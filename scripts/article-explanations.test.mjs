@@ -1,4 +1,94 @@
 import test from 'node:test';
+test('CTB licensing integrates 2026 electric exception and first A/B toxicology without universal periodic tests',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(143).pontos.join(' '),/14\/9\/2026.*predominantemente elétrica.*4.250/s);
+ assert.match(get('148-a').simples,/PRIMEIRA habilitação A\/B.*sem criar periodicismo universal/s);
+ assert.ok(!get('148-a').prova.some(s=>/aplica-se às categorias C, D e E/.test(s)));
+ assert.match(get('148-a').atencao.join(' '),/validade inferior a três anos.*diferente da janela/s);
+ assert.match(get('165-d').atencao.join(' '),/B\/AB.*trigésimo dia.*afasta/s);
+ for(const n of [143,'148-a','165-b','165-c','165-d'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB alcohol procedure distinguishes present rules from deferred manual changes',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(165).simples,/1031\/2026.*não recolhimento.*embora.*CTB/s);
+ assert.match(get(165).atencao.join(' '),/17\/10\/2026.*13\/10.*fichas futuras.*18\/8\/2026/s);
+ assert.match(get('165-a').prova.join(' '),/1079.*validou.*crime.*Não/s);
+ assert.equal(legalStudyCaveat('transito','art-165').literalPractice,false);
+});
+test('CTB parking corrections remove universal removal and lower-gravity assumptions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(181).simples,/contramão.*não enumera remoção/s);
+ assert.match(get(181).pontos.join(' '),/VII.*salvo força maior/);
+ assert.match(get(182).simples,/Não dizer sempre menos grave.*classes coincidem/s);
+ for(const n of [181,182])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB motofrete distinguishes expired provisional measure from current restored requirements',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-03-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('139-a').simples,/categoria de aluguel.*inspeção semestral.*ENCERRADA em 15\/9\/2026/s);
+ assert.match(get('139-a').atencao.join(' '),/relações constituídas.*§§3º\/11/s);
+ assert.ok(!get('139-a').atencao.some(x=>/inciso sobre registro como categoria de aluguel tem vigência encerrada/.test(x)));
+ assert.equal(legalStudyCaveat('transito','art-139-a').literalPractice,false);
+ assert.match(get(138).remissoes.join(' '),/Resolucao10202025/);
+});
+test('CTB inspection and registration integrate suspended program and specific documentary exceptions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-03-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(104).simples,/716\/2017.*suspenso.*170\/2018.*Inspeções específicas/s);
+ assert.match(get(115).simples,/§9º.*969\/2022.*QR Code.*lacre eletrônico/s);
+ assert.match(get(124).prova.join(' '),/Não.*determina cobrança.*proprietário anterior/s);
+ assert.match(get(131).pontos.join(' '),/um ano.*informação.*EXCEPCIONAL/s);
+ assert.match(get('134-a').prova.join(' '),/31\/12\/2025.*13\/10\/2026/s);
+ for(const n of [104,115,124,131,'134-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB driver rest and residual SPVAT text cannot produce unqualified literal exercises',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-02-2026-10-13.json','utf8'));validateArticlePackage(p);
+ assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('67-c').simples,/NÃO.*fracionamento.*ADI 5322/s);
+ assert.ok(!get('67-c').pontos.some(s=>/sendo 8 ininterruptas/.test(s)));
+ assert.match(get('67-c').atencao.join(' '),/Efeitos temporais.*fatos antigos/s);
+ assert.match(get(78).simples,/LC 211.*revogou.*31\/12\/2024/s);
+ assert.ok(!get(78).prova.some(s=>/fixa em 10% o repasse/.test(s)));
+ for(const n of ['67-c','67-e',78])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB child retention, reserved parking and defective signs retain specific scopes',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-02-2026-10-13.json','utf8'));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(64).exemplo,/oito anos.*cinto.*não afirmar cadeirinha/s);
+ assert.match(get(55).prova.join(' '),/proteção ocular.*passageiros.*Sim/s);
+ assert.match(get(61).atencao.join(' '),/14.440.*motocicletas.*110\/100/s);
+ assert.match(get('86-a').simples,/Não restringir.*XVII.*inciso XX/s);
+ assert.match(get(90).prova.join(' '),/Não.*não de imunidade geral/s);
+ assert.equal(legalStudyCaveat('transito','art-90').literalPractice,false);
+});
+test('CTB first review batch corrects scope, delegation and institutional roles without rewriting the statute',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-01-2026-10-13.json','utf8'));validateArticlePackage(p);
+ assert.equal(p.units.length,50);assert.equal(p.laws[0].course_current_units,365);assert.equal(p.laws[0].scope_type,'targeted_correction');
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(2).simples,/estacionamentos privados de uso coletivo/);
+ assert.match(get(7).simples,/sem inciso autônomo|não o órgão máximo executivo/);
+ assert.ok(!/Câmaras Temáticas, entre outros/.test(get(7).simples));
+ assert.match(get(10).pontos.join(' '),/CCE 17.*Secretário-Executivo.*MAIORIA ABSOLUTA/s);
+ assert.match(get(12).pontos.join(' '),/DOIS ANOS.*120 dias.*vedação de reedição/s);
+ assert.match(get(19).atencao.join(' '),/28\/5\/2024.*180 dias/);
+ assert.match(get(21).atencao.join(' '),/965.*NÃO EXCLUSIVO/);
+ assert.match(get(22).pontos.join(' '),/165-D.*330.*§5º/);
+ assert.match(get(24).pontos.join(' '),/§3º.*vagas reservadas/);
+ assert.match(get('24-a').pontos.join(' '),/delegação.*CONVÊNIO/);
+ assert.match(get('25-a').simples,/adjacências.*treinamento específico/s);
+ for(const row of p.units){assert.ok(row.expected);assert.equal(row.prova.length,2);assert.ok(explanationExample(row.exemplo).variation);for(const q of row.prova)assert.ok(explanationPractice(q)?.answer.length>45);}
+ for(const n of [1,2,7,10,12,14,19,20,21,22,23,24,'24-a','25-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB circulation review separates horns, lights, conditional priority and vulnerable users',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-01-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(29).pontos.join(' '),/velocidade REDUZIDA.*Utilidade pública.*sem livre circulação/s);
+ assert.match(get(38).pontos.join(' '),/sentido único, bordo esquerdo/);
+ assert.match(get(40).pontos.join(' '),/SEM DRL.*PISTA SIMPLES.*FORA/s);
+ assert.match(get(40).prova.join(' '),/restrição fora da área urbana.*Não/s);
+ assert.match(get('44-a').prova.join(' '),/sinalização indicativa.*44, 45 e 70/s);
+ assert.match(get(47).exemplo,/dois minutos.*estacionamento/s);
+ for(const n of [29,40,'44-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
 test('CPP final integrates current STJ competence and rejects historical automatic drills',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-final-2026-10-13.json','utf8'));validateArticlePackage(p);
  assert.equal(p.units.length,33);assert.equal(p.laws[0].scope_type,'targeted_correction');
@@ -480,8 +570,8 @@ function fixture(){
     legal_courses:pack.laws.map(l=>{const r=pack.units.find(r=>r.course_slug===l.slug);return {id:r.course_id,slug:l.slug,status:'active',source_url:l.source_url,syllabus_topic_id:r.syllabus_topic_id};}),
     legal_course_units:pack.units.map(r=>({id:r.unit_id,course_id:r.course_id,unit_key:r.unit_key,content_status:'current',content_sha256:r.content_sha256})),
     syllabus_topics:pack.units.map(r=>({id:r.syllabus_topic_id,edition_id:r.edition_id,content_status:'current'})),
-    syllabus_editions:pack.units.map(r=>({id:r.edition_id,status:'active'})),
-    content_sources:pack.laws.flatMap(l=>[l.source_url,...(l.additional_sources??[]).map(s=>s.url)]).map(url=>({url,is_official:true,status:'vigente'})),
+    syllabus_editions:pack.units.map(r=>({id:r.edition_id,status:'active',source_id:'official-edital'})),
+    content_sources:[{id:'official-edital',source_type:'edital',title:'Edital oficial do concurso',is_official:true,status:'vigente'},...pack.laws.flatMap(l=>[l.source_url,...(l.additional_sources??[]).map(s=>s.url)]).map(url=>({url,is_official:true,status:'vigente'}))],
     legal_unit_explanations:pack.units.filter(r=>r.expected).map(r=>structuredClone(r.expected)),
   };
 }
@@ -1179,4 +1269,12 @@ test('CP final lote5: exceções democráticas e suspensão judicial distinguem 
  }
  for(const n of [351,352,'359-k','359-l','359-m','359-t',360,361])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
  assert.match(get(361).exemplo,/1942.*1940.*Variação/s);
+});
+
+test('Article publication rejects a caderno or gabarito as syllabus, even when official or mislabelled',()=>{
+ const snapshot=fixture();assert.doesNotThrow(()=>checkArticlePreflight(pack,snapshot));
+ for(const patch of [{source_type:'outro',title:'Prova objetiva oficial'},{source_type:'edital',title:'Caderno oficial de prova'},{source_type:'edital',title:'Gabarito definitivo'},{status:'archived'},{is_official:false}]){
+  const bad=fixture();Object.assign(bad.content_sources[0],patch);assert.throws(()=>checkArticlePreflight(pack,bad),/Edital oficial/);
+ }
+ const missing=fixture();missing.syllabus_editions.forEach(e=>e.source_id='missing');assert.throws(()=>checkArticlePreflight(pack,missing),/Edital oficial/);
 });

@@ -1,10 +1,14 @@
 import type { LegalUnit } from "./legalCourses";
 import { libraryMatchParts, matchesLibrarySearch, normalizeLibrarySearch } from "./librarySearch";
 
+export function legalArticleSearchKey(query: string): string | undefined {
+  const article = query.trim().match(/^(?:art(?:igo)?\.?\s*)?(\d+)[º°]?(?:\s*-?\s*([a-z]))?$/i);
+  return article ? `art-${Number(article[1])}${article[2] ? `-${article[2].toLowerCase()}` : ""}` : undefined;
+}
 /** Search only the units supplied by the currently open course. */
 export function matchesLegalUnit(unit: Pick<LegalUnit, "label" | "unit_key" | "chapter" | "body_text">, query: string): boolean {
-  const article = query.trim().match(/^(?:art(?:igo)?\.?\s*)?(\d+)[º°]?(?:\s*-?\s*([a-z]))?$/i);
-  if (article) return unit.unit_key.toLowerCase() === `art-${Number(article[1])}${article[2] ? `-${article[2].toLowerCase()}` : ""}`;
+  const article = legalArticleSearchKey(query);
+  if (article) return unit.unit_key.toLowerCase() === article;
   return matchesLibrarySearch(normalizeLibrarySearch(`${unit.label} ${unit.chapter} ${unit.body_text}`), query);
 }
 

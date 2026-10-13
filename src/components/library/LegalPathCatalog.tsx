@@ -6,9 +6,10 @@ import { compareLawChronology, compareMaterialRevision, LAW_CHRONOLOGY, lawChron
 import { libraryTone } from "@/lib/libraryOrganization";
 import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 import { matchingLibraryLaws, libraryLawResultTitle } from "@/lib/librarySearch";
+import type { ContentHit } from "@/lib/contentSearch";
 import { LibrarySearchMatch } from "./LibrarySearchMatch";
 
-export function LegalPathCatalog({ userId, materials, query = "", searching = false }: { userId: string; materials: StudyMaterialSummary[]; searching: boolean; query?: string }) {
+export function LegalPathCatalog({ userId, materials, query = "", searching = false, hits = [] }: { userId: string; materials: StudyMaterialSummary[]; searching: boolean; query?: string; hits?: ContentHit[] }) {
   const { data, isPending, isError, refetch } = useLegalCourses(userId);
   const lawMatches = matchingLibraryLaws(query);
   if (isPending) return <p role="status" className="text-sm text-muted-foreground">Carregando percursos de legislação…</p>;
@@ -34,11 +35,13 @@ export function LegalPathCatalog({ userId, materials, query = "", searching = fa
         <div className="library-law-grid">{entries.map(course => {
           const related = materials.filter(material => materialLawSlug(material) === course.slug && material.slug !== course.material_slug).sort(compareMaterialRevision);
           const chronology = LAW_CHRONOLOGY[course.slug];
-          const matched = lawMatches.includes(course.slug);
+          const occurrences = hits.filter(hit => hit.slug === course.slug);
+          const matched = lawMatches.includes(course.slug) || occurrences.length > 0;
           return <article key={course.id} className={`library-law-card ${matched ? "library-law-match" : ""}`}>
             <div className="library-law-card__top"><span className="library-law-tag">{matched ? "Correspondência da busca" : "Texto oficial + prática"}</span><BookOpen aria-hidden="true" size={17}/></div>
             <h4><LibrarySearchMatch text={libraryLawResultTitle(course.slug)} query={query}/></h4>
             {matched && <span className="sr-only">Lei correspondente à busca</span>}
+            {occurrences.length > 0 && <p className="text-xs font-semibold text-primary">Termo encontrado em {occurrences.length} artigos desta lei</p>}
             <p className="library-law-date">{lawChronologyLabel(course.slug)}</p>
             <p className="library-law-meta">{course.overview.current_units} dispositivos vigentes · {course.overview.chapters.length} blocos</p>
             <Link to="/dashboard/legal-course/$slug" params={{slug: course.slug}} className="library-study-button">Estudar artigo por artigo<ArrowUpRight aria-hidden="true" size={16}/></Link>

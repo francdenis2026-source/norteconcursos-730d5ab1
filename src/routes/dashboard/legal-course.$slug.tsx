@@ -38,7 +38,8 @@ import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
 
 export const Route = createFileRoute("/dashboard/legal-course/$slug")({
   component: LegalCoursePage, head: () => ({ meta: [{ title: "Percurso de legislação | Norte Concursos" }] }),
-  validateSearch: (s: Record<string, unknown>): { art?: string | undefined; par?: string | undefined } => ({
+  validateSearch: (s: Record<string, unknown>): { art?: string | undefined; par?: string | undefined; find?: string | undefined } => ({
+    find: typeof s["find"] === "string" ? s["find"].slice(0,300) : undefined,
     art: typeof s["art"] === "string" ? s["art"] : undefined,
     par: typeof s["par"] === "string" || typeof s["par"] === "number" ? String(s["par"]) : undefined,
   }),
@@ -55,7 +56,7 @@ function LegalCoursePage() {
   const progress = useLegalProgress(userId);
   const coverage = useLegalExplanationCoverage(userId).data?.find(row => row.course_slug === slug);
   const material = useStudyMaterial(course?.material_slug ?? "", !!course && !!userId);
-  const { art, par } = Route.useSearch();
+  const { art, par, find } = Route.useSearch();
   const navigate = useNavigate({ from: "/dashboard/legal-course/$slug" });
   const refIndex = useLegalRefIndex(courses.data, userId).data ?? null;
   const [selectedId, setSelectedIdState] = useState<string>();
@@ -171,7 +172,7 @@ function LegalCoursePage() {
           {!visible.length && <p className="text-sm">Nenhum dispositivo neste filtro.</p>}
         </nav>
       </aside>}
-      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson cargo={cargo} key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} searchQuery={hasSearch ? search : undefined} onPrev={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index - 1]) setSelectedId(navigationRows[index - 1]!.id); }} onNext={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index + 1]) setSelectedId(navigationRows[index + 1]!.id); }} />}
+      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson cargo={cargo} key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} searchQuery={hasSearch ? search : selected.unit_key === art ? find : undefined} onPrev={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index - 1]) setSelectedId(navigationRows[index - 1]!.id); }} onNext={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index + 1]) setSelectedId(navigationRows[index + 1]!.id); }} />}
       {!selected && !progress.isPending && <div role="status" className="surface-card p-6"><p>Nenhum artigo corresponde à busca e aos filtros nesta matéria.</p><button type="button" className="mt-3 underline" onClick={clearFilters}>Limpar busca e filtros</button></div>}
     </div>}
     {!fm.focus && <section aria-label="Sobre esta lei" className="space-y-4 border-t pt-5"><h2 className="text-lg font-bold">Sobre esta lei</h2>
@@ -199,6 +200,9 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
   const explanation = useLegalExplanation(unit.id, userId);
   // sem explicação publicada para este artigo: começa direto no texto oficial
   useEffect(() => { if (explanation.isSuccess && !explanation.data && !highlightPar) setStep(cur => (cur === "entender" ? "texto" : cur)); }, [explanation.isSuccess, explanation.data, highlightPar]);
+  const bodyMatch = !!searchQuery && matchesLegalUnit(unit, searchQuery);
+  const bodyExcerpt = bodyMatch ? legalSearchExcerpt(unit.body_text, searchQuery!, 520) : "";
+  const explanationExcerpt = searchQuery && !bodyExcerpt && explanation.data ? legalSearchExcerpt([explanation.data.simples, ...explanation.data.pontos, ...explanation.data.atencao, explanation.data.exemplo, ...explanation.data.prova].join(" "), searchQuery, 520) : "";
   const mode = step === "fixar" ? "recall" : "read";
   const [revealed, setRevealed] = useState(false);
   const [notes, setNotes] = useState(progress?.notes ?? "");
@@ -219,7 +223,7 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
   }
   return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-5 p-5 sm:p-7">
     <header className="border-b pb-4"><p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{unit.chapter}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{unit.label}</h2></header>
-    {searchQuery && <aside className="rounded-xl border border-sky-300 bg-sky-50 p-4 text-sm dark:bg-sky-950/30" aria-label="Trecho encontrado na busca"><p className="font-semibold">Resultado nesta matéria · {unit.label}</p><p className="mt-2 whitespace-pre-wrap leading-7"><LibrarySearchMatch text={legalSearchExcerpt(unit.body_text, searchQuery, 520) || `${unit.label} · ${unit.chapter}`} query={searchQuery} /></p><Button variant="outline" className="mt-3" onClick={() => setStep("texto")}>Ver no texto oficial</Button></aside>}
+    {searchQuery && <aside className="rounded-xl border border-sky-300 bg-sky-50 p-4 text-sm dark:bg-sky-950/30" aria-label="Trecho encontrado na busca"><p className="font-semibold">Resultado nesta matéria · {unit.label}</p><p className="mt-2 whitespace-pre-wrap leading-7"><LibrarySearchMatch text={bodyExcerpt || explanationExcerpt || `${unit.label} · ${unit.chapter}`} query={searchQuery} /></p><Button variant="outline" className="mt-3" onClick={() => setStep(bodyMatch ? "texto" : "entender")}>{bodyMatch ? "Ver no texto oficial" : "Ver a explicação"}</Button></aside>}
     {unit.content_status !== "excluded" && <CobrancaCard stat={cobrancaOf(law, unit.unit_key)} group={cargo} />}
     {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso de estudo das regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
       <nav className="grid gap-2 rounded-xl bg-muted/40 p-1.5 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">

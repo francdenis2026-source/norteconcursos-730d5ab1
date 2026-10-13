@@ -1,0 +1,3176 @@
+{
+  "version": "2026-10-11-transito-targeted",
+  "checked_at": "2026-10-13T07:44:24.171161+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-93",
+        "art-94",
+        "art-95",
+        "art-96",
+        "art-97",
+        "art-98",
+        "art-99",
+        "art-100",
+        "art-101",
+        "art-102",
+        "art-103",
+        "art-104",
+        "art-105",
+        "art-106",
+        "art-107",
+        "art-109",
+        "art-110",
+        "art-111",
+        "art-113",
+        "art-114",
+        "art-115",
+        "art-116",
+        "art-117",
+        "art-118",
+        "art-119",
+        "art-120",
+        "art-121",
+        "art-122",
+        "art-123",
+        "art-124",
+        "art-125",
+        "art-126",
+        "art-127",
+        "art-128",
+        "art-129",
+        "art-129-a",
+        "art-129-b",
+        "art-130",
+        "art-131",
+        "art-132",
+        "art-133",
+        "art-134",
+        "art-134-a",
+        "art-135",
+        "art-136",
+        "art-137",
+        "art-138",
+        "art-139",
+        "art-139-a",
+        "art-139-b"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-93",
+      "unit_id": "cb04a3df-96a4-5f49-8c77-d5887c3ef2c4",
+      "content_sha256": "016bd21d434f5b1c66c89413eeae0e0986048947573bdd67bbf328c4423b6ada",
+      "simples": "Nenhum projeto de edificação que possa transformar-se em polo atrativo de trânsito pode ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.",
+      "pontos": [
+        "Anuência prévia do órgão de trânsito.",
+        "Área de estacionamento e vias de acesso."
+      ],
+      "atencao": [
+        "Polo atrativo de trânsito exige anuência prévia.",
+        "Não reduzir o controle à edificação já aberta; a aptidão do projeto para atrair trânsito é relevante."
+      ],
+      "exemplo": "Um projeto de centro comercial capaz de atrair trânsito tem estacionamento, mas não anuência do órgão com circunscrição. Resposta: o estacionamento não supre a anuência prévia. Variação: A aprovação também exige indicar vias de acesso adequadas; não basta obter anuência e omitir essas informações.",
+      "prova": [
+        "Área de estacionamento dispensa a anuência do órgão de trânsito? Não. O artigo reúne anuência prévia, área de estacionamento e indicação de acessos adequados.",
+        "O artigo exige anuência apenas depois que o prédio estiver funcionando? Não. A exigência incide na aprovação do projeto que possa transformar-se em polo atrativo."
+      ],
+      "termos": [
+        {
+          "termo": "Polo atrativo",
+          "significado": "Edificação capaz de gerar demanda de circulação, examinada ainda na fase do projeto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 95"
+      ],
+      "expected": {
+        "unit_id": "cb04a3df-96a4-5f49-8c77-d5887c3ef2c4",
+        "content_sha256": "016bd21d434f5b1c66c89413eeae0e0986048947573bdd67bbf328c4423b6ada",
+        "simples": "Nenhum projeto de edificação que possa transformar-se em polo atrativo de trânsito pode ser aprovado sem prévia anuência do órgão ou entidade com circunscrição sobre a via e sem que do projeto conste área para estacionamento e indicação das vias de acesso adequadas.",
+        "pontos": [
+          "Anuência prévia do órgão de trânsito.",
+          "Área de estacionamento e vias de acesso."
+        ],
+        "atencao": [
+          "Polo atrativo de trânsito exige anuência prévia."
+        ],
+        "exemplo": "Um shopping só é aprovado com estacionamento e acessos adequados.",
+        "prova": [
+          "Assertiva que dispensa área de estacionamento no projeto de polos atrativos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 95"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-94",
+      "unit_id": "c1e35074-1cac-5fa6-9726-c635828ec1cd",
+      "content_sha256": "279d00b713566d824c2cf09b157bb63c1f9d07d96f6140a98f16b763296a2250",
+      "simples": "Qualquer obstáculo à livre circulação e à segurança de veículos e pedestres, na via ou na calçada, que não possa ser retirado, deve ser devida e imediatamente sinalizado. É proibida a utilização de ondulações transversais e de sonorizadores como redutores de velocidade, salvo casos especiais definidos pelo órgão competente, nos padrões do Contran.",
+      "pontos": [
+        "Obstáculo não removível deve ser sinalizado.",
+        "Ondulações e sonorizadores só em casos especiais."
+      ],
+      "atencao": [
+        "Lombada só nos casos e padrões definidos pelo Contran.",
+        "Não ensinar lombada totalmente livre nem proibição sem a exceção legal; não inventar dimensões regulamentares neste artigo."
+      ],
+      "exemplo": "Uma obstrução na calçada não pode ser removida de imediato. Resposta: deve ser devida e imediatamente sinalizada, também para proteger pedestres. Variação: O morador quer instalar lombada por conta própria: a exceção exige caso definido pelo órgão competente e padrões do Contran.",
+      "prova": [
+        "O dever de sinalizar obstáculo atinge apenas a pista de veículos? Não. O caput inclui via e calçada e protege veículos e pedestres.",
+        "Todo redutor ondulado é absolutamente proibido sem exceção? Não. O parágrafo admite casos especiais definidos pelo órgão competente, nos padrões e critérios do Contran."
+      ],
+      "termos": [
+        {
+          "termo": "Ondulação transversal",
+          "significado": "Redutor admitido apenas no regime excepcional e técnico pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 91"
+      ],
+      "expected": {
+        "unit_id": "c1e35074-1cac-5fa6-9726-c635828ec1cd",
+        "content_sha256": "279d00b713566d824c2cf09b157bb63c1f9d07d96f6140a98f16b763296a2250",
+        "simples": "Qualquer obstáculo à livre circulação e à segurança de veículos e pedestres, na via ou na calçada, que não possa ser retirado, deve ser devida e imediatamente sinalizado. É proibida a utilização de ondulações transversais e de sonorizadores como redutores de velocidade, salvo casos especiais definidos pelo órgão competente, nos padrões do Contran.",
+        "pontos": [
+          "Obstáculo não removível deve ser sinalizado.",
+          "Ondulações e sonorizadores só em casos especiais."
+        ],
+        "atencao": [
+          "Lombada só nos casos e padrões definidos pelo Contran."
+        ],
+        "exemplo": "A lombada segue o padrão definido pelo Contran.",
+        "prova": [
+          "Assertiva que permite instalar lombadas sem padrão do Contran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-95",
+      "unit_id": "00aeeaa0-dbe3-5e49-95b0-29526e0a8286",
+      "content_sha256": "dcb8817ccf837eaa7b1bacab8e556b1a0dfa4f91e24420d4b7daef953e30fe28",
+      "simples": "Nenhuma obra ou evento que possa perturbar ou interromper a livre circulação de veículos e pedestres, ou colocar em risco sua segurança, pode ser iniciada sem permissão prévia do órgão de trânsito com circunscrição sobre a via. A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento. Salvo emergência, a autoridade avisa a comunidade pelos meios de comunicação com quarenta e oito horas de antecedência de qualquer interdição da via, indicando caminhos alternativos.",
+      "pontos": [
+        "Permissão prévia para obras e eventos.",
+        "Sinalização a cargo do responsável.",
+        "Aviso à comunidade com quarenta e oito horas de antecedência.",
+        "§3º: multa textual R$ 81,35 a R$ 488,10; diária a partir do prazo final concedido até regularização; não elimina consequências civis e penais.",
+        "§4º: servidor, multa diária de 50% do DIA de vencimento/remuneração; integra também arts. 93 e 94."
+      ],
+      "atencao": [
+        "Aviso com quarenta e oito horas de antecedência, salvo emergência.",
+        "Distinguir permissão prévia, obrigação de sinalizar, aviso comunitário e sanções próprias."
+      ],
+      "exemplo": "Uma interdição programada ocorrerá em dois dias. Resposta: salvo emergência, a autoridade deve avisar a comunidade com 48 horas de antecedência e indicar caminhos alternativos. Variação: A empresa executora obtém permissão, mas deixa a obra sem sinalização: a obrigação de sinalizar continua sendo do responsável pela execução ou manutenção.",
+      "prova": [
+        "A autoridade é sempre a responsável direta pela sinalização da obra? Não. O §1º atribui a obrigação ao responsável pela execução ou manutenção da obra ou evento.",
+        "A multa diária de 50% usa todo o salário mensal do servidor como base? Não. O §4º usa o DIA de vencimento ou remuneração devida enquanto persistir a irregularidade, não metade automática do salário mensal."
+      ],
+      "termos": [
+        {
+          "termo": "Interdição avisada",
+          "significado": "Comunicação prévia de fechamento e rota alternativa, com ressalva de emergência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 93"
+      ],
+      "expected": {
+        "unit_id": "00aeeaa0-dbe3-5e49-95b0-29526e0a8286",
+        "content_sha256": "dcb8817ccf837eaa7b1bacab8e556b1a0dfa4f91e24420d4b7daef953e30fe28",
+        "simples": "Nenhuma obra ou evento que possa perturbar ou interromper a livre circulação de veículos e pedestres, ou colocar em risco sua segurança, pode ser iniciada sem permissão prévia do órgão de trânsito com circunscrição sobre a via. A obrigação de sinalizar é do responsável pela execução ou manutenção da obra ou do evento. Salvo emergência, a autoridade avisa a comunidade pelos meios de comunicação com quarenta e oito horas de antecedência de qualquer interdição da via, indicando caminhos alternativos.",
+        "pontos": [
+          "Permissão prévia para obras e eventos.",
+          "Sinalização a cargo do responsável.",
+          "Aviso à comunidade com quarenta e oito horas de antecedência."
+        ],
+        "atencao": [
+          "Aviso com quarenta e oito horas de antecedência, salvo emergência."
+        ],
+        "exemplo": "A interdição programada é anunciada com dois dias de antecedência.",
+        "prova": [
+          "Assertiva que dispensa o aviso prévio nas interdições programadas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 93"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-96",
+      "unit_id": "7e107b0e-8829-58b3-8188-7ce66392f243",
+      "content_sha256": "7681d607eb028303010d0f07d145df23f5dd55865748a1f7a50d1c882542007a",
+      "simples": "O art. 96 separa tração, espécie e categoria. Categoria inclui oficial, representação diplomática/consular/internacional, particular, aluguel e aprendizagem. A espécie pode ser passageiros, carga, misto, competição, tração, especial ou coleção. Um mesmo tipo, como motocicleta, aparece em mais de uma espécie. A alínea elétrica da classificação por tração foi revogada em 2023.",
+      "pontos": [
+        "TRAÇÃO: automotor, propulsão humana, tração animal, reboque/semirreboque; alínea b REVOGADA.",
+        "ESPÉCIE não é sinônimo de CATEGORIA.",
+        "Motocicleta aparece em passageiros, carga e especial, conforme enquadramento.",
+        "Lei 14.599/2023 explicitou tipos da espécie especial; não ensinar rol antigo incompleto."
+      ],
+      "atencao": [
+        "Consulte o texto integral para a lista completa por espécie e categoria."
+      ],
+      "exemplo": "Uma motocicleta é configurada para transporte de carga. Resposta: pode integrar a espécie de carga; não classificar toda motocicleta automaticamente como passageiros. Variação: A categoria aluguel é outro eixo de classificação, distinto de tração automotora ou espécie de carga.",
+      "prova": [
+        "Tração, espécie e categoria são critérios equivalentes? Não. O artigo separa três eixos; um veículo deve ser enquadrado em cada um conforme suas características e uso.",
+        "A classificação elétrica continua como alínea b vigente do inciso I? Não. A Lei 14.599/2023 revogou essa alínea; não recuperar o rol antigo como atual."
+      ],
+      "termos": [
+        {
+          "termo": "Eixos de classificação",
+          "significado": "Critérios independentes: tração, espécie e categoria do veículo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Anexo I",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "7e107b0e-8829-58b3-8188-7ce66392f243",
+        "content_sha256": "7681d607eb028303010d0f07d145df23f5dd55865748a1f7a50d1c882542007a",
+        "simples": "Os veículos classificam-se quanto à tração em automotor, de propulsão humana, de tração animal e reboque ou semirreboque; e quanto à espécie em veículos de passageiros (bicicleta, ciclomotor, motoneta, motocicleta, triciclo, quadriciclo, automóvel, micro-ônibus, ônibus, bonde, reboque, charrete), de carga, mistos, de competição e de tração, entre outras categorias, além de quanto à categoria.",
+        "pontos": [
+          "Classificação por tração.",
+          "Classificação por espécie: passageiros, carga, misto, competição e tração.",
+          "Há também classificação por categoria."
+        ],
+        "atencao": [
+          "Consulte o texto integral para a lista completa por espécie e categoria."
+        ],
+        "exemplo": "A motocicleta é veículo automotor da espécie passageiros.",
+        "prova": [
+          "Assertiva que inclui a carroça entre os veículos de passageiros erra: é de carga."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Anexo I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-97",
+      "unit_id": "75a71098-6887-5754-89c1-b59665245737",
+      "content_sha256": "fd4e987774d7f3554080aabe34170a8b74cafc2c41367a81ae8cb4c5c7996ccc",
+      "simples": "As características dos veículos, suas especificações básicas, configuração e condições essenciais para registro, licenciamento e circulação são estabelecidas pelo Contran, em função de suas aplicações.",
+      "pontos": [
+        "Características e especificações definidas pelo Contran."
+      ],
+      "atencao": [
+        "Competência do Contran.",
+        "Separar função normativa do Contran e atos administrativos dos órgãos executivos."
+      ],
+      "exemplo": "Um fabricante pretende cadastrar veículo com configuração inédita. Resposta: condições essenciais de registro, licenciamento e circulação são estabelecidas pelo Contran em função das aplicações. Variação: A autoridade executiva pratica atos de registro, mas não substitui por vontade própria os padrões normativos nacionais.",
+      "prova": [
+        "O fabricante determina sozinho as condições legais de circulação? Não. O artigo atribui ao Contran as características, especificações e condições essenciais.",
+        "Especificações básicas são irrelevantes para o licenciamento? Não. O caput as relaciona expressamente às condições para registro, licenciamento e circulação."
+      ],
+      "termos": [
+        {
+          "termo": "Especificação básica",
+          "significado": "Requisito técnico nacional ligado à aplicação do veículo e à sua regularidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "75a71098-6887-5754-89c1-b59665245737",
+        "content_sha256": "fd4e987774d7f3554080aabe34170a8b74cafc2c41367a81ae8cb4c5c7996ccc",
+        "simples": "As características dos veículos, suas especificações básicas, configuração e condições essenciais para registro, licenciamento e circulação são estabelecidas pelo Contran, em função de suas aplicações.",
+        "pontos": [
+          "Características e especificações definidas pelo Contran."
+        ],
+        "atencao": [
+          "Competência do Contran."
+        ],
+        "exemplo": "O Contran define os requisitos para registro de um novo tipo de veículo.",
+        "prova": [
+          "Assertiva que atribui ao fabricante a definição das condições de registro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-98",
+      "unit_id": "b76babea-8ab9-5bd0-9003-9a2d578f1131",
+      "content_sha256": "c98ab0a9f72f1813ad4a2462712fe61d7a59272484cf936e39573c7ed9683247",
+      "simples": "Nenhum proprietário ou responsável pode, sem prévia autorização da autoridade competente, fazer ou ordenar modificações das características de fábrica do veículo. Os veículos e motores novos ou usados que sofrerem alterações ou conversões devem atender aos mesmos limites de emissão de poluentes e ruído, cabendo à entidade executora das modificações e ao proprietário a responsabilidade pelo cumprimento. Há regras específicas para a alteração de veículos do tipo utilitário jipe.",
+      "pontos": [
+        "Modificações dependem de autorização prévia.",
+        "Atender aos limites de emissão e ruído.",
+        "Responsabilidade do executor e do proprietário."
+      ],
+      "atencao": [
+        "Alteração sem autorização é infração.",
+        "Responsabilidade do proprietário E da entidade executora.",
+        "Lei 14.071/2020: distinguir alteração de características, emissões/ruído e hipótese específica de utilitário jipe."
+      ],
+      "exemplo": "Uma oficina modifica características de fábrica com autorização prévia. Resposta: autorização não dispensa limites de emissão e ruído; executor e proprietário respondem pelo cumprimento. Variação: Alterar conjunto roda/pneu de utilitário jipe depende das restrições do fabricante e exigências do Contran, não autorização genérica para qualquer veículo.",
+      "prova": [
+        "Basta chamar a mudança de melhoria para dispensar autorização? Não. O caput exige prévia autorização para fazer ou ordenar modificação das características de fábrica.",
+        "Só o proprietário responde pelos limites ambientais da conversão? Não. O §1º também atribui responsabilidade à entidade executora das modificações."
+      ],
+      "termos": [
+        {
+          "termo": "Modificação autorizada",
+          "significado": "Mudança sujeita a controle prévio e demais requisitos de segurança e ambientais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 230",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "b76babea-8ab9-5bd0-9003-9a2d578f1131",
+        "content_sha256": "c98ab0a9f72f1813ad4a2462712fe61d7a59272484cf936e39573c7ed9683247",
+        "simples": "Nenhum proprietário ou responsável pode, sem prévia autorização da autoridade competente, fazer ou ordenar modificações das características de fábrica do veículo. Os veículos e motores novos ou usados que sofrerem alterações ou conversões devem atender aos mesmos limites de emissão de poluentes e ruído, cabendo à entidade executora das modificações e ao proprietário a responsabilidade pelo cumprimento. Há regras específicas para a alteração de veículos do tipo utilitário jipe.",
+        "pontos": [
+          "Modificações dependem de autorização prévia.",
+          "Atender aos limites de emissão e ruído.",
+          "Responsabilidade do executor e do proprietário."
+        ],
+        "atencao": [
+          "Alteração sem autorização é infração.",
+          "Responsabilidade do proprietário E da entidade executora."
+        ],
+        "exemplo": "Trocar o motor do carro exige autorização e atendimento aos limites de emissão.",
+        "prova": [
+          "Assertiva que permite modificar o veículo sem autorização desde que seja para melhoria erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 230"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-99",
+      "unit_id": "f3525edb-61cc-5362-8387-9c18bd3a76be",
+      "content_sha256": "922a0c1afe7b74f256a76090527403ef588c231f8be5a36a463cc258790b739c",
+      "simples": "Somente pode transitar pelas vias terrestres o veículo cujo peso e dimensões atendam aos limites estabelecidos pelo Contran. O excesso de peso é aferido por equipamento de pesagem ou pela verificação de documento fiscal. É tolerado um percentual sobre os limites de peso bruto total e por eixo, quando aferido por equipamento, e os equipamentos de pesagem são aferidos conforme metodologia e periodicidade do Contran.",
+      "pontos": [
+        "Peso e dimensões conforme o Contran.",
+        "Aferição por equipamento ou documento fiscal.",
+        "Tolerância percentual.",
+        "§4º e §5º incluídos pela Lei 14.229/2021, com regime de vigência próprio já transcorrido.",
+        "Limite técnico por eixo: informação visível na estrutura E no Renavam."
+      ],
+      "atencao": [
+        "Tolerância percentual aplicada quando a aferição é por equipamento.",
+        "Não recuperar automaticamente a regra transitória de peso da Lei 7.408, cujo prazo foi limitado, como fórmula atual universal."
+      ],
+      "exemplo": "Na pesagem, o veículo supera o limite nominal, mas não o limite acrescido da tolerância aplicável. Resposta: o §4º impede autuação por pesagem antes de ultrapassar esse conjunto. Variação: O limite técnico por eixo precisa constar em lugar visível e no Renavam; a tolerância não autoriza desrespeitar capacidades técnicas do fabricante.",
+      "prova": [
+        "Basta superar qualquer limite nominal para autuar na pesagem? Não. O §4º exige ultrapassar os limites fixados acrescidos da respectiva tolerância.",
+        "O artigo fixa um único percentual universal para toda modalidade de aferição? Não. Diferencia aferição por equipamento/documento e remete à regulamentação; não inventar percentual para todo caso."
+      ],
+      "termos": [
+        {
+          "termo": "Tolerância de aferição",
+          "significado": "Margem do regime aplicável à pesagem, distinta de autorização para excesso habitual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 231",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14229.htm"
+      ],
+      "expected": {
+        "unit_id": "f3525edb-61cc-5362-8387-9c18bd3a76be",
+        "content_sha256": "922a0c1afe7b74f256a76090527403ef588c231f8be5a36a463cc258790b739c",
+        "simples": "Somente pode transitar pelas vias terrestres o veículo cujo peso e dimensões atendam aos limites estabelecidos pelo Contran. O excesso de peso é aferido por equipamento de pesagem ou pela verificação de documento fiscal. É tolerado um percentual sobre os limites de peso bruto total e por eixo, quando aferido por equipamento, e os equipamentos de pesagem são aferidos conforme metodologia e periodicidade do Contran.",
+        "pontos": [
+          "Peso e dimensões conforme o Contran.",
+          "Aferição por equipamento ou documento fiscal.",
+          "Tolerância percentual."
+        ],
+        "atencao": [
+          "Tolerância percentual aplicada quando a aferição é por equipamento."
+        ],
+        "exemplo": "O caminhão é pesado na balança da rodovia.",
+        "prova": [
+          "Assertiva que dispensa a aferição periódica dos equipamentos de pesagem erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 231"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-100",
+      "unit_id": "6192690b-137b-55d0-a5f0-3ccbd1d395f7",
+      "content_sha256": "19c26864dc7dd5238b24c38110fec13fa6800b603d8cb02600b5c4b90d35aad5",
+      "simples": "Nenhum veículo ou combinação de veículos pode transitar com lotação de passageiros, com peso bruto total ou com peso bruto total combinado com peso por eixo superior ao fixado pelo fabricante, nem ultrapassar a capacidade máxima de tração da unidade tratora. Os veículos de transporte coletivo de passageiros podem ter pneus extralargos, e o Contran regulamenta o uso nos demais. É permitida a fabricação de veículos de transporte de passageiros de até 15 m de comprimento na configuração de chassi 8x2.",
+      "pontos": [
+        "Respeitar lotação e pesos do fabricante.",
+        "Capacidade máxima de tração.",
+        "Pneus extralargos.",
+        "Ônibus de até 15 m em chassi 8x2."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: os parágrafos sobre pneus extralargos e chassi 8x2 vieram de leis posteriores.",
+        "Não estender o permissivo de 15 m a qualquer chassi; o §3º especifica configuração 8x2."
+      ],
+      "exemplo": "O fabricante fixa lotação do ônibus e capacidade de tração da unidade tratora. Resposta: ambas são limites pertinentes; cumprir o peso não libera excesso de passageiros. Variação: O §3º permite até 15 m em configuração de chassi 8x2, sem transformar toda configuração em veículo de 15 m autorizado.",
+      "prova": [
+        "Pneus extralargos são proibidos para todo coletivo? Não. O §1º permite nos coletivos; o §2º remete os demais veículos à regulamentação do Contran.",
+        "A capacidade de tração pode ser ultrapassada porque o peso por eixo está regular? Não. O caput protege limites distintos, inclusive a capacidade máxima de tração."
+      ],
+      "termos": [
+        {
+          "termo": "Capacidade de tração",
+          "significado": "Limite da unidade tratora, diferente de lotação ou peso por eixo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 99"
+      ],
+      "expected": {
+        "unit_id": "6192690b-137b-55d0-a5f0-3ccbd1d395f7",
+        "content_sha256": "19c26864dc7dd5238b24c38110fec13fa6800b603d8cb02600b5c4b90d35aad5",
+        "simples": "Nenhum veículo ou combinação de veículos pode transitar com lotação de passageiros, com peso bruto total ou com peso bruto total combinado com peso por eixo superior ao fixado pelo fabricante, nem ultrapassar a capacidade máxima de tração da unidade tratora. Os veículos de transporte coletivo de passageiros podem ter pneus extralargos, e o Contran regulamenta o uso nos demais. É permitida a fabricação de veículos de transporte de passageiros de até 15 m de comprimento na configuração de chassi 8x2.",
+        "pontos": [
+          "Respeitar lotação e pesos do fabricante.",
+          "Capacidade máxima de tração.",
+          "Pneus extralargos.",
+          "Ônibus de até 15 m em chassi 8x2."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: os parágrafos sobre pneus extralargos e chassi 8x2 vieram de leis posteriores."
+        ],
+        "exemplo": "O ônibus não pode levar mais passageiros que a lotação fixada pelo fabricante.",
+        "prova": [
+          "Assertiva que permite exceder a lotação fixada pelo fabricante erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 99"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-101",
+      "unit_id": "f611479f-0354-584e-a9a3-d3e1ecfbf206",
+      "content_sha256": "29961d623663515afd84db306e1e74335f6239449f94195c4e1fff99919cddfc",
+      "simples": "Ao veículo ou combinação de veículos de carga que não se enquadre nos limites de peso e dimensões do Contran pode ser concedida, pela autoridade com circunscrição sobre a via, autorização especial de trânsito, com prazo certo, válida para cada viagem ou por período, atendidas as medidas de segurança, conforme regulamentação do Contran. A autorização é concedida mediante requerimento que especifica as características do veículo e da carga, o percurso, a data e o horário do deslocamento.",
+      "pontos": [
+        "Autorização especial de trânsito para cargas excedentes.",
+        "Prazo certo.",
+        "Requerimento com características, percurso e horário.",
+        "Guindastes: hipótese de seis meses no §3º.",
+        "§4º: mínimos específicos para tráfego exclusivamente em via rural não pavimentada, com caráter regional diferenciado."
+      ],
+      "atencao": [
+        "A autorização não exime o beneficiário da responsabilidade por danos.",
+        "Não afirmar escolta obrigatória em todo caso apenas pelo art. 101; conferir regulamentação e características da operação."
+      ],
+      "exemplo": "Uma composição de carga excedente recebe AET por período com prazo certo. Resposta: é modalidade admitida; a autorização não precisa limitar-se invariavelmente a uma viagem. Variação: mesmo autorizada, causa dano à via; o §2º não exonera o beneficiário.",
+      "prova": [
+        "Toda AET tem prazo legal universal de seis meses? Não. Seis meses é hipótese dos guindastes do §3º; o caput admite prazo certo por viagem ou período.",
+        "A AET dispensa toda medida de segurança e responsabilidade por dano? Não. São mantidas medidas necessárias e responsabilidade por dano à via ou a terceiros."
+      ],
+      "termos": [
+        {
+          "termo": "AET",
+          "significado": "Autorização especial de trânsito, com prazo e segurança conforme o caso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 99",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14229.htm"
+      ],
+      "expected": {
+        "unit_id": "f611479f-0354-584e-a9a3-d3e1ecfbf206",
+        "content_sha256": "29961d623663515afd84db306e1e74335f6239449f94195c4e1fff99919cddfc",
+        "simples": "Ao veículo ou combinação de veículos de carga que não se enquadre nos limites de peso e dimensões do Contran pode ser concedida, pela autoridade com circunscrição sobre a via, autorização especial de trânsito, com prazo certo, válida para cada viagem ou por período, atendidas as medidas de segurança, conforme regulamentação do Contran. A autorização é concedida mediante requerimento que especifica as características do veículo e da carga, o percurso, a data e o horário do deslocamento.",
+        "pontos": [
+          "Autorização especial de trânsito para cargas excedentes.",
+          "Prazo certo.",
+          "Requerimento com características, percurso e horário."
+        ],
+        "atencao": [
+          "A autorização não exime o beneficiário da responsabilidade por danos."
+        ],
+        "exemplo": "A carga indivisível maior que o limite viaja com AET e escolta.",
+        "prova": [
+          "Assertiva que dispensa autorização para transportar carga acima dos limites erra."
+        ],
+        "termos": [
+          {
+            "termo": "AET",
+            "significado": "Autorização especial de trânsito."
+          }
+        ],
+        "remissoes": [
+          "Art. 99"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-102",
+      "unit_id": "41e87b52-74bb-5867-b515-d893d44fcc37",
+      "content_sha256": "3ebad7442b083142f8aba8e201de473d2081fc371fd6e4691504c99bda065319",
+      "simples": "O veículo de carga deve estar devidamente equipado quando transitar, de modo a evitar o derramamento da carga sobre a via. O Contran fixa os requisitos mínimos e a forma de proteção das cargas, de acordo com a sua natureza.",
+      "pontos": [
+        "Equipamento para evitar o derramamento da carga.",
+        "Requisitos fixados pelo Contran."
+      ],
+      "atencao": [
+        "Requisitos variam conforme a natureza da carga.",
+        "Não transformar um exemplo de lona em exigência universal para todas as cargas; integrar o regulamento adequado."
+      ],
+      "exemplo": "Um caminhão transporta carga que pode derramar na pista. Resposta: precisa estar equipado de forma a impedir derramamento, conforme natureza e regras de proteção da carga. Variação: A autorização de transporte não libera perder material na via; cumprir um documento não substitui proteção adequada.",
+      "prova": [
+        "O dever de evitar derramamento vale apenas para viagem longa? Não. O artigo não cria dispensa por curta distância quando o veículo transita.",
+        "O art. 102 fixa uma cobertura idêntica para toda carga? Não. O parágrafo remete requisitos mínimos e forma de proteção ao Contran conforme a natureza da carga."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção da carga",
+          "significado": "Medida técnica que evita derramamento e depende da natureza transportada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 235"
+      ],
+      "expected": {
+        "unit_id": "41e87b52-74bb-5867-b515-d893d44fcc37",
+        "content_sha256": "3ebad7442b083142f8aba8e201de473d2081fc371fd6e4691504c99bda065319",
+        "simples": "O veículo de carga deve estar devidamente equipado quando transitar, de modo a evitar o derramamento da carga sobre a via. O Contran fixa os requisitos mínimos e a forma de proteção das cargas, de acordo com a sua natureza.",
+        "pontos": [
+          "Equipamento para evitar o derramamento da carga.",
+          "Requisitos fixados pelo Contran."
+        ],
+        "atencao": [
+          "Requisitos variam conforme a natureza da carga."
+        ],
+        "exemplo": "O caminhão de areia usa lona para evitar o derramamento.",
+        "prova": [
+          "Assertiva que dispensa a proteção da carga em trajetos curtos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 235"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-103",
+      "unit_id": "dd7d57d1-f737-5b70-94da-e7da28f62f96",
+      "content_sha256": "be131b06a67b13f6c769ca0e397cca45c12c5b2bdf43cafa89a4f9de31d1bd7d",
+      "simples": "O veículo só pode transitar pela via quando atendidos os requisitos e condições de segurança do Código e das normas do Contran. Fabricantes, importadores, montadores e encarroçadores emitem certificado de segurança, indispensável ao cadastramento no Renavam, e devem manter disponíveis os resultados dos testes e ensaios de segurança veicular. O Contran pode autorizar, em caráter experimental e por período prefixado, a circulação em condições não previstas.",
+      "pontos": [
+        "Requisitos de segurança do Código e do Contran.",
+        "Certificado de segurança para o Renavam.",
+        "Autorização experimental pelo Contran."
+      ],
+      "atencao": [
+        "Certificado de segurança é indispensável ao cadastro no Renavam.",
+        "§3º incluído pela Lei 14.599/2023. Distinguir competência experimental de veículos e a de sinalização do art. 80."
+      ],
+      "exemplo": "Pretende-se experimentar condição de circulação não prevista ordinariamente. Resposta: a autorização do §3º cabe ao Contran, em caráter experimental e por período prefixado. Variação: No art. 80, §2º, a autorização experimental de sinalização cabe ao máximo executivo federal; não copiar a mesma competência para ambos.",
+      "prova": [
+        "A autorização experimental do art. 103 cabe ao órgão municipal por livre escolha? Não. O §3º atribui a possibilidade ao Contran e exige duração prefixada.",
+        "Certificado de segurança elimina o dever de manter resultados dos ensaios disponíveis? Não. O §2º exige disponibilidade a qualquer tempo e procedimentos de comprovação definidos pelo Contran."
+      ],
+      "termos": [
+        {
+          "termo": "Experimento veicular",
+          "significado": "Circulação excepcional autorizada pelo Contran com duração definida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 105",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "dd7d57d1-f737-5b70-94da-e7da28f62f96",
+        "content_sha256": "be131b06a67b13f6c769ca0e397cca45c12c5b2bdf43cafa89a4f9de31d1bd7d",
+        "simples": "O veículo só pode transitar pela via quando atendidos os requisitos e condições de segurança do Código e das normas do Contran. Fabricantes, importadores, montadores e encarroçadores emitem certificado de segurança, indispensável ao cadastramento no Renavam, e devem manter disponíveis os resultados dos testes e ensaios de segurança veicular. O Contran pode autorizar, em caráter experimental e por período prefixado, a circulação em condições não previstas.",
+        "pontos": [
+          "Requisitos de segurança do Código e do Contran.",
+          "Certificado de segurança para o Renavam.",
+          "Autorização experimental pelo Contran."
+        ],
+        "atencao": [
+          "Certificado de segurança é indispensável ao cadastro no Renavam."
+        ],
+        "exemplo": "O fabricante emite o certificado de segurança antes do cadastro do veículo.",
+        "prova": [
+          "Assertiva que dispensa o certificado de segurança para o cadastro no Renavam erra."
+        ],
+        "termos": [
+          {
+            "termo": "Renavam",
+            "significado": "Registro Nacional de Veículos Automotores."
+          }
+        ],
+        "remissoes": [
+          "Art. 105"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-104",
+      "unit_id": "40c44b5a-680e-527f-b11a-165f235396a3",
+      "content_sha256": "d527b4da37d8227243f792436e418bb3f7ea5d5fd4ee8ddc77b3775c55d8ff07",
+      "simples": "O art. 104 prevê inspeção de segurança sob normas do Contran e de emissões/ruído sob normas do Conama. Retenção incide em reprovação. Isenções textuais de três anos (particular novo, até sete passageiros) ou dois anos (demais novos) dependem de características originais e ausência de sinistro de média/grande monta. ALERTA: o programa da Resolução 716/2017 está suspenso por tempo indeterminado pela Deliberação 170/2018 no índice consultado; não ensinar periodicidade geral nacional como se estivesse plenamente implantada. Inspeções específicas continuam com disciplina própria.",
+      "pontos": [
+        "Inspeção de segurança, emissões e ruído.",
+        "Retenção de veículos reprovados.",
+        "Isenção de três anos para particulares novos de até sete passageiros.",
+        "Isenção de dois anos para os demais novos."
+      ],
+      "atencao": [
+        "Não confundir previsão legal, isenção condicionada e implantação regulamentar.",
+        "Contran: segurança; Conama: gases e ruído.",
+        "Deliberação 170/2018 suspende Resolução 716/2017; índice oficial de 13/10/2026 ainda registra a suspensão. Isso não elimina inspeção semestral escolar do art. 136."
+      ],
+      "exemplo": "Um carro novo particular para até sete passageiros sofre sinistro com dano de média monta. Resposta: perde o pressuposto de isenção trienal, que exige ausência desse evento e características originais. Variação: O candidato presume inspeção nacional anual automática de toda frota: não concluir isso; o índice oficial mantém a Resolução 716/2017 suspensa por tempo indeterminado pela Deliberação 170/2018.",
+      "prova": [
+        "A isenção de três anos independe de manter características originais? Não. O §6º condiciona o benefício à originalidade e à ausência de sinistro com danos de média ou grande monta.",
+        "A suspensão da Resolução 716 elimina todas as inspeções previstas no CTB? Não. Não revoga o art. 104 nem dispensa inspeções específicas, como escolares; não presumir calendário nacional universal ativo."
+      ],
+      "termos": [
+        {
+          "termo": "Inspeção específica",
+          "significado": "Avaliação segundo regime pertinente, distinta de supor implantação geral uniforme."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 131",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1702018.pdf"
+      ],
+      "expected": {
+        "unit_id": "40c44b5a-680e-527f-b11a-165f235396a3",
+        "content_sha256": "d527b4da37d8227243f792436e418bb3f7ea5d5fd4ee8ddc77b3775c55d8ff07",
+        "simples": "Os veículos em circulação têm suas condições de segurança, de controle de emissão de gases poluentes e de ruído avaliadas mediante inspeção obrigatória, na forma e periodicidade fixadas pelo Contran para segurança e pelo Conama para poluentes e ruído. Aplica-se a medida administrativa de retenção aos veículos reprovados. Ficam isentos, por três anos a partir do primeiro licenciamento, os veículos novos de categoria particular com capacidade de até sete passageiros; para os demais veículos novos, o período é de dois anos, desde que mantenham as características originais e não se envolvam em sinistro com danos de média ou grande monta.",
+        "pontos": [
+          "Inspeção de segurança, emissões e ruído.",
+          "Retenção de veículos reprovados.",
+          "Isenção de três anos para particulares novos de até sete passageiros.",
+          "Isenção de dois anos para os demais novos."
+        ],
+        "atencao": [
+          "Isenção: três anos (particulares, até sete passageiros) e dois anos (demais)."
+        ],
+        "exemplo": "O carro particular novo fica isento da inspeção nos três primeiros anos.",
+        "prova": [
+          "Assertiva que fixa isenção de cinco anos para veículos novos erra: são três ou dois anos, conforme o caso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 131"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-105",
+      "unit_id": "c4373da8-a309-5579-8b3b-08ecd03c1591",
+      "content_sha256": "f34c76ba1ddc95c56b077c7deb7f097301e17c8a62392e44bd7df08d7e6a8f4e",
+      "simples": "São equipamentos obrigatórios dos veículos, entre outros a serem estabelecidos pelo Contran: cinto de segurança (salvo transporte em pé); equipamento registrador instantâneo inalterável de velocidade e tempo para veículos de transporte e condução escolar, de passageiros com mais de dez lugares e de carga com peso bruto total superior a quatro mil, quinhentos e trinta e seis quilogramas; encosto de cabeça; dispositivo de controle de emissão de gases e ruído; para bicicletas, campainha, sinalização noturna e espelho retrovisor esquerdo; air bag frontal; e luzes de rodagem diurna. Nenhum veículo pode transitar com equipamento ou acessório proibido.",
+      "pontos": [
+        "Cinto, encosto de cabeça, registrador, air bag e luzes diurnas.",
+        "Equipamentos obrigatórios das bicicletas.",
+        "Vedado equipamento ou acessório proibido."
+      ],
+      "atencao": [
+        "Rol não exaustivo: o Contran pode acrescentar equipamentos.",
+        "ATUALIZAÇÃO: o inciso das luzes de rodagem diurna foi incluído por lei posterior.",
+        "Não transformar airbag/DRL em obrigação retroativa universal da frota sem conferir cronograma, projeto e regulamentação.",
+        "§6º: a exigência do inciso VII não se aplica aos veículos destinados à exportação; não dispensa geral de segurança."
+      ],
+      "exemplo": "Um coletivo tem onze lugares, enquanto um veículo de carga tem PBT exatamente 4.536 kg. Resposta: o inciso II inclui mais de dez lugares e PBT SUPERIOR a 4.536 kg; não trocar limites por igual ou superior. Variação: O inciso VIII de DRL precisa ser integrado ao cronograma e à regulamentação, sem obrigar adaptar toda frota antiga apenas por leitura isolada.",
+      "prova": [
+        "O rol do art. 105 esgota todo equipamento obrigatório? Não. O caput permite outros estabelecidos pelo Contran e o §1º remete especificações técnicas.",
+        "A exceção textual de cinto para percurso em pé dispensa todo coletivo indistintamente? Não. O inciso I traz recorte de veículo destinado a percurso em que é permitido viajar em pé, integrado à regulamentação."
+      ],
+      "termos": [
+        {
+          "termo": "Equipamento por categoria",
+          "significado": "Obrigação cujo alcance depende do tipo de veículo e das normas técnicas aplicáveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 230"
+      ],
+      "expected": {
+        "unit_id": "c4373da8-a309-5579-8b3b-08ecd03c1591",
+        "content_sha256": "f34c76ba1ddc95c56b077c7deb7f097301e17c8a62392e44bd7df08d7e6a8f4e",
+        "simples": "São equipamentos obrigatórios dos veículos, entre outros a serem estabelecidos pelo Contran: cinto de segurança (salvo transporte em pé); equipamento registrador instantâneo inalterável de velocidade e tempo para veículos de transporte e condução escolar, de passageiros com mais de dez lugares e de carga com peso bruto total superior a quatro mil, quinhentos e trinta e seis quilogramas; encosto de cabeça; dispositivo de controle de emissão de gases e ruído; para bicicletas, campainha, sinalização noturna e espelho retrovisor esquerdo; air bag frontal; e luzes de rodagem diurna. Nenhum veículo pode transitar com equipamento ou acessório proibido.",
+        "pontos": [
+          "Cinto, encosto de cabeça, registrador, air bag e luzes diurnas.",
+          "Equipamentos obrigatórios das bicicletas.",
+          "Vedado equipamento ou acessório proibido."
+        ],
+        "atencao": [
+          "Rol não exaustivo: o Contran pode acrescentar equipamentos.",
+          "ATUALIZAÇÃO: o inciso das luzes de rodagem diurna foi incluído por lei posterior."
+        ],
+        "exemplo": "A bicicleta deve ter campainha e sinalização noturna.",
+        "prova": [
+          "Assertiva que dispensa o espelho retrovisor esquerdo nas bicicletas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 230"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-106",
+      "unit_id": "472f56c8-1268-5516-9516-dc9f65656771",
+      "content_sha256": "0da33f25d29efe73c97f67349726586ddafeb87a77b4544fe94dc414109d1ff4",
+      "simples": "Na fabricação artesanal, na modificação do veículo ou na substituição de equipamento de segurança especificado pelo fabricante, exige-se, para licenciamento e registro, certificado de segurança expedido por instituição técnica credenciada por órgão de metrologia legal, conforme norma do Contran. Para blindagem de veículo, não se exige qualquer outro documento ou autorização para o registro ou o licenciamento.",
+      "pontos": [
+        "Certificado de segurança de instituição credenciada.",
+        "Blindagem não exige outra autorização."
+      ],
+      "atencao": [
+        "A expressão nenhum outro documento ou autorização no parágrafo não deve ser ampliada para dispensa de todo requisito do veículo ou de qualquer regime externo.",
+        "Distinguir certificado deste artigo e o emitido pelos sujeitos do art. 103."
+      ],
+      "exemplo": "Veículo artesanal precisa ser registrado e licenciado. Resposta: exige certificado por instituição técnica credenciada em metrologia legal, conforme norma do Contran. Variação: A blindagem tem ressalva de não exigir outro documento/autorização para registro ou licenciamento; isso não vira dispensa universal de segurança, modificação regular ou outras regras aplicáveis.",
+      "prova": [
+        "Qualquer oficina não credenciada pode emitir o certificado exigido? Não. O caput exige instituição técnica credenciada por órgão ou entidade de metrologia legal.",
+        "O parágrafo de blindagem libera toda obrigação de segurança do veículo? Não. Delimita documento/autorização adicional para registro ou licenciamento, sem revogar o restante do CTB."
+      ],
+      "termos": [
+        {
+          "termo": "Certificado técnico",
+          "significado": "Documento de instituição credenciada para o recorte de registro e licenciamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 98",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "472f56c8-1268-5516-9516-dc9f65656771",
+        "content_sha256": "0da33f25d29efe73c97f67349726586ddafeb87a77b4544fe94dc414109d1ff4",
+        "simples": "Na fabricação artesanal, na modificação do veículo ou na substituição de equipamento de segurança especificado pelo fabricante, exige-se, para licenciamento e registro, certificado de segurança expedido por instituição técnica credenciada por órgão de metrologia legal, conforme norma do Contran. Para blindagem de veículo, não se exige qualquer outro documento ou autorização para o registro ou o licenciamento.",
+        "pontos": [
+          "Certificado de segurança de instituição credenciada.",
+          "Blindagem não exige outra autorização."
+        ],
+        "atencao": [
+          "Blindagem: nenhum outro documento ou autorização."
+        ],
+        "exemplo": "O veículo modificado só é licenciado com o certificado de segurança.",
+        "prova": [
+          "Assertiva que dispensa o certificado de segurança em veículos de fabricação artesanal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 98"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-107",
+      "unit_id": "4fb37b57-0abf-5161-a0b7-5c1002a0db28",
+      "content_sha256": "125b0bdccce5e4f651412f6115f18880713b19104305c93e49bad1265eca7e36",
+      "simples": "Os veículos de aluguel, destinados ao transporte individual ou coletivo de passageiros, devem satisfazer, além das exigências do Código, às condições técnicas e aos requisitos de segurança, higiene e conforto estabelecidos pelo poder competente para autorizar, permitir ou conceder a exploração da atividade.",
+      "pontos": [
+        "Exigências do Código e do poder concedente.",
+        "Segurança, higiene e conforto."
+      ],
+      "atencao": [
+        "O poder concedente define requisitos adicionais.",
+        "Não confundir regulamentação adicional válida com liberdade para contrariar normas federais."
+      ],
+      "exemplo": "Um táxi preenche requisitos do CTB, mas descumpre higiene exigida pelo poder competente. Resposta: as condições adicionais de segurança, higiene e conforto também se aplicam. Variação: Cumprir condição local não dispensa o veículo das exigências nacionais do CTB.",
+      "prova": [
+        "Exigência local de higiene substitui integralmente o CTB? Não. O caput usa além das exigências previstas no código, indicando integração.",
+        "A competência adicional se limita a conceder serviço coletivo? Não. O artigo inclui transporte individual ou coletivo e autorizar, permitir ou conceder a exploração."
+      ],
+      "termos": [
+        {
+          "termo": "Requisito adicional",
+          "significado": "Condição do poder competente que se soma às exigências nacionais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 135"
+      ],
+      "expected": {
+        "unit_id": "4fb37b57-0abf-5161-a0b7-5c1002a0db28",
+        "content_sha256": "125b0bdccce5e4f651412f6115f18880713b19104305c93e49bad1265eca7e36",
+        "simples": "Os veículos de aluguel, destinados ao transporte individual ou coletivo de passageiros, devem satisfazer, além das exigências do Código, às condições técnicas e aos requisitos de segurança, higiene e conforto estabelecidos pelo poder competente para autorizar, permitir ou conceder a exploração da atividade.",
+        "pontos": [
+          "Exigências do Código e do poder concedente.",
+          "Segurança, higiene e conforto."
+        ],
+        "atencao": [
+          "O poder concedente define requisitos adicionais."
+        ],
+        "exemplo": "O táxi cumpre as exigências do município, além do Código.",
+        "prova": [
+          "Assertiva que afasta as exigências do poder concedente do veículo de aluguel erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-109",
+      "unit_id": "7331eeff-5114-5068-ad57-4755b4ab6d40",
+      "content_sha256": "682694f152ebf25ad9c3bcff4b80a50e82a5ce53d23d28510a4ad55a93ae517c",
+      "simples": "O transporte de carga em veículos destinados ao transporte de passageiros só pode ser realizado de acordo com as normas estabelecidas pelo Contran.",
+      "pontos": [
+        "Carga em veículo de passageiros só conforme o Contran."
+      ],
+      "atencao": [
+        "Depende das normas do Contran.",
+        "Não inserir limite de quantidade ou exigência de compartimento específico sem validar a norma pertinente."
+      ],
+      "exemplo": "Um veículo destinado a passageiros transportará carga. Resposta: é preciso obedecer às normas do Contran, não presumir autorização sem condições. Variação: A regra não proíbe absolutamente toda carga nesse tipo de veículo; admite realização no regime normativo pertinente.",
+      "prova": [
+        "O artigo libera carga em veículo de passageiros por decisão do motorista? Não. Só permite realização conforme as normas estabelecidas pelo Contran.",
+        "A norma significa proibição absoluta sem possibilidade regulamentar? Não. O texto condiciona a atividade à regulamentação, em vez de excluí-la em toda hipótese."
+      ],
+      "termos": [
+        {
+          "termo": "Carga condicionada",
+          "significado": "Transporte compatível com o regulamento aplicável, sem autorização irrestrita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 108"
+      ],
+      "expected": {
+        "unit_id": "7331eeff-5114-5068-ad57-4755b4ab6d40",
+        "content_sha256": "682694f152ebf25ad9c3bcff4b80a50e82a5ce53d23d28510a4ad55a93ae517c",
+        "simples": "O transporte de carga em veículos destinados ao transporte de passageiros só pode ser realizado de acordo com as normas estabelecidas pelo Contran.",
+        "pontos": [
+          "Carga em veículo de passageiros só conforme o Contran."
+        ],
+        "atencao": [
+          "Depende das normas do Contran."
+        ],
+        "exemplo": "O ônibus só carrega encomendas nos termos da norma do Contran.",
+        "prova": [
+          "Assertiva que permite carga livre em veículos de passageiros erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 108"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-110",
+      "unit_id": "69b04ccd-648c-5960-a329-eb9c7b3f3f37",
+      "content_sha256": "3d25a98c7c863c7b40f0dbfb737f3c5889550485ce0f166e781c755f2c3cdf61",
+      "simples": "O veículo que tiver alterada qualquer de suas características para competição ou finalidade análoga só pode circular nas vias públicas com licença especial da autoridade de trânsito, em itinerário e horário fixados.",
+      "pontos": [
+        "Licença especial da autoridade de trânsito.",
+        "Itinerário e horário fixados."
+      ],
+      "atencao": [
+        "Licença especial, com itinerário e horário.",
+        "Não confundir licença de circulação, autorização de modificação e permissão para competição."
+      ],
+      "exemplo": "Um automóvel foi alterado para competição e pretende circular em via pública. Resposta: necessita licença especial da autoridade, com itinerário e horário fixados. Variação: A licença de circulação não substitui automaticamente a permissão de uma competição em via aberta, regida pelo art. 67.",
+      "prova": [
+        "A licença especial vale para qualquer rota e horário? Não. O caput exige itinerário e horário fixados, não circulação irrestrita.",
+        "Art. 110 e art. 67 concedem a mesma autorização para todo caso? Não. Um trata de veículo alterado para competição; outro, de realização de provas e ensaios na via."
+      ],
+      "termos": [
+        {
+          "termo": "Licença especial",
+          "significado": "Permissão de circulação de veículo alterado, delimitada por percurso e horário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 98"
+      ],
+      "expected": {
+        "unit_id": "69b04ccd-648c-5960-a329-eb9c7b3f3f37",
+        "content_sha256": "3d25a98c7c863c7b40f0dbfb737f3c5889550485ce0f166e781c755f2c3cdf61",
+        "simples": "O veículo que tiver alterada qualquer de suas características para competição ou finalidade análoga só pode circular nas vias públicas com licença especial da autoridade de trânsito, em itinerário e horário fixados.",
+        "pontos": [
+          "Licença especial da autoridade de trânsito.",
+          "Itinerário e horário fixados."
+        ],
+        "atencao": [
+          "Licença especial, com itinerário e horário."
+        ],
+        "exemplo": "O carro de competição só circula na via com licença e rota definidas.",
+        "prova": [
+          "Assertiva que dispensa licença para circular com veículo modificado para competição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 98"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-111",
+      "unit_id": "c0bade76-5a91-540f-8b16-5c00f2cb9f07",
+      "content_sha256": "91d35962c9658271aba716ca935c23fb91f8ed8cbd742367760efd7a910bd6d9",
+      "simples": "É vedado, nas áreas envidraçadas do veículo, o uso de cortinas, persianas fechadas ou similares em veículos em movimento, salvo nos que possuam espelhos retrovisores em ambos os lados, e a aposição de inscrições, películas, painéis decorativos ou pinturas quando comprometer a segurança do veículo, na forma da regulamentação do Contran. É proibida a inscrição de caráter publicitário ou outra que desvie a atenção dos condutores em toda a extensão do para-brisa e da traseira, salvo se não colocar em risco a segurança.",
+      "pontos": [
+        "Vedadas cortinas e persianas fechadas, com exceção.",
+        "Películas e pinturas que comprometam a segurança.",
+        "Vedada publicidade que desvie a atenção."
+      ],
+      "atencao": [
+        "Inciso I: VETADO, sem comando vigente. Não confundir veto com revogação posterior.",
+        "Inciso II: exceção de retrovisores nos dois lados; inciso III e parágrafo: segurança e regulamentação, sem dispensa universal.",
+        "Não ensinar um percentual único de película para todos os vidros sem conferir resolução e posição do vidro."
+      ],
+      "exemplo": "Um veículo em movimento usa persianas fechadas e não tem retrovisores dos dois lados. Resposta: não se enquadra na exceção do inciso II. Variação: Ter retrovisores dos dois lados não permite película que comprometa a segurança; o inciso III tem regra e regulamentação próprias.",
+      "prova": [
+        "Retrovisores de ambos os lados tornam qualquer película automaticamente regular? Não. A exceção do inciso II não elimina a restrição de segurança e regulamentação do inciso III.",
+        "O inciso I vetado institui atualmente uma proibição autônoma? Não. Vetado não equivale a norma vigente; não afirmar que foi lei válida depois suprimida apenas pela marcação."
+      ],
+      "termos": [
+        {
+          "termo": "Área envidraçada",
+          "significado": "Superfície sujeita a regras de visibilidade e segurança, com exceções delimitadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 230"
+      ],
+      "expected": {
+        "unit_id": "c0bade76-5a91-540f-8b16-5c00f2cb9f07",
+        "content_sha256": "91d35962c9658271aba716ca935c23fb91f8ed8cbd742367760efd7a910bd6d9",
+        "simples": "É vedado, nas áreas envidraçadas do veículo, o uso de cortinas, persianas fechadas ou similares em veículos em movimento, salvo nos que possuam espelhos retrovisores em ambos os lados, e a aposição de inscrições, películas, painéis decorativos ou pinturas quando comprometer a segurança do veículo, na forma da regulamentação do Contran. É proibida a inscrição de caráter publicitário ou outra que desvie a atenção dos condutores em toda a extensão do para-brisa e da traseira, salvo se não colocar em risco a segurança.",
+        "pontos": [
+          "Vedadas cortinas e persianas fechadas, com exceção.",
+          "Películas e pinturas que comprometam a segurança.",
+          "Vedada publicidade que desvie a atenção."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso I (películas) foi suprimido; a regulação cabe ao Contran."
+        ],
+        "exemplo": "Persiana fechada no vidro traseiro só é permitida com espelhos retrovisores dos dois lados.",
+        "prova": [
+          "Assertiva que permite persianas fechadas em qualquer veículo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 230"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-113",
+      "unit_id": "2c61b748-7f46-5a34-9d71-0d4c97953ae4",
+      "content_sha256": "81268cea54958cec0ef92b543ea8bdd7c2d1dfd5ddc28004e6647eb6aca506a9",
+      "simples": "Os importadores, as montadoras, as encarroçadoras e os fabricantes de veículos e autopeças são responsáveis civil e criminalmente por danos causados aos usuários, a terceiros e ao meio ambiente, decorrentes de falhas oriundas de projetos e da qualidade dos materiais e equipamentos utilizados na fabricação.",
+      "pontos": [
+        "Responsabilidade civil e criminal.",
+        "Danos a usuários, terceiros e ao meio ambiente."
+      ],
+      "atencao": [
+        "Responsabilidade CIVIL E CRIMINAL.",
+        "Distinguir responsabilidade civil e penal; não criar tipo penal ou culpa automática apenas pelo dano."
+      ],
+      "exemplo": "Uma falha de projeto gera dano ao usuário e ao ambiente. Resposta: o artigo prevê responsabilidade civil e criminal dos sujeitos indicados, conforme os requisitos de cada regime. Variação: A menção a responsabilidade criminal não condena automaticamente toda pessoa ligada à empresa sem examinar conduta, tipicidade e imputação.",
+      "prova": [
+        "O artigo protege apenas quem comprou o veículo? Não. Abrange usuários, terceiros e meio ambiente diante de falhas de projeto ou qualidade.",
+        "Responsabilidade criminal prevista dispensa provar seus pressupostos no caso? Não. O artigo não autoriza condenação penal automática por qualquer dano ou vínculo empresarial."
+      ],
+      "termos": [
+        {
+          "termo": "Responsabilidade delimitada",
+          "significado": "Consequências civis e criminais nos seus respectivos requisitos, sem condenação automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 103"
+      ],
+      "expected": {
+        "unit_id": "2c61b748-7f46-5a34-9d71-0d4c97953ae4",
+        "content_sha256": "81268cea54958cec0ef92b543ea8bdd7c2d1dfd5ddc28004e6647eb6aca506a9",
+        "simples": "Os importadores, as montadoras, as encarroçadoras e os fabricantes de veículos e autopeças são responsáveis civil e criminalmente por danos causados aos usuários, a terceiros e ao meio ambiente, decorrentes de falhas oriundas de projetos e da qualidade dos materiais e equipamentos utilizados na fabricação.",
+        "pontos": [
+          "Responsabilidade civil e criminal.",
+          "Danos a usuários, terceiros e ao meio ambiente."
+        ],
+        "atencao": [
+          "Responsabilidade CIVIL E CRIMINAL."
+        ],
+        "exemplo": "A montadora responde por falha de projeto que causou acidente.",
+        "prova": [
+          "Assertiva que limita a responsabilidade dos fabricantes à esfera civil erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 103"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-114",
+      "unit_id": "ec89bece-3fcc-55c2-b965-e6c2c5fa81f4",
+      "content_sha256": "98b7abf94abba1a2e8471471b6c5f1fdf8870e8afcc322311424c6209ccd1c4d",
+      "simples": "O veículo é identificado obrigatoriamente por caracteres gravados no chassi ou monobloco, reproduzidos em outras partes, conforme o Contran. A gravação é feita pelo fabricante ou montador e identifica o veículo, seu fabricante, suas características e o ano de fabricação, que não pode ser alterado. As regravações dependem de prévia autorização da autoridade executiva de trânsito e só são processadas por estabelecimento credenciado, mediante comprovação de propriedade. Nenhum proprietário pode modificar a identificação sem prévia permissão.",
+      "pontos": [
+        "Gravação no chassi ou monobloco.",
+        "Ano de fabricação inalterável.",
+        "Regravação com autorização e por estabelecimento credenciado."
+      ],
+      "atencao": [
+        "O ano de fabricação NÃO pode ser alterado.",
+        "Não transformar autorização de regravação em permissão para mudar identidade do veículo."
+      ],
+      "exemplo": "Um chassi precisa de regravação. Resposta: exigir autorização prévia, estabelecimento credenciado e prova de propriedade, mantendo identificação anterior e ano de fabricação. Variação: Regravar para atribuir ano mais recente não é permitido pelo regime legal.",
+      "prova": [
+        "A regravação permite alterar o ano de fabricação? Não. Os §§1º/2º preservam o ano e a identificação anterior, não uma nova identidade arbitrária.",
+        "Apenas prova de propriedade dispensa autorização e credenciamento? Não. O §2º reúne esses requisitos, e o §3º impede alteração sem prévia permissão."
+      ],
+      "termos": [
+        {
+          "termo": "Regravação regular",
+          "significado": "Reprodução autorizada da identificação anterior por estabelecimento credenciado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 115"
+      ],
+      "expected": {
+        "unit_id": "ec89bece-3fcc-55c2-b965-e6c2c5fa81f4",
+        "content_sha256": "98b7abf94abba1a2e8471471b6c5f1fdf8870e8afcc322311424c6209ccd1c4d",
+        "simples": "O veículo é identificado obrigatoriamente por caracteres gravados no chassi ou monobloco, reproduzidos em outras partes, conforme o Contran. A gravação é feita pelo fabricante ou montador e identifica o veículo, seu fabricante, suas características e o ano de fabricação, que não pode ser alterado. As regravações dependem de prévia autorização da autoridade executiva de trânsito e só são processadas por estabelecimento credenciado, mediante comprovação de propriedade. Nenhum proprietário pode modificar a identificação sem prévia permissão.",
+        "pontos": [
+          "Gravação no chassi ou monobloco.",
+          "Ano de fabricação inalterável.",
+          "Regravação com autorização e por estabelecimento credenciado."
+        ],
+        "atencao": [
+          "O ano de fabricação NÃO pode ser alterado."
+        ],
+        "exemplo": "A regravação do chassi só é feita por oficina credenciada, com autorização.",
+        "prova": [
+          "Assertiva que permite alterar o ano de fabricação na regravação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-115",
+      "unit_id": "0e83d0e6-79f0-5561-ad3a-5bc114daf055",
+      "content_sha256": "4a433cc17f52983394dae3305872c66736664b2fbcbfe5e3f03811b2c3351379",
+      "simples": "O veículo tem placas conforme o modelo do Contran, com exceções, como dispensa dianteira para duas ou três rodas e regime de veículo bélico. O §9º permite dispensa do lacre físico por tecnologia de identificação: na PIV, a Resolução 969/2022 prevê QR Code como lacre eletrônico. Registro de máquinas de construção e de máquinas agrícolas tem recortes próprios; não exigir licenciamento/emplacamento universal dessas hipóteses. Placas especiais e particulares dependem dos pressupostos específicos.",
+      "pontos": [
+        "Duas/três rodas: dispensa de placa dianteira no §6º; não generalizar para todos os automotores.",
+        "Caracteres individualizados até baixa, vedado reaproveitamento.",
+        "§9º + Resolução 969, art. 3º: lacre eletrônico por QR Code substitui lacre físico no modelo PIV.",
+        "§4º: máquinas de construção/pavimentação na via pública têm registro, dispensados licenciamento e emplacamento.",
+        "§4º-A: máquinas agrícolas, registro único gratuito no Ministério da Agricultura e Pecuária.",
+        "§7º: placa especial temporária exige autorização específica fundamentada e comunicação; não privilégio automático de toda autoridade."
+      ],
+      "atencao": [
+        "Não repetir placa sempre lacrada fisicamente sem a exceção tecnológica.",
+        "Não confundir §7º (proteção temporária de membros com atribuição criminal) e art. 116 (serviço policial reservado).",
+        "§10: livre passagem exige meios técnicos de identificação; não significa anonimato ou dispensa de pagamento de pedágio."
+      ],
+      "exemplo": "Um veículo usa PIV com QR Code no modelo regulamentado. Resposta: a Resolução 969/2022 trata o código como lacre eletrônico que substitui o lacre do caput, integrado ao §9º. Variação: Uma placa antiga continua sujeita ao seu regime pertinente; a dispensa de lacre físico da PIV não libera identificação defeituosa de todo modelo.",
+      "prova": [
+        "Toda placa traseira exige lacre físico sem exceção? Não. O §9º admite dispensa com tecnologia de identificação e a Resolução 969, art. 3º, estabelece lacre eletrônico por QR Code.",
+        "O registro agrícola do §4º-A exige pagamento obrigatório no Detran? Não. O recorte atual prevê registro único sem ônus no cadastro específico do Ministério da Agricultura e Pecuária."
+      ],
+      "termos": [
+        {
+          "termo": "Lacre eletrônico",
+          "significado": "QR Code de identificação no regime da PIV, distinto de ausência de controle da placa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 116",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "0e83d0e6-79f0-5561-ad3a-5bc114daf055",
+        "content_sha256": "4a433cc17f52983394dae3305872c66736664b2fbcbfe5e3f03811b2c3351379",
+        "simples": "O veículo é identificado externamente por placas dianteira e traseira, esta lacrada em sua estrutura, segundo as especificações do Contran. Os caracteres são individualizados para cada veículo e o acompanham até a baixa do registro, vedado o reaproveitamento. As placas verde e amarela da Bandeira Nacional são de uso exclusivo dos veículos de representação pessoal de autoridades como o Presidente da República, ministros do Supremo e Ministros de Estado. Veículos de duas ou três rodas são dispensados da placa dianteira. Aparelhos automotores para trabalhos de construção ou pavimentação estão sujeitos ao registro, dispensados licenciamento e emplacamento.",
+        "pontos": [
+          "Placas dianteira e traseira, esta lacrada.",
+          "Caracteres individualizados e sem reaproveitamento.",
+          "Placas verde e amarela restritas a altas autoridades.",
+          "Veículos de duas ou três rodas dispensados da placa dianteira."
+        ],
+        "atencao": [
+          "Motos e triciclos usam só a placa traseira.",
+          "Placa lacrada na estrutura do veículo."
+        ],
+        "exemplo": "A motocicleta circula apenas com a placa traseira.",
+        "prova": [
+          "Assertiva que exige placa dianteira nas motocicletas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 116"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-116",
+      "unit_id": "8fea620d-70be-5648-8941-f364070bb10e",
+      "content_sha256": "d7a3a12bf9346932c5de6eeca1c4f292533b720cbdbb3e4b23fb6b78b921f5ae",
+      "simples": "Os veículos de propriedade da União, dos Estados e do Distrito Federal, devidamente registrados e licenciados, ou aqueles sob posse dos órgãos de segurança pública, somente quando estritamente usados em serviço reservado de caráter policial, podem usar placas particulares, obedecidos os critérios da legislação sobre veículo oficial. As placas são concedidas mediante solicitação aos órgãos executivos de trânsito dos Estados e do Distrito Federal e vinculadas ao órgão de segurança pública solicitante.",
+      "pontos": [
+        "Placas particulares em serviço reservado de caráter policial.",
+        "Concessão pelos órgãos executivos estaduais e distritais.",
+        "Vinculação ao órgão solicitante."
+      ],
+      "atencao": [
+        "Só em serviço RESERVADO de caráter policial.",
+        "Lei 14.599/2023 atualizou propriedade/posse e vinculação; não ampliar a toda atividade oficial."
+      ],
+      "exemplo": "Um órgão de segurança usa veículo sob sua posse, estritamente em serviço policial reservado. Resposta: pode requerer placa particular no recorte atual, que não se limita à propriedade. Variação: Um veículo oficial em atividade administrativa comum não recebe a mesma permissão apenas por integrar a frota policial.",
+      "prova": [
+        "O artigo exige sempre propriedade do órgão de segurança? Não. A redação de 2023 também inclui veículos sob posse desses órgãos, com as demais condições.",
+        "A placa é desvinculada de qualquer órgão para manter anonimato administrativo total? Não. O parágrafo determina concessão por solicitação e vínculo ao órgão de segurança requerente."
+      ],
+      "termos": [
+        {
+          "termo": "Serviço reservado",
+          "significado": "Uso policial estritamente delimitado que fundamenta a placa particular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 115",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "8fea620d-70be-5648-8941-f364070bb10e",
+        "content_sha256": "d7a3a12bf9346932c5de6eeca1c4f292533b720cbdbb3e4b23fb6b78b921f5ae",
+        "simples": "Os veículos de propriedade da União, dos Estados e do Distrito Federal, devidamente registrados e licenciados, ou aqueles sob posse dos órgãos de segurança pública, somente quando estritamente usados em serviço reservado de caráter policial, podem usar placas particulares, obedecidos os critérios da legislação sobre veículo oficial. As placas são concedidas mediante solicitação aos órgãos executivos de trânsito dos Estados e do Distrito Federal e vinculadas ao órgão de segurança pública solicitante.",
+        "pontos": [
+          "Placas particulares em serviço reservado de caráter policial.",
+          "Concessão pelos órgãos executivos estaduais e distritais.",
+          "Vinculação ao órgão solicitante."
+        ],
+        "atencao": [
+          "Só em serviço RESERVADO de caráter policial."
+        ],
+        "exemplo": "A viatura descaracterizada em operação reservada usa placa particular.",
+        "prova": [
+          "Assertiva que permite placa particular a qualquer veículo oficial em qualquer serviço erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-117",
+      "unit_id": "20a5fec5-5d98-5737-8b7a-60d8a5ffd234",
+      "content_sha256": "f1902cadae077d68f68000e3cfc1eead48bcb48260f84c60c367af1af45994ac",
+      "simples": "Os veículos de transporte de carga e os coletivos de passageiros devem conter, em local facilmente visível, a inscrição indicativa de sua tara, do peso bruto total, do peso bruto total combinado ou capacidade máxima de tração e de sua lotação, vedado o uso em desacordo com sua classificação.",
+      "pontos": [
+        "Inscrição de tara, PBT, PBTC ou CMT e lotação.",
+        "Em local facilmente visível."
+      ],
+      "atencao": [
+        "Vedado usar o veículo em desacordo com a classificação.",
+        "Não trocar PBT, PBTC e CMT nem deduzir capacidade por sigla sem consultar definição correspondente."
+      ],
+      "exemplo": "Um coletivo de passageiros não exibe sua lotação em local facilmente visível. Resposta: a inscrição é exigida junto aos dados de peso/capacidade pertinentes. Variação: Mostrar dados técnicos não permite usar o veículo em desacordo com a classificação.",
+      "prova": [
+        "A inscrição pode ficar em local inacessível à observação? Não. O caput exige local facilmente visível para veículos de carga e coletivos de passageiros.",
+        "Tara e lotação designam exatamente a mesma capacidade? Não. Tara é dado de peso do veículo; lotação e capacidades de peso/tração são grandezas distintas."
+      ],
+      "termos": [
+        {
+          "termo": "Tara",
+          "significado": "Peso próprio do veículo no conceito técnico, diferente da carga transportada ou lotação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 100"
+      ],
+      "expected": {
+        "unit_id": "20a5fec5-5d98-5737-8b7a-60d8a5ffd234",
+        "content_sha256": "f1902cadae077d68f68000e3cfc1eead48bcb48260f84c60c367af1af45994ac",
+        "simples": "Os veículos de transporte de carga e os coletivos de passageiros devem conter, em local facilmente visível, a inscrição indicativa de sua tara, do peso bruto total, do peso bruto total combinado ou capacidade máxima de tração e de sua lotação, vedado o uso em desacordo com sua classificação.",
+        "pontos": [
+          "Inscrição de tara, PBT, PBTC ou CMT e lotação.",
+          "Em local facilmente visível."
+        ],
+        "atencao": [
+          "Vedado usar o veículo em desacordo com a classificação."
+        ],
+        "exemplo": "O caminhão traz a tara e o peso bruto total inscritos.",
+        "prova": [
+          "Assertiva que dispensa a inscrição da lotação nos coletivos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 100"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-118",
+      "unit_id": "91dd8e22-7b8b-5569-a069-a22b2d18fc49",
+      "content_sha256": "4b28aa3648983dae6f385c670472a2b9e56c9c28834e4ac72d3d9a47ea384ccc",
+      "simples": "A circulação de veículo no território nacional, independentemente de sua origem, em trânsito entre o Brasil e países com os quais exista acordo ou tratado internacional, reger-se-á pelas disposições do Código e pelas convenções e acordos internacionais ratificados.",
+      "pontos": [
+        "Aplicação do Código e dos tratados ratificados."
+      ],
+      "atencao": [
+        "Convenções internacionais ratificadas também se aplicam.",
+        "Não afirmar que todo veículo de país vizinho está dispensado de documentação ou normas brasileiras."
+      ],
+      "exemplo": "Um veículo estrangeiro circula no Brasil numa operação entre países com acordo ratificado. Resposta: integrar CTB e convenções/acordos ratificados pertinentes. Variação: Uma referência a acordo ainda não ratificado não basta para aplicar automaticamente suas regras como regime vigente.",
+      "prova": [
+        "A origem estrangeira exclui a aplicação do CTB? Não. O artigo prevê o CTB integrado às convenções e acordos internacionais ratificados.",
+        "Qualquer acordo anunciado, mesmo sem ratificação, substitui as regras? Não. O caput exige convenções e acordos ratificados, sem dispensa universal pela nacionalidade do veículo."
+      ],
+      "termos": [
+        {
+          "termo": "Acordo ratificado",
+          "significado": "Instrumento internacional incorporado no regime pertinente, não mera notícia de negociação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 3º"
+      ],
+      "expected": {
+        "unit_id": "91dd8e22-7b8b-5569-a069-a22b2d18fc49",
+        "content_sha256": "4b28aa3648983dae6f385c670472a2b9e56c9c28834e4ac72d3d9a47ea384ccc",
+        "simples": "A circulação de veículo no território nacional, independentemente de sua origem, em trânsito entre o Brasil e países com os quais exista acordo ou tratado internacional, reger-se-á pelas disposições do Código e pelas convenções e acordos internacionais ratificados.",
+        "pontos": [
+          "Aplicação do Código e dos tratados ratificados."
+        ],
+        "atencao": [
+          "Convenções internacionais ratificadas também se aplicam."
+        ],
+        "exemplo": "O veículo de outro país do Mercosul segue o Código e o acordo ratificado.",
+        "prova": [
+          "Assertiva que afasta o Código para veículos estrangeiros em trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-119",
+      "unit_id": "e5c61fe3-c592-557c-9697-0a7ee31b8386",
+      "content_sha256": "93eae11f6c2ce0b02dbe82cccc89132d209f13360055207bc8bc61d199772b8b",
+      "simples": "As repartições aduaneiras e os órgãos de controle de fronteira comunicam diretamente ao Renavam a entrada e a saída temporária ou definitiva de veículos. Os veículos licenciados no exterior não podem sair do território nacional sem o prévio pagamento ou depósito dos valores das infrações de trânsito e do ressarcimento de danos que tiverem causado ao patrimônio público ou de particulares. Os que saírem sem esse cumprimento e forem flagrados tentando ingressar ou em circulação no território nacional são retidos até a regularização.",
+      "pontos": [
+        "Comunicação ao Renavam.",
+        "Saída condicionada ao pagamento das infrações e danos.",
+        "Retenção em caso de nova entrada sem regularização."
+      ],
+      "atencao": [
+        "Saída do veículo estrangeiro só após pagar ou depositar infrações e danos.",
+        "Distinguir veículo licenciado no exterior e pessoa estrangeira; o recorte é do veículo.",
+        "§2º: retenção até regularização, não antiga penalidade de apreensão."
+      ],
+      "exemplo": "Um veículo licenciado no exterior causou dano e recebeu infração no Brasil. Resposta: a saída depende de pagamento ou depósito judicial/administrativo dos valores pertinentes, conforme §1º. Variação: Se saiu sem regularização e volta, pode ser retido até regularizar; não substituir retenção por antiga penalidade de apreensão.",
+      "prova": [
+        "O artigo só permite quitação definitiva em dinheiro para a saída? Não. O §1º admite pagamento OU depósito judicial ou administrativo, sem eliminar demais requisitos.",
+        "A comunicação ao Renavam só alcança entrada definitiva? Não. O caput inclui entrada e saída temporária ou definitiva comunicadas pelos órgãos indicados."
+      ],
+      "termos": [
+        {
+          "termo": "Depósito admitido",
+          "significado": "Alternativa judicial ou administrativa prevista para os valores pertinentes à saída."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 118"
+      ],
+      "expected": {
+        "unit_id": "e5c61fe3-c592-557c-9697-0a7ee31b8386",
+        "content_sha256": "93eae11f6c2ce0b02dbe82cccc89132d209f13360055207bc8bc61d199772b8b",
+        "simples": "As repartições aduaneiras e os órgãos de controle de fronteira comunicam diretamente ao Renavam a entrada e a saída temporária ou definitiva de veículos. Os veículos licenciados no exterior não podem sair do território nacional sem o prévio pagamento ou depósito dos valores das infrações de trânsito e do ressarcimento de danos que tiverem causado ao patrimônio público ou de particulares. Os que saírem sem esse cumprimento e forem flagrados tentando ingressar ou em circulação no território nacional são retidos até a regularização.",
+        "pontos": [
+          "Comunicação ao Renavam.",
+          "Saída condicionada ao pagamento das infrações e danos.",
+          "Retenção em caso de nova entrada sem regularização."
+        ],
+        "atencao": [
+          "Saída do veículo estrangeiro só após pagar ou depositar infrações e danos."
+        ],
+        "exemplo": "O turista paga as multas antes de deixar o país com o carro.",
+        "prova": [
+          "Assertiva que permite a saída do veículo estrangeiro com multas pendentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 118"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-120",
+      "unit_id": "e465e8ba-ded7-5d38-be53-0b09d1283b2d",
+      "content_sha256": "0f3f06bfbdeff75aaa960bfab6fa9d2924ee72dbcee9f784e8b1722ac53988c6",
+      "simples": "Todo veículo automotor, articulado, reboque ou semirreboque deve ser registrado perante o órgão executivo de trânsito do Estado ou do Distrito Federal, no Município de domicílio ou residência de seu proprietário. Veículos oficiais da administração direta de qualquer poder são registrados com indicação expressa, por pintura nas portas, do nome, sigla ou logotipo do órgão, excetuados os de representação e os do art. 116. A regra não se aplica ao veículo de uso bélico.",
+      "pontos": [
+        "Registro no órgão estadual ou distrital.",
+        "Município de domicílio do proprietário.",
+        "Identificação pintada nos veículos oficiais."
+      ],
+      "atencao": [
+        "Veículos oficiais: identificação pintada nas portas.",
+        "§2º: veículo bélico fora desta regra. Não omitir exceções de representação e serviço reservado."
+      ],
+      "exemplo": "O proprietário reside em um município e registra o veículo perante o órgão executivo estadual competente. Resposta: município de domicílio/residência e órgão estadual/distrital são referências distintas. Variação: Veículo de serviço reservado do art. 116 tem exceção à identificação pintada nas portas; não aplicar pintura indistintamente a todo oficial.",
+      "prova": [
+        "O órgão municipal é sempre quem realiza o registro do caput? Não. O artigo aponta órgão executivo do Estado ou DF, no município pertinente ao proprietário.",
+        "Todo veículo oficial, inclusive os do art. 116, precisa da mesma pintura? Não. O §1º excepciona veículos de representação e os previstos no art. 116."
+      ],
+      "termos": [
+        {
+          "termo": "Local e órgão de registro",
+          "significado": "Referências territorial e administrativa que não se confundem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 121",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "e465e8ba-ded7-5d38-be53-0b09d1283b2d",
+        "content_sha256": "0f3f06bfbdeff75aaa960bfab6fa9d2924ee72dbcee9f784e8b1722ac53988c6",
+        "simples": "Todo veículo automotor, articulado, reboque ou semirreboque deve ser registrado perante o órgão executivo de trânsito do Estado ou do Distrito Federal, no Município de domicílio ou residência de seu proprietário. Veículos oficiais da administração direta de qualquer poder são registrados com indicação expressa, por pintura nas portas, do nome, sigla ou logotipo do órgão, excetuados os de representação e os do art. 116. A regra não se aplica ao veículo de uso bélico.",
+        "pontos": [
+          "Registro no órgão estadual ou distrital.",
+          "Município de domicílio do proprietário.",
+          "Identificação pintada nos veículos oficiais."
+        ],
+        "atencao": [
+          "Veículos oficiais: identificação pintada nas portas."
+        ],
+        "exemplo": "O proprietário registra o carro no Detran do seu estado de domicílio.",
+        "prova": [
+          "Assertiva que manda registrar o veículo no órgão federal erra: é o órgão estadual ou distrital."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 121"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-121",
+      "unit_id": "ac9d0043-2887-5762-b7cb-ccc86bd14256",
+      "content_sha256": "71bdec44babefb88a46abbef412e86bcdcf966b73fcd0f73ce3cedbadae49124",
+      "simples": "Registrado o veículo, expede-se o Certificado de Registro de Veículo (CRV), em meio físico ou digital, à escolha do proprietário, conforme os modelos e especificações do Contran, com características de invulnerabilidade à falsificação e à adulteração.",
+      "pontos": [
+        "CRV em meio físico ou digital.",
+        "Escolha do proprietário.",
+        "Invulnerabilidade à falsificação."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: a opção pelo meio digital veio de lei posterior.",
+        "Preservar o e/ou da redação legal; não reduzir registro e licenciamento a ato único permanente."
+      ],
+      "exemplo": "Depois do registro, o proprietário escolhe o meio digital do CRV conforme padrões regulamentares. Resposta: há previsão física e/ou digital, com proteção contra falsificação e adulteração. Variação: Ter CRV não prova sozinho o licenciamento anual atual; CRLV tem disciplina própria.",
+      "prova": [
+        "O art. 121 obriga documento apenas em papel? Não. A redação da Lei 14.071/2020 admite físico e/ou digital, à escolha do proprietário.",
+        "CRV e certificado anual são a mesma obrigação para qualquer finalidade? Não. O CRV resulta do registro; licenciamento anual e seu certificado são tratados nos arts. 130/131."
+      ],
+      "termos": [
+        {
+          "termo": "CRV",
+          "significado": "Certificado do registro do veículo, distinto do licenciamento anual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 122",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "ac9d0043-2887-5762-b7cb-ccc86bd14256",
+        "content_sha256": "71bdec44babefb88a46abbef412e86bcdcf966b73fcd0f73ce3cedbadae49124",
+        "simples": "Registrado o veículo, expede-se o Certificado de Registro de Veículo (CRV), em meio físico ou digital, à escolha do proprietário, conforme os modelos e especificações do Contran, com características de invulnerabilidade à falsificação e à adulteração.",
+        "pontos": [
+          "CRV em meio físico ou digital.",
+          "Escolha do proprietário.",
+          "Invulnerabilidade à falsificação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a opção pelo meio digital veio de lei posterior."
+        ],
+        "exemplo": "O proprietário escolhe receber o CRV em formato digital.",
+        "prova": [
+          "Assertiva que obriga o CRV físico erra: o proprietário pode optar pelo digital."
+        ],
+        "termos": [
+          {
+            "termo": "CRV",
+            "significado": "Certificado de Registro de Veículo."
+          }
+        ],
+        "remissoes": [
+          "Art. 122"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-122",
+      "unit_id": "0290a99b-1aab-56eb-994b-f66926def4f2",
+      "content_sha256": "246063bba786c941cab2d48643884db7eb403e56aa7228d103711ef1375b2867",
+      "simples": "Para a expedição do CRV, o órgão executivo de trânsito consulta o cadastro do Renavam e exige do proprietário a nota fiscal fornecida pelo fabricante ou revendedor, ou documento equivalente expedido por autoridade competente, e, em veículo importado por membro de missões diplomáticas ou organismos internacionais, o documento do Ministério das Relações Exteriores.",
+      "pontos": [
+        "Consulta ao Renavam.",
+        "Nota fiscal ou documento equivalente.",
+        "Documento do Itamaraty para diplomatas."
+      ],
+      "atencao": [
+        "Não ensinar nota fiscal sem a alternativa equivalente; não generalizar exigência diplomática."
+      ],
+      "exemplo": "O requerente apresenta documento equivalente à nota fiscal expedido por autoridade competente. Resposta: o inciso I admite essa alternativa, não exige invariavelmente nota fiscal comercial. Variação: Importação pela hipótese diplomática do inciso II tem documento do Ministério das Relações Exteriores, não obrigação idêntica para todo proprietário.",
+      "prova": [
+        "Só nota fiscal é juridicamente admitida pelo inciso I? Não. Também admite documento equivalente expedido por autoridade competente.",
+        "O documento do Ministério das Relações Exteriores é exigido em todo registro nacional? Não. O inciso II condiciona-o à importação pelos sujeitos diplomáticos/consulares/internacionais descritos."
+      ],
+      "termos": [
+        {
+          "termo": "Documento equivalente",
+          "significado": "Alternativa expressa à nota fiscal, expedida por autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 121"
+      ],
+      "expected": {
+        "unit_id": "0290a99b-1aab-56eb-994b-f66926def4f2",
+        "content_sha256": "246063bba786c941cab2d48643884db7eb403e56aa7228d103711ef1375b2867",
+        "simples": "Para a expedição do CRV, o órgão executivo de trânsito consulta o cadastro do Renavam e exige do proprietário a nota fiscal fornecida pelo fabricante ou revendedor, ou documento equivalente expedido por autoridade competente, e, em veículo importado por membro de missões diplomáticas ou organismos internacionais, o documento do Ministério das Relações Exteriores.",
+        "pontos": [
+          "Consulta ao Renavam.",
+          "Nota fiscal ou documento equivalente.",
+          "Documento do Itamaraty para diplomatas."
+        ],
+        "atencao": [
+          "Primeiro registro exige nota fiscal."
+        ],
+        "exemplo": "A concessionária entrega a nota fiscal para o primeiro registro.",
+        "prova": [
+          "Assertiva que dispensa a nota fiscal para o primeiro registro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 121"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-123",
+      "unit_id": "060b83a4-fdc8-5f59-b667-4de3790cc566",
+      "content_sha256": "b3599565a4661b30b279f35bdb82151bb3051aaa46e3d5bb515e7aa34f2c3bcb",
+      "simples": "É obrigatória a expedição de novo CRV quando for transferida a propriedade, o proprietário mudar o Município de domicílio ou residência, for alterada qualquer característica do veículo ou houver mudança de categoria. Na transferência de propriedade, o prazo para as providências é de trinta dias; nos demais casos, as providências são imediatas. A mudança de endereço no mesmo Município é comunicada em trinta dias. A transferência pode ser feita integralmente por meio eletrônico, com assinaturas eletrônicas qualificadas ou avançadas, nos termos da regulamentação.",
+      "pontos": [
+        "Quatro hipóteses de novo CRV.",
+        "Trinta dias na transferência de propriedade.",
+        "Trinta dias para comunicar mudança de endereço no mesmo Município.",
+        "Transferência eletrônica.",
+        "Lei 15.153/2025, publicada em 27/6/2025, acrescentou §4º; distinguir data da lei, publicação e conferência de 13/10/2026.",
+        "§4º, II: contrato digital assinado por comprador/vendedor perante máximo executivo federal tem validade nacional e aceitação obrigatória.",
+        "§4º, III: plataforma de assinatura avançada homologada; V: vistoria eletrônica a critério do órgão estadual/distrital, não direito automático de dispensar vistoria."
+      ],
+      "atencao": [
+        "Transferência de propriedade: TRINTA dias.",
+        "ATUALIZAÇÃO: transferência totalmente eletrônica prevista por lei posterior.",
+        "O inciso IV permanece vetado; não gerar obrigação fictícia. Transferência eletrônica não elimina por si prazos ou outros requisitos."
+      ],
+      "exemplo": "O comprador providencia novo CRV em trinta dias após transferência. Resposta: é seu prazo; mudança para outro município e alteração de característica/categoria têm providências imediatas. Variação: Mudar de endereço dentro do mesmo município exige comunicação em trinta dias e aguardar novo licenciamento para alterar o certificado anual, situação diferente de mudar de município.",
+      "prova": [
+        "Toda mudança de endereço exige novo CRV imediato? Não. O §2º distingue mudança dentro do mesmo município da hipótese do inciso II.",
+        "Transferência eletrônica exige sempre assinatura qualificada, excluindo a avançada? Não. O §4º admite qualificada ou avançada; a avançada depende de plataforma homologada e normas pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Transferência eletrônica",
+          "significado": "Procedimento digital com assinaturas e plataforma nos requisitos legais, sem assinatura informal universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 134",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15153.htm"
+      ],
+      "expected": {
+        "unit_id": "060b83a4-fdc8-5f59-b667-4de3790cc566",
+        "content_sha256": "b3599565a4661b30b279f35bdb82151bb3051aaa46e3d5bb515e7aa34f2c3bcb",
+        "simples": "É obrigatória a expedição de novo CRV quando for transferida a propriedade, o proprietário mudar o Município de domicílio ou residência, for alterada qualquer característica do veículo ou houver mudança de categoria. Na transferência de propriedade, o prazo para as providências é de trinta dias; nos demais casos, as providências são imediatas. A mudança de endereço no mesmo Município é comunicada em trinta dias. A transferência pode ser feita integralmente por meio eletrônico, com assinaturas eletrônicas qualificadas ou avançadas, nos termos da regulamentação.",
+        "pontos": [
+          "Quatro hipóteses de novo CRV.",
+          "Trinta dias na transferência de propriedade.",
+          "Trinta dias para comunicar mudança de endereço no mesmo Município.",
+          "Transferência eletrônica."
+        ],
+        "atencao": [
+          "Transferência de propriedade: TRINTA dias.",
+          "ATUALIZAÇÃO: transferência totalmente eletrônica prevista por lei posterior."
+        ],
+        "exemplo": "O comprador tem trinta dias para transferir o veículo para o seu nome.",
+        "prova": [
+          "Assertiva que fixa em sessenta dias o prazo do comprador para a transferência erra: são trinta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 134"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-124",
+      "unit_id": "57b8c1a7-ab55-5845-92eb-d80aa5c4e214",
+      "content_sha256": "d8367dfdd65ebcf689d5d514ca97fd0ea376ef62cfb494d8b49ed0ae9bdc09f5",
+      "simples": "Para a expedição do novo CRV são exigidos, entre outros, o CRV anterior, o Certificado de Licenciamento Anual, o comprovante de transferência de propriedade quando for o caso, o certificado de segurança veicular e de emissão de poluentes e ruído em caso de adaptação ou alteração, o comprovante de procedência dos componentes e agregados adaptados, a autorização do Ministério das Relações Exteriores para veículo de missão diplomática, e a certidão negativa de roubo ou furto.",
+      "pontos": [
+        "CRV anterior e licenciamento anual.",
+        "Comprovante de transferência.",
+        "Certificados e comprovantes de adaptações.",
+        "Documentos específicos para casos especiais.",
+        "ADI 2998/STF manteve constitucional o inciso VIII; não ensinar afastamento universal da quitação.",
+        "Parágrafo atual: Lei 14.440/2022; dispensa só do inciso VIII, não de todo documento.",
+        "Inciso XI: inspeções quando for o caso; integrar regulamentação e suspensão do programa geral, sem calendário universal."
+      ],
+      "atencao": [
+        "Rol de documentos exigíveis para o novo CRV.",
+        "Não usar apreensão judicial do parágrafo como restauração da antiga penalidade administrativa de apreensão."
+      ],
+      "exemplo": "Veículo é transferido por leilão de recolhido em depósito e possui débito anterior. Resposta: o parágrafo dispensa o requisito de quitação do inciso VIII nesse recorte e remete cobrança ao antigo proprietário. Variação: Certidão negativa de roubo/furto pode ser substituída por informação do Renavam; não torná-la papel obrigatório em toda hipótese.",
+      "prova": [
+        "A dispensa do parágrafo anula a dívida anterior? Não. Dispensa o inciso VIII para a transferência especificada, mas determina cobrança dos débitos do proprietário anterior.",
+        "Toda aquisição particular comum recebe a mesma dispensa de débitos? Não. O parágrafo enumera apreensão/confisco judicial, leilão de recolhido em depósito e doação a órgãos públicos."
+      ],
+      "termos": [
+        {
+          "termo": "Dispensa para transferência",
+          "significado": "Exceção específica de requisito, distinta de perdão da dívida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 123",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-julga-inconstitucional-norma-do-ctb-que-permite-ao-contran-criar-sancoes-para-infracoes-de-transito/",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1702018.pdf"
+      ],
+      "expected": {
+        "unit_id": "57b8c1a7-ab55-5845-92eb-d80aa5c4e214",
+        "content_sha256": "d8367dfdd65ebcf689d5d514ca97fd0ea376ef62cfb494d8b49ed0ae9bdc09f5",
+        "simples": "Para a expedição do novo CRV são exigidos, entre outros, o CRV anterior, o Certificado de Licenciamento Anual, o comprovante de transferência de propriedade quando for o caso, o certificado de segurança veicular e de emissão de poluentes e ruído em caso de adaptação ou alteração, o comprovante de procedência dos componentes e agregados adaptados, a autorização do Ministério das Relações Exteriores para veículo de missão diplomática, e a certidão negativa de roubo ou furto.",
+        "pontos": [
+          "CRV anterior e licenciamento anual.",
+          "Comprovante de transferência.",
+          "Certificados e comprovantes de adaptações.",
+          "Documentos específicos para casos especiais."
+        ],
+        "atencao": [
+          "Rol de documentos exigíveis para o novo CRV."
+        ],
+        "exemplo": "Na venda do carro, apresentam-se o CRV anterior e o comprovante de transferência.",
+        "prova": [
+          "Assertiva que dispensa o licenciamento anual para expedir novo CRV erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 123"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-125",
+      "unit_id": "e64ad746-5286-57c7-b890-24cfe063d620",
+      "content_sha256": "4da577ebf7ef8d22785c6c9acc15de72760a61eed34f466ee4c2493113d61b82",
+      "simples": "As informações sobre o chassi, o monobloco, os agregados e as características originais do veículo devem ser prestadas ao Renavam pelo fabricante ou montadora antes da comercialização, no caso de veículo nacional; pelo órgão alfandegário, no caso de veículo importado por pessoa física; e pelo importador, no caso de importado por pessoa jurídica. As informações são repassadas ao órgão responsável pelo registro, que comunica ao Renavam quando o veículo for registrado.",
+      "pontos": [
+        "Fabricante: veículo nacional.",
+        "Órgão alfandegário: importado por pessoa física.",
+        "Importador: importado por pessoa jurídica."
+      ],
+      "atencao": [
+        "Quem informa depende da origem e do importador.",
+        "Distinguir dados do fabricante/alfândega/importador e comunicação posterior pelo órgão registrador."
+      ],
+      "exemplo": "Pessoa física importa veículo. Resposta: as informações originárias são prestadas pelo órgão alfandegário; se importação por pessoa jurídica, o responsável é o importador. Variação: No veículo nacional, fabricante/montadora informa antes da comercialização; depois do registro o órgão comunica ao Renavam.",
+      "prova": [
+        "O mesmo sujeito presta dados originários em toda importação? Não. O inciso II aponta órgão alfandegário para pessoa física e o III, importador para pessoa jurídica.",
+        "O órgão que registra dispensa comunicação ao Renavam porque recebeu os dados? Não. O parágrafo exige comunicar tão logo o veículo seja registrado."
+      ],
+      "termos": [
+        {
+          "termo": "Pré-cadastro originário",
+          "significado": "Informações fornecidas pelo sujeito legal adequado antes ou em função do registro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 103"
+      ],
+      "expected": {
+        "unit_id": "e64ad746-5286-57c7-b890-24cfe063d620",
+        "content_sha256": "4da577ebf7ef8d22785c6c9acc15de72760a61eed34f466ee4c2493113d61b82",
+        "simples": "As informações sobre o chassi, o monobloco, os agregados e as características originais do veículo devem ser prestadas ao Renavam pelo fabricante ou montadora antes da comercialização, no caso de veículo nacional; pelo órgão alfandegário, no caso de veículo importado por pessoa física; e pelo importador, no caso de importado por pessoa jurídica. As informações são repassadas ao órgão responsável pelo registro, que comunica ao Renavam quando o veículo for registrado.",
+        "pontos": [
+          "Fabricante: veículo nacional.",
+          "Órgão alfandegário: importado por pessoa física.",
+          "Importador: importado por pessoa jurídica."
+        ],
+        "atencao": [
+          "Quem informa depende da origem e do importador."
+        ],
+        "exemplo": "A montadora cadastra o veículo no Renavam antes de vendê-lo.",
+        "prova": [
+          "Assertiva que atribui ao proprietário a prestação das informações originais ao Renavam erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 103"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-126",
+      "unit_id": "e916c389-e499-5c68-8460-c26ab1f79b8f",
+      "content_sha256": "cfc55c3ee11ddeb78bdd8b682466b1650d1b49247f7e020c6403d6265791d3c2",
+      "simples": "O proprietário de veículo irrecuperável ou destinado à desmontagem deve requerer a baixa do registro, no prazo e forma do Contran, vedada a remontagem sobre o mesmo chassi de modo a manter o registro anterior. A obrigação é da seguradora ou do adquirente do veículo destinado à desmontagem, quando sucederem ao proprietário. A existência de débitos fiscais ou multas de trânsito e ambientais não impede a baixa do registro.",
+      "pontos": [
+        "Baixa do registro de veículo irrecuperável.",
+        "Obrigação da seguradora ou adquirente, quando sucessores.",
+        "Débitos não impedem a baixa."
+      ],
+      "atencao": [
+        "Débitos e multas NÃO impedem a baixa do registro.",
+        "§§1º/2º incluídos pela Lei 14.440/2022. Não equiparar toda perda total econômica à classificação técnica de irrecuperável sem análise."
+      ],
+      "exemplo": "Veículo destinado à desmontagem tem débitos fiscais e multas ambientais. Resposta: isso não impede a baixa, conforme §2º, sem extinguir automaticamente as dívidas. Variação: Seguradora ou adquirente que sucede ao proprietário assume o dever; não afirmar que toda perda econômica configura sempre veículo tecnicamente irrecuperável.",
+      "prova": [
+        "A baixa pode ser condicionada à quitação de toda multa? Não. O §2º permite baixa mesmo com débitos fiscais e multas de trânsito ou ambientais vinculadas.",
+        "Remontar sobre o mesmo chassi para preservar o registro anterior é permitido? Não. O caput veda essa utilização para veículo irrecuperável ou destinado à desmontagem."
+      ],
+      "termos": [
+        {
+          "termo": "Baixa do registro",
+          "significado": "Encerramento registral do veículo no regime legal, distinto de extinção de dívidas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 127",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm"
+      ],
+      "expected": {
+        "unit_id": "e916c389-e499-5c68-8460-c26ab1f79b8f",
+        "content_sha256": "cfc55c3ee11ddeb78bdd8b682466b1650d1b49247f7e020c6403d6265791d3c2",
+        "simples": "O proprietário de veículo irrecuperável ou destinado à desmontagem deve requerer a baixa do registro, no prazo e forma do Contran, vedada a remontagem sobre o mesmo chassi de modo a manter o registro anterior. A obrigação é da seguradora ou do adquirente do veículo destinado à desmontagem, quando sucederem ao proprietário. A existência de débitos fiscais ou multas de trânsito e ambientais não impede a baixa do registro.",
+        "pontos": [
+          "Baixa do registro de veículo irrecuperável.",
+          "Obrigação da seguradora ou adquirente, quando sucessores.",
+          "Débitos não impedem a baixa."
+        ],
+        "atencao": [
+          "Débitos e multas NÃO impedem a baixa do registro."
+        ],
+        "exemplo": "O veículo sinistrado em perda total tem o registro baixado pela seguradora.",
+        "prova": [
+          "Assertiva que condiciona a baixa do registro à quitação de multas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 127"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-127",
+      "unit_id": "31233f3b-9bde-5a10-bc97-39193150b05c",
+      "content_sha256": "a21df9372067e9e89b5e26d6b04ccb59b28d8f7173d31669290cd11e2b3f3519",
+      "simples": "O órgão executivo de trânsito só efetua a baixa do registro após prévia consulta ao cadastro do Renavam, e a baixa deve ser comunicada de imediato ao Renavam.",
+      "pontos": [
+        "Consulta prévia ao Renavam.",
+        "Comunicação imediata da baixa."
+      ],
+      "atencao": [
+        "Consulta ANTES da baixa; comunicação IMEDIATA depois.",
+        "Não inventar prazo de trinta dias para a comunicação deste artigo."
+      ],
+      "exemplo": "O órgão vai baixar o registro de um veículo. Resposta: consulta antes o cadastro do Renavam e comunica a baixa imediatamente depois. Variação: A consulta não pode ser trocada por comunicação tardia como se as duas etapas fossem uma só.",
+      "prova": [
+        "Consultar o cadastro depois da baixa satisfaz a exigência de consulta prévia? Não. O caput condiciona a baixa à consulta anterior do Renavam.",
+        "A comunicação depois da baixa pode ser livremente postergada? Não. O parágrafo exige comunicação de imediato ao Renavam, sem prazo arbitrário criado neste artigo."
+      ],
+      "termos": [
+        {
+          "termo": "Sequência registral",
+          "significado": "Consulta anterior e comunicação imediata posterior à baixa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 126"
+      ],
+      "expected": {
+        "unit_id": "31233f3b-9bde-5a10-bc97-39193150b05c",
+        "content_sha256": "a21df9372067e9e89b5e26d6b04ccb59b28d8f7173d31669290cd11e2b3f3519",
+        "simples": "O órgão executivo de trânsito só efetua a baixa do registro após prévia consulta ao cadastro do Renavam, e a baixa deve ser comunicada de imediato ao Renavam.",
+        "pontos": [
+          "Consulta prévia ao Renavam.",
+          "Comunicação imediata da baixa."
+        ],
+        "atencao": [
+          "Consulta ANTES da baixa; comunicação IMEDIATA depois."
+        ],
+        "exemplo": "O Detran consulta o Renavam e depois comunica a baixa.",
+        "prova": [
+          "Assertiva que dispensa a consulta prévia ao Renavam erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-128",
+      "unit_id": "3f5cc04b-ae2a-5aab-a0ed-95fac98b0ce9",
+      "content_sha256": "48fcd9cf21112aac3050f8a4655564e6dc6238fb2c785c65f34223643f3471b9",
+      "simples": "A regra geral impede novo CRV com débitos fiscais e multas de trânsito/ambientais vinculados, independentemente de quem cometeu a infração. A ADI 2998 manteve o caput constitucional. Integrar exceções específicas, especialmente art. 124, parágrafo, e garantias do procedimento de cobrança; não converter o texto em exigibilidade automática de qualquer lançamento.",
+      "pontos": [
+        "Débitos e multas impedem o novo CRV."
+      ],
+      "atencao": [
+        "STF, ADI 2998, notícia oficial de 10/4/2019: caput constitucional; a decisão sobre sanções do Contran não anulou esta regra.",
+        "Constitucionalidade não elimina defesa nem exceções legais; não restaurar exigência universal de quitação para baixa do art. 126."
+      ],
+      "exemplo": "Há débitos vinculados ao veículo numa transferência privada comum. Resposta: a regra impede novo CRV; a ADI 2998 manteve o caput constitucional. Variação: A aquisição enquadrada na exceção do art. 124, parágrafo, não deve receber a regra geral sem essa integração.",
+      "prova": [
+        "A ADI 2998 retirou toda exigência de quitação para novo CRV? Não. O STF manteve este caput constitucional, distinguindo-o da autorização para o Contran criar sanções.",
+        "A regra autoriza cobrar qualquer lançamento irregular sem defesa? Não. Examinar exigibilidade, regular procedimento e exceções aplicáveis; constitucionalidade não dispensa garantias."
+      ],
+      "termos": [
+        {
+          "termo": "Débito vinculado",
+          "significado": "Obrigação relativa ao veículo no regime pertinente, com exigibilidade e exceções próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 131",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-julga-inconstitucional-norma-do-ctb-que-permite-ao-contran-criar-sancoes-para-infracoes-de-transito/"
+      ],
+      "expected": {
+        "unit_id": "3f5cc04b-ae2a-5aab-a0ed-95fac98b0ce9",
+        "content_sha256": "48fcd9cf21112aac3050f8a4655564e6dc6238fb2c785c65f34223643f3471b9",
+        "simples": "Não é expedido novo CRV enquanto houver débitos fiscais e de multas de trânsito e ambientais vinculadas ao veículo, independentemente da responsabilidade pelas infrações cometidas.",
+        "pontos": [
+          "Débitos e multas impedem o novo CRV."
+        ],
+        "atencao": [
+          "Vale mesmo que as infrações tenham sido de outro proprietário."
+        ],
+        "exemplo": "A transferência fica bloqueada enquanto houver multa em aberto.",
+        "prova": [
+          "Assertiva que permite novo CRV com multas pendentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 131"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-129",
+      "unit_id": "c9043936-8ff6-56ac-bfc7-89a3090cd6b9",
+      "content_sha256": "7fe996db77b5daf4ca9e15888e4801e40d1d2d563e59f48ce1c7b7851672980d",
+      "simples": "O registro e o licenciamento dos veículos de propulsão humana e de tração animal obedecem à regulamentação estabelecida em legislação municipal do domicílio ou residência de seus proprietários.",
+      "pontos": [
+        "Competência municipal para propulsão humana e tração animal."
+      ],
+      "atencao": [
+        "Quem regula é o município.",
+        "Lei 13.154/2015 retirou ciclomotores deste recorte; bicicleta elétrica e equiparados exigem também verificar art. 134-A e Resolução 996."
+      ],
+      "exemplo": "O município regulamenta registro de carroças e veículos de propulsão humana de residentes. Resposta: integra a atribuição municipal do artigo. Variação: Ciclomotor não está incluído por ter pequena potência: não reinseri-lo no rol retirado em 2015.",
+      "prova": [
+        "O texto atual entrega registro de todo ciclomotor ao município? Não. Abrange propulsão humana e tração animal; ciclomotores têm regime próprio.",
+        "A legislação de qualquer município é escolhida livremente pelo proprietário? Não. O artigo aponta legislação municipal do domicílio ou residência do proprietário."
+      ],
+      "termos": [
+        {
+          "termo": "Regime municipal",
+          "significado": "Regulamentação de propulsão humana e tração animal vinculada ao domicílio/residência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 120"
+      ],
+      "expected": {
+        "unit_id": "c9043936-8ff6-56ac-bfc7-89a3090cd6b9",
+        "content_sha256": "7fe996db77b5daf4ca9e15888e4801e40d1d2d563e59f48ce1c7b7851672980d",
+        "simples": "O registro e o licenciamento dos veículos de propulsão humana e de tração animal obedecem à regulamentação estabelecida em legislação municipal do domicílio ou residência de seus proprietários.",
+        "pontos": [
+          "Competência municipal para propulsão humana e tração animal."
+        ],
+        "atencao": [
+          "Quem regula é o município."
+        ],
+        "exemplo": "A prefeitura regulamenta o registro de carroças.",
+        "prova": [
+          "Assertiva que atribui ao Detran o registro de veículos de tração animal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 120"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-129-a",
+      "unit_id": "b0ca727c-24ca-5586-97df-40f19520a04a",
+      "content_sha256": "d44ceb604482e943c6233e9aa19e18490cc0dc26783ba0eb2f6cbc6631803de1",
+      "simples": "O registro dos tratores e demais aparelhos automotores destinados a puxar ou arrastar maquinaria agrícola ou a executar trabalhos agrícolas é efetuado, sem ônus, pelo Ministério da Agricultura e Pecuária, diretamente ou mediante convênio.",
+      "pontos": [
+        "Registro pelo Ministério da Agricultura e Pecuária.",
+        "Sem ônus."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Sem cobrança de taxas.",
+        "Redação de 2023 identifica Ministério da Agricultura e Pecuária; não atribuir categoria indistinta a máquina de construção."
+      ],
+      "exemplo": "Um trator destinado a trabalho agrícola é registrado pelo Ministério da Agricultura e Pecuária mediante convênio. Resposta: a modalidade é admitida e o registro é sem ônus. Variação: Máquina de construção não se torna agrícola só por puxar equipamento; conferir destinação e hipótese do art. 115.",
+      "prova": [
+        "O Ministério só pode registrar diretamente sem cooperação? Não. O artigo admite atuação direta ou mediante convênio, sem ônus para o registro previsto.",
+        "Todo aparelho automotor se submete a este cadastro por existir? Não. O caput delimita tratores e máquinas destinados a puxar maquinaria agrícola ou executar trabalho agrícola."
+      ],
+      "termos": [
+        {
+          "termo": "Cadastro agrícola",
+          "significado": "Registro especial gratuito de máquinas destinadas às atividades agrícolas especificadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 115",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "b0ca727c-24ca-5586-97df-40f19520a04a",
+        "content_sha256": "d44ceb604482e943c6233e9aa19e18490cc0dc26783ba0eb2f6cbc6631803de1",
+        "simples": "O registro dos tratores e demais aparelhos automotores destinados a puxar ou arrastar maquinaria agrícola ou a executar trabalhos agrícolas é efetuado, sem ônus, pelo Ministério da Agricultura e Pecuária, diretamente ou mediante convênio.",
+        "pontos": [
+          "Registro pelo Ministério da Agricultura e Pecuária.",
+          "Sem ônus."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Sem cobrança de taxas."
+        ],
+        "exemplo": "O trator agrícola é registrado no cadastro do Ministério da Agricultura.",
+        "prova": [
+          "Assertiva que atribui ao Detran o registro de tratores agrícolas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-129-b",
+      "unit_id": "646669bd-1aa9-5835-b45d-de298a96baaa",
+      "content_sha256": "c1e76d222c19a2d3be1d0ba5506381b4d36d10e2fff64cbe56cb8200fa0f4d42",
+      "simples": "O registro de contratos de garantias de alienação fiduciária em operações financeiras, consórcio, arrendamento mercantil, reserva de domínio ou penhor é realizado nos órgãos executivos de trânsito dos Estados e do Distrito Federal, observados o Código Civil e a Lei Geral de Proteção de Dados Pessoais. O registro é executado por empresas registradoras especializadas, credenciadas pelos órgãos executivos de trânsito.",
+      "pontos": [
+        "Registro de garantias no órgão estadual ou distrital.",
+        "Empresas registradoras credenciadas."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Observa a proteção de dados pessoais.",
+        "Lei 14.599/2023 acrescentou parágrafo com remissão ao art. 79 da Lei 14.133; não confundir modalidade de credenciamento e dispensa universal de procedimento."
+      ],
+      "exemplo": "Uma garantia de financiamento é registrada por empresa especializada credenciada pelo executivo estadual. Resposta: observar Código Civil, proteção de dados e credenciamento no recorte atual. Variação: O tratamento de dados para registro não autoriza exposição pública irrestrita de informações pessoais.",
+      "prova": [
+        "O banco pode substituir livremente o credenciamento com registro informal próprio? Não. O parágrafo prevê execução por registradora especializada credenciada pelo órgão estadual/distrital.",
+        "O art. 129-B ignora a LGPD porque se trata de veículo? Não. O caput remete expressamente à Lei Geral de Proteção de Dados Pessoais."
+      ],
+      "termos": [
+        {
+          "termo": "Gravame contratual",
+          "significado": "Garantia registrada no regime próprio, distinta de simples informação informal do credor."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 121",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "646669bd-1aa9-5835-b45d-de298a96baaa",
+        "content_sha256": "c1e76d222c19a2d3be1d0ba5506381b4d36d10e2fff64cbe56cb8200fa0f4d42",
+        "simples": "O registro de contratos de garantias de alienação fiduciária em operações financeiras, consórcio, arrendamento mercantil, reserva de domínio ou penhor é realizado nos órgãos executivos de trânsito dos Estados e do Distrito Federal, observados o Código Civil e a Lei Geral de Proteção de Dados Pessoais. O registro é executado por empresas registradoras especializadas, credenciadas pelos órgãos executivos de trânsito.",
+        "pontos": [
+          "Registro de garantias no órgão estadual ou distrital.",
+          "Empresas registradoras credenciadas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Observa a proteção de dados pessoais."
+        ],
+        "exemplo": "O gravame do financiamento é registrado por empresa credenciada.",
+        "prova": [
+          "Assertiva que atribui ao banco o registro direto do gravame no Renavam erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 121"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-130",
+      "unit_id": "54b38c9f-a51a-575b-b3a1-4812c353fb7f",
+      "content_sha256": "91d96cd76ed8cd99bf8d29eabfc52cb2ea2d96314fb70a1ca82b0311481384b9",
+      "simples": "Todo veículo automotor, articulado, reboque ou semirreboque, para transitar na via, deve ser licenciado anualmente pelo órgão executivo de trânsito do Estado ou do Distrito Federal onde estiver registrado. A regra não se aplica a veículo de uso bélico. No caso de transferência de residência ou domicílio, vale durante o exercício o licenciamento de origem.",
+      "pontos": [
+        "Licenciamento anual.",
+        "Órgão estadual ou distrital do registro.",
+        "Licenciamento de origem vale no exercício em caso de mudança."
+      ],
+      "atencao": [
+        "Anual e no órgão onde o veículo está registrado.",
+        "Redação de 2023; mudança de residência não é dispensa permanente de licenciamento."
+      ],
+      "exemplo": "O proprietário muda de residência durante o exercício com licenciamento de origem válido. Resposta: o §2º preserva a validade nesse exercício, não dispensa regularização futura. Variação: Veículo de uso bélico tem a exceção do §1º; não exigir o regime anual deste artigo de modo universal.",
+      "prova": [
+        "O licenciamento é bienal pela regra do art. 130? Não. O caput exige licenciamento anual no órgão estadual ou distrital onde o veículo está registrado.",
+        "Mudança de domicílio invalida imediatamente todo licenciamento anterior? Não. O §2º mantém válido o de origem durante o exercício, com as demais obrigações pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Licenciamento anual",
+          "significado": "Regularidade periódica, distinta do registro e da mudança de domicílio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 131",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "54b38c9f-a51a-575b-b3a1-4812c353fb7f",
+        "content_sha256": "91d96cd76ed8cd99bf8d29eabfc52cb2ea2d96314fb70a1ca82b0311481384b9",
+        "simples": "Todo veículo automotor, articulado, reboque ou semirreboque, para transitar na via, deve ser licenciado anualmente pelo órgão executivo de trânsito do Estado ou do Distrito Federal onde estiver registrado. A regra não se aplica a veículo de uso bélico. No caso de transferência de residência ou domicílio, vale durante o exercício o licenciamento de origem.",
+        "pontos": [
+          "Licenciamento anual.",
+          "Órgão estadual ou distrital do registro.",
+          "Licenciamento de origem vale no exercício em caso de mudança."
+        ],
+        "atencao": [
+          "Anual e no órgão onde o veículo está registrado."
+        ],
+        "exemplo": "O proprietário licencia o veículo todos os anos no Detran de registro.",
+        "prova": [
+          "Assertiva que torna o licenciamento bienal erra: é anual."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 131"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-131",
+      "unit_id": "48f1e7fd-e488-5ca8-a916-8734109a487d",
+      "content_sha256": "b7c5c7ef414169abac2931a32f576ff6e877fc908877e7c105f0523d6b7f2904",
+      "simples": "O certificado anual se vincula ao CRV, em meio físico e/ou digital. Primeiro licenciamento junto ao registro; débitos exigíveis e inspeções pertinentes integram o regime. No recall, campanhas realizadas desde 1º/10/2019 não atendidas em um ano da comunicação passam ao certificado; após inclusão, comprovar atendimento para licenciar. O Contran pode excepcionalmente prorrogar essa exigência por falta comprovada de peças ou escalonamento, considerando segurança. Não supor inspeção geral nacional implantada pela mera remissão ao art. 104.",
+      "pontos": [
+        "Primeiro licenciamento SIMULTÂNEO ao registro.",
+        "ADI 2998: §2º constitucional; não confundir com autorização de criar sanção.",
+        "Recall: campanha desde 1º/10/2019 → um ano da comunicação → informação no certificado → requisito do §5º.",
+        "§6º: dados de campanhas anteriores dependem do regulamento.",
+        "§7º: prorrogação EXCEPCIONAL pelo Contran, com motivo comprovado e avaliação de segurança."
+      ],
+      "atencao": [
+        "Não ensinar todo recall com bloqueio imediato e sem exceção.",
+        "Não dispensar inspeção específica nem criar calendário geral ativo a partir de resolução suspensa.",
+        "Distinguir débito exigível, defesa, certificado de registro e certificado anual."
+      ],
+      "exemplo": "Recall comunicado de campanha realizada desde 1º/10/2019 não é atendido durante um ano. Resposta: informação deve constar do certificado e depois disso o §5º condiciona o licenciamento à comprovação de atendimento. Variação: Há comprovada falta de peças: o §7º permite prorrogação excepcional pelo Contran, avaliada segurança, não decisão unilateral do proprietário.",
+      "prova": [
+        "Qualquer recall bloqueia automaticamente o licenciamento no mesmo dia do anúncio? Não. Integrar data de campanha, um ano da comunicação, inclusão da informação e a eventual prorrogação excepcional.",
+        "Inspeção do §3º prova calendário nacional anual implantado para toda frota? Não. Integrar art. 104, regimes específicos e suspensão do programa da Resolução 716 pela Deliberação 170."
+      ],
+      "termos": [
+        {
+          "termo": "Recall",
+          "significado": "Chamamento para substituição/reparo, com marcos e consequências próprias no licenciamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 130",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14229.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-julga-inconstitucional-norma-do-ctb-que-permite-ao-contran-criar-sancoes-para-infracoes-de-transito/",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1702018.pdf"
+      ],
+      "expected": {
+        "unit_id": "48f1e7fd-e488-5ca8-a916-8734109a487d",
+        "content_sha256": "b7c5c7ef414169abac2931a32f576ff6e877fc908877e7c105f0523d6b7f2904",
+        "simples": "O Certificado de Licenciamento Anual (CRLV) é expedido ao veículo licenciado, vinculado ao CRV, em meio físico ou digital, à escolha do proprietário. O primeiro licenciamento é feito simultaneamente ao registro. O veículo só é considerado licenciado estando quitados os débitos de tributos, encargos e multas de trânsito e ambientais vinculados a ele, independentemente da responsabilidade pelas infrações. Ao licenciar, o proprietário comprova aprovação nas inspeções de segurança e de emissões. As campanhas de chamamento (recall) não atendidas em um ano passam a constar do CRLV, e o licenciamento exige o atendimento a elas.",
+        "pontos": [
+          "CRLV vinculado ao CRV, físico ou digital.",
+          "Primeiro licenciamento junto com o registro.",
+          "Débitos quitados para considerar o veículo licenciado.",
+          "Inspeções e recall."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: regras sobre recall incluídas por lei posterior.",
+          "Licenciado = débitos quitados."
+        ],
+        "exemplo": "O veículo com multa em aberto não é considerado licenciado.",
+        "prova": [
+          "Assertiva que considera licenciado o veículo com multas em aberto erra."
+        ],
+        "termos": [
+          {
+            "termo": "CRLV",
+            "significado": "Certificado de Registro e Licenciamento de Veículo, o licenciamento anual."
+          }
+        ],
+        "remissoes": [
+          "Art. 130"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-132",
+      "unit_id": "90aa14b3-f376-53ec-b189-354d68040c17",
+      "content_sha256": "f78e3414effc292ad537c8f4694cb57f5b74b28184fdc8ec6696dd08d3fede39",
+      "simples": "Os veículos novos não estão sujeitos ao licenciamento e têm sua circulação regulada pelo Contran durante o trajeto entre a fábrica e o Município de destino. O mesmo se aplica aos veículos importados, durante o trajeto entre a alfândega ou entreposto e o Município de destino.",
+      "pontos": [
+        "Veículos novos dispensados de licenciamento no trajeto.",
+        "Circulação regulada pelo Contran.",
+        "Vale para importados do alfândega ao destino."
+      ],
+      "atencao": [
+        "Dispensa apenas no trajeto fábrica ou alfândega até o destino.",
+        "§2º revogado não cria nova dispensa. O exemplo de carga em caminhão cegonha não substitui a análise da circulação própria do veículo."
+      ],
+      "exemplo": "Um veículo novo segue da fábrica ao município de destino nos termos do Contran. Resposta: a dispensa de licenciamento vale para esse trajeto regulado. Variação: Após chegar, o veículo não ganha isenção indefinida para passeios e uso habitual só porque é novo.",
+      "prova": [
+        "A dispensa cobre circulação habitual indefinida do veículo zero quilômetro? Não. O artigo limita a circulação regulada ao trajeto entre fábrica e município de destino.",
+        "O recorte também contempla importados? Sim. O §1º prevê trajeto entre alfândega/entreposto alfandegário e município de destino."
+      ],
+      "termos": [
+        {
+          "termo": "Trajeto de destino",
+          "significado": "Percurso delimitado da dispensa, sem exoneração permanente do licenciamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 130"
+      ],
+      "expected": {
+        "unit_id": "90aa14b3-f376-53ec-b189-354d68040c17",
+        "content_sha256": "f78e3414effc292ad537c8f4694cb57f5b74b28184fdc8ec6696dd08d3fede39",
+        "simples": "Os veículos novos não estão sujeitos ao licenciamento e têm sua circulação regulada pelo Contran durante o trajeto entre a fábrica e o Município de destino. O mesmo se aplica aos veículos importados, durante o trajeto entre a alfândega ou entreposto e o Município de destino.",
+        "pontos": [
+          "Veículos novos dispensados de licenciamento no trajeto.",
+          "Circulação regulada pelo Contran.",
+          "Vale para importados do alfândega ao destino."
+        ],
+        "atencao": [
+          "Dispensa apenas no trajeto fábrica ou alfândega até o destino."
+        ],
+        "exemplo": "O caminhão cegonha leva veículos novos da fábrica à concessionária.",
+        "prova": [
+          "Assertiva que isenta o veículo novo de licenciamento por tempo indeterminado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 130"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-133",
+      "unit_id": "735dbdaf-29a8-515c-bd5a-c73e643d3d32",
+      "content_sha256": "1910ac45eb4ea70bb70f5654c94bccb1f1ad0152a2c5d09cb72d82053ff88929",
+      "simples": "É obrigatório o porte do Certificado de Licenciamento Anual. O porte é dispensado quando, no momento da fiscalização, for possível ter acesso ao sistema informatizado para verificar se o veículo está licenciado.",
+      "pontos": [
+        "Porte obrigatório do CRLV.",
+        "Dispensa se o sistema permitir a verificação."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: a dispensa do porte veio de lei posterior.",
+        "Distinguir porte documental e licenciamento efetivo; dispensa não regulariza veículo."
+      ],
+      "exemplo": "Na fiscalização, o agente acessa o sistema devido e verifica o licenciamento. Resposta: o porte do certificado é dispensado pelo parágrafo. Variação: Sem possibilidade de consulta naquele momento, não invocar a exceção apenas porque um sistema existe em tese.",
+      "prova": [
+        "A simples existência abstrata de banco informatizado dispensa sempre o porte? Não. Deve ser possível acessar o devido sistema no momento da fiscalização para verificar o licenciamento.",
+        "A dispensa do porte elimina a obrigação de licenciar o veículo? Não. Refere-se à apresentação/porte do documento, não à regularidade anual."
+      ],
+      "termos": [
+        {
+          "termo": "Porte dispensado",
+          "significado": "Exceção de apresentação quando a fiscalização consegue verificar a regularidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 131"
+      ],
+      "expected": {
+        "unit_id": "735dbdaf-29a8-515c-bd5a-c73e643d3d32",
+        "content_sha256": "1910ac45eb4ea70bb70f5654c94bccb1f1ad0152a2c5d09cb72d82053ff88929",
+        "simples": "É obrigatório o porte do Certificado de Licenciamento Anual. O porte é dispensado quando, no momento da fiscalização, for possível ter acesso ao sistema informatizado para verificar se o veículo está licenciado.",
+        "pontos": [
+          "Porte obrigatório do CRLV.",
+          "Dispensa se o sistema permitir a verificação."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a dispensa do porte veio de lei posterior."
+        ],
+        "exemplo": "O agente consulta o sistema e dispensa a apresentação do documento.",
+        "prova": [
+          "Assertiva que exige o porte do documento mesmo havendo consulta ao sistema erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 131"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-134",
+      "unit_id": "4b1fc227-93a6-591f-9a73-f75d18cd2af2",
+      "content_sha256": "04fb4fda7e03ecb2217d63ee92b68d9a29478097af8ec71080e15e938931ac05",
+      "simples": "Na transferência de propriedade, expirado o prazo de trinta dias sem que o novo proprietário tenha tomado as providências, o antigo proprietário deve encaminhar ao órgão executivo de trânsito, em sessenta dias, cópia autenticada do comprovante de transferência, devidamente assinado e datado, sob pena de responder solidariamente pelas penalidades impostas e suas reincidências até a data da comunicação. O comprovante pode ser substituído por documento eletrônico com assinatura eletrônica válida.",
+      "pontos": [
+        "Prazo de sessenta dias para o antigo proprietário.",
+        "Responsabilidade solidária até a comunicação.",
+        "Documento eletrônico admitido."
+      ],
+      "atencao": [
+        "Sessenta dias, após vencido o prazo do novo proprietário.",
+        "Não generalizar solidariedade de penalidades para danos civis ou todo tributo. A comunicação não é declaração de culpa penal por conduta alheia."
+      ],
+      "exemplo": "O comprador não providencia novo CRV no prazo de trinta dias. Resposta: o vendedor deve observar a comunicação no prazo de sessenta dias previsto após esse marco, evitando a responsabilidade pelas penalidades e reincidências até comunicar. Variação: O comprovante eletrônico com assinatura válida pode substituir o autenticado nos termos do regulamento; mensagem informal não basta automaticamente.",
+      "prova": [
+        "O prazo de trinta dias do comprador é o mesmo dever de sessenta dias do vendedor? Não. São sujeitos e marcos distintos nos arts. 123 e 134; não trocar os prazos.",
+        "A solidariedade textual do art. 134 abrange automaticamente toda indenização civil e todo IPVA? Não. O artigo trata de penalidades e reincidências; outros efeitos têm regimes e jurisprudência próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação da venda",
+          "significado": "Dever do antigo proprietário no recorte legal, diferente de transferir o registro pelo comprador."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 123",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "4b1fc227-93a6-591f-9a73-f75d18cd2af2",
+        "content_sha256": "04fb4fda7e03ecb2217d63ee92b68d9a29478097af8ec71080e15e938931ac05",
+        "simples": "Na transferência de propriedade, expirado o prazo de trinta dias sem que o novo proprietário tenha tomado as providências, o antigo proprietário deve encaminhar ao órgão executivo de trânsito, em sessenta dias, cópia autenticada do comprovante de transferência, devidamente assinado e datado, sob pena de responder solidariamente pelas penalidades impostas e suas reincidências até a data da comunicação. O comprovante pode ser substituído por documento eletrônico com assinatura eletrônica válida.",
+        "pontos": [
+          "Prazo de sessenta dias para o antigo proprietário.",
+          "Responsabilidade solidária até a comunicação.",
+          "Documento eletrônico admitido."
+        ],
+        "atencao": [
+          "Sessenta dias, após vencido o prazo do novo proprietário."
+        ],
+        "exemplo": "O vendedor comunica a venda ao Detran para não responder por multas futuras.",
+        "prova": [
+          "Assertiva que isenta o antigo proprietário de qualquer comunicação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 123"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-134-a",
+      "unit_id": "9b0faf71-f85c-5d83-a61b-ba9f7e1f7ea0",
+      "content_sha256": "58459113ac3309b03ab5d62512269eed3bed4e3533b3b9bb29e309d38492f866",
+      "simples": "O Contran especifica as bicicletas motorizadas e equiparados não sujeitos ao registro, ao licenciamento e ao emplacamento para circulação nas vias.",
+      "pontos": [
+        "Especificação pelo Contran.",
+        "Resolução 996 vigente desde 3/7/2023: bicicleta elétrica ordinária com pedal assistido, sem acelerador, motor até 1000 W e propulsão auxiliar até 32 km/h, com hipóteses específicas.",
+        "Art. 12: bicicleta elétrica/equipamento autopropelido não sujeitos a registro/licenciamento/emplacamento; ciclomotor tem outro regime."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "A classificação de equipamento autopropelido pode ter acelerador; não concluir que todo veículo com acelerador é necessariamente ciclomotor.",
+        "Não afirmar prorrogação da transição até data não verificada; índice consultado mantém o ato sem indicação de alteração desse prazo."
+      ],
+      "exemplo": "Uma bicicleta elétrica atende ao enquadramento de pedal assistido, potência e velocidade da Resolução 996. Resposta: integra a dispensa de registro, licenciamento e emplacamento do art. 12 da resolução. Variação: Veículo elétrico comercialmente chamado de bicicleta, mas enquadrado como ciclomotor, não recebe a mesma dispensa apenas pelo nome.",
+      "prova": [
+        "Toda bicicleta ou veículo elétrico com acelerador é automaticamente isento de registro? Não. Conferir a classe e características técnicas; bicicleta elétrica regulamentar não é sinônimo de qualquer elétrico.",
+        "A transição do art. 14 da Resolução 996 ainda permite circulação indefinida de ciclomotor antigo sem regularizar em 2026? Não. O prazo ali previsto terminou em 31/12/2025; não tratá-lo como futuro na conferência de 13/10/2026."
+      ],
+      "termos": [
+        {
+          "termo": "Enquadramento elétrico",
+          "significado": "Classificação técnica que define dispensa ou exigências, distinta do nome comercial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 115",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf"
+      ],
+      "expected": {
+        "unit_id": "9b0faf71-f85c-5d83-a61b-ba9f7e1f7ea0",
+        "content_sha256": "58459113ac3309b03ab5d62512269eed3bed4e3533b3b9bb29e309d38492f866",
+        "simples": "O Contran especifica as bicicletas motorizadas e equiparados não sujeitos ao registro, ao licenciamento e ao emplacamento para circulação nas vias.",
+        "pontos": [
+          "Especificação pelo Contran."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "A bicicleta elétrica dentro dos limites do Contran circula sem registro.",
+        "prova": [
+          "Assertiva que exige emplacamento de toda bicicleta motorizada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-135",
+      "unit_id": "ff02493c-39a6-596e-9f41-14dff41ac6b7",
+      "content_sha256": "8e0894a6f6e5998e3daec0023c703fe79983b4d99453705d683c03a5c20d5eee",
+      "simples": "Os veículos de aluguel, destinados ao transporte individual ou coletivo de passageiros de linhas regulares ou empregados em qualquer serviço remunerado, para registro, licenciamento e emplacamento de característica comercial, devem estar devidamente autorizados pelo poder público concedente.",
+      "pontos": [
+        "Autorização do poder concedente.",
+        "Emplacamento de característica comercial."
+      ],
+      "atencao": [
+        "Sem autorização do poder concedente, sem placa comercial.",
+        "Não generalizar regras de táxi para todo transporte por aplicativo sem verificar sua disciplina própria."
+      ],
+      "exemplo": "Um táxi pretende registro e emplacamento comercial. Resposta: necessita autorização do poder público competente para o serviço abrangido. Variação: A regra para categoria de aluguel não deve ser generalizada automaticamente a todo veículo particular que se relaciona a uma atividade econômica; conferir enquadramento e regime específico.",
+      "prova": [
+        "Cumprir registro e licenciamento dispensa autorização do serviço no recorte deste artigo? Não. O caput exige estar devidamente autorizado pelo poder público concedente.",
+        "A autorização concede liberdade para ignorar requisitos técnicos do CTB? Não. Integra os deveres, sem afastar segurança, registro ou licenciamento pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Autorização do serviço",
+          "significado": "Ato do poder competente para exploração, distinto da regularidade técnica do veículo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 107"
+      ],
+      "expected": {
+        "unit_id": "ff02493c-39a6-596e-9f41-14dff41ac6b7",
+        "content_sha256": "8e0894a6f6e5998e3daec0023c703fe79983b4d99453705d683c03a5c20d5eee",
+        "simples": "Os veículos de aluguel, destinados ao transporte individual ou coletivo de passageiros de linhas regulares ou empregados em qualquer serviço remunerado, para registro, licenciamento e emplacamento de característica comercial, devem estar devidamente autorizados pelo poder público concedente.",
+        "pontos": [
+          "Autorização do poder concedente.",
+          "Emplacamento de característica comercial."
+        ],
+        "atencao": [
+          "Sem autorização do poder concedente, sem placa comercial."
+        ],
+        "exemplo": "O táxi obtém a autorização da prefeitura antes do emplacamento comercial.",
+        "prova": [
+          "Assertiva que dispensa a autorização do poder concedente para veículos de aluguel erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 107"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-136",
+      "unit_id": "46b929b7-d7f8-5d32-b7fa-554b9bf9c505",
+      "content_sha256": "c8ca3ff8a2c1c891e3017460553bf257dc464930f78767a71d9f549f8b4767b9",
+      "simples": "Os veículos de condução coletiva de escolares só podem circular com autorização do órgão executivo de trânsito estadual ou distrital, exigindo-se registro como veículo de passageiros; inspeção semestral; pintura de faixa horizontal amarela de quarenta centímetros de largura, à meia altura, com o dístico ESCOLAR em preto; registrador instantâneo inalterável de velocidade e tempo; lanternas de luz branca, fosca ou amarela na parte dianteira e vermelha na traseira; cintos de segurança em número igual à lotação; e outros requisitos do Contran.",
+      "pontos": [
+        "Autorização do órgão estadual ou distrital.",
+        "Inspeção semestral.",
+        "Faixa amarela de quarenta centímetros com o dístico ESCOLAR.",
+        "Registrador, lanternas e cintos.",
+        "Faixa de 40 cm à meia altura, em toda extensão lateral/traseira; carroçaria amarela: INVERTER cores.",
+        "Lanternas superiores: dianteira branca fosca ou amarela e traseira vermelha, no recorte do inciso V."
+      ],
+      "atencao": [
+        "Inspeção SEMESTRAL e faixa amarela de QUARENTA centímetros.",
+        "Não usar suspensão do programa de inspeção geral como dispensa da inspeção escolar específica."
+      ],
+      "exemplo": "Um veículo escolar tem carroçaria amarela. Resposta: as cores da faixa/dístico são invertidas, conforme inciso III; não repetir amarelo sobre amarelo. Variação: A autorização é estadual/distrital, mas competência municipal complementar continua pelo art. 139.",
+      "prova": [
+        "A inspeção legal do escolar é apenas anual? Não. O inciso II prevê semestral para equipamentos obrigatórios e de segurança, distinta do programa geral de inspeção.",
+        "Os cintos podem existir apenas para parte da lotação? Não. O inciso VI exige número igual à lotação, além dos demais equipamentos."
+      ],
+      "termos": [
+        {
+          "termo": "Identificação escolar",
+          "significado": "Faixa e dístico nos requisitos legais, com inversão de cores para carroçaria amarela."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 138"
+      ],
+      "expected": {
+        "unit_id": "46b929b7-d7f8-5d32-b7fa-554b9bf9c505",
+        "content_sha256": "c8ca3ff8a2c1c891e3017460553bf257dc464930f78767a71d9f549f8b4767b9",
+        "simples": "Os veículos de condução coletiva de escolares só podem circular com autorização do órgão executivo de trânsito estadual ou distrital, exigindo-se registro como veículo de passageiros; inspeção semestral; pintura de faixa horizontal amarela de quarenta centímetros de largura, à meia altura, com o dístico ESCOLAR em preto; registrador instantâneo inalterável de velocidade e tempo; lanternas de luz branca, fosca ou amarela na parte dianteira e vermelha na traseira; cintos de segurança em número igual à lotação; e outros requisitos do Contran.",
+        "pontos": [
+          "Autorização do órgão estadual ou distrital.",
+          "Inspeção semestral.",
+          "Faixa amarela de quarenta centímetros com o dístico ESCOLAR.",
+          "Registrador, lanternas e cintos."
+        ],
+        "atencao": [
+          "Inspeção SEMESTRAL e faixa amarela de QUARENTA centímetros."
+        ],
+        "exemplo": "A van escolar tem a faixa amarela com ESCOLAR e passa por inspeção a cada semestre.",
+        "prova": [
+          "Assertiva que fixa inspeção anual para o veículo escolar erra: é semestral."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 138"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-137",
+      "unit_id": "818e961f-83a6-5bbe-b3a1-4995febc64c2",
+      "content_sha256": "efba6908acc4c4a10eaed61578451196440120e69dbcf395d13d809e81576114",
+      "simples": "A autorização do veículo escolar deve ser afixada na parte interna do veículo, em local visível, com inscrição da lotação permitida, sendo vedada a condução de escolares em número superior à capacidade estabelecida pelo fabricante.",
+      "pontos": [
+        "Autorização afixada em local visível.",
+        "Lotação inscrita.",
+        "Vedado exceder a capacidade."
+      ],
+      "atencao": [
+        "Lotação do fabricante é o limite.",
+        "Autorização e capacidade não dispensam cintos em número igual à lotação."
+      ],
+      "exemplo": "Uma van escolar autorizada pretende levar crianças acima da capacidade do fabricante. Resposta: a autorização não permite excesso, mesmo se fisicamente couberem. Variação: Além de respeitar capacidade, a autorização deve estar dentro do veículo, visível e com inscrição da lotação permitida.",
+      "prova": [
+        "Crianças pequenas podem superar o número autorizado por ocuparem menos espaço? Não. O artigo veda escolares em número superior à capacidade estabelecida pelo fabricante.",
+        "Guardar a autorização em casa satisfaz a exigência do art. 137? Não. Deve ser afixada na parte interna, em local visível e com inscrição da lotação."
+      ],
+      "termos": [
+        {
+          "termo": "Lotação escolar",
+          "significado": "Limite que não aumenta por tamanho ou acomodação improvisada de crianças."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 136"
+      ],
+      "expected": {
+        "unit_id": "818e961f-83a6-5bbe-b3a1-4995febc64c2",
+        "content_sha256": "efba6908acc4c4a10eaed61578451196440120e69dbcf395d13d809e81576114",
+        "simples": "A autorização do veículo escolar deve ser afixada na parte interna do veículo, em local visível, com inscrição da lotação permitida, sendo vedada a condução de escolares em número superior à capacidade estabelecida pelo fabricante.",
+        "pontos": [
+          "Autorização afixada em local visível.",
+          "Lotação inscrita.",
+          "Vedado exceder a capacidade."
+        ],
+        "atencao": [
+          "Lotação do fabricante é o limite."
+        ],
+        "exemplo": "A van escolar exibe a autorização e a lotação dentro do veículo.",
+        "prova": [
+          "Assertiva que permite exceder a capacidade do fabricante com crianças pequenas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 136"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-138",
+      "unit_id": "f7f9b50f-c87e-5dfa-8025-c6b429c80be2",
+      "content_sha256": "842a4eff9282016312e8c445f8e6089b32efe87ef4c2ec981420a9e1fe0ef5d2",
+      "simples": "O condutor de veículo destinado à condução de escolares deve ter idade superior a vinte e um anos, ser habilitado na categoria D, não ter cometido mais de uma infração gravíssima nos últimos doze meses e ser aprovado em curso especializado, nos termos da regulamentação do Contran.",
+      "pontos": [
+        "Idade superior a vinte e um anos.",
+        "Categoria D.",
+        "No máximo uma infração gravíssima em doze meses.",
+        "Curso especializado."
+      ],
+      "atencao": [
+        "Mais de VINTE E UM anos e categoria D.",
+        "Texto do inciso I: idade SUPERIOR a vinte e um anos; não reescrever silenciosamente a expressão legal.",
+        "Resolução 1020/2025, publicada/vigente em 9/12/2025, inclui escolares no art. 67 e formação especializada nos seguintes. Não certifica aqui toda carga horária de normativo Senatran."
+      ],
+      "exemplo": "Uma motorista de 25 anos, categoria D e curso especializado tem uma única gravíssima nos últimos doze meses. Resposta: o inciso IV atual não exige zero gravíssima, mas não ter cometido MAIS DE UMA, mantendo os demais requisitos. Variação: Ter duas gravíssimas nesse intervalo viola esse requisito; categoria B não substitui D por dirigir uma van pequena.",
+      "prova": [
+        "O inciso IV atual proíbe qualquer infração grave ou média no período? Não. A redação da Lei 14.071/2020 trata de mais de uma gravíssima nos doze últimos meses.",
+        "Curso especializado hoje deve ser estudado exclusivamente pela Resolução 789/2020? Não. A Resolução 1020/2025 revogou a 789 e disciplina formação especializada, incluindo transporte de escolares."
+      ],
+      "termos": [
+        {
+          "termo": "Requisito de histórico",
+          "significado": "Condição legal de gravíssimas no período, sem recuperar o rol antigo de infrações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 145",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "f7f9b50f-c87e-5dfa-8025-c6b429c80be2",
+        "content_sha256": "842a4eff9282016312e8c445f8e6089b32efe87ef4c2ec981420a9e1fe0ef5d2",
+        "simples": "O condutor de veículo destinado à condução de escolares deve ter idade superior a vinte e um anos, ser habilitado na categoria D, não ter cometido mais de uma infração gravíssima nos últimos doze meses e ser aprovado em curso especializado, nos termos da regulamentação do Contran.",
+        "pontos": [
+          "Idade superior a vinte e um anos.",
+          "Categoria D.",
+          "No máximo uma infração gravíssima em doze meses.",
+          "Curso especializado."
+        ],
+        "atencao": [
+          "Mais de VINTE E UM anos e categoria D."
+        ],
+        "exemplo": "O motorista de ônibus escolar tem 25 anos, categoria D e curso especializado.",
+        "prova": [
+          "Assertiva que exige apenas a categoria B para conduzir escolares erra: é categoria D."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-139",
+      "unit_id": "55caf626-d841-5410-9548-15df0fca5eff",
+      "content_sha256": "dfea727d06728ac39bfc639dcfbca4f5d9705bd365b6e5576493e739e74f0f22",
+      "simples": "As regras do capítulo sobre condução de escolares não excluem a competência municipal de aplicar as exigências previstas em seus regulamentos para o transporte de escolares.",
+      "pontos": [
+        "Municípios podem fazer exigências adicionais."
+      ],
+      "atencao": [
+        "Competência municipal complementar.",
+        "Evitar afirmar exclusividade estadual da regulamentação de escolares."
+      ],
+      "exemplo": "O município aplica requisitos próprios de transporte escolar em sua circunscrição. Resposta: o capítulo não exclui essa competência. Variação: A regra complementar não autoriza eliminar a inspeção semestral ou aceitar condutor sem categoria exigida pelo CTB.",
+      "prova": [
+        "A autorização estadual elimina toda exigência municipal de escolar? Não. O art. 139 preserva a aplicação das exigências previstas em regulamentos municipais.",
+        "A competência municipal permite contrariar requisitos federais do capítulo? Não. Deve ser exercida em integração ao CTB, sem transformar complementaridade em dispensa dos deveres nacionais."
+      ],
+      "termos": [
+        {
+          "termo": "Competência complementar",
+          "significado": "Atuação local preservada, compatível com os deveres nacionais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 136"
+      ],
+      "expected": {
+        "unit_id": "55caf626-d841-5410-9548-15df0fca5eff",
+        "content_sha256": "dfea727d06728ac39bfc639dcfbca4f5d9705bd365b6e5576493e739e74f0f22",
+        "simples": "As regras do capítulo sobre condução de escolares não excluem a competência municipal de aplicar as exigências previstas em seus regulamentos para o transporte de escolares.",
+        "pontos": [
+          "Municípios podem fazer exigências adicionais."
+        ],
+        "atencao": [
+          "Competência municipal complementar."
+        ],
+        "exemplo": "A prefeitura exige vistoria extra para vans escolares.",
+        "prova": [
+          "Assertiva que impede o município de regulamentar o transporte escolar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 136"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-139-a",
+      "unit_id": "43bf6a86-742d-5efe-be71-f9f94b0ac4cb",
+      "content_sha256": "43b110f90e8f349e397bb982ba9a474a443bd6d77b9d01ebac434d00c9c45f9d",
+      "simples": "Motofrete exige autorização estadual/distrital e os requisitos do art. 139-A, incluindo categoria de aluguel, mata-cachorro, antena corta-pipas e inspeção semestral. ATUALIZAÇÃO: a MP 1360/2026 flexibilizou autorização e revogou temporariamente os incisos I e IV, mas teve vigência ENCERRADA em 15/9/2026 pelo Ato Declaratório 96/2026. Em 13/10/2026, não ensinar a dispensa temporária como atual. Relações do período da MP exigem análise própria do art. 62 da Constituição. Cargas seguem regulamento; gás de cozinha/água mineral são exceções com side-car.",
+      "pontos": [
+        "Autorização estadual/distrital e categoria de ALUGUEL no regime atual.",
+        "Mata-cachorro e antena corta-pipas conforme regulamento.",
+        "Inspeção SEMESTRAL: não tratar revogação temporária da MP como permanente.",
+        "MP de 19/5/2026: prazo encerrado em 15/9/2026; ato de 16/9 publicado em 17/9.",
+        "Inflamáveis/tóxicos/combustíveis: proibição com exceção de gás de cozinha e galões de água mineral mediante side-car."
+      ],
+      "atencao": [
+        "A marcação vigência encerrada refere-se à MP, não a uma revogação permanente dos requisitos originais.",
+        "Distinguir regra atual e relações constituídas durante a MP conforme CF 62, §§3º/11; não certificada aqui existência ou alcance de todo decreto legislativo de transição.",
+        "Formação especializada: Resolução 1020/2025 revogou 930/2022; não citar esta como regulamento atual sem ressalva."
+      ],
+      "exemplo": "Em outubro de 2026, um motofretista alega dispensa de categoria de aluguel e de inspeção semestral com base na MP 1360. Resposta: a MP teve vigência encerrada em 15/9/2026; não usar suas revogações temporárias como regra vigente de dispensa, e conferir requisitos restaurados no compilado. Variação: Relações constituídas durante a vigência da MP exigem análise de transição do art. 62 da Constituição; não aplicar a regra de outubro indistintamente a todo período anterior.",
+      "prova": [
+        "Vigência encerrada junto à anotação da MP significa que os incisos originais I e IV continuam revogados para sempre? Não. O ato congressual encerra a vigência da MP; no compilado atual os requisitos originais reaparecem e a revogação temporária é histórica.",
+        "A exceção para gás de cozinha e água mineral permite transporte livre na motocicleta? Não. O §2º exige auxílio de side-car e observância da regulamentação, sem liberar todo inflamável."
+      ],
+      "termos": [
+        {
+          "termo": "Caducidade da MP",
+          "significado": "Fim da eficácia da medida provisória, com retorno ao regime aplicável e análise específica das relações temporais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 139-B",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1360.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "43bf6a86-742d-5efe-be71-f9f94b0ac4cb",
+        "content_sha256": "43b110f90e8f349e397bb982ba9a474a443bd6d77b9d01ebac434d00c9c45f9d",
+        "simples": "As motocicletas e motonetas destinadas ao transporte remunerado de mercadorias, o moto-frete, só podem circular com autorização do órgão executivo de trânsito estadual ou distrital, exigindo-se, entre outros requisitos, protetor de motor (mata-cachorro), aparador de linha (antena corta-pipas), nos termos do Contran, e inspeção semestral para verificação dos equipamentos obrigatórios e de segurança. É proibido o transporte de combustíveis, produtos inflamáveis ou tóxicos e de galões, com exceção do gás de cozinha e de galões de água mineral, com o auxílio de side-car.",
+        "pontos": [
+          "Autorização do órgão estadual ou distrital.",
+          "Mata-cachorro e antena corta-pipas.",
+          "Inspeção semestral.",
+          "Vedado transporte de combustíveis e inflamáveis."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso sobre registro como categoria de aluguel tem vigência encerrada.",
+          "Exceção: gás de cozinha e galões de água mineral, com side-car."
+        ],
+        "exemplo": "O motofretista instala a antena corta-pipas e passa pela inspeção semestral.",
+        "prova": [
+          "Assertiva que permite o transporte de combustíveis em moto-frete erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 139-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-139-b",
+      "unit_id": "37b5cf75-6dce-55a2-ad16-3ab3d73e9f00",
+      "content_sha256": "c25e9f1f2fda37ba4ed769b6667f54fd399cd116240bffe58cf10bc623790244",
+      "simples": "As regras do capítulo sobre moto-frete não excluem a competência municipal ou estadual de aplicar as exigências previstas em seus regulamentos para a atividade no âmbito de suas circunscrições.",
+      "pontos": [
+        "Competência municipal ou estadual complementar."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Integrar art. 139-A e a caducidade da MP 1360 em setembro/2026; preservação local não resolve toda transição."
+      ],
+      "exemplo": "Um município estabelece requisitos adicionais válidos para motofrete em suas vias. Resposta: a competência municipal e estadual é preservada no âmbito da respectiva circunscrição. Variação: O órgão não pode usar complementaridade para ignorar a vigência encerrada da MP ou eliminar indistintamente o regime nacional.",
+      "prova": [
+        "O capítulo torna a regulamentação de motofrete exclusivamente federal? Não. O artigo preserva exigências previstas nos regulamentos municipais ou estaduais.",
+        "A norma local vale automaticamente fora da circunscrição da autoridade? Não. O caput delimita atuação ao âmbito das respectivas circunscrições."
+      ],
+      "termos": [
+        {
+          "termo": "Circunscrição do motofrete",
+          "significado": "Limite territorial e de competência para exigências locais compatíveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 139-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm"
+      ],
+      "expected": {
+        "unit_id": "37b5cf75-6dce-55a2-ad16-3ab3d73e9f00",
+        "content_sha256": "c25e9f1f2fda37ba4ed769b6667f54fd399cd116240bffe58cf10bc623790244",
+        "simples": "As regras do capítulo sobre moto-frete não excluem a competência municipal ou estadual de aplicar as exigências previstas em seus regulamentos para a atividade no âmbito de suas circunscrições.",
+        "pontos": [
+          "Competência municipal ou estadual complementar."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "O município exige credenciamento adicional dos motofretistas.",
+        "prova": [
+          "Assertiva que impede estados e municípios de regular o moto-frete erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 139-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:08.843318+00:00",
+        "updated_at": "2026-10-11T22:03:08.843318+00:00"
+      }
+    }
+  ]
+}

@@ -40,6 +40,15 @@ export function matchingLibraryLaws(query:string): string[] {
  }).map(entry=>entry.slug);
 }
 
+/** A content word (e.g. "crimes") must not restrict the search to law titles. */
+export function identifyingLibraryLaws(query: string): string[] {
+ const normalized = normalizeLibrarySearch(query);
+ if (/^(cp|cpp|ctb|eca|lep|cpf|cin|icn|ric|codigo penal|codigo de processo penal|codigo de transito brasileiro)$/.test(normalized)) return matchingLibraryLaws(query);
+ const tokens = normalized.split(' ').filter(token => !['lei','leis','decreto','de','n','numero'].includes(token));
+ if (tokens.length && tokens.every(token => /^\d+$/.test(token)) && tokens[0]!.length >= 4 && !(tokens.length === 1 && /^\d{4}$/.test(tokens[0]!) && Number(tokens[0]) >= 1900 && Number(tokens[0]) <= 2100)) return matchingLibraryLaws(query);
+ return [];
+}
+
 export function libraryMatchParts(text:string,query:string): {text:string;match:boolean}[] {
  const mapped:{start:number;end:number}[]=[];
  let normalized='',offset=0;

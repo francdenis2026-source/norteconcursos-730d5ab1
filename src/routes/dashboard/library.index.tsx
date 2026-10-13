@@ -18,7 +18,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { compareMaterialRevision } from "@/lib/legalChronology";
 import { materialLawSlug } from "@/lib/legalLibrary";
-import { librarySearchText, matchesLibrarySearch, matchingLibraryLaws } from "@/lib/librarySearch";
+import { librarySearchText, identifyingLibraryLaws, libraryLawResultTitle } from "@/lib/librarySearch";
+import { useContentSearch } from "@/lib/contentSearch";
+import { scopeLibraryMaterials, matchingLibraryMaterials } from "@/lib/librarySearchScope";
 import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
 import { LibraryNavigation } from "@/components/library/LibraryNavigation";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
@@ -62,6 +64,7 @@ export function LibraryIndex() {
   const [discipline, setDiscipline] = useState<string>("all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
+  const [law, setLaw] = useState("all");
   const restoredFilters = useRef(false);
   const filterKey = `library-filters:${user?.id}:${initialQuery ?? ""}:${back ?? ""}`;
   useEffect(() => {
@@ -80,12 +83,14 @@ export function LibraryIndex() {
         setDiscipline(saved.discipline);
         setContest(saved.contest);
         setTopic(saved.topic);
+        setLaw(typeof saved.law === "string" ? saved.law : "all");
       } else {
         setQuery(initialQuery ?? "");
         setArea("all");
         setDiscipline("all");
         setContest("all");
         setTopic("all");
+        setLaw("all");
       }
     } catch {
       /* Session storage is optional. */
@@ -97,13 +102,13 @@ export function LibraryIndex() {
     try {
       sessionStorage.setItem(
         filterKey,
-        JSON.stringify({ query, area, discipline, contest, topic }),
+        JSON.stringify({ query, area, discipline, contest, topic, law }),
       );
     } catch {
       /* Session storage is optional. */
     }
-  }, [filterKey, query, area, discipline, contest, topic]);
-  const lawMatches = useMemo(() => matchingLibraryLaws(query), [query]);
+  }, [filterKey, query, area, discipline, contest, topic, law]);
+  const lawMatches = useMemo(() => identifyingLibraryLaws(query), [query]);
   const content = useLibrarySearchContent(
     signedIn && query.trim().length >= 2 && !lawMatches.length,
     user?.id,
@@ -143,18 +148,16 @@ export function LibraryIndex() {
     [items],
   );
 
-  const visible = useMemo(() => {
-    return items.filter(
-      (item) =>
-        (area === "all" || libraryArea(item) === area) &&
-        (discipline === "all" || libraryDiscipline(item) === discipline) &&
-        (contest === "all" || item.contest_name === contest) &&
-        matchesTopicFilter(libraryDiscipline(item), libraryTopic(item), topic) &&
-        (lawMatches.length
-          ? lawMatches.includes(materialLawSlug(item) ?? "")
-          : matchesLibrarySearch(searchIndex.get(item.id) ?? "", query)),
-    );
-  }, [items, query, area, discipline, contest, topic, searchIndex, lawMatches]);
+  const lawOptions = useMemo(() => {
+    const scoped = scopeLibraryMaterials(items, {area, discipline, contest, topic, law: "all"});
+    return [...new Set(scoped.map(materialLawSlug).filter((slug): slug is string => !!slug))]
+      .map(slug => ({slug, title: libraryLawResultTitle(slug)}))
+      .sort((a,b) => a.title.localeCompare(b.title, "pt-BR"));
+  }, [items, area, discipline, contest, topic]);
+  const scopedItems = useMemo(() => scopeLibraryMaterials(items, {area, discipline, contest, topic, law}), [items, area, discipline, contest, topic, law]);
+  const allowedLaws = useMemo(() => [...new Set(scopedItems.map(materialLawSlug).filter((slug): slug is string => !!slug))].sort(), [scopedItems]);
+  const articleSearch = useContentSearch(query, signedIn ? user?.id : undefined, allowedLaws, !lawMatches.length);
+  const visible = useMemo(() => matchingLibraryMaterials(scopedItems, query, searchIndex, articleSearch.data ?? []), [scopedItems, query, searchIndex, articleSearch.data]);
 
   const visibleGroups = useMemo(
     () =>
@@ -166,13 +169,14 @@ export function LibraryIndex() {
         .sort((a, b) => compareMaterialRevision(a[1][0]!, b[1][0]!)),
     [visible],
   );
-  const searching = query.trim() !== "" || contest !== "all" || topic !== "all";
+  const searching = query.trim() !== "" || contest !== "all" || topic !== "all" || law !== "all";
   const resetFilters = () => {
     setQuery("");
     setArea("all");
     setDiscipline("all");
     setContest("all");
     setTopic("all");
+    setLaw("all");
   };
   const readCount = items.filter((item) => read.has(item.slug)).length;
 
@@ -260,6 +264,7 @@ export function LibraryIndex() {
               setArea(value);
               setDiscipline("all");
               setTopic("all");
+              setLaw("all");
             }}
             query={query}
             onQuery={setQuery}
@@ -267,23 +272,28 @@ export function LibraryIndex() {
             onDiscipline={(value) => {
               setDiscipline(value);
               setTopic("all");
+              setLaw("all");
             }}
             disciplines={disciplines}
             topic={topic}
-            onTopic={setTopic}
+            onTopic={(value) => { setTopic(value); setLaw("all"); }}
+            law={law}
+            onLaw={setLaw}
+            laws={lawOptions}
             topics={topics}
             contest={contest}
             onContest={(value) => {
               setContest(value);
               setTopic("all");
+              setLaw("all");
             }}
             contests={contests}
             count={visible.length}
-            searchingContent={!lawMatches.length && query.trim().length >= 2 && content.isPending}
+            searchingContent={!lawMatches.length && ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)}
             onReset={resetFilters}
           />
-          {signedIn && user && <ContentSearchResults query={query} userId={user.id} />}
-          <ContranLibraryLink area={area} discipline={discipline} contest={contest} topic={topic} query={query} />
+          {signedIn && user && allowedLaws.length > 0 && !lawMatches.length && <ContentSearchResults query={query} userId={user.id} result={articleSearch} />}
+          {law === "all" && <ContranLibraryLink area={area} discipline={discipline} contest={contest} topic={topic} query={query} />}
           {content.isError && query.trim().length >= 2 && (
             <p role="alert" className="rounded-xl border p-4 text-sm">
               A busca nos textos não carregou; títulos e assuntos continuam disponíveis.{" "}
@@ -298,19 +308,20 @@ export function LibraryIndex() {
             materials={visible}
             searching={searching || discipline !== "all"}
             query={query}
+            hits={articleSearch.data ?? []}
           />
 
           {visible.length === 0 ? (
             <Empty
               icon={SearchX}
               title={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
+                !lawMatches.length && ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
                   ? "Pesquisando o conteúdo…"
                   : "Nada encontrado"
               }
               text={
-                !lawMatches.length && query.trim().length >= 2 && content.isPending
-                  ? "Aguarde a busca nos textos dos guias publicados."
+                !lawMatches.length && ((query.trim().length >= 2 && content.isPending) || articleSearch.isFetching)
+                  ? "Aguarde a busca nos textos das leis e dos guias publicados."
                   : "Nenhum material combina com essa busca. Tente outro termo ou limpe o filtro."
               }
               action={
@@ -322,6 +333,7 @@ export function LibraryIndex() {
                     setDiscipline("all");
                     setContest("all");
                     setTopic("all");
+                    setLaw("all");
                   }}
                 >
                   Limpar filtros

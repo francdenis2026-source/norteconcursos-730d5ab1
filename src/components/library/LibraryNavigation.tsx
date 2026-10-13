@@ -16,6 +16,9 @@ type Props = {
   topic: string;
   onTopic: (value: string) => void;
   topics: string[];
+  law?: string;
+  onLaw?: (value: string) => void;
+  laws?: {slug: string; title: string}[];
   contest: string;
   onContest: (value: string) => void;
   contests: string[];
@@ -29,6 +32,7 @@ export function LibraryNavigation(p: Props) {
     p.query.trim() !== "" ||
     p.discipline !== "all" ||
     p.topic !== "all" ||
+    (p.law ?? "all") !== "all" ||
     p.contest !== "all";
   return (
     <section className="library-navigator" aria-label="Pesquisar e organizar a biblioteca">
@@ -80,7 +84,7 @@ export function LibraryNavigation(p: Props) {
           type="search"
           value={p.query}
           onChange={(e) => p.onQuery(e.target.value)}
-          placeholder="Busque um assunto ou lei: CPP, Maria da Penha, 11.340…"
+          placeholder="Busque um termo em todas as leis ou refine pelos filtros…"
         />
         {p.query && (
           <button type="button" onClick={() => p.onQuery("")} aria-label="Limpar busca">
@@ -104,6 +108,13 @@ export function LibraryNavigation(p: Props) {
             ))}
           </select>
         </label>
+        {p.onLaw && <label>
+          Lei
+          <select value={p.law ?? "all"} onChange={e => p.onLaw?.(e.target.value)}>
+            <option value="all">Todas as leis da seleção</option>
+            {(p.laws ?? []).map(law => <option key={law.slug} value={law.slug}>{law.title}</option>)}
+          </select>
+        </label>}
         <label>
           Assunto
           <select value={p.topic} onChange={(e) => p.onTopic(e.target.value)}>
