@@ -1,0 +1,75 @@
+{
+  "verified_at": "2026-10-13T23:04:46.270509+00:00",
+  "scope": "Três registros reabertos em revisão; sem alteração de respostas ou fontes originais.",
+  "items": [
+    {
+      "id": "facbb40f-b1e8-4456-95d6-e783e19311f7",
+      "contest": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia",
+      "item_number": 40,
+      "original_status": "active",
+      "original_answer": "B",
+      "decision": "under_review",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "art. 322"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 14, parágrafo único"
+        }
+      ],
+      "review": {
+        "reason": "Recolocada em revisão individual: o gabarito oficial B foi conferido no PDF definitivo e permanece preservado. A justificativa anterior aplicava automaticamente a redução máxima de 2/3 à tentativa para calcular pena máxima da fiança. O art. 322 do CPP considera pena máxima, enquanto o art. 14, parágrafo único, do CP admite redução entre 1/3 e 2/3: com a menor redução, oito anos resultam em cinco anos e quatro meses, acima de quatro. A concessão policial não pode ser afirmada só pela existência de tentativa. Há necessidade de conciliar critério de cálculo e gabarito oficial; não se altera a resposta para E nem se declara anulação sem ato da banca.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "62c459da-090a-40b1-9837-99d3f8ab3a89",
+      "contest": "Polícia Civil do Estado de Sergipe - Escrivão de Polícia",
+      "item_number": 54,
+      "original_status": "archived",
+      "original_answer": "E",
+      "decision": "under_review",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 13-A e 13-B, caput e §§ 2º a 4º"
+        }
+      ],
+      "review": {
+        "reason": "Retirada a justificativa incorreta de arquivamento anterior: o prazo de 30 dias do art. 13-B, § 2º, II, não dispensa autorização judicial. O caput exige autorização; somente a ausência de manifestação judicial por 12 horas admite requisição direta com comunicação imediata ao juiz (§ 4º). Não confundir meios técnicos de localização com conteúdo de comunicação, nem com dados cadastrais do art. 13-A. O gabarito oficial E é compatível com a afirmação geral do item. Registro retorna à revisão para conferir prova, página, gabarito e vínculo ao edital antes de eventual publicação; original e resposta preservados.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "19f9f8da-0fe2-41a5-be1a-fc4cf1469c76",
+      "contest": "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária",
+      "item_number": 59,
+      "original_status": "archived",
+      "original_answer": "E",
+      "decision": "under_review",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 13-A e 13-B, caput e §§ 2º a 4º"
+        }
+      ],
+      "review": {
+        "reason": "Retirada a justificativa incorreta de arquivamento anterior: o prazo de 30 dias do art. 13-B, § 2º, II, não dispensa autorização judicial. O caput exige autorização; somente a ausência de manifestação judicial por 12 horas admite requisição direta com comunicação imediata ao juiz (§ 4º). Não confundir meios técnicos de localização com conteúdo de comunicação, nem com dados cadastrais do art. 13-A. O gabarito oficial E é compatível com a afirmação geral do item. Registro retorna à revisão para conferir prova, página, gabarito e vínculo ao edital antes de eventual publicação; original e resposta preservados.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+        ]
+      }
+    }
+  ]
+}
