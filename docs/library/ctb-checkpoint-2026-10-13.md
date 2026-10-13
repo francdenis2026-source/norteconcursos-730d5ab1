@@ -1,6 +1,6 @@
 # CTB — revisão em andamento
 
-Supabase conferido em 13/10/2026: **267/365 unidades atuais com aprovação editorial válida; 98 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
+Supabase conferido em 13/10/2026: **317/365 unidades atuais com aprovação editorial válida; 48 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
 
 Cada item do lote tem caso resolvido, variação contrastante, dois exercícios com resposta explicada e termo definido. Foram corrigidas omissões e generalizações, entre elas estacionamentos privados coletivos, composição do SNT/Contran, mandato dos Conselhos, registros nacionais, competências reorganizadas em 2023, delegação de privativas, alcance da polícia legislativa, prioridade de veículos especiais e distinção entre buzina, faróis e DRL. Os alertas antigos sobre apreensão/remoção foram preservados.
 
@@ -12,7 +12,7 @@ Readback: **50/50**, todos os campos autorais e hashes, 3.463 explicações fora
 
 Validação: 421 testes, TypeScript e build aprovados, além das verificações de integração. Pacotes retêm as 50 versões anteriores. Fontes brutas, snapshots e logs ficam apenas nos outputs ignorados; credenciais não são versionadas.
 
-Retomar no **art. 248**. Não declarar conclusão do CTB; a comparação textual não substitui revisão pedagógica/jurídica. Inventário legal geral: **2.710/3.511 revisadas, 801 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
+Retomar no **art. 296**. Não declarar conclusão do CTB; a comparação textual não substitui revisão pedagógica/jurídica. Inventário legal geral: **2.760/3.511 revisadas, 751 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
 
 ## Segundo lote
 
@@ -39,3 +39,12 @@ Mais 50 itens (arts. 193–247, recorte explícito) publicados e conferidos. Cor
 50/50 no readback; 3.463 explicações externas ao lote, incluindo 315 do CTB, preservadas. Todos os registros anteriores das seis tabelas protegidas permaneceram idênticos. Foram adicionados pela outra conta 23 tópicos de edição diferente e 13 fontes: evidência explícita por ID/hash, sem ocultar o crescimento das tabelas ou aceitar alteração de registros anteriores. Seis testes negativos/positivos do readback passaram; 434 testes de aplicação, TypeScript e build passaram. Lote anterior na main: `3e3834e`. A retomada soma 250 novos itens aprovados.
 
 A main recebeu migração concorrente `88d90c3` de rascunhos dos arts. 193–201. Seu conteúdo é preservado no Git; inserção ajustada para não sobrescrever registros já existentes, em especial as aprovações correntes. As demais mudanças remotas tratam principalmente do treinador e não contam como novas revisões editoriais da biblioteca.
+
+
+## Sexto lote
+
+Mais 50 unidades (arts. 248–295, recorte explícito) revisadas, publicadas e confirmadas. Corrigidos descontos de 20%/40% e condições de renúncia, dever de advertência do 267, RNPC sem dispensa dos exames físico/mental, diferenças entre expedição/recebimento de notificação e entre prazos de quinze/trinta/sessenta dias. Resolução 1025/2026 e vigência futura do SNE exclusivo em 2027 explicitadas. Cautelares e expressão de ofício integradas ao CPP atual, sem declarar resolvidas todas as controvérsias.
+
+50/50 no readback; 3.463 explicações fora do lote, incluindo 315 do CTB, preservadas. Todos os registros anteriores das seis tabelas protegidas permaneceram iguais; adições concorrentes de 21 tópicos, duas edições e quatro fontes registradas por ID/hash. Coleta com duplicados foi rejeitada e repetida. Antes da publicação, conferência independente registrou outras adições e duas fontes de disciplinas alheias atualizadas pela outra conta, sem alteração em explicações ou unidades do CTB.
+
+437 testes, TypeScript e build passaram; sete testes de proteção do readback passaram. Esta retomada soma 300 novos itens aprovados; 17 anteriores preservados. Lote anterior enviado com proteção de migração no commit `e9c8f7b`. Próximo lote: 48 unidades do art. 296 ao Anexo I. Não confundir aprovação da unidade com certificação de toda jurisprudência/regulamentação externa.

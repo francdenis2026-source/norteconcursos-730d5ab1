@@ -46,7 +46,7 @@ if len(sys.argv)>7 and sys.argv[7]!='-':
 foreign_additions=json.loads(Path(sys.argv[8]).read_text()) if len(sys.argv)>8 else None
 if foreign_additions:
  assert foreign_additions['kind']=='explicit_foreign_metadata_additions'
- assert set(foreign_additions['tables']).issubset({'syllabus_topics','content_sources'})
+ assert set(foreign_additions['tables']).issubset({'syllabus_topics','syllabus_editions','content_sources'})
  assert foreign_additions['target_course_id']==cp['id']
  target_topic=next(t for t in read(after,'syllabus_topics') if t['id']==cp['syllabus_topic_id'])
  assert foreign_additions['target_edition_id']==target_topic['edition_id']
@@ -65,6 +65,7 @@ for t in protected:
    row=actual[id]
    assert hashlib.sha256(json.dumps(row,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==evidence['sha256'],(t,id,'Metadata addition differs from explicit evidence')
    if t=='syllabus_topics':assert row['edition_id']!=target_topic['edition_id'],(id,'Addition in target edition is not foreign')
+   if t=='syllabus_editions':assert row['id']!=target_topic['edition_id'],(id,'Target edition is not foreign')
   added_tables.append(t)
  else:assert expected_table==actual_table,t
 for id in set(new)-set(old):

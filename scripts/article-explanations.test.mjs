@@ -1294,3 +1294,21 @@ test('Article publication rejects a caderno or gabarito as syllabus, even when o
  }
  const missing=fixture();missing.syllabus_editions.forEach(e=>e.source_id='missing');assert.throws(()=>checkArticlePreflight(pack,missing),/Edital oficial/);
 });
+
+test('CTB automatic renewal and repair deadlines retain exceptions and future effect',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-06-2026-10-13.json','utf8'));validateArticlePackage(p);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(JSON.stringify(get('268-a')),/físic.*mental/i);
+ assert.match(JSON.stringify(get(270)),/TRINTA|trinta/);
+ assert.match(JSON.stringify(get(271)),/QUINZE|quinze/);
+ assert.match(JSON.stringify(get(271)),/sessenta.*quinze\/trinta/);
+ assert.match(JSON.stringify(get(271)),/2027.*não já exclusivo/);
+ for(const n of ['268-a',270,271])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB payment discount and criminal speed threshold do not become misleading literal practice',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-06-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(284).simples,/80%.*20%.*60%.*40%.*sem defesa\/recurso/s);
+ assert.match(get(284).exemplo,/DESCONTO DE 20%/);
+ assert.match(get(291).exemplo,/50 km\/h, não 50%/);
+ assert.match(get(294).simples,/CPP 282.*sem ensinar atuação de ofício irrestrita/s);
+ for(const n of [284,291,294])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});

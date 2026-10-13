@@ -1,8 +1,8 @@
 {
   "current_units": 3511,
-  "current_review_metadata": 2710,
-  "pending_current_review_metadata": 801,
-  "checked_at": "2026-10-13T21:44:46.782Z",
+  "current_review_metadata": 2760,
+  "pending_current_review_metadata": 751,
+  "checked_at": "2026-10-13T22:37:57.583Z",
   "note": "Contagem de aprovações editoriais atuais com revisor, data e hash correspondente; existência de explicação publicada não equivale a revisão atual. Não certifica toda a regulamentação ou jurisprudência.",
   "courses": [
     {
@@ -158,8 +158,8 @@
     {
       "slug": "transito",
       "current": 365,
-      "review_metadata": 267,
-      "pending": 98
+      "review_metadata": 317,
+      "pending": 48
     },
     {
       "slug": "henry-borel",

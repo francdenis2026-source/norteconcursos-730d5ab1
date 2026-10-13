@@ -27,6 +27,13 @@ class ReadbackGuards(unittest.TestCase):
  def test_explicit_additions_preserve_every_existing_row(self):
   result=self.run_check();self.assertEqual(result.returncode,0,result.stderr);report=json.loads((self.root/'report.json').read_text());self.assertEqual(len(report['protected_existing_rows_unchanged']),6);self.assertNotIn('syllabus_topics',report['protected_tables_unchanged'])
  def test_default_rejects_metadata_growth(self):self.assertNotEqual(self.run_check(False).returncode,0)
+ def test_foreign_edition_requires_exact_additive_evidence(self):
+  row=dict(id='foreign-edition',source_id='foreign-source');self.after['syllabus_editions'].append(row)
+  self.assertNotEqual(self.run_check().returncode,0)
+  self.manifest['tables']['syllabus_editions']=[dict(id=row['id'],sha256=digest(row))]
+  self.assertEqual(self.run_check().returncode,0)
+  self.after['syllabus_editions'][0]['source_id']='changed'
+  self.assertNotEqual(self.run_check().returncode,0)
  def test_existing_protected_row_change_rejected(self):
   self.after['syllabus_topics'][0]['edition_id']='other';self.assertNotEqual(self.run_check().returncode,0)
  def test_unlisted_addition_rejected(self):

@@ -1,0 +1,388 @@
+{
+  "checked_at": "2026-10-13T22:37:24.268205+00:00",
+  "batch": 6,
+  "reviewed": 50,
+  "published": {
+    "version": "2026-10-11-transito-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 50,
+    "published": 50,
+    "improved": 50,
+    "preserved": 0,
+    "verified_at": "2026-10-13T22:29:06.037Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T22:37:24.268205+00:00",
+    "authored_explanations_confirmed": 50,
+    "untargeted_explanations_preserved": 3463,
+    "untargeted_course_explanations_preserved": 315,
+    "prior_revisions_retained_in_manifest": 50,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses"
+    ],
+    "protected_existing_rows_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "syllabus_editions",
+      "content_sources"
+    ],
+    "authorized_syllabus_source_repair": null,
+    "concurrent_foreign_metadata_additions": {
+      "kind": "explicit_foreign_metadata_additions",
+      "target_course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "target_edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "tables": {
+        "syllabus_topics": [
+          {
+            "id": "0c6cbc83-2f1c-42d3-9fa8-d1beaf260ade",
+            "sha256": "3af54a8ffe21b6d33a7983f1d8b4c5724a18c4ccb15a8421050be4d4449e0171",
+            "title": null
+          },
+          {
+            "id": "1adb329e-c742-4e75-ad54-11686e6e2517",
+            "sha256": "c6cb38969985782a5d7c5946b0146ccd1b9080807fdb8ef9bdde62a0fc181698",
+            "title": null
+          },
+          {
+            "id": "2f4e7cb4-bb65-4c88-8a13-464b832265b3",
+            "sha256": "0ab6a55229c57908187d67a0d652c97524cb30a419d0f935f33603af7336433a",
+            "title": null
+          },
+          {
+            "id": "3d343c6a-2ff2-4390-a38a-887e681f0d5d",
+            "sha256": "8f5f95986c7193cb2d9a0c2584b5113818783df1e74e8ab52529911deb98f96f",
+            "title": null
+          },
+          {
+            "id": "412d760c-0555-4fbc-89e1-fdda4ee893e3",
+            "sha256": "fc61fa9539155443d0a6c136f0490a30ff9196e2e9c0cb5d9c4453d9c74d23cc",
+            "title": null
+          },
+          {
+            "id": "71ce68c9-2d76-47ad-b52e-8baec2d6e8f1",
+            "sha256": "8ee9072243bde5052f8d6a071716fddba143b3f9734716887c0ca47e2f21e650",
+            "title": null
+          },
+          {
+            "id": "83b168bd-913a-4899-a1e3-029b18ba4e2f",
+            "sha256": "ca2fd04cbdfc726286ea6393ae2868bb92cb051d32db6d87fd61565e84abd088",
+            "title": null
+          },
+          {
+            "id": "8d589b9e-c99e-449c-9772-8ad5eb0cce81",
+            "sha256": "82c346961b13a1976bcf668323aa377b7f28744cb2d39a19d49958fa7d227e61",
+            "title": null
+          },
+          {
+            "id": "bbd36405-e1ee-4d60-b20c-e41d79a263e6",
+            "sha256": "15de1621fc08b0a6ec22b20b92702b7c803f8786ff9c89c2479646f70738c112",
+            "title": null
+          },
+          {
+            "id": "bc9aed7d-2573-462f-bde8-1b0cb826b0a0",
+            "sha256": "ff37517fe04eff1300d564a7b02387ddcf52f5427c7c6bf4cca4f17deb00ff63",
+            "title": null
+          },
+          {
+            "id": "bde6f873-c27b-43f4-8fee-13b8523f6952",
+            "sha256": "622c72633984658cf7787936e76f149b38ae11f7308236e9e6865bcd0578f98c",
+            "title": null
+          },
+          {
+            "id": "c66a243e-54a3-41bf-9da7-c79be45c0966",
+            "sha256": "089ab3e1681ef7a595535f481068715cf887d52fb435b5285a8f05ba43618c66",
+            "title": null
+          },
+          {
+            "id": "cfb0fb78-dccd-4348-89d8-303c67785832",
+            "sha256": "60621605287acf1f94d28cac27c6fb31c0128397d2cd1aa91b0774bdc1db27f8",
+            "title": null
+          },
+          {
+            "id": "d3bbb9b0-f17c-4f47-bae2-90d12a18e5c1",
+            "sha256": "4bd957d3df66dc1b8fd7dc009fa96b9aa8b3d2f483763a29fcb5002ed0840edc",
+            "title": null
+          },
+          {
+            "id": "d40ca52e-b2ee-42a8-b20b-da182468e1fe",
+            "sha256": "aeb0bf4a375207e2b49e4cb94be4a048c4707cf133dcc6df7908197443eea044",
+            "title": null
+          },
+          {
+            "id": "d798b964-dd78-4d37-8f18-99b9d0bdf73f",
+            "sha256": "d3c9a754c2be643da02146e3af106351bf4ddab72d6b71cbec93dc4809895b14",
+            "title": null
+          },
+          {
+            "id": "da083f94-e3dc-4ce4-afc1-1efd1c3acf0a",
+            "sha256": "790a426bafdadb5ff53683385fe7294cb1bf2363c1ba61b5f768f0dd86bc0290",
+            "title": null
+          },
+          {
+            "id": "e507c631-a82f-47d9-a669-27571db31b44",
+            "sha256": "227a340daa49fe934d6023ca325e0184a9f9c4bbda16d2ad7c070524efc1045c",
+            "title": null
+          },
+          {
+            "id": "e8a6e331-84fa-429a-9e82-23f4297c9165",
+            "sha256": "5ba580c7ea8009816de0968b4968ac3fb5d6423c6fdcd57afa676e08e5f7ef5d",
+            "title": null
+          },
+          {
+            "id": "f7197a3b-8805-4b61-bbf4-8105ada8bced",
+            "sha256": "c42ce230c06aa6614879f5d7184ef6b3ad035351b183b8085dba4c3ad5340ce0",
+            "title": null
+          },
+          {
+            "id": "ff8aaea6-66cb-4515-bd7a-f160537d5a63",
+            "sha256": "15022220b8bb2848a9d0b743d4176201d83ad6345020e872a6c678e46f8cbe53",
+            "title": null
+          }
+        ],
+        "syllabus_editions": [
+          {
+            "id": "1053c168-c3e1-4e07-b101-37649647f535",
+            "sha256": "7023d3c24bd728aea2ffe21a562a21f7e9a6c67141d704548e7f9a5c54aad5fe",
+            "title": null
+          },
+          {
+            "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+            "sha256": "d484a53ccb1b27367a611cffc30a51674448ff9f46b5dfec1df87ba903749703",
+            "title": null
+          }
+        ],
+        "content_sources": [
+          {
+            "id": "1e91ec85-62cf-4cf0-90b0-1e9ee0edce1c",
+            "sha256": "59ba605d086c22f24930a8e1aaaa0e528615b06e81f1398da40b6fafafd0ca99",
+            "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)"
+          },
+          {
+            "id": "3cdfcc5f-311e-4f35-a8c3-42b67e4caee2",
+            "sha256": "cd665bc2ad3bdff5d3e9cfe58becc020c3aad36e494ffbb0a8404259947b23ae",
+            "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)"
+          },
+          {
+            "id": "412de40f-ade9-41a0-96fc-7e713e81c916",
+            "sha256": "fc8ad099f86800f8744856dbc62e08921655548f57824c78677cc7afd61fda94",
+            "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)"
+          },
+          {
+            "id": "aa2d07d5-d3c5-4b8d-b499-10c6ba6547d8",
+            "sha256": "61b3c243d59e2b01e3bccc74a40c6e79a3e0cc95bb9238578b427b895fcad97d",
+            "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)"
+          }
+        ]
+      },
+      "note": "Adições concorrentes fora da edição do CTB, identificadas por ID/hash; todos os registros anteriores preservados."
+    },
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source. Optional foreign topic/source additions require exact ID/hash evidence and preservation of every prior row; topics in the target edition are rejected. No broad protected-table exemption."
+  },
+  "sources": [
+    {
+      "name": "lei15428",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm",
+      "status": 200,
+      "bytes": 18611,
+      "sha256": "28e66031ca29eff04ed86d625f6db60c328b42d4e24890acccc7358f6135db83",
+      "checked_at": "2026-10-13T21:49:33.746187+00:00"
+    },
+    {
+      "name": "contran1025",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10252026c.pdf",
+      "final_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10252026c.pdf",
+      "status": 200,
+      "bytes": 256961,
+      "sha256": "fa6ffc0346400e0ac5760bc663e0d6efc5e466dfc5819701f772db1754c09f9c",
+      "checked_at": "2026-10-13T21:49:34.992640+00:00"
+    },
+    {
+      "name": "contran772",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7722019.pdf",
+      "final_url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7722019.pdf",
+      "status": 200,
+      "bytes": 480365,
+      "sha256": "1925b17d22cc92e0a7d4e18df974f9dd6830c650578654264b542e389921e337",
+      "checked_at": "2026-10-13T21:49:37.602715+00:00"
+    },
+    {
+      "name": "cpp-current",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "status": 200,
+      "bytes": 908608,
+      "sha256": "8e25e3e6d3980103989d4e4e43b6c6a1a9d3c60d55aea6899707b41b6ea5f777",
+      "checked_at": "2026-10-13T21:49:42.653512+00:00"
+    },
+    {
+      "name": "stf-motorista-profissional",
+      "url": "https://noticias.stf.jus.br/postsnoticias/suspensao-de-cnh-de-motorista-profissional-condenado-por-homicidio-culposo-por-acidente-de-transito-e-constitucional/",
+      "final_url": "https://noticias.stf.jus.br/postsnoticias/suspensao-de-cnh-de-motorista-profissional-condenado-por-homicidio-culposo-por-acidente-de-transito-e-constitucional/",
+      "status": 200,
+      "bytes": 67398,
+      "sha256": "2a163896a26932eebca591d833b8f3f5778c896a26916424bb1fbdd937da405d",
+      "checked_at": "2026-10-13T21:51:42.246128+00:00"
+    }
+  ],
+  "unusable_sources": [
+    {
+      "name": "stj-sum312",
+      "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=312+INPATH%28NUM%29",
+      "final_url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=312+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 615,
+      "sha256": "e8542410d74b375c1967b84c3ab7419a78e28642606a47947dd670d1c3ada2c4",
+      "checked_at": "2026-10-13T21:51:42.034447+00:00",
+      "usable": false,
+      "reason": "HTTP 200 is a Request Rejected page, not the judgment or sumula"
+    }
+  ],
+  "reused_sources": [
+    "ctb-lote-04-review-2026-10-13.json",
+    "ctb-lote-05-review-2026-10-13.json"
+  ],
+  "compiled_source": {
+    "slug": "transito",
+    "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+    "units": 50,
+    "scope_type": "targeted_correction",
+    "course_current_units": 365,
+    "target_unit_keys": [
+      "art-248",
+      "art-249",
+      "art-250",
+      "art-251",
+      "art-252",
+      "art-253-a",
+      "art-254",
+      "art-255",
+      "art-257",
+      "art-258",
+      "art-259",
+      "art-260",
+      "art-261",
+      "art-263",
+      "art-265",
+      "art-266",
+      "art-267",
+      "art-268",
+      "art-268-a",
+      "art-269",
+      "art-270",
+      "art-271",
+      "art-272",
+      "art-273",
+      "art-274",
+      "art-275",
+      "art-276",
+      "art-277",
+      "art-278",
+      "art-278-a",
+      "art-279",
+      "art-279-a",
+      "art-280",
+      "art-281",
+      "art-281-a",
+      "art-282-a",
+      "art-284",
+      "art-285",
+      "art-286",
+      "art-287",
+      "art-288",
+      "art-289",
+      "art-289-a",
+      "art-290",
+      "art-290-a",
+      "art-291",
+      "art-292",
+      "art-293",
+      "art-294",
+      "art-295"
+    ],
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+    "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+  },
+  "late_compiled_refetch": {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "sha256": "4f7953a33d9d81f9dd33a2c2d9a355028ae33058ed49a979cdeb471ea8f3f571",
+    "checked_at": "2026-10-13T21:50:03.184842+00:00",
+    "same_as_initial": false
+  },
+  "late_compiled_audit": {
+    "checked_at": "2026-10-13T21:51:08.465412+00:00",
+    "source_sha256": "4f7953a33d9d81f9dd33a2c2d9a355028ae33058ed49a979cdeb471ea8f3f571",
+    "parsed_current": 365,
+    "database_current": 365,
+    "missing_articles": [],
+    "unexpected_current": [],
+    "text_differences": []
+  },
+  "validation": {
+    "tests": 437,
+    "typecheck": "passed",
+    "build": "passed",
+    "readback_guard_tests": 7
+  },
+  "limits": [
+    "RNPC: renovação automática da Lei 15.428/2026 preserva exames de aptidão física e mental; não certificada toda implantação operacional.",
+    "Resolução 1025: vigência desde publicação em 30/6/2026, substitui 623; exclusividade do SNE em 1/1/2027 e obrigações do Sivec têm transições próprias.",
+    "De ofício no 278-A/294 exige integração com CPP atual; não certificada solução de toda controvérsia especial/processual.",
+    "Captura after-06 teve IDs repetidos nos tópicos durante inserções concorrentes; rejeitada e preservada como evidência privada. Readback usa coleta after-06-stable sem duplicados.",
+    "21 tópicos, 2 edições e 4 fontes adicionados durante o lote fora da edição do CTB, registrados por ID/hash. Todos os registros anteriores das seis tabelas protegidas preservados."
+  ],
+  "before_publication_concurrency_summary": {
+    "content_sources": {
+      "added": 13,
+      "changed_ids": [
+        "15494028-a541-44f7-8017-8316c239a213",
+        "66f680a1-73a2-4043-a29f-6e9ab69638f7"
+      ],
+      "deleted": 0
+    },
+    "syllabus_topics": {
+      "added": 20,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "syllabus_editions": {
+      "added": 1,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "legal_courses": {
+      "added": 0,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "study_materials": {
+      "added": 0,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "study_material_enrichments": {
+      "added": 0,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "legal_course_units": {
+      "added": 0,
+      "changed_ids": [],
+      "deleted": 0
+    },
+    "legal_unit_explanations": {
+      "added": 0,
+      "changed_ids": [],
+      "deleted": 0
+    }
+  }
+}
