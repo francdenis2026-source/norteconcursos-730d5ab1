@@ -42,6 +42,16 @@
       "before_sha256": "4fa93b9369789f2df7370720f04c869a98ab03005c784cd771d8b07a10c5ca10",
       "after_sha256": "74f223b55bd5d73908ac39a339028678275c5b65801b718fbac32301cea3ae25",
       "raw_preserved": true
+    },
+    {
+      "id": "33315dde-cdd1-463e-b30f-44f37f20c502",
+      "item": 43,
+      "page": 8,
+      "answer_preserved": "C",
+      "reason": "Comando separado da alternativa A conforme caderno oficial, página 8; gabarito, alternativas e texto bruto preservados.",
+      "before_sha256": "19d82d759f8fee603ca3d43523f61b0647cf48796f2dd872895521c2e2619c43",
+      "after_sha256": "a82050581d97c4ba330480943db661e5019dab8d12176971c95a3dc0ce9e0789",
+      "raw_preserved": true
     }
   ]
 }
