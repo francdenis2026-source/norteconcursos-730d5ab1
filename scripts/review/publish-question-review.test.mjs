@@ -1,6 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateReview,publishReview} from './publish-question-review.mjs';
+import {validateReview,publishReview,sameReviewRow} from './publish-question-review.mjs';
+test('accepts PostgreSQL timestamp formatting without hiding concurrent microsecond changes',()=>{
+ assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.25871Z'}),true);
+ assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.258711+00:00'}),false);
+ assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.000000Z',official_answer:'C'},{verified_at:'2026-10-13T00:00:00+00:00',official_answer:'E'}),false);
+});
 const make=()=>({items:[{table:'official_exam_questions',expected:{id:'q1',content_status:'under_review',official_answer:'E',question_text:'Complete question',context_review_required:false},patch:{content_status:'active',current_syllabus_topic_id:'t1',verified_at:'2026-10-13T00:00:00Z',law_version_checked_at:'2026-10-13T00:00:00Z',legal_basis:[{url:'https://www.planalto.gov.br/law'}]},evidence:{legal:true,reason:'Individually verified',sources:['https://www.planalto.gov.br/law']}}]});
 test('forbids changing original answer, incomplete contexts and missing legal sources',()=>{
  const p=make();p.items[0].patch.official_answer='C';assert.throws(()=>validateReview(p));
