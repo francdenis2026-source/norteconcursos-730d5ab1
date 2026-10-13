@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-13T23:26:47.933Z",
+  "scope": "Correção exclusiva da fonte das duas matrizes históricas PC-SE 2021. Cadernos, questões, gabaritos e estados de revisão preservados.",
+  "official_edital": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+  "editions": [
+    {
+      "id": "1053c168-c3e1-4e07-b101-37649647f535",
+      "old_source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+      "new_source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+      "role": "Agente de Polícia Judiciária",
+      "verified": true
+    },
+    {
+      "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+      "old_source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+      "new_source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+      "role": "Escrivão de Polícia",
+      "verified": true
+    }
+  ]
+}
