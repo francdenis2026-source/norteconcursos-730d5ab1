@@ -928,3 +928,14 @@ test('CP final lote1: patrimônio e trabalho não ensinam textos residuais como 
  assert.match(get(165).simples,/62.*9.605/);assert.match(get(201).simples,/direito constitucional de greve/);
  for(const n of [153,154,'154-a',155,158,165,166,'168-a',171,180,'180-a',181,182,201,204,213])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP final lote2: vulnerabilidade, sigilo e perigo não viram automatismos',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-final-lote-2-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('217-a').atencao.join(' '),/8\/12\/2025.*8\/3\/2026.*593/s);
+ assert.match(get('234-b').atencao.join(' '),/7871.*não conhecida.*não decide constitucionalidade/);
+ assert.match(get('234-b').pontos.join(' '),/Ressalvada decisão judicial fundamentada/);
+ assert.match(get(259).pontos.join(' '),/POSSA causar dano/);
+ assert.match(get(247).pontos.join(' '),/sem presumir crime por pobreza/);
+ for(const n of ['217-a','234-b',226,244,246,247,248,249,266,268])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});

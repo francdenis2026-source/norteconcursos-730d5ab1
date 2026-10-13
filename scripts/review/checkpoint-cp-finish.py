@@ -21,7 +21,7 @@ Alvos: {', '.join(p['laws'][0]['target_unit_keys'])}.
 
 Dry-run e publicação com preflight/estado anterior esperado concluídos.
 Readback confirmou {r['authored_explanations_confirmed']} gravações e preservou
-{r['untargeted_explanations_preserved']} explicações alheias e sete tabelas, sem exclusões
+{r['untargeted_explanations_preserved']} explicações alheias e {len(r['protected_tables_unchanged'])} tabelas imutáveis, sem exclusões
 ou alteração de timestamps alheios. Fontes brutas/snapshots ficam em outputs
 ignorados; pacote conserva versões anteriores, hashes e escopo explícito.
 
@@ -34,4 +34,7 @@ regulamentação ou constitucionalidade. Trechos históricos/residuais e pontos
 não certificados permanecem ressalvados, sem treino literal automático indevido.
 Push não comprova implantação dos alertas no domínio; banco tem leitura própria.
 Saldo de créditos não é acessível automaticamente nesta sessão.
-''');print('CP',c,'Next',pending[:3])
+''');
+if r.get('concurrent_other_course_changes'):
+ with report.open('a') as f:f.write('\nAlterações concorrentes fora do CP: '+str(len(r['concurrent_other_course_changes']))+' registros, detalhados no readback. Todos os artigos do CP permaneceram iguais; não foi declarada imutabilidade global da tabela de artigos. As salvaguardas de publicação continuam inalteradas.\n')
+print('CP',c,'Next',pending[:3])

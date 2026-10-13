@@ -1,0 +1,2936 @@
+{
+  "version": "2026-10-11-codigo-penal-targeted",
+  "checked_at": "2026-10-12T23:53:28.483682+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-penal",
+      "title": "Código Penal — leitura atualizada",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 401,
+      "target_unit_keys": [
+        "art-215-a",
+        "art-216-a",
+        "art-217-a",
+        "art-218",
+        "art-218-a",
+        "art-218-b",
+        "art-218-c",
+        "art-225",
+        "art-226",
+        "art-227",
+        "art-228",
+        "art-229",
+        "art-230",
+        "art-232-a",
+        "art-233",
+        "art-234",
+        "art-234-a",
+        "art-234-b",
+        "art-235",
+        "art-236",
+        "art-237",
+        "art-238",
+        "art-239",
+        "art-241",
+        "art-242",
+        "art-243",
+        "art-244",
+        "art-245",
+        "art-246",
+        "art-247",
+        "art-248",
+        "art-249",
+        "art-250",
+        "art-251",
+        "art-252",
+        "art-253",
+        "art-254",
+        "art-255",
+        "art-256",
+        "art-257",
+        "art-258",
+        "art-259",
+        "art-260",
+        "art-261",
+        "art-262",
+        "art-263",
+        "art-264",
+        "art-265",
+        "art-266",
+        "art-268"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "source_sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "source_checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-215-a",
+      "unit_id": "28724cc0-0a98-5fa5-86ea-a2346a4c736d",
+      "content_sha256": "fcac40698551978ae91480ff5a99781ed8a304d8e3e4d7c8f7b80dcc7633bf9f",
+      "simples": "Importunação sexual: praticar contra alguém e sem a sua anuência ato libidinoso com o objetivo de satisfazer a própria lascívia ou a de terceiro. Pena: reclusão de 1 a 5 anos, se o ato não constitui crime mais grave.",
+      "pontos": [
+        "Ato libidinoso contra alguém, sem anuência.",
+        "Objetivo de satisfazer a própria lascívia ou a de terceiro.",
+        "Reclusão de 1 a 5 anos, se não for crime mais grave."
+      ],
+      "atencao": [
+        "Crime subsidiário: se há violência ou grave ameaça, trata-se de estupro (art. 213).",
+        "Não exige violência ou grave ameaça."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 213"
+      ],
+      "exemplo": "Ato libidinoso sem anuência é analisado com finalidade e ausência de tipo mais grave. Variação: Vítima vulnerável ou grave ameaça exigem outro enquadramento; não reduzir todo fato ao tipo subsidiário.",
+      "prova": [
+        "Exige finalidade de satisfação indicada? Sim.",
+        "Ausência de violência prova permissão? Não; consentimento e tipos próprios importam."
+      ],
+      "expected": {
+        "unit_id": "28724cc0-0a98-5fa5-86ea-a2346a4c736d",
+        "content_sha256": "fcac40698551978ae91480ff5a99781ed8a304d8e3e4d7c8f7b80dcc7633bf9f",
+        "simples": "Importunação sexual: praticar contra alguém e sem a sua anuência ato libidinoso com o objetivo de satisfazer a própria lascívia ou a de terceiro. Pena: reclusão de 1 a 5 anos, se o ato não constitui crime mais grave.",
+        "pontos": [
+          "Ato libidinoso contra alguém, sem anuência.",
+          "Objetivo de satisfazer a própria lascívia ou a de terceiro.",
+          "Reclusão de 1 a 5 anos, se não for crime mais grave."
+        ],
+        "atencao": [
+          "Crime subsidiário: se há violência ou grave ameaça, trata-se de estupro (art. 213).",
+          "Não exige violência ou grave ameaça."
+        ],
+        "exemplo": "Alguém se esfrega em passageira no transporte público, sem consentimento: importunação sexual.",
+        "prova": [
+          "Assertiva que exige violência ou grave ameaça na importunação sexual erra: com violência ou ameaça, é estupro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-216-a",
+      "unit_id": "706da91f-e115-58ea-992a-15aeefebee74",
+      "content_sha256": "05de9b662aeb7007dc58c29768c89dfef7bafd87adc718cd69e9298669e6b7a1",
+      "simples": "Assédio sexual: constranger alguém com o intuito de obter vantagem ou favorecimento sexual, prevalecendo-se o agente da sua condição de superior hierárquico ou ascendência inerentes ao exercício de emprego, cargo ou função. Pena: detenção de 1 a 2 anos. A pena é aumentada em até um terço se a vítima é menor de 18 anos.",
+      "pontos": [
+        "Constranger para obter vantagem ou favorecimento sexual.",
+        "Prevalecendo-se de superioridade hierárquica ou ascendência do emprego, cargo ou função.",
+        "Detenção de 1 a 2 anos.",
+        "Vítima menor de 18 anos: aumento de até um terço."
+      ],
+      "atencao": [
+        "Ascendência inerente a emprego/cargo/função não deve ser reduzida a exigir vínculo empregatício formal em todo caso. Identificar função, poder e finalidade; não certificadas todas as aplicações jurisprudenciais setoriais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 213"
+      ],
+      "exemplo": "Superior se prevalece de ascendência inerente à função para constranger com fim sexual. Variação: Sem essa ascendência, avaliar outros tipos e provas, sem impor automaticamente 216-A.",
+      "prova": [
+        "Toda relação precisa ser emprego formal entre vítima e agente? Não; identificar ascendência da função pertinente.",
+        "Menor 18 aumenta obrigatoriamente um terço? Não; texto prevê até um terço."
+      ],
+      "expected": {
+        "unit_id": "706da91f-e115-58ea-992a-15aeefebee74",
+        "content_sha256": "05de9b662aeb7007dc58c29768c89dfef7bafd87adc718cd69e9298669e6b7a1",
+        "simples": "Assédio sexual: constranger alguém com o intuito de obter vantagem ou favorecimento sexual, prevalecendo-se o agente da sua condição de superior hierárquico ou ascendência inerentes ao exercício de emprego, cargo ou função. Pena: detenção de 1 a 2 anos. A pena é aumentada em até um terço se a vítima é menor de 18 anos.",
+        "pontos": [
+          "Constranger para obter vantagem ou favorecimento sexual.",
+          "Prevalecendo-se de superioridade hierárquica ou ascendência do emprego, cargo ou função.",
+          "Detenção de 1 a 2 anos.",
+          "Vítima menor de 18 anos: aumento de até um terço."
+        ],
+        "atencao": [
+          "Exige RELAÇÃO HIERÁRQUICA ou de ascendência no trabalho.",
+          "A pena é de detenção."
+        ],
+        "exemplo": "Chefe condiciona a promoção da subordinada a favores sexuais: assédio sexual.",
+        "prova": [
+          "Assertiva que dispensa relação de superioridade hierárquica ou ascendência no assédio sexual erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-217-a",
+      "unit_id": "9a2dad5e-512a-5620-94d6-3b6c9b2aa554",
+      "content_sha256": "e6bc819f7b50c9c8fec52101abf75acc2f1391b3a6f1289c09927a6bc4462f50",
+      "simples": "Estupro de vulnerável: ter conjunção carnal ou praticar outro ato libidinoso com menor de 14 anos. Pena: reclusão de 10 a 18 anos e multa (texto atual). Incorre na mesma pena quem pratica as ações com alguém que, por enfermidade ou deficiência mental, não tem o necessário discernimento ou que, por qualquer outra causa, não pode oferecer resistência. Lesão corporal grave: reclusão de 12 a 24 anos e multa; morte: reclusão de 20 a 40 anos e multa. É absoluta a presunção de vulnerabilidade, inadmissível relativizá-la (§4º-A). As penas se aplicam independentemente do consentimento da vítima, de sua experiência sexual e de outras circunstâncias do §5º.",
+      "pontos": [
+        "Caput: menor de 14 anos: reclusão de 10 a 18 anos e multa.",
+        "§1º: pessoa sem discernimento por enfermidade ou deficiência, ou sem poder de resistência: mesma pena.",
+        "§3º: lesão grave: 12 a 24 anos e multa.",
+        "§4º: morte: 20 a 40 anos e multa.",
+        "§4º-A: presunção de vulnerabilidade ABSOLUTA.",
+        "§5º: aplica-se independentemente do consentimento da vítima e de outras circunstâncias."
+      ],
+      "atencao": [
+        "A vulnerabilidade do menor de 14 anos é ABSOLUTA: o consentimento é irrelevante.",
+        "Crime hediondo.",
+        "Lei 15.280 publicada/vigente em 8/12/2025 alterou penas e multa. Não retroagir agravamento;§1º de 218-B revogado. Conferir modalidade antes de usar pena antiga.",
+        "Lei 15.353 publicada/vigente em 8/3/2026: presunção absoluta e regras do§5º. Súmula 593/STJ confirma irrelevância de consentimento/experiência/relacionamento no menor 14. Não presumir incapacidade de todo adulto com deficiência."
+      ],
+      "termos": [
+        {
+          "termo": "Vulnerável",
+          "significado": "Menor de 14 anos ou pessoa sem discernimento ou sem poder de resistência."
+        }
+      ],
+      "remissoes": [
+        "Art. 213",
+        "Art. 218",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15353.htm"
+      ],
+      "exemplo": "Vítima de treze anos é protegida pela regra etária, independentemente de consentimento. Variação: Deficiência isolada não presume incapacidade em todo adulto;§1º exige discernimento/resistência nos termos legais.",
+      "prova": [
+        "Consentimento do menor 14 afasta o tipo? Não; Súmula 593/STJ e legislação atual.",
+        "A pena de 10 a 18 vale retroativamente sempre? Não; alteração mais gravosa exige lei no tempo."
+      ],
+      "expected": {
+        "unit_id": "9a2dad5e-512a-5620-94d6-3b6c9b2aa554",
+        "content_sha256": "e6bc819f7b50c9c8fec52101abf75acc2f1391b3a6f1289c09927a6bc4462f50",
+        "simples": "Estupro de vulnerável: ter conjunção carnal ou praticar outro ato libidinoso com menor de 14 anos. Pena: reclusão de 10 a 18 anos e multa (texto atual). Incorre na mesma pena quem pratica as ações com alguém que, por enfermidade ou deficiência mental, não tem o necessário discernimento ou que, por qualquer outra causa, não pode oferecer resistência. Lesão corporal grave: reclusão de 12 a 24 anos e multa; morte: reclusão de 20 a 40 anos e multa. É absoluta a presunção de vulnerabilidade, inadmissível relativizá-la (§4º-A). As penas se aplicam independentemente do consentimento da vítima, de sua experiência sexual e de outras circunstâncias do §5º.",
+        "pontos": [
+          "Caput: menor de 14 anos: reclusão de 10 a 18 anos e multa.",
+          "§1º: pessoa sem discernimento por enfermidade ou deficiência, ou sem poder de resistência: mesma pena.",
+          "§3º: lesão grave: 12 a 24 anos e multa.",
+          "§4º: morte: 20 a 40 anos e multa.",
+          "§4º-A: presunção de vulnerabilidade ABSOLUTA.",
+          "§5º: aplica-se independentemente do consentimento da vítima e de outras circunstâncias."
+        ],
+        "atencao": [
+          "A vulnerabilidade do menor de 14 anos é ABSOLUTA: o consentimento é irrelevante.",
+          "Crime hediondo."
+        ],
+        "exemplo": "Relação sexual com adolescente de 13 anos, ainda que ele diga consentir: estupro de vulnerável.",
+        "prova": [
+          "Assertiva que admite afastar o crime pelo consentimento do menor de 14 anos erra: a presunção é absoluta."
+        ],
+        "termos": [
+          {
+            "termo": "Vulnerável",
+            "significado": "Menor de 14 anos ou pessoa sem discernimento ou sem poder de resistência."
+          }
+        ],
+        "remissoes": [
+          "Art. 213",
+          "Art. 218"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-218",
+      "unit_id": "a4c32693-fd71-5274-8d6c-7de5a95cf4ae",
+      "content_sha256": "5ce433867ecb3c0a7cb5c4432ab855ad95c8654b5ebabce9007d61fb7c75dc76",
+      "simples": "Corrupção de menores: induzir alguém menor de 14 anos a satisfazer a lascívia de outrem. Pena: reclusão de 6 a 14 anos e multa (texto atual).",
+      "pontos": [
+        "Induzir menor de 14 anos a satisfazer a lascívia de outrem.",
+        "Reclusão de 6 a 14 anos e multa."
+      ],
+      "atencao": [
+        "Vítima menor de 14 anos.",
+        "O agente induz; quem pratica o ato com o menor responde por estupro de vulnerável (art. 217-A).",
+        "Lei 15.280 publicada/vigente em 8/12/2025 alterou penas e multa. Não retroagir agravamento;§1º de 218-B revogado. Conferir modalidade antes de usar pena antiga.",
+        "Indução não exclui automaticamente participação em 217-A: identificar fato e contribuição, sem limitar todo intermediário ao 218."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 217-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "exemplo": "Pessoa induz menor 14 para satisfação de terceiro nas condições típicas. Variação: Não considerar todo indutor necessariamente imune a participação em crime mais grave; examinar contribuição e fato.",
+      "prova": [
+        "A finalidade de outrem importa? Sim.",
+        "O parágrafo vetado cria hipótese vigente? Não; veto não é regra penal atual."
+      ],
+      "expected": {
+        "unit_id": "a4c32693-fd71-5274-8d6c-7de5a95cf4ae",
+        "content_sha256": "5ce433867ecb3c0a7cb5c4432ab855ad95c8654b5ebabce9007d61fb7c75dc76",
+        "simples": "Corrupção de menores: induzir alguém menor de 14 anos a satisfazer a lascívia de outrem. Pena: reclusão de 6 a 14 anos e multa (texto atual).",
+        "pontos": [
+          "Induzir menor de 14 anos a satisfazer a lascívia de outrem.",
+          "Reclusão de 6 a 14 anos e multa."
+        ],
+        "atencao": [
+          "Vítima menor de 14 anos.",
+          "O agente induz; quem pratica o ato com o menor responde por estupro de vulnerável (art. 217-A)."
+        ],
+        "exemplo": "Aliciar uma criança para que satisfaça os desejos sexuais de outra pessoa.",
+        "prova": [
+          "Assertiva que aplica o art. 218 à vítima de 15 anos erra: o tipo exige menor de 14 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 217-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-218-a",
+      "unit_id": "978f643c-706d-5598-b070-30b3742753d8",
+      "content_sha256": "0c3b68b04eed4a16612ca212eda1307a7b78c0727eaf7179723d620404997af5",
+      "simples": "Satisfação de lascívia mediante presença de criança ou adolescente: praticar, na presença de alguém menor de 14 anos, ou induzi-lo a presenciar, conjunção carnal ou outro ato libidinoso, a fim de satisfazer lascívia própria ou de outrem. Pena: reclusão de 5 a 12 anos e multa (texto atual).",
+      "pontos": [
+        "Praticar, na presença de menor de 14 anos (ou induzi-lo a presenciar), ato libidinoso.",
+        "Fim de satisfazer lascívia própria ou alheia.",
+        "Reclusão de 5 a 12 anos e multa."
+      ],
+      "atencao": [
+        "O menor apenas PRESENCIA o ato; não é sujeito do ato.",
+        "Lei 15.280 publicada/vigente em 8/12/2025 alterou penas e multa. Não retroagir agravamento;§1º de 218-B revogado. Conferir modalidade antes de usar pena antiga."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 217-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "exemplo": "Menor 14 é induzido a presenciar ato típico com finalidade indicada, sem descrição gráfica. Variação: Se o fato envolve ato com a vítima, reavaliar 217-A e participação; não manter automaticamente a mesma classificação.",
+      "prova": [
+        "Menor precisa participar fisicamente do ato para este recorte? Não; a conduta prevê presença/indução a presenciar.",
+        "Toda presença casual basta? Não; demonstrar conduta e finalidade."
+      ],
+      "expected": {
+        "unit_id": "978f643c-706d-5598-b070-30b3742753d8",
+        "content_sha256": "0c3b68b04eed4a16612ca212eda1307a7b78c0727eaf7179723d620404997af5",
+        "simples": "Satisfação de lascívia mediante presença de criança ou adolescente: praticar, na presença de alguém menor de 14 anos, ou induzi-lo a presenciar, conjunção carnal ou outro ato libidinoso, a fim de satisfazer lascívia própria ou de outrem. Pena: reclusão de 5 a 12 anos e multa (texto atual).",
+        "pontos": [
+          "Praticar, na presença de menor de 14 anos (ou induzi-lo a presenciar), ato libidinoso.",
+          "Fim de satisfazer lascívia própria ou alheia.",
+          "Reclusão de 5 a 12 anos e multa."
+        ],
+        "atencao": [
+          "O menor apenas PRESENCIA o ato; não é sujeito do ato."
+        ],
+        "exemplo": "Praticar ato sexual na frente de uma criança de 10 anos para satisfazer a própria lascívia.",
+        "prova": [
+          "Assertiva que exige contato físico com o menor erra: o crime ocorre pela presença do menor."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 217-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-218-b",
+      "unit_id": "00f65356-417a-5172-bf93-eeecf99b0e74",
+      "content_sha256": "9279caeff878228d0273e9efb742946920385d9477bb76bdab71799b3798c95c",
+      "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual de criança ou adolescente ou de vulnerável: submeter, induzir ou atrair à prostituição ou outra forma de exploração sexual alguém menor de 18 anos ou que, por enfermidade ou deficiência mental, não tem discernimento, facilitá-la, impedir ou dificultar que a abandone. Pena: reclusão de 7 a 16 anos e multa (texto atual). Incorre nas mesmas penas quem pratica ato libidinoso com menor de 18 e maior de 14 anos nessa situação, e o proprietário, gerente ou responsável pelo local. Para o responsável pelo local, é efeito obrigatório da condenação a cassação da licença de localização e funcionamento do estabelecimento.",
+      "pontos": [
+        "Submeter, induzir, atrair, facilitar ou impedir o abandono da exploração sexual de menor de 18 anos ou vulnerável.",
+        "Reclusão de 7 a 16 anos e multa.",
+        "§2º, I: quem pratica ato libidinoso com menor de 18 e maior de 14 anos na situação descrita.",
+        "§2º, II: proprietário, gerente ou responsável pelo local.",
+        "§3º: cassação obrigatória da licença do estabelecimento (no caso do §2º, II)."
+      ],
+      "atencao": [
+        "Vítima menor de 18 anos ou vulnerável.",
+        "Cassação da licença é EFEITO OBRIGATÓRIO da condenação do responsável pelo local.",
+        "Lei 15.280 publicada/vigente em 8/12/2025 alterou penas e multa. Não retroagir agravamento;§1º de 218-B revogado. Conferir modalidade antes de usar pena antiga."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 228",
+        "Art. 149-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "exemplo": "Responsável pelo local participa da exploração de adolescente na hipótese legal. Variação: Ser proprietário sem elementos de responsabilidade penal não dispensa prova; situação de menor 14 exige tipos pertinentes.",
+      "prova": [
+        "O§1º revogado deve ser aplicado como atual? Não.",
+        "Cassação do local tem hipótese específica? Sim; integrar§2ºII e§3º."
+      ],
+      "expected": {
+        "unit_id": "00f65356-417a-5172-bf93-eeecf99b0e74",
+        "content_sha256": "9279caeff878228d0273e9efb742946920385d9477bb76bdab71799b3798c95c",
+        "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual de criança ou adolescente ou de vulnerável: submeter, induzir ou atrair à prostituição ou outra forma de exploração sexual alguém menor de 18 anos ou que, por enfermidade ou deficiência mental, não tem discernimento, facilitá-la, impedir ou dificultar que a abandone. Pena: reclusão de 7 a 16 anos e multa (texto atual). Incorre nas mesmas penas quem pratica ato libidinoso com menor de 18 e maior de 14 anos nessa situação, e o proprietário, gerente ou responsável pelo local. Para o responsável pelo local, é efeito obrigatório da condenação a cassação da licença de localização e funcionamento do estabelecimento.",
+        "pontos": [
+          "Submeter, induzir, atrair, facilitar ou impedir o abandono da exploração sexual de menor de 18 anos ou vulnerável.",
+          "Reclusão de 7 a 16 anos e multa.",
+          "§2º, I: quem pratica ato libidinoso com menor de 18 e maior de 14 anos na situação descrita.",
+          "§2º, II: proprietário, gerente ou responsável pelo local.",
+          "§3º: cassação obrigatória da licença do estabelecimento (no caso do §2º, II)."
+        ],
+        "atencao": [
+          "Vítima menor de 18 anos ou vulnerável.",
+          "Cassação da licença é EFEITO OBRIGATÓRIO da condenação do responsável pelo local."
+        ],
+        "exemplo": "O dono de um estabelecimento mantém adolescentes em exploração sexual no local: responde pelo art. 218-B, §2º, II, e perde a licença.",
+        "prova": [
+          "Assertiva que torna facultativa a cassação da licença do estabelecimento erra: é efeito obrigatório."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 228",
+          "Art. 149-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-218-c",
+      "unit_id": "39a7e2e5-e334-5783-a77f-9871b96191fa",
+      "content_sha256": "f6cd2fbb713ff9d9273fb9af67b5720d2d2ac59d4c97f1f47d1f8e40425ddd63",
+      "simples": "Divulgação de cena de estupro, de sexo, nudez ou pornografia: oferecer, trocar, disponibilizar, transmitir, vender ou expor à venda, distribuir, publicar ou divulgar, por qualquer meio, fotografia, vídeo ou outro registro audiovisual que contenha cena de estupro ou de estupro de vulnerável, ou que faça apologia ou induza a sua prática, ou, sem o consentimento da vítima, cena de sexo, nudez ou pornografia. Pena: reclusão de 4 a 10 anos e multa (texto atual), se o fato não constitui crime mais grave. A pena aumenta de 1/3 a 2/3 se o agente mantém ou manteve relação íntima de afeto com a vítima ou age com fim de vingança ou humilhação. Não há crime em publicação de natureza jornalística, científica, cultural ou acadêmica com recurso que impossibilite a identificação da vítima, ressalvada autorização prévia se maior de 18 anos.",
+      "pontos": [
+        "Condutas: oferecer, trocar, disponibilizar, transmitir, vender, expor à venda, distribuir, publicar ou divulgar.",
+        "Objeto: cena de estupro ou apologia, ou cena de sexo, nudez ou pornografia sem consentimento da vítima.",
+        "Pena: reclusão de 4 a 10 anos e multa, se não houver crime mais grave.",
+        "§1º: aumento de 1/3 a 2/3 (relação íntima de afeto, vingança ou humilhação).",
+        "§2º: exclusão do crime em publicação jornalística, científica, cultural ou acadêmica sem identificar a vítima."
+      ],
+      "atencao": [
+        "Pena aumentada na 'vingança pornográfica' (relação de afeto, fim de vingança ou humilhação).",
+        "Lei 15.280 publicada/vigente em 8/12/2025 alterou penas e multa. Não retroagir agravamento;§1º de 218-B revogado. Conferir modalidade antes de usar pena antiga."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 216-B",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "exemplo": "Registro íntimo é divulgado sem consentimento no recorte legal. Variação: Publicação jornalística tem requisitos próprios de proteção/identificação, não imunidade por mero rótulo.",
+      "prova": [
+        "Finalidade de vingança pode aumentar? Sim;§1º, com elementos.",
+        "Identificar a vítima é sempre liberado pela palavra jornalismo? Não; conferir§2º e garantias."
+      ],
+      "expected": {
+        "unit_id": "39a7e2e5-e334-5783-a77f-9871b96191fa",
+        "content_sha256": "f6cd2fbb713ff9d9273fb9af67b5720d2d2ac59d4c97f1f47d1f8e40425ddd63",
+        "simples": "Divulgação de cena de estupro, de sexo, nudez ou pornografia: oferecer, trocar, disponibilizar, transmitir, vender ou expor à venda, distribuir, publicar ou divulgar, por qualquer meio, fotografia, vídeo ou outro registro audiovisual que contenha cena de estupro ou de estupro de vulnerável, ou que faça apologia ou induza a sua prática, ou, sem o consentimento da vítima, cena de sexo, nudez ou pornografia. Pena: reclusão de 4 a 10 anos e multa (texto atual), se o fato não constitui crime mais grave. A pena aumenta de 1/3 a 2/3 se o agente mantém ou manteve relação íntima de afeto com a vítima ou age com fim de vingança ou humilhação. Não há crime em publicação de natureza jornalística, científica, cultural ou acadêmica com recurso que impossibilite a identificação da vítima, ressalvada autorização prévia se maior de 18 anos.",
+        "pontos": [
+          "Condutas: oferecer, trocar, disponibilizar, transmitir, vender, expor à venda, distribuir, publicar ou divulgar.",
+          "Objeto: cena de estupro ou apologia, ou cena de sexo, nudez ou pornografia sem consentimento da vítima.",
+          "Pena: reclusão de 4 a 10 anos e multa, se não houver crime mais grave.",
+          "§1º: aumento de 1/3 a 2/3 (relação íntima de afeto, vingança ou humilhação).",
+          "§2º: exclusão do crime em publicação jornalística, científica, cultural ou acadêmica sem identificar a vítima."
+        ],
+        "atencao": [
+          "Pena aumentada na 'vingança pornográfica' (relação de afeto, fim de vingança ou humilhação)."
+        ],
+        "exemplo": "Ex-namorado divulga em redes sociais vídeo íntimo da ex-companheira para humilhá-la: art. 218-C, com aumento.",
+        "prova": [
+          "Assertiva que exige que a vítima seja maior de 18 anos para o art. 218-C erra: o consentimento é a base para cena de sexo, nudez ou pornografia, e a cena de estupro é crime por si."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 216-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-225",
+      "unit_id": "ef96aa3a-8245-58d8-99e0-305bc7f95ea4",
+      "content_sha256": "2e2719c4a76676a024cda3f2bae63415ac263478b41368b8037d713ff906e2ba",
+      "simples": "Ação penal nos crimes contra a liberdade sexual e contra vulneráveis (Capítulos I e II do Título): procede-se mediante ação penal pública incondicionada. O parágrafo único está revogado.",
+      "pontos": [
+        "Ação penal pública INCONDICIONADA nos Capítulos I e II do Título."
+      ],
+      "atencao": [
+        "Hoje a regra é ação pública incondicionada (mudança de 2018).",
+        "Mudança de 2018 exige direito intertemporal: não aplicar condição atual a todo fato histórico sem análise própria."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 213 a 218-C"
+      ],
+      "exemplo": "Crime dos capítulos indicados é apurado sob regime atual incondicionado. Variação: Fato anterior à alteração exige análise temporal; não transferir o regime a todo crime de qualquer título.",
+      "prova": [
+        "Todo crime sexual atual depende de representação? Não; no escopo do 225 a ação é incondicionada.",
+        "O parágrafo revogado é regra atual? Não."
+      ],
+      "expected": {
+        "unit_id": "ef96aa3a-8245-58d8-99e0-305bc7f95ea4",
+        "content_sha256": "2e2719c4a76676a024cda3f2bae63415ac263478b41368b8037d713ff906e2ba",
+        "simples": "Ação penal nos crimes contra a liberdade sexual e contra vulneráveis (Capítulos I e II do Título): procede-se mediante ação penal pública incondicionada. O parágrafo único está revogado.",
+        "pontos": [
+          "Ação penal pública INCONDICIONADA nos Capítulos I e II do Título."
+        ],
+        "atencao": [
+          "Hoje a regra é ação pública incondicionada (mudança de 2018)."
+        ],
+        "exemplo": "O Ministério Público denuncia o autor de estupro independentemente de representação da vítima.",
+        "prova": [
+          "Assertiva que exige representação da vítima para o estupro erra: a ação é pública incondicionada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 213 a 218-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-226",
+      "unit_id": "46663024-bf16-56ff-8314-d3bcac68bb1e",
+      "content_sha256": "1217b999afb0c48cd2faf84f6f7b7dcfe71af107f83dc17be1e47ad2ce8af2df",
+      "simples": "Aumentos de pena nos crimes sexuais: aumenta-se de quarta parte se o crime é cometido com o concurso de 2 ou mais pessoas; de metade se o agente é ascendente, padrasto, madrasta, tio, irmão, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima ou por qualquer título tem autoridade sobre ela; e de 1/3 a 2/3 se o crime é praticado mediante concurso de 2 ou mais agentes (estupro coletivo) ou para controlar o comportamento social ou sexual da vítima (estupro corretivo).",
+      "pontos": [
+        "I – concurso de 2 ou mais pessoas: aumento de quarta parte.",
+        "II – agente com autoridade sobre a vítima (ascendente, padrasto, tutor, empregador etc.): aumento de metade.",
+        "IV, a – estupro coletivo: aumento de 1/3 a 2/3.",
+        "IV, b – estupro corretivo (controlar comportamento social ou sexual): 1/3 a 2/3."
+      ],
+      "atencao": [
+        "Concurso de 2 ou mais pessoas: quarta parte (inciso I) OU, no estupro coletivo, 1/3 a 2/3 (inciso IV, a): cuidado com a aplicação.",
+        "O inciso III está revogado.",
+        "Não cumular automaticamente I eIVa pelo mesmo concurso nem autoridade já usada como elementar em outro tipo sem examinar bis in idem."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 213",
+        "Art. 234-A"
+      ],
+      "exemplo": "Estupro coletivo por dois ou mais agentes exige hipótese doIVa. Variação: Não somar automaticamente quarta parte e fração doIV pelo mesmo concurso de pessoas.",
+      "prova": [
+        "Mesma pluralidade autoriza dupla contagem automática? Não.",
+        "Toda relação familiar exige o mesmo fundamento duplicado? Não; identificar elementares e aumentos pertinentes."
+      ],
+      "expected": {
+        "unit_id": "46663024-bf16-56ff-8314-d3bcac68bb1e",
+        "content_sha256": "1217b999afb0c48cd2faf84f6f7b7dcfe71af107f83dc17be1e47ad2ce8af2df",
+        "simples": "Aumentos de pena nos crimes sexuais: aumenta-se de quarta parte se o crime é cometido com o concurso de 2 ou mais pessoas; de metade se o agente é ascendente, padrasto, madrasta, tio, irmão, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima ou por qualquer título tem autoridade sobre ela; e de 1/3 a 2/3 se o crime é praticado mediante concurso de 2 ou mais agentes (estupro coletivo) ou para controlar o comportamento social ou sexual da vítima (estupro corretivo).",
+        "pontos": [
+          "I – concurso de 2 ou mais pessoas: aumento de quarta parte.",
+          "II – agente com autoridade sobre a vítima (ascendente, padrasto, tutor, empregador etc.): aumento de metade.",
+          "IV, a – estupro coletivo: aumento de 1/3 a 2/3.",
+          "IV, b – estupro corretivo (controlar comportamento social ou sexual): 1/3 a 2/3."
+        ],
+        "atencao": [
+          "Concurso de 2 ou mais pessoas: quarta parte (inciso I) OU, no estupro coletivo, 1/3 a 2/3 (inciso IV, a): cuidado com a aplicação.",
+          "O inciso III está revogado."
+        ],
+        "exemplo": "Padrasto que comete estupro contra a enteada tem a pena aumentada de metade.",
+        "prova": [
+          "Assertiva que fixa em dobro o aumento pelo agente com autoridade sobre a vítima erra: é de metade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213",
+          "Art. 234-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-227",
+      "unit_id": "f2d3f798-0767-5e5c-b110-0e8a6e5c53ca",
+      "content_sha256": "f55204bb8dd80ba1d5210d7d75f5448d22f4c5b19006a699fba66d6e183c15aa",
+      "simples": "Mediação para servir a lascívia de outrem: induzir alguém a satisfazer a lascívia de outrem. Pena: reclusão de 1 a 3 anos. Se a vítima é maior de 14 e menor de 18 anos, ou se o agente é seu ascendente, descendente, cônjuge ou companheiro, irmão, tutor, curador ou pessoa a quem esteja confiada para educação, tratamento ou guarda: reclusão de 2 a 5 anos. Com violência, grave ameaça ou fraude: reclusão de 2 a 8 anos, além da pena da violência. Com fim de lucro: também multa.",
+      "pontos": [
+        "Caput: reclusão de 1 a 3 anos.",
+        "§1º: vítima entre 14 e 18 anos ou agente com vínculo de cuidado: reclusão de 2 a 5 anos.",
+        "§2º: violência, grave ameaça ou fraude: reclusão de 2 a 8 anos.",
+        "§3º: fim de lucro: também multa."
+      ],
+      "atencao": [
+        "Vítima menor de 14 anos: outro crime (art. 218)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 218",
+        "Art. 228"
+      ],
+      "exemplo": "Indução para satisfação de terceiro é examinada com idade e meios legais. Variação: Vítima menor 14 e fatos mais graves exigem 218/217-A e participação, não resposta automática pelo nome mediação.",
+      "prova": [
+        "Fim de lucro pode acrescentar multa? Sim;§3º.",
+        "Violência é irrelevante? Não; há hipótese própria e pena correspondente."
+      ],
+      "expected": {
+        "unit_id": "f2d3f798-0767-5e5c-b110-0e8a6e5c53ca",
+        "content_sha256": "f55204bb8dd80ba1d5210d7d75f5448d22f4c5b19006a699fba66d6e183c15aa",
+        "simples": "Mediação para servir a lascívia de outrem: induzir alguém a satisfazer a lascívia de outrem. Pena: reclusão de 1 a 3 anos. Se a vítima é maior de 14 e menor de 18 anos, ou se o agente é seu ascendente, descendente, cônjuge ou companheiro, irmão, tutor, curador ou pessoa a quem esteja confiada para educação, tratamento ou guarda: reclusão de 2 a 5 anos. Com violência, grave ameaça ou fraude: reclusão de 2 a 8 anos, além da pena da violência. Com fim de lucro: também multa.",
+        "pontos": [
+          "Caput: reclusão de 1 a 3 anos.",
+          "§1º: vítima entre 14 e 18 anos ou agente com vínculo de cuidado: reclusão de 2 a 5 anos.",
+          "§2º: violência, grave ameaça ou fraude: reclusão de 2 a 8 anos.",
+          "§3º: fim de lucro: também multa."
+        ],
+        "atencao": [
+          "Vítima menor de 14 anos: outro crime (art. 218)."
+        ],
+        "exemplo": "Aliciar mulher adulta para que satisfaça a lascívia de outra pessoa.",
+        "prova": [
+          "Assertiva que aplica o caput do art. 227 a vítima menor de 14 anos erra: o art. 218 trata desse caso."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218",
+          "Art. 228"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-228",
+      "unit_id": "91937f59-1ecd-5061-acd3-201f58a5af82",
+      "content_sha256": "fe5c2165fc6aa93fffdfa291c9c9e05213461dec470e5c0e66cc4cf31861c93f",
+      "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual: induzir ou atrair alguém à prostituição ou outra forma de exploração sexual, facilitá-la, impedir ou dificultar que alguém a abandone. Pena: reclusão de 2 a 5 anos e multa. Se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima, ou assumiu obrigação de cuidado, proteção ou vigilância: reclusão de 3 a 8 anos. Com violência, grave ameaça ou fraude: reclusão de 4 a 10 anos, além da violência. Com fim de lucro: também multa.",
+      "pontos": [
+        "Caput: reclusão de 2 a 5 anos e multa.",
+        "§1º: vínculo familiar, de autoridade ou de cuidado: 3 a 8 anos.",
+        "§2º: violência, grave ameaça ou fraude: 4 a 10 anos, além da violência.",
+        "§3º: fim de lucro: também multa."
+      ],
+      "atencao": [
+        "A PROSTITUIÇÃO em si não é crime; o crime é o favorecimento ou a exploração por terceiros."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Arts. 218-B, 229 e 230"
+      ],
+      "exemplo": "Agente dificulta abandono de exploração sexual nas condições típicas. Variação: Prostituição de pessoa adulta, por si, não torna automaticamente qualquer relação em favorecimento penal.",
+      "prova": [
+        "Impedir abandono está previsto? Sim.",
+        "Qualquer parentesco prova automaticamente o crime? Não; conduta, contexto e elementos importam."
+      ],
+      "expected": {
+        "unit_id": "91937f59-1ecd-5061-acd3-201f58a5af82",
+        "content_sha256": "fe5c2165fc6aa93fffdfa291c9c9e05213461dec470e5c0e66cc4cf31861c93f",
+        "simples": "Favorecimento da prostituição ou de outra forma de exploração sexual: induzir ou atrair alguém à prostituição ou outra forma de exploração sexual, facilitá-la, impedir ou dificultar que alguém a abandone. Pena: reclusão de 2 a 5 anos e multa. Se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador da vítima, ou assumiu obrigação de cuidado, proteção ou vigilância: reclusão de 3 a 8 anos. Com violência, grave ameaça ou fraude: reclusão de 4 a 10 anos, além da violência. Com fim de lucro: também multa.",
+        "pontos": [
+          "Caput: reclusão de 2 a 5 anos e multa.",
+          "§1º: vínculo familiar, de autoridade ou de cuidado: 3 a 8 anos.",
+          "§2º: violência, grave ameaça ou fraude: 4 a 10 anos, além da violência.",
+          "§3º: fim de lucro: também multa."
+        ],
+        "atencao": [
+          "A PROSTITUIÇÃO em si não é crime; o crime é o favorecimento ou a exploração por terceiros."
+        ],
+        "exemplo": "Pessoa impede, com ameaças, que uma mulher abandone a exploração sexual: art. 228, §2º.",
+        "prova": [
+          "Assertiva que considera crime o exercício da prostituição pela própria pessoa erra: o tipo pune quem a favorece ou explora."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Arts. 218-B, 229 e 230"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-229",
+      "unit_id": "187e821a-a85c-5160-94cc-413aff035bb5",
+      "content_sha256": "61c59d36dd1b657423d7782b863b1251cd677d686e8cf688532bb7ad7a8f1813",
+      "simples": "Casa de exploração sexual: manter, por conta própria ou de terceiro, estabelecimento em que ocorra exploração sexual, haja ou não intuito de lucro ou mediação direta do proprietário ou gerente. Pena: reclusão de 2 a 5 anos e multa.",
+      "pontos": [
+        "Manter estabelecimento em que ocorra exploração sexual.",
+        "Com ou sem intuito de lucro ou mediação direta.",
+        "Reclusão de 2 a 5 anos e multa."
+      ],
+      "atencao": [
+        "Independe de lucro.",
+        "Exploração sexual deve ser demonstrada; não equiparar automaticamente exercício lícito de prostituição de adultos a exploração, nem condenar só pelo rótulo do local."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 228"
+      ],
+      "exemplo": "Estabelecimento mantém exploração sexual efetiva demonstrada. Variação: Não presumir exploração apenas pela existência de atividade sexual remunerada lícita de adultos; provar o elemento atual.",
+      "prova": [
+        "Lucro é sempre requisito? Não; texto diz haja ou não.",
+        "Nome do estabelecimento basta para condenar? Não; exploração e elementos precisam ser provados."
+      ],
+      "expected": {
+        "unit_id": "187e821a-a85c-5160-94cc-413aff035bb5",
+        "content_sha256": "61c59d36dd1b657423d7782b863b1251cd677d686e8cf688532bb7ad7a8f1813",
+        "simples": "Casa de exploração sexual: manter, por conta própria ou de terceiro, estabelecimento em que ocorra exploração sexual, haja ou não intuito de lucro ou mediação direta do proprietário ou gerente. Pena: reclusão de 2 a 5 anos e multa.",
+        "pontos": [
+          "Manter estabelecimento em que ocorra exploração sexual.",
+          "Com ou sem intuito de lucro ou mediação direta.",
+          "Reclusão de 2 a 5 anos e multa."
+        ],
+        "atencao": [
+          "Independe de lucro."
+        ],
+        "exemplo": "Dono de um imóvel mantém local onde se explora sexualmente pessoas.",
+        "prova": [
+          "Assertiva que exige intuito de lucro para o art. 229 erra: o tipo dispensa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 228"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-230",
+      "unit_id": "e43067de-6766-5f79-9595-9e428de6bfc3",
+      "content_sha256": "01dc2958b79fb1c6d436bf15e79e8db58c618461830a4391439c160a9eac18f2",
+      "simples": "Rufianismo: tirar proveito da prostituição alheia, participando diretamente de seus lucros ou fazendo-se sustentar, no todo ou em parte, por quem a exerça. Pena: reclusão de 1 a 4 anos e multa. Se a vítima é menor de 18 e maior de 14 anos, ou se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador, ou assumiu dever de cuidado, proteção ou vigilância: reclusão de 3 a 6 anos e multa. Com violência, grave ameaça, fraude ou outro meio que impeça a livre manifestação da vontade: reclusão de 2 a 8 anos, sem prejuízo da violência.",
+      "pontos": [
+        "Tirar proveito da prostituição alheia (participar dos lucros ou ser sustentado).",
+        "Caput: reclusão de 1 a 4 anos e multa.",
+        "§1º: vítima entre 14 e 18 anos ou vínculo de cuidado ou autoridade: reclusão de 3 a 6 anos e multa.",
+        "§2º: violência, grave ameaça, fraude ou outro meio: reclusão de 2 a 8 anos."
+      ],
+      "atencao": [
+        "Crime de quem VIVE à custa da prostituição de outra pessoa."
+      ],
+      "termos": [
+        {
+          "termo": "Rufianismo",
+          "significado": "Viver às custas da prostituição alheia."
+        }
+      ],
+      "remissoes": [
+        "Art. 228"
+      ],
+      "exemplo": "Agente participa diretamente dos lucros da prostituição alheia nas condições típicas. Variação: Convívio com adulto que exerça atividade não prova automaticamente proveito ou sustento típico.",
+      "prova": [
+        "Todo companheiro é automaticamente rufião? Não; demonstrar conduta e elementos.",
+        "Fraude que limita vontade tem modalidade própria? Sim;§2º."
+      ],
+      "expected": {
+        "unit_id": "e43067de-6766-5f79-9595-9e428de6bfc3",
+        "content_sha256": "01dc2958b79fb1c6d436bf15e79e8db58c618461830a4391439c160a9eac18f2",
+        "simples": "Rufianismo: tirar proveito da prostituição alheia, participando diretamente de seus lucros ou fazendo-se sustentar, no todo ou em parte, por quem a exerça. Pena: reclusão de 1 a 4 anos e multa. Se a vítima é menor de 18 e maior de 14 anos, ou se o agente é ascendente, padrasto, madrasta, irmão, enteado, cônjuge, companheiro, tutor, curador, preceptor ou empregador, ou assumiu dever de cuidado, proteção ou vigilância: reclusão de 3 a 6 anos e multa. Com violência, grave ameaça, fraude ou outro meio que impeça a livre manifestação da vontade: reclusão de 2 a 8 anos, sem prejuízo da violência.",
+        "pontos": [
+          "Tirar proveito da prostituição alheia (participar dos lucros ou ser sustentado).",
+          "Caput: reclusão de 1 a 4 anos e multa.",
+          "§1º: vítima entre 14 e 18 anos ou vínculo de cuidado ou autoridade: reclusão de 3 a 6 anos e multa.",
+          "§2º: violência, grave ameaça, fraude ou outro meio: reclusão de 2 a 8 anos."
+        ],
+        "atencao": [
+          "Crime de quem VIVE à custa da prostituição de outra pessoa."
+        ],
+        "exemplo": "Pessoa vive sustentada pelos ganhos da prostituição de outra e participa dos lucros.",
+        "prova": [
+          "Assertiva que pune a pessoa que exerce a prostituição por conta própria erra: o rufianismo pune quem tira proveito dela."
+        ],
+        "termos": [
+          {
+            "termo": "Rufianismo",
+            "significado": "Viver às custas da prostituição alheia."
+          }
+        ],
+        "remissoes": [
+          "Art. 228"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-232-a",
+      "unit_id": "8131ce26-5b19-5a81-a9fe-e6fef5e0496e",
+      "content_sha256": "c3281cd2f7ff51c36ef43eba832e5f1eaf740a222bda170a472673ee25ae9dd7",
+      "simples": "Promoção de migração ilegal: promover, por qualquer meio, com o fim de obter vantagem econômica, a entrada ilegal de estrangeiro em território nacional ou de brasileiro em país estrangeiro. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem promove, com o mesmo fim, a saída de estrangeiro do território nacional para ingressar ilegalmente em país estrangeiro. A pena aumenta de 1/6 a 1/3 se há violência ou se a vítima é submetida a condição desumana ou degradante, e é aplicada sem prejuízo das infrações conexas.",
+      "pontos": [
+        "Promover entrada ilegal de estrangeiro no país ou de brasileiro em país estrangeiro, com vantagem econômica.",
+        "Reclusão de 2 a 5 anos e multa.",
+        "§1º: saída de estrangeiro para ingressar ilegalmente em outro país.",
+        "§2º: aumento de 1/6 a 1/3 (violência; condição desumana ou degradante).",
+        "§3º: sem prejuízo das infrações conexas."
+      ],
+      "atencao": [
+        "Exige FIM DE VANTAGEM ECONÔMICA."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 149-A (tráfico de pessoas)"
+      ],
+      "exemplo": "Agente promove entrada ilegal com fim econômico. Variação: Acolhimento lícito/humanitário sem finalidade típica não é automaticamente promoção de migração ilegal.",
+      "prova": [
+        "Fronteira e ilegalidade pertinentes precisam ser provadas? Sim.",
+        "Toda ajuda a migrante configura crime? Não; meio, finalidade e hipótese legal importam."
+      ],
+      "expected": {
+        "unit_id": "8131ce26-5b19-5a81-a9fe-e6fef5e0496e",
+        "content_sha256": "c3281cd2f7ff51c36ef43eba832e5f1eaf740a222bda170a472673ee25ae9dd7",
+        "simples": "Promoção de migração ilegal: promover, por qualquer meio, com o fim de obter vantagem econômica, a entrada ilegal de estrangeiro em território nacional ou de brasileiro em país estrangeiro. Pena: reclusão de 2 a 5 anos e multa. Na mesma pena quem promove, com o mesmo fim, a saída de estrangeiro do território nacional para ingressar ilegalmente em país estrangeiro. A pena aumenta de 1/6 a 1/3 se há violência ou se a vítima é submetida a condição desumana ou degradante, e é aplicada sem prejuízo das infrações conexas.",
+        "pontos": [
+          "Promover entrada ilegal de estrangeiro no país ou de brasileiro em país estrangeiro, com vantagem econômica.",
+          "Reclusão de 2 a 5 anos e multa.",
+          "§1º: saída de estrangeiro para ingressar ilegalmente em outro país.",
+          "§2º: aumento de 1/6 a 1/3 (violência; condição desumana ou degradante).",
+          "§3º: sem prejuízo das infrações conexas."
+        ],
+        "atencao": [
+          "Exige FIM DE VANTAGEM ECONÔMICA."
+        ],
+        "exemplo": "Pessoa cobra para levar estrangeiros ao Brasil por vias ilegais.",
+        "prova": [
+          "Assertiva que dispensa a finalidade de vantagem econômica no art. 232-A erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 149-A (tráfico de pessoas)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-233",
+      "unit_id": "99c059a5-c447-532e-85f4-7c958d157b0f",
+      "content_sha256": "c0ea201c58d049fe77a7968b13ca444b55a70d0a5c9aab2aef84339e678ae505",
+      "simples": "Ato obsceno: praticar ato obsceno em lugar público, ou aberto ou exposto ao público. Pena: detenção de 3 meses a 1 ano, ou multa.",
+      "pontos": [
+        "Praticar ato obsceno.",
+        "Em lugar público, ou aberto ou exposto ao público.",
+        "Detenção de 3 meses a 1 ano, ou multa."
+      ],
+      "atencao": [
+        "O lugar deve ser público, aberto ou exposto ao público.",
+        "Liberdade de expressão/artística, contexto e tipicidade exigem integração constitucional; não ensinar nudez/obra artística como crime automático por juízo moral. Não certificadas todas as teses de recepção neste lote."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 234"
+      ],
+      "exemplo": "Ato é examinado quanto a publicidade, contexto e elemento típico, sem descrição gráfica. Variação: Expressão artística/manifestação legítima exige análise constitucional; nudez por si não resolve todo enquadramento.",
+      "prova": [
+        "Lugar precisa ser público, aberto ou exposto? Sim.",
+        "Qualquer imagem artística implica condenação automática? Não."
+      ],
+      "expected": {
+        "unit_id": "99c059a5-c447-532e-85f4-7c958d157b0f",
+        "content_sha256": "c0ea201c58d049fe77a7968b13ca444b55a70d0a5c9aab2aef84339e678ae505",
+        "simples": "Ato obsceno: praticar ato obsceno em lugar público, ou aberto ou exposto ao público. Pena: detenção de 3 meses a 1 ano, ou multa.",
+        "pontos": [
+          "Praticar ato obsceno.",
+          "Em lugar público, ou aberto ou exposto ao público.",
+          "Detenção de 3 meses a 1 ano, ou multa."
+        ],
+        "atencao": [
+          "O lugar deve ser público, aberto ou exposto ao público."
+        ],
+        "exemplo": "Pessoa pratica ato obsceno em praça pública.",
+        "prova": [
+          "Assertiva que aplica o art. 233 a ato obsceno praticado em ambiente privado, sem exposição ao público, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 234"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-234",
+      "unit_id": "6892d270-1f0e-5664-85de-16b583c0e6c3",
+      "content_sha256": "d329ce226d2fc65b1123817bf8f4d26dcd4a49d609bfb4481eeb4eb9b4cee7cf",
+      "simples": "Escrito ou objeto obsceno: fazer, importar, exportar, adquirir ou ter sob sua guarda, para fim de comércio, de distribuição ou de exposição pública, escrito, desenho, pintura, estampa ou qualquer objeto obsceno. Pena: detenção de 6 meses a 2 anos, ou multa. Na mesma pena quem vende, distribui ou expõe à venda ou ao público esses objetos; realiza, em lugar público ou acessível ao público, representação teatral ou exibição cinematográfica de caráter obsceno ou qualquer espetáculo do mesmo caráter; ou realiza, em lugar público ou acessível ao público, ou pelo rádio, audição ou recitação de caráter obsceno.",
+      "pontos": [
+        "Fazer, importar, exportar, adquirir ou guardar objeto obsceno para comércio, distribuição ou exposição pública.",
+        "Detenção de 6 meses a 2 anos, ou multa.",
+        "Parágrafo único: vender, distribuir, expor; espetáculos, exibições, audições ou recitações obscenas em lugar público."
+      ],
+      "atencao": [
+        "O fim é comércio, distribuição ou exposição pública.",
+        "Liberdade de expressão/artística, contexto e tipicidade exigem integração constitucional; não ensinar nudez/obra artística como crime automático por juízo moral. Não certificadas todas as teses de recepção neste lote."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 233"
+      ],
+      "exemplo": "Objeto é mantido com finalidade comercial/distributiva ou exposição nas condições legais. Variação: Mera posse privada sem finalidade indicada não pode ser equiparada automaticamente; arte e liberdade exigem integração.",
+      "prova": [
+        "A finalidade do caput importa? Sim.",
+        "Todo material artístico é obsceno por presunção? Não; contexto, direitos e tipo devem ser examinados."
+      ],
+      "expected": {
+        "unit_id": "6892d270-1f0e-5664-85de-16b583c0e6c3",
+        "content_sha256": "d329ce226d2fc65b1123817bf8f4d26dcd4a49d609bfb4481eeb4eb9b4cee7cf",
+        "simples": "Escrito ou objeto obsceno: fazer, importar, exportar, adquirir ou ter sob sua guarda, para fim de comércio, de distribuição ou de exposição pública, escrito, desenho, pintura, estampa ou qualquer objeto obsceno. Pena: detenção de 6 meses a 2 anos, ou multa. Na mesma pena quem vende, distribui ou expõe à venda ou ao público esses objetos; realiza, em lugar público ou acessível ao público, representação teatral ou exibição cinematográfica de caráter obsceno ou qualquer espetáculo do mesmo caráter; ou realiza, em lugar público ou acessível ao público, ou pelo rádio, audição ou recitação de caráter obsceno.",
+        "pontos": [
+          "Fazer, importar, exportar, adquirir ou guardar objeto obsceno para comércio, distribuição ou exposição pública.",
+          "Detenção de 6 meses a 2 anos, ou multa.",
+          "Parágrafo único: vender, distribuir, expor; espetáculos, exibições, audições ou recitações obscenas em lugar público."
+        ],
+        "atencao": [
+          "O fim é comércio, distribuição ou exposição pública."
+        ],
+        "exemplo": "Comerciante expõe à venda ao público objeto de caráter obsceno.",
+        "prova": [
+          "Assertiva que pune a posse de objeto obsceno para uso exclusivamente privado erra: o tipo exige fim de comércio, distribuição ou exposição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 233"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-234-a",
+      "unit_id": "97632b16-b6e8-51a5-b21f-871ca635ae35",
+      "content_sha256": "e9ab255c45add53a166fb8019132d800d8910791f2518a30578395dd5da9d2fd",
+      "simples": "Aumentos nos crimes sexuais do Título: de metade a 2/3 se do crime resulta gravidez; de 1/3 a 2/3 se o agente transmite à vítima doença sexualmente transmissível de que sabe ou deveria saber ser portador, ou se a vítima é idosa ou pessoa com deficiência. Os incisos I e II foram vetados.",
+      "pontos": [
+        "III – gravidez: aumento de metade a 2/3.",
+        "IV – transmissão de DST que sabe ou deveria saber ser portador, ou vítima idosa ou com deficiência: 1/3 a 2/3."
+      ],
+      "atencao": [
+        "Gravidez: de METADE a 2/3; DST ou vítima idosa/com deficiência: de 1/3 a 2/3."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 226"
+      ],
+      "exemplo": "Gravidez decorre do crime e o aumento próprio é examinado com nexo. Variação: Doença apenas diagnosticada depois não prova transmissão pelo agente; conhecimento e imputação importam.",
+      "prova": [
+        "Gravidez tem faixa de metade a 2/3? Sim; incisoIII.",
+        "Os incisos vetados são causas vigentes? Não."
+      ],
+      "expected": {
+        "unit_id": "97632b16-b6e8-51a5-b21f-871ca635ae35",
+        "content_sha256": "e9ab255c45add53a166fb8019132d800d8910791f2518a30578395dd5da9d2fd",
+        "simples": "Aumentos nos crimes sexuais do Título: de metade a 2/3 se do crime resulta gravidez; de 1/3 a 2/3 se o agente transmite à vítima doença sexualmente transmissível de que sabe ou deveria saber ser portador, ou se a vítima é idosa ou pessoa com deficiência. Os incisos I e II foram vetados.",
+        "pontos": [
+          "III – gravidez: aumento de metade a 2/3.",
+          "IV – transmissão de DST que sabe ou deveria saber ser portador, ou vítima idosa ou com deficiência: 1/3 a 2/3."
+        ],
+        "atencao": [
+          "Gravidez: de METADE a 2/3; DST ou vítima idosa/com deficiência: de 1/3 a 2/3."
+        ],
+        "exemplo": "Estupro de que resulta gravidez: pena aumentada de metade a 2/3.",
+        "prova": [
+          "Assertiva que fixa em 1/3 a 2/3 o aumento por gravidez erra: é de metade a 2/3."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 226"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-234-b",
+      "unit_id": "c273ec57-7f1f-5660-a202-98535066c7cd",
+      "content_sha256": "4f07e404108d7a48b0b78f7a6568b6745ad3e3641317288fe7b74493997fa7df",
+      "simples": "Segredo de justiça: os processos em que se apuram crimes definidos no Título correrão em segredo de justiça. A partir da condenação em primeira instância pelos crimes dos arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230, o sistema de consulta processual torna público o nome completo do réu, seu CPF e a tipificação penal, com os dados da pena ou medida de segurança, salvo decisão fundamentada do juiz que mantenha o sigilo. Se absolvido em grau recursal, o sigilo é restabelecido. O réu condenado passa a ser monitorado por dispositivo eletrônico.",
+      "pontos": [
+        "Processos em segredo de justiça.",
+        "§1º: após condenação em primeira instância (arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230): nome, CPF e tipificação passam a ser públicos. Ressalvada decisão judicial fundamentada de manutenção do sigilo; não ampliar a lista legal.",
+        "§2º: absolvição em grau recursal restabelece o sigilo.",
+        "§3º: réu condenado monitorado por dispositivo eletrônico."
+      ],
+      "atencao": [
+        "A regra é o sigilo; a publicidade dos dados vem com a condenação em PRIMEIRA instância (salvo decisão em contrário).",
+        "Lei 15.035 vigente em 28/11/2024: publicidade excepcional, lista e sigilo fundamentado. Notícia STF de 10/9/2025 atualizada informa ADI 7871 não conhecida em 15/9 por ilegitimidade; isso não decide constitucionalidade de mérito. Não certificado todo controle posterior nem monitoramento automático sem garantias."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 213",
+        "Art. 217-A",
+        "https://noticias.stf.jus.br/postsnoticias/instituto-questiona-no-stf-criacao-de-cadastro-nacional-de-pedofilos-e-predadores-sexuais/"
+      ],
+      "exemplo": "Condenação em primeira instância de crime listado é examinada com exceção fundamentada de sigilo. Variação: Absolvição recursal impõe regra de restabelecer sigilo; não expor dados de vítima ou afirmar monitoramento sem controle jurídico.",
+      "prova": [
+        "Publicidade do§1º dispensa lista e ressalva? Não.",
+        "Não conhecimento de ADI prova constitucionalidade de mérito? Não; distinguir decisão processual e mérito."
+      ],
+      "expected": {
+        "unit_id": "c273ec57-7f1f-5660-a202-98535066c7cd",
+        "content_sha256": "4f07e404108d7a48b0b78f7a6568b6745ad3e3641317288fe7b74493997fa7df",
+        "simples": "Segredo de justiça: os processos em que se apuram crimes definidos no Título correrão em segredo de justiça. A partir da condenação em primeira instância pelos crimes dos arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230, o sistema de consulta processual torna público o nome completo do réu, seu CPF e a tipificação penal, com os dados da pena ou medida de segurança, salvo decisão fundamentada do juiz que mantenha o sigilo. Se absolvido em grau recursal, o sigilo é restabelecido. O réu condenado passa a ser monitorado por dispositivo eletrônico.",
+        "pontos": [
+          "Processos em segredo de justiça.",
+          "§1º: após condenação em primeira instância (arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230): nome, CPF e tipificação passam a ser públicos.",
+          "§2º: absolvição em grau recursal restabelece o sigilo.",
+          "§3º: réu condenado monitorado por dispositivo eletrônico."
+        ],
+        "atencao": [
+          "A regra é o sigilo; a publicidade dos dados vem com a condenação em PRIMEIRA instância (salvo decisão em contrário)."
+        ],
+        "exemplo": "Réu condenado por estupro em primeira instância tem nome e CPF públicos no sistema de consulta (salvo decisão contrária).",
+        "prova": [
+          "Assertiva que torna públicos os dados do réu antes de qualquer condenação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 213",
+          "Art. 217-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-235",
+      "unit_id": "06a31c00-c1c3-56b1-8f7d-6128d4ca16e5",
+      "content_sha256": "66707b66b01751a9e4d336e3914ac822c86b0ef28b72efea5c5c6f89e292d8bb",
+      "simples": "Bigamia: contrair alguém, sendo casado, novo casamento. Pena: reclusão de 2 a 6 anos. Quem, não sendo casado, contrai casamento com pessoa casada, conhecendo essa circunstância, é punido com reclusão ou detenção de 1 a 3 anos. Anulado por qualquer motivo o primeiro casamento, ou o outro por motivo que não a bigamia, considera-se inexistente o crime.",
+      "pontos": [
+        "Caput: casar-se sendo casado: reclusão de 2 a 6 anos.",
+        "§1º: casar-se com pessoa casada, conhecendo a circunstância: reclusão ou detenção de 1 a 3 anos.",
+        "§2º: anulado o primeiro casamento (ou o outro por outro motivo), inexiste o crime."
+      ],
+      "atencao": [
+        "O §1º exige que o outro contraente CONHEÇA o estado de casado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 111, IV (prescrição)"
+      ],
+      "exemplo": "Pessoa já casada contrai novo casamento. Variação: O outro contraente desconhece esse estado: falta conhecimento exigido para sua hipótese própria.",
+      "prova": [
+        "As penas de ambos são sempre iguais? Não; caput e§1º diferem.",
+        "Anulação pertinente pode tornar crime inexistente? Sim; observar§2º, não qualquer sentença presumida."
+      ],
+      "expected": {
+        "unit_id": "06a31c00-c1c3-56b1-8f7d-6128d4ca16e5",
+        "content_sha256": "66707b66b01751a9e4d336e3914ac822c86b0ef28b72efea5c5c6f89e292d8bb",
+        "simples": "Bigamia: contrair alguém, sendo casado, novo casamento. Pena: reclusão de 2 a 6 anos. Quem, não sendo casado, contrai casamento com pessoa casada, conhecendo essa circunstância, é punido com reclusão ou detenção de 1 a 3 anos. Anulado por qualquer motivo o primeiro casamento, ou o outro por motivo que não a bigamia, considera-se inexistente o crime.",
+        "pontos": [
+          "Caput: casar-se sendo casado: reclusão de 2 a 6 anos.",
+          "§1º: casar-se com pessoa casada, conhecendo a circunstância: reclusão ou detenção de 1 a 3 anos.",
+          "§2º: anulado o primeiro casamento (ou o outro por outro motivo), inexiste o crime."
+        ],
+        "atencao": [
+          "O §1º exige que o outro contraente CONHEÇA o estado de casado."
+        ],
+        "exemplo": "Pessoa já casada celebra novo casamento: bigamia.",
+        "prova": [
+          "Assertiva que pune o contraente do §1º mesmo sem conhecer o estado de casado do outro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 111, IV (prescrição)"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-236",
+      "unit_id": "7479737f-ce95-527e-9b22-6dd8025b8865",
+      "content_sha256": "73058daca8ae7dbb80d7cf15e55b86d505ea65535210d933fe8afffb4fb712e1",
+      "simples": "Induzimento a erro essencial e ocultação de impedimento: contrair casamento, induzindo em erro essencial o outro contraente, ou ocultando-lhe impedimento que não seja casamento anterior. Pena: detenção de 6 meses a 2 anos. A ação penal depende de queixa do contraente enganado e só pode ser intentada depois de transitar em julgado a sentença que, por erro ou impedimento, anule o casamento.",
+      "pontos": [
+        "Induzir em erro essencial ou ocultar impedimento (que não seja casamento anterior).",
+        "Detenção de 6 meses a 2 anos.",
+        "Ação por QUEIXA, só após o trânsito em julgado da sentença que anule o casamento."
+      ],
+      "atencao": [
+        "Condição de procedibilidade: anulação do casamento transitada em julgado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 235",
+        "Art. 237"
+      ],
+      "exemplo": "Contraente enganado espera trânsito da sentença anulatória pertinente para propor queixa. Variação: Casamento anterior envolve distinção com bigamia, não importação automática deste recorte.",
+      "prova": [
+        "Pode propor a ação antes da condição indicada? Não.",
+        "Queixa pertence ao contraente enganado? Sim; parágrafo."
+      ],
+      "expected": {
+        "unit_id": "7479737f-ce95-527e-9b22-6dd8025b8865",
+        "content_sha256": "73058daca8ae7dbb80d7cf15e55b86d505ea65535210d933fe8afffb4fb712e1",
+        "simples": "Induzimento a erro essencial e ocultação de impedimento: contrair casamento, induzindo em erro essencial o outro contraente, ou ocultando-lhe impedimento que não seja casamento anterior. Pena: detenção de 6 meses a 2 anos. A ação penal depende de queixa do contraente enganado e só pode ser intentada depois de transitar em julgado a sentença que, por erro ou impedimento, anule o casamento.",
+        "pontos": [
+          "Induzir em erro essencial ou ocultar impedimento (que não seja casamento anterior).",
+          "Detenção de 6 meses a 2 anos.",
+          "Ação por QUEIXA, só após o trânsito em julgado da sentença que anule o casamento."
+        ],
+        "atencao": [
+          "Condição de procedibilidade: anulação do casamento transitada em julgado."
+        ],
+        "exemplo": "Ocultar do cônjuge um impedimento ao casamento que o torna anulável.",
+        "prova": [
+          "Assertiva que permite a queixa antes da anulação transitada em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 235",
+          "Art. 237"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-237",
+      "unit_id": "24a5d9db-da59-5485-8ea5-78a179404306",
+      "content_sha256": "fa60a3f9a4339925e5e319fe5110418411160d08e52ad87ad783adfb71270dd5",
+      "simples": "Conhecimento prévio de impedimento: contrair casamento, conhecendo a existência de impedimento que lhe cause a nulidade absoluta. Pena: detenção de 3 meses a 1 ano.",
+      "pontos": [
+        "Casar-se conhecendo impedimento que gera nulidade absoluta.",
+        "Detenção de 3 meses a 1 ano."
+      ],
+      "atencao": [
+        "Exige CONHECIMENTO do impedimento."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 236"
+      ],
+      "exemplo": "Contraente conhece impedimento legal de nulidade absoluta. Variação: Impedimento inexistente no direito atual ou desconhecido não pode ser presumido pela simples reprovação social.",
+      "prova": [
+        "O impedimento precisa ser vigente? Sim.",
+        "Exige conhecimento? Sim; texto expresso."
+      ],
+      "expected": {
+        "unit_id": "24a5d9db-da59-5485-8ea5-78a179404306",
+        "content_sha256": "fa60a3f9a4339925e5e319fe5110418411160d08e52ad87ad783adfb71270dd5",
+        "simples": "Conhecimento prévio de impedimento: contrair casamento, conhecendo a existência de impedimento que lhe cause a nulidade absoluta. Pena: detenção de 3 meses a 1 ano.",
+        "pontos": [
+          "Casar-se conhecendo impedimento que gera nulidade absoluta.",
+          "Detenção de 3 meses a 1 ano."
+        ],
+        "atencao": [
+          "Exige CONHECIMENTO do impedimento."
+        ],
+        "exemplo": "Casar-se com parente em grau proibido, sabendo do impedimento.",
+        "prova": [
+          "Assertiva que dispensa o conhecimento do impedimento no art. 237 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 236"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-238",
+      "unit_id": "3dd621df-2a70-5556-b01b-6d2c9fa235e0",
+      "content_sha256": "6a9f93efba113045b020e05a574db210803d7428edc750b2ce67180f5990a837",
+      "simples": "Simulação de autoridade para celebração de casamento: atribuir-se falsamente autoridade para celebração de casamento. Pena: detenção de 1 a 3 anos, se o fato não constitui crime mais grave.",
+      "pontos": [
+        "Atribuir-se falsamente autoridade para celebrar casamento.",
+        "Detenção de 1 a 3 anos, se não for crime mais grave."
+      ],
+      "atencao": [
+        "Subsidiário: só se o fato não constitui crime mais grave."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 239"
+      ],
+      "exemplo": "Agente se atribui falsamente autoridade para celebrar casamento. Variação: Se fato constitui crime mais grave, observar subsidiariedade; atuação regular não é simulação.",
+      "prova": [
+        "Toda cerimônia sem efeito civil configura crime? Não; provar falsa autoridade e elementos.",
+        "A ressalva de crime mais grave importa? Sim."
+      ],
+      "expected": {
+        "unit_id": "3dd621df-2a70-5556-b01b-6d2c9fa235e0",
+        "content_sha256": "6a9f93efba113045b020e05a574db210803d7428edc750b2ce67180f5990a837",
+        "simples": "Simulação de autoridade para celebração de casamento: atribuir-se falsamente autoridade para celebração de casamento. Pena: detenção de 1 a 3 anos, se o fato não constitui crime mais grave.",
+        "pontos": [
+          "Atribuir-se falsamente autoridade para celebrar casamento.",
+          "Detenção de 1 a 3 anos, se não for crime mais grave."
+        ],
+        "atencao": [
+          "Subsidiário: só se o fato não constitui crime mais grave."
+        ],
+        "exemplo": "Pessoa finge ser juiz de paz para celebrar um casamento.",
+        "prova": [
+          "Assertiva que aplica o art. 238 mesmo havendo crime mais grave erra: o tipo é subsidiário."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 239"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-239",
+      "unit_id": "db329292-5641-5c99-928e-aa4c89872f70",
+      "content_sha256": "cfe2a4916333253b213079958191ea9b7a340e8aec594586c583df371d6f6f43",
+      "simples": "Simulação de casamento: simular casamento mediante engano de outra pessoa. Pena: detenção de 1 a 3 anos, se o fato não constitui elemento de crime mais grave.",
+      "pontos": [
+        "Simular casamento enganando outra pessoa.",
+        "Detenção de 1 a 3 anos, se não for elemento de crime mais grave."
+      ],
+      "atencao": [
+        "Subsidiário."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 238"
+      ],
+      "exemplo": "Cerimônia é simulada mediante engano de outra pessoa. Variação: Representação teatral consentida não prova engano típico; crime mais grave exige integração.",
+      "prova": [
+        "Toda encenação é automaticamente crime? Não.",
+        "Engano de outra pessoa é requisito? Sim."
+      ],
+      "expected": {
+        "unit_id": "db329292-5641-5c99-928e-aa4c89872f70",
+        "content_sha256": "cfe2a4916333253b213079958191ea9b7a340e8aec594586c583df371d6f6f43",
+        "simples": "Simulação de casamento: simular casamento mediante engano de outra pessoa. Pena: detenção de 1 a 3 anos, se o fato não constitui elemento de crime mais grave.",
+        "pontos": [
+          "Simular casamento enganando outra pessoa.",
+          "Detenção de 1 a 3 anos, se não for elemento de crime mais grave."
+        ],
+        "atencao": [
+          "Subsidiário."
+        ],
+        "exemplo": "Fingir uma cerimônia de casamento para enganar a vítima.",
+        "prova": [
+          "Assertiva que dispensa o engano da outra pessoa no art. 239 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 238"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-241",
+      "unit_id": "1fe42e90-7246-56d9-80b9-00f88159ef79",
+      "content_sha256": "e15aab0cb1b3b94e3ee8b414ab38fe3910a90a5b0fa82698a312385122beee19",
+      "simples": "Registro de nascimento inexistente: promover no registro civil a inscrição de nascimento inexistente. Pena: reclusão de 2 a 6 anos.",
+      "pontos": [
+        "Promover, no registro civil, inscrição de nascimento inexistente.",
+        "Reclusão de 2 a 6 anos."
+      ],
+      "atencao": [
+        "O nascimento é INEXISTENTE (diferente do art. 242, em que o filho existe)."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 242"
+      ],
+      "exemplo": "Nascimento inexistente é inscrito no registro civil. Variação: Registro falso de filiação de criança existente exige 242 ou outro tipo, não confundir objetos.",
+      "prova": [
+        "A criança existe necessariamente no 241? Não; nascimento é inexistente.",
+        "É o mesmo fato de registrar filho alheio? Não; distinguir 242."
+      ],
+      "expected": {
+        "unit_id": "1fe42e90-7246-56d9-80b9-00f88159ef79",
+        "content_sha256": "e15aab0cb1b3b94e3ee8b414ab38fe3910a90a5b0fa82698a312385122beee19",
+        "simples": "Registro de nascimento inexistente: promover no registro civil a inscrição de nascimento inexistente. Pena: reclusão de 2 a 6 anos.",
+        "pontos": [
+          "Promover, no registro civil, inscrição de nascimento inexistente.",
+          "Reclusão de 2 a 6 anos."
+        ],
+        "atencao": [
+          "O nascimento é INEXISTENTE (diferente do art. 242, em que o filho existe)."
+        ],
+        "exemplo": "Registrar no cartório o nascimento de uma criança que não nasceu.",
+        "prova": [
+          "Assertiva que aplica o art. 241 ao registro de filho de outrem como seu erra: isso é o art. 242."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 242"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-242",
+      "unit_id": "4e0a4917-26ba-5e1a-95cd-97e397e7deb9",
+      "content_sha256": "61b6027151b27ca43233919d4c3c1958fde7cbf223b2a42e359a8ddc7b0a86a3",
+      "simples": "Parto suposto e supressão ou alteração de direito inerente ao estado civil de recém-nascido: dar parto alheio como próprio; registrar como seu o filho de outrem; ocultar recém-nascido ou substituí-lo, suprimindo ou alterando direito inerente ao estado civil. Pena: reclusão de 2 a 6 anos. Se praticado por motivo de reconhecida nobreza: detenção de 1 a 2 anos, podendo o juiz deixar de aplicar a pena.",
+      "pontos": [
+        "Condutas: dar parto alheio como próprio; registrar como seu filho de outrem; ocultar ou substituir recém-nascido.",
+        "Reclusão de 2 a 6 anos.",
+        "Parágrafo único: motivo de reconhecida nobreza: detenção de 1 a 2 anos, com possibilidade de perdão judicial."
+      ],
+      "atencao": [
+        "'Adoção à brasileira': registrar filho alheio como seu, podendo ter o privilégio por nobreza.",
+        "Nobreza é hipótese a reconhecer, não licença para registro falso ou adoção fora das garantias. Faculdade de deixar pena não é absolvição automática."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 241",
+        "Art. 243"
+      ],
+      "exemplo": "Filho alheio existente é registrado como próprio fora do regime legal. Variação: Motivo reconhecido de nobreza pode ter consequência própria, sem licenciar fraude registral ou adoção fora das garantias.",
+      "prova": [
+        "Motivo nobre dá absolvição automática? Não; hipótese e faculdade precisam ser examinadas.",
+        "As condutas do caput são todas simultaneamente necessárias? Não; são alternativas."
+      ],
+      "expected": {
+        "unit_id": "4e0a4917-26ba-5e1a-95cd-97e397e7deb9",
+        "content_sha256": "61b6027151b27ca43233919d4c3c1958fde7cbf223b2a42e359a8ddc7b0a86a3",
+        "simples": "Parto suposto e supressão ou alteração de direito inerente ao estado civil de recém-nascido: dar parto alheio como próprio; registrar como seu o filho de outrem; ocultar recém-nascido ou substituí-lo, suprimindo ou alterando direito inerente ao estado civil. Pena: reclusão de 2 a 6 anos. Se praticado por motivo de reconhecida nobreza: detenção de 1 a 2 anos, podendo o juiz deixar de aplicar a pena.",
+        "pontos": [
+          "Condutas: dar parto alheio como próprio; registrar como seu filho de outrem; ocultar ou substituir recém-nascido.",
+          "Reclusão de 2 a 6 anos.",
+          "Parágrafo único: motivo de reconhecida nobreza: detenção de 1 a 2 anos, com possibilidade de perdão judicial."
+        ],
+        "atencao": [
+          "'Adoção à brasileira': registrar filho alheio como seu, podendo ter o privilégio por nobreza."
+        ],
+        "exemplo": "Pessoa registra como seu o filho recém-nascido de outra, sem adoção legal.",
+        "prova": [
+          "Assertiva que pune com reclusão de 2 a 6 anos o fato cometido por reconhecida nobreza erra: aplica-se o parágrafo único (detenção de 1 a 2 anos, com possível perdão judicial)."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 241",
+          "Art. 243"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-243",
+      "unit_id": "d173c894-9275-5bdb-be8a-061ed89d8777",
+      "content_sha256": "f7bc78cef8f28491932368ad15028447c3294218772921f5b9642faa4c2a2226",
+      "simples": "Sonegação de estado de filiação: deixar em asilo de expostos ou outra instituição de assistência filho próprio ou alheio, ocultando-lhe a filiação ou atribuindo-lhe outra, com o fim de prejudicar direito inerente ao estado civil. Pena: reclusão de 1 a 5 anos e multa.",
+      "pontos": [
+        "Deixar filho (próprio ou alheio) em instituição, ocultando ou alterando a filiação.",
+        "Fim de prejudicar direito inerente ao estado civil.",
+        "Reclusão de 1 a 5 anos e multa."
+      ],
+      "atencao": [
+        "Exige o fim de prejudicar o estado civil."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 242"
+      ],
+      "exemplo": "Filiação é ocultada ao deixar criança em instituição, com fim de prejudicar estado civil. Variação: Acolhimento regular com identificação/proteção não prova finalidade típica automaticamente.",
+      "prova": [
+        "Finalidade de prejudicar direito importa? Sim.",
+        "Toda instituição de assistência é crime por receber criança? Não; identificar conduta e elementos."
+      ],
+      "expected": {
+        "unit_id": "d173c894-9275-5bdb-be8a-061ed89d8777",
+        "content_sha256": "f7bc78cef8f28491932368ad15028447c3294218772921f5b9642faa4c2a2226",
+        "simples": "Sonegação de estado de filiação: deixar em asilo de expostos ou outra instituição de assistência filho próprio ou alheio, ocultando-lhe a filiação ou atribuindo-lhe outra, com o fim de prejudicar direito inerente ao estado civil. Pena: reclusão de 1 a 5 anos e multa.",
+        "pontos": [
+          "Deixar filho (próprio ou alheio) em instituição, ocultando ou alterando a filiação.",
+          "Fim de prejudicar direito inerente ao estado civil.",
+          "Reclusão de 1 a 5 anos e multa."
+        ],
+        "atencao": [
+          "Exige o fim de prejudicar o estado civil."
+        ],
+        "exemplo": "Deixar criança em instituição com filiação falsa para prejudicar seus direitos.",
+        "prova": [
+          "Assertiva que dispensa o fim de prejudicar direito inerente ao estado civil erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 242"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-244",
+      "unit_id": "fd61d629-caab-5f1c-b445-dbff3ad7842c",
+      "content_sha256": "9c78ea867e8973fcd5716ea5f361acd55a5774a34abc483ebd32d75df2890cfb",
+      "simples": "Abandono material: deixar, sem justa causa, de prover a subsistência do cônjuge, de filho menor de 18 anos ou inapto para o trabalho, ou de ascendente inválido ou maior de 60 anos, não lhes proporcionando os recursos necessários ou faltando ao pagamento de pensão alimentícia judicialmente acordada, fixada ou majorada; ou deixar, sem justa causa, de socorrer descendente ou ascendente gravemente enfermo. Pena: detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo vigente. Nas mesmas penas incide quem, sendo solvente, frustra ou ilide o pagamento de pensão alimentícia, inclusive por abandono injustificado de emprego ou função.",
+      "pontos": [
+        "Deixar de prover a subsistência de cônjuge, filho menor de 18 ou inapto, ascendente inválido ou maior de 60 anos.",
+        "Faltar ao pagamento de pensão alimentícia judicial.",
+        "Deixar de socorrer descendente ou ascendente gravemente enfermo.",
+        "Detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo.",
+        "Parágrafo único: quem, sendo solvente, frustra o pagamento da pensão (inclusive por abandono de emprego)."
+      ],
+      "atencao": [
+        "Exige AUSÊNCIA de justa causa.",
+        "O parágrafo único trata do devedor SOLVENTE que frustra o pagamento.",
+        "Sem justa causa e solvência exigem prova; prisão civil ou inadimplência não são automaticamente condenação penal. Integrar regime atual de multa, sem transformar referência histórica em exercício mecânico."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 245"
+      ],
+      "exemplo": "Devedor solvente deliberadamente frustra pensão nas condições legais. Variação: Incapacidade econômica efetiva exige avaliação de justa causa; atraso sozinho não prova crime.",
+      "prova": [
+        "Pobreza basta para condenar? Não.",
+        "O parágrafo exige solvência? Sim; não presumi-la sem prova."
+      ],
+      "expected": {
+        "unit_id": "fd61d629-caab-5f1c-b445-dbff3ad7842c",
+        "content_sha256": "9c78ea867e8973fcd5716ea5f361acd55a5774a34abc483ebd32d75df2890cfb",
+        "simples": "Abandono material: deixar, sem justa causa, de prover a subsistência do cônjuge, de filho menor de 18 anos ou inapto para o trabalho, ou de ascendente inválido ou maior de 60 anos, não lhes proporcionando os recursos necessários ou faltando ao pagamento de pensão alimentícia judicialmente acordada, fixada ou majorada; ou deixar, sem justa causa, de socorrer descendente ou ascendente gravemente enfermo. Pena: detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo vigente. Nas mesmas penas incide quem, sendo solvente, frustra ou ilide o pagamento de pensão alimentícia, inclusive por abandono injustificado de emprego ou função.",
+        "pontos": [
+          "Deixar de prover a subsistência de cônjuge, filho menor de 18 ou inapto, ascendente inválido ou maior de 60 anos.",
+          "Faltar ao pagamento de pensão alimentícia judicial.",
+          "Deixar de socorrer descendente ou ascendente gravemente enfermo.",
+          "Detenção de 1 a 4 anos e multa de uma a dez vezes o maior salário mínimo.",
+          "Parágrafo único: quem, sendo solvente, frustra o pagamento da pensão (inclusive por abandono de emprego)."
+        ],
+        "atencao": [
+          "Exige AUSÊNCIA de justa causa.",
+          "O parágrafo único trata do devedor SOLVENTE que frustra o pagamento."
+        ],
+        "exemplo": "Pai deixa de pagar, sem justa causa, a pensão alimentícia fixada em juízo, embora possa pagar.",
+        "prova": [
+          "Assertiva que pune o devedor de pensão que está sem condições de pagar por justa causa erra: o tipo exige ausência de justa causa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-245",
+      "unit_id": "84c44774-9c54-5dd4-bf2f-0cf78b8bb395",
+      "content_sha256": "50f6ccf4ecd92d40d2390acf5e2e774e4402c184544db398eb9b3c76017e8c4f",
+      "simples": "Entrega de filho menor a pessoa inidônea: entregar filho menor de 18 anos a pessoa em cuja companhia saiba ou deva saber que o menor fica moral ou materialmente em perigo. Pena: detenção de um a dois anos. Se o agente pratica o delito para obter lucro, ou se o menor é enviado para o exterior: reclusão de um a quatro anos. Incorre na mesma pena quem, embora excluído o perigo, auxilia ato destinado ao envio de menor para o exterior com o fito de lucro.",
+      "pontos": [
+        "Entregar filho menor de 18 anos a pessoa inidônea.",
+        "Detenção de um a dois anos.",
+        "§1º: fim de lucro ou envio ao exterior: reclusão de um a quatro anos.",
+        "§2º: auxiliar o envio de menor ao exterior com fito de lucro, mesmo sem perigo."
+      ],
+      "atencao": [
+        "Exige que o agente SAIBA ou DEVA SABER do perigo moral ou material."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 244",
+        "Art. 249"
+      ],
+      "exemplo": "Filho menor 18 é entregue a companhia com perigo indicado e elementos subjetivos comprovados. Variação: Envio regular autorizado ao exterior não é crime só pela fronteira;§§1º/2º exigem hipóteses próprias.",
+      "prova": [
+        "Idade e perigo importam no caput? Sim.",
+        "Lucro ou exterior dispensam todos os elementos? Não; verificar modalidade e conduta."
+      ],
+      "expected": {
+        "unit_id": "84c44774-9c54-5dd4-bf2f-0cf78b8bb395",
+        "content_sha256": "50f6ccf4ecd92d40d2390acf5e2e774e4402c184544db398eb9b3c76017e8c4f",
+        "simples": "Entrega de filho menor a pessoa inidônea: entregar filho menor de 18 anos a pessoa em cuja companhia saiba ou deva saber que o menor fica moral ou materialmente em perigo. Pena: detenção de um a dois anos. Se o agente pratica o delito para obter lucro, ou se o menor é enviado para o exterior: reclusão de um a quatro anos. Incorre na mesma pena quem, embora excluído o perigo, auxilia ato destinado ao envio de menor para o exterior com o fito de lucro.",
+        "pontos": [
+          "Entregar filho menor de 18 anos a pessoa inidônea.",
+          "Detenção de um a dois anos.",
+          "§1º: fim de lucro ou envio ao exterior: reclusão de um a quatro anos.",
+          "§2º: auxiliar o envio de menor ao exterior com fito de lucro, mesmo sem perigo."
+        ],
+        "atencao": [
+          "Exige que o agente SAIBA ou DEVA SABER do perigo moral ou material."
+        ],
+        "exemplo": "Pai entrega o filho a uma pessoa que sabe explorá-lo.",
+        "prova": [
+          "Assertiva que dispensa que o agente saiba ou deva saber do perigo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 244",
+          "Art. 249"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-246",
+      "unit_id": "86a8eb06-daa3-5bc3-a79e-ce03f1d8d2c0",
+      "content_sha256": "889aef2cc7ef50b45df61e3236da7c72f9cbd685921870339e1c88ed4a6749d5",
+      "simples": "Abandono intelectual: deixar, sem justa causa, de prover à instrução primária de filho em idade escolar. Pena: detenção de quinze dias a um mês, ou multa.",
+      "pontos": [
+        "Deixar de prover a instrução primária de filho em idade escolar.",
+        "Sem justa causa.",
+        "Detenção de quinze dias a um mês, ou multa."
+      ],
+      "atencao": [
+        "Exige ausência de justa causa.",
+        "Integrar educação obrigatória atual, acesso efetivo e justa causa; não criminalizar pobreza ou ausência escolar sem elementos. Instrução primária é terminologia histórica, não regra para ignorar escolaridade obrigatória atual."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 244"
+      ],
+      "exemplo": "Responsável sem justa causa deixa de prover instrução do filho em idade escolar. Variação: Impossibilidade concreta de acesso não equivale automaticamente a abandono; avaliar dever público e medidas pertinentes.",
+      "prova": [
+        "Toda ausência escolar prova dolo dos pais? Não.",
+        "Qualquer escolha educacional é automaticamente lícita ou criminosa por rótulo? Não; integrar normas atuais e elementos."
+      ],
+      "expected": {
+        "unit_id": "86a8eb06-daa3-5bc3-a79e-ce03f1d8d2c0",
+        "content_sha256": "889aef2cc7ef50b45df61e3236da7c72f9cbd685921870339e1c88ed4a6749d5",
+        "simples": "Abandono intelectual: deixar, sem justa causa, de prover à instrução primária de filho em idade escolar. Pena: detenção de quinze dias a um mês, ou multa.",
+        "pontos": [
+          "Deixar de prover a instrução primária de filho em idade escolar.",
+          "Sem justa causa.",
+          "Detenção de quinze dias a um mês, ou multa."
+        ],
+        "atencao": [
+          "Exige ausência de justa causa."
+        ],
+        "exemplo": "Pai que, podendo, não matricula o filho em idade escolar.",
+        "prova": [
+          "Assertiva que pune o fato mesmo havendo justa causa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 244"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-247",
+      "unit_id": "82759633-5e58-5c62-9b9b-56bf60f1b5db",
+      "content_sha256": "df870f94c73b6d5ae1548275745c4e15538fc557fae497f4e5e531a6900a95b3",
+      "simples": "Abandono moral: permitir alguém que menor de dezoito anos, sujeito a seu poder ou confiado à sua guarda ou vigilância, frequente casa de jogo ou mal-afamada, ou conviva com pessoa viciosa ou de má vida; frequente espetáculo capaz de pervertê-lo ou de ofender-lhe o pudor; resida ou trabalhe em casa de prostituição; ou mendigue ou sirva a mendigo para excitar a comiseração pública. Pena: detenção de um a três meses, ou multa.",
+      "pontos": [
+        "Condutas no texto histórico devem ser integradas ao ECA e à Constituição sem presumir crime por pobreza ou estereótipo.",
+        "Exige menor sob poder, guarda ou vigilância e elementos da conduta pertinente.",
+        "Não ensinar as expressões estigmatizantes como critérios automáticos atuais de condenação."
+      ],
+      "atencao": [
+        "O crime é PERMITIR, ou seja, omissão de quem tem poder, guarda ou vigilância.",
+        "Expressões históricas de estigma não autorizam condenar por pobreza, identidade ou juízo moral genérico. Integrar ECA e proteção atual; treino literal dos rótulos bloqueado."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 218-B"
+      ],
+      "exemplo": "Responsável permite situação legalmente relevante de risco ao menor sob sua guarda. Variação: Não usar expressões históricas viciosa/má vida como licença de condenar por pobreza, identidade ou estereótipo.",
+      "prova": [
+        "Toda pessoa marginalizada preenche o tipo? Não.",
+        "Há relação de poder/guarda/vigilância a provar? Sim."
+      ],
+      "expected": {
+        "unit_id": "82759633-5e58-5c62-9b9b-56bf60f1b5db",
+        "content_sha256": "df870f94c73b6d5ae1548275745c4e15538fc557fae497f4e5e531a6900a95b3",
+        "simples": "Abandono moral: permitir alguém que menor de dezoito anos, sujeito a seu poder ou confiado à sua guarda ou vigilância, frequente casa de jogo ou mal-afamada, ou conviva com pessoa viciosa ou de má vida; frequente espetáculo capaz de pervertê-lo ou de ofender-lhe o pudor; resida ou trabalhe em casa de prostituição; ou mendigue ou sirva a mendigo para excitar a comiseração pública. Pena: detenção de um a três meses, ou multa.",
+        "pontos": [
+          "Permitir que o menor frequente casa de jogo, mal-afamada ou conviva com pessoa viciosa.",
+          "Permitir espetáculo que o perverta ou ofenda o pudor.",
+          "Permitir que resida ou trabalhe em casa de prostituição.",
+          "Permitir que mendigue ou sirva a mendigo.",
+          "Detenção de um a três meses, ou multa."
+        ],
+        "atencao": [
+          "O crime é PERMITIR, ou seja, omissão de quem tem poder, guarda ou vigilância."
+        ],
+        "exemplo": "Responsável permite que o menor trabalhe em casa de prostituição.",
+        "prova": [
+          "Assertiva que aplica o art. 247 a qualquer pessoa, sem poder, guarda ou vigilância sobre o menor, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-248",
+      "unit_id": "f00ab61e-790e-591b-935f-2047d2ecee26",
+      "content_sha256": "1c3931748fe856d8c9582d07e71a5b349b0e2e3c01e2cfc7605b43b5a00cca2d",
+      "simples": "Induzimento a fuga, entrega arbitrária ou sonegação de incapazes: induzir menor de dezoito anos, ou interdito, a fugir do lugar em que se acha por determinação de quem sobre ele exerce autoridade; confiar a outrem, sem ordem do pai, do tutor ou do curador, algum menor de dezoito anos ou interdito; ou deixar, sem justa causa, de entregá-lo a quem legitimamente o reclame. Pena: detenção de um mês a um ano, ou multa.",
+      "pontos": [
+        "Induzir menor ou interdito a fugir.",
+        "Confiar menor ou interdito a outrem sem ordem do responsável.",
+        "Deixar de entregá-lo, sem justa causa, a quem legitimamente o reclame.",
+        "Detenção de um mês a um ano, ou multa."
+      ],
+      "atencao": [
+        "Três condutas no mesmo artigo.",
+        "Curatela/interdição não presumem incapacidade civil total de toda pessoa com deficiência; verificar alcance da decisão, autoridade legítima e direitos atuais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 249"
+      ],
+      "exemplo": "Menor é induzido a fugir de autoridade legítima indicada em lei/ordem judicial. Variação: Proteção contra situação abusiva exige analisar justa causa e decisão válida; não presunção pelo parentesco.",
+      "prova": [
+        "Autoridade precisa ter fundamento pertinente? Sim.",
+        "As três condutas exigem sempre mesma ação material? Não; distinguir indução, entrega e sonegação."
+      ],
+      "expected": {
+        "unit_id": "f00ab61e-790e-591b-935f-2047d2ecee26",
+        "content_sha256": "1c3931748fe856d8c9582d07e71a5b349b0e2e3c01e2cfc7605b43b5a00cca2d",
+        "simples": "Induzimento a fuga, entrega arbitrária ou sonegação de incapazes: induzir menor de dezoito anos, ou interdito, a fugir do lugar em que se acha por determinação de quem sobre ele exerce autoridade; confiar a outrem, sem ordem do pai, do tutor ou do curador, algum menor de dezoito anos ou interdito; ou deixar, sem justa causa, de entregá-lo a quem legitimamente o reclame. Pena: detenção de um mês a um ano, ou multa.",
+        "pontos": [
+          "Induzir menor ou interdito a fugir.",
+          "Confiar menor ou interdito a outrem sem ordem do responsável.",
+          "Deixar de entregá-lo, sem justa causa, a quem legitimamente o reclame.",
+          "Detenção de um mês a um ano, ou multa."
+        ],
+        "atencao": [
+          "Três condutas no mesmo artigo."
+        ],
+        "exemplo": "Pessoa se recusa, sem justa causa, a devolver o menor a quem legitimamente o reclama.",
+        "prova": [
+          "Assertiva que pune a conduta de entregar o menor a quem legitimamente o reclame erra: o crime é deixar de entregar."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 249"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-249",
+      "unit_id": "482d1a11-c440-50ca-9964-324299f803c2",
+      "content_sha256": "675e84a4250c5836e5609d17839786db0a38d99829d023b4a15a2a90ec849a70",
+      "simples": "Subtração de incapazes: subtrair menor de dezoito anos ou interdito ao poder de quem o tem sob sua guarda em virtude de lei ou de ordem judicial. Pena: detenção de dois meses a dois anos, se o fato não constitui elemento de outro crime. Ser o agente pai ou tutor do menor ou curador do interdito não o exime de pena, se destituído ou temporariamente privado do poder, tutela, curatela ou guarda. Se há restituição do menor ou do interdito sem maus-tratos ou privações, o juiz pode deixar de aplicar pena.",
+      "pontos": [
+        "Subtrair menor ou interdito de quem o tem sob guarda legal ou judicial.",
+        "Detenção de dois meses a dois anos, se não for elemento de outro crime.",
+        "§1º: pai ou tutor destituído ou privado temporariamente também responde.",
+        "§2º: restituição sem maus-tratos ou privações permite ao juiz deixar de aplicar pena; não é automática."
+      ],
+      "atencao": [
+        "Crime subsidiário.",
+        "O próprio pai pode ser sujeito ativo se perdeu a guarda.",
+        "Curatela/interdição não presumem incapacidade civil total de toda pessoa com deficiência; verificar alcance da decisão, autoridade legítima e direitos atuais."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 248"
+      ],
+      "exemplo": "Pessoa privada legitimamente da guarda subtrai incapaz de guardião legal. Variação: Restituição sem maus-tratos/privações pode abrir faculdade judicial, não imunidade automática por ser pai.",
+      "prova": [
+        "Ser pai sempre exime? Não;§1º.",
+        "Restituição sempre extingue automaticamente? Não; há condições e faculdade."
+      ],
+      "expected": {
+        "unit_id": "482d1a11-c440-50ca-9964-324299f803c2",
+        "content_sha256": "675e84a4250c5836e5609d17839786db0a38d99829d023b4a15a2a90ec849a70",
+        "simples": "Subtração de incapazes: subtrair menor de dezoito anos ou interdito ao poder de quem o tem sob sua guarda em virtude de lei ou de ordem judicial. Pena: detenção de dois meses a dois anos, se o fato não constitui elemento de outro crime. Ser o agente pai ou tutor do menor ou curador do interdito não o exime de pena, se destituído ou temporariamente privado do poder, tutela, curatela ou guarda. Se há restituição do menor ou do interdito sem maus-tratos ou privações, o juiz pode deixar de aplicar pena.",
+        "pontos": [
+          "Subtrair menor ou interdito de quem o tem sob guarda legal ou judicial.",
+          "Detenção de dois meses a dois anos, se não for elemento de outro crime.",
+          "§1º: pai ou tutor destituído ou privado temporariamente também responde.",
+          "§2º: restituição sem maus-tratos ou privações: perdão judicial."
+        ],
+        "atencao": [
+          "Crime subsidiário.",
+          "O próprio pai pode ser sujeito ativo se perdeu a guarda."
+        ],
+        "exemplo": "Pai privado da guarda por decisão judicial leva o filho sem autorização.",
+        "prova": [
+          "Assertiva que isenta o pai de qualquer responsabilidade no art. 249 erra: se destituído ou privado da guarda, responde."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 248"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-250",
+      "unit_id": "50a033cf-d731-5503-a500-c5ce94478c4f",
+      "content_sha256": "e748e3f437cc125fbebce3c344a5f140ec82a3f5ba007f497391edb7d233098a",
+      "simples": "Incêndio: causar incêndio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa. As penas aumentam-se de um terço se o crime é cometido com intuito de obter vantagem pecuniária, ou se o incêndio é em casa habitada ou destinada a habitação; em edifício público ou de uso público, obra de assistência social ou de cultura; em embarcação, aeronave, comboio ou veículo de transporte coletivo; em estação ferroviária ou aeródromo; em estaleiro, fábrica ou oficina; em depósito de explosivo, combustível ou inflamável; em poço petrolífico ou galeria de mineração; ou em lavoura, pastagem, mata ou floresta. Se culposo: detenção de seis meses a dois anos.",
+      "pontos": [
+        "Causar incêndio, expondo a perigo vida, integridade física ou patrimônio de outrem.",
+        "Reclusão de três a seis anos e multa.",
+        "§1º: aumento de um terço (vantagem pecuniária; locais e meios listados).",
+        "§2º: culposo: detenção de seis meses a dois anos."
+      ],
+      "atencao": [
+        "É crime de PERIGO COMUM: exige perigo concreto a pessoas ou patrimônio.",
+        "Há modalidade culposa.",
+        "Incêndio em mata/floresta deve ser integrado à legislação ambiental, sem tratar toda combustão como mesmo crime ou cumular fundamentos sem exame."
+      ],
+      "termos": [
+        {
+          "termo": "Crime de perigo comum",
+          "significado": "Atinge número indeterminado de pessoas ou coisas."
+        }
+      ],
+      "remissoes": [
+        "Art. 251",
+        "Art. 258"
+      ],
+      "exemplo": "Incêndio expõe pessoas ou patrimônio alheio ao perigo típico. Variação: Queima sem perigo comum demonstrado exige outro enquadramento; em mata integrar norma ambiental e fatos.",
+      "prova": [
+        "Fogo sozinho resolve o tipo? Não; exposição ao perigo importa.",
+        "Há forma culposa? Sim;§2º."
+      ],
+      "expected": {
+        "unit_id": "50a033cf-d731-5503-a500-c5ce94478c4f",
+        "content_sha256": "e748e3f437cc125fbebce3c344a5f140ec82a3f5ba007f497391edb7d233098a",
+        "simples": "Incêndio: causar incêndio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa. As penas aumentam-se de um terço se o crime é cometido com intuito de obter vantagem pecuniária, ou se o incêndio é em casa habitada ou destinada a habitação; em edifício público ou de uso público, obra de assistência social ou de cultura; em embarcação, aeronave, comboio ou veículo de transporte coletivo; em estação ferroviária ou aeródromo; em estaleiro, fábrica ou oficina; em depósito de explosivo, combustível ou inflamável; em poço petrolífico ou galeria de mineração; ou em lavoura, pastagem, mata ou floresta. Se culposo: detenção de seis meses a dois anos.",
+        "pontos": [
+          "Causar incêndio, expondo a perigo vida, integridade física ou patrimônio de outrem.",
+          "Reclusão de três a seis anos e multa.",
+          "§1º: aumento de um terço (vantagem pecuniária; locais e meios listados).",
+          "§2º: culposo: detenção de seis meses a dois anos."
+        ],
+        "atencao": [
+          "É crime de PERIGO COMUM: exige perigo concreto a pessoas ou patrimônio.",
+          "Há modalidade culposa."
+        ],
+        "exemplo": "Incendiar um edifício público expondo pessoas a perigo.",
+        "prova": [
+          "Assertiva que dispensa a exposição a perigo no crime de incêndio erra."
+        ],
+        "termos": [
+          {
+            "termo": "Crime de perigo comum",
+            "significado": "Atinge número indeterminado de pessoas ou coisas."
+          }
+        ],
+        "remissoes": [
+          "Art. 251",
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-251",
+      "unit_id": "d3c57951-0cbd-51b9-aca5-1394f05c3737",
+      "content_sha256": "7ea2485e84df45ae2413512eb45e4263efd247245e94a309651be5f4cc419169",
+      "simples": "Explosão: expor a perigo a vida, a integridade física ou o patrimônio de outrem, mediante explosão, arremesso ou simples colocação de engenho de dinamite ou de substância de efeitos análogos. Pena: reclusão de três a seis anos e multa. Se a substância não é dinamite ou explosivo de efeitos análogos: reclusão de um a quatro anos e multa. As penas aumentam-se de um terço nas hipóteses do art. 250, §1º, I ou II. No caso de culpa: detenção de seis meses a dois anos, se a explosão é de dinamite ou substância análoga; nos demais casos, de três meses a um ano.",
+      "pontos": [
+        "Expor a perigo mediante explosão, arremesso ou colocação de engenho.",
+        "Dinamite ou análoga: reclusão de três a seis anos e multa.",
+        "§1º: outra substância: reclusão de um a quatro anos e multa.",
+        "§2º: aumento de um terço nas hipóteses do art. 250.",
+        "§3º: culposo: detenção de seis meses a dois anos (dinamite) ou de três meses a um ano (demais)."
+      ],
+      "atencao": [
+        "A pena varia conforme a substância usada."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 250",
+        "Art. 258"
+      ],
+      "exemplo": "Engenho é colocado e cria perigo típico, mesmo sem descrição técnica de funcionamento. Variação: Tipo de substância e culpa mudam a faixa; não tratar toda ocorrência como mesma pena.",
+      "prova": [
+        "A explosão efetiva é sempre indispensável? Não; artigo inclui arremesso ou simples colocação com perigo.",
+        "Substância e elemento subjetivo importam? Sim; modalidades diferentes."
+      ],
+      "expected": {
+        "unit_id": "d3c57951-0cbd-51b9-aca5-1394f05c3737",
+        "content_sha256": "7ea2485e84df45ae2413512eb45e4263efd247245e94a309651be5f4cc419169",
+        "simples": "Explosão: expor a perigo a vida, a integridade física ou o patrimônio de outrem, mediante explosão, arremesso ou simples colocação de engenho de dinamite ou de substância de efeitos análogos. Pena: reclusão de três a seis anos e multa. Se a substância não é dinamite ou explosivo de efeitos análogos: reclusão de um a quatro anos e multa. As penas aumentam-se de um terço nas hipóteses do art. 250, §1º, I ou II. No caso de culpa: detenção de seis meses a dois anos, se a explosão é de dinamite ou substância análoga; nos demais casos, de três meses a um ano.",
+        "pontos": [
+          "Expor a perigo mediante explosão, arremesso ou colocação de engenho.",
+          "Dinamite ou análoga: reclusão de três a seis anos e multa.",
+          "§1º: outra substância: reclusão de um a quatro anos e multa.",
+          "§2º: aumento de um terço nas hipóteses do art. 250.",
+          "§3º: culposo: detenção de seis meses a dois anos (dinamite) ou de três meses a um ano (demais)."
+        ],
+        "atencao": [
+          "A pena varia conforme a substância usada."
+        ],
+        "exemplo": "Detonar dinamite em local movimentado expondo pessoas a perigo.",
+        "prova": [
+          "Assertiva que aplica a mesma pena para dinamite e para outras substâncias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 250",
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-252",
+      "unit_id": "d3356df8-63a3-57c3-88fd-f1a1cc5e0b46",
+      "content_sha256": "edaf0107f370a5cf614992968e548d6aadeef3d7a5462d37c01202e5332dcf90",
+      "simples": "Uso de gás tóxico ou asfixiante: expor a perigo a vida, a integridade física ou o patrimônio de outrem, usando de gás tóxico ou asfixiante. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de três meses a um ano.",
+      "pontos": [
+        "Expor a perigo usando gás tóxico ou asfixiante.",
+        "Reclusão de um a quatro anos e multa.",
+        "Culposo: detenção de três meses a um ano."
+      ],
+      "atencao": [
+        "Há modalidade culposa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 253"
+      ],
+      "exemplo": "Gás tóxico expõe a perigo pessoas ou patrimônio nas condições típicas. Variação: Uso regular sem perigo ou acidente não imputável não satisfaz automaticamente o crime.",
+      "prova": [
+        "Dolo e culpa têm mesma pena? Não.",
+        "Mero nome do produto prova todo tipo? Não; conduta e perigo precisam de prova."
+      ],
+      "expected": {
+        "unit_id": "d3356df8-63a3-57c3-88fd-f1a1cc5e0b46",
+        "content_sha256": "edaf0107f370a5cf614992968e548d6aadeef3d7a5462d37c01202e5332dcf90",
+        "simples": "Uso de gás tóxico ou asfixiante: expor a perigo a vida, a integridade física ou o patrimônio de outrem, usando de gás tóxico ou asfixiante. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de três meses a um ano.",
+        "pontos": [
+          "Expor a perigo usando gás tóxico ou asfixiante.",
+          "Reclusão de um a quatro anos e multa.",
+          "Culposo: detenção de três meses a um ano."
+        ],
+        "atencao": [
+          "Há modalidade culposa."
+        ],
+        "exemplo": "Liberar gás tóxico em ambiente fechado com pessoas.",
+        "prova": [
+          "Assertiva que nega a modalidade culposa no art. 252 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 253"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-253",
+      "unit_id": "89508643-0d06-50ec-9270-65eb90174cf6",
+      "content_sha256": "959bc0ee26b170cbb542ed022e4d50f933642a47285f5399c6c1a34d8017ac97",
+      "simples": "Fabrico, fornecimento, aquisição, posse ou transporte de explosivos ou gás tóxico ou asfixiante: fabricar, fornecer, adquirir, possuir ou transportar, sem licença da autoridade, substância ou engenho explosivo, gás tóxico ou asfixiante, ou material destinado à sua fabricação. Pena: detenção de seis meses a dois anos e multa.",
+      "pontos": [
+        "Fabricar, fornecer, adquirir, possuir ou transportar sem licença.",
+        "Objeto: explosivo, gás tóxico ou asfixiante, ou material para fabricação.",
+        "Detenção de seis meses a dois anos e multa."
+      ],
+      "atencao": [
+        "Exige ausência de LICENÇA da autoridade.",
+        "Normas especiais de explosivos/armas e licença vigente precisam ser identificadas; não decidir todo enquadramento por palavra explosivo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 251",
+        "Art. 252"
+      ],
+      "exemplo": "Posse/transporte de material indicado ocorre sem licença pertinente. Variação: Licença válida e aplicável altera o pressuposto; normas especiais de armas/explosivos exigem integração.",
+      "prova": [
+        "Licença de qualquer atividade basta? Não; deve cobrir a hipótese.",
+        "Há diversas condutas alternativas? Sim; fabricar, fornecer, adquirir, possuir ou transportar."
+      ],
+      "expected": {
+        "unit_id": "89508643-0d06-50ec-9270-65eb90174cf6",
+        "content_sha256": "959bc0ee26b170cbb542ed022e4d50f933642a47285f5399c6c1a34d8017ac97",
+        "simples": "Fabrico, fornecimento, aquisição, posse ou transporte de explosivos ou gás tóxico ou asfixiante: fabricar, fornecer, adquirir, possuir ou transportar, sem licença da autoridade, substância ou engenho explosivo, gás tóxico ou asfixiante, ou material destinado à sua fabricação. Pena: detenção de seis meses a dois anos e multa.",
+        "pontos": [
+          "Fabricar, fornecer, adquirir, possuir ou transportar sem licença.",
+          "Objeto: explosivo, gás tóxico ou asfixiante, ou material para fabricação.",
+          "Detenção de seis meses a dois anos e multa."
+        ],
+        "atencao": [
+          "Exige ausência de LICENÇA da autoridade."
+        ],
+        "exemplo": "Transportar explosivo sem licença da autoridade.",
+        "prova": [
+          "Assertiva que dispensa a ausência de licença no art. 253 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 251",
+          "Art. 252"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-254",
+      "unit_id": "5afc2be8-b4f0-54e4-a928-b0528b7eb937",
+      "content_sha256": "a32e8b8025982d9064a6da9f7912ae4338a038bed909ea3f912ac7b440effddd",
+      "simples": "Inundação: causar inundação, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa, no caso de dolo, ou detenção de seis meses a dois anos, no caso de culpa.",
+      "pontos": [
+        "Causar inundação expondo a perigo.",
+        "Doloso: reclusão de três a seis anos e multa.",
+        "Culposo: detenção de seis meses a dois anos."
+      ],
+      "atencao": [
+        "As penas dolosa e culposa estão no mesmo caput."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 255"
+      ],
+      "exemplo": "Inundação causada expõe terceiros ao perigo típico. Variação: Fenômeno natural sem conduta imputável não prova automaticamente crime humano.",
+      "prova": [
+        "Dolo e culpa são diferenciados no caput? Sim.",
+        "Todo alagamento configura crime por si? Não; provar conduta e elementos."
+      ],
+      "expected": {
+        "unit_id": "5afc2be8-b4f0-54e4-a928-b0528b7eb937",
+        "content_sha256": "a32e8b8025982d9064a6da9f7912ae4338a038bed909ea3f912ac7b440effddd",
+        "simples": "Inundação: causar inundação, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de três a seis anos e multa, no caso de dolo, ou detenção de seis meses a dois anos, no caso de culpa.",
+        "pontos": [
+          "Causar inundação expondo a perigo.",
+          "Doloso: reclusão de três a seis anos e multa.",
+          "Culposo: detenção de seis meses a dois anos."
+        ],
+        "atencao": [
+          "As penas dolosa e culposa estão no mesmo caput."
+        ],
+        "exemplo": "Abrir comportas deliberadamente, expondo moradores a perigo.",
+        "prova": [
+          "Assertiva que pune a inundação só se dolosa erra: há forma culposa."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 255"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-255",
+      "unit_id": "b1b7070b-5596-51b4-8424-c5066b24ccd3",
+      "content_sha256": "4ff25160a407272f6c2edf4ab1574b7bd12c0c1b24ecccfbbb9a167ff69389e1",
+      "simples": "Perigo de inundação: remover, destruir ou inutilizar, em prédio próprio ou alheio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem, obstáculo natural ou obra destinada a impedir inundação. Pena: reclusão de um a três anos e multa.",
+      "pontos": [
+        "Remover, destruir ou inutilizar obstáculo natural ou obra contra inundação.",
+        "Em prédio próprio ou alheio.",
+        "Reclusão de um a três anos e multa."
+      ],
+      "atencao": [
+        "Vale também em prédio PRÓPRIO."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 254"
+      ],
+      "exemplo": "Obra de contenção é removida em prédio próprio e gera perigo típico a terceiros. Variação: Ser proprietário não cria licença para expor outros ao risco.",
+      "prova": [
+        "Vale em prédio próprio? Sim.",
+        "Qualquer reforma é automaticamente 255? Não; objeto e perigo devem ser identificados."
+      ],
+      "expected": {
+        "unit_id": "b1b7070b-5596-51b4-8424-c5066b24ccd3",
+        "content_sha256": "4ff25160a407272f6c2edf4ab1574b7bd12c0c1b24ecccfbbb9a167ff69389e1",
+        "simples": "Perigo de inundação: remover, destruir ou inutilizar, em prédio próprio ou alheio, expondo a perigo a vida, a integridade física ou o patrimônio de outrem, obstáculo natural ou obra destinada a impedir inundação. Pena: reclusão de um a três anos e multa.",
+        "pontos": [
+          "Remover, destruir ou inutilizar obstáculo natural ou obra contra inundação.",
+          "Em prédio próprio ou alheio.",
+          "Reclusão de um a três anos e multa."
+        ],
+        "atencao": [
+          "Vale também em prédio PRÓPRIO."
+        ],
+        "exemplo": "Destruir um dique em sua propriedade, expondo vizinhos a perigo.",
+        "prova": [
+          "Assertiva que exclui o prédio próprio do art. 255 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-256",
+      "unit_id": "4a8efb77-4c2c-51fd-a7ba-0e49b560a334",
+      "content_sha256": "99d34aaabf54a7a572c911cd8832b6ddfd11146b7d7edb219b339ce2652fbbda",
+      "simples": "Desabamento ou desmoronamento: causar desabamento ou desmoronamento, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de seis meses a um ano.",
+      "pontos": [
+        "Causar desabamento ou desmoronamento expondo a perigo.",
+        "Reclusão de um a quatro anos e multa.",
+        "Culposo: detenção de seis meses a um ano."
+      ],
+      "atencao": [
+        "Há modalidade culposa."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 258"
+      ],
+      "exemplo": "Desabamento imputável expõe pessoas ao perigo legal. Variação: Acidente sem violação imputável do cuidado ou dolo não prova culpa criminal automaticamente.",
+      "prova": [
+        "Existe modalidade culposa? Sim; parágrafo.",
+        "Dolo e culpa têm penas iguais? Não."
+      ],
+      "expected": {
+        "unit_id": "4a8efb77-4c2c-51fd-a7ba-0e49b560a334",
+        "content_sha256": "99d34aaabf54a7a572c911cd8832b6ddfd11146b7d7edb219b339ce2652fbbda",
+        "simples": "Desabamento ou desmoronamento: causar desabamento ou desmoronamento, expondo a perigo a vida, a integridade física ou o patrimônio de outrem. Pena: reclusão de um a quatro anos e multa. Se culposo: detenção de seis meses a um ano.",
+        "pontos": [
+          "Causar desabamento ou desmoronamento expondo a perigo.",
+          "Reclusão de um a quatro anos e multa.",
+          "Culposo: detenção de seis meses a um ano."
+        ],
+        "atencao": [
+          "Há modalidade culposa."
+        ],
+        "exemplo": "Demolir estrutura de forma que causa desabamento perigoso aos vizinhos.",
+        "prova": [
+          "Assertiva que nega a forma culposa do art. 256 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-257",
+      "unit_id": "562ffddb-3a45-52a1-a70b-44d4c4d6c682",
+      "content_sha256": "91ce0ef9b449ed3927d12e1b3b4610f5ea5224d851e5d30ca59e1196f494c782",
+      "simples": "Subtração, ocultação ou inutilização de material de salvamento: subtrair, ocultar ou inutilizar, por ocasião de incêndio, inundação, naufrágio ou outro desastre ou calamidade, aparelho, material ou qualquer meio destinado a serviço de combate ao perigo, de socorro ou salvamento; ou impedir ou dificultar serviço de tal natureza. Pena: reclusão de dois a cinco anos e multa.",
+      "pontos": [
+        "Subtrair, ocultar ou inutilizar material de socorro ou salvamento.",
+        "Ou impedir/dificultar serviço de socorro.",
+        "Por ocasião de desastre ou calamidade.",
+        "Reclusão de dois a cinco anos e multa."
+      ],
+      "atencao": [
+        "Exige que ocorra por OCASIÃO de desastre ou calamidade."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 250"
+      ],
+      "exemplo": "Material de salvamento é ocultado durante calamidade, no recorte legal. Variação: Fora desse contexto, identificar outro tipo e elementos, não presumir a hipótese específica.",
+      "prova": [
+        "Contexto de desastre/calamidade importa? Sim.",
+        "É só subtrair material? Não; impedir/dificultar serviço também está previsto."
+      ],
+      "expected": {
+        "unit_id": "562ffddb-3a45-52a1-a70b-44d4c4d6c682",
+        "content_sha256": "91ce0ef9b449ed3927d12e1b3b4610f5ea5224d851e5d30ca59e1196f494c782",
+        "simples": "Subtração, ocultação ou inutilização de material de salvamento: subtrair, ocultar ou inutilizar, por ocasião de incêndio, inundação, naufrágio ou outro desastre ou calamidade, aparelho, material ou qualquer meio destinado a serviço de combate ao perigo, de socorro ou salvamento; ou impedir ou dificultar serviço de tal natureza. Pena: reclusão de dois a cinco anos e multa.",
+        "pontos": [
+          "Subtrair, ocultar ou inutilizar material de socorro ou salvamento.",
+          "Ou impedir/dificultar serviço de socorro.",
+          "Por ocasião de desastre ou calamidade.",
+          "Reclusão de dois a cinco anos e multa."
+        ],
+        "atencao": [
+          "Exige que ocorra por OCASIÃO de desastre ou calamidade."
+        ],
+        "exemplo": "Esconder equipamento de combate ao fogo durante um incêndio.",
+        "prova": [
+          "Assertiva que dispensa o contexto de desastre ou calamidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 250"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-258",
+      "unit_id": "ae829ff3-7471-5e60-b793-f0d265e1e5a5",
+      "content_sha256": "e24aa0e338fee98686885fbcf5504f63aa48c67128cdbee6ef2bf7f3ce8ef406",
+      "simples": "Formas qualificadas de crime de perigo comum: se do crime doloso de perigo comum resulta lesão corporal de natureza grave, a pena privativa de liberdade é aumentada de metade; se resulta morte, é aplicada em dobro. No caso de culpa, se do fato resulta lesão corporal, a pena aumenta-se de metade; se resulta morte, aplica-se a pena cominada ao homicídio culposo, aumentada de um terço.",
+      "pontos": [
+        "Doloso + lesão grave: aumento de metade.",
+        "Doloso + morte: pena em dobro.",
+        "Culposo + lesão corporal: aumento de metade.",
+        "Culposo + morte: pena do homicídio culposo, aumentada de um terço."
+      ],
+      "atencao": [
+        "Diferencie o resultado agravador no crime doloso e no culposo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 250",
+        "Art. 263"
+      ],
+      "exemplo": "Crime doloso de perigo comum resulta lesão grave imputável. Variação: No culposo, a redação diferencia lesão corporal e morte; não duplicar fórmulas sem ler a modalidade.",
+      "prova": [
+        "Dolo com morte tem dobro na regra textual? Sim, na hipótese pertinente.",
+        "Culpa com morte usa a mesma fórmula? Não; homicídio culposo aumentado de um terço."
+      ],
+      "expected": {
+        "unit_id": "ae829ff3-7471-5e60-b793-f0d265e1e5a5",
+        "content_sha256": "e24aa0e338fee98686885fbcf5504f63aa48c67128cdbee6ef2bf7f3ce8ef406",
+        "simples": "Formas qualificadas de crime de perigo comum: se do crime doloso de perigo comum resulta lesão corporal de natureza grave, a pena privativa de liberdade é aumentada de metade; se resulta morte, é aplicada em dobro. No caso de culpa, se do fato resulta lesão corporal, a pena aumenta-se de metade; se resulta morte, aplica-se a pena cominada ao homicídio culposo, aumentada de um terço.",
+        "pontos": [
+          "Doloso + lesão grave: aumento de metade.",
+          "Doloso + morte: pena em dobro.",
+          "Culposo + lesão corporal: aumento de metade.",
+          "Culposo + morte: pena do homicídio culposo, aumentada de um terço."
+        ],
+        "atencao": [
+          "Diferencie o resultado agravador no crime doloso e no culposo."
+        ],
+        "exemplo": "Incêndio doloso do qual resulta morte tem a pena em dobro.",
+        "prova": [
+          "Assertiva que aplica a pena em dobro no crime culposo com morte erra: aplica-se a pena do homicídio culposo aumentada de um terço."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 250",
+          "Art. 263"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-259",
+      "unit_id": "31500594-b4b6-50c1-84a2-5678015e4abc",
+      "content_sha256": "d6d4363f7c027f892f5be8888dfc5b07fe875af33bcd6fe2b96fd84ae70ba9ee",
+      "simples": "Difusão de doença ou praga: difundir doença ou praga que possa causar dano a floresta, plantação ou animais de utilidade econômica. Pena: reclusão de dois a cinco anos e multa. No caso de culpa: detenção de um a seis meses, ou multa.",
+      "pontos": [
+        "Difundir doença ou praga que POSSA causar dano a floresta, plantação ou animais de utilidade econômica.",
+        "Reclusão de dois a cinco anos e multa.",
+        "Culposo: detenção de um a seis meses, ou multa."
+      ],
+      "atencao": [
+        "O objeto protegido é de utilidade econômica."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 267"
+      ],
+      "exemplo": "Doença/praga é difundida com capacidade de dano nos objetos indicados. Variação: Diagnóstico isolado sem difusão imputável não basta; normas ambientais/fitossanitárias exigem objeto pertinente.",
+      "prova": [
+        "Exige sempre dano já consumado? Não; possa causar dano.",
+        "Há culpa prevista? Sim; parágrafo com pena própria."
+      ],
+      "expected": {
+        "unit_id": "31500594-b4b6-50c1-84a2-5678015e4abc",
+        "content_sha256": "d6d4363f7c027f892f5be8888dfc5b07fe875af33bcd6fe2b96fd84ae70ba9ee",
+        "simples": "Difusão de doença ou praga: difundir doença ou praga que possa causar dano a floresta, plantação ou animais de utilidade econômica. Pena: reclusão de dois a cinco anos e multa. No caso de culpa: detenção de um a seis meses, ou multa.",
+        "pontos": [
+          "Difundir doença ou praga que cause dano a floresta, plantação ou animais de utilidade econômica.",
+          "Reclusão de dois a cinco anos e multa.",
+          "Culposo: detenção de um a seis meses, ou multa."
+        ],
+        "atencao": [
+          "O objeto protegido é de utilidade econômica."
+        ],
+        "exemplo": "Espalhar praga que atinge lavouras da região.",
+        "prova": [
+          "Assertiva que aplica o art. 259 a doença que ataca pessoas erra: o tipo protege floresta, plantação e animais."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 267"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-260",
+      "unit_id": "c52f5b04-82df-5c5e-9cca-4e32aed7ac4d",
+      "content_sha256": "b37aae710dfc2d9819e78920718d2c3283b460a8d3221010cec7a3dcc42a1949",
+      "simples": "Perigo de desastre ferroviário: impedir ou perturbar serviço de estrada de ferro destruindo, danificando ou desarranjando linha férrea, material rodante ou de tração, obra-de-arte ou instalação; colocando obstáculo na linha; transmitindo falso aviso acerca do movimento dos veículos ou interrompendo ou embaraçando o funcionamento de telégrafo, telefone ou radiotelegrafia; ou praticando outro ato de que possa resultar desastre. Pena: reclusão de dois a cinco anos e multa. Se resulta desastre: reclusão de quatro a doze anos e multa. No caso de culpa, ocorrendo desastre: detenção de seis meses a dois anos. Estrada de ferro: qualquer via em que circulem veículos de tração mecânica, em trilhos ou por meio de cabo aéreo.",
+      "pontos": [
+        "Impedir ou perturbar serviço de estrada de ferro por quatro meios.",
+        "Reclusão de dois a cinco anos e multa.",
+        "§1º: resulta desastre: reclusão de quatro a doze anos e multa.",
+        "§2º: culposo com desastre: detenção de seis meses a dois anos.",
+        "§3º: conceito de estrada de ferro."
+      ],
+      "atencao": [
+        "O conceito de estrada de ferro inclui cabo aéreo."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 261",
+        "Art. 263"
+      ],
+      "exemplo": "Obstáculo perturba via ferroviária, preenchidos os elementos. Variação: Desastre e culpa têm hipóteses diferentes; via de cabo aéreo também está no conceito legal.",
+      "prova": [
+        "Todo caput depende de desastre ocorrido? Não; desastre qualifica.",
+        "Cabo aéreo pode integrar o conceito? Sim;§3º."
+      ],
+      "expected": {
+        "unit_id": "c52f5b04-82df-5c5e-9cca-4e32aed7ac4d",
+        "content_sha256": "b37aae710dfc2d9819e78920718d2c3283b460a8d3221010cec7a3dcc42a1949",
+        "simples": "Perigo de desastre ferroviário: impedir ou perturbar serviço de estrada de ferro destruindo, danificando ou desarranjando linha férrea, material rodante ou de tração, obra-de-arte ou instalação; colocando obstáculo na linha; transmitindo falso aviso acerca do movimento dos veículos ou interrompendo ou embaraçando o funcionamento de telégrafo, telefone ou radiotelegrafia; ou praticando outro ato de que possa resultar desastre. Pena: reclusão de dois a cinco anos e multa. Se resulta desastre: reclusão de quatro a doze anos e multa. No caso de culpa, ocorrendo desastre: detenção de seis meses a dois anos. Estrada de ferro: qualquer via em que circulem veículos de tração mecânica, em trilhos ou por meio de cabo aéreo.",
+        "pontos": [
+          "Impedir ou perturbar serviço de estrada de ferro por quatro meios.",
+          "Reclusão de dois a cinco anos e multa.",
+          "§1º: resulta desastre: reclusão de quatro a doze anos e multa.",
+          "§2º: culposo com desastre: detenção de seis meses a dois anos.",
+          "§3º: conceito de estrada de ferro."
+        ],
+        "atencao": [
+          "O conceito de estrada de ferro inclui cabo aéreo."
+        ],
+        "exemplo": "Colocar obstáculo na linha férrea.",
+        "prova": [
+          "Assertiva que restringe o conceito de estrada de ferro a trilhos erra: inclui cabo aéreo."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 261",
+          "Art. 263"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-261",
+      "unit_id": "971e398b-51dd-5b48-a365-45a3e9069fc2",
+      "content_sha256": "9ce00ec1566780afbf0a1442a28ede0fc5902c14974d00698c78e4e0a5202784",
+      "simples": "Atentado contra a segurança de transporte marítimo, fluvial ou aéreo: expor a perigo embarcação ou aeronave, própria ou alheia, ou praticar qualquer ato tendente a impedir ou dificultar navegação marítima, fluvial ou aérea. Pena: reclusão de dois a cinco anos. Se resulta naufrágio, submersão ou encalhe de embarcação ou queda ou destruição de aeronave: reclusão de quatro a doze anos. Com intuito de vantagem econômica: também multa. No caso de culpa, se ocorre o sinistro: detenção de seis meses a dois anos.",
+      "pontos": [
+        "Expor a perigo embarcação ou aeronave, ou dificultar navegação.",
+        "Reclusão de dois a cinco anos.",
+        "§1º: sinistro (naufrágio, submersão, encalhe, queda ou destruição): reclusão de quatro a doze anos.",
+        "§2º: fim de lucro: também multa.",
+        "§3º: culposo com sinistro: detenção de seis meses a dois anos."
+      ],
+      "atencao": [
+        "Embarcação ou aeronave própria ou alheia."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 260",
+        "Art. 262"
+      ],
+      "exemplo": "Aeronave própria é exposta ao perigo típico por conduta do agente. Variação: Ser dono não autoriza perigo; modalidade culposa exige sinistro na redação específica.",
+      "prova": [
+        "Só aeronave alheia é protegida? Não; própria ou alheia.",
+        "Vantagem econômica pode agregar multa? Sim;§2º."
+      ],
+      "expected": {
+        "unit_id": "971e398b-51dd-5b48-a365-45a3e9069fc2",
+        "content_sha256": "9ce00ec1566780afbf0a1442a28ede0fc5902c14974d00698c78e4e0a5202784",
+        "simples": "Atentado contra a segurança de transporte marítimo, fluvial ou aéreo: expor a perigo embarcação ou aeronave, própria ou alheia, ou praticar qualquer ato tendente a impedir ou dificultar navegação marítima, fluvial ou aérea. Pena: reclusão de dois a cinco anos. Se resulta naufrágio, submersão ou encalhe de embarcação ou queda ou destruição de aeronave: reclusão de quatro a doze anos. Com intuito de vantagem econômica: também multa. No caso de culpa, se ocorre o sinistro: detenção de seis meses a dois anos.",
+        "pontos": [
+          "Expor a perigo embarcação ou aeronave, ou dificultar navegação.",
+          "Reclusão de dois a cinco anos.",
+          "§1º: sinistro (naufrágio, submersão, encalhe, queda ou destruição): reclusão de quatro a doze anos.",
+          "§2º: fim de lucro: também multa.",
+          "§3º: culposo com sinistro: detenção de seis meses a dois anos."
+        ],
+        "atencao": [
+          "Embarcação ou aeronave própria ou alheia."
+        ],
+        "exemplo": "Sabotar aeronave expondo-a a perigo.",
+        "prova": [
+          "Assertiva que limita o art. 261 a embarcação ou aeronave alheia erra: vale também a própria."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 260",
+          "Art. 262"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-262",
+      "unit_id": "4e0565f0-0e3f-5ff8-8fe2-77c7c7cbef77",
+      "content_sha256": "13e5e44f8ddb31ac7f159a941824e339d892df4f8901c1390bb7769e8a877dc6",
+      "simples": "Atentado contra a segurança de outro meio de transporte: expor a perigo outro meio de transporte público, impedir-lhe ou dificultar-lhe o funcionamento. Pena: detenção de um a dois anos. Se resulta desastre: reclusão de dois a cinco anos. No caso de culpa, se ocorre desastre: detenção de três meses a um ano.",
+      "pontos": [
+        "Expor a perigo outro meio de transporte público.",
+        "Detenção de um a dois anos.",
+        "§1º: resulta desastre: reclusão de dois a cinco anos.",
+        "§2º: culposo com desastre: detenção de três meses a um ano."
+      ],
+      "atencao": [
+        "Abrange meios de transporte público diversos de trem, embarcação e aeronave."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 260",
+        "Art. 261"
+      ],
+      "exemplo": "Outro transporte público tem funcionamento impedido nas condições legais. Variação: Trem/aeronave exigem artigos específicos; culpa com desastre tem pena distinta.",
+      "prova": [
+        "Todo veículo particular satisfaz este recorte? Não; identificar transporte público e norma.",
+        "Desastre muda pena? Sim;§1º."
+      ],
+      "expected": {
+        "unit_id": "4e0565f0-0e3f-5ff8-8fe2-77c7c7cbef77",
+        "content_sha256": "13e5e44f8ddb31ac7f159a941824e339d892df4f8901c1390bb7769e8a877dc6",
+        "simples": "Atentado contra a segurança de outro meio de transporte: expor a perigo outro meio de transporte público, impedir-lhe ou dificultar-lhe o funcionamento. Pena: detenção de um a dois anos. Se resulta desastre: reclusão de dois a cinco anos. No caso de culpa, se ocorre desastre: detenção de três meses a um ano.",
+        "pontos": [
+          "Expor a perigo outro meio de transporte público.",
+          "Detenção de um a dois anos.",
+          "§1º: resulta desastre: reclusão de dois a cinco anos.",
+          "§2º: culposo com desastre: detenção de três meses a um ano."
+        ],
+        "atencao": [
+          "Abrange meios de transporte público diversos de trem, embarcação e aeronave."
+        ],
+        "exemplo": "Sabotar ônibus de transporte público para dificultar seu funcionamento.",
+        "prova": [
+          "Assertiva que aplica o art. 262 a transporte privado erra: o tipo exige transporte público."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 260",
+          "Art. 261"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-263",
+      "unit_id": "856a35c3-7ad7-503c-83b5-09c3db86aab1",
+      "content_sha256": "207b71185b743fc9d65c28898b47e7a82744927a41cdfb6b0830b5ce66e335fb",
+      "simples": "Forma qualificada: se de qualquer dos crimes previstos nos arts. 260 a 262, no caso de desastre ou sinistro, resulta lesão corporal ou morte, aplica-se o disposto no art. 258.",
+      "pontos": [
+        "Crimes dos arts. 260 a 262 com desastre ou sinistro.",
+        "Se resulta lesão corporal ou morte, aplica-se o art. 258."
+      ],
+      "atencao": [
+        "Remissão ao art. 258."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 258"
+      ],
+      "exemplo": "Desastre de transporte indicado causa lesão/morte imputável. Variação: Sem desastre/sinistro ou nexo correspondente, não importar remissão automaticamente.",
+      "prova": [
+        "Quais artigos são remetidos?260 a 262, nas condições previstas.",
+        "Distinguir dolo e culpa continua necessário? Sim; integração ao 258."
+      ],
+      "expected": {
+        "unit_id": "856a35c3-7ad7-503c-83b5-09c3db86aab1",
+        "content_sha256": "207b71185b743fc9d65c28898b47e7a82744927a41cdfb6b0830b5ce66e335fb",
+        "simples": "Forma qualificada: se de qualquer dos crimes previstos nos arts. 260 a 262, no caso de desastre ou sinistro, resulta lesão corporal ou morte, aplica-se o disposto no art. 258.",
+        "pontos": [
+          "Crimes dos arts. 260 a 262 com desastre ou sinistro.",
+          "Se resulta lesão corporal ou morte, aplica-se o art. 258."
+        ],
+        "atencao": [
+          "Remissão ao art. 258."
+        ],
+        "exemplo": "Desastre ferroviário doloso que causa morte tem a pena aplicada em dobro.",
+        "prova": [
+          "Assertiva que cria aumento próprio no art. 263 erra: ele remete ao art. 258."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-264",
+      "unit_id": "f4c7613d-3326-5eba-9dc4-7a28fefc9523",
+      "content_sha256": "1f5aba2062fbd6488cf5f5d5bbbcd13c72164e407c0546f4287a0105ee38c6f9",
+      "simples": "Arremesso de projétil: arremessar projétil contra veículo, em movimento, destinado ao transporte público por terra, por água ou pelo ar. Pena: detenção de um a seis meses. Se resulta lesão corporal: detenção de seis meses a dois anos; se resulta morte, a pena é a do art. 121, §3º, aumentada de um terço.",
+      "pontos": [
+        "Arremessar projétil contra veículo de transporte público em movimento.",
+        "Detenção de um a seis meses.",
+        "Lesão corporal: detenção de seis meses a dois anos.",
+        "Morte: pena do art. 121, §3º, aumentada de um terço."
+      ],
+      "atencao": [
+        "O veículo deve estar EM MOVIMENTO e ser de transporte público."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 121, §3º"
+      ],
+      "exemplo": "Projétil é arremessado contra transporte público em movimento. Variação: Veículo parado ou particular não satisfaz esse recorte só pelo arremesso; outros tipos podem existir.",
+      "prova": [
+        "Movimento é requisito? Sim.",
+        "Morte usa automaticamente pena de homicídio doloso? Não; texto remete 121§3º com aumento, com análise de elementos e tipo aplicável."
+      ],
+      "expected": {
+        "unit_id": "f4c7613d-3326-5eba-9dc4-7a28fefc9523",
+        "content_sha256": "1f5aba2062fbd6488cf5f5d5bbbcd13c72164e407c0546f4287a0105ee38c6f9",
+        "simples": "Arremesso de projétil: arremessar projétil contra veículo, em movimento, destinado ao transporte público por terra, por água ou pelo ar. Pena: detenção de um a seis meses. Se resulta lesão corporal: detenção de seis meses a dois anos; se resulta morte, a pena é a do art. 121, §3º, aumentada de um terço.",
+        "pontos": [
+          "Arremessar projétil contra veículo de transporte público em movimento.",
+          "Detenção de um a seis meses.",
+          "Lesão corporal: detenção de seis meses a dois anos.",
+          "Morte: pena do art. 121, §3º, aumentada de um terço."
+        ],
+        "atencao": [
+          "O veículo deve estar EM MOVIMENTO e ser de transporte público."
+        ],
+        "exemplo": "Atirar pedra contra ônibus em movimento.",
+        "prova": [
+          "Assertiva que aplica o art. 264 a veículo parado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 121, §3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-265",
+      "unit_id": "c82ac9fc-fc21-5b41-934a-15aa68f94d3f",
+      "content_sha256": "65a4f6c75914f454e810fc7a9b988641b1f38e6c0fdac496363deeb1937d1960",
+      "simples": "Atentado contra a segurança de serviço de utilidade pública: atentar contra a segurança ou o funcionamento de serviço de água, luz, força ou calor, ou qualquer outro de utilidade pública. Pena: reclusão de um a cinco anos e multa. Aumenta-se a pena de 1/3 até a metade se o dano ocorrer em virtude de subtração de material essencial ao funcionamento dos serviços.",
+      "pontos": [
+        "Atentar contra a segurança ou o funcionamento de serviço de utilidade pública.",
+        "Reclusão de um a cinco anos e multa.",
+        "Parágrafo único: subtração de material essencial: aumento de 1/3 até a metade."
+      ],
+      "atencao": [
+        "Serviços como água, luz, força ou calor."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 266"
+      ],
+      "exemplo": "Funcionamento de serviço de utilidade pública é atingido nas condições do tipo. Variação: Subtração de material essencial tem aumento próprio; não somar todo enquadramento pelo mesmo fundamento.",
+      "prova": [
+        "É só serviço de água? Não; há várias utilidades.",
+        "Todo dano em objeto privado é automaticamente 265? Não; verificar serviço e elementos."
+      ],
+      "expected": {
+        "unit_id": "c82ac9fc-fc21-5b41-934a-15aa68f94d3f",
+        "content_sha256": "65a4f6c75914f454e810fc7a9b988641b1f38e6c0fdac496363deeb1937d1960",
+        "simples": "Atentado contra a segurança de serviço de utilidade pública: atentar contra a segurança ou o funcionamento de serviço de água, luz, força ou calor, ou qualquer outro de utilidade pública. Pena: reclusão de um a cinco anos e multa. Aumenta-se a pena de 1/3 até a metade se o dano ocorrer em virtude de subtração de material essencial ao funcionamento dos serviços.",
+        "pontos": [
+          "Atentar contra a segurança ou o funcionamento de serviço de utilidade pública.",
+          "Reclusão de um a cinco anos e multa.",
+          "Parágrafo único: subtração de material essencial: aumento de 1/3 até a metade."
+        ],
+        "atencao": [
+          "Serviços como água, luz, força ou calor."
+        ],
+        "exemplo": "Subtrair cabos essenciais que causam interrupção do serviço de energia.",
+        "prova": [
+          "Assertiva que fixa o aumento em dobro na subtração de material essencial erra: é de 1/3 até a metade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 266"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-266",
+      "unit_id": "75bb8ac9-55c3-54ac-9981-648c79ad1982",
+      "content_sha256": "e33d0ec0edafa7c96b349decec10203c6775c908855c8a615763f7a7a75fb0f0",
+      "simples": "Interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública: interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico, impedir ou dificultar-lhe o restabelecimento. Pena: reclusão de 2 a 4 anos e multa (Lei nº 15.397, de 2026). Na mesma pena quem interrompe serviço telemático ou de informação de utilidade pública, ou impede ou dificulta o restabelecimento. As penas se aplicam em dobro se o crime é cometido por ocasião de calamidade pública ou mediante subtração, dano ou destruição de equipamento instalado em estrutura utilizada para telecomunicações.",
+      "pontos": [
+        "Interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico.",
+        "Reclusão de 2 a 4 anos e multa.",
+        "§1º: serviço telemático ou de informação de utilidade pública.",
+        "§2º: penas em dobro (calamidade pública; subtração, dano ou destruição de equipamento de telecomunicações)."
+      ],
+      "atencao": [
+        "Conferir a redação vigente, pois a pena foi alterada em 2026.",
+        "Lei 15.397 vigente em 4/5/2026: pena 2 a 4 e dobro nas hipóteses do§2º; mudança gravosa não retroage."
+      ],
+      "termos": [],
+      "remissoes": [
+        "Art. 265"
+      ],
+      "exemplo": "Serviço telemático de utilidade pública é interrompido de forma típica. Variação: Penas e dobro de 2026 exigem hipótese específica e lei no tempo, não copiar detenção antiga.",
+      "prova": [
+        "Pena atual é 2 a 4 de reclusão? Sim; redação de 2026.",
+        "Toda interrupção dobra automaticamente? Não;§2º enumera hipóteses."
+      ],
+      "expected": {
+        "unit_id": "75bb8ac9-55c3-54ac-9981-648c79ad1982",
+        "content_sha256": "e33d0ec0edafa7c96b349decec10203c6775c908855c8a615763f7a7a75fb0f0",
+        "simples": "Interrupção ou perturbação de serviço telegráfico, telefônico, informático, telemático ou de informação de utilidade pública: interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico, impedir ou dificultar-lhe o restabelecimento. Pena: reclusão de 2 a 4 anos e multa (Lei nº 15.397, de 2026). Na mesma pena quem interrompe serviço telemático ou de informação de utilidade pública, ou impede ou dificulta o restabelecimento. As penas se aplicam em dobro se o crime é cometido por ocasião de calamidade pública ou mediante subtração, dano ou destruição de equipamento instalado em estrutura utilizada para telecomunicações.",
+        "pontos": [
+          "Interromper ou perturbar serviço telegráfico, radiotelegráfico ou telefônico.",
+          "Reclusão de 2 a 4 anos e multa.",
+          "§1º: serviço telemático ou de informação de utilidade pública.",
+          "§2º: penas em dobro (calamidade pública; subtração, dano ou destruição de equipamento de telecomunicações)."
+        ],
+        "atencao": [
+          "Conferir a redação vigente, pois a pena foi alterada em 2026."
+        ],
+        "exemplo": "Derrubar serviço de internet de utilidade pública durante calamidade pública: penas em dobro.",
+        "prova": [
+          "Assertiva que não prevê aumento por calamidade pública erra: as penas se aplicam em dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 265"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:19.401485+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-penal",
+      "course_id": "16dc52bb-bb18-5cde-8c4c-0e48f04bc936",
+      "syllabus_topic_id": "7010cf66-304d-4251-8180-aa575b0c9134",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-268",
+      "unit_id": "e5efc41b-77d2-5b70-a8c6-3380d2647f8c",
+      "content_sha256": "3d9cb9cb961e664142251273eaff3e3f4df032677cd261f7d7d6f87d9cbeb8a3",
+      "simples": "Infração de medida sanitária preventiva: infringir determinação do poder público destinada a impedir introdução ou propagação de doença contagiosa. Pena: detenção de um mês a um ano e multa. A pena é aumentada de um terço se o agente é funcionário da saúde pública ou exerce a profissão de médico, farmacêutico, dentista ou enfermeiro.",
+      "pontos": [
+        "Infringir determinação do poder público contra doença contagiosa.",
+        "Detenção de um mês a um ano e multa.",
+        "Parágrafo único: aumento de um terço (funcionário da saúde pública, médico, farmacêutico, dentista ou enfermeiro)."
+      ],
+      "atencao": [
+        "Norma penal em branco: depende da determinação do poder público.",
+        "Identificar determinação sanitária competente, válida e vigente; não reutilizar automaticamente restrição histórica da pandemia como regra atual."
+      ],
+      "termos": [
+        {
+          "termo": "Norma penal em branco",
+          "significado": "Norma cuja descrição depende de complementação por outra norma."
+        }
+      ],
+      "remissoes": [
+        "Art. 267"
+      ],
+      "exemplo": "Determinação sanitária competente e vigente é infringida nas condições penais. Variação: Regra revogada, recomendação sem caráter obrigatório ou ordem inválida não pode ser ensinada como complemento atual por palpite.",
+      "prova": [
+        "Qualquer recomendação equivale à determinação? Não.",
+        "Norma complementar precisa ser vigente e aplicável? Sim; tipo penal em branco."
+      ],
+      "expected": {
+        "unit_id": "e5efc41b-77d2-5b70-a8c6-3380d2647f8c",
+        "content_sha256": "3d9cb9cb961e664142251273eaff3e3f4df032677cd261f7d7d6f87d9cbeb8a3",
+        "simples": "Infração de medida sanitária preventiva: infringir determinação do poder público destinada a impedir introdução ou propagação de doença contagiosa. Pena: detenção de um mês a um ano e multa. A pena é aumentada de um terço se o agente é funcionário da saúde pública ou exerce a profissão de médico, farmacêutico, dentista ou enfermeiro.",
+        "pontos": [
+          "Infringir determinação do poder público contra doença contagiosa.",
+          "Detenção de um mês a um ano e multa.",
+          "Parágrafo único: aumento de um terço (funcionário da saúde pública, médico, farmacêutico, dentista ou enfermeiro)."
+        ],
+        "atencao": [
+          "Norma penal em branco: depende da determinação do poder público."
+        ],
+        "exemplo": "Descumprir quarentena determinada pela autoridade sanitária.",
+        "prova": [
+          "Assertiva que dispensa a existência de determinação do poder público erra."
+        ],
+        "termos": [
+          {
+            "termo": "Norma penal em branco",
+            "significado": "Norma cuja descrição depende de complementação por outra norma."
+          }
+        ],
+        "remissoes": [
+          "Art. 267"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T12:54:45.000404+00:00",
+        "updated_at": "2026-10-11T13:14:34.666429+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-13T00:01:49.464948+00:00",
+  "sources": [
+    {
+      "id": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06"
+    },
+    {
+      "id": "l15280",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm",
+      "sha256": "e9356adcc12ea5e46c951714e1c9212809ccd1b6843a5431c86c7dc02b463702"
+    },
+    {
+      "id": "l15353",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15353.htm",
+      "sha256": "1195f724f6dc0b1d49aed7beca4ac821de16dcaea6d95a21668db09fb99c07dc"
+    },
+    {
+      "id": "l15035",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15035.htm",
+      "sha256": "2ec4c8a93cf58426a1d1961883c8d7389a0af618b6cfded39cea62deffbc7204"
+    },
+    {
+      "id": "l15397",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15397.htm",
+      "sha256": "3aaa45c615c0cf3e53ac41ffad2e47fe46207cc3627421b38cf07d794562bf2d"
+    },
+    {
+      "id": "ADI7871",
+      "url": "https://noticias.stf.jus.br/postsnoticias/instituto-questiona-no-stf-criacao-de-cadastro-nacional-de-pedofilos-e-predadores-sexuais/",
+      "sha256": "084e7d6ace586783f093f4b601c2d1ebf25c5286c1e49d91b93f28c827ceaae4"
+    },
+    {
+      "id": "STJ593",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82",
+      "note": "Coleta oficial válida de12/10 desta sessão, reutilizada."
+    }
+  ],
+  "limitations": [
+    "ADI7871: notícia atualizada informa não conhecimento por ilegitimidade em15/9/2025; isso não é julgamento de constitucionalidade. Não certificado todo controle posterior.",
+    "Não certificadas todas as combinações de majorantes, aplicações setoriais do assédio, recepção de rótulos antigos ou regulamentação sanitária."
+  ]
+}
