@@ -11,6 +11,15 @@ test('LEP fundamentos distingue classificação, visita, sigilo e contratação'
  for(const n of [8,35,37,41,'41-a','41-b'])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
  assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length===2));
 });
+test('CPP processamento recursal distingue efeitos e prazos atuais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-appeal-process-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(584).pontos.join(' '),/Novo§4º/);
+ assert.match(get(589).pontos.join(' '),/não pode modificar novamente/);
+ assert.match(get(598).pontos.join(' '),/habilitado: cinco dias/);
+ assert.match(get(600).pontos.join(' '),/prazos comuns/);
+ for(const n of [583,584,585,596,597,598])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP nulidades e recursos integra reformas e fungibilidade atual',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-nullities-resources-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

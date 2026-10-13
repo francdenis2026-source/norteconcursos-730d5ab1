@@ -1,0 +1,1176 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:08:33.519845+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 19,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-583",
+        "art-584",
+        "art-585",
+        "art-586",
+        "art-587",
+        "art-588",
+        "art-589",
+        "art-590",
+        "art-591",
+        "art-592",
+        "art-593",
+        "art-596",
+        "art-597",
+        "art-598",
+        "art-599",
+        "art-600",
+        "art-601",
+        "art-602",
+        "art-603"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-583",
+      "unit_id": "8dd0e4fb-42e9-550a-b245-556cd1bb39f5",
+      "content_sha256": "40655b541b0721349bd1e1378f2906a1a508c19a725d95da6e1726f082feecb5",
+      "simples": "Subida do RESE nos autos ou traslado depende da hipótese e preservação do andamento, com integração de incisos revogados.",
+      "pontos": [
+        "Recurso de ofício só onde atualmente cabível.",
+        "Não restaurar art.581,VI revogado.",
+        "Pronúncia com pluralidade e condições do parágrafo: traslado."
+      ],
+      "atencao": [
+        "Não interromper automaticamente processo de corréu que não recorreu nem recuperar RESE de impronúncia eliminado."
+      ],
+      "exemplo": "Um acusado aceita pronúncia e outro recorre: examinar traslado previsto. Variação: Impronúncia atual segue apelação, não remissão residual ao incisoVI.",
+      "prova": [
+        "Inciso revogado volta pela remissão? Não.",
+        "Pluralidade pode exigir traslado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Forma de subida",
+          "significado": "Encaminhamento compatível com recurso e continuidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8dd0e4fb-42e9-550a-b245-556cd1bb39f5",
+        "content_sha256": "40655b541b0721349bd1e1378f2906a1a508c19a725d95da6e1726f082feecb5",
+        "simples": "Subirão nos próprios autos os recursos interpostos de ofício; nos casos do art. 581, I, III, IV, VI, VIII e X; e quando o recurso não prejudicar o andamento do processo. O recurso da pronúncia subirá em traslado quando, havendo dois ou mais réus, qualquer deles se conformar com a decisão ou todos não tiverem sido ainda intimados.",
+        "pontos": [
+          "Sobem nos próprios autos: recursos de ofício, os de certos incisos do art. 581 e os que não prejudicam o andamento.",
+          "Pronúncia: sobe em traslado se houver mais de um réu e um se conformar ou nem todos forem intimados."
+        ],
+        "atencao": [
+          "Instrumento (traslado) × próprios autos."
+        ],
+        "exemplo": "O recurso contra a pronúncia sobe em traslado quando um dos réus se conforma.",
+        "prova": [
+          "Assertiva que manda subir sempre em traslado o recurso da pronúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 587"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-584",
+      "unit_id": "4958cee9-e3e8-5138-9ca7-6944d7605922",
+      "content_sha256": "cb85471ffad0cd763c68c009727dfb4a1a89c88c4fe71530d3286647344ad7e6",
+      "simples": "Efeitos do RESE são delimitados; Lei15358/2026 acrescentou pedido de efeito suspensivo ou ativo nas hipóteses do art.581,V.",
+      "pontos": [
+        "Pronúncia suspende só julgamento; quebra de fiança só perda da metade.",
+        "Novo§4º: até julgamento, pedir ao tribunal com relevância, plausibilidade e risco de dano grave.",
+        "Retratação do art.589 permanece.",
+        "Livramento/unificação e multa exigem integração à LEP e reformas.",
+        "Impronúncia segue apelação atual, não RESE antigo."
+      ],
+      "atencao": [
+        "Não afirmar que todo RESE suspende tudo ou que efeito ativo novo é automático."
+      ],
+      "exemplo": "Recorrente fundamenta urgência e plausibilidade ao pedir efeito na hipóteseV. Variação: Pedido sem risco demonstrado não tem deferimento necessário.",
+      "prova": [
+        "Novo efeito é automático? Não.",
+        "Pronúncia suspende só julgamento pela regra? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeitos recursais",
+          "significado": "Consequências delimitadas e tutela requerida ao tribunal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "4958cee9-e3e8-5138-9ca7-6944d7605922",
+        "content_sha256": "cb85471ffad0cd763c68c009727dfb4a1a89c88c4fe71530d3286647344ad7e6",
+        "simples": "Os recursos terão efeito suspensivo nos casos de perda da fiança, de concessão de livramento condicional e dos incisos XV, XVII e XXIV do art. 581. Ao recurso de sentença de impronúncia ou no caso do inciso VIII do art. 581, aplica-se o disposto nos arts. 596 e 598. O recurso da pronúncia suspenderá tão somente o julgamento. O recurso do despacho que julgar quebrada a fiança suspenderá unicamente o efeito de perda da metade do seu valor. No caso do inciso V do art. 581, o recorrente poderá pedir ao Tribunal, a qualquer tempo, até o julgamento, a concessão de efeito suspensivo ou ativo ao recurso, demonstrando a relevância dos motivos, a plausibilidade do direito alegado e a probabilidade de dano.",
+        "pontos": [
+          "Efeito suspensivo: perda da fiança, livramento condicional e certos incisos do art. 581.",
+          "Pronúncia: suspende apenas o julgamento.",
+          "Fiança quebrada: suspende só a perda de metade do valor.",
+          "Inciso V: possibilidade de pedir efeito suspensivo ou ativo ao tribunal."
+        ],
+        "atencao": [
+          "Efeito suspensivo restrito."
+        ],
+        "exemplo": "O recurso da pronúncia suspende o julgamento pelo Júri.",
+        "prova": [
+          "Assertiva que atribui efeito suspensivo amplo ao recurso em sentido estrito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-585",
+      "unit_id": "c1677f57-a33a-582d-9e8a-78cddd416821",
+      "content_sha256": "3b4dcebfeb5058cb599aae426b975f41eaab23df4f338a28570530b409c85fca",
+      "simples": "Exigência histórica de prender ou afiançar para recorrer da pronúncia não é condição automática atual de acesso ao recurso.",
+      "pontos": [
+        "Distinguir admissibilidade recursal e custódia cautelar.",
+        "Preventiva exige fundamentos próprios e garantias.",
+        "STF rechaça custódia imposta apenas para admitir recurso."
+      ],
+      "atencao": [
+        "Não ordenar prisão só para permitir que réu recorra nem negar processamento por estar solto."
+      ],
+      "exemplo": "Réu solto impugna pronúncia pelo recurso cabível. Variação: Risco cautelar concreto é questão independente, não preço para acessar tribunal.",
+      "prova": [
+        "Prisão é preço obrigatório para recorrer? Não.",
+        "Cautelar precisa base própria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Recurso e liberdade",
+          "significado": "Garantia recursal separada dos pressupostos de custódia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/ministro-do-stf-concede-alvara-de-soltura-para-sergio-jacome-de-lucena/"
+      ],
+      "expected": {
+        "unit_id": "c1677f57-a33a-582d-9e8a-78cddd416821",
+        "content_sha256": "3b4dcebfeb5058cb599aae426b975f41eaab23df4f338a28570530b409c85fca",
+        "simples": "O réu não poderá recorrer da pronúncia senão depois de preso, salvo se prestar fiança, nos casos em que a lei a admitir. O dispositivo é considerado superado, pois a Constituição e a legislação posterior vedam condicionar o recurso ao recolhimento à prisão.",
+        "pontos": [
+          "Previa que o recurso da pronúncia dependia da prisão do réu ou de fiança.",
+          "Considerado superado."
+        ],
+        "atencao": [
+          "Dispositivo superado: o recurso independe da prisão."
+        ],
+        "exemplo": "Hoje, o réu solto pode recorrer da pronúncia.",
+        "prova": [
+          "Assertiva que exige a prisão do réu para recorrer da pronúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 581, IV"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-586",
+      "unit_id": "a2030a14-604b-5496-a35c-1a53f121a0f2",
+      "content_sha256": "555c642a7dc0b6491ff22066dfa91f6b58bdaa96ce4eb03e5ea1ef18c81237fd",
+      "simples": "RESE voluntário tem prazo de cinco dias; lista geral de jurados tem vinte dias da publicação definitiva na hipóteseXIV.",
+      "pontos": [
+        "Distinguir interposição de razões em dois dias.",
+        "Marco da exceção é lista definitiva, não provisória."
+      ],
+      "atencao": [
+        "Não aplicar cinco dias indistintamente à impugnação da lista nem vinte a todo RESE."
+      ],
+      "exemplo": "Decisão de pronúncia é impugnada no prazo pertinente de cinco. Variação: Inclusão/exclusão da lista na hipóteseXIV usa vinte dias do marco próprio.",
+      "prova": [
+        "Exceção da lista tem vinte dias? Sim.",
+        "Razões do art.588 têm mesmo prazo sempre? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo do RESE",
+          "significado": "Interposição com exceção expressa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a2030a14-604b-5496-a35c-1a53f121a0f2",
+        "content_sha256": "555c642a7dc0b6491ff22066dfa91f6b58bdaa96ce4eb03e5ea1ef18c81237fd",
+        "simples": "O recurso voluntário poderá ser interposto no prazo de cinco dias. No caso do art. 581, XIV (lista de jurados), o prazo será de vinte dias, contado da data da publicação definitiva da lista de jurados.",
+        "pontos": [
+          "Prazo geral do recurso em sentido estrito: cinco dias.",
+          "Lista de jurados: vinte dias, da publicação definitiva."
+        ],
+        "atencao": [
+          "Cinco dias; vinte dias para a lista de jurados."
+        ],
+        "exemplo": "A parte tem cinco dias para interpor o recurso em sentido estrito.",
+        "prova": [
+          "Assertiva que fixa em dez dias o prazo do recurso em sentido estrito erra: são cinco dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-587",
+      "unit_id": "57231315-0a73-5818-977c-cd0a4830be72",
+      "content_sha256": "a672f0745cd550217b838019f243be3719a5f06701eeae88202541423a0a48e4",
+      "simples": "Recurso por instrumento exige peças indicadas e essenciais, com traslado conferido em cinco dias.",
+      "pontos": [
+        "Decisão recorrida, prova de ciência quando necessária e termo de interposição.",
+        "Integrar peças eletrônicas autênticas e regime do órgão."
+      ],
+      "atencao": [
+        "Não enviar instrumento incapaz de mostrar decisão ou tempestividade nem exigir papel exclusivo sem regime atual."
+      ],
+      "exemplo": "Parte seleciona peças e inclui decisão/ciência pertinentes. Variação: Documento sem identificação não demonstra por si marco recursal.",
+      "prova": [
+        "Peças essenciais devem constar? Sim.",
+        "Tempestividade pode ser ignorada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrumento recursal",
+          "significado": "Conjunto necessário à compreensão e admissibilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "57231315-0a73-5818-977c-cd0a4830be72",
+        "content_sha256": "a672f0745cd550217b838019f243be3719a5f06701eeae88202541423a0a48e4",
+        "simples": "Quando o recurso houver de subir por instrumento, a parte indicará, no respectivo termo ou em requerimento avulso, as peças dos autos de que pretenda traslado. O traslado será extraído, conferido e concertado no prazo de cinco dias, e dele constarão sempre a decisão recorrida, a certidão de sua intimação, se por outra forma não for possível verificar a oportunidade do recurso, e o termo de interposição.",
+        "pontos": [
+          "Recurso por instrumento: a parte indica as peças a transladar.",
+          "Traslado extraído e conferido em cinco dias.",
+          "Constam sempre a decisão recorrida, a certidão da intimação e o termo de interposição."
+        ],
+        "atencao": [
+          "Peças obrigatórias do traslado."
+        ],
+        "exemplo": "A parte indica as peças que quer ver transladadas no recurso por instrumento.",
+        "prova": [
+          "Assertiva que dispensa a decisão recorrida no traslado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 583"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-588",
+      "unit_id": "1968c66e-a21a-5984-9c55-d7ee6358760a",
+      "content_sha256": "ad9ecbfbc5080ccdced7e5b28504ed7b0596dd4c77b957fd4ea48363775be02e",
+      "simples": "Razões de RESE são oferecidas em dois dias do marco legal; recorrido tem igual prazo, com ciência defensiva se réu.",
+      "pontos": [
+        "Marco: interposição ou vista após traslado na hipótese.",
+        "Não confundir com cinco da interposição.",
+        "Intimar defensor do réu recorrido."
+      ],
+      "atencao": [
+        "Não omitir ciência da defesa sob justificativa de prazo curto."
+      ],
+      "exemplo": "Após vista pertinente, recorrente fundamenta e recorrido responde. Variação: Réu recorrido precisa da intimação ao defensor, não mera nota interna.",
+      "prova": [
+        "Razões têm dois dias? Sim.",
+        "Defensor do réu recorrido deve ser intimado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Razões do RESE",
+          "significado": "Fundamentação e contraditório em prazo próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1968c66e-a21a-5984-9c55-d7ee6358760a",
+        "content_sha256": "ad9ecbfbc5080ccdced7e5b28504ed7b0596dd4c77b957fd4ea48363775be02e",
+        "simples": "Dentro de dois dias, contados da interposição do recurso, ou do dia em que o escrivão, extraído o traslado, o fizer com vista ao recorrente, este oferecerá as razões e, em seguida, será aberta vista ao recorrido por igual prazo. Se o recorrido for o réu, será intimado do prazo na pessoa do defensor.",
+        "pontos": [
+          "Razões do recorrente em dois dias.",
+          "Contrarrazões do recorrido por igual prazo.",
+          "Réu recorrido: intimado na pessoa do defensor."
+        ],
+        "atencao": [
+          "Prazo de dois dias para razões e contrarrazões."
+        ],
+        "exemplo": "O recorrente apresenta as razões em dois dias, e o recorrido, em igual prazo.",
+        "prova": [
+          "Assertiva que fixa em cinco dias as razões do recurso em sentido estrito erra: são dois dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 589"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-589",
+      "unit_id": "0ceac4bd-a6f4-535d-8248-db0a34a7c52a",
+      "content_sha256": "cb2dd405088412fb9f891a74fa9f7e46a286bd56ee44dcc0522c7812f9d0c975",
+      "simples": "Após resposta ou seu prazo, juiz em dois dias reforma ou sustenta decisão e instrui recurso.",
+      "pontos": [
+        "Retratação integra processamento.",
+        "Se reformar, outra parte pode recorrer por petição quando cabível.",
+        "Juiz não pode modificar novamente nessa hipótese.",
+        "Subida sem novos arrazoados nas condições legais."
+      ],
+      "atencao": [
+        "Não criar sequência infinita de retratações nem suprimir direito da parte contrária."
+      ],
+      "exemplo": "Juiz revê decisão e parte contrária apresenta recurso cabível por petição. Variação: Sustentar decisão não impede encaminhamento ao tribunal.",
+      "prova": [
+        "Juiz pode modificar indefinidamente nesse parágrafo? Não.",
+        "Retratação pode gerar recurso da parte contrária? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Retratação",
+          "significado": "Reexame pelo próprio juiz antes do tribunal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0ceac4bd-a6f4-535d-8248-db0a34a7c52a",
+        "content_sha256": "cb2dd405088412fb9f891a74fa9f7e46a286bd56ee44dcc0522c7812f9d0c975",
+        "simples": "Com a resposta do recorrido ou sem ela, será o recurso concluso ao juiz, que, dentro de dois dias, reformará ou sustentará o seu despacho, mandando instruir o recurso com os traslados que lhe parecerem necessários. Se o juiz reformar o despacho recorrido, a parte contrária, por simples petição, poderá recorrer da nova decisão, se couber recurso, não sendo mais lícito ao juiz modificá-la. Neste caso, independentemente de novos arrazoados, subirá o recurso nos próprios autos ou em traslado.",
+        "pontos": [
+          "Juiz tem dois dias para reformar ou sustentar a decisão (juízo de retratação).",
+          "Reformada a decisão: a parte contrária pode recorrer por simples petição.",
+          "Não se admite nova modificação pelo juiz."
+        ],
+        "atencao": [
+          "Juízo de retratação no recurso em sentido estrito."
+        ],
+        "exemplo": "O juiz se retrata em dois dias, e a parte contrária recorre da nova decisão por simples petição.",
+        "prova": [
+          "Assertiva que veda ao juiz reformar sua decisão no recurso em sentido estrito erra: há juízo de retratação."
+        ],
+        "termos": [
+          {
+            "termo": "Juízo de retratação",
+            "significado": "Possibilidade de o juiz reformar a própria decisão."
+          }
+        ],
+        "remissoes": [
+          "Art. 588"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-590",
+      "unit_id": "5d40f1ce-8007-5341-868f-24085a6081c0",
+      "content_sha256": "35a252828c666b80595e2673a554f8cc2acf73f0f9c31a8024d8b4f2ed483ed4",
+      "simples": "Se traslado não puder ser extraído no prazo, juiz pode prorrogá-lo até o dobro.",
+      "pontos": [
+        "Prorrogação judicial, não livre prazo da parte.",
+        "Integrar impossibilidade real e registro."
+      ],
+      "atencao": [
+        "Não duplicar prazo de interposição do recorrente por conta desta regra da secretaria."
+      ],
+      "exemplo": "Dificuldade comprovada permite prazo maior para extrair instrumento. Variação: Parte não ganha dez dias para interpor RESE só porque traslado é demorado.",
+      "prova": [
+        "Prorrogação dobra prazo de interposição? Não.",
+        "Refere-se à extração do traslado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prorrogação do traslado",
+          "significado": "Dilação do trabalho de formação do instrumento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5d40f1ce-8007-5341-868f-24085a6081c0",
+        "content_sha256": "35a252828c666b80595e2673a554f8cc2acf73f0f9c31a8024d8b4f2ed483ed4",
+        "simples": "Quando for impossível ao escrivão extrair o traslado no prazo da lei, poderá o juiz prorrogá-lo até o dobro.",
+        "pontos": [
+          "Impossibilidade de extrair o traslado no prazo: o juiz pode prorrogá-lo até o dobro."
+        ],
+        "atencao": [
+          "Prorrogação limitada ao dobro do prazo."
+        ],
+        "exemplo": "Com muitas peças, o juiz dobra o prazo do traslado.",
+        "prova": [
+          "Assertiva que permite prorrogação indefinida do prazo do traslado erra: é até o dobro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 587"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-591",
+      "unit_id": "751c17d7-c1cb-543a-8bb1-c3b0425b2cb9",
+      "content_sha256": "1b00b4e4eeaf0e2b9225480e3ecf6e1058935e581a3b9298eceb8f5b774fe01d",
+      "simples": "Encaminhamento ao órgão ad quem ocorre em cinco dias da resposta do juízo a quo, com integração ao sistema eletrônico.",
+      "pontos": [
+        "Distinguir remessa e prazo de recorrer.",
+        "Correio é previsão histórica de transmissão, não exclusividade atual."
+      ],
+      "atencao": [
+        "Não aplicar esses cinco dias como nova oportunidade de interposição tardia."
+      ],
+      "exemplo": "Secretaria encaminha recurso já processado ao competente. Variação: Remessa eletrônica válida não precisa virar carta física por literalidade.",
+      "prova": [
+        "É prazo de encaminhamento? Sim.",
+        "Cria novo prazo para recurso perdido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Remessa do RESE",
+          "significado": "Transmissão administrativa ao órgão julgador."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "751c17d7-c1cb-543a-8bb1-c3b0425b2cb9",
+        "content_sha256": "1b00b4e4eeaf0e2b9225480e3ecf6e1058935e581a3b9298eceb8f5b774fe01d",
+        "simples": "Os recursos serão apresentados ao juiz ou tribunal ad quem, dentro de cinco dias da publicação da resposta do juiz a quo, ou entregues ao Correio dentro do mesmo prazo.",
+        "pontos": [
+          "Apresentação ao juízo ad quem em cinco dias da publicação da resposta do juiz a quo.",
+          "Ou entrega ao Correio no mesmo prazo."
+        ],
+        "atencao": [
+          "Prazo de cinco dias."
+        ],
+        "exemplo": "A parte entrega o recurso ao Correio em cinco dias da publicação da resposta do juiz.",
+        "prova": [
+          "Assertiva que fixa em dez dias o prazo de apresentação ao juízo ad quem erra: são cinco dias."
+        ],
+        "termos": [
+          {
+            "termo": "Juízo a quo / ad quem",
+            "significado": "Juízo de origem e juízo de destino do recurso."
+          }
+        ],
+        "remissoes": [
+          "Art. 589"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-592",
+      "unit_id": "f9eb375c-fec8-5567-8f95-a6d811f564b6",
+      "content_sha256": "ebb0a9310512c352e6a6a55bdbc6969648794d7003a1f8110bf6c4e72f98b01e",
+      "simples": "Após publicada decisão recursal, autos retornam ao juízo de origem no prazo previsto de cinco dias, integrado à tramitação atual.",
+      "pontos": [
+        "Não confundir retorno com fim de todo recurso possível.",
+        "Verificar comunicações e providências pertinentes."
+      ],
+      "atencao": [
+        "Devolver autos não significa trânsito em julgado automático de qualquer decisão."
+      ],
+      "exemplo": "Secretaria devolve após julgamento para providências do juízo. Variação: Possibilidade de recurso cabível deve ser examinada separadamente.",
+      "prova": [
+        "Retorno implica sempre trânsito imediato? Não.",
+        "Há prazo textual de cinco dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Retorno dos autos",
+          "significado": "Encaminhamento após decisão do recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f9eb375c-fec8-5567-8f95-a6d811f564b6",
+        "content_sha256": "ebb0a9310512c352e6a6a55bdbc6969648794d7003a1f8110bf6c4e72f98b01e",
+        "simples": "Publicada a decisão do juiz ou do tribunal ad quem, deverão os autos ser devolvidos, dentro de cinco dias, ao juiz a quo.",
+        "pontos": [
+          "Publicada a decisão do juízo ad quem, os autos voltam ao juiz a quo em cinco dias."
+        ],
+        "atencao": [
+          "Prazo de cinco dias para devolução."
+        ],
+        "exemplo": "Julgado o recurso, os autos retornam ao juízo de origem em cinco dias.",
+        "prova": [
+          "Assertiva que dispensa a devolução dos autos ao juiz a quo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 591"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-593",
+      "unit_id": "f57ff14f-ae85-50f5-9623-6c078bcc52d8",
+      "content_sha256": "fc5e8928c782989df54e131d9c5d26532d37e70ce7a65b369a8c52e6535868c8",
+      "simples": "Apelação em cinco dias abrange sentenças do singular e hipóteses específicas do júri, com consequências diferentes.",
+      "pontos": [
+        "Júri: nulidade após pronúncia, sentença contrária à lei/veredito, erro de pena ou manifesta contrariedade à prova.",
+        "Lei/veredito/pena: tribunal retifica no âmbito pertinente.",
+        "Contrariedade manifesta: novo júri, sem segunda apelação pelo mesmo motivo.",
+        "Cabível apelação, não escolher RESE deliberadamente; fungibilidade tem requisitos.",
+        "Tema1087 integra absolvição genérica e clemência constitucional registrada."
+      ],
+      "atencao": [
+        "Tribunal não substitui livremente jurados para condenar só por discordar de prova."
+      ],
+      "exemplo": "Erro na pena é corrigido pelo tribunal na hipótese própria. Variação: Veredito manifestamente contrário à prova pode levar a novo júri, não condenação direta por mera reavaliação.",
+      "prova": [
+        "Erro de pena e novo júri têm mesma consequência? Não.",
+        "Prazo geral de interposição é cinco dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Apelação penal",
+          "significado": "Revisão da decisão nos fundamentos e efeitos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5745131&numeroProcesso=1225185&numeroTema=1087"
+      ],
+      "expected": {
+        "unit_id": "f57ff14f-ae85-50f5-9623-6c078bcc52d8",
+        "content_sha256": "fc5e8928c782989df54e131d9c5d26532d37e70ce7a65b369a8c52e6535868c8",
+        "simples": "Caberá apelação no prazo de 5 dias das sentenças definitivas de condenação ou absolvição proferidas por juiz singular; das decisões definitivas, ou com força de definitivas, proferidas por juiz singular nos casos não previstos no Capítulo anterior (recurso em sentido estrito); e das decisões do Tribunal do Júri quando ocorrer nulidade posterior à pronúncia; for a sentença do juiz-presidente contrária à lei expressa ou à decisão dos jurados; houver erro ou injustiça no tocante à aplicação da pena ou da medida de segurança; ou for a decisão dos jurados manifestamente contrária à prova dos autos. Se a sentença do juiz-presidente for contrária à lei expressa ou divergir das respostas dos jurados, o tribunal fará a devida retificação.",
+        "pontos": [
+          "I: sentenças definitivas do juiz singular.",
+          "II: decisões definitivas ou com força de definitivas, fora do rol do recurso em sentido estrito.",
+          "III: Júri: nulidade posterior à pronúncia; sentença contrária à lei ou à decisão dos jurados; erro ou injustiça na pena; decisão manifestamente contrária à prova.",
+          "Prazo de 5 dias."
+        ],
+        "atencao": [
+          "Apelação contra o Júri tem fundamentos TAXATIVOS (alíneas a a d).",
+          "Apelação: 5 dias."
+        ],
+        "exemplo": "Decisão dos jurados manifestamente contrária à prova dos autos desafia apelação.",
+        "prova": [
+          "Assertiva que admite apelação contra o Júri por qualquer motivo erra: os fundamentos do inciso III são taxativos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 581",
+          "Art. 600"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-596",
+      "unit_id": "951e3e0b-909c-5b0f-be37-9a43fc026bd7",
+      "content_sha256": "5f5eaf6b70b7dedf55bcb71f8a0d11b9bf5d95f8a9ea52853ff205dbe33ce799",
+      "simples": "Recurso da absolvição não impede liberdade imediata se não houver outro título prisional; parágrafo de medida provisória exige integração histórica.",
+      "pontos": [
+        "Não antecipar culpa porque acusação recorreu.",
+        "Segurança penal não se impõe por antiga referência automática.",
+        "Verificar outro fundamento legítimo de custódia."
+      ],
+      "atencao": [
+        "Não conservar prisão só pela apelação acusatória nem restaurar medida provisória do regime antigo."
+      ],
+      "exemplo": "Absolvido sem outro título é libertado apesar do recurso. Variação: Prisão por processo diverso exige decisão própria, não liberação indiscriminada de todos os títulos.",
+      "prova": [
+        "Apelação acusatória impede por si liberdade? Não.",
+        "Outro título prisional exige exame? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito da absolvição",
+          "significado": "Liberdade vinculada à decisão e demais títulos válidos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "951e3e0b-909c-5b0f-be37-9a43fc026bd7",
+        "content_sha256": "5f5eaf6b70b7dedf55bcb71f8a0d11b9bf5d95f8a9ea52853ff205dbe33ce799",
+        "simples": "A apelação da sentença absolutória não impedirá que o réu seja posto imediatamente em liberdade. A apelação não suspenderá a execução da medida de segurança aplicada provisoriamente.",
+        "pontos": [
+          "Apelação da absolvição não impede a liberdade imediata do réu.",
+          "Apelação não suspende a medida de segurança provisória."
+        ],
+        "atencao": [
+          "Absolvição: liberdade imediata."
+        ],
+        "exemplo": "O réu absolvido é solto, mesmo que o MP apele.",
+        "prova": [
+          "Assertiva que mantém o réu preso até o julgamento da apelação contra a absolvição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 597"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-597",
+      "unit_id": "de5e5d14-5845-5bff-93f3-147421aabb63",
+      "content_sha256": "67fb3bdd093dcc4cc672f494dafb2fde3ebd4d9bdc104a95a46a02a9142f338f",
+      "simples": "Apelação condenatória tem efeito suspensivo no regime comum, integrado à exceção atual do júri e remissões históricas.",
+      "pontos": [
+        "Art.393 revogado não volta.",
+        "Interdições/segurança provisórias antigas não são regime atual geral.",
+        "Tema1068/STF: condenação do júri tem execução independente do total da pena.",
+        "Cautelar válida é questão própria."
+      ],
+      "atencao": [
+        "Não afirmar que toda condenação em qualquer rito aguarda apelação nem que toda sentença comum permite execução automática."
+      ],
+      "exemplo": "Condenação comum e prisão cautelar são examinadas por bases distintas. Variação: Júri exige integrar precedente específico, mesmo pena inferior a quinze.",
+      "prova": [
+        "Júri e sentença comum têm sempre mesmo efeito? Não.",
+        "Remissão restaura art.393 revogado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito suspensivo integrado",
+          "significado": "Regra e exceções lidas com reformas e precedentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciarepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5776893&numeroProcesso=1235340&numeroTema=1068"
+      ],
+      "expected": {
+        "unit_id": "de5e5d14-5845-5bff-93f3-147421aabb63",
+        "content_sha256": "67fb3bdd093dcc4cc672f494dafb2fde3ebd4d9bdc104a95a46a02a9142f338f",
+        "simples": "A apelação de sentença condenatória terá efeito suspensivo, salvo o disposto no art. 393, a aplicação provisória de interdições de direitos e de medidas de segurança (arts. 374 e 378), e o caso de suspensão condicional de pena.",
+        "pontos": [
+          "Apelação da condenação tem efeito suspensivo, em regra.",
+          "Ressalvas: aplicação provisória de interdições e de medidas de segurança, e suspensão condicional da pena."
+        ],
+        "atencao": [
+          "Efeito suspensivo não impede a prisão preventiva fundamentada."
+        ],
+        "exemplo": "Apelação da condenação suspende os efeitos da sentença, salvo as ressalvas legais.",
+        "prova": [
+          "Assertiva que nega efeito suspensivo à apelação da sentença condenatória em qualquer hipótese erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 596"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-598",
+      "unit_id": "18246f1f-7295-50e5-8187-aff981712c66",
+      "content_sha256": "02f33bba3cd8549edffa11e58f2d944af2a5f06a5b363e3dc67272b08892121c",
+      "simples": "Sem apelação do MP, ofendido/legitimados podem recorrer supletivamente; prazo distingue habilitação.",
+      "pontos": [
+        "Não habilitado: quinze dias após prazo do MP no regime do artigo.",
+        "Assistente habilitado: cinco dias, com ciência regular e leitura da Súmula448/STF.",
+        "Recurso da hipótese não tem efeito suspensivo.",
+        "Não presumir autorização de qualquer terceiro interessado."
+      ],
+      "atencao": [
+        "Não aplicar quinze dias a todo assistente nem iniciar prazo sem examinar ciência e inércia ministerial."
+      ],
+      "exemplo": "Ofendido não habilitado recorre na hipótese de omissão do MP pelo prazo pertinente. Variação: Assistente já habilitado exige prazo próprio de cinco e intimação válida.",
+      "prova": [
+        "Todo assistente tem quinze dias? Não.",
+        "Não habilitado tem hipótese supletiva? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Recurso supletivo",
+          "significado": "Impugnação diante da inércia do acusador público."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=1600"
+      ],
+      "expected": {
+        "unit_id": "18246f1f-7295-50e5-8187-aff981712c66",
+        "content_sha256": "02f33bba3cd8549edffa11e58f2d944af2a5f06a5b363e3dc67272b08892121c",
+        "simples": "Nos crimes de competência do Tribunal do Júri, ou do juiz singular, se da sentença não for interposta apelação pelo Ministério Público no prazo legal, o ofendido ou qualquer das pessoas enumeradas no art. 31, ainda que não se tenha habilitado como assistente, poderá interpor apelação, que não terá, porém, efeito suspensivo. O prazo para interposição desse recurso será de quinze dias e correrá do dia em que terminar o do Ministério Público.",
+        "pontos": [
+          "Apelação supletiva do ofendido ou legitimados do art. 31.",
+          "Cabe se o MP não apelar no prazo legal.",
+          "Sem efeito suspensivo.",
+          "Prazo de quinze dias, a contar do fim do prazo do MP."
+        ],
+        "atencao": [
+          "Ofendido NÃO habilitado como assistente tem quinze dias, a contar do fim do prazo do MP."
+        ],
+        "exemplo": "O MP não apela, e a vítima, não habilitada, apela em quinze dias.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo da apelação supletiva do ofendido não habilitado erra: são quinze dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 31",
+          "Art. 271"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-599",
+      "unit_id": "3e746584-7543-5d89-867f-d72e00f28db2",
+      "content_sha256": "2b9f0f9eac78c33912e7430ec6199b9266008a4f2edf2e36dcf723d63b57a3a0",
+      "simples": "Apelação pode atingir todo julgado ou parte dele.",
+      "pontos": [
+        "Identificar capítulos impugnados.",
+        "Integrar limites e efeitos legais do recurso."
+      ],
+      "atencao": [
+        "Recurso parcial não é autorização para agravar livremente parte não impugnada pela acusação."
+      ],
+      "exemplo": "Defesa impugna dosimetria sem contestar todo fundamento. Variação: Pedido limitado exige examinar âmbito devolvido e garantias, não refazer processo indiscriminadamente.",
+      "prova": [
+        "Apelação pode ser parcial? Sim.",
+        "Pedido parcial elimina garantias recursais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Objeto da apelação",
+          "significado": "Parte da decisão levada ao tribunal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3e746584-7543-5d89-867f-d72e00f28db2",
+        "content_sha256": "2b9f0f9eac78c33912e7430ec6199b9266008a4f2edf2e36dcf723d63b57a3a0",
+        "simples": "As apelações poderão ser interpostas quer em relação a todo o julgado, quer em relação a parte dele.",
+        "pontos": [
+          "Apelação total ou parcial."
+        ],
+        "atencao": [
+          "Efeito devolutivo limitado ao que foi impugnado."
+        ],
+        "exemplo": "A defesa apela apenas da dosimetria da pena.",
+        "prova": [
+          "Assertiva que obriga a impugnação de todo o julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 593"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-600",
+      "unit_id": "f383c31f-545a-50c5-9623-43ff32b79182",
+      "content_sha256": "f2a9a325b39dfb6b44d587cc0c32deb390f0dec50f028bdf66239bb71993f67f",
+      "simples": "Razões/contrarrazões da apelação têm oito dias cada; contravenção três; interposição é prazo distinto.",
+      "pontos": [
+        "Assistente: três após MP; ação privada: vista ao MP por três.",
+        "Vários apelantes/apelados: prazos comuns.",
+        "Opção de arrazoar no tribunal deve ser declarada na interposição e observar ciência/prazos.",
+        "Defesa efetiva não é dispensada por inércia do advogado."
+      ],
+      "atencao": [
+        "Não confundir oito dias das razões com cinco da interposição nem avançar sem garantir defesa diante de omissão."
+      ],
+      "exemplo": "Parte interpõe em cinco e apresenta razões no prazo pertinente de oito. Variação: Contravenção tem três para razões no regime deste artigo.",
+      "prova": [
+        "Razões ordinárias têm oito dias? Sim.",
+        "Interposição geral ganha oito por isso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Razões de apelação",
+          "significado": "Fundamentação em fase e prazo próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f383c31f-545a-50c5-9623-43ff32b79182",
+        "content_sha256": "f2a9a325b39dfb6b44d587cc0c32deb390f0dec50f028bdf66239bb71993f67f",
+        "simples": "Assinado o termo de apelação, o apelante e, depois dele, o apelado terão o prazo de oito dias cada um para oferecer razões, salvo nos processos de contravenção, em que o prazo será de três dias. Se houver assistente, este arrazoará, no prazo de três dias, após o Ministério Público. Se a ação penal for movida pela parte ofendida, o Ministério Público terá vista dos autos no mesmo prazo. Quando forem dois ou mais os apelantes ou apelados, os prazos serão comuns. Se o apelante declarar, na petição ou no termo, que deseja arrazoar na superior instância, os autos serão remetidos ao tribunal ad quem, onde será aberta vista às partes.",
+        "pontos": [
+          "Razões: oito dias para cada parte (contravenção: três dias).",
+          "Assistente: três dias após o MP.",
+          "Ação privada: MP tem vista no mesmo prazo.",
+          "Vários apelantes ou apelados: prazos comuns.",
+          "Razões na instância superior, se o apelante declarar."
+        ],
+        "atencao": [
+          "Oito dias para as razões; três para contravenção e assistente."
+        ],
+        "exemplo": "O apelante tem oito dias para apresentar as razões, e o apelado, outros oito.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo das razões de apelação erra: são oito dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 593",
+          "Art. 601"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-601",
+      "unit_id": "3bb6d4f8-7966-5180-a9d9-700f50990046",
+      "content_sha256": "261ee8b47a067af89016afe93767ce11bb913cefc00dbbd90e3b8437450de7c8",
+      "simples": "Após prazo de razões, remeter autos ao superior com ou sem elas, com regimes próprios de traslado e garantias.",
+      "pontos": [
+        "Texto: cinco dias, com exceção de trinta referida.",
+        "Pluralidade e julgamento/recurso parciais podem exigir instrumento no regime descrito.",
+        "Custos não cobrados do réu pobre ou MP na hipótese de traslado.",
+        "Não suprimir assistência defensiva por falta de razões."
+      ],
+      "atencao": [
+        "Subida sem razões no texto não permite ignorar defesa técnica efetiva nem impor despesas incompatíveis com gratuidade."
+      ],
+      "exemplo": "Secretaria remete processo e controla regularidade defensiva. Variação: Falta do advogado exige providência pertinente antes de presumir abandono irreversível.",
+      "prova": [
+        "Texto prevê subida com ou sem razões? Sim.",
+        "Isso elimina garantia de defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Subida da apelação",
+          "significado": "Remessa com controle de atos e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3bb6d4f8-7966-5180-a9d9-700f50990046",
+        "content_sha256": "261ee8b47a067af89016afe93767ce11bb913cefc00dbbd90e3b8437450de7c8",
+        "simples": "Findos os prazos para razões, os autos serão remetidos à instância superior, com as razões ou sem elas, no prazo de 5 dias, salvo no caso do art. 603, segunda parte, em que o prazo será de trinta dias. Se houver mais de um réu, e não houverem todos sido julgados, ou não tiverem todos apelado, caberá ao apelante promover a extração do traslado dos autos, o qual deverá ser remetido à instância superior no prazo de trinta dias. As despesas do traslado correrão por conta de quem o solicitar, salvo se o pedido for de réu pobre ou do Ministério Público.",
+        "pontos": [
+          "Remessa à instância superior em cinco dias após as razões.",
+          "Exceção do art. 603, segunda parte: trinta dias.",
+          "Vários réus: traslado promovido pelo apelante, em trinta dias.",
+          "Despesas por conta de quem solicitar, salvo réu pobre ou MP."
+        ],
+        "atencao": [
+          "Cinco dias (regra) e trinta dias (traslado)."
+        ],
+        "exemplo": "Findo o prazo das razões, os autos sobem ao tribunal em cinco dias.",
+        "prova": [
+          "Assertiva que cobra as despesas do traslado do réu pobre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 600",
+          "Art. 603"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-602",
+      "unit_id": "eb8cd566-c257-5654-87eb-566762738a41",
+      "content_sha256": "d473a4c898a89a2596ba490d71a1da74862ff3cff5faeb451a166c5dbba74755",
+      "simples": "Encaminhar apelação nos prazos do art.601 ao tribunal, integrando previsão postal à tramitação eletrônica válida.",
+      "pontos": [
+        "Transmissão documentada.",
+        "Não confundir prazo administrativo e admissibilidade do recurso."
+      ],
+      "atencao": [
+        "Texto de correio sob registro não impõe exclusivamente envio físico hoje."
+      ],
+      "exemplo": "Órgão registra remessa eletrônica regular ao tribunal. Variação: Falha de transmissão exige apuração e correção, não ocultar perda do recurso.",
+      "prova": [
+        "Correio é única via atual obrigatória? Não.",
+        "Registro da transmissão importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Transmissão da apelação",
+          "significado": "Encaminhamento formal e rastreável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "eb8cd566-c257-5654-87eb-566762738a41",
+        "content_sha256": "d473a4c898a89a2596ba490d71a1da74862ff3cff5faeb451a166c5dbba74755",
+        "simples": "Os autos serão, dentro dos prazos do artigo anterior, apresentados ao tribunal ad quem ou entregues ao Correio, sob registro.",
+        "pontos": [
+          "Autos apresentados ao tribunal ad quem ou entregues ao Correio, sob registro, nos prazos do art. 601."
+        ],
+        "atencao": [
+          "Envio com registro."
+        ],
+        "exemplo": "Os autos são remetidos ao tribunal por Correio registrado.",
+        "prova": [
+          "Assertiva que dispensa registro no envio postal dos autos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 601"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-603",
+      "unit_id": "4208cf40-600d-5221-b410-497655a5d6f4",
+      "content_sha256": "07880623cd4f4782e45603a0979b9357b4ac2b65937f1499314b701bc22750fe",
+      "simples": "Texto prevê subida nos originais e preservação de peças essenciais; referências organizacionais antigas exigem integração atual.",
+      "pontos": [
+        "Autos eletrônicos têm modo válido de acesso e remessa.",
+        "Distinguir conservação documental e duplicação física indiscriminada.",
+        "Não restaurar libelo ou curador por remissão ao art.564."
+      ],
+      "atencao": [
+        "Nome antigo de tribunal e cidade não resolve sozinho regra eletrônica atual."
+      ],
+      "exemplo": "Processo digital sobe com acesso íntegro das peças pertinentes. Variação: Não exigir documento antigo do rito extinto só porque remissão menciona essenciais.",
+      "prova": [
+        "Remissão recupera libelo extinto? Não.",
+        "Integridade documental deve ser preservada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Autos e peças essenciais",
+          "significado": "Documentação íntegra para julgamento recursal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4208cf40-600d-5221-b410-497655a5d6f4",
+        "content_sha256": "07880623cd4f4782e45603a0979b9357b4ac2b65937f1499314b701bc22750fe",
+        "simples": "A apelação subirá nos autos originais e, a não ser no Distrito Federal e nas comarcas que forem sede de Tribunal de Apelação, ficará em cartório traslado dos termos essenciais do processo referidos no art. 564, III.",
+        "pontos": [
+          "Apelação sobe nos autos originais.",
+          "Ficam em cartório traslados dos termos essenciais (art. 564, III), salvo nas sedes de tribunal."
+        ],
+        "atencao": [
+          "Traslado dos termos essenciais fica em cartório."
+        ],
+        "exemplo": "Os autos originais sobem, e o cartório conserva o traslado dos termos essenciais.",
+        "prova": [
+          "Assertiva que manda enviar ao tribunal apenas o traslado, mantendo os originais em cartório, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 564",
+          "Art. 601"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    }
+  ]
+}
