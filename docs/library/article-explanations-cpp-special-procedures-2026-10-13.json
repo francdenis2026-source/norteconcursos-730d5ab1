@@ -1,0 +1,1613 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:53:13.186380+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 27,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-513",
+        "art-514",
+        "art-515",
+        "art-516",
+        "art-517",
+        "art-518",
+        "art-519",
+        "art-520",
+        "art-521",
+        "art-522",
+        "art-523",
+        "art-524",
+        "art-525",
+        "art-526",
+        "art-527",
+        "art-528",
+        "art-529",
+        "art-530",
+        "art-530-a",
+        "art-530-b",
+        "art-530-c",
+        "art-530-d",
+        "art-530-e",
+        "art-530-f",
+        "art-530-g",
+        "art-530-h",
+        "art-530-i"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-513",
+      "unit_id": "6e6d6453-5d77-53ac-acd5-0b2f5bb85a7c",
+      "content_sha256": "c0577810bc10a98196d4435c23df55460ccadd635677ea98ea75a6f452e34d80",
+      "simples": "Acusação no rito de crimes funcionais precisa suporte documental/justificação ou declaração fundamentada de impossibilidade.",
+      "pontos": [
+        "Identificar crime funcional e competência aplicável.",
+        "Não confundir com impeachment político.",
+        "A impossibilidade precisa ser motivada."
+      ],
+      "atencao": [
+        "Não aplicar rito a todo crime só porque autor é servidor, nem transformar declaração vazia em justa causa."
+      ],
+      "exemplo": "Acusação de delito funcional vem com suporte pertinente. Variação: Crime particular sem vínculo funcional não entra automaticamente no rito pela profissão do acusado.",
+      "prova": [
+        "Ser servidor basta para qualquer crime entrar neste rito? Não.",
+        "Impossibilidade de prova deve ser fundamentada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Rito funcional",
+          "significado": "Procedimento próprio da hipótese legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6e6d6453-5d77-53ac-acd5-0b2f5bb85a7c",
+        "content_sha256": "c0577810bc10a98196d4435c23df55460ccadd635677ea98ea75a6f452e34d80",
+        "simples": "Nos crimes de responsabilidade dos funcionários públicos, cujo processo e julgamento competirão aos juízes de direito, a queixa ou a denúncia será instruída com documentos ou justificação que façam presumir a existência do delito ou com declaração fundamentada da impossibilidade de apresentação de qualquer dessas provas.",
+        "pontos": [
+          "Crimes de responsabilidade de funcionários públicos julgados por juiz de direito.",
+          "Denúncia ou queixa instruída com documentos ou justificação.",
+          "Ou declaração fundamentada de impossibilidade."
+        ],
+        "atencao": [
+          "Início do procedimento especial dos crimes funcionais afiançáveis."
+        ],
+        "exemplo": "A denúncia contra o servidor vem acompanhada de documentos que indicam o delito.",
+        "prova": [
+          "Assertiva que dispensa documentos ou justificação para a denúncia do art. 513 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 514"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-514",
+      "unit_id": "cc1aa8c9-ab69-5080-9ed7-fade4a457e50",
+      "content_sha256": "2cefe65f51e403a597b16d21d0d503de76ab9081b1edce1cfa3f816c65b48541",
+      "simples": "Texto prevê resposta preliminar em quinze dias nos crimes afiançáveis do rito funcional; integrar Súmula330/STJ.",
+      "pontos": [
+        "Notificação antes do recebimento, distinta de resposta do art. 396-A.",
+        "STJ dispensa esta resposta preliminar se ação instruída por inquérito.",
+        "Nomear defensor se residência desconhecida ou acusado fora da jurisdição na hipótese do parágrafo."
+      ],
+      "atencao": [
+        "Não ensinar dispensa de toda defesa técnica nem usar prazo de quinze para resposta comum de dez; identificar fonte jurisprudencial e caso."
+      ],
+      "exemplo": "Rito funcional sem a situação da súmula exige examinar notificação prévia. Variação: Ação precedida de inquérito demanda aplicar leitura STJ, mantendo defesa posterior regular.",
+      "prova": [
+        "Súmula330 elimina defesa técnica posterior? Não.",
+        "Prazo textual preliminar é quinze dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Resposta preliminar funcional",
+          "significado": "Manifestação anterior ao recebimento, com ressalva jurisprudencial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=%40NUM%3D%27330%27"
+      ],
+      "expected": {
+        "unit_id": "cc1aa8c9-ab69-5080-9ed7-fade4a457e50",
+        "content_sha256": "2cefe65f51e403a597b16d21d0d503de76ab9081b1edce1cfa3f816c65b48541",
+        "simples": "Nos crimes afiançáveis, estando a denúncia ou queixa em devida forma, o juiz mandará autuá-la e ordenará a notificação do acusado, para responder por escrito, dentro do prazo de quinze dias. Se não for conhecida a residência do acusado, ou este se achar fora da jurisdição do juiz, ser-lhe-á nomeado defensor, a quem caberá apresentar a resposta preliminar.",
+        "pontos": [
+          "Crimes afiançáveis de funcionários: notificação para resposta preliminar em quinze dias.",
+          "Sem residência conhecida ou fora da jurisdição: defensor nomeado."
+        ],
+        "atencao": [
+          "A Súmula 330 do STJ dispensa a defesa preliminar se a ação é instruída por inquérito policial."
+        ],
+        "exemplo": "O servidor é notificado para responder por escrito em quinze dias.",
+        "prova": [
+          "Assertiva que fixa em 10 dias a resposta preliminar do art. 514 erra: são quinze dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 513",
+          "Art. 516"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-515",
+      "unit_id": "f81571c8-80c5-5c4d-a69c-87b52fdfe060",
+      "content_sha256": "d78d9c46a22d10b5e29c12feb3fa415e4ba29cbf2aca031c2e91225296b5acbc",
+      "simples": "Durante prazo preliminar, acusado ou defensor pode examinar autos e apresentar documentos e justificações.",
+      "pontos": [
+        "Acesso real é necessário para resposta.",
+        "Integrar consulta eletrônica quando aplicável."
+      ],
+      "atencao": [
+        "Não conceder prazo com autos inacessíveis nem interpretar cartório como proibição de acesso eletrônico válido."
+      ],
+      "exemplo": "Defensor consulta suporte da acusação e junta documento explicativo. Variação: Arquivo sigiloso deve ser tratado conforme garantias pertinentes, não negar toda ciência defensiva.",
+      "prova": [
+        "Resposta pode ter documentos? Sim.",
+        "Prazo sem acesso efetivo assegura defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Acesso para resposta",
+          "significado": "Conhecimento do material que permite manifestação técnica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f81571c8-80c5-5c4d-a69c-87b52fdfe060",
+        "content_sha256": "d78d9c46a22d10b5e29c12feb3fa415e4ba29cbf2aca031c2e91225296b5acbc",
+        "simples": "No caso do artigo anterior, durante o prazo concedido para a resposta, os autos permanecerão em cartório, onde poderão ser examinados pelo acusado ou por seu defensor. A resposta poderá ser instruída com documentos e justificações.",
+        "pontos": [
+          "Autos permanecem em cartório durante o prazo de resposta.",
+          "Acusado ou defensor podem examiná-los.",
+          "Resposta pode ter documentos e justificações."
+        ],
+        "atencao": [
+          "Acesso aos autos em cartório."
+        ],
+        "exemplo": "O defensor examina os autos em cartório e junta documentos à resposta.",
+        "prova": [
+          "Assertiva que impede o exame dos autos durante o prazo de resposta erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 514"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-516",
+      "unit_id": "3c8ff1ef-7e34-53f9-be07-9022cb5ed95b",
+      "content_sha256": "61fe6b6de9e4d643f90b08603a5a8d4a5437143c34a05fe21bb8d2b6116ab961",
+      "simples": "Juiz rejeita fundamentadamente acusação se resposta o convence da inexistência do crime ou improcedência da ação.",
+      "pontos": [
+        "Decisão anterior ao recebimento na hipótese do rito.",
+        "Não rejeitar ou receber sem analisar questão relevante."
+      ],
+      "atencao": [
+        "Rejeição preliminar não é condenação nem simples concordância obrigatória com toda defesa."
+      ],
+      "exemplo": "Documento defensivo demonstra fundamento para rejeição e juiz explica decisão. Variação: Alegação controvertida sem suporte exige análise, não rejeição automática.",
+      "prova": [
+        "Decisão exige fundamentação? Sim.",
+        "Toda alegação defensiva impõe rejeição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Controle prévio funcional",
+          "significado": "Exame de admissibilidade após manifestação pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3c8ff1ef-7e34-53f9-be07-9022cb5ed95b",
+        "content_sha256": "61fe6b6de9e4d643f90b08603a5a8d4a5437143c34a05fe21bb8d2b6116ab961",
+        "simples": "O juiz rejeitará a queixa ou denúncia, em despacho fundamentado, se convencido, pela resposta do acusado ou do seu defensor, da inexistência do crime ou da improcedência da ação.",
+        "pontos": [
+          "Rejeição fundamentada da denúncia ou queixa.",
+          "Convencimento pela resposta preliminar da inexistência do crime ou da improcedência da ação."
+        ],
+        "atencao": [
+          "Despacho fundamentado."
+        ],
+        "exemplo": "Pela resposta, o juiz se convence da inexistência do crime e rejeita a denúncia.",
+        "prova": [
+          "Assertiva que dispensa a fundamentação do despacho de rejeição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 514"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-517",
+      "unit_id": "ea863e38-7332-5bf7-8419-369cacd8fb17",
+      "content_sha256": "2a309a53f0c95fb19925f2b6fa76390c68ce27003deafcd906b4eda61ebb3ec4",
+      "simples": "Recebida acusação, acusado é citado conforme regime do capítulo de citações.",
+      "pontos": [
+        "Distinguir notificação preliminar e citação processual.",
+        "Resposta prévia não dispensa atos defensivos posteriores."
+      ],
+      "atencao": [
+        "Não pular citação apenas porque houve resposta do art. 514."
+      ],
+      "exemplo": "Depois do recebimento, juízo promove citação regular. Variação: Ciência de peça anterior não substitui automaticamente chamamento exigido.",
+      "prova": [
+        "Notificação anterior dispensa sempre citação? Não.",
+        "Recebimento precede citação deste dispositivo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Citação após recebimento",
+          "significado": "Chamamento processual distinto da defesa preliminar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ea863e38-7332-5bf7-8419-369cacd8fb17",
+        "content_sha256": "2a309a53f0c95fb19925f2b6fa76390c68ce27003deafcd906b4eda61ebb3ec4",
+        "simples": "Recebida a denúncia ou a queixa, será o acusado citado, na forma estabelecida no Capítulo I do Título X do Livro I.",
+        "pontos": [
+          "Recebida a peça acusatória, citação do acusado na forma do Capítulo I do Título X do Livro I."
+        ],
+        "atencao": [
+          "Citação segue as regras gerais."
+        ],
+        "exemplo": "Recebida a denúncia contra o servidor, ele é citado conforme as regras gerais.",
+        "prova": [
+          "Assertiva que dispensa a citação após o recebimento da denúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 351"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-518",
+      "unit_id": "160248e7-07bc-5584-8479-fb5224f859b7",
+      "content_sha256": "85eb2aabcd211bd8e10669ad4b44ef61fe2abcea8505c3623c1318c06bcd2ad7",
+      "simples": "Instrução e demais atos integram procedimento comum atual nas remissões, respeitadas especificidades funcionais.",
+      "pontos": [
+        "Não restaurar artigos revogados nas antigas remissões.",
+        "Garantias e ordem probatória atuais permanecem."
+      ],
+      "atencao": [
+        "Remissão histórica não permite usar rito ordinário anterior à reforma de 2008."
+      ],
+      "exemplo": "Processo segue instrução compatível com disciplina comum atual. Variação: Interrogatório e defesa não são suprimidos por aplicar rito funcional.",
+      "prova": [
+        "Remissão restaura artigo revogado? Não.",
+        "Especificidade dispensa defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Integração do rito",
+          "significado": "Aplicação compatível das normas processuais atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "160248e7-07bc-5584-8479-fb5224f859b7",
+        "content_sha256": "85eb2aabcd211bd8e10669ad4b44ef61fe2abcea8505c3623c1318c06bcd2ad7",
+        "simples": "Na instrução criminal e nos demais termos do processo, observar-se-á o disposto nos Capítulos I e III, Título I, deste Livro.",
+        "pontos": [
+          "Instrução e demais termos seguem o rito comum (Capítulos I e III do Título I)."
+        ],
+        "atencao": [
+          "Remissão ao procedimento comum."
+        ],
+        "exemplo": "A instrução dos crimes funcionais segue o rito comum.",
+        "prova": [
+          "Assertiva que cria rito de instrução próprio no art. 518 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 394"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-519",
+      "unit_id": "6756f302-6f68-5419-a125-5bda0cb97cb0",
+      "content_sha256": "a7af1cf871a1283d5cc89c10ce501a0f7ad856e1444ca4e9b3e0e4c1b1561225",
+      "simples": "Calúnia ou injúria seguem rito indicado com modificações especiais, salvo outra forma estabelecida por lei especial.",
+      "pontos": [
+        "Verificar ação penal e competência.",
+        "JECRIM e lei especial podem ter disciplina própria.",
+        "Não estender automaticamente a todos os crimes contra honra sem análise."
+      ],
+      "atencao": [
+        "Não aplicar uma sequência única a qualquer crime de honra sem verificar regime pertinente."
+      ],
+      "exemplo": "Queixa por calúnia é examinada conforme competência e regras especiais aplicáveis. Variação: Infração de menor potencial exige verificar rito do Juizado antes de copiar procedimento.",
+      "prova": [
+        "Outra lei especial pode estabelecer forma diversa? Sim.",
+        "Nome genérico crimes de honra resolve sozinho rito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Rito de honra",
+          "significado": "Modificações para as hipóteses definidas no artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6756f302-6f68-5419-a125-5bda0cb97cb0",
+        "content_sha256": "a7af1cf871a1283d5cc89c10ce501a0f7ad856e1444ca4e9b3e0e4c1b1561225",
+        "simples": "No processo por crime de calúnia ou injúria, para o qual não haja outra forma estabelecida em lei especial, observar-se-á o disposto nos Capítulos I e III, Título I, deste Livro, com as modificações constantes dos artigos seguintes.",
+        "pontos": [
+          "Calúnia e injúria seguem o rito comum com modificações.",
+          "Aplica-se onde não houver rito de lei especial."
+        ],
+        "atencao": [
+          "Procedimento de crimes contra a honra de competência do juiz singular."
+        ],
+        "exemplo": "A queixa por injúria segue o rito comum com a fase de reconciliação.",
+        "prova": [
+          "Assertiva que cria rito totalmente autônomo para calúnia e injúria erra: segue o comum, com modificações."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 520"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-520",
+      "unit_id": "6b49ce45-97f1-519c-9151-d04e8032ec3e",
+      "content_sha256": "721f4be7c9facf031920248066e65f72863219601432d96d14697d16ae0a43cb",
+      "simples": "Antes de receber queixa na hipótese deste rito, juiz oferece oportunidade de reconciliação com oitiva separada das partes.",
+      "pontos": [
+        "Texto descreve comparecimento separado, sem advogados na tentativa específica e sem termo desse diálogo.",
+        "Distinguir da formalização de desistência do art. 522.",
+        "Não suprimir assistência técnica de todo processo."
+      ],
+      "atencao": [
+        "Tentativa de acordo não pode forçar desistência; regra específica não exclui defensor dos demais atos."
+      ],
+      "exemplo": "Juiz ouve cada parte para avaliar possibilidade de reconciliação. Variação: Sem acordo, não inventa desistência nem converte conversa em confissão obrigatória.",
+      "prova": [
+        "Tentativa obriga desistência? Não.",
+        "É anterior ao recebimento da queixa nesta hipótese? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reconciliação preliminar",
+          "significado": "Oportunidade de composição sem imposição de acordo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6b49ce45-97f1-519c-9151-d04e8032ec3e",
+        "content_sha256": "721f4be7c9facf031920248066e65f72863219601432d96d14697d16ae0a43cb",
+        "simples": "Antes de receber a queixa, o juiz oferecerá às partes oportunidade para se reconciliarem, fazendo-as comparecer em juízo e ouvindo-as, separadamente, sem a presença dos seus advogados, não se lavrando termo.",
+        "pontos": [
+          "Audiência de reconciliação antes de receber a queixa.",
+          "Partes ouvidas separadamente, sem advogados.",
+          "Sem termo."
+        ],
+        "atencao": [
+          "Sem a presença dos advogados e sem termo."
+        ],
+        "exemplo": "O juiz ouve querelante e querelado separadamente, buscando a reconciliação.",
+        "prova": [
+          "Assertiva que exige a presença dos advogados na audiência de reconciliação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 521"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-521",
+      "unit_id": "54933b14-5c7d-56f7-b602-c848f7d97acc",
+      "content_sha256": "d7d3569c08c5fce3ecf072f69c11e656a460b8be67cb79121c8ca87806b52a4c",
+      "simples": "Se considerar provável reconciliação após ouvir partes, juiz promove entendimento na sua presença.",
+      "pontos": [
+        "Avaliar disposição real de composição.",
+        "Não impor resultado."
+      ],
+      "atencao": [
+        "Probabilidade de acordo não equivale a acordo consumado."
+      ],
+      "exemplo": "Partes demonstram interesse e juiz promove diálogo de composição. Variação: Persistindo oposição, não declarar reconciliação fictícia.",
+      "prova": [
+        "Probabilidade é acordo já concluído? Não.",
+        "Entendimento ocorre na presença do juiz? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Entendimento entre partes",
+          "significado": "Etapa de tentativa de reconciliação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "54933b14-5c7d-56f7-b602-c848f7d97acc",
+        "content_sha256": "d7d3569c08c5fce3ecf072f69c11e656a460b8be67cb79121c8ca87806b52a4c",
+        "simples": "Se, depois de ouvir o querelante e o querelado, o juiz achar provável a reconciliação, promoverá entendimento entre eles, na sua presença.",
+        "pontos": [
+          "Juiz que considera provável a reconciliação promove entendimento entre as partes, na sua presença."
+        ],
+        "atencao": [
+          "Etapa seguinte à oitiva separada."
+        ],
+        "exemplo": "Percebendo chance de acordo, o juiz reúne as partes para conciliar.",
+        "prova": [
+          "Assertiva que impede o juiz de promover o entendimento entre as partes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 520"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-522",
+      "unit_id": "c0f1e967-08b0-535c-abe0-9f289b0d8c54",
+      "content_sha256": "2dd70942b8927e3bc3da37dbf72b60117211809f491ecd72b8c124f5e5408866",
+      "simples": "Reconciliação leva ao arquivamento após termo de desistência assinado pelo querelante.",
+      "pontos": [
+        "Formalização da vontade relevante.",
+        "Distinguir diálogo sem termo e ato conclusivo documentado."
+      ],
+      "atencao": [
+        "Não arquivar só porque juiz achou acordo possível, sem condição prevista."
+      ],
+      "exemplo": "Querelante assina desistência após reconciliação e queixa é arquivada. Variação: Promessa informal sem formalização pertinente não é termo assinado.",
+      "prova": [
+        "Querelante assina termo? Sim.",
+        "Possibilidade de acordo basta ao arquivamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Desistência formal",
+          "significado": "Documentação do resultado reconciliatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c0f1e967-08b0-535c-abe0-9f289b0d8c54",
+        "content_sha256": "2dd70942b8927e3bc3da37dbf72b60117211809f491ecd72b8c124f5e5408866",
+        "simples": "No caso de reconciliação, depois de assinado pelo querelante o termo da desistência, a queixa será arquivada.",
+        "pontos": [
+          "Reconciliação: termo de desistência assinado pelo querelante.",
+          "Queixa arquivada."
+        ],
+        "atencao": [
+          "Arquivamento da queixa."
+        ],
+        "exemplo": "Reconciliadas as partes, o querelante assina a desistência e a queixa é arquivada.",
+        "prova": [
+          "Assertiva que prossegue com a ação após a reconciliação e a desistência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 521"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-523",
+      "unit_id": "e8246c29-7e2b-5119-af52-3b4d3c7e68cd",
+      "content_sha256": "a772936d88d775ce1cc9939ef2e5f8fbc6cc844790feb8e8f363ddc29496bd4c",
+      "simples": "Exceção da verdade/notoriedade permite contestação pelo querelante em dois dias e prova testemunhal nos limites.",
+      "pontos": [
+        "Pode utilizar testemunhas já arroladas.",
+        "Substituição/complementação respeita máximo legal.",
+        "Cabimento da exceção depende da lei penal aplicável."
+      ],
+      "atencao": [
+        "Não presumir exceção da verdade cabível em todo crime de honra."
+      ],
+      "exemplo": "Oferecida exceção cabível, querelante contesta e indica prova pertinente. Variação: Injúria não ganha automaticamente defesa de verdade só por este rito.",
+      "prova": [
+        "Prazo de contestação é dois dias? Sim.",
+        "Rito torna exceção cabível em qualquer crime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Contestação da exceção",
+          "significado": "Resposta ao incidente com prova legalmente admitida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e8246c29-7e2b-5119-af52-3b4d3c7e68cd",
+        "content_sha256": "a772936d88d775ce1cc9939ef2e5f8fbc6cc844790feb8e8f363ddc29496bd4c",
+        "simples": "Quando for oferecida a exceção da verdade ou da notoriedade do fato imputado, o querelante poderá contestar a exceção no prazo de dois dias, podendo ser inquiridas as testemunhas arroladas na queixa, ou outras indicadas naquele prazo, em substituição às primeiras, ou para completar o máximo legal.",
+        "pontos": [
+          "Exceção da verdade ou da notoriedade do fato imputado.",
+          "Querelante contesta em dois dias.",
+          "Testemunhas da queixa ou outras indicadas, em substituição ou para completar o máximo."
+        ],
+        "atencao": [
+          "Prazo de dois dias."
+        ],
+        "exemplo": "O querelado opõe exceção da verdade, e o querelante contesta em dois dias.",
+        "prova": [
+          "Assertiva que fixa em cinco dias a contestação da exceção da verdade erra: são dois dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 85"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-524",
+      "unit_id": "f422922c-3b8c-59ae-9c3c-22ff5d25c698",
+      "content_sha256": "1518ddba351afd60bb943531790f7676f41b22d987d7cb987e1fbfa76cc22c1f",
+      "simples": "Propriedade imaterial segue procedimento comum com as modificações próprias deste capítulo.",
+      "pontos": [
+        "Identificar crime e modalidade de ação.",
+        "Art. 530-A separa queixa; 530-I distingue ações públicas.",
+        "Não confundir direito civil autoral e imputação penal."
+      ],
+      "atencao": [
+        "Nem toda controvérsia de titularidade configura crime ou o mesmo rito."
+      ],
+      "exemplo": "Suspeita de violação autoral exige identificar tipo e iniciativa da ação. Variação: Debate contratual sem elementos penais não vira ação criminal automaticamente.",
+      "prova": [
+        "Modalidade de ação importa? Sim.",
+        "Conflito civil sempre é crime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Propriedade imaterial",
+          "significado": "Bem protegido cuja infração penal tem requisitos próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f422922c-3b8c-59ae-9c3c-22ff5d25c698",
+        "content_sha256": "1518ddba351afd60bb943531790f7676f41b22d987d7cb987e1fbfa76cc22c1f",
+        "simples": "No processo e julgamento dos crimes contra a propriedade imaterial, observar-se-á o disposto nos Capítulos I e III do Título I deste Livro, com as modificações constantes dos artigos seguintes.",
+        "pontos": [
+          "Crimes contra a propriedade imaterial seguem o rito comum com modificações."
+        ],
+        "atencao": [
+          "Propriedade imaterial: por exemplo, direitos autorais."
+        ],
+        "exemplo": "A queixa por violação de direito autoral segue o rito comum com adaptações.",
+        "prova": [
+          "Assertiva que cria rito autônomo para crimes contra a propriedade imaterial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 525"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-525",
+      "unit_id": "2f2bf2f2-1a85-5439-b5f2-92ee46914529",
+      "content_sha256": "301dca7e6565260a98d18ff1fa4017e15e5da414f4f62818320633bed037b4c6",
+      "simples": "Se infração deixa vestígio na hipótese do rito, acusação deve vir com exame pericial dos objetos que formam corpo de delito.",
+      "pontos": [
+        "Integrar art. 530-A e ação específica.",
+        "Distinguir constatação técnica de confissão.",
+        "Não admitir falsificação de laudo para preencher requisito."
+      ],
+      "atencao": [
+        "Confissão não substitui automaticamente perícia exigida de vestígios."
+      ],
+      "exemplo": "Objetos são periciados para instruir queixa pertinente. Variação: Foto genérica não é laudo completo por mera denominação.",
+      "prova": [
+        "Vestígio exige cuidado pericial? Sim.",
+        "Confissão sempre elimina exame? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Corpo de delito imaterial",
+          "significado": "Vestígios examinados para comprovar infração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2f2bf2f2-1a85-5439-b5f2-92ee46914529",
+        "content_sha256": "301dca7e6565260a98d18ff1fa4017e15e5da414f4f62818320633bed037b4c6",
+        "simples": "No caso de haver o crime deixado vestígio, a queixa ou a denúncia não será recebida se não for instruída com o exame pericial dos objetos que constituam o corpo de delito.",
+        "pontos": [
+          "Crime com vestígios: a peça acusatória precisa do exame pericial dos objetos."
+        ],
+        "atencao": [
+          "Condição para o recebimento da queixa ou denúncia."
+        ],
+        "exemplo": "Sem o laudo pericial dos objetos, a queixa não é recebida.",
+        "prova": [
+          "Assertiva que dispensa o exame pericial dos objetos para receber a queixa nesses crimes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-526",
+      "unit_id": "3564d3f2-9960-5a93-a90f-0bf26635e0cf",
+      "content_sha256": "95948677345e474dc63a038e411726139321eb2e10ce587b1317023e54c787bd",
+      "simples": "Prova do direito à ação é necessária para receber queixa e ordenar diligência preliminar requerida pelo ofendido.",
+      "pontos": [
+        "Identificar legitimidade e titularidade pertinente.",
+        "Não antecipar conclusão de culpa."
+      ],
+      "atencao": [
+        "Dizer fui prejudicado não prova sozinho direito de agir em qualquer situação."
+      ],
+      "exemplo": "Titular apresenta suporte de legitimidade para medida preliminar. Variação: Terceiro sem direito demonstrado não obtém automaticamente busca penal privada.",
+      "prova": [
+        "Legitimidade precisa ser demonstrada? Sim.",
+        "Isso já prova culpa do acusado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Direito à ação",
+          "significado": "Condição para iniciativa privada e diligência requerida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3564d3f2-9960-5a93-a90f-0bf26635e0cf",
+        "content_sha256": "95948677345e474dc63a038e411726139321eb2e10ce587b1317023e54c787bd",
+        "simples": "Sem a prova de direito à ação, não será recebida a queixa, nem ordenada qualquer diligência preliminarmente requerida pelo ofendido.",
+        "pontos": [
+          "Sem prova do direito à ação, não se recebe a queixa nem se ordenam diligências."
+        ],
+        "atencao": [
+          "Prova do direito à ação."
+        ],
+        "exemplo": "Sem documento que comprove a titularidade do direito, a queixa é rejeitada.",
+        "prova": [
+          "Assertiva que ordena diligências preliminares sem prova do direito à ação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 525"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-527",
+      "unit_id": "28808cab-69ce-5781-a8f4-da16d271e4f5",
+      "content_sha256": "31179dea9b45f7e90d219139b5e57cb643cc6af1752cacda47bc2295c7a13469",
+      "simples": "Busca/apreensão preparatória na ação privada segue dois peritos nomeados e laudo em três dias após diligência.",
+      "pontos": [
+        "Distinção confirmada pelo STJ entre iniciativa privada e pública.",
+        "Requerente pode impugnar laudo contrário; juiz decide fundamento.",
+        "Não transpor indiscriminadamente regra geral de um perito oficial."
+      ],
+      "atencao": [
+        "Distinguir perícia de apreensão na ação privada do regime dos arts. 530-B seguintes."
+      ],
+      "exemplo": "Dois peritos verificam fundamento na diligência preparatória privada. Variação: Ação pública tem disciplina própria e não recebe automaticamente mesmo procedimento.",
+      "prova": [
+        "Laudo tem prazo de três dias após diligência? Sim.",
+        "Rito privado e público são sempre iguais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perícia preparatória privada",
+          "significado": "Controle técnico específico antes da queixa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=18%2F06%2F2015&num_registro=201500795635"
+      ],
+      "expected": {
+        "unit_id": "28808cab-69ce-5781-a8f4-da16d271e4f5",
+        "content_sha256": "31179dea9b45f7e90d219139b5e57cb643cc6af1752cacda47bc2295c7a13469",
+        "simples": "A diligência de busca ou de apreensão será realizada por dois peritos nomeados pelo juiz, que verificarão a existência de fundamento para a apreensão, e, quer esta se realize, quer não, o laudo pericial será apresentado dentro de 3 dias após o encerramento da diligência. O requerente da diligência poderá impugnar o laudo contrário à apreensão, e o juiz ordenará que esta se efetue, se reconhecer a improcedência das razões dos peritos.",
+        "pontos": [
+          "Busca ou apreensão por dois peritos nomeados pelo juiz.",
+          "Laudo em 3 dias após a diligência.",
+          "Impugnação do laudo contrário à apreensão; o juiz pode ordenar a apreensão."
+        ],
+        "atencao": [
+          "Prazo do laudo: 3 dias."
+        ],
+        "exemplo": "Dois peritos verificam o fundamento da apreensão e entregam o laudo em 3 dias.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o prazo do laudo dos peritos erra: são 3 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 528"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-528",
+      "unit_id": "0242fbaf-e0a5-5e31-a583-ad47c843351d",
+      "content_sha256": "5ef25550ea65beb72b5e074161f780ab8c0f2f9a7fc17703f35ac3ce72be5f54",
+      "simples": "Encerradas diligências, autos vão ao juiz para homologar laudo.",
+      "pontos": [
+        "Homologação é ato judicial.",
+        "Marco pode repercutir no prazo do art. 529."
+      ],
+      "atencao": [
+        "Data do exame e data de homologação não são necessariamente iguais."
+      ],
+      "exemplo": "Juiz recebe diligências concluídas e examina homologação. Variação: Não contar prazo da homologação apenas da assinatura do perito.",
+      "prova": [
+        "Homologação é ato do juiz? Sim.",
+        "É sempre a mesma data do laudo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Homologação do laudo",
+          "significado": "Ato judicial de exame da diligência realizada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0242fbaf-e0a5-5e31-a583-ad47c843351d",
+        "content_sha256": "5ef25550ea65beb72b5e074161f780ab8c0f2f9a7fc17703f35ac3ce72be5f54",
+        "simples": "Encerradas as diligências, os autos serão conclusos ao juiz para homologação do laudo.",
+        "pontos": [
+          "Encerradas as diligências, os autos vão ao juiz para homologar o laudo."
+        ],
+        "atencao": [
+          "Homologação do laudo pelo juiz."
+        ],
+        "exemplo": "O juiz homologa o laudo após a conclusão das diligências.",
+        "prova": [
+          "Assertiva que dispensa a homologação do laudo pelo juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 527"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-529",
+      "unit_id": "f7cd62ec-d309-52e7-a6e5-de1dd3b16261",
+      "content_sha256": "1c40723521b0b9ca98412672a2b6f3b16644c7c88fe95c6ce5caf5bee51b7d04",
+      "simples": "Queixa fundada em apreensão/perícia tem prazo de trinta dias após homologação, harmonizado com decadência geral.",
+      "pontos": [
+        "STJ: ciência de autoria inicia seis meses; homologação no intervalo reduz a trinta dias.",
+        "Não usar homologação para reviver direito já decaído.",
+        "Parágrafo: vista ao MP na situação de ação pública descrita."
+      ],
+      "atencao": [
+        "Não ensinar trinta dias como substituto isolado universal dos seis meses em toda propriedade imaterial."
+      ],
+      "exemplo": "Homologação durante prazo geral exige observar também prazo específico. Variação: Se direito já decaiu, laudo posterior não o ressuscita.",
+      "prova": [
+        "Homologação revive direito decaído? Não.",
+        "Trinta dias exige integração com prazo geral? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo especial da queixa",
+          "significado": "Marco pericial integrado à decadência penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/12052021-Homologacao-de-pericia-reduz-para-30-dias-prazo-decadencial-em-crime-contra-propriedade-imaterial.aspx"
+      ],
+      "expected": {
+        "unit_id": "f7cd62ec-d309-52e7-a6e5-de1dd3b16261",
+        "content_sha256": "1c40723521b0b9ca98412672a2b6f3b16644c7c88fe95c6ce5caf5bee51b7d04",
+        "simples": "Nos crimes de ação privativa do ofendido, não será admitida queixa com fundamento em apreensão e em perícia, se decorrido o prazo de 30 dias, após a homologação do laudo. Será dada vista ao Ministério Público dos autos de busca e apreensão requeridas pelo ofendido, se o crime for de ação pública e não tiver sido oferecida queixa no prazo fixado neste artigo.",
+        "pontos": [
+          "Ação privada: queixa com fundamento em apreensão e perícia no prazo de 30 dias da homologação do laudo.",
+          "Ação pública: vista ao MP se não houver queixa no prazo."
+        ],
+        "atencao": [
+          "Prazo de 30 dias da homologação do laudo."
+        ],
+        "exemplo": "Passados 30 dias da homologação, não se admite mais a queixa baseada na apreensão.",
+        "prova": [
+          "Assertiva que fixa em 8 dias o prazo para a queixa nesse caso, fora do flagrante, erra: são 30 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530",
+      "unit_id": "6859a687-c4ae-50e6-b34e-309167548c97",
+      "content_sha256": "98562123feaa4edd7448141952ad24441c1650643a63b9e026855886d82baa2a",
+      "simples": "Flagrante sem libertação reduz a oito dias o prazo referido no art. 529 na hipótese especial.",
+      "pontos": [
+        "Condições cumulativas: flagrante e não posto em liberdade.",
+        "Marco deve ser lido com artigo anterior.",
+        "Não é prazo geral de resposta ou de toda queixa."
+      ],
+      "atencao": [
+        "Não aplicar oito dias a qualquer infração só porque houve prisão alguma vez."
+      ],
+      "exemplo": "Flagrante e permanência preso exigem verificar prazo especial do capítulo. Variação: Liberado não preenche condição apenas por ter sido autuado antes.",
+      "prova": [
+        "Libertação altera condição da hipótese? Sim.",
+        "É prazo universal da resposta à acusação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prazo especial reduzido",
+          "significado": "Regra da hipótese de flagrante sem libertação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6859a687-c4ae-50e6-b34e-309167548c97",
+        "content_sha256": "98562123feaa4edd7448141952ad24441c1650643a63b9e026855886d82baa2a",
+        "simples": "Se ocorrer prisão em flagrante e o réu não for posto em liberdade, o prazo a que se refere o artigo anterior será de 8 dias.",
+        "pontos": [
+          "Flagrante com réu preso: prazo de 8 dias para a queixa."
+        ],
+        "atencao": [
+          "Prazo de 8 dias."
+        ],
+        "exemplo": "Réu preso em flagrante e mantido preso: a queixa deve vir em 8 dias.",
+        "prova": [
+          "Assertiva que mantém o prazo de 30 dias para o réu preso em flagrante erra: são 8 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 529"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-a",
+      "unit_id": "974266c0-7612-5e87-be4a-f2dd196e2937",
+      "content_sha256": "e1940ed6b9b8311a868621cd7135d35b74b10f0548162b6da82d2252577d2415",
+      "simples": "Arts. 524–530 aplicam-se aos crimes processados mediante queixa.",
+      "pontos": [
+        "Modalidade de ação delimita remissão.",
+        "Contrastar com art. 530-I nas ações públicas."
+      ],
+      "atencao": [
+        "Não aplicar o bloco privado a toda violação autoral sem identificar iniciativa."
+      ],
+      "exemplo": "Crime de ação privada segue modificações referidas. Variação: Tipo com ação pública exige examinar outro conjunto de regras.",
+      "prova": [
+        "Artigo delimita ao procedimento por queixa? Sim.",
+        "Toda ação autoral é privada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Delimitação da queixa",
+          "significado": "Separação entre regimes de iniciativa penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "974266c0-7612-5e87-be4a-f2dd196e2937",
+        "content_sha256": "e1940ed6b9b8311a868621cd7135d35b74b10f0548162b6da82d2252577d2415",
+        "simples": "O disposto nos arts. 524 a 530 será aplicável aos crimes em que se proceda mediante queixa.",
+        "pontos": [
+          "Arts. 524 a 530 aplicam-se aos crimes de ação por queixa."
+        ],
+        "atencao": [
+          "Alcance dos arts. 524 a 530."
+        ],
+        "exemplo": "A violação de direito autoral de ação privada segue os arts. 524 a 530.",
+        "prova": [
+          "Assertiva que aplica os arts. 524 a 530 aos crimes de ação pública incondicionada erra: para estes valem os arts. 530-B a 530-H."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-b",
+      "unit_id": "a479d81d-0369-5e5f-8311-b3798b446248",
+      "content_sha256": "d83645fe1dfa426350495f0df6358d8b0b44a6b3c696b8489d435010e233637f",
+      "simples": "Nos §§1º–3º do art. 184/CP, apreender bens ilícitos e meios destinados principalmente à prática ilícita.",
+      "pontos": [
+        "Produtos/reproduções em totalidade.",
+        "Equipamentos, suportes e materiais com destinação precípua.",
+        "Respeitar legalidade da diligência e documentação."
+      ],
+      "atencao": [
+        "Não confiscar qualquer bem pessoal só por estar no local."
+      ],
+      "exemplo": "Equipamento principalmente utilizado para reprodução ilícita é examinado na apreensão. Variação: Computador sem vínculo de destinação precípua não entra automaticamente só por proximidade.",
+      "prova": [
+        "Todo bem próximo é apreendido automaticamente? Não.",
+        "Destinação principal do equipamento importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação precípua",
+          "significado": "Uso principal voltado à prática ilícita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a479d81d-0369-5e5f-8311-b3798b446248",
+        "content_sha256": "d83645fe1dfa426350495f0df6358d8b0b44a6b3c696b8489d435010e233637f",
+        "simples": "Nos casos das infrações previstas nos §§ 1º, 2º e 3º do art. 184 do Código Penal (violação de direitos autorais), a autoridade policial procederá à apreensão dos bens ilicitamente produzidos ou reproduzidos, em sua totalidade, juntamente com os equipamentos, suportes e materiais que possibilitaram a sua existência, desde que estes se destinem precipuamente à prática do ilícito.",
+        "pontos": [
+          "Violação de direitos autorais: apreensão pela autoridade policial.",
+          "Bens ilicitamente produzidos ou reproduzidos, em sua totalidade.",
+          "Equipamentos, suportes e materiais destinados precipuamente ao ilícito."
+        ],
+        "atencao": [
+          "Apreensão integral dos bens e dos equipamentos destinados ao ilícito."
+        ],
+        "exemplo": "A polícia apreende as cópias piratas e os equipamentos de reprodução.",
+        "prova": [
+          "Assertiva que limita a apreensão a uma amostra dos bens ilícitos erra: é em sua totalidade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 184 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-c",
+      "unit_id": "7590d2f2-cd02-5e32-ae9f-881b82d106bf",
+      "content_sha256": "d1abbda90793469e01ec4bae7166a468b5de20fd87d4ddeb209fb182f556deb2",
+      "simples": "Apreensão gera termo com descrição dos bens e origem, assinado por duas ou mais testemunhas.",
+      "pontos": [
+        "Integrar inquérito ou processo.",
+        "Descrição permite controle e rastreabilidade."
+      ],
+      "atencao": [
+        "Não registrar lote como objetos diversos sem dados suficientes."
+      ],
+      "exemplo": "Termo individualiza material e informações de procedência. Variação: Assinatura de uma só testemunha não cumpre número textual exigido.",
+      "prova": [
+        "São pelo menos duas testemunhas? Sim.",
+        "Termo integra investigação/processo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Termo de apreensão",
+          "significado": "Registro dos bens e da diligência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7590d2f2-cd02-5e32-ae9f-881b82d106bf",
+        "content_sha256": "d1abbda90793469e01ec4bae7166a468b5de20fd87d4ddeb209fb182f556deb2",
+        "simples": "Na ocasião da apreensão será lavrado termo, assinado por 2 ou mais testemunhas, com a descrição de todos os bens apreendidos e informações sobre suas origens, o qual deverá integrar o inquérito policial ou o processo.",
+        "pontos": [
+          "Termo de apreensão assinado por 2 ou mais testemunhas.",
+          "Descrição de todos os bens e informações sobre suas origens.",
+          "Integra o inquérito ou o processo."
+        ],
+        "atencao": [
+          "Duas ou mais testemunhas."
+        ],
+        "exemplo": "O termo de apreensão lista os bens e é assinado por duas testemunhas.",
+        "prova": [
+          "Assertiva que dispensa testemunhas no termo de apreensão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-d",
+      "unit_id": "9ef0f97d-9fad-5f09-b80b-b8a87c8dc3e5",
+      "content_sha256": "408b6a5f4aeb2972268f6543761eee1302dbc5f32f24dae7a4d3c100ef76f667",
+      "simples": "Após apreensão, perícia e laudo integram procedimento, por oficial ou, faltando, tecnicamente habilitado.",
+      "pontos": [
+        "Examinar bens apreendidos e autenticidade pertinente.",
+        "Integrar jurisprudência sobre amostragem no tipo específico.",
+        "Não exigir automaticamente identificação de cada titular em hipótese sumulada.",
+        "Súmula574/STJ: materialidade da violação autoral pode ser demonstrada por amostragem dos aspectos externos; dispensa identificar titulares na hipótese sumulada."
+      ],
+      "atencao": [
+        "A redação todos os bens não autoriza ignorar perícia nem resolver regras de amostragem sem fonte e hipótese específica."
+      ],
+      "exemplo": "Lote de mídias no art.184, §2º: laudo por amostragem dos aspectos externos pode demonstrar materialidade conforme Súmula574. Variação: amostragem não equivale a dispensar laudo nem demonstra por si todos os outros elementos do crime.",
+      "prova": [
+        "Precisa sempre periciar individualmente cada mídia para materialidade nessa hipótese? Não, amostragem é admitida.",
+        "Amostragem dispensa laudo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perícia autoral",
+          "significado": "Exame técnico das características relevantes do material."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%40cod%3D%270585%27"
+      ],
+      "expected": {
+        "unit_id": "9ef0f97d-9fad-5f09-b80b-b8a87c8dc3e5",
+        "content_sha256": "408b6a5f4aeb2972268f6543761eee1302dbc5f32f24dae7a4d3c100ef76f667",
+        "simples": "Subsequente à apreensão, será realizada, por perito oficial, ou, na falta deste, por pessoa tecnicamente habilitada, perícia sobre todos os bens apreendidos e elaborado o laudo que deverá integrar o inquérito policial ou o processo.",
+        "pontos": [
+          "Perícia sobre todos os bens apreendidos.",
+          "Perito oficial ou, na falta, pessoa tecnicamente habilitada.",
+          "Laudo integra o inquérito ou o processo."
+        ],
+        "atencao": [
+          "Perícia de TODOS os bens apreendidos."
+        ],
+        "exemplo": "Um perito oficial examina os bens apreendidos e elabora o laudo.",
+        "prova": [
+          "Assertiva que restringe a perícia a uma amostra dos bens erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-e",
+      "unit_id": "575c587d-4551-519e-8588-3d9704371fbb",
+      "content_sha256": "69b46251efd7f748b3017c9f1a60d9fd3d65217a161df7635b49cb72ec7c8f20",
+      "simples": "Titulares autorais/conexos são fiéis depositários dos bens, à disposição do juiz ao ajuizar ação.",
+      "pontos": [
+        "Depósito não é autorização de venda ou descarte livre.",
+        "Preservar apresentação judicial."
+      ],
+      "atencao": [
+        "Ser titular do direito não transforma apreensão em aquisição irrestrita dos objetos."
+      ],
+      "exemplo": "Depositário conserva bens para disponibilizar ao juízo. Variação: Destruir sem hipótese e ordem próprias pode prejudicar prova.",
+      "prova": [
+        "Depositário pode vender livremente? Não.",
+        "Bens devem ficar disponíveis ao juiz? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fiel depósito",
+          "significado": "Guarda com dever de preservação e apresentação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "575c587d-4551-519e-8588-3d9704371fbb",
+        "content_sha256": "69b46251efd7f748b3017c9f1a60d9fd3d65217a161df7635b49cb72ec7c8f20",
+        "simples": "Os titulares de direito de autor e os que lhe são conexos serão os fiéis depositários de todos os bens apreendidos, devendo colocá-los à disposição do juiz quando do ajuizamento da ação.",
+        "pontos": [
+          "Titulares de direitos autorais e conexos são fiéis depositários dos bens apreendidos.",
+          "Devem colocá-los à disposição do juiz quando da ação."
+        ],
+        "atencao": [
+          "Os próprios titulares guardam os bens."
+        ],
+        "exemplo": "A associação titular dos direitos guarda os bens apreendidos até a ação.",
+        "prova": [
+          "Assertiva que torna a polícia a depositária dos bens apreendidos nesses crimes erra."
+        ],
+        "termos": [
+          {
+            "termo": "Fiel depositário",
+            "significado": "Quem guarda o bem à disposição do juízo."
+          }
+        ],
+        "remissoes": [
+          "Art. 530-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-f",
+      "unit_id": "50693aac-3c5e-5aed-bd50-0ae078707246",
+      "content_sha256": "663d2fa1946d89d988d8f423967e57b0c3c8600887172c772c9c56559de4de6c",
+      "simples": "Juiz pode destruir reprodução ilícita a pedido da vítima nas hipóteses legais, preservando possibilidade de corpo de delito.",
+      "pontos": [
+        "Sem impugnação da ilicitude ou sem autor identificado para iniciar ação.",
+        "Decisão judicial e pedido exigidos.",
+        "Preservação probatória importa."
+      ],
+      "atencao": [
+        "Não destruir automaticamente tudo na apreensão nem eliminar vestígio necessário."
+      ],
+      "exemplo": "Vítima pede destruição em hipótese legal e juiz assegura preservação pertinente. Variação: Havendo controvérsia técnica relevante, não presumir ilicitude incontroversa.",
+      "prova": [
+        "Pedido da vítima é previsto? Sim.",
+        "Destruição dispensa cuidado com prova? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Destruição antecipada autorizada",
+          "significado": "Destinação judicial sujeita às condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "50693aac-3c5e-5aed-bd50-0ae078707246",
+        "content_sha256": "663d2fa1946d89d988d8f423967e57b0c3c8600887172c772c9c56559de4de6c",
+        "simples": "Ressalvada a possibilidade de se preservar o corpo de delito, o juiz poderá determinar, a requerimento da vítima, a destruição da produção ou reprodução apreendida quando não houver impugnação quanto à sua ilicitude ou quando a ação penal não puder ser iniciada por falta de determinação de quem seja o autor do ilícito.",
+        "pontos": [
+          "Destruição da produção ou reprodução apreendida, a requerimento da vítima.",
+          "Cabimento: sem impugnação da ilicitude, ou impossibilidade de iniciar a ação por falta de autoria determinada.",
+          "Ressalvada a preservação do corpo de delito."
+        ],
+        "atencao": [
+          "Preservar o corpo de delito."
+        ],
+        "exemplo": "Sem autoria determinada, o juiz autoriza a destruição das cópias ilícitas.",
+        "prova": [
+          "Assertiva que destrói os bens sem preservar o corpo de delito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-G"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-g",
+      "unit_id": "00c325d1-e0ea-57c5-8b83-e62bb41807a4",
+      "content_sha256": "f9478d2cbfd95f54aedf42e18169c49273f2b816fbfa207056723439ad3677ca",
+      "simples": "Na condenação, juiz pode determinar destruição dos bens ilícitos e perdimento de equipamentos principalmente destinados à reprodução.",
+      "pontos": [
+        "Perdimento em favor da Fazenda Nacional.",
+        "Destinação: destruir, doar aos entes/instituições indicados ou incorporar à União por interesse/economia.",
+        "Não retornar aos canais de comércio."
+      ],
+      "atencao": [
+        "Não estender perdimento a equipamento sem destinação precípua nem vender de volta ao comércio."
+      ],
+      "exemplo": "Equipamento destinado ao ilícito recebe destinação judicial legal. Variação: Bem de uso legítimo sem requisito não é perdido automaticamente por estar apreendido.",
+      "prova": [
+        "Pode retornar ao comércio? Não.",
+        "Uso principal ilícito importa no equipamento? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação na condenação",
+          "significado": "Consequências patrimoniais específicas da sentença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "00c325d1-e0ea-57c5-8b83-e62bb41807a4",
+        "content_sha256": "f9478d2cbfd95f54aedf42e18169c49273f2b816fbfa207056723439ad3677ca",
+        "simples": "O juiz, ao proferir a sentença condenatória, poderá determinar a destruição dos bens ilicitamente produzidos ou reproduzidos e o perdimento dos equipamentos apreendidos, desde que precipuamente destinados à produção e reprodução dos bens, em favor da Fazenda Nacional, que deverá destruí-los ou doá-los aos Estados, Municípios e Distrito Federal, a instituições públicas de ensino e pesquisa ou de assistência social, bem como incorporá-los, se houver interesse, ao patrimônio da União, que não poderá retorná-los aos canais de comércio.",
+        "pontos": [
+          "Sentença condenatória: destruição dos bens ilícitos.",
+          "Perdimento dos equipamentos destinados precipuamente à produção.",
+          "Destino: Fazenda Nacional destrói, doa a entes e instituições ou incorpora ao patrimônio da União.",
+          "Não retornam aos canais de comércio."
+        ],
+        "atencao": [
+          "Os bens não podem voltar ao comércio."
+        ],
+        "exemplo": "Na condenação, os equipamentos de reprodução são perdidos em favor da Fazenda Nacional.",
+        "prova": [
+          "Assertiva que permite o retorno dos bens ao comércio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-F"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-h",
+      "unit_id": "982e8019-31fc-5853-ad92-9739f9b3f16d",
+      "content_sha256": "202bc6c6609adaad15542b398a46b94ac22dbe94e37e0549409b602bcba8783e",
+      "simples": "Associação de titulares pode atuar em próprio nome como assistente se crime do art.184 lesar associado.",
+      "pontos": [
+        "Identificar direito e associado atingido.",
+        "Não confundir assistente com substituição ilimitada do MP."
+      ],
+      "atencao": [
+        "Vínculo associativo e hipótese penal são condições, não ingresso automático de qualquer entidade."
+      ],
+      "exemplo": "Associação demonstra lesão a membro e pede assistência. Variação: Entidade sem relação com titular lesado não recebe legitimidade só por interesse genérico.",
+      "prova": [
+        "Atuação pode ser em próprio nome? Sim.",
+        "Qualquer entidade tem acesso automático? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Assistência associativa",
+          "significado": "Atuação prevista de associação de titulares lesados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "982e8019-31fc-5853-ad92-9739f9b3f16d",
+        "content_sha256": "202bc6c6609adaad15542b398a46b94ac22dbe94e37e0549409b602bcba8783e",
+        "simples": "As associações de titulares de direitos de autor e os que lhes são conexos poderão, em seu próprio nome, funcionar como assistente da acusação nos crimes previstos no art. 184 do Código Penal, quando praticado em detrimento de qualquer de seus associados.",
+        "pontos": [
+          "Associações de titulares de direitos autorais e conexos podem ser assistentes da acusação, em nome próprio.",
+          "Crimes do art. 184 do CP, em detrimento de associados."
+        ],
+        "atencao": [
+          "Legitimidade da associação como assistente."
+        ],
+        "exemplo": "A associação de autores atua como assistente da acusação em crime contra seus associados.",
+        "prova": [
+          "Assertiva que nega às associações a possibilidade de atuar como assistente da acusação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-530-i",
+      "unit_id": "db23bfbc-e543-5eec-b782-831f98e6de20",
+      "content_sha256": "d950e14a958406872756bd1a1f0a8ed3a367e771e098e4d6e7b9312a5f726582",
+      "simples": "Nas ações públicas condicionadas ou incondicionadas, aplicam-se arts. 530-B–H.",
+      "pontos": [
+        "Identificar condição de procedibilidade quando exigida.",
+        "Não confundir ação condicionada com queixa privada."
+      ],
+      "atencao": [
+        "Referência a ação pública não elimina representação quando legalmente necessária."
+      ],
+      "exemplo": "Tipo de ação pública utiliza apreensão, perícia e demais regras pertinentes. Variação: Se condicionada, verificar manifestação exigida antes de presumir ação livre de condição.",
+      "prova": [
+        "Abrange pública condicionada? Sim.",
+        "Condicionada equivale a queixa privada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Regime da ação pública",
+          "significado": "Disciplina especial para iniciativa acusatória pública."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "db23bfbc-e543-5eec-b782-831f98e6de20",
+        "content_sha256": "d950e14a958406872756bd1a1f0a8ed3a367e771e098e4d6e7b9312a5f726582",
+        "simples": "Nos crimes em que caiba ação penal pública incondicionada ou condicionada, observar-se-ão as normas constantes dos arts. 530-B, 530-C, 530-D, 530-E, 530-F, 530-G e 530-H.",
+        "pontos": [
+          "Ação penal pública (incondicionada ou condicionada): aplicam-se os arts. 530-B a 530-H."
+        ],
+        "atencao": [
+          "Os arts. 524 a 530 valem para a queixa; os 530-B a 530-H, para a ação pública."
+        ],
+        "exemplo": "Em crime de ação pública contra direitos autorais, aplicam-se as regras de apreensão e perícia dos arts. 530-B a 530-H.",
+        "prova": [
+          "Assertiva que aplica os arts. 524 a 530 aos crimes de ação pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 530-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    }
+  ]
+}

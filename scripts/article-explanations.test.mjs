@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP procedimentos especiais separa defesa e regimes periciais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-special-procedures-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(514).pontos.join(' '),/não dispensa|STJ dispensa/);
+ assert.match(get(529).pontos.join(' '),/Não usar homologação para reviver/);
+ assert.match(get('530-d').exemplo,/Súmula574/);
+ assert.match(get('530-g').pontos.join(' '),/Não retornar aos canais de comércio/);
+ for(const n of [514,529,'530-d'])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP plenário integra garantias, recursos e execução do júri',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-verdict-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
