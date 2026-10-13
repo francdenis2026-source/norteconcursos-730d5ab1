@@ -2,6 +2,22 @@ import test from "node:test";
 import fs from "node:fs";
 import assert from 'node:assert/strict';
 import {usableArticleSource} from './article-explanation-package.mjs';
+import {legalStudyCaveat} from '../src/lib/legalStudyCaveats.ts';
+
+test('CPP: regras afastadas pelo STF não geram treino literal e custódia integra 2026',()=>{
+ for(const key of ['art-1','art-3-a','art-3-b','art-3-c','art-3-d','art-3-e']) {
+  assert.equal(legalStudyCaveat('codigo-processo-penal',key)?.literalPractice,false,key);
+ }
+ const pack=JSON.parse(fs.readFileSync('docs/library/article-explanations-cpp-foundations-2026-10-12.json','utf8'));
+ const c=pack.units.find(u=>u.unit_key==='art-3-c');
+ assert.match(c.pontos.join(' '),/OFERECIMENTO/);
+ assert.match(c.pontos.join(' '),/sem dispensar|não elimina/);
+ const b=pack.units.find(u=>u.unit_key==='art-3-b');
+ assert.match(b.pontos.join(' '),/15\.358\/2026/);
+ assert.match(b.pontos.join(' '),/não revoga automaticamente/);
+ assert.match(pack.units.find(u=>u.unit_key==='art-3-d').simples,/inconstitucionais/);
+ assert.equal(pack.units.length,9);
+});
 
 // Estrutura mínima de cada explicação por artigo (a conferência contra o texto oficial roda em scripts/explicacoes/build.mjs).
 for (const file of fs.readdirSync("scripts/explicacoes").filter((f) => f.endsWith(".json"))) {

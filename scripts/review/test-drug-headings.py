@@ -3,6 +3,11 @@ import importlib.util,unittest
 from pathlib import Path
 s=importlib.util.spec_from_file_location('parser',Path(__file__).parents[1]/'build-legal-curriculum.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 class DrugHeadings(unittest.TestCase):
+ def test_cpp_guarantees_heading_is_not_article_three(self):
+  raw='<p>Art. 3. Interpretação.</p><p>Juiz das Garantias</p><p>(Incluído pela Lei nº 13.964, de 2019) (Vigência)</p><p>Art. 3-A. Acusatório. (Incluído pela Lei nº 13.964, de 2019)</p>'
+  us={u['key']:u for u in m.parse_law(raw.encode(),'codigo-processo-penal')}
+  self.assertEqual(us['art-3']['text'],'Art. 3. Interpretação.')
+  self.assertIn('(Incluído pela Lei',us['art-3-a']['text'])
  def parse(self,text):return {u['key']:u for u in m.parse_law(text.encode(),'drogas')}
  def test_mixed_heading_levels_do_not_pollute_articles(self):
   us=self.parse('<h4>TÍTULO IV</h4><h5>DA REPRESSÃO</h5><h4>CAPÍTULO II</h4><h5>DOS CRIMES</h5><p>Art. 33. Regra criminal.</p><h4>CAPÍTULO III</h4><h5>DO PROCEDIMENTO PENAL</h5><p>Art. 48. Regra processual.</p>')

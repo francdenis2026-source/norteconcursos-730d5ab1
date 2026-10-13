@@ -1,5 +1,17 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  const cppFoundations: Record<string, [string, string, string]> = {
+    "art-1": ["Remissões históricas e Constituição", "Incisos II/IV remetem à Constituição histórica; não criar tribunal de exceção. ADPF 130 afastou a Lei de Imprensa. Conferir Constituição e regime especial antes de exercício literal.", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"],
+    "art-3-a": ["Estrutura acusatória e diligência delimitada", "STF admite diligência suplementar pontual, legalmente autorizada, para dúvida relevante no julgamento; não autoriza juiz investigador ou substituição da acusação.", "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274"],
+    "art-3-b": ["Custódia em 2026 e leitura constitucional", "Lei 15.358/2026 alterou o §1º para videoconferência em 24 horas com requisitos do art. 310. Distinguir da disciplina anterior. STF: oferecimento encerra competência e prazo vencido não revoga preventiva automaticamente. ADIs da lei nova exigem acompanhamento; audiência pública não é julgamento.", "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm"],
+    "art-3-c": ["Oferecimento, autos e exceções", "Competência cessa no oferecimento, não recebimento. Autos passam à instrução; não ensinar retenção absoluta. CNJ 562 lista exceções, inclusive Júri e violência doméstica, sem dispensar custódia.", "https://atos.cnj.jus.br/atos/detalhar/5601"],
+    "art-3-d": ["Dispositivo declarado inconstitucional", "STF declarou inconstitucionais caput e parágrafo único. Não transformar impedimento literal ou rodízio em regra universal; observar organização judiciária e demais causas próprias de impedimento/suspeição.", "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274"],
+    "art-3-e": ["Investidura objetiva", "Designado não autoriza escolha discricionária por caso. Investidura, promoção/remoção e divulgação de critérios seguem organização judiciária e CNJ.", "https://atos.cnj.jus.br/atos/detalhar/5601"],
+  };
+  if (law === "codigo-processo-penal" && cppFoundations[key]) {
+    const [title, explanation, source] = cppFoundations[key];
+    return {title, explanation, source, literalPractice: false};
+  }
   const penalGeneralNotes: Record<string, [string, string, string]> = {
     "art-153": ["Multa histórica e sigilo", "A divulgação deve poder produzir DANO a outrem. Informações sigilosas da Administração: pena maior (1 a 4 anos). Moeda em mil-réis é histórica; integrar regime de dias-multa, não converter valores por palpite.", "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"],
     "art-154": ["Segredo profissional e regime atual", "A 'justa causa' afasta o crime (ex.: dever legal de comunicar). Referência monetária histórica não é tabela atual de multa; justa causa exige fundamento pertinente, não autorização genérica.", "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"],
