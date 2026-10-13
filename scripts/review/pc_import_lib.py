@@ -125,7 +125,7 @@ def run(exam, items, gab, decisions, dry=False):
             row["law_version_checked_at"] = __import__("datetime").datetime.utcnow().isoformat() + "Z"
         rows.append(row)
     from urllib.parse import quote
-    have = rest("GET", f"official_exam_questions?select=item_number&exam_year=eq.{e['year']}&contest_name=eq.{quote(who)}&limit=1000") or []
+    have = rest("GET", f"official_exam_questions?select=item_number&exam_year=eq.{e['year']}&contest_name=eq.{quote(who)}&item_number=in.({",".join(str(i["n"]) for i in items)})&limit=1000") or []
     assert not have, f"já existem {len(have)} linhas de {who}; confira antes de regravar"
     for i in range(0, len(rows), 25):
         rest("POST", "official_exam_questions", rows[i:i + 25], "return=minimal")
