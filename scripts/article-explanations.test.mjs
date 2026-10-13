@@ -1,4 +1,22 @@
 import test from 'node:test';
+test('CTB motofrete distinguishes expired provisional measure from current restored requirements',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-03-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('139-a').simples,/categoria de aluguel.*inspeção semestral.*ENCERRADA em 15\/9\/2026/s);
+ assert.match(get('139-a').atencao.join(' '),/relações constituídas.*§§3º\/11/s);
+ assert.ok(!get('139-a').atencao.some(x=>/inciso sobre registro como categoria de aluguel tem vigência encerrada/.test(x)));
+ assert.equal(legalStudyCaveat('transito','art-139-a').literalPractice,false);
+ assert.match(get(138).remissoes.join(' '),/Resolucao10202025/);
+});
+test('CTB inspection and registration integrate suspended program and specific documentary exceptions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-03-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(104).simples,/716\/2017.*suspenso.*170\/2018.*Inspeções específicas/s);
+ assert.match(get(115).simples,/§9º.*969\/2022.*QR Code.*lacre eletrônico/s);
+ assert.match(get(124).prova.join(' '),/Não.*determina cobrança.*proprietário anterior/s);
+ assert.match(get(131).pontos.join(' '),/um ano.*informação.*EXCEPCIONAL/s);
+ assert.match(get('134-a').prova.join(' '),/31\/12\/2025.*13\/10\/2026/s);
+ for(const n of [104,115,124,131,'134-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
 test('CTB driver rest and residual SPVAT text cannot produce unqualified literal exercises',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-02-2026-10-13.json','utf8'));validateArticlePackage(p);
  assert.equal(p.units.length,50);
