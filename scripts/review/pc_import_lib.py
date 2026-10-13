@@ -39,6 +39,9 @@ def url_ok(u):
 
 
 def clean(it):
+    if it.get("ce"):                      # certo/errado: comando + item
+        cmd = re.sub(r"^--[^-]*--\s*", "", it["command"]).strip()
+        return (it["stem"] or "[Enunciado não extraído do PDF; conferir no caderno oficial.]"), cmd, {}
     """Corrige as falhas conhecidas do extrator (estende o enunciado quando a letra A engole a pergunta)."""
     o = dict(it["options"])
     stem, ctx = it["stem"].strip(), it["context"].strip()
@@ -55,6 +58,8 @@ def clean(it):
 
 
 def question_text(stem, ctx, o):
+    if not o:
+        return (("Comando:\n" + ctx + "\n\n") if ctx else "") + "Item: " + stem
     base = ("Texto-base:\n" + ctx + "\n\n") if len(ctx) > 250 else (("Comando:\n" + ctx + "\n\n") if ctx else "")
     return base + stem + "\n" + "\n".join(f"({k}) {o[k]}" for k in "ABCDE")
 

@@ -62,8 +62,10 @@ for (const s of sources) {
     for (const f of found) {
       const [slug, art] = f.split("|");
       const law = (laws[slug] ??= {});
-      const a = (law[art] ??= { n: 0, r: 0, p: 0, g: {}, c: [] });
+      const a = (law[art] ??= { n: 0, r: 0, p: 0, w: 0, y: 0, g: {}, c: [] });
       a.n++;
+      a.w += year ? 1 + Math.max(0, year - 2018) * 0.25 : 1; // prova recente pesa mais (tendência)
+      a.y = Math.max(a.y, year ?? 0);
       if (how === "r") a.r++;
       if (s.kind === "prova") a.p++;
       a.g[group] = (a.g[group] ?? 0) + 1;
@@ -72,6 +74,7 @@ for (const s of sources) {
     }
   }
 }
+for (const l of Object.values(laws)) for (const a of Object.values(l)) a.w = Math.round(a.w * 10) / 10;
 const out = { generatedAt: new Date().toISOString().slice(0, 10), questions, withRef, laws };
 writeFileSync("src/data/artigosCobrados.json", JSON.stringify(out));
 const arts = Object.values(laws).reduce((n, l) => n + Object.keys(l).length, 0);
