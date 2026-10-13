@@ -13,6 +13,23 @@ import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
 
+test('CPP competência: Constituição, foro 2026 e ressalva do Júri não se confundem com referências antigas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-civil-jurisdiction-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,29);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.ok(p.units.every(r=>r.expected&&explanationExample(r.exemplo).variation&&r.prova.every(q=>explanationPractice(q))));
+ assert.match(get(65).pontos.join(' '),/929.*930.*terceiro inocente/);
+ assert.match(get(68).pontos.join(' '),/intimar Defensoria/);
+ assert.match(get(70).pontos.join(' '),/domicílio da vítima.*prevenção/);
+ assert.match(get(74).pontos.join(' '),/121-A/);
+ assert.match(get(78).atencao.join(' '),/15.358.*audiência não é julgamento/s);
+ assert.match(get(84).pontos.join(' '),/maio de 2026.*vitalícios/);
+ assert.match(get(84).pontos.join(' '),/período eleitoral.*exceções/);
+ assert.match(get(84).pontos.join(' '),/imediata.*instrução finalizada/);
+ assert.match(get(89).atencao.join(' '),/canoa.*navio/);
+ for(const n of [65,68,74,75,77,78,79,83,84,85,86,87,89,90])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n)?.literalPractice,false);
+});
+
 test('CPP ação penal: prazos novos, ANPP e regras etárias não viram pegadinhas desatualizadas',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-action-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,38);
