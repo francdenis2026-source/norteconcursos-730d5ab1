@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-13T23:36:53.914243+00:00",
+  "id": "facbb40f-b1e8-4456-95d6-e783e19311f7",
+  "item_number": 40,
+  "source_page": 12,
+  "decision": "archived",
+  "official_answer_preserved": "B",
+  "raw_and_question_preserved": true,
+  "legal_basis": [
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "norma": "Código de Processo Penal",
+      "artigo": "art. 322"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "norma": "Código Penal",
+      "artigo": "arts. 14, parágrafo único, e 155, § 4º"
+    }
+  ],
+  "evidence": {
+    "legal": true,
+    "reason": "Retirada pedagógica: a justificativa de ativação anterior aplicou automaticamente redução máxima de 2/3 à tentativa para enquadrar a pena no art. 322 do CPP. O art. 14 do CP prevê intervalo de 1/3 a 2/3; a pena máxima de oito anos, com a menor redução, resulta em cinco anos e quatro meses. O simples reconhecimento de tentativa não resolve a competência policial para fiança. O gabarito definitivo B e o caderno foram conferidos e preservados; não se troca por E, não se declara anulação da banca e não se afirma impossibilidade de fiança judicial. Ausente fundamento oficial que reconcilie a resposta com o critério de pena máxima, o item fica fora do treino.",
+    "sources": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+      "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF"
+    ]
+  }
+}
