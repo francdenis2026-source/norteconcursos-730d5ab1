@@ -1,0 +1,1264 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:08:56.432454+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-373",
+        "art-374",
+        "art-375",
+        "art-376",
+        "art-377",
+        "art-378",
+        "art-379",
+        "art-380",
+        "art-381",
+        "art-382",
+        "art-383",
+        "art-384",
+        "art-385",
+        "art-386",
+        "art-387",
+        "art-388",
+        "art-389",
+        "art-390",
+        "art-391",
+        "art-392"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-373",
+      "unit_id": "8679769b-60b7-5b51-afc1-6fd4b68203dc",
+      "content_sha256": "6d34b92b6401f50dda7fea764f4ca5694bb2f45195c79027672349c335da5de4",
+      "simples": "Dispositivo do regime histórico de interdições provisórias: não usar como autorização atual genérica para antecipar pena.",
+      "pontos": [
+        "Texto distingue instrução, pronúncia, confirmação e condenação recorrível.",
+        "Prazo histórico de dois dias não substitui o procedimento da cautelar atual.",
+        "Comparar cautelares do art. 319 com execução de sanção na LEP."
+      ],
+      "atencao": [
+        "A permanência no compilado não permite restaurar automaticamente o sistema penal anterior à reforma de 1984."
+      ],
+      "exemplo": "Risco ligado à função pública exige analisar suspensão cautelar pelo art. 319, VI, com requisitos atuais. Variação: Sem risco concreto não se antecipa interdição punitiva por simples acusação.",
+      "prova": [
+        "Interdição histórica é cautelar moderna automaticamente? Não.",
+        "Sanção e cautelar têm o mesmo fundamento? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Regime histórico",
+          "significado": "Texto que exige integração com legislação posterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "8679769b-60b7-5b51-afc1-6fd4b68203dc",
+        "content_sha256": "6d34b92b6401f50dda7fea764f4ca5694bb2f45195c79027672349c335da5de4",
+        "simples": "A aplicação provisória de interdições de direitos poderá ser determinada pelo juiz, de ofício ou a requerimento do Ministério Público, do querelante, do assistente, do ofendido ou de seu representante legal, ainda que este não se tenha constituído assistente: durante a instrução criminal após a apresentação da defesa ou do prazo concedido; na sentença de pronúncia; na decisão confirmatória da pronúncia ou na que, em grau de recurso, pronunciar o réu; e na sentença condenatória recorrível. No primeiro caso, havendo requerimento, o réu ou seu defensor será ouvido no prazo de 2 dias. Decretada a medida, serão feitas as comunicações para a sua execução.",
+        "pontos": [
+          "Aplicação provisória de interdições de direitos pelo juiz, de ofício ou a requerimento.",
+          "Momentos: instrução (após a defesa), pronúncia, confirmação da pronúncia e sentença condenatória recorrível.",
+          "Instrução: defesa ouvida em 2 dias."
+        ],
+        "atencao": [
+          "Quatro momentos."
+        ],
+        "exemplo": "Na sentença condenatória recorrível, o juiz aplica provisoriamente a interdição de direitos.",
+        "prova": [
+          "Assertiva que permite a aplicação provisória de interdição antes da apresentação da defesa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 374"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-374",
+      "unit_id": "cec20780-f2fe-5380-963a-212fb8e7b94b",
+      "content_sha256": "bcd9d7bb1625dd33272e2f303d509a355b6850890cb2989992f1945d8ff73eea",
+      "simples": "A cláusula histórica de ausência de recurso acompanha interdições do regime antigo, não todas as cautelares contemporâneas.",
+      "pontos": [
+        "Substituição e revogação eram ligadas às fases do art. 373.",
+        "Controle atual depende da medida efetivamente aplicada e do instrumento cabível."
+      ],
+      "atencao": [
+        "Não ensinar irrecorribilidade universal de decisão que restringe direitos."
+      ],
+      "exemplo": "Defesa impugna restrição atual pelo meio adequado ao seu fundamento. Variação: Não se rejeita toda impugnação apenas citando a redação antiga do art. 374.",
+      "prova": [
+        "Todas as cautelares atuais são irrecorríveis por este artigo? Não.",
+        "Deve identificar o regime jurídico da medida? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Controle da restrição",
+          "significado": "Exame da via adequada à decisão, sem generalizar regra histórica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "cec20780-f2fe-5380-963a-212fb8e7b94b",
+        "content_sha256": "bcd9d7bb1625dd33272e2f303d509a355b6850890cb2989992f1945d8ff73eea",
+        "simples": "Não caberá recurso do despacho ou da parte da sentença que decretar ou denegar a aplicação provisória de interdições de direitos, mas estas poderão ser substituídas ou revogadas: se aplicadas no curso da instrução criminal, durante esta ou pelas sentenças a que se referem os incisos II, III e IV do artigo anterior; se aplicadas na sentença de pronúncia, pela decisão que, em grau de recurso, a confirmar, total ou parcialmente, ou pela sentença condenatória recorrível; e se aplicadas na decisão a que se refere o inciso III do artigo anterior, pela sentença condenatória recorrível.",
+        "pontos": [
+          "Decisão sobre aplicação provisória de interdição: sem recurso.",
+          "Pode ser substituída ou revogada em momentos posteriores."
+        ],
+        "atencao": [
+          "Sem recurso, mas com possibilidade de revogação ou substituição."
+        ],
+        "exemplo": "A interdição aplicada na pronúncia é revogada na sentença condenatória recorrível.",
+        "prova": [
+          "Assertiva que prevê recurso em sentido estrito contra a decisão sobre interdição provisória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 373"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-375",
+      "unit_id": "ac47cd78-e1ee-5057-b34c-67d341c8a190",
+      "content_sha256": "86f92c19b5b425e3e0e34c8013f7e6ada1bb3ec28c563f15142532c1725c2210",
+      "simples": "O texto exige fundamentação ao aplicar, substituir ou revogar interdição histórica; decisões atuais também precisam base própria.",
+      "pontos": [
+        "Motivos concretos devem permitir compreensão e controle.",
+        "Fundamentar não torna vigente uma sanção provisória de regime superado."
+      ],
+      "atencao": [
+        "Não basta escrever que a restrição é necessária sem explicar fatos e base legal atual."
+      ],
+      "exemplo": "Juiz explicita risco e pertinência ao decidir cautelar atual. Variação: Motivação detalhada não legitima uma modalidade sem fundamento legal aplicável.",
+      "prova": [
+        "Motivação substitui base legal? Não.",
+        "A decisão precisa explicar seus motivos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fundamentação",
+          "significado": "Razões concretas de fato e de direito da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ac47cd78-e1ee-5057-b34c-67d341c8a190",
+        "content_sha256": "86f92c19b5b425e3e0e34c8013f7e6ada1bb3ec28c563f15142532c1725c2210",
+        "simples": "O despacho que aplicar provisoriamente, substituir ou revogar interdição de direito será fundamentado.",
+        "pontos": [
+          "Decisão sobre interdição provisória deve ser fundamentada."
+        ],
+        "atencao": [
+          "Dever de fundamentação."
+        ],
+        "exemplo": "O juiz fundamenta a imposição provisória da interdição.",
+        "prova": [
+          "Assertiva que dispensa a fundamentação da interdição provisória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 374"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-376",
+      "unit_id": "ec16c1ad-2769-55ea-ad2c-e45c15819175",
+      "content_sha256": "66c25d9538e50cee28cd86d60eb4a77651d394fecb909adf3943510d7d876627",
+      "simples": "A cessação prevista refere-se a interdição provisória histórica; estudar efeitos atuais de impronúncia e absolvição conforme a medida.",
+      "pontos": [
+        "Não transportar o instituto antigo para prisão ou proteção de vítima sem verificar regras próprias.",
+        "Absolvição: observar também art. 386, parágrafo único."
+      ],
+      "atencao": [
+        "Medidas protetivas têm disciplina própria; não concluir que toda proteção cessa mecanicamente por esta remissão antiga."
+      ],
+      "exemplo": "Após absolvição, examinam-se as cautelares penais nos termos atuais. Variação: Proteção da vítima exige análise do regime específico e do risco, não aplicação indiscriminada do art. 376.",
+      "prova": [
+        "O artigo encerra automaticamente qualquer proteção existente? Não.",
+        "É necessário identificar a natureza da medida? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Cessação e natureza jurídica",
+          "significado": "Efeito examinado segundo a medida realmente aplicada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ec16c1ad-2769-55ea-ad2c-e45c15819175",
+        "content_sha256": "66c25d9538e50cee28cd86d60eb4a77651d394fecb909adf3943510d7d876627",
+        "simples": "A decisão que impronunciar ou absolver o réu fará cessar a aplicação provisória da interdição anteriormente determinada.",
+        "pontos": [
+          "Impronúncia ou absolvição faz cessar a interdição provisória."
+        ],
+        "atencao": [
+          "Efeito imediato."
+        ],
+        "exemplo": "O réu é absolvido, e a interdição provisória cessa.",
+        "prova": [
+          "Assertiva que mantém a interdição provisória após a absolvição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 373"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-377",
+      "unit_id": "6870c2d6-2142-596b-b785-050301a90167",
+      "content_sha256": "f060b203e997ea339b4ce744a47100c970f2882b297a1578a57b554e63fc8ce0",
+      "simples": "Execução de interdição como sanção exige título e regime atuais, sem perpetuar restrições provisórias antigas.",
+      "pontos": [
+        "Distinguir conteúdo da condenação, efeitos legais e cautelar.",
+        "LEP, art. 147, disciplina execução da pena restritiva de direitos após trânsito em julgado."
+      ],
+      "atencao": [
+        "Apenas existir restrição durante o processo não a transforma em pena definitiva."
+      ],
+      "exemplo": "Condenação definitiva com pena restritiva é executada no regime da LEP. Variação: Medida temporária investigativa não vira automaticamente sanção no título executivo.",
+      "prova": [
+        "Cautelar vira pena definitiva por si? Não.",
+        "O título condenatório importa para execução? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Título executivo penal",
+          "significado": "Decisão e efeitos legais que delimitam execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "6870c2d6-2142-596b-b785-050301a90167",
+        "content_sha256": "f060b203e997ea339b4ce744a47100c970f2882b297a1578a57b554e63fc8ce0",
+        "simples": "Transitando em julgado a sentença condenatória, serão executadas somente as interdições nela aplicadas ou que derivarem da imposição da pena principal.",
+        "pontos": [
+          "Após o trânsito: executam-se só as interdições aplicadas na sentença ou derivadas da pena principal."
+        ],
+        "atencao": [
+          "Interdições provisórias anteriores não se executam por si."
+        ],
+        "exemplo": "Só a interdição fixada na sentença condenatória é executada.",
+        "prova": [
+          "Assertiva que executa todas as interdições provisórias após o trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 373"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-378",
+      "unit_id": "75609fdb-0dab-50fa-819f-90f79c27a79e",
+      "content_sha256": "4c2937244cc6198f9d232ffc3f5bcc11eeed4b2b179bf93763a4fbbce9fe5013",
+      "simples": "A medida de segurança provisória descrita no sistema antigo não se confunde com internação cautelar atual.",
+      "pontos": [
+        "Art. 319, VII, prevê hipótese cautelar específica e requisitos próprios.",
+        "Medida de segurança definitiva exige pressupostos penais e execução adequada.",
+        "Diagnóstico isolado não prova necessidade de internar."
+      ],
+      "atencao": [
+        "Não decretar internação punitiva de ofício só pela redação histórica ou por doença mental."
+      ],
+      "exemplo": "Caso com suspeita de inimputabilidade exige perícia e análise do regime adequado. Variação: Sem os requisitos da cautelar atual, o texto antigo não fornece atalho para internar.",
+      "prova": [
+        "Doença mental autoriza internação automática? Não.",
+        "Internação cautelar e medida definitiva são idênticas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Internação cautelar",
+          "significado": "Providência específica distinta da execução de medida de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "75609fdb-0dab-50fa-819f-90f79c27a79e",
+        "content_sha256": "4c2937244cc6198f9d232ffc3f5bcc11eeed4b2b179bf93763a4fbbce9fe5013",
+        "simples": "A aplicação provisória de medida de segurança obedecerá ao disposto nos artigos anteriores, com modificações: o juiz poderá aplicá-la de ofício ou a requerimento do Ministério Público; poderá ser determinada ainda no curso do inquérito, mediante representação da autoridade policial; a aplicação, substituição ou revogação poderão ocorrer também na sentença absolutória; e decretada a medida, atender-se-á ao Título V do Livro IV.",
+        "pontos": [
+          "Juiz aplica de ofício ou a requerimento do MP.",
+          "Possível no inquérito, por representação da autoridade policial.",
+          "Possível na sentença absolutória.",
+          "Execução segue o Título V do Livro IV."
+        ],
+        "atencao": [
+          "Medida de segurança provisória pode ser aplicada já no inquérito."
+        ],
+        "exemplo": "No inquérito, a autoridade policial representa pela medida de segurança provisória.",
+        "prova": [
+          "Assertiva que veda a aplicação provisória de medida de segurança no inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 373"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-379",
+      "unit_id": "4b2cacc4-3f7f-5116-895c-29871e60d383",
+      "content_sha256": "521df4d6f208f64342228c19df06da79e41a8109daa703ba45a42e4b49a7be57",
+      "simples": "A execução definitiva de medida de segurança deve ser integrada à LEP, especialmente guia e controle judicial.",
+      "pontos": [
+        "Distinguir sentença, trânsito e início regular da execução.",
+        "LEP, arts. 171 e 172: guia é requisito da execução prevista."
+      ],
+      "atencao": [
+        "A remissão histórica ao Livro IV não dispensa os requisitos da legislação de execução posterior."
+      ],
+      "exemplo": "Após título definitivo, são observadas guia e providências legais de execução. Variação: Não se inicia execução de medida por mera anotação informal de diagnóstico.",
+      "prova": [
+        "Guia pode ser ignorada nessa execução? Não.",
+        "Diagnóstico isolado equivale a título definitivo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Guia de execução",
+          "significado": "Documento judicial exigido pelo regime de execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "4b2cacc4-3f7f-5116-895c-29871e60d383",
+        "content_sha256": "521df4d6f208f64342228c19df06da79e41a8109daa703ba45a42e4b49a7be57",
+        "simples": "Transitando em julgado a sentença, observar-se-á, quanto à execução das medidas de segurança definitivamente aplicadas, o disposto no Título V do Livro IV.",
+        "pontos": [
+          "Execução das medidas de segurança definitivas segue o Título V do Livro IV."
+        ],
+        "atencao": [
+          "Remissão ao Livro da execução."
+        ],
+        "exemplo": "Após o trânsito, a medida de segurança é executada conforme o Título V do Livro IV.",
+        "prova": [
+          "Assertiva que aplica regras próprias do Livro I à execução das medidas definitivas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 378"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-380",
+      "unit_id": "d964c2c5-4b16-5623-a072-e5858779c15f",
+      "content_sha256": "b4130bba719af5a0d92cff60379a991c17d80997500298b931c5b6dafa6b3ca1",
+      "simples": "A perda da fiança ligada à antiga medida provisória não deve ser ensinada como consequência atual automática.",
+      "pontos": [
+        "Identificar a natureza da restrição e o regime cautelar aplicável.",
+        "Não confundir fiança, prisão preventiva e internação cautelar."
+      ],
+      "atencao": [
+        "Texto residual não restaura medida de segurança provisória antiga nem autoriza desfazer toda fiança por diagnóstico."
+      ],
+      "exemplo": "Pedido de internação cautelar é examinado por seus requisitos atuais. Variação: Alegar transtorno sem avaliação pertinente não elimina automaticamente fiança já concedida.",
+      "prova": [
+        "Diagnóstico desfaz toda fiança automaticamente? Não.",
+        "É preciso aplicar o regime atual da medida? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fiança e cautelares",
+          "significado": "Institutos distintos, com pressupostos próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "d964c2c5-4b16-5623-a072-e5858779c15f",
+        "content_sha256": "b4130bba719af5a0d92cff60379a991c17d80997500298b931c5b6dafa6b3ca1",
+        "simples": "A aplicação provisória de medida de segurança obstará a concessão de fiança e tornará sem efeito a anteriormente concedida.",
+        "pontos": [
+          "Medida de segurança provisória impede fiança.",
+          "Torna sem efeito a fiança anterior."
+        ],
+        "atencao": [
+          "Incompatibilidade com a fiança."
+        ],
+        "exemplo": "Com a medida de segurança provisória, a fiança anterior perde o efeito.",
+        "prova": [
+          "Assertiva que admite fiança cumulada com medida de segurança provisória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 378"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-381",
+      "unit_id": "ba10c5b1-3c2f-54c7-b537-dcff2beb3a8e",
+      "content_sha256": "6b2dd0ba4e76d854c926a0d35d1d49ed0ef0a3d5c1a3cd6a160998510af2716e",
+      "simples": "Sentença identifica partes, resume acusação e defesa, fundamenta, indica normas, decide e contém data e assinatura.",
+      "pontos": [
+        "Seis elementos do artigo.",
+        "Dispositivo é a conclusão; fundamentação explica por quê.",
+        "Impossibilidade de nomes exige identificação suficiente."
+      ],
+      "atencao": [
+        "Resumo da acusação não substitui exame da defesa nem motivação judicial."
+      ],
+      "exemplo": "Sentença enfrenta tese defensiva relevante e apresenta conclusão identificável. Variação: Apenas copiar denúncia e escrever condenado não satisfaz os elementos exigidos.",
+      "prova": [
+        "Dispositivo e fundamentação são iguais? Não.",
+        "Pode haver identificação suficiente sem nome conhecido? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Dispositivo",
+          "significado": "Parte conclusiva da sentença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ba10c5b1-3c2f-54c7-b537-dcff2beb3a8e",
+        "content_sha256": "6b2dd0ba4e76d854c926a0d35d1d49ed0ef0a3d5c1a3cd6a160998510af2716e",
+        "simples": "A sentença conterá os nomes das partes ou as indicações necessárias para identificá-las; a exposição sucinta da acusação e da defesa; a indicação dos motivos de fato e de direito em que se fundar a decisão; a indicação dos artigos de lei aplicados; o dispositivo; e a data e a assinatura do juiz.",
+        "pontos": [
+          "I: partes.",
+          "II: relatório (exposição sucinta da acusação e da defesa).",
+          "III: fundamentação (motivos de fato e de direito).",
+          "IV: artigos de lei aplicados.",
+          "V: dispositivo.",
+          "VI: data e assinatura do juiz."
+        ],
+        "atencao": [
+          "Estrutura: relatório, fundamentação e dispositivo."
+        ],
+        "exemplo": "A sentença traz relatório, fundamentação, dispositivo, data e assinatura.",
+        "prova": [
+          "Assertiva que dispensa a fundamentação de fato e de direito na sentença erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 387"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-382",
+      "unit_id": "72bbcc8f-ef99-5146-bbee-98e77ab63b20",
+      "content_sha256": "fa3fa5aad9c3e5f0962fea57aabb9ea42a887912221225c17b594eb04e21bedd",
+      "simples": "Partes podem pedir esclarecimento da sentença em dois dias por obscuridade, ambiguidade, contradição ou omissão.",
+      "pontos": [
+        "Pedido dirigido ao juiz da sentença.",
+        "Não importar prazo geral de cinco dias do CPC.",
+        "Omissão é falta de exame de ponto relevante."
+      ],
+      "atencao": [
+        "Discordância simples não dispensa demonstrar o defeito próprio do pedido."
+      ],
+      "exemplo": "Sentença omite tese decisiva: parte pede integração dentro do prazo penal. Variação: Conclusão desfavorável, mas clara e completa, não cria omissão por si.",
+      "prova": [
+        "Prazo deste artigo é cinco dias? Não, dois.",
+        "Omissão pode motivar o pedido? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Integração da sentença",
+          "significado": "Correção dos defeitos enumerados no artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "72bbcc8f-ef99-5146-bbee-98e77ab63b20",
+        "content_sha256": "fa3fa5aad9c3e5f0962fea57aabb9ea42a887912221225c17b594eb04e21bedd",
+        "simples": "Qualquer das partes poderá, no prazo de 2 dias, pedir ao juiz que declare a sentença, sempre que nela houver obscuridade, ambiguidade, contradição ou omissão (embargos de declaração).",
+        "pontos": [
+          "Embargos de declaração ao juiz.",
+          "Prazo de 2 dias.",
+          "Cabimento: obscuridade, ambiguidade, contradição ou omissão."
+        ],
+        "atencao": [
+          "Prazo de 2 dias."
+        ],
+        "exemplo": "A parte opõe embargos por contradição na sentença em até 2 dias.",
+        "prova": [
+          "Assertiva que fixa em 5 dias o prazo dos embargos de declaração de sentença erra neste artigo: são 2 dias."
+        ],
+        "termos": [
+          {
+            "termo": "Embargos de declaração",
+            "significado": "Pedido para esclarecer obscuridade, contradição ou omissão."
+          }
+        ],
+        "remissoes": [
+          "Art. 381"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-383",
+      "unit_id": "5777c5d8-3dc6-5a5b-8ec6-1587fc341e15",
+      "content_sha256": "14f21ba2bf19fdd0c218951a28ecee319b2134dac91b9e96ff1484a5a8733a22",
+      "simples": "Emendatio libelli altera a definição jurídica sem alterar os fatos narrados na acusação.",
+      "pontos": [
+        "Pode resultar em pena mais grave na hipótese do artigo.",
+        "Examinar suspensão condicional do processo quando cabível.",
+        "Se mudar competência, encaminhar ao juízo competente."
+      ],
+      "atencao": [
+        "Não confundir nova classificação com inclusão de fato ausente da acusação."
+      ],
+      "exemplo": "Fatos de violência já narrados recebem enquadramento jurídico diverso. Variação: Violência somente revelada na prova e não narrada exige examinar art. 384, não disfarçar mudança factual.",
+      "prova": [
+        "Emendatio permite modificar os fatos acusados? Não.",
+        "Nova competência pode exigir remessa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Emendatio libelli",
+          "significado": "Correção do enquadramento com a mesma descrição factual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5777c5d8-3dc6-5a5b-8ec6-1587fc341e15",
+        "content_sha256": "14f21ba2bf19fdd0c218951a28ecee319b2134dac91b9e96ff1484a5a8733a22",
+        "simples": "O juiz, sem modificar a descrição do fato contida na denúncia ou queixa, poderá atribuir-lhe definição jurídica diversa, ainda que, em consequência, tenha de aplicar pena mais grave (emendatio libelli). Se, em consequência de definição jurídica diversa, houver possibilidade de proposta de suspensão condicional do processo, o juiz procederá de acordo com a lei. Tratando-se de infração da competência de outro juízo, a este serão encaminhados os autos.",
+        "pontos": [
+          "Emendatio libelli: nova definição jurídica sem alterar os fatos.",
+          "Pode agravar a pena.",
+          "§1º: possibilidade de suspensão condicional do processo.",
+          "§2º: infração de competência de outro juízo: remessa dos autos."
+        ],
+        "atencao": [
+          "Os FATOS não mudam; muda a capitulação jurídica.",
+          "Não exige aditamento."
+        ],
+        "exemplo": "O juiz corrige a capitulação do crime sem alterar os fatos narrados na denúncia.",
+        "prova": [
+          "Assertiva que exige aditamento da denúncia para a emendatio libelli erra."
+        ],
+        "termos": [
+          {
+            "termo": "Emendatio libelli",
+            "significado": "Correção da definição jurídica dos mesmos fatos."
+          }
+        ],
+        "remissoes": [
+          "Art. 384"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-384",
+      "unit_id": "fd440c7d-8a99-5562-a59b-bde8d24a7bd7",
+      "content_sha256": "9f5ee4437c1de793bf98bf0550114497ea88e9c10dd36a117d8b64f5cd38610e",
+      "simples": "Mutatio libelli exige aditamento por novo elemento ou circunstância não contido na acusação, com oportunidade de defesa.",
+      "pontos": [
+        "MP: cinco dias para aditar na hipótese de ação pública.",
+        "Defesa ouvida em cinco dias; admitido aditamento, continuação a requerimento de parte.",
+        "Cada parte pode indicar até três testemunhas em cinco dias.",
+        "Novo interrogatório, debates e julgamento; decisão vinculada ao aditamento.",
+        "Sem aditamento: remissão ao art. 28 deve ser integrada à redação atual.",
+        "Não recebido o aditamento, processo prossegue."
+      ],
+      "atencao": [
+        "Juiz não inclui sozinho o elemento novo e condena sem contraditório."
+      ],
+      "exemplo": "Prova revela circunstância nova: MP adita e defesa recebe prazo e possibilidade de produzir prova. Variação: Se muda só a classificação dos mesmos fatos, aplica-se art. 383.",
+      "prova": [
+        "Cada parte pode arrolar três testemunhas no aditamento? Sim.",
+        "Juiz pode substituir o aditamento acusatório sem defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Mutatio libelli",
+          "significado": "Alteração da imputação factual mediante procedimento próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fd440c7d-8a99-5562-a59b-bde8d24a7bd7",
+        "content_sha256": "9f5ee4437c1de793bf98bf0550114497ea88e9c10dd36a117d8b64f5cd38610e",
+        "simples": "Encerrada a instrução probatória, se entender cabível nova definição jurídica do fato, em consequência de prova existente nos autos de elemento ou circunstância da infração penal não contida na acusação, o Ministério Público deverá aditar a denúncia ou queixa, no prazo de 5 dias, se em virtude desta houver sido instaurado o processo em crime de ação pública (mutatio libelli). Não procedendo o MP ao aditamento, aplica-se o art. 28. Ouvido o defensor no prazo de 5 dias e admitido o aditamento, o juiz, a requerimento de qualquer das partes, designará dia e hora para continuação da audiência, com inquirição de testemunhas, novo interrogatório, debates e julgamento. Havendo aditamento, cada parte poderá arrolar até 3 testemunhas, no prazo de 5 dias, ficando o juiz, na sentença, adstrito aos termos do aditamento.",
+        "pontos": [
+          "Mutatio libelli: nova definição jurídica por elemento ou circunstância não contida na acusação.",
+          "MP adita em 5 dias.",
+          "Sem aditamento: aplica-se o art. 28.",
+          "Defensor ouvido em 5 dias.",
+          "Até 3 testemunhas por parte, em 5 dias.",
+          "Juiz fica adstrito ao aditamento."
+        ],
+        "atencao": [
+          "Os FATOS mudam (elemento ou circunstância nova).",
+          "Depende de aditamento pelo MP, na ação pública."
+        ],
+        "exemplo": "A prova revela circunstância nova, e o MP adita a denúncia em 5 dias.",
+        "prova": [
+          "Assertiva que permite ao juiz condenar por fato novo sem aditamento pelo MP erra."
+        ],
+        "termos": [
+          {
+            "termo": "Mutatio libelli",
+            "significado": "Alteração dos fatos da acusação por aditamento."
+          }
+        ],
+        "remissoes": [
+          "Art. 383",
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-385",
+      "unit_id": "f71a5326-b57b-5783-a8f8-04d975422455",
+      "content_sha256": "f3f1bb9c97e129a201f8d95cf51a9d16344607b9795292de5963b844de350bbf",
+      "simples": "Na ação pública, pedido de absolvição do MP não impede por si condenação motivada nos limites da acusação e da prova.",
+      "pontos": [
+        "STJ reafirmou compatibilidade do artigo com sistema acusatório em 2025.",
+        "Texto admite reconhecimento de agravantes não alegadas.",
+        "Correlação com acusação e garantias de defesa permanecem."
+      ],
+      "atencao": [
+        "Poder condenar não significa dever condenar nem autorização para criar fatos acusatórios."
+      ],
+      "exemplo": "MP pede absolvição, mas juiz avalia prova válida e fundamenta conclusão diferente. Variação: Insuficiência probatória exige absolvição; a regra não cria prova inexistente.",
+      "prova": [
+        "Pedido absolutório sempre vincula juiz na ação pública? Não.",
+        "Artigo autoriza inventar fato novo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Independência decisória",
+          "significado": "Conclusão judicial fundamentada, sujeita a limites processuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?num_registro=202403533485"
+      ],
+      "expected": {
+        "unit_id": "f71a5326-b57b-5783-a8f8-04d975422455",
+        "content_sha256": "f3f1bb9c97e129a201f8d95cf51a9d16344607b9795292de5963b844de350bbf",
+        "simples": "Nos crimes de ação pública, o juiz poderá proferir sentença condenatória, ainda que o Ministério Público tenha opinado pela absolvição, bem como reconhecer agravantes, embora nenhuma tenha sido alegada.",
+        "pontos": [
+          "Juiz pode condenar mesmo com pedido de absolvição do MP.",
+          "Pode reconhecer agravantes não alegadas."
+        ],
+        "atencao": [
+          "Muito discutido à luz do sistema acusatório (art. 3º-A): parte da doutrina entende o dispositivo incompatível."
+        ],
+        "exemplo": "O MP pede absolvição, mas o juiz condena com base na prova.",
+        "prova": [
+          "Assertiva que vincula o juiz ao pedido de absolvição do MP, conforme o texto do art. 385, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-386",
+      "unit_id": "7fafff7e-0712-55fe-a09d-2421e65dd85f",
+      "content_sha256": "25a49c15a065fcc79a98f84b5e1cc531263205cddcbf778528e9efce0d2006d7",
+      "simples": "Absolvição deve indicar seu fundamento: inexistência, falta de prova, atipicidade, autoria ou exclusão/isenção e dúvida pertinente.",
+      "pontos": [
+        "I/II: inexistência provada versus ausência de prova do fato.",
+        "IV/V: não participação provada versus falta de prova de participação.",
+        "VI inclui fundada dúvida sobre excludente; VII é prova insuficiente.",
+        "Dispositivo indica causa; examinar liberdade e cessação cautelar.",
+        "Medida de segurança somente se juridicamente cabível."
+      ],
+      "atencao": [
+        "Absolvição não significa em todas as hipóteses prova de que o fato nunca ocorreu; diagnóstico não impõe medida automática."
+      ],
+      "exemplo": "Prova demonstra que acusado estava em outro local: fundamento de não participação provada. Variação: Autoria permanece incerta: ausência de prova de participação, sem afirmar certeza positiva de inocorrência.",
+      "prova": [
+        "Inexistência provada e falta de prova são iguais? Não.",
+        "Medida de segurança cabe em toda absolvição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Fundamento absolutório",
+          "significado": "Razão jurídica precisa da absolvição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7fafff7e-0712-55fe-a09d-2421e65dd85f",
+        "content_sha256": "25a49c15a065fcc79a98f84b5e1cc531263205cddcbf778528e9efce0d2006d7",
+        "simples": "O juiz absolverá o réu, mencionando a causa na parte dispositiva, desde que reconheça estar provada a inexistência do fato; não haver prova da existência do fato; não constituir o fato infração penal; estar provado que o réu não concorreu para a infração; não existir prova de ter o réu concorrido para a infração; existirem circunstâncias que excluam o crime ou isentem o réu de pena (arts. 20, 21, 22, 23, 26 e §1º do art. 28 do Código Penal), ou mesmo se houver fundada dúvida sobre sua existência; ou não existir prova suficiente para a condenação. Na sentença absolutória, o juiz mandará pôr o réu em liberdade, ordenará a cessação das medidas cautelares e provisoriamente aplicadas e aplicará medida de segurança, se cabível.",
+        "pontos": [
+          "I: provada a inexistência do fato.",
+          "II: não há prova da existência do fato.",
+          "III: o fato não constitui infração penal.",
+          "IV: provado que o réu não concorreu.",
+          "V: não há prova de que o réu concorreu.",
+          "VI: excludentes de ilicitude ou culpabilidade, ou dúvida sobre elas.",
+          "VII: prova insuficiente para a condenação.",
+          "Parágrafo único: liberdade, cessação das cautelares e medida de segurança, se cabível."
+        ],
+        "atencao": [
+          "Inexistência do fato (I) e prova de que o réu não concorreu (IV) repercutem no cível; já a atipicidade (III) não impede a ação civil (art. 67, III).",
+          "Dúvida sobre excludente leva à absolvição (VI)."
+        ],
+        "exemplo": "Provado que o fato não existiu, o juiz absolve com base no inciso I.",
+        "prova": [
+          "Assertiva que dispensa mencionar a causa da absolvição na parte dispositiva erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65",
+          "Art. 66",
+          "Art. 67"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-387",
+      "unit_id": "142b992d-ba43-52a8-a31b-fc64c2081c2f",
+      "content_sha256": "74ac904bce107ce45a253135644ddc8d70629ae4c2dbf486f29da889e6d6a74d",
+      "simples": "Condenação fundamenta pena, reparação mínima, cautelares e detração para regime inicial; há remissões antigas que exigem integração.",
+      "pontos": [
+        "Circunstâncias e pena devem ser individualizadas.",
+        "Reparação mínima exige observar contraditório e jurisprudência aplicável ao tipo de dano.",
+        "Prisão ou outra cautelar exige decisão própria fundamentada, sem impedir conhecimento da apelação.",
+        "Detração do §2º é considerada na definição do regime inicial.",
+        "Incisos V/VI remetem a institutos antigos; não restaurar interdição provisória punitiva ou publicação como pena antiga."
+      ],
+      "atencao": [
+        "Não automatizar prisão ao condenar nem reparar sem examinar pedido, dano e regime jurisprudencial pertinente."
+      ],
+      "exemplo": "Juiz justifica pena e avalia tempo cautelar para regime inicial, separando decisão de prisão. Variação: Condenação sem risco cautelar não basta, por si, para nova preventiva; reparação requer análise própria.",
+      "prova": [
+        "Condenação impõe preventiva automaticamente? Não.",
+        "Detração do §2º serve para examinar regime inicial? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Individualização da condenação",
+          "significado": "Decisões distintas sobre pena, danos e cautelares."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "142b992d-ba43-52a8-a31b-fc64c2081c2f",
+        "content_sha256": "74ac904bce107ce45a253135644ddc8d70629ae4c2dbf486f29da889e6d6a74d",
+        "simples": "O juiz, ao proferir sentença condenatória, mencionará as circunstâncias agravantes ou atenuantes do Código Penal; mencionará as outras circunstâncias apuradas e tudo o mais que deva ser levado em conta na aplicação da pena, nos termos dos arts. 59 e 60 do Código Penal; aplicará as penas de acordo com essas conclusões; fixará valor mínimo para reparação dos danos causados pela infração, considerando os prejuízos sofridos pelo ofendido; atenderá ao disposto sobre aplicação provisória de interdições de direitos e medidas de segurança; e determinará se a sentença deverá ser publicada na íntegra ou em resumo. O juiz decidirá, fundamentadamente, sobre a manutenção ou imposição de prisão preventiva ou outra medida cautelar, sem prejuízo da apelação. O tempo de prisão provisória, de prisão administrativa ou de internação, no Brasil ou no estrangeiro, será computado para fins de determinação do regime inicial de pena privativa de liberdade.",
+        "pontos": [
+          "Agravantes, atenuantes e circunstâncias dos arts. 59 e 60 do CP.",
+          "Aplicação das penas.",
+          "IV: valor mínimo para reparação dos danos.",
+          "V: interdições de direitos e medidas de segurança provisórias.",
+          "VI: publicação da sentença.",
+          "§1º: decide sobre prisão preventiva ou cautelar.",
+          "§2º: detração para o regime inicial."
+        ],
+        "atencao": [
+          "O valor mínimo de reparação do dano depende de pedido e de contraditório sobre o tema.",
+          "Detração: o tempo de prisão provisória é computado para o regime inicial."
+        ],
+        "exemplo": "A sentença fixa o valor mínimo de reparação à vítima.",
+        "prova": [
+          "Assertiva que dispensa a fixação do valor mínimo de reparação dos danos na sentença condenatória erra."
+        ],
+        "termos": [
+          {
+            "termo": "Detração",
+            "significado": "Desconto do tempo de prisão provisória na pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 63",
+          "Art. 381"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-388",
+      "unit_id": "8085d658-b6bc-5824-a086-7000489d7900",
+      "content_sha256": "e04fee11d1f50103ca5a1d5a57c4db5b60a93539575192ada72abc466fed9459",
+      "simples": "Redação sobre sentença datilografada e rubrica expressa formalização e autenticidade, integrada hoje ao processo eletrônico.",
+      "pontos": [
+        "Não confundir forma histórica com exigência exclusiva de máquina de escrever.",
+        "Assinatura e integridade seguem também regime eletrônico aplicável."
+      ],
+      "atencao": [
+        "Não exigir rubricar fisicamente cada página de toda sentença eletrônica sem considerar legislação digital."
+      ],
+      "exemplo": "Documento judicial eletrônico recebe assinatura válida no sistema competente. Variação: Texto sem identificação ou assinatura não se torna sentença autêntica por estar em PDF.",
+      "prova": [
+        "Datilografia é única forma atual? Não.",
+        "Autenticidade continua relevante? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Autenticidade documental",
+          "significado": "Controle da autoria e integridade do ato judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8085d658-b6bc-5824-a086-7000489d7900",
+        "content_sha256": "e04fee11d1f50103ca5a1d5a57c4db5b60a93539575192ada72abc466fed9459",
+        "simples": "A sentença poderá ser datilografada e, neste caso, o juiz a rubricará em todas as folhas.",
+        "pontos": [
+          "Sentença datilografada: rubrica do juiz em todas as folhas."
+        ],
+        "atencao": [
+          "Hoje a regra é o meio eletrônico."
+        ],
+        "exemplo": "Texto histórico, adaptado hoje ao processo eletrônico.",
+        "prova": [
+          "Assertiva que dispensa a rubrica do juiz em todas as folhas da sentença datilografada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 389"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-389",
+      "unit_id": "93dc87aa-6bad-5827-aae5-6fa0c54cf44e",
+      "content_sha256": "3f9666fc4f0ee49bc3284a5bd972abeeac74e2ba79cb3ffe91378554bf2bd12f",
+      "simples": "Publicação judicial da sentença é ato formal nos autos, distinto de notícia de imprensa e de intimação de todos os destinatários.",
+      "pontos": [
+        "Redação descreve termo e registro históricos.",
+        "Integrar os meios oficiais do processo eletrônico.",
+        "Publicação e ciência para prazo podem exigir atos diferentes."
+      ],
+      "atencao": [
+        "Uma reportagem ou postagem não substitui publicação e intimação processuais exigidas."
+      ],
+      "exemplo": "Sentença é formalizada no processo e depois comunicada conforme regime de cada sujeito. Variação: Divulgar resultado em rede social não comprova intimação da defesa.",
+      "prova": [
+        "Publicação jornalística substitui intimação? Não.",
+        "Publicação e intimação são sempre o mesmo ato? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Publicação judicial",
+          "significado": "Formalização oficial da sentença no processo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "93dc87aa-6bad-5827-aae5-6fa0c54cf44e",
+        "content_sha256": "3f9666fc4f0ee49bc3284a5bd972abeeac74e2ba79cb3ffe91378554bf2bd12f",
+        "simples": "A sentença será publicada em mão do escrivão, que lavrará nos autos o respectivo termo, registrando-a em livro especialmente destinado a esse fim.",
+        "pontos": [
+          "Publicação da sentença em mão do escrivão.",
+          "Termo nos autos e registro em livro especial."
+        ],
+        "atencao": [
+          "Rito formal de publicação."
+        ],
+        "exemplo": "O juiz entrega a sentença ao escrivão, que a registra.",
+        "prova": [
+          "Assertiva que dispensa o registro da sentença em livro próprio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 390"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-390",
+      "unit_id": "84859eab-1719-5b1a-a83b-52db4e6baf6b",
+      "content_sha256": "00acdc563c0f1efcc7b3a320db8f98f2c43225bf9707856cbf44189d61cce462",
+      "simples": "Escrivão deve dar conhecimento da sentença ao MP em três dias após publicação; não é prazo de apelação.",
+      "pontos": [
+        "Integrar intimação pessoal do MP, art. 370, §4º.",
+        "Texto contém previsão histórica disciplinar; sanção não dispensa procedimento e garantias atuais."
+      ],
+      "atencao": [
+        "Não confundir os três dias de comunicação com prazo recursal nem aplicar punição disciplinar automática sem garantias."
+      ],
+      "exemplo": "Secretaria comunica sentença ao MP pelo canal oficial apropriado. Variação: Atraso exige apuração pertinente, não suspensão sumária sem defesa.",
+      "prova": [
+        "Os três dias são prazo de apelação? Não.",
+        "A ciência do MP tem regime pessoal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação ao MP",
+          "significado": "Providência da secretaria distinta de recurso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "84859eab-1719-5b1a-a83b-52db4e6baf6b",
+        "content_sha256": "00acdc563c0f1efcc7b3a320db8f98f2c43225bf9707856cbf44189d61cce462",
+        "simples": "O escrivão, dentro de três dias após a publicação, e sob pena de suspensão de cinco dias, dará conhecimento da sentença ao órgão do Ministério Público.",
+        "pontos": [
+          "Escrivão comunica a sentença ao MP em três dias.",
+          "Pena de suspensão de cinco dias."
+        ],
+        "atencao": [
+          "Prazo de três dias."
+        ],
+        "exemplo": "O escrivão dá ciência ao MP da sentença em três dias.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o prazo do escrivão para dar ciência ao MP erra: são três dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 389"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-391",
+      "unit_id": "889c24bc-05e0-585c-81d9-dcbcaa3718d9",
+      "content_sha256": "28cd96949ee59d4bf94d13b3b14445b9b373718d9be43120e3cefe47e47a9b68",
+      "simples": "Querelante ou assistente recebe intimação pessoal ou por advogado; ausência de ambos na sede pode levar a edital de dez dias.",
+      "pontos": [
+        "Regra específica desses sujeitos.",
+        "Não confundir com edital de intimação da sentença ao réu.",
+        "Certificar as condições da hipótese."
+      ],
+      "atencao": [
+        "Prazo de dez dias não é regra universal de todo edital penal."
+      ],
+      "exemplo": "Assistente é intimado por seu advogado regularmente localizado. Variação: Se ambos não são encontrados na sede, examina-se hipótese de edital deste artigo.",
+      "prova": [
+        "Este edital é universal para todo réu? Não.",
+        "Advogado pode receber ciência do assistente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ciência do assistente",
+          "significado": "Intimação específica prevista para querelante ou assistente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "889c24bc-05e0-585c-81d9-dcbcaa3718d9",
+        "content_sha256": "28cd96949ee59d4bf94d13b3b14445b9b373718d9be43120e3cefe47e47a9b68",
+        "simples": "O querelante ou o assistente será intimado da sentença, pessoalmente ou na pessoa de seu advogado. Se nenhum deles for encontrado no lugar da sede do juízo, a intimação será feita mediante edital com o prazo de 10 dias, afixado no lugar de costume.",
+        "pontos": [
+          "Querelante ou assistente intimados pessoalmente ou na pessoa do advogado.",
+          "Se não encontrados: edital de 10 dias."
+        ],
+        "atencao": [
+          "Edital de 10 dias."
+        ],
+        "exemplo": "Nem o assistente nem seu advogado são encontrados: intimação por edital de 10 dias.",
+        "prova": [
+          "Assertiva que fixa em 90 dias o prazo do edital para o querelante erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 392"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-392",
+      "unit_id": "50b936bc-4eea-5255-977e-44ef86c09586",
+      "content_sha256": "582c98b603202968950cfc2d195d006763df88a71bb5869a320844cf6912c34a",
+      "simples": "Intimação da sentença ao réu varia conforme prisão, defesa constituída e localização, com formalidades de edital.",
+      "pontos": [
+        "Réu preso: intimação pessoal.",
+        "Hipóteses de defensor constituído e edital exigem condições e certidão previstas.",
+        "Edital: noventa dias se pena privativa igual ou superior a um ano; sessenta nos demais casos.",
+        "Apelação após edital, salvo outra intimação regular durante ele.",
+        "Defensor nomeado conserva regime pessoal do art. 370, §4º."
+      ],
+      "atencao": [
+        "Não trocar noventa/sessenta por dez dias nem suprimir defesa técnica sob justificativa de réu não localizado."
+      ],
+      "exemplo": "Réu preso é intimado pessoalmente da sentença. Variação: Edital pertinente com pena de um ano usa noventa dias, observadas condições e ciência do defensor.",
+      "prova": [
+        "Réu preso recebe pessoalmente? Sim.",
+        "Pena de exatamente um ano entra nos noventa dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Intimação da sentença",
+          "significado": "Ciência regular conforme situação do acusado e defesa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "50b936bc-4eea-5255-977e-44ef86c09586",
+        "content_sha256": "582c98b603202968950cfc2d195d006763df88a71bb5869a320844cf6912c34a",
+        "simples": "A intimação da sentença será feita ao réu, pessoalmente, se estiver preso; ao réu, pessoalmente, ou ao defensor por ele constituído, quando se livrar solto ou, sendo afiançável a infração, tiver prestado fiança; ao defensor constituído pelo réu, se este, expedido o mandado de prisão, não tiver sido encontrado; e por edital nos demais casos em que o réu e o defensor não forem encontrados, conforme certidão do oficial de justiça. O prazo do edital será de 90 dias, se tiver sido imposta pena privativa de liberdade por tempo igual ou superior a um ano, e de 60 dias, nos outros casos. O prazo para apelação correrá após o término do fixado no edital, salvo se, no curso deste, for feita a intimação por outra forma.",
+        "pontos": [
+          "Réu preso: pessoalmente.",
+          "Réu solto ou afiançado: ele ou o defensor constituído.",
+          "Mandado de prisão sem localização do réu: defensor constituído.",
+          "Demais casos de não localização: edital.",
+          "Prazo do edital: 90 dias (pena igual ou superior a um ano) ou 60 dias (demais casos).",
+          "Prazo de apelação corre após o fim do edital."
+        ],
+        "atencao": [
+          "Edital: 90 dias se a pena privativa de liberdade for igual ou superior a um ano; senão 60 dias."
+        ],
+        "exemplo": "Condenado a um ano de reclusão e não localizado: edital de 90 dias.",
+        "prova": [
+          "Assertiva que fixa em 60 dias o edital para pena igual ou superior a um ano erra: são 90 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 391"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    }
+  ]
+}

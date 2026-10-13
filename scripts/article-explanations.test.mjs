@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP sentenças separa regime histórico, mudança factual e intimação',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-sentences-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ for(const n of [373,374,375,376,377,378,379,380,387])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+ assert.match(get(383).simples,/sem alterar os fatos/);
+ assert.match(get(384).pontos.join(' '),/três testemunhas/);
+ assert.match(get(386).pontos.join(' '),/inexistência provada versus ausência/);
+ assert.match(get(392).pontos.join(' '),/igual ou superior a um ano/);
+});
 test('CPP proteção e citação não confundem edital, hora certa e prescrição',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-protection-citations-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,24);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
