@@ -1,4 +1,15 @@
 import test from 'node:test';
+test('CPP flagrante e preventiva integram alterações 2025/2026 sem automatismos',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-flagrant-preventive-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,23);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(306).atencao.join(' '),/atrasar comunicação imediata/);
+ assert.match(get(310).pontos.join(' '),/15.358\/2026.*privacidade/s);
+ assert.match(get('310-a').pontos.join(' '),/dez dias contados de sua realização/);
+ assert.match(get(313).pontos.join(' '),/15.487\/2026/);
+ assert.match(get(316).pontos.join(' '),/não gera soltura automática/);
+ for(const n of [310,'310-a',313,316])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP custódia distingue júri, diploma e identificação genética específica',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-custody-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,20);
