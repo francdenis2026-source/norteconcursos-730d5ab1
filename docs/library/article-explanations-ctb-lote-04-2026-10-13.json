@@ -1,0 +1,3163 @@
+{
+  "version": "2026-10-11-transito-targeted",
+  "checked_at": "2026-10-13T08:03:20.522558+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-140",
+        "art-141",
+        "art-142",
+        "art-143",
+        "art-144",
+        "art-145",
+        "art-145-a",
+        "art-146",
+        "art-147-a",
+        "art-148-a",
+        "art-150",
+        "art-152",
+        "art-153",
+        "art-154",
+        "art-155",
+        "art-156",
+        "art-158",
+        "art-160",
+        "art-161",
+        "art-162",
+        "art-163",
+        "art-164",
+        "art-165",
+        "art-165-a",
+        "art-165-b",
+        "art-165-c",
+        "art-165-d",
+        "art-166",
+        "art-167",
+        "art-168",
+        "art-169",
+        "art-170",
+        "art-171",
+        "art-172",
+        "art-176",
+        "art-177",
+        "art-178",
+        "art-179",
+        "art-180",
+        "art-181",
+        "art-182",
+        "art-183",
+        "art-185",
+        "art-186",
+        "art-187",
+        "art-188",
+        "art-189",
+        "art-190",
+        "art-191",
+        "art-192"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-140",
+      "unit_id": "e7bc34d3-a7be-59bc-91bc-5a26f80c2a56",
+      "content_sha256": "c22f74d5b2159a52f14d2ff9402d5e7fd075af01956bb82b2531bb601c94275b",
+      "simples": "A habilitação para conduzir veículo automotor é apurada por meio de exames realizados no órgão ou entidade executivos do Estado ou do Distrito Federal do domicílio ou residência do candidato, ou na sede estadual ou distrital do próprio órgão. O candidato deve ser penalmente imputável, saber ler e escrever e possuir Carteira de Identidade ou equivalente. As informações do candidato são cadastradas no Renach.",
+      "pontos": [
+        "Exames no órgão estadual ou distrital.",
+        "Imputável, alfabetizado e com identidade.",
+        "Cadastro no Renach."
+      ],
+      "atencao": [
+        "Requisitos: imputabilidade penal, saber ler e escrever, identidade.",
+        "Não afirmar que só ser adulto assegura habilitação: requisitos e exames continuam."
+      ],
+      "exemplo": "Um adolescente emancipado requer habilitação. Resposta: emancipação civil não substitui o requisito de imputabilidade penal do inciso I. Variação: Um candidato satisfaz os requisitos iniciais: isso não equivale a aprovação automática nos exames ou autorização imediata para dirigir.",
+      "prova": [
+        "Ser civilmente emancipado dispensa a imputabilidade penal? Não. O art. 140 exige imputabilidade penal, além de saber ler/escrever e documento de identidade ou equivalente.",
+        "As informações do candidato são cadastradas no Renavam? Não. O parágrafo prevê Renach; Renavam é cadastro de veículos, distinto do de habilitação."
+      ],
+      "termos": [
+        {
+          "termo": "Imputabilidade penal",
+          "significado": "Requisito próprio, distinto de capacidade civil adquirida por emancipação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 141",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "e7bc34d3-a7be-59bc-91bc-5a26f80c2a56",
+        "content_sha256": "c22f74d5b2159a52f14d2ff9402d5e7fd075af01956bb82b2531bb601c94275b",
+        "simples": "A habilitação para conduzir veículo automotor é apurada por meio de exames realizados no órgão ou entidade executivos do Estado ou do Distrito Federal do domicílio ou residência do candidato, ou na sede estadual ou distrital do próprio órgão. O candidato deve ser penalmente imputável, saber ler e escrever e possuir Carteira de Identidade ou equivalente. As informações do candidato são cadastradas no Renach.",
+        "pontos": [
+          "Exames no órgão estadual ou distrital.",
+          "Imputável, alfabetizado e com identidade.",
+          "Cadastro no Renach."
+        ],
+        "atencao": [
+          "Requisitos: imputabilidade penal, saber ler e escrever, identidade."
+        ],
+        "exemplo": "O candidato maior de dezoito anos, alfabetizado e com identidade pode se habilitar.",
+        "prova": [
+          "Assertiva que dispensa saber ler e escrever para a habilitação erra."
+        ],
+        "termos": [
+          {
+            "termo": "Renach",
+            "significado": "Registro Nacional de Carteiras de Habilitação."
+          }
+        ],
+        "remissoes": [
+          "Art. 141"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-141",
+      "unit_id": "c2844bd5-538a-5619-a3d2-fdf08b875b26",
+      "content_sha256": "48e85e73bb083fac665a7209bc053738d817d576eeadeec839509dd6ddd96432",
+      "simples": "O processo de habilitação e as normas relativas à aprendizagem para conduzir veículos automotores e à autorização para conduzir ciclomotores são regulamentados pelo Contran. A autorização para conduzir veículos de propulsão humana e de tração animal fica a cargo dos Municípios.",
+      "pontos": [
+        "Regulamentação pelo Contran.",
+        "Municípios autorizam propulsão humana e tração animal."
+      ],
+      "atencao": [
+        "Municípios, não os Detrans, autorizam condutores de tração animal.",
+        "Resolução 1020/2025 vigente desde publicação de 9/12/2025; preservar transições e não recuperar obrigatoriedade universal de autoescola."
+      ],
+      "exemplo": "Um município disciplina a autorização de condução de veículo de tração animal. Resposta: o §1º reserva essa matéria aos municípios. Variação: Autorizar ciclomotor integra regulamentação do Contran, não se confunde com tração animal por baixa velocidade.",
+      "prova": [
+        "O processo de habilitação é normatizado livremente por cada instrutor? Não. A regulamentação cabe ao Contran, com execução pelos órgãos competentes.",
+        "A Resolução 789/2020 permanece regulamento atual único de formação? Não. A Resolução 1020/2025 a revogou e reorganizou os procedimentos."
+      ],
+      "termos": [
+        {
+          "termo": "ACC",
+          "significado": "Autorização para Conduzir Ciclomotor, distinta de autorização municipal de tração animal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 140",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "c2844bd5-538a-5619-a3d2-fdf08b875b26",
+        "content_sha256": "48e85e73bb083fac665a7209bc053738d817d576eeadeec839509dd6ddd96432",
+        "simples": "O processo de habilitação e as normas relativas à aprendizagem para conduzir veículos automotores e à autorização para conduzir ciclomotores são regulamentados pelo Contran. A autorização para conduzir veículos de propulsão humana e de tração animal fica a cargo dos Municípios.",
+        "pontos": [
+          "Regulamentação pelo Contran.",
+          "Municípios autorizam propulsão humana e tração animal."
+        ],
+        "atencao": [
+          "Municípios, não os Detrans, autorizam condutores de tração animal."
+        ],
+        "exemplo": "O Contran regula as aulas e o processo de habilitação.",
+        "prova": [
+          "Assertiva que atribui ao Detran a autorização de condutores de tração animal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 140"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-142",
+      "unit_id": "8d8ed29f-96e4-5c22-b5da-00fb5f53406a",
+      "content_sha256": "785099bb9e6c7afa5d5cd00ba700db763ec1dedda7631506612fcef080c6465a",
+      "simples": "O reconhecimento de habilitação obtida em outro país está subordinado às condições estabelecidas em convenções e acordos internacionais e às normas do Contran.",
+      "pontos": [
+        "Reconhecimento conforme tratados e normas do Contran."
+      ],
+      "atencao": [
+        "Depende de convenções e acordos internacionais.",
+        "Resolução 1020/2025, arts. 101 seguintes, disciplina estrangeiros. Não ensinar prazo indiscriminado sem verificar requisitos e situação."
+      ],
+      "exemplo": "Uma turista apresenta habilitação estrangeira. Resposta: o reconhecimento depende do regime internacional e das normas do Contran, não apenas da existência do documento. Variação: A validade no país emissor não resolve automaticamente prazo, documentos e categoria admitidos no Brasil.",
+      "prova": [
+        "Qualquer habilitação estrangeira é automaticamente reconhecida por tempo ilimitado? Não. O artigo subordina o reconhecimento às condições internacionais e à regulamentação do Contran.",
+        "O artigo fixa sozinho prazo universal de seis meses para toda pessoa? Não. Remete ao regime aplicável; hipóteses regulamentares e condições do país devem ser examinadas."
+      ],
+      "termos": [
+        {
+          "termo": "Reconhecimento condicionado",
+          "significado": "Aceitação da habilitação conforme convenções e requisitos regulamentares."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 118",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "8d8ed29f-96e4-5c22-b5da-00fb5f53406a",
+        "content_sha256": "785099bb9e6c7afa5d5cd00ba700db763ec1dedda7631506612fcef080c6465a",
+        "simples": "O reconhecimento de habilitação obtida em outro país está subordinado às condições estabelecidas em convenções e acordos internacionais e às normas do Contran.",
+        "pontos": [
+          "Reconhecimento conforme tratados e normas do Contran."
+        ],
+        "atencao": [
+          "Depende de convenções e acordos internacionais."
+        ],
+        "exemplo": "A CNH estrangeira é reconhecida nos termos do acordo internacional.",
+        "prova": [
+          "Assertiva que reconhece automaticamente qualquer habilitação estrangeira erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 118"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-143",
+      "unit_id": "7550519f-5b6a-5831-add8-6049b0fc57b1",
+      "content_sha256": "11042b00ee2fcef092c53f92ff97abc2a4de562a0b129b92b6a34d49160c7898",
+      "simples": "A: motorizado de duas/três rodas. B: fora da A, PBT até 3.500 kg e até oito lugares excluído motorista, com exceções. C abrange B e carga acima de 3.500 kg; D abrange B/C e passageiros acima de oito lugares. E considera unidade acoplada de 6.000 kg ou mais ou lotação acima de oito, e combinações com mais de uma unidade tracionada. §2º: motor-casa tem redação específica com OU. §2º-A de 2026: elétrica ou híbrida com tração predominantemente elétrica, PBT até 4.250 kg, observado regulamento. C exige um ano de B e não mais de uma gravíssima em doze meses.",
+      "pontos": [
+        "B ordinária: até 3.500 kg E até oito lugares, excluído motorista.",
+        "Lei 15.503/2026 publicada/vigente em 14/9/2026: §2º-A, elétrica ou híbrida com tração predominantemente elétrica até 4.250 kg.",
+        "C: um ano de B; não mais de UMA gravíssima nos últimos doze meses.",
+        "E: unidade acoplada com 6.000 kg OU MAIS ou mais de oito lugares; §3º: mais de uma unidade tracionada.",
+        "§4º: B/C/D podem conduzir combinação no recorte próprio de tratora, acoplada MENOR que 6.000 kg E até oito lugares, respeitada CMT.",
+        "Motor-casa: preservar OU da redação do §2º; não substituir silenciosamente por E nem generalizar esse recorte aos outros tipos."
+      ],
+      "atencao": [
+        "Atualização normativa de 14/9/2026 não é a data original do CTB nem a data da conferência de 13/10/2026.",
+        "Não recuperar restrição de graves/reincidência média para acesso à C; não tratar qualquer híbrido como exceção."
+      ],
+      "exemplo": "Um veículo híbrido com tração predominantemente elétrica tem PBT de 4.000 kg. Resposta: pode entrar no §2º-A da categoria B, respeitados eventuais critérios adicionais do Contran. Variação: Um híbrido sem tração predominantemente elétrica não ganha automaticamente o teto de 4.250 kg só por ser chamado híbrido.",
+      "prova": [
+        "O teto de 4.250 kg da B vale para qualquer automóvel a combustão? Não. A Lei 15.503/2026 delimita propulsão elétrica ou híbrida com tração predominantemente elétrica e regulamento adicional.",
+        "Duas unidades tracionadas pequenas dispensam E porque cada uma pesa menos de 6.000 kg? Não. O §3º aplica o inciso V a combinação com mais de uma unidade tracionada independentemente de peso/capacidade."
+      ],
+      "termos": [
+        {
+          "termo": "Categoria e combinação",
+          "significado": "Enquadramento que considera tratora, unidades acopladas e exceções específicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 145",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15503.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm"
+      ],
+      "expected": {
+        "unit_id": "7550519f-5b6a-5831-add8-6049b0fc57b1",
+        "content_sha256": "11042b00ee2fcef092c53f92ff97abc2a4de562a0b129b92b6a34d49160c7898",
+        "simples": "Os candidatos podem habilitar-se nas categorias A a E. A categoria A é de veículo motorizado de duas ou três rodas; B, de veículo cujo peso bruto total não exceda 3.500 kg e a lotação oito lugares, excluído o motorista; C, de veículos da B e de carga com peso bruto total acima de 3.500 kg; D, de veículos das B e C e de transporte de passageiros com lotação acima de oito lugares; E, de combinações em que a unidade acoplada tenha 6.000 kg ou mais de peso bruto total ou lotação acima de oito lugares. Para a categoria C exige-se um ano de categoria B e não mais de uma infração gravíssima nos últimos doze meses. A categoria B também autoriza motor-casa até 6.000 kg e veículos elétricos ou híbridos até 4.250 kg.",
+        "pontos": [
+          "Categorias A a E em gradação.",
+          "Limites de 3.500 kg e de oito lugares.",
+          "C exige um ano de B.",
+          "B autoriza motor-casa e veículos elétricos ou híbridos nos limites legais."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: limites da categoria C e extensões da B foram alterados por leis recentes.",
+          "Categoria B: até 3.500 kg e oito lugares."
+        ],
+        "exemplo": "Quem tem categoria B há um ano e sem reincidência grave pode pedir a categoria C.",
+        "prova": [
+          "Assertiva que fixa em 3.000 kg o limite de peso da categoria B erra: são 3.500 kg."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-144",
+      "unit_id": "aed365b5-9198-5263-824b-0576d16b5e83",
+      "content_sha256": "18bdc984152fb4f0b47f5fc12dd5b2642e6c7ffd5e8aa0bde36169c9f3e04882",
+      "simples": "O trator de roda, o trator de esteira, o trator misto ou o equipamento automotor destinado à movimentação de cargas ou execução de trabalho agrícola, de terraplenagem, construção ou pavimentação só podem ser conduzidos na via pública por condutor habilitado nas categorias C, D ou E. O trator de roda e os equipamentos para trabalhos agrícolas podem também ser conduzidos por condutor da categoria B.",
+      "pontos": [
+        "Categorias C, D ou E.",
+        "Exceção: trator de roda e equipamentos agrícolas com categoria B."
+      ],
+      "atencao": [
+        "Exceção só para tratores de roda e equipamentos agrícolas.",
+        "Não extrapolar a exceção para qualquer trator/máquina apenas pelo nome popular."
+      ],
+      "exemplo": "Um trator de rodas executa trabalho agrícola e é conduzido na via por habilitado em B. Resposta: o parágrafo admite a hipótese, sem exigir indistintamente C/D/E. Variação: A exceção não libera toda máquina de construção para qualquer habilitado em B; analisar o tipo/destinação previstos.",
+      "prova": [
+        "O caput não admite nenhuma exceção à exigência C/D/E? Não. O parágrafo inclui trator de roda e equipamentos destinados a trabalho agrícola também para B.",
+        "Habilitação B permite qualquer máquina de terraplenagem por analogia? Não. A exceção é delimitada, não autorização geral para toda máquina automotora."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção agrícola",
+          "significado": "Extensão da B no recorte do parágrafo, sem equiparação universal de maquinário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 143"
+      ],
+      "expected": {
+        "unit_id": "aed365b5-9198-5263-824b-0576d16b5e83",
+        "content_sha256": "18bdc984152fb4f0b47f5fc12dd5b2642e6c7ffd5e8aa0bde36169c9f3e04882",
+        "simples": "O trator de roda, o trator de esteira, o trator misto ou o equipamento automotor destinado à movimentação de cargas ou execução de trabalho agrícola, de terraplenagem, construção ou pavimentação só podem ser conduzidos na via pública por condutor habilitado nas categorias C, D ou E. O trator de roda e os equipamentos para trabalhos agrícolas podem também ser conduzidos por condutor da categoria B.",
+        "pontos": [
+          "Categorias C, D ou E.",
+          "Exceção: trator de roda e equipamentos agrícolas com categoria B."
+        ],
+        "atencao": [
+          "Exceção só para tratores de roda e equipamentos agrícolas."
+        ],
+        "exemplo": "O agricultor com categoria B conduz trator de roda na via.",
+        "prova": [
+          "Assertiva que permite a categoria B para conduzir trator de esteira na via erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 143"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-145",
+      "unit_id": "c96f99d0-05e7-5f96-b12f-895f5cd8c4ac",
+      "content_sha256": "60ef69b65e47804fb249bfed21eba66368c7f88b7dd0351fc9a11c09db0905f2",
+      "simples": "Para habilitar-se nas categorias D e E ou para conduzir veículo de transporte coletivo de passageiros, de escolares, de emergência ou de produto perigoso, o candidato deve ser maior de vinte e um anos; estar habilitado há, no mínimo, dois anos na categoria B ou um ano na categoria C, para a categoria D, e há um ano na categoria C, para a categoria E; não ter cometido mais de uma infração gravíssima nos últimos doze meses; e ser aprovado em curso especializado e em treinamento de prática veicular em situação de risco, nos termos do Contran.",
+      "pontos": [
+        "Maior de vinte e um anos.",
+        "Tempo mínimo de habilitação prévia.",
+        "No máximo uma infração gravíssima em doze meses.",
+        "Curso especializado e treinamento em situação de risco."
+      ],
+      "atencao": [
+        "D: dois anos na B ou um ano na C; E: um ano na C.",
+        "ATUALIZAÇÃO: requisitos ajustados por leis recentes.",
+        "Histórico atual: não mais de uma gravíssima em doze meses. Texto da idade: maior de vinte e um anos; não substituir silenciosamente sua expressão.",
+        "Formação especializada deve integrar Resolução 1020/2025, não programa antigo revogado como única fonte."
+      ],
+      "exemplo": "O candidato tem B há dois anos e pretende D. Resposta: satisfaz uma alternativa temporal, mas precisa dos demais requisitos do artigo. Variação: Ter C há um ano permite outra alternativa para D e o requisito temporal de E; participar do curso não depende do histórico do inciso III, conforme parágrafo.",
+      "prova": [
+        "Para D são cumulativos dois anos de B e um ano de C? Não. O inciso II, a, apresenta alternativas com OU, mantendo os demais requisitos.",
+        "Duas gravíssimas impedem até mesmo participar do curso especializado pelo artigo? Não. O parágrafo separa participação no curso do requisito do inciso III; não equivale a aprovação final na habilitação."
+      ],
+      "termos": [
+        {
+          "termo": "Requisito prévio",
+          "significado": "Condição para a categoria/atividade, distinta da possibilidade de participar do curso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 143",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "c96f99d0-05e7-5f96-b12f-895f5cd8c4ac",
+        "content_sha256": "60ef69b65e47804fb249bfed21eba66368c7f88b7dd0351fc9a11c09db0905f2",
+        "simples": "Para habilitar-se nas categorias D e E ou para conduzir veículo de transporte coletivo de passageiros, de escolares, de emergência ou de produto perigoso, o candidato deve ser maior de vinte e um anos; estar habilitado há, no mínimo, dois anos na categoria B ou um ano na categoria C, para a categoria D, e há um ano na categoria C, para a categoria E; não ter cometido mais de uma infração gravíssima nos últimos doze meses; e ser aprovado em curso especializado e em treinamento de prática veicular em situação de risco, nos termos do Contran.",
+        "pontos": [
+          "Maior de vinte e um anos.",
+          "Tempo mínimo de habilitação prévia.",
+          "No máximo uma infração gravíssima em doze meses.",
+          "Curso especializado e treinamento em situação de risco."
+        ],
+        "atencao": [
+          "D: dois anos na B ou um ano na C; E: um ano na C.",
+          "ATUALIZAÇÃO: requisitos ajustados por leis recentes."
+        ],
+        "exemplo": "Quem tem categoria B há dois anos pode buscar a categoria D, atendidos os demais requisitos.",
+        "prova": [
+          "Assertiva que fixa em dezoito anos a idade mínima para a categoria D erra: são mais de vinte e um anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 143"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-145-a",
+      "unit_id": "134a2f9d-464e-5eb2-a8f4-49a8a93fb058",
+      "content_sha256": "1f0274f28b1cf2bcb513430be49c2322a606b3714c8fd8cb6e120d3667b0ba75",
+      "simples": "Além do art. 145, para conduzir ambulâncias o candidato deve comprovar treinamento especializado e reciclagem em cursos específicos a cada cinco anos, nos termos da normatização do Contran.",
+      "pontos": [
+        "Treinamento especializado.",
+        "Reciclagem a cada cinco anos."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Reciclagem a cada cinco anos.",
+        "Resolução 1020/2025, art. 75: validade de cinco anos a partir da aprovação; atualização registrada no Renach tem regime próprio."
+      ],
+      "exemplo": "Uma motorista de ambulância comprova formação e reciclagem específica no período de cinco anos. Resposta: é exigência adicional ao regime do art. 145. Variação: Ser habilitada em D não substitui o treinamento especializado e a reciclagem própria.",
+      "prova": [
+        "O intervalo legal da reciclagem da ambulância é de dois anos? Não. O art. 145-A prevê cinco anos, integrado à normatização do Contran.",
+        "A exigência substitui integralmente todos os requisitos do art. 145? Não. O texto diz além do disposto no art. 145, indicando exigência adicional."
+      ],
+      "termos": [
+        {
+          "termo": "Reciclagem de ambulância",
+          "significado": "Formação periódica específica em cinco anos, distinta de toda renovação de CNH."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 145",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "134a2f9d-464e-5eb2-a8f4-49a8a93fb058",
+        "content_sha256": "1f0274f28b1cf2bcb513430be49c2322a606b3714c8fd8cb6e120d3667b0ba75",
+        "simples": "Além do art. 145, para conduzir ambulâncias o candidato deve comprovar treinamento especializado e reciclagem em cursos específicos a cada cinco anos, nos termos da normatização do Contran.",
+        "pontos": [
+          "Treinamento especializado.",
+          "Reciclagem a cada cinco anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Reciclagem a cada cinco anos."
+        ],
+        "exemplo": "O motorista de ambulância refaz o curso a cada cinco anos.",
+        "prova": [
+          "Assertiva que fixa em dois anos a reciclagem do condutor de ambulância erra: são cinco anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 145"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-146",
+      "unit_id": "f75582c6-61a2-581b-ba55-081529e71da1",
+      "content_sha256": "ccaecae319f5aa5226ef195be09b16aa0dea3e78c41148f0c45df200eaa51dd1",
+      "simples": "Para conduzir veículos de outra categoria, o condutor deve realizar os exames complementares exigidos para a habilitação na categoria pretendida.",
+      "pontos": [
+        "Exames complementares para nova categoria."
+      ],
+      "atencao": [
+        "Exames complementares, não todo o processo.",
+        "Não confundir inclusão legal de veículos na categoria existente e processo de mudança/adicionamento."
+      ],
+      "exemplo": "Condutor de B pretende conduzir veículo da C. Resposta: deve realizar exames complementares exigidos para a categoria pretendida, sem dispensar demais requisitos. Variação: Conduzir um tipo que já está incluído na categoria atual não é automaticamente mudança de categoria; conferir art. 143.",
+      "prova": [
+        "O artigo dispensa todo exame para ampliar categoria? Não. Exige exames complementares próprios da habilitação pretendida.",
+        "Ter qualquer habilitação libera condução de categoria superior? Não. A ampliação depende dos requisitos e exames pertinentes; não decorre de possuir CNH em geral."
+      ],
+      "termos": [
+        {
+          "termo": "Exame complementar",
+          "significado": "Avaliação própria da categoria pretendida, distinta de livre extensão da licença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 143",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "f75582c6-61a2-581b-ba55-081529e71da1",
+        "content_sha256": "ccaecae319f5aa5226ef195be09b16aa0dea3e78c41148f0c45df200eaa51dd1",
+        "simples": "Para conduzir veículos de outra categoria, o condutor deve realizar os exames complementares exigidos para a habilitação na categoria pretendida.",
+        "pontos": [
+          "Exames complementares para nova categoria."
+        ],
+        "atencao": [
+          "Exames complementares, não todo o processo."
+        ],
+        "exemplo": "Quem tem categoria B faz exames complementares para a C.",
+        "prova": [
+          "Assertiva que dispensa novos exames para mudar de categoria erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 143"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-147-a",
+      "unit_id": "ea4bd432-9545-5162-a6e6-cef0b7509b7d",
+      "content_sha256": "d7a5434a937e1da88f67a9c18fb2a9c7871ac65772dd237b6a6e96935bdca3d7",
+      "simples": "Ao candidato com deficiência auditiva é assegurada acessibilidade de comunicação, mediante tecnologias assistivas ou ajudas técnicas, em todas as etapas da habilitação. O material didático audiovisual das aulas teóricas deve ser acessível, com legenda oculta e tradução simultânea em Libras. O candidato pode requerer, na inscrição, intérprete de Libras para aulas práticas e teóricas.",
+      "pontos": [
+        "Acessibilidade de comunicação.",
+        "Material com legenda oculta e Libras.",
+        "Intérprete de Libras a pedido."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Incluído pela LBI, Lei 13.146/2015; não converter deficiência auditiva em incapacidade automática para habilitação."
+      ],
+      "exemplo": "Candidata com deficiência auditiva requer na inscrição intérprete de Libras para aulas. Resposta: a garantia abrange aulas práticas e teóricas e acessibilidade em todas as etapas. Variação: Material audiovisual só com legenda não satisfaz automaticamente a associação de legenda oculta e tradução simultânea em Libras prevista no §1º.",
+      "prova": [
+        "A acessibilidade se limita à prova teórica? Não. O caput a assegura em todas as etapas, e o §2º inclui acompanhamento das aulas práticas e teóricas.",
+        "O direito autoriza presumir que toda pessoa surda usa a mesma comunicação? Não. A acessibilidade deve respeitar a comunicação efetiva; o artigo garante os recursos e o requerimento descritos."
+      ],
+      "termos": [
+        {
+          "termo": "Acessibilidade comunicacional",
+          "significado": "Condições para participação efetiva, sem presumir incapacidade ou método único."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 147"
+      ],
+      "expected": {
+        "unit_id": "ea4bd432-9545-5162-a6e6-cef0b7509b7d",
+        "content_sha256": "d7a5434a937e1da88f67a9c18fb2a9c7871ac65772dd237b6a6e96935bdca3d7",
+        "simples": "Ao candidato com deficiência auditiva é assegurada acessibilidade de comunicação, mediante tecnologias assistivas ou ajudas técnicas, em todas as etapas da habilitação. O material didático audiovisual das aulas teóricas deve ser acessível, com legenda oculta e tradução simultânea em Libras. O candidato pode requerer, na inscrição, intérprete de Libras para aulas práticas e teóricas.",
+        "pontos": [
+          "Acessibilidade de comunicação.",
+          "Material com legenda oculta e Libras.",
+          "Intérprete de Libras a pedido."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "O candidato surdo requer intérprete de Libras nas aulas.",
+        "prova": [
+          "Assertiva que dispensa o intérprete de Libras nas aulas teóricas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-148-a",
+      "unit_id": "a71b469b-152c-59f8-8f9e-72e9dca96467",
+      "content_sha256": "e4e4d6e835fc3d3825768451e220c4674f9d43594a555f83c6fd1ec7895aa996",
+      "simples": "C/D/E: negativo para obtenção/renovação; abaixo de setenta anos, exame periódico a cada dois anos e seis meses, independente dos demais exames. Janela mínima de noventa dias; contraprova e recurso sem efeito suspensivo. Positivo no periódico: suspensão de três meses, levantamento condicionado a novo negativo no Renach. ATUALIZAÇÃO: §10 da Lei 15.153/2025 também prevê negativo na PRIMEIRA habilitação A/B, sem criar periodicismo universal dessas categorias. Aplicação operacional e calendários regulamentares devem ser conferidos; não ensinar exclusão absoluta de A/B.",
+      "pontos": [
+        "C/D/E: obtenção/renovação e periódico, abaixo de setenta, a cada 2 anos e 6 meses.",
+        "§10: primeira habilitação A/B, incluída após promulgação de partes vetadas da Lei 15.153/2025.",
+        "Janela mínima: 90 dias; recurso/contraprova SEM efeito suspensivo.",
+        "§5º: positivo no PERIÓDICO, suspensão de três meses e negativo no Renach para levantamento; vedadas outras penalidades nesse recorte.",
+        "§9º: comunicação de vencimento com trinta dias de antecedência via sistema eletrônico.",
+        "§7º: laboratórios credenciados, livre concorrência; vedados preço público fixado, limite de número/locais e exclusividade territorial.",
+        "§11: posto de coleta em ambiente próprio e segregado na clínica, contratado por laboratório credenciado; não habilita a clínica automaticamente como laboratório.",
+        "§6º: resultado divulgado ao interessado, com finalidade delimitada; não exposição pública irrestrita do laudo."
+      ],
+      "atencao": [
+        "Não repetir exercício antigo só C/D/E: o §10 alcança primeira A/B. Não estender seu alcance à renovação/periódico universal de A/B.",
+        "Regulamento 923 compilado consultado no recorte C/D/E. Não certificada integralmente a implantação/calendário operacional da expansão A/B.",
+        "Distinguir não realização, positivo no exame do caput e positivo no periódico; arts. 165-B/C/D não são hipóteses idênticas.",
+        "O texto do §5º condiciona levantamento a negativo no Renach; o art. 16 da Resolução 923 compilada também menciona cumprimento da penalidade. Distinguir as formulações e o procedimento aplicável, sem ensinar bloqueio perpétuo automático após cumprimento.",
+        "Resolução 923 compilada, art. 10-A, §3º: periódico não exigido de C/D/E abaixo de setenta com CNH de validade inferior a três anos. Art. 10-B: validade do exame de noventa dias da coleta é diferente da janela retrospectiva mínima de noventa dias."
+      ],
+      "exemplo": "Uma questão afirma que toxicológico jamais alcança categoria A ou B. Resposta: erra diante do §10 incluído na Lei 15.153/2025 após promulgação de partes vetadas, que prevê primeira habilitação A/B. Variação: Isso não estende automaticamente o exame periódico de dois anos e seis meses do §2º a todo habilitado A/B; o periodicismo continua no recorte C/D/E menores de setenta.",
+      "prova": [
+        "É correto manter exercício dizendo que categoria B nunca precisa de toxicológico? Não. O §10 atual inclui primeira habilitação A/B; distinguir previsão legal e regras operacionais pertinentes.",
+        "Um resultado negativo elimina toda fiscalização de influência atual de substância? Não. O exame de larga janela tem objeto diferente da abordagem e prova de influência/alteração na condução."
+      ],
+      "termos": [
+        {
+          "termo": "Larga janela de detecção",
+          "significado": "Avaliação retrospectiva mínima de noventa dias, distinta da fiscalização instantânea."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 165-B",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15153.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes2/Resoluo923compilado.pdf",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "a71b469b-152c-59f8-8f9e-72e9dca96467",
+        "content_sha256": "e4e4d6e835fc3d3825768451e220c4674f9d43594a555f83c6fd1ec7895aa996",
+        "simples": "Os condutores das categorias C, D e E devem comprovar resultado negativo em exame toxicológico para obtenção e renovação da CNH. O exame busca aferir o consumo de substâncias psicoativas que comprometam a capacidade de direção e tem janela de detecção mínima de 90 dias. Os condutores dessas categorias com menos de 70 anos fazem novo exame a cada 2 anos e 6 meses. É garantido o direito de contraprova e de recurso administrativo sem efeito suspensivo. O resultado positivo no exame periódico acarreta a suspensão do direito de dirigir por três meses, condicionada a novo exame negativo. O exame é realizado em regime de livre concorrência por laboratórios credenciados. A não realização do exame impede a obtenção ou renovação da CNH e acarreta as sanções previstas.",
+        "pontos": [
+          "Exame toxicológico para as categorias C, D e E.",
+          "Janela de detecção mínima de 90 dias.",
+          "Novo exame a cada 2 anos e 6 meses para menores de 70 anos.",
+          "Suspensão por três meses em caso de resultado positivo no periódico.",
+          "Livre concorrência entre laboratórios credenciados."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o exame toxicológico foi ampliado e alterado por leis posteriores; confira o texto vigente.",
+          "Resultado positivo no periódico: suspensão de TRÊS meses."
+        ],
+        "exemplo": "O caminhoneiro de 45 anos refaz o exame toxicológico a cada 2 anos e 6 meses.",
+        "prova": [
+          "Assertiva que exige o exame toxicológico dos condutores da categoria B erra: aplica-se às categorias C, D e E."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-150",
+      "unit_id": "dff4dc07-afdf-5b0e-90d8-f468d259ec46",
+      "content_sha256": "b039b1db539001a1cdc96a119f18d8dd30ed4e443ff97eb52ba0f48bda7b643a",
+      "simples": "Ao renovar os exames de habilitação, o condutor que não tenha curso de direção defensiva e de primeiros socorros deve a eles ser submetido, conforme normatização do Contran. A empresa que utiliza condutores contratados para operar sua frota é obrigada a fornecer curso de direção defensiva, primeiros socorros e outros, conforme o Contran.",
+      "pontos": [
+        "Cursos exigidos na renovação, se o condutor não os tem.",
+        "Empresas fornecem cursos aos condutores contratados."
+      ],
+      "atencao": [
+        "Obrigação da EMPRESA que usa condutores contratados.",
+        "A remissão ao artigo anterior deve ser integrada ao regime atual de exames; o art. 149 está revogado. Não recuperar procedimento antigo apenas por remissão residual."
+      ],
+      "exemplo": "Uma empresa contrata condutores para operar a frota. Resposta: tem dever de fornecer os cursos mencionados e outros conforme normas do Contran. Variação: O artigo não autoriza repetir todo curso em qualquer renovação sem considerar se já foi realizado e o regime atual.",
+      "prova": [
+        "O caput manda repetir cursos indiscriminadamente mesmo quando o condutor já os possui? Não. Delimita condutor que não tenha direção defensiva e primeiros socorros, conforme normatização.",
+        "A obrigação de fornecer cursos é exclusiva do próprio motorista contratado? Não. O parágrafo atribui o fornecimento à empresa que utiliza condutores contratados em sua frota."
+      ],
+      "termos": [
+        {
+          "termo": "Formação continuada",
+          "significado": "Capacitação conforme situação e normatização, não repetição automática de todo curso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 148",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "dff4dc07-afdf-5b0e-90d8-f468d259ec46",
+        "content_sha256": "b039b1db539001a1cdc96a119f18d8dd30ed4e443ff97eb52ba0f48bda7b643a",
+        "simples": "Ao renovar os exames de habilitação, o condutor que não tenha curso de direção defensiva e de primeiros socorros deve a eles ser submetido, conforme normatização do Contran. A empresa que utiliza condutores contratados para operar sua frota é obrigada a fornecer curso de direção defensiva, primeiros socorros e outros, conforme o Contran.",
+        "pontos": [
+          "Cursos exigidos na renovação, se o condutor não os tem.",
+          "Empresas fornecem cursos aos condutores contratados."
+        ],
+        "atencao": [
+          "Obrigação da EMPRESA que usa condutores contratados."
+        ],
+        "exemplo": "A transportadora paga o curso de direção defensiva dos motoristas.",
+        "prova": [
+          "Assertiva que isenta a empresa de fornecer os cursos aos seus condutores erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 148"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-152",
+      "unit_id": "4b3c368f-534d-54a6-86bd-1d4f6669cbb3",
+      "content_sha256": "3f514f1dfd4b3360cee9904ee864fb7bf0c9538739153599434c121387f98b75",
+      "simples": "O exame de direção veicular é realizado perante comissão integrada por três membros designados pelo dirigente do órgão executivo local de trânsito, e pelo menos um deles deve ser habilitado em categoria igual ou superior à pretendida pelo candidato. Militares, policiais e bombeiros com curso de formação de condutor ministrado em suas corporações são dispensados dos exames em que tenham sido aprovados naquele curso, desde que observadas as normas do Contran, mediante requerimento instruído com ofício do comandante.",
+      "pontos": [
+        "Comissão de três membros.",
+        "Pelo menos um com categoria igual ou superior.",
+        "Dispensa para militares e policiais com curso nas corporações."
+      ],
+      "atencao": [
+        "Comissão de TRÊS membros.",
+        "Resolução 1020/2025, art. 43: acompanhamento por preposto, comissão de três e possibilidade regulamentada de avaliação remota; não dispensar requisitos legais."
+      ],
+      "exemplo": "A comissão tem três membros, um habilitado na categoria igual ou superior à pretendida. Resposta: corresponde à composição legal; não exige todos com essa categoria. Variação: Na regulamentação 1020, um preposto acompanha o candidato e a comissão avalia; não exigir os três sentados no veículo em toda prova.",
+      "prova": [
+        "Todos os membros da comissão precisam de categoria igual ou superior? Não. O §1º exige pelo menos um; o número total da comissão é três.",
+        "Curso corporativo dispensa qualquer exame, mesmo sem aprovação no curso? Não. O §2º limita a dispensa aos exames com aprovação observadas normas do Contran e documentação do §3º."
+      ],
+      "termos": [
+        {
+          "termo": "Comissão examinadora",
+          "significado": "Colegiado de avaliação, distinto de exigir presença simultânea de todos no veículo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 147",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "4b3c368f-534d-54a6-86bd-1d4f6669cbb3",
+        "content_sha256": "3f514f1dfd4b3360cee9904ee864fb7bf0c9538739153599434c121387f98b75",
+        "simples": "O exame de direção veicular é realizado perante comissão integrada por três membros designados pelo dirigente do órgão executivo local de trânsito, e pelo menos um deles deve ser habilitado em categoria igual ou superior à pretendida pelo candidato. Militares, policiais e bombeiros com curso de formação de condutor ministrado em suas corporações são dispensados dos exames em que tenham sido aprovados naquele curso, desde que observadas as normas do Contran, mediante requerimento instruído com ofício do comandante.",
+        "pontos": [
+          "Comissão de três membros.",
+          "Pelo menos um com categoria igual ou superior.",
+          "Dispensa para militares e policiais com curso nas corporações."
+        ],
+        "atencao": [
+          "Comissão de TRÊS membros."
+        ],
+        "exemplo": "A banca de direção tem três examinadores, um deles com a categoria pretendida.",
+        "prova": [
+          "Assertiva que fixa comissão de cinco membros erra: são três."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-153",
+      "unit_id": "5635d573-cf03-586d-ac91-e85795b8125e",
+      "content_sha256": "2c882bf0db979fa6a18ab2ad520ef58cabf5655322fc3e0e9ca573235bdf6039",
+      "simples": "O candidato habilitado tem em seu prontuário a identificação de seus instrutores e examinadores, que são passíveis de punição conforme regulamentação do Contran. As penalidades aplicadas a instrutores e examinadores são advertência, suspensão e cancelamento da autorização para o exercício da atividade, conforme a falta cometida.",
+      "pontos": [
+        "Identificação de instrutores e examinadores no prontuário.",
+        "Advertência, suspensão e cancelamento."
+      ],
+      "atencao": [
+        "Três penalidades possíveis.",
+        "Não confundir cancelamento de autorização profissional e cassação da CNH do art. 263."
+      ],
+      "exemplo": "O prontuário identifica instrutores e examinadores da formação. Resposta: permite vincular agentes ao processo, sujeitos às sanções segundo a falta e o regulamento. Variação: A identificação não gera cancelamento automático por qualquer erro do aluno; analisar conduta e procedimento sancionador.",
+      "prova": [
+        "O rol textual do parágrafo contém apenas multa ao examinador? Não. Prevê advertência, suspensão e cancelamento da autorização para atividade, conforme falta.",
+        "Todo erro do candidato impõe automaticamente punição ao instrutor? Não. Responsabilidade exige examinar conduta, falta e regime aplicável, sem automatismo pelo resultado do aluno."
+      ],
+      "termos": [
+        {
+          "termo": "Autorização profissional",
+          "significado": "Vínculo para exercer instrução/exame, distinto da CNH pessoal do profissional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 156",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "5635d573-cf03-586d-ac91-e85795b8125e",
+        "content_sha256": "2c882bf0db979fa6a18ab2ad520ef58cabf5655322fc3e0e9ca573235bdf6039",
+        "simples": "O candidato habilitado tem em seu prontuário a identificação de seus instrutores e examinadores, que são passíveis de punição conforme regulamentação do Contran. As penalidades aplicadas a instrutores e examinadores são advertência, suspensão e cancelamento da autorização para o exercício da atividade, conforme a falta cometida.",
+        "pontos": [
+          "Identificação de instrutores e examinadores no prontuário.",
+          "Advertência, suspensão e cancelamento."
+        ],
+        "atencao": [
+          "Três penalidades possíveis."
+        ],
+        "exemplo": "O examinador que comete falta grave pode ter a autorização cancelada.",
+        "prova": [
+          "Assertiva que isenta examinadores e instrutores de penalidades erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 156"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-154",
+      "unit_id": "2bbefd68-86a7-5e64-aaa8-7c49f09fb804",
+      "content_sha256": "67815e3fc213009e2468a5ba3d72aa7f1b76d7c771be34617c5e677d49fe0ef0",
+      "simples": "Os veículos destinados à formação de condutores são identificados por uma faixa amarela de vinte centímetros de largura, pintada ao longo da carroçaria, à meia altura, com a inscrição AUTO-ESCOLA em preto. No veículo eventualmente utilizado para aprendizagem, afixa-se faixa branca removível de mesma largura. As idades máximas dos veículos de formação, sem computar o ano de fabricação, são oito anos para a categoria A, doze anos para a B e vinte anos para as categorias C, D e E.",
+      "pontos": [
+        "Faixa amarela de vinte centímetros com AUTO-ESCOLA.",
+        "Faixa branca removível para uso eventual.",
+        "Idades máximas: oito, doze e vinte anos."
+      ],
+      "atencao": [
+        "Lei 14.921/2024 publicada/vigente em 11/7/2024: máximo A=8, B=12, C/D/E=20, NÃO computado ano de fabricação.",
+        "Resolução 1020/2025, art. 128: destinados à formação são categoria aprendizagem; eventual tem identificação branca removível. Não afirmar exigência idêntica para qualquer carro particular usado em aula."
+      ],
+      "exemplo": "Veículo da categoria de aprendizagem destinado à formação tem faixa amarela de vinte centímetros. Resposta: aplicar esse regime e idade máxima por categoria, sem contar ano de fabricação. Variação: Veículo usado eventualmente na aprendizagem tem faixa branca removível; Resolução 1020, art. 128, distingue-o do destinado à formação.",
+      "prova": [
+        "Faixa da autoescola tem quarenta centímetros como a escolar? Não. O art. 154 usa vinte; quarenta é o recorte de identificação escolar do art. 136.",
+        "Idade máxima do veículo de formação se conta pelo início do uso na autoescola? Não. O §2º manda não computar ano de fabricação e fixa 8/12/20 por categoria; não contar por tempo comercial de uso."
+      ],
+      "termos": [
+        {
+          "termo": "Formação e uso eventual",
+          "significado": "Regimes de identificação distintos, também distinguidos na Resolução 1020."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 143",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14921.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "2bbefd68-86a7-5e64-aaa8-7c49f09fb804",
+        "content_sha256": "67815e3fc213009e2468a5ba3d72aa7f1b76d7c771be34617c5e677d49fe0ef0",
+        "simples": "Os veículos destinados à formação de condutores são identificados por uma faixa amarela de vinte centímetros de largura, pintada ao longo da carroçaria, à meia altura, com a inscrição AUTO-ESCOLA em preto. No veículo eventualmente utilizado para aprendizagem, afixa-se faixa branca removível de mesma largura. As idades máximas dos veículos de formação, sem computar o ano de fabricação, são oito anos para a categoria A, doze anos para a B e vinte anos para as categorias C, D e E.",
+        "pontos": [
+          "Faixa amarela de vinte centímetros com AUTO-ESCOLA.",
+          "Faixa branca removível para uso eventual.",
+          "Idades máximas: oito, doze e vinte anos."
+        ],
+        "atencao": [
+          "Idades máximas: A, oito anos; B, doze anos; C, D e E, vinte anos.",
+          "Faixa de vinte centímetros (a do escolar tem quarenta)."
+        ],
+        "exemplo": "O carro da autoescola tem faixa amarela e no máximo doze anos de uso.",
+        "prova": [
+          "Assertiva que fixa em dez anos a idade máxima do veículo da categoria B erra: são doze anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 143"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-155",
+      "unit_id": "179a32b1-cdea-5ad9-b4fc-9d94251b1b8d",
+      "content_sha256": "8381484bcf0f00d48f1fe3a84ed431f56f0ad8bb2cb157e3f5333766518f6f93",
+      "simples": "A formação de condutor de veículo automotor é realizada por instrutor autorizado pelo órgão executivo de trânsito dos Estados ou do Distrito Federal, pertencente ou não à entidade credenciada. Ao aprendiz é expedida autorização para aprendizagem, conforme o Contran, após aprovação nos exames de aptidão física e mental, de primeiros socorros e sobre legislação de trânsito.",
+      "pontos": [
+        "Instrutor autorizado pelo órgão estadual ou distrital.",
+        "Autorização para aprendizagem após aprovação nos exames."
+      ],
+      "atencao": [
+        "Instrutor pode ou não pertencer a entidade credenciada.",
+        "ATUALIZAÇÃO: o processo de formação foi flexibilizado por normas recentes do Contran; confira a regulamentação vigente.",
+        "Lei 14.599/2023 e Resolução 1020/2025: distinguir flexibilização de vínculo e ausência de controle."
+      ],
+      "exemplo": "Um instrutor autorizado não pertence a autoescola, mas orienta aprendizagem regular. Resposta: a redação atual admite pertencente ou não à entidade credenciada. Variação: Ser condutor experiente não equivale a instrutor autorizado nem substitui autorização de aprendizagem.",
+      "prova": [
+        "Instrutor precisa sempre ser empregado de autoescola? Não. O caput atual admite instrutor autorizado pertencente ou não a entidade credenciada.",
+        "A flexibilização elimina autorização do instrutor e condições da aprendizagem? Não. Autorização estadual/distrital e regime regulamentar permanecem exigíveis."
+      ],
+      "termos": [
+        {
+          "termo": "Instrutor autorizado",
+          "significado": "Profissional autorizado pelo órgão competente, com ou sem vínculo a entidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 158",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "179a32b1-cdea-5ad9-b4fc-9d94251b1b8d",
+        "content_sha256": "8381484bcf0f00d48f1fe3a84ed431f56f0ad8bb2cb157e3f5333766518f6f93",
+        "simples": "A formação de condutor de veículo automotor é realizada por instrutor autorizado pelo órgão executivo de trânsito dos Estados ou do Distrito Federal, pertencente ou não à entidade credenciada. Ao aprendiz é expedida autorização para aprendizagem, conforme o Contran, após aprovação nos exames de aptidão física e mental, de primeiros socorros e sobre legislação de trânsito.",
+        "pontos": [
+          "Instrutor autorizado pelo órgão estadual ou distrital.",
+          "Autorização para aprendizagem após aprovação nos exames."
+        ],
+        "atencao": [
+          "Instrutor pode ou não pertencer a entidade credenciada.",
+          "ATUALIZAÇÃO: o processo de formação foi flexibilizado por normas recentes do Contran; confira a regulamentação vigente."
+        ],
+        "exemplo": "O aprendiz recebe a autorização para aprender depois dos exames iniciais.",
+        "prova": [
+          "Assertiva que exige que o instrutor pertença a autoescola erra: pode ou não pertencer."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-156",
+      "unit_id": "3b841474-4f05-5ee6-8a8d-977c936a59c3",
+      "content_sha256": "6383a44bf6abbcf2146a907247a7728e16f53cf66bb4a531c36a94af8f98cab2",
+      "simples": "O Contran regulamenta o credenciamento para prestação de serviço pelas autoescolas e outras entidades destinadas à formação de condutores e as exigências para o exercício das atividades de instrutor e examinador.",
+      "pontos": [
+        "Credenciamento regulamentado pelo Contran.",
+        "Exigências para instrutores e examinadores."
+      ],
+      "atencao": [
+        "Competência do Contran.",
+        "Resolução 1020/2025 é fonte atual; não recuperar 789/2020 como vigente."
+      ],
+      "exemplo": "Uma entidade pretende oferecer formação de condutores. Resposta: o credenciamento e as exigências de instrutores/examinadores obedecem à regulamentação do Contran. Variação: A função normativa nacional não significa que todo ato de credenciamento individual seja praticado diretamente pelo Contran.",
+      "prova": [
+        "Só autoescola aparece como entidade de formação no artigo? Não. O caput também menciona outras entidades destinadas à formação, conforme regulamentação.",
+        "Definir normas e executar credenciamento são sempre a mesma competência? Não. O artigo atribui regulamentação ao Contran; atos executivos têm disciplina e órgãos próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Credenciamento",
+          "significado": "Vínculo regulado de prestação do serviço, distinto da elaboração nacional de normas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 155",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "3b841474-4f05-5ee6-8a8d-977c936a59c3",
+        "content_sha256": "6383a44bf6abbcf2146a907247a7728e16f53cf66bb4a531c36a94af8f98cab2",
+        "simples": "O Contran regulamenta o credenciamento para prestação de serviço pelas autoescolas e outras entidades destinadas à formação de condutores e as exigências para o exercício das atividades de instrutor e examinador.",
+        "pontos": [
+          "Credenciamento regulamentado pelo Contran.",
+          "Exigências para instrutores e examinadores."
+        ],
+        "atencao": [
+          "Competência do Contran."
+        ],
+        "exemplo": "O Contran define como as autoescolas são credenciadas.",
+        "prova": [
+          "Assertiva que atribui ao município o credenciamento das autoescolas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-158",
+      "unit_id": "eaa6a6cb-6ea5-5ac2-89e2-fd8971c2d4b6",
+      "content_sha256": "6cb0eae481ba5dfe1c05dde9375804bfbfc05267f41729bf70b300bc1c1f806b",
+      "simples": "A aprendizagem só pode realizar-se nos termos, horários e locais estabelecidos pelo órgão executivo de trânsito e com o aprendiz acompanhado por instrutor autorizado. Além do aprendiz e do instrutor, o veículo utilizado na aprendizagem pode conduzir apenas mais um acompanhante.",
+      "pontos": [
+        "Termos, horários e locais definidos pelo órgão de trânsito.",
+        "Acompanhamento por instrutor.",
+        "Apenas mais um acompanhante."
+      ],
+      "atencao": [
+        "Além do instrutor, só mais UM acompanhante.",
+        "Integrar Resolução 1020/2025; autorização não equivale a livre aprendizagem desacompanhada."
+      ],
+      "exemplo": "Na aula estão aprendiz, instrutor autorizado e um acompanhante. Resposta: o §1º permite só mais um acompanhante além dos dois. Variação: Instrutor não autorizado ou aula fora das condições do órgão viola os requisitos, mesmo sem acompanhante adicional.",
+      "prova": [
+        "O limite é um ocupante total no veículo de aprendizagem? Não. Permite aprendiz e instrutor, além de apenas mais um acompanhante.",
+        "O §2º revogado ainda impõe a mesma restrição histórica vigente? Não. Deve ser tratado como marca de revogação, sem gerar exercício de dever antigo."
+      ],
+      "termos": [
+        {
+          "termo": "Aprendizagem acompanhada",
+          "significado": "Instrução regular com profissional autorizado e limite adicional de acompanhante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 155",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "eaa6a6cb-6ea5-5ac2-89e2-fd8971c2d4b6",
+        "content_sha256": "6cb0eae481ba5dfe1c05dde9375804bfbfc05267f41729bf70b300bc1c1f806b",
+        "simples": "A aprendizagem só pode realizar-se nos termos, horários e locais estabelecidos pelo órgão executivo de trânsito e com o aprendiz acompanhado por instrutor autorizado. Além do aprendiz e do instrutor, o veículo utilizado na aprendizagem pode conduzir apenas mais um acompanhante.",
+        "pontos": [
+          "Termos, horários e locais definidos pelo órgão de trânsito.",
+          "Acompanhamento por instrutor.",
+          "Apenas mais um acompanhante."
+        ],
+        "atencao": [
+          "Além do instrutor, só mais UM acompanhante."
+        ],
+        "exemplo": "Na aula prática vão o aprendiz, o instrutor e um único acompanhante.",
+        "prova": [
+          "Assertiva que permite dois acompanhantes além do instrutor erra: apenas um."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-160",
+      "unit_id": "ea4dee7b-2a4e-5c1f-a84d-89213172ea6f",
+      "content_sha256": "cd3b20084d9ab66ab36929465fa2be923d9b9e45ab5ce767ca6186dc25650590",
+      "simples": "O condutor condenado por delito de trânsito deve ser submetido a novos exames para voltar a dirigir, conforme as normas do Contran, independentemente do reconhecimento da prescrição em face da pena concretizada na sentença. Em caso de sinistro grave, o condutor envolvido pode ser submetido aos exames, a juízo da autoridade executiva estadual de trânsito, assegurada ampla defesa, e esta pode apreender o documento de habilitação até a aprovação nos exames.",
+      "pontos": [
+        "Novos exames após condenação por delito de trânsito.",
+        "Independe da prescrição.",
+        "Sinistro grave: exames a juízo da autoridade, com ampla defesa.",
+        "Apreensão do documento até a aprovação."
+      ],
+      "atencao": [
+        "Exames exigidos mesmo com prescrição.",
+        "Distinguir condenado do caput e envolvido do §1º; não presumir culpa pelo mero envolvimento."
+      ],
+      "exemplo": "Condutor condenado por delito de trânsito pretende voltar a dirigir. Resposta: o caput exige novos exames na forma do Contran, inclusive na hipótese de prescrição que especifica. Variação: Condutor apenas envolvido em sinistro grave não recebe automaticamente a mesma consequência: o §1º diz poderá e assegura ampla defesa.",
+      "prova": [
+        "Todo envolvimento em sinistro grave exige automaticamente novos exames? Não. O §1º remete ao juízo da autoridade estadual e assegura ampla defesa, sem condenação presumida.",
+        "Apreender documento do §2º restaura a antiga penalidade de apreensão do veículo? Não. São objeto e regime diferentes; não confundir documento e veículo nem medida e pena."
+      ],
+      "termos": [
+        {
+          "termo": "Retorno à condução",
+          "significado": "Exames conforme hipótese legal e procedimento, distinto de culpa automática no sinistro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 147"
+      ],
+      "expected": {
+        "unit_id": "ea4dee7b-2a4e-5c1f-a84d-89213172ea6f",
+        "content_sha256": "cd3b20084d9ab66ab36929465fa2be923d9b9e45ab5ce767ca6186dc25650590",
+        "simples": "O condutor condenado por delito de trânsito deve ser submetido a novos exames para voltar a dirigir, conforme as normas do Contran, independentemente do reconhecimento da prescrição em face da pena concretizada na sentença. Em caso de sinistro grave, o condutor envolvido pode ser submetido aos exames, a juízo da autoridade executiva estadual de trânsito, assegurada ampla defesa, e esta pode apreender o documento de habilitação até a aprovação nos exames.",
+        "pontos": [
+          "Novos exames após condenação por delito de trânsito.",
+          "Independe da prescrição.",
+          "Sinistro grave: exames a juízo da autoridade, com ampla defesa.",
+          "Apreensão do documento até a aprovação."
+        ],
+        "atencao": [
+          "Exames exigidos mesmo com prescrição."
+        ],
+        "exemplo": "O condutor condenado por homicídio culposo no trânsito refaz os exames para voltar a dirigir.",
+        "prova": [
+          "Assertiva que dispensa os exames se houver prescrição da pena erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 147"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-161",
+      "unit_id": "93661f67-70f4-5673-8a51-2c6f906c9e67",
+      "content_sha256": "62897d91109ea2b294a627c767768fe89ebbe3f1251e9178aaedda6edf91b58b",
+      "simples": "Constitui infração de trânsito a inobservância de qualquer preceito do Código ou da legislação complementar, e o infrator sujeita-se às penalidades e medidas administrativas indicadas em cada artigo do capítulo e às punições do capítulo dos crimes de trânsito.",
+      "pontos": [
+        "Infração = inobservância do Código ou da legislação complementar.",
+        "Penalidades e medidas administrativas de cada artigo."
+      ],
+      "atencao": [
+        "Infração administrativa e crime são esferas distintas.",
+        "Redação atual usa código e legislação complementar. Não recuperar o parágrafo revogado ou a expressão afastada judicialmente como poder sancionatório livre."
+      ],
+      "exemplo": "Uma resolução define requisito técnico e uma autoridade pretende inventar por ela sanção inédita. Resposta: regulamentação não equivale à criação livre de sanções; a ADI 2998 afastou essa autorização. Variação: Conduta pode gerar infração administrativa e crime quando preencher tipos próprios, não porque toda irregularidade administrativa é crime.",
+      "prova": [
+        "Toda infração administrativa constitui automaticamente crime de trânsito? Não. O capítulo penal tem requisitos próprios, distintos do simples descumprimento administrativo.",
+        "Contran pode criar qualquer sanção como legislador pelo parágrafo antigo? Não. A ADI 2998 afastou essa autorização; o parágrafo atual foi revogado pela Lei 14.071/2020."
+      ],
+      "termos": [
+        {
+          "termo": "Reserva legal sancionatória",
+          "significado": "Regulamentação técnica não concede poder ilimitado de criar punições."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 256",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-julga-inconstitucional-norma-do-ctb-que-permite-ao-contran-criar-sancoes-para-infracoes-de-transito/",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "93661f67-70f4-5673-8a51-2c6f906c9e67",
+        "content_sha256": "62897d91109ea2b294a627c767768fe89ebbe3f1251e9178aaedda6edf91b58b",
+        "simples": "Constitui infração de trânsito a inobservância de qualquer preceito do Código ou da legislação complementar, e o infrator sujeita-se às penalidades e medidas administrativas indicadas em cada artigo do capítulo e às punições do capítulo dos crimes de trânsito.",
+        "pontos": [
+          "Infração = inobservância do Código ou da legislação complementar.",
+          "Penalidades e medidas administrativas de cada artigo."
+        ],
+        "atencao": [
+          "Infração administrativa e crime são esferas distintas."
+        ],
+        "exemplo": "Quem descumpre uma regra do Código comete infração de trânsito.",
+        "prova": [
+          "Assertiva que restringe as infrações às hipóteses do capítulo específico erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 256"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-162",
+      "unit_id": "1e3b0f0a-19d4-5edd-bdaf-4cbf38619978",
+      "content_sha256": "ba0e9947e79b7b901e315d62c77372d5b006a1b0f05623667f2a66b5efc3fa9a",
+      "simples": "Dirigir veículo sem possuir CNH, Permissão para Dirigir ou Autorização para Conduzir Ciclomotor é infração gravíssima, com multa (três vezes) e retenção do veículo até a apresentação de condutor habilitado. Dirigir com habilitação cassada ou com suspensão do direito de dirigir também é gravíssima, com multa (três vezes), recolhimento do documento e retenção do veículo. Dirigir com habilitação de categoria diferente é gravíssima, com multa (duas vezes) e retenção. Também é gravíssima dirigir com CNH vencida há mais de trinta dias, sem lentes corretoras, aparelho auxiliar de audição ou adaptações impostas, ou sem os cursos especializados obrigatórios, com multa e retenção do veículo.",
+      "pontos": [
+        "Sem habilitação: gravíssima, multa três vezes.",
+        "Habilitação cassada ou suspensa: gravíssima, multa três vezes.",
+        "Categoria diferente: gravíssima, multa duas vezes.",
+        "CNH vencida há mais de trinta dias: gravíssima.",
+        "Sem lentes corretoras ou adaptações impostas: gravíssima."
+      ],
+      "atencao": [
+        "Inciso V: vencida há MAIS DE trinta dias. Lei 14.440/2022 retirou recolhimento do documento desse inciso, mas não foi a primeira lei a tornar a hipótese gravíssima.",
+        "Cursos obrigatórios do inciso VII precisam do regime atual, incluindo Resolução 1020/2025; não recuperar curso revogado como único requisito.",
+        "Deficiência por si não constitui infração: inciso VI trata de deixar de usar auxílio/adaptação imposto ao habilitar/renovar."
+      ],
+      "exemplo": "Uma pessoa com B dirige motocicleta que exige A. Resposta: categoria diferente tem multa duas vezes, distinta da multa três vezes de não possuir habilitação. Variação: A CNH venceu há exatamente trinta dias: o inciso V exige MAIS DE trinta dias; analisar também hipóteses atuais de validade e exceções, sem alterar o limiar.",
+      "prova": [
+        "Sem habilitação e categoria diferente têm multiplicador idêntico? Não. Incisos I/II usam três vezes; o III, duas vezes, com medidas próprias.",
+        "A infração administrativa por não possuir habilitação prova automaticamente crime do art. 309? Não. O tipo penal exige seus próprios elementos, inclusive perigo de dano; não deduzir crime de toda autuação."
+      ],
+      "termos": [
+        {
+          "termo": "Categoria diferente",
+          "significado": "Possuir habilitação incompatível com o veículo, distinto de não possuir licença."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 163",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10202025.pdf"
+      ],
+      "expected": {
+        "unit_id": "1e3b0f0a-19d4-5edd-bdaf-4cbf38619978",
+        "content_sha256": "ba0e9947e79b7b901e315d62c77372d5b006a1b0f05623667f2a66b5efc3fa9a",
+        "simples": "Dirigir veículo sem possuir CNH, Permissão para Dirigir ou Autorização para Conduzir Ciclomotor é infração gravíssima, com multa (três vezes) e retenção do veículo até a apresentação de condutor habilitado. Dirigir com habilitação cassada ou com suspensão do direito de dirigir também é gravíssima, com multa (três vezes), recolhimento do documento e retenção do veículo. Dirigir com habilitação de categoria diferente é gravíssima, com multa (duas vezes) e retenção. Também é gravíssima dirigir com CNH vencida há mais de trinta dias, sem lentes corretoras, aparelho auxiliar de audição ou adaptações impostas, ou sem os cursos especializados obrigatórios, com multa e retenção do veículo.",
+        "pontos": [
+          "Sem habilitação: gravíssima, multa três vezes.",
+          "Habilitação cassada ou suspensa: gravíssima, multa três vezes.",
+          "Categoria diferente: gravíssima, multa duas vezes.",
+          "CNH vencida há mais de trinta dias: gravíssima.",
+          "Sem lentes corretoras ou adaptações impostas: gravíssima."
+        ],
+        "atencao": [
+          "Sem habilitação e cassada/suspensa: multa TRÊS vezes.",
+          "Categoria diferente: multa DUAS vezes.",
+          "ATUALIZAÇÃO: a CNH vencida há mais de trinta dias passou a ser gravíssima por lei posterior."
+        ],
+        "exemplo": "Quem dirige sem CNH sofre multa de três vezes e retenção do veículo.",
+        "prova": [
+          "Assertiva que classifica como média a direção com CNH de categoria diferente erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 163"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-163",
+      "unit_id": "dbe14ade-ce3c-5c7c-948f-2dc3c1a43dfb",
+      "content_sha256": "4825b8edb81526011b35fb402ecad4926f50c04426b9f287fe2f8128bb421d2e",
+      "simples": "Entregar a direção do veículo a pessoa nas condições previstas no artigo anterior é infração com as mesmas características e penalidades do artigo 162, com a medida administrativa de retenção do veículo até a apresentação de condutor habilitado.",
+      "pontos": [
+        "Mesmas infração e penalidades do art. 162.",
+        "Retenção do veículo."
+      ],
+      "atencao": [
+        "Quem entrega a direção sofre as mesmas penalidades.",
+        "Distinguir entregar (163), permitir posse e condução (164) e confiar a pessoa sem condição segura (166)."
+      ],
+      "exemplo": "O responsável entrega diretamente a direção a pessoa sem habilitação. Resposta: incidem as infrações e penalidades correspondentes do art. 162, com medida referida ao inciso III. Variação: Não presumir que toda entrega configura crime do art. 310 sem analisar elementos e hipótese própria, ainda que esfera administrativa possa coexistir.",
+      "prova": [
+        "A medida administrativa reproduz indistintamente qualquer medida do art. 162? Não. O art. 163 remete especificamente à medida do inciso III, distinguindo-a das penalidades.",
+        "O multiplicador é sempre três vezes em qualquer entrega irregular? Não. Depende da condição do art. 162 aplicável, como categoria diferente com duas vezes."
+      ],
+      "termos": [
+        {
+          "termo": "Entrega da direção",
+          "significado": "Conduta de disponibilizar diretamente a condução a pessoa em condição vedada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 162"
+      ],
+      "expected": {
+        "unit_id": "dbe14ade-ce3c-5c7c-948f-2dc3c1a43dfb",
+        "content_sha256": "4825b8edb81526011b35fb402ecad4926f50c04426b9f287fe2f8128bb421d2e",
+        "simples": "Entregar a direção do veículo a pessoa nas condições previstas no artigo anterior é infração com as mesmas características e penalidades do artigo 162, com a medida administrativa de retenção do veículo até a apresentação de condutor habilitado.",
+        "pontos": [
+          "Mesmas infração e penalidades do art. 162.",
+          "Retenção do veículo."
+        ],
+        "atencao": [
+          "Quem entrega a direção sofre as mesmas penalidades."
+        ],
+        "exemplo": "O proprietário que entrega o carro a quem não tem CNH é autuado.",
+        "prova": [
+          "Assertiva que isenta o proprietário que entrega a direção a quem não é habilitado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 162"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-164",
+      "unit_id": "6500ede5-8b6d-5565-8eb1-57129d196848",
+      "content_sha256": "0b8ada8f6f8e0b24613be390a4c220a04f1f67d8705732f94973e19a048bbdd4",
+      "simples": "Permitir que pessoa nas condições do art. 162 tome posse do veículo automotor e passe a conduzi-lo na via é infração com as mesmas características e penalidades do art. 162, com a medida administrativa do inciso III do art. 162.",
+      "pontos": [
+        "Mesmas infração e penalidades do art. 162.",
+        "Retenção do veículo."
+      ],
+      "atencao": [
+        "Quem permite a posse também responde.",
+        "Não presumir permissão por vínculo familiar sem comprovar a conduta; integrar a hipótese concreta."
+      ],
+      "exemplo": "O responsável permite que pessoa sem habilitação tome posse do veículo e passe a conduzi-lo na via. Resposta: estão presentes os elementos administrativos descritos no artigo. Variação: Permitir apenas acesso ao carro, sem condução na via, não deve ser equiparado automaticamente à descrição completa do art. 164.",
+      "prova": [
+        "A mera presença de pessoa sem habilitação dentro do carro completa todo art. 164? Não. O texto inclui permitir posse e que passe a conduzi-lo na via.",
+        "A medida remete a qualquer inciso do art. 162 livremente? Não. Remete à medida do inciso III; infração e penalidade dependem da condição correspondente."
+      ],
+      "termos": [
+        {
+          "termo": "Permissão de condução",
+          "significado": "Tolerar posse e condução na via na condição legal vedada, não simples proximidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 163"
+      ],
+      "expected": {
+        "unit_id": "6500ede5-8b6d-5565-8eb1-57129d196848",
+        "content_sha256": "0b8ada8f6f8e0b24613be390a4c220a04f1f67d8705732f94973e19a048bbdd4",
+        "simples": "Permitir que pessoa nas condições do art. 162 tome posse do veículo automotor e passe a conduzi-lo na via é infração com as mesmas características e penalidades do art. 162, com a medida administrativa do inciso III do art. 162.",
+        "pontos": [
+          "Mesmas infração e penalidades do art. 162.",
+          "Retenção do veículo."
+        ],
+        "atencao": [
+          "Quem permite a posse também responde."
+        ],
+        "exemplo": "O dono que deixa o carro com quem não tem CNH é autuado.",
+        "prova": [
+          "Assertiva que isenta quem permite a posse do veículo a não habilitado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 163"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-165",
+      "unit_id": "f77eb5d2-8259-5e91-ac3e-1ef0f4526a79",
+      "content_sha256": "238a836737c45fcc9241340f7d1286d0af11b61e499b3411bd16e4b99d907878",
+      "simples": "Dirigir sob influência de álcool/outra substância descrita é gravíssima: multa dez vezes e suspensão por doze meses; multa em dobro na reincidência em até doze meses. Distinguir infração, crime e procedimentos de prova. Resolução 1031/2026, publicada em 18/8, revogou 432/2013: pré-teste é só indicativo, constatação tem requisitos e erro metrológico, e art. 12 prevê não recolhimento do documento pelo agente na abordagem, embora o texto do CTB conserve essa medida. A suspensão segue procedimento próprio.",
+      "pontos": [
+        "Multa DEZ vezes; suspensão DOZE meses; reincidência em até doze meses dobra a MULTA.",
+        "Resolução 1031/2026: pré-teste não fundamenta sozinho autuação; distinguir medição realizada e valor considerado.",
+        "Sinais: pelo menos DOIS em conjunto, descritos no auto/termo; não um sinal isolado universal.",
+        "Retenção/liberação do veículo seguem requisitos de condutor seguro; não antiga penalidade de apreensão.",
+        "Art. 12 regulamentar: agente não recolhe documento nessa abordagem; suspensão não é apreensão física automática."
+      ],
+      "atencao": [
+        "Texto legal e procedimento regulamentar devem ser diferenciados, sem alterar a transcrição oficial do CTB.",
+        "Art. 16 da Resolução 1031: alterações no anexo do Manual 985 têm vacância de sessenta dias da publicação, até 17/10/2026; em 13/10 não aplicar como vigentes essas fichas futuras. Os demais artigos vigoram desde 18/8/2026.",
+        "Não presumir crime de todo resultado administrativo; o art. 306 exige seus próprios elementos."
+      ],
+      "exemplo": "A fiscalização usa só pré-teste passivo indicativo de álcool. Resposta: a Resolução 1031/2026 não permite fundamentar autuação apenas nesse pré-teste; exige procedimento válido de constatação. Variação: O CTB conserva recolhimento da habilitação no texto, mas a Resolução 1031, art. 12, orienta que o agente não recolha o documento nessa abordagem; suspensão segue procedimento próprio.",
+      "prova": [
+        "O pré-teste passivo sozinho comprova a infração para autuar? Não. O art. 4º, §2º, da Resolução 1031 atribui caráter indicativo e exige procedimento de constatação conforme seus requisitos.",
+        "A suspensão legal de doze meses corresponde a apreensão automática da CNH física no local? Não. Distinguir texto legal de medidas e procedimento atual da Resolução 1031, art. 12; suspensão tem processo próprio."
+      ],
+      "termos": [
+        {
+          "termo": "Pré-teste indicativo",
+          "significado": "Triagem que não substitui prova válida para autuação por influência de álcool."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 277",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
+      ],
+      "expected": {
+        "unit_id": "f77eb5d2-8259-5e91-ac3e-1ef0f4526a79",
+        "content_sha256": "238a836737c45fcc9241340f7d1286d0af11b61e499b3411bd16e4b99d907878",
+        "simples": "Dirigir sob a influência de álcool ou de qualquer outra substância psicoativa que determine dependência é infração gravíssima, com multa (dez vezes) e suspensão do direito de dirigir por doze meses, além de recolhimento do documento de habilitação e retenção do veículo. A multa é aplicada em dobro em caso de reincidência no período de até doze meses.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (dez vezes) e suspensão por doze meses.",
+          "Recolhimento da CNH e retenção do veículo.",
+          "Dobro da multa na reincidência em até doze meses."
+        ],
+        "atencao": [
+          "Multa DEZ vezes e suspensão de DOZE meses.",
+          "Reincidência em até doze meses: multa em dobro.",
+          "Pode também configurar crime de embriaguez ao volante."
+        ],
+        "exemplo": "O condutor flagrado alcoolizado paga multa de dez vezes e fica doze meses sem dirigir.",
+        "prova": [
+          "Assertiva que fixa em seis meses a suspensão do direito de dirigir erra: são doze meses."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 277"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-165-a",
+      "unit_id": "3df69fa0-06a3-5cc0-a945-cd72a1397c76",
+      "content_sha256": "5917a0db101b8c152c258026d85520a6cf5e32b9e94aabd1c3dbc947cdb0ccf8",
+      "simples": "Recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277, é infração gravíssima, com multa (dez vezes) e suspensão do direito de dirigir por doze meses, recolhimento do documento e retenção do veículo. A multa é aplicada em dobro na reincidência em até doze meses.",
+      "pontos": [
+        "Recusa ao teste do bafômetro ou perícia.",
+        "Mesmas penalidades da direção sob influência de álcool.",
+        "Dobro da multa na reincidência."
+      ],
+      "atencao": [
+        "Tema 1079/STF, julgamento de 19/5/2022: validade das sanções administrativas; não usar linguagem imprecisa de apreensão da CNH por um ano para confundir suspensão e documento.",
+        "Resolução 1031/2026, art. 8º, §§1º/2º: sem dois sinais, recusa; com ao menos dois sinais, art. 165.",
+        "Art. 12 da resolução: agente não recolhe documento nessa abordagem; art. 16 difere a vigência das fichas do Manual para 17/10/2026, sem diferir todo o ato."
+      ],
+      "exemplo": "Condutor recusa procedimento adequado regularmente ofertado e não apresenta dois sinais de alteração. Resposta: a Resolução 1031 enquadra a recusa no art. 165-A, com multa dez vezes e suspensão de doze meses. Variação: Se há pelo menos dois sinais de alteração, a resolução distingue aplicação do art. 165; não autuar cumulativamente por automatismo pelos mesmos fatos.",
+      "prova": [
+        "O STF considerou toda sanção administrativa por recusa inconstitucional? Não. O Tema 1079, RE 1224374, validou a previsão administrativa sem equiparar recusa isolada a crime.",
+        "A recusa sozinha comprova automaticamente crime do art. 306? Não. A infração de recusa é autônoma administrativa; crime exige elementos e provas próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Recusa administrativa",
+          "significado": "Hipótese autônoma validada pelo STF, distinta de presumir crime de embriaguez."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 165",
+        "https://noticias.stf.jus.br/postsnoticias/bafometro-multa-a-motorista-que-recusa-teste-e-valida-decide-stf/",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
+      ],
+      "expected": {
+        "unit_id": "3df69fa0-06a3-5cc0-a945-cd72a1397c76",
+        "content_sha256": "5917a0db101b8c152c258026d85520a6cf5e32b9e94aabd1c3dbc947cdb0ccf8",
+        "simples": "Recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma do art. 277, é infração gravíssima, com multa (dez vezes) e suspensão do direito de dirigir por doze meses, recolhimento do documento e retenção do veículo. A multa é aplicada em dobro na reincidência em até doze meses.",
+        "pontos": [
+          "Recusa ao teste do bafômetro ou perícia.",
+          "Mesmas penalidades da direção sob influência de álcool.",
+          "Dobro da multa na reincidência."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: infração incluída por lei posterior.",
+          "A recusa recebe as mesmas penalidades do art. 165."
+        ],
+        "exemplo": "Quem se recusa ao bafômetro sofre a mesma penalidade de quem dirigiu alcoolizado.",
+        "prova": [
+          "Assertiva que isenta de penalidade administrativa quem se recusa ao bafômetro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-165-b",
+      "unit_id": "77c5fe25-a39c-5de8-8e4b-d21ee252a75e",
+      "content_sha256": "da862eaf56c76d36330f7a4dd9dad9539b3fee61f90683bd16f7b21465a76af6",
+      "simples": "Dirigir veículo sem realizar o exame toxicológico previsto no art. 148-A é infração gravíssima, com multa (cinco vezes) e, em caso de reincidência em até doze meses, multa (dez vezes) e suspensão do direito de dirigir. Se o condutor deixar de fazer o exame periódico, a infração se configura quando dirigir após o trigésimo dia do vencimento do prazo.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa (cinco vezes), dez vezes na reincidência.",
+        "Suspensão na reincidência.",
+        "Prazo de trinta dias após o vencimento do exame periódico."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico.",
+        "Multa CINCO vezes; reincidência em até doze meses: dez vezes e suspensão.",
+        "Lei 14.599/2023: produção de efeitos das alterações toxicológicas desde 1º/7/2023 e implementação escalonada; não usar prazo transitório vencido como regra permanente.",
+        "Separar exames do caput/§2º e alcance do §10 atual para primeira A/B; não aplicar periódico indiscriminadamente a A/B."
+      ],
+      "exemplo": "Condutor de C sujeito ao exame periódico dirige 31 dias após o vencimento sem realizá-lo. Resposta: verificar o parágrafo, que exige condução após o trigésimo dia, com multa cinco vezes. Variação: A ausência de condução não completa essa descrição, mas pode integrar 165-D no recorte periódico; não confundir ambos.",
+      "prova": [
+        "O art. 165-B periódico exige conduzir o veículo? Sim. O caput e o parágrafo descrevem dirigir sem exame, após o trigésimo dia do vencimento no periódico.",
+        "A primeira ocorrência tem suspensão expressamente cumulada em todo caso pelo caput? Não. A redação prevê cinco vezes e, na reincidência até doze meses, dez vezes e suspensão; integrar outras hipóteses sem somar por automatismo."
+      ],
+      "termos": [
+        {
+          "termo": "Condução sem exame",
+          "significado": "Hipótese de dirigir sem requisito toxicológico, distinta de mero atraso do periódico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 148-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes2/Resoluo923compilado.pdf"
+      ],
+      "expected": {
+        "unit_id": "77c5fe25-a39c-5de8-8e4b-d21ee252a75e",
+        "content_sha256": "da862eaf56c76d36330f7a4dd9dad9539b3fee61f90683bd16f7b21465a76af6",
+        "simples": "Dirigir veículo sem realizar o exame toxicológico previsto no art. 148-A é infração gravíssima, com multa (cinco vezes) e, em caso de reincidência em até doze meses, multa (dez vezes) e suspensão do direito de dirigir. Se o condutor deixar de fazer o exame periódico, a infração se configura quando dirigir após o trigésimo dia do vencimento do prazo.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (cinco vezes), dez vezes na reincidência.",
+          "Suspensão na reincidência.",
+          "Prazo de trinta dias após o vencimento do exame periódico."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico.",
+          "Multa CINCO vezes; reincidência em até doze meses: dez vezes e suspensão."
+        ],
+        "exemplo": "O motorista de ônibus sem exame toxicológico na renovação é autuado.",
+        "prova": [
+          "Assertiva que isenta de multa a falta do exame toxicológico erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 148-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-165-c",
+      "unit_id": "7d752e31-2bdf-50c0-bc06-b0c0e4081b05",
+      "content_sha256": "039c5d35c7a8647044bfa56333dbc5047f955e1d7355401d166b086016aba96f",
+      "simples": "Dirigir veículo tendo obtido resultado positivo no exame toxicológico previsto no caput do art. 148-A é infração gravíssima, com multa (cinco vezes) e, em caso de reincidência em até doze meses, multa (dez vezes) e suspensão do direito de dirigir.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa (cinco vezes), dez vezes na reincidência, com suspensão."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico.",
+        "Não confundir exame do caput, periódico e influência atual na fiscalização do art. 165."
+      ],
+      "exemplo": "Condutor dirige tendo resultado positivo no exame do CAPUT do art. 148-A. Resposta: é a hipótese do art. 165-C, multa cinco vezes e agravamento por reincidência. Variação: Positivo no exame periódico do §2º tem também disciplina do §5º do art. 148-A; não substituir as hipóteses por uma regra única sem distinção.",
+      "prova": [
+        "O art. 165-C pune só ter resultado positivo sem jamais dirigir? Não. O texto descreve DIRIGIR tendo o resultado positivo no exame do caput.",
+        "A primeira ocorrência tem multa dez vezes pelo art. 165-C? Não. O caput prevê cinco vezes; dez vezes e suspensão estão no regime da reincidência em até doze meses."
+      ],
+      "termos": [
+        {
+          "termo": "Positivo e condução",
+          "significado": "Combinação dos elementos do art. 165-C, não sinônimo de toda irregularidade toxicológica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 148-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "7d752e31-2bdf-50c0-bc06-b0c0e4081b05",
+        "content_sha256": "039c5d35c7a8647044bfa56333dbc5047f955e1d7355401d166b086016aba96f",
+        "simples": "Dirigir veículo tendo obtido resultado positivo no exame toxicológico previsto no caput do art. 148-A é infração gravíssima, com multa (cinco vezes) e, em caso de reincidência em até doze meses, multa (dez vezes) e suspensão do direito de dirigir.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (cinco vezes), dez vezes na reincidência, com suspensão."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico."
+        ],
+        "exemplo": "O motorista com resultado positivo que continua dirigindo é autuado.",
+        "prova": [
+          "Assertiva que fixa multa de dez vezes na primeira ocorrência erra: são cinco vezes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 148-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-165-d",
+      "unit_id": "ccbd6f2d-d00d-51e3-94cf-fd5e35f0adf4",
+      "content_sha256": "d20d02b7437abcf73dadda818ebcffe14fd5a4a2fdac9ddd3a62b7f7af9d32c0",
+      "simples": "Deixar de realizar o exame toxicológico periódico do §2º do art. 148-A, após trinta dias do vencimento do prazo, é infração gravíssima, com multa (cinco vezes). A competência para aplicar a penalidade é do órgão de trânsito de registro da CNH do infrator.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa (cinco vezes).",
+        "Competência do órgão de registro da CNH."
+      ],
+      "atencao": [
+        "Trinta dias após o vencimento do prazo.",
+        "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico.",
+        "Aplicação específica pelo órgão de registro da CNH; não confundir CNH e registro do veículo.",
+        "Lei 14.599/2023: distinguir efeitos desde 1º/7/2023 e calendários transitórios de regularização, sem ensinar prorrogação histórica como dispensa atual.",
+        "Resolução 923 compilada, art. 22, §2º: mudar C/D/E para B/AB ou solicitar cancelamento até o trigésimo dia após vencimento afasta esta penalidade. Não estender a dispensa a mudança tardia sem analisar os requisitos."
+      ],
+      "exemplo": "Condutor de D sujeito ao periódico deixa passar mais de trinta dias do prazo sem fazer exame. Resposta: o artigo descreve deixar de realizar; não exige flagrante dirigindo como o 165-B. Variação: A aplicação cabe ao órgão de registro da CNH, não automaticamente ao órgão onde o veículo foi registrado ou onde se encontrou o condutor.",
+      "prova": [
+        "O art. 165-D exige necessariamente condução na abordagem? Não. Descreve não realizar exame periódico após trinta dias do vencimento, distinguindo-se do 165-B.",
+        "A penalidade deste artigo inclui suspensão de três meses expressa no próprio caput? Não. Prevê multa cinco vezes; suspensão do art. 148-A, §5º, tem outra hipótese e precisa ser integrada corretamente."
+      ],
+      "termos": [
+        {
+          "termo": "Mero atraso periódico",
+          "significado": "Não realização além do marco, distinta de dirigir sem exame ou com positivo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 165-B",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes2/Resoluo923compilado.pdf"
+      ],
+      "expected": {
+        "unit_id": "ccbd6f2d-d00d-51e3-94cf-fd5e35f0adf4",
+        "content_sha256": "d20d02b7437abcf73dadda818ebcffe14fd5a4a2fdac9ddd3a62b7f7af9d32c0",
+        "simples": "Deixar de realizar o exame toxicológico periódico do §2º do art. 148-A, após trinta dias do vencimento do prazo, é infração gravíssima, com multa (cinco vezes). A competência para aplicar a penalidade é do órgão de trânsito de registro da CNH do infrator.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (cinco vezes).",
+          "Competência do órgão de registro da CNH."
+        ],
+        "atencao": [
+          "Trinta dias após o vencimento do prazo.",
+          "ATUALIZAÇÃO: infração incluída pela lei do exame toxicológico."
+        ],
+        "exemplo": "O condutor que passa trinta dias do prazo sem refazer o exame é multado.",
+        "prova": [
+          "Assertiva que atribui a competência ao órgão do local da infração erra: é o órgão de registro da CNH."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-166",
+      "unit_id": "9778ab6b-05d6-517b-b5a4-d6b182b17d88",
+      "content_sha256": "8586fb8aa2d79dc042f2ca0ad205401d4b3cb39a386a67f24c2df58ed10d12b8",
+      "simples": "Confiar ou entregar a direção de veículo a pessoa que, mesmo habilitada, por seu estado físico ou psíquico, não estiver em condições de dirigi-lo com segurança é infração gravíssima, com penalidade de multa.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Penalidade de multa."
+      ],
+      "atencao": [
+        "Alcança pessoa HABILITADA, mas sem condições físicas ou psíquicas.",
+        "Distinguir arts. 163/164, condição de habilitação, e art. 166, condição física/psíquica de segurança."
+      ],
+      "exemplo": "O responsável confia a direção a habilitado que está fisicamente sem condição segura para dirigir. Resposta: a habilitação não elimina a hipótese gravíssima do artigo. Variação: Deficiência não significa por si falta de condição: examinar condição efetiva e adaptações, sem presumir incapacidade.",
+      "prova": [
+        "Só entregar a não habilitado configura o art. 166? Não. O texto inclui pessoa mesmo habilitada que, por estado físico ou psíquico, não pode dirigir com segurança.",
+        "A infração autoriza discriminar qualquer condutor com deficiência? Não. Exige condição concreta de insegurança, sem equiparar deficiência e incapacidade automaticamente."
+      ],
+      "termos": [
+        {
+          "termo": "Condição segura",
+          "significado": "Aptidão concreta para dirigir no momento, distinta da simples posse de CNH."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 162"
+      ],
+      "expected": {
+        "unit_id": "9778ab6b-05d6-517b-b5a4-d6b182b17d88",
+        "content_sha256": "8586fb8aa2d79dc042f2ca0ad205401d4b3cb39a386a67f24c2df58ed10d12b8",
+        "simples": "Confiar ou entregar a direção de veículo a pessoa que, mesmo habilitada, por seu estado físico ou psíquico, não estiver em condições de dirigi-lo com segurança é infração gravíssima, com penalidade de multa.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Penalidade de multa."
+        ],
+        "atencao": [
+          "Alcança pessoa HABILITADA, mas sem condições físicas ou psíquicas."
+        ],
+        "exemplo": "Quem entrega o carro a um amigo embriagado, ainda que habilitado, comete a infração.",
+        "prova": [
+          "Assertiva que limita a infração à entrega do veículo a não habilitado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 162"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-167",
+      "unit_id": "bcb02e5d-cc3c-59e2-a421-3625f6da1a75",
+      "content_sha256": "916e27e2fa26ecb34a0eb0723fb4ef0d0a14b890623ff6a916f8e6736c2cc9c2",
+      "simples": "Deixar o condutor ou passageiro de usar o cinto de segurança, conforme previsto no art. 65, é infração grave, com multa e a medida administrativa de retenção do veículo até a colocação do cinto pelo infrator.",
+      "pontos": [
+        "Infração grave.",
+        "Multa e retenção do veículo até colocar o cinto."
+      ],
+      "atencao": [
+        "Vale para condutor e passageiro.",
+        "Condutor e passageiro abrangidos; integrar exceções regulamentadas do art. 65 sem inventar trajeto curto."
+      ],
+      "exemplo": "Passageiro traseiro deixa de usar cinto em trajeto curto. Resposta: no regime aplicável, infração grave com multa e retenção até colocar o cinto. Variação: Uma hipótese regulamentar válida do art. 65 deve ser examinada; não criar dispensa pessoal por conveniência ou duração do trajeto.",
+      "prova": [
+        "A falta do cinto é infração gravíssima por envolver segurança? Não. O art. 167 a classifica como GRAVE, sem confundir importância do cuidado e classe legal.",
+        "O artigo permite liberação sem sanar a falta do cinto em sua medida textual? Não. A medida é retenção até a colocação pelo infrator, integrada às condições aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Retenção para saneamento",
+          "significado": "Medida de regularização, distinta da remoção ou de antiga apreensão penalizadora."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 65"
+      ],
+      "expected": {
+        "unit_id": "bcb02e5d-cc3c-59e2-a421-3625f6da1a75",
+        "content_sha256": "916e27e2fa26ecb34a0eb0723fb4ef0d0a14b890623ff6a916f8e6736c2cc9c2",
+        "simples": "Deixar o condutor ou passageiro de usar o cinto de segurança, conforme previsto no art. 65, é infração grave, com multa e a medida administrativa de retenção do veículo até a colocação do cinto pelo infrator.",
+        "pontos": [
+          "Infração grave.",
+          "Multa e retenção do veículo até colocar o cinto."
+        ],
+        "atencao": [
+          "Vale para condutor e passageiro."
+        ],
+        "exemplo": "O passageiro do banco traseiro sem cinto sujeita o condutor à multa.",
+        "prova": [
+          "Assertiva que classifica como média a falta de cinto de segurança erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 65"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-168",
+      "unit_id": "b5392be1-2bdd-5537-869a-cdb30e193215",
+      "content_sha256": "a28ffad920e4d3f48d3858d6f7abfe872c42c7f680ff121124a2b693a45d6256",
+      "simples": "Transportar crianças em veículo automotor sem observância das normas de segurança especiais estabelecidas no Código é infração gravíssima, com multa e a medida administrativa de retenção do veículo até que a irregularidade seja sanada.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa e retenção do veículo."
+      ],
+      "atencao": [
+        "Não recuperar exemplo antigo de cadeirinha como equipamento universal para idade de seis anos; conferir assento de elevação e demais critérios do anexo.",
+        "Retenção até saneamento, não penalidade antiga de apreensão do veículo."
+      ],
+      "exemplo": "Uma criança de seis anos em carro particular vai sem o dispositivo adequado às suas condições na Resolução 819. Resposta: analisar o transporte irregular, infração gravíssima, com retenção até sanar. Variação: Não exigir cadeirinha universal para toda criança de oito anos: idade, peso, altura e condições do veículo definem o equipamento e as exceções.",
+      "prova": [
+        "Transportar criança irregularmente tem a mesma classe grave da falta comum de cinto? Não. O art. 168 é gravíssima, distinto da classe do art. 167.",
+        "Toda criança menor de dez deve usar o mesmo dispositivo? Não. Integrar art. 64 e Resolução 819, com critérios de retenção e exceções delimitadas."
+      ],
+      "termos": [
+        {
+          "termo": "Retenção infantil",
+          "significado": "Proteção adequada à criança, diferente de aplicar um único equipamento a todas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 64",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao8192021.pdf"
+      ],
+      "expected": {
+        "unit_id": "b5392be1-2bdd-5537-869a-cdb30e193215",
+        "content_sha256": "a28ffad920e4d3f48d3858d6f7abfe872c42c7f680ff121124a2b693a45d6256",
+        "simples": "Transportar crianças em veículo automotor sem observância das normas de segurança especiais estabelecidas no Código é infração gravíssima, com multa e a medida administrativa de retenção do veículo até que a irregularidade seja sanada.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa e retenção do veículo."
+        ],
+        "atencao": [
+          "Gravíssima; o veículo fica retido até regularizar."
+        ],
+        "exemplo": "A criança de seis anos sem cadeirinha adequada gera a autuação.",
+        "prova": [
+          "Assertiva que classifica como grave o transporte irregular de crianças erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 64"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-169",
+      "unit_id": "a9b164f6-1d8c-56d4-be74-b5da78fea1b2",
+      "content_sha256": "1b9bfa5f459685ea7e8bb0f36e4bcb6aa94b896ffd159e2cad290d1dcb051f77",
+      "simples": "Dirigir sem atenção ou sem os cuidados indispensáveis à segurança é infração leve, com penalidade de multa.",
+      "pontos": [
+        "Infração leve.",
+        "Multa."
+      ],
+      "atencao": [
+        "Infração LEVE.",
+        "Evitar tornar o artigo forma de rebaixar qualquer infração mais específica."
+      ],
+      "exemplo": "Condutor está desatento e não há descrição mais específica demonstrada. Resposta: o art. 169 tem classe leve e multa, observada a hipótese concreta. Variação: Segurar/manusear celular tem tipo específico no art. 252; não reduzir automaticamente toda distração a infração leve.",
+      "prova": [
+        "Dirigir sem atenção é classificado como grave pelo art. 169? Não. O texto o classifica como LEVE, com multa.",
+        "Toda conduta perigosa ou distração sempre se enquadra somente no 169? Não. Conferir tipos específicos e seus elementos, como uso de celular, sem generalização."
+      ],
+      "termos": [
+        {
+          "termo": "Tipo residual",
+          "significado": "Descrição geral de falta de atenção, quando a conduta não exige enquadramento específico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 28"
+      ],
+      "expected": {
+        "unit_id": "a9b164f6-1d8c-56d4-be74-b5da78fea1b2",
+        "content_sha256": "1b9bfa5f459685ea7e8bb0f36e4bcb6aa94b896ffd159e2cad290d1dcb051f77",
+        "simples": "Dirigir sem atenção ou sem os cuidados indispensáveis à segurança é infração leve, com penalidade de multa.",
+        "pontos": [
+          "Infração leve.",
+          "Multa."
+        ],
+        "atencao": [
+          "Infração LEVE."
+        ],
+        "exemplo": "Dirigir distraído, sem causar risco maior, enquadra-se no art. 169.",
+        "prova": [
+          "Assertiva que classifica como grave a direção sem atenção erra: é leve."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-170",
+      "unit_id": "21c3d5a8-8f1c-58fd-9a79-dbb31d1d980c",
+      "content_sha256": "5ef1af44de6b38d5b7ffb1ba44f716f17cccb673d21a9863cd5e8531dca9ad12",
+      "simples": "Dirigir ameaçando os pedestres que estejam atravessando a via pública ou os demais veículos é infração gravíssima, com multa e suspensão do direito de dirigir, e medida administrativa de retenção do veículo e recolhimento do documento de habilitação.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa e suspensão do direito de dirigir.",
+        "Retenção do veículo e recolhimento da CNH."
+      ],
+      "atencao": [
+        "Gravíssima com suspensão do direito de dirigir.",
+        "Não presumir crime ou ameaça por todo erro; esfera penal depende de requisitos próprios."
+      ],
+      "exemplo": "Motorista dirige para ameaçar pedestres que atravessam. Resposta: gravíssima, com multa e suspensão, além das medidas textuais pertinentes. Variação: Uma manobra inadvertida não deve ser equiparada automaticamente à descrição de ameaça sem examinar os elementos concretos.",
+      "prova": [
+        "O art. 170 prevê apenas multa sem suspensão? Não. A penalidade inclui multa E suspensão do direito de dirigir.",
+        "A infração exige ameaça somente contra outro veículo? Não. Inclui pedestres atravessando a via pública e demais veículos."
+      ],
+      "termos": [
+        {
+          "termo": "Ameaça na direção",
+          "significado": "Uso da condução para ameaçar no recorte descrito, distinto de qualquer erro de manobra."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 28"
+      ],
+      "expected": {
+        "unit_id": "21c3d5a8-8f1c-58fd-9a79-dbb31d1d980c",
+        "content_sha256": "5ef1af44de6b38d5b7ffb1ba44f716f17cccb673d21a9863cd5e8531dca9ad12",
+        "simples": "Dirigir ameaçando os pedestres que estejam atravessando a via pública ou os demais veículos é infração gravíssima, com multa e suspensão do direito de dirigir, e medida administrativa de retenção do veículo e recolhimento do documento de habilitação.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa e suspensão do direito de dirigir.",
+          "Retenção do veículo e recolhimento da CNH."
+        ],
+        "atencao": [
+          "Gravíssima com suspensão do direito de dirigir."
+        ],
+        "exemplo": "Acelerar na direção de pedestres para assustá-los gera suspensão da CNH.",
+        "prova": [
+          "Assertiva que prevê apenas multa para quem ameaça pedestres com o veículo erra: há também suspensão do direito de dirigir."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-171",
+      "unit_id": "ce8affd9-f041-5bdb-9674-734c769d58c4",
+      "content_sha256": "d57fde474f36cb1879329cc49771f77f676aa1d5c3900a722a438b898bf7ddfa",
+      "simples": "Usar o veículo para arremessar, sobre os pedestres ou veículos, água ou detritos é infração média, com penalidade de multa.",
+      "pontos": [
+        "Infração média.",
+        "Multa."
+      ],
+      "atencao": [
+        "Infração MÉDIA.",
+        "Distinguir art. 171 e art. 172; não dispensar prova da conduta pela mera existência de poça."
+      ],
+      "exemplo": "Condutor usa o veículo para lançar água de uma poça sobre pedestre. Resposta: a descrição é média com multa, quando comprovada a conduta do artigo. Variação: Derramamento de carga ou jogar objeto do veículo tem descrições próprias; não tratar todo episódio de material na via como idêntico.",
+      "prova": [
+        "A conduta descrita no art. 171 é leve? Não. Usar o veículo para arremessar água ou detritos sobre pedestres/veículos é MÉDIA.",
+        "O artigo alcança apenas água lançada contra pedestre? Não. Inclui água ou detritos sobre pedestres ou veículos, no recorte de uso do veículo para arremessar."
+      ],
+      "termos": [
+        {
+          "termo": "Arremesso pelo veículo",
+          "significado": "Conduta do art. 171, distinta de atirar objeto manualmente ou perder carga."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 172"
+      ],
+      "expected": {
+        "unit_id": "ce8affd9-f041-5bdb-9674-734c769d58c4",
+        "content_sha256": "d57fde474f36cb1879329cc49771f77f676aa1d5c3900a722a438b898bf7ddfa",
+        "simples": "Usar o veículo para arremessar, sobre os pedestres ou veículos, água ou detritos é infração média, com penalidade de multa.",
+        "pontos": [
+          "Infração média.",
+          "Multa."
+        ],
+        "atencao": [
+          "Infração MÉDIA."
+        ],
+        "exemplo": "Passar sobre a poça de propósito para molhar o pedestre é infração.",
+        "prova": [
+          "Assertiva que classifica como leve o arremesso de água sobre pedestres erra: é média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 172"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-172",
+      "unit_id": "e8e1a00e-bb00-5a25-be4a-817e0e9fe5ac",
+      "content_sha256": "fc671a2d93ead3e1d438f00107ca79def1e496a46f482102e9df9aaefd3ec80d",
+      "simples": "Atirar do veículo ou abandonar na via objetos ou substâncias é infração média, com penalidade de multa.",
+      "pontos": [
+        "Infração média.",
+        "Multa."
+      ],
+      "atencao": [
+        "Média, como o arremesso de água ou detritos.",
+        "Não atribuir automaticamente ao condutor toda conduta de qualquer pessoa sem verificar regime de responsabilidade."
+      ],
+      "exemplo": "O passageiro atira objeto do veículo ou alguém o abandona na via. Resposta: a descrição administrativa é média com multa, examinada a atribuição da responsabilidade. Variação: Não confundir arremesso de água pelo próprio veículo do art. 171 com toda hipótese de lixo ou substância abandonada.",
+      "prova": [
+        "O art. 172 só descreve atirar objeto enquanto o veículo está em alta velocidade? Não. Inclui atirar do veículo OU abandonar na via, sem esse requisito inventado.",
+        "A classe da infração é gravíssima para qualquer objeto por risco potencial? Não. O tipo do art. 172 é MÉDIA; outros crimes/infrações exigem requisitos específicos."
+      ],
+      "termos": [
+        {
+          "termo": "Abandono na via",
+          "significado": "Depósito indevido de objetos/substâncias, alternativa expressa ao ato de atirar do veículo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 26"
+      ],
+      "expected": {
+        "unit_id": "e8e1a00e-bb00-5a25-be4a-817e0e9fe5ac",
+        "content_sha256": "fc671a2d93ead3e1d438f00107ca79def1e496a46f482102e9df9aaefd3ec80d",
+        "simples": "Atirar do veículo ou abandonar na via objetos ou substâncias é infração média, com penalidade de multa.",
+        "pontos": [
+          "Infração média.",
+          "Multa."
+        ],
+        "atencao": [
+          "Média, como o arremesso de água ou detritos."
+        ],
+        "exemplo": "Jogar lixo pela janela do carro gera multa.",
+        "prova": [
+          "Assertiva que classifica como gravíssima a conduta de atirar objetos do veículo erra: é média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 26"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-176",
+      "unit_id": "9769c562-6594-5d07-acdb-97e63a5758b4",
+      "content_sha256": "91a45053d30cca18bbefe2fb89c3b6b59a273bfe18a66dc3ace2a616b9e40398",
+      "simples": "Deixar o condutor envolvido em sinistro com vítima de prestar ou providenciar socorro, podendo fazê-lo; de adotar providências para evitar perigo ao trânsito no local; de preservar o local, de forma a facilitar os trabalhos da polícia e da perícia; de remover o veículo quando determinado pela autoridade; ou de identificar-se ao policial e prestar as informações necessárias ao boletim de ocorrência, é infração gravíssima, com multa (cinco vezes) e suspensão do direito de dirigir, e recolhimento do documento de habilitação.",
+      "pontos": [
+        "Cinco condutas omissivas após sinistro com vítima.",
+        "Gravíssima, multa (cinco vezes) e suspensão do direito de dirigir."
+      ],
+      "atencao": [
+        "Não confundir com o crime de omissão de socorro (art. 304).",
+        "ATUALIZAÇÃO: o termo \"acidente\" foi substituído por \"sinistro\" por lei posterior.",
+        "Não confundir infração administrativa, crime do art. 304 e fuga do art. 305; cada qual tem elementos próprios."
+      ],
+      "exemplo": "Condutor envolvido em sinistro com vítima pode providenciar socorro e deixa de fazê-lo. Resposta: analisar inciso I, gravíssima com multa cinco vezes e suspensão. Variação: O policial determina remover o veículo: a preservação do local não elimina a hipótese do inciso IV de adotar providências para remoção determinada.",
+      "prova": [
+        "O dever de socorro do inciso I ignora a possibilidade real de agir? Não. O texto inclui podendo fazê-lo; não omitir a condição nem ensinar intervenção médica perigosa.",
+        "Toda remoção de veículo após sinistro com vítima é proibida pelo artigo? Não. O inciso IV prevê providências quando determinadas por policial ou agente; integrar segurança e preservação."
+      ],
+      "termos": [
+        {
+          "termo": "Sinistro com vítima",
+          "significado": "Evento que ativa deveres específicos do envolvido, distintos do regime sem vítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 304"
+      ],
+      "expected": {
+        "unit_id": "9769c562-6594-5d07-acdb-97e63a5758b4",
+        "content_sha256": "91a45053d30cca18bbefe2fb89c3b6b59a273bfe18a66dc3ace2a616b9e40398",
+        "simples": "Deixar o condutor envolvido em sinistro com vítima de prestar ou providenciar socorro, podendo fazê-lo; de adotar providências para evitar perigo ao trânsito no local; de preservar o local, de forma a facilitar os trabalhos da polícia e da perícia; de remover o veículo quando determinado pela autoridade; ou de identificar-se ao policial e prestar as informações necessárias ao boletim de ocorrência, é infração gravíssima, com multa (cinco vezes) e suspensão do direito de dirigir, e recolhimento do documento de habilitação.",
+        "pontos": [
+          "Cinco condutas omissivas após sinistro com vítima.",
+          "Gravíssima, multa (cinco vezes) e suspensão do direito de dirigir."
+        ],
+        "atencao": [
+          "Não confundir com o crime de omissão de socorro (art. 304).",
+          "ATUALIZAÇÃO: o termo \"acidente\" foi substituído por \"sinistro\" por lei posterior."
+        ],
+        "exemplo": "Quem foge do local do sinistro sem socorrer a vítima comete infração gravíssima.",
+        "prova": [
+          "Assertiva que classifica como média a fuga do local do sinistro com vítima erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-177",
+      "unit_id": "c7dbff3e-2e94-5f3e-a5b2-65bd02b7bd01",
+      "content_sha256": "3d4713d23bae8dca3140786a71260f8d5e965599fedf0cabb90da5e2add62799",
+      "simples": "Deixar o condutor de prestar socorro à vítima de sinistro de trânsito quando solicitado pela autoridade e seus agentes é infração grave, com penalidade de multa.",
+      "pontos": [
+        "Infração grave.",
+        "Recusar socorro quando solicitado pela autoridade."
+      ],
+      "atencao": [
+        "Grave, diferente do art. 176 (gravíssima).",
+        "Não ensinar transporte improvisado de pessoa ferida como obrigação universal; socorro deve observar possibilidade e segurança."
+      ],
+      "exemplo": "Autoridade solicita auxílio seguro a condutor para socorrer vítima e ele deixa de atender. Resposta: no recorte do art. 177, infração grave e multa. Variação: condutor envolvido no próprio sinistro tem deveres específicos do art. 176; não trocar as hipóteses.",
+      "prova": [
+        "A classe é gravíssima por ter vítima? Não. A omissão de auxílio solicitado descrita neste artigo é GRAVE, distinta da hipótese do art. 176.",
+        "O art. 177 exige que a pessoa seja sempre o condutor envolvido no sinistro? Não. Descreve o condutor solicitado pela autoridade e seus agentes, com recorte diverso do 176."
+      ],
+      "termos": [
+        {
+          "termo": "Socorro solicitado",
+          "significado": "Auxílio requerido pela autoridade, sem exigir que o solicitado tenha provocado o evento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 176"
+      ],
+      "expected": {
+        "unit_id": "c7dbff3e-2e94-5f3e-a5b2-65bd02b7bd01",
+        "content_sha256": "3d4713d23bae8dca3140786a71260f8d5e965599fedf0cabb90da5e2add62799",
+        "simples": "Deixar o condutor de prestar socorro à vítima de sinistro de trânsito quando solicitado pela autoridade e seus agentes é infração grave, com penalidade de multa.",
+        "pontos": [
+          "Infração grave.",
+          "Recusar socorro quando solicitado pela autoridade."
+        ],
+        "atencao": [
+          "Grave, diferente do art. 176 (gravíssima)."
+        ],
+        "exemplo": "O condutor que se recusa a levar a vítima ao hospital a pedido do policial é multado.",
+        "prova": [
+          "Assertiva que classifica como gravíssima a recusa de socorro a pedido da autoridade erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 176"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-178",
+      "unit_id": "b6c6f368-21b1-5e5f-a397-b7fd6692cf23",
+      "content_sha256": "852f4380e50cf58e64646ed53ba289ef08bc450fc6972bc823ba0d325726c2f6",
+      "simples": "Deixar o condutor envolvido em sinistro sem vítima de adotar providências para remover o veículo do local, quando necessária tal medida para assegurar a segurança e a fluidez do trânsito, é infração média, com penalidade de multa.",
+      "pontos": [
+        "Sinistro sem vítima.",
+        "Infração média."
+      ],
+      "atencao": [
+        "Média, em sinistro SEM vítima.",
+        "Não confundir obrigação de adotar providências com ignorar impossibilidade material ou criar risco para mover o veículo."
+      ],
+      "exemplo": "Dois veículos colidem sem vítimas e bloqueiam a circulação. Resposta: adotar providências para remover é necessário à segurança e fluidez; a omissão descrita é média. Variação: Se há vítima, não transportar automaticamente a regra do 178: integrar preservação e determinações do art. 176.",
+      "prova": [
+        "O artigo exige remover indistintamente todo veículo em qualquer sinistro? Não. O recorte é sem vítima e medida necessária à segurança e fluidez.",
+        "A presença de vítima é requisito do art. 178? Não. O texto diz SEM vítima; trocar a condição muda a hipótese aplicável."
+      ],
+      "termos": [
+        {
+          "termo": "Remoção necessária",
+          "significado": "Providência de segurança/fluidez em sinistro sem vítima, no recorte legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 176"
+      ],
+      "expected": {
+        "unit_id": "b6c6f368-21b1-5e5f-a397-b7fd6692cf23",
+        "content_sha256": "852f4380e50cf58e64646ed53ba289ef08bc450fc6972bc823ba0d325726c2f6",
+        "simples": "Deixar o condutor envolvido em sinistro sem vítima de adotar providências para remover o veículo do local, quando necessária tal medida para assegurar a segurança e a fluidez do trânsito, é infração média, com penalidade de multa.",
+        "pontos": [
+          "Sinistro sem vítima.",
+          "Infração média."
+        ],
+        "atencao": [
+          "Média, em sinistro SEM vítima."
+        ],
+        "exemplo": "Deixar o carro batido bloqueando a via, sem vítimas, gera multa.",
+        "prova": [
+          "Assertiva que aplica a penalidade do art. 178 a sinistros com vítima erra: é para sinistros sem vítima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 176"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-179",
+      "unit_id": "384ada77-492f-5cd6-b725-824b32559669",
+      "content_sha256": "9d6727eea8717d1cc843b064761e0ecf994309ea3848bcca6e8a1d44b756088a",
+      "simples": "Fazer ou deixar que se faça reparo em veículo na via pública, salvo nos casos de impedimento absoluto de sua remoção e em que o veículo esteja devidamente sinalizado, é infração grave, com multa e remoção do veículo, quando em pista de rolamento de rodovias e vias de trânsito rápido, e leve, com multa, nas demais vias.",
+      "pontos": [
+        "Reparo na via pública.",
+        "Grave em rodovias e vias de trânsito rápido.",
+        "Leve nas demais vias."
+      ],
+      "atencao": [
+        "A gravidade depende do tipo de via.",
+        "Não transformar sinalização isolada em permissão geral de manutenção na via pública."
+      ],
+      "exemplo": "O motorista faz reparo na pista da rodovia sem impedimento absoluto de remoção. Resposta: a hipótese do inciso I é grave, com multa e remoção. Variação: Se há impedimento absoluto de remover E sinalização adequada, a exceção do caput deve ser examinada; sinalizar sozinho não a completa.",
+      "prova": [
+        "A exceção se satisfaz apenas por ligar pisca-alerta em todo reparo? Não. Exige impedimento absoluto de remoção e veículo devidamente sinalizado.",
+        "Reparo em qualquer via tem a mesma classe grave? Não. Pista de rodovia/trânsito rápido: grave com remoção; demais vias: leve, conforme incisos."
+      ],
+      "termos": [
+        {
+          "termo": "Reparo excepcional",
+          "significado": "Intervenção sob impedimento absoluto e sinalização, requisitos cumulativos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 46"
+      ],
+      "expected": {
+        "unit_id": "384ada77-492f-5cd6-b725-824b32559669",
+        "content_sha256": "9d6727eea8717d1cc843b064761e0ecf994309ea3848bcca6e8a1d44b756088a",
+        "simples": "Fazer ou deixar que se faça reparo em veículo na via pública, salvo nos casos de impedimento absoluto de sua remoção e em que o veículo esteja devidamente sinalizado, é infração grave, com multa e remoção do veículo, quando em pista de rolamento de rodovias e vias de trânsito rápido, e leve, com multa, nas demais vias.",
+        "pontos": [
+          "Reparo na via pública.",
+          "Grave em rodovias e vias de trânsito rápido.",
+          "Leve nas demais vias."
+        ],
+        "atencao": [
+          "A gravidade depende do tipo de via."
+        ],
+        "exemplo": "Trocar o óleo do carro na pista da rodovia é infração grave.",
+        "prova": [
+          "Assertiva que classifica como leve o reparo na pista de rodovias erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 46"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-180",
+      "unit_id": "de65d903-a0c0-5568-8683-af291735de59",
+      "content_sha256": "2ce4f949df564ed512bf454bdd8a5d0aee99ea544d7fad6dfc31de4669f1d338",
+      "simples": "Ter seu veículo imobilizado na via por falta de combustível é infração média, com multa e a medida administrativa de remoção do veículo.",
+      "pontos": [
+        "Infração média.",
+        "Multa e remoção do veículo."
+      ],
+      "atencao": [
+        "Média, com remoção do veículo.",
+        "Não inventar tolerância universal de distância até posto nem tratar falta de combustível como excludente automática de autuação."
+      ],
+      "exemplo": "O veículo fica imobilizado na via porque acabou o combustível. Resposta: é média com multa e remoção no recorte do artigo. Variação: Uma pane elétrica sem vínculo com falta de combustível não é automaticamente a descrição completa do 180; outros deveres de segurança permanecem.",
+      "prova": [
+        "O art. 180 enquadra qualquer pane como falta de combustível? Não. Exige imobilização na via por essa causa, sem generalizar a toda avaria.",
+        "A consequência textual é só multa, sem medida administrativa? Não. O artigo também prevê remoção do veículo, distinta de retenção para apresentar habilitado."
+      ],
+      "termos": [
+        {
+          "termo": "Pane por combustível",
+          "significado": "Causa específica da imobilização descrita, distinta de toda pane mecânica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 27"
+      ],
+      "expected": {
+        "unit_id": "de65d903-a0c0-5568-8683-af291735de59",
+        "content_sha256": "2ce4f949df564ed512bf454bdd8a5d0aee99ea544d7fad6dfc31de4669f1d338",
+        "simples": "Ter seu veículo imobilizado na via por falta de combustível é infração média, com multa e a medida administrativa de remoção do veículo.",
+        "pontos": [
+          "Infração média.",
+          "Multa e remoção do veículo."
+        ],
+        "atencao": [
+          "Média, com remoção do veículo."
+        ],
+        "exemplo": "O carro parado por falta de combustível pode ser removido e gera multa.",
+        "prova": [
+          "Assertiva que classifica como leve a imobilização por falta de combustível erra: é média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 27"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-181",
+      "unit_id": "2f92f1cf-7814-5c36-9f6e-ab15e5a20486",
+      "content_sha256": "6bb19b5be1663610278f70176691149e131711a50031b561fcd11def5c752689",
+      "simples": "O art. 181 tem hipóteses específicas de estacionamento. Não há classe ou medida universal: contramão (XV) é média e não enumera remoção; fila dupla é grave; pista de rodovia/estrada/trânsito rápido/via com acostamento é gravíssima. Distância da guia de 50 cm a 1 m é leve; MAIS DE 1 m, grave. Vaga reservada sem credencial é inciso XX, gravíssima, distinto do XVII regulamentado. Acostamento tem ressalva de força maior e ponto de ônibus tem delimitador ou intervalo subsidiário próprio.",
+      "pontos": [
+        "II: 50 cm a 1 m, LEVE; III: mais de 1 m, GRAVE.",
+        "V: pista de estradas, rodovias, trânsito rápido ou via dotada de acostamento, GRAVÍSSIMA.",
+        "VII: acostamento, LEVE, salvo força maior.",
+        "XI: fila dupla, GRAVE; XV: contramão, MÉDIA, sem remoção enumerada no inciso.",
+        "XVII: estacionamento regulamentado, GRAVE; XVIII: proibido estacionar, MÉDIA; XIX: proibido parar/estacionar, GRAVE.",
+        "XX: vaga reservada sem credencial, GRAVÍSSIMA.",
+        "XIII: delimitador do ponto; sem ele, dez metros ANTES E DEPOIS do marco.",
+        "§1º: aplicação preferencialmente após remoção não torna remoção pressuposto universal de toda multa."
+      ],
+      "atencao": [
+        "Não dizer sempre multa e remoção; conferir inciso específico e regime de aplicação.",
+        "Não afirmar acostamento sem a ressalva de força maior.",
+        "Requisitos de vagas reservadas e sinalização devem ser integrados ao regime atual; não confundir art. 86-A e inciso XX."
+      ],
+      "exemplo": "Veículo estaciona na vaga reservada a idoso sem credencial. Resposta: inciso XX, gravíssima com multa e remoção, distinto do inciso XVII de estacionamento regulamentado. Variação: Estacionar na contramão, inciso XV, tem multa média, mas não enumera remoção como todos os outros incisos; não afirmar sempre remoção.",
+      "prova": [
+        "Todo inciso de estacionamento prevê obrigatoriamente remoção? Não. O inciso XV não lista essa medida; examinar cada hipótese sem copiar consequência universal.",
+        "Exatamente um metro do meio-fio é mais de um metro e infração grave do III? Não. A faixa de cinquenta centímetros a UM metro é leve no II; o III exige MAIS DE um metro."
+      ],
+      "termos": [
+        {
+          "termo": "Estacionamento por hipótese",
+          "significado": "Conduta com classe e medida próprias, sem regra universal de gravidade ou remoção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 182"
+      ],
+      "expected": {
+        "unit_id": "2f92f1cf-7814-5c36-9f6e-ab15e5a20486",
+        "content_sha256": "6bb19b5be1663610278f70176691149e131711a50031b561fcd11def5c752689",
+        "simples": "O estacionamento irregular é infração com gravidade variável, sempre com multa e remoção do veículo. É média estacionar nas esquinas e a menos de cinco metros do bordo da via transversal, em desacordo com as posições do Código, junto a hidrantes, em ponto de ônibus, impedindo a movimentação de outro veículo e onde houver guia rebaixada. É leve estacionar afastado da guia entre cinquenta centímetros e um metro, e nos acostamentos. É grave estacionar afastado da guia a mais de um metro, no passeio ou sobre faixa de pedestre, ciclovia ou ciclofaixa, em fila dupla, na área de cruzamento, e em viadutos, pontes e túneis. É gravíssima estacionar na pista de rolamento das estradas, rodovias, vias de trânsito rápido e vias com acostamento. Também há infrações específicas para vagas de idosos e pessoas com deficiência e para locais proibidos pela sinalização.",
+        "pontos": [
+          "Média: esquinas, hidrantes, pontos de ônibus, guia rebaixada.",
+          "Leve: afastado da guia de meio a um metro; acostamentos.",
+          "Grave: fila dupla, passeio, faixa de pedestre, ciclovia, cruzamento, viadutos.",
+          "Gravíssima: pista de rolamento de estradas, rodovias e vias de trânsito rápido."
+        ],
+        "atencao": [
+          "Estacionar em fila dupla é infração GRAVE.",
+          "Estacionar a menos de cinco metros da esquina: média."
+        ],
+        "exemplo": "O veículo em fila dupla gera multa grave e remoção.",
+        "prova": [
+          "Assertiva que classifica como leve o estacionamento em fila dupla erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 182"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-182",
+      "unit_id": "d64f1bdb-b2b4-50e2-910f-d51cba81f000",
+      "content_sha256": "87c668d6e487b0dae45387a972d13462d5d3a11677f107dc6bf2fa3befbc3753",
+      "simples": "Paradas irregulares têm classes por inciso: leve em posição, distância de 50 cm a 1 m, passeio/faixa de pedestre; média em esquina, distância acima de 1 m, cruzamento prejudicado, pontes/viadutos/túneis, contramão e local proibido; grave na pista das vias especificadas e sobre ciclovia/ciclofaixa. Não dizer sempre menos grave que estacionar: algumas classes coincidem. O artigo não enumera remoção como medida padrão.",
+      "pontos": [
+        "Média: esquinas, cruzamento, viadutos, contramão, local proibido.",
+        "Leve: afastado entre meio e um metro; passeio e faixa de pedestres.",
+        "Grave: pista de rolamento das estradas e sobre ciclovia."
+      ],
+      "atencao": [
+        "Comparar cada inciso, sem regra universal de menor gravidade.",
+        "Lei 14.071/2020 acrescentou XI: ciclovia/ciclofaixa GRAVE, distinto do VI."
+      ],
+      "exemplo": "Veículo faz parada para embarque na esquina a menos de cinco metros. Resposta: média, mesma classe da hipótese correspondente de estacionamento; não há menor gravidade universal. Variação: Parar sobre ciclovia é grave no inciso XI; sobre passeio/faixa de pedestre, no inciso VI, leve, sem equiparar todas as posições.",
+      "prova": [
+        "Toda parada irregular é sempre menos grave que estacionamento no mesmo ponto? Não. Há hipóteses de mesma classe, como esquina e contramão; comparar inciso por inciso.",
+        "O art. 182 enumera remoção do veículo como medida padrão? Não. Os incisos listam multa, sem medida de remoção enumerada; outras regras precisam de fundamento próprio."
+      ],
+      "termos": [
+        {
+          "termo": "Parada irregular",
+          "significado": "Enquadramento ligado à imobilização para embarque/desembarque, com hipóteses próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 181",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "d64f1bdb-b2b4-50e2-910f-d51cba81f000",
+        "content_sha256": "87c668d6e487b0dae45387a972d13462d5d3a11677f107dc6bf2fa3befbc3753",
+        "simples": "Parar o veículo em local irregular é infração de menor gravidade que estacionar, sem a medida de remoção na maior parte dos casos. É média parar nas esquinas e a menos de cinco metros do bordo da via transversal, afastado da guia a mais de um metro, na área de cruzamento, em viadutos, pontes e túneis, na contramão e em local proibido pela sinalização. É leve parar afastado da guia de cinquenta centímetros a um metro, em desacordo com as posições do Código, no passeio ou faixa de pedestres. É grave parar na pista de rolamento das estradas e vias com acostamento e sobre ciclovia ou ciclofaixa.",
+        "pontos": [
+          "Média: esquinas, cruzamento, viadutos, contramão, local proibido.",
+          "Leve: afastado entre meio e um metro; passeio e faixa de pedestres.",
+          "Grave: pista de rolamento das estradas e sobre ciclovia."
+        ],
+        "atencao": [
+          "Parar é menos grave que estacionar nos mesmos locais."
+        ],
+        "exemplo": "Parar sobre a ciclovia é infração grave.",
+        "prova": [
+          "Assertiva que aplica remoção do veículo como medida padrão em todas as paradas irregulares erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 181"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-183",
+      "unit_id": "61dbb330-2efe-56b3-941c-6759f1d6440e",
+      "content_sha256": "2b6d5f8600d107d8ab9c194fe20a766836ee9248e8beea225aa0c32392f73976",
+      "simples": "Parar o veículo sobre a faixa de pedestres na mudança de sinal luminoso é infração média, com penalidade de multa.",
+      "pontos": [
+        "Infração média.",
+        "Parar sobre a faixa na mudança de sinal."
+      ],
+      "atencao": [
+        "Média.",
+        "Distinguir arts. 182, VI, 183 e bloqueio de interseção; não criar preferência sobre pedestre pela mudança da luz."
+      ],
+      "exemplo": "Na mudança do semáforo, o condutor para sobre a faixa de pedestres. Resposta: a hipótese específica é média com multa. Variação: Parada fora dessa situação pode exigir outro inciso; não enquadrar qualquer presença na faixa pelo 183 sem examinar mudança de sinal.",
+      "prova": [
+        "A mudança de sinal integra a descrição do art. 183? Sim. O texto descreve parar sobre faixa na mudança de sinal luminoso, com classe média.",
+        "Toda parada sobre faixa tem sempre classe leve do art. 182, VI? Não. Há hipótese específica média no art. 183 vinculada à mudança do sinal."
+      ],
+      "termos": [
+        {
+          "termo": "Parada no semáforo",
+          "significado": "Hipótese específica na mudança de luz, distinta da descrição geral da parada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 70"
+      ],
+      "expected": {
+        "unit_id": "61dbb330-2efe-56b3-941c-6759f1d6440e",
+        "content_sha256": "2b6d5f8600d107d8ab9c194fe20a766836ee9248e8beea225aa0c32392f73976",
+        "simples": "Parar o veículo sobre a faixa de pedestres na mudança de sinal luminoso é infração média, com penalidade de multa.",
+        "pontos": [
+          "Infração média.",
+          "Parar sobre a faixa na mudança de sinal."
+        ],
+        "atencao": [
+          "Média."
+        ],
+        "exemplo": "Parar sobre a faixa de pedestres quando o sinal abre é infração.",
+        "prova": [
+          "Assertiva que classifica como gravíssima a parada sobre a faixa de pedestres na mudança de sinal erra: é média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 70"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-185",
+      "unit_id": "e99f38a9-008c-5dc9-8499-1a6de6374dc7",
+      "content_sha256": "2b25fd7547e0f2fe9de847bf28b9c71dfd70a20d4f917cb665722f35c920cce8",
+      "simples": "Quando o veículo estiver em movimento, deixar de conservá-lo na faixa a ele destinada pela sinalização de regulamentação, exceto em situações de emergência, ou deixar de conservar nas faixas da direita os veículos lentos e de maior porte, é infração média, com penalidade de multa.",
+      "pontos": [
+        "Manter o veículo na faixa destinada.",
+        "Veículos lentos e de maior porte nas faixas da direita.",
+        "Infração média."
+      ],
+      "atencao": [
+        "Média; exceção para emergência.",
+        "Não estender a exceção textual do inciso I indiscriminadamente a qualquer desvio nem ignorar manobras regulares."
+      ],
+      "exemplo": "Um veículo lento de grande porte deixa a faixa direita sem situação regular que justifique. Resposta: examinar inciso II, infração média. Variação: A ultrapassagem tem regras próprias; não transformar qualquer uso momentâneo de outra faixa em proibição absoluta sem integrar circulação e sinalização.",
+      "prova": [
+        "O inciso I traz exceção para emergência? Sim. A obrigação de conservar faixa regulamentada tem a exceção textual de emergência.",
+        "Um caminhão nunca pode usar outra faixa em qualquer situação? Não. Integrar regras de manobra/ultrapassagem e sinalização; não tornar o resumo em proibição absoluta."
+      ],
+      "termos": [
+        {
+          "termo": "Conservação da faixa",
+          "significado": "Manutenção na faixa pertinente, integrada às exceções e demais regras de circulação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 184"
+      ],
+      "expected": {
+        "unit_id": "e99f38a9-008c-5dc9-8499-1a6de6374dc7",
+        "content_sha256": "2b25fd7547e0f2fe9de847bf28b9c71dfd70a20d4f917cb665722f35c920cce8",
+        "simples": "Quando o veículo estiver em movimento, deixar de conservá-lo na faixa a ele destinada pela sinalização de regulamentação, exceto em situações de emergência, ou deixar de conservar nas faixas da direita os veículos lentos e de maior porte, é infração média, com penalidade de multa.",
+        "pontos": [
+          "Manter o veículo na faixa destinada.",
+          "Veículos lentos e de maior porte nas faixas da direita.",
+          "Infração média."
+        ],
+        "atencao": [
+          "Média; exceção para emergência."
+        ],
+        "exemplo": "O caminhão lento deve trafegar nas faixas da direita.",
+        "prova": [
+          "Assertiva que permite caminhões lentos na faixa da esquerda erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 184"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-186",
+      "unit_id": "48988992-719f-5991-ad14-58f9ced006cb",
+      "content_sha256": "873f0db3fffa36df44d2a979ff34f79ffa1af23ede8637846d579f316f986219",
+      "simples": "Transitar pela contramão de direção em vias com duplo sentido de circulação, exceto para ultrapassar outro veículo e apenas pelo tempo necessário, respeitada a preferência de quem vem em sentido contrário, é infração grave, com multa. Transitar pela contramão em vias com sinalização de sentido único de circulação é infração gravíssima, com multa.",
+      "pontos": [
+        "Duplo sentido: grave.",
+        "Sentido único: gravíssima."
+      ],
+      "atencao": [
+        "Via de sentido ÚNICO: gravíssima; via de duplo sentido: grave.",
+        "Não usar a exceção para legalizar ultrapassagem proibida por linha, curva, cruzamento ou outras condições pertinentes."
+      ],
+      "exemplo": "Veículo entra na contramão de via sinalizada de sentido único. Resposta: gravíssima; em duplo sentido a hipótese ordinária é grave. Variação: Em duplo sentido, usar faixa contrária apenas para ultrapassagem permitida, no tempo necessário e respeitada preferência oposta, tem exceção específica.",
+      "prova": [
+        "A exceção de ultrapassagem do inciso I libera toda contramão em mão única? Não. Refere-se a via de duplo sentido e exige condições; mão única tem hipótese gravíssima.",
+        "Basta alegar ultrapassagem para afastar qualquer irregularidade? Não. Devem ser respeitados tempo necessário, preferência contrária e demais proibições de ultrapassagem."
+      ],
+      "termos": [
+        {
+          "termo": "Contramão condicionada",
+          "significado": "Uso excepcional na ultrapassagem regular em via de duplo sentido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 203"
+      ],
+      "expected": {
+        "unit_id": "48988992-719f-5991-ad14-58f9ced006cb",
+        "content_sha256": "873f0db3fffa36df44d2a979ff34f79ffa1af23ede8637846d579f316f986219",
+        "simples": "Transitar pela contramão de direção em vias com duplo sentido de circulação, exceto para ultrapassar outro veículo e apenas pelo tempo necessário, respeitada a preferência de quem vem em sentido contrário, é infração grave, com multa. Transitar pela contramão em vias com sinalização de sentido único de circulação é infração gravíssima, com multa.",
+        "pontos": [
+          "Duplo sentido: grave.",
+          "Sentido único: gravíssima."
+        ],
+        "atencao": [
+          "Via de sentido ÚNICO: gravíssima; via de duplo sentido: grave."
+        ],
+        "exemplo": "Entrar na contramão de uma rua de mão única é infração gravíssima.",
+        "prova": [
+          "Assertiva que classifica como grave a contramão em via de sentido único erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-187",
+      "unit_id": "da38beaa-8f61-5fb6-afc4-521b11db4fb0",
+      "content_sha256": "69f3c1f01cb93c4db182ca5dd098d4a4cf73a607d98566640ef8636eacdfd621",
+      "simples": "Transitar em locais e horários não permitidos pela regulamentação estabelecida pela autoridade competente é infração média, com multa, para todos os tipos de veículos. O antigo inciso II, que tratava de veículos específicos como os de carga, foi revogado pela Lei nº 9.602, de 1998, e hoje todas as restrições de local e horário se enquadram no inciso I.",
+      "pontos": [
+        "Infração média, para todos os tipos de veículos.",
+        "Inciso II revogado: todas as restrições se enquadram no inciso I."
+      ],
+      "atencao": [
+        "Inciso II revogado pela Lei 9.602/1998; não ensinar rol histórico como atual.",
+        "Não generalizar todas as restrições se enquadram no I quando há tipo específico aplicável."
+      ],
+      "exemplo": "Um caminhão entra em local/horário vedado pela regulamentação competente. Resposta: art. 187, I, média; não recuperar inciso II revogado como regra geral de grave para carga. Variação: Faixa exclusiva ou passagem por calçada tem tipos específicos; não afirmar que toda proibição de circulação, qualquer que seja, cabe exclusivamente no 187.",
+      "prova": [
+        "O inciso II revogado ainda cria classe grave geral para caminhões? Não. O rol atual mantém inciso I para todos os tipos no recorte de locais/horários.",
+        "Toda restrição de trânsito necessariamente afasta outros artigos específicos? Não. Examinar descrição e sinalização pertinentes, sem absorver toda infração no tipo geral."
+      ],
+      "termos": [
+        {
+          "termo": "Restrição de local/horário",
+          "significado": "Limitação regulamentar do art. 187, distinta de todo tipo de circulação proibida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "da38beaa-8f61-5fb6-afc4-521b11db4fb0",
+        "content_sha256": "69f3c1f01cb93c4db182ca5dd098d4a4cf73a607d98566640ef8636eacdfd621",
+        "simples": "Transitar em locais e horários não permitidos pela regulamentação estabelecida pela autoridade competente é infração média, com multa, para todos os tipos de veículos. O antigo inciso II, que tratava de veículos específicos como os de carga, foi revogado pela Lei nº 9.602, de 1998, e hoje todas as restrições de local e horário se enquadram no inciso I.",
+        "pontos": [
+          "Infração média, para todos os tipos de veículos.",
+          "Inciso II revogado: todas as restrições se enquadram no inciso I."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso II foi revogado pela Lei nº 9.602, de 1998; hoje só vale o inciso I.",
+          "Média, com quatro pontos, também para caminhões em restrição de circulação."
+        ],
+        "exemplo": "O caminhão que circula em horário proibido pela placa é autuado no art. 187, I.",
+        "prova": [
+          "Assertiva que classifica como grave a circulação de caminhão em local ou horário proibido erra: o inciso II foi revogado e vale a infração média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T23:45:52.053001+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-188",
+      "unit_id": "88fbe914-1527-5574-a641-0030edb34e6f",
+      "content_sha256": "95df4bfa0c3c7dcf578c699ebcfb3a2da4249b00ccab0ace8aba7886b2102afc",
+      "simples": "Transitar ao lado de outro veículo, interrompendo ou perturbando o trânsito, é infração média, com penalidade de multa.",
+      "pontos": [
+        "Infração média.",
+        "Transitar lado a lado perturbando o fluxo."
+      ],
+      "atencao": [
+        "Média.",
+        "Não omitir interrompendo ou perturbando da descrição."
+      ],
+      "exemplo": "Dois veículos circulam lado a lado interrompendo o trânsito. Resposta: a perturbação/obstrução compõe a infração média. Variação: A simples circulação paralela regular em faixas distintas não completa automaticamente a hipótese.",
+      "prova": [
+        "Circular lado a lado, sem perturbação, basta sempre para o art. 188? Não. O texto exige interromper ou perturbar o trânsito, não proibição de toda circulação paralela.",
+        "A classe do tipo é gravíssima apenas por haver dois veículos? Não. A descrição do art. 188 é MÉDIA; outras condutas têm requisitos próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Circulação perturbadora",
+          "significado": "Trânsito paralelo com interferência no fluxo, distinto de circular regularmente em faixas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 185"
+      ],
+      "expected": {
+        "unit_id": "88fbe914-1527-5574-a641-0030edb34e6f",
+        "content_sha256": "95df4bfa0c3c7dcf578c699ebcfb3a2da4249b00ccab0ace8aba7886b2102afc",
+        "simples": "Transitar ao lado de outro veículo, interrompendo ou perturbando o trânsito, é infração média, com penalidade de multa.",
+        "pontos": [
+          "Infração média.",
+          "Transitar lado a lado perturbando o fluxo."
+        ],
+        "atencao": [
+          "Média."
+        ],
+        "exemplo": "Dois carros lado a lado que bloqueiam a via cometem a infração.",
+        "prova": [
+          "Assertiva que classifica como gravíssima a circulação lado a lado erra: é média."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 185"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-189",
+      "unit_id": "c58a1603-faf0-5ac1-9a5d-b8d7dccbfb15",
+      "content_sha256": "0adc070d1baa41b2dc77b107474f0f1ef1c7373b7efd709c880e8b3f211cf7b3",
+      "simples": "Deixar de dar passagem aos veículos precedidos de batedores, de socorro de incêndio e salvamento, de polícia, de operação e fiscalização de trânsito e às ambulâncias, quando em serviço de urgência e devidamente identificados por dispositivos de alarme sonoro e iluminação intermitente, é infração gravíssima, com multa.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Veículos de urgência identificados por sirene e luz intermitente."
+      ],
+      "atencao": [
+        "Só vale para veículos em serviço de urgência e identificados.",
+        "Integrar art. 29 atual sem afirmar que toda prioridade de veículo policial só existe numa única situação."
+      ],
+      "exemplo": "Uma ambulância em serviço de urgência usa identificação sonora e luminosa regulamentar e o condutor não dá passagem. Resposta: o recorte é gravíssimo. Variação: Não confundir mera aparência de ambulância estacionada sem urgência com todos os requisitos desta descrição.",
+      "prova": [
+        "A identificação só por nome pintado no veículo completa o art. 189? Não. O texto menciona serviço de urgência e dispositivos regulamentares de alarme sonoro e iluminação intermitente.",
+        "Recusar passagem e seguir para aproveitar a abertura têm mesma classe? Não. Art. 189 é gravíssima; seguir no art. 190 é grave, com condições próprias."
+      ],
+      "termos": [
+        {
+          "termo": "Prioridade identificada",
+          "significado": "Condição especial de urgência e sinalização para a hipótese administrativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 190",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm"
+      ],
+      "expected": {
+        "unit_id": "c58a1603-faf0-5ac1-9a5d-b8d7dccbfb15",
+        "content_sha256": "0adc070d1baa41b2dc77b107474f0f1ef1c7373b7efd709c880e8b3f211cf7b3",
+        "simples": "Deixar de dar passagem aos veículos precedidos de batedores, de socorro de incêndio e salvamento, de polícia, de operação e fiscalização de trânsito e às ambulâncias, quando em serviço de urgência e devidamente identificados por dispositivos de alarme sonoro e iluminação intermitente, é infração gravíssima, com multa.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Veículos de urgência identificados por sirene e luz intermitente."
+        ],
+        "atencao": [
+          "Só vale para veículos em serviço de urgência e identificados."
+        ],
+        "exemplo": "Não abrir caminho para a ambulância com sirene é infração gravíssima.",
+        "prova": [
+          "Assertiva que classifica como grave a recusa de passagem à ambulância em urgência erra: é gravíssima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 190"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-190",
+      "unit_id": "a6ef3ed7-8e6e-5a6e-bd23-6e9f88e2a2d1",
+      "content_sha256": "7db99f6e8eed50e617b617711052d89bb66d13a2658a5f08f2dfa2b620352aba",
+      "simples": "Seguir veículo em serviço de urgência, estando este com prioridade de passagem devidamente identificada por dispositivos regulamentares de alarme sonoro e iluminação intermitente, é infração grave, com multa.",
+      "pontos": [
+        "GRAVE, multa.",
+        "Serviço de urgência e prioridade identificada por alarme sonoro e iluminação intermitente.",
+        "Não inventar limite de distância no art. 190."
+      ],
+      "atencao": [
+        "Grave (diferente da recusa de passagem, que é gravíssima).",
+        "Não restringir a apenas seguir de perto porque o texto não fixa essa condição numérica."
+      ],
+      "exemplo": "O motorista segue veículo de urgência para aproveitar a passagem aberta com alarme e iluminação. Resposta: examinar art. 190, grave com multa. Variação: A distância frontal de segurança é obrigação distinta; o artigo não autoriza seguir o veículo urgente apenas porque ficou distante.",
+      "prova": [
+        "O art. 190 exige um número fixo de metros de proximidade? Não. Não fixa distância numérica; descreve seguir veículo urgente com prioridade identificada.",
+        "A classe é gravíssima como deixar de dar passagem? Não. O art. 190 é GRAVE, distinto da classe do art. 189."
+      ],
+      "termos": [
+        {
+          "termo": "Seguir a urgência",
+          "significado": "Aproveitamento da prioridade identificada, distinto de negar passagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 189",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14440.htm"
+      ],
+      "expected": {
+        "unit_id": "a6ef3ed7-8e6e-5a6e-bd23-6e9f88e2a2d1",
+        "content_sha256": "7db99f6e8eed50e617b617711052d89bb66d13a2658a5f08f2dfa2b620352aba",
+        "simples": "Seguir veículo em serviço de urgência, estando este com prioridade de passagem devidamente identificada por dispositivos regulamentares de alarme sonoro e iluminação intermitente, é infração grave, com multa.",
+        "pontos": [
+          "Infração grave.",
+          "Seguir de perto veículo de urgência."
+        ],
+        "atencao": [
+          "Grave (diferente da recusa de passagem, que é gravíssima)."
+        ],
+        "exemplo": "Aproveitar a ambulância para furar o trânsito atrás dela é infração.",
+        "prova": [
+          "Assertiva que classifica como média a conduta de seguir veículo de urgência erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 189"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-191",
+      "unit_id": "4b5fe3f9-5ccf-5638-ace4-818c8c6f504a",
+      "content_sha256": "5ccae8dec2c2ea3731335838166821c1b97748d4a5f8bfbbaee00da41be5423a",
+      "simples": "Forçar passagem entre veículos que, transitando em sentidos opostos, estejam na iminência de passar um pelo outro ao realizar operação de ultrapassagem é infração gravíssima, com multa (dez vezes) e suspensão do direito de dirigir. A multa é aplicada em dobro na reincidência em até doze meses.",
+      "pontos": [
+        "Infração gravíssima.",
+        "Multa (dez vezes) e suspensão do direito de dirigir.",
+        "Dobro da multa na reincidência em até doze meses."
+      ],
+      "atencao": [
+        "Multa DEZ vezes e suspensão.",
+        "Não confundir com qualquer ultrapassagem irregular nem inventar prazo fixo de suspensão neste artigo."
+      ],
+      "exemplo": "Um motorista força passagem na ultrapassagem entre veículos em sentidos opostos prestes a se cruzar. Resposta: gravíssima com multa dez vezes e suspensão. Variação: Na reincidência em até doze meses, dobra-se a multa; o artigo não declara automaticamente dobrar o prazo de suspensão.",
+      "prova": [
+        "A primeira ocorrência prevê multa simples sem suspensão? Não. A redação atual prevê multa DEZ vezes e suspensão do direito de dirigir.",
+        "Dobro na reincidência significa dobrar automaticamente toda consequência? Não. O parágrafo dobra a multa prevista, não fixa dobra automática de suspensão."
+      ],
+      "termos": [
+        {
+          "termo": "Passagem forçada",
+          "significado": "Manobra entre veículos opostos na iminência de cruzamento, com sanção própria."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 203"
+      ],
+      "expected": {
+        "unit_id": "4b5fe3f9-5ccf-5638-ace4-818c8c6f504a",
+        "content_sha256": "5ccae8dec2c2ea3731335838166821c1b97748d4a5f8bfbbaee00da41be5423a",
+        "simples": "Forçar passagem entre veículos que, transitando em sentidos opostos, estejam na iminência de passar um pelo outro ao realizar operação de ultrapassagem é infração gravíssima, com multa (dez vezes) e suspensão do direito de dirigir. A multa é aplicada em dobro na reincidência em até doze meses.",
+        "pontos": [
+          "Infração gravíssima.",
+          "Multa (dez vezes) e suspensão do direito de dirigir.",
+          "Dobro da multa na reincidência em até doze meses."
+        ],
+        "atencao": [
+          "Multa DEZ vezes e suspensão."
+        ],
+        "exemplo": "Tentar passar entre dois veículos que se cruzam na ultrapassagem é infração gravíssima.",
+        "prova": [
+          "Assertiva que prevê apenas multa simples para quem força passagem erra: há multa de dez vezes e suspensão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 203"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-192",
+      "unit_id": "d81c9893-c12d-55f9-98bf-1acadc0222ed",
+      "content_sha256": "a086ec22ea6e54b3825fc09657b912df3b0cba26930fe23ee3d95f691aaa14f4",
+      "simples": "Deixar de guardar distância de segurança lateral e frontal entre o seu veículo e os demais, bem como em relação ao bordo da pista, considerando-se, no momento, a velocidade, as condições climáticas do local da circulação e do veículo, é infração grave, com multa.",
+      "pontos": [
+        "Infração grave.",
+        "Distância lateral e frontal."
+      ],
+      "atencao": [
+        "Grave.",
+        "Não transferir indiscriminadamente o valor do art. 201 para toda distância deste artigo."
+      ],
+      "exemplo": "Em chuva e velocidade elevada, o condutor mantém espaço insuficiente lateral/frontal. Resposta: a distância deve considerar velocidade, clima, via e veículo; a falta é grave. Variação: Distância segura não é uma metragem única para toda situação; há tipo específico de distância ao ultrapassar bicicleta no art. 201.",
+      "prova": [
+        "O art. 192 protege só distância para o veículo da frente? Não. Inclui lateral e frontal entre veículos e em relação ao bordo da pista.",
+        "Um valor fixo escolhido pelo aluno substitui avaliação das condições? Não. O artigo exige considerar velocidade, clima, local de circulação e veículo no momento."
+      ],
+      "termos": [
+        {
+          "termo": "Distância contextual",
+          "significado": "Espaço de segurança ajustado às condições, distinto de número universal inventado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 29"
+      ],
+      "expected": {
+        "unit_id": "d81c9893-c12d-55f9-98bf-1acadc0222ed",
+        "content_sha256": "a086ec22ea6e54b3825fc09657b912df3b0cba26930fe23ee3d95f691aaa14f4",
+        "simples": "Deixar de guardar distância de segurança lateral e frontal entre o seu veículo e os demais, bem como em relação ao bordo da pista, considerando-se, no momento, a velocidade, as condições climáticas do local da circulação e do veículo, é infração grave, com multa.",
+        "pontos": [
+          "Infração grave.",
+          "Distância lateral e frontal."
+        ],
+        "atencao": [
+          "Grave."
+        ],
+        "exemplo": "Colar na traseira do carro da frente é infração grave.",
+        "prova": [
+          "Assertiva que classifica como leve a falta de distância de segurança erra: é grave."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:03:31.358659+00:00",
+        "updated_at": "2026-10-11T22:03:31.358659+00:00"
+      }
+    }
+  ]
+}

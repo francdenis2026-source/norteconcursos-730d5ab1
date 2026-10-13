@@ -1,4 +1,27 @@
 import test from 'node:test';
+test('CTB licensing integrates 2026 electric exception and first A/B toxicology without universal periodic tests',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(143).pontos.join(' '),/14\/9\/2026.*predominantemente elétrica.*4.250/s);
+ assert.match(get('148-a').simples,/PRIMEIRA habilitação A\/B.*sem criar periodicismo universal/s);
+ assert.ok(!get('148-a').prova.some(s=>/aplica-se às categorias C, D e E/.test(s)));
+ assert.match(get('148-a').atencao.join(' '),/validade inferior a três anos.*diferente da janela/s);
+ assert.match(get('165-d').atencao.join(' '),/B\/AB.*trigésimo dia.*afasta/s);
+ for(const n of [143,'148-a','165-b','165-c','165-d'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB alcohol procedure distinguishes present rules from deferred manual changes',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(165).simples,/1031\/2026.*não recolhimento.*embora.*CTB/s);
+ assert.match(get(165).atencao.join(' '),/17\/10\/2026.*13\/10.*fichas futuras.*18\/8\/2026/s);
+ assert.match(get('165-a').prova.join(' '),/1079.*validou.*crime.*Não/s);
+ assert.equal(legalStudyCaveat('transito','art-165').literalPractice,false);
+});
+test('CTB parking corrections remove universal removal and lower-gravity assumptions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(181).simples,/contramão.*não enumera remoção/s);
+ assert.match(get(181).pontos.join(' '),/VII.*salvo força maior/);
+ assert.match(get(182).simples,/Não dizer sempre menos grave.*classes coincidem/s);
+ for(const n of [181,182])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
 test('CTB motofrete distinguishes expired provisional measure from current restored requirements',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-03-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
