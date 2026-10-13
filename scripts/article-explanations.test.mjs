@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP sumário e restauração não recuperam sanção por fato atípico',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-summary-restoration-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(531).simples,/trinta dias/);
+ assert.match(get(532).simples,/cinco.*cinco/);
+ assert.match(get(541).simples,/primeira instância/);
+ assert.match(get(548).atencao.join(' '),/registro não preenche|título/);
+ for(const n of [535,549,550,551,552,553,554,555])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP procedimentos especiais separa defesa e regimes periciais',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-special-procedures-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
