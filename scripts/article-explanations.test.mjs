@@ -929,3 +929,14 @@ test('CP final lote2: vulnerabilidade, sigilo e perigo não viram automatismos',
  assert.match(get(247).pontos.join(' '),/sem presumir crime por pobreza/);
  for(const n of ['217-a','234-b',226,244,246,247,248,249,266,268])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
 });
+
+test('CP final lote3: medicamento sem registro, classificação e identidade têm ressalvas reais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cp-final-lote-3-2026-10-12.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(273).simples,/1003.*2023.*1 a.*3/s);assert.match(get(273).atencao.join(' '),/inconstitucional/);
+ assert.match(get(270).atencao.join(' '),/rol atual.*não inclui/);
+ assert.match(get(307).atencao.join(' '),/522.*identidade falsa/);
+ assert.match(get(289).atencao.join(' '),/73.*estelionato estadual/);
+ assert.match(get(282).atencao.join(' '),/8\/6\/2026.*não responsabilidade objetiva/);
+ for(const n of [270,273,282,283,284,286,287,288,289,297,299,304,307,309,310,311,315])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
+});
