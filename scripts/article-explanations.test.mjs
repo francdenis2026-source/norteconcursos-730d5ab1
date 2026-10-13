@@ -1,4 +1,14 @@
 import test from 'node:test';
+test('CPP proteção e citação não confundem edital, hora certa e prescrição',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-protection-citations-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,24);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('350-a').pontos.join(' '),/qualquer crime/);
+ assert.match(get(362).simples,/252–254.*atual/);
+ assert.match(get(364).atencao.join(' '),/Não ensinar trinta/);
+ assert.match(get(366).pontos.join(' '),/processo pode continuar suspenso/);
+ assert.match(get(367).atencao.join(' '),/não presume verdade/);
+ for(const n of [362,364,366])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP fiança distingue competência, percentuais e prisão por pobreza',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-bail-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,30);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
