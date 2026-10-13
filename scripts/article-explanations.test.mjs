@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP nulidades e recursos integra reformas e fungibilidade atual',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-nullities-resources-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(563).atencao.join(' '),/processo totalmente sem defesa/);
+ assert.match(get(573).pontos.join(' '),/atos independentes/);
+ assert.match(get(579).pontos.join(' '),/erro grosseiro por si não impede/);
+ assert.match(get(581).pontos.join(' '),/agravo da LEP197/);
+ for(const n of [564,569,571,574,579,581,582])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP sumário e restauração não recuperam sanção por fato atípico',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-summary-restoration-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
