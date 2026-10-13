@@ -1,0 +1,1477 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:49:27.930989+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 24,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-350-a",
+        "art-350-b",
+        "art-351",
+        "art-352",
+        "art-353",
+        "art-354",
+        "art-355",
+        "art-356",
+        "art-357",
+        "art-358",
+        "art-359",
+        "art-360",
+        "art-361",
+        "art-362",
+        "art-363",
+        "art-364",
+        "art-365",
+        "art-366",
+        "art-367",
+        "art-368",
+        "art-369",
+        "art-370",
+        "art-371",
+        "art-372"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-350-a",
+      "unit_id": "c6f0fe6d-94e9-5d76-ba33-ba5e0c77aa2a",
+      "content_sha256": "b780299436895c2766cdfff61edbc294aa006db5fade7e116d4bf133fbb57439",
+      "simples": "Lei 15.280/2025 permite proteção urgente por indícios de crime contra dignidade sexual e estende regime a vítimas vulneráveis, qualquer que seja crime investigado.",
+      "pontos": [
+        "Medidas isoladas ou conjuntas: armas, afastamento, distância/contato/lugares, visitas com equipe, alimentos, programas e acompanhamento psicossocial.",
+        "Outras medidas cabíveis, comunicadas ao MP; CPC no que couber.",
+        "Restrição de arma de agente autorizado: comunicar instituição e responsabilidade de superior pela execução conforme caso.",
+        "Auxílio policial pode ser requisitado.",
+        "§5º: cumular monitoração e disponibilizar dispositivo de alerta à vítima.",
+        "§6º: crianças, adolescentes, pessoas com deficiência ou incapazes na situação de vulnerabilidade, qualquer crime."
+      ],
+      "atencao": [
+        "Não limitar toda proteção a violência doméstica ou afirmar que medida é pena definitiva. O âmbito do §6º é mais amplo que crime sexual."
+      ],
+      "exemplo": "Indícios de crime sexual permitem afastamento e proibição de contato com proteção efetiva. Variação: Vítima criança em situação vulnerável pode estar abrangida mesmo por crime diverso, conforme §6º.",
+      "prova": [
+        "Só se aplica a crime sexual em toda hipótese? Não.",
+        "Há monitoração cumulada e alerta à vítima previstos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção urgente",
+          "significado": "Providência preventiva para segurança e integridade da vítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "expected": {
+        "unit_id": "c6f0fe6d-94e9-5d76-ba33-ba5e0c77aa2a",
+        "content_sha256": "b780299436895c2766cdfff61edbc294aa006db5fade7e116d4bf133fbb57439",
+        "simples": "Constatada a existência de indícios da prática de crime contra a dignidade sexual, o juiz poderá aplicar, de imediato, ao autor, em conjunto ou separadamente, medidas protetivas de urgência, entre outras: suspensão da posse ou restrição do porte de armas; afastamento do lar, domicílio ou local de convivência com a vítima; proibição de aproximação da vítima, de seus familiares e das testemunhas, de contato por qualquer meio e de frequentação de determinados lugares; e restrição ou suspensão de visitas aos dependentes menores, ouvida a equipe de atendimento multidisciplinar.",
+        "pontos": [
+          "Indícios de crime contra a dignidade sexual.",
+          "Juiz aplica de imediato, em conjunto ou separadamente, medidas protetivas de urgência.",
+          "Exemplos: restrição de armas, afastamento do lar, proibição de aproximação e contato, restrição de visitas a dependentes menores."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 15.280, de 2025.",
+          "Rol exemplificativo ('entre outras')."
+        ],
+        "exemplo": "O autor de crime sexual é proibido de se aproximar da vítima e de seus familiares.",
+        "prova": [
+          "Assertiva que exige sentença condenatória para aplicar as medidas do art. 350-A erra: bastam indícios."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 350-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-350-b",
+      "unit_id": "cc5d2f3d-106d-5da2-9093-a408acd324d9",
+      "content_sha256": "acd1d437f2158213e5d8f81c1ac0b9fbd2d522cd5c567204aefc3d0e87efbb53",
+      "simples": "Juiz pode vedar atividade com contato direto com vulnerável a pedido dos legitimados, com prova do crime, autoria indicativa e perigo da liberdade.",
+      "pontos": [
+        "Pedido da polícia, MP ou vítima.",
+        "Qualquer fase da investigação ou processo.",
+        "Decisão requer os três pressupostos enumerados."
+      ],
+      "atencao": [
+        "Não confundir indício de autoria com condenação nem proibir qualquer trabalho sem nexo com contato vulnerável."
+      ],
+      "exemplo": "Risco concreto em atividade de contato direto com crianças fundamenta pedido de proibição. Variação: Profissão sem esse contato não entra automaticamente no objeto específico do artigo.",
+      "prova": [
+        "Vítima pode pedir? Sim.",
+        "A medida dispensa perigo concreto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Restrição de atividade protetiva",
+          "significado": "Limite judicial ao contato profissional vulnerável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "expected": {
+        "unit_id": "cc5d2f3d-106d-5da2-9093-a408acd324d9",
+        "content_sha256": "acd1d437f2158213e5d8f81c1ac0b9fbd2d522cd5c567204aefc3d0e87efbb53",
+        "simples": "Em qualquer fase da investigação policial ou do processo penal, a pedido da autoridade policial, do Ministério Público ou da vítima, o juiz poderá determinar a proibição do autor de exercer atividades que envolvam contato direto com pessoa em situação de vulnerabilidade, quando houver prova da existência do crime, indício suficiente de autoria e perigo gerado pelo estado de liberdade do imputado.",
+        "pontos": [
+          "Em qualquer fase da investigação ou do processo.",
+          "A pedido da autoridade policial, do MP ou da vítima.",
+          "Proibição de atividades que envolvam contato direto com pessoa vulnerável.",
+          "Requisitos: prova do crime, indício suficiente de autoria e perigo da liberdade."
+        ],
+        "atencao": [
+          "Mesmos requisitos centrais da preventiva (art. 312)."
+        ],
+        "exemplo": "O juiz proíbe o investigado de trabalhar com crianças enquanto durar o processo.",
+        "prova": [
+          "Assertiva que dispensa prova da existência do crime e indício de autoria no art. 350-B erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312",
+          "Art. 350-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-351",
+      "unit_id": "7548678c-19f9-56e5-8694-f23ad512aac2",
+      "content_sha256": "2aa27a3960545ae2b4f67245587f2cd2e41e059bff17c68f9b03e68e30b0297d",
+      "simples": "Citação inicial por mandado é regra quando acusado está no território do juiz que ordenou o ato.",
+      "pontos": [
+        "Distinguir citação de intimação posterior.",
+        "Fora do território, regra própria de cooperação."
+      ],
+      "atencao": [
+        "Não supor que edital é primeira opção por conveniência."
+      ],
+      "exemplo": "Acusado localizado na comarca recebe mandado pessoal. Variação: Endereço em outra comarca exige meio pertinente, não edital só por distância.",
+      "prova": [
+        "Na área do juiz regra é mandado? Sim.",
+        "Distância por si torna edital primeira opção? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Citação inicial",
+          "significado": "Chamamento regular do acusado para defesa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7548678c-19f9-56e5-8694-f23ad512aac2",
+        "content_sha256": "2aa27a3960545ae2b4f67245587f2cd2e41e059bff17c68f9b03e68e30b0297d",
+        "simples": "A citação inicial far-se-á por mandado, quando o réu estiver no território sujeito à jurisdição do juiz que a houver ordenado.",
+        "pontos": [
+          "Citação por mandado quando o réu está na jurisdição do juiz."
+        ],
+        "atencao": [
+          "Citação por mandado é a regra dentro da jurisdição."
+        ],
+        "exemplo": "O oficial de justiça cita o réu na comarca por mandado.",
+        "prova": [
+          "Assertiva que usa precatória para réu dentro da jurisdição do juiz erra."
+        ],
+        "termos": [
+          {
+            "termo": "Citação",
+            "significado": "Ato que chama o réu a juízo para se defender."
+          }
+        ],
+        "remissoes": [
+          "Art. 353"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-352",
+      "unit_id": "d31b982a-9fd7-56d3-97fa-11c0d61bd642",
+      "content_sha256": "c1e2de1e9063b31d913e52aa7a018eb91e89e94fa30272af4fc9c3d262f94208",
+      "simples": "Mandado identifica juiz, acusado e finalidade e contém dados e assinaturas previstos.",
+      "pontos": [
+        "Querelante nas ações por queixa.",
+        "Nome ou sinais do acusado; residência conhecida.",
+        "Juízo, local, dia e hora pertinentes.",
+        "Subscrição do escrivão e rubrica do juiz."
+      ],
+      "atencao": [
+        "Integrar procedimento atual de resposta à acusação: não transformar menção histórica a comparecimento em supressão do prazo de defesa."
+      ],
+      "exemplo": "Mandado individualiza acusado e finalidade do chamamento. Variação: Nome desconhecido permite sinais, mas não citar pessoa física errada.",
+      "prova": [
+        "Sinais característicos podem identificar acusado? Sim.",
+        "Deve indicar finalidade? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Conteúdo do mandado",
+          "significado": "Informações que viabilizam ciência e defesa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d31b982a-9fd7-56d3-97fa-11c0d61bd642",
+        "content_sha256": "c1e2de1e9063b31d913e52aa7a018eb91e89e94fa30272af4fc9c3d262f94208",
+        "simples": "O mandado de citação indicará o nome do juiz; o nome do querelante nas ações iniciadas por queixa; o nome do réu, ou, se desconhecido, seus sinais característicos; a residência do réu, se conhecida; o fim para que é feita a citação; o juízo e o lugar, o dia e a hora em que o réu deverá comparecer; e a subscrição do escrivão e a rubrica do juiz.",
+        "pontos": [
+          "Juiz e querelante (se houver).",
+          "Nome ou sinais característicos do réu e residência.",
+          "Finalidade da citação.",
+          "Juízo, lugar, dia e hora do comparecimento.",
+          "Subscrição do escrivão e rubrica do juiz."
+        ],
+        "atencao": [
+          "Requisitos formais do mandado de citação."
+        ],
+        "exemplo": "O mandado traz o dia e a hora do comparecimento e a rubrica do juiz.",
+        "prova": [
+          "Assertiva que dispensa a rubrica do juiz no mandado de citação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 351"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-353",
+      "unit_id": "f83cbb70-6485-50f7-b5ce-681402196ceb",
+      "content_sha256": "b51825c18cdf18b44b7ed65ae00f6eaa546f866833ef3158c46780758d78705f",
+      "simples": "Acusado fora da jurisdição territorial é citado por precatória nas hipóteses nacionais.",
+      "pontos": [
+        "Juízo deprecante pede diligência ao deprecado.",
+        "Exterior em lugar sabido segue rogatória."
+      ],
+      "atencao": [
+        "Não confundir precatória nacional com cooperação internacional."
+      ],
+      "exemplo": "Acusado em outra comarca recebe diligência deprecada. Variação: Acusado em país estrangeiro com localização sabida exige art. 368.",
+      "prova": [
+        "Precatória se refere à cooperação territorial aqui? Sim.",
+        "Exterior em lugar sabido é hipótese idêntica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Citação deprecada",
+          "significado": "Chamamento por cooperação entre juízos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f83cbb70-6485-50f7-b5ce-681402196ceb",
+        "content_sha256": "b51825c18cdf18b44b7ed65ae00f6eaa546f866833ef3158c46780758d78705f",
+        "simples": "Quando o réu estiver fora do território da jurisdição do juiz processante, será citado mediante precatória.",
+        "pontos": [
+          "Réu fora da jurisdição: citação por precatória."
+        ],
+        "atencao": [
+          "Precatória para réu em outra jurisdição."
+        ],
+        "exemplo": "Réu que mora em outra comarca é citado por carta precatória.",
+        "prova": [
+          "Assertiva que usa mandado direto para réu em outra jurisdição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 354"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-354",
+      "unit_id": "2da2b691-8c59-56a2-a049-4120ffa74808",
+      "content_sha256": "26b012bfdb4e9201d7c3f5b02308bab81322045ad78d31ffd694a3f80f507ba2",
+      "simples": "Precatória identifica juízos e sedes, finalidade com especificações e dados de comparecimento.",
+      "pontos": [
+        "Identificar deprecante e deprecado.",
+        "Finalidade precisa e dados do ato.",
+        "Integrar forma atual de resposta à acusação."
+      ],
+      "atencao": [
+        "Comunicação entre juízos não dispensa clareza para o destinatário exercer defesa."
+      ],
+      "exemplo": "Carta indica órgão solicitante, destinatário e finalidade. Variação: Pedido genérico sem identificação do ato não satisfaz as especificações legais.",
+      "prova": [
+        "Deve identificar ambos os juízos? Sim.",
+        "Finalidade genérica basta sempre? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Requisitos da precatória",
+          "significado": "Dados necessários à cooperação de citação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2da2b691-8c59-56a2-a049-4120ffa74808",
+        "content_sha256": "26b012bfdb4e9201d7c3f5b02308bab81322045ad78d31ffd694a3f80f507ba2",
+        "simples": "A precatória indicará o juiz deprecado e o juiz deprecante; a sede da jurisdição de um e de outro; o fim para que é feita a citação, com todas as especificações; e o juízo do lugar, o dia e a hora em que o réu deverá comparecer.",
+        "pontos": [
+          "Juiz deprecado e deprecante.",
+          "Sede da jurisdição de ambos.",
+          "Finalidade da citação.",
+          "Juízo, dia e hora do comparecimento."
+        ],
+        "atencao": [
+          "Requisitos da precatória de citação."
+        ],
+        "exemplo": "A precatória informa o juízo, o dia e a hora do comparecimento do réu.",
+        "prova": [
+          "Assertiva que dispensa a indicação da finalidade da citação na precatória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 353"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-355",
+      "unit_id": "53db037d-15ce-55ea-8244-2f906a031ea9",
+      "content_sha256": "d17cc1cd3cea39297aadfe970ece57602fc8cb8539ca404038fbe30792e09b32",
+      "simples": "Precatória retorna após cumprimento; localização em outra jurisdição permite remessa útil, e ocultação certificada leva ao regime de hora certa.",
+      "pontos": [
+        "Cumpra-se e mandado do deprecado.",
+        "Remessa a outro juiz se há tempo para citação.",
+        "Ocultação certificada: devolução para art. 362."
+      ],
+      "atencao": [
+        "Não equiparar não encontrado a ocultação deliberada sem certificação."
+      ],
+      "exemplo": "Réu localizado em outra comarca permite remessa ao juízo adequado com tempo útil. Variação: Ocultação comprovada exige observar hora certa, não edital automático.",
+      "prova": [
+        "Pode haver remessa ao juízo onde encontrado se há tempo? Sim.",
+        "Ocultação é igual a mero endereço desconhecido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cumprimento itinerante",
+          "significado": "Encaminhamento e devolução segundo resultado da diligência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "53db037d-15ce-55ea-8244-2f906a031ea9",
+        "content_sha256": "d17cc1cd3cea39297aadfe970ece57602fc8cb8539ca404038fbe30792e09b32",
+        "simples": "A precatória será devolvida ao juiz deprecante, independentemente de traslado, depois de lançado o 'cumpra-se' e de feita a citação por mandado do juiz deprecado. Verificado que o réu se encontra em território sujeito à jurisdição de outro juiz, a este o juiz deprecado remeterá os autos para efetivação da diligência, desde que haja tempo. Certificado pelo oficial de justiça que o réu se oculta para não ser citado, a precatória será imediatamente devolvida, para o fim previsto no art. 362.",
+        "pontos": [
+          "Devolução da precatória ao juiz deprecante, sem traslado, após o 'cumpra-se' e a citação.",
+          "Réu em outra jurisdição: remessa ao juiz competente, se houver tempo.",
+          "Réu que se oculta: devolução imediata para citação com hora certa."
+        ],
+        "atencao": [
+          "Ocultação do réu leva à citação com hora certa (art. 362)."
+        ],
+        "exemplo": "O oficial certifica que o réu se oculta, e a precatória volta para a citação com hora certa.",
+        "prova": [
+          "Assertiva que mantém a precatória no juízo deprecado após constatada a ocultação do réu erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 362"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-356",
+      "unit_id": "c96268e5-f5ea-51b6-a3d3-fa43b45d58fa",
+      "content_sha256": "715c07d1985abf48d54c16d4bf15ce83767be32c865e3be2fdcc4868e7590da2",
+      "simples": "Texto prevê expedição telegráfica urgente com autenticação; estudar a finalidade histórica e integrar comunicação oficial atual.",
+      "pontos": [
+        "Requisitos resumidos do art. 354.",
+        "Autenticidade do emissor é essencial.",
+        "Não afirmar que telegrama é único meio contemporâneo possível."
+      ],
+      "atencao": [
+        "Mensagem informal não equivale automaticamente a comunicação judicial autenticada; regime digital depende de regras aplicáveis."
+      ],
+      "exemplo": "Diligência urgente é comunicada por canal judicial formal com dados e autenticidade. Variação: Mensagem sem identificação confiável não autoriza presumir citação válida.",
+      "prova": [
+        "Urgência elimina autenticidade? Não.",
+        "Texto histórico impõe exclusivamente telegrama para todo ato atual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação urgente",
+          "significado": "Celeridade com identificação e controle."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c96268e5-f5ea-51b6-a3d3-fa43b45d58fa",
+        "content_sha256": "715c07d1985abf48d54c16d4bf15ce83767be32c865e3be2fdcc4868e7590da2",
+        "simples": "Se houver urgência, a precatória, que conterá em resumo os requisitos do art. 354, poderá ser expedida por via telegráfica, depois de reconhecida a firma do juiz, o que a estação expedidora mencionará.",
+        "pontos": [
+          "Urgência: precatória por via telegráfica.",
+          "Contém resumo dos requisitos do art. 354.",
+          "Firma do juiz reconhecida."
+        ],
+        "atencao": [
+          "Meio telegráfico; hoje se usam meios eletrônicos."
+        ],
+        "exemplo": "Texto histórico, adaptado hoje aos meios eletrônicos.",
+        "prova": [
+          "Assertiva que dispensa o reconhecimento da firma do juiz na precatória telegráfica erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 354"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-357",
+      "unit_id": "2a021c95-2427-5b55-9c32-aefdcdc10acf",
+      "content_sha256": "418eb091a5bdb36141bba4828055739bef875348114b511b63ccdfbf892c6149",
+      "simples": "Oficial lê mandado, entrega contrafé com data e hora e certifica entrega e aceitação ou recusa.",
+      "pontos": [
+        "Ciência e registro da diligência.",
+        "Recusa é registrada, não substituída por assinatura fictícia."
+      ],
+      "atencao": [
+        "Recusa de receber não se confunde com ausência de tentativa regular; examinar ato documentado."
+      ],
+      "exemplo": "Oficial lê, entrega e certifica citação com dia e hora. Variação: Recusa é fielmente registrada em certidão.",
+      "prova": [
+        "Contrafé deve mencionar dia e hora? Sim.",
+        "Recusa deve ser ocultada na certidão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Contrafé",
+          "significado": "Via fornecida ao citando com registro do ato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2a021c95-2427-5b55-9c32-aefdcdc10acf",
+        "content_sha256": "418eb091a5bdb36141bba4828055739bef875348114b511b63ccdfbf892c6149",
+        "simples": "São requisitos da citação por mandado a leitura do mandado ao citando pelo oficial e a entrega da contrafé, na qual se mencionarão dia e hora da citação; e a declaração do oficial, na certidão, da entrega da contrafé e sua aceitação ou recusa.",
+        "pontos": [
+          "Leitura do mandado ao citando e entrega da contrafé, com dia e hora.",
+          "Certidão do oficial sobre a entrega da contrafé e sua aceitação ou recusa."
+        ],
+        "atencao": [
+          "Contrafé é a cópia do mandado entregue ao citando."
+        ],
+        "exemplo": "O oficial lê o mandado, entrega a contrafé e certifica a aceitação.",
+        "prova": [
+          "Assertiva que dispensa a certidão do oficial quanto à entrega da contrafé erra."
+        ],
+        "termos": [
+          {
+            "termo": "Contrafé",
+            "significado": "Cópia do mandado entregue ao citando."
+          }
+        ],
+        "remissoes": [
+          "Art. 352"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-358",
+      "unit_id": "ab984d5e-886e-54a8-bdf5-7070f9dda783",
+      "content_sha256": "b9fb2cf94279dfc1ab064d178854eda13f6ba4c4bc82b51af06ceb80d4795480",
+      "simples": "Citação militar ocorre por intermédio do chefe do serviço, com garantia de ciência regular do acusado.",
+      "pontos": [
+        "Canal funcional específico.",
+        "Não dispensa chamamento individual para defesa."
+      ],
+      "atencao": [
+        "Comunicar chefe não significa permitir condenar militar sem citação regular ou defesa."
+      ],
+      "exemplo": "Diligência chega por chefe do serviço conforme regra. Variação: Rotina militar não elimina direitos de resposta e assistência técnica.",
+      "prova": [
+        "Há intermédio do chefe do serviço? Sim.",
+        "Isso elimina direito de defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Citação do militar",
+          "significado": "Comunicação pelo canal funcional previsto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ab984d5e-886e-54a8-bdf5-7070f9dda783",
+        "content_sha256": "b9fb2cf94279dfc1ab064d178854eda13f6ba4c4bc82b51af06ceb80d4795480",
+        "simples": "A citação do militar far-se-á por intermédio do chefe do respectivo serviço.",
+        "pontos": [
+          "Citação do militar por intermédio do chefe do serviço."
+        ],
+        "atencao": [
+          "Rito próprio para o militar."
+        ],
+        "exemplo": "A citação do policial militar é feita por meio do comandante.",
+        "prova": [
+          "Assertiva que cita o militar diretamente, sem o chefe do serviço, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 359"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-359",
+      "unit_id": "1bcd33b4-74a8-5ec0-9b83-4f0874ada29a",
+      "content_sha256": "c29e5ed9749375591af80ad6c081b1f05562cffcdd65e822dea57d48200ad8cf",
+      "simples": "Data para servidor acusado comparecer é notificada a ele e ao chefe da repartição.",
+      "pontos": [
+        "Dupla comunicação funcional.",
+        "Finalidade de viabilizar comparecimento sem confundir chefe com réu."
+      ],
+      "atencao": [
+        "Avisar chefe não substitui notificar próprio acusado."
+      ],
+      "exemplo": "Servidor e chefia recebem informação da data. Variação: Não considerar cientificado acusado só porque chefe leu aviso informal.",
+      "prova": [
+        "Deve notificar servidor e chefe? Sim.",
+        "Chefe passa a ser acusado por receber aviso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Notificação funcional",
+          "significado": "Ciência pessoal e institucional do ato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1bcd33b4-74a8-5ec0-9b83-4f0874ada29a",
+        "content_sha256": "c29e5ed9749375591af80ad6c081b1f05562cffcdd65e822dea57d48200ad8cf",
+        "simples": "O dia designado para funcionário público comparecer em juízo, como acusado, será notificado assim a ele como ao chefe de sua repartição.",
+        "pontos": [
+          "Funcionário público acusado: notificação ao acusado e ao chefe da repartição."
+        ],
+        "atencao": [
+          "Dupla notificação."
+        ],
+        "exemplo": "O servidor e seu chefe são notificados do dia do comparecimento.",
+        "prova": [
+          "Assertiva que dispensa a notificação do chefe da repartição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 358"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-360",
+      "unit_id": "ad9d8e19-ce00-52ae-9b4d-3190a4928116",
+      "content_sha256": "0fb8f6081123bae8c42132f89ff8123183fed1e86cef45cf980742b0a0921482",
+      "simples": "Acusado preso deve ser citado pessoalmente.",
+      "pontos": [
+        "Prisão não dispensa ciência direta.",
+        "Conferir localização e pessoa efetivamente citada."
+      ],
+      "atencao": [
+        "Não usar edital apenas porque acusado está preso; integrar Súmula 351/STF quando cabível."
+      ],
+      "exemplo": "Oficial cita pessoalmente no estabelecimento onde réu está custodiado. Variação: Requisitar transporte não equivale automaticamente a citação documentada.",
+      "prova": [
+        "Réu preso é citado pessoalmente? Sim.",
+        "Prisão dispensa citação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ciência do preso",
+          "significado": "Chamamento pessoal mesmo em custódia."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ad9d8e19-ce00-52ae-9b4d-3190a4928116",
+        "content_sha256": "0fb8f6081123bae8c42132f89ff8123183fed1e86cef45cf980742b0a0921482",
+        "simples": "Se o réu estiver preso, será pessoalmente citado, não se admitindo, nesse caso, a citação por edital ou outra forma ficta.",
+        "pontos": [
+          "Réu preso: citação pessoal."
+        ],
+        "atencao": [
+          "Vedada a citação por edital do réu preso."
+        ],
+        "exemplo": "O réu preso é citado no estabelecimento prisional.",
+        "prova": [
+          "Assertiva que admite a citação por edital do réu preso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 361"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-361",
+      "unit_id": "9d0a50a9-2bd7-57d6-a4c5-10bbf0871ac9",
+      "content_sha256": "c589e752dd69c9b25e527d2e934039cfe49b5e78a22bae87b1f19697bb819664",
+      "simples": "Sem localização após diligências adequadas, edital tem prazo de quinze dias.",
+      "pontos": [
+        "Edital é citação ficta, não substituto conveniente de busca real.",
+        "Ocultação conhecida tem hora certa, não necessariamente edital."
+      ],
+      "atencao": [
+        "Não considerar esgotamento de diligências só por uma tentativa insuficiente no endereço."
+      ],
+      "exemplo": "Após medidas razoáveis sem localizar acusado, juiz determina edital de quinze dias. Variação: Se réu está localizado e se esconde, verificar art. 362.",
+      "prova": [
+        "Prazo previsto é quinze dias? Sim.",
+        "Edital é escolha livre sem tentar localizar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Citação por edital",
+          "significado": "Chamamento fictício após não localização adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9d0a50a9-2bd7-57d6-a4c5-10bbf0871ac9",
+        "content_sha256": "c589e752dd69c9b25e527d2e934039cfe49b5e78a22bae87b1f19697bb819664",
+        "simples": "Se o réu não for encontrado, será citado por edital, com o prazo de 15 dias.",
+        "pontos": [
+          "Réu não encontrado: citação por edital.",
+          "Prazo de 15 dias."
+        ],
+        "atencao": [
+          "Prazo de 15 dias."
+        ],
+        "exemplo": "O réu não é localizado, e o juiz determina a citação por edital.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo do edital de citação erra neste art. 361: são 15 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 363",
+          "Art. 365"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-362",
+      "unit_id": "c9ea2602-de2b-56b9-8f1e-a0351ed3c1c6",
+      "content_sha256": "4e2b4a49d6067401ffd5f17667f897d506b9e19ea020fecef45b97871f77fe16",
+      "simples": "Ocultação para evitar citação certificada permite hora certa, integrada aos arts. 252–254 do CPC atual.",
+      "pontos": [
+        "Remissão textual ao CPC/1973 é antiga: CPC/2015 substituiu disciplina.",
+        "Suspeita fundada de ocultação e formalidades de retorno, ciência e comunicação.",
+        "Completada hora certa, ausência exige defensor dativo."
+      ],
+      "atencao": [
+        "Não confundir com art. 366: hora certa não é edital sem defesa. Não treinar arts. 227–229 do CPC revogado como referência atual."
+      ],
+      "exemplo": "Oficial documenta ocultação e cumpre formalidades atuais da hora certa. Variação: Ausente após ato completo, assegurar defesa dativa, sem suspensão automática do edital.",
+      "prova": [
+        "A remissão numérica ao CPC antigo deve ser atualizada? Sim.",
+        "Hora certa sem presença elimina defensor? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Hora certa",
+          "significado": "Citação por ocultação com formalidades e defesa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+      ],
+      "expected": {
+        "unit_id": "c9ea2602-de2b-56b9-8f1e-a0351ed3c1c6",
+        "content_sha256": "4e2b4a49d6067401ffd5f17667f897d506b9e19ea020fecef45b97871f77fe16",
+        "simples": "Verificando que o réu se oculta para não ser citado, o oficial de justiça certificará a ocorrência e procederá à citação com hora certa, na forma estabelecida no Código de Processo Civil. Completada a citação com hora certa, se o acusado não comparecer, ser-lhe-á nomeado defensor dativo.",
+        "pontos": [
+          "Réu que se oculta: oficial certifica e cita com hora certa.",
+          "Se o acusado não comparecer, defensor dativo."
+        ],
+        "atencao": [
+          "Citação ficta com hora certa."
+        ],
+        "exemplo": "O oficial constata a ocultação do réu e o cita com hora certa.",
+        "prova": [
+          "Assertiva que determina a citação por edital quando o réu se oculta erra: é com hora certa."
+        ],
+        "termos": [
+          {
+            "termo": "Citação com hora certa",
+            "significado": "Citação ficta feita quando o réu se oculta."
+          }
+        ],
+        "remissoes": [
+          "Art. 355"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-363",
+      "unit_id": "3d38e441-8242-5784-baec-fa92dea3a587",
+      "content_sha256": "5582607eed779cfac018b2439f846ec5b1b39e856b1a8185b5f65ced67644784",
+      "simples": "Formação processual se completa com citação; edital e comparecimento posterior seguem as regras legais.",
+      "pontos": [
+        "Não localizado: edital.",
+        "Ao comparecer citado por edital, aplicar arts. 394 e seguintes.",
+        "Incisos revogados e parágrafos vetados não são comandos atuais."
+      ],
+      "atencao": [
+        "Não tratar citação como condenação nem restaurar conteúdo vetado."
+      ],
+      "exemplo": "Acusado é citado e passa a exercer defesa no procedimento. Variação: Comparecimento após edital ativa procedimento pertinente, respeitando atos válidos e garantias.",
+      "prova": [
+        "Citação completa formação na regra? Sim.",
+        "Parágrafo vetado pode ser exigido como obrigação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Formação da relação processual",
+          "significado": "Chamamento que integra acusado ao processo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3d38e441-8242-5784-baec-fa92dea3a587",
+        "content_sha256": "5582607eed779cfac018b2439f846ec5b1b39e856b1a8185b5f65ced67644784",
+        "simples": "O processo terá completada a sua formação quando realizada a citação do acusado. Não sendo encontrado o acusado, será procedida a citação por edital. Comparecendo o acusado citado por edital, em qualquer tempo, o processo observará o disposto nos arts. 394 e seguintes. Os incisos I e II foram revogados.",
+        "pontos": [
+          "A formação do processo se completa com a citação.",
+          "Não encontrado: citação por edital.",
+          "Comparecimento do citado por edital: segue o rito dos arts. 394 e seguintes."
+        ],
+        "atencao": [
+          "Citação válida completa a relação processual."
+        ],
+        "exemplo": "Citado por edital, o acusado comparece depois e o processo segue.",
+        "prova": [
+          "Assertiva que considera completa a relação processual antes da citação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 361",
+          "Art. 394"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-364",
+      "unit_id": "dc639910-8185-5ec7-b64b-600929d94022",
+      "content_sha256": "19f338fb697a51c7541a5e98754d8c7d32dfce0dc77ca8cd397bbcb51d9b9bcc",
+      "simples": "Artigo conserva prazos ligados a incisos do art. 363 que foram revogados; não constitui regra atual geral de edital.",
+      "pontos": [
+        "Remissão antiga a inciso I: quinze a noventa; II: trinta.",
+        "Art. 361 atual fixa quinze dias para hipótese própria.",
+        "Distinguir corpo histórico de regra operacional vigente."
+      ],
+      "atencao": [
+        "Não ensinar trinta ou até noventa como alternativas universais atuais por este artigo."
+      ],
+      "exemplo": "Aluno encontra redação residual e usa art. 361 na hipótese atual de não localização. Variação: Questão que invoca antigo inciso precisa ser tratada como histórica, não treino automático vigente.",
+      "prova": [
+        "Incisos antigos do 363 continuam ativos? Não.",
+        "Este residual substitui prazo atual do 361? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Remissão residual",
+          "significado": "Texto dependente de dispositivos revogados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dc639910-8185-5ec7-b64b-600929d94022",
+        "content_sha256": "19f338fb697a51c7541a5e98754d8c7d32dfce0dc77ca8cd397bbcb51d9b9bcc",
+        "simples": "No caso do artigo anterior, no inciso I, o prazo será fixado pelo juiz entre 15 e 90 dias, de acordo com as circunstâncias, e, no caso do inciso II, o prazo será de trinta dias.",
+        "pontos": [
+          "Prazo do edital fixado pelo juiz entre 15 e 90 dias (inciso I).",
+          "Trinta dias (inciso II)."
+        ],
+        "atencao": [
+          "Dispositivo ligado a incisos revogados do art. 363; leitura histórica."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que aplica hoje o art. 364 sem considerar a revogação dos incisos do art. 363 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 363"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-365",
+      "unit_id": "143bff16-f618-524b-939c-8a97dd01c401",
+      "content_sha256": "339df27bed1df229103260e7e6d7c41e25115a517659afc6c35d2f7a31d3d245",
+      "simples": "Edital identifica órgão, acusado, finalidade, ato e prazo, com publicação/afixação e comprovação.",
+      "pontos": [
+        "Prazo começa da publicação na imprensa, se houver, ou afixação na hipótese.",
+        "Dados conhecidos de residência/profissão e sinais se nome desconhecido.",
+        "Formalidades e prova da publicação; integrar meios oficiais atuais aplicáveis."
+      ],
+      "atencao": [
+        "Não contar prazo de elaboração interna sem marco de publicidade pertinente."
+      ],
+      "exemplo": "Edital é publicado e certificado com data para contagem. Variação: Publicação não certificada exige verificar regularidade, sem pressupor ciência real.",
+      "prova": [
+        "Prazo começa só pela assinatura interna? Não.",
+        "Publicação/afixação devem ser comprovadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Publicidade do edital",
+          "significado": "Divulgação formal que inicia prazo pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "143bff16-f618-524b-939c-8a97dd01c401",
+        "content_sha256": "339df27bed1df229103260e7e6d7c41e25115a517659afc6c35d2f7a31d3d245",
+        "simples": "O edital de citação indicará o nome do juiz que a determinar; o nome do réu ou seus sinais característicos, residência e profissão, se constarem do processo; o fim para que é feita a citação; o juízo, o dia, a hora e o lugar em que o réu deverá comparecer; e o prazo, que será contado do dia da publicação na imprensa, se houver, ou da afixação. O edital será afixado à porta do edifício onde funcionar o juízo e publicado pela imprensa, onde houver, devendo a afixação ser certificada pelo oficial e a publicação provada por exemplar do jornal ou certidão do escrivão.",
+        "pontos": [
+          "Nome do juiz.",
+          "Nome ou sinais, residência e profissão do réu.",
+          "Finalidade da citação.",
+          "Juízo, dia, hora e lugar.",
+          "Prazo contado da publicação ou afixação.",
+          "Afixação certificada e publicação provada."
+        ],
+        "atencao": [
+          "Prazo conta da publicação na imprensa ou da afixação."
+        ],
+        "exemplo": "O edital é afixado à porta do fórum e publicado no jornal.",
+        "prova": [
+          "Assertiva que dispensa a afixação do edital à porta do fórum erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 361"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-366",
+      "unit_id": "380f0aa2-af96-5aff-a6d1-c70b40b336b3",
+      "content_sha256": "3546be61cd2961917341b29c76631cb97f11aefa5833f104c7d4a3a92ea24520",
+      "simples": "Citado por edital que não comparece nem constitui advogado tem processo e prescrição suspensos, com controles específicos.",
+      "pontos": [
+        "Condições cumulativas de ausência e falta de advogado.",
+        "Urgência probatória concretamente fundamentada; Súmula 455/STJ afasta mero tempo como razão única.",
+        "Suspensão prescricional limitada pelo prazo correspondente ao máximo cominado, conforme Súmula 415 e Tema 438/STF; processo pode continuar suspenso.",
+        "Preventiva depende requisitos, provocação e risco: edital não a torna automática.",
+        "Antecipação preserva defesa técnica; peculiaridades reais de testemunhas podem ser analisadas, sem regra universal por profissão."
+      ],
+      "atencao": [
+        "Não declarar crime imprescritível pela suspensão nem reiniciar processo automaticamente só porque prescrição voltou a correr."
+      ],
+      "exemplo": "Sem réu e sem advogado após edital, processo é suspenso e urgência de prova realmente perecível é apreciada. Variação: Passar tempo isoladamente não fundamenta toda antecipação nem autoriza prender para obrigar comparecimento.",
+      "prova": [
+        "A suspensão torna todo crime imprescritível? Não.",
+        "Tempo isolado basta para prova antecipada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão por edital",
+          "significado": "Pausa com limites e medidas cautelares fundamentadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/SCON/sumstj/toc.jsp?sumula=455.num.",
+        "https://noticias.stf.jus.br/postsnoticias/prescricao-em-processo-suspenso-deve-ser-limitada-a-pena-maxima-prevista-para-o-crime/"
+      ],
+      "expected": {
+        "unit_id": "380f0aa2-af96-5aff-a6d1-c70b40b336b3",
+        "content_sha256": "3546be61cd2961917341b29c76631cb97f11aefa5833f104c7d4a3a92ea24520",
+        "simples": "Se o acusado, citado por edital, não comparecer, nem constituir advogado, ficarão suspensos o processo e o curso do prazo prescricional, podendo o juiz determinar a produção antecipada das provas consideradas urgentes e, se for o caso, decretar prisão preventiva, nos termos do art. 312.",
+        "pontos": [
+          "Citado por edital, sem comparecer nem constituir advogado: suspensão do processo e da prescrição.",
+          "Possível produção antecipada de provas urgentes.",
+          "Possível prisão preventiva, nos termos do art. 312."
+        ],
+        "atencao": [
+          "Suspensão do processo E da prescrição.",
+          "Súmula 415 do STJ: o período de suspensão da prescrição é regulado pelo máximo da pena cominada."
+        ],
+        "exemplo": "Réu citado por edital não comparece: o processo e a prescrição ficam suspensos.",
+        "prova": [
+          "Assertiva que suspende apenas o processo, sem suspender a prescrição, no art. 366 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 361",
+          "Art. 367"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-367",
+      "unit_id": "8915c856-2245-5c2a-b914-fa939e846ed6",
+      "content_sha256": "12f33be1404b7ac24c9131901e79823c48ef588aaa4cf7d30e5e8ae257425d7d",
+      "simples": "Após citação ou intimação pessoal, falta injustificada ou mudança sem aviso pode permitir prosseguimento sem presença física, mantendo defensor.",
+      "pontos": [
+        "Ausência pessoal não elimina defesa técnica.",
+        "Justificativa deve ser examinada.",
+        "Não importar confissão ficta civil para condenação penal."
+      ],
+      "atencao": [
+        "Revelia penal não presume verdade da acusação nem dispensa prova."
+      ],
+      "exemplo": "Réu pessoalmente intimado falta sem motivo e ato prossegue com defensor. Variação: Doença comprovada demanda análise, não revelia automática.",
+      "prova": [
+        "Ausência torna acusação verdadeira automaticamente? Não.",
+        "Defensor continua necessário? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prosseguimento sem presença",
+          "significado": "Continuidade com defesa e prova, sem culpa presumida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8915c856-2245-5c2a-b914-fa939e846ed6",
+        "content_sha256": "12f33be1404b7ac24c9131901e79823c48ef588aaa4cf7d30e5e8ae257425d7d",
+        "simples": "O processo seguirá sem a presença do acusado que, citado ou intimado pessoalmente para qualquer ato, deixar de comparecer sem motivo justificado, ou, no caso de mudança de residência, não comunicar o novo endereço ao juízo.",
+        "pontos": [
+          "Acusado citado ou intimado pessoalmente que falta sem justificativa: o processo segue sem ele.",
+          "Mudança de endereço não comunicada: mesmo efeito."
+        ],
+        "atencao": [
+          "Revelia: citação pessoal + ausência injustificada."
+        ],
+        "exemplo": "Réu citado pessoalmente não comparece e o processo prossegue sem ele.",
+        "prova": [
+          "Assertiva que suspende o processo na revelia do réu citado pessoalmente erra: o processo segue."
+        ],
+        "termos": [
+          {
+            "termo": "Revelia",
+            "significado": "Ausência injustificada do acusado citado pessoalmente."
+          }
+        ],
+        "remissoes": [
+          "Art. 366"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-368",
+      "unit_id": "b0c637ea-3402-57c2-b721-8b26efcfb18a",
+      "content_sha256": "aa12251a2b3a9d0d1d58286a9583795321aea0ca45ff2402a9c5696150b18256",
+      "simples": "Acusado em lugar conhecido no exterior é citado por rogatória, com prescrição suspensa até cumprimento.",
+      "pontos": [
+        "Local sabido diferencia do edital.",
+        "Cooperação internacional nos instrumentos aplicáveis."
+      ],
+      "atencao": [
+        "Não confundir suspensão até cumprir carta com limite específico do art. 366 por edital."
+      ],
+      "exemplo": "Endereço no exterior conhecido é encaminhado por carta rogatória. Variação: Residência estrangeira conhecida não torna acusado não localizado por mera distância.",
+      "prova": [
+        "Lugar conhecido no exterior segue rogatória? Sim.",
+        "A regra é a mesma suspensão por edital? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Citação internacional",
+          "significado": "Cooperação para chamamento no exterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b0c637ea-3402-57c2-b721-8b26efcfb18a",
+        "content_sha256": "aa12251a2b3a9d0d1d58286a9583795321aea0ca45ff2402a9c5696150b18256",
+        "simples": "Estando o acusado no estrangeiro, em lugar sabido, será citado mediante carta rogatória, suspendendo-se o curso do prazo de prescrição até o seu cumprimento.",
+        "pontos": [
+          "Acusado no exterior em lugar sabido: citação por carta rogatória.",
+          "Suspensão do prazo prescricional até o cumprimento."
+        ],
+        "atencao": [
+          "Suspende a prescrição."
+        ],
+        "exemplo": "Réu residente em outro país é citado por carta rogatória.",
+        "prova": [
+          "Assertiva que cita por edital o acusado no exterior em lugar sabido erra: é por carta rogatória."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 369"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-369",
+      "unit_id": "76a2618f-c66a-557e-a66c-bb76135a629a",
+      "content_sha256": "4faa7345712dc3b68d96bbc102517fab3728a416b1a56accbe7abb839022932e",
+      "simples": "Citação em legações estrangeiras ocorre por carta rogatória nas condições legais.",
+      "pontos": [
+        "Proteção e cooperação diplomática pertinentes.",
+        "Não tratar espaço diplomático como destino de mandado doméstico irrestrito."
+      ],
+      "atencao": [
+        "Regra não elimina imunidades eventualmente aplicáveis nem competência internacional."
+      ],
+      "exemplo": "Diligência em legação segue cooperação legal adequada. Variação: Não concluir que rogatória permite qualquer ingresso forçado.",
+      "prova": [
+        "O meio indicado é rogatória? Sim.",
+        "Ela afasta automaticamente imunidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cooperação diplomática",
+          "significado": "Via formal para diligência em legação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "76a2618f-c66a-557e-a66c-bb76135a629a",
+        "content_sha256": "4faa7345712dc3b68d96bbc102517fab3728a416b1a56accbe7abb839022932e",
+        "simples": "As citações que houverem de ser feitas em legações estrangeiras serão efetuadas mediante carta rogatória.",
+        "pontos": [
+          "Citação em legação estrangeira: carta rogatória."
+        ],
+        "atencao": [
+          "Legações estrangeiras (embaixadas)."
+        ],
+        "exemplo": "A citação de pessoa em embaixada estrangeira segue por carta rogatória.",
+        "prova": [
+          "Assertiva que cita em legação estrangeira por mandado comum erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 368"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-370",
+      "unit_id": "9d6ec7a1-722b-5729-bf9c-97895d957758",
+      "content_sha256": "89e3b70d7b828c883cc251360b1239593bd8b1aad12d89fe7d6f28d35b7dc61c",
+      "simples": "Intimações seguem regras de citação no que compatível, com distinção entre advogado constituído e nomeado.",
+      "pontos": [
+        "Constituído, querelante e assistente: publicação incluindo nome do acusado.",
+        "Sem órgão de publicação: meios previstos/idôneos; ciência pessoal do escrivão dispensa publicação.",
+        "MP e defensor nomeado: intimação pessoal.",
+        "Integrar processo eletrônico e prerrogativas legais atuais sem abolir garantias."
+      ],
+      "atencao": [
+        "Não trocar intimar dativo pessoalmente por publicação comum de advogado constituído."
+      ],
+      "exemplo": "Defensor nomeado recebe intimação pessoal e constituído pelo regime pertinente. Variação: Publicação sem nome do acusado exige examinar a nulidade prevista, sem fingir requisito cumprido.",
+      "prova": [
+        "Defensor nomeado recebe pessoalmente? Sim.",
+        "Toda intimação exige o mesmo meio? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Intimação diferenciada",
+          "significado": "Ciência conforme sujeito e regime aplicável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9d6ec7a1-722b-5729-bf9c-97895d957758",
+        "content_sha256": "89e3b70d7b828c883cc251360b1239593bd8b1aad12d89fe7d6f28d35b7dc61c",
+        "simples": "Nas intimações dos acusados, das testemunhas e demais pessoas que devam tomar conhecimento de qualquer ato, será observado, no que for aplicável, o disposto sobre a citação. A intimação do defensor constituído, do advogado do querelante e do assistente far-se-á por publicação no órgão incumbido da publicidade dos atos judiciais, incluindo, sob pena de nulidade, o nome do acusado. Não havendo órgão de publicação, a intimação far-se-á pelo escrivão, por mandado, via postal com comprovante ou outro meio idôneo. A intimação pessoal pelo escrivão dispensa a publicação. A intimação do Ministério Público e do defensor nomeado será pessoal.",
+        "pontos": [
+          "Intimações seguem, no que couber, as regras da citação.",
+          "Defensor constituído, advogado do querelante e assistente: publicação com o nome do acusado, sob pena de nulidade.",
+          "Sem órgão de publicação: escrivão, por mandado, correio ou outro meio idôneo.",
+          "MP e defensor nomeado: intimação pessoal."
+        ],
+        "atencao": [
+          "Intimação PESSOAL do MP e do defensor nomeado (dativo/público)."
+        ],
+        "exemplo": "O defensor público é intimado pessoalmente; o advogado constituído, por publicação com o nome do acusado.",
+        "prova": [
+          "Assertiva que admite a intimação por publicação do defensor nomeado erra: deve ser pessoal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 351"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-371",
+      "unit_id": "50b82802-e2d6-5e28-977e-cc743b1bd46e",
+      "content_sha256": "cad11c447caf724085fd96f7a420c8d971c97f74e2556ace0fabca2de52e1545",
+      "simples": "Intimação pode ocorrer por despacho na petição em que requerida, observadas formalidades do art. 357.",
+      "pontos": [
+        "Forma admitida com ciência e registro pertinentes.",
+        "Não equivale a despacho interno jamais comunicado."
+      ],
+      "atencao": [
+        "Escrever decisão nos autos não comprova automaticamente intimação válida por essa via."
+      ],
+      "exemplo": "Despacho na petição viabiliza ciência documentada com requisitos. Variação: Sem ciência formal pertinente, não presumir prazo iniciado só pelo despacho.",
+      "prova": [
+        "Há remissão ao art. 357? Sim.",
+        "Despacho não comunicado prova sozinho intimação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ciência por despacho",
+          "significado": "Forma de intimação com requisitos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "50b82802-e2d6-5e28-977e-cc743b1bd46e",
+        "content_sha256": "cad11c447caf724085fd96f7a420c8d971c97f74e2556ace0fabca2de52e1545",
+        "simples": "Será admissível a intimação por despacho na petição em que for requerida, observado o disposto no art. 357.",
+        "pontos": [
+          "Intimação por despacho na própria petição que a requer, observado o art. 357."
+        ],
+        "atencao": [
+          "Observar as formalidades do art. 357."
+        ],
+        "exemplo": "O juiz despacha na petição e determina a intimação do interessado.",
+        "prova": [
+          "Assertiva que veda a intimação por despacho na petição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 357"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-372",
+      "unit_id": "e7d0f87b-cb23-5dcf-a5cc-70cf0d27fa48",
+      "content_sha256": "a4a5be97764e902fddb8f34da90a16f16589f0b6403419c8a81fae4b7da303a5",
+      "simples": "Adiada instrução, juiz fixa desde logo dia e hora de continuação na presença das partes e testemunhas, lavrando termo.",
+      "pontos": [
+        "Registro da nova data e horário.",
+        "Ciência dos presentes; ausentes exigem regime aplicável.",
+        "Adiamento não elimina defesa ou necessidade de regular comunicação."
+      ],
+      "atencao": [
+        "Não presumir que pessoa ausente ouviu data fixada em audiência."
+      ],
+      "exemplo": "Ao adiar ato, juiz anuncia e documenta continuação aos presentes. Variação: Parte ausente demanda verificar sua intimação, não ciência presumida pelo anúncio.",
+      "prova": [
+        "Nova data deve constar de termo? Sim.",
+        "Ausente é automaticamente cientificado pelo anúncio? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Continuação da instrução",
+          "significado": "Agendamento e registro do ato adiado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e7d0f87b-cb23-5dcf-a5cc-70cf0d27fa48",
+        "content_sha256": "a4a5be97764e902fddb8f34da90a16f16589f0b6403419c8a81fae4b7da303a5",
+        "simples": "Adiada, por qualquer motivo, a instrução criminal, o juiz marcará desde logo, na presença das partes e testemunhas, dia e hora para seu prosseguimento, do que se lavrará termo nos autos.",
+        "pontos": [
+          "Instrução adiada: o juiz marca desde logo novo dia e hora.",
+          "Presença das partes e testemunhas.",
+          "Termo nos autos."
+        ],
+        "atencao": [
+          "Evita nova intimação: todos saem intimados."
+        ],
+        "exemplo": "A audiência é adiada, e o juiz já marca nova data na presença de todos.",
+        "prova": [
+          "Assertiva que exige nova intimação das partes após o adiamento marcado na presença delas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 370"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    }
+  ]
+}
