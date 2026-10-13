@@ -13,6 +13,47 @@ import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
 
+test('CPP: falsidade incidental não condena e saúde mental não impõe internação automática',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-document-health-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,10);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(145).pontos.join(' '),/48 horas.*três dias sucessivos/s);
+ assert.match(get(148).simples,/não produz coisa julgada.*posterior/);
+ assert.match(get(150).simples,/45 dias.*necessidade demonstrada/);
+ assert.match(get(151).atencao.join(' '),/CP 22 atual trata de coação.*Não impor medida automaticamente/s);
+ assert.match(get(152).pontos.join(' '),/reinquirição/);
+ assert.match(get(154).pontos.join(' '),/183.*Defensoria/);
+ for(const n of [150,151,152,154])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: garantias distinguem origem ilícita, reparação e preservação de valor',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-assets-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,30);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(118).atencao.join(' '),/não ensinar.*só termina depois/si);
+ assert.match(get(120).pontos.join(' '),/cinco dias sucessivos.*dois dias/);
+ assert.match(get(131).atencao.join(' '),/Nem levantamento mecânico.*nem retenção indefinida/);
+ assert.match(get(134).pontos.join(' '),/Não exige origem ilícita/);
+ assert.match(get('133-a').simples,/transferência definitiva depende de condenação/);
+ assert.match(get('144-a').pontos.join(' '),/dez dias.*80%/);
+ for(const n of [119,121,124,127,130,131,142])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: incidentes não eliminam preclusão nem atualizam moeda histórica por suposição',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-incidents-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,26);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(92).simples,/estado civil.*suspensão.*definitiva/);
+ assert.match(get(93).pontos.join(' '),/retoma-se.*toda a matéria/);
+ assert.match(get(101).atencao.join(' '),/Rejeição simples não prova malícia.*não pode virar multa/);
+ assert.match(get(109).simples,/não reabre.*territorial.*preclusa/);
+ assert.match(get(117).pontos.join(' '),/102.*reclamação.*Não apresentar avocatória/s);
+ for(const n of [101,103,107,108,109,117])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
 test('CPP competência: Constituição, foro 2026 e ressalva do Júri não se confundem com referências antigas',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-civil-jurisdiction-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,29);

@@ -1,0 +1,1622 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T01:32:50.506017+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 26,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-92",
+        "art-93",
+        "art-94",
+        "art-95",
+        "art-96",
+        "art-97",
+        "art-98",
+        "art-99",
+        "art-100",
+        "art-101",
+        "art-102",
+        "art-103",
+        "art-104",
+        "art-105",
+        "art-106",
+        "art-107",
+        "art-108",
+        "art-109",
+        "art-110",
+        "art-111",
+        "art-112",
+        "art-113",
+        "art-114",
+        "art-115",
+        "art-116",
+        "art-117"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-92",
+      "unit_id": "2ed4bd45-4c6d-5b3f-8fee-e844b32f66ca",
+      "content_sha256": "d31ef2b752beb62a6540784f5ca90eb91447b6c4a556b29892922d1016789264",
+      "simples": "Questão séria e fundada sobre estado civil, indispensável à existência da infração, impõe suspensão da ação penal até decisão civil definitiva.",
+      "pontos": [
+        "A dependência deve atingir a existência do crime, não mera conveniência.",
+        "Testemunhas e outras provas urgentes podem ser colhidas durante a suspensão.",
+        "Em ação pública, MP promove ou prossegue a causa civil quando necessário, citados os interessados."
+      ],
+      "atencao": [
+        "Estado civil gera suspensão obrigatória apenas quando presentes os requisitos. Não esperar o trânsito civil para preservar prova urgente."
+      ],
+      "exemplo": "Em acusação de bigamia, a existência do primeiro casamento depende de controvérsia civil séria: suspende-se a ação penal até solução civil definitiva. Variação: Se a controvérsia alegada é manifestamente infundada, não basta invocar casamento para suspender automaticamente.",
+      "prova": [
+        "A suspensão impede colher prova urgente? Não.",
+        "Basta qualquer alegação sobre estado civil? Não; deve ser séria, fundada e prejudicial à existência da infração."
+      ],
+      "termos": [
+        {
+          "termo": "Prejudicial obrigatória",
+          "significado": "Questão antecedente cuja solução civil condiciona a definição penal nos requisitos do art. 92."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2ed4bd45-4c6d-5b3f-8fee-e844b32f66ca",
+        "content_sha256": "d31ef2b752beb62a6540784f5ca90eb91447b6c4a556b29892922d1016789264",
+        "simples": "Se a decisão sobre a existência da infração depender da solução de controvérsia, que o juiz repute séria e fundada, sobre o estado civil das pessoas, o curso da ação penal ficará suspenso até que no juízo cível a controvérsia seja dirimida por sentença transitada em julgado, sem prejuízo da inquirição das testemunhas e de outras provas urgentes. Se for crime de ação pública, o Ministério Público, quando necessário, promoverá a ação civil ou prosseguirá na que tiver sido iniciada, com a citação dos interessados.",
+        "pontos": [
+          "Questão prejudicial obrigatória: estado civil das pessoas.",
+          "Suspensão da ação penal até a sentença cível transitar em julgado.",
+          "Provas urgentes e oitiva de testemunhas continuam.",
+          "MP promove a ação civil, se necessário."
+        ],
+        "atencao": [
+          "Prejudicial OBRIGATÓRIA: controvérsia séria e fundada sobre o estado civil."
+        ],
+        "exemplo": "Bigamia: validade do primeiro casamento é questão cível prejudicial.",
+        "prova": [
+          "Assertiva que torna facultativa a suspensão por questão de estado civil erra: é obrigatória, se séria e fundada."
+        ],
+        "termos": [
+          {
+            "termo": "Questão prejudicial",
+            "significado": "Questão de outro ramo que deve ser resolvida antes do mérito penal."
+          }
+        ],
+        "remissoes": [
+          "Art. 93",
+          "Art. 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-93",
+      "unit_id": "7e466aff-9792-5bd7-9672-490270be8088",
+      "content_sha256": "b040bf33c6538a7c2b800ee8190b719af3f763660dcc99a8d9d1bb302df2c7db",
+      "simples": "Outra questão civil pode justificar suspensão facultativa se já houver ação civil, a solução for difícil e não envolver direito com prova civil legalmente limitada.",
+      "pontos": [
+        "Colher testemunhas e outras provas urgentes antes da suspensão.",
+        "Juiz fixa prazo; prorrogação razoável se demora não imputável à parte.",
+        "Sem decisão civil ao fim do prazo, retoma-se o processo e resolve-se toda a matéria da acusação e defesa.",
+        "§2º não prevê recurso contra a negativa; em ação pública suspensa, MP intervém para acelerar a causa civil."
+      ],
+      "atencao": [
+        "Não transportar a espera obrigatória por trânsito do art. 92 para toda questão patrimonial. Ausência de recurso no §2º não é imunidade a qualquer controle excepcional."
+      ],
+      "exemplo": "Questão dominial difícil, já discutida em ação civil, condiciona existência da infração: juiz avalia suspender por prazo e preserva provas urgentes. Variação: Expirado prazo sem decisão civil, a ação criminal prossegue; não fica indefinidamente paralisada.",
+      "prova": [
+        "A suspensão deste artigo é obrigatória? Não.",
+        "Precisa existir ação no juízo cível? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prejudicial facultativa",
+          "significado": "Questão civil distinta de estado civil cuja espera depende da avaliação judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7e466aff-9792-5bd7-9672-490270be8088",
+        "content_sha256": "b040bf33c6538a7c2b800ee8190b719af3f763660dcc99a8d9d1bb302df2c7db",
+        "simples": "Se o reconhecimento da existência da infração penal depender de decisão sobre questão diversa da do artigo anterior, da competência do juízo cível, e se neste houver sido proposta ação para resolvê-la, o juiz criminal pode, desde que a questão seja de difícil solução e não verse sobre direito cuja prova a lei civil limite, suspender o curso do processo, após a inquirição das testemunhas e a realização das outras provas urgentes. O juiz marcará o prazo da suspensão, que poderá ser razoavelmente prorrogado se a demora não for imputável à parte; expirado o prazo sem decisão do juiz cível, o criminal prosseguirá e resolverá toda a matéria. Do despacho que denegar a suspensão não cabe recurso. Suspenso o processo, no crime de ação pública, o MP intervém na causa cível para promover-lhe o rápido andamento.",
+        "pontos": [
+          "Prejudicial FACULTATIVA: questão cível de difícil solução, com ação cível já proposta.",
+          "Suspensão após provas urgentes.",
+          "§1º: prazo marcado, prorrogável; esgotado, o juiz criminal resolve tudo.",
+          "§2º: sem recurso contra a denegação.",
+          "§3º: MP intervém na causa cível."
+        ],
+        "atencao": [
+          "Na prejudicial facultativa, a suspensão é discricionária e exige ação cível já proposta."
+        ],
+        "exemplo": "Discussão cível sobre a propriedade de um bem pode suspender o processo do crime de furto.",
+        "prova": [
+          "Assertiva que admite recurso contra o despacho que denega a suspensão erra: o §2º veda."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92",
+          "Art. 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-94",
+      "unit_id": "9bf2cae7-2d18-588b-b184-8a248ed3dc12",
+      "content_sha256": "85f353ed9ee11071148730ac3439c4136c4b621df40b0f23fa747656afa42354",
+      "simples": "Nos casos dos arts. 92 e 93, a suspensão pode ser decretada por iniciativa judicial ou a pedido das partes.",
+      "pontos": [
+        "A iniciativa não modifica os requisitos do artigo aplicável.",
+        "De ofício não significa suspensão arbitrária.",
+        "Separar quem provoca da natureza obrigatória ou facultativa."
+      ],
+      "atencao": [
+        "Pedido da parte não transforma suspensão facultativa em obrigatória."
+      ],
+      "exemplo": "Juiz identifica dependência séria de estado civil e suspende mesmo sem pedido. Variação: Parte pede espera por questão civil comum: o juiz verifica os requisitos do art. 93, sem aceitar automaticamente.",
+      "prova": [
+        "Só a defesa pode pedir suspensão? Não.",
+        "De ofício dispensa requisitos legais? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Iniciativa de ofício",
+          "significado": "Providência judicial sem requerimento, sujeita aos pressupostos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9bf2cae7-2d18-588b-b184-8a248ed3dc12",
+        "content_sha256": "85f353ed9ee11071148730ac3439c4136c4b621df40b0f23fa747656afa42354",
+        "simples": "A suspensão do curso da ação penal, nos casos dos artigos anteriores, será decretada pelo juiz, de ofício ou a requerimento das partes.",
+        "pontos": [
+          "Suspensão por questão prejudicial: decretada de ofício ou a requerimento."
+        ],
+        "atencao": [
+          "Vale para os arts. 92 e 93."
+        ],
+        "exemplo": "Juiz decreta de ofício a suspensão do processo por questão prejudicial.",
+        "prova": [
+          "Assertiva que exige requerimento das partes para suspender o processo por prejudicial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 92",
+          "Art. 93"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-95",
+      "unit_id": "90a90643-c6ae-5695-be1d-2c4a70c98f5b",
+      "content_sha256": "6d80a376a27f4e089b9e5c3e6561faf4d9f69cb3828af9db71497dac880dd7c9",
+      "simples": "Cinco exceções são enumeradas: suspeição, incompetência, litispendência, ilegitimidade de parte e coisa julgada.",
+      "pontos": [
+        "Suspeição discute imparcialidade; incompetência, atribuição do órgão.",
+        "Litispendência aponta processo pendente duplicado; coisa julgada aponta decisão definitiva sobre o fato principal.",
+        "Ilegitimidade questiona a posição processual da parte, não prova automaticamente inocência."
+      ],
+      "atencao": [
+        "Não confundir repetição de processo ainda pendente com fato definitivamente julgado."
+      ],
+      "exemplo": "Defesa encontra duas ações pendentes contra a mesma pessoa pelo mesmo fato e suscita litispendência. Variação: Se o fato principal já recebeu decisão definitiva pertinente, examina-se coisa julgada, não simples litispendência.",
+      "prova": [
+        "Suspeição e incompetência são a mesma objeção? Não.",
+        "Processo ainda pendente corresponde sempre a coisa julgada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção processual",
+          "significado": "Incidente para suscitar uma das objeções enumeradas, conforme seu rito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "90a90643-c6ae-5695-be1d-2c4a70c98f5b",
+        "content_sha256": "6d80a376a27f4e089b9e5c3e6561faf4d9f69cb3828af9db71497dac880dd7c9",
+        "simples": "Poderão ser opostas as exceções de suspeição, incompetência de juízo, litispendência, ilegitimidade de parte e coisa julgada.",
+        "pontos": [
+          "Suspeição.",
+          "Incompetência de juízo.",
+          "Litispendência.",
+          "Ilegitimidade de parte.",
+          "Coisa julgada."
+        ],
+        "atencao": [
+          "Exceções são defesas processuais indiretas; veja o rito nos artigos seguintes."
+        ],
+        "exemplo": "Réu processado duas vezes pelo mesmo fato opõe exceção de litispendência.",
+        "prova": [
+          "Assertiva que inclui a exceção de pré-executividade entre as do art. 95 erra."
+        ],
+        "termos": [
+          {
+            "termo": "Litispendência",
+            "significado": "Existência de duas ações idênticas em curso."
+          }
+        ],
+        "remissoes": [
+          "Art. 96",
+          "Art. 108"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-96",
+      "unit_id": "97d62c98-e29c-5c24-86bf-e63e983dc9c3",
+      "content_sha256": "9161023b600ee5eb5381a12720f75ea2e684aaba73f9112c351115844ecd8882",
+      "simples": "A suspeição deve ser arguida antes das outras exceções, ressalvado motivo surgido posteriormente.",
+      "pontos": [
+        "Precedência protege a imparcialidade antes das demais decisões.",
+        "Motivo superveniente permite arguição posterior.",
+        "Não confundir superveniência com escolha de guardar motivo já conhecido."
+      ],
+      "atencao": [
+        "A precedência não torna impossível suscitar suspeição surgida no curso posterior do processo."
+      ],
+      "exemplo": "Parte conhece motivo de suspeição e também incompetência: apresenta primeiro a suspeição. Variação: O motivo de suspeição aparece depois da exceção de incompetência: a ressalva permite argui-lo então.",
+      "prova": [
+        "Motivo superveniente permite arguição posterior? Sim.",
+        "Regra de precedência significa proibição absoluta depois de outro incidente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Superveniência",
+          "significado": "Surgimento posterior do motivo que fundamenta a objeção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "97d62c98-e29c-5c24-86bf-e63e983dc9c3",
+        "content_sha256": "9161023b600ee5eb5381a12720f75ea2e684aaba73f9112c351115844ecd8882",
+        "simples": "A arguição de suspeição precederá a qualquer outra, salvo quando fundada em motivo superveniente.",
+        "pontos": [
+          "A suspeição deve ser arguida antes de qualquer outra exceção.",
+          "Exceção: motivo superveniente."
+        ],
+        "atencao": [
+          "Antes de qualquer outra."
+        ],
+        "exemplo": "A defesa arguiu a suspeição do juiz antes de qualquer outra exceção.",
+        "prova": [
+          "Assertiva que permite arguir a suspeição por último, sem exceção, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 95",
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-97",
+      "unit_id": "6bed19ab-e119-508b-b740-716d621c80ba",
+      "content_sha256": "8d7bbf47f28146a191f03f9c7df21c0679d87012d4402595756cfe4e2db12d04",
+      "simples": "O juiz que reconhece espontaneamente suspeição declara por escrito o motivo legal, intima as partes e remete imediatamente ao substituto.",
+      "pontos": [
+        "Declaração escrita e motivo legal.",
+        "Remessa imediata ao substituto.",
+        "Partes devem ser intimadas."
+      ],
+      "atencao": [
+        "Não manter o processo com o juiz suspeito apenas porque ninguém pediu a recusa."
+      ],
+      "exemplo": "Magistrado reconhece motivo legal de suspeição, registra-o e envia o processo ao substituto, intimadas as partes. Variação: A ausência de requerimento não impede a declaração espontânea exigida pelo artigo.",
+      "prova": [
+        "A declaração é apenas verbal neste artigo? Não; escrita.",
+        "A remessa exige concordância das partes? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Declaração espontânea",
+          "significado": "Reconhecimento de suspeição pelo próprio juiz."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6bed19ab-e119-508b-b740-716d621c80ba",
+        "content_sha256": "8d7bbf47f28146a191f03f9c7df21c0679d87012d4402595756cfe4e2db12d04",
+        "simples": "O juiz que espontaneamente afirmar suspeição deverá fazê-lo por escrito, declarando o motivo legal, e remeterá imediatamente o processo ao seu substituto, intimadas as partes.",
+        "pontos": [
+          "Suspeição espontânea do juiz: por escrito.",
+          "Declara o motivo legal.",
+          "Remete o processo ao substituto e intima as partes."
+        ],
+        "atencao": [
+          "Cabe ao juiz afirmar espontaneamente."
+        ],
+        "exemplo": "Juiz declara-se suspeito por escrito e envia os autos ao substituto.",
+        "prova": [
+          "Assertiva que dispensa a forma escrita na suspeição espontânea erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-98",
+      "unit_id": "26e0917d-c750-5ea4-943d-4fcf1266ea2a",
+      "content_sha256": "3304c2e5ae1d6df431b952046fd26bdd93ee921ae4a62cc3d7be74874cb7fd70",
+      "simples": "A parte recusa o juiz por petição assinada pessoalmente ou por procurador com poderes especiais, com razões e documentos ou rol de testemunhas.",
+      "pontos": [
+        "Parte pode assinar diretamente.",
+        "Procurador precisa de poderes especiais.",
+        "Indicar fundamentos e suporte documental ou testemunhal."
+      ],
+      "atencao": [
+        "Não ensinar que procuração geral basta à recusa subscrita por procurador."
+      ],
+      "exemplo": "Advogado munido de poderes especiais apresenta fundamentos e rol de testemunhas da suspeição. Variação: A própria parte pode assinar a petição; a exigência de poderes especiais é dirigida ao procurador.",
+      "prova": [
+        "Procuração geral é a exigência do art. 98? Não; poderes especiais.",
+        "Só documentos podem acompanhar? Não; também rol de testemunhas."
+      ],
+      "termos": [
+        {
+          "termo": "Poderes especiais",
+          "significado": "Autorização específica do procurador para a recusa prevista no artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "26e0917d-c750-5ea4-943d-4fcf1266ea2a",
+        "content_sha256": "3304c2e5ae1d6df431b952046fd26bdd93ee921ae4a62cc3d7be74874cb7fd70",
+        "simples": "Quando qualquer das partes pretender recusar o juiz, deverá fazê-lo em petição assinada por ela própria ou por procurador com poderes especiais, aduzindo as suas razões acompanhadas de prova documental ou do rol de testemunhas.",
+        "pontos": [
+          "Recusa do juiz por petição assinada pela parte ou procurador com poderes especiais.",
+          "Razões acompanhadas de prova documental ou rol de testemunhas."
+        ],
+        "atencao": [
+          "Exige poderes ESPECIAIS do procurador."
+        ],
+        "exemplo": "A defesa, com procuração com poderes especiais, recusa o juiz por suspeição.",
+        "prova": [
+          "Assertiva que dispensa poderes especiais na recusa do juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-99",
+      "unit_id": "1277b5ef-6b16-5907-abc8-f9737b09d790",
+      "content_sha256": "2957177c598e1b958a181e7118612d20ce773f085e4b6bbed346d18bc49697f8",
+      "simples": "Se aceita a suspeição, o juiz susta o processo, junta petição e documentos, declara-se suspeito por despacho e remete ao substituto.",
+      "pontos": [
+        "Reconhecimento conduz à remessa, sem rito de resistência do art. 100.",
+        "Petição e documentos são juntados aos autos.",
+        "Marcha principal é sustada nessa hipótese."
+      ],
+      "atencao": [
+        "Autos apartados com resposta do juiz são próprios da recusa não aceita; não confundir os dois caminhos."
+      ],
+      "exemplo": "Juiz reconhece a suspeição arguida, interrompe a marcha e encaminha o processo ao substituto. Variação: Se discorda da recusa, passa-se ao art. 100 em vez de declarar-se suspeito por conveniência.",
+      "prova": [
+        "Reconhecimento mantém julgamento pelo recusado? Não.",
+        "Juntar os documentos é dispensável? Não; o artigo determina a juntada."
+      ],
+      "termos": [
+        {
+          "termo": "Recusa aceita",
+          "significado": "Reconhecimento judicial da suspeição suscitada pela parte."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1277b5ef-6b16-5907-abc8-f9737b09d790",
+        "content_sha256": "2957177c598e1b958a181e7118612d20ce773f085e4b6bbed346d18bc49697f8",
+        "simples": "Se reconhecer a suspeição, o juiz sustará a marcha do processo, mandará juntar aos autos a petição do recusante com os documentos que a instruam e, por despacho, declarar-se-á suspeito, ordenando a remessa dos autos ao substituto.",
+        "pontos": [
+          "Juiz reconhece a suspeição: suspende o processo.",
+          "Junta a petição do recusante.",
+          "Declara-se suspeito por despacho e remete ao substituto."
+        ],
+        "atencao": [
+          "Procedimento do reconhecimento da suspeição pelo próprio juiz."
+        ],
+        "exemplo": "Juiz aceita a recusa, sustando o processo e passando os autos ao substituto.",
+        "prova": [
+          "Assertiva que mantém a marcha do processo após o reconhecimento da suspeição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 100"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-100",
+      "unit_id": "30f2810a-8085-56c8-ba3b-5e30c46fdbe6",
+      "content_sha256": "1c1958ec933ce0482e8a213ef6125042299092cc915912c4f547e1af78886a3d",
+      "simples": "Se rejeita a suspeição, o juiz autua a petição em apartado, responde em três dias e remete o incidente em 24 horas ao órgão competente.",
+      "pontos": [
+        "Resposta pode vir com documentos e testemunhas.",
+        "Relevância preliminar leva à oitiva, citadas as partes, e julgamento sem mais alegações.",
+        "Manifesta improcedência permite rejeição liminar pelo juiz ou relator competente."
+      ],
+      "atencao": [
+        "Três dias correspondem à resposta; 24 horas à remessa subsequente. Não são o mesmo prazo."
+      ],
+      "exemplo": "Juiz contesta a recusa em três dias e encaminha o incidente em 24 horas ao órgão competente. Variação: A arguição manifestamente improcedente pode ser rejeitada liminarmente no exame próprio, sem instrução inútil.",
+      "prova": [
+        "O juiz responde em 24 horas? Não; em três dias.",
+        "Há rejeição liminar de manifesta improcedência? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Incidente apartado",
+          "significado": "Autuação separada para julgamento da objeção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "30f2810a-8085-56c8-ba3b-5e30c46fdbe6",
+        "content_sha256": "1c1958ec933ce0482e8a213ef6125042299092cc915912c4f547e1af78886a3d",
+        "simples": "Não aceitando a suspeição, o juiz mandará autuar em apartado a petição, dará sua resposta em três dias, podendo instruí-la e oferecer testemunhas, e determinará a remessa dos autos da exceção, em 24 horas, ao juiz ou tribunal competente para julgá-la. Reconhecida, preliminarmente, a relevância da arguição, o juiz ou tribunal, com citação das partes, marcará dia e hora para a inquirição das testemunhas, seguindo-se o julgamento, independentemente de mais alegações. Se a suspeição for de manifesta improcedência, o juiz ou relator a rejeitará liminarmente.",
+        "pontos": [
+          "Juiz não aceita a suspeição: autua em apartado.",
+          "Resposta em três dias.",
+          "Remessa em 24 horas ao órgão competente para julgar.",
+          "§1º: relevância reconhecida: oitiva de testemunhas e julgamento.",
+          "§2º: manifesta improcedência: rejeição liminar."
+        ],
+        "atencao": [
+          "Prazos: três dias para a resposta e 24 horas para a remessa."
+        ],
+        "exemplo": "Juiz recusa a suspeição, responde em três dias e remete a exceção ao tribunal.",
+        "prova": [
+          "Assertiva que fixa em cinco dias a resposta do juiz erra: são três dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 99",
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-101",
+      "unit_id": "a60f1c6a-54a5-52d3-a9db-b26078640643",
+      "content_sha256": "77004057717554a0f5742c39d0b434a61a2a6b6d56089681208ca593affcf00b",
+      "simples": "Suspeição procedente invalida os atos do processo principal nos termos do artigo; erro inescusável pode impor custas ao juiz. Rejeição maliciosa tem previsão sancionatória histórica.",
+      "pontos": [
+        "Distinguir procedência e rejeição com malícia.",
+        "Custas ao juiz exigem erro inescusável.",
+        "O texto conserva moeda histórica: mil-réis e contos de réis; não inventar valor atual em reais."
+      ],
+      "atencao": [
+        "Rejeição simples não prova malícia. A faixa monetária de 1941 não pode virar multa contemporânea calculada automaticamente sem base vigente."
+      ],
+      "exemplo": "Reconhecida a suspeição, examinam-se os atos do processo principal atingidos; custas ao juiz dependem de erro inescusável. Variação: Arguição é rejeitada de boa-fé: não se presume malícia para sancionar quem a formulou.",
+      "prova": [
+        "Toda rejeição pressupõe malícia? Não.",
+        "A moeda histórica equivale a valor atual em reais definido pelo artigo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Erro inescusável",
+          "significado": "Erro não justificável que condiciona a responsabilização por custas prevista no texto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a60f1c6a-54a5-52d3-a9db-b26078640643",
+        "content_sha256": "77004057717554a0f5742c39d0b434a61a2a6b6d56089681208ca593affcf00b",
+        "simples": "Julgada procedente a suspeição, ficam nulos os atos do processo principal, pagando o juiz as custas, no caso de erro inescusável. Rejeitada, evidenciando-se a malícia do excipiente, a este será imposta multa de duzentos mil-réis a dois contos de réis.",
+        "pontos": [
+          "Suspeição procedente: nulidade dos atos do processo principal.",
+          "Juiz paga as custas se houve erro inescusável.",
+          "Suspeição rejeitada com malícia do excipiente: multa."
+        ],
+        "atencao": [
+          "Os valores da multa constam em moeda antiga; interessa a lógica da sanção."
+        ],
+        "exemplo": "Suspeição reconhecida: os atos praticados pelo juiz suspeito no processo são anulados.",
+        "prova": [
+          "Assertiva que preserva todos os atos do processo principal após a suspeição reconhecida erra: eles ficam nulos."
+        ],
+        "termos": [
+          {
+            "termo": "Excipiente",
+            "significado": "Quem opõe a exceção."
+          }
+        ],
+        "remissoes": [
+          "Art. 100"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-102",
+      "unit_id": "522711d2-92bb-5cc5-a8cd-1db0c41d3265",
+      "content_sha256": "9c50491e98d3fdaedd91bb3943390e729d58979c1d454c85897915fe61f7a660",
+      "simples": "Reconhecida a procedência da arguição pela parte contrária, o processo principal pode ser sustado a seu requerimento até julgamento da suspeição.",
+      "pontos": [
+        "Exige reconhecimento da parte contrária e requerimento.",
+        "Poderá: suspensão não é automática.",
+        "Dura até julgamento do incidente."
+      ],
+      "atencao": [
+        "A concordância da parte contrária não substitui o julgamento da suspeição."
+      ],
+      "exemplo": "Acusação concorda com a recusa da defesa e requer paralisação: juiz avalia sustar o principal até o incidente ser decidido. Variação: Sem reconhecimento ou pedido nessa hipótese, não aplicar o art. 102 como suspensão automática.",
+      "prova": [
+        "Concordância dispensa julgamento do incidente? Não.",
+        "O verbo legal impõe suspensão automática? Não; poderá."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão incidental",
+          "significado": "Paralisação do principal nas condições expressas do art. 102."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "522711d2-92bb-5cc5-a8cd-1db0c41d3265",
+        "content_sha256": "9c50491e98d3fdaedd91bb3943390e729d58979c1d454c85897915fe61f7a660",
+        "simples": "Quando a parte contrária reconhecer a procedência da arguição, poderá ser sustado, a seu requerimento, o processo principal, até que se julgue o incidente da suspeição.",
+        "pontos": [
+          "Parte contrária reconhece a suspeição.",
+          "Processo principal pode ser sustado a requerimento até o julgamento do incidente."
+        ],
+        "atencao": [
+          "A suspensão depende de requerimento."
+        ],
+        "exemplo": "A acusação concorda com a suspeição do juiz e pede a suspensão do processo principal.",
+        "prova": [
+          "Assertiva que determina a suspensão automática do processo principal com o reconhecimento da parte contrária erra: depende de requerimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 100",
+          "Art. 101"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-103",
+      "unit_id": "3936b930-26f9-5873-a06d-8d3435c86d2c",
+      "content_sha256": "b9115860b7ab341ee717979b58f54497ff3a47a4c829160aeefbf6e288756559",
+      "simples": "A suspeição em tribunal exige substituição ou redistribuição conforme a função, registro nos autos ou ata e julgamento da arguição não reconhecida.",
+      "pontos": [
+        "Relator: nova distribuição; revisor: substituto na precedência.",
+        "Outro julgador declara verbalmente na sessão, com registro em ata; presidente é substituído para designar e presidir.",
+        "Texto prevê pleno e relatoria do presidente; recusado o presidente, vice relata. Integrar regimento e organização atuais.",
+        "Arguição da parte segue arts. 98–101 no que aplicável."
+      ],
+      "atencao": [
+        "Tribunais de Apelação é denominação histórica. Não presumir que toda corte atual mantém revisor ou idêntica organização sem seu regimento."
+      ],
+      "exemplo": "Relator reconhece suspeição e encaminha para nova distribuição, em vez de escolher pessoalmente seu sucessor. Variação: Se a suspeição atinge o presidente, ele não preside nem relata o julgamento de sua própria recusa nos moldes do artigo.",
+      "prova": [
+        "Relator suspeito continua com a causa? Não.",
+        "Todo tribunal contemporâneo necessariamente tem revisor? Não; integrar o regimento atual."
+      ],
+      "termos": [
+        {
+          "termo": "Substituição colegiada",
+          "significado": "Afastamento do integrante suspeito com observância das funções e normas do tribunal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "3936b930-26f9-5873-a06d-8d3435c86d2c",
+        "content_sha256": "b9115860b7ab341ee717979b58f54497ff3a47a4c829160aeefbf6e288756559",
+        "simples": "No Supremo Tribunal Federal e nos Tribunais de Apelação, o juiz que se julgar suspeito declarará nos autos e, se for revisor, passará o feito ao substituto na ordem de precedência, ou, se for relator, apresentará os autos em mesa para nova distribuição. O juiz que não for relator nem revisor declara a suspeição verbalmente na sessão, registrando-se em ata. Se o presidente do tribunal se der por suspeito, caberá ao substituto designar dia para o julgamento e presidi-lo. Quanto à arguição pela parte, observam-se os arts. 98 a 101. Não reconhecida, a suspeição será julgada pelo tribunal pleno, funcionando como relator o presidente. Se o recusado for o presidente, o relator será o vice-presidente.",
+        "pontos": [
+          "Suspeição de membro de tribunal: declaração nos autos.",
+          "Revisor: passa ao substituto; relator: nova distribuição.",
+          "Quem não é relator nem revisor declara verbalmente em ata.",
+          "Presidente suspeito: o substituto preside o julgamento.",
+          "Suspeição não reconhecida: tribunal pleno, relator o presidente.",
+          "Presidente recusado: relator o vice-presidente."
+        ],
+        "atencao": [
+          "Procedimento de suspeição nos tribunais."
+        ],
+        "exemplo": "Desembargador relator se declara suspeito e os autos são redistribuídos.",
+        "prova": [
+          "Assertiva que mantém a relatoria com o juiz suspeito erra: os autos são redistribuídos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 98",
+          "Art. 101"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-104",
+      "unit_id": "05d0d6b8-dd29-56d4-bed4-ae4203bae214",
+      "content_sha256": "98036ac8112739378ee9cb827835dddb955d12664b184ee660390dd79fc768d5",
+      "simples": "Suspeição do membro do MP é decidida pelo juiz depois de ouvi-lo; o artigo não prevê recurso e admite prova em três dias.",
+      "pontos": [
+        "Ouvir o órgão do MP antes da decisão.",
+        "Prova pode ser admitida previamente por três dias.",
+        "Não usar automaticamente o rito de remessa da suspeição do juiz."
+      ],
+      "atencao": [
+        "Sem recurso no texto não equivale a impedir todo controle excepcional constitucional de ilegalidade."
+      ],
+      "exemplo": "Parte suscita suspeição do membro do MP; juiz ouve-o e admite provas por três dias antes de decidir. Variação: Alegação desacompanhada de fundamento não torna o promotor suspeito automaticamente.",
+      "prova": [
+        "O MP precisa ser ouvido? Sim.",
+        "O artigo prevê três dias para provas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Suspeição do MP",
+          "significado": "Objeção de imparcialidade ao membro ministerial atuante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "05d0d6b8-dd29-56d4-bed4-ae4203bae214",
+        "content_sha256": "98036ac8112739378ee9cb827835dddb955d12664b184ee660390dd79fc768d5",
+        "simples": "Se for arguida a suspeição do órgão do Ministério Público, o juiz, depois de ouvi-lo, decidirá, sem recurso, podendo antes admitir a produção de provas no prazo de três dias.",
+        "pontos": [
+          "Suspeição do Ministério Público: o juiz ouve o MP e decide.",
+          "Decisão sem recurso.",
+          "Pode admitir provas em três dias."
+        ],
+        "atencao": [
+          "Prazo de provas: três dias."
+        ],
+        "exemplo": "A defesa argui a suspeição do promotor; o juiz o ouve e decide sem recurso.",
+        "prova": [
+          "Assertiva que admite recurso contra a decisão sobre suspeição do MP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-105",
+      "unit_id": "7f489ac4-a438-5d98-af33-2d6a0046b940",
+      "content_sha256": "e37c0f778f3d2e1f8e3f5d88b9a4740288fcffc645a778ec2a0937879c33eda7",
+      "simples": "Peritos, intérpretes e servidores podem ser recusados por suspeição; juiz decide de plano pela alegação e prova imediata, sem recurso previsto neste rito.",
+      "pontos": [
+        "Abrange peritos, intérpretes e serventuários ou funcionários de justiça.",
+        "Prova imediata e decisão de plano.",
+        "Não transportar automaticamente prazo de três dias do art. 104."
+      ],
+      "atencao": [
+        "Discordar da conclusão técnica não prova por si suspeição do perito."
+      ],
+      "exemplo": "Parte apresenta prova imediata de motivo legal de suspeição do intérprete; juiz decide de plano. Variação: Laudo desfavorável, sozinho, não justifica declarar o perito parcial.",
+      "prova": [
+        "Este artigo fixa três dias para provas? Não; prova imediata.",
+        "Perito também pode ser recusado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Decisão de plano",
+          "significado": "Decisão imediata com o suporte probatório exigido pelo rito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7f489ac4-a438-5d98-af33-2d6a0046b940",
+        "content_sha256": "e37c0f778f3d2e1f8e3f5d88b9a4740288fcffc645a778ec2a0937879c33eda7",
+        "simples": "As partes poderão também arguir de suspeitos os peritos, os intérpretes e os serventuários ou funcionários de justiça, decidindo o juiz de plano e sem recurso, à vista da matéria alegada e da prova imediata.",
+        "pontos": [
+          "Suspeição de peritos, intérpretes e serventuários.",
+          "Juiz decide de plano, sem recurso, com prova imediata."
+        ],
+        "atencao": [
+          "Decisão sem recurso."
+        ],
+        "exemplo": "A defesa argui a suspeição do perito, e o juiz decide de plano.",
+        "prova": [
+          "Assertiva que exige rito formal e recurso contra a decisão sobre suspeição do perito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 280"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-106",
+      "unit_id": "d538a995-0ef8-58c2-a411-f4caec99edbc",
+      "content_sha256": "a94fad75b473ed169f44d15ac0e5e7930030c5eec1964ab4581a9b1bb2e0f380",
+      "simples": "Suspeição de jurado é arguida oralmente e decidida de plano pelo presidente do Júri; negativa do recusado exige comprovação imediata para acolhimento.",
+      "pontos": [
+        "Arguição oral.",
+        "Presidente decide imediatamente.",
+        "Negativa sem prova imediata leva à rejeição; registrar tudo na ata."
+      ],
+      "atencao": [
+        "Não confundir suspeição fundamentada com recusa imotivada de jurado, que possui disciplina própria."
+      ],
+      "exemplo": "Defesa argui oralmente suspeição de jurado e apresenta prova imediata; presidente decide e registra na ata. Variação: Jurado nega o motivo e nenhuma prova imediata existe: a arguição é rejeitada nos termos do artigo.",
+      "prova": [
+        "Arguição precisa ser escrita? Não; oral.",
+        "O ocorrido deve constar da ata? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Recusa motivada de jurado",
+          "significado": "Objeção fundada em suspeição, distinta da recusa sem motivação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d538a995-0ef8-58c2-a411-f4caec99edbc",
+        "content_sha256": "a94fad75b473ed169f44d15ac0e5e7930030c5eec1964ab4581a9b1bb2e0f380",
+        "simples": "A suspeição dos jurados deverá ser arguida oralmente, decidindo de plano o presidente do Tribunal do Júri, que a rejeitará se, negada pelo recusado, não for imediatamente comprovada, o que tudo constará da ata.",
+        "pontos": [
+          "Suspeição de jurados é arguida oralmente.",
+          "Presidente do Júri decide de plano.",
+          "Rejeita se negada e não comprovada imediatamente.",
+          "Tudo consta da ata."
+        ],
+        "atencao": [
+          "Arguição oral e decisão imediata."
+        ],
+        "exemplo": "A defesa argui oralmente a suspeição de um jurado, e o presidente decide na hora.",
+        "prova": [
+          "Assertiva que exige petição escrita para arguir a suspeição de jurados erra: é oral."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 448"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-107",
+      "unit_id": "34601959-62aa-5775-9965-9d5c1d29d8f8",
+      "content_sha256": "b86260f5579a45ad44920607b0f447c7d261dcf85b06b2f92b857e19352ebb09",
+      "simples": "O CPP não prevê oposição formal da exceção de suspeição contra autoridade policial no inquérito, mas exige que ela se declare suspeita por motivo legal.",
+      "pontos": [
+        "Inaplicabilidade da exceção formal não elimina o dever de abstenção.",
+        "Não confundir polícia com juiz ou membro do MP.",
+        "Eventuais irregularidades continuam sujeitas aos controles próprios."
+      ],
+      "atencao": [
+        "Não ensinar que autoridade policial está dispensada de imparcialidade ou imune a controle de ilegalidade."
+      ],
+      "exemplo": "Delegado identifica motivo legal de suspeição na investigação e deve declará-lo. Variação: A vedação da exceção formal não autoriza atuação pessoalmente interessada sem controle institucional.",
+      "prova": [
+        "O delegado deve declarar suspeição legal? Sim.",
+        "A vedação formal torna lícita qualquer parcialidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Abstenção policial",
+          "significado": "Dever de declarar suspeição legal apesar da ausência do rito formal da exceção."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "34601959-62aa-5775-9965-9d5c1d29d8f8",
+        "content_sha256": "b86260f5579a45ad44920607b0f447c7d261dcf85b06b2f92b857e19352ebb09",
+        "simples": "Não se poderá opor suspeição às autoridades policiais nos atos do inquérito, mas elas deverão declarar-se suspeitas quando ocorrer motivo legal.",
+        "pontos": [
+          "Não cabe oposição de suspeição à autoridade policial no inquérito.",
+          "A autoridade deve declarar-se suspeita quando houver motivo legal."
+        ],
+        "atencao": [
+          "O inquérito é peça informativa: a lei não admite exceção contra o delegado."
+        ],
+        "exemplo": "Delegado parente da vítima deve declarar-se suspeito.",
+        "prova": [
+          "Assertiva que admite a oposição formal de suspeição contra o delegado no inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-108",
+      "unit_id": "9ecf21a7-5c0d-5eac-98a5-76bb2ee13203",
+      "content_sha256": "e059e0257c843b73d4d7a7f05cb39a6005cd9d23a62773fb47d5e7412b7c543e",
+      "simples": "A exceção de incompetência pode ser oral ou escrita no prazo de defesa. Aceita depois de ouvido o MP, remete-se ao órgão competente; rejeitada, prossegue o feito.",
+      "pontos": [
+        "Declinatória oral deve ser tomada por termo quando recusada.",
+        "No destino, há exame e ratificação dos atos anteriores conforme a disciplina aplicável.",
+        "Competência territorial relativa exige oposição tempestiva, sob pena de preclusão e prorrogação."
+      ],
+      "atencao": [
+        "Não prometer que qualquer alegação territorial tardia anula o processo. STJ, AgRg RHC 232412, publicado em 14/4/2026, reafirma a exigência de tempestividade."
+      ],
+      "exemplo": "Defesa questiona o foro territorial na resposta à acusação; MP é ouvido e o juiz decide remeter ou manter o feito. Variação: Alegação territorial só depois de iniciada a instrução pode estar preclusa; não confundir com incompetência absoluta.",
+      "prova": [
+        "A exceção pode ser oral? Sim.",
+        "Toda objeção territorial pode ser apresentada a qualquer tempo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Declinatória",
+          "significado": "Pedido de reconhecimento da incompetência e envio ao órgão competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=14%2F04%2F2026&num_registro=202600564943"
+      ],
+      "expected": {
+        "unit_id": "9ecf21a7-5c0d-5eac-98a5-76bb2ee13203",
+        "content_sha256": "e059e0257c843b73d4d7a7f05cb39a6005cd9d23a62773fb47d5e7412b7c543e",
+        "simples": "A exceção de incompetência do juízo pode ser oposta, verbalmente ou por escrito, no prazo de defesa. Se, ouvido o Ministério Público, for aceita a declinatória, o feito é remetido ao juízo competente, onde, ratificados os atos anteriores, o processo prossegue. Recusada a incompetência, o juiz continua no feito, fazendo tomar por termo a declinatória, se formulada verbalmente.",
+        "pontos": [
+          "Exceção de incompetência: oral ou escrita, no prazo de defesa.",
+          "Aceita a declinatória: remessa ao juízo competente, com ratificação dos atos.",
+          "Recusada: o juiz continua e toma a declinatória por termo."
+        ],
+        "atencao": [
+          "Prazo: o de defesa.",
+          "A incompetência absoluta pode ser declarada a qualquer tempo."
+        ],
+        "exemplo": "A defesa opõe, na resposta à acusação, exceção de incompetência territorial.",
+        "prova": [
+          "Assertiva que exige forma escrita para a exceção de incompetência erra: pode ser verbal."
+        ],
+        "termos": [
+          {
+            "termo": "Declinatória",
+            "significado": "Alegação de que o juízo é incompetente."
+          }
+        ],
+        "remissoes": [
+          "Art. 109",
+          "Art. 110"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-109",
+      "unit_id": "7fbbc908-0c41-5bb7-92fa-399a6aa2e84f",
+      "content_sha256": "2848836d1d5f907d52dd1fc1b551d0a7a3ceba7c0a3fcf018f273e43f1a7b5ad",
+      "simples": "O reconhecimento judicial de incompetência deve ser integrado à natureza do vício. A expressão qualquer fase não reabre competência territorial relativa já preclusa.",
+      "pontos": [
+        "O texto admite declaração judicial sem alegação da parte e remete ao art. 108.",
+        "STJ, AgRg RHC 232412, 14/4/2026: reconhecimento a qualquer tempo refere-se à incompetência absoluta.",
+        "Territorial relativa não arguida oportunamente pode prorrogar-se; não tratar como nulidade absoluta universal."
+      ],
+      "atencao": [
+        "Distinguir texto literal e interpretação: não ensinar que o juiz afasta de ofício, em qualquer fase, todo foro territorial não impugnado tempestivamente."
+      ],
+      "exemplo": "Identificada incompetência absoluta, juiz declara-a nos autos e observa o encaminhamento legal. Variação: Defesa deixou de impugnar o foro territorial no prazo: a invocação genérica do art. 109 não elimina a preclusão.",
+      "prova": [
+        "Qualquer fase elimina preclusão territorial relativa? Não.",
+        "Reconhecimento absoluto exige sempre pedido da parte? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incompetência absoluta",
+          "significado": "Vício de atribuição distinta da competência territorial relativa sujeita à preclusão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=14%2F04%2F2026&num_registro=202600564943"
+      ],
+      "expected": {
+        "unit_id": "7fbbc908-0c41-5bb7-92fa-399a6aa2e84f",
+        "content_sha256": "2848836d1d5f907d52dd1fc1b551d0a7a3ceba7c0a3fcf018f273e43f1a7b5ad",
+        "simples": "Se em qualquer fase do processo o juiz reconhecer motivo que o torne incompetente, declará-lo-á nos autos, haja ou não alegação da parte, prosseguindo-se na forma do artigo anterior.",
+        "pontos": [
+          "Juiz reconhece incompetência em qualquer fase.",
+          "Declara nos autos, com ou sem alegação da parte."
+        ],
+        "atencao": [
+          "Conhecimento de ofício da incompetência."
+        ],
+        "exemplo": "Juiz percebe que o crime é da Justiça Federal e declina da competência.",
+        "prova": [
+          "Assertiva que exige alegação da parte para o juiz reconhecer a incompetência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 108"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-110",
+      "unit_id": "4bb5f561-1a0f-527f-87d6-20fbcb3ccb75",
+      "content_sha256": "1a61d2f1d010877211a6ae7abefece4f6ffc9a7569843e53986a064bc4258f13",
+      "simples": "Litispendência, ilegitimidade e coisa julgada seguem o rito da incompetência no que aplicável; várias dessas exceções devem ser reunidas em uma petição.",
+      "pontos": [
+        "Reunião das exceções enumeradas em uma só petição ou articulado.",
+        "Coisa julgada refere-se ao fato principal objeto da sentença.",
+        "Decisão incidental não equivale automaticamente a julgamento definitivo do fato principal."
+      ],
+      "atencao": [
+        "A aplicação do rito é no que couber, não identidade de fundamentos entre todas as exceções."
+      ],
+      "exemplo": "Parte suscita ilegitimidade e litispendência na mesma petição, cada qual com fundamento próprio. Variação: Decisão incidental sobre documento não é, por si, coisa julgada sobre o crime principal.",
+      "prova": [
+        "Várias exceções deste artigo vão em uma petição? Sim.",
+        "Qualquer questão incidental fundamenta coisa julgada do fato principal? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Fato principal",
+          "significado": "Objeto fático da sentença relevante à exceção de coisa julgada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4bb5f561-1a0f-527f-87d6-20fbcb3ccb75",
+        "content_sha256": "1a61d2f1d010877211a6ae7abefece4f6ffc9a7569843e53986a064bc4258f13",
+        "simples": "Nas exceções de litispendência, ilegitimidade de parte e coisa julgada, observa-se, no que for aplicável, o disposto sobre a exceção de incompetência do juízo. Se a parte tiver de opor mais de uma dessas exceções, deve fazê-lo numa só petição ou articulado. A exceção de coisa julgada somente pode ser oposta em relação ao fato principal, que tiver sido objeto da sentença.",
+        "pontos": [
+          "Litispendência, ilegitimidade de parte e coisa julgada seguem o rito da incompetência.",
+          "Várias exceções: numa só petição.",
+          "Coisa julgada: só em relação ao fato principal objeto da sentença."
+        ],
+        "atencao": [
+          "Coisa julgada refere-se ao FATO principal."
+        ],
+        "exemplo": "O réu opõe numa só petição as exceções de litispendência e coisa julgada.",
+        "prova": [
+          "Assertiva que exige petições separadas para cada exceção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 108"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-111",
+      "unit_id": "deb88f7c-90d3-5027-a57e-dded53d1af65",
+      "content_sha256": "c8aa6142b3e56c607bbf01c99c7910ec1049a6006649f3dd42ac9b09337175a8",
+      "simples": "Exceções tramitam em autos apartados e, em regra, não suspendem a ação penal.",
+      "pontos": [
+        "Autuação apartada é a regra.",
+        "Não suspensão admite hipóteses legais próprias.",
+        "Integrar a suspensão prevista no art. 102 e o reconhecimento do art. 99."
+      ],
+      "atencao": [
+        "Em regra não pode ser convertido em nunca: conferir a hipótese concreta e a decisão cabível."
+      ],
+      "exemplo": "Exceção é autuada separadamente e o processo principal continua segundo a regra geral. Variação: Se a hipótese do art. 102 autoriza suspensão e ela é determinada, não aplicar a regra geral como proibição absoluta.",
+      "prova": [
+        "Toda exceção suspende automaticamente? Não.",
+        "Há hipóteses legais de suspensão? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Regra de não suspensão",
+          "significado": "Continuidade ordinária do principal, ressalvadas hipóteses específicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "deb88f7c-90d3-5027-a57e-dded53d1af65",
+        "content_sha256": "c8aa6142b3e56c607bbf01c99c7910ec1049a6006649f3dd42ac9b09337175a8",
+        "simples": "As exceções serão processadas em autos apartados e não suspenderão, em regra, o andamento da ação penal.",
+        "pontos": [
+          "Exceções em autos apartados.",
+          "Em regra, não suspendem a ação penal."
+        ],
+        "atencao": [
+          "A regra é a não suspensão."
+        ],
+        "exemplo": "A exceção de suspeição tramita em apartado, e o processo principal segue.",
+        "prova": [
+          "Assertiva que suspende sempre a ação penal durante o processamento de exceções erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 102"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-112",
+      "unit_id": "a5f918ba-938e-5d7c-a5c8-5e43ffe1db67",
+      "content_sha256": "00fefc361d75fe507aa065e04629a859bf9e4ed16afdd58a0c79e5a01493c29d",
+      "simples": "Juiz, MP, servidores, peritos e intérpretes devem abster-se quando houver impedimento ou incompatibilidade legal; a parte pode arguir se não houver abstenção.",
+      "pontos": [
+        "Motivo declarado nos autos.",
+        "Abrange sujeitos indicados além do juiz.",
+        "Arguição segue o processo da exceção de suspeição, sem tornar idênticas as causas."
+      ],
+      "atencao": [
+        "Impedimento e suspeição não são sinônimos apenas porque compartilham rito de arguição."
+      ],
+      "exemplo": "Perito identifica impedimento legal e declara-o, abstendo-se de atuar. Variação: Se não o declara, a parte pode provocar o reconhecimento pelo rito indicado, apresentando fundamento.",
+      "prova": [
+        "Só juiz está abrangido? Não.",
+        "Rito comum faz impedimento e suspeição serem a mesma causa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Impedimento",
+          "significado": "Circunstância legal que impede atuação, distinta das causas de suspeição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a5f918ba-938e-5d7c-a5c8-5e43ffe1db67",
+        "content_sha256": "00fefc361d75fe507aa065e04629a859bf9e4ed16afdd58a0c79e5a01493c29d",
+        "simples": "O juiz, o órgão do Ministério Público, os serventuários ou funcionários de justiça e os peritos ou intérpretes devem abster-se de servir no processo quando houver incompatibilidade ou impedimento legal, que declararão nos autos. Se não se der a abstenção, a incompatibilidade ou impedimento pode ser arguido pelas partes, seguindo-se o processo estabelecido para a exceção de suspeição.",
+        "pontos": [
+          "Dever de abstenção diante de incompatibilidade ou impedimento legal.",
+          "Declaração nos autos.",
+          "Sem abstenção: arguição pelas partes pelo rito da suspeição."
+        ],
+        "atencao": [
+          "Impedimento e incompatibilidade seguem o rito da suspeição."
+        ],
+        "exemplo": "O promotor impedido deve declarar o impedimento e deixar o processo.",
+        "prova": [
+          "Assertiva que cria rito distinto da suspeição para o impedimento erra: segue o da suspeição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 252",
+          "Art. 253"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-113",
+      "unit_id": "518f9159-153e-57c9-a21f-ab7168259b69",
+      "content_sha256": "c4519e43a16cb2c69d38cd0a1619bd0989916facfd9c6449e27ebeaa4e54305b",
+      "simples": "Competência pode ser resolvida pela exceção própria ou pelo conflito positivo ou negativo de jurisdição.",
+      "pontos": [
+        "Exceção é via incidental perante o juízo.",
+        "Conflito envolve dissídio entre órgãos nas hipóteses legais.",
+        "Não confundir recurso contra decisão com conflito automaticamente formado."
+      ],
+      "atencao": [
+        "Discordância da parte com um único juiz não basta, por si, para caracterizar conflito entre órgãos."
+      ],
+      "exemplo": "Dois juízos recusam o mesmo processo: forma-se conflito negativo, resolvido pelo tribunal competente. Variação: Havendo apenas objeção da defesa ao juiz, examina-se a exceção própria sem inventar segundo órgão em conflito.",
+      "prova": [
+        "Só exceção resolve questão de competência? Não.",
+        "Conflito negativo pressupõe órgãos que recusam a atribuição? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Conflito de jurisdição",
+          "significado": "Dissídio institucional sobre a competência ou unidade processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "518f9159-153e-57c9-a21f-ab7168259b69",
+        "content_sha256": "c4519e43a16cb2c69d38cd0a1619bd0989916facfd9c6449e27ebeaa4e54305b",
+        "simples": "As questões atinentes à competência resolvem-se não só pela exceção própria, como também pelo conflito positivo ou negativo de jurisdição.",
+        "pontos": [
+          "Competência pode ser discutida por exceção.",
+          "Também por conflito positivo ou negativo de jurisdição."
+        ],
+        "atencao": [
+          "Duas vias: exceção e conflito."
+        ],
+        "exemplo": "Dois juízes se consideram competentes para o mesmo fato: conflito positivo.",
+        "prova": [
+          "Assertiva que restringe a discussão de competência à exceção erra: cabe também conflito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 114"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-114",
+      "unit_id": "b3ba8589-8425-5e03-895c-6c82f327c86a",
+      "content_sha256": "af1e6add541cc11565ac34ea27538aad825fdc4f59afae0e2c724053e001269e",
+      "simples": "Conflito pode ser positivo, negativo ou envolver controvérsia entre órgãos sobre unidade, junção ou separação de processos.",
+      "pontos": [
+        "Positivo: dois ou mais se consideram competentes para o mesmo fato.",
+        "Negativo: dois ou mais se consideram incompetentes.",
+        "Também cabe dissídio sobre unidade, reunião ou separação."
+      ],
+      "atencao": [
+        "Não restringir o conflito apenas à dúvida territorial: o inciso II também trata da unidade processual."
+      ],
+      "exemplo": "Dois órgãos querem processar o mesmo fato: conflito positivo. Variação: Ambos recusam a causa: negativo; discordância sobre reunião pode configurar a hipótese do inciso II.",
+      "prova": [
+        "Dois órgãos se dizem competentes: positivo ou negativo? Positivo.",
+        "O inciso II inclui separação de processos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Conflito positivo",
+          "significado": "Dissídio no qual órgãos afirmam competência para o mesmo fato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b3ba8589-8425-5e03-895c-6c82f327c86a",
+        "content_sha256": "af1e6add541cc11565ac34ea27538aad825fdc4f59afae0e2c724053e001269e",
+        "simples": "Haverá conflito de jurisdição quando duas ou mais autoridades judiciárias se considerarem competentes ou incompetentes para conhecer do mesmo fato criminoso, ou quando surgir controvérsia entre elas sobre unidade de juízo, junção ou separação de processos.",
+        "pontos": [
+          "Conflito positivo: ambos se consideram competentes.",
+          "Conflito negativo: ambos se consideram incompetentes.",
+          "Controvérsia sobre unidade de juízo, junção ou separação de processos."
+        ],
+        "atencao": [
+          "Conflito pode ser positivo ou negativo."
+        ],
+        "exemplo": "Dois juízes declinam da competência para o mesmo crime: conflito negativo.",
+        "prova": [
+          "Assertiva que admite conflito de competência apenas quando ambos se declaram competentes erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-115",
+      "unit_id": "c81bef6b-9216-5bce-aa6c-33abd76528b5",
+      "content_sha256": "c2c7fca4b32bf4757115c4fcf367969177718fde917bf097bce0c60dc7bc49d5",
+      "simples": "Parte interessada, MP junto a qualquer juízo em dissídio e juízes ou tribunais envolvidos podem suscitar o conflito.",
+      "pontos": [
+        "Legitimação não é exclusiva do MP.",
+        "Órgão ministerial de qualquer juízo em dissídio.",
+        "Também pode haver iniciativa judicial."
+      ],
+      "atencao": [
+        "Ter legitimidade para suscitar não define qual tribunal julgará: essa competência exige Constituição e organização judiciária."
+      ],
+      "exemplo": "Parte interessada documenta o dissídio e requer sua solução ao tribunal competente. Variação: Mesmo sem pedido da parte, um dos juízes envolvidos pode suscitar o conflito.",
+      "prova": [
+        "Apenas o MP pode suscitar? Não.",
+        "Juiz envolvido também pode? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Legitimidade para o conflito",
+          "significado": "Autorização legal para provocar sua solução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "c81bef6b-9216-5bce-aa6c-33abd76528b5",
+        "content_sha256": "c2c7fca4b32bf4757115c4fcf367969177718fde917bf097bce0c60dc7bc49d5",
+        "simples": "O conflito poderá ser suscitado pela parte interessada, pelos órgãos do Ministério Público junto a qualquer dos juízos em dissídio, ou por qualquer dos juízes ou tribunais em causa.",
+        "pontos": [
+          "Parte interessada.",
+          "Ministério Público junto a qualquer dos juízos.",
+          "Qualquer dos juízes ou tribunais em causa."
+        ],
+        "atencao": [
+          "Três legitimados."
+        ],
+        "exemplo": "O juiz suscita conflito de competência com outro juízo.",
+        "prova": [
+          "Assertiva que nega legitimidade ao Ministério Público para suscitar o conflito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 116"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-116",
+      "unit_id": "52f6a198-4c1e-545b-adfb-eeb738b7a99d",
+      "content_sha256": "013380ac13b5e92cc208ae22a9247004d7fec2f21c524302ff41dc8074a8b568",
+      "simples": "Conflito é apresentado por escrito, fundamentado e documentado ao tribunal competente; relator colhe informações e ouve o procurador-geral antes da decisão.",
+      "pontos": [
+        "Juízes e tribunais representam; parte requer. Negativo pode ser suscitado nos próprios autos.",
+        "No positivo, relator pode suspender imediatamente o andamento; não é suspensão automática universal.",
+        "Informações têm prazo fixado pelo relator, independentemente da suspensão.",
+        "Decisão na primeira sessão depois das informações e oitiva, salvo diligências; cópias seguem às autoridades para execução."
+      ],
+      "atencao": [
+        "Não inventar prazo fixo de três dias para informações: o artigo deixa sua fixação ao relator."
+      ],
+      "exemplo": "Conflito positivo chega documentado; relator avalia suspensão e requisita informações em prazo por ele marcado. Variação: Se faltam diligências indispensáveis, a previsão da primeira sessão não impõe julgamento sem completar a instrução.",
+      "prova": [
+        "Informações dependem de suspensão prévia? Não.",
+        "O prazo das informações é fixado pelo relator? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Representação no conflito",
+          "significado": "Forma escrita e circunstanciada utilizada pelos órgãos judiciais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "52f6a198-4c1e-545b-adfb-eeb738b7a99d",
+        "content_sha256": "013380ac13b5e92cc208ae22a9247004d7fec2f21c524302ff41dc8074a8b568",
+        "simples": "Os juízes e tribunais, sob a forma de representação, e a parte interessada, sob a de requerimento, darão parte escrita e circunstanciada do conflito, perante o tribunal competente, expondo os fundamentos e juntando os documentos comprobatórios. Quando negativo o conflito, juízes e tribunais podem suscitá-lo nos próprios autos. Se positivo, o relator pode determinar imediatamente que se suspenda o andamento do processo. O relator requisita informações às autoridades em conflito, no prazo marcado. Recebidas as informações e ouvido o procurador-geral, o conflito é decidido na primeira sessão, salvo diligência. Proferida a decisão, as cópias necessárias são remetidas às autoridades envolvidas.",
+        "pontos": [
+          "Juízes: representação; parte: requerimento; ambos por escrito e circunstanciados.",
+          "Conflito negativo: pode ser suscitado nos próprios autos.",
+          "Conflito positivo: relator pode suspender o processo.",
+          "Informações das autoridades e parecer do procurador-geral.",
+          "Decisão na primeira sessão."
+        ],
+        "atencao": [
+          "Juiz suscita por REPRESENTAÇÃO; parte, por REQUERIMENTO."
+        ],
+        "exemplo": "Juiz representa ao tribunal para decidir o conflito negativo.",
+        "prova": [
+          "Assertiva que exige que a parte suscite conflito por representação erra: é requerimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 115",
+          "Art. 117"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-117",
+      "unit_id": "92d3451a-b60d-5bd4-96c1-96452debd9fa",
+      "content_sha256": "128bae341a9302c060f3efbb3a055cb2602de45668260ca31802de3530db7e8b",
+      "simples": "O texto histórico fala em avocatória para restaurar jurisdição do STF. O estudo atual deve usar os instrumentos constitucionais, especialmente reclamação para preservar competência.",
+      "pontos": [
+        "CF 102, I, l: reclamação para preservar competência e garantir autoridade das decisões.",
+        "Não apresentar avocatória histórica como poder irrestrito de tomar qualquer processo inferior.",
+        "Conflito, reclamação e recurso têm pressupostos e competências próprios."
+      ],
+      "atencao": [
+        "A manutenção da redação no compilado não autoriza exercício atual de uma avocatória genérica independente da Constituição."
+      ],
+      "exemplo": "Alegada usurpação de competência do STF exige examinar cabimento da reclamação constitucional, com seus requisitos. Variação: Mera discordância com decisão inferior não permite ao STF avocar qualquer causa sem instrumento e competência próprios.",
+      "prova": [
+        "A literalidade permite tomar qualquer processo inferior? Não.",
+        "CF 102, I, l prevê reclamação para preservar competência? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reclamação constitucional",
+          "significado": "Instrumento constitucional para preservação de competência e autoridade de decisões."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "92d3451a-b60d-5bd4-96c1-96452debd9fa",
+        "content_sha256": "128bae341a9302c060f3efbb3a055cb2602de45668260ca31802de3530db7e8b",
+        "simples": "O Supremo Tribunal Federal, mediante avocatória, restabelecerá a sua jurisdição sempre que exercida por qualquer dos juízes ou tribunais inferiores.",
+        "pontos": [
+          "Avocatória do STF para restabelecer sua jurisdição usurpada."
+        ],
+        "atencao": [
+          "Instituto raro; hoje o meio usual é a reclamação ao STF."
+        ],
+        "exemplo": "Juiz inferior julga causa de competência do STF: a avocatória restabelece a jurisdição.",
+        "prova": [
+          "Assertiva que atribui a avocatória ao Superior Tribunal de Justiça erra: o artigo menciona o STF."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 116"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:24.920078+00:00",
+        "updated_at": "2026-10-11T13:15:24.920078+00:00"
+      }
+    }
+  ]
+}
