@@ -25,7 +25,7 @@ export function cargoGroup(contest: string | null | undefined, career?: string |
   return "Outros";
 }
 
-export type ArtStat = { n: number; r: number; p: number; g: Partial<Record<CargoGroup, number>>; c: string[] };
+export type ArtStat = { n: number; r: number; p: number; w?: number; y?: number; g: Partial<Record<CargoGroup, number>>; c: string[] };
 export type Heat = "alta" | "media" | "baixa" | null;
 
 /** Nível de cobrança pelo total de questões que citam o artigo (poucas provas ainda: limites baixos e explicáveis ao aluno). */
@@ -42,4 +42,16 @@ export const HEAT_LABEL: Record<Exclude<Heat, null>, string> = { alta: "Muito co
 export function countFor(stat: ArtStat | undefined, group: CargoGroup | "all"): number {
   if (!stat) return 0;
   return group === "all" ? stat.n : (stat.g[group] ?? 0);
+}
+
+export type Forecast = { level: "alta" | "media" | "baixa"; label: string };
+
+/** Previsão de cobrança: soma ponderada pelo ano das provas (as mais recentes pesam mais) + sinal de que caiu há pouco. É estimativa, não garantia. */
+export function forecastOf(stat: ArtStat | undefined): Forecast | null {
+  if (!stat) return null;
+  const w = stat.w ?? stat.n;
+  const recent = (stat.y ?? 0) >= 2023;
+  if (w >= 7 || (w >= 5 && recent)) return { level: "alta", label: "Muito provável de cair de novo" };
+  if (w >= 3.5 || (w >= 2 && recent)) return { level: "media", label: "Provável" };
+  return { level: "baixa", label: "Possível" };
 }
