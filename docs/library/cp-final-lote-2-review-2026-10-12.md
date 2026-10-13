@@ -32,3 +32,9 @@ CPP; não foi sobrescrita. Verificação específica mantém alvos e não alvos
 do CP estritos e registra essa diferença fora do CP. Não afirmar sete
 tabelas globalmente imutáveis neste lote. Ressalvas de atualização e
 constitucionalidade permanecem no conteúdo e nas fontes.
+
+Após integrar os commits de CPP e as mudanças da aplicação,370 testes,
+TypeScript e build passaram. O verificador específico foi exercitado com
+alterações artificiais em alvo e não alvo do CP, rejeitando ambas.
+Snapshot posterior antes do próximo lote:1795 revisados/1716 pendentes
+na biblioteca, incluindo trabalho concorrente de CPP; CP segue270/401.
