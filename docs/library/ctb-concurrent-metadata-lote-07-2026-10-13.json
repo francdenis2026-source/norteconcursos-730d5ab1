@@ -1,0 +1,40 @@
+{
+  "kind": "explicit_foreign_metadata_additions",
+  "target_course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+  "target_edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+  "tables": {
+    "syllabus_topics": [
+      {
+        "id": "3c028835-f979-4c8a-9bc0-823dda93999a",
+        "sha256": "b0d2c98b5e94775580ff55b58d15c178203f184c8b1efdf321feeda12bc3557a",
+        "title": null
+      },
+      {
+        "id": "980aacc1-5d7d-41e1-b6bf-6e671c08a8b9",
+        "sha256": "204577548c62825a13319915969cf01f69f8eae9e6d750a404dfb67709f729a0",
+        "title": null
+      },
+      {
+        "id": "bcd911ad-11b8-46c0-aabc-1ecb14187471",
+        "sha256": "ec8a4ce2e882db6a66ce4136c6e985c593cb994d4c506844c8156b9ae12185c6",
+        "title": null
+      },
+      {
+        "id": "d7f58b11-4ec8-4a0b-bb86-f440c64e9e2f",
+        "sha256": "92418ad5bf582a4278789eb7682acc699b64dc46b053af2be420f5f0dad7c567",
+        "title": null
+      },
+      {
+        "id": "ebe6bc21-f2ab-4b3e-9932-1ade1655fbbe",
+        "sha256": "f066e3b46494a92ddb56bf70f77ff860c61457f50b448921efaebdb880f1786d",
+        "title": null
+      },
+      {
+        "id": "f105d039-b451-431e-9565-12b639c04380",
+        "sha256": "562bc4d6330734709089bd7c569fc89abb309dfd1c4ecbe7216691db950ca281",
+        "title": null
+      }
+    ]
+  },
+  "note": "Seis tópicos adicionados por trabalho concorrente fora da edição do CTB; nenhum registro anterior alterado."
+}

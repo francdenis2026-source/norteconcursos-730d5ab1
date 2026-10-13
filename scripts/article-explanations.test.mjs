@@ -1312,3 +1312,22 @@ test('CTB payment discount and criminal speed threshold do not become misleading
  assert.match(get(294).simples,/CPP 282.*sem ensinar atuação de ofício irrestrita/s);
  for(const n of [284,291,294])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
 });
+
+test('CTB criminal units preserve mental-state, proof and special substitution distinctions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-07-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,48);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(302).exemplo,/álcool não prova sozinho dolo/);
+ assert.match(get(306).atencao.join(' '),/leitura bruta de 0,30.*margem/s);
+ assert.match(get(310).exemplo,/575.*dispensa lesão ou perigo/s);
+ assert.match(get('312-b').simples,/44.*dois|44.*302.*303/s);
+ for(const n of [298,306,307,309,310,'312-b'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB historical deadlines and annex definitions cannot generate unqualified current exercises',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-07-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(328).pontos.join(' '),/piso de 50%/);
+ assert.match(get(333).simples,/Cetran quando municipal.*Contran quando estadual/s);
+ assert.match(get('326-c').atencao.join(' '),/30\/6\/2026.*1º\/7\/2026/s);
+ const annex=p.units.find(r=>r.unit_key==='anexo-1');assert.match(annex.simples,/50 cm³ OU elétrico/);
+ assert.match(annex.exemplo,/INTERRUPÇÃO DE MARCHA/);
+ for(const n of [313,316,319,323,331,334,336,339,340])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+ assert.equal(legalStudyCaveat('transito','anexo-1').literalPractice,false);
+});

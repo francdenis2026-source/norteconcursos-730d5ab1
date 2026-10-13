@@ -1,0 +1,252 @@
+{
+  "checked_at": "2026-10-13T22:42:56.278321+00:00",
+  "batch": 7,
+  "reviewed": 48,
+  "published": {
+    "version": "2026-10-11-transito-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 48,
+    "published": 48,
+    "improved": 48,
+    "preserved": 0,
+    "verified_at": "2026-10-13T22:41:19.941Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T22:42:56.278321+00:00",
+    "authored_explanations_confirmed": 48,
+    "untargeted_explanations_preserved": 3465,
+    "untargeted_course_explanations_preserved": 317,
+    "prior_revisions_retained_in_manifest": 48,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_editions",
+      "content_sources"
+    ],
+    "protected_existing_rows_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "syllabus_editions",
+      "content_sources"
+    ],
+    "authorized_syllabus_source_repair": null,
+    "concurrent_foreign_metadata_additions": {
+      "kind": "explicit_foreign_metadata_additions",
+      "target_course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "target_edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "tables": {
+        "syllabus_topics": [
+          {
+            "id": "3c028835-f979-4c8a-9bc0-823dda93999a",
+            "sha256": "b0d2c98b5e94775580ff55b58d15c178203f184c8b1efdf321feeda12bc3557a",
+            "title": null
+          },
+          {
+            "id": "980aacc1-5d7d-41e1-b6bf-6e671c08a8b9",
+            "sha256": "204577548c62825a13319915969cf01f69f8eae9e6d750a404dfb67709f729a0",
+            "title": null
+          },
+          {
+            "id": "bcd911ad-11b8-46c0-aabc-1ecb14187471",
+            "sha256": "ec8a4ce2e882db6a66ce4136c6e985c593cb994d4c506844c8156b9ae12185c6",
+            "title": null
+          },
+          {
+            "id": "d7f58b11-4ec8-4a0b-bb86-f440c64e9e2f",
+            "sha256": "92418ad5bf582a4278789eb7682acc699b64dc46b053af2be420f5f0dad7c567",
+            "title": null
+          },
+          {
+            "id": "ebe6bc21-f2ab-4b3e-9932-1ade1655fbbe",
+            "sha256": "f066e3b46494a92ddb56bf70f77ff860c61457f50b448921efaebdb880f1786d",
+            "title": null
+          },
+          {
+            "id": "f105d039-b451-431e-9565-12b639c04380",
+            "sha256": "562bc4d6330734709089bd7c569fc89abb309dfd1c4ecbe7216691db950ca281",
+            "title": null
+          }
+        ]
+      },
+      "note": "Seis tópicos adicionados por trabalho concorrente fora da edição do CTB; nenhum registro anterior alterado."
+    },
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source. Optional foreign topic/edition/source additions require exact ID/hash evidence and preservation of every prior row; additions in the target edition are rejected. No broad protected-table exemption."
+  },
+  "sources": [
+    {
+      "name": "cp-current",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "status": 200,
+      "sha256": "3c76284aae70b2800e4254c57680c6e2b0864e44140f5440ea65569452a1b374",
+      "bytes": 683589,
+      "checked_at": "2026-10-13T22:28:13.169928+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj575",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=575+INPATH%28NUM%29",
+      "status": 200,
+      "sha256": "fefa321e0023a56cbf1cc1338a3cbbd003ef8cea6155891987203483137e3aeb",
+      "bytes": 30087,
+      "checked_at": "2026-10-13T22:28:07.909413+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf305",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-reafirma-validade-de-dispositivo-que-tipifica-como-crime-a-fuga-do-local-de-acidente-de-transito/",
+      "status": 200,
+      "sha256": "e64ad12cfc6540907fd582ef2123d077ec9c97b3a0ad564efb1f2f81656634aa",
+      "bytes": 67003,
+      "checked_at": "2026-10-13T22:28:58.856949+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei15452",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15452.htm",
+      "status": 200,
+      "sha256": "0534eedf1b909d853fd5c1f893f7519011463e1ad6ccc8ffcb21c0d031e9578c",
+      "bytes": 12822,
+      "checked_at": "2026-10-13T22:28:59.884122+00:00",
+      "usable": true
+    }
+  ],
+  "unusable_sources": [
+    {
+      "name": "stj307-search",
+      "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2019/Conduzir-veiculo-com-CNH-suspensa-por-decisao-administrativa-nao-configura-crime.aspx",
+      "status": 200,
+      "sha256": "fd0db34c15788f60fd12821e89bfb66a48af04dec5d2dbd0cfdc7d11238c4acc",
+      "bytes": 615,
+      "checked_at": "2026-10-13T22:28:07.402368+00:00",
+      "usable": false,
+      "reason": "Página de pesquisa sem acórdão identificado; não usada para certificar jurisprudência."
+    },
+    {
+      "name": "stj307",
+      "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=ACOR&livre=%22307%22+%22suspensao+administrativa%22&l=5",
+      "status": 200,
+      "sha256": "9c73dfbe5876bbb6abcb6b0d17145601a7879eeacfde50cf2748414d2654b6ac",
+      "bytes": 1022783,
+      "checked_at": "2026-10-13T22:29:02.453494+00:00",
+      "usable": false,
+      "reason": "Página de pesquisa sem acórdão identificado; não usada para certificar jurisprudência."
+    },
+    {
+      "name": "stj307-toc",
+      "url": "https://processo.stj.jus.br/SCON/jurisprudencia/toc.jsp?b=ACOR&livre=%22307%22+E+%22administrativa%22&l=5&i=1&tipo_visualizacao=RESUMO&acao=pesquisar",
+      "status": 200,
+      "sha256": "a90523f37ae21efa541df125317cc8afdd5296f38aa2d244b7920a62a0c7d56a",
+      "bytes": 1022783,
+      "checked_at": "2026-10-13T22:29:51.386825+00:00",
+      "usable": false,
+      "reason": "Página de pesquisa sem acórdão identificado; não usada para certificar jurisprudência."
+    },
+    {
+      "name": "stj307-acao",
+      "url": "https://processo.stj.jus.br/SCON/pesquisar.jsp?b=ACOR&livre=%22307%22+E+%22administrativa%22&l=5&i=1&tipo_visualizacao=RESUMO&acao=pesquisar",
+      "status": 200,
+      "sha256": "279d2b14072ff1677b6ace2d9b7f202c451c33b86c82fe2c7d15d42e72efc11e",
+      "bytes": 1022784,
+      "checked_at": "2026-10-13T22:29:51.330069+00:00",
+      "usable": false,
+      "reason": "Página de pesquisa sem acórdão identificado; não usada para certificar jurisprudência."
+    },
+    {
+      "name": "stj307-doc",
+      "url": "https://processo.stj.jus.br/SCON/jurisprudencia/doc.jsp?b=ACOR&livre=%22307%22+E+%22administrativa%22&l=10&i=1&operador=AND&p=false",
+      "status": 200,
+      "sha256": "1e002d20df4a9fa26d2dc0da1ca9672cfe8a2b7a336670e2645ccdf88a61bf6e",
+      "bytes": 1022783,
+      "checked_at": "2026-10-13T22:39:15.871022+00:00",
+      "usable": false,
+      "reason": "Página de pesquisa sem acórdão identificável; não usada como decisão oficial."
+    }
+  ],
+  "reused_sources": [
+    "ctb-lote-03-review-2026-10-13.json",
+    "ctb-lote-04-review-2026-10-13.json",
+    "ctb-lote-06-review-2026-10-13.json"
+  ],
+  "compiled_source": {
+    "slug": "transito",
+    "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+    "units": 48,
+    "scope_type": "targeted_correction",
+    "course_current_units": 365,
+    "target_unit_keys": [
+      "art-296",
+      "art-297",
+      "art-298",
+      "art-301",
+      "art-302",
+      "art-303",
+      "art-304",
+      "art-305",
+      "art-306",
+      "art-307",
+      "art-308",
+      "art-309",
+      "art-310",
+      "art-311",
+      "art-312",
+      "art-312-a",
+      "art-312-b",
+      "art-313",
+      "art-314",
+      "art-315",
+      "art-316",
+      "art-317",
+      "art-319",
+      "art-319-a",
+      "art-320",
+      "art-320-a",
+      "art-323",
+      "art-325",
+      "art-326",
+      "art-326-a",
+      "art-326-b",
+      "art-326-c",
+      "art-327",
+      "art-328",
+      "art-329",
+      "art-330",
+      "art-331",
+      "art-332",
+      "art-333",
+      "art-334",
+      "art-336",
+      "art-337",
+      "art-338",
+      "art-338-a",
+      "art-339",
+      "art-340",
+      "art-341",
+      "anexo-1"
+    ],
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+    "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+  },
+  "validation": {
+    "tests": 440,
+    "typecheck": "passed",
+    "build": "passed",
+    "readback_guard_tests": 7
+  },
+  "limits": [
+    "365/365 unidades atuais têm metadados válidos; não certifica toda jurisprudência, anexos externos, resoluções técnicas ou implementação de sistemas.",
+    "Art. 307: consulta jurisprudencial não retornou acórdão identificável sobre suspensão administrativa. Exemplos limitados à suspensão judicial e ao marco de intimação; não inferir crime automático por toda suspensão administrativa.",
+    "Arts. 319/336: não certificada cadeia integral de atos sucessores; exercícios não ensinam norma de 1968 ou sinal histórico como atual.",
+    "Art. 312-B remete especificamente a CP 44,I; não usado para proibir universalmente ANPP/sursis/transação.",
+    "Resolução 1025 tem transições de Sivec/SNE; art. 328 não certifica todos os anexos ou procedimentos técnicos de leilão.",
+    "Art. 306: margem metrológica e outros meios de prova diferenciados; fichas do Manual alteradas pela 1031 têm vigência futura em 17/10/2026.",
+    "Seis tópicos concorrentes de outra edição registrados por ID/hash; todos os registros anteriores das seis tabelas protegidas preservados."
+  ]
+}
