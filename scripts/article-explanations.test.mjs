@@ -1,4 +1,21 @@
 import test from 'node:test';
+test('LEP disciplina e órgãos integra defesa, estrutura atual e textos residuais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-2-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,47);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ for(const n of [50,52,54]){
+  assert.ok(!get(n),'alteração2026 ainda não certificada');
+  const caveat=legalStudyCaveat('lep','art-'+n);assert.equal(caveat.literalPractice,false);
+  assert.match(caveat.explanation,/permanece pendente/);
+ }
+ assert.match(get(51).pontos.join(' '),/INJUSTIFICADAMENTE/);
+ assert.match(get(59).simples,/972598.*afasta PAD/s);
+ assert.match(get(66).pontos.join(' '),/sem prisão automática/);
+ assert.match(get(71).simples,/DEPEN.*Senappen/s);
+ assert.match(get('81-b').atencao.join(' '),/não pode virar mensal/);
+ assert.match(get(83).pontos.join(' '),/segurança.*internas/i);
+ assert.match(get(86).pontos.join(' '),/comunicação imediata.*24 horas/);
+ for(const n of [53,59,66,71,77,86,91])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
 test('LEP fundamentos distingue classificação, visita, sigilo e contratação',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-1-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

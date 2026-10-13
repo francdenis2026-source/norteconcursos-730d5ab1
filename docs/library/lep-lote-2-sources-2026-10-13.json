@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "slug": "lep",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "fetched_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "sha256": "4f2c70bd250307fd0c2575eedbceb12bd47bc4426cf85ec57ce1df783ebbe5ac",
+      "checked_at": "2026-10-12T03:15:19.191370+00:00",
+      "status": 200
+    },
+    {
+      "id": "stf-falta-grave",
+      "url": "https://noticias.stf.jus.br/postsnoticias/reconhecimento-de-falta-grave-por-crime-doloso-durante-a-execucao-dispensa-transito-em-julgado/",
+      "sha256": "f459d6a3dcba523385782c3e4cd0272134da4f5197188e04b7faee3ff4d7826a",
+      "checked_at": "2026-10-13T04:36:51.828427+00:00"
+    },
+    {
+      "id": "stf-sv56",
+      "url": "https://noticias.stf.jus.br/postsnoticias/sv-56-decisao-garante-o-respeito-do-poder-publico-aos-direitos-do-sentenciado/",
+      "sha256": "0e44f0b9bd468314531c88c621b24eca6e35ec6241bfefd63a32a1b0c2e5ed68",
+      "checked_at": "2026-10-13T04:36:51.828574+00:00"
+    },
+    {
+      "id": "senappen",
+      "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/institucional",
+      "sha256": "935d189d0ff213b6f39e41ec533fb623adcb886d6550c55ba1831909fc825c76",
+      "checked_at": "2026-10-13T04:36:51.828968+00:00"
+    },
+    {
+      "id": "STJ526-533",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82",
+      "note": "PDF oficial válido coletado nesta sessão em12/10,reutilizado."
+    },
+    {
+      "slug": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06",
+      "checked_at": "2026-10-12T23:38:16.494220+00:00"
+    }
+  ],
+  "excluded_from_review": [
+    "art-50",
+    "art-52",
+    "art-54"
+  ],
+  "limitations": [
+    "Novas tentativas Planalto LEP/Leis15.407/15.410 retornaram503; Câmara páginas de íntegra retornaram403. Compilado oficial anterior reutilizado,com data de coleta preservada e215 registros do percurso idênticos ao último audit.",
+    "Art.86: alteração do§4º não objeto de exercício automático ou certificação integral de efeitos/controle; casos e avisos distinguem§§3º/5º e remissão recente.",
+    "Notícias STF delimitamRE972598/Tema758 eSV56,não substituem certificação de toda jurisprudência posterior.",
+    "Senappen: identificação no portal institucional atual; não certificadas todas as normas regulamentares de competência/composição.",
+    "CP51 conferido no compilado oficial válido coletado nesta sessão; referência residual do66Vb não autoriza conversão de dívida em prisão."
+  ]
+}
