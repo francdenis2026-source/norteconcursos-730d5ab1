@@ -13,6 +13,21 @@ import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
 
+test('CPP: provas não restauram impedimento inconstitucional ou coerção grafotécnica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-evidence-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,36);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(157).simples,/§5º.*declarado inconstitucional/);
+ assert.match(get(156).atencao.join(' '),/Não tratar.*licença.*Nem afirmar proibição absoluta/s);
+ assert.match(get('158-a').pontos.join(' '),/não gera nulidade automática/);
+ assert.match(get(159).pontos.join(' '),/Um perito oficial.*dois não oficiais/);
+ assert.match(get('158-d').pontos.join(' '),/Lacre rompido fica dentro/);
+ assert.match(get(168).atencao.join(' '),/Não contar 30 dias do primeiro laudo/);
+ assert.match(get(174).atencao.join(' '),/Não transformar.*obrigação coercitiva/);
+ for(const n of [156,157,'158-a',174,178,179])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
 test('CPP: falsidade incidental não condena e saúde mental não impõe internação automática',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-document-health-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,10);
