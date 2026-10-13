@@ -7,7 +7,7 @@ export type LegalReview = {
   checked_at: string;
   scope: string;
   course_slug?: string | null | undefined;
-  corrections: string[];
+  corrections?: string[] | undefined;
   sources: { title: string; url: string; sha256?: string }[];
   changes: {
     title: string;
@@ -168,11 +168,11 @@ export function LegalUpdateNotice({
             <summary className="cursor-pointer text-sm font-medium">Sobre esta conferência</summary>
             <div className="mt-3 space-y-3 text-sm">
               <p className="text-muted-foreground">{review.scope}</p>
-              {!!review.corrections.length && (
+              {!!review.corrections?.length && (
                 <div>
                   <p className="font-medium">O que foi corrigido neste material</p>
                   <ul className="mt-1 list-disc space-y-1 pl-5">
-                    {review.corrections.map((text) => (
+                    {(review.corrections ?? []).map((text) => (
                       <li key={text}>{text}</li>
                     ))}
                   </ul>
@@ -181,7 +181,7 @@ export function LegalUpdateNotice({
               <div>
                 <p className="font-medium">Fontes oficiais</p>
                 <ul className="mt-1 space-y-1">
-                  {review.sources.map((source) => (
+                  {(review.sources ?? []).map((source) => (
                     <li key={source.url}>
                       {isStudySourceUrl(source.url) ? (
                         <a
