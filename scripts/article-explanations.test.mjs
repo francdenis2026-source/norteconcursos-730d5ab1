@@ -1,4 +1,25 @@
 import test from 'node:test';
+test('CTB driver rest and residual SPVAT text cannot produce unqualified literal exercises',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-02-2026-10-13.json','utf8'));validateArticlePackage(p);
+ assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('67-c').simples,/NÃO.*fracionamento.*ADI 5322/s);
+ assert.ok(!get('67-c').pontos.some(s=>/sendo 8 ininterruptas/.test(s)));
+ assert.match(get('67-c').atencao.join(' '),/Efeitos temporais.*fatos antigos/s);
+ assert.match(get(78).simples,/LC 211.*revogou.*31\/12\/2024/s);
+ assert.ok(!get(78).prova.some(s=>/fixa em 10% o repasse/.test(s)));
+ for(const n of ['67-c','67-e',78])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB child retention, reserved parking and defective signs retain specific scopes',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-02-2026-10-13.json','utf8'));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(64).exemplo,/oito anos.*cinto.*não afirmar cadeirinha/s);
+ assert.match(get(55).prova.join(' '),/proteção ocular.*passageiros.*Sim/s);
+ assert.match(get(61).atencao.join(' '),/14.440.*motocicletas.*110\/100/s);
+ assert.match(get('86-a').simples,/Não restringir.*XVII.*inciso XX/s);
+ assert.match(get(90).prova.join(' '),/Não.*não de imunidade geral/s);
+ assert.equal(legalStudyCaveat('transito','art-90').literalPractice,false);
+});
 test('CTB first review batch corrects scope, delegation and institutional roles without rewriting the statute',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-01-2026-10-13.json','utf8'));validateArticlePackage(p);
  assert.equal(p.units.length,50);assert.equal(p.laws[0].course_current_units,365);assert.equal(p.laws[0].scope_type,'targeted_correction');
