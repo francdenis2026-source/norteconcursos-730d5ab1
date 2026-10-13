@@ -7865,8 +7865,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .library-searchbar input { flex:1; min-width:0; border:0; outline:0; padding:14px 0; background:transparent; color:var(--foreground); font-size:.9rem; }
 .library-searchbar input::placeholder { color:var(--muted-foreground); }
 .library-searchbar button { display:grid; place-items:center; padding:6px; border-radius:6px; cursor:pointer; }
-.library-refine { display:grid; grid-template-columns:auto repeat(3,minmax(0,1fr)); align-items:end; gap:12px; margin-top:16px; }
-.library-refine__label { display:flex; align-items:center; gap:8px; align-self:center; font-size:.75rem; font-weight:650; color:var(--muted-foreground); padding-top:18px; }
+.library-refine { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); align-items:end; gap:12px; margin-top:16px; }
+.library-refine__label { display:flex; grid-column:1/-1; align-items:center; gap:8px; align-self:center; font-size:.75rem; font-weight:650; color:var(--muted-foreground); }
 .library-refine label { display:grid; gap:6px; font-size:.7rem; font-weight:700; color:var(--muted-foreground); min-width:0; }
 .library-refine select { width:100%; min-width:0; padding:10px 12px; background:var(--background); color:var(--foreground); border:1px solid var(--border); border-radius:9px; font-size:.8rem; font-weight:500; cursor:pointer; }
 .library-navigator__footer { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-top:18px; padding-top:14px; border-top:1px solid var(--border); font-size:.75rem; color:var(--muted-foreground); }
@@ -7920,7 +7920,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 @media (max-width:1100px) {
   .library-area-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .library-law-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .library-refine { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .library-refine { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .library-refine__label { grid-column:1/-1; padding-top:0; }
 }
 @media (max-width:640px) {

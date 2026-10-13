@@ -163,19 +163,19 @@ test('Search highlighting preserves original text and remains available with stu
   assert.equal(parts.map(p=>p.text).join(''),text);
  }
 });
-function renderCourseSearch(query) {
+function renderCourseSearch(query, linkedSearch = {}, linkedExplanation = {simples:'Explicação geral',pontos:[],atencao:[],exemplo:'',prova:[]}) {
  let stateCall=0;
  const rows=[searchUnit('art-1','Preâmbulo. '.repeat(80)+'Estupro consta no inciso V.'),searchUnit('art-2','Regra sem o termo pesquisado.')];
  const course={id:'course',slug:'hediondos',title:'Crimes hediondos',material_slug:'hediondos',overview:{intro:'',jurisprudence:[],contest:'PF',objectives:[]}};
  const none=()=>null;
  const stubs={
   react:{...React,useState:initial=>{const result=React.useState(initial);return ++stateCall===2?[query,result[1]]:result;}},
-  '@tanstack/react-router':{createFileRoute:()=>options=>({...options,useSearch:()=>({art:'art-2'})}),useParams:()=>({slug:'hediondos'}),useNavigate:()=>none,Link:({children})=>React.createElement('a',null,children)},
+  '@tanstack/react-router':{createFileRoute:()=>options=>({...options,useSearch:()=>({art:'art-2',...linkedSearch})}),useParams:()=>({slug:'hediondos'}),useNavigate:()=>none,Link:({children})=>React.createElement('a',null,children)},
   '@tanstack/react-query':{useQueryClient:()=>({})},sonner:{toast:{}},
   '@/components/ui/button':{Button:({children,onClick,disabled})=>React.createElement('button',{onClick,disabled},children)},
   '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},
   '@/hooks/useFocusMode':{useFocusMode:()=>({focus:false,bar:none,containerClass:''})},
-  '@/lib/legalCourses':{useLegalCourses:()=>({data:[course]}),useLegalUnits:()=>({data:rows}),useLegalProgress:()=>({data:[],isPending:false}),useLegalExplanationCoverage:()=>({data:[]}),useLegalRefIndex:()=>({data:null}),useLegalExplanation:()=>({isSuccess:true,data:{simples:'Explicação geral'}})},
+  '@/lib/legalCourses':{useLegalCourses:()=>({data:[course]}),useLegalUnits:()=>({data:rows}),useLegalProgress:()=>({data:[],isPending:false}),useLegalExplanationCoverage:()=>({data:[]}),useLegalRefIndex:()=>({data:null}),useLegalExplanation:()=>({isSuccess:true,data:linkedExplanation})},
   '@/lib/legalLearning':{selectNextLegalUnit:()=>rows[1],legalProgressSummary:()=>({read:0,practiced:0,difficult:0,due:0})},
   '@/lib/legalCourseSearch':courseSearch,'@/lib/librarySearch':courseSearchLibrary,
   '@/components/library/LibrarySearchMatch':load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary}),
@@ -201,4 +201,144 @@ test('The course screen explicitly reports no matches without leaving the previo
  const html=renderCourseSearch('inexistente');
  assert.ok(html.includes('Nenhum artigo corresponde'));assert.ok(!html.includes('id="dispositivo-aberto"'));
  assert.ok(html.includes('Limpar busca e filtros'));
+});
+
+const searchScope=load('src/lib/librarySearchScope.ts',{
+ './libraryOrganization':organization,'./legalLibrary':laws,'./filterTaxonomy':sharedTaxonomy,'./librarySearch':courseSearchLibrary,
+});
+const contentModule = overrides => load('src/lib/contentSearch.ts',{
+ '@/integrations/supabase/client':{supabase:{}},'./legalCourseSearch':courseSearch,'./librarySearch':courseSearchLibrary,...overrides,
+});
+const legalHitUnit=(slug,key,text)=>({...searchUnit(key,text),legal_courses:{slug,title:slug,status:'active'}});
+test('Content terms search all laws; only explicit law identifiers restrict identity',()=>{
+ for(const q of ['crimes','drogas','hediondos','estupro'])assert.equal(courseSearchLibrary.identifyingLibraryLaws(q).length,0,q);
+ assert.equal(courseSearchLibrary.identifyingLibraryLaws('CP').join(','),'codigo-penal');
+ assert.equal(courseSearchLibrary.identifyingLibraryLaws('Lei 8.072').join(','),'hediondos');
+ const {collectContentHits}=contentModule();
+ const units=Array.from({length:45},(_,i)=>legalHitUnit('codigo-penal',`art-${i+1}`,'Estupro está no caso.'));
+ units.push(legalHitUnit('hediondos','art-1','Estupro consta no catálogo.'),legalHitUnit('eca','art-2','Estupro no contexto de proteção.'));
+ const hits=collectContentHits('estupro',units,[]);
+ assert.equal(hits.length,47);assert.equal(new Set(hits.map(h=>h.slug)).size,3);
+ const scoped=collectContentHits('estupro',units,[],['hediondos']);
+ assert.equal(scoped.length,1);assert.equal(scoped[0].slug,'hediondos');
+});
+test('Content search checks exact accents and tokens, includes examples and excludes unpublished or excluded units',()=>{
+ const {collectContentHits}=contentModule();
+ const u=legalHitUnit('codigo-penal','art-129','Lesão corporal por violência.');
+ const falsePositive=legalHitUnit('hediondos','art-1','Lesou corpolar: falso candidato SQL.');
+ const excluded={...u,unit_key:'art-999',content_status:'excluded'};
+ const inactive={...u,unit_key:'art-998',legal_courses:{...u.legal_courses,status:'under_review'}};
+ assert.equal(collectContentHits('lesao corporal',[u,falsePositive,excluded,inactive],[]).length,1);
+ const e={simples:'Regra geral.',exemplo:'Lesão corporal está neste caso resolvido.',status:'published',legal_course_units:legalHitUnit('hediondos','art-1','')};
+ const hits=collectContentHits('lesao corporal',[u],[e,{...e,status:'under_review',legal_course_units:legalHitUnit('eca','art-3','')}]);
+ assert.equal(hits.length,2);assert.equal(hits[1].via,'explicação');assert.ok(hits[1].snippet.includes('Lesão corporal'));
+ assert.equal(collectContentHits('lesao corporal',[u],[{...e,legal_course_units:u}]).length,1);
+ assert.equal(collectContentHits('lesao inexistente',[u],[e]).length,0);
+});
+test('Every material and article match obeys area, discipline, law, topic and contest scope',()=>{
+ const scope={area:'all',discipline:'all',contest:'all',topic:'all',law:'all'};
+ const index=new Map(items.map(i=>[i.id,'sem a palavra pesquisada']));
+ const {collectContentHits}=contentModule();
+ const hits=collectContentHits('estupro',[legalHitUnit('codigo-penal','art-213','Estupro'),legalHitUnit('armas','art-1','Estupro')],[]);
+ assert.equal(searchScope.matchingLibraryMaterials(items,'estupro',index,hits).length,2);
+ const cp=searchScope.scopeLibraryMaterials(items,{...scope,discipline:'Direito Penal'});
+ assert.equal(searchScope.matchingLibraryMaterials(cp,'estupro',index,hits).length,1);
+ assert.equal(laws.materialLawSlug(cp[0]),'codigo-penal');
+ const armas=searchScope.scopeLibraryMaterials(items,{...scope,law:'armas'});
+ assert.equal(searchScope.matchingLibraryMaterials(armas,'estupro',index,hits).length,1);
+ assert.equal(laws.materialLawSlug(armas[0]),'armas');
+ assert.equal(searchScope.scopeLibraryMaterials(items,{...scope,area:'general',law:'armas'}).length,0);
+ assert.equal(searchScope.scopeLibraryMaterials(items,{...scope,contest:'PC',law:'armas'}).length,0);
+ const topic=sharedTaxonomy.scopedTopic(organization.libraryDiscipline(armas[0]),organization.libraryTopic(armas[0]));
+ assert.equal(searchScope.scopeLibraryMaterials(items,{...scope,topic}).length,1);
+ assert.equal(searchScope.matchingLibraryMaterials(items,'CP',index,hits).length,1);
+});
+test('Backend pagination reads beyond server caps, applies nested scope and propagates errors',async()=>{
+ const calls=[];
+ const units=Array.from({length:6},(_,i)=>legalHitUnit(i===5?'hediondos':'codigo-penal',`art-${i+1}`,'Estupro'));
+ const fake={from:table=>{
+  const filters=[];
+  const builder={select:value=>{filters.push(['select',value]);return builder;},eq:(...args)=>{filters.push(['eq',...args]);return builder;},or:value=>{filters.push(['or',value]);return builder;},order:value=>{filters.push(['order',value]);return builder;},in:(...args)=>{filters.push(['in',...args]);return builder;},abortSignal:()=>builder,
+   range:async(start,end)=>{calls.push({table,start,end,filters});return {data:table==='legal_course_units'?units.slice(start,start+2):[],error:null};}};
+  return builder;
+ }};
+ const {searchContent}=contentModule({'@/integrations/supabase/client':{supabase:fake}});
+ const hits=await searchContent('estupro',['codigo-penal','hediondos']);
+ assert.equal(hits.length,6);assert.ok(hits.some(h=>h.slug==='hediondos'));
+ assert.deepEqual(calls.filter(c=>c.table==='legal_course_units').map(c=>c.start),[0,2,4,6]);
+ assert.ok(calls.every(c=>c.filters.some(f=>f[0]==='in'&&f[1].endsWith('legal_courses.slug'))));
+ assert.ok(calls.filter(c=>c.table==='legal_unit_explanations').every(c=>c.filters.some(f=>f[0]==='eq'&&f[1]==='status'&&f[2]==='published')));
+ const broken={from:()=>{const b={select:()=>b,eq:()=>b,or:()=>b,order:()=>b,range:async()=>({data:null,error:new Error('network failed')})};return b;}};
+ await assert.rejects(contentModule({'@/integrations/supabase/client':{supabase:broken}}).searchContent('estupro'),/network failed/);
+});
+test('All matching laws stay visible in grouped results, without a global twelve-hit cutoff',()=>{
+ const hits=laws.LEGAL_LIBRARY.slice(0,20).map((law,i)=>({key:law.slug+':art-1',slug:law.slug,lawTitle:law.title,chapter:'Crimes',unitKey:'art-1',label:'Art. 1',snippet:'Estupro neste dispositivo.',via:'texto'}));
+ const matches=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary});
+ const {ContentSearchResults}=load('src/components/library/ContentSearchResults.tsx',{
+  '@/lib/contentSearch':{useContentSearch:()=>({data:[],isFetching:false,isError:false})},'@/lib/glossary':{searchGlossary:()=>[]},'@/lib/librarySearch':courseSearchLibrary,
+  '@/lib/legalChronology':load('src/lib/legalChronology.ts'),'./LibrarySearchMatch':matches,'@/lib/legalCourseSearch':courseSearch,
+  '@tanstack/react-router':{Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+'?'+new URLSearchParams(search)},children)},
+ });
+ const html=renderToStaticMarkup(React.createElement(ContentSearchResults,{query:'estupro',userId:'test',result:{data:hits,isFetching:false,isError:false,refetch:()=>{}}}));
+ assert.equal((html.match(/<details/g)??[]).length,20);assert.match(html.replace(/<!--.*?-->/g,''),/20\s+leis encontradas/);
+ for(const h of hits)assert.ok(html.includes('/dashboard/legal-course/'+h.slug));
+ assert.ok(html.includes('find=estupro'));assert.ok(html.includes('>Estupro</mark>'));assert.ok(!html.includes('target="_blank"'));
+});
+test('Navigator provides an explicit law filter without mixing disciplines',()=>{
+ const {LibraryNavigation}=load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy});
+ const noop=()=>{};
+ const html=renderToStaticMarkup(React.createElement(LibraryNavigation,{items,area:'legislation',onArea:noop,query:'estupro',onQuery:noop,discipline:'Direito Penal',onDiscipline:noop,disciplines:[],topic:'all',onTopic:noop,topics:[],law:'codigo-penal',onLaw:noop,laws:[{slug:'codigo-penal',title:'Código Penal'}],contest:'all',onContest:noop,contests:[],count:1,searchingContent:false,onReset:noop}));
+ assert.match(html,/<option value="codigo-penal" selected="">Código Penal<\/option>/);
+ assert.ok(html.includes('Todas as leis da seleção'));assert.ok(!html.includes('<option value="armas"'));
+});
+test('A global explanation hit preserves the term and displays its explanation excerpt in the article',()=>{
+ const html=renderCourseSearch('',{find:'estupro'},{simples:'Estupro aparece nesta explicação.',pontos:[],atencao:[],exemplo:'',prova:[]});
+ assert.match(html,/<h2[^>]*>Art\. 2<\/h2>/);assert.ok(html.includes('>Estupro</mark>'));assert.ok(html.includes('Ver a explicação'));
+ assert.ok(!html.includes('Nenhum artigo corresponde'));
+});
+test('New queries never display the previous query data or error while debouncing, and scopes use separate cache keys',()=>{
+ const captures=[];
+ const {useContentSearch}=contentModule({react:{useEffect:()=>{},useState:()=>['estupro',()=>{}]},'@tanstack/react-query':{useQuery:options=>{captures.push(options);return {data:[{slug:'codigo-penal'}],isFetching:false,isError:true};}}});
+ const waiting=useContentSearch('homicidio','user',['hediondos']);
+ assert.equal(waiting.data,undefined);assert.equal(waiting.isFetching,true);assert.equal(waiting.isError,false);
+ assert.equal(captures[0].enabled,false);
+ useContentSearch('estupro','user',['hediondos']);
+ assert.deepEqual(JSON.parse(JSON.stringify(captures[1].queryKey)),['content-search','estupro','user',['hediondos']]);
+ const none=useContentSearch('estupro','user',[]);assert.equal(none.data.length,0);assert.equal(none.isFetching,false);
+});
+function renderGlobalLibrary(filters={}) {
+ let stateCall=0;
+ const fixture=[...items,sample('legislacao-hediondos-revisao','Legislação Especial')];
+ const rawHits=['codigo-penal','hediondos','armas'].map(slug=>({key:slug+':art-1',slug,lawTitle:courseSearchLibrary.libraryLawResultTitle(slug),chapter:'Crimes',unitKey:'art-1',label:'Art. 1',snippet:'Estupro no texto.',via:'texto'}));
+ const calls=[];const none=()=>null;
+ const fakeSearch={useContentSearch:(query,user,allowed)=>{if(user)calls.push(allowed);return {data:rawHits.filter(hit=>!allowed||allowed.includes(hit.slug)),isFetching:false,isError:false,refetch:none};}};
+ const chronology=load('src/lib/legalChronology.ts');
+ const match=load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary});
+ const router={createFileRoute:()=>options=>({...options,useSearch:()=>({q:'estupro'})}),Link:({to,params,search,children,...props})=>React.createElement('a',{...props,href:to.replace('$slug',params?.slug??'')+(search?'?'+new URLSearchParams(search):'')},children)};
+ const courses=laws.LEGAL_LIBRARY.map(c=>({...c,id:c.slug,overview:{current_units:1,chapters:[]}}));
+ const catalog=load('src/components/library/LegalPathCatalog.tsx',{'@/lib/legalCourses':{useLegalCourses:()=>({data:courses})},'@/lib/legalLibrary':laws,'@/lib/legalChronology':chronology,'@/lib/libraryOrganization':organization,'@/lib/librarySearch':courseSearchLibrary,'./LibrarySearchMatch':match,'@tanstack/react-router':router});
+ const results=load('src/components/library/ContentSearchResults.tsx',{'@/lib/contentSearch':fakeSearch,'@/lib/glossary':{searchGlossary:()=>[]},'@/lib/librarySearch':courseSearchLibrary,'@/lib/legalCourseSearch':courseSearch,'@/lib/legalChronology':chronology,'./LibrarySearchMatch':match,'@tanstack/react-router':router});
+ const stubs={
+  react:{...React,useState:initial=>{const pair=React.useState(initial);const name=['query','area','discipline','contest','topic','law'][stateCall++];return name&&filters[name]!==undefined?[filters[name],pair[1]]:pair;}},
+  '@tanstack/react-router':router,'@/lib/filterTaxonomy':sharedTaxonomy,'@/lib/librarySearch':courseSearchLibrary,'@/lib/librarySearchScope':searchScope,'@/lib/contentSearch':fakeSearch,
+  '@/lib/legalLibrary':laws,'@/lib/libraryOrganization':organization,'@/lib/legalChronology':chronology,
+  '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},'@/lib/studyMaterials':{useStudyMaterialList:()=>({data:fixture,isPending:false,isError:false}),useLibrarySearchContent:()=>({data:[],isPending:false,isError:false}),readSlugs:()=>[]},
+  '@/components/library/LegalPathCatalog':catalog,'@/components/library/ContentSearchResults':results,'@/components/library/LibrarySearchMatch':match,
+  '@/components/library/LibraryNavigation':load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy}),
+ };
+ const nullModule=new Proxy({}, {get:()=>none});
+ for(const m of readFileSync('src/routes/dashboard/library.index.tsx','utf8').matchAll(/from "([^"]+)"/g))if(!stubs[m[1]])stubs[m[1]]=nullModule;
+ const {LibraryIndex}=load('src/routes/dashboard/library.index.tsx',stubs);
+ return {html:renderToStaticMarkup(React.createElement(LibraryIndex)),calls};
+}
+test('Library page unifies guide and article results and passes selected discipline and law into the actual search panel',()=>{
+ const all=renderGlobalLibrary();
+ for(const slug of ['codigo-penal','hediondos','armas'])assert.ok(all.html.includes('/dashboard/legal-course/'+slug));
+ const cp=renderGlobalLibrary({discipline:'Direito Penal'});
+ assert.deepEqual(JSON.parse(JSON.stringify(cp.calls[0])),['codigo-penal']);
+ assert.ok(cp.html.includes('/dashboard/legal-course/codigo-penal'));assert.ok(!cp.html.includes('/dashboard/legal-course/hediondos'));assert.ok(!cp.html.includes('/dashboard/legal-course/armas'));
+ const hed=renderGlobalLibrary({law:'hediondos'});
+ assert.deepEqual(JSON.parse(JSON.stringify(hed.calls[0])),['hediondos']);
+ assert.ok(hed.html.includes('/dashboard/legal-course/hediondos'));assert.ok(!hed.html.includes('/dashboard/legal-course/codigo-penal'));
+ const general=renderGlobalLibrary({area:'general'});assert.equal(general.calls[0].length,0);assert.ok(!general.html.includes('Resultados nos artigos'));
 });
