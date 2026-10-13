@@ -1,0 +1,47 @@
+{
+  "verified_at": "2026-10-13T21:23:14.874595+00:00",
+  "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+  "source_url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/084_PC_CE_001_01.pdf",
+  "items": [
+    {
+      "id": "e8c20b4b-eab1-44cb-b95a-0c72029779a6",
+      "item": 29,
+      "page": 5,
+      "answer_preserved": "B",
+      "reason": "Conferência visual confirma enunciado, caso concreto e cinco alternativas completos na mesma página, sem texto externo necessário.",
+      "before_sha256": "78e9d3016eacfb9d963c50049981fbfb60ac084dae2642eb9ef96e889be088cc",
+      "after_sha256": "78e9d3016eacfb9d963c50049981fbfb60ac084dae2642eb9ef96e889be088cc",
+      "raw_preserved": true
+    },
+    {
+      "id": "ad48f79a-ff73-4893-8561-4464e9041c94",
+      "item": 33,
+      "page": 6,
+      "answer_preserved": "D",
+      "reason": "Erro de extração: comando incluído na alternativa A. Comando restaurado ao início e alternativa A separada, conforme conferência visual do caderno. Nenhuma opção ou gabarito alterado.",
+      "before_sha256": "8cd0530b5e917e2c03c01c91a403b9d457ffcef25be46837ec45943d2547787c",
+      "after_sha256": "e7fa6ffbe64a4050e3284873d6e03faefa802aa4b29fb6a0763780de2c5a67d2",
+      "raw_preserved": true
+    },
+    {
+      "id": "adca067e-e7de-4a11-a290-259230615939",
+      "item": 41,
+      "page": 8,
+      "answer_preserved": "D",
+      "reason": "Erro de extração: comando incluído na alternativa A. Comando restaurado ao início e alternativa A separada, conforme conferência visual do caderno. Nenhuma opção ou gabarito alterado.",
+      "before_sha256": "923e76926cd6638b011021dccddfc2671861849dbd47f13bdb071c3988046112",
+      "after_sha256": "5524cb958d074b3a626b77ced621f27fca7b8ab077214a44815e2b20510916fc",
+      "raw_preserved": true
+    },
+    {
+      "id": "8d3646ff-a884-4ec0-976e-a22a5342a9e1",
+      "item": 46,
+      "page": 8,
+      "answer_preserved": "C",
+      "reason": "Erro de extração: comando incluído na alternativa A. Comando restaurado ao início e alternativa A separada, conforme conferência visual do caderno. Nenhuma opção ou gabarito alterado.",
+      "before_sha256": "4fa93b9369789f2df7370720f04c869a98ab03005c784cd771d8b07a10c5ca10",
+      "after_sha256": "74f223b55bd5d73908ac39a339028678275c5b65801b718fbac32301cea3ae25",
+      "raw_preserved": true
+    }
+  ]
+}
