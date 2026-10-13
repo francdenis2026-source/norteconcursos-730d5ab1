@@ -1,0 +1,331 @@
+{
+  "checked_at": "2026-10-13T23:28:37.357235+00:00",
+  "batch": 4,
+  "new_reviews": 54,
+  "updates": 56,
+  "own_refinements": [
+    "art-108",
+    "art-149"
+  ],
+  "publication": {
+    "version": "2026-10-11-lep-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 56,
+    "published": 56,
+    "improved": 56,
+    "preserved": 0,
+    "verified_at": "2026-10-13T23:23:02.094Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T23:28:37.357235+00:00",
+    "authored_explanations_confirmed": 56,
+    "untargeted_explanations_preserved": 3457,
+    "untargeted_course_explanations_preserved": 160,
+    "prior_revisions_retained_in_manifest": 56,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses"
+    ],
+    "protected_existing_rows_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "content_sources"
+    ],
+    "authorized_syllabus_source_repair": null,
+    "concurrent_foreign_metadata_additions": {
+      "kind": "explicit_foreign_metadata_with_edition_source_repairs",
+      "target_course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+      "target_edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+      "tables": {
+        "syllabus_topics": [
+          {
+            "id": "0cdabffb-8e0b-5224-88b6-72f79477bb4f",
+            "sha256": "87e0663aa8d6fba47d51c891c9cdcea8ebe0a6b60483a6756b47a9a509c7b6f3",
+            "title": null
+          },
+          {
+            "id": "8c6ac292-a6ad-5c95-badb-b4cab78d30ed",
+            "sha256": "eae3bca3fd2d3b5bebcb1a3f06d902068d257269a773dbc4f6645479a342d6cc",
+            "title": null
+          }
+        ],
+        "content_sources": [
+          {
+            "id": "6a690f81-51e9-53d4-a722-3ad1041846d6",
+            "sha256": "c5e082673bf09c9eff16c7b15ab54d9ad7bc2edd873f9f4e5c68af39c7557f68",
+            "title": "Lei do Cheque — texto oficial"
+          },
+          {
+            "id": "893ad1e6-2393-5a4a-9512-2533e86c2a1e",
+            "sha256": "2b1ffff4ddc7bafaee8d25837e91f15d13354cfe4466b23102b2bb14cd35010f",
+            "title": "Constituição do Ceará — compilação até EC 136/2026"
+          },
+          {
+            "id": "a05ca69c-66bc-58f1-b771-35c3fdcd1a34",
+            "sha256": "c8871d6747028d0c92e94636efff72f039e7413dd8d433d03983bfca278627c6",
+            "title": "STJ — AgInt no AREsp 2.500.935/SP"
+          },
+          {
+            "id": "abe121a7-b101-58e7-bd67-55faf703c703",
+            "sha256": "dfe5d21ac86b5da07355df7ed7f54b2a5fb40f1ecf93fbd09fc1e4e3a52c071e",
+            "title": "STJ — Tema repetitivo 1004"
+          },
+          {
+            "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+            "sha256": "23bed67021232cf4e0fd17c4da267e75387a51e985caf65d6777b2e1d274990e",
+            "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão"
+          }
+        ]
+      },
+      "edition_source_repairs": [
+        {
+          "expected": {
+            "id": "1053c168-c3e1-4e07-b101-37649647f535",
+            "contest_name": "Polícia Civil do Estado de Sergipe",
+            "role_name": "Agente de Polícia Judiciária",
+            "contest_year": 2021,
+            "exam_board": "Cebraspe",
+            "source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+            "status": "active",
+            "created_at": "2026-10-13T22:29:48.226006+00:00"
+          },
+          "applied": {
+            "id": "1053c168-c3e1-4e07-b101-37649647f535",
+            "contest_name": "Polícia Civil do Estado de Sergipe",
+            "role_name": "Agente de Polícia Judiciária",
+            "contest_year": 2021,
+            "exam_board": "Cebraspe",
+            "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+            "status": "active",
+            "created_at": "2026-10-13T22:29:48.226006+00:00"
+          },
+          "source": {
+            "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+            "source_type": "edital",
+            "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+            "issuer": "Cebraspe / Estado de Sergipe",
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+            "published_on": null,
+            "checked_at": "2026-10-13T23:26:46.355+00:00",
+            "status": "vigente",
+            "is_official": true,
+            "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+          }
+        },
+        {
+          "expected": {
+            "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+            "contest_name": "Polícia Civil do Estado de Sergipe",
+            "role_name": "Escrivão de Polícia",
+            "contest_year": 2021,
+            "exam_board": "Cebraspe",
+            "source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+            "status": "active",
+            "created_at": "2026-10-13T22:29:51.385401+00:00"
+          },
+          "applied": {
+            "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+            "contest_name": "Polícia Civil do Estado de Sergipe",
+            "role_name": "Escrivão de Polícia",
+            "contest_year": 2021,
+            "exam_board": "Cebraspe",
+            "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+            "status": "active",
+            "created_at": "2026-10-13T22:29:51.385401+00:00"
+          },
+          "source": {
+            "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+            "source_type": "edital",
+            "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+            "issuer": "Cebraspe / Estado de Sergipe",
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+            "published_on": null,
+            "checked_at": "2026-10-13T23:26:46.355+00:00",
+            "status": "vigente",
+            "is_official": true,
+            "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+          }
+        }
+      ],
+      "note": "Dois tópicos de outra edição, cinco fontes novas e correção exclusivamente de source_id em duas edições PC-SE, alheias à LEP. Alterações registradas por IDs, hashes e linhas completas. Nenhuma dessas alterações foi escrita pelo importador do lote. Snapshot por cursor não é transação entre tabelas."
+    },
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source. Optional foreign topic/edition/source additions require exact ID/hash evidence and preservation of every prior row; additions in the target edition are rejected. Foreign edition source repairs also require exact before/after rows, only source_id changed, and a registered official current edital; target edition changes are rejected. No broad protected-table exemption."
+  },
+  "compiled_source": {
+    "slug": "lep",
+    "title": "Lei 7.210/1984 — Lei de Execução Penal",
+    "units": 56,
+    "scope_type": "targeted_correction",
+    "course_current_units": 215,
+    "target_unit_keys": [
+      "art-150",
+      "art-151",
+      "art-152",
+      "art-153",
+      "art-154",
+      "art-155",
+      "art-156",
+      "art-157",
+      "art-158",
+      "art-159",
+      "art-160",
+      "art-161",
+      "art-162",
+      "art-163",
+      "art-164",
+      "art-165",
+      "art-166",
+      "art-167",
+      "art-168",
+      "art-169",
+      "art-170",
+      "art-171",
+      "art-172",
+      "art-173",
+      "art-174",
+      "art-175",
+      "art-176",
+      "art-177",
+      "art-178",
+      "art-179",
+      "art-180",
+      "art-181",
+      "art-183",
+      "art-184",
+      "art-185",
+      "art-186",
+      "art-187",
+      "art-188",
+      "art-189",
+      "art-190",
+      "art-191",
+      "art-192",
+      "art-193",
+      "art-194",
+      "art-195",
+      "art-196",
+      "art-197",
+      "art-198",
+      "art-199",
+      "art-200",
+      "art-201",
+      "art-202",
+      "art-203",
+      "art-204",
+      "art-108",
+      "art-149"
+    ],
+    "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+    "source_sha256": "521ed0af59844f045fc3a5741e087629072ba9b4840eb22e8938b61299e241f9",
+    "source_checked_at": "2026-10-13T22:55:21.606634+00:00"
+  },
+  "sources": [
+    {
+      "name": "stj-sum527",
+      "url": "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29",
+      "status": 200,
+      "bytes": 22265,
+      "sha256": "c5725302e978925b31939cb7b7f729a013b50594d2221114828b2c8cd7fc1b6a",
+      "checked_at": "2026-10-13T22:56:24.363544+00:00",
+      "usable": true
+    },
+    {
+      "name": "lei10216",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+      "status": 200,
+      "bytes": 13964,
+      "sha256": "e316324f27b7a652fa83b89385818eed52ef32152fde830905dfda1656762351",
+      "checked_at": "2026-10-13T22:56:46.927345+00:00",
+      "usable": true
+    },
+    {
+      "name": "cp-current",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "status": 200,
+      "sha256": "3c76284aae70b2800e4254c57680c6e2b0864e44140f5440ea65569452a1b374",
+      "bytes": 683589,
+      "checked_at": "2026-10-13T22:28:13.169928+00:00",
+      "usable": true
+    },
+    {
+      "name": "stj-tema931",
+      "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=931&cod_tema_final=931",
+      "status": 200,
+      "bytes": 74127,
+      "sha256": "99f22f820b221d541ef12d3a66ae7df75418fcc41020d8668665c18af508e729",
+      "checked_at": "2026-10-13T23:06:24.833623+00:00",
+      "usable": true
+    },
+    {
+      "name": "decreto8858",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8858.htm",
+      "status": 200,
+      "bytes": 13286,
+      "sha256": "a7eda9a5d9c0cf745eee3cedaa60d7a0dc620a4841316f055d25e764ab52381a",
+      "checked_at": "2026-10-13T23:08:50.938860+00:00",
+      "usable": true
+    },
+    {
+      "name": "constituicao",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "status": 200,
+      "bytes": 1840587,
+      "sha256": "29bf27cf7f230d57a55b54725f1b3d6308c0238815d72cbbbf400cb3f8ce8cfe",
+      "checked_at": "2026-10-13T23:08:54.827807+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-multa-pobreza",
+      "url": "https://noticias.stf.jus.br/postsnoticias/supremo-permite-fim-de-processo-de-condenado-que-cumpriu-pena-de-prisao-e-nao-tem-condicoes-de-pagar-multa/",
+      "status": 200,
+      "bytes": 65682,
+      "sha256": "485ea82739ac00e40790ab28919e5ed59c93a9908c844e094ac5d7c7fa0b9acf",
+      "checked_at": "2026-10-13T23:08:51.746068+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-sv25",
+      "url": "https://noticias.stf.jus.br/postsnoticias/prisao-civil-de-depositario-infiel-e-progressao-de-regime-em-crime-hediondo-sao-tema-de-duas-novas-sumulas-vinculantes/",
+      "status": 200,
+      "bytes": 66149,
+      "sha256": "04795bdd9e512216180e72db746f764f21e0285d8fced44222150f2d91f95f20",
+      "checked_at": "2026-10-13T23:09:50.365260+00:00",
+      "usable": true
+    },
+    {
+      "name": "stf-algemas",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-nega-pedidos-que-apontavam-descumprimento-de-sumula-que-limita-uso-de-algemas/",
+      "status": 200,
+      "bytes": 66862,
+      "sha256": "05b106e72918eb9fcfceeeff53b84fb606b127d68cf4da69f80590b2a0a63a17",
+      "checked_at": "2026-10-13T23:09:50.415291+00:00",
+      "usable": true
+    }
+  ],
+  "reused_sources": [
+    "lep-lote-3-review-2026-10-13.json"
+  ],
+  "validation": {
+    "tests": 448,
+    "typecheck": "passed",
+    "build": "passed",
+    "readback_guard_tests": 10,
+    "snapshot_concurrency_tests": 2
+  },
+  "limits": [
+    "215/215 unidades atuais têm metadados válidos. Não certifica toda jurisprudência, normas locais, políticas CNJ ou efeitos de implantação.",
+    "HCTP e medidas: integração com Lei 10.216 e Súmula 527, sem internação automática por diagnóstico ou medida perpétua. Limites de conversão têm regime específico não universalizado.",
+    "Multa: CP 51/ADI 7032 e Tema 931 examinados; não prisão por pobreza ou remessa cível automática baseada em texto antigo.",
+    "Algemas: Decreto 8.858 e SV 11; não certificada toda hipótese concreta de nulidade ou regulamento local.",
+    "Datas/prazos originais de implantação não reabertos a cada atualização; não certificada execução histórica de todos os atos.",
+    "Snapshot offset com duplicados foi rejeitado. Nova coleta por cursor, verificada sem duplicados; não é transação global entre tabelas.",
+    "Duas edições PC-SE tiveram source_id corrigido por trabalho alheio: diferenças exatas, fonte oficial e preservação dos outros campos conferidas. Não atribuir essas alterações ao importador LEP."
+  ]
+}

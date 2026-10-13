@@ -43,4 +43,25 @@ class ReadbackGuards(unittest.TestCase):
  def test_addition_in_target_edition_rejected_even_with_matching_hash(self):
   row=self.after['syllabus_topics'][-1];row['edition_id']='edition';self.manifest['tables']['syllabus_topics'][0]['sha256']=digest(row);self.assertNotEqual(self.run_check().returncode,0)
 
+ def prepare_foreign_source_repair(self):
+  prior=dict(id='foreign-edition',source_id='source',contest_name='Another contest')
+  applied={**prior,'source_id':'foreign-source'}
+  self.before['syllabus_editions'].append(prior);self.after['syllabus_editions'].append(applied)
+  registered=self.after['content_sources'][-1];registered.update(title='Edital oficial',source_type='edital',status='vigente',is_official=True)
+  self.manifest['tables']['content_sources'][0]['sha256']=digest(registered)
+  self.manifest['kind']='explicit_foreign_metadata_with_edition_source_repairs'
+  self.manifest['edition_source_repairs']=[dict(expected=copy.deepcopy(prior),applied=copy.deepcopy(applied),source=copy.deepcopy(registered))]
+ def test_exact_foreign_source_repair_is_separate_from_immutability(self):
+  self.prepare_foreign_source_repair();self.assertNotEqual(self.run_check(False).returncode,0)
+  result=self.run_check();self.assertEqual(result.returncode,0,result.stderr)
+  report=json.loads((self.root/'report.json').read_text());self.assertNotIn('syllabus_editions',report['protected_existing_rows_unchanged'])
+ def test_foreign_repair_cannot_change_other_fields(self):
+  self.prepare_foreign_source_repair();self.after['syllabus_editions'][-1]['contest_name']='Altered'
+  self.manifest['edition_source_repairs'][0]['applied']=copy.deepcopy(self.after['syllabus_editions'][-1]);self.assertNotEqual(self.run_check().returncode,0)
+ def test_foreign_repair_cannot_change_target_edition(self):
+  self.prepare_foreign_source_repair();prior=self.before['syllabus_editions'][0];applied={**prior,'source_id':'foreign-source'}
+  self.after['syllabus_editions'][0]=applied
+  self.manifest['edition_source_repairs']=[dict(expected=prior,applied=applied,source=self.after['content_sources'][-1])]
+  self.assertNotEqual(self.run_check().returncode,0)
+
 if __name__=='__main__':unittest.main()
