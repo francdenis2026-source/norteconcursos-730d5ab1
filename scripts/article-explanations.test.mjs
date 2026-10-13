@@ -1,4 +1,20 @@
 import test from 'node:test';
+test('CTB free-flow examples retain ratified 2026 transition and current payment trigger',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-05-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('209-a').simples,/duzentos dias.*29\/4\/2026.*13\/10.*não configura/s);
+ assert.match(get('209-a').atencao.join(' '),/aprovada.*1028.*25\/8\/2026/s);
+ assert.match(get('209-a').pontos.join(' '),/mais favorável.*CONFIRMAÇÃO DO PROCESSAMENTO/s);
+ assert.match(get('209-a').prova.join(' '),/gratuita/);
+ assert.equal(legalStudyCaveat('transito','art-209-a').literalPractice,false);
+});
+test('CTB speed thresholds and residual vehicle seizure cannot teach old sanctions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-05-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(218).exemplo,/CONSIDERADA.*90.*exatamente 50%.*grave.*91/s);
+ assert.match(get(218).atencao.join(' '),/2020.*redação antiga.*depois.*não restaurar/s);
+ assert.match(get(231).simples,/penalidade de apreensão.*não deve.*revogada/s);
+ assert.match(get(244).pontos.join(' '),/MENOR DE DEZ OU.*INDICAR MANOBRA.*semirreboque/s);
+ for(const n of [218,231,244])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
 test('CTB licensing integrates 2026 electric exception and first A/B toxicology without universal periodic tests',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-04-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
  assert.match(get(143).pontos.join(' '),/14\/9\/2026.*predominantemente elétrica.*4.250/s);

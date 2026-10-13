@@ -1,6 +1,6 @@
 # CTB — revisão em andamento
 
-Supabase conferido em 13/10/2026: **217/365 unidades atuais com aprovação editorial válida; 148 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
+Supabase conferido em 13/10/2026: **267/365 unidades atuais com aprovação editorial válida; 98 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
 
 Cada item do lote tem caso resolvido, variação contrastante, dois exercícios com resposta explicada e termo definido. Foram corrigidas omissões e generalizações, entre elas estacionamentos privados coletivos, composição do SNT/Contran, mandato dos Conselhos, registros nacionais, competências reorganizadas em 2023, delegação de privativas, alcance da polícia legislativa, prioridade de veículos especiais e distinção entre buzina, faróis e DRL. Os alertas antigos sobre apreensão/remoção foram preservados.
 
@@ -12,7 +12,7 @@ Readback: **50/50**, todos os campos autorais e hashes, 3.463 explicações fora
 
 Validação: 421 testes, TypeScript e build aprovados, além das verificações de integração. Pacotes retêm as 50 versões anteriores. Fontes brutas, snapshots e logs ficam apenas nos outputs ignorados; credenciais não são versionadas.
 
-Retomar no **art. 193**. Não declarar conclusão do CTB; a comparação textual não substitui revisão pedagógica/jurídica. Inventário legal geral: **2.660/3.511 revisadas, 851 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
+Retomar no **art. 248**. Não declarar conclusão do CTB; a comparação textual não substitui revisão pedagógica/jurídica. Inventário legal geral: **2.710/3.511 revisadas, 801 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
 
 ## Segundo lote
 
@@ -31,3 +31,11 @@ Mais 50 itens (arts. 93–139-B, com recorte explícito) publicados e conferidos
 Mais 50 itens (arts. 140–192, recorte explícito) publicados e conferidos. Corrigidas categorias, exceção de elétrica/híbrida da Lei 15.503/2026, toxicológico na primeira A/B, exceções e diferenças entre exames, formação pela Resolução 1020 e procedimentos de álcool pela Resolução 1031. Fichas alteradas do Manual 985 ainda em vacância até 17/10/2026; não tratadas como vigentes em 13/10. Corrigidos também remoção não universal e ausência de menor gravidade universal da parada em relação ao estacionamento.
 
 50/50 no readback; 3.463 explicações externas ao lote, incluindo 315 do CTB, e as seis tabelas protegidas preservadas. 431 testes, TypeScript e build passaram. Lote anterior enviado no commit `32b51ac`. Esta retomada soma 200 novos itens aprovados, preservando os 17 anteriores. Limites de implantação do toxicológico A/B e distinções entre texto legal/procedimento regulamentar estão explícitos.
+
+## Quinto lote
+
+Mais 50 itens (arts. 193–247, recorte explícito) publicados e conferidos. Corrigidos transição de free flow aprovada pela Resolução 1028/2026, marco do prazo de pagamento, exemplos de percentuais com velocidade considerada e contraste entre ultrapassagem, trânsito pelo acostamento, preferência e motocicletas. Pena residual de apreensão no art. 231 não tratada como atual.
+
+50/50 no readback; 3.463 explicações externas ao lote, incluindo 315 do CTB, preservadas. Todos os registros anteriores das seis tabelas protegidas permaneceram idênticos. Foram adicionados pela outra conta 23 tópicos de edição diferente e 13 fontes: evidência explícita por ID/hash, sem ocultar o crescimento das tabelas ou aceitar alteração de registros anteriores. Seis testes negativos/positivos do readback passaram; 434 testes de aplicação, TypeScript e build passaram. Lote anterior na main: `3e3834e`. A retomada soma 250 novos itens aprovados.
+
+A main recebeu migração concorrente `88d90c3` de rascunhos dos arts. 193–201. Seu conteúdo é preservado no Git; ajustar inserção para não sobrescrever registros já existentes, em especial as aprovações correntes. As demais mudanças remotas tratam principalmente do treinador e não contam como novas revisões editoriais da biblioteca.

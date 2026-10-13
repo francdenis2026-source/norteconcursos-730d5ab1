@@ -32,7 +32,7 @@ for id,u in old_units.items():
   concurrent.append(dict(table='legal_course_units',unit_id=id,course_id=u['course_id'],unit_key=u['unit_key'],fields=[f for f in u if u[f]!=new_units[id].get(f)],before_sha256=hashlib.sha256(json.dumps(u,sort_keys=True).encode()).hexdigest(),after_sha256=hashlib.sha256(json.dumps(new_units[id],sort_keys=True).encode()).hexdigest()))
 protected=['study_materials','study_material_enrichments','legal_courses','syllabus_topics','syllabus_editions','content_sources']
 source_repair=None
-if len(sys.argv)>7:
+if len(sys.argv)>7 and sys.argv[7]!='-':
  source_repair=json.loads(Path(sys.argv[7]).read_text())
  assert source_repair['table']=='syllabus_editions' and source_repair['changed_fields']==['source_id']
  prior=source_repair['expected'];applied=source_repair['applied']
@@ -43,15 +43,35 @@ if len(sys.argv)>7:
  assert registered==source_repair['source'] and registered['is_official'] and registered['source_type']=='edital' and registered['status']=='vigente'
  assert not re.search(r'\b(caderno|prova objetiva|gabarito)\b',registered.get('title',''),re.I)
  assert next(t for t in read(after,'syllabus_topics') if t['id']==cp['syllabus_topic_id'])['edition_id']==prior['id']
+foreign_additions=json.loads(Path(sys.argv[8]).read_text()) if len(sys.argv)>8 else None
+if foreign_additions:
+ assert foreign_additions['kind']=='explicit_foreign_metadata_additions'
+ assert set(foreign_additions['tables']).issubset({'syllabus_topics','content_sources'})
+ assert foreign_additions['target_course_id']==cp['id']
+ target_topic=next(t for t in read(after,'syllabus_topics') if t['id']==cp['syllabus_topic_id'])
+ assert foreign_additions['target_edition_id']==target_topic['edition_id']
+added_tables=[]
 for t in protected:
  expected_table=read(baseline,t)
  if t=='syllabus_editions' and source_repair:expected_table=[source_repair['applied'] if row['id']==source_repair['expected']['id'] else row for row in expected_table]
- assert expected_table==read(after,t),t
+ actual_table=read(after,t)
+ if foreign_additions and t in foreign_additions['tables']:
+  prior={r['id']:r for r in expected_table};actual={r['id']:r for r in actual_table}
+  assert len(prior)==len(expected_table) and len(actual)==len(actual_table)
+  assert all(actual.get(id)==row for id,row in prior.items()),(t,'Existing protected metadata changed or deleted')
+  allowed={r['id']:r for r in foreign_additions['tables'][t]}
+  assert len(allowed)==len(foreign_additions['tables'][t]) and set(actual)-set(prior)==set(allowed),(t,'Unlisted metadata addition')
+  for id,evidence in allowed.items():
+   row=actual[id]
+   assert hashlib.sha256(json.dumps(row,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()==evidence['sha256'],(t,id,'Metadata addition differs from explicit evidence')
+   if t=='syllabus_topics':assert row['edition_id']!=target_topic['edition_id'],(id,'Addition in target edition is not foreign')
+  added_tables.append(t)
+ else:assert expected_table==actual_table,t
 for id in set(new)-set(old):
  assert new_units[id]['course_id']!=cp['id'],'Target course explanation unexpectedly added'
  concurrent.append(dict(table='legal_unit_explanations',unit_id=id,course_id=new_units[id]['course_id'],unit_key=new_units[id]['unit_key'],added=True))
 for id in set(new_units)-set(old_units):
  assert new_units[id]['course_id']!=cp['id'],'Target course unit unexpectedly added'
  concurrent.append(dict(table='legal_course_units',unit_id=id,course_id=new_units[id]['course_id'],unit_key=new_units[id]['unit_key'],added=True))
-out=dict(verified_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),authored_explanations_confirmed=len(targets),untargeted_explanations_preserved=unchanged,untargeted_course_explanations_preserved=cp_unchanged,prior_revisions_retained_in_manifest=len(targets),timestamp_only_changes=[],protected_tables_unchanged=[t for t in protected if not(source_repair and t=='syllabus_editions')],authorized_syllabus_source_repair=source_repair,course_units_unchanged=True,concurrent_other_course_changes=concurrent,note='Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source; no broad protected-table exemption.')
-dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in out.items() if k not in ['concurrent_other_course_changes','protected_tables_unchanged','authorized_syllabus_source_repair']});print('Observed concurrent outside target course changes:',len(concurrent));print('Explicit syllabus source correction verified:',bool(source_repair))
+out=dict(verified_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),authored_explanations_confirmed=len(targets),untargeted_explanations_preserved=unchanged,untargeted_course_explanations_preserved=cp_unchanged,prior_revisions_retained_in_manifest=len(targets),timestamp_only_changes=[],protected_tables_unchanged=[t for t in protected if not(source_repair and t=='syllabus_editions') and t not in added_tables],protected_existing_rows_unchanged=[t for t in protected if not(source_repair and t=='syllabus_editions')],authorized_syllabus_source_repair=source_repair,concurrent_foreign_metadata_additions=foreign_additions,course_units_unchanged=True,concurrent_other_course_changes=concurrent,note='Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source. Optional foreign topic/source additions require exact ID/hash evidence and preservation of every prior row; topics in the target edition are rejected. No broad protected-table exemption.')
+dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in out.items() if k not in ['concurrent_other_course_changes','protected_tables_unchanged','protected_existing_rows_unchanged','authorized_syllabus_source_repair','concurrent_foreign_metadata_additions']});print('Observed concurrent outside target course changes:',len(concurrent));print('Explicit syllabus source correction verified:',bool(source_repair));print('Explicit foreign metadata addition evidence checked:',bool(foreign_additions))
