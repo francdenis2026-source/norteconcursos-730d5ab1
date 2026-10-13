@@ -1,0 +1,1741 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:43:43.762397+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 28,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-733",
+        "art-734",
+        "art-735",
+        "art-736",
+        "art-737",
+        "art-738",
+        "art-739",
+        "art-740",
+        "art-741",
+        "art-742",
+        "art-743",
+        "art-744",
+        "art-745",
+        "art-746",
+        "art-747",
+        "art-748",
+        "art-749",
+        "art-750",
+        "art-751",
+        "art-752",
+        "art-753",
+        "art-754",
+        "art-755",
+        "art-756",
+        "art-757",
+        "art-758",
+        "art-759",
+        "art-760"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-733",
+      "unit_id": "bfea33ed-2b54-523a-a7fb-6659a2a225df",
+      "content_sha256": "82602524b7ff442a2b2fb66528597b1e213b855b1727a2d9700141fdda092197",
+      "simples": "Extinção do livramento exige integrar CP89–90, LEP146 e Súmula617/STJ.",
+      "pontos": [
+        "Sem suspensão ou revogação antes do fim, considerar orientação sumulada.",
+        "Tema1367/STJ de2026: nova pena por delito do período inicia após fim do benefício na hipótese examinada.",
+        "Não cumprir simultaneamente duas penas não unificadas."
+      ],
+      "atencao": [
+        "Não presumir prorrogação automática por notícia de crime; verificar ato de suspensão/revogação e situação do período."
+      ],
+      "exemplo": "Período acaba sem suspensão ou revogação; examina-se extinção conforme Súmula617. Variação: Preso por delito cometido no período, depois extinto sem suspensão/revogação, tem termo da nova execução examinado pelo Tema1367.",
+      "prova": [
+        "Mera notícia prorroga automaticamente todo livramento? Não.",
+        "Tema1367 afasta cumprimento simultâneo de penas não unificadas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Extinção do livramento",
+          "significado": "Conclusão do benefício segundo regime legal e jurisprudencial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA+INPATH%28TIPO%29+AND+617+INPATH%28NUM%29",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2026/29052026-Repetitivo-define-que-pena-por-crime-cometido-sob-livramento-condicional-comeca-apos-fim-do-beneficio.aspx"
+      ],
+      "expected": {
+        "unit_id": "bfea33ed-2b54-523a-a7fb-6659a2a225df",
+        "content_sha256": "82602524b7ff442a2b2fb66528597b1e213b855b1727a2d9700141fdda092197",
+        "simples": "O juiz, de ofício, ou a requerimento do interessado, do Ministério Público, ou do Conselho Penitenciário, julgará extinta a pena privativa de liberdade, se expirar o prazo do livramento sem revogação, ou, na hipótese do artigo anterior, for o liberado absolvido por sentença irrecorrível.",
+        "pontos": [
+          "Pena extinta se expirar o prazo do livramento sem revogação.",
+          "Ou se o liberado for absolvido da nova infração por sentença irrecorrível."
+        ],
+        "atencao": [
+          "Extinção da pena."
+        ],
+        "exemplo": "Findo o período do livramento sem revogação, a pena é declarada extinta.",
+        "prova": [
+          "Assertiva que mantém a pena após o fim do livramento sem revogação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 732"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-734",
+      "unit_id": "fe73db5b-5de3-5536-9031-ca6d52b3961d",
+      "content_sha256": "4760133868193063c9448b18243ce950bd19683c532c29dbadcd0a82b27c2e89",
+      "simples": "Graça ou indulto individual segue competência presidencial e limites constitucionais e legais.",
+      "pontos": [
+        "Pedido não garante concessão.",
+        "Examinar vedações e possibilidade de iniciativa própria.",
+        "Distinguir anistia legislativa."
+      ],
+      "atencao": [
+        "Não confundir Presidente com juiz da execução nem prometer perdão a crime legalmente excluído."
+      ],
+      "exemplo": "Condenado apresenta pedido individual para processamento pertinente. Variação: Anistia depende de regime legislativo, não da mesma decisão individual.",
+      "prova": [
+        "Pedido garante graça? Não.",
+        "Graça e anistia possuem mesmo regime? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Clemência individual",
+          "significado": "Benefício sujeito à competência e limites próprios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "fe73db5b-5de3-5536-9031-ca6d52b3961d",
+        "content_sha256": "4760133868193063c9448b18243ce950bd19683c532c29dbadcd0a82b27c2e89",
+        "simples": "A graça poderá ser provocada por petição do condenado, de qualquer pessoa do povo, do Conselho Penitenciário ou do Ministério Público, ressalvada, entretanto, ao Presidente da República, a faculdade de concedê-la espontaneamente.",
+        "pontos": [
+          "Provocada por petição do condenado, de qualquer pessoa, do Conselho ou do MP.",
+          "O Presidente pode concedê-la espontaneamente."
+        ],
+        "atencao": [
+          "A graça é individual; o indulto é coletivo."
+        ],
+        "exemplo": "Familiares peticionam a graça em favor do condenado.",
+        "prova": [
+          "Assertiva que restringe a provocação da graça ao próprio condenado erra."
+        ],
+        "termos": [
+          {
+            "termo": "Graça",
+            "significado": "Clemência individual concedida pelo Presidente da República."
+          }
+        ],
+        "remissoes": [
+          "Art. 735"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-735",
+      "unit_id": "0f53f525-bc1f-5b69-ae7d-4f4c092fa47f",
+      "content_sha256": "79415449433a9ec774f0acefc28597df6275ae368271430ecbfa6fb6efcc48dc",
+      "simples": "Pedido individual é instruído e encaminhado no regime pertinente, integrado à LEP188–191.",
+      "pontos": [
+        "Documentos subsidiam análise.",
+        "Conselho não substitui decisão presidencial."
+      ],
+      "atencao": [
+        "Não tratar remessa ao Ministério como concessão automática."
+      ],
+      "exemplo": "Pedido documentado percorre fluxo legal de apreciação. Variação: Documento faltante pode exigir esclarecimento, sem autorizar funcionário a conceder benefício.",
+      "prova": [
+        "Conselho concede graça sozinho? Não.",
+        "Documentos instruem análise? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução da graça",
+          "significado": "Preparação do pedido individual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "0f53f525-bc1f-5b69-ae7d-4f4c092fa47f",
+        "content_sha256": "79415449433a9ec774f0acefc28597df6275ae368271430ecbfa6fb6efcc48dc",
+        "simples": "A petição de graça, acompanhada dos documentos com que o impetrante a instruir, será remetida ao ministro da Justiça por intermédio do Conselho Penitenciário.",
+        "pontos": [
+          "Petição de graça vai ao ministro da Justiça por meio do Conselho Penitenciário."
+        ],
+        "atencao": [
+          "Trâmite pelo Conselho Penitenciário."
+        ],
+        "exemplo": "O Conselho Penitenciário encaminha ao ministro da Justiça a petição de graça.",
+        "prova": [
+          "Assertiva que envia a petição diretamente ao Presidente da República sem passar pelo Conselho erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 734"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-736",
+      "unit_id": "a3a368b1-67a4-52b3-a434-63be2cc9e9b4",
+      "content_sha256": "2a5dcaab488dbd7fbeee5311e6712de43b539a6d92daac754615350271ae91e5",
+      "simples": "Relatório e parecer subsidiam análise da clemência, observadas atribuições atuais do Conselho.",
+      "pontos": [
+        "Integrar LEP70,189–190.",
+        "Indulto por saúde tem exceção específica de parecer no70I."
+      ],
+      "atencao": [
+        "Não exigir indiscriminadamente parecer em hipótese legalmente excepcionada por saúde."
+      ],
+      "exemplo": "Órgão relata circunstâncias pertinentes para apreciação competente. Variação: Pedido baseado em saúde exige conferir exceção atual antes de impor barreira documental.",
+      "prova": [
+        "Parecer equivale à decisão presidencial? Não.",
+        "Hipótese de saúde exige atenção à exceção do70I? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Parecer de clemência",
+          "significado": "Subsídio consultivo conforme competência atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "a3a368b1-67a4-52b3-a434-63be2cc9e9b4",
+        "content_sha256": "2a5dcaab488dbd7fbeee5311e6712de43b539a6d92daac754615350271ae91e5",
+        "simples": "O Conselho Penitenciário, à vista dos autos do processo, e depois de ouvir o diretor do estabelecimento penal a que estiver recolhido o condenado, fará, em relatório, a narração do fato criminoso, examinará as provas, mencionará qualquer formalidade ou circunstância omitida na petição e exporá os antecedentes do condenado e seu procedimento depois do ato delituoso, opinando sobre o mérito do pedido.",
+        "pontos": [
+          "Conselho ouve o diretor do estabelecimento.",
+          "Relatório: fato criminoso, provas, omissões da petição, antecedentes e conduta posterior.",
+          "Opina sobre o mérito."
+        ],
+        "atencao": [
+          "Relatório do Conselho Penitenciário."
+        ],
+        "exemplo": "O Conselho elabora relatório e opina sobre o pedido de graça.",
+        "prova": [
+          "Assertiva que dispensa o relatório do Conselho Penitenciário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 735"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-737",
+      "unit_id": "5a1a7fbf-5d68-53b6-b4f4-1635c452073f",
+      "content_sha256": "1fda2d0ec59f9dd0ed2cdf97264074a7465e6eeeec1afbadc0c4e5147982256d",
+      "simples": "Processamento ministerial prepara submissão da petição à autoridade presidencial competente.",
+      "pontos": [
+        "Autos ou peças podem ser requisitados.",
+        "Integrar CF84XII e limites legais."
+      ],
+      "atencao": [
+        "Ministro processar pedido não significa poder conceder todo benefício sem delegação válida e seus limites."
+      ],
+      "exemplo": "Documentação é preparada para apreciação pertinente. Variação: Competência ou delegação deve ser conferida, não presumida por cargo administrativo.",
+      "prova": [
+        "Processamento é concessão automática? Não.",
+        "Competência deve ser verificada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Apreciação presidencial",
+          "significado": "Exame da clemência pela autoridade competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "5a1a7fbf-5d68-53b6-b4f4-1635c452073f",
+        "content_sha256": "1fda2d0ec59f9dd0ed2cdf97264074a7465e6eeeec1afbadc0c4e5147982256d",
+        "simples": "Processada no Ministério da Justiça, com os documentos e o relatório do Conselho Penitenciário, a petição subirá a despacho do Presidente da República, a quem serão presentes os autos do processo ou a certidão de qualquer de suas peças, se ele o determinar.",
+        "pontos": [
+          "Petição processada no Ministério da Justiça.",
+          "Segue ao despacho do Presidente da República.",
+          "Autos ou certidões se ele determinar."
+        ],
+        "atencao": [
+          "Decisão final do Presidente da República."
+        ],
+        "exemplo": "O Ministério da Justiça encaminha a petição ao Presidente para despacho.",
+        "prova": [
+          "Assertiva que atribui ao ministro da Justiça a decisão final da graça erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 736"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-738",
+      "unit_id": "6e74c458-a658-5c1a-a484-02e5b5fe60bd",
+      "content_sha256": "0a8f024707453537dfaeae029e26c4528ebf55a24aaca6f3f39077492f753283",
+      "simples": "Decreto concedido exige decisão judicial que extinga pena ou ajuste execução na comutação, conforme termos aplicáveis.",
+      "pontos": [
+        "Indulto total e redução não têm efeito idêntico.",
+        "Conferir abrangência do ato."
+      ],
+      "atencao": [
+        "Não apagar toda consequência civil ou condenatória só porque houve clemência penal."
+      ],
+      "exemplo": "Decreto reduz pena e cálculo é ajustado na extensão prevista. Variação: Benefício restrito a um título não apaga outras condenações fora do ato.",
+      "prova": [
+        "Comutação sempre extingue integralmente pena? Não.",
+        "Termos do decreto delimitam efeito? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comutação",
+          "significado": "Modificação da pena nos termos do ato de clemência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "6e74c458-a658-5c1a-a484-02e5b5fe60bd",
+        "content_sha256": "0a8f024707453537dfaeae029e26c4528ebf55a24aaca6f3f39077492f753283",
+        "simples": "Concedida a graça e junta aos autos cópia do decreto, o juiz declarará extinta a pena ou penas, ou ajustará a execução aos termos do decreto, no caso de redução ou comutação de pena.",
+        "pontos": [
+          "Graça concedida: o juiz declara extinta a pena ou ajusta a execução.",
+          "Redução ou comutação: execução ajustada ao decreto."
+        ],
+        "atencao": [
+          "Extinção ou ajuste conforme o decreto."
+        ],
+        "exemplo": "Com a graça, o juiz declara extinta a pena.",
+        "prova": [
+          "Assertiva que mantém a execução intacta após a graça erra."
+        ],
+        "termos": [
+          {
+            "termo": "Comutação",
+            "significado": "Substituição da pena por outra mais branda."
+          }
+        ],
+        "remissoes": [
+          "Art. 734"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-739",
+      "unit_id": "098f4f16-9cd0-561b-bc87-0911cd334c06",
+      "content_sha256": "429075effb48f7e511d467d9ba804d34fd360dada4e776dc79fef9fdaa779493",
+      "simples": "Texto admite recusa da comutação; distinguir benefício modificativo e suas condições.",
+      "pontos": [
+        "Examinar ato e regime pertinente.",
+        "Recusa não cria perdão integral alternativo."
+      ],
+      "atencao": [
+        "Não tratar direito de recusar como poder de escolher qualquer pena ou exigir indulto."
+      ],
+      "exemplo": "Beneficiário examina comutação concedida e formaliza recusa cabível. Variação: Recusar redução não obriga Presidente a eliminar pena inteira.",
+      "prova": [
+        "Recusa obriga indulto total? Não.",
+        "Comutação difere de perdão integral? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Recusa da comutação",
+          "significado": "Manifestação sobre benefício modificativo previsto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "098f4f16-9cd0-561b-bc87-0911cd334c06",
+        "content_sha256": "429075effb48f7e511d467d9ba804d34fd360dada4e776dc79fef9fdaa779493",
+        "simples": "O condenado poderá recusar a comutação da pena, isto é, a substituição por outra mais branda concedida pela graça.",
+        "pontos": [
+          "O condenado pode recusar a comutação."
+        ],
+        "atencao": [
+          "A recusa vale para a comutação."
+        ],
+        "exemplo": "O condenado recusa a comutação e prefere manter a pena original.",
+        "prova": [
+          "Assertiva que impõe a comutação ao condenado erra: ele pode recusá-la."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 738"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-740",
+      "unit_id": "9395877f-b2e1-5792-a286-226ad2df4ce8",
+      "content_sha256": "4d4c5b317b405d6d9316cfc3694a37ae2687d61c06f1063045829627fb0f3073",
+      "simples": "Arquivamento ministerial documenta processo do pedido de graça, sem substituir cumprimento judicial do benefício concedido.",
+      "pontos": [
+        "Distinguir autos administrativos e execução.",
+        "Preservar atos e documentos pertinentes."
+      ],
+      "atencao": [
+        "Arquivar pedido não prova concessão nem dispensa ajuste da execução."
+      ],
+      "exemplo": "Após trâmite, processo administrativo é arquivado no órgão pertinente. Variação: Se concedido benefício, cópia do ato deve chegar à execução para providências.",
+      "prova": [
+        "Arquivamento garante concessão? Não.",
+        "Cumprimento judicial é questão distinta? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Arquivo do pedido",
+          "significado": "Custódia administrativa da documentação da clemência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "9395877f-b2e1-5792-a286-226ad2df4ce8",
+        "content_sha256": "4d4c5b317b405d6d9316cfc3694a37ae2687d61c06f1063045829627fb0f3073",
+        "simples": "Os autos da petição de graça serão arquivados no Ministério da Justiça.",
+        "pontos": [
+          "Autos da petição de graça arquivados no Ministério da Justiça."
+        ],
+        "atencao": [
+          "Arquivo no Ministério."
+        ],
+        "exemplo": "O Ministério da Justiça arquiva os autos da petição de graça.",
+        "prova": [
+          "Assertiva que determina o arquivamento dos autos da graça no juízo da execução erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 735"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-741",
+      "unit_id": "1b3fb5a7-1741-53d3-944a-8fdb60fa865d",
+      "content_sha256": "7680479b164d303a9c5373947a98149173eb1cd1d4927c2c55502220867c923a",
+      "simples": "Indulto coletivo exige verificar requisitos do decreto e providência judicial conforme LEP192–193.",
+      "pontos": [
+        "Aplicar alcance temporal, exclusões e condições do ato.",
+        "Juízo reconhece cabimento ao caso."
+      ],
+      "atencao": [
+        "Não conceder a todos os presos por existir decreto nem afirmar que todo efeito da condenação desaparece."
+      ],
+      "exemplo": "Condenado elegível requer reconhecimento com cálculo e documentos. Variação: Hipótese expressamente excluída não recebe benefício por analogia automática.",
+      "prova": [
+        "Decreto beneficia automaticamente qualquer preso? Não.",
+        "Requisitos do ato precisam ser conferidos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Indulto coletivo",
+          "significado": "Clemência a grupo legalmente delimitado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "1b3fb5a7-1741-53d3-944a-8fdb60fa865d",
+        "content_sha256": "7680479b164d303a9c5373947a98149173eb1cd1d4927c2c55502220867c923a",
+        "simples": "Se o réu for beneficiado por indulto, o juiz, de ofício ou a requerimento do interessado, do Ministério Público ou por iniciativa do Conselho Penitenciário, providenciará de acordo com o disposto no art. 738.",
+        "pontos": [
+          "Indulto: o juiz providencia conforme o art. 738.",
+          "De ofício ou a requerimento do interessado, do MP ou por iniciativa do Conselho."
+        ],
+        "atencao": [
+          "Indulto é coletivo; a graça, individual."
+        ],
+        "exemplo": "O decreto de indulto abrange o condenado, e o juiz declara extinta a pena.",
+        "prova": [
+          "Assertiva que exige petição do condenado para aplicar o indulto erra: o juiz pode agir de ofício."
+        ],
+        "termos": [
+          {
+            "termo": "Indulto",
+            "significado": "Clemência coletiva concedida por decreto presidencial."
+          }
+        ],
+        "remissoes": [
+          "Art. 738"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-742",
+      "unit_id": "6d0c2aec-d274-5bab-abbe-90ddf0769300",
+      "content_sha256": "194526afb4188924173453b75e8dcc5afd2cef8cc5d299e8a01146957a3e5568",
+      "simples": "Anistia exige integrar lei concedente e extinção da punibilidade, não apenas sentença já definitiva.",
+      "pontos": [
+        "LEP187 disciplina reconhecimento.",
+        "Examinar abrangência e limites constitucionais."
+      ],
+      "atencao": [
+        "Anistia não é ato presidencial idêntico ao indulto e não se limita universalmente à fase pós-trânsito."
+      ],
+      "exemplo": "Lei anistia hipótese abrangida e juízo reconhece efeito pertinente. Variação: Crime fora do alcance legal não recebe benefício por semelhança.",
+      "prova": [
+        "Anistia e indulto são atos idênticos? Não.",
+        "Alcance da lei concedente importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Anistia",
+          "significado": "Benefício legislativo com alcance definido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "6d0c2aec-d274-5bab-abbe-90ddf0769300",
+        "content_sha256": "194526afb4188924173453b75e8dcc5afd2cef8cc5d299e8a01146957a3e5568",
+        "simples": "Concedida a anistia após transitar em julgado a sentença condenatória, o juiz, de ofício ou a requerimento do interessado, do Ministério Público ou por iniciativa do Conselho Penitenciário, declarará extinta a pena.",
+        "pontos": [
+          "Anistia após o trânsito em julgado: o juiz declara extinta a pena.",
+          "De ofício ou a requerimento."
+        ],
+        "atencao": [
+          "Anistia é concedida por lei."
+        ],
+        "exemplo": "A lei de anistia alcança o condenado, e o juiz declara extinta a pena.",
+        "prova": [
+          "Assertiva que exige novo processo para aplicar a anistia após o trânsito erra."
+        ],
+        "termos": [
+          {
+            "termo": "Anistia",
+            "significado": "Perdão legal que apaga o crime."
+          }
+        ],
+        "remissoes": [
+          "Art. 741"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-743",
+      "unit_id": "1c2a24a5-473e-59c3-954e-102540f6fbcd",
+      "content_sha256": "a6d6dcfc1863c060c1a19b85f684b5d400bc3210c98959b23970d16c033507eb",
+      "simples": "Reabilitação segue CP94: prazo atual de dois anos, com requisitos e cômputo dos períodos de benefício sem revogação.",
+      "pontos": [
+        "Não recuperar quatro ou oito anos históricos.",
+        "Pedido ao juiz da condenação.",
+        "Indicar residência e comprovar requisitos."
+      ],
+      "atencao": [
+        "Prazo sozinho não garante deferimento; não confundir com revisão criminal ou absolvição."
+      ],
+      "exemplo": "Pena extinta e prazo legal atendido permitem examinar pedido documentado. Variação: Reincidência não autoriza usar oito anos antigos como regra automática atual.",
+      "prova": [
+        "Prazo atual comum é quatro ou oito anos? Não.",
+        "Reabilitação equivale à absolvição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reabilitação",
+          "significado": "Proteção legal de registros e efeitos delimitados da condenação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "1c2a24a5-473e-59c3-954e-102540f6fbcd",
+        "content_sha256": "a6d6dcfc1863c060c1a19b85f684b5d400bc3210c98959b23970d16c033507eb",
+        "simples": "A reabilitação será requerida ao juiz da condenação, após o decurso de quatro ou oito anos, pelo menos, conforme se trate de condenado ou reincidente, contados do dia em que houver terminado a execução da pena principal ou da medida de segurança detentiva, devendo o requerente indicar as comarcas em que haja residido durante esse tempo. O dispositivo foi superado pelo prazo de dois anos do Código Penal.",
+        "pontos": [
+          "Reabilitação requerida ao juiz da condenação.",
+          "Prazos do texto: quatro anos (condenado) ou oito anos (reincidente).",
+          "Contados do fim da execução da pena principal ou da medida de segurança.",
+          "Indicar as comarcas de residência."
+        ],
+        "atencao": [
+          "Hoje a reabilitação segue o Código Penal (art. 94): prazo de dois anos."
+        ],
+        "exemplo": "O condenado que terminou a pena pede a reabilitação ao juiz da condenação.",
+        "prova": [
+          "Assertiva que aplica hoje o prazo de oito anos para a reabilitação do reincidente erra, à luz do Código Penal."
+        ],
+        "termos": [
+          {
+            "termo": "Reabilitação",
+            "significado": "Direito de sigilo dos antecedentes e de recuperar direitos após a pena."
+          }
+        ],
+        "remissoes": [
+          "Art. 94 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-744",
+      "unit_id": "b6e99464-8612-5861-9dbe-a239f9b1b63b",
+      "content_sha256": "08eac9d3f8a396d4da0f77dc969f2980537734c79254a5d47e535cada0dab042",
+      "simples": "Documentos devem demonstrar requisitos atuais do CP94, integrados à instrução do CPP.",
+      "pontos": [
+        "Domicílio, comportamento e reparação ou alternativa legal.",
+        "Renúncia da vítima ou novação podem integrar prova do dano."
+      ],
+      "atencao": [
+        "Não limitar análise apenas ao pagamento efetivo quando CP admite impossibilidade e outras alternativas; acusações sem condenação exigem cuidado constitucional."
+      ],
+      "exemplo": "Requerente prova residência, conduta e impossibilidade absoluta de reparar. Variação: Documento de renúncia da vítima é examinado no regime atual, não rejeitado só por falta de recibo.",
+      "prova": [
+        "Pagamento é única alternativa legal sobre dano? Não.",
+        "Documentos precisam demonstrar requisitos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prova dos requisitos",
+          "significado": "Instrução da pretensão reabilitadora."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "b6e99464-8612-5861-9dbe-a239f9b1b63b",
+        "content_sha256": "08eac9d3f8a396d4da0f77dc969f2980537734c79254a5d47e535cada0dab042",
+        "simples": "O requerimento de reabilitação será instruído com certidões comprobatórias de não ter o requerente respondido, nem estar respondendo a processo penal, nas comarcas em que houver residido; atestados de autoridades policiais ou outros documentos que comprovem ter residido nas comarcas indicadas e mantido bom comportamento; atestados de bom comportamento fornecidos por pessoas a cujo serviço tenha estado; quaisquer outros documentos que sirvam como prova de sua regeneração; e prova de haver ressarcido o dano causado pelo crime ou persistir a impossibilidade de fazê-lo.",
+        "pontos": [
+          "Certidões negativas de processos penais.",
+          "Atestados de residência e bom comportamento.",
+          "Atestados de quem o contratou.",
+          "Outras provas de regeneração.",
+          "Prova do ressarcimento do dano ou da impossibilidade."
+        ],
+        "atencao": [
+          "Provas da regeneração e do ressarcimento."
+        ],
+        "exemplo": "O requerente junta certidões negativas e atestados de bom comportamento.",
+        "prova": [
+          "Assertiva que dispensa a prova de ressarcimento do dano ou da impossibilidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 743"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-745",
+      "unit_id": "23e27701-52c6-569e-9d7f-b59c578d14b4",
+      "content_sha256": "b2715af6b2e18566d435eec4a6fb3a89277c19f62f50a87696b1f8a71522af5e",
+      "simples": "Juiz pode determinar diligências, preserva sigilo possível e ouve MP antes de decidir reabilitação.",
+      "pontos": [
+        "Esclarecer requisitos sem publicidade desnecessária.",
+        "MP opina; juiz decide."
+      ],
+      "atencao": [
+        "Parecer favorável não substitui decisão nem dispensa requisitos comprovados."
+      ],
+      "exemplo": "Diligência esclarece domicílio antes de decisão fundamentada. Variação: Divulgação ampla do passado não é necessária para toda verificação documental.",
+      "prova": [
+        "MP é ouvido antes da decisão? Sim.",
+        "Diligências devem ignorar sigilo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução sigilosa",
+          "significado": "Verificação dos requisitos sob proteção pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "23e27701-52c6-569e-9d7f-b59c578d14b4",
+        "content_sha256": "b2715af6b2e18566d435eec4a6fb3a89277c19f62f50a87696b1f8a71522af5e",
+        "simples": "O juiz poderá ordenar as diligências necessárias para apreciação do pedido, cercando-as do sigilo possível e, antes da decisão final, ouvirá o Ministério Público.",
+        "pontos": [
+          "Juiz ordena as diligências necessárias, com sigilo possível.",
+          "Antes da decisão final, ouve o Ministério Público."
+        ],
+        "atencao": [
+          "Oitiva do MP antes da decisão sobre a reabilitação."
+        ],
+        "exemplo": "O juiz determina diligências sigilosas e ouve o MP antes de decidir o pedido.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do Ministério Público antes da decisão da reabilitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 743"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-746",
+      "unit_id": "b92eb9ae-833b-569e-b851-2596746a3715",
+      "content_sha256": "3e5818f6657dc871f40d148642099c79b180be41185b6613bc061f8372871956",
+      "simples": "CPP prevê recurso de ofício da decisão concessiva de reabilitação.",
+      "pontos": [
+        "Distinguir concessão e indeferimento.",
+        "Não presumir revogação só pelo agravo da LEP."
+      ],
+      "atencao": [
+        "Reabilitação é examinada pelo juiz da condenação; recurso oficial previsto não é mera extensão de todo incidente executório."
+      ],
+      "exemplo": "Concessão é encaminhada ao exame oficial previsto. Variação: Negativa não entra automaticamente na mesma hipótese de recurso de ofício concessivo.",
+      "prova": [
+        "Texto prevê recurso de ofício na concessão? Sim.",
+        "Abrange automaticamente toda negativa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reexame da concessão",
+          "significado": "Exame oficial previsto para decisão reabilitadora favorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "b92eb9ae-833b-569e-b851-2596746a3715",
+        "content_sha256": "3e5818f6657dc871f40d148642099c79b180be41185b6613bc061f8372871956",
+        "simples": "Da decisão que conceder a reabilitação haverá recurso de ofício, ou seja, o juiz deve submetê-la ao tribunal independentemente de recurso das partes.",
+        "pontos": [
+          "Concessão da reabilitação: recurso de ofício."
+        ],
+        "atencao": [
+          "Recurso de ofício, e não voluntário."
+        ],
+        "exemplo": "Concedida a reabilitação, o juiz envia a decisão ao tribunal por recurso de ofício.",
+        "prova": [
+          "Assertiva que dispensa o recurso de ofício contra a concessão da reabilitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 574"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-747",
+      "unit_id": "af3cb37a-e3c6-596e-b4ec-f36e9c630943",
+      "content_sha256": "9041b9b4bf26387879b2dc3ba0095bf607b70a4d6c49f837c180a83b6b913419",
+      "simples": "Reabilitação definitivamente concedida é comunicada ao órgão de identificação pertinente para efetivar registros.",
+      "pontos": [
+        "Distinguir órgão histórico e estrutura atual.",
+        "Não apagar fisicamente todo dado por decisão administrativa."
+      ],
+      "atencao": [
+        "Comunicação precisa observar conteúdo e sigilo do título, não inventar absolvição."
+      ],
+      "exemplo": "Órgão recebe decisão para ajustar informação nos limites legais. Variação: Dados judiciais de acesso restrito não viram inexistentes por simples mudança do cadastro.",
+      "prova": [
+        "Comunicação efetiva consequências registrais? Sim.",
+        "Reabilitação transforma condenação em absolvição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Efetivação registral",
+          "significado": "Cumprimento documental da decisão reabilitadora."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "af3cb37a-e3c6-596e-b4ec-f36e9c630943",
+        "content_sha256": "9041b9b4bf26387879b2dc3ba0095bf607b70a4d6c49f837c180a83b6b913419",
+        "simples": "A reabilitação, depois de sentença irrecorrível, será comunicada ao Instituto de Identificação e Estatística ou repartição congênere.",
+        "pontos": [
+          "Reabilitação irrecorrível é comunicada ao Instituto de Identificação ou repartição congênere."
+        ],
+        "atencao": [
+          "Comunicação para efeitos registrais."
+        ],
+        "exemplo": "Transitada em julgado a reabilitação, o juízo comunica o instituto de identificação.",
+        "prova": [
+          "Assertiva que dispensa a comunicação da reabilitação ao instituto de identificação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 748"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-748",
+      "unit_id": "c3a4ec53-3b9e-57d6-bcb6-5ec419c3f1b6",
+      "content_sha256": "ea92c958d7196d30144977030168635312f59ad89df6a768fa3e2f4128aa1746",
+      "simples": "Reabilitação protege menção aos antecedentes nos limites legais, ressalvada requisição judicial criminal pertinente.",
+      "pontos": [
+        "Integrar CP93 e sigilo.",
+        "Distinguir proteção de publicidade e apagamento universal."
+      ],
+      "atencao": [
+        "Não afirmar que nenhuma autoridade judicial jamais pode acessar condenação reabilitada."
+      ],
+      "exemplo": "Certidão comum respeita sigilo dos registros abrangidos. Variação: Requisição de juiz criminal exige exame da exceção legal e finalidade.",
+      "prova": [
+        "Sigilo elimina qualquer acesso judicial? Não.",
+        "Certidão comum deve observar proteção legal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Sigilo reabilitador",
+          "significado": "Restrição de publicidade dos registros abrangidos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c3a4ec53-3b9e-57d6-bcb6-5ec419c3f1b6",
+        "content_sha256": "ea92c958d7196d30144977030168635312f59ad89df6a768fa3e2f4128aa1746",
+        "simples": "A condenação ou condenações anteriores não serão mencionadas na folha de antecedentes do reabilitado, nem em certidão extraída dos livros do juízo, salvo quando requisitadas por juiz criminal.",
+        "pontos": [
+          "Condenações anteriores não constam da folha de antecedentes do reabilitado.",
+          "Nem em certidões, salvo requisição de juiz criminal."
+        ],
+        "atencao": [
+          "Sigilo dos antecedentes, com exceção para o juiz criminal."
+        ],
+        "exemplo": "O reabilitado pede certidão de antecedentes e a condenação anterior não aparece.",
+        "prova": [
+          "Assertiva que impede o juiz criminal de requisitar as condenações do reabilitado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 743"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-749",
+      "unit_id": "141d7269-7bbd-53f2-b754-877a57622f30",
+      "content_sha256": "24d865f323e937313e40e1aba51bac957b82704f19d57128ff143d3847105b05",
+      "simples": "Negativa pode ser renovada a qualquer tempo com novos elementos dos requisitos, conforme CP94parágrafo único.",
+      "pontos": [
+        "Espera antiga de dois anos não é regra atual.",
+        "Novo pedido precisa de elementos pertinentes."
+      ],
+      "atencao": [
+        "Não confundir dois anos para pedido inicial com intervalo obrigatório após toda negativa."
+      ],
+      "exemplo": "Falta documental é suprida e novo pedido reúne prova pertinente. Variação: Repetir pedido sem novos elementos não demonstra atendimento do regime atual.",
+      "prova": [
+        "Toda negativa obriga esperar mais dois anos? Não.",
+        "Renovação exige novos elementos pertinentes? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Renovação reabilitadora",
+          "significado": "Novo exame com elementos comprobatórios atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "141d7269-7bbd-53f2-b754-877a57622f30",
+        "content_sha256": "24d865f323e937313e40e1aba51bac957b82704f19d57128ff143d3847105b05",
+        "simples": "Indeferida a reabilitação, o condenado não poderá renovar o pedido senão após o decurso de dois anos, salvo se o indeferimento tiver resultado de falta ou insuficiência de documentos.",
+        "pontos": [
+          "Reabilitação indeferida: novo pedido só após dois anos.",
+          "Exceção: indeferimento por falta ou insuficiência de documentos."
+        ],
+        "atencao": [
+          "Prazo de dois anos."
+        ],
+        "exemplo": "O pedido foi negado por mérito, e o condenado aguarda dois anos para renová-lo.",
+        "prova": [
+          "Assertiva que permite renovar imediatamente o pedido negado por mérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 743"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-750",
+      "unit_id": "30f7fe47-d69a-5d0b-9336-0df79d1d528f",
+      "content_sha256": "136de517235b82694eabc8083a0654d6093f5e23f45f2331c1d1b49dcafd2e4b",
+      "simples": "Revogação da reabilitação exige CP95, não remissão histórica ao antigo120.",
+      "pontos": [
+        "Condenação definitiva como reincidente.",
+        "Pena que não seja apenas multa.",
+        "Ofício ou requerimento ministerial no regime legal."
+      ],
+      "atencao": [
+        "Não revogar por mera investigação nem por qualquer condenação sem preencher requisitos atuais."
+      ],
+      "exemplo": "Nova condenação definitiva como reincidente a pena não pecuniária exige exame do95. Variação: Condenação só a multa não satisfaz automaticamente a hipótese.",
+      "prova": [
+        "Mera investigação revoga reabilitação? Não.",
+        "Só multa preenche automaticamente CP95? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação reabilitadora",
+          "significado": "Perda do benefício nas hipóteses atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "30f7fe47-d69a-5d0b-9336-0df79d1d528f",
+        "content_sha256": "136de517235b82694eabc8083a0654d6093f5e23f45f2331c1d1b49dcafd2e4b",
+        "simples": "A revogação de reabilitação, prevista no Código Penal, será decretada pelo juiz, de ofício ou a requerimento do Ministério Público.",
+        "pontos": [
+          "Revogação da reabilitação decretada pelo juiz, de ofício ou a pedido do MP."
+        ],
+        "atencao": [
+          "Ocorre se o reabilitado for condenado por decisão definitiva a pena que não seja de multa."
+        ],
+        "exemplo": "O reabilitado é condenado definitivamente por novo crime, e o juiz revoga a reabilitação.",
+        "prova": [
+          "Assertiva que exige provocação do MP para a revogação da reabilitação erra: pode ser de ofício."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 743"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-751",
+      "unit_id": "4f0571b9-7eec-56e8-95e3-f322ca41ab30",
+      "content_sha256": "3c338200e5db9b57305b531a298d2579d580c998b5ab623ae922c7c95d612a11",
+      "simples": "Modelo de impor medida por periculosidade depois da condenação exige integração ao sistema atual, sem recuperar pena e medida cumuladas.",
+      "pontos": [
+        "CP96–98 e LEP183 têm pressupostos próprios.",
+        "Tratamento superveniente não é punição extra livre."
+      ],
+      "atencao": [
+        "Não criar medida adicional só por avaliação vaga de perigo ou omissão da sentença."
+      ],
+      "exemplo": "Saúde mental superveniente exige avaliação e decisão legal individualizada. Variação: Mau comportamento não vira automaticamente inimputabilidade e medida cumulativa.",
+      "prova": [
+        "Periculosidade vaga cria punição extra? Não.",
+        "Regime atual exige pressupostos próprios? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Sistema atual de medidas",
+          "significado": "Aplicação legal delimitada distinta do modelo histórico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "4f0571b9-7eec-56e8-95e3-f322ca41ab30",
+        "content_sha256": "3c338200e5db9b57305b531a298d2579d580c998b5ab623ae922c7c95d612a11",
+        "simples": "Durante a execução da pena ou durante o tempo em que a ela se furtar o condenado, poderá ser imposta medida de segurança se o juiz ou o tribunal, na sentença, omitir sua decretação nos casos de periculosidade presumida, deixar de aplicá-la ou de excluí-la expressamente, ou declarar os elementos do processo insuficientes e ordenar indagações para verificar a periculosidade; ou se, tendo sido expressamente excluída a periculosidade na sentença, novos fatos demonstrarem ser o condenado perigoso.",
+        "pontos": [
+          "Medida de segurança durante a execução ou a fuga do condenado.",
+          "Sentença omissa nos casos de periculosidade presumida.",
+          "Sentença que não aplicou nem excluiu expressamente.",
+          "Elementos insuficientes, com indagações sobre a periculosidade.",
+          "Novos fatos após exclusão expressa da periculosidade."
+        ],
+        "atencao": [
+          "Regras do sistema duplo binário, hoje superado pelo sistema vicariante."
+        ],
+        "exemplo": "Texto histórico, de aplicação rara com o sistema atual.",
+        "prova": [
+          "Assertiva que aplica hoje a periculosidade presumida do art. 751 sem considerar a reforma penal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 752"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-752",
+      "unit_id": "8cffd271-12e6-5a57-a6a6-3c7a5f42a043",
+      "content_sha256": "bf7657c92c9c4b22dcda180f1d4ec4e507fb6eb87f9cd093685462eb121a7d31",
+      "simples": "Trânsito em julgado não autoriza completar sentença com medida detentiva antiga sem base atual.",
+      "pontos": [
+        "Não recuperar hipóteses do751 automaticamente.",
+        "Respeitar título e garantias."
+      ],
+      "atencao": [
+        "Omissão histórica de medida não abre autorização genérica para adicionar sanção após decisão definitiva."
+      ],
+      "exemplo": "Necessidade de cuidado é examinada na via legal atual. Variação: Pessoa condenada não recebe medida extra apenas porque execução ainda não começou.",
+      "prova": [
+        "Execução não iniciada libera imposição arbitrária? Não.",
+        "Título e requisitos atuais continuam necessários? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Limites após trânsito",
+          "significado": "Proteção contra acréscimo punitivo sem base legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "8cffd271-12e6-5a57-a6a6-3c7a5f42a043",
+        "content_sha256": "bf7657c92c9c4b22dcda180f1d4ec4e507fb6eb87f9cd093685462eb121a7d31",
+        "simples": "Poderá ser imposta medida de segurança, depois de transitar em julgado a sentença, ainda quando não iniciada a execução da pena, por motivo diverso de fuga ou ocultação do condenado, nos casos da letra a do inciso I do artigo anterior, bem como da letra b, se tiver sido alegada a periculosidade, e no caso da letra c.",
+        "pontos": [
+          "Medida de segurança após o trânsito, mesmo sem início da execução.",
+          "Hipóteses do art. 751, I, a, b (se alegada a periculosidade) e c."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que exige o início da execução da pena para a medida de segurança do art. 752 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 751"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-753",
+      "unit_id": "96fb6a66-eea7-592a-ae47-696464887d72",
+      "content_sha256": "411ec539260e48a5a318dab3eab77a45a002443ee6fa7bbf1c6edaf5495fba51",
+      "simples": "Absolvição definitiva não permite impor medida posteriormente só porque lei antiga presumia pessoa perigosa.",
+      "pontos": [
+        "Distinguir absolvição própria e imprópria.",
+        "Medida exige título e pressupostos atuais."
+      ],
+      "atencao": [
+        "Não transformar absolvido em internado penal por presunção genérica nem ignorar coisa julgada."
+      ],
+      "exemplo": "Absolvição própria sem título de medida não vira internação por simples relatório posterior. Variação: Absolvição imprópria com medida legalmente imposta tem regime executório específico.",
+      "prova": [
+        "Perigo presumido basta para medida após qualquer absolvição? Não.",
+        "Absolvição própria e imprópria precisam ser distinguidas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Título da medida",
+          "significado": "Fundamento judicial atual da execução de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "96fb6a66-eea7-592a-ae47-696464887d72",
+        "content_sha256": "411ec539260e48a5a318dab3eab77a45a002443ee6fa7bbf1c6edaf5495fba51",
+        "simples": "Ainda depois de transitar em julgado a sentença absolutória, poderá ser imposta a medida de segurança, enquanto não decorrido tempo equivalente ao da sua duração mínima, a indivíduo que a lei presuma perigoso.",
+        "pontos": [
+          "Após a absolvição definitiva, medida de segurança ao presumidamente perigoso.",
+          "Enquanto não decorrido tempo equivalente ao da duração mínima."
+        ],
+        "atencao": [
+          "Periculosidade presumida: conceito superado."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que aplica hoje a periculosidade presumida para impor medida de segurança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 751"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-754",
+      "unit_id": "3d607a2b-14d7-5cd2-936b-425f09dc321c",
+      "content_sha256": "0bd29b8e360eb602ec88835166038318ed11820153fa8b46627b2488df135710",
+      "simples": "Competência para medida deve seguir organização atual e LEP66, sem validar hipóteses históricas dos751–753.",
+      "pontos": [
+        "Distinguir imposição e execução.",
+        "Competência não supre requisito material."
+      ],
+      "atencao": [
+        "Ser juiz competente não permite impor medida proibida por falta de título ou pressuposto."
+      ],
+      "exemplo": "Juízo executório decide incidente legal pertinente à medida vigente. Variação: Remissão ao753 não legitima nova medida após absolvição própria.",
+      "prova": [
+        "Competência elimina necessidade de base legal? Não.",
+        "Imposição e execução são questões distintas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência da medida",
+          "significado": "Órgão atual dentro dos limites materiais legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "3d607a2b-14d7-5cd2-936b-425f09dc321c",
+        "content_sha256": "0bd29b8e360eb602ec88835166038318ed11820153fa8b46627b2488df135710",
+        "simples": "A aplicação da medida de segurança, nos casos previstos nos arts. 751 e 752, competirá ao juiz da execução da pena e, no caso do art. 753, ao juiz da sentença.",
+        "pontos": [
+          "Arts. 751 e 752: juiz da execução da pena.",
+          "Art. 753: juiz da sentença."
+        ],
+        "atencao": [
+          "Competência conforme o artigo aplicado."
+        ],
+        "exemplo": "A medida do art. 751 é aplicada pelo juiz da execução da pena.",
+        "prova": [
+          "Assertiva que atribui ao juiz da sentença a medida do art. 751 erra: é o juiz da execução."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 751",
+          "Art. 753"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-755",
+      "unit_id": "ab8868ec-b836-5a7a-bcf4-cf97c63c0eef",
+      "content_sha256": "01080497f40895442bb879d7f5b8c9a53ace5ca92985ac139bdaee4591e8b184",
+      "simples": "Iniciativa judicial ou ministerial não permite restaurar modelo de segurança dos751–753.",
+      "pontos": [
+        "Notícia da direção demanda apuração pertinente.",
+        "Não confundir pedido e decisão válida."
+      ],
+      "atencao": [
+        "Relatório de perigo não cria internação automática, nem dispensa defesa e avaliação."
+      ],
+      "exemplo": "Diretor comunica quadro de saúde para providência legal adequada. Variação: Notícia de indisciplina não autoriza nova medida cumulada por vontade administrativa.",
+      "prova": [
+        "Relatório impõe medida sozinho? Não.",
+        "Provocação precisa de base atual? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação para apuração",
+          "significado": "Informação que exige avaliação legal adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ab8868ec-b836-5a7a-bcf4-cf97c63c0eef",
+        "content_sha256": "01080497f40895442bb879d7f5b8c9a53ace5ca92985ac139bdaee4591e8b184",
+        "simples": "A imposição da medida de segurança, nos casos dos arts. 751 a 753, poderá ser decretada de ofício ou a requerimento do Ministério Público. O diretor do estabelecimento penal que tiver conhecimento de fatos indicativos da periculosidade do condenado, a quem não tenha sido imposta medida de segurança, deverá logo comunicá-los ao juiz.",
+        "pontos": [
+          "Decretada de ofício ou a requerimento do MP.",
+          "Diretor do estabelecimento comunica ao juiz fatos indicativos da periculosidade."
+        ],
+        "atencao": [
+          "Dever de comunicação do diretor."
+        ],
+        "exemplo": "O diretor informa ao juiz fatos que indicam a periculosidade do preso.",
+        "prova": [
+          "Assertiva que dispensa a comunicação do diretor ao juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 754"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-756",
+      "unit_id": "bf0eb330-7090-5628-82cf-17e48e7e0ffc",
+      "content_sha256": "c210a657254b5a627d13ce916755324a6864e2d29bc49ea65f782205c7fd2a55",
+      "simples": "Dispensa antiga de nova audiência não autoriza eliminar defesa em incidente atual de saúde ou medida.",
+      "pontos": [
+        "Garantir contraditório e defesa cabíveis.",
+        "Não aplicar remissão automática ao modelo751/752."
+      ],
+      "atencao": [
+        "Oitiva dispensada no texto histórico não equivale a autorização para impor medida atual secreta."
+      ],
+      "exemplo": "Defesa participa do incidente que afeta execução e apresenta dados médicos. Variação: Urgência clínica permite cuidados legalmente cabíveis, sem apagar revisão judicial e garantias.",
+      "prova": [
+        "Regra antiga elimina toda defesa atual? Não.",
+        "Urgência dispensa qualquer controle posterior? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa no incidente",
+          "significado": "Participação na decisão que afeta liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "bf0eb330-7090-5628-82cf-17e48e7e0ffc",
+        "content_sha256": "c210a657254b5a627d13ce916755324a6864e2d29bc49ea65f782205c7fd2a55",
+        "simples": "Nos casos do inciso I, a e b, do art. 751, e no inciso I do art. 752, poderá ser dispensada nova audiência do condenado.",
+        "pontos": [
+          "Nesses casos, pode ser dispensada nova audiência do condenado."
+        ],
+        "atencao": [
+          "Dispensa facultativa."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que exige sempre nova audiência do condenado, nesses casos, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 757"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-757",
+      "unit_id": "43730c20-0d5e-572f-acea-491641363ad2",
+      "content_sha256": "18b8182634101851b16900515dd79cb0af874a6c97f694cb87f80c601f3890b1",
+      "simples": "Rito histórico de investigação de periculosidade exige integração às garantias e procedimentos atuais.",
+      "pontos": [
+        "Não confundir três dias antigos com prazo universal de todo incidente.",
+        "Defesa técnica não depende apenas de pedido do acusado.",
+        "Conferir LEP e CPP pertinentes."
+      ],
+      "atencao": [
+        "Fuga não permite eliminar indiscriminadamente defesa técnica nem provar periculosidade por ausência."
+      ],
+      "exemplo": "Incidente legalmente cabível é instruído com avaliação e defesa. Variação: Pessoa ausente mantém defesa pertinente, não recebe medida pela mera evasão.",
+      "prova": [
+        "Defesa técnica existe apenas se requerida? Não.",
+        "Ausência prova automaticamente periculosidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Instrução garantida",
+          "significado": "Apuração individualizada sob defesa e base legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "43730c20-0d5e-572f-acea-491641363ad2",
+        "content_sha256": "18b8182634101851b16900515dd79cb0af874a6c97f694cb87f80c601f3890b1",
+        "simples": "Nos casos do art. 751, I, c, e II, e do art. 752, II, o juiz, depois de proceder às diligências que julgar convenientes, ouvirá o Ministério Público e concederá ao condenado o prazo de três dias para alegações, devendo a prova requerida ou reputada necessária ser produzida em prazo determinado. O juiz nomeará defensor ao condenado que o requerer. Se o réu estiver foragido, o juiz procederá às diligências convenientes, concedendo prazo de provas se requerido pelo MP. Findo o prazo de provas, o juiz proferirá a sentença dentro de três dias.",
+        "pontos": [
+          "Diligências, oitiva do MP e três dias para as alegações do condenado.",
+          "Defensor nomeado se requerido.",
+          "Foragido: diligências e prazo de provas a pedido do MP.",
+          "Sentença em três dias."
+        ],
+        "atencao": [
+          "Prazos de três dias."
+        ],
+        "exemplo": "O juiz ouve o MP, concede três dias ao condenado e sentencia em três dias após as provas.",
+        "prova": [
+          "Assertiva que fixa em cinco dias o prazo da sentença após as provas erra: são três."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 751"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-758",
+      "unit_id": "2d42401a-b077-50c5-a86c-dd3a4ab13b9a",
+      "content_sha256": "044424ee91b5343313fd5fa5576d719a968b4a9caa3e989a6cd31b8403f9d5ce",
+      "simples": "Execução de medida válida compete ao juízo executório no regime atual da LEP.",
+      "pontos": [
+        "Título, guia e condições precisam ser conferidos.",
+        "Não recuperar imposição inválida por regra de competência."
+      ],
+      "atencao": [
+        "Executar medida não é conceder competência para internação sem fundamento legal."
+      ],
+      "exemplo": "Juízo acompanha medida judicial válida e reavaliações pertinentes. Variação: Documento sem título válido não permite custódia só porque chegou à execução.",
+      "prova": [
+        "Execução exige título válido? Sim.",
+        "Competência autoriza medida sem pressupostos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Execução da medida",
+          "significado": "Cumprimento jurisdicional de título de segurança válido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "2d42401a-b077-50c5-a86c-dd3a4ab13b9a",
+        "content_sha256": "044424ee91b5343313fd5fa5576d719a968b4a9caa3e989a6cd31b8403f9d5ce",
+        "simples": "A execução da medida de segurança incumbirá ao juiz da execução da sentença.",
+        "pontos": [
+          "Execução da medida de segurança cabe ao juiz da execução."
+        ],
+        "atencao": [
+          "Juízo da execução."
+        ],
+        "exemplo": "O juiz da execução cuida da internação do condenado inimputável.",
+        "prova": [
+          "Assertiva que atribui ao juiz da sentença a execução da medida de segurança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 754"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-759",
+      "unit_id": "ea05c291-2c83-56bf-af6d-d6e2b70d35b4",
+      "content_sha256": "5ce42ff2c81ba5f600aa3673c24ccd6c2cc571e8b6661e51464f6ce12cc53205",
+      "simples": "Curadoria e exame do modelo753 não autorizam internação imediata após absolvição própria.",
+      "pontos": [
+        "Avaliação de saúde e proteção têm regimes atuais.",
+        "Curador não substitui defesa técnica universalmente."
+      ],
+      "atencao": [
+        "Não usar internação histórica desde logo como resposta automática a laudo ou condição pessoal."
+      ],
+      "exemplo": "Necessidade clínica é encaminhada à providência legal adequada com garantias. Variação: Pessoa absolvida não perde liberdade penal só porque curador foi nomeado.",
+      "prova": [
+        "Nomear curador permite internar penalmente qualquer absolvido? Não.",
+        "Cuidado em saúde exige regime legal atual? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção e liberdade",
+          "significado": "Cuidado que não cria punição penal sem título."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ea05c291-2c83-56bf-af6d-d6e2b70d35b4",
+        "content_sha256": "5ce42ff2c81ba5f600aa3673c24ccd6c2cc571e8b6661e51464f6ce12cc53205",
+        "simples": "No caso do art. 753, o juiz ouvirá o curador já nomeado ou que então nomear, podendo mandar submeter o condenado a exame mental, internando-o, desde logo, em estabelecimento adequado.",
+        "pontos": [
+          "No caso do art. 753, o juiz ouve o curador, já nomeado ou novo.",
+          "Pode determinar exame mental e a internação imediata."
+        ],
+        "atencao": [
+          "Dispositivo histórico ligado à periculosidade presumida."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que dispensa o curador na hipótese do art. 759 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 753"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-760",
+      "unit_id": "a6428b50-93af-55eb-a374-ec7a0b125f0a",
+      "content_sha256": "3357eb9e0f33e7ab3eeaeec9f220a1338a055bd8985294197f15890861e71670",
+      "simples": "Remissão à periculosidade do antigo CP78§3 exige leitura do regime atual, pois CP78 hoje trata de sursis.",
+      "pontos": [
+        "Conferir correspondência material, não só número.",
+        "Aplicar CP96–98 e LEP nas medidas cabíveis."
+      ],
+      "atencao": [
+        "Não misturar condição do sursis atual com investigação histórica de medida de segurança."
+      ],
+      "exemplo": "Estudo identifica que o número remete a texto antigo e consulta regime vigente. Variação: Condição de sursis não vira presunção legal de perigo por remissão desatualizada.",
+      "prova": [
+        "CP78 atual tem o mesmo conteúdo histórico referido? Não.",
+        "Número sozinho basta para aplicar remissão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Remissão histórica",
+          "significado": "Referência que precisa de correspondência normativa atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "a6428b50-93af-55eb-a374-ec7a0b125f0a",
+        "content_sha256": "3357eb9e0f33e7ab3eeaeec9f220a1338a055bd8985294197f15890861e71670",
+        "simples": "Para a verificação da periculosidade, no caso do §3º do art. 78 do Código Penal, observar-se-á o disposto no art. 757, no que for aplicável.",
+        "pontos": [
+          "Verificação da periculosidade nesse caso segue, no que couber, o art. 757."
+        ],
+        "atencao": [
+          "Remissão ao Código Penal em redação original."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que cria rito próprio no art. 760 erra: ele remete ao art. 757."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 757"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    }
+  ]
+}

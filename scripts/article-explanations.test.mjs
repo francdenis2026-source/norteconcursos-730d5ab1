@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP clemência e reabilitação integram jurisprudência2026 e afastam modelo antigo',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-clemency-rehabilitation-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,28);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(733).pontos.join(' '),/Tema1367\/STJ de2026/);
+ assert.match(get(743).simples,/dois anos/);
+ assert.match(get(749).simples,/qualquer tempo com novos elementos/);
+ assert.match(get(753).atencao.join(' '),/coisa julgada/);
+ for(const n of [733,736,743,749,750,751,753,757,760])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP livramento usa requisitos atuais e distingue causas revocatórias',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-parole-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,31);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
