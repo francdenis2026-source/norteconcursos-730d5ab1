@@ -1,0 +1,286 @@
+{
+  "verified_at": "2026-10-13T21:19:59.851038+00:00",
+  "scope": "Seis questões individuais PC-CE 2025; sem declaração de auditoria integral.",
+  "topics": [
+    {
+      "id": "e16c8447-65ec-5954-93dd-28f671f87141",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 101,
+      "topic_text": "Princípios e garantias penais fundamentais (item 1 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "b0b5831c-6887-5328-b989-e5304c06c0b8",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 86,
+      "topic_text": "Crimes contra a dignidade sexual (item 8.6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "7fdf1041-db31-510d-a179-908fafca3743",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 96,
+      "topic_text": "Fiança; prisão e liberdade provisória (itens 9.5 e 9.6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "9c2d3d05-1e1b-5276-8ce6-709a7381eec9",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 6,
+      "topic_text": "Provas: valoração, confissão e testemunhas (itens 6.3 e 6.6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "80551221-ac6e-551a-83c5-6306ce682518",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 6,
+      "topic_text": "Estatuto da Criança e do Adolescente — Lei 8.069/1990 (item 6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "1de97123-e39b-5759-8676-e7d5d7836dda",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 14,
+      "topic_text": "Juizados especiais criminais — Lei 9.099/1995 (item 14 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "sources": [
+    {
+      "id": "799e91a7-c494-52b9-a174-757ae9d1d0a8",
+      "source_type": "jurisprudencia",
+      "title": "Súmula 589",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+589+INPATH%28NUM%29&ordenacao=-%40NUM&p=false",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "bfc8f2a4-1746-5cae-af17-d3b4238d2222",
+      "source_type": "jurisprudencia",
+      "title": "Tema repetitivo 1121",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1121&cod_tema_inicial=1121&novaConsulta=true&tipo_pesquisa=T",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "feb86695-462e-5dfb-a355-1f4cbdf17afb",
+      "source_type": "jurisprudencia",
+      "title": "Tema repetitivo 1168",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1168&cod_tema_inicial=1168&novaConsulta=true&tipo_pesquisa=T",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "1a75ba0c-a26c-5418-b248-150ee3385b44",
+      "source_type": "jurisprudencia",
+      "title": "Informativo 819 — corroboração da confissão",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27020891%27",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "5c65a26e-2896-556c-a884-7f582474e894",
+      "source_type": "jurisprudencia",
+      "title": "REsp 2083823 — ANPP e distinção da transação privada",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18032025-Inercia-do-querelante-autoriza-Ministerio-Publico-a-propor-ANPP-em-acao-penal-privada-decide-Quinta-Turma.aspx",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "81575f5a-cbd2-50c7-8980-0952a863f078",
+      "source_type": "jurisprudencia",
+      "title": "Tema 150 — antecedentes",
+      "issuer": "Supremo Tribunal Federal",
+      "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2642160",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "770caac4-bb71-5eb1-a6fe-42e1a13fea02",
+      "source_type": "jurisprudencia",
+      "title": "Súmula 617",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=617+INPATH%28NUM%29",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    },
+    {
+      "id": "7ddb8e76-b43b-5c43-ba62-4e274182c58c",
+      "source_type": "lei",
+      "title": "Lei 15.487/2026",
+      "issuer": "Presidência da República",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+      "checked_at": "2026-10-13T21:19:59.851038+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial consultada para revisão individual em 13/10/2026; não substitui auditoria integral."
+    }
+  ],
+  "items": [
+    {
+      "id": "9f54015b-80ec-4e45-8fa7-b705265a07fb",
+      "item": 23,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+589+INPATH%28NUM%29&ordenacao=-%40NUM&p=false",
+          "norma": "STJ — Súmula 589",
+          "artigo": "enunciado"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "norma": "Lei Maria da Penha (11.340/2006)",
+          "artigo": "arts. 5º, 6º e 41; fundamento jurisprudencial específico: Súmula 589/STJ"
+        }
+      ],
+      "reason": "D. Violência doméstica contra mulher afasta a insignificância (Súmula 589). O princípio atua na tipicidade material, não automaticamente na culpabilidade. As proibições irrestritas e absolutas dos outros itens não correspondem à jurisprudência."
+    },
+    {
+      "id": "65ec170c-8afa-444c-980e-203085a66d78",
+      "item": 24,
+      "answer": "C",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1121&cod_tema_inicial=1121&novaConsulta=true&tipo_pesquisa=T",
+          "norma": "STJ — Tema 1121",
+          "artigo": "tese firmada"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "arts. 49, 75, § 2º, e 217-A"
+        },
+        {
+          "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2642160",
+          "norma": "STF — Tema 150",
+          "artigo": "RE 593818"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=617+INPATH%28NUM%29",
+          "norma": "STJ — Súmula 617",
+          "artigo": "enunciado"
+        }
+      ],
+      "reason": "C. Ato libidinoso com menor de 14 anos, com finalidade lasciva, não é desclassificado por brevidade. Demais opções: nova unificação por fato posterior não computa o período anterior para esse fim; livramento sem suspensão/revogação até o fim enseja extinção; multa vai ao fundo penitenciário; antecedentes não seguem automaticamente o prazo da reincidência, com fundamentação individual. Atualizações: Lei 15.280/2025 agravou penas e Lei 15.353/2026 explicitou vulnerabilidade absoluta e irrelevância de gravidez; não alteram o gabarito."
+    },
+    {
+      "id": "b6c30219-5f35-419d-b660-1b9a0075715b",
+      "item": 34,
+      "answer": "E",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 322 e 78, II, a"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+          "norma": "Lei 9.099/1995",
+          "artigo": "arts. 60 e 61"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 69"
+        }
+      ],
+      "reason": "E. Concurso material: penas máximas de três e dois anos somam cinco; ultrapassam o limite de quatro para fiança policial. A infração menor acompanha o processamento conjunto na justiça comum, sem separar o flagrante em TCO. Isso não torna os crimes inafiançáveis: a fiança pode ser examinada judicialmente; os institutos consensuais são preservados conforme art. 60, parágrafo único."
+    },
+    {
+      "id": "3b5aeccd-e1c0-48b5-8449-192a19e72a72",
+      "item": 36,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 197, 200 e 386, VII"
+        },
+        {
+          "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27020891%27",
+          "norma": "STJ — Informativo 819",
+          "artigo": "AREsp 2.123.334/MG, Terceira Seção"
+        }
+      ],
+      "reason": "D. Confissão judicial precisa de corroboração independente; não basta isoladamente quando as testemunhas não confirmam autoria e não há outras provas no caso descrito. Insuficiência impõe absolvição. A confissão não é prova de valor absoluto e não transfere à defesa o ônus de provar inocência."
+    },
+    {
+      "id": "d36ccada-cb73-4ad9-b1b0-cec93429cfb3",
+      "item": 42,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+          "norma": "ECA",
+          "artigo": "arts. 241-A e 241-B"
+        },
+        {
+          "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1168&cod_tema_inicial=1168&novaConsulta=true&tipo_pesquisa=T",
+          "norma": "STJ — Tema 1168",
+          "artigo": "tese firmada"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+          "norma": "Lei 15.487/2026",
+          "artigo": "arts. 2º e 7º"
+        }
+      ],
+      "reason": "D. Armazenamento e transmissão demonstrados são condutas autônomas, admitindo concurso material (Tema 1168), sem absorção necessária. Atualização desde 7/8/2026: Lei 15.487 mudou terminologia para violência sexual, elevou penas e ampliou condutas. O enunciado histórico não cobra penas antigas; o concurso continua compatível com os tipos atuais. Não reproduzir as penas de 2025 como vigentes."
+    },
+    {
+      "id": "64557308-9ae3-4d9d-bf25-91164e515d67",
+      "item": 45,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+          "norma": "Lei 9.099/1995",
+          "artigo": "arts. 61 e 76"
+        },
+        {
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/18032025-Inercia-do-querelante-autoriza-Ministerio-Publico-a-propor-ANPP-em-acao-penal-privada-decide-Quinta-Turma.aspx",
+          "norma": "STJ — REsp 2.083.823",
+          "artigo": "distinção entre transação penal e ANPP"
+        }
+      ],
+      "reason": "D. A transação é admitida na ação exclusivamente privada e oferecida pelo ofendido, respeitado o limite conjunto. A referência a pena inferior a dois anos contempla parte do intervalo; o teto legal também inclui exatamente dois anos. Atualização: atuação supletiva do MP em ANPP reconhecida em 2025 não equivale a transferir-lhe a proposta de transação ou a titularidade privada."
+    }
+  ]
+}

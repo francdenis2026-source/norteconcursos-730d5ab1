@@ -1,0 +1,122 @@
+{
+  "verified_at": "2026-10-13T21:26:18.175182+00:00",
+  "scope": "Quatro questões após reparo de contexto separado, preservando o gabarito histórico e a extração original.",
+  "topics": [
+    {
+      "id": "58a63695-0e01-5ad1-a3cd-b9eaa2a90bbf",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Penal",
+      "topic_order": 85,
+      "topic_text": "Crimes contra o sentimento religioso e contra o respeito aos mortos (item 8.5 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "4c5291fa-a44e-58ae-a63c-068368157236",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Direito Processual Penal",
+      "topic_order": 5,
+      "topic_text": "Questões e processos incidentes (item 5 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "b21b0f54-8438-5045-8d74-a407447e8e7c",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 3,
+      "topic_text": "Crimes resultantes de preconceito de raça ou de cor — Lei 7.716/1989 (item 3 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "6817f9a0-9309-5461-9fbc-965920ea450b",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos específicos",
+      "discipline": "Legislação Penal e Processual Penal Extravagante",
+      "topic_order": 17,
+      "topic_text": "Lei de drogas — Lei 11.343/2006 (item 17 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "sources": [
+    {
+      "id": "7151e0a7-14a1-5543-a1a2-3de9f6845f34",
+      "source_type": "jurisprudencia",
+      "title": "STJ — AgRg no AREsp 3103207/ES — requisitos do tráfico privilegiado",
+      "issuer": "Superior Tribunal de Justiça",
+      "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=17%2F03%2F2026&num_registro=202504438591",
+      "checked_at": "2026-10-13T21:26:18.175182+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual em 13/10/2026."
+    }
+  ],
+  "items": [
+    {
+      "id": "e8c20b4b-eab1-44cb-b95a-0c72029779a6",
+      "item": 29,
+      "answer": "B",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "norma": "Código Penal",
+          "artigo": "art. 212"
+        }
+      ],
+      "reason": "B. A exposição depreciativa do cadáver manifesta desprezo e se enquadra em vilipêndio. Não basta fotografar: o caso inclui propósito e manifestações de desrespeito. Calúnia exige imputação falsa de fato definido como crime; esse fato não foi narrado.",
+      "context_audit": "docs/question-context-repairs-pcce-2026-10-13.json"
+    },
+    {
+      "id": "ad48f79a-ff73-4893-8561-4464e9041c94",
+      "item": 33,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "norma": "Código de Processo Penal",
+          "artigo": "arts. 95, III, 109 e 110"
+        }
+      ],
+      "reason": "D. A duplicidade de persecução pelo mesmo fato pode ser arguida pela defesa e pelo MP e conhecida de ofício. O prazo da exceção de incompetência relativa não impede o reconhecimento da litispendência como matéria de ordem pública, nas fases cabíveis do processo.",
+      "context_audit": "docs/question-context-repairs-pcce-2026-10-13.json"
+    },
+    {
+      "id": "adca067e-e7de-4a11-a290-259230615939",
+      "item": 41,
+      "answer": "D",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+          "norma": "Lei 7.716/1989",
+          "artigo": "art. 1º"
+        }
+      ],
+      "reason": "D. O art. 1º contempla raça, cor, etnia, religião e procedência nacional. Religião e procedência nacional constam expressamente; idade e gênero não estão nesse rol. Isso não significa ausência de proteção por outras normas ou interpretação constitucional, que não são objeto da pergunta. A Lei 14.532/2023 incorporou injúria racial ao art. 2º-A, sem mudar o rol cobrado.",
+      "context_audit": "docs/question-context-repairs-pcce-2026-10-13.json"
+    },
+    {
+      "id": "8d3646ff-a884-4ec0-976e-a22a5342a9e1",
+      "item": 46,
+      "answer": "C",
+      "decision": "active",
+      "basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+          "norma": "Lei 11.343/2006",
+          "artigo": "art. 33, § 4º"
+        },
+        {
+          "url": "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=17%2F03%2F2026&num_registro=202504438591",
+          "norma": "STJ — AgRg no AREsp 3.103.207/ES",
+          "artigo": "julgado em março de 2026"
+        }
+      ],
+      "reason": "C. Requisitos cumulativos: primariedade, bons antecedentes, ausência de dedicação criminosa e de integração em organização criminosa. Ser mula ou portar pequena quantidade não garante sozinho o benefício. A vedação legal de conversão em penas restritivas está suspensa conforme Resolução do Senado 5/2012 indicada no Planalto; não ensinar essa proibição como vigente. Associação para tráfico não se torna hedionda só pela cumulação.",
+      "context_audit": "docs/question-context-repairs-pcce-2026-10-13.json"
+    }
+  ]
+}

@@ -5,6 +5,19 @@ import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 
 const tables = new Set(['official_exam_questions','curated_question_catalog','board_exam_questions']);
 const allowed = new Set(['content_status','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+// PostgreSQL omits trailing fractional zeroes in timestamptz responses.
+// Preserve microsecond precision: Date parsing would silently round it away.
+export function sameReviewRow(a,b) {
+  const normalize=row=>row && Object.fromEntries(Object.entries(row).map(([key,value])=>{
+    if (['created_at','verified_at','law_version_checked_at'].includes(key) && typeof value==='string') {
+      value=value.replace(/Z$/, '+00:00').replace(/\.(\d+)(?=[+-]\d{2}:\d{2}$)/,(_,fraction)=>{
+        const digits=fraction.replace(/0+$/,''); return digits?`.${digits}`:'';
+      });
+    }
+    return [key,value];
+  }));
+  return isDeepStrictEqual(normalize(a),normalize(b));
+}
 export function validateReview(pack) {
   if (!Array.isArray(pack.items) || !pack.items.length) throw Error('Empty review');
   const ids = new Set();
@@ -22,6 +35,7 @@ export function validateReview(pack) {
       if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
       if (evidence.legal && (!patch.legal_basis?.length || !patch.law_version_checked_at)) throw Error('Current legal basis required');
       if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
+      if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
       if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
     }
   }
@@ -35,8 +49,16 @@ export async function publishReview(pack, request) {
   for (const item of pack.items) {
     const {table,expected,patch}=item;
     const [actual]=await request(`${table}?id=eq.${expected.id}&select=*`);
-    if (isDeepStrictEqual(actual,{...expected,...patch})) continue;
-    if (!isDeepStrictEqual(actual,expected)) throw Error(`Concurrent revision: ${table}/${expected.id}`);
+    if (sameReviewRow(actual,{...expected,...patch})) continue;
+    if (!sameReviewRow(actual,expected)) throw Error(`Concurrent revision: ${table}/${expected.id}`);
+    if (item.evidence.duplicate_of) {
+      if (patch.content_status!=='archived' || pack.items.some(i=>i.table===table && i.expected.id===item.evidence.duplicate_of)) throw Error('Canonical duplicate cannot also be archived');
+      const [canonical]=await request(`${table}?id=eq.${item.evidence.duplicate_of}&select=*`);
+      const identity=['question_source_id','answer_key_source_id','item_number','question_text','official_answer','syllabus_topic_id','exam_year','contest_name'];
+      const aliases={'Polícia Civil do Acre':'Agente de Polícia Civil','Polícia Penal do Acre':'Agente de Polícia Penal'};
+      const careerMatches=canonical && (canonical.career_name===expected.career_name || (item.evidence.career_alias_verified && aliases[expected.career_name]===canonical.career_name));
+      if (!canonical || !careerMatches || !['active','under_review'].includes(canonical.content_status) || identity.some(k=>!isDeepStrictEqual(canonical[k],expected[k]))) throw Error('Duplicate identity mismatch');
+    }
     if (patch.content_status==='active') {
       const topicId=patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id;
       const [topic]=await request(`syllabus_topics?id=eq.${topicId}&select=*`);
@@ -55,7 +77,7 @@ export async function publishReview(pack, request) {
     // Filter every original field to avoid overwriting another account's simultaneous work.
     const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
     const rows=await request(`${table}?${filters}`,'PATCH',patch);
-    if (rows.length!==1 || !isDeepStrictEqual(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
+    if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
     result.updated.push(expected.id);
   }
   return result;
