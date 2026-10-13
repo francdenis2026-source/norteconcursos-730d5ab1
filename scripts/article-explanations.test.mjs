@@ -12,6 +12,24 @@ import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
+
+test('CPP ação penal: prazos novos, ANPP e regras etárias não viram pegadinhas desatualizadas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-action-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,38);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.ok(p.units.every(r=>r.expected&&explanationExample(r.exemplo).variation&&r.prova.length>=2&&r.prova.every(q=>explanationPractice(q))));
+ assert.equal(get(35),undefined);assert.equal(get(43),undefined);
+ assert.match(get(38).pontos.join(' '),/15.438.*19\/06\/2026.*12 meses/);
+ assert.match(get(38).atencao.join(' '),/não.*retroativamente.*decadência já consumada/i);
+ assert.match(get('28-a').pontos.join(' '),/Tema 1303.*silêncio.*confissão no inquérito não impedem/i);
+ assert.match(get('28-a').pontos.join(' '),/Tema 1098.*trânsito/);
+ assert.match(get('28-a').pontos.join(' '),/inferior, não igual, a quatro/);
+ assert.match(get(25).pontos.join(' '),/oferecimento, não recebimento/);
+ assert.match(get(28).pontos.join(' '),/patente ilegalidade ou teratologia/);
+ assert.match(get(46).simples,/cinco dias.*quinze/);
+ assert.match(get(60).pontos.join(' '),/30 dias.*60 dias/);
+ for(const n of [24,25,26,28,'28-a',33,34,38,50,52,53,54])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n)?.literalPractice,false);
+});
 test('antifaction review preserves prior versions and separates timelines, percentages and constitutional guarantees',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-antifaction-procedures-2026-10-12.json','utf8'));
  validateArticlePackage(p);
