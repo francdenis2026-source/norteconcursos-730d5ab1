@@ -31,6 +31,9 @@ import { useLegalCourses, useLegalProgress, useLegalUnits, useLegalExplanationCo
 import { legalProgressSummary, selectNextLegalUnit, type LegalProgress, type ReviewRating } from "@/lib/legalLearning";
 import { supabase } from "@/integrations/supabase/client";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
+import { LibrarySearchMatch } from "@/components/library/LibrarySearchMatch";
+import { legalSearchExcerpt, matchesLegalUnit, selectVisibleLegalUnit } from "@/lib/legalCourseSearch";
+import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
 
 export const Route = createFileRoute("/dashboard/legal-course/$slug")({
@@ -72,7 +75,15 @@ function LegalCoursePage() {
   const current = rows.filter(row => row.content_status === "current");
   const suggested = selectNextLegalUnit(rows, states);
   const fromUrl = art ? rows.find(row => row.unit_key === art) : undefined;
-  const selected = rows.find(row => row.id === selectedId) ?? fromUrl ?? suggested ?? current[0];
+  const preferred = rows.find(row => row.id === selectedId) ?? fromUrl ?? suggested ?? current[0];
+  const byId = useMemo(() => new Map(states.map(row => [row.unit_id, row])), [states]);
+  const hasSearch = !!normalizeLibrarySearch(search);
+  const filtering = hasSearch || chapter !== "all" || dueOnly || hotOnly || showExcluded;
+  const visible = rows.filter(row => (showExcluded || row.content_status === "current") && (chapter === "all" || row.chapter === chapter) && matchesLegalUnit(row, search) && (!dueOnly || (byId.get(row.id)?.due_at && Date.parse(byId.get(row.id)!.due_at!) <= Date.now())) && (!hotOnly || countFor(cobrancaOf(slug, row.unit_key), cargo) > 0));
+  const selected = filtering ? selectVisibleLegalUnit(visible, preferred) : preferred;
+  const navigationRows = filtering ? visible : current;
+  const clearFilters = () => { setSearch(""); setChapter("all"); setDueOnly(false); setHotOnly(false); setShowExcluded(false); };
+  useEffect(() => { setSelectedIdState(undefined); clearFilters(); setTab("learn"); }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
   // escolher um dispositivo atualiza o endereço (compartilhável e com o botão Voltar funcionando)
   const setSelectedId = (id: string) => {
     setSelectedIdState(id);
@@ -88,8 +99,6 @@ function LegalCoursePage() {
     return () => clearTimeout(t);
   }, [art, par, selected?.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const summary = legalProgressSummary(current.map(row => row.id), states);
-  const byId = useMemo(() => new Map(states.map(row => [row.unit_id, row])), [states]);
-  const visible = rows.filter(row => (showExcluded || row.content_status === "current") && (chapter === "all" || row.chapter === chapter) && `${row.label} ${row.chapter} ${row.body_text}`.toLocaleLowerCase("pt-BR").includes(search.trim().toLocaleLowerCase("pt-BR")) && (!dueOnly || (byId.get(row.id)?.due_at && Date.parse(byId.get(row.id)!.due_at!) <= Date.now())) && (!hotOnly || countFor(cobrancaOf(course!.slug, row.unit_key), cargo) > 0));
   if (!isLoading && !userId) return <LockedState image="study-desk" title="Percurso de legislação" description="Entre para estudar e guardar seu progresso e suas revisões." />;
   if (isLoading || courses.isPending || (course && units.isPending)) return <Skeleton className="h-80 rounded-2xl" />;
   if (courses.isError || units.isError || !course) return <div className="surface-card p-6"><p>Não foi possível abrir este percurso.</p><Button onClick={() => { void courses.refetch(); void units.refetch(); }}>Tentar novamente</Button><Link to="/dashboard/library" className="ml-4 underline">Biblioteca</Link></div>;
@@ -97,10 +106,10 @@ function LegalCoursePage() {
     {fm.bar({
       kicker: course.title,
       title: selected?.label ?? "Escolha um artigo",
-      position: selected ? `${Math.max(1, current.findIndex(r => r.id === selected.id) + 1)} de ${current.length}` : "",
+      position: selected ? `${Math.max(1, navigationRows.findIndex(r => r.id === selected.id) + 1)} de ${navigationRows.length}` : "",
       progress: current.length ? (summary.read / current.length) * 100 : 0,
-      onPrev: selected && current.findIndex(r => r.id === selected.id) > 0 ? () => { const i = current.findIndex(r => r.id === selected.id); setSelectedId(current[i - 1]!.id); } : undefined,
-      onNext: selected && current.findIndex(r => r.id === selected.id) < current.length - 1 ? () => { const i = current.findIndex(r => r.id === selected.id); setSelectedId(current[i + 1]!.id); } : undefined,
+      onPrev: selected && navigationRows.findIndex(r => r.id === selected.id) > 0 ? () => { const i = navigationRows.findIndex(r => r.id === selected.id); setSelectedId(navigationRows[i - 1]!.id); } : undefined,
+      onNext: selected && navigationRows.findIndex(r => r.id === selected.id) < navigationRows.length - 1 ? () => { const i = navigationRows.findIndex(r => r.id === selected.id); setSelectedId(navigationRows[i + 1]!.id); } : undefined,
       prevLabel: "Artigo anterior",
       nextLabel: "Próximo artigo",
       tools: toolsAreaFor(`${course.title} ${course.slug}`),
@@ -126,13 +135,13 @@ function LegalCoursePage() {
       <Button variant={tab === "learn" ? "default" : "ghost"} onClick={() => setTab("learn")}>Estudo por artigo</Button>
       <Button variant={tab === "application" ? "default" : "ghost"} onClick={() => setTab("application")}>Questões comentadas e cartões</Button>
       {videos.length > 0 && <Button variant={tab === "videos" ? "default" : "ghost"} onClick={() => setTab("videos")}>Vídeo-aulas ({videos.length})</Button>}
-      {suggested && <Button variant="ghost" className="ml-auto" onClick={() => { setSelectedId(suggested.id); setTab("learn"); }}>Continuar de onde parei →</Button>}
+      {suggested && <Button variant="ghost" className="ml-auto" onClick={() => { clearFilters(); setSelectedId(suggested.id); setTab("learn"); }}>Continuar de onde parei →</Button>}
     </div>
     {tab === "learn" && !fm.focus && topArticles(course.slug, cargo, 8).length > 0 && (
       <section className="rounded-xl border bg-card p-3" aria-label="Artigos mais cobrados">
         <p className="mb-2 flex flex-wrap items-center gap-2 text-sm font-semibold"><Flame className="h-4 w-4 text-rose-600" aria-hidden /> Mais cobrados em provas{cargo !== "all" && <span className="font-normal text-muted-foreground">para {CARGO_LABEL[cargo]}</span>}</p>
         <div className="flex flex-wrap gap-2">
-          {topArticles(course.slug, cargo, 8).map(({ art, n }) => { const u = rows.find(r => r.unit_key === art); return u ? <button key={art} type="button" onClick={() => { setSelectedId(u.id); setTab("learn"); }} className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-semibold hover:bg-muted ${heatOf(n) === "alta" ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30" : "border-amber-300 bg-amber-50 dark:bg-amber-950/30"}`}><Flame className="h-3.5 w-3.5" aria-hidden />{u.label}<span className="text-xs text-muted-foreground">{n}</span></button> : null; })}
+          {topArticles(course.slug, cargo, 8).map(({ art, n }) => { const u = rows.find(r => r.unit_key === art); return u ? <button key={art} type="button" onClick={() => { clearFilters(); setSelectedId(u.id); setTab("learn"); }} className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-semibold hover:bg-muted ${heatOf(n) === "alta" ? "border-rose-300 bg-rose-50 dark:bg-rose-950/30" : "border-amber-300 bg-amber-50 dark:bg-amber-950/30"}`}><Flame className="h-3.5 w-3.5" aria-hidden />{u.label}<span className="text-xs text-muted-foreground">{n}</span></button> : null; })}
         </div>
         <p className="mt-2 text-[11px] text-muted-foreground">Contagem de questões das provas da plataforma que citam o artigo ou cobram o seu conteúdo.</p>
       </section>
@@ -153,14 +162,17 @@ function LegalCoursePage() {
         <label className="flex gap-2 text-sm"><input type="checkbox" checked={dueOnly} onChange={e => setDueOnly(e.target.checked)} />Somente revisões pendentes</label>
         <label className="flex gap-2 text-sm"><input type="checkbox" checked={showExcluded} onChange={e => setShowExcluded(e.target.checked)} />Mostrar dispositivos excluídos</label>
         <p className="text-xs text-muted-foreground">{visible.length} dispositivos neste filtro</p>
+        {filtering && <button type="button" onClick={clearFilters} className="text-sm underline">Limpar busca e filtros</button>}
         <nav className="max-h-[calc(100vh-22rem)] min-h-48 space-y-1 overflow-y-auto pr-1" aria-label="Dispositivos da lei">
           {visible.map(row => <button type="button" key={row.id} aria-current={selected?.id === row.id ? "true" : undefined} onClick={() => setSelectedId(row.id)} className={`block w-full rounded-lg border p-2 text-left text-sm ${selected?.id === row.id ? "border-primary bg-primary/5" : "border-transparent hover:bg-muted"}`}>
             <span className="flex items-center gap-2"><strong>{row.label}</strong><CobrancaBadge stat={cobrancaOf(course.slug, row.unit_key)} group={cargo} /></span><span className="text-xs text-muted-foreground">{row.content_status === "excluded" ? "Fora da leitura ativa" : byId.get(row.id)?.last_rating === "again" ? "Retomar" : byId.get(row.id)?.read_at ? "Lido" : "A estudar"}</span>
+            {hasSearch && <span className="mt-1 block text-xs leading-5"><LibrarySearchMatch text={legalSearchExcerpt(row.body_text, search) || row.chapter} query={search} /></span>}
           </button>)}
           {!visible.length && <p className="text-sm">Nenhum dispositivo neste filtro.</p>}
         </nav>
       </aside>}
-      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson cargo={cargo} key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} onPrev={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index - 1]) setSelectedId(current[index - 1]!.id); }} onNext={() => { const index = current.findIndex(row => row.id === selected.id); if (current[index + 1]) setSelectedId(current[index + 1]!.id); }} />}
+      {progress.isPending ? <Skeleton className="h-80 rounded-xl" /> : selected && userId && !progress.isError && <UnitLesson cargo={cargo} key={`${userId}:${selected.id}`} unit={selected} law={course.slug} materialSlug={course.material_slug} references={course.overview.jurisprudence.filter(ref => ref.articles.includes(selected.label))} progress={byId.get(selected.id)} userId={userId} highlightPar={selected.unit_key === art ? par : undefined} searchQuery={hasSearch ? search : undefined} onPrev={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index - 1]) setSelectedId(navigationRows[index - 1]!.id); }} onNext={() => { const index = navigationRows.findIndex(row => row.id === selected.id); if (navigationRows[index + 1]) setSelectedId(navigationRows[index + 1]!.id); }} />}
+      {!selected && !progress.isPending && <div role="status" className="surface-card p-6"><p>Nenhum artigo corresponde à busca e aos filtros nesta matéria.</p><button type="button" className="mt-3 underline" onClick={clearFilters}>Limpar busca e filtros</button></div>}
     </div>}
     {!fm.focus && <section aria-label="Sobre esta lei" className="space-y-4 border-t pt-5"><h2 className="text-lg font-bold">Sobre esta lei</h2>
       <div className="surface-card p-5 text-sm">
@@ -180,7 +192,7 @@ function LegalCoursePage() {
   </div></LegalRefProvider>;
 }
 
-function UnitLesson({ cargo, unit, law, materialSlug, references, progress, userId, highlightPar, onNext, onPrev }: { highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void; onPrev?: () => void; cargo: CargoGroup | "all" }) {
+function UnitLesson({ cargo, unit, law, materialSlug, references, progress, userId, highlightPar, searchQuery, onNext, onPrev }: { searchQuery?: string | undefined; highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void; onPrev?: () => void; cargo: CargoGroup | "all" }) {
   const caveat = legalStudyCaveat(law, unit.unit_key);
   const queryClient = useQueryClient();
   const [step, setStep] = useState<"entender" | "texto" | "fixar">(highlightPar ? "texto" : "entender");
@@ -207,6 +219,7 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
   }
   return <article id="dispositivo-aberto" className="surface-card scroll-mt-4 space-y-5 p-5 sm:p-7">
     <header className="border-b pb-4"><p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{unit.chapter}</p><h2 className="mt-1 text-2xl font-bold sm:text-3xl">{unit.label}</h2></header>
+    {searchQuery && <aside className="rounded-xl border border-sky-300 bg-sky-50 p-4 text-sm dark:bg-sky-950/30" aria-label="Trecho encontrado na busca"><p className="font-semibold">Resultado nesta matéria · {unit.label}</p><p className="mt-2 whitespace-pre-wrap leading-7"><LibrarySearchMatch text={legalSearchExcerpt(unit.body_text, searchQuery, 520) || `${unit.label} · ${unit.chapter}`} query={searchQuery} /></p><Button variant="outline" className="mt-3" onClick={() => setStep("texto")}>Ver no texto oficial</Button></aside>}
     {unit.content_status !== "excluded" && <CobrancaCard stat={cobrancaOf(law, unit.unit_key)} group={cargo} />}
     {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso de estudo das regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
       <nav className="grid gap-2 rounded-xl bg-muted/40 p-1.5 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
@@ -226,7 +239,7 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
         <div className="flex justify-end"><Button onClick={() => setStep("texto")}>Ler o texto oficial →</Button></div>
       </>}
       {(step === "texto" || (step === "fixar" && revealed)) && <>
-        <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} /></div>
+        <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} searchQuery={searchQuery} /></div>
         {step === "texto" && caveat?.literalPractice !== false && <SafeBoundary><UnitTrueFalse key={unit.id} unit={unit} userId={userId} /></SafeBoundary>}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
         {step === "texto" && <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("entender")}>← Entender</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Fixar este artigo →</Button></div>}

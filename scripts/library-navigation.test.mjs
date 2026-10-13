@@ -129,3 +129,76 @@ test('Each legal section contains only its own discipline and retains chronology
   for(let i=1;i<expected.length;i++)assert.ok(section.indexOf('/dashboard/library/'+expected[i-1].material_slug)<section.indexOf('/dashboard/library/'+expected[i].material_slug));
  }
 });
+
+const courseSearchLibrary = load('src/lib/librarySearch.ts', {'./legalLibrary': laws});
+const courseSearch = load('src/lib/legalCourseSearch.ts', {'./librarySearch': courseSearchLibrary});
+const searchUnit = (key, body, chapter = 'Crimes') => ({id:key,unit_key:key,label:`Art. ${key.slice(4)}`,chapter,body_text:body,content_status:'current'});
+test('Article search finds deep text, accents and combined terms without numeric false positives', () => {
+ const unit = searchUnit('art-213', 'Introdução. '.repeat(80) + 'Estupro mediante violência ou grave ameaça. Lesão corporal.');
+ for (const query of ['estupro', 'AMEACA', 'lesao corporal', 'grave violencia', 'Art.213', 'artigo 213', '213']) assert.equal(courseSearch.matchesLegalUnit(unit, query), true, query);
+ for (const query of ['estupro homicidio', 'art. 21', '21']) assert.equal(courseSearch.matchesLegalUnit(unit, query), false, query);
+ assert.equal(courseSearch.matchesLegalUnit(searchUnit('art-798-a', 'Suspensão'), 'Art. 798-A'), true);
+ const excerpt = courseSearch.legalSearchExcerpt(unit.body_text, 'estupro');
+ assert.ok(excerpt.includes('Estupro')); assert.ok(excerpt.length < 260); assert.ok(excerpt.startsWith('…'));
+ assert.equal(courseSearch.legalSearchExcerpt(unit.body_text, 'inexistente'), '');
+});
+test('A selected article outside the results is replaced; an empty result never opens an unrelated article', () => {
+ const a=searchUnit('art-1','Estupro'), b=searchUnit('art-2','Outra regra');
+ assert.equal(courseSearch.selectVisibleLegalUnit([a],b),a);
+ assert.equal(courseSearch.selectVisibleLegalUnit([a,b],b),b);
+ assert.equal(courseSearch.selectVisibleLegalUnit([],b),undefined);
+});
+test('Search highlighting preserves original text and remains available with study highlights disabled', () => {
+ const highlights = load('src/lib/legalHighlights.ts');
+ const {LegalSearchText} = load('src/components/library/LegalStudyReading.tsx', {
+  '@/lib/legalHighlights': highlights, '@/lib/librarySearch': courseSearchLibrary,
+  './LegalRefText': {LegalRefText:({text})=>text}, './Markdown': {}, '@/lib/legalRefs': {},
+ });
+ const text='Lesão corporal mediante violência. <script>não executar</script>';
+ for (const highlighted of [true,false]) {
+  const html=renderToStaticMarkup(React.createElement(LegalSearchText,{text,query:'lesao',highlighted}));
+  assert.match(html, /data-search-hit="true" class="library-search-match">Lesão<\/mark>/);
+  assert.ok(html.includes('&lt;script&gt;')); assert.ok(!html.includes('<script>'));
+  const parts=courseSearchLibrary.libraryMatchParts(text,'lesao');
+  assert.equal(parts.map(p=>p.text).join(''),text);
+ }
+});
+function renderCourseSearch(query) {
+ let stateCall=0;
+ const rows=[searchUnit('art-1','Preâmbulo. '.repeat(80)+'Estupro consta no inciso V.'),searchUnit('art-2','Regra sem o termo pesquisado.')];
+ const course={id:'course',slug:'hediondos',title:'Crimes hediondos',material_slug:'hediondos',overview:{intro:'',jurisprudence:[],contest:'PF',objectives:[]}};
+ const none=()=>null;
+ const stubs={
+  react:{...React,useState:initial=>{const result=React.useState(initial);return ++stateCall===2?[query,result[1]]:result;}},
+  '@tanstack/react-router':{createFileRoute:()=>options=>({...options,useSearch:()=>({art:'art-2'})}),useParams:()=>({slug:'hediondos'}),useNavigate:()=>none,Link:({children})=>React.createElement('a',null,children)},
+  '@tanstack/react-query':{useQueryClient:()=>({})},sonner:{toast:{}},
+  '@/components/ui/button':{Button:({children,onClick,disabled})=>React.createElement('button',{onClick,disabled},children)},
+  '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},
+  '@/hooks/useFocusMode':{useFocusMode:()=>({focus:false,bar:none,containerClass:''})},
+  '@/lib/legalCourses':{useLegalCourses:()=>({data:[course]}),useLegalUnits:()=>({data:rows}),useLegalProgress:()=>({data:[],isPending:false}),useLegalExplanationCoverage:()=>({data:[]}),useLegalRefIndex:()=>({data:null}),useLegalExplanation:()=>({isSuccess:true,data:{simples:'Explicação geral'}})},
+  '@/lib/legalLearning':{selectNextLegalUnit:()=>rows[1],legalProgressSummary:()=>({read:0,practiced:0,difficult:0,due:0})},
+  '@/lib/legalCourseSearch':courseSearch,'@/lib/librarySearch':courseSearchLibrary,
+  '@/components/library/LibrarySearchMatch':load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary}),
+  '@/components/library/LegalRefText':{LegalRefProvider:({children})=>children},
+  '@/lib/studyMaterials':{useStudyMaterial:()=>({})},'@/lib/mediaStore':{useMediaCatalog:()=>({catalog:[]})},'@/lib/relatedVideos':{lawVideos:()=>[]},
+  '@/lib/cobrancaData':{topArticles:()=>[],cobrancaOf:none},'@/lib/cobrancas':{CARGO_GROUPS:[],countFor:()=>0},
+  '@/components/study/StudyTools':{toolsAreaFor:none},'@/lib/legalStudyCaveats':{legalStudyCaveat:none},'@/lib/studySourceUrl':{isStudySourceUrl:()=>false},'@/integrations/supabase/client':{supabase:{}},
+ };
+ // Peripheral panels do not affect the search or article selection under test.
+ const nullModule=new Proxy({}, {get:()=>none});
+ const imports=[...readFileSync('src/routes/dashboard/legal-course.$slug.tsx','utf8').matchAll(/from "([^"]+)"/g)].map(m=>m[1]);
+ for(const name of imports) if(!stubs[name]) stubs[name]=nullModule;
+ const {Route}=load('src/routes/dashboard/legal-course.$slug.tsx',stubs);
+ return renderToStaticMarkup(React.createElement(Route.component));
+}
+test('The course screen shows the found excerpt instead of the previously opened article',()=>{
+ const html=renderCourseSearch('estupro');
+ assert.match(html,/Trecho encontrado na busca/);assert.match(html,/>Estupro<\/mark>/);
+ assert.match(html,/<h2[^>]*>Art\. 1<\/h2>/);assert.ok(!/<h2[^>]*>Art\. 2<\/h2>/.test(html));
+ assert.ok(html.includes('Ver no texto oficial'));
+});
+test('The course screen explicitly reports no matches without leaving the previous lesson visible',()=>{
+ const html=renderCourseSearch('inexistente');
+ assert.ok(html.includes('Nenhum artigo corresponde'));assert.ok(!html.includes('id="dispositivo-aberto"'));
+ assert.ok(html.includes('Limpar busca e filtros'));
+});
