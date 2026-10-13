@@ -1,5 +1,13 @@
 import test from 'node:test';
-<<<<<<< HEAD
+test('CPP habeas corpus distingue regra de2024 e remissões históricas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-habeas-corpus-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,32);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('647-a').pontos.join(' '),/sem conhecimento/);
+ assert.match(get(664).simples,/regra atual favorável/);
+ assert.match(get(637).simples,/não autoriza.*execução automática/);
+ assert.match(get(650).atencao.join(' '),/prisão administrativa genérica/);
+ for(const n of [637,641,642,643,647,650,655,664])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP julgamento e revisão respeita empate e limites favoráveis',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-judgment-revision-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
@@ -8,7 +16,7 @@ test('CPP julgamento e revisão respeita empate e limites favoráveis',()=>{
  assert.match(get(622).pontos.join(' '),/Novo pedido/);
  assert.match(get(626).simples,/nunca agravar/);
  for(const n of [615,624,630])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
-=======
+});
 test('LEP fundamentos distingue classificação, visita, sigilo e contratação',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-1-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
@@ -20,7 +28,6 @@ test('LEP fundamentos distingue classificação, visita, sigilo e contratação'
  assert.match(get('41-b').exemplo,/Juízo de instrução não acessa/);
  for(const n of [8,35,37,41,'41-a','41-b'])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
  assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length===2));
->>>>>>> origin/main
 });
 test('CPP processamento recursal distingue efeitos e prazos atuais',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-appeal-process-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
