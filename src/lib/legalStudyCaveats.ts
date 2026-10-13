@@ -1,5 +1,23 @@
 /** Editorial application notes are separate from the unmodified compiled statute. */
 export function legalStudyCaveat(law: string, key: string) {
+  const lepNotes: Record<string, [string, string, string]> = {
+    "art-8": ["Aplicação da LEP: art. 8", "Obrigatório no FECHADO; facultativo no SEMIABERTO. Exame inicial de classificação não se confunde com exame para progressão,alterado por Lei 14.843/2024 e sujeito à jurisprudência/irretroatividade aplicáveis. Não certificada aqui toda decisão posterior sobre 112; sem exercício literal universal de progressão.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-18-a": ["Aplicação da LEP: art. 18-a", "ATUALIZAÇÃO: artigo incluído por lei posterior. Incluído pela Lei 13.163/2015,não dispositivo original de 1984. O número isolado 7.627 encontrado no compilado junto ao 18-A não foi tratado como requisito normativo.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-19": ["Aplicação da LEP: art. 19", "Ensino profissional adequado à mulher condenada. Adequação não autoriza discriminação de gênero ou restringir formação por estereótipo.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-23": ["Aplicação da LEP: art. 23", "Também ampara a família da VÍTIMA. Saídas dependem do regime atual de cada modalidade; acompanhamento social não revive hipótese revogada nem concede benefício por si.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-29": ["Aplicação da LEP: art. 29", "Mínimo de TRÊS QUARTOS do salário mínimo. Piso textual de 3/4 não permite ressarcimento estatal prejudicando destinações anteriores do§1º; cálculo de remuneração e aplicações legais exigem caso concreto. ADPF 336: notícia oficial STF de 8/3/2021 registra improcedência e recepção do piso de 3/4 do salário mínimo. É mínimo,não teto; não autoriza remuneração zero em trabalho prisional remunerável.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-35": ["Aplicação da LEP: art. 35", "Dispensa de CONCORRÊNCIA PÚBLICA.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-37": ["Aplicação da LEP: art. 37", "Distinguir fechado,semiaberto e progressão. Não certificado neste lote todo precedente de dispensa/cômputo do lapso; sem exercício literal universal.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-39": ["Aplicação da LEP: art. 39", "Os incisos II e V são ligados à falta grave (art. 50, VI).", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-41": ["Aplicação da LEP: art. 41", "ATUALIZAÇÃO: o §2º (sem visita íntima, em crime contra a mulher) foi incluído por lei posterior. Só o JUIZ pode suspender os direitos dos incisos V, X e XV. Lei 14.994 publicada/vigente em 10/10/2024 atribuiu restrição dos incisosV,X,XV ao juiz e inseriu§2º; distinguir visita íntima/conjugal de toda visita. Não certificada toda controvérsia constitucional posterior.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-41-a": ["Aplicação da LEP: art. 41-a", "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção. Lei 15.358 publicada/vigente em 25/3/2026. Controle constitucional da Antifacção não tratado como resolvido; previsão textual não autoriza monitoramento universal ou acesso automático ao sigilo profissional.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+    "art-41-b": ["Aplicação da LEP: art. 41-b", "ATUALIZAÇÃO: artigo incluído pela Lei Antifacção. Juízo de controle DISTINTO do juízo da instrução. Lei 15.358 publicada/vigente em 25/3/2026. Controle constitucional da Antifacção não tratado como resolvido; previsão textual não autoriza monitoramento universal ou acesso automático ao sigilo profissional.", "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"],
+  };
+  if (law === "lep" && lepNotes[key]) {
+    const [title, explanation, source] = lepNotes[key];
+    return {title, explanation, source, literalPractice: false};
+  }
+
   const cppFoundations: Record<string, [string, string, string]> = {
     "art-615": ["Empate: regra atual de2024", "Lei14836 favorece imediatamente imputado no empate de julgamento penal/processual penal colegiado, inclusive composição incompleta nas causas enumeradas. Não recuperar voto condenatório de desempate como regra geral.", "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14836.htm"],
     "art-624": ["Revisão: competência constitucional atual", "TFR e Alçada históricos exigem integração aos órgãos atuais. Decisão própria e mérito examinado importam; recurso excepcional inadmitido não transfere automaticamente revisão ao superior.", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"],
