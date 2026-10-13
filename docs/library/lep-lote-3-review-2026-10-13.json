@@ -639,7 +639,12 @@
   "validation": {
     "tests": 443,
     "typecheck": "passed",
-    "build": "passed"
+    "build": "passed",
+    "integrated": {
+      "tests": 444,
+      "typecheck": "passed",
+      "build": "passed"
+    }
   },
   "limits": [
     "Aprovação dos 55 itens explicitamente listados; não certifica os demais nem toda jurisprudência.",
