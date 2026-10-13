@@ -10,6 +10,7 @@ assert all(oldus[i]==newus[i] for i in cppids),'CPP structure changed during pub
 olde={r['unit_id']:r for r in read(before,'legal_unit_explanations')};newe={r['unit_id']:r for r in read(after,'legal_unit_explanations')}
 targets={r['unit_id']:r for r in pack['units']};fields=('simples','pontos','atencao','exemplo','prova','termos','remissoes')
 for i,r in targets.items():
+ assert olde.get(i)==r.get('expected'),(i,'baseline differs from protected previous revision')
  e=newe[i];assert e['status']=='published' and e['reviewed_by'] and e['reviewed_at'],i
  assert e['content_sha256']==newus[i]['content_sha256']==r['content_sha256'],i
  assert hashlib.sha256(newus[i]['body_text'].encode()).hexdigest()==e['content_sha256'],i

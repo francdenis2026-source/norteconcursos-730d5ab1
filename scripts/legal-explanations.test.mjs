@@ -19,6 +19,17 @@ test('CPP: regras afastadas pelo STF não geram treino literal e custódia integ
  assert.equal(pack.units.length,9);
 });
 
+test('CPP: inquérito não ensina incomunicabilidade, curador histórico ou conteúdo como cadastro',()=>{
+ for(const key of ['art-15','art-21','art-13-a','art-13-b','art-6']) assert.equal(legalStudyCaveat('codigo-processo-penal',key)?.literalPractice,false,key);
+ const p=JSON.parse(fs.readFileSync('docs/library/article-explanations-cpp-inquiry-2026-10-12.json','utf8'));
+ assert.equal(p.units.length,23);
+ assert.match(p.units.find(u=>u.unit_key==='art-6').pontos.join(' '),/1258/);
+ assert.match(p.units.find(u=>u.unit_key==='art-13-b').pontos.join(' '),/72 horas/);
+ assert.match(p.units.find(u=>u.unit_key==='art-13-b').pontos.join(' '),/doze horas/);
+ assert.match(p.units.find(u=>u.unit_key==='art-15').simples,/desnecessidade/);
+ assert.match(p.units.find(u=>u.unit_key==='art-21').simples,/não recepção/);
+});
+
 // Estrutura mínima de cada explicação por artigo (a conferência contra o texto oficial roda em scripts/explicacoes/build.mjs).
 for (const file of fs.readdirSync("scripts/explicacoes").filter((f) => f.endsWith(".json"))) {
   test(`explicações por artigo: ${file}`, () => {
