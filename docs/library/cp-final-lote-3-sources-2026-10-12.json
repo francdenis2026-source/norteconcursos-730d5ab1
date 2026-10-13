@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-13T02:54:22.409945+00:00",
+  "sources": [
+    {
+      "id": "codigo-penal",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "sha256": "f2588e5b077b4a1177625aa7769ab27b15e59559a0e312f2510d606554bbfc06"
+    },
+    {
+      "id": "hediondos",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "sha256": "c15b33e28eb4d7f26c8a121f0018f1151e01daac5dfd1ecdeaf1f6b3d2ed657d"
+    },
+    {
+      "id": "l15425",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15425.htm",
+      "sha256": "8e3697b72bbc1b3c45f5ddbf32281bddceb4efaaf20dcfb063f08c0f2877a949"
+    },
+    {
+      "id": "l15245",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+      "sha256": "ec49d44076517fa819f487fdbfc1d44f43608788d642ca028fa6ad6e5d2f9da7"
+    },
+    {
+      "id": "stf-273-extended",
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-estende-tese-sobre-pena-por-importacao-de-medicamento-sem-registro-sanitario/",
+      "sha256": "3716258c2035b194a35cc340117f0137f66f566201ed53a3789fdcbb94614cdc"
+    },
+    {
+      "id": "stf-adpf187",
+      "url": "https://noticias.stf.jus.br/postsnoticias/direto-do-plenario-stf-considera-constitucional-a-marcha-da-maconha/",
+      "sha256": "8a8e4e1866d52ce63544597fc403d198bd66ddbc4249d3d23d524d667996f38f"
+    },
+    {
+      "id": "STJ73-522-546",
+      "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82",
+      "note": "Coleta oficial válida de 12/10 desta sessão, reutilizada; nova resposta não-PDF não usada."
+    }
+  ],
+  "limitations": [
+    "Tema1003 reformulado em2023 é restrito às condutas do §1º-BI indicadas, não repristinação universal do273.",
+    "Não certificadas todas as normas sanitárias, cosméticos ou nacionalidade/normas patrimoniais antigas; ressalvas explícitas preservadas."
+  ]
+}

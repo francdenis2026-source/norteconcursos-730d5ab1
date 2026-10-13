@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-13T03:07:02.576387+00:00",
+  "authored_explanations_confirmed": 50,
+  "untargeted_explanations_preserved": 3463,
+  "untargeted_cp_explanations_preserved": 351,
+  "prior_revisions_retained_in_manifest": 50,
+  "timestamp_only_changes": [],
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "legal_courses",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "cp_units_unchanged": true,
+  "concurrent_other_course_changes": [],
+  "note": "CP alvos e não alvos verificados estritamente; mudanças fora do CP identificadas como concorrentes, sem escrever sobre elas ou declarar toda tabela global imutável."
+}
