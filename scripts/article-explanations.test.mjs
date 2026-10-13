@@ -1,4 +1,15 @@
 import test from 'node:test';
+test('CPP defesa não restaura multa antiga, curador etário ou interrogatório coercitivo',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-participants-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,31);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(260).simples,/incompatível.*395 e 444/s);
+ assert.match(get(262).simples,/não impõe curador.*18 e 21/s);
+ assert.match(get(265).pontos.join(' '),/sem repetir antiga multa judicial/);
+ assert.match(get(271).pontos.join(' '),/aboliu essa peça/);
+ assert.match(get(279).atencao.join(' '),/nem anunciar revogação textual inexistente/);
+ for(const n of [260,262,264,265,271,277,279])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP reconhecimento e busca preservam garantias além da redação histórica',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-recognition-search-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,25);

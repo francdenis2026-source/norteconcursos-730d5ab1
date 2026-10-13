@@ -1,0 +1,1879 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:25:35.522500+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 31,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-251",
+        "art-252",
+        "art-253",
+        "art-254",
+        "art-255",
+        "art-256",
+        "art-257",
+        "art-258",
+        "art-259",
+        "art-260",
+        "art-261",
+        "art-262",
+        "art-263",
+        "art-264",
+        "art-265",
+        "art-266",
+        "art-267",
+        "art-268",
+        "art-269",
+        "art-270",
+        "art-271",
+        "art-272",
+        "art-273",
+        "art-274",
+        "art-275",
+        "art-276",
+        "art-277",
+        "art-278",
+        "art-279",
+        "art-280",
+        "art-281"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-251",
+      "unit_id": "a1a41966-88bc-51f6-a0de-f03ab5875182",
+      "content_sha256": "ccdbde21cdc34c4195aca7ee7fa706115d59366ed741d4bb9776e522ccc0d48c",
+      "simples": "Juiz preserva regularidade e ordem dos atos, podendo requisitar força pública quando necessária.",
+      "pontos": [
+        "Poder de organização não substitui acusação.",
+        "Medidas devem ser proporcionais e respeitar defesa."
+      ],
+      "atencao": [
+        "Manter ordem não autoriza calar defesa legítima ou investigar como parte."
+      ],
+      "exemplo": "Tumulto concreto exige medida adequada para retomar audiência. Variação: Discordância jurídica respeitosa da defesa não justifica uso de força.",
+      "prova": [
+        "Pode requisitar força para preservar ordem? Sim.",
+        "Pode substituir acusação por essa regra? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Direção processual",
+          "significado": "Organização legítima dos atos judiciais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a1a41966-88bc-51f6-a0de-f03ab5875182",
+        "content_sha256": "ccdbde21cdc34c4195aca7ee7fa706115d59366ed741d4bb9776e522ccc0d48c",
+        "simples": "Ao juiz incumbirá prover à regularidade do processo e manter a ordem no curso dos respectivos atos, podendo, para tal fim, requisitar a força pública.",
+        "pontos": [
+          "Juiz zela pela regularidade do processo e pela ordem dos atos.",
+          "Pode requisitar a força pública."
+        ],
+        "atencao": [
+          "Poder de polícia do juiz nas audiências."
+        ],
+        "exemplo": "O juiz requisita a força pública para manter a ordem na audiência.",
+        "prova": [
+          "Assertiva que impede o juiz de requisitar a força pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 252"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-252",
+      "unit_id": "8438a722-a0f9-5680-8314-13d12ca8351c",
+      "content_sha256": "51e564566ff2137108818b1c8ef3206ccd41ed8c4d2974921fd4d8f44127f2ce",
+      "simples": "Impedimento afasta juiz por vínculos objetivos expressamente previstos no processo.",
+      "pontos": [
+        "Cônjuge ou parente até terceiro grau em funções enumeradas.",
+        "O próprio juiz anteriormente nessas funções ou como testemunha.",
+        "Atuação como juiz de outra instância com pronunciamento sobre a questão.",
+        "Interesse direto ou condição de parte própria ou dos familiares abrangidos."
+      ],
+      "atencao": [
+        "Não confundir grau de parentesco com grau recursal; nem presumir que qualquer ato anterior na mesma instância gera este impedimento."
+      ],
+      "exemplo": "Juiz não julga causa em que seu irmão atuou como defensor. Variação: Atuação judicial anterior deve ser enquadrada na hipótese específica, não em impedimento inventado.",
+      "prova": [
+        "As hipóteses abrangem parentes até terceiro grau? Sim.",
+        "Toda decisão anterior na mesma instância satisfaz o inciso III? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Impedimento",
+          "significado": "Vínculo objetivo que impede jurisdição no feito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8438a722-a0f9-5680-8314-13d12ca8351c",
+        "content_sha256": "51e564566ff2137108818b1c8ef3206ccd41ed8c4d2974921fd4d8f44127f2ce",
+        "simples": "O juiz não poderá exercer jurisdição no processo em que tiver funcionado seu cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral até o terceiro grau, inclusive, como defensor ou advogado, órgão do Ministério Público, autoridade policial, auxiliar da justiça ou perito; em que ele próprio houver desempenhado qualquer dessas funções ou servido como testemunha; em que tiver funcionado como juiz de outra instância, pronunciando-se de fato ou de direito sobre a questão; ou em que ele próprio, seu cônjuge ou parente, até o terceiro grau, for parte ou diretamente interessado.",
+        "pontos": [
+          "I: cônjuge ou parente (até o terceiro grau) funcionou no processo como defensor, MP, autoridade policial, auxiliar ou perito.",
+          "II: o próprio juiz atuou em tais funções ou foi testemunha.",
+          "III: já decidiu a questão em outra instância.",
+          "IV: o juiz ou seus parentes são parte ou diretamente interessados."
+        ],
+        "atencao": [
+          "Hipóteses de IMPEDIMENTO (não de suspeição).",
+          "Rol taxativo segundo a doutrina majoritária."
+        ],
+        "exemplo": "Juiz que já atuou no processo como membro do Ministério Público está impedido.",
+        "prova": [
+          "Assertiva que trata as hipóteses do art. 252 como suspeição erra: são casos de impedimento."
+        ],
+        "termos": [
+          {
+            "termo": "Impedimento",
+            "significado": "Causa objetiva que proíbe o juiz de atuar no processo."
+          }
+        ],
+        "remissoes": [
+          "Art. 254",
+          "Art. 112"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-253",
+      "unit_id": "4a08ff70-3022-5360-bf4b-78ede77c2398",
+      "content_sha256": "d3d7f840328e7775de52d808da8b1a603b74953b3194c361142f4d8b95bebd65",
+      "simples": "Juízes parentes até terceiro grau não podem atuar juntos no mesmo processo em órgão coletivo.",
+      "pontos": [
+        "Abrange consanguinidade e afinidade, linha reta ou colateral.",
+        "Vedação concerne ao mesmo processo no juízo coletivo."
+      ],
+      "atencao": [
+        "Não confundir esta regra entre julgadores com parentesco entre juiz e parte."
+      ],
+      "exemplo": "Dois irmãos não compõem o colegiado para julgar a mesma causa. Variação: Ausência de parentesco entre julgadores não elimina outros impedimentos próprios.",
+      "prova": [
+        "A regra trata de parentesco entre julgadores? Sim.",
+        "Exclui análise de outros impedimentos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Colegiado imparcial",
+          "significado": "Composição sem o parentesco vedado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a08ff70-3022-5360-bf4b-78ede77c2398",
+        "content_sha256": "d3d7f840328e7775de52d808da8b1a603b74953b3194c361142f4d8b95bebd65",
+        "simples": "Nos juízos coletivos, não poderão servir no mesmo processo os juízes que forem entre si parentes, consanguíneos ou afins, em linha reta ou colateral até o terceiro grau, inclusive.",
+        "pontos": [
+          "Juízos coletivos: juízes parentes até o terceiro grau não atuam no mesmo processo."
+        ],
+        "atencao": [
+          "Impedimento por parentesco entre magistrados."
+        ],
+        "exemplo": "Dois desembargadores primos-irmãos não integram a mesma turma no mesmo processo.",
+        "prova": [
+          "Assertiva que permite a atuação conjunta de juízes parentes em juízo coletivo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 252"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-254",
+      "unit_id": "583a7f9b-036f-5d62-9f5a-ea66f1fc5514",
+      "content_sha256": "03c5299792e9a7f3c3553a807496e732a163169577ecb1774cba44f0aff58678",
+      "simples": "Suspeição trata de vínculos e situações que comprometem imparcialidade nas hipóteses enumeradas.",
+      "pontos": [
+        "Amizade íntima ou inimizade capital.",
+        "Processo por fato análogo com controvérsia criminal na hipótese do inciso II.",
+        "Demanda a ser julgada por parte envolvendo juiz ou familiares abrangidos.",
+        "Aconselhamento de parte; crédito, débito, tutela ou curatela.",
+        "Vínculo societário com sociedade interessada."
+      ],
+      "atencao": [
+        "Conhecimento social superficial não equivale automaticamente a amizade íntima; identificar fatos e hipótese legal."
+      ],
+      "exemplo": "Juiz é credor de uma parte e comunica suspeição. Variação: Só conhecer profissionalmente advogado não basta, sem circunstância legal pertinente.",
+      "prova": [
+        "Aconselhar parte pode gerar suspeição? Sim.",
+        "Qualquer contato social é amizade íntima? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suspeição",
+          "significado": "Comprometimento da imparcialidade nas situações legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "583a7f9b-036f-5d62-9f5a-ea66f1fc5514",
+        "content_sha256": "03c5299792e9a7f3c3553a807496e732a163169577ecb1774cba44f0aff58678",
+        "simples": "O juiz dar-se-á por suspeito, e, se não o fizer, poderá ser recusado por qualquer das partes: se for amigo íntimo ou inimigo capital de qualquer deles; se ele, seu cônjuge, ascendente ou descendente estiver respondendo a processo por fato análogo, sobre cujo caráter criminoso haja controvérsia; se ele, seu cônjuge ou parente até o terceiro grau sustentar demanda ou responder a processo que tenha de ser julgado por qualquer das partes; se tiver aconselhado qualquer das partes; se for credor ou devedor, tutor ou curador de qualquer das partes; ou se for sócio, acionista ou administrador de sociedade interessada no processo.",
+        "pontos": [
+          "I: amigo íntimo ou inimigo capital.",
+          "II: ele ou parentes respondem a processo por fato análogo.",
+          "III: ele ou parentes têm demanda a ser julgada por qualquer das partes.",
+          "IV: aconselhou a parte.",
+          "V: credor, devedor, tutor ou curador.",
+          "VI: sócio, acionista ou administrador de sociedade interessada."
+        ],
+        "atencao": [
+          "Hipóteses de SUSPEIÇÃO (subjetivas), de rol discutido na doutrina."
+        ],
+        "exemplo": "Juiz amigo íntimo do réu deve declarar-se suspeito.",
+        "prova": [
+          "Assertiva que classifica o juiz amigo íntimo da parte como caso de impedimento erra: é suspeição."
+        ],
+        "termos": [
+          {
+            "termo": "Suspeição",
+            "significado": "Causa subjetiva que compromete a imparcialidade do juiz."
+          }
+        ],
+        "remissoes": [
+          "Art. 252",
+          "Art. 97"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-255",
+      "unit_id": "b2a3e785-07d8-5856-a6e5-7e1251a453ef",
+      "content_sha256": "c29780cc1cb8a71664eeb61ff2e4a0f3b1d5c6d836921f926fc77496fe8b3808",
+      "simples": "Fim do casamento pode cessar afinidade relevante ao impedimento ou suspeição, com exceções expressas.",
+      "pontos": [
+        "Se há descendentes, a cessação prevista não ocorre.",
+        "Mesmo sem descendentes, não julga causa de sogro, padrasto, cunhado, genro ou enteado previstos como parte."
+      ],
+      "atencao": [
+        "Dissolução do casamento não apaga automaticamente todas as hipóteses de afastamento."
+      ],
+      "exemplo": "Mesmo após casamento dissolvido sem filhos, juiz não atua em processo de antigo cunhado como parte. Variação: Existindo descendentes, não aplicar a regra geral de cessação como se fossem inexistentes.",
+      "prova": [
+        "Dissolução sempre elimina afastamento? Não.",
+        "O artigo conserva exceções mesmo sem descendentes? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Afinidade residual",
+          "significado": "Vínculo relevante mantido nas hipóteses expressas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b2a3e785-07d8-5856-a6e5-7e1251a453ef",
+        "content_sha256": "c29780cc1cb8a71664eeb61ff2e4a0f3b1d5c6d836921f926fc77496fe8b3808",
+        "simples": "O impedimento ou suspeição decorrente de parentesco por afinidade cessará pela dissolução do casamento que lhe tiver dado causa, salvo sobrevindo descendentes; mas, ainda que dissolvido o casamento sem descendentes, não funcionará como juiz o sogro, o padrasto, o cunhado, o genro ou enteado de quem for parte no processo.",
+        "pontos": [
+          "Afinidade cessa com a dissolução do casamento, salvo se houver descendentes.",
+          "Mesmo dissolvido sem descendentes, sogro, padrasto, cunhado, genro ou enteado não funcionam como juiz."
+        ],
+        "atencao": [
+          "Exceções à cessação da afinidade."
+        ],
+        "exemplo": "Juiz que é ex-genro da parte continua impedido, ainda que o casamento tenha acabado.",
+        "prova": [
+          "Assertiva que permite ao ex-genro da parte funcionar como juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 252",
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-256",
+      "unit_id": "57d53c35-0fa3-54c2-9ca8-1977960897ff",
+      "content_sha256": "c630b884b77d606372f9ccb0146af190da5bb3427248edb7d4b28b42a9b1fba4",
+      "simples": "Parte não pode fabricar suspeição por insultar juiz ou provocar deliberadamente sua causa.",
+      "pontos": [
+        "Exige provocação intencional na hipótese legal.",
+        "Causa real independente de suspeição continua sujeita a análise."
+      ],
+      "atencao": [
+        "A regra não imuniza juiz contra motivos de suspeição efetivamente existentes."
+      ],
+      "exemplo": "Parte insulta juiz para tentar escolher outro julgador; isso não cria a suspeição pretendida. Variação: Vínculo real preexistente de interesse deve ser analisado independentemente da provocação.",
+      "prova": [
+        "Injúria estratégica cria suspeição válida? Não.",
+        "Causa independente deixa de ser analisada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suspeição provocada",
+          "significado": "Tentativa artificial de afastar julgador."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "57d53c35-0fa3-54c2-9ca8-1977960897ff",
+        "content_sha256": "c630b884b77d606372f9ccb0146af190da5bb3427248edb7d4b28b42a9b1fba4",
+        "simples": "A suspeição não poderá ser declarada nem reconhecida quando a parte injuriar o juiz ou de propósito der motivo para criá-la.",
+        "pontos": [
+          "Suspeição não pode ser declarada nem reconhecida se a parte injuria o juiz.",
+          "Nem se a parte, de propósito, dá motivo para criá-la."
+        ],
+        "atencao": [
+          "Vedação à suspeição provocada."
+        ],
+        "exemplo": "A parte ofende o juiz para forçar sua suspeição; ela não será reconhecida.",
+        "prova": [
+          "Assertiva que reconhece a suspeição criada propositalmente pela parte erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-257",
+      "unit_id": "e8732725-f568-5eb0-a879-135ad27abe08",
+      "content_sha256": "cfede89be0df911aeafa67adf93d0791de9dc0c3e2e4769e19bb84276f426681",
+      "simples": "Ministério Público promove privativamente ação penal pública e fiscaliza execução da lei.",
+      "pontos": [
+        "Ação pública é sua atribuição prevista.",
+        "Fiscalização exige observar legalidade, inclusive garantias do acusado.",
+        "Distinguir ação privada e subsidiária nos requisitos próprios."
+      ],
+      "atencao": [
+        "Privatividade da ação pública não elimina ação privada subsidiária constitucional na inércia legal."
+      ],
+      "exemplo": "MP oferece denúncia quando presentes requisitos e também controla legalidade. Variação: Ausência de base para acusar não autoriza denúncia por simples dever de acusação.",
+      "prova": [
+        "Também fiscaliza execução da lei? Sim.",
+        "Deve acusar sem justa causa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Funções do MP",
+          "significado": "Promoção da ação pública e fiscalização jurídica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "e8732725-f568-5eb0-a879-135ad27abe08",
+        "content_sha256": "cfede89be0df911aeafa67adf93d0791de9dc0c3e2e4769e19bb84276f426681",
+        "simples": "Ao Ministério Público cabe promover, privativamente, a ação penal pública, na forma estabelecida no Código, e fiscalizar a execução da lei.",
+        "pontos": [
+          "Promover, privativamente, a ação penal pública.",
+          "Fiscalizar a execução da lei."
+        ],
+        "atencao": [
+          "Privatividade da ação pública (Constituição, art. 129, I)."
+        ],
+        "exemplo": "O MP oferece denúncia e atua como fiscal da lei.",
+        "prova": [
+          "Assertiva que torna a ação penal pública exclusiva da polícia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-258",
+      "unit_id": "170533de-91c3-5b03-b6ee-2e88d10819b2",
+      "content_sha256": "1d15e31cbe7ec105b3a679cbaec95b16ff684c5711e41f2c69c9f8cafd0b8607",
+      "simples": "Membro do MP se afasta por parentesco com juiz ou partes nos limites legais e por impedimento ou suspeição aplicáveis.",
+      "pontos": [
+        "Cônjuge e parentes até terceiro grau, consanguíneos ou afins.",
+        "Regras do juiz se estendem naquilo que for aplicável."
+      ],
+      "atencao": [
+        "Não importar hipóteses incompatíveis de forma automática; nem ignorar vínculo com juiz."
+      ],
+      "exemplo": "Promotor não atua em processo de seu irmão como parte. Variação: A análise alcança também parentesco vedado com o juiz da causa.",
+      "prova": [
+        "O parentesco relevante pode ser com o juiz? Sim.",
+        "Toda regra judicial se aplica sem adaptação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Imparcialidade institucional",
+          "significado": "Afastamento do membro do MP nas situações legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "170533de-91c3-5b03-b6ee-2e88d10819b2",
+        "content_sha256": "1d15e31cbe7ec105b3a679cbaec95b16ff684c5711e41f2c69c9f8cafd0b8607",
+        "simples": "Os órgãos do Ministério Público não funcionarão nos processos em que o juiz ou qualquer das partes for seu cônjuge ou parente, consanguíneo ou afim, em linha reta ou colateral, até o terceiro grau, inclusive, e a eles se estendem, no que lhes for aplicável, as prescrições relativas à suspeição e aos impedimentos dos juízes.",
+        "pontos": [
+          "Membro do MP não atua em processo em que juiz ou parte seja seu cônjuge ou parente até o terceiro grau.",
+          "Aplicam-se as regras de suspeição e impedimento dos juízes."
+        ],
+        "atencao": [
+          "Impedimento e suspeição valem também para o MP."
+        ],
+        "exemplo": "Promotor não atua em processo em que o réu é seu irmão.",
+        "prova": [
+          "Assertiva que isenta o MP das regras de impedimento e suspeição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 104"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-259",
+      "unit_id": "1634a2ff-bceb-53ec-98a8-f0af6fded455",
+      "content_sha256": "e0b976de830f754fdc62c1f5a8655f34263de849e518e665dfbcefa3b09d1aa3",
+      "simples": "Nome ou qualificação desconhecidos não retardam a ação quando identidade física é certa; descoberta posterior permite retificação.",
+      "pontos": [
+        "Exige certeza sobre a pessoa física processada.",
+        "Retificação por termo em processo, julgamento ou execução.",
+        "Atos anteriores não perdem validade apenas pela correção."
+      ],
+      "atencao": [
+        "Não confundir nome incerto com dúvida sobre qual pessoa cometeu o fato."
+      ],
+      "exemplo": "Réu fisicamente identificado usa nome falso; nome verdadeiro é corrigido depois. Variação: Se há dúvida sobre a própria pessoa, o artigo não sana acusação de indivíduo errado.",
+      "prova": [
+        "Nome desconhecido sempre paralisa ação? Não.",
+        "Identidade física certa é requisito? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Identidade física",
+          "significado": "Certeza da pessoa, distinta de seus dados nominais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1634a2ff-bceb-53ec-98a8-f0af6fded455",
+        "content_sha256": "e0b976de830f754fdc62c1f5a8655f34263de849e518e665dfbcefa3b09d1aa3",
+        "simples": "A impossibilidade de identificação do acusado com o seu verdadeiro nome ou outros qualificativos não retardará a ação penal, quando certa a identidade física. A qualquer tempo, no curso do processo, do julgamento ou da execução da sentença, se for descoberta a sua qualificação, far-se-á a retificação por termo nos autos, sem prejuízo da validade dos atos precedentes.",
+        "pontos": [
+          "Identidade física certa: a ação penal não é retardada pela falta do nome verdadeiro.",
+          "Qualificação descoberta depois: retificação por termo nos autos.",
+          "Atos anteriores permanecem válidos."
+        ],
+        "atencao": [
+          "O que importa é a identidade FÍSICA do acusado."
+        ],
+        "exemplo": "O acusado usa nome falso, mas é plenamente identificado fisicamente; o processo segue.",
+        "prova": [
+          "Assertiva que suspende a ação penal até se descobrir o verdadeiro nome do acusado erra, se certa a identidade física."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-260",
+      "unit_id": "184d7de7-3954-5ae6-8adb-8d6e3ea0d81e",
+      "content_sha256": "6a54c954d1614dfadee91db2b04dbdc6713e6655e1a5d0dd322630a7da57fb0b",
+      "simples": "Condução coercitiva para interrogatório de acusado ou investigado é incompatível com a Constituição, conforme ADPFs 395 e 444.",
+      "pontos": [
+        "STF em 2018 afastou a expressão para o interrogatório.",
+        "Não transportar conclusão automaticamente para testemunha ou perito: regras próprias.",
+        "Outros atos envolvendo acusado exigem análise específica, necessidade e garantias.",
+        "Mandado nos atos juridicamente admitidos observa requisitos próprios."
+      ],
+      "atencao": [
+        "Falta ao interrogatório não legitima levar à força para obter respostas. A decisão preservou interrogatórios anteriores ao julgamento nos termos da modulação."
+      ],
+      "exemplo": "Réu não comparece para ser interrogado; não se ordena condução para obrigá-lo a depor. Variação: Reconhecimento ou identificação têm disciplina distinta e não autorizam interrogatório coercitivo disfarçado.",
+      "prova": [
+        "Pode conduzir acusado para interrogatório após ausência? Não.",
+        "A decisão se estende mecanicamente a toda testemunha? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Não autoincriminação",
+          "significado": "Garantia que impede interrogatório coercitivo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADPF&numeroProcesso=395"
+      ],
+      "expected": {
+        "unit_id": "184d7de7-3954-5ae6-8adb-8d6e3ea0d81e",
+        "content_sha256": "6a54c954d1614dfadee91db2b04dbdc6713e6655e1a5d0dd322630a7da57fb0b",
+        "simples": "Se o acusado não atender à intimação para o interrogatório, reconhecimento ou qualquer outro ato que, sem ele, não possa ser realizado, a autoridade poderá mandar conduzi-lo à sua presença. O mandado conterá, além da ordem de condução, os requisitos do art. 352, no que lhe for aplicável. O texto remete a ADPFs sobre condução coercitiva.",
+        "pontos": [
+          "Acusado que não atende à intimação pode ser conduzido, para atos que dependam dele.",
+          "Mandado contém os requisitos do art. 352."
+        ],
+        "atencao": [
+          "O STF (ADPF 395 e 444) considerou a condução coercitiva para interrogatório incompatível com a Constituição.",
+          "Continua possível para reconhecimento e atos que dependam da presença física do acusado."
+        ],
+        "exemplo": "Para o reconhecimento de pessoa, pode ser determinada a condução do acusado que não comparece.",
+        "prova": [
+          "Assertiva que autoriza a condução coercitiva do acusado para interrogatório, nos termos do art. 260, erra, à luz das ADPFs 395 e 444."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 218",
+          "Art. 352"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-261",
+      "unit_id": "ebd1207c-d655-5bb8-a61a-47191f100bd2",
+      "content_sha256": "b2c7d7b11118fa4c5554208fbc104bb8169a15ba3294f21a8da7dfe800c0f026",
+      "simples": "Todo acusado precisa de defensor, mesmo ausente ou foragido; defesa pública ou dativa deve apresentar manifestação fundamentada.",
+      "pontos": [
+        "Defesa técnica indispensável.",
+        "Não basta presença formal sem atuação fundamentada prevista.",
+        "Ausência pessoal não elimina assistência técnica."
+      ],
+      "atencao": [
+        "Foragido não perde direito à defesa."
+      ],
+      "exemplo": "Réu ausente continua representado por defensor nos atos processuais. Variação: Nomeação meramente nominal não substitui defesa técnica efetiva.",
+      "prova": [
+        "Foragido pode ser julgado sem defensor? Não.",
+        "Defesa dativa deve ser fundamentada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa técnica",
+          "significado": "Assistência jurídica indispensável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ebd1207c-d655-5bb8-a61a-47191f100bd2",
+        "content_sha256": "b2c7d7b11118fa4c5554208fbc104bb8169a15ba3294f21a8da7dfe800c0f026",
+        "simples": "Nenhum acusado, ainda que ausente ou foragido, será processado ou julgado sem defensor. A defesa técnica, quando realizada por defensor público ou dativo, será sempre exercida através de manifestação fundamentada.",
+        "pontos": [
+          "Nenhum acusado é processado ou julgado sem defensor, ainda que ausente ou foragido.",
+          "Defensor público ou dativo: manifestação sempre fundamentada."
+        ],
+        "atencao": [
+          "A defesa técnica é indispensável.",
+          "Defesa meramente formal é nula."
+        ],
+        "exemplo": "Réu foragido tem defensor nomeado para acompanhar o processo.",
+        "prova": [
+          "Assertiva que permite processar o réu foragido sem defensor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 263"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-262",
+      "unit_id": "9bafe12a-8cae-592e-8195-37df2c051c15",
+      "content_sha256": "c423ea297565490a256654b3c563041bad7c8314374d1a2ef1abb9885cc73859",
+      "simples": "A expressão histórica acusado menor não impõe curador apenas porque réu tem entre 18 e 21 anos após maioridade civil aos 18.",
+      "pontos": [
+        "Integrar Código Civil e entendimento do STJ.",
+        "Curadoria por incapacidade ou incidente específico possui outro fundamento."
+      ],
+      "atencao": [
+        "Não restaurar exigência etária superada; não confundir com incidente de insanidade."
+      ],
+      "exemplo": "Réu de 19 anos tem defensor, sem curador exigido só por idade. Variação: Incidente de insanidade pode demandar curador por regra própria, independentemente deste antigo fundamento.",
+      "prova": [
+        "Idade de 19 anos exige curador automaticamente? Não.",
+        "Curadoria por outra causa possui regras próprias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Curadoria por fundamento próprio",
+          "significado": "Proteção fundada em hipótese atual, não antiga menoridade civil."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20150211&formato=PDF&nreg=201400285520&salvar=false&seq=1379594&tipo=0"
+      ],
+      "expected": {
+        "unit_id": "9bafe12a-8cae-592e-8195-37df2c051c15",
+        "content_sha256": "c423ea297565490a256654b3c563041bad7c8314374d1a2ef1abb9885cc73859",
+        "simples": "Ao acusado menor dar-se-á curador. O dispositivo, anterior à maioridade civil aos 18 anos, está superado, pois o menor de 18 anos é inimputável.",
+        "pontos": [
+          "Previa curador para o acusado menor.",
+          "Superado pela maioridade civil e penal aos 18 anos."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática hoje.",
+        "prova": [
+          "Assertiva que exige curador para o acusado maior de 18 anos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 15"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-263",
+      "unit_id": "831d7e71-ed16-53fe-ab8d-9d9096edf077",
+      "content_sha256": "0ff04e508a1b091a3bff1fb258b9c11d52e3912dab54ee62a7f1e7f914c6ca50",
+      "simples": "Sem defensor constituído, juiz nomeia defesa, preservando direito de escolha posterior ou autodefesa técnica se habilitado.",
+      "pontos": [
+        "Escolha de defensor de confiança a qualquer tempo.",
+        "Autodefesa técnica exige habilitação.",
+        "Acusado não pobre paga honorários dativos arbitrados nos termos legais."
+      ],
+      "atencao": [
+        "Saber argumentar não é habilitação profissional para dispensar defensor técnico."
+      ],
+      "exemplo": "Juiz nomeia dativo e réu depois constitui advogado de confiança. Variação: Réu sem habilitação não substitui defesa técnica apenas por querer defender-se sozinho.",
+      "prova": [
+        "Pode escolher outro defensor depois? Sim.",
+        "Qualquer réu pode dispensar técnica por autodefesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Defensor nomeado",
+          "significado": "Assistência designada quando não há constituição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "831d7e71-ed16-53fe-ab8d-9d9096edf077",
+        "content_sha256": "0ff04e508a1b091a3bff1fb258b9c11d52e3912dab54ee62a7f1e7f914c6ca50",
+        "simples": "Se o acusado não tiver defensor, o juiz nomeará um, ressalvado o seu direito de, a todo tempo, nomear outro de sua confiança, ou a si mesmo defender-se, caso tenha habilitação. O acusado que não for pobre será obrigado a pagar os honorários do defensor dativo, arbitrados pelo juiz.",
+        "pontos": [
+          "Acusado sem defensor: o juiz nomeia.",
+          "Pode nomear outro de confiança a qualquer tempo.",
+          "Pode defender-se a si mesmo, se habilitado.",
+          "Quem não é pobre paga os honorários do dativo."
+        ],
+        "atencao": [
+          "Defesa técnica obrigatória: a autodefesa é possível apenas por quem tem habilitação."
+        ],
+        "exemplo": "Acusado sem advogado recebe defensor nomeado pelo juiz; se não é pobre, paga os honorários.",
+        "prova": [
+          "Assertiva que isenta o acusado não pobre do pagamento dos honorários do dativo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 261"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-264",
+      "unit_id": "99b87096-7a6e-54bc-82bf-32b3fde19203",
+      "content_sha256": "34c0f6bb2723c38252ce8c6a2285cd02f1fca3d3592569db8c2e968bd9fadccb",
+      "simples": "Nomeação para defesa exige patrocínio salvo motivo relevante; a multa em mil-réis é redação histórica, não valor monetário atual certificado.",
+      "pontos": [
+        "Examinar motivo relevante para recusa.",
+        "Não inventar conversão de moeda antiga.",
+        "Distinguir nomeação desta regra e abandono do art. 265 atualizado."
+      ],
+      "atencao": [
+        "Não ensinar multa de mil-réis como cobrança atual nem restaurar antiga multa do art. 265 por analogia."
+      ],
+      "exemplo": "Advogado comunica razão relevante que inviabiliza aceitar nomeação. Variação: Ausência de justificativa demanda análise do regime aplicável, sem conversão automática da antiga moeda.",
+      "prova": [
+        "Motivo relevante pode justificar recusa? Sim.",
+        "Pode converter mil-réis por conta própria em multa atual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Encargo de defesa",
+          "significado": "Nomeação sujeita a análise de escusa e regime pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "99b87096-7a6e-54bc-82bf-32b3fde19203",
+        "content_sha256": "34c0f6bb2723c38252ce8c6a2285cd02f1fca3d3592569db8c2e968bd9fadccb",
+        "simples": "Salvo motivo relevante, os advogados e solicitadores serão obrigados, sob pena de multa de cem a quinhentos mil-réis, a prestar seu patrocínio aos acusados quando nomeados pelo juiz.",
+        "pontos": [
+          "Advogados nomeados pelo juiz devem patrocinar o acusado.",
+          "Exceção: motivo relevante.",
+          "Sanção de multa (valores históricos)."
+        ],
+        "atencao": [
+          "Valores em moeda antiga; a lógica é o dever de patrocínio."
+        ],
+        "exemplo": "Advogado nomeado dativo não pode recusar sem motivo relevante.",
+        "prova": [
+          "Assertiva que permite ao advogado nomeado recusar livremente o patrocínio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 263"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-265",
+      "unit_id": "a1c78614-2f60-5712-989e-a4b6ecfa134b",
+      "content_sha256": "e0f7bc856600b4235796baca4a18556f3038ad09b8b3aa74350fc17441d107db",
+      "simples": "Lei 14.752/2023 prevê infração disciplinar por abandono sem justo motivo previamente comunicado, com preservação da defesa do acusado.",
+      "pontos": [
+        "Caput atual: responsabilidade perante órgão correicional, sem repetir antiga multa judicial.",
+        "Ausência justificada pode adiar audiência; impedimento deve ser provado até abertura.",
+        "Sem prova, nomear substituto para o ato em vez de deixar acusado indefeso.",
+        "Abandono: intimar para novo defensor; se não localizado, nomear público ou dativo."
+      ],
+      "atencao": [
+        "Mudança de 2023 não permite processo sem defesa nem substituição automática de toda recusa justificada por abandono."
+      ],
+      "exemplo": "Defensor comunica e comprova impedimento; juiz aprecia adiamento. Variação: Abandono exige garantir novo defensor e apuração disciplinar pelo órgão competente.",
+      "prova": [
+        "A redação atual repete a antiga multa do caput? Não.",
+        "Réu não localizado fica sem defensor após abandono? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Abandono e continuidade",
+          "significado": "Responsabilização com manutenção da defesa técnica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14752.htm"
+      ],
+      "expected": {
+        "unit_id": "a1c78614-2f60-5712-989e-a4b6ecfa134b",
+        "content_sha256": "e0f7bc856600b4235796baca4a18556f3038ad09b8b3aa74350fc17441d107db",
+        "simples": "O defensor não poderá abandonar o processo sem justo motivo, previamente comunicado ao juiz, sob pena de responder por infração disciplinar perante o órgão correicional competente. A audiência poderá ser adiada se, por motivo justificado, o defensor não puder comparecer. Incumbe ao defensor provar o impedimento até a abertura da audiência; não o fazendo, o juiz não determinará o adiamento de ato algum do processo, devendo nomear defensor substituto, ainda que provisoriamente ou só para o efeito do ato. Em caso de abandono, o acusado será intimado para constituir novo defensor, se quiser, e, se não for localizado, será nomeado defensor público ou advogado dativo.",
+        "pontos": [
+          "Defensor não abandona o processo sem justo motivo previamente comunicado.",
+          "Abandono: infração disciplinar.",
+          "Adiamento da audiência por impedimento justificado.",
+          "Impedimento deve ser provado até a abertura da audiência.",
+          "Não provado: defensor substituto nomeado.",
+          "Abandono: intimação do acusado para constituir novo defensor; se não localizado, defensor público ou dativo."
+        ],
+        "atencao": [
+          "Prova do impedimento até a abertura da audiência."
+        ],
+        "exemplo": "Defensor com impedimento prova a razão até a abertura da audiência e obtém o adiamento.",
+        "prova": [
+          "Assertiva que adia sempre a audiência pela ausência do defensor, sem prova do impedimento, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 261"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-266",
+      "unit_id": "4a3bf9b1-41c3-5281-9d81-cf163a10d84a",
+      "content_sha256": "03f8e5a0d173c421af27194e7438726652bc32904ba977b3ee72356f0c7bb70c",
+      "simples": "Indicação do defensor pelo acusado no interrogatório dispensa instrumento de mandato nessa hipótese.",
+      "pontos": [
+        "Indicação deve constar do ato.",
+        "Dispensa específica não elimina habilitação nem regras de representação dos demais casos."
+      ],
+      "atencao": [
+        "Não concluir que nenhuma constituição de advogado exige formalização em qualquer contexto."
+      ],
+      "exemplo": "Réu indica advogado habilitado durante interrogatório e a indicação é registrada. Variação: Em outro contexto, conferir forma aplicável, sem generalizar a exceção.",
+      "prova": [
+        "No interrogatório a indicação pode dispensar procuração? Sim.",
+        "A exceção vale indiscriminadamente em todo contexto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Indicação no interrogatório",
+          "significado": "Constituição pela manifestação registrada no ato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a3bf9b1-41c3-5281-9d81-cf163a10d84a",
+        "content_sha256": "03f8e5a0d173c421af27194e7438726652bc32904ba977b3ee72356f0c7bb70c",
+        "simples": "A constituição de defensor independerá de instrumento de mandato se o acusado o indicar por ocasião do interrogatório.",
+        "pontos": [
+          "Defensor indicado pelo acusado no interrogatório dispensa procuração."
+        ],
+        "atencao": [
+          "Indicação feita no interrogatório."
+        ],
+        "exemplo": "No interrogatório, o acusado indica seu advogado, que passa a atuar sem procuração.",
+        "prova": [
+          "Assertiva que exige procuração em qualquer hipótese de constituição de defensor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 263"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-267",
+      "unit_id": "8bfd0471-b28d-5859-85b7-1679405588c0",
+      "content_sha256": "bd60fa35029724df290414b6137f9066cb0bcacef02ba1ce7ea0ff89773d5ac3",
+      "simples": "Parentes do juiz não atuam como defensores nas condições remetidas ao art. 252.",
+      "pontos": [
+        "Integração com limites e vínculos do art. 252.",
+        "Proteger imparcialidade da atuação judicial."
+      ],
+      "atencao": [
+        "Não criar grau de parentesco diferente do dispositivo referido."
+      ],
+      "exemplo": "Irmão do juiz não exerce defesa naquela causa. Variação: A verificação considera também afinidade e hipóteses expressas, não só sobrenome semelhante.",
+      "prova": [
+        "O artigo remete ao 252? Sim.",
+        "Mesmo sobrenome prova automaticamente parentesco vedado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa e parentesco",
+          "significado": "Vedação integrada às hipóteses de imparcialidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8bfd0471-b28d-5859-85b7-1679405588c0",
+        "content_sha256": "bd60fa35029724df290414b6137f9066cb0bcacef02ba1ce7ea0ff89773d5ac3",
+        "simples": "Nos termos do art. 252, não funcionarão como defensores os parentes do juiz.",
+        "pontos": [
+          "Parentes do juiz não podem ser defensores, nos termos do art. 252."
+        ],
+        "atencao": [
+          "Impedimento do advogado parente do juiz."
+        ],
+        "exemplo": "Irmão do juiz não atua como defensor no processo que ele preside.",
+        "prova": [
+          "Assertiva que permite ao parente do juiz atuar como defensor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 252"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-268",
+      "unit_id": "f78f31fc-5042-59e0-a970-5d5e4089e00c",
+      "content_sha256": "49c293a8f8882a67505f5f61a44d48409d13c77be21d05cb462cb625d1fe640d",
+      "simples": "Ofendido, representante legal ou sucessores previstos podem intervir como assistente do MP na ação pública.",
+      "pontos": [
+        "Legitimação remete ao art. 31 na falta do ofendido.",
+        "Não substitui titularidade da ação pública.",
+        "Exige admissão no processo."
+      ],
+      "atencao": [
+        "Assistente de acusação não é sinônimo de autor de ação privada."
+      ],
+      "exemplo": "Vítima pede admissão como assistente em ação pública. Variação: Falta da vítima exige conferir legitimado do art. 31, sem aceitar qualquer interessado.",
+      "prova": [
+        "Pode intervir vítima como assistente? Sim.",
+        "Qualquer pessoa interessada tem legitimidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Assistência da acusação",
+          "significado": "Intervenção do legitimado ao lado do MP."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f78f31fc-5042-59e0-a970-5d5e4089e00c",
+        "content_sha256": "49c293a8f8882a67505f5f61a44d48409d13c77be21d05cb462cb625d1fe640d",
+        "simples": "Em todos os termos da ação pública, poderá intervir, como assistente do Ministério Público, o ofendido ou seu representante legal ou, na falta, qualquer das pessoas mencionadas no art. 31.",
+        "pontos": [
+          "Assistente de acusação na ação pública: ofendido ou representante legal.",
+          "Na falta: cônjuge, ascendente, descendente ou irmão (art. 31)."
+        ],
+        "atencao": [
+          "O assistente atua APENAS na ação penal pública."
+        ],
+        "exemplo": "A vítima se habilita como assistente do MP no processo.",
+        "prova": [
+          "Assertiva que admite assistente de acusação na ação penal privada erra."
+        ],
+        "termos": [
+          {
+            "termo": "Assistente de acusação",
+            "significado": "Quem auxilia o MP na ação penal pública."
+          }
+        ],
+        "remissoes": [
+          "Art. 31",
+          "Art. 269"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-269",
+      "unit_id": "8ab37058-c356-5674-9f9b-7478afb086f8",
+      "content_sha256": "7f5916fba11e550453902e7decc8416fe1407cebbd884fd063ada188b30b2fd8",
+      "simples": "Assistente pode ser admitido antes do trânsito em julgado e recebe processo no estado em que estiver.",
+      "pontos": [
+        "Admissão não se limita ao começo da instrução.",
+        "Não reabrir fases automaticamente por ingresso tardio."
+      ],
+      "atencao": [
+        "Intervenção posterior não garante repetição de atos válidos já praticados."
+      ],
+      "exemplo": "Vítima pede admissão após instrução, antes do trânsito. Variação: Ingresso não obriga refazer todos os depoimentos.",
+      "prova": [
+        "Pode ingressar antes do trânsito mesmo em fase avançada? Sim.",
+        "Recebe causa desde o início com repetição automática? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ingresso do assistente",
+          "significado": "Admissão no estágio processual existente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8ab37058-c356-5674-9f9b-7478afb086f8",
+        "content_sha256": "7f5916fba11e550453902e7decc8416fe1407cebbd884fd063ada188b30b2fd8",
+        "simples": "O assistente será admitido enquanto não passar em julgado a sentença e receberá a causa no estado em que se achar.",
+        "pontos": [
+          "Admissão enquanto não houver trânsito em julgado.",
+          "Recebe a causa no estado em que se encontra."
+        ],
+        "atencao": [
+          "Ingresso até o trânsito em julgado, sem retroceder o processo."
+        ],
+        "exemplo": "A vítima se habilita como assistente após a instrução, recebendo o processo como está.",
+        "prova": [
+          "Assertiva que permite a habilitação do assistente após o trânsito em julgado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-270",
+      "unit_id": "94af6aef-128a-5d1e-bc30-ca138d1133b9",
+      "content_sha256": "7168f29014e899e654ed7b501427bdcf28dd4d05871cbbb58a2b8d441bf20c2a",
+      "simples": "Corréu no mesmo processo não pode atuar como assistente do MP.",
+      "pontos": [
+        "Vedação depende da condição de corréu na mesma causa.",
+        "Não eliminar sua defesa e meios próprios de prova."
+      ],
+      "atencao": [
+        "Ser acusado não permite transformar-se em assistente contra o outro corréu no mesmo processo."
+      ],
+      "exemplo": "Um dos dois acusados pede assistência contra o outro e o pedido encontra vedação. Variação: Continua podendo exercer defesa pelos meios legais.",
+      "prova": [
+        "Corréu pode assistir acusação no mesmo processo? Não.",
+        "A vedação retira seu direito de defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incompatibilidade do corréu",
+          "significado": "Impossibilidade de acumular assistência na mesma causa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "94af6aef-128a-5d1e-bc30-ca138d1133b9",
+        "content_sha256": "7168f29014e899e654ed7b501427bdcf28dd4d05871cbbb58a2b8d441bf20c2a",
+        "simples": "O corréu no mesmo processo não poderá intervir como assistente do Ministério Público.",
+        "pontos": [
+          "Corréu não pode ser assistente do MP no mesmo processo."
+        ],
+        "atencao": [
+          "Vedação por conflito de interesses."
+        ],
+        "exemplo": "Dois acusados no mesmo processo: um não pode ser assistente de acusação contra o outro.",
+        "prova": [
+          "Assertiva que admite o corréu como assistente do MP erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-271",
+      "unit_id": "e711abf3-a6af-5516-a21e-cce86ba9cafb",
+      "content_sha256": "2dc21c564cfdf02c8b07061d6b4cddac4fa53341b7bd1905ed220257da01f21c",
+      "simples": "Assistente pode propor prova, perguntas e atuar em debates e recursos nas hipóteses legais.",
+      "pontos": [
+        "Juiz decide provas propostas após ouvir MP.",
+        "Recursos próprios observam arts. 584, §1º, e 598.",
+        "Ausência injustificada após intimação dispensa nova intimação nos termos do §2º.",
+        "Remissão ao libelo é histórica: reforma do júri aboliu essa peça."
+      ],
+      "atencao": [
+        "Não ensinar apresentação de libelo como etapa atual nem conferir recurso universal ao assistente."
+      ],
+      "exemplo": "Assistente propõe prova e juiz decide após ouvir MP. Variação: Ausência por força maior comprovada não se equipara à falta injustificada do §2º.",
+      "prova": [
+        "Prova proposta é deferida automaticamente? Não.",
+        "Libelo permanece etapa atual do júri? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Faculdades do assistente",
+          "significado": "Atuação subordinada às hipóteses e procedimento atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e711abf3-a6af-5516-a21e-cce86ba9cafb",
+        "content_sha256": "2dc21c564cfdf02c8b07061d6b4cddac4fa53341b7bd1905ed220257da01f21c",
+        "simples": "Ao assistente será permitido propor meios de prova, requerer perguntas às testemunhas, aditar o libelo e os articulados, participar do debate oral e arrazoar os recursos interpostos pelo Ministério Público, ou por ele próprio, nos casos dos arts. 584, §1º, e 598. O juiz, ouvido o Ministério Público, decidirá acerca da realização das provas propostas pelo assistente. O processo prosseguirá independentemente de nova intimação do assistente, quando este, intimado, deixar de comparecer a qualquer dos atos da instrução ou do julgamento sem motivo de força maior devidamente comprovado.",
+        "pontos": [
+          "Propor provas, requerer perguntas às testemunhas, aditar, participar do debate oral e arrazoar recursos.",
+          "Provas propostas: o juiz decide, ouvido o MP.",
+          "Falta injustificada do assistente: o processo prossegue sem nova intimação."
+        ],
+        "atencao": [
+          "Ausência do assistente sem força maior não paralisa o processo."
+        ],
+        "exemplo": "O assistente propõe uma prova, e o juiz decide após ouvir o MP.",
+        "prova": [
+          "Assertiva que determina nova intimação do assistente faltoso sem motivo de força maior erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 268"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-272",
+      "unit_id": "9398cc91-1d5f-56ec-b4ed-b1cdb192627b",
+      "content_sha256": "2ffc9cf94c5923b5e8ab9e667d56d057f0efe85933e2dbf865133d72b537f0dd",
+      "simples": "Antes de admitir assistente, juiz ouve o Ministério Público.",
+      "pontos": [
+        "Manifestação prévia necessária.",
+        "Decisão de admissão cabe ao juiz."
+      ],
+      "atencao": [
+        "Oitiva não significa poder absoluto de veto do MP."
+      ],
+      "exemplo": "Juiz solicita manifestação do MP antes de decidir pedido da vítima. Variação: Parecer contrário é analisado, sem substituir automaticamente decisão judicial.",
+      "prova": [
+        "Deve ouvir MP antes? Sim.",
+        "Parecer é automaticamente decisão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Oitiva prévia",
+          "significado": "Manifestação do MP antecedente à admissão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9398cc91-1d5f-56ec-b4ed-b1cdb192627b",
+        "content_sha256": "2ffc9cf94c5923b5e8ab9e667d56d057f0efe85933e2dbf865133d72b537f0dd",
+        "simples": "O Ministério Público será ouvido previamente sobre a admissão do assistente.",
+        "pontos": [
+          "Oitiva prévia do MP sobre a admissão do assistente."
+        ],
+        "atencao": [
+          "A oitiva é prévia."
+        ],
+        "exemplo": "Antes de admitir o assistente, o juiz ouve o promotor.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do MP quanto à admissão do assistente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 273"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-273",
+      "unit_id": "86244a83-71bb-59e4-8266-336a068e259c",
+      "content_sha256": "0eb78156c0df1db1b4962ee0fef6233321f90a9931ae0809815e2bcb8732c25e",
+      "simples": "Despacho que admite ou não assistente não tem recurso previsto pelo artigo; pedido e decisão ficam nos autos.",
+      "pontos": [
+        "Registro formal obrigatório.",
+        "Distinguir recurso ordinário desta decisão de medidas autônomas em situações juridicamente cabíveis."
+      ],
+      "atencao": [
+        "Não afirmar imunidade total a controle judicial por ler a ausência de recurso como ausência de qualquer tutela."
+      ],
+      "exemplo": "Pedido é decidido e documentado nos autos. Variação: Eventual ilegalidade demanda análise do meio adequado, sem inventar recurso ordinário previsto aqui.",
+      "prova": [
+        "Há recurso previsto neste artigo contra admissão? Não.",
+        "Pedido e decisão devem constar dos autos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro da admissão",
+          "significado": "Formalização de decisão sobre assistência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "86244a83-71bb-59e4-8266-336a068e259c",
+        "content_sha256": "0eb78156c0df1db1b4962ee0fef6233321f90a9931ae0809815e2bcb8732c25e",
+        "simples": "Do despacho que admitir, ou não, o assistente, não caberá recurso, devendo, entretanto, constar dos autos o pedido e a decisão.",
+        "pontos": [
+          "Despacho sobre admissão do assistente é irrecorrível.",
+          "Pedido e decisão constam dos autos."
+        ],
+        "atencao": [
+          "Irrecorribilidade; cabe, em tese, mandado de segurança segundo a jurisprudência."
+        ],
+        "exemplo": "O juiz indefere a habilitação do assistente, sem recurso.",
+        "prova": [
+          "Assertiva que prevê recurso em sentido estrito contra o despacho que nega o assistente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 272"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-274",
+      "unit_id": "c8fac0f6-1bb5-5b21-867e-a32d9c7d06d2",
+      "content_sha256": "fed0640f992b4d956b5db615225f7dd874a7648d58f54d089ab11ffb40b5483c",
+      "simples": "Suspeição dos juízes se estende a serventuários e funcionários da Justiça naquilo que for aplicável.",
+      "pontos": [
+        "Considerar função concreta e causa de suspeição.",
+        "Não dispensar análise por não se tratar de magistrado."
+      ],
+      "atencao": [
+        "Aplicação exige compatibilidade com a atividade desempenhada."
+      ],
+      "exemplo": "Servidor com vínculo legal de suspeição tem situação apreciada. Variação: Não importar automaticamente hipótese incompatível com sua função.",
+      "prova": [
+        "Pode haver suspeição de serventuário? Sim.",
+        "A extensão exige compatibilidade? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Auxiliar imparcial",
+          "significado": "Garantia aplicada à atuação do servidor."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c8fac0f6-1bb5-5b21-867e-a32d9c7d06d2",
+        "content_sha256": "fed0640f992b4d956b5db615225f7dd874a7648d58f54d089ab11ffb40b5483c",
+        "simples": "As prescrições sobre suspeição dos juízes estendem-se aos serventuários e funcionários da justiça, no que lhes for aplicável.",
+        "pontos": [
+          "Regras de suspeição dos juízes valem para serventuários e funcionários da justiça."
+        ],
+        "atencao": [
+          "Extensão das regras de suspeição."
+        ],
+        "exemplo": "Escrivão inimigo capital do acusado pode ser recusado.",
+        "prova": [
+          "Assertiva que exclui os serventuários das regras de suspeição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 254",
+          "Art. 105"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-275",
+      "unit_id": "8be112d5-965b-5628-84d2-532b3a899073",
+      "content_sha256": "16e4aff6bf39bcdbaa217c4d4650dfd1b183374a3c720105c733f82ef13fc6d5",
+      "simples": "Perito, oficial ou não, está sujeito à disciplina judiciária.",
+      "pontos": [
+        "Nomeação não elimina controle funcional no processo.",
+        "Distinguir independência técnica de descumprimento de deveres."
+      ],
+      "atencao": [
+        "Disciplina não permite ao juiz impor conclusão científica desejada."
+      ],
+      "exemplo": "Perito cumpre prazos e procedimentos mantendo conclusão técnica fundamentada. Variação: Discordância técnica não autoriza compelir laudo favorável à acusação.",
+      "prova": [
+        "Perito não oficial também se submete? Sim.",
+        "Juiz pode ditar resultado científico por disciplina? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Disciplina pericial",
+          "significado": "Deveres processuais sem submissão da conclusão técnica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8be112d5-965b-5628-84d2-532b3a899073",
+        "content_sha256": "16e4aff6bf39bcdbaa217c4d4650dfd1b183374a3c720105c733f82ef13fc6d5",
+        "simples": "O perito, ainda quando não oficial, estará sujeito à disciplina judiciária.",
+        "pontos": [
+          "Perito, oficial ou não, sujeita-se à disciplina judiciária."
+        ],
+        "atencao": [
+          "Alcança também o perito não oficial."
+        ],
+        "exemplo": "O perito nomeado pelo juiz responde às ordens e advertências do juízo.",
+        "prova": [
+          "Assertiva que isenta o perito não oficial da disciplina judiciária erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-276",
+      "unit_id": "68e7624e-f932-5d23-8123-d7c51fed2276",
+      "content_sha256": "9cb37fc201b52d48d8de7bfebeb1c5a3bedf7759a3b56e8102daa5cd3770f4a9",
+      "simples": "Partes não escolhem o perito nomeado pela autoridade; podem exercer direitos de participação previstos em outros artigos.",
+      "pontos": [
+        "Integrar art. 159: quesitos e assistente técnico.",
+        "Nomeação oficial não elimina controle de impedimento ou suspeição."
+      ],
+      "atencao": [
+        "Não intervir na nomeação não significa ausência de contraditório pericial."
+      ],
+      "exemplo": "Autoridade nomeia perito e defesa apresenta quesitos cabíveis. Variação: Vínculo de suspeição pode ser apontado pelo meio próprio.",
+      "prova": [
+        "Pode indicar assistente técnico nos termos legais? Sim.",
+        "A regra elimina toda impugnação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Nomeação e participação",
+          "significado": "Designação pela autoridade com direitos técnicos das partes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "68e7624e-f932-5d23-8123-d7c51fed2276",
+        "content_sha256": "9cb37fc201b52d48d8de7bfebeb1c5a3bedf7759a3b56e8102daa5cd3770f4a9",
+        "simples": "As partes não intervirão na nomeação do perito, que é ato da autoridade; elas apenas formulam quesitos e indicam assistentes técnicos.",
+        "pontos": [
+          "Partes não participam da nomeação do perito."
+        ],
+        "atencao": [
+          "Nomeação feita pela autoridade; as partes indicam assistentes técnicos."
+        ],
+        "exemplo": "O juiz nomeia o perito sem consultar as partes.",
+        "prova": [
+          "Assertiva que permite às partes escolher o perito oficial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-277",
+      "unit_id": "3c478b64-82a9-5a76-a17d-785e6b45fb31",
+      "content_sha256": "efa021f8bb51ccf68a86430eab203de63815a957b0708aa59cc18c7bd7e1fd4f",
+      "simples": "Perito nomeado aceita encargo salvo escusa atendível e justifica impedimentos imediatamente; multa em mil-réis é expressão histórica.",
+      "pontos": [
+        "Sem justa causa: ausência ao chamado, ao exame ou atraso de laudo/realização nas hipóteses.",
+        "Justa causa deve ser provada imediatamente.",
+        "Não converter automaticamente sanção histórica em moeda atual."
+      ],
+      "atencao": [
+        "Não tratar recusa justificada como infração automática nem certificar valor atual com a antiga moeda."
+      ],
+      "exemplo": "Perito comprova prontamente doença impeditiva. Variação: Atraso sem causa exige apreciação jurídica; não inventar conversão de mil-réis.",
+      "prova": [
+        "Escusa atendível pode afastar aceitação? Sim.",
+        "Justa causa deve ser provada imediatamente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Dever pericial",
+          "significado": "Aceitação e cumprimento sujeitos a escusa legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3c478b64-82a9-5a76-a17d-785e6b45fb31",
+        "content_sha256": "efa021f8bb51ccf68a86430eab203de63815a957b0708aa59cc18c7bd7e1fd4f",
+        "simples": "O perito nomeado pela autoridade será obrigado a aceitar o encargo, sob pena de multa de cem a quinhentos mil-réis, salvo escusa atendível. Incorrerá na mesma multa o perito que, sem justa causa, provada imediatamente, deixar de acudir à intimação ou ao chamado da autoridade; não comparecer no dia e local designados para o exame; ou não der o laudo, ou concorrer para que a perícia não seja feita, nos prazos estabelecidos.",
+        "pontos": [
+          "Perito nomeado é obrigado a aceitar, salvo escusa atendível.",
+          "Multa também por: não atender à intimação, faltar ao exame, não entregar o laudo no prazo."
+        ],
+        "atencao": [
+          "Valores de multa em moeda antiga."
+        ],
+        "exemplo": "O perito não entrega o laudo no prazo, sem justa causa, e sofre multa.",
+        "prova": [
+          "Assertiva que permite ao perito recusar livremente o encargo erra: só com escusa atendível."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 278"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-278",
+      "unit_id": "553c21e2-7cd5-5a69-bf37-9b2034f3ef5b",
+      "content_sha256": "c1f8c1ccafde4c750fba8ab11f8ef278e0dc852d1be2eef3c368ca24d6a766f4",
+      "simples": "Ausência injustificada do perito pode levar à condução nas condições legais.",
+      "pontos": [
+        "Exige não comparecimento sem justa causa.",
+        "Preservar regular convocação e controle de necessidade.",
+        "Não confundir com interrogatório coercitivo de acusado."
+      ],
+      "atencao": [
+        "Não conduzir perito por ausência justificada; a vedação das ADPFs ao interrogatório não elimina automaticamente esta hipótese."
+      ],
+      "exemplo": "Perito regularmente convocado falta sem causa e autoridade avalia condução. Variação: Doença comprovada exige análise da justificativa, não condução automática.",
+      "prova": [
+        "Ausência justificada basta para conduzir? Não.",
+        "É hipótese diferente do interrogatório do réu? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comparecimento pericial",
+          "significado": "Presença do auxiliar sob condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADPF&numeroProcesso=395"
+      ],
+      "expected": {
+        "unit_id": "553c21e2-7cd5-5a69-bf37-9b2034f3ef5b",
+        "content_sha256": "c1f8c1ccafde4c750fba8ab11f8ef278e0dc852d1be2eef3c368ca24d6a766f4",
+        "simples": "No caso de não comparecimento do perito, sem justa causa, a autoridade poderá determinar a sua condução.",
+        "pontos": [
+          "Perito faltoso sem justa causa pode ser conduzido."
+        ],
+        "atencao": [
+          "Condução coercitiva do perito."
+        ],
+        "exemplo": "Perito que não comparece ao exame sem justificativa é conduzido.",
+        "prova": [
+          "Assertiva que veda a condução do perito faltoso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 277"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-279",
+      "unit_id": "dd8b9d8d-0739-5282-94ad-94f17446b747",
+      "content_sha256": "7aaa3d274718aa1f9a3cb4a02bff413fa88840fe419c4076e09a6873b449a350",
+      "simples": "O artigo enumera impedimentos periciais, mas conserva remissão ao antigo Código Penal e referência etária histórica que exigem leitura integrada.",
+      "pontos": [
+        "Quem depôs no processo ou opinou antes sobre objeto da perícia é abrangido pelo inciso II.",
+        "Inciso I remete a antiga estrutura do CP: não usar números como se fossem atuais.",
+        "Inciso III ainda diz analfabetos e menores de 21 no compilado; distinguir literalidade de integração com capacidade civil aos 18.",
+        "Qualificação pericial atual também segue art. 159."
+      ],
+      "atencao": [
+        "Não declarar automaticamente uma perícia inválida só por idade de 18 a 20, nem anunciar revogação textual inexistente. A interação da cláusula histórica com maioridade civil exige análise específica, não flashcard universal."
+      ],
+      "exemplo": "Pessoa que já depôs como testemunha sobre o fato não é escolhida para perícia naquele objeto. Variação: Sobre idade e remissão antiga, consultar regime integrado e qualificação, sem resposta automática baseada só no número 21.",
+      "prova": [
+        "Quem depôs pode ignorar o impedimento do inciso II? Não.",
+        "O número do antigo CP deve ser transportado sem atualização? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Impedimento pericial",
+          "significado": "Restrições com leitura integrada das redações históricas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      ],
+      "expected": {
+        "unit_id": "dd8b9d8d-0739-5282-94ad-94f17446b747",
+        "content_sha256": "7aaa3d274718aa1f9a3cb4a02bff413fa88840fe419c4076e09a6873b449a350",
+        "simples": "Não poderão ser peritos os que estiverem sujeitos à interdição de direito mencionada nos números I e IV do art. 69 do Código Penal; os que tiverem prestado depoimento no processo ou opinado anteriormente sobre o objeto da perícia; e os analfabetos e os menores de 21 anos.",
+        "pontos": [
+          "Interditados nos termos do art. 69, I e IV, do Código Penal.",
+          "Quem depôs no processo ou opinou antes sobre o objeto da perícia.",
+          "Analfabetos e menores de 21 anos (limite etário histórico)."
+        ],
+        "atencao": [
+          "Quem já opinou sobre o objeto da perícia está impedido."
+        ],
+        "exemplo": "Quem já depôs como testemunha no processo não pode atuar como perito.",
+        "prova": [
+          "Assertiva que permite ao analfabeto atuar como perito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159",
+          "Art. 280"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-280",
+      "unit_id": "a04a2535-561f-5acc-a05c-ea2da818b55f",
+      "content_sha256": "4a1518ba4b3e2aafd37e483122b066ebf60f32bd287371dc9fcf2b5ac413e20d",
+      "simples": "Regras de suspeição do juiz aplicam-se aos peritos quando compatíveis.",
+      "pontos": [
+        "Analisar vínculo concreto com partes e objeto.",
+        "Distinguir suspeição de discordância com resultado técnico."
+      ],
+      "atencao": [
+        "Laudo desfavorável não demonstra sozinho suspeição."
+      ],
+      "exemplo": "Perito credor de parte tem vínculo examinado pela regra aplicável. Variação: Resultado desfavorável fundamentado exige crítica técnica, não acusação automática de parcialidade.",
+      "prova": [
+        "Suspeição pode alcançar perito? Sim.",
+        "Discordância do laudo prova sozinha suspeição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perícia imparcial",
+          "significado": "Ausência de vínculos que comprometam atuação técnica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a04a2535-561f-5acc-a05c-ea2da818b55f",
+        "content_sha256": "4a1518ba4b3e2aafd37e483122b066ebf60f32bd287371dc9fcf2b5ac413e20d",
+        "simples": "É extensivo aos peritos, no que lhes for aplicável, o disposto sobre suspeição dos juízes.",
+        "pontos": [
+          "Regras de suspeição dos juízes aplicam-se aos peritos, no que couber."
+        ],
+        "atencao": [
+          "Perito pode ser arguido de suspeito (art. 105)."
+        ],
+        "exemplo": "Perito amigo íntimo do acusado é arguido de suspeito.",
+        "prova": [
+          "Assertiva que isenta o perito das regras de suspeição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 105",
+          "Art. 254"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-281",
+      "unit_id": "86eca8fd-2d79-5882-a680-bcfe0301ad87",
+      "content_sha256": "ed9de19d826b0cf4842d6dd07f62328eabefc81688c2a70a29c6b9ccb29185c1",
+      "simples": "Intérpretes equiparam-se a peritos para efeitos legais pertinentes.",
+      "pontos": [
+        "Deveres e causas de afastamento aplicáveis.",
+        "Interpretação deve preservar sentido e acessibilidade.",
+        "Equiparação não transforma intérprete em testemunha dos fatos."
+      ],
+      "atencao": [
+        "Não permitir tradução dirigida a favorecer parte; integrar regras especiais de acessibilidade."
+      ],
+      "exemplo": "Intérprete fielmente transmite perguntas e respostas, observando deveres e afastamentos. Variação: Alterar sentido para beneficiar interessado compromete a função, ainda que chamado apenas de tradutor.",
+      "prova": [
+        "Equiparação alcança deveres aplicáveis? Sim.",
+        "Pode alterar sentido para ajudar parte? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Intérprete processual",
+          "significado": "Auxiliar de comunicação sujeito a garantias técnicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "86eca8fd-2d79-5882-a680-bcfe0301ad87",
+        "content_sha256": "ed9de19d826b0cf4842d6dd07f62328eabefc81688c2a70a29c6b9ccb29185c1",
+        "simples": "Os intérpretes são, para todos os efeitos, equiparados aos peritos.",
+        "pontos": [
+          "Intérpretes são equiparados aos peritos para todos os efeitos."
+        ],
+        "atencao": [
+          "Sujeitam-se às mesmas regras dos peritos."
+        ],
+        "exemplo": "O intérprete sofre as mesmas restrições de suspeição que o perito.",
+        "prova": [
+          "Assertiva que diferencia o regime do intérprete e do perito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 275"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    }
+  ]
+}
