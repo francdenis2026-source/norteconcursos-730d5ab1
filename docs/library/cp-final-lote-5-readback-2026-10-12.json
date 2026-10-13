@@ -1,0 +1,440 @@
+{
+  "verified_at": "2026-10-13T03:13:15.205356+00:00",
+  "authored_explanations_confirmed": 31,
+  "untargeted_explanations_preserved": 3462,
+  "untargeted_cp_explanations_preserved": 370,
+  "prior_revisions_retained_in_manifest": 31,
+  "timestamp_only_changes": [],
+  "protected_tables_unchanged": [
+    "study_materials",
+    "study_material_enrichments",
+    "legal_courses",
+    "syllabus_topics",
+    "syllabus_editions",
+    "content_sources"
+  ],
+  "cp_units_unchanged": true,
+  "concurrent_other_course_changes": [
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "142b992d-ba43-52a8-a31b-fc64c2081c2f",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-387",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "5d968b8255a738224151973193030c0f3ca9b3ee297797ef721fcb2a8c9dcd68",
+      "after_sha256": "2c975e345d2ab95722402c8f9d8ea2203cd1a9e0abec468cd7aea340ead99b71"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "4b2cacc4-3f7f-5116-895c-29871e60d383",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-379",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "a2adc0af5e364a8cc89560847b09d6a717d90572bf573e9c23207753941f6e4f",
+      "after_sha256": "05a63ae2467c0bf9ea39d06b3a0cc06049fb94adbc6bfa163967551bc34b3faa"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "50b936bc-4eea-5255-977e-44ef86c09586",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-392",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "ad11028954dc4cda020e0969ecf3605ef9330b31362c0d87476ae47f825067c8",
+      "after_sha256": "7209a98093be7b966a52b31ae9c588b3b6d1ed6a71baa53a94bf0c839d299303"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "5777c5d8-3dc6-5a5b-8ec6-1587fc341e15",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-383",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "16562caa56b68da88b35d259d071822057638d837b681fae4c6e24116ac5bd1a",
+      "after_sha256": "53a663e8333d3787133f3db51241e27f04536ea2e238f62332b47bbf7814c0d5"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "6870c2d6-2142-596b-b785-050301a90167",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-377",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "636f62c4ab2d53c8997e9811e1964d9f0bf7c78f93edc7b5d06897e36831c914",
+      "after_sha256": "8cfcb43020c3bf74bb1a300e61de5ccda5d7381e2fcf07ca66be7fc03e6b091c"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "72bbcc8f-ef99-5146-bbee-98e77ab63b20",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-382",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "0844aca9bfedd9aee44a3e819516d81a43587ed01596c414ab8596f6a6af2b7c",
+      "after_sha256": "2e70f135250eab1a9943a86ac5a7cb1f7efb7226c1fafa483ecbd37ad1f07f3e"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "75609fdb-0dab-50fa-819f-90f79c27a79e",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-378",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "e7af251ff824382376e95e062118203c9f1129a21250145eafe71279562a8ffb",
+      "after_sha256": "95f29872223d918b703623eba814d01f78d87591f1350f11c924c6b123e77dc6"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "7fafff7e-0712-55fe-a09d-2421e65dd85f",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-386",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "ca1d1ed8c20a5db7aac2cbce0a0d17af7f25a74f64e4983f528b637b16a9fe2d",
+      "after_sha256": "d4902ab26637a4a7631948961d5b4badb8b5d890c55145ec01219b3bdf875dc6"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "8085d658-b6bc-5824-a086-7000489d7900",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-388",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "61e23ba7172f58e79124ad1137069ed66d8f59849cdbad4dcd91c7ebef95ad02",
+      "after_sha256": "1029541b7c39c35055ac1d118fc3eda6563765ade1c8608f0f952c043482086b"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "84859eab-1719-5b1a-a83b-52db4e6baf6b",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-390",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "94f17348c29b216650cbf284e63e4819fbbf2182b6ad4316b5f2773e8f76e4ab",
+      "after_sha256": "29aa321e656ba51cf78a32e1a6e036283ec3b4bd141d860669a2296cff648783"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "8679769b-60b7-5b51-afc1-6fd4b68203dc",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-373",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "9e07ff52c15895b39d21237db852e26ddcc5ef8becd0d54bfdeeb5953dc78a18",
+      "after_sha256": "73d7e317b0f1eea501a2c4a6288d9843f1faa96ad3827541c71256460d0b8746"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "889c24bc-05e0-585c-81d9-dcbcaa3718d9",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-391",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "21c827f38f74af22a60916d663c5b00d4e7fd6eafa09e4c898dc3b7246689ba1",
+      "after_sha256": "bcc5320327aceb54f9b20b0696f6312deef81104a27ce438a662ac1d908f3414"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "93dc87aa-6bad-5827-aae5-6fa0c54cf44e",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-389",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "c289e1d8a79b3a67b5c8f893eaa81894cedd9ffa5b3b36afcaeea7b870891a28",
+      "after_sha256": "59295b2944faa83617c3f68a435c1301d8680170559852f919349d271310874b"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "ac47cd78-e1ee-5057-b34c-67d341c8a190",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-375",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "fb41ed6f173b696c998c99f71b04436d1715c0fce93775a15e0fb6ad0e92a2aa",
+      "after_sha256": "a39978f61ae068b144170f108549a172bfe5a083e72aaa6d8ecace01dc4faa52"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "ba10c5b1-3c2f-54c7-b537-dcff2beb3a8e",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-381",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "7fed344e7fec597b55d4404d242ce4c869fd6a73d1ea20e1eca167faadeed272",
+      "after_sha256": "392896efc0aff5d9b604359e67e26480ddde9b050e2d77a847b3e5807a6a81d3"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "cec20780-f2fe-5380-963a-212fb8e7b94b",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-374",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "283ce1ba7143dc476d883240ec66d13a4b236370e2890339028782a577e9d6df",
+      "after_sha256": "4d1548f4c1a23d9014c372adb52a5576365f9af9b2cb6b100aabe23637527593"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "d964c2c5-4b16-5623-a072-e5858779c15f",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-380",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "d39f07be369ccac66a87c35375f5ea3d9a55e289e906aa863335a1ef2ae0324f",
+      "after_sha256": "f5581877b99531a38b34032ec7039d8714707ed923f7f82f789cc21223400a1d"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "ec16c1ad-2769-55ea-ad2c-e45c15819175",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-376",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "6146d750c8d9137339bf283830d88b621a034178ed9e91df84541303d73e4a4d",
+      "after_sha256": "7228e03827a029569fdb641a91d3ac75ad02558847e7a727eaa9e08d9903d4c1"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "f71a5326-b57b-5783-a8f8-04d975422455",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-385",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "3f8dfee83d52d1801dd1c9b59a5a1a99e8e51fd6086b601d50d64a9e9567fa6f",
+      "after_sha256": "adc2207b23d7c56b46a915f3f1840dd87c5c300e4c71b36def5f97a4f1ccab18"
+    },
+    {
+      "table": "legal_unit_explanations",
+      "unit_id": "fd440c7d-8a99-5562-a59b-bde8d24a7bd7",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "unit_key": "art-384",
+      "fields": [
+        "simples",
+        "pontos",
+        "atencao",
+        "exemplo",
+        "prova",
+        "termos",
+        "remissoes",
+        "authored_by",
+        "reviewed_by",
+        "reviewed_at",
+        "updated_at"
+      ],
+      "before_sha256": "796921d7e406234ba3fc0992b537b72bff0027d544fbbdc1ef0979d1596b2e70",
+      "after_sha256": "b580b08c1568f9253ad6a04715e8bba6b1a0de05140e6b24502e20da274c5e55"
+    }
+  ],
+  "note": "CP alvos e não alvos verificados estritamente; mudanças fora do CP identificadas como concorrentes, sem escrever sobre elas ou declarar toda tabela global imutável."
+}
