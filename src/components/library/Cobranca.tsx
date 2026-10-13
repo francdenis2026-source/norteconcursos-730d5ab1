@@ -1,5 +1,5 @@
 import { Flame } from "lucide-react";
-import { CARGO_GROUPS, CARGO_LABEL, HEAT_LABEL, countFor, heatOf, type ArtStat, type CargoGroup } from "@/lib/cobrancas";
+import { CARGO_GROUPS, CARGO_LABEL, HEAT_LABEL, countFor, forecastOf, heatOf, type ArtStat, type CargoGroup } from "@/lib/cobrancas";
 import { COBRANCA_QUESTIONS, COBRANCA_UPDATED } from "@/lib/cobrancaData";
 import { cn } from "@/lib/utils";
 
@@ -43,6 +43,7 @@ export function CobrancaCard({ stat, group }: { stat: ArtStat | undefined; group
       <ul className="flex flex-wrap gap-1.5 text-xs">
         {groups.map((g) => <li key={g} className={cn("rounded-full border px-2 py-0.5", group === g && "border-primary bg-primary/10 font-bold")}>{CARGO_LABEL[g]}: <strong>{stat.g[g]}</strong></li>)}
       </ul>
+      {forecastOf(stat) && <p className="text-xs"><strong>Previsão:</strong> {forecastOf(stat)!.label}. <span className="text-muted-foreground">Estimativa pelo número de questões e pelo ano das provas (as recentes pesam mais){stat.y ? `; a última vez foi em ${stat.y}` : ""}. Não é garantia.</span></p>}
       {stat.c.length > 0 && <p className="text-xs text-muted-foreground">Exemplos de provas: {stat.c.join("; ")}.</p>}
       <p className="text-[11px] text-muted-foreground">Levantamento de {COBRANCA_UPDATED}{stat.r > 0 ? `: ${stat.r} ${stat.r === 1 ? "questão cita" : "questões citam"} o artigo expressamente` : ""}{inferred > 0 ? `${stat.r > 0 ? " e" : ":"} ${inferred} ${inferred === 1 ? "foi ligada" : "foram ligadas"} pelo conteúdo do enunciado (indício, com margem de erro)` : ""}.</p>
     </section>
