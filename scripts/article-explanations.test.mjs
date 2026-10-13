@@ -1,4 +1,16 @@
 import test from 'node:test';
+test('LEP fundamentos distingue classificação, visita, sigilo e contratação',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-1-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(8).atencao.join(' '),/classificação.*progressão/s);
+ assert.match(get(29).pontos.join(' '),/sem prejudicar destinações anteriores/);
+ assert.match(get(35).pontos.join(' '),/não dispensa irrestrita/);
+ assert.match(get(39).simples,/quando possível/);
+ assert.match(get(41).atencao.join(' '),/10\/10\/2024.*toda visita/s);
+ assert.match(get('41-b').exemplo,/Juízo de instrução não acessa/);
+ for(const n of [8,35,37,41,'41-a','41-b'])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length===2));
+});
 test('CPP procedimentos especiais separa defesa e regimes periciais',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-special-procedures-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
