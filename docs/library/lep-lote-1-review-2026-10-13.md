@@ -25,3 +25,5 @@ Snapshots, fontes brutas e PDFs continuam em outputs ignorados;credenciais não 
 Integração posterior: preservados os novos commits de CPP e os testes das duas contas no conflito de inserção. A versão integrada passou388 testes,typecheck ebuild isolado.
 
 Após novo envio concorrente deCPP,integração final preservou ambos os conjuntos de testes:389 testes,typecheck ebuild isolado passaram.
+
+A integração do recurso de artigos mais cobrados,feito por outra ferramenta,também foi preservada. Validação final da main integrada:392 testes,typecheck ebuild isolado passaram.
