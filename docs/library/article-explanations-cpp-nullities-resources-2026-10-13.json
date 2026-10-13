@@ -1,0 +1,1249 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:02:39.709522+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-563",
+        "art-564",
+        "art-565",
+        "art-566",
+        "art-567",
+        "art-568",
+        "art-569",
+        "art-570",
+        "art-571",
+        "art-572",
+        "art-573",
+        "art-574",
+        "art-575",
+        "art-576",
+        "art-577",
+        "art-578",
+        "art-579",
+        "art-580",
+        "art-581",
+        "art-582"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-563",
+      "unit_id": "38967fda-b28c-54a5-87ac-dd95f38f630f",
+      "content_sha256": "bd067ec17e61c9fde64a60e8241945afd9db0a0fde1508695cd124fc457e847b",
+      "simples": "Nulidade pressupõe prejuízo à acusação ou defesa, com exame da garantia e natureza do vício.",
+      "pontos": [
+        "Evitar anulação por formalismo sem consequência.",
+        "Súmula523/STF distingue falta de defesa e mera deficiência.",
+        "Ausência completa de defesa não se equipara a simples inconformismo técnico."
+      ],
+      "atencao": [
+        "Não usar regra de prejuízo para validar processo totalmente sem defesa."
+      ],
+      "exemplo": "Erro de forma sem consequência relevante é analisado à luz da finalidade e prejuízo. Variação: Falta absoluta de defensor tem tratamento distinto de discordar da estratégia adotada.",
+      "prova": [
+        "Qualquer erro formal anula automaticamente? Não.",
+        "Falta de defesa e deficiência são idênticas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prejuízo processual",
+          "significado": "Efeito concreto do vício sobre garantia processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2729"
+      ],
+      "expected": {
+        "unit_id": "38967fda-b28c-54a5-87ac-dd95f38f630f",
+        "content_sha256": "bd067ec17e61c9fde64a60e8241945afd9db0a0fde1508695cd124fc457e847b",
+        "simples": "Nenhum ato será declarado nulo, se da nulidade não resultar prejuízo para a acusação ou para a defesa (princípio pas de nullité sans grief).",
+        "pontos": [
+          "Sem prejuízo, não há nulidade.",
+          "Vale para acusação e defesa."
+        ],
+        "atencao": [
+          "Exige a demonstração de prejuízo."
+        ],
+        "exemplo": "Vício formal que não prejudicou a defesa não leva à nulidade.",
+        "prova": [
+          "Assertiva que declara nulidade sem demonstração de prejuízo erra, em regra."
+        ],
+        "termos": [
+          {
+            "termo": "Pas de nullité sans grief",
+            "significado": "Não há nulidade sem prejuízo."
+          }
+        ],
+        "remissoes": [
+          "Art. 566"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-564",
+      "unit_id": "289e4d1c-ee29-50ed-8a20-8d9a23be8f71",
+      "content_sha256": "35111470281c9f4dc7655b41d9134753b52b7c116b84e4cb968e67467572d0cf",
+      "simples": "Rol de nulidades protege competência, legitimidade, defesa, prova essencial, atos de julgamento e fundamentação, com remissões históricas.",
+      "pontos": [
+        "Decisão sem fundamentação: incisoV, Lei13964/2019.",
+        "Distinguir falta de defensor e deficiência.",
+        "Libelo/contrariedade e curador menor de21 pertencem à redação histórica, não requisitos atuais gerais.",
+        "Contravenção não restaura ação acusatória policial por portaria.",
+        "Júri: composição, incomunicabilidade e quesitos seguem rito atual."
+      ],
+      "atencao": [
+        "Não gerar treino literal de libelo, curador só por idade de vinte anos ou acusação policial; integrar reformas e Constituição."
+      ],
+      "exemplo": "Sentença sem razões é examinada como decisão carente de fundamentação. Variação: Acusado de vinte anos não recebe curador apenas por remissão residual antiga; defesa técnica permanece.",
+      "prova": [
+        "Falta de fundamentação consta do rol? Sim.",
+        "Libelo é requisito geral atual do júri? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Nulidades e reformas",
+          "significado": "Garantias essenciais lidas com as normas atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2729"
+      ],
+      "expected": {
+        "unit_id": "289e4d1c-ee29-50ed-8a20-8d9a23be8f71",
+        "content_sha256": "35111470281c9f4dc7655b41d9134753b52b7c116b84e4cb968e67467572d0cf",
+        "simples": "A nulidade ocorrerá por incompetência, suspeição ou suborno do juiz; por ilegitimidade de parte; por falta das fórmulas ou dos termos como a denúncia ou a queixa e a representação, o exame do corpo de delito nos crimes que deixam vestígios, a nomeação de defensor ao réu presente que não tiver, a intervenção do Ministério Público em todos os termos da ação pública, a citação do réu, o interrogatório, os prazos, a sentença de pronúncia e as formalidades do Júri; por omissão de formalidade que constitua elemento essencial do ato; e por outras hipóteses previstas no dispositivo.",
+        "pontos": [
+          "I: incompetência, suspeição ou suborno do juiz.",
+          "II: ilegitimidade de parte.",
+          "III: falta de fórmulas ou termos essenciais (denúncia, exame de corpo de delito, defensor, MP, citação, interrogatório, pronúncia, formalidades do Júri).",
+          "IV: omissão de formalidade essencial do ato."
+        ],
+        "atencao": [
+          "Nulidade relativa exige alegação oportuna e prejuízo; a absoluta pode ser reconhecida de ofício.",
+          "A redação do inciso III alude a institutos do Júri anteriores à reforma."
+        ],
+        "exemplo": "A falta de citação do réu para ver-se processar gera nulidade.",
+        "prova": [
+          "Assertiva que não considera nulidade a falta de exame de corpo de delito nos crimes que deixam vestígios erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 563",
+          "Art. 572"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-565",
+      "unit_id": "41628253-71c4-5874-b028-2565854b66e3",
+      "content_sha256": "6d9233cdae135bd9d4a8ed92085dfd1030e27f0f78e35085eb1287c83c91387c",
+      "simples": "Parte não pode invocar vício que causou/contribuiu ou formalidade de interesse exclusivo da outra.",
+      "pontos": [
+        "Lealdade processual e finalidade da garantia.",
+        "Não converter regra em renúncia automática a toda garantia essencial."
+      ],
+      "atencao": [
+        "Examinar origem e interesse do vício; não permitir fabricar nulidade para lucrar com própria conduta."
+      ],
+      "exemplo": "Parte cria irregularidade deliberada e tenta usá-la em benefício: examina-se vedação. Variação: Falta de defesa imposta pelo juízo não vira vício causado pelo réu só porque ele permaneceu em silêncio.",
+      "prova": [
+        "Causar vício autoriza aproveitá-lo livremente? Não.",
+        "Silêncio significa causar falta de defesa técnica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Vedação de aproveitamento próprio",
+          "significado": "Limite ligado à responsabilidade e interesse na formalidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "41628253-71c4-5874-b028-2565854b66e3",
+        "content_sha256": "6d9233cdae135bd9d4a8ed92085dfd1030e27f0f78e35085eb1287c83c91387c",
+        "simples": "Nenhuma das partes poderá arguir nulidade a que haja dado causa, ou para que tenha concorrido, ou referente a formalidade cuja observância só à parte contrária interesse.",
+        "pontos": [
+          "A parte não pode arguir nulidade que ela causou.",
+          "Nem a que só interessa à parte contrária."
+        ],
+        "atencao": [
+          "Vedação do venire contra factum proprium."
+        ],
+        "exemplo": "A defesa não pode alegar nulidade que ela mesma provocou.",
+        "prova": [
+          "Assertiva que permite à parte alegar nulidade que ela mesma causou erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 563"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-566",
+      "unit_id": "a7d57f35-b4f7-5e70-985d-5b4f3871d2cd",
+      "content_sha256": "13893af74a00fe46486c8787edcd8bad3d0c68288e478ed0c461b3617bd48def",
+      "simples": "Ato sem influência na apuração relevante ou decisão não é anulado apenas pela irregularidade.",
+      "pontos": [
+        "Relacionar vício e consequência.",
+        "Preservar atos úteis sem negar garantia essencial."
+      ],
+      "atencao": [
+        "Não chamar violação decisiva de mero detalhe sem demonstrar ausência de influência."
+      ],
+      "exemplo": "Erro material sem impacto na identificação ou defesa não produz anulação automática. Variação: Supressão de prova defensiva relevante pode influir e exige exame real.",
+      "prova": [
+        "Irregularidade sem influência sempre anula? Não.",
+        "Influência relevante precisa ser analisada? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Influência do vício",
+          "significado": "Relação entre irregularidade e processo decisório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a7d57f35-b4f7-5e70-985d-5b4f3871d2cd",
+        "content_sha256": "13893af74a00fe46486c8787edcd8bad3d0c68288e478ed0c461b3617bd48def",
+        "simples": "Não será declarada a nulidade de ato processual que não houver influído na apuração da verdade substancial ou na decisão da causa.",
+        "pontos": [
+          "Sem influência na apuração da verdade ou na decisão, não se declara a nulidade."
+        ],
+        "atencao": [
+          "Outra face do princípio do prejuízo."
+        ],
+        "exemplo": "Erro formal irrelevante para a decisão não anula o ato.",
+        "prova": [
+          "Assertiva que anula todo ato irregular, ainda que sem influência na decisão, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 563"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-567",
+      "unit_id": "7d929b9d-34b3-5020-8afd-868d315b2af8",
+      "content_sha256": "290b00fd80060555291ed121bbdeddb4aa0400d22d78f378461d306322581acc",
+      "simples": "Incompetência anula atos decisórios no regime do artigo e exige remessa ao juízo competente.",
+      "pontos": [
+        "Não apagar automaticamente toda prova independente.",
+        "Examinar natureza e efeitos da incompetência no caso.",
+        "Garantias de obtenção da prova permanecem."
+      ],
+      "atencao": [
+        "A regra não torna válida prova ilícita nem dispensa analisar atos dependentes."
+      ],
+      "exemplo": "Declarada incompetência, autos seguem ao órgão adequado e decisões são examinadas. Variação: Depoimento regularmente documentado não desaparece por mera suposição de que tudo é nulo.",
+      "prova": [
+        "Remessa ao competente é prevista? Sim.",
+        "Artigo valida prova ilícita? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito da incompetência",
+          "significado": "Consequência processual delimitada pelo ato e regime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "7d929b9d-34b3-5020-8afd-868d315b2af8",
+        "content_sha256": "290b00fd80060555291ed121bbdeddb4aa0400d22d78f378461d306322581acc",
+        "simples": "A incompetência do juízo anula somente os atos decisórios, devendo o processo, quando for declarada a nulidade, ser remetido ao juiz competente.",
+        "pontos": [
+          "Incompetência anula somente os atos decisórios.",
+          "O processo segue ao juiz competente."
+        ],
+        "atencao": [
+          "Atos instrutórios podem ser aproveitados (teoria prevalente, ainda que a jurisprudência distinga a incompetência absoluta)."
+        ],
+        "exemplo": "Declarada a incompetência, as decisões são anuladas e o processo vai ao juízo competente.",
+        "prova": [
+          "Assertiva que anula todos os atos do processo, incluindo a instrução, na incompetência, erra segundo a letra do art. 567."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 108"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-568",
+      "unit_id": "dd65efd3-6b44-55dc-b183-64f5a68bdbb7",
+      "content_sha256": "0c1eec7e209788cd52f78629590d3aedec3e8bd5bc602bd4a95bc735f47f9da7",
+      "simples": "Ilegitimidade do representante pode ser sanada por ratificação dos atos.",
+      "pontos": [
+        "Distinguir representante e titular da ação.",
+        "Ratificação precisa ser válida por quem tem poderes."
+      ],
+      "atencao": [
+        "Não usar ratificação para criar legitimidade de parte inexistente ou reviver direito extinto."
+      ],
+      "exemplo": "Representação irregular é regularizada e atos ratificados validamente. Variação: Pessoa sem direito material de ação não o adquire porque chama documento de ratificação.",
+      "prova": [
+        "Representante e titular são iguais? Não.",
+        "Ratificação pode sanar representação na hipótese? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ratificação",
+          "significado": "Confirmação válida dos atos por quem pode praticá-los."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dd65efd3-6b44-55dc-b183-64f5a68bdbb7",
+        "content_sha256": "0c1eec7e209788cd52f78629590d3aedec3e8bd5bc602bd4a95bc735f47f9da7",
+        "simples": "A nulidade por ilegitimidade do representante da parte poderá ser a todo tempo sanada, mediante ratificação dos atos processuais.",
+        "pontos": [
+          "Ilegitimidade do representante pode ser sanada a todo tempo.",
+          "Por ratificação dos atos processuais."
+        ],
+        "atencao": [
+          "Sanável por ratificação."
+        ],
+        "exemplo": "O representante legítimo ratifica os atos praticados pelo ilegítimo.",
+        "prova": [
+          "Assertiva que torna insanável a ilegitimidade do representante da parte erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 564"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-569",
+      "unit_id": "3142fc74-4413-5e40-b4ca-9c2b227a5b84",
+      "content_sha256": "619779fcdbba56b9c7631d6f3e04c3128d6c33cba7384f58e314fa2f09d271b4",
+      "simples": "Omissões acusatórias podem ser supridas antes de sentença final, respeitadas defesa, correlação e iniciativa atual.",
+      "pontos": [
+        "Não converter suprimento em alteração factual sem aditamento.",
+        "Portaria/flagrante de contravenção: referência histórica não restaura ação policial.",
+        "Examinar requisitos e limites do defeito."
+      ],
+      "atencao": [
+        "Antes da sentença não significa licença para condenar por fato surpresa."
+      ],
+      "exemplo": "Dado omitido é regularizado com garantias pertinentes. Variação: Novo elemento acusatório exige procedimento de aditamento e oportunidade de defesa.",
+      "prova": [
+        "Suprimento dispensa contraditório? Não.",
+        "Portaria policial vira acusação penal válida por si? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Suprimento de omissão",
+          "significado": "Correção processual sujeita aos limites da acusação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3142fc74-4413-5e40-b4ca-9c2b227a5b84",
+        "content_sha256": "619779fcdbba56b9c7631d6f3e04c3128d6c33cba7384f58e314fa2f09d271b4",
+        "simples": "As omissões da denúncia ou da queixa, da representação, ou, nos processos das contravenções penais, da portaria ou do auto de prisão em flagrante, poderão ser supridas a todo o tempo, antes da sentença final.",
+        "pontos": [
+          "Omissões da denúncia, queixa ou representação são supridas até a sentença."
+        ],
+        "atencao": [
+          "Limite: antes da sentença final."
+        ],
+        "exemplo": "O MP supre uma omissão da denúncia antes da sentença.",
+        "prova": [
+          "Assertiva que impede suprir omissões da denúncia após o recebimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 564"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-570",
+      "unit_id": "85c409a6-b99b-538e-8f8b-c03535cfcfca",
+      "content_sha256": "1537401415a31ef6e169f8fcb32621b1cea3c6b4a7c32b08d82e4d9b65439c9a",
+      "simples": "Comparecimento antes da consumação pode sanar vício de citação/intimação/notificação, mas juiz adia ou suspende se houver risco ao direito.",
+      "pontos": [
+        "Mesmo comparecimento só para arguir pode produzir efeito previsto.",
+        "Ciência não substitui tempo necessário à defesa quando prejudicada."
+      ],
+      "atencao": [
+        "Não usar presença para obrigar julgamento surpresa sem prazo defensivo útil."
+      ],
+      "exemplo": "Interessado comparece e tem condições de exercer direito adequadamente. Variação: Comparece no último momento sem acesso: juízo examina adiamento para evitar prejuízo.",
+      "prova": [
+        "Comparecimento elimina sempre necessidade de adiar? Não.",
+        "Risco ao direito demanda providência judicial? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comparecimento saneador",
+          "significado": "Ciência efetiva com proteção ao exercício do direito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "85c409a6-b99b-538e-8f8b-c03535cfcfca",
+        "content_sha256": "1537401415a31ef6e169f8fcb32621b1cea3c6b4a7c32b08d82e4d9b65439c9a",
+        "simples": "A falta ou a nulidade da citação, da intimação ou notificação estará sanada, desde que o interessado compareça antes de o ato consumar-se, embora declare que o faz para o único fim de arguí-la. O juiz ordenará, todavia, a suspensão ou o adiamento do ato, quando reconhecer que a irregularidade poderá prejudicar direito da parte.",
+        "pontos": [
+          "Comparecimento do interessado sana a falta ou nulidade da citação, intimação ou notificação.",
+          "Mesmo que compareça apenas para arguir.",
+          "O juiz suspende ou adia o ato se houver risco de prejuízo."
+        ],
+        "atencao": [
+          "Comparecimento = sanação (com ressalva de prejuízo)."
+        ],
+        "exemplo": "O réu comparece mesmo sem citação válida: a nulidade é sanada, salvo risco de prejuízo.",
+        "prova": [
+          "Assertiva que mantém a nulidade da citação mesmo com o comparecimento do réu erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 572"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-571",
+      "unit_id": "39c75769-65b5-5cad-b9ae-01ea2b2963e8",
+      "content_sha256": "357a386aad3ffc59dd03697b788e1d9eb46e16bb15c87d53bf38c6a9b6233120",
+      "simples": "Nulidades devem ser suscitadas oportunamente segundo fase e regime; remissões a artigos revogados não fixam prazos atuais.",
+      "pontos": [
+        "500 e537 foram revogados: integrar alegações e atos atuais.",
+        "No plenário/audiência/sessão: arguir logo após ocorrência.",
+        "Vício após primeira instância: razões recursais ou momento indicado.",
+        "Distinguir nulidade, preclusão e garantias essenciais."
+      ],
+      "atencao": [
+        "Não decorar prazo inexistente do art.500/537 nem aguardar resultado para guardar vício conhecido como estratégia."
+      ],
+      "exemplo": "Defesa registra objeção ao surgir irregularidade em plenário. Variação: Vício de instrução requer identificação do momento processual atual, não prazo de artigo eliminado.",
+      "prova": [
+        "Remissão restaura prazo revogado? Não.",
+        "Ocorrência em plenário exige arguição oportuna? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Oportunidade da arguição",
+          "significado": "Momento de suscitar vício com registro e fundamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "39c75769-65b5-5cad-b9ae-01ea2b2963e8",
+        "content_sha256": "357a386aad3ffc59dd03697b788e1d9eb46e16bb15c87d53bf38c6a9b6233120",
+        "simples": "As nulidades deverão ser arguidas: as da instrução criminal dos processos do júri, nos prazos do art. 406; as da instrução dos processos do juiz singular e dos especiais, nos prazos do art. 500; as do processo sumário, no prazo do art. 537 ou logo depois de aberta a audiência e apregoadas as partes; as ocorridas posteriormente à pronúncia, logo depois de anunciado o julgamento e apregoadas as partes; as de instrução dos processos de competência do STF e dos tribunais, nos prazos do art. 500; as verificadas após a decisão de primeira instância, nas razões de recurso ou logo depois de anunciado o julgamento do recurso; e as do julgamento em plenário, em audiência ou em sessão do tribunal, logo depois de ocorrerem.",
+        "pontos": [
+          "Momentos de arguição variam conforme o rito e a fase.",
+          "Nulidades do plenário e de sessões: logo depois de ocorrerem.",
+          "Pós-pronúncia: logo depois de anunciado o julgamento.",
+          "Após a decisão de primeira instância: nas razões do recurso."
+        ],
+        "atencao": [
+          "Preclusão: a nulidade relativa não alegada a tempo fica sanada."
+        ],
+        "exemplo": "A nulidade ocorrida no plenário deve ser arguida logo depois de ocorrer.",
+        "prova": [
+          "Assertiva que permite arguir qualquer nulidade ao final do processo, sem preclusão, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Preclusão",
+            "significado": "Perda da oportunidade processual por não exercê-la no momento certo."
+          }
+        ],
+        "remissoes": [
+          "Art. 572"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-572",
+      "unit_id": "99969fc1-e59c-5d89-b8cb-d956f9b72833",
+      "content_sha256": "2e6f94c375c66c0d856a8456443095b42e294fb4c4ce120578824aa3bacdb691",
+      "simples": "Vícios enumerados podem ser sanados por falta de arguição oportuna, finalidade alcançada ou aceitação dos efeitos.",
+      "pontos": [
+        "Hipóteses do rol precisam de integração atual.",
+        "Não aplicar saneamento indistinto a falta absoluta de defesa.",
+        "Finalidade real do ato importa."
+      ],
+      "atencao": [
+        "Não afirmar que qualquer nulidade se sana pelo silêncio de toda pessoa em qualquer hipótese."
+      ],
+      "exemplo": "Forma alternativa cumpre finalidade e não prejudica garantia no caso pertinente. Variação: Ausência total de defensor não é banalizada como aceitação tácita.",
+      "prova": [
+        "Toda nulidade se sana sempre por silêncio? Não.",
+        "Finalidade alcançada pode importar? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Saneamento delimitado",
+          "significado": "Convalidação nas hipóteses legalmente pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2729"
+      ],
+      "expected": {
+        "unit_id": "99969fc1-e59c-5d89-b8cb-d956f9b72833",
+        "content_sha256": "2e6f94c375c66c0d856a8456443095b42e294fb4c4ce120578824aa3bacdb691",
+        "simples": "As nulidades previstas no art. 564, III, d e e (segunda parte), g e h, e IV, considerar-se-ão sanadas se não forem arguidas em tempo oportuno, de acordo com o artigo anterior; se, praticado o ato por outra forma, tiver atingido o seu fim; ou se a parte, ainda que tacitamente, tiver aceito os seus efeitos.",
+        "pontos": [
+          "Sanam-se se não forem arguidas a tempo.",
+          "Sanam-se se o ato atingiu seu fim por outra forma.",
+          "Sanam-se se a parte aceitou seus efeitos, ainda que tacitamente."
+        ],
+        "atencao": [
+          "Três formas de sanação."
+        ],
+        "exemplo": "O ato praticado de outra forma atingiu sua finalidade: nulidade sanada.",
+        "prova": [
+          "Assertiva que torna insanáveis essas nulidades erra: elas se sanam nas três hipóteses do art. 572."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 571"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-573",
+      "unit_id": "12316ab5-5f86-5566-9a57-6dc6d156951c",
+      "content_sha256": "5726702a8d5038f0f04e7384a250a8296df760799b47789caf760cfe672877af",
+      "simples": "Ato nulo não sanado é renovado ou retificado; nulidade alcança dependentes/consequentes diretos e juiz delimita extensão.",
+      "pontos": [
+        "Não destruir atos independentes automaticamente.",
+        "Decisão identifica quais atos são atingidos."
+      ],
+      "atencao": [
+        "Anular um ato não significa anular toda causa sem demonstrar dependência."
+      ],
+      "exemplo": "Depoimento inválido é renovado e decisões diretamente dependentes são examinadas. Variação: Documento independente válido não é eliminado só por integrar mesmos autos.",
+      "prova": [
+        "Juiz delimita extensão? Sim.",
+        "Todo ato independente cai automaticamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Extensão da nulidade",
+          "significado": "Alcance ligado à dependência processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "12316ab5-5f86-5566-9a57-6dc6d156951c",
+        "content_sha256": "5726702a8d5038f0f04e7384a250a8296df760799b47789caf760cfe672877af",
+        "simples": "Os atos cuja nulidade não tiver sido sanada serão renovados ou retificados. A nulidade de um ato, uma vez declarada, causará a dos atos que dele diretamente dependam ou sejam consequência. O juiz que pronunciar a nulidade declarará os atos a que ela se estende.",
+        "pontos": [
+          "Atos nulos não sanados são renovados ou retificados.",
+          "Nulidade contamina os atos dependentes ou consequentes (nulidade derivada).",
+          "O juiz declara os atos a que a nulidade se estende."
+        ],
+        "atencao": [
+          "Nulidade por derivação."
+        ],
+        "exemplo": "A nulidade da citação atinge os atos posteriores dela dependentes.",
+        "prova": [
+          "Assertiva que limita a nulidade ao ato viciado, sem alcançar os dependentes, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 564"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-574",
+      "unit_id": "d07b1076-eb0f-5a98-b90d-12a26ce09279",
+      "content_sha256": "8517030c91a733b3fb265042cc0f5af1c9196d4ee3bc3277ef496078460e3c1b",
+      "simples": "Recursos são em regra voluntários; incisoII sobre absolvição sumária do júri exige integração à reforma de2008.",
+      "pontos": [
+        "STJ reconhece superação do reexame obrigatório da absolvição sumária do júri.",
+        "Art.416 atual prevê apelação voluntária.",
+        "IncisoI descreve hipótese de concessão de habeas corpus no regime cabível."
+      ],
+      "atencao": [
+        "Não ensinar recurso de ofício da absolvição sumária pelo antigo art.411 como regra vigente."
+      ],
+      "exemplo": "Parte interessada pode recorrer por apelação da absolvição sumária atual. Variação: Não exigir remessa automática apenas pela referência antiga do incisoII.",
+      "prova": [
+        "Absolvição sumária atual exige esse recurso de ofício antigo? Não.",
+        "Apelação do art.416 permanece? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Voluntariedade e remessa",
+          "significado": "Distinção entre recurso da parte e hipóteses de reexame."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2019/Depois-do-juri-execucao-da-pena--limites-recursais-e-revisao-criminal.aspx"
+      ],
+      "expected": {
+        "unit_id": "d07b1076-eb0f-5a98-b90d-12a26ce09279",
+        "content_sha256": "8517030c91a733b3fb265042cc0f5af1c9196d4ee3bc3277ef496078460e3c1b",
+        "simples": "Os recursos serão voluntários, excetuando-se os casos em que deverão ser interpostos, de ofício, pelo juiz: da sentença que conceder habeas corpus e da que absolver desde logo o réu com fundamento na existência de circunstância que exclua o crime ou isente o réu de pena, nos termos do art. 411 (hipótese da absolvição sumária no Júri).",
+        "pontos": [
+          "Regra: recursos voluntários.",
+          "Recurso de ofício: sentença que concede habeas corpus.",
+          "Recurso de ofício: absolvição sumária por excludente de crime ou isenção de pena."
+        ],
+        "atencao": [
+          "O recurso de ofício da absolvição sumária no Júri foi retirado pela reforma de 2008; a referência é histórica."
+        ],
+        "exemplo": "A concessão de habeas corpus sujeita-se a recurso de ofício.",
+        "prova": [
+          "Assertiva que torna obrigatórios todos os recursos erra: a regra é a voluntariedade."
+        ],
+        "termos": [
+          {
+            "termo": "Recurso de ofício",
+            "significado": "Reexame necessário imposto ao juiz."
+          }
+        ],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-575",
+      "unit_id": "bc14ff76-75dd-5071-9ddc-b1dbb4b40106",
+      "content_sha256": "e9d9a0ec0b538ff05ec7b983a8fb6b576f0b80f299ebeaf869b64887bf4ffdf2",
+      "simples": "Erro, falta ou omissão de funcionário não deve prejudicar seguimento ou apresentação tempestiva do recurso na hipótese prevista.",
+      "pontos": [
+        "Demonstrar falha e circunstâncias.",
+        "Não converter em prorrogação livre por inércia da parte."
+      ],
+      "atencao": [
+        "A proteção não autoriza atribuir toda intempestividade à secretaria sem suporte."
+      ],
+      "exemplo": "Parte entrega no prazo, mas falha de registro impede andamento: prova do ocorrido importa. Variação: Parte perde prazo por negligência própria não entra automaticamente na hipótese.",
+      "prova": [
+        "Falha funcional pode proteger recurso? Sim.",
+        "Basta alegar falha sem demonstrar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Falha de processamento",
+          "significado": "Irregularidade funcional que não deve onerar recorrente diligente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bc14ff76-75dd-5071-9ddc-b1dbb4b40106",
+        "content_sha256": "e9d9a0ec0b538ff05ec7b983a8fb6b576f0b80f299ebeaf869b64887bf4ffdf2",
+        "simples": "Não serão prejudicados os recursos que, por erro, falta ou omissão dos funcionários, não tiverem seguimento ou não forem apresentados dentro do prazo.",
+        "pontos": [
+          "Falha dos funcionários não prejudica o recurso."
+        ],
+        "atencao": [
+          "Proteção da parte contra erro do serviço judiciário."
+        ],
+        "exemplo": "O recurso não subiu por omissão do cartório, e a parte não é prejudicada.",
+        "prova": [
+          "Assertiva que prejudica a parte por erro dos funcionários da justiça erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 586"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-576",
+      "unit_id": "f747acde-9225-5436-8bcb-6e1938b7b692",
+      "content_sha256": "dc0e4e34f110f9a62c92dd4bcd25588dc66475d70b806d3d852eed6e6108f8a3",
+      "simples": "MP não pode desistir de recurso que já interpôs.",
+      "pontos": [
+        "Distinguir não recorrer e desistir depois.",
+        "Opinião em fase posterior não é retirada automática do recurso."
+      ],
+      "atencao": [
+        "Não confundir manifestação jurídica com autorização para apagar recurso interposto."
+      ],
+      "exemplo": "MP recorre e depois revê avaliação; recurso não é desistido livremente. Variação: Decidir não interpor antes é situação diferente da desistência vedada.",
+      "prova": [
+        "MP pode desistir livremente após interpor? Não.",
+        "Não recorrer inicialmente é a mesma situação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Indisponibilidade recursal do MP",
+          "significado": "Vedação de desistência do recurso interposto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f747acde-9225-5436-8bcb-6e1938b7b692",
+        "content_sha256": "dc0e4e34f110f9a62c92dd4bcd25588dc66475d70b806d3d852eed6e6108f8a3",
+        "simples": "O Ministério Público não poderá desistir de recurso que haja interposto.",
+        "pontos": [
+          "MP não desiste de recurso interposto (indisponibilidade)."
+        ],
+        "atencao": [
+          "Coerência com o art. 42."
+        ],
+        "exemplo": "Interposta a apelação, o MP não pode desistir dela.",
+        "prova": [
+          "Assertiva que permite ao MP desistir do recurso que interpôs erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 42"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-577",
+      "unit_id": "f1ec424c-3373-5437-a697-526d987cfc23",
+      "content_sha256": "fc3f8b286e72dbf0eee8baeeeb277a2049c7c0dfd067802b4a840e56b4255a60",
+      "simples": "Legitimados enumerados podem recorrer, mas precisam de interesse em modificar decisão.",
+      "pontos": [
+        "MP, querelante, réu, procurador ou defensor.",
+        "Outras participações legais dependem de previsão específica.",
+        "Interesse não se reduz sempre a valor econômico."
+      ],
+      "atencao": [
+        "Legitimidade formal não dispensa utilidade jurídica do pedido."
+      ],
+      "exemplo": "Defesa busca corrigir decisão prejudicial ao acusado. Variação: Parte sem interesse na alteração não tem recurso admitido só por ser parte.",
+      "prova": [
+        "Legitimidade dispensa interesse? Não.",
+        "Defensor está previsto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Interesse recursal",
+          "significado": "Utilidade de obter reforma ou modificação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f1ec424c-3373-5437-a697-526d987cfc23",
+        "content_sha256": "fc3f8b286e72dbf0eee8baeeeb277a2049c7c0dfd067802b4a840e56b4255a60",
+        "simples": "O recurso poderá ser interposto pelo Ministério Público, ou pelo querelante, ou pelo réu, seu procurador ou seu defensor. Não se admitirá, entretanto, recurso da parte que não tiver interesse na reforma ou modificação da decisão.",
+        "pontos": [
+          "Legitimados: MP, querelante, réu, procurador ou defensor.",
+          "Exige interesse na reforma ou modificação."
+        ],
+        "atencao": [
+          "Interesse recursal."
+        ],
+        "exemplo": "O réu absolvido não tem interesse em recorrer da absolvição.",
+        "prova": [
+          "Assertiva que dispensa o interesse recursal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 578"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-578",
+      "unit_id": "4ff3b6db-1048-5f4f-afdb-8a9a81b6333d",
+      "content_sha256": "ddee125a018e8d3f79958a2675786ce2176a27644725afd8f4d6068a33b23361",
+      "simples": "Interposição por petição ou termo assinado; impossibilidade de assinatura do réu admite assinatura a rogo com duas testemunhas.",
+      "pontos": [
+        "Registros de entrega e encaminhamento da secretaria.",
+        "Integrar protocolo eletrônico e garantias disciplinares atuais.",
+        "Sanção histórica não dispensa procedimento adequado."
+      ],
+      "atencao": [
+        "Não exigir forma física exclusiva em sistema eletrônico nem impor punição disciplinar sumária."
+      ],
+      "exemplo": "Réu sem capacidade de assinar usa termo a rogo na forma prevista. Variação: Petição protocolada eletronicamente deve ser analisada pelo regime válido do órgão.",
+      "prova": [
+        "A rogo exige duas testemunhas? Sim.",
+        "Texto elimina protocolo eletrônico válido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Interposição formal",
+          "significado": "Ato de apresentar recurso e registrar sua tempestividade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4ff3b6db-1048-5f4f-afdb-8a9a81b6333d",
+        "content_sha256": "ddee125a018e8d3f79958a2675786ce2176a27644725afd8f4d6068a33b23361",
+        "simples": "O recurso será interposto por petição ou por termo nos autos, assinado pelo recorrente ou por seu representante. Não sabendo ou não podendo o réu assinar o nome, o termo será assinado por alguém, a seu rogo, na presença de duas testemunhas. A petição de interposição, com o despacho do juiz, será, até o dia seguinte ao último do prazo, entregue ao escrivão, que certificará no termo da juntada a data da entrega. Interposto por termo o recurso, o escrivão, sob pena de suspensão por dez a trinta dias, fará conclusos os autos ao juiz, até o dia seguinte ao último do prazo.",
+        "pontos": [
+          "Interposição por petição ou termo nos autos.",
+          "Réu que não sabe assinar: alguém assina a rogo, com duas testemunhas.",
+          "Petição entregue ao escrivão até o dia seguinte ao último do prazo.",
+          "Escrivão faz os autos conclusos até o dia seguinte ao último do prazo, sob pena de suspensão."
+        ],
+        "atencao": [
+          "Duas testemunhas na assinatura a rogo."
+        ],
+        "exemplo": "O réu analfabeto interpõe o recurso por termo, assinado a rogo na presença de duas testemunhas.",
+        "prova": [
+          "Assertiva que dispensa testemunhas na assinatura a rogo do réu erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 586"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-579",
+      "unit_id": "e8e043bb-e420-566e-a704-23b8ad11ec58",
+      "content_sha256": "b5120759fac57261ea2e0f13af52c8980b8b90902bf53099aa71ec0cd66a53d8",
+      "simples": "Fungibilidade penal admite recurso inadequado como cabível, sem má-fé e com prazo e requisitos do correto.",
+      "pontos": [
+        "Tema1219/STJ,2024: erro grosseiro por si não impede fungibilidade penal.",
+        "Respeitar tempestividade do recurso cabível.",
+        "Juiz processa pelo rito adequado na hipótese legal."
+      ],
+      "atencao": [
+        "Não repetir regra antiga de proibição universal por erro grosseiro; nem usar fungibilidade para salvar recurso fora do prazo pertinente."
+      ],
+      "exemplo": "RESE apresentado no prazo e com requisitos pode ser tratado como apelação na hipótese do precedente. Variação: Má-fé ou falta de pressupostos do correto exigem análise distinta.",
+      "prova": [
+        "Erro grosseiro isolado impede sempre no penal? Não.",
+        "Prazo do recurso cabível importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fungibilidade penal",
+          "significado": "Aproveitamento sujeito aos pressupostos atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/30092024-Recurso-em-sentido-estrito-pode-ser-aceito-como-apelacao-e-vice-versa--observados-os-pressupostos-legais.aspx"
+      ],
+      "expected": {
+        "unit_id": "e8e043bb-e420-566e-a704-23b8ad11ec58",
+        "content_sha256": "b5120759fac57261ea2e0f13af52c8980b8b90902bf53099aa71ec0cd66a53d8",
+        "simples": "Salvo a hipótese de má-fé, a parte não será prejudicada pela interposição de um recurso por outro (princípio da fungibilidade). Se o juiz, desde logo, reconhecer a impropriedade do recurso interposto, mandará processá-lo de acordo com o rito do recurso cabível.",
+        "pontos": [
+          "Fungibilidade recursal, salvo má-fé.",
+          "O juiz manda processar pelo rito do recurso cabível."
+        ],
+        "atencao": [
+          "A má-fé afasta a fungibilidade."
+        ],
+        "exemplo": "Apelação interposta no lugar do recurso em sentido estrito é processada pelo rito correto.",
+        "prova": [
+          "Assertiva que aplica a fungibilidade mesmo em caso de má-fé erra."
+        ],
+        "termos": [
+          {
+            "termo": "Fungibilidade",
+            "significado": "Aproveitamento de um recurso por outro."
+          }
+        ],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-580",
+      "unit_id": "c3bbca52-be4d-5a60-940e-2a6767dfd7b7",
+      "content_sha256": "8c4734456164d1315612f0f2e35ac1b7e3ca60c77cacc4a20ae7fcc6f48902bc",
+      "simples": "Resultado favorável de recurso de um corréu pode beneficiar outros se motivo não for exclusivamente pessoal.",
+      "pontos": [
+        "Mesma razão objetiva pertinente.",
+        "Remissão ao antigo art.25/CP não altera regra de extensão.",
+        "Não estender condição individual automaticamente."
+      ],
+      "atencao": [
+        "Benefício ligado só à pessoa não se comunica a todo corréu."
+      ],
+      "exemplo": "Reconhecimento de inexistência do fato pode repercutir nos demais em situação equivalente. Variação: Circunstância pessoal de um acusado não se transfere por mera coautoria.",
+      "prova": [
+        "Motivo exclusivamente pessoal comunica sempre? Não.",
+        "Fundamento objetivo pode aproveitar outros? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efeito extensivo",
+          "significado": "Aplicação do resultado a corréus na mesma razão jurídica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c3bbca52-be4d-5a60-940e-2a6767dfd7b7",
+        "content_sha256": "8c4734456164d1315612f0f2e35ac1b7e3ca60c77cacc4a20ae7fcc6f48902bc",
+        "simples": "No caso de concurso de agentes (art. 25 do Código Penal), a decisão do recurso interposto por um dos réus, se fundado em motivos que não sejam de caráter exclusivamente pessoal, aproveitará aos outros.",
+        "pontos": [
+          "Concurso de agentes: o recurso de um aproveita aos demais.",
+          "Desde que o fundamento não seja exclusivamente pessoal."
+        ],
+        "atencao": [
+          "Efeito extensivo do recurso."
+        ],
+        "exemplo": "A absolvição por inexistência do fato, obtida por um corréu, aproveita aos outros.",
+        "prova": [
+          "Assertiva que nega o efeito extensivo mesmo quando os motivos não são pessoais erra."
+        ],
+        "termos": [
+          {
+            "termo": "Efeito extensivo",
+            "significado": "O resultado do recurso de um beneficia os corréus."
+          }
+        ],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-581",
+      "unit_id": "9aaa8675-83c1-518c-a477-62c19f068fe7",
+      "content_sha256": "97c2c3186dc9fc74696fda90c652888c9d938cfea0950a4edcdf8e0eb0161246",
+      "simples": "RESE cabe nas hipóteses legais, com atualização do rito do júri, ANPP e execução penal.",
+      "pontos": [
+        "Rejeição acusatória, incompetência, exceções procedentes salvo suspeição, pronúncia.",
+        "Fiança/liberdade, extinção da punibilidade, habeas corpus e demais hipóteses pertinentes.",
+        "IncisoXXV: recusa de homologação de ANPP.",
+        "Impronúncia/absolvição sumária: apelação do art.416; incisoVI revogado.",
+        "Decisões do juízo da execução seguem agravo da LEP197, não aplicação automática de incisos antigos.",
+        "Não restaurar conversão automática da multa em prisão."
+      ],
+      "atencao": [
+        "Taxatividade e interpretação precisam de hipótese e regime; não usar lista residual para ensinar recurso atual incorreto na execução."
+      ],
+      "exemplo": "Recusa judicial de homologação do ANPP é hipótese de RESE. Variação: Revogação de livramento pelo juízo da execução exige examinar agravo em execução, não memorizar incisoXII isolado.",
+      "prova": [
+        "ANPP recusado na homologação tem hipótese expressa? Sim.",
+        "Impronúncia usa incisoVI revogado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cabimento do RESE",
+          "significado": "Recurso legalmente delimitado e integrado às normas posteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "9aaa8675-83c1-518c-a477-62c19f068fe7",
+        "content_sha256": "97c2c3186dc9fc74696fda90c652888c9d938cfea0950a4edcdf8e0eb0161246",
+        "simples": "Caberá recurso, no sentido estrito, da decisão, despacho ou sentença que não receber a denúncia ou a queixa; que concluir pela incompetência do juízo; que julgar procedentes as exceções, salvo a de suspeição; que pronunciar o réu; que conceder, negar, arbitrar, cassar ou julgar inidônea a fiança, indeferir requerimento de prisão preventiva ou revogá-la, conceder liberdade provisória ou relaxar a prisão em flagrante; que julgar quebrada a fiança ou perdido o seu valor; que decretar a prescrição ou julgar, por outro modo, extinta a punibilidade; que indeferir o pedido de reconhecimento da prescrição ou de outra causa extintiva; que conceder ou negar habeas corpus; que conceder, negar ou revogar a suspensão condicional da pena; que conceder, negar ou revogar livramento condicional; que anular o processo da instrução criminal, no todo ou em parte; que incluir jurado na lista geral ou dela o excluir; que denegar a apelação ou a julgar deserta; que ordenar a suspensão do processo em virtude de questão prejudicial; entre outras hipóteses.",
+        "pontos": [
+          "I: não receber denúncia ou queixa.",
+          "II: incompetência do juízo.",
+          "III: exceções procedentes (salvo suspeição).",
+          "IV: pronúncia.",
+          "V: fiança, preventiva, liberdade provisória e relaxamento.",
+          "VII e VIII: fiança quebrada; extinção da punibilidade.",
+          "X: habeas corpus; XI e XII: sursis e livramento.",
+          "XIII: anulação da instrução; XIV: lista de jurados.",
+          "XV: denegar apelação; XVI: questão prejudicial."
+        ],
+        "atencao": [
+          "Rol é taxativo, mas admite interpretação extensiva (STF/STJ).",
+          "Contra a impronúncia e a absolvição sumária cabe apelação (art. 416)."
+        ],
+        "exemplo": "Contra a decisão que rejeita a denúncia, cabe recurso em sentido estrito.",
+        "prova": [
+          "Assertiva que prevê apelação contra a decisão de pronúncia erra: cabe recurso em sentido estrito."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 582",
+          "Art. 416"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-582",
+      "unit_id": "fe9ac00d-bad0-5b63-9933-5f4e2ad803a4",
+      "content_sha256": "0cc7105a192e548ca589598cec5de94c001ec269c87bc62bceb874779fc4ccf0",
+      "simples": "Texto histórico de Tribunais de Apelação e exceções deve ser integrado à competência recursal constitucional e organização atuais.",
+      "pontos": [
+        "Não tratar nome antigo como órgão autônomo contemporâneo.",
+        "HypóteseXIV indica presidente no texto; verificar órgão competente atual.",
+        "Competência depende de decisão, autoridade e regime aplicável."
+      ],
+      "atencao": [
+        "Não concluir que todo habeas corpus ou fiança pode ser revisto por qualquer juízo só pela exceção histórica."
+      ],
+      "exemplo": "Parte identifica órgão competente para decisão recorrida no sistema atual. Variação: Usar nome antigo sem verificar competência pode encaminhar recurso ao destinatário errado.",
+      "prova": [
+        "Nome histórico define sozinho órgão atual? Não.",
+        "É preciso identificar competência pertinente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Competência recursal",
+          "significado": "Órgão apto segundo sistema constitucional e normas atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fe9ac00d-bad0-5b63-9933-5f4e2ad803a4",
+        "content_sha256": "0cc7105a192e548ca589598cec5de94c001ec269c87bc62bceb874779fc4ccf0",
+        "simples": "Os recursos em sentido estrito serão sempre para o Tribunal de Apelação, salvo nos casos dos incisos V, X e XIV. O recurso, no caso do inciso XIV (lista de jurados), será para o presidente do Tribunal de Apelação.",
+        "pontos": [
+          "Regra: Tribunal de Apelação.",
+          "Exceções: incisos V, X e XIV do art. 581.",
+          "Inciso XIV (lista de jurados): para o presidente do Tribunal."
+        ],
+        "atencao": [
+          "Texto anterior à organização atual dos tribunais."
+        ],
+        "exemplo": "O recurso contra a inclusão de jurado na lista vai ao presidente do tribunal.",
+        "prova": [
+          "Assertiva que envia todos os recursos em sentido estrito ao presidente do tribunal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 581"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:51.653+00:00",
+        "updated_at": "2026-10-11T13:18:51.653+00:00"
+      }
+    }
+  ]
+}

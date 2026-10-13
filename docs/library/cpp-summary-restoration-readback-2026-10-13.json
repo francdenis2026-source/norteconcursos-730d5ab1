@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-13T03:59:24.919594+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 22,
+  "target_keys": [
+    "art-531",
+    "art-532",
+    "art-533",
+    "art-534",
+    "art-535",
+    "art-536",
+    "art-538",
+    "art-541",
+    "art-542",
+    "art-543",
+    "art-544",
+    "art-545",
+    "art-546",
+    "art-547",
+    "art-548",
+    "art-549",
+    "art-550",
+    "art-551",
+    "art-552",
+    "art-553",
+    "art-554",
+    "art-555"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 824,
+  "concurrent_other_changes": []
+}

@@ -21,3 +21,5 @@ Próximos: faltas graves, RDD, sanções e órgãos da execução. As mudanças 
 
 Biblioteca: 2214/3511 revisados;1297 pendentes. Inclui trabalho concorrente de CPP, não atribuído à revisão de LEP.
 Snapshots, fontes brutas e PDFs continuam em outputs ignorados;credenciais não gravadas. Não há leitura automática do saldo nem garantia de parada em 5%/retomada automática.
+
+Integração posterior: preservados os novos commits de CPP e os testes das duas contas no conflito de inserção. A versão integrada passou388 testes,typecheck ebuild isolado.

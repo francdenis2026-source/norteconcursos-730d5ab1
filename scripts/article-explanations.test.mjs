@@ -11,6 +11,24 @@ test('LEP fundamentos distingue classificação, visita, sigilo e contratação'
  for(const n of [8,35,37,41,'41-a','41-b'])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
  assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length===2));
 });
+test('CPP nulidades e recursos integra reformas e fungibilidade atual',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-nullities-resources-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(563).atencao.join(' '),/processo totalmente sem defesa/);
+ assert.match(get(573).pontos.join(' '),/atos independentes/);
+ assert.match(get(579).pontos.join(' '),/erro grosseiro por si não impede/);
+ assert.match(get(581).pontos.join(' '),/agravo da LEP197/);
+ for(const n of [564,569,571,574,579,581,582])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP sumário e restauração não recuperam sanção por fato atípico',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-summary-restoration-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(531).simples,/trinta dias/);
+ assert.match(get(532).simples,/cinco.*cinco/);
+ assert.match(get(541).simples,/primeira instância/);
+ assert.match(get(548).atencao.join(' '),/registro não preenche|título/);
+ for(const n of [535,549,550,551,552,553,554,555])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP procedimentos especiais separa defesa e regimes periciais',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-special-procedures-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
