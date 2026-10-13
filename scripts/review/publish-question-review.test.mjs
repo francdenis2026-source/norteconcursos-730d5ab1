@@ -11,6 +11,7 @@ test('forbids changing original answer, incomplete contexts and missing legal so
  const p=make();p.items[0].patch.official_answer='C';assert.throws(()=>validateReview(p));
  const q=make();q.items[0].expected.context_review_required=true;assert.throws(()=>validateReview(q));
  const r=make();r.items[0].patch.legal_basis=[];assert.throws(()=>validateReview(r));
+ const s=make();s.items[0].expected.question_text='(A) Stem incorrectly embedded';assert.throws(()=>validateReview(s));
 });
 test('checks all prior rows before any write',async()=>{
  const p=make();p.items.push({...p.items[0],expected:{...p.items[0].expected,id:'q2'}});

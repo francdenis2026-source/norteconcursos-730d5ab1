@@ -1,0 +1,83 @@
+{
+  "verified_at": "2026-10-13T21:38:13.102773+00:00",
+  "scope": "Três questões individuais. Não declara conclusão do catálogo.",
+  "topics": [
+    {
+      "id": "f5d6707f-84c2-50b3-b237-87c9b0f8e10f",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Constitucional",
+      "topic_order": 17,
+      "topic_text": "Organização do Estado e repartição de competências (item 17 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "1690eaac-72dc-549a-bd7b-03ebe1fb8479",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Constitucional",
+      "topic_order": 8,
+      "topic_text": "Processo legislativo, reforma constitucional e reapresentação de proposições (itens 3 e 8 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "5e7ae822-42a9-490d-b93e-a4848894894e",
+      "item_number": 2,
+      "official_answer": "D",
+      "review": {
+        "legal": true,
+        "reason": "D. Procedimentos em matéria processual integram a competência concorrente da União, dos estados e do Distrito Federal (art. 24, XI). Não confundir com direito processual, privativo da União (art. 22, I). Na ausência de normas gerais federais, o estado pode exercer competência plena para suas peculiaridades (§ 3º); a alternativa E erra ao exigir lei federal prévia. A conformidade material de uma lei concreta continua sujeita a controle.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+        ]
+      },
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal de 1988",
+          "artigo": "arts. 22, I, e 24, XI e §§ 1º a 4º"
+        }
+      ]
+    },
+    {
+      "id": "47b0528e-d0a6-4eeb-a37b-a81f26c26dbe",
+      "item_number": 6,
+      "official_answer": "E",
+      "review": {
+        "legal": true,
+        "reason": "E. PEC rejeitada ou prejudicada não pode voltar na mesma sessão legislativa (art. 60, § 5º). Projeto de lei rejeitado pode voltar mediante proposta da maioria absoluta dos membros de qualquer das Casas (art. 67). Sessão legislativa não é o mesmo que legislatura nem sessão de votação.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+        ]
+      },
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal de 1988",
+          "artigo": "arts. 60, § 5º, e 67"
+        }
+      ]
+    },
+    {
+      "id": "2901232c-7700-4be8-b755-ac502953279e",
+      "item_number": 9,
+      "official_answer": "C",
+      "review": {
+        "legal": true,
+        "reason": "C. O art. 5º, XLII, reúne expressamente racismo, inafiançabilidade, imprescritibilidade e pena de reclusão. Atenção: a ação de grupos armados contra a ordem constitucional e o Estado Democrático também é inafiançável e imprescritível (XLIV); a opção A não reproduz a cláusula constitucional expressa de reclusão solicitada. Tortura, tráfico e terrorismo são inafiançáveis e insuscetíveis de graça ou anistia, mas o XLIII não os declara imprescritíveis.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+        ]
+      },
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal de 1988",
+          "artigo": "art. 5º, XLII a XLIV"
+        }
+      ]
+    }
+  ]
+}

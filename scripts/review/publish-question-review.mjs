@@ -35,6 +35,7 @@ export function validateReview(pack) {
       if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
       if (evidence.legal && (!patch.legal_basis?.length || !patch.law_version_checked_at)) throw Error('Current legal basis required');
       if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
+      if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
       if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
     }
   }
