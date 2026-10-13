@@ -1,0 +1,191 @@
+{
+  "verified_at": "2026-10-13T22:18:18.406254+00:00",
+  "scope": "Seis questões; item 75 retido para delimitar a incidência do Código Civil e das leis especiais sobre aval parcial.",
+  "topics": [
+    {
+      "id": "020fd492-4847-523a-b043-910440bc0061",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Civil",
+      "topic_order": 1,
+      "topic_text": "Lei de Introdução às Normas do Direito Brasileiro (item 1 de Direito Civil e Empresarial do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "3a6b054c-ecfa-5be8-be37-84fc5f0167f3",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Civil",
+      "topic_order": 8,
+      "topic_text": "Posse e propriedade: aquisição e perda (itens 8 e 8.2 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "9cdf4ecf-a16c-56fb-93ea-e068172e92bd",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Civil",
+      "topic_order": 9,
+      "topic_text": "Responsabilidade civil e teorias da culpa e do risco (itens 9 e 9.1 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "b22fd650-6a25-5635-bf95-23c672fbc0ba",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Empresarial",
+      "topic_order": 133,
+      "topic_text": "Transformação, incorporação, fusão e cisão (item 13.3 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "87b161b9-212c-5d2e-8bfe-d8f82351592a",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Empresarial",
+      "topic_order": 136,
+      "topic_text": "Recuperação judicial e extrajudicial e falência (item 13.6 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "a08275a2-caf8-45ea-ad26-4f1d22c89982",
+      "item_number": 73,
+      "page": 13,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "answer_preserved": true,
+      "raw_preserved": true,
+      "old_text_sha256": "6139d91ec16baaea11799384efd6e77f009f2d28d04979f3e8a95eef2e8e3030",
+      "new_text_sha256": "d89222f068c2e21ccce67bfa5921dda572038118c5535d5853ed138acc0d3605"
+    }
+  ],
+  "items": [
+    {
+      "id": "5a6ab767-8cc5-4e9d-bde4-c830e85cc728",
+      "item_number": 68,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+          "norma": "LINDB",
+          "artigo": "arts. 1º, 2º e 6º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. Efeito imediato e geral respeita ato jurídico perfeito, direito adquirido e coisa julgada (LINDB, art. 6º). Sem disposição diversa, vacância de 45 dias no Brasil e obrigatoriedade após três meses no exterior, quando admitida (art. 1º). Não há repristinação automática; normas gerais ou especiais paralelas não necessariamente revogam a lei anterior (art. 2º, §§ 2º e 3º).",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "09987ff7-422f-44c7-aa47-1c1cc9a29f1d",
+      "item_number": 69,
+      "official_answer": "E",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "norma": "Código Civil",
+          "artigo": "arts. 1.238, 1.240, 1.240-A, 1.242 e 1.260"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "E. Usucapião familiar do art. 1.240-A exige cumulativamente dois anos, posse direta exclusiva sem oposição, imóvel urbano até 250 m² compartilhado com ex-cônjuge ou ex-companheiro que abandonou o lar, uso como moradia e ausência de outro imóvel urbano ou rural. Saída física do lar, isoladamente, não comprova automaticamente abandono ou os demais requisitos. A usucapião ordinária móvel é de três anos (art. 1.260); a ordinária imóvel, em regra, de dez (art. 1.242). A extraordinária imóvel exige quinze, reduzidos a dez nas condições do parágrafo único do art. 1.238; não omitir essas condições.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        ]
+      }
+    },
+    {
+      "id": "29f0b8aa-b2f4-4e5a-99d5-f5e468b41c5b",
+      "item_number": 70,
+      "official_answer": "D",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "norma": "Código Civil",
+          "artigo": "arts. 1.113 e 1.116 a 1.119"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm",
+          "norma": "Lei 6.404/1976",
+          "artigo": "arts. 220, 223, § 3º, e 227 a 229"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. A fusão cria sociedade nova que sucede duas ou mais em todos os direitos e obrigações (Lei 6.404/1976, art. 228; CC, art. 1.119). Incorporação absorve sociedades por outra já existente; transformação muda o tipo sem dissolução. Cisão transfere parcelas patrimoniais e pode ser parcial ou total, não é a definição de absorção apresentada em A. Sucessoras de companhias abertas devem também ser abertas (art. 223, § 3º). Vinculação temática corrigida para direito societário, preservada a classificação histórica da importação.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm"
+        ]
+      }
+    },
+    {
+      "id": "0fc7a30d-155d-44c1-a547-52354040fa60",
+      "item_number": 71,
+      "official_answer": "E",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 37, § 6º"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "norma": "Código Civil",
+          "artigo": "arts. 43, 186 e 927"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "E. No risco administrativo, o terceiro não precisa comprovar culpa do agente para responsabilizar o Estado; deve demonstrar dano e nexo com a atuação pública (CF, art. 37, § 6º; CC, art. 43). Não é risco integral: o nexo pode ser rompido por excludentes. A ação regressiva contra o agente exige dolo ou culpa. Imperícia é falta de aptidão técnica; negligência é falta do cuidado devido. Não generalizar a regra para qualquer omissão estatal sem examinar o dever de atuação e seu nexo.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        ]
+      }
+    },
+    {
+      "id": "a08275a2-caf8-45ea-ad26-4f1d22c89982",
+      "item_number": 73,
+      "official_answer": "C",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+          "norma": "Lei 11.101/2005",
+          "artigo": "arts. 2º, I; 3º; 161, §§ 1º e 3º; e 164, § 8º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "C. A competência é do juízo do principal estabelecimento do devedor ou da filial brasileira de empresa sediada no exterior (art. 3º). Empresas públicas e sociedades de economia mista são excluídas (art. 2º, I); pedido extrajudicial não é simultâneo a recuperação judicial pendente (art. 161, § 3º). A rejeição do plano extrajudicial não acarreta falência automática (art. 164, § 8º). Atenção à atualização pela Lei 14.112/2020: créditos trabalhistas e acidentários podem integrar recuperação extrajudicial mediante negociação coletiva sindical (art. 161, § 1º), tornando incorreta a exclusão absoluta da alternativa E.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm"
+        ]
+      }
+    },
+    {
+      "id": "388d9924-4e64-472f-865b-35d725e4df7d",
+      "item_number": 74,
+      "official_answer": "D",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+          "norma": "Lei 11.101/2005",
+          "artigo": "arts. 5º, II; 6º, I; 76; 97, I; e 129, IV"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. A decretação da falência suspende a prescrição das obrigações sujeitas ao regime falimentar (art. 6º, I). O próprio devedor pode requerer falência (art. 97, I). Atos gratuitos praticados nos dois anos anteriores são ineficazes perante a massa (art. 129, IV). Despesas de participação dos credores não são exigíveis, ressalvadas custas de litígio com o devedor (art. 5º, II). A indivisibilidade do juízo tem exceções, inclusive causas trabalhistas e fiscais (art. 76). Não confundir suspensão da prescrição com prazo de suspensão de execuções em recuperação judicial.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm"
+        ]
+      }
+    }
+  ]
+}

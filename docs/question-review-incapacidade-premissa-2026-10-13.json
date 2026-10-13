@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-10-13T22:15:21.215023+00:00",
+  "id": "6422d0ee-0b18-4675-9821-32ce2c07ed84",
+  "item_number": 8,
+  "original_answer": "D",
+  "decision": "archived",
+  "reason": "Arquivamento pedagógico, sem declarar anulação pela banca: o gabarito histórico D é preservado e é compatível com o cancelamento da naturalização (CF, art. 15, I). Contudo, o enunciado atribui incapacidade civil absoluta a pessoa idosa e a pessoa de 21 anos. O CC, art. 3º, vigente desde a Lei 13.146/2015, restringe essa categoria aos menores de 16 anos; impossibilidade de exprimir vontade é incapacidade relativa (art. 4º, III). Publicar o item inalterado pode ensinar premissa jurídica superada. Preservados texto original, extração bruta e gabarito; retirado do repertório ativo, sem excluir histórico.",
+  "legal_basis": [
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "norma": "Constituição Federal",
+      "artigo": "art. 15, I e II"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "norma": "Código Civil",
+      "artigo": "arts. 3º e 4º, III"
+    }
+  ]
+}
