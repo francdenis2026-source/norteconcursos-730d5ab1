@@ -1,4 +1,15 @@
 import test from 'node:test';
+test('CPP reconhecimento e busca preservam garantias além da redação histórica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-recognition-search-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(226).pontos.join(' '),/1258.*obrigatório.*prisão preventiva/s);
+ assert.match(get(226).pontos.join(' '),/Repetição não cura.*independente/s);
+ assert.match(get(241).atencao.join(' '),/Não.*presença.*dispensa/s);
+ assert.match(get(244).pontos.join(' '),/posterior não cria retroativamente/s);
+ assert.match(get(245).atencao.join(' '),/livre e comprovado.*todo consentimento verbal é inválido/s);
+ for(const n of [226,241,242,244,245])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {validateArticlePackage,checkArticlePreflight,explanationPayload} from './article-explanation-package.mjs';
