@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-13T03:41:28.230912+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 20,
+  "target_keys": [
+    "art-451",
+    "art-452",
+    "art-453",
+    "art-454",
+    "art-455",
+    "art-456",
+    "art-457",
+    "art-458",
+    "art-459",
+    "art-460",
+    "art-461",
+    "art-462",
+    "art-463",
+    "art-464",
+    "art-465",
+    "art-466",
+    "art-467",
+    "art-468",
+    "art-469",
+    "art-470"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 826,
+  "concurrent_other_changes": []
+}

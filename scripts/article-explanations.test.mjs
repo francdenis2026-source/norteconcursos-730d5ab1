@@ -1,4 +1,14 @@
 import test from 'node:test';
+test('CPP instalação preserva defesa e distingue contagem de aptidão',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-installation-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(451).atencao.join(' '),/Não sortear impedido/);
+ assert.match(get(456).pontos.join(' '),/mínimo de dez dias/);
+ assert.match(get(457).pontos.join(' '),/ele e defensor/);
+ assert.match(get(461).pontos.join(' '),/não encontrada.*certificado, julgamento ocorre/);
+ assert.match(get(466).pontos.join(' '),/uso prolongado de celular/);
+ assert.match(get(468).simples,/Defesa e depois MP/);
+});
 test('CPP organização distingue lista, convocação, conselho e dispensa',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-organization-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,26);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
