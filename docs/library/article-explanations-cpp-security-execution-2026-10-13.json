@@ -1,0 +1,1230 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T04:51:06.089624+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-474-a",
+        "art-761",
+        "art-762",
+        "art-763",
+        "art-764",
+        "art-765",
+        "art-766",
+        "art-767",
+        "art-768",
+        "art-769",
+        "art-770",
+        "art-771",
+        "art-772",
+        "art-773",
+        "art-774",
+        "art-775",
+        "art-776",
+        "art-777",
+        "art-778",
+        "art-779"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-474-a",
+      "unit_id": "3b1aeba2-0449-540c-93bc-a55058cff48b",
+      "content_sha256": "7b9ddf2017d3426b3c8011fbbb166e1f09d92659f8e706e9c703362d15876054",
+      "simples": "Na instrução do plenário, participantes devem respeitar dignidade da vítima; presidente garante proteção.",
+      "pontos": [
+        "Lei14.245/2021.",
+        "Vedados elementos alheios aos fatos e linguagem, informação ou material ofensivos à vítima ou testemunhas."
+      ],
+      "atencao": [
+        "Defesa pode questionar prova pertinente, mas não humilhar pessoa por aspectos estranhos ao fato."
+      ],
+      "exemplo": "Parte tenta exibir material íntimo sem relação com apuração; presidente impede a ofensa. Variação: Contradição pertinente é perguntada de modo respeitoso, sem suprimir defesa legítima.",
+      "prova": [
+        "Regra protege também testemunhas contra linguagem ofensiva? Sim.",
+        "Veda qualquer pergunta pertinente da defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dignidade em plenário",
+          "significado": "Proteção pessoal compatível com produção legítima de prova."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14245.htm"
+      ],
+      "expected": {
+        "unit_id": "3b1aeba2-0449-540c-93bc-a55058cff48b",
+        "content_sha256": "7b9ddf2017d3426b3c8011fbbb166e1f09d92659f8e706e9c703362d15876054",
+        "simples": "Durante a instrução em plenário, todas as partes e demais sujeitos processuais presentes no ato deverão respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz presidente garantir o cumprimento do disposto, sendo vedadas a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração nos autos e a utilização de linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas.",
+        "pontos": [
+          "Respeito à dignidade da vítima no plenário.",
+          "Responsabilidade civil, penal e administrativa.",
+          "Vedadas manifestações alheias aos fatos e linguagem ofensiva."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 14.245, de 2021."
+        ],
+        "exemplo": "O juiz presidente impede o uso de material ofensivo à vítima no plenário.",
+        "prova": [
+          "Assertiva que restringe o art. 474-A aos crimes sexuais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 400-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-761",
+      "unit_id": "a14df83a-f681-5374-9a6c-1b0211ebffdb",
+      "content_sha256": "8df0ed75ce2a36af51cd4798abc9bb35565053ff3d62c526387de6b243ebb549",
+      "simples": "Competência e reunião de títulos seguem organização atual e LEP; remissão ao antigo CP84§2 não basta.",
+      "pontos": [
+        "CP84 atual trata soma para livramento.",
+        "Conferir competência e incidente cabível."
+      ],
+      "atencao": [
+        "Não escolher juiz somente pelo último julgamento com base em remissão materialmente antiga."
+      ],
+      "exemplo": "Execução recebe títulos e examina competência atual para providência pertinente. Variação: Duas sentenças não autorizam restaurar cumulação histórica de medidas.",
+      "prova": [
+        "Número antigo identifica sempre conteúdo atual? Não.",
+        "Competência exige regras atuais? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Remissão executória",
+          "significado": "Referência sujeita à correspondência atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "a14df83a-f681-5374-9a6c-1b0211ebffdb",
+        "content_sha256": "8df0ed75ce2a36af51cd4798abc9bb35565053ff3d62c526387de6b243ebb549",
+        "simples": "Para a providência determinada no art. 84, §2º, do Código Penal, se as sentenças forem proferidas por juízes diferentes, será competente o juiz que tiver sentenciado por último ou a autoridade de jurisdição prevalente no caso do art. 82.",
+        "pontos": [
+          "Sentenças de juízes diferentes: competente o juiz da última sentença.",
+          "Ou a autoridade de jurisdição prevalente (art. 82)."
+        ],
+        "atencao": [
+          "Dispositivo ligado a normas do Código Penal em redação original."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que atribui ao juiz da primeira sentença a providência do art. 761 erra: é o da última sentença."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 82"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-762",
+      "unit_id": "11a629f8-dc80-5e63-8cc9-ba1f20a83b12",
+      "content_sha256": "7d54de004486849deb60b1929a404ec686daf5bc1252046b5a9945ccde5355ea",
+      "simples": "Guia de medida válida identifica pessoa, título e parâmetros, integrada à LEP171–173.",
+      "pontos": [
+        "Não internar sem guia judicial pertinente.",
+        "Prazo mínimo não equivale a liberação automática nem autoriza custódia perpétua."
+      ],
+      "atencao": [
+        "Documento não supre pressupostos materiais ou cuidado em saúde adequado."
+      ],
+      "exemplo": "Medida legalmente imposta é encaminhada com identificação e decisão. Variação: Erro no título precisa ser corrigido, sem inventar internação pela guia.",
+      "prova": [
+        "Guia cria medida sem decisão válida? Não.",
+        "Prazo mínimo é limite máximo automático? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Guia da medida",
+          "significado": "Documento de execução do título de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "11a629f8-dc80-5e63-8cc9-ba1f20a83b12",
+        "content_sha256": "7d54de004486849deb60b1929a404ec686daf5bc1252046b5a9945ccde5355ea",
+        "simples": "A ordem de internação, expedida para executar-se medida de segurança detentiva, conterá a qualificação do internando, o teor da decisão que tiver imposto a medida de segurança e a data em que terminará o prazo mínimo da internação.",
+        "pontos": [
+          "Qualificação do internando.",
+          "Teor da decisão que impôs a medida.",
+          "Data de término do prazo mínimo da internação."
+        ],
+        "atencao": [
+          "Conteúdo da ordem de internação."
+        ],
+        "exemplo": "A ordem de internação traz o teor da decisão e a data do fim do prazo mínimo.",
+        "prova": [
+          "Assertiva que dispensa a data do fim do prazo mínimo na ordem de internação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 763"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-763",
+      "unit_id": "ad6fc143-1882-519c-92ec-52f8e382a148",
+      "content_sha256": "65f6ea07a72bf2f0f9f3e01c0825c6e0d00375fb3f4a99b940660084eb2b4608",
+      "simples": "Cumprimento de ordem referente a medida depende de título válido e garantias atuais.",
+      "pontos": [
+        "Oficial ou polícia cumpre ordem judicial.",
+        "Integrar tratamento e execução legal."
+      ],
+      "atencao": [
+        "Não capturar pessoa só por diagnóstico ou por mandato informal da direção."
+      ],
+      "exemplo": "Ordem válida é cumprida com identificação correta e proteção da integridade. Variação: Pessoa com mesmo nome exige conferência, não captura por mera semelhança.",
+      "prova": [
+        "Diagnóstico sozinho autoriza captura penal? Não.",
+        "Identidade deve ser conferida? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Cumprimento da ordem",
+          "significado": "Efetivação legal do título de medida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "ad6fc143-1882-519c-92ec-52f8e382a148",
+        "content_sha256": "65f6ea07a72bf2f0f9f3e01c0825c6e0d00375fb3f4a99b940660084eb2b4608",
+        "simples": "Se estiver solto o internando, expedir-se-á mandado de captura, que será cumprido por oficial de justiça ou por autoridade policial.",
+        "pontos": [
+          "Internando solto: mandado de captura.",
+          "Cumprido por oficial de justiça ou autoridade policial."
+        ],
+        "atencao": [
+          "Mandado de captura para internar."
+        ],
+        "exemplo": "O juiz expede mandado de captura do internando que está solto.",
+        "prova": [
+          "Assertiva que dispensa mandado para internar quem está solto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 762"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-764",
+      "unit_id": "02df7ef8-eab1-515c-908b-31799ceae64c",
+      "content_sha256": "3edf751b41809f1881adcfc3dfff4a801805dc29d0b713517c76c08a284334f8",
+      "simples": "Trabalho do internado precisa considerar capacidade, finalidade educativa e remuneração no regime atual.",
+      "pontos": [
+        "Remissão a estabelecimentos do CP antigo exige integração.",
+        "Saúde limita atividade compatível."
+      ],
+      "atencao": [
+        "Não impor trabalho incompatível com condição clínica nem reproduzir instituição antiga como única forma de cuidado."
+      ],
+      "exemplo": "Atividade compatível é organizada com acompanhamento e remuneração legal. Variação: Inaptidão demonstrada exige adaptação, não punição automática por falta de trabalho.",
+      "prova": [
+        "Condições pessoais importam? Sim.",
+        "Trabalho pode ser imposto sem considerar saúde? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Atividade compatível",
+          "significado": "Trabalho adequado à pessoa e ao regime legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "02df7ef8-eab1-515c-908b-31799ceae64c",
+        "content_sha256": "3edf751b41809f1881adcfc3dfff4a801805dc29d0b713517c76c08a284334f8",
+        "simples": "O trabalho nos estabelecimentos referidos no art. 88, §1º, III, do Código Penal, será educativo e remunerado, de modo que assegure ao internado meios de subsistência quando cessar a internação. O trabalho poderá ser praticado ao ar livre. Nos outros estabelecimentos, o trabalho dependerá das condições pessoais do internado.",
+        "pontos": [
+          "Trabalho educativo e remunerado nesses estabelecimentos.",
+          "Pode ser ao ar livre.",
+          "Nos demais estabelecimentos, depende das condições pessoais do internado."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "O internado trabalha, com remuneração, para ter meios de subsistência ao sair.",
+        "prova": [
+          "Assertiva que torna gratuito o trabalho do internado erra: é remunerado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 765"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-765",
+      "unit_id": "c384c415-d801-5344-a71a-ecd367397355",
+      "content_sha256": "9036a1b2be47fb9d336bcfec34d30639942309ed9bd9278f0b90cbe74661b11d",
+      "simples": "Distribuição antiga do salário não deve substituir destinações e proteção atuais da LEP29.",
+      "pontos": [
+        "Não aplicar retirada fixa universal de um quarto.",
+        "Distinguir remuneração e pecúlio."
+      ],
+      "atencao": [
+        "O texto histórico não autoriza Estado a apropriar parcela automaticamente sem regime atual."
+      ],
+      "exemplo": "Remuneração é destinada conforme obrigações e limites legais pertinentes. Variação: Recursos da família não são calculados só por três quartos históricos.",
+      "prova": [
+        "Estado recebe automaticamente25% em todo caso atual? Não.",
+        "Pecúlio e destinações exigem regime legal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação remuneratória",
+          "significado": "Distribuição do produto do trabalho conforme lei vigente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "c384c415-d801-5344-a71a-ecd367397355",
+        "content_sha256": "9036a1b2be47fb9d336bcfec34d30639942309ed9bd9278f0b90cbe74661b11d",
+        "simples": "A quarta parte do salário caberá ao Estado ou, no Distrito Federal e nos Territórios, à União, e o restante será depositado em nome do internado ou, se este preferir, entregue à sua família.",
+        "pontos": [
+          "Um quarto do salário vai ao Estado (ou à União).",
+          "O restante é depositado em nome do internado ou entregue à família."
+        ],
+        "atencao": [
+          "Um quarto ao ente público."
+        ],
+        "exemplo": "Do salário do internado, a quarta parte é recolhida ao Estado.",
+        "prova": [
+          "Assertiva que destina metade do salário ao Estado erra: é a quarta parte."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 764"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-766",
+      "unit_id": "05112161-3d0e-589a-ba65-c00605ffff94",
+      "content_sha256": "22db65854246b552bd37ffd07b9d4c4056138ec1c548aa7eb6dea7bb061ecf23",
+      "simples": "Proteção das mulheres exige acomodação e cuidado adequados no regime atual, sem internação automática por sexo.",
+      "pontos": [
+        "Separação e integridade devem ser garantidas.",
+        "Integrar saúde e direitos não atingidos pelo título."
+      ],
+      "atencao": [
+        "Seção própria não dispensa cuidado clínico nem valida instituição inadequada."
+      ],
+      "exemplo": "Pessoa recebe atendimento com segurança e proteção da intimidade. Variação: Necessidade clínica é individualizada; ser mulher não cria título de medida.",
+      "prova": [
+        "Separação dispensa assistência à saúde? Não.",
+        "Sexo cria medida penal por si? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção da internada",
+          "significado": "Garantias de integridade e cuidado adequado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "05112161-3d0e-589a-ba65-c00605ffff94",
+        "content_sha256": "22db65854246b552bd37ffd07b9d4c4056138ec1c548aa7eb6dea7bb061ecf23",
+        "simples": "A internação das mulheres será feita em estabelecimento próprio ou em seção especial.",
+        "pontos": [
+          "Mulheres internadas em estabelecimento próprio ou seção especial."
+        ],
+        "atencao": [
+          "Separação por sexo."
+        ],
+        "exemplo": "A mulher submetida a internação fica em ala própria.",
+        "prova": [
+          "Assertiva que permite internar mulheres junto com homens, sem seção separada, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 762"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-767",
+      "unit_id": "071bc95d-a95b-56fb-af6f-6d2c8a37b12c",
+      "content_sha256": "6dfad19a1b70240c7bece9e7d56b61691101ef16c9b054dc5355aa33f366122f",
+      "simples": "Liberdade vigiada do sistema antigo não é espécie atual automática de medida de segurança.",
+      "pontos": [
+        "CP96 prevê espécies atuais.",
+        "Não confundir com sursis, livramento ou cautelar."
+      ],
+      "atencao": [
+        "Obrigações antigas não podem ser importadas integralmente sem título atual e base legal."
+      ],
+      "exemplo": "Condição de livramento é examinada pela LEP132, não por medida histórica genérica. Variação: Proibir locais exige hipótese atual cabível, não simples menção à liberdade vigiada.",
+      "prova": [
+        "Liberdade vigiada antiga é medida atual universal? Não.",
+        "Livramento tem condições próprias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Liberdade vigiada histórica",
+          "significado": "Modelo antigo distinto dos institutos atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "071bc95d-a95b-56fb-af6f-6d2c8a37b12c",
+        "content_sha256": "6dfad19a1b70240c7bece9e7d56b61691101ef16c9b054dc5355aa33f366122f",
+        "simples": "O juiz fixará as normas de conduta que serão observadas durante a liberdade vigiada. São obrigatórias: tomar ocupação, dentro de prazo razoável, se apto para o trabalho, e não mudar do território da jurisdição do juiz sem prévia autorização. Poderão ser impostas, entre outras, não mudar de habitação sem aviso prévio, recolher-se cedo à habitação, não trazer consigo armas ofensivas e não frequentar casas de bebidas ou de tavolagem, nem certas reuniões, espetáculos ou diversões. Será entregue ao indivíduo uma caderneta, de que constarão as obrigações impostas.",
+        "pontos": [
+          "Normas de conduta fixadas pelo juiz.",
+          "Obrigatórias: ocupação lícita e não mudar de jurisdição sem autorização.",
+          "Facultativas: aviso de mudança, recolhimento, sem armas, sem certos locais.",
+          "Caderneta com as obrigações."
+        ],
+        "atencao": [
+          "Liberdade vigiada: medida de segurança histórica."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que dispensa a caderneta de obrigações da liberdade vigiada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 698"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-768",
+      "unit_id": "3a0a1df1-d60e-5e4b-9fe9-17b73af9ab55",
+      "content_sha256": "0587c540e0a8149b21e224d4275933b81fef4356dcbd20c7fc2ce10cd16b41e3",
+      "simples": "Comunicação de obrigações deve derivar de decisão válida; remissão à vigilância antiga exige integração.",
+      "pontos": [
+        "Identificar destinatário e finalidade legais.",
+        "Não criar restrições pela comunicação."
+      ],
+      "atencao": [
+        "Ofício à polícia não valida obrigação incompatível com regime atual."
+      ],
+      "exemplo": "Condições legalmente fixadas são informadas ao órgão pertinente. Variação: Polícia não acrescenta horário proibido por vontade própria.",
+      "prova": [
+        "Comunicação cria novas restrições? Não.",
+        "Obrigação precisa de base válida? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ciência institucional",
+          "significado": "Informação para cumprir decisão legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "3a0a1df1-d60e-5e4b-9fe9-17b73af9ab55",
+        "content_sha256": "0587c540e0a8149b21e224d4275933b81fef4356dcbd20c7fc2ce10cd16b41e3",
+        "simples": "As obrigações estabelecidas na sentença serão comunicadas à autoridade policial.",
+        "pontos": [
+          "Obrigações da sentença comunicadas à autoridade policial."
+        ],
+        "atencao": [
+          "Comunicação à polícia."
+        ],
+        "exemplo": "O juiz comunica à polícia as obrigações impostas ao sujeito à liberdade vigiada.",
+        "prova": [
+          "Assertiva que dispensa a comunicação das obrigações à autoridade policial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 767"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-769",
+      "unit_id": "7031b395-372a-5017-b3d9-e7f898feea53",
+      "content_sha256": "5e3cec6a56cf57c3dc8dd8064f27d09056db798556886049213acca57d384d35",
+      "simples": "Acompanhamento legítimo deve preservar pessoa e não produzir exposição ou prejuízo arbitrário.",
+      "pontos": [
+        "Discrição do texto não restaura espécie antiga.",
+        "Integrar finalidade e competência atuais."
+      ],
+      "atencao": [
+        "Vigilância discreta não autoriza monitoramento sem base legal."
+      ],
+      "exemplo": "Órgão competente acompanha condição válida sem divulgação humilhante. Variação: Avisar empregador indiscriminadamente exige fundamento, não mera conveniência.",
+      "prova": [
+        "Discrição dispensa base legal? Não.",
+        "Exposição arbitrária é autorizada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Acompanhamento discreto",
+          "significado": "Atuação legal que evita prejuízo indevido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "7031b395-372a-5017-b3d9-e7f898feea53",
+        "content_sha256": "5e3cec6a56cf57c3dc8dd8064f27d09056db798556886049213acca57d384d35",
+        "simples": "A vigilância será exercida discretamente, de modo que não prejudique o indivíduo a ela sujeito.",
+        "pontos": [
+          "Vigilância discreta, sem prejudicar o indivíduo."
+        ],
+        "atencao": [
+          "Discrição na fiscalização."
+        ],
+        "exemplo": "A fiscalização é feita de modo discreto, sem expor o indivíduo.",
+        "prova": [
+          "Assertiva que autoriza vigilância ostensiva e prejudicial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 767"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-770",
+      "unit_id": "d9942f89-1bed-5772-a3ea-e00212224acd",
+      "content_sha256": "9897c31f0a2964ddd32633341e66a51a7a5758cd785d291c723e23d87c40741f",
+      "simples": "Alteração de condições depende de competência, título e instituto atuais, sem recuperar liberdade vigiada histórica.",
+      "pontos": [
+        "Decisão deve ser comunicada.",
+        "Não punir obrigação retroativa inexistente."
+      ],
+      "atencao": [
+        "Pedido policial não torna válida qualquer condição sugerida."
+      ],
+      "exemplo": "Condição de benefício atual é ajustada motivadamente pelo juiz competente. Variação: Regra nova sem ciência não prova descumprimento anterior.",
+      "prova": [
+        "Pedido policial impõe condição sozinho? Não.",
+        "Alteração exige decisão legal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ajuste de condições",
+          "significado": "Mudança jurisdicional sob limites atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "d9942f89-1bed-5772-a3ea-e00212224acd",
+        "content_sha256": "9897c31f0a2964ddd32633341e66a51a7a5758cd785d291c723e23d87c40741f",
+        "simples": "Mediante representação da autoridade incumbida da vigilância, a requerimento do Ministério Público ou de ofício, poderá o juiz modificar as normas fixadas ou estabelecer outras.",
+        "pontos": [
+          "Juiz pode modificar as normas ou criar outras.",
+          "Por representação da autoridade, a pedido do MP ou de ofício."
+        ],
+        "atencao": [
+          "Modificação das condições."
+        ],
+        "exemplo": "O juiz altera as normas de conduta por representação da autoridade que fiscaliza.",
+        "prova": [
+          "Assertiva que torna imutáveis as normas fixadas na sentença erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 767"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-771",
+      "unit_id": "3c7c4af1-e339-530a-a32c-1861d9307e82",
+      "content_sha256": "54fbac42ed6fa049afa225285626013411f73d066be9cdd91cbd1c4d31527285",
+      "simples": "Exílio local é medida histórica que não integra automaticamente espécies atuais do CP96.",
+      "pontos": [
+        "Não confundir cautelar de proibição de acesso com banimento.",
+        "Liberdade não pode ser limitada sem hipótese atual."
+      ],
+      "atencao": [
+        "Não ensinar expulsão geográfica ou detenção pelo exílio antigo como regra vigente."
+      ],
+      "exemplo": "Juízo examina cautelar atual cabível com fundamento próprio. Variação: Morador não é banido de cidade por mera aplicação do dispositivo histórico.",
+      "prova": [
+        "Exílio local é medida atual genérica? Não.",
+        "Cautelar exige base distinta? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Exílio histórico",
+          "significado": "Instituto antigo que não equivale às cautelares atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "3c7c4af1-e339-530a-a32c-1861d9307e82",
+        "content_sha256": "54fbac42ed6fa049afa225285626013411f73d066be9cdd91cbd1c4d31527285",
+        "simples": "Para execução do exílio local, o juiz comunicará sua decisão à autoridade policial do lugar ou dos lugares onde o exilado está proibido de permanecer ou de residir. O infrator da medida será conduzido à presença do juiz, que poderá mantê-lo detido até proferir decisão. Reconhecida a transgressão e imposta a liberdade vigiada, o juiz determinará que a autoridade policial providencie para que o infrator siga imediatamente para o lugar de residência por ele escolhido, oficiando à autoridade policial desse lugar.",
+        "pontos": [
+          "Exílio local comunicado à autoridade policial dos lugares proibidos.",
+          "Infrator conduzido ao juiz, que pode mantê-lo detido até decidir.",
+          "Transgressão reconhecida: liberdade vigiada e remoção ao lugar de residência escolhido."
+        ],
+        "atencao": [
+          "Medida histórica, sem aplicação atual."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que aplica hoje o exílio local como medida de segurança erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 772"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-772",
+      "unit_id": "e5128c19-7d80-5ff8-a948-49b8ee15609d",
+      "content_sha256": "04f04596d19e4ca73eb388525f321d5dd43a5c74abd98af7289f7fd24e23b8e5",
+      "simples": "Proibição de locais precisa de base atual, não de aplicação automática do modelo histórico de medida.",
+      "pontos": [
+        "Distinguir cautelar, pena restritiva e condição de benefício.",
+        "Comunicação não substitui título."
+      ],
+      "atencao": [
+        "Mesmo nome de obrigação não iguala institutos nem consequências de descumprimento."
+      ],
+      "exemplo": "Cautelar de acesso é comunicada sob decisão fundamentada do regime pertinente. Variação: Descumprimento de condição de livramento segue seu procedimento, não sanção antiga automática.",
+      "prova": [
+        "Nome semelhante torna regimes idênticos? Não.",
+        "Título determina consequências? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proibição delimitada",
+          "significado": "Restrição fundada no instituto legal adequado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "e5128c19-7d80-5ff8-a948-49b8ee15609d",
+        "content_sha256": "04f04596d19e4ca73eb388525f321d5dd43a5c74abd98af7289f7fd24e23b8e5",
+        "simples": "A proibição de frequentar determinados lugares será comunicada pelo juiz à autoridade policial, que lhe dará conhecimento de qualquer transgressão.",
+        "pontos": [
+          "Proibição de frequentar lugares comunicada à autoridade policial.",
+          "A polícia informa ao juiz qualquer transgressão."
+        ],
+        "atencao": [
+          "Medida histórica."
+        ],
+        "exemplo": "A polícia avisa o juiz quando o proibido frequenta o lugar vedado.",
+        "prova": [
+          "Assertiva que dispensa a comunicação da transgressão ao juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 771"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-773",
+      "unit_id": "95c46e12-8882-56ca-af70-2924f17f07f3",
+      "content_sha256": "0d41dd93b282f08821f4974ef3332167d58fc5f105011eb4db59e1f7b6f0c943",
+      "simples": "Fechamento ou interdição exige hipótese atual própria e decisão competente, não medida histórica universal.",
+      "pontos": [
+        "Não restaurar espécies antigas pelo CP96.",
+        "Separar sanção penal, cautelar e atuação administrativa."
+      ],
+      "atencao": [
+        "Comunicar à polícia não basta para fechar qualquer entidade por suspeita."
+      ],
+      "exemplo": "Hipótese específica legalmente cabível é apreciada com garantias pertinentes. Variação: Associação lícita não é interditada só por relatório vago de perigo.",
+      "prova": [
+        "Relatório vago basta para interdição penal? Não.",
+        "Hipótese legal específica precisa existir? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Interdição específica",
+          "significado": "Providência dependente de competência e fundamento atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "95c46e12-8882-56ca-af70-2924f17f07f3",
+        "content_sha256": "0d41dd93b282f08821f4974ef3332167d58fc5f105011eb4db59e1f7b6f0c943",
+        "simples": "A medida de fechamento de estabelecimento ou de interdição de associação será comunicada pelo juiz à autoridade policial, para que a execute.",
+        "pontos": [
+          "Fechamento de estabelecimento ou interdição de associação comunicados à autoridade policial.",
+          "A polícia executa."
+        ],
+        "atencao": [
+          "Medida histórica."
+        ],
+        "exemplo": "O juiz determina o fechamento de um estabelecimento, e a polícia o executa.",
+        "prova": [
+          "Assertiva que atribui ao próprio juiz a execução material do fechamento erra: cabe à polícia."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 772"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-774",
+      "unit_id": "517de598-4ace-5927-93cd-8b1c422f8fff",
+      "content_sha256": "5ed0641c1492d100bd590bec41c36afc37dccb2422f80b4c81a16f83933a76db",
+      "simples": "Transgressão de medida não autoriza impor outra automaticamente pela remissão histórica ao CP83.",
+      "pontos": [
+        "CP83 atual trata livramento.",
+        "Identificar medida, incidente e regime vigentes."
+      ],
+      "atencao": [
+        "Não trocar conteúdo do artigo atual por número antigo nem dispensar defesa."
+      ],
+      "exemplo": "Incidente de medida válida é apurado conforme CP e LEP pertinentes. Variação: Falta de comparecimento não cria por si espécie de medida histórica adicional.",
+      "prova": [
+        "CP83 atual corresponde integralmente à remissão antiga? Não.",
+        "Transgressão permite medida extra arbitrária? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Incidente da medida",
+          "significado": "Apuração no regime legal atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "517de598-4ace-5927-93cd-8b1c422f8fff",
+        "content_sha256": "5ed0641c1492d100bd590bec41c36afc37dccb2422f80b4c81a16f83933a76db",
+        "simples": "Nos casos do parágrafo único do art. 83 do Código Penal, ou quando a transgressão de uma medida de segurança importar a imposição de outra, observar-se-á o disposto no art. 757, no que for aplicável.",
+        "pontos": [
+          "Transgressão que leva a outra medida de segurança: aplica-se, no que couber, o art. 757."
+        ],
+        "atencao": [
+          "Remissão ao art. 757."
+        ],
+        "exemplo": "Texto histórico, sem aplicação prática atual.",
+        "prova": [
+          "Assertiva que cria rito próprio para a transgressão da medida erra: aplica-se o art. 757."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 757"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-775",
+      "unit_id": "7c31b1cb-55f8-56db-b595-4be6c8d1b561",
+      "content_sha256": "f60702c2ee8c1e2f269c99dc5491b304cc200f8e3a54bbb82275ffbf87f83e02",
+      "simples": "Reavaliação da medida segue CP97 e LEP175: relatório, laudo e participação antes de decisão.",
+      "pontos": [
+        "Não recuperar exílio ou liberdade vigiada.",
+        "Distinguir laudo clínico e decisão judicial.",
+        "Prazos e garantias devem seguir regime atual."
+      ],
+      "atencao": [
+        "Não manter custódia indefinidamente por demora de relatório ou confundir prazo mínimo com sentença de prisão perpétua."
+      ],
+      "exemplo": "Relatório e laudo instruem análise judicial com manifestações pertinentes. Variação: Fim do prazo mínimo exige exame, não automática continuidade sem controle.",
+      "prova": [
+        "Laudo substitui decisão judicial? Não.",
+        "Prazo mínimo dispensa reavaliação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reavaliação da medida",
+          "significado": "Controle periódico dos pressupostos e cuidado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "7c31b1cb-55f8-56db-b595-4be6c8d1b561",
+        "content_sha256": "f60702c2ee8c1e2f269c99dc5491b304cc200f8e3a54bbb82275ffbf87f83e02",
+        "simples": "A cessação ou não da periculosidade se verificará ao fim do prazo mínimo de duração da medida de segurança pelo exame das condições da pessoa a que tiver sido imposta, observando-se que o diretor do estabelecimento de internação ou a autoridade policial remeterá ao juiz da execução minucioso relatório, até um mês antes de expirado o prazo mínimo se não for inferior a um ano, ou até quinze dias nos outros casos; que, se o indivíduo estiver internado em manicômio judiciário ou casa de custódia, o relatório será acompanhado do laudo de exame pericial feito por dois médicos designados pelo diretor; e que o diretor ou a autoridade deverá concluir pela conveniência da revogação ou não da medida.",
+        "pontos": [
+          "Verificação da periculosidade ao fim do prazo mínimo.",
+          "Relatório até um mês antes (prazo mínimo igual ou superior a um ano) ou quinze dias nos demais casos.",
+          "Internado: laudo de dois médicos.",
+          "Conclusão sobre a revogação ou não da medida."
+        ],
+        "atencao": [
+          "Um mês ou quinze dias de antecedência para o relatório."
+        ],
+        "exemplo": "O diretor envia o relatório e o laudo de dois médicos antes do fim do prazo mínimo.",
+        "prova": [
+          "Assertiva que dispensa o laudo médico do internado no relatório do diretor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 776",
+          "Art. 777"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-776",
+      "unit_id": "903e7a36-4dea-5bc8-a2f9-4cb3e840edb8",
+      "content_sha256": "9c453c48d7e1ab9ff47d93c24006d865395d996b51ca3dfd8b124d007ac0898b",
+      "simples": "Exames sucessivos devem integrar CP97§2 e LEP177, não remissões do CP81 antigo.",
+      "pontos": [
+        "CP81 atual trata sursis.",
+        "Aplicar procedimento compatível de reavaliação."
+      ],
+      "atencao": [
+        "Não misturar revogação do sursis com perícia de medida apenas por número de artigo."
+      ],
+      "exemplo": "Juízo determina reavaliação no regime próprio da medida. Variação: Novo relatório não elimina participação defensiva cabível.",
+      "prova": [
+        "CP81 atual tem objeto histórico referido? Não.",
+        "Exames seguem regime vigente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Exame sucessivo",
+          "significado": "Reavaliação posterior com procedimento legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "903e7a36-4dea-5bc8-a2f9-4cb3e840edb8",
+        "content_sha256": "9c453c48d7e1ab9ff47d93c24006d865395d996b51ca3dfd8b124d007ac0898b",
+        "simples": "Nos exames sucessivos a que se referem o §1º, II, e §2º do art. 81 do Código Penal, observar-se-á, no que lhes for aplicável, o disposto no artigo anterior.",
+        "pontos": [
+          "Exames sucessivos seguem, no que couber, o art. 775."
+        ],
+        "atencao": [
+          "Remissão ao art. 775."
+        ],
+        "exemplo": "Os exames periódicos seguem o procedimento do art. 775.",
+        "prova": [
+          "Assertiva que cria rito próprio para os exames sucessivos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 775"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-777",
+      "unit_id": "38cf0838-ae7f-5140-a6e5-16777a8029ad",
+      "content_sha256": "1e53697ca3c85b7bdda216fd5173574ffb70c3ff50fa21611abd2f369a9c0507",
+      "simples": "Reavaliação pode ser determinada antes do prazo mínimo quando cabível, integrada à LEP176 e CP97.",
+      "pontos": [
+        "Pedido fundamentado e competência atuais.",
+        "Antecipar exame não garante liberação automática."
+      ],
+      "atencao": [
+        "Não obrigar pessoa a esperar todo prazo mínimo para qualquer avaliação legalmente antecipável."
+      ],
+      "exemplo": "Dados clínicos novos fundamentam pedido de exame antecipado. Variação: Exame solicitado não concede desinternação sem análise dos pressupostos.",
+      "prova": [
+        "É sempre proibido exame antes do prazo mínimo? Não.",
+        "Pedido equivale a liberação imediata? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Exame antecipado",
+          "significado": "Reavaliação cabível antes do marco mínimo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "38cf0838-ae7f-5140-a6e5-16777a8029ad",
+        "content_sha256": "1e53697ca3c85b7bdda216fd5173574ffb70c3ff50fa21611abd2f369a9c0507",
+        "simples": "Em qualquer tempo, ainda durante o prazo mínimo de duração da medida de segurança, poderá o tribunal, câmara ou turma, a requerimento do Ministério Público ou do interessado, seu defensor ou curador, ordenar o exame para a verificação da cessação da periculosidade. Designado o relator e ouvido o procurador-geral, se a medida não tiver sido por ele requerida, o pedido será julgado na primeira sessão. Deferido o pedido, a decisão será imediatamente comunicada ao juiz, que requisitará, marcando prazo, o relatório e o exame ou ordenará as diligências.",
+        "pontos": [
+          "A qualquer tempo, o tribunal pode ordenar o exame de cessação da periculosidade.",
+          "Requerimento do MP, do interessado, do defensor ou do curador.",
+          "Julgamento na primeira sessão.",
+          "Deferido, o juiz requisita o relatório e o exame."
+        ],
+        "atencao": [
+          "Exame possível mesmo antes do prazo mínimo."
+        ],
+        "exemplo": "O defensor pede ao tribunal o exame de cessação da periculosidade antes do prazo mínimo.",
+        "prova": [
+          "Assertiva que exige o fim do prazo mínimo para pedir o exame de cessação da periculosidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 775"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-778",
+      "unit_id": "358196ad-2398-5c17-9ebc-7703fe7bf826",
+      "content_sha256": "9db565fb9883144ed8414a23d349c346888e68321943f1eb8fdb3106bbb3afff",
+      "simples": "Decisão deve ser efetivada por ordem adequada de desinternação ou liberação, integrada à LEP178–179 e CP97.",
+      "pontos": [
+        "Distinguir cessação e período condicional.",
+        "Não restaurar vigilância histórica como espécie atual."
+      ],
+      "atencao": [
+        "Liberação condicional da medida não é igual a livramento da pena; outra causa válida precisa ser conferida."
+      ],
+      "exemplo": "Decisão de desinternação é comunicada para efetivação e cuidado pertinente. Variação: Condições atuais são examinadas sem reativar exílio antigo.",
+      "prova": [
+        "Desinternação equivale a livramento da pena? Não.",
+        "Decisão exige implementação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Desinternação",
+          "significado": "Saída do regime detentivo sob pressupostos atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "358196ad-2398-5c17-9ebc-7703fe7bf826",
+        "content_sha256": "9db565fb9883144ed8414a23d349c346888e68321943f1eb8fdb3106bbb3afff",
+        "simples": "Transitando em julgado a sentença de revogação, o juiz expedirá ordem para a desinternação, quando se tratar de medida detentiva, ou para que cesse a vigilância ou a proibição, nos outros casos.",
+        "pontos": [
+          "Revogação da medida transitada em julgado: ordem de desinternação.",
+          "Nas demais medidas: cessa a vigilância ou a proibição."
+        ],
+        "atencao": [
+          "Efeito da revogação."
+        ],
+        "exemplo": "Revogada definitivamente a medida, o juiz expede a ordem de desinternação.",
+        "prova": [
+          "Assertiva que mantém a internação após o trânsito da revogação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 775"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:01.309419+00:00",
+        "updated_at": "2026-10-11T13:26:01.309419+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-779",
+      "unit_id": "f97536fc-166e-5826-9a2a-3e03f4c354c7",
+      "content_sha256": "9fabc6980780b7eef5e907dc7bdbc313ba91ea278387516ecbdaac343d125dfc",
+      "simples": "Confisco deve ser integrado ao CP91 e regras atuais sobre bens, não à remissão ao antigo CP100.",
+      "pontos": [
+        "Proteger lesado e terceiro de boa-fé.",
+        "Identificar natureza do bem e base de perdimento.",
+        "Arquivamento ou absolvição não produzem todo confisco automaticamente."
+      ],
+      "atencao": [
+        "Não confiscar qualquer patrimônio lícito por simples despacho de arquivamento."
+      ],
+      "exemplo": "Objeto de posse ilícita exige exame da providência legal cabível. Variação: Bem lícito de terceiro de boa-fé reclama proteção e análise de restituição, não perda genérica.",
+      "prova": [
+        "Todo arquivamento confisca qualquer bem? Não.",
+        "Terceiro de boa-fé exige proteção? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Perdimento delimitado",
+          "significado": "Consequência patrimonial sujeita à base legal atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm"
+      ],
+      "expected": {
+        "unit_id": "f97536fc-166e-5826-9a2a-3e03f4c354c7",
+        "content_sha256": "9fabc6980780b7eef5e907dc7bdbc313ba91ea278387516ecbdaac343d125dfc",
+        "simples": "O confisco dos instrumentos e produtos do crime, no caso previsto no art. 100 do Código Penal, será decretado no despacho de arquivamento do inquérito, na sentença de impronúncia ou na sentença absolutória.",
+        "pontos": [
+          "Confisco de instrumentos e produtos do crime decretado no arquivamento, na impronúncia ou na absolvição."
+        ],
+        "atencao": [
+          "Confisco independe de condenação nesses casos."
+        ],
+        "exemplo": "Na sentença absolutória, o juiz decreta o confisco do instrumento ilícito.",
+        "prova": [
+          "Assertiva que condiciona o confisco do art. 779 à condenação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 119",
+          "Art. 124"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:26:44.013683+00:00",
+        "updated_at": "2026-10-11T13:26:44.013683+00:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-13T04:53:33.979191+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 20,
+  "target_keys": [
+    "art-474-a",
+    "art-761",
+    "art-762",
+    "art-763",
+    "art-764",
+    "art-765",
+    "art-766",
+    "art-767",
+    "art-768",
+    "art-769",
+    "art-770",
+    "art-771",
+    "art-772",
+    "art-773",
+    "art-774",
+    "art-775",
+    "art-776",
+    "art-777",
+    "art-778",
+    "art-779"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 826,
+  "concurrent_other_changes": []
+}

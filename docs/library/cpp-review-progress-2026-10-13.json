@@ -1,29 +1,9 @@
 {
   "scope": "CPP; revisão editorial atual não equivale a cobertura de toda regulamentação e jurisprudência",
-  "reviewed": 755,
+  "reviewed": 775,
   "total": 808,
-  "pending_count": 53,
+  "pending_count": 33,
   "pending_units": [
-    "art-474-a",
-    "art-761",
-    "art-762",
-    "art-763",
-    "art-764",
-    "art-765",
-    "art-766",
-    "art-767",
-    "art-768",
-    "art-769",
-    "art-770",
-    "art-771",
-    "art-772",
-    "art-773",
-    "art-774",
-    "art-775",
-    "art-776",
-    "art-777",
-    "art-778",
-    "art-779",
     "art-780",
     "art-781",
     "art-782",
@@ -58,7 +38,6 @@
     "art-810",
     "art-811"
   ],
-  "next_article": "art-474-a",
-  "verified_snapshot": "after-clemency-rehabilitation",
-  "then_resume_at": "art-761"
+  "next_article": "art-780",
+  "verified_snapshot": "after-security-execution"
 }

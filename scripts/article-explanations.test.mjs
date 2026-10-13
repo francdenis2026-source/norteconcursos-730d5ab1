@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP medidas e dignidade não recuperam exílio ou confisco universal',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-security-execution-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('474-a').pontos.join(' '),/Lei14.245\/2021/);
+ assert.match(get(771).simples,/não integra automaticamente/);
+ assert.match(get(775).atencao.join(' '),/indefinidamente/);
+ assert.match(get(779).simples,/CP91/);
+ for(const n of [761,765,767,771,775,776,779])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP clemência e reabilitação integram jurisprudência2026 e afastam modelo antigo',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-clemency-rehabilitation-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,28);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
