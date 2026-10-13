@@ -1,4 +1,16 @@
 import test from 'node:test';
+test('CPP custódia distingue júri, diploma e identificação genética específica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-custody-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(283).pontos.join(' '),/1068.*independe do total/s);
+ assert.match(get(295).pontos.join(' '),/afastou inciso VII/);
+ assert.match(get(292).pontos.join(' '),/puerpério imediato/);
+ assert.match(get('300-a').simples,/15.280\/2025/);
+ assert.match(get('300-a').atencao.join(' '),/qualquer investigado solto/);
+ assert.ok(!p.units.some(r=>r.unit_key==='art-298'));
+ for(const n of [282,283,292,295])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP defesa não restaura multa antiga, curador etário ou interrogatório coercitivo',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-participants-2026-10-13.json','utf8'));
  validateArticlePackage(p);assert.equal(p.units.length,31);

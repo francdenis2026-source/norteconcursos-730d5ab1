@@ -1,0 +1,1255 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:29:32.410804+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 20,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-282",
+        "art-283",
+        "art-284",
+        "art-285",
+        "art-286",
+        "art-287",
+        "art-288",
+        "art-289",
+        "art-289-a",
+        "art-290",
+        "art-291",
+        "art-292",
+        "art-293",
+        "art-294",
+        "art-295",
+        "art-296",
+        "art-297",
+        "art-299",
+        "art-300",
+        "art-300-a"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-282",
+      "unit_id": "4d93c677-ec9c-51c0-a23b-045a2f2a001f",
+      "content_sha256": "acee175baabb17a7ef1eadb38d820defcabc6b108ef554a77955a8522d7a9f27",
+      "simples": "Cautelares dependem de necessidade, adequação e decisão individualizada; prisão preventiva é última alternativa quando medidas menos gravosas não bastam.",
+      "pontos": [
+        "Aplicação isolada ou cumulativa.",
+        "Decretação mediante provocação legal; não usar redação anterior que admitia iniciativa judicial geral.",
+        "Contraditório prévio: cinco dias, salvo urgência ou risco de ineficácia concretamente fundamentados.",
+        "Descumprimento: requerimento do MP, assistente ou querelante; substituir, cumular ou, por último, preventiva com requisitos.",
+        "Revogação ou substituição por falta de motivo pode ocorrer de ofício; nova decretação precisa observar provocação e requisitos atuais.",
+        "Justificar individualmente por que art. 319 é insuficiente."
+      ],
+      "atencao": [
+        "Descumprimento não torna prisão automática. Não ler §5º como autorização para restabelecer prisão de ofício sem provocação no modelo atual."
+      ],
+      "exemplo": "Comparecimento periódico é suficiente para risco concreto e afasta prisão mais gravosa. Variação: Quebra da medida exige pedido, análise do risco e alternativas, não preventiva mecânica.",
+      "prova": [
+        "Preventiva deve examinar alternativas? Sim.",
+        "Prazo ordinário de contraditório é cinco dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Necessidade cautelar",
+          "significado": "Risco concreto e medida proporcional, não antecipação de pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4d93c677-ec9c-51c0-a23b-045a2f2a001f",
+        "content_sha256": "acee175baabb17a7ef1eadb38d820defcabc6b108ef554a77955a8522d7a9f27",
+        "simples": "As medidas cautelares do Título devem ser aplicadas observando-se a necessidade para aplicação da lei penal, para a investigação ou a instrução criminal e, nos casos expressamente previstos, para evitar a prática de infrações penais, e a adequação da medida à gravidade do crime, às circunstâncias do fato e às condições pessoais do indiciado ou acusado. Podem ser aplicadas isolada ou cumulativamente. São decretadas pelo juiz a requerimento das partes ou, no curso da investigação, por representação da autoridade policial ou mediante requerimento do Ministério Público. Ressalvados os casos de urgência ou perigo de ineficácia, o juiz, ao receber o pedido, determinará a intimação da parte contrária para se manifestar no prazo de 5 dias, acompanhada de cópia do requerimento e das peças necessárias.",
+        "pontos": [
+          "Necessidade (aplicação da lei penal, investigação ou instrução, evitar novas infrações).",
+          "Adequação à gravidade do crime, circunstâncias do fato e condições pessoais.",
+          "Aplicação isolada ou cumulativa.",
+          "Decretação a requerimento das partes ou, na investigação, por representação policial ou requerimento do MP.",
+          "Contraditório prévio de 5 dias, salvo urgência ou perigo de ineficácia."
+        ],
+        "atencao": [
+          "Necessidade e adequação são requisitos CUMULATIVOS.",
+          "Contraditório prévio de 5 dias, salvo urgência.",
+          "O juiz não decreta cautelar de ofício na fase de investigação."
+        ],
+        "exemplo": "Juiz aplica monitoramento eletrônico e proibição de contato, cumulando medidas adequadas ao caso.",
+        "prova": [
+          "Assertiva que permite ao juiz decretar medida cautelar de ofício na fase de investigação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 283",
+          "Art. 312"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-283",
+      "unit_id": "4b1d275b-f7b5-564d-8ade-07bdb4d9995d",
+      "content_sha256": "dd10478741a968932fc17234d2a7d9343789cc1c98d9cda3c61b0efcb76a1717",
+      "simples": "Prisão segue flagrante ou ordem judicial fundamentada, por cautelar ou condenação definitiva; execução do júri possui entendimento específico do STF.",
+      "pontos": [
+        "Título e competência precisam ser legítimos.",
+        "Cautelares do título não se aplicam quando não há pena privativa de liberdade cominada nas formas previstas.",
+        "Prisão pode ser executada em qualquer dia e hora, respeitado domicílio.",
+        "Tema 1068/STF: execução imediata da condenação pelo júri independe do total da pena; não generalizar a qualquer condenação."
+      ],
+      "atencao": [
+        "Não afirmar que toda condenação de segunda instância autoriza execução automática, nem ignorar regra específica do júri."
+      ],
+      "exemplo": "Cautelar judicial fundamentada é cumprida respeitando proteção domiciliar. Variação: Condenação pelo júri exige leitura do Tema 1068, sem transportar esse regime para sentença comum.",
+      "prova": [
+        "Qualquer hora elimina inviolabilidade da casa? Não.",
+        "Tema 1068 depende de pena mínima de quinze anos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Título legítimo da prisão",
+          "significado": "Fundamento legal e constitucional da privação de liberdade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudenciarepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5776893&numeroProcesso=1235340&numeroTema=1068"
+      ],
+      "expected": {
+        "unit_id": "4b1d275b-f7b5-564d-8ade-07bdb4d9995d",
+        "content_sha256": "dd10478741a968932fc17234d2a7d9343789cc1c98d9cda3c61b0efcb76a1717",
+        "simples": "Ninguém poderá ser preso senão em flagrante delito ou por ordem escrita e fundamentada da autoridade judiciária competente, em decorrência de prisão cautelar ou em virtude de condenação criminal transitada em julgado. As medidas cautelares do Título não se aplicam à infração a que não for isolada, cumulativa ou alternativamente cominada pena privativa de liberdade. A prisão poderá ser efetuada em qualquer dia e a qualquer hora, respeitadas as restrições relativas à inviolabilidade do domicílio.",
+        "pontos": [
+          "Prisão só em flagrante ou por ordem escrita e fundamentada do juiz competente.",
+          "Hipóteses: prisão cautelar ou condenação transitada em julgado.",
+          "§1º: cautelares não se aplicam a infração sem pena privativa de liberdade.",
+          "§2º: prisão em qualquer dia e hora, respeitado o domicílio."
+        ],
+        "atencao": [
+          "A redação do caput (Lei nº 13.964, de 2019) exige trânsito em julgado para a prisão-pena; o STF decidiu sobre a execução provisória (ADCs 43, 44 e 54).",
+          "O domicílio protege a prisão noturna."
+        ],
+        "exemplo": "Prisão preventiva decretada por juiz competente, por escrito e fundamentada.",
+        "prova": [
+          "Assertiva que permite a prisão por ordem não escrita da autoridade policial, fora do flagrante, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 282",
+          "Art. 311"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-284",
+      "unit_id": "29234138-ab0e-50dc-8ee3-6b8144d6f752",
+      "content_sha256": "d521fe691996bfefef6f7236f31df145b758dfe204f9c6cadf66a769d68d3765",
+      "simples": "Força só é admitida na medida indispensável diante de resistência ou tentativa de fuga.",
+      "pontos": [
+        "Necessidade limita intensidade.",
+        "Não confundir execução da prisão com punição física."
+      ],
+      "atencao": [
+        "Prisão lícita não torna toda violência lícita."
+      ],
+      "exemplo": "Resistência concreta é vencida com força estritamente necessária. Variação: Preso cooperativo não pode receber agressão por castigo.",
+      "prova": [
+        "Força pode ser usada como punição? Não.",
+        "Resistência autoriza força ilimitada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Força indispensável",
+          "significado": "Intervenção necessária para execução legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "29234138-ab0e-50dc-8ee3-6b8144d6f752",
+        "content_sha256": "d521fe691996bfefef6f7236f31df145b758dfe204f9c6cadf66a769d68d3765",
+        "simples": "Não será permitido o emprego de força, salvo a indispensável no caso de resistência ou de tentativa de fuga do preso.",
+        "pontos": [
+          "Proibido o emprego de força.",
+          "Exceção: a indispensável, em caso de resistência ou tentativa de fuga."
+        ],
+        "atencao": [
+          "Súmula Vinculante 11: algemas só em caso de resistência, fundado receio de fuga ou perigo, com justificativa por escrito."
+        ],
+        "exemplo": "A força é usada apenas na medida indispensável para vencer a resistência do preso.",
+        "prova": [
+          "Assertiva que permite o emprego de força sem necessidade na prisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 292"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-285",
+      "unit_id": "c78d29ec-905e-5c78-9c40-3b932138bbec",
+      "content_sha256": "02ed82450352aa67b0667fce3c8b81b108aaf4910838f61959f9aa423c64369f",
+      "simples": "Autoridade que determina prisão expede mandado com identificação, motivo e demais requisitos.",
+      "pontos": [
+        "Escrivão lavra; autoridade assina.",
+        "Nome, alcunha ou sinais identificam pessoa.",
+        "Indicar infração e fiança arbitrada quando cabível.",
+        "Dirigir a quem tenha qualidade para execução."
+      ],
+      "atencao": [
+        "Mandado não corrige prisão sem fundamento ou contra pessoa errada."
+      ],
+      "exemplo": "Ordem identifica acusado por sinais quando nome não está confirmado. Variação: Sem correspondência física, não se prende homônimo por mera coincidência nominal.",
+      "prova": [
+        "Sinais característicos podem identificar? Sim.",
+        "Fiança arbitrada deve constar quando cabível? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Mandado de prisão",
+          "significado": "Documento formal da ordem legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c78d29ec-905e-5c78-9c40-3b932138bbec",
+        "content_sha256": "02ed82450352aa67b0667fce3c8b81b108aaf4910838f61959f9aa423c64369f",
+        "simples": "A autoridade que ordenar a prisão fará expedir o respectivo mandado. O mandado de prisão será lavrado pelo escrivão e assinado pela autoridade; designará a pessoa a ser presa por seu nome, alcunha ou sinais característicos; mencionará a infração penal que motivar a prisão; declarará o valor da fiança arbitrada, quando afiançável a infração; e será dirigido a quem tiver qualidade para dar-lhe execução.",
+        "pontos": [
+          "Mandado lavrado pelo escrivão e assinado pela autoridade.",
+          "Designa a pessoa por nome, alcunha ou sinais.",
+          "Menciona a infração.",
+          "Declara o valor da fiança, se afiançável.",
+          "Dirigido a quem pode executá-lo."
+        ],
+        "atencao": [
+          "Requisitos formais do mandado."
+        ],
+        "exemplo": "O mandado traz o nome do preso, a infração e o valor da fiança arbitrada.",
+        "prova": [
+          "Assertiva que dispensa a menção da infração no mandado de prisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 286"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-286",
+      "unit_id": "f248418f-13b4-5e56-8a67-944bfa6f2536",
+      "content_sha256": "6ffc3f6b8f1241dec2a96e047077c413d55cbec27f16532a1d1acb885d33cad3",
+      "simples": "Executor entrega exemplar do mandado ao preso com data, hora e local; recusa ou impossibilidade de recibo é documentada por duas testemunhas.",
+      "pontos": [
+        "Regra de duplicata e entrega.",
+        "Registrar circunstâncias da diligência.",
+        "Recusa, desconhecimento ou impossibilidade de escrever exigem declaração testemunhada."
+      ],
+      "atencao": [
+        "Recusa de assinar não autoriza omitir registro nem inventar recibo."
+      ],
+      "exemplo": "Preso recebe exemplar e assina recibo no outro. Variação: Se não pode escrever, executor registra fato com duas testemunhas.",
+      "prova": [
+        "Recusa dispensa documentar entrega? Não.",
+        "A declaração prevista tem duas testemunhas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comprovação da entrega",
+          "significado": "Registro do conhecimento da ordem e da diligência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f248418f-13b4-5e56-8a67-944bfa6f2536",
+        "content_sha256": "6ffc3f6b8f1241dec2a96e047077c413d55cbec27f16532a1d1acb885d33cad3",
+        "simples": "O mandado será passado em duplicata, e o executor entregará ao preso, logo depois da prisão, um dos exemplares com declaração do dia, hora e lugar da diligência. Da entrega deverá o preso passar recibo no outro exemplar; se recusar, não souber ou não puder escrever, o fato será mencionado em declaração assinada por duas testemunhas.",
+        "pontos": [
+          "Mandado em duplicata.",
+          "Entrega de um exemplar ao preso, com dia, hora e lugar.",
+          "Recibo no outro exemplar.",
+          "Recusa ou impossibilidade: declaração assinada por duas testemunhas."
+        ],
+        "atencao": [
+          "Duas testemunhas na recusa."
+        ],
+        "exemplo": "O preso recebe uma via do mandado e assina recibo na outra.",
+        "prova": [
+          "Assertiva que dispensa a entrega de exemplar do mandado ao preso erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 285"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-287",
+      "unit_id": "0b29cd13-8e03-54e9-b995-c64901e9fa7e",
+      "content_sha256": "96bda5784d1ca050fe88fe6a282646eae83437757d39fd273a6338421319bff5",
+      "simples": "Em infração inafiançável, falta de exibição física do mandado não impede execução de prisão judicial existente; apresentação imediata ao juiz viabiliza custódia.",
+      "pontos": [
+        "Não confundir falta de mostrar com inexistência de ordem.",
+        "Atualização de 2019 prevê audiência de custódia.",
+        "Garantias e autenticidade da ordem permanecem."
+      ],
+      "atencao": [
+        "Ser crime inafiançável não cria prisão automática sem título legítimo."
+      ],
+      "exemplo": "Ordem judicial legítima é executada sem exemplar exibido na hipótese legal e preso apresentado imediatamente. Variação: Suspeita de crime inafiançável não dispensa flagrante ou ordem judicial.",
+      "prova": [
+        "Falta de exibição equivale a ausência de ordem? Não.",
+        "Há apresentação para audiência de custódia? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Exibição e existência da ordem",
+          "significado": "Distinção entre documento mostrado e título judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0b29cd13-8e03-54e9-b995-c64901e9fa7e",
+        "content_sha256": "96bda5784d1ca050fe88fe6a282646eae83437757d39fd273a6338421319bff5",
+        "simples": "Se a infração for inafiançável, a falta de exibição do mandado não obstará a prisão, e o preso, em tal caso, será imediatamente apresentado ao juiz que tiver expedido o mandado, para a realização de audiência de custódia.",
+        "pontos": [
+          "Infração inafiançável: a falta de exibição do mandado não impede a prisão.",
+          "O preso é imediatamente apresentado ao juiz que expediu o mandado.",
+          "Realiza-se audiência de custódia."
+        ],
+        "atencao": [
+          "Só vale para infração INAFIANÇÁVEL."
+        ],
+        "exemplo": "Em crime inafiançável, a prisão ocorre mesmo sem exibir o mandado no ato, com posterior apresentação ao juiz.",
+        "prova": [
+          "Assertiva que dispensa a audiência de custódia no caso do art. 287 erra."
+        ],
+        "termos": [
+          {
+            "termo": "Audiência de custódia",
+            "significado": "Apresentação do preso ao juiz para controle da legalidade da prisão."
+          }
+        ],
+        "remissoes": [
+          "Art. 310"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-288",
+      "unit_id": "9aefd5c5-8848-5a14-b9bb-df1f72524f20",
+      "content_sha256": "b696e8d5e28f5abfcf553dd76cca87ec18cc5db88b774c10986ad2d4447f25c8",
+      "simples": "Recolhimento prisional exige exibição e entrega dos documentos previstos e recibo com dia e hora.",
+      "pontos": [
+        "Mandado, cópia assinada pelo executor ou guia competente nos termos do artigo.",
+        "Diretor ou carcereiro recebe e documenta ingresso.",
+        "Recibo pode constar no exemplar apresentado."
+      ],
+      "atencao": [
+        "Formalização do ingresso não substitui controle da legalidade da prisão."
+      ],
+      "exemplo": "Estabelecimento recebe cópia pertinente e emite recibo de ingresso. Variação: Ausência de documento regular exige providências legais, não registro inventado.",
+      "prova": [
+        "Deve haver recibo com dia e hora? Sim.",
+        "Recibo pode ficar no exemplar do mandado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro de ingresso",
+          "significado": "Documentação do recebimento do preso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9aefd5c5-8848-5a14-b9bb-df1f72524f20",
+        "content_sha256": "b696e8d5e28f5abfcf553dd76cca87ec18cc5db88b774c10986ad2d4447f25c8",
+        "simples": "Ninguém será recolhido à prisão sem que seja exibido o mandado ao respectivo diretor ou carcereiro, a quem será entregue cópia assinada pelo executor ou apresentada a guia expedida pela autoridade competente, devendo ser passado recibo da entrega do preso, com declaração de dia e hora. O recibo poderá ser passado no próprio exemplar do mandado, se este for o documento exibido.",
+        "pontos": [
+          "Recolhimento à prisão exige exibição do mandado ao diretor ou carcereiro.",
+          "Cópia assinada pelo executor ou guia expedida pela autoridade.",
+          "Recibo com dia e hora."
+        ],
+        "atencao": [
+          "Formalidades de recolhimento."
+        ],
+        "exemplo": "O diretor da unidade recebe o mandado e passa recibo da entrega do preso.",
+        "prova": [
+          "Assertiva que dispensa recibo da entrega do preso ao diretor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 285"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-289",
+      "unit_id": "598d2237-4d57-540b-9d85-e1415ce103a1",
+      "content_sha256": "77f194113a929afa7a8b0d203d6775b0e7a6128a667983a9f712ba2f399e7099",
+      "simples": "Prisão fora da jurisdição nacional do juiz processante é deprecada com inteiro teor do mandado; urgência admite comunicação controlada.",
+      "pontos": [
+        "Motivo e fiança arbitrada na requisição urgente.",
+        "Destinatário verifica autenticidade.",
+        "Remoção pelo juiz processante em até trinta dias da efetivação."
+      ],
+      "atencao": [
+        "Não confundir precatória com pedido de extradição internacional; prazo começa na efetivação, não no envio."
+      ],
+      "exemplo": "Réu em outra comarca é preso após confirmação da ordem. Variação: Urgência permite comunicação célere, mantendo autenticidade e prazo de remoção.",
+      "prova": [
+        "Remoção tem máximo de trinta dias previsto? Sim.",
+        "Urgência dispensa verificar autenticidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prisão deprecada",
+          "significado": "Cumprimento territorial com cooperação judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "598d2237-4d57-540b-9d85-e1415ce103a1",
+        "content_sha256": "77f194113a929afa7a8b0d203d6775b0e7a6128a667983a9f712ba2f399e7099",
+        "simples": "Quando o acusado estiver no território nacional, fora da jurisdição do juiz processante, será deprecada a sua prisão, devendo constar da precatória o inteiro teor do mandado. Havendo urgência, o juiz poderá requisitar a prisão por qualquer meio de comunicação, do qual deverá constar o motivo da prisão, bem como o valor da fiança, se arbitrada. A autoridade requisitada tomará as precauções necessárias para averiguar a autenticidade da comunicação. O juiz processante deverá providenciar a remoção do preso no prazo máximo de 30 dias, contados da efetivação da medida.",
+        "pontos": [
+          "Acusado fora da jurisdição: prisão deprecada, com o teor do mandado.",
+          "Urgência: requisição por qualquer meio de comunicação.",
+          "Verificação da autenticidade pela autoridade requisitada.",
+          "Remoção do preso em até 30 dias."
+        ],
+        "atencao": [
+          "Prazo de 30 dias para a remoção do preso."
+        ],
+        "exemplo": "O juiz requisita por telefone a prisão do acusado em outro Estado, por urgência.",
+        "prova": [
+          "Assertiva que fixa em 10 dias o prazo para a remoção do preso erra: são 30 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 289-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-289-a",
+      "unit_id": "916a8990-e8ab-5dd3-8e15-7115228e6039",
+      "content_sha256": "56b4040959c28cd23c36e40cd4a1619bc7152785afd65d3d1d10e1366dc9b7c3",
+      "simples": "Mandado deve ser imediatamente registrado no banco do CNJ; execução nacional por agente policial observa comunicação e direitos.",
+      "pontos": [
+        "Execução pode ocorrer fora do território do juiz emissor.",
+        "Sem registro, verificar autenticidade e comunicar emissor para registro posterior.",
+        "Comunicar imediatamente juiz local, que certifica e informa emissor.",
+        "Informar direitos; se não indicado advogado, comunicar Defensoria.",
+        "Dúvida sobre executor ou identidade segue controle do art. 290, §2º; CNJ regulamenta banco."
+      ],
+      "atencao": [
+        "Ausência de registro não autoriza prender sem ordem; nem existência de registro dispensa conferir identidade."
+      ],
+      "exemplo": "Agente em outro estado executa ordem autêntica registrada e comunica juízo local. Variação: Ordem ainda não registrada exige cautelas e comunicação para registro.",
+      "prova": [
+        "Registro limita execução ao estado emissor? Não.",
+        "Sem advogado indicado deve comunicar Defensoria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro nacional",
+          "significado": "Controle e execução de mandados com garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "916a8990-e8ab-5dd3-8e15-7115228e6039",
+        "content_sha256": "56b4040959c28cd23c36e40cd4a1619bc7152785afd65d3d1d10e1366dc9b7c3",
+        "simples": "O juiz competente providenciará o imediato registro do mandado de prisão em banco de dados mantido pelo Conselho Nacional de Justiça. Qualquer agente policial poderá efetuar a prisão determinada no mandado registrado no CNJ, ainda que fora da competência territorial do juiz que o expediu. Poderá ainda efetuar a prisão decretada sem registro no CNJ, adotando as precauções para averiguar a autenticidade e comunicando ao juiz que a decretou, que providenciará o registro. A prisão será imediatamente comunicada ao juiz do local de cumprimento, que providenciará a certidão extraída do registro e informará o juízo que a decretou. O preso será informado de seus direitos, nos termos do inciso LXIII do art. 5º da Constituição, e, se não informar o nome de seu advogado, será comunicada a Defensoria Pública.",
+        "pontos": [
+          "Registro imediato do mandado no banco de dados do CNJ.",
+          "Qualquer agente policial cumpre mandado registrado, mesmo fora do território do juiz.",
+          "Mandado não registrado: cumprimento com cautelas e comunicação ao juiz.",
+          "Comunicação ao juiz do local de cumprimento.",
+          "Preso informado de seus direitos; se não indicar advogado, comunica-se a Defensoria Pública."
+        ],
+        "atencao": [
+          "Registro no CNJ torna o mandado cumprível em todo o território."
+        ],
+        "exemplo": "Policial de outro Estado cumpre mandado registrado no CNJ.",
+        "prova": [
+          "Assertiva que restringe o cumprimento do mandado ao território do juiz que o expediu erra, se registrado no CNJ."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 289"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-290",
+      "unit_id": "a6ad9996-e43b-5ddd-8e87-86a816a65acf",
+      "content_sha256": "25160d9ae2c44e6b9234ecd14573b343b0e3b2a006ed9de91a532065de201211",
+      "simples": "Perseguição contínua permite prisão em outra comarca, com apresentação imediata à autoridade local e providências de remoção.",
+      "pontos": [
+        "Pode haver perda de contato visual sem interrupção da perseguição.",
+        "Informação fidedigna de passagem recente permite encalço na hipótese legal.",
+        "Dúvida fundada sobre executor ou mandado exige esclarecimento sob controle local."
+      ],
+      "atencao": [
+        "Não converter notícia antiga e vaga em perseguição atual nem custódia de verificação em prisão indefinida."
+      ],
+      "exemplo": "Executor segue pessoa que cruza divisa e apresenta-a imediatamente ao órgão local. Variação: Dúvida concreta sobre autenticidade é esclarecida prontamente, sem ignorar garantia de liberdade.",
+      "prova": [
+        "Perder contato visual sempre interrompe perseguição? Não.",
+        "Apresentação local é imediata? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Perseguição territorial",
+          "significado": "Continuidade legítima da execução fora da comarca."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a6ad9996-e43b-5ddd-8e87-86a816a65acf",
+        "content_sha256": "25160d9ae2c44e6b9234ecd14573b343b0e3b2a006ed9de91a532065de201211",
+        "simples": "Se o réu, sendo perseguido, passar ao território de outro município ou comarca, o executor poderá efetuar-lhe a prisão no lugar onde o alcançar, apresentando-o imediatamente à autoridade local, que, depois de lavrado, se for o caso, o auto de flagrante, providenciará a remoção do preso. Entende-se que o executor vai em perseguição quando, tendo-o avistado, for perseguindo-o sem interrupção, embora o tenha perdido de vista, ou quando, sabendo por indícios ou informações fidedignas que o réu passou há pouco em determinada direção, for no seu encalço. Se as autoridades locais tiverem fundadas razões para duvidar da legitimidade do executor ou da legalidade do mandado, poderão pôr em custódia o réu até esclarecida a dúvida.",
+        "pontos": [
+          "Perseguição ao réu que passa para outro município ou comarca: prisão onde alcançar.",
+          "Apresentação imediata à autoridade local.",
+          "Perseguição: contínua após avistar, ou no encalço por indícios fidedignos.",
+          "Dúvida da autoridade local: custódia até esclarecer."
+        ],
+        "atencao": [
+          "Persecução (perseguição) contínua ou por indícios fidedignos."
+        ],
+        "exemplo": "Policiais perseguem o réu, que cruza a divisa da comarca, e o prendem lá.",
+        "prova": [
+          "Assertiva que exige novo mandado ao cruzar a divisa da comarca durante a perseguição erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 250"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-291",
+      "unit_id": "bf36432e-df81-5cbc-9e99-ff25585cdeb2",
+      "content_sha256": "446d163ec8ed18f3616c0d14f84b96c5c1f43f099c74d320e73ab9969140b315",
+      "simples": "Prisão por mandado se considera efetuada com identificação do executor, apresentação da ordem e intimação para acompanhar.",
+      "pontos": [
+        "Definição do momento jurídico da execução.",
+        "Conhecimento da ordem e qualidade do executor.",
+        "Ler com exceção de exibição do art. 287."
+      ],
+      "atencao": [
+        "Não exigir chegada à cela para reconhecer toda prisão já efetuada."
+      ],
+      "exemplo": "Executor identifica-se, mostra ordem e intima réu a acompanhá-lo. Variação: A hipótese específica do art. 287 exige integração, não contradição aparente.",
+      "prova": [
+        "Só existe prisão quando entra na cela? Não.",
+        "Executor deve fazer-se conhecer na regra geral? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Efetivação da prisão",
+          "significado": "Momento previsto para execução da ordem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bf36432e-df81-5cbc-9e99-ff25585cdeb2",
+        "content_sha256": "446d163ec8ed18f3616c0d14f84b96c5c1f43f099c74d320e73ab9969140b315",
+        "simples": "A prisão em virtude de mandado entender-se-á feita desde que o executor, fazendo-se conhecer do réu, lhe apresente o mandado e o intime a acompanhá-lo.",
+        "pontos": [
+          "Prisão por mandado consuma-se quando o executor se identifica, apresenta o mandado e intima o réu a acompanhá-lo."
+        ],
+        "atencao": [
+          "Identificação, apresentação do mandado e intimação."
+        ],
+        "exemplo": "O policial se identifica, mostra o mandado e intima o réu a acompanhá-lo.",
+        "prova": [
+          "Assertiva que dispensa a apresentação do mandado ao réu erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 285"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-292",
+      "unit_id": "984dfb28-f517-52f9-874a-9d6b17ea6fa9",
+      "content_sha256": "280052a21da2bda16e0fa1065b542bcefdcf3ac11828db9e85a073a294bf5301",
+      "simples": "Resistência própria ou de terceiros permite meios necessários e registro; algemas possuem limites constitucionais e proteção específica ao parto.",
+      "pontos": [
+        "Auto subscrito também por duas testemunhas.",
+        "SV11: resistência ou receio fundado de fuga/perigo à integridade; excepcionalidade justificada por escrito.",
+        "Lei 13.434/2017 veda algemas nos atos médico-hospitalares preparatórios do parto, no trabalho de parto e no puerpério imediato."
+      ],
+      "atencao": [
+        "Nem resistência permite força ilimitada, nem proteção ao parto se reduz ao instante do nascimento."
+      ],
+      "exemplo": "Tentativa concreta de fuga exige controle necessário documentado. Variação: Mulher no trabalho de parto está na vedação expressa de algemas, não em regra genérica de conveniência.",
+      "prova": [
+        "Uso de algemas é padrão obrigatório para todo preso? Não.",
+        "Vedação inclui puerpério imediato? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Contenção excepcional",
+          "significado": "Necessidade documentada e proteção corporal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://noticias.stf.jus.br/postsnoticias/11a-sumula-vinculante-do-stf-limita-o-uso-de-algemas-a-casos-excepcionais/"
+      ],
+      "expected": {
+        "unit_id": "984dfb28-f517-52f9-874a-9d6b17ea6fa9",
+        "content_sha256": "280052a21da2bda16e0fa1065b542bcefdcf3ac11828db9e85a073a294bf5301",
+        "simples": "Se houver, ainda que por parte de terceiros, resistência à prisão em flagrante ou à determinada por autoridade competente, o executor e as pessoas que o auxiliarem poderão usar dos meios necessários para defender-se ou para vencer a resistência, do que tudo se lavrará auto subscrito também por duas testemunhas. É vedado o uso de algemas em mulheres grávidas durante os atos médico-hospitalares preparatórios para o parto e durante o trabalho de parto, bem como em mulheres durante o período de puerpério imediato.",
+        "pontos": [
+          "Resistência, mesmo de terceiros: uso dos meios necessários.",
+          "Auto subscrito por duas testemunhas.",
+          "Vedadas algemas em grávidas no parto e atos preparatórios e no puerpério imediato."
+        ],
+        "atencao": [
+          "Meios NECESSÁRIOS, com auto e duas testemunhas.",
+          "Vedação de algemas em gestante e parturiente."
+        ],
+        "exemplo": "O policial vence a resistência com meios necessários e lavra auto com duas testemunhas.",
+        "prova": [
+          "Assertiva que autoriza o uso de algemas em mulher durante o trabalho de parto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 284"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-293",
+      "unit_id": "8b991f8d-787a-5ab9-b3db-5bf5ec924e82",
+      "content_sha256": "f6aa77923606471dea3fd69cb5755433b502aa2e1770ba070c50befcab0dd6e8",
+      "simples": "Cumprir mandado de prisão em casa exige certeza do ingresso do réu e respeito à proteção domiciliar, distinguindo dia e noite.",
+      "pontos": [
+        "À vista da ordem, intimar morador a entregar acusado.",
+        "Dia: duas testemunhas e ingresso forçado necessário se não atendido.",
+        "Noite: ordem judicial isolada não autoriza arrombamento; guardar saídas e cumprir de dia conforme regra.",
+        "Situação do morador é apurada como de direito, sem condenação automática."
+      ],
+      "atencao": [
+        "Mandado de prisão não elimina limite noturno domiciliar; exceções constitucionais têm requisitos próprios."
+      ],
+      "exemplo": "Com segurança sobre localização, ordem é cumprida de dia nos termos legais. Variação: À noite sem consentimento ou exceção constitucional, não arrombar apenas pelo mandado.",
+      "prova": [
+        "Mandado autoriza arrombamento noturno por si só? Não.",
+        "Deve haver certeza sobre localização em casa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prisão e domicílio",
+          "significado": "Cumprimento sob limites constitucionais de ingresso."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "8b991f8d-787a-5ab9-b3db-5bf5ec924e82",
+        "content_sha256": "f6aa77923606471dea3fd69cb5755433b502aa2e1770ba070c50befcab0dd6e8",
+        "simples": "Se o executor do mandado verificar, com segurança, que o réu entrou ou se encontra em alguma casa, o morador será intimado a entregá-lo, à vista da ordem de prisão. Se não for obedecido imediatamente, o executor convocará duas testemunhas e, sendo dia, entrará à força na casa, arrombando as portas, se preciso; sendo noite, o executor, depois da intimação ao morador, se não for atendido, fará guardar todas as saídas, tornando a casa incomunicável, e, logo que amanheça, arrombará as portas e efetuará a prisão. O morador que se recusar a entregar o réu oculto em sua casa será levado à presença da autoridade para que se proceda contra ele como for de direito.",
+        "pontos": [
+          "Réu em casa: intimação do morador a entregá-lo.",
+          "Sem obediência: duas testemunhas e entrada à força, de dia.",
+          "À noite: guardar as saídas e, ao amanhecer, arrombar as portas.",
+          "Morador que oculta o réu: conduzido à autoridade."
+        ],
+        "atencao": [
+          "A Constituição só permite a entrada sem consentimento, para cumprir ordem judicial, durante o DIA."
+        ],
+        "exemplo": "À noite, o executor cerca a casa e espera amanhecer para entrar.",
+        "prova": [
+          "Assertiva que permite arrombar a casa à noite para cumprir o mandado de prisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 294",
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-294",
+      "unit_id": "31cf71e2-4861-5218-85d8-deafaa83e602",
+      "content_sha256": "e44243371a5853eb3b084884738fbf6bc2f188d12c46ee1a17e8a450f7cf5d24",
+      "simples": "No flagrante, aplicar cautelas do artigo anterior naquilo que for compatível, respeitando exceção constitucional e razões concretas.",
+      "pontos": [
+        "Flagrante não depende de mandado judicial.",
+        "Ingresso domiciliar exige fundamento concreto de flagrante interior.",
+        "Não transpor mecanicamente espera até amanhecer para toda hipótese flagrancial legítima."
+      ],
+      "atencao": [
+        "Rotular crime como permanente não basta sem razões concretas para entrada; achado posterior não supre fundamento ausente."
+      ],
+      "exemplo": "Razões concretas indicam flagrante no interior e ingresso é controlado pela Constituição. Variação: Denúncia vaga sem confirmação não legitima automaticamente entrada à força.",
+      "prova": [
+        "Aplicação do artigo anterior é integral sem adaptação? Não.",
+        "Flagrante interior deve ter fundamento concreto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Ingresso flagrancial",
+          "significado": "Exceção constitucional demonstrada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=280"
+      ],
+      "expected": {
+        "unit_id": "31cf71e2-4861-5218-85d8-deafaa83e602",
+        "content_sha256": "e44243371a5853eb3b084884738fbf6bc2f188d12c46ee1a17e8a450f7cf5d24",
+        "simples": "No caso de prisão em flagrante, observar-se-á o disposto no artigo anterior, no que for aplicável.",
+        "pontos": [
+          "Flagrante: aplica-se o art. 293, no que couber."
+        ],
+        "atencao": [
+          "No flagrante, o ingresso na casa é permitido a qualquer hora (Constituição, art. 5º, XI)."
+        ],
+        "exemplo": "Flagrante dentro de casa permite a entrada sem mandado, respeitadas as regras constitucionais.",
+        "prova": [
+          "Assertiva que restringe a entrada em casa para flagrante ao período diurno erra à luz da Constituição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 293"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-295",
+      "unit_id": "a6e13577-5394-5099-9cd5-29eb6e1c6a9d",
+      "content_sha256": "e1b7974d98176ca494adfeb5a83934a29f8748c2dfc028aa1b9de0ad3951d5e5",
+      "simples": "Prisão especial antes de condenação definitiva separa local, não confere direitos ilimitados; diploma superior não é fundamento válido após ADPF 334.",
+      "pontos": [
+        "STF em 2023 afastou inciso VII por violação à isonomia.",
+        "Demais categorias requerem enquadramento específico, sem restaurar cargos históricos extintos.",
+        "Sem estabelecimento específico: cela distinta; alojamento coletivo salubre é possível.",
+        "Transporte separado; demais direitos e deveres iguais aos do preso comum."
+      ],
+      "atencao": [
+        "Não gerar flashcard que conceda prisão especial apenas por diploma; decisão não significa extinção automática de todas as outras hipóteses."
+      ],
+      "exemplo": "Pessoa com diploma não obtém prisão especial só por esse título. Variação: Categoria legal efetivamente aplicável exige local distinto, sem privilégios irrestritos.",
+      "prova": [
+        "Diploma superior basta atualmente? Não.",
+        "Prisão especial significa liberdade ou comodidades ilimitadas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prisão especial delimitada",
+          "significado": "Separação legal com igualdade das demais garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=5&abrirBase=CF"
+      ],
+      "expected": {
+        "unit_id": "a6e13577-5394-5099-9cd5-29eb6e1c6a9d",
+        "content_sha256": "e1b7974d98176ca494adfeb5a83934a29f8748c2dfc028aa1b9de0ad3951d5e5",
+        "simples": "Serão recolhidos a quartéis ou a prisão especial, à disposição da autoridade competente, quando sujeitos a prisão antes de condenação definitiva: os ministros de Estado; governadores, prefeito do Distrito Federal, seus secretários, prefeitos municipais, vereadores e chefes de Polícia; membros do Parlamento Nacional e das Assembleias Legislativas; os cidadãos inscritos no Livro de Mérito; oficiais das Forças Armadas e militares dos Estados e do Distrito Federal; os magistrados; os diplomados por faculdades superiores (objeto de ADPF); ministros de confissão religiosa; ministros do Tribunal de Contas; cidadãos que exerceram efetivamente a função de jurado; e delegados de polícia e guardas-civis, ativos e inativos.",
+        "pontos": [
+          "Prisão especial antes de condenação definitiva para as categorias listadas.",
+          "Inclui ministros, governadores, parlamentares, magistrados, militares, jurados e delegados, entre outros.",
+          "Diplomados em curso superior: dispositivo questionado em ADPF."
+        ],
+        "atencao": [
+          "Vale só ANTES da condenação definitiva.",
+          "O STF considerou não recepcionado o privilégio dos diplomados em curso superior (ADPF 334)."
+        ],
+        "exemplo": "Magistrado preso preventivamente cumpre a prisão em sala especial.",
+        "prova": [
+          "Assertiva que estende a prisão especial a quem já tem condenação definitiva erra."
+        ],
+        "termos": [
+          {
+            "termo": "Prisão especial",
+            "significado": "Recolhimento em local distinto da prisão comum, antes da condenação definitiva."
+          }
+        ],
+        "remissoes": [
+          "Art. 300"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-296",
+      "unit_id": "b7dcdc73-f45e-5556-a7bc-6ee0be9e2f8a",
+      "content_sha256": "062e18ee75afe634443942fd428500fe58183fe26ae741e846ebaa55887d6853",
+      "simples": "Militares abrangidos pela terminologia histórica do artigo são recolhidos em estabelecimento militar quando possível, conforme regulamentos.",
+      "pontos": [
+        "Observar categoria e regime aplicável.",
+        "Não confundir local militar com imunidade à prisão."
+      ],
+      "atencao": [
+        "Terminologia antiga não autoriza inventar cargos atuais ou dispensar ordem legítima."
+      ],
+      "exemplo": "Praça abrangida é encaminhada ao estabelecimento militar possível e pertinente. Variação: Impossibilidade concreta exige solução no regime aplicável, não soltura automática.",
+      "prova": [
+        "O artigo condiciona a onde for possível? Sim.",
+        "Local militar significa imunidade à prisão? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Custódia militar",
+          "significado": "Recolhimento sob regras próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b7dcdc73-f45e-5556-a7bc-6ee0be9e2f8a",
+        "content_sha256": "062e18ee75afe634443942fd428500fe58183fe26ae741e846ebaa55887d6853",
+        "simples": "Os inferiores e praças de pré, onde for possível, serão recolhidos à prisão em estabelecimentos militares, de acordo com os respectivos regulamentos.",
+        "pontos": [
+          "Inferiores e praças de pré (militares): prisão em estabelecimentos militares, quando possível."
+        ],
+        "atencao": [
+          "Terminologia militar antiga."
+        ],
+        "exemplo": "Praça militar cumpre a prisão em estabelecimento militar, onde possível.",
+        "prova": [
+          "Assertiva que determina a prisão comum para todos os praças erra: onde possível, estabelecimentos militares."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 295"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-297",
+      "unit_id": "ad324976-1798-5bcb-a22f-505218d80a89",
+      "content_sha256": "22c48bfd6abd91de52f0ffadbacf07ff199ca8fae17c37714a260e0c00ccde5c",
+      "simples": "Autoridade policial pode expedir vias necessárias à diligência de cumprimento, reproduzindo fielmente mandado judicial original.",
+      "pontos": [
+        "Derivação para execução, não nova decretação autônoma.",
+        "Preservar conteúdo e limites da ordem."
+      ],
+      "atencao": [
+        "Não ampliar pessoas, crimes ou fundamento sob pretexto de reproduzir mandado."
+      ],
+      "exemplo": "Polícia reproduz ordem para equipes executoras sem alterar conteúdo. Variação: Inserir outro alvo na reprodução exige título próprio, não mera cópia alterada.",
+      "prova": [
+        "Polícia pode modificar fundamento da ordem ao copiar? Não.",
+        "Reprodução deve ser fiel? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reprodução executória",
+          "significado": "Vias necessárias sem alteração da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ad324976-1798-5bcb-a22f-505218d80a89",
+        "content_sha256": "22c48bfd6abd91de52f0ffadbacf07ff199ca8fae17c37714a260e0c00ccde5c",
+        "simples": "Para o cumprimento de mandado expedido pela autoridade judiciária, a autoridade policial poderá expedir tantos outros quantos necessários às diligências, devendo neles ser fielmente reproduzido o teor do mandado original.",
+        "pontos": [
+          "Autoridade policial expede mandados auxiliares para cumprir o do juiz.",
+          "Reproduz fielmente o teor do mandado original."
+        ],
+        "atencao": [
+          "Mandados auxiliares reproduzem o original."
+        ],
+        "exemplo": "O delegado expede cópias do mandado para diferentes equipes cumprirem a ordem.",
+        "prova": [
+          "Assertiva que autoriza a autoridade policial a alterar o conteúdo do mandado ao reproduzi-lo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 285"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-299",
+      "unit_id": "cfdbd63a-052e-5147-a1ce-3d1b22b488b5",
+      "content_sha256": "508362e14ceefded0c2c2ab7ac019d9a7ba1a05f0ab5a217db959f374d1d4fdf",
+      "simples": "Captura baseada em mandado judicial pode ser requisitada por comunicação, com cautelas de autenticidade.",
+      "pontos": [
+        "Meio de comunicação é flexível.",
+        "Ordem judicial permanece pressuposto.",
+        "Destinatário verifica autenticidade."
+      ],
+      "atencao": [
+        "Mensagem recebida não basta sem controle; não restaurar meios obrigatórios da redação antiga."
+      ],
+      "exemplo": "Autoridade confirma requisição eletrônica e existência de ordem legítima. Variação: Mensagem suspeita exige verificação antes de captura indevida.",
+      "prova": [
+        "Pode usar meio de comunicação diverso do antigo telegrama? Sim.",
+        "A comunicação substitui a necessidade de mandado judicial? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Requisição autenticada",
+          "significado": "Comunicação da ordem sob confirmação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cfdbd63a-052e-5147-a1ce-3d1b22b488b5",
+        "content_sha256": "508362e14ceefded0c2c2ab7ac019d9a7ba1a05f0ab5a217db959f374d1d4fdf",
+        "simples": "A captura poderá ser requisitada, à vista de mandado judicial, por qualquer meio de comunicação, tomadas pela autoridade a quem se fizer a requisição as precauções necessárias para averiguar a autenticidade desta.",
+        "pontos": [
+          "Captura pode ser requisitada por qualquer meio de comunicação.",
+          "Exige mandado judicial.",
+          "A autoridade requisitada verifica a autenticidade."
+        ],
+        "atencao": [
+          "Autenticidade verificada."
+        ],
+        "exemplo": "A prisão é requisitada por meio eletrônico, e a autoridade confirma a autenticidade.",
+        "prova": [
+          "Assertiva que dispensa a verificação de autenticidade da requisição de captura erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 289"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-300",
+      "unit_id": "598a9739-9a3b-5e11-8d42-e8de0b7fd6cd",
+      "content_sha256": "7fcbb85da053f5b3f61748c1fe96b03cd1d349029919839b78ccb5e850de55e9",
+      "simples": "Presos provisórios ficam separados dos definitivamente condenados; militar em flagrante segue recolhimento institucional após procedimentos legais.",
+      "pontos": [
+        "Separação conforme LEP.",
+        "Lavrar procedimentos antes do encaminhamento militar.",
+        "Custódia permanece à disposição da autoridade competente."
+      ],
+      "atencao": [
+        "Recolhimento militar não elimina formalização do flagrante nem fiscalização judicial."
+      ],
+      "exemplo": "Preso cautelar é colocado separado de definitivamente condenado. Variação: Militar em flagrante não segue diretamente ao quartel omitindo os procedimentos legais.",
+      "prova": [
+        "Provisórios devem ficar separados de condenados definitivos? Sim.",
+        "Militar fica livre de controle da autoridade competente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Separação prisional",
+          "significado": "Regime de recolhimento conforme situação jurídica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "598a9739-9a3b-5e11-8d42-e8de0b7fd6cd",
+        "content_sha256": "7fcbb85da053f5b3f61748c1fe96b03cd1d349029919839b78ccb5e850de55e9",
+        "simples": "As pessoas presas provisoriamente ficarão separadas das que já estiverem definitivamente condenadas, nos termos da lei de execução penal. O militar preso em flagrante delito, após a lavratura dos procedimentos legais, será recolhido a quartel da instituição a que pertencer, onde ficará preso à disposição das autoridades competentes.",
+        "pontos": [
+          "Presos provisórios separados dos condenados definitivos.",
+          "Militar preso em flagrante: recolhido a quartel da própria instituição."
+        ],
+        "atencao": [
+          "Separação entre provisórios e definitivos."
+        ],
+        "exemplo": "Preso preventivo e condenado definitivo ficam em alas diferentes.",
+        "prova": [
+          "Assertiva que permite manter juntos presos provisórios e condenados definitivos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 295"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-300-a",
+      "unit_id": "5977d6fd-5a37-5732-b0cf-83393168770a",
+      "content_sha256": "d40f419682e23dd58e4061289ff94046283bb0fbb5c69dc29d95bf0b2e68d042",
+      "simples": "Lei 15.280/2025 acrescentou identificação genética obrigatória para investigado preso cautelarmente e condenado por crimes contra dignidade sexual, no ingresso prisional.",
+      "pontos": [
+        "Extração de DNA por técnica adequada e indolor.",
+        "Investigado precisa estar preso cautelarmente na hipótese textual.",
+        "Aplicação exige identificação do âmbito legal, proteção de dados e regras pertinentes."
+      ],
+      "atencao": [
+        "Não dizer que qualquer investigado solto por qualquer crime é abrangido por este artigo; identificação genética não prova automaticamente autoria."
+      ],
+      "exemplo": "Investigado por crime contra dignidade sexual ingressa preso cautelarmente e segue coleta legal adequada e indolor. Variação: Investigação por outro delito não entra automaticamente nesta regra específica, sem prejuízo de outras normas aplicáveis.",
+      "prova": [
+        "Basta qualquer investigação em liberdade para aplicar este artigo? Não.",
+        "A técnica deve ser adequada e indolor? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Identificação genética",
+          "significado": "Perfil de DNA sob hipótese legal e garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15280.htm"
+      ],
+      "expected": {
+        "unit_id": "5977d6fd-5a37-5732-b0cf-83393168770a",
+        "content_sha256": "d40f419682e23dd58e4061289ff94046283bb0fbb5c69dc29d95bf0b2e68d042",
+        "simples": "O investigado por crimes contra a dignidade sexual, quando preso cautelarmente, e o condenado pelos mesmos crimes deverão ser submetidos obrigatoriamente à identificação do perfil genético, mediante extração de DNA, por técnica adequada e indolor, por ocasião do ingresso no estabelecimento prisional.",
+        "pontos": [
+          "Investigado preso cautelarmente por crime contra a dignidade sexual e condenado pelos mesmos crimes.",
+          "Identificação obrigatória do perfil genético (DNA).",
+          "Técnica adequada e indolor, no ingresso no estabelecimento prisional."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 15.280, de 2025."
+        ],
+        "exemplo": "Ao ingressar no presídio, o preso por estupro tem o DNA coletado.",
+        "prova": [
+          "Assertiva que torna facultativa a coleta de DNA do art. 300-A erra: é obrigatória."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º-A da Lei de Execução Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    }
+  ]
+}
