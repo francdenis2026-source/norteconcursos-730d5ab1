@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-13",
+  "scope": "CPC — PC-CE Delegado 2025",
+  "items": [
+    {
+      "id": "0018eab7-3ea6-43b7-92ec-3d74e5b22a2e",
+      "item_number": 81,
+      "answer_preserved": "E",
+      "decision": "active",
+      "legal": true,
+      "reason": "E. A possessória imobiliária pertence ao foro da situação do imóvel, com competência absoluta (art. 47, § 2º). Acidente/delito: domicílio do autor ou local do fato; bens móveis: em regra domicílio do réu; sociedade sem personalidade: local de atividade. Mudanças posteriores são irrelevantes salvo supressão de órgão ou alteração de competência absoluta.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "08a52a44-25b6-42bf-b0be-2b8cf9559952",
+      "item_number": 77,
+      "answer_preserved": "E",
+      "decision": "active",
+      "legal": true,
+      "reason": "E. O STJ, no CC 185.702/DF, reconheceu competência para dirimir conflito entre tribunais arbitrais da mesma câmara quando o regulamento não disciplina a solução interna. O tribunal arbitral exerce jurisdição; a câmara administra o procedimento. A omissão regulamentar é condição expressa: não eliminar essa ressalva.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20220630&formato=PDF&nreg=202200232916&salvar=false&seq=2186844&tipo=0",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "328894ba-0a5a-489e-8afb-20583676390e",
+      "item_number": 84,
+      "answer_preserved": "C",
+      "decision": "active",
+      "legal": true,
+      "reason": "C. Corretos I, III e IV. A cautelar antecedente perde eficácia sem pedido principal no prazo legal, se não efetivada em 30 dias (não 15), se o pedido principal for improcedente ou se houver extinção sem mérito. Memorize: efetivação 30 dias; o prazo para o pedido principal também é 30 dias, contado da efetivação, conforme art. 308.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "559d2235-374d-4e72-a196-3fe46cdbf890",
+      "item_number": 83,
+      "answer_preserved": "E",
+      "decision": "active",
+      "legal": true,
+      "reason": "E. A confissão é em regra indivisível, mas admite cisão quando acrescidos fatos novos que fundamentem defesa material ou reconvenção (art. 395). Perícia também pode ser indeferida por ser desnecessária diante de outras provas; confissão admite anulação por erro de fato ou coação; autenticidade documental deve ser provada por quem produziu o documento; direitos indisponíveis não admitem confissão.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "bfb637b5-8012-47aa-b016-4d9b2c07a43b",
+      "item_number": 78,
+      "answer_preserved": "D",
+      "decision": "active",
+      "legal": true,
+      "reason": "D. A responsabilidade pelos danos da tutela depois revogada decorre da lei, dispensando condenação expressa; os danos devem ser demonstrados e liquidados nos próprios autos quando possível (art. 302 e Informativo STJ 649). A prescrição/decadência impede novo pedido principal (art. 310); a ausência do pedido principal faz cessar a cautelar (art. 309). Astreintes: o cumprimento provisório exige confirmação pela sentença, entendimento reafirmado pelo STJ em decisão publicada em 25/06/2026. Não confundir com levantamento da quantia, que exige trânsito em julgado.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&from=feed&livre=0649.cod.",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=25%2F06%2F2026&num_registro=202501964500",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "e01e3fd4-4973-4196-9a5b-c68dcef16670",
+      "item_number": 80,
+      "answer_preserved": "C",
+      "decision": "active",
+      "legal": true,
+      "reason": "C. O REsp 2.037.088/SP afasta leitura do art. 382, § 4º que elimine inteiramente o contraditório na produção antecipada de provas. A defesa pode discutir os requisitos e limites da produção; não se trata de autorização irrestrita para discutir o mérito futuro. Confissão não prejudica litisconsortes; não se presume nulidade apenas pela especialidade médica; conhecimento pessoal do juiz não substitui perícia necessária; distribuição dinâmica do ônus é admitida, mediante decisão fundamentada e oportunidade de cumprimento.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=13%2F03%2F2023&num_registro=202202788280",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    },
+    {
+      "id": "f60e378d-647f-4f6e-875b-7c6890d82072",
+      "item_number": 76,
+      "answer_preserved": "D",
+      "decision": "active",
+      "legal": true,
+      "reason": "D. O art. 10 veda decisão com fundamento jurídico sobre o qual não houve oportunidade de manifestação. A boa-fé alcança todos os participantes; cooperação inclui o juiz; paridade também abrange deveres e sanções. Atenção: aplicar a classificação jurídica adequada aos fatos já debatidos não equivale automaticamente a decisão surpresa (REsp 1.957.652).",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?b=ACOR&fr=veja&i=1&livre=%28%27RESP%27+INPATH%28CLAS%29+AND+%271957652%27+INPATH%28NUM%29%29+OR+%28%28%27REsp+1957652%27%29+INPATH%28SUCE%29%29&thesaurus=JURIDICO",
+        "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+      ]
+    }
+  ],
+  "syllabus_correction": "Edição apontava para caderno de prova; corrigida para o edital oficial de abertura. Tópicos específicos transcritos do conteúdo programático.",
+  "private_outputs": "Cadernos, textos e snapshots completos permanecem em outputs, fora do Git."
+}
