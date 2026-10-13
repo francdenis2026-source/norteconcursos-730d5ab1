@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP organização distingue lista, convocação, conselho e dispensa',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-organization-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,26);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(426).atencao.join(' '),/ter integrado Conselho/);
+ assert.match(get(437).atencao.join(' '),/Não ensinar dispensa automática/);
+ assert.match(get(439).atencao.join(' '),/Não apresentar função como imunidade/);
+ assert.match(get(440).atencao.join(' '),/Não transformar desempate em aprovação garantida/);
+ assert.match(get(447).atencao.join(' '),/quórum de instalação de quinze/);
+});
 test('CPP júri primeira fase distingue requisitos, prova indireta e recursos',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-first-phase-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
