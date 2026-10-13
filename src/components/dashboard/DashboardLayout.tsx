@@ -185,7 +185,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Questões",
-    label: "Banco de questões",
+    label: "Acervo de questões",
     icon: BookMarked,
     href: "/dashboard/question-bank",
   },

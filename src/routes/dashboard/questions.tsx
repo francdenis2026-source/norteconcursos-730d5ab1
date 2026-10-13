@@ -136,7 +136,7 @@ function QuestionsCatalog() {
               acervo de provas e questões.
             </p>
             <Button asChild>
-              <Link to="/dashboard/question-bank">Abrir banco de questões</Link>
+              <Link to="/dashboard/question-bank">Consultar o acervo de questões</Link>
             </Button>
           </CardContent>
         </Card>

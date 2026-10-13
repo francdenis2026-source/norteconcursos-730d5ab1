@@ -12,7 +12,7 @@ export const hms = (s: number) => `${pad(Math.floor(s / 3600))}:${pad(Math.floor
 /** Áreas para onde o aluno pode ir sem encerrar o foco: o relógio pausa e volta de onde parou. */
 const PAUSE_DESTINATIONS = [
   { path: "/dashboard/question-trainer", name: "Questões" },
-  { path: "/dashboard/question-bank", name: "o Banco de questões" },
+  { path: "/dashboard/question-bank", name: "o Acervo de questões" },
   { path: "/dashboard/dicionario", name: "o Dicionário" },
 ];
 
