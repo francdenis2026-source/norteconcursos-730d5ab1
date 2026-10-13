@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP processamento recursal distingue efeitos e prazos atuais',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-appeal-process-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(584).pontos.join(' '),/Novo§4º/);
+ assert.match(get(589).pontos.join(' '),/não pode modificar novamente/);
+ assert.match(get(598).pontos.join(' '),/habilitado: cinco dias/);
+ assert.match(get(600).pontos.join(' '),/prazos comuns/);
+ for(const n of [583,584,585,596,597,598])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP nulidades e recursos integra reformas e fungibilidade atual',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-nullities-resources-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

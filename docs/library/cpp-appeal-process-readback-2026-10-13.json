@@ -1,0 +1,51 @@
+{
+  "verified_at": "2026-10-13T04:11:15.058220+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 19,
+  "target_keys": [
+    "art-583",
+    "art-584",
+    "art-585",
+    "art-586",
+    "art-587",
+    "art-588",
+    "art-589",
+    "art-590",
+    "art-591",
+    "art-592",
+    "art-593",
+    "art-596",
+    "art-597",
+    "art-598",
+    "art-599",
+    "art-600",
+    "art-601",
+    "art-602",
+    "art-603"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 827,
+  "concurrent_other_changes": [
+    {
+      "table": "legal_unit_explanations",
+      "changed_ids": [
+        "6d41bd3d-2e4a-5ff4-bc4a-69bae0db6a09",
+        "e46533c5-45f6-55a1-8b57-4b8458f22508",
+        "15c3774a-4d15-5283-ac45-c984f90f878c",
+        "e6113d50-4b45-5b98-83f7-b56b070e9b62",
+        "284b4f6b-42b3-5395-8835-0a62d764caf1",
+        "c7a988b1-2f16-5ea2-8904-a271201f90e6",
+        "ac891bd9-588c-58d1-a707-8e7d0a53f071",
+        "9a196bc9-8629-5ef2-a179-26132a0792a4",
+        "998f40cc-c941-5524-b168-f7ab5f1e4c2b",
+        "acd16490-da7b-529a-a415-62e90dcd0138",
+        "1a876454-ffe5-599f-abfa-3c345531e0b9",
+        "50219eea-6103-5113-b854-ca4dbd8148d0",
+        "0cfc323e-3ca4-5266-a290-c092bf6b3498",
+        "3d18ebd0-86bb-5f89-8b77-ce2eb53d541a"
+      ],
+      "origin": "Concurrent external edits observed; this importer writes only the listed CPP explanations."
+    }
+  ]
+}
