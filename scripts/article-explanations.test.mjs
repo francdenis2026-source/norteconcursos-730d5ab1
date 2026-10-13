@@ -1,4 +1,32 @@
 import test from 'node:test';
+test('CTB first review batch corrects scope, delegation and institutional roles without rewriting the statute',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-01-2026-10-13.json','utf8'));validateArticlePackage(p);
+ assert.equal(p.units.length,50);assert.equal(p.laws[0].course_current_units,365);assert.equal(p.laws[0].scope_type,'targeted_correction');
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(2).simples,/estacionamentos privados de uso coletivo/);
+ assert.match(get(7).simples,/sem inciso autônomo|não o órgão máximo executivo/);
+ assert.ok(!/Câmaras Temáticas, entre outros/.test(get(7).simples));
+ assert.match(get(10).pontos.join(' '),/CCE 17.*Secretário-Executivo.*MAIORIA ABSOLUTA/s);
+ assert.match(get(12).pontos.join(' '),/DOIS ANOS.*120 dias.*vedação de reedição/s);
+ assert.match(get(19).atencao.join(' '),/28\/5\/2024.*180 dias/);
+ assert.match(get(21).atencao.join(' '),/965.*NÃO EXCLUSIVO/);
+ assert.match(get(22).pontos.join(' '),/165-D.*330.*§5º/);
+ assert.match(get(24).pontos.join(' '),/§3º.*vagas reservadas/);
+ assert.match(get('24-a').pontos.join(' '),/delegação.*CONVÊNIO/);
+ assert.match(get('25-a').simples,/adjacências.*treinamento específico/s);
+ for(const row of p.units){assert.ok(row.expected);assert.equal(row.prova.length,2);assert.ok(explanationExample(row.exemplo).variation);for(const q of row.prova)assert.ok(explanationPractice(q)?.answer.length>45);}
+ for(const n of [1,2,7,10,12,14,19,20,21,22,23,24,'24-a','25-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB circulation review separates horns, lights, conditional priority and vulnerable users',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-01-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(29).pontos.join(' '),/velocidade REDUZIDA.*Utilidade pública.*sem livre circulação/s);
+ assert.match(get(38).pontos.join(' '),/sentido único, bordo esquerdo/);
+ assert.match(get(40).pontos.join(' '),/SEM DRL.*PISTA SIMPLES.*FORA/s);
+ assert.match(get(40).prova.join(' '),/restrição fora da área urbana.*Não/s);
+ assert.match(get('44-a').prova.join(' '),/sinalização indicativa.*44, 45 e 70/s);
+ assert.match(get(47).exemplo,/dois minutos.*estacionamento/s);
+ for(const n of [29,40,'44-a'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
 test('CPP final integrates current STJ competence and rejects historical automatic drills',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-final-2026-10-13.json','utf8'));validateArticlePackage(p);
  assert.equal(p.units.length,33);assert.equal(p.laws[0].scope_type,'targeted_correction');
@@ -480,8 +508,8 @@ function fixture(){
     legal_courses:pack.laws.map(l=>{const r=pack.units.find(r=>r.course_slug===l.slug);return {id:r.course_id,slug:l.slug,status:'active',source_url:l.source_url,syllabus_topic_id:r.syllabus_topic_id};}),
     legal_course_units:pack.units.map(r=>({id:r.unit_id,course_id:r.course_id,unit_key:r.unit_key,content_status:'current',content_sha256:r.content_sha256})),
     syllabus_topics:pack.units.map(r=>({id:r.syllabus_topic_id,edition_id:r.edition_id,content_status:'current'})),
-    syllabus_editions:pack.units.map(r=>({id:r.edition_id,status:'active'})),
-    content_sources:pack.laws.flatMap(l=>[l.source_url,...(l.additional_sources??[]).map(s=>s.url)]).map(url=>({url,is_official:true,status:'vigente'})),
+    syllabus_editions:pack.units.map(r=>({id:r.edition_id,status:'active',source_id:'official-edital'})),
+    content_sources:[{id:'official-edital',source_type:'edital',title:'Edital oficial do concurso',is_official:true,status:'vigente'},...pack.laws.flatMap(l=>[l.source_url,...(l.additional_sources??[]).map(s=>s.url)]).map(url=>({url,is_official:true,status:'vigente'}))],
     legal_unit_explanations:pack.units.filter(r=>r.expected).map(r=>structuredClone(r.expected)),
   };
 }
@@ -1179,4 +1207,12 @@ test('CP final lote5: exceções democráticas e suspensão judicial distinguem 
  }
  for(const n of [351,352,'359-k','359-l','359-m','359-t',360,361])assert.equal(legalStudyCaveat('codigo-penal','art-'+n).literalPractice,false);
  assert.match(get(361).exemplo,/1942.*1940.*Variação/s);
+});
+
+test('Article publication rejects a caderno or gabarito as syllabus, even when official or mislabelled',()=>{
+ const snapshot=fixture();assert.doesNotThrow(()=>checkArticlePreflight(pack,snapshot));
+ for(const patch of [{source_type:'outro',title:'Prova objetiva oficial'},{source_type:'edital',title:'Caderno oficial de prova'},{source_type:'edital',title:'Gabarito definitivo'},{status:'archived'},{is_official:false}]){
+  const bad=fixture();Object.assign(bad.content_sources[0],patch);assert.throws(()=>checkArticlePreflight(pack,bad),/Edital oficial/);
+ }
+ const missing=fixture();missing.syllabus_editions.forEach(e=>e.source_id='missing');assert.throws(()=>checkArticlePreflight(pack,missing),/Edital oficial/);
 });

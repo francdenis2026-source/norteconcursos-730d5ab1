@@ -1,0 +1,3183 @@
+{
+  "version": "2026-10-11-transito-targeted",
+  "checked_at": "2026-10-13T06:41:27.311045+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 50,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4",
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-7-a",
+        "art-8",
+        "art-9",
+        "art-10",
+        "art-10-a",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15",
+        "art-16",
+        "art-17",
+        "art-19",
+        "art-20",
+        "art-21",
+        "art-22",
+        "art-23",
+        "art-24",
+        "art-24-a",
+        "art-25",
+        "art-25-a",
+        "art-26",
+        "art-27",
+        "art-28",
+        "art-29",
+        "art-30",
+        "art-31",
+        "art-32",
+        "art-33",
+        "art-34",
+        "art-35",
+        "art-36",
+        "art-37",
+        "art-38",
+        "art-39",
+        "art-40",
+        "art-41",
+        "art-42",
+        "art-43",
+        "art-44",
+        "art-44-a",
+        "art-45",
+        "art-46",
+        "art-47"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-1",
+      "unit_id": "9d7540c0-0a67-595b-b228-bb6e4087aecb",
+      "content_sha256": "366af6e513d03bd7f6314f49aaeab6af710de334434d2841a54b0bd8255f5d01",
+      "simples": "O trânsito de qualquer natureza nas vias terrestres abertas à circulação rege-se pelo Código. Trânsito é a utilização das vias por pessoas, veículos e animais, para circulação, parada, estacionamento e operação de carga ou descarga. O trânsito em condições seguras é direito de todos e dever dos órgãos do Sistema Nacional de Trânsito.",
+      "pontos": [
+        "Aplica-se às vias terrestres abertas à circulação.",
+        "Conceito amplo de trânsito.",
+        "Trânsito seguro é direito de todos e dever dos órgãos do sistema.",
+        "Responsabilidade OBJETIVA no recorte do §3º não equivale a indenização automática por todo sinistro.",
+        "Prioridade: defesa da VIDA, abrangendo saúde e meio ambiente."
+      ],
+      "atencao": [
+        "Trânsito inclui pessoas, veículos e animais.",
+        "Abrange parada, estacionamento e carga ou descarga.",
+        "Não criar obrigação com o §4º vetado nem afirmar responsabilidade universal de qualquer órgão por todo evento."
+      ],
+      "exemplo": "Uma falha de manutenção atribuída ao órgão competente causa dano ao usuário. Resposta: o §3º prevê responsabilidade objetiva, mas é necessário examinar competência, dano e nexo com a ação, omissão ou erro. Variação: Um sinistro sem vínculo demonstrado com serviço do órgão não gera indenização automática apenas porque aconteceu numa via.",
+      "prova": [
+        "Somente carros em movimento integram o trânsito? Não. O §1º inclui pessoas e animais, além de circulação, parada, estacionamento e carga ou descarga.",
+        "Responsabilidade objetiva dispensa demonstrar dano e nexo? Não. O §3º vincula a responsabilidade aos danos decorrentes da atuação do órgão em suas competências."
+      ],
+      "termos": [
+        {
+          "termo": "Trânsito seguro",
+          "significado": "Direito de todos e dever dos integrantes do SNT no âmbito de suas competências."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 2º"
+      ],
+      "expected": {
+        "unit_id": "9d7540c0-0a67-595b-b228-bb6e4087aecb",
+        "content_sha256": "366af6e513d03bd7f6314f49aaeab6af710de334434d2841a54b0bd8255f5d01",
+        "simples": "O trânsito de qualquer natureza nas vias terrestres abertas à circulação rege-se pelo Código. Trânsito é a utilização das vias por pessoas, veículos e animais, para circulação, parada, estacionamento e operação de carga ou descarga. O trânsito em condições seguras é direito de todos e dever dos órgãos do Sistema Nacional de Trânsito.",
+        "pontos": [
+          "Aplica-se às vias terrestres abertas à circulação.",
+          "Conceito amplo de trânsito.",
+          "Trânsito seguro é direito de todos e dever dos órgãos do sistema."
+        ],
+        "atencao": [
+          "Trânsito inclui pessoas, veículos e animais.",
+          "Abrange parada, estacionamento e carga ou descarga."
+        ],
+        "exemplo": "O pedestre que atravessa a rua também está no trânsito para fins do Código.",
+        "prova": [
+          "Assertiva que restringe o conceito de trânsito à circulação de veículos erra."
+        ],
+        "termos": [
+          {
+            "termo": "Trânsito",
+            "significado": "Utilização das vias por pessoas, veículos e animais para circulação, parada, estacionamento e carga ou descarga."
+          }
+        ],
+        "remissoes": [
+          "Art. 2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-2",
+      "unit_id": "24f9dcfe-d884-50f7-abbb-4452f72a3f86",
+      "content_sha256": "65314997aedda09f21365ccfc1d901b7c36209aa25aafcb602c477c72f840121",
+      "simples": "O CTB abrange vias urbanas e rurais, praias abertas à circulação pública, vias internas de condomínios de unidades autônomas e vias e estacionamentos privados de uso coletivo. A circunscrição e as competências do órgão continuam relevantes.",
+      "pontos": [
+        "Rol de vias urbanas e rurais.",
+        "Regulamentação pelo órgão com circunscrição.",
+        "Praias abertas e vias de condomínios também contam.",
+        "ATUALIZAÇÃO: Lei 13.146/2015 incluiu expressamente vias e áreas de estacionamento de estabelecimentos privados de uso coletivo."
+      ],
+      "atencao": [
+        "Praias abertas à circulação pública e vias de condomínio são vias terrestres para o Código.",
+        "Não confundir inclusão da via no CTB com competência irrestrita de qualquer autoridade; integrar art. 24, §3º."
+      ],
+      "exemplo": "Um motorista circula no estacionamento de um supermercado aberto ao público. Resposta: área privada de uso coletivo é considerada via terrestre para o CTB. Variação: A aplicação do CTB não torna ilimitada toda atuação municipal ali: o art. 24, §3º, delimita a atribuição do inciso VI para infrações de uso de vagas reservadas.",
+      "prova": [
+        "O estacionamento privado de uso coletivo está fora do CTB? Não. O parágrafo único o inclui expressamente, junto às vias de condomínios e praias abertas à circulação pública.",
+        "Todo imóvel privado é automaticamente via aberta à circulação pública? Não. É preciso identificar a hipótese legal e o uso coletivo, sem generalizar o parágrafo."
+      ],
+      "termos": [
+        {
+          "termo": "Uso coletivo",
+          "significado": "Destinação que inclui vias e estacionamentos de estabelecimentos privados no recorte legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 51"
+      ],
+      "expected": {
+        "unit_id": "24f9dcfe-d884-50f7-abbb-4452f72a3f86",
+        "content_sha256": "65314997aedda09f21365ccfc1d901b7c36209aa25aafcb602c477c72f840121",
+        "simples": "São vias terrestres urbanas e rurais as ruas, avenidas, logradouros, caminhos, passagens, estradas e rodovias, cujo uso é regulamentado pelo órgão com circunscrição sobre elas. Também são vias terrestres, para o Código, as praias abertas à circulação pública e as vias internas pertencentes a condomínios constituídos por unidades autônomas.",
+        "pontos": [
+          "Rol de vias urbanas e rurais.",
+          "Regulamentação pelo órgão com circunscrição.",
+          "Praias abertas e vias de condomínios também contam."
+        ],
+        "atencao": [
+          "Praias abertas à circulação pública e vias de condomínio são vias terrestres para o Código."
+        ],
+        "exemplo": "A rua interna de um condomínio de unidades autônomas está sujeita ao Código.",
+        "prova": [
+          "Assertiva que exclui as praias abertas à circulação pública do conceito de via terrestre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 51"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-3",
+      "unit_id": "c523ce8e-a01c-5bf8-88da-80844c090adc",
+      "content_sha256": "5e51ba937cdf4891ad7c41a99d1f02be6664a20f23e30aba8cda3b230a33009a",
+      "simples": "As disposições do Código aplicam-se a qualquer veículo, bem como aos proprietários, aos condutores de veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.",
+      "pontos": [
+        "Aplica-se a qualquer veículo.",
+        "Alcança proprietários e condutores, nacionais ou estrangeiros."
+      ],
+      "atencao": [
+        "Vale para veículos nacionais E estrangeiros.",
+        "Não transformar o alcance geral em responsabilidade solidária automática por todas as condutas."
+      ],
+      "exemplo": "Uma turista dirige no Brasil um carro com registro estrangeiro. Resposta: o CTB também se aplica ao veículo e à condutora estrangeiros. Variação: A aplicação do código não torna proprietário e condutor automaticamente responsáveis pela mesma infração; a atribuição da responsabilidade tem disciplina própria.",
+      "prova": [
+        "Veículos estrangeiros estão dispensados das regras de circulação brasileiras? Não. O art. 3º abrange expressamente veículos e condutores nacionais ou estrangeiros.",
+        "O art. 3º pune sempre proprietário e condutor juntos? Não. Define alcance do código; a responsabilidade por cada infração deve ser examinada nas regras pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Alcance do código",
+          "significado": "Pessoas e veículos abrangidos, distinto da atribuição concreta de uma infração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 1º"
+      ],
+      "expected": {
+        "unit_id": "c523ce8e-a01c-5bf8-88da-80844c090adc",
+        "content_sha256": "5e51ba937cdf4891ad7c41a99d1f02be6664a20f23e30aba8cda3b230a33009a",
+        "simples": "As disposições do Código aplicam-se a qualquer veículo, bem como aos proprietários, aos condutores de veículos nacionais ou estrangeiros e às pessoas nele expressamente mencionadas.",
+        "pontos": [
+          "Aplica-se a qualquer veículo.",
+          "Alcança proprietários e condutores, nacionais ou estrangeiros."
+        ],
+        "atencao": [
+          "Vale para veículos nacionais E estrangeiros."
+        ],
+        "exemplo": "O turista estrangeiro que dirige no Brasil submete-se ao Código.",
+        "prova": [
+          "Assertiva que isenta condutores estrangeiros do Código erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-4",
+      "unit_id": "16649521-5d7c-5652-8d70-9de3c0a59809",
+      "content_sha256": "bfd0a990c4a5f9e44b8d38e3b9f759af7f47a95c0969f350a2152c1fcf71f063",
+      "simples": "Os conceitos e definições estabelecidos para os efeitos do Código são os constantes do Anexo I, que deve ser consultado para os termos técnicos.",
+      "pontos": [
+        "Definições no Anexo I."
+      ],
+      "atencao": [
+        "Consulte o Anexo I para os conceitos técnicos.",
+        "Conferir o Anexo I atual; não recuperar definição antiga de categoria de veículo após alteração legislativa."
+      ],
+      "exemplo": "Um candidato chama de parada qualquer imobilização de três minutos. Resposta: deve conferir a definição do Anexo I, que vincula parada ao tempo indispensável para embarque ou desembarque. Variação: Carga e descarga não se tornam parada pela curta duração: o art. 47 as considera estacionamento.",
+      "prova": [
+        "Uma duração arbitrária de três minutos define parada? Não. O conceito legal deve ser buscado no Anexo I, integrado à regra específica.",
+        "O uso cotidiano de uma palavra substitui o conceito legal? Não. Para os efeitos do CTB, prevalecem as definições do Anexo I."
+      ],
+      "termos": [
+        {
+          "termo": "Definição legal",
+          "significado": "Sentido técnico adotado pelo CTB para aplicar suas regras."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Anexo I"
+      ],
+      "expected": {
+        "unit_id": "16649521-5d7c-5652-8d70-9de3c0a59809",
+        "content_sha256": "bfd0a990c4a5f9e44b8d38e3b9f759af7f47a95c0969f350a2152c1fcf71f063",
+        "simples": "Os conceitos e definições estabelecidos para os efeitos do Código são os constantes do Anexo I, que deve ser consultado para os termos técnicos.",
+        "pontos": [
+          "Definições no Anexo I."
+        ],
+        "atencao": [
+          "Consulte o Anexo I para os conceitos técnicos."
+        ],
+        "exemplo": "O conceito de ciclomotor está no Anexo I.",
+        "prova": [
+          "Assertiva que dispensa o Anexo I na interpretação dos conceitos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Anexo I"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-5",
+      "unit_id": "b7b519b9-2b4c-5de8-a25d-26fda49ccba6",
+      "content_sha256": "90692d0526956ce54e82f85265ae93ddeaf2957867647e33765c0edea9d002ff",
+      "simples": "O Sistema Nacional de Trânsito é o conjunto de órgãos e entidades da União, dos Estados, do Distrito Federal e dos Municípios que tem por finalidade o exercício de atividades como planejamento, administração, normatização, pesquisa, registro e licenciamento de veículos, formação e habilitação de condutores, educação, engenharia, operação do sistema viário, policiamento, fiscalização, julgamento de infrações e recursos e aplicação de penalidades.",
+      "pontos": [
+        "Conjunto de órgãos de todos os entes federativos.",
+        "Atividades de planejamento, normatização, registro, habilitação, fiscalização e julgamento."
+      ],
+      "atencao": [
+        "Sistema integrado por União, Estados, DF e Municípios.",
+        "Distinguir finalidades do sistema e atribuições de cada órgão."
+      ],
+      "exemplo": "A candidata estuda somente multas e esquece formação de condutores. Resposta: o SNT também exerce planejamento, pesquisa, educação, registro, habilitação, engenharia e outras atividades do artigo. Variação: O julgamento de recursos integra o sistema, mas não significa que todo órgão tenha competência para julgar qualquer recurso.",
+      "prova": [
+        "O SNT é composto apenas por entidades federais? Não. Inclui União, Estados, Distrito Federal e Municípios.",
+        "Integrar o SNT concede todas as atribuições a cada integrante? Não. A finalidade do sistema não elimina a distribuição específica de competências."
+      ],
+      "termos": [
+        {
+          "termo": "Sistema integrado",
+          "significado": "Conjunto de órgãos de todos os entes, com funções complementares e competências próprias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 7º"
+      ],
+      "expected": {
+        "unit_id": "b7b519b9-2b4c-5de8-a25d-26fda49ccba6",
+        "content_sha256": "90692d0526956ce54e82f85265ae93ddeaf2957867647e33765c0edea9d002ff",
+        "simples": "O Sistema Nacional de Trânsito é o conjunto de órgãos e entidades da União, dos Estados, do Distrito Federal e dos Municípios que tem por finalidade o exercício de atividades como planejamento, administração, normatização, pesquisa, registro e licenciamento de veículos, formação e habilitação de condutores, educação, engenharia, operação do sistema viário, policiamento, fiscalização, julgamento de infrações e recursos e aplicação de penalidades.",
+        "pontos": [
+          "Conjunto de órgãos de todos os entes federativos.",
+          "Atividades de planejamento, normatização, registro, habilitação, fiscalização e julgamento."
+        ],
+        "atencao": [
+          "Sistema integrado por União, Estados, DF e Municípios."
+        ],
+        "exemplo": "Detran, Contran e órgãos municipais integram o mesmo sistema.",
+        "prova": [
+          "Assertiva que restringe o sistema aos órgãos federais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-6",
+      "unit_id": "4107bb1b-99e8-5c6c-9b2e-5d86365bbe63",
+      "content_sha256": "53e47e4e01b302bf2ed9961e7d67e4c07e201704f220af820db4bc7d135cb3e8",
+      "simples": "O art. 6º tem três objetivos: diretrizes da política nacional e fiscalização de seu cumprimento; padronização de critérios técnicos, financeiros e administrativos; e fluxos permanentes de informações para decisão e integração.",
+      "pontos": [
+        "Segurança, fluidez, conforto, defesa ambiental e educação.",
+        "Padronização de critérios.",
+        "Fluxo de informações e integração entre órgãos."
+      ],
+      "atencao": [
+        "Cinco valores da política: segurança, fluidez, conforto, defesa ambiental e educação.",
+        "Não transformar um resumo sobre aperfeiçoamento em quarto objetivo textual autônomo."
+      ],
+      "exemplo": "Dois órgãos trocam permanentemente dados para decidir medidas de segurança. Resposta: o fluxo permanente de informações facilita decisões e integração do SNT. Variação: A integração não permite abandonar critérios técnicos, financeiros e administrativos padronizados pelo inciso II.",
+      "prova": [
+        "A política nacional considera apenas rapidez do tráfego? Não. O inciso I reúne segurança, fluidez, conforto, defesa ambiental e educação.",
+        "O art. 6º contém um quarto inciso autônomo sobre intercâmbio? Não. Há três objetivos básicos; a integração está no inciso III, sem inventar inciso adicional."
+      ],
+      "termos": [
+        {
+          "termo": "Padronização",
+          "significado": "Critérios técnicos, financeiros e administrativos comuns para executar atividades de trânsito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 5º"
+      ],
+      "expected": {
+        "unit_id": "4107bb1b-99e8-5c6c-9b2e-5d86365bbe63",
+        "content_sha256": "53e47e4e01b302bf2ed9961e7d67e4c07e201704f220af820db4bc7d135cb3e8",
+        "simples": "São objetivos básicos do Sistema Nacional de Trânsito estabelecer diretrizes da Política Nacional de Trânsito, voltadas à segurança, fluidez, conforto, defesa ambiental e educação para o trânsito; fixar a padronização de critérios técnicos, financeiros e administrativos; estabelecer a sistemática de fluxos permanentes de informações; e promover o aperfeiçoamento e o intercâmbio entre os órgãos.",
+        "pontos": [
+          "Segurança, fluidez, conforto, defesa ambiental e educação.",
+          "Padronização de critérios.",
+          "Fluxo de informações e integração entre órgãos."
+        ],
+        "atencao": [
+          "Cinco valores da política: segurança, fluidez, conforto, defesa ambiental e educação."
+        ],
+        "exemplo": "A padronização da sinalização em todo o país decorre desses objetivos.",
+        "prova": [
+          "Assertiva que exclui a defesa ambiental dos objetivos do sistema erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 5º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7",
+      "unit_id": "b8b7a990-5ed1-5054-b4a5-9f43d44441f7",
+      "content_sha256": "6915beb9d649ae95f55666ad34743aa4f6344b97b64cfddc4405f9d156a6ef4f",
+      "simples": "O art. 7º relaciona Contran; CETRAN e CONTRANDIFE; órgãos executivos de trânsito; órgãos executivos rodoviários; PRF; Polícias Militares; e JARI. Contran é coordenador e órgão máximo normativo e consultivo, não o órgão máximo executivo.",
+      "pontos": [
+        "Contran como órgão máximo normativo e consultivo.",
+        "Cetran e Contrandife.",
+        "Órgãos executivos de trânsito e rodoviários.",
+        "Polícia Rodoviária Federal, Polícias Militares e JARI."
+      ],
+      "atencao": [
+        "Câmaras Temáticas são órgãos técnicos vinculados ao Contran no art. 13, sem inciso autônomo neste rol.",
+        "Não trocar Contran e Senatran nem atribuir competências indistintas a todos os integrantes."
+      ],
+      "exemplo": "Uma questão atribui ao Detran a posição de órgão máximo normativo do SNT. Resposta: essa posição é do Contran; órgãos executivos têm atribuições distintas. Variação: Câmaras Temáticas assessoram tecnicamente o Contran pelo art. 13, mas não são inciso autônomo do rol do art. 7º.",
+      "prova": [
+        "O Contran é o órgão máximo executivo? Não. É coordenador e órgão máximo normativo e consultivo; a função executiva federal é distinta.",
+        "PRF, Polícias Militares e JARI aparecem no rol? Sim. São expressamente relacionados, cada qual com competências próprias."
+      ],
+      "termos": [
+        {
+          "termo": "Normativo e executivo",
+          "significado": "Produção de normas e execução de atividades são funções distintas no SNT."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran"
+      ],
+      "expected": {
+        "unit_id": "b8b7a990-5ed1-5054-b4a5-9f43d44441f7",
+        "content_sha256": "6915beb9d649ae95f55666ad34743aa4f6344b97b64cfddc4405f9d156a6ef4f",
+        "simples": "Compõem o Sistema Nacional de Trânsito o Contran, coordenador do Sistema e órgão máximo normativo e consultivo; os Conselhos Estaduais de Trânsito e o do Distrito Federal; os órgãos e entidades executivos de trânsito da União, dos Estados, do Distrito Federal e dos Municípios; os órgãos executivos rodoviários; a Polícia Rodoviária Federal; as Polícias Militares; as Juntas Administrativas de Recursos de Infrações; e as Câmaras Temáticas, entre outros.",
+        "pontos": [
+          "Contran como órgão máximo normativo e consultivo.",
+          "Cetran e Contrandife.",
+          "Órgãos executivos de trânsito e rodoviários.",
+          "Polícia Rodoviária Federal, Polícias Militares e JARI."
+        ],
+        "atencao": [
+          "Contran é o órgão máximo NORMATIVO e consultivo.",
+          "ATUALIZAÇÃO: a composição do sistema foi alterada por leis posteriores; consulte o texto vigente."
+        ],
+        "exemplo": "O Contran edita as resoluções que regulamentam o Código.",
+        "prova": [
+          "Assertiva que atribui ao Detran a função de órgão máximo normativo erra: é do Contran."
+        ],
+        "termos": [
+          {
+            "termo": "Contran",
+            "significado": "Conselho Nacional de Trânsito, órgão máximo normativo e consultivo do sistema."
+          }
+        ],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-7-a",
+      "unit_id": "5a5bd9b8-a3ca-5250-8904-7181babcdccf",
+      "content_sha256": "7daf491148a1110cf3f25853189eefbed669e3c9b04d28bcbb4e0e58c1a8c578",
+      "simples": "A autoridade portuária ou a entidade concessionária de porto organizado pode celebrar convênios com os órgãos de trânsito, com a interveniência dos Municípios e Estados interessados, para facilitar a autuação por descumprimento da legislação de trânsito. O convênio vale para toda a área física do porto organizado.",
+      "pontos": [
+        "Convênio entre autoridade portuária e órgãos de trânsito.",
+        "Finalidade: facilitar a autuação.",
+        "Vale para toda a área do porto organizado."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: incluído pela Lei 12.058/2009; não é redação original de 1997.",
+        "Poderá celebrar indica possibilidade legal; não ensinar exclusividade universal do convênio nem atribuir conteúdo aos §§2º e 3º vetados."
+      ],
+      "exemplo": "Autoridade portuária celebra convênio com órgão do SNT, com interveniência dos entes juridicamente interessados. Resposta: o instrumento facilita autuações em toda a área do porto organizado. Variação: Terminal alfandegado ou estacionamento interno não está automaticamente fora da área alcançada pelo §1º.",
+      "prova": [
+        "O convênio vale somente para a via de entrada do porto? Não. O §1º abrange toda a área física, inclusive terminais, transbordo, instalações e estacionamentos ou vias internas.",
+        "O artigo afirma que toda autuação portuária é sempre inválida sem este convênio? Não. Cria possibilidade específica de cooperação; não elimina por presunção todas as competências ordinárias já existentes."
+      ],
+      "termos": [
+        {
+          "termo": "Interveniência",
+          "significado": "Participação dos Municípios e Estados juridicamente interessados no convênio específico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 7º"
+      ],
+      "expected": {
+        "unit_id": "5a5bd9b8-a3ca-5250-8904-7181babcdccf",
+        "content_sha256": "7daf491148a1110cf3f25853189eefbed669e3c9b04d28bcbb4e0e58c1a8c578",
+        "simples": "A autoridade portuária ou a entidade concessionária de porto organizado pode celebrar convênios com os órgãos de trânsito, com a interveniência dos Municípios e Estados interessados, para facilitar a autuação por descumprimento da legislação de trânsito. O convênio vale para toda a área física do porto organizado.",
+        "pontos": [
+          "Convênio entre autoridade portuária e órgãos de trânsito.",
+          "Finalidade: facilitar a autuação.",
+          "Vale para toda a área do porto organizado."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Exige interveniência de Municípios e Estados."
+        ],
+        "exemplo": "O porto firma convênio para que infrações em suas vias internas sejam autuadas.",
+        "prova": [
+          "Assertiva que dispensa convênio para a autuação em área portuária erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-8",
+      "unit_id": "0baa9aa9-30ba-56df-adfc-7bf1caabb267",
+      "content_sha256": "687b432b124578382d906a859e0d6a744d7e5499ada922235570c03735b4f3c4",
+      "simples": "Os Estados, o Distrito Federal e os Municípios organizam os respectivos órgãos e entidades executivos de trânsito e executivos rodoviários, estabelecendo os limites circunscricionais de suas atuações.",
+      "pontos": [
+        "Cada ente organiza seus órgãos.",
+        "Definição dos limites de atuação."
+      ],
+      "atencao": [
+        "Circunscrição define quem tem competência sobre a via.",
+        "Não confundir área territorial com exclusividade universal sobre todas as atividades na via."
+      ],
+      "exemplo": "Estado e Município organizam seus respectivos órgãos executivos e delimitam áreas de atuação. Resposta: o artigo atribui essa organização aos entes indicados. Variação: Definir limites territoriais não permite criar por ato local uma competência contrária ao CTB.",
+      "prova": [
+        "O Presidente organiza diretamente todo órgão municipal de trânsito pelo art. 8º? Não. O artigo atribui a organização aos Estados, DF e Municípios.",
+        "Circunscrição equivale a liberdade para modificar qualquer competência legal? Não. Delimita atuação e precisa respeitar a distribuição de atribuições."
+      ],
+      "termos": [
+        {
+          "termo": "Circunscrição",
+          "significado": "Área delimitada de atuação do órgão, integrada à competência legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 24"
+      ],
+      "expected": {
+        "unit_id": "0baa9aa9-30ba-56df-adfc-7bf1caabb267",
+        "content_sha256": "687b432b124578382d906a859e0d6a744d7e5499ada922235570c03735b4f3c4",
+        "simples": "Os Estados, o Distrito Federal e os Municípios organizam os respectivos órgãos e entidades executivos de trânsito e executivos rodoviários, estabelecendo os limites circunscricionais de suas atuações.",
+        "pontos": [
+          "Cada ente organiza seus órgãos.",
+          "Definição dos limites de atuação."
+        ],
+        "atencao": [
+          "Circunscrição define quem tem competência sobre a via."
+        ],
+        "exemplo": "O município cria seu órgão de trânsito e define a área de atuação.",
+        "prova": [
+          "Assertiva que atribui à União a organização dos órgãos municipais de trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-9",
+      "unit_id": "659ece38-f99e-5da1-acd7-6dd7ece4c205",
+      "content_sha256": "e116512721dbb17b066c0c6fb04b3d2c594506e4965fe3fac22b76997a935752",
+      "simples": "O Presidente da República designa o ministério ou órgão da Presidência responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual fica vinculado o Contran e subordinado o órgão máximo executivo de trânsito da União.",
+      "pontos": [
+        "Designação pelo Presidente da República.",
+        "Vinculação do Contran.",
+        "Subordinação do órgão máximo executivo da União."
+      ],
+      "atencao": [
+        "O órgão máximo executivo da União é subordinado; o Contran é vinculado.",
+        "A página institucional atual identifica Senatran no Ministério dos Transportes; distinguir texto legal e estrutura administrativa atual."
+      ],
+      "exemplo": "Uma decisão administrativa diferencia Contran e órgão máximo executivo federal. Resposta: o art. 9º usa vinculação para o Contran e subordinação para o executivo. Variação: É o Presidente da República quem designa o ministério ou órgão coordenador; o Contran não escolhe sozinho essa pasta.",
+      "prova": [
+        "Vinculação e subordinação foram usadas indistintamente no artigo? Não. O texto diferencia expressamente os dois vínculos.",
+        "Uma designação antiga de ministério deve ser memorizada como estrutura imutável? Não. O artigo contém regra de designação e a estrutura atual precisa ser consultada."
+      ],
+      "termos": [
+        {
+          "termo": "Coordenação máxima",
+          "significado": "Designação presidencial do ministério ou órgão da Presidência responsável pelo sistema."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 10",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran"
+      ],
+      "expected": {
+        "unit_id": "659ece38-f99e-5da1-acd7-6dd7ece4c205",
+        "content_sha256": "e116512721dbb17b066c0c6fb04b3d2c594506e4965fe3fac22b76997a935752",
+        "simples": "O Presidente da República designa o ministério ou órgão da Presidência responsável pela coordenação máxima do Sistema Nacional de Trânsito, ao qual fica vinculado o Contran e subordinado o órgão máximo executivo de trânsito da União.",
+        "pontos": [
+          "Designação pelo Presidente da República.",
+          "Vinculação do Contran.",
+          "Subordinação do órgão máximo executivo da União."
+        ],
+        "atencao": [
+          "O órgão máximo executivo da União é subordinado; o Contran é vinculado."
+        ],
+        "exemplo": "O decreto presidencial define a pasta que coordena o sistema.",
+        "prova": [
+          "Assertiva que atribui ao Contran a designação do ministério coordenador erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10",
+      "unit_id": "4384fd81-34ab-57f6-8a29-a9d791336fd6",
+      "content_sha256": "e7f9f4a45c763c075dd95dbece1a2a4457b1cc2b489f302e19c5eb23ed76f480",
+      "simples": "O Contran tem sede no DF e composição ministerial por áreas de competência. A Lei 14.599/2023 reorganizou a composição e a presidência. A representação dos Ministros exige CCE 17 ou superior, ou oficial-general quando militar; o dirigente do órgão máximo executivo é Secretário-Executivo. Votação e aprovação exigem maioria absoluta.",
+      "pontos": [
+        "Áreas: ciência/tecnologia/inovações, educação, defesa, meio ambiente, saúde, justiça, relações exteriores, indústria/comércio, agropecuária, transportes terrestres, segurança pública e mobilidade urbana.",
+        "Preside o Ministro ao qual está subordinado o órgão máximo executivo federal.",
+        "Representante: CCE 17 ou superior; hipótese militar: oficial-general.",
+        "Secretário-Executivo: dirigente do órgão máximo executivo. Quórum: MAIORIA ABSOLUTA."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: redação de 2023; não recuperar incisos revogados ou vetados como áreas ativas.",
+        "Convidado não é representante com voto; não trocar presidência e Secretaria-Executiva."
+      ],
+      "exemplo": "Um convidado tenta votar numa reunião do Contran. Resposta: não se confunde com Ministro membro ou representante qualificado do §4º; convidados do art. 10-A não votam. Variação: Uma votação que reúne apenas maioria dos presentes pode ser insuficiente: o §6º exige maioria absoluta, não simples maioria relativa.",
+      "prova": [
+        "Qualquer servidor pode representar um Ministro? Não. O §4º exige nível igual ou superior a CCE 17, ou oficial-general quando militar.",
+        "O dirigente do órgão máximo executivo preside necessariamente o Contran? Não. É Secretário-Executivo; a presidência cabe ao Ministro indicado no §3º-A."
+      ],
+      "termos": [
+        {
+          "termo": "Maioria absoluta",
+          "significado": "Mais da metade da composição pertinente, diferente de maioria dos presentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "4384fd81-34ab-57f6-8a29-a9d791336fd6",
+        "content_sha256": "e7f9f4a45c763c075dd95dbece1a2a4457b1cc2b489f302e19c5eb23ed76f480",
+        "simples": "O Contran tem sede no Distrito Federal e é composto por Ministros de Estado responsáveis por áreas definidas em lei, como ciência e tecnologia, educação, defesa, meio ambiente, saúde, justiça e relações exteriores, entre outras. Vários incisos foram revogados ou alterados por leis posteriores.",
+        "pontos": [
+          "Sede no Distrito Federal.",
+          "Composto por Ministros de Estado.",
+          "Incisos alterados ou revogados por leis posteriores."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: a composição do Contran foi reorganizada; confira o texto vigente.",
+          "É composto por Ministros de Estado."
+        ],
+        "exemplo": "O Contran reúne representantes de várias pastas ministeriais.",
+        "prova": [
+          "Assertiva que compõe o Contran com representantes estaduais erra: é composto por Ministros de Estado."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-10-a",
+      "unit_id": "38d9b4f9-dff5-5439-a383-403830452b7e",
+      "content_sha256": "ea795331861665def03ffeb2d0e81f682f98455524115aba1d0ffe810b879e4b",
+      "simples": "Podem ser convidados a participar de reuniões do Contran, sem direito a voto, representantes de órgãos e entidades setoriais responsáveis ou impactados pelas propostas ou matérias em exame.",
+      "pontos": [
+        "Convidados participam sem direito a voto."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: redação atual da Lei 14.071/2020, com vigência diferida de 180 dias após publicação; já aplicável na conferência de 13/10/2026.",
+        "Não somar voto de convidado ao quórum legal."
+      ],
+      "exemplo": "Representante de entidade setorial é convidado para explicar impacto de uma proposta. Resposta: pode participar, mas sem direito a voto. Variação: Um servidor que representa formalmente Ministro sob o art. 10, §4º, está em categoria distinta do mero convidado.",
+      "prova": [
+        "O interesse da entidade na matéria dá voto ao convidado? Não. O art. 10-A exclui expressamente esse direito.",
+        "Convidado setorial e representante de Ministro são categorias iguais? Não. Observar o regime de convite e a representação qualificada do art. 10."
+      ],
+      "termos": [
+        {
+          "termo": "Convidado setorial",
+          "significado": "Participante responsável ou impactado pela matéria, sem voto nesse recorte."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 10",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "38d9b4f9-dff5-5439-a383-403830452b7e",
+        "content_sha256": "ea795331861665def03ffeb2d0e81f682f98455524115aba1d0ffe810b879e4b",
+        "simples": "Podem ser convidados a participar de reuniões do Contran, sem direito a voto, representantes de órgãos e entidades setoriais responsáveis ou impactados pelas propostas ou matérias em exame.",
+        "pontos": [
+          "Convidados participam sem direito a voto."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "SEM direito a voto."
+        ],
+        "exemplo": "Representante do setor de transporte participa da reunião, mas não vota.",
+        "prova": [
+          "Assertiva que concede voto aos convidados das reuniões do Contran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-12",
+      "unit_id": "4946a04d-3302-58db-baa5-adb7aea0c112",
+      "content_sha256": "8fa599fa9ebd053f3caea87916fa3a99fd53887c5ef1398719b70ef60087297d",
+      "simples": "Compete ao Contran estabelecer as normas regulamentares do Código e as diretrizes da Política Nacional de Trânsito; coordenar os órgãos do Sistema; criar Câmaras Temáticas; fixar seu regimento e as diretrizes de funcionamento dos Cetran e do Contrandife e das JARI; zelar pela uniformidade das normas; normatizar o enquadramento das condutas, a fiscalização, as penalidades e a arrecadação das multas; responder a consultas; normatizar aprendizagem, habilitação, documentos de condutores, registro e licenciamento de veículos; aprovar a sinalização e os equipamentos de trânsito; avocar processos sobre conflitos de competência; dirimir conflitos de circunscrição; e normatizar o processo de formação do candidato à CNH, com conteúdo, carga horária, avaliações e exames. As propostas de normas regulamentares passam por consulta pública de, no mínimo, 30 dias. Em urgência, o presidente pode editar deliberação ad referendum do Plenário, que perde eficácia se não aprovada em 120 dias, mantidos os efeitos já produzidos.",
+      "pontos": [
+        "Normas regulamentares e diretrizes da política de trânsito.",
+        "Câmaras Temáticas e regimentos dos Cetran e JARI.",
+        "Normatizar habilitação, registro, licenciamento e formação do candidato.",
+        "Consulta pública de, no mínimo, 30 dias.",
+        "Deliberação ad referendum perde eficácia em 120 dias se não aprovada.",
+        "Contribuições: acesso público por DOIS ANOS contados do encerramento.",
+        "Urgência E relevante interesse público; 120 dias para aprovação, manutenção dos efeitos decorrentes e vedação de reedição.",
+        "§5º admite regulamentação de sinalização com técnicas de estímulos comportamentais para reduzir sinistros."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o inciso XV (formação do candidato) e as regras de consulta pública e deliberação ad referendum vieram de leis posteriores.",
+        "Consulta pública de no mínimo 30 dias para normas regulamentares.",
+        "Deliberação ad referendum: perde eficácia em 120 dias, mantidos os efeitos.",
+        "Não afirmar que toda deliberação urgente já é resolução definitiva nem que a perda de eficácia apaga automaticamente efeitos anteriores."
+      ],
+      "exemplo": "Uma proposta de norma ordinária é enviada à consulta pública por 20 dias. Resposta: o §1º exige período mínimo de 30 dias antes do exame pelo Contran. Variação: Uma deliberação urgente e de relevante interesse público segue regime próprio: se não aprovada em 120 dias, perde eficácia, mas mantém os efeitos decorrentes; não pode ser reeditada.",
+      "prova": [
+        "As contribuições da consulta ficam disponíveis por somente 30 dias? Não. O §2º prevê dois anos após o encerramento da consulta.",
+        "A deliberação urgente se submete às mesmas regras dos §§1º e 2º? Não. O §4º, II, excepciona esse regime e veda reedição; urgência e relevante interesse público continuam necessários."
+      ],
+      "termos": [
+        {
+          "termo": "Ad referendum",
+          "significado": "Deliberação sujeita ao exame posterior do Plenário nos prazos e condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 7º",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "4946a04d-3302-58db-baa5-adb7aea0c112",
+        "content_sha256": "8fa599fa9ebd053f3caea87916fa3a99fd53887c5ef1398719b70ef60087297d",
+        "simples": "Compete ao Contran estabelecer as normas regulamentares do Código e as diretrizes da Política Nacional de Trânsito; coordenar os órgãos do Sistema; criar Câmaras Temáticas; fixar seu regimento e as diretrizes de funcionamento dos Cetran e do Contrandife e das JARI; zelar pela uniformidade das normas; normatizar o enquadramento das condutas, a fiscalização, as penalidades e a arrecadação das multas; responder a consultas; normatizar aprendizagem, habilitação, documentos de condutores, registro e licenciamento de veículos; aprovar a sinalização e os equipamentos de trânsito; avocar processos sobre conflitos de competência; dirimir conflitos de circunscrição; e normatizar o processo de formação do candidato à CNH, com conteúdo, carga horária, avaliações e exames. As propostas de normas regulamentares passam por consulta pública de, no mínimo, 30 dias. Em urgência, o presidente pode editar deliberação ad referendum do Plenário, que perde eficácia se não aprovada em 120 dias, mantidos os efeitos já produzidos.",
+        "pontos": [
+          "Normas regulamentares e diretrizes da política de trânsito.",
+          "Câmaras Temáticas e regimentos dos Cetran e JARI.",
+          "Normatizar habilitação, registro, licenciamento e formação do candidato.",
+          "Consulta pública de, no mínimo, 30 dias.",
+          "Deliberação ad referendum perde eficácia em 120 dias se não aprovada."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o inciso XV (formação do candidato) e as regras de consulta pública e deliberação ad referendum vieram de leis posteriores.",
+          "Consulta pública de no mínimo 30 dias para normas regulamentares.",
+          "Deliberação ad referendum: perde eficácia em 120 dias, mantidos os efeitos."
+        ],
+        "exemplo": "A resolução que padroniza a sinalização vem do Contran.",
+        "prova": [
+          "Assertiva que atribui ao Detran a edição das normas regulamentares do Código erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 7º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T23:45:52.053001+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-13",
+      "unit_id": "336192b4-9d29-5d71-9754-ce1cb3b57cf3",
+      "content_sha256": "42c8c3841f17236e8ce67675606937de610d4efca45908db3d1a84ff7d12493e",
+      "simples": "Câmaras Temáticas são órgãos técnicos vinculados ao Contran, com especialistas que oferecem estudo, sugestões e embasamento para suas decisões. O §1º reúne representantes da União, dos Estados OU do DF e dos Municípios em igual número, além de segmentos sociais. Coordenação e designação seguem os recortes do artigo e do ato de criação.",
+      "pontos": [
+        "Órgãos técnicos vinculados ao Contran.",
+        "Integradas por especialistas.",
+        "Composição paritária entre os entes.",
+        "Sociedade: representação por pessoa jurídica e requisitos do Contran.",
+        "Coordenação definida no ato de criação, no recorte do §3º atualizado em 2020."
+      ],
+      "atencao": [
+        "Função de assessoramento técnico, sem poder decisório.",
+        "Não atribuir conteúdo a incisos vetados ou transformar sugestão técnica em poder normativo final."
+      ],
+      "exemplo": "Especialistas estudam a segurança de ciclistas e oferecem subsídios ao Contran. Resposta: a Câmara Temática assessora; não substitui o colegiado na decisão normativa. Variação: Há também especialistas de segmentos sociais representados por pessoas jurídicas que atendam aos requisitos; não restringir a Câmara aos servidores públicos.",
+      "prova": [
+        "A Câmara Temática edita por si a norma final do Contran? Não. Sua função legal é estudo, sugestão e embasamento técnico.",
+        "A coordenação pertence necessariamente a representante estadual? Não. O §3º prevê representante do órgão máximo executivo federal ou de Ministério representado no Contran, conforme o ato de criação."
+      ],
+      "termos": [
+        {
+          "termo": "Assessoramento técnico",
+          "significado": "Estudo especializado para subsidiar a decisão do Contran."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "336192b4-9d29-5d71-9754-ce1cb3b57cf3",
+        "content_sha256": "42c8c3841f17236e8ce67675606937de610d4efca45908db3d1a84ff7d12493e",
+        "simples": "As Câmaras Temáticas, órgãos técnicos vinculados ao Contran, são integradas por especialistas e têm por objetivo estudar e oferecer sugestões e embasamento técnico sobre assuntos específicos para as decisões do Contran. Cada Câmara é constituída por especialistas representantes de órgãos executivos da União, dos Estados, do Distrito Federal e dos Municípios, em igual número.",
+        "pontos": [
+          "Órgãos técnicos vinculados ao Contran.",
+          "Integradas por especialistas.",
+          "Composição paritária entre os entes."
+        ],
+        "atencao": [
+          "Função de assessoramento técnico, sem poder decisório."
+        ],
+        "exemplo": "Uma Câmara Temática estuda a segurança de motocicletas e sugere ao Contran.",
+        "prova": [
+          "Assertiva que dá poder normativo final às Câmaras Temáticas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-14",
+      "unit_id": "6066da8a-86b7-55de-be2b-ffb7afddd7a6",
+      "content_sha256": "da7a989a06cae26e27ea30e9d4c6decbb92e52f4e7cc7e32c5c341b3cb5b451a",
+      "simples": "Compete aos Cetran e ao Contrandife cumprir e fazer cumprir a legislação de trânsito; elaborar normas no âmbito de suas competências; responder a consultas; estimular campanhas educativas; julgar os recursos interpostos contra decisões das JARI e dos órgãos executivos estaduais nos casos de inaptidão permanente constatada nos exames de aptidão física, mental ou psicológica; indicar representante para a comissão que examina candidatos com deficiência física; acompanhar e coordenar as atividades de trânsito no Estado, reportando-se ao Contran; dirimir conflitos de circunscrição entre Municípios; informar o Contran sobre o cumprimento do art. 333; e designar junta especial de saúde nos recursos deferidos. Das decisões do Cetran nos recursos do inciso V não cabe recurso na esfera administrativa.",
+      "pontos": [
+        "Normas e consultas no âmbito estadual ou distrital.",
+        "Julga recursos contra decisões das JARI.",
+        "Julga recursos de inaptidão permanente nos exames de aptidão.",
+        "Dirime conflitos de circunscrição entre Municípios.",
+        "Sem recurso administrativo contra as decisões do inciso V."
+      ],
+      "atencao": [
+        "Cetran julga recursos contra decisões das JARI e nos casos de inaptidão permanente.",
+        "Das decisões do inciso V NÃO cabe recurso administrativo.",
+        "Suas normas valem no âmbito estadual ou distrital.",
+        "Não generalizar o parágrafo único a todo ato dos Conselhos nem eliminar a via judicial."
+      ],
+      "exemplo": "A JARI rejeita recurso e a parte interpõe a segunda instância cabível ao CETRAN. Resposta: o inciso V prevê julgamento de recurso contra decisão da JARI, com o recorte pertinente. Variação: O esgotamento da via administrativa do inciso V não impede, por si, controle judicial de ilegalidade.",
+      "prova": [
+        "CETRAN e CONTRANDIFE podem julgar recurso de inaptidão permanente nos exames indicados? Sim. O inciso V, b, prevê essa hipótese, distinta de recurso contra multa.",
+        "O parágrafo proíbe qualquer acesso ao Judiciário? Não. Refere-se à esfera administrativa nos casos do inciso V."
+      ],
+      "termos": [
+        {
+          "termo": "Instância administrativa",
+          "significado": "Exame dentro da Administração, distinto do controle jurisdicional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 16"
+      ],
+      "expected": {
+        "unit_id": "6066da8a-86b7-55de-be2b-ffb7afddd7a6",
+        "content_sha256": "da7a989a06cae26e27ea30e9d4c6decbb92e52f4e7cc7e32c5c341b3cb5b451a",
+        "simples": "Compete aos Cetran e ao Contrandife cumprir e fazer cumprir a legislação de trânsito; elaborar normas no âmbito de suas competências; responder a consultas; estimular campanhas educativas; julgar os recursos interpostos contra decisões das JARI e dos órgãos executivos estaduais nos casos de inaptidão permanente constatada nos exames de aptidão física, mental ou psicológica; indicar representante para a comissão que examina candidatos com deficiência física; acompanhar e coordenar as atividades de trânsito no Estado, reportando-se ao Contran; dirimir conflitos de circunscrição entre Municípios; informar o Contran sobre o cumprimento do art. 333; e designar junta especial de saúde nos recursos deferidos. Das decisões do Cetran nos recursos do inciso V não cabe recurso na esfera administrativa.",
+        "pontos": [
+          "Normas e consultas no âmbito estadual ou distrital.",
+          "Julga recursos contra decisões das JARI.",
+          "Julga recursos de inaptidão permanente nos exames de aptidão.",
+          "Dirime conflitos de circunscrição entre Municípios.",
+          "Sem recurso administrativo contra as decisões do inciso V."
+        ],
+        "atencao": [
+          "Cetran julga recursos contra decisões das JARI e nos casos de inaptidão permanente.",
+          "Das decisões do inciso V NÃO cabe recurso administrativo.",
+          "Suas normas valem no âmbito estadual ou distrital."
+        ],
+        "exemplo": "O Cetran responde a consultas sobre a aplicação da legislação no estado.",
+        "prova": [
+          "Assertiva que atribui ao Cetran a edição de normas nacionais erra: suas normas valem no âmbito estadual."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T23:45:52.053001+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-15",
+      "unit_id": "80937e9b-4703-5f37-ad61-288e9fac1fb4",
+      "content_sha256": "7dc5a260ad3959a09bf90280a2c8a30809cc969ba13d334f0c1e9fba825eb6d6",
+      "simples": "Os presidentes dos Cetran e do Contrandife são nomeados pelos Governadores dos Estados e do Distrito Federal e devem ter reconhecida experiência em matéria de trânsito. Os membros desses órgãos também são nomeados pelos Governadores e devem ser pessoas de reconhecida experiência em trânsito.",
+      "pontos": [
+        "Nomeação pelos Governadores.",
+        "Reconhecida experiência em trânsito.",
+        "Mandato dos MEMBROS: DOIS ANOS, admitida recondução."
+      ],
+      "atencao": [
+        "Quem nomeia é o Governador.",
+        "Não omitir o prazo nem confundir nomeação dos Conselhos estaduais/distrital com composição ministerial do Contran."
+      ],
+      "exemplo": "Governador nomeia pessoa com experiência em trânsito para integrar o CETRAN. Resposta: a competência de nomeação e a experiência são exigidas; mandato dos membros é de dois anos, com recondução admitida. Variação: Ter experiência não transfere a nomeação ao Contran ou ao Presidente da República.",
+      "prova": [
+        "O mandato dos membros é de cinco anos sem recondução? Não. O §3º estabelece dois anos e admite recondução.",
+        "A experiência em trânsito é dispensável por livre nomeação? Não. Presidentes e membros devem atender ao requisito expresso."
+      ],
+      "termos": [
+        {
+          "termo": "Recondução",
+          "significado": "Nova permanência no mandato admitida pela lei, sem alterar a duração de dois anos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 14"
+      ],
+      "expected": {
+        "unit_id": "80937e9b-4703-5f37-ad61-288e9fac1fb4",
+        "content_sha256": "7dc5a260ad3959a09bf90280a2c8a30809cc969ba13d334f0c1e9fba825eb6d6",
+        "simples": "Os presidentes dos Cetran e do Contrandife são nomeados pelos Governadores dos Estados e do Distrito Federal e devem ter reconhecida experiência em matéria de trânsito. Os membros desses órgãos também são nomeados pelos Governadores e devem ser pessoas de reconhecida experiência em trânsito.",
+        "pontos": [
+          "Nomeação pelos Governadores.",
+          "Reconhecida experiência em trânsito."
+        ],
+        "atencao": [
+          "Quem nomeia é o Governador."
+        ],
+        "exemplo": "O Governador nomeia o presidente do Cetran.",
+        "prova": [
+          "Assertiva que atribui ao Presidente da República a nomeação dos membros do Cetran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-16",
+      "unit_id": "a8eb1a11-dd78-53cf-97ab-d96ebce57e76",
+      "content_sha256": "4026e86aace9216fef0dfd85542dc97509e9f2ff007e0d7b7fada5395e44ed0a",
+      "simples": "Junto a cada órgão ou entidade executivo de trânsito ou rodoviário funcionam as Juntas Administrativas de Recursos de Infrações, as JARI, órgãos colegiados responsáveis pelo julgamento dos recursos interpostos contra as penalidades por eles impostas. As JARI têm regimento próprio, observadas as diretrizes do Contran, e apoio administrativo e financeiro do órgão junto ao qual funcionam.",
+      "pontos": [
+        "JARI junto a cada órgão executivo.",
+        "Colegiado que julga recursos contra penalidades.",
+        "Regimento próprio e apoio do órgão."
+      ],
+      "atencao": [
+        "A JARI é a primeira instância recursal administrativa.",
+        "Distinguir defesa da autuação, aplicação da penalidade e instâncias recursais; não inventar prazos neste artigo."
+      ],
+      "exemplo": "Um órgão executivo aplica penalidade e o interessado recorre. Resposta: a JARI ligada ao órgão julga o recurso no recorte legal; defesa da autuação e recurso contra penalidade não são a mesma fase. Variação: A JARI possui regimento próprio, mas deve respeitar as diretrizes do Contran e recebe apoio administrativo e financeiro do órgão.",
+      "prova": [
+        "A JARI julga recursos contra penalidades de qualquer órgão sem limite? Não. O art. 16 liga a Junta às penalidades do órgão junto ao qual funciona.",
+        "Regimento próprio permite ignorar diretrizes nacionais? Não. O regimento próprio deve observar as diretrizes do Contran previstas no art. 12, VI."
+      ],
+      "termos": [
+        {
+          "termo": "JARI",
+          "significado": "Colegiado administrativo recursal, distinto da autoridade que autua e aplica a penalidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 17"
+      ],
+      "expected": {
+        "unit_id": "a8eb1a11-dd78-53cf-97ab-d96ebce57e76",
+        "content_sha256": "4026e86aace9216fef0dfd85542dc97509e9f2ff007e0d7b7fada5395e44ed0a",
+        "simples": "Junto a cada órgão ou entidade executivo de trânsito ou rodoviário funcionam as Juntas Administrativas de Recursos de Infrações, as JARI, órgãos colegiados responsáveis pelo julgamento dos recursos interpostos contra as penalidades por eles impostas. As JARI têm regimento próprio, observadas as diretrizes do Contran, e apoio administrativo e financeiro do órgão junto ao qual funcionam.",
+        "pontos": [
+          "JARI junto a cada órgão executivo.",
+          "Colegiado que julga recursos contra penalidades.",
+          "Regimento próprio e apoio do órgão."
+        ],
+        "atencao": [
+          "A JARI é a primeira instância recursal administrativa."
+        ],
+        "exemplo": "O condutor multado recorre à JARI do órgão que o autuou.",
+        "prova": [
+          "Assertiva que atribui ao Contran o julgamento de recursos de multas em primeira instância erra."
+        ],
+        "termos": [
+          {
+            "termo": "JARI",
+            "significado": "Junta Administrativa de Recursos de Infrações."
+          }
+        ],
+        "remissoes": [
+          "Art. 17"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-17",
+      "unit_id": "171d8249-845e-5ecf-87f8-fbd56fe63458",
+      "content_sha256": "d4698ee8307ac631029134dfada7d87e778b8a9d0c95efeeeee9dd6194705f08",
+      "simples": "Compete às JARI julgar os recursos interpostos pelos infratores; solicitar aos órgãos de trânsito e rodoviários informações complementares relativas aos recursos; e encaminhar aos órgãos informações sobre problemas observados nas autuações e apontados em recursos, para as providências cabíveis.",
+      "pontos": [
+        "Julgar recursos.",
+        "Solicitar informações complementares.",
+        "Encaminhar informações sobre problemas nas autuações.",
+        "Comunicar problemas de autuação que se repitam sistematicamente, no recorte do inciso III."
+      ],
+      "atencao": [
+        "Também funcionam como fonte de retroalimentação aos órgãos.",
+        "Não transformar comunicação de falhas em competência para legislar sobre novas infrações."
+      ],
+      "exemplo": "A Junta encontra informação insuficiente no processo de recurso. Resposta: pode solicitar dados complementares ao órgão executivo para analisar a situação recorrida. Variação: Um erro repetido em diversas autuações é comunicado ao órgão; isso não significa que a JARI passe a criar infrações novas.",
+      "prova": [
+        "Julgar é a única função da JARI neste artigo? Não. Também solicita informações e comunica problemas sistemáticos de autuação.",
+        "A informação complementar autoriza dispensar defesa ou fundamentação? Não. A instrução melhora análise do recurso e não elimina as garantias pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Problema sistemático",
+          "significado": "Falha que se repete nas autuações e pode ser comunicada pela JARI."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 16"
+      ],
+      "expected": {
+        "unit_id": "171d8249-845e-5ecf-87f8-fbd56fe63458",
+        "content_sha256": "d4698ee8307ac631029134dfada7d87e778b8a9d0c95efeeeee9dd6194705f08",
+        "simples": "Compete às JARI julgar os recursos interpostos pelos infratores; solicitar aos órgãos de trânsito e rodoviários informações complementares relativas aos recursos; e encaminhar aos órgãos informações sobre problemas observados nas autuações e apontados em recursos, para as providências cabíveis.",
+        "pontos": [
+          "Julgar recursos.",
+          "Solicitar informações complementares.",
+          "Encaminhar informações sobre problemas nas autuações."
+        ],
+        "atencao": [
+          "Também funcionam como fonte de retroalimentação aos órgãos."
+        ],
+        "exemplo": "A JARI aponta ao órgão um erro recorrente em autuações.",
+        "prova": [
+          "Assertiva que impede a JARI de solicitar informações complementares erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-19",
+      "unit_id": "56b439f0-bf69-54b6-ad6f-8a1b39ffd245",
+      "content_sha256": "503f701142de7639973952a446e319af277012564bda94b1b28b964045274ecc",
+      "simples": "A Senatran é identificada pelo portal oficial como órgão máximo executivo federal. O art. 19 reúne supervisão e execução da política, procedimentos, registros nacionais, estatísticas, educação e suporte ao Contran, com atribuições próprias e hipóteses de delegação. Consulta do §5º é dos dados da própria habilitação e do próprio veículo.",
+      "pontos": [
+        "RENACH, RENAVAM, RENAINF, RNPC e RENAEST possuem objetos distintos.",
+        "§1º: sindicância, deficiência/improbidade comprovada e aprovação do Contran para assumir atividades até saneamento.",
+        "§3º: fornecimento estatístico MÊS A MÊS.",
+        "§5º: consulta on-line do motorista/proprietário a seus dados, incluída pela Lei 14.861/2024."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: separar inclusão de Renaest em 2023 e consulta on-line em 2024 da data original do CTB.",
+        "Não confundir funções executivas/procedimentais da Senatran com posição normativa máxima do Contran, nem disponibilização dos próprios dados com publicidade irrestrita.",
+        "Lei 14.861: publicação em 28/5/2024 e vacância de 180 dias; esse período já transcorreu na conferência de 13/10/2026."
+      ],
+      "exemplo": "Uma candidata troca Renach e Renavam na prova. Resposta: Renach registra habilitações e Renavam veículos; o órgão máximo executivo federal mantém os registros nacionais previstos no artigo. Variação: A consulta on-line do §5º abrange a própria habilitação e o veículo de propriedade do usuário; não é acesso irrestrito a dados pessoais de terceiros.",
+      "prova": [
+        "Uma deficiência estadual autoriza intervenção federal instantânea sem sindicância e sem Contran? Não. O §1º exige comprovação por sindicância e aprovação do Contran, até saneamento das irregularidades.",
+        "Os dados estatísticos previstos são fornecidos apenas uma vez por ano? Não. O §3º determina envio obrigatório mês a mês."
+      ],
+      "termos": [
+        {
+          "termo": "Registros nacionais",
+          "significado": "Renach: habilitações; Renavam: veículos; Renainf: infrações; RNPC: condutores positivos; Renaest: sinistros e estatísticas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14861.htm"
+      ],
+      "expected": {
+        "unit_id": "56b439f0-bf69-54b6-ad6f-8a1b39ffd245",
+        "content_sha256": "503f701142de7639973952a446e319af277012564bda94b1b28b964045274ecc",
+        "simples": "Compete ao órgão máximo executivo de trânsito da União cumprir e fazer cumprir a legislação de trânsito e a execução das normas e diretrizes do Contran; supervisionar, coordenar e fiscalizar os órgãos delegados e a execução da Política Nacional de Trânsito; articular-se com os órgãos dos demais entes; entre outras atribuições relativas a registros, estatísticas e fiscalização.",
+        "pontos": [
+          "Cumprir as normas do Contran.",
+          "Supervisão e correição dos órgãos delegados.",
+          "Articulação com os sistemas de trânsito, transporte e segurança pública.",
+          "Manter o Renach, o Renavam e a estatística nacional de trânsito.",
+          "Administrar o fundo nacional de segurança e educação de trânsito."
+        ],
+        "atencao": [
+          "Executa e supervisiona; não edita as normas regulamentares, que são do Contran.",
+          "Mantém o Renach (habilitações) e o Renavam (veículos)."
+        ],
+        "exemplo": "O órgão federal supervisiona a execução da política nacional.",
+        "prova": [
+          "Assertiva que dá ao órgão máximo executivo da União a função normativa do Contran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T23:45:52.053001+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-20",
+      "unit_id": "e3144e77-ee50-5a61-a764-311fd0e696e6",
+      "content_sha256": "6db16ea4dacfaff0b21295d4ef60090f299de2ab9255373ca95d986b37aa1018",
+      "simples": "Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais, cumprir e fazer cumprir a legislação e as normas de trânsito, realizar o patrulhamento ostensivo com operações de segurança pública, executar a fiscalização de trânsito, autuar e aplicar medidas administrativas, entre outras atribuições.",
+      "pontos": [
+        "Atuação nas rodovias e estradas federais.",
+        "Patrulhamento ostensivo.",
+        "Fiscalização, autuação e medidas administrativas.",
+        "Suspensão específica da infração: inciso XII, com comunicação ao órgão máximo executivo federal.",
+        "Socorro, salvamento, estatísticas, perícia administrativa e prevenção não se confundem com função exclusivamente arrecadatória."
+      ],
+      "atencao": [
+        "Âmbito: rodovias e estradas FEDERAIS.",
+        "Não trocar PRF por Polícia Federal nem extrair exclusividade universal de fiscalização; distinguir suspensão específica e processo por pontos."
+      ],
+      "exemplo": "A PRF autua em rodovia federal e verifica infração com suspensão específica. Resposta: o inciso XII prevê aplicação dessa suspensão e comunicação ao órgão máximo executivo, dentro da competência legal. Variação: A presença da PRF não elimina por si as atribuições do órgão executivo rodoviário do art. 21.",
+      "prova": [
+        "A PRF exerce só autuação, sem nenhuma penalidade? Não. O texto inclui advertência, multa e suspensão específica, além de medidas administrativas e outras atividades.",
+        "Este artigo estabelece competência exclusiva da PRF sobre qualquer órgão em toda rodovia federal? Não. Define seu âmbito, integrado às demais competências legais."
+      ],
+      "termos": [
+        {
+          "termo": "Patrulhamento ostensivo",
+          "significado": "Atuação da PRF no recorte legal de segurança pública e trânsito nas rodovias e estradas federais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 21",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=965&cod_tema_final=965"
+      ],
+      "expected": {
+        "unit_id": "e3144e77-ee50-5a61-a764-311fd0e696e6",
+        "content_sha256": "6db16ea4dacfaff0b21295d4ef60090f299de2ab9255373ca95d986b37aa1018",
+        "simples": "Compete à Polícia Rodoviária Federal, no âmbito das rodovias e estradas federais, cumprir e fazer cumprir a legislação e as normas de trânsito, realizar o patrulhamento ostensivo com operações de segurança pública, executar a fiscalização de trânsito, autuar e aplicar medidas administrativas, entre outras atribuições.",
+        "pontos": [
+          "Atuação nas rodovias e estradas federais.",
+          "Patrulhamento ostensivo.",
+          "Fiscalização, autuação e medidas administrativas."
+        ],
+        "atencao": [
+          "Âmbito: rodovias e estradas FEDERAIS."
+        ],
+        "exemplo": "A PRF autua o condutor que excede a velocidade na rodovia federal.",
+        "prova": [
+          "Assertiva que estende a competência da PRF a todas as vias urbanas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-21",
+      "unit_id": "7c8f08b1-9583-59a9-b834-afa778a39fa1",
+      "content_sha256": "5c16d8f541c8b1f7d2c408db680feeea467dc651b376657f85b488514e4393e5",
+      "simples": "Compete aos órgãos e entidades executivos rodoviários da União, dos Estados, do Distrito Federal e dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito, implantar e manter a sinalização e os equipamentos de controle viário, e executar a fiscalização, autuar e aplicar as penalidades e medidas administrativas, entre outras atribuições.",
+      "pontos": [
+        "Planejamento e operação do trânsito nas rodovias.",
+        "Sinalização e equipamentos de controle.",
+        "Fiscalização, autuação e penalidades.",
+        "Inciso XV prevê suspensão específica com comunicação ao órgão máximo executivo federal.",
+        "Aplicação das funções rodoviárias exige o âmbito de circunscrição; não é exclusividade automática sobre todos os assuntos na via."
+      ],
+      "atencao": [
+        "Não reduzir toda distribuição do CTB à frase rodoviário só em rodovia, executivo só em via urbana. Circunscrição, atividade e eventual delegação são relevantes.",
+        "Tema 965/STJ: competência do DNIT para fiscalização e penalidade em rodovias/estradas federais, em caráter NÃO EXCLUSIVO. O registro remete ao Tema 1077/STF; não se certifica aqui todo controle constitucional posterior."
+      ],
+      "exemplo": "O DNIT fiscaliza infração de trânsito em rodovia federal dentro de suas atribuições. Resposta: o Tema 965/STJ reconhece competência não exclusiva; não excluir a autuação apenas porque a PRF também atua. Variação: A fiscalização precisa continuar dentro da circunscrição e da competência pertinente; o entendimento não concede poder irrestrito em qualquer via.",
+      "prova": [
+        "Órgão executivo rodoviário cuida apenas de sinalização, sem autuar? Não. O art. 21 contempla fiscalização, penalidades, medidas e suspensão específica, além de outras funções.",
+        "O Tema 965 torna o DNIT fiscal exclusivo de toda rodovia federal? Não. A tese é expressamente não exclusiva e deve ser integrada aos limites legais."
+      ],
+      "termos": [
+        {
+          "termo": "Competência não exclusiva",
+          "significado": "Atribuição que não elimina automaticamente atuação válida de outro órgão competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 20",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=965&cod_tema_final=965",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "7c8f08b1-9583-59a9-b834-afa778a39fa1",
+        "content_sha256": "5c16d8f541c8b1f7d2c408db680feeea467dc651b376657f85b488514e4393e5",
+        "simples": "Compete aos órgãos e entidades executivos rodoviários da União, dos Estados, do Distrito Federal e dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito, implantar e manter a sinalização e os equipamentos de controle viário, e executar a fiscalização, autuar e aplicar as penalidades e medidas administrativas, entre outras atribuições.",
+        "pontos": [
+          "Planejamento e operação do trânsito nas rodovias.",
+          "Sinalização e equipamentos de controle.",
+          "Fiscalização, autuação e penalidades."
+        ],
+        "atencao": [
+          "Órgãos RODOVIÁRIOS atuam em rodovias; os executivos de trânsito, nas vias urbanas."
+        ],
+        "exemplo": "O órgão rodoviário estadual sinaliza e fiscaliza a rodovia estadual.",
+        "prova": [
+          "Assertiva que restringe a competência dos órgãos rodoviários às vias urbanas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 20"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-22",
+      "unit_id": "775e054c-bc3d-5504-8eaa-3e31940ead8d",
+      "content_sha256": "af0dc40725e227b117f7607dc14b3efd3b5d0774edce7db8fc46a6282af76683",
+      "simples": "O órgão executivo estadual ou distrital controla formação e habilitação, expede e cassa Licença de Aprendizagem, Permissão para Dirigir e CNH, e registra, emplaca e licencia veículos no recorte de delegação federal. Fiscalização, penalidades e suspensão devem observar a reorganização de 2023, as privativas municipais e o art. 24-A; não atribuir cassação de todo documento veicular ao inciso III.",
+      "pontos": [
+        "Formação/habilitação e registro/licenciamento: observar a delegação federal expressa nos incisos II e III.",
+        "§1º: suspensão por pontos e suspensão específica quando autuada pelo próprio órgão estadual.",
+        "Privativas: arts. 165-D, 233, 240, 241, 242, 243 e art. 330, §5º.",
+        "Fiscalização e penalidades ressalvam as privativas municipais do art. 24, §4º."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: Lei 14.599/2023 reorganizou fiscalização e suspensão. Não recuperar a divisão antiga como vigente.",
+        "Integrar concorrência e possibilidade de delegar privativas por convênio; não inventar limites de pontos sem analisar art. 261 e seu caso."
+      ],
+      "exemplo": "Um condutor alcança o limite de pontos aplicável. Resposta: o processo estadual de suspensão está na hipótese do §1º, I; suspensão específica autuada pelo próprio órgão estadual está no inciso II. Variação: Infração privativa municipal não se torna automaticamente estadual só porque a CNH foi expedida pelo Detran; verificar delegação válida quando pertinente.",
+      "prova": [
+        "O Estado fiscaliza indistintamente toda hipótese privativa municipal sem examinar convênio? Não. Os incisos V/VI ressalvam o art. 24, §4º, e o art. 24-A permite delegação mediante convênio.",
+        "Todo caso de suspensão específica pertence automaticamente ao Detran? Não. O §1º, II, exige autuação pelo próprio órgão executivo estadual nessa hipótese."
+      ],
+      "termos": [
+        {
+          "termo": "Competência privativa estadual",
+          "significado": "Recorte do art. 22, §2º, distinto da competência concorrente e sujeito à delegação legal cabível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 24",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "775e054c-bc3d-5504-8eaa-3e31940ead8d",
+        "content_sha256": "af0dc40725e227b117f7607dc14b3efd3b5d0774edce7db8fc46a6282af76683",
+        "simples": "Compete aos órgãos executivos de trânsito dos Estados e do Distrito Federal, no âmbito de sua circunscrição, cumprir a legislação, realizar e controlar o processo de formação, aperfeiçoamento, reciclagem e suspensão de condutores e expedir e cassar a Licença de Aprendizagem, a Permissão para Dirigir e a Carteira Nacional de Habilitação; vistoriar, inspecionar e registrar veículos; expedir e cassar documentos de licenciamento; e executar a fiscalização, entre outras competências.",
+        "pontos": [
+          "Formação e habilitação de condutores.",
+          "Expedição e cassação de licença de aprendizagem, permissão e CNH.",
+          "Registro e licenciamento de veículos.",
+          "Fiscalização."
+        ],
+        "atencao": [
+          "É o órgão estadual (Detran) que habilita condutores e registra veículos.",
+          "ATUALIZAÇÃO: o rol foi alterado por leis posteriores."
+        ],
+        "exemplo": "O Detran emite a CNH e registra o veículo.",
+        "prova": [
+          "Assertiva que atribui aos municípios a expedição da CNH erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-23",
+      "unit_id": "65427370-b7b5-53cf-8377-6d309413268b",
+      "content_sha256": "529ea75f22a2a69ce4cac1411e22e5a54f952228b30782da4c0335f3bd60ffcd",
+      "simples": "Compete às Polícias Militares dos Estados e do Distrito Federal executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados.",
+      "pontos": [
+        "Fiscalização de trânsito pela Polícia Militar.",
+        "Depende de convênio.",
+        "Atua como agente do órgão de trânsito."
+      ],
+      "atencao": [
+        "Depende de CONVÊNIO com o órgão de trânsito ou rodoviário.",
+        "ATUALIZAÇÃO: outros incisos foram vetados ou revogados.",
+        "A ressalva do convênio é para a fiscalização administrativa tratada no artigo; não declarar que toda atuação policial depende dele."
+      ],
+      "exemplo": "A Polícia Militar fiscaliza como agente do órgão de trânsito sob convênio vigente. Resposta: o inciso III condiciona essa atuação a quando e conforme o instrumento, junto aos demais agentes credenciados. Variação: O convênio de trânsito não deve ser confundido com fundamento de todas as atribuições constitucionais da Polícia Militar.",
+      "prova": [
+        "A competência administrativa de fiscalização prevista aqui é universal e independe de convênio? Não. O inciso III exige fiscalização quando e conforme convênio, no recorte administrativo indicado.",
+        "Incisos vetados concedem competências adicionais atuais? Não. Veto não pode ser convertido em regra ativa ou exercício de competência inexistente."
+      ],
+      "termos": [
+        {
+          "termo": "Agente conveniado",
+          "significado": "Atuação administrativa no recorte e condições do convênio com o órgão competente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 25"
+      ],
+      "expected": {
+        "unit_id": "65427370-b7b5-53cf-8377-6d309413268b",
+        "content_sha256": "529ea75f22a2a69ce4cac1411e22e5a54f952228b30782da4c0335f3bd60ffcd",
+        "simples": "Compete às Polícias Militares dos Estados e do Distrito Federal executar a fiscalização de trânsito, quando e conforme convênio firmado, como agente do órgão ou entidade executivos de trânsito ou executivos rodoviários, concomitantemente com os demais agentes credenciados.",
+        "pontos": [
+          "Fiscalização de trânsito pela Polícia Militar.",
+          "Depende de convênio.",
+          "Atua como agente do órgão de trânsito."
+        ],
+        "atencao": [
+          "Depende de CONVÊNIO com o órgão de trânsito ou rodoviário.",
+          "ATUALIZAÇÃO: outros incisos foram vetados ou revogados."
+        ],
+        "exemplo": "A Polícia Militar fiscaliza o trânsito urbano por convênio com o órgão municipal.",
+        "prova": [
+          "Assertiva que dispensa convênio para a fiscalização de trânsito pela Polícia Militar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24",
+      "unit_id": "391d8434-a6c3-5803-b011-e99f00e9cb7c",
+      "content_sha256": "dff04bdf5d1b5cd4befd732c6761350a4732507908847e81f12318ccf9c891f9",
+      "simples": "O órgão municipal integrado ao SNT planeja e opera o trânsito, implanta sinalização e exerce fiscalização, penalidades e medidas dentro de suas competências. A Lei 14.599/2023 reorganizou concorrência e privativas. A atuação do inciso VI em edificação privada coletiva tem limite específico de vagas reservadas; outras atribuições não se confundem com expedir CNH.",
+      "pontos": [
+        "Competência municipal no DF: órgão executivo distrital (§1º).",
+        "Integração ao SNT: por órgão executivo ou diretamente pela prefeitura (§2º).",
+        "§3º limita atuação do inciso VI em edificação privada de uso coletivo a infrações de vagas reservadas.",
+        "Privativas municipais: arts. 95, 181, 182, 183, 218, 219, art. 231, V/X, e arts. 245, 246, 279-A; integrar delegação do art. 24-A.",
+        "Suspensão específica, educação, estacionamento rotativo e atividades próprias não equivalem a expedir CNH."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: Lei 14.599/2023 ampliou/reorganizou competências; não recuperar incisos VII/VIII revogados como rol atual separado.",
+        "A inclusão de estacionamento coletivo no CTB não elimina limites de competência. Não restringir hoje toda fiscalização municipal apenas a circulação, parada e estacionamento."
+      ],
+      "exemplo": "Agente municipal verifica uso irregular de vaga reservada em estacionamento privado de uso coletivo. Resposta: a atuação do inciso VI ali tem o limite do §3º, sem competência universal para qualquer fato interno. Variação: O município não passa a expedir CNH apenas porque exerce fiscalização ampla: habilitação segue a distribuição legal própria.",
+      "prova": [
+        "O município integrado ao SNT só pode sinalizar e nunca autuar? Não. O artigo prevê fiscalização, penalidades, medidas e outras competências.",
+        "A fiscalização municipal do inciso VI em edificação privada de uso coletivo alcança indistintamente toda infração? Não. O §3º limita esse exercício às infrações de uso de vagas reservadas."
+      ],
+      "termos": [
+        {
+          "termo": "Competência municipal",
+          "significado": "Funções próprias e concorrentes, no âmbito legal e com integração ao SNT."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 24-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "391d8434-a6c3-5803-b011-e99f00e9cb7c",
+        "content_sha256": "dff04bdf5d1b5cd4befd732c6761350a4732507908847e81f12318ccf9c891f9",
+        "simples": "Compete aos órgãos e entidades executivos de trânsito dos Municípios, no âmbito de sua circunscrição, cumprir e fazer cumprir a legislação de trânsito, planejar, projetar, regulamentar e operar o trânsito de veículos, pedestres e animais, implantar e manter a sinalização, executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades por infrações de circulação, estacionamento e parada, entre outras atribuições.",
+        "pontos": [
+          "Planejamento e operação do trânsito municipal.",
+          "Sinalização.",
+          "Fiscalização e penalidades por infrações de circulação, estacionamento e parada."
+        ],
+        "atencao": [
+          "O município fiscaliza as infrações de circulação, estacionamento e parada nas suas vias.",
+          "ATUALIZAÇÃO: o rol foi ampliado por leis posteriores."
+        ],
+        "exemplo": "A prefeitura aplica a multa de estacionamento irregular.",
+        "prova": [
+          "Assertiva que restringe os órgãos municipais à sinalização, sem poder de fiscalização, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 24-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-24-a",
+      "unit_id": "28e41cdc-c9b8-5be7-98f9-9a9328b7ad92",
+      "content_sha256": "1f0ee8ab26c0785cc0bd97d4a4dd676d04e5f23511817fd89e4c4942f1d9eb30",
+      "simples": "Compete concorrentemente aos órgãos e entidades executivos de trânsito dos Estados, do Distrito Federal e dos Municípios executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas no Código, observadas as competências privativas do art. 22, §2º, e do art. 24, §4º.",
+      "pontos": [
+        "Competência concorrente para fiscalizar e autuar.",
+        "Ressalvadas as competências privativas.",
+        "Parágrafo único admite delegação de competências privativas por CONVÊNIO."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "CONCORRENTE, com ressalva das competências privativas.",
+        "ATUALIZAÇÃO: incluído pela Lei 14.599/2023. Não equiparar concorrência, privatividade e indelegabilidade."
+      ],
+      "exemplo": "Estado e Município fiscalizam hipótese concorrente em suas competências. Resposta: o caput prevê concorrência, ressalvadas as listas privativas dos arts. 22 e 24. Variação: Uma atividade privativa pode ser delegada por convênio do art. 25; privativa não significa indelegável em toda situação.",
+      "prova": [
+        "A concorrência elimina as listas privativas? Não. O artigo ressalva expressamente os dois recortes.",
+        "As privativas jamais podem ser delegadas? Não. O parágrafo único admite delegação por convênio do art. 25."
+      ],
+      "termos": [
+        {
+          "termo": "Concorrência e delegação",
+          "significado": "Atribuição compartilhada e transferência legal por instrumento próprio são conceitos distintos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 22",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "28e41cdc-c9b8-5be7-98f9-9a9328b7ad92",
+        "content_sha256": "1f0ee8ab26c0785cc0bd97d4a4dd676d04e5f23511817fd89e4c4942f1d9eb30",
+        "simples": "Compete concorrentemente aos órgãos e entidades executivos de trânsito dos Estados, do Distrito Federal e dos Municípios executar a fiscalização de trânsito, autuar e aplicar as medidas administrativas e penalidades previstas no Código, observadas as competências privativas do art. 22, §2º, e do art. 24, §4º.",
+        "pontos": [
+          "Competência concorrente para fiscalizar e autuar.",
+          "Ressalvadas as competências privativas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "CONCORRENTE, com ressalva das competências privativas."
+        ],
+        "exemplo": "Município e estado podem fiscalizar o trânsito, respeitadas as competências privativas.",
+        "prova": [
+          "Assertiva que torna exclusiva do estado toda a fiscalização erra: a competência é concorrente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 22"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25",
+      "unit_id": "82734767-718a-554a-8b4d-c0332890551c",
+      "content_sha256": "a646aebae926bd423499ff747649e68bfdea7d4143335b14ee91a2d1dac76eab",
+      "simples": "Os órgãos e entidades executivos do Sistema Nacional de Trânsito podem celebrar convênio delegando as atividades previstas no Código, com vistas à maior eficiência e à segurança dos usuários da via. Podem ainda prestar serviços de capacitação técnica, assessoria e monitoramento das atividades relativas ao trânsito, por prazo estabelecido entre as partes, mediante ressarcimento dos custos.",
+      "pontos": [
+        "Convênio de delegação de atividades.",
+        "Capacitação, assessoria e monitoramento.",
+        "Ressarcimento de custos.",
+        "Prefeitura pode celebrar diretamente na falta de órgão executivo, inclusive por consórcio."
+      ],
+      "atencao": [
+        "A delegação se faz por CONVÊNIO.",
+        "Não afirmar que privativa é sempre indelegável nem que convênio elimina limites legais de atuação."
+      ],
+      "exemplo": "Um Município sem órgão executivo celebra convênio diretamente pela prefeitura com integrante do SNT. Resposta: o §2º admite esse caminho e inclusive consórcio com outro ente federativo. Variação: Uma mera combinação informal não substitui o convênio legal de delegação; capacitação/assessoria/monitoramento têm prazo e ressarcimento próprios.",
+      "prova": [
+        "A prefeitura sem órgão executivo está sempre impedida de celebrar convênio? Não. O §2º prevê expressamente sua celebração direta.",
+        "Capacitação e monitoramento devem ser necessariamente permanentes e gratuitos? Não. O §1º prevê prazo estabelecido entre as partes e ressarcimento dos custos apropriados."
+      ],
+      "termos": [
+        {
+          "termo": "Convênio de delegação",
+          "significado": "Instrumento de cooperação para atividades legais de trânsito, distinto de transferência informal de toda competência."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 23",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "82734767-718a-554a-8b4d-c0332890551c",
+        "content_sha256": "a646aebae926bd423499ff747649e68bfdea7d4143335b14ee91a2d1dac76eab",
+        "simples": "Os órgãos e entidades executivos do Sistema Nacional de Trânsito podem celebrar convênio delegando as atividades previstas no Código, com vistas à maior eficiência e à segurança dos usuários da via. Podem ainda prestar serviços de capacitação técnica, assessoria e monitoramento das atividades relativas ao trânsito, por prazo estabelecido entre as partes, mediante ressarcimento dos custos.",
+        "pontos": [
+          "Convênio de delegação de atividades.",
+          "Capacitação, assessoria e monitoramento.",
+          "Ressarcimento de custos."
+        ],
+        "atencao": [
+          "A delegação se faz por CONVÊNIO."
+        ],
+        "exemplo": "O município delega ao estado parte da fiscalização por convênio.",
+        "prova": [
+          "Assertiva que permite a delegação de atividades sem convênio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 23"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-25-a",
+      "unit_id": "0ecc4cd2-669f-500c-805d-d46acc302452",
+      "content_sha256": "95f90008f99031b4fd50a8edbc0e8734cfefd3d7e9786195aee83ebb178c2eb9",
+      "simples": "Agentes das polícias da Câmara e Senado podem lavrar auto e remetê-lo ao órgão competente mediante convênio com quem tem circunscrição. A infração deve ocorrer nas adjacências do Congresso ou nos locais sob sua responsabilidade e comprometer objetivamente serviços ou colocar pessoas/patrimônio das Casas em risco. Exige treinamento específico.",
+      "pontos": [
+        "CONVÊNIO com órgão que tem circunscrição sobre a via.",
+        "Adjacências do Congresso OU locais sob responsabilidade das Casas.",
+        "Comprometimento objetivo de serviços OU risco à incolumidade/patrimônio.",
+        "Treinamento específico; lavrar e REMETER ao órgão competente."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: incluído pela Lei 14.071/2020 com vigência diferida. Não restringir às dependências internas nem atribuir poder pleno de trânsito sem os pressupostos."
+      ],
+      "exemplo": "Agente da polícia legislativa, treinado e sob convênio, encontra infração nas adjacências do Congresso que compromete objetivamente o serviço. Resposta: pode lavrar auto e remetê-lo ao órgão competente no recorte legal. Variação: A condição não se limita ao interior do prédio, mas também não permite autuar qualquer infração em toda Brasília sem os pressupostos.",
+      "prova": [
+        "A polícia legislativa recebe competência plena para julgar e aplicar qualquer penalidade por este artigo? Não. O artigo trata de lavrar auto e remetê-lo ao órgão competente, com condições específicas.",
+        "Treinamento específico é opcional? Não. O parágrafo exige treinamento conforme regulamentação do Contran."
+      ],
+      "termos": [
+        {
+          "termo": "Autuação legislativa delimitada",
+          "significado": "Lavratura e remessa do auto sob convênio, treinamento, local e comprometimento/risco previstos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 25",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "0ecc4cd2-669f-500c-805d-d46acc302452",
+        "content_sha256": "95f90008f99031b4fd50a8edbc0e8734cfefd3d7e9786195aee83ebb178c2eb9",
+        "simples": "Os agentes dos órgãos policiais da Câmara dos Deputados e do Senado Federal, mediante convênio com o órgão ou entidade de trânsito com circunscrição sobre a via, podem lavrar auto de infração de trânsito e remetê-lo ao órgão competente, nos casos de infração cometida nas dependências dessas Casas legislativas.",
+        "pontos": [
+          "Polícias legislativas lavram auto de infração.",
+          "Depende de convênio com o órgão de trânsito."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Depende de convênio."
+        ],
+        "exemplo": "A polícia do Senado lavra auto de infração por convênio com o órgão de trânsito.",
+        "prova": [
+          "Assertiva que dá às polícias legislativas competência plena de trânsito sem convênio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 25"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-26",
+      "unit_id": "0d8ef8d2-d95c-5403-b7de-08343c86a344",
+      "content_sha256": "d8b9b702164e8cfa32f00616954d4657f04e1ff56179d436bf2e5857e6c4ea28",
+      "simples": "Os usuários das vias terrestres devem abster-se de todo ato que possa constituir perigo ou obstáculo para o trânsito de veículos, pessoas ou animais, ou causar danos a propriedades públicas ou privadas, e abster-se de obstruir o trânsito ou torná-lo perigoso, atirando, depositando ou abandonando na via objetos ou substâncias, ou criando qualquer outro obstáculo.",
+      "pontos": [
+        "Dever geral de não criar perigo ou obstáculo.",
+        "Vedado atirar ou abandonar objetos na via."
+      ],
+      "atencao": [
+        "Dever de TODOS os usuários, não só condutores.",
+        "Não confundir dever geral, infração administrativa e crime de trânsito."
+      ],
+      "exemplo": "Um comerciante deixa entulho na pista e cria obstáculo ao tráfego. Resposta: o dever de não obstruir a via alcança usuários em geral, não somente motoristas. Variação: O fato de ninguém ter colidido ainda não torna lícito criar perigo; o artigo previne risco e danos, respeitado o enquadramento sancionatório próprio.",
+      "prova": [
+        "Somente condutores devem evitar obstáculos na via? Não. O caput impõe os deveres aos usuários das vias terrestres.",
+        "O art. 26 fixa por si uma pena criminal automática? Não. É dever geral de conduta; eventual infração ou crime exige enquadramento e requisitos próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Dever de prevenção",
+          "significado": "Evitar perigo, obstáculos e danos no trânsito, sem presumir sanção penal por todo descumprimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 28"
+      ],
+      "expected": {
+        "unit_id": "0d8ef8d2-d95c-5403-b7de-08343c86a344",
+        "content_sha256": "d8b9b702164e8cfa32f00616954d4657f04e1ff56179d436bf2e5857e6c4ea28",
+        "simples": "Os usuários das vias terrestres devem abster-se de todo ato que possa constituir perigo ou obstáculo para o trânsito de veículos, pessoas ou animais, ou causar danos a propriedades públicas ou privadas, e abster-se de obstruir o trânsito ou torná-lo perigoso, atirando, depositando ou abandonando na via objetos ou substâncias, ou criando qualquer outro obstáculo.",
+        "pontos": [
+          "Dever geral de não criar perigo ou obstáculo.",
+          "Vedado atirar ou abandonar objetos na via."
+        ],
+        "atencao": [
+          "Dever de TODOS os usuários, não só condutores."
+        ],
+        "exemplo": "Deixar entulho no meio da via viola o dever de não criar obstáculo.",
+        "prova": [
+          "Assertiva que restringe o dever de não obstruir a via aos condutores erra: vale para todos os usuários."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-27",
+      "unit_id": "73935aa2-1812-5b25-8835-b9ceecfd4cf3",
+      "content_sha256": "9fae97d8f450c68e58d12ab00a955b05df28f3cad7e66e6b40c7df57a4e3881a",
+      "simples": "Antes de colocar o veículo em circulação nas vias públicas, o condutor deve verificar a existência e as boas condições de funcionamento dos equipamentos de uso obrigatório, bem como assegurar-se da existência de combustível suficiente para chegar ao local de destino.",
+      "pontos": [
+        "Verificar equipamentos obrigatórios.",
+        "Verificar combustível suficiente."
+      ],
+      "atencao": [
+        "Dever ANTES de colocar o veículo em circulação.",
+        "Não inventar percentual obrigatório do tanque nem listar equipamento sem conferir a regulamentação atual da categoria."
+      ],
+      "exemplo": "Antes da viagem, a condutora encontra equipamento obrigatório sem funcionamento e combustível insuficiente. Resposta: deve regularizar as condições antes de colocar o veículo em circulação. Variação: Ter combustível suficiente não dispensa conferir os equipamentos obrigatórios; são exigências distintas e cumulativas do artigo.",
+      "prova": [
+        "A verificação só precisa ocorrer depois de iniciar a viagem? Não. O dever é anterior à circulação nas vias públicas.",
+        "Este artigo exige tanque sempre cheio? Não. Exige combustível suficiente para chegar ao destino, além de equipamentos existentes e funcionando."
+      ],
+      "termos": [
+        {
+          "termo": "Verificação prévia",
+          "significado": "Conferência de equipamentos obrigatórios e combustível antes da circulação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 28"
+      ],
+      "expected": {
+        "unit_id": "73935aa2-1812-5b25-8835-b9ceecfd4cf3",
+        "content_sha256": "9fae97d8f450c68e58d12ab00a955b05df28f3cad7e66e6b40c7df57a4e3881a",
+        "simples": "Antes de colocar o veículo em circulação nas vias públicas, o condutor deve verificar a existência e as boas condições de funcionamento dos equipamentos de uso obrigatório, bem como assegurar-se da existência de combustível suficiente para chegar ao local de destino.",
+        "pontos": [
+          "Verificar equipamentos obrigatórios.",
+          "Verificar combustível suficiente."
+        ],
+        "atencao": [
+          "Dever ANTES de colocar o veículo em circulação."
+        ],
+        "exemplo": "O motorista confere os equipamentos e o combustível antes da viagem.",
+        "prova": [
+          "Assertiva que dispensa a verificação do combustível erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 28"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-28",
+      "unit_id": "0cae2db0-82d8-5c6b-90dd-d76af1325054",
+      "content_sha256": "4f8acca34dc48c3ffb582aab17b5cd00ba32a536ffb1492943a6c14c86cfd8b1",
+      "simples": "O condutor deve, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito.",
+      "pontos": [
+        "Domínio do veículo a todo momento.",
+        "Atenção e cuidados indispensáveis."
+      ],
+      "atencao": [
+        "Princípio da direção defensiva e do domínio do veículo.",
+        "Dever geral de cautela não equivale a condenação ou culpa automática em todo sinistro."
+      ],
+      "exemplo": "Mesmo em rua vazia, o condutor se distrai e perde o controle da direção. Resposta: o dever de domínio, atenção e cuidado vale a todo momento. Variação: Usar recurso de auxílio à condução não elimina por si o dever do condutor; o artigo não transfere automaticamente toda responsabilidade ao equipamento.",
+      "prova": [
+        "Ausência de outros veículos dispensa atenção? Não. O art. 28 exige domínio e cuidados a todo momento, não somente quando há tráfego intenso.",
+        "A simples referência ao art. 28 prova automaticamente qualquer crime de trânsito? Não. O dever geral não substitui os elementos específicos do tipo ou da infração."
+      ],
+      "termos": [
+        {
+          "termo": "Domínio do veículo",
+          "significado": "Controle contínuo da condução com atenção e cuidados de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 29"
+      ],
+      "expected": {
+        "unit_id": "0cae2db0-82d8-5c6b-90dd-d76af1325054",
+        "content_sha256": "4f8acca34dc48c3ffb582aab17b5cd00ba32a536ffb1492943a6c14c86cfd8b1",
+        "simples": "O condutor deve, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito.",
+        "pontos": [
+          "Domínio do veículo a todo momento.",
+          "Atenção e cuidados indispensáveis."
+        ],
+        "atencao": [
+          "Princípio da direção defensiva e do domínio do veículo."
+        ],
+        "exemplo": "Usar o celular a ponto de perder o domínio do veículo viola o art. 28.",
+        "prova": [
+          "Assertiva que dispensa atenção do condutor em vias vazias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 29"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-29",
+      "unit_id": "cca48ada-37ba-526e-82e7-aac6dd9b5831",
+      "content_sha256": "038649320362b466307bd1fd13a6d327ae6b72aa999d9e15b472636ccbebf29a",
+      "simples": "O art. 29 distribui circulação, distâncias, preferências, faixas, ultrapassagem e dever de proteção dos usuários vulneráveis. Veículos especiais têm prerrogativas condicionadas, não autorização para ignorar segurança. A Lei 14.071/2020 e a Lei 14.440/2022 atualizaram as regras; não copiar a antiga redação como vigente.",
+      "pontos": [
+        "Local não sinalizado: rodovia quando apenas um fluxo vem dela; rotatória para quem já circula; nos demais casos, veículo pela DIREITA.",
+        "Faixas: direita para lentos/maior porte, salvo faixa especial; esquerda para ultrapassagem e maior velocidade, sem afastar limites.",
+        "Ultrapassagem pela esquerda, salvo veículo à frente sinalizando entrada à esquerda; verificar quem já iniciou a manobra, faixa livre, distância e retorno seguro.",
+        "Passagem em passeio/calçada/acostamento no recorte do inciso V não é faixa livre de circulação.",
+        "Inciso VII: serviço de urgência, policiamento ostensivo ou preservação da ordem pública; uso de sirene/luz somente em efetiva urgência, com recortes de identificação das alíneas e/f.",
+        "Prioridade em via/cruzamento: velocidade REDUZIDA e cuidado; alarme não torna qualquer conduta segura.",
+        "Utilidade pública: parada/estacionamento no local do atendimento com identificação, sem livre circulação universal.",
+        "Trilhos: preferência respeitadas normas. Maior porte protege menor; motorizados protegem não motorizados; todos protegem pedestres."
+      ],
+      "atencao": [
+        "Distinguir prerrogativas de circulação, parada, estacionamento e uso de dispositivos; não reduzir todas a uma condição genérica nem atribuir preferência absoluta sem cautela.",
+        "§4º prevê disciplina específica de veículos oficiais descaracterizados em situações especiais; não inventar dispensa geral automática.",
+        "Regras de ultrapassagem indicadas no §1º também se aplicam à transposição de faixas, que pode ocorrer pela direita ou esquerda."
+      ],
+      "exemplo": "Dois carros chegam a cruzamento não sinalizado e apenas um fluxo vem de rodovia. Resposta: tem preferência quem circula pela rodovia; em rotatória não sinalizada, quem já circula nela; nos demais casos, quem vem pela direita. Variação: Uma ambulância em urgência usa os dispositivos regulamentares, mas chega ao cruzamento em alta velocidade sem cautela. A prioridade não elimina a obrigação de reduzir e proteger a segurança.",
+      "prova": [
+        "Todo veículo policial pode usar sirene em qualquer deslocamento? Não. A alínea c limita o uso de alarme e iluminação intermitente à efetiva prestação de serviço de urgência.",
+        "Utilidade pública em atendimento recebe automaticamente a mesma livre circulação de ambulância urgente? Não. O inciso VIII prevê parada e estacionamento no local do serviço, com identificação, não livre circulação universal."
+      ],
+      "termos": [
+        {
+          "termo": "Prerrogativa condicionada",
+          "significado": "Prioridade ou facilidade de circulação vinculada a finalidade, identificação e segurança legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 30",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "cca48ada-37ba-526e-82e7-aac6dd9b5831",
+        "content_sha256": "038649320362b466307bd1fd13a6d327ae6b72aa999d9e15b472636ccbebf29a",
+        "simples": "O trânsito de veículos obedece a normas como a circulação pelo lado direito, admitidas exceções sinalizadas; a distância de segurança lateral e frontal; a preferência em local não sinalizado, que é de quem circula pela rodovia, de quem circula pela rotatória e, nos demais casos, de quem vem pela direita; as faixas da direita para veículos mais lentos e de maior porte e as da esquerda para ultrapassagem; o trânsito sobre passeios e acostamentos só para entrar ou sair de imóveis; a prioridade dos veículos precedidos de batedores; e a prioridade e livre circulação dos veículos de socorro, polícia, fiscalização e ambulâncias em serviço de urgência, com alarme sonoro e luz intermitente acionados, quando todos devem liberar a faixa da esquerda e os pedestres aguardar no passeio.",
+        "pontos": [
+          "Circulação pela direita.",
+          "Distância de segurança.",
+          "Preferência em local não sinalizado: rodovia, rotatória, depois quem vem pela direita.",
+          "Faixas da direita para os mais lentos e da esquerda para a ultrapassagem.",
+          "Prioridade e livre circulação dos veículos de urgência em serviço."
+        ],
+        "atencao": [
+          "Sem sinalização: preferência de quem circula pela rodovia ou pela rotatória; nos demais casos, de quem vem pela direita.",
+          "Alarme e luz intermitente só podem ser usados na efetiva prestação de serviço de urgência.",
+          "Passeios e acostamentos só podem ser usados para entrar ou sair de imóveis ou áreas especiais."
+        ],
+        "exemplo": "O condutor mantém distância de segurança do veículo à frente.",
+        "prova": [
+          "Assertiva que permite circular pela esquerda como regra erra: a regra é a direita."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 30"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T23:45:52.053001+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-30",
+      "unit_id": "12063dc0-71c8-5580-8bf8-3a790e27965e",
+      "content_sha256": "d6b13adf9d9df5d9278f926e45c50f38ad84fd4b0a63192d8855f589efb72e30",
+      "simples": "Todo condutor, ao perceber que outro que o segue tem o propósito de ultrapassá-lo, deve, se estiver na faixa da esquerda, deslocar-se para a faixa da direita, sem acelerar a marcha; e, se estiver nas demais faixas, manter-se naquela em que circula, sem acelerar. Os veículos mais lentos, quando em fila, devem manter distância suficiente entre si para permitir que os que os ultrapassem possam se intercalar na fila.",
+      "pontos": [
+        "Quem é ultrapassado não acelera.",
+        "Faixa da esquerda: desloca-se para a direita.",
+        "Veículos lentos em fila mantêm distância."
+      ],
+      "atencao": [
+        "Quem é ultrapassado NÃO pode acelerar.",
+        "A troca de faixa também deve respeitar cautela e sinalização; não converter cooperação em manobra arriscada."
+      ],
+      "exemplo": "Um carro na faixa esquerda percebe o veículo de trás preparando ultrapassagem. Resposta: deve deslocar-se para a direita sem acelerar, com segurança. Variação: Se já estiver em outra faixa, deve manter-se nela sem acelerar; não é ordem universal para trocar de faixa em todo caso.",
+      "prova": [
+        "O ultrapassado pode acelerar para impedir a manobra? Não. Tanto ao sair da faixa esquerda quanto ao manter outra faixa, o artigo exige não acelerar.",
+        "Veículos lentos em fila podem eliminar todo espaço entre si? Não. Devem manter distância que permita intercalação segura de quem os ultrapassa."
+      ],
+      "termos": [
+        {
+          "termo": "Cooperação na ultrapassagem",
+          "significado": "Conduta de quem é ultrapassado para permitir manobra segura, sem aceleração impeditiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 32"
+      ],
+      "expected": {
+        "unit_id": "12063dc0-71c8-5580-8bf8-3a790e27965e",
+        "content_sha256": "d6b13adf9d9df5d9278f926e45c50f38ad84fd4b0a63192d8855f589efb72e30",
+        "simples": "Todo condutor, ao perceber que outro que o segue tem o propósito de ultrapassá-lo, deve, se estiver na faixa da esquerda, deslocar-se para a faixa da direita, sem acelerar a marcha; e, se estiver nas demais faixas, manter-se naquela em que circula, sem acelerar. Os veículos mais lentos, quando em fila, devem manter distância suficiente entre si para permitir que os que os ultrapassem possam se intercalar na fila.",
+        "pontos": [
+          "Quem é ultrapassado não acelera.",
+          "Faixa da esquerda: desloca-se para a direita.",
+          "Veículos lentos em fila mantêm distância."
+        ],
+        "atencao": [
+          "Quem é ultrapassado NÃO pode acelerar."
+        ],
+        "exemplo": "O condutor na faixa da esquerda cede à direita ao perceber a ultrapassagem.",
+        "prova": [
+          "Assertiva que permite ao ultrapassado acelerar para impedir a manobra erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-31",
+      "unit_id": "1daaaa16-1510-5676-98e8-e1128c39356b",
+      "content_sha256": "7a4e65c2e951e4ee92d9b877d8f9bcb0212b7d09ff4bd8940b0b1b46cf4c412d",
+      "simples": "O condutor que tenha o propósito de ultrapassar um veículo de transporte coletivo parado, efetuando embarque ou desembarque de passageiros, deve reduzir a velocidade, dirigindo com atenção redobrada, ou parar o veículo, com vistas à segurança dos pedestres.",
+      "pontos": [
+        "Reduzir a velocidade ou parar.",
+        "Atenção redobrada."
+      ],
+      "atencao": [
+        "Proteção do pedestre que embarca ou desembarca.",
+        "Não confundir ônibus em simples estacionamento com a hipótese específica de embarque/desembarque."
+      ],
+      "exemplo": "Um ônibus está parado desembarcando passageiros e uma pessoa surge ao seu lado. Resposta: quem pretende ultrapassá-lo reduz, redobra atenção e para se necessário à segurança. Variação: Sem embarque ou desembarque, não se presume idêntico recorte do art. 31, mas permanecem os deveres gerais de segurança.",
+      "prova": [
+        "Basta passar normalmente pelo ônibus porque ele está parado? Não. A hipótese envolve embarque/desembarque e exige cautela reforçada.",
+        "O artigo manda sempre parar, sem examinar a situação? Não. Prevê redução com atenção redobrada ou parada para segurança dos pedestres."
+      ],
+      "termos": [
+        {
+          "termo": "Atenção redobrada",
+          "significado": "Cautela reforçada para proteger pedestres no embarque e desembarque."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 32"
+      ],
+      "expected": {
+        "unit_id": "1daaaa16-1510-5676-98e8-e1128c39356b",
+        "content_sha256": "7a4e65c2e951e4ee92d9b877d8f9bcb0212b7d09ff4bd8940b0b1b46cf4c412d",
+        "simples": "O condutor que tenha o propósito de ultrapassar um veículo de transporte coletivo parado, efetuando embarque ou desembarque de passageiros, deve reduzir a velocidade, dirigindo com atenção redobrada, ou parar o veículo, com vistas à segurança dos pedestres.",
+        "pontos": [
+          "Reduzir a velocidade ou parar.",
+          "Atenção redobrada."
+        ],
+        "atencao": [
+          "Proteção do pedestre que embarca ou desembarca."
+        ],
+        "exemplo": "Ao passar por um ônibus parado, o motorista reduz a velocidade.",
+        "prova": [
+          "Assertiva que permite ultrapassar o ônibus parado em velocidade normal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-32",
+      "unit_id": "aa3d5723-9abc-54dc-9da0-9f01b2ee08ef",
+      "content_sha256": "2c12706d6c4d283ad232fb8b12eb9ff444d3d969ee220bb70cd3bdb2fd014c4a",
+      "simples": "O condutor não pode ultrapassar veículos em vias com duplo sentido de direção e pista única nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+      "pontos": [
+        "Proibição em curvas e aclives sem visibilidade.",
+        "Passagens de nível, pontes, viadutos e travessias de pedestres.",
+        "Exceção: sinalização permissiva."
+      ],
+      "atencao": [
+        "Exceção só com sinalização que permita.",
+        "Não eliminar a exceção textual nem transformar uma sinalização permissiva em autorização contra toda regra de segurança."
+      ],
+      "exemplo": "Em via de pista única e duplo sentido, o motorista chega a ponte sem sinalização que permita ultrapassar. Resposta: a proibição textual alcança a hipótese. Variação: O artigo contém exceção de sinalização permissiva; ela não dispensa visibilidade, espaço e demais regras de segurança.",
+      "prova": [
+        "A confiança pessoal do motorista substitui a exceção sinalizada? Não. A exceção expressa é de sinalização permitindo a manobra.",
+        "Toda via, inclusive qualquer pista dupla, recebe automaticamente a mesma hipótese deste artigo? Não. Identificar pista única, duplo sentido e o local especificado, sem afastar outras proibições aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Ultrapassagem restrita",
+          "significado": "Manobra sujeita ao tipo de via, local, sinalização e cautela."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 33"
+      ],
+      "expected": {
+        "unit_id": "aa3d5723-9abc-54dc-9da0-9f01b2ee08ef",
+        "content_sha256": "2c12706d6c4d283ad232fb8b12eb9ff444d3d969ee220bb70cd3bdb2fd014c4a",
+        "simples": "O condutor não pode ultrapassar veículos em vias com duplo sentido de direção e pista única nos trechos em curvas e em aclives sem visibilidade suficiente, nas passagens de nível, nas pontes e viadutos e nas travessias de pedestres, exceto quando houver sinalização permitindo a ultrapassagem.",
+        "pontos": [
+          "Proibição em curvas e aclives sem visibilidade.",
+          "Passagens de nível, pontes, viadutos e travessias de pedestres.",
+          "Exceção: sinalização permissiva."
+        ],
+        "atencao": [
+          "Exceção só com sinalização que permita."
+        ],
+        "exemplo": "Ultrapassar em curva sem visibilidade é proibido.",
+        "prova": [
+          "Assertiva que permite ultrapassar em ponte sem sinalização erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 33"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-33",
+      "unit_id": "8332f63c-97a3-57a4-b101-4c2316cbae81",
+      "content_sha256": "7ed7e6d9af343c7e4507479d81e3216d21c348f9c9fe32c58abef305422f9833",
+      "simples": "Nas interseções e suas proximidades, o condutor não pode efetuar ultrapassagem, regra que busca evitar colisões no ponto de encontro das vias.",
+      "pontos": [
+        "Proibida ultrapassagem em interseções e proximidades."
+      ],
+      "atencao": [
+        "Proibição absoluta no texto do artigo.",
+        "Não inventar distância fixa em metros para proximidades sem fonte regulamentar específica."
+      ],
+      "exemplo": "Perto de um cruzamento, o motorista inicia ultrapassagem porque a faixa parece livre. Resposta: o artigo proíbe a manobra na interseção e nas proximidades. Variação: A exceção de sinalização do art. 32 não deve ser copiada automaticamente para o art. 33, que não a contém no seu texto.",
+      "prova": [
+        "Só dentro do centro geométrico do cruzamento vale a proibição? Não. A vedação também alcança as proximidades da interseção, sem depender de seu centro geométrico.",
+        "Via aparentemente vazia elimina a regra de proibição? Não. A ausência momentânea de veículo não cria exceção textual."
+      ],
+      "termos": [
+        {
+          "termo": "Interseção",
+          "significado": "Ponto de encontro de vias, com área próxima protegida contra ultrapassagem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 32"
+      ],
+      "expected": {
+        "unit_id": "8332f63c-97a3-57a4-b101-4c2316cbae81",
+        "content_sha256": "7ed7e6d9af343c7e4507479d81e3216d21c348f9c9fe32c58abef305422f9833",
+        "simples": "Nas interseções e suas proximidades, o condutor não pode efetuar ultrapassagem, regra que busca evitar colisões no ponto de encontro das vias.",
+        "pontos": [
+          "Proibida ultrapassagem em interseções e proximidades."
+        ],
+        "atencao": [
+          "Proibição absoluta no texto do artigo."
+        ],
+        "exemplo": "Não se ultrapassa no cruzamento.",
+        "prova": [
+          "Assertiva que permite a ultrapassagem em interseção se a via estiver livre erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 32"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-34",
+      "unit_id": "3bfd0918-bc60-5ce5-9e77-7ad0ef3692d1",
+      "content_sha256": "114ceac41075c58d6319f98c58d065d20a7e3b38fa7aeaacd234d75d129d7802",
+      "simples": "O condutor que queira executar uma manobra deve certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade.",
+      "pontos": [
+        "Certificar-se de que a manobra é segura.",
+        "Considerar posição, direção e velocidade."
+      ],
+      "atencao": [
+        "Dever geral de cautela em manobras.",
+        "Sinalização da intenção e segurança da execução são deveres distintos."
+      ],
+      "exemplo": "A condutora liga a seta para mudar de faixa, mas há outro veículo aproximando-se pelo lado. Resposta: sinalizar não basta; precisa certificar-se de que a manobra não cria perigo. Variação: A faixa estar livre atrás não dispensa observar usuários à frente e os que irão cruzar sua trajetória.",
+      "prova": [
+        "A seta concede preferência automática na manobra? Não. O dever de avaliar posição, direção e velocidade dos demais continua.",
+        "Só usuários que vêm atrás precisam ser considerados? Não. O artigo também abrange os que precedem e os que cruzarão."
+      ],
+      "termos": [
+        {
+          "termo": "Manobra segura",
+          "significado": "Mudança de movimento precedida de avaliação dos usuários e trajetórias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 35"
+      ],
+      "expected": {
+        "unit_id": "3bfd0918-bc60-5ce5-9e77-7ad0ef3692d1",
+        "content_sha256": "114ceac41075c58d6319f98c58d065d20a7e3b38fa7aeaacd234d75d129d7802",
+        "simples": "O condutor que queira executar uma manobra deve certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade.",
+        "pontos": [
+          "Certificar-se de que a manobra é segura.",
+          "Considerar posição, direção e velocidade."
+        ],
+        "atencao": [
+          "Dever geral de cautela em manobras."
+        ],
+        "exemplo": "Antes de mudar de faixa, o condutor confere o retrovisor.",
+        "prova": [
+          "Assertiva que dispensa a verificação dos que seguem o veículo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-35",
+      "unit_id": "22dae7f4-5f7d-56a6-8dc5-74b4a6a0b9cb",
+      "content_sha256": "5eb162a7e491e50ea0741adf0338ea696981794e6f12769a199952be2041226d",
+      "simples": "Antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deve indicar seu propósito de forma clara e com a devida antecedência, por meio da luz indicadora de direção do veículo ou fazendo gesto convencional de braço. Deslocamento lateral é a transposição de faixas, movimentos de conversão à direita ou à esquerda e retornos.",
+      "pontos": [
+        "Sinalizar com antecedência.",
+        "Seta ou gesto de braço.",
+        "Conceito de deslocamento lateral."
+      ],
+      "atencao": [
+        "Deslocamento lateral inclui transposição de faixas, conversões e retornos.",
+        "Não confundir a indicação da intenção com autorização para executar manobra perigosa."
+      ],
+      "exemplo": "A condutora pretende converter à direita e sinaliza antes da manobra de modo claro. Resposta: conversão é deslocamento lateral e exige antecedência. Variação: Ligar a seta somente depois de começar a conversão não satisfaz o dever de antecedência; o gesto convencional previsto também não dispensa cuidado.",
+      "prova": [
+        "Retorno está fora do conceito de deslocamento lateral? Não. O parágrafo inclui retorno, conversões e transposição de faixas.",
+        "O CTB menciona exclusivamente luz indicadora, sem gesto de braço? Não. O texto prevê luz ou gesto convencional, observadas as demais exigências pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Deslocamento lateral",
+          "significado": "Transposição de faixas, conversões à direita/esquerda e retornos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 34"
+      ],
+      "expected": {
+        "unit_id": "22dae7f4-5f7d-56a6-8dc5-74b4a6a0b9cb",
+        "content_sha256": "5eb162a7e491e50ea0741adf0338ea696981794e6f12769a199952be2041226d",
+        "simples": "Antes de iniciar qualquer manobra que implique um deslocamento lateral, o condutor deve indicar seu propósito de forma clara e com a devida antecedência, por meio da luz indicadora de direção do veículo ou fazendo gesto convencional de braço. Deslocamento lateral é a transposição de faixas, movimentos de conversão à direita ou à esquerda e retornos.",
+        "pontos": [
+          "Sinalizar com antecedência.",
+          "Seta ou gesto de braço.",
+          "Conceito de deslocamento lateral."
+        ],
+        "atencao": [
+          "Deslocamento lateral inclui transposição de faixas, conversões e retornos."
+        ],
+        "exemplo": "O condutor liga a seta antes de mudar de faixa.",
+        "prova": [
+          "Assertiva que dispensa a sinalização na mudança de faixa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 34"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-36",
+      "unit_id": "629ea144-b5f1-5ac7-8bd0-1b187c674625",
+      "content_sha256": "abbb385264fd2968721f4a5fbf93c0a610ebb26503d84bccfade70eea4502ae1",
+      "simples": "O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deve dar preferência aos veículos e pedestres que por ela estejam transitando.",
+      "pontos": [
+        "Quem sai de lote lindeiro dá preferência à via."
+      ],
+      "atencao": [
+        "Preferência de quem já está na via.",
+        "Não trocar a regra de ingresso a partir de imóvel com a preferência em cruzamento não sinalizado."
+      ],
+      "exemplo": "Ao sair de uma garagem, o condutor encontra pedestre na via e carro já circulando. Resposta: deve dar preferência a ambos ao ingressar a partir do lote lindeiro. Variação: A velocidade baixa de saída não concede preferência nem elimina o dever de observar o pedestre.",
+      "prova": [
+        "A preferência vale somente para os veículos da via? Não. Quem ingressa a partir de lote lindeiro deve ceder tanto aos veículos quanto aos pedestres da via.",
+        "Ser proprietário do imóvel torna preferencial sua saída? Não. A origem no lote lindeiro é justamente a hipótese que impõe ceder passagem."
+      ],
+      "termos": [
+        {
+          "termo": "Lote lindeiro",
+          "significado": "Imóvel adjacente à via, cuja saída exige ceder a quem nela transita."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 38"
+      ],
+      "expected": {
+        "unit_id": "629ea144-b5f1-5ac7-8bd0-1b187c674625",
+        "content_sha256": "abbb385264fd2968721f4a5fbf93c0a610ebb26503d84bccfade70eea4502ae1",
+        "simples": "O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deve dar preferência aos veículos e pedestres que por ela estejam transitando.",
+        "pontos": [
+          "Quem sai de lote lindeiro dá preferência à via."
+        ],
+        "atencao": [
+          "Preferência de quem já está na via."
+        ],
+        "exemplo": "Quem sai da garagem espera passar os veículos e pedestres.",
+        "prova": [
+          "Assertiva que dá preferência a quem sai do lote lindeiro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-37",
+      "unit_id": "a5f61228-51e9-5cd2-8841-16d423422fc2",
+      "content_sha256": "a5d823173b0985a0fc7fbb4138e3196b98af897b9e4622e5264cf7590a36007b",
+      "simples": "Nas vias providas de acostamento, a conversão à esquerda e a operação de retorno devem ser feitas nos locais apropriados e, onde estes não existirem, o condutor deve aguardar no acostamento, à direita, para cruzar a pista com segurança.",
+      "pontos": [
+        "Conversão e retorno em locais apropriados.",
+        "Na falta, aguardar no acostamento, à direita."
+      ],
+      "atencao": [
+        "Aguardar à DIREITA, no acostamento.",
+        "A hipótese não dispensa sinalização nem autoriza circular livremente no acostamento."
+      ],
+      "exemplo": "Em via com acostamento, o condutor quer retornar onde não existe local apropriado. Resposta: aguarda à direita no acostamento e só cruza com segurança, observadas outras restrições. Variação: Se há local apropriado para conversão ou retorno, o artigo determina seu uso; não autoriza escolher sempre qualquer ponto do acostamento.",
+      "prova": [
+        "O texto manda aguardar no meio da pista? Não. A espera, na hipótese indicada, ocorre no acostamento à direita.",
+        "A existência de acostamento permite retorno proibido pela sinalização? Não. A regra precisa ser integrada aos limites e à segurança da manobra."
+      ],
+      "termos": [
+        {
+          "termo": "Acostamento",
+          "significado": "Parte da via utilizada no recorte de espera segura, sem virar faixa geral de circulação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 38"
+      ],
+      "expected": {
+        "unit_id": "a5f61228-51e9-5cd2-8841-16d423422fc2",
+        "content_sha256": "a5d823173b0985a0fc7fbb4138e3196b98af897b9e4622e5264cf7590a36007b",
+        "simples": "Nas vias providas de acostamento, a conversão à esquerda e a operação de retorno devem ser feitas nos locais apropriados e, onde estes não existirem, o condutor deve aguardar no acostamento, à direita, para cruzar a pista com segurança.",
+        "pontos": [
+          "Conversão e retorno em locais apropriados.",
+          "Na falta, aguardar no acostamento, à direita."
+        ],
+        "atencao": [
+          "Aguardar à DIREITA, no acostamento."
+        ],
+        "exemplo": "Sem retorno sinalizado, o condutor aguarda no acostamento para cruzar.",
+        "prova": [
+          "Assertiva que manda aguardar no meio da pista para converter à esquerda erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 38"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-38",
+      "unit_id": "59409abf-949d-5be3-ad0d-b4d4ce3b7f60",
+      "content_sha256": "1c9eb6f8abac7829881648119c06e8da8432d61015cc42f41a64bd38ac319de2",
+      "simples": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deve, ao sair pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar a manobra no menor espaço possível; e, ao sair pelo lado esquerdo, aproximar-se o máximo possível do eixo ou da linha divisória da pista, quando houver, em pista com circulação nos dois sentidos.",
+      "pontos": [
+        "Saída à DIREITA: aproximar-se do bordo direito e executar no menor espaço possível.",
+        "Saída à ESQUERDA: em dois sentidos, eixo/linha divisória; em sentido único, bordo esquerdo.",
+        "Ceder aos pedestres e ciclistas e aos veículos contrários conforme preferências."
+      ],
+      "atencao": [
+        "Posicionamento correto antes de converter.",
+        "A seta e o posicionamento correto não concedem prioridade contra usuários com preferência."
+      ],
+      "exemplo": "Em via de sentido único, a condutora prepara conversão à esquerda. Resposta: aproxima-se do bordo esquerdo, não aplica automaticamente a posição do eixo de uma via de dois sentidos. Variação: Ao converter, encontra ciclista e pedestre com passagem a respeitar: cede, além de observar veículos em sentido contrário e as preferências pertinentes.",
+      "prova": [
+        "A posição para sair à esquerda é igual em via de um e de dois sentidos? Não. O inciso II diferencia bordo esquerdo e eixo/linha divisória.",
+        "Durante a mudança de direção, só importa o veículo que vem atrás? Não. O parágrafo exige ceder a pedestres, ciclistas e veículos em sentido contrário, respeitadas preferências."
+      ],
+      "termos": [
+        {
+          "termo": "Posicionamento para conversão",
+          "significado": "Aproximação do bordo ou eixo pertinente, integrada à proteção de quem cruza a trajetória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 35"
+      ],
+      "expected": {
+        "unit_id": "59409abf-949d-5be3-ad0d-b4d4ce3b7f60",
+        "content_sha256": "1c9eb6f8abac7829881648119c06e8da8432d61015cc42f41a64bd38ac319de2",
+        "simples": "Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deve, ao sair pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar a manobra no menor espaço possível; e, ao sair pelo lado esquerdo, aproximar-se o máximo possível do eixo ou da linha divisória da pista, quando houver, em pista com circulação nos dois sentidos.",
+        "pontos": [
+          "Saída pela direita: junto ao bordo direito.",
+          "Saída pela esquerda: junto ao eixo da pista."
+        ],
+        "atencao": [
+          "Posicionamento correto antes de converter."
+        ],
+        "exemplo": "Para converter à direita, o condutor se aproxima do bordo direito.",
+        "prova": [
+          "Assertiva que manda converter à direita partindo do eixo da pista erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 35"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-39",
+      "unit_id": "63094404-6c20-5f3d-850a-ab94b2967180",
+      "content_sha256": "a3a92a8666e344bcf092cac6955e35e355255bcff0f17c96d28e0dfcbb3ef8e0",
+      "simples": "Nas vias urbanas, a operação de retorno deve ser feita nos locais para isso determinados, por meio de sinalização ou existência de locais apropriados, ou em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, as condições meteorológicas e a movimentação de pedestres e ciclistas.",
+      "pontos": [
+        "Retorno em locais determinados ou seguros.",
+        "Observância das condições da via e do ambiente."
+      ],
+      "atencao": [
+        "Retorno em local sem proibição e com segurança.",
+        "Não usar a possibilidade textual para desconsiderar sinalização proibitiva ou condições adversas."
+      ],
+      "exemplo": "O condutor encontra local urbano sem proibição, mas a chuva e o movimento de ciclistas impedem retorno seguro. Resposta: a ausência de placa proibitiva não basta para autorizar a manobra. Variação: Outro ponto oferece condições reais de segurança e fluidez no recorte do artigo; sua análise não se resume a ser formalmente sinalizado.",
+      "prova": [
+        "Retorno urbano só pode ocorrer em local com placa específica em toda hipótese? Não. O texto também admite locais apropriados e outros com segurança e fluidez, respeitadas restrições.",
+        "Basta a vontade de retornar para escolher qualquer ponto? Não. Considerar via, veículo, clima e movimento de pedestres e ciclistas."
+      ],
+      "termos": [
+        {
+          "termo": "Fluidez segura",
+          "significado": "Circulação sem interferência indevida, compatível com proteção dos usuários."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 37"
+      ],
+      "expected": {
+        "unit_id": "63094404-6c20-5f3d-850a-ab94b2967180",
+        "content_sha256": "a3a92a8666e344bcf092cac6955e35e355255bcff0f17c96d28e0dfcbb3ef8e0",
+        "simples": "Nas vias urbanas, a operação de retorno deve ser feita nos locais para isso determinados, por meio de sinalização ou existência de locais apropriados, ou em outros locais que ofereçam condições de segurança e fluidez, observadas as características da via, do veículo, as condições meteorológicas e a movimentação de pedestres e ciclistas.",
+        "pontos": [
+          "Retorno em locais determinados ou seguros.",
+          "Observância das condições da via e do ambiente."
+        ],
+        "atencao": [
+          "Retorno em local sem proibição e com segurança."
+        ],
+        "exemplo": "O retorno é feito no local sinalizado.",
+        "prova": [
+          "Assertiva que permite retorno em qualquer ponto da via urbana erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 37"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-40",
+      "unit_id": "90527640-aba9-5ca0-b48d-f3346aeabcce",
+      "content_sha256": "282c000f0ea1388ab3e4dc2c93914137ddab957b773cde3ac5876f7b56e2991b",
+      "simples": "Usar luz baixa à noite e também de dia em túnel, chuva, neblina ou cerração. Via não iluminada exige luz alta, salvo cruzar ou seguir veículo. A troca intermitente breve tem hipóteses próprias de advertência; não copiar a limitação territorial da buzina. Os §§1º/2º distinguem motocicletas/transporte coletivo em faixa própria e veículos sem DRL em rodovia de pista simples fora do perímetro urbano.",
+      "pontos": [
+        "Luz baixa: noite; de dia em TÚNEL, CHUVA, NEBLINA ou CERRAÇÃO.",
+        "Luz alta em via não iluminada, exceto ao CRUZAR ou SEGUIR veículo.",
+        "Troca intermitente breve: intenção de ultrapassar o veículo à frente ou indicar risco aos veículos em sentido contrário.",
+        "Pisca-alerta: imobilizações/emergência ou determinação regulamentar da via.",
+        "À noite, luz de placa na circulação e luzes de posição na parada para embarque/desembarque/carga/descarga.",
+        "Motocicletas, motonetas e ciclomotores: luz baixa de dia e à noite; coletivo: recorte de faixa/pista destinada.",
+        "§2º: SEM DRL, em rodovia de PISTA SIMPLES, FORA do perímetro urbano, mesmo de dia."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: Lei 14.071/2020, com vigência diferida de 180 dias. Não recuperar inciso IV revogado nem regra antiga geral de farol diurno em toda rodovia.",
+        "DRL não afasta por si luz baixa em túnel ou condição meteorológica do inciso I. Não confundir troca de luzes com buzina."
+      ],
+      "exemplo": "Um carro com luzes de rodagem diurna entra num túnel durante o dia. Resposta: a luz baixa continua obrigatória pelo inciso I, b; não basta invocar a regra de DRL da rodovia. Variação: Em rodovia de pista simples fora do perímetro urbano, de dia e sem situação adicional, o §2º exige faróis para veículo sem DRL; motocicletas têm regra própria de luz baixa de dia e à noite.",
+      "prova": [
+        "A restrição fora da área urbana da buzina deve ser copiada para a troca intermitente de luzes? Não. O inciso III trata de intenção de ultrapassar o veículo à frente ou risco para o sentido contrário, sem a mesma condição territorial do art. 41, II.",
+        "Luz alta em via não iluminada pode ser mantida ao seguir outro veículo? Não. O inciso II exige a exceção ao cruzar ou seguir outro veículo."
+      ],
+      "termos": [
+        {
+          "termo": "Luz de rodagem diurna",
+          "significado": "DRL: iluminação com função própria, que não dispensa luz baixa nas hipóteses expressas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 41",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "90527640-aba9-5ca0-b48d-f3346aeabcce",
+        "content_sha256": "282c000f0ea1388ab3e4dc2c93914137ddab957b773cde3ac5876f7b56e2991b",
+        "simples": "O uso de luzes em veículo obedece a determinações como manter acesos os faróis, na luz baixa, à noite e, mesmo durante o dia, em túneis e sob chuva, neblina ou cerração; usar luz alta nas vias não iluminadas, exceto ao cruzar com outro veículo ou ao segui-lo; e não trocar de forma intermitente e por curto período a luz baixa e a alta, salvo para advertir ultrapassagem fora da área urbana.",
+        "pontos": [
+          "Luz baixa à noite e em túneis, chuva e neblina.",
+          "Luz alta em vias não iluminadas, com exceções.",
+          "Regras sobre a troca intermitente."
+        ],
+        "atencao": [
+          "Luz baixa também de dia em túneis, chuva, neblina e cerração.",
+          "ATUALIZAÇÃO: regras sobre luzes diurnas em rodovias foram alteradas por lei posterior; confira o texto integral."
+        ],
+        "exemplo": "Em túnel, mesmo de dia, mantém-se a luz baixa acesa.",
+        "prova": [
+          "Assertiva que dispensa os faróis acesos em túnel durante o dia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 41"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-41",
+      "unit_id": "efc4b55c-b31e-5d1c-8542-ee55e8458cb4",
+      "content_sha256": "da34b567705efc797e654b8752797d7a5a712df56e2a8a0385ea122d1afb83fd",
+      "simples": "O condutor só pode fazer uso de buzina, em toque breve, para fazer as advertências necessárias a fim de evitar sinistros e, fora das áreas urbanas, quando for conveniente advertir outro condutor de que se tem o propósito de ultrapassá-lo.",
+      "pontos": [
+        "Toque breve.",
+        "Para evitar sinistros.",
+        "Fora das áreas urbanas, para advertir ultrapassagem."
+      ],
+      "atencao": [
+        "Em área urbana, só para evitar sinistro.",
+        "ATUALIZAÇÃO: Lei 14.599/2023 usa sinistros no inciso I. O limite territorial da buzina de ultrapassagem não deve ser transportado ao art. 40, III."
+      ],
+      "exemplo": "Fora da área urbana, a condutora dá toque breve para advertir que pretende ultrapassar. Resposta: é hipótese do inciso II, sem licença para buzina contínua. Variação: Em área urbana, advertência necessária para evitar sinistro está no inciso I; mero cumprimento ou pressão para acelerar não se torna uso livre.",
+      "prova": [
+        "O artigo admite qualquer duração de toque nas hipóteses legais? Não. Mesmo nas hipóteses permitidas de advertência, o caput limita o uso a toque breve.",
+        "A advertência de ultrapassagem do inciso II vale indistintamente dentro de área urbana? Não. O inciso a condiciona a estar fora dessas áreas, distinto da prevenção de sinistros."
+      ],
+      "termos": [
+        {
+          "termo": "Advertência breve",
+          "significado": "Sinal sonoro curto nas hipóteses legais, distinto de uso livre ou prolongado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 40",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm"
+      ],
+      "expected": {
+        "unit_id": "efc4b55c-b31e-5d1c-8542-ee55e8458cb4",
+        "content_sha256": "da34b567705efc797e654b8752797d7a5a712df56e2a8a0385ea122d1afb83fd",
+        "simples": "O condutor só pode fazer uso de buzina, em toque breve, para fazer as advertências necessárias a fim de evitar sinistros e, fora das áreas urbanas, quando for conveniente advertir outro condutor de que se tem o propósito de ultrapassá-lo.",
+        "pontos": [
+          "Toque breve.",
+          "Para evitar sinistros.",
+          "Fora das áreas urbanas, para advertir ultrapassagem."
+        ],
+        "atencao": [
+          "Em área urbana, só para evitar sinistro."
+        ],
+        "exemplo": "Na rodovia, o toque breve avisa que o condutor vai ultrapassar.",
+        "prova": [
+          "Assertiva que permite o uso livre da buzina nas áreas urbanas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 40"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-42",
+      "unit_id": "e94d8bbb-a014-596d-a8e0-b19fb2a739f6",
+      "content_sha256": "e7a034aa5f10c733d119d383a8253c5ff80ced80cf4006a3753bc34b765585ba",
+      "simples": "Nenhum condutor deve frear bruscamente seu veículo, salvo por razões de segurança.",
+      "pontos": [
+        "Frenagem brusca só por segurança."
+      ],
+      "atencao": [
+        "Exceção: razões de segurança.",
+        "Não ensinar proibição sem exceção nem presumir que toda frenagem provocativa é legítima."
+      ],
+      "exemplo": "Um pedestre surge inesperadamente à frente e a condutora freia bruscamente para evitar atropelamento. Resposta: a exceção de segurança permite a frenagem necessária. Variação: Frear para assustar o condutor que vem atrás não é legitimado pela mesma exceção e pode criar perigo.",
+      "prova": [
+        "O artigo proíbe qualquer frenagem brusca, inclusive para evitar sinistro? Não. A regra ressalva razões de segurança, como a frenagem necessária para evitar atropelamento.",
+        "Uma razão de vingança contra outro motorista equivale a segurança? Não. A exceção exige necessidade de segurança, não simples vontade de impor risco."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção de segurança",
+          "significado": "Motivo legítimo para a frenagem brusca que a regra ordinária restringe."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 43"
+      ],
+      "expected": {
+        "unit_id": "e94d8bbb-a014-596d-a8e0-b19fb2a739f6",
+        "content_sha256": "e7a034aa5f10c733d119d383a8253c5ff80ced80cf4006a3753bc34b765585ba",
+        "simples": "Nenhum condutor deve frear bruscamente seu veículo, salvo por razões de segurança.",
+        "pontos": [
+          "Frenagem brusca só por segurança."
+        ],
+        "atencao": [
+          "Exceção: razões de segurança."
+        ],
+        "exemplo": "A frenagem brusca para evitar atropelamento é permitida.",
+        "prova": [
+          "Assertiva que proíbe frenagem brusca em qualquer hipótese erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 43"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-43",
+      "unit_id": "99e1647b-8f20-584b-bad0-f90995d7ac78",
+      "content_sha256": "cad3649f92c84a1f08f8164a1d09d51f232b323953429638bc058d46cfadde76",
+      "simples": "Ao regular a velocidade, o condutor deve observar constantemente as condições físicas da via, do veículo e da carga, as condições meteorológicas e a intensidade do trânsito, obedecendo aos limites máximos de velocidade estabelecidos para a via, além de não obstruir a marcha normal dos demais veículos sem causa justificada, transitando a velocidade anormalmente reduzida.",
+      "pontos": [
+        "Observar condições da via, do veículo, da carga e do clima.",
+        "Respeitar os limites máximos.",
+        "Não transitar em velocidade anormalmente reduzida sem causa justificada.",
+        "Redução ordinária: avaliar risco/inconveniente e sinalizar com antecedência; ressalva de perigo iminente no inciso II."
+      ],
+      "atencao": [
+        "Velocidade anormalmente reduzida sem causa também é irregular.",
+        "O limite máximo não é velocidade obrigatória. Não inventar uma velocidade mínima única para qualquer via neste artigo."
+      ],
+      "exemplo": "A velocidade máxima da via é 80 km/h, mas chuva intensa e visibilidade reduzida exigem velocidade menor. Resposta: respeitar o teto não dispensa adaptar a condução às condições. Variação: Em via segura e fluxo normal, velocidade anormalmente reduzida sem causa justificada que obstrua veículos também viola o artigo; reduzir por risco real é situação diferente.",
+      "prova": [
+        "Circular no limite máximo assegura conformidade em qualquer clima? Não. Via, veículo, carga, clima e intensidade do trânsito devem ser considerados.",
+        "A verificação prévia ao reduzir nunca admite exceção? Não. O inciso II ressalva perigo iminente; a redução ordinária deve ser segura e sinalizada com antecedência."
+      ],
+      "termos": [
+        {
+          "termo": "Velocidade compatível",
+          "significado": "Ritmo adequado ao contexto, respeitado o limite máximo e a segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 61"
+      ],
+      "expected": {
+        "unit_id": "99e1647b-8f20-584b-bad0-f90995d7ac78",
+        "content_sha256": "cad3649f92c84a1f08f8164a1d09d51f232b323953429638bc058d46cfadde76",
+        "simples": "Ao regular a velocidade, o condutor deve observar constantemente as condições físicas da via, do veículo e da carga, as condições meteorológicas e a intensidade do trânsito, obedecendo aos limites máximos de velocidade estabelecidos para a via, além de não obstruir a marcha normal dos demais veículos sem causa justificada, transitando a velocidade anormalmente reduzida.",
+        "pontos": [
+          "Observar condições da via, do veículo, da carga e do clima.",
+          "Respeitar os limites máximos.",
+          "Não transitar em velocidade anormalmente reduzida sem causa justificada."
+        ],
+        "atencao": [
+          "Velocidade anormalmente reduzida sem causa também é irregular."
+        ],
+        "exemplo": "Dirigir devagar demais e atrapalhar o fluxo viola a regra.",
+        "prova": [
+          "Assertiva que considera irregular apenas o excesso de velocidade, e não a velocidade anormalmente reduzida, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 61"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44",
+      "unit_id": "7f39529b-6071-5a9b-bcbb-d7bef60f3832",
+      "content_sha256": "8f8b122f5fb7916c759158068caa79799219baebd3f5111c64a13d8470a59e6a",
+      "simples": "Ao aproximar-se de qualquer tipo de cruzamento, o condutor do veículo deve demonstrar prudência especial, transitando em velocidade moderada, de forma que possa deter seu veículo com segurança para dar passagem a pedestre e a veículos que tenham o direito de preferência.",
+      "pontos": [
+        "Prudência especial nos cruzamentos.",
+        "Velocidade moderada.",
+        "Dar passagem a quem tem preferência."
+      ],
+      "atencao": [
+        "Vale para qualquer cruzamento.",
+        "Preferência não elimina o dever de segurança; não tratar o sinal favorável como autorização incondicional."
+      ],
+      "exemplo": "A condutora tem preferência em cruzamento, mas um pedestre está na trajetória. Resposta: aproximação exige prudência e velocidade que permita parar com segurança, não preferência absoluta sem cautela. Variação: Mesmo com semáforo favorável, a cautela se mantém; o art. 45 ainda impede bloquear o trânsito transversal.",
+      "prova": [
+        "Só cruzamento sem sinalização exige prudência especial? Não. O artigo abrange qualquer tipo de cruzamento.",
+        "Ter preferência permite atravessar sem observar pedestres? Não. O dever de controle e passagem segura continua."
+      ],
+      "termos": [
+        {
+          "termo": "Prudência no cruzamento",
+          "significado": "Cautela reforçada para conseguir parar e respeitar quem deve passar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 45"
+      ],
+      "expected": {
+        "unit_id": "7f39529b-6071-5a9b-bcbb-d7bef60f3832",
+        "content_sha256": "8f8b122f5fb7916c759158068caa79799219baebd3f5111c64a13d8470a59e6a",
+        "simples": "Ao aproximar-se de qualquer tipo de cruzamento, o condutor do veículo deve demonstrar prudência especial, transitando em velocidade moderada, de forma que possa deter seu veículo com segurança para dar passagem a pedestre e a veículos que tenham o direito de preferência.",
+        "pontos": [
+          "Prudência especial nos cruzamentos.",
+          "Velocidade moderada.",
+          "Dar passagem a quem tem preferência."
+        ],
+        "atencao": [
+          "Vale para qualquer cruzamento."
+        ],
+        "exemplo": "Ao chegar ao cruzamento, o condutor reduz para poder parar.",
+        "prova": [
+          "Assertiva que dispensa prudência especial em cruzamentos sinalizados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 45"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-44-a",
+      "unit_id": "a32f7059-ca28-5e2e-986c-86cac00dedbe",
+      "content_sha256": "f1945f2512cb83e47af654fc62c98d5fba11d0490cb652b7515fbaf965b10e1b",
+      "simples": "É livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os arts. 44, 45 e 70.",
+      "pontos": [
+        "Conversão à direita no vermelho, só com sinalização permissiva."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Exige SINALIZAÇÃO que permita; sem ela, é proibido.",
+        "ATUALIZAÇÃO: incluído pela Lei 14.071/2020, vigente após sua vacância. Não copiar permissões gerais de outros países nem transformar a placa em prioridade absoluta."
+      ],
+      "exemplo": "Há sinalização permitindo conversão à direita no vermelho e a área de destino está livre. Resposta: a conversão pode ocorrer com prudência, sem prejudicar pedestres e sem bloquear a interseção. Variação: Sem sinalização permissiva, a simples ausência de veículos não cria essa autorização; com pedestre em situação protegida, deve ceder.",
+      "prova": [
+        "A Lei 14.071 liberou toda conversão à direita em qualquer vermelho? Não. Exige sinalização indicativa permitindo e observância dos arts. 44, 45 e 70.",
+        "A autorização permite fechar o cruzamento ou ignorar a preferência do pedestre? Não. As remissões preservam cautela, não bloqueio e proteção dos pedestres."
+      ],
+      "termos": [
+        {
+          "termo": "Conversão condicionada",
+          "significado": "Permissão expressamente sinalizada, integrada às demais regras de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 44",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm"
+      ],
+      "expected": {
+        "unit_id": "a32f7059-ca28-5e2e-986c-86cac00dedbe",
+        "content_sha256": "f1945f2512cb83e47af654fc62c98d5fba11d0490cb652b7515fbaf965b10e1b",
+        "simples": "É livre o movimento de conversão à direita diante de sinal vermelho do semáforo onde houver sinalização indicativa que permita essa conversão, observados os arts. 44, 45 e 70.",
+        "pontos": [
+          "Conversão à direita no vermelho, só com sinalização permissiva."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Exige SINALIZAÇÃO que permita; sem ela, é proibido."
+        ],
+        "exemplo": "Há placa permitindo a conversão à direita no vermelho; o condutor pode converter com cautela.",
+        "prova": [
+          "Assertiva que permite a conversão à direita no vermelho em qualquer semáforo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-45",
+      "unit_id": "666a89fc-1467-575b-aae4-e3b6a5d1878f",
+      "content_sha256": "40b7da447709a709b3234703b1165b9c7f9cbae5b9007ec2dbb6f329e6b86bff",
+      "simples": "Mesmo que a indicação luminosa do semáforo lhe seja favorável, nenhum condutor pode entrar em uma interseção se houver possibilidade de ser obrigado a imobilizar o veículo na área do cruzamento, obstruindo ou impedindo a passagem do trânsito transversal.",
+      "pontos": [
+        "Proibido entrar na interseção sem espaço para sair.",
+        "Vale mesmo com sinal verde."
+      ],
+      "atencao": [
+        "Mesmo com semáforo favorável.",
+        "O dever decorre do risco de obstrução; não presumir preferência ilimitada pelo verde."
+      ],
+      "exemplo": "O semáforo está verde, mas o trânsito à frente impede sair da área do cruzamento. Resposta: não deve entrar, pois pode ficar imobilizado e impedir o fluxo transversal. Variação: Na abertura de espaço suficiente, a passagem volta a ser examinada com as regras e cautelas pertinentes; não há proibição permanente de cruzar por ter havido fila.",
+      "prova": [
+        "Sinal verde autoriza entrar mesmo com risco de parar bloqueando a interseção? Não. O artigo ressalva essa situação expressamente.",
+        "Só depois de efetivamente bloquear a via surge o dever de cautela? Não. A regra considera a possibilidade de imobilização na área do cruzamento."
+      ],
+      "termos": [
+        {
+          "termo": "Não bloqueio",
+          "significado": "Dever de preservar o fluxo transversal, mesmo com sinal luminoso favorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 44"
+      ],
+      "expected": {
+        "unit_id": "666a89fc-1467-575b-aae4-e3b6a5d1878f",
+        "content_sha256": "40b7da447709a709b3234703b1165b9c7f9cbae5b9007ec2dbb6f329e6b86bff",
+        "simples": "Mesmo que a indicação luminosa do semáforo lhe seja favorável, nenhum condutor pode entrar em uma interseção se houver possibilidade de ser obrigado a imobilizar o veículo na área do cruzamento, obstruindo ou impedindo a passagem do trânsito transversal.",
+        "pontos": [
+          "Proibido entrar na interseção sem espaço para sair.",
+          "Vale mesmo com sinal verde."
+        ],
+        "atencao": [
+          "Mesmo com semáforo favorável."
+        ],
+        "exemplo": "O condutor não avança no verde se o trânsito à frente está parado.",
+        "prova": [
+          "Assertiva que autoriza entrar no cruzamento no verde, ainda que fique parado nele, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 44"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-46",
+      "unit_id": "2d7f0471-4865-5da3-8113-4805dd300386",
+      "content_sha256": "04fdd82de6e1778c31e858be795e41b6657ff5c13ab8e85c07b554b083ef6074",
+      "simples": "Sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deve ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo Contran.",
+      "pontos": [
+        "Sinalização imediata em imobilização de emergência.",
+        "Forma definida pelo Contran."
+      ],
+      "atencao": [
+        "Sinalização na forma do Contran, como o triângulo.",
+        "Não certificar neste artigo todo detalhe de equipamento ou distância regulamentar; emergência não afasta o dever de segurança."
+      ],
+      "exemplo": "Um veículo sofre pane e precisa imobilizar-se temporariamente no leito viário. Resposta: é necessária sinalização imediata de advertência, conforme forma estabelecida pelo Contran. Variação: Ativar um equipamento não deve ser tratado como cumprimento automático de toda regra regulamentar; examinar os requisitos atuais e a situação concreta.",
+      "prova": [
+        "A emergência dispensa sinalizar porque a parada era inevitável? Não. É precisamente a hipótese que exige advertência imediata.",
+        "O art. 46 fixa sozinho uma distância universal de triângulo? Não. Remete a forma de sinalização ao Contran; não inventar metragem sem verificar a norma pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Advertência de emergência",
+          "significado": "Sinalização imediata de imobilização no leito viário, integrada à regulamentação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 47"
+      ],
+      "expected": {
+        "unit_id": "2d7f0471-4865-5da3-8113-4805dd300386",
+        "content_sha256": "04fdd82de6e1778c31e858be795e41b6657ff5c13ab8e85c07b554b083ef6074",
+        "simples": "Sempre que for necessária a imobilização temporária de um veículo no leito viário, em situação de emergência, deve ser providenciada a imediata sinalização de advertência, na forma estabelecida pelo Contran.",
+        "pontos": [
+          "Sinalização imediata em imobilização de emergência.",
+          "Forma definida pelo Contran."
+        ],
+        "atencao": [
+          "Sinalização na forma do Contran, como o triângulo."
+        ],
+        "exemplo": "Em pane na pista, o condutor coloca o triângulo de sinalização.",
+        "prova": [
+          "Assertiva que dispensa a sinalização na imobilização por emergência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 47"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-47",
+      "unit_id": "3726c539-11f4-584d-8375-5a038e3c4350",
+      "content_sha256": "6c34fe97ab648e0af0035db7e686e3fbea07714fa483544b59568b76975da604",
+      "simples": "Quando proibido o estacionamento na via, a parada deve restringir-se ao tempo indispensável para embarque ou desembarque de passageiros, desde que não interrompa ou perturbe o fluxo de veículos ou a locomoção de pedestres. A operação de carga ou descarga é regulamentada pelo órgão com circunscrição sobre a via e é considerada estacionamento.",
+      "pontos": [
+        "Parada só para embarque e desembarque.",
+        "Carga e descarga é considerada estacionamento."
+      ],
+      "atencao": [
+        "Carga ou descarga = ESTACIONAMENTO.",
+        "Proibição de estacionar não permite parada em local onde também exista proibição de parar ou em condição que perturbe o fluxo."
+      ],
+      "exemplo": "Uma pessoa embarca rapidamente em local que proíbe estacionamento, sem interromper o fluxo. Resposta: a parada se limita ao tempo indispensável de embarque/desembarque, respeitadas outras proibições. Variação: Descarregar mercadorias durante apenas dois minutos continua sendo estacionamento para o parágrafo; curta duração não transforma carga/descarga em parada.",
+      "prova": [
+        "Toda parada é permitida onde estacionamento é proibido? Não. O recorte exige embarque/desembarque indispensável e ausência de interrupção ou perturbação do fluxo de veículos/pedestres, além das restrições pertinentes.",
+        "Carga e descarga viram parada se o motorista continua dentro do veículo? Não. O parágrafo as considera estacionamento e remete a regulamentação ao órgão com circunscrição."
+      ],
+      "termos": [
+        {
+          "termo": "Parada e estacionamento",
+          "significado": "Embarque/desembarque indispensável e carga/descarga têm tratamento jurídico distinto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 48"
+      ],
+      "expected": {
+        "unit_id": "3726c539-11f4-584d-8375-5a038e3c4350",
+        "content_sha256": "6c34fe97ab648e0af0035db7e686e3fbea07714fa483544b59568b76975da604",
+        "simples": "Quando proibido o estacionamento na via, a parada deve restringir-se ao tempo indispensável para embarque ou desembarque de passageiros, desde que não interrompa ou perturbe o fluxo de veículos ou a locomoção de pedestres. A operação de carga ou descarga é regulamentada pelo órgão com circunscrição sobre a via e é considerada estacionamento.",
+        "pontos": [
+          "Parada só para embarque e desembarque.",
+          "Carga e descarga é considerada estacionamento."
+        ],
+        "atencao": [
+          "Carga ou descarga = ESTACIONAMENTO."
+        ],
+        "exemplo": "Em local de estacionamento proibido, só se para para embarcar ou desembarcar.",
+        "prova": [
+          "Assertiva que considera carga e descarga como mera parada erra: é estacionamento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 48"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:02:32.326691+00:00",
+        "updated_at": "2026-10-11T22:02:32.326691+00:00"
+      }
+    }
+  ]
+}

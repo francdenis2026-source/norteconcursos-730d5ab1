@@ -1,0 +1,229 @@
+{
+  "verified_at": "2026-10-13T07:02:33.213Z",
+  "batch": 1,
+  "target_keys": [
+    "art-1",
+    "art-2",
+    "art-3",
+    "art-4",
+    "art-5",
+    "art-6",
+    "art-7",
+    "art-7-a",
+    "art-8",
+    "art-9",
+    "art-10",
+    "art-10-a",
+    "art-12",
+    "art-13",
+    "art-14",
+    "art-15",
+    "art-16",
+    "art-17",
+    "art-19",
+    "art-20",
+    "art-21",
+    "art-22",
+    "art-23",
+    "art-24",
+    "art-24-a",
+    "art-25",
+    "art-25-a",
+    "art-26",
+    "art-27",
+    "art-28",
+    "art-29",
+    "art-30",
+    "art-31",
+    "art-32",
+    "art-33",
+    "art-34",
+    "art-35",
+    "art-36",
+    "art-37",
+    "art-38",
+    "art-39",
+    "art-40",
+    "art-41",
+    "art-42",
+    "art-43",
+    "art-44",
+    "art-44-a",
+    "art-45",
+    "art-46",
+    "art-47"
+  ],
+  "reviewed": 50,
+  "solved_exercises": 100,
+  "publication": {
+    "version": "2026-10-11-transito-targeted",
+    "dry_run": false,
+    "laws": 1,
+    "explanations": 50,
+    "published": 50,
+    "improved": 42,
+    "preserved": 0,
+    "verified_at": "2026-10-13T06:59:59.188Z"
+  },
+  "readback": {
+    "verified_at": "2026-10-13T07:03:37.526829+00:00",
+    "authored_explanations_confirmed": 50,
+    "untargeted_explanations_preserved": 3463,
+    "untargeted_course_explanations_preserved": 315,
+    "prior_revisions_retained_in_manifest": 50,
+    "timestamp_only_changes": [],
+    "protected_tables_unchanged": [
+      "study_materials",
+      "study_material_enrichments",
+      "legal_courses",
+      "syllabus_topics",
+      "content_sources"
+    ],
+    "authorized_syllabus_source_repair": {
+      "verified_at": "2026-10-13T06:56:14.196Z",
+      "table": "syllabus_editions",
+      "expected": {
+        "id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+        "contest_name": "Polícia Civil do Distrito Federal",
+        "role_name": "Delegado de Polícia",
+        "contest_year": 2026,
+        "exam_board": "Cebraspe",
+        "source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "status": "active",
+        "created_at": "2026-09-28T03:34:44.103601+00:00"
+      },
+      "applied": {
+        "id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+        "contest_name": "Polícia Civil do Distrito Federal",
+        "role_name": "Delegado de Polícia",
+        "contest_year": 2026,
+        "exam_board": "Cebraspe",
+        "source_id": "bf11c280-41e9-4e27-a06b-f3b0f4c32c34",
+        "status": "active",
+        "created_at": "2026-09-28T03:34:44.103601+00:00"
+      },
+      "changed_fields": [
+        "source_id"
+      ],
+      "repair_applied": true,
+      "source": {
+        "id": "bf11c280-41e9-4e27-a06b-f3b0f4c32c34",
+        "source_type": "edital",
+        "title": "PCDF Delegado 2026: edital oficial retificado",
+        "issuer": "CEBRASPE / PCDF",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/409522C3AA9E7D9736EC8A33888E0732BEE4FB07EABC75866BB311B2062C5FF9.pdf",
+        "published_on": null,
+        "checked_at": "2026-10-11T15:26:41.589802+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Fonte consultada na revisão individual do lote de 378; não implica auditoria integral de todos os dispositivos."
+      },
+      "source_original_checked_at_preserved": true,
+      "notes": "Existing registered official retified edital verified in the database; current PDF requests returned 403, so no new full syllabus certification is claimed. Eight early approvals withdrawn for reapproval under the repaired binding.",
+      "partial_approvals_withdrawn": [
+        "art-1",
+        "art-5",
+        "art-2",
+        "art-3",
+        "art-6",
+        "art-7-a",
+        "art-4",
+        "art-7"
+      ]
+    },
+    "course_units_unchanged": true,
+    "concurrent_other_course_changes": [],
+    "note": "Selected course targets and non-targets checked strictly; outside changes recorded without overwriting them or declaring global immutability. Optional single edition source_id repair is checked against exact before/after rows and its registered official source; no broad protected-table exemption."
+  },
+  "ctb": {
+    "slug": "transito",
+    "current": 365,
+    "review_metadata": 67,
+    "pending": 298
+  },
+  "library_totals": {
+    "current_units": 3511,
+    "current_review_metadata": 2510,
+    "pending_current_review_metadata": 1001
+  },
+  "official_sources": [
+    {
+      "slug": "transito",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "fetched_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "status": 200,
+      "sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "bytes": 789873,
+      "checked_at": "2026-10-13T06:15:49.054361+00:00"
+    },
+    {
+      "name": "lei-14071",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14071.htm",
+      "status": 200,
+      "sha256": "6c6c5bdec646f567ebb33a3a353b3ecff139da5172ef746b0bce5a8386df125e",
+      "bytes": 95778,
+      "checked_at": "2026-10-13T06:21:42.398401+00:00"
+    },
+    {
+      "name": "lei-14599",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14599.htm",
+      "status": 200,
+      "sha256": "9bf8e99b419ec65a3430c4daaaa7d1bdbae3505031a6b12071bf2b939396b786",
+      "bytes": 139766,
+      "checked_at": "2026-10-13T06:21:43.573624+00:00"
+    },
+    {
+      "name": "lei-14861",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14861.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14861.htm",
+      "status": 200,
+      "sha256": "95aedbdd7e1cff258ab0c543745cceb4ff07b0c7eafd96d116fd71d5c8d5656f",
+      "bytes": 13154,
+      "checked_at": "2026-10-13T06:21:41.884888+00:00"
+    },
+    {
+      "name": "stj-tema965",
+      "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=965&cod_tema_final=965",
+      "final_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=965&cod_tema_final=965",
+      "status": 200,
+      "sha256": "c46c6851b481a7ff81ddfc0d3bb1c48a3755733251ed6d7680695066fe357779",
+      "bytes": 62839,
+      "checked_at": "2026-10-13T06:21:41.825992+00:00"
+    }
+  ],
+  "institutional_source": {
+    "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran",
+    "status": 200,
+    "sha256": "3ec76f081ecd9ba75599ca8106be16c1039c15df7b11d6a3b8d74bc9265a1c4d",
+    "checked_at": "2026-10-13T06:07:40.585Z"
+  },
+  "normative_source_audit": {
+    "checked_at": "2026-10-13T06:18:00.736661+00:00",
+    "method": "Full HTML5 parse of fresh official Planalto compiled CTB; exact unit body hash comparison.",
+    "rows": [
+      {
+        "slug": "transito",
+        "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+        "parsed_current": 365,
+        "database_current": 365,
+        "missing_articles": [],
+        "unexpected_current": [],
+        "text_differences": []
+      }
+    ]
+  },
+  "validation": {
+    "tests": 421,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "limits": [
+    "A comparação de texto dos 365 dispositivos não certifica a revisão editorial dos 298 pendentes.",
+    "O edital retificado já registrado no banco, conferido em 11/10, substitui a referência incorreta ao caderno. A nova coleta dos PDFs retornou 403 e não foi declarada auditoria integral atualizada do edital.",
+    "Tema 965/STJ foi lido no registro oficial; não certificada toda regulamentação ou decisão constitucional posterior."
+  ],
+  "private_evidence": "Raw HTML/PDFs, snapshots and logs remain in ignored outputs."
+}
