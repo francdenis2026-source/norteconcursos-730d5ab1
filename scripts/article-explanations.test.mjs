@@ -1,4 +1,14 @@
 import test from 'node:test';
+test('CPP plenário integra garantias, recursos e execução do júri',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-verdict-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,27);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(478).atencao.join(' '),/silêncio não é confissão/);
+ assert.match(get(479).simples,/três dias úteis/);
+ assert.match(get(483).atencao.join(' '),/não cria absolvição imune/);
+ assert.match(get(492).pontos.join(' '),/independe do total da pena/);
+ assert.match(get(497).exemplo,/não ao interventor/);
+ for(const n of [475,483,492])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP instalação preserva defesa e distingue contagem de aptidão',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-installation-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

@@ -1,0 +1,1667 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:46:15.815235+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 27,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-471",
+        "art-472",
+        "art-473",
+        "art-474",
+        "art-475",
+        "art-476",
+        "art-477",
+        "art-478",
+        "art-479",
+        "art-480",
+        "art-481",
+        "art-482",
+        "art-483",
+        "art-484",
+        "art-485",
+        "art-486",
+        "art-487",
+        "art-488",
+        "art-489",
+        "art-490",
+        "art-491",
+        "art-492",
+        "art-493",
+        "art-494",
+        "art-495",
+        "art-496",
+        "art-497"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-471",
+      "unit_id": "b9ef880a-9d17-51b4-83ec-792d35408193",
+      "content_sha256": "ed444eb9ae7ab28d8814f91b42a516fc7b4a4ccd8998eb51e21e06b87d4708d2",
+      "simples": "Falta de número para Conselho por exclusões ou recusas leva a adiamento após sorteio de suplentes.",
+      "pontos": [
+        "Primeiro dia desimpedido.",
+        "Observar art. 464.",
+        "Necessidade de sete aptos para Conselho difere do quórum de instalação."
+      ],
+      "atencao": [
+        "Não julgar com seis nem contar excluído como votante."
+      ],
+      "exemplo": "Recusas deixam só seis aptos: aplicam-se suplência e adiamento. Variação: Haver quinze na chamada não garante sete aptos após todas as exclusões.",
+      "prova": [
+        "Pode julgar com seis jurados? Não.",
+        "Quórum inicial garante sempre Conselho apto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Composição insuficiente",
+          "significado": "Impossibilidade de formar os sete julgadores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b9ef880a-9d17-51b4-83ec-792d35408193",
+        "content_sha256": "ed444eb9ae7ab28d8814f91b42a516fc7b4a4ccd8998eb51e21e06b87d4708d2",
+        "simples": "Se, em consequência do impedimento, suspeição, incompatibilidade, dispensa ou recusa, não houver número para a formação do Conselho, o julgamento será adiado para o primeiro dia desimpedido, após sorteados os suplentes, com observância do art. 464.",
+        "pontos": [
+          "Sem número para formar o Conselho: adiamento para o primeiro dia desimpedido.",
+          "Sorteio de suplentes, segundo o art. 464."
+        ],
+        "atencao": [
+          "Adiamento e sorteio de suplentes."
+        ],
+        "exemplo": "Recusas e impedimentos esgotam os jurados: adia-se e sorteiam-se suplentes.",
+        "prova": [
+          "Assertiva que forma o Conselho com menos de 7 jurados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 464"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-472",
+      "unit_id": "c59b069e-d1e7-5336-bbb6-12b16341ca20",
+      "content_sha256": "d5441a6b4f30d20622a1fb15644f0ad43dc60e6e7775994904b8a32ad6c789e3",
+      "simples": "Formado Conselho, jurados prestam compromisso de imparcialidade e recebem peças de admissibilidade e relatório.",
+      "pontos": [
+        "Compromisso nominal.",
+        "Cópias da pronúncia ou decisões posteriores pertinentes e relatório.",
+        "Pronúncia não é prova de culpa por autoridade."
+      ],
+      "atencao": [
+        "Receber pronúncia não autoriza condenar porque juiz já decidiu culpa: decisão admite acusação."
+      ],
+      "exemplo": "Jurado recebe documentos para compreender objeto da causa. Variação: Acusação não pode convertê-los em argumento de autoridade nos debates.",
+      "prova": [
+        "Pronúncia significa condenação anterior? Não.",
+        "Há compromisso individual nominal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Compromisso do jurado",
+          "significado": "Dever de exame imparcial da causa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c59b069e-d1e7-5336-bbb6-12b16341ca20",
+        "content_sha256": "d5441a6b4f30d20622a1fb15644f0ad43dc60e6e7775994904b8a32ad6c789e3",
+        "simples": "Formado o Conselho de Sentença, o presidente, levantando-se, e, com ele, todos os presentes, fará aos jurados a exortação: 'Em nome da lei, concito-vos a examinar esta causa com imparcialidade e a proferir a vossa decisão de acordo com a vossa consciência e os ditames da justiça.' Os jurados, nominalmente chamados, responderão: 'Assim o prometo.' O jurado, em seguida, receberá cópias da pronúncia ou das decisões posteriores que julgaram admissível a acusação e do relatório do processo.",
+        "pontos": [
+          "Compromisso solene dos jurados.",
+          "Todos de pé; resposta 'Assim o prometo'.",
+          "Entrega aos jurados de cópias da pronúncia e do relatório."
+        ],
+        "atencao": [
+          "Jurados recebem a pronúncia e o relatório."
+        ],
+        "exemplo": "Os jurados prestam o compromisso e recebem cópia da pronúncia.",
+        "prova": [
+          "Assertiva que dispensa a entrega de cópia da pronúncia aos jurados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 473"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-473",
+      "unit_id": "9a537999-2f81-514d-91c2-4a01c347db2a",
+      "content_sha256": "3d4679f7044618a5d7134c0d8726ec1cce49be1d3ff05c91bd9e5d1ee825937e",
+      "simples": "Instrução plenária tem perguntas diretas dos sujeitos previstos e perguntas dos jurados por intermédio do presidente.",
+      "pontos": [
+        "Testemunhas da acusação: ordem do caput.",
+        "Testemunhas defensivas: defensor pergunta antes do MP e assistente.",
+        "Podem pedir acareação, reconhecimento e esclarecimento pericial.",
+        "Leitura de peças limitada a precatória e provas cautelares, antecipadas ou não repetíveis na hipótese do §3º."
+      ],
+      "atencao": [
+        "Não dar jurado pergunta direta irrestrita nem converter leitura em reprodução geral do inquérito."
+      ],
+      "exemplo": "Testemunha defensiva recebe primeiro perguntas do defensor no ponto previsto. Variação: Jurado pede esclarecimento ao presidente, que intermedeia.",
+      "prova": [
+        "Jurado pergunta por intermédio do presidente? Sim.",
+        "Defesa tem precedência pertinente em sua testemunha? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Inquirição plenária",
+          "significado": "Produção de prova com ordem e interlocução definidas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9a537999-2f81-514d-91c2-4a01c347db2a",
+        "content_sha256": "3d4679f7044618a5d7134c0d8726ec1cce49be1d3ff05c91bd9e5d1ee825937e",
+        "simples": "Prestado o compromisso pelos jurados, será iniciada a instrução plenária, quando o juiz presidente, o Ministério Público, o assistente, o querelante e o defensor do acusado tomarão, sucessiva e diretamente, as declarações do ofendido, se possível, e inquirirão as testemunhas arroladas pela acusação. Para a inquirição das testemunhas da defesa, o defensor formulará as perguntas antes do Ministério Público e do assistente. Os jurados poderão formular perguntas ao ofendido e às testemunhas, por intermédio do juiz presidente. As partes e os jurados poderão requerer acareações, reconhecimento de pessoas e coisas e esclarecimento dos peritos, bem como a leitura de peças que se refiram, exclusivamente, às provas colhidas por carta precatória e às provas cautelares, antecipadas ou não repetíveis.",
+        "pontos": [
+          "Instrução plenária: juiz, MP, assistente, querelante e defensor perguntam sucessiva e diretamente.",
+          "Testemunhas da defesa: o defensor pergunta primeiro.",
+          "Jurados perguntam por intermédio do juiz presidente.",
+          "Acareações, reconhecimentos, esclarecimentos de peritos e leitura restrita de peças."
+        ],
+        "atencao": [
+          "Jurados perguntam POR INTERMÉDIO do juiz.",
+          "Testemunha de defesa: o defensor inicia."
+        ],
+        "exemplo": "Um jurado submete sua pergunta ao juiz presidente, que a formula à testemunha.",
+        "prova": [
+          "Assertiva que permite ao jurado perguntar diretamente à testemunha erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 474"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-474",
+      "unit_id": "d7f60d95-6e13-58f0-a65d-94482d91db33",
+      "content_sha256": "c191e97b6afc285c2951b53cec9c26bd6127eb0a65c87bd386e666063033b30c",
+      "simples": "Acusado presente é interrogado após instrução; partes perguntam diretamente e jurados por intermédio do presidente.",
+      "pontos": [
+        "Ordem: MP, assistente, querelante e defensor.",
+        "Garantias de silêncio e entrevista defensiva permanecem.",
+        "Algemas só se absolutamente necessárias às hipóteses legais, com fundamentação conforme SV11."
+      ],
+      "atencao": [
+        "Não algemar por rotina, aparência de culpabilidade ou conveniência genérica."
+      ],
+      "exemplo": "Juiz avalia risco concreto e explica necessidade excepcional de algemas. Variação: Réu tranquilo sem necessidade demonstrada não deve permanecer algemado só porque responde por crime grave.",
+      "prova": [
+        "Algemas são rotina permitida no plenário? Não.",
+        "Jurado pergunta diretamente ao acusado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Interrogatório em plenário",
+          "significado": "Ato defensivo com garantias e segurança excepcional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d7f60d95-6e13-58f0-a65d-94482d91db33",
+        "content_sha256": "c191e97b6afc285c2951b53cec9c26bd6127eb0a65c87bd386e666063033b30c",
+        "simples": "Em seguida, o acusado será interrogado, se estiver presente, na forma estabelecida no Capítulo III do Título VII do Livro I do Código, com as alterações introduzidas nesta Seção. O Ministério Público, o assistente, o querelante e o defensor, nessa ordem, poderão formular, diretamente, perguntas ao acusado. Os jurados formularão perguntas por intermédio do juiz presidente. Não se permitirá o uso de algemas no acusado durante o período em que permanecer no plenário do júri, salvo se absolutamente necessário à ordem dos trabalhos, à segurança das testemunhas ou à garantia da integridade física dos presentes.",
+        "pontos": [
+          "Acusado interrogado no plenário, se presente.",
+          "Perguntas diretas: MP, assistente, querelante e defensor, nessa ordem.",
+          "Jurados por intermédio do juiz presidente.",
+          "Sem algemas no plenário, salvo absoluta necessidade."
+        ],
+        "atencao": [
+          "Algemas: exceção por absoluta necessidade (e Súmula Vinculante 11)."
+        ],
+        "exemplo": "O acusado é interrogado sem algemas no plenário.",
+        "prova": [
+          "Assertiva que permite o uso rotineiro de algemas no plenário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 473"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-475",
+      "unit_id": "59240120-a685-52c2-8d98-5d5ba48f60ad",
+      "content_sha256": "afa442839145c8d794a3e2ce43320c9aa7010ab7fc3ffde939f8faa5651f6f49",
+      "simples": "Depoimentos e interrogatório devem ter registro fiel; degravação integra autos quando realizada, com leitura jurisprudencial atual.",
+      "pontos": [
+        "STJ exige necessidade excepcional e prejuízo demonstrado para questão de falta de transcrição.",
+        "Gravação integral acessível assegura consulta; indisponibilidade exige providência.",
+        "Não confundir dispensar transcrição automática com negar acesso."
+      ],
+      "atencao": [
+        "Não declarar nulidade automática só por ausência de texto se há registro acessível; examinar prejuízo e necessidade."
+      ],
+      "exemplo": "Defesa acessa gravação completa para recurso. Variação: Arquivo corrompido ou inacessível demanda exame e solução, não resposta de que transcrição nunca importa.",
+      "prova": [
+        "Toda ausência de transcrição é nulidade automática? Não.",
+        "Acesso efetivo ao registro importa? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro e degravação",
+          "significado": "Documentação audiovisual e transcrição quando necessária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=15%2F08%2F2025&num_registro=202500801523"
+      ],
+      "expected": {
+        "unit_id": "59240120-a685-52c2-8d98-5d5ba48f60ad",
+        "content_sha256": "afa442839145c8d794a3e2ce43320c9aa7010ab7fc3ffde939f8faa5651f6f49",
+        "simples": "O registro dos depoimentos e do interrogatório será feito pelos meios ou recursos de gravação magnética, eletrônica, estenotipia ou técnica similar, destinada a obter maior fidelidade e celeridade na colheita da prova. A transcrição do registro, após feita a degravação, constará dos autos.",
+        "pontos": [
+          "Registro por gravação magnética, eletrônica, estenotipia ou técnica similar.",
+          "Transcrição, após degravação, consta dos autos."
+        ],
+        "atencao": [
+          "Fidelidade e celeridade."
+        ],
+        "exemplo": "Os depoimentos no plenário são gravados e degravados.",
+        "prova": [
+          "Assertiva que dispensa a transcrição do registro nos autos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 405"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-476",
+      "unit_id": "1348520e-aaf6-544f-a291-1dd92046d315",
+      "content_sha256": "278313392b8a17017943952072f89011e6cf17be729a7e583b2fa422b1e9073b",
+      "simples": "Debates seguem acusação nos limites da admissibilidade, depois defesa; réplica e tréplica podem ocorrer.",
+      "pontos": [
+        "Assistente fala após MP.",
+        "Queixa: querelante antes do MP, salvo retomada de titularidade pelo art. 29.",
+        "Agravante pode ser sustentada.",
+        "Pode haver reinquirição de testemunha já ouvida."
+      ],
+      "atencao": [
+        "Acusação não pode introduzir imputação factual nova livremente só porque tem palavra em plenário."
+      ],
+      "exemplo": "MP sustenta acusação admitida e defesa responde. Variação: Fato fora do objeto não pode ser usado como ampliação informal para condenar.",
+      "prova": [
+        "Defesa fala após acusação? Sim.",
+        "Réplica permite tréplica? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Debates plenários",
+          "significado": "Argumentação sobre a causa admitida e prova produzida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1348520e-aaf6-544f-a291-1dd92046d315",
+        "content_sha256": "278313392b8a17017943952072f89011e6cf17be729a7e583b2fa422b1e9073b",
+        "simples": "Encerrada a instrução, será concedida a palavra ao Ministério Público, que fará a acusação, nos limites da pronúncia ou das decisões posteriores que julgaram admissível a acusação, sustentando, se for o caso, a existência de circunstância agravante. O assistente falará depois do Ministério Público. Na ação penal privada, falará em primeiro lugar o querelante e, em seguida, o Ministério Público, salvo se este houver retomado a titularidade da ação. Finda a acusação, terá a palavra a defesa. A acusação poderá replicar e a defesa treplicar, sendo admitida a reinquirição de testemunha já ouvida em plenário.",
+        "pontos": [
+          "Acusação pelo MP nos limites da pronúncia.",
+          "Assistente depois do MP.",
+          "Ação privada: querelante primeiro.",
+          "Defesa após a acusação.",
+          "Réplica e tréplica, com reinquirição possível."
+        ],
+        "atencao": [
+          "Acusação limitada pela PRONÚNCIA."
+        ],
+        "exemplo": "O MP sustenta a acusação nos limites da pronúncia e a defesa responde em seguida.",
+        "prova": [
+          "Assertiva que permite ao MP ampliar a acusação além dos limites da pronúncia erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 477"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-477",
+      "unit_id": "9cfb4f56-4050-5101-b9ec-3ab3bfe33d07",
+      "content_sha256": "433e2bfd7cf1e9960696823b6919ad3313447e74ecee7024c6b62197d52b16bb",
+      "simples": "Acusação e defesa têm uma hora e meia cada; réplica e tréplica uma hora cada, com ampliação por pluralidade de acusados.",
+      "pontos": [
+        "Vários acusadores/defensores dividem tempo por acordo ou decisão do presidente.",
+        "Mais de um acusado: acrescentar uma hora à acusação e defesa; dobrar réplica/tréplica.",
+        "Não usar tempos individuais da primeira fase como regra do plenário."
+      ],
+      "atencao": [
+        "Duas defesas não recebem automaticamente uma hora e meia integral cada sob este dispositivo."
+      ],
+      "exemplo": "Dois acusados: acusação e defesa têm duas horas e meia e réplica/tréplica duas horas. Variação: Vários advogados combinam distribuição, sem ultrapassar total aplicável.",
+      "prova": [
+        "Pluralidade de acusados dobra réplica? Sim.",
+        "Tempo-base da defesa é uma hora e meia? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Tempo dos debates",
+          "significado": "Duração total e repartição conforme composição da causa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9cfb4f56-4050-5101-b9ec-3ab3bfe33d07",
+        "content_sha256": "433e2bfd7cf1e9960696823b6919ad3313447e74ecee7024c6b62197d52b16bb",
+        "simples": "O tempo destinado à acusação e à defesa será de uma hora e meia para cada, e de uma hora para a réplica e outro tanto para a tréplica. Havendo mais de um acusador ou mais de um defensor, combinarão entre si a distribuição do tempo, que, na falta de acordo, será dividido pelo juiz presidente, de forma a não exceder o determinado. Havendo mais de 1 acusado, o tempo para a acusação e a defesa será acrescido de 1 hora e elevado ao dobro o da réplica e da tréplica.",
+        "pontos": [
+          "Acusação e defesa: uma hora e meia cada.",
+          "Réplica e tréplica: uma hora cada.",
+          "Vários acusadores ou defensores dividem o tempo.",
+          "Mais de 1 acusado: acréscimo de 1 hora e réplica e tréplica em dobro."
+        ],
+        "atencao": [
+          "Tempos: 1h30 (debate) e 1h (réplica/tréplica).",
+          "Mais de um acusado: +1 hora e dobro da réplica e da tréplica."
+        ],
+        "exemplo": "Em plenário com um acusado, cada parte tem uma hora e meia para o debate.",
+        "prova": [
+          "Assertiva que fixa em duas horas o tempo de debate com um só acusado erra: é uma hora e meia."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 476"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-478",
+      "unit_id": "4a095a1a-1476-58bb-a3d0-ca5b3f0d058b",
+      "content_sha256": "14c8fb5635fd0a37acd401d826e2ef1be140ba24ab4369af8886534935cd40ae",
+      "simples": "Debates não usam admissibilidade ou algemas como argumento de autoridade, nem silêncio/ausência de interrogatório em prejuízo do acusado.",
+      "pontos": [
+        "Proibição incide sobre uso de autoridade da decisão, não simples existência do documento.",
+        "Garantia de silêncio não produz culpa presumida.",
+        "Nulidade prevista exige exame do ato e regime pertinente."
+      ],
+      "atencao": [
+        "Dizer que juiz pronunciou, logo réu é culpado viola limite; silêncio não é confissão."
+      ],
+      "exemplo": "Defesa ou acusação discute prova sem afirmar culpa pela pronúncia. Variação: Promotor não pode pedir condenação porque réu exerceu silêncio.",
+      "prova": [
+        "Silêncio pode ser explorado para prejudicar acusado? Não.",
+        "Pronúncia prova culpa por autoridade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Limites argumentativos",
+          "significado": "Proteção contra autoridade indevida e autoincriminação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a095a1a-1476-58bb-a3d0-ca5b3f0d058b",
+        "content_sha256": "14c8fb5635fd0a37acd401d826e2ef1be140ba24ab4369af8886534935cd40ae",
+        "simples": "Durante os debates as partes não poderão, sob pena de nulidade, fazer referências à decisão de pronúncia, às decisões posteriores que julgaram admissível a acusação ou à determinação do uso de algemas como argumento de autoridade que beneficiem ou prejudiquem o acusado; nem ao silêncio do acusado ou à ausência de interrogatório por falta de requerimento, em seu prejuízo.",
+        "pontos": [
+          "Proibido invocar a pronúncia como argumento de autoridade.",
+          "Proibido usar o uso de algemas como argumento de autoridade.",
+          "Proibido usar o silêncio do acusado em seu prejuízo.",
+          "Sob pena de nulidade."
+        ],
+        "atencao": [
+          "Nulidade se as vedações forem descumpridas."
+        ],
+        "exemplo": "O promotor diz aos jurados que o juiz já entendeu pela culpa ao pronunciar: nulidade.",
+        "prova": [
+          "Assertiva que permite ao MP citar o silêncio do acusado como indício de culpa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 186"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-479",
+      "unit_id": "ba558658-93c3-5c0b-af76-81bb1356618d",
+      "content_sha256": "cdeb10ef9c7489566aa7068bd5764390699a942805f8375204d45594d353c116",
+      "simples": "Documento ou objeto sobre fatos exige juntada com três dias úteis de antecedência e ciência da outra parte para leitura/exibição.",
+      "pontos": [
+        "Inclui jornais, vídeos, gravações, fotos, laudos, quadros, croquis e similares.",
+        "Prazo em dias úteis.",
+        "Finalidade: evitar surpresa probatória."
+      ],
+      "atencao": [
+        "Não exibir vídeo novo no dia do júri sob pretexto de mera ilustração se versa sobre os fatos."
+      ],
+      "exemplo": "Parte junta fotografia com antecedência e comunica adversária. Variação: Arquivo factual enviado apenas na manhã da sessão não cumpre requisito automaticamente.",
+      "prova": [
+        "São três dias úteis? Sim.",
+        "Regra alcança vídeo sobre o fato? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proibição de surpresa",
+          "significado": "Antecedência e ciência para material factual exibido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ba558658-93c3-5c0b-af76-81bb1356618d",
+        "content_sha256": "cdeb10ef9c7489566aa7068bd5764390699a942805f8375204d45594d353c116",
+        "simples": "Durante o julgamento não será permitida a leitura de documento ou a exibição de objeto que não tiver sido juntado aos autos com a antecedência mínima de 3 dias úteis, dando-se ciência à outra parte. Compreende-se na proibição a leitura de jornais ou qualquer outro escrito, bem como a exibição de vídeos, gravações, fotografias, laudos, quadros, croqui ou qualquer outro meio assemelhado, cujo conteúdo versar sobre a matéria de fato submetida à apreciação e julgamento dos jurados.",
+        "pontos": [
+          "Documento ou objeto deve ser juntado aos autos com antecedência mínima de 3 dias úteis, com ciência à outra parte.",
+          "A vedação abrange jornais, vídeos, gravações, fotografias, laudos, quadros e croqui sobre a matéria de fato."
+        ],
+        "atencao": [
+          "Antecedência de 3 dias ÚTEIS."
+        ],
+        "exemplo": "A defesa não pode exibir no plenário um vídeo juntado no dia do julgamento.",
+        "prova": [
+          "Assertiva que fixa em 24 horas a antecedência para exibir documentos no plenário erra: são 3 dias úteis."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 231"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-480",
+      "unit_id": "f3102de4-af6e-58d1-9544-452199ec3937",
+      "content_sha256": "1dca847da187c43e6a6a059d6b2810b1450a55627303d9f69121499fda923302",
+      "simples": "Partes e jurados podem pedir localização de peça citada por intermédio do presidente; jurados podem pedir esclarecimentos sobre fatos.",
+      "pontos": [
+        "Após debates, verificar se jurados estão habilitados a julgar.",
+        "Esclarecer dúvidas fáticas à vista dos autos.",
+        "Acesso aos autos e instrumentos solicitado ao presidente."
+      ],
+      "atencao": [
+        "Esclarecer não permite inventar prova ou induzir voto do Conselho."
+      ],
+      "exemplo": "Jurado pede folha da peça citada e consulta pertinente. Variação: Presidente não responde dúvida com opinião pessoal de culpa alheia à prova.",
+      "prova": [
+        "Pedido passa pelo presidente? Sim.",
+        "Dúvida permite criar prova? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Esclarecimento aos jurados",
+          "significado": "Acesso informado à prova com controle do ato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f3102de4-af6e-58d1-9544-452199ec3937",
+        "content_sha256": "1dca847da187c43e6a6a059d6b2810b1450a55627303d9f69121499fda923302",
+        "simples": "A acusação, a defesa e os jurados poderão, a qualquer momento e por intermédio do juiz presidente, pedir ao orador que indique a folha dos autos onde se encontra a peça por ele lida ou citada, facultando-se, ainda, aos jurados solicitar-lhe, pelo mesmo meio, o esclarecimento de fato por ele alegado. Concluídos os debates, o presidente indagará dos jurados se estão habilitados a julgar ou se necessitam de outros esclarecimentos. Se houver dúvida sobre questão de fato, o presidente prestará esclarecimentos à vista dos autos. Os jurados, nesta fase, terão acesso aos autos e aos instrumentos do crime se solicitarem ao juiz presidente.",
+        "pontos": [
+          "Pedido de indicação da folha dos autos, por intermédio do juiz presidente.",
+          "Jurados podem pedir esclarecimento de fato alegado.",
+          "Fim dos debates: presidente pergunta se estão habilitados a julgar.",
+          "Dúvida de fato: esclarecimentos à vista dos autos.",
+          "Acesso aos autos e instrumentos do crime, se solicitado."
+        ],
+        "atencao": [
+          "Tudo por intermédio do juiz presidente."
+        ],
+        "exemplo": "Um jurado pede ao juiz que o orador indique a folha dos autos de onde leu.",
+        "prova": [
+          "Assertiva que permite aos jurados dirigirem-se diretamente ao orador erra: é por intermédio do juiz presidente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 481"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-481",
+      "unit_id": "42b7464f-66da-55d2-bd2b-7675e02b55c5",
+      "content_sha256": "d6f2b4b187d23b9792885d7ff8265bf8159f98fdab340a28cfda88563a3b4e19",
+      "simples": "Fato essencial impossível de verificar imediatamente leva à dissolução do Conselho e diligências necessárias.",
+      "pontos": [
+        "Se perícia, nomear perito e formular quesitos.",
+        "Partes podem formular quesitos e indicar assistentes técnicos em cinco dias."
+      ],
+      "atencao": [
+        "Não confundir dissolução por prova essencial com pausa breve para questão resolvível na hora."
+      ],
+      "exemplo": "Perícia imprescindível não realizável imediatamente leva a diligência e novo procedimento pertinente. Variação: Dúvida simples resolvida nos autos não exige dissolução automática.",
+      "prova": [
+        "Partes podem indicar assistente em cinco dias? Sim.",
+        "Toda dúvida dissolve Conselho? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dissolução por prova essencial",
+          "significado": "Encerramento da composição para produzir esclarecimento indispensável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "42b7464f-66da-55d2-bd2b-7675e02b55c5",
+        "content_sha256": "d6f2b4b187d23b9792885d7ff8265bf8159f98fdab340a28cfda88563a3b4e19",
+        "simples": "Se a verificação de qualquer fato, reconhecida como essencial para o julgamento da causa, não puder ser realizada imediatamente, o juiz presidente dissolverá o Conselho, ordenando a realização das diligências entendidas necessárias. Se a diligência consistir na produção de prova pericial, o juiz presidente, desde logo, nomeará perito e formulará quesitos, facultando às partes também formulá-los e indicar assistentes técnicos, no prazo de 5 dias.",
+        "pontos": [
+          "Fato essencial não verificável de imediato: dissolução do Conselho e diligências.",
+          "Prova pericial: perito nomeado e quesitos do juiz.",
+          "Partes formulam quesitos e indicam assistentes técnicos em 5 dias."
+        ],
+        "atencao": [
+          "Dissolução do Conselho de Sentença."
+        ],
+        "exemplo": "Uma perícia essencial é necessária; o Conselho é dissolvido e o perito, nomeado.",
+        "prova": [
+          "Assertiva que mantém o Conselho de Sentença enquanto aguarda a diligência essencial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 480"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-482",
+      "unit_id": "55cdd0c3-34c7-5ee1-9185-1f6d9e606b12",
+      "content_sha256": "b6b6b0b279ce3e367440bcc55b0d5b8f3092daab76a6c2f763d10fb5c1934736",
+      "simples": "Quesitos tratam dos fatos e da absolvição, em proposições afirmativas, simples e distintas.",
+      "pontos": [
+        "Considerar admissibilidade, interrogatório e alegações.",
+        "Cada pergunta precisa de resposta clara e precisa."
+      ],
+      "atencao": [
+        "Não juntar vários fatos independentes numa pergunta confusa."
+      ],
+      "exemplo": "Presidente separa materialidade e participação em quesitos próprios. Variação: Pergunta com duas hipóteses contraditórias não permite voto claro.",
+      "prova": [
+        "Proposições devem ser simples e distintas? Sim.",
+        "Quesito trata só de técnica de dosimetria? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Quesitação",
+          "significado": "Formulação das perguntas a serem votadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "55cdd0c3-34c7-5ee1-9185-1f6d9e606b12",
+        "content_sha256": "b6b6b0b279ce3e367440bcc55b0d5b8f3092daab76a6c2f763d10fb5c1934736",
+        "simples": "O Conselho de Sentença será questionado sobre matéria de fato e se o acusado deve ser absolvido. Os quesitos serão redigidos em proposições afirmativas, simples e distintas, de modo que cada um possa ser respondido com suficiente clareza e necessária precisão, levando o presidente em conta os termos da pronúncia, do interrogatório e das alegações das partes.",
+        "pontos": [
+          "Os jurados respondem sobre matéria de FATO e sobre a absolvição.",
+          "Quesitos: afirmativos, simples e distintos.",
+          "Redação com base na pronúncia, no interrogatório e nas alegações das partes."
+        ],
+        "atencao": [
+          "Os jurados não decidem questões de direito."
+        ],
+        "exemplo": "O quesito é formulado de forma afirmativa e simples, para ser respondido com 'sim' ou 'não'.",
+        "prova": [
+          "Assertiva que permite quesitos complexos e negativos erra: devem ser afirmativos, simples e distintos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 483"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-483",
+      "unit_id": "c6b50179-a0f9-52a1-a35b-0cb577c431db",
+      "content_sha256": "32900d106cf5286ee86c3b7938869e5c15d39b6d8f6383a717affcd7266d1a03",
+      "simples": "Quesitos seguem materialidade, autoria, absolvição e, quando pertinente, diminuição, qualificadoras e aumentos.",
+      "pontos": [
+        "Quatro votos negativos em materialidade ou autoria encerram com absolvição.",
+        "Quatro afirmativos em ambos levam ao quesito genérico de absolvição.",
+        "Desclassificação após segundo ou terceiro conforme caso; tentativa/tipificação de competência do júri após segundo.",
+        "Crimes/acusados distintos exigem séries distintas.",
+        "ADPF779 veda legítima defesa da honra.",
+        "Tema1087 admite recurso da acusação por manifesta contrariedade à prova; clemência registrada e constitucional tem limites específicos."
+      ],
+      "atencao": [
+        "Quesito genérico não cria absolvição imune a todo recurso nem permite restaurar argumento discriminatório."
+      ],
+      "exemplo": "Após reconhecer fato e autoria, Conselho vota absolvição no quesito próprio. Variação: Clemência exige tese em ata e compatibilidade constitucional; não basta rótulo para impedir qualquer revisão.",
+      "prova": [
+        "Quatro negativos na autoria podem encerrar votação? Sim.",
+        "Absolvição genérica é absolutamente irrecorrível? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Quesito absolutório",
+          "significado": "Pergunta geral inserida após reconhecimento dos requisitos anteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5745131&numeroProcesso=1225185&numeroTema=1087",
+        "https://noticias.stf.jus.br/postsnoticias/tese-da-legitima-defesa-da-honra-e-inconstitucional/"
+      ],
+      "expected": {
+        "unit_id": "c6b50179-a0f9-52a1-a35b-0cb577c431db",
+        "content_sha256": "32900d106cf5286ee86c3b7938869e5c15d39b6d8f6383a717affcd7266d1a03",
+        "simples": "Os quesitos serão formulados na seguinte ordem: materialidade do fato; autoria ou participação; se o acusado deve ser absolvido; se existe causa de diminuição de pena alegada pela defesa; e se existe circunstância qualificadora ou causa de aumento de pena reconhecidas na pronúncia. A resposta negativa, de mais de 3 jurados, a qualquer dos quesitos dos incisos I e II encerra a votação e implica a absolvição. Respondidos afirmativamente por mais de 3 jurados os quesitos I e II, será formulado o quesito: 'O jurado absolve o acusado?'. Decidindo os jurados pela condenação, o julgamento prossegue, com quesitos sobre causa de diminuição de pena e circunstância qualificadora ou causa de aumento. O dispositivo remete à ADPF 779.",
+        "pontos": [
+          "Ordem: I materialidade; II autoria ou participação; III absolvição; IV causa de diminuição; V qualificadora ou causa de aumento.",
+          "Negativa de mais de 3 jurados em I ou II: absolvição.",
+          "Afirmativa em I e II: quesito genérico 'O jurado absolve o acusado?'.",
+          "Condenação: quesitos sobre diminuição e qualificadora/aumento."
+        ],
+        "atencao": [
+          "Mais de 3 jurados = maioria (de 7).",
+          "O quesito da absolvição (genérico) é obrigatório."
+        ],
+        "exemplo": "Quatro jurados negam a autoria: o acusado é absolvido e a votação se encerra.",
+        "prova": [
+          "Assertiva que coloca o quesito de qualificadora antes da autoria erra: autoria vem antes."
+        ],
+        "termos": [
+          {
+            "termo": "Quesito genérico",
+            "significado": "'O jurado absolve o acusado?', terceiro quesito da série."
+          }
+        ],
+        "remissoes": [
+          "Art. 482",
+          "Art. 489"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-484",
+      "unit_id": "d7bcf9df-86db-5d42-a5ef-6fd79d1f426f",
+      "content_sha256": "e0ebb05a3f83d011eeb7fd0415c284fdf9a9257876a8c40839484386a7ef8d12",
+      "simples": "Presidente lê quesitos, ouve pedidos/reclamações e registra decisão; explica significado ainda em plenário.",
+      "pontos": [
+        "Ata contém requerimento/reclamação e decisão.",
+        "Explicação deve ser compreensível e imparcial."
+      ],
+      "atencao": [
+        "Não omitir objeção da parte nem confundir esclarecimento com indicação de voto."
+      ],
+      "exemplo": "Defesa reclama de quesito composto; presidente decide e registra. Variação: Explicar palavra jurídica não autoriza aconselhar condenação.",
+      "prova": [
+        "Objeção e decisão vão à ata? Sim.",
+        "Explicação ocorre ainda em plenário? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Controle dos quesitos",
+          "significado": "Ciência e exame das formulações antes da votação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d7bcf9df-86db-5d42-a5ef-6fd79d1f426f",
+        "content_sha256": "e0ebb05a3f83d011eeb7fd0415c284fdf9a9257876a8c40839484386a7ef8d12",
+        "simples": "O presidente lerá os quesitos e indagará das partes se têm requerimento ou reclamação a fazer, devendo qualquer deles, bem como a decisão, constar da ata. Ainda em plenário, o juiz presidente explicará aos jurados o significado de cada quesito.",
+        "pontos": [
+          "Leitura dos quesitos e oportunidade de requerimento ou reclamação.",
+          "Requerimentos e decisão constam da ata.",
+          "Explicação do significado de cada quesito aos jurados."
+        ],
+        "atencao": [
+          "Reclamação não registrada em ata gera preclusão."
+        ],
+        "exemplo": "A defesa reclama de um quesito, e a ata registra a reclamação e a decisão.",
+        "prova": [
+          "Assertiva que dispensa o registro em ata das reclamações sobre os quesitos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 483"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-485",
+      "unit_id": "d9817b75-9d50-57cf-af2a-68e7b7b5b461",
+      "content_sha256": "04e28bfd1c19dc9b90b6e625a615c011609418278d3d7dd0886537bf38655290",
+      "simples": "Votação ocorre em sala especial com os sujeitos enumerados, sem intervenções que perturbem liberdade do Conselho.",
+      "pontos": [
+        "Sem sala especial, retirar público e manter os autorizados.",
+        "Retirar quem se porta inconvenientemente nas condições legais."
+      ],
+      "atencao": [
+        "Sigilo dos votos não significa expulsar defensor ou MP do ato previsto."
+      ],
+      "exemplo": "Defesa acompanha votação sem pressionar jurados. Variação: Ausência de sala não leva a votação com plateia influenciando respostas.",
+      "prova": [
+        "Defensor está entre participantes previstos? Sim.",
+        "Público permanece se não há sala especial? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ambiente de votação",
+          "significado": "Proteção de voto livre com participantes legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "d9817b75-9d50-57cf-af2a-68e7b7b5b461",
+        "content_sha256": "04e28bfd1c19dc9b90b6e625a615c011609418278d3d7dd0886537bf38655290",
+        "simples": "Não havendo dúvida a ser esclarecida, o juiz presidente, os jurados, o Ministério Público, o assistente, o querelante, o defensor do acusado, o escrivão e o oficial de justiça dirigir-se-ão à sala especial a fim de ser procedida a votação. Na falta de sala especial, o juiz presidente determinará que o público se retire, permanecendo somente as pessoas mencionadas. O juiz presidente advertirá as partes de que não será permitida qualquer intervenção que possa perturbar a livre manifestação do Conselho e fará retirar da sala quem se portar inconvenientemente.",
+        "pontos": [
+          "Votação em sala especial, com presentes limitados.",
+          "Sem sala especial: público se retira.",
+          "Proibida intervenção que perturbe a livre manifestação do Conselho."
+        ],
+        "atencao": [
+          "Sigilo da votação, mas com a presença de partes e escrivão."
+        ],
+        "exemplo": "Sem sala especial, o público é retirado e a votação ocorre no plenário.",
+        "prova": [
+          "Assertiva que permite a presença do público na votação, na falta de sala especial, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Sala especial",
+            "significado": "Local da votação dos quesitos, com acesso restrito."
+          }
+        ],
+        "remissoes": [
+          "Art. 486"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-486",
+      "unit_id": "328d3f12-882c-5ad6-927c-d242c926be9e",
+      "content_sha256": "c1e74db9d61ed02853d12309f272f8831c80733e4573054fd0e976f744e49b1b",
+      "simples": "Para cada quesito são distribuídas cédulas opacas dobráveis: sete sim e sete não.",
+      "pontos": [
+        "Cada jurado escolhe resposta.",
+        "Não confundir quatorze cédulas com quatorze votantes.",
+        "Sigilo depende da forma e coleta."
+      ],
+      "atencao": [
+        "Sete sim e sete não representam opções, não número de jurados."
+      ],
+      "exemplo": "Cada um dos sete recebe as opções para voto secreto. Variação: Não divulgar escolha pela transparência do papel.",
+      "prova": [
+        "Quatorze cédulas significam quatorze jurados? Não.",
+        "Papel deve ser opaco? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Cédulas de votação",
+          "significado": "Opções materiais destinadas ao sigilo da escolha."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "328d3f12-882c-5ad6-927c-d242c926be9e",
+        "content_sha256": "c1e74db9d61ed02853d12309f272f8831c80733e4573054fd0e976f744e49b1b",
+        "simples": "Antes de proceder-se à votação de cada quesito, o juiz presidente mandará distribuir aos jurados pequenas cédulas, feitas de papel opaco e facilmente dobráveis, contendo 7 delas a palavra sim, 7 a palavra não.",
+        "pontos": [
+          "Cédulas de papel opaco e facilmente dobráveis.",
+          "7 com 'sim' e 7 com 'não' para cada jurado."
+        ],
+        "atencao": [
+          "7 cédulas 'sim' e 7 'não'."
+        ],
+        "exemplo": "Cada jurado recebe 7 cédulas 'sim' e 7 'não' antes de cada quesito.",
+        "prova": [
+          "Assertiva que fixa em 3 cédulas de cada tipo a distribuição erra: são 7 de cada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 487"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-487",
+      "unit_id": "a34d549c-ff90-50cc-b620-1e6b0cddbb2b",
+      "content_sha256": "a7e7faaca64a70974fbdda10476e3b8c972e28f5e02f7c5accf217009ff471db",
+      "simples": "Oficial recolhe votos e cédulas não usadas em urnas separadas para garantir sigilo.",
+      "pontos": [
+        "Separar o que foi votado do que sobrou.",
+        "Conferência não pode revelar escolha individual."
+      ],
+      "atencao": [
+        "Não misturar conjuntos ou identificar autor de cada voto."
+      ],
+      "exemplo": "Cédula escolhida vai à urna de votos e sobra à outra. Variação: Contagem pública individualizada por jurado destruiria finalidade do sigilo.",
+      "prova": [
+        "Urnas devem ser separadas? Sim.",
+        "Identificar voto de cada jurado é finalidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Coleta sigilosa",
+          "significado": "Recolhimento separado das cédulas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a34d549c-ff90-50cc-b620-1e6b0cddbb2b",
+        "content_sha256": "a7e7faaca64a70974fbdda10476e3b8c972e28f5e02f7c5accf217009ff471db",
+        "simples": "Para assegurar o sigilo do voto, o oficial de justiça recolherá em urnas separadas as cédulas correspondentes aos votos e as não utilizadas.",
+        "pontos": [
+          "Urnas separadas para as cédulas votadas e para as não utilizadas."
+        ],
+        "atencao": [
+          "Mantém o sigilo do voto, evitando identificar a votação."
+        ],
+        "exemplo": "Voto e cédulas restantes vão para urnas diferentes.",
+        "prova": [
+          "Assertiva que recolhe em uma só urna os votos e as cédulas não utilizadas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 486"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-488",
+      "unit_id": "f566678c-b7c0-5104-afed-f86da3328d8c",
+      "content_sha256": "a5b04edc8699b1481708c322ac7af13f92a3aa8e657ecfe9533be9fe9f53aaf4",
+      "simples": "Conferidos votos e cédulas não utilizadas, registrar votação de cada quesito e resultado no termo.",
+      "pontos": [
+        "Conferência das sobras também consta.",
+        "Documentação respeita segredo individual."
+      ],
+      "atencao": [
+        "Não registrar nome do jurado ligado ao sim/não sob pretexto de detalhamento."
+      ],
+      "exemplo": "Termo informa resultado e conferência regular das cédulas. Variação: Ata nominal dos presentes não vira identificação de seus votos.",
+      "prova": [
+        "Termo inclui conferência das sobras? Sim.",
+        "Registro deve revelar escolha individual? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Termo de votação",
+          "significado": "Documento do resultado e dos controles da votação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f566678c-b7c0-5104-afed-f86da3328d8c",
+        "content_sha256": "a5b04edc8699b1481708c322ac7af13f92a3aa8e657ecfe9533be9fe9f53aaf4",
+        "simples": "Após a resposta, verificados os votos e as cédulas não utilizadas, o presidente determinará que o escrivão registre no termo a votação de cada quesito, bem como o resultado do julgamento. Do termo também constará a conferência das cédulas não utilizadas.",
+        "pontos": [
+          "Verificação dos votos e das cédulas não utilizadas.",
+          "Registro no termo da votação de cada quesito e do resultado.",
+          "Conferência das cédulas não utilizadas consta do termo."
+        ],
+        "atencao": [
+          "A apuração é interrompida quando se alcança maioria (sigilo da unanimidade)."
+        ],
+        "exemplo": "O escrivão registra no termo o resultado de cada quesito.",
+        "prova": [
+          "Assertiva que dispensa a conferência das cédulas não utilizadas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 491"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-489",
+      "unit_id": "1c22f6f2-6fac-58e1-a2a6-4cb07a6f3704",
+      "content_sha256": "c7a77c33bf673ad3946194f4f14f05a63ae0992c6ec7ff469ed8b9997e68fdb4",
+      "simples": "Decisões do júri são tomadas por maioria de votos.",
+      "pontos": [
+        "Com sete, quatro compõem maioria.",
+        "Integrar regras de quesitação e segredo.",
+        "Não exigir unanimidade."
+      ],
+      "atencao": [
+        "Maioria não elimina controle de contradição entre respostas."
+      ],
+      "exemplo": "Quatro respostas convergentes estabelecem maioria pertinente. Variação: Veredito não depende de sete votos iguais.",
+      "prova": [
+        "Unanimidade é obrigatória? Não.",
+        "Quatro de sete formam maioria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Maioria",
+          "significado": "Número de votos suficiente para decisão do Conselho."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1c22f6f2-6fac-58e1-a2a6-4cb07a6f3704",
+        "content_sha256": "c7a77c33bf673ad3946194f4f14f05a63ae0992c6ec7ff469ed8b9997e68fdb4",
+        "simples": "As decisões do Tribunal do Júri serão tomadas por maioria de votos.",
+        "pontos": [
+          "Decisões do Júri por maioria de votos."
+        ],
+        "atencao": [
+          "Voto secreto e soberania dos veredictos (Constituição, art. 5º, XXXVIII)."
+        ],
+        "exemplo": "Quatro votos 'sim' decidem o quesito.",
+        "prova": [
+          "Assertiva que exige unanimidade para as decisões do Júri erra: basta maioria."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 483"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-490",
+      "unit_id": "fd571036-5d14-5f0c-9928-daa61468389f",
+      "content_sha256": "616e97926f50c000ee6d8fdae00a0b839e7bba093766d1ae65b1647c9a7c16d1",
+      "simples": "Contradição entre respostas é explicada e os quesitos pertinentes voltam à votação; prejudicados são declarados sem voto inútil.",
+      "pontos": [
+        "Identificar incompatibilidade concreta.",
+        "Não mudar resposta por discordância do juiz.",
+        "Quesito genérico absolutório precisa leitura do sistema e Tema1087."
+      ],
+      "atencao": [
+        "Reconhecer fato/autoria e absolver no quesito genérico não é sempre contradição lógica automática."
+      ],
+      "exemplo": "Duas respostas factualmente incompatíveis exigem explicação e nova votação pertinente. Variação: Juiz não impõe condenação apenas porque discordou da absolvição geral.",
+      "prova": [
+        "Discordância pessoal autoriza nova votação? Não.",
+        "Quesitos prejudicados precisam ser todos votados? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Coerência das respostas",
+          "significado": "Compatibilização sem substituir vontade do Conselho."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5745131&numeroProcesso=1225185&numeroTema=1087"
+      ],
+      "expected": {
+        "unit_id": "fd571036-5d14-5f0c-9928-daa61468389f",
+        "content_sha256": "616e97926f50c000ee6d8fdae00a0b839e7bba093766d1ae65b1647c9a7c16d1",
+        "simples": "Se a resposta a qualquer dos quesitos estiver em contradição com outra ou outras já dadas, o presidente, explicando aos jurados em que consiste a contradição, submeterá novamente à votação os quesitos a que se referirem tais respostas. Se, pela resposta dada a um dos quesitos, o presidente verificar que ficam prejudicados os seguintes, assim o declarará, dando por finda a votação.",
+        "pontos": [
+          "Respostas contraditórias: o presidente explica a contradição e submete novamente a votação.",
+          "Quesitos prejudicados: o presidente declara e encerra a votação."
+        ],
+        "atencao": [
+          "Contradição leva a nova votação (e não a nulidade imediata)."
+        ],
+        "exemplo": "Duas respostas se contradizem, e os jurados votam novamente.",
+        "prova": [
+          "Assertiva que anula o julgamento diante de contradição sem nova votação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 483"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-491",
+      "unit_id": "5dbe6f59-d667-54c6-9e9e-49c2a4d464f2",
+      "content_sha256": "15b27adbc949523acb1b16300b18869b2428260928d85cc139b6c634e90dcaff",
+      "simples": "Termo de votação é assinado por presidente, jurados e partes após encerramento.",
+      "pontos": [
+        "Assinaturas formalizam documentação.",
+        "Não revelam voto pessoal."
+      ],
+      "atencao": [
+        "Assinar termo não significa declarar qual opção cada jurado escolheu."
+      ],
+      "exemplo": "Participantes assinam o registro da votação concluída. Variação: Recibo nominal do termo não deve indicar voto individual.",
+      "prova": [
+        "Jurados assinam termo? Sim.",
+        "Assinatura revela voto necessariamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Formalização do termo",
+          "significado": "Registro assinado do procedimento de votação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5dbe6f59-d667-54c6-9e9e-49c2a4d464f2",
+        "content_sha256": "15b27adbc949523acb1b16300b18869b2428260928d85cc139b6c634e90dcaff",
+        "simples": "Encerrada a votação, será o termo a que se refere o art. 488 assinado pelo presidente, pelos jurados e pelas partes.",
+        "pontos": [
+          "Termo de votação assinado pelo presidente, jurados e partes."
+        ],
+        "atencao": [
+          "Assinatura de todos."
+        ],
+        "exemplo": "Ao fim da votação, o termo é assinado por todos.",
+        "prova": [
+          "Assertiva que dispensa a assinatura dos jurados no termo de votação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 488"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-492",
+      "unit_id": "6ff644fd-ac3d-5317-aa86-967fa986ed88",
+      "content_sha256": "209b5a00dfc3a862c07c0db964fc82419c28232741c6f48c1687678feb5814f9",
+      "simples": "Presidente sentencia conforme veredito e integra execução imediata ao Tema1068/STF, sem requisito universal de quinze anos.",
+      "pontos": [
+        "Condenação: pena-base, agravantes/atenuantes debatidas, causas admitidas e efeitos.",
+        "Tema1068: execução da condenação pelo corpo de jurados independe do total da pena.",
+        "Preventiva e execução são fundamentos distintos; recursos e análise de suspensão excepcional preservam regime aplicável.",
+        "Absolvição: liberdade se não preso por outro motivo; revogar restrições pertinentes; segurança somente se cabível.",
+        "Desclassificação: presidente sentencia e observa Lei9099 quando pertinente, inclusive conexo não doloso contra vida.",
+        "Não aplicar recortes de quinze dos parágrafos sem integração ao precedente vinculante."
+      ],
+      "atencao": [
+        "Não ensinar que pena abaixo de quinze impede execução imediata do júri; não estender regime a toda condenação comum."
+      ],
+      "exemplo": "Condenação de oito anos pelo júri não afasta por valor da pena a regra do Tema1068. Variação: Absolvido ainda preso por outra causa não é liberado dessa prisão só pelo veredito deste processo.",
+      "prova": [
+        "Tema1068 depende de quinze anos? Não.",
+        "Preventiva e execução têm fundamento idêntico? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Sentença do júri",
+          "significado": "Decisão do presidente que concretiza o veredito e efeitos legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciarepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5776893&numeroProcesso=1235340&numeroTema=1068"
+      ],
+      "expected": {
+        "unit_id": "6ff644fd-ac3d-5317-aa86-967fa986ed88",
+        "content_sha256": "209b5a00dfc3a862c07c0db964fc82419c28232741c6f48c1687678feb5814f9",
+        "simples": "Em seguida, o presidente proferirá sentença. No caso de condenação: fixará a pena-base; considerará as circunstâncias agravantes ou atenuantes alegadas nos debates; imporá os aumentos ou diminuições, em atenção às causas admitidas pelo júri; observará as demais disposições do art. 387; mandará o acusado recolher-se ou o recomendará à prisão em que se encontra, se presentes os requisitos da preventiva, ou, no caso de condenação a pena igual ou superior a 15 anos de reclusão, determinará a execução provisória das penas, com expedição de mandado de prisão, sem prejuízo do conhecimento de recursos; e estabelecerá os efeitos genéricos e específicos da condenação. No caso de absolvição, mandará colocar em liberdade o acusado se por outro motivo não estiver preso, entre outras providências.",
+        "pontos": [
+          "Condenação: pena-base, agravantes e atenuantes alegadas, aumentos e diminuições, art. 387.",
+          "Prisão: se presentes os requisitos da preventiva; pena igual ou superior a 15 anos: execução provisória.",
+          "Efeitos genéricos e específicos da condenação.",
+          "Absolvição: liberdade, se por outro motivo não estiver preso."
+        ],
+        "atencao": [
+          "Pena igual ou superior a 15 anos: execução provisória (texto do dispositivo), tema debatido no STF.",
+          "O juiz presidente fixa a pena; os jurados decidem apenas sobre os fatos."
+        ],
+        "exemplo": "O juiz presidente fixa a pena-base após o veredicto condenatório.",
+        "prova": [
+          "Assertiva que atribui aos jurados a fixação da pena erra: ela cabe ao juiz presidente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 387",
+          "Art. 483"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-493",
+      "unit_id": "351f5720-99dd-5773-a60b-b5720fb3306c",
+      "content_sha256": "2a60fd0adea98fd2562652f31fd1c835cfafc275a11aafa058562cff4fced08d",
+      "simples": "Sentença é lida em plenário antes de encerrar sessão.",
+      "pontos": [
+        "Ato formal de comunicação do resultado.",
+        "Não confundir com demais intimações exigidas."
+      ],
+      "atencao": [
+        "Leitura não dispensa indiscriminadamente todo ato de ciência posterior."
+      ],
+      "exemplo": "Presidente lê sentença ainda na sessão. Variação: Notícia informal depois de encerrar não substitui ato previsto.",
+      "prova": [
+        "Leitura é antes do encerramento? Sim.",
+        "Toda intimação posterior é dispensada automaticamente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Leitura da sentença",
+          "significado": "Proclamação formal em plenário."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "351f5720-99dd-5773-a60b-b5720fb3306c",
+        "content_sha256": "2a60fd0adea98fd2562652f31fd1c835cfafc275a11aafa058562cff4fced08d",
+        "simples": "A sentença será lida em plenário pelo presidente antes de encerrada a sessão de instrução e julgamento.",
+        "pontos": [
+          "Sentença lida em plenário, antes de encerrada a sessão."
+        ],
+        "atencao": [
+          "Leitura pública."
+        ],
+        "exemplo": "O juiz lê a sentença em plenário ao fim da sessão.",
+        "prova": [
+          "Assertiva que dispensa a leitura da sentença em plenário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 492"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-494",
+      "unit_id": "800eae15-c1c9-5972-9d35-38ffaedc0022",
+      "content_sha256": "2ac346853faab8e2c8e20e66fe7406e68c2590e1b4782d3b1198ca0cd74a2bc4",
+      "simples": "Escrivão lavra ata de cada julgamento, assinada pelo presidente e partes.",
+      "pontos": [
+        "Distinguir ata geral de termo de votação.",
+        "Registro da sessão é obrigatório."
+      ],
+      "atencao": [
+        "Gravação não autoriza simplesmente omitir ata prevista."
+      ],
+      "exemplo": "Secretaria registra sessão e recolhe assinaturas pertinentes. Variação: Termo dos quesitos sozinho não descreve todas as ocorrências da ata.",
+      "prova": [
+        "Ata é de cada sessão? Sim.",
+        "Termo de voto substitui toda ata? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ata da sessão",
+          "significado": "Documento geral das ocorrências do julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "800eae15-c1c9-5972-9d35-38ffaedc0022",
+        "content_sha256": "2ac346853faab8e2c8e20e66fe7406e68c2590e1b4782d3b1198ca0cd74a2bc4",
+        "simples": "De cada sessão de julgamento o escrivão lavrará ata, assinada pelo presidente e pelas partes.",
+        "pontos": [
+          "Ata de cada sessão, lavrada pelo escrivão.",
+          "Assinada pelo presidente e pelas partes."
+        ],
+        "atencao": [
+          "A ata é peça essencial para recursos."
+        ],
+        "exemplo": "O escrivão lavra a ata da sessão do Júri.",
+        "prova": [
+          "Assertiva que dispensa a ata da sessão de julgamento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 495",
+          "Art. 496"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-495",
+      "unit_id": "f769022d-77a6-518f-af4d-5079482dd60a",
+      "content_sha256": "fc19d04e689f8086ddf0cf1afe7ebc4933bb99e35404e8c16327cfae29343965",
+      "simples": "Ata registra fielmente instalação, presenças, ausências, dispensas, sorteios, prova, debates, incidentes e resultado.",
+      "pontos": [
+        "Data/hora, presidente, presentes, faltas/escusas/sanções.",
+        "Requerimentos, suplentes e motivo de adiamento.",
+        "Abertura, pregão, testemunhas dispensadas/separadas, cédulas e Conselho/recusas.",
+        "Compromisso/interrogatório, argumentos com fundamentos, incidentes, julgamento e publicidade.",
+        "Registrar tese defensiva relevante, inclusive clemência no regime do Tema1087."
+      ],
+      "atencao": [
+        "Resumo não pode apagar objeção ou argumento decisivo; não registrar voto nominal."
+      ],
+      "exemplo": "Ata documenta fundamento de reclamação e tese debatida. Variação: Anotar apenas houve debates não substitui registro dos fundamentos exigidos.",
+      "prova": [
+        "Fundamentos das alegações devem aparecer? Sim.",
+        "Ata deve indicar voto de cada jurado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Fidelidade da ata",
+          "significado": "Descrição adequada dos atos e argumentos relevantes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=5745131&numeroProcesso=1225185&numeroTema=1087"
+      ],
+      "expected": {
+        "unit_id": "f769022d-77a6-518f-af4d-5079482dd60a",
+        "content_sha256": "fc19d04e689f8086ddf0cf1afe7ebc4933bb99e35404e8c16327cfae29343965",
+        "simples": "A ata descreverá fielmente todas as ocorrências, mencionando obrigatoriamente, entre outros itens: a data e a hora da instalação dos trabalhos; o magistrado que presidiu a sessão e os jurados presentes; os jurados que deixaram de comparecer, com escusa ou sem ela, e as sanções aplicadas; o ofício ou requerimento de isenção ou dispensa; o sorteio dos suplentes; o adiamento da sessão, com o motivo; a abertura da sessão e a presença do MP, do querelante, do assistente e do defensor; o pregão e a sanção imposta, no caso de não comparecimento; as testemunhas dispensadas de depor; e o recolhimento das testemunhas a lugar onde umas não ouvissem as outras.",
+        "pontos": [
+          "Ata fiel, com elementos obrigatórios.",
+          "Instalação, magistrado, jurados presentes e faltosos.",
+          "Isenções, dispensas, suplentes e adiamentos.",
+          "Presença das partes, pregão, testemunhas dispensadas e incomunicabilidade."
+        ],
+        "atencao": [
+          "Rol extenso de itens obrigatórios."
+        ],
+        "exemplo": "A ata registra o horário de instalação e os jurados presentes.",
+        "prova": [
+          "Assertiva que dispensa a menção dos jurados faltosos na ata erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 494"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-496",
+      "unit_id": "a7a63e66-1519-5619-af18-2e0f5c44c74e",
+      "content_sha256": "931533a90c909744a65d8c4afb3cc84d6f558b74499e4ab1822920e21f710737",
+      "simples": "Falta de ata sujeita responsável a apuração de sanções administrativas e penais.",
+      "pontos": [
+        "Consequências demandam regime e pressupostos próprios.",
+        "Não confundir responsabilidade do registro com culpa do acusado."
+      ],
+      "atencao": [
+        "Artigo não cria condenação penal automática sem apuração nem autoriza fabricar ata retroativa."
+      ],
+      "exemplo": "Omissão é identificada e apurada pelos meios adequados. Variação: Corrigir documentação deve respeitar verdade dos atos e não inventar acontecimentos.",
+      "prova": [
+        "Falta permite fabricar registro? Não.",
+        "Sanção criminal dispensa apuração? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dever de documentação",
+          "significado": "Responsabilidade pela ata exigida."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a7a63e66-1519-5619-af18-2e0f5c44c74e",
+        "content_sha256": "931533a90c909744a65d8c4afb3cc84d6f558b74499e4ab1822920e21f710737",
+        "simples": "A falta da ata sujeitará o responsável a sanções administrativa e penal.",
+        "pontos": [
+          "Falta da ata: sanções administrativa e penal ao responsável."
+        ],
+        "atencao": [
+          "Responsabilidade do escrivão."
+        ],
+        "exemplo": "O responsável que não lavra a ata sofre sanção administrativa e penal.",
+        "prova": [
+          "Assertiva que sanciona a falta da ata apenas civilmente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 494"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-497",
+      "unit_id": "3defbcd7-02a4-5fb9-a6fd-83777ec75a9f",
+      "content_sha256": "6c70e3c45e85dffe2ff8841e27f68d50b829511b5bb31b95e662b131177947b7",
+      "simples": "Presidente dirige sessão, resolve direito e incidentes, preserva defesa e ordem, sem substituir decisão factual dos jurados.",
+      "pontos": [
+        "Força pública e ordem dos trabalhos, dentro dos limites legais.",
+        "Intervir contra abuso e linguagem excessiva.",
+        "Indefesa: nomear defensor, podendo dissolver Conselho e redesignar.",
+        "Retirar acusado que dificulta ato, mantendo defesa.",
+        "Diligências e pausas necessárias; conservar incomunicabilidade.",
+        "Extinção da punibilidade ouvidos MP/defesa.",
+        "Aparte até três minutos acrescido ao tempo de quem estava falando."
+      ],
+      "atencao": [
+        "Poder de polícia não torna juiz acusador nem legitima punição sumária ou supressão da defesa."
+      ],
+      "exemplo": "Juiz interrompe ataque indevido e garante participação defensiva. Variação: Ao conceder aparte, acrescenta tempo ao orador interrompido, não ao interventor.",
+      "prova": [
+        "Aparte é acrescido ao tempo de quem estava falando? Sim.",
+        "Presidente pode ignorar indefesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Direção do plenário",
+          "significado": "Gestão imparcial de ordem, garantias e questões jurídicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3defbcd7-02a4-5fb9-a6fd-83777ec75a9f",
+        "content_sha256": "6c70e3c45e85dffe2ff8841e27f68d50b829511b5bb31b95e662b131177947b7",
+        "simples": "São atribuições do juiz presidente do Tribunal do Júri, além de outras referidas no Código: regular a polícia das sessões e prender os desobedientes; requisitar o auxílio da força pública, que ficará sob sua exclusiva autoridade; dirigir os debates, intervindo em caso de abuso, excesso de linguagem ou mediante requerimento de uma das partes; resolver as questões incidentes que não dependam de pronunciamento do júri; nomear defensor ao acusado, quando considerá-lo indefeso, podendo dissolver o Conselho e designar novo dia; mandar retirar da sala o acusado que dificultar a realização do julgamento, o qual prosseguirá sem a sua presença; e suspender a sessão pelo tempo indispensável à realização das diligências, mantida a incomunicabilidade dos jurados, entre outras atribuições.",
+        "pontos": [
+          "Polícia das sessões e prisão dos desobedientes.",
+          "Força pública sob sua exclusiva autoridade.",
+          "Direção dos debates e coibição de excessos.",
+          "Questões incidentes que não dependam do júri.",
+          "Nomeação de defensor se o acusado estiver indefeso, com possível dissolução do Conselho.",
+          "Retirada do acusado que dificulta o julgamento.",
+          "Suspensão da sessão para diligências, com incomunicabilidade dos jurados."
+        ],
+        "atencao": [
+          "Defesa deficiente: o juiz nomeia defensor e pode dissolver o Conselho."
+        ],
+        "exemplo": "O juiz presidente considera o acusado indefeso, nomeia novo defensor e dissolve o Conselho.",
+        "prova": [
+          "Assertiva que impede o juiz presidente de dissolver o Conselho por defesa deficiente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 481"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:23.842988+00:00",
+        "updated_at": "2026-10-11T13:18:23.842988+00:00"
+      }
+    }
+  ]
+}
