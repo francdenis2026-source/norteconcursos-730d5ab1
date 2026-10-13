@@ -3,6 +3,8 @@
 // verdade do Treinador — nada de mock). O aluno não responde de novo aqui;
 // ele revisa e marca o progresso (pendente/revisado/dominado) pra focar no
 // que ainda precisa estudar.
+import { MissingTextNotice } from "@/components/library/MissingTextNotice";
+import { needsMissingSupportText } from "@/lib/questionText";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -343,6 +345,7 @@ function ErrorsPage() {
         </div>
         <Card className="border-2 border-primary/20">
           <CardContent className="space-y-4 pt-6">
+            {needsMissingSupportText(question) && <MissingTextNotice />}
             <div className="flex flex-wrap gap-1.5">
               <Badge variant="outline">{question.subject}</Badge>
               <Badge variant="outline">{question.board}</Badge>
@@ -541,6 +544,7 @@ function ErrorsPage() {
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4">
+                    {needsMissingSupportText(detail) && <MissingTextNotice />}
                     <p className="whitespace-pre-line text-sm leading-6">
                       {parseQuestion(detail.text).stem}
                     </p>
