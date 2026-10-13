@@ -1,0 +1,160 @@
+{
+  "verified_at": "2026-10-13T23:34:31.902528+00:00",
+  "scope": "Sete reparos visuais e revisões matemáticas em provas de três cargos da PF 2021. Mesmos itens em cadernos distintos; não se certifica unicidade global. Originais e gabaritos preservados.",
+  "items": [
+    {
+      "id": "62205e92-7b35-48f6-8e64-12a328c01807",
+      "item_number": 39,
+      "career": "Agente de Polícia Federal",
+      "old_page": 4,
+      "verified_page": 4,
+      "pdf_sha256": "5464654f02abfcafe921eaa65c4f30bf9c267d80e667b7b35a8ca9e3f115b42f",
+      "old_text_sha256": "c84481ccd60dc7c25ff05ace1480e3c893bd542445ef12c986db7ac8f9c65446",
+      "new_text_sha256": "c5bf678420e7314786d95eda92f261cfd170f6a0bae49787e7fb83dc26ada0c1",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: para variável contínua P(X=5)=0, enquanto γ>0. Densidade não é probabilidade de um ponto. Contexto e fórmula restaurados visualmente.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/agente-de-policia-federal/prova_cargo_2_agente_de_polcia_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/agente-de-policia-federal/gab_definitivo_apf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "a1ecfbb2-d823-4333-9ec8-45bbdd55b298",
+      "item_number": 42,
+      "career": "Escrivão de Polícia Federal",
+      "old_page": 1,
+      "verified_page": 4,
+      "pdf_sha256": "d10ff2dae65cd8614e076d5e318b8258f12aa7dcf60b858f1738d574b01e7d31",
+      "old_text_sha256": "ba080c1a707c9d613ac1a7d76fd34e91b98cb289985444aea3320bf0aa0879ba",
+      "new_text_sha256": "564506906b3786d8a64f869893948ecc02f5d770c27d79b29c6abc7eb655a7f2",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: f_X(1/2)=1 e E[Y|X=1/2]=7/12. Portanto E[X+Y|X=1/2]=13/12, e não 14/12. A extração anterior continha expressão diferente do caderno; restaurada sem mudar gabarito.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/prova_cargo_3_escrivo_de_polcia_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/gab_definitivo_epf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "a25232a7-8fa2-4d0d-a4cb-f2cbdaba78d0",
+      "item_number": 42,
+      "career": "Papiloscopista Policial Federal",
+      "old_page": 1,
+      "verified_page": 4,
+      "pdf_sha256": "99b59dac252614f67877bdd2dc82888807089796a630dc0f8dcef0d6f0c82c75",
+      "old_text_sha256": "bdcaf7601e8a973df2e35b5e7be33c06ffe9d838272f166e7aed4374616a39e4",
+      "new_text_sha256": "564506906b3786d8a64f869893948ecc02f5d770c27d79b29c6abc7eb655a7f2",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: f_X(1/2)=1 e E[Y|X=1/2]=7/12. Portanto E[X+Y|X=1/2]=13/12, e não 14/12. A extração anterior continha expressão diferente do caderno; restaurada sem mudar gabarito.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/prova_cargo_4_papiloscopista_policial_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/gab_definitivo_ppf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "a8615716-e029-4cb9-bb16-8d9c7ac60cc1",
+      "item_number": 59,
+      "career": "Papiloscopista Policial Federal",
+      "old_page": 1,
+      "verified_page": 6,
+      "pdf_sha256": "99b59dac252614f67877bdd2dc82888807089796a630dc0f8dcef0d6f0c82c75",
+      "old_text_sha256": "775ed8c0ef4aea38cb144f5307d88d023998c6fe8579582cd51c17e6b760e5cf",
+      "new_text_sha256": "a1ce640567af078ed68f3eec651ae1d82228d4fc3bc7341023100a46e7a14b68",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: P1 está contido em P2; alguém com 18 meses de experiência pertence a P2 e não a P1. Comando e definições dos conjuntos restaurados.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/prova_cargo_4_papiloscopista_policial_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/gab_definitivo_ppf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "a952b223-ea62-433d-87fe-e05c242e853c",
+      "item_number": 39,
+      "career": "Papiloscopista Policial Federal",
+      "old_page": 1,
+      "verified_page": 4,
+      "pdf_sha256": "99b59dac252614f67877bdd2dc82888807089796a630dc0f8dcef0d6f0c82c75",
+      "old_text_sha256": "775dca91ff5622a036b5452e29eaea57bdee4f48fdc946833ec6dbea3ee57003",
+      "new_text_sha256": "c5bf678420e7314786d95eda92f261cfd170f6a0bae49787e7fb83dc26ada0c1",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: para variável contínua P(X=5)=0, enquanto γ>0. Densidade não é probabilidade de um ponto. Contexto e fórmula restaurados visualmente.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/prova_cargo_4_papiloscopista_policial_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/papiloscopista-policial-federal/gab_definitivo_ppf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "d0fc5ba9-3894-4739-98d4-d5b6ce01e6f6",
+      "item_number": 39,
+      "career": "Escrivão de Polícia Federal",
+      "old_page": 1,
+      "verified_page": 4,
+      "pdf_sha256": "d10ff2dae65cd8614e076d5e318b8258f12aa7dcf60b858f1738d574b01e7d31",
+      "old_text_sha256": "2012ce5eedfe7eaba0ee5fc9c381416315e263ec09c105cfdf739dadb47e3f0f",
+      "new_text_sha256": "c5bf678420e7314786d95eda92f261cfd170f6a0bae49787e7fb83dc26ada0c1",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: para variável contínua P(X=5)=0, enquanto γ>0. Densidade não é probabilidade de um ponto. Contexto e fórmula restaurados visualmente.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/prova_cargo_3_escrivo_de_polcia_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/gab_definitivo_epf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    },
+    {
+      "id": "ebd865b2-6f6d-4995-846c-695dac754c00",
+      "item_number": 59,
+      "career": "Escrivão de Polícia Federal",
+      "old_page": 1,
+      "verified_page": 6,
+      "pdf_sha256": "d10ff2dae65cd8614e076d5e318b8258f12aa7dcf60b858f1738d574b01e7d31",
+      "old_text_sha256": "775ed8c0ef4aea38cb144f5307d88d023998c6fe8579582cd51c17e6b760e5cf",
+      "new_text_sha256": "a1ce640567af078ed68f3eec651ae1d82228d4fc3bc7341023100a46e7a14b68",
+      "answer_preserved": "E",
+      "raw_preserved": true,
+      "decision": "active",
+      "review": {
+        "legal": false,
+        "reason": "Item errado: P1 está contido em P2; alguém com 18 meses de experiência pertence a P2 e não a P1. Comando e definições dos conjuntos restaurados.",
+        "sources": [
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/prova_cargo_3_escrivo_de_polcia_federal.pdf/view",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2021/escrivao-de-policia-federal/gab_definitivo_epf.pdf/view",
+          "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+        ]
+      }
+    }
+  ]
+}
