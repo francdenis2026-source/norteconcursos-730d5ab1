@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-10-13T03:31:04.461393+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 19,
+  "target_keys": [
+    "art-406",
+    "art-407",
+    "art-408",
+    "art-409",
+    "art-410",
+    "art-411",
+    "art-412",
+    "art-413",
+    "art-414",
+    "art-415",
+    "art-416",
+    "art-417",
+    "art-418",
+    "art-419",
+    "art-420",
+    "art-421",
+    "art-422",
+    "art-423",
+    "art-424"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 827,
+  "concurrent_other_changes": []
+}

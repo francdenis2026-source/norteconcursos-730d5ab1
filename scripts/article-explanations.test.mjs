@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP júri primeira fase distingue requisitos, prova indireta e recursos',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-jury-first-phase-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,19);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(413).pontos.join(' '),/isolado é insuficiente.*intimidação objetiva/);
+ assert.match(get(415).pontos.join(' '),/única tese defensiva/);
+ assert.match(get(416).simples,/apelação/);
+ assert.match(get(422).simples,/até cinco testemunhas/);
+ for(const n of [411,413])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('CPP rito comum protege defesa, prioridade e limites próprios',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-common-procedure-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,14);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
