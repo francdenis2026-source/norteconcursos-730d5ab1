@@ -1,0 +1,629 @@
+{
+  "version": "2026-10-12-cpp-foundations",
+  "checked_at": "2026-10-13T00:04:41.225762+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 9,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-3-a",
+        "art-3-b",
+        "art-3-c",
+        "art-3-d",
+        "art-3-e",
+        "art-3-f"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "fa04d19979dd880a3c7f89b3a06d1ca82136357462049099fec677af68395446",
+      "source_checked_at": "2026-10-12T23:55:50.273365+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-1",
+      "unit_id": "d8bd4c6c-892f-5bf8-bfe6-826012c95fab",
+      "content_sha256": "5f3728702ff8d9e4676a2c1cb9d438cf8e03676706aa5c83fa083865e1ad5cbe",
+      "simples": "O processo penal comum segue o CPP em todo o território brasileiro, com as ressalvas legais. A redação de 1941 precisa ser lida com a Constituição de 1988, legislação especial e decisões constitucionais; remissão histórica não cria competência atual.",
+      "pontos": [
+        "Territorialidade processual: regra em todo o Brasil, com ressalvas de tratados e regras internacionais.",
+        "Justiça Militar possui processo próprio; o CPP não elimina esse regime.",
+        "Responsabilização de autoridades depende da Constituição vigente e das leis aplicáveis, não dos números constitucionais históricos transcritos no inciso II."
+      ],
+      "atencao": [
+        "Inciso IV menciona tribunal especial histórico: CF, art. 5º, XXXVII, veda juízo ou tribunal de exceção. Não ensinar sua existência atual.",
+        "Inciso V não restaura a Lei de Imprensa: ADPF 130 reconheceu a não recepção da Lei 5.250/1967. O parágrafo único não revive essa lei."
+      ],
+      "exemplo": "Uma questão afirma que crime praticado por publicação jornalística deve obrigatoriamente seguir a antiga Lei de Imprensa. A afirmação ignora a ADPF 130; identificar a infração e o regime atual aplicável. Variação: Em infração de competência militar, verificar o regime processual militar. A não recepção da Lei de Imprensa não revoga essa ressalva distinta.",
+      "prova": [
+        "A ressalva à Justiça Militar torna o CPP a única lei do processo militar? Não; há regime próprio.",
+        "O inciso V comprova a vigência atual da Lei 5.250/1967? Não; deve ser integrado à ADPF 130."
+      ],
+      "termos": [
+        {
+          "termo": "Territorialidade processual",
+          "significado": "Regra de aplicação espacial do processo, distinta da extraterritorialidade da lei penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/rejeitada-acao-em-que-advogado-condenado-por-extorsao-pedia-aplicacao-de-pena-da-lei-de-imprensa/"
+      ],
+      "expected": {
+        "unit_id": "d8bd4c6c-892f-5bf8-bfe6-826012c95fab",
+        "content_sha256": "5f3728702ff8d9e4676a2c1cb9d438cf8e03676706aa5c83fa083865e1ad5cbe",
+        "simples": "O Código de Processo Penal vale em todo o território brasileiro. Há ressalvas: tratados, convenções e regras de direito internacional; prerrogativas constitucionais do Presidente da República, dos ministros de Estado e dos ministros do Supremo Tribunal Federal nos crimes de responsabilidade; processos da Justiça Militar; processos do tribunal especial; e crimes de imprensa. Aos dois últimos, o Código se aplica quando as leis especiais não dispuserem de modo diverso.",
+        "pontos": [
+          "Regra: o CPP rege o processo penal em todo o território brasileiro.",
+          "Ressalvas: tratados e regras internacionais; prerrogativas constitucionais; Justiça Militar; tribunal especial; crimes de imprensa.",
+          "Parágrafo único: aplica-se aos processos do tribunal especial e de imprensa, se a lei especial não dispuser diferente."
+        ],
+        "atencao": [
+          "O texto remete a normas de constituição anterior: é leitura histórica.",
+          "Há referência à ADPF nº 130 no texto compilado (crimes de imprensa)."
+        ],
+        "exemplo": "Um processo da competência da Justiça Militar segue a legislação militar, e não o CPP.",
+        "prova": [
+          "Assertiva que aplica o CPP a processos da Justiça Militar erra: ela é ressalvada."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 2º",
+          "Art. 3º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-2",
+      "unit_id": "666eda4a-354c-5cf4-b3c7-754578779b32",
+      "content_sha256": "a85aafb372dc3771b9a5566e07435b7d232ba8d7b830d1c04d82844679fc10a5",
+      "simples": "A lei processual penal tem aplicação imediata aos atos futuros de um processo em andamento, preservada a validade dos atos praticados sob a lei anterior. O marco é o ato processual, sem invalidar automaticamente o que já foi regularmente realizado.",
+      "pontos": [
+        "Aplicação imediata não exige que o processo comece depois da lei nova.",
+        "Atos anteriores regularmente praticados são preservados.",
+        "Distinguir norma puramente processual de conteúdo penal material ou misto."
+      ],
+      "atencao": [
+        "Não converter o art. 2º em autorização de retroatividade penal gravosa. Norma de conteúdo material exige exame da lei penal no tempo e da Constituição."
+      ],
+      "exemplo": "Uma audiência foi validamente realizada sob o procedimento anterior. Lei processual nova entra em vigor antes da próxima audiência: aplica-se aos próximos atos, sem repetir a anterior só pela mudança. Variação: Se a alteração amplia uma pena ou atinge direito penal material, a solução não decorre apenas do tempus regit actum; analisar irretroatividade gravosa e norma favorável.",
+      "prova": [
+        "O CPP determina refazer todo ato anterior quando muda a lei processual? Não; preserva a validade dos atos anteriores.",
+        "Processo já iniciado fica sempre submetido à lei antiga até terminar? Não; a regra processual é aplicação imediata aos atos futuros."
+      ],
+      "termos": [
+        {
+          "termo": "Tempus regit actum",
+          "significado": "O ato processual é regido pela lei vigente quando praticado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "666eda4a-354c-5cf4-b3c7-754578779b32",
+        "content_sha256": "a85aafb372dc3771b9a5566e07435b7d232ba8d7b830d1c04d82844679fc10a5",
+        "simples": "A lei processual penal aplica-se desde logo (aplicação imediata), sem prejuízo da validade dos atos realizados sob a vigência da lei anterior (princípio do tempus regit actum).",
+        "pontos": [
+          "Aplicação imediata da lei processual penal.",
+          "Os atos já praticados sob a lei anterior continuam válidos."
+        ],
+        "atencao": [
+          "Normas processuais penais materiais (mistas) seguem a lei penal: retroatividade benéfica."
+        ],
+        "exemplo": "Nova regra de intimação vale para os atos futuros; as intimações já feitas continuam válidas.",
+        "prova": [
+          "Assertiva que invalida os atos realizados sob a lei anterior, por força da nova lei processual, erra: eles permanecem válidos."
+        ],
+        "termos": [
+          {
+            "termo": "Tempus regit actum",
+            "significado": "O ato se rege pela lei vigente quando praticado."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3",
+      "unit_id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+      "content_sha256": "b99a3a1c2753d0f0ff37952880ad10b509058e46ad931bfafceaf20f0bafec21",
+      "simples": "A lei processual admite interpretação extensiva, aplicação analógica e suplemento dos princípios gerais do direito. São técnicas distintas, usadas com respeito à Constituição, ao contraditório e às demais garantias.",
+      "pontos": [
+        "Interpretação extensiva esclarece alcance da norma existente.",
+        "Analogia integra lacuna por regra de situação semelhante.",
+        "Princípios gerais suplementam a disciplina processual, sem licença para atuação arbitrária."
+      ],
+      "atencao": [
+        "Analogia processual não autoriza criar crime, agravar pena ou afastar garantia fundamental. Não transferir a permissão do CPP à analogia penal incriminadora."
+      ],
+      "exemplo": "Surge lacuna sobre um ato processual e propõe-se regra de situação semelhante: verificar compatibilidade, finalidade e garantias antes de aplicar analogia. Variação: Se alguém tenta usar analogia para transformar conduta não tipificada em crime, o art. 3º do CPP não serve de fundamento.",
+      "prova": [
+        "Extensiva e analogia são sinônimos? Não; uma interpreta o alcance da regra e a outra integra lacuna.",
+        "A analogia admitida pelo CPP permite inventar novo crime? Não; há legalidade penal e limites constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Analogia",
+          "significado": "Integração de lacuna pela disciplina de hipótese semelhante."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+        "content_sha256": "3e4fcd0e090b7d4929269e9267ba33f66430ebbe1324f9af9f56a7b658283cf2",
+        "simples": "A lei processual penal admite interpretação extensiva e aplicação analógica, bem como o suplemento dos princípios gerais de direito.",
+        "pontos": [
+          "Interpretação extensiva é admitida.",
+          "Aplicação analógica é admitida.",
+          "Princípios gerais de direito suplementam a lei."
+        ],
+        "atencao": [
+          "Diferente do direito penal material, a analogia em prejuízo do réu é debatida: a doutrina distingue normas processuais das de caráter material."
+        ],
+        "exemplo": "Aplicar por analogia regra processual civil a lacuna do CPP.",
+        "prova": [
+          "Assertiva que veda interpretação extensiva e analogia na lei processual penal erra: ambas são admitidas."
+        ],
+        "termos": [
+          {
+            "termo": "Interpretação extensiva",
+            "significado": "Amplia o alcance literal da norma para o que o legislador quis dizer."
+          }
+        ],
+        "remissoes": [
+          "Art. 1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-a",
+      "unit_id": "02676e1f-f70e-5e89-ae6b-6bf94b9f9087",
+      "content_sha256": "6f3d4bb8944ee747caafb4e7d68c05400d800d31c818ebd6c215a6f5bc8035fc",
+      "simples": "O processo tem estrutura acusatória: investigar e acusar não são funções assumidas pelo juiz. A imparcialidade impede iniciativa judicial na investigação e substituição da atividade probatória da acusação.",
+      "pontos": [
+        "Separar investigação, acusação e julgamento.",
+        "Juiz não pode atuar como investigador ou substituir a acusação.",
+        "STF admite diligências suplementares pontuais, nos limites legalmente autorizados, para dúvida relevante ao julgamento do mérito."
+      ],
+      "atencao": [
+        "Não ensinar nem juiz investigador nem proibição absoluta de toda diligência judicial. A ressalva do STF é delimitada; não autoriza construir uma acusação faltante."
+      ],
+      "exemplo": "O juiz decide iniciar por conta própria uma investigação para descobrir quem cometeu um crime. Isso conflita com a estrutura acusatória. Variação: Diligência suplementar pontual para esclarecer dúvida relevante no julgamento, autorizada em lei e com garantias, não equivale a iniciar investigação de ofício.",
+      "prova": [
+        "O juiz pode assumir a função de investigar porque busca a verdade? Não; art. 3º-A impede essa iniciativa.",
+        "Toda diligência suplementar judicial é proibida pelo STF? Não; existe ressalva pontual e legalmente delimitada."
+      ],
+      "termos": [
+        {
+          "termo": "Sistema acusatório",
+          "significado": "Separação funcional que protege a imparcialidade do julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274",
+        "https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf"
+      ],
+      "expected": {
+        "unit_id": "02676e1f-f70e-5e89-ae6b-6bf94b9f9087",
+        "content_sha256": "6f3d4bb8944ee747caafb4e7d68c05400d800d31c818ebd6c215a6f5bc8035fc",
+        "simples": "O processo penal terá estrutura acusatória, vedadas a iniciativa do juiz na fase de investigação e a substituição da atuação probatória do órgão de acusação. O texto compilado indica discussão de sua eficácia no Supremo Tribunal Federal (ADIs).",
+        "pontos": [
+          "Estrutura acusatória do processo penal.",
+          "Veda a iniciativa do juiz na fase de investigação.",
+          "Veda a substituição da atuação probatória do órgão de acusação."
+        ],
+        "atencao": [
+          "Dispositivo incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "Eficácia discutida em ADIs: confira a situação atual."
+        ],
+        "exemplo": "O juiz não pode determinar, por conta própria, a produção de prova em substituição ao Ministério Público.",
+        "prova": [
+          "Assertiva que permite ao juiz a iniciativa na fase de investigação, segundo o art. 3º-A, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Sistema acusatório",
+            "significado": "Separação entre quem acusa, quem defende e quem julga."
+          }
+        ],
+        "remissoes": [
+          "Art. 3º-B",
+          "Art. 156"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-b",
+      "unit_id": "35a199d5-3512-593e-b38e-b49f9d00c351",
+      "content_sha256": "1f65446ec7a8f1f3b74a459f0980d28e79478311b88a2f05e33e5e622db8f142",
+      "simples": "O juiz das garantias controla a legalidade da investigação e resguarda direitos cuja restrição exige autorização judicial. Não conduz a investigação, não assume a acusação e não decide a condenação.",
+      "pontos": [
+        "I–IV: receber comunicações da prisão e da instauração da investigação, controlar o flagrante e proteger os direitos da pessoa presa.",
+        "V–VIII: decidir requerimentos de prisão/cautelares, sua prorrogação, substituição ou revogação; produção antecipada urgente e não repetível; prorrogação do inquérito de investigado preso.",
+        "IX–X: trancar inquérito sem fundamento razoável e requisitar informações/documentos/laudos sobre o andamento.",
+        "XI: decidir interceptação, afastamento de sigilos, busca domiciliar, acesso a informações sigilosas e outros meios que restrinjam direitos fundamentais, com requisitos próprios.",
+        "XII–XIII: habeas corpus antes do oferecimento da acusação e incidente de insanidade mental.",
+        "XIV: a menção literal ao recebimento não define o marco atual; pelo STF a competência cessa com o OFERECIMENTO.",
+        "XV–XVIII: assegurar acesso defensivo aos elementos produzidos, ressalvadas diligências em andamento; admitir assistente técnico; homologar ANPP/colaboração formalizados na investigação; outras matérias inerentes ao controle do caput.",
+        "§1º: Lei 15.358/2026 passou a prever audiência de custódia por videoconferência em até 24 horas para flagrante ou mandado provisório, com MP e defesa e requisitos do art. 310.",
+        "§2º: STF admite novas prorrogações fundamentadas por elementos concretos e complexidade; vencimento do prazo não revoga automaticamente a preventiva. O juízo deve avaliar seus fundamentos."
+      ],
+      "atencao": [
+        "Atualização de 2026: não repetir como redação atual a antiga proibição absoluta de videoconferência. A disciplina de 2023/CNJ 562 deve ser distinguida da nova redação, com direitos e requisitos do art. 310 preservados.",
+        "A Lei 15.358 está submetida às ADIs 7952, 7956, 7957 e 7958. Notícia de audiência pública não é decisão de mérito nem prova de suspensão. Não certificada aqui a inexistência de decisões posteriores em cada ação.",
+        "Contraditório das cautelares e prova antecipada: STF admitiu dispensar audiência quando houver risco ao processo ou diferi-la por necessidade; exige fundamento, não supressão genérica da defesa."
+      ],
+      "exemplo": "Durante o inquérito, a polícia requer busca domiciliar: o juiz controla requisitos e fundamenta a decisão, sem assumir a condução da investigação. Encerrado o prazo do inquérito com preso, eventual prorrogação exige motivos concretos e controle judicial da custódia. Variação: Depois de oferecida a denúncia, não atribuir o recebimento ao juiz das garantias por leitura isolada do inciso XIV. Para custódia realizada em 2026, conferir a redação nova e o art. 310, sem aplicar automaticamente a frase de 2019.",
+      "prova": [
+        "O juiz das garantias pode condenar ao concluir o inquérito? Não; exerce controle investigativo e proteção de direitos.",
+        "O vencimento do prazo do §2º sempre solta automaticamente o preso? Não; a interpretação do STF exige avaliação judicial dos fundamentos e admite prorrogação concretamente motivada.",
+        "Qual mudança de 2026 exige atenção no §1º? A previsão de custódia por videoconferência, com prazo de 24 horas, participantes e requisitos legais.",
+        "O acesso da defesa autoriza divulgar antecipadamente toda diligência ainda em execução? Não; distinguir elementos produzidos de diligências em andamento."
+      ],
+      "termos": [
+        {
+          "termo": "Oferecimento",
+          "significado": "Apresentação da acusação; distinto da decisão judicial de recebimento."
+        },
+        {
+          "termo": "Reserva de jurisdição",
+          "significado": "Restrição de direito que exige autorização judicial nas hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274",
+        "https://atos.cnj.jus.br/atos/detalhar/5601",
+        "https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://web.trf3.jus.br/acordaos/Acordao/BuscarDocumentoPje/362788890",
+        "https://noticias.stf.jus.br/postsnoticias/stf-retoma-debates-sobre-a-lei-antifaccao/"
+      ],
+      "expected": {
+        "unit_id": "35a199d5-3512-593e-b38e-b49f9d00c351",
+        "content_sha256": "1f65446ec7a8f1f3b74a459f0980d28e79478311b88a2f05e33e5e622db8f142",
+        "simples": "O juiz das garantias é responsável pelo controle da legalidade da investigação criminal e pela salvaguarda dos direitos individuais cuja franquia tenha sido reservada à autorização prévia do Poder Judiciário. Entre outras funções, recebe a comunicação imediata da prisão e o auto de prisão em flagrante, zela pelos direitos do preso, decide sobre prisão provisória e medidas cautelares, e decide sobre a homologação de acordo de não persecução penal ou de colaboração premiada formalizados durante a investigação. O preso será encaminhado à audiência de custódia no prazo de 24 horas. Se o investigado estiver preso, o juiz das garantias pode prorrogar o inquérito, uma única vez, por até 15 dias, após o que a prisão será relaxada.",
+        "pontos": [
+          "Controla a legalidade da investigação e protege direitos individuais sob reserva de jurisdição.",
+          "Recebe a comunicação da prisão e o auto de flagrante.",
+          "Decide sobre prisão provisória e outras cautelares.",
+          "Homologa ANPP e colaboração premiada na fase de investigação.",
+          "§1º: audiência de custódia em 24 horas, por videoconferência.",
+          "§2º: prorrogação única do inquérito do preso, por até 15 dias; depois, relaxamento."
+        ],
+        "atencao": [
+          "Eficácia do instituto discutida em ADIs: confira a situação atual.",
+          "A redação do §1º veio da Lei nº 15.358, de 2026."
+        ],
+        "exemplo": "O juiz das garantias decide sobre pedido de interceptação durante o inquérito.",
+        "prova": [
+          "Assertiva que atribui ao juiz das garantias o julgamento do mérito da ação penal erra: sua função é a legalidade da investigação."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-C",
+          "Art. 310"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-c",
+      "unit_id": "3632da18-e222-5f28-ac41-c9774ed62ccb",
+      "content_sha256": "1adf6398965d651f6c53eb6c1ba245c43041a505918b4cc1648746269d7a9fb8",
+      "simples": "A divisão de funções exige identificar quais processos seguem o juiz das garantias e o momento de passagem ao juiz da instrução. STF e CNJ corrigem a leitura isolada da redação compilada.",
+      "pontos": [
+        "Marco constitucional: OFERECIMENTO da denúncia, não seu recebimento.",
+        "Questões pendentes passam ao juiz da instrução e julgamento.",
+        "Medidas cautelares não vinculam o juiz da instrução; necessidade reexaminada em até dez dias após a passagem dos autos.",
+        "Autos devem ser remetidos ao juiz da instrução: não ensinar retenção absoluta do inquérito na secretaria nem acesso apenas às provas irrepetíveis.",
+        "CNJ 562, art. 3º: fora dessa sistemática estão competência originária dos tribunais, Júri, violência doméstica/familiar das Leis 11.340 e 14.344, Juizados Especiais Criminais e varas criminais colegiadas do art. 1º-A da Lei 12.694. A exclusão não elimina audiência de custódia."
+      ],
+      "atencao": [
+        "Redação literal sobre recebimento e retenção dos autos não deve virar exercício automático de regra atual. Integrar ADIs 6298 e conexas e normas organizacionais.",
+        "Não inferir que todo processo penal em qualquer justiça segue a mesma organização, nem certificar implantação uniforme em todos os tribunais."
+      ],
+      "exemplo": "O MP oferece denúncia e ainda há pedido cautelar pendente: a competência passa ao juiz da instrução, que decide o pedido e reavalia as medidas em curso dentro do prazo aplicável. Variação: Em processo do Júri, não aplicar a divisão ordinária automaticamente: a hipótese está entre as exceções, sem dispensar controle da prisão e custódia.",
+      "prova": [
+        "O recebimento é o marco atual da competência do juiz das garantias? Não; o STF fixou o oferecimento.",
+        "Excluir o Júri da sistemática dispensa audiência de custódia? Não; a exclusão não elimina essa garantia.",
+        "O juiz da instrução fica vinculado às cautelares anteriores? Não; reexamina sua necessidade."
+      ],
+      "termos": [
+        {
+          "termo": "Cisão funcional",
+          "significado": "Divisão de competências entre controle da investigação e instrução/julgamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274",
+        "https://atos.cnj.jus.br/atos/detalhar/5601",
+        "https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf"
+      ],
+      "expected": {
+        "unit_id": "3632da18-e222-5f28-ac41-c9774ed62ccb",
+        "content_sha256": "1adf6398965d651f6c53eb6c1ba245c43041a505918b4cc1648746269d7a9fb8",
+        "simples": "A competência do juiz das garantias abrange todas as infrações penais, exceto as de menor potencial ofensivo, e cessa com o recebimento da denúncia ou queixa. Recebida a denúncia, as questões pendentes serão decididas pelo juiz da instrução e julgamento. As decisões do juiz das garantias não vinculam o juiz da instrução e julgamento, que, após o recebimento da denúncia ou queixa, deverá reexaminar a necessidade das medidas cautelares em curso, no prazo máximo de 10 dias. Os autos das matérias do juiz das garantias ficam acautelados na secretaria desse juízo, à disposição do Ministério Público e da defesa, e não são apensados ao processo, ressalvados os documentos relativos às provas irrepetíveis, medidas de obtenção de provas ou de antecipação de provas. Fica assegurado às partes o amplo acesso aos autos acautelados.",
+        "pontos": [
+          "Abrange todas as infrações, exceto as de menor potencial ofensivo.",
+          "Cessa com o recebimento da denúncia ou queixa.",
+          "Juiz da instrução reexamina as cautelares em até 10 dias.",
+          "Autos do juízo das garantias ficam na secretaria, com acesso amplo às partes.",
+          "Exceção ao não apensamento: provas irrepetíveis, medidas de obtenção e antecipação de provas."
+        ],
+        "atencao": [
+          "Eficácia discutida em ADIs.",
+          "Prazo de 10 dias para reexame das cautelares."
+        ],
+        "exemplo": "Após o recebimento da denúncia, outro juiz assume o processo e reexamina a prisão preventiva em até 10 dias.",
+        "prova": [
+          "Assertiva que estende a competência do juiz das garantias às infrações de menor potencial ofensivo erra: elas são excluídas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-B",
+          "Art. 399"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-d",
+      "unit_id": "87775d3b-24e6-5a0b-aa8d-18bc1d7537fd",
+      "content_sha256": "31de9c52733805abb8a7d8e3944a60dc86f174a1b852cc863e730555d9e151e4",
+      "simples": "O artigo contém regra literal de impedimento e rodízio, mas o STF declarou inconstitucionais o caput e o parágrafo único. A implementação do juiz das garantias depende da organização judiciária e das diretrizes atuais.",
+      "pontos": [
+        "Caput: inconstitucionalidade material reconhecida pelo STF.",
+        "Parágrafo único: inconstitucionalidade formal; organização judiciária compete aos respectivos tribunais.",
+        "CNJ 562 admite especialização, regionalização e substituição pré-definida, segundo os requisitos de cada modelo."
+      ],
+      "atencao": [
+        "Não criar flashcard afirmando que qualquer ato investigativo gera esse impedimento específico automaticamente ou que vara única deve sempre adotar rodízio.",
+        "Isso não elimina as demais regras de impedimento, suspeição e imparcialidade: analisar seus fundamentos próprios."
+      ],
+      "exemplo": "A comarca possui vara única e organiza atuação regional do juiz das garantias segundo normas do tribunal. Não exigir rodízio só pelo parágrafo declarado inconstitucional. Variação: Se há outra causa legal de impedimento ou suspeição, examiná-la autonomamente; a decisão sobre o art. 3º-D não dá licença para juiz parcial.",
+      "prova": [
+        "O rodízio do parágrafo único é imposição universal vigente? Não; o STF declarou inconstitucionalidade formal.",
+        "A decisão sobre o art. 3º-D elimina toda hipótese de suspeição? Não; as demais normas têm aplicação própria."
+      ],
+      "termos": [
+        {
+          "termo": "Organização judiciária",
+          "significado": "Estrutura e distribuição institucional de funções, sujeitas às competências constitucionais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf",
+        "https://atos.cnj.jus.br/atos/detalhar/5601",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274"
+      ],
+      "expected": {
+        "unit_id": "87775d3b-24e6-5a0b-aa8d-18bc1d7537fd",
+        "content_sha256": "31de9c52733805abb8a7d8e3944a60dc86f174a1b852cc863e730555d9e151e4",
+        "simples": "O juiz que, na fase de investigação, praticar qualquer ato incluído nas competências dos arts. 4º e 5º do Código ficará impedido de funcionar no processo. Nas comarcas em que funcionar apenas um juiz, os tribunais criarão um sistema de rodízio de magistrados.",
+        "pontos": [
+          "Juiz que atua na investigação fica impedido de funcionar no processo.",
+          "Comarca com um só juiz: rodízio de magistrados criado pelos tribunais."
+        ],
+        "atencao": [
+          "Eficácia discutida em ADIs."
+        ],
+        "exemplo": "O juiz que decretou medida cautelar na investigação não julga o processo.",
+        "prova": [
+          "Assertiva que permite ao juiz da investigação julgar o processo, segundo o art. 3º-D, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-e",
+      "unit_id": "15040287-e71e-5636-9369-7b2af3806a67",
+      "content_sha256": "5bc7f021c9a35c3766294f065a67e88ef894c3b5a98166feb824cef7559bc372",
+      "simples": "A função de juiz das garantias deve observar investidura e critérios objetivos da organização judiciária. A palavra designado no texto compilado não autoriza escolha discricionária de um magistrado para um caso específico.",
+      "pontos": [
+        "STF: investir segundo normas de organização, com critérios objetivos periodicamente divulgados.",
+        "Promoção e remoção observam os critérios legais pertinentes.",
+        "CNJ: substituição pré-definida, juízes investidos e lista publicizada; modelo subsidiário quando inviáveis especialização/regionalização."
+      ],
+      "atencao": [
+        "Não confundir transparência dos critérios com liberdade de selecionar ad hoc o juiz de uma investigação. Preservar o juiz natural e regras de distribuição."
+      ],
+      "exemplo": "O tribunal publica critérios objetivos e organiza a unidade de garantias conforme sua legislação, sem escolher o julgador por interesse no caso. Variação: Indicar informalmente um juiz depois de saber quem será investigado não se legitima apenas pela palavra designado do art. 3º-E.",
+      "prova": [
+        "Pode haver escolha discricionária do juiz para favorecer um resultado? Não; exige investidura e critérios objetivos.",
+        "Critérios de atuação devem ficar secretos para a administração? Não; sua divulgação integra a disciplina constitucional e organizacional."
+      ],
+      "termos": [
+        {
+          "termo": "Investidura",
+          "significado": "Exercício da função segundo normas de organização e critérios objetivos, não escolha casuística."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://atos.cnj.jus.br/atos/detalhar/5601",
+        "https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274"
+      ],
+      "expected": {
+        "unit_id": "15040287-e71e-5636-9369-7b2af3806a67",
+        "content_sha256": "5bc7f021c9a35c3766294f065a67e88ef894c3b5a98166feb824cef7559bc372",
+        "simples": "O juiz das garantias será designado conforme as normas de organização judiciária da União, dos Estados e do Distrito Federal, observando critérios objetivos a serem periodicamente divulgados pelo respectivo tribunal.",
+        "pontos": [
+          "Designação conforme a organização judiciária.",
+          "Critérios objetivos, periodicamente divulgados pelo tribunal."
+        ],
+        "atencao": [
+          "Eficácia discutida em ADIs."
+        ],
+        "exemplo": "O tribunal divulga os critérios objetivos para designar o juiz das garantias.",
+        "prova": [
+          "Assertiva que dispensa critérios objetivos na designação do juiz das garantias erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-3-f",
+      "unit_id": "2c2bc40e-869e-5c92-a76a-b2f0bfb5897b",
+      "content_sha256": "4c44f63347ce369a7ef0e6dede6c051a9f2382bfe45809e025373c7396e6f04d",
+      "simples": "O juiz das garantias deve impedir acordos ou ajustes de autoridades com a imprensa para explorar a imagem da pessoa presa. Informação pública e liberdade de imprensa devem conviver com dignidade, integridade e efetividade da persecução.",
+      "pontos": [
+        "Proibição alcança acordo/ajuste para exploração da imagem da pessoa presa.",
+        "Responsabilidades civil, administrativa e penal dependem dos fundamentos e procedimentos aplicáveis.",
+        "Informação sobre prisão/autoria deve ser disciplinada com padronização, dignidade, efetividade e direito à informação.",
+        "O prazo de 180 dias do parágrafo é dirigido à regulamentação; não é prazo de exposição ou incomunicabilidade de um preso."
+      ],
+      "atencao": [
+        "Não ensinar proibição de toda notícia de prisão ou autorização de espetáculo vexatório. A responsabilização penal não é condenação automática sem tipo e processo."
+      ],
+      "exemplo": "Uma autoridade combina com a imprensa apresentação humilhante da pessoa presa para produzir imagens. O controle deve impedir essa exploração e apurar responsabilidades cabíveis. Variação: Comunicação institucional padronizada, pertinente e respeitosa sobre uma prisão não é automaticamente o ajuste vedado; verificar conteúdo, finalidade, dignidade e direitos.",
+      "prova": [
+        "O artigo proíbe qualquer informação pública sobre uma prisão? Não; exige compatibilização com dignidade e efetividade.",
+        "Os 180 dias são prazo de prisão incomunicável? Não; referem-se à regulamentação do procedimento informativo."
+      ],
+      "termos": [
+        {
+          "termo": "Exploração da imagem",
+          "significado": "Uso acordado da imagem da pessoa presa vedado pelo dispositivo, sem confundir com informação pública legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274",
+        "https://atos.cnj.jus.br/atos/detalhar/5601"
+      ],
+      "expected": {
+        "unit_id": "2c2bc40e-869e-5c92-a76a-b2f0bfb5897b",
+        "content_sha256": "4c44f63347ce369a7ef0e6dede6c051a9f2382bfe45809e025373c7396e6f04d",
+        "simples": "O juiz das garantias deve assegurar o cumprimento das regras para o tratamento dos presos, impedindo o acordo ou ajuste de qualquer autoridade com órgãos da imprensa para explorar a imagem da pessoa submetida à prisão, sob pena de responsabilidade civil, administrativa e penal. Por regulamento, as autoridades disciplinarão, em 180 dias, o modo padronizado de transmitir à imprensa as informações sobre a prisão e a identidade do preso.",
+        "pontos": [
+          "Garantir as regras de tratamento dos presos.",
+          "Impedir acordo com a imprensa para explorar a imagem do preso.",
+          "Responsabilidade civil, administrativa e penal.",
+          "Parágrafo único: regulamento em 180 dias para padronizar as informações à imprensa."
+        ],
+        "atencao": [
+          "Eficácia discutida em ADIs."
+        ],
+        "exemplo": "Autoridade combina com a imprensa a exposição da imagem do preso: pode ser responsabilizada.",
+        "prova": [
+          "Assertiva que permite a exploração da imagem do preso mediante acordo com a imprensa erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:09.415136+00:00",
+        "updated_at": "2026-10-11T13:15:09.415136+00:00"
+      }
+    }
+  ]
+}

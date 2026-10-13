@@ -1,0 +1,940 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:00:18.907982+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 15,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-185",
+        "art-186",
+        "art-187",
+        "art-188",
+        "art-189",
+        "art-190",
+        "art-191",
+        "art-192",
+        "art-193",
+        "art-195",
+        "art-196",
+        "art-197",
+        "art-198",
+        "art-199",
+        "art-200"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-185",
+      "unit_id": "8806649d-c82e-5c5b-8545-c820c983a31c",
+      "content_sha256": "c492f98283d1638312798280724f4945d1c5a49a1da9bdecc8db218ccc6206ce",
+      "simples": "Interrogatório exige defensor e entrevista prévia reservada. Videoconferência de preso é excepcional, fundamentada e vinculada às finalidades legais.",
+      "pontos": [
+        "No presídio: segurança, defesa e publicidade; fora das hipóteses legais, requisitar comparecimento.",
+        "Vídeo: risco de fuga/segurança, dificuldade pessoal relevante, influência sobre depoentes quando art. 217 inviável ou gravíssima ordem pública.",
+        "Intimar as partes da decisão de vídeo com dez dias de antecedência ao ato; acusado acompanha atos da audiência e tem canais reservados com defesa.",
+        "Fiscalização da sala: corregedores, juiz, MP e OAB; garantias adaptadas a outros atos com pessoa presa.",
+        "Informar filhos, idades, deficiência e contato do responsável por cuidados."
+      ],
+      "atencao": [
+        "Economia administrativa genérica não substitui fundamento excepcional. Vídeo não elimina defensor ou conversa sigilosa."
+      ],
+      "exemplo": "Risco de fuga fundamentado leva a vídeo, com intimação prévia, entrevista reservada e acompanhamento defensivo. Variação: Preferência do estabelecimento, sem finalidade legal demonstrada, não basta para restringir o comparecimento.",
+      "prova": [
+        "Vídeo dispensa entrevista reservada? Não.",
+        "Antecedência prevista é dez dias? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Interrogatório remoto",
+          "significado": "Modalidade excepcional com motivação e garantias preservadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8806649d-c82e-5c5b-8545-c820c983a31c",
+        "content_sha256": "c492f98283d1638312798280724f4945d1c5a49a1da9bdecc8db218ccc6206ce",
+        "simples": "O acusado que comparecer perante a autoridade judiciária, no curso do processo penal, será qualificado e interrogado na presença de seu defensor, constituído ou nomeado. O interrogatório do réu preso será realizado em sala própria, no estabelecimento em que estiver recolhido, desde que garantidas a segurança do juiz, do membro do Ministério Público e dos auxiliares, a presença do defensor e a publicidade do ato. Excepcionalmente, o juiz, por decisão fundamentada, de ofício ou a requerimento das partes, pode realizar o interrogatório do réu preso por videoconferência ou outro recurso tecnológico de transmissão de sons e imagens em tempo real, desde que necessário para prevenir risco à segurança pública (suspeita de integrar organização criminosa ou de fuga durante o deslocamento), viabilizar a participação do réu quando haja relevante dificuldade para comparecer em juízo, impedir a influência do réu no ânimo de testemunha ou da vítima, ou responder a gravíssima questão de ordem pública, conforme as hipóteses do dispositivo.",
+        "pontos": [
+          "Interrogatório na presença do defensor, constituído ou nomeado.",
+          "Réu preso: sala própria do estabelecimento, com segurança, defensor e publicidade.",
+          "Videoconferência: excepcional, por decisão fundamentada, em hipóteses legais.",
+          "Hipóteses: risco à segurança pública, dificuldade de comparecimento, influência sobre testemunha ou vítima, questão de ordem pública."
+        ],
+        "atencao": [
+          "Videoconferência é EXCEÇÃO e exige decisão fundamentada.",
+          "A presença do defensor é obrigatória."
+        ],
+        "exemplo": "Réu preso com suspeita de integrar organização criminosa é interrogado por videoconferência, por decisão fundamentada.",
+        "prova": [
+          "Assertiva que torna a videoconferência a regra para o interrogatório do réu preso erra: é excepcional."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 186",
+          "Art. 187"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-186",
+      "unit_id": "bae4c214-fe44-5643-a8d3-77d8a2824e4d",
+      "content_sha256": "54a7fb369ef5c1ea9a1a7e3a1ade2e697a93d4071549c95aa631b4be9e873e57",
+      "simples": "Antes de perguntar sobre a acusação, juiz informa direito ao silêncio; calar não é confessar e não pode prejudicar defesa.",
+      "pontos": [
+        "Qualificação e ciência integral da acusação precedem advertência.",
+        "Silêncio total ou exercício parcial não autoriza presunção de culpa.",
+        "STF reconhece possibilidade de responder somente à defesa; não encerrar indevidamente a autodefesa."
+      ],
+      "atencao": [
+        "Não transformar quem cala em culpado nem impedir esclarecimentos só porque recusou perguntas da acusação."
+      ],
+      "exemplo": "Acusado prefere responder apenas ao defensor; ato deve respeitar exercício parcial da garantia. Variação: Silêncio integral tampouco permite acrescentar presunção incriminadora à sentença.",
+      "prova": [
+        "Silêncio é confissão? Não.",
+        "Pode ser interpretado contra defesa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Direito ao silêncio",
+          "significado": "Garantia de não responder perguntas incriminadoras, sem inferência desfavorável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=532401"
+      ],
+      "expected": {
+        "unit_id": "bae4c214-fe44-5643-a8d3-77d8a2824e4d",
+        "content_sha256": "54a7fb369ef5c1ea9a1a7e3a1ade2e697a93d4071549c95aa631b4be9e873e57",
+        "simples": "Depois de devidamente qualificado e cientificado do inteiro teor da acusação, o acusado será informado pelo juiz, antes de iniciar o interrogatório, do seu direito de permanecer calado e de não responder perguntas que lhe forem formuladas. O silêncio, que não importará em confissão, não poderá ser interpretado em prejuízo da defesa.",
+        "pontos": [
+          "Qualificação e ciência da acusação antes do interrogatório.",
+          "Juiz informa o direito de permanecer calado.",
+          "O silêncio não é confissão e não prejudica a defesa."
+        ],
+        "atencao": [
+          "Direito ao silêncio: nemo tenetur se detegere.",
+          "O art. 198 trazia redação anterior de que o silêncio poderia ser elemento de convencimento; hoje prevalece o art. 186."
+        ],
+        "exemplo": "Antes do interrogatório, o juiz avisa que o acusado pode ficar em silêncio.",
+        "prova": [
+          "Assertiva que interpreta o silêncio em prejuízo da defesa erra."
+        ],
+        "termos": [
+          {
+            "termo": "Direito ao silêncio",
+            "significado": "Ninguém é obrigado a produzir prova contra si."
+          }
+        ],
+        "remissoes": [
+          "Art. 198"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-187",
+      "unit_id": "e21a7390-eab1-5712-8e06-91bd891b70d0",
+      "content_sha256": "f9470cf3ffc60b82e2dba874dfbc0129939da07f3cff8ba74cd6b1362a2fed4c",
+      "simples": "Interrogatório tem duas partes: dados pessoais e fatos imputados, com oportunidade de apresentar defesa e esclarecer circunstâncias.",
+      "pontos": [
+        "Primeira: residência, trabalho, oportunidades sociais, antecedentes e dados familiares.",
+        "Segunda: acusação, possível autoria diversa, localização, provas, vítimas/testemunhas, instrumentos e pormenores.",
+        "Pergunta final permite alegações defensivas; integrar advertência e silêncio."
+      ],
+      "atencao": [
+        "A existência de perguntas legais não cria dever de provar inocência ou confessar."
+      ],
+      "exemplo": "Após perguntas pessoais, acusado é informado das garantias e responde sobre onde estava no momento do fato. Variação: Se prefere calar sobre fatos, não inferir culpa nem impedir alegação defensiva voluntária.",
+      "prova": [
+        "Há duas partes previstas? Sim.",
+        "Roteiro impõe confissão obrigatória? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Autodefesa",
+          "significado": "Participação pessoal do acusado em seu favor, preservadas garantias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "e21a7390-eab1-5712-8e06-91bd891b70d0",
+        "content_sha256": "f9470cf3ffc60b82e2dba874dfbc0129939da07f3cff8ba74cd6b1362a2fed4c",
+        "simples": "O interrogatório será constituído de duas partes: sobre a pessoa do acusado e sobre os fatos. Na primeira parte, o interrogando será perguntado sobre residência, meios de vida ou profissão, oportunidades sociais, lugar onde exerce sua atividade, vida pregressa (se foi preso ou processado, juízo, suspensão condicional ou condenação, pena imposta e cumprimento) e outros dados familiares e sociais. Na segunda parte será perguntado sobre ser verdadeira a acusação; se não, o motivo particular a que atribuí-la, se conhece a pessoa a quem deva ser imputada e se com ela esteve; onde estava ao tempo da infração e se teve notícia; as provas já apuradas; se conhece as vítimas e testemunhas; e todos os demais fatos e pormenores que conduzam à elucidação dos antecedentes e circunstâncias da infração.",
+        "pontos": [
+          "Duas partes: sobre a pessoa e sobre os fatos.",
+          "Primeira parte: residência, profissão, vida pregressa, dados familiares e sociais.",
+          "Segunda parte: veracidade da acusação, álibi, provas apuradas, vítimas e testemunhas, circunstâncias."
+        ],
+        "atencao": [
+          "Estrutura em duas partes."
+        ],
+        "exemplo": "O juiz pergunta primeiro sobre a pessoa do acusado e depois sobre os fatos.",
+        "prova": [
+          "Assertiva que divide o interrogatório em três partes erra: são duas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 186",
+          "Art. 188"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-188",
+      "unit_id": "c22becdd-ecbd-5cd9-b3ac-e213c94d6659",
+      "content_sha256": "0fa4725b838451540d8a01cfc3abc18cd1d2aae69c7bf5525963d478081968f3",
+      "simples": "Depois do interrogatório, partes indicam fatos que ainda precisam de esclarecimento e juiz formula perguntas pertinentes e relevantes.",
+      "pontos": [
+        "Rito próprio de perguntas por intermédio do juiz.",
+        "Não confundir com perguntas diretas às testemunhas do art. 212.",
+        "Garantia de silêncio permanece."
+      ],
+      "atencao": [
+        "Esclarecimento não pode virar coerção para responder nem bloqueio arbitrário de participação defensiva."
+      ],
+      "exemplo": "Defesa indica dúvida sobre horário; juiz formula pergunta relevante ao acusado. Variação: Pergunta repetitiva sem pertinência pode ser afastada, com preservação da defesa efetiva.",
+      "prova": [
+        "Rito é idêntico ao das testemunhas? Não.",
+        "Silêncio deixa de valer nas perguntas complementares? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Esclarecimento do interrogatório",
+          "significado": "Perguntas adicionais sobre fato relevante indicado pelas partes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c22becdd-ecbd-5cd9-b3ac-e213c94d6659",
+        "content_sha256": "0fa4725b838451540d8a01cfc3abc18cd1d2aae69c7bf5525963d478081968f3",
+        "simples": "Após proceder ao interrogatório, o juiz indagará das partes se restou algum fato para ser esclarecido, formulando as perguntas correspondentes se o entender pertinente e relevante.",
+        "pontos": [
+          "Após o interrogatório, o juiz pergunta às partes se resta fato a esclarecer.",
+          "Formula perguntas pertinentes e relevantes."
+        ],
+        "atencao": [
+          "As partes não perguntam diretamente: pedem ao juiz."
+        ],
+        "exemplo": "A defesa sugere pergunta ao juiz, que a formula ao acusado.",
+        "prova": [
+          "Assertiva que permite às partes perguntar diretamente ao acusado, nos termos do art. 188, erra: o juiz formula as perguntas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 187"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-189",
+      "unit_id": "034fef5e-f6d4-5cdc-834d-dc579ef33183",
+      "content_sha256": "d076da4b2bc2aa26e2337b81cae03287c1f636a00f9ba41d9b3db41ce04a3d25",
+      "simples": "Quem nega a acusação total ou parcialmente pode explicar sua versão e indicar provas.",
+      "pontos": [
+        "Negativa pode ser parcial.",
+        "Esclarecimentos e provas são faculdades defensivas.",
+        "Ausência de prova indicada não desloca ônus de demonstrar a acusação."
+      ],
+      "atencao": [
+        "Não confundir faculdade de indicar prova com obrigação de demonstrar inocência."
+      ],
+      "exemplo": "Acusado nega estar no local e indica registro de trabalho como prova de sua versão. Variação: Prefere não responder ou não indica documento: isso não é confissão nem prova positiva de culpa.",
+      "prova": [
+        "Negativa parcial é permitida? Sim.",
+        "O acusado fica obrigado a provar inocência? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Versão defensiva",
+          "significado": "Explicação pessoal facultativa sobre a imputação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "034fef5e-f6d4-5cdc-834d-dc579ef33183",
+        "content_sha256": "d076da4b2bc2aa26e2337b81cae03287c1f636a00f9ba41d9b3db41ce04a3d25",
+        "simples": "Se o interrogando negar a acusação, no todo ou em parte, poderá prestar esclarecimentos e indicar provas.",
+        "pontos": [
+          "Acusado que nega a acusação pode prestar esclarecimentos e indicar provas."
+        ],
+        "atencao": [
+          "Faculdade do acusado."
+        ],
+        "exemplo": "O acusado nega o crime e indica uma testemunha de álibi.",
+        "prova": [
+          "Assertiva que proíbe o acusado de indicar provas no interrogatório erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 190"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-190",
+      "unit_id": "559f477b-9aaa-5204-8401-c3342912f2e8",
+      "content_sha256": "53666e171204e74fff578164e5bb479fda6ae849557eecfb844c8ab3da5cf747",
+      "simples": "Confessada autoria, perguntas esclarecem motivos, circunstâncias e participação de outras pessoas, sem eliminar direitos ou confronto probatório.",
+      "pontos": [
+        "Investigar detalhes da narrativa, não presumir tudo demonstrado.",
+        "Confissão deve ser voluntária e confrontada com provas.",
+        "Indicação de terceiro não equivale a condenação automática desse terceiro."
+      ],
+      "atencao": [
+        "Confissão não dispensa exame de corpo de delito exigível nem prova de autoria alheia."
+      ],
+      "exemplo": "Acusado admite conduta e esclarece circunstâncias, que serão confrontadas com os elementos produzidos. Variação: Aponta outro participante: é necessária prova e defesa próprias, não culpa automática pela declaração.",
+      "prova": [
+        "Confissão elimina demais provas? Não.",
+        "Motivos e circunstâncias são objeto de perguntas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Confissão esclarecida",
+          "significado": "Admissão voluntária cuja narrativa e compatibilidade precisam ser examinadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "559f477b-9aaa-5204-8401-c3342912f2e8",
+        "content_sha256": "53666e171204e74fff578164e5bb479fda6ae849557eecfb844c8ab3da5cf747",
+        "simples": "Se confessar a autoria, o acusado será perguntado sobre os motivos e circunstâncias do fato e se outras pessoas concorreram para a infração, e quais sejam.",
+        "pontos": [
+          "Confissão: perguntas sobre motivos e circunstâncias.",
+          "Perguntas sobre concurso de outras pessoas."
+        ],
+        "atencao": [
+          "Explora a confissão para identificar coautores."
+        ],
+        "exemplo": "Ao confessar, o acusado informa quem o ajudou.",
+        "prova": [
+          "Assertiva que dispensa perguntas sobre motivos e circunstâncias na confissão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 189"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-191",
+      "unit_id": "1f2d4246-3cdb-563b-84b3-70fe09972a29",
+      "content_sha256": "a0462593f239cd189d6c2dc2faf037fbbab4a8529213d1cff4c78001f39bcd6a",
+      "simples": "Havendo vários acusados, cada um é interrogado separadamente.",
+      "pontos": [
+        "Evitar interferência recíproca no relato.",
+        "Preservar defensor e garantias de cada acusado.",
+        "Não confundir separação de interrogatórios com separação obrigatória de processos."
+      ],
+      "atencao": [
+        "Interrogatório coletivo em coro não atende à regra; a disciplina do contraditório sobre versões segue própria análise."
+      ],
+      "exemplo": "Dois acusados da mesma ação prestam interrogatórios em momentos separados. Variação: Isso não exige automaticamente desmembrar a ação em dois processos.",
+      "prova": [
+        "Interrogatórios devem ser separados? Sim.",
+        "Separação implica sempre processos distintos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Individualização do ato",
+          "significado": "Oitiva pessoal de cada acusado, sem interrogatório conjunto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1f2d4246-3cdb-563b-84b3-70fe09972a29",
+        "content_sha256": "a0462593f239cd189d6c2dc2faf037fbbab4a8529213d1cff4c78001f39bcd6a",
+        "simples": "Havendo mais de um acusado no processo, cada um será interrogado separadamente, sem presença dos demais corréus.",
+        "pontos": [
+          "Interrogatório separado de cada acusado."
+        ],
+        "atencao": [
+          "Evita a interferência entre os depoimentos."
+        ],
+        "exemplo": "Dois corréus são interrogados um de cada vez.",
+        "prova": [
+          "Assertiva que determina o interrogatório conjunto de todos os acusados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 185"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-192",
+      "unit_id": "d5fe7d62-4a06-5d2a-b0ef-87c003e2c5d1",
+      "content_sha256": "34bb5c68bc6e2a3d86c08bbde2a97d5a073d9daf9053a4042c0caf46319fef46",
+      "simples": "Comunicação no interrogatório exige meios acessíveis adequados; o roteiro escrito/oral histórico deve ser integrado à inclusão, Libras e necessidades concretas.",
+      "pontos": [
+        "Texto prevê perguntas escritas a pessoa surda, respostas escritas a quem não fala e escrita em ambos os sentidos quando necessário.",
+        "Se não lê ou escreve, intérprete habilitado sob compromisso.",
+        "LBI 79–80 assegura recursos e adaptações para acesso efetivo à justiça; não presumir que toda pessoa surda usa a mesma comunicação."
+      ],
+      "atencao": [
+        "Não equiparar deficiência a incapacidade civil ou de entendimento. Terminologia histórica não elimina tecnologia assistiva atual."
+      ],
+      "exemplo": "Acusado usuário de Libras recebe interpretação adequada e acesso compreensível às perguntas e direitos. Variação: Quem não lê precisa recurso habilitado, em vez de receber perguntas escritas que não consegue compreender.",
+      "prova": [
+        "Toda deficiência significa incapacidade? Não.",
+        "Acessibilidade depende da necessidade concreta? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação acessível",
+          "significado": "Adaptação que permite entender e participar do ato judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm"
+      ],
+      "expected": {
+        "unit_id": "d5fe7d62-4a06-5d2a-b0ef-87c003e2c5d1",
+        "content_sha256": "34bb5c68bc6e2a3d86c08bbde2a97d5a073d9daf9053a4042c0caf46319fef46",
+        "simples": "O interrogatório do mudo, do surdo ou do surdo-mudo será feito assim: ao surdo, as perguntas por escrito e a resposta oral; ao mudo, as perguntas orais e a resposta escrita; ao surdo-mudo, perguntas e respostas por escrito. Caso o interrogando não saiba ler ou escrever, intervirá no ato, como intérprete e sob compromisso, pessoa habilitada a entendê-lo.",
+        "pontos": [
+          "Surdo: perguntas escritas, respostas orais.",
+          "Mudo: perguntas orais, respostas escritas.",
+          "Surdo-mudo: perguntas e respostas escritas.",
+          "Analfabeto: intérprete sob compromisso."
+        ],
+        "atencao": [
+          "Terminologia antiga; hoje usa-se intérprete de Libras (Lei nº 13.146, de 2015)."
+        ],
+        "exemplo": "Ao surdo, o juiz apresenta as perguntas por escrito, e ele responde oralmente.",
+        "prova": [
+          "Assertiva que inverte as formas de comunicação do surdo e do mudo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 193"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-193",
+      "unit_id": "e5e27b70-3865-58bd-842f-5b9b712eac5b",
+      "content_sha256": "dfb2ea1178793b5d8c61ccf5a844a5a1bbf212ec937fb148f57f7f38b37efd91",
+      "simples": "Acusado que não fala português é interrogado por meio de intérprete, preservados defesa e compreensão.",
+      "pontos": [
+        "Tradução das perguntas e respostas.",
+        "Não se presume entendimento por estar no Brasil.",
+        "Intérprete não substitui defensor."
+      ],
+      "atencao": [
+        "Não obrigar a responder idioma incompreensível nem tratar dificuldade linguística como silêncio culpável."
+      ],
+      "exemplo": "Estrangeiro sem domínio do português recebe intérprete para acompanhar acusação e interrogatório. Variação: Presença de advogado não elimina necessidade de tradução efetiva.",
+      "prova": [
+        "Intérprete substitui defensor? Não.",
+        "É necessário compreender perguntas e respostas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Interpretação linguística",
+          "significado": "Tradução para participação compreensível no ato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e5e27b70-3865-58bd-842f-5b9b712eac5b",
+        "content_sha256": "dfb2ea1178793b5d8c61ccf5a844a5a1bbf212ec937fb148f57f7f38b37efd91",
+        "simples": "Quando o interrogando não falar a língua nacional, o interrogatório será feito por meio de intérprete.",
+        "pontos": [
+          "Acusado que não fala português: intérprete."
+        ],
+        "atencao": [
+          "Garantia de compreensão."
+        ],
+        "exemplo": "Réu estrangeiro que não fala português é interrogado com intérprete.",
+        "prova": [
+          "Assertiva que dispensa intérprete para o acusado que não fala a língua nacional erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 192"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-195",
+      "unit_id": "c73be6fe-3728-54d7-9891-093bd9fe4306",
+      "content_sha256": "f87cc59007829a94fd31d74c14c6ea4adf0d958dd582c7e80aecd0ae480b4087",
+      "simples": "Impossibilidade ou recusa de assinatura do interrogado deve ser registrada no termo, sem inventar assinatura ou confessionar por omissão.",
+      "pontos": [
+        "Não saber, não poder ou não querer assinar são hipóteses previstas.",
+        "Consignar a ocorrência.",
+        "Integrar registro e autenticidade aplicáveis."
+      ],
+      "atencao": [
+        "Recusar assinatura não equivale a confissão nem torna automaticamente inexistente toda declaração regularmente documentada."
+      ],
+      "exemplo": "Acusado não consegue assinar e a circunstância é consignada. Variação: Recusa voluntária também se registra, sem reproduzir assinatura fictícia.",
+      "prova": [
+        "Recusa deve ser registrada? Sim.",
+        "Ela equivale a confessar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Registro da não assinatura",
+          "significado": "Documentação da hipótese concreta em lugar de assinatura inexistente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c73be6fe-3728-54d7-9891-093bd9fe4306",
+        "content_sha256": "f87cc59007829a94fd31d74c14c6ea4adf0d958dd582c7e80aecd0ae480b4087",
+        "simples": "Se o interrogado não souber escrever, não puder ou não quiser assinar, tal fato será consignado no termo.",
+        "pontos": [
+          "Interrogado que não sabe, não pode ou não quer assinar: registro no termo."
+        ],
+        "atencao": [
+          "Recusa em assinar não invalida o termo."
+        ],
+        "exemplo": "O acusado se recusa a assinar, e o fato é anotado no termo.",
+        "prova": [
+          "Assertiva que invalida o interrogatório se o acusado não assinar o termo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 199"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-196",
+      "unit_id": "acea7431-16b1-5d69-9b4c-437cbbf0c468",
+      "content_sha256": "47a3a46491bca7b3ff09613104551dd64eb7c00b04d15382591a31bde4d1592e",
+      "simples": "Juiz pode realizar novo interrogatório ou acolher pedido fundamentado das partes, preservando defesa e o direito ao silêncio.",
+      "pontos": [
+        "Possibilidade a todo tempo segundo o texto, integrada à fase e competência atuais.",
+        "Pedido da parte deve ser fundamentado.",
+        "Novo ato não serve para compelir confissão após exercício de garantia."
+      ],
+      "atencao": [
+        "Não confundir possibilidade de repetição com licença para insistência intimidatória contra silêncio."
+      ],
+      "exemplo": "Surge elemento relevante e defesa pede novo interrogatório para esclarecimento. Variação: Acusado mantém silêncio: repetição não elimina a garantia nem autoriza censura.",
+      "prova": [
+        "Parte pode pedir novo ato com fundamento? Sim.",
+        "Repetir elimina direito ao silêncio? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Novo interrogatório",
+          "significado": "Repetição juridicamente cabível com garantias preservadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "acea7431-16b1-5d69-9b4c-437cbbf0c468",
+        "content_sha256": "47a3a46491bca7b3ff09613104551dd64eb7c00b04d15382591a31bde4d1592e",
+        "simples": "A todo tempo o juiz poderá proceder a novo interrogatório de ofício ou a pedido fundamentado de qualquer das partes.",
+        "pontos": [
+          "Novo interrogatório a qualquer tempo.",
+          "De ofício ou a pedido fundamentado das partes."
+        ],
+        "atencao": [
+          "Pedido deve ser fundamentado."
+        ],
+        "exemplo": "Surgida nova prova, o juiz determina novo interrogatório.",
+        "prova": [
+          "Assertiva que veda novo interrogatório após o primeiro erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 185"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-197",
+      "unit_id": "1c71a802-5881-586a-b5d5-4ab21da99f97",
+      "content_sha256": "5d03231b8deee52273c9f7573bb3ea6b081b4176ff570cadad4601b9591e6139",
+      "simples": "Confissão é valorada em confronto com o conjunto, não como prova soberana. Admissibilidade, força probatória e atenuante são questões distintas.",
+      "pontos": [
+        "Art. 158 mantém exame quando exigível.",
+        "Tema 1194/STJ de 2025 revisou Súmulas 545/630: atenuante não exige uso na convicção; retratação depende de utilidade à apuração.",
+        "Quando fato confessado tem pena menor ou excludente, atenuação menor e não preponderante; efeitos prejudiciais só para fatos após publicação do acórdão."
+      ],
+      "atencao": [
+        "Não usar a redação antiga da Súmula 545 como requisito absoluto atual. Benefício de dosimetria não transforma declaração em prova suficiente de condenação."
+      ],
+      "exemplo": "Confissão compatível é examinada com prova; mesmo não usada na convicção, pode gerar atenuante nos termos atuais. Variação: Retratação válida sem contribuição à apuração exige análise própria do Tema, sem afirmar benefício universal em toda fala informal.",
+      "prova": [
+        "Confissão é rainha das provas? Não.",
+        "Atenuante exige sempre uso na fundamentação? Não; observar Tema 1194."
+      ],
+      "termos": [
+        {
+          "termo": "Valoração da confissão",
+          "significado": "Exame de compatibilidade e consequências, sem suficiência automática."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27"
+      ],
+      "expected": {
+        "unit_id": "1c71a802-5881-586a-b5d5-4ab21da99f97",
+        "content_sha256": "5d03231b8deee52273c9f7573bb3ea6b081b4176ff570cadad4601b9591e6139",
+        "simples": "O valor da confissão se aferirá pelos critérios adotados para os outros elementos de prova, e para a sua apreciação o juiz deverá confrontá-la com as demais provas do processo, verificando se entre ela e estas existe compatibilidade ou concordância.",
+        "pontos": [
+          "Confissão tem valor relativo, como as demais provas.",
+          "Deve ser confrontada com o restante da prova."
+        ],
+        "atencao": [
+          "Não há hierarquia entre provas: a confissão não é a 'rainha das provas'."
+        ],
+        "exemplo": "O juiz confronta a confissão com a perícia e os depoimentos.",
+        "prova": [
+          "Assertiva que atribui valor absoluto à confissão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155",
+          "Art. 200"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-198",
+      "unit_id": "0cba89cc-aabe-5707-b320-5442deab92d8",
+      "content_sha256": "52fe99c67990ff7de11a44a11fc069e4411e010437a50828f6e641327bc7befb",
+      "simples": "Silêncio não é confissão e não pode ser usado contra a defesa; a segunda parte histórica do artigo não prevalece sobre CF e CPP 186.",
+      "pontos": [
+        "Preservar garantia total ou parcial.",
+        "Não inserir silêncio como indício incriminador.",
+        "Confrontar outras provas sem punir exercício de direito."
+      ],
+      "atencao": [
+        "Não ensinar poderá constituir elemento como permissão atual para inferir culpa do silêncio."
+      ],
+      "exemplo": "Juiz aprecia provas independentes e não atribui peso incriminador ao acusado que calou. Variação: Responder somente ao defensor não torna o silêncio diante da acusação elemento de culpa.",
+      "prova": [
+        "Silêncio pode prejudicar defesa? Não.",
+        "Redação histórica supera CPP 186 e CF? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Silêncio protegido",
+          "significado": "Exercício de garantia sem inferência penal adversa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=532401"
+      ],
+      "expected": {
+        "unit_id": "0cba89cc-aabe-5707-b320-5442deab92d8",
+        "content_sha256": "52fe99c67990ff7de11a44a11fc069e4411e010437a50828f6e641327bc7befb",
+        "simples": "O silêncio do acusado não importará confissão, mas poderá constituir elemento para a formação do convencimento do juiz. A parte final do dispositivo, que permite valorar o silêncio, é considerada incompatível com a garantia constitucional do direito ao silêncio.",
+        "pontos": [
+          "Silêncio não é confissão.",
+          "A parte final (silêncio como elemento de convencimento) conflita com a Constituição."
+        ],
+        "atencao": [
+          "Prevalece o art. 186, parágrafo único: o silêncio não pode ser interpretado em prejuízo da defesa."
+        ],
+        "exemplo": "O silêncio do acusado não pode ser usado para fundamentar a condenação.",
+        "prova": [
+          "Assertiva que usa o silêncio como elemento de convencimento contra o acusado erra, à luz do art. 186 e da Constituição."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 186"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-199",
+      "unit_id": "72dfef54-ab1c-51fc-8f2b-7cfc5d7ab3c7",
+      "content_sha256": "b388efb32a788f5e2ef8c5ce5dead30c029cbf0390fefc6e0ee887ddec35e648",
+      "simples": "Confissão fora do interrogatório deve ser formalmente registrada. STJ de 2024 exige ato documentado em estabelecimento estatal oficial e limita seu uso incriminador.",
+      "pontos": [
+        "Informar direitos; não admitir ingresso indireto da confissão inadmissível por relato de policial.",
+        "AREsp 2123334: confissão extrajudicial orienta fontes de prova; condenação precisa de provas judiciais próprias.",
+        "Aplicação prospectiva da vedação incriminadora a fatos desde 3/7/2024; não estender esse marco mecanicamente à atenuante, hoje integrada ao Tema 1194.",
+        "Observar art. 195 sobre ausência de assinatura."
+      ],
+      "atencao": [
+        "Não transformar fala informal na rua em confissão judicial por mero testemunho policial; examinar data do fato e disciplina aplicável."
+      ],
+      "exemplo": "Autoridade registra ato formal na delegacia, informa garantias e busca outras provas judiciais da imputação. Variação: Relato do agente sobre fala informal não contorna inadmissibilidade; modulação exige distinguir fatos anteriores e posteriores.",
+      "prova": [
+        "Registro formal dispensa todas as garantias? Não.",
+        "Marco de 3/7/2024 se aplica automaticamente à atenuante? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Confissão extrajudicial",
+          "significado": "Declaração formal fora do interrogatório judicial, com regime próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27020893%27",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=28%2F08%2F2025&num_registro=202501361800",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27"
+      ],
+      "expected": {
+        "unit_id": "72dfef54-ab1c-51fc-8f2b-7cfc5d7ab3c7",
+        "content_sha256": "b388efb32a788f5e2ef8c5ce5dead30c029cbf0390fefc6e0ee887ddec35e648",
+        "simples": "A confissão, quando feita fora do interrogatório, será tomada por termo nos autos, observado o disposto no art. 195.",
+        "pontos": [
+          "Confissão extra-interrogatório é reduzida a termo nos autos.",
+          "Aplica-se o art. 195 (registro de recusa ou impossibilidade de assinar)."
+        ],
+        "atencao": [
+          "Confissão extrajudicial tomada por termo."
+        ],
+        "exemplo": "Acusado confessa por petição, e a confissão é tomada por termo nos autos.",
+        "prova": [
+          "Assertiva que dispensa o termo para a confissão fora do interrogatório erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 195"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-200",
+      "unit_id": "c7b39885-dd87-5c84-8226-8bcbb1aaf8cb",
+      "content_sha256": "afc014de43085782c46c5c6b0c1da4007a31818507eadb4601f86d780b63b064",
+      "simples": "Confissão pode ser dividida e retratada; juiz analisa o conjunto, e seus efeitos de atenuação seguem o Tema 1194 e a modulação pertinente.",
+      "pontos": [
+        "Divisível: partes da declaração podem ter valor distinto fundamentado.",
+        "Retratação não apaga automaticamente fatos comprovados por outras provas.",
+        "Tema 1194: retratada só beneficia na hipótese em que serviu à apuração; nova tese prejudicial não retroage a fatos anteriores à publicação."
+      ],
+      "atencao": [
+        "Não afirmar que toda retratação perde necessariamente atenuante, nem que toda confissão informal gera benefício. Separar prova e dosimetria."
+      ],
+      "exemplo": "Réu retrata declaração inicial, mas ela contribuiu à apuração: examinar benefício segundo Tema 1194, sem depender de uso na convicção. Variação: Retratação válida sem utilidade exige análise distinta; aplicação prejudicial da nova tese respeita modulação.",
+      "prova": [
+        "Confissão é sempre indivisível? Não.",
+        "Retratação sempre elimina atenuante? Não; verificar utilidade, natureza e marco temporal."
+      ],
+      "termos": [
+        {
+          "termo": "Retratação",
+          "significado": "Recuo da declaração confessória, com efeitos examinados no regime próprio."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021819%27"
+      ],
+      "expected": {
+        "unit_id": "c7b39885-dd87-5c84-8226-8bcbb1aaf8cb",
+        "content_sha256": "afc014de43085782c46c5c6b0c1da4007a31818507eadb4601f86d780b63b064",
+        "simples": "A confissão será divisível e retratável, sem prejuízo do livre convencimento do juiz, fundado no exame das provas em conjunto.",
+        "pontos": [
+          "Confissão divisível: o juiz pode aceitar parte e rejeitar outra.",
+          "Confissão retratável: o acusado pode voltar atrás.",
+          "Livre convencimento fundado no conjunto das provas."
+        ],
+        "atencao": [
+          "Divisibilidade e retratabilidade."
+        ],
+        "exemplo": "O acusado confessa o fato, mas o juiz acolhe só parte da narrativa.",
+        "prova": [
+          "Assertiva que torna a confissão irretratável e indivisível erra."
+        ],
+        "termos": [
+          {
+            "termo": "Confissão divisível",
+            "significado": "O juiz pode acolher parte da confissão."
+          }
+        ],
+        "remissoes": [
+          "Art. 197"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    }
+  ]
+}

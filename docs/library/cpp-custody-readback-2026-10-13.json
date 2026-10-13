@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-13T02:32:31.264104+00:00",
+  "course_slug": "codigo-processo-penal",
+  "published_units": 20,
+  "target_keys": [
+    "art-282",
+    "art-283",
+    "art-284",
+    "art-285",
+    "art-286",
+    "art-287",
+    "art-288",
+    "art-289",
+    "art-289-a",
+    "art-290",
+    "art-291",
+    "art-292",
+    "art-293",
+    "art-294",
+    "art-295",
+    "art-296",
+    "art-297",
+    "art-299",
+    "art-300",
+    "art-300-a"
+  ],
+  "all_authored_fields_match": true,
+  "cpp_structure_preserved": true,
+  "untargeted_cpp_explanations_preserved": 826,
+  "concurrent_other_changes": []
+}

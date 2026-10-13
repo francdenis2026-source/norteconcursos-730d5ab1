@@ -1,0 +1,181 @@
+"""Article-specific inquiry teaching, reviewed with constitutional integrations."""
+import json,sys
+from pathlib import Path
+CPP='https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm'
+CF='https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm'
+SV14='https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26+&sumula=1230'
+ADI5642='https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=5&abrirBase=CF'
+rows={}
+def add(n,text,points,alert,case,variation,qa,term,definition,links=()):
+ rows['art-'+str(n)]=dict(simples=text,pontos=points,atencao=[alert],exemplo=case+' Variação: '+variation,prova=qa,termos=[dict(termo=term,significado=definition)],remissoes=[CPP,*links])
+add(4,'A polícia judiciária apura infrações penais e autoria nas respectivas circunscrições. O parágrafo não exclui autoridades administrativas com função investigativa atribuída por lei; investigação criminal não é monopólio absoluto da polícia.',
+ ['Finalidade: apurar infração e autoria, não condenar.', 'Circunscrição delimita atuação policial, não se confunde automaticamente com competência judicial.', 'MP pode investigar, com prazo razoável, documentação, garantias e controle judicial, segundo Tema 184/STF.'],
+ 'Não transformar competência investigativa em poder de restringir qualquer direito sem autorização. A reserva de jurisdição e as prerrogativas defensivas permanecem.',
+ 'O MP instaura investigação criminal e documenta atos sob controle judicial: não é inválida apenas por não ter sido presidida pela polícia.',
+ 'Determinar interceptação exige o regime judicial próprio; o poder investigativo do MP não afasta essa reserva.',
+ ['A polícia condena ao concluir o inquérito? Não; apura fato e autoria.', 'O art. 4º proíbe toda investigação criminal do MP? Não; Tema 184 reconhece competência com garantias e controle.'],
+ 'Polícia judiciária','Função de apuração penal distinta de julgamento e de policiamento ostensivo.',
+ ['https://noticias.stf.jus.br/postsnoticias/stf-fixa-requisitos-para-atuacao-do-ministerio-publico-em-investigacoes-penais/','https://portal.stf.jus.br/processos/listarProcessos.asp?classe=RE&numeroProcesso=593727'])
+add(5,'A abertura do inquérito depende da natureza da ação penal. Ação pública incondicionada admite iniciativa policial; condicionada exige representação; privada exige requerimento de legitimado. Comunicação do fato não é denúncia oferecida ao juiz.',
+ ['§1º: requerimento traz, sempre que possível, fato/circunstâncias, identificação ou sinais do suspeito e razões, testemunhas e dados.', '§2º: indeferimento do requerimento de abertura admite recurso ao chefe de Polícia.', '§3º: qualquer pessoa pode comunicar infração de ação pública; a autoridade verifica procedência das informações.', '§4º: condicionada depende de representação; §5º: privada depende do legitimado.', 'Requisição judicial literal do inciso II deve ser lida com estrutura acusatória do art. 3º-A; não autoriza juiz iniciar investigação comum de ofício.'],
+ 'Não confundir representação, requerimento, requisição e notícia-crime. Gravidade abstrata não elimina condição de procedibilidade.',
+ 'Vítima de crime de ação pública condicionada comunica o fato, mas não manifesta representação: identificar se o ato contém manifestação válida antes de instaurar pela regra do §4º.',
+ 'Em ação pública incondicionada, a polícia pode agir de ofício ao verificar notícia procedente; não exigir sempre pedido da vítima.',
+ ['Toda ação pública dispensa representação? Não; há pública condicionada.', 'O recurso previsto contra o indeferimento é ao chefe de Polícia? Sim; art. 5º, §2º.'],
+ 'Notícia-crime','Comunicação de fato potencialmente criminoso; não equivale à peça acusatória.',[CF])
+add(6,'As primeiras providências incluem preservar o local, arrecadar objetos após liberação pericial, colher elementos, ouvir pessoas e realizar os procedimentos pertinentes. Cada diligência continua submetida às garantias constitucionais e às regras de prova.',
+ ['I–III: conservar local até peritos, apreender objetos após liberação e colher elementos.', 'IV–VII: ouvir vítima/indiciado, reconhecimento/acareação e perícias quando cabíveis.', 'VIII: identificação criminal não é automática do civilmente identificado; integrar CF 5º, LVIII, e Lei 12.037.', 'IX: informações pessoais não substituem prova do fato nem autorizam condenação por estereótipo.', 'X: filhos, idades, deficiência e responsável indicado pela pessoa presa devem ser informados.', 'Tema 1258/STJ (2025): reconhecimento exige procedimento do art. 226 na polícia e em juízo; prova inválida não se torna válida só pela repetição. Identificação de pessoa já conhecida possui distinção.'],
+ 'Lei 15.295/2025 ampliou hipóteses de identificação/perfil genético na Lei 12.037; conferir condições atuais. Oitiva do indiciado preserva silêncio e defesa. Não ensinar reconhecimento informal como mera recomendação.',
+ 'A equipe preserva a cena e aguarda os peritos para liberar um objeto. O investigado é informado de direitos e o procedimento de reconhecimento observa o art. 226.',
+ 'Exibir só uma fotografia e repetir depois o mesmo apontamento não cura automaticamente reconhecimento viciado. Prova independente tem análise própria.',
+ ['Objetos devem ser removidos antes de os peritos liberarem a cena? Não; o inciso II exige liberação pericial.', 'Identificação criminal é sempre obrigatória apesar de documento civil válido? Não; há hipóteses legais e garantias.', 'Repetir em juízo um reconhecimento viciado sempre sana a prova? Não; Tema 1258 alerta para contaminação e admite análise de prova independente.'],
+ 'Preservação do local','Conservação dos vestígios até a intervenção pericial, conectada à cadeia de custódia.',
+ [CF,'https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm','https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021716%27'])
+add(7,'A reprodução simulada verifica se o fato poderia ter ocorrido de determinado modo. É faculdade investigativa sujeita à moralidade, ordem pública e garantias, não licença para obrigar o suspeito a produzir prova contra si.',
+ ['Objetivo: testar possibilidade da dinâmica, não substituir toda perícia.', 'Não contrariar moralidade ou ordem pública.', 'Preservar não autoincriminação e dignidade das pessoas envolvidas.'],
+ 'Não exigir participação ativa compulsória do investigado para encenar uma confissão. A recusa não prova por si autoria.',
+ 'Peritos testam uma versão sobre percurso e visibilidade, sem compelir o investigado a representar a própria conduta incriminadora.',
+ 'Uma proposta de simulação que expõe vítima à repetição vexatória da violência precisa ser recusada ou reformulada, respeitando os limites.',
+ ['A reprodução é obrigação em todo inquérito? Não; a lei diz poderá.', 'O art. 7º autoriza constranger o suspeito a autoincriminar-se? Não; integrar as garantias constitucionais.'],
+ 'Reprodução simulada','Reconstrução destinada a testar uma hipótese sobre a dinâmica dos fatos.',[CF])
+add(8,'Quando há flagrante, seguem-se as regras específicas de prisão em flagrante, com formalização, comunicações e controle judicial. O art. 8º é remissão: não contém autorização geral de manutenção da prisão.',
+ ['Consultar CPP 301–310 e a disciplina de custódia.', 'Comunicação da prisão e apresentação ao controle judicial são atos distintos.', 'Custódia e preventiva têm pressupostos próprios; flagrante não garante custódia ilimitada.'],
+ 'Integração recente: Lei 15.358/2026 alterou custódia; usar redação atual e alertas do art. 3º-B/310, sem reproduzir proibição absoluta antiga de videoconferência.',
+ 'A pessoa é presa em flagrante: formalizar os atos, comunicar imediatamente e submeter a situação ao controle e à audiência nos termos vigentes.',
+ 'Prisão sem hipótese legal de flagrante exige examinar ilegalidade; preencher um auto não cria retrospectivamente uma hipótese inexistente.',
+ ['O art. 8º disciplina sozinho todo flagrante? Não; remete ao capítulo específico.', 'Flagrante autoriza preventiva automática sem requisitos? Não; são decisões e fundamentos distintos.'],
+ 'Remissão normativa','Indicação de outro conjunto de regras que completa a disciplina do artigo.',[CF])
+add(9,'Os atos do inquérito devem ser documentados em conjunto organizado. A redação sobre escrita/datilo registra a forma histórica; documentação eletrônica institucional não equivale a investigação informal sem autos.',
+ ['Peças documentadas em um processado.', 'Rastreabilidade, integridade e vinculação dos elementos ao procedimento.', 'Meio eletrônico não dispensa registro, acesso devido e preservação da prova.'],
+ 'Não ensinar que todo ato só vale em máquina de escrever ou que investigação oral não documentada satisfaz o artigo. A tramitação eletrônica tem normas específicas.',
+ 'O procedimento eletrônico incorpora depoimentos, laudos e registros com identificação e integridade, permitindo controle e acesso cabível.',
+ 'Relatar verbalmente uma diligência sem registrá-la não equivale à documentação exigida, ainda que a investigação seja eletrônica.',
+ ['Inquérito pode ser apenas oral sem documentação? Não; as peças devem ser documentadas.', 'Digitalizar dispensa preservar integridade e organização? Não; essas exigências permanecem.'],
+ 'Documentação','Registro verificável dos atos e elementos investigativos.',
+ ['https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf'])
+add(10,'A regra geral do CPP é conclusão em dez dias com indiciado preso e trinta quando solto, com ou sem fiança. Relatório minucioso resume a apuração; normas especiais e interpretação constitucional impedem tratar esses prazos como únicos para toda investigação.',
+ ['Preso: dez dias; preventiva contada da execução da ordem.', 'Solto: trinta dias, com ou sem fiança.', 'Relatório pode indicar testemunhas não ouvidas e onde encontrá-las.', 'Fato difícil com investigado solto: solicitar diligências no prazo marcado.', 'Integrar art. 3º-B, §2º: prorrogação concretamente fundamentada e avaliação da prisão; não revogação automática pelo vencimento.'],
+ 'Não transportar dez/trinta dias indiscriminadamente às leis especiais ou permitir investigação indefinida. Prazo razoável, fundamentação e controle da custódia são exigidos.',
+ 'Inquérito comum com investigado solto tem referência de trinta dias; dificuldade concreta pode justificar solicitação de novas diligências e prazo pertinente.',
+ 'Com investigado preso, não ensinar soltura ou manutenção automática por simples conta de dias; verificar o regime e exigir avaliação judicial fundamentada.',
+ ['Fiança altera a regra geral do solto para dez dias? Não; com ou sem fiança são trinta.', 'Dez/trinta dias são os únicos prazos de toda legislação investigativa? Não; há regimes especiais.'],
+ 'Prazo do inquérito','Duração sujeita ao regime aplicável, à fundamentação e ao controle das restrições.',
+ ['https://web.trf3.jus.br/acordaos/Acordao/BuscarDocumentoPje/362788890'])
+add(11,'Instrumentos e objetos relevantes acompanham o inquérito como elementos vinculados à apuração. A norma não dispensa preservação, registro, custódia e formas próprias de armazenamento ou apresentação.',
+ ['Vínculo entre objeto e autos.', 'Preservação do vestígio e rastreabilidade.', 'Relevância para a prova, não mera acumulação de qualquer bem apreendido.'],
+ 'Acompanhar autos não exige anexar fisicamente todo objeto a um papel: observar guarda apropriada e cadeia de custódia dos arts. 158-A e seguintes.',
+ 'Uma arma relacionada ao fato fica corretamente acondicionada, identificada e vinculada ao procedimento, com registros de entrega e guarda.',
+ 'Misturar objetos sem identificação compromete rastreabilidade; citar o art. 11 não sana perda de cadeia de custódia.',
+ ['Objeto relevante pode perder a identificação só porque está junto dos autos? Não; preservar vinculação e custódia.', 'O artigo dispensa cuidados com vestígios? Não; integrar o regime probatório.'],
+ 'Vinculação probatória','Relação documentada entre objeto, procedimento e fato investigado.')
+add(12,'O inquérito acompanha denúncia ou queixa quando lhes servir de base. Isso não faz do inquérito requisito universal de toda ação: outros elementos idôneos podem fundamentar a acusação nos regimes legais.',
+ ['Condição da remessa: servir de base à acusação.', 'Denúncia e queixa têm titulares e regimes diferentes.', 'Dispensabilidade do inquérito não é dispensa de justa causa.'],
+ 'Não afirmar que ausência de inquérito sempre impede a denúncia, nem que sua existência garante acusação sem elementos mínimos.',
+ 'A denúncia usa as diligências do inquérito como fundamento: o procedimento deve acompanhá-la.',
+ 'Se já há elementos idôneos por outra via legal, examinar a possibilidade de acusação sem inquérito, preservada a justa causa e os requisitos da peça.',
+ ['Todo crime exige inquérito antes de ação penal? Não; ele é dispensável quando existem elementos idôneos.', 'Dispensar inquérito dispensa justa causa? Não; permanece necessária.'],
+ 'Dispensabilidade','Possibilidade de acusação legalmente fundamentada por elementos que não dependam de inquérito prévio.')
+add(13,'A autoridade policial também presta informações, executa diligências requisitadas, cumpre mandados e representa por preventiva. Representar significa solicitar fundamentadamente; a decisão cautelar cabe ao juízo competente.',
+ ['I: informações para instrução e julgamento.', 'II: diligências requisitadas, integradas ao art. 3º-A.', 'III: cumprimento de mandados.', 'IV: representação sobre preventiva não é decretação policial.'],
+ 'Menção ao juiz no inciso II não permite condução judicial de investigação comum de ofício. Preventiva exige arts. 311–313 e fundamentação própria.',
+ 'O delegado fundamenta representação por preventiva e remete ao juízo. A prisão não decorre apenas da assinatura policial.',
+ 'Cumprir um mandado já expedido é distinto de pedir sua expedição; conferir a validade da ordem e o regime do cumprimento.',
+ ['Representação do delegado já decreta a preventiva? Não; cabe decisão judicial.', 'O inciso II transforma juiz em investigador? Não; integrar estrutura acusatória.'],
+ 'Representação cautelar','Pedido fundamentado da autoridade, distinto da decisão judicial.')
+add('13-a','MP ou delegado podem requisitar dados cadastrais de vítima ou suspeitos nos crimes especificamente listados, a órgãos públicos ou empresas privadas. Não é autorização de acesso indiscriminado ao conteúdo das comunicações.',
+ ['Rol: CP 148, 149, 149-A, 158 §3º, 159 e ECA 239.', 'Prazo para atender: 24 horas.', 'Requisição: autoridade, número do inquérito e unidade responsável.', 'ADI 5642 (2024): poder instrumental aos fins e crimes abrangidos, sem inclusão automática de interceptação de voz/telemática, dados de usuários de IP, agenda virtual, cadastro de e-mail ou extratos de conexão.'],
+ 'Dado cadastral, extrato e conteúdo de comunicação não são a mesma categoria. Identificar objeto e regime; não ampliar o rol a qualquer crime pelo uso de telefone.',
+ 'No sequestro do art. 148, delegado requisita dados cadastrais pertinentes, identifica procedimento e unidade e observa prazo e finalidade.',
+ 'Pedir todo o conteúdo de mensagens com o rótulo cadastro não afasta a autorização judicial e a legislação específica.',
+ ['O art. 13-A se aplica automaticamente a qualquer crime? Não; há rol e finalidade.', 'O prazo de atendimento da requisição é 24 horas? Sim; não confundir com as doze horas do art. 13-B.'],
+ 'Dados cadastrais','Categoria que não se confunde com conteúdo interceptado ou acesso integral a comunicações.',[ADI5642])
+add('13-b','A localização por meios técnicos tem requisitos e prazos próprios. O sinal indica estação de cobertura, setor e intensidade de radiofrequência; localizar não equivale a ouvir ou ler a comunicação.',
+ ['Caput: requisição por MP ou delegado mediante autorização judicial para localização de vítima/suspeitos de delito em curso.', '§1º: definição técnica de sinal.', '§2º: não autoriza conteúdo; período de até trinta dias renovável uma vez por igual período e ordem judicial para períodos superiores.', '§3º: instaurar inquérito em até 72 horas do registro da ocorrência.', '§4º: sem manifestação judicial em doze horas, requisição imediata com comunicação imediata ao juiz; não é ausência de controle judicial.', 'ADI 5642 (2024): art. 13-B alcança também os delitos listados em 13-A; não restringir a explicação ao tráfico de pessoas isoladamente.'],
+ 'Trinta dias, 72 horas, doze horas e 24 horas de 13-A referem-se a atos diferentes. O regime não autoriza vigilância ilimitada nem interceptação de conteúdo sem a disciplina própria.',
+ 'Há pedido judicial de localização de vítima de delito abrangido em curso. Passam doze horas sem manifestação: aplicar os requisitos do §4º e comunicar imediatamente ao juízo.',
+ 'Se o pedido é ouvir a conversa, não basta a autorização para sinal de localização; o objeto e o regime jurídico mudam.',
+ ['Sinal de localização inclui automaticamente o conteúdo da ligação? Não; §2º separa as categorias.', 'As 72 horas são o prazo para o juiz decidir? Não; são para instaurar o inquérito a partir da ocorrência.', 'A aplicação está limitada ao tráfico de pessoas sem integrar a ADI 5642? Não; o STF inclui os delitos do art. 13-A.'],
+ 'Sinal','Dados técnicos de cobertura/setor/intensidade, diferentes do conteúdo da comunicação.',[ADI5642,'https://web.trf3.jus.br/acordaos/Acordao/BuscarDocumentoPje/324189586'])
+add(14,'Vítima, representante legal e indiciado podem requerer diligências. O pedido é analisado pela autoridade, não atendido automaticamente nem ignorado arbitrariamente; distinguir discricionariedade investigativa de direitos específicos de defesa e prova.',
+ ['Legitimados expressos: ofendido/representante e indiciado.', 'Realização depende da apreciação da autoridade.', 'Pedidos devem ser pertinentes e compatíveis com garantias e regras específicas.'],
+ 'O art. 14 não permite negar todo acesso a provas já documentadas: SV 14 tem objeto próprio. Também não torna facultativo todo exame obrigatório previsto em outra norma.',
+ 'O indiciado pede que câmera indicada seja examinada; a autoridade avalia pertinência e registra a decisão sobre a diligência.',
+ 'Pedido de acesso a prova documentada em favor da defesa é analisado pelo direito próprio, sem invocar o art. 14 para bloqueio total.',
+ ['Toda diligência requerida deve ser realizada sem análise? Não; há apreciação da autoridade.', 'A faculdade do art. 14 elimina SV 14? Não; pedido de diligência e acesso defensivo são distintos.'],
+ 'Requerimento de diligência','Solicitação de ato investigativo, distinta de direito de acesso ao elemento já documentado.',[SV14])
+add('14-a','O artigo disciplina defesa em investigação de uso profissional de força letal por agentes das instituições do art. 144, consumado ou tentado, inclusive hipóteses de excludentes do CP 23. Não condiciona o direito geral ao advogado a pertencer a essas instituições.',
+ ['§1º: citar investigado, que pode constituir defensor em até 48 horas do recebimento.', '§2º: sem defensor no primeiro prazo, intimar instituição de vínculo à época dos fatos para indicação em 48 horas.', '§§3º–4º: preferência da Defensoria e condições para disponibilização/indicação de outro profissional, observadas atribuições territoriais.', '§5º: sem atuação da Defensoria, custeio institucional previsto.', '§6º: militares do art. 142 somente no recorte de missões de Garantia da Lei e da Ordem.'],
+ 'Não ampliar o rito especial a todo delito de todo servidor, nem transformar investigação em afirmação de culpa. São dois prazos sucessivos com marcos diferentes; não presumir sempre 96 horas desde o fato.',
+ 'Agente é investigado por uso de força letal em serviço e recebe a citação: inicia o prazo de 48 horas para constituir defensor. Ausência de indicação aciona o passo institucional próprio.',
+ 'Investigação de servidor por delito sem uso profissional de força letal não ingressa automaticamente nesse rito, embora permaneça o direito geral à defesa.',
+ ['O primeiro prazo conta sempre da data do fato? Não; conta do recebimento da citação.', 'O §6º abrange qualquer missão militar sem requisito? Não; exige o recorte de GLO.', 'Quem não integra o art. 144 perde o direito ao advogado? Não; o artigo não elimina a garantia geral.'],
+ 'Defesa investigativa','Assistência técnica na apuração, sem equivaler a reconhecimento da culpa.',[CF])
+add(15,'A menção histórica a curador não deve ser ensinada como exigência etária atual de todo indiciado entre dezoito e vinte e um anos. O STJ reconhece a desnecessidade após a maioridade civil aos dezoito e a mudança do interrogatório pela Lei 10.792/2003.',
+ ['Integrar Código Civil 5º e jurisprudência STJ sobre derrogação do regime histórico.', 'Menor de dezoito ao fato segue ECA, não vira réu penal comum apenas com um curador.', 'Curador e defensor técnico têm funções distintas; assistência jurídica não desaparece.'],
+ 'O texto compilado permanece visível, mas não gerar exercício automático obrigando curador só por idade 18–20. Não confundir com curatela por outras hipóteses legais.',
+ 'Investigado de dezenove anos é assistido tecnicamente; a idade inferior a vinte e um, por si, não impõe o antigo curador.',
+ 'Se tinha dezessete anos na data do fato, identificar ato infracional e o procedimento do ECA, com suas garantias específicas.',
+ ['Dezenove anos exigem automaticamente o antigo curador etário? Não; STJ afasta a exigência no regime atual.', 'Nomear curador transforma adolescente em réu penal comum? Não; aplicar ECA e a idade ao fato.'],
+ 'Curador histórico','Figura de assistência etária do regime antigo, sem confundir com defesa técnica ou outras curatelas.',
+ ['https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm','https://www.planalto.gov.br/ccivil_03/leis/l8069.htm','https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?dt=20090629&formato=PDF&nreg=200401407244&seq=558912'])
+add(16,'Devolução do inquérito pelo MP para diligências é limitada às novas providências imprescindíveis à denúncia. Não é mecanismo genérico para prolongar apuração com pedido sem relevância.',
+ ['Novas diligências, não devolução por rotina.', 'Imprescindibilidade ao oferecimento da denúncia.', 'Identificar elemento faltante e providência necessária.'],
+ 'Dispensabilidade do inquérito e justa causa permanecem distintas: o artigo não obriga denunciar sem base nem autoriza prazo indefinido.',
+ 'Falta exame indispensável para esclarecer a materialidade; o MP solicita a diligência identificando sua necessidade para acusar.',
+ 'Pedido de repetir ato irrelevante apenas para ganhar tempo não satisfaz a imprescindibilidade.',
+ ['Qualquer conveniência permite devolver o inquérito pelo art. 16? Não; exige novas diligências imprescindíveis.', 'O artigo obriga acusar sem justa causa? Não; falta de base exige a solução legal pertinente.'],
+ 'Imprescindibilidade','Necessidade efetiva da diligência para fundamentar a acusação.')
+add(17,'A autoridade policial não pode arquivar inquérito. Sua função é apurar e relatar; eventual conclusão de que não há crime ou prova suficiente não transfere a competência de arquivamento à polícia.',
+ ['Vedação expressa ao arquivamento policial.', 'Relatório não equivale a decisão de arquivar.', 'Integrar art. 28 e controle constitucional do arquivamento.'],
+ 'Não ensinar que o juiz pode ordenar acusação sempre que discorde do MP. O art. 28 e a interpretação STF delimitam a revisão e o controle.',
+ 'O delegado relata ausência de indícios e remete os autos para a tramitação cabível, sem encerrá-los por arquivamento próprio.',
+ 'O surgimento de notícia de prova nova é analisado segundo art. 18 e fundamento do arquivamento, não por poder policial de revogar qualquer decisão.',
+ ['Delegado pode arquivar porque entende inocente o investigado? Não; pode registrar conclusão, não arquivar.', 'Relatório final equivale à decisão de arquivamento? Não; atos distintos.'],
+ 'Arquivamento','Encerramento sujeito ao regime do MP, revisão e controle aplicável, não decisão policial.',
+ ['https://www.cjf.jus.br/publico/biblioteca/Res%20882-2024%20publ%20DOU.pdf'])
+add(18,'Arquivamento por falta de base probatória admite novas pesquisas se houver notícia de outras provas. Reabrir investigação e propor ação após arquivamento têm exigências diferentes; mudar apenas a interpretação dos mesmos elementos não basta.',
+ ['Art. 18: notícia de prova nova permite novas pesquisas na hipótese probatória.', 'Súmula 524/STF: iniciar ação após esse arquivamento exige novas provas efetivamente produzidas.', 'Fundamento do arquivamento importa; atipicidade não se equipara automaticamente à mera insuficiência probatória.'],
+ 'Integrar procedimento atual do art. 28. A redação histórica sobre ordem judicial não esgota o regime contemporâneo. Não ensinar que todo arquivamento é reversível por simples nova opinião.',
+ 'Inquérito arquivado por falta de prova recebe notícia de câmera antes desconhecida: a notícia pode justificar investigar; a ação exige elementos novos idôneos e justa causa.',
+ 'Ler de novo o mesmo depoimento e preferir conclusão oposta não constitui, só por isso, prova nova.',
+ ['Notícia de prova e prova produzida são idênticas para os dois momentos? Não; desarquivamento e acusação têm exigências distintas.', 'Qualquer arquivamento pode ser reaberto por mera mudança de opinião? Não; examinar fundamento e elementos novos.'],
+ 'Prova nova','Elemento substancialmente novo pertinente à hipótese, não mera releitura do acervo anterior.',
+ ['https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2731'])
+add(19,'Na ação privada, o inquérito aguarda iniciativa do legitimado no juízo competente ou pode ser entregue ao requerente mediante traslado. A investigação não substitui a queixa e não suspende automaticamente o prazo de iniciativa.',
+ ['Autos aguardam iniciativa do ofendido/representante.', 'Entrega ao requerente se pedida, com traslado.', 'Observar decadência e regras de legitimação, separadas da duração do inquérito.'],
+ 'Não afirmar que esperar conclusão do inquérito sempre paralisa seis meses de decadência. Integrar CPP 38, titularidade e marco de conhecimento da autoria.',
+ 'Ofendido reúne elementos do inquérito para a queixa e observa seu prazo legal de iniciativa.',
+ 'A simples existência de investigação em andamento não autoriza deixar transcorrer indefinidamente o prazo de queixa.',
+ ['Autos em juízo substituem a iniciativa do legitimado? Não; é necessária a iniciativa cabível.', 'O artigo suspende automaticamente decadência? Não; verificar a regra específica.'],
+ 'Queixa','Peça de iniciativa privada distinta da comunicação do fato e do inquérito.')
+add(20,'O sigilo protege a apuração e interesses legítimos, mas não torna todos os elementos inacessíveis à defesa. SV 14 garante acesso defensivo aos elementos já documentados relevantes ao exercício da defesa; diligências em andamento têm tratamento próprio.',
+ ['Sigilo necessário, sem bloqueio absoluto da defesa.', 'SV 14: elementos documentados pertinentes ao constituinte.', 'Diligência em execução não se confunde com prova já incorporada.', 'Parágrafo: atestado de antecedentes não pode mencionar instauração de inquérito contra o requerente.'],
+ 'Não confundir acesso defensivo com divulgação pública irrestrita. Mera instauração de investigação não equivale a condenação ou antecedente penal condenatório.',
+ 'Advogado pede acesso ao laudo já documentado referente ao investigado: o sigilo não fundamenta uma recusa geral.',
+ 'Pedido de conhecer operação ainda em andamento exige análise do recorte específico, sem transformar a ressalva em veto a todo o acervo.',
+ ['Sigilo permite negar toda prova documentada à defesa? Não; integrar SV 14.', 'Atestado pode mencionar instauração de inquérito contra o requerente? Não; o parágrafo veda essa anotação.'],
+ 'Sigilo investigativo','Restrição proporcional de divulgação, compatível com acesso defensivo cabível.',[SV14,CF])
+add(21,'A incomunicabilidade por três dias prevista no texto histórico não deve ser apresentada como poder atual geral. A Constituição assegura assistência e comunicação; o STJ registra a não recepção dessa incomunicabilidade, incompatível até com o estado de defesa.',
+ ['CF 5º, LXII/LXIII: comunicação da prisão e assistência de família/advogado.', 'CF 136, §3º, IV: vedação da incomunicabilidade no estado de defesa.', 'HC 368.217/STJ distingue o texto histórico do regime constitucional.', 'Controle de contato, sigilo e regimes de custódia não se confundem com incomunicabilidade absoluta.'],
+ 'Bloquear treino literal de três dias como autorização atual. Nenhum rótulo investigativo elimina acesso reservado ao advogado; examinar normas específicas de custódia.',
+ 'A autoridade pretende isolar completamente o preso de família e defesa com base apenas no art. 21. A leitura constitucional impede usar o artigo histórico como autorização geral.',
+ 'Restringir contato específico sob fundamento legal próprio demanda análise própria e não autoriza incomunicabilidade absoluta por conveniência.',
+ ['Os três dias são autorização atual automática de incomunicabilidade? Não; integrar Constituição e não recepção.', 'A Constituição admite incomunicabilidade no estado de defesa? Não; art. 136, §3º, IV.'],
+ 'Não recepção','Incompatibilidade da norma anterior com a Constituição posterior.',
+ [CF,'https://www.stj.jus.br/websecstj/cgi/revista/REJ.cgi/ITA?CodOrgaoJgdr=&SeqCgrmaSessao=&dt=20170508&formato=PDF&nreg=201602193180&salvar=false&seq=1597825&tipo=0'])
+add(22,'No DF e nas comarcas com mais de uma circunscrição policial, a autoridade pode ordenar diligência investigativa em outra circunscrição sem precatória/requisição. Também atua sobre fato presenciado fora da sua área até chegar a competente.',
+ ['Recorte espacial e organizacional previsto no artigo.', 'Diligência em outro distrito policial não é mudança automática de foro judicial.', 'Providências urgentes até comparecimento da autoridade competente.'],
+ 'Não ampliar o artigo a poder ilimitado em qualquer território nem dispensar autorização judicial exigida pelo objeto da diligência.',
+ 'Delegado de um distrito, na mesma comarca com diversas circunscrições, precisa diligenciar em outra: não exige precatória policial pelo art. 22.',
+ 'Se a medida é busca sujeita a ordem judicial, a dispensa de precatória policial não elimina o requisito judicial.',
+ ['Diligenciar em outro distrito muda automaticamente a competência do juiz? Não; circunscrição policial e foro judicial são diferentes.', 'O artigo dispensa autorização para qualquer busca? Não; a exigência depende da medida.'],
+ 'Circunscrição','Área de atuação policial distinta da competência do juízo.')
+add(23,'A remessa do inquérito exige comunicação ao órgão de identificação e estatística ou equivalente, com juízo de distribuição e dados do fato e do indiciado. É registro institucional, não juízo de culpabilidade ou publicação aberta dos dados.',
+ ['Órgão destinatário: identificação/estatística ou congênere.', 'Informações: juízo, infração e pessoa do indiciado.', 'Distinguir cadastro interno de atestado de antecedentes e divulgação pública.'],
+ 'Integrar art. 20, parágrafo, e presunção de inocência: envio institucional não autoriza mencionar instauração em atestado nem apresentar suspeito como condenado.',
+ 'Ao remeter autos, informa-se o juízo competente e os dados pertinentes ao órgão institucional responsável.',
+ 'O particular pede atestado de antecedentes: não reproduzir nele a mera instauração do inquérito por existir esse registro interno.',
+ ['Ofício ao órgão de identificação equivale a condenação? Não; é comunicação institucional.', 'Cadastro interno autoriza a anotação vedada no atestado? Não; art. 20 mantém sua regra própria.'],
+ 'Comunicação institucional','Registro direcionado ao órgão competente, diferente de divulgação pública de antecedentes.',[CF])
+Path(sys.argv[1]).write_text(json.dumps({'course_slug':'codigo-processo-penal','units':rows},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(len(rows),'inquiry units explicitly authored')

@@ -1,0 +1,1475 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:37:00.282013+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 23,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-301",
+        "art-302",
+        "art-303",
+        "art-304",
+        "art-305",
+        "art-306",
+        "art-307",
+        "art-308",
+        "art-309",
+        "art-310",
+        "art-310-a",
+        "art-311",
+        "art-312",
+        "art-313",
+        "art-314",
+        "art-315",
+        "art-316",
+        "art-317",
+        "art-318",
+        "art-318-a",
+        "art-318-b",
+        "art-319",
+        "art-320"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-301",
+      "unit_id": "eadd7c25-3e52-5903-86db-f373eb5b15ed",
+      "content_sha256": "53d60ff696bc4204c745c5dea13d91c0c48b274337eb663b01965357524f55c4",
+      "simples": "Qualquer pessoa pode prender em flagrante; autoridades policiais e seus agentes têm dever legal nas hipóteses pertinentes.",
+      "pontos": [
+        "Faculdade para povo, dever para polícia.",
+        "Flagrante exige situação legal, não mera desconfiança."
+      ],
+      "atencao": [
+        "A faculdade popular não autoriza linchamento, punição ou entrada domiciliar fora das hipóteses legítimas."
+      ],
+      "exemplo": "Pessoa presencia delito em execução e aciona polícia, podendo efetuar prisão legítima. Variação: Suspeita vaga não legitima capturar vizinho por conta própria.",
+      "prova": [
+        "Para qualquer do povo é faculdade? Sim.",
+        "Para polícia é simples faculdade no texto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Flagrante facultativo e obrigatório",
+          "significado": "Distinção pelo sujeito que realiza captura."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "eadd7c25-3e52-5903-86db-f373eb5b15ed",
+        "content_sha256": "53d60ff696bc4204c745c5dea13d91c0c48b274337eb663b01965357524f55c4",
+        "simples": "Qualquer do povo poderá e as autoridades policiais e seus agentes deverão prender quem quer que seja encontrado em flagrante delito.",
+        "pontos": [
+          "Qualquer pessoa PODE prender quem esteja em flagrante (flagrante facultativo).",
+          "Autoridades policiais e seus agentes DEVEM prender (flagrante obrigatório)."
+        ],
+        "atencao": [
+          "Flagrante facultativo para o povo; obrigatório para a polícia."
+        ],
+        "exemplo": "Um cidadão detém o autor de um furto em andamento (flagrante facultativo).",
+        "prova": [
+          "Assertiva que torna obrigatória a prisão em flagrante para qualquer cidadão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 302"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-302",
+      "unit_id": "fda77864-2186-53df-b932-cd8aa4900961",
+      "content_sha256": "1df9b18e9bd6f44187014441581c71707555539ddeca8db0b2385735ea6a48a1",
+      "simples": "Flagrante compreende execução atual, término imediato, perseguição logo após e encontro logo depois com elementos de autoria.",
+      "pontos": [
+        "Incisos I e II: cometendo ou acaba de cometer.",
+        "III: perseguição logo após em situação indicativa de autoria.",
+        "IV: encontrado logo depois com instrumentos, armas, objetos ou papéis pertinentes."
+      ],
+      "atencao": [
+        "Não há limite universal de 24 horas escrito para todas as modalidades; nem a expressão logo depois autoriza captura sem proximidade e contexto."
+      ],
+      "exemplo": "Autor é perseguido imediatamente após o fato e alcançado no encalço. Variação: Encontro muito posterior exige outro título, não flagrante presumido só por suspeita.",
+      "prova": [
+        "O artigo fixa prazo universal de 24 horas? Não.",
+        "Inciso III exige perseguição nas condições legais? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Modalidades flagranciais",
+          "significado": "Situações temporais e probatórias da captura."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fda77864-2186-53df-b932-cd8aa4900961",
+        "content_sha256": "1df9b18e9bd6f44187014441581c71707555539ddeca8db0b2385735ea6a48a1",
+        "simples": "Considera-se em flagrante delito quem está cometendo a infração penal (flagrante próprio); acaba de cometê-la (flagrante próprio); é perseguido, logo após, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser autor (flagrante impróprio ou quase flagrante); ou é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele autor da infração (flagrante presumido).",
+        "pontos": [
+          "I e II: flagrante próprio (está cometendo ou acaba de cometer).",
+          "III: flagrante impróprio (perseguição logo após).",
+          "IV: flagrante presumido (encontrado logo depois com objetos)."
+        ],
+        "atencao": [
+          "Perseguição (III) exige continuidade; encontro (IV) exige que seja 'logo depois'."
+        ],
+        "exemplo": "Quem é encontrado logo depois com a arma do crime está em flagrante presumido.",
+        "prova": [
+          "Assertiva que classifica quem é perseguido logo após o crime como flagrante presumido erra: é flagrante impróprio."
+        ],
+        "termos": [
+          {
+            "termo": "Flagrante impróprio",
+            "significado": "Perseguição logo após o crime em situação que faz presumir a autoria."
+          }
+        ],
+        "remissoes": [
+          "Art. 301",
+          "Art. 303"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-303",
+      "unit_id": "aa6bdd83-fb51-5604-8045-0bb574638aa5",
+      "content_sha256": "cc26ed5db819c450f4108732a373423533f8d71117432123524a8ed1b03d007f",
+      "simples": "Em crime permanente, flagrante persiste enquanto durar a permanência.",
+      "pontos": [
+        "Cessação da permanência delimita hipótese.",
+        "Distinguir permanente de crime instantâneo com efeitos duradouros.",
+        "Entrada em casa ainda exige razões concretas da situação interior."
+      ],
+      "atencao": [
+        "Crime permanente não autoriza busca domiciliar baseada em boato nem elimina requisitos do ingresso."
+      ],
+      "exemplo": "Sequestro ainda em curso mantém situação flagrancial. Variação: Dano já consumado com efeito duradouro não vira permanente só porque prejuízo continua.",
+      "prova": [
+        "Efeito duradouro torna todo crime permanente? Não.",
+        "O flagrante persiste durante permanência? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Permanência",
+          "significado": "Prolongamento da consumação sob controle do agente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "aa6bdd83-fb51-5604-8045-0bb574638aa5",
+        "content_sha256": "cc26ed5db819c450f4108732a373423533f8d71117432123524a8ed1b03d007f",
+        "simples": "Nas infrações permanentes, entende-se o agente em flagrante delito enquanto não cessar a permanência.",
+        "pontos": [
+          "Crime permanente: flagrante enquanto durar a permanência."
+        ],
+        "atencao": [
+          "Permite o flagrante a qualquer momento da permanência, inclusive com ingresso em domicílio."
+        ],
+        "exemplo": "Em sequestro em andamento, o agente está em flagrante enquanto a vítima estiver privada de liberdade.",
+        "prova": [
+          "Assertiva que limita o flagrante em crime permanente ao momento inicial da conduta erra."
+        ],
+        "termos": [
+          {
+            "termo": "Crime permanente",
+            "significado": "Consumação que se prolonga no tempo."
+          }
+        ],
+        "remissoes": [
+          "Art. 302"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-304",
+      "unit_id": "d993764a-7404-538c-b9a8-e0137ef0e607",
+      "content_sha256": "84e1dd2014229d887ef339e2bc907ab94ebf2bea1cba26e607a3497d921e2bb8",
+      "simples": "Auto de flagrante registra apresentação, condutor, testemunhas, declarações com garantias e circunstâncias familiares.",
+      "pontos": [
+        "Condutor: ouvir, assinatura, cópia do termo e recibo de entrega.",
+        "Seguem testemunhas e interrogatório com direito ao silêncio; assinaturas após oitivas e lavratura final.",
+        "Sem testemunha do crime, duas pessoas testemunham apresentação e assinam com condutor.",
+        "Recusa ou impossibilidade de assinatura do acusado: duas testemunhas ouvem leitura em sua presença.",
+        "Registrar filhos, idades, deficiência e responsável pelos cuidados.",
+        "Recolhimento depende hipótese legal; enviar autos ao competente quando necessário."
+      ],
+      "atencao": [
+        "Testemunha da apresentação não vira testemunha presencial do crime; silêncio não autoriza coerção nem condenação."
+      ],
+      "exemplo": "Crime não foi presenciado por terceiros; duas pessoas atestam apresentação e o auto distingue isso. Variação: Se acusado não assina, registrar leitura e testemunhas, sem assinatura inventada.",
+      "prova": [
+        "Falta de testemunha do fato impede sempre o auto? Não.",
+        "Devem registrar informações de filhos previstas? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Formalização do flagrante",
+          "significado": "Documentação com distinção das fontes e direitos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "d993764a-7404-538c-b9a8-e0137ef0e607",
+        "content_sha256": "84e1dd2014229d887ef339e2bc907ab94ebf2bea1cba26e607a3497d921e2bb8",
+        "simples": "Apresentado o preso à autoridade competente, ouvirá esta o condutor e colherá, desde logo, sua assinatura, entregando a este cópia do termo e recibo de entrega do preso. Em seguida, procederá à oitiva das testemunhas que o acompanharem e ao interrogatório do acusado sobre a imputação, colhendo, após cada oitiva, as respectivas assinaturas, lavrando, afinal, o auto. Resultando das respostas fundada suspeita contra o conduzido, a autoridade mandará recolhê-lo à prisão, exceto no caso de livrar-se solto ou de prestar fiança. A falta de testemunhas da infração não impede o auto, mas, com o condutor, deverão assiná-lo pelo menos duas pessoas que hajam testemunhado a apresentação do preso. Quando o acusado se recusar a assinar, não souber ou não puder fazê-lo, o auto será assinado por duas testemunhas que tenham ouvido sua leitura.",
+        "pontos": [
+          "Ordem da oitiva: condutor, testemunhas, depois o preso.",
+          "Cada oitiva colhe a respectiva assinatura.",
+          "§1º: fundada suspeita leva ao recolhimento, salvo se livrar-se solto ou prestar fiança.",
+          "§2º: falta de testemunhas da infração não impede o auto; duas pessoas que testemunhem a apresentação assinam.",
+          "§3º: recusa ou impossibilidade de assinar do acusado: duas testemunhas da leitura."
+        ],
+        "atencao": [
+          "Primeiro o condutor, depois as testemunhas, por fim o preso."
+        ],
+        "exemplo": "O delegado ouve o condutor, as testemunhas e, por fim, o preso, e lavra o auto.",
+        "prova": [
+          "Assertiva que determina interrogar o preso antes da oitiva do condutor erra."
+        ],
+        "termos": [
+          {
+            "termo": "Auto de prisão em flagrante",
+            "significado": "Peça que documenta a prisão em flagrante."
+          }
+        ],
+        "remissoes": [
+          "Art. 306",
+          "Art. 310"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-305",
+      "unit_id": "2584af4e-9426-5a88-af0e-4df3fbcda2ea",
+      "content_sha256": "cac704bceff6c0080992485fc0bf53b295ff06d399e0b799a5f95d28800f17d2",
+      "simples": "Sem escrivão ou com impedimento, pessoa designada pela autoridade lavra auto após compromisso legal.",
+      "pontos": [
+        "Designação e compromisso necessários.",
+        "Substituição funcional não dispensa conteúdo e garantias do auto."
+      ],
+      "atencao": [
+        "Não presumir que qualquer pessoa escreve validamente o auto sem designação e compromisso."
+      ],
+      "exemplo": "Autoridade designa substituto e colhe compromisso antes da lavratura. Variação: Ausência do escrivão não permite omitir comunicações ou direitos.",
+      "prova": [
+        "Há compromisso legal? Sim.",
+        "Substituição elimina garantias do preso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Escrivão substituto",
+          "significado": "Pessoa designada e compromissada para lavrar auto."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2584af4e-9426-5a88-af0e-4df3fbcda2ea",
+        "content_sha256": "cac704bceff6c0080992485fc0bf53b295ff06d399e0b799a5f95d28800f17d2",
+        "simples": "Na falta ou no impedimento do escrivão, qualquer pessoa designada pela autoridade lavrará o auto de prisão em flagrante, depois de prestado o compromisso legal.",
+        "pontos": [
+          "Falta ou impedimento do escrivão: qualquer pessoa designada pela autoridade lavra o auto.",
+          "Exige o compromisso legal."
+        ],
+        "atencao": [
+          "Compromisso legal prévio do substituto do escrivão."
+        ],
+        "exemplo": "Sem escrivão na delegacia, outra pessoa designada presta compromisso e lavra o auto.",
+        "prova": [
+          "Assertiva que dispensa o compromisso legal da pessoa designada para lavrar o auto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-306",
+      "unit_id": "5406640b-bc15-5887-9b9d-ef51ad2951ac",
+      "content_sha256": "e89c657b4ca2891e4854cbbbc069030f889df9c39b94d55d5379bbc9af9b3de1",
+      "simples": "Prisão e localização são comunicadas imediatamente; auto ao juiz e nota de culpa ao preso têm prazo de até 24 horas.",
+      "pontos": [
+        "Comunicação imediata ao juiz, MP e família ou pessoa indicada.",
+        "Auto ao juiz em até 24 horas da prisão; sem advogado informado, cópia integral à Defensoria.",
+        "Nota de culpa no mesmo prazo, assinada com motivo, condutor e testemunhas, mediante recibo."
+      ],
+      "atencao": [
+        "Não transformar prazo de remessa em autorização para atrasar comunicação imediata."
+      ],
+      "exemplo": "Prisão é comunicada logo e documentos entregues dentro das 24 horas. Variação: Sem nome de advogado, enviar cópia integral à Defensoria, sem aguardar escolha indefinidamente.",
+      "prova": [
+        "Todas as comunicações podem esperar 24 horas? Não.",
+        "Nota de culpa tem motivo e nomes previstos? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação e documentação",
+          "significado": "Deveres imediatos distintos dos documentos em 24 horas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5406640b-bc15-5887-9b9d-ef51ad2951ac",
+        "content_sha256": "e89c657b4ca2891e4854cbbbc069030f889df9c39b94d55d5379bbc9af9b3de1",
+        "simples": "A prisão de qualquer pessoa e o local onde se encontre serão comunicados imediatamente ao juiz competente, ao Ministério Público e à família do preso ou à pessoa por ele indicada. Em até 24 horas após a prisão, será encaminhado ao juiz competente o auto de prisão em flagrante e, caso o autuado não informe o nome de seu advogado, cópia integral para a Defensoria Pública. No mesmo prazo, será entregue ao preso, mediante recibo, a nota de culpa, assinada pela autoridade, com o motivo da prisão, o nome do condutor e os das testemunhas.",
+        "pontos": [
+          "Comunicação imediata ao juiz, ao MP e à família ou pessoa indicada.",
+          "Em até 24 horas: auto ao juiz e, se não houver advogado, cópia à Defensoria Pública.",
+          "Mesmo prazo: nota de culpa entregue ao preso, com recibo."
+        ],
+        "atencao": [
+          "24 horas para o auto e para a nota de culpa.",
+          "A nota de culpa traz motivo, condutor e testemunhas."
+        ],
+        "exemplo": "Em 24 horas da prisão, o preso recebe a nota de culpa e o auto segue ao juiz.",
+        "prova": [
+          "Assertiva que fixa em 48 horas o prazo para encaminhar o auto de prisão em flagrante ao juiz erra: são 24 horas."
+        ],
+        "termos": [
+          {
+            "termo": "Nota de culpa",
+            "significado": "Documento que informa ao preso o motivo da prisão, o condutor e as testemunhas."
+          }
+        ],
+        "remissoes": [
+          "Art. 304",
+          "Art. 310"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-307",
+      "unit_id": "05ea25db-357d-5b4c-8606-f1d9a218a172",
+      "content_sha256": "6ed987586f02355c7c5e4500ec14f7f9496963c13286798992ac12d1df06d484",
+      "simples": "Delito na presença da autoridade ou contra ela em função exige auto com narrativa, voz de prisão, declarações e testemunhos.",
+      "pontos": [
+        "Assinaturas e remessa imediata ao juiz competente se não for quem presidiu.",
+        "Direito ao silêncio permanece nas declarações.",
+        "Ser vítima não torna autoridade julgadora da própria causa."
+      ],
+      "atencao": [
+        "Presenciar fato não elimina garantias nem controle de competência."
+      ],
+      "exemplo": "Autoridade registra fato ocorrido diante dela e remete ao juiz competente. Variação: Recusa do preso a declarar não permite preencher confissão fictícia.",
+      "prova": [
+        "Auto deve narrar o fato e voz de prisão? Sim.",
+        "O preso perde silêncio por agir contra autoridade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Flagrante perante autoridade",
+          "significado": "Formalização específica com garantias intactas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "05ea25db-357d-5b4c-8606-f1d9a218a172",
+        "content_sha256": "6ed987586f02355c7c5e4500ec14f7f9496963c13286798992ac12d1df06d484",
+        "simples": "Quando o fato for praticado em presença da autoridade, ou contra esta, no exercício de suas funções, constarão do auto a narração do fato, a voz de prisão, as declarações do preso e os depoimentos das testemunhas, assinados pela autoridade, pelo preso e pelas testemunhas, e remetidos imediatamente ao juiz a quem couber conhecer do fato delituoso.",
+        "pontos": [
+          "Fato praticado na presença da autoridade ou contra ela, no exercício das funções.",
+          "Auto narra o fato, a voz de prisão, declarações do preso e depoimentos.",
+          "Assinado por autoridade, preso e testemunhas, e remetido ao juiz."
+        ],
+        "atencao": [
+          "Procedimento simplificado quando o fato ocorre diante da autoridade."
+        ],
+        "exemplo": "Desacato praticado diante do juiz: lavra-se o auto e remete-se ao juízo competente.",
+        "prova": [
+          "Assertiva que dispensa a remessa imediata do auto ao juiz competente nesses casos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-308",
+      "unit_id": "bb28b7f8-3014-5126-8b84-2a1c0c7b8cf0",
+      "content_sha256": "5b1708beb8326682347c84d9c4bbfc5f0123a553f1cd000bbc12dca362de96ab",
+      "simples": "Sem autoridade no lugar da captura, preso é apresentado logo à autoridade do local mais próximo.",
+      "pontos": [
+        "Não prolongar custódia por mera ausência de autoridade local.",
+        "Preservar comunicação e prazos legais."
+      ],
+      "atencao": [
+        "Local mais próximo não significa escolher destino distante por conveniência indevida."
+      ],
+      "exemplo": "Captura em local sem autoridade segue prontamente ao órgão mais próximo. Variação: Deslocamento não reinicia automaticamente prazo contado da prisão.",
+      "prova": [
+        "Apresentação deve ser pronta? Sim.",
+        "Deslocamento reinicia prazo de 24 horas por si só? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Apresentação próxima",
+          "significado": "Encaminhamento célere na ausência de autoridade local."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bb28b7f8-3014-5126-8b84-2a1c0c7b8cf0",
+        "content_sha256": "5b1708beb8326682347c84d9c4bbfc5f0123a553f1cd000bbc12dca362de96ab",
+        "simples": "Não havendo autoridade no lugar em que se tiver efetuado a prisão, o preso será logo apresentado à do lugar mais próximo.",
+        "pontos": [
+          "Sem autoridade no local da prisão: apresentação à autoridade do lugar mais próximo."
+        ],
+        "atencao": [
+          "Apresentação imediata."
+        ],
+        "exemplo": "Preso em área remota é levado à delegacia do município mais próximo.",
+        "prova": [
+          "Assertiva que manda aguardar a instalação de autoridade no local da prisão erra: o preso é apresentado à mais próxima."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-309",
+      "unit_id": "2815c798-1764-57dd-af19-219005ef2e5c",
+      "content_sha256": "7c240472bf0502069b731fd8fa516817c80bd9ce14837e8419b2518400833a21",
+      "simples": "Se hipótese legal permite livrar-se solto, libertação segue lavratura do auto.",
+      "pontos": [
+        "Formalização não exige manter prisão indevida.",
+        "Integrar liberdade provisória e regime atual, sem confundir com absolvição."
+      ],
+      "atencao": [
+        "Lavrar auto não é decretar preventiva nem tornar condenação definitiva."
+      ],
+      "exemplo": "Autoridade formaliza flagrante e aplica hipótese legal de liberdade. Variação: Liberdade não elimina apuração posterior legítima.",
+      "prova": [
+        "Auto implica condenação? Não.",
+        "Libertação impede sempre investigar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Liberdade após formalização",
+          "significado": "Cessação da custódia sem encerrar necessariamente apuração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2815c798-1764-57dd-af19-219005ef2e5c",
+        "content_sha256": "7c240472bf0502069b731fd8fa516817c80bd9ce14837e8419b2518400833a21",
+        "simples": "Se o réu se livrar solto, deverá ser posto em liberdade depois de lavrado o auto de prisão em flagrante.",
+        "pontos": [
+          "Réu que se livra solto é posto em liberdade após a lavratura do auto."
+        ],
+        "atencao": [
+          "Relaciona-se à liberdade provisória e à fiança."
+        ],
+        "exemplo": "Em infração em que se livra solto, o autuado é liberado após o auto.",
+        "prova": [
+          "Assertiva que mantém preso quem se livra solto, após o auto, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 321"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-310",
+      "unit_id": "19e651bb-9fac-556d-a909-2426725f2518",
+      "content_sha256": "108a00b817cb3979b6dd113a9f5e2d446f149c727fd8822ea5fb73d84d8a73ae",
+      "simples": "Audiência de custódia controla legalidade e cautelares; texto de 2026 prevê videoconferência em tempo real com defesa e MP, em até 24 horas da prisão.",
+      "pontos": [
+        "Decidir fundamentadamente: relaxar ilegalidade, converter em preventiva com requisitos e alternativas insuficientes, ou liberdade com/sem fiança.",
+        "Excludentes do art. 23/CP: liberdade fundamentada com comparecimento, nos termos do §1º.",
+        "Examinar reincidência, organização armada/milícia e arma restrita do §2º sem dispensar motivação concreta.",
+        "Omissão injustificada no prazo: responsabilidades; §4º integrado à interpretação das ADIs de 2023, sem resposta automática desvinculada da situação.",
+        "Lei 15.272/2025: examinar reiteração, violência/ameaça, liberação prévia salvo absolvição, processo pendente, fuga e risco à prova/instrução; integrar periculosidade do art. 312, §3º.",
+        "Lei 15.358/2026: conferir citações pendentes, intervenção efetiva, entrevista reservada e privacidade do preso, ressalvada presença do defensor.",
+        "Falha atribuível ao tribunal: repetir audiência inteira, sem convalidar ato incompleto; salas e meios estáveis.",
+        "Presencial excepcional por força maior: decisão justificada e limites do §13."
+      ],
+      "atencao": [
+        "Não ensinar vídeo apenas pela regra anterior a 2026 nem certificar constitucionalidade definitiva da inovação: ADIs 7952, 7956, 7957 e 7958 discutem a Lei 15.358. Acompanhamento deve distinguir texto novo, entendimento de 2023 e decisões supervenientes."
+      ],
+      "exemplo": "Juiz controla flagrante em audiência remota com entrevista reservada e efetiva participação da defesa. Variação: Falha de comunicação atribuível ao tribunal exige repetição completa; não publicar ato incompleto como audiência válida.",
+      "prova": [
+        "Audiência serve para condenar definitivamente? Não.",
+        "Falha do sistema atribuível ao tribunal permite aproveitar ato incompleto? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Controle de custódia",
+          "significado": "Exame judicial de legalidade, integridade e necessidade cautelar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15272.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7563157",
+        "https://legis.senado.leg.br/norma/528776"
+      ],
+      "expected": {
+        "unit_id": "19e651bb-9fac-556d-a909-2426725f2518",
+        "content_sha256": "108a00b817cb3979b6dd113a9f5e2d446f149c727fd8822ea5fb73d84d8a73ae",
+        "simples": "Após receber o auto de prisão em flagrante, no prazo máximo de até 24 horas após a prisão, o juiz deverá promover, por videoconferência em tempo real, audiência de custódia com a presença do acusado, seu advogado constituído ou membro da Defensoria Pública e o membro do Ministério Público, e, nessa audiência, deverá, fundamentadamente: relaxar a prisão ilegal; converter a prisão em flagrante em preventiva, quando presentes os requisitos do art. 312 e se revelarem inadequadas ou insuficientes as medidas cautelares diversas da prisão; ou conceder liberdade provisória, com ou sem fiança. Se o juiz verificar, pelo auto, que o agente praticou o fato nas condições do art. 23, I, II ou III, do Código Penal (excludentes de ilicitude), poderá, fundamentadamente, conceder liberdade provisória mediante termo de comparecimento obrigatório. O texto vigente tem outros parágrafos sobre vedações e consequências da falta de audiência.",
+        "pontos": [
+          "Audiência de custódia em até 24 horas da prisão, por videoconferência em tempo real.",
+          "Presenças: acusado, advogado ou Defensoria, Ministério Público.",
+          "Opções do juiz: relaxar a prisão ilegal; converter em preventiva; conceder liberdade provisória, com ou sem fiança.",
+          "§1º: excludentes de ilicitude do art. 23 do CP permitem liberdade provisória."
+        ],
+        "atencao": [
+          "Três caminhos fundamentados: relaxar, converter em preventiva ou conceder liberdade.",
+          "Prazo de até 24 horas após a prisão."
+        ],
+        "exemplo": "Na audiência de custódia, o juiz relaxa a prisão por ilegalidade.",
+        "prova": [
+          "Assertiva que permite ao juiz manter a prisão em flagrante, sem converter em preventiva, erra: ele deve relaxar, converter ou conceder liberdade."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 287",
+          "Art. 312"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-310-a",
+      "unit_id": "61ec4ef8-1f40-50d0-87e4-bd308e53018b",
+      "content_sha256": "4d5d644893e913259d610e5c12c32ce75ddc7224cb123adbf7d6e295a41d1463",
+      "simples": "Lei 15.272/2025 exige pedido judicial de coleta genética nas hipóteses qualificadas de flagrante previstas.",
+      "pontos": [
+        "Violência ou grave ameaça, dignidade sexual, organização com armas ou crimes hediondos nos termos do caput.",
+        "MP ou polícia requerem ao juiz; não confundir com ordem administrativa irrestrita.",
+        "Preferencialmente na audiência ou em dez dias contados de sua realização.",
+        "Agente público treinado e cadeia de custódia legal/pericial."
+      ],
+      "atencao": [
+        "Distinguir do art. 300-A: hipóteses, momento e procedimento não são idênticos; não coletar de todo custodiado por automatismo."
+      ],
+      "exemplo": "Flagrante por crime enquadrado motiva requerimento ao juiz para coleta adequada. Variação: Prazo de dez dias conta da audiência, não de data livremente escolhida pelo agente.",
+      "prova": [
+        "Pedido é dirigido ao juiz? Sim.",
+        "Qualquer flagrante entra automaticamente neste artigo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Coleta genética judicial",
+          "significado": "Pedido nas hipóteses legais com custódia e agente treinado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15272.htm"
+      ],
+      "expected": {
+        "unit_id": "61ec4ef8-1f40-50d0-87e4-bd308e53018b",
+        "content_sha256": "4d5d644893e913259d610e5c12c32ce75ddc7224cb123adbf7d6e295a41d1463",
+        "simples": "No caso de prisão em flagrante por crime praticado com violência ou grave ameaça contra a pessoa, por crime contra a dignidade sexual ou por crime praticado por agente integrante de organização criminosa armada, entre outras hipóteses do dispositivo, o juiz determinará a coleta de material biológico para obtenção do perfil genético. A coleta deverá ser feita, preferencialmente, na própria audiência de custódia ou no prazo de 10 dias, contado de sua realização. Será realizada por agente público treinado e respeitará os procedimentos de cadeia de custódia definidos pela legislação e complementados pelo órgão de perícia oficial de natureza criminal.",
+        "pontos": [
+          "Prisão em flagrante por crime com violência ou grave ameaça, crime contra a dignidade sexual ou crime de integrante de organização criminosa armada, entre outras hipóteses.",
+          "Coleta de material biológico para o perfil genético.",
+          "Preferencialmente na audiência de custódia ou em até 10 dias.",
+          "Agente público treinado e cadeia de custódia."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 15.272, de 2025.",
+          "Confira o texto integral do caput para as hipóteses completas."
+        ],
+        "exemplo": "Preso em flagrante por crime violento tem o DNA coletado na audiência de custódia.",
+        "prova": [
+          "Assertiva que dispensa a observância da cadeia de custódia na coleta do material biológico erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 310",
+          "Art. 158-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-311",
+      "unit_id": "2b7863d4-1066-5e0f-819f-b2cb6fdeb3b3",
+      "content_sha256": "068aac4b764b831cbf7bd01759610c723bc06b527f6e3a08da3bdcf12f79d8c2",
+      "simples": "Preventiva depende de decisão judicial provocada pelos legitimados, em investigação ou processo.",
+      "pontos": [
+        "MP, querelante e assistente podem requerer.",
+        "Polícia representa.",
+        "Sem decretação geral de ofício após reforma de 2019."
+      ],
+      "atencao": [
+        "Converter flagrante não cria exceção universal à necessidade de provocação."
+      ],
+      "exemplo": "MP requer preventiva com fundamentos concretos e juiz aprecia. Variação: Juiz não decreta cautelar máxima só por iniciativa acusatória própria.",
+      "prova": [
+        "Polícia decreta preventiva? Não, representa.",
+        "Assistente pode requerer nas condições legais? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Provocação cautelar",
+          "significado": "Pedido ou representação que antecede decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2b7863d4-1066-5e0f-819f-b2cb6fdeb3b3",
+        "content_sha256": "068aac4b764b831cbf7bd01759610c723bc06b527f6e3a08da3bdcf12f79d8c2",
+        "simples": "Em qualquer fase da investigação policial ou do processo penal, caberá a prisão preventiva decretada pelo juiz, a requerimento do Ministério Público, do querelante ou do assistente, ou por representação da autoridade policial.",
+        "pontos": [
+          "Preventiva cabe em qualquer fase da investigação ou do processo.",
+          "Decretada pelo juiz.",
+          "A requerimento do MP, querelante ou assistente, ou por representação policial."
+        ],
+        "atencao": [
+          "A Lei nº 13.964, de 2019, retirou a decretação de ofício pelo juiz."
+        ],
+        "exemplo": "O delegado representa pela preventiva, e o juiz decide.",
+        "prova": [
+          "Assertiva que permite ao juiz decretar a preventiva de ofício erra, segundo a redação atual do art. 311."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-312",
+      "unit_id": "8e437333-3d35-5168-8af2-236d79adf18b",
+      "content_sha256": "0cb4e2f4531a1ac3e953c474d033af6129fd7575bde039f56226ecb4ebc6f9c1",
+      "simples": "Preventiva exige prova do crime, indício suficiente de autoria e perigo concreto da liberdade, com finalidade cautelar legal.",
+      "pontos": [
+        "Ordem pública/econômica, instrução ou aplicação da lei penal.",
+        "Descumprimento de medida não dispensa exame dos requisitos.",
+        "Fatos novos ou contemporâneos e decisão fundamentada.",
+        "Lei 15.272/2025: modus operandi, violência reiterada ou premeditação, organização, natureza/quantidade/variedade de drogas/armas/munições e receio fundado de reiteração.",
+        "§4º proíbe gravidade abstrata: demonstrar perigo concretamente."
+      ],
+      "atencao": [
+        "Não equiparar estar investigado a culpado nem repetir gravidade do tipo como fundamento suficiente."
+      ],
+      "exemplo": "Ameaça concreta às testemunhas fundamenta risco à instrução, além dos demais requisitos. Variação: Só afirmar que delito é grave não demonstra risco atual da liberdade.",
+      "prova": [
+        "Prova do crime basta sem perigo concreto? Não.",
+        "Gravidade abstrata é fundamento suficiente? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo da liberdade",
+          "significado": "Risco cautelar demonstrado, distinto da pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15272.htm"
+      ],
+      "expected": {
+        "unit_id": "8e437333-3d35-5168-8af2-236d79adf18b",
+        "content_sha256": "0cb4e2f4531a1ac3e953c474d033af6129fd7575bde039f56226ecb4ebc6f9c1",
+        "simples": "A prisão preventiva poderá ser decretada como garantia da ordem pública, da ordem econômica, por conveniência da instrução criminal ou para assegurar a aplicação da lei penal, quando houver prova da existência do crime e indício suficiente de autoria e de perigo gerado pelo estado de liberdade do imputado. Também poderá ser decretada em caso de descumprimento de obrigações impostas por outras medidas cautelares. A decisão deve ser motivada e fundamentada em receio de perigo e na existência concreta de fatos novos ou contemporâneos que justifiquem a medida. Na aferição da periculosidade do agente, geradora de riscos à ordem pública, devem ser considerados o modus operandi (uso reiterado de violência ou grave ameaça, premeditação), a participação em organização criminosa e a natureza, quantidade e variedade de drogas, entre outros fatores.",
+        "pontos": [
+          "Fundamentos: ordem pública, ordem econômica, conveniência da instrução, aplicação da lei penal.",
+          "Requisitos: prova da existência do crime, indício suficiente de autoria e perigo da liberdade (fumus commissi delicti e periculum libertatis).",
+          "§1º: descumprimento de outras cautelares.",
+          "§2º: motivação com fatos novos ou contemporâneos.",
+          "§3º: critérios de periculosidade (modus operandi, organização criminosa, drogas)."
+        ],
+        "atencao": [
+          "Prova do CRIME e INDÍCIO de AUTORIA (não prova de autoria).",
+          "Exige contemporaneidade dos fatos."
+        ],
+        "exemplo": "Preventiva por risco concreto de fuga para garantir a aplicação da lei penal.",
+        "prova": [
+          "Assertiva que exige prova plena da autoria para a preventiva erra: basta indício suficiente."
+        ],
+        "termos": [
+          {
+            "termo": "Periculum libertatis",
+            "significado": "Perigo gerado pela liberdade do imputado."
+          }
+        ],
+        "remissoes": [
+          "Art. 311",
+          "Art. 313",
+          "Art. 315"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-313",
+      "unit_id": "6d598e8a-bf38-5cf9-a3c9-11485099fece",
+      "content_sha256": "829e92692927d0ee8c43682d9c46ee675dfdc923742d57b3f543ec00af21b4dc",
+      "simples": "Hipóteses de admissibilidade da preventiva se somam aos requisitos concretos do art. 312, sem impor prisão automática.",
+      "pontos": [
+        "Doloso com pena máxima superior a quatro anos; exatamente quatro não satisfaz só inciso I.",
+        "Condenação anterior dolosa definitiva, respeitado período depurador do CP.",
+        "Violência doméstica contra pessoas listadas para garantir medidas protetivas.",
+        "Lei 15.358/2026: organização ultraviolenta, grupo paramilitar ou milícia no contexto legal do inciso V.",
+        "Lei 15.487/2026: dignidade sexual contra criança/adolescente e tipos do ECA enumerados no inciso VI.",
+        "Identidade civil duvidosa: liberdade imediata após identificar, salvo outro fundamento.",
+        "Não usar preventiva para antecipar pena nem como consequência imediata de investigação ou denúncia."
+      ],
+      "atencao": [
+        "Não reativar inciso IV revogado. Incisos V e VI ampliam admissibilidade, não dispensam perigo, provocação e fundamentação; norma antifacção tem controle constitucional em acompanhamento."
+      ],
+      "exemplo": "Pena máxima exatamente quatro exige outra hipótese admissível, além do risco concreto, para preventiva. Variação: Identificação esclarecida elimina fundamento identitário, salvo outra hipótese legítima de manutenção.",
+      "prova": [
+        "Pena máxima de quatro preenche sozinha inciso I? Não.",
+        "Novo inciso VI dispensa art. 312? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Admissibilidade",
+          "significado": "Porta legal somada à necessidade cautelar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7563157"
+      ],
+      "expected": {
+        "unit_id": "6d598e8a-bf38-5cf9-a3c9-11485099fece",
+        "content_sha256": "829e92692927d0ee8c43682d9c46ee675dfdc923742d57b3f543ec00af21b4dc",
+        "simples": "Nos termos do art. 312, será admitida a decretação da prisão preventiva nos crimes dolosos punidos com pena privativa de liberdade máxima superior a 4 anos; se o agente tiver sido condenado por outro crime doloso, em sentença transitada em julgado, ressalvado o inciso I do art. 64 do Código Penal (período depurador); se o crime envolver violência doméstica e familiar contra a mulher, criança, adolescente, idoso, enfermo ou pessoa com deficiência, para garantir a execução das medidas protetivas de urgência; se o crime for cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada; e nos crimes contra a dignidade sexual praticados contra criança ou adolescente, entre outras hipóteses do dispositivo.",
+        "pontos": [
+          "I: crimes dolosos com pena máxima superior a 4 anos.",
+          "II: reincidente em crime doloso, ressalvado o período depurador.",
+          "III: violência doméstica e familiar, para garantir medidas protetivas.",
+          "V: organização criminosa ultraviolenta, grupo paramilitar ou milícia.",
+          "VI: crimes contra a dignidade sexual de criança ou adolescente e outros listados."
+        ],
+        "atencao": [
+          "Pena máxima SUPERIOR a 4 anos (não 'igual ou superior').",
+          "Inciso IV revogado."
+        ],
+        "exemplo": "Crime doloso com pena máxima de 8 anos admite preventiva, se presentes os requisitos do art. 312.",
+        "prova": [
+          "Assertiva que admite a preventiva em crime culposo punido com pena máxima superior a 4 anos, pelo inciso I, erra: o inciso trata de crimes dolosos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312",
+          "Art. 314"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-314",
+      "unit_id": "f2c5b209-e698-5041-9ba9-558f5f4a3b42",
+      "content_sha256": "2a910d188bb1a6304ea134209a380925b27cb6f4bd419d45987127c3ca5a5eef",
+      "simples": "Preventiva não é decretada quando provas demonstram fato em excludente de ilicitude do art. 23, I–III, do CP.",
+      "pontos": [
+        "Estado de necessidade, legítima defesa e estrito dever/exercício regular nas hipóteses legais.",
+        "Exige verificação probatória, não alegação sem análise."
+      ],
+      "atencao": [
+        "Alegar legítima defesa não é automaticamente provar seus requisitos."
+      ],
+      "exemplo": "Provas demonstram legítima defesa e impedem preventiva pelo artigo. Variação: Versão sem suporte deve ser apreciada, sem assumir excludente só pela afirmação.",
+      "prova": [
+        "A regra exige verificação pelas provas? Sim.",
+        "Toda alegação isolada torna excludente comprovada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Excludente e cautela",
+          "significado": "Limite legal quando fato é justificado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f2c5b209-e698-5041-9ba9-558f5f4a3b42",
+        "content_sha256": "2a910d188bb1a6304ea134209a380925b27cb6f4bd419d45987127c3ca5a5eef",
+        "simples": "A prisão preventiva em nenhum caso será decretada se o juiz verificar, pelas provas constantes dos autos, ter o agente praticado o fato nas condições previstas nos incisos I, II e III do caput do art. 23 do Código Penal (estado de necessidade, legítima defesa e estrito cumprimento do dever legal ou exercício regular de direito).",
+        "pontos": [
+          "Preventiva vedada se o fato foi praticado sob excludente de ilicitude (art. 23, I, II e III, do CP)."
+        ],
+        "atencao": [
+          "Vedação absoluta ('em nenhum caso')."
+        ],
+        "exemplo": "Juiz percebe, pelas provas, que houve legítima defesa e não decreta a preventiva.",
+        "prova": [
+          "Assertiva que permite a preventiva mesmo diante de excludente de ilicitude evidente erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 310, §1º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-315",
+      "unit_id": "99e5fd79-7333-537f-aeac-1ddc54688f54",
+      "content_sha256": "e1d2f9fad3cce38d3dc90079b651b3e85b9c1299a67d8fe35ed5a3d5052d1b0f",
+      "simples": "Decretar, substituir ou negar preventiva exige motivação real, fatos pertinentes e resposta às questões decisivas.",
+      "pontos": [
+        "Fatos novos ou contemporâneos concretos.",
+        "Não basta copiar lei, conceito vago ou motivo genérico.",
+        "Enfrentar argumentos capazes de infirmar conclusão.",
+        "Precedente: identificar razão determinante e adequação; afastamento exige distinção ou superação demonstrada."
+      ],
+      "atencao": [
+        "Texto longo com frases prontas pode continuar sem fundamentação."
+      ],
+      "exemplo": "Juiz explica risco atual à testemunha, prova e insuficiência da alternativa. Variação: Citar súmula sem mostrar relação com caso não resolve motivação.",
+      "prova": [
+        "Só copiar o art. 312 fundamenta? Não.",
+        "Precisa explicar adequação do precedente? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fundamentação concreta",
+          "significado": "Razões individualizadas e controláveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "99e5fd79-7333-537f-aeac-1ddc54688f54",
+        "content_sha256": "e1d2f9fad3cce38d3dc90079b651b3e85b9c1299a67d8fe35ed5a3d5052d1b0f",
+        "simples": "A decisão que decretar, substituir ou denegar a prisão preventiva será sempre motivada e fundamentada. Na motivação da decretação da preventiva ou de qualquer outra cautelar, o juiz deverá indicar concretamente a existência de fatos novos ou contemporâneos que justifiquem a medida. Não se considera fundamentada qualquer decisão judicial, seja interlocutória, sentença ou acórdão, que se limite à indicação, reprodução ou paráfrase de ato normativo sem explicar sua relação com a causa; empregue conceitos jurídicos indeterminados sem explicar o motivo concreto de sua incidência; invoque motivos que se prestariam a justificar qualquer outra decisão; não enfrente todos os argumentos capazes de, em tese, infirmar a conclusão; ou se limite a invocar precedente ou enunciado de súmula sem identificar seus fundamentos determinantes nem demonstrar que o caso se ajusta a eles, entre outras hipóteses do dispositivo.",
+        "pontos": [
+          "Decisão sobre preventiva sempre motivada e fundamentada.",
+          "Fatos novos ou contemporâneos indicados concretamente.",
+          "§2º: decisão genérica não é fundamentada (paráfrase de norma, conceitos indeterminados sem explicação, motivos genéricos, argumentos não enfrentados, precedente sem fundamentos determinantes)."
+        ],
+        "atencao": [
+          "§2º aplica-se a qualquer decisão judicial, não só à preventiva."
+        ],
+        "exemplo": "Decisão que apenas repete a fórmula 'garantia da ordem pública', sem fatos concretos, é considerada não fundamentada.",
+        "prova": [
+          "Assertiva que aceita decisão que apenas reproduz o texto da lei como fundamentada erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-316",
+      "unit_id": "0f28bbae-5c51-5561-8d0d-53e4ddd25138",
+      "content_sha256": "0731c3cfdcc2e2cd8e1723248d845e32360bc8db93ed2bf2d50424bffb1e4327",
+      "simples": "Sem motivo subsistente, preventiva pode ser revogada; manutenção exige revisão fundamentada a cada noventa dias na fase abrangida.",
+      "pontos": [
+        "Revogação pode ser de ofício ou a pedido.",
+        "Nova decretação observa provocação e requisitos atuais.",
+        "ADIs 6581/6582: falta de revisão não gera soltura automática; provocar reavaliação pelo juízo competente.",
+        "STF delimitou revisão à fase sem condenação em segunda instância, sem afastar outros controles de legalidade."
+      ],
+      "atencao": [
+        "Não ensinar noventa dias como prazo máximo automático da preventiva nem autorizar ignorar revisão obrigatória."
+      ],
+      "exemplo": "Juízo reavalia motivos em decisão atual e fundamentada. Variação: Prazo passou sem revisão: exigir controle judicial, sem concluir liberação automática por calendário.",
+      "prova": [
+        "Após noventa dias há soltura automática? Não.",
+        "Revisão é dispensável porque não há soltura automática? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Reavaliação periódica",
+          "significado": "Controle obrigatório da necessidade atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=483244&ori=1"
+      ],
+      "expected": {
+        "unit_id": "0f28bbae-5c51-5561-8d0d-53e4ddd25138",
+        "content_sha256": "0731c3cfdcc2e2cd8e1723248d845e32360bc8db93ed2bf2d50424bffb1e4327",
+        "simples": "O juiz poderá, de ofício ou a pedido das partes, revogar a prisão preventiva se, no correr da investigação ou do processo, verificar a falta de motivo para que ela subsista, bem como novamente decretá-la, se sobrevierem razões que a justifiquem. Decretada a prisão preventiva, o órgão emissor da decisão deverá revisar a necessidade de sua manutenção a cada 90 dias, mediante decisão fundamentada, de ofício, sob pena de tornar a prisão ilegal. O texto indica ADIs sobre o parágrafo único.",
+        "pontos": [
+          "Revogação da preventiva se faltar motivo para sua manutenção.",
+          "Nova decretação se sobrevierem razões.",
+          "Revisão a cada 90 dias, de ofício, por decisão fundamentada.",
+          "A falta de revisão pode tornar a prisão ilegal."
+        ],
+        "atencao": [
+          "Revisão a cada 90 DIAS.",
+          "O STF decidiu que a inobservância dos 90 dias não gera revogação automática da prisão (ADI 6581)."
+        ],
+        "exemplo": "O juiz revisa, a cada 90 dias, se subsistem os motivos da preventiva.",
+        "prova": [
+          "Assertiva que fixa a revisão da preventiva a cada 60 dias erra: são 90 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-317",
+      "unit_id": "b3dbf57b-294c-5dc1-a78c-25ef59b39921",
+      "content_sha256": "e065d75f8e15b4a87f1fd59d178b76aa1a81e7d0f88b734f2344e7ec87cb1f8b",
+      "simples": "Prisão domiciliar recolhe acusado ou indiciado à residência, com saída só por autorização judicial.",
+      "pontos": [
+        "Continua sendo prisão.",
+        "Não equivale ao simples recolhimento noturno do art. 319."
+      ],
+      "atencao": [
+        "Não confundir liberdade sem restrições com domiciliar."
+      ],
+      "exemplo": "Acusado cumpre prisão em casa e pede autorização para saída necessária. Variação: Recolhimento apenas noturno é medida distinta, com condições próprias.",
+      "prova": [
+        "Domiciliar permite sair livremente? Não.",
+        "É igual a recolhimento noturno? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prisão domiciliar",
+          "significado": "Custódia residencial sujeita a autorização para sair."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b3dbf57b-294c-5dc1-a78c-25ef59b39921",
+        "content_sha256": "e065d75f8e15b4a87f1fd59d178b76aa1a81e7d0f88b734f2344e7ec87cb1f8b",
+        "simples": "A prisão domiciliar consiste no recolhimento do indiciado ou acusado em sua residência, só podendo dela ausentar-se com autorização judicial.",
+        "pontos": [
+          "Recolhimento na residência.",
+          "Saída somente com autorização judicial."
+        ],
+        "atencao": [
+          "Não confundir com o recolhimento domiciliar noturno (art. 319, V)."
+        ],
+        "exemplo": "O acusado fica recolhido em casa e só sai com autorização do juiz.",
+        "prova": [
+          "Assertiva que permite saída livre do acusado em prisão domiciliar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 318"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-318",
+      "unit_id": "76f25067-403f-5e08-b566-757da73f9230",
+      "content_sha256": "0b65588f4b249ec4d0c8a1c665688e2768e361dffb2ae63131c51d8623c3fc70",
+      "simples": "Substituição por domiciliar depende de hipótese e prova idônea: idade avançada, doença grave, cuidados e parentalidade nas condições legais.",
+      "pontos": [
+        "Maior de oitenta anos, não apenas completar oitenta.",
+        "Extrema debilidade por doença grave.",
+        "Imprescindível aos cuidados de menor de seis ou pessoa com deficiência.",
+        "Gestante; mulher com filho menor de doze; homem único responsável por filho menor de doze.",
+        "Prova idônea dos requisitos; integrar art. 318-A."
+      ],
+      "atencao": [
+        "Não generalizar doença comum ou qualquer pai como hipótese suficiente."
+      ],
+      "exemplo": "Homem demonstra ser único responsável por filho de dez anos e pede substituição. Variação: Pai sem exclusividade dos cuidados não satisfaz só inciso VI; verificar eventual outra hipótese.",
+      "prova": [
+        "Para homem basta ter filho menor de doze? Não.",
+        "Requisitos precisam de prova idônea? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Hipótese domiciliar",
+          "significado": "Condição legal comprovada para substituição."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "76f25067-403f-5e08-b566-757da73f9230",
+        "content_sha256": "0b65588f4b249ec4d0c8a1c665688e2768e361dffb2ae63131c51d8623c3fc70",
+        "simples": "Poderá o juiz substituir a prisão preventiva pela domiciliar quando o agente for maior de 80 anos; extremamente debilitado por motivo de doença grave; imprescindível aos cuidados especiais de pessoa menor de 6 anos de idade ou com deficiência; gestante; mulher com filho de até 12 anos de idade incompletos; ou homem, caso seja o único responsável pelos cuidados do filho de até 12 anos incompletos. Para a substituição, o juiz exigirá prova idônea dos requisitos.",
+        "pontos": [
+          "Maior de 80 anos.",
+          "Extremamente debilitado por doença grave.",
+          "Imprescindível aos cuidados de pessoa menor de 6 anos ou com deficiência.",
+          "Gestante.",
+          "Mulher com filho até 12 anos incompletos.",
+          "Homem único responsável por filho até 12 anos incompletos.",
+          "Prova idônea dos requisitos."
+        ],
+        "atencao": [
+          "Hipóteses facultativas ('poderá'); o art. 318-A trata do caso obrigatório."
+        ],
+        "exemplo": "Preso maior de 80 anos pode ter a preventiva substituída pela domiciliar.",
+        "prova": [
+          "Assertiva que fixa a idade de 70 anos para a domiciliar do art. 318, I, erra: são 80 anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 318-A",
+          "Art. 317"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-318-a",
+      "unit_id": "879aa614-b116-5c14-a88b-1029d479c591",
+      "content_sha256": "9522497d16d830bf1794188503e35a41df058ab402cc900a4fd51df7f0a01862",
+      "simples": "Preventiva da gestante, mãe ou responsável por criança ou pessoa com deficiência é substituída nas condições legais de proteção.",
+      "pontos": [
+        "Não ter praticado crime com violência ou grave ameaça à pessoa.",
+        "Não ter cometido crime contra filho ou dependente.",
+        "Examinar enquadramento e integração jurisprudencial, sem converter condição familiar em imunidade."
+      ],
+      "atencao": [
+        "Substituir preventiva não é absolver; exceções expressas precisam ser verificadas."
+      ],
+      "exemplo": "Mãe abrangida por requisitos, sem violência nem crime contra dependente, recebe análise de substituição. Variação: Crime contra próprio dependente incide na exclusão expressa, sem resposta automática favorável.",
+      "prova": [
+        "Crime contra dependente satisfaz condição do inciso II? Não.",
+        "Domiciliar equivale a absolvição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção familiar cautelar",
+          "significado": "Substituição condicionada ao âmbito legal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "879aa614-b116-5c14-a88b-1029d479c591",
+        "content_sha256": "9522497d16d830bf1794188503e35a41df058ab402cc900a4fd51df7f0a01862",
+        "simples": "A prisão preventiva imposta à mulher gestante ou que for mãe ou responsável por crianças ou pessoas com deficiência será substituída por prisão domiciliar, desde que não tenha cometido crime com violência ou grave ameaça a pessoa e não tenha cometido o crime contra seu filho ou dependente.",
+        "pontos": [
+          "Gestante, mãe ou responsável por crianças ou pessoas com deficiência.",
+          "Substituição por domiciliar (regra).",
+          "Condições: sem crime com violência ou grave ameaça; sem crime contra filho ou dependente."
+        ],
+        "atencao": [
+          "A substituição é a regra, quando presentes os requisitos.",
+          "O HC coletivo 143.641 do STF fundamentou a mudança, com ressalvas excepcionais."
+        ],
+        "exemplo": "Gestante presa por crime sem violência tem a preventiva substituída por domiciliar.",
+        "prova": [
+          "Assertiva que torna facultativa a substituição do art. 318-A, mesmo presentes os requisitos, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 318"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-318-b",
+      "unit_id": "8a3474e7-9929-5f74-99a0-aa88e7bcc899",
+      "content_sha256": "7c91a285eec9faa714c6b1c6451d74c134c3fa78e02c1e91cf24c43e5283299d",
+      "simples": "Domiciliar dos arts. 318 e 318-A pode ser combinada com medidas alternativas do art. 319.",
+      "pontos": [
+        "Cumulação deve ser adequada e fundamentada.",
+        "Condições adicionais não são obrigatórias em todos os casos."
+      ],
+      "atencao": [
+        "Domiciliar não impede monitoração cabível nem exige impor toda lista de cautelares."
+      ],
+      "exemplo": "Substituição combina domiciliar com monitoração pertinente ao risco. Variação: Sem necessidade, não acumular restrições apenas para agravar situação.",
+      "prova": [
+        "Pode cumular medida do art. 319? Sim.",
+        "Toda cumulação é automática e obrigatória? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Cumulação adequada",
+          "significado": "Combinação de restrições justificadas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8a3474e7-9929-5f74-99a0-aa88e7bcc899",
+        "content_sha256": "7c91a285eec9faa714c6b1c6451d74c134c3fa78e02c1e91cf24c43e5283299d",
+        "simples": "A substituição de que tratam os arts. 318 e 318-A poderá ser efetuada sem prejuízo da aplicação concomitante das medidas alternativas previstas no art. 319 do Código.",
+        "pontos": [
+          "A prisão domiciliar pode ser acompanhada das medidas cautelares do art. 319."
+        ],
+        "atencao": [
+          "Cumulação com medidas alternativas."
+        ],
+        "exemplo": "Preventiva substituída por domiciliar com monitoração eletrônica.",
+        "prova": [
+          "Assertiva que veda a cumulação da domiciliar com medidas do art. 319 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 319"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-319",
+      "unit_id": "ef0d1a3d-5e13-5d90-af80-f84cdf02ca77",
+      "content_sha256": "6616ae368c0d6358b8c285437785a9af00b0e7f6bc5a455a7b802cb8f6be8db3",
+      "simples": "Medidas diversas da prisão oferecem restrições específicas proporcionais ao risco, isoladas ou cumuladas nos termos legais.",
+      "pontos": [
+        "Comparecimento periódico; restrição de lugares e contato com pessoa.",
+        "Não sair da comarca; recolhimento noturno e folgas com residência e trabalho fixos.",
+        "Suspender função ou atividade econômica/financeira quando risco de uso criminoso.",
+        "Internação provisória: violência/ameaça, conclusão pericial de inimputabilidade/semi-imputabilidade e risco de reiteração.",
+        "Fiança para fins legais e monitoração eletrônica.",
+        "Fiança segue capítulo próprio e pode cumular; §§1º–3º antigos revogados."
+      ],
+      "atencao": [
+        "Internação não decorre de diagnóstico isolado; não confundir recolhimento noturno com prisão domiciliar integral."
+      ],
+      "exemplo": "Risco de contato intimidatório é enfrentado por proibição concreta de contato. Variação: Internação exige requisitos próprios e perícia, não simples conveniência.",
+      "prova": [
+        "Monitoração está na lista? Sim.",
+        "Doença mental isolada preenche toda internação cautelar? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Alternativas cautelares",
+          "significado": "Medidas específicas com necessidade e adequação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "ef0d1a3d-5e13-5d90-af80-f84cdf02ca77",
+        "content_sha256": "6616ae368c0d6358b8c285437785a9af00b0e7f6bc5a455a7b802cb8f6be8db3",
+        "simples": "São medidas cautelares diversas da prisão: comparecimento periódico em juízo; proibição de acesso ou frequência a determinados lugares; proibição de manter contato com pessoa determinada; proibição de ausentar-se da comarca; recolhimento domiciliar no período noturno e nos dias de folga, quando o investigado ou acusado tenha residência e trabalho fixos; suspensão do exercício de função pública ou de atividade de natureza econômica ou financeira; internação provisória do acusado nas hipóteses de crimes praticados com violência ou grave ameaça, quando os peritos concluírem ser inimputável ou semi-imputável e houver risco de reiteração; fiança; e monitoração eletrônica.",
+        "pontos": [
+          "I: comparecimento periódico em juízo.",
+          "II: proibição de acesso ou frequência a certos lugares.",
+          "III: proibição de contato com pessoa determinada.",
+          "IV: proibição de ausentar-se da comarca.",
+          "V: recolhimento domiciliar noturno e nos dias de folga.",
+          "VI: suspensão de função pública ou atividade econômica.",
+          "VII: internação provisória.",
+          "VIII: fiança.",
+          "IX: monitoração eletrônica."
+        ],
+        "atencao": [
+          "Rol de nove medidas.",
+          "A internação provisória depende de perícia e de risco de reiteração."
+        ],
+        "exemplo": "Proibição de contato com a vítima somada a monitoração eletrônica.",
+        "prova": [
+          "Assertiva que inclui a prisão temporária entre as medidas cautelares diversas da prisão erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 282",
+          "Art. 320"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-320",
+      "unit_id": "2a4f75f0-64ec-5c61-ae43-ea59076de0ba",
+      "content_sha256": "11419024328fd00c4ae3a50c0756eff816e2c9308b6d6a11239e307a4f8c6466",
+      "simples": "Proibição de sair do país é comunicada ao controle de fronteiras e acusado é intimado a entregar passaporte em 24 horas.",
+      "pontos": [
+        "Juiz comunica autoridades de fiscalização.",
+        "Entrega após intimação no prazo legal.",
+        "Proibição de país difere de proibição de comarca."
+      ],
+      "atencao": [
+        "Não concluir que reter passaporte por iniciativa administrativa sempre dispensa ordem e fundamentos."
+      ],
+      "exemplo": "Juiz impõe e comunica restrição, intimando entrega em 24 horas. Variação: Medida de permanecer na comarca não é automaticamente idêntica à restrição de saída nacional.",
+      "prova": [
+        "Prazo de entrega é 24 horas? Sim.",
+        "País e comarca são a mesma restrição? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Restrição de saída nacional",
+          "significado": "Medida judicial com comunicação e entrega de documento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2a4f75f0-64ec-5c61-ae43-ea59076de0ba",
+        "content_sha256": "11419024328fd00c4ae3a50c0756eff816e2c9308b6d6a11239e307a4f8c6466",
+        "simples": "A proibição de ausentar-se do País será comunicada pelo juiz às autoridades encarregadas de fiscalizar as saídas do território nacional, intimando-se o indiciado ou acusado para entregar o passaporte, no prazo de 24 horas.",
+        "pontos": [
+          "Proibição de sair do País: comunicação às autoridades de fiscalização das saídas.",
+          "Entrega do passaporte em 24 horas."
+        ],
+        "atencao": [
+          "Prazo de 24 horas."
+        ],
+        "exemplo": "O acusado é intimado a entregar o passaporte em 24 horas.",
+        "prova": [
+          "Assertiva que fixa em 5 dias o prazo para entrega do passaporte erra: são 24 horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 319"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:51.752149+00:00",
+        "updated_at": "2026-10-11T13:17:51.752149+00:00"
+      }
+    }
+  ]
+}

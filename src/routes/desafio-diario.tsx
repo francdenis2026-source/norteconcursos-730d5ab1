@@ -1,4 +1,6 @@
 import { canonicalSubject } from "@/lib/subjects";
+import { MissingTextNotice } from "@/components/library/MissingTextNotice";
+import { needsMissingSupportText } from "@/lib/questionText";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -425,6 +427,7 @@ function QuestionPlayer({
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
           </div>
+          {needsMissingSupportText(question) && <div className="mb-4"><MissingTextNotice /></div>}
           {parsed.base && (
             <details
               open

@@ -31,6 +31,7 @@ import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
 import { useReinforcement } from "@/hooks/useReinforcement";
 import { QuestionSupportText } from "@/components/library/QuestionSupportText";
+import { MissingTextNotice } from "@/components/library/MissingTextNotice";
 import { needsMissingSupportText, reflowStem } from "@/lib/questionText";
 import { idleSeconds, IDLE_PAUSE_SECONDS, startActivityTracking } from "@/lib/activity";
 import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
@@ -155,14 +156,16 @@ function QuestionTrainer() {
     loading: catalogLoading,
     error,
   } = useQuestionCatalog(userId, canLoad);
+  // Questões sem o texto de apoio ficam fora do treino, a menos que o aluno as peça (marcadas e sem pontuar).
+  const [includeNoText, setIncludeNoText] = React.useState(false);
   const law = routeFilters.law;
   // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
     const scoped = law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
-    return { catalog: usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law]);
+    return { catalog: includeNoText ? scoped : usable, missingSupportText: scoped.length - usable.length };
+  }, [fullCatalog, law, includeNoText]);
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
@@ -540,6 +543,9 @@ function QuestionTrainer() {
   };
 
   const question = questions[index];
+  // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
+  const noText = !!question && needsMissingSupportText(question);
+  const nonScoring = sessionReinforce || noText;
   React.useEffect(() => {
     questionSecsRef.current = 0;
     setQuestionSecs(0);
@@ -561,7 +567,7 @@ function QuestionTrainer() {
     // Enquanto o histórico de respostas ainda está carregando, espera: decidir "não respondida"
     // antes de saber é o que deixava responder de novo e, ao voltar, mostrar como não respondida.
     if (lockedLoading) return;
-    const past = sessionReinforce ? undefined : locked.get(lockedKey(question.source, question.id));
+    const past = nonScoring ? undefined : locked.get(lockedKey(question.source, question.id));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -589,7 +595,7 @@ function QuestionTrainer() {
       setStartedAt(Date.now());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- só deve rodar quando a questão exibida muda (ou quando o histórico termina de carregar)
-  }, [index, question?.id, question?.source, lockedLoading, sessionReinforce]);
+  }, [index, question?.id, question?.source, lockedLoading, nonScoring]);
   const submit = async () => {
     if (
       !selected ||
@@ -597,15 +603,15 @@ function QuestionTrainer() {
       answered ||
       !user ||
       savingRef.current ||
-      (reachedDailyLimit && !sessionReinforce) ||
+      (reachedDailyLimit && !nonScoring) ||
       lockedLoading
     )
       return;
     savingRef.current = true;
     setSaving(true);
     const isCorrect = selected === question.answer;
-    if (sessionReinforce) {
-      // Reforço: guarda o desempenho de estudo, mas não pontua nem consome o limite diário.
+    if (nonScoring) {
+      // Reforço (ou questão sem texto): guarda o desempenho de estudo, mas não pontua nem consome o limite diário.
       try {
         const { error } = await supabase.from("question_reinforcement_attempts").insert({
           id: responseIdRef.current,
@@ -721,7 +727,12 @@ function QuestionTrainer() {
       <div className="space-y-4">
         {lawNotice}
         <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
-          {missingSupportText > 0 && <p className="rounded-lg border bg-muted/40 p-2 text-xs text-muted-foreground">{missingSupportText} questões de Língua Portuguesa dependem de um texto de apoio que ainda não foi cadastrado e ficam fora do treino por enquanto, para você não receber perguntas sem o texto.</p>}
+          {missingSupportText > 0 && (
+            <div className="rounded-lg border-2 border-amber-300 bg-amber-50 p-3 text-xs text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100">
+              <p><strong>{missingSupportText} questões de Língua Portuguesa estão sem o texto de apoio</strong> e ficam fora do treino, para você não receber perguntas impossíveis de resolver.</p>
+              <label className="mt-2 flex items-center gap-2 font-semibold"><input type="checkbox" checked={includeNoText} onChange={(e) => setIncludeNoText(e.target.checked)} /> Mostrar mesmo assim (marcadas com aviso, e não contam para o ranking nem para o desempenho)</label>
+            </div>
+          )}
           {notice && <p className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100" role="status">{notice}</p>}
           <p className="font-semibold">O que você quer praticar neste filtro?</p>
           <div className="grid gap-2 sm:grid-cols-3">
@@ -840,6 +851,7 @@ function QuestionTrainer() {
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
       {lawNotice}
+      {noText && <MissingTextNotice scoring />}
       {sessionReinforce && (
         <div role="status" className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100">
           <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
@@ -858,7 +870,7 @@ function QuestionTrainer() {
           </div>
         </div>
       )}
-      {reachedDailyLimit && !sessionReinforce && (
+      {reachedDailyLimit && !nonScoring && (
         <div
           role="status"
           className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
@@ -1112,7 +1124,7 @@ function QuestionTrainer() {
                 </Button>
                 <Button
                   size="lg"
-                  disabled={!selected || saving || (reachedDailyLimit && !sessionReinforce)}
+                  disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
                   onClick={submit}
                   className="h-11 min-w-44 bg-amber-400 text-slate-900 shadow-[0_8px_24px_-8px_oklch(0.8_0.13_78/0.8)] hover:bg-amber-300 sm:h-12"
                 >

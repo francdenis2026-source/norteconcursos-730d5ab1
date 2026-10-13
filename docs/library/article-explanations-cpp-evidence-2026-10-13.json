@@ -1,0 +1,2241 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T01:51:55.967684+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 36,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-155",
+        "art-156",
+        "art-157",
+        "art-158",
+        "art-158-a",
+        "art-158-b",
+        "art-158-c",
+        "art-158-d",
+        "art-158-e",
+        "art-158-f",
+        "art-159",
+        "art-160",
+        "art-161",
+        "art-162",
+        "art-163",
+        "art-164",
+        "art-165",
+        "art-166",
+        "art-167",
+        "art-168",
+        "art-169",
+        "art-170",
+        "art-171",
+        "art-172",
+        "art-173",
+        "art-174",
+        "art-175",
+        "art-176",
+        "art-177",
+        "art-178",
+        "art-179",
+        "art-180",
+        "art-181",
+        "art-182",
+        "art-183",
+        "art-184"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-155",
+      "unit_id": "c29200e5-5596-587e-b764-3b396283398e",
+      "content_sha256": "c88b84d955d5a36fdb9c9752402cfdd77786f9ef6f76b6f79ab9993d9bcd0db0",
+      "simples": "Convicção fundamentada usa prova sob contraditório judicial; elementos informativos não podem ser fundamento exclusivo, ressalvadas provas cautelares, não repetíveis e antecipadas.",
+      "pontos": [
+        "Livre apreciação não dispensa motivação nem licitude.",
+        "Inquérito pode integrar o conjunto, mas não substituir prova judicial pela mera repetição de suspeitas.",
+        "Restrições civis são observadas quanto ao estado das pessoas."
+      ],
+      "atencao": [
+        "Não afirmar que inquérito é sempre inutilizável ou que qualquer condenação pode apoiar-se exclusivamente nele."
+      ],
+      "exemplo": "Depoimento só policial é comparado com prova judicial: informação investigativa não basta como fundamento exclusivo. Variação: Prova não repetível tem regime ressalvado, com garantias aplicáveis; não se torna proibida só por origem anterior ao processo.",
+      "prova": [
+        "Toda informação de inquérito é proibida? Não.",
+        "Livre apreciação dispensa motivação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Elemento informativo",
+          "significado": "Dado de investigação distinto da prova judicial em contraditório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c29200e5-5596-587e-b764-3b396283398e",
+        "content_sha256": "c88b84d955d5a36fdb9c9752402cfdd77786f9ef6f76b6f79ab9993d9bcd0db0",
+        "simples": "O juiz formará sua convicção pela livre apreciação da prova produzida em contraditório judicial, não podendo fundamentar sua decisão exclusivamente nos elementos informativos colhidos na investigação, ressalvadas as provas cautelares, não repetíveis e antecipadas. Somente quanto ao estado das pessoas serão observadas as restrições estabelecidas na lei civil.",
+        "pontos": [
+          "Livre apreciação da prova (livre convencimento motivado).",
+          "Prova produzida em contraditório judicial.",
+          "Elementos do inquérito não bastam sozinhos.",
+          "Exceções: provas cautelares, não repetíveis e antecipadas.",
+          "Restrições da lei civil apenas quanto ao estado das pessoas."
+        ],
+        "atencao": [
+          "Sentença não pode se apoiar EXCLUSIVAMENTE no inquérito.",
+          "Provas cautelares, não repetíveis e antecipadas têm valor."
+        ],
+        "exemplo": "Perícia não repetível feita no inquérito pode embasar a condenação.",
+        "prova": [
+          "Assertiva que permite condenar com base apenas em elementos informativos do inquérito erra."
+        ],
+        "termos": [
+          {
+            "termo": "Livre convencimento motivado",
+            "significado": "O juiz avalia a prova livremente, mas fundamenta a decisão."
+          }
+        ],
+        "remissoes": [
+          "Art. 156",
+          "Art. 157"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-156",
+      "unit_id": "58992d42-6a00-55cc-9ceb-dbdb35034178",
+      "content_sha256": "3b2a38c8d689553bd03b55235fd3fbd48e2c35cdcedd75e6fd75e2b61ba14411",
+      "simples": "O texto distribui prova da alegação e prevê diligências judiciais; a aplicação deve preservar presunção de inocência, ônus acusatório e sistema acusatório.",
+      "pontos": [
+        "Acusação demonstra o fato imputado; não cabe exigir que acusado prove inocência.",
+        "Prova antecipada exige urgência, relevância, necessidade, adequação e proporcionalidade.",
+        "ADI 6298: diligências suplementares pontuais, nos limites legais, para dúvida relevante ao mérito; não substituir atuação acusatória."
+      ],
+      "atencao": [
+        "Não tratar o inciso I como licença para juiz investigar de ofício. Nem afirmar proibição absoluta de qualquer esclarecimento suplementar na instrução."
+      ],
+      "exemplo": "Na instrução há dúvida relevante sobre prova existente; juiz fundamenta diligência suplementar nos limites legais. Variação: Juiz não pode assumir apuração investigativa para construir acusação que o MP não demonstrou.",
+      "prova": [
+        "O acusado deve provar inocência? Não.",
+        "Diligência suplementar pontual é sempre proibida? Não; observar ADI e limites legais."
+      ],
+      "termos": [
+        {
+          "termo": "Diligência suplementar",
+          "significado": "Esclarecimento pontual autorizado sem substituição da acusação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840274"
+      ],
+      "expected": {
+        "unit_id": "58992d42-6a00-55cc-9ceb-dbdb35034178",
+        "content_sha256": "3b2a38c8d689553bd03b55235fd3fbd48e2c35cdcedd75e6fd75e2b61ba14411",
+        "simples": "A prova da alegação incumbe a quem a fizer, sendo, porém, facultado ao juiz, de ofício, ordenar, mesmo antes de iniciada a ação penal, a produção antecipada de provas consideradas urgentes e relevantes, observando a necessidade, adequação e proporcionalidade da medida; e determinar, no curso da instrução ou antes de proferir sentença, a realização de diligências para dirimir dúvida sobre ponto relevante.",
+        "pontos": [
+          "Ônus da prova de quem alega.",
+          "Juiz pode ordenar, de ofício, produção antecipada de provas urgentes e relevantes (observada a proporcionalidade).",
+          "Pode determinar diligências para dirimir dúvida sobre ponto relevante."
+        ],
+        "atencao": [
+          "O inciso I (prova antes da ação penal) é objeto de discussão em ADIs; confira a situação atual.",
+          "Atuação supletiva do juiz, não substitutiva da acusação."
+        ],
+        "exemplo": "Juiz determina diligência para esclarecer ponto relevante antes de sentenciar.",
+        "prova": [
+          "Assertiva que impede qualquer iniciativa probatória do juiz erra: o art. 156 a prevê de forma supletiva."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 3º-A",
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-157",
+      "unit_id": "ecb0c2a0-a029-56d3-a910-4ae8e66dd9d2",
+      "content_sha256": "e89f05195130ca253a9dc12306f13a86283ca8ce31bfb33a0399f5687871e0c2",
+      "simples": "Prova obtida violando Constituição ou lei é inadmissível; derivadas também, salvo ausência de nexo ou fonte independente. O §5º de impedimento automático foi declarado inconstitucional.",
+      "pontos": [
+        "Fonte independente exige percurso próprio juridicamente adequado, não justificativa inventada.",
+        "Preclusa a decisão de retirada, inutilização judicial pode ser acompanhada pelas partes.",
+        "§4º vetado não contém regra ativa.",
+        "ADIs 6298/6299/6300/6305 e AgRg HC 815195/STJ: não ensinar o §5º como impedimento automático vigente."
+      ],
+      "atencao": [
+        "Nem toda prova posterior é automaticamente contaminada; examinar nexo. Inconstitucionalidade do §5º não torna a prova ilícita admissível."
+      ],
+      "exemplo": "Dado obtido ilicitamente conduz diretamente a outra prova: examinar derivação e as exceções legais. Variação: A fonte realmente independente pode ser utilizada; não basta dizer que alguém poderia encontrar o mesmo dado de qualquer maneira.",
+      "prova": [
+        "O §5º impõe impedimento automático atual? Não; foi declarado inconstitucional.",
+        "Fonte independente precisa de fundamento real? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Prova derivada",
+          "significado": "Prova ligada causalmente à obtenção ilícita, sujeita às exceções legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?b=ACOR&fr=veja&i=1&livre=%28%27AGRHC%27+INPATH%28CLAS%29+AND+%27815195%27+INPATH%28NUM%29%29+OR+%28%28%27AgRg+no+HC+815195%27%29+INPATH%28SUCE%29%29&thesaurus=JURIDICO",
+        "https://legis.senado.gov.br/norma/528776"
+      ],
+      "expected": {
+        "unit_id": "ecb0c2a0-a029-56d3-a910-4ae8e66dd9d2",
+        "content_sha256": "e89f05195130ca253a9dc12306f13a86283ca8ce31bfb33a0399f5687871e0c2",
+        "simples": "São inadmissíveis, devendo ser desentranhadas do processo, as provas ilícitas, assim entendidas as obtidas em violação a normas constitucionais ou legais. São também inadmissíveis as provas derivadas das ilícitas, salvo quando não evidenciado o nexo de causalidade entre umas e outras, ou quando as derivadas puderem ser obtidas por uma fonte independente. Considera-se fonte independente aquela que por si só, seguindo os trâmites típicos da investigação ou instrução criminal, seria capaz de conduzir ao fato objeto da prova. Preclusa a decisão de desentranhamento, a prova será inutilizada por decisão judicial, facultado às partes acompanhar o incidente. O juiz que conhecer do conteúdo da prova declarada inadmissível não poderá proferir a sentença ou acórdão.",
+        "pontos": [
+          "Provas ilícitas são inadmissíveis e desentranhadas.",
+          "Provas derivadas também (teoria dos frutos da árvore envenenada), com exceções.",
+          "Exceções: ausência de nexo causal; fonte independente.",
+          "Inutilização da prova após a preclusão do desentranhamento.",
+          "§5º: juiz que conheceu o conteúdo da prova ilícita não sentencia."
+        ],
+        "atencao": [
+          "§5º sujeito a discussão em ADIs: confira a situação atual.",
+          "Fonte independente é aquela capaz de, por si só, levar ao fato."
+        ],
+        "exemplo": "Prova obtida por interceptação ilegal é desentranhada, e as provas dela derivadas também.",
+        "prova": [
+          "Assertiva que admite sempre as provas derivadas das ilícitas erra: há exceções (nexo e fonte independente)."
+        ],
+        "termos": [
+          {
+            "termo": "Fonte independente",
+            "significado": "Origem autônoma que conduziria ao fato por si só."
+          }
+        ],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158",
+      "unit_id": "48b9dcc6-647e-5069-b447-e7961b58e72f",
+      "content_sha256": "acfdf0b1fcaedb59a4e3f745d01a5491f430aae475eb7055b0d50cf57597b3de",
+      "simples": "Infração com vestígios exige exame de corpo de delito direto ou indireto; confissão não o substitui. Há prioridade para vítimas vulneráveis enumeradas.",
+      "pontos": [
+        "Prioridade: violência doméstica contra mulher; violência contra criança, adolescente, idoso ou pessoa com deficiência.",
+        "Corpo de delito não significa apenas cadáver.",
+        "Se vestígios desapareceram, integrar a exceção probatória do art. 167."
+      ],
+      "atencao": [
+        "Confessar não dispensa exame quando ele é exigível e possível."
+      ],
+      "exemplo": "Lesão deixa vestígios: exame documenta materialidade mesmo com confissão. Variação: Vestígios desapareceram e exame não é possível: avaliar art. 167, sem equiparar confissão isolada ao exame.",
+      "prova": [
+        "Corpo de delito é só cadáver? Não.",
+        "Confissão supre o exame exigível? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Corpo de delito",
+          "significado": "Vestígios materiais da infração e sua constatação pericial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "48b9dcc6-647e-5069-b447-e7961b58e72f",
+        "content_sha256": "acfdf0b1fcaedb59a4e3f745d01a5491f430aae475eb7055b0d50cf57597b3de",
+        "simples": "Quando a infração deixar vestígios, será indispensável o exame de corpo de delito, direto ou indireto, não podendo supri-lo a confissão do acusado. Dar-se-á prioridade ao exame de corpo de delito quando se tratar de crime que envolva violência doméstica e familiar contra mulher, ou violência contra criança, adolescente, idoso ou pessoa com deficiência.",
+        "pontos": [
+          "Infração com vestígios: exame de corpo de delito indispensável (direto ou indireto).",
+          "A confissão não supre o exame.",
+          "Prioridade: violência doméstica e familiar contra a mulher; violência contra criança, adolescente, idoso ou pessoa com deficiência."
+        ],
+        "atencao": [
+          "A confissão NÃO substitui o exame.",
+          "Se os vestígios desaparecem, a prova testemunhal pode suprir (art. 167)."
+        ],
+        "exemplo": "Em lesão corporal, o laudo pericial é necessário e a confissão não o substitui.",
+        "prova": [
+          "Assertiva que permite suprir o exame de corpo de delito pela confissão do acusado erra."
+        ],
+        "termos": [
+          {
+            "termo": "Exame de corpo de delito",
+            "significado": "Perícia sobre os vestígios materiais da infração."
+          }
+        ],
+        "remissoes": [
+          "Art. 167"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-a",
+      "unit_id": "b3f64e98-256e-5ca8-abec-901e6944c24e",
+      "content_sha256": "0c688381059325b45d223806b2fd67d228def026206eefa2e16a51c2708eadfa",
+      "simples": "Cadeia de custódia documenta cronologicamente posse e manuseio do vestígio, do reconhecimento ao descarte.",
+      "pontos": [
+        "Início na preservação do local ou detecção em procedimento policial/pericial.",
+        "Agente que reconhece elemento relevante responde por sua preservação.",
+        "Vestígio pode ser bruto, visível ou latente.",
+        "STJ: falha não gera nulidade automática universal; avaliar confiabilidade e caso concreto, sem torná-la irrelevante."
+      ],
+      "atencao": [
+        "Não confundir cadeia de custódia com mera assinatura final do laudo, nem minimizar perda de rastreabilidade."
+      ],
+      "exemplo": "Agente identifica material potencialmente relevante, preserva-o e registra percurso até análise e destinação. Variação: Falta de registro exige exame de confiabilidade; não se presume validade absoluta nem exclusão automática de todo o processo.",
+      "prova": [
+        "Começa só no laboratório? Não.",
+        "Toda falha anula automaticamente todas as provas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Rastreabilidade",
+          "significado": "Possibilidade de reconstruir posse e manuseio cronológicos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/09122021-Quebra-da-cadeia-de-custodia-nao-gera-nulidade-obrigatoria-da-prova--define-Sexta-Turma.aspx"
+      ],
+      "expected": {
+        "unit_id": "b3f64e98-256e-5ca8-abec-901e6944c24e",
+        "content_sha256": "0c688381059325b45d223806b2fd67d228def026206eefa2e16a51c2708eadfa",
+        "simples": "Considera-se cadeia de custódia o conjunto de todos os procedimentos utilizados para manter e documentar a história cronológica do vestígio coletado em locais ou em vítimas de crimes, para rastrear sua posse e manuseio a partir de seu reconhecimento até o descarte. O início da cadeia dá-se com a preservação do local de crime ou com procedimentos policiais ou periciais nos quais seja detectada a existência de vestígio. O agente público que reconhecer um elemento como de potencial interesse para a produção da prova pericial fica responsável por sua preservação. Vestígio é todo objeto ou material bruto, visível ou latente, constatado ou recolhido, que se relaciona à infração penal.",
+        "pontos": [
+          "Cadeia de custódia: procedimentos para documentar a história do vestígio, do reconhecimento ao descarte.",
+          "Início: preservação do local ou procedimentos em que se detecta o vestígio.",
+          "Agente que reconhece o elemento fica responsável por preservá-lo.",
+          "Vestígio: objeto ou material bruto, visível ou latente, relacionado à infração."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 13.964, de 2019 (Pacote Anticrime).",
+          "Quebra da cadeia de custódia pode comprometer a prova."
+        ],
+        "exemplo": "A arma encontrada na cena é registrada, lacrada e documentada em todas as etapas.",
+        "prova": [
+          "Assertiva que inicia a cadeia de custódia apenas com a entrega ao laboratório erra: começa com a preservação do local ou o reconhecimento do vestígio."
+        ],
+        "termos": [
+          {
+            "termo": "Vestígio",
+            "significado": "Todo objeto ou material relacionado à infração penal."
+          }
+        ],
+        "remissoes": [
+          "Art. 158-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-b",
+      "unit_id": "9c6a2883-46bd-5a6a-a270-b22db053df17",
+      "content_sha256": "fb981326e51c65338b62609ffbd907cdbbd34ef9b9f531252064c4c66f814c79",
+      "simples": "São dez etapas: reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte.",
+      "pontos": [
+        "Reconhecer distingue interesse; isolar preserva; fixar descreve posição e características.",
+        "Coletar recolhe; acondicionar individualiza com data, hora e responsável; transportar mantém condições e posse.",
+        "Recebimento formal identifica procedimento, origem, transportador, rastreio, exame, tipo, protocolo e receptor.",
+        "Processar examina e gera laudo; armazenar guarda com vínculo; descarte respeita lei e autorização quando pertinente."
+      ],
+      "atencao": [
+        "Fotografia pode ilustrar fixação, mas não dispensa a descrição; processamento não é transporte."
+      ],
+      "exemplo": "Vestígio é fotografado e descrito antes da coleta, acondicionado individualmente e recebido com protocolo. Variação: Descarte não se faz só porque exame acabou: verificar autorização e regime legal.",
+      "prova": [
+        "Fixação é sinônimo de coleta? Não.",
+        "Descarte precisa respeitar legislação? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fixação do vestígio",
+          "significado": "Descrição detalhada do estado e posição, com ilustrações possíveis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "9c6a2883-46bd-5a6a-a270-b22db053df17",
+        "content_sha256": "fb981326e51c65338b62609ffbd907cdbbd34ef9b9f531252064c4c66f814c79",
+        "simples": "A cadeia de custódia compreende o rastreamento do vestígio nas etapas de reconhecimento (distinguir o elemento de potencial interesse para a prova pericial); isolamento (evitar a alteração do estado das coisas, preservando o ambiente imediato, mediato e relacionado); fixação (descrição detalhada do vestígio como se encontra, podendo ser ilustrada por fotografias, filmagens ou croqui, sendo indispensável sua descrição no laudo); coleta (recolher o vestígio, respeitando suas características e natureza); acondicionamento (embalar cada vestígio de forma individualizada, com anotação da data, hora e nome de quem coletou e acondicionou); e as demais etapas previstas no dispositivo, como transporte, recebimento, processamento, armazenamento e descarte.",
+        "pontos": [
+          "Reconhecimento.",
+          "Isolamento.",
+          "Fixação (descrição, fotografias, filmagens ou croqui).",
+          "Coleta.",
+          "Acondicionamento individualizado, com data, hora e nome.",
+          "Seguem transporte, recebimento, processamento, armazenamento e descarte."
+        ],
+        "atencao": [
+          "Dez etapas; saiba a ordem e o conceito de cada."
+        ],
+        "exemplo": "O perito fotografa e descreve o vestígio (fixação) antes da coleta.",
+        "prova": [
+          "Assertiva que coloca a coleta antes do isolamento erra: a ordem é reconhecimento, isolamento, fixação e coleta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158-A",
+          "Art. 158-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-c",
+      "unit_id": "6adb9e98-f2b1-5c54-8a68-c083e61dc705",
+      "content_sha256": "99836b132dcf73b556f5bec1710dfba1f462ac6f6890310cfc8cd30cf87ee131",
+      "simples": "Coleta é preferencialmente por perito oficial, com encaminhamento à central; todos os vestígios devem seguir o regime de custódia.",
+      "pontos": [
+        "Preferencialmente não significa exclusivamente em todo caso.",
+        "Órgão central detalha cumprimento técnico.",
+        "Entrada em local isolado ou remoção antes da liberação pericial é proibida; o texto tipifica sua realização como fraude processual."
+      ],
+      "atencao": [
+        "Não autorizar curiosos a remover material nem ensinar que preferência elimina preservação por outros agentes."
+      ],
+      "exemplo": "Perito recolhe material e encaminha à central, mantendo registro e conservação. Variação: Agente que chega antes deve preservar, não retirar informalmente o vestígio do local isolado.",
+      "prova": [
+        "Coleta é sempre exclusivamente oficial no texto? Não; preferencialmente.",
+        "Remoção antes da liberação está autorizada? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Coleta preservada",
+          "significado": "Recolhimento com respeito à natureza e à liberação do local."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6adb9e98-f2b1-5c54-8a68-c083e61dc705",
+        "content_sha256": "99836b132dcf73b556f5bec1710dfba1f462ac6f6890310cfc8cd30cf87ee131",
+        "simples": "A coleta dos vestígios deverá ser realizada preferencialmente por perito oficial, que dará o encaminhamento necessário para a central de custódia, mesmo quando for necessária a realização de exames complementares. Todos os vestígios coletados no decurso do inquérito ou processo devem ser tratados como descrito na lei, ficando o órgão central de perícia oficial de natureza criminal responsável por detalhar a forma do seu cumprimento. É proibida a entrada em locais isolados bem como a remoção de quaisquer vestígios de locais de crime antes da liberação por parte do perito responsável, sendo tipificada como fraude processual a sua realização.",
+        "pontos": [
+          "Coleta preferencialmente por perito oficial.",
+          "Encaminhamento à central de custódia.",
+          "Órgão central de perícia detalha o cumprimento.",
+          "Proibido entrar no local isolado ou remover vestígios antes da liberação do perito.",
+          "Violação configura fraude processual."
+        ],
+        "atencao": [
+          "Remover vestígio antes da liberação pelo perito = FRAUDE PROCESSUAL."
+        ],
+        "exemplo": "Curioso entra na cena do crime isolada e retira um objeto antes da liberação: fraude processual.",
+        "prova": [
+          "Assertiva que autoriza a remoção de vestígios por qualquer agente antes da liberação do perito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158-B",
+          "Art. 347 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-d",
+      "unit_id": "13a8da71-3f35-5e19-addd-f44ab82008f4",
+      "content_sha256": "9de6e057376559f763d88dcbf5229c9febf75f11661128e53ac854609993fbc4",
+      "simples": "Acondicionamento depende do material; recipiente individualizado e lacrado deve preservar integridade, sem contaminação ou vazamento.",
+      "pontos": [
+        "Lacre numerado individualmente; resistência e espaço para informações.",
+        "Abertura pelo perito analista ou pessoa autorizada motivadamente.",
+        "Rompimento registrado com responsável, matrícula, data, local, finalidade e novo lacre.",
+        "Lacre rompido fica dentro do novo recipiente."
+      ],
+      "atencao": [
+        "Abrir e fechar sem registro rompe a rastreabilidade; não reutilizar lacre como se intacto."
+      ],
+      "exemplo": "Perito abre recipiente, registra rompimento e novo lacre, guardando o antigo no novo acondicionamento. Variação: Pessoa autorizada motivadamente pode abrir, mas isso não dispensa identificação e registro.",
+      "prova": [
+        "Lacre anterior deve ser descartado sem registro? Não.",
+        "Abertura autorizada dispensa ficha? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Lacre individualizado",
+          "significado": "Selo numerado para controle da inviolabilidade e de suas aberturas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "13a8da71-3f35-5e19-addd-f44ab82008f4",
+        "content_sha256": "9de6e057376559f763d88dcbf5229c9febf75f11661128e53ac854609993fbc4",
+        "simples": "O recipiente para acondicionamento do vestígio será determinado pela natureza do material. Todos os recipientes deverão ser selados com lacres, com numeração individualizada, de forma a garantir a inviolabilidade e a idoneidade do vestígio durante o transporte. O recipiente deverá individualizar o vestígio, preservar suas características, impedir contaminação e vazamento, ter grau de resistência adequado e espaço para registro de informações sobre seu conteúdo. Só poderá ser aberto pelo perito que vai proceder à análise e, motivadamente, por pessoa autorizada. Após cada rompimento de lacre, devem constar na ficha de acompanhamento do vestígio o nome e a matrícula do responsável, a data, o local, a finalidade e as informações do novo lacre. O lacre rompido será acondicionado no interior do novo recipiente.",
+        "pontos": [
+          "Recipiente conforme a natureza do material.",
+          "Lacres com numeração individualizada.",
+          "Recipiente individualiza o vestígio, evita contaminação e tem espaço para registro.",
+          "Só o perito que analisa (ou pessoa autorizada, motivadamente) abre.",
+          "Cada rompimento de lacre é registrado na ficha.",
+          "Lacre rompido guardado no novo recipiente."
+        ],
+        "atencao": [
+          "Registro de cada rompimento de lacre."
+        ],
+        "exemplo": "Cada vez que o lacre é rompido, a ficha de acompanhamento registra quem, quando e por quê.",
+        "prova": [
+          "Assertiva que permite a qualquer servidor abrir o recipiente do vestígio erra: só o perito responsável ou pessoa autorizada, motivadamente."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-e",
+      "unit_id": "aeac0bad-aa1e-5cc2-bb2a-1b05541c3e14",
+      "content_sha256": "fdc1002236450512d05d537af422f372694c329ee452c4be87e31492a80ecc66",
+      "simples": "Institutos de Criminalística devem ter central de custódia segura, vinculada ao órgão central de perícia, com protocolo e rastreio de acessos e movimentações.",
+      "pontos": [
+        "Recepção, conferência, devolução, seleção e distribuição em ambiente adequado.",
+        "Entrada e saída protocoladas com relação ao inquérito.",
+        "Cada acesso identifica pessoa, data e hora; tramitação registra responsável, destino e momento."
+      ],
+      "atencao": [
+        "Sala de depósito sem controle de acesso e ambiente adequado não satisfaz toda a central legal."
+      ],
+      "exemplo": "Vestígio ingressa com protocolo e cada consulta ou saída recebe identificação e horário. Variação: Transferência interna também é ação a registrar, não apenas a chegada do laboratório.",
+      "prova": [
+        "Acesso de pessoa precisa identificação e horário? Sim.",
+        "Só entrada inicial merece protocolo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Central de custódia",
+          "significado": "Estrutura segura de guarda e controle rastreável dos vestígios."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "aeac0bad-aa1e-5cc2-bb2a-1b05541c3e14",
+        "content_sha256": "fdc1002236450512d05d537af422f372694c329ee452c4be87e31492a80ecc66",
+        "simples": "Todos os Institutos de Criminalística deverão ter uma central de custódia destinada à guarda e controle dos vestígios, e sua gestão deve ser vinculada diretamente ao órgão central de perícia oficial de natureza criminal. Toda central deve possuir serviços de protocolo, com local para conferência, recepção, devolução de materiais e documentos, em espaço seguro e com condições ambientais que não interfiram nas características do vestígio. A entrada e a saída de vestígio devem ser protocoladas; todas as pessoas com acesso ao vestígio devem ser identificadas, com data e hora; e todas as ações de tramitação devem ser registradas.",
+        "pontos": [
+          "Central de custódia em todo Instituto de Criminalística, vinculada ao órgão central de perícia.",
+          "Serviço de protocolo e espaço seguro.",
+          "Entrada e saída protocoladas.",
+          "Identificação de quem acessa, com data e hora.",
+          "Registro de todas as ações de tramitação."
+        ],
+        "atencao": [
+          "Gestão vinculada ao órgão central de perícia oficial."
+        ],
+        "exemplo": "Quem acessa o vestígio armazenado é identificado e registrado com data e hora.",
+        "prova": [
+          "Assertiva que vincula a central de custódia à polícia militar erra: é vinculada ao órgão central de perícia."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158-D"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-158-f",
+      "unit_id": "5052b7e3-2181-5e78-9817-df256ad5b5f6",
+      "content_sha256": "43ded4b5383df21b20ce1e7ffad8aa35b99c38661b352a7201efb1f2dbfce0d9",
+      "simples": "Depois da perícia, material volta e permanece na central; armazenamento diverso depende de falta de condições e determinação formal.",
+      "pontos": [
+        "Falta de espaço ou condições não legitima destino informal.",
+        "Diretor do órgão central de perícia requer solução.",
+        "Autoridade policial ou judicial determina condições do depósito diverso."
+      ],
+      "atencao": [
+        "Perícia concluída não autoriza descarte automático."
+      ],
+      "exemplo": "Material examinado retorna à central para guarda rastreável. Variação: Peça volumosa sem espaço exige requerimento do diretor e determinação das condições de guarda externa.",
+      "prova": [
+        "Exame terminado significa descarte livre? Não.",
+        "Guarda diversa exige determinação nas condições legais? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Retorno à custódia",
+          "significado": "Reintegração do material examinado à guarda institucional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5052b7e3-2181-5e78-9817-df256ad5b5f6",
+        "content_sha256": "43ded4b5383df21b20ce1e7ffad8aa35b99c38661b352a7201efb1f2dbfce0d9",
+        "simples": "Após a realização da perícia, o material deverá ser devolvido à central de custódia, devendo nela permanecer. Caso a central não possua espaço ou condições de armazenar determinado material, a autoridade policial ou judiciária determinará as condições de depósito em local diverso, mediante requerimento do diretor do órgão central de perícia oficial de natureza criminal.",
+        "pontos": [
+          "Material devolvido à central de custódia após a perícia.",
+          "Sem espaço: depósito em outro local, determinado pela autoridade, a requerimento do diretor do órgão central de perícia."
+        ],
+        "atencao": [
+          "Devolução à central depois da perícia."
+        ],
+        "exemplo": "Material volumoso é depositado em local diverso por decisão da autoridade.",
+        "prova": [
+          "Assertiva que permite ao perito escolher o local de depósito sem decisão da autoridade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158-E"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-159",
+      "unit_id": "856b7536-88b8-51de-9aee-4c9bc64ad895",
+      "content_sha256": "a1d90341b0508152f92aeef113d1f461510c1a03e64929406629fcfa05027a7a",
+      "simples": "Perito oficial com diploma superior realiza exame; na falta, duas pessoas idôneas com formação e habilitação relacionadas, prestando compromisso.",
+      "pontos": [
+        "Um perito oficial é a regra; dois não oficiais na ausência.",
+        "MP, assistente de acusação, ofendido, querelante e acusado formulam quesitos e indicam assistente técnico.",
+        "Assistente atua após admissão e conclusão do exame/laudo oficial; partes intimadas.",
+        "Oitiva: mandado e questões com dez dias mínimos; parecer do assistente tem prazo judicial.",
+        "Material disponível no órgão, sob guarda e presença oficial, salvo impossibilidade de conservação; perícia complexa admite pluralidade de especialistas."
+      ],
+      "atencao": [
+        "Assistente técnico não substitui o perito oficial nem leva livremente o vestígio para casa."
+      ],
+      "exemplo": "Perito oficial produz laudo; assistente admitido examina material no órgão sob controle e apresenta parecer. Variação: Sem oficial, dois idôneos habilitados prestam compromisso; não nomear um só não oficial como regra.",
+      "prova": [
+        "Dois peritos oficiais são sempre obrigatórios? Não.",
+        "Assistente atua antes do laudo oficial por esta regra? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Assistente técnico",
+          "significado": "Profissional indicado pela parte, distinto do perito responsável pelo exame."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "856b7536-88b8-51de-9aee-4c9bc64ad895",
+        "content_sha256": "a1d90341b0508152f92aeef113d1f461510c1a03e64929406629fcfa05027a7a",
+        "simples": "O exame de corpo de delito e outras perícias serão realizados por perito oficial, portador de diploma de curso superior. Na falta de perito oficial, o exame será realizado por 2 pessoas idôneas, portadoras de diploma de curso superior preferencialmente na área específica, dentre as que tiverem habilitação técnica relacionada com a natureza do exame. Os peritos não oficiais prestarão o compromisso de bem e fielmente desempenhar o encargo. É facultada ao Ministério Público, ao assistente de acusação, ao ofendido, ao querelante e ao acusado a formulação de quesitos e a indicação de assistente técnico. O assistente técnico atua a partir de sua admissão pelo juiz e após a conclusão dos exames e elaboração do laudo pelos peritos oficiais, sendo as partes intimadas desta decisão. Durante o curso do processo judicial, é permitido às partes requerer a oitiva dos peritos e indicar assistentes técnicos, nos termos do dispositivo.",
+        "pontos": [
+          "Regra: um perito oficial com curso superior.",
+          "Sem perito oficial: 2 pessoas idôneas com curso superior.",
+          "Peritos não oficiais prestam compromisso.",
+          "Partes formulam quesitos e indicam assistente técnico.",
+          "Assistente técnico atua após o laudo dos oficiais.",
+          "Partes podem requerer a oitiva dos peritos."
+        ],
+        "atencao": [
+          "Exige diploma de curso superior.",
+          "Assistente técnico atua após o laudo."
+        ],
+        "exemplo": "Na falta de perito oficial, duas pessoas idôneas com diploma superior fazem o exame.",
+        "prova": [
+          "Assertiva que dispensa diploma de curso superior para o perito oficial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 160"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-160",
+      "unit_id": "5e9a30f8-0c0b-5c5e-bb1b-971b252ec8af",
+      "content_sha256": "6819f239d2fb4ae4bf91daf16866070d20d314069dcc86a351ec47499de3621d",
+      "simples": "Laudo descreve minuciosamente o exame e responde quesitos em até dez dias, prorrogáveis excepcionalmente a pedido dos peritos.",
+      "pontos": [
+        "Prazo do laudo: dez dias.",
+        "Exceção requer provocação pericial e fundamento.",
+        "Descrição e respostas são componentes distintos."
+      ],
+      "atencao": [
+        "Não confundir prazo do laudo com 45 dias do exame mental ou antecedência da intimação pericial."
+      ],
+      "exemplo": "Peritos apresentam descrição técnica e respostas no laudo em dez dias. Variação: Complexidade excepcional pode justificar pedido de prorrogação, não demora automática sem explicação.",
+      "prova": [
+        "Prazo comum é dez dias? Sim.",
+        "Prorrogação é automática sem pedido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Laudo pericial",
+          "significado": "Documento técnico descritivo com resposta às questões formuladas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5e9a30f8-0c0b-5c5e-bb1b-971b252ec8af",
+        "content_sha256": "6819f239d2fb4ae4bf91daf16866070d20d314069dcc86a351ec47499de3621d",
+        "simples": "Os peritos elaborarão o laudo pericial, onde descreverão minuciosamente o que examinarem e responderão aos quesitos formulados. O laudo pericial será elaborado no prazo máximo de 10 dias, podendo este prazo ser prorrogado, em casos excepcionais, a requerimento dos peritos.",
+        "pontos": [
+          "Laudo descreve minuciosamente o exame e responde aos quesitos.",
+          "Prazo máximo de 10 dias.",
+          "Prorrogação excepcional, a requerimento dos peritos."
+        ],
+        "atencao": [
+          "Prazo: 10 dias."
+        ],
+        "exemplo": "Perito pede prorrogação do prazo de 10 dias para o laudo, em caso excepcional.",
+        "prova": [
+          "Assertiva que fixa em 30 dias o prazo do laudo erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-161",
+      "unit_id": "1aa72d51-fb31-5069-bafd-632a097d082e",
+      "content_sha256": "d24a5b99d93ab95ed747e47e2be486ed1fee6301b6b2704d41e3a4d6f809aadb",
+      "simples": "Exame de corpo de delito pode ocorrer em qualquer dia e horário.",
+      "pontos": [
+        "Não depende de dia útil.",
+        "Não depende de expediente judicial.",
+        "Horário livre não elimina demais garantias e condições técnicas."
+      ],
+      "atencao": [
+        "Não atrasar vestígio perecível só porque é feriado ou noite."
+      ],
+      "exemplo": "Lesão precisa documentação urgente na madrugada: artigo permite exame nesse horário. Variação: Permissão temporal não dispensa equipe habilitada ou custódia do material.",
+      "prova": [
+        "Pode ser feito em feriado? Sim.",
+        "Qualquer horário dispensa condições técnicas? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Disponibilidade temporal",
+          "significado": "Possibilidade legal de exame independentemente do calendário forense."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1aa72d51-fb31-5069-bafd-632a097d082e",
+        "content_sha256": "d24a5b99d93ab95ed747e47e2be486ed1fee6301b6b2704d41e3a4d6f809aadb",
+        "simples": "O exame de corpo de delito poderá ser feito em qualquer dia e a qualquer hora.",
+        "pontos": [
+          "Exame de corpo de delito em qualquer dia e hora."
+        ],
+        "atencao": [
+          "Não há restrição de horário."
+        ],
+        "exemplo": "Exame realizado em feriado ou de madrugada é válido.",
+        "prova": [
+          "Assertiva que limita o exame de corpo de delito a dias úteis erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-162",
+      "unit_id": "e274b36a-710c-5890-a60c-8e0343198b11",
+      "content_sha256": "5921f70906f52cfc8ae529b7e913de567631cb4874279d50c1db1ff2a63492b5",
+      "simples": "Autópsia ocorre ordinariamente pelo menos seis horas após óbito; sinais evidentes podem justificar antecipação, declarada no auto.",
+      "pontos": [
+        "Seis horas são regra mínima, com exceção fundamentada pelos peritos.",
+        "Morte violenta: exame externo basta sem infração a apurar ou quando define causa e não há necessidade interna relevante.",
+        "Não reduzir toda morte violenta a exame externo automático."
+      ],
+      "atencao": [
+        "A exceção não é autorização livre sem declaração pericial; condições do exame externo devem ser verificadas."
+      ],
+      "exemplo": "Sinais evidentes de morte permitem aos peritos realizar antes de seis horas, com declaração no auto. Variação: Dúvida de circunstância interna relevante impede usar a suficiência externa como regra geral.",
+      "prova": [
+        "Nunca pode ocorrer antes de seis horas? Pode, na exceção fundamentada.",
+        "Toda morte violenta dispensa exame interno? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Autópsia",
+          "significado": "Exame cadavérico com requisitos e possíveis modalidades legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e274b36a-710c-5890-a60c-8e0343198b11",
+        "content_sha256": "5921f70906f52cfc8ae529b7e913de567631cb4874279d50c1db1ff2a63492b5",
+        "simples": "A autópsia será feita pelo menos seis horas depois do óbito, salvo se os peritos, pela evidência dos sinais de morte, julgarem que possa ser feita antes daquele prazo, o que declararão no auto. Nos casos de morte violenta, bastará o simples exame externo do cadáver quando não houver infração penal a apurar, ou quando as lesões externas permitirem precisar a causa da morte e não houver necessidade de exame interno.",
+        "pontos": [
+          "Autópsia pelo menos seis horas após o óbito.",
+          "Antes, se a evidência dos sinais de morte permitir, declarado no auto.",
+          "Morte violenta: pode bastar o exame externo em hipóteses específicas."
+        ],
+        "atencao": [
+          "Seis horas, salvo evidência dos sinais de morte."
+        ],
+        "exemplo": "Perito conclui antecipadamente a autópsia por evidência dos sinais de morte e declara no auto.",
+        "prova": [
+          "Assertiva que fixa em 24 horas o prazo mínimo para a autópsia erra: são seis horas."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-163",
+      "unit_id": "32e867df-aba4-5bd3-a3b0-ffd5026189b7",
+      "content_sha256": "0ab2971523efdf633f9f7ee38272e90541bd9807e5b8d96e12faf3646efe5011",
+      "simples": "Exumação pericial tem dia e hora marcados e auto circunstanciado; administrador indica sepultura, sob pena legal, ou fazem-se pesquisas registradas.",
+      "pontos": [
+        "Abrange cemitério público e particular.",
+        "Recusa, falta de indicação ou cadáver fora de sepultura exigem pesquisas.",
+        "Registrar a diligência e suas circunstâncias."
+      ],
+      "atencao": [
+        "Exumação não é retirada informal de restos sem determinação e documentação."
+      ],
+      "exemplo": "Administrador informa sepultura e diligência marcada é registrada em auto. Variação: Se não há indicação, autoridade pesquisa e documenta os procedimentos realizados.",
+      "prova": [
+        "Administrador particular também deve indicar? Sim.",
+        "Pesquisas devem constar do auto? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Exumação",
+          "significado": "Retirada de restos para exame, mediante diligência formal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "32e867df-aba4-5bd3-a3b0-ffd5026189b7",
+        "content_sha256": "0ab2971523efdf633f9f7ee38272e90541bd9807e5b8d96e12faf3646efe5011",
+        "simples": "Em caso de exumação para exame cadavérico, a autoridade providenciará para que, em dia e hora previamente marcados, se realize a diligência, da qual se lavrará auto circunstanciado. O administrador de cemitério público ou particular indicará o lugar da sepultura, sob pena de desobediência. No caso de recusa ou falta de quem indique a sepultura, ou de encontrar-se o cadáver em lugar não destinado a inumações, a autoridade procederá às pesquisas necessárias, o que constará do auto.",
+        "pontos": [
+          "Exumação em dia e hora previamente marcados, com auto circunstanciado.",
+          "Administrador do cemitério indica a sepultura, sob pena de desobediência.",
+          "Recusa ou ausência de indicação: autoridade faz as pesquisas e registra no auto."
+        ],
+        "atencao": [
+          "Recusa do administrador pode configurar desobediência."
+        ],
+        "exemplo": "Cemitério se recusa a indicar a sepultura, e a autoridade realiza pesquisas e lavra auto.",
+        "prova": [
+          "Assertiva que dispensa a lavratura do auto circunstanciado na exumação erra."
+        ],
+        "termos": [
+          {
+            "termo": "Exumação",
+            "significado": "Retirada do cadáver da sepultura para exame."
+          }
+        ],
+        "remissoes": [
+          "Art. 162"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-164",
+      "unit_id": "b2b2f063-8a7c-57a9-9266-e7a8be3a6070",
+      "content_sha256": "d5680834b36d011f89c8ec70017352d3902a36b8f3e4de38260ed799a07109a1",
+      "simples": "Cadáver é fotografado como encontrado; lesões externas e vestígios locais também, na medida do possível.",
+      "pontos": [
+        "Posição original é registro obrigatório.",
+        "Possibilidade qualifica o registro adicional de lesões e vestígios.",
+        "Integrar preservação do local e cadeia de custódia."
+      ],
+      "atencao": [
+        "Não reposicionar primeiro e documentar como se fosse a posição original."
+      ],
+      "exemplo": "Equipe registra fotograficamente a posição encontrada antes de alteração pericial. Variação: Limitação real para algum detalhe é documentada, sem dispensar arbitrariamente a posição do cadáver.",
+      "prova": [
+        "A posição encontrada deve ser fotografada? Sim.",
+        "Pode montar posição fictícia como original? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Registro cadavérico",
+          "significado": "Documentação da posição e dos elementos externos encontrados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b2b2f063-8a7c-57a9-9266-e7a8be3a6070",
+        "content_sha256": "d5680834b36d011f89c8ec70017352d3902a36b8f3e4de38260ed799a07109a1",
+        "simples": "Os cadáveres serão sempre fotografados na posição em que forem encontrados, bem como, na medida do possível, todas as lesões externas e vestígios deixados no local do crime.",
+        "pontos": [
+          "Cadáveres fotografados na posição em que foram encontrados.",
+          "Lesões externas e vestígios, na medida do possível."
+        ],
+        "atencao": [
+          "Registro fotográfico obrigatório."
+        ],
+        "exemplo": "A equipe fotografa o corpo na posição original e as lesões visíveis.",
+        "prova": [
+          "Assertiva que dispensa fotografias do cadáver na posição em que foi encontrado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-165",
+      "unit_id": "c636df56-1e3e-5b21-af96-b64bc35545d2",
+      "content_sha256": "2b239f1d6f2839f0f578f4c1271796a511c5b2f7a7e621e1c39da52076153f16",
+      "simples": "Peritos juntam, quando possível, fotografias, esquemas ou desenhos rubricados para representar lesões cadavéricas.",
+      "pontos": [
+        "Ilustrações complementam descrição técnica.",
+        "Rubrica identifica responsabilidade pelo material.",
+        "Possibilidade não autoriza falsificação ou omissão injustificada."
+      ],
+      "atencao": [
+        "Desenho é apoio ao laudo, não substituto de exame real."
+      ],
+      "exemplo": "Perito usa esquema rubricado para localizar lesões descritas no laudo. Variação: Fotografias insuficientes podem ser complementadas por desenhos, sem inventar lesões.",
+      "prova": [
+        "Esquemas podem ser usados? Sim.",
+        "Ilustração dispensa exame? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ilustração pericial",
+          "significado": "Representação visual identificada que auxilia a descrição do exame."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c636df56-1e3e-5b21-af96-b64bc35545d2",
+        "content_sha256": "2b239f1d6f2839f0f578f4c1271796a511c5b2f7a7e621e1c39da52076153f16",
+        "simples": "Para representar as lesões encontradas no cadáver, os peritos, quando possível, juntarão ao laudo do exame provas fotográficas, esquemas ou desenhos, devidamente rubricados.",
+        "pontos": [
+          "Representação das lesões por fotografias, esquemas ou desenhos.",
+          "Devidamente rubricados."
+        ],
+        "atencao": [
+          "Elementos ilustrativos do laudo, quando possível."
+        ],
+        "exemplo": "Perito anexa croqui rubricado com a localização das lesões.",
+        "prova": [
+          "Assertiva que torna proibida a juntada de desenhos ao laudo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 164"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-166",
+      "unit_id": "11ab87ae-9ce3-5da1-8bc8-61b53463ca78",
+      "content_sha256": "e20e3d9bb3d02a49cbf68e6a8359320cb0a2d426477847359aa1f6e9de75b0fb",
+      "simples": "Dúvida de identidade do cadáver exumado exige reconhecimento institucional ou testemunhal, auto descritivo e autenticação de objetos úteis.",
+      "pontos": [
+        "Instituto de identificação ou repartição congênere, ou testemunhas.",
+        "Auto de reconhecimento e identidade com sinais e indicações.",
+        "Objetos úteis arrecadados e autenticados em qualquer caso."
+      ],
+      "atencao": [
+        "Não presumir identidade só pela sepultura se subsiste dúvida fundada."
+      ],
+      "exemplo": "Sinais e objetos associados ao cadáver exumado são documentados para o reconhecimento. Variação: Depoimento de familiar é examinado com a documentação, sem dispensar arrecadação dos objetos úteis.",
+      "prova": [
+        "Pode haver prova testemunhal de reconhecimento? Sim.",
+        "Objetos úteis devem ser autenticados? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reconhecimento de identidade",
+          "significado": "Identificação documentada do cadáver cuja identidade é duvidosa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "11ab87ae-9ce3-5da1-8bc8-61b53463ca78",
+        "content_sha256": "e20e3d9bb3d02a49cbf68e6a8359320cb0a2d426477847359aa1f6e9de75b0fb",
+        "simples": "Havendo dúvida sobre a identidade do cadáver exumado, proceder-se-á ao reconhecimento pelo Instituto de Identificação e Estatística ou repartição congênere ou pela inquirição de testemunhas, lavrando-se auto de reconhecimento e de identidade, no qual se descreverá o cadáver, com todos os sinais e indicações. Em qualquer caso, serão arrecadados e autenticados todos os objetos encontrados que possam ser úteis para a identificação do cadáver.",
+        "pontos": [
+          "Dúvida sobre a identidade do cadáver exumado: reconhecimento pelo Instituto de Identificação ou por testemunhas.",
+          "Auto de reconhecimento e de identidade.",
+          "Objetos úteis à identificação arrecadados e autenticados."
+        ],
+        "atencao": [
+          "Auto descreve o cadáver com todos os sinais."
+        ],
+        "exemplo": "Testemunhas reconhecem o cadáver exumado, e se lavra o auto de identidade.",
+        "prova": [
+          "Assertiva que dispensa o auto de reconhecimento e de identidade erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 163"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-167",
+      "unit_id": "784f4fa0-7871-57b4-98fa-c247ac47ff1a",
+      "content_sha256": "75651f5f8c90baeb9f4a12eb4c1dfe3e0da869135e9fc23bd2dc7472f193acb6",
+      "simples": "Se vestígios desapareceram e o exame se tornou impossível, testemunhas podem suprir sua falta.",
+      "pontos": [
+        "Exige impossibilidade ligada ao desaparecimento.",
+        "Não é dispensa genérica de perícia possível.",
+        "Confissão não substitui automaticamente o exame exigível."
+      ],
+      "atencao": [
+        "Falta de vontade de periciar não equivale a desaparecimento dos vestígios."
+      ],
+      "exemplo": "Lesões não deixaram vestígios disponíveis ao tempo do exame: avaliar prova testemunhal substitutiva. Variação: Vestígios conservados tornam perícia possível; não dispensá-la só por haver confissão.",
+      "prova": [
+        "Testemunhas sempre dispensam exame possível? Não.",
+        "Desaparecimento pode permitir suprimento testemunhal? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Suprimento testemunhal",
+          "significado": "Substituição probatória nas condições excepcionais do artigo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "784f4fa0-7871-57b4-98fa-c247ac47ff1a",
+        "content_sha256": "75651f5f8c90baeb9f4a12eb4c1dfe3e0da869135e9fc23bd2dc7472f193acb6",
+        "simples": "Não sendo possível o exame de corpo de delito por haverem desaparecido os vestígios, a prova testemunhal poderá suprir-lhe a falta.",
+        "pontos": [
+          "Vestígios desaparecidos: a prova testemunhal pode suprir o exame."
+        ],
+        "atencao": [
+          "Exame indireto por testemunhas, se os vestígios sumiram."
+        ],
+        "exemplo": "Lesão sem registro e já curada: testemunhas podem comprovar a materialidade.",
+        "prova": [
+          "Assertiva que permite suprir o exame pela confissão, no art. 167, erra: o texto fala em prova testemunhal."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-168",
+      "unit_id": "29d2ffaa-638a-538e-be75-b1b628e14ef1",
+      "content_sha256": "bc37afdc1a137ef13841f26abfc80e53d2c817306512b36a83590f6f864400b6",
+      "simples": "Lesões com exame incompleto exigem complementação; incapacidade para ocupações habituais por mais de 30 dias é verificada após esse prazo contado do crime.",
+      "pontos": [
+        "Autoridade policial/judicial pode determinar; MP, ofendido, acusado ou defensor podem requerer.",
+        "Auto inicial orienta suprimento ou retificação.",
+        "Exame do CP 129, §1º, I logo após 30 dias do fato; falta do complementar pode ser suprida por testemunhas."
+      ],
+      "atencao": [
+        "Não contar 30 dias do primeiro laudo, nem confundir ocupação habitual com apenas emprego remunerado."
+      ],
+      "exemplo": "Lesão pode gerar incapacidade superior a 30 dias; exame complementar após esse período avalia a classificação. Variação: Primeiro exame incompleto por outro motivo pode ser complementado sem fingir que toda hipótese tem prazo obrigatório de 30 dias.",
+      "prova": [
+        "Prazo específico é contado do crime? Sim.",
+        "Todo complementar precisa esperar 30 dias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Exame complementar",
+          "significado": "Perícia que supre ou retifica exame inicial de lesões."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "29d2ffaa-638a-538e-be75-b1b628e14ef1",
+        "content_sha256": "bc37afdc1a137ef13841f26abfc80e53d2c817306512b36a83590f6f864400b6",
+        "simples": "Em caso de lesões corporais, se o primeiro exame pericial tiver sido incompleto, proceder-se-á a exame complementar por determinação da autoridade policial ou judiciária, de ofício, ou a requerimento do Ministério Público, do ofendido ou do acusado, ou de seu defensor. No exame complementar, os peritos terão presente o auto de corpo de delito, a fim de suprir-lhe a deficiência ou retificá-lo. Se o exame tiver por fim precisar a classificação do delito no art. 129, §1º, I, do Código Penal (incapacidade para as ocupações habituais por mais de trinta dias), deverá ser feito logo que decorra o prazo de 30 dias, contado da data do crime. A falta de exame complementar poderá ser suprida pela prova testemunhal.",
+        "pontos": [
+          "Exame complementar quando o primeiro foi incompleto.",
+          "Determinado de ofício ou a requerimento.",
+          "Peritos têm à vista o primeiro auto.",
+          "Para o art. 129, §1º, I: logo que decorra o prazo de 30 dias da data do crime.",
+          "Falta do complementar pode ser suprida por testemunhas."
+        ],
+        "atencao": [
+          "Prazo de 30 dias do crime, para a lesão com incapacidade por mais de 30 dias."
+        ],
+        "exemplo": "Exame complementar feito após 30 dias para verificar a incapacidade para as ocupações habituais.",
+        "prova": [
+          "Assertiva que impede suprir a falta do exame complementar por prova testemunhal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158",
+          "Art. 129 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-169",
+      "unit_id": "83381346-7f6f-5e29-a6a6-43e95f08ff85",
+      "content_sha256": "b4a23e0d347cffde23e6e23f4e90dc41a03747aa13ba5ec35e0bec6b2b996189",
+      "simples": "Autoridade preserva o local até chegada pericial; laudo pode ilustrar e deve registrar alterações e suas consequências na dinâmica.",
+      "pontos": [
+        "Providência imediata contra alteração.",
+        "Fotografias, desenhos ou esquemas podem apoiar.",
+        "Integrar liberação pericial e hipóteses especiais legais, não remover indiscriminadamente."
+      ],
+      "atencao": [
+        "Alteração inevitável não deve ser ocultada no laudo; discutir impacto é parte da reconstrução."
+      ],
+      "exemplo": "Equipe isola o local e peritos descrevem os vestígios encontrados. Variação: Houve mudança antes da chegada: peritos registram e analisam consequências, sem apresentar cenário alterado como intacto.",
+      "prova": [
+        "Alterações devem ser registradas? Sim.",
+        "Fotografias permitem ignorar mudanças? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Preservação do local",
+          "significado": "Manutenção do estado relevante para análise, com registro das intervenções."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "83381346-7f6f-5e29-a6a6-43e95f08ff85",
+        "content_sha256": "b4a23e0d347cffde23e6e23f4e90dc41a03747aa13ba5ec35e0bec6b2b996189",
+        "simples": "Para o efeito de exame do local onde houver sido praticada a infração, a autoridade providenciará imediatamente para que não se altere o estado das coisas até a chegada dos peritos, que poderão instruir seus laudos com fotografias, desenhos ou esquemas elucidativos. Os peritos registrarão, no laudo, as alterações do estado das coisas e discutirão, no relatório, as consequências dessas alterações na dinâmica dos fatos.",
+        "pontos": [
+          "Autoridade preserva o local até a chegada dos peritos.",
+          "Laudos podem ter fotografias, desenhos ou esquemas.",
+          "Peritos registram as alterações e discutem as consequências."
+        ],
+        "atencao": [
+          "Preservação do local é imediata."
+        ],
+        "exemplo": "O local do crime é isolado imediatamente, e o perito registra as alterações encontradas.",
+        "prova": [
+          "Assertiva que dispensa o registro, no laudo, das alterações do local erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 6º",
+          "Art. 158-C"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-170",
+      "unit_id": "0ed896ad-0ddb-5e15-8bbd-d16ba0776288",
+      "content_sha256": "b5ed017e036ad8c49216f99f7190f7ce2e812860effb9ff76b1785863132dd3c",
+      "simples": "Laboratório guarda material suficiente para eventual nova perícia; laudos podem ser ilustrados por fotografias, microfotografias, desenhos e esquemas.",
+      "pontos": [
+        "Reserva para contraprova ou novo exame.",
+        "Ilustração quando conveniente.",
+        "Integração com custódia e limites materiais de conservação."
+      ],
+      "atencao": [
+        "Não consumir sem registro todo o material como regra, inviabilizando arbitrariamente exame posterior."
+      ],
+      "exemplo": "Laboratório analisa amostra e preserva porção suficiente para novo exame possível. Variação: Impossibilidade material real deve ser documentada e tratada tecnicamente, não escondida.",
+      "prova": [
+        "Prevê reserva para nova perícia? Sim.",
+        "Ilustração é sempre obrigatória neste artigo? Não; quando conveniente."
+      ],
+      "termos": [
+        {
+          "termo": "Reserva pericial",
+          "significado": "Material preservado para exame posterior pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "0ed896ad-0ddb-5e15-8bbd-d16ba0776288",
+        "content_sha256": "b5ed017e036ad8c49216f99f7190f7ce2e812860effb9ff76b1785863132dd3c",
+        "simples": "Nas perícias de laboratório, os peritos guardarão material suficiente para a eventualidade de nova perícia. Sempre que conveniente, os laudos serão ilustrados com provas fotográficas, ou microfotográficas, desenhos ou esquemas.",
+        "pontos": [
+          "Material suficiente guardado para eventual nova perícia.",
+          "Laudos ilustrados com fotografias, microfotografias, desenhos ou esquemas."
+        ],
+        "atencao": [
+          "Guarda de material para contraprova."
+        ],
+        "exemplo": "Perito guarda parte da amostra para uma possível segunda análise.",
+        "prova": [
+          "Assertiva que permite consumir toda a amostra na perícia de laboratório erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-171",
+      "unit_id": "eb6313d2-422f-5ee1-b435-45d8faa3f697",
+      "content_sha256": "0e4ad52c6553a2b6f27bc9520e1cad76ae36354155780112f3d3d58b3020e6c1",
+      "simples": "Rompimento de obstáculo ou escalada exige descrição dos vestígios e indicação pericial de instrumentos, meios e época presumida do fato.",
+      "pontos": [
+        "Análise técnica do modo de execução.",
+        "Descrever vestígios antes de concluir.",
+        "Integrar corpo de delito e eventual impossibilidade do art. 167."
+      ],
+      "atencao": [
+        "Qualificadora não deve ser presumida só pelo nome dado à ocorrência."
+      ],
+      "exemplo": "Fechadura rompida é descrita e perito indica instrumento e meio provável. Variação: Sem vestígio disponível, avaliar justificativa de impossibilidade e regime probatório, não fabricar laudo.",
+      "prova": [
+        "Só dizer houve rompimento basta ao laudo? Não.",
+        "Época presumida integra o exame? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Vestígio de execução",
+          "significado": "Marca material que ajuda a reconstruir meios e instrumentos empregados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "eb6313d2-422f-5ee1-b435-45d8faa3f697",
+        "content_sha256": "0e4ad52c6553a2b6f27bc9520e1cad76ae36354155780112f3d3d58b3020e6c1",
+        "simples": "Nos crimes cometidos com destruição ou rompimento de obstáculo à subtração da coisa, ou por meio de escalada, os peritos, além de descrever os vestígios, indicarão com que instrumentos, por que meios e em que época presumem ter sido o fato praticado.",
+        "pontos": [
+          "Crimes com destruição ou rompimento de obstáculo, ou escalada.",
+          "Peritos descrevem os vestígios e indicam instrumentos, meios e época provável."
+        ],
+        "atencao": [
+          "Perícia de qualificadora (rompimento de obstáculo, escalada)."
+        ],
+        "exemplo": "No furto qualificado por rompimento de obstáculo, o perito indica o instrumento usado.",
+        "prova": [
+          "Assertiva que dispensa a indicação da época do fato no laudo do art. 171 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-172",
+      "unit_id": "4729f1ff-4653-5127-96f2-c3d90d63780c",
+      "content_sha256": "9a6da9fc9ce8deabf4da88569c2c50608f03a2163e95b1cf058d71975435ca9a",
+      "simples": "Peritos avaliam coisas destruídas, deterioradas ou produto do crime quando necessário; impossibilidade direta permite elementos dos autos e diligências.",
+      "pontos": [
+        "Necessidade da avaliação.",
+        "Via indireta precisa elementos existentes e obtidos legitimamente.",
+        "Não confundir estimativa fundamentada com palpite."
+      ],
+      "atencao": [
+        "Destruição do objeto não torna impossível toda avaliação, mas exige suporte técnico para reconstrução."
+      ],
+      "exemplo": "Bem destruído é avaliado com registros disponíveis e diligências técnicas. Variação: Sem dados confiáveis, não inventar valor para preencher relatório.",
+      "prova": [
+        "Só avaliação direta é permitida? Não.",
+        "Palpite sem elementos satisfaz via indireta? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Avaliação indireta",
+          "significado": "Estimativa técnica fundamentada sem exame direto possível."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4729f1ff-4653-5127-96f2-c3d90d63780c",
+        "content_sha256": "9a6da9fc9ce8deabf4da88569c2c50608f03a2163e95b1cf058d71975435ca9a",
+        "simples": "Proceder-se-á, quando necessário, à avaliação de coisas destruídas, deterioradas ou que constituam produto do crime. Se impossível a avaliação direta, os peritos procederão à avaliação por meio dos elementos existentes nos autos e dos que resultarem de diligências.",
+        "pontos": [
+          "Avaliação de coisas destruídas, deterioradas ou produto do crime.",
+          "Avaliação indireta, se a direta for impossível."
+        ],
+        "atencao": [
+          "Avaliação indireta com base nos autos e diligências."
+        ],
+        "exemplo": "Perito avalia o valor do bem destruído com base em documentos dos autos.",
+        "prova": [
+          "Assertiva que impede a avaliação indireta de coisas destruídas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-173",
+      "unit_id": "56674c35-4feb-5798-9ded-2610ed9f5c10",
+      "content_sha256": "a618b7c8e3b727757fdf980453f0f19b39cea69376e0e71a49083d6a2bab123b",
+      "simples": "Perícia de incêndio verifica causa, início, perigo à vida ou patrimônio alheio, dano, valor e demais circunstâncias relevantes.",
+      "pontos": [
+        "Origem e local inicial.",
+        "Perigo distinto do dano já ocorrido.",
+        "Extensão e valor documentados."
+      ],
+      "atencao": [
+        "Não concluir incêndio criminoso apenas porque houve fogo; causas e circunstâncias exigem apuração."
+      ],
+      "exemplo": "Peritos investigam ponto inicial e risco ao prédio vizinho, além do prejuízo. Variação: Causa acidental exige análise própria; o laudo não deve presumir dolo a partir do dano.",
+      "prova": [
+        "Perigo e dano são avaliados? Sim.",
+        "Todo fogo prova crime doloso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Dinâmica do incêndio",
+          "significado": "Reconstrução técnica da origem, propagação, risco e dano."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "56674c35-4feb-5798-9ded-2610ed9f5c10",
+        "content_sha256": "a618b7c8e3b727757fdf980453f0f19b39cea69376e0e71a49083d6a2bab123b",
+        "simples": "No caso de incêndio, os peritos verificarão a causa e o lugar em que houver começado, o perigo que dele tiver resultado para a vida ou para o patrimônio alheio, a extensão do dano e o seu valor e as demais circunstâncias que interessarem à elucidação do fato.",
+        "pontos": [
+          "Perícia de incêndio: causa e lugar de origem.",
+          "Perigo para a vida ou o patrimônio alheio.",
+          "Extensão e valor do dano, e outras circunstâncias."
+        ],
+        "atencao": [
+          "Relaciona-se ao crime de incêndio (art. 250 do Código Penal)."
+        ],
+        "exemplo": "Perito do incêndio determina onde o fogo começou e o prejuízo causado.",
+        "prova": [
+          "Assertiva que dispensa a verificação do local onde o incêndio começou erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 250 do Código Penal"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-174",
+      "unit_id": "d0b89adc-56b1-52f8-ae69-2e202754cf4e",
+      "content_sha256": "3064899c51cf4c2196479285d00791f97a6cd3e0f93493c824e89312a99a95e2",
+      "simples": "Grafotecnia compara escrito questionado com padrões reconhecidos ou autenticamente atribuídos; obtenção de novo padrão deve respeitar não autoincriminação.",
+      "pontos": [
+        "Documentos reconhecidos pela pessoa, judicialmente ou sem dúvida de autenticidade podem servir.",
+        "Autoridade pode requisitar arquivos públicos ou examinar no local.",
+        "Acusado não deve ser compelido a produzir ativamente padrão incriminador; preservar informação sobre direitos.",
+        "Precatória pode viabilizar diligência em local conhecido, sem eliminar garantias."
+      ],
+      "atencao": [
+        "Não transformar mandará escrever do inciso IV em obrigação coercitiva do acusado de produzir prova contra si. Fonte oficial STF sobre colheita sem advertência foi consultada por conteúdo indexado; acesso direto falhou."
+      ],
+      "exemplo": "Perícia compara assinatura discutida com documentos autênticos já disponíveis. Variação: Pedido de nova escrita ao acusado não autoriza puni-lo só por exercer a garantia de não autoincriminação.",
+      "prova": [
+        "Pode comparar documentos autênticos existentes? Sim.",
+        "Acusado é compelido a produzir ativamente padrão contra si? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Padrão gráfico",
+          "significado": "Escrita de comparação com autenticidade e obtenção legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=453761"
+      ],
+      "expected": {
+        "unit_id": "d0b89adc-56b1-52f8-ae69-2e202754cf4e",
+        "content_sha256": "3064899c51cf4c2196479285d00791f97a6cd3e0f93493c824e89312a99a95e2",
+        "simples": "No exame para o reconhecimento de escritos, por comparação de letra: a pessoa a quem se atribua o escrito será intimada para o ato, se encontrada; para a comparação servem quaisquer documentos que ela reconheça, já judicialmente reconhecidos como de seu punho, ou de autenticidade indiscutível; a autoridade requisitará documentos de arquivos ou estabelecimentos públicos, ou realizará a diligência no local; e, se não houver escritos ou forem insuficientes, mandará que a pessoa escreva o que lhe for ditado, podendo a diligência ser feita por precatória se ela estiver ausente em lugar certo.",
+        "pontos": [
+          "Intimação da pessoa a quem se atribui o escrito.",
+          "Documentos de comparação: reconhecidos, judicialmente reconhecidos ou de autenticidade indiscutível.",
+          "Requisição de documentos de arquivos públicos.",
+          "Sem escritos suficientes: a pessoa escreve o que lhe for ditado (por precatória, se ausente em lugar certo)."
+        ],
+        "atencao": [
+          "Ninguém é obrigado a produzir prova contra si: a recusa em escrever sob ditado é discutida pela jurisprudência."
+        ],
+        "exemplo": "A autoridade pede à pessoa que escreva um texto ditado, para comparar com o documento questionado.",
+        "prova": [
+          "Assertiva que dispensa a intimação da pessoa a quem se atribui o escrito, se ela for encontrada, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-175",
+      "unit_id": "b52ebae5-e36e-5a30-b8f0-c6216ee5ae33",
+      "content_sha256": "89b6fea100512ffd9781ac081aac0131b53718d2e8d7122814bc15ba0f7c0d8c",
+      "simples": "Instrumentos empregados na infração são examinados para verificar natureza e eficiência.",
+      "pontos": [
+        "Identificar características do objeto.",
+        "Avaliar aptidão relacionada ao uso alegado.",
+        "Exame não decide sozinho autoria ou dolo."
+      ],
+      "atencao": [
+        "Objeto apreendido não prova automaticamente que foi usado pelo acusado."
+      ],
+      "exemplo": "Ferramenta vinculada ao fato passa por exame de características e capacidade. Variação: Conclusão sobre eficiência não elimina necessidade de ligar instrumento, conduta e autor por prova.",
+      "prova": [
+        "Eficiência integra exame? Sim.",
+        "Laudo sozinho define toda autoria? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Eficiência do instrumento",
+          "significado": "Aptidão técnica relevante à utilização investigada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "b52ebae5-e36e-5a30-b8f0-c6216ee5ae33",
+        "content_sha256": "89b6fea100512ffd9781ac081aac0131b53718d2e8d7122814bc15ba0f7c0d8c",
+        "simples": "Serão sujeitos a exame os instrumentos empregados para a prática da infração, a fim de se lhes verificar a natureza e a eficiência.",
+        "pontos": [
+          "Instrumentos do crime são periciados.",
+          "Verifica-se a natureza e a eficiência."
+        ],
+        "atencao": [
+          "Exemplo: exame de eficiência da arma (potencialidade lesiva)."
+        ],
+        "exemplo": "A arma usada no crime é submetida a perícia para verificar se funciona.",
+        "prova": [
+          "Assertiva que dispensa o exame do instrumento do crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-176",
+      "unit_id": "e32a5a0a-83c0-5264-ab08-d67d8798b01f",
+      "content_sha256": "92ccd1a019b9c036a445117c44b6616aa3f040b5da830b4d55342ea81634f469",
+      "simples": "Autoridade e partes podem formular quesitos até o ato da diligência, observados os procedimentos específicos aplicáveis.",
+      "pontos": [
+        "Quesitos são perguntas técnicas.",
+        "Momento limite do artigo: ato da diligência.",
+        "Não confundir com antecedência de dez dias para oitiva pericial do art. 159."
+      ],
+      "atencao": [
+        "Não aplicar prazo de intimação da audiência como se fosse toda formulação de quesito neste artigo."
+      ],
+      "exemplo": "Parte apresenta questão técnica até o ato do exame para esclarecimento pericial. Variação: Na oitiva posterior, regras específicas de antecedência e intimação continuam aplicáveis.",
+      "prova": [
+        "Partes também formulam quesitos? Sim.",
+        "O artigo fixa dez dias para toda pergunta? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Quesito",
+          "significado": "Pergunta técnica destinada ao perito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e32a5a0a-83c0-5264-ab08-d67d8798b01f",
+        "content_sha256": "92ccd1a019b9c036a445117c44b6616aa3f040b5da830b4d55342ea81634f469",
+        "simples": "A autoridade e as partes poderão formular quesitos até o ato da diligência.",
+        "pontos": [
+          "Quesitos podem ser formulados até o ato da diligência."
+        ],
+        "atencao": [
+          "Prazo: até a realização do ato."
+        ],
+        "exemplo": "A defesa apresenta quesitos antes do início da perícia.",
+        "prova": [
+          "Assertiva que veda a formulação de quesitos pela autoridade erra."
+        ],
+        "termos": [
+          {
+            "termo": "Quesitos",
+            "significado": "Perguntas dirigidas aos peritos."
+          }
+        ],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-177",
+      "unit_id": "74e83fc3-e20f-5029-ba66-5804d77cd08f",
+      "content_sha256": "1157e91a142b44918242f2d97a7af477a33caf1dd5c27e31e798f090981761e5",
+      "simples": "Perícia por precatória tem nomeação no juízo deprecado; em ação privada, acordo das partes pode permitir nomeação pelo deprecante.",
+      "pontos": [
+        "Regra: nomeação no destino.",
+        "Exceção: ação privada e acordo.",
+        "Quesitos judiciais e das partes transcritos na precatória."
+      ],
+      "atencao": [
+        "Não estender acordo da ação privada a toda ação pública sem fundamento."
+      ],
+      "exemplo": "Juízo solicita perícia em outra comarca e destino nomeia peritos. Variação: Na ação privada, acordo pode deslocar nomeação ao solicitante, com quesitos transcritos.",
+      "prova": [
+        "Regra é nomeação no deprecado? Sim.",
+        "A exceção dispensa acordo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Juízo deprecado",
+          "significado": "Órgão destinatário da diligência solicitada por precatória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "74e83fc3-e20f-5029-ba66-5804d77cd08f",
+        "content_sha256": "1157e91a142b44918242f2d97a7af477a33caf1dd5c27e31e798f090981761e5",
+        "simples": "No exame por precatória, a nomeação dos peritos far-se-á no juízo deprecado. Havendo, porém, no caso de ação privada, acordo das partes, essa nomeação poderá ser feita pelo juiz deprecante. Os quesitos do juiz e das partes serão transcritos na precatória.",
+        "pontos": [
+          "Exame por precatória: peritos nomeados no juízo deprecado.",
+          "Ação privada: acordo das partes permite nomeação pelo juiz deprecante.",
+          "Quesitos transcritos na precatória."
+        ],
+        "atencao": [
+          "Regra: juízo deprecado nomeia."
+        ],
+        "exemplo": "Perícia em outra comarca: o juízo deprecado nomeia o perito.",
+        "prova": [
+          "Assertiva que sempre atribui ao juízo deprecante a nomeação dos peritos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-178",
+      "unit_id": "5ea249bb-5c42-579e-b31b-2bffe2dce22e",
+      "content_sha256": "bb4b5ff783a057c48b081532ee251ff3c3ca96d01ac03a44c0007223de406908",
+      "simples": "Perícia oficial é requisitada ao diretor da repartição e o laudo assinado é juntado ao processo.",
+      "pontos": [
+        "Requisição institucional.",
+        "Laudo com assinatura dos responsáveis.",
+        "Integrar quantidade e qualificações atuais do art. 159."
+      ],
+      "atencao": [
+        "Plural histórico não torna dois oficiais obrigatórios em todo exame atual."
+      ],
+      "exemplo": "Autoridade requisita ao diretor e junta laudo firmado pelo perito oficial competente. Variação: Perícia complexa pode ter mais profissionais, sem transformar pluralidade em regra universal.",
+      "prova": [
+        "Requisição vai ao diretor? Sim.",
+        "Dois oficiais são sempre exigidos pelo plural? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Requisição pericial",
+          "significado": "Solicitação institucional do exame técnico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5ea249bb-5c42-579e-b31b-2bffe2dce22e",
+        "content_sha256": "bb4b5ff783a057c48b081532ee251ff3c3ca96d01ac03a44c0007223de406908",
+        "simples": "No caso do art. 159, o exame será requisitado pela autoridade ao diretor da repartição, juntando-se ao processo o laudo assinado pelos peritos.",
+        "pontos": [
+          "Exame requisitado pela autoridade ao diretor da repartição.",
+          "Laudo assinado pelos peritos é juntado ao processo."
+        ],
+        "atencao": [
+          "Perícia oficial é requisitada à repartição."
+        ],
+        "exemplo": "O delegado requisita o exame ao diretor do instituto de criminalística.",
+        "prova": [
+          "Assertiva que dispensa a assinatura dos peritos no laudo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-179",
+      "unit_id": "3cbfd718-4844-5b19-af27-fa78020230e0",
+      "content_sha256": "a61da7b4111bda065b2b31b7b63a25278eb5a9d23112e5fcdb20fddcd0239f0f",
+      "simples": "Perícia não oficial tem auto lavrado pelo escrivão e assinado pelos peritos; laudo prorrogado do art. 160 segue subscrição e rubrica indicadas.",
+      "pontos": [
+        "Art. 159, §1º: assinatura dos peritos e da autoridade se presente.",
+        "Parágrafo remete ao art. 160, parágrafo único.",
+        "Expressão datilografado é histórica: integrar documentação eletrônica e identificação atuais."
+      ],
+      "atencao": [
+        "Não exigir máquina de escrever como condição contemporânea de validade, nem dispensar autenticação dos responsáveis."
+      ],
+      "exemplo": "Dois não oficiais assinam o auto lavrado; autoridade também assina se participou do exame. Variação: Documento eletrônico segue autenticidade aplicável, sem simular dispensa de autoria por formato digital.",
+      "prova": [
+        "Autoridade ausente deve assinar como presente? Não.",
+        "Peritos precisam identificar sua autoria? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Auto do exame",
+          "significado": "Registro formal da diligência pericial não oficial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3cbfd718-4844-5b19-af27-fa78020230e0",
+        "content_sha256": "a61da7b4111bda065b2b31b7b63a25278eb5a9d23112e5fcdb20fddcd0239f0f",
+        "simples": "No caso do §1º do art. 159 (peritos não oficiais), o escrivão lavrará o auto respectivo, que será assinado pelos peritos e, se presente ao exame, também pela autoridade. Nos casos do art. 160, parágrafo único, o laudo, que poderá ser datilografado, será subscrito e rubricado em suas folhas por todos os peritos.",
+        "pontos": [
+          "Peritos não oficiais: o escrivão lavra o auto, assinado pelos peritos e pela autoridade, se presente.",
+          "Laudo subscrito e rubricado em todas as folhas por todos os peritos."
+        ],
+        "atencao": [
+          "Formalidade da perícia por peritos não oficiais."
+        ],
+        "exemplo": "Peritos leigos assinam o auto lavrado pelo escrivão.",
+        "prova": [
+          "Assertiva que dispensa a rubrica das folhas do laudo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159",
+          "Art. 160"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-180",
+      "unit_id": "54948937-3c32-5b71-a819-42a0268a5b7b",
+      "content_sha256": "1bbce12f3738128b52b0957265dc007dc63f685e117ca69ecde200be3ff810a7",
+      "simples": "Divergência pericial é registrada ou exposta em laudos separados e leva à nomeação de terceiro; se este divergir de ambos, pode haver novo exame.",
+      "pontos": [
+        "Preservar opiniões e respostas divergentes.",
+        "Terceiro não apaga os laudos anteriores.",
+        "Divergência dupla permite novo exame por outros peritos."
+      ],
+      "atencao": [
+        "Não obrigar peritos a fabricar consenso nem tratar terceiro como vencedor automático de qualquer disputa."
+      ],
+      "exemplo": "Dois peritos divergem e autoridade nomeia terceiro, registradas as conclusões. Variação: Terceiro discorda de ambos: pode ser determinado novo exame, não simples escolha arbitrária.",
+      "prova": [
+        "A divergência deve ser documentada? Sim.",
+        "Terceiro impede sempre novo exame? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Divergência pericial",
+          "significado": "Conclusões técnicas discordantes preservadas para esclarecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "54948937-3c32-5b71-a819-42a0268a5b7b",
+        "content_sha256": "1bbce12f3738128b52b0957265dc007dc63f685e117ca69ecde200be3ff810a7",
+        "simples": "Se houver divergência entre os peritos, serão consignadas no auto do exame as declarações e respostas de um e de outro, ou cada um redigirá separadamente o seu laudo, e a autoridade nomeará um terceiro; se este divergir de ambos, a autoridade poderá mandar proceder a novo exame por outros peritos.",
+        "pontos": [
+          "Divergência: consignam-se as respostas de cada perito, ou laudos separados.",
+          "A autoridade nomeia um terceiro perito.",
+          "Se o terceiro divergir de ambos, novo exame por outros peritos."
+        ],
+        "atencao": [
+          "Terceiro perito resolve a divergência."
+        ],
+        "exemplo": "Dois peritos divergem, e a autoridade nomeia um terceiro.",
+        "prova": [
+          "Assertiva que determina o descarte do laudo em caso de divergência entre peritos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 159"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-181",
+      "unit_id": "48db442d-99c3-564d-a822-e59c4888c29d",
+      "content_sha256": "790e5242fa4e8469a1e5b54142218ffafff1306ea30099da21e28c137dbe5d6f",
+      "simples": "Formalidades ausentes e laudo omisso, obscuro ou contraditório exigem suprimento, complementação ou esclarecimento; pode haver novo exame por outros peritos.",
+      "pontos": [
+        "Autoridade judiciária determina correção.",
+        "Separar obscuridade de mera discordância da parte.",
+        "Novo exame é possibilidade quando conveniente."
+      ],
+      "atencao": [
+        "Deficiência técnica não deve ser ocultada nem resolvida com conclusão judicial sem base."
+      ],
+      "exemplo": "Laudo deixa quesito essencial sem resposta; juiz determina complementação. Variação: Se a falha exige novo exame, outros peritos podem ser designados conforme a necessidade.",
+      "prova": [
+        "Omissão pode exigir complemento? Sim.",
+        "Novo exame é automaticamente proibido? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Esclarecimento pericial",
+          "significado": "Correção ou explicação de lacunas e ambiguidades técnicas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "48db442d-99c3-564d-a822-e59c4888c29d",
+        "content_sha256": "790e5242fa4e8469a1e5b54142218ffafff1306ea30099da21e28c137dbe5d6f",
+        "simples": "No caso de inobservância de formalidades, ou no caso de omissões, obscuridades ou contradições, a autoridade judiciária mandará suprir a formalidade, complementar ou esclarecer o laudo. A autoridade poderá também ordenar que se proceda a novo exame, por outros peritos, se julgar conveniente.",
+        "pontos": [
+          "Falhas do laudo: a autoridade manda suprir, complementar ou esclarecer.",
+          "Pode ordenar novo exame por outros peritos."
+        ],
+        "atencao": [
+          "Poder da autoridade para sanar o laudo."
+        ],
+        "exemplo": "Juiz manda o perito esclarecer uma contradição no laudo.",
+        "prova": [
+          "Assertiva que impede o juiz de determinar novo exame por outros peritos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 180",
+          "Art. 182"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-182",
+      "unit_id": "5ad1ade9-213e-5bad-8d04-8e585948d0be",
+      "content_sha256": "ea3a5e923a6488a7a61f17952cac2f5103fb271f329bc9239173b77e151b8f45",
+      "simples": "Juiz pode aceitar ou rejeitar laudo total ou parcialmente, mediante apreciação fundamentada do conjunto probatório.",
+      "pontos": [
+        "Laudo não vincula mecanicamente.",
+        "Motivação continua indispensável.",
+        "Não substituir ciência por opinião pessoal arbitrária."
+      ],
+      "atencao": [
+        "Livre apreciação não significa ignorar prova técnica sem razões."
+      ],
+      "exemplo": "Juiz acolhe parte do laudo e explica por que outra conclusão não é sustentada pelo conjunto. Variação: Discordância pessoal sem fundamento não legitima rejeição do exame.",
+      "prova": [
+        "O laudo vincula sempre integralmente? Não.",
+        "Rejeição dispensa motivação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Valoração pericial",
+          "significado": "Análise judicial fundamentada da prova técnica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "5ad1ade9-213e-5bad-8d04-8e585948d0be",
+        "content_sha256": "ea3a5e923a6488a7a61f17952cac2f5103fb271f329bc9239173b77e151b8f45",
+        "simples": "O juiz não ficará adstrito ao laudo, podendo aceitá-lo ou rejeitá-lo, no todo ou em parte.",
+        "pontos": [
+          "O juiz não está vinculado ao laudo.",
+          "Pode aceitá-lo ou rejeitá-lo, total ou parcialmente."
+        ],
+        "atencao": [
+          "Sistema liberatório: o laudo não vincula o juiz."
+        ],
+        "exemplo": "O juiz acolhe parte do laudo e rejeita outra, fundamentando.",
+        "prova": [
+          "Assertiva que vincula o juiz ao laudo pericial erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-183",
+      "unit_id": "c8cbf980-36e7-5618-ad3b-746484c392cf",
+      "content_sha256": "78e2d6874d0909e5530885d1ccd0a465f410f7c266fc05823ba7bbd9bdafb53b",
+      "simples": "Na ação que não é pública, observar o art. 19 sobre destino e disponibilidade dos autos investigativos pertinentes.",
+      "pontos": [
+        "Remissão à disciplina da ação privada.",
+        "Verificar legitimidade e prazo de queixa.",
+        "Exame não transforma iniciativa privada em denúncia obrigatória do MP."
+      ],
+      "atencao": [
+        "Não supor ação pública apenas porque houve perícia policial."
+      ],
+      "exemplo": "Perícia em investigação de delito de ação privada integra autos disponíveis ao legitimado na forma do art. 19. Variação: A existência de laudo não elimina o prazo e os requisitos de propositura da queixa.",
+      "prova": [
+        "Perícia muda automaticamente natureza da ação? Não.",
+        "Remissão é ao art. 19? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Iniciativa privada",
+          "significado": "Propositura por legitimado mediante queixa nas hipóteses legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c8cbf980-36e7-5618-ad3b-746484c392cf",
+        "content_sha256": "78e2d6874d0909e5530885d1ccd0a465f410f7c266fc05823ba7bbd9bdafb53b",
+        "simples": "Nos crimes em que não couber ação pública, observar-se-á o disposto no art. 19.",
+        "pontos": [
+          "Ação privada: aplica-se o art. 19 (autos entregues ao ofendido ou aguardam sua iniciativa)."
+        ],
+        "atencao": [
+          "Remissão ao art. 19."
+        ],
+        "exemplo": "Em crime de ação privada, os autos periciais seguem o destino do art. 19.",
+        "prova": [
+          "Assertiva que aplica o art. 183 à ação penal pública erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 19"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-184",
+      "unit_id": "95ffdf1e-94a5-500d-9a6a-b88816ff2881",
+      "content_sha256": "4bb7ca1696f2da222dbadde5ea8fcde52a9e586a76cab1414894ae44ec8fb962",
+      "simples": "Juiz ou polícia nega perícia requerida desnecessária ao esclarecimento, ressalvado exame de corpo de delito exigível.",
+      "pontos": [
+        "Avaliar necessidade concreta.",
+        "Ressalva protege exame de materialidade.",
+        "Integrar art. 167 quando vestígios desapareceram e exame é impossível."
+      ],
+      "atencao": [
+        "Não negar exame obrigatório possível por simples conveniência, nem aceitar toda diligência inútil sem análise."
+      ],
+      "exemplo": "Pedido pericial irrelevante é motivadamente negado por ausência de necessidade. Variação: Infração com vestígios disponíveis exige corpo de delito, sem dispensa arbitrária pela regra geral.",
+      "prova": [
+        "Toda perícia pedida é obrigatória? Não.",
+        "Regra autoriza negar corpo de delito exigível por conveniência? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Necessidade pericial",
+          "significado": "Pertinência do exame, com ressalva legal da materialidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "95ffdf1e-94a5-500d-9a6a-b88816ff2881",
+        "content_sha256": "4bb7ca1696f2da222dbadde5ea8fcde52a9e586a76cab1414894ae44ec8fb962",
+        "simples": "Salvo o caso de exame de corpo de delito, o juiz ou a autoridade policial negará a perícia requerida pelas partes quando não for necessária ao esclarecimento da verdade.",
+        "pontos": [
+          "Perícia requerida pelas partes pode ser negada se desnecessária.",
+          "Exceção: exame de corpo de delito não pode ser negado."
+        ],
+        "atencao": [
+          "Exame de corpo de delito é obrigatório quando há vestígios."
+        ],
+        "exemplo": "A autoridade nega uma perícia desnecessária requerida pela defesa.",
+        "prova": [
+          "Assertiva que permite negar o exame de corpo de delito por desnecessário erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 158"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:15:44.2179+00:00",
+        "updated_at": "2026-10-11T13:15:44.2179+00:00"
+      }
+    }
+  ]
+}

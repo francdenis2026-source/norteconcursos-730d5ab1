@@ -1,0 +1,1543 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T02:17:22.884499+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 25,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-226",
+        "art-227",
+        "art-228",
+        "art-229",
+        "art-230",
+        "art-231",
+        "art-232",
+        "art-233",
+        "art-234",
+        "art-235",
+        "art-236",
+        "art-237",
+        "art-238",
+        "art-239",
+        "art-240",
+        "art-241",
+        "art-242",
+        "art-243",
+        "art-244",
+        "art-245",
+        "art-246",
+        "art-247",
+        "art-248",
+        "art-249",
+        "art-250"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-226",
+      "unit_id": "e43314a5-31b0-5236-8f22-7d4aaa0c978f",
+      "content_sha256": "5e74c48ed24b024d8337135c73c24edbb9d8f91e115166de04f2e0174d9a07c6",
+      "simples": "Reconhecimento de desconhecido exige descrição prévia, alinhamento adequado, proteção cabível e registro detalhado; não é simples exibição de suspeito.",
+      "pontos": [
+        "Descrever antes; pessoas semelhantes no alinhamento, quando possível, com justificativa para limitações.",
+        "Auto assinado pela autoridade, reconhecedor e duas testemunhas; observar proteção contra intimidação.",
+        "Tema 1258/STJ, julgado em junho de 2025: procedimento obrigatório na investigação e em juízo; reconhecimento inválido não sustenta condenação, prisão preventiva, recebimento da denúncia ou pronúncia.",
+        "Repetição não cura contaminação da memória; prova independente pode sustentar autoria. Reconhecimento válido deve combinar com outras provas.",
+        "Identificar pessoa anteriormente conhecida difere de reconhecer desconhecido pela memória visual."
+      ],
+      "atencao": [
+        "Não transformar a expressão quando possível em dispensa geral. A proteção em juízo integra as garantias atuais, inclusive art. 217. Tema 1380/STF deve ser acompanhado; não atribuir ao STF tese definitiva com base apenas no tema pendente consultado."
+      ],
+      "exemplo": "Vítima descreve desconhecido antes de observar alinhamento sem destaque artificial do suspeito. Variação: Exibir primeiro uma foto isolada pode contaminar reconhecimento posterior; nova sessão não apaga automaticamente esse vício.",
+      "prova": [
+        "Reconhecimento irregular é mera recomendação descumprida? Não, conforme Tema 1258/STJ.",
+        "Prova independente pode demonstrar autoria apesar do reconhecimento inválido? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reconhecimento formal",
+          "significado": "Procedimento de identificação visual sujeito a garantias de confiabilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40CNOT%3D%27021716%27"
+      ],
+      "expected": {
+        "unit_id": "e43314a5-31b0-5236-8f22-7d4aaa0c978f",
+        "content_sha256": "5e74c48ed24b024d8337135c73c24edbb9d8f91e115166de04f2e0174d9a07c6",
+        "simples": "Quando houver necessidade de fazer-se o reconhecimento de pessoa, procede-se assim: a pessoa que tiver de fazer o reconhecimento é convidada a descrever a pessoa a ser reconhecida; esta será colocada, se possível, ao lado de outras que tiverem qualquer semelhança, convidando-se quem faz o reconhecimento a apontá-la; se houver razão para recear que a pessoa chamada não diga a verdade em face da que deve ser reconhecida, por intimidação ou outra influência, a autoridade providenciará para que esta não veja aquela; do ato lavra-se auto pormenorizado, subscrito pela autoridade, pela pessoa que reconheceu e por duas testemunhas presenciais. O inciso III não se aplica na instrução criminal ou em plenário.",
+        "pontos": [
+          "I: descrição prévia da pessoa a ser reconhecida.",
+          "II: colocação ao lado de pessoas semelhantes, se possível.",
+          "III: se houver receio de intimidação, a pessoa a reconhecer não vê a reconhecenda.",
+          "IV: auto pormenorizado, subscrito pela autoridade, pelo reconhecedor e por duas testemunhas.",
+          "Parágrafo único: o inciso III não se aplica na instrução ou no plenário."
+        ],
+        "atencao": [
+          "O STJ tem exigido a observância do procedimento do art. 226 sob pena de invalidade do reconhecimento.",
+          "O parágrafo único afasta o inciso III na instrução e no plenário."
+        ],
+        "exemplo": "A vítima descreve o autor e depois o aponta entre pessoas parecidas.",
+        "prova": [
+          "Assertiva que dispensa a descrição prévia pela pessoa que fará o reconhecimento erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 227",
+          "Art. 228"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-227",
+      "unit_id": "8a52ec49-42b6-569a-ba57-256b861fe18d",
+      "content_sha256": "97b27e544c2d7a4e52166491546739ffc15199c9b5f9b1b78e08ebbcb8089410",
+      "simples": "Reconhecimento de objetos segue as cautelas do reconhecimento de pessoas naquilo que for aplicável.",
+      "pontos": [
+        "Descrever características antes de apontar o objeto.",
+        "Registrar identificação e condições do ato.",
+        "Adaptar cautelas ao objeto, sem importar mecanicamente regras incompatíveis."
+      ],
+      "atencao": [
+        "Tema sobre reconhecimento de pessoas não se transforma automaticamente em tese idêntica para qualquer objeto."
+      ],
+      "exemplo": "Vítima descreve marca e avaria do relógio antes de identificá-lo. Variação: Relógios semelhantes exigem atenção às características individualizadoras.",
+      "prova": [
+        "Aplicam-se todas as regras sem adaptação? Não.",
+        "É importante registrar como o objeto foi identificado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reconhecimento de coisa",
+          "significado": "Identificação de objeto com cautelas pertinentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "8a52ec49-42b6-569a-ba57-256b861fe18d",
+        "content_sha256": "97b27e544c2d7a4e52166491546739ffc15199c9b5f9b1b78e08ebbcb8089410",
+        "simples": "No reconhecimento de objeto, proceder-se-á com as cautelas estabelecidas no artigo anterior, no que for aplicável.",
+        "pontos": [
+          "Reconhecimento de objeto segue as cautelas do art. 226, no que couber."
+        ],
+        "atencao": [
+          "Aplicação subsidiária das regras do reconhecimento de pessoas."
+        ],
+        "exemplo": "Vítima descreve o objeto subtraído antes de reconhecê-lo entre outros semelhantes.",
+        "prova": [
+          "Assertiva que dispensa as cautelas do art. 226 no reconhecimento de objeto erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 226"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-228",
+      "unit_id": "97235b7a-6d7c-5c9b-b3d6-d2b6e1c38d34",
+      "content_sha256": "e981e7adf67a30fdf2777e37514100581ada9df6aaf07b27bd6cb9a3e0b634c4",
+      "simples": "Cada reconhecedor realiza o ato separadamente, sem comunicação entre eles.",
+      "pontos": [
+        "Separação evita influência recíproca.",
+        "Cada relato e resultado deve ser individualizado."
+      ],
+      "atencao": [
+        "Concordância construída por conversa prévia não equivale a reconhecimentos independentes."
+      ],
+      "exemplo": "Duas vítimas descrevem e reconhecem separadamente. Variação: Uma vítima não deve transmitir à outra quem escolheu antes do segundo ato.",
+      "prova": [
+        "Podem combinar respostas antes? Não.",
+        "Os resultados devem ser individualizados? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Independência dos relatos",
+          "significado": "Prevenção de influência entre reconhecedores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "97235b7a-6d7c-5c9b-b3d6-d2b6e1c38d34",
+        "content_sha256": "e981e7adf67a30fdf2777e37514100581ada9df6aaf07b27bd6cb9a3e0b634c4",
+        "simples": "Se várias forem as pessoas chamadas a efetuar o reconhecimento de pessoa ou de objeto, cada uma fará a prova em separado, evitando-se qualquer comunicação entre elas.",
+        "pontos": [
+          "Vários reconhecedores: provas em separado.",
+          "Evita-se comunicação entre eles."
+        ],
+        "atencao": [
+          "Evita contaminação entre os reconhecimentos."
+        ],
+        "exemplo": "Duas vítimas fazem o reconhecimento separadamente, sem conversar entre si.",
+        "prova": [
+          "Assertiva que permite o reconhecimento conjunto por várias pessoas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 226"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-229",
+      "unit_id": "186117ea-17b0-511e-9a6a-d6a0ab80bca5",
+      "content_sha256": "6d8da8997ea28e2e11766105537cccd4fd1f58bd9087c362329427f18b86d4d1",
+      "simples": "Acareação confronta declarações divergentes sobre fatos relevantes entre os participantes previstos no artigo.",
+      "pontos": [
+        "Admite acusado, testemunha e ofendido nas combinações legais.",
+        "Reperguntar sobre os pontos de divergência e registrar explicações.",
+        "Preservar silêncio, defesa e proteção especial de vítimas."
+      ],
+      "atencao": [
+        "Acareação não autoriza coagir acusado a falar ou expor criança vítima a confronto revitimizador."
+      ],
+      "exemplo": "Duas testemunhas divergem sobre quem estava no local e esclarecem o ponto relevante. Variação: Divergência sem importância para o fato não exige acareação por si só.",
+      "prova": [
+        "Qualquer divergência irrelevante impõe acareação? Não.",
+        "O acusado conserva direito ao silêncio? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Acareação",
+          "significado": "Esclarecimento de divergência relevante entre declarações."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "186117ea-17b0-511e-9a6a-d6a0ab80bca5",
+        "content_sha256": "6d8da8997ea28e2e11766105537cccd4fd1f58bd9087c362329427f18b86d4d1",
+        "simples": "A acareação será admitida entre acusados, entre acusado e testemunha, entre testemunhas, entre acusado ou testemunha e a pessoa ofendida, e entre as pessoas ofendidas, sempre que divergirem, em suas declarações, sobre fatos ou circunstâncias relevantes. Os acareados serão reperguntados, para que expliquem os pontos de divergência, reduzindo-se a termo o ato.",
+        "pontos": [
+          "Cabe entre acusados, testemunhas, ofendidos e entre esses grupos.",
+          "Pressuposto: divergência sobre fatos ou circunstâncias relevantes.",
+          "Acareados são reperguntados.",
+          "O ato é reduzido a termo."
+        ],
+        "atencao": [
+          "Exige divergência RELEVANTE."
+        ],
+        "exemplo": "Duas testemunhas dão versões divergentes sobre ponto essencial e são acareadas.",
+        "prova": [
+          "Assertiva que admite acareação mesmo sem divergência erra."
+        ],
+        "termos": [
+          {
+            "termo": "Acareação",
+            "significado": "Confronto entre pessoas que deram declarações divergentes."
+          }
+        ],
+        "remissoes": [
+          "Art. 230"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-230",
+      "unit_id": "2f0bb38c-285f-57d0-9418-2de492e8b76c",
+      "content_sha256": "5fabd6b535a9c002b5b0beab0245db7694b429e27b726608302ffffb186270fb",
+      "simples": "Se testemunha divergente está ausente, podem ser esclarecidos os pontos com a presente e, quando conveniente, por precatória com a ausente.",
+      "pontos": [
+        "Ler pontos divergentes à presente e registrar explicações.",
+        "Persistindo discordância, transmitir dados e trechos pertinentes por precatória.",
+        "Medida condicionada à conveniência e à ausência de demora prejudicial."
+      ],
+      "atencao": [
+        "Não há obrigação de atrasar todo processo para acareação por precatória sem utilidade."
+      ],
+      "exemplo": "Testemunha presente esclarece divergência e juiz avalia necessidade de ouvir a ausente. Variação: Se a diligência não é conveniente e provoca atraso prejudicial, a hipótese legal não exige sua realização.",
+      "prova": [
+        "A precatória é sempre obrigatória? Não.",
+        "Devem ser identificados os pontos divergentes? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Acareação por precatória",
+          "significado": "Esclarecimento de divergência envolvendo testemunha ausente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2f0bb38c-285f-57d0-9418-2de492e8b76c",
+        "content_sha256": "5fabd6b535a9c002b5b0beab0245db7694b429e27b726608302ffffb186270fb",
+        "simples": "Se ausente alguma testemunha cujas declarações divirjam das de outra que esteja presente, a esta se darão a conhecer os pontos da divergência, consignando-se no auto o que explicar ou observar. Se subsistir a discordância, expedir-se-á precatória à autoridade do lugar onde resida a testemunha ausente, transcrevendo-se as declarações desta e as da testemunha presente, nos pontos em que divergirem, bem como o texto do referido auto, para que essa autoridade possa ouvir a testemunha ausente.",
+        "pontos": [
+          "Testemunha ausente divergente da presente: dá-se conhecimento à presente dos pontos divergentes.",
+          "Subsistindo a discordância: precatória ao lugar de residência da ausente.",
+          "Transcrevem-se as declarações divergentes."
+        ],
+        "atencao": [
+          "Acareação por precatória."
+        ],
+        "exemplo": "Testemunha em outra comarca é ouvida por precatória sobre a divergência.",
+        "prova": [
+          "Assertiva que dispensa a transcrição das declarações divergentes na precatória erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 229"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-231",
+      "unit_id": "a4464ca3-75c9-5845-ad4d-650292233a08",
+      "content_sha256": "1ca8fb43bbbd29dd961dacd3065a60686fa8ac36813d1158abe604a4f4e7f08a",
+      "simples": "As partes podem apresentar documentos em qualquer fase, ressalvadas restrições legais específicas.",
+      "pontos": [
+        "Regra de apresentação ampla.",
+        "Garantir conhecimento e possibilidade de resposta da parte contrária.",
+        "No júri, observar antecedência e ciência previstas no art. 479."
+      ],
+      "atencao": [
+        "Qualquer fase não significa surpreender a defesa no plenário ou ignorar norma especial."
+      ],
+      "exemplo": "Defesa junta documento novo e permite contraditório. Variação: Documento destinado a leitura no júri deve respeitar a regra específica, não somente este artigo.",
+      "prova": [
+        "A regra dispensa exceções legais? Não.",
+        "Documentos exigem contraditório? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Juntada documental",
+          "significado": "Apresentação de documento ao processo, com limites específicos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "a4464ca3-75c9-5845-ad4d-650292233a08",
+        "content_sha256": "1ca8fb43bbbd29dd961dacd3065a60686fa8ac36813d1158abe604a4f4e7f08a",
+        "simples": "Salvo os casos expressos em lei, as partes poderão apresentar documentos em qualquer fase do processo.",
+        "pontos": [
+          "Documentos podem ser juntados em qualquer fase do processo.",
+          "Exceções expressas em lei."
+        ],
+        "atencao": [
+          "Exemplo de exceção: no Júri, documentos devem ser juntados com antecedência mínima (art. 479)."
+        ],
+        "exemplo": "A defesa junta um documento novo na fase de instrução.",
+        "prova": [
+          "Assertiva que limita a juntada de documentos à fase inicial, sem ressalvas, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 479"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-232",
+      "unit_id": "c76c5d43-e3d7-5008-a3c5-1f6684e56ef7",
+      "content_sha256": "b30c01d9f26f05606f7cb673e3e11e41622715a6777b70757ccad46011bd7961",
+      "simples": "Documento compreende escritos e instrumentos públicos ou particulares; fotografia autenticada do documento tem valor do original.",
+      "pontos": [
+        "Natureza pública ou privada não elimina exame de autenticidade.",
+        "A equivalência mencionada exige autenticação.",
+        "Prova digital requer análise de origem e integridade pertinente."
+      ],
+      "atencao": [
+        "Imagem de tela não recebe autenticidade automática só por ter sido impressa."
+      ],
+      "exemplo": "Cópia fotográfica autenticada substitui original nos termos legais. Variação: Captura digital contestada demanda exame de confiabilidade e contexto, não presunção absoluta.",
+      "prova": [
+        "Só instrumento público é documento? Não.",
+        "Toda fotografia não autenticada equivale automaticamente ao original? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Autenticidade documental",
+          "significado": "Confiabilidade da origem e integridade do registro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c76c5d43-e3d7-5008-a3c5-1f6684e56ef7",
+        "content_sha256": "b30c01d9f26f05606f7cb673e3e11e41622715a6777b70757ccad46011bd7961",
+        "simples": "Consideram-se documentos quaisquer escritos, instrumentos ou papéis, públicos ou particulares. À fotografia do documento, devidamente autenticada, se dará o mesmo valor do original.",
+        "pontos": [
+          "Documento: quaisquer escritos, instrumentos ou papéis, públicos ou particulares.",
+          "Fotografia autenticada tem o valor do original."
+        ],
+        "atencao": [
+          "Conceito amplo de documento."
+        ],
+        "exemplo": "Cópia fotográfica autenticada de um contrato vale como original.",
+        "prova": [
+          "Assertiva que restringe documento aos papéis públicos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 231"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-233",
+      "unit_id": "68c5b642-5617-5f2a-850e-cced05b245c0",
+      "content_sha256": "e67460ba323eaadbcd1b2f958d3e94974ee599048102a250dd646e7f964e806b",
+      "simples": "Cartas particulares obtidas por meio criminoso não são admitidas; destinatário pode exibi-las para defender seu direito, nos limites legais.",
+      "pontos": [
+        "Distinguir obtenção criminosa da exibição pelo destinatário.",
+        "A segunda hipótese independe do consentimento do signatário.",
+        "Integrar proteção constitucional e limites do uso do conteúdo."
+      ],
+      "atencao": [
+        "Ser destinatário não autoriza praticar crime para obter outras comunicações nem exposição desnecessária."
+      ],
+      "exemplo": "Destinatário apresenta carta que recebeu para provar ameaça contra si. Variação: Subtrair correspondência de terceiro por meio criminoso não se legitima pela utilidade probatória.",
+      "prova": [
+        "Obtenção criminosa é admitida por ser útil? Não.",
+        "Destinatário precisa sempre de consentimento do signatário para defender direito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Correspondência particular",
+          "significado": "Comunicação privada sujeita a proteção e hipóteses de uso legítimo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "68c5b642-5617-5f2a-850e-cced05b245c0",
+        "content_sha256": "e67460ba323eaadbcd1b2f958d3e94974ee599048102a250dd646e7f964e806b",
+        "simples": "As cartas particulares, interceptadas ou obtidas por meios criminosos, não serão admitidas em juízo. As cartas poderão ser exibidas em juízo pelo respectivo destinatário, para a defesa de seu direito, ainda que não haja consentimento do signatário.",
+        "pontos": [
+          "Cartas interceptadas ou obtidas por meio criminoso: inadmissíveis.",
+          "O destinatário pode exibi-las para defender seu direito, sem consentimento do signatário."
+        ],
+        "atencao": [
+          "Aplicação da vedação às provas ilícitas."
+        ],
+        "exemplo": "O destinatário apresenta em juízo a carta que recebeu para defender seu direito.",
+        "prova": [
+          "Assertiva que exige o consentimento do signatário para que o destinatário exiba a carta erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 157"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-234",
+      "unit_id": "e8910c7c-7a59-5d23-ac26-6a45bb106672",
+      "content_sha256": "8c2c9b16c5c69afe8cd668786a08ce3ad2bb6d7bffbb2f7c23f6130682d80195",
+      "simples": "Ao conhecer documento relativo a ponto relevante, juiz pode determinar sua juntada, observada a estrutura acusatória e o contraditório.",
+      "pontos": [
+        "Relevância concreta para acusação ou defesa.",
+        "Providência não autoriza investigação substitutiva da acusação.",
+        "Dar acesso às partes para manifestação."
+      ],
+      "atencao": [
+        "Ler a iniciativa prevista com art. 3º-A e limites constitucionais, sem transformar juiz em investigador."
+      ],
+      "exemplo": "Documento identificado em depoimento é requisitado para esclarecer ponto relevante. Variação: Juiz não pode usar a regra como autorização para construir sozinho uma investigação acusatória.",
+      "prova": [
+        "Qualquer documento irrelevante justifica a medida? Não.",
+        "A juntada elimina contraditório? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Documento relevante",
+          "significado": "Registro pertinente ao esclarecimento de questão processual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e8910c7c-7a59-5d23-ac26-6a45bb106672",
+        "content_sha256": "8c2c9b16c5c69afe8cd668786a08ce3ad2bb6d7bffbb2f7c23f6130682d80195",
+        "simples": "Se o juiz tiver notícia da existência de documento relativo a ponto relevante da acusação ou da defesa, providenciará, independentemente de requerimento de qualquer das partes, para sua juntada aos autos, se possível.",
+        "pontos": [
+          "Juiz providencia, de ofício, a juntada de documento relevante da acusação ou da defesa, se possível."
+        ],
+        "atencao": [
+          "Iniciativa oficial do juiz."
+        ],
+        "exemplo": "O juiz determina de ofício a juntada de certidão relevante à defesa.",
+        "prova": [
+          "Assertiva que exige requerimento das partes para a juntada de documento relevante pelo juiz erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 156"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-235",
+      "unit_id": "230d0e4a-603c-5aef-a0d3-805213a91f9b",
+      "content_sha256": "74d52b52911090b739c28c91680f96ec83454a6e7aba6bf2e01cfe28920a8cac",
+      "simples": "Se a autenticidade de letra ou firma em documento particular é contestada, a verificação ocorre por exame pericial.",
+      "pontos": [
+        "Objeto é letra ou assinatura contestada.",
+        "Perícia deve seguir regras próprias e materiais adequados.",
+        "Preservar direito de não produzir ativamente prova contra si."
+      ],
+      "atencao": [
+        "A contestação não equivale a comprovação de falsidade; silêncio ou recusa a produzir padrão não prova autoria."
+      ],
+      "exemplo": "Assinatura contestada é comparada com padrões existentes legítimos. Variação: Recusa do acusado a escrever novo padrão não autoriza tratá-lo automaticamente como falsificador.",
+      "prova": [
+        "Contestar autenticidade já prova falsidade? Não.",
+        "Há exame pericial para a controvérsia? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Perícia grafotécnica",
+          "significado": "Exame técnico de escrita ou assinatura."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "230d0e4a-603c-5aef-a0d3-805213a91f9b",
+        "content_sha256": "74d52b52911090b739c28c91680f96ec83454a6e7aba6bf2e01cfe28920a8cac",
+        "simples": "A letra e firma dos documentos particulares serão submetidas a exame pericial quando contestada a sua autenticidade.",
+        "pontos": [
+          "Contestada a autenticidade, a letra e a firma de documentos particulares são periciadas."
+        ],
+        "atencao": [
+          "Só cabe a perícia se houver contestação."
+        ],
+        "exemplo": "A defesa contesta a assinatura de documento particular, e se determina a perícia.",
+        "prova": [
+          "Assertiva que obriga a perícia de todo documento particular, mesmo sem contestação, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 174"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-236",
+      "unit_id": "3e246e1a-10d4-5670-b708-9324297c8029",
+      "content_sha256": "8d1d71b6d1a56e6a57915fa6c166259e96f45048f7e7f25e863463392afb573f",
+      "simples": "Documento em língua estrangeira pode ser juntado imediatamente; tradução é feita quando necessária, pelo profissional previsto ou pessoa idônea nomeada.",
+      "pontos": [
+        "Juntada não depende sempre de tradução anterior.",
+        "Necessidade de tradução deve preservar compreensão e defesa.",
+        "Tradutor público; na falta, pessoa idônea nomeada pela autoridade."
+      ],
+      "atencao": [
+        "Não impor tradução prévia universal, nem dispensar tradução necessária para compreensão."
+      ],
+      "exemplo": "Documento estrangeiro é juntado e traduzido por ser relevante à controvérsia. Variação: Conteúdo cuja tradução seja necessária não pode ficar incompreensível às partes.",
+      "prova": [
+        "Tradução é requisito prévio universal da juntada? Não.",
+        "Pessoa idônea pode ser nomeada na falta de tradutor público? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Tradução necessária",
+          "significado": "Conversão linguística para compreensão do documento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3e246e1a-10d4-5670-b708-9324297c8029",
+        "content_sha256": "8d1d71b6d1a56e6a57915fa6c166259e96f45048f7e7f25e863463392afb573f",
+        "simples": "Os documentos em língua estrangeira, sem prejuízo de sua juntada imediata, serão, se necessário, traduzidos por tradutor público ou, na falta, por pessoa idônea nomeada pela autoridade.",
+        "pontos": [
+          "Documento em língua estrangeira é juntado de imediato.",
+          "Se necessário, é traduzido por tradutor público ou pessoa idônea."
+        ],
+        "atencao": [
+          "A tradução não impede a juntada."
+        ],
+        "exemplo": "Documento em inglês é juntado e, depois, traduzido por tradutor público.",
+        "prova": [
+          "Assertiva que impede a juntada do documento estrangeiro antes da tradução erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 232"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-237",
+      "unit_id": "f428be6e-5017-5c37-8038-6676ff117672",
+      "content_sha256": "1f9cc05e7aaeb3656912a129816ffeed047522eeaeb605b57b3876c163e7c4fb",
+      "simples": "Públicas-formas possuem valor após conferência com o original perante a autoridade, conforme a regra do artigo.",
+      "pontos": [
+        "Conferência autentica correspondência com o original.",
+        "Expressão histórica não abrange automaticamente todas as formas modernas de prova digital."
+      ],
+      "atencao": [
+        "Não concluir que todo documento eletrônico é inválido por não ser pública-forma: existem regimes próprios."
+      ],
+      "exemplo": "Traslado apresentado é conferido com original perante a autoridade. Variação: Documento eletrônico exige exame pelo regime aplicável, não uma proibição genérica extraída deste artigo.",
+      "prova": [
+        "A conferência prevista é dispensável para a pública-forma? Não.",
+        "O artigo proíbe todo documento eletrônico? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Pública-forma",
+          "significado": "Cópia formal sujeita à conferência prevista."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f428be6e-5017-5c37-8038-6676ff117672",
+        "content_sha256": "1f9cc05e7aaeb3656912a129816ffeed047522eeaeb605b57b3876c163e7c4fb",
+        "simples": "As públicas-formas só terão valor quando conferidas com o original, em presença da autoridade.",
+        "pontos": [
+          "Pública-forma (cópia autenticada por oficial público) só vale se conferida com o original perante a autoridade."
+        ],
+        "atencao": [
+          "Conferência com o original."
+        ],
+        "exemplo": "A cópia é cotejada com o original na presença do juiz.",
+        "prova": [
+          "Assertiva que dispensa a conferência com o original das públicas-formas erra."
+        ],
+        "termos": [
+          {
+            "termo": "Pública-forma",
+            "significado": "Cópia de documento autenticada por oficial público."
+          }
+        ],
+        "remissoes": [
+          "Art. 232"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-238",
+      "unit_id": "2b3a5d8e-2686-50c8-a228-5f2628533a05",
+      "content_sha256": "6da074ae7b438f17f7f095f24ab6aa57d10c63b397dca39500ce22bcaea029d8",
+      "simples": "Originais podem ser devolvidos após o encerramento do processo, a pedido, ouvido o Ministério Público e sem motivo relevante para conservação, ficando traslado.",
+      "pontos": [
+        "Requerimento é necessário.",
+        "Ouvir Ministério Público e avaliar conservação.",
+        "Manter traslado nos autos."
+      ],
+      "atencao": [
+        "Devolução não significa apagar a prova nem destruir o registro processual."
+      ],
+      "exemplo": "Após processo findo, original é devolvido e cópia permanece. Variação: Se há motivo relevante de conservação, devolução não é automática.",
+      "prova": [
+        "Processo findo torna toda devolução automática? Não.",
+        "Deve permanecer traslado? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Restituição documental",
+          "significado": "Devolução de original com conservação de registro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2b3a5d8e-2686-50c8-a228-5f2628533a05",
+        "content_sha256": "6da074ae7b438f17f7f095f24ab6aa57d10c63b397dca39500ce22bcaea029d8",
+        "simples": "Os documentos originais, juntos a processo findo, quando não exista motivo relevante que justifique a sua conservação nos autos, poderão, mediante requerimento e ouvido o Ministério Público, ser entregues à parte que os produziu, ficando traslado nos autos.",
+        "pontos": [
+          "Documentos originais de processo findo podem ser devolvidos à parte que os produziu.",
+          "Sem motivo relevante para mantê-los.",
+          "Mediante requerimento e oitiva do MP, ficando traslado nos autos."
+        ],
+        "atencao": [
+          "Fica o traslado (cópia) nos autos."
+        ],
+        "exemplo": "Terminado o processo, a parte pede os originais de volta e deixa cópia nos autos.",
+        "prova": [
+          "Assertiva que dispensa a oitiva do Ministério Público na devolução de documentos originais erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 232"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-239",
+      "unit_id": "4a4f5a37-c996-5f31-abd4-67224b6cde15",
+      "content_sha256": "e86561bf61ebf78793e961fb3d0f14421c4b594b17bf45f49d1d31f4379a3c98",
+      "simples": "Indício é circunstância conhecida e provada que permite inferir outra por raciocínio relacionado ao fato.",
+      "pontos": [
+        "Ponto de partida deve ser demonstrado.",
+        "Inferência exige nexo lógico, não mera intuição.",
+        "Avaliar conjunto e hipóteses alternativas."
+      ],
+      "atencao": [
+        "Indício não é sinônimo de boato ou suspeita sem base; prova indireta não é automaticamente inútil."
+      ],
+      "exemplo": "Registro comprovado de acesso ao local integra inferência junto a outros dados. Variação: Boato de que alguém parece culpado não se torna indício só por repetição.",
+      "prova": [
+        "O fato de partida deve ser conhecido e provado? Sim.",
+        "Toda suspeita é indício jurídico? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prova indiciária",
+          "significado": "Inferência a partir de circunstância demonstrada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4a4f5a37-c996-5f31-abd4-67224b6cde15",
+        "content_sha256": "e86561bf61ebf78793e961fb3d0f14421c4b594b17bf45f49d1d31f4379a3c98",
+        "simples": "Considera-se indício a circunstância conhecida e provada que, tendo relação com o fato, autorize, por indução, concluir-se a existência de outra ou outras circunstâncias.",
+        "pontos": [
+          "Indício: circunstância conhecida e provada.",
+          "Relaciona-se ao fato.",
+          "Permite concluir, por indução, a existência de outras circunstâncias."
+        ],
+        "atencao": [
+          "Indício é prova indireta, que se vale do raciocínio indutivo."
+        ],
+        "exemplo": "A presença do réu no local do crime pode ser indício de participação.",
+        "prova": [
+          "Assertiva que considera o indício mera suspeita, sem exigir a circunstância provada, erra."
+        ],
+        "termos": [
+          {
+            "termo": "Prova indiciária",
+            "significado": "Prova indireta construída por indução."
+          }
+        ],
+        "remissoes": [
+          "Art. 155"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-240",
+      "unit_id": "8889d649-60c9-5e84-809a-26399a1c91c1",
+      "content_sha256": "08762ea2ea5780d3db96dd37ea1e55e1d4b8773d7bff992cb8df907960d356d0",
+      "simples": "Busca pode ser domiciliar ou pessoal, com fundamentos, finalidades legais e proteção constitucional.",
+      "pontos": [
+        "Domiciliar exige fundadas razões e hipótese legítima de ingresso.",
+        "Finalidades abrangem pessoas, objetos, instrumentos, documentos e elementos pertinentes nos limites do §1º.",
+        "Pessoal exige fundada suspeita de porte de arma proibida ou dos objetos/documentos abrangidos pelo §2º.",
+        "Finalidade legal não dispensa privacidade, sigilos ou controle da diligência."
+      ],
+      "atencao": [
+        "Fundadas razões para ingresso em casa e fundada suspeita para busca pessoal são requisitos distintos; não basta propósito genérico de colher prova."
+      ],
+      "exemplo": "Mandado individualizado permite localizar objeto relacionado ao crime em endereço determinado. Variação: Busca pessoal não pode ser justificada apenas por aparência ou por objeto ilícito encontrado depois.",
+      "prova": [
+        "Busca tem duas modalidades previstas? Sim.",
+        "Finalidade útil dispensa fundamento e garantias? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Busca probatória",
+          "significado": "Diligência delimitada para localizar pessoa ou elemento pertinente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=280",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?O=JT&b=ACOR&livre=158580"
+      ],
+      "expected": {
+        "unit_id": "8889d649-60c9-5e84-809a-26399a1c91c1",
+        "content_sha256": "08762ea2ea5780d3db96dd37ea1e55e1d4b8773d7bff992cb8df907960d356d0",
+        "simples": "A busca será domiciliar ou pessoal. A busca domiciliar, quando fundadas razões a autorizarem, serve para prender criminosos; apreender coisas achadas ou obtidas por meios criminosos; apreender instrumentos de falsificação ou contrafação e objetos falsificados; apreender armas, munições e instrumentos utilizados na prática de crime; descobrir objetos necessários à prova da infração ou à defesa do réu; apreender cartas destinadas ao acusado ou em seu poder, quando houver suspeita de que o conteúdo seja útil à elucidação do fato; apreender pessoas vítimas de crimes; e colher qualquer elemento de convicção. A busca pessoal ocorrerá quando houver fundada suspeita de que alguém oculte consigo arma proibida ou os objetos das letras b a f e h do parágrafo anterior.",
+        "pontos": [
+          "Busca domiciliar ou pessoal.",
+          "Domiciliar: fundadas razões; finalidades das alíneas a a h.",
+          "Pessoal: fundada suspeita de arma proibida ou dos objetos listados."
+        ],
+        "atencao": [
+          "Exige FUNDADAS razões (domiciliar) e FUNDADA SUSPEITA (pessoal).",
+          "A Constituição protege o domicílio (art. 5º, XI)."
+        ],
+        "exemplo": "Busca domiciliar para apreender arma usada no crime, com fundadas razões.",
+        "prova": [
+          "Assertiva que permite a busca pessoal sem fundada suspeita erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 241",
+          "Art. 244"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-241",
+      "unit_id": "433353e1-cec1-558a-af35-f10852e5be6b",
+      "content_sha256": "07ddbd41cc8c7c9ad257effb0936c547086d7a467b86edc74b7da6e11a9d3bfe",
+      "simples": "A redação antiga sobre presença pessoal da autoridade deve ser lida com a inviolabilidade constitucional do domicílio.",
+      "pontos": [
+        "Presença da polícia ou do juiz não afasta, por si, reserva judicial.",
+        "Sem consentimento ou exceção constitucional, ingresso domiciliar depende de determinação judicial durante o dia."
+      ],
+      "atencao": [
+        "Não memorizar presença da autoridade policial como dispensa atual de mandado domiciliar."
+      ],
+      "exemplo": "Policiais executam mandado válido durante o dia, após identificar-se. Variação: Estar o delegado pessoalmente na porta não cria exceção constitucional de ingresso.",
+      "prova": [
+        "Presença do delegado basta para dispensar mandado? Não.",
+        "A Constituição limita a leitura do texto histórico? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Reserva judicial domiciliar",
+          "significado": "Proteção constitucional contra ingresso fora das hipóteses legítimas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=280"
+      ],
+      "expected": {
+        "unit_id": "433353e1-cec1-558a-af35-f10852e5be6b",
+        "content_sha256": "07ddbd41cc8c7c9ad257effb0936c547086d7a467b86edc74b7da6e11a9d3bfe",
+        "simples": "Quando a própria autoridade policial ou judiciária não a realizar pessoalmente, a busca domiciliar deverá ser precedida da expedição de mandado.",
+        "pontos": [
+          "Busca domiciliar por terceiros exige mandado.",
+          "A autoridade que a realiza pessoalmente fica dispensada do mandado pelo texto, mas a Constituição exige ordem judicial."
+        ],
+        "atencao": [
+          "Na Constituição, a busca domiciliar de dia exige ordem judicial; o dispositivo deve ser lido à luz dela."
+        ],
+        "exemplo": "O delegado cumpre o mandado de busca expedido pelo juiz.",
+        "prova": [
+          "Assertiva que dispensa mandado para a busca domiciliar realizada por agentes subordinados erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 243"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-242",
+      "unit_id": "de653b86-f2f2-59cc-bb90-16f94723f047",
+      "content_sha256": "20c2478f7a586081e7f66a13cbdca8f6db03e44a10d47faddc275e9da862afd3",
+      "simples": "Busca pode ser requerida pelas partes; a iniciativa judicial escrita no artigo deve observar o sistema acusatório.",
+      "pontos": [
+        "Requerimento deve indicar fundamento e objeto.",
+        "Art. 3º-A impede juiz de substituir a atividade investigativa da acusação.",
+        "Medida precisa de decisão fundamentada e limites."
+      ],
+      "atencao": [
+        "A expressão de ofício não autoriza investigação ilimitada pelo julgador."
+      ],
+      "exemplo": "Parte fundamenta pedido de busca com objeto e endereço identificados. Variação: Juiz não pode iniciar investigação acusatória própria invocando isoladamente este artigo.",
+      "prova": [
+        "Pedido de parte dispensa fundamentação? Não.",
+        "De ofício autoriza substituir a investigação da acusação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Iniciativa da busca",
+          "significado": "Provocação e decisão da diligência dentro do modelo acusatório."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "de653b86-f2f2-59cc-bb90-16f94723f047",
+        "content_sha256": "20c2478f7a586081e7f66a13cbdca8f6db03e44a10d47faddc275e9da862afd3",
+        "simples": "A busca poderá ser determinada de ofício ou a requerimento de qualquer das partes.",
+        "pontos": [
+          "Busca determinada de ofício ou a requerimento das partes."
+        ],
+        "atencao": [
+          "Mesmo de ofício, deve respeitar a Constituição e o sistema acusatório."
+        ],
+        "exemplo": "A defesa requer busca para localizar documento útil à sua tese.",
+        "prova": [
+          "Assertiva que restringe o pedido de busca ao Ministério Público erra: qualquer das partes pode requerer."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 240"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-243",
+      "unit_id": "80fea67c-d4e9-5bd5-8395-f488c4aa5af2",
+      "content_sha256": "6065b83966d8ffb9e3a5aedca2dfb2277f61115292ead337c90482b0554deea2",
+      "simples": "Mandado deve identificar local ou pessoa, indicar motivo e finalidade e conter assinaturas exigidas.",
+      "pontos": [
+        "Casa: precisão possível e morador; pessoa: nome ou sinais identificadores.",
+        "Subscrição do escrivão e assinatura da autoridade.",
+        "Incluir ordem de prisão quando houver.",
+        "Documento em poder do defensor: restrição legal, ressalvada hipótese de corpo de delito; integrar prerrogativas profissionais."
+      ],
+      "atencao": [
+        "Mandado genérico não legitima devassa; exceção de corpo de delito não elimina outras garantias profissionais aplicáveis."
+      ],
+      "exemplo": "Mandado delimita endereço e objeto procurado. Variação: Recolher toda a documentação de defesa sem vínculo ou garantia não se autoriza pela mera existência de mandado.",
+      "prova": [
+        "Motivo e finalidade devem constar? Sim.",
+        "Toda documentação do defensor é livremente apreensível? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Individualização do mandado",
+          "significado": "Delimitação formal do alvo e propósito da busca."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "80fea67c-d4e9-5bd5-8395-f488c4aa5af2",
+        "content_sha256": "6065b83966d8ffb9e3a5aedca2dfb2277f61115292ead337c90482b0554deea2",
+        "simples": "O mandado de busca deverá indicar, o mais precisamente possível, a casa em que será realizada a diligência e o nome do respectivo proprietário ou morador, ou, no caso de busca pessoal, o nome da pessoa ou os sinais que a identifiquem; mencionar o motivo e os fins da diligência; e ser subscrito pelo escrivão e assinado pela autoridade que o fizer expedir. Se houver ordem de prisão, constará do próprio texto do mandado de busca. Não será permitida a apreensão de documento em poder do defensor do acusado, salvo quando constituir elemento do corpo de delito.",
+        "pontos": [
+          "Indicar a casa e o morador (ou a pessoa, na busca pessoal).",
+          "Mencionar motivo e fins.",
+          "Subscrito pelo escrivão e assinado pela autoridade.",
+          "Ordem de prisão consta do próprio mandado.",
+          "Documentos em poder do defensor não podem ser apreendidos, salvo se forem corpo de delito."
+        ],
+        "atencao": [
+          "Proteção do sigilo profissional do advogado."
+        ],
+        "exemplo": "O mandado indica precisamente o endereço e a finalidade da busca.",
+        "prova": [
+          "Assertiva que permite a apreensão de qualquer documento em poder do defensor erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 240",
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-244",
+      "unit_id": "bed10d5b-0acd-5724-9c8e-d0e16dcede55",
+      "content_sha256": "8ce02a0bd7b2d26d9d57e57e54c3453dbabff3bb9b6cf8ea099ccfc46eb49c5e",
+      "simples": "Busca pessoal sem mandado é possível nas hipóteses legais, com fundada suspeita concretamente relacionada a arma ou corpo de delito quando exigida.",
+      "pontos": [
+        "Prisão, fundada suspeita qualificada e curso de busca domiciliar são hipóteses legais.",
+        "STJ, RHC 158580: elementos prévios e objetivos, vinculados ao objeto legal da busca.",
+        "Achado posterior não cria retroativamente a justificativa que faltava."
+      ],
+      "atencao": [
+        "Aparência, nervosismo genérico ou informação anônima isolada não bastam por si. A regra não autoriza revista indiscriminada."
+      ],
+      "exemplo": "Conduta concretamente observada e outros elementos indicam porte do objeto relacionado ao delito. Variação: Encontrar droga depois de revista sem fundamento prévio não convalida automaticamente a diligência.",
+      "prova": [
+        "Achado posterior supre justificativa inexistente antes? Não.",
+        "A suspeita deve ter elementos objetivos ligados à busca? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Fundada suspeita",
+          "significado": "Justificação concreta anterior para a revista probatória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://scon.stj.jus.br/SCON/pesquisar.jsp?O=JT&b=ACOR&livre=158580"
+      ],
+      "expected": {
+        "unit_id": "bed10d5b-0acd-5724-9c8e-d0e16dcede55",
+        "content_sha256": "8ce02a0bd7b2d26d9d57e57e54c3453dbabff3bb9b6cf8ea099ccfc46eb49c5e",
+        "simples": "A busca pessoal independerá de mandado, no caso de prisão ou quando houver fundada suspeita de que a pessoa esteja na posse de arma proibida ou de objetos ou papéis que constituam corpo de delito, ou quando a medida for determinada no curso de busca domiciliar.",
+        "pontos": [
+          "Busca pessoal sem mandado em caso de prisão.",
+          "Ou fundada suspeita de arma proibida ou corpo de delito.",
+          "Ou no curso de busca domiciliar."
+        ],
+        "atencao": [
+          "Exige FUNDADA SUSPEITA, baseada em elementos concretos, e não mero estereótipo."
+        ],
+        "exemplo": "Policial, com fundada suspeita, revista pessoa que esconde arma proibida.",
+        "prova": [
+          "Assertiva que exige mandado para toda busca pessoal erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 240, §2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-245",
+      "unit_id": "4ee74e36-6283-5afd-84de-04d817435a61",
+      "content_sha256": "f4704df298d2ea98e8fead63b6f6a84063aadac0825c5c143a95276d1c69dd66",
+      "simples": "Busca domiciliar com mandado ocorre de dia; consentimento e demais exceções constitucionais possuem requisitos próprios.",
+      "pontos": [
+        "Mostrar e ler mandado, intimando abertura; autoridade presente identifica-se e anuncia objeto, sem afastar a Constituição.",
+        "Resistência pode exigir ingresso forçado legítimo e proporcional; ausência do morador exige cautelas e vizinho quando presente.",
+        "Solicitar entrega do objeto procurado; apreensão segue registro e custódia.",
+        "Auto circunstanciado com duas testemunhas presenciais.",
+        "Tema 280/STF: ingresso forçado sem mandado exige razões concretas de flagrante no interior, justificadas no controle posterior."
+      ],
+      "atencao": [
+        "Consentimento deve ser livre e comprovado. Documentá-lo permite controle; decisões de 2026 apreciam concretamente a prova, sem regra de que todo consentimento verbal é inválido ou de que a palavra policial sempre basta."
+      ],
+      "exemplo": "Mandado diurno é apresentado, busca delimitada e apreensão documentada. Variação: Sem mandado, denúncia vaga e descoberta posterior de droga não dispensam fundamentação prévia ou comprovação de consentimento válido.",
+      "prova": [
+        "Presença policial elimina proteção domiciliar? Não.",
+        "Consentimento obtido por coação legitima ingresso? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Ingresso domiciliar legítimo",
+          "significado": "Entrada em casa sob autorização ou exceção constitucional demonstrada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=280",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=09%2F06%2F2026&num_registro=202503309826"
+      ],
+      "expected": {
+        "unit_id": "4ee74e36-6283-5afd-84de-04d817435a61",
+        "content_sha256": "f4704df298d2ea98e8fead63b6f6a84063aadac0825c5c143a95276d1c69dd66",
+        "simples": "As buscas domiciliares serão executadas de dia, salvo se o morador consentir que se realizem à noite, e, antes de penetrarem na casa, os executores mostrarão e lerão o mandado ao morador, ou a quem o represente, intimando-o a abrir a porta. Se a própria autoridade der a busca, declarará previamente sua qualidade e o objeto da diligência. Em caso de desobediência, será arrombada a porta e forçada a entrada. Recalcitrando o morador, será permitido o emprego de força contra coisas existentes no interior da casa. Ausentes os moradores, será intimado a assistir à diligência qualquer vizinho presente. Se determinada a pessoa ou coisa a procurar, o morador será intimado a mostrá-la. Descoberta, será imediatamente apreendida e posta sob custódia. Finda a diligência, lavra-se auto circunstanciado, assinado com duas testemunhas presenciais.",
+        "pontos": [
+          "Busca de dia, salvo consentimento do morador para a noite.",
+          "Mostrar e ler o mandado antes de entrar e intimar a abrir a porta.",
+          "Desobediência: arrombamento da porta.",
+          "Morador recalcitrante: força contra coisas.",
+          "Ausência de moradores: vizinho assiste.",
+          "Auto circunstanciado com duas testemunhas."
+        ],
+        "atencao": [
+          "Dia/noite: a Constituição permite o ingresso sem consentimento, com ordem judicial, apenas de dia."
+        ],
+        "exemplo": "A equipe lê o mandado ao morador e o intima a abrir a porta antes de entrar.",
+        "prova": [
+          "Assertiva que autoriza a busca domiciliar à noite com mandado, sem consentimento do morador, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 243",
+          "Art. 246"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-246",
+      "unit_id": "d5d8c98b-aa72-5b73-b780-387b798c4279",
+      "content_sha256": "1fed65378d24cf3ee0ecbda6d1399add5a0592f182c9a227673b7ab8b82438b3",
+      "simples": "As cautelas domiciliares também alcançam aposento ocupado em habitação coletiva e recinto profissional privado não aberto ao público.",
+      "pontos": [
+        "Proteção acompanha uso privado do espaço.",
+        "Não confundir área aberta ao público com recinto profissional reservado.",
+        "Observar garantias específicas quando aplicáveis."
+      ],
+      "atencao": [
+        "Quarto de hotel ocupado não perde proteção apenas porque integra estabelecimento comercial."
+      ],
+      "exemplo": "Busca em quarto de hotel ocupado respeita requisitos de ingresso domiciliar. Variação: Área de atendimento aberta ao público e sala profissional privada não têm automaticamente o mesmo regime espacial.",
+      "prova": [
+        "Quarto ocupado de hotel pode ter proteção domiciliar? Sim.",
+        "Todo espaço comercial é indiferentemente aberto à busca? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Domicílio protegido",
+          "significado": "Espaços privados abrangidos pelas cautelas legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ],
+      "expected": {
+        "unit_id": "d5d8c98b-aa72-5b73-b780-387b798c4279",
+        "content_sha256": "1fed65378d24cf3ee0ecbda6d1399add5a0592f182c9a227673b7ab8b82438b3",
+        "simples": "Aplicar-se-á também o disposto no artigo anterior quando se tiver de proceder a busca em compartimento habitado ou em aposento ocupado de habitação coletiva ou em compartimento não aberto ao público, onde alguém exercer profissão ou atividade.",
+        "pontos": [
+          "As regras do art. 245 valem para compartimento habitado ou aposento ocupado de habitação coletiva.",
+          "Também para compartimento não aberto ao público onde se exerce profissão ou atividade."
+        ],
+        "atencao": [
+          "Conceito amplo de 'casa' (STF)."
+        ],
+        "exemplo": "Escritório profissional fechado ao público equipara-se à casa para fins de busca.",
+        "prova": [
+          "Assertiva que exclui o escritório profissional da proteção do domicílio erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-247",
+      "unit_id": "c758ddcc-e995-5362-ac82-73dd2d4d7326",
+      "content_sha256": "f9352b9ac6bc4436b7ca48c857fc31265fcdbe518d964a3d35a2fa08e93c8211",
+      "simples": "Se busca domiciliar não alcançar o resultado, motivos da diligência devem ser comunicados a quem a sofreu, quando solicitados.",
+      "pontos": [
+        "Ausência de resultado não transforma por si a busca em ilegal.",
+        "Informação é prestada ao interessado que a solicitar."
+      ],
+      "atencao": [
+        "Dever de explicar motivo não autoriza inventar fundamento depois: legalidade depende dos requisitos prévios."
+      ],
+      "exemplo": "Morador solicita e recebe motivos de busca que não localizou objeto. Variação: Encontrar nada não dispensa a prestação de informação prevista quando solicitada.",
+      "prova": [
+        "O interessado pode solicitar motivos? Sim.",
+        "Resultado negativo prova automaticamente ilegalidade? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Comunicação dos motivos",
+          "significado": "Informação ao atingido por diligência sem resultado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c758ddcc-e995-5362-ac82-73dd2d4d7326",
+        "content_sha256": "f9352b9ac6bc4436b7ca48c857fc31265fcdbe518d964a3d35a2fa08e93c8211",
+        "simples": "Não sendo encontrada a pessoa ou coisa procurada, os motivos da diligência serão comunicados a quem tiver sofrido a busca, se o requerer.",
+        "pontos": [
+          "Busca infrutífera: comunicam-se os motivos a quem sofreu a busca, se requerer."
+        ],
+        "atencao": [
+          "Depende de requerimento."
+        ],
+        "exemplo": "Nada foi encontrado, e o morador pede explicações sobre os motivos da diligência.",
+        "prova": [
+          "Assertiva que obriga a comunicação automática dos motivos da busca infrutífera erra: depende de requerimento."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-248",
+      "unit_id": "3bfff2e0-485c-5cce-91e1-2f26f8b774d4",
+      "content_sha256": "517c483874e3b573a63b09f061c6e04bf8966ba5e6c56ba113c8950e92db2928",
+      "simples": "Busca em casa habitada deve minimizar incômodo além do indispensável ao êxito.",
+      "pontos": [
+        "Necessidade limita intervenção.",
+        "Preservar dignidade, bens e espaços alheios ao objeto.",
+        "Força legítima não autoriza excesso."
+      ],
+      "atencao": [
+        "Busca não é punição antecipada nem licença para dano desnecessário."
+      ],
+      "exemplo": "Agentes limitam inspeção aos espaços pertinentes e preservam bens. Variação: Destruir objeto sem necessidade para localizar a prova excede o propósito da diligência.",
+      "prova": [
+        "Pode causar qualquer incômodo por conveniência? Não.",
+        "Deve limitar-se ao indispensável? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Proporcionalidade da execução",
+          "significado": "Intervenção apenas na medida necessária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "3bfff2e0-485c-5cce-91e1-2f26f8b774d4",
+        "content_sha256": "517c483874e3b573a63b09f061c6e04bf8966ba5e6c56ba113c8950e92db2928",
+        "simples": "Em casa habitada, a busca será feita de modo que não moleste os moradores mais do que o indispensável para o êxito da diligência.",
+        "pontos": [
+          "Busca em casa habitada sem molestar os moradores além do indispensável."
+        ],
+        "atencao": [
+          "Princípio da proporcionalidade na execução."
+        ],
+        "exemplo": "A equipe conduz a busca com discrição para não constranger os moradores.",
+        "prova": [
+          "Assertiva que autoriza molestar os moradores livremente durante a busca erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 245"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-249",
+      "unit_id": "c6941171-fea5-5ee5-a881-fdd7562c197c",
+      "content_sha256": "ead1d52d805b758a57ebe4de8aa9946b674fb7eb8715a469e591a6b34e3d37a2",
+      "simples": "Busca em mulher é realizada por outra mulher se isso não importar retardamento ou prejuízo à diligência.",
+      "pontos": [
+        "Preferência legal com condição expressa.",
+        "Exceção exige situação concreta, não rotina sem justificativa.",
+        "Dignidade e privacidade permanecem em qualquer hipótese."
+      ],
+      "atencao": [
+        "A condição legal não autoriza humilhação ou abuso; também não se conclui nulidade automática apenas pelo sexo do agente."
+      ],
+      "exemplo": "Agente mulher disponível realiza busca sem atraso prejudicial. Variação: Urgência concretamente incompatível com espera exige análise e respeito às garantias, não licença para exposição.",
+      "prova": [
+        "A regra possui condição expressa? Sim.",
+        "A exceção permite tratamento degradante? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Busca e dignidade",
+          "significado": "Execução respeitosa com preferência prevista."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c6941171-fea5-5ee5-a881-fdd7562c197c",
+        "content_sha256": "ead1d52d805b758a57ebe4de8aa9946b674fb7eb8715a469e591a6b34e3d37a2",
+        "simples": "A busca em mulher será feita por outra mulher, se não importar retardamento ou prejuízo da diligência.",
+        "pontos": [
+          "Busca em mulher feita por outra mulher.",
+          "Exceção: se importar retardamento ou prejuízo da diligência."
+        ],
+        "atencao": [
+          "Exceção quando houver prejuízo à diligência."
+        ],
+        "exemplo": "Policial feminina realiza a busca pessoal em suspeita do sexo feminino.",
+        "prova": [
+          "Assertiva que torna absoluta a regra de busca em mulher por outra mulher erra: há exceção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 240, §2º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-250",
+      "unit_id": "1d9ae416-0fb2-5c41-91be-b0eca94030c9",
+      "content_sha256": "816f3d10a7ff85af3ad1fe3d2be7cd73a4653c1ec5e43d0e5f39545fe6a3f458",
+      "simples": "Na perseguição para apreensão, autoridade pode transpor outra jurisdição, mesmo de outro estado, cumprindo comunicação local prevista.",
+      "pontos": [
+        "Apresentar-se à autoridade local antes ou depois, conforme urgência.",
+        "Perseguição inclui acompanhamento contínuo e informações fidedignas de passagem recente nas hipóteses do §1º.",
+        "Autoridade local pode verificar legitimidade sem frustrar a diligência."
+      ],
+      "atencao": [
+        "Transposição territorial não cria competência processual universal nem elimina requisitos para entrar em domicílio."
+      ],
+      "exemplo": "Perseguição urgente cruza divisa e autoridade se apresenta localmente após a diligência. Variação: Uma pista vaga e antiga não configura automaticamente a perseguição descrita no artigo.",
+      "prova": [
+        "Pode alcançar outro estado nos termos legais? Sim.",
+        "A transposição dispensa requisitos domiciliares? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Continuidade da perseguição",
+          "significado": "Prosseguimento territorial da diligência sob condições legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "1d9ae416-0fb2-5c41-91be-b0eca94030c9",
+        "content_sha256": "816f3d10a7ff85af3ad1fe3d2be7cd73a4653c1ec5e43d0e5f39545fe6a3f458",
+        "simples": "A autoridade ou seus agentes poderão penetrar no território de jurisdição alheia, ainda que de outro Estado, quando, para o fim de apreensão, forem no seguimento de pessoa ou coisa, devendo apresentar-se à competente autoridade local antes da diligência ou após, conforme a urgência. Entende-se que vão em seguimento quando, tendo conhecimento direto da remoção ou transporte, a seguirem sem interrupção, embora a percam de vista; ou, mesmo sem avistá-la, sabendo por informações fidedignas ou circunstâncias indiciárias que está sendo removida em determinada direção, forem ao seu encalço. As autoridades locais, havendo fundadas razões para duvidar da legitimidade das pessoas ou da legalidade dos mandados, poderão exigir as provas, mas sem frustrar a diligência.",
+        "pontos": [
+          "Seguimento de pessoa ou coisa em outra jurisdição, mesmo de outro Estado.",
+          "Apresentação à autoridade local antes ou depois, conforme a urgência.",
+          "Seguimento: conhecimento direto e perseguição sem interrupção; ou informações fidedignas.",
+          "Autoridade local pode exigir provas de legitimidade, sem frustrar a diligência."
+        ],
+        "atencao": [
+          "Apresentação à autoridade local, antes ou depois, conforme a urgência."
+        ],
+        "exemplo": "Policiais perseguem veículo com produto do crime para outro Estado e depois se apresentam à autoridade local.",
+        "prova": [
+          "Assertiva que exige sempre a apresentação prévia à autoridade local erra: pode ser depois, conforme a urgência."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 240"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:17:24.733339+00:00",
+        "updated_at": "2026-10-11T13:17:24.733339+00:00"
+      }
+    }
+  ]
+}

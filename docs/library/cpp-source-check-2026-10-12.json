@@ -1,0 +1,15 @@
+{
+  "scope": "CPP, conferência do corpo normativo da fonte oficial com unidades atuais, após uma separação não normativa protegida.",
+  "source": {
+    "slug": "codigo-processo-penal",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+    "sha256": "fa04d19979dd880a3c7f89b3a06d1ca82136357462049099fec677af68395446",
+    "checked_at": "2026-10-12T23:55:50.273365+00:00"
+  },
+  "active_units_checked": 808,
+  "remaining_body_differences": 0,
+  "caption_corrections": 1,
+  "pedagogically_reviewed": 32,
+  "pedagogically_pending": 776,
+  "source_jurisprudence_limit": "Conferência legislativa não certifica leitura integral de todos os acórdãos, implementação territorial uniforme ou inexistência de cautelares posteriores."
+}

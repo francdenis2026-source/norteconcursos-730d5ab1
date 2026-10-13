@@ -144,6 +144,9 @@ def parse_law(raw,slug,source_url='https://www.planalto.gov.br/'):
      'Voluntariedade Dolo e culpa',
     }
     for value,unstripped in blocks:
+     # A standalone heading and its provenance describe the next CPP section.
+     # Do not append either to art. 3; inline amendment notes remain intact.
+     if slug=='codigo-processo-penal' and units and units[-1]['key']=='art-3' and value in {'Juiz das Garantias','(Incluído pela Lei nº 13.964, de 2019) (Vigência)'}:continue
      # Inspected split chapter caption and annotation left after struck MP text.
      # Scope to this source; never discard an operative paragraph by length.
      if slug=='ambientais' and value in {'ADMINISTRATIVA OU DE CRIME','Prejudicada'}:continue

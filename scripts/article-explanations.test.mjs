@@ -1,4 +1,49 @@
 import test from 'node:test';
+test('CPP flagrante e preventiva integram alterações 2025/2026 sem automatismos',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-flagrant-preventive-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,23);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(306).atencao.join(' '),/atrasar comunicação imediata/);
+ assert.match(get(310).pontos.join(' '),/15.358\/2026.*privacidade/s);
+ assert.match(get('310-a').pontos.join(' '),/dez dias contados de sua realização/);
+ assert.match(get(313).pontos.join(' '),/15.487\/2026/);
+ assert.match(get(316).pontos.join(' '),/não gera soltura automática/);
+ for(const n of [310,'310-a',313,316])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP custódia distingue júri, diploma e identificação genética específica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-custody-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,20);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(283).pontos.join(' '),/1068.*independe do total/s);
+ assert.match(get(295).pontos.join(' '),/afastou inciso VII/);
+ assert.match(get(292).pontos.join(' '),/puerpério imediato/);
+ assert.match(get('300-a').simples,/15.280\/2025/);
+ assert.match(get('300-a').atencao.join(' '),/qualquer investigado solto/);
+ assert.ok(!p.units.some(r=>r.unit_key==='art-298'));
+ for(const n of [282,283,292,295])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP defesa não restaura multa antiga, curador etário ou interrogatório coercitivo',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-participants-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,31);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(260).simples,/incompatível.*395 e 444/s);
+ assert.match(get(262).simples,/não impõe curador.*18 e 21/s);
+ assert.match(get(265).pontos.join(' '),/sem repetir antiga multa judicial/);
+ assert.match(get(271).pontos.join(' '),/aboliu essa peça/);
+ assert.match(get(279).atencao.join(' '),/nem anunciar revogação textual inexistente/);
+ for(const n of [260,262,264,265,271,277,279])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP reconhecimento e busca preservam garantias além da redação histórica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-recognition-search-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,25);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(226).pontos.join(' '),/1258.*obrigatório.*prisão preventiva/s);
+ assert.match(get(226).pontos.join(' '),/Repetição não cura.*independente/s);
+ assert.match(get(241).atencao.join(' '),/Não.*presença.*dispensa/s);
+ assert.match(get(244).pontos.join(' '),/posterior não cria retroativamente/s);
+ assert.match(get(245).atencao.join(' '),/livre e comprovado.*todo consentimento verbal é inválido/s);
+ for(const n of [226,241,242,244,245])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {validateArticlePackage,checkArticlePreflight,explanationPayload} from './article-explanation-package.mjs';
@@ -12,6 +57,123 @@ import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 const pack=JSON.parse(readFileSync('docs/library/article-explanations-identification-pension-2026-10-11.json','utf8'));
+
+test('CPP: proteção testemunhal não dispensa defesa ou presume incapacidade',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-witnesses-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,26);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(208).atencao.join(' '),/Ausência de compromisso não é proibição/);
+ assert.match(get(217).simples,/primeiro usar videoconferência.*retirada só se vídeo for impossível/);
+ assert.match(get(214).simples,/antes.*só exclui.*207–208/s);
+ assert.match(get(221).pontos.join(' '),/Escrito: Presidente\/Vice.*presidentes/);
+ assert.match(get(225).atencao.join(' '),/Velhice isolada não torna automática/);
+ for(const n of [208,211,216,219,221,223])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: interrogatório preserva silêncio e modulações distintas da confissão',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-interrogation-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,15);assert.ok(!p.units.some(r=>r.unit_key==='art-194'));
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(185).pontos.join(' '),/decisão de vídeo com dez dias de antecedência ao ato/);
+ assert.match(get(198).atencao.join(' '),/Não ensinar.*permissão atual/);
+ assert.match(get(199).pontos.join(' '),/3\/7\/2024.*não estender.*atenuante/s);
+ assert.match(get(197).pontos.join(' '),/1194.*2025.*retratação.*utilidade/s);
+ assert.match(get(200).atencao.join(' '),/Não afirmar que toda retratação perde/);
+ for(const n of [186,192,197,198,199,200])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: provas não restauram impedimento inconstitucional ou coerção grafotécnica',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-evidence-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,36);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(157).simples,/§5º.*declarado inconstitucional/);
+ assert.match(get(156).atencao.join(' '),/Não tratar.*licença.*Nem afirmar proibição absoluta/s);
+ assert.match(get('158-a').pontos.join(' '),/não gera nulidade automática/);
+ assert.match(get(159).pontos.join(' '),/Um perito oficial.*dois não oficiais/);
+ assert.match(get('158-d').pontos.join(' '),/Lacre rompido fica dentro/);
+ assert.match(get(168).atencao.join(' '),/Não contar 30 dias do primeiro laudo/);
+ assert.match(get(174).atencao.join(' '),/Não transformar.*obrigação coercitiva/);
+ for(const n of [156,157,'158-a',174,178,179])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: falsidade incidental não condena e saúde mental não impõe internação automática',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-document-health-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,10);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(145).pontos.join(' '),/48 horas.*três dias sucessivos/s);
+ assert.match(get(148).simples,/não produz coisa julgada.*posterior/);
+ assert.match(get(150).simples,/45 dias.*necessidade demonstrada/);
+ assert.match(get(151).atencao.join(' '),/CP 22 atual trata de coação.*Não impor medida automaticamente/s);
+ assert.match(get(152).pontos.join(' '),/reinquirição/);
+ assert.match(get(154).pontos.join(' '),/183.*Defensoria/);
+ for(const n of [150,151,152,154])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: garantias distinguem origem ilícita, reparação e preservação de valor',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-assets-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,30);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(118).atencao.join(' '),/não ensinar.*só termina depois/si);
+ assert.match(get(120).pontos.join(' '),/cinco dias sucessivos.*dois dias/);
+ assert.match(get(131).atencao.join(' '),/Nem levantamento mecânico.*nem retenção indefinida/);
+ assert.match(get(134).pontos.join(' '),/Não exige origem ilícita/);
+ assert.match(get('133-a').simples,/transferência definitiva depende de condenação/);
+ assert.match(get('144-a').pontos.join(' '),/dez dias.*80%/);
+ for(const n of [119,121,124,127,130,131,142])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP: incidentes não eliminam preclusão nem atualizam moeda histórica por suposição',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-incidents-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,26);
+ assert.ok(p.units.every(r=>r.expected&&r.exemplo.includes('Variação:')&&r.prova.length>=2));
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(92).simples,/estado civil.*suspensão.*definitiva/);
+ assert.match(get(93).pontos.join(' '),/retoma-se.*toda a matéria/);
+ assert.match(get(101).atencao.join(' '),/Rejeição simples não prova malícia.*não pode virar multa/);
+ assert.match(get(109).simples,/não reabre.*territorial.*preclusa/);
+ assert.match(get(117).pontos.join(' '),/102.*reclamação.*Não apresentar avocatória/s);
+ for(const n of [101,103,107,108,109,117])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+
+test('CPP competência: Constituição, foro 2026 e ressalva do Júri não se confundem com referências antigas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-civil-jurisdiction-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,29);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.ok(p.units.every(r=>r.expected&&explanationExample(r.exemplo).variation&&r.prova.every(q=>explanationPractice(q))));
+ assert.match(get(65).pontos.join(' '),/929.*930.*terceiro inocente/);
+ assert.match(get(68).pontos.join(' '),/intimar Defensoria/);
+ assert.match(get(70).pontos.join(' '),/domicílio da vítima.*prevenção/);
+ assert.match(get(74).pontos.join(' '),/121-A/);
+ assert.match(get(78).atencao.join(' '),/15.358.*audiência não é julgamento/s);
+ assert.match(get(84).pontos.join(' '),/maio de 2026.*vitalícios/);
+ assert.match(get(84).pontos.join(' '),/período eleitoral.*exceções/);
+ assert.match(get(84).pontos.join(' '),/imediata.*instrução finalizada/);
+ assert.match(get(89).atencao.join(' '),/canoa.*navio/);
+ for(const n of [65,68,74,75,77,78,79,83,84,85,86,87,89,90])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n)?.literalPractice,false);
+});
+
+test('CPP ação penal: prazos novos, ANPP e regras etárias não viram pegadinhas desatualizadas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-action-2026-10-13.json','utf8'));
+ validateArticlePackage(p);assert.equal(p.units.length,38);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.ok(p.units.every(r=>r.expected&&explanationExample(r.exemplo).variation&&r.prova.length>=2&&r.prova.every(q=>explanationPractice(q))));
+ assert.equal(get(35),undefined);assert.equal(get(43),undefined);
+ assert.match(get(38).pontos.join(' '),/15.438.*19\/06\/2026.*12 meses/);
+ assert.match(get(38).atencao.join(' '),/não.*retroativamente.*decadência já consumada/i);
+ assert.match(get('28-a').pontos.join(' '),/Tema 1303.*silêncio.*confissão no inquérito não impedem/i);
+ assert.match(get('28-a').pontos.join(' '),/Tema 1098.*trânsito/);
+ assert.match(get('28-a').pontos.join(' '),/inferior, não igual, a quatro/);
+ assert.match(get(25).pontos.join(' '),/oferecimento, não recebimento/);
+ assert.match(get(28).pontos.join(' '),/patente ilegalidade ou teratologia/);
+ assert.match(get(46).simples,/cinco dias.*quinze/);
+ assert.match(get(60).pontos.join(' '),/30 dias.*60 dias/);
+ for(const n of [24,25,26,28,'28-a',33,34,38,50,52,53,54])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n)?.literalPractice,false);
+});
 test('antifaction review preserves prior versions and separates timelines, percentages and constitutional guarantees',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-antifaction-procedures-2026-10-12.json','utf8'));
  validateArticlePackage(p);
