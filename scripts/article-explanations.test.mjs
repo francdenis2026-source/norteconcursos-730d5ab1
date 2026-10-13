@@ -1,4 +1,13 @@
 import test from 'node:test';
+test('CPP rito comum protege defesa, prioridade e limites próprios',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-common-procedure-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,14);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(394).atencao.join(' '),/exatamente quatro/);
+ assert.match(get('394-a').atencao.join(' '),/Não estender isenção ao acusado/);
+ assert.match(get(397).pontos.join(' '),/salvo inimputabilidade/);
+ assert.match(get(403).pontos.join(' '),/tempo de defesa individual/);
+ assert.match(get(405).atencao.join(' '),/não significa dispensar acesso/);
+});
 test('CPP sentenças separa regime histórico, mudança factual e intimação',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-sentences-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,20);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

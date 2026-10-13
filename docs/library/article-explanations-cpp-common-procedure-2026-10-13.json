@@ -1,0 +1,895 @@
+{
+  "version": "2026-10-11-codigo-processo-penal-targeted",
+  "checked_at": "2026-10-13T03:16:42.734102+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "codigo-processo-penal",
+      "title": "Código de Processo Penal — leitura atualizada",
+      "units": 14,
+      "scope_type": "targeted_correction",
+      "course_current_units": 808,
+      "target_unit_keys": [
+        "art-394",
+        "art-394-a",
+        "art-395",
+        "art-396",
+        "art-396-a",
+        "art-397",
+        "art-399",
+        "art-400",
+        "art-400-a",
+        "art-401",
+        "art-402",
+        "art-403",
+        "art-404",
+        "art-405"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "source_sha256": "a1ced52b4ce9f3fe7045fee94865fc779a00361e5e544713acc7cf0247f72488",
+      "source_checked_at": "2026-10-13T01:06:26.493619+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-394",
+      "unit_id": "2b2cf366-cf6a-5092-9085-c891b80e19fa",
+      "content_sha256": "4266b16012a21f085f55ce6faebad16a7320fd232e624b5e4fd5a8211933c955",
+      "simples": "Procedimento é comum ou especial; no comum, distinguir ordinário, sumário e sumaríssimo.",
+      "pontos": [
+        "Ordinário: pena máxima igual ou superior a quatro anos.",
+        "Sumário: pena máxima inferior a quatro, ressalvado enquadramento sumaríssimo/especial.",
+        "Sumaríssimo: infração de menor potencial na forma da lei.",
+        "Júri: arts. 406–497.",
+        "Subsidiariedade do ordinário exige compatibilidade.",
+        "Remissão 395–398 não restaura art. 398 revogado."
+      ],
+      "atencao": [
+        "Usar pena máxima cominada, não pena concreta; exatamente quatro pertence ao ordinário."
+      ],
+      "exemplo": "Crime com máximo de quatro anos, sem rito especial, segue ordinário. Variação: Infração de menor potencial deve ser examinada segundo regime sumaríssimo, não tratada indistintamente como sumária.",
+      "prova": [
+        "Exatamente quatro anos entra no ordinário? Sim.",
+        "Pena concreta define por si o rito do artigo? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Procedimento comum",
+          "significado": "Rito definido pela lei e natureza da infração."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2b2cf366-cf6a-5092-9085-c891b80e19fa",
+        "content_sha256": "4266b16012a21f085f55ce6faebad16a7320fd232e624b5e4fd5a8211933c955",
+        "simples": "O procedimento será comum ou especial. O comum será ordinário (crime com sanção máxima igual ou superior a 4 anos de pena privativa de liberdade), sumário (sanção máxima inferior a 4 anos) ou sumaríssimo (infrações de menor potencial ofensivo, na forma da lei). Aplica-se a todos os processos o procedimento comum, salvo disposições em contrário do Código ou de lei especial. Nos processos de competência do Tribunal do Júri, o procedimento observa os arts. 406 a 497. As disposições dos arts. 395 a 398 aplicam-se a todos os procedimentos penais de primeiro grau, ainda que não regulados no Código.",
+        "pontos": [
+          "Procedimento comum (ordinário, sumário, sumaríssimo) ou especial.",
+          "Ordinário: pena máxima igual ou superior a 4 anos.",
+          "Sumário: pena máxima inferior a 4 anos.",
+          "Sumaríssimo: menor potencial ofensivo.",
+          "Júri: arts. 406 a 497.",
+          "Arts. 395 a 398 valem para todos os procedimentos de primeiro grau."
+        ],
+        "atencao": [
+          "Ordinário: IGUAL ou SUPERIOR a 4 anos; sumário: INFERIOR a 4 anos.",
+          "O critério é a pena MÁXIMA."
+        ],
+        "exemplo": "Crime com pena máxima de 6 anos segue o rito ordinário.",
+        "prova": [
+          "Assertiva que fixa o rito sumário para crimes com pena máxima igual a 4 anos erra: igual a 4 anos é ordinário."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 395",
+          "Art. 406"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-394-a",
+      "unit_id": "30283055-a52f-5ac1-8885-4f5fad89f352",
+      "content_sha256": "6de005de9b7994af581b070b2a9f17a424e92d3a4745f185a8ad1699304e294d",
+      "simples": "Lei 14.994/2024 ampliou prioridade aos processos de violência contra a mulher, além dos hediondos, em todas as instâncias.",
+      "pontos": [
+        "Isenção de custas, taxas e despesas nos processos de violência contra mulher, salvo má-fé.",
+        "Isenção apenas à vítima e, se morta, familiares enumerados quando titulares da representação, queixa ou prosseguimento.",
+        "Prioridade não elimina contraditório."
+      ],
+      "atencao": [
+        "Não estender isenção ao acusado nem a qualquer pessoa só porque há processo prioritário."
+      ],
+      "exemplo": "Vítima utiliza a isenção prevista em processo de violência contra mulher. Variação: Acusado não recebe essa isenção apenas pelo §1º; verificar eventual fundamento diverso.",
+      "prova": [
+        "Prioridade se limita à primeira instância? Não.",
+        "A isenção deste artigo beneficia automaticamente acusado? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Prioridade e isenção",
+          "significado": "Benefícios processuais de alcance e destinatários definidos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm"
+      ],
+      "expected": {
+        "unit_id": "30283055-a52f-5ac1-8885-4f5fad89f352",
+        "content_sha256": "6de005de9b7994af581b070b2a9f17a424e92d3a4745f185a8ad1699304e294d",
+        "simples": "Os processos que apurem a prática de crime hediondo ou violência contra a mulher terão prioridade de tramitação em todas as instâncias. Os processos que apurem violência contra a mulher independem do pagamento de custas, taxas ou despesas processuais, salvo má-fé. As isenções aplicam-se apenas à vítima e, em caso de morte, ao cônjuge, ascendente, descendente ou irmão, quando a estes couber o direito de representação, de queixa ou de prosseguir a ação.",
+        "pontos": [
+          "Prioridade de tramitação: crime hediondo e violência contra a mulher, em todas as instâncias.",
+          "Violência contra a mulher: sem custas, salvo má-fé.",
+          "Isenção só para a vítima e, em caso de morte, para familiares legitimados."
+        ],
+        "atencao": [
+          "A isenção de custas não alcança o acusado."
+        ],
+        "exemplo": "A vítima de violência doméstica não paga custas processuais.",
+        "prova": [
+          "Assertiva que estende a isenção de custas ao acusado erra: aplica-se à vítima e aos familiares legitimados."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 31"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-395",
+      "unit_id": "fd04e4d8-e891-53ce-b0b2-43c3b2a550d5",
+      "content_sha256": "4c203a297bd32e9ad97c8cbb96e5ad330f28443a399b2089a6193693608ebfac",
+      "simples": "Rejeição da denúncia ou queixa ocorre por inépcia manifesta, falta de pressuposto/condição ou ausência de justa causa.",
+      "pontos": [
+        "Três fundamentos distintos.",
+        "Justa causa exige suporte para instaurar ação, não certeza de condenação.",
+        "Parágrafo único revogado não deve ser recuperado."
+      ],
+      "atencao": [
+        "Não confundir rejeição inicial com absolvição após instrução."
+      ],
+      "exemplo": "Acusação não descreve conduta de modo apto à defesa: examinar inépcia. Variação: Descrição apta, mas sem suporte mínimo, exige examinar justa causa em vez de condenar antecipadamente.",
+      "prova": [
+        "Rejeição é sentença condenatória? Não.",
+        "Justa causa exige certeza final de culpa? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Rejeição inicial",
+          "significado": "Controle de admissibilidade da acusação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "fd04e4d8-e891-53ce-b0b2-43c3b2a550d5",
+        "content_sha256": "4c203a297bd32e9ad97c8cbb96e5ad330f28443a399b2089a6193693608ebfac",
+        "simples": "A denúncia ou queixa será rejeitada quando for manifestamente inepta; quando faltar pressuposto processual ou condição para o exercício da ação penal; ou quando faltar justa causa para o exercício da ação penal. O parágrafo único está revogado.",
+        "pontos": [
+          "I: denúncia ou queixa manifestamente inepta.",
+          "II: falta de pressuposto processual ou de condição da ação.",
+          "III: falta de justa causa."
+        ],
+        "atencao": [
+          "Rejeição liminar da peça acusatória: cabe recurso em sentido estrito (art. 581, I)."
+        ],
+        "exemplo": "Denúncia que não descreve o fato criminoso é rejeitada por inépcia.",
+        "prova": [
+          "Assertiva que recebe a denúncia sem justa causa erra: ela deve ser rejeitada."
+        ],
+        "termos": [
+          {
+            "termo": "Justa causa",
+            "significado": "Lastro probatório mínimo para a ação penal."
+          }
+        ],
+        "remissoes": [
+          "Art. 41",
+          "Art. 396"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-396",
+      "unit_id": "bc1f3cab-5404-5757-ba5c-be8b4e5c92be",
+      "content_sha256": "75c486985b917361b96355d2d99d78228185172055e975c63f626b2d54855e32",
+      "simples": "Sem rejeição liminar, no ordinário e sumário juiz recebe acusação e cita para resposta escrita em dez dias.",
+      "pontos": [
+        "Não confundir oferecimento com recebimento.",
+        "Por edital: prazo começa com comparecimento pessoal do acusado ou defensor constituído.",
+        "Ausência por edital deve ser integrada ao art. 366."
+      ],
+      "atencao": [
+        "Não contar automaticamente dez dias de defesa apenas da publicação do edital."
+      ],
+      "exemplo": "Acusado citado regularmente apresenta resposta por defensor no prazo legal. Variação: Edital sem comparecimento e sem defensor constituído exige avaliar suspensão, não presumir defesa perdida.",
+      "prova": [
+        "Resposta escrita tem dez dias? Sim.",
+        "Edital inicia sempre prazo por sua publicação? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Resposta à acusação",
+          "significado": "Manifestação defensiva inicial após citação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "bc1f3cab-5404-5757-ba5c-be8b4e5c92be",
+        "content_sha256": "75c486985b917361b96355d2d99d78228185172055e975c63f626b2d54855e32",
+        "simples": "Nos procedimentos ordinário e sumário, oferecida a denúncia ou queixa, o juiz, se não a rejeitar liminarmente, a receberá e ordenará a citação do acusado para responder à acusação, por escrito, no prazo de 10 dias. No caso de citação por edital, o prazo para a defesa começa a fluir a partir do comparecimento pessoal do acusado ou do defensor constituído.",
+        "pontos": [
+          "Recebimento da denúncia e citação para resposta escrita em 10 dias.",
+          "Citação por edital: o prazo começa com o comparecimento do acusado ou do defensor constituído."
+        ],
+        "atencao": [
+          "Prazo de 10 dias.",
+          "Prazo contado da citação pessoal (ou do comparecimento, no edital)."
+        ],
+        "exemplo": "O acusado é citado e tem 10 dias para apresentar a resposta à acusação.",
+        "prova": [
+          "Assertiva que fixa em 5 dias o prazo de resposta à acusação erra: são 10 dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 396-A",
+          "Art. 399"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-396-a",
+      "unit_id": "e532e8dc-9508-551e-b0f6-30548aa5bde0",
+      "content_sha256": "e3ff93ac37117f2cfefd26748c3edf63bf6f134b88bcb9d54abd4a4a9d9347a4",
+      "simples": "Resposta permite preliminares, argumentos defensivos, documentos, justificações, especificação de prova e testemunhas.",
+      "pontos": [
+        "Qualificar testemunhas e pedir intimação se necessária.",
+        "Exceção processa-se em apartado.",
+        "Sem resposta ou sem defensor constituído: nomeação e vista por dez dias."
+      ],
+      "atencao": [
+        "Não prosseguir sem resposta técnica apenas porque acusado deixou transcorrer prazo."
+      ],
+      "exemplo": "Defensor apresenta tese preliminar, documento e rol com qualificação. Variação: Sem advogado constituído, juiz nomeia defensor e assegura vista por dez dias.",
+      "prova": [
+        "Exceção é processada em apartado? Sim.",
+        "Falta de resposta dispensa defesa técnica? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Defesa inicial técnica",
+          "significado": "Preparação das teses e das provas da defesa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "e532e8dc-9508-551e-b0f6-30548aa5bde0",
+        "content_sha256": "e3ff93ac37117f2cfefd26748c3edf63bf6f134b88bcb9d54abd4a4a9d9347a4",
+        "simples": "Na resposta, o acusado poderá arguir preliminares e alegar tudo o que interesse à sua defesa, oferecer documentos e justificações, especificar as provas pretendidas e arrolar testemunhas, qualificando-as e requerendo sua intimação, quando necessário. A exceção será processada em apartado. Não apresentada a resposta no prazo legal, ou se o acusado, citado, não constituir defensor, o juiz nomeará defensor para oferecê-la, concedendo-lhe vista dos autos por 10 dias.",
+        "pontos": [
+          "Resposta à acusação: preliminares, defesa, documentos, provas e rol de testemunhas.",
+          "Exceções em apartado (arts. 95 a 112).",
+          "Sem resposta no prazo: defensor nomeado, com vista de 10 dias."
+        ],
+        "atencao": [
+          "A resposta é OBRIGATÓRIA; sem ela, o juiz nomeia defensor.",
+          "Momento de arrolar testemunhas da defesa (preclusão)."
+        ],
+        "exemplo": "Na resposta, a defesa arrola testemunhas e junta documentos.",
+        "prova": [
+          "Assertiva que dispensa a apresentação da resposta, seguindo o processo sem defensor, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 396",
+          "Art. 397"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-397",
+      "unit_id": "6463de02-0695-55f8-9ff2-9e55fc1e7567",
+      "content_sha256": "aad0a91cea336ce2b71f9adda2e978ce932f49eddc85a3a61f780104cce80168",
+      "simples": "Após resposta, absolvição sumária cabe por excludente manifesta, atipicidade evidente ou punibilidade extinta.",
+      "pontos": [
+        "I: excludente de ilicitude manifesta.",
+        "II: excludente de culpabilidade manifesta, salvo inimputabilidade.",
+        "III: fato evidentemente não é crime; IV: extinção de punibilidade.",
+        "Distinguir absolvição sumária comum do art. 415 no júri."
+      ],
+      "atencao": [
+        "Inimputabilidade foi ressalvada no inciso II; não impor medida de segurança sumária por diagnóstico."
+      ],
+      "exemplo": "Documento incontroverso demonstra atipicidade evidente: examinar absolvição sumária. Variação: Excludente dependente de prova controvertida não é automaticamente manifesta para este momento.",
+      "prova": [
+        "Inimputabilidade está incluída sem ressalva no inciso II? Não.",
+        "Atipicidade evidente é fundamento? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Absolvição sumária",
+          "significado": "Encerramento nas hipóteses legais verificáveis antes da instrução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "6463de02-0695-55f8-9ff2-9e55fc1e7567",
+        "content_sha256": "aad0a91cea336ce2b71f9adda2e978ce932f49eddc85a3a61f780104cce80168",
+        "simples": "Após o cumprimento do disposto no art. 396-A e parágrafos, o juiz deverá absolver sumariamente o acusado quando verificar a existência manifesta de causa excludente da ilicitude do fato; a existência manifesta de causa excludente da culpabilidade do agente, salvo inimputabilidade; que o fato narrado evidentemente não constitui crime; ou extinta a punibilidade do agente.",
+        "pontos": [
+          "I: excludente de ilicitude manifesta.",
+          "II: excludente de culpabilidade manifesta, salvo inimputabilidade.",
+          "III: fato evidentemente atípico.",
+          "IV: extinção da punibilidade."
+        ],
+        "atencao": [
+          "Inimputabilidade não autoriza absolvição sumária (a absolvição seria imprópria)."
+        ],
+        "exemplo": "Legítima defesa manifestamente demonstrada: absolvição sumária.",
+        "prova": [
+          "Assertiva que permite a absolvição sumária por inimputabilidade erra: a exceção do inciso II a afasta."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 396-A",
+          "Art. 415"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-399",
+      "unit_id": "083513f4-56b6-5791-9e6f-82bb7b7b4ff0",
+      "content_sha256": "d32d26febb27ff4def1c63124cab2726da74773d429fed6da4eff96681883485",
+      "simples": "Juiz agenda instrução e intima sujeitos pertinentes; preso é requisitado e quem presidiu instrução deve sentenciar.",
+      "pontos": [
+        "Intimar acusado, defesa, MP e querelante/assistente se aplicável.",
+        "Poder público providencia apresentação do preso.",
+        "Identidade física do juiz não elimina exame de substituições legalmente justificadas."
+      ],
+      "atencao": [
+        "Não afirmar que a falta de presença física do preso autoriza suprimir interrogatório ou defesa."
+      ],
+      "exemplo": "Audiência é designada com comunicação regular e providências de apresentação. Variação: Alteração de juiz exige examinar motivo e regime de substituição, não nulidade automática sem análise.",
+      "prova": [
+        "Defensor precisa ser intimado? Sim.",
+        "Apresentação do preso depende de providência pública? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Identidade física do juiz",
+          "significado": "Ligação entre instrução presidida e sentença, integrada ao regime judicial."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "083513f4-56b6-5791-9e6f-82bb7b7b4ff0",
+        "content_sha256": "d32d26febb27ff4def1c63124cab2726da74773d429fed6da4eff96681883485",
+        "simples": "Recebida a denúncia ou queixa, o juiz designará dia e hora para a audiência, ordenando a intimação do acusado, de seu defensor, do Ministério Público e, se for o caso, do querelante e do assistente. O acusado preso será requisitado para comparecer ao interrogatório, devendo o poder público providenciar sua apresentação. O juiz que presidiu a instrução deverá proferir a sentença (identidade física do juiz).",
+        "pontos": [
+          "Designação de audiência e intimação das partes.",
+          "Réu preso requisitado ao interrogatório.",
+          "§2º: o juiz que presidiu a instrução sentencia (identidade física do juiz)."
+        ],
+        "atencao": [
+          "Identidade física do juiz: prevista no §2º (com exceções admitidas pela jurisprudência)."
+        ],
+        "exemplo": "O juiz que colheu toda a prova profere a sentença.",
+        "prova": [
+          "Assertiva que dispensa a intimação do assistente, se houver, para a audiência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 400"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-400",
+      "unit_id": "2866c81d-b597-5960-9757-926ca34efa40",
+      "content_sha256": "22af3ee70f69169ae68a164b0a078877fb8aa03c2a98a04610174fb92627eccf",
+      "simples": "Instrução ordinária tem prazo máximo legal de sessenta dias e interrogatório após a produção de provas enumerada.",
+      "pontos": [
+        "Ofendido; testemunhas acusação e defesa, ressalvado art. 222.",
+        "Esclarecimentos periciais, acareações e reconhecimento; depois acusado.",
+        "Concentração numa audiência; provas irrelevantes, impertinentes ou protelatórias podem ser indeferidas.",
+        "Esclarecimento pericial depende de requerimento prévio."
+      ],
+      "atencao": [
+        "Prazo não gera soltura automática isoladamente; indeferimento de prova deve respeitar defesa e fundamentação."
+      ],
+      "exemplo": "Defesa conhece depoimentos e demais provas antes do interrogatório. Variação: Prova pertinente não pode ser recusada apenas porque desfavorece acusação.",
+      "prova": [
+        "Interrogatório antecede todas as testemunhas neste rito? Não.",
+        "Esclarecimento do perito requer pedido prévio? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Concentração da instrução",
+          "significado": "Produção ordenada de prova com interrogatório ao final."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "2866c81d-b597-5960-9757-926ca34efa40",
+        "content_sha256": "22af3ee70f69169ae68a164b0a078877fb8aa03c2a98a04610174fb92627eccf",
+        "simples": "Na audiência de instrução e julgamento, a ser realizada no prazo máximo de 60 dias, proceder-se-á à tomada de declarações do ofendido, à inquirição das testemunhas arroladas pela acusação e pela defesa, nesta ordem, ressalvado o disposto no art. 222, bem como aos esclarecimentos dos peritos, às acareações e ao reconhecimento de pessoas e coisas, interrogando-se, em seguida, o acusado e procedendo-se o debate. As provas serão produzidas numa só audiência, podendo o juiz indeferir as consideradas irrelevantes, impertinentes ou protelatórias. Os esclarecimentos dos peritos dependerão de prévio requerimento das partes.",
+        "pontos": [
+          "Audiência no prazo máximo de 60 dias.",
+          "Ordem: ofendido, testemunhas da acusação, testemunhas da defesa, peritos, acareações, reconhecimentos, interrogatório, debates.",
+          "Provas em uma só audiência; indeferimento das irrelevantes, impertinentes ou protelatórias.",
+          "Esclarecimentos dos peritos dependem de requerimento prévio."
+        ],
+        "atencao": [
+          "Interrogatório por ÚLTIMO (STF fixou que vale para todos os ritos).",
+          "Prazo máximo de 60 dias para a audiência."
+        ],
+        "exemplo": "O interrogatório do acusado ocorre ao final da instrução, antes dos debates.",
+        "prova": [
+          "Assertiva que coloca o interrogatório do acusado no início da audiência erra: ele ocorre ao final da produção da prova."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 396",
+          "Art. 399"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-400-a",
+      "unit_id": "0f67fbe0-9098-5400-9841-3ecd057e3fda",
+      "content_sha256": "c2b9136e998b3a6440f350aaf7f482a7ac666e0e49573e0603621f17ce2756d6",
+      "simples": "Todos no ato devem preservar integridade física e psicológica da vítima; juiz impede ataques estranhos aos fatos e ofensivos.",
+      "pontos": [
+        "Regra da audiência, especialmente crimes sexuais.",
+        "Vedadas circunstâncias alheias e linguagem/material ofensivos à vítima ou testemunha.",
+        "ADPF 1107: não desqualificar mulher por histórico sexual ou modo de vida.",
+        "Responsabilidades possíveis são civil, penal e administrativa, conforme apuração."
+      ],
+      "atencao": [
+        "Direito de defesa não autoriza humilhação; questionamento pertinente sobre fatos exige respeito e limites."
+      ],
+      "exemplo": "Pergunta sobre dinâmica do fato é feita de modo respeitoso e pertinente. Variação: Insinuação sobre vida sexual para desacreditar mulher exige intervenção judicial, não tolerância como técnica defensiva.",
+      "prova": [
+        "Proteção alcança testemunha na vedação de ofensa? Sim.",
+        "Ampla defesa permite humilhar a vítima? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Proteção na audiência",
+          "significado": "Garantia de participação sem desqualificação ofensiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=540018"
+      ],
+      "expected": {
+        "unit_id": "0f67fbe0-9098-5400-9841-3ecd057e3fda",
+        "content_sha256": "c2b9136e998b3a6440f350aaf7f482a7ac666e0e49573e0603621f17ce2756d6",
+        "simples": "Na audiência de instrução e julgamento, e em especial nas que apurem crimes contra a dignidade sexual, todas as partes e demais sujeitos processuais deverão zelar pela integridade física e psicológica da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz garantir o cumprimento do disposto, sendo vedadas a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração nos autos e a utilização de linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas.",
+        "pontos": [
+          "Todos devem zelar pela integridade física e psicológica da vítima.",
+          "Responsabilidade civil, penal e administrativa.",
+          "Juiz garante o cumprimento.",
+          "Vedada manifestação sobre elementos alheios aos fatos.",
+          "Vedada linguagem ou material que ofenda a dignidade da vítima ou de testemunhas."
+        ],
+        "atencao": [
+          "Incluído pela Lei nº 14.245, de 2021 (Lei Mariana Ferrer)."
+        ],
+        "exemplo": "O juiz impede a defesa de usar linguagem ofensiva contra a vítima.",
+        "prova": [
+          "Assertiva que restringe o art. 400-A aos crimes contra a dignidade sexual erra: aplica-se a toda audiência, em especial a esses crimes."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 400"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-401",
+      "unit_id": "cf40974a-08f7-59f9-a403-2b9aa73b7490",
+      "content_sha256": "992ac87b321467bf35c6e7200f35d124f1a18654257d1df2dd23a5a119f03db1",
+      "simples": "No ordinário, acusação e defesa podem arrolar até oito testemunhas cada, com exclusões legais da contagem.",
+      "pontos": [
+        "Não contar as sem compromisso e as referidas nesse limite.",
+        "Desistência é possível, ressalvada iniciativa pertinente do art. 209.",
+        "Distinguir limite de ritos especiais ou sumário."
+      ],
+      "atencao": [
+        "Oito é por lado neste rito, não teto único para todo processo penal."
+      ],
+      "exemplo": "Acusação indica oito e defesa oito testemunhas do rol ordinário. Variação: Testemunha referida durante depoimento exige exame próprio e não é somada automaticamente ao limite.",
+      "prova": [
+        "Oito é total compartilhado pelas partes? Não.",
+        "Referidas integram essa contagem? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Rol ordinário",
+          "significado": "Limite de testemunhas com exclusões previstas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "cf40974a-08f7-59f9-a403-2b9aa73b7490",
+        "content_sha256": "992ac87b321467bf35c6e7200f35d124f1a18654257d1df2dd23a5a119f03db1",
+        "simples": "Na instrução poderão ser inquiridas até 8 testemunhas arroladas pela acusação e 8 pela defesa. Nesse número não se compreendem as que não prestem compromisso e as referidas. A parte poderá desistir da inquirição de qualquer das testemunhas arroladas, ressalvado o disposto no art. 209.",
+        "pontos": [
+          "Até 8 testemunhas para a acusação e 8 para a defesa.",
+          "Não entram no cômputo as que não prestam compromisso e as referidas.",
+          "A parte pode desistir de testemunha, ressalvado o art. 209."
+        ],
+        "atencao": [
+          "Rito ordinário: 8 testemunhas por parte.",
+          "Informantes e testemunhas referidas não contam."
+        ],
+        "exemplo": "A defesa arrola 8 testemunhas, e informantes ouvidos não entram na conta.",
+        "prova": [
+          "Assertiva que limita a 5 as testemunhas por parte no rito ordinário erra: são 8."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 209",
+          "Art. 532"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-402",
+      "unit_id": "4f94693e-8318-5cff-a5f4-d38fcd94a10b",
+      "content_sha256": "4546575b1bc8910ad97e1b77051ba4e0589b4a3cd0fc39445f1a1bf354baa28b",
+      "simples": "Ao final da prova podem ser pedidas diligências necessárias por circunstâncias ou fatos revelados na instrução.",
+      "pontos": [
+        "Acusação, querelante e assistente; depois acusado.",
+        "Pedido deve explicar relação com o que surgiu.",
+        "Não confundir com adiamento sem finalidade."
+      ],
+      "atencao": [
+        "O momento não legitima pedido protelatório desconectado da instrução."
+      ],
+      "exemplo": "Testemunha revela documento antes desconhecido: defesa pede diligência justificada. Variação: Pedido repetido sem utilidade nem nexo pode ser examinado para indeferimento fundamentado.",
+      "prova": [
+        "Necessidade deve decorrer do apurado na instrução? Sim.",
+        "Pedido protelatório é direito irrestrito? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Diligência complementar",
+          "significado": "Providência necessária por elemento surgido na prova."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4f94693e-8318-5cff-a5f4-d38fcd94a10b",
+        "content_sha256": "4546575b1bc8910ad97e1b77051ba4e0589b4a3cd0fc39445f1a1bf354baa28b",
+        "simples": "Produzidas as provas, ao final da audiência, o Ministério Público, o querelante e o assistente e, a seguir, o acusado poderão requerer diligências cuja necessidade se origine de circunstâncias ou fatos apurados na instrução.",
+        "pontos": [
+          "Ao final da audiência, as partes podem requerer diligências.",
+          "Ordem: MP, querelante e assistente, depois acusado.",
+          "Só diligências nascidas de circunstâncias ou fatos da instrução."
+        ],
+        "atencao": [
+          "Diligências decorrentes da instrução, e não para recomeçar a prova."
+        ],
+        "exemplo": "Um fato novo surgiu no depoimento, e a defesa requer uma diligência.",
+        "prova": [
+          "Assertiva que permite requerer qualquer diligência, sem relação com a instrução, no art. 402, erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 403",
+          "Art. 404"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-403",
+      "unit_id": "70c630b7-25f9-5f1f-b103-446dd6960207",
+      "content_sha256": "171c51bc89be77ce6fd02a20f35b478a68284d205a865096a5c6994e3df263b4",
+      "simples": "Sem diligências pendentes, alegações finais orais seguem acusação e defesa: vinte minutos, prorrogáveis por dez.",
+      "pontos": [
+        "Cada acusado tem tempo de defesa individual.",
+        "Assistente: dez minutos após MP; acrescenta igual período à defesa.",
+        "Complexidade ou vários acusados permitem memoriais sucessivos de cinco dias.",
+        "Com memoriais, sentença em dez dias."
+      ],
+      "atencao": [
+        "Não dividir um único tempo de defesa entre todos os acusados nem tornar simultâneos os prazos sucessivos."
+      ],
+      "exemplo": "Dois acusados recebem cada qual seu tempo defensivo. Variação: Caso complexo pode ter memoriais com defesa após acusação e prazo de sentença próprio.",
+      "prova": [
+        "Defesa de cada acusado tem tempo individual? Sim.",
+        "Memoriais do §3º são simultâneos? Não."
+      ],
+      "termos": [
+        {
+          "termo": "Alegações finais",
+          "significado": "Última manifestação sobre prova antes da decisão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "70c630b7-25f9-5f1f-b103-446dd6960207",
+        "content_sha256": "171c51bc89be77ce6fd02a20f35b478a68284d205a865096a5c6994e3df263b4",
+        "simples": "Não havendo requerimento de diligências, ou sendo indeferido, serão oferecidas alegações finais orais por 20 minutos, respectivamente, pela acusação e pela defesa, prorrogáveis por mais 10, proferindo o juiz, a seguir, sentença. Havendo mais de um acusado, o tempo previsto para a defesa de cada um é individual. Ao assistente do MP, após a manifestação deste, serão concedidos 10 minutos, prorrogando-se por igual período o tempo da defesa. O juiz poderá, considerada a complexidade do caso ou o número de acusados, conceder às partes o prazo de 5 dias sucessivamente para a apresentação de memoriais, tendo então 10 dias para proferir a sentença.",
+        "pontos": [
+          "Alegações finais orais: 20 minutos para a acusação e 20 para a defesa, prorrogáveis por mais 10.",
+          "Vários acusados: tempo individual.",
+          "Assistente: 10 minutos, com igual prorrogação para a defesa.",
+          "Memoriais em 5 dias sucessivos; sentença em 10 dias."
+        ],
+        "atencao": [
+          "Memoriais: 5 dias para cada parte, sentença em 10 dias."
+        ],
+        "exemplo": "Caso complexo: o juiz concede memoriais em 5 dias e sentencia em 10.",
+        "prova": [
+          "Assertiva que fixa em 30 minutos o tempo básico das alegações finais orais erra: são 20 minutos, prorrogáveis por mais 10."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 404"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-404",
+      "unit_id": "4732ca75-d735-5940-8e61-cb2b6176921d",
+      "content_sha256": "8df4f42be19a6ea485f5085d548c3bd609d0d6a8af246877c8c2793a03703a04",
+      "simples": "Diligência imprescindível encerra audiência sem alegações finais; concluída a diligência, seguem memoriais sucessivos.",
+      "pontos": [
+        "Cinco dias sucessivos para partes.",
+        "Dez dias para sentença após memoriais.",
+        "Fundamentar necessidade e respeitar sistema acusatório."
+      ],
+      "atencao": [
+        "Não sentenciar ignorando oportunidade de manifestação sobre prova nova imprescindível."
+      ],
+      "exemplo": "Documento necessário é obtido e partes se manifestam antes da sentença. Variação: Sem diligência imprescindível, não aplicar este regime apenas para adiar julgamento.",
+      "prova": [
+        "Memoriais vêm depois da diligência? Sim.",
+        "Prazo das partes é sucessivo? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Diligência imprescindível",
+          "significado": "Prova necessária antes das manifestações finais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "4732ca75-d735-5940-8e61-cb2b6176921d",
+        "content_sha256": "8df4f42be19a6ea485f5085d548c3bd609d0d6a8af246877c8c2793a03703a04",
+        "simples": "Ordenada diligência considerada imprescindível, de ofício ou a requerimento da parte, a audiência será concluída sem as alegações finais. Realizada, em seguida, a diligência determinada, as partes apresentarão, no prazo sucessivo de 5 dias, suas alegações finais, por memorial, e, no prazo de 10 dias, o juiz proferirá a sentença.",
+        "pontos": [
+          "Diligência imprescindível: audiência concluída sem alegações finais.",
+          "Realizada a diligência: memoriais sucessivos de 5 dias.",
+          "Sentença em 10 dias."
+        ],
+        "atencao": [
+          "Alegações por memorial, 5 dias sucessivos."
+        ],
+        "exemplo": "Perícia imprescindível é ordenada, e as alegações finais vêm em memoriais depois dela.",
+        "prova": [
+          "Assertiva que mantém as alegações finais orais mesmo após diligência imprescindível erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 403"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    },
+    {
+      "course_slug": "codigo-processo-penal",
+      "course_id": "b404e605-a54e-51d1-99e4-ab524b0a6490",
+      "syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+      "unit_key": "art-405",
+      "unit_id": "964b442f-f284-5b94-97bc-30e87b78570c",
+      "content_sha256": "1311fb4440f47ac5dc8367e4e0d9641549e2f5b1aad8d8112088c985a09dae12",
+      "simples": "Audiência é documentada em termo; gravação, sobretudo audiovisual, busca fidelidade e dispensa transcrição nesse caso.",
+      "pontos": [
+        "Termo com resumo relevante e assinaturas previstas.",
+        "Sempre que possível utilizar recursos de registro.",
+        "Cópia do registro original encaminhada às partes no audiovisual."
+      ],
+      "atencao": [
+        "Dispensar transcrição não significa dispensar acesso da defesa à gravação."
+      ],
+      "exemplo": "Partes recebem cópia da audiência audiovisual para consultar depoimentos. Variação: Arquivo inacessível não satisfaz contraditório apenas porque a lei dispensa degravação.",
+      "prova": [
+        "Audiovisual exige sempre transcrição integral? Não.",
+        "Partes devem receber cópia do registro original? Sim."
+      ],
+      "termos": [
+        {
+          "termo": "Registro audiovisual",
+          "significado": "Documentação fiel com acesso às partes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "964b442f-f284-5b94-97bc-30e87b78570c",
+        "content_sha256": "1311fb4440f47ac5dc8367e4e0d9641549e2f5b1aad8d8112088c985a09dae12",
+        "simples": "Do ocorrido em audiência será lavrado termo em livro próprio, assinado pelo juiz e pelas partes, contendo breve resumo dos fatos relevantes nela ocorridos. Sempre que possível, o registro dos depoimentos do investigado, indiciado, ofendido e testemunhas será feito pelos meios ou recursos de gravação magnética, estenotipia, digital ou técnica similar, inclusive audiovisual, destinada a obter maior fidelidade das informações. No caso de registro audiovisual, será encaminhada às partes cópia do registro original, sem necessidade de transcrição.",
+        "pontos": [
+          "Termo da audiência assinado pelo juiz e pelas partes, com breve resumo.",
+          "Depoimentos registrados, sempre que possível, por gravação ou meios audiovisuais.",
+          "Registro audiovisual: cópia às partes, sem transcrição."
+        ],
+        "atencao": [
+          "Registro audiovisual dispensa transcrição."
+        ],
+        "exemplo": "Os depoimentos são gravados em vídeo, e as partes recebem cópia, sem transcrição.",
+        "prova": [
+          "Assertiva que exige transcrição integral do registro audiovisual dos depoimentos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 216"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T13:18:07.829855+00:00",
+        "updated_at": "2026-10-11T13:18:07.829855+00:00"
+      }
+    }
+  ]
+}
