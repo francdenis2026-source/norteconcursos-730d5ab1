@@ -16,6 +16,42 @@ test('LEP disciplina e órgãos integra defesa, estrutura atual e textos residua
  assert.match(get(86).pontos.join(' '),/comunicação imediata.*24 horas/);
  for(const n of [53,59,66,71,77,86,91])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
 });
+test('CPP livramento usa requisitos atuais e distingue causas revocatórias',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-parole-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,31);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(710).atencao.join(' '),/três quartos automaticamente/);
+ assert.match(get(726).atencao.join(' '),/tipo e sanção/);
+ assert.match(get(728).pontos.join(' '),/Data do crime/);
+ assert.match(get(732).simples,/revogação depende/);
+ for(const n of [710,715,726,728,732])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP execução não recupera multa prisional ou sursis histórico',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-execution-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,33);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(669).atencao.join(' '),/barreira antiga.*oito anos/);
+ assert.match(get(689).simples,/não integra regime atual/);
+ assert.match(get(696).pontos.join(' '),/dois a quatro anos/);
+ assert.match(get(693).simples,/incompatível com igualdade/);
+ for(const n of [669,675,689,690,693,696])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP habeas corpus distingue regra de2024 e remissões históricas',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-habeas-corpus-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,32);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get('647-a').pontos.join(' '),/sem conhecimento/);
+ assert.match(get(664).simples,/regra atual favorável/);
+ assert.match(get(637).simples,/não autoriza.*execução automática/);
+ assert.match(get(650).atencao.join(' '),/prisão administrativa genérica/);
+ for(const n of [637,641,642,643,647,650,655,664])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
+test('CPP julgamento e revisão respeita empate e limites favoráveis',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-cpp-judgment-revision-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,22);
+ const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(615).pontos.join(' '),/todos os julgamentos colegiados/);
+ assert.match(get(617).simples,/não agrava pena quando só réu/);
+ assert.match(get(622).pontos.join(' '),/Novo pedido/);
+ assert.match(get(626).simples,/nunca agravar/);
+ for(const n of [615,624,630])assert.equal(legalStudyCaveat('codigo-processo-penal','art-'+n).literalPractice,false);
+});
 test('LEP fundamentos distingue classificação, visita, sigilo e contratação',()=>{
  const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-1-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,50);
  const get=n=>p.units.find(r=>r.unit_key==='art-'+n);

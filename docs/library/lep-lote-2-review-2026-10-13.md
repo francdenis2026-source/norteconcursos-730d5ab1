@@ -15,3 +15,5 @@ Compilado oficial válido anterior reutilizado com data/hash preservados;todas a
 394 testes, typecheck e build da versão final deste lote passaram. Snapshots, fontes brutas e PDFs ficam em outputs ignorados;credenciais não gravadas. Não certificada toda jurisprudência, regulamentação local ou constitucionalidade de pontos recentes.
 
 Biblioteca: 2379/3511 com revisão atual;1132 pendentes. Inclui o trabalho concorrente de CPP, sem atribuí-lo à revisão de LEP. Não há leitura automática de créditos ou retomada automática por renovação.
+
+Integração posterior dos novos commits deCPP: conflito de inserção em testes resolvido preservando os dois conjuntos. Versão integrada passou398 testes,typecheck ebuild isolado.
