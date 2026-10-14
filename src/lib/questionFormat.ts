@@ -17,6 +17,7 @@ export type Question = {
   id: string;
   source: Source;
   table?: QuestionTable;
+  syllabusTopicId?: string | null;
   contest: string;
   year: string;
   career: string;

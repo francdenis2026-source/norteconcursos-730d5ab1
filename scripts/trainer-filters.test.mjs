@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { filterTrainerQuestions, trainerBoard, trainerCollectionQuestions, isEnemContest, trainerPracticeQuestions, trainerFilterFacets } from "../src/lib/trainerFilters.ts";
+import { filterTrainerQuestions, trainerBoard, trainerCollectionQuestions, isEnemContest, trainerPracticeQuestions, trainerFilterFacets, syllabusQuestions } from "../src/lib/trainerFilters.ts";
 import { isMissingQuestionTable } from "../src/lib/catalog.ts";
 
 const all = Object.fromEntries(
@@ -108,4 +108,11 @@ test("practice facets only include the selected student's unanswered, answered o
  assert.deepEqual(trainerPracticeQuestions(catalog,"all",answers,recovery).map(q=>q.board),["INEP","FGV","FCC"]);
  assert.deepEqual(trainerPracticeQuestions(catalog,"new",answers,recovery).map(q=>q.board),["CEBRASPE","VUNESP"]);
  assert.equal(trainerPracticeQuestions(catalog,"all",new Map(),new Map()).length,0);
+});
+
+test("syllabus practice targets the exact topic and never broadens to the whole discipline", () => {
+ const catalog=[{...q("one","CEBRASPE"),syllabusTopicId:"topic-a"},{...q("two","CEBRASPE"),syllabusTopicId:"topic-b"},{...q("historic","FGV"),syllabusTopicId:"topic-a"}];
+ assert.deepEqual(syllabusQuestions(catalog,"topic-a").map(q=>q.id),["one","historic"]);
+ assert.deepEqual(syllabusQuestions(catalog,"missing"),[]);
+ assert.equal(syllabusQuestions(catalog),catalog);
 });

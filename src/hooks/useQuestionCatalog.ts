@@ -3,6 +3,7 @@
 // sua pool — extraído pra um só lugar porque o Caderno de erros também
 // precisa do texto completo das questões que o aluno errou.
 import * as React from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import {
   canonicalBoard,
   canonicalSubject,
@@ -28,6 +29,8 @@ function withSupportText(support: unknown, text: string): string {
 }
 
 export function useQuestionCatalog(userId: string | undefined, enabled: boolean) {
+  const queryClient = useQueryClient();
+  const [reloadVersion, setReloadVersion] = React.useState(0);
   const [catalog, setCatalog] = React.useState<Question[]>([]);
   const [hidden, setHidden] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
@@ -53,11 +56,17 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             builder: ReturnType<ReturnType<typeof supabase.from>["select"]>,
           ) => ReturnType<ReturnType<typeof supabase.from>["select"]>,
         ) => ({
-          data: await fetchAllRows((from, to) =>
-            refine(supabase.from(table).select(base + ",content_status," + extra))
-              .order("id")
-              .range(from, to),
-          ),
+          data: await queryClient.fetchQuery({
+            queryKey: ["question-catalog", userId, table, base, extra],
+            staleTime: 60_000,
+            retry: 0,
+            queryFn: () => fetchAllRows((from, to) =>
+              refine(supabase.from(table).select(base + ",content_status," + extra))
+                .abortSignal(AbortSignal.timeout(20000))
+                .order("id")
+                .range(from, to),
+            ),
+          }),
           error: null,
           gated: true,
         });
@@ -65,7 +74,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
         const officialQuery = (withSupport: boolean) =>
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category" +
+            "id,syllabus_topic_id,current_syllabus_topic_id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category" +
               (withSupport ? ",support:question_support_texts(label,body)" : ""),
             "law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
@@ -74,7 +83,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           officialQuery(true).catch(() => officialQuery(false)), // sem a coluna de texto de apoio ainda: segue sem ela
           query(
             "curated_question_catalog",
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+            "id,syllabus_topic_id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
             "law_version_checked_at",
             (builder) => builder.eq("content_status", "active"),
           ),
@@ -89,7 +98,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           // Provas de bancas com alternativas A–E (FGV etc.): só entram depois de revisadas e ativadas.
           query(
             "board_exam_questions",
-            "id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
+            "id,syllabus_topic_id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
             "created_at",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ).catch((error: unknown) => {
@@ -133,6 +142,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               id: String(row["id"]),
               source: "official" as const,
               table: "board_exam_questions" as const,
+            syllabusTopicId: (row["syllabus_topic_id"]) ? String(row["syllabus_topic_id"]) : null,
               contest: String(row["contest_name"]),
               year: String(row["exam_year"]),
               career: canonicalCareerName(String(row["career_name"])),
@@ -165,6 +175,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             id: String(row["id"]),
             source: "official" as const,
             table: "official_exam_questions" as const,
+            syllabusTopicId: (row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"]) ? String(row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"]) : null,
             contest: String(row["contest_name"]),
             year: String(row["exam_year"]),
             career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
@@ -189,6 +200,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             id: String(row["id"]),
             source: "curated" as const,
             table: "curated_question_catalog" as const,
+            syllabusTopicId: (row["syllabus_topic_id"]) ? String(row["syllabus_topic_id"]) : null,
             contest: String(row["contest_name"]),
             year: String(row["contest_year"]),
             career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
@@ -247,7 +259,11 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
     return () => {
       active = false;
     };
-  }, [enabled, userId]);
+  }, [enabled, userId, queryClient, reloadVersion]);
 
-  return { catalog, hidden, loading, error };
+  const reload = () => {
+    queryClient.removeQueries({ queryKey: ["question-catalog", userId] });
+    setReloadVersion(value => value + 1);
+  };
+  return { catalog, hidden, loading, error, reload };
 }

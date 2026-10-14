@@ -74,7 +74,7 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, isEnemContest, trainerCollectionQuestions, trainerPracticeQuestions } from "@/lib/trainerFilters";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, isEnemContest, trainerCollectionQuestions, trainerPracticeQuestions, syllabusQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -88,6 +88,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "syllabus"
       | "law"
       | "contest"
       | "board"
@@ -106,6 +107,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    syllabus: typeof search["syllabus"] === "string" ? search["syllabus"] : undefined,
     law: typeof search["law"] === "string" ? search["law"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
     board: typeof search["board"] === "string" ? search["board"] : undefined,
@@ -166,11 +168,11 @@ function QuestionTrainer() {
   // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
-    const collectionCatalog = trainerCollectionQuestions(fullCatalog, collection);
+    const collectionCatalog = trainerCollectionQuestions(syllabusQuestions(fullCatalog, routeFilters.syllabus), collection);
     const scoped = law === undefined ? collectionCatalog : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
     return { catalog: includeNoText ? scoped : usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law, includeNoText, collection]);
+  }, [fullCatalog, law, includeNoText, collection, routeFilters.syllabus]);
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
@@ -307,6 +309,7 @@ function QuestionTrainer() {
     pendingRestore.current = true;
   }, [
     law,
+    routeFilters.syllabus,
     routeFilters.contest,
     routeFilters.board,
     routeFilters.career,
@@ -773,6 +776,7 @@ function QuestionTrainer() {
           </span>
         </div>
       </section>
+        {routeFilters.syllabus && <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-primary/5 p-3 text-sm"><span>Questões vinculadas ao assunto escolhido no edital.</span><Link to="/dashboard/edital/$topicId" params={{topicId:routeFilters.syllabus}} className="font-semibold text-primary underline">Voltar ao assunto</Link></div>}
         {lawNotice}
         <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
           {missingSupportText > 0 && (

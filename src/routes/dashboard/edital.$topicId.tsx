@@ -1,3 +1,10 @@
+import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { syllabusQuestions, isEnemContest } from "@/lib/trainerFilters";
+import { needsMissingSupportText } from "@/lib/questionText";
+import { hasReviewedExplanation } from "@/lib/questionFormat";
+import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { buildTheoryIndex, findTheory } from "@/lib/cronogramaTeoria";
+import { libraryCollection } from "@/lib/libraryOrganization";
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link, useParams } from "@tanstack/react-router";
@@ -23,7 +30,9 @@ import {
 
 export const Route = createFileRoute("/dashboard/edital/$topicId")({
   component: TopicPage,
-  validateSearch: (s: Record<string, unknown>): { back?: string | undefined; tema?: string | undefined } => ({
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { back?: string | undefined; tema?: string | undefined } => ({
     back: typeof s["back"] === "string" ? s["back"] : undefined,
     tema: typeof s["tema"] === "string" ? s["tema"] : undefined,
   }),
@@ -40,6 +49,7 @@ interface EditionRow {
   role_name: string;
   contest_year: number;
   exam_board: string | null;
+  source: { url: string; title: string; source_type: string; status: string } | null;
 }
 interface StudyCard {
   id: string;
@@ -56,13 +66,62 @@ function TopicPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const [topic, setTopic] = React.useState<TopicRow | null>(null);
   const [edition, setEdition] = React.useState<EditionRow | null>(null);
-  const [cards, setCards] = React.useState<StudyCard[]>([]);
+  const real = !!user && user.id !== "demo-user";
+  const {
+    catalog: questionCatalog,
+    loading: questionsLoading,
+    error: questionsError,
+    reload: reloadQuestions,
+  } = useQuestionCatalog(user?.id, real);
+  const library = useStudyMaterialList(real);
+  const [showAllComments, setShowAllComments] = React.useState(false);
+  const linkedQuestions = React.useMemo(
+    () => syllabusQuestions(questionCatalog, topicId).filter((q) => !needsMissingSupportText(q)),
+    [questionCatalog, topicId],
+  );
+  const cards = React.useMemo(
+    () =>
+      linkedQuestions.filter(hasReviewedExplanation).map((q) => ({
+        id: `${q.source}:${q.id}`,
+        subtopic: q.subtopic,
+        subject: q.subject,
+        explanation: q.explanation,
+        legalBasis: q.legalBasis,
+        difficulty: q.difficulty,
+      })),
+    [linkedQuestions],
+  );
+  const materials = React.useMemo(
+    () =>
+      topic && edition
+        ? findTheory(
+            buildTheoryIndex(
+              (library.data ?? []).filter(
+                (m) => (libraryCollection(m) === "enem") === isEnemContest(edition.contest_name),
+              ),
+              [],
+            ),
+            topic.discipline,
+            topic.topic_text,
+          )
+        : [],
+    [library.data, topic, edition],
+  );
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
-  const { catalog } = useMediaCatalog();
+  const { catalog: mediaCatalog } = useMediaCatalog();
   const videos = React.useMemo(
-    () => (topic ? relatedVideos(catalog, topic.discipline, topic.topic_text) : []),
-    [catalog, topic],
+    () =>
+      topic
+        ? relatedVideos(
+            mediaCatalog,
+            topic.discipline,
+            topic.topic_text,
+            4,
+            edition && isEnemContest(edition.contest_name) ? "enem" : "general",
+          )
+        : [],
+    [mediaCatalog, topic, edition],
   );
 
   React.useEffect(() => {
@@ -71,11 +130,17 @@ function TopicPage() {
       return;
     }
     let active = true;
+    setLoading(true);
+    setError(null);
+    setTopic(null);
+    setEdition(null);
+    setShowAllComments(false);
     void (async () => {
       const topicResult = await supabase
         .from("syllabus_topics")
         .select("id,discipline,topic_text,edition_id")
         .eq("id", topicId)
+        .eq("content_status", "current")
         .maybeSingle();
       if (!active) return;
       if (topicResult.error || !topicResult.data) {
@@ -85,38 +150,18 @@ function TopicPage() {
       }
       const topicRow = topicResult.data as TopicRow;
       setTopic(topicRow);
-      const [editionResult, curatedResult] = await Promise.all([
-        supabase
-          .from("syllabus_editions")
-          .select("contest_name,role_name,contest_year,exam_board")
-          .eq("id", topicRow.edition_id)
-          .maybeSingle(),
-        supabase
-          .from("curated_question_catalog")
-          .select(
-            "id,subtopic,subject,explanation,legal_basis,difficulty,content_status,official_answer,law_version_checked_at",
-          )
-          .eq("syllabus_topic_id", topicId)
-          .eq("content_status", "active"),
-      ]);
+      const editionResult = await supabase
+        .from("syllabus_editions")
+        .select(
+          "contest_name,role_name,contest_year,exam_board,source:content_sources(url,title,source_type,status)",
+        )
+        .eq("id", topicRow.edition_id)
+        .eq("status", "active")
+        .maybeSingle();
       if (!active) return;
-      if (editionResult.data) setEdition(editionResult.data as EditionRow);
-      if (curatedResult.error) {
-        setError(curatedResult.error.message);
-      } else {
-        setCards(
-          ((curatedResult.data || []) as Array<Record<string, unknown>>)
-            .filter(isEligibleQuestion)
-            .map((row) => ({
-              id: String(row["id"]),
-              subtopic: row["subtopic"] ? String(row["subtopic"]) : null,
-              subject: canonicalSubject(String(row["subject"])),
-              explanation: String(row["explanation"]),
-              legalBasis: parseBasis(row["legal_basis"]),
-              difficulty: String(row["difficulty"] || "média"),
-            })),
-        );
-      }
+      if (editionResult.error || !editionResult.data)
+        setError("A edição deste assunto está indisponível ou não está ativa.");
+      else setEdition(editionResult.data as unknown as EditionRow);
       setLoading(false);
     })();
     return () => {
@@ -147,28 +192,22 @@ function TopicPage() {
       <div className="space-y-4">
         <p className="text-destructive">{error || "Assunto não encontrado."}</p>
         <Button asChild variant="outline">
-          <Link to="/dashboard/edital">
+          <Link to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
             <ArrowLeft className="mr-2 h-4 w-4" /> Voltar ao edital
           </Link>
         </Button>
       </div>
     );
 
-  const practiceSearch = edition
-    ? {
-        contest: edition.contest_name,
-        career: edition.role_name,
-        year: String(edition.contest_year),
-        board: edition.exam_board || undefined,
-        subject: cards[0]?.subject,
-      }
-    : {};
-
+  const practiceSearch = {
+    syllabus: topic.id,
+    ...(edition && isEnemContest(edition.contest_name) ? { contest: "ENEM" } : {}),
+  };
   return (
     <div className="space-y-6 pb-8">
       <BackToPlan back={backToPlan} topic={tema} />
       <Button asChild variant="ghost" size="sm" className="gap-2">
-        <Link to="/dashboard/edital">
+        <Link to="/dashboard/edital" search={{ edition: topic?.edition_id }}>
           <ArrowLeft className="h-4 w-4" /> Voltar ao edital eletrônico
         </Link>
       </Button>
@@ -186,7 +225,7 @@ function TopicPage() {
             {edition.exam_board ? ` · ${edition.exam_board}` : ""}
           </p>
         )}
-        {cards.length > 0 && (
+        {!questionsLoading && !questionsError && linkedQuestions.length > 0 && (
           <Button asChild className="mt-5 bg-white text-[#0b3150] hover:bg-white/90">
             <Link to="/dashboard/question-trainer" search={practiceSearch}>
               <BookOpenCheck className="mr-2 h-4 w-4" />
@@ -196,22 +235,120 @@ function TopicPage() {
         )}
       </section>
 
-      {cards.length === 0 ? (
+      <section className="grid gap-3 sm:grid-cols-3" aria-label="Etapas de estudo do assunto">
+        <Card>
+          <CardContent className="p-4">
+            <p className="font-semibold">1. Consulte o programa</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Este tópico pertence à edição e ao cargo indicados acima.
+            </p>
+            {edition?.source?.source_type === "edital" &&
+              edition.source.status === "vigente" &&
+              /^https:\/\//.test(edition.source.url) && (
+                <a
+                  href={edition.source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-3 inline-block text-sm font-semibold text-primary underline"
+                >
+                  Consultar fonte do edital
+                </a>
+              )}
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <p className="font-semibold">2. Estude o conteúdo</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Use os materiais relacionados e consulte as fontes das explicações.
+            </p>
+            <Button variant="outline" size="sm" className="mt-3" asChild>
+              {edition && isEnemContest(edition.contest_name) ? (
+                <Link to="/dashboard/enem" search={{ tab: "materiais" }}>
+                  Materiais do ENEM
+                </Link>
+              ) : (
+                <Link
+                  to="/dashboard/library"
+                  search={{
+                    collection:
+                      libraryCollection({
+                        slug: "",
+                        discipline: topic.discipline,
+                        law_course_slug: null,
+                      }) === "subjects"
+                        ? "subjects"
+                        : "laws",
+                  }}
+                >
+                  Consultar biblioteca
+                </Link>
+              )}
+            </Button>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4">
+            <p className="font-semibold">3. Pratique e revise</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {questionsLoading
+                ? "Consultando questões…"
+                : questionsError
+                  ? "Acervo temporariamente indisponível."
+                  : `${linkedQuestions.length} questões elegíveis vinculadas a este tópico.`}
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+      {materials.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Ainda sem resumo publicado</CardTitle>
+            <CardTitle className="text-lg">Materiais relacionados</CardTitle>
             <CardDescription>
-              Esse assunto do edital ainda não tem questões explicadas cadastradas. Continue
-              acompanhando — a curadoria de conteúdo está em andamento e cobre editais aos poucos.
+              Sugestões por disciplina e assunto; confira o recorte do edital ao estudar.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-2 sm:grid-cols-2">
+            {materials.map((material) => (
+              <Link
+                key={material.id}
+                to="/dashboard/library/$slug"
+                params={{ slug: material.id }}
+                search={{ back: backToPlan, tema: topic.topic_text }}
+                className="rounded-xl border p-3 text-sm font-semibold hover:bg-muted"
+              >
+                {material.label}
+              </Link>
+            ))}
+          </CardContent>
+        </Card>
+      )}
+      {questionsError && (
+        <p role="status" className="text-sm text-muted-foreground">
+          Não foi possível consultar o acervo agora. O tópico e os materiais continuam disponíveis.{" "}
+          <Button variant="ghost" size="sm" onClick={reloadQuestions}>
+            Tentar carregar questões
+          </Button>
+        </p>
+      )}
+      {questionsLoading ? (
+        <p role="status" className="text-sm text-muted-foreground">
+          Carregando comentários vinculados…
+        </p>
+      ) : cards.length === 0 ? (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Sem comentários didáticos vinculados</CardTitle>
+            <CardDescription>
+              Não há comentários didáticos disponíveis neste tópico. Isso não significa que o
+              conteúdo esteja fora do edital. Consulte a fonte e os materiais relacionados.
             </CardDescription>
           </CardHeader>
         </Card>
       ) : (
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold">
-            Resumo do assunto ({cards.length} pontos revisados)
-          </h2>
-          {cards.map((card) => {
+          <h2 className="text-lg font-semibold">Comentários das questões ({cards.length})</h2>
+          {(showAllComments ? cards : cards.slice(0, 6)).map((card) => {
             const { main, example } = splitExplanation(card.explanation);
             return (
               <Card key={card.id}>
@@ -248,6 +385,13 @@ function TopicPage() {
               </Card>
             );
           })}
+          {cards.length > 6 && (
+            <Button variant="outline" onClick={() => setShowAllComments((value) => !value)}>
+              {showAllComments
+                ? "Mostrar menos comentários"
+                : `Ver todos os ${cards.length} comentários`}
+            </Button>
+          )}
         </div>
       )}
 

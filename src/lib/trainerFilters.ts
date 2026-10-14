@@ -165,3 +165,7 @@ export function trainerPracticeQuestions(
     return answers.get(key)?.isCorrect === false && !reinforcements.get(key)?.lastCorrect;
   });
 }
+
+export function syllabusQuestions(catalog: Question[], topicId?: string) {
+  return topicId ? catalog.filter(question => question.syllabusTopicId === topicId) : catalog;
+}
