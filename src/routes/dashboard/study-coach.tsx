@@ -5,7 +5,9 @@ import {
   ArrowRight,
   ArrowUp,
   CalendarDays,
-  Compass,
+  BookOpenCheck,
+  CheckCircle2,
+  Clock,
   Gauge,
   Loader2,
   Lock,
@@ -27,7 +29,7 @@ import { Input } from "@/components/ui/input";
 import { DatePicker } from "@/components/ui/date-picker";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState } from "@/components/dashboard/PageHero";
 import {
   buildPlan,
   CAREERS,
@@ -36,6 +38,7 @@ import {
   type Experience,
   type SubjectStat,
 } from "@/lib/studyEngine";
+import { coachWeekSummary } from "@/lib/studyCoachSummary";
 import { buildSchedule, DAY_NAMES } from "@/lib/studySchedule";
 import {
   MethodCard,
@@ -130,7 +133,8 @@ function Wizard({
   async function finish() {
     if (!experience || essay === null) return;
     setBusy(true);
-    await onSave({
+    try {
+      await onSave({
       name: name.trim() || null,
       experience,
       career,
@@ -140,7 +144,9 @@ function Wizard({
       essay,
       start_time: startTime,
     });
-    setBusy(false);
+    } finally {
+      setBusy(false);
+    }
   }
 
   return (
@@ -151,7 +157,7 @@ function Wizard({
           {initial ? "Editar plano" : "Vamos montar o seu plano"}
         </CardTitle>
         <CardDescription>
-          Quatro perguntas rápidas. Depois o plano se ajusta sozinho conforme você estuda.
+          Defina seu objetivo e uma rotina viável. A distribuição das matérias considera os resultados registrados na plataforma.
         </CardDescription>
         <ol className="flex flex-wrap gap-2 pt-2 text-xs" aria-label="Etapas">
           {steps.map((s, i) => (
@@ -418,6 +424,8 @@ function StudyCoachPage() {
   const [hoursStudied, setHoursStudied] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
   const [mode, setMode] = React.useState<Mode>({ kind: "view" });
+  const [view, setView] = React.useState<"week" | "strategy" | "history">("week");
+  const [loadError, setLoadError] = React.useState(false);
   const [checks, setChecks] = React.useState<CheckRow[]>([]);
   const real = !!user && user.id !== "demo-user";
   const hasStudyPlanAccess =
@@ -425,6 +433,7 @@ function StudyCoachPage() {
 
   const load = React.useCallback(async () => {
     if (!user) return;
+    setLoadError(false);
     const [p, s, h, c] = await Promise.all([
       supabase
         .from("study_profiles")
@@ -442,6 +451,11 @@ function StudyCoachPage() {
         .order("done_at", { ascending: false })
         .limit(2000),
     ]);
+    if (p.error || s.error || h.error || c.error) {
+      setLoadError(true);
+      setLoading(false);
+      return;
+    }
     setChecks((c.data as CheckRow[] | null) ?? []);
     const list = (p.data as Profile[] | null) ?? [];
     setPlans(list);
@@ -581,52 +595,37 @@ function StudyCoachPage() {
   const showPlanPaywall = !hasStudyPlanAccess && (plans.length === 0 || mode.kind !== "view");
   const editing = mode.kind === "edit" ? (plans.find((p) => p.id === mode.id) ?? null) : null;
 
-  return (
-    <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero
-        image="journey"
-        size="sm"
-        kicker="Hoje"
-        icon={Compass}
-        title={
-          <>
-            Assistente de <em>estudos</em>
-          </>
-        }
-        description="Um plano que começa pelo seu perfil e se reajusta a cada questão, simulado e hora de estudo."
-      />
+  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date());
+  const todayDay = new Date(`${todayDate}T00:00:00Z`).getUTCDay();
+  const summary = coachWeekSummary(schedule, checks, profile?.id ?? "", weekStart, todayDay);
+  const nextBlock = summary.nextBlock;
 
-      {plans.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Seus planos">
-          {plans.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              role="tab"
-              aria-selected={p.id === selectedId}
-              onClick={() => {
-                setSelectedId(p.id);
-                setMode({ kind: "view" });
-              }}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-semibold",
-                p.id === selectedId
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "hover:border-primary/50",
-              )}
-            >
-              {planLabel(p)}
-            </button>
-          ))}
-          {mode.kind === "view" && (
-            <Button size="sm" variant="outline" onClick={() => setMode({ kind: "create" })}>
-              <Plus className="h-4 w-4" /> Novo plano
-            </Button>
-          )}
+  return (
+    <div className="study-assistant mx-auto max-w-6xl space-y-6">
+      <section className="study-assistant-hero" aria-labelledby="study-assistant-title">
+        <div className="study-assistant-hero__content">
+          <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
+          <h1 id="study-assistant-title">Assistente de estudos</h1>
+          <p>Transforme seu objetivo em uma rotina possível. Planeje a semana, revise o que precisa e acompanhe o que você realmente fez.</p>
+          {profile && <a href="#coach-workspace" className="study-assistant-hero__action" onClick={() => setView("week")}>Organizar minha semana <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>}
         </div>
+      </section>
+
+      {loadError && <Card role="alert"><CardContent className="flex flex-wrap items-center justify-between gap-3 p-5"><div><p className="font-semibold">Não foi possível carregar seu planejamento</p><p className="text-sm text-muted-foreground">Tente novamente para consultar seus planos e registros.</p></div><Button variant="outline" onClick={() => void load()}>Tentar novamente</Button></CardContent></Card>}
+
+      {!loadError && plans.length > 0 && (
+        <section className="flex flex-wrap items-end justify-between gap-3 rounded-2xl border bg-card p-4" aria-label="Selecionar plano">
+          <div className="min-w-0 flex-1 space-y-2 sm:max-w-md">
+            <Label htmlFor="coach-plan">Plano de preparação</Label>
+            <select id="coach-plan" className="h-11 w-full rounded-lg border border-input bg-background px-3 text-sm" value={selectedId ?? ""} onChange={(event) => { setSelectedId(event.target.value); setMode({ kind: "view" }); setView("week"); }}>
+              {plans.map((p) => <option key={p.id} value={p.id}>{planLabel(p)}</option>)}
+            </select>
+          </div>
+          {hasStudyPlanAccess && mode.kind === "view" && <Button variant="outline" onClick={() => setMode({ kind: "create" })}><Plus className="h-4 w-4" /> Novo plano</Button>}
+        </section>
       )}
 
-      {showWizard && (
+      {!loadError && showWizard && (
         <Wizard
           key={mode.kind === "edit" ? mode.id : mode.kind}
           initial={editing}
@@ -635,7 +634,7 @@ function StudyCoachPage() {
         />
       )}
 
-      {showPlanPaywall && (
+      {!loadError && showPlanPaywall && (
         <Card>
           <CardContent className="flex items-start gap-3 p-6 text-sm">
             <Lock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -657,7 +656,7 @@ function StudyCoachPage() {
         </Card>
       )}
 
-      {profile && plan && mode.kind === "view" && (
+      {!loadError && profile && plan && mode.kind === "view" && (
         <>
           <Card>
             <CardHeader className="gap-2 md:flex-row md:items-start md:justify-between">
@@ -743,9 +742,20 @@ function StudyCoachPage() {
             </CardContent>
           </Card>
 
-          <MethodCard schedule={schedule} phaseTitle={plan.phase.title} />
+          <section id="coach-workspace" className="scroll-mt-24 space-y-5">
+            <div className="grid gap-3 sm:grid-cols-3">
+              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><CheckCircle2 className="h-4 w-4" /> Semana em andamento</p><p className="mt-2 text-2xl font-bold">{summary.completed}/{summary.total} blocos</p><Progress className="mt-3 h-2" value={summary.percentage} /><p className="mt-2 text-xs text-muted-foreground">{summary.percentage}% das atividades planejadas concluídas</p></CardContent></Card>
+              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><Clock className="h-4 w-4" /> Rotina semanal</p><p className="mt-2 text-2xl font-bold">{profile.hours_per_week} horas</p><p className="mt-2 text-xs text-muted-foreground">Distribuídas em {profile.study_days.length} dias de estudo</p></CardContent></Card>
+              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><BookOpenCheck className="h-4 w-4" /> Próximo bloco de hoje</p><p className="mt-2 text-base font-bold">{nextBlock ? nextBlock.subject : summary.todayCount ? "Atividades concluídas" : "Dia sem blocos planejados"}</p><p className="mt-2 text-xs text-muted-foreground">{nextBlock ? `${nextBlock.kind} · ${nextBlock.minutes} minutos` : "Consulte a semana e preserve seu tempo de descanso."}</p></CardContent></Card>
+            </div>
+            <div className="coach-view-switch" role="group" aria-label="Visualização do assistente">
+              {([ ["week", "Esta semana"], ["strategy", "Estratégia"], ["history", "Histórico"] ] as const).map(([key, label]) => <button type="button" key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
+            </div>
+          </section>
 
-          {user && (
+          {view === "strategy" && <MethodCard schedule={schedule} phaseTitle={plan.phase.title} />}
+
+          {view === "week" && user && (
             <ReviewQueue
               userId={user.id}
               planId={profile.id}
@@ -755,7 +765,7 @@ function StudyCoachPage() {
             />
           )}
 
-          {user && (
+          {view === "week" && user && (
             <WeekChecklist
               userId={user.id}
               planId={profile.id}
@@ -770,9 +780,9 @@ function StudyCoachPage() {
             />
           )}
 
-          <StudyRecord checks={checks} planId={profile.id} />
+          {view === "history" && <StudyRecord checks={checks} planId={profile.id} />}
 
-          {changes.length > 0 && (
+          {view === "strategy" && changes.length > 0 && (
             <Card className="border-primary/40">
               <CardHeader>
                 <CardTitle className="text-base">O plano foi reajustado</CardTitle>
@@ -791,10 +801,10 @@ function StudyCoachPage() {
             </Card>
           )}
 
-          <Card>
+          {view === "strategy" && <Card>
             <CardHeader>
-              <CardTitle>Sua semana por matéria</CardTitle>
-              <CardDescription>Quem mais precisa recebe mais tempo.</CardDescription>
+              <CardTitle>Distribuição do tempo por matéria</CardTitle>
+              <CardDescription>A distribuição combina o peso da matéria com os resultados disponíveis.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               {plan.subjects.map((s) => (
@@ -819,16 +829,16 @@ function StudyCoachPage() {
                               ? "bg-amber-500"
                               : "bg-emerald-500",
                       )}
-                      style={{ width: `${Math.min(100, s.share * 4)}%` }}
+                      style={{ width: `${Math.min(100, s.share)}%` }}
                     />
                   </div>
                   <p className="text-xs text-muted-foreground">{s.reason}</p>
                 </div>
               ))}
             </CardContent>
-          </Card>
+          </Card>}
 
-          {plan.tips.length > 0 && (
+          {view === "strategy" && plan.tips.length > 0 && (
             <Card>
               <CardHeader>
                 <CardTitle className="text-base">Recomendações</CardTitle>
