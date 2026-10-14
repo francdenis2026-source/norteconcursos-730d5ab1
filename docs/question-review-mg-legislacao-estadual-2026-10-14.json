@@ -1,0 +1,318 @@
+{
+  "verified_at": "2026-10-14T02:51:30.437402+00:00",
+  "scope": "Revisões individuais PCMG 2026 com reparos de proveniência e contexto, conservando originais e gabaritos.",
+  "topics": [
+    {
+      "id": "21f90862-34f5-5a81-bccb-81c5649825ce",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Legislação Específica de Minas Gerais",
+      "topic_order": 1,
+      "topic_text": "Lei Orgânica da Polícia Civil — Lei 5.406/1969 e LC 129/2013, respeitadas revogações e texto vigente (item 1 de Legislação do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "9f8a8ea1-91d5-53fd-b837-88517b8f77cc",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Legislação Específica de Minas Gerais",
+      "topic_order": 2,
+      "topic_text": "Estatuto dos Funcionários Públicos Civis — Lei 869/1952 (item 2 de Legislação do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "d6b459f9-bca2-5bd6-8605-48ae54692617",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Legislação Específica de Minas Gerais",
+      "topic_order": 3,
+      "topic_text": "Carreiras do Grupo de Atividades de Defesa Social — Lei 15.301/2004 (item 3 de Legislação do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "97178a81-010e-596e-969d-5d248495679d",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Ética no Serviço Público",
+      "topic_order": 4,
+      "topic_text": "Código de Conduta Ética — Decreto 46.644/2014 (item 4 de Legislação do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "cbac1791-3a5e-4d4f-a696-a03700a0599d",
+      "n": 23,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "C",
+      "old_text_sha256": "6657156b63275e6f192fcbf43cb084eb4517a0c854f7881f3aae928233c9c366",
+      "new_text_sha256": "5f2abe71fa90fdf916a33e689b332485101f21dabbb5844ca98cfbfe7e002eac",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "norma": "LC MG 129/2013 — texto consolidado",
+          "artigo": "art. 18, parágrafo único; art. 123, I"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito C. O governador nomeia o chefe entre delegados de carreira; a LC 129 exige atividade, nível final e vinte anos de serviço policial, além da restrição de inelegibilidade. Alerta: não usar como vigentes os dispositivos organizacionais da Lei 5.406/1969 revogados pelo art. 123 da LC 129.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "af0bebba-cf1e-4dc5-b294-1bd8bb01883a",
+      "n": 24,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "C",
+      "old_text_sha256": "d2b18be336da9ecfa34ea6671c5cc09b01737faf899a9a5c9e37fd299a699564",
+      "new_text_sha256": "e4278b649a42fb397c6a0fdd6946e20537920ae7c7d05e6f4eadaeab0f192717",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "norma": "LC MG 129/2013 — texto consolidado",
+          "artigo": "arts. 2º, IV, 3º, VI, e 8º a 10"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 144, § 4º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito C. Polícia judiciária e apuração das infrações no território estadual são funções da PCMG, observadas hierarquia e disciplina. A competência não depende de ausência de atuação policial militar prévia; participação dos demais cargos não é proibida. Ressalvar as infrações militares e a competência da União.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "3d608170-4c7a-4ebf-925e-3fe787864eab",
+      "n": 25,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "B",
+      "old_text_sha256": "50b70bfeafd8a081041523722f8dd6e9ffa90d1cfae03475830c21ba77b64cf6",
+      "new_text_sha256": "41a3e304c14ca0db4ba26bccc8993b5f887af8e85f70ae84da35ea752e460e05",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "norma": "LC MG 129/2013 — texto consolidado",
+          "artigo": "art. 17, § 6º; arts. 18 e 20"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito B. Delegacias territoriais/especializadas são dirigidas por delegados de carreira; regionais e divisões especializadas exigem ao menos nível especial. Não confundir com o requisito de vinte anos para chefe nem ignorar a ordem legal de substituição. Texto consolidado da ALMG atualizado em 18/08/2026.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LCP/129/2013/atualizado",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "69fed618-43a2-4856-b909-3da0ac58081b",
+      "n": 26,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "A",
+      "old_text_sha256": "675be6fc371756176c8ca82dbf2219011ad139ca1a97530154b1ad028081684c",
+      "new_text_sha256": "c94a5cf87849a91a44589781287791afa3fb497b5bcde739d470b53750e545a7",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/DEC/46644/2014/?cons=1",
+          "norma": "Decreto MG 46.644/2014 — texto atualizado",
+          "artigo": "art. 10, XVI e XVIII"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A confirmado. São vedadas a prevalência de interesses particulares e a participação em atividade que configure conflito com a função pública. Ética é obrigatória e tem orientação preventiva; não se limita a punições. Item antes ativo sem fundamento registrado: proveniência, matriz e base normativa agora foram completadas.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/DEC/46644/2014/?cons=1",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "95fbe7a9-0e3d-42ce-8f77-5dc981a53b30",
+      "n": 27,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "A",
+      "old_text_sha256": "b06d1939b28cfce193b9cd8073cc5d1437e1342fc86bf6307ccc610e38e94dcb",
+      "new_text_sha256": "547dd32b67ba88da96e2390617bf5db094ee5a4f6c655c6f17d037ef6c84a6b2",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15301/2004/atualizado",
+          "norma": "Lei MG 15.301/2004 — texto atualizado",
+          "artigo": "arts. 1º, V, 6º, 7º, 9º, § 1º, II, e Anexo II"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A. A carreira de técnico assistente integra o grupo e envolve apoio técnico, administrativo e logístico compatível com nível intermediário. Não se restringe todo o grupo à PCMG nem se elimina a exigência de vaga para transferência. Alerta: a Lei 25.663/2025 alterou regras de cessão; não ensinar vedação absoluta de cessão.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15301/2004/atualizado",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "1e2d4987-e143-4395-a49c-389764cb3851",
+      "n": 28,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "C",
+      "old_text_sha256": "a3c07ae0e56cbc911a457029cb953fb5607eeb350bb1abd73b4171d54b0f200d",
+      "new_text_sha256": "054dc5e8be6df068d8a5fb317cdc341c8cdde59ffcead36ec8de01828ae2fd47",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/869/1952/",
+          "norma": "Lei MG 869/1952 — texto atualizado",
+          "artigo": "arts. 235 e 236, parágrafo único"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito C. A revisão pode ser pedida a qualquer tempo mediante fatos/circunstâncias que justifiquem inocência. Em falecimento ou desaparecimento, o pedido cabe a pessoa relacionada no assentamento individual; não é acesso indiscriminado de qualquer terceiro. Simples alegação de injustiça da penalidade não basta.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LEI/869/1952/",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "14d2b852-017c-484f-b3d4-36ee1179bf50",
+      "n": 29,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 2,
+      "original_answer": "B",
+      "old_text_sha256": "483e327fc0ecdad3b641855b6b59ecc90c1bf88e69aeacbf384e18570893a088",
+      "new_text_sha256": "25d0e0c4b026981c472bf500a85abf685f39a8798bf0ea81aafc261952fcef9e",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/869/1952/",
+          "norma": "Lei MG 869/1952 — texto atualizado",
+          "artigo": "art. 23, §§ 1º, 4º, 5º e 6º"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 41, caput e § 4º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito B confirmado na regra de vista de cinco dias do art. 23, § 5º. Não confundir com dispensa de avaliação: Constituição exige três anos e avaliação especial para estabilidade. A menção antiga a dois anos no caput do estatuto não prevalece sobre o regime constitucional atual; o item não pergunta aquele prazo antigo.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LEI/869/1952/",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "10515465-d141-4e3c-b469-f847a73ff778",
+      "n": 30,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 3,
+      "original_answer": "A",
+      "old_text_sha256": "990082c76f5c175038b0a7c99ff376f61eb5483b6fc72cc4984dd23b3e0141c7",
+      "new_text_sha256": "93cbf994f195da4ae0081818e6d679a989ea6c9716cce6673f2068c9245042d1",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15301/2004/atualizado",
+          "norma": "Lei MG 15.301/2004 — texto atualizado",
+          "artigo": "art. 9º, caput"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A. O ingresso nas carreiras efetivas depende de concurso de provas ou provas e títulos; promoção não é ingresso inicial e cargo em comissão/contratação temporária não substituem esse requisito. Matriz e fonte conferidas no edital vigente do certame e no art. 9º da lei consolidada.",
+        "sources": [
+          "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15301/2004/atualizado",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    }
+  ],
+  "matrix_source_repair": {
+    "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+    "old_source_id": "f4405972-ed5b-4a97-ac7a-4d37a0c45e61",
+    "new_source_id": "f4405972-ed5b-4a97-ac7a-4d37a0c45e61",
+    "verified": true
+  }
+}
