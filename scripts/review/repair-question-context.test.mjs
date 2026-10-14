@@ -34,3 +34,9 @@ test('binary formula repairs require explicit format, complete context and evide
  i.patch.source_page=6;assert.throws(()=>validateRepairs(p),/page/);
  i.patch.source_page=4;i.patch.question_text='Item: P(X=5)>0.';assert.throws(()=>validateRepairs(p));
 });
+test('four-option exams preserve their original format and refuse invented options',()=>{
+ const p=make();const i=p.items[0];i.patch.question_text='Complete stem (A)a (B)b (C)c (D)d';
+ assert.throws(()=>validateRepairs(p));i.evidence.alternative_labels=['A','B','C','D'];assert.equal(validateRepairs(p),p);
+ i.patch.question_text+=' (E)invented';assert.throws(()=>validateRepairs(p));
+ i.patch.question_text='Complete stem (A)a (B)b (D)d';assert.throws(()=>validateRepairs(p));
+});
