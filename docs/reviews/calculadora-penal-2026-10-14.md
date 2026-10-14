@@ -64,3 +64,19 @@ A execução herda a pena da dosimetria por padrão; o aluno pode registrar uma 
 O resultado distingue a duração integral do exercício de reconhecimento judicial de extinção e ordem de soltura. Remete ao juízo da execução (LEP 66, II), aos requisitos próprios do CPP e ao período depurador do CP 64, I. Nenhuma decisão judicial ou situação real do condenado é produzida pela ferramenta.
 
 Validação: 514 testes passaram, typecheck e build passaram. Chromium com autenticação e dados legais simulados confirmou: perfil compartilhado; agravante única e pena ilustrativa de 6 para 7 anos pelo critério de 1/6; progressão comum com violência de 25% para 30% no recorte cadastrado; livramento de 1/3 para 1/2 com dados apropriados; botão de cálculo e invalidação da conferência; prescrição executória de 16 para 12 anos ao mudar o perfil e a pena vinculada, mantendo 16 anos na hipótese abstrata do mesmo crime; reincidente genérico em hediondo com fração manual inválida; reincidente específico com perfil de 80% e livramento não habilitado; ausência de overflow em 320/390 px. Não foi validada uma conta real no site publicado. Mantêm-se os limites de vigência e consulta oficial registrados acima.
+
+## Reorganização do painel e catálogo conectado ao acervo
+
+- Separação entre campos principais, ajustes avançados e consulta de impedimentos. Institutos sem aplicação confirmada saem da grade principal; motivos continuam disponíveis em uma seção recolhida.
+- Ícones de informação são botões acessíveis que abrem conceito, situação do exercício e fundamento.
+- Seletor consulta as leis ativas vinculadas ao conteúdo programático no Supabase, além dos três grupos com crimes parametrizados. Consulta de leitura em 14/10 encontrou 42 leis ativas e 44 dispositivos na Lei Antifacção. Isso verifica presença no acervo, não certifica nova atualização de vigência.
+- Dispositivos com menção a pena privativa podem ser consultados e seus limites usados em um exercício após conferência explícita. Sugestão textual conservadora distingue unidades, rejeita alternativas, revogações e intervalos incoerentes; não interpreta qualificadoras ou remissões como enquadramento automático.
+- Leis sem regras parametrizadas não geram automaticamente regime, progressão, livramento ou prescrição. Limites conferidos e identificação da fonte são preservados ao alternar abas; trocar lei, crime ou dispositivo limpa o exercício anterior.
+- Retirada de controles genéricos de majorantes/minorantes: não havia vínculo com a modalidade escolhida. A interface informa falta de parametrização, sem afirmar inexistência de causas na lei. O cálculo principal mantém as três fases, sem aplicar frações especiais não conferidas.
+- Livramento e suas projeções aparecem somente quando o perfil permite o cálculo; opções de progressão são filtradas pelo enquadramento e perfil compartilhado.
+
+Escopo: os crimes anteriormente parametrizados mantêm suas regras; consultar uma nova lei não equivale a parametrizar todas suas modalidades. A consulta oficial atual permanece sujeita ao bloqueio de rede documentado anteriormente. Sem alteração de dados jurídicos no banco.
+
+Validação: 517 testes passaram, incluindo regressões do reconhecimento textual conservador. Verificações de interface usam autenticação simulada e cópia de leitura do acervo, sem testar publicação em produção.
+
+Verificação final: TypeScript e build de produção concluíram sem erro. No navegador isolado, passaram abertura/fechamento das explicações, consulta recolhida de impedimentos, seleção da Lei Antifacção com dados lidos do acervo, conferência explícita dos limites, preservação do exercício ao alternar abas, bloqueio dos cálculos não parametrizados e ausência de transbordamento nas quatro abas em 320 e 390 px. O fluxo de primariedade/reincidência também passou, incluindo invalidação da confirmação, frações compatíveis, prescrição executória e ocultação do livramento vedado. Sem erros de JavaScript nesse teste.

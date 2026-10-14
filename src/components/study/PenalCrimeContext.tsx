@@ -1,5 +1,7 @@
+import { cn } from "@/lib/utils";
+import { PenalRuleHelp } from "./PenalRuleHelp";
 import { useQuery } from "@tanstack/react-query";
-import { LockKeyhole, BookOpen, Info } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useLegalCourses } from "@/lib/legalCourses";
 import { supabase } from "@/integrations/supabase/client";
@@ -8,7 +10,6 @@ import type { CrimePolicy } from "@/lib/penalPolicy";
 import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
 import { acreDate } from "@/lib/acreTime";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
-import { cn } from "@/lib/utils";
 
 export function PenalCrimeContext({ policy }: { policy: CrimePolicy }) {
   const { user } = useAuthStatus();
@@ -71,40 +72,59 @@ export function PenalCrimeContext({ policy }: { policy: CrimePolicy }) {
         {policy.classificationNote} Síntese do perfil cadastrado: confira a data do fato e a lei
         mais benéfica. A pena em anos não define sozinha a elegibilidade.
       </p>
-      <p className="mt-3 text-xs text-muted-foreground">
-        Abra uma indicação para ler as condições. Saída temporária (“saidinha”) e permissão de saída
-        com escolta são diferentes; monitoração depende das hipóteses legais e da decisão judicial.
-      </p>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {policy.rules.map((rule) => (
-          <details
-            key={rule.title}
-            className={cn(
-              "rounded-xl border-l-4 p-4",
-              rule.state === "vedado"
-                ? "border-rose-300 bg-rose-50 text-rose-950 dark:border-rose-800 dark:bg-rose-950/40 dark:text-rose-100"
-                : rule.state === "nao-avaliado"
-                  ? "border-slate-300 bg-slate-100 text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
-                  : "border-sky-300 bg-sky-50 text-sky-950 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-100",
-            )}
-          >
-            <summary className="cursor-pointer list-none">
-              <span className="flex items-center gap-2 text-sm font-bold">
-                {rule.state === "vedado" ? (
-                  <LockKeyhole aria-hidden className="h-4 w-4" />
-                ) : (
-                  <Info aria-hidden className="h-4 w-4" />
-                )}
-                {rule.title}
-              </span>
-              <span className="mt-2 block text-xs font-semibold">{rule.label}</span>
-              <span className="mt-2 block text-[11px] opacity-80">Ver condições e fundamento</span>
-            </summary>
-            <p className="mt-2 text-xs leading-5">{rule.explanation}</p>
-            <p className="mt-3 text-xs font-medium">{rule.reference}</p>
-          </details>
-        ))}
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        {policy.rules
+          .filter(
+            (rule) =>
+              rule.state === "condicionado" &&
+              ["Progressão", "Livramento condicional", "Substituição", "Sursis"].includes(
+                rule.title,
+              ),
+          )
+          .map((rule) => (
+            <article
+              key={rule.title}
+              className="flex items-start justify-between gap-2 rounded-xl border border-sky-200 bg-sky-50 p-3 text-sky-950 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-100"
+            >
+              <div>
+                <h3 className="text-sm font-bold">{rule.title}</h3>
+                <p className="mt-1 text-xs">{rule.label}</p>
+              </div>
+              <PenalRuleHelp rule={rule} />
+            </article>
+          ))}
       </div>
+      <details className="mt-4 rounded-xl border p-3">
+        <summary className="cursor-pointer text-sm font-semibold">
+          Consultar outros institutos, impedimentos e dados pendentes
+        </summary>
+        <p className="mt-2 text-xs text-muted-foreground">
+          Os itens abaixo não habilitam opções de cálculo. Abra a ajuda para distinguir uma vedação
+          de uma condição ainda não verificada.
+        </p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {policy.rules
+            .filter(
+              (rule) =>
+                rule.state !== "condicionado" ||
+                !["Progressão", "Livramento condicional", "Substituição", "Sursis"].includes(
+                  rule.title,
+                ),
+            )
+            .map((rule) => (
+              <article
+                key={rule.title}
+                className="flex items-center justify-between gap-2 rounded-lg border p-3"
+              >
+                <div>
+                  <h3 className="text-sm font-semibold">{rule.title}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground">{rule.label}</p>
+                </div>
+                <PenalRuleHelp rule={rule} />
+              </article>
+            ))}
+        </div>
+      </details>
       <details className="mt-5 rounded-xl border p-4">
         <summary className="flex cursor-pointer items-center gap-2 text-sm font-semibold">
           <BookOpen aria-hidden className="h-4 w-4" />

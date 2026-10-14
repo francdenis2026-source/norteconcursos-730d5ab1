@@ -254,3 +254,18 @@ test('avisos do painel acompanham falta de dados e vedação do perfil compartil
  assert.equal(rule(policyForOffender(crimePolicy('cp213'),specific),'Livramento condicional').state,'vedado');
  assert.equal(rule(policyForOffender(crimePolicy('cp213'),{...INITIAL_OFFENDER,kind:'recurrent'}),'Progressão').state,'nao-avaliado');
 });
+
+const catalogModule = { exports: {} };
+vm.runInNewContext(ts.transpileModule(readFileSync('src/lib/penalCatalog.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText, { module: catalogModule, exports: catalogModule.exports, require: () => ({}), Number, Math });
+const catalog = catalogModule.exports;
+test('sugestão de pena distingue caput, unidades e modalidade, sem aplicar qualificadoras', () => {
+  const r = catalog.suggestCustodialPenalty('Pena - detenção, de 6 (seis) meses a 2 (dois) anos. § 1º Pena - reclusão, de 3 a 5 anos.');
+  assert.equal(r.min.meses, 6); assert.equal(r.max.anos, 2); assert.equal(r.tipo, 'detenção');
+});
+test('sugestão rejeita revogação, penas alternativas e limites incoerentes', () => {
+  for (const text of ['Revogado. Pena - reclusão, de 1 a 3 anos.', 'Pena - reclusão, de 1 a 3 anos, ou multa.', 'Pena - reclusão, de 5 a 2 anos.', 'A reclusão pode ocorrer por 2 a 4 anos.', 'Pena - reclusão, de 1 a 3 anos. Pena - detenção, de 2 a 4 anos.']) assert.equal(catalog.suggestCustodialPenalty(text), null);
+});
+test('catálogo exclui dispositivos sem pena identificada e versões históricas', () => {
+  const rows = [{id:'a',content_status:'current',body_text:'Pena - reclusão, de 1 a 3 anos.'},{id:'b',content_status:'excluded',body_text:'Pena - detenção, de 1 a 2 anos.'},{id:'c',content_status:'current',body_text:'Norma processual.'}];
+  assert.equal(catalog.custodialUnits(rows).map(x=>x.id).join(','),'a');
+});

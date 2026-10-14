@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AlertTriangle, CalendarClock, Gavel, Scale } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { PenalLawPicker } from "@/components/study/PenalLawPicker";
+import type { SourcePenalty } from "@/lib/penalCatalog";
 import { PenalSources } from "@/components/study/PenalSources";
 import { acreDateKey } from "@/lib/acreTime";
 import { Button } from "@/components/ui/button";
@@ -166,6 +168,8 @@ function DosimetriaTab({
   setExtermination,
   onSentence,
   offender,
+  sourcePenalty,
+  onSourcePenalty,
 }: {
   crimeId: string;
   setCrimeId: (id: string) => void;
@@ -174,35 +178,43 @@ function DosimetriaTab({
   setExtermination: (value: boolean) => void;
   onSentence: (days: number | null) => void;
   offender: OffenderProfile;
+  sourcePenalty: SourcePenalty | null;
+  onSourcePenalty: (source: SourcePenalty | null) => void;
 }) {
   const crime = CRIMES.find((c) => c.id === crimeId);
-  const [min, setMin] = useState<Pena>(crime ? crime.min : { anos: 0, meses: 0, dias: 0 });
-  const [max, setMax] = useState<Pena>(crime ? crime.max : { anos: 0, meses: 0, dias: 0 });
+  const [min, setMin] = useState<Pena>(
+    crime ? crime.min : (sourcePenalty?.min ?? { anos: 0, meses: 0, dias: 0 }),
+  );
+  const [max, setMax] = useState<Pena>(
+    crime ? crime.max : (sourcePenalty?.max ?? { anos: 0, meses: 0, dias: 0 }),
+  );
   const [circ, setCirc] = useState(0);
   const [fCirc, setFCirc] = useState<Fracao>({ num: 1, den: 8 });
   const [agr, setAgr] = useState(0);
   const [aten, setAten] = useState(0);
   const [fAg, setFAg] = useState<Fracao>({ num: 1, den: 6 });
-  const [aum, setAum] = useState<Fracao[]>([]);
-  const [dim, setDim] = useState<Fracao[]>([]);
-  const [causesConfirmed, setCausesConfirmed] = useState(false);
+
+  const [law, setLaw] = useState(
+    crimeStudyTarget(crimeId)?.slug ?? sourcePenalty?.lawSlug ?? "manual",
+  );
   const reinc = offender.kind === "recurrent";
   const [violencia, setViolencia] = useState(true);
   const [culposo, setCulposo] = useState(false);
-  const [tipoManual, setTipoManual] = useState<"reclusão" | "detenção">("reclusão");
+  const [tipoManual, setTipoManual] = useState<"reclusão" | "detenção">(
+    sourcePenalty?.tipo ?? "reclusão",
+  );
   const pick = (id: string) => {
     setCrimeId(id);
+    onSourcePenalty(null);
     setCulposo(false);
     setCirc(0);
     setAgr(0);
     setAten(0);
-    setAum([]);
-    setDim([]);
-    setCausesConfirmed(false);
     setFCirc({ num: 1, den: 8 });
     setFAg({ num: 1, den: 6 });
     const c = CRIMES.find((x) => x.id === id);
     if (c) {
+      setLaw(crimeStudyTarget(c.id)!.slug);
       setMin(c.min);
       setMax(c.max);
       setTipoManual(c.tipo);
@@ -229,10 +241,9 @@ function DosimetriaTab({
     agravantes: agr + (reinc ? 1 : 0),
     atenuantes: aten,
     fracaoAgravanteAtenuante: fAg,
-    aumentos: aum,
-    diminuicoes: dim,
+    aumentos: [],
+    diminuicoes: [],
   };
-  const law = crimeStudyTarget(crimeId)?.slug ?? "manual";
   const lawName =
     law === "codigo-penal"
       ? "Código Penal"
@@ -240,7 +251,7 @@ function DosimetriaTab({
         ? "Lei 11.343/2006 · Drogas"
         : law === "armas"
           ? "Lei 10.826/2003 · Armas"
-          : "Pena informada manualmente";
+          : (sourcePenalty?.lawTitle ?? "Pena informada manualmente");
   let out: ReturnType<typeof dosimetria> | null = null;
   let err = "";
   try {
@@ -256,9 +267,10 @@ function DosimetriaTab({
     policyForSentence(policy, out?.final ?? null, violencia, culposo),
     offender,
   );
-  const regime = out
-    ? regimeInicial(out.final, reinc, tipo, circ === 0 && offender.record !== "bad")
-    : null;
+  const regime =
+    out && crime
+      ? regimeInicial(out.final, reinc, tipo, circ === 0 && offender.record !== "bad")
+      : null;
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <section
@@ -266,7 +278,12 @@ function DosimetriaTab({
         aria-label="Pena e dados do crime selecionado"
       >
         <p className="text-xs font-semibold uppercase tracking-wide text-primary">{lawName}</p>
-        <h2 className="mt-2 text-lg font-bold">{crime?.label ?? "Simulação de outro crime"}</h2>
+        <h2 className="mt-2 text-lg font-bold">
+          {crime?.label ??
+            (sourcePenalty
+              ? `${sourcePenalty.lawTitle} · ${sourcePenalty.label}`
+              : "Simulação de outro crime")}
+        </h2>
         {out ? (
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl bg-background p-3">
@@ -307,7 +324,6 @@ function DosimetriaTab({
           Homicídio praticado em atividade típica de grupo de extermínio (Lei 8.072, art. 1º, I)
         </label>
       )}
-      <PenalCrimeContext policy={sentencePolicy} />
       <section className={card}>
         <h2 className="text-lg font-bold">Dados do crime e das fases</h2>
         {offender.record === "bad" && (
@@ -321,42 +337,34 @@ function DosimetriaTab({
           Os exemplos usam a redação cadastrada em 12/10/2026. Para fatos anteriores, confira a lei
           aplicável e informe os limites manualmente. Multa e concurso de crimes não são calculados.
         </p>
-        <label className="block text-sm font-medium">
-          Lei do exemplo
-          <select
-            className={cn(field, "mt-1")}
-            value={law}
-            onChange={(e) =>
-              pick(
-                CRIMES.find((c) => crimeStudyTarget(c.id)?.slug === e.target.value)?.id ?? "custom",
-              )
+        <PenalLawPicker
+          law={law}
+          crimeId={crimeId}
+          onLaw={(slug) => {
+            const first = CRIMES.find((c) => crimeStudyTarget(c.id)?.slug === slug);
+            pick(first?.id ?? "custom");
+            if (!first) {
+              setMin({ anos: 0, meses: 0, dias: 0 });
+              setMax({ anos: 0, meses: 0, dias: 0 });
             }
-          >
-            <option value="codigo-penal">Código Penal</option>
-            <option value="drogas">Lei de Drogas</option>
-            <option value="armas">Estatuto do Desarmamento</option>
-            <option value="manual">Outra lei: informar os limites</option>
-          </select>
-        </label>
-        <p className="text-xs text-muted-foreground">
-          Trocar o crime inicia um novo exemplo: as fases são zeradas. O perfil da pessoa permanece
-          selecionado.
-        </p>
-        <label className="block text-sm font-medium">
-          Crime (preceito do texto compilado)
-          <select
-            className={cn(field, "mt-1")}
-            value={crimeId}
-            onChange={(e) => pick(e.target.value)}
-          >
-            {CRIMES.filter((c) => crimeStudyTarget(c.id)?.slug === law).map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.label}
-              </option>
-            ))}
-            <option value="custom">Outro crime: informar a pena</option>
-          </select>
-        </label>
+            setLaw(slug);
+          }}
+          onCrime={(id) => {
+            pick(id);
+            if (id === "custom") {
+              setMin({ anos: 0, meses: 0, dias: 0 });
+              setMax({ anos: 0, meses: 0, dias: 0 });
+            }
+          }}
+          onApply={(source) => {
+            pick("custom");
+            setMin(source.min);
+            setMax(source.max);
+            setTipoManual(source.tipo);
+            setViolencia(false);
+            onSourcePenalty(source);
+          }}
+        />
         {!crime && (
           <label className="block text-sm font-medium">
             Espécie da pena
@@ -376,6 +384,7 @@ function DosimetriaTab({
             value={min}
             onChange={(p) => {
               setMin(p);
+              onSourcePenalty(null);
               setCrimeId("custom");
             }}
           />
@@ -384,98 +393,60 @@ function DosimetriaTab({
             value={max}
             onChange={(p) => {
               setMax(p);
+              onSourcePenalty(null);
               setCrimeId("custom");
             }}
           />
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <label className="text-sm font-medium">
-            1ª fase: circunstâncias judiciais desfavoráveis
-            <input
-              className={cn(field, "mt-1")}
-              type="number"
-              min={0}
-              max={8}
-              value={circ}
-              onChange={(e) => setCirc(num(e.target.value))}
+        <details className="rounded-xl border p-3">
+          <summary className="cursor-pointer text-sm font-semibold">
+            Ajustar circunstâncias, agravantes e atenuantes
+          </summary>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <label className="text-sm font-medium">
+              1ª fase: circunstâncias judiciais desfavoráveis
+              <input
+                className={cn(field, "mt-1")}
+                type="number"
+                min={0}
+                max={8}
+                value={circ}
+                onChange={(e) => setCirc(num(e.target.value))}
+              />
+            </label>
+            <FracaoSelect
+              label="Fração por circunstância (sobre o intervalo)"
+              value={fCirc}
+              onChange={setFCirc}
             />
-          </label>
-          <FracaoSelect
-            label="Fração por circunstância (sobre o intervalo)"
-            value={fCirc}
-            onChange={setFCirc}
-          />
-          <label className="text-sm font-medium">
-            2ª fase: outras agravantes (sem contar reincidência)
-            <input
-              className={cn(field, "mt-1")}
-              type="number"
-              min={0}
-              value={agr}
-              onChange={(e) => setAgr(num(e.target.value))}
-            />
-          </label>
-          <label className="text-sm font-medium">
-            2ª fase: atenuantes
-            <input
-              className={cn(field, "mt-1")}
-              type="number"
-              min={0}
-              value={aten}
-              onChange={(e) => setAten(num(e.target.value))}
-            />
-          </label>
-          <FracaoSelect label="Fração por agravante/atenuante" value={fAg} onChange={setFAg} />
-        </div>
-        <label className="flex items-start gap-2 rounded-xl border bg-muted/30 p-3 text-sm">
-          <input
-            type="checkbox"
-            checked={causesConfirmed}
-            onChange={(e) => {
-              setCausesConfirmed(e.target.checked);
-              if (!e.target.checked) {
-                setAum([]);
-                setDim([]);
-              }
-            }}
-          />
-          Habilitar causas manuais após conferir o fundamento, a hipótese e a fração na lei. A
-          calculadora não presume causas pelo nome do crime.
-        </label>
-        {(
-          [
-            ["Causas de aumento (3ª fase)", aum, setAum],
-            ["Causas de diminuição (3ª fase)", dim, setDim],
-          ] as const
-        ).map(([title, list, set]) => (
-          <div key={title} className="space-y-2">
-            <p className="text-sm font-medium">{title}</p>
-            <div className="flex flex-wrap gap-2">
-              {list.map((f, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className="rounded-full border bg-muted px-3 py-1 text-sm"
-                  onClick={() => set(list.filter((_, j) => j !== i))}
-                  aria-label={`Remover ${fracKey(f)}`}
-                >
-                  {fracKey(f)} ✕
-                </button>
-              ))}
-              {FRACOES.map((f) => (
-                <button
-                  key={f.label}
-                  type="button"
-                  className="rounded-full border px-3 py-1 text-sm hover:bg-muted"
-                  disabled={!causesConfirmed || list.length >= 10}
-                  onClick={() => set([...list, f.value])}
-                >
-                  + {f.label}
-                </button>
-              ))}
-            </div>
+            <label className="text-sm font-medium">
+              2ª fase: outras agravantes (sem contar reincidência)
+              <input
+                className={cn(field, "mt-1")}
+                type="number"
+                min={0}
+                value={agr}
+                onChange={(e) => setAgr(num(e.target.value))}
+              />
+            </label>
+            <label className="text-sm font-medium">
+              2ª fase: atenuantes
+              <input
+                className={cn(field, "mt-1")}
+                type="number"
+                min={0}
+                value={aten}
+                onChange={(e) => setAten(num(e.target.value))}
+              />
+            </label>
+            <FracaoSelect label="Fração por agravante/atenuante" value={fAg} onChange={setFAg} />
           </div>
-        ))}
+        </details>
+        <p className="text-xs text-muted-foreground">
+          Causas específicas de aumento e diminuição não estão parametrizadas para esta seleção.
+          Consulte o dispositivo completo; a ausência do controle não significa inexistência da
+          causa na lei.
+        </p>
         <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"
@@ -540,15 +511,20 @@ function DosimetriaTab({
                 ({out.final} dias, com ano de 12 meses e mês de 30 dias)
               </p>
             </Result>
-            <div className="space-y-3" aria-label="Exemplos das fases da pena">
-              {dosimetryExamples(
-                simulation,
-                out,
-                crime?.label ?? "crime informado manualmente",
-              ).map((example, index) => (
-                <PenalExample key={index} example={example} />
-              ))}
-            </div>
+            <details className="rounded-xl border p-3">
+              <summary className="cursor-pointer text-sm font-semibold">
+                Entender o cálculo com exemplos
+              </summary>
+              <div className="mt-3 space-y-3" aria-label="Exemplos das fases da pena">
+                {dosimetryExamples(
+                  simulation,
+                  out,
+                  crime?.label ?? "crime informado manualmente",
+                ).map((example, index) => (
+                  <PenalExample key={index} example={example} />
+                ))}
+              </div>
+            </details>
             {regime && (
               <Result title="Regime inicial (art. 33, § 2º, do CP)">
                 <p className="font-bold">{regime.regime}</p>
@@ -564,18 +540,6 @@ function DosimetriaTab({
                 </p>
               </Result>
             )}
-            <Result title="Outros benefícios a estudar" tone="warn">
-              <ul className="list-disc space-y-1 pl-5">
-                {beneficios(out.final, violencia, culposo).map((b, index) => (
-                  <li key={b}>
-                    {index === 1 &&
-                    sentencePolicy.rules.find((r) => r.title === "Sursis")?.state === "vedado"
-                      ? `${sentencePolicy.rules.find((r) => r.title === "Sursis")!.label}: ${sentencePolicy.rules.find((r) => r.title === "Sursis")!.explanation}`
-                      : b}
-                  </li>
-                ))}
-              </ul>
-            </Result>
           </>
         )}
         <p className="text-xs text-muted-foreground">
@@ -586,6 +550,7 @@ function DosimetriaTab({
           do art. 68, parágrafo único. Frações de dia são desprezadas (CP, art. 11).
         </p>
       </section>
+      <PenalCrimeContext policy={sentencePolicy} />
     </div>
   );
 }
@@ -657,6 +622,17 @@ function ExecucaoTab({
     };
   });
   const { prog, lc, fim, penaDias } = result.value ?? {};
+  if (policy.classification === "desconhecido")
+    return (
+      <section className={card}>
+        <h2 className="text-lg font-bold">Execução ainda não parametrizada para esta seleção</h2>
+        <p className="text-sm text-muted-foreground">
+          A pena pode ser estudada na dosimetria após conferir os limites. Progressão, percentuais e
+          livramento exigem enquadramento e regras próprios deste crime; os controles não são
+          exibidos sem essa parametrização.
+        </p>
+      </section>
+    );
   return (
     <div className="grid gap-5 lg:grid-cols-2">
       <section className={card}>
@@ -714,7 +690,11 @@ function ExecucaoTab({
             }}
           >
             <option value="manual">Informar a fração aplicável ao exercício</option>
-            {CATEGORIAS_PROGRESSAO.map((c) => (
+            {CATEGORIAS_PROGRESSAO.filter(
+              (c) =>
+                compatibleProgression(policy, c.id) &&
+                offenderCategoryCompatible(policy, offender, c.id),
+            ).map((c) => (
               <option
                 key={c.id}
                 value={c.id}
@@ -782,32 +762,38 @@ function ExecucaoTab({
           />{" "}
           Conferi a fração e as vedações para o caso de estudo, incluindo a lei no tempo.
         </label>
-        <label className="block text-sm font-medium">
-          Perfil para o livramento condicional (CP, art. 83)
-          <select
-            className={cn(field, "mt-1")}
-            value={livId}
-            onChange={(e) => {
-              setLivId(e.target.value);
-              setRegraConfirmada(false);
-            }}
-          >
-            <option value="vedado">Não calcular: vedação ou dados insuficientes</option>
-            {LIVRAMENTO.map((l) => (
-              <option
-                key={l.id}
-                value={l.id}
-                disabled={
-                  !compatibleParole(policy, l.id, catId, specificRecidivism) ||
-                  l.id !== suggestedParole.id ||
-                  (l.id !== "vedado" && (!result.value || result.value.penaDias < 720))
-                }
-              >
-                {l.label}
-              </option>
-            ))}
-          </select>
-        </label>
+        {suggestedParole.id !== "vedado" && result.value && result.value.penaDias >= 720 && (
+          <label className="block text-sm font-medium">
+            Perfil para o livramento condicional (CP, art. 83)
+            <select
+              className={cn(field, "mt-1")}
+              value={livId}
+              onChange={(e) => {
+                setLivId(e.target.value);
+                setRegraConfirmada(false);
+              }}
+            >
+              <option value="vedado">Não calcular: vedação ou dados insuficientes</option>
+              {LIVRAMENTO.filter(
+                (l) =>
+                  l.id === suggestedParole.id &&
+                  compatibleParole(policy, l.id, catId, specificRecidivism),
+              ).map((l) => (
+                <option
+                  key={l.id}
+                  value={l.id}
+                  disabled={
+                    !compatibleParole(policy, l.id, catId, specificRecidivism) ||
+                    l.id !== suggestedParole.id ||
+                    (l.id !== "vedado" && (!result.value || result.value.penaDias < 720))
+                  }
+                >
+                  {l.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <div className="grid grid-cols-2 gap-3">
           <label className="text-sm font-medium">
             Detração (dias de prisão provisória)
@@ -891,52 +877,56 @@ function ExecucaoTab({
                   criminológico (art. 112, § 1º).
                 </p>
               </Result>
-              <Result
-                title={
-                  livId === "vedado" ||
-                  !compatibleParole(policy, livId, catId, specificRecidivism) ||
-                  penaDias < 720
-                    ? "Livramento condicional: não habilitado"
-                    : `Livramento condicional: mais de ${liv.fracao.num}/${liv.fracao.den}`
-                }
-              >
-                {penaDias < 2 * 360 ? (
-                  <p className="font-semibold text-rose-600">
-                    O livramento exige pena igual ou superior a 2 anos (art. 83, caput).
-                  </p>
-                ) : livId === "vedado" ||
-                  !compatibleParole(policy, livId, catId, specificRecidivism) ? (
-                  <p className="font-semibold text-rose-600">
-                    O livramento não está habilitado para esta combinação. Confira a vedação, a
-                    reincidência específica ou a insuficiência de enquadramento (CP, art. 83; LEP,
-                    art. 112).
-                  </p>
-                ) : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
-                  livId !== "doistercos" ? (
-                  <p className="text-sm text-destructive">
-                    O perfil de hediondo/equiparado não admite usar a regra comum de 1/3 ou 1/2.
-                    Confira o art. 83, V, inclusive a vedação por reincidência específica.
-                  </p>
-                ) : (
-                  <>
-                    <p>
-                      Exigido: <strong>{lc.exigidosDias} dias</strong> (mais de {liv.fracao.num}/
-                      {liv.fracao.den} de {lc.totalDias}).
-                    </p>
-                    <p className="mt-1 text-base font-bold">
-                      {lc.jaCumprido ? (
-                        "Abatimentos informados cobrem a fração exigida."
-                      ) : (
-                        <>Marco temporal hipotético: {formatBr(lc.data)}</>
-                      )}
-                    </p>
-                    <p className="text-muted-foreground">
-                      Exige também requisitos do art. 83, III e IV (comportamento, ausência de falta
-                      grave nos últimos 12 meses, trabalho e reparação do dano).
-                    </p>
-                  </>
+              {livId !== "vedado" &&
+                penaDias >= 720 &&
+                compatibleParole(policy, livId, catId, specificRecidivism) && (
+                  <Result
+                    title={
+                      livId === "vedado" ||
+                      !compatibleParole(policy, livId, catId, specificRecidivism) ||
+                      penaDias < 720
+                        ? "Livramento condicional: não habilitado"
+                        : `Livramento condicional: mais de ${liv.fracao.num}/${liv.fracao.den}`
+                    }
+                  >
+                    {penaDias < 2 * 360 ? (
+                      <p className="font-semibold text-rose-600">
+                        O livramento exige pena igual ou superior a 2 anos (art. 83, caput).
+                      </p>
+                    ) : livId === "vedado" ||
+                      !compatibleParole(policy, livId, catId, specificRecidivism) ? (
+                      <p className="font-semibold text-rose-600">
+                        O livramento não está habilitado para esta combinação. Confira a vedação, a
+                        reincidência específica ou a insuficiência de enquadramento (CP, art. 83;
+                        LEP, art. 112).
+                      </p>
+                    ) : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
+                      livId !== "doistercos" ? (
+                      <p className="text-sm text-destructive">
+                        O perfil de hediondo/equiparado não admite usar a regra comum de 1/3 ou 1/2.
+                        Confira o art. 83, V, inclusive a vedação por reincidência específica.
+                      </p>
+                    ) : (
+                      <>
+                        <p>
+                          Exigido: <strong>{lc.exigidosDias} dias</strong> (mais de {liv.fracao.num}
+                          /{liv.fracao.den} de {lc.totalDias}).
+                        </p>
+                        <p className="mt-1 text-base font-bold">
+                          {lc.jaCumprido ? (
+                            "Abatimentos informados cobrem a fração exigida."
+                          ) : (
+                            <>Marco temporal hipotético: {formatBr(lc.data)}</>
+                          )}
+                        </p>
+                        <p className="text-muted-foreground">
+                          Exige também requisitos do art. 83, III e IV (comportamento, ausência de
+                          falta grave nos últimos 12 meses, trabalho e reparação do dano).
+                        </p>
+                      </>
+                    )}
+                  </Result>
                 )}
-              </Result>
               <PenalExample
                 source="execution"
                 example={{
@@ -954,36 +944,40 @@ function ExecucaoTab({
                     "LEP, art. 112; CP, arts. 10 e 42: não duplique dias já contados. Interrupções e requisitos subjetivos podem alterar a análise.",
                 }}
               />
-              <PenalExample
-                source="execution"
-                example={{
-                  title: "Entendendo o livramento condicional",
-                  scenario: `No mesmo exercício, a pena é de ${formatPena(pena)} e o perfil de livramento é ${livId === "vedado" ? "vedado" : liv.label}.`,
-                  steps:
-                    penaDias < 720
-                      ? [
-                          "A pena informada é inferior a dois anos; o requisito quantitativo do art. 83, caput, não foi atendido.",
-                        ]
-                      : livId === "vedado" ||
-                          !compatibleParole(policy, livId, catId, specificRecidivism)
-                        ? [
-                            "A hipótese selecionada foi marcada como vedada; alcançar uma fração de tempo não afasta a vedação.",
-                          ]
-                        : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
-                            livId !== "doistercos"
+              {livId !== "vedado" &&
+                penaDias >= 720 &&
+                compatibleParole(policy, livId, catId, specificRecidivism) && (
+                  <PenalExample
+                    source="execution"
+                    example={{
+                      title: "Entendendo o livramento condicional",
+                      scenario: `No mesmo exercício, a pena é de ${formatPena(pena)} e o perfil de livramento é ${livId === "vedado" ? "vedado" : liv.label}.`,
+                      steps:
+                        penaDias < 720
                           ? [
-                              "O perfil de hediondo/equiparado não pode ser combinado com a regra comum de 1/3 ou 1/2. Corrija o perfil antes de usar o exemplo.",
+                              "A pena informada é inferior a dois anos; o requisito quantitativo do art. 83, caput, não foi atendido.",
                             ]
-                          : [
-                              `A expressão “mais de” exige ${lc.exigidosDias} dias, superando a fração ${liv.fracao.num}/${liv.fracao.den} de ${lc.totalDias}.`,
-                              `Depois de ${lc.abatidosDias} dias de abatimentos, restam ${lc.faltamDias} dias para esse requisito temporal.`,
-                            ],
-                  conclusion:
-                    "Tempo cumprido e elegibilidade jurídica são verificações diferentes.",
-                  caution:
-                    "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
-                }}
-              />
+                          : livId === "vedado" ||
+                              !compatibleParole(policy, livId, catId, specificRecidivism)
+                            ? [
+                                "A hipótese selecionada foi marcada como vedada; alcançar uma fração de tempo não afasta a vedação.",
+                              ]
+                            : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
+                                livId !== "doistercos"
+                              ? [
+                                  "O perfil de hediondo/equiparado não pode ser combinado com a regra comum de 1/3 ou 1/2. Corrija o perfil antes de usar o exemplo.",
+                                ]
+                              : [
+                                  `A expressão “mais de” exige ${lc.exigidosDias} dias, superando a fração ${liv.fracao.num}/${liv.fracao.den} de ${lc.totalDias}.`,
+                                  `Depois de ${lc.abatidosDias} dias de abatimentos, restam ${lc.faltamDias} dias para esse requisito temporal.`,
+                                ],
+                      conclusion:
+                        "Tempo cumprido e elegibilidade jurídica são verificações diferentes.",
+                      caution:
+                        "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
+                    }}
+                  />
+                )}
               <Result title="Ao concluir o tempo de pena · penal e execução" tone="warn">
                 <p>
                   O marco abaixo é a duração integral do exercício, sem abatimentos ou interrupções.
@@ -1067,6 +1061,16 @@ function PrescricaoTab({
     };
   });
   const { r, data } = result.value ?? {};
+  if (!crime)
+    return (
+      <section className={card}>
+        <h2 className="font-bold">Prescrição não parametrizada</h2>
+        <p className="text-sm text-muted-foreground">
+          Este dispositivo exige conferir hipóteses de imprescritibilidade, regras especiais e
+          termos iniciais. O painel não presume a aplicação da tabela geral.
+        </p>
+      </section>
+    );
   return (
     <div className="grid gap-5 lg:grid-cols-2">
       <section className={card}>
@@ -1267,6 +1271,7 @@ function PenalCalculatorPage() {
   const [extermination, setExtermination] = useState(false);
   const [offender, setOffender] = useState<OffenderProfile>(INITIAL_OFFENDER);
   const [sentenceDays, setSentenceDays] = useState<number | null>(6 * 360);
+  const [sourcePenalty, setSourcePenalty] = useState<SourcePenalty | null>(null);
   const policy = crimePolicy(crimeId, extermination);
   const setCrimeId = (id: string) => {
     if (id !== crimeId) {
@@ -1337,6 +1342,8 @@ function PenalCalculatorPage() {
             extermination={extermination}
             setExtermination={setExtermination}
             onSentence={setSentenceDays}
+            sourcePenalty={sourcePenalty}
+            onSourcePenalty={setSourcePenalty}
             offender={offender}
           />
         </TabsContent>
