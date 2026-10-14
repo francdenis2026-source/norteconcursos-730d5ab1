@@ -1373,30 +1373,14 @@ function TrainerSetup({
   };
   return (
     <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
-      <section className="question-trainer-hero tactical-feature-hero overflow-hidden rounded-xl p-4 text-white shadow-xl sm:rounded-2xl sm:p-6 md:p-8">
-        <div className="grid gap-3 sm:gap-6 md:grid-cols-[1fr_auto] md:items-end">
-          <div>
-            <Badge className="mb-2 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10 sm:mb-4">
-              <BrainCircuit className="mr-1.5 h-3.5 w-3.5" /> Treinamento de precisão
-            </Badge>
-            <h1 className="text-2xl font-black leading-tight sm:text-3xl md:text-4xl">
-              Monte sua sessão de questões
-            </h1>
-            <p className="mt-2 max-w-2xl text-xs leading-5 text-slate-300 sm:mt-3 sm:text-sm sm:leading-6">
-              Escolha a banca, carreira, concurso e disciplina. Aqui cada resposta recebe correção
-              imediata e orientação pedagógica, sem afetar o ranking dos simulados.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-2 text-center">
-            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
-              <p className="text-xl font-black sm:text-2xl">{total}</p>
-              <p className="text-[10px] text-slate-300">questões ativas</p>
-            </div>
-            <div className="rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 sm:rounded-xl sm:px-4 sm:py-3">
-              <p className="text-xl font-black text-amber-200 sm:text-2xl">{available}</p>
-              <p className="text-[10px] text-slate-300">na seleção</p>
-            </div>
-          </div>
+      <section className="trainer-study-hero" aria-labelledby="trainer-title">
+        <div className="trainer-study-hero__content">
+          <span className="trainer-study-hero__eyebrow">Prática para concursos</span>
+          <h1 id="trainer-title">Treinador de questões</h1>
+          <p>Escolha o que estudar, responda no seu ritmo e aprenda com a correção.</p>
+          <span className="trainer-study-hero__catalog">
+            {total.toLocaleString("pt-BR")} questões disponíveis no acervo
+          </span>
         </div>
       </section>
       <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
@@ -1408,7 +1392,7 @@ function TrainerSetup({
             <div>
               <h2 className="text-lg font-black">Filtros do treino</h2>
               <p className="text-xs text-muted-foreground">
-                As opções podem ser combinadas livremente.
+                Comece pelo concurso ou pela disciplina. Os demais filtros são opcionais.
               </p>
             </div>
           </div>
@@ -1427,7 +1411,26 @@ function TrainerSetup({
               </button>
             </p>
           )}
-          <div className="grid gap-2.5 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <TrainerFilter
+              counts={facets.counts["contest"]}
+              allCount={facets.totals["contest"]}
+              label="Concurso ou material"
+              value={values.contest}
+              setValue={setters.setContest}
+              options={choices.contests}
+              labels={Object.fromEntries(
+                choices.contests.map((value) => [value, questionContestOptionLabel(value)]),
+              )}
+            />
+            <TrainerFilter
+              counts={facets.counts["career"]}
+              allCount={facets.totals["career"]}
+              label="Cargo"
+              value={values.career}
+              setValue={setters.setCareer}
+              options={choices.careers}
+            />
             <TrainerFilter
               counts={facets.counts["board"]}
               allCount={facets.totals["board"]}
@@ -1456,123 +1459,133 @@ function TrainerSetup({
               )}
               allLabel="Todos os assuntos"
             />
-            <TrainerFilter
-              counts={facets.counts["contest"]}
-              allCount={facets.totals["contest"]}
-              label="Concurso ou material"
-              value={values.contest}
-              setValue={setters.setContest}
-              options={choices.contests}
-              labels={Object.fromEntries(choices.contests.map((value) => [value, questionContestOptionLabel(value)]))}
-            />
-            <TrainerFilter
-              counts={facets.counts["career"]}
-              allCount={facets.totals["career"]}
-              label="Cargo"
-              value={values.career}
-              setValue={setters.setCareer}
-              options={choices.careers}
-            />
-            <TrainerFilter
-              counts={facets.counts["state"]}
-              allCount={facets.totals["state"]}
-              label="Estado"
-              value={values.state}
-              setValue={setters.setState}
-              options={choices.states}
-            />
-            <TrainerFilter
-              counts={facets.counts["category"]}
-              allCount={facets.totals["category"]}
-              label="Categoria"
-              value={values.category}
-              setValue={setters.setCategory}
-              options={choices.categories}
-            />
-            <TrainerFilter
-              counts={facets.counts["year"]}
-              allCount={facets.totals["year"]}
-              label="Ano"
-              value={values.year}
-              setValue={setters.setYear}
-              options={choices.years}
-            />
-            <TrainerFilter
-              counts={facets.counts["exam"]}
-              allCount={facets.totals["exam"]}
-              label="Prova aplicada"
-              value={values.appliedExam}
-              setValue={setters.setAppliedExam}
-              options={choices.exams.map(([value]) => value)}
-              labels={Object.fromEntries(choices.exams)}
-            />
-            <TrainerFilter
-              counts={facets.counts["source"]}
-              allCount={facets.totals["source"]}
-              label="Origem"
-              value={values.source}
-              setValue={setters.setSource}
-              options={["official", "curated", "personal"]}
-              labels={{
-                official: "Provas oficiais",
-                curated: "Autorais e repertório de estudo",
-                personal: "Meu caderno",
-              }}
-            />
-            <TrainerFilter
-              counts={facets.counts["reviewed"]}
-              allCount={facets.totals["reviewed"]}
-              label="Explicação didática"
-              value={values.reviewed}
-              setValue={setters.setReviewed}
-              options={["reviewed"]}
-              labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
-              allLabel="Todas as questões"
-            />
-            <TrainerFilter
-              counts={facets.counts["difficulty"]}
-              allCount={facets.totals["difficulty"]}
-              label="Dificuldade"
-              value={values.difficulty}
-              setValue={setters.setDifficulty}
-              options={["fácil", "média", "difícil"]}
-              labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
-            />
-            <TrainerFilter
-              label="Quantidade"
-              value={values.limit}
-              setValue={setters.setLimit}
-              options={["5", "10", "20", "30", "50"]}
-              allLabel="Quantidade"
-              hideAll
-            />
-            <label className="space-y-1.5 sm:space-y-2">
-              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
-                Ordem das questões
-              </span>
-              <Select
-                value={values.orderMode}
-                onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
-              >
-                <SelectTrigger className="h-10 bg-background sm:h-11">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="random">Aleatório inteligente</SelectItem>
-                  <SelectItem value="exam">Ordem do acervo</SelectItem>
-                </SelectContent>
-              </Select>
-            </label>
           </div>
-          <div className="mt-4 flex flex-col gap-2.5 rounded-xl border bg-muted/30 p-3 sm:mt-7 sm:flex-row sm:items-center sm:justify-between sm:rounded-2xl sm:p-4">
+          <details
+            className="trainer-extra-filters"
+            open={
+              Object.entries({
+                state: values.state,
+                category: values.category,
+                year: values.year,
+                exam: values.appliedExam,
+                source: values.source,
+                reviewed: values.reviewed,
+                difficulty: values.difficulty,
+              }).some(([, value]) => value !== "all") || undefined
+            }
+          >
+            <summary>
+              Mais filtros <span>Estado, ano, prova, origem e dificuldade</span>
+            </summary>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <TrainerFilter
+                counts={facets.counts["state"]}
+                allCount={facets.totals["state"]}
+                label="Estado"
+                value={values.state}
+                setValue={setters.setState}
+                options={choices.states}
+              />
+              <TrainerFilter
+                counts={facets.counts["category"]}
+                allCount={facets.totals["category"]}
+                label="Categoria"
+                value={values.category}
+                setValue={setters.setCategory}
+                options={choices.categories}
+              />
+              <TrainerFilter
+                counts={facets.counts["year"]}
+                allCount={facets.totals["year"]}
+                label="Ano"
+                value={values.year}
+                setValue={setters.setYear}
+                options={choices.years}
+              />
+              <TrainerFilter
+                counts={facets.counts["exam"]}
+                allCount={facets.totals["exam"]}
+                label="Prova aplicada"
+                value={values.appliedExam}
+                setValue={setters.setAppliedExam}
+                options={choices.exams.map(([value]) => value)}
+                labels={Object.fromEntries(choices.exams)}
+              />
+              <TrainerFilter
+                counts={facets.counts["source"]}
+                allCount={facets.totals["source"]}
+                label="Origem"
+                value={values.source}
+                setValue={setters.setSource}
+                options={["official", "curated", "personal"]}
+                labels={{
+                  official: "Provas oficiais",
+                  curated: "Autorais e repertório de estudo",
+                  personal: "Meu caderno",
+                }}
+              />
+              <TrainerFilter
+                counts={facets.counts["reviewed"]}
+                allCount={facets.totals["reviewed"]}
+                label="Explicação didática"
+                value={values.reviewed}
+                setValue={setters.setReviewed}
+                options={["reviewed"]}
+                labels={{ reviewed: "Com explicação e exemplo do dia a dia" }}
+                allLabel="Todas as questões"
+              />
+              <TrainerFilter
+                counts={facets.counts["difficulty"]}
+                allCount={facets.totals["difficulty"]}
+                label="Dificuldade"
+                value={values.difficulty}
+                setValue={setters.setDifficulty}
+                options={["fácil", "média", "difícil"]}
+                labels={{ fácil: "Fácil", média: "Média", difícil: "Difícil" }}
+              />
+            </div>
+          </details>
+          <div className="mt-5 border-t pt-5">
+            <h3 className="mb-3 text-sm font-semibold">Formato da sessão</h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <TrainerFilter
+                label="Quantidade"
+                value={values.limit}
+                setValue={setters.setLimit}
+                options={["5", "10", "20", "30", "50"]}
+                allLabel="Quantidade"
+                hideAll
+              />{" "}
+              <label className="space-y-1.5 sm:space-y-2">
+                <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">
+                  Ordem das questões
+                </span>
+                <Select
+                  value={values.orderMode}
+                  onValueChange={(value) => setters.setOrderMode(value as OrderMode)}
+                >
+                  <SelectTrigger className="h-10 bg-background sm:h-11">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="random">Aleatório inteligente</SelectItem>
+                    <SelectItem value="exam">Ordem do acervo</SelectItem>
+                  </SelectContent>
+                </Select>
+              </label>
+            </div>
+          </div>
+          <div className="trainer-start-bar mt-5 flex flex-col gap-3 rounded-xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="font-black">
-                {Math.min(available, Number(values.limit))} questões serão usadas
+                {available
+                  ? `${Math.min(available, Number(values.limit))} questões nesta sessão`
+                  : "Nenhuma questão para estes filtros"}
               </p>
               <p className="text-xs text-muted-foreground">
                 {values.orderMode === "random"
-                  ? "Seleção embaralhada uma única vez ao iniciar; a questão fica estável enquanto você responde."
-                  : "Questões apresentadas na ordem cadastrada, com correção após cada resposta."}
+                  ? "Questões em ordem aleatória, com correção após cada resposta."
+                  : "Questões na ordem do acervo, com correção após cada resposta."}
               </p>
             </div>
             <div className="grid grid-cols-[auto_1fr] gap-2 sm:flex">
@@ -1584,7 +1597,7 @@ function TrainerSetup({
                 onClick={start}
                 className="hero-primary-action h-9 sm:h-10"
               >
-                <Sparkles className="mr-2 h-4 w-4" /> Iniciar treinamento
+                <ArrowRight className="mr-2 h-4 w-4" /> Começar sessão
               </Button>
             </div>
           </div>

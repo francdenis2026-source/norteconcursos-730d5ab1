@@ -10669,3 +10669,31 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .dark .study-tag-exception { background: #581c87; color: #e9d5ff; }
 .dark .study-tag-rule { background: #1e3a8a; color: #bfdbfe; }
 .dark .study-tag-tip { background: #164e63; color: #a5f3fc; }
+
+/* Question practice: calm header and progressive filter disclosure. */
+.trainer-study-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #071d35 url('/media/hero/trainer-study.webp') center / cover no-repeat;
+  color: #fff;
+  padding: clamp(24px, 4vw, 40px);
+  min-height: 210px;
+}
+.trainer-study-hero__content { position: relative; max-width: 60%; }
+.trainer-study-hero__eyebrow { color: #f1c879; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.trainer-study-hero h1 { margin: 10px 0; font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 750; line-height: 1.15; }
+.trainer-study-hero p { color: #d5deea; font-size: .95rem; line-height: 1.65; }
+.trainer-study-hero__catalog { display: block; margin-top: 16px; color: #bacadd; font-size: .8rem; }
+.trainer-extra-filters { margin-top: 20px; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.trainer-extra-filters summary { cursor: pointer; font-size: .9rem; font-weight: 650; }
+.trainer-extra-filters summary span { display: block; margin-top: 4px; font-size: .8rem; font-weight: 400; color: var(--muted-foreground); }
+.trainer-extra-filters[open] summary { margin-bottom: 18px; }
+.trainer-extra-filters summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; border-radius: 4px; }
+.trainer-start-bar { position: sticky; bottom: 12px; z-index: 10; background: var(--card); box-shadow: 0 6px 24px rgb(0 0 0 / .08); }
+@media (max-width: 640px) {
+  .trainer-study-hero { min-height: 185px; background-position: 65% center; }
+  .trainer-study-hero::before { content: ''; position: absolute; inset: 0; background: rgb(7 29 53 / .65); }
+  .trainer-study-hero__content { max-width: 100%; }
+  .trainer-start-bar { position: static; }
+}
