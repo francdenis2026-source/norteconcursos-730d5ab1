@@ -7,6 +7,14 @@ import { filterTrainerQuestions } from "../../src/lib/trainerFilters.ts";
 import { isEligibleQuestion, parseQuestion } from "../../src/lib/questionFormat.ts";
 import { needsMissingSupportText } from "../../src/lib/questionText.ts";
 import { ENEM_STUDY_GROUPS, matchesEnemMaterial } from "../../src/lib/enemStudy.ts";
+
+import {
+  enemQuestionArea,
+  enemSimulatorCatalog,
+  enemSimulatorFilters,
+  enemVideoSelection,
+} from "../../src/lib/enemScope.ts";
+import { ENEM_AREAS } from "../../src/data/enem.ts";
 const pack = JSON.parse(
   await readFile(new URL("../../docs/enem-question-batch-01-2026-10-14.json", import.meta.url)),
 );
@@ -129,4 +137,114 @@ test("ENEM materials keep subject areas separate and support accent-insensitive 
   assert.equal(matchesEnemMaterial({ ...m, contest_name: "Polícia Federal" }, "all", ""), false);
   const all = ENEM_STUDY_GROUPS.flatMap((g) => g.subjects);
   assert.equal(new Set(all).size, all.length);
+});
+
+test("ENEM scope excludes other exams and non-ENEM subjects even with unrelated route filters", () => {
+  const catalog = [
+    {
+      contest: "ENEM",
+      subject: "Matemática",
+      board: "Inep",
+      career: "Estudante",
+      year: 2025,
+      sourceKind: "official",
+      state: "",
+      category: "",
+      explanation: "",
+      legalBasis: [],
+      checkedAt: null,
+    },
+    {
+      contest: "Polícia Federal",
+      subject: "Matemática",
+      board: "CEBRASPE",
+      career: "Agente",
+      year: 2025,
+      sourceKind: "official",
+      state: "AC",
+      category: "Policial",
+      explanation: "",
+      legalBasis: [],
+      checkedAt: null,
+    },
+    {
+      contest: "ENEM",
+      subject: "Direito Penal",
+      board: "Inep",
+      career: "Estudante",
+      year: 2025,
+      sourceKind: "official",
+      state: "",
+      category: "",
+      explanation: "",
+      legalBasis: [],
+      checkedAt: null,
+    },
+  ];
+  const filters = enemSimulatorFilters({
+    contest: "Polícia Federal",
+    subject: "all",
+    board: "CEBRASPE",
+    career: "Agente",
+    year: "all",
+    source: "all",
+    state: "AC",
+    category: "Policial",
+    reviewed: "all",
+  });
+  assert.deepEqual(filterSimulatorQuestions(enemSimulatorCatalog(catalog), filters), [catalog[0]]);
+  assert.equal(
+    filterSimulatorQuestions(enemSimulatorCatalog(catalog), { ...filters, source: "curated" })
+      .length,
+    0,
+  );
+});
+
+test("ENEM areas include the actual subject labels and empty areas stay empty", () => {
+  const catalog = [
+    "Biologia",
+    "Química",
+    "Física",
+    "História",
+    "Sociologia",
+    "Filosofia",
+    "Artes e Educação Física",
+    "Português",
+    "Inglês",
+    "Matemática",
+  ].map((subject) => ({ contest: "ENEM", subject }));
+  assert.deepEqual(
+    enemSimulatorCatalog(catalog, "natureza").map((q) => q.subject),
+    ["Biologia", "Química", "Física"],
+  );
+  assert.deepEqual(
+    enemSimulatorCatalog(catalog, "humanas").map((q) => q.subject),
+    ["História", "Sociologia", "Filosofia"],
+  );
+  assert.equal(enemSimulatorCatalog(catalog, "linguagens").length, 3);
+  assert.equal(enemQuestionArea("Informática"), null);
+  assert.equal(enemSimulatorCatalog(catalog, "unknown").length, 0);
+});
+
+test("video selection never falls back to another subject or topic, and deduplicates entries", () => {
+  const math = { id: "math", title: "Matemática" },
+    bio = { id: "bio", title: "Biologia" };
+  const topics = {
+    "ENEM — Matemática": { "*": [math], Funções: [math] },
+    "ENEM — Biologia": { Ecologia: [bio] },
+    "Língua Portuguesa": { "*": [math] },
+  };
+  assert.deepEqual(enemVideoSelection(topics, "Matemática").videos, [math]);
+  assert.deepEqual(enemVideoSelection(topics, "Biologia", "Ecologia").videos, [bio]);
+  assert.deepEqual(enemVideoSelection(topics, "Biologia", "Funções").videos, []);
+  assert.deepEqual(enemVideoSelection(topics, "Física").videos, []);
+  assert.deepEqual(enemVideoSelection(topics, "Língua Portuguesa").videos, []);
+  assert.deepEqual(enemVideoSelection(topics, "Artes, Educação Física e Tecnologias").videos, []);
+});
+
+test("Artes has its own video category rather than borrowing Portuguese classes", () => {
+  const arts = ENEM_AREAS.flatMap((a) => a.subjects).find(
+    (s) => s.name === "Artes, Educação Física e Tecnologias",
+  );
+  assert.equal(arts.videoKey, "ENEM — Artes, Educação Física e Tecnologias");
 });

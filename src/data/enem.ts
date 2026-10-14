@@ -67,7 +67,7 @@ export const ENEM_AREAS: EnemArea[] = [
       },
       {
         name: "Artes, Educação Física e Tecnologias",
-        videoKey: v("Língua Portuguesa"),
+        videoKey: v("Artes, Educação Física e Tecnologias"),
         topics: [
           "Movimentos artísticos",
           "Cultura corporal",
@@ -210,6 +210,7 @@ export const ENEM_VIDEO_SUBJECTS = [
   "Língua Portuguesa",
   "Literatura",
   "Línguas Estrangeiras",
+  "Artes, Educação Física e Tecnologias",
   "História",
   "Geografia",
   "Filosofia e Sociologia",
