@@ -23,6 +23,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { SubjectIcon } from "@/components/ui/subject-icon";
+import { EnemOfficialPractice } from "@/components/enem/EnemOfficialPractice";
 import { EnemStudy } from "@/components/enem/EnemStudy";
 import { EnemVideos } from "@/components/enem/EnemVideos";
 import { COMPETENCIAS, ENEM_AREAS, ENEM_FACTS, type EnemArea } from "@/data/enem";
@@ -235,7 +236,8 @@ function EnemPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="questoes" className="mt-5">
+        <TabsContent value="questoes" className="mt-5 space-y-4">
+          <EnemOfficialPractice />
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">

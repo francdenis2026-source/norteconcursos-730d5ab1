@@ -201,6 +201,12 @@ function ProfessionalSimulator() {
   ]);
   const [limit, setLimit] = React.useState(20);
   const [durationMinutes, setDurationMinutes] = React.useState(30);
+  React.useEffect(() => {
+    if (contest !== "ENEM") {
+      setLimit((n) => (LIMITS.includes(n) ? n : 20));
+      setDurationMinutes((n) => (DURATIONS.includes(n) ? n : 30));
+    }
+  }, [contest]);
   const [startWarningOpen, setStartWarningOpen] = React.useState(false);
   const [warningAccepted, setWarningAccepted] = React.useState(false);
   const [questions, setQuestions] = React.useState<SimulatorQuestion[]>([]);

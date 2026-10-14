@@ -1,0 +1,407 @@
+[
+  {
+    "slug": "enem-redacao-aplicacoes",
+    "discipline": "Redação",
+    "topic_label": "Projeto de texto e intervenção",
+    "sort_order": 14,
+    "title": "ENEM — Redação: da tese à proposta de intervenção",
+    "summary": "Conceitos, dois exemplos resolvidos, armadilhas e exercícios de fixação.",
+    "body_md": "## Objetivo\n\nRedação: da tese à proposta de intervenção. Estude o conceito e tente resolver os exemplos antes de conferir a explicação.\n\n## Conceitos essenciais\n\n### Tese e tema\n\nA tese é seu ponto de vista sobre o recorte proposto. Não substitua o tema por outro problema parecido.\n\n### Argumentação\n\nExplique como cada razão sustenta a tese. Repertório deve ser pertinente e integrado ao raciocínio.\n\n### Coesão e escrita formal\n\nConectivos e retomadas organizam a progressão; concordância, regência e pontuação precisam ser revisadas.\n\n### Intervenção\n\nProponha uma ação ligada ao problema discutido, com responsável, execução e finalidade, respeitando os direitos humanos.\n\n## Aplicações\n\n> Exemplo resolvido 1: Num tema fictício sobre acesso à leitura, “A leitura é importante” constitui uma tese suficientemente delimitada?\n> Resolução: É uma afirmação muito ampla. Uma tese mais precisa seria: “A escassez de bibliotecas acessíveis e a falta de mediação de leitura limitam a formação de leitores”. Agora há dois problemas que podem orientar o desenvolvimento.\n\n> Exemplo resolvido 2: Como transformar “o governo deve melhorar” em proposta articulada ao problema da leitura?\n> Resolução: Exemplo autoral: secretarias municipais de educação podem ampliar horários das bibliotecas e formar mediadores por meio de programas locais, para facilitar o acesso e a leitura compartilhada. Explique a atuação dos mediadores e conecte a ação aos obstáculos discutidos. Não é um modelo universal para decorar.\n\n## Evite esta armadilha\n\nRepetir citações prontas sem explicar sua relação com o tema, ou oferecer uma intervenção que não enfrenta o problema desenvolvido.\n\n## Exercite\n\nResponda aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais para fixação, não questões oficiais. Ao errar, explique o motivo antes de repetir.\n\n## Cinco competências e revisão final\n\n- C1: revise a escrita formal.\n- C2: confira o recorte do tema e a estrutura dissertativo-argumentativa.\n- C3: conecte informações e argumentos à tese.\n- C4: revise a coesão e a progressão das ideias.\n- C5: articule uma intervenção que respeite os direitos humanos.\n\n## Referência atual de 2026\n\nO Inep divulgou a cartilha 2026 em setembro. Consulte a edição atual para descritores de pontuação e critérios completos. Este guia não atribui nota automática e não substitui a correção da redação.\n\n[Orientações oficiais do Inep para 2026](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/alunos-nota-mil-inspiram-preparacao-para-a-redacao-do-enem-2026/).",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 14,
+    "source_note": "Material autoral. Revisão assistida por Codex em 14/10/2026. Redação alinhada às orientações oficiais 2026; demais guias aos objetos da matriz ENEM. Não representa cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Inep — orientações oficiais ENEM",
+        "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/alunos-nota-mil-inspiram-preparacao-para-a-redacao-do-enem-2026/"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:55:28.379364+00:00",
+    "flashcards": [
+      {
+        "f": "Tese e tema — qual regra aplicar?",
+        "b": "A tese é seu ponto de vista sobre o recorte proposto. Não substitua o tema por outro problema parecido."
+      },
+      {
+        "f": "Argumentação — qual regra aplicar?",
+        "b": "Explique como cada razão sustenta a tese. Repertório deve ser pertinente e integrado ao raciocínio."
+      },
+      {
+        "f": "Coesão e escrita formal — qual regra aplicar?",
+        "b": "Conectivos e retomadas organizam a progressão; concordância, regência e pontuação precisam ser revisadas."
+      },
+      {
+        "f": "Intervenção — qual regra aplicar?",
+        "b": "Proponha uma ação ligada ao problema discutido, com responsável, execução e finalidade, respeitando os direitos humanos."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A tese deve responder ao recorte do tema.",
+        "a": true,
+        "why": "A tese é seu ponto de vista sobre o recorte proposto. Não substitua o tema por outro problema parecido."
+      },
+      {
+        "q": "O argumento precisa explicar a relação entre evidência e tese.",
+        "a": true,
+        "why": "Explique como cada razão sustenta a tese. Repertório deve ser pertinente e integrado ao raciocínio."
+      },
+      {
+        "q": "Coesão ajuda a conectar e fazer progredir as ideias.",
+        "a": true,
+        "why": "Conectivos e retomadas organizam a progressão; concordância, regência e pontuação precisam ser revisadas."
+      },
+      {
+        "q": "A intervenção deve respeitar os direitos humanos.",
+        "a": true,
+        "why": "Proponha uma ação ligada ao problema discutido, com responsável, execução e finalidade, respeitando os direitos humanos."
+      },
+      {
+        "q": "Basta trocar o tema por um assunto amplo da mesma área.",
+        "a": false,
+        "why": "A tese é seu ponto de vista sobre o recorte proposto. Não substitua o tema por outro problema parecido."
+      },
+      {
+        "q": "Uma citação decorada garante um argumento pertinente.",
+        "a": false,
+        "why": "Explique como cada razão sustenta a tese. Repertório deve ser pertinente e integrado ao raciocínio."
+      },
+      {
+        "q": "O mesmo conectivo cabe em qualquer relação lógica.",
+        "a": false,
+        "why": "Conectivos e retomadas organizam a progressão; concordância, regência e pontuação precisam ser revisadas."
+      },
+      {
+        "q": "Qualquer medida resolve o texto mesmo sem relação com a discussão.",
+        "a": false,
+        "why": "Proponha uma ação ligada ao problema discutido, com responsável, execução e finalidade, respeitando os direitos humanos."
+      }
+    ],
+    "_syllabus_topic_id": "8e4ec7dd-90ff-51e5-a6f5-cd8094ee53b3",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-geometria-aplicacoes",
+    "discipline": "Matemática",
+    "topic_label": "Geometria e medidas",
+    "sort_order": 15,
+    "title": "ENEM — Geometria: área, volume e conversão de unidades",
+    "summary": "Conceitos, dois exemplos resolvidos, armadilhas e exercícios de fixação.",
+    "body_md": "## Objetivo\n\nGeometria: área, volume e conversão de unidades. Estude o conceito e tente resolver os exemplos antes de conferir a explicação.\n\n## Conceitos essenciais\n\n### Área\n\nMede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura.\n\n### Volume\n\nMede ocupação espacial; para prismas, V = área da base × altura.\n\n### Raio e diâmetro\n\nNo círculo, diâmetro = 2 × raio e área = π × raio².\n\n### Conversões\n\n1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear.\n\n## Aplicações\n\n> Exemplo resolvido 1: Um reservatório mede 2 m por 1,5 m na base e possui água até 0,8 m. Quantos litros contém?\n> Resolução: V = 2 × 1,5 × 0,8 = 2,4 m³. Como 1 m³ corresponde a 1000 L, são 2400 L. A altura usada é a coluna de água, não necessariamente a altura total do reservatório.\n\n> Exemplo resolvido 2: Uma embalagem quadrada deve conter um disco de raio 8 cm com 1 cm de folga em cada lado. Qual lado mínimo?\n> Resolução: O diâmetro é 16 cm. A folga precisa existir nos dois lados: 16 + 1 + 1 = 18 cm. Usar 8 cm como diâmetro subestima a embalagem.\n\n## Evite esta armadilha\n\nConverter m³ em litros multiplicando por 100, ou confundir raio e diâmetro.\n\n## Exercite\n\nResponda aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais para fixação, não questões oficiais. Ao errar, explique o motivo antes de repetir.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais para os objetos de conhecimento indicados; guia temático, sem alegação de cobertura integral da área.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 15,
+    "source_note": "Material autoral. Revisão assistida por Codex em 14/10/2026. Redação alinhada às orientações oficiais 2026; demais guias aos objetos da matriz ENEM. Não representa cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Inep — orientações oficiais ENEM",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:55:28.379364+00:00",
+    "flashcards": [
+      {
+        "f": "Área — qual regra aplicar?",
+        "b": "Mede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura."
+      },
+      {
+        "f": "Volume — qual regra aplicar?",
+        "b": "Mede ocupação espacial; para prismas, V = área da base × altura."
+      },
+      {
+        "f": "Raio e diâmetro — qual regra aplicar?",
+        "b": "No círculo, diâmetro = 2 × raio e área = π × raio²."
+      },
+      {
+        "f": "Conversões — qual regra aplicar?",
+        "b": "1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Área é expressa em unidades quadradas.",
+        "a": true,
+        "why": "Mede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura."
+      },
+      {
+        "q": "Volume de um prisma usa área da base vezes altura.",
+        "a": true,
+        "why": "Mede ocupação espacial; para prismas, V = área da base × altura."
+      },
+      {
+        "q": "Um círculo de raio 8 cm tem diâmetro 16 cm.",
+        "a": true,
+        "why": "No círculo, diâmetro = 2 × raio e área = π × raio²."
+      },
+      {
+        "q": "2,4 m³ correspondem a 2400 L.",
+        "a": true,
+        "why": "1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear."
+      },
+      {
+        "q": "Área e volume medem a mesma grandeza.",
+        "a": false,
+        "why": "Mede uma superfície; use unidades ao quadrado. Retângulo: A = base × altura."
+      },
+      {
+        "q": "Dobrar três dimensões lineares dobra o volume.",
+        "a": false,
+        "why": "Mede ocupação espacial; para prismas, V = área da base × altura."
+      },
+      {
+        "q": "O raio sempre coincide com o diâmetro.",
+        "a": false,
+        "why": "No círculo, diâmetro = 2 × raio e área = π × raio²."
+      },
+      {
+        "q": "1 m³ corresponde a apenas 100 L.",
+        "a": false,
+        "why": "1 dm³ = 1 L; 1 m³ = 1000 L. Ao converter área ou volume, eleve também o fator linear."
+      }
+    ],
+    "_syllabus_topic_id": "b6cf426e-24e8-59d7-b093-180ee00cb6c1",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-probabilidade-aplicacoes",
+    "discipline": "Matemática",
+    "topic_label": "Probabilidade e contagem",
+    "sort_order": 16,
+    "title": "ENEM — Probabilidade: universo, condições e combinações",
+    "summary": "Conceitos, dois exemplos resolvidos, armadilhas e exercícios de fixação.",
+    "body_md": "## Objetivo\n\nProbabilidade: universo, condições e combinações. Estude o conceito e tente resolver os exemplos antes de conferir a explicação.\n\n## Conceitos essenciais\n\n### Espaço amostral\n\nDefina quais resultados são possíveis e se têm a mesma chance antes de contar.\n\n### Combinação\n\nEscolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!].\n\n### Independência\n\nEventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes.\n\n### Condição\n\nP(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência.\n\n## Aplicações\n\n> Exemplo resolvido 1: Uma comissão de 2 pessoas será formada entre 5 candidatos diferentes. A ordem dos nomes cria outra comissão?\n> Resolução: Não. São C(5,2) = (5 × 4)/2 = 10 comissões. Contar 5 × 4 sem dividir por 2 contaria cada dupla duas vezes.\n\n> Exemplo resolvido 2: 80% dos estudantes usam uma biblioteca; entre esses usuários, 25% participam de um clube de leitura. Qual fração do total usa a biblioteca e participa do clube?\n> Resolução: 0,80 × 0,25 = 0,20: 20% do total. O segundo percentual é condicional aos usuários. Não é preciso supor independência para essa multiplicação condicionada.\n\n## Evite esta armadilha\n\nUsar favoráveis/possíveis sem equiprobabilidade, ou confundir “entre os usuários” com “entre todos”.\n\n## Exercite\n\nResponda aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais para fixação, não questões oficiais. Ao errar, explique o motivo antes de repetir.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais para os objetos de conhecimento indicados; guia temático, sem alegação de cobertura integral da área.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 16,
+    "source_note": "Material autoral. Revisão assistida por Codex em 14/10/2026. Redação alinhada às orientações oficiais 2026; demais guias aos objetos da matriz ENEM. Não representa cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Inep — orientações oficiais ENEM",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:55:28.379364+00:00",
+    "flashcards": [
+      {
+        "f": "Espaço amostral — qual regra aplicar?",
+        "b": "Defina quais resultados são possíveis e se têm a mesma chance antes de contar."
+      },
+      {
+        "f": "Combinação — qual regra aplicar?",
+        "b": "Escolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!]."
+      },
+      {
+        "f": "Independência — qual regra aplicar?",
+        "b": "Eventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes."
+      },
+      {
+        "f": "Condição — qual regra aplicar?",
+        "b": "P(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O universo de referência deve ser identificado.",
+        "a": true,
+        "why": "Defina quais resultados são possíveis e se têm a mesma chance antes de contar."
+      },
+      {
+        "q": "Combinações desconsideram a ordem da escolha.",
+        "a": true,
+        "why": "Escolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!]."
+      },
+      {
+        "q": "Eventos disjuntos de probabilidade positiva não são independentes.",
+        "a": true,
+        "why": "Eventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes."
+      },
+      {
+        "q": "Uma probabilidade condicional utiliza a condição no denominador.",
+        "a": true,
+        "why": "P(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência."
+      },
+      {
+        "q": "Todo espaço amostral é automaticamente equiprovável.",
+        "a": false,
+        "why": "Defina quais resultados são possíveis e se têm a mesma chance antes de contar."
+      },
+      {
+        "q": "Uma dupla constitui duas comissões porque seus nomes podem ser invertidos.",
+        "a": false,
+        "why": "Escolhas sem considerar ordem: C(n,k) = n!/[k!(n−k)!]."
+      },
+      {
+        "q": "Dois eventos disjuntos de probabilidade positiva são sempre independentes.",
+        "a": false,
+        "why": "Eventos independentes satisfazem P(A∩B) = P(A) × P(B). Eventos disjuntos de probabilidade positiva não são independentes."
+      },
+      {
+        "q": "Condicionar nunca altera o universo de referência.",
+        "a": false,
+        "why": "P(A|B) = P(A∩B)/P(B), se P(B)>0; a condição muda o universo de referência."
+      }
+    ],
+    "_syllabus_topic_id": "4855d982-8b6a-59b0-8734-8b45121d4a64",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-funcoes-aplicacoes",
+    "discipline": "Matemática",
+    "topic_label": "Funções e matemática financeira",
+    "sort_order": 17,
+    "title": "ENEM — Funções: modelos, gráficos e porcentagens",
+    "summary": "Conceitos, dois exemplos resolvidos, armadilhas e exercícios de fixação.",
+    "body_md": "## Objetivo\n\nFunções: modelos, gráficos e porcentagens. Estude o conceito e tente resolver os exemplos antes de conferir a explicação.\n\n## Conceitos essenciais\n\n### Função afim\n\nf(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0.\n\n### Função quadrática\n\nf(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0.\n\n### Percentuais sucessivos\n\nAplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100.\n\n### Domínio contextual\n\nNem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto.\n\n## Aplicações\n\n> Exemplo resolvido 1: Uma atividade tem custo C(x)=20+5x e receita R(x)=10x, para x unidades. Qual quantidade cobre o custo?\n> Resolução: R=C implica 10x=20+5x, então x=4. O custo fixo é 20, e cada unidade acrescenta 5 ao custo. Para lucro positivo, x deve ser maior que 4.\n\n> Exemplo resolvido 2: Um preço de R$ 100 sofre aumento de 20% e desconto de 20%. Qual preço final?\n> Resolução: 100 × 1,20 × 0,80 = R$ 96. O desconto incide sobre 120, não sobre 100. O produto dos fatores é 0,96.\n\n## Evite esta armadilha\n\nForçar regra de três em uma função com parcela fixa ou ignorar o domínio do modelo.\n\n## Exercite\n\nResponda aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais para fixação, não questões oficiais. Ao errar, explique o motivo antes de repetir.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais para os objetos de conhecimento indicados; guia temático, sem alegação de cobertura integral da área.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 17,
+    "source_note": "Material autoral. Revisão assistida por Codex em 14/10/2026. Redação alinhada às orientações oficiais 2026; demais guias aos objetos da matriz ENEM. Não representa cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Inep — orientações oficiais ENEM",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:55:28.379364+00:00",
+    "flashcards": [
+      {
+        "f": "Função afim — qual regra aplicar?",
+        "b": "f(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0."
+      },
+      {
+        "f": "Função quadrática — qual regra aplicar?",
+        "b": "f(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0."
+      },
+      {
+        "f": "Percentuais sucessivos — qual regra aplicar?",
+        "b": "Aplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100."
+      },
+      {
+        "f": "Domínio contextual — qual regra aplicar?",
+        "b": "Nem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma função afim pode ter parcela fixa.",
+        "a": true,
+        "why": "f(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0."
+      },
+      {
+        "q": "Uma função quadrática tem vértice quando a é diferente de zero.",
+        "a": true,
+        "why": "f(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0."
+      },
+      {
+        "q": "Percentuais sucessivos usam bases atualizadas.",
+        "a": true,
+        "why": "Aplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100."
+      },
+      {
+        "q": "O contexto pode restringir o domínio.",
+        "a": true,
+        "why": "Nem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto."
+      },
+      {
+        "q": "Toda função afim representa proporcionalidade direta.",
+        "a": false,
+        "why": "f(x)=ax+b; a representa a taxa de variação constante e b o valor em x=0."
+      },
+      {
+        "q": "Qualquer polinômio quadrático tem a igual a zero.",
+        "a": false,
+        "why": "f(x)=ax²+bx+c; o vértice ocorre em x=−b/(2a), para a≠0."
+      },
+      {
+        "q": "Aumentar e descontar o mesmo percentual sempre se anulam.",
+        "a": false,
+        "why": "Aplique cada fator à nova base: aumento de p% usa 1+p/100; desconto usa 1−p/100."
+      },
+      {
+        "q": "Uma quantidade negativa de produtos é sempre válida no modelo.",
+        "a": false,
+        "why": "Nem todo valor matematicamente possível faz sentido no problema; restrinja quantidades, tempo e medidas conforme o contexto."
+      }
+    ],
+    "_syllabus_topic_id": "6b325b6a-19fb-5857-9e1a-ad540ec0a1d2",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-estatistica-aplicacoes",
+    "discipline": "Matemática",
+    "topic_label": "Estatística e leitura de dados",
+    "sort_order": 18,
+    "title": "ENEM — Estatística: médias, mediana, dispersão e gráficos",
+    "summary": "Conceitos, dois exemplos resolvidos, armadilhas e exercícios de fixação.",
+    "body_md": "## Objetivo\n\nEstatística: médias, mediana, dispersão e gráficos. Estude o conceito e tente resolver os exemplos antes de conferir a explicação.\n\n## Conceitos essenciais\n\n### Média simples\n\nSome os valores e divida pela quantidade; valores extremos podem alterá-la bastante.\n\n### Média ponderada\n\nSome valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores.\n\n### Mediana e moda\n\nMediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente.\n\n### Gráficos\n\nLeia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade.\n\n## Aplicações\n\n> Exemplo resolvido 1: As notas são 4, 5, 6, 7 e 18. Qual média e qual mediana?\n> Resolução: Média: 40/5=8. Mediana: 6, o terceiro valor da lista ordenada. O valor 18 puxa a média para cima, mas não muda a posição central.\n\n> Exemplo resolvido 2: Uma nota 6 tem peso 1 e uma nota 9 tem peso 2. Qual média ponderada?\n> Resolução: (6×1+9×2)/(1+2)=24/3=8. A média simples 7,5 não respeita os pesos atribuídos.\n\n## Evite esta armadilha\n\nConfundir percentuais com quantidades absolutas, ou comparar gráficos com escalas diferentes sem conferir os eixos.\n\n## Exercite\n\nResponda aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais para fixação, não questões oficiais. Ao errar, explique o motivo antes de repetir.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais para os objetos de conhecimento indicados; guia temático, sem alegação de cobertura integral da área.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 18,
+    "source_note": "Material autoral. Revisão assistida por Codex em 14/10/2026. Redação alinhada às orientações oficiais 2026; demais guias aos objetos da matriz ENEM. Não representa cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Inep — orientações oficiais ENEM",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:55:28.379364+00:00",
+    "flashcards": [
+      {
+        "f": "Média simples — qual regra aplicar?",
+        "b": "Some os valores e divida pela quantidade; valores extremos podem alterá-la bastante."
+      },
+      {
+        "f": "Média ponderada — qual regra aplicar?",
+        "b": "Some valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores."
+      },
+      {
+        "f": "Mediana e moda — qual regra aplicar?",
+        "b": "Mediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente."
+      },
+      {
+        "f": "Gráficos — qual regra aplicar?",
+        "b": "Leia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Valores extremos podem alterar a média.",
+        "a": true,
+        "why": "Some os valores e divida pela quantidade; valores extremos podem alterá-la bastante."
+      },
+      {
+        "q": "Média ponderada divide pela soma dos pesos.",
+        "a": true,
+        "why": "Some valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores."
+      },
+      {
+        "q": "A mediana usa os dados ordenados.",
+        "a": true,
+        "why": "Mediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente."
+      },
+      {
+        "q": "Um gráfico exige leitura de eixos e unidades.",
+        "a": true,
+        "why": "Leia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade."
+      },
+      {
+        "q": "A média é imune a valores extremos.",
+        "a": false,
+        "why": "Some os valores e divida pela quantidade; valores extremos podem alterá-la bastante."
+      },
+      {
+        "q": "Na média ponderada, o denominador é sempre o número de notas.",
+        "a": false,
+        "why": "Some valor × peso e divida pela soma dos pesos; não apenas pela quantidade de valores."
+      },
+      {
+        "q": "A moda é necessariamente o maior valor da lista.",
+        "a": false,
+        "why": "Mediana é central na lista ordenada; com quantidade par, use a média dos dois centrais. Moda é o valor mais frequente."
+      },
+      {
+        "q": "Correlação prova sozinha uma relação de causa e efeito.",
+        "a": false,
+        "why": "Leia eixos, escalas, unidades e período. Correlação não basta para demonstrar causalidade."
+      }
+    ],
+    "_syllabus_topic_id": "bce77874-1849-5ee8-83db-e2c37c10e5fd",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  }
+]
