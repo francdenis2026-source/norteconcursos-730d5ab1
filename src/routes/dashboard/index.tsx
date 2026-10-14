@@ -36,7 +36,6 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { MockService } from "@/services/mockService";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
-import { StudyGoals } from "@/components/dashboard/StudyGoals";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -312,8 +311,6 @@ function DashboardIndex() {
           text="Raio-X de desempenho"
         />
       </section>
-
-      <StudyGoals planTier={user?.subscription_tier} />
 
       <div className="grid grid-cols-1 gap-4 sm:gap-6 xl:grid-cols-[1.35fr_1fr]">
         <Card className="command-panel">
