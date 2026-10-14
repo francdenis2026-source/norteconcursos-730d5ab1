@@ -1,0 +1,269 @@
+{
+  "sources": [
+    {
+      "id": "54e0550b-e2db-59d7-8ed2-3669dc763d63",
+      "source_type": "manual",
+      "title": "Matriz de referência ENEM — Inep",
+      "issuer": "Inep",
+      "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf",
+      "checked_at": "2026-10-14T03:30:00Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Objetos de conhecimento da matriz oficial; também listada no portal do Inep em 2026."
+    },
+    {
+      "id": "f5351dc7-c7fd-59c5-bc75-3845da39599e",
+      "source_type": "edital",
+      "title": "Edital ENEM 2025 nº 52 — matriz das provas históricas de 2025",
+      "issuer": "Inep",
+      "url": "https://download.inep.gov.br/enem/edital_52_de_23_de_maio_de_2025.pdf",
+      "checked_at": "2026-10-14T03:30:00Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte histórica da aplicação 2025, item 3.1. Status vigente indica documento válido como fonte histórica; prazos de inscrição não são atuais."
+    },
+    {
+      "id": "dfdbf87d-f322-5c62-b463-de03734d9097",
+      "source_type": "outro",
+      "title": "Prova objetiva ENEM 2025 — aplicação regular, dia 2, caderno 5 amarelo",
+      "issuer": "Inep",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D2_CD5.pdf",
+      "checked_at": "2026-10-14T03:30:00Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial de prova histórica; itens anulados excluídos do treino."
+    },
+    {
+      "id": "9b064f01-7300-5058-a52f-b9151796c8b9",
+      "source_type": "outro",
+      "title": "Gabarito definitivo ENEM 2025 — aplicação regular, dia 2, caderno 5 amarelo",
+      "issuer": "Inep",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_GB_impresso_D2_CD5.pdf",
+      "checked_at": "2026-10-14T03:30:00Z",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Fonte oficial de prova histórica; itens anulados excluídos do treino."
+    },
+    {
+      "id": "198247a7-b105-5ac8-8786-0fc02eaae926",
+      "source_type": "manual",
+      "title": "Inep — cinco competências e preparação para a redação ENEM 2026",
+      "issuer": "Inep",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/alunos-nota-mil-inspiram-preparacao-para-a-redacao-do-enem-2026/",
+      "checked_at": "2026-10-14T03:56:44.413073+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Orientações oficiais de 2026; descritores completos permanecem vinculados à cartilha do participante."
+    }
+  ],
+  "editions": [
+    {
+      "id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "contest_name": "ENEM",
+      "role_name": "Ensino Médio — provas e matriz 2025",
+      "contest_year": 2025,
+      "exam_board": "INEP",
+      "source_id": "f5351dc7-c7fd-59c5-bc75-3845da39599e",
+      "status": "active"
+    }
+  ],
+  "topics": [
+    {
+      "id": "5fb90589-41a8-5e8b-becc-62443956483c",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Língua Portuguesa",
+      "topic_order": 1,
+      "topic_text": "Leitura e argumentação — Interpretação, inferência e intenção do texto",
+      "content_status": "current"
+    },
+    {
+      "id": "b5928772-d79c-53b3-a1b5-d1ecd33c8005",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Literatura",
+      "topic_order": 2,
+      "topic_text": "Literatura e contexto — Recursos literários, vozes e contexto social",
+      "content_status": "current"
+    },
+    {
+      "id": "ed209f8c-4f46-572b-9328-7b2330ee3169",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Língua Inglesa",
+      "topic_order": 3,
+      "topic_text": "Leitura em língua estrangeira — Inglês: finalidade, referências e vocabulário em contexto",
+      "content_status": "current"
+    },
+    {
+      "id": "c4a6cf8f-5271-5291-a031-e3024930a8c3",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Língua Espanhola",
+      "topic_order": 4,
+      "topic_text": "Leitura em língua estrangeira — Espanhol: leitura, conectivos e falsos cognatos",
+      "content_status": "current"
+    },
+    {
+      "id": "79945ed6-3740-5a64-b717-c4178876f94b",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "História",
+      "topic_order": 5,
+      "topic_text": "Fontes e processos históricos — História: fontes, cidadania e transformações sociais",
+      "content_status": "current"
+    },
+    {
+      "id": "e713cbf5-cfc7-5b12-bac3-afd065f3ed4b",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Geografia",
+      "topic_order": 6,
+      "topic_text": "Espaço, ambiente e cartografia — Geografia: escala, urbanização e questões ambientais",
+      "content_status": "current"
+    },
+    {
+      "id": "2fcc4ab7-be83-5307-b077-27cda5dabc7b",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Filosofia",
+      "topic_order": 7,
+      "topic_text": "Ética e argumentação — Filosofia: argumentos, ética e política",
+      "content_status": "current"
+    },
+    {
+      "id": "b1871c67-6a33-5084-a1ab-a114d933d5d5",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Sociologia",
+      "topic_order": 8,
+      "topic_text": "Cultura e sociedade — Sociologia: cultura, trabalho e desigualdade",
+      "content_status": "current"
+    },
+    {
+      "id": "944e0b2c-7d28-5ca2-b709-9a5b6def3078",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Biologia",
+      "topic_order": 9,
+      "topic_text": "Ecologia e genética — Biologia: energia, cadeias alimentares e hereditariedade",
+      "content_status": "current"
+    },
+    {
+      "id": "62d4d90e-a08d-5ab8-8a19-0ed3ce781875",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Física",
+      "topic_order": 10,
+      "topic_text": "Grandezas e energia — Física: movimento, energia e circuitos",
+      "content_status": "current"
+    },
+    {
+      "id": "0852affe-8c57-5aa3-a828-23d4e6c0fb20",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Química",
+      "topic_order": 11,
+      "topic_text": "Transformações e quantidades — Química: estequiometria, soluções e química ambiental",
+      "content_status": "current"
+    },
+    {
+      "id": "d4df33c1-7c6a-5dd1-8f90-a48653946786",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Matemática",
+      "topic_order": 12,
+      "topic_text": "Proporções, estatística e geometria — Matemática: porcentagens, estatística e modelos",
+      "content_status": "current"
+    },
+    {
+      "id": "8f67db86-441a-5a70-b182-3ce5ff83783f",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Artes e Educação Física",
+      "topic_order": 13,
+      "topic_text": "Linguagens artísticas e corporais — Arte, corpo, identidade e tecnologias",
+      "content_status": "current"
+    },
+    {
+      "id": "8e4ec7dd-90ff-51e5-a6f5-cd8094ee53b3",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Redação",
+      "topic_order": 14,
+      "topic_text": "Projeto de texto e intervenção — Redação: da tese à proposta de intervenção",
+      "content_status": "current"
+    },
+    {
+      "id": "b6cf426e-24e8-59d7-b093-180ee00cb6c1",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Matemática",
+      "topic_order": 15,
+      "topic_text": "Geometria e medidas — Geometria: área, volume e conversão de unidades",
+      "content_status": "current"
+    },
+    {
+      "id": "4855d982-8b6a-59b0-8734-8b45121d4a64",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Matemática",
+      "topic_order": 16,
+      "topic_text": "Probabilidade e contagem — Probabilidade: universo, condições e combinações",
+      "content_status": "current"
+    },
+    {
+      "id": "6b325b6a-19fb-5857-9e1a-ad540ec0a1d2",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Matemática",
+      "topic_order": 17,
+      "topic_text": "Funções e matemática financeira — Funções: modelos, gráficos e porcentagens",
+      "content_status": "current"
+    },
+    {
+      "id": "bce77874-1849-5ee8-83db-e2c37c10e5fd",
+      "edition_id": "f664ac75-2e95-591e-939d-4c2728318e48",
+      "block_name": "Matriz de referência ENEM",
+      "discipline": "Matemática",
+      "topic_order": 18,
+      "topic_text": "Estatística e leitura de dados — Estatística: médias, mediana, dispersão e gráficos",
+      "content_status": "current"
+    }
+  ],
+  "questions": [],
+  "evidence": {
+    "reviewed_items": [
+      140,
+      141,
+      143,
+      145,
+      146,
+      149,
+      150,
+      172,
+      173,
+      174,
+      175,
+      177,
+      179,
+      180
+    ],
+    "visually_verified_pages": [
+      17,
+      19,
+      21,
+      29,
+      30,
+      31
+    ],
+    "prova_sha256": "0a59697676989b55e6f3e40636fad164c1c26868ddba37d04e4fffc101168298",
+    "gabarito_sha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "excluded_annulled": [
+      115,
+      121,
+      178
+    ],
+    "matrix": "Matriz oficial disponível no portal Inep 2026; competências matemáticas páginas 8–9 conferidas visualmente; objetos da matriz textual usados para os guias. Escopo histórico 2025, sem publicação de prazos antigos como atuais."
+  }
+}

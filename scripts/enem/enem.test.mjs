@@ -4,6 +4,10 @@ import { readFile } from "node:fs/promises";
 import { validateEnemPackage, sameFields } from "./import-enem.mjs";
 import { filterSimulatorQuestions } from "../../src/lib/simulatorFilters.ts";
 import { filterTrainerQuestions } from "../../src/lib/trainerFilters.ts";
+import { isEligibleQuestion, parseQuestion } from "../../src/lib/questionFormat.ts";
+import { needsMissingSupportText } from "../../src/lib/questionText.ts";
+import { ENEM_STUDY_GROUPS, matchesEnemMaterial } from "../../src/lib/enemStudy.ts";
+
 import {
   enemQuestionArea,
   enemSimulatorCatalog,
@@ -96,6 +100,43 @@ test("reimport comparison detects changed content and accepts equivalent timesta
     ),
     true,
   );
+});
+
+test("all published ENEM questions have complete options and support in the actual trainer parser", async () => {
+  let count = 0;
+  for (const batch of ["01", "02", "03"]) {
+    const p = JSON.parse(
+      await readFile(
+        new URL(`../../docs/enem-question-batch-${batch}-2026-10-14.json`, import.meta.url),
+      ),
+    );
+    validateEnemPackage(p);
+    for (const q of p.questions) {
+      assert.equal(isEligibleQuestion(q), true, String(q.item_number));
+      const parsed = parseQuestion(q.question_text);
+      assert.equal(parsed.options.map((o) => o.letter).join(""), "ABCDE");
+      assert.ok(parsed.stem);
+      assert.equal(
+        needsMissingSupportText({ subject: q.subject, text: q.question_text, source: "official" }),
+        false,
+      );
+      count++;
+    }
+  }
+  assert.equal(count, 53);
+});
+test("ENEM materials keep subject areas separate and support accent-insensitive search", () => {
+  const m = {
+    contest_name: "ENEM",
+    discipline: "Física",
+    title: "Eletricidade",
+    topic_label: "Circuitos",
+  };
+  assert.equal(matchesEnemMaterial(m, "natureza", "fisica"), true);
+  assert.equal(matchesEnemMaterial(m, "humanas", ""), false);
+  assert.equal(matchesEnemMaterial({ ...m, contest_name: "Polícia Federal" }, "all", ""), false);
+  const all = ENEM_STUDY_GROUPS.flatMap((g) => g.subjects);
+  assert.equal(new Set(all).size, all.length);
 });
 
 test("ENEM scope excludes other exams and non-ENEM subjects even with unrelated route filters", () => {
