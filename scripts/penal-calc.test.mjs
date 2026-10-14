@@ -126,3 +126,32 @@ test('referências de crimes apontam para o diploma e o artigo correto', () => {
   assert.equal(c.crimeStudyTarget('custom'),null);
   assert.equal(c.crimeStudyTarget('cp9999'),null);
 });
+
+
+test('exemplos acompanham os dados e resultados de cada fase, incluindo ausência de causas', async () => {
+  const { dosimetryExamples } = await import('../src/lib/penalExamples.ts');
+  const input = {min:P(1),max:P(6),circunstanciasNegativas:1,fracaoCircunstancia:{num:1,den:8},agravantes:0,atenuantes:1,fracaoAgravanteAtenuante:{num:1,den:6},aumentos:[],diminuicoes:[]};
+  const output = c.dosimetria(input);
+  const examples = dosimetryExamples(input,output,'furto');
+  assert.equal(examples.length,3);
+  assert.match(examples[0].scenario,/furto/);
+  assert.match(examples[0].steps[1],new RegExp(String(output.passos[0].dias)));
+  assert.match(examples[1].steps[1],new RegExp(String(output.passos[1].dias)));
+  assert.match(examples[2].scenario,/nenhuma causa/);
+  input.aumentos=[{num:1,den:3}];
+  const changed=c.dosimetria(input);
+  const newExamples=dosimetryExamples(input,changed,'furto');
+  assert.equal(newExamples.length,changed.passos.length);
+  assert.match(newExamples.at(-1).steps[0],/1\/3/);
+  assert.match(newExamples.at(-1).steps[1],new RegExp(String(changed.final)));
+});
+
+test('exemplo de remição acompanha a conclusão e o resultado transferível', async () => {
+  const {remitionExample} = await import('../src/lib/penalExamples.ts');
+  const result=c.remicaoPorBlocos(12,90,true);
+  const example=remitionExample(12,90,true,result);
+  assert.equal(result.total,46);
+  assert.match(example.conclusion,/46 dias/);
+  assert.match(example.scenario,/conclusão certificada/);
+  assert.match(example.steps[2],/12 \+ 30 \+ 4 = 46/);
+});

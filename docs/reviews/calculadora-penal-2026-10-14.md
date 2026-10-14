@@ -24,3 +24,11 @@ Links de acervo não significam que todas as leis e decisões foram incorporadas
 ## Validação
 
 505 testes passaram, incluindo regressões para base integral dos benefícios, regime de detenção, Súmula 269, frações de dia, referências do crime e datas inválidas/fim de mês. Typecheck e build de produção passaram. A interface foi exercitada em Chromium com autenticação e catálogo simulados, sem acesso a contas reais: troca de abas com preservação de estado, transferência de 42 dias de remição, confirmação de execução, validação de data vazia, referência da Lei de Drogas e ausência de overflow em 320/390 px. A verificação encontrou e corrigiu overflow no link do crime selecionado. Não foi validado o site publicado com uma conta real.
+
+## Destaques e exemplos didáticos
+
+A atualização seguinte acrescenta seleção do diploma do exemplo (CP, Drogas, Armas ou limites manuais), filtrando os crimes desse diploma. Ao trocar de crime, fases e reincidência são zeradas para evitar herdar o resultado de outro cenário. Um painel destaca mínimo, máximo, espécie e pena simulada, distinguindo intervalo previsto e pena final do exercício.
+
+Os exemplos numéricos acompanham cada etapa da dosimetria, inclusive a terceira fase sem causas selecionadas; regime; progressão com abatimentos; livramento elegível, incompatível ou vedado; prescrição simples; e remição. Mostram cenário hipotético, conta, conclusão e limites, com links do CP/LEP. Reutilizam os resultados e regras existentes, sem criar novos crimes, questões ou afirmações de nova vigência. Não inventam um enquadramento fático nem uma decisão judicial.
+
+Validação desta atualização: 507 testes passaram, typecheck e build passaram. Chromium, com dados simulados, confirmou a seleção da Lei de Drogas destacando 5/15 anos e reclusão, reinício das circunstâncias ao trocar a lei, identificação do crime nos exemplos, terceira fase sem causas, preservação entre abas, transferência da remição e ausência de overflow nas quatro abas em 320/390 px. O site publicado com conta real não foi verificado.

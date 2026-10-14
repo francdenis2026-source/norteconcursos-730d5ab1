@@ -6,6 +6,7 @@ import { PenalSources } from "@/components/study/PenalSources";
 import { acreDateKey } from "@/lib/acreTime";
 import { Button } from "@/components/ui/button";
 import {
+  crimeStudyTarget,
   CATEGORIAS_PROGRESSAO,
   CRIMES,
   LIVRAMENTO,
@@ -26,6 +27,8 @@ import {
   type Fracao,
   type Pena,
 } from "@/lib/penalCalc";
+import { PenalExample } from "@/components/study/PenalExample";
+import { dosimetryExamples, remitionExample } from "@/lib/penalExamples";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/calculadora-penal")({
@@ -161,6 +164,14 @@ function DosimetriaTab({
   const pick = (id: string) => {
     setCrimeId(id);
     setCulposo(false);
+    setCirc(0);
+    setAgr(0);
+    setAten(0);
+    setAum([]);
+    setDim([]);
+    setReinc(false);
+    setFCirc({ num: 1, den: 8 });
+    setFAg({ num: 1, den: 6 });
     const c = CRIMES.find((x) => x.id === id);
     if (c) {
       setMin(c.min);
@@ -181,20 +192,30 @@ function DosimetriaTab({
       );
     }
   };
+  const simulation = {
+    min,
+    max,
+    circunstanciasNegativas: circ,
+    fracaoCircunstancia: fCirc,
+    agravantes: agr,
+    atenuantes: aten,
+    fracaoAgravanteAtenuante: fAg,
+    aumentos: aum,
+    diminuicoes: dim,
+  };
+  const law = crimeStudyTarget(crimeId)?.slug ?? "manual";
+  const lawName =
+    law === "codigo-penal"
+      ? "Código Penal"
+      : law === "drogas"
+        ? "Lei 11.343/2006 · Drogas"
+        : law === "armas"
+          ? "Lei 10.826/2003 · Armas"
+          : "Pena informada manualmente";
   let out: ReturnType<typeof dosimetria> | null = null;
   let err = "";
   try {
-    out = dosimetria({
-      min,
-      max,
-      circunstanciasNegativas: circ,
-      fracaoCircunstancia: fCirc,
-      agravantes: agr,
-      atenuantes: aten,
-      fracaoAgravanteAtenuante: fAg,
-      aumentos: aum,
-      diminuicoes: dim,
-    });
+    out = dosimetria(simulation);
   } catch (e) {
     err = e instanceof Error ? e.message : "Dados inválidos";
   }
@@ -202,11 +223,66 @@ function DosimetriaTab({
   const regime = out ? regimeInicial(out.final, reinc, tipo, circ === 0) : null;
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+      <section
+        className="min-w-0 rounded-2xl border border-primary/20 bg-primary/5 p-5 lg:col-span-2"
+        aria-label="Pena e dados do crime selecionado"
+      >
+        <p className="text-xs font-semibold uppercase tracking-wide text-primary">{lawName}</p>
+        <h2 className="mt-2 text-lg font-bold">{crime?.label ?? "Simulação de outro crime"}</h2>
+        {out ? (
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl bg-background p-3">
+              <p className="text-xs text-muted-foreground">Pena mínima do exercício</p>
+              <p className="mt-1 text-xl font-bold">{formatPena(min)}</p>
+            </div>
+            <div className="rounded-xl bg-background p-3">
+              <p className="text-xs text-muted-foreground">Pena máxima do exercício</p>
+              <p className="mt-1 text-xl font-bold">{formatPena(max)}</p>
+            </div>
+            <div className="rounded-xl bg-background p-3">
+              <p className="text-xs text-muted-foreground">Pena simulada após as fases</p>
+              <p className="mt-1 text-xl font-bold">{formatPena(diasParaPena(out.final))}</p>
+            </div>
+          </div>
+        ) : (
+          <p role="status" className="mt-3 text-sm">
+            Confira os limites informados para exibir a pena.
+          </p>
+        )}
+        <p className="mt-3 text-sm text-muted-foreground">
+          Espécie: <strong>{tipo}</strong> ·{" "}
+          {violencia
+            ? "Com violência ou grave ameaça no exercício"
+            : "Sem violência ou grave ameaça no exercício"}
+          . Confira também multa, qualificadoras e regras especiais no dispositivo. O intervalo
+          legal não é a pena definitiva de um caso real.
+        </p>
+      </section>
       <section className={card}>
         <h2 className="text-lg font-bold">Dados do crime e das fases</h2>
         <p className="text-sm text-muted-foreground">
           Os exemplos usam a redação cadastrada em 12/10/2026. Para fatos anteriores, confira a lei
           aplicável e informe os limites manualmente. Multa e concurso de crimes não são calculados.
+        </p>
+        <label className="block text-sm font-medium">
+          Lei do exemplo
+          <select
+            className={cn(field, "mt-1")}
+            value={law}
+            onChange={(e) =>
+              pick(
+                CRIMES.find((c) => crimeStudyTarget(c.id)?.slug === e.target.value)?.id ?? "custom",
+              )
+            }
+          >
+            <option value="codigo-penal">Código Penal</option>
+            <option value="drogas">Lei de Drogas</option>
+            <option value="armas">Estatuto do Desarmamento</option>
+            <option value="manual">Outra lei: informar os limites</option>
+          </select>
+        </label>
+        <p className="text-xs text-muted-foreground">
+          Trocar o crime inicia um novo exemplo: as fases e a reincidência são zeradas.
         </p>
         <label className="block text-sm font-medium">
           Crime (preceito do texto compilado)
@@ -215,7 +291,7 @@ function DosimetriaTab({
             value={crimeId}
             onChange={(e) => pick(e.target.value)}
           >
-            {CRIMES.map((c) => (
+            {CRIMES.filter((c) => crimeStudyTarget(c.id)?.slug === law).map((c) => (
               <option key={c.id} value={c.id}>
                 {c.label}
               </option>
@@ -328,7 +404,12 @@ function DosimetriaTab({
           </div>
         ))}
         <label className="flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={culposo} onChange={(e) => setCulposo(e.target.checked)} />{" "}
+          <input
+            type="checkbox"
+            checked={culposo}
+            disabled={!!crime}
+            onChange={(e) => setCulposo(e.target.checked)}
+          />{" "}
           Crime culposo (disponível ao informar outro crime)
         </label>
         <div className="flex flex-wrap gap-4 text-sm">
@@ -368,10 +449,25 @@ function DosimetriaTab({
                 ({out.final} dias, com ano de 12 meses e mês de 30 dias)
               </p>
             </Result>
+            <div className="space-y-3" aria-label="Exemplos das fases da pena">
+              {dosimetryExamples(
+                simulation,
+                out,
+                crime?.label ?? "crime informado manualmente",
+              ).map((example, index) => (
+                <PenalExample key={index} example={example} />
+              ))}
+            </div>
             {regime && (
               <Result title="Regime inicial (art. 33, § 2º, do CP)">
                 <p className="font-bold">{regime.regime}</p>
                 <p className="text-muted-foreground">{regime.nota}</p>
+                <p className="mt-2 text-sm">
+                  Exemplo: uma pessoa com pena simulada de {formatPena(diasParaPena(out.final))},{" "}
+                  {reinc ? "reincidente" : "não reincidente"}, com {tipo} e circunstâncias{" "}
+                  {circ === 0 ? "favoráveis" : "desfavoráveis informadas"}, recebe neste exercício a
+                  indicação “{regime.regime}”. Essa indicação não concede um regime automaticamente.
+                </p>
               </Result>
             )}
             <Result title="Outros benefícios a estudar" tone="warn">
@@ -610,6 +706,51 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
                 </>
               )}
             </Result>
+            <PenalExample
+              source="execution"
+              example={{
+                title: "Como os abatimentos alteram a primeira progressão",
+                scenario: `Imagine uma pena de ${formatPena(pena)} e data-base em ${formatBr(parseDate(inicio))}, com a fração ${cat.fracao.num}/${cat.fracao.den} já conferida para o exercício.`,
+                steps: [
+                  `A pena corresponde a ${prog.totalDias} dias pelo calendário. A fração exige ${prog.exigidosDias} dias inteiros.`,
+                  `Detração de ${detracao} dias + remição de ${remido} dias = ${prog.abatidosDias} dias abatidos.`,
+                  `Requisito temporal restante: máximo entre zero e (${prog.exigidosDias} − ${prog.abatidosDias}) = ${prog.faltamDias} dias.`,
+                ],
+                conclusion: prog.jaCumprido
+                  ? "Os abatimentos informados cobrem a fração; isso não concede a progressão."
+                  : `Incluindo o dia da data-base, o marco hipotético é ${formatBr(prog.data)}.`,
+                caution:
+                  "LEP, art. 112; CP, arts. 10 e 42: não duplique dias já contados. Interrupções e requisitos subjetivos podem alterar a análise.",
+              }}
+            />
+            <PenalExample
+              source="execution"
+              example={{
+                title: "Entendendo o livramento condicional",
+                scenario: `No mesmo exercício, a pena é de ${formatPena(pena)} e o perfil de livramento é ${livId === "vedado" ? "vedado" : liv.label}.`,
+                steps:
+                  penaDias < 720
+                    ? [
+                        "A pena informada é inferior a dois anos; o requisito quantitativo do art. 83, caput, não foi atendido.",
+                      ]
+                    : livId === "vedado" || cat.livramentoVedado
+                      ? [
+                          "A hipótese selecionada foi marcada como vedada; alcançar uma fração de tempo não afasta a vedação.",
+                        ]
+                      : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
+                          livId !== "doistercos"
+                        ? [
+                            "O perfil de hediondo/equiparado não pode ser combinado com a regra comum de 1/3 ou 1/2. Corrija o perfil antes de usar o exemplo.",
+                          ]
+                        : [
+                            `A expressão “mais de” exige ${lc.exigidosDias} dias, superando a fração ${liv.fracao.num}/${liv.fracao.den} de ${lc.totalDias}.`,
+                            `Depois de ${lc.abatidosDias} dias de abatimentos, restam ${lc.faltamDias} dias para esse requisito temporal.`,
+                          ],
+                conclusion: "Tempo cumprido e elegibilidade jurídica são verificações diferentes.",
+                caution:
+                  "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
+              }}
+            />
             <Result title="Último dia da pena total informada (sem abatimentos)">
               <p className="font-bold">{formatBr(fim)}</p>
               <p className="text-muted-foreground">
@@ -717,6 +858,16 @@ function PrescricaoTab() {
             <Result title="Marco hipotético (sem interrupções ou suspensões)">
               <p className="text-lg font-bold">{formatBr(data)}</p>
             </Result>
+            <PenalExample
+              example={{
+                title: "Prazo não é declaração de prescrição",
+                scenario: `Imagine ${executoria ? "uma pena aplicada" : "uma pena máxima prevista"} de ${formatPena(pena)}, com termo inicial hipotético em ${formatBr(parseDate(termo))}.`,
+                steps: r.notas,
+                conclusion: `Sem interrupções ou suspensões, a projeção do exercício chega a ${formatBr(data)}.`,
+                caution:
+                  "CP, arts. 109–117: o termo inicial e a lei aplicável precisam ser conferidos. Uma nova causa interruptiva ou suspensiva muda a conta; esta data não prova extinção da punibilidade.",
+              }}
+            />
             <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
               {r.notas.map((n) => (
                 <li key={n}>{n}</li>
@@ -812,6 +963,7 @@ function RemicaoTab({ onApply }: { onApply: (days: number) => void }) {
                 Trabalho: {diasTrab} ÷ 3, desprezada a fração = <strong>{r.trabalho} dias</strong>
               </li>
             </ul>
+            <PenalExample source="lep" example={remitionExample(blocos, diasTrab, conclusao, r)} />
             <Button onClick={() => onApply(r.total)}>Levar resultado para Execução</Button>
           </>
         )}
