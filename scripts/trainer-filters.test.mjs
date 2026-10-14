@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { filterTrainerQuestions, trainerBoard } from "../src/lib/trainerFilters.ts";
+import { filterTrainerQuestions, trainerBoard, trainerCollectionQuestions, isEnemContest } from "../src/lib/trainerFilters.ts";
 import { isMissingQuestionTable } from "../src/lib/catalog.ts";
 
 const all = Object.fromEntries(
@@ -84,4 +84,16 @@ test("only absent optional tables may be omitted; permissions and network errors
   assert.equal(isMissingQuestionTable({ code: "PGRST205" }), true);
   for (const e of [{ code: "42501" }, { code: "PGRST301" }, new Error("Network failure"), null])
     assert.equal(isMissingQuestionTable(e), false);
+});
+
+test("ENEM and public contest collections cannot mix shared disciplines", () => {
+  const catalog = [
+    {...q("enem", "INEP"), contest: "ENEM"},
+    {...q("enem-full", "INEP"), contest: "Exame Nacional do Ensino Médio"},
+    {...q("pf", "CEBRASPE"), contest: "Polícia Federal"},
+  ];
+  assert.deepEqual(trainerCollectionQuestions(catalog, "enem").map(q => q.id), ["enem", "enem-full"]);
+  assert.deepEqual(trainerCollectionQuestions(catalog, "contests").map(q => q.id), ["pf"]);
+  assert.equal(isEnemContest("ENEM 2024"), true);
+  assert.equal(isEnemContest("Polícia Civil"), false);
 });

@@ -41,6 +41,7 @@ const states: [string, string][] = [
 export function questionContestLabel(raw: string) {
   const text = raw.replace(/\s+/g, " ").trim();
   const key = fold(text);
+  if (/^(enem\b|exame nacional do ensino medio\b)/.test(key)) return "ENEM";
   if (/op-100ag-21/i.test(text) && /repertorio|apostilas/.test(key))
     return "Repertório — Apostilas Opção (OP-100AG-21)";
   if (/apostilas opcao/.test(key))

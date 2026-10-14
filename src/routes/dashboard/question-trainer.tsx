@@ -74,7 +74,7 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets } from "@/lib/trainerFilters";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, isEnemContest, trainerCollectionQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -161,20 +161,22 @@ function QuestionTrainer() {
   // Questões sem o texto de apoio ficam fora do treino, a menos que o aluno as peça (marcadas e sem pontuar).
   const [includeNoText, setIncludeNoText] = React.useState(false);
   const law = routeFilters.law;
+  const [contest, setContest] = React.useState(questionContestValue(routeFilters.contest || "all"));
+  const collection = isEnemContest(contest) ? "enem" : "contests";
   // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
-    const scoped = law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law));
+    const collectionCatalog = trainerCollectionQuestions(fullCatalog, collection);
+    const scoped = law === undefined ? collectionCatalog : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
     return { catalog: includeNoText ? scoped : usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law, includeNoText]);
+  }, [fullCatalog, law, includeNoText, collection]);
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [sessionReinforce, setSessionReinforce] = React.useState(false);
-  const [contest, setContest] = React.useState(questionContestValue(routeFilters.contest || "all"));
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(selectedQuestionCareer(routeFilters.career || "all", routeFilters.contest || "all", routeFilters.year || 0));
   const [year, setYear] = React.useState(routeFilters.year || "all");
@@ -1397,7 +1399,7 @@ function TrainerSetup({
   start: () => void;
 }) {
   const reset = () => {
-    setters.setContest("all");
+    setters.setContest(isEnemContest(values.contest) ? "ENEM" : "all");
     setters.setBoard("all");
     setters.setCareer("all");
     setters.setYear("all");
@@ -1436,6 +1438,20 @@ function TrainerSetup({
               </p>
             </div>
           </div>
+          <fieldset className="mb-5 rounded-xl border bg-muted/20 p-4">
+            <legend className="px-1 text-sm font-semibold">Área de preparação</legend>
+            <div className="flex flex-wrap gap-2">
+              {(["contests", "enem"] as const).map((collection) => {
+                const active = isEnemContest(values.contest) === (collection === "enem");
+                return <Button key={collection} type="button" variant={active ? "default" : "outline"} aria-pressed={active} onClick={() => {
+                  if (active) return;
+                  reset();
+                  setters.setContest(collection === "enem" ? "ENEM" : "all");
+                }}>{collection === "enem" ? "ENEM" : "Concursos públicos"}</Button>;
+              })}
+            </div>
+            <p className="mt-2 text-xs text-muted-foreground">As opções e questões pertencem somente à área escolhida. Ao trocar de área, os filtros anteriores são limpos.</p>
+          </fieldset>
           {values.area !== "all" && (
             <p className="mb-3 flex flex-wrap items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-xs font-semibold">
               Filtro do seu cronograma: {values.area}
@@ -1456,6 +1472,7 @@ function TrainerSetup({
               counts={facets.counts["contest"]}
               allCount={facets.totals["contest"]}
               label="Concurso ou material"
+                hideAll={isEnemContest(values.contest)}
               value={values.contest}
               setValue={setters.setContest}
               options={choices.contests}

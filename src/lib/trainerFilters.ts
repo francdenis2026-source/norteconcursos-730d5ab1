@@ -140,3 +140,12 @@ export function trainerFilterFacets(
   }
   return { counts, totals };
 }
+
+/** Scope by exam identity, never by a shared discipline such as Portuguese. */
+export function isEnemContest(contest: string) {
+  const name = contest.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  return /^(?:ENEM\b|Exame Nacional do Ensino Medio\b)/i.test(name);
+}
+export function trainerCollectionQuestions(catalog: Question[], collection: "enem" | "contests") {
+  return catalog.filter((question) => isEnemContest(question.contest) === (collection === "enem"));
+}
