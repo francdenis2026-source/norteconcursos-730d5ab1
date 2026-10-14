@@ -31,6 +31,13 @@ import { useMediaCatalog } from "@/lib/mediaStore";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/enem")({
+  validateSearch: (search: Record<string, unknown>): { tab?: string } => ({
+    tab: ["visao", "materiais", "videos", "redacao", "questoes", "checklist"].includes(
+      String(search["tab"]),
+    )
+      ? String(search["tab"])
+      : "visao",
+  }),
   head: () => ({ meta: [{ title: "Área ENEM | Norte Concurso" }] }),
   component: EnemPage,
 });
@@ -92,7 +99,9 @@ function useEnemQuestionCount() {
 }
 
 function EnemPage() {
-  const [tab, setTab] = React.useState("visao");
+  const { tab: initialTab } = Route.useSearch();
+  const [tab, setTab] = React.useState(initialTab ?? "visao");
+  React.useEffect(() => setTab(initialTab ?? "visao"), [initialTab]);
   const [subject, setSubject] = React.useState("Matemática");
   const { catalog } = useMediaCatalog();
   const checks = useChecks();

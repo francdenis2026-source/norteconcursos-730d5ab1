@@ -10,5 +10,15 @@ function LibraryBoundary() {
 }
 
 export const Route = createFileRoute("/dashboard/library")({
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { collection?: "subjects" | "laws"; q?: string | undefined; back?: string | undefined } => ({
+    collection: search["collection"] === "subjects" ? ("subjects" as const) : ("laws" as const),
+    q:
+      typeof search["q"] === "string" || typeof search["q"] === "number"
+        ? String(search["q"])
+        : undefined,
+    back: typeof search["back"] === "string" ? search["back"] : undefined,
+  }),
   component: LibraryBoundary,
 });

@@ -17,14 +17,15 @@ type Props = {
   onTopic: (value: string) => void;
   topics: string[];
   law?: string;
-  onLaw?: (value: string) => void;
-  laws?: {slug: string; title: string}[];
+  onLaw?: ((value: string) => void) | undefined;
+  laws?: { slug: string; title: string }[];
   contest: string;
   onContest: (value: string) => void;
   contests: string[];
   count: number;
   searchingContent: boolean;
   onReset: () => void;
+  collection?: "laws" | "subjects";
 };
 export function LibraryNavigation(p: Props) {
   const filtered =
@@ -48,7 +49,12 @@ export function LibraryNavigation(p: Props) {
         </span>
       </header>
       <div className="library-area-grid" role="group" aria-label="Áreas de estudo">
-        {LIBRARY_AREAS.map((a) => {
+        {LIBRARY_AREAS.filter(
+          (a) =>
+            !p.collection ||
+            a.id === "all" ||
+            (p.collection === "laws" ? a.id !== "general" : a.id === "general"),
+        ).map((a) => {
           const Icon = icons[a.id];
           const count =
             a.id === "all"
@@ -84,7 +90,11 @@ export function LibraryNavigation(p: Props) {
           type="search"
           value={p.query}
           onChange={(e) => p.onQuery(e.target.value)}
-          placeholder="Busque um termo em todas as leis ou refine pelos filtros…"
+          placeholder={
+            p.collection === "subjects"
+              ? "Busque nesta coleção de disciplinas…"
+              : "Busque um termo nas leis ou refine pelos filtros…"
+          }
         />
         {p.query && (
           <button type="button" onClick={() => p.onQuery("")} aria-label="Limpar busca">
@@ -108,13 +118,19 @@ export function LibraryNavigation(p: Props) {
             ))}
           </select>
         </label>
-        {p.onLaw && <label>
-          Lei
-          <select value={p.law ?? "all"} onChange={e => p.onLaw?.(e.target.value)}>
-            <option value="all">Todas as leis da seleção</option>
-            {(p.laws ?? []).map(law => <option key={law.slug} value={law.slug}>{law.title}</option>)}
-          </select>
-        </label>}
+        {p.onLaw && (
+          <label>
+            Lei
+            <select value={p.law ?? "all"} onChange={(e) => p.onLaw?.(e.target.value)}>
+              <option value="all">Todas as leis da seleção</option>
+              {(p.laws ?? []).map((law) => (
+                <option key={law.slug} value={law.slug}>
+                  {law.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
         <label>
           Assunto
           <select value={p.topic} onChange={(e) => p.onTopic(e.target.value)}>

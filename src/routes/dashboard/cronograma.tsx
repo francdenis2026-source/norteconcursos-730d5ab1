@@ -1,3 +1,4 @@
+import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -529,7 +530,7 @@ function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | und
   const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold hover:bg-primary hover:text-primary-foreground";
   return (
     <span className="flex flex-wrap gap-1.5">
-      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
+      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws" }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
       <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" }} className={cls}><Target className="h-3 w-3" />Questões</Link>
       <Link to="/dashboard/flashcards" search={{ subject: nome }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
       <Link to="/dashboard/media" className={cls}><Mic className="h-3 w-3" />Podcast</Link>

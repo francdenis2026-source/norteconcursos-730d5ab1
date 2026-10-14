@@ -1,3 +1,4 @@
+import { libraryCollection } from "@/lib/libraryOrganization";
 import React from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -320,7 +321,7 @@ function PlatformMaterialCard({ subject, topic }: { subject: string; topic: stri
       <CardContent className="space-y-4">
         <div className="flex flex-wrap gap-2">
           <Button asChild className="gap-2">
-            <Link to="/dashboard/library" search={{ q, back: undefined }}>
+            <Link to="/dashboard/library" search={{ q, back: undefined, collection: libraryCollection({ slug: "", discipline: subject }) === "subjects" ? "subjects" : "laws" }}>
               <LibraryBig className="h-4 w-4" /> Biblioteca
             </Link>
           </Button>

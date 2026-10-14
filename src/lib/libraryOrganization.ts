@@ -15,7 +15,12 @@ export const LIBRARY_AREAS = [
     description: "Código Penal, CPP, leis especiais, PF e trânsito",
     tone: "amber",
   },
-  { id: "law", title: "Direito", description: "Fundamentos: constitucional, administrativo e humanos", tone: "blue" },
+  {
+    id: "law",
+    title: "Direito",
+    description: "Fundamentos: constitucional, administrativo e humanos",
+    tone: "blue",
+  },
   {
     id: "general",
     title: "Demais disciplinas",
@@ -24,6 +29,13 @@ export const LIBRARY_AREAS = [
   },
 ] as const;
 export type LibraryArea = (typeof LIBRARY_AREAS)[number]["id"];
+export type LibraryCollection = "laws" | "subjects" | "enem";
+export function libraryCollection(
+  item: LibraryClassifiable & { contest_name?: string | null },
+): LibraryCollection {
+  if (item.contest_name?.trim().toUpperCase() === "ENEM") return "enem";
+  return libraryArea(item) === "general" ? "subjects" : "laws";
+}
 export type LibraryClassifiable = Pick<
   StudyMaterialSummary,
   "slug" | "discipline" | "law_course_slug"
