@@ -1,3 +1,4 @@
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -101,6 +102,7 @@ function CronogramaPage() {
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero image="journey" size="sm" kicker="Hoje" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
+      <StudyPlanningNav active="schedule" />
       {openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
       ) : open ? (

@@ -135,7 +135,7 @@ const MENU: MenuItem[] = [
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Meu cronograma", icon: CalendarClock, href: "/dashboard/cronograma" },
-  { group: "Hoje", label: "Plano de estudos", icon: ClipboardList, href: "/dashboard/study-plan" },
+  { group: "Hoje", label: "Diagnóstico por provas", icon: ClipboardList, href: "/dashboard/study-plan" },
   { group: "Hoje", label: "Foco e revisão", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },

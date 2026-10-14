@@ -1,3 +1,4 @@
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -611,6 +612,7 @@ function StudyCoachPage() {
         </div>
       </section>
 
+      <StudyPlanningNav active="coach" />
       {loadError && <Card role="alert"><CardContent className="flex flex-wrap items-center justify-between gap-3 p-5"><div><p className="font-semibold">Não foi possível carregar seu planejamento</p><p className="text-sm text-muted-foreground">Tente novamente para consultar seus planos e registros.</p></div><Button variant="outline" onClick={() => void load()}>Tentar novamente</Button></CardContent></Card>}
 
       {!loadError && plans.length > 0 && (

@@ -1,3 +1,4 @@
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -334,7 +335,7 @@ function StudyPlanPage() {
               <Sparkles /> Inteligência baseada na sua trajetória
             </span>
             <h1>
-              Operação aprovação: <em>PF, PRF e Polícia Civil</em>
+              Diagnóstico por provas: <em>PF, PRF e Polícia Civil</em>
             </h1>
             <p className="page-hero__desc">
               Um ciclo adaptativo que transforma suas provas anteriores em prioridades, metas de
@@ -358,6 +359,7 @@ function StudyPlanPage() {
           </div>
         </div>
       </section>
+      <StudyPlanningNav active="diagnosis" />
       {error && (
         <Card className="border-amber-300 bg-amber-50 dark:border-amber-500/30 dark:bg-amber-500/10">
           <CardContent className="flex items-center gap-3 py-4 text-sm text-amber-900 dark:text-amber-200">
