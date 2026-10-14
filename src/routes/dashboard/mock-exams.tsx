@@ -1,4 +1,4 @@
-import { trainerBoard } from "@/lib/trainerFilters";
+import { trainerBoard, isEnemContest } from "@/lib/trainerFilters";
 import {
   questionContestValue,
   questionContestOptionLabel,
@@ -10,6 +10,9 @@ import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import { isEligibleQuestion } from "@/lib/questionFormat";
 import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
 import React from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { LockedState } from "@/components/dashboard/PageHero";
+import { Skeleton } from "@/components/ui/skeleton";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
@@ -154,6 +157,9 @@ const LIMITS = [10, 20, 30, 50];
 const DURATIONS = [15, 30, 60, 120];
 
 function ProfessionalSimulator() {
+  const queryClient = useQueryClient();
+  const loadGeneration = React.useRef(0);
+  const [showCompetition, setShowCompetition] = React.useState(false);
   const routeSearch = Route.useSearch();
   const isEnemMode =
     routeSearch.mode === "enem" || routeSearch.contest?.trim().toUpperCase() === "ENEM";
@@ -163,6 +169,7 @@ function ProfessionalSimulator() {
     isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "mockExams").included;
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
+  const [historyUnavailable, setHistoryUnavailable] = React.useState(false);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
   const [rankProfile, setRankProfile] = React.useState<RankProfile | null>(null);
   const [loading, setLoading] = React.useState(true);
@@ -235,6 +242,8 @@ function ProfessionalSimulator() {
 
   const loadData = React.useCallback(async () => {
     if (authLoading) return;
+    if (!user || user.id === "demo-user") { setLoading(false); return; }
+    const generation = ++loadGeneration.current;
     setLoading(true);
     setLoadError(null);
     try {
@@ -243,13 +252,18 @@ function ProfessionalSimulator() {
         fields: string,
       ) => ({
         error: null,
-        data: await fetchAllRows<Record<string, unknown>>((from, to) => {
+        data: await queryClient.fetchQuery({
+          queryKey: ["simulator-catalog", user.id, isEnemMode, table, fields],
+          staleTime: 5 * 60_000,
+          retry: 1,
+          queryFn: () => fetchAllRows<Record<string, unknown>>((from, to) => {
           let request = supabase
             .from(table)
             .select(fields + ",content_status,law_version_checked_at,state,career_category")
             .eq("content_status", "active");
           if (isEnemMode) request = request.eq("contest_name", "ENEM");
-          return request.order("id").range(from, to).returns<Record<string, unknown>[]>();
+          return request.abortSignal(AbortSignal.timeout(20000)).order("id").range(from, to).returns<Record<string, unknown>[]>();
+          }),
         }),
       });
       const loadHistory = () => {
@@ -261,9 +275,9 @@ function ProfessionalSimulator() {
           )
           .eq("user_id", user.id);
         if (isEnemMode) request = request.eq("contest_filter", "ENEM");
-        return request.order("finished_at", { ascending: false }).limit(8);
+        return request.abortSignal(AbortSignal.timeout(8000)).order("finished_at", { ascending: false }).limit(8);
       };
-      const [officialResult, curatedResult, boardResult, historyResult, rankResult] =
+      const [officialResult, curatedResult, boardResult, historyResult] =
         await Promise.all([
           query(
             "official_exam_questions",
@@ -281,10 +295,9 @@ function ProfessionalSimulator() {
             throw error;
           }),
           loadHistory(),
-          user && user.id !== "demo-user"
-            ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
-            : Promise.resolve({ data: null, error: null }),
+
         ]);
+      if (generation !== loadGeneration.current) return;
       if (officialResult.error) throw officialResult.error;
       if (curatedResult.error) throw curatedResult.error;
       const official = ((officialResult.data || []) as Array<Record<string, unknown>>)
@@ -374,24 +387,33 @@ function ProfessionalSimulator() {
             }),
         ),
       );
+      setHistoryUnavailable(!!historyResult.error);
       setHistory(
         ((historyResult.data || []) as AttemptHistory[]).filter(
           (item) => !isEnemMode || /ENEM/i.test(item.title),
         ),
       );
-      setRankProfile((rankResult.data || null) as RankProfile | null);
+
     } catch (error) {
+      if (generation !== loadGeneration.current) return;
       setLoadError(
-        error instanceof Error ? error.message : "Não foi possível carregar o banco de questões.",
+        "Não foi possível carregar as questões. Confira sua conexão e tente novamente.",
       );
     } finally {
-      setLoading(false);
+      if (generation === loadGeneration.current) setLoading(false);
     }
-  }, [authLoading, user, isEnemMode]);
+  }, [authLoading, user?.id, isEnemMode, queryClient]);
 
   React.useEffect(() => {
     void loadData();
+    return () => { loadGeneration.current += 1; };
   }, [loadData]);
+  React.useEffect(() => {
+    if (!showCompetition || !user || isEnemMode) return;
+    let active = true;
+    void supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).abortSignal(AbortSignal.timeout(8000)).maybeSingle().then(({data}) => { if (active) setRankProfile(data as RankProfile | null); });
+    return () => { active = false; };
+  }, [showCompetition, user?.id, isEnemMode]);
   React.useEffect(() => {
     if (stage !== "active" || timeLeft <= 0) return;
     const timer = window.setInterval(() => {
@@ -416,7 +438,7 @@ function ProfessionalSimulator() {
   }, [stage]);
 
   const scopedCatalog = React.useMemo(
-    () => (isEnemMode ? enemSimulatorCatalog(catalog, enemArea) : catalog),
+    () => (isEnemMode ? enemSimulatorCatalog(catalog, enemArea) : catalog.filter(question => !isEnemContest(question.contest))),
     [catalog, isEnemMode, enemArea],
   );
   const filters = React.useMemo(() => {
@@ -554,6 +576,7 @@ function ProfessionalSimulator() {
   }
 
   if (loading || authLoading) return <LoadingState />;
+  if (!user || user.id === "demo-user") return <LockedState image="exam-hall" title="Simulador de provas" description="Entre na sua conta para preparar e acompanhar suas provas cronometradas." />;
   if (loadError) return <ErrorState message={loadError} retry={loadData} />;
   if (stage === "active" && current)
     return (
@@ -585,51 +608,21 @@ function ProfessionalSimulator() {
     );
 
   return (
-    <div className="space-y-6 pb-6">
-      <section className="mock-exam-hero tactical-feature-hero overflow-hidden rounded-2xl p-6 text-white shadow-xl md:p-9">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_.8fr] lg:items-center">
-          <div>
-            <Badge className="mb-4 border-amber-300/30 bg-amber-300/10 text-amber-100 hover:bg-amber-300/10">
-              <Sparkles className="mr-1 h-3.5 w-3.5" /> Sala de simulação
-            </Badge>
-            <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
-              {isEnemMode ? "Simulador ENEM" : "Simulador de prova"}
-            </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200 md:text-base">
-              Treine com questões oficiais e autorais auditadas, receba diagnóstico por disciplina e
-              transforme cada erro em uma próxima ação de estudo.
-            </p>
-            {isEnemMode && (
-              <Button asChild variant="secondary" className="mt-4">
-                <Link to="/dashboard/enem">Voltar à área do ENEM</Link>
-              </Button>
-            )}
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            <HeroMetric value={scopedCatalog.length} label="questões ativas" icon={BookOpenCheck} />
-            <HeroMetric
-              value={
-                isEnemMode
-                  ? new Set(scopedCatalog.map((q) => enemQuestionArea(q.subject))).size
-                  : contests.length
-              }
-              label={isEnemMode ? "áreas do conhecimento" : "concursos"}
-              icon={ShieldCheck}
-            />
-            <HeroMetric
-              value={new Set(scopedCatalog.map((i) => i.subject)).size}
-              label="disciplinas"
-              icon={BarChart3}
-            />
-            <HeroMetric value={history.length} label="tentativas recentes" icon={History} />
-          </div>
+    <div className="simulator-workspace mx-auto max-w-6xl space-y-6 pb-6">
+      <section className="exam-simulator-hero" aria-labelledby="simulator-title">
+        <div className="exam-simulator-hero__content">
+          <span className="exam-simulator-hero__eyebrow">Preparação em condições de prova</span>
+          <h1 id="simulator-title">{isEnemMode ? "Simulador ENEM" : "Simulador de provas"}</h1>
+          <p>Pratique a gestão do tempo, marque questões para revisar e confira seu desempenho ao finalizar.</p>
+          <span className="exam-simulator-hero__catalog">{scopedCatalog.length.toLocaleString("pt-BR")} questões disponíveis • {new Set(scopedCatalog.map(q => q.subject)).size} disciplinas</span>
+          {isEnemMode && <Link to="/dashboard/enem" className="mt-3 inline-block text-sm underline">Voltar à área ENEM</Link>}
         </div>
       </section>
-      <div className="grid gap-6 xl:grid-cols-[1.15fr_.85fr]">
+      <div className="grid gap-6 xl:grid-cols-[1.7fr_1fr]">
         <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
-              <Target className="h-5 w-5 text-emerald-600" /> Monte seu treino
+              <Target className="h-5 w-5 text-emerald-600" /> Configure sua prova
             </CardTitle>
             <CardDescription>
               Configure o foco. A seleção usa somente conteúdo com status ativo.
@@ -733,6 +726,10 @@ function ProfessionalSimulator() {
                   </Field>
                 </>
               )}
+            </div>
+            <details className="simulator-extra-filters">
+              <summary>Refinar a seleção <span>Ano, origem, estado, categoria e explicações</span></summary>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               <Field label="Ano de referência">
                 <Select value={year} onValueChange={setYear}>
                   <SelectTrigger>
@@ -827,6 +824,11 @@ function ProfessionalSimulator() {
                   </SelectContent>
                 </Select>
               </Field>
+              </div>
+            </details>
+            <div className="border-t pt-5">
+              <h3 className="mb-3 text-sm font-semibold">Formato da prova</h3>
+              <div className="grid gap-4 sm:grid-cols-2">
               <Field label="Quantidade de questões">
                 <Select value={String(limit)} onValueChange={(v) => setLimit(Number(v))}>
                   <SelectTrigger>
@@ -859,11 +861,13 @@ function ProfessionalSimulator() {
                 </Select>
               </Field>
             </div>
+            </div>
             <div className="flex flex-col gap-3 rounded-2xl border bg-muted/30 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="font-bold">{available.length} questões disponíveis</p>
                 <p className="text-xs text-muted-foreground">
                   Serão sorteadas {Math.min(limit, available.length)} questões sem repetição.
+                  {available.length > 0 && ` Tempo médio: ${Math.round(durationMinutes * 60 / Math.min(limit, available.length))} segundos por questão.`}
                 </p>
               </div>
               <Button
@@ -878,6 +882,7 @@ function ProfessionalSimulator() {
                 <Play className="h-4 w-4 fill-current" /> Iniciar simulado
               </Button>
             </div>
+            <Button variant="ghost" size="sm" onClick={() => { setContest(isEnemMode ? "ENEM" : "all"); resetChildren(); setSourceKind("all"); setReviewed("all"); setEnemArea("all"); }}>Limpar filtros</Button>
             {!hasMockExamAccess && (
               <div
                 role="status"
@@ -903,10 +908,10 @@ function ProfessionalSimulator() {
             <CardTitle className="flex items-center gap-2 text-xl">
               <History className="h-5 w-5 text-blue-600" /> Histórico recente
             </CardTitle>
-            <CardDescription>Últimas tentativas registradas no Supabase.</CardDescription>
+            <CardDescription>Seus últimos simulados concluídos.</CardDescription>
           </CardHeader>
           <CardContent>
-            {history.length ? (
+            {historyUnavailable ? <p role="status" className="text-sm text-muted-foreground">O histórico está indisponível no momento. Você pode preparar a prova e tentar carregar o histórico novamente depois.</p> : history.length ? (
               <div className="space-y-3">
                 {history.slice(0, 5).map((i) => (
                   <HistoryRow key={i.id} item={i} />
@@ -924,13 +929,14 @@ function ProfessionalSimulator() {
           </CardContent>
         </Card>
       </div>
-      {!isEnemMode && (
+      {!isEnemMode && <Button variant="outline" aria-expanded={showCompetition} onClick={() => setShowCompetition(value => !value)}>{showCompetition ? "Ocultar ranking" : "Consultar ranking e conquistas"}</Button>}
+      {!isEnemMode && showCompetition && (
         <div className="grid gap-6 xl:grid-cols-[.7fr_1.3fr]">
           <RankIdentity profile={rankProfile} />
           <Leaderboard userId={user?.id} />
         </div>
       )}
-      <CatalogOverview catalog={scopedCatalog} enem={isEnemMode} />
+      <details className="simulator-extra-filters"><summary>Explorar o acervo disponível</summary><CatalogOverview catalog={scopedCatalog} enem={isEnemMode} /></details>
       <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
         <DialogContent className="sm:max-w-lg">
           <DialogHeader>
@@ -1809,9 +1815,10 @@ function ResultMetric({
 }
 function LoadingState() {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center">
-      <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
-      <p className="mt-3 text-sm text-muted-foreground">Preparando o banco de questões...</p>
+    <div className="mx-auto max-w-6xl space-y-6" role="status" aria-label="Carregando simulador" aria-busy="true">
+      <Skeleton className="h-52 rounded-2xl" />
+      <p className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Preparando as questões disponíveis para sua prova…</p>
+      <div className="grid gap-6 lg:grid-cols-[1.7fr_1fr]"><Skeleton className="h-96 rounded-2xl" /><Skeleton className="h-64 rounded-2xl" /></div>
     </div>
   );
 }

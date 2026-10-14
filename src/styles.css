@@ -10718,3 +10718,21 @@ html body[data-scroll-locked] .right-scroll-bar-position {
  .coach-view-switch { width: 100%; }
  .coach-view-switch button { flex: 1; padding-inline: 10px; }
 }
+
+/* Simulator setup: examination imagery and focused configuration. */
+.exam-simulator-hero { position: relative; overflow: hidden; min-height: 220px; border-radius: 22px; padding: clamp(24px, 4vw, 40px); color: white; background: #081b30 url('/media/hero/exam-simulator.webp') center / cover no-repeat; }
+.exam-simulator-hero__content { position: relative; max-width: 58%; }
+.exam-simulator-hero__eyebrow { color: #efc980; font-size: .75rem; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+.exam-simulator-hero h1 { margin: 12px 0; font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 750; line-height: 1.15; }
+.exam-simulator-hero p { color: #d3dfeb; line-height: 1.7; font-size: .95rem; }
+.exam-simulator-hero__catalog { display: block; margin-top: 16px; color: #b8cadc; font-size: .8rem; }
+.simulator-extra-filters { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: var(--card); }
+.simulator-extra-filters summary { cursor: pointer; font-size: .9rem; font-weight: 650; }
+.simulator-extra-filters summary span { display: block; margin-top: 4px; color: var(--muted-foreground); font-size: .8rem; font-weight: 400; }
+.simulator-extra-filters[open] summary { margin-bottom: 18px; }
+.simulator-extra-filters summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 640px) {
+ .exam-simulator-hero { background-position: 65% center; }
+ .exam-simulator-hero::before { content: ''; position: absolute; inset: 0; background: rgb(8 27 48 / .7); }
+ .exam-simulator-hero__content { max-width: 100%; }
+}
