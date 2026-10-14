@@ -4957,6 +4957,34 @@ html {
   background: oklch(1 0 0 / 0.14) !important;
 }
 
+/* Secondary actions sit on a dark photograph in both application themes. */
+.hero-btn-secondary,
+.page-hero__actions :is(a, button).border-input {
+  min-height: 44px;
+  border: 1px solid rgb(255 255 255 / 0.38) !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+  background: #123653 !important;
+  font-weight: 650;
+  box-shadow: 0 4px 12px rgb(8 20 35 / 0.2);
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+.hero-btn-secondary:hover,
+.page-hero__actions :is(a, button).border-input:hover {
+  border-color: rgb(255 255 255 / 0.7) !important;
+  color: #fff !important;
+  background: #194969 !important;
+}
+.hero-btn-secondary:focus-visible,
+.page-hero__actions :is(a, button).border-input:focus-visible {
+  outline: 2px solid #f4bd60;
+  outline-offset: 3px;
+}
+.hero-btn-secondary svg,
+.page-hero__actions :is(a, button).border-input svg {
+  color: inherit;
+}
+
 /* Hero image per area */
 [data-hero="dashboard"] {
   --hero-image: url("/media/hero/dashboard.webp");
