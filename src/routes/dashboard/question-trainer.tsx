@@ -762,7 +762,17 @@ function QuestionTrainer() {
     );
   if (!started)
     return (
-      <div className="space-y-4">
+      <div className="mx-auto max-w-5xl space-y-4">
+      <section className="trainer-study-hero" aria-labelledby="trainer-title">
+        <div className="trainer-study-hero__content">
+          <span className="trainer-study-hero__eyebrow">Prática para concursos</span>
+          <h1 id="trainer-title">Treinador de questões</h1>
+          <p>Escolha o que estudar, responda no seu ritmo e aprenda com a correção.</p>
+          <span className="trainer-study-hero__catalog">
+            {practiceCatalog.length.toLocaleString("pt-BR")} {practiceMode === "new" ? "questões ainda não respondidas" : practiceMode === "wrong" ? "erros pendentes de reforço" : "questões já respondidas"}
+          </span>
+        </div>
+      </section>
         {lawNotice}
         <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
           {missingSupportText > 0 && (
@@ -789,8 +799,6 @@ function QuestionTrainer() {
           <p className="text-xs text-muted-foreground">Só a primeira resposta de cada questão conta para ranking, medalhas e seus números de acertos e erros. O reforço registra suas tentativas à parte, para você acompanhar a recuperação dos erros.</p>
         </section>
         <TrainerSetup
-          total={practiceCatalog.length}
-          catalogLabel={practiceMode === "new" ? "questões ainda não respondidas" : practiceMode === "wrong" ? "erros pendentes de reforço" : "questões já respondidas"}
           available={trainingPool.length}
           choices={choices}
           facets={facets}
@@ -1386,8 +1394,6 @@ type SetupSetters = {
 };
 
 function TrainerSetup({
-  total,
-  catalogLabel,
   available,
   choices,
   facets,
@@ -1395,8 +1401,6 @@ function TrainerSetup({
   setters,
   start,
 }: {
-  total: number;
-  catalogLabel: string;
   available: number;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
   choices: {
@@ -1431,16 +1435,6 @@ function TrainerSetup({
   };
   return (
     <div className="trainer-setup mx-auto max-w-5xl space-y-3 pb-5 animate-in fade-in duration-300 sm:space-y-5 sm:pb-10">
-      <section className="trainer-study-hero" aria-labelledby="trainer-title">
-        <div className="trainer-study-hero__content">
-          <span className="trainer-study-hero__eyebrow">Prática para concursos</span>
-          <h1 id="trainer-title">Treinador de questões</h1>
-          <p>Escolha o que estudar, responda no seu ritmo e aprenda com a correção.</p>
-          <span className="trainer-study-hero__catalog">
-            {total.toLocaleString("pt-BR")} {catalogLabel}
-          </span>
-        </div>
-      </section>
       <Card className="command-panel border-0 shadow-lg ring-1 ring-border/70">
         <CardContent className="p-3.5 sm:p-5 md:p-7">
           <div className="mb-3 flex items-center gap-2.5 sm:mb-6 sm:gap-3">
