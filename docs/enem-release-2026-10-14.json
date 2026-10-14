@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-14",
+  "scope": "ENEM — primeiro bloco: guias introdutórios e matemática 2025",
+  "materials": {
+    "validated": 13,
+    "inserted": 13,
+    "preserved": 0,
+    "dry_run": false
+  },
+  "questions": {
+    "dry_run": false,
+    "questions": 14,
+    "inserted": {
+      "content_sources": 4,
+      "syllabus_editions": 1,
+      "syllabus_topics": 13,
+      "official_exam_questions": 14
+    },
+    "preserved": {
+      "content_sources": 0,
+      "syllabus_editions": 0,
+      "syllabus_topics": 0,
+      "official_exam_questions": 0
+    }
+  },
+  "practice": {
+    "flashcards": 52,
+    "authorial_true_false": 104
+  },
+  "limitations": [
+    "Guias de fundamentos; não representam cobertura integral das disciplinas.",
+    "Primeiro lote oficial restrito a Matemática; expansão das outras áreas em andamento.",
+    "Resultados de simulados não são notas TRI.",
+    "Prazos de editais históricos não são divulgados como atuais."
+  ],
+  "verification": [
+    "Texto e gabarito confrontados com páginas oficiais do Inep.",
+    "Dados necessários de gráficos e tabelas transcritos para acessibilidade.",
+    "Banco relido após importação; registros existentes preservados.",
+    "Testes de isolamento do filtro ENEM, alternativas completas, anulados e reimportação."
+  ]
+}

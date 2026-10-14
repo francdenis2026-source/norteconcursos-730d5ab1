@@ -571,7 +571,7 @@ function ProfessionalSimulator() {
               <Sparkles className="mr-1 h-3.5 w-3.5" /> Sala de simulação
             </Badge>
             <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
-              Simulador de prova policial
+              {contest === "ENEM" ? "Simulador ENEM" : "Simulador de prova"}
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200 md:text-base">
               Treine com questões oficiais e autorais auditadas, receba diagnóstico por disciplina e
@@ -768,7 +768,7 @@ function ProfessionalSimulator() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {LIMITS.map((i) => (
+                    {(contest === "ENEM" ? [10, 20, 30, 45, 90] : LIMITS).map((i) => (
                       <SelectItem key={i} value={String(i)}>
                         {i} questões
                       </SelectItem>
@@ -785,7 +785,7 @@ function ProfessionalSimulator() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {DURATIONS.map((i) => (
+                    {(contest === "ENEM" ? [15, 30, 60, 120, 300, 330] : DURATIONS).map((i) => (
                       <SelectItem key={i} value={String(i)}>
                         {i} minutos
                       </SelectItem>
