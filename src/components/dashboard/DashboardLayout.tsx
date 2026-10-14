@@ -422,6 +422,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const [farewell, setFarewell] = React.useState<{ spent: number } | null>(null);
   const reallySignOut = async () => {
+    await flushStudyClock();
     stopStudyClock();
     await supabase.auth.signOut();
     navigate({ to: "/" });

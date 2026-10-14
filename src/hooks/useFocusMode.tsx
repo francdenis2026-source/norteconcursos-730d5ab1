@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
@@ -43,7 +44,7 @@ export type FocusBarProps = {
 export function useFocusMode() {
   const router = useRouter();
   const [focus, setFocus] = useState(false);
-  const [now, setNow] = useState(() => new Date());
+  const [now, setNow] = useState(() => platformDate());
   const [toolsOpen, setToolsOpen] = useState(false);
   const session = useSyncExternalStore(subscribeFocusSession, getFocusSession, () => null);
   const exiting = useRef(false);
@@ -91,7 +92,7 @@ export function useFocusMode() {
     window.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const id = window.setInterval(() => { setNow(new Date()); tickFocus(); }, 1000);
+    const id = window.setInterval(() => { setNow(platformDate()); tickFocus(); }, 1000);
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;

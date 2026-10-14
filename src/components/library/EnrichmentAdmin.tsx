@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -77,7 +78,7 @@ export function EnrichmentAdmin() {
         .from("study_material_enrichments")
         .update(
           status === "active"
-            ? { status, reviewed_by: user?.id, reviewed_at: new Date().toISOString() }
+            ? { status, reviewed_by: user?.id, reviewed_at: platformDate().toISOString() }
             : { status, reviewed_by: null, reviewed_at: null },
         )
         .eq("id", id);

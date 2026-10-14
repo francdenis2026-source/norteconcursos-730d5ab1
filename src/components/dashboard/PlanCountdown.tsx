@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useState } from "react";
 import { Hourglass } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -65,7 +66,7 @@ export function PlanCountdown({
 }) {
   const r = useRemaining(endsAt);
   const urgent = !!r && !r.over && r.d < 3;
-  const end = new Date(endsAt).toLocaleString("pt-BR", { dateStyle: "long", timeStyle: "short" });
+  const end = acreDate(endsAt).toLocaleString("pt-BR", { ...({ dateStyle: "long", timeStyle: "short" }), timeZone: "America/Rio_Branco" });
 
   const cells = r
     ? [

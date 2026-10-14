@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { Input } from "@/components/ui/input";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
@@ -66,7 +67,7 @@ function Support() {
   }
   const email = import.meta.env["VITE_SUPPORT_EMAIL"] as string | undefined;
   const report = () =>
-    `Norte Concursos — ${topic}\n\n${description.trim()}\n\nData: ${new Date().toLocaleDateString("pt-BR")}`;
+    `Norte Concursos — ${topic}\n\n${description.trim()}\n\nData: ${acreDate().toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}`;
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(report());

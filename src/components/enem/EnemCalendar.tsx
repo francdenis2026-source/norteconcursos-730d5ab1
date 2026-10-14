@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { CalendarDays, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,11 +22,11 @@ const exams = [
 
 function todayKey() {
   const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/Sao_Paulo",
+    timeZone: "America/Rio_Branco",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).formatToParts(new Date());
+  }).formatToParts(platformDate());
   return ["year", "month", "day"]
     .map((part) => parts.find((p) => p.type === part)!.value)
     .join("-");

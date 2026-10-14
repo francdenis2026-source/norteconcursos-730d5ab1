@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useDashboardData } from "@/hooks/useDashboard";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -52,7 +54,7 @@ function MyContestPage() {
 
   const daysToExam = focusedContest.examDate
     ? Math.ceil(
-        (new Date(focusedContest.examDate).getTime() - new Date().getTime()) /
+        (new Date(focusedContest.examDate).getTime() - platformDate().getTime()) /
           (1000 * 60 * 60 * 24),
       )
     : null;
@@ -137,7 +139,7 @@ function MyContestPage() {
                         <Calendar className="h-3 w-3" />
                         Próxima revisão sugerida:{" "}
                         <span className="font-bold text-secondary">
-                          {new Date(topic.nextReview).toLocaleDateString()}
+                          {acreDate(topic.nextReview).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}
                         </span>
                         <Badge variant="outline" className="ml-auto text-[9px] h-4">
                           Repetição Espaçada

@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import React from "react";
 import { Link, createFileRoute } from "@tanstack/react-router";
@@ -104,7 +105,7 @@ function useStudyContext() {
           .from("flashcards")
           .select("id,subject,topic,front,back")
           .eq("user_id", user.id)
-          .lte("due_at", new Date().toISOString())
+          .lte("due_at", platformDate().toISOString())
           .order("due_at")
           .limit(300),
       ]);
@@ -154,7 +155,7 @@ function useStudyContext() {
     );
   }, [plan, subjects]);
   const daysToExam = profile?.exam_date
-    ? Math.ceil((new Date(`${profile.exam_date}T12:00:00`).getTime() - Date.now()) / 86_400_000)
+    ? Math.ceil((new Date(`${profile.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 86_400_000)
     : null;
   return {
     real,

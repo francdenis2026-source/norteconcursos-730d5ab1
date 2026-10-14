@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -519,7 +520,7 @@ function ProfilePage() {
                         {log.event_type.replace("_", " ")}
                       </span>
                       <span className="text-[10px] text-muted-foreground">
-                        {new Date(log.created_at).toLocaleString()}
+                        {acreDate(log.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}
                       </span>
                       {typeof log.metadata?.["reason"] === "string" && (
                         <span className="text-[9px] text-rose-500/80 mt-0.5 italic">

@@ -1,3 +1,5 @@
+import { platformNow } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import type { LucideIcon } from "lucide-react";
 import { userStorageKey } from "@/lib/userStorage";
@@ -46,7 +48,7 @@ function TimerPage() {
     const active = localStorage.getItem(userStorageKey("norte_timer_active"));
     if (active) {
       const parsed = JSON.parse(active);
-      const elapsed = Math.floor((Date.now() - parsed.timestamp) / 1000);
+      const elapsed = Math.floor((platformNow() - parsed.timestamp) / 1000);
       const remaining = parsed.timeLeft - elapsed;
 
       if (remaining > 0) {
@@ -66,7 +68,7 @@ function TimerPage() {
         JSON.stringify({
           mode,
           timeLeft,
-          timestamp: Date.now(),
+          timestamp: platformNow(),
         }),
       );
     } else {
@@ -259,10 +261,10 @@ function TimerPage() {
                       <div className="flex flex-col">
                         <span className="text-xs font-bold">Foco Total</span>
                         <span className="text-[10px] text-muted-foreground">
-                          {new Date().toLocaleTimeString([], {
+                          {acreDate().toLocaleTimeString("pt-BR", { ...({
                             hour: "2-digit",
                             minute: "2-digit",
-                          })}
+                          }), timeZone: "America/Rio_Branco" })}
                         </span>
                       </div>
                       <span className="text-xs font-medium text-emerald-600">+25m</span>

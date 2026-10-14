@@ -1,3 +1,5 @@
+import { acreDateKey } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { BookOpenText, Calculator, CalendarDays, Cpu, Dices, Gavel, Link2, Network, NotebookPen, Percent, Receipt, Sigma, Table2, Wallet, X, Keyboard, Languages, Shapes, Waves } from "lucide-react";
@@ -395,7 +397,7 @@ function PunctuationTool() {
 
 // ───────── Direito: prazos, multa e calculadora penal ─────────
 function DeadlineTool() {
-  const [inicio, setInicio] = useState(() => new Date().toISOString().slice(0, 10));
+  const [inicio, setInicio] = useState(() => acreDateKey());
   const [dias, setDias] = useState("10");
   const [excluir, setExcluir] = useState(true), [uteis, setUteis] = useState(false);
   let fim: number | null = null;
@@ -408,7 +410,7 @@ function DeadlineTool() {
       <label className="flex items-start gap-2 text-sm"><input className="mt-1" type="checkbox" checked={excluir} onChange={(e) => setExcluir(e.target.checked)} /> Excluir o dia do começo e incluir o do vencimento (regra usual de prazos processuais; ex.: CPP, art. 798, § 1º)</label>
       <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={uteis} onChange={(e) => setUteis(e.target.checked)} /> Contar só dias úteis (sem sábados e domingos)</label>
       {err ? <p className="text-sm text-rose-600">{err}</p> : fim !== null && prorrogado !== null && (
-        <dl className={cn(cardCls, "divide-y")}><Row k="Último dia do prazo" v={`${formatBr(fim)} (${new Date(fim).toLocaleDateString("pt-BR", { weekday: "long", timeZone: "UTC" })})`} />{prorrogado !== fim && <Row k="Se cair em fim de semana, prorroga para" v={formatBr(prorrogado)} />}</dl>
+        <dl className={cn(cardCls, "divide-y")}><Row k="Último dia do prazo" v={`${formatBr(fim)} (${acreDate(fim).toLocaleDateString("pt-BR", { weekday: "long", timeZone: "UTC" })})`} />{prorrogado !== fim && <Row k="Se cair em fim de semana, prorroga para" v={formatBr(prorrogado)} />}</dl>
       )}
       <p className="text-[11px] text-muted-foreground">Feriados e suspensões de prazo não são considerados. Para a contagem de pena, o dia do começo conta (CP, art. 10); desmarque a primeira opção.</p>
     </div>

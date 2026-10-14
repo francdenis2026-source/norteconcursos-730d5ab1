@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
@@ -69,7 +70,7 @@ function QuestionsCatalog() {
     }
   }
   const date = (value?: string) =>
-    value ? new Date(`${value.slice(0, 10)}T12:00:00`).toLocaleDateString("pt-BR") : "A confirmar";
+    value ? acreDate(`${value.slice(0, 10)}T12:00:00`).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "A confirmar";
   const money = (value: number) =>
     value > 0
       ? value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })

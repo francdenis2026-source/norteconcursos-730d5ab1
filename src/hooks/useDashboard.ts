@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { useState, useEffect } from "react";
 import { MockService } from "../services/mockService";
 import { Contest, PerformanceStats, UserResponse } from "../types";
@@ -71,7 +72,7 @@ export function useAuthStatus() {
         const expiredFrom = eff.expiredFrom;
         const expiredByDate =
           !!profile?.subscription_expires_at &&
-          new Date(profile.subscription_expires_at) < new Date();
+          new Date(profile.subscription_expires_at) < platformDate();
         const isActivated = expiredByDate ? false : !!profile?.is_activated;
 
         if (!active) return;

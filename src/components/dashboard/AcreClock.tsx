@@ -1,6 +1,6 @@
+import { platformNow } from "@/lib/platformClock";
 import { useEffect, useState } from "react";
 import { CalendarClock } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const TZ = "America/Rio_Branco";
@@ -27,31 +27,16 @@ const full = new Intl.DateTimeFormat("pt-BR", {
  * como referência: se o relógio do aparelho estiver errado, a plataforma continua certa.
  */
 export function AcreClock() {
-  const [offset, setOffset] = useState(0); // servidor − aparelho, em ms
   const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
-    let alive = true;
-    const sync = async () => {
-      const t0 = Date.now();
-      const { data } = await supabase.rpc("server_now");
-      if (!alive || typeof data !== "string") return;
-      const t1 = Date.now();
-      setOffset(new Date(data).getTime() - (t0 + t1) / 2);
-    };
-    void sync();
-    const resync = window.setInterval(sync, 10 * 60_000);
-    setNow(Date.now());
-    const tick = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => {
-      alive = false;
-      window.clearInterval(resync);
-      window.clearInterval(tick);
-    };
+    setNow(platformNow());
+    const tick = window.setInterval(() => setNow(platformNow()), 1000);
+    return () => window.clearInterval(tick);
   }, []);
 
   if (now === null) return null;
-  const d = new Date(now + offset);
+  const d = new Date(now);
   return (
     <Tooltip>
       <TooltipTrigger asChild>

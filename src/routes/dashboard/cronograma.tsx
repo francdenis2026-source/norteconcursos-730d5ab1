@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
@@ -23,7 +24,7 @@ import {
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
-import { acreDateKey } from "@/lib/acreTime";
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { DayRun } from "@/components/cronograma/DayRun";
 import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
 import { useQuery } from "@tanstack/react-query";
@@ -293,7 +294,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         };
       setProgress(m);
     });
-    const since = new Date(Date.now() - 6 * 864e5).toISOString().slice(0, 10);
+    const since = acreDaysAgoKey(6);
     void supabase.from("study_sessions").select("active_seconds").eq("user_id", userId).gte("study_date", since)
       .then(({ data }) => setStudiedMin(Math.round(((data ?? []) as { active_seconds: number }[]).reduce((s, r) => s + r.active_seconds, 0) / 60)));
     return () => Object.values(timers.current).forEach(clearTimeout);
@@ -310,7 +311,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       timers.current[topicId] = setTimeout(() => {
         void supabase.from("cronograma_progress").upsert({
           plan_id: plan.id, user_id: userId, topic_id: topicId, video: p.video, pdf: p.pdf, podcast: p.podcast,
-          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: new Date().toISOString(),
+          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: platformDate().toISOString(),
         }).then(({ error }) => error && toast.error("Não foi possível salvar o progresso."));
       }, 500);
       return next;
@@ -321,7 +322,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
     const next = { ...plan, ...patch };
     onChange(next);
     const { error } = await supabase.from("cronograma_plans").update({
-      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: new Date().toISOString(),
+      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: platformDate().toISOString(),
     }).eq("id", plan.id);
     if (error) toast.error("Não foi possível salvar as alterações.");
   };
@@ -358,7 +359,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
       })
     : [];
-  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00`).getTime() - Date.now()) / 864e5) : null;
+  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 864e5) : null;
 
   return (
     <div className="space-y-4">

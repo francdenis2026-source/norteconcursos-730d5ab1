@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -97,7 +98,7 @@ const START_TIMES = [
 ];
 
 /** Segunda-feira da semana atual (fuso do Acre) em yyyy-mm-dd. */
-function acreWeekStart(now = new Date()): string {
+function acreWeekStart(now = platformDate()): string {
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(now); // yyyy-mm-dd
   const d = new Date(`${today}T00:00:00Z`);
   d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
@@ -237,7 +238,7 @@ function Wizard({
                 id="exam"
                 value={examDate}
                 min={new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(
-                  new Date(),
+                  platformDate(),
                 )}
                 onChange={setExamDate}
                 placeholder="Escolher a data da prova"
@@ -525,7 +526,7 @@ function StudyCoachPage() {
     const shares = Object.fromEntries(plan.subjects.map((s) => [s.name, s.share]));
     void supabase
       .from("study_profiles")
-      .update({ last_plan: { at: new Date().toISOString(), shares } })
+      .update({ last_plan: { at: platformDate().toISOString(), shares } })
       .eq("id", profile.id);
   }, [plan, profile]);
 
@@ -596,7 +597,7 @@ function StudyCoachPage() {
   const showPlanPaywall = !hasStudyPlanAccess && (plans.length === 0 || mode.kind !== "view");
   const editing = mode.kind === "edit" ? (plans.find((p) => p.id === mode.id) ?? null) : null;
 
-  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date());
+  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(platformDate());
   const todayDay = new Date(`${todayDate}T00:00:00Z`).getUTCDay();
   const summary = coachWeekSummary(schedule, checks, profile?.id ?? "", weekStart, todayDay);
   const nextBlock = summary.nextBlock;

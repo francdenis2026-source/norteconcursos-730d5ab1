@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -138,7 +140,7 @@ interface Data {
 }
 
 const fmtDate = (iso?: string | null) =>
-  iso ? new Date(iso.length === 10 ? `${iso}T12:00:00` : iso).toLocaleDateString("pt-BR") : "—";
+  iso ? acreDate(iso.length === 10 ? `${iso}T12:00:00` : iso).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "—";
 const money = (cents: number) =>
   (cents / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 const planName = (id?: string | null) =>
@@ -225,7 +227,7 @@ function StudentDetailPage() {
     if (!det) return [];
     const list: string[] = [];
     if (!det.email_confirmed_at) list.push("E-mail ainda não confirmado.");
-    if (det.expires_at && new Date(det.expires_at) < new Date())
+    if (det.expires_at && new Date(det.expires_at) < platformDate())
       list.push(`Plano vencido em ${fmtDate(det.expires_at)}.`);
     if (!det.last_sign_in_at) list.push("Nunca fez login.");
     return list;
@@ -403,7 +405,7 @@ function StudentDetailPage() {
                 return (
                   <div key={r.id} className="flex items-center gap-3 text-xs">
                     <span className="w-20 shrink-0 text-muted-foreground">
-                      {new Date(r.finished_at).toLocaleDateString("pt-BR")}
+                      {acreDate(r.finished_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}
                     </span>
                     <div className="h-3 flex-1 rounded bg-muted">
                       <div className="h-3 rounded bg-primary" style={{ width: `${pct}%` }} />

@@ -2,15 +2,16 @@ import { useEffect, useSyncExternalStore } from "react";
 import { Link } from "@tanstack/react-router";
 import { Timer } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { fmtClock, getStudyToday, startStudyClock, subscribeStudyClock } from "@/lib/studyClock";
+import { fmtClock, getStudyToday, startStudyClock, stopStudyClock, flushStudyClock, subscribeStudyClock } from "@/lib/studyClock";
 
 /**
- * Tempo do aluno na plataforma HOJE (dia do Acre). Soma todo o tempo com a plataforma aberta,
+ * Tempo do aluno na plataforma HOJE (dia do Acre). Soma o tempo ativo com a plataforma visível,
  * mesmo ao trocar de seção, de aba ou recarregar. Clicar abre o histórico em Desempenho.
  */
 export function SessionClock({ userId }: { userId: string }) {
   useEffect(() => {
     startStudyClock(userId);
+    return () => { void flushStudyClock(); stopStudyClock(); };
   }, [userId]);
   const today = useSyncExternalStore(subscribeStudyClock, getStudyToday, () => 0);
 
@@ -29,7 +30,7 @@ export function SessionClock({ userId }: { userId: string }) {
         </Link>
       </TooltipTrigger>
       <TooltipContent side="bottom">
-        Tempo na plataforma hoje. Clique para ver seu histórico.
+        Tempo ativo acumulado hoje, no dia do Acre. Soma suas sessões; pausas e abas ocultas não contam. Clique para ver seu histórico.
       </TooltipContent>
     </Tooltip>
   );

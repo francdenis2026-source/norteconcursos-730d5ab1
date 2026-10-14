@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { Link } from "@tanstack/react-router";
 import { ExternalLink, History } from "lucide-react";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
@@ -95,7 +96,7 @@ export function LegalUpdateNotice({
   const curated = slug ? (CURATED_LEGAL_UPDATES[slug] ?? []) : [];
   if (!review && !curated.length) return null;
   const date = review
-    ? new Date(review.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
+    ? acreDate(review.checked_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
     : null;
   const others = review?.changes ?? [];
   const total = curated.length + others.length;

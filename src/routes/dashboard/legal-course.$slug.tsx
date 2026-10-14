@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link, useNavigate, useParams } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
@@ -255,7 +256,7 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
       <details className="rounded-lg border px-3 py-2 text-sm" open={!!notes}><summary className="cursor-pointer font-medium">Minhas anotações</summary><textarea aria-label="Minhas anotações" maxLength={4000} className="mt-2 min-h-20 w-full rounded-lg border bg-background p-2 text-sm" value={notes} onChange={e => setNotes(e.target.value)} /></details>
       <div className="flex flex-wrap items-center gap-2 border-t pt-4"><Button disabled={busy} onClick={() => void save("read")}>Marcar como lido e salvar</Button>{onPrev && <Button variant="outline" onClick={onPrev}>← Artigo anterior</Button>}<Button variant="outline" onClick={onNext}>Próximo artigo →</Button></div>
-      {progress?.due_at && <p className="text-xs text-muted-foreground">Próxima revisão: {new Date(progress.due_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>}
+      {progress?.due_at && <p className="text-xs text-muted-foreground">Próxima revisão: {acreDate(progress.due_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>}
     </>}
   </article>;
 }

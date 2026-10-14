@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Clock, History, Loader2, Trophy } from "lucide-react";
@@ -52,7 +53,7 @@ interface Me {
 }
 
 const fmtDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" });
+  acreDate(iso).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" });
 
 function HistoryPage() {
   const { user, isLoading: authLoading } = useAuthStatus();

@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { toast } from "sonner";
 import { Bot, FilePlus2, Save, Trash2, CheckSquare, Square } from "lucide-react";
@@ -271,7 +272,7 @@ function EssayNotebook({ userId }: { userId: string }) {
               >
                 <p className="truncate text-sm font-medium">{e.title}</p>
                 <p className="text-xs text-muted-foreground">
-                  {new Date(e.updated_at).toLocaleDateString("pt-BR")}
+                  {acreDate(e.updated_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}
                 </p>
               </button>
               <Button

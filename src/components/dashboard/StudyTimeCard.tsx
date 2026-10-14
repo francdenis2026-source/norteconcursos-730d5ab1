@@ -1,3 +1,4 @@
+import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -13,13 +14,11 @@ export function StudyTimeCard({ userId }: { userId: string }) {
   const live = useSyncExternalStore(subscribeStudyClock, getStudyToday, () => 0);
 
   useEffect(() => {
-    void supabase
-      .from("study_sessions")
-      .select("study_date, active_seconds")
-      .eq("user_id", userId)
-      .order("study_date", { ascending: false })
-      .limit(2000)
-      .then(({ data }) => setRows(data ?? []));
+    let active = true;
+    const load = () => void fetchAllRows<{ study_date: string; active_seconds: number }>((from, to) => supabase.from("study_sessions").select("study_date, active_seconds").eq("user_id", userId).order("id").range(from, to)).then(data => { if (active) setRows(data); }).catch(() => { /* Preserve the previous successful history on a transient failure. */ });
+    load();
+    const timer = window.setInterval(load, 60_000);
+    return () => { active = false; window.clearInterval(timer); };
   }, [userId]);
 
   const stats = useMemo(() => {
@@ -53,7 +52,7 @@ export function StudyTimeCard({ userId }: { userId: string }) {
           <Clock className="h-5 w-5 text-primary" aria-hidden /> Tempo na plataforma
         </CardTitle>
         <CardDescription>
-          Soma o tempo com a plataforma aberta e visível, mesmo ao trocar de seção. Dias contados
+          Soma o tempo ativo de todas as suas sessões, inclusive ao sair e entrar novamente. Pausas por inatividade e abas ocultas não contam. Dias contados
           pelo horário do Acre.
         </CardDescription>
       </CardHeader>

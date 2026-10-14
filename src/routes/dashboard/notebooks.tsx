@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -62,7 +64,7 @@ function NotebooksPage() {
           name: "Revisão Português - Sintaxe",
           description: "Questões focadas em análise sintática para o concurso da PF",
           questionIds: ["q1", "q3", "q5"],
-          createdAt: new Date().toISOString(),
+          createdAt: platformDate().toISOString(),
         },
       ];
       setNotebooks(initial);
@@ -82,7 +84,7 @@ function NotebooksPage() {
       name: "Novo Caderno",
       description: "Descrição do caderno",
       questionIds: [],
-      createdAt: new Date().toISOString(),
+      createdAt: platformDate().toISOString(),
     };
     const updated = [...notebooks, newNb];
     setNotebooks(updated);
@@ -126,7 +128,7 @@ function NotebooksPage() {
       <div style="border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px;">
         <h1 style="font-size: 24px; font-bold; color: #1e293b;">${notebook.name}</h1>
         <p style="color: #64748b;">${notebook.description || ""}</p>
-        <p style="font-size: 12px;">Gerado em: ${new Date().toLocaleDateString()}</p>
+        <p style="font-size: 12px;">Gerado em: ${acreDate().toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>
       </div>
       
       <div style="margin-bottom: 30px; background: #f8fafc; padding: 15px; border-radius: 8px;">

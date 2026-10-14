@@ -1,3 +1,4 @@
+import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -186,6 +187,27 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(() => {
+    let active = true;
+    let pending = false;
+    const sync = async () => {
+      if (pending) return;
+      pending = true;
+      const started = performance.now();
+      try {
+        const { data, error } = await supabase.rpc("server_now").abortSignal(AbortSignal.timeout(10000));
+        if (!error && active && typeof data === "string") synchronizeClock(new Date(data).getTime(), performance.now() - started);
+      } catch {
+        // Keep the last server anchor when offline; the initial fallback uses the device instant.
+      } finally { pending = false; }
+    };
+    void sync();
+    const timer = window.setInterval(() => void sync(), 5 * 60_000);
+    const visible = () => { if (document.visibilityState === "visible") void sync(); };
+    document.addEventListener("visibilitychange", visible);
+    return () => { active = false; window.clearInterval(timer); document.removeEventListener("visibilitychange", visible); };
+  }, []);
+
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
   useEffect(() => {

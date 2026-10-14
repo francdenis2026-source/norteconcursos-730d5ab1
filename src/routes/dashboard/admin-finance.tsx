@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -88,7 +89,7 @@ const EVENT_LABELS: Record<string, string> = {
 
 const monthLabel = (month: string) => {
   const [y = 1970, m = 1] = month.split("-").map(Number);
-  const label = new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString("pt-BR", {
+  const label = acreDate(Date.UTC(y, m - 1, 1)).toLocaleDateString("pt-BR", {
     month: "long",
     year: "numeric",
     timeZone: "UTC",

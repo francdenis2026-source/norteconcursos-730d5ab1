@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -589,7 +590,7 @@ function MaterialRow({
           {item.updated_at && (
             <span className="mt-1 block text-xs text-muted-foreground">
               Material atualizado em{" "}
-              {new Date(item.updated_at).toLocaleDateString("pt-BR", {
+              {acreDate(item.updated_at).toLocaleDateString("pt-BR", {
                 timeZone: "America/Rio_Branco",
               })}
             </span>

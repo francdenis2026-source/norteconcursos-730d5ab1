@@ -1,3 +1,4 @@
+import { acreDateKey } from "@/lib/acreTime";
 import React from "react";
 import { canonicalBoard } from "@/lib/subjects";
 import { Plus } from "lucide-react";
@@ -43,7 +44,7 @@ export function AddExamDialog({
 }) {
   const [open, setOpen] = React.useState(false);
   const [contest, setContest] = React.useState("");
-  const [year, setYear] = React.useState(String(new Date().getFullYear()));
+  const [year, setYear] = React.useState(String(Number(acreDateKey().slice(0, 4))));
   const [board, setBoard] = React.useState("");
   const [correct, setCorrect] = React.useState("");
   const [wrong, setWrong] = React.useState("");
@@ -55,7 +56,7 @@ export function AddExamDialog({
 
   const reset = () => {
     setContest("");
-    setYear(String(new Date().getFullYear()));
+    setYear(String(Number(acreDateKey().slice(0, 4))));
     setBoard("");
     setCorrect("");
     setWrong("");
@@ -79,7 +80,7 @@ export function AddExamDialog({
     if (
       !Number.isInteger(yearNumber) ||
       yearNumber < 1990 ||
-      yearNumber > new Date().getFullYear() + 1
+      yearNumber > Number(acreDateKey().slice(0, 4)) + 1
     )
       return "Informe um ano válido.";
     const counts = [correct, wrong, blank].map(toCount);

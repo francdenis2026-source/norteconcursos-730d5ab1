@@ -1,3 +1,5 @@
+import { acreDateKey } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -76,7 +78,7 @@ interface ExamRow {
   created_at: string;
 }
 
-const todayIso = () => new Date().toISOString().slice(0, 10);
+const todayIso = () => acreDateKey();
 
 function AdminStudentsPage() {
   const { user, isAdmin } = useAuthStatus();
@@ -477,7 +479,7 @@ function AdminStudentsPage() {
                           <span className="text-muted-foreground">
                             {ex.score_net != null
                               ? `Nota ${ex.score_net}`
-                              : new Date(ex.created_at).toLocaleDateString("pt-BR")}
+                              : acreDate(ex.created_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}
                           </span>
                         </li>
                       ))

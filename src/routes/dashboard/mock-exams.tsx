@@ -1,3 +1,6 @@
+import { platformDate } from "@/lib/platformClock";
+import { platformNow } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import { trainerBoard, isEnemContest } from "@/lib/trainerFilters";
 import {
   questionContestValue,
@@ -418,7 +421,7 @@ function ProfessionalSimulator() {
   React.useEffect(() => {
     if (stage !== "active" || !startedAt) return;
     const tick = () => {
-      const clock = simulatorClock(startedAt, durationMinutes * 60, Date.now());
+      const clock = simulatorClock(startedAt, durationMinutes * 60, platformNow());
       setElapsedSeconds(clock.elapsed);
       setTimeLeft(clock.remaining);
     };
@@ -500,7 +503,7 @@ function ProfessionalSimulator() {
     setAnswers({});
     setFlagged(new Set());
     setCurrentIndex(0);
-    setStartedAt(Date.now());
+    setStartedAt(platformNow());
     setElapsedSeconds(0);
     setTimeLeft(durationMinutes * 60);
     setStage("active");
@@ -543,7 +546,7 @@ function ProfessionalSimulator() {
           accuracy: computed.accuracy,
           duration_seconds: elapsedSeconds,
           time_limit_seconds: durationMinutes * 60,
-          finished_at: new Date().toISOString(),
+          finished_at: platformDate().toISOString(),
         })
         .select("id")
         .single();
@@ -1797,7 +1800,7 @@ function HistoryRow({ item }: { item: AttemptHistory }) {
       <div className="min-w-0">
         <p className="truncate text-sm font-bold">{item.title}</p>
         <p className="text-[11px] text-muted-foreground">
-          {new Date(item.finished_at).toLocaleDateString("pt-BR")} · {item.total_questions} questões
+          {acreDate(item.finished_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })} · {item.total_questions} questões
         </p>
       </div>
       <div className="text-right">

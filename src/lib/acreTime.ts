@@ -1,3 +1,4 @@
+import { platformDate } from "./platformClock";
 // Horário do Acre (America/Rio_Branco, UTC−5, sem horário de verão).
 //
 // Funções puras, sem rede: usadas como reserva quando o servidor não responde
@@ -5,7 +6,7 @@
 // para a contagem regressiva exibida na página inicial. Nunca usar
 // `toISOString()` para "o dia de hoje": isso é UTC e viraria o dia às 19h do Acre.
 
-const ACRE_TZ = "America/Rio_Branco";
+export const ACRE_TZ = "America/Rio_Branco";
 
 const dateFmt = new Intl.DateTimeFormat("en-CA", {
   timeZone: ACRE_TZ,
@@ -23,18 +24,18 @@ const timeFmt = new Intl.DateTimeFormat("en-GB", {
 });
 
 /** Data do Acre no formato AAAA-MM-DD (mesmo formato de get_current_acre_date()). */
-export function acreDateKey(now: Date = new Date()): string {
+export function acreDateKey(now: Date = platformDate()): string {
   return dateFmt.format(now);
 }
 
 /** Segundos que faltam para a próxima meia-noite do Acre (1…86400). */
-export function secondsUntilAcreMidnight(now: Date = new Date()): number {
+export function secondsUntilAcreMidnight(now: Date = platformDate()): number {
   const [h = 0, m = 0, s = 0] = timeFmt.format(now).split(":").map(Number);
   return 86400 - (((h % 24) * 60 + m) * 60 + s);
 }
 
 /** Instante UTC (ISO) em que começou o dia de hoje no Acre — para filtrar "desde hoje" no banco. */
-export function acreDayStartISO(now: Date = new Date()): string {
+export function acreDayStartISO(now: Date = platformDate()): string {
   return `${acreDateKey(now)}T05:00:00.000Z`;
 }
 
@@ -43,4 +44,22 @@ export function formatCountdown(totalSeconds: number): string {
   const t = Math.min(86399, Math.max(0, Math.floor(totalSeconds)));
   const pad = (n: number) => String(n).padStart(2, "0");
   return `${pad(Math.floor(t / 3600))}:${pad(Math.floor((t % 3600) / 60))}:${pad(t % 60)}`;
+}
+
+/** Civil dates retain their calendar day; timestamps are rendered in Acre by callers. */
+export function acreDate(value?: string | number | Date): Date {
+  if (value === undefined) return platformDate();
+  if (value instanceof Date) return value;
+  if (typeof value === "string") {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return new Date(`${value}T12:00:00-05:00`);
+    if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?$/.test(value)) return new Date(`${value}-05:00`);
+  }
+  return new Date(value);
+}
+export function acreHour(now: Date = platformDate()): number {
+  return Number(new Intl.DateTimeFormat("en-GB", { timeZone: ACRE_TZ, hour: "2-digit", hourCycle: "h23" }).format(now));
+}
+
+export function acreDaysAgoKey(days: number, now: Date = platformDate()): string {
+  return acreDateKey(new Date(now.getTime() - days * 86_400_000));
 }

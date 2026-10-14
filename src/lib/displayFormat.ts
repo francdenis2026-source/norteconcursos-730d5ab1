@@ -1,12 +1,13 @@
+import { acreDate } from "@/lib/acreTime";
 export const fmtDateTime = (iso?: string | null) =>
   iso
-    ? new Date(iso).toLocaleString("pt-BR", {
+    ? acreDate(iso).toLocaleString("pt-BR", { ...({
         day: "2-digit",
         month: "2-digit",
         year: "numeric",
         hour: "2-digit",
         minute: "2-digit",
-      })
+      }), timeZone: "America/Rio_Branco" })
     : "—";
 
 export const fmtMin = (m: number) =>

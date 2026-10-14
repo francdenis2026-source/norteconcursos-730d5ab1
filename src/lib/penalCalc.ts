@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 /**
  * Cálculos penais para estudo (dosimetria, regime, progressão, livramento, prescrição, remição, detração).
  * Valores conferidos no texto compilado do Planalto, conforme a Biblioteca de leis, em 12/10/2026:
@@ -146,7 +147,7 @@ export function addPena(ms: number, p: Pena): number {
   return clamped + p.dias * MS;
 }
 export const diasEntre = (a: number, b: number) => Math.round((b - a) / MS);
-export const formatBr = (ms: number) => new Date(ms).toLocaleDateString("pt-BR", { timeZone: "UTC" });
+export const formatBr = (ms: number) => acreDate(ms).toLocaleDateString("pt-BR", { timeZone: "UTC" });
 
 export type ExecucaoResultado = {
   totalDias: number;

@@ -1,3 +1,5 @@
+import { acreDateKey, acreHour } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { LucideIcon } from "lucide-react";
@@ -78,7 +80,7 @@ const TRAINER_SEARCH = {
 };
 
 function greeting() {
-  const hour = new Date().getHours();
+  const hour = acreHour();
   if (hour < 12) return "Bom dia";
   if (hour < 18) return "Boa tarde";
   return "Boa noite";
@@ -172,7 +174,7 @@ function DashboardIndex() {
       headers.join(","),
       ...responses.map((r) =>
         [
-          new Date(r.createdAt).toLocaleString(),
+          acreDate(r.createdAt).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" }),
           r.questionId,
           r.isCorrect ? "Sim" : "Não",
           r.timeSpent,
@@ -184,7 +186,7 @@ function DashboardIndex() {
     const link = document.createElement("a");
     const url = URL.createObjectURL(blob);
     link.setAttribute("href", url);
-    link.setAttribute("download", `resultados_norte_${new Date().toISOString().split("T")[0]}.csv`);
+    link.setAttribute("download", `resultados_norte_${acreDateKey()}.csv`);
     link.style.visibility = "hidden";
     document.body.appendChild(link);
     link.click();

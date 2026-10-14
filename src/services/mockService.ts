@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { userStorageKey } from "@/lib/userStorage";
 import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "../lib/launch.config";
 import {
@@ -944,9 +945,9 @@ export const MockService = {
       log.new_tier,
       String(log.metadata?.["reason"] || "N/A"),
       typeof log.metadata?.["effective_date"] === "string"
-        ? new Date(log.metadata["effective_date"]).toLocaleDateString()
+        ? acreDate(log.metadata["effective_date"]).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
         : "Immediate",
-      new Date(log.created_at).toLocaleString(),
+      acreDate(log.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" }),
     ]);
 
     const csvContent = [

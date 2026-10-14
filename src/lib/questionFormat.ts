@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 // Tipos e helpers de formatação de questão compartilhados entre o Treinador
 // de Questões (área logada, /dashboard/question-trainer) e o Desafio Diário
 // público (visitante sem cadastro, /desafio-diario) — extraídos pra um só
@@ -109,7 +110,7 @@ export function splitExplanation(text: string) {
   return { main: text.slice(0, match.index).trim(), example: (match[1] ?? "").trim() };
 }
 export const formatDate = (value: string | null) =>
-  value ? new Date(value).toLocaleDateString("pt-BR") : "";
+  value ? acreDate(value).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "";
 // Alguns itens ainda em fase de importação têm review_note preenchido só com
 // metadado de auditoria ("Importado do caderno oficial...", "aguardando
 // revisão de conteúdo...") em vez de uma explicação de verdade escrita pra
