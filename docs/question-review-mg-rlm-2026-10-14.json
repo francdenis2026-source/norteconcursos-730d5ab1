@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-10-14T02:58:32.295239+00:00",
+  "scope": "Dois itens de raciocínio lógico: um liberado e reclassificado; outro retirado por imprecisão de redação. Originais e respostas preservados.",
+  "topics": [
+    {
+      "id": "721c8cda-2806-5b5b-91e2-7a1ef9626d8a",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Geral",
+      "discipline": "Raciocínio Lógico",
+      "topic_order": 1,
+      "topic_text": "Sequências lógicas e leis de formação: verbais, numéricas e geométricas (item 1 de Raciocínio Lógico-Matemático do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "d77758ce-6bc5-5e31-b123-224a3273aeac",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Geral",
+      "discipline": "Raciocínio Lógico",
+      "topic_order": 5,
+      "topic_text": "Regra de três simples e composta (item 5 de Raciocínio Lógico-Matemático do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "2caf944f-b3c1-4c98-b6d8-7388b8b96880",
+      "item_number": 12,
+      "old_subject": "Eixo Geral",
+      "new_subject": "Eixo Geral",
+      "original_answer": "B",
+      "source_page": 2,
+      "decision": "archived",
+      "pdf_sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b",
+      "question_and_raw_preserved": true,
+      "review": {
+        "legal": false,
+        "reason": "Retirada pedagógica por imprecisão na regra anunciada, sem declarar anulação da banca. O gabarito histórico B é reconstruível se a progressão se referir aos lados dos polígonos: 4,8,6,10,8,... e sétimo 10 (decágono). Porém o enunciado atribui aumentos/diminuições constantes ao número de diagonais; as diferenças de 2,20,9,35,20 não são constantes (+18,-11,+26,-15). Não substituir silenciosamente diagonais por lados para publicar um original modificado. Texto e resposta B preservados.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "8a757559-fcba-41a7-b42a-3695a9bf868b",
+      "item_number": 13,
+      "old_subject": "Eixo Geral",
+      "new_subject": "Raciocínio Lógico",
+      "original_answer": "A",
+      "source_page": 3,
+      "decision": "active",
+      "pdf_sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b",
+      "question_and_raw_preserved": true,
+      "review": {
+        "legal": false,
+        "reason": "Gabarito A confirmado: 20 relatórios/(5 peritos × 8 horas)=0,5 relatório por perito-hora. Com quatro peritos, a produção é de dois relatórios por hora; 26/2=13 horas. A classificação genérica Eixo Geral foi substituída pela disciplina canônica Raciocínio Lógico, vinculada à regra de três composta do edital.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ],
+        "classification_reviewed": true
+      }
+    }
+  ]
+}
