@@ -23,6 +23,7 @@ import {
   LineChart,
   Map as MapIcon,
   Menu,
+  LogIn,
   ScrollText,
   ShieldCheck,
   Sparkles,
@@ -220,7 +221,7 @@ function Index() {
           </nav>
           <div className="lp-header__actions">
             <Link to="/auth" search={{ mode: undefined }} className="lp-header__login">
-              Entrar
+              <LogIn aria-hidden="true" /> Entrar
             </Link>
             <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
               Começar grátis <ArrowRight />
