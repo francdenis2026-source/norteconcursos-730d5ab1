@@ -141,7 +141,7 @@ const MENU: MenuItem[] = [
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   {
     group: "Objetivo",
-    label: "Panorama das provas",
+    label: "Panorama e tendências",
     icon: BarChart3,
     href: "/dashboard/exam-panorama",
   },

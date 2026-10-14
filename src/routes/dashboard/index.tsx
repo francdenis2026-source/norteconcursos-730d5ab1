@@ -330,6 +330,11 @@ function DashboardIndex() {
         </div>
       </PageHero>
 
+      <Link to="/dashboard/exam-panorama" search={{ pcCargo: "investigador" }} hash="pc-acre" className="flex items-center justify-between gap-3 rounded-xl border border-primary/40 bg-primary/5 p-4 transition-colors hover:bg-primary/10">
+        <span><span className="block font-bold">PC do Acre: o que estudar primeiro</span><span className="mt-1 block text-sm text-muted-foreground">Prioridades, provas de referência e comparação entre Investigador, Escrivão e Delegado.</span></span>
+        <ArrowRight className="h-5 w-5 shrink-0 text-primary" />
+      </Link>
+
       {showTour && (
         <section className="onboarding-banner no-print">
           <div>

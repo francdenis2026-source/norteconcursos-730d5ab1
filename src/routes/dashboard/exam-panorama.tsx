@@ -17,8 +17,13 @@ import {
 } from "@/lib/editalRadar";
 import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
+import { PcAcreStudyOutlook } from "@/components/dashboard/PcAcreStudyOutlook";
+import { pcAcreRole, type PcAcreRole } from "@/lib/pcAcreOutlook";
 
-export const Route = createFileRoute("/dashboard/exam-panorama")({ component: ExamPanoramaPage });
+export const Route = createFileRoute("/dashboard/exam-panorama")({
+  validateSearch: (search: Record<string, unknown>): { pcCargo?: PcAcreRole | undefined } => ({ pcCargo: search["pcCargo"] ? pcAcreRole(search["pcCargo"]) : undefined }),
+  component: ExamPanoramaPage,
+});
 
 interface Row {
   contest_name: string;
@@ -80,6 +85,8 @@ function Pills<T extends string>({
 }
 
 function ExamPanoramaPage() {
+  const search = Route.useSearch();
+  const navigate = Route.useNavigate();
   const { user, isLoading: authLoading } = useAuthStatus();
   const [rows, setRows] = React.useState<Row[] | null>(null);
   const [error, setError] = React.useState(false);
@@ -223,7 +230,7 @@ function ExamPanoramaPage() {
         image="field-map"
         title={
           <>
-            Panorama das <em>provas</em>
+            Panorama e <em>tendências</em>
           </>
         }
         description="Entre na sua conta para ver o que mais caiu nas provas já realizadas, por esfera e por carreira."
@@ -243,11 +250,15 @@ function ExamPanoramaPage() {
         icon={BarChart3}
         title={
           <>
-            Panorama das <em>provas</em>
+            Panorama e <em>tendências</em>
           </>
         }
-        description="O que mais caiu nas provas oficiais já analisadas pela plataforma. A mesma informação para todos os alunos, como norte para escolher o que estudar."
+        description="Explore o histórico de provas e encontre prioridades para organizar seu estudo por cargo."
       />
+
+      <PcAcreStudyOutlook role={pcAcreRole(search.pcCargo)} onRoleChange={(pcCargo) => { void navigate({ search: { pcCargo }, replace: true }); }} />
+
+      <div id="panorama-geral" className="scroll-mt-24"><h2 className="text-xl font-bold">Panorama geral do acervo</h2><p className="mt-1 text-sm text-muted-foreground">Os filtros abaixo exploram outras provas e carreiras.</p></div>
 
       <Card>
         <CardContent className="space-y-3 pt-6">
@@ -304,8 +315,7 @@ function ExamPanoramaPage() {
 
       {error && (
         <p className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
-          Não foi possível carregar o panorama. Confirme que a migration exam_panorama foi aplicada
-          no banco.
+          Não foi possível carregar o panorama geral. A análise da PC do Acre continua disponível. Tente atualizar a página.
         </p>
       )}
       {!rows && !error && (
