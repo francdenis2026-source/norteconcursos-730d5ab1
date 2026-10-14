@@ -36,7 +36,9 @@ test('regime inicial pelo art. 33, § 2º', () => {
   assert.equal(c.regimeInicial(c.penaParaDias(P(8, 0, 1)), false, 'reclusão').regime, 'Fechado');
   assert.equal(c.regimeInicial(c.penaParaDias(P(8)), false, 'reclusão').regime, 'Semiaberto');
   assert.equal(c.regimeInicial(c.penaParaDias(P(4)), false, 'reclusão').regime, 'Aberto');
-  assert.match(c.regimeInicial(c.penaParaDias(P(3)), true, 'reclusão').regime, /Fechado/);
+  assert.equal(c.regimeInicial(c.penaParaDias(P(3)), true, 'reclusão').regime, 'Semiaberto possível');
+  assert.equal(c.regimeInicial(c.penaParaDias(P(9)), true, 'detenção').regime, 'Semiaberto, em tese');
+  assert.equal(c.regimeInicial(c.penaParaDias(P(3)), false, 'reclusão', false).regime, 'Depende de fundamentação');
 });
 
 test('progressão: frações do art. 112 da LEP e data pelo calendário', () => {
@@ -62,11 +64,12 @@ test('livramento exige mais que a fração; remição segue o art. 126', () => {
   const ini = c.parseDate('2026-01-01');
   const l = c.marcoExecucao(ini, P(3), { num: 1, den: 3 }, 0, 0, true);
   assert.equal(l.exigidosDias, Math.floor(l.totalDias / 3) + 1);
-  const r = c.remicao(120, 20, 90, false);
+  const r = c.remicaoPorBlocos(10, 90, false);
   assert.equal(r.estudo, 10);
   assert.equal(r.trabalho, 30);
-  assert.equal(c.remicao(120, 20, 0, true).acrescimoConclusao, 3);
-  assert.equal(c.remicao(120, 2, 0, false).estudo, 0, 'horas de estudo devem ser divididas em ao menos 3 dias');
+  assert.equal(c.remicaoPorBlocos(10, 0, true).acrescimoConclusao, 3);
+  assert.throws(() => c.remicaoPorBlocos(1.5, 0, false), /inteiro/);
+  assert.throws(() => c.remicaoPorBlocos(1, -3, false), /inteiro/);
 });
 
 test('prescrição: faixas do art. 109, aumento do art. 110 e redução do art. 115', () => {
@@ -83,4 +86,43 @@ test('prescrição: faixas do art. 109, aumento do art. 110 e redução do art. 
   assert.equal(c.prescricao(y(4), base).meses, 128);
   assert.equal(c.prescricao(y(4), { ...base, executoria: false, reincidente: true, reduzPelaIdade: true }).meses, 48);
   assert.equal(c.prescricao(y(4), { ...base, executoria: false, reincidente: false, reduzPelaIdade: true, violenciaSexualContraMulher: true }).meses, 96);
+});
+
+
+test('benefícios usam pena total, sem redução ao limite de cumprimento (Súmula 715)', () => {
+  const inicio = c.parseDate('2026-01-01');
+  const out = c.marcoExecucao(inicio, P(50), {num:1,den:2}, 0, 0);
+  assert.equal(out.totalDias, c.diasEntre(inicio,c.addPena(inicio,P(50))));
+  assert.equal(out.exigidosDias, Math.ceil(out.totalDias / 2));
+  assert.ok(out.exigidosDias > 24 * 365);
+  assert.equal(out.limiteQuarentaAnos, true);
+});
+
+test('datas civis e fim de mês não dependem do fuso do dispositivo', () => {
+  assert.throws(() => c.parseDate('2026-02-30'), /existente/);
+  assert.throws(() => c.parseDate(''), /válida/);
+  assert.equal(c.formatBr(c.parseDate('2026-10-14')), '14/10/2026');
+  assert.equal(c.toIso(c.addPena(c.parseDate('2026-01-31'),P(0,1))), '2026-02-28');
+  assert.equal(c.toIso(c.addPena(c.parseDate('2024-02-29'),P(1))), '2025-02-28');
+});
+
+test('dosimetria despreza fração de dia e rejeita valores inválidos', () => {
+  const input = {min:P(0,0,1),max:P(0,0,2),circunstanciasNegativas:1,fracaoCircunstancia:{num:1,den:8},agravantes:0,atenuantes:0,fracaoAgravanteAtenuante:{num:1,den:6},aumentos:[{num:2,den:3}],diminuicoes:[]};
+  assert.equal(c.dosimetria(input).final, 1);
+  assert.throws(()=>c.dosimetria({...input,circunstanciasNegativas:9}),/Circunstâncias/);
+  assert.throws(()=>c.dosimetria({...input,diminuicoes:[{num:1,den:0}]}),/Fração/);
+  assert.throws(()=>c.penaParaDias(P(1,12)),/meses/);
+  assert.throws(()=>c.marcoExecucao(c.parseDate('2026-01-01'),P(0),{num:1,den:6},0,0),/zero/);
+  assert.throws(()=>c.prazoPrescricaoAnos(0),/zero/);
+});
+
+
+test('referências de crimes apontam para o diploma e o artigo correto', () => {
+  const targets = ['cp121q','cp217a','d33','a16'].map(id => c.crimeStudyTarget(id));
+  assert.equal(targets[0].art,'art-121');
+  assert.equal(targets[1].art,'art-217-a');
+  assert.equal(targets[2].slug,'drogas');
+  assert.equal(targets[3].slug,'armas');
+  assert.equal(c.crimeStudyTarget('custom'),null);
+  assert.equal(c.crimeStudyTarget('cp9999'),null);
 });
