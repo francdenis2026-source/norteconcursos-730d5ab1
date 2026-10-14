@@ -1,3 +1,6 @@
+import { TRACKS } from "@/data/tracks";
+import { editalLessonLinks } from "@/lib/editalStudy";
+import { useLegalCourses } from "@/lib/legalCourses";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { syllabusQuestions, isEnemContest } from "@/lib/trainerFilters";
 import { needsMissingSupportText } from "@/lib/questionText";
@@ -74,6 +77,14 @@ function TopicPage() {
     reload: reloadQuestions,
   } = useQuestionCatalog(user?.id, real);
   const library = useStudyMaterialList(real);
+  const legalCourses = useLegalCourses(real ? user?.id : undefined);
+  const learning = React.useMemo(
+    () =>
+      topic && edition && !isEnemContest(edition.contest_name)
+        ? editalLessonLinks(topic.discipline, topic.topic_text, TRACKS)
+        : { lessons: [], tracks: [] },
+    [topic, edition],
+  );
   const [showAllComments, setShowAllComments] = React.useState(false);
   const linkedQuestions = React.useMemo(
     () => syllabusQuestions(questionCatalog, topicId).filter((q) => !needsMissingSupportText(q)),
@@ -199,6 +210,19 @@ function TopicPage() {
       </div>
     );
 
+  const materialSlugs = new Set(materials.map((material) => material.id));
+  const relatedLawSlugs = new Set(
+    (library.data ?? [])
+      .filter((material) => materialSlugs.has(material.slug))
+      .map((material) => material.law_course_slug)
+      .filter(Boolean),
+  );
+  const lawCourses =
+    edition && !isEnemContest(edition.contest_name)
+      ? (legalCourses.data ?? []).filter(
+          (course) => course.syllabus_topic_id === topic.id || relatedLawSlugs.has(course.slug),
+        )
+      : [];
   const practiceSearch = {
     syllabus: topic.id,
     ...(edition && isEnemContest(edition.contest_name) ? { contest: "ENEM" } : {}),
@@ -225,6 +249,12 @@ function TopicPage() {
             {edition.exam_board ? ` · ${edition.exam_board}` : ""}
           </p>
         )}
+        <a
+          href="#edital-study-content"
+          className="mt-5 mr-3 inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#0b3150] hover:bg-white/90"
+        >
+          <BookOpenCheck className="h-4 w-4" /> Estudar este assunto
+        </a>
         {!questionsLoading && !questionsError && linkedQuestions.length > 0 && (
           <Button asChild className="mt-5 bg-white text-[#0b3150] hover:bg-white/90">
             <Link to="/dashboard/question-trainer" search={practiceSearch}>
@@ -263,27 +293,7 @@ function TopicPage() {
               Use os materiais relacionados e consulte as fontes das explicações.
             </p>
             <Button variant="outline" size="sm" className="mt-3" asChild>
-              {edition && isEnemContest(edition.contest_name) ? (
-                <Link to="/dashboard/enem" search={{ tab: "materiais" }}>
-                  Materiais do ENEM
-                </Link>
-              ) : (
-                <Link
-                  to="/dashboard/library"
-                  search={{
-                    collection:
-                      libraryCollection({
-                        slug: "",
-                        discipline: topic.discipline,
-                        law_course_slug: null,
-                      }) === "subjects"
-                        ? "subjects"
-                        : "laws",
-                  }}
-                >
-                  Consultar biblioteca
-                </Link>
-              )}
+              <a href="#edital-study-content">Ver conteúdos e cursos</a>
             </Button>
           </CardContent>
         </Card>
@@ -300,29 +310,169 @@ function TopicPage() {
           </CardContent>
         </Card>
       </section>
-      {materials.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Materiais relacionados</CardTitle>
-            <CardDescription>
-              Sugestões por disciplina e assunto; confira o recorte do edital ao estudar.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-2 sm:grid-cols-2">
-            {materials.map((material) => (
+      <section
+        id="edital-study-content"
+        className="scroll-mt-24 space-y-5"
+        aria-label="Conteúdo para estudar o assunto"
+      >
+        <div>
+          <h2 className="text-xl font-semibold">Conteúdo para estudar</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Materiais, aulas e percursos disponíveis. Sugestões relacionadas não substituem o
+            recorte do edital.
+          </p>
+        </div>
+        {edition &&
+          !isEnemContest(edition.contest_name) &&
+          (materials.length > 0 || videos.length > 0) && (
+            <Button asChild>
               <Link
-                key={material.id}
-                to="/dashboard/library/$slug"
-                params={{ slug: material.id }}
-                search={{ back: backToPlan, tema: topic.topic_text }}
-                className="rounded-xl border p-3 text-sm font-semibold hover:bg-muted"
+                to="/dashboard/study-room"
+                search={{
+                  subject: topic.discipline,
+                  topic: topic.topic_text,
+                  kind: "Teoria",
+                  minutes: "30",
+                  edital: topic.id,
+                }}
               >
-                {material.label}
+                Abrir sessão de estudo de 30 minutos
               </Link>
-            ))}
-          </CardContent>
-        </Card>
-      )}
+            </Button>
+          )}
+        {learning.lessons.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Aulas relacionadas ao assunto</CardTitle>
+            </CardHeader>
+            <CardContent className="grid gap-3 sm:grid-cols-2">
+              {learning.lessons.map((lesson) => (
+                <Link
+                  key={`${lesson.track}:${lesson.lesson}`}
+                  to="/dashboard/trilhas"
+                  search={{ t: lesson.track, l: lesson.lesson }}
+                  className="rounded-xl border p-4 text-sm font-semibold hover:bg-muted"
+                >
+                  {lesson.title}
+                  <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                    Aula com explicação, exemplos e exercícios
+                  </span>
+                </Link>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+        {lawCourses.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Estudar a legislação</CardTitle>
+              <CardDescription>
+                Percursos vinculados ao tópico ou aos materiais relacionados. Confira quais artigos
+                o edital exige.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-3 sm:grid-cols-2">
+              {lawCourses.map((course) => (
+                <Link
+                  key={course.id}
+                  to="/dashboard/legal-course/$slug"
+                  params={{ slug: course.slug }}
+                  className="rounded-xl border p-4 text-sm font-semibold hover:bg-muted"
+                >
+                  {course.title}
+                  <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                    Texto normativo, explicações e revisão
+                  </span>
+                </Link>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+        {learning.tracks.length > 0 && (
+          <details className="rounded-xl border p-4">
+            <summary className="cursor-pointer text-sm font-semibold">
+              Trilhas da disciplina — conteúdo geral
+            </summary>
+            <p className="mt-2 text-xs text-muted-foreground">
+              As trilhas podem abranger outros tópicos e concursos. Consulte o programa antes de
+              ampliar o estudo.
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {learning.tracks.map((track) => (
+                <Button variant="outline" size="sm" key={track.slug} asChild>
+                  <Link to="/dashboard/trilhas" search={{ t: track.slug }}>
+                    {track.title}
+                  </Link>
+                </Button>
+              ))}
+            </div>
+          </details>
+        )}
+        {materials.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Materiais relacionados</CardTitle>
+              <CardDescription>
+                Sugestões por disciplina e assunto; confira o recorte do edital ao estudar.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-2 sm:grid-cols-2">
+              {materials.map((material) => (
+                <Link
+                  key={material.id}
+                  to="/dashboard/library/$slug"
+                  params={{ slug: material.id }}
+                  search={{ back: backToPlan, tema: topic.topic_text }}
+                  className="rounded-xl border p-3 text-sm font-semibold hover:bg-muted"
+                >
+                  {material.label}
+                </Link>
+              ))}
+            </CardContent>
+          </Card>
+        )}
+        {videos.length > 0 && <LibraryVideos videos={videos} />}
+        {!library.isLoading &&
+          !legalCourses.isLoading &&
+          !materials.length &&
+          !learning.lessons.length &&
+          !lawCourses.length &&
+          !videos.length && (
+            <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">
+              Ainda não há conteúdo específico relacionado automaticamente a este assunto. Consulte
+              a fonte do edital e busque materiais na biblioteca.
+            </p>
+          )}
+        <div className="flex flex-wrap gap-2">
+          <Button variant="outline" size="sm" asChild>
+            {edition && isEnemContest(edition.contest_name) ? (
+              <Link to="/dashboard/enem" search={{ tab: "materiais" }}>
+                Buscar materiais do ENEM
+              </Link>
+            ) : (
+              <Link
+                to="/dashboard/library"
+                search={{
+                  collection:
+                    libraryCollection({
+                      slug: "",
+                      discipline: topic.discipline,
+                      law_course_slug: null,
+                    }) === "subjects"
+                      ? "subjects"
+                      : "laws",
+                  q: topic.discipline,
+                }}
+              >
+                Buscar na biblioteca
+              </Link>
+            )}
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/dashboard/cronograma">Organizar no cronograma</Link>
+          </Button>
+        </div>
+      </section>
       {questionsError && (
         <p role="status" className="text-sm text-muted-foreground">
           Não foi possível consultar o acervo agora. O tópico e os materiais continuam disponíveis.{" "}
@@ -394,8 +544,6 @@ function TopicPage() {
           )}
         </div>
       )}
-
-      {videos.length > 0 && <LibraryVideos videos={videos} />}
     </div>
   );
 }

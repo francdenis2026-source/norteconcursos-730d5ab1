@@ -57,6 +57,7 @@ import {
 import { cn } from "@/lib/utils";
 
 type Search = {
+  edital?: string | undefined;
   subject?: string | undefined;
   topic?: string | undefined;
   kind?: string | undefined;
@@ -71,6 +72,7 @@ const pick = (v: unknown) =>
 
 export const Route = createFileRoute("/dashboard/study-room")({
   validateSearch: (s: Record<string, unknown>): Search => ({
+    edital: pick(s["edital"]),
     subject: pick(s["subject"]),
     topic: pick(s["topic"]),
     kind: pick(s["kind"]),
@@ -440,15 +442,23 @@ function StudyRoomPage() {
     );
   }
 
-  const questionSearch = { area: subject, go: "1", ...(topic ? { topic } : {}) };
+  const questionSearch = sp.edital
+    ? { syllabus: sp.edital, go: "1" }
+    : { area: subject, go: "1", ...(topic ? { topic } : {}) };
 
   return (
     <div className="mx-auto max-w-6xl space-y-5">
       <div>
         <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
-          <Link to="/dashboard/study-coach">
-            <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
-          </Link>
+          {sp.edital ? (
+            <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>
+              <ArrowLeft className="h-4 w-4" /> Voltar ao assunto do edital
+            </Link>
+          ) : (
+            <Link to="/dashboard/study-coach">
+              <ArrowLeft className="h-4 w-4" /> Voltar ao cronograma
+            </Link>
+          )}
         </Button>
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline">{sp.kind ?? "Estudo"}</Badge>
