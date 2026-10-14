@@ -6,8 +6,9 @@ import {
   type TrainerBookmark,
 } from "@/lib/internalNavigation";
 import { legalLibraryEntry, questionMatchesLaw } from "@/lib/legalLibrary";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate, useBlocker } from "@tanstack/react-router";
 import {
+  PauseCircle,
   ArrowLeft,
   ArrowRight,
   BookOpenCheck,
@@ -204,6 +205,27 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | "result" | null>(null);
   const [results, setResults] = React.useState<("ok" | "err")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
+  const [confirmStop, setConfirmStop] = React.useState(false);
+  const sessionInProgress = started && questions.length > 0 && results.length < questions.length;
+  const blocker = useBlocker({
+    shouldBlockFn: () => sessionInProgress || savingRef.current,
+    enableBeforeUnload: () => sessionInProgress || savingRef.current,
+    withResolver: true,
+  });
+  const leaveDialogOpen = confirmStop || blocker.status === "blocked";
+  const cancelLeave = () => {
+    setConfirmStop(false);
+    blocker.reset?.();
+  };
+  const confirmLeave = () => {
+    if (savingRef.current) return;
+    if (blocker.status === "blocked") blocker.proceed();
+    else {
+      setConfirmStop(false);
+      setStarted(false);
+    }
+  };
+
   // Cronômetro da questão: conta só o tempo ativo (aba visível e aluno interagindo) enquanto a questão está
   // aberta e sem resposta, e recomeça do zero a cada questão. É o tempo gravado como response_seconds.
   const [questionSecs, setQuestionSecs] = React.useState(0);
@@ -552,14 +574,14 @@ function QuestionTrainer() {
     setQuestionSecs(0);
   }, [startedAt, index, question?.id, question?.source]);
   React.useEffect(() => {
-    if (!started || !question || answered) return;
+    if (!started || !question || answered || leaveDialogOpen) return;
     const id = window.setInterval(() => {
       if (document.visibilityState !== "visible" || idleSeconds() >= IDLE_PAUSE_SECONDS) return;
       questionSecsRef.current += 1;
       setQuestionSecs(questionSecsRef.current);
     }, 1000);
     return () => window.clearInterval(id);
-  }, [started, question?.id, question?.source, answered, index]);
+  }, [started, question?.id, question?.source, answered, index, leaveDialogOpen]);
   // Já respondida antes (nesta sessão ou em qualquer sessão anterior): mostra
   // em modo revisão, sem permitir reenviar. Só rearma quando a questão exibida
   // muda — back/forward dentro da sessão não reconta nem reseta o cronômetro.
@@ -851,6 +873,24 @@ function QuestionTrainer() {
   };
   return (
     <div className="trainer-session-shell mx-auto max-w-4xl space-y-2.5 pb-4 sm:space-y-4 sm:pb-8">
+      <Dialog open={leaveDialogOpen} onOpenChange={(open) => { if (!open) cancelLeave(); }}>
+        <DialogContent className="max-w-sm rounded-2xl" onEscapeKeyDown={(event) => { if (saving) event.preventDefault(); }}>
+          <DialogHeader>
+            <span className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <PauseCircle className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <DialogTitle>Interromper o treino?</DialogTitle>
+            <DialogDescription>
+              {saving ? "Aguarde enquanto sua resposta é salva." : "Você ainda tem questões nesta sessão. As respostas já confirmadas permanecem registradas; a alternativa selecionada só é enviada ao confirmar a resposta."}
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-2 sm:justify-start">
+            <Button onClick={cancelLeave}>Continuar estudando</Button>
+            <Button variant="outline" onClick={confirmLeave} disabled={saving}>Sair do treino</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
       {sessionReinforce && (
@@ -889,7 +929,7 @@ function QuestionTrainer() {
       )}
       <header className="flex flex-wrap items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-1.5">
-          <Button variant="ghost" size="sm" onClick={() => setStarted(false)}>
+          <Button variant="ghost" size="sm" onClick={() => setConfirmStop(true)}>
             <ArrowLeft className="mr-1.5 h-4 w-4" /> Configuração
           </Button>
           <Button variant="ghost" size="sm" disabled={index === 0} onClick={() => goTo(index - 1)}>
