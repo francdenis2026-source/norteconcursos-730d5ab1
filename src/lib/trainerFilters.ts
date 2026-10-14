@@ -149,3 +149,19 @@ export function isEnemContest(contest: string) {
 export function trainerCollectionQuestions(catalog: Question[], collection: "enem" | "contests") {
   return catalog.filter((question) => isEnemContest(question.contest) === (collection === "enem"));
 }
+
+export type TrainerPracticeMode = "new" | "wrong" | "all";
+/** Filter the catalog before deriving facets, so options reflect the student's own history. */
+export function trainerPracticeQuestions(
+  catalog: Question[],
+  mode: TrainerPracticeMode,
+  answers: ReadonlyMap<string, { isCorrect: boolean }>,
+  reinforcements: ReadonlyMap<string, { lastCorrect: boolean }>,
+) {
+  return catalog.filter(question => {
+    const key = `${question.source}:${question.id}`;
+    if (mode === "new") return !answers.has(key);
+    if (mode === "all") return answers.has(key);
+    return answers.get(key)?.isCorrect === false && !reinforcements.get(key)?.lastCorrect;
+  });
+}

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { filterTrainerQuestions, trainerBoard, trainerCollectionQuestions, isEnemContest } from "../src/lib/trainerFilters.ts";
+import { filterTrainerQuestions, trainerBoard, trainerCollectionQuestions, isEnemContest, trainerPracticeQuestions, trainerFilterFacets } from "../src/lib/trainerFilters.ts";
 import { isMissingQuestionTable } from "../src/lib/catalog.ts";
 
 const all = Object.fromEntries(
@@ -96,4 +96,16 @@ test("ENEM and public contest collections cannot mix shared disciplines", () => 
   assert.deepEqual(trainerCollectionQuestions(catalog, "contests").map(q => q.id), ["pf"]);
   assert.equal(isEnemContest("ENEM 2024"), true);
   assert.equal(isEnemContest("Polícia Civil"), false);
+});
+
+test("practice facets only include the selected student's unanswered, answered or unresolved errors", () => {
+ const catalog=[{...q("same","INEP"),contest:"ENEM"},q("same","CEBRASPE","curated"),q("right","FGV"),q("recovered","FCC"),q("new","VUNESP")];
+ const answers=new Map([["official:same",{isCorrect:false}],["official:right",{isCorrect:true}],["official:recovered",{isCorrect:false}]]);
+ const recovery=new Map([["official:recovered",{lastCorrect:true}]]);
+ const wrong=trainerPracticeQuestions(catalog,"wrong",answers,recovery);
+ assert.deepEqual(wrong.map(q=>q.board),["INEP"]);
+ assert.deepEqual([...trainerFilterFacets(wrong,all,new Map()).counts.board.keys()],["INEP"]);
+ assert.deepEqual(trainerPracticeQuestions(catalog,"all",answers,recovery).map(q=>q.board),["INEP","FGV","FCC"]);
+ assert.deepEqual(trainerPracticeQuestions(catalog,"new",answers,recovery).map(q=>q.board),["CEBRASPE","VUNESP"]);
+ assert.equal(trainerPracticeQuestions(catalog,"all",new Map(),new Map()).length,0);
 });

@@ -74,7 +74,7 @@ import {
 } from "@/components/ui/select";
 import { canonicalSubject, canonicalCareerName } from "@/lib/subjects";
 import { questionTopic, topicFilterLabel } from "@/lib/filterTaxonomy";
-import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, isEnemContest, trainerCollectionQuestions } from "@/lib/trainerFilters";
+import { filterTrainerQuestions, trainerBoard, trainerFilterFacets, isEnemContest, trainerCollectionQuestions, trainerPracticeQuestions } from "@/lib/trainerFilters";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
@@ -386,6 +386,20 @@ function QuestionTrainer() {
   const correct = results.filter((r) => r === "ok").length;
   const wrong = results.filter((r) => r === "err").length;
 
+  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(routeFilters.mode === "reforco" ? "wrong" : "new");
+  const practiceCatalog = React.useMemo(
+    () => trainerPracticeQuestions(catalog, practiceMode, locked, reinforced),
+    [catalog, practiceMode, locked, reinforced],
+  );
+  const changePracticeMode = (mode: "new" | "wrong" | "all") => {
+    if (mode === practiceMode) return;
+    setPracticeMode(mode);
+    setContest(isEnemContest(contest) ? "ENEM" : "all");
+    setBoard("all"); setCareer("all"); setYear("all"); setAppliedExam("all");
+    setSubject("all"); setSource("all"); setReviewed("all"); setDifficulty("all");
+    setState("all"); setCategory("all"); setArea("all"); setTopic("all");
+    setNotice("Os filtros foram limpos para mostrar as opções disponíveis neste modo de prática.");
+  };
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   const topicOf = React.useMemo(
     () => new Map(catalog.map((q) => [q.id, questionTopic(q)])),
@@ -394,7 +408,7 @@ function QuestionTrainer() {
   const facets = React.useMemo(
     () =>
       trainerFilterFacets(
-        catalog,
+        practiceCatalog,
         {
           area,
           topic,
@@ -413,7 +427,7 @@ function QuestionTrainer() {
         topicOf,
       ),
     [
-      catalog,
+      practiceCatalog,
       area,
       topic,
       contest,
@@ -494,7 +508,6 @@ function QuestionTrainer() {
   );
   // Modos de prática. "new": só questões ainda não respondidas (a 1ª resposta é a que conta para ranking e medalhas).
   // "wrong" e "all": reforço de questões já respondidas; as novas tentativas ficam numa tabela própria e não pontuam.
-  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(routeFilters.mode === "reforco" ? "wrong" : "new");
   const [notice, setNotice] = React.useState("");
   const fresh = React.useMemo(() => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))), [pool, locked]);
   const answeredPool = React.useMemo(() => pool.filter((q) => locked.has(lockedKey(q.source, q.id))), [pool, locked]);
@@ -767,7 +780,7 @@ function QuestionTrainer() {
               ["all", "Revisar respondidas", `${answeredPool.length} já respondidas. Não pontuam de novo.`],
             ] as const).map(([id, title, sub]) => (
               <label key={id} className={`cursor-pointer rounded-xl border p-3 ${practiceMode === id ? "border-primary bg-primary/5" : "hover:bg-muted/50"}`}>
-                <input type="radio" name="practice-mode" className="mr-2" checked={practiceMode === id} onChange={() => { setPracticeMode(id); setNotice(""); }} />
+                <input type="radio" name="practice-mode" className="mr-2" checked={practiceMode === id} onChange={() => changePracticeMode(id)} />
                 <span className="font-semibold">{title}</span>
                 <span className="mt-1 block text-xs text-muted-foreground">{sub}</span>
               </label>
@@ -776,7 +789,8 @@ function QuestionTrainer() {
           <p className="text-xs text-muted-foreground">Só a primeira resposta de cada questão conta para ranking, medalhas e seus números de acertos e erros. O reforço registra suas tentativas à parte, para você acompanhar a recuperação dos erros.</p>
         </section>
         <TrainerSetup
-          total={catalog.length}
+          total={practiceCatalog.length}
+          catalogLabel={practiceMode === "new" ? "questões ainda não respondidas" : practiceMode === "wrong" ? "erros pendentes de reforço" : "questões já respondidas"}
           available={trainingPool.length}
           choices={choices}
           facets={facets}
@@ -1373,6 +1387,7 @@ type SetupSetters = {
 
 function TrainerSetup({
   total,
+  catalogLabel,
   available,
   choices,
   facets,
@@ -1381,6 +1396,7 @@ function TrainerSetup({
   start,
 }: {
   total: number;
+  catalogLabel: string;
   available: number;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
   choices: {
@@ -1421,7 +1437,7 @@ function TrainerSetup({
           <h1 id="trainer-title">Treinador de questões</h1>
           <p>Escolha o que estudar, responda no seu ritmo e aprenda com a correção.</p>
           <span className="trainer-study-hero__catalog">
-            {total.toLocaleString("pt-BR")} questões disponíveis no acervo
+            {total.toLocaleString("pt-BR")} {catalogLabel}
           </span>
         </div>
       </section>
