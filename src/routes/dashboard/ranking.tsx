@@ -14,7 +14,7 @@ export const Route = createFileRoute("/dashboard/ranking")({ component: RankingP
 const TABS = [
   ["questions", "Questões", "Pontos das questões do Treinador, conferidos com o gabarito oficial."],
   ["simulators", "Simulados", "Pontos dos simulados concluídos, com bônus de precisão."],
-  ["general", "Geral", "Tudo que você faz: questões, simulados, estudo, flashcards, redação e constância."],
+  ["general", "Geral", "Pontos de questões, simulados, flashcards e redação. Horas de estudo são uma métrica de dedicação."],
 ] as const;
 
 interface Row {
@@ -123,19 +123,29 @@ function RankingPage() {
   const real = !!user && user.id !== "demo-user";
   const [kind, setKind] = React.useState<(typeof TABS)[number][0]>("general");
   const [rows, setRows] = React.useState<Row[] | null>(null);
+  const [loadError, setLoadError] = React.useState(false);
+  const [reload, setReload] = React.useState(0);
+  const [myProfile, setMyProfile] = React.useState<Profile | null>(null);
   const [viewing, setViewing] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     if (isLoading || !real) return;
     let alive = true;
     setRows(null);
-    void supabase.rpc("get_ranking_section", { _kind: kind, _limit: 50 }).then(({ data }) => {
-      if (alive) setRows((data || []) as Row[]);
-    });
+    setLoadError(false);
+    setMyProfile(null);
+    void Promise.resolve(supabase.rpc("get_ranking_section", { _kind: kind, _limit: 50 })).then(({ data, error }) => {
+      if (!alive) return;
+      setLoadError(!!error);
+      setRows(error ? [] : (data || []) as Row[]);
+    }).catch(() => { if (alive) { setLoadError(true); setRows([]); } });
+    void Promise.resolve(supabase.rpc("get_ranking_profile", { _user: user.id }).maybeSingle()).then(({ data, error }) => {
+      if (alive && !error) setMyProfile(data as Profile | null);
+    }).catch(() => { /* The public ranking remains usable if the profile request fails. */ });
     return () => {
       alive = false;
     };
-  }, [kind, real, isLoading]);
+  }, [kind, real, isLoading, user?.id, reload]);
 
   const tab = TABS.find((t) => t[0] === kind)!;
 
@@ -168,8 +178,25 @@ function RankingPage() {
           </details>
         </CardHeader>
         <CardContent>
+          {real && rows && !loadError && !rows.some((r) => r.user_id === user.id) && (
+            <div className="mb-4 rounded-xl border border-primary/40 bg-primary/5 p-4" role="status">
+              <p className="text-sm font-bold">Seu desempenho</p>
+              {myProfile ? (
+                <>
+                  <p className="mt-1 text-sm">{myProfile.questions} questões · {myProfile.accuracy}% de acertos · {kind === "questions" ? myProfile.question_points : kind === "simulators" ? myProfile.simulator_points : myProfile.general_points} pts</p>
+                  <p className="mt-1 text-xs text-muted-foreground">Você não aparece entre os candidatos exibidos nesta lista. Com zero pontos, algumas seções não exibem seu nome. Seus resultados continuam registrados.</p>
+                  <button type="button" className="mt-2 text-sm font-semibold text-primary underline" onClick={() => setViewing(user.id)}>Ver meu perfil</button>
+                </>
+              ) : <p className="mt-1 text-sm text-muted-foreground">Você não aparece entre os candidatos exibidos nesta lista. Resolva questões para registrar seu desempenho; a pontuação segue as regras acima.</p>}
+            </div>
+          )}
           {!real ? (
             <p className="py-6 text-center text-sm text-muted-foreground">Entre na sua conta para ver o ranking.</p>
+          ) : loadError ? (
+            <div role="alert" className="py-6 text-center text-sm">
+              <p>Não foi possível carregar o ranking. Tente novamente.</p>
+              <button type="button" className="mt-2 font-semibold text-primary underline" onClick={() => setReload((n) => n + 1)}>Recarregar ranking</button>
+            </div>
           ) : !rows ? (
             <div className="flex justify-center py-8"><Loader2 className="h-5 w-5 animate-spin text-muted-foreground" aria-label="Carregando" /></div>
           ) : rows.length ? (
