@@ -192,7 +192,7 @@ function EnemPage() {
           <EnemStudy />
         </TabsContent>
         <TabsContent value="videos" className="mt-5">
-          <EnemVideos subject={subject} onSubject={setSubject} />
+          <EnemVideos key={subject} subject={subject} onSubject={setSubject} />
         </TabsContent>
 
         <TabsContent value="redacao" className="mt-5 space-y-4">
@@ -250,13 +250,13 @@ function EnemPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <Button asChild variant="outline" className="gap-2">
-                <Link to="/dashboard/mock-exams" search={{ contest: "ENEM" }}>
+                <Link to="/dashboard/mock-exams" search={{ mode: "enem", contest: "ENEM" }}>
                   <Timer className="h-4 w-4" /> Montar simulado ENEM
                 </Link>
               </Button>
               <p className="text-sm text-muted-foreground">
-                Escolha a quantidade e o tempo no simulador. O filtro ENEM já estará selecionado;
-                combinações sem questões permanecem vazias.
+                Escolha a área do conhecimento, a disciplina, a quantidade e o tempo. O simulador
+                desta área usa somente questões do ENEM; combinações sem questões permanecem vazias.
               </p>
               {questionCountError ? (
                 <p role="alert" className="text-sm text-destructive">
@@ -371,13 +371,7 @@ function AreaCard({
                   size="sm"
                   variant="outline"
                   className="shrink-0 gap-1.5"
-                  onClick={() =>
-                    onWatch(
-                      s.name === "Artes, Educação Física e Tecnologias"
-                        ? "Língua Portuguesa"
-                        : s.name,
-                    )
-                  }
+                  onClick={() => onWatch(s.name)}
                 >
                   <PlayCircle className="h-4 w-4" /> {videos}
                 </Button>

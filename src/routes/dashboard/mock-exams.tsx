@@ -63,11 +63,16 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
+import { ENEM_AREAS } from "@/data/enem";
+import { enemSimulatorCatalog, enemSimulatorFilters, enemQuestionArea } from "@/lib/enemScope";
+
 export const Route = createFileRoute("/dashboard/mock-exams")({
   validateSearch: (
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "mode"
+      | "area"
       | "contest"
       | "board"
       | "career"
@@ -80,6 +85,8 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
       string | undefined
     >
   > => ({
+    mode: search["mode"] === "enem" ? "enem" : undefined,
+    area: typeof search["area"] === "string" ? search["area"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
     board: typeof search["board"] === "string" ? search["board"] : undefined,
     career: typeof search["career"] === "string" ? search["career"] : undefined,
@@ -148,6 +155,9 @@ const DURATIONS = [15, 30, 60, 120];
 
 function ProfessionalSimulator() {
   const routeSearch = Route.useSearch();
+  const isEnemMode =
+    routeSearch.mode === "enem" || routeSearch.contest?.trim().toUpperCase() === "ENEM";
+  const [enemArea, setEnemArea] = React.useState(routeSearch.area || "all");
   const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const hasMockExamAccess =
     isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "mockExams").included;
@@ -157,7 +167,9 @@ function ProfessionalSimulator() {
   const [rankProfile, setRankProfile] = React.useState<RankProfile | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
-  const [contest, setContest] = React.useState(questionContestValue(routeSearch.contest || "all"));
+  const [contest, setContest] = React.useState(
+    isEnemMode ? "ENEM" : questionContestValue(routeSearch.contest || "all"),
+  );
   const [subject, setSubject] = React.useState(canonicalSubject(routeSearch.subject) || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeSearch.board));
   const [career, setCareer] = React.useState(
@@ -173,7 +185,8 @@ function ProfessionalSimulator() {
   const [category, setCategory] = React.useState(routeSearch.category || "all");
   const [reviewed, setReviewed] = React.useState(routeSearch.reviewed || "all");
   React.useEffect(() => {
-    setContest(questionContestValue(routeSearch.contest || "all"));
+    setEnemArea(ENEM_AREAS.some((a) => a.id === routeSearch.area) ? routeSearch.area! : "all");
+    setContest(isEnemMode ? "ENEM" : questionContestValue(routeSearch.contest || "all"));
     setSubject(canonicalSubject(routeSearch.subject) || "all");
     setBoard(trainerBoard(routeSearch.board));
     setCareer(
@@ -189,6 +202,8 @@ function ProfessionalSimulator() {
     setCategory(routeSearch.category || "all");
     setReviewed(routeSearch.reviewed || "all");
   }, [
+    isEnemMode,
+    routeSearch.area,
     routeSearch.contest,
     routeSearch.subject,
     routeSearch.board,
@@ -222,16 +237,26 @@ function ProfessionalSimulator() {
         fields: string,
       ) => ({
         error: null,
-        data: await fetchAllRows<Record<string, unknown>>((from, to) =>
-          supabase
+        data: await fetchAllRows<Record<string, unknown>>((from, to) => {
+          let request = supabase
             .from(table)
             .select(fields + ",content_status,law_version_checked_at,state,career_category")
-            .eq("content_status", "active")
-            .order("id")
-            .range(from, to)
-            .returns<Record<string, unknown>[]>(),
-        ),
+            .eq("content_status", "active");
+          if (isEnemMode) request = request.eq("contest_name", "ENEM");
+          return request.order("id").range(from, to).returns<Record<string, unknown>[]>();
+        }),
       });
+      const loadHistory = () => {
+        if (!user || user.id === "demo-user") return Promise.resolve({ data: [], error: null });
+        let request = supabase
+          .from("simulator_attempts")
+          .select(
+            "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
+          )
+          .eq("user_id", user.id);
+        if (isEnemMode) request = request.eq("contest_filter", "ENEM");
+        return request.order("finished_at", { ascending: false }).limit(8);
+      };
       const [officialResult, curatedResult, boardResult, historyResult, rankResult] =
         await Promise.all([
           query(
@@ -249,16 +274,7 @@ function ProfessionalSimulator() {
             if (isMissingQuestionTable(error)) return { data: [], error: null };
             throw error;
           }),
-          user && user.id !== "demo-user"
-            ? supabase
-                .from("simulator_attempts")
-                .select(
-                  "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
-                )
-                .eq("user_id", user.id)
-                .order("finished_at", { ascending: false })
-                .limit(8)
-            : Promise.resolve({ data: [], error: null }),
+          loadHistory(),
           user && user.id !== "demo-user"
             ? supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle()
             : Promise.resolve({ data: null, error: null }),
@@ -352,7 +368,11 @@ function ProfessionalSimulator() {
             }),
         ),
       );
-      setHistory((historyResult.data || []) as AttemptHistory[]);
+      setHistory(
+        ((historyResult.data || []) as AttemptHistory[]).filter(
+          (item) => !isEnemMode || /ENEM/i.test(item.title),
+        ),
+      );
       setRankProfile((rankResult.data || null) as RankProfile | null);
     } catch (error) {
       setLoadError(
@@ -361,7 +381,7 @@ function ProfessionalSimulator() {
     } finally {
       setLoading(false);
     }
-  }, [authLoading, user]);
+  }, [authLoading, user, isEnemMode]);
 
   React.useEffect(() => {
     void loadData();
@@ -389,8 +409,12 @@ function ProfessionalSimulator() {
     return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
   }, [stage]);
 
-  const filters = React.useMemo(
-    () => ({
+  const scopedCatalog = React.useMemo(
+    () => (isEnemMode ? enemSimulatorCatalog(catalog, enemArea) : catalog),
+    [catalog, isEnemMode, enemArea],
+  );
+  const filters = React.useMemo(() => {
+    const selected = {
       contest,
       subject,
       board,
@@ -400,10 +424,13 @@ function ProfessionalSimulator() {
       state,
       category,
       reviewed,
-    }),
-    [contest, subject, board, career, year, sourceKind, state, category, reviewed],
+    };
+    return isEnemMode ? enemSimulatorFilters(selected) : selected;
+  }, [contest, subject, board, career, year, sourceKind, state, category, reviewed, isEnemMode]);
+  const facets = React.useMemo(
+    () => simulatorFilterFacets(scopedCatalog, filters),
+    [scopedCatalog, filters],
   );
-  const facets = React.useMemo(() => simulatorFilterFacets(catalog, filters), [catalog, filters]);
   const options = (key: keyof typeof facets) =>
     [...facets[key].keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
   const contests = options("contest");
@@ -420,19 +447,8 @@ function ProfessionalSimulator() {
     setCategory("all");
   };
   const available = React.useMemo(
-    () =>
-      filterSimulatorQuestions(catalog, {
-        contest,
-        subject,
-        board,
-        career,
-        year,
-        source: sourceKind,
-        state,
-        category,
-        reviewed,
-      }),
-    [catalog, contest, subject, board, career, year, sourceKind, state, category, reviewed],
+    () => filterSimulatorQuestions(scopedCatalog, filters),
+    [scopedCatalog, filters],
   );
   const current = questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
@@ -571,18 +587,31 @@ function ProfessionalSimulator() {
               <Sparkles className="mr-1 h-3.5 w-3.5" /> Sala de simulação
             </Badge>
             <h1 className="max-w-3xl text-3xl font-black tracking-tight md:text-5xl">
-              {contest === "ENEM" ? "Simulador ENEM" : "Simulador de prova"}
+              {isEnemMode ? "Simulador ENEM" : "Simulador de prova"}
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200 md:text-base">
               Treine com questões oficiais e autorais auditadas, receba diagnóstico por disciplina e
               transforme cada erro em uma próxima ação de estudo.
             </p>
+            {isEnemMode && (
+              <Button asChild variant="secondary" className="mt-4">
+                <Link to="/dashboard/enem">Voltar à área do ENEM</Link>
+              </Button>
+            )}
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <HeroMetric value={catalog.length} label="questões ativas" icon={BookOpenCheck} />
-            <HeroMetric value={contests.length} label="concursos" icon={ShieldCheck} />
+            <HeroMetric value={scopedCatalog.length} label="questões ativas" icon={BookOpenCheck} />
             <HeroMetric
-              value={new Set(catalog.map((i) => i.subject)).size}
+              value={
+                isEnemMode
+                  ? new Set(scopedCatalog.map((q) => enemQuestionArea(q.subject))).size
+                  : contests.length
+              }
+              label={isEnemMode ? "áreas do conhecimento" : "concursos"}
+              icon={ShieldCheck}
+            />
+            <HeroMetric
+              value={new Set(scopedCatalog.map((i) => i.subject)).size}
               label="disciplinas"
               icon={BarChart3}
             />
@@ -602,76 +631,102 @@ function ProfessionalSimulator() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              <Field label="Concurso ou material">
-                <Select
-                  value={contest}
-                  onValueChange={(v) => {
-                    setContest(v);
-                    resetChildren();
-                  }}
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todos os concursos</SelectItem>
-                    {contests.map((i) => (
-                      <SelectItem key={i} value={i}>
-                        {questionContestOptionLabel(i)}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  Provas são agrupadas por órgão; referências de apostilas, pelo material. Cargo e
-                  ano permanecem nos filtros próprios.
-                </p>
-              </Field>
-              <Field label="Banca organizadora">
-                <Select
-                  value={board}
-                  onValueChange={(value) => {
-                    setBoard(value);
-                    setCareer("all");
-                    setYear("all");
-                    setSubject("all");
-                  }}
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todas as bancas</SelectItem>
-                    {boards.map((item) => (
-                      <SelectItem key={item} value={item}>
-                        {item}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
-              <Field label="Cargo">
-                <Select
-                  value={career}
-                  onValueChange={(value) => {
-                    setCareer(value);
-                    setYear("all");
-                    setSubject("all");
-                  }}
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todos os cargos</SelectItem>
-                    {careers.map((item) => (
-                      <SelectItem key={item} value={item}>
-                        {item}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
+              {isEnemMode ? (
+                <Field label="Área do conhecimento">
+                  <Select
+                    value={enemArea}
+                    onValueChange={(value) => {
+                      setEnemArea(value);
+                      setSubject("all");
+                    }}
+                  >
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">Todas as áreas do ENEM</SelectItem>
+                      {ENEM_AREAS.map((area) => (
+                        <SelectItem key={area.id} value={area.id}>
+                          {area.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </Field>
+              ) : (
+                <>
+                  <Field label="Concurso ou material">
+                    <Select
+                      value={contest}
+                      onValueChange={(v) => {
+                        setContest(v);
+                        resetChildren();
+                      }}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todos os concursos</SelectItem>
+                        {contests.map((i) => (
+                          <SelectItem key={i} value={i}>
+                            {questionContestOptionLabel(i)}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      Provas são agrupadas por órgão; referências de apostilas, pelo material. Cargo
+                      e ano permanecem nos filtros próprios.
+                    </p>
+                  </Field>
+                  <Field label="Banca organizadora">
+                    <Select
+                      value={board}
+                      onValueChange={(value) => {
+                        setBoard(value);
+                        setCareer("all");
+                        setYear("all");
+                        setSubject("all");
+                      }}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todas as bancas</SelectItem>
+                        {boards.map((item) => (
+                          <SelectItem key={item} value={item}>
+                            {item}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+                  <Field label="Cargo">
+                    <Select
+                      value={career}
+                      onValueChange={(value) => {
+                        setCareer(value);
+                        setYear("all");
+                        setSubject("all");
+                      }}
+                    >
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todos os cargos</SelectItem>
+                        {careers.map((item) => (
+                          <SelectItem key={item} value={item}>
+                            {item}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+                </>
+              )}
               <Field label="Ano de referência">
                 <Select value={year} onValueChange={setYear}>
                   <SelectTrigger>
@@ -692,7 +747,7 @@ function ProfessionalSimulator() {
                   value={sourceKind}
                   onValueChange={(value) => {
                     setSourceKind(value);
-                    setContest("all");
+                    setContest(isEnemMode ? "ENEM" : "all");
                     resetChildren();
                   }}
                 >
@@ -721,36 +776,40 @@ function ProfessionalSimulator() {
                   </SelectContent>
                 </Select>
               </Field>
-              <Field label="Estado">
-                <Select value={state} onValueChange={setState}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todos os estados</SelectItem>
-                    {options("state").map((value) => (
-                      <SelectItem key={value} value={value}>
-                        {value}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
-              <Field label="Categoria">
-                <Select value={category} onValueChange={setCategory}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todas as categorias</SelectItem>
-                    {options("category").map((value) => (
-                      <SelectItem key={value} value={value}>
-                        {value}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
+              {!isEnemMode && (
+                <>
+                  <Field label="Estado">
+                    <Select value={state} onValueChange={setState}>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todos os estados</SelectItem>
+                        {options("state").map((value) => (
+                          <SelectItem key={value} value={value}>
+                            {value}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+                  <Field label="Categoria">
+                    <Select value={category} onValueChange={setCategory}>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">Todas as categorias</SelectItem>
+                        {options("category").map((value) => (
+                          <SelectItem key={value} value={value}>
+                            {value}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </Field>
+                </>
+              )}
               <Field label="Comentário didático">
                 <Select value={reviewed} onValueChange={setReviewed}>
                   <SelectTrigger>
@@ -768,7 +827,7 @@ function ProfessionalSimulator() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {(contest === "ENEM" ? [10, 20, 30, 45, 90] : LIMITS).map((i) => (
+                    {(isEnemMode ? [10, 20, 30, 45, 90] : LIMITS).map((i) => (
                       <SelectItem key={i} value={String(i)}>
                         {i} questões
                       </SelectItem>
@@ -785,7 +844,7 @@ function ProfessionalSimulator() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {(contest === "ENEM" ? [15, 30, 60, 120, 300, 330] : DURATIONS).map((i) => (
+                    {(isEnemMode ? [15, 30, 60, 120, 300, 330] : DURATIONS).map((i) => (
                       <SelectItem key={i} value={String(i)}>
                         {i} minutos
                       </SelectItem>
@@ -859,11 +918,13 @@ function ProfessionalSimulator() {
           </CardContent>
         </Card>
       </div>
-      <div className="grid gap-6 xl:grid-cols-[.7fr_1.3fr]">
-        <RankIdentity profile={rankProfile} />
-        <Leaderboard userId={user?.id} />
-      </div>
-      <CatalogOverview catalog={catalog} />
+      {!isEnemMode && (
+        <div className="grid gap-6 xl:grid-cols-[.7fr_1.3fr]">
+          <RankIdentity profile={rankProfile} />
+          <Leaderboard userId={user?.id} />
+        </div>
+      )}
+      <CatalogOverview catalog={scopedCatalog} enem={isEnemMode} />
       <Dialog open={startWarningOpen} onOpenChange={setStartWarningOpen}>
         <DialogContent className="sm:max-w-lg">
           <DialogHeader>
@@ -1153,7 +1214,13 @@ function Leaderboard({ userId }: { userId?: string | undefined }) {
   );
 }
 
-function CatalogOverview({ catalog }: { catalog: SimulatorQuestion[] }) {
+function CatalogOverview({
+  catalog,
+  enem = false,
+}: {
+  catalog: SimulatorQuestion[];
+  enem?: boolean;
+}) {
   const group = (key: "board" | "career" | "subject") =>
     Array.from(
       catalog.reduce(
@@ -1161,11 +1228,13 @@ function CatalogOverview({ catalog }: { catalog: SimulatorQuestion[] }) {
         new Map<string, number>(),
       ),
     ).sort((a, b) => b[1] - a[1]);
-  const sections = [
-    { title: "Principais bancas", items: group("board") },
-    { title: "Carreiras e cargos", items: group("career") },
-    { title: "Disciplinas", items: group("subject") },
-  ];
+  const sections = enem
+    ? [{ title: "Disciplinas do ENEM", items: group("subject") }]
+    : [
+        { title: "Principais bancas", items: group("board") },
+        { title: "Carreiras e cargos", items: group("career") },
+        { title: "Disciplinas", items: group("subject") },
+      ];
   return (
     <Card className="border-0 shadow-lg ring-1 ring-border/70">
       <CardHeader>
@@ -1173,8 +1242,9 @@ function CatalogOverview({ catalog }: { catalog: SimulatorQuestion[] }) {
           <BookOpenCheck className="h-5 w-5 text-blue-600" /> Acervo organizado
         </CardTitle>
         <CardDescription>
-          Visão do banco ativo por banca, carreira e disciplina. Os números acompanham
-          automaticamente a expansão do catálogo.
+          {enem
+            ? "Questões do ENEM organizadas por disciplina da área selecionada."
+            : "Visão do banco ativo por banca, carreira e disciplina. Os números acompanham automaticamente a expansão do catálogo."}
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6 lg:grid-cols-3">
@@ -1184,7 +1254,7 @@ function CatalogOverview({ catalog }: { catalog: SimulatorQuestion[] }) {
               {section.title}
             </p>
             <div className="space-y-2">
-              {section.items.slice(0, 8).map(([name, count]) => (
+              {section.items.slice(0, enem ? section.items.length : 8).map(([name, count]) => (
                 <div
                   key={name}
                   className="flex items-center justify-between gap-3 rounded-lg bg-muted/40 px-3 py-2"
