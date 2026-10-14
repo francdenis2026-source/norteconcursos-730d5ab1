@@ -157,8 +157,8 @@ interface RankProfile {
   completed_simulators: number;
   best_accuracy: number;
 }
-const LIMITS = [10, 20, 30, 50];
-const DURATIONS = [15, 30, 60, 120];
+const LIMITS = [10, 20, 30, 50, 120];
+const DURATIONS = [15, 30, 60, 120, 180, 240, 300];
 
 function ProfessionalSimulator() {
   const queryClient = useQueryClient();
@@ -877,6 +877,7 @@ function ProfessionalSimulator() {
                 <p className="text-xs text-muted-foreground">
                   Serão sorteadas {Math.min(limit, available.length)} questões sem repetição.
                   {available.length > 0 && ` Tempo médio: ${Math.round(durationMinutes * 60 / Math.min(limit, available.length))} segundos por questão.`}
+                  {available.length > 0 && available.length < limit && <span className="mt-1 block text-amber-700 dark:text-amber-300">A seleção contém menos de {limit} questões. Amplie os filtros para montar a prova completa.</span>}
                 </p>
               </div>
               <Button
