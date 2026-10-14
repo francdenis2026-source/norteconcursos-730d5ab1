@@ -1,0 +1,1143 @@
+{
+  "method": "Registered historical questions, including pending/annulled items for thematic counts only. No answers taught. Whole-exam normalization, recency half-life 3 years; no future probabilities. Direct registered official PDF URLs required, not a fresh web verification. Mixed subjects never split automatically.",
+  "profiles": {
+    "Investigador/Agente": {
+      "exams": [
+        {
+          "state": "PI",
+          "year": 2026,
+          "role": "Investigador/Agente",
+          "contest": "Polícia Civil do Piauí – Oficial Investigador",
+          "career": "Oficial Investigador",
+          "board": "FGV",
+          "records": 74,
+          "statuses": {
+            "active": 74
+          },
+          "subjects": {
+            "Criminologia": 4,
+            "Legislação institucional/estadual (não transferir entre estados)": 2,
+            "Penal": 10,
+            "Informática": 7,
+            "Direitos humanos": 6,
+            "Administrativo": 6,
+            "Medicina Legal": 4,
+            "Conhecimentos Regionais (Piauí)": 8,
+            "Processo Penal": 9,
+            "Português": 7,
+            "Constitucional": 6,
+            "RLM/estatística/contabilidade (bloco misto)": 5
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/oficial-investigador-cns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pc-pi-investigador-e-perito-2025.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 80
+        },
+        {
+          "state": "CE",
+          "year": 2025,
+          "role": "Investigador/Agente",
+          "contest": "Polícia Civil do Ceará – Oficial Investigador de Polícia",
+          "career": "Oficial Investigador de Polícia",
+          "board": "UECE-CEV",
+          "records": 95,
+          "statuses": {
+            "active": 95
+          },
+          "subjects": {
+            "Português": 10,
+            "Estatística": 4,
+            "Constitucional": 8,
+            "Medicina Legal": 5,
+            "Penal": 8,
+            "Processo Penal": 15,
+            "Administrativo": 7,
+            "Legislação institucional/estadual (não transferir entre estados)": 10,
+            "Raciocínio lógico": 10,
+            "Criminologia": 5,
+            "Informática": 8,
+            "Contabilidade": 5
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+              "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/oippcceg1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+              "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/comunicado1432025cev.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 99
+        },
+        {
+          "state": "MG",
+          "year": 2025,
+          "role": "Investigador/Agente",
+          "contest": "Polícia Civil de Minas Gerais – Investigador de Polícia I",
+          "career": "Investigador de Polícia I",
+          "board": "FGV",
+          "records": 69,
+          "statuses": {
+            "active": 69
+          },
+          "subjects": {
+            "Administrativo": 6,
+            "Processo Penal": 5,
+            "Português": 10,
+            "Direitos humanos": 3,
+            "Penal": 5,
+            "Informática": 8,
+            "Legislação institucional/estadual (não transferir entre estados)": 6,
+            "Medicina Legal": 5,
+            "Legislação especial": 4,
+            "Raciocínio lógico": 6,
+            "Criminologia": 5,
+            "Constitucional": 6
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador-de-policia-icns401-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpinvestigador.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 70
+        },
+        {
+          "state": "PE",
+          "year": 2024,
+          "role": "Investigador/Agente",
+          "contest": "Polícia Civil de Pernambuco - Agente de Polícia",
+          "career": "Agente de Polícia",
+          "board": "CEBRASPE",
+          "records": 60,
+          "statuses": {
+            "under_review": 18,
+            "active": 35,
+            "annulled": 7
+          },
+          "subjects": {
+            "Estatística": 7,
+            "Raciocínio lógico": 7,
+            "Informática": 6,
+            "Português": 8,
+            "Processo Penal": 5,
+            "Contabilidade": 8,
+            "Redação oficial": 4,
+            "Constitucional": 3,
+            "Penal": 5,
+            "Administrativo": 3,
+            "Legislação institucional/estadual (não transferir entre estados)": 4
+          },
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+              "is_official": true
+            }
+          ],
+          "max_item": 60
+        }
+      ],
+      "total_records": 298,
+      "subjects": [
+        {
+          "subject": "Português",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 35,
+          "weighted_observed_share": 11.72
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 34,
+          "weighted_observed_share": 11.09
+        },
+        {
+          "subject": "Informática",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 29,
+          "weighted_observed_share": 9.84
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 28,
+          "weighted_observed_share": 9.7
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 23,
+          "weighted_observed_share": 7.72
+        },
+        {
+          "subject": "Administrativo",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 22,
+          "weighted_observed_share": 7.46
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 4,
+          "exams": 4,
+          "observed_questions": 22,
+          "weighted_observed_share": 6.89
+        },
+        {
+          "subject": "Raciocínio lógico",
+          "exams_present": 3,
+          "exams": 4,
+          "observed_questions": 23,
+          "weighted_observed_share": 7.03
+        },
+        {
+          "subject": "Criminologia",
+          "exams_present": 3,
+          "exams": 4,
+          "observed_questions": 14,
+          "weighted_observed_share": 4.77
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 3,
+          "exams": 4,
+          "observed_questions": 14,
+          "weighted_observed_share": 4.77
+        },
+        {
+          "subject": "Contabilidade",
+          "exams_present": 2,
+          "exams": 4,
+          "observed_questions": 13,
+          "weighted_observed_share": 3.91
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 2,
+          "exams": 4,
+          "observed_questions": 9,
+          "weighted_observed_share": 3.59
+        },
+        {
+          "subject": "Estatística",
+          "exams_present": 2,
+          "exams": 4,
+          "observed_questions": 11,
+          "weighted_observed_share": 3.32
+        },
+        {
+          "subject": "Conhecimentos Regionais (Piauí)",
+          "exams_present": 1,
+          "exams": 4,
+          "observed_questions": 8,
+          "weighted_observed_share": 3.36
+        },
+        {
+          "subject": "RLM/estatística/contabilidade (bloco misto)",
+          "exams_present": 1,
+          "exams": 4,
+          "observed_questions": 5,
+          "weighted_observed_share": 2.1
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 1,
+          "exams": 4,
+          "observed_questions": 4,
+          "weighted_observed_share": 1.43
+        },
+        {
+          "subject": "Redação oficial",
+          "exams_present": 1,
+          "exams": 4,
+          "observed_questions": 4,
+          "weighted_observed_share": 1.31
+        }
+      ]
+    },
+    "Escrivão": {
+      "exams": [
+        {
+          "state": "PE",
+          "year": 2024,
+          "role": "Escrivão",
+          "contest": "Polícia Civil de Pernambuco - Escrivão de Polícia",
+          "career": "Escrivão de Polícia",
+          "board": "CEBRASPE",
+          "records": 60,
+          "statuses": {
+            "active": 44,
+            "under_review": 11,
+            "annulled": 5
+          },
+          "subjects": {
+            "Informática": 6,
+            "Arquivologia": 10,
+            "Penal": 5,
+            "Processo Penal": 5,
+            "Legislação institucional/estadual (não transferir entre estados)": 4,
+            "Constitucional": 3,
+            "Português": 11,
+            "Administrativo": 3,
+            "Raciocínio lógico": 5,
+            "Estatística": 7,
+            "Redação oficial": 1
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+              "is_official": true
+            }
+          ],
+          "max_item": 60
+        },
+        {
+          "state": "AM",
+          "year": 2022,
+          "role": "Escrivão",
+          "contest": "Polícia Civil do Estado do Amazonas - Escrivão de Polícia",
+          "career": "Escrivão de Polícia",
+          "board": "FGV",
+          "records": 80,
+          "statuses": {
+            "active": 78,
+            "annulled": 2
+          },
+          "subjects": {
+            "Administrativo": 10,
+            "Penal/CPP/leis especiais (bloco misto)": 15,
+            "Noções de Administração": 10,
+            "Constitucional": 10,
+            "Informática": 5,
+            "Conhecimentos regionais do estado da prova": 5,
+            "Arquivologia": 10,
+            "Raciocínio lógico": 5,
+            "Português": 10
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Escrivão de Polícia (2022, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/escrivao_de_policia_-_4a_classens200_tipo_1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 80
+        },
+        {
+          "state": "SE",
+          "year": 2021,
+          "role": "Escrivão",
+          "contest": "Polícia Civil do Estado de Sergipe - Escrivão de Polícia",
+          "career": "Escrivão de Polícia",
+          "board": "CEBRASPE",
+          "records": 100,
+          "statuses": {
+            "active": 95,
+            "annulled": 4,
+            "under_review": 1
+          },
+          "subjects": {
+            "Constitucional": 8,
+            "Medicina Legal": 5,
+            "Conhecimentos regionais do estado da prova": 8,
+            "Arquivologia": 10,
+            "Raciocínio lógico": 4,
+            "Direitos humanos": 4,
+            "Processo Penal": 8,
+            "Informática": 6,
+            "Português": 10,
+            "Ética": 4,
+            "Legislação especial": 8,
+            "Contabilidade": 8,
+            "Estatística": 6,
+            "Administrativo": 8,
+            "Penal": 2,
+            "Direito da Criança e do Adolescente": 1
+          },
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_002_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_002_01.PDF",
+              "is_official": true
+            }
+          ],
+          "max_item": 100
+        }
+      ],
+      "total_records": 240,
+      "subjects": [
+        {
+          "subject": "Português",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 31,
+          "weighted_observed_share": 14.65
+        },
+        {
+          "subject": "Arquivologia",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 30,
+          "weighted_observed_share": 13.87
+        },
+        {
+          "subject": "Informática",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 17,
+          "weighted_observed_share": 7.95
+        },
+        {
+          "subject": "Administrativo",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 21,
+          "weighted_observed_share": 7.92
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 21,
+          "weighted_observed_share": 7.92
+        },
+        {
+          "subject": "Raciocínio lógico",
+          "exams_present": 3,
+          "exams": 3,
+          "observed_questions": 14,
+          "weighted_observed_share": 6.7
+        },
+        {
+          "subject": "Estatística",
+          "exams_present": 2,
+          "exams": 3,
+          "observed_questions": 13,
+          "weighted_observed_share": 6.89
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 2,
+          "exams": 3,
+          "observed_questions": 13,
+          "weighted_observed_share": 5.79
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 2,
+          "exams": 3,
+          "observed_questions": 7,
+          "weighted_observed_share": 4.38
+        },
+        {
+          "subject": "Conhecimentos regionais do estado da prova",
+          "exams_present": 2,
+          "exams": 3,
+          "observed_questions": 13,
+          "weighted_observed_share": 3.73
+        },
+        {
+          "subject": "Penal/CPP/leis especiais (bloco misto)",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 15,
+          "weighted_observed_share": 5.55
+        },
+        {
+          "subject": "Noções de Administração",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 10,
+          "weighted_observed_share": 3.7
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 4,
+          "weighted_observed_share": 3.13
+        },
+        {
+          "subject": "Contabilidade",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 8,
+          "weighted_observed_share": 1.88
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 8,
+          "weighted_observed_share": 1.88
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 5,
+          "weighted_observed_share": 1.17
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 4,
+          "weighted_observed_share": 0.94
+        },
+        {
+          "subject": "Ética",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 4,
+          "weighted_observed_share": 0.94
+        },
+        {
+          "subject": "Redação oficial",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 1,
+          "weighted_observed_share": 0.78
+        },
+        {
+          "subject": "Direito da Criança e do Adolescente",
+          "exams_present": 1,
+          "exams": 3,
+          "observed_questions": 1,
+          "weighted_observed_share": 0.23
+        }
+      ]
+    },
+    "Delegado": {
+      "exams": [
+        {
+          "state": "DF",
+          "year": 2026,
+          "role": "Delegado",
+          "contest": "Polícia Civil do Distrito Federal – Delegado de Polícia",
+          "career": "Delegado de Polícia",
+          "board": "CEBRASPE",
+          "records": 111,
+          "statuses": {
+            "active": 92,
+            "under_review": 19
+          },
+          "subjects": {
+            "Primeiros Socorros": 2,
+            "Legislação especial": 17,
+            "Direito Ambiental": 7,
+            "Penal": 12,
+            "Legislação institucional/estadual (não transferir entre estados)": 7,
+            "Administrativo": 18,
+            "Direito Empresarial": 8,
+            "Constitucional": 12,
+            "Processo Penal": 7,
+            "Direito Civil": 11,
+            "Medicina Legal": 6,
+            "Direito Tributário": 4
+          },
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 120
+        },
+        {
+          "state": "PI",
+          "year": 2026,
+          "role": "Delegado",
+          "contest": "Polícia Civil do Piauí – Delegado de Polícia Civil",
+          "career": "Delegado de Polícia Civil",
+          "board": "FGV",
+          "records": 80,
+          "statuses": {
+            "active": 76,
+            "under_review": 4
+          },
+          "subjects": {
+            "Administrativo": 11,
+            "Processo Penal": 12,
+            "Constitucional": 10,
+            "Penal": 12,
+            "Conhecimentos Regionais (Piauí)": 8,
+            "Direitos humanos": 8,
+            "Ciências Forenses": 10,
+            "Legislação institucional/estadual (não transferir entre estados)": 3,
+            "Direito Civil": 6
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 80
+        },
+        {
+          "state": "CE",
+          "year": 2025,
+          "role": "Delegado",
+          "contest": "Polícia Civil do Ceará – Delegado de Polícia Civil",
+          "career": "Delegado de Polícia Civil",
+          "board": "CEBRASPE",
+          "records": 89,
+          "statuses": {
+            "active": 83,
+            "archived": 5,
+            "obsolete": 1
+          },
+          "subjects": {
+            "Direito Processual Civil": 7,
+            "Direito Ambiental": 7,
+            "Direito Civil": 4,
+            "Direito Empresarial": 3,
+            "Processo Penal": 10,
+            "Criminologia": 9,
+            "Legislação especial": 6,
+            "Constitucional": 8,
+            "Direito Tributário": 8,
+            "Direito Eleitoral": 1,
+            "Penal": 9,
+            "Medicina Legal": 8,
+            "Administrativo": 9
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/084_PC_CE_001_01.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Gab_Definitivo_084_PC_CE_001_01.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 100
+        },
+        {
+          "state": "MG",
+          "year": 2025,
+          "role": "Delegado",
+          "contest": "Polícia Civil de Minas Gerais – Delegado de Polícia Substituto",
+          "career": "Delegado de Polícia Substituto",
+          "board": "FGV",
+          "records": 80,
+          "statuses": {
+            "active": 80
+          },
+          "subjects": {
+            "Penal/leis especiais (bloco misto)": 15,
+            "Administrativo": 10,
+            "Direitos humanos": 10,
+            "Legislação institucional/estadual (não transferir entre estados)": 5,
+            "CPP/leis especiais (bloco misto)": 15,
+            "Constitucional": 10,
+            "Medicina Legal": 5,
+            "Direito Civil": 5,
+            "Criminologia": 5
+          },
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpdelegado.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-substitutocns101-tipo-1.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 80
+        },
+        {
+          "state": "PE",
+          "year": 2024,
+          "role": "Delegado",
+          "contest": "Polícia Civil de Pernambuco - Delegado de Polícia",
+          "career": "Delegado de Polícia",
+          "board": "CEBRASPE",
+          "records": 100,
+          "statuses": {
+            "active": 86,
+            "under_review": 10,
+            "annulled": 3,
+            "archived": 1
+          },
+          "subjects": {
+            "Constitucional": 12,
+            "Processo Penal": 14,
+            "Administrativo": 12,
+            "Medicina Legal": 6,
+            "Direito Processual Civil": 6,
+            "Direito Empresarial": 3,
+            "Penal": 14,
+            "Legislação institucional/estadual (não transferir entre estados)": 5,
+            "Criminologia": 5,
+            "Direito Tributário": 5,
+            "CPP/leis especiais (bloco misto)": 10,
+            "Direito Ambiental": 5,
+            "Direito Civil": 3
+          },
+          "sources": [
+            {
+              "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+              "is_official": true
+            },
+            {
+              "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+              "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+              "is_official": true
+            }
+          ],
+          "max_item": 100
+        },
+        {
+          "state": "SC",
+          "year": 2024,
+          "role": "Delegado",
+          "contest": "Polícia Civil de Santa Catarina – Delegado de Polícia",
+          "career": "Delegado de Polícia",
+          "board": "FGV",
+          "records": 95,
+          "statuses": {
+            "active": 95
+          },
+          "subjects": {
+            "Penal": 15,
+            "Noções de Tecnologia Aplicável a Investigações Criminais": 4,
+            "Legislação institucional/estadual (não transferir entre estados)": 5,
+            "Medicina Legal": 5,
+            "Direito Civil": 5,
+            "Português": 10,
+            "Administrativo": 15,
+            "Processo Penal": 14,
+            "Criminologia": 5,
+            "Direitos humanos": 5,
+            "Constitucional": 12
+          },
+          "sources": [
+            {
+              "title": "Prova objetiva (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-objetivacns100-tipo-1.pdf",
+              "is_official": true
+            },
+            {
+              "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+              "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcscdelegado2024_gabarito_definitivo_20240220.pdf",
+              "is_official": true
+            }
+          ],
+          "max_item": 100
+        }
+      ],
+      "total_records": 555,
+      "subjects": [
+        {
+          "subject": "Administrativo",
+          "exams_present": 6,
+          "exams": 6,
+          "observed_questions": 75,
+          "weighted_observed_share": 13.5
+        },
+        {
+          "subject": "Constitucional",
+          "exams_present": 6,
+          "exams": 6,
+          "observed_questions": 64,
+          "weighted_observed_share": 11.53
+        },
+        {
+          "subject": "Direito Civil",
+          "exams_present": 6,
+          "exams": 6,
+          "observed_questions": 34,
+          "weighted_observed_share": 6.42
+        },
+        {
+          "subject": "Penal",
+          "exams_present": 5,
+          "exams": 6,
+          "observed_questions": 62,
+          "weighted_observed_share": 10.85
+        },
+        {
+          "subject": "Processo Penal",
+          "exams_present": 5,
+          "exams": 6,
+          "observed_questions": 57,
+          "weighted_observed_share": 9.97
+        },
+        {
+          "subject": "Medicina Legal",
+          "exams_present": 5,
+          "exams": 6,
+          "observed_questions": 30,
+          "weighted_observed_share": 5.07
+        },
+        {
+          "subject": "Legislação institucional/estadual (não transferir entre estados)",
+          "exams_present": 5,
+          "exams": 6,
+          "observed_questions": 25,
+          "weighted_observed_share": 4.43
+        },
+        {
+          "subject": "Criminologia",
+          "exams_present": 4,
+          "exams": 6,
+          "observed_questions": 24,
+          "weighted_observed_share": 4.01
+        },
+        {
+          "subject": "Direitos humanos",
+          "exams_present": 3,
+          "exams": 6,
+          "observed_questions": 23,
+          "weighted_observed_share": 4.79
+        },
+        {
+          "subject": "Direito Ambiental",
+          "exams_present": 3,
+          "exams": 6,
+          "observed_questions": 19,
+          "weighted_observed_share": 3.24
+        },
+        {
+          "subject": "Direito Tributário",
+          "exams_present": 3,
+          "exams": 6,
+          "observed_questions": 17,
+          "weighted_observed_share": 2.87
+        },
+        {
+          "subject": "Direito Empresarial",
+          "exams_present": 3,
+          "exams": 6,
+          "observed_questions": 14,
+          "weighted_observed_share": 2.43
+        },
+        {
+          "subject": "CPP/leis especiais (bloco misto)",
+          "exams_present": 2,
+          "exams": 6,
+          "observed_questions": 25,
+          "weighted_observed_share": 4.37
+        },
+        {
+          "subject": "Legislação especial",
+          "exams_present": 2,
+          "exams": 6,
+          "observed_questions": 23,
+          "weighted_observed_share": 4.26
+        },
+        {
+          "subject": "Direito Processual Civil",
+          "exams_present": 2,
+          "exams": 6,
+          "observed_questions": 13,
+          "weighted_observed_share": 2.07
+        },
+        {
+          "subject": "Penal/leis especiais (bloco misto)",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 15,
+          "weighted_observed_share": 3.07
+        },
+        {
+          "subject": "Ciências Forenses",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 10,
+          "weighted_observed_share": 2.58
+        },
+        {
+          "subject": "Conhecimentos Regionais (Piauí)",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 8,
+          "weighted_observed_share": 2.06
+        },
+        {
+          "subject": "Português",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 10,
+          "weighted_observed_share": 1.37
+        },
+        {
+          "subject": "Noções de Tecnologia Aplicável a Investigações Criminais",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 4,
+          "weighted_observed_share": 0.55
+        },
+        {
+          "subject": "Primeiros Socorros",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 2,
+          "weighted_observed_share": 0.37
+        },
+        {
+          "subject": "Direito Eleitoral",
+          "exams_present": 1,
+          "exams": 6,
+          "observed_questions": 1,
+          "weighted_observed_share": 0.18
+        }
+      ]
+    }
+  },
+  "excluded": [
+    {
+      "state": "AC",
+      "year": 2017,
+      "role": "Investigador/Agente",
+      "contest": "Polícia Civil do Acre",
+      "career": "Agente de Polícia Civil",
+      "board": "IBADE",
+      "records": 79,
+      "statuses": {
+        "under_review": 79
+      },
+      "subjects": {
+        "Administrativo": 9,
+        "Medicina Legal": 10,
+        "Penal": 10,
+        "Constitucional": 10,
+        "Processo Penal": 10,
+        "Português": 10,
+        "Penal/CPP/leis especiais (bloco misto)": 10,
+        "Informática": 5,
+        "Raciocínio lógico": 5
+      },
+      "max_item": 80,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    },
+    {
+      "state": "DF",
+      "year": 2026,
+      "role": "Delegado",
+      "contest": "Polícia Civil do Distrito Federal",
+      "career": "Delegado de Polícia",
+      "board": "CEBRASPE",
+      "records": 111,
+      "statuses": {
+        "active": 111
+      },
+      "subjects": {
+        "Direito Civil": 11,
+        "Medicina Legal": 8,
+        "Administrativo": 18,
+        "Direito Tributário": 7,
+        "Conhecimentos regionais do estado da prova": 7,
+        "Direito Ambiental": 7,
+        "Constitucional": 12,
+        "Penal": 14,
+        "Processo Penal": 7,
+        "Direito Empresarial": 8,
+        "Legislação especial": 9,
+        "Legislação de Segurança Pública": 1,
+        "Primeiros Socorros": 2
+      },
+      "max_item": 120,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    },
+    {
+      "state": "ES",
+      "year": 2022,
+      "role": "Delegado",
+      "contest": "Polícia Civil do Estado do Espírito Santo",
+      "career": "Delegado de Polícia",
+      "board": "CEBRASPE",
+      "records": 74,
+      "statuses": {
+        "active": 72,
+        "obsolete": 2
+      },
+      "subjects": {
+        "Direitos humanos": 4,
+        "Criminologia": 7,
+        "Português": 9,
+        "Penal": 5,
+        "Administrativo": 7,
+        "Legislação especial": 5,
+        "Direito Civil": 5,
+        "Constitucional": 7,
+        "Informática": 5,
+        "Medicina Legal": 6,
+        "Processo Penal": 8,
+        "Estatuto dos Policiais Civis do Espírito Santo (LC nº 46/1994)": 6
+      },
+      "max_item": 80,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    },
+    {
+      "state": "RO",
+      "year": 2022,
+      "role": "Delegado",
+      "contest": "Polícia Civil do Estado de Rondônia - Delegado de Polícia",
+      "career": "Delegado de Polícia",
+      "board": "CEBRASPE",
+      "records": 98,
+      "statuses": {
+        "under_review": 79,
+        "active": 19
+      },
+      "subjects": {
+        "Direito Civil": 5,
+        "Administrativo": 15,
+        "Constitucional": 10,
+        "Penal": 13,
+        "Conhecimentos Regionais (Rondônia)": 8,
+        "Processo Penal": 15,
+        "Direito Ambiental": 5,
+        "Criminologia": 5,
+        "Legislação especial": 10,
+        "Medicina Legal": 5,
+        "Direito Tributário": 4,
+        "Administração Financeira e Orçamentária": 1,
+        "Direitos humanos": 1,
+        "Conhecimentos Gerais": 1
+      },
+      "max_item": 100,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    },
+    {
+      "state": "RO",
+      "year": 2022,
+      "role": "Escrivão",
+      "contest": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil",
+      "career": "Escrivão de Polícia Civil",
+      "board": "CEBRASPE",
+      "records": 97,
+      "statuses": {
+        "under_review": 28,
+        "active": 68,
+        "archived": 1
+      },
+      "subjects": {
+        "Processo Penal": 6,
+        "Informática": 10,
+        "Raciocínio lógico": 5,
+        "Contabilidade": 9,
+        "Medicina Legal": 5,
+        "Português": 15,
+        "Conhecimentos Regionais (Rondônia)": 10,
+        "Estatística": 4,
+        "Constitucional": 7,
+        "Penal": 4,
+        "Administração Pública": 9,
+        "Administração Financeira e Orçamentária": 1,
+        "Administrativo": 10,
+        "Direitos humanos": 2
+      },
+      "max_item": 100,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    },
+    {
+      "state": "RO",
+      "year": 2022,
+      "role": "Investigador/Agente",
+      "contest": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil",
+      "career": "Agente de Polícia Civil",
+      "board": "CEBRASPE",
+      "records": 94,
+      "statuses": {
+        "active": 64,
+        "under_review": 30
+      },
+      "subjects": {
+        "Conhecimentos Regionais (Rondônia)": 10,
+        "Administração Pública": 8,
+        "Português": 14,
+        "Administrativo": 11,
+        "Direitos humanos": 2,
+        "Constitucional": 7,
+        "Processo Penal": 6,
+        "Estatística": 5,
+        "Contabilidade": 9,
+        "Medicina Legal": 5,
+        "Informática": 8,
+        "Raciocínio lógico": 4,
+        "Penal": 4,
+        "Administração Financeira e Orçamentária": 1
+      },
+      "max_item": 100,
+      "reason": "Mirror, placeholder or source without a direct official PDF; inventory only"
+    }
+  ]
+}
