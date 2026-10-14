@@ -25,6 +25,7 @@ import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { SubjectIcon } from "@/components/ui/subject-icon";
 import { EnemStudy } from "@/components/enem/EnemStudy";
 import { EnemVideos } from "@/components/enem/EnemVideos";
+import { EnemCalendar } from "@/components/enem/EnemCalendar";
 import { COMPETENCIAS, ENEM_AREAS, ENEM_FACTS, type EnemArea } from "@/data/enem";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { cn } from "@/lib/utils";
@@ -140,6 +141,8 @@ function EnemPage() {
           <HeroStat icon={BrainCircuit} label="Questões ENEM" value={questions ?? "—"} />
         </div>
       </PageHero>
+
+      <EnemCalendar />
 
       <Tabs value={tab} onValueChange={setTab}>
         <TabsList className="h-auto w-full flex-wrap justify-start gap-1">
