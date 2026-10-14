@@ -10,6 +10,8 @@ import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import { isEligibleQuestion } from "@/lib/questionFormat";
 import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
 import React from "react";
+import { simulatorClock } from "@/lib/simulatorClock";
+import { createPortal } from "react-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -54,7 +56,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -415,13 +416,17 @@ function ProfessionalSimulator() {
     return () => { active = false; };
   }, [showCompetition, user?.id, isEnemMode]);
   React.useEffect(() => {
-    if (stage !== "active" || timeLeft <= 0) return;
-    const timer = window.setInterval(() => {
-      setTimeLeft((value) => Math.max(0, value - 1));
-      setElapsedSeconds((value) => value + 1);
-    }, 1000);
-    return () => window.clearInterval(timer);
-  }, [stage, timeLeft]);
+    if (stage !== "active" || !startedAt) return;
+    const tick = () => {
+      const clock = simulatorClock(startedAt, durationMinutes * 60, Date.now());
+      setElapsedSeconds(clock.elapsed);
+      setTimeLeft(clock.remaining);
+    };
+    tick();
+    const timer = window.setInterval(tick, 1000);
+    document.addEventListener("visibilitychange", tick);
+    return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", tick); };
+  }, [stage, startedAt, durationMinutes]);
   React.useEffect(() => {
     if (stage === "active" && timeLeft === 0 && startedAt)
       void finishSimulator(true); /* eslint-disable-next-line react-hooks/exhaustive-deps */
@@ -587,6 +592,7 @@ function ProfessionalSimulator() {
         answers={answers}
         flagged={flagged}
         timeLeft={timeLeft}
+        durationSeconds={durationMinutes * 60}
         answeredCount={answeredCount}
         saving={saving}
         setCurrentIndex={setCurrentIndex}
@@ -1290,6 +1296,7 @@ function ActiveSimulator(p: {
   answers: Record<string, Answer>;
   flagged: Set<string>;
   timeLeft: number;
+  durationSeconds: number;
   answeredCount: number;
   saving: boolean;
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -1305,6 +1312,7 @@ function ActiveSimulator(p: {
     answers,
     flagged,
     timeLeft,
+    durationSeconds,
     answeredCount,
     saving,
     setCurrentIndex,
@@ -1315,10 +1323,24 @@ function ActiveSimulator(p: {
   } = p;
   const progress = (answeredCount / questions.length) * 100;
   const [cancelOpen, setCancelOpen] = React.useState(false);
-  const [cancelPhrase, setCancelPhrase] = React.useState("");
-  return (
-    <div className="space-y-5 pb-8">
-      <div className="exam-status-bar sticky z-10 rounded-xl border bg-background/95 p-4 shadow-lg backdrop-blur">
+  const [finishOpen, setFinishOpen] = React.useState(false);
+  const examRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    examRef.current?.focus({ preventScroll: true });
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previous; };
+  }, []);
+  const content = (
+    <div ref={examRef} tabIndex={-1} className="simulator-exam-expanded" role="region" aria-label="Simulado em andamento" onKeyDown={(event) => {
+      if (event.key !== "Tab" || cancelOpen || finishOpen) return;
+      const controls = Array.from(examRef.current?.querySelectorAll<HTMLElement>('button:not(:disabled), [role="radio"]:not([data-disabled]), a[href], [tabindex="0"]') ?? []);
+      const first = controls[0], last = controls.at(-1);
+      if (!first || !last) return;
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === examRef.current)) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }}>
+      <div className="simulator-exam-toolbar sticky top-0 z-10 border-b bg-background/95 p-4 backdrop-blur">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-emerald-600">
@@ -1336,20 +1358,22 @@ function ActiveSimulator(p: {
                 : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
             )}
           >
-            <Clock3 className="h-5 w-5" />
-            {formatTime(timeLeft)}
+            <svg viewBox="0 0 44 44" className="h-11 w-11 -rotate-90" aria-hidden="true">
+              <circle cx="22" cy="22" r="18" fill="none" stroke="currentColor" strokeWidth="3" opacity=".15" />
+              <circle cx="22" cy="22" r="18" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - Math.min(100, timeLeft / durationSeconds * 100)} />
+            </svg>
+            <span><span className="block text-[10px] font-medium uppercase tracking-wide">Tempo restante</span>{formatTime(timeLeft)}</span>
           </div>
           <div className="flex gap-2">
             <Button
               variant="outline"
               onClick={() => {
-                setCancelPhrase("");
                 setCancelOpen(true);
               }}
             >
               Cancelar
             </Button>
-            <Button variant="destructive" onClick={() => void finish()} disabled={saving}>
+            <Button onClick={() => setFinishOpen(true)} disabled={saving}>
               {saving && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Finalizar
             </Button>
           </div>
@@ -1361,7 +1385,7 @@ function ActiveSimulator(p: {
           </span>
         </div>
       </div>
-      <div className="grid gap-5 xl:grid-cols-[1fr_280px]">
+      <div className="simulator-exam-grid grid gap-5 lg:grid-cols-[minmax(0,1fr)_280px]">
         <Card className="exam-question-window border-0 shadow-lg ring-1 ring-border/70">
           <CardHeader className="border-b bg-muted/20">
             <div className="flex flex-wrap items-center gap-2">
@@ -1374,7 +1398,7 @@ function ActiveSimulator(p: {
             </div>
           </CardHeader>
           <CardContent className="space-y-7 p-6 md:p-9">
-            <p className="text-lg font-medium leading-8 md:text-xl">{current.text}</p>
+            <p className="mx-auto max-w-5xl whitespace-pre-wrap text-base font-medium leading-8 md:text-lg">{current.text}</p>
             <div className="rounded-2xl border bg-muted/20 p-5">
               <p className="mb-4 text-sm font-bold">
                 {isCebraspeStyle(current.board)
@@ -1384,6 +1408,7 @@ function ActiveSimulator(p: {
               <RadioGroup
                 value={answers[current.id] || ""}
                 onValueChange={(v) => setAnswers((old) => ({ ...old, [current.id]: v as Answer }))}
+                disabled={saving}
                 className={cn(
                   "grid gap-3",
                   isCebraspeStyle(current.board) ? "sm:grid-cols-2" : "sm:grid-cols-5",
@@ -1434,26 +1459,32 @@ function ActiveSimulator(p: {
                   Anterior
                 </Button>
                 <Button
-                  disabled={currentIndex === questions.length - 1}
-                  onClick={() => setCurrentIndex((i) => i + 1)}
+                  disabled={saving}
+                  onClick={() => currentIndex === questions.length - 1 ? setFinishOpen(true) : setCurrentIndex((i) => i + 1)}
                 >
-                  Próxima
+                  {currentIndex === questions.length - 1 ? "Revisar e finalizar" : "Próxima"}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
           </CardContent>
         </Card>
-        <Card className="h-fit xl:sticky xl:top-[220px]">
+        <Card className="h-fit lg:sticky lg:top-40">
           <CardHeader>
             <CardTitle className="text-base">Mapa da prova</CardTitle>
             <CardDescription>Clique para navegar.</CardDescription>
           </CardHeader>
           <CardContent>
+            <div className="mb-4 grid gap-2">
+              <Button variant="outline" size="sm" onClick={() => { const index = questions.findIndex(q => !answers[q.id]); if (index >= 0) setCurrentIndex(index); }} disabled={answeredCount === questions.length}>Ir à primeira pendente ({questions.length - answeredCount})</Button>
+              <Button variant="outline" size="sm" onClick={() => { const index = questions.findIndex(q => flagged.has(q.id)); if (index >= 0) setCurrentIndex(index); }} disabled={!flagged.size}>Rever marcadas ({flagged.size})</Button>
+            </div>
             <div className="grid grid-cols-5 gap-2">
               {questions.map((q, i) => (
                 <button
                   key={q.id}
+                  aria-label={`Questão ${i + 1}, ${answers[q.id] ? "respondida" : "pendente"}${flagged.has(q.id) ? ", marcada para revisão" : ""}`}
+                  aria-current={i === currentIndex ? "step" : undefined}
                   onClick={() => setCurrentIndex(i)}
                   className={cn(
                     "relative flex h-10 items-center justify-center rounded-lg border text-xs font-bold transition",
@@ -1479,33 +1510,33 @@ function ActiveSimulator(p: {
           </CardContent>
         </Card>
       </div>
+      <Dialog open={finishOpen} onOpenChange={setFinishOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader><DialogTitle>Finalizar e conferir o resultado?</DialogTitle><DialogDescription>Depois de finalizar, suas respostas não poderão ser alteradas nesta tentativa.</DialogDescription></DialogHeader>
+          <div className="grid grid-cols-3 gap-3 rounded-xl bg-muted p-4 text-center text-sm">
+            <div><strong className="block text-xl">{answeredCount}</strong>Respondidas</div>
+            <div><strong className="block text-xl">{questions.length - answeredCount}</strong>Em branco</div>
+            <div><strong className="block text-xl">{flagged.size}</strong>Marcadas</div>
+          </div>
+          <DialogFooter><Button variant="outline" onClick={() => setFinishOpen(false)} disabled={saving}>Continuar prova</Button><Button onClick={() => void finish()} disabled={saving}>{saving ? "Salvando…" : "Finalizar simulado"}</Button></DialogFooter>
+        </DialogContent>
+      </Dialog>
       <Dialog open={cancelOpen} onOpenChange={setCancelOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle>Cancelar simulado?</DialogTitle>
             <DialogDescription>
               O resultado não será salvo nem afetará suas questões, estrelas ou posição no ranking.
-              Para confirmar, digite exatamente:
+              Você pode continuar a prova ou confirmar o cancelamento.
             </DialogDescription>
           </DialogHeader>
-          <div className="space-y-3">
-            <div className="rounded-lg bg-red-50 p-3 text-center font-mono text-sm font-black text-red-700">
-              CANCELAR SIMULADO
-            </div>
-            <Input
-              value={cancelPhrase}
-              onChange={(event) => setCancelPhrase(event.target.value)}
-              placeholder="Digite a frase de confirmação"
-              autoComplete="off"
-            />
-          </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setCancelOpen(false)}>
               Continuar prova
             </Button>
             <Button
               variant="destructive"
-              disabled={cancelPhrase.trim().toUpperCase() !== "CANCELAR SIMULADO"}
+              disabled={saving}
               onClick={() => {
                 setCancelOpen(false);
                 cancel();
@@ -1518,6 +1549,7 @@ function ActiveSimulator(p: {
       </Dialog>
     </div>
   );
+  return typeof document === "undefined" ? content : createPortal(content, document.body);
 }
 
 function ResultView({
@@ -1559,6 +1591,11 @@ function ResultView({
         <ResultMetric icon={Gauge} label="Precisão" value={`${result.accuracy}%`} tone="blue" />
         <ResultMetric icon={TimerReset} label="Tempo" value={formatTime(elapsed)} tone="slate" />
       </div>
+      <Card><CardContent className="grid gap-4 p-5 sm:grid-cols-3">
+        <div><p className="text-sm text-muted-foreground">Conclusão da prova</p><p className="mt-1 text-xl font-bold">{Math.round((result.correct + result.wrong) / questions.length * 100)}% respondida</p></div>
+        <div><p className="text-sm text-muted-foreground">Tempo médio por resposta</p><p className="mt-1 text-xl font-bold">{result.correct + result.wrong ? `${Math.round(elapsed / (result.correct + result.wrong))} segundos` : "Sem respostas"}</p></div>
+        <div><p className="text-sm text-muted-foreground">Próxima ação</p><p className="mt-1 text-sm font-semibold">{result.wrong ? "Revisar os erros e suas explicações" : result.blank ? "Retomar as questões deixadas em branco" : "Avançar para uma nova sessão"}</p></div>
+      </CardContent></Card>
       <div className="grid gap-6 lg:grid-cols-[.75fr_1.25fr]">
         <Card>
           <CardHeader>
