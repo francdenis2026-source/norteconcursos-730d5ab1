@@ -1,6 +1,11 @@
 import { trainerBoard } from "@/lib/trainerFilters";
+import {
+  questionContestValue,
+  questionContestOptionLabel,
+  selectedQuestionCareer,
+} from "@/lib/questionFilterIdentity";
 import { needsMissingSupportText } from "@/lib/questionText";
-import { filterSimulatorQuestions } from "@/lib/simulatorFilters";
+import { filterSimulatorQuestions, simulatorFilterFacets } from "@/lib/simulatorFilters";
 import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 import { isEligibleQuestion } from "@/lib/questionFormat";
 import { canonicalSubject, canonicalBoard, canonicalCareerName } from "@/lib/subjects";
@@ -152,20 +157,32 @@ function ProfessionalSimulator() {
   const [rankProfile, setRankProfile] = React.useState<RankProfile | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
-  const [contest, setContest] = React.useState(routeSearch.contest || "all");
+  const [contest, setContest] = React.useState(questionContestValue(routeSearch.contest || "all"));
   const [subject, setSubject] = React.useState(canonicalSubject(routeSearch.subject) || "all");
   const [board, setBoard] = React.useState(trainerBoard(routeSearch.board));
-  const [career, setCareer] = React.useState(canonicalCareerName(routeSearch.career) || "all");
+  const [career, setCareer] = React.useState(
+    selectedQuestionCareer(
+      routeSearch.career || "all",
+      routeSearch.contest || "all",
+      routeSearch.year || 0,
+    ),
+  );
   const [year, setYear] = React.useState(routeSearch.year || "all");
   const [sourceKind, setSourceKind] = React.useState(routeSearch.source || "all");
   const [state, setState] = React.useState(routeSearch.state || "all");
   const [category, setCategory] = React.useState(routeSearch.category || "all");
   const [reviewed, setReviewed] = React.useState(routeSearch.reviewed || "all");
   React.useEffect(() => {
-    setContest(routeSearch.contest || "all");
+    setContest(questionContestValue(routeSearch.contest || "all"));
     setSubject(canonicalSubject(routeSearch.subject) || "all");
     setBoard(trainerBoard(routeSearch.board));
-    setCareer(canonicalCareerName(routeSearch.career) || "all");
+    setCareer(
+      selectedQuestionCareer(
+        routeSearch.career || "all",
+        routeSearch.contest || "all",
+        routeSearch.year || 0,
+      ),
+    );
     setYear(routeSearch.year || "all");
     setSourceKind(routeSearch.source || "all");
     setState(routeSearch.state || "all");
@@ -372,38 +389,36 @@ function ProfessionalSimulator() {
     return () => window.removeEventListener("beforeunload", warnBeforeLeaving);
   }, [stage]);
 
-  const contests = React.useMemo(
-    () =>
-      Array.from(new Set(catalog.map((item) => item["contest"]))).sort((a, b) =>
-        a.localeCompare(b),
-      ),
-    [catalog],
+  const filters = React.useMemo(
+    () => ({
+      contest,
+      subject,
+      board,
+      career,
+      year,
+      source: sourceKind,
+      state,
+      category,
+      reviewed,
+    }),
+    [contest, subject, board, career, year, sourceKind, state, category, reviewed],
   );
-  const subjects = React.useMemo(
-    () =>
-      Array.from(
-        new Set(
-          catalog
-            .filter((item) => contest === "all" || item["contest"] === contest)
-            .map((item) => item["subject"]),
-        ),
-      ).sort((a, b) => a.localeCompare(b)),
-    [catalog, contest],
-  );
-  const boards = React.useMemo(
-    () =>
-      Array.from(new Set(catalog.map((item) => item["board"]))).sort((a, b) => a.localeCompare(b)),
-    [catalog],
-  );
-  const careers = React.useMemo(
-    () =>
-      Array.from(new Set(catalog.map((item) => item["career"]))).sort((a, b) => a.localeCompare(b)),
-    [catalog],
-  );
-  const years = React.useMemo(
-    () => Array.from(new Set(catalog.map((item) => item["year"]))).sort((a, b) => b - a),
-    [catalog],
-  );
+  const facets = React.useMemo(() => simulatorFilterFacets(catalog, filters), [catalog, filters]);
+  const options = (key: keyof typeof facets) =>
+    [...facets[key].keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  const contests = options("contest");
+  const subjects = options("subject");
+  const boards = options("board");
+  const careers = options("career");
+  const years = options("year").sort((a, b) => Number(b) - Number(a));
+  const resetChildren = () => {
+    setBoard("all");
+    setCareer("all");
+    setYear("all");
+    setSubject("all");
+    setState("all");
+    setCategory("all");
+  };
   const available = React.useMemo(
     () =>
       filterSimulatorQuestions(catalog, {
@@ -587,12 +602,12 @@ function ProfessionalSimulator() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              <Field label="Concurso ou carreira">
+              <Field label="Concurso ou material">
                 <Select
                   value={contest}
                   onValueChange={(v) => {
                     setContest(v);
-                    setSubject("all");
+                    resetChildren();
                   }}
                 >
                   <SelectTrigger>
@@ -602,14 +617,26 @@ function ProfessionalSimulator() {
                     <SelectItem value="all">Todos os concursos</SelectItem>
                     {contests.map((i) => (
                       <SelectItem key={i} value={i}>
-                        {i}
+                        {questionContestOptionLabel(i)}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Provas são agrupadas por órgão; referências de apostilas, pelo material. Cargo e
+                  ano permanecem nos filtros próprios.
+                </p>
               </Field>
               <Field label="Banca organizadora">
-                <Select value={board} onValueChange={setBoard}>
+                <Select
+                  value={board}
+                  onValueChange={(value) => {
+                    setBoard(value);
+                    setCareer("all");
+                    setYear("all");
+                    setSubject("all");
+                  }}
+                >
                   <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
@@ -623,13 +650,20 @@ function ProfessionalSimulator() {
                   </SelectContent>
                 </Select>
               </Field>
-              <Field label="Carreira ou cargo">
-                <Select value={career} onValueChange={setCareer}>
+              <Field label="Cargo">
+                <Select
+                  value={career}
+                  onValueChange={(value) => {
+                    setCareer(value);
+                    setYear("all");
+                    setSubject("all");
+                  }}
+                >
                   <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Todas as carreiras</SelectItem>
+                    <SelectItem value="all">Todos os cargos</SelectItem>
                     {careers.map((item) => (
                       <SelectItem key={item} value={item}>
                         {item}
@@ -654,14 +688,21 @@ function ProfessionalSimulator() {
                 </Select>
               </Field>
               <Field label="Origem das questões">
-                <Select value={sourceKind} onValueChange={setSourceKind}>
+                <Select
+                  value={sourceKind}
+                  onValueChange={(value) => {
+                    setSourceKind(value);
+                    setContest("all");
+                    resetChildren();
+                  }}
+                >
                   <SelectTrigger>
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Oficiais e autorais</SelectItem>
+                    <SelectItem value="all">Provas e materiais de estudo</SelectItem>
                     <SelectItem value="official">Provas oficiais</SelectItem>
-                    <SelectItem value="curated">Questões autorais auditadas</SelectItem>
+                    <SelectItem value="curated">Autorais e repertório de estudo</SelectItem>
                   </SelectContent>
                 </Select>
               </Field>
@@ -687,13 +728,11 @@ function ProfessionalSimulator() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">Todos os estados</SelectItem>
-                    {[...new Set(catalog.map((item) => item.state).filter(Boolean))]
-                      .sort()
-                      .map((value) => (
-                        <SelectItem key={value} value={value}>
-                          {value}
-                        </SelectItem>
-                      ))}
+                    {options("state").map((value) => (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </Field>
@@ -704,13 +743,11 @@ function ProfessionalSimulator() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">Todas as categorias</SelectItem>
-                    {[...new Set(catalog.map((item) => item.category).filter(Boolean))]
-                      .sort()
-                      .map((value) => (
-                        <SelectItem key={value} value={value}>
-                          {value}
-                        </SelectItem>
-                      ))}
+                    {options("category").map((value) => (
+                      <SelectItem key={value} value={value}>
+                        {value}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </Field>

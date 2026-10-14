@@ -3,6 +3,12 @@ import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { subjectInArea } from "./questionTopics";
 import { canonicalBoard, canonicalSubject, canonicalCareerName } from "./subjects";
 import {
+  matchesQuestionContest,
+  matchesQuestionCareer,
+  questionContestLabel,
+  questionCareerLabel,
+} from "./questionFilterIdentity";
+import {
   matchesTopicFilter,
   scopedTopic,
   topicLabels,
@@ -41,9 +47,9 @@ export function filterTrainerQuestions(
     (q) =>
       (f.area === "all" || subjectInArea(f.area, q.subject)) &&
       matchesTopicFilter(q.subject, topics.get(q.id), f.topic) &&
-      (f.contest === "all" || q.contest === f.contest) &&
+      matchesQuestionContest(q.contest, f.contest) &&
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
-      (f.career === "all" || canonicalCareerName(q.career) === canonicalCareerName(f.career)) &&
+      matchesQuestionCareer(q.career, q.contest, q.year, f.career, f.contest, f.year) &&
       (f.year === "all" || q.year === f.year) &&
       (f.appliedExam === "all" || examKey(q) === f.appliedExam) &&
       (f.subject === "all" || canonicalSubject(q.subject) === canonicalSubject(f.subject)) &&
@@ -114,8 +120,10 @@ export function trainerFilterFacets(
                       ) ?? "")
                     : ""
                   : key === "career"
-                    ? canonicalCareerName(q.career)
-                    : q[key];
+                    ? questionCareerLabel(q.career, q.contest, q.year)
+                    : key === "contest"
+                      ? questionContestLabel(q.contest)
+                      : q[key];
       if (value) map.set(value, (map.get(value) ?? 0) + 1);
     }
     // Preserve counts for older plan URLs whose topic has no discipline prefix.
@@ -126,6 +134,8 @@ export function trainerFilterFacets(
       );
     }
     counts[key] = map;
+    if ((key === "contest" || key === "career") && filters[key] !== "all" && !map.has(filters[key]))
+      map.set(filters[key], filterTrainerQuestions(rows, filters, topics).length);
     totals[key] = rows.length;
   }
   return { counts, totals };
