@@ -4,7 +4,7 @@ import {pathToFileURL} from 'node:url';
 import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 
 const tables = new Set(['official_exam_questions','curated_question_catalog','board_exam_questions']);
-const allowed = new Set(['content_status','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+const allowed = new Set(['content_status','subject','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
 // PostgreSQL omits trailing fractional zeroes in timestamptz responses.
 // Preserve microsecond precision: Date parsing would silently round it away.
 export function sameReviewRow(a,b) {
@@ -29,6 +29,7 @@ export function validateReview(pack) {
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
     if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
     if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
+    if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !patch.current_syllabus_topic_id || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
     for (const url of evidence.sources) if (new URL(url).protocol !== 'https:') throw Error('HTTPS evidence required');
     if (!Number.isFinite(Date.parse(patch.verified_at)) || Date.parse(patch.verified_at)>Date.now()) throw Error('Invalid review date');
     if (patch.content_status==='active') {
@@ -65,6 +66,7 @@ export async function publishReview(pack, request) {
       const [edition]=await request(`syllabus_editions?id=eq.${topic?.edition_id}&select=*`);
       const [source]=await request(`content_sources?id=eq.${edition?.source_id}&select=*`);
       if (topic?.content_status!=='current' || edition?.status!=='active' || !source?.is_official || source.source_type!=='edital' || source.status!=='vigente') throw Error('Verified official active syllabus required');
+      if (patch.subject!==undefined && patch.subject!==topic.discipline) throw Error('Corrected subject must match verified topic discipline');
       for (const basis of patch.legal_basis || []) {
         const sources=await request(`content_sources?url=eq.${encodeURIComponent(basis.url)}&select=id,is_official,status`);
         if (!sources.some(s=>s.is_official && ['vigente','parcialmente_revogado'].includes(s.status))) throw Error(`Official basis not registered: ${basis.url}`);

@@ -41,3 +41,9 @@ test('duplicate archiving requires matching source, item, answer and syllabus',a
  const req=async(path,method)=>{if(method==='PATCH'){writes++;return [];}return path.includes('canonical')?[canonical]:[p.items[0].expected];};
  await assert.rejects(()=>publishReview(p,req),/Duplicate identity mismatch/);assert.equal(writes,0);
 });
+test('classification changes require review and a matching official topic before writes',async()=>{
+ const p=make();p.items[0].patch.subject='Raciocínio Lógico';assert.throws(()=>validateReview(p),/classified subject/);
+ p.items[0].evidence.classification_reviewed=true;assert.equal(validateReview(p),p);
+ let writes=0;const req=async(path,method)=>{if(method==='PATCH'){writes++;return [];}return path.startsWith('official_exam_questions')?[p.items[0].expected]:path.startsWith('syllabus_topics')?[{edition_id:'e1',content_status:'current',discipline:'Direito Penal'}]:path.startsWith('syllabus_editions')?[{source_id:'s1',status:'active'}]:[{is_official:true,source_type:'edital',status:'vigente'}];};
+ await assert.rejects(()=>publishReview(p,req),/subject must match/);assert.equal(writes,0);
+});
