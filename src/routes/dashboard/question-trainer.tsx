@@ -1,3 +1,4 @@
+import { questionContestValue, questionContestOptionLabel, selectedQuestionCareer } from "@/lib/questionFilterIdentity";
 import * as React from "react";
 import {
   trainerRouteKey,
@@ -172,9 +173,9 @@ function QuestionTrainer() {
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
   const [sessionReinforce, setSessionReinforce] = React.useState(false);
-  const [contest, setContest] = React.useState(routeFilters.contest || "all");
+  const [contest, setContest] = React.useState(questionContestValue(routeFilters.contest || "all"));
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
-  const [career, setCareer] = React.useState(canonicalCareerName(routeFilters.career) || "all");
+  const [career, setCareer] = React.useState(selectedQuestionCareer(routeFilters.career || "all", routeFilters.contest || "all", routeFilters.year || 0));
   const [year, setYear] = React.useState(routeFilters.year || "all");
   const [appliedExam, setAppliedExam] = React.useState("all");
   const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.subject) || "all");
@@ -265,9 +266,9 @@ function QuestionTrainer() {
     setResults([]);
     setIndex(0);
     setModal(null);
-    setContest(routeFilters.contest || "all");
+    setContest(questionContestValue(routeFilters.contest || "all"));
     setBoard(trainerBoard(routeFilters.board));
-    setCareer(canonicalCareerName(routeFilters.career) || "all");
+    setCareer(selectedQuestionCareer(routeFilters.career || "all", routeFilters.contest || "all", routeFilters.year || 0));
     setYear(routeFilters.year || "all");
     setSubject(canonicalSubject(routeFilters.subject) || "all");
     setSource(routeFilters.source || "all");
@@ -317,9 +318,9 @@ function QuestionTrainer() {
       setAnswered(false); // The saved-answer gate is always reconstructed from the database.
       restoredSelection.current = restored.questions[b.index]?.id ?? null;
       const f = b.filters;
-      setContest(f.contest);
+      setContest(questionContestValue(f.contest));
       setBoard(f.board);
-      setCareer(f.career);
+      setCareer(selectedQuestionCareer(f.career, f.contest, f.year));
       setYear(f.year);
       setAppliedExam(f.appliedExam);
       setSubject(f.subject);
@@ -1458,15 +1459,16 @@ function TrainerSetup({
             <TrainerFilter
               counts={facets.counts["contest"]}
               allCount={facets.totals["contest"]}
-              label="Concurso"
+              label="Concurso ou material"
               value={values.contest}
               setValue={setters.setContest}
               options={choices.contests}
+              labels={Object.fromEntries(choices.contests.map((value) => [value, questionContestOptionLabel(value)]))}
             />
             <TrainerFilter
               counts={facets.counts["career"]}
               allCount={facets.totals["career"]}
-              label="Carreira ou cargo"
+              label="Cargo"
               value={values.career}
               setValue={setters.setCareer}
               options={choices.careers}
@@ -1513,7 +1515,7 @@ function TrainerSetup({
               options={["official", "curated", "personal"]}
               labels={{
                 official: "Provas oficiais",
-                curated: "Questões autorais",
+                curated: "Autorais e repertório de estudo",
                 personal: "Meu caderno",
               }}
             />
