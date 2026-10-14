@@ -2,8 +2,7 @@ import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { LucideIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
   ArrowRight,
@@ -18,11 +17,9 @@ import {
   Layers,
   MapPin,
   NotebookPen,
-  ShieldAlert,
   Target,
   Timer,
   Trophy,
-  Zap,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -61,13 +58,6 @@ export const Route = createFileRoute("/dashboard/")({
   component: DashboardIndex,
 });
 
-type AccessAuditLog = {
-  id: string;
-  feature_key: string;
-  attempt_time: string;
-  was_blocked: boolean;
-};
-
 type ProfileChange = {
   new: {
     onboarding_steps?: { contest: boolean; notebook: boolean; plan: boolean };
@@ -104,9 +94,6 @@ function DashboardIndex() {
     plan: false,
   });
   const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
-  const [dailyQuota, setDailyQuota] = React.useState({ used: 0, total: 0 });
-  const [blockedAttempts, setBlockedAttempts] = React.useState<AccessAuditLog[]>([]);
-  const [isLoadingAttempts, setIsLoadingAttempts] = React.useState(false);
 
   React.useEffect(() => {
     const fetchOnboarding = async () => {
@@ -115,13 +102,12 @@ function DashboardIndex() {
         setShowTour(true);
       }
 
-      const storedContest = localStorage.getItem("norte_focused_contest");
       const storedNotebooks = JSON.parse(localStorage.getItem("norte_notebooks") || "[]");
 
       const currentSteps = {
-        contest: !!storedContest,
+        contest: !!focusedContest,
         notebook: storedNotebooks.length > 0,
-        plan: user?.subscription_tier !== "free",
+        plan: status.onboarding_steps?.plan ?? false,
       };
 
       setChecklist(currentSteps);
@@ -130,37 +116,7 @@ function DashboardIndex() {
         MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
       }
 
-      const responses = MockService.getUserResponses();
-      const today = new Date().toISOString().split("T")[0];
-      const todayCount = responses.filter(
-        (response) => response.createdAt?.split("T")[0] === today,
-      ).length;
-      const userRole = (user?.role || "free") as string;
-      const limit = userRole === "free" ? 10 : userRole === "essential" ? 100 : Infinity;
-      setDailyQuota({ used: todayCount, total: limit === Infinity ? 9999 : limit });
 
-      if (limit !== Infinity) {
-        const usagePercent = (todayCount / (limit as number)) * 100;
-        const lastNotified = localStorage.getItem("norte_last_quota_notify");
-        const todayStr = new Date().toDateString();
-
-        if (usagePercent >= 100 && lastNotified !== `100_${todayStr}`) {
-          toast.error("Cota diária esgotada! Considere um upgrade para continuar respondendo.");
-          localStorage.setItem("norte_last_quota_notify", `100_${todayStr}`);
-        } else if (
-          usagePercent >= 80 &&
-          lastNotified !== `80_${todayStr}` &&
-          lastNotified !== `100_${todayStr}`
-        ) {
-          toast.warning("Você atingiu 80% da sua cota diária de questões.");
-          localStorage.setItem("norte_last_quota_notify", `80_${todayStr}`);
-        }
-      }
-
-      setIsLoadingAttempts(true);
-      const logs = await MockService.getAccessAuditLogs();
-      setBlockedAttempts((logs as AccessAuditLog[]).filter((log) => log.was_blocked));
-      setIsLoadingAttempts(false);
     };
 
     fetchOnboarding();
@@ -192,7 +148,7 @@ function DashboardIndex() {
       };
     }
     return undefined;
-  }, [user]);
+  }, [user, focusedContest]);
 
   const completeTour = async () => {
     setIsUpdatingTour(true);
@@ -233,6 +189,7 @@ function DashboardIndex() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
     toast.success("Exportação CSV concluída!");
   };
 
@@ -243,18 +200,13 @@ function DashboardIndex() {
     }, 600);
   };
 
-  const chartData =
-    stats?.byDiscipline.map((d) => ({
-      name:
-        d.disciplineId === "1" ? "Português" : d.disciplineId === "4" ? "Constitucional" : "Outras",
-      acertos: d.correct,
-      total: d.total,
-    })) || [];
-
+  const totalQuestions = stats?.totalQuestions ?? 0;
   const accuracy = stats?.accuracyRate ?? 0;
   const minutes = Math.floor((stats?.timeSpent || 0) / 60);
-  const unlimited = dailyQuota.total === 9999;
-  const quotaPercent = dailyQuota.total ? (dailyQuota.used / dailyQuota.total) * 100 : 0;
+  const chartData = totalQuestions > 0 ? [
+    { name: "Acertos", total: stats?.correctAnswers ?? 0 },
+    { name: "Erros", total: totalQuestions - (stats?.correctAnswers ?? 0) },
+  ] : [];
   const firstName = user?.full_name?.split(" ")[0] || "Estudante";
 
   return (
@@ -299,41 +251,20 @@ function DashboardIndex() {
       >
         <div className="page-hero__stats">
           <HeroStat icon={Target} label="Foco atual" value={focusedContest?.agency || "—"} />
-          <HeroStat icon={CheckCircle2} label="Taxa de acerto" value={`${accuracy.toFixed(1)}%`} />
+          <HeroStat icon={CheckCircle2} label="Taxa de acerto" value={totalQuestions ? `${accuracy.toFixed(1)}%` : "Sem respostas"} />
           <HeroStat icon={Clock} label="Tempo efetivo" value={`${minutes} min`} />
-          <HeroStat
-            icon={Zap}
-            label="Cota diária"
-            value={
-              unlimited ? (
-                `${dailyQuota.used}/∞`
-              ) : (
-                <>
-                  {dailyQuota.used}/{dailyQuota.total}
-                  <i className="hero-stat__bar" aria-hidden="true">
-                    <b
-                      style={{
-                        width: `${Math.min(quotaPercent, 100)}%`,
-                        background:
-                          quotaPercent > 90
-                            ? "var(--color-destructive)"
-                            : quotaPercent > 70
-                              ? "var(--color-amber-400)"
-                              : "var(--color-emerald-400)",
-                      }}
-                    />
-                  </i>
-                </>
-              )
-            }
-          />
+          <HeroStat icon={FileText} label="Questões respondidas" value={totalQuestions} />
         </div>
       </PageHero>
 
-      <Link to="/dashboard/exam-panorama" search={{ pcCargo: "investigador" }} hash="pc-acre" className="flex items-center justify-between gap-3 rounded-xl border border-primary/40 bg-primary/5 p-4 transition-colors hover:bg-primary/10">
-        <span><span className="block font-bold">PC do Acre: o que estudar primeiro</span><span className="mt-1 block text-sm text-muted-foreground">Prioridades, provas de referência e comparação entre Investigador, Escrivão e Delegado.</span></span>
-        <ArrowRight className="h-5 w-5 shrink-0 text-primary" />
-      </Link>
+      <section className="rounded-xl border bg-card p-4 sm:p-5" aria-label="Objetivo de estudo">
+        <h2 className="font-semibold">{focusedContest ? "Seu objetivo de preparação" : "Escolha seu objetivo"}</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{focusedContest ? `${focusedContest.agency}: organize o estudo pelo edital e acompanhe seus resultados.` : "Defina seu concurso antes de escolher matérias e simulados. Isso ajuda a estudar o conteúdo certo."}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Button size="sm" asChild><Link to="/dashboard/my-contest">{focusedContest ? "Consultar objetivo" : "Definir concurso"}</Link></Button>
+          <Button size="sm" variant="outline" asChild><Link to="/dashboard/study-plan">Planejar estudos</Link></Button>
+        </div>
+      </section>
 
       {showTour && (
         <section className="onboarding-banner no-print">
@@ -345,7 +276,6 @@ function DashboardIndex() {
             <div className="onboarding-steps">
               <OnboardingStep label="Definir concurso" done={checklist.contest} />
               <OnboardingStep label="Criar caderno" done={checklist.notebook} />
-              <OnboardingStep label="Ajustar plano" done={checklist.plan} />
             </div>
           </div>
           <Button onClick={completeTour} className="hero-btn-primary" disabled={isUpdatingTour}>
@@ -388,8 +318,8 @@ function DashboardIndex() {
           <CardHeader className="pb-2">
             <div className="section-title">
               <div>
-                <h2>Evolução por disciplina</h2>
-                <p>Acertos acumulados nas suas sessões</p>
+                <h2>Resumo das respostas</h2>
+                <p>Acertos e erros acumulados nas sessões registradas</p>
               </div>
               <Button variant="ghost" size="sm" asChild>
                 <Link to="/dashboard/performance">
@@ -415,8 +345,8 @@ function DashboardIndex() {
                     }}
                   />
                   <Bar
-                    dataKey="acertos"
-                    name="Acertos"
+                    dataKey="total"
+                    name="Respostas"
                     fill="var(--color-chart-1)"
                     radius={[8, 8, 2, 2]}
                     maxBarSize={56}
@@ -427,7 +357,7 @@ function DashboardIndex() {
               <EmptyState
                 icon={BarChart3}
                 title="Sem dados por enquanto"
-                text="Resolva sua primeira sessão de questões para ver a evolução por disciplina."
+                text="Resolva sua primeira sessão de questões para acompanhar seus acertos e erros."
                 action={
                   <Button size="sm" asChild>
                     <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
@@ -444,8 +374,8 @@ function DashboardIndex() {
           <CardHeader className="pb-3">
             <div className="section-title">
               <div>
-                <h2>Próximas atividades</h2>
-                <p>Sequência sugerida para hoje</p>
+                <h2>Escolha sua próxima sessão</h2>
+                <p>Atalhos de estudo; consulte seu plano para decidir a prioridade</p>
               </div>
               <Button variant="ghost" size="sm" asChild>
                 <Link to="/dashboard/study-plan">
@@ -459,7 +389,7 @@ function DashboardIndex() {
               icon={Trophy}
               tone="brass"
               title="Simulado semanal"
-              meta="Simulado · prioridade"
+              meta="Avalie seu preparo em condições de prova"
               to="/dashboard/mock-exams"
               cta="Iniciar"
             />
@@ -467,15 +397,15 @@ function DashboardIndex() {
               icon={NotebookPen}
               tone="signal"
               title="Revisão dos erros recentes"
-              meta="Repetição espaçada · sugerido hoje"
+              meta="Entenda os erros antes de repetir o treino"
               to="/dashboard/errors"
               cta="Revisar"
             />
             <TaskRow
               icon={BrainCircuit}
               tone="jade"
-              title="Bloco de questões do seu concurso"
-              meta="Treino direcionado"
+              title="Bloco de questões por assunto"
+              meta="Selecione seu concurso e a disciplina nos filtros"
               to="/dashboard/question-trainer"
               cta="Treinar"
             />
@@ -490,51 +420,7 @@ function DashboardIndex() {
         </Card>
       </div>
 
-      {(isLoadingAttempts || blockedAttempts.length > 0) && (
-        <Card className="command-panel no-print">
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center justify-between gap-3">
-              <span className="section-title">
-                <span>
-                  <h2>Limites do plano</h2>
-                  <p>Recursos que você tentou usar além da sua cota</p>
-                </span>
-              </span>
-              <Badge variant="outline" className="shrink-0">
-                {blockedAttempts.length} bloqueios
-              </Badge>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            {isLoadingAttempts ? (
-              <div className="space-y-2">
-                <Skeleton className="h-12 rounded-xl" />
-                <Skeleton className="h-12 rounded-xl" />
-              </div>
-            ) : (
-              <div className="grid gap-2 md:grid-cols-3">
-                {blockedAttempts.slice(0, 3).map((attempt) => (
-                  <div
-                    key={attempt.id}
-                    className="flex items-center gap-3 rounded-xl border border-destructive/15 bg-destructive/5 p-3"
-                  >
-                    <ShieldAlert className="h-4 w-4 shrink-0 text-destructive" />
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-semibold">{attempt.feature_key}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {new Date(attempt.attempt_time).toLocaleString()}
-                      </p>
-                    </div>
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link to="/dashboard/profile">Planos</Link>
-                    </Button>
-                  </div>
-                ))}
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      )}
+
     </div>
   );
 }
