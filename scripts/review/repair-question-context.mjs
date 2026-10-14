@@ -14,7 +14,9 @@ export function validateRepairs(pack) {
     if (!evidence?.reason || !evidence.visually_verified || !/^[a-f0-9]{64}$/.test(evidence.pdf_sha256 || '') || !evidence.pdf_path || !evidence.source_url || !Number.isInteger(evidence.page) || evidence.page<1) throw Error('Visual PDF evidence required');
     const text=patch.question_text || expected.question_text;
     const binary=['C','E'].includes(expected.official_answer) && evidence.question_format==='certo_errado';
-    const complete=binary? /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): ['A','B','C','D','E'].every(letter=>(text || '').includes(`(${letter})`));
+    const labels=evidence.alternative_labels || ['A','B','C','D','E'];
+    if (!binary && (!Array.isArray(labels) || !['ABCD','ABCDE'].includes(labels.join('')) || !labels.includes(expected.official_answer))) throw Error('Verified alternative labels required');
+    const complete=binary? /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): labels.every(letter=>(text || '').includes(`(${letter})`)) && !['A','B','C','D','E'].some(letter=>!labels.includes(letter) && (text || '').includes(`(${letter})`));
     if (!text || !complete || text.trimStart().startsWith('(A)')) throw Error('Complete stem and alternatives required');
     if (patch.source_page!==undefined && (!Number.isInteger(patch.source_page) || patch.source_page!==evidence.page)) throw Error('Corrected page must match visual evidence');
     if (patch.context_review_required!==false || !patch.review_note || !Number.isFinite(Date.parse(patch.verified_at))) throw Error('Explicit context decision required');
