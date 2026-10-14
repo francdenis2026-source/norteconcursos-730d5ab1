@@ -10775,3 +10775,44 @@ html body[data-scroll-locked] .right-scroll-bar-position {
  .simulator-exam-expanded .exam-question-window { min-height: 0; }
  .simulator-exam-expanded .exam-question-window [data-slot='card-content'] { padding: 16px; }
 }
+
+/* Penal learning: stable colour cues independent of the light-theme primary token. */
+.penal-sentence-summary {
+  border-color: #9bc2e4;
+  background: linear-gradient(130deg, #eaf4ff, #edfafa);
+  color: #123653;
+}
+.penal-sentence-summary > p:first-child { color: #155e75; }
+.penal-sentence-summary .grid > div {
+  border: 1px solid #b7d4ef;
+  border-top: 4px solid #2479b7;
+  background: #f5faff;
+}
+.penal-sentence-summary .grid > div:nth-child(2) { border-top-color: #7651b1; background: #f7f3ff; }
+.penal-sentence-summary .grid > div:nth-child(3) { border-top-color: #138675; background: #eefbf6; }
+.penal-phase {
+  border-left: 4px solid #2479b7;
+  border-color: #b7d4ef;
+  border-left-color: #2479b7;
+  background: #eef6ff;
+  color: #123653;
+}
+.penal-phase[data-phase="intermediate"] { border-color: #d3c3ed; border-left-color: #7651b1; background: #f5f0ff; color: #48266f; }
+.penal-phase[data-phase="final"] { border-color: #a8dacd; border-left-color: #138675; background: #edf9f3; color: #135846; }
+.penal-phase .text-muted-foreground { color: #42566b; }
+.penal-result { box-shadow: inset 0 0 0 1px rgb(50 77 123 / .12); }
+.dark .penal-sentence-summary { border-color: #254e72; background: linear-gradient(130deg, #102c45, #123b3d); color: #e5f2ff; }
+.dark .penal-sentence-summary > p:first-child { color: #a5e4ee; }
+.dark .penal-sentence-summary .grid > div { border-color: #315d85; border-top-color: #65b6f0; background: #12304a; }
+.dark .penal-sentence-summary .grid > div:nth-child(2) { border-top-color: #b69ae8; background: #302344; }
+.dark .penal-sentence-summary .grid > div:nth-child(3) { border-top-color: #70cead; background: #173d32; }
+.dark .penal-phase { border-color: #315d85; border-left-color: #65b6f0; background: #12304a; color: #e5f2ff; }
+.dark .penal-phase[data-phase="intermediate"] { border-color: #6a508c; border-left-color: #b69ae8; background: #302344; color: #f0e7ff; }
+.dark .penal-phase[data-phase="final"] { border-color: #367a63; border-left-color: #70cead; background: #173d32; color: #defff0; }
+.dark .penal-phase .text-muted-foreground { color: #bdccdd; }
+
+.focus-study-container { scroll-padding-top: calc(var(--focus-bar-height, 64px) + 16px); }
+.focus-study-bar { line-height: 1.35; }
+.focus-study-actions :is(button, a) { min-height: 34px; padding: 6px 9px; font-size: 12px; line-height: 1.3; white-space: nowrap; }
+.focus-study-actions svg { width: 15px; height: 15px; flex-shrink: 0; }
+.focus-study-container > :not(aside) { max-width: 72rem; margin-inline: auto; }

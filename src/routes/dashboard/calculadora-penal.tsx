@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AlertTriangle, CalendarClock, Gavel, Scale } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -29,6 +29,14 @@ import {
 } from "@/lib/penalCalc";
 import { PenalExample } from "@/components/study/PenalExample";
 import { dosimetryExamples, remitionExample } from "@/lib/penalExamples";
+import { PenalCrimeContext } from "@/components/study/PenalCrimeContext";
+import {
+  crimePolicy,
+  policyForSentence,
+  compatibleProgression,
+  compatibleParole,
+  type CrimePolicy,
+} from "@/lib/penalPolicy";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/calculadora-penal")({
@@ -128,7 +136,7 @@ const Result = ({
 }) => (
   <div
     className={cn(
-      "rounded-xl border-l-4 p-4",
+      "penal-result rounded-xl border-l-4 p-4",
       tone === "primary"
         ? "border-l-indigo-500 bg-indigo-50/60 dark:bg-indigo-950/20"
         : "border-l-amber-500 bg-amber-50 dark:bg-amber-950/20",
@@ -143,9 +151,17 @@ const Result = ({
 function DosimetriaTab({
   crimeId,
   setCrimeId,
+  policy,
+  extermination,
+  setExtermination,
+  onSentence,
 }: {
   crimeId: string;
   setCrimeId: (id: string) => void;
+  policy: CrimePolicy;
+  extermination: boolean;
+  setExtermination: (value: boolean) => void;
+  onSentence: (days: number | null) => void;
 }) {
   const crime = CRIMES.find((c) => c.id === crimeId);
   const [min, setMin] = useState<Pena>(crime ? crime.min : { anos: 0, meses: 0, dias: 0 });
@@ -157,6 +173,7 @@ function DosimetriaTab({
   const [fAg, setFAg] = useState<Fracao>({ num: 1, den: 6 });
   const [aum, setAum] = useState<Fracao[]>([]);
   const [dim, setDim] = useState<Fracao[]>([]);
+  const [causesConfirmed, setCausesConfirmed] = useState(false);
   const [reinc, setReinc] = useState(false);
   const [violencia, setViolencia] = useState(true);
   const [culposo, setCulposo] = useState(false);
@@ -169,6 +186,7 @@ function DosimetriaTab({
     setAten(0);
     setAum([]);
     setDim([]);
+    setCausesConfirmed(false);
     setReinc(false);
     setFCirc({ num: 1, den: 8 });
     setFAg({ num: 1, den: 6 });
@@ -220,11 +238,15 @@ function DosimetriaTab({
     err = e instanceof Error ? e.message : "Dados inválidos";
   }
   const tipo = crime?.tipo ?? tipoManual;
+  useEffect(() => {
+    onSentence(out?.final ?? null);
+  }, [out?.final, onSentence]);
+  const sentencePolicy = policyForSentence(policy, out?.final ?? null, violencia, culposo);
   const regime = out ? regimeInicial(out.final, reinc, tipo, circ === 0) : null;
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <section
-        className="min-w-0 rounded-2xl border border-primary/20 bg-primary/5 p-5 lg:col-span-2"
+        className="penal-sentence-summary min-w-0 rounded-2xl border p-5 lg:col-span-2"
         aria-label="Pena e dados do crime selecionado"
       >
         <p className="text-xs font-semibold uppercase tracking-wide text-primary">{lawName}</p>
@@ -258,6 +280,18 @@ function DosimetriaTab({
           legal não é a pena definitiva de um caso real.
         </p>
       </section>
+      {crimeId === "cp121" && (
+        <label className="rounded-xl border bg-amber-50 p-4 text-sm text-amber-950 dark:bg-amber-950/30 dark:text-amber-100 lg:col-span-2">
+          <input
+            type="checkbox"
+            checked={extermination}
+            onChange={(e) => setExtermination(e.target.checked)}
+            className="mr-2"
+          />
+          Homicídio praticado em atividade típica de grupo de extermínio (Lei 8.072, art. 1º, I)
+        </label>
+      )}
+      <PenalCrimeContext policy={sentencePolicy} />
       <section className={card}>
         <h2 className="text-lg font-bold">Dados do crime e das fases</h2>
         <p className="text-sm text-muted-foreground">
@@ -369,6 +403,21 @@ function DosimetriaTab({
           </label>
           <FracaoSelect label="Fração por agravante/atenuante" value={fAg} onChange={setFAg} />
         </div>
+        <label className="flex items-start gap-2 rounded-xl border bg-muted/30 p-3 text-sm">
+          <input
+            type="checkbox"
+            checked={causesConfirmed}
+            onChange={(e) => {
+              setCausesConfirmed(e.target.checked);
+              if (!e.target.checked) {
+                setAum([]);
+                setDim([]);
+              }
+            }}
+          />
+          Habilitar causas manuais após conferir o fundamento, a hipótese e a fração na lei. A
+          calculadora não presume causas pelo nome do crime.
+        </label>
         {(
           [
             ["Causas de aumento (3ª fase)", aum, setAum],
@@ -394,7 +443,7 @@ function DosimetriaTab({
                   key={f.label}
                   type="button"
                   className="rounded-full border px-3 py-1 text-sm hover:bg-muted"
-                  disabled={list.length >= 10}
+                  disabled={!causesConfirmed || list.length >= 10}
                   onClick={() => set([...list, f.value])}
                 >
                   + {f.label}
@@ -435,13 +484,28 @@ function DosimetriaTab({
           <>
             <ol className="space-y-2">
               {out.passos.map((p, i) => (
-                <li key={i} className="rounded-xl border p-3 text-sm">
+                <li
+                  key={i}
+                  data-phase={i === 0 ? "base" : i === 1 ? "intermediate" : "final"}
+                  className="penal-phase rounded-xl border p-3 text-sm"
+                >
                   <p className="font-semibold">
                     {p.fase}: <span className="font-mono">{formatPena(diasParaPena(p.dias))}</span>
                   </p>
                   <p className="mt-1 text-muted-foreground">{p.explicacao}</p>
                 </li>
               ))}
+              {out.passos.length === 2 && (
+                <li data-phase="final" className="penal-phase rounded-xl border p-3 text-sm">
+                  <p className="font-semibold">
+                    3ª fase: sem causas informadas · {formatPena(diasParaPena(out.final))}
+                  </p>
+                  <p className="mt-1 text-muted-foreground">
+                    A pena da segunda fase foi mantida porque nenhuma causa de aumento ou diminuição
+                    foi selecionada no exercício.
+                  </p>
+                </li>
+              )}
             </ol>
             <Result title="Pena definitiva">
               <p className="text-lg font-bold">{formatPena(diasParaPena(out.final))}</p>
@@ -472,8 +536,13 @@ function DosimetriaTab({
             )}
             <Result title="Outros benefícios a estudar" tone="warn">
               <ul className="list-disc space-y-1 pl-5">
-                {beneficios(out.final, violencia, culposo).map((b) => (
-                  <li key={b}>{b}</li>
+                {beneficios(out.final, violencia, culposo).map((b, index) => (
+                  <li key={b}>
+                    {index === 1 &&
+                    sentencePolicy.rules.find((r) => r.title === "Sursis")?.state === "vedado"
+                      ? `${sentencePolicy.rules.find((r) => r.title === "Sursis")!.label}: ${sentencePolicy.rules.find((r) => r.title === "Sursis")!.explanation}`
+                      : b}
+                  </li>
                 ))}
               </ul>
             </Result>
@@ -492,13 +561,31 @@ function DosimetriaTab({
 }
 
 // ───────── Execução ─────────
-function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: number) => void }) {
+function ExecucaoTab({
+  remido,
+  setRemido,
+  policy,
+  sentenceDays,
+}: {
+  remido: number;
+  setRemido: (days: number) => void;
+  policy: CrimePolicy;
+  sentenceDays: number | null;
+}) {
   const [pena, setPena] = useState<Pena>({ anos: 6, meses: 0, dias: 0 });
   const [inicio, setInicio] = useState(acreDateKey());
   const [catId, setCatId] = useState("manual");
   const [fracaoManual, setFracaoManual] = useState<Fracao>({ num: 1, den: 6 });
   const [regraConfirmada, setRegraConfirmada] = useState(false);
-  const [livId, setLivId] = useState("terco");
+  const [livId, setLivId] = useState(
+    policy.classification === "hediondo" || policy.classification === "equiparado"
+      ? "doistercos"
+      : policy.classification === "desconhecido"
+        ? "vedado"
+        : "terco",
+  );
+  const [specificRecidivism, setSpecificRecidivism] = useState(false);
+  const special = policy.classification === "hediondo" || policy.classification === "equiparado";
   const [detracao, setDetracao] = useState(0);
 
   const cat = CATEGORIAS_PROGRESSAO.find((c) => c.id === catId) ?? {
@@ -522,6 +609,34 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
     <div className="grid gap-5 lg:grid-cols-2">
       <section className={card}>
         <h2 className="text-lg font-bold">Dados da execução</h2>
+        <div className="rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-800 dark:bg-sky-950/30 dark:text-sky-100">
+          <p className="font-bold">{policy.classificationLabel}</p>
+          <p className="mt-1 text-xs leading-5">{policy.scope}</p>
+        </div>
+        {sentenceDays !== null && (
+          <Button
+            variant="outline"
+            onClick={() => {
+              setPena(diasParaPena(sentenceDays));
+              setRegraConfirmada(false);
+            }}
+          >
+            Usar pena simulada: {formatPena(diasParaPena(sentenceDays))}
+          </Button>
+        )}
+        <label className="flex items-start gap-2 text-sm">
+          <input
+            type="checkbox"
+            checked={specificRecidivism}
+            disabled={!special}
+            onChange={(e) => {
+              setSpecificRecidivism(e.target.checked);
+              setRegraConfirmada(false);
+              if (e.target.checked) setLivId("vedado");
+            }}
+          />
+          Reincidência específica em hediondo/equiparado — conferir o enquadramento
+        </label>
         <PenaInput label="Pena total a cumprir" value={pena} onChange={setPena} />
         <label className="block text-sm font-medium">
           Data-base da primeira progressão (sem interrupções)
@@ -544,12 +659,16 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
           >
             <option value="manual">Informar a fração aplicável ao exercício</option>
             {CATEGORIAS_PROGRESSAO.map((c) => (
-              <option key={c.id} value={c.id}>
+              <option key={c.id} value={c.id} disabled={!compatibleProgression(policy, c.id)}>
                 {c.label}
               </option>
             ))}
           </select>
         </label>
+        <p className="text-xs text-muted-foreground">
+          Opções incompatíveis com a modalidade selecionada ficam desabilitadas. A fração manual
+          exige conferência expressa da lei no tempo; não altera o enquadramento do crime.
+        </p>
         {catId === "manual" && (
           <div className="grid grid-cols-2 gap-3">
             <label className="text-sm">
@@ -583,6 +702,7 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
           <input
             type="checkbox"
             checked={regraConfirmada}
+            disabled={!compatibleProgression(policy, catId)}
             onChange={(e) => setRegraConfirmada(e.target.checked)}
           />{" "}
           Conferi a fração e as vedações para o caso de estudo, incluindo a lei no tempo.
@@ -596,7 +716,14 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
           >
             <option value="vedado">Livramento vedado para a hipótese estudada</option>
             {LIVRAMENTO.map((l) => (
-              <option key={l.id} value={l.id}>
+              <option
+                key={l.id}
+                value={l.id}
+                disabled={
+                  !compatibleParole(policy, l.id, catId, specificRecidivism) ||
+                  (l.id !== "vedado" && (!result.value || result.value.penaDias < 720))
+                }
+              >
                 {l.label}
               </option>
             ))}
@@ -642,123 +769,133 @@ function ExecucaoTab({ remido, setRemido }: { remido: number; setRemido: (days: 
             Confira e confirme a fração aplicável para exibir a projeção.
           </p>
         )}
-        {regraConfirmada && prog && lc && fim !== undefined && penaDias !== undefined && (
-          <>
-            <Result
-              title={`Progressão de regime: ${cat.fracao.num}/${cat.fracao.den} (${(fracaoValor(cat.fracao) * 100).toFixed(2).replace(".", ",")}%)`}
-            >
-              <p>
-                Exigido: <strong>{prog.exigidosDias} dias</strong> de {prog.totalDias}. Abatidos
-                (detração e remição): {prog.abatidosDias}.
-              </p>
-              <p className="mt-1 text-base font-bold">
-                {prog.jaCumprido ? (
-                  "Abatimentos informados cobrem a fração exigida."
-                ) : (
-                  <>Marco temporal hipotético: {formatBr(prog.data)}</>
-                )}
-              </p>
-              <p className="text-muted-foreground">
-                Também exige mérito: boa conduta carcerária e, quando for o caso, exame
-                criminológico (art. 112, § 1º).
-              </p>
-            </Result>
-            <Result
-              title={
-                livId === "vedado"
-                  ? "Livramento condicional: vedado"
-                  : `Livramento condicional: mais de ${liv.fracao.num}/${liv.fracao.den}`
-              }
-            >
-              {penaDias < 2 * 360 ? (
-                <p className="font-semibold text-rose-600">
-                  O livramento exige pena igual ou superior a 2 anos (art. 83, caput).
+        {regraConfirmada &&
+          compatibleProgression(policy, catId) &&
+          prog &&
+          lc &&
+          fim !== undefined &&
+          penaDias !== undefined && (
+            <>
+              <Result
+                title={`Progressão de regime: ${cat.fracao.num}/${cat.fracao.den} (${(fracaoValor(cat.fracao) * 100).toFixed(2).replace(".", ",")}%)`}
+              >
+                <p>
+                  Exigido: <strong>{prog.exigidosDias} dias</strong> de {prog.totalDias}. Abatidos
+                  (detração e remição): {prog.abatidosDias}.
                 </p>
-              ) : livId === "vedado" ||
-                CATEGORIAS_PROGRESSAO.find((c) => c.id === catId)?.livramentoVedado ? (
-                <p className="font-semibold text-rose-600">
-                  A hipótese selecionada veda o livramento. Consulte a regra específica (LEP, art.
-                  112, VI, a, b, d e VIII).
+                <p className="mt-1 text-base font-bold">
+                  {prog.jaCumprido ? (
+                    "Abatimentos informados cobrem a fração exigida."
+                  ) : (
+                    <>Marco temporal hipotético: {formatBr(prog.data)}</>
+                  )}
                 </p>
-              ) : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
-                livId !== "doistercos" ? (
-                <p className="text-sm text-destructive">
-                  O perfil de hediondo/equiparado não admite usar a regra comum de 1/3 ou 1/2.
-                  Confira o art. 83, V, inclusive a vedação por reincidência específica.
+                <p className="text-muted-foreground">
+                  Também exige mérito: boa conduta carcerária e, quando for o caso, exame
+                  criminológico (art. 112, § 1º).
                 </p>
-              ) : (
-                <>
-                  <p>
-                    Exigido: <strong>{lc.exigidosDias} dias</strong> (mais de {liv.fracao.num}/
-                    {liv.fracao.den} de {lc.totalDias}).
-                  </p>
-                  <p className="mt-1 text-base font-bold">
-                    {lc.jaCumprido ? (
-                      "Abatimentos informados cobrem a fração exigida."
-                    ) : (
-                      <>Marco temporal hipotético: {formatBr(lc.data)}</>
-                    )}
-                  </p>
-                  <p className="text-muted-foreground">
-                    Exige também requisitos do art. 83, III e IV (comportamento, ausência de falta
-                    grave nos últimos 12 meses, trabalho e reparação do dano).
-                  </p>
-                </>
-              )}
-            </Result>
-            <PenalExample
-              source="execution"
-              example={{
-                title: "Como os abatimentos alteram a primeira progressão",
-                scenario: `Imagine uma pena de ${formatPena(pena)} e data-base em ${formatBr(parseDate(inicio))}, com a fração ${cat.fracao.num}/${cat.fracao.den} já conferida para o exercício.`,
-                steps: [
-                  `A pena corresponde a ${prog.totalDias} dias pelo calendário. A fração exige ${prog.exigidosDias} dias inteiros.`,
-                  `Detração de ${detracao} dias + remição de ${remido} dias = ${prog.abatidosDias} dias abatidos.`,
-                  `Requisito temporal restante: máximo entre zero e (${prog.exigidosDias} − ${prog.abatidosDias}) = ${prog.faltamDias} dias.`,
-                ],
-                conclusion: prog.jaCumprido
-                  ? "Os abatimentos informados cobrem a fração; isso não concede a progressão."
-                  : `Incluindo o dia da data-base, o marco hipotético é ${formatBr(prog.data)}.`,
-                caution:
-                  "LEP, art. 112; CP, arts. 10 e 42: não duplique dias já contados. Interrupções e requisitos subjetivos podem alterar a análise.",
-              }}
-            />
-            <PenalExample
-              source="execution"
-              example={{
-                title: "Entendendo o livramento condicional",
-                scenario: `No mesmo exercício, a pena é de ${formatPena(pena)} e o perfil de livramento é ${livId === "vedado" ? "vedado" : liv.label}.`,
-                steps:
+              </Result>
+              <Result
+                title={
+                  livId === "vedado" ||
+                  !compatibleParole(policy, livId, catId, specificRecidivism) ||
                   penaDias < 720
-                    ? [
-                        "A pena informada é inferior a dois anos; o requisito quantitativo do art. 83, caput, não foi atendido.",
-                      ]
-                    : livId === "vedado" || cat.livramentoVedado
+                    ? "Livramento condicional: não habilitado"
+                    : `Livramento condicional: mais de ${liv.fracao.num}/${liv.fracao.den}`
+                }
+              >
+                {penaDias < 2 * 360 ? (
+                  <p className="font-semibold text-rose-600">
+                    O livramento exige pena igual ou superior a 2 anos (art. 83, caput).
+                  </p>
+                ) : livId === "vedado" ||
+                  !compatibleParole(policy, livId, catId, specificRecidivism) ? (
+                  <p className="font-semibold text-rose-600">
+                    O livramento não está habilitado para esta combinação. Confira a vedação, a
+                    reincidência específica ou a insuficiência de enquadramento (CP, art. 83; LEP,
+                    art. 112).
+                  </p>
+                ) : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
+                  livId !== "doistercos" ? (
+                  <p className="text-sm text-destructive">
+                    O perfil de hediondo/equiparado não admite usar a regra comum de 1/3 ou 1/2.
+                    Confira o art. 83, V, inclusive a vedação por reincidência específica.
+                  </p>
+                ) : (
+                  <>
+                    <p>
+                      Exigido: <strong>{lc.exigidosDias} dias</strong> (mais de {liv.fracao.num}/
+                      {liv.fracao.den} de {lc.totalDias}).
+                    </p>
+                    <p className="mt-1 text-base font-bold">
+                      {lc.jaCumprido ? (
+                        "Abatimentos informados cobrem a fração exigida."
+                      ) : (
+                        <>Marco temporal hipotético: {formatBr(lc.data)}</>
+                      )}
+                    </p>
+                    <p className="text-muted-foreground">
+                      Exige também requisitos do art. 83, III e IV (comportamento, ausência de falta
+                      grave nos últimos 12 meses, trabalho e reparação do dano).
+                    </p>
+                  </>
+                )}
+              </Result>
+              <PenalExample
+                source="execution"
+                example={{
+                  title: "Como os abatimentos alteram a primeira progressão",
+                  scenario: `Imagine uma pena de ${formatPena(pena)} e data-base em ${formatBr(parseDate(inicio))}, com a fração ${cat.fracao.num}/${cat.fracao.den} já conferida para o exercício.`,
+                  steps: [
+                    `A pena corresponde a ${prog.totalDias} dias pelo calendário. A fração exige ${prog.exigidosDias} dias inteiros.`,
+                    `Detração de ${detracao} dias + remição de ${remido} dias = ${prog.abatidosDias} dias abatidos.`,
+                    `Requisito temporal restante: máximo entre zero e (${prog.exigidosDias} − ${prog.abatidosDias}) = ${prog.faltamDias} dias.`,
+                  ],
+                  conclusion: prog.jaCumprido
+                    ? "Os abatimentos informados cobrem a fração; isso não concede a progressão."
+                    : `Incluindo o dia da data-base, o marco hipotético é ${formatBr(prog.data)}.`,
+                  caution:
+                    "LEP, art. 112; CP, arts. 10 e 42: não duplique dias já contados. Interrupções e requisitos subjetivos podem alterar a análise.",
+                }}
+              />
+              <PenalExample
+                source="execution"
+                example={{
+                  title: "Entendendo o livramento condicional",
+                  scenario: `No mesmo exercício, a pena é de ${formatPena(pena)} e o perfil de livramento é ${livId === "vedado" ? "vedado" : liv.label}.`,
+                  steps:
+                    penaDias < 720
                       ? [
-                          "A hipótese selecionada foi marcada como vedada; alcançar uma fração de tempo não afasta a vedação.",
+                          "A pena informada é inferior a dois anos; o requisito quantitativo do art. 83, caput, não foi atendido.",
                         ]
-                      : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
-                          livId !== "doistercos"
+                      : livId === "vedado" ||
+                          !compatibleParole(policy, livId, catId, specificRecidivism)
                         ? [
-                            "O perfil de hediondo/equiparado não pode ser combinado com a regra comum de 1/3 ou 1/2. Corrija o perfil antes de usar o exemplo.",
+                            "A hipótese selecionada foi marcada como vedada; alcançar uma fração de tempo não afasta a vedação.",
                           ]
-                        : [
-                            `A expressão “mais de” exige ${lc.exigidosDias} dias, superando a fração ${liv.fracao.num}/${liv.fracao.den} de ${lc.totalDias}.`,
-                            `Depois de ${lc.abatidosDias} dias de abatimentos, restam ${lc.faltamDias} dias para esse requisito temporal.`,
-                          ],
-                conclusion: "Tempo cumprido e elegibilidade jurídica são verificações diferentes.",
-                caution:
-                  "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
-              }}
-            />
-            <Result title="Último dia da pena total informada (sem abatimentos)">
-              <p className="font-bold">{formatBr(fim)}</p>
-              <p className="text-muted-foreground">
-                Contagem pelo calendário comum (CP, art. 10), incluindo o dia do começo.
-              </p>
-            </Result>
-          </>
-        )}
+                        : ["v", "via", "vib", "vic", "vid", "vii", "viii"].includes(catId) &&
+                            livId !== "doistercos"
+                          ? [
+                              "O perfil de hediondo/equiparado não pode ser combinado com a regra comum de 1/3 ou 1/2. Corrija o perfil antes de usar o exemplo.",
+                            ]
+                          : [
+                              `A expressão “mais de” exige ${lc.exigidosDias} dias, superando a fração ${liv.fracao.num}/${liv.fracao.den} de ${lc.totalDias}.`,
+                              `Depois de ${lc.abatidosDias} dias de abatimentos, restam ${lc.faltamDias} dias para esse requisito temporal.`,
+                            ],
+                  conclusion:
+                    "Tempo cumprido e elegibilidade jurídica são verificações diferentes.",
+                  caution:
+                    "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
+                }}
+              />
+              <Result title="Último dia da pena total informada (sem abatimentos)">
+                <p className="font-bold">{formatBr(fim)}</p>
+                <p className="text-muted-foreground">
+                  Contagem pelo calendário comum (CP, art. 10), incluindo o dia do começo.
+                </p>
+              </Result>
+            </>
+          )}
         {prog?.limiteQuarentaAnos && (
           <Result title="Limite de 40 anos" tone="warn">
             <p>
@@ -986,7 +1123,17 @@ const TABS = [
 function PenalCalculatorPage() {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("dosimetria");
   const [diasRemidos, setDiasRemidos] = useState(0);
-  const [crimeId, setCrimeId] = useState("cp157");
+  const [crimeId, setCrimeIdState] = useState("cp157");
+  const [extermination, setExtermination] = useState(false);
+  const [sentenceDays, setSentenceDays] = useState<number | null>(6 * 360);
+  const policy = crimePolicy(crimeId, extermination);
+  const setCrimeId = (id: string) => {
+    if (id !== crimeId) {
+      setExtermination(false);
+      setDiasRemidos(0);
+    }
+    setCrimeIdState(id);
+  };
   return (
     <div className="mx-auto max-w-7xl space-y-6 pb-8">
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#081c30] via-[#123653] to-[#155e75] p-6 text-white md:p-9">
@@ -1040,10 +1187,23 @@ function PenalCalculatorPage() {
           ))}
         </TabsList>
         <TabsContent value="dosimetria" forceMount className="mt-5 data-[state=inactive]:hidden">
-          <DosimetriaTab crimeId={crimeId} setCrimeId={setCrimeId} />
+          <DosimetriaTab
+            crimeId={crimeId}
+            setCrimeId={setCrimeId}
+            policy={policy}
+            extermination={extermination}
+            setExtermination={setExtermination}
+            onSentence={setSentenceDays}
+          />
         </TabsContent>
         <TabsContent value="execucao" forceMount className="mt-5 data-[state=inactive]:hidden">
-          <ExecucaoTab remido={diasRemidos} setRemido={setDiasRemidos} />
+          <ExecucaoTab
+            key={`${crimeId}:${extermination}`}
+            remido={diasRemidos}
+            setRemido={setDiasRemidos}
+            policy={policy}
+            sentenceDays={sentenceDays}
+          />
         </TabsContent>
         <TabsContent value="prescricao" forceMount className="mt-5 data-[state=inactive]:hidden">
           <PrescricaoTab />

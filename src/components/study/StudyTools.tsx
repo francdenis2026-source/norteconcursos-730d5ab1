@@ -455,12 +455,12 @@ function NotesTool({ storageKey }: { storageKey: string }) {
 }
 
 // ───────── Painel ─────────
-export function StudyToolsPanel({ area, notesKey, onClose }: { area: ToolsArea; notesKey: string; onClose: () => void }) {
+export function StudyToolsPanel({ area, notesKey, onClose, topOffset = 68 }: { area: ToolsArea; notesKey: string; onClose: () => void; topOffset?: number }) {
   const ids = BY_AREA[area];
   const [tool, setTool] = useState<ToolId>(ids[0]!);
   const current = ids.includes(tool) ? tool : ids[0]!;
   return (
-    <aside className="fixed bottom-0 right-0 top-[4.25rem] z-[62] flex w-full max-w-sm flex-col border-l bg-background shadow-2xl" aria-label={AREA_TITLE[area]}>
+    <aside style={{top:topOffset}} className="fixed bottom-0 right-0 z-[62] flex w-full max-w-sm flex-col border-l bg-background shadow-2xl" aria-label={AREA_TITLE[area]}>
       <header className="flex items-center justify-between gap-2 border-b bg-gradient-to-r from-indigo-50 to-fuchsia-50 px-4 py-2 dark:from-indigo-950/40 dark:to-fuchsia-950/30">
         <p className="text-sm font-bold">{AREA_TITLE[area]}</p>
         <Button size="sm" variant="ghost" onClick={onClose} aria-label="Fechar ferramentas"><X className="h-4 w-4" /></Button>

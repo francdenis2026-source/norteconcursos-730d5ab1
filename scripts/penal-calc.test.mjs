@@ -155,3 +155,63 @@ test('exemplo de remição acompanha a conclusão e o resultado transferível', 
   assert.match(example.scenario,/conclusão certificada/);
   assert.match(example.steps[2],/12 \+ 30 \+ 4 = 46/);
 });
+
+
+test('perfil jurídico distingue hediondez, modalidade e ausência de enquadramento', async () => {
+  const {crimePolicy} = await import('../src/lib/penalPolicy.ts');
+  const common=crimePolicy('cp157');
+  assert.equal(common.classification,'comum');
+  assert.equal(crimePolicy('cp121q').classification,'hediondo');
+  assert.equal(crimePolicy('cp121').classification,'comum');
+  assert.equal(crimePolicy('cp121',true).classification,'hediondo');
+  assert.equal(crimePolicy('d33').classification,'equiparado');
+  assert.equal(crimePolicy('a16').classification,'comum','uso restrito não é automaticamente uso proibido');
+  assert.ok(crimePolicy('custom').rules.every(r=>r.state==='nao-avaliado'));
+  const rules=Object.fromEntries(crimePolicy('cp213').rules.map(r=>[r.title,r]));
+  for(const name of ['Fiança','Indulto','Graça','Anistia']) assert.equal(rules[name].state,'vedado');
+  assert.equal(rules['Progressão'].state,'condicionado','hediondez não elimina progressão');
+  assert.match(rules['Fiança'].explanation,/não determina prisão/);
+  assert.equal(common.rules.find(r=>r.title==='Indulto').label,'Depende do decreto');
+});
+
+test('execução impede perfis incompatíveis sem transformar requisitos em concessões', async () => {
+  const {crimePolicy,compatibleProgression,compatibleParole}=await import('../src/lib/penalPolicy.ts');
+  const rape=crimePolicy('cp213'),murder=crimePolicy('cp121q'),theft=crimePolicy('cp155'),robbery=crimePolicy('cp157');
+  assert.equal(compatibleProgression(rape,'base'),false);
+  assert.equal(compatibleProgression(rape,'v'),true);
+  assert.equal(compatibleProgression(murder,'v'),false);
+  assert.equal(compatibleProgression(murder,'via'),true);
+  assert.equal(compatibleProgression(theft,'i'),false);
+  assert.equal(compatibleProgression(robbery,'base'),false);
+  assert.equal(compatibleProgression(robbery,'i'),true);
+  assert.equal(compatibleParole(rape,'terco','manual',false),false);
+  assert.equal(compatibleParole(rape,'doistercos','v',false),true);
+  assert.equal(compatibleParole(rape,'doistercos','v',true),false);
+  assert.equal(compatibleParole(murder,'doistercos','via',false),false);
+  assert.equal(compatibleParole(theft,'doistercos','base',false),false);
+  assert.equal(compatibleParole(crimePolicy('custom'),'terco','manual',false),false);
+});
+
+test('requisitos objetivos da pena atualizam os avisos de benefícios', async()=>{
+  const {crimePolicy,policyForSentence}=await import('../src/lib/penalPolicy.ts');
+  const map=p=>Object.fromEntries(p.rules.map(r=>[r.title,r.state]));
+  assert.equal(map(policyForSentence(crimePolicy('cp129'),90,true,false))['Livramento condicional'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp157'),2160,true,false))['Substituição'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp157'),2160,true,false))['Sursis'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('d33'),720,false,false))['Sursis'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp155'),720,false,false))['Substituição'],'condicionado');
+});
+
+
+test('saída temporária e monitoração não são inferidas como concessões', async()=>{
+  const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+  const find=(id,title)=>crimePolicy(id).rules.find(r=>r.title===title);
+  assert.equal(find('cp157','Saída temporária').state,'vedado');
+  assert.equal(find('cp213','Saída temporária').state,'vedado');
+  assert.equal(find('cp155','Saída temporária').state,'condicionado');
+  assert.equal(find('d33','Saída temporária').state,'condicionado','não estender a expressão hediondo sem examinar alcance no equiparado');
+  assert.match(find('cp155','Saída temporária').explanation,/visitas familiares/);
+  assert.equal(find('cp213','Monitoração eletrônica').state,'condicionado');
+  assert.match(find('cp213','Monitoração eletrônica').explanation,/não afasta uma vedação/);
+  assert.equal(find('custom','Monitoração eletrônica').state,'nao-avaliado');
+});

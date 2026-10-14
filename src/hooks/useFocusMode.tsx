@@ -1,14 +1,30 @@
 import { platformDate } from "@/lib/platformClock";
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StudyToolsPanel, type ToolsArea } from "@/components/study/StudyTools";
 import { confirmDialog } from "@/lib/confirm";
-import { beginFocus, endFocus, getFocusSession, goAway, setFocusPaused, subscribeFocusSession, tickFocus } from "@/lib/focusSession";
+import {
+  beginFocus,
+  endFocus,
+  getFocusSession,
+  goAway,
+  setFocusPaused,
+  subscribeFocusSession,
+  tickFocus,
+} from "@/lib/focusSession";
 
 const pad = (n: number) => String(n).padStart(2, "0");
-export const hms = (s: number) => `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
+export const hms = (s: number) =>
+  `${pad(Math.floor(s / 3600))}:${pad(Math.floor((s % 3600) / 60))}:${pad(s % 60)}`;
 
 /** Áreas para onde o aluno pode ir sem encerrar o foco: o relógio pausa e volta de onde parou. */
 const PAUSE_DESTINATIONS = [
@@ -46,6 +62,8 @@ export function useFocusMode() {
   const [focus, setFocus] = useState(false);
   const [now, setNow] = useState(() => platformDate());
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [barHeight, setBarHeight] = useState(64);
+  const barRef = useRef<HTMLElement | null>(null);
   const session = useSyncExternalStore(subscribeFocusSession, getFocusSession, () => null);
   const exiting = useRef(false);
   const href = useCallback(() => router.state.location.href, [router]);
@@ -87,12 +105,20 @@ export function useFocusMode() {
   }, []);
 
   useEffect(() => {
-    if (!focus) { setToolsOpen(false); return; }
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") void requestExit(); };
+    if (!focus) {
+      setToolsOpen(false);
+      return;
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") void requestExit();
+    };
     window.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const id = window.setInterval(() => { setNow(platformDate()); tickFocus(); }, 1000);
+    const id = window.setInterval(() => {
+      setNow(platformDate());
+      tickFocus();
+    }, 1000);
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
@@ -136,11 +162,30 @@ export function useFocusMode() {
     },
   });
 
+  useEffect(() => {
+    if (!focus || !barRef.current) return;
+    const header = barRef.current;
+    const measure = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      setBarHeight(height);
+      header
+        .closest<HTMLElement>(".focus-study-container")
+        ?.style.setProperty("--focus-bar-height", `${height}px`);
+    };
+    measure();
+    const observer = typeof ResizeObserver !== "undefined" ? new ResizeObserver(measure) : null;
+    observer?.observe(header);
+    window.addEventListener("resize", measure);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [focus]);
+
   /** Classes do contêiner do conteúdo: tela cheia, abaixo da faixa fixa do topo. */
   const containerClass = focus
     ? [
-        "fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-10 pt-24 sm:px-10 text-[17px] leading-8",
-        "[&>*]:mx-auto [&>*]:max-w-6xl",
+        "focus-study-container fixed inset-0 z-[60] max-w-none! overflow-y-auto bg-background px-4 pb-10 pt-0 sm:px-8 text-[17px] leading-8",
         // explicação do artigo em duas colunas, sem quebrar os blocos no meio
         "lg:[&_section[aria-label='Entenda_este_artigo']]:columns-2 lg:[&_section[aria-label='Entenda_este_artigo']]:gap-10",
         "[&_section[aria-label='Entenda_este_artigo']>*]:break-inside-avoid [&_section[aria-label='Entenda_este_artigo']>*]:mb-4",
@@ -159,48 +204,124 @@ export function useFocusMode() {
   const bar = (p: FocusBarProps) =>
     !focus ? null : (
       <>
-        <header className="fixed inset-x-0 top-0 z-[61] bg-gradient-to-r from-indigo-700 via-violet-700 to-fuchsia-700 text-white shadow-lg" role="banner">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 sm:px-8">
-            <div className="min-w-0 flex-1 basis-60">
-              <p className="truncate text-[11px] font-semibold uppercase tracking-widest text-white/75">{p.kicker}</p>
-              <p className="truncate text-base font-bold leading-tight sm:text-lg">{p.title}</p>
+        <header
+          ref={barRef}
+          className="focus-study-bar sticky top-0 z-[61] bg-gradient-to-r from-slate-900 to-sky-900 text-white shadow-md"
+          aria-label="Controles do modo foco"
+          role="banner"
+        >
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 px-3 py-2 lg:grid-cols-[minmax(120px,1fr)_auto_auto]">
+            <div className="min-w-0">
+              <p className="truncate text-[11px] font-semibold uppercase tracking-widest text-white/75">
+                {p.kicker}
+              </p>
+              <p className="truncate text-sm font-bold leading-tight sm:text-base">{p.title}</p>
             </div>
-            <div className="flex items-center gap-2 rounded-xl bg-black/25 px-3 py-1.5" aria-label="Tempo de estudo nesta sessão">
+            <div
+              className="flex items-center gap-1.5 rounded-xl bg-black/20 px-2 py-1"
+              aria-label="Tempo de estudo nesta sessão"
+            >
               <Clock3 className="h-4 w-4 text-amber-300" aria-hidden />
               <div className="leading-tight">
-                <p className="font-mono text-lg font-bold tabular-nums" aria-live="off">{hms(elapsed)}</p>
-                <p className="text-[10px] uppercase tracking-wider text-white/70">{paused ? "pausado" : "tempo de estudo"} · {now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Rio_Branco" })}</p>
+                <p className="font-mono text-sm font-bold tabular-nums" aria-live="off">
+                  {hms(elapsed)}
+                </p>
+                <p className="text-[10px] uppercase tracking-wider text-white/70">
+                  {paused ? "pausado" : "tempo de estudo"} ·{" "}
+                  {now.toLocaleTimeString("pt-BR", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    timeZone: "America/Rio_Branco",
+                  })}
+                </p>
               </div>
-              <button type="button" onClick={() => setFocusPaused(!paused)} className="ml-1 grid h-8 w-8 place-items-center rounded-full bg-white/15 hover:bg-white/25" aria-label={paused ? "Retomar contagem" : "Pausar contagem"}>
+              <button
+                type="button"
+                onClick={() => setFocusPaused(!paused)}
+                className="ml-1 grid h-8 w-8 place-items-center rounded-full bg-white/15 hover:bg-white/25"
+                aria-label={paused ? "Retomar contagem" : "Pausar contagem"}
+              >
                 {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
               </button>
             </div>
-            <nav className="flex items-center gap-1.5" aria-label="Navegação do modo foco">
-              <button type="button" disabled={!p.onPrev} onClick={p.onPrev} className="flex items-center gap-1 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold hover:bg-white/25 disabled:opacity-40">
-                <ChevronLeft className="h-4 w-4" /> <span className="hidden sm:inline">{p.prevLabel ?? "Anterior"}</span>
+            <div className="focus-study-actions col-span-2 flex min-w-0 flex-wrap items-center justify-end gap-1.5 lg:col-span-1">
+              <nav className="flex items-center gap-1.5" aria-label="Navegação do modo foco">
+                <button
+                  type="button"
+                  disabled={!p.onPrev}
+                  onClick={p.onPrev}
+                  aria-label={p.prevLabel ?? "Anterior"}
+                  title={p.prevLabel ?? "Anterior"}
+                  className="flex items-center gap-1 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold hover:bg-white/25 disabled:opacity-40"
+                >
+                  <ChevronLeft className="h-4 w-4" />{" "}
+                  <span className="hidden sm:inline">Anterior</span>
+                </button>
+                {p.position && (
+                  <span className="hidden whitespace-nowrap px-1 text-xs font-medium text-white/85 xl:inline">
+                    {p.position}
+                  </span>
+                )}
+                <button
+                  type="button"
+                  disabled={!p.onNext}
+                  onClick={p.onNext}
+                  aria-label={p.nextLabel ?? "Próxima"}
+                  title={p.nextLabel ?? "Próxima"}
+                  className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-indigo-800 hover:bg-white/90 disabled:opacity-40"
+                >
+                  <span className="hidden sm:inline">Próxima</span>{" "}
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </nav>
+              {p.tools && (
+                <button
+                  type="button"
+                  onClick={() => setToolsOpen((v) => !v)}
+                  aria-pressed={toolsOpen}
+                  aria-label="Ferramentas"
+                  className="flex items-center gap-1.5 rounded-lg bg-amber-400 px-3 py-2 text-sm font-bold text-amber-950 hover:bg-amber-300"
+                >
+                  <Wrench className="h-4 w-4" />{" "}
+                  <span className="hidden sm:inline">Ferramentas</span>
+                </button>
+              )}
+              {p.extra}
+              <button
+                type="button"
+                onClick={() => void requestExit()}
+                aria-label="Sair do modo foco"
+                title="Sair do modo foco (Esc)"
+                className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15"
+              >
+                <X className="h-4 w-4" /> <span className="hidden sm:inline">Sair</span>
               </button>
-              {p.position && <span className="hidden px-1 text-sm font-medium text-white/85 md:inline">{p.position}</span>}
-              <button type="button" disabled={!p.onNext} onClick={p.onNext} className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-indigo-800 hover:bg-white/90 disabled:opacity-40">
-                <span className="hidden sm:inline">{p.nextLabel ?? "Próxima"}</span> <ChevronRight className="h-4 w-4" />
-              </button>
-            </nav>
-            {p.tools && (
-              <button type="button" onClick={() => setToolsOpen((v) => !v)} aria-pressed={toolsOpen} className="flex items-center gap-1.5 rounded-lg bg-amber-400 px-3 py-2 text-sm font-bold text-amber-950 hover:bg-amber-300">
-                <Wrench className="h-4 w-4" /> Ferramentas
-              </button>
-            )}
-            {p.extra}
-            <button type="button" onClick={() => void requestExit()} className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15">
-              <X className="h-4 w-4" /> Sair <span className="hidden text-white/70 lg:inline">(Esc)</span>
-            </button>
+            </div>
           </div>
           {p.progress !== undefined && (
-            <div className="h-1.5 bg-black/25" role="progressbar" aria-valuenow={Math.round(p.progress)} aria-valuemin={0} aria-valuemax={100} aria-label="Progresso do curso">
-              <div className="h-full bg-gradient-to-r from-amber-300 to-emerald-300 transition-all" style={{ width: `${Math.min(100, Math.max(0, p.progress))}%` }} />
+            <div
+              className="h-1 bg-black/25"
+              role="progressbar"
+              aria-valuenow={Math.round(p.progress)}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-label="Progresso do curso"
+            >
+              <div
+                className="h-full bg-gradient-to-r from-amber-300 to-emerald-300 transition-all"
+                style={{ width: `${Math.min(100, Math.max(0, p.progress))}%` }}
+              />
             </div>
           )}
         </header>
-        {p.tools && toolsOpen && <StudyToolsPanel area={p.tools} notesKey={p.notesKey} onClose={() => setToolsOpen(false)} />}
+        {p.tools && toolsOpen && (
+          <StudyToolsPanel
+            area={p.tools}
+            notesKey={p.notesKey}
+            topOffset={barHeight}
+            onClose={() => setToolsOpen(false)}
+          />
+        )}
       </>
     );
 
