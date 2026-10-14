@@ -29,6 +29,16 @@ import {
 } from "@/lib/penalCalc";
 import { PenalExample } from "@/components/study/PenalExample";
 import { dosimetryExamples, remitionExample } from "@/lib/penalExamples";
+import { PenalOffenderSelector } from "@/components/study/PenalOffenderSelector";
+import {
+  INITIAL_OFFENDER,
+  offenderLabel,
+  recommendedProgression,
+  recommendedParole,
+  offenderCategoryCompatible,
+  policyForOffender,
+  type OffenderProfile,
+} from "@/lib/penalOffender";
 import { PenalCrimeContext } from "@/components/study/PenalCrimeContext";
 import {
   crimePolicy,
@@ -155,6 +165,7 @@ function DosimetriaTab({
   extermination,
   setExtermination,
   onSentence,
+  offender,
 }: {
   crimeId: string;
   setCrimeId: (id: string) => void;
@@ -162,6 +173,7 @@ function DosimetriaTab({
   extermination: boolean;
   setExtermination: (value: boolean) => void;
   onSentence: (days: number | null) => void;
+  offender: OffenderProfile;
 }) {
   const crime = CRIMES.find((c) => c.id === crimeId);
   const [min, setMin] = useState<Pena>(crime ? crime.min : { anos: 0, meses: 0, dias: 0 });
@@ -174,7 +186,7 @@ function DosimetriaTab({
   const [aum, setAum] = useState<Fracao[]>([]);
   const [dim, setDim] = useState<Fracao[]>([]);
   const [causesConfirmed, setCausesConfirmed] = useState(false);
-  const [reinc, setReinc] = useState(false);
+  const reinc = offender.kind === "recurrent";
   const [violencia, setViolencia] = useState(true);
   const [culposo, setCulposo] = useState(false);
   const [tipoManual, setTipoManual] = useState<"reclusão" | "detenção">("reclusão");
@@ -187,7 +199,6 @@ function DosimetriaTab({
     setAum([]);
     setDim([]);
     setCausesConfirmed(false);
-    setReinc(false);
     setFCirc({ num: 1, den: 8 });
     setFAg({ num: 1, den: 6 });
     const c = CRIMES.find((x) => x.id === id);
@@ -215,7 +226,7 @@ function DosimetriaTab({
     max,
     circunstanciasNegativas: circ,
     fracaoCircunstancia: fCirc,
-    agravantes: agr,
+    agravantes: agr + (reinc ? 1 : 0),
     atenuantes: aten,
     fracaoAgravanteAtenuante: fAg,
     aumentos: aum,
@@ -241,8 +252,13 @@ function DosimetriaTab({
   useEffect(() => {
     onSentence(out?.final ?? null);
   }, [out?.final, onSentence]);
-  const sentencePolicy = policyForSentence(policy, out?.final ?? null, violencia, culposo);
-  const regime = out ? regimeInicial(out.final, reinc, tipo, circ === 0) : null;
+  const sentencePolicy = policyForOffender(
+    policyForSentence(policy, out?.final ?? null, violencia, culposo),
+    offender,
+  );
+  const regime = out
+    ? regimeInicial(out.final, reinc, tipo, circ === 0 && offender.record !== "bad")
+    : null;
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <section
@@ -294,6 +310,13 @@ function DosimetriaTab({
       <PenalCrimeContext policy={sentencePolicy} />
       <section className={card}>
         <h2 className="text-lg font-bold">Dados do crime e das fases</h2>
+        {offender.record === "bad" && (
+          <p className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
+            Foram informados maus antecedentes. Confira sua valoração no art. 59 e registre as
+            circunstâncias pertinentes; a seleção não cria automaticamente uma fração judicial. Não
+            duplique a mesma condenação como antecedente e reincidência.
+          </p>
+        )}
         <p className="text-sm text-muted-foreground">
           Os exemplos usam a redação cadastrada em 12/10/2026. Para fatos anteriores, confira a lei
           aplicável e informe os limites manualmente. Multa e concurso de crimes não são calculados.
@@ -316,7 +339,8 @@ function DosimetriaTab({
           </select>
         </label>
         <p className="text-xs text-muted-foreground">
-          Trocar o crime inicia um novo exemplo: as fases e a reincidência são zeradas.
+          Trocar o crime inicia um novo exemplo: as fases são zeradas. O perfil da pessoa permanece
+          selecionado.
         </p>
         <label className="block text-sm font-medium">
           Crime (preceito do texto compilado)
@@ -382,7 +406,7 @@ function DosimetriaTab({
             onChange={setFCirc}
           />
           <label className="text-sm font-medium">
-            2ª fase: agravantes
+            2ª fase: outras agravantes (sem contar reincidência)
             <input
               className={cn(field, "mt-1")}
               type="number"
@@ -462,10 +486,13 @@ function DosimetriaTab({
           Crime culposo (disponível ao informar outro crime)
         </label>
         <div className="flex flex-wrap gap-4 text-sm">
-          <label className="flex items-center gap-2">
-            <input type="checkbox" checked={reinc} onChange={(e) => setReinc(e.target.checked)} />{" "}
-            Réu reincidente
-          </label>
+          <p className="text-xs text-muted-foreground">
+            {offenderLabel(offender)}:{" "}
+            {reinc
+              ? "a reincidência entra uma vez na segunda fase, com a fração do exercício. Não a duplique em antecedentes ou outras agravantes"
+              : "sem agravante de reincidência informada"}{" "}
+            (CP, arts. 61, I, 63–64 e 67).
+          </p>
           <label className="flex items-center gap-2">
             <input
               type="checkbox"
@@ -529,8 +556,11 @@ function DosimetriaTab({
                 <p className="mt-2 text-sm">
                   Exemplo: uma pessoa com pena simulada de {formatPena(diasParaPena(out.final))},{" "}
                   {reinc ? "reincidente" : "não reincidente"}, com {tipo} e circunstâncias{" "}
-                  {circ === 0 ? "favoráveis" : "desfavoráveis informadas"}, recebe neste exercício a
-                  indicação “{regime.regime}”. Essa indicação não concede um regime automaticamente.
+                  {circ === 0 && offender.record !== "bad"
+                    ? "sem fatores desfavoráveis informados"
+                    : "desfavoráveis informadas"}
+                  , recebe neste exercício a indicação “{regime.regime}”. Essa indicação não concede
+                  um regime automaticamente.
                 </p>
               </Result>
             )}
@@ -566,26 +596,48 @@ function ExecucaoTab({
   setRemido,
   policy,
   sentenceDays,
+  offender,
 }: {
   remido: number;
   setRemido: (days: number) => void;
   policy: CrimePolicy;
   sentenceDays: number | null;
+  offender: OffenderProfile;
 }) {
-  const [pena, setPena] = useState<Pena>({ anos: 6, meses: 0, dias: 0 });
+  const [manualPena, setManualPena] = useState<Pena | null>(null);
+  const pena =
+    manualPena ??
+    (sentenceDays !== null ? diasParaPena(sentenceDays) : { anos: 0, meses: 0, dias: 0 });
+  const setPena = (value: Pena) => setManualPena(value);
   const [inicio, setInicio] = useState(acreDateKey());
-  const [catId, setCatId] = useState("manual");
-  const [fracaoManual, setFracaoManual] = useState<Fracao>({ num: 1, den: 6 });
-  const [regraConfirmada, setRegraConfirmada] = useState(false);
-  const [livId, setLivId] = useState(
-    policy.classification === "hediondo" || policy.classification === "equiparado"
-      ? "doistercos"
-      : policy.classification === "desconhecido"
-        ? "vedado"
-        : "terco",
-  );
-  const [specificRecidivism, setSpecificRecidivism] = useState(false);
-  const special = policy.classification === "hediondo" || policy.classification === "equiparado";
+  const profileKey = JSON.stringify(offender);
+  const suggestedProgression = recommendedProgression(policy, offender);
+  const [categoryOverride, setCategoryOverride] = useState<string | null>(null);
+  const catId = categoryOverride ?? suggestedProgression.id;
+  const setCatId = (value: string) => setCategoryOverride(value);
+  const [fracaoManual, setFracaoManual] = useState<Fracao>({ num: 0, den: 0 });
+  const [confirmedProfile, setConfirmedProfile] = useState<string | null>(null);
+  const [ruleReviewed, setRuleReviewed] = useState(false);
+  const regraConfirmada = confirmedProfile === profileKey;
+  const setRegraConfirmada = (value: boolean) => {
+    setConfirmedProfile(value ? profileKey : null);
+    if (!value) setRuleReviewed(false);
+  };
+  const suggestedParole = recommendedParole(policy, offender, catId);
+  const [paroleOverride, setParoleOverride] = useState<string | null>(null);
+  const livId = paroleOverride === "vedado" ? "vedado" : suggestedParole.id;
+  const setLivId = (value: string) => setParoleOverride(value);
+  const specificRecidivism = offender.kind === "recurrent" && offender.specificSpecial;
+  useEffect(() => {
+    setCategoryOverride(null);
+    setParoleOverride(null);
+    setConfirmedProfile(null);
+    setRuleReviewed(false);
+  }, [profileKey]);
+  useEffect(() => {
+    setConfirmedProfile(null);
+    setRuleReviewed(false);
+  }, [remido, sentenceDays]);
   const [detracao, setDetracao] = useState(0);
 
   const cat = CATEGORIAS_PROGRESSAO.find((c) => c.id === catId) ?? {
@@ -617,34 +669,38 @@ function ExecucaoTab({
           <Button
             variant="outline"
             onClick={() => {
-              setPena(diasParaPena(sentenceDays));
+              setManualPena(null);
               setRegraConfirmada(false);
             }}
           >
             Usar pena simulada: {formatPena(diasParaPena(sentenceDays))}
           </Button>
         )}
-        <label className="flex items-start gap-2 text-sm">
-          <input
-            type="checkbox"
-            checked={specificRecidivism}
-            disabled={!special}
-            onChange={(e) => {
-              setSpecificRecidivism(e.target.checked);
-              setRegraConfirmada(false);
-              if (e.target.checked) setLivId("vedado");
-            }}
-          />
-          Reincidência específica em hediondo/equiparado — conferir o enquadramento
-        </label>
-        <PenaInput label="Pena total a cumprir" value={pena} onChange={setPena} />
+        <p className="rounded-xl bg-muted p-3 text-sm">
+          <strong>{offenderLabel(offender)}</strong>
+          <br />
+          {suggestedProgression.note}
+          <br />
+          {suggestedParole.note}
+        </p>
+        <PenaInput
+          label={manualPena ? "Pena fixada manualmente" : "Pena vinculada à dosimetria"}
+          value={pena}
+          onChange={(p) => {
+            setPena(p);
+            setRegraConfirmada(false);
+          }}
+        />
         <label className="block text-sm font-medium">
           Data-base da primeira progressão (sem interrupções)
           <input
             className={cn(field, "mt-1")}
             type="date"
             value={inicio}
-            onChange={(e) => setInicio(e.target.value)}
+            onChange={(e) => {
+              setInicio(e.target.value);
+              setRegraConfirmada(false);
+            }}
           />
         </label>
         <label className="block text-sm font-medium">
@@ -659,7 +715,14 @@ function ExecucaoTab({
           >
             <option value="manual">Informar a fração aplicável ao exercício</option>
             {CATEGORIAS_PROGRESSAO.map((c) => (
-              <option key={c.id} value={c.id} disabled={!compatibleProgression(policy, c.id)}>
+              <option
+                key={c.id}
+                value={c.id}
+                disabled={
+                  !compatibleProgression(policy, c.id) ||
+                  !offenderCategoryCompatible(policy, offender, c.id)
+                }
+              >
                 {c.label}
               </option>
             ))}
@@ -678,7 +741,10 @@ function ExecucaoTab({
                 min={1}
                 className={field}
                 value={fracaoManual.num}
-                onChange={(e) => setFracaoManual({ ...fracaoManual, num: num(e.target.value) })}
+                onChange={(e) => {
+                  setFracaoManual({ ...fracaoManual, num: num(e.target.value) });
+                  setRegraConfirmada(false);
+                }}
               />
             </label>
             <label className="text-sm">
@@ -688,7 +754,10 @@ function ExecucaoTab({
                 min={1}
                 className={field}
                 value={fracaoManual.den}
-                onChange={(e) => setFracaoManual({ ...fracaoManual, den: num(e.target.value) })}
+                onChange={(e) => {
+                  setFracaoManual({ ...fracaoManual, den: num(e.target.value) });
+                  setRegraConfirmada(false);
+                }}
               />
             </label>
           </div>
@@ -701,9 +770,15 @@ function ExecucaoTab({
         <label className="flex items-start gap-2 text-sm">
           <input
             type="checkbox"
-            checked={regraConfirmada}
-            disabled={!compatibleProgression(policy, catId)}
-            onChange={(e) => setRegraConfirmada(e.target.checked)}
+            checked={ruleReviewed}
+            disabled={
+              !compatibleProgression(policy, catId) ||
+              !offenderCategoryCompatible(policy, offender, catId)
+            }
+            onChange={(e) => {
+              setRuleReviewed(e.target.checked);
+              if (!e.target.checked) setConfirmedProfile(null);
+            }}
           />{" "}
           Conferi a fração e as vedações para o caso de estudo, incluindo a lei no tempo.
         </label>
@@ -712,15 +787,19 @@ function ExecucaoTab({
           <select
             className={cn(field, "mt-1")}
             value={livId}
-            onChange={(e) => setLivId(e.target.value)}
+            onChange={(e) => {
+              setLivId(e.target.value);
+              setRegraConfirmada(false);
+            }}
           >
-            <option value="vedado">Livramento vedado para a hipótese estudada</option>
+            <option value="vedado">Não calcular: vedação ou dados insuficientes</option>
             {LIVRAMENTO.map((l) => (
               <option
                 key={l.id}
                 value={l.id}
                 disabled={
                   !compatibleParole(policy, l.id, catId, specificRecidivism) ||
+                  l.id !== suggestedParole.id ||
                   (l.id !== "vedado" && (!result.value || result.value.penaDias < 720))
                 }
               >
@@ -737,7 +816,10 @@ function ExecucaoTab({
               type="number"
               min={0}
               value={detracao}
-              onChange={(e) => setDetracao(num(e.target.value))}
+              onChange={(e) => {
+                setDetracao(num(e.target.value));
+                setRegraConfirmada(false);
+              }}
             />
           </label>
           <label className="text-sm font-medium">
@@ -747,10 +829,22 @@ function ExecucaoTab({
               type="number"
               min={0}
               value={remido}
-              onChange={(e) => setRemido(num(e.target.value))}
+              onChange={(e) => {
+                setRemido(num(e.target.value));
+                setRegraConfirmada(false);
+              }}
             />
           </label>
         </div>
+        <Button
+          className="w-full"
+          disabled={
+            !ruleReviewed || !result.value || !offenderCategoryCompatible(policy, offender, catId)
+          }
+          onClick={() => setRegraConfirmada(true)}
+        >
+          Calcular marcos com este perfil
+        </Button>
         <p className="text-xs text-muted-foreground">
           Não informe como detração dias já incluídos no período contado a partir da data-base. O
           tempo remido é computado como pena cumprida (LEP, art. 128), e a detração está no art. 42
@@ -766,11 +860,13 @@ function ExecucaoTab({
         )}
         {!regraConfirmada && (
           <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">
-            Confira e confirme a fração aplicável para exibir a projeção.
+            Confira a fração aplicável e clique em “Calcular marcos com este perfil” para exibir a
+            projeção.
           </p>
         )}
         {regraConfirmada &&
           compatibleProgression(policy, catId) &&
+          offenderCategoryCompatible(policy, offender, catId) &&
           prog &&
           lc &&
           fim !== undefined &&
@@ -888,6 +984,22 @@ function ExecucaoTab({
                     "CP, art. 83, e vedações especiais: comportamento, reincidência específica, reparação do dano e outros requisitos precisam ser analisados.",
                 }}
               />
+              <Result title="Ao concluir o tempo de pena · penal e execução" tone="warn">
+                <p>
+                  O marco abaixo é a duração integral do exercício, sem abatimentos ou interrupções.
+                  O reconhecimento da extinção da punibilidade cabe ao juízo da execução (LEP, art.
+                  66, II).
+                </p>
+                <p className="mt-2">
+                  No processo penal, essa data não é ordem automática de soltura nem decisão sobre
+                  outras medidas cautelares. Fiança e prisão preventiva têm requisitos próprios no
+                  CPP.
+                </p>
+                <p className="mt-2">
+                  O término não apaga automaticamente a condenação: a aferição de reincidência de um
+                  novo fato deve observar o período e as condições do CP, art. 64, I.
+                </p>
+              </Result>
               <Result title="Último dia da pena total informada (sem abatimentos)">
                 <p className="font-bold">{formatBr(fim)}</p>
                 <p className="text-muted-foreground">
@@ -917,10 +1029,28 @@ function ExecucaoTab({
 }
 
 // ───────── Prescrição ─────────
-function PrescricaoTab() {
-  const [pena, setPena] = useState<Pena>({ anos: 4, meses: 0, dias: 0 });
+function PrescricaoTab({
+  offender,
+  sentenceDays,
+  crimeId,
+}: {
+  offender: OffenderProfile;
+  sentenceDays: number | null;
+  crimeId: string;
+}) {
+  const [manualPena, setManualPena] = useState<Pena | null>(null);
+  const crime = CRIMES.find((c) => c.id === crimeId);
   const [executoria, setExecutoria] = useState(false);
-  const [reinc, setReinc] = useState(false);
+  const pena =
+    manualPena ??
+    (executoria && sentenceDays !== null
+      ? diasParaPena(sentenceDays)
+      : !executoria && crime
+        ? crime.max
+        : { anos: 0, meses: 0, dias: 0 });
+  const setPena = (p: Pena) => setManualPena(p);
+  useEffect(() => setManualPena(null), [crimeId]);
+  const reinc = offender.kind === "recurrent";
   const [idade, setIdade] = useState(false);
   const [sexual, setSexual] = useState(false);
   const [termo, setTermo] = useState("2020-01-01");
@@ -945,10 +1075,24 @@ function PrescricaoTab() {
           <input
             type="checkbox"
             checked={executoria}
-            onChange={(e) => setExecutoria(e.target.checked)}
+            onChange={(e) => {
+              setExecutoria(e.target.checked);
+              setManualPena(null);
+            }}
           />{" "}
           Simular pretensão executória pela pena aplicada (o termo inicial deve ser conferido)
         </label>
+        <p className="rounded-xl bg-muted p-3 text-sm">
+          <strong>{offenderLabel(offender)}.</strong>{" "}
+          {executoria && reinc
+            ? "Nesta hipótese executória, o prazo aumenta de um terço (CP, art. 110)."
+            : "A seleção de reincidência não aumenta o prazo da hipótese punitiva em abstrato."}
+        </p>
+        {executoria && sentenceDays !== null && (
+          <Button variant="outline" onClick={() => setManualPena(null)}>
+            Usar pena simulada: {formatPena(diasParaPena(sentenceDays))}
+          </Button>
+        )}
         <PenaInput
           label={executoria ? "Pena aplicada" : "Pena máxima cominada ao crime"}
           value={pena}
@@ -964,10 +1108,6 @@ function PrescricaoTab() {
           />
         </label>
         <div className="space-y-2 text-sm">
-          <label className="flex items-center gap-2">
-            <input type="checkbox" checked={reinc} onChange={(e) => setReinc(e.target.checked)} />{" "}
-            Condenado reincidente (aumenta 1/3 só na prescrição da pretensão executória)
-          </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" checked={idade} onChange={(e) => setIdade(e.target.checked)} />{" "}
             Menor de 21 anos ao tempo do crime ou maior de 70 na sentença
@@ -1125,12 +1265,14 @@ function PenalCalculatorPage() {
   const [diasRemidos, setDiasRemidos] = useState(0);
   const [crimeId, setCrimeIdState] = useState("cp157");
   const [extermination, setExtermination] = useState(false);
+  const [offender, setOffender] = useState<OffenderProfile>(INITIAL_OFFENDER);
   const [sentenceDays, setSentenceDays] = useState<number | null>(6 * 360);
   const policy = crimePolicy(crimeId, extermination);
   const setCrimeId = (id: string) => {
     if (id !== crimeId) {
       setExtermination(false);
       setDiasRemidos(0);
+      setOffender((profile) => ({ ...profile, specificSpecial: false }));
     }
     setCrimeIdState(id);
   };
@@ -1170,6 +1312,7 @@ function PenalCalculatorPage() {
         requisitos legais e das decisões pertinentes. Os exemplos legais têm conferência registrada
         em 12/10/2026; consulte a fonte e o edital antes de usá-los.
       </p>
+      <PenalOffenderSelector value={offender} onChange={setOffender} policy={policy} />
       <Tabs value={tab} onValueChange={(value) => setTab(value as typeof tab)}>
         <TabsList
           className="grid h-auto w-full grid-cols-2 gap-1 rounded-2xl bg-muted p-1.5 lg:grid-cols-4"
@@ -1194,6 +1337,7 @@ function PenalCalculatorPage() {
             extermination={extermination}
             setExtermination={setExtermination}
             onSentence={setSentenceDays}
+            offender={offender}
           />
         </TabsContent>
         <TabsContent value="execucao" forceMount className="mt-5 data-[state=inactive]:hidden">
@@ -1203,10 +1347,11 @@ function PenalCalculatorPage() {
             setRemido={setDiasRemidos}
             policy={policy}
             sentenceDays={sentenceDays}
+            offender={offender}
           />
         </TabsContent>
         <TabsContent value="prescricao" forceMount className="mt-5 data-[state=inactive]:hidden">
-          <PrescricaoTab />
+          <PrescricaoTab offender={offender} sentenceDays={sentenceDays} crimeId={crimeId} />
         </TabsContent>
         <TabsContent value="remicao" forceMount className="mt-5 data-[state=inactive]:hidden">
           <RemicaoTab

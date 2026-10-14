@@ -12,7 +12,7 @@ import { acreDate } from "@/lib/acreTime";
 const CONTEXT = {
   dosimetria: {
     slug: "codigo-penal",
-    articles: ["59", "61", "65", "67", "68", "33", "44", "77"],
+    articles: ["59", "61", "63", "64", "65", "67", "68", "33", "44", "77"],
     notes: ["59", "65", "68", "33", "44"],
   },
   execucao: { slug: "lep", articles: ["112", "126", "127", "128"], notes: ["112"] },

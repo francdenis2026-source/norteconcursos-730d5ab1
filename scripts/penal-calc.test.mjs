@@ -215,3 +215,42 @@ test('saída temporária e monitoração não são inferidas como concessões', 
   assert.match(find('cp213','Monitoração eletrônica').explanation,/não afasta uma vedação/);
   assert.equal(find('custom','Monitoração eletrônica').state,'nao-avaliado');
 });
+
+
+test('perfil compartilhado sugere progressão conforme primariedade e espécie de reincidência',async()=>{
+ const {INITIAL_OFFENDER,recommendedProgression,offenderCategoryCompatible}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const primary={...INITIAL_OFFENDER},generic={...primary,kind:'recurrent'},specific={...generic,specificSpecial:true};
+ assert.equal(recommendedProgression(crimePolicy('cp157'),primary).id,'i');
+ assert.equal(recommendedProgression(crimePolicy('cp157'),generic).id,'ii');
+ assert.equal(recommendedProgression(crimePolicy('cp155'),primary).id,'base');
+ assert.equal(recommendedProgression(crimePolicy('cp155'),generic).id,'iii');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),primary).id,'v');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),generic).id,'manual');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),specific).id,'vii');
+ assert.equal(recommendedProgression(crimePolicy('cp121q'),specific).id,'viii');
+ assert.equal(offenderCategoryCompatible(crimePolicy('cp157'),generic,'i'),false);
+});
+
+test('livramento exige antecedentes/natureza informados e respeita a vedação específica',async()=>{
+ const {INITIAL_OFFENDER,recommendedParole}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const common=crimePolicy('cp155'),special=crimePolicy('cp213');
+ assert.equal(recommendedParole(common,INITIAL_OFFENDER,'base').id,'vedado','primariedade não prova antecedentes');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,record:'good'},'base').id,'terco');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,kind:'recurrent'},'iii').id,'vedado');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,kind:'recurrent',previousIntent:'intentional'},'iii').id,'metade');
+ assert.equal(recommendedParole(special,{...INITIAL_OFFENDER,kind:'recurrent',specificSpecial:true},'vii').id,'vedado');
+ assert.equal(recommendedParole(special,INITIAL_OFFENDER,'v').id,'doistercos');
+});
+
+
+test('avisos do painel acompanham falta de dados e vedação do perfil compartilhado',async()=>{
+ const {INITIAL_OFFENDER,policyForOffender}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const rule=(p,title)=>p.rules.find(r=>r.title===title);
+ assert.equal(rule(policyForOffender(crimePolicy('cp155'),INITIAL_OFFENDER),'Livramento condicional').state,'nao-avaliado');
+ const specific={...INITIAL_OFFENDER,kind:'recurrent',specificSpecial:true};
+ assert.equal(rule(policyForOffender(crimePolicy('cp213'),specific),'Livramento condicional').state,'vedado');
+ assert.equal(rule(policyForOffender(crimePolicy('cp213'),{...INITIAL_OFFENDER,kind:'recurrent'}),'Progressão').state,'nao-avaliado');
+});
