@@ -1,0 +1,1055 @@
+[
+  {
+    "slug": "enem-portugues-fundamentos",
+    "discipline": "Língua Portuguesa",
+    "topic_label": "Leitura e argumentação",
+    "sort_order": 1,
+    "title": "ENEM — Interpretação, inferência e intenção do texto",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Língua Portuguesa.",
+    "body_md": "## O que você vai aprender\n\nInterpretação, inferência e intenção do texto. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Inferência\n\nConclusão sustentada por pistas do texto; não é uma opinião livre.\n\n### Tese\n\nIdeia central defendida, distinta do exemplo usado para apoiá-la.\n\n### Coesão\n\nPronomes, conectivos e repetições controladas encadeiam partes do texto.\n\n### Variação\n\nA linguagem se adequa ao interlocutor, ao gênero e à situação.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Um anúncio diz: “Leve sua garrafa. Pequenas escolhas reduzem o lixo”. Qual é a finalidade?\n> Resolução: O imperativo convida a uma ação. A referência ao lixo explica o benefício. A finalidade predominante é persuadir o leitor a adotar um hábito.\n\n> Exemplo resolvido 2: “A biblioteca ampliou o horário, mas poucos alunos compareceram.” Qual relação o conectivo expressa?\n> Resolução: “Mas” contrasta a expectativa de maior acesso com a baixa presença. Não indica causa nem conclusão.\n\n## Evite esta armadilha\n\nEscolher uma alternativa verdadeira no mundo, mas que o texto não permite concluir.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 1,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Inferência — o que significa?",
+        "b": "Conclusão sustentada por pistas do texto; não é uma opinião livre."
+      },
+      {
+        "f": "Tese — o que significa?",
+        "b": "Ideia central defendida, distinta do exemplo usado para apoiá-la."
+      },
+      {
+        "f": "Coesão — o que significa?",
+        "b": "Pronomes, conectivos e repetições controladas encadeiam partes do texto."
+      },
+      {
+        "f": "Variação — o que significa?",
+        "b": "A linguagem se adequa ao interlocutor, ao gênero e à situação."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Uma inferência deve ter apoio no texto.",
+        "a": true,
+        "why": "Conclusão sustentada por pistas do texto; não é uma opinião livre."
+      },
+      {
+        "q": "A tese pode ser diferente de um exemplo específico.",
+        "a": true,
+        "why": "Ideia central defendida, distinta do exemplo usado para apoiá-la."
+      },
+      {
+        "q": "O conectivo “mas” pode marcar oposição.",
+        "a": true,
+        "why": "Pronomes, conectivos e repetições controladas encadeiam partes do texto."
+      },
+      {
+        "q": "O registro linguístico depende do contexto.",
+        "a": true,
+        "why": "A linguagem se adequa ao interlocutor, ao gênero e à situação."
+      },
+      {
+        "q": "Inferir significa inventar a intenção do autor.",
+        "a": false,
+        "why": "Conclusão sustentada por pistas do texto; não é uma opinião livre."
+      },
+      {
+        "q": "Todo exemplo é a tese do texto.",
+        "a": false,
+        "why": "Ideia central defendida, distinta do exemplo usado para apoiá-la."
+      },
+      {
+        "q": "“Portanto” sempre indica oposição.",
+        "a": false,
+        "why": "Pronomes, conectivos e repetições controladas encadeiam partes do texto."
+      },
+      {
+        "q": "Toda variação informal constitui erro em qualquer gênero.",
+        "a": false,
+        "why": "A linguagem se adequa ao interlocutor, ao gênero e à situação."
+      }
+    ],
+    "_syllabus_topic_id": "5fb90589-41a8-5e8b-becc-62443956483c",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-literatura-fundamentos",
+    "discipline": "Literatura",
+    "topic_label": "Literatura e contexto",
+    "sort_order": 2,
+    "title": "ENEM — Recursos literários, vozes e contexto social",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Literatura.",
+    "body_md": "## O que você vai aprender\n\nRecursos literários, vozes e contexto social. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Eu lírico\n\nVoz que se expressa no poema; não coincide necessariamente com o autor.\n\n### Metáfora\n\nTransfere um sentido por aproximação, sem precisar usar “como”.\n\n### Ironia\n\nCria distância entre o sentido literal e o sentido pretendido no contexto.\n\n### Contexto\n\nAjuda a interpretar valores e tensões sociais, sem substituir a leitura.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Num verso fictício, “a cidade mastiga meus dias”, há descrição literal?\n> Resolução: Não. A cidade recebe uma ação humana para sugerir que a rotina urbana consome o tempo. A leitura deve explicar o efeito, e não apenas nomear a figura.\n\n> Exemplo resolvido 2: Um narrador elogia uma solução que o restante da cena revela desastrosa. Como ler o elogio?\n> Resolução: A contradição contextual pode produzir ironia. Procure a distância entre a fala e o acontecimento antes de assumir concordância.\n\n## Evite esta armadilha\n\nMemorizar escolas literárias sem observar linguagem, voz e conflito do trecho.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 2,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Eu lírico — o que significa?",
+        "b": "Voz que se expressa no poema; não coincide necessariamente com o autor."
+      },
+      {
+        "f": "Metáfora — o que significa?",
+        "b": "Transfere um sentido por aproximação, sem precisar usar “como”."
+      },
+      {
+        "f": "Ironia — o que significa?",
+        "b": "Cria distância entre o sentido literal e o sentido pretendido no contexto."
+      },
+      {
+        "f": "Contexto — o que significa?",
+        "b": "Ajuda a interpretar valores e tensões sociais, sem substituir a leitura."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O eu lírico pode ser uma voz construída.",
+        "a": true,
+        "why": "Voz que se expressa no poema; não coincide necessariamente com o autor."
+      },
+      {
+        "q": "Metáforas produzem sentidos figurados.",
+        "a": true,
+        "why": "Transfere um sentido por aproximação, sem precisar usar “como”."
+      },
+      {
+        "q": "O contexto pode ser decisivo para reconhecer ironia.",
+        "a": true,
+        "why": "Cria distância entre o sentido literal e o sentido pretendido no contexto."
+      },
+      {
+        "q": "Um trecho literário pode discutir relações sociais.",
+        "a": true,
+        "why": "Ajuda a interpretar valores e tensões sociais, sem substituir a leitura."
+      },
+      {
+        "q": "Eu lírico e autor são necessariamente idênticos.",
+        "a": false,
+        "why": "Voz que se expressa no poema; não coincide necessariamente com o autor."
+      },
+      {
+        "q": "Toda metáfora deve conter a palavra “como”.",
+        "a": false,
+        "why": "Transfere um sentido por aproximação, sem precisar usar “como”."
+      },
+      {
+        "q": "A ironia depende somente do significado isolado de uma palavra.",
+        "a": false,
+        "why": "Cria distância entre o sentido literal e o sentido pretendido no contexto."
+      },
+      {
+        "q": "Reconhecer uma escola dispensa interpretar o texto.",
+        "a": false,
+        "why": "Ajuda a interpretar valores e tensões sociais, sem substituir a leitura."
+      }
+    ],
+    "_syllabus_topic_id": "b5928772-d79c-53b3-a1b5-d1ecd33c8005",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-ingles-fundamentos",
+    "discipline": "Língua Inglesa",
+    "topic_label": "Leitura em língua estrangeira",
+    "sort_order": 3,
+    "title": "ENEM — Inglês: finalidade, referências e vocabulário em contexto",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Língua Inglesa.",
+    "body_md": "## O que você vai aprender\n\nInglês: finalidade, referências e vocabulário em contexto. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Leitura global\n\nIdentifique tema, gênero, público e finalidade antes de traduzir detalhes.\n\n### Referência\n\nPronomes como it e they retomam termos; confira número e contexto.\n\n### Conectivos\n\nBut marca contraste; because introduz causa; therefore anuncia conclusão.\n\n### Falso cognato\n\nUma palavra parecida com português pode ter outro sentido, como actually: na verdade.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: “Bring your own bottle. Together we can reduce waste.” O aviso quer informar uma receita?\n> Resolução: Não. Bring é um convite ou instrução. Bottle e reduce waste indicam uma campanha para reduzir resíduos.\n\n> Exemplo resolvido 2: “The service was expensive, but useful.” O que but relaciona?\n> Resolução: Contrasta o custo elevado com a utilidade. A frase não diz que o serviço era gratuito.\n\n## Evite esta armadilha\n\nTraduzir palavra por palavra e ignorar o propósito do texto.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 3,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Leitura global — o que significa?",
+        "b": "Identifique tema, gênero, público e finalidade antes de traduzir detalhes."
+      },
+      {
+        "f": "Referência — o que significa?",
+        "b": "Pronomes como it e they retomam termos; confira número e contexto."
+      },
+      {
+        "f": "Conectivos — o que significa?",
+        "b": "But marca contraste; because introduz causa; therefore anuncia conclusão."
+      },
+      {
+        "f": "Falso cognato — o que significa?",
+        "b": "Uma palavra parecida com português pode ter outro sentido, como actually: na verdade."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O gênero ajuda a identificar a finalidade.",
+        "a": true,
+        "why": "Identifique tema, gênero, público e finalidade antes de traduzir detalhes."
+      },
+      {
+        "q": "They pode retomar um grupo mencionado antes.",
+        "a": true,
+        "why": "Pronomes como it e they retomam termos; confira número e contexto."
+      },
+      {
+        "q": "But pode expressar contraste.",
+        "a": true,
+        "why": "But marca contraste; because introduz causa; therefore anuncia conclusão."
+      },
+      {
+        "q": "Actually pode significar “na verdade”.",
+        "a": true,
+        "why": "Uma palavra parecida com português pode ter outro sentido, como actually: na verdade."
+      },
+      {
+        "q": "É necessário conhecer cada palavra para captar o tema.",
+        "a": false,
+        "why": "Identifique tema, gênero, público e finalidade antes de traduzir detalhes."
+      },
+      {
+        "q": "They sempre se refere a uma única pessoa.",
+        "a": false,
+        "why": "Pronomes como it e they retomam termos; confira número e contexto."
+      },
+      {
+        "q": "Because expressa necessariamente oposição.",
+        "a": false,
+        "why": "But marca contraste; because introduz causa; therefore anuncia conclusão."
+      },
+      {
+        "q": "Actually significa sempre “atualmente”.",
+        "a": false,
+        "why": "Uma palavra parecida com português pode ter outro sentido, como actually: na verdade."
+      }
+    ],
+    "_syllabus_topic_id": "ed209f8c-4f46-572b-9328-7b2330ee3169",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-espanhol-fundamentos",
+    "discipline": "Língua Espanhola",
+    "topic_label": "Leitura em língua estrangeira",
+    "sort_order": 4,
+    "title": "ENEM — Espanhol: leitura, conectivos e falsos cognatos",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Língua Espanhola.",
+    "body_md": "## O que você vai aprender\n\nEspanhol: leitura, conectivos e falsos cognatos. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Leitura contextual\n\nAssocie palavras ao tema, ao gênero e à função social do texto.\n\n### Contraste\n\nPero e sin embargo podem opor ideias.\n\n### Falso cognato\n\nEmbarazada significa grávida; apellido significa sobrenome.\n\n### Referência\n\nExpressões demonstrativas e pronomes retomam informações do texto.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: “La entrada es gratuita, pero hay que reservar.” Pode entrar sem providência prévia?\n> Resolução: Não. A entrada é gratuita, porém a reserva é exigida. O contraste não elimina a segunda informação.\n\n> Exemplo resolvido 2: Um formulário pede “nombre y apellido”. O que preencher?\n> Resolução: Nome e sobrenome. A semelhança de apellido com “apelido” não determina sua tradução.\n\n## Evite esta armadilha\n\nDesconsiderar a frase inteira ao reconhecer uma palavra parecida.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 4,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Leitura contextual — o que significa?",
+        "b": "Associe palavras ao tema, ao gênero e à função social do texto."
+      },
+      {
+        "f": "Contraste — o que significa?",
+        "b": "Pero e sin embargo podem opor ideias."
+      },
+      {
+        "f": "Falso cognato — o que significa?",
+        "b": "Embarazada significa grávida; apellido significa sobrenome."
+      },
+      {
+        "f": "Referência — o que significa?",
+        "b": "Expressões demonstrativas e pronomes retomam informações do texto."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Pero pode marcar contraste.",
+        "a": true,
+        "why": "Associe palavras ao tema, ao gênero e à função social do texto."
+      },
+      {
+        "q": "Apellido pode significar sobrenome.",
+        "a": true,
+        "why": "Pero e sin embargo podem opor ideias."
+      },
+      {
+        "q": "O tema orienta a interpretação do vocabulário.",
+        "a": true,
+        "why": "Embarazada significa grávida; apellido significa sobrenome."
+      },
+      {
+        "q": "Uma entrada gratuita pode exigir reserva.",
+        "a": true,
+        "why": "Expressões demonstrativas e pronomes retomam informações do texto."
+      },
+      {
+        "q": "Embarazada significa necessariamente envergonhada.",
+        "a": false,
+        "why": "Associe palavras ao tema, ao gênero e à função social do texto."
+      },
+      {
+        "q": "Sin embargo sempre introduz uma causa.",
+        "a": false,
+        "why": "Pero e sin embargo podem opor ideias."
+      },
+      {
+        "q": "Um cognato aparente garante a tradução.",
+        "a": false,
+        "why": "Embarazada significa grávida; apellido significa sobrenome."
+      },
+      {
+        "q": "A gratuidade implica ausência de todas as condições de acesso.",
+        "a": false,
+        "why": "Expressões demonstrativas e pronomes retomam informações do texto."
+      }
+    ],
+    "_syllabus_topic_id": "c4a6cf8f-5271-5291-a031-e3024930a8c3",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-historia-fundamentos",
+    "discipline": "História",
+    "topic_label": "Fontes e processos históricos",
+    "sort_order": 5,
+    "title": "ENEM — História: fontes, cidadania e transformações sociais",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar História.",
+    "body_md": "## O que você vai aprender\n\nHistória: fontes, cidadania e transformações sociais. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Fonte histórica\n\nDocumento produzido em um contexto, por um sujeito e com uma finalidade.\n\n### Anacronismo\n\nProjetar categorias atuais no passado sem mediação histórica.\n\n### Cidadania\n\nDireitos e participação foram disputados; não avançaram de forma uniforme.\n\n### Industrialização\n\nTransforma trabalho, produção e espaços urbanos; seus efeitos são desiguais.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Dois jornais do mesmo período descrevem uma greve de maneiras diferentes. Qual deles é automaticamente falso?\n> Resolução: Nenhum por esse único motivo. Compare autoria, público, evidências e interesses. A divergência pode revelar posições sociais.\n\n> Exemplo resolvido 2: Uma lei antiga reconheceu um direito. Isso prova que todos passaram imediatamente a exercê-lo?\n> Resolução: Não. Distinga reconhecimento formal de condições sociais de acesso e implementação.\n\n## Evite esta armadilha\n\nTratar processos complexos como resultado de uma única causa ou de um único herói.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 5,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Fonte histórica — o que significa?",
+        "b": "Documento produzido em um contexto, por um sujeito e com uma finalidade."
+      },
+      {
+        "f": "Anacronismo — o que significa?",
+        "b": "Projetar categorias atuais no passado sem mediação histórica."
+      },
+      {
+        "f": "Cidadania — o que significa?",
+        "b": "Direitos e participação foram disputados; não avançaram de forma uniforme."
+      },
+      {
+        "f": "Industrialização — o que significa?",
+        "b": "Transforma trabalho, produção e espaços urbanos; seus efeitos são desiguais."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A finalidade da fonte influencia sua leitura.",
+        "a": true,
+        "why": "Documento produzido em um contexto, por um sujeito e com uma finalidade."
+      },
+      {
+        "q": "É possível haver direitos formais e exclusão prática.",
+        "a": true,
+        "why": "Projetar categorias atuais no passado sem mediação histórica."
+      },
+      {
+        "q": "A industrialização altera relações de trabalho.",
+        "a": true,
+        "why": "Direitos e participação foram disputados; não avançaram de forma uniforme."
+      },
+      {
+        "q": "Anacronismo pode distorcer a interpretação.",
+        "a": true,
+        "why": "Transforma trabalho, produção e espaços urbanos; seus efeitos são desiguais."
+      },
+      {
+        "q": "Uma fonte é sempre neutra.",
+        "a": false,
+        "why": "Documento produzido em um contexto, por um sujeito e com uma finalidade."
+      },
+      {
+        "q": "Toda mudança histórica tem uma única causa.",
+        "a": false,
+        "why": "Projetar categorias atuais no passado sem mediação histórica."
+      },
+      {
+        "q": "Direitos surgiram igualmente para todos os grupos.",
+        "a": false,
+        "why": "Direitos e participação foram disputados; não avançaram de forma uniforme."
+      },
+      {
+        "q": "Categorias atuais podem ser aplicadas ao passado sem contexto.",
+        "a": false,
+        "why": "Transforma trabalho, produção e espaços urbanos; seus efeitos são desiguais."
+      }
+    ],
+    "_syllabus_topic_id": "79945ed6-3740-5a64-b717-c4178876f94b",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-geografia-fundamentos",
+    "discipline": "Geografia",
+    "topic_label": "Espaço, ambiente e cartografia",
+    "sort_order": 6,
+    "title": "ENEM — Geografia: escala, urbanização e questões ambientais",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Geografia.",
+    "body_md": "## O que você vai aprender\n\nGeografia: escala, urbanização e questões ambientais. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Escala\n\nRazão entre medida no mapa e medida real, com unidades compatíveis.\n\n### Urbanização\n\nCrescimento da participação da população urbana; não é sinônimo de crescimento de qualquer cidade.\n\n### Clima e tempo\n\nClima descreve padrões de longo prazo; tempo corresponde à condição atmosférica de um momento.\n\n### Ambiente\n\nProblemas ambientais relacionam processos naturais e decisões sociais.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Num mapa de escala 1:100 000, dois pontos estão a 3 cm. Qual distância real?\n> Resolução: 3 × 100 000 = 300 000 cm. Divida por 100 000 cm/km: a distância é 3 km.\n\n> Exemplo resolvido 2: Um bairro impermeabilizou o solo e passou a sofrer alagamentos. Basta atribuir tudo à chuva?\n> Resolução: Não. A impermeabilização reduz infiltração e aumenta escoamento. Analise drenagem, ocupação e intensidade da chuva.\n\n## Evite esta armadilha\n\nConfundir a grandeza da escala com o tamanho do denominador.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 6,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Escala — o que significa?",
+        "b": "Razão entre medida no mapa e medida real, com unidades compatíveis."
+      },
+      {
+        "f": "Urbanização — o que significa?",
+        "b": "Crescimento da participação da população urbana; não é sinônimo de crescimento de qualquer cidade."
+      },
+      {
+        "f": "Clima e tempo — o que significa?",
+        "b": "Clima descreve padrões de longo prazo; tempo corresponde à condição atmosférica de um momento."
+      },
+      {
+        "f": "Ambiente — o que significa?",
+        "b": "Problemas ambientais relacionam processos naturais e decisões sociais."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A escala exige compatibilizar unidades.",
+        "a": true,
+        "why": "Razão entre medida no mapa e medida real, com unidades compatíveis."
+      },
+      {
+        "q": "Tempo e clima são conceitos diferentes.",
+        "a": true,
+        "why": "Crescimento da participação da população urbana; não é sinônimo de crescimento de qualquer cidade."
+      },
+      {
+        "q": "Impermeabilização pode aumentar o escoamento superficial.",
+        "a": true,
+        "why": "Clima descreve padrões de longo prazo; tempo corresponde à condição atmosférica de um momento."
+      },
+      {
+        "q": "A urbanização deve ser analisada com indicadores e contexto.",
+        "a": true,
+        "why": "Problemas ambientais relacionam processos naturais e decisões sociais."
+      },
+      {
+        "q": "Na escala 1:100 000, 1 cm representa 100 000 km.",
+        "a": false,
+        "why": "Razão entre medida no mapa e medida real, com unidades compatíveis."
+      },
+      {
+        "q": "Um dia frio demonstra sozinho uma tendência climática.",
+        "a": false,
+        "why": "Crescimento da participação da população urbana; não é sinônimo de crescimento de qualquer cidade."
+      },
+      {
+        "q": "Impermeabilizar sempre aumenta a infiltração.",
+        "a": false,
+        "why": "Clima descreve padrões de longo prazo; tempo corresponde à condição atmosférica de um momento."
+      },
+      {
+        "q": "Urbanização elimina automaticamente desigualdades.",
+        "a": false,
+        "why": "Problemas ambientais relacionam processos naturais e decisões sociais."
+      }
+    ],
+    "_syllabus_topic_id": "e713cbf5-cfc7-5b12-bac3-afd065f3ed4b",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-filosofia-fundamentos",
+    "discipline": "Filosofia",
+    "topic_label": "Ética e argumentação",
+    "sort_order": 7,
+    "title": "ENEM — Filosofia: argumentos, ética e política",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Filosofia.",
+    "body_md": "## O que você vai aprender\n\nFilosofia: argumentos, ética e política. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Argumento\n\nPremissas oferecem razões para uma conclusão; verifique a ligação entre elas.\n\n### Ética\n\nInvestiga critérios de ação e justificação; não se reduz a costumes locais.\n\n### Política\n\nDiscute poder, justiça, participação e organização coletiva.\n\n### Falácia\n\nRaciocínio aparentemente convincente cujo apoio à conclusão é inadequado.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: “Essa proposta é ruim porque seu defensor é antipático.” A razão examina a proposta?\n> Resolução: Não. Ataca a pessoa sem avaliar conteúdo ou consequências. É um exemplo de ataque pessoal, inadequado como refutação.\n\n> Exemplo resolvido 2: Uma decisão beneficia muitos, mas viola uma regra de dever. Há uma única resposta ética automática?\n> Resolução: Não. Perspectivas consequencialistas e deontológicas usam critérios diferentes. Identifique o critério adotado pelo texto.\n\n## Evite esta armadilha\n\nConfundir explicar a posição de um filósofo com concordar pessoalmente com ela.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 7,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Argumento — o que significa?",
+        "b": "Premissas oferecem razões para uma conclusão; verifique a ligação entre elas."
+      },
+      {
+        "f": "Ética — o que significa?",
+        "b": "Investiga critérios de ação e justificação; não se reduz a costumes locais."
+      },
+      {
+        "f": "Política — o que significa?",
+        "b": "Discute poder, justiça, participação e organização coletiva."
+      },
+      {
+        "f": "Falácia — o que significa?",
+        "b": "Raciocínio aparentemente convincente cujo apoio à conclusão é inadequado."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Premissas sustentam conclusões.",
+        "a": true,
+        "why": "Premissas oferecem razões para uma conclusão; verifique a ligação entre elas."
+      },
+      {
+        "q": "Atacar uma pessoa não refuta necessariamente sua tese.",
+        "a": true,
+        "why": "Investiga critérios de ação e justificação; não se reduz a costumes locais."
+      },
+      {
+        "q": "Teorias éticas podem usar critérios distintos.",
+        "a": true,
+        "why": "Discute poder, justiça, participação e organização coletiva."
+      },
+      {
+        "q": "A interpretação deve identificar a posição apresentada.",
+        "a": true,
+        "why": "Raciocínio aparentemente convincente cujo apoio à conclusão é inadequado."
+      },
+      {
+        "q": "Toda opinião constitui um argumento completo.",
+        "a": false,
+        "why": "Premissas oferecem razões para uma conclusão; verifique a ligação entre elas."
+      },
+      {
+        "q": "A popularidade prova a verdade de uma afirmação.",
+        "a": false,
+        "why": "Investiga critérios de ação e justificação; não se reduz a costumes locais."
+      },
+      {
+        "q": "Todas as teorias éticas avaliam apenas consequências.",
+        "a": false,
+        "why": "Discute poder, justiça, participação e organização coletiva."
+      },
+      {
+        "q": "Compreender uma tese exige aceitá-la.",
+        "a": false,
+        "why": "Raciocínio aparentemente convincente cujo apoio à conclusão é inadequado."
+      }
+    ],
+    "_syllabus_topic_id": "2fcc4ab7-be83-5307-b077-27cda5dabc7b",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-sociologia-fundamentos",
+    "discipline": "Sociologia",
+    "topic_label": "Cultura e sociedade",
+    "sort_order": 8,
+    "title": "ENEM — Sociologia: cultura, trabalho e desigualdade",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Sociologia.",
+    "body_md": "## O que você vai aprender\n\nSociologia: cultura, trabalho e desigualdade. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Socialização\n\nAprendizagem de normas, valores e papéis em relações sociais.\n\n### Cultura\n\nPráticas e significados socialmente construídos; não é apenas produção erudita.\n\n### Etnocentrismo\n\nJulgar outra cultura tomando a própria como medida superior.\n\n### Desigualdade\n\nDistribuição desigual de recursos, oportunidades e poder, relacionada a instituições e processos históricos.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Uma pessoa chama um costume de outro povo de inferior só porque é diferente. Qual problema de análise?\n> Resolução: O julgamento toma a própria cultura como padrão universal: etnocentrismo. Descrever diferenças não exige hierarquizá-las.\n\n> Exemplo resolvido 2: Dois estudantes se esforçam igualmente, mas têm acesso diferente a internet e transporte. O resultado depende só de mérito individual?\n> Resolução: Não. Condições materiais afetam oportunidades. A análise sociológica relaciona ação individual e estrutura social.\n\n## Evite esta armadilha\n\nReduzir fenômenos coletivos a defeitos pessoais ou tratar culturas como biologicamente fixas.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 8,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Socialização — o que significa?",
+        "b": "Aprendizagem de normas, valores e papéis em relações sociais."
+      },
+      {
+        "f": "Cultura — o que significa?",
+        "b": "Práticas e significados socialmente construídos; não é apenas produção erudita."
+      },
+      {
+        "f": "Etnocentrismo — o que significa?",
+        "b": "Julgar outra cultura tomando a própria como medida superior."
+      },
+      {
+        "f": "Desigualdade — o que significa?",
+        "b": "Distribuição desigual de recursos, oportunidades e poder, relacionada a instituições e processos históricos."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A socialização ocorre em relações sociais.",
+        "a": true,
+        "why": "Aprendizagem de normas, valores e papéis em relações sociais."
+      },
+      {
+        "q": "Cultura inclui práticas cotidianas.",
+        "a": true,
+        "why": "Práticas e significados socialmente construídos; não é apenas produção erudita."
+      },
+      {
+        "q": "Etnocentrismo pode hierarquizar costumes.",
+        "a": true,
+        "why": "Julgar outra cultura tomando a própria como medida superior."
+      },
+      {
+        "q": "Instituições influenciam oportunidades.",
+        "a": true,
+        "why": "Distribuição desigual de recursos, oportunidades e poder, relacionada a instituições e processos históricos."
+      },
+      {
+        "q": "Cultura corresponde apenas a museus e concertos.",
+        "a": false,
+        "why": "Aprendizagem de normas, valores e papéis em relações sociais."
+      },
+      {
+        "q": "Desigualdades são sempre explicadas só por esforço.",
+        "a": false,
+        "why": "Práticas e significados socialmente construídos; não é apenas produção erudita."
+      },
+      {
+        "q": "Valores culturais são biologicamente imutáveis.",
+        "a": false,
+        "why": "Julgar outra cultura tomando a própria como medida superior."
+      },
+      {
+        "q": "A própria cultura é a medida universal de todas as outras.",
+        "a": false,
+        "why": "Distribuição desigual de recursos, oportunidades e poder, relacionada a instituições e processos históricos."
+      }
+    ],
+    "_syllabus_topic_id": "b1871c67-6a33-5084-a1ab-a114d933d5d5",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-biologia-fundamentos",
+    "discipline": "Biologia",
+    "topic_label": "Ecologia e genética",
+    "sort_order": 9,
+    "title": "ENEM — Biologia: energia, cadeias alimentares e hereditariedade",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Biologia.",
+    "body_md": "## O que você vai aprender\n\nBiologia: energia, cadeias alimentares e hereditariedade. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Energia e matéria\n\nA energia flui e se dissipa; a matéria circula em ciclos biogeoquímicos.\n\n### Produtores\n\nOrganismos que produzem matéria orgânica; sustentam a entrada de energia na maioria das cadeias.\n\n### Genótipo e fenótipo\n\nGenótipo é a constituição genética; fenótipo resulta de sua expressão em interação com o ambiente.\n\n### Meiose\n\nProduz células com redução cromossômica e contribui para a variabilidade genética.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Uma cadeia tem plantas, lagartas e aves. Em que direção vai a transferência de energia alimentar?\n> Resolução: Plantas → lagartas → aves. Parte da energia é dissipada em cada nível; não se transfere integralmente ao seguinte.\n\n> Exemplo resolvido 2: Num modelo mendeliano de dominância completa, Aa × Aa produz qual chance de aa?\n> Resolução: Cada progenitor fornece A ou a com chance de 1/2. As combinações AA, Aa, aA e aa são equiprováveis: aa tem chance de 1/4.\n\n## Evite esta armadilha\n\nConfundir dominância com frequência ou qualidade de uma característica.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 9,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Energia e matéria — o que significa?",
+        "b": "A energia flui e se dissipa; a matéria circula em ciclos biogeoquímicos."
+      },
+      {
+        "f": "Produtores — o que significa?",
+        "b": "Organismos que produzem matéria orgânica; sustentam a entrada de energia na maioria das cadeias."
+      },
+      {
+        "f": "Genótipo e fenótipo — o que significa?",
+        "b": "Genótipo é a constituição genética; fenótipo resulta de sua expressão em interação com o ambiente."
+      },
+      {
+        "f": "Meiose — o que significa?",
+        "b": "Produz células com redução cromossômica e contribui para a variabilidade genética."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "A energia se dissipa ao longo da cadeia.",
+        "a": true,
+        "why": "A energia flui e se dissipa; a matéria circula em ciclos biogeoquímicos."
+      },
+      {
+        "q": "A matéria participa de ciclos.",
+        "a": true,
+        "why": "Organismos que produzem matéria orgânica; sustentam a entrada de energia na maioria das cadeias."
+      },
+      {
+        "q": "Ambiente pode influenciar fenótipo.",
+        "a": true,
+        "why": "Genótipo é a constituição genética; fenótipo resulta de sua expressão em interação com o ambiente."
+      },
+      {
+        "q": "Aa × Aa pode gerar aa.",
+        "a": true,
+        "why": "Produz células com redução cromossômica e contribui para a variabilidade genética."
+      },
+      {
+        "q": "A energia é reciclada integralmente entre níveis.",
+        "a": false,
+        "why": "A energia flui e se dissipa; a matéria circula em ciclos biogeoquímicos."
+      },
+      {
+        "q": "Todo alelo dominante é o mais comum.",
+        "a": false,
+        "why": "Organismos que produzem matéria orgânica; sustentam a entrada de energia na maioria das cadeias."
+      },
+      {
+        "q": "Fenótipo depende somente do genótipo em qualquer caso.",
+        "a": false,
+        "why": "Genótipo é a constituição genética; fenótipo resulta de sua expressão em interação com o ambiente."
+      },
+      {
+        "q": "A meiose mantém sempre a mesma ploidia da célula inicial.",
+        "a": false,
+        "why": "Produz células com redução cromossômica e contribui para a variabilidade genética."
+      }
+    ],
+    "_syllabus_topic_id": "944e0b2c-7d28-5ca2-b709-9a5b6def3078",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-fisica-fundamentos",
+    "discipline": "Física",
+    "topic_label": "Grandezas e energia",
+    "sort_order": 10,
+    "title": "ENEM — Física: movimento, energia e circuitos",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Física.",
+    "body_md": "## O que você vai aprender\n\nFísica: movimento, energia e circuitos. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Velocidade média\n\nDeslocamento dividido pelo intervalo de tempo; use unidades coerentes.\n\n### Energia\n\nPode se transformar e se transferir. Em um sistema isolado, a energia total se conserva.\n\n### Potência\n\nEnergia transferida por unidade de tempo: P = E/Δt.\n\n### Circuito ôhmico\n\nPara um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Um veículo percorre 120 km em 2 h, no mesmo sentido. Qual velocidade média em km/h?\n> Resolução: 120/2 = 60 km/h. A média não significa que o veículo manteve 60 km/h em cada instante.\n\n> Exemplo resolvido 2: Uma lâmpada de 20 W funciona por 5 h. Qual energia em kWh?\n> Resolução: 20 W = 0,020 kW. Energia = 0,020 × 5 = 0,10 kWh. Potência e energia não são a mesma grandeza.\n\n## Evite esta armadilha\n\nSubstituir unidades incompatíveis ou confundir kW com kWh.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 10,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Velocidade média — o que significa?",
+        "b": "Deslocamento dividido pelo intervalo de tempo; use unidades coerentes."
+      },
+      {
+        "f": "Energia — o que significa?",
+        "b": "Pode se transformar e se transferir. Em um sistema isolado, a energia total se conserva."
+      },
+      {
+        "f": "Potência — o que significa?",
+        "b": "Energia transferida por unidade de tempo: P = E/Δt."
+      },
+      {
+        "f": "Circuito ôhmico — o que significa?",
+        "b": "Para um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Velocidade média envolve tempo e deslocamento.",
+        "a": true,
+        "why": "Deslocamento dividido pelo intervalo de tempo; use unidades coerentes."
+      },
+      {
+        "q": "Potência é taxa de transferência de energia.",
+        "a": true,
+        "why": "Pode se transformar e se transferir. Em um sistema isolado, a energia total se conserva."
+      },
+      {
+        "q": "20 W equivalem a 0,020 kW.",
+        "a": true,
+        "why": "Energia transferida por unidade de tempo: P = E/Δt."
+      },
+      {
+        "q": "Um resistor ôhmico obedece a U = RI nas condições consideradas.",
+        "a": true,
+        "why": "Para um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I."
+      },
+      {
+        "q": "kW e kWh medem a mesma grandeza.",
+        "a": false,
+        "why": "Deslocamento dividido pelo intervalo de tempo; use unidades coerentes."
+      },
+      {
+        "q": "A velocidade média determina a velocidade de todo instante.",
+        "a": false,
+        "why": "Pode se transformar e se transferir. Em um sistema isolado, a energia total se conserva."
+      },
+      {
+        "q": "Energia desaparece quando há atrito.",
+        "a": false,
+        "why": "Energia transferida por unidade de tempo: P = E/Δt."
+      },
+      {
+        "q": "Em resistência constante, aumentar a tensão necessariamente reduz a corrente.",
+        "a": false,
+        "why": "Para um resistor ôhmico, U = R × I; potência elétrica pode ser P = U × I."
+      }
+    ],
+    "_syllabus_topic_id": "62d4d90e-a08d-5ab8-8a19-0ed3ce781875",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-quimica-fundamentos",
+    "discipline": "Química",
+    "topic_label": "Transformações e quantidades",
+    "sort_order": 11,
+    "title": "ENEM — Química: estequiometria, soluções e química ambiental",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Química.",
+    "body_md": "## O que você vai aprender\n\nQuímica: estequiometria, soluções e química ambiental. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Balanceamento\n\nConserve os átomos de cada elemento ao ajustar os coeficientes.\n\n### Mol\n\nQuantidade de matéria; relações dos coeficientes estequiométricos são relações em mol.\n\n### Concentração\n\nPode expressar massa de soluto por volume de solução; explicite a unidade.\n\n### Diluição\n\nSem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Na equação 2 H₂ + O₂ → 2 H₂O, quantos mol de água podem surgir de 3 mol de H₂, com O₂ em excesso?\n> Resolução: A razão H₂:H₂O é 2:2. Assim, 3 mol de H₂ podem formar 3 mol de água, admitindo reação completa.\n\n> Exemplo resolvido 2: Uma solução contém 10 g de soluto em 0,5 L. Qual concentração em g/L?\n> Resolução: C = 10/0,5 = 20 g/L. Se o volume final for duplicado sem mudar o soluto, a concentração cairá à metade.\n\n## Evite esta armadilha\n\nUsar a razão de coeficientes como razão de massas sem considerar massas molares.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 11,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Balanceamento — o que significa?",
+        "b": "Conserve os átomos de cada elemento ao ajustar os coeficientes."
+      },
+      {
+        "f": "Mol — o que significa?",
+        "b": "Quantidade de matéria; relações dos coeficientes estequiométricos são relações em mol."
+      },
+      {
+        "f": "Concentração — o que significa?",
+        "b": "Pode expressar massa de soluto por volume de solução; explicite a unidade."
+      },
+      {
+        "f": "Diluição — o que significa?",
+        "b": "Sem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "O balanceamento conserva átomos.",
+        "a": true,
+        "why": "Conserve os átomos de cada elemento ao ajustar os coeficientes."
+      },
+      {
+        "q": "Coeficientes indicam proporções em mol.",
+        "a": true,
+        "why": "Quantidade de matéria; relações dos coeficientes estequiométricos são relações em mol."
+      },
+      {
+        "q": "10 g em 0,5 L correspondem a 20 g/L.",
+        "a": true,
+        "why": "Pode expressar massa de soluto por volume de solução; explicite a unidade."
+      },
+      {
+        "q": "A diluição sem perda conserva soluto.",
+        "a": true,
+        "why": "Sem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta."
+      },
+      {
+        "q": "Coeficientes estequiométricos são sempre razões diretas de massa.",
+        "a": false,
+        "why": "Conserve os átomos de cada elemento ao ajustar os coeficientes."
+      },
+      {
+        "q": "Diluir necessariamente acrescenta mais soluto.",
+        "a": false,
+        "why": "Quantidade de matéria; relações dos coeficientes estequiométricos são relações em mol."
+      },
+      {
+        "q": "A concentração aumenta sempre que o volume aumenta.",
+        "a": false,
+        "why": "Pode expressar massa de soluto por volume de solução; explicite a unidade."
+      },
+      {
+        "q": "Na reação balanceada, átomos podem desaparecer.",
+        "a": false,
+        "why": "Sem reação ou perda de soluto, a quantidade de soluto se conserva e o volume aumenta."
+      }
+    ],
+    "_syllabus_topic_id": "0852affe-8c57-5aa3-a828-23d4e6c0fb20",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-matematica-fundamentos",
+    "discipline": "Matemática",
+    "topic_label": "Proporções, estatística e geometria",
+    "sort_order": 12,
+    "title": "ENEM — Matemática: porcentagens, estatística e modelos",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Matemática.",
+    "body_md": "## O que você vai aprender\n\nMatemática: porcentagens, estatística e modelos. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Porcentagem\n\np% de x equivale a (p/100) × x; identifique sempre a base.\n\n### Média e mediana\n\nMédia soma valores e divide pela quantidade; mediana é central na lista ordenada.\n\n### Probabilidade\n\nEm espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis.\n\n### Modelo geométrico\n\nÁrea tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Um preço de R$ 200 sobe 10% e depois cai 10%. Retorna a R$ 200?\n> Resolução: Não. Primeiro 200 × 1,10 = 220. Depois 220 × 0,90 = 198. As bases dos percentuais são diferentes.\n\n> Exemplo resolvido 2: Uma turma tem notas 2, 7 e 9. Qual média e qual mediana?\n> Resolução: A média é (2+7+9)/3 = 6. A mediana é 7. A nota menor afeta a média; as medidas não são intercambiáveis.\n\n## Evite esta armadilha\n\nComparar porcentagens sem comparar suas bases ou aplicar proporcionalidade onde ela não existe.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 12,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Porcentagem — o que significa?",
+        "b": "p% de x equivale a (p/100) × x; identifique sempre a base."
+      },
+      {
+        "f": "Média e mediana — o que significa?",
+        "b": "Média soma valores e divide pela quantidade; mediana é central na lista ordenada."
+      },
+      {
+        "f": "Probabilidade — o que significa?",
+        "b": "Em espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis."
+      },
+      {
+        "f": "Modelo geométrico — o que significa?",
+        "b": "Área tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Percentuais devem indicar a base.",
+        "a": true,
+        "why": "p% de x equivale a (p/100) × x; identifique sempre a base."
+      },
+      {
+        "q": "A mediana exige ordenar os dados.",
+        "a": true,
+        "why": "Média soma valores e divide pela quantidade; mediana é central na lista ordenada."
+      },
+      {
+        "q": "Probabilidade equiprovável usa favoráveis/possíveis.",
+        "a": true,
+        "why": "Em espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis."
+      },
+      {
+        "q": "Área e volume têm unidades distintas.",
+        "a": true,
+        "why": "Área tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular."
+      },
+      {
+        "q": "Aumento de 10% seguido de desconto de 10% sempre se anula.",
+        "a": false,
+        "why": "p% de x equivale a (p/100) × x; identifique sempre a base."
+      },
+      {
+        "q": "Média e mediana são sempre iguais.",
+        "a": false,
+        "why": "Média soma valores e divide pela quantidade; mediana é central na lista ordenada."
+      },
+      {
+        "q": "Todo evento tem probabilidade de 50%.",
+        "a": false,
+        "why": "Em espaço finito equiprovável, divida casos favoráveis pelo total de casos possíveis."
+      },
+      {
+        "q": "Dobrar todas as dimensões lineares dobra o volume.",
+        "a": false,
+        "why": "Área tem unidade ao quadrado; volume, ao cubo. Desenhe a situação antes de calcular."
+      }
+    ],
+    "_syllabus_topic_id": "d4df33c1-7c6a-5dd1-8f90-a48653946786",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  },
+  {
+    "slug": "enem-artes-fundamentos",
+    "discipline": "Artes e Educação Física",
+    "topic_label": "Linguagens artísticas e corporais",
+    "sort_order": 13,
+    "title": "ENEM — Arte, corpo, identidade e tecnologias",
+    "summary": "Fundamentos, dois exemplos resolvidos e exercícios de fixação para estudar Artes e Educação Física.",
+    "body_md": "## O que você vai aprender\n\nArte, corpo, identidade e tecnologias. Este guia introduz fundamentos; use a matriz oficial para acompanhar os demais assuntos da disciplina.\n\n## Conceitos essenciais\n\n### Arte e contexto\n\nA produção artística expressa escolhas estéticas e relações culturais.\n\n### Linguagem corporal\n\nGestos e práticas corporais comunicam identidades e modos de interação.\n\n### Diversidade\n\nNão há um único padrão cultural ou corporal universal para avaliar todas as práticas.\n\n### Tecnologias\n\nMeios digitais transformam circulação, autoria, acesso e interação cultural.\n\n## Resolva antes de conferir\n\n> Exemplo resolvido 1: Uma dança comunitária aparece numa festa local. É suficiente avaliá-la como desempenho atlético?\n> Resolução: Não. Também expressa memória, pertencimento e relações sociais. O contexto ajuda a interpretar seu significado.\n\n> Exemplo resolvido 2: Um museu publica obras digitalizadas. Isso elimina todas as barreiras de acesso?\n> Resolução: Não. Amplia circulação, mas conectividade, acessibilidade e letramento digital ainda interferem no acesso.\n\n## Evite esta armadilha\n\nJulgar toda arte pelo realismo ou reduzir toda prática corporal à competição.\n\n## Método para responder\n\n1. Leia o comando e identifique o que ele pede.\n2. Separe os dados e os conceitos necessários.\n3. Resolva antes de comparar as alternativas.\n4. Elimine opções incompatíveis com o contexto.\n5. Registre o motivo do erro e revise o conceito.\n\n## Fixação\n\nTente responder aos cartões e às afirmações abaixo sem consultar o texto. São exercícios autorais de aprendizagem; não são itens oficiais do ENEM.\n\n## Fonte e alcance\n\n[Matriz oficial do Inep](https://download.inep.gov.br/download/enem/matriz_referencia.pdf). Explicações e exemplos autorais, organizados a partir dos objetos de conhecimento da matriz. Este guia não representa cobertura integral de toda a disciplina.",
+    "contest_name": "ENEM",
+    "syllabus_topic_order": 13,
+    "source_note": "Conteúdo autoral alinhado à matriz de referência do Inep. Revisão assistida por Codex em 14/10/2026; guia introdutório, sem alegação de cobertura integral.",
+    "legal_basis": [
+      {
+        "title": "Matriz de referência ENEM — Inep",
+        "url": "https://download.inep.gov.br/download/enem/matriz_referencia.pdf"
+      }
+    ],
+    "law_version_checked_at": "2026-10-14T03:30:00Z",
+    "flashcards": [
+      {
+        "f": "Arte e contexto — o que significa?",
+        "b": "A produção artística expressa escolhas estéticas e relações culturais."
+      },
+      {
+        "f": "Linguagem corporal — o que significa?",
+        "b": "Gestos e práticas corporais comunicam identidades e modos de interação."
+      },
+      {
+        "f": "Diversidade — o que significa?",
+        "b": "Não há um único padrão cultural ou corporal universal para avaliar todas as práticas."
+      },
+      {
+        "f": "Tecnologias — o que significa?",
+        "b": "Meios digitais transformam circulação, autoria, acesso e interação cultural."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Práticas corporais podem comunicar identidades.",
+        "a": true,
+        "why": "A produção artística expressa escolhas estéticas e relações culturais."
+      },
+      {
+        "q": "Contexto é relevante para interpretar arte.",
+        "a": true,
+        "why": "Gestos e práticas corporais comunicam identidades e modos de interação."
+      },
+      {
+        "q": "Tecnologias alteram circulação cultural.",
+        "a": true,
+        "why": "Não há um único padrão cultural ou corporal universal para avaliar todas as práticas."
+      },
+      {
+        "q": "Acessibilidade influencia o acesso digital.",
+        "a": true,
+        "why": "Meios digitais transformam circulação, autoria, acesso e interação cultural."
+      },
+      {
+        "q": "Só a arte realista tem valor cultural.",
+        "a": false,
+        "why": "A produção artística expressa escolhas estéticas e relações culturais."
+      },
+      {
+        "q": "Toda dança é exclusivamente competição.",
+        "a": false,
+        "why": "Gestos e práticas corporais comunicam identidades e modos de interação."
+      },
+      {
+        "q": "Digitalizar elimina automaticamente qualquer barreira.",
+        "a": false,
+        "why": "Não há um único padrão cultural ou corporal universal para avaliar todas as práticas."
+      },
+      {
+        "q": "Existe um padrão corporal único para todas as culturas.",
+        "a": false,
+        "why": "Meios digitais transformam circulação, autoria, acesso e interação cultural."
+      }
+    ],
+    "_syllabus_topic_id": "8f67db86-441a-5a70-b182-3ce5ff83783f",
+    "_syllabus_edition_id": "f664ac75-2e95-591e-939d-4c2728318e48"
+  }
+]
