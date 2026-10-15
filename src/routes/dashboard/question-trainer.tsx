@@ -273,8 +273,19 @@ function QuestionTrainer() {
     setConfirmStop(false);
     blocker.reset?.();
   };
+  const clearBookmark = () => {
+    bookmarkRef.current = null;
+    if (!userId) return;
+    try {
+      localStorage.removeItem(`trainer-bookmark:${userId}`);
+      sessionStorage.removeItem(`trainer-bookmark:${userId}`);
+    } catch {
+      /* A blocked store must not prevent ending the session. */
+    }
+  };
   const confirmLeave = () => {
     if (savingRef.current) return;
+    clearBookmark();
     if (blocker.status === "blocked") blocker.proceed();
     else {
       setConfirmStop(false);
@@ -289,6 +300,9 @@ function QuestionTrainer() {
   const questionSecsRef = React.useRef(0);
   const routeKey = trainerRouteKey(routeFilters);
   const pendingRestore = React.useRef(false);
+  const [resumeNotice, setResumeNotice] = React.useState(false);
+  const [bookmarkError, setBookmarkError] = React.useState(false);
+  const restoredSeconds = React.useRef<number | null>(null);
   const restoredSelection = React.useRef<string | null>(null);
   const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
   bookmarkRef.current =
@@ -302,6 +316,7 @@ function QuestionTrainer() {
               index,
               ...answer,
             })),
+            questionSeconds: questionSecs,
             savedAt: Date.now(),
             route: routeKey,
             questions: questions.map(({ id, source, table }) => ({ id, source, table })),
@@ -330,18 +345,37 @@ function QuestionTrainer() {
           },
         }
       : null;
-  React.useEffect(
-    () => () => {
+  const persistBookmark = React.useCallback(() => {
+    const saved = bookmarkRef.current;
+    if (!saved) return;
+    try {
+      localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+      setBookmarkError(false);
+    } catch {
+      setBookmarkError(true);
+    }
+  }, []);
+  // Save selections, position and active time before a browser reload can discard React.
+  React.useEffect(() => {
+    persistBookmark();
+  });
+  React.useEffect(() => {
+    const onHide = () => persistBookmark();
+    window.addEventListener("pagehide", onHide);
+    window.addEventListener("beforeunload", onHide);
+    return () => {
+      window.removeEventListener("pagehide", onHide);
+      window.removeEventListener("beforeunload", onHide);
       const saved = bookmarkRef.current;
-      if (!saved) return;
-      try {
-        sessionStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
-      } catch {
-        /* Storage can be unavailable; navigation must still work. */
+      if (saved) {
+        try {
+          localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+        } catch {
+          /* Navigation remains possible when storage is blocked. */
+        }
       }
-    },
-    [],
-  );
+    };
+  }, [persistBookmark]);
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
     sessionAnswers.current.clear();
@@ -404,11 +438,10 @@ function QuestionTrainer() {
     pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
-      const raw = sessionStorage.getItem(storageKey);
+      const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
       if (!raw) return;
       const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
       if (!restored) return;
-      sessionStorage.removeItem(storageKey);
       const b = restored.bookmark;
       sessionAnswers.current = new Map(
         (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
@@ -432,6 +465,8 @@ function QuestionTrainer() {
       setResults(b.results);
       setSelected(b.selected as Answer | null);
       setStruck(b.struck as Answer[]);
+      restoredSeconds.current = b.questionSeconds ?? 0;
+      setResumeNotice(true);
       setStartedAt(b.startedAt);
       setStarted(true);
       setModal(null);
@@ -735,6 +770,9 @@ function QuestionTrainer() {
     setYear(selectedYear);
   };
 
+  React.useEffect(() => {
+    if (started && questions.length > 0 && index >= questions.length) clearBookmark();
+  }, [started, questions.length, index, userId]);
   const question = questions[index];
   // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
   const noText = !!question && needsMissingSupportText(question);
@@ -745,8 +783,10 @@ function QuestionTrainer() {
       !!question &&
       catalogReviewKeys.current.has(lockedKey(question.source, question.id)));
   React.useEffect(() => {
-    questionSecsRef.current = 0;
-    setQuestionSecs(0);
+    const seconds = restoredSeconds.current ?? 0;
+    restoredSeconds.current = null;
+    questionSecsRef.current = seconds;
+    setQuestionSecs(seconds);
   }, [startedAt, index, question?.id, question?.source]);
   React.useEffect(() => {
     if (!started || !question || answered || leaveDialogOpen) return;
@@ -908,6 +948,8 @@ function QuestionTrainer() {
   };
   const next = () => goTo(index + 1);
   const restart = () => {
+    clearBookmark();
+    setResumeNotice(false);
     responseIdRef.current = crypto.randomUUID();
     sessionAnswers.current.clear();
     setStarted(false);
@@ -1188,22 +1230,36 @@ function QuestionTrainer() {
             <span className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
               <PauseCircle className="h-5 w-5" aria-hidden="true" />
             </span>
-            <DialogTitle>Interromper o treino?</DialogTitle>
+            <DialogTitle>Encerrar este treino?</DialogTitle>
             <DialogDescription>
               {saving
                 ? "Aguarde enquanto sua resposta é salva."
-                : "Você ainda tem questões nesta sessão. As respostas já confirmadas permanecem registradas; a alternativa selecionada só é enviada ao confirmar a resposta."}
+                : "Ao encerrar, a retomada desta sessão será removida. As respostas já confirmadas permanecem no seu histórico. Para continuar depois, você pode atualizar ou fechar a página."}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="gap-2 sm:justify-start">
             <Button onClick={cancelLeave}>Continuar estudando</Button>
             <Button variant="outline" onClick={confirmLeave} disabled={saving}>
-              Sair do treino
+              Encerrar treino
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
+      <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+        <strong>
+          {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
+          {questions.length}
+        </strong>
+        <p>
+          {bookmarkError
+            ? "Não foi possível salvar a retomada neste navegador. Evite recarregar antes de concluir."
+            : "Sua posição é salva automaticamente neste navegador, nesta conta. Você pode atualizar a página e continuar daqui."}
+        </p>
+        <button type="button" className="mt-2 underline" onClick={() => setConfirmStop(true)}>
+          Encerrar este treino
+        </button>
+      </aside>
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
       {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
@@ -1262,7 +1318,7 @@ function QuestionTrainer() {
           </Button>
           <Button variant="outline" onClick={() => setConfirmStop(true)}>
             <PauseCircle className="mr-2 h-4 w-4" />
-            Sair do treino
+            Encerrar treino
           </Button>
         </div>
       </header>

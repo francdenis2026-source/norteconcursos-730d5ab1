@@ -1,3 +1,4 @@
+import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
@@ -76,6 +77,8 @@ function PerformancePage() {
           Minhas provas e diagnóstico →
         </Link>
       </div>
+      <StudyTimeCard key={user.id} userId={user.id} />
+      <LearningJourney key={user.id} userId={user.id} overview={data} />
       {error ? (
         <div role="alert" className="rounded-2xl border p-5">
           <p>
@@ -185,14 +188,14 @@ function PerformanceOverviewTab({
   loading: boolean;
   libraryMaterials: StudyMaterialSummary[];
 }) {
-  if (loading || !overview)
+  if (!overview)
     return (
       <div className="p-8 text-center text-sm text-muted-foreground">
         Reunindo tempo de estudo, questões, simulados e revisões…
       </div>
     );
 
-  const { trainer, difficulty, simulators, errors, streak, rank } = overview;
+  const { trainer, difficulty, simulators, errors, streak, rank, available } = overview;
   const weakSubjects = trainer.bySubject.filter(
     (s) => s.total >= MIN_ITEMS_FOR_SIGNAL && s.accuracy < WEAK_THRESHOLD,
   );
@@ -211,36 +214,68 @@ function PerformanceOverviewTab({
     simulators,
     streak,
     libraryByDiscipline,
+    available,
   });
 
   return (
     <div className="space-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
+        <p>Atualização automática a cada 30 segundos enquanto esta página estiver visível.</p>
+        <span>
+          {loading
+            ? "Atualizando…"
+            : `Última consulta: ${new Date(overview.updatedAt).toLocaleTimeString("pt-BR", { timeZone: "America/Rio_Branco" })} (Acre)`}
+        </span>
+      </div>
+      {!!overview.warnings.length && (
+        <div
+          role="status"
+          className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 text-sm"
+        >
+          <p className="font-semibold">Alguns indicadores estão indisponíveis</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            {overview.warnings.map((warning) => (
+              <li key={warning}>{warning}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           icon={ListChecks}
           label="Questões respondidas"
-          value={String(trainer.totalAnswered)}
+          value={available.training ? String(trainer.totalAnswered) : "—"}
           detail={
-            trainer.totalAnswered ? `${trainer.accuracy}% de aproveitamento` : "Comece no Treinador"
+            !available.training
+              ? "Consulta indisponível"
+              : trainer.totalAnswered
+                ? `${trainer.accuracy}% de aproveitamento`
+                : "Comece no Treinador"
           }
           tone="navy"
         />
         <MetricCard
           icon={Brain}
           label="Simulados realizados"
-          value={String(simulators.count)}
+          value={available.simulators ? String(simulators.count) : "—"}
           detail={
-            simulators.count
-              ? `melhor resultado: ${simulators.bestAccuracy}%`
-              : "Ainda nenhum simulado"
+            !available.simulators
+              ? "Consulta indisponível"
+              : simulators.count
+                ? `melhor resultado: ${simulators.bestAccuracy}%`
+                : "Ainda nenhum simulado"
           }
           tone="amber"
         />
         <MetricCard
           icon={Flame}
           label="Sequência de estudo"
-          value={`${streak.current} dia${streak.current === 1 ? "" : "s"}`}
-          detail={`recorde: ${streak.longest} dia${streak.longest === 1 ? "" : "s"}`}
+          value={available.streak ? `${streak.current} dia${streak.current === 1 ? "" : "s"}` : "—"}
+          detail={
+            available.streak
+              ? `recorde: ${streak.longest} dia${streak.longest === 1 ? "" : "s"}`
+              : "Consulta indisponível"
+          }
           tone={streak.current > 0 ? "emerald" : "rose"}
         />
         <MetricCard
@@ -250,7 +285,9 @@ function PerformanceOverviewTab({
           detail={
             rank
               ? `${rank.stars} estrela${rank.stars === 1 ? "" : "s"}`
-              : "Responda questões para pontuar"
+              : available.rank
+                ? "Responda questões para pontuar"
+                : "Consulta indisponível"
           }
           tone="navy"
         />
@@ -271,7 +308,9 @@ function PerformanceOverviewTab({
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {trainer.bySubject.length === 0 ? (
+            {!available.training ? (
+              <p>As respostas não puderam ser consultadas nesta atualização.</p>
+            ) : trainer.bySubject.length === 0 ? (
               <p className="text-sm text-muted-foreground">
                 Responda questões no Treinador para ver seus pontos fortes e fracos aqui.
               </p>
@@ -326,14 +365,16 @@ function PerformanceOverviewTab({
               Caderno de erros
             </CardTitle>
             <CardDescription>
-              Classificações registradas no Caderno de erros, por status de revisão.
+              Erros da primeira resposta no histórico, por status de revisão. Sem classificação, o
+              erro é pendente. O caderno exibe apenas questões ainda ativas.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-3">
-            {errors.total === 0 ? (
+            {!available.reviews ? (
+              <p>As revisões não puderam ser consultadas nesta atualização.</p>
+            ) : errors.total === 0 ? (
               <p className="text-sm text-muted-foreground">
-                Nenhuma classificação de revisão registrada. Os acertos e erros das suas respostas
-                aparecem no detalhamento por disciplina.
+                Nenhum erro na primeira resposta encontrado no histórico consultado.
               </p>
             ) : (
               <div className="flex flex-wrap gap-3 text-sm">
@@ -365,14 +406,16 @@ function PerformanceOverviewTab({
             Onde você precisa de mais atenção
           </CardTitle>
           <CardDescription>
-            Cruzamos seus erros e o tempo mediano por questão para apontar a disciplina e o assunto
-            que merecem reforço.
+            Cruzamos erros e tempo mediano para orientar o reforço. Sem análise por assunto, usamos
+            a disciplina. O índice de atenção é uma heurística de estudo, não uma previsão de nota.
           </CardDescription>
         </CardHeader>
         <CardContent>
           {difficulty.length === 0 ? (
             <p className="text-sm text-muted-foreground">
-              Responda questões no Treinador para criar seu diagnóstico de dificuldade.
+              {available.training
+                ? "Responda questões no Treinador para criar seu diagnóstico de dificuldade."
+                : "Diagnóstico indisponível nesta atualização."}
             </p>
           ) : (
             <div className="grid gap-2 sm:grid-cols-2">
@@ -391,7 +434,9 @@ function PerformanceOverviewTab({
                       </p>
                     </div>
                     <Badge variant="outline" className="shrink-0 text-[10px]">
-                      {item.difficultyScore}% atenção
+                      {item.answered < 5
+                        ? "Amostra inicial"
+                        : `${item.difficultyScore}/100 atenção`}
                     </Badge>
                   </div>
                   <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
@@ -467,8 +512,6 @@ function PerformanceOverviewTab({
           )}
         </CardContent>
       </Card>
-
-      <StudyTimeCard userId={userId} />
     </div>
   );
 }
@@ -490,12 +533,14 @@ function buildSuggestions({
   simulators,
   streak,
   libraryByDiscipline,
+  available,
 }: {
   weakSubjects: SubjectAccuracy[];
   errors: { pendente: number; total: number };
   simulators: { count: number };
   streak: { current: number };
   libraryByDiscipline: Map<string, StudyMaterialSummary>;
+  available: import("@/hooks/usePerformanceOverview").PerformanceOverview["available"];
 }): Suggestion[] {
   const suggestions: Suggestion[] = [];
   for (const subject of weakSubjects.slice(0, 3)) {
@@ -515,18 +560,16 @@ function buildSuggestions({
   if (errors.pendente > 0)
     suggestions.push({
       icon: AlertTriangle,
-      text: `Você tem ${errors.pendente} questão${errors.pendente === 1 ? "" : "s"} marcada${
-        errors.pendente === 1 ? "" : "s"
-      } como "ainda tenho dúvida" no Caderno de erros. Revisá-las é o jeito mais rápido de ganhar pontos.`,
+      text: `Você tem ${errors.pendente} erro${errors.pendente === 1 ? "" : "s"} pendente${errors.pendente === 1 ? "" : "s"} de revisão no histórico. Abra o caderno para revisar as questões que continuam ativas.`,
       link: { kind: "errors", label: "Abrir o Caderno de erros" },
     });
-  if (simulators.count === 0)
+  if (available.simulators && simulators.count === 0)
     suggestions.push({
       icon: Brain,
-      text: "Você ainda não fez nenhum simulado cronometrado. Simular a prova real ajuda a treinar ritmo e ansiedade, além de medir sua nota estimada.",
+      text: "Não há simulado concluído registrado nesta consulta. Quando estiver preparado, use um simulado para avaliar ritmo e distribuição dos erros. O resultado da plataforma não prevê sua nota em um concurso.",
       link: { kind: "mock-exams", label: "Fazer um simulado" },
     });
-  if (streak.current === 0)
+  if (available.streak && streak.current === 0)
     suggestions.push({
       icon: Flame,
       text: "Sua sequência de estudo está zerada. Estudar um pouco todo dia rende mais do que maratonas espaçadas — comece hoje.",

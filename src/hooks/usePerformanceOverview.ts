@@ -1,6 +1,11 @@
 import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  fallbackDifficulty,
+  historicalErrorSummary,
+  performanceSourceResults,
+} from "@/lib/performanceAnalysis";
 import { canonicalSubject } from "@/lib/subjects";
 
 export interface SubjectAccuracy {
@@ -23,6 +28,15 @@ export interface DifficultyStat {
 }
 
 export interface PerformanceOverview {
+  warnings: string[];
+  available: {
+    training: boolean;
+    simulators: boolean;
+    reviews: boolean;
+    streak: boolean;
+    rank: boolean;
+  };
+  updatedAt: string;
   trainer: {
     totalAnswered: number;
     totalCorrect: number;
@@ -98,59 +112,76 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
     }
     let active = true;
     setLoading(true);
-    setData(null);
     setError(false);
     (async () => {
       try {
-        const [responsesRes, attemptsRes, reviewsRes, streakRes, rankRes, difficultyRes] =
-          await Promise.all([
-            fetchAllRows<TrainingActivity>((from, to) =>
-              supabase
-                .from("question_training_responses")
-                .select(
-                  "id,question_id,question_source,subject,is_correct,response_seconds,selected_answer,official_answer,created_at",
-                )
-                .eq("user_id", userId)
-                .order("created_at")
-                .order("id")
-                .range(from, to),
-            ),
-            fetchAllRows<SimulatorActivity>((from, to) =>
-              supabase
-                .from("simulator_attempts")
-                .select(
-                  "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at,contest_filter",
-                )
-                .eq("user_id", userId)
-                .order("finished_at", { ascending: false })
-                .order("id")
-                .range(from, to),
-            ),
-            fetchAllRows<{ status: string }>((from, to) =>
+        const results = await Promise.allSettled([
+          fetchAllRows<TrainingActivity>((from, to) =>
+            supabase
+              .from("question_training_responses")
+              .select(
+                "id,question_id,question_source,subject,is_correct,response_seconds,selected_answer,official_answer,created_at",
+              )
+              .eq("user_id", userId)
+              .order("created_at")
+              .order("id")
+              .range(from, to),
+          ),
+          fetchAllRows<SimulatorActivity>((from, to) =>
+            supabase
+              .from("simulator_attempts")
+              .select(
+                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at,contest_filter",
+              )
+              .eq("user_id", userId)
+              .order("finished_at", { ascending: false })
+              .order("id")
+              .range(from, to),
+          ),
+          fetchAllRows<{ question_id: string; question_source: string; status: string }>(
+            (from, to) =>
               supabase
                 .from("question_error_reviews")
-                .select("status")
+                .select("question_id,question_source,status")
                 .eq("user_id", userId)
                 .order("question_id")
                 .order("question_source")
                 .range(from, to),
-            ),
-            supabase
-              .from("user_streaks")
-              .select("current_streak,longest_streak")
-              .eq("user_id", userId)
-              .maybeSingle(),
-            supabase
-              .from("user_rank_profiles")
-              .select("total_points,stars,level_name")
-              .eq("user_id", userId)
-              .maybeSingle(),
-            supabase.rpc("my_difficulty_analysis"),
-          ]);
+          ),
+          supabase
+            .from("user_streaks")
+            .select("current_streak,longest_streak")
+            .eq("user_id", userId)
+            .maybeSingle(),
+          supabase
+            .from("user_rank_profiles")
+            .select("total_points,stars,level_name")
+            .eq("user_id", userId)
+            .maybeSingle(),
+          supabase.rpc("my_difficulty_analysis"),
+        ]);
         if (!active) return;
 
-        for (const result of [streakRes, rankRes, difficultyRes])
-          if (result.error) throw result.error;
+        const state = performanceSourceResults(results);
+        const responsesRes = state.values[0] as TrainingActivity[];
+        const attemptsRes = state.values[1] as SimulatorActivity[];
+        const reviewsRes = state.values[2] as {
+          question_id: string;
+          question_source: string;
+          status: string;
+        }[];
+        const streakRes = {
+          data: state.values[3] as { current_streak: number; longest_streak: number } | null,
+        };
+        const rankRes = {
+          data: state.values[4] as {
+            total_points: number;
+            stars: number;
+            level_name: string;
+          } | null,
+        };
+        const difficultyRes = { data: state.values[5] };
+        if (!state.available.training && !state.available.simulators) setError(true);
         const seen = new Set<string>();
         const responses = responsesRes.filter((r) => {
           const key = JSON.stringify([r.question_source, r.question_id]);
@@ -187,16 +218,14 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
           .sort((a, b) => a.accuracy - b.accuracy);
 
         const attempts = attemptsRes;
-        const reviews = reviewsRes as { status: "pendente" | "revisado" | "dominado" }[];
-        const errors = {
-          pendente: reviews.filter((r) => r.status === "pendente").length,
-          revisado: reviews.filter((r) => r.status === "revisado").length,
-          dominado: reviews.filter((r) => r.status === "dominado").length,
-          total: reviews.length,
-        };
+        const errors = historicalErrorSummary(responses, reviewsRes);
+        state.available.reviews = state.available.reviews && state.available.training;
 
         if (!active) return;
         setData({
+          warnings: state.warnings,
+          available: state.available,
+          updatedAt: new Date().toISOString(),
           trainer: {
             totalAnswered: responses.length,
             totalCorrect,
@@ -204,27 +233,29 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
             avgSeconds: responses.length ? Math.round(totalSeconds / responses.length) : 0,
             bySubject,
           },
-          difficulty: (
-            (difficultyRes.data ?? []) as {
-              subject: string;
-              topic: string;
-              answered: number;
-              correct: number;
-              accuracy: number;
-              avg_seconds: number;
-              median_seconds: number;
-              difficulty_score: number;
-            }[]
-          ).map((row) => ({
-            subject: row.subject,
-            topic: row.topic,
-            answered: row.answered,
-            correct: row.correct,
-            accuracy: row.accuracy,
-            avgSeconds: row.avg_seconds,
-            medianSeconds: row.median_seconds,
-            difficultyScore: row.difficulty_score,
-          })),
+          difficulty: state.difficultyAvailable
+            ? (
+                (difficultyRes.data ?? []) as {
+                  subject: string;
+                  topic: string;
+                  answered: number;
+                  correct: number;
+                  accuracy: number;
+                  avg_seconds: number;
+                  median_seconds: number;
+                  difficulty_score: number;
+                }[]
+              ).map((row) => ({
+                subject: row.subject,
+                topic: row.topic,
+                answered: row.answered,
+                correct: row.correct,
+                accuracy: row.accuracy,
+                avgSeconds: row.avg_seconds,
+                medianSeconds: row.median_seconds,
+                difficultyScore: row.difficulty_score,
+              }))
+            : fallbackDifficulty(responses),
           simulators: {
             count: attempts.length,
             avgAccuracy: attempts.length
@@ -267,6 +298,21 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
       active = false;
     };
   }, [userId, enabled, revision]);
+
+  useEffect(() => {
+    if (!enabled || !userId) return;
+    const refresh = () => {
+      if (document.visibilityState !== "hidden") setRevision((n) => n + 1);
+    };
+    const timer = window.setInterval(refresh, 30_000);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [userId, enabled]);
 
   return {
     data: loadedFor === userId ? data : null,
