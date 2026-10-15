@@ -42,9 +42,10 @@ export const Route = createFileRoute("/dashboard/library/$slug")({
   component: MaterialPage,
   validateSearch: (
     s: Record<string, unknown>,
-  ): { back?: string | undefined; tema?: string | undefined } => ({
+  ): { back?: string | undefined; tema?: string | undefined; edital?: string | undefined } => ({
     back: typeof s["back"] === "string" ? s["back"] : undefined,
     tema: typeof s["tema"] === "string" ? s["tema"] : undefined,
+    edital: typeof s["edital"] === "string" ? s["edital"] : undefined,
   }),
 });
 
@@ -52,7 +53,7 @@ function MaterialPage() {
   const fm = useFocusMode();
   const navigate = useNavigate();
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
-  const { back: backToPlan, tema } = Route.useSearch();
+  const { back: backToPlan, tema, edital } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
@@ -102,25 +103,28 @@ function MaterialPage() {
     );
   }
 
-  const back =
-    material && libraryCollection(material) === "enem" ? (
-      <Link to="/dashboard/enem" search={{ tab: "materiais" }} className="library-back">
-        <ArrowLeft /> Materiais do ENEM
-      </Link>
-    ) : (
-      <Link
-        to="/dashboard/library"
-        search={{
-          collection: material && libraryCollection(material) === "subjects" ? "subjects" : "laws",
-        }}
-        className="library-back"
-      >
-        <ArrowLeft />{" "}
-        {material && libraryCollection(material) === "subjects"
-          ? "Materiais por disciplina"
-          : "Biblioteca de leis"}
-      </Link>
-    );
+  const back = edital ? (
+    <Link to="/dashboard/edital/$topicId" params={{ topicId: edital }} className="library-back">
+      <ArrowLeft /> Voltar ao assunto do edital
+    </Link>
+  ) : material && libraryCollection(material) === "enem" ? (
+    <Link to="/dashboard/enem" search={{ tab: "materiais" }} className="library-back">
+      <ArrowLeft /> Materiais do ENEM
+    </Link>
+  ) : (
+    <Link
+      to="/dashboard/library"
+      search={{
+        collection: material && libraryCollection(material) === "subjects" ? "subjects" : "laws",
+      }}
+      className="library-back"
+    >
+      <ArrowLeft />{" "}
+      {material && libraryCollection(material) === "subjects"
+        ? "Materiais por disciplina"
+        : "Biblioteca de leis"}
+    </Link>
+  );
 
   if (isPending && signedIn) {
     return (

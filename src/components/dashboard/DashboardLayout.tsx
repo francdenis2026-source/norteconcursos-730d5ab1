@@ -208,7 +208,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Edital e conteúdo",
-    label: "Estudar por assunto",
+    label: "Meu edital",
     icon: MapPin,
     href: "/dashboard/edital",
   },
