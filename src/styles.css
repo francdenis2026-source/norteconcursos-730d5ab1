@@ -11746,3 +11746,23 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .student-hub__masthead .student-hub__date { font-size:11px; }
   .student-hub__masthead .student-hub__masthead-actions > a { font-size:12px; min-height:40px; }
 }
+
+/* Translucent dashboard header: readable color in light mode and glass over scrolled content. */
+.app-shell .app-topbar,
+.app-shell[data-area="student"] .app-topbar {
+  background: linear-gradient(110deg, rgba(221,235,249,.88), rgba(250,244,230,.85));
+  border-bottom: 1px solid rgba(75,109,146,.25);
+  box-shadow: 0 4px 18px rgba(25,50,80,.08), inset 0 1px 0 rgba(255,255,255,.8);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+}
+.dark .app-shell .app-topbar,
+.dark .app-shell[data-area="student"] .app-topbar {
+  background: linear-gradient(110deg, rgba(12,25,43,.88), rgba(22,29,39,.85));
+  border-bottom-color: rgba(143,175,207,.2);
+  box-shadow: 0 4px 18px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.04);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .app-shell .app-topbar,.app-shell[data-area="student"] .app-topbar { background: #e9eff5; }
+  .dark .app-shell .app-topbar,.dark .app-shell[data-area="student"] .app-topbar { background: #111d2d; }
+}

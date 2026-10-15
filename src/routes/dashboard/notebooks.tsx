@@ -1,3 +1,4 @@
+import { StudyLaterNotebook } from "@/components/dashboard/StudyLater";
 import { platformDate } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect } from "react";
@@ -194,6 +195,7 @@ function NotebooksPage() {
         }
       />
 
+      <StudyLaterNotebook />
       <AiResolutionsSection />
 
       <div className="flex flex-col md:flex-row gap-4 items-center bg-card p-4 rounded-xl border shadow-sm">
