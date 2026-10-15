@@ -31,7 +31,7 @@ function MyContestPage() {
   if (!focusedContest) {
     return (
       <PageHero
-        image="journey"
+        image="public-security"
         size="lg"
         kicker="Meu concurso"
         icon={Target}
@@ -62,7 +62,7 @@ function MyContestPage() {
   return (
     <div className="space-y-6">
       <PageHero
-        image="journey"
+        image="public-security"
         kicker="Meu concurso"
         icon={Target}
         title={focusedContest.agency}

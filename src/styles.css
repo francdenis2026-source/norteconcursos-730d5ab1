@@ -11009,3 +11009,51 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 
 .app-sheet .app-sidebar__search { flex-shrink: 0; }
+
+
+/* Public-safety artwork: reserved text area, separate image strip on small screens. */
+.page-hero[data-hero="public-security"] {
+  --hero-image: url('/media/hero/meu-concurso-seguranca-publica.webp');
+  --hero-position: right center;
+  min-height: 320px;
+  background-color: #081827;
+}
+.page-hero[data-hero="public-security"]::before {
+  background: linear-gradient(90deg, rgb(5 16 29 / .90), rgb(5 16 29 / .72) 48%, rgb(5 16 29 / .12) 74%, rgb(5 16 29 / .06));
+}
+.page-hero[data-hero="public-security"]::after { display: none; }
+.page-hero[data-hero="public-security"] .page-hero__row {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.page-hero[data-hero="public-security"] .page-hero__text,
+.page-hero[data-hero="public-security"] .page-hero__actions { max-width: 55%; }
+.page-hero[data-hero="public-security"] h1 { overflow-wrap: anywhere; }
+.page-hero[data-hero="public-security"] .page-hero__desc { color: #dce5f0; }
+.page-hero[data-hero="public-security"] .page-hero__actions :is(a, button) { min-height: 44px; white-space: normal; }
+@media (max-width: 1023px) {
+  .page-hero[data-hero="public-security"] {
+    min-height: 0;
+    padding-top: 210px !important;
+    background-position: right top;
+    background-size: auto 190px;
+  }
+  .page-hero[data-hero="public-security"]::before {
+    background: linear-gradient(180deg, rgb(8 24 39 / .06), rgb(8 24 39 / .10) 130px, #081827 190px);
+  }
+  .page-hero[data-hero="public-security"] .page-hero__text,
+  .page-hero[data-hero="public-security"] .page-hero__actions { max-width: 100%; }
+}
+@media (max-width: 640px) {
+  .page-hero[data-hero="public-security"] { padding-top: 172px !important; background-size: auto 150px; }
+  .page-hero[data-hero="public-security"]::before {
+    background: linear-gradient(180deg, rgb(8 24 39 / .04), rgb(8 24 39 / .10) 100px, #081827 150px);
+  }
+  .page-hero[data-hero="public-security"] .page-hero__actions { width: 100%; }
+}
+@media (forced-colors: active) {
+  .page-hero[data-hero="public-security"] { background-image: none; padding-top: 24px !important; }
+  .page-hero[data-hero="public-security"]::before { display: none; }
+}
