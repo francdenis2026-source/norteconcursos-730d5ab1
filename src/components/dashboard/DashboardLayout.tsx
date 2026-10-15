@@ -163,7 +163,7 @@ const MENU: MenuItem[] = [
     icon: BarChart3,
     href: "/dashboard/exam-panorama",
   },
-  { group: "Objetivo", label: "Concursos disponíveis", icon: Search, href: "/dashboard/questions" },
+  { group: "Objetivo", label: "Concursos e editais", icon: Search, href: "/dashboard/questions" },
   {
     group: "ENEM",
     label: "Área ENEM",

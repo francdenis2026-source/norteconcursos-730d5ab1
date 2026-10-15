@@ -4,6 +4,7 @@ import {
   filterEditalEditions,
   editalSourceUrl,
   editalMaterials,
+  contestStudyEditions,
 } from "../src/lib/editalCatalog.ts";
 const editions = [
   {
@@ -34,6 +35,14 @@ const editions = [
     source: { source_type: "outro" },
   },
 ];
+test("public-service goal catalog does not mix ENEM into competition editions", () => {
+  const enem = { ...editions[0], id: "enem", contest_name: " ENEM 2025 " };
+  assert.deepEqual(
+    contestStudyEditions([...editions, enem]).map((e) => e.id),
+    editions.map((e) => e.id),
+  );
+  assert.equal(contestStudyEditions([enem]).length, 0);
+});
 test("edital catalog finds recent and archived editions by accent-free terms, year, and document type", () => {
   assert.deepEqual(
     filterEditalEditions(editions, "policia agente").map((e) => e.id),

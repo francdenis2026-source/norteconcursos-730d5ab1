@@ -68,7 +68,11 @@ function mapContest(row: Record<string, unknown>): Contest {
 export const MockService = {
   // Contests
   getContests: async (): Promise<Contest[]> => {
-    const { data, error } = await supabase.from("contests").select("*").eq("is_demo", false);
+    const { data, error } = await supabase
+      .from("contests")
+      .select("*")
+      .eq("is_demo", false)
+      .eq("content_status", "publicado");
     if (error) throw error;
     return (data ?? []).map(mapContest).filter((c) => !/fict[ií]cio/i.test(c.name));
   },
@@ -87,12 +91,20 @@ export const MockService = {
       data: { session },
     } = await supabase.auth.getSession();
     if (!session) throw new Error("Entre na sua conta para definir o concurso.");
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from("profiles")
       .update({ focused_contest_id: id })
-      .eq("id", session.user.id);
+      .eq("id", session.user.id)
+      .select("id,focused_contest_id")
+      .single();
     if (error) throw error;
-    localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
+    if (data?.id !== session.user.id || data?.focused_contest_id !== id)
+      throw new Error("Não foi possível confirmar o concurso salvo na sua conta.");
+    try {
+      localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
+    } catch {
+      /* The database is the source of truth; local cache is optional. */
+    }
   },
   getFocusedContest: async (): Promise<Contest | undefined> => {
     const {
