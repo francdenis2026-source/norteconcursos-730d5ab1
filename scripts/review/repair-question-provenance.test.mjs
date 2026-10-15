@@ -18,3 +18,4 @@ test('already repaired records are preserved and duplicates stop the batch',asyn
  assert.deepEqual(await repairProvenance(p,req,async()=>bytes),{updated:[],preserved:1});
  await assert.rejects(repairProvenance(p,async(path,method)=>{assert.notEqual(method,'PATCH');return path.startsWith('content_sources')?sources(path):path.includes('select=id')?[{id:'canonical'}]:[p.items[0].expected];},async()=>bytes),/Canonical/);
 });
+test('database dry run checks canonical duplicates but never writes',async()=>{const p=make();let writes=0;const req=async(path,method='GET')=>{if(method!=='GET'){writes++;throw Error('Unexpected write');}return path.startsWith('content_sources')?sources(path):path.includes('select=id')?[]:[p.items[0].expected];};const result=await repairProvenance(p,req,async()=>bytes,{dryRun:true});assert.deepEqual(result.pending,['q']);assert.equal(writes,0);});

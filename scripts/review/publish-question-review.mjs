@@ -9,7 +9,7 @@ const allowed = new Set(['content_status','subject','legal_basis','law_version_c
 // Preserve microsecond precision: Date parsing would silently round it away.
 export function sameReviewRow(a,b) {
   const normalize=row=>row && Object.fromEntries(Object.entries(row).map(([key,value])=>{
-    if (['created_at','verified_at','law_version_checked_at'].includes(key) && typeof value==='string') {
+    if (['created_at','verified_at','law_version_checked_at','checked_at'].includes(key) && typeof value==='string') {
       value=value.replace(/Z$/, '+00:00').replace(/\.(\d+)(?=[+-]\d{2}:\d{2}$)/,(_,fraction)=>{
         const digits=fraction.replace(/0+$/,''); return digits?`.${digits}`:'';
       });

@@ -24,7 +24,7 @@ export function validateRepairs(pack) {
   return pack;
 }
 
-export async function repairContexts(pack,request,readPdf=readFile) {
+export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false}={}) {
   validateRepairs(pack);
   const pending=[];
   for(const item of pack.items) {
@@ -42,6 +42,7 @@ export async function repairContexts(pack,request,readPdf=readFile) {
     pending.push(item);
   }
   const result={repaired:[],preserved:pack.items.length-pending.length};
+  if(dryRun)return {...result,dry_run:true,pending:pending.map(i=>i.expected.id)};
   for(const {expected,patch} of pending) {
     const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
     const rows=await request(`official_exam_questions?${filters}`,'PATCH',patch);
