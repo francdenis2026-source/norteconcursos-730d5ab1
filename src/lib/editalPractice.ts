@@ -14,16 +14,14 @@ export function editalExamQuestions(catalog: Question[], edition: EditalEdition)
   if (
     !edition.contest_name?.trim() ||
     !edition.role_name?.trim() ||
-    !edition.exam_board?.trim() ||
     !Number.isInteger(edition.contest_year)
   )
     return [];
-  return catalog.filter(
+  const candidates = catalog.filter(
     (q) =>
       isAppliedExamQuestion(q) &&
       !needsMissingSupportText(q) &&
       q.year === String(edition.contest_year) &&
-      canonicalBoard(q.board) === canonicalBoard(edition.exam_board!) &&
       matchesQuestionContest(q.contest, questionContestLabel(edition.contest_name)) &&
       matchesQuestionCareer(
         q.career,
@@ -34,10 +32,22 @@ export function editalExamQuestions(catalog: Question[], edition: EditalEdition)
         edition.contest_year,
       ),
   );
+  const knownBoard = (value: string | null | undefined) =>
+    !!value?.trim() && !/^(?:n[aã]o informada|desconhecida|a definir)$/i.test(value.trim());
+  const board = knownBoard(edition.exam_board) ? canonicalBoard(edition.exam_board) : null;
+  if (board) return candidates.filter((q) => canonicalBoard(q.board) === board);
+  // A missing edition field can be resolved only by one unambiguous board in this paper's eligible items.
+  const identified = new Set(
+    candidates.filter((q) => knownBoard(q.board)).map((q) => canonicalBoard(q.board)),
+  );
+  if (identified.size !== 1) return [];
+  const [resolved] = identified;
+  return candidates.filter((q) => canonicalBoard(q.board) === resolved);
 }
 export function editalPracticeSearch(edition: EditalEdition) {
   return {
     edition: edition.id,
+    go: "1",
     mode: "catalog",
     limit: "all",
     ...(/^\s*(?:ENEM\b|Exame Nacional do Ensino M[eé]dio\b)/i.test(edition.contest_name)

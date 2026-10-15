@@ -144,9 +144,9 @@ test("same-year police papers in different states and cargos cannot leak across 
   assert.equal(editalExamQuestions([{ ...q, career: "Delegado de Polícia" }], e).length, 0);
 });
 test("incomplete metadata and unavailable papers stay empty without a broad fallback", () => {
-  assert.deepEqual(
-    editalExamQuestions([paperQuestion], { ...practiceEdition, exam_board: null }),
-    [],
+  assert.equal(
+    editalExamQuestions([paperQuestion], { ...practiceEdition, exam_board: null }).length,
+    1,
   );
   assert.deepEqual(editalExamQuestions([paperQuestion], { ...practiceEdition, role_name: "" }), []);
   assert.deepEqual(
@@ -164,13 +164,28 @@ test("incomplete metadata and unavailable papers stay empty without a broad fall
 test("edition links retain all catalog and review modes without a subject-only filter", () => {
   assert.deepEqual(editalPracticeSearch(practiceEdition), {
     edition: "new",
+    go: "1",
     mode: "catalog",
     limit: "all",
   });
   assert.deepEqual(editalPracticeSearch({ ...practiceEdition, id: "enem", contest_name: "ENEM" }), {
     edition: "enem",
+    go: "1",
     mode: "catalog",
     limit: "all",
     contest: "ENEM",
   });
+});
+
+test("missing board is resolved from this paper only when unambiguous, never across distinct boards", () => {
+  const e = { ...practiceEdition, exam_board: null };
+  assert.equal(editalExamQuestions([paperQuestion], e).length, 1);
+  assert.deepEqual(
+    editalExamQuestions(
+      [paperQuestion, { ...paperQuestion, id: "another-board", board: "FGV" }],
+      e,
+    ),
+    [],
+  );
+  assert.deepEqual(editalExamQuestions([{ ...paperQuestion, board: "Não informada" }], e), []);
 });

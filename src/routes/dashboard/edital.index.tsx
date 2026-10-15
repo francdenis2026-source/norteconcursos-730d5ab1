@@ -181,7 +181,10 @@ function EditalPage() {
           </h2>
           <p>{edition.role_name}</p>
           <p className="text-sm text-muted-foreground">
-            {edition.exam_board || "Banca não informada"}
+            {edition.exam_board ||
+              (examQuestions[0]?.board
+                ? `${examQuestions[0].board} · identificada nas questões desta prova`
+                : "Banca não informada")}
           </p>
           {editalSourceUrl(edition.source) && (
             <a
@@ -203,8 +206,9 @@ function EditalPage() {
           >
             <h3 className="font-semibold">Resolva a prova escolhida</h3>
             <p className="my-2 text-sm text-muted-foreground">
-              Somente questões oficiais identificadas para este concurso, cargo, banca e ano. As
-              questões por assunto abaixo podem ter origem em outras provas.
+              Treinador: entre direto nas questões desta prova, com correção após cada resposta. A
+              seleção usa concurso, cargo, banca e ano. Questões por assunto abaixo podem ter origem
+              em outras provas.
             </p>
             {catalogLoading ? (
               <p role="status">Conferindo questões desta prova…</p>

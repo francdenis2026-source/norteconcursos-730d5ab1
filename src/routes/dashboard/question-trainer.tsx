@@ -534,8 +534,9 @@ function QuestionTrainer() {
           : "Consultando edição"}
       </strong>
       <p>
-        Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam
-        essa seleção.
+        {routeFilters.go === "1"
+          ? "Você está resolvendo somente as questões oficiais elegíveis desta prova, com correção após cada resposta."
+          : "Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam essa seleção."}
       </p>
       <Link
         to="/dashboard/edital"
@@ -765,7 +766,18 @@ function QuestionTrainer() {
   };
   // Veio com ?go=1 (cronograma, cursos, leis): começa direto, com 10 questões ainda não respondidas do assunto.
   React.useEffect(() => {
-    if (!autoStart.current || loading || started) return;
+    if (!autoStart.current || loading || started || examEdition.isError) return;
+    if (routeFilters.edition) {
+      autoStart.current = false;
+      if (!trainingPool.length) {
+        setNotice(
+          "Não há questões elegíveis disponíveis desta prova para iniciar. Nenhuma questão de outra prova será incluída.",
+        );
+        return;
+      }
+      startTraining();
+      return;
+    }
     if (pool.length === 0) {
       // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
       if (topic !== "all") {
@@ -1052,6 +1064,29 @@ function QuestionTrainer() {
         <p>{error}</p>
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
+        </Button>
+      </Center>
+    );
+  if (!started && routeFilters.edition && routeFilters.go === "1")
+    return (
+      <Center>
+        {autoStart.current ? (
+          <Loader2 className="h-7 w-7 animate-spin" />
+        ) : (
+          <Target className="h-8 w-8 text-primary" />
+        )}
+        <p role="status">
+          {autoStart.current
+            ? "Abrindo as questões da prova escolhida…"
+            : notice || "Treino encerrado. Suas respostas confirmadas permanecem no histórico."}
+        </p>
+        {!autoStart.current && catalog.length > 0 && (
+          <Button onClick={startTraining}>Resolver novamente esta prova</Button>
+        )}
+        <Button asChild variant="outline">
+          <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
+            Voltar ao meu edital
+          </Link>
         </Button>
       </Center>
     );
