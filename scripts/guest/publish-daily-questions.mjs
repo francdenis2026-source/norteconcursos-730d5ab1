@@ -3,7 +3,15 @@ import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 const project = "gkwphadbveiyjcwiiizw";
 const file = "supabase/migrations/20261015010000_balanced_daily_guest_questions.sql";
-const sql = await readFile(file, "utf8"),
+const sql =
+    (await readFile(file, "utf8")) +
+    (process.argv.includes("--legacy-test-only")
+      ? ""
+      : "\n" +
+        (await readFile(
+          "supabase/migrations/20261015020000_security_ce_daily_guest_questions.sql",
+          "utf8",
+        ))),
   sha256 = createHash("sha256").update(sql).digest("hex");
 if (process.argv.includes("--dry-run")) {
   await mkdir("outputs", { recursive: true });

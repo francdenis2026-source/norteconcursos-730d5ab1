@@ -6,9 +6,13 @@ import { execFileSync } from "node:child_process";
 const { PGlite } = await import(pathToFileURL(process.env.GUEST_SQL_TEST_MODULE).href);
 const db = new PGlite();
 // Exercise the exact file delivered to the user, including its transaction and dependencies.
-execFileSync(process.execPath, ["scripts/guest/publish-daily-questions.mjs", "--dry-run"], {
-  stdio: "pipe",
-});
+execFileSync(
+  process.execPath,
+  ["scripts/guest/publish-daily-questions.mjs", "--dry-run", "--legacy-test-only"],
+  {
+    stdio: "pipe",
+  },
+);
 const publication = await readFile("outputs/instalar-desafio-diario-completo.sql", "utf8");
 assert.ok(
   publication.startsWith("begin;" + String.fromCharCode(10)),
@@ -184,6 +188,36 @@ try {
   assert.ok(cycle2.slice(0, 5).every((q) => !cycle1.some((p) => p.id === q.id)));
   console.log(
     "PASS SQL: exact delivered SQL file, missing helper/support table/column, safe rerun, 10 shared questions, clamped limits, 5/5 formats, 6/4 careers, subject/answer diversity, date renewal, history, duplicates, quarantine, missing context/options, support text, anon isolation and sparse fallback.",
+  );
+  await db.exec(
+    "alter table official_exam_questions add column review_note text; update official_exam_questions set content_status='active',review_note='Comentário didático para teste local: a análise do enunciado depende dos requisitos descritos na norma e do alcance da regra apresentada, conforme o gabarito oficial.'; truncate daily_guest_question_items,daily_guest_question_sets;",
+  );
+  await db.exec(
+    await readFile(
+      "supabase/migrations/20261015020000_security_ce_daily_guest_questions.sql",
+      "utf8",
+    ),
+  );
+  execFileSync(process.execPath, ["scripts/guest/publish-daily-questions.mjs", "--dry-run"], {
+    stdio: "pipe",
+  });
+  await db.exec(await readFile("outputs/instalar-desafio-diario-completo.sql", "utf8"));
+  const security = await get();
+  assert.equal(security.length, 10);
+  assert.ok(
+    security.every(
+      (q) =>
+        q.exam_board === "CEBRASPE" &&
+        q.contest_name === "Polícia Civil" &&
+        ["C", "E"].includes(q.official_answer),
+    ),
+  );
+  await db.exec(
+    "update official_exam_questions set review_note='Transcrição verbatim do caderno oficial.';",
+  );
+  assert.equal((await get()).length, 0);
+  console.log(
+    "PASS security policy: ten original C/E police items; MC and unrelated careers excluded; missing explanation removes cached items.",
   );
   if (process.env.GUEST_AUDIT_DATA) {
     await db.exec(

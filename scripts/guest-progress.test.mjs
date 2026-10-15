@@ -5,6 +5,7 @@ import {
   dailyGuestQuestions,
   pendingGuestQuestions,
   guestContentKey,
+  isGuestSecurityCareer,
 } from "../src/lib/dailyGuestQuestions.ts";
 const day = "2026-10-15";
 const memory = () => {
@@ -13,15 +14,17 @@ const memory = () => {
 };
 const row = (id, changes = {}) => ({
   id,
-  contest_name: "Secretaria de Administração",
+  contest_name: "Polícia Federal",
   exam_year: 2026,
-  career_name: "Analista",
-  exam_board: "FGV",
+  career_name: "Agente de Polícia Federal",
+  exam_board: "CEBRASPE",
   subject: "Matemática",
-  question_text: `Qual é o resultado da operação apresentada na situação ${id}?\n(A) Primeira opção.\n(B) Segunda opção.\n(C) Terceira opção.\n(D) Quarta opção.\n(E) Quinta opção.`,
-  official_answer: "B",
+  question_text: `Julgue a afirmação matemática independente na situação ${id}, conforme o enunciado apresentado.`,
+  official_answer: "C",
   content_status: "active",
   legal_basis: [],
+  review_note:
+    "A afirmação é analisada pela operação matemática descrita no enunciado, considerando os valores e as regras aplicáveis à situação. Exemplo: somar duas unidades a outras duas resulta em quatro unidades.",
   ...changes,
 });
 test("guest refresh skips answered items and preserves the ten-answer cap across visits", () => {
@@ -74,28 +77,24 @@ test("legacy quota and corrupted progress cannot grant extra free answers", () =
   assert.equal(readGuestProgress(store, day).used, 5);
   assert.equal(pendingGuestQuestions(q, readGuestProgress(store, day))[0].id, "5");
 });
-test("daily guest parsing mixes formats, retains official answers, and removes duplicate imports", () => {
-  const mc = row("mc"),
-    ce = row("ce", {
-      exam_board: "CEBRASPE",
-      question_text: "Julgue a afirmação independente sobre as operações matemáticas.",
-      official_answer: "E",
-    });
-  const items = dailyGuestQuestions([
-    mc,
-    ce,
-    { ...mc, id: "copy", question_text: mc.question_text.replaceAll(" ", "  ") },
-    mc,
-  ]);
-  assert.equal(items.length, 2);
-  assert.deepEqual(
-    items.map((q) => q.kind),
-    ["multiple_choice", "true_false"],
-  );
-  assert.deepEqual(
-    items.map((q) => q.answer),
-    ["B", "E"],
-  );
+test("public challenge accepts only reviewed security C/E, preserving official answers and deduplicating copies", () => {
+  const ce = row("ce");
+  const multiple = row("mc", {
+    question_text: "Assinale a alternativa correta. (A) Uma. (B) Duas. (C) Três. (D) Quatro.",
+    official_answer: "C",
+  });
+  const unrelated = row("civil", {
+    contest_name: "Secretaria da Fazenda",
+    career_name: "Auditor fiscal",
+    career_category: "Fiscal",
+  });
+  const uncommented = row("no-comment", {
+    review_note: "Transcrição verbatim do caderno oficial; gabarito definitivo conferido.",
+  });
+  const actual = dailyGuestQuestions([ce, multiple, unrelated, uncommented, { ...ce, id: "copy" }]);
+  assert.equal(actual.length, 1);
+  assert.equal(actual[0].kind, "true_false");
+  assert.equal(actual[0].answer, "C");
 });
 test("unreviewed law, missing support text, annulment and multiple choice without options are never shown", () => {
   const invalid = [
@@ -130,4 +129,21 @@ test("unreviewed law, missing support text, annulment and multiple choice withou
       "Texto-base:\nTexto de apoio completo para interpretar.\n\n[[/texto-base]]\nSegundo o texto, julgue a afirmação.",
   });
   assert.equal(dailyGuestQuestions([supported]).length, 1);
+});
+
+test("security scope includes registered police, firefighter, penal and guard careers", () => {
+  for (const name of [
+    "Polícia Civil",
+    "Polícia Militar",
+    "Polícia Federal",
+    "Polícia Rodoviária Federal",
+    "Corpo de Bombeiros",
+    "DEPEN",
+    "Polícia Penal",
+    "Guarda Municipal",
+    "Instituto de Perícia Criminal",
+  ]) {
+    assert.ok(isGuestSecurityCareer(name, name.includes("Perícia") ? "Perito criminal" : "", ""), name);
+  }
+  assert.equal(isGuestSecurityCareer("SEFAZ", "Auditor fiscal", "Fiscal"), false);
 });

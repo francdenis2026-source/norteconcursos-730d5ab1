@@ -3,8 +3,6 @@ import {
   pendingGuestQuestions,
   guestContentKey,
 } from "@/lib/dailyGuestQuestions";
-import { MissingTextNotice } from "@/components/library/MissingTextNotice";
-import { needsMissingSupportText } from "@/lib/questionText";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -16,8 +14,6 @@ import {
   Loader2,
   ShieldCheck,
   Sparkles,
-  Strikethrough,
-  X,
   XCircle,
   Zap,
 } from "lucide-react";
@@ -27,13 +23,6 @@ import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import {
@@ -46,11 +35,8 @@ import {
 import {
   type Answer,
   type Question,
-  DIFFICULTY_LABEL,
-  DIFFICULTY_STYLE,
-  questionAnswerLabel,
-  questionAnswers,
-  isPlaceholderExplanation,
+  basisHref,
+  shuffled,
   parseQuestion,
   splitExplanation,
 } from "@/lib/questionFormat";
@@ -86,9 +72,7 @@ function DesafioDiario() {
   const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
-  const [struck, setStruck] = React.useState<Answer[]>([]);
   const [answered, setAnswered] = React.useState(false);
-  const [showResult, setShowResult] = React.useState(false);
   const [correct, setCorrect] = React.useState(0);
   const [wrong, setWrong] = React.useState(0);
   const [dayChanged, setDayChanged] = React.useState(false);
@@ -118,9 +102,11 @@ function DesafioDiario() {
           if (active) window.location.reload();
           return;
         }
-        const daily = pendingGuestQuestions(
-          dailyGuestQuestions((data || []) as Record<string, unknown>[]),
-          progress,
+        const daily = shuffled(
+          pendingGuestQuestions(
+            dailyGuestQuestions((data || []) as Record<string, unknown>[]),
+            progress,
+          ),
         );
         if (!active) return;
         setRemaining(remainingToday);
@@ -143,7 +129,6 @@ function DesafioDiario() {
   const startChallenge = () => {
     setIndex(0);
     setSelected(null);
-    setStruck([]);
     setAnswered(false);
     setStep("playing");
   };
@@ -174,7 +159,6 @@ function DesafioDiario() {
       setAnswered(true);
       if (isCorrect) setCorrect((value) => value + 1);
       else setWrong((value) => value + 1);
-      setShowResult(true);
     } catch {
       setErrorMessage(
         "Não foi possível salvar sua resposta neste navegador. Verifique se o armazenamento está disponível e tente novamente.",
@@ -185,9 +169,7 @@ function DesafioDiario() {
     }
   };
   const next = () => {
-    setShowResult(false);
     setSelected(null);
-    setStruck([]);
     setAnswered(false);
     if (index + 1 >= questions.length || remaining <= 0) {
       setStep("done");
@@ -298,7 +280,7 @@ function DesafioDiario() {
                   Desafio diário <em>Norte Concurso</em>
                 </>
               }
-              description={`${questions.length} questões oficiais disponíveis para você hoje, com gabarito e comentários quando disponíveis. A rodada é compartilhada entre os visitantes e renova à meia-noite do Acre.`}
+              description={`${questions.length} questões de certo ou errado de segurança pública disponíveis para você hoje, com explicação após cada resposta. A rodada é compartilhada entre os visitantes e renova à meia-noite do Acre.`}
               actions={
                 <button type="button" className="btn-brass" onClick={startChallenge}>
                   Começar agora <ArrowRight />
@@ -317,15 +299,11 @@ function DesafioDiario() {
             </PageHero>
             <p
               className="flex flex-wrap gap-2 text-sm text-muted-foreground"
-              aria-label="Composição das questões disponíveis"
+              aria-label="Formato do desafio"
             >
-              <Badge variant="outline">
-                {questions.filter((q) => q.kind === "multiple_choice").length} de múltipla escolha
-              </Badge>
-              <Badge variant="outline">
-                {questions.filter((q) => q.kind === "true_false").length} de certo ou errado
-              </Badge>
-              <span>Concursos, carreiras e anos identificados em cada questão.</span>
+              <Badge variant="outline">Cebraspe / Cespe · Certo ou errado</Badge>
+              <Badge variant="outline">Segurança pública</Badge>
+              <span>Confira a explicação após confirmar a resposta.</span>
             </p>
             <section className="daily-intro__guide" aria-labelledby="daily-guide-title">
               <figure className="daily-intro__visual">
@@ -344,7 +322,7 @@ function DesafioDiario() {
                     <b>01</b>
                     <div>
                       <strong>Resolva no seu ritmo</strong>
-                      <p>Leia o enunciado e escolha uma alternativa.</p>
+                      <p>Leia o enunciado e marque Certo ou Errado.</p>
                     </div>
                   </li>
                   <li>
@@ -382,24 +360,12 @@ function DesafioDiario() {
               total={questions.length}
               remaining={remaining}
               selected={selected}
-              struck={struck}
               answered={answered}
-              showResult={showResult}
               correct={correct}
               wrong={wrong}
               onSelect={(letter) => {
                 if (answered) return;
-                setStruck((items) => items.filter((item) => item !== letter));
                 setSelected(letter);
-              }}
-              onToggleStrike={(letter) => {
-                if (answered) return;
-                setStruck((items) =>
-                  items.includes(letter)
-                    ? items.filter((item) => item !== letter)
-                    : [...items, letter],
-                );
-                if (selected === letter) setSelected(null);
               }}
               onSubmit={submit}
               onNext={next}
@@ -426,13 +392,10 @@ function QuestionPlayer({
   total,
   remaining,
   selected,
-  struck,
   answered,
-  showResult,
   correct,
   wrong,
   onSelect,
-  onToggleStrike,
   onSubmit,
   onNext,
   isLast,
@@ -442,36 +405,25 @@ function QuestionPlayer({
   total: number;
   remaining: number;
   selected: Answer | null;
-  struck: Answer[];
   answered: boolean;
-  showResult: boolean;
   correct: number;
   wrong: number;
-  onSelect: (letter: Answer) => void;
-  onToggleStrike: (letter: Answer) => void;
+  onSelect: (answer: Answer) => void;
   onSubmit: () => void;
   onNext: () => void;
   isLast: boolean;
 }) {
-  const isCorrect = selected === question.answer;
   const parsed = parseQuestion(question.text);
-  const hasOptions = parsed.options.length > 0;
   const explanation = splitExplanation(question.explanation);
-  const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
-  const labelFor = (answer: Answer) =>
-    hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
-
+  const isCorrect = selected === question.answer;
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <Badge variant="secondary">
-          <Sparkles className="mr-1 h-3.5 w-3.5 text-amber-500" /> Desafio do dia
-        </Badge>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <Badge variant="secondary">Desafio de segurança pública</Badge>
         <Badge variant="outline">{remaining} restantes hoje</Badge>
       </div>
-      <div className="rounded-xl border bg-card px-4 py-3 shadow-sm">
-        <div className="mb-2 flex items-center justify-between text-xs">
+      <div className="rounded-xl border bg-card px-4 py-3">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2 text-xs">
           <span className="font-bold">
             Questão {index + 1} de {total}
           </span>
@@ -479,121 +431,37 @@ function QuestionPlayer({
             {correct} certas · {wrong} erradas
           </span>
         </div>
-        <Progress value={(index / total) * 100} className="h-1.5" />
+        <Progress value={((index + (answered ? 1 : 0)) / total) * 100} className="h-1.5" />
       </div>
-      <Card
-        className="overflow-hidden border-0 shadow-xl ring-1 ring-border/70 animate-in fade-in slide-in-from-bottom-3 duration-300"
-        key={question.id}
-      >
-        <div className="h-1 bg-gradient-to-r from-amber-500 via-sky-500 to-blue-800" />
+      <Card className="overflow-hidden">
         <CardContent className="p-5 md:p-7">
           <div className="mb-5 flex flex-wrap gap-2">
             <Badge>{question.board}</Badge>
-            <Badge variant="outline">
-              {question.kind === "multiple_choice" ? "Múltipla escolha" : "Certo ou errado"}
-            </Badge>
+            <Badge variant="outline">Certo ou errado</Badge>
             <Badge variant="outline">{question.subject}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
             </Badge>
-            <Badge
-              variant="outline"
-              className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
-            >
-              {DIFFICULTY_LABEL[question.difficulty]}
-            </Badge>
+            <Badge variant="outline">{question.career}</Badge>
           </div>
-          {needsMissingSupportText(question) && (
-            <div className="mb-4">
-              <MissingTextNotice />
-            </div>
-          )}
           {parsed.base && (
-            <details
-              open
-              className="mb-4 rounded-xl border bg-muted/40 [&_summary::-webkit-details-marker]:hidden"
-            >
-              <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+            <details open className="mb-4 rounded-xl border bg-muted/40">
+              <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">
                 {parsed.baseLabel}
-                <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
               </summary>
-              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7 text-foreground">
+              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7">
                 {parsed.base}
               </div>
             </details>
           )}
-          <p className="whitespace-pre-line text-base font-medium leading-7 text-foreground md:text-lg">
+          <p className="whitespace-pre-line text-base font-medium leading-7 md:text-lg">
             {parsed.stem}
           </p>
-          <p className="mt-5 text-xs font-black uppercase tracking-wider text-muted-foreground">
-            {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
+          <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+            Julgue o item
           </p>
-          {hasOptions && (
-            <div className="mt-3 space-y-2">
-              {parsed.options.map((option) => {
-                const isStruck = struck.includes(option.letter);
-                const isSelected = selected === option.letter;
-                const isRight = answered && option.letter === question.answer;
-                const isWrong = answered && isSelected && option.letter !== question.answer;
-                return (
-                  <div key={option.letter} className="flex items-start gap-2">
-                    <button
-                      type="button"
-                      aria-pressed={isSelected}
-                      disabled={answered}
-                      onClick={() => onSelect(option.letter)}
-                      className={cn(
-                        "group flex flex-1 items-start gap-3 rounded-xl border-2 border-border bg-background p-3 text-left text-sm leading-6 transition-all duration-200 hover:border-primary hover:bg-primary/5 disabled:hover:bg-background",
-                        isStruck && "opacity-50",
-                        isSelected &&
-                          !answered &&
-                          "border-blue-600 bg-blue-50 ring-4 ring-blue-600/10 hover:bg-blue-50",
-                        isRight && "border-emerald-500 bg-emerald-50 hover:bg-emerald-50",
-                        isWrong && "border-rose-500 bg-rose-50 hover:bg-rose-50",
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-muted text-xs font-bold",
-                          isSelected && !answered && "bg-blue-600 text-white",
-                          isRight && "bg-emerald-600 text-white",
-                          isWrong && "bg-rose-600 text-white",
-                        )}
-                      >
-                        {option.letter}
-                      </span>
-                      <span className={cn(isStruck && "line-through")}>{option.text}</span>
-                    </button>
-                    <Button
-                      type="button"
-                      variant={isStruck ? "secondary" : "ghost"}
-                      size="icon"
-                      className="h-10 w-10 shrink-0"
-                      disabled={answered}
-                      aria-pressed={isStruck}
-                      aria-label={
-                        isStruck
-                          ? `Desfazer risco da alternativa ${option.letter}`
-                          : `Riscar alternativa ${option.letter}`
-                      }
-                      title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
-                      onClick={() => onToggleStrike(option.letter)}
-                    >
-                      <Strikethrough className="h-4 w-4" />
-                    </Button>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-          <div
-            className={cn(
-              "mt-3 grid gap-2",
-              hasOptions && "hidden",
-              questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
-            )}
-          >
-            {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            {(["C", "E"] as const).map((answer) => (
               <button
                 key={answer}
                 type="button"
@@ -601,94 +469,89 @@ function QuestionPlayer({
                 disabled={answered}
                 onClick={() => onSelect(answer)}
                 className={cn(
-                  "group relative flex min-h-16 items-center justify-center gap-2 rounded-xl border-2 border-border bg-background px-4 font-bold transition-all duration-200 hover:-translate-y-0.5 hover:border-primary hover:bg-primary/5 hover:shadow-md disabled:hover:translate-y-0",
-                  selected === answer &&
-                    !answered &&
-                    "scale-[1.02] border-blue-600 bg-blue-600 text-white shadow-lg shadow-blue-600/20 ring-4 ring-blue-600/15 hover:bg-blue-600 hover:text-white",
+                  "min-h-16 rounded-xl border-2 px-4 font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary",
+                  selected === answer && !answered
+                    ? "border-blue-600 bg-blue-600 text-white"
+                    : "border-border bg-background",
                   answered &&
                     answer === question.answer &&
-                    "border-emerald-500 bg-emerald-50 text-emerald-700",
+                    "border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200",
                   answered &&
                     selected === answer &&
-                    answer !== question.answer &&
-                    "border-rose-500 bg-rose-50 text-rose-700",
+                    !isCorrect &&
+                    "border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
                 )}
               >
-                <span
-                  className={cn(
-                    "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
-                    selected === answer &&
-                      !answered &&
-                      "bg-white text-blue-700 group-hover:bg-white group-hover:text-blue-700",
-                  )}
-                >
-                  {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
-                </span>
-                {labelFor(answer)}
+                {answer === "C" ? "Certo" : "Errado"}
               </button>
             ))}
           </div>
-          <div className="mt-6 flex justify-end">
-            <Button
-              size="lg"
-              disabled={!selected || answered}
-              onClick={onSubmit}
-              className="min-w-44"
-            >
-              Confirmar resposta <Check className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
+          {!answered && (
+            <div className="mt-6 flex justify-end">
+              <Button size="lg" disabled={!selected} onClick={onSubmit}>
+                Confirmar resposta <Check className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          )}
         </CardContent>
       </Card>
-      <Dialog open={showResult} onOpenChange={(open) => !open && onNext()}>
-        <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
-          <DialogHeader>
-            <div
-              className={cn(
-                "mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl sm:mx-0",
-                isCorrect ? "bg-emerald-100 text-emerald-700" : "bg-rose-100 text-rose-700",
-              )}
-            >
-              {isCorrect ? <CheckCircle2 /> : <X />}
+      {answered && (
+        <section
+          aria-label="Explicação da resposta"
+          aria-live="polite"
+          className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
+        >
+          <div className="flex items-center gap-3">
+            {isCorrect ? (
+              <CheckCircle2 className="h-6 w-6 text-emerald-600" />
+            ) : (
+              <XCircle className="h-6 w-6 text-rose-600" />
+            )}
+            <div>
+              <h2 className="text-lg font-bold">
+                {isCorrect ? "Resposta correta" : "Vamos revisar este ponto"}
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Gabarito oficial:{" "}
+                <strong className="text-foreground">
+                  {question.answer === "C" ? "Certo" : "Errado"}
+                </strong>
+              </p>
             </div>
-            <DialogTitle>
-              {isCorrect ? "Resposta correta" : "Vamos corrigir este ponto"}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            {!isCorrect && (
-              <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
-                <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
-                  Resposta correta
-                </p>
-                <p className="text-sm font-bold">{labelFor(question.answer)}</p>
-                {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
-              </div>
-            )}
-            {!isPlaceholderExplanation(explanation.main) && (
-              <div className="rounded-xl border bg-muted/30 p-4">
-                <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
-                  Comentário da questão
-                </p>
-                <p className="text-sm leading-6">{explanation.main}</p>
-              </div>
-            )}
-            {explanation.example && (
-              <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:bg-amber-950/30">
-                <p className="mb-1 text-xs font-black uppercase tracking-wider text-amber-700">
-                  Exemplo do dia a dia
-                </p>
-                <p className="text-sm leading-6">{explanation.example}</p>
-              </div>
-            )}
           </div>
-          <DialogFooter>
-            <Button onClick={onNext}>
-              {isLast ? "Ver resultado" : "Próxima questão"} <ArrowRight className="ml-2 h-4 w-4" />
+          <div>
+            <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
+            <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
+          </div>
+          {explanation.example && (
+            <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+              <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
+              <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+            </div>
+          )}
+          {question.legalBasis.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {question.legalBasis.map((basis, i) => (
+                <a
+                  key={i}
+                  href={basisHref(basis)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg border px-3 py-2 text-xs underline"
+                >
+                  {basis.title || basis.lei || "Consultar fonte oficial"}
+                </a>
+              ))}
+            </div>
+          )}
+          <div className="flex justify-end">
+            <Button size="lg" onClick={onNext}>
+              {isLast ? "Ver resultado" : "Próxima questão"}
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
