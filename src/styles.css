@@ -4609,7 +4609,7 @@ html {
   width: 300px !important;
   padding: 0 !important;
   border-color: oklch(1 0 0 / 0.08) !important;
-  background: var(--sidebar) !important;
+  background: var(--app-navigation-background, var(--sidebar)) !important;
   color: white;
 }
 .app-sheet > button {
@@ -10906,7 +10906,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-content nav[aria-label="Planejamento de estudos"] > a > span > span + span { font-size: 13px; }
 .lp-footer__grid > div:not(:first-child) a { display: flex; align-items: center; min-height: 44px; font-size: 15px; }
 .lp-menu-btn { min-width: 44px; min-height: 44px; }
-.app-sheet > button, .lp-sheet > button {
+.app-sheet > button:first-child, .lp-sheet > button:first-child {
   display: grid;
   width: 44px;
   height: 44px;
@@ -10992,3 +10992,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-sidebar__search svg { width: 22px; height: 22px; }
 .app-bottom-nav .app-ico { width: 36px; height: 36px; }
 .app-bottom-nav .app-ico svg { width: 23px !important; height: 23px !important; }
+
+
+/* Decorative Acre-inspired cartography, beneath all navigation content. */
+:root {
+  --app-navigation-background: linear-gradient(180deg, rgb(4 12 24 / .28), rgb(4 12 24 / .10) 48%, rgb(4 12 24 / .26)), url('/media/navigation/acre-topografia-sidebar.webp') center / cover no-repeat #071322;
+}
+.app-shell .app-sidebar,
+.app-shell[data-area] .app-sidebar {
+  background: var(--app-navigation-background);
+  border-right-color: rgb(190 151 78 / .20);
+}
+.app-shell[data-area] .app-sidebar[data-collapsed="true"] { background-position: center, left center; }
+@media (forced-colors: active) {
+  .app-shell[data-area] .app-sidebar, .app-sheet { background-image: none !important; }
+}
+
+.app-sheet .app-sidebar__search { flex-shrink: 0; }

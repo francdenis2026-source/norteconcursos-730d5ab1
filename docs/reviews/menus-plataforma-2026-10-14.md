@@ -34,3 +34,11 @@ Nenhum caderno, conteúdo de estudo, questão ou registro do banco foi excluído
 Ícones laterais passaram de 16 px para 24 px no menu expandido e 28 px no recolhido, com blocos de 38/44 px e contorno colorido. O menu recolhido tem 96 px, com legenda curta e ícones fixos por área: preparação, objetivo, conteúdo, questões, provas, desempenho e conta. A página ativa permanece identificada pela cor e pelo estado acessível, com descrição completa ao focar o atalho. A barra móvel também recebeu ícones maiores.
 
 Verificados TypeScript, build e navegação em Chromium com serviços simulados, incluindo medidas dos ícones, identificação de preparação, busca, grupos, destaque da página e telas de 320, 390, 768 e 1024 px sem transbordamento horizontal.
+
+## Fundo visual da barra lateral
+
+Arte vertical exclusiva gerada para a navegação: relevo, rios e linhas de orientação em azul-marinho e dourado, inspirados no Acre. O original foi preservado fora do repositório e a versão de produção é `public/media/navigation/acre-topografia-sidebar.webp` (724 × 2172 px, 74.230 bytes). O fundo é decorativo em CSS, com camada escura e cor de reserva, sem inserir informação extra na leitura assistiva.
+
+A imagem atende à barra lateral de aluno/administrador e ao menu móvel. No modo recolhido, o enquadramento destaca somente uma faixa de textura. Não há animação nem carregamento de fonte externa. Em cores forçadas, a decoração é retirada. Ajustado o seletor do botão de fechar a gaveta para não aplicar sua largura ao campo de busca.
+
+Verificação em Chromium com serviços simulados: menu expandido/recolhido, busca, navegação, grupos e larguras 320/390/768/1024 px sem transbordamento. Campo de busca móvel ocupa a largura disponível. Capturas locais conferidas e build de produção executado. Sem alterações de permissões ou dados de alunos.
