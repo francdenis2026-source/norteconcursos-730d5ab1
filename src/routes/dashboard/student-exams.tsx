@@ -24,7 +24,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { ExamBookletViewer } from "@/components/dashboard/ExamBookletViewer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddExamDialog } from "@/components/dashboard/AddExamDialog";
 import {
@@ -135,7 +135,7 @@ interface SubjectReport {
   mapped: number;
 }
 
-// Raio-X por disciplina de um conjunto de provas (uma só, ou todas). Conta todos os itens
+// Análise por disciplina de um conjunto de provas (uma só, ou todas). Conta todos os itens
 // respondidos (anuladas e pendentes ficam de fora); a disciplina vem da questão cadastrada e,
 // quando ela não existe, o item cai em "Sem disciplina cadastrada" em vez de sumir da conta.
 function computeSubjectReport(
@@ -505,7 +505,7 @@ function StudentExamIntelligence() {
     return (
       <EmptyState
         title="Você ainda não cadastrou nenhuma prova"
-        description="Cadastre os concursos que você já fez para ver a linha do tempo, o Raio-X por disciplina e o seu rendimento."
+        description="Cadastre os concursos que você já fez para ver a linha do tempo, o Análise por disciplina e o seu rendimento."
       >
         <AddExamCard
           user={user}
@@ -602,7 +602,7 @@ function StudentExamIntelligence() {
     });
   };
 
-  // Raio-X de TODAS as edições de cada concurso (ex.: PF 2014+2018+2021+2025) e plano até o corte.
+  // Análise de TODAS as edições de cada concurso (ex.: PF 2014+2018+2021+2025) e plano até o corte.
   const families = contests
     .map((contest) => {
       const list = groups.filter((group) => group.contest === contest);
@@ -665,6 +665,20 @@ function StudentExamIntelligence() {
   return (
     <div className="space-y-7 pb-10">
       <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
+      <div className="flex flex-wrap gap-3 rounded-2xl border bg-card p-4 text-sm">
+        <Link
+          className="inline-flex min-h-11 items-center rounded-lg border px-4 font-semibold hover:bg-muted"
+          to="/dashboard/study-plan"
+        >
+          Planejar a partir dos resultados →
+        </Link>
+        <Link
+          className="inline-flex min-h-11 items-center rounded-lg border px-4 font-semibold hover:bg-muted"
+          to="/dashboard/performance"
+        >
+          Ver desempenho nos estudos →
+        </Link>
+      </div>
       <Timeline groups={groups} selectedKey={selectedExam} onSelect={selectExam} />
       <section className="space-y-4">
         <div className="flex flex-wrap items-start justify-between gap-3">
@@ -748,7 +762,7 @@ function StudentExamIntelligence() {
       </section>
       <section className="space-y-4">
         <div>
-          <h2 className="text-xl font-black text-primary">Raio-X e plano por concurso</h2>
+          <h2 className="text-xl font-black text-primary">Análise e plano por concurso</h2>
           <p className="text-sm text-muted-foreground">
             Todas as edições de cada concurso juntas (por exemplo PF 2014, 2018, 2021 e 2025), com o
             mapa dos seus erros e questões em branco e o caminho até a nota de corte.
@@ -770,7 +784,7 @@ function StudentExamIntelligence() {
       <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
         <DisciplineAnalysis
           report={overallReport}
-          title="Raio-X geral — todos os concursos"
+          title="Análise geral — todos os concursos"
           scope={`Soma de ${attempts.length} prova(s) já realizadas, com todas as disciplinas cobradas em cada concurso.`}
         />
         <ActionPlan
@@ -829,13 +843,13 @@ function Hero({ attempts, years }: { attempts: number; years: number }) {
     <section className="page-hero page-hero--lg" data-hero="exam-hall">
       <div className="page-hero__row">
         <div className="page-hero__text">
-          <span className="hero-chip">Inteligência de desempenho</span>
+          <span className="hero-chip">Concursos realizados</span>
           <h1>
-            Minha trajetória <em>em concursos</em>
+            Minhas provas <em>e diagnóstico</em>
           </h1>
           <p className="page-hero__desc">
-            Uma leitura objetiva do seu histórico, das falhas recorrentes e do próximo passo de
-            estudo.
+            Envie suas provas, consulte os cadernos e acompanhe resultados por concurso. Compare
+            gabaritos e notas de corte disponíveis, com cada edição identificada.
           </p>
         </div>
         <div className="flex gap-2 sm:gap-3">
@@ -1114,9 +1128,7 @@ function ContestCard({
   onUploaded: () => void;
 }) {
   const answered = group.correct + group.wrong;
-  const [previewPage, setPreviewPage] = React.useState<{ url: string; number: number } | null>(
-    null,
-  );
+  const [previewIndex, setPreviewIndex] = React.useState<number | null>(null);
   const accuracy = percent(group.correct, answered);
   const reviewItems = Object.entries(group.analysis?.items || {})
     .flatMap(([itemText, verdict]) => {
@@ -1181,7 +1193,7 @@ function ContestCard({
             <div className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
               <strong>Detalhamento por questão aproximado.</strong> Os totais e a nota são os
               oficiais ({group.correct} acertos, {group.wrong} erros, nota {group.score}), mas o
-              Raio-X por disciplina desta edição vem da sua planilha pessoal e pode divergir em
+              Análise por disciplina desta edição vem da sua planilha pessoal e pode divergir em
               algumas questões. Use para ver tendências, não para contar cada item.
             </div>
           )}
@@ -1190,7 +1202,7 @@ function ContestCard({
             <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
               Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
               {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão, por isso
-              não há Raio-X por disciplina desta edição. Ela entra no Raio-X do concurso (todas as
+              não há Análise por disciplina desta edição. Ela entra no Análise do concurso (todas as
               edições) pelos totais e pela nota de corte, e as outras edições mostram as
               disciplinas.
             </div>
@@ -1200,7 +1212,7 @@ function ContestCard({
 
               report={computeSubjectReport([group], references, syllabus)}
 
-              title="Raio-X desta prova"
+              title="Análise desta prova"
 
               scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
             />
@@ -1278,7 +1290,7 @@ function ContestCard({
                     key={page.id}
                     type="button"
                     disabled={!pageUrls[page.id]}
-                    onClick={() => setPreviewPage({ url: pageUrls[page.id]!, number: index + 1 })}
+                    onClick={() => setPreviewIndex(index)}
                     aria-label={`Ampliar página ${index + 1} do caderno`}
                     className="relative aspect-[3/4] overflow-hidden rounded-xl border bg-muted shadow-sm transition hover:-translate-y-1 hover:ring-2 hover:ring-emerald-400"
                   >
@@ -1304,24 +1316,12 @@ function ContestCard({
           )}
         </CardContent>
       )}
-      <Dialog
-        open={!!previewPage}
-        onOpenChange={(value) => {
-          if (!value) setPreviewPage(null);
-        }}
-      >
-        <DialogContent className="max-h-[95dvh] max-w-4xl overflow-auto">
-          <DialogTitle>Página {previewPage?.number} do caderno</DialogTitle>
-          <DialogDescription>Feche a imagem para voltar à sua prova.</DialogDescription>
-          {previewPage && (
-            <img
-              src={previewPage.url}
-              alt={`Página ${previewPage.number} ampliada`}
-              className="h-auto w-full"
-            />
-          )}
-        </DialogContent>
-      </Dialog>
+      <ExamBookletViewer
+        pages={group.pages.map((page) => ({ id: page.id, url: pageUrls[page.id] }))}
+        initialIndex={previewIndex}
+        title={`${group.contest} — ${group.year}`}
+        onClose={() => setPreviewIndex(null)}
+      />
     </Card>
   );
 }

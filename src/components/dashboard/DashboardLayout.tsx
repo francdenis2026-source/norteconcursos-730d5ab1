@@ -152,12 +152,6 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Minha preparação",
-    label: "Diagnóstico por provas",
-    icon: ClipboardList,
-    href: "/dashboard/study-plan",
-  },
-  {
-    group: "Minha preparação",
     label: "Foco e revisão",
     icon: Timer,
     href: "/dashboard/study-tools",
@@ -180,7 +174,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Edital e conteúdo",
-    label: "Raio-X dos editais",
+    label: "Análise dos editais",
     icon: Radar,
     href: "/dashboard/edital-radar",
   },
@@ -233,11 +227,22 @@ const MENU: MenuItem[] = [
   { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
   { group: "Questões", label: "Revisar erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Provas", label: "Simulador", icon: Trophy, href: "/dashboard/mock-exams" },
-  { group: "Provas", label: "Minhas provas", icon: FileStack, href: "/dashboard/student-exams" },
+  {
+    group: "Provas",
+    label: "Minhas provas e diagnóstico",
+    icon: FileStack,
+    href: "/dashboard/student-exams",
+  },
+  {
+    group: "Provas",
+    label: "Plano por resultados",
+    icon: ClipboardList,
+    href: "/dashboard/study-plan",
+  },
   { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
   {
     group: "Desempenho",
-    label: "Visão de desempenho",
+    label: "Meu desempenho",
     icon: Layers,
     href: "/dashboard/performance",
   },

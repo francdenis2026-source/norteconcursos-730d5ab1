@@ -74,3 +74,44 @@ test('announced training size respects stock, daily first-answer allowance and r
  assert.equal(trainerSessionSize(100,'10',-1),0);
  assert.equal(trainerSessionSize(NaN,'20'),0);
 });
+
+const home=await import('../src/lib/studentDashboard.ts');
+test('student overview uses the first scored answer, source identity and latest reinforcement',()=>{
+ const rows=[
+ {id:'b',question_id:'q1',question_source:'official',subject:'Português',is_correct:true,created_at:'2026-10-15T08:00:00Z'},
+ {id:'a',question_id:'q1',question_source:'official',subject:'Português',is_correct:false,created_at:'2026-10-15T02:00:00Z'},
+ {id:'c',question_id:'q1',question_source:'personal',subject:'Matemática',is_correct:false,created_at:'2026-10-15T09:00:00Z'},
+ {id:'d',question_id:'q2',question_source:'official',subject:'Português',is_correct:true,created_at:'2026-10-15T09:00:00Z'}];
+ const attempts=[{...rows[0],id:'review',is_correct:true,created_at:'2026-10-15T10:00:00Z'}];
+ const result=home.summarizeTraining(rows,attempts,'2026-10-15');assert.equal(result.total,3);assert.equal(result.correct,1);assert.equal(result.wrong,2);assert.equal(result.today,2);assert.equal(result.pending,1);assert.equal(result.accuracy,33);
+ assert.equal(home.summarizeTraining(rows,null,'2026-10-15').pending,null);
+ assert.equal(home.summarizeTraining(rows,[...attempts,{...attempts[0],id:'later',is_correct:false,created_at:'2026-10-15T11:00:00Z'}],'2026-10-15').pending,2);
+});
+test('student review signals require at least five answers and never infer mastery from one item',()=>{
+ const rows=Array.from({length:5},(_,i)=>({id:`a${i}`,question_id:`q${i}`,question_source:'official',subject:'Matemática',is_correct:i===0,created_at:'2026-10-15T09:00:00Z'}));
+ assert.equal(home.summarizeTraining(rows.slice(0,4),[],'2026-10-15').signals.length,0);
+ assert.equal(home.summarizeTraining(rows,[],'2026-10-15').signals[0].subject,'Matemática');
+ assert.equal(home.summarizeTraining([],[],'2026-10-15').accuracy,null);
+});
+test('active time sums separate sessions and does not add the live clock twice',()=>{
+ const rows=[{study_date:'2026-10-15',active_seconds:90},{study_date:'2026-10-15',active_seconds:60},{study_date:'2026-10-14',active_seconds:100},{study_date:'2026-10-01',active_seconds:200},{study_date:'2026-10-14',active_seconds:-50}];
+ const r=home.summarizeStudyTime(rows,180,new Date('2026-10-15T08:00:00Z'));assert.equal(r.today,180);assert.equal(r.week,280);assert.equal(r.total,480);assert.equal(r.days.length,7);
+ assert.equal(home.summarizeStudyTime(rows,80,new Date('2026-10-15T08:00:00Z')).today,150);
+ const beforeMidnight=home.summarizeStudyTime([{study_date:'2026-10-14',active_seconds:60}],120,new Date('2026-10-15T04:30:00Z'));assert.equal(beforeMidnight.days.at(-1).date,'2026-10-14');assert.equal(beforeMidnight.total,120);
+});
+test('exam countdown preserves civil dates, past dates and rejects invalid calendar values',()=>{
+ assert.equal(home.daysToExam('2026-10-16','2026-10-15'),1);assert.equal(home.daysToExam('2026-10-15','2026-10-15'),0);assert.equal(home.daysToExam('2026-10-14','2026-10-15'),-1);assert.equal(home.daysToExam('2026-02-31','2026-10-15'),null);assert.equal(home.daysToExam(undefined,'2026-10-15'),null);
+});
+test('dashboard schedule follows the selected config and the same completion criteria as cronograma',()=>{
+ const config={days:[1],weeklyHours:1,startTime:'19:00',discs:[{id:'d',nome:'Português',peso:1,topicos:[{id:'t1',t:'Crase'},{id:'t2',t:'Verbos'}]}]};
+ assert.equal(home.validDashboardConfig(config),true);assert.equal(home.validDashboardConfig({...config,startTime:'27:00'}),false);assert.equal(home.validDashboardConfig({...config,weeklyHours:NaN}),false);assert.equal(home.validDashboardConfig({}),false);
+ const progress={t1:{video:true,pdf:false,podcast:false,qtde:0,acertos:0,revPdf:false,revQuestoes:false}};
+ assert.equal(home.dashboardSchedule(config,progress,1).completed,0);progress.t1.qtde=3;
+ const result=home.dashboardSchedule(config,progress,1);assert.equal(result.completed,1);assert.equal(result.next.t.id,'t2');assert.equal(result.blocks.reduce((s,b)=>s+b.minutes,0),60);assert.equal(home.dashboardSchedule(config,progress,2).blocks.length,0);
+});
+test('resume reading skips excluded units, inactive courses and unlinked material',()=>{
+ const progress=[{unit_id:'excluded',read_at:'2026-10-15'},{unit_id:'orphan',read_at:'2026-10-14'},{unit_id:'valid',read_at:'2026-10-13'}];
+ const units=[{id:'excluded',course_id:'a',unit_key:'art-1',label:'Art. 1',content_status:'excluded'},{id:'orphan',course_id:'b',unit_key:'art-2',label:'Art. 2',content_status:'current'},{id:'valid',course_id:'a',unit_key:'art-3',label:'Art. 3',content_status:'current'}];
+ const courses=[{id:'a',slug:'codigo-penal',title:'Código Penal',status:'active',syllabus_topic_id:'topic'},{id:'b',slug:'orphan',title:'Sem vínculo',status:'active',syllabus_topic_id:null}];
+ assert.equal(home.recentReading(progress,units,courses).article,'art-3');assert.equal(home.recentReading(progress,units,courses.map(c=>({...c,status:'inactive'}))),null);
+});

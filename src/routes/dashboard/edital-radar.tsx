@@ -45,7 +45,7 @@ function EditalRadarPage() {
     loadRadarData()
       .then((result) => active && setData(result))
       .catch((loadError) => {
-        console.error("Falha ao carregar o Raio-X dos editais", loadError);
+        console.error("Falha ao carregar o Análise dos editais", loadError);
         if (active) setError("Não foi possível carregar os editais e as provas agora.");
       });
     return () => {
@@ -93,7 +93,7 @@ function EditalRadarPage() {
         icon={Radar}
         title={
           <>
-            Raio-X dos <em>editais</em>
+            Análise dos <em>editais</em>
           </>
         }
         description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."

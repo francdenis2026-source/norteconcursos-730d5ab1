@@ -1,42 +1,38 @@
-import { acreDateKey, acreHour } from "@/lib/acreTime";
-import { acreDate } from "@/lib/acreTime";
-import React from "react";
+import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import type { LucideIcon } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import {
   ArrowRight,
-  BarChart3,
+  BookOpen,
   BrainCircuit,
+  CalendarClock,
   CheckCircle2,
-  Circle,
   Clock,
   Compass,
-  Download,
   FileText,
-  Layers,
-  MapPin,
-  NotebookPen,
+  Loader2,
+  RefreshCw,
+  Sparkles,
   Target,
-  Timer,
+  TrendingUp,
   Trophy,
+  type LucideIcon,
 } from "lucide-react";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { useStudentDashboard } from "@/hooks/useStudentDashboard";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useDashboardData, useAuthStatus } from "@/hooks/useDashboard";
+  summarizeTraining,
+  summarizeStudyTime,
+  validDashboardConfig,
+  dashboardSchedule,
+  daysToExam,
+} from "@/lib/studentDashboard";
+import { acreDateKey, acreHour, ACRE_TZ } from "@/lib/acreTime";
+import { platformDate } from "@/lib/platformClock";
+import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { MockService } from "@/services/mockService";
-import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
-import { toast } from "sonner";
+import { LockedState } from "@/components/dashboard/PageHero";
+import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
   head: () => ({
@@ -45,485 +41,750 @@ export const Route = createFileRoute("/dashboard/")({
       {
         name: "description",
         content:
-          "Acompanhe seu plano, desempenho e próximas atividades de preparação para concursos.",
+          "Seu próximo passo, cronograma e evolução nos estudos, conectados aos registros da plataforma.",
       },
-      { property: "og:title", content: "Painel do aluno | Norte Concurso" },
-      {
-        property: "og:description",
-        content: "Sua central de preparação, questões, provas e desempenho.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: DashboardIndex,
 });
-
-type ProfileChange = {
-  new: {
-    onboarding_steps?: { contest: boolean; notebook: boolean; plan: boolean };
-    onboarding_done?: boolean;
-  };
-};
-
-const TRAINER_SEARCH = {
-  contest: undefined,
-  board: undefined,
-  career: undefined,
-  year: undefined,
-  subject: undefined,
-  source: undefined,
-  reviewed: undefined,
-  state: undefined,
-  category: undefined,
-};
-
-function greeting() {
-  const hour = acreHour();
-  if (hour < 12) return "Bom dia";
-  if (hour < 18) return "Boa tarde";
-  return "Boa noite";
-}
-
+const liveMinutes = () => Math.floor(getStudyToday() / 60) * 60;
+const number = (n: number) => n.toLocaleString("pt-BR");
+const duration = (seconds: number) => (seconds > 0 ? fmtHuman(seconds) : "0 min");
+const destinations = [
+  {
+    to: "/dashboard/question-trainer",
+    title: "Resolver questões",
+    text: "Questões novas, erros e revisões no mesmo treinador.",
+    icon: BrainCircuit,
+  },
+  {
+    to: "/dashboard/library",
+    title: "Estudar conteúdo",
+    text: "Leis e disciplinas organizadas por assunto.",
+    icon: BookOpen,
+  },
+  {
+    to: "/dashboard/edital",
+    title: "Explorar meu edital",
+    text: "Relacione o conteúdo exigido com teoria e questões.",
+    icon: FileText,
+  },
+  {
+    to: "/dashboard/mock-exams",
+    title: "Fazer um simulado",
+    text: "Treine tempo, resolução e estratégia de prova.",
+    icon: Trophy,
+  },
+];
 function DashboardIndex() {
-  const { stats, focusedContest, isLoading } = useDashboardData();
-  const { user } = useAuthStatus();
-  const [showTour, setShowTour] = React.useState(false);
-  const [checklist, setChecklist] = React.useState({
-    contest: false,
-    notebook: false,
-    plan: false,
-  });
-  const [isUpdatingTour, setIsUpdatingTour] = React.useState(false);
-
-  React.useEffect(() => {
-    const fetchOnboarding = async () => {
-      const status = await MockService.getOnboardingStatus();
-      if (!status.onboarding_done) {
-        setShowTour(true);
-      }
-
-      const storedNotebooks = JSON.parse(localStorage.getItem("norte_notebooks") || "[]");
-
-      const currentSteps = {
-        contest: !!focusedContest,
-        notebook: storedNotebooks.length > 0,
-        plan: status.onboarding_steps?.plan ?? false,
-      };
-
-      setChecklist(currentSteps);
-
-      if (user && JSON.stringify(status.onboarding_steps) !== JSON.stringify(currentSteps)) {
-        MockService.updateOnboardingStatus({ onboarding_steps: currentSteps });
-      }
-
-
-    };
-
-    fetchOnboarding();
-
-    if (user) {
-      const channel = supabase
-        .channel("profile_sync")
-        .on(
-          "postgres_changes",
-          {
-            event: "UPDATE",
-            schema: "public",
-            table: "profiles",
-            filter: `id=eq.${user.id}`,
-          },
-          (payload: ProfileChange) => {
-            if (payload.new.onboarding_steps) {
-              setChecklist(payload.new.onboarding_steps);
-            }
-            if (payload.new.onboarding_done !== undefined) {
-              setShowTour(!payload.new.onboarding_done);
-            }
-          },
-        )
-        .subscribe();
-
-      return () => {
-        supabase.removeChannel(channel);
-      };
-    }
-    return undefined;
-  }, [user, focusedContest]);
-
-  const completeTour = async () => {
-    setIsUpdatingTour(true);
-    await MockService.updateOnboardingStatus({ onboarding_done: true });
-    setShowTour(false);
-    setIsUpdatingTour(false);
-    toast.success("Tudo pronto! Boa sorte nos estudos.");
-  };
-
+  const { user, isLoading } = useAuthStatus();
   if (isLoading) return <DashboardSkeleton />;
-
-  const handleExportCSV = () => {
-    const responses = MockService.getUserResponses();
-    if (responses.length === 0) {
-      toast.error("Nenhum dado para exportar");
-      return;
+  if (!user || user.id === "demo-user")
+    return (
+      <LockedState
+        image="journey"
+        title="Painel do aluno"
+        description="Entre na sua conta para acompanhar sua preparação e seus registros de estudo."
+      />
+    );
+  return <StudentHome key={user.id} user={user} />;
+}
+function StudentHome({ user }: { user: UserProfile }) {
+  const [now, setNow] = React.useState(platformDate);
+  const [selectedId, setSelectedId] = React.useState(() => {
+    try {
+      return localStorage.getItem(`norte:dashboard-plan:${user.id}`) ?? "";
+    } catch {
+      return "";
     }
-
-    const headers = ["Data", "Questão ID", "Acertou", "Tempo (seg)"];
-    const csvContent = [
-      headers.join(","),
-      ...responses.map((r) =>
-        [
-          acreDate(r.createdAt).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" }),
-          r.questionId,
-          r.isCorrect ? "Sim" : "Não",
-          r.timeSpent,
-        ].join(","),
-      ),
-    ].join("\n");
-
-    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    const link = document.createElement("a");
-    const url = URL.createObjectURL(blob);
-    link.setAttribute("href", url);
-    link.setAttribute("download", `resultados_norte_${acreDateKey()}.csv`);
-    link.style.visibility = "hidden";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    toast.success("Exportação CSV concluída!");
-  };
-
-  const handleExportPDF = () => {
-    toast.success("Gerando relatório para impressão...");
-    setTimeout(() => {
-      window.print();
-    }, 600);
-  };
-
-  const totalQuestions = stats?.totalQuestions ?? 0;
-  const accuracy = stats?.accuracyRate ?? 0;
-  const minutes = Math.floor((stats?.timeSpent || 0) / 60);
-  const chartData = totalQuestions > 0 ? [
-    { name: "Acertos", total: stats?.correctAnswers ?? 0 },
-    { name: "Erros", total: totalQuestions - (stats?.correctAnswers ?? 0) },
-  ] : [];
-  const firstName = user?.full_name?.split(" ")[0] || "Estudante";
-
-  return (
-    <div className="space-y-5 sm:space-y-7">
-      <PageHero
-        image="dashboard"
-        size="lg"
-        kicker="Central de preparação"
-        icon={Compass}
-        title={
-          <>
-            {greeting()}, <em>{firstName}.</em>
-          </>
+  });
+  const q = useStudentDashboard(user.id, selectedId || undefined);
+  const plan = q.plans.data?.find((p) => p.id === selectedId) ?? q.plans.data?.[0];
+  React.useEffect(() => {
+    if (q.plans.isSuccess && plan?.id !== selectedId) setSelectedId(plan?.id ?? "");
+  }, [q.plans.isSuccess, plan?.id, selectedId]);
+  React.useEffect(() => {
+    const timer = window.setInterval(() => setNow(platformDate()), 60_000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const live = React.useSyncExternalStore(subscribeStudyClock, liveMinutes, () => 0);
+  const today = acreDateKey(now);
+  const day = new Date(`${today}T12:00:00Z`).getUTCDay();
+  const stats = React.useMemo(
+    () =>
+      q.training.data
+        ? summarizeTraining(
+            q.training.data,
+            q.reinforcement.isSuccess ? q.reinforcement.data : null,
+            today,
+          )
+        : null,
+    [q.training.data, q.reinforcement.data, q.reinforcement.isSuccess, today],
+  );
+  const time = React.useMemo(
+    () => (q.activity.data ? summarizeStudyTime(q.activity.data, live, now) : null),
+    [q.activity.data, live, now],
+  );
+  const schedule =
+    plan && plan.id === selectedId && validDashboardConfig(plan.config) && q.progress.isSuccess
+      ? dashboardSchedule(plan.config, q.progress.data, day)
+      : null;
+  const objective = q.objective.data;
+  const days = daysToExam(objective?.examDate, today);
+  const firstName = user.full_name?.trim().split(/\s+/)[0] || "Estudante";
+  const hour = acreHour(now),
+    hello = hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite";
+  const priority =
+    schedule && plan
+      ? {
+          title: schedule.blocks.length
+            ? "Seu cronograma está pronto para hoje."
+            : "Consulte seu próximo dia de estudo.",
+          reason: `${plan.name}: conteúdo e atividades no seu cronograma por edital.`,
+          label: schedule.blocks.length ? "Abrir sessão do cronograma" : "Ver meu cronograma",
+          to: "/dashboard/cronograma",
+          search: { plano: plan.id, painel: "1" },
         }
-        description="Prioridades, ritmo e desempenho reunidos para você avançar com clareza hoje."
-        actions={
-          <>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="hero-btn-ghost gap-2">
-                  <Download className="h-4 w-4" /> Exportar
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Formato de exportação</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={handleExportCSV} className="cursor-pointer gap-2">
-                  <FileText className="h-4 w-4" /> CSV (Excel)
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleExportPDF} className="cursor-pointer gap-2">
-                  <Download className="h-4 w-4" /> PDF (relatório)
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Button size="sm" className="hero-btn-primary gap-2" asChild>
-              <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
-                Treinar agora <ArrowRight className="h-4 w-4" />
+      : q.reading.data
+        ? {
+            title: "Continue de onde você parou.",
+            reason: `Sua última leitura disponível: ${q.reading.data.title} · ${q.reading.data.label}.`,
+            label: "Continuar minha leitura",
+            to: "/dashboard/legal-course/$slug",
+            params: { slug: q.reading.data.slug },
+            search: { art: q.reading.data.article },
+          }
+        : stats?.pending && stats.pending > 0
+          ? {
+              title: "Transforme os erros em aprendizado.",
+              reason:
+                "Há erros sem acerto posterior registrado. Abra o reforço para conferir as questões disponíveis e revisar o raciocínio.",
+              label: "Revisar meus erros",
+              to: "/dashboard/question-trainer",
+              search: { mode: "reforco" },
+            }
+          : q.objective.isSuccess && !objective
+            ? {
+                title: "Dê direção à sua preparação.",
+                reason:
+                  "Escolha seu concurso para acompanhar o objetivo. Você também pode começar pelas questões ou pelo conteúdo abaixo.",
+                label: "Escolher meu concurso",
+                to: "/dashboard/questions",
+              }
+            : q.strategy.data && !plan
+              ? {
+                  title: "Sua estratégia de estudos está salva.",
+                  reason:
+                    "Abra o assistente para consultar a distribuição do estudo. Para executar por assunto, organize também seu cronograma por edital.",
+                  label: "Abrir minha estratégia",
+                  to: "/dashboard/study-coach",
+                }
+              : {
+                  title: "Seu próximo avanço começa aqui.",
+                  reason:
+                    "Escolha um assunto, resolva com atenção e use a correção para definir o próximo estudo.",
+                  label: "Resolver questões",
+                  to: "/dashboard/question-trainer",
+                };
+  const choosePlan = (id: string) => {
+    setSelectedId(id);
+    try {
+      localStorage.setItem(`norte:dashboard-plan:${user.id}`, id);
+    } catch {
+      /* Optional navigation preference. */
+    }
+  };
+  return (
+    <div className="student-home">
+      <section className="student-home__hero" aria-labelledby="student-home-title">
+        <img
+          className="student-home__art"
+          src="/media/hero/painel-aluno-direcao-estudos.webp"
+          alt=""
+          aria-hidden="true"
+          width={2172}
+          height={724}
+          decoding="async"
+          fetchPriority="high"
+        />
+        <div className="student-home__hero-copy">
+          <span className="student-home__eyebrow">
+            <Compass aria-hidden="true" />
+            PAINEL DO ALUNO
+          </span>
+          <p className="student-home__greeting">
+            {hello}, {firstName}.
+          </p>
+          <h1 id="student-home-title">{priority.title}</h1>
+          <p className="student-home__hero-description">{priority.reason}</p>
+          <div className="student-home__hero-actions">
+            <Button asChild className="student-home__primary">
+              <Link
+                to={priority.to}
+                {...("params" in priority ? { params: priority.params } : {})}
+                {...("search" in priority ? { search: priority.search } : {})}
+              >
+                {priority.label}
+                <ArrowRight aria-hidden="true" />
               </Link>
             </Button>
-          </>
-        }
-      >
-        <div className="page-hero__stats">
-          <HeroStat icon={Target} label="Foco atual" value={focusedContest?.agency || "—"} />
-          <HeroStat icon={CheckCircle2} label="Taxa de acerto" value={totalQuestions ? `${accuracy.toFixed(1)}%` : "Sem respostas"} />
-          <HeroStat icon={Clock} label="Tempo efetivo" value={`${minutes} min`} />
-          <HeroStat icon={FileText} label="Questões respondidas" value={totalQuestions} />
-        </div>
-      </PageHero>
-
-      <section className="rounded-xl border bg-card p-4 sm:p-5" aria-label="Objetivo de estudo">
-        <h2 className="font-semibold">{focusedContest ? "Seu objetivo de preparação" : "Escolha seu objetivo"}</h2>
-        <p className="mt-1 text-sm text-muted-foreground">{focusedContest ? `${focusedContest.agency}: organize o estudo pelo edital e acompanhe seus resultados.` : "Defina seu concurso antes de escolher matérias e simulados. Isso ajuda a estudar o conteúdo certo."}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <Button size="sm" asChild><Link to="/dashboard/my-contest">{focusedContest ? "Consultar objetivo" : "Definir concurso"}</Link></Button>
-          <Button size="sm" variant="outline" asChild><Link to="/dashboard/study-plan">Planejar estudos</Link></Button>
-        </div>
-      </section>
-
-      {showTour && (
-        <section className="onboarding-banner no-print">
-          <div>
-            <span className="hero-chip">Primeiros passos</span>
-            <h2 className="font-display mt-3 text-2xl font-bold">
-              Configure sua rota de preparação
-            </h2>
-            <div className="onboarding-steps">
-              <OnboardingStep label="Definir concurso" done={checklist.contest} />
-              <OnboardingStep label="Criar caderno" done={checklist.notebook} />
-            </div>
+            <Link to="/dashboard/performance" className="student-home__hero-secondary">
+              Ver meu desempenho
+              <TrendingUp aria-hidden="true" />
+            </Link>
           </div>
-          <Button onClick={completeTour} className="hero-btn-primary" disabled={isUpdatingTour}>
-            {isUpdatingTour ? "Sincronizando..." : "Concluir configuração"}
-          </Button>
-        </section>
-      )}
+        </div>
+      </section>
 
-      <section className="quick-actions no-print" aria-label="Ações rápidas">
-        <QuickAction
-          to="/dashboard/question-trainer"
+      <section className="student-home__metrics" aria-label="Seu resumo de estudos">
+        <Metric
           icon={BrainCircuit}
-          title="Treinar"
-          text="Questões por filtro"
+          label="Primeiras respostas"
+          value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
+          detail={stats ? `${number(stats.today)} registradas hoje` : "Dados do treinador"}
         />
-        <QuickAction
-          to="/dashboard/mock-exams"
-          icon={Trophy}
-          title="Simular"
-          text="Prova completa"
+        <Metric
+          icon={CheckCircle2}
+          label="Aproveitamento"
+          value={
+            q.training.isError
+              ? "Indisponível"
+              : stats
+                ? stats.accuracy === null
+                  ? "Sem respostas"
+                  : `${stats.accuracy}%`
+                : "…"
+          }
+          detail={
+            stats?.total
+              ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
+              : "Baseado nas primeiras respostas"
+          }
         />
-        <QuickAction
-          to="/dashboard/edital"
-          icon={MapPin}
-          title="Edital"
-          text="Estudar por assunto"
+        <Metric
+          icon={Clock}
+          label="Tempo ativo hoje"
+          value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
+          detail="Soma das sessões · horário do Acre"
         />
-        <QuickAction
-          to="/dashboard/performance"
-          icon={Layers}
-          title="Evolução"
-          text="Raio-X de desempenho"
+        <Metric
+          icon={CalendarClock}
+          label="Estudo nos últimos 7 dias"
+          value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
+          detail={
+            time
+              ? `${duration(time.total)} de uso ativo no total`
+              : "Pausas e abas ocultas não contam"
+          }
         />
       </section>
 
-      <div className="grid grid-cols-1 gap-4 sm:gap-6 xl:grid-cols-[1.35fr_1fr]">
-        <Card className="command-panel">
-          <CardHeader className="pb-2">
-            <div className="section-title">
-              <div>
-                <h2>Resumo das respostas</h2>
-                <p>Acertos e erros acumulados nas sessões registradas</p>
-              </div>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/dashboard/performance">
-                  Raio-X <ArrowRight className="h-3.5 w-3.5" />
+      <div className="student-home__workspace">
+        <section
+          className="student-home__card student-home__schedule"
+          aria-labelledby="dashboard-schedule-title"
+        >
+          <SectionTitle
+            icon={CalendarClock}
+            title="Meu estudo por edital"
+            id="dashboard-schedule-title"
+            description="Planejamento e progresso do seu cronograma, no mesmo lugar."
+          />
+          {q.plans.isPending ? (
+            <PanelLoading />
+          ) : q.plans.isError ? (
+            <QueryError
+              text="Não foi possível carregar seus cronogramas."
+              retry={() => q.plans.refetch()}
+            />
+          ) : !plan ? (
+            <EmptyPanel
+              title="Organize sua execução por assunto"
+              text="Monte um cronograma para distribuir disciplinas e abrir as atividades do dia. Os registros continuam sendo feitos na área de cronograma."
+            >
+              <Button variant="outline" asChild>
+                <Link to="/dashboard/cronograma">
+                  Montar meu cronograma
+                  <ArrowRight aria-hidden="true" />
                 </Link>
               </Button>
-            </div>
-          </CardHeader>
-          <CardContent className="h-72 sm:h-80">
-            {chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ left: -18, right: 8, top: 12 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                  <XAxis dataKey="name" tickLine={false} axisLine={false} />
-                  <YAxis tickLine={false} axisLine={false} allowDecimals={false} />
-                  <Tooltip
-                    cursor={{ fill: "var(--color-muted)" }}
-                    contentStyle={{
-                      borderRadius: 12,
-                      border: "1px solid var(--color-border)",
-                      background: "var(--color-popover)",
-                      color: "var(--color-popover-foreground)",
-                    }}
-                  />
-                  <Bar
-                    dataKey="total"
-                    name="Respostas"
-                    fill="var(--color-chart-1)"
-                    radius={[8, 8, 2, 2]}
-                    maxBarSize={56}
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-            ) : (
-              <EmptyState
-                icon={BarChart3}
-                title="Sem dados por enquanto"
-                text="Resolva sua primeira sessão de questões para acompanhar seus acertos e erros."
-                action={
-                  <Button size="sm" asChild>
-                    <Link to="/dashboard/question-trainer" search={TRAINER_SEARCH}>
-                      Começar treino
+            </EmptyPanel>
+          ) : (
+            <>
+              {(q.plans.data?.length ?? 0) > 1 ? (
+                <label className="student-home__select">
+                  Cronograma exibido
+                  <select value={plan.id} onChange={(e) => choosePlan(e.target.value)}>
+                    {q.plans.data!.map((p) => (
+                      <option value={p.id} key={p.id}>
+                        {p.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ) : (
+                <p className="student-home__plan-name">{plan.name}</p>
+              )}
+              {!validDashboardConfig(plan.config) ? (
+                <EmptyPanel
+                  title="Este plano precisa de ajustes"
+                  text="Abra o cronograma para conferir disciplinas, dias e horários."
+                >
+                  <Button variant="outline" asChild>
+                    <Link to="/dashboard/cronograma" search={{ plano: plan.id }}>
+                      Conferir cronograma
                     </Link>
                   </Button>
-                }
+                </EmptyPanel>
+              ) : q.progress.isError ? (
+                <QueryError
+                  text="Não conseguimos consultar o progresso deste cronograma."
+                  retry={() => q.progress.refetch()}
+                />
+              ) : !schedule ? (
+                <PanelLoading />
+              ) : (
+                <>
+                  <div className="student-home__coverage">
+                    <span>Conteúdos com teoria e questões registradas</span>
+                    <strong>
+                      {schedule.completed} de {schedule.total}
+                    </strong>
+                    <progress
+                      value={schedule.completed}
+                      max={Math.max(1, schedule.total)}
+                      aria-label="Conteúdos com teoria e questões concluídos"
+                    />
+                  </div>
+                  <div className="student-home__day-heading">
+                    <h3>
+                      {new Intl.DateTimeFormat("pt-BR", {
+                        weekday: "long",
+                        timeZone: ACRE_TZ,
+                      }).format(now)}
+                    </h3>
+                    <span>Horários previstos · Acre</span>
+                  </div>
+                  {schedule.blocks.length ? (
+                    <ol className="student-home__blocks">
+                      {schedule.blocks.slice(0, 4).map((block, i) => (
+                        <li key={`${block.discId}:${i}`}>
+                          <span>
+                            {block.start}
+                            <small>{block.end}</small>
+                          </span>
+                          <div>
+                            <strong>{block.nome}</strong>
+                            <small>{block.minutes} min previstos</small>
+                          </div>
+                          <Clock aria-hidden="true" />
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <p className="student-home__quiet">
+                      Este cronograma não prevê blocos para hoje. Consulte os próximos dias ou use
+                      um dos caminhos de estudo abaixo.
+                    </p>
+                  )}
+                  {schedule.blocks.length > 4 && (
+                    <p className="student-home__quiet">
+                      Mais {schedule.blocks.length - 4} blocos no cronograma.
+                    </p>
+                  )}
+                  {schedule.next && (
+                    <div className="student-home__next-topic">
+                      <span>Próximo conteúdo pendente no plano</span>
+                      <strong>{schedule.next.t.t}</strong>
+                      <small>{schedule.next.d.nome}</small>
+                    </div>
+                  )}
+                  <Button asChild variant="outline" className="student-home__wide-action">
+                    <Link to="/dashboard/cronograma" search={{ plano: plan.id, painel: "1" }}>
+                      {schedule.blocks.length
+                        ? "Abrir atividades do dia"
+                        : "Abrir cronograma completo"}
+                      <ArrowRight aria-hidden="true" />
+                    </Link>
+                  </Button>
+                </>
+              )}
+            </>
+          )}
+        </section>
+
+        <aside className="student-home__side">
+          <section className="student-home__card" aria-labelledby="dashboard-objective-title">
+            <SectionTitle icon={Target} title="Meu objetivo" id="dashboard-objective-title" />
+            {q.objective.isPending ? (
+              <PanelLoading />
+            ) : q.objective.isError ? (
+              <QueryError
+                text="Não foi possível consultar seu concurso."
+                retry={() => q.objective.refetch()}
               />
-            )}
-          </CardContent>
-        </Card>
-
-        <Card className="command-panel no-print">
-          <CardHeader className="pb-3">
-            <div className="section-title">
-              <div>
-                <h2>Escolha sua próxima sessão</h2>
-                <p>Atalhos de estudo; consulte seu plano para decidir a prioridade</p>
-              </div>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/dashboard/study-plan">
-                  Ver plano <ArrowRight className="h-3.5 w-3.5" />
+            ) : objective ? (
+              <>
+                <h3 className="student-home__objective-name">{objective.agency}</h3>
+                <p className="student-home__quiet">{objective.role}</p>
+                <p className="student-home__quiet">{objective.examBoard}</p>
+                {objective.examDate && (
+                  <p className="student-home__exam-date">
+                    {days !== null
+                      ? days > 0
+                        ? `${days} dias para a data registrada`
+                        : days === 0
+                          ? "Data da prova registrada para hoje"
+                          : "A data registrada da prova já passou"
+                      : "Confira a data da prova no concurso"}
+                  </p>
+                )}
+                <Link to="/dashboard/my-contest" className="student-home__text-link">
+                  Consultar meu concurso
+                  <ArrowRight aria-hidden="true" />
                 </Link>
-              </Button>
+              </>
+            ) : (
+              <EmptyPanel
+                title="Um objetivo ajuda a escolher prioridades"
+                text="Selecione um concurso do catálogo. A definição é opcional para começar a estudar."
+              >
+                <Link to="/dashboard/questions" className="student-home__text-link">
+                  Escolher concurso
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </EmptyPanel>
+            )}
+          </section>
+          <section className="student-home__card" aria-labelledby="dashboard-reading-title">
+            <SectionTitle icon={BookOpen} title="Retomar conteúdo" id="dashboard-reading-title" />
+            {q.reading.isPending ? (
+              <PanelLoading />
+            ) : q.reading.isError ? (
+              <QueryError
+                text="Não conseguimos recuperar sua última leitura."
+                retry={() => q.reading.refetch()}
+              />
+            ) : q.reading.data ? (
+              <>
+                <h3 className="student-home__objective-name">{q.reading.data.title}</h3>
+                <p className="student-home__quiet">
+                  Última leitura disponível · {q.reading.data.label}
+                </p>
+                <Link
+                  to="/dashboard/legal-course/$slug"
+                  params={{ slug: q.reading.data.slug }}
+                  search={{ art: q.reading.data.article }}
+                  className="student-home__text-link"
+                >
+                  Continuar leitura
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </>
+            ) : (
+              <EmptyPanel
+                title="Sua próxima leitura pode começar aqui"
+                text="Explore leis e disciplinas na biblioteca. Leituras registradas aparecem aqui para você retomar."
+              >
+                <Link to="/dashboard/library" className="student-home__text-link">
+                  Explorar conteúdo
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </EmptyPanel>
+            )}
+          </section>
+          <section className="student-home__strategy">
+            <Sparkles aria-hidden="true" />
+            <div>
+              <h3>Estratégia de estudos</h3>
+              <p>
+                Defina disponibilidade e distribuição do estudo no assistente. Execute os assuntos
+                no cronograma.
+              </p>
+              <Link to="/dashboard/study-coach">
+                {q.strategy.data ? "Consultar estratégia salva" : "Abrir assistente de estudos"}
+                <ArrowRight aria-hidden="true" />
+              </Link>
             </div>
-          </CardHeader>
-          <CardContent className="space-y-2.5">
-            <TaskRow
-              icon={Trophy}
-              tone="brass"
-              title="Simulado semanal"
-              meta="Avalie seu preparo em condições de prova"
-              to="/dashboard/mock-exams"
-              cta="Iniciar"
-            />
-            <TaskRow
-              icon={NotebookPen}
-              tone="signal"
-              title="Revisão dos erros recentes"
-              meta="Entenda os erros antes de repetir o treino"
-              to="/dashboard/errors"
-              cta="Revisar"
-            />
-            <TaskRow
-              icon={BrainCircuit}
-              tone="jade"
-              title="Bloco de questões por assunto"
-              meta="Selecione seu concurso e a disciplina nos filtros"
-              to="/dashboard/question-trainer"
-              cta="Treinar"
-            />
-            <TaskRow
-              icon={Timer}
-              title="Sessão de foco"
-              meta="Pomodoro · 25 min"
-              to="/dashboard/timer"
-              cta="Abrir"
-            />
-          </CardContent>
-        </Card>
+          </section>
+        </aside>
       </div>
 
-
+      <div className="student-home__insights">
+        <section className="student-home__card" aria-labelledby="dashboard-rhythm-title">
+          <SectionTitle
+            icon={TrendingUp}
+            title="Seu ritmo na semana"
+            id="dashboard-rhythm-title"
+            description="Tempo ativo registrado, sem somar duas vezes as sessões de hoje."
+          />
+          {q.activity.isError ? (
+            <QueryError
+              text="Não foi possível consultar o tempo de estudo."
+              retry={() => q.activity.refetch()}
+            />
+          ) : !time ? (
+            <PanelLoading />
+          ) : (
+            <>
+              <div className="student-home__week" role="list" aria-label="Tempo ativo por dia">
+                {time.days.map((d) => (
+                  <div
+                    role="listitem"
+                    key={d.date}
+                    aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}`}
+                    data-today={d.date === today}
+                  >
+                    <span>
+                      {d.date.slice(8)}/{d.date.slice(5, 7)}
+                    </span>
+                    <div className="student-home__bar-track">
+                      <i
+                        style={{
+                          height: d.seconds
+                            ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
+                            : "0%",
+                        }}
+                      />
+                    </div>
+                    <strong>
+                      {d.seconds
+                        ? d.seconds < 60
+                          ? "<1 min"
+                          : d.seconds < 3600
+                            ? `${Math.floor(d.seconds / 60)} min`
+                            : `${Math.round(d.seconds / 360) / 10} h`
+                        : "—"}
+                    </strong>
+                  </div>
+                ))}
+              </div>
+              {!time.week && (
+                <p className="student-home__quiet">
+                  Nenhum tempo ativo registrado nesta semana. Seus próximos períodos de uso
+                  aparecerão aqui.
+                </p>
+              )}
+              <Link to="/dashboard/performance" hash="tempo" className="student-home__text-link">
+                Ver histórico de tempo
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            </>
+          )}
+        </section>
+        <section className="student-home__card" aria-labelledby="dashboard-review-title">
+          <SectionTitle
+            icon={BrainCircuit}
+            title="O que merece revisão"
+            id="dashboard-review-title"
+            description="Sinais das suas primeiras respostas, sem classificar domínio com poucos itens."
+          />
+          {q.training.isError ? (
+            <QueryError
+              text="Não conseguimos consultar suas respostas."
+              retry={() => q.training.refetch()}
+            />
+          ) : !stats ? (
+            <PanelLoading />
+          ) : !stats.total ? (
+            <EmptyPanel
+              title="Comece por uma sessão curta"
+              text="Resolva algumas questões para identificar o que já está firme e o que precisa de estudo."
+            >
+              <Link to="/dashboard/question-trainer" className="student-home__text-link">
+                Resolver minhas primeiras questões
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            </EmptyPanel>
+          ) : (
+            <>
+              {stats.signals.length ? (
+                <ul className="student-home__signals">
+                  {stats.signals.map((s) => (
+                    <li key={s.subject}>
+                      <div>
+                        <strong>{s.subject}</strong>
+                        <small>
+                          {s.correct} acertos em {s.total} primeiras respostas
+                        </small>
+                      </div>
+                      <Link
+                        to="/dashboard/question-trainer"
+                        search={{ mode: "reforco", subject: s.subject }}
+                        aria-label={`Revisar erros de ${s.subject}`}
+                      >
+                        Revisar
+                        <ArrowRight aria-hidden="true" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="student-home__quiet">
+                  Ainda não há disciplina com pelo menos 5 respostas e aproveitamento abaixo de 60%.
+                  Continue praticando para formar uma base de comparação.
+                </p>
+              )}
+              {q.reinforcement.isError ? (
+                <QueryError
+                  text="Seu desempenho está disponível, mas não conseguimos conferir as tentativas de reforço."
+                  retry={() => q.reinforcement.refetch()}
+                />
+              ) : (
+                stats.pending !== null && (
+                  <p className="student-home__review-count">
+                    <strong>{stats.pending}</strong> erros sem acerto posterior registrado no
+                    reforço.
+                  </p>
+                )
+              )}
+              {q.reinforcement.isSuccess && q.reinforcement.data === null && (
+                <p className="student-home__footnote">
+                  A recuperação dos erros ainda não está disponível neste resumo. Suas primeiras
+                  respostas permanecem registradas.
+                </p>
+              )}
+              <Link
+                to="/dashboard/question-trainer"
+                search={{ mode: "reforco" }}
+                className="student-home__text-link"
+              >
+                Abrir revisão de erros
+                <ArrowRight aria-hidden="true" />
+              </Link>
+              <p className="student-home__footnote">
+                A revisão usa as questões atualmente disponíveis no acervo.
+              </p>
+            </>
+          )}
+        </section>
+      </div>
+      <section aria-labelledby="dashboard-tools-title" className="student-home__tools">
+        <div className="student-home__tools-heading">
+          <h2 id="dashboard-tools-title">Escolha como avançar</h2>
+          <span>Conteúdo, prática e prova com caminhos definidos.</span>
+        </div>
+        <nav aria-label="Caminhos de estudo" className="student-home__tool-grid">
+          {destinations.map(({ to, title, text, icon: Icon }) => (
+            <Link key={to} to={to}>
+              <span className="student-home__tool-icon">
+                <Icon aria-hidden="true" />
+              </span>
+              <strong>{title}</strong>
+              <p>{text}</p>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      </section>
+      <details className="student-home__data-note">
+        <summary>Como este painel calcula seus indicadores</summary>
+        <p>
+          Respostas e aproveitamento vêm das primeiras respostas salvas no treinador. Reforços não
+          pontuam novamente. Tempo ativo vem das sessões da plataforma; hoje usa o maior valor entre
+          o registro sincronizado e o relógio ao vivo, sem duplicar minutos. Dias seguem o horário
+          do Acre. A cobertura do cronograma exige teoria e questões registradas no assunto; não
+          representa aprovação nem domínio da disciplina. As informações são atualizadas ao retornar
+          à aba e periodicamente enquanto o painel está aberto.
+        </p>
+        <Link to="/dashboard/performance">Consultar desempenho detalhado</Link>
+      </details>
     </div>
   );
 }
-
-function QuickAction({
-  to,
+function Metric({
   icon: Icon,
-  title,
-  text,
+  label,
+  value,
+  detail,
 }: {
-  to: string;
   icon: LucideIcon;
-  title: string;
-  text: string;
+  label: string;
+  value: string;
+  detail: string;
 }) {
   return (
-    <Link to={to} className="quick-action">
-      <span className="quick-action__icon">
-        <Icon />
-      </span>
+    <article className="student-home__metric">
       <span>
-        <strong>{title}</strong>
-        <small>{text}</small>
-      </span>
-      <ArrowRight />
-    </Link>
-  );
-}
-
-function TaskRow({
-  icon: Icon,
-  title,
-  meta,
-  to,
-  cta,
-  tone,
-}: {
-  icon: LucideIcon;
-  title: string;
-  meta: string;
-  to: string;
-  cta: string;
-  tone?: "brass" | "signal" | "jade";
-}) {
-  return (
-    <div className="task-row" data-tone={tone}>
-      <span className="task-row__icon">
-        <Icon />
-      </span>
-      <div className="min-w-0 flex-1">
-        <p className="truncate text-sm font-semibold">{title}</p>
-        <p className="truncate text-xs text-muted-foreground">{meta}</p>
-      </div>
-      <Button variant="outline" size="sm" asChild>
-        <Link to={to}>{cta}</Link>
-      </Button>
-    </div>
-  );
-}
-
-function OnboardingStep({ label, done }: { label: string; done: boolean }) {
-  return (
-    <span className="onboarding-step" data-done={done}>
-      {done ? <CheckCircle2 /> : <Circle />}
-      {label}
-    </span>
-  );
-}
-
-function EmptyState({
-  icon: Icon,
-  title,
-  text,
-  action,
-}: {
-  icon: LucideIcon;
-  title: string;
-  text: string;
-  action?: React.ReactNode;
-}) {
-  return (
-    <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-      <span className="metric-tile__icon h-12 w-12 rounded-2xl">
-        <Icon />
+        <Icon aria-hidden="true" />
       </span>
       <div>
-        <p className="font-semibold">{title}</p>
-        <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">{text}</p>
+        <h2>{label}</h2>
+        <strong>{value}</strong>
+        <p>{detail}</p>
       </div>
-      {action}
+    </article>
+  );
+}
+function SectionTitle({
+  icon: Icon,
+  title,
+  id,
+  description,
+}: {
+  icon: LucideIcon;
+  title: string;
+  id: string;
+  description?: string;
+}) {
+  return (
+    <header className="student-home__section-title">
+      <span>
+        <Icon aria-hidden="true" />
+      </span>
+      <div>
+        <h2 id={id}>{title}</h2>
+        {description && <p>{description}</p>}
+      </div>
+    </header>
+  );
+}
+function EmptyPanel({
+  title,
+  text,
+  children,
+}: {
+  title: string;
+  text: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="student-home__empty">
+      <h3>{title}</h3>
+      <p>{text}</p>
+      {children}
     </div>
   );
 }
-
+function PanelLoading() {
+  return (
+    <div className="student-home__loading" role="status">
+      <Loader2 aria-hidden="true" className="animate-spin" />
+      Carregando seus registros…
+    </div>
+  );
+}
+function QueryError({ text, retry }: { text: string; retry: () => unknown }) {
+  return (
+    <div className="student-home__error" role="status">
+      <p>{text}</p>
+      <button type="button" onClick={() => void retry()}>
+        <RefreshCw aria-hidden="true" />
+        Tentar novamente
+      </button>
+    </div>
+  );
+}
 function DashboardSkeleton() {
   return (
-    <div className="space-y-6">
-      <Skeleton className="h-[300px] rounded-[22px]" />
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {[0, 1, 2, 3].map((i) => (
-          <Skeleton key={i} className="h-32 rounded-2xl" />
+    <div className="space-y-5" role="status" aria-label="Carregando painel">
+      <Skeleton className="h-64 rounded-2xl" />
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {[0, 1, 2, 3].map((n) => (
+          <Skeleton key={n} className="h-28 rounded-xl" />
         ))}
       </div>
-      <Skeleton className="h-80 rounded-2xl" />
+      <Skeleton className="h-96 rounded-2xl" />
     </div>
   );
 }

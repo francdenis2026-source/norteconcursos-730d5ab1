@@ -335,7 +335,7 @@ function StudyPlanPage() {
               <Sparkles /> Inteligência baseada na sua trajetória
             </span>
             <h1>
-              Diagnóstico por provas: <em>PF, PRF e Polícia Civil</em>
+              Plano por resultados: <em>PF, PRF e Polícia Civil</em>
             </h1>
             <p className="page-hero__desc">
               Um ciclo adaptativo que transforma suas provas anteriores em prioridades, metas de

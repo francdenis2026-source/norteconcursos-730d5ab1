@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 const sections = [
   { key: 'coach', href: '/dashboard/study-coach', label: 'Estratégia de estudos', detail: 'Perfil, disponibilidade e distribuição do estudo', icon: Sparkles },
   { key: 'schedule', href: '/dashboard/cronograma', label: 'Cronograma por edital', detail: 'Disciplinas, tópicos e execução do dia', icon: CalendarClock },
-  { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Diagnóstico por provas', detail: 'Resultados anteriores e prioridades de preparação', icon: BarChart3 },
+  { key: 'diagnosis', href: '/dashboard/study-plan', label: 'Plano por resultados', detail: 'Resultados anteriores e prioridades de preparação', icon: BarChart3 },
 ] as const;
 
 export function StudyPlanningNav({ active }: { active: typeof sections[number]['key'] }) {
