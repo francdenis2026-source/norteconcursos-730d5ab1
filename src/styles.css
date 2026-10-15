@@ -9678,7 +9678,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 
 /* Internal workspace v4: a denser, calmer system for every student area. */
 .app-shell[data-area="student"] {
-  --app-sidebar-width: 248px;
+  --app-sidebar-width: 304px;
   background: var(--color-background);
 }
 .app-shell[data-area="student"] .app-sidebar {
@@ -9699,7 +9699,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   color: transparent;
 }
 .app-shell[data-area="student"] .app-sidebar[data-collapsed="true"] .app-nav__link {
-  width: 42px;
+  width: 44px;
+  padding-inline: 0;
   margin-inline: auto;
 }
 .app-shell[data-area="student"] .app-sidebar__head {
@@ -9722,11 +9723,11 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   font-size: 0.55rem;
 }
 .app-shell[data-area="student"] .app-nav__link {
-  height: 40px;
+  height: auto;
   margin-block: 1px;
   padding-inline: 11px;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 15px;
 }
 .app-shell[data-area="student"] .app-sidebar__foot {
   padding: 10px 12px;
@@ -9867,7 +9868,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 
 @media (max-width: 1023px) {
-  .app-shell[data-area="student"] .app-sidebar { width: 232px; }
+  .app-shell[data-area="student"] .app-sidebar { width: 280px; }
   .app-shell[data-area="student"] .app-top-search { width: 40px; }
 }
 @media (max-width: 767px) {
@@ -10816,3 +10817,100 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .focus-study-actions :is(button, a) { min-height: 34px; padding: 6px 9px; font-size: 12px; line-height: 1.3; white-space: nowrap; }
 .focus-study-actions svg { width: 15px; height: 15px; flex-shrink: 0; }
 .focus-study-container > :not(aside) { max-width: 72rem; margin-inline: auto; }
+
+/* Navigation: readable labels, clear groups and consistent touch targets. */
+.app-shell { --app-sidebar-width: 304px; }
+.app-nav { min-height: 0; scrollbar-gutter: stable; }
+.app-nav__section { margin-block: 6px; }
+.app-nav__heading {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: oklch(0.9 0.01 255);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+.app-nav__heading:hover { background: oklch(1 0 0 / 0.07); }
+.app-nav__heading svg { width: 18px; height: 18px; flex: none; transition: transform 160ms; }
+.app-nav__heading svg[data-open="true"] { transform: rotate(180deg); }
+.app-nav__entries { margin-bottom: 10px; padding-left: 4px; border-left: 1px solid oklch(1 0 0 / 0.12); }
+.app-nav__link {
+  height: auto;
+  min-height: 48px;
+  padding: 10px 12px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: oklch(0.86 0.012 255);
+  white-space: normal;
+}
+.app-nav__label { min-width: 0; overflow-wrap: anywhere; }
+.app-nav__compact-group { margin-block: 6px; }
+.app-sidebar[data-collapsed="true"] .app-nav__link { min-height: 48px; }
+.app-sidebar__search { min-height: 44px; font-size: 14px; }
+.app-nav__heading:focus-visible,
+.app-nav__link:focus-visible,
+.app-sidebar__search:focus-visible,
+.app-bottom-nav :is(a, button):focus-visible {
+  outline: 2px solid var(--brass-soft);
+  outline-offset: -2px;
+}
+.app-top-btn, .app-icon-btn, .app-top-search { min-height: 44px; }
+.app-top-btn, .app-icon-btn { min-width: 44px; }
+.app-sheet { width: min(352px, calc(100vw - 16px)) !important; height: 100dvh; }
+.app-sheet .app-sidebar__head { padding-right: 48px; }
+.app-sheet .app-nav { overscroll-behavior: contain; }
+.lp-nav a { display: inline-flex; min-height: 44px; align-items: center; font-size: 15px; padding-inline: 12px; }
+.lp-sheet { max-height: 100dvh; overflow-y: auto; }
+.lp-sheet-nav a { min-height: 48px; }
+.institutional-footer nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; }
+@media (min-width: 768px) and (max-width: 1023px) { .app-sidebar { width: 280px; } }
+@media (max-width: 767px) {
+  .app-bottom-nav :is(a, button) {
+    display: grid;
+    min-width: 0;
+    min-height: 56px;
+    justify-items: center;
+    align-content: center;
+    gap: 4px;
+    padding: 6px 2px;
+    border-radius: 10px;
+    color: oklch(0.87 0.012 255);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+  .app-bottom-nav :is(a, button):hover { background: oklch(1 0 0 / 0.08); }
+  .app-bottom-nav button[aria-expanded="true"] { color: var(--brass-soft); background: oklch(0.8 0.13 78 / 0.12); }
+  .app-bottom-nav button svg { width: 20px; height: 20px; }
+  .app-content { padding-bottom: calc(112px + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) { .app-nav__heading svg { transition: none; } }
+@media (min-width: 901px) and (max-width: 1150px) {
+  .lp-nav { display: none; }
+  .lp-menu-btn { display: grid; }
+}
+/* Avoid squeezing labels into vertical text while expanding the sidebar. */
+.app-sidebar { transition: none; }
+.app-content nav :is(a, button) { min-height: 44px; }
+.app-content nav[aria-label="Dispositivos da lei"] button { padding: 10px 12px; font-size: 15px; }
+.app-content nav[aria-label="Planejamento de estudos"] > a > span > span:first-child { font-size: 15px; }
+.app-content nav[aria-label="Planejamento de estudos"] > a > span > span + span { font-size: 13px; }
+.lp-footer__grid > div:not(:first-child) a { display: flex; align-items: center; min-height: 44px; font-size: 15px; }
+.lp-menu-btn { min-width: 44px; min-height: 44px; }
+.app-sheet > button, .lp-sheet > button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  top: 8px;
+  right: 8px;
+  place-items: center;
+}

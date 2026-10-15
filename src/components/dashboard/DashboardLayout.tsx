@@ -1,8 +1,8 @@
 import React from "react";
 import { PlatformBack } from "./PlatformBack";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { SoonBadge } from "@/components/SoonBadge";
-import { AI_ENABLED, SOON_LABEL, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
+import { DashboardNavigation, navigationActive as isActive } from "./DashboardNavigation";
+import { AI_ENABLED, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
 import {
@@ -80,7 +80,7 @@ import { SessionClock } from "@/components/dashboard/SessionClock";
 import { IdleGuard } from "@/components/dashboard/IdleGuard";
 import { FocusReturnBar } from "@/components/dashboard/FocusReturnBar";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
-import { MockService, type MedalProgress } from "@/services/mockService";
+import { MockService } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 
@@ -135,7 +135,12 @@ const MENU: MenuItem[] = [
   { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
   { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Hoje", label: "Meu cronograma", icon: CalendarClock, href: "/dashboard/cronograma" },
-  { group: "Hoje", label: "Diagnóstico por provas", icon: ClipboardList, href: "/dashboard/study-plan" },
+  {
+    group: "Hoje",
+    label: "Diagnóstico por provas",
+    icon: ClipboardList,
+    href: "/dashboard/study-plan",
+  },
   { group: "Hoje", label: "Foco e revisão", icon: Timer, href: "/dashboard/study-tools" },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
@@ -146,6 +151,7 @@ const MENU: MenuItem[] = [
     href: "/dashboard/exam-panorama",
   },
   { group: "Objetivo", label: "Concursos disponíveis", icon: Search, href: "/dashboard/questions" },
+  { group: "Objetivo", label: "Área ENEM", icon: GraduationCap, href: "/dashboard/enem" },
   {
     group: "Edital e conteúdo",
     label: "Edital eletrônico",
@@ -158,10 +164,25 @@ const MENU: MenuItem[] = [
     icon: Radar,
     href: "/dashboard/edital-radar",
   },
-  { group: "Edital e conteúdo", label: "Biblioteca de leis", icon: Library, href: "/dashboard/library" },
+  {
+    group: "Edital e conteúdo",
+    label: "Biblioteca de leis",
+    icon: Library,
+    href: "/dashboard/library",
+  },
   { group: "Edital e conteúdo", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
-  { group: "Edital e conteúdo", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
-  { group: "Edital e conteúdo", label: "Cursos por disciplina", icon: GraduationCap, href: "/dashboard/trilhas" },
+  {
+    group: "Edital e conteúdo",
+    label: "Calculadora penal",
+    icon: Scale,
+    href: "/dashboard/calculadora-penal",
+  },
+  {
+    group: "Edital e conteúdo",
+    label: "Cursos por disciplina",
+    icon: GraduationCap,
+    href: "/dashboard/trilhas",
+  },
   { group: "Edital e conteúdo", label: "Dicionário", icon: BookA, href: "/dashboard/dicionario" },
   {
     group: "Edital e conteúdo",
@@ -169,7 +190,6 @@ const MENU: MenuItem[] = [
     icon: PlayCircle,
     href: "/dashboard/media",
   },
-  { group: "ENEM", label: "Área ENEM", icon: GraduationCap, href: "/dashboard/enem" },
   {
     group: "Questões",
     label: "Treinador de questões",
@@ -281,17 +301,11 @@ const MOBILE_NAV: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "Painel", href: "/dashboard", icon: LayoutDashboard },
   { label: "Questões", href: "/dashboard/question-trainer", icon: BrainCircuit },
   { label: "Simulados", href: "/dashboard/mock-exams", icon: Trophy },
-  { label: "Desempenho", href: "/dashboard/performance", icon: Layers },
+  { label: "Evolução", href: "/dashboard/performance", icon: Layers },
   { label: "Perfil", href: "/dashboard/profile", icon: User },
 ];
 
 const normalize = (path: string) => (path.length > 1 ? path.replace(/\/$/, "") : path);
-
-function isActive(pathname: string, href: string) {
-  const current = normalize(pathname);
-  if (href === "/dashboard") return current === "/dashboard";
-  return current === href || current.startsWith(`${href}/`);
-}
 
 function initials(name?: string) {
   if (!name) return "NC";
@@ -322,12 +336,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     window.addEventListener("norte:avatar-changed", on);
     return () => window.removeEventListener("norte:avatar-changed", on);
   }, []);
-  const [medalsOpen, setMedalsOpen] = React.useState(false);
-  const [medalProgress, setMedalProgress] = React.useState<MedalProgress[]>([]);
-  const openMedals = () => {
-    setMedalsOpen(true);
-    void MockService.getMedalProgress().then(setMedalProgress);
-  };
 
   const isAdmin = user?.role === "admin";
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
@@ -338,7 +346,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             ...MENU.filter((item) => item.adminOnly),
             ...MENU.filter((item) => item.href === "/dashboard/profile"),
           ]
-        : MENU.filter((item) => !item.adminOnly),
+        : MENU.filter((item) => !item.adminOnly && !item.soon),
     [isAdmin],
   );
 
@@ -444,44 +452,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const planLabel = isAdmin ? "Administrador" : `Plano ${planName}`;
 
   const nav = (collapsed: boolean) => (
-    <nav className="app-nav scroll-dark" aria-label="Menu principal">
-      {items.map((item, index) => {
-        const showGroup = item.group !== items[index - 1]?.group;
-        const active = isActive(location.pathname, item.href);
-        const link = (
-          <Link
-            to={item.href}
-            className="app-nav__link"
-            data-active={active}
-            aria-current={active ? "page" : undefined}
-            aria-label={collapsed ? item.label : undefined}
-          >
-            <span className="app-ico" data-hue={GROUP_HUE[item.group] ?? "gold"}>
-              <item.icon />
-            </span>
-            {!collapsed && <span>{item.label}</span>}
-            {!collapsed && item.soon && <SoonBadge className="ml-auto" />}
-          </Link>
-        );
-        return (
-          <React.Fragment key={item.href}>
-            {showGroup && <div className="app-nav__group">{item.group}</div>}
-            <div className={item.adminOnly ? "app-nav__admin" : undefined}>
-              {collapsed ? (
-                <Tooltip>
-                  <TooltipTrigger asChild>{link}</TooltipTrigger>
-                  <TooltipContent side="right">
-                    {item.soon ? `${item.label} — ${SOON_LABEL}` : item.label}
-                  </TooltipContent>
-                </Tooltip>
-              ) : (
-                link
-              )}
-            </div>
-          </React.Fragment>
-        );
-      })}
-    </nav>
+    <DashboardNavigation
+      items={items}
+      pathname={location.pathname}
+      collapsed={collapsed}
+      hues={GROUP_HUE}
+      onNavigate={() => setMobileOpen(false)}
+    />
   );
 
   const userMenu = (collapsed: boolean) => (
@@ -559,6 +536,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             type="button"
             className="app-sidebar__search"
             onClick={() => setPaletteOpen(true)}
+            aria-label="Buscar área da plataforma"
           >
             <Search />
             {!isCollapsed && (
@@ -572,37 +550,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           {nav(isCollapsed)}
 
           <div className="app-sidebar__foot">
-            {!isCollapsed && (
-              <div className="app-stats">
-                <div className="app-stat">
-                  <span>
-                    <Flame /> Ofensiva
-                  </span>
-                  <strong className="tabular">{streak?.currentStreak ?? 0} dias</strong>
-                </div>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div
-                      className="app-stat cursor-pointer"
-                      role="button"
-                      tabIndex={0}
-                      onClick={openMedals}
-                      onKeyDown={(e) => e.key === "Enter" && openMedals()}
-                    >
-                      <span>
-                        <Medal /> Medalhas
-                      </span>
-                      <strong className="tabular">{achievements.length}</strong>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-56">
-                    {achievements.length > 0
-                      ? achievements.map((a) => a.name).join(" · ")
-                      : "Nenhuma medalha ainda. Clique para ver como ganhar."}
-                  </TooltipContent>
-                </Tooltip>
-              </div>
-            )}
             {isCollapsed && (
               <button
                 type="button"
@@ -619,49 +566,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
         <RenewPlanDialog user={user} enabled={!isAdmin} />
 
-        <Dialog open={medalsOpen} onOpenChange={setMedalsOpen}>
-          <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-lg">
-            <DialogTitle>Medalhas e progresso</DialogTitle>
-            <p className="text-sm text-muted-foreground">
-              Cada medalha é concedida automaticamente ao atingir a meta. Continue estudando para
-              avançar.
-            </p>
-            <ul className="space-y-3">
-              {medalProgress.map((m) => (
-                <li key={m.code} className={m.earned ? "" : "opacity-80"}>
-                  <div className="flex items-center justify-between gap-2 text-sm">
-                    <span className="flex items-center gap-2 font-semibold">
-                      <Medal
-                        className={
-                          m.earned ? "h-4 w-4 text-amber-500" : "h-4 w-4 text-muted-foreground"
-                        }
-                      />
-                      {m.name}
-                    </span>
-                    <span className="tabular text-xs text-muted-foreground">
-                      {m.earned ? "Conquistada" : `${m.current} / ${m.target}`}
-                    </span>
-                  </div>
-                  <p className="text-xs text-muted-foreground">{m.description}</p>
-                  <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-muted">
-                    <div
-                      className={m.earned ? "h-full bg-amber-500" : "h-full bg-primary"}
-                      style={{ width: `${Math.round((m.current / m.target) * 100)}%` }}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/dashboard/medals"
-              onClick={() => setMedalsOpen(false)}
-              className="block rounded-lg bg-primary/10 px-3 py-2 text-center text-sm font-semibold text-primary hover:bg-primary/15"
-            >
-              Ver todas as medalhas e como ganhar
-            </Link>
-          </DialogContent>
-        </Dialog>
-
         <div className="app-main">
           <header className="app-topbar no-print">
             <div className="app-mobile-bar gap-2">
@@ -676,6 +580,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <div className="app-sidebar__head">
                     <NorteBrand light />
                   </div>
+                  <button
+                    type="button"
+                    className="app-sidebar__search"
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setPaletteOpen(true);
+                    }}
+                  >
+                    <Search aria-hidden="true" />
+                    <span>Buscar área da plataforma</span>
+                  </button>
                   {nav(false)}
                   <div className="app-sidebar__foot">{userMenu(false)}</div>
                 </SheetContent>
@@ -765,11 +680,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </main>
 
           <nav className="app-bottom-nav no-print" aria-label="Navegação rápida">
-            {(isAdmin ? ADMIN_MOBILE_NAV : MOBILE_NAV).map((item) => (
+            {(isAdmin ? ADMIN_MOBILE_NAV : MOBILE_NAV).slice(0, 4).map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
                 data-active={isActive(location.pathname, item.href)}
+                aria-current={isActive(location.pathname, item.href) ? "page" : undefined}
               >
                 <span className="app-ico" data-hue={MOBILE_HUE[item.href] ?? "gold"}>
                   <item.icon />
@@ -777,6 +693,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span>{item.label}</span>
               </Link>
             ))}
+            <button
+              type="button"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Abrir menu completo"
+              aria-expanded={mobileOpen}
+            >
+              <span className="app-ico" data-hue="teal">
+                <Menu aria-hidden="true" />
+              </span>
+              <span>Menu</span>
+            </button>
           </nav>
         </div>
 

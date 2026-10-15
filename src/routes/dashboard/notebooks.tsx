@@ -8,8 +8,6 @@ import { Input } from "@/components/ui/input";
 import {
   Plus,
   BookOpen,
-  Trash2,
-  Edit3,
   MoreVertical,
   FileText,
   Search,
@@ -20,7 +18,6 @@ import {
   Printer,
   Eye,
 } from "lucide-react";
-import { MediaViewer } from "@/components/dashboard/MediaViewer";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { AiResolutionsSection } from "@/components/dashboard/AiResolutionsSection";
 import {
@@ -296,38 +293,18 @@ function NotebooksPage() {
                 </div>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 -mr-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-[44px] w-[44px] -mr-2"
+                      aria-label={`Ações do caderno ${nb.name}`}
+                    >
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem className="gap-2" onClick={() => handleExportPDF(nb)}>
                       <Printer className="h-4 w-4" /> Imprimir / PDF
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2">
-                      <Edit3 className="h-4 w-4" /> Renomear
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2 text-destructive focus:text-destructive">
-                      <Trash2 className="h-4 w-4" /> Excluir
-                    </DropdownMenuItem>
-                    <div className="border-t my-1" />
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="video"
-                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        title="Aula Inaugural: Como usar os Cadernos"
-                        triggerLabel="Ver Vídeo Aula"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="pdf"
-                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                        title="Teoria: Guia de Estudos"
-                        triggerLabel="Baixar Guia (PDF)"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
