@@ -11746,3 +11746,37 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .student-hub__masthead .student-hub__date { font-size:11px; }
   .student-hub__masthead .student-hub__masthead-actions > a { font-size:12px; min-height:40px; }
 }
+
+/* Trainer: an existing professional study photograph, with a readable text area. */
+.trainer-workbench-heading.trainer-workbench-hero {
+  min-height: 210px;
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid rgb(148 180 218 / .22);
+  border-radius: 24px;
+  background: linear-gradient(90deg, rgb(3 23 46 / .92), rgb(3 23 46 / .65) 46%, rgb(3 23 46 / .08)), url('/media/hero/trainer-study.webp') center / cover;
+  box-shadow: 0 18px 42px -26px rgb(8 31 58 / .6);
+  color: #f8fafc;
+}
+.trainer-workbench-hero .trainer-panel-kicker { color: #f3cd82; }
+.trainer-workbench-hero h1 { color: #fff; }
+.trainer-workbench-hero p { max-width: 420px; color: #d3e1ef; }
+.trainer-workbench-hero .trainer-catalog-link { color: #f8fafc; border-color: rgb(255 255 255 / .28); background: rgb(7 28 52 / .65); }
+.app-shell .app-topbar {
+  border-bottom-color: rgb(72 117 172 / .25);
+  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  -webkit-backdrop-filter: blur(20px) saturate(1.45);
+  backdrop-filter: blur(20px) saturate(1.45);
+  box-shadow: 0 5px 22px -15px rgb(19 58 105 / .38);
+}
+.app-shell[data-area="student"] .app-topbar {
+  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  -webkit-backdrop-filter: blur(20px) saturate(1.45);
+  backdrop-filter: blur(20px) saturate(1.45);
+}
+.dark .app-shell .app-topbar {
+  background: linear-gradient(110deg, rgb(10 29 52 / .83), rgb(15 24 42 / .74) 62%, rgb(49 39 24 / .78));
+  border-bottom-color: rgb(154 181 215 / .24);
+}
+@media (max-width: 640px) {
+  .trainer-workbench-heading.trainer-workbench-hero { align-items: flex-start; flex-direction: column; gap: 20px; min-height: 215px; background-position: 63% center; }
+}

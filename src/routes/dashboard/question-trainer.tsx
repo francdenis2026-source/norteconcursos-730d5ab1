@@ -1,3 +1,5 @@
+import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
+import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
 import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
 import { searchQuestionCatalog } from "@/lib/questionBank";
@@ -949,7 +951,7 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="trainer-workbench">
-        <header className="trainer-workbench-heading">
+        <header className="trainer-workbench-heading trainer-workbench-hero">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
             <h1 id="trainer-title">Treinador de questões</h1>
@@ -1151,7 +1153,9 @@ function QuestionTrainer() {
     if (library.isError) void library.refetch();
   };
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
+  const certoErrado =
+    question.kind === "true_false" || (!hasOptions && questionAnswers(question).join("") === "CE");
+  const canStrike = canStrikeQuestion(question);
   const labelFor = (answer: Answer) =>
     hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
   const chooseOption = (letter: Answer) => {
@@ -1160,7 +1164,7 @@ function QuestionTrainer() {
     setSelected(letter);
   };
   const toggleStrike = (letter: Answer) => {
-    if (answered || savingRef.current) return;
+    if (!canStrike || answered || savingRef.current) return;
     setStruck((items) =>
       items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
     );
@@ -1251,6 +1255,7 @@ function QuestionTrainer() {
           <h1>{question.subject}</h1>
         </div>
         <div>
+          {user?.id && <SaveStudyLater userId={user.id} question={question} />}
           <Button variant="outline" onClick={() => setMapOpen(true)}>
             <LayoutGrid className="mr-2 h-4 w-4" />
             Navegar questões
@@ -1333,36 +1338,6 @@ function QuestionTrainer() {
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>
-            {!answered && (
-              <div className="trainer-elimination-tools">
-                <div>
-                  <p className="flex items-center gap-2 font-semibold">
-                    <Strikethrough aria-hidden="true" className="h-4 w-4" /> Riscar opções
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Descarte opções durante a análise. Para recuperar uma opção, use Desfazer ou
-                    selecione-a novamente.
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Riscar a opção selecionada remove sua seleção, sem enviar uma resposta.
-                  </p>
-                </div>
-                <div className="flex shrink-0 items-center gap-2">
-                  <span role="status" className="text-xs text-muted-foreground">
-                    {struck.length} riscadas
-                  </span>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    disabled={!struck.length || saving}
-                    onClick={() => setStruck([])}
-                  >
-                    Limpar riscos
-                  </Button>
-                </div>
-              </div>
-            )}
             {hasOptions && (
               <div className="mt-3 space-y-2">
                 {parsed.options.map((option) => {
@@ -1400,7 +1375,7 @@ function QuestionTrainer() {
                           </span>
                         )}
                       </button>
-                      {!answered && (
+                      {canStrike && !answered && (
                         <Button
                           type="button"
                           variant={isStruck ? "secondary" : "ghost"}
@@ -1417,7 +1392,6 @@ function QuestionTrainer() {
                           onClick={() => toggleStrike(option.letter)}
                         >
                           <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                          {isStruck ? "Desfazer" : "Riscar"}
                         </Button>
                       )}
                     </div>
@@ -1464,7 +1438,7 @@ function QuestionTrainer() {
                       {labelFor(answer)}
                     </span>
                   </button>
-                  {!answered && (
+                  {canStrike && !answered && (
                     <Button
                       type="button"
                       variant={struck.includes(answer) ? "secondary" : "ghost"}
@@ -1476,7 +1450,6 @@ function QuestionTrainer() {
                       onClick={() => toggleStrike(answer)}
                     >
                       <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                      {struck.includes(answer) ? "Desfazer" : "Riscar"}
                     </Button>
                   )}
                 </div>
