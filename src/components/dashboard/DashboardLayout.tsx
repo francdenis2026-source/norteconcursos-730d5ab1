@@ -505,7 +505,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     await flushStudyClock();
     stopStudyClock();
     await supabase.auth.signOut();
-    navigate({ to: "/" });
+    window.location.replace("/");
   };
   const signOut = async () => {
     await flushStudyClock();
