@@ -7,19 +7,29 @@ const sql = await readFile(file, "utf8"),
   sha256 = createHash("sha256").update(sql).digest("hex");
 if (process.argv.includes("--dry-run")) {
   await mkdir("outputs", { recursive: true });
-  await writeFile(
-    "outputs/guest-daily-publication.sql",
-    `begin;\n${sql}\nnotify pgrst,'reload schema';\ncommit;\n`,
-  );
+  const preparedSQL = "outputs/instalar-desafio-diario-completo.sql";
+  const publication = [
+    "begin;",
+    "-- NORTE_CONCURSOS_INSTALACAO_COMPLETA_V3: execute este arquivo inteiro.",
+    sql,
+    "notify pgrst,'reload schema';",
+    "commit;",
+    "select 'Instalação concluída' as status, public.get_current_acre_date() as dia_acre, (select count(*)::integer from public.get_daily_guest_questions(10)) as questoes_do_dia;",
+    "",
+  ].join(String.fromCharCode(10));
+  await Promise.all([
+    writeFile(preparedSQL, publication),
+    writeFile("outputs/guest-daily-publication.sql", publication),
+  ]);
   console.log(
     JSON.stringify(
       {
         project,
         file,
         sha256,
-        preparedSQL: "outputs/guest-daily-publication.sql",
+        preparedSQL,
         operation:
-          "replace daily selector and create private selection history; no edits to questions, answers or publication statuses",
+          "replace daily selector and create its dependencies; preserve question texts, answers and publication statuses",
       },
       null,
       2,
@@ -50,10 +60,17 @@ if (!Array.isArray(before) || !before[0]?.definition)
   throw new Error("Cannot snapshot the current daily selector");
 const folder = `outputs/guest-deploy-${Date.now()}`;
 await mkdir(folder, { recursive: true });
-await writeFile(folder + "/before.json", JSON.stringify({ sha256, before }, null, 2) + "\n");
+await writeFile(
+  folder + "/before.json",
+  JSON.stringify({ sha256, before }, null, 2) + String.fromCharCode(10),
+);
 const guard = `do ${quote(`begin if pg_get_functiondef(to_regprocedure('public.get_daily_guest_questions(integer)')) is distinct from ${quote(before[0].definition)} then raise exception 'Concurrent daily selector change'; end if; end;`)};`;
 await query(
-  `begin isolation level serializable; select pg_advisory_xact_lock(hashtext('norte-daily-guest-deploy')); ${guard}\n${sql}\nnotify pgrst,'reload schema';commit;`,
+  [
+    `begin isolation level serializable; select pg_advisory_xact_lock(hashtext('norte-daily-guest-deploy')); ${guard}`,
+    sql,
+    "notify pgrst,'reload schema';commit;",
+  ].join(String.fromCharCode(10)),
 );
 const verification = await query(
   "select pg_get_functiondef(to_regprocedure('public.get_daily_guest_questions(integer)')) as definition,has_function_privilege('anon','public.get_daily_guest_questions(integer)','execute') as public_access,has_function_privilege('anon','public._guest_question_pool(uuid[])','execute') as pool_access",

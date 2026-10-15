@@ -27,7 +27,7 @@ node scripts/guest/publish-daily-questions.mjs --dry-run
 node scripts/guest/publish-daily-questions.mjs
 ```
 
-O primeiro comando prepara `outputs/guest-daily-publication.sql`. O segundo salva a definição anterior, verifica alterações concorrentes, aplica a mudança em uma transação e confirma os privilégios do visitante. Alternativamente, substitua o conteúdo da consulta no editor SQL do projeto Supabase pelo arquivo completo `outputs/guest-daily-publication.sql`, gerado pelo primeiro comando, e execute-o. Esse arquivo inclui `BEGIN` e `COMMIT`, além dos pré-requisitos; não execute apenas um trecho selecionado. Nenhuma credencial deve ser colocada no repositório ou no chat.
+O primeiro comando prepara `outputs/instalar-desafio-diario-completo.sql`. O segundo salva a definição anterior, verifica alterações concorrentes, aplica a mudança em uma transação e confirma os privilégios do visitante. Alternativamente, substitua o conteúdo da consulta no editor SQL do projeto Supabase pelo arquivo completo `outputs/instalar-desafio-diario-completo.sql`, gerado pelo primeiro comando, e execute-o. Esse arquivo começa com `BEGIN` e a identificação `NORTE_CONCURSOS_INSTALACAO_COMPLETA_V3`, inclui os pré-requisitos e todas as funções auxiliares, e termina com uma consulta de verificação após `COMMIT`. Execute o arquivo inteiro: o resultado final mostra `status`, `dia_acre` e `questoes_do_dia`. Nenhuma credencial deve ser colocada no repositório ou no chat.
 
 ## Verificação
 

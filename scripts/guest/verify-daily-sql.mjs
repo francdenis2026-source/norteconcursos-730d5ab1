@@ -2,11 +2,27 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
+import { execFileSync } from "node:child_process";
 const { PGlite } = await import(pathToFileURL(process.env.GUEST_SQL_TEST_MODULE).href);
 const db = new PGlite();
-const migration = await readFile(
-  "supabase/migrations/20261015010000_balanced_daily_guest_questions.sql",
-  "utf8",
+// Exercise the exact file delivered to the user, including its transaction and dependencies.
+execFileSync(process.execPath, ["scripts/guest/publish-daily-questions.mjs", "--dry-run"], {
+  stdio: "pipe",
+});
+const publication = await readFile("outputs/instalar-desafio-diario-completo.sql", "utf8");
+assert.ok(
+  publication.startsWith("begin;" + String.fromCharCode(10)),
+  "the delivered SQL must contain real newlines",
+);
+assert.ok(publication.includes("NORTE_CONCURSOS_INSTALACAO_COMPLETA_V3"));
+assert.ok(
+  publication.includes("commit;" + String.fromCharCode(10) + "select 'Instalação concluída'"),
+);
+const kindPosition = publication.indexOf("create or replace function public._guest_question_kind(");
+const poolPosition = publication.indexOf("create or replace function public._guest_question_pool(");
+assert.ok(
+  kindPosition >= 0 && poolPosition > kindPosition,
+  "create every helper before its callers",
 );
 try {
   await db.exec(`create role anon;create role authenticated;
@@ -43,7 +59,17 @@ try {
     (await db.query("select to_regclass('public.question_support_texts') as name")).rows[0].name,
     null,
   );
-  await db.exec(migration);
+  assert.equal(
+    (
+      await db.query(
+        "select to_regprocedure('public._guest_question_kind(text,text,text)') as signature",
+      )
+    ).rows[0].signature,
+    null,
+  );
+  const installation = await db.exec(publication);
+  assert.equal(installation.at(-1).rows[0].questoes_do_dia, 10);
+  assert.equal(installation.at(-1).rows[0].status, "Instalação concluída");
   assert.equal(
     (
       await db.query(
@@ -56,10 +82,7 @@ try {
     (await db.query("select * from get_daily_guest_questions($1)", [limit])).rows;
   const first = await get();
   assert.equal(first.length, 10);
-  await db.exec(`begin;
-${migration}
-notify pgrst,'reload schema';
-commit;`);
+  await db.exec(publication);
   assert.deepEqual(
     await get(),
     first,
@@ -160,7 +183,7 @@ commit;`);
   assert.equal(new Set([...cycle1, ...cycle2].map((q) => q.id)).size, 15);
   assert.ok(cycle2.slice(0, 5).every((q) => !cycle1.some((p) => p.id === q.id)));
   console.log(
-    "PASS SQL: standalone migration without support table/column, safe rerun, 10 shared questions, clamped limits, 5/5 formats, 6/4 careers, subject/answer diversity, date renewal, history, duplicates, quarantine, missing context/options, support text, anon isolation and sparse fallback.",
+    "PASS SQL: exact delivered SQL file, missing helper/support table/column, safe rerun, 10 shared questions, clamped limits, 5/5 formats, 6/4 careers, subject/answer diversity, date renewal, history, duplicates, quarantine, missing context/options, support text, anon isolation and sparse fallback.",
   );
   if (process.env.GUEST_AUDIT_DATA) {
     await db.exec(
