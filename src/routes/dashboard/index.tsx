@@ -196,27 +196,38 @@ function StudentHome({ user }: { user: UserProfile }) {
   return (
     <div className="student-home student-hub">
       <header className="student-hub__masthead">
-        <div>
+        <div className="student-hub__hero-copy">
           <p className="student-hub__welcome">
             {hello}, {firstName}.
           </p>
           <h1 id="student-home-title">Painel do aluno</h1>
           <p>Seu estudo, suas prioridades e sua evolução.</p>
+          <div className="student-hub__masthead-actions">
+            <span className="student-hub__date">
+              <CalendarClock aria-hidden="true" />
+              {new Intl.DateTimeFormat("pt-BR", {
+                day: "2-digit",
+                month: "long",
+                timeZone: ACRE_TZ,
+              }).format(now)}
+              <small>Acre</small>
+            </span>
+            <Link to="/dashboard/performance">
+              Meu desempenho <ArrowRight aria-hidden="true" />
+            </Link>
+          </div>
         </div>
-        <div className="student-hub__masthead-actions">
-          <span className="student-hub__date">
-            <CalendarClock aria-hidden="true" />
-            {new Intl.DateTimeFormat("pt-BR", {
-              day: "2-digit",
-              month: "long",
-              timeZone: ACRE_TZ,
-            }).format(now)}
-            <small>Acre</small>
-          </span>
-          <Link to="/dashboard/performance">
-            Meu desempenho <ArrowRight aria-hidden="true" />
-          </Link>
-        </div>
+        <picture className="student-hub__hero-visual" aria-hidden="true">
+          <source media="(max-width: 640px)" srcSet="/media/hero/painel-aluno-estudo-small.webp" />
+          <img
+            src="/media/hero/painel-aluno-estudo.webp"
+            alt=""
+            width={960}
+            height={640}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
       </header>
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric

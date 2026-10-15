@@ -11715,3 +11715,30 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 .app-content__inner > .edital-workspace { animation: none; }
+
+/* A hero do aluno permanece visível com ou sem cronograma configurado. */
+.student-hub__masthead { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:0; align-items:stretch; overflow:hidden; border:1px solid #25384b; border-radius:18px; background:#091a2c; color:#f4f7fb; }
+.student-hub__hero-copy { padding:clamp(22px,3vw,36px); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+.student-hub__masthead .student-hub__welcome { color:#e8c17f; font-size:13px; }
+.student-hub__masthead h1 { margin-top:8px; font-size:clamp(27px,3vw,38px); letter-spacing:-.035em; }
+.student-hub__masthead h1 + p { color:#c9d5e4; font-size:14px; max-width:34ch; line-height:1.6; }
+.student-hub__masthead .student-hub__masthead-actions { flex-direction:row; align-items:center; flex-wrap:wrap; gap:10px 20px; margin-top:22px; }
+.student-hub__masthead .student-hub__date { color:#d2deeb; font-size:12px; }
+.student-hub__masthead .student-hub__date svg { color:#e8c17f; }
+.student-hub__masthead .student-hub__date small { color:#c9d5e4; border-color:#435367; }
+.student-hub__masthead-actions > a { color:#f1cf96; }
+.student-hub__masthead-actions > a:focus-visible { outline-color:#f1cf96; }
+.student-hub__hero-visual { position:relative; display:block; min-height:240px; overflow:hidden; }
+.student-hub__hero-visual img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; object-position:60% 48%; }
+.student-hub__hero-visual::after { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,#091a2c 0%,transparent 22%); }
+@media(max-width:640px) {
+  .student-hub__masthead { grid-template-columns:minmax(0,1fr); }
+  .student-hub__hero-visual { order:-1; min-height:0; height:155px; }
+  .student-hub__hero-visual img { object-position:center 46%; }
+  .student-hub__hero-visual::after { background:linear-gradient(0deg,#091a2c 0%,transparent 40%); }
+  .student-hub__hero-copy { padding:14px 22px 22px; }
+  .student-hub__masthead .student-hub__masthead-actions { margin-top:12px; gap:6px 18px; }
+  .student-hub__masthead h1 + p { max-width:none; font-size:13px; }
+  .student-hub__masthead .student-hub__date { font-size:11px; }
+  .student-hub__masthead .student-hub__masthead-actions > a { font-size:12px; min-height:40px; }
+}
