@@ -3,6 +3,7 @@ import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { subjectInArea } from "./questionTopics";
 import { canonicalBoard, canonicalSubject, canonicalCareerName } from "./subjects";
 import {
+  isAppliedExamQuestion,
   matchesQuestionContest,
   matchesQuestionCareer,
   questionContestLabel,
@@ -51,7 +52,7 @@ export function filterTrainerQuestions(
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
       matchesQuestionCareer(q.career, q.contest, q.year, f.career, f.contest, f.year) &&
       (f.year === "all" || q.year === f.year) &&
-      (f.appliedExam === "all" || examKey(q) === f.appliedExam) &&
+      (f.appliedExam === "all" || (isAppliedExamQuestion(q) && examKey(q) === f.appliedExam)) &&
       (f.subject === "all" || canonicalSubject(q.subject) === canonicalSubject(f.subject)) &&
       (f.source === "all" || q.source === f.source) &&
       (f.reviewed === "all" ||
@@ -101,6 +102,7 @@ export function trainerFilterFacets(
       topicNames.map((name) => [filterTopicIdentity(name), name]),
     );
     for (const q of rows) {
+      if (key === "exam" && !isAppliedExamQuestion(q)) continue;
       const rawTopic = topics.get(q.id);
       const value =
         key === "exam"
@@ -150,7 +152,7 @@ export function trainerCollectionQuestions(catalog: Question[], collection: "ene
   return catalog.filter((question) => isEnemContest(question.contest) === (collection === "enem"));
 }
 
-export type TrainerPracticeMode = "new" | "wrong" | "all";
+export type TrainerPracticeMode = "new" | "wrong" | "all" | "catalog";
 /** Filter the catalog before deriving facets, so options reflect the student's own history. */
 export function trainerPracticeQuestions(
   catalog: Question[],
@@ -159,6 +161,7 @@ export function trainerPracticeQuestions(
   reinforcements: ReadonlyMap<string, { lastCorrect: boolean }>,
 ) {
   return catalog.filter(question => {
+    if (mode === "catalog") return true;
     const key = `${question.source}:${question.id}`;
     if (mode === "new") return !answers.has(key);
     if (mode === "all") return answers.has(key);

@@ -66,6 +66,14 @@ export function questionContestLabel(raw: string) {
   return text;
 }
 
+/** A study repertoire may contain official items without identifying an applied exam paper. */
+export function isAppliedExamQuestion(question: { source: string; contest: string }) {
+  return (
+    question.source === "official" &&
+    !/^(repertorio\b|material historico\b)/.test(fold(questionContestLabel(question.contest)))
+  );
+}
+
 function specificLegacyContest(raw: string) {
   if (questionContestLabel(raw) === raw.trim()) return false;
   return (

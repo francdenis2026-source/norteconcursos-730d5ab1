@@ -1,4 +1,5 @@
-import { trainerSessionSize } from "@/lib/trainerSession";
+import { searchQuestionCatalog } from "@/lib/questionBank";
+import { trainerSessionSize, catalogSessionQuestions } from "@/lib/trainerSession";
 import {
   questionContestValue,
   questionContestOptionLabel,
@@ -113,7 +114,10 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "topic"
       | "go"
       | "reinforce"
-      | "mode",
+      | "mode"
+      | "appliedExam"
+      | "catalogQuery"
+      | "limit",
       string | undefined
     >
   > => ({
@@ -133,6 +137,13 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     go: typeof search["go"] === "string" ? search["go"] : undefined,
     reinforce: typeof search["reinforce"] === "string" ? search["reinforce"] : undefined,
     mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
+    appliedExam: typeof search["appliedExam"] === "string" ? search["appliedExam"] : undefined,
+    catalogQuery: typeof search["catalogQuery"] === "string" ? search["catalogQuery"] : undefined,
+    limit:
+      typeof search["limit"] === "string" &&
+      ["5", "10", "20", "30", "50", "all"].includes(search["limit"])
+        ? search["limit"]
+        : undefined,
   }),
   component: QuestionTrainer,
 });
@@ -179,7 +190,10 @@ function QuestionTrainer() {
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
     const collectionCatalog = trainerCollectionQuestions(
-      syllabusQuestions(fullCatalog, routeFilters.syllabus),
+      searchQuestionCatalog(
+        syllabusQuestions(fullCatalog, routeFilters.syllabus),
+        routeFilters.catalogQuery ?? "",
+      ),
       collection,
     );
     const scoped =
@@ -188,15 +202,16 @@ function QuestionTrainer() {
         : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
     return { catalog: usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law, collection, routeFilters.syllabus]);
+  }, [fullCatalog, law, collection, routeFilters.syllabus, routeFilters.catalogQuery]);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
-  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(
-    routeFilters.mode === "reforco" ? "wrong" : "new",
+  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all" | "catalog">(
+    routeFilters.mode === "catalog" ? "catalog" : routeFilters.mode === "reforco" ? "wrong" : "new",
   );
   const [sessionReinforce, setSessionReinforce] = React.useState(false);
+  const catalogReviewKeys = React.useRef(new Set<string>());
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(
     selectedQuestionCareer(
@@ -206,7 +221,7 @@ function QuestionTrainer() {
     ),
   );
   const [year, setYear] = React.useState(routeFilters.year || "all");
-  const [appliedExam, setAppliedExam] = React.useState("all");
+  const [appliedExam, setAppliedExam] = React.useState(routeFilters.appliedExam || "all");
   const [subject, setSubject] = React.useState(canonicalSubject(routeFilters.subject) || "all");
   const [source, setSource] = React.useState(routeFilters.source || "all");
   const [reviewed, setReviewed] = React.useState(routeFilters.reviewed || "all");
@@ -217,7 +232,7 @@ function QuestionTrainer() {
   const [topic, setTopic] = React.useState(routeFilters.topic || "all");
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
-  const [limit, setLimit] = React.useState("20");
+  const [limit, setLimit] = React.useState(routeFilters.limit || "20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
   const loading = catalogLoading || lockedLoading;
   const [index, setIndex] = React.useState(0);
@@ -345,7 +360,15 @@ function QuestionTrainer() {
     setArea(routeFilters.area || "all");
     setTopic(routeFilters.topic || "all");
     setDifficulty("all");
-    setAppliedExam("all");
+    setAppliedExam(routeFilters.appliedExam || "all");
+    setLimit(routeFilters.limit || "20");
+    setPracticeMode(
+      routeFilters.mode === "catalog"
+        ? "catalog"
+        : routeFilters.mode === "reforco"
+          ? "wrong"
+          : "new",
+    );
     autoStart.current = routeFilters.go === "1";
     pendingRestore.current = true;
   }, [
@@ -363,6 +386,10 @@ function QuestionTrainer() {
     routeFilters.area,
     routeFilters.topic,
     routeFilters.go,
+    routeFilters.mode,
+    routeFilters.appliedExam,
+    routeFilters.catalogQuery,
+    routeFilters.limit,
   ]);
   React.useEffect(() => {
     if (!pendingRestore.current || loading || error || !userId) return;
@@ -378,9 +405,19 @@ function QuestionTrainer() {
       sessionAnswers.current = new Map(
         (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
       );
-      setPracticeMode(b.practiceMode ?? (routeFilters.mode === "reforco" ? "wrong" : "new"));
+      catalogReviewKeys.current = new Set(locked.keys());
+      setPracticeMode(
+        b.practiceMode ??
+          (routeFilters.mode === "catalog"
+            ? "catalog"
+            : routeFilters.mode === "reforco"
+              ? "wrong"
+              : "new"),
+      );
       setSessionReinforce(
-        b.practiceMode ? b.practiceMode !== "new" : routeFilters.mode === "reforco",
+        b.practiceMode
+          ? b.practiceMode === "all" || b.practiceMode === "wrong"
+          : routeFilters.mode === "reforco",
       );
       setQuestions(restored.questions);
       setIndex(b.index);
@@ -441,23 +478,12 @@ function QuestionTrainer() {
     () => trainerPracticeQuestions(catalog, practiceMode, locked, reinforced),
     [catalog, practiceMode, locked, reinforced],
   );
-  const changePracticeMode = (mode: "new" | "wrong" | "all") => {
+  const changePracticeMode = (mode: "new" | "wrong" | "all" | "catalog") => {
     if (mode === practiceMode) return;
     setPracticeMode(mode);
-    setContest(isEnemContest(contest) ? "ENEM" : "all");
-    setBoard("all");
-    setCareer("all");
-    setYear("all");
-    setAppliedExam("all");
-    setSubject("all");
-    setSource("all");
-    setReviewed("all");
-    setDifficulty("all");
-    setState("all");
-    setCategory("all");
-    setArea("all");
-    setTopic("all");
-    setNotice("Os filtros foram limpos para mostrar as opções disponíveis neste modo de prática.");
+    setNotice(
+      "Os filtros foram preservados. As opções e quantidades agora refletem o modo de prática escolhido.",
+    );
   };
   // Cada lista mostra só o que existe combinado com os OUTROS filtros já escolhidos,
   const topicOf = React.useMemo(
@@ -590,14 +616,24 @@ function QuestionTrainer() {
     return locked.get(k)?.isCorrect === false && reinforced.get(k)?.lastCorrect;
   }).length;
   const trainingPool =
-    practiceMode === "new" ? fresh : practiceMode === "wrong" ? wrongPending : answeredPool;
+    practiceMode === "catalog"
+      ? pool
+      : practiceMode === "new"
+        ? fresh
+        : practiceMode === "wrong"
+          ? wrongPending
+          : answeredPool;
   const dailyRemaining =
-    practiceMode === "new" && dailyLimit !== "unlimited"
+    (practiceMode === "new" || practiceMode === "catalog") && dailyLimit !== "unlimited"
       ? Math.max(0, dailyLimit - dailyUsed)
       : undefined;
   const startTraining = () => {
     responseIdRef.current = crypto.randomUUID();
-    const ordered = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
+    const orderedPool = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
+    const ordered =
+      practiceMode === "catalog"
+        ? catalogSessionQuestions(orderedPool, locked, dailyRemaining)
+        : orderedPool;
     if (!ordered.length) {
       setNotice(
         practiceMode === "new"
@@ -606,8 +642,13 @@ function QuestionTrainer() {
       );
       return;
     }
-    setSessionReinforce(practiceMode !== "new");
-    const count = trainerSessionSize(ordered.length, limit, dailyRemaining);
+    catalogReviewKeys.current = new Set(locked.keys());
+    setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
+    const count = trainerSessionSize(
+      ordered.length,
+      limit,
+      practiceMode === "new" ? dailyRemaining : undefined,
+    );
     if (!count) {
       setNotice(
         "O limite de novas respostas foi atingido hoje. Você pode revisar questões já respondidas.",
@@ -648,7 +689,8 @@ function QuestionTrainer() {
       );
       return;
     }
-    setSessionReinforce(practiceMode !== "new");
+    catalogReviewKeys.current = new Set(locked.keys());
+    setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
     setLimit("10");
     const count = trainerSessionSize(trainingPool.length, 10, dailyRemaining);
     if (!count) {
@@ -688,7 +730,12 @@ function QuestionTrainer() {
   const question = questions[index];
   // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
   const noText = !!question && needsMissingSupportText(question);
-  const nonScoring = sessionReinforce || noText;
+  const nonScoring =
+    sessionReinforce ||
+    noText ||
+    (practiceMode === "catalog" &&
+      !!question &&
+      catalogReviewKeys.current.has(lockedKey(question.source, question.id)));
   React.useEffect(() => {
     questionSecsRef.current = 0;
     setQuestionSecs(0);
@@ -897,14 +944,44 @@ function QuestionTrainer() {
             <p>Escolha o que estudar, responda no seu ritmo e aprenda com a correção.</p>
             <span className="trainer-study-hero__catalog">
               {practiceCatalog.length.toLocaleString("pt-BR")}{" "}
-              {practiceMode === "new"
-                ? "questões ainda não respondidas"
-                : practiceMode === "wrong"
-                  ? "erros pendentes de reforço"
-                  : "questões já respondidas"}
+              {practiceMode === "catalog"
+                ? "questões do acervo"
+                : practiceMode === "new"
+                  ? "questões ainda não respondidas"
+                  : practiceMode === "wrong"
+                    ? "erros pendentes de reforço"
+                    : "questões já respondidas"}
             </span>
           </div>
         </section>
+        {practiceMode === "catalog" && (
+          <div className="rounded-xl border bg-card p-4 text-sm" role="status">
+            <p className="font-semibold">
+              {pool.length.toLocaleString("pt-BR")} questões na seleção atual
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Ajuste disciplina, banca, ano ou assunto abaixo. Questões já respondidas são revisadas
+              sem pontuar novamente.
+              {dailyRemaining !== undefined
+                ? ` Você pode registrar ${dailyRemaining} ${dailyRemaining === 1 ? "nova resposta" : "novas respostas"} hoje; esse limite é aplicado ao montar a sessão.`
+                : ""}
+            </p>
+          </div>
+        )}
+        {routeFilters.catalogQuery && (
+          <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border p-3 text-sm">
+            <span>
+              Busca do acervo: <strong>{routeFilters.catalogQuery}</strong>
+            </span>
+            <Link
+              to="/dashboard/question-trainer"
+              search={{ ...routeFilters, catalogQuery: undefined }}
+              className="inline-flex min-h-11 items-center font-semibold underline"
+            >
+              Remover busca
+            </Link>
+          </div>
+        )}
         {routeFilters.syllabus && (
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-primary/5 p-3 text-sm">
             <span>Questões vinculadas ao assunto escolhido no edital.</span>
@@ -940,9 +1017,14 @@ function QuestionTrainer() {
             </p>
           )}
           <h2 className="text-base font-semibold">1. Escolha seu objetivo</h2>
-          <div className="grid gap-2 sm:grid-cols-3">
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {(
               [
+                [
+                  "catalog",
+                  "Todas da seleção",
+                  `${pool.length} questões, incluindo as já respondidas.`,
+                ],
                 ["new", "Questões novas", `${fresh.length} ainda não respondidas neste filtro.`],
                 [
                   "wrong",
@@ -978,8 +1060,12 @@ function QuestionTrainer() {
           </p>
         </section>
         <TrainerSetup
-          available={trainingPool.length}
-          dailyRemaining={dailyRemaining}
+          available={
+            practiceMode === "catalog"
+              ? catalogSessionQuestions(trainingPool, locked, dailyRemaining).length
+              : trainingPool.length
+          }
+          dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
           choices={choices}
           facets={facets}
           values={{
@@ -1005,21 +1091,21 @@ function QuestionTrainer() {
             setCareer: manual(setCareer),
             setYear: manual(setYear),
             setAppliedExam: selectAppliedExam,
-            setSubject: manual((value: string) => {
+            setSubject: (value: string) => {
               setSubject(value);
               setTopic("all");
-            }),
-            setSource: manual(setSource),
-            setReviewed: manual(setReviewed),
-            setDifficulty: manual(setDifficulty),
-            setState: manual(setState),
-            setCategory: manual(setCategory),
+            },
+            setSource: setSource,
+            setReviewed: setReviewed,
+            setDifficulty: setDifficulty,
+            setState: setState,
+            setCategory: setCategory,
             setArea: (value: string) => {
               setArea(value);
               setSubject("all");
               setTopic("all");
             },
-            setTopic: manual(setTopic),
+            setTopic: setTopic,
             setLimit,
             setOrderMode,
           }}
@@ -1043,6 +1129,7 @@ function QuestionTrainer() {
         wrong={wrong}
         restart={restart}
         review={sessionReinforce}
+        mixed={practiceMode === "catalog"}
       />
     );
 
@@ -1117,7 +1204,7 @@ function QuestionTrainer() {
 
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
-      {sessionReinforce && (
+      {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
         <div
           role="status"
           className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100"
@@ -1874,7 +1961,8 @@ function TrainerSetup({
                 label="Quantidade"
                 value={values.limit}
                 setValue={setters.setLimit}
-                options={["5", "10", "20", "30", "50"]}
+                options={["5", "10", "20", "30", "50", "all"]}
+                labels={{ all: "Todas as questões da seleção" }}
                 allLabel="Quantidade"
                 hideAll
               />{" "}
@@ -1991,7 +2079,7 @@ function TrainerFilter({
               <SelectItem key={option} value={option}>
                 {labels?.[option] || option}
                 {counts ? ` (${(counts.get(option) ?? 0).toLocaleString("pt-BR")})` : ""}
-                {hideAll ? " questões" : ""}
+                {hideAll && option !== "all" ? " questões" : ""}
               </SelectItem>
             ))}
         </SelectContent>
@@ -2014,6 +2102,7 @@ function Center({ children }: { children: React.ReactNode }) {
   );
 }
 function TrainingResult({
+  mixed,
   total,
   review,
   correct,
@@ -2021,6 +2110,7 @@ function TrainingResult({
   restart,
 }: {
   total: number;
+  mixed: boolean;
   review: boolean;
   correct: number;
   wrong: number;
@@ -2057,9 +2147,11 @@ function TrainingResult({
               </div>
             </dl>
             <p className="mt-3 text-sm text-muted-foreground">
-              {review
-                ? "Sessão de revisão: suas primeiras respostas permanecem como registro oficial, sem nova pontuação."
-                : "Suas respostas foram registradas no desempenho."}
+              {mixed
+                ? "Primeiras respostas registram seu desempenho. Questões já respondidas são revisões e não pontuam novamente."
+                : review
+                  ? "Sessão de revisão: suas primeiras respostas permanecem como registro oficial, sem nova pontuação."
+                  : "Suas respostas foram registradas no desempenho."}
             </p>
           </div>
           <Progress value={accuracy} />

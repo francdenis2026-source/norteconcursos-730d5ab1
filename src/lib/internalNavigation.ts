@@ -37,7 +37,7 @@ export const trainerFilterKeys = [
 ] as const;
 export type TrainerBookmark = {
   version: 1;
-  practiceMode?: "new" | "wrong" | "all";
+  practiceMode?: "new" | "wrong" | "all" | "catalog";
   sessionAttempts?: { index: number; selected: "A" | "B" | "C" | "D" | "E"; isCorrect: boolean }[];
   savedAt: number;
   route: string;
@@ -72,7 +72,7 @@ export function restoreTrainerBookmark<
   if (
     !Array.isArray(b.questions) ||
     !b.questions.length ||
-    b.questions.length > 500 ||
+    b.questions.length > catalog.length ||
     !Number.isInteger(b.index) ||
     b.index < 0 ||
     b.index > b.questions.length ||
@@ -88,7 +88,7 @@ export function restoreTrainerBookmark<
     trainerFilterKeys.some((k) => typeof b.filters[k] !== "string")
   )
     return null;
-  if (b.practiceMode !== undefined && !["new", "wrong", "all"].includes(b.practiceMode))
+  if (b.practiceMode !== undefined && !["new", "wrong", "all", "catalog"].includes(b.practiceMode))
     return null;
   if (
     b.sessionAttempts !== undefined &&

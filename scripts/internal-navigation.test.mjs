@@ -115,3 +115,10 @@ test('resume reading skips excluded units, inactive courses and unlinked materia
  const courses=[{id:'a',slug:'codigo-penal',title:'Código Penal',status:'active',syllabus_topic_id:'topic'},{id:'b',slug:'orphan',title:'Sem vínculo',status:'active',syllabus_topic_id:null}];
  assert.equal(home.recentReading(progress,units,courses).article,'art-3');assert.equal(home.recentReading(progress,units,courses.map(c=>({...c,status:'inactive'}))),null);
 });
+
+test('a catalog session larger than 500 restores all current eligible question IDs',()=>{
+ const many=Array.from({length:601},(_,i)=>({id:`large-${i}`,source:'official',table:'official_exam_questions'}));
+ const b={...bookmark(),practiceMode:'catalog',questions:many,filters:{...bookmark().filters,limit:'all'}};
+ assert.equal(restoreTrainerBookmark(b,b.route,many,now).questions.length,601);
+ assert.equal(restoreTrainerBookmark(b,b.route,many.slice(0,600),now),null);
+});
