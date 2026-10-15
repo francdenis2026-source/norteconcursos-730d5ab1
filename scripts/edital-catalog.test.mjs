@@ -96,3 +96,81 @@ test("broad syllabus topic finds individual study materials while excluding unre
   assert.equal(hits.length, 2);
   assert.deepEqual(editalMaterials(materials, "Informática", "Inquérito policial"), []);
 });
+
+import { editalExamQuestions, editalPracticeSearch } from "../src/lib/editalPractice.ts";
+const practiceEdition = { ...editions[1], role_name: "Agente de Polícia Federal" };
+const paperQuestion = {
+  id: "correct",
+  source: "official",
+  table: "official_exam_questions",
+  contest: "Polícia Federal",
+  career: "Agente de Polícia Federal",
+  year: "2025",
+  board: "CEBRASPE",
+  subject: "Direito Penal",
+  text: "Julgue o item sobre a tipicidade penal.",
+  syllabusTopicId: "remapped-current-topic",
+};
+test("edition practice uses original paper identity rather than a shared or remapped syllabus", () => {
+  const variants = [
+    paperQuestion,
+    { ...paperQuestion, id: "other-year", year: "2021" },
+    { ...paperQuestion, id: "other-career", career: "Escrivão de Polícia Federal" },
+    { ...paperQuestion, id: "other-board", board: "FGV" },
+    { ...paperQuestion, id: "other-agency", contest: "Polícia Civil do Acre" },
+    { ...paperQuestion, id: "authored", source: "curated" },
+    { ...paperQuestion, id: "personal", source: "personal" },
+  ];
+  assert.deepEqual(
+    editalExamQuestions(variants, practiceEdition).map((q) => q.id),
+    ["correct"],
+  );
+});
+test("same-year police papers in different states and cargos cannot leak across editions", () => {
+  const e = {
+    ...practiceEdition,
+    contest_name: "Polícia Civil do Estado de Sergipe",
+    role_name: "Escrivão de Polícia Civil",
+    contest_year: 2021,
+  };
+  const q = {
+    ...paperQuestion,
+    contest: "Polícia Civil do Estado de Sergipe - Escrivão de Polícia",
+    career: "Escrivão de Polícia",
+    year: "2021",
+  };
+  assert.equal(editalExamQuestions([q], e).length, 1);
+  assert.equal(editalExamQuestions([{ ...q, contest: "Polícia Civil do Acre" }], e).length, 0);
+  assert.equal(editalExamQuestions([{ ...q, career: "Delegado de Polícia" }], e).length, 0);
+});
+test("incomplete metadata and unavailable papers stay empty without a broad fallback", () => {
+  assert.deepEqual(
+    editalExamQuestions([paperQuestion], { ...practiceEdition, exam_board: null }),
+    [],
+  );
+  assert.deepEqual(editalExamQuestions([paperQuestion], { ...practiceEdition, role_name: "" }), []);
+  assert.deepEqual(
+    editalExamQuestions([paperQuestion], { ...practiceEdition, contest_year: 2014 }),
+    [],
+  );
+  assert.deepEqual(
+    editalExamQuestions(
+      [{ ...paperQuestion, contest: "Material histórico — Polícia Federal" }],
+      practiceEdition,
+    ),
+    [],
+  );
+});
+test("edition links retain all catalog and review modes without a subject-only filter", () => {
+  assert.deepEqual(editalPracticeSearch(practiceEdition), {
+    edition: "new",
+    mode: "catalog",
+    limit: "all",
+  });
+  assert.deepEqual(editalPracticeSearch({ ...practiceEdition, id: "enem", contest_name: "ENEM" }), {
+    edition: "enem",
+    mode: "catalog",
+    limit: "all",
+    contest: "ENEM",
+  });
+});

@@ -1,3 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
+import { fetchEditalEditions } from "@/lib/editalEditions";
+import { editalExamQuestions } from "@/lib/editalPractice";
 import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
 import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
@@ -107,6 +110,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "edition"
       | "syllabus"
       | "law"
       | "contest"
@@ -129,6 +133,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    edition: typeof search["edition"] === "string" ? search["edition"] : undefined,
     syllabus: typeof search["syllabus"] === "string" ? search["syllabus"] : undefined,
     law: typeof search["law"] === "string" ? search["law"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
@@ -189,6 +194,16 @@ function QuestionTrainer() {
     loading: catalogLoading,
     error,
   } = useQuestionCatalog(userId, canLoad);
+  const examEdition = useQuery({
+    queryKey: ["trainer-exam-edition", userId, routeFilters.edition],
+    enabled: canLoad && !!routeFilters.edition,
+    queryFn: async () => {
+      const found = (await fetchEditalEditions()).find((e) => e.id === routeFilters.edition);
+      if (!found) throw Error("Edição não encontrada");
+      return found;
+    },
+    retry: false,
+  });
   // Questões sem o texto de apoio ficam fora do treino até que o conteúdo esteja disponível.
 
   const law = routeFilters.law;
@@ -199,7 +214,14 @@ function QuestionTrainer() {
   const { catalog, missingSupportText } = React.useMemo(() => {
     const collectionCatalog = trainerCollectionQuestions(
       searchQuestionCatalog(
-        syllabusQuestions(fullCatalog, routeFilters.syllabus),
+        syllabusQuestions(
+          routeFilters.edition
+            ? examEdition.data
+              ? editalExamQuestions(fullCatalog, examEdition.data)
+              : []
+            : fullCatalog,
+          routeFilters.syllabus,
+        ),
         routeFilters.catalogQuery ?? "",
       ),
       collection,
@@ -210,7 +232,15 @@ function QuestionTrainer() {
         : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
     return { catalog: usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law, collection, routeFilters.syllabus, routeFilters.catalogQuery]);
+  }, [
+    fullCatalog,
+    law,
+    collection,
+    routeFilters.syllabus,
+    routeFilters.catalogQuery,
+    routeFilters.edition,
+    examEdition.data,
+  ]);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
@@ -242,7 +272,8 @@ function QuestionTrainer() {
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState(routeFilters.limit || "20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
-  const loading = catalogLoading || lockedLoading;
+  const loading =
+    catalogLoading || lockedLoading || (!!routeFilters.edition && examEdition.isPending);
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
@@ -415,6 +446,7 @@ function QuestionTrainer() {
     pendingRestore.current = true;
   }, [
     law,
+    routeFilters.edition,
     routeFilters.syllabus,
     routeFilters.contest,
     routeFilters.board,
@@ -434,7 +466,7 @@ function QuestionTrainer() {
     routeFilters.limit,
   ]);
   React.useEffect(() => {
-    if (!pendingRestore.current || loading || error || !userId) return;
+    if (!pendingRestore.current || loading || error || examEdition.isError || !userId) return;
     pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
@@ -492,7 +524,28 @@ function QuestionTrainer() {
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
-  }, [loading, error, userId, routeKey, catalog]);
+  }, [loading, error, examEdition.isError, userId, routeKey, catalog]);
+  const examNotice = routeFilters.edition ? (
+    <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
+      <strong>
+        Prova selecionada:{" "}
+        {examEdition.data
+          ? `${examEdition.data.contest_name} · ${examEdition.data.role_name} · ${examEdition.data.contest_year}`
+          : "Consultando edição"}
+      </strong>
+      <p>
+        Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam
+        essa seleção.
+      </p>
+      <Link
+        to="/dashboard/edital"
+        search={{ edition: routeFilters.edition }}
+        className="mt-2 inline-block underline"
+      >
+        Voltar ao meu edital
+      </Link>
+    </aside>
+  ) : null;
   const lawNotice =
     law !== undefined ? (
       <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
@@ -970,6 +1023,18 @@ function QuestionTrainer() {
         <p>{isGuest ? "Redirecionando…" : "Preparando seu treino…"}</p>
       </Center>
     );
+  if (routeFilters.edition && examEdition.isError)
+    return (
+      <Center>
+        <p>
+          Não foi possível conferir a prova selecionada. Nenhuma questão de outra prova será usada.
+        </p>
+        <Button onClick={() => void examEdition.refetch()}>Tentar carregar a prova</Button>
+        <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
+          Voltar ao meu edital
+        </Link>
+      </Center>
+    );
   if (!user)
     return (
       <Center>
@@ -1045,6 +1110,7 @@ function QuestionTrainer() {
             </Link>
           </div>
         )}
+        {examNotice}
         {lawNotice}
         <section className="trainer-practice-panel" aria-label="Modo de prática">
           {missingSupportText > 0 && (
@@ -1260,6 +1326,7 @@ function QuestionTrainer() {
           Encerrar este treino
         </button>
       </aside>
+      {examNotice}
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
       {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (

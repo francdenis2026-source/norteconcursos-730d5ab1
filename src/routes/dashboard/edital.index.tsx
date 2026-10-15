@@ -1,3 +1,4 @@
+import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
@@ -79,6 +80,10 @@ function EditalPage() {
   }, [authLoading, user?.id, real, revision]);
   const edition = editions.find((e) => e.id === selected);
   const editionId = edition?.id;
+  const examQuestions = React.useMemo(
+    () => (edition ? editalExamQuestions(catalog, edition) : []),
+    [catalog, edition],
+  );
   React.useEffect(() => {
     setSearch("");
     setDiscipline("all");
@@ -191,6 +196,43 @@ function EditalPage() {
               <ExternalLink className="h-4 w-4" />
             </a>
           )}
+          <div
+            className="mt-4 rounded-xl border border-primary/25 bg-primary/5 p-4"
+            role="region"
+            aria-label="Treinar a prova desta edição"
+          >
+            <h3 className="font-semibold">Resolva a prova escolhida</h3>
+            <p className="my-2 text-sm text-muted-foreground">
+              Somente questões oficiais identificadas para este concurso, cargo, banca e ano. As
+              questões por assunto abaixo podem ter origem em outras provas.
+            </p>
+            {catalogLoading ? (
+              <p role="status">Conferindo questões desta prova…</p>
+            ) : catalogError ? (
+              <Button variant="outline" onClick={reloadCatalog}>
+                Tentar carregar questões da prova
+              </Button>
+            ) : examQuestions.length ? (
+              <>
+                <Button asChild>
+                  <Link to="/dashboard/question-trainer" search={editalPracticeSearch(edition)}>
+                    Resolver questões desta prova ({examQuestions.length})
+                  </Link>
+                </Button>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Quantidade disponível no acervo revisado; pode ser menor que a prova completa.
+                  Respostas anteriores ficam em revisão. Os limites diários do seu plano continuam
+                  valendo.
+                </p>
+              </>
+            ) : (
+              <p role="status" className="text-sm">
+                Ainda não há questões elegíveis identificadas para esta prova no acervo. Você pode
+                estudar pelos assuntos abaixo; questões de outras provas não serão incluídas neste
+                treino.
+              </p>
+            )}
+          </div>
           {edition.status === "archived" && (
             <p className="edital-note">
               Programa histórico para consulta. Os materiais relacionados apresentam conteúdo atual
