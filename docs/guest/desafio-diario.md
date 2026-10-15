@@ -2,6 +2,8 @@
 
 A interface usa apenas `get_daily_guest_questions(10)`. O catálogo completo e o histórico de seleção continuam privados. A cota permanece em dez respostas por navegador, com renovação à meia-noite do Acre e data consultada no servidor.
 
+A migração é autossuficiente: cria a tabela `question_support_texts`, sua proteção de acesso e a coluna de vínculo caso ainda não existam, preservando os dados existentes. Pode ser reexecutada após uma tentativa interrompida.
+
 A migração `20261015010000_balanced_daily_guest_questions.sql` prepara uma seleção diária compartilhada:
 
 - prioriza itens aprovados dos últimos três anos, sem excluir automaticamente repertório antigo ainda válido;
@@ -25,7 +27,7 @@ node scripts/guest/publish-daily-questions.mjs --dry-run
 node scripts/guest/publish-daily-questions.mjs
 ```
 
-O primeiro comando prepara `outputs/guest-daily-publication.sql`. O segundo salva a definição anterior, verifica alterações concorrentes, aplica a mudança em uma transação e confirma os privilégios do visitante. Alternativamente, execute a migração no editor SQL do projeto Supabase. Nenhuma credencial deve ser colocada no repositório ou no chat.
+O primeiro comando prepara `outputs/guest-daily-publication.sql`. O segundo salva a definição anterior, verifica alterações concorrentes, aplica a mudança em uma transação e confirma os privilégios do visitante. Alternativamente, substitua o conteúdo da consulta no editor SQL do projeto Supabase pelo arquivo completo `outputs/guest-daily-publication.sql`, gerado pelo primeiro comando, e execute-o. Esse arquivo inclui `BEGIN` e `COMMIT`, além dos pré-requisitos; não execute apenas um trecho selecionado. Nenhuma credencial deve ser colocada no repositório ou no chat.
 
 ## Verificação
 

@@ -10,15 +10,16 @@ const migration = await readFile(
 );
 try {
   await db.exec(`create role anon;create role authenticated;
+ create schema auth;
+ create function auth.uid() returns uuid language sql stable as $$select null::uuid$$;
+ create function public.has_role(uuid,text) returns boolean language sql stable as $$select false$$;
  create table syllabus_editions(id uuid primary key,status text);
  create table syllabus_topics(id uuid primary key,edition_id uuid,content_status text);
- create table question_support_texts(id uuid primary key,label text,body text);
- alter table question_support_texts enable row level security;
- create table official_exam_questions(id uuid primary key,syllabus_topic_id uuid,current_syllabus_topic_id uuid,support_text_id uuid,contest_name text,career_name text,career_category text,exam_board text,exam_year integer,subject text,question_text text,official_answer text,content_status text,context_review_required boolean,legal_review_required boolean,legal_audit_completed boolean,legal_basis jsonb,law_version_checked_at timestamptz);
+ create table official_exam_questions(id uuid primary key,syllabus_topic_id uuid,current_syllabus_topic_id uuid,contest_name text,career_name text,career_category text,exam_board text,exam_year integer,subject text,question_text text,official_answer text,content_status text,context_review_required boolean,legal_review_required boolean,legal_audit_completed boolean,legal_basis jsonb,law_version_checked_at timestamptz);
  create function get_current_acre_date() returns date language sql stable as $$select coalesce(nullif(current_setting('fixture.acre_day',true),''),'2026-10-15')::date$$;
  insert into syllabus_editions values('00000000-0000-0000-0000-000000000001','active');
  insert into syllabus_topics values('00000000-0000-0000-0000-000000000001','00000000-0000-0000-0000-000000000001','current');
- insert into official_exam_questions select lpad(i::text,32,'0')::uuid,'00000000-0000-0000-0000-000000000001',null,null,
+ insert into official_exam_questions select lpad(i::text,32,'0')::uuid,'00000000-0000-0000-0000-000000000001',null,
  case when i%10<6 then 'Polícia Civil' else 'Secretaria de Administração' end,
  case when i%10<6 then 'Agente de Polícia' else 'Analista Administrativo' end,
  case when i%10<6 then 'Polícia Civil' else 'Administrativo/Outros' end,
@@ -38,6 +39,10 @@ try {
       basis.indexOf("create or replace function public.get_daily_guest_questions"),
     ),
   );
+  assert.equal(
+    (await db.query("select to_regclass('public.question_support_texts') as name")).rows[0].name,
+    null,
+  );
   await db.exec(migration);
   assert.equal(
     (
@@ -51,6 +56,15 @@ try {
     (await db.query("select * from get_daily_guest_questions($1)", [limit])).rows;
   const first = await get();
   assert.equal(first.length, 10);
+  await db.exec(`begin;
+${migration}
+notify pgrst,'reload schema';
+commit;`);
+  assert.deepEqual(
+    await get(),
+    first,
+    "rerunning the standalone migration preserves the current daily set",
+  );
   assert.deepEqual(await get(), first);
   assert.deepEqual(await get(3), first.slice(0, 3));
   assert.equal((await get(50)).length, 10);
@@ -97,7 +111,7 @@ try {
   ).rows;
   assert.equal(bad.length, 0);
   await db.exec(
-    `insert into question_support_texts values('88888888-0000-0000-0000-000000000001','Texto 1','Texto de apoio completo para a questão de interpretação, com contexto suficiente.');update official_exam_questions set support_text_id='88888888-0000-0000-0000-000000000001' where id='99999999-0000-0000-0000-000000000003';`,
+    `insert into question_support_texts(id,label,body,contest_name,exam_year) values('88888888-0000-0000-0000-000000000001','Texto 1','Texto de apoio completo para a questão de interpretação, com contexto suficiente.','Concurso de teste',2026);update official_exam_questions set support_text_id='88888888-0000-0000-0000-000000000001' where id='99999999-0000-0000-0000-000000000003';`,
   );
   const supported = (
     await db.query(
@@ -146,7 +160,7 @@ try {
   assert.equal(new Set([...cycle1, ...cycle2].map((q) => q.id)).size, 15);
   assert.ok(cycle2.slice(0, 5).every((q) => !cycle1.some((p) => p.id === q.id)));
   console.log(
-    "PASS SQL: 10 shared questions, clamped limits, 5/5 formats, 6/4 careers, subject/answer diversity, date renewal, history, duplicates, quarantine, missing context/options, support text, anon isolation and sparse fallback.",
+    "PASS SQL: standalone migration without support table/column, safe rerun, 10 shared questions, clamped limits, 5/5 formats, 6/4 careers, subject/answer diversity, date renewal, history, duplicates, quarantine, missing context/options, support text, anon isolation and sparse fallback.",
   );
   if (process.env.GUEST_AUDIT_DATA) {
     await db.exec(
