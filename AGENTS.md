@@ -15,7 +15,7 @@ Ao criar ou alterar questões, siga integralmente `CONTENT_GOVERNANCE.md`. Nunca
 
 ## Arquitetura da experiência
 
-As áreas autenticadas usam uma única navegação por jornadas (Hoje, Objetivo, Edital e conteúdo, Questões, Provas, Desempenho e Conta), enquanto funções administrativas ficam em um grupo visual separado para reduzir ambiguidade.
+As áreas autenticadas usam uma única navegação por jornadas (Minha preparação, Objetivo, Edital e conteúdo, Questões, Provas, Desempenho e Conta), enquanto funções administrativas ficam em um grupo visual separado para reduzir ambiguidade.
 
 ## Normalização de dados pessoais
 

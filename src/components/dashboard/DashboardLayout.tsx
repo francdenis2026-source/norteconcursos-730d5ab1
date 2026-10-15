@@ -95,7 +95,7 @@ type MenuItem = {
 
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
 const GROUP_HUE: Record<string, Hue> = {
-  Hoje: "gold",
+  "Minha preparação": "gold",
   Objetivo: "sky",
   "Edital e conteúdo": "violet",
   ENEM: "sky",
@@ -132,16 +132,36 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-contests",
     adminOnly: true,
   },
-  { group: "Hoje", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard" },
-  { group: "Hoje", label: "Assistente de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
-  { group: "Hoje", label: "Meu cronograma", icon: CalendarClock, href: "/dashboard/cronograma" },
   {
-    group: "Hoje",
+    group: "Minha preparação",
+    label: "Painel do aluno",
+    icon: LayoutDashboard,
+    href: "/dashboard",
+  },
+  {
+    group: "Minha preparação",
+    label: "Assistente de estudos",
+    icon: Sparkles,
+    href: "/dashboard/study-coach",
+  },
+  {
+    group: "Minha preparação",
+    label: "Meu cronograma",
+    icon: CalendarClock,
+    href: "/dashboard/cronograma",
+  },
+  {
+    group: "Minha preparação",
     label: "Diagnóstico por provas",
     icon: ClipboardList,
     href: "/dashboard/study-plan",
   },
-  { group: "Hoje", label: "Foco e revisão", icon: Timer, href: "/dashboard/study-tools" },
+  {
+    group: "Minha preparação",
+    label: "Foco e revisão",
+    icon: Timer,
+    href: "/dashboard/study-tools",
+  },
   { group: "Objetivo", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Objetivo", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
   {
@@ -662,8 +682,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <main
             className="app-content"
             data-hue={
-              GROUP_HUE[items.find((i) => isActive(location.pathname, i.href))?.group ?? "Hoje"] ??
-              "gold"
+              GROUP_HUE[
+                items.find((i) => isActive(location.pathname, i.href))?.group ?? "Minha preparação"
+              ] ?? "gold"
             }
           >
             <div className="app-content__inner">

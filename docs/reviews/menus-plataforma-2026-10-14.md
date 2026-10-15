@@ -26,3 +26,11 @@ Nenhum caderno, conteúdo de estudo, questão ou registro do banco foi excluído
 ## Verificação
 
 517 testes existentes passaram. TypeScript e build de produção foram executados. Teste de interface em Chromium usa o layout e os componentes reais com autenticação, relógio e serviço de conquistas simulados: grupos, links, busca, recolhimento, página ativa, separação aluno/admin, ausência de recurso indisponível, alvos de menus/seletores e fechamento da gaveta passaram. Sem transbordamento horizontal em 320, 390, 768 e 1024 px. Capturas locais revisadas no computador e em celular. Não equivale a testar o site publicado ou a autenticação de produção.
+
+## Ajuste dos ícones e identificação da preparação
+
+“Hoje” foi substituído por “Minha preparação” no grupo de navegação, busca, identificação da área e cabeçalhos de cronograma/foco. Os indicadores que representam o dia atual continuam com seus nomes temporais.
+
+Ícones laterais passaram de 16 px para 24 px no menu expandido e 28 px no recolhido, com blocos de 38/44 px e contorno colorido. O menu recolhido tem 96 px, com legenda curta e ícones fixos por área: preparação, objetivo, conteúdo, questões, provas, desempenho e conta. A página ativa permanece identificada pela cor e pelo estado acessível, com descrição completa ao focar o atalho. A barra móvel também recebeu ícones maiores.
+
+Verificados TypeScript, build e navegação em Chromium com serviços simulados, incluindo medidas dos ícones, identificação de preparação, busca, grupos, destaque da página e telas de 320, 390, 768 e 1024 px sem transbordamento horizontal.

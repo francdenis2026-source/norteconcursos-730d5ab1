@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronDown, type LucideIcon } from "lucide-react";
+import {
+  ChevronDown,
+  LayoutDashboard,
+  Target,
+  BookOpen,
+  BrainCircuit,
+  ClipboardList,
+  BarChart3,
+  UserRound,
+  ShieldCheck,
+  type LucideIcon,
+} from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export type NavigationItem = {
@@ -11,6 +22,24 @@ export type NavigationItem = {
   adminOnly?: boolean;
   soon?: boolean;
 };
+const compactLabels: Record<string, string> = {
+  "Minha preparação": "Preparação",
+  "Edital e conteúdo": "Conteúdo",
+  Desempenho: "Evolução",
+  Administração: "Gestão",
+};
+
+const compactIcons: Record<string, LucideIcon> = {
+  "Minha preparação": LayoutDashboard,
+  Objetivo: Target,
+  "Edital e conteúdo": BookOpen,
+  Questões: BrainCircuit,
+  Provas: ClipboardList,
+  Desempenho: BarChart3,
+  Conta: UserRound,
+  Administração: ShieldCheck,
+};
+
 export function navigationActive(pathname: string, href: string) {
   const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
   if (href === "/dashboard/library" && path.startsWith("/dashboard/legal-course/")) return true;
@@ -33,12 +62,13 @@ export function DashboardNavigation({
   const available = items.filter((item) => !item.soon);
   const groups = [...new Set(available.map((item) => item.group))];
   const activeGroup = available.find((item) => navigationActive(pathname, item.href))?.group;
-  const [expanded, setExpanded] = useState<string[]>(() => [activeGroup ?? "Hoje"]);
+  const [expanded, setExpanded] = useState<string[]>(() => [activeGroup ?? "Minha preparação"]);
   useEffect(() => {
     if (activeGroup) setExpanded([activeGroup]);
   }, [activeGroup]);
   function renderLink(item: NavigationItem, label = item.label) {
     const active = navigationActive(pathname, item.href);
+    const Icon = collapsed ? (compactIcons[item.group] ?? item.icon) : item.icon;
     const link = (
       <Link
         to={item.href}
@@ -49,9 +79,15 @@ export function DashboardNavigation({
         onClick={onNavigate}
       >
         <span className="app-ico" data-hue={hues[item.group] ?? "gold"}>
-          <item.icon aria-hidden="true" />
+          <Icon aria-hidden="true" />
         </span>
-        {!collapsed && <span className="app-nav__label">{item.label}</span>}
+        {collapsed ? (
+          <span className="app-nav__compact-label" aria-hidden="true">
+            {compactLabels[item.group] ?? item.group}
+          </span>
+        ) : (
+          <span className="app-nav__label">{item.label}</span>
+        )}
       </Link>
     );
     return collapsed ? (
