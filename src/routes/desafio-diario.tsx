@@ -1,9 +1,14 @@
-import { canonicalSubject } from "@/lib/subjects";
+import {
+  dailyGuestQuestions,
+  pendingGuestQuestions,
+  guestContentKey,
+} from "@/lib/dailyGuestQuestions";
 import { MissingTextNotice } from "@/components/library/MissingTextNotice";
 import { needsMissingSupportText } from "@/lib/questionText";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  BookOpenCheck,
   ArrowLeft,
   ArrowRight,
   Check,
@@ -33,7 +38,8 @@ import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import {
   GUEST_DAILY_LIMIT,
-  getGuestRemainingToday,
+  getGuestProgressToday,
+  getAcreDateKey,
   onAcreDayChange,
   registerGuestAnswer,
 } from "@/lib/guestQuota";
@@ -45,9 +51,6 @@ import {
   questionAnswerLabel,
   questionAnswers,
   isPlaceholderExplanation,
-  normalizeDifficulty,
-  isEligibleQuestion,
-  parseBasis,
   parseQuestion,
   splitExplanation,
 } from "@/lib/questionFormat";
@@ -72,11 +75,13 @@ export const Route = createFileRoute("/desafio-diario")({
   }),
 });
 
-type Step = "loading" | "blocked" | "intro" | "playing" | "done" | "error";
+type Step = "loading" | "blocked" | "intro" | "playing" | "done" | "error" | "unavailable";
 
 function DesafioDiario() {
   const [step, setStep] = React.useState<Step>("loading");
   const [questions, setQuestions] = React.useState<Question[]>([]);
+  const sessionDay = React.useRef("");
+  const submitting = React.useRef(false);
   const [remaining, setRemaining] = React.useState(GUEST_DAILY_LIMIT);
   const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
   const [index, setIndex] = React.useState(0);
@@ -99,39 +104,30 @@ function DesafioDiario() {
     let active = true;
     void (async () => {
       try {
-        const remainingToday = await getGuestRemainingToday();
+        await getAcreDateKey(true);
+        const progress = await getGuestProgressToday();
+        const remainingToday = Math.max(0, GUEST_DAILY_LIMIT - progress.used);
+        sessionDay.current = progress.day;
         const { data, error } = await supabase
           .rpc("get_daily_guest_questions", { p_limit: 10 })
           .select(
             "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,difficulty,state,career_category,content_status,law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required",
           );
         if (error) throw error;
-        const daily: Question[] = ((data || []) as Array<Record<string, unknown>>)
-          .filter(isEligibleQuestion)
-          .map((row) => ({
-            id: String(row["id"]),
-            source: "official" as const,
-            contest: String(row["contest_name"]),
-            year: String(row["exam_year"]),
-            career: String(row["career_name"] || "Carreira policial"),
-            board: String(row["exam_board"] || "CEBRASPE"),
-            subject: canonicalSubject(String(row["subject"])),
-            subtopic: null,
-            text: String(row["question_text"]),
-            answer: String(row["official_answer"]) as Answer,
-            explanation: String(
-              row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
-            ),
-            legalBasis: parseBasis(row["legal_basis"]),
-            checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
-            difficulty: normalizeDifficulty(row["difficulty"]),
-            state: String(row["state"] || ""),
-            category: String(row["career_category"] || ""),
-          }));
+        if ((await getAcreDateKey(true)) !== progress.day) {
+          if (active) window.location.reload();
+          return;
+        }
+        const daily = pendingGuestQuestions(
+          dailyGuestQuestions((data || []) as Record<string, unknown>[]),
+          progress,
+        );
         if (!active) return;
         setRemaining(remainingToday);
+        setCorrect(progress.answers.filter((a) => a.correct).length);
+        setWrong(progress.answers.filter((a) => !a.correct).length);
         setQuestions(daily);
-        setStep(remainingToday <= 0 || !daily.length ? "blocked" : "intro");
+        setStep(remainingToday <= 0 ? "blocked" : !daily.length ? "unavailable" : "intro");
       } catch (err) {
         if (active) {
           setErrorMessage(err instanceof Error ? err.message : "Não foi possível carregar.");
@@ -146,8 +142,6 @@ function DesafioDiario() {
 
   const startChallenge = () => {
     setIndex(0);
-    setCorrect(0);
-    setWrong(0);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
@@ -156,21 +150,46 @@ function DesafioDiario() {
 
   const question = questions[index];
   const submit = async () => {
-    if (!selected || !question || answered) return;
-    const isCorrect = selected === question.answer;
-    setAnswered(true);
-    if (isCorrect) setCorrect((value) => value + 1);
-    else setWrong((value) => value + 1);
-    setShowResult(true);
-    const used = await registerGuestAnswer();
-    setRemaining(Math.max(0, GUEST_DAILY_LIMIT - used));
+    if (!selected || !question || answered || submitting.current) return;
+    submitting.current = true;
+    try {
+      const isCorrect = selected === question.answer;
+      const result = await registerGuestAnswer(
+        { id: question.id, key: guestContentKey(question.text), correct: isCorrect },
+        sessionDay.current,
+      );
+      setRemaining(Math.max(0, GUEST_DAILY_LIMIT - result.used));
+      if (!result.recorded) {
+        const pending = pendingGuestQuestions(questions, result);
+        setQuestions(pending);
+        setIndex(0);
+        setSelected(null);
+        setCorrect(result.answers.filter((a) => a.correct).length);
+        setWrong(result.answers.filter((a) => !a.correct).length);
+        setStep(
+          result.used >= GUEST_DAILY_LIMIT ? "blocked" : pending.length ? "intro" : "unavailable",
+        );
+        return;
+      }
+      setAnswered(true);
+      if (isCorrect) setCorrect((value) => value + 1);
+      else setWrong((value) => value + 1);
+      setShowResult(true);
+    } catch {
+      setErrorMessage(
+        "Não foi possível salvar sua resposta neste navegador. Verifique se o armazenamento está disponível e tente novamente.",
+      );
+      setStep("error");
+    } finally {
+      submitting.current = false;
+    }
   };
   const next = () => {
     setShowResult(false);
     setSelected(null);
     setStruck([]);
     setAnswered(false);
-    if (index + 1 >= questions.length) {
+    if (index + 1 >= questions.length || remaining <= 0) {
       setStep("done");
     } else {
       setIndex((value) => value + 1);
@@ -220,6 +239,19 @@ function DesafioDiario() {
           </Center>
         )}
 
+        {step === "unavailable" && (
+          <Center>
+            <BookOpenCheck className="h-8 w-8" />
+            <p>Não há novas questões liberadas para você neste desafio agora.</p>
+            <p className="text-sm">
+              A próxima rodada renova à meia-noite do Acre. Sua cota não foi consumida por esta
+              consulta.
+            </p>
+            <Button variant="outline" onClick={() => window.location.reload()}>
+              Consultar novamente
+            </Button>
+          </Center>
+        )}
         {step === "blocked" && (
           <PageHero
             image="trainer"
@@ -255,51 +287,92 @@ function DesafioDiario() {
 
         {step === "intro" && (
           <div className="daily-intro">
-          <PageHero
-            className="daily-intro__hero"
-            image="trainer"
-            size="lg"
-            kicker="Sem cadastro · grátis"
-            icon={Zap}
-            title={
-              <>
-                Desafio diário <em>Norte Concurso</em>
-              </>
-            }
-            description={`${questions.length} questões oficiais de concursos públicos, sorteadas hoje — as mesmas para todo mundo que entrar hoje. Correção na hora, com explicação didática em cada uma.`}
-            actions={
-              <button type="button" className="btn-brass" onClick={startChallenge}>
-                Começar agora <ArrowRight />
-              </button>
-            }
-          >
-            <div className="page-hero__stats max-w-xl">
-              <HeroStat icon={Zap} label="Questões" value={questions.length} />
-              <HeroStat icon={ShieldCheck} label="Gabarito" value="Oficial" />
-              <HeroStat icon={Sparkles} label="Custo" value="Grátis" />
-            </div>
-          </PageHero>
-          <section className="daily-intro__guide" aria-labelledby="daily-guide-title">
-            <figure className="daily-intro__visual">
-              <img src="/media/hero/study-desk.webp" alt="Ambiente de estudo e preparação para concursos" width={960} height={540} />
-              <figcaption>Um treino por dia. Mais direção para sua preparação.</figcaption>
-            </figure>
-            <div className="daily-intro__steps">
-              <h2 id="daily-guide-title">Seu treino em três passos</h2>
-              <ol>
-                <li><b>01</b><div><strong>Resolva no seu ritmo</strong><p>Leia o enunciado e escolha uma alternativa.</p></div></li>
-                <li><b>02</b><div><strong>Entenda a resposta</strong><p>Confira o gabarito e a explicação após responder.</p></div></li>
-                <li><b>03</b><div><strong>Veja seu resultado</strong><p>Ao concluir, acompanhe seus acertos e pontos de revisão.</p></div></li>
-              </ol>
-              <button type="button" className="btn-brass" onClick={startChallenge}>Iniciar meu desafio <ArrowRight /></button>
-            </div>
-          </section>
+            <PageHero
+              className="daily-intro__hero"
+              image="trainer"
+              size="lg"
+              kicker="Sem cadastro · grátis"
+              icon={Zap}
+              title={
+                <>
+                  Desafio diário <em>Norte Concurso</em>
+                </>
+              }
+              description={`${questions.length} questões oficiais disponíveis para você hoje, com gabarito e comentários quando disponíveis. A rodada é compartilhada entre os visitantes e renova à meia-noite do Acre.`}
+              actions={
+                <button type="button" className="btn-brass" onClick={startChallenge}>
+                  Começar agora <ArrowRight />
+                </button>
+              }
+            >
+              <div className="page-hero__stats max-w-xl">
+                <HeroStat icon={Zap} label="Questões" value={questions.length} />
+                <HeroStat icon={ShieldCheck} label="Gabarito" value="Oficial" />
+                <HeroStat
+                  icon={Sparkles}
+                  label="Disciplinas"
+                  value={new Set(questions.map((q) => q.subject)).size}
+                />
+              </div>
+            </PageHero>
+            <p
+              className="flex flex-wrap gap-2 text-sm text-muted-foreground"
+              aria-label="Composição das questões disponíveis"
+            >
+              <Badge variant="outline">
+                {questions.filter((q) => q.kind === "multiple_choice").length} de múltipla escolha
+              </Badge>
+              <Badge variant="outline">
+                {questions.filter((q) => q.kind === "true_false").length} de certo ou errado
+              </Badge>
+              <span>Concursos, carreiras e anos identificados em cada questão.</span>
+            </p>
+            <section className="daily-intro__guide" aria-labelledby="daily-guide-title">
+              <figure className="daily-intro__visual">
+                <img
+                  src="/media/hero/study-desk.webp"
+                  alt="Ambiente de estudo e preparação para concursos"
+                  width={960}
+                  height={540}
+                />
+                <figcaption>Um treino por dia. Mais direção para sua preparação.</figcaption>
+              </figure>
+              <div className="daily-intro__steps">
+                <h2 id="daily-guide-title">Seu treino em três passos</h2>
+                <ol>
+                  <li>
+                    <b>01</b>
+                    <div>
+                      <strong>Resolva no seu ritmo</strong>
+                      <p>Leia o enunciado e escolha uma alternativa.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <b>02</b>
+                    <div>
+                      <strong>Entenda a resposta</strong>
+                      <p>Confira o gabarito e a explicação após responder.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <b>03</b>
+                    <div>
+                      <strong>Veja seu resultado</strong>
+                      <p>Ao concluir, acompanhe seus acertos e pontos de revisão.</p>
+                    </div>
+                  </li>
+                </ol>
+                <button type="button" className="btn-brass" onClick={startChallenge}>
+                  Iniciar meu desafio <ArrowRight />
+                </button>
+              </div>
+            </section>
           </div>
         )}
 
         <div className="mx-auto max-w-3xl">
           {step === "done" && (
-            <TrainingResult total={questions.length} correct={correct} wrong={wrong} />
+            <TrainingResult total={correct + wrong} correct={correct} wrong={wrong} />
           )}
 
           {step === "playing" && question && (
@@ -330,7 +403,7 @@ function DesafioDiario() {
               }}
               onSubmit={submit}
               onNext={next}
-              isLast={index + 1 >= questions.length}
+              isLast={index + 1 >= questions.length || remaining <= 0}
             />
           )}
         </div>
@@ -416,6 +489,9 @@ function QuestionPlayer({
         <CardContent className="p-5 md:p-7">
           <div className="mb-5 flex flex-wrap gap-2">
             <Badge>{question.board}</Badge>
+            <Badge variant="outline">
+              {question.kind === "multiple_choice" ? "Múltipla escolha" : "Certo ou errado"}
+            </Badge>
             <Badge variant="outline">{question.subject}</Badge>
             <Badge variant="outline">
               {question.contest} · {question.year}
@@ -427,7 +503,11 @@ function QuestionPlayer({
               {DIFFICULTY_LABEL[question.difficulty]}
             </Badge>
           </div>
-          {needsMissingSupportText(question) && <div className="mb-4"><MissingTextNotice /></div>}
+          {needsMissingSupportText(question) && (
+            <div className="mb-4">
+              <MissingTextNotice />
+            </div>
+          )}
           {parsed.base && (
             <details
               open

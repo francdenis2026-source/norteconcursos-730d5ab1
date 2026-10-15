@@ -25,10 +25,10 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { acreDateKey } from "@/lib/acreTime";
+import { readGuestProgress, recordGuestAnswer, type GuestAnswerRecord } from "@/lib/guestProgress";
 
 export const GUEST_DAILY_LIMIT = 10;
 
-const STORAGE_PREFIX = "norteconcurso:guest-quota:";
 const DATE_TTL_MS = 60_000;
 const WATCH_INTERVAL_MS = 30_000;
 
@@ -83,30 +83,24 @@ export function onAcreDayChange(callback: () => void): () => void {
   };
 }
 
-async function storageKey(): Promise<string> {
-  return `${STORAGE_PREFIX}${await getAcreDateKey()}`;
-}
-
-export async function getGuestUsedToday(): Promise<number> {
+export async function getGuestProgressToday() {
+  const day = await getAcreDateKey();
   try {
-    const raw = window.localStorage.getItem(await storageKey());
-    const value = raw ? Number.parseInt(raw, 10) : 0;
-    return Number.isFinite(value) && value > 0 ? value : 0;
+    return readGuestProgress(window.localStorage, day);
   } catch {
-    return 0;
+    return { day, used: 0, answers: [], legacyUsed: 0 };
   }
 }
-
+export async function getGuestUsedToday(): Promise<number> {
+  return (await getGuestProgressToday()).used;
+}
 export async function getGuestRemainingToday(): Promise<number> {
   return Math.max(0, GUEST_DAILY_LIMIT - (await getGuestUsedToday()));
 }
-
-export async function registerGuestAnswer(): Promise<number> {
-  try {
-    const used = (await getGuestUsedToday()) + 1;
-    window.localStorage.setItem(await storageKey(), String(used));
-    return used;
-  } catch {
-    return getGuestUsedToday();
-  }
+/** Keep a session crossing midnight on its original Acre date; it cannot consume tomorrow's quota. */
+export async function registerGuestAnswer(answer: GuestAnswerRecord, day: string) {
+  const record = () => recordGuestAnswer(window.localStorage, day, answer);
+  if (typeof navigator !== "undefined" && navigator.locks)
+    return navigator.locks.request(`norte:guest:${day}`, record);
+  return record();
 }
