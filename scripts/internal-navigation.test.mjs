@@ -122,3 +122,27 @@ test('a catalog session larger than 500 restores all current eligible question I
  assert.equal(restoreTrainerBookmark(b,b.route,many,now).questions.length,601);
  assert.equal(restoreTrainerBookmark(b,b.route,many.slice(0,600),now),null);
 });
+
+const {activeNavigation,navigationKey}=await import('../src/lib/dashboardNavigation.ts');
+test('ENEM tab links have distinct identity and the tab-specific menu takes precedence over its landing page',()=>{
+ const menu=[{href:'/dashboard/enem',label:'Área ENEM'},{href:'/dashboard/enem',label:'Materiais',search:{tab:'materiais'}},{href:'/dashboard/enem',label:'Questões',search:{tab:'questoes'}}];
+ assert.equal(new Set(menu.map(navigationKey)).size,3);
+ assert.equal(activeNavigation(menu,'/dashboard/enem',{tab:'questoes'}).label,'Questões');
+ assert.equal(activeNavigation(menu,'/dashboard/enem',{}).label,'Área ENEM');
+ assert.equal(activeNavigation(menu,'/dashboard/enem',{tab:'materiais'}).label,'Materiais');
+ assert.equal(activeNavigation(menu,'/dashboard/question-trainer'),undefined);
+});
+test('nested and legal reading routes resolve to the right navigation destination',()=>{
+ const menu=[{href:'/dashboard'},{href:'/dashboard/library'},{href:'/dashboard/admin'},{href:'/dashboard/admin/students'}];
+ assert.equal(activeNavigation(menu,'/dashboard/legal-course/codigo-penal').href,'/dashboard/library');
+ assert.equal(activeNavigation(menu,'/dashboard/admin/students/1').href,'/dashboard/admin/students');
+ assert.equal(activeNavigation(menu,'/dashboard/').href,'/dashboard');
+});
+const {trainerReachableIndex}=await import('../src/lib/trainerSession.ts');
+test('question map allows revisiting answers and the next unanswered question without skipping ahead',()=>{
+ assert.equal(trainerReachableIndex([],100),0);
+ assert.equal(trainerReachableIndex(['ok','err'],100),2);
+ assert.equal(trainerReachableIndex(['ok',null,'err'],100),1);
+ assert.equal(trainerReachableIndex(['ok','ok'],2),1);
+ assert.equal(trainerReachableIndex(Array(2),10),0);
+});

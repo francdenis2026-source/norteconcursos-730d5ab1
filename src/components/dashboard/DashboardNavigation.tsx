@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ChevronDown,
@@ -10,124 +10,216 @@ import {
   BarChart3,
   UserRound,
   ShieldCheck,
+  GraduationCap,
+  ChevronRight,
   type LucideIcon,
 } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
+export { navigationActive } from "@/lib/dashboardNavigation";
 export type NavigationItem = {
   group: string;
   label: string;
   icon: LucideIcon;
   href: string;
+  search?: Record<string, string>;
   adminOnly?: boolean;
   soon?: boolean;
+  primary?: boolean;
 };
-const compactLabels: Record<string, string> = {
-  "Minha preparação": "Preparação",
-  "Edital e conteúdo": "Conteúdo",
-  Desempenho: "Evolução",
-  Administração: "Gestão",
-};
-
-const compactIcons: Record<string, LucideIcon> = {
+const groupIcons: Record<string, LucideIcon> = {
   "Minha preparação": LayoutDashboard,
   Objetivo: Target,
   "Edital e conteúdo": BookOpen,
   Questões: BrainCircuit,
   Provas: ClipboardList,
   Desempenho: BarChart3,
+  ENEM: GraduationCap,
   Conta: UserRound,
   Administração: ShieldCheck,
 };
-
-export function navigationActive(pathname: string, href: string) {
-  const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
-  if (href === "/dashboard/library" && path.startsWith("/dashboard/legal-course/")) return true;
-  return href === "/dashboard" ? path === href : path === href || path.startsWith(`${href}/`);
-}
-
+const groupDetails: Record<string, string> = {
+  "Minha preparação": "Plano e rotina de estudo",
+  Objetivo: "Escolha e acompanhe seu concurso",
+  "Edital e conteúdo": "Assuntos, leis e ferramentas",
+  Questões: "Acervo, cadernos e revisão",
+  Provas: "Resultados e concursos realizados",
+  Desempenho: "Indicadores e histórico",
+  ENEM: "Materiais e preparação para o exame",
+  Conta: "Perfil e acesso",
+  Administração: "Operação da plataforma",
+};
+const shortLabels: Record<string, string> = {
+  "/dashboard": "Painel",
+  "/dashboard/question-trainer": "Treinar",
+  "/dashboard/mock-exams": "Simular",
+  "/dashboard/enem": "ENEM",
+};
 export function DashboardNavigation({
   items,
   pathname,
+  search = {},
   collapsed,
   hues,
   onNavigate,
 }: {
   items: NavigationItem[];
   pathname: string;
+  search?: Record<string, unknown>;
   collapsed: boolean;
   hues: Record<string, string>;
   onNavigate?: () => void;
 }) {
   const available = items.filter((item) => !item.soon);
-  const groups = [...new Set(available.map((item) => item.group))];
-  const activeGroup = available.find((item) => navigationActive(pathname, item.href))?.group;
-  const [expanded, setExpanded] = useState<string[]>(() => [activeGroup ?? "Minha preparação"]);
+  const current = activeNavigation(available, pathname, search);
+  const primaryOrder = [
+    "/dashboard",
+    "/dashboard/question-trainer",
+    "/dashboard/mock-exams",
+    "/dashboard/enem",
+  ];
+  const primary = available
+    .filter((item) => item.primary)
+    .sort((a, b) => primaryOrder.indexOf(a.href) - primaryOrder.indexOf(b.href));
+  const groups = [...new Set(available.filter((item) => !item.primary).map((item) => item.group))];
+  const [expanded, setExpanded] = useState<string[]>(() => [current?.group ?? "Minha preparação"]);
+  const instance = useId();
   useEffect(() => {
-    if (activeGroup) setExpanded([activeGroup]);
-  }, [activeGroup]);
-  function renderLink(item: NavigationItem, label = item.label) {
-    const active = navigationActive(pathname, item.href);
-    const Icon = collapsed ? (compactIcons[item.group] ?? item.icon) : item.icon;
-    const link = (
+    if (current?.group)
+      setExpanded((previous) =>
+        previous.includes(current.group) ? previous : [...previous, current.group],
+      );
+  }, [current?.group]);
+  const isCurrent = (item: NavigationItem) =>
+    !!current && navigationKey(current) === navigationKey(item);
+  function link(item: NavigationItem, compact = false) {
+    const Icon = item.icon;
+    return (
       <Link
+        key={navigationKey(item)}
         to={item.href}
+        activeOptions={{ exact: true, includeSearch: true }}
+        search={item.search ?? {}}
         className="app-nav__link"
-        data-active={active}
-        aria-current={active ? "page" : undefined}
-        aria-label={collapsed ? label : undefined}
+        data-active={isCurrent(item)}
+        aria-current={isCurrent(item) ? "page" : undefined}
+        aria-label={compact ? item.label : undefined}
+        title={compact ? item.label : undefined}
         onClick={onNavigate}
       >
         <span className="app-ico" data-hue={hues[item.group] ?? "gold"}>
           <Icon aria-hidden="true" />
         </span>
-        {collapsed ? (
-          <span className="app-nav__compact-label" aria-hidden="true">
-            {compactLabels[item.group] ?? item.group}
-          </span>
-        ) : (
-          <span className="app-nav__label">{item.label}</span>
-        )}
+        <span className={compact ? "app-nav__compact-label" : "app-nav__label"}>
+          {compact ? (shortLabels[item.href] ?? item.label) : item.label}
+        </span>
+        {!compact && isCurrent(item) && <span className="nav-current-dot" aria-hidden="true" />}
       </Link>
-    );
-    return collapsed ? (
-      <Tooltip key={item.href}>
-        <TooltipTrigger asChild>{link}</TooltipTrigger>
-        <TooltipContent side="right">{label}</TooltipContent>
-      </Tooltip>
-    ) : (
-      <div key={item.href} className={item.adminOnly ? "app-nav__admin" : undefined}>
-        {link}
-      </div>
     );
   }
   return (
-    <nav className="app-nav scroll-dark" aria-label="Menu principal">
-      {groups.map((group) => {
-        const entries = available.filter((item) => item.group === group);
-        if (collapsed) {
-          const representative =
-            entries.find((item) => navigationActive(pathname, item.href)) ?? entries[0]!;
-          return (
-            <div key={group} className="app-nav__compact-group">
-              {renderLink(representative, `${group}: ${representative.label}`)}
-            </div>
-          );
-        }
+    <nav className="app-nav scroll-dark navigation-workspace" aria-label="Menu principal">
+      {primary.length > 0 && (
+        <div className="nav-primary" aria-label="Acessos principais">
+          {primary.map((item) => link(item, collapsed))}
+        </div>
+      )}
+      {!collapsed && (
+        <p className="nav-section-label">
+          {available.some((item) => item.adminOnly)
+            ? "Gestão da plataforma"
+            : "Explore sua preparação"}
+        </p>
+      )}
+      {groups.map((group, i) => {
+        const entries = available.filter((item) => item.group === group && !item.primary);
+        const Icon = groupIcons[group] ?? BookOpen;
         const open = expanded.includes(group);
+        const active = current?.group === group;
+        const id = `${instance}-group-${i}`;
+        if (collapsed)
+          return (
+            <DropdownMenu key={group}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className="nav-group-trigger"
+                  data-active={active}
+                  aria-label={`Abrir ${group}`}
+                  title={group}
+                >
+                  <Icon aria-hidden="true" />
+                  <span>
+                    {group === "Minha preparação"
+                      ? "Planejar"
+                      : group === "Edital e conteúdo"
+                        ? "Conteúdo"
+                        : group === "Desempenho"
+                          ? "Evolução"
+                          : group === "Administração"
+                            ? "Gestão"
+                            : group}
+                  </span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                side="right"
+                align="start"
+                sideOffset={12}
+                collisionPadding={12}
+                className="nav-flyout"
+              >
+                <DropdownMenuLabel>
+                  {group}
+                  <small>{groupDetails[group]}</small>
+                </DropdownMenuLabel>
+                {entries.map((item) => (
+                  <DropdownMenuItem key={navigationKey(item)} asChild>
+                    <Link
+                      to={item.href}
+                      activeOptions={{ exact: true, includeSearch: true }}
+                      search={item.search ?? {}}
+                      aria-current={isCurrent(item) ? "page" : undefined}
+                      onClick={onNavigate}
+                    >
+                      <item.icon aria-hidden="true" />
+                      <span>{item.label}</span>
+                      <ChevronRight aria-hidden="true" />
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          );
         return (
           <section key={group} className="app-nav__section" aria-label={group}>
             <button
               type="button"
               className="app-nav__heading"
+              data-active={active}
               aria-expanded={open}
-              onClick={() => setExpanded(open ? [] : [group])}
+              aria-controls={id}
+              onClick={() =>
+                setExpanded((previous) =>
+                  open ? previous.filter((value) => value !== group) : [...previous, group],
+                )
+              }
             >
-              <span>{group}</span>
+              <Icon aria-hidden="true" />
+              <span>
+                {group}
+                <small>{groupDetails[group]}</small>
+              </span>
               <ChevronDown aria-hidden="true" data-open={open} />
             </button>
-            <div hidden={!open} className="app-nav__entries">
-              {entries.map((item) => renderLink(item))}
+            <div id={id} hidden={!open} className="app-nav__entries">
+              {entries.map((item) => link(item))}
             </div>
           </section>
         );

@@ -100,9 +100,11 @@ function useEnemQuestionCount() {
 }
 
 function EnemPage() {
-  const { tab: initialTab } = Route.useSearch();
-  const [tab, setTab] = React.useState(initialTab ?? "visao");
-  React.useEffect(() => setTab(initialTab ?? "visao"), [initialTab]);
+  const { tab = "visao" } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const setTab = (value: string) => {
+    void navigate({ search: { tab: value }, replace: true });
+  };
   const [subject, setSubject] = React.useState("Matemática");
   const { catalog } = useMediaCatalog();
   const checks = useChecks();

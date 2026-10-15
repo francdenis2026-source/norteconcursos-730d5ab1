@@ -1,7 +1,12 @@
+import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { PlatformBack } from "./PlatformBack";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { DashboardNavigation, navigationActive as isActive } from "./DashboardNavigation";
+import {
+  DashboardNavigation,
+  navigationActive as isActive,
+  type NavigationItem,
+} from "./DashboardNavigation";
 import { AI_ENABLED, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
@@ -84,14 +89,7 @@ import { MockService } from "@/services/mockService";
 import type { Achievement, UserStreak } from "@/types";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 
-type MenuItem = {
-  group: string;
-  label: string;
-  icon: LucideIcon;
-  href: string;
-  adminOnly?: boolean;
-  soon?: boolean;
-};
+type MenuItem = NavigationItem;
 
 type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
 const GROUP_HUE: Record<string, Hue> = {
@@ -137,6 +135,7 @@ const MENU: MenuItem[] = [
     label: "Painel do aluno",
     icon: LayoutDashboard,
     href: "/dashboard",
+    primary: true,
   },
   {
     group: "Minha preparação",
@@ -165,10 +164,51 @@ const MENU: MenuItem[] = [
     href: "/dashboard/exam-panorama",
   },
   { group: "Objetivo", label: "Concursos disponíveis", icon: Search, href: "/dashboard/questions" },
-  { group: "Objetivo", label: "Área ENEM", icon: GraduationCap, href: "/dashboard/enem" },
+  {
+    group: "ENEM",
+    label: "Área ENEM",
+    icon: GraduationCap,
+    href: "/dashboard/enem",
+    primary: true,
+  },
+  {
+    group: "ENEM",
+    label: "Materiais de estudo",
+    icon: BookOpen,
+    href: "/dashboard/enem",
+    search: { tab: "materiais" },
+  },
+  {
+    group: "ENEM",
+    label: "Questões do ENEM",
+    icon: BrainCircuit,
+    href: "/dashboard/enem",
+    search: { tab: "questoes" },
+  },
+  {
+    group: "ENEM",
+    label: "Redação do ENEM",
+    icon: PenLine,
+    href: "/dashboard/enem",
+    search: { tab: "redacao" },
+  },
+  {
+    group: "ENEM",
+    label: "Videoaulas do ENEM",
+    icon: PlayCircle,
+    href: "/dashboard/enem",
+    search: { tab: "videos" },
+  },
+  {
+    group: "ENEM",
+    label: "Checklist do ENEM",
+    icon: ClipboardList,
+    href: "/dashboard/enem",
+    search: { tab: "checklist" },
+  },
   {
     group: "Edital e conteúdo",
-    label: "Edital eletrônico",
+    label: "Estudar por assunto",
     icon: MapPin,
     href: "/dashboard/edital",
   },
@@ -180,7 +220,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Edital e conteúdo",
-    label: "Biblioteca de leis",
+    label: "Biblioteca: leis e disciplinas",
     icon: Library,
     href: "/dashboard/library",
   },
@@ -193,7 +233,7 @@ const MENU: MenuItem[] = [
   },
   {
     group: "Edital e conteúdo",
-    label: "Cursos por disciplina",
+    label: "Trilhas por disciplina",
     icon: GraduationCap,
     href: "/dashboard/trilhas",
   },
@@ -209,6 +249,7 @@ const MENU: MenuItem[] = [
     label: "Treinador de questões",
     icon: BrainCircuit,
     href: "/dashboard/question-trainer",
+    primary: true,
   },
   {
     group: "Questões",
@@ -226,7 +267,13 @@ const MENU: MenuItem[] = [
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
   { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
   { group: "Questões", label: "Revisar erros", icon: NotebookPen, href: "/dashboard/errors" },
-  { group: "Provas", label: "Simulador", icon: Trophy, href: "/dashboard/mock-exams" },
+  {
+    group: "Provas",
+    label: "Simulador",
+    icon: Trophy,
+    href: "/dashboard/mock-exams",
+    primary: true,
+  },
   {
     group: "Provas",
     label: "Minhas provas e diagnóstico",
@@ -239,7 +286,7 @@ const MENU: MenuItem[] = [
     icon: ClipboardList,
     href: "/dashboard/study-plan",
   },
-  { group: "Provas", label: "Redação", icon: PenLine, href: "/dashboard/essays" },
+  { group: "Provas", label: "Redação para concursos", icon: PenLine, href: "/dashboard/essays" },
   {
     group: "Desempenho",
     label: "Meu desempenho",
@@ -381,7 +428,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     if (path.startsWith("/dashboard/admin") || path === "/dashboard/profile") return;
     navigate({ to: "/dashboard/admin-students", replace: true });
   }, [isAdmin, location.pathname, navigate]);
-  const current = items.find((item) => isActive(location.pathname, item.href));
+  const current = activeNavigation(items, location.pathname, location.search);
 
   React.useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -436,7 +483,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   React.useEffect(() => {
     setMobileOpen(false);
-  }, [location.pathname]);
+  }, [location.href]);
 
   const toggleCollapsed = () => {
     setIsCollapsed((value) => {
@@ -466,9 +513,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     else setFarewell({ spent: getStudyToday() });
   };
 
-  const go = (href: string) => {
+  const go = (item: MenuItem) => {
     setPaletteOpen(false);
-    navigate({ to: href });
+    navigate({ to: item.href, search: item.search ?? {} });
   };
 
   const tier = user?.subscription_tier ? String(user.subscription_tier) : "free";
@@ -480,6 +527,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     <DashboardNavigation
       items={items}
       pathname={location.pathname}
+      search={location.search}
       collapsed={collapsed}
       hues={GROUP_HUE}
       onNavigate={() => setMobileOpen(false)}
@@ -537,12 +585,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <div className="app-shell" data-area={isAdmin ? "admin" : "student"}>
+      <div className="app-shell navigation-v2" data-area={isAdmin ? "admin" : "student"}>
         {user && user.id !== "demo-user" && <IdleGuard />}
         <FocusReturnBar />
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">
-            <Link to="/dashboard" aria-label="Norte Concurso — visão geral">
+            <Link
+              to="/dashboard"
+              activeOptions={{ exact: true, includeSearch: false }}
+              aria-label="Norte Concurso — visão geral"
+            >
               <NorteBrand light compact={isCollapsed} />
             </Link>
             {!isCollapsed && (
@@ -620,7 +672,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <div className="app-sidebar__foot">{userMenu(false)}</div>
                 </SheetContent>
               </Sheet>
-              <Link to="/dashboard" aria-label="Norte Concurso — visão geral">
+              <Link
+                to="/dashboard"
+                activeOptions={{ exact: true, includeSearch: false }}
+                aria-label="Norte Concurso — visão geral"
+              >
                 <NorteBrand light compact />
               </Link>
             </div>
@@ -686,11 +742,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main
             className="app-content"
-            data-hue={
-              GROUP_HUE[
-                items.find((i) => isActive(location.pathname, i.href))?.group ?? "Minha preparação"
-              ] ?? "gold"
-            }
+            data-hue={GROUP_HUE[current?.group ?? "Minha preparação"] ?? "gold"}
           >
             <div className="app-content__inner">
               <PlatformBack />
@@ -710,6 +762,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <Link
                 key={item.href}
                 to={item.href}
+                activeOptions={{ exact: true, includeSearch: false }}
                 data-active={isActive(location.pathname, item.href)}
                 aria-current={isActive(location.pathname, item.href) ? "page" : undefined}
               >
@@ -756,9 +809,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                       .filter((item) => item.group === group)
                       .map((item) => (
                         <CommandItem
-                          key={item.href}
+                          key={navigationKey(item)}
                           value={`${item.label} ${item.group}`}
-                          onSelect={() => go(item.href)}
+                          onSelect={() => go(item)}
                         >
                           <item.icon />
                           {item.label}
