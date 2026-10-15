@@ -244,7 +244,6 @@ function QuestionTrainer() {
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
-  const [eliminationOpen, setEliminationOpen] = React.useState(false);
   const [communityOpen, setCommunityOpen] = React.useState(false);
   const sessionAnswers = React.useRef(new Map<number, { selected: Answer; isCorrect: boolean }>());
   const [saving, setSaving] = React.useState(false);
@@ -899,7 +898,6 @@ function QuestionTrainer() {
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
     setSaveError("");
-    setEliminationOpen(false);
     setCommunityOpen(false);
     setIndex(target);
     window.requestAnimationFrame(() =>
@@ -1335,24 +1333,40 @@ function QuestionTrainer() {
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>
-            {hasOptions && !answered && (
-              <button
-                type="button"
-                className="trainer-elimination-toggle"
-                aria-pressed={eliminationOpen}
-                onClick={() => {
-                  setEliminationOpen((value) => !value);
-                  setStruck([]);
-                }}
-              >
-                <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                {eliminationOpen ? "Ocultar ferramenta de eliminação" : "Eliminar alternativas"}
-              </button>
+            {!answered && (
+              <div className="trainer-elimination-tools">
+                <div>
+                  <p className="flex items-center gap-2 font-semibold">
+                    <Strikethrough aria-hidden="true" className="h-4 w-4" /> Riscar opções
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Descarte opções durante a análise. Para recuperar uma opção, use Desfazer ou
+                    selecione-a novamente.
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    Riscar a opção selecionada remove sua seleção, sem enviar uma resposta.
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-2">
+                  <span role="status" className="text-xs text-muted-foreground">
+                    {struck.length} riscadas
+                  </span>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    disabled={!struck.length || saving}
+                    onClick={() => setStruck([])}
+                  >
+                    Limpar riscos
+                  </Button>
+                </div>
+              </div>
             )}
             {hasOptions && (
               <div className="mt-3 space-y-2">
                 {parsed.options.map((option) => {
-                  const isStruck = struck.includes(option.letter);
+                  const isStruck = !answered && struck.includes(option.letter);
                   const isSelected = selected === option.letter;
                   const isRight = answered && option.letter === question.answer;
                   const isWrong = answered && isSelected && option.letter !== question.answer;
@@ -1386,12 +1400,12 @@ function QuestionTrainer() {
                           </span>
                         )}
                       </button>
-                      {eliminationOpen && !answered && (
+                      {!answered && (
                         <Button
                           type="button"
                           variant={isStruck ? "secondary" : "ghost"}
-                          size="icon"
-                          className="h-[44px] w-[44px] shrink-0"
+                          size="sm"
+                          className="min-h-11 shrink-0 gap-1.5 px-2"
                           disabled={answered || saving}
                           aria-pressed={isStruck}
                           aria-label={
@@ -1402,7 +1416,8 @@ function QuestionTrainer() {
                           title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
                           onClick={() => toggleStrike(option.letter)}
                         >
-                          <Strikethrough className="h-4 w-4" />
+                          <Strikethrough aria-hidden="true" className="h-4 w-4" />
+                          {isStruck ? "Desfazer" : "Riscar"}
                         </Button>
                       )}
                     </div>
@@ -1418,31 +1433,53 @@ function QuestionTrainer() {
               )}
             >
               {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
-                <button
-                  key={answer}
-                  type="button"
-                  aria-pressed={selected === answer}
-                  disabled={answered || saving}
-                  onClick={() => setSelected(answer)}
-                  className={cn(
-                    "trainer-verdict",
-                    selected === answer && !answered && "is-selected",
-                    answered && answer === question.answer && "is-correct",
-                    answered && selected === answer && answer !== question.answer && "is-incorrect",
-                  )}
-                >
-                  <span
+                <div key={answer} className="flex min-w-0 items-center gap-2">
+                  <button
+                    type="button"
+                    aria-pressed={selected === answer}
+                    disabled={answered || saving}
+                    onClick={() => chooseOption(answer)}
                     className={cn(
-                      "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
-                      selected === answer &&
-                        !answered &&
-                        "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+                      "trainer-verdict min-w-0 flex-1",
+                      !answered && struck.includes(answer) && "is-eliminated",
+                      selected === answer && !answered && "is-selected",
+                      answered && answer === question.answer && "is-correct",
+                      answered &&
+                        selected === answer &&
+                        answer !== question.answer &&
+                        "is-incorrect",
                     )}
                   >
-                    {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
-                  </span>
-                  {labelFor(answer)}
-                </button>
+                    <span
+                      className={cn(
+                        "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                        selected === answer &&
+                          !answered &&
+                          "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
+                      )}
+                    >
+                      {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
+                    </span>
+                    <span className={cn(!answered && struck.includes(answer) && "line-through")}>
+                      {labelFor(answer)}
+                    </span>
+                  </button>
+                  {!answered && (
+                    <Button
+                      type="button"
+                      variant={struck.includes(answer) ? "secondary" : "ghost"}
+                      size="sm"
+                      className="min-h-11 shrink-0 gap-1.5 px-2"
+                      disabled={saving}
+                      aria-pressed={struck.includes(answer)}
+                      aria-label={`${struck.includes(answer) ? "Desfazer risco de" : "Riscar"} ${labelFor(answer)}`}
+                      onClick={() => toggleStrike(answer)}
+                    >
+                      <Strikethrough aria-hidden="true" className="h-4 w-4" />
+                      {struck.includes(answer) ? "Desfazer" : "Riscar"}
+                    </Button>
+                  )}
+                </div>
               ))}
             </div>
             {answered && (
