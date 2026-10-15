@@ -167,7 +167,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                 title: "Dê direção à sua preparação.",
                 reason:
                   "Escolha seu concurso para acompanhar o objetivo. Você também pode começar pelas questões ou pelo conteúdo abaixo.",
-                label: "Escolher meu concurso",
+                label: "Consultar concursos e editais",
                 to: "/dashboard/questions",
               }
             : q.strategy.data && !plan
@@ -558,7 +558,7 @@ function StudentHome({ user }: { user: UserProfile }) {
                 text="Defina seu objetivo para orientar sua preparação."
               >
                 <Link to="/dashboard/questions" className="student-home__text-link">
-                  Escolher concurso
+                  Consultar concursos e editais
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </EmptyPanel>

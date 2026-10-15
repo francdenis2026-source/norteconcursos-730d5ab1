@@ -1,0 +1,76 @@
+{
+  "scope": "Correção de proveniência PC-AC 2017, S01 Agente, versão V; parada solicitada antes da recuperação de contexto e da publicação editorial.",
+  "checked_at": "2026-10-15T19:27:40.082Z",
+  "published_to_database": {
+    "sources_created": 3,
+    "historical_edition_source_repaired": true,
+    "question_provenance_repaired": 79,
+    "question_texts_recovered": 0,
+    "questions_activated": 0,
+    "historical_status_decisions_published": 0
+  },
+  "preserved": {
+    "original_answers": true,
+    "original_raw_extraction": true,
+    "question_statuses": true,
+    "archived_duplicate_records": 79
+  },
+  "pending": {
+    "pcac_2017_canonical_under_review": 79,
+    "global_under_review": 951,
+    "by_table": [
+      {
+        "table": "official_exam_questions",
+        "under_review": 651
+      },
+      {
+        "table": "board_exam_questions",
+        "under_review": 300
+      },
+      {
+        "table": "curated_question_catalog",
+        "under_review": 0
+      },
+      {
+        "table": "question_bank",
+        "under_review": 0
+      }
+    ],
+    "context_pack_prepared_not_published": 69,
+    "portuguese_support_context_still_pending": 10
+  },
+  "official_sources": [
+    {
+      "kind": "edital",
+      "id": "481165f0-45bf-465c-977c-e4f0e992a9c2",
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Edital-n-001-SEPC-Abertura-Atualizada-conforme-retifica-es-13092019.pdf",
+      "sha256": "b77448e72ce9fe3824297ae6cb1896554838eac8d41bfc9ae602c08a7aa87cde"
+    },
+    {
+      "kind": "prova",
+      "id": "efaf074c-cd9b-4f55-9b9f-17d7911dc585",
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69"
+    },
+    {
+      "kind": "gabarito",
+      "id": "c16e5bae-7b88-4ad5-bb3b-7413dccc943b",
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697"
+    }
+  ],
+  "evidence_hashes": {
+    "provenance-pack": "097d7af51e961a908d3f657926a4efed5adb080bb25083aa31c786d36e04a13d",
+    "provenance-published": "5a7793ff2c42ab5ee0c63ab18c8e4db2cf834b77ed72b201ff56cde527a990c8",
+    "context-pack": "3e579b91b1fe255401c781f6c1b817f9835f9a2d85c04c2995e89032e06207f8",
+    "context-dry-run": "e6e1cf34cf904d229197199b7b7e5478696e52a9470e8bcecf7a08f313622c7f",
+    "stop-verification": "9a8aeda2cf55f08f1044e2e66e2d374c0291944159d1e0fe5f0f40fd1771cc1a",
+    "counts-at-stop": "695da33b20adfcc35024d46865995827bb9f974e361cc09df6fe5c637fc80d3c"
+  },
+  "validation": {
+    "review_tool_tests_passed": 21,
+    "application_code_changed": false,
+    "application_build_run": false
+  },
+  "stop_requested": true
+}

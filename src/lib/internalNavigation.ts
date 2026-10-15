@@ -39,6 +39,7 @@ export type TrainerBookmark = {
   version: 1;
   practiceMode?: "new" | "wrong" | "all" | "catalog";
   sessionAttempts?: { index: number; selected: "A" | "B" | "C" | "D" | "E"; isCorrect: boolean }[];
+  questionSeconds?: number;
   savedAt: number;
   route: string;
   questions: { id: string; source: string; table?: string | undefined }[];
@@ -66,7 +67,8 @@ export function restoreTrainerBookmark<
     b.route !== route ||
     !Number.isFinite(b.savedAt) ||
     b.savedAt > now ||
-    now - b.savedAt > 4 * 60 * 60 * 1000
+    (b.questionSeconds !== undefined &&
+      (!Number.isFinite(b.questionSeconds) || b.questionSeconds < 0))
   )
     return null;
   if (

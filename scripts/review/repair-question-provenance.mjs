@@ -19,7 +19,7 @@ export function validateProvenance(pack){
  return pack;
 }
 
-export async function repairProvenance(pack,request,readPdf=readFile){
+export async function repairProvenance(pack,request,readPdf=readFile,{dryRun=false}={}){
  validateProvenance(pack);const pending=[];
  for(const item of pack.items){
   const {expected,patch,evidence}=item;
@@ -37,6 +37,7 @@ export async function repairProvenance(pack,request,readPdf=readFile){
   pending.push(item);
  }
  const result={updated:[],preserved:pack.items.length-pending.length};
+ if(dryRun)return {...result,dry_run:true,pending:pending.map(i=>i.expected.id)};
  for(const {expected,patch} of pending){
   const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
   const rows=await request('official_exam_questions?'+filters,'PATCH',patch);

@@ -11747,22 +11747,36 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .student-hub__masthead .student-hub__masthead-actions > a { font-size:12px; min-height:40px; }
 }
 
-/* Translucent dashboard header: readable color in light mode and glass over scrolled content. */
-.app-shell .app-topbar,
+/* Trainer: an existing professional study photograph, with a readable text area. */
+.trainer-workbench-heading.trainer-workbench-hero {
+  min-height: 210px;
+  padding: clamp(22px, 4vw, 42px);
+  border: 1px solid rgb(148 180 218 / .22);
+  border-radius: 24px;
+  background: linear-gradient(90deg, rgb(3 23 46 / .92), rgb(3 23 46 / .65) 46%, rgb(3 23 46 / .08)), url('/media/hero/trainer-study.webp') center / cover;
+  box-shadow: 0 18px 42px -26px rgb(8 31 58 / .6);
+  color: #f8fafc;
+}
+.trainer-workbench-hero .trainer-panel-kicker { color: #f3cd82; }
+.trainer-workbench-hero h1 { color: #fff; }
+.trainer-workbench-hero p { max-width: 420px; color: #d3e1ef; }
+.trainer-workbench-hero .trainer-catalog-link { color: #f8fafc; border-color: rgb(255 255 255 / .28); background: rgb(7 28 52 / .65); }
+.app-shell .app-topbar {
+  border-bottom-color: rgb(72 117 172 / .25);
+  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  -webkit-backdrop-filter: blur(20px) saturate(1.45);
+  backdrop-filter: blur(20px) saturate(1.45);
+  box-shadow: 0 5px 22px -15px rgb(19 58 105 / .38);
+}
 .app-shell[data-area="student"] .app-topbar {
-  background: linear-gradient(110deg, rgba(221,235,249,.88), rgba(250,244,230,.85));
-  border-bottom: 1px solid rgba(75,109,146,.25);
-  box-shadow: 0 4px 18px rgba(25,50,80,.08), inset 0 1px 0 rgba(255,255,255,.8);
-  backdrop-filter: blur(22px) saturate(150%);
-  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  -webkit-backdrop-filter: blur(20px) saturate(1.45);
+  backdrop-filter: blur(20px) saturate(1.45);
 }
-.dark .app-shell .app-topbar,
-.dark .app-shell[data-area="student"] .app-topbar {
-  background: linear-gradient(110deg, rgba(12,25,43,.88), rgba(22,29,39,.85));
-  border-bottom-color: rgba(143,175,207,.2);
-  box-shadow: 0 4px 18px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.04);
+.dark .app-shell .app-topbar {
+  background: linear-gradient(110deg, rgb(10 29 52 / .83), rgb(15 24 42 / .74) 62%, rgb(49 39 24 / .78));
+  border-bottom-color: rgb(154 181 215 / .24);
 }
-@supports not (backdrop-filter: blur(1px)) {
-  .app-shell .app-topbar,.app-shell[data-area="student"] .app-topbar { background: #e9eff5; }
-  .dark .app-shell .app-topbar,.dark .app-shell[data-area="student"] .app-topbar { background: #111d2d; }
+@media (max-width: 640px) {
+  .trainer-workbench-heading.trainer-workbench-hero { align-items: flex-start; flex-direction: column; gap: 20px; min-height: 215px; background-position: 63% center; }
 }

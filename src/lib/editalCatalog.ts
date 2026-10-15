@@ -19,6 +19,10 @@ export interface EditalEdition {
   status: string;
   source: { title: string; url: string; source_type: string; status: string } | null;
 }
+/** The public-service goal catalog keeps ENEM in its dedicated study area. */
+export function contestStudyEditions(editions: EditalEdition[]) {
+  return editions.filter((edition) => !/^enem\b/.test(editalFold(edition.contest_name).trim()));
+}
 export function editalSourceLabel(edition: Pick<EditalEdition, "source">) {
   return edition.source?.source_type === "edital" ? "Edital cadastrado" : "Referência de prova";
 }

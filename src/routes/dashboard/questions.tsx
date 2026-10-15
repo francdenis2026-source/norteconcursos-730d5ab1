@@ -1,3 +1,8 @@
+import { useQuery } from "@tanstack/react-query";
+import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
+import { fetchEditalEditions } from "@/lib/editalEditions";
+import { contestStudyEditions } from "@/lib/editalCatalog";
+import { useAuthStatus } from "@/hooks/useDashboard";
 import { acreDate } from "@/lib/acreTime";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
@@ -11,9 +16,18 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 export const Route = createFileRoute("/dashboard/questions")({
   component: QuestionsCatalog,
-  head: () => ({ meta: [{ title: "Concursos disponíveis | Norte Concursos" }] }),
+  head: () => ({ meta: [{ title: "Concursos e editais | Norte Concursos" }] }),
 });
 function QuestionsCatalog() {
+  const { user, isLoading: authLoading } = useAuthStatus();
+  const real = !!user && user.id !== "demo-user";
+  const editions = useQuery({
+    queryKey: ["goal-edital-editions", user?.id],
+    enabled: real && !authLoading,
+    queryFn: fetchEditalEditions,
+    staleTime: 300_000,
+  });
+  const studyEditions = useMemo(() => contestStudyEditions(editions.data ?? []), [editions.data]);
   const [contests, setContests] = useState<Contest[]>([]);
   const [focus, setFocus] = useState<string>();
   const [search, setSearch] = useState("");
@@ -25,10 +39,17 @@ function QuestionsCatalog() {
   const [detail, setDetail] = useState<Contest | null>(null);
   const [saving, setSaving] = useState<string | null>(null);
   useEffect(() => {
+    if (authLoading || !real) {
+      setLoading(false);
+      return;
+    }
     let active = true;
     setLoading(true);
     setError(false);
-    void Promise.all([MockService.getContests(), MockService.getFocusedContest()])
+    void Promise.all([
+      MockService.getContests(),
+      MockService.getFocusedContest().catch(() => undefined),
+    ])
       .then(([rows, focused]) => {
         if (active) {
           setContests(rows);
@@ -44,7 +65,7 @@ function QuestionsCatalog() {
     return () => {
       active = false;
     };
-  }, [refresh]);
+  }, [refresh, real, authLoading, user?.id]);
   const visible = useMemo(
     () =>
       contests.filter(
@@ -70,7 +91,11 @@ function QuestionsCatalog() {
     }
   }
   const date = (value?: string) =>
-    value ? acreDate(`${value.slice(0, 10)}T12:00:00`).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" }) : "A confirmar";
+    value
+      ? acreDate(`${value.slice(0, 10)}T12:00:00`).toLocaleDateString("pt-BR", {
+          timeZone: "America/Rio_Branco",
+        })
+      : "A confirmar";
   const money = (value: number) =>
     value > 0
       ? value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
@@ -79,48 +104,53 @@ function QuestionsCatalog() {
     <section className="space-y-6">
       <header className="catalog-command-hero tactical-feature-hero">
         <span className="internal-hero-kicker">Seu próximo objetivo</span>
-        <h1>Concursos disponíveis</h1>
-        <p>Consulte os concursos cadastrados e escolha o foco da sua preparação.</p>
+        <h1>Concursos e editais</h1>
+        <p>Encontre uma oportunidade acompanhada ou escolha uma edição para orientar seu estudo.</p>
       </header>
-      <div className="grid gap-4 md:grid-cols-3">
-        <label>
-          Pesquisar
-          <Input
-            placeholder="Órgão, cargo ou banca"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </label>
-        <label>
-          Carreira
-          <select
-            className="institutional-input w-full"
-            value={career}
-            onChange={(e) => setCareer(e.target.value)}
-          >
-            <option value="">Todas as carreiras</option>
-            {[...new Set(contests.map((c) => c.career))].sort().map((c) => (
-              <option key={c}>{c}</option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Banca
-          <select
-            className="institutional-input w-full"
-            value={board}
-            onChange={(e) => setBoard(e.target.value)}
-          >
-            <option value="">Todas as bancas</option>
-            {[...new Set(contests.map((c) => c.examBoard))]
-              .filter(Boolean)
-              .sort()
-              .map((b) => (
-                <option key={b}>{b}</option>
-              ))}
-          </select>
-        </label>
-      </div>
+      {!loading && !error && contests.length > 0 && (
+        <section aria-label="Filtrar oportunidades" className="space-y-3">
+          <h2 className="text-lg font-bold">Oportunidades em acompanhamento</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            <label>
+              Pesquisar
+              <Input
+                placeholder="Órgão, cargo ou banca"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </label>
+            <label>
+              Carreira
+              <select
+                className="institutional-input w-full"
+                value={career}
+                onChange={(e) => setCareer(e.target.value)}
+              >
+                <option value="">Todas as carreiras</option>
+                {[...new Set(contests.map((c) => c.career))].sort().map((c) => (
+                  <option key={c}>{c}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Banca
+              <select
+                className="institutional-input w-full"
+                value={board}
+                onChange={(e) => setBoard(e.target.value)}
+              >
+                <option value="">Todas as bancas</option>
+                {[...new Set(contests.map((c) => c.examBoard))]
+                  .filter(Boolean)
+                  .sort()
+                  .map((b) => (
+                    <option key={b}>{b}</option>
+                  ))}
+              </select>
+            </label>
+          </div>
+        </section>
+      )}
       {loading ? (
         <p role="status">Carregando concursos…</p>
       ) : error ? (
@@ -131,10 +161,10 @@ function QuestionsCatalog() {
       ) : contests.length === 0 ? (
         <Card>
           <CardContent className="p-8 space-y-4">
-            <h2 className="text-xl font-bold">O catálogo de editais está sendo atualizado.</h2>
+            <h2 className="text-xl font-bold">Estude com os editais e as provas já cadastrados</h2>
             <p>
-              Os concursos aparecerão aqui quando forem cadastrados. Você já pode estudar com o
-              acervo de provas e questões.
+              Não há oportunidades de concurso publicadas no momento. Use o catálogo abaixo para
+              consultar edições de estudo. A presença de uma edição não indica inscrições abertas.
             </p>
             <Button asChild>
               <Link to="/dashboard/question-bank">Consultar o acervo de questões</Link>
@@ -191,6 +221,23 @@ function QuestionsCatalog() {
           ))}
         </div>
       )}
+      <section aria-labelledby="goal-editions-title" className="space-y-4">
+        <h2 id="goal-editions-title" className="text-xl font-bold">
+          Editais e provas para estudar
+        </h2>
+        {editions.isPending ? (
+          <p role="status">Carregando edições para estudo…</p>
+        ) : editions.isError ? (
+          <div role="alert" className="rounded-xl border p-5">
+            <p>Não foi possível carregar as edições para estudo.</p>
+            <Button variant="outline" onClick={() => void editions.refetch()}>
+              Tentar carregar editais novamente
+            </Button>
+          </div>
+        ) : (
+          <EditalEditionCatalog editions={studyEditions} />
+        )}
+      </section>
       <Dialog
         open={!!detail}
         onOpenChange={(open) => {

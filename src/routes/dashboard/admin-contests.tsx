@@ -246,7 +246,7 @@ function AdminContestsPage() {
       .eq("id", r.id);
     if (error) toast.error("Não foi possível publicar.");
     else {
-      toast.success("Publicado! Já aparece em Concursos disponíveis.");
+      toast.success("Publicado! Já aparece em Concursos e editais.");
       void load();
     }
   }

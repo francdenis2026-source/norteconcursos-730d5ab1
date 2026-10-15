@@ -1,4 +1,5 @@
-import { StudyLaterNotebook } from "@/components/dashboard/StudyLater";
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { StudyLaterNotebook } from "@/components/dashboard/StudyLaterNotebook";
 import { platformDate } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect } from "react";
@@ -37,6 +38,9 @@ export const Route = createFileRoute("/dashboard/notebooks")({
 });
 
 function NotebooksPage() {
+  const { user, isLoading: authLoading } = useAuthStatus();
+  const owner = user?.id && user.id !== "demo-user" ? user.id : null;
+  const notebookStorageKey = owner ? `norte_notebooks:${owner}` : null;
   const [notebooks, setNotebooks] = useState<Notebook[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -46,27 +50,24 @@ function NotebooksPage() {
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
-    loadData();
-  }, []);
+    setNotebooks([]);
+    if (!owner || authLoading) return;
+    void loadData();
+  }, [owner, authLoading]);
 
   const loadData = async () => {
     setIsLoading(true);
     // Load Notebooks
-    const storedNbs = localStorage.getItem("norte_notebooks");
+    if (!notebookStorageKey) return;
+    const storedNbs = localStorage.getItem(notebookStorageKey);
     if (storedNbs) {
-      setNotebooks(JSON.parse(storedNbs));
+      try {
+        setNotebooks(JSON.parse(storedNbs));
+      } catch {
+        toast.error("Não foi possível ler os cadernos deste navegador.");
+      }
     } else {
-      const initial: Notebook[] = [
-        {
-          id: "nb-1",
-          name: "Revisão Português - Sintaxe",
-          description: "Questões focadas em análise sintática para o concurso da PF",
-          questionIds: ["q1", "q3", "q5"],
-          createdAt: platformDate().toISOString(),
-        },
-      ];
-      setNotebooks(initial);
-      localStorage.setItem("norte_notebooks", JSON.stringify(initial));
+      setNotebooks([]);
     }
 
     // Load All Questions for searching context
@@ -86,7 +87,7 @@ function NotebooksPage() {
     };
     const updated = [...notebooks, newNb];
     setNotebooks(updated);
-    localStorage.setItem("norte_notebooks", JSON.stringify(updated));
+    if (notebookStorageKey) localStorage.setItem(notebookStorageKey, JSON.stringify(updated));
     toast.success("Caderno criado com sucesso!");
     loadData();
   };
@@ -195,7 +196,8 @@ function NotebooksPage() {
         }
       />
 
-      <StudyLaterNotebook />
+      {owner && <StudyLaterNotebook key={owner} userId={owner} />}
+
       <AiResolutionsSection />
 
       <div className="flex flex-col md:flex-row gap-4 items-center bg-card p-4 rounded-xl border shadow-sm">

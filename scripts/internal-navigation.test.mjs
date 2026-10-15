@@ -18,10 +18,10 @@ test('restore retains order, position and results using current eligible questio
  assert.equal(result.bookmark.selected,'B');
  assert.equal(trainerRouteKey({year:'2025',subject:'Direito Penal'}),trainerRouteKey({subject:'Direito Penal',year:'2025'}));
 });
-test('new law, expired sessions, missing questions and invalid filters cannot restore old training', () => {
+test('new law, future timestamps, missing questions and invalid filters cannot restore old training', () => {
  const b=bookmark();
  assert.equal(restoreTrainerBookmark(b,trainerRouteKey({law:'drogas'}),catalog,now),null);
- assert.equal(restoreTrainerBookmark({...b,savedAt:now-14400001},b.route,catalog,now),null);
+ assert.equal(restoreTrainerBookmark({...b,savedAt:now+1},b.route,catalog,now),null);
  assert.equal(restoreTrainerBookmark(b,b.route,catalog.slice(1),now),null);
  assert.equal(restoreTrainerBookmark({...b,index:99},b.route,catalog,now),null);
  assert.equal(restoreTrainerBookmark({...b,filters:{}},b.route,catalog,now),null);
@@ -145,4 +145,10 @@ test('question map allows revisiting answers and the next unanswered question wi
  assert.equal(trainerReachableIndex(['ok',null,'err'],100),1);
  assert.equal(trainerReachableIndex(['ok','ok'],2),1);
  assert.equal(trainerReachableIndex(Array(2),10),0);
+});
+
+test('unfinished sessions remain resumable after days and preserve active question time', () => {
+ const b={...bookmark(),savedAt:now-7*86400000,questionSeconds:42};
+ assert.equal(restoreTrainerBookmark(b,b.route,catalog,now).bookmark.questionSeconds,42);
+ assert.equal(restoreTrainerBookmark({...b,questionSeconds:-1},b.route,catalog,now),null);
 });

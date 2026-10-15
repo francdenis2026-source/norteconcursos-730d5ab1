@@ -1,3 +1,6 @@
+import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
+import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
+import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { BookOpenText, ChevronRight, ExternalLink, Loader2, Search } from "lucide-react";
@@ -27,7 +30,6 @@ export const Route = createFileRoute("/dashboard/edital/")({
   }),
 });
 import {
-  filterEditalEditions,
   editalSourceLabel,
   editalSourceUrl,
   editalFold as fold,
@@ -45,10 +47,6 @@ function EditalPage() {
     [topicsLoading, setTopicsLoading] = React.useState(false),
     [error, setError] = React.useState("");
   const [topicsError, setTopicsError] = React.useState("");
-  const [editionQuery, setEditionQuery] = React.useState("");
-  const [year, setYear] = React.useState("all");
-  const [kind, setKind] = React.useState("all");
-  const [page, setPage] = React.useState(0);
   const [search, setSearch] = React.useState(""),
     [discipline, setDiscipline] = React.useState("all"),
     [revision, setRevision] = React.useState(0);
@@ -66,17 +64,7 @@ function EditalPage() {
     let active = true;
     setLoading(true);
     setError("");
-    void fetchAllRows<Edition>((from, to) =>
-      supabase
-        .from("syllabus_editions")
-        .select(
-          "id,contest_name,role_name,contest_year,exam_board,status,source:content_sources(title,url,source_type,status)",
-        )
-        .in("status", ["active", "archived"])
-        .order("id")
-        .range(from, to)
-        .returns<Edition[]>(),
-    )
+    void fetchEditalEditions()
       .then((data) => {
         if (active) setEditions(data);
       })
@@ -92,6 +80,10 @@ function EditalPage() {
   }, [authLoading, user?.id, real, revision]);
   const edition = editions.find((e) => e.id === selected);
   const editionId = edition?.id;
+  const examQuestions = React.useMemo(
+    () => (edition ? editalExamQuestions(catalog, edition) : []),
+    [catalog, edition],
+  );
   React.useEffect(() => {
     setSearch("");
     setDiscipline("all");
@@ -145,11 +137,8 @@ function EditalPage() {
     const name = canonicalSubject(t.discipline);
     groups.set(name, [...(groups.get(name) ?? []), t]);
   }
-  const visibleEditions = filterEditalEditions(editions, editionQuery, year, kind);
-  const years = [...new Set(editions.map((e) => e.contest_year))].sort((a, b) => b - a);
   const chooseEdition = (id?: string) =>
     void navigate({ to: "/dashboard/edital", search: { edition: id } });
-  React.useEffect(() => setPage(0), [editionQuery, year, kind]);
   if (authLoading || loading)
     return (
       <div className="flex h-64 items-center justify-center" role="status">
@@ -176,119 +165,7 @@ function EditalPage() {
         <BookOpenText aria-hidden className="edital-heading-icon" />
       </header>
       {!edition ? (
-        <section className="edital-catalog" aria-label="Catálogo de editais">
-          <div className="edital-catalog-intro">
-            <div>
-              <h2>Escolha o concurso e o cargo</h2>
-              <p>{editions.length} edições cadastradas · das mais recentes às anteriores</p>
-            </div>
-            <Badge variant="outline">
-              {editions.filter((e) => e.status === "archived").length} arquivadas
-            </Badge>
-          </div>
-          <div className="edital-catalog-filters">
-            <div>
-              <Label htmlFor="edition-search">Concurso, cargo ou banca</Label>
-              <Input
-                id="edition-search"
-                value={editionQuery}
-                onChange={(e) => setEditionQuery(e.target.value)}
-                placeholder="Ex.: Polícia Federal, delegado, Cebraspe…"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edition-year">Ano da edição</Label>
-              <select id="edition-year" value={year} onChange={(e) => setYear(e.target.value)}>
-                <option value="all">Todos os anos</option>
-                {years.map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <Label htmlFor="edition-kind">Documentação</Label>
-              <select id="edition-kind" value={kind} onChange={(e) => setKind(e.target.value)}>
-                <option value="all">Todas as edições</option>
-                <option value="edital">Com edital cadastrado</option>
-                <option value="reference">Referência de prova</option>
-                <option value="archived">Arquivadas</option>
-              </select>
-            </div>
-          </div>
-          <p className="edital-note">
-            O ano identifica a edição do concurso. A presença no catálogo não significa inscrições
-            abertas. Referências de prova podem ter apenas parte do programa revisada.
-          </p>
-          <p role="status" className="text-sm text-muted-foreground">
-            {visibleEditions.length} edições encontradas
-          </p>
-          <div className="edital-editions">
-            {visibleEditions.slice(page * 12, page * 12 + 12).map((e) => (
-              <button
-                type="button"
-                key={e.id}
-                onClick={() => chooseEdition(e.id)}
-                className="edital-edition"
-              >
-                <div className="edital-edition-meta">
-                  <strong>{e.contest_year}</strong>
-                  <span>{e.status === "archived" ? "Edição arquivada" : editalSourceLabel(e)}</span>
-                </div>
-                <h3>{e.contest_name}</h3>
-                <p>{e.role_name}</p>
-                <div className="edital-edition-foot">
-                  <span>{e.exam_board || "Banca não informada"}</span>
-                  <span>
-                    Abrir programa <ChevronRight aria-hidden className="h-4 w-4" />
-                  </span>
-                </div>
-              </button>
-            ))}
-          </div>
-          {!visibleEditions.length && !error && (
-            <div className="edital-empty">
-              <p>
-                {editions.length
-                  ? "Nenhuma edição corresponde aos filtros."
-                  : "Nenhuma edição está disponível no catálogo."}
-              </p>
-              {editions.length > 0 && (
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setEditionQuery("");
-                    setYear("all");
-                    setKind("all");
-                  }}
-                >
-                  Limpar filtros
-                </Button>
-              )}
-            </div>
-          )}
-          {visibleEditions.length > 12 && (
-            <nav
-              aria-label="Páginas do catálogo de editais"
-              className="flex flex-wrap items-center justify-between gap-3"
-            >
-              <Button variant="outline" disabled={page === 0} onClick={() => setPage((p) => p - 1)}>
-                Anterior
-              </Button>
-              <span className="text-sm">
-                Página {page + 1} de {Math.ceil(visibleEditions.length / 12)}
-              </span>
-              <Button
-                variant="outline"
-                disabled={(page + 1) * 12 >= visibleEditions.length}
-                onClick={() => setPage((p) => p + 1)}
-              >
-                Próxima
-              </Button>
-            </nav>
-          )}
-        </section>
+        <EditalEditionCatalog editions={editions} failed={!!error} />
       ) : (
         <section className="edital-selected">
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -304,7 +181,10 @@ function EditalPage() {
           </h2>
           <p>{edition.role_name}</p>
           <p className="text-sm text-muted-foreground">
-            {edition.exam_board || "Banca não informada"}
+            {edition.exam_board ||
+              (examQuestions[0]?.board
+                ? `${examQuestions[0].board} · identificada nas questões desta prova`
+                : "Banca não informada")}
           </p>
           {editalSourceUrl(edition.source) && (
             <a
@@ -319,6 +199,44 @@ function EditalPage() {
               <ExternalLink className="h-4 w-4" />
             </a>
           )}
+          <div
+            className="mt-4 rounded-xl border border-primary/25 bg-primary/5 p-4"
+            role="region"
+            aria-label="Treinar a prova desta edição"
+          >
+            <h3 className="font-semibold">Resolva a prova escolhida</h3>
+            <p className="my-2 text-sm text-muted-foreground">
+              Treinador: entre direto nas questões desta prova, com correção após cada resposta. A
+              seleção usa concurso, cargo, banca e ano. Questões por assunto abaixo podem ter origem
+              em outras provas.
+            </p>
+            {catalogLoading ? (
+              <p role="status">Conferindo questões desta prova…</p>
+            ) : catalogError ? (
+              <Button variant="outline" onClick={reloadCatalog}>
+                Tentar carregar questões da prova
+              </Button>
+            ) : examQuestions.length ? (
+              <>
+                <Button asChild>
+                  <Link to="/dashboard/question-trainer" search={editalPracticeSearch(edition)}>
+                    Resolver questões desta prova ({examQuestions.length})
+                  </Link>
+                </Button>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Quantidade disponível no acervo revisado; pode ser menor que a prova completa.
+                  Respostas anteriores ficam em revisão. Os limites diários do seu plano continuam
+                  valendo.
+                </p>
+              </>
+            ) : (
+              <p role="status" className="text-sm">
+                Ainda não há questões elegíveis identificadas para esta prova no acervo. Você pode
+                estudar pelos assuntos abaixo; questões de outras provas não serão incluídas neste
+                treino.
+              </p>
+            )}
+          </div>
           {edition.status === "archived" && (
             <p className="edital-note">
               Programa histórico para consulta. Os materiais relacionados apresentam conteúdo atual

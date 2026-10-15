@@ -1,57 +1,86 @@
-import { parseQuestion, type Question } from "./questionFormat";
+import { parseQuestion, questionAnswers, type Question } from "./questionFormat";
 import { questionTopic } from "./filterTaxonomy";
 import { classifyTopic } from "./questionTopics";
+
 export type StudyLaterItem = {
   key: string;
   question: Question;
-  topic: string;
-  note: string;
+  topic: string | null;
+  alternatives: { letter: string; text: string; topic: string | null; subject: string }[];
   savedAt: string;
+  notes: string;
   reviewed: boolean;
 };
+export interface StudyLaterStorage {
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+}
 export const studyLaterKey = (userId: string) => `norte:study-later:v1:${userId}`;
-export const studyQuestionKey = (q: Question) => `${q.source}:${q.id}`;
-export function questionStudyTopics(q: Question) {
-  return {
-    main: questionTopic(q),
-    alternatives: parseQuestion(q.text).options.map((o) => ({
-      letter: o.letter,
-      topic: classifyTopic(q.subject, o.text),
-    })),
-  };
+export const studyLaterIdentity = (question: Pick<Question, "source" | "id">) =>
+  `${question.source}:${question.id}`;
+export function canStrikeQuestion(question: Question) {
+  return (
+    question.kind !== "true_false" &&
+    questionAnswers(question).join("") !== "CE" &&
+    (parseQuestion(question.text).options.length >= 2 || question.kind === "multiple_choice")
+  );
 }
-export function readStudyLater(userId: string): StudyLaterItem[] {
-  const raw = localStorage.getItem(studyLaterKey(userId));
+export function readStudyLater(storage: StudyLaterStorage, userId: string): StudyLaterItem[] {
+  if (!userId || userId === "demo-user") return [];
+  const raw = storage.getItem(studyLaterKey(userId));
   if (!raw) return [];
-  const data: unknown = JSON.parse(raw);
+  const items: unknown = JSON.parse(raw);
   if (
-    !Array.isArray(data) ||
-    data.some((x) => !x || typeof x.key !== "string" || typeof x.question?.text !== "string")
+    !Array.isArray(items) ||
+    !items.every(
+      (item) =>
+        item &&
+        typeof item.key === "string" &&
+        typeof item.question?.id === "string" &&
+        typeof item.question?.text === "string" &&
+        typeof item.question?.subject === "string" &&
+        Array.isArray(item.alternatives) &&
+        typeof item.notes === "string" &&
+        typeof item.reviewed === "boolean" &&
+        typeof item.savedAt === "string",
+    )
   )
-    throw new Error("Caderno inválido");
-  return data;
+    throw new Error("O caderno salvo não pôde ser lido. Os dados existentes foram preservados.");
+  return items;
 }
-export function writeStudyLater(userId: string, items: StudyLaterItem[]) {
-  localStorage.setItem(studyLaterKey(userId), JSON.stringify(items));
-  window.dispatchEvent(new Event("study-later-changed"));
-}
-export function addStudyLater(
+export function writeStudyLater(
+  storage: StudyLaterStorage,
+  userId: string,
   items: StudyLaterItem[],
+) {
+  if (!userId || userId === "demo-user")
+    throw new Error("Entre na sua conta para salvar no caderno.");
+  storage.setItem(studyLaterKey(userId), JSON.stringify(items));
+}
+export function saveStudyLater(
+  storage: StudyLaterStorage,
+  userId: string,
   question: Question,
-  topic: string,
-  note: string,
-): StudyLaterItem[] {
-  const key = studyQuestionKey(question),
-    previous = items.find((i) => i.key === key);
-  return [
-    {
-      key,
-      question,
-      topic,
-      note,
-      savedAt: previous?.savedAt ?? new Date().toISOString(),
-      reviewed: previous?.reviewed ?? false,
-    },
-    ...items.filter((i) => i.key !== key),
-  ];
+  now = new Date().toISOString(),
+) {
+  const items = readStudyLater(storage, userId);
+  const key = studyLaterIdentity(question);
+  if (items.some((item) => item.key === key)) return items;
+  const parsed = parseQuestion(question.text);
+  const item: StudyLaterItem = {
+    key,
+    question: { ...question },
+    topic: questionTopic({ ...question, text: parsed.stem }),
+    alternatives: parsed.options.map((option) => ({
+      ...option,
+      subject: question.subject,
+      topic: classifyTopic(question.subject, option.text),
+    })),
+    savedAt: now,
+    notes: "",
+    reviewed: false,
+  };
+  const result = [item, ...items];
+  writeStudyLater(storage, userId, result);
+  return result;
 }

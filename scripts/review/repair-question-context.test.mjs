@@ -40,3 +40,4 @@ test('four-option exams preserve their original format and refuse invented optio
  i.patch.question_text+=' (E)invented';assert.throws(()=>validateRepairs(p));
  i.patch.question_text='Complete stem (A)a (B)b (D)d';assert.throws(()=>validateRepairs(p));
 });
+test('database dry run validates source and current row without mutation',async()=>{const p=make();let writes=0;const req=async(path,method='GET')=>{if(method!=='GET'){writes++;throw Error('Unexpected write');}return path.startsWith('content_sources')?[{is_official:true,source_type:'prova',url:p.items[0].evidence.source_url}]:[p.items[0].expected];};const result=await repairContexts(p,req,async()=>bytes,{dryRun:true});assert.deepEqual(result.pending,['q']);assert.equal(writes,0);});

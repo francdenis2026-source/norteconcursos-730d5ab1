@@ -1,4 +1,8 @@
-import { SaveStudyLater } from "@/components/dashboard/StudyLater";
+import { useQuery } from "@tanstack/react-query";
+import { fetchEditalEditions } from "@/lib/editalEditions";
+import { editalExamQuestions } from "@/lib/editalPractice";
+import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
+import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
 import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
 import { searchQuestionCatalog } from "@/lib/questionBank";
@@ -106,6 +110,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "edition"
       | "syllabus"
       | "law"
       | "contest"
@@ -128,6 +133,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    edition: typeof search["edition"] === "string" ? search["edition"] : undefined,
     syllabus: typeof search["syllabus"] === "string" ? search["syllabus"] : undefined,
     law: typeof search["law"] === "string" ? search["law"] : undefined,
     contest: typeof search["contest"] === "string" ? search["contest"] : undefined,
@@ -188,6 +194,16 @@ function QuestionTrainer() {
     loading: catalogLoading,
     error,
   } = useQuestionCatalog(userId, canLoad);
+  const examEdition = useQuery({
+    queryKey: ["trainer-exam-edition", userId, routeFilters.edition],
+    enabled: canLoad && !!routeFilters.edition,
+    queryFn: async () => {
+      const found = (await fetchEditalEditions()).find((e) => e.id === routeFilters.edition);
+      if (!found) throw Error("Edição não encontrada");
+      return found;
+    },
+    retry: false,
+  });
   // Questões sem o texto de apoio ficam fora do treino até que o conteúdo esteja disponível.
 
   const law = routeFilters.law;
@@ -198,7 +214,14 @@ function QuestionTrainer() {
   const { catalog, missingSupportText } = React.useMemo(() => {
     const collectionCatalog = trainerCollectionQuestions(
       searchQuestionCatalog(
-        syllabusQuestions(fullCatalog, routeFilters.syllabus),
+        syllabusQuestions(
+          routeFilters.edition
+            ? examEdition.data
+              ? editalExamQuestions(fullCatalog, examEdition.data)
+              : []
+            : fullCatalog,
+          routeFilters.syllabus,
+        ),
         routeFilters.catalogQuery ?? "",
       ),
       collection,
@@ -209,7 +232,15 @@ function QuestionTrainer() {
         : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
     return { catalog: usable, missingSupportText: scoped.length - usable.length };
-  }, [fullCatalog, law, collection, routeFilters.syllabus, routeFilters.catalogQuery]);
+  }, [
+    fullCatalog,
+    law,
+    collection,
+    routeFilters.syllabus,
+    routeFilters.catalogQuery,
+    routeFilters.edition,
+    examEdition.data,
+  ]);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
@@ -241,7 +272,8 @@ function QuestionTrainer() {
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState(routeFilters.limit || "20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
-  const loading = catalogLoading || lockedLoading;
+  const loading =
+    catalogLoading || lockedLoading || (!!routeFilters.edition && examEdition.isPending);
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
@@ -272,8 +304,19 @@ function QuestionTrainer() {
     setConfirmStop(false);
     blocker.reset?.();
   };
+  const clearBookmark = () => {
+    bookmarkRef.current = null;
+    if (!userId) return;
+    try {
+      localStorage.removeItem(`trainer-bookmark:${userId}`);
+      sessionStorage.removeItem(`trainer-bookmark:${userId}`);
+    } catch {
+      /* A blocked store must not prevent ending the session. */
+    }
+  };
   const confirmLeave = () => {
     if (savingRef.current) return;
+    clearBookmark();
     if (blocker.status === "blocked") blocker.proceed();
     else {
       setConfirmStop(false);
@@ -288,6 +331,9 @@ function QuestionTrainer() {
   const questionSecsRef = React.useRef(0);
   const routeKey = trainerRouteKey(routeFilters);
   const pendingRestore = React.useRef(false);
+  const [resumeNotice, setResumeNotice] = React.useState(false);
+  const [bookmarkError, setBookmarkError] = React.useState(false);
+  const restoredSeconds = React.useRef<number | null>(null);
   const restoredSelection = React.useRef<string | null>(null);
   const bookmarkRef = React.useRef<{ userId: string; value: TrainerBookmark } | null>(null);
   bookmarkRef.current =
@@ -301,6 +347,7 @@ function QuestionTrainer() {
               index,
               ...answer,
             })),
+            questionSeconds: questionSecs,
             savedAt: Date.now(),
             route: routeKey,
             questions: questions.map(({ id, source, table }) => ({ id, source, table })),
@@ -329,18 +376,37 @@ function QuestionTrainer() {
           },
         }
       : null;
-  React.useEffect(
-    () => () => {
+  const persistBookmark = React.useCallback(() => {
+    const saved = bookmarkRef.current;
+    if (!saved) return;
+    try {
+      localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+      setBookmarkError(false);
+    } catch {
+      setBookmarkError(true);
+    }
+  }, []);
+  // Save selections, position and active time before a browser reload can discard React.
+  React.useEffect(() => {
+    persistBookmark();
+  });
+  React.useEffect(() => {
+    const onHide = () => persistBookmark();
+    window.addEventListener("pagehide", onHide);
+    window.addEventListener("beforeunload", onHide);
+    return () => {
+      window.removeEventListener("pagehide", onHide);
+      window.removeEventListener("beforeunload", onHide);
       const saved = bookmarkRef.current;
-      if (!saved) return;
-      try {
-        sessionStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
-      } catch {
-        /* Storage can be unavailable; navigation must still work. */
+      if (saved) {
+        try {
+          localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+        } catch {
+          /* Navigation remains possible when storage is blocked. */
+        }
       }
-    },
-    [],
-  );
+    };
+  }, [persistBookmark]);
   React.useEffect(() => {
     // A new law link must never reuse a session or filters belonging to the previous law.
     sessionAnswers.current.clear();
@@ -380,6 +446,7 @@ function QuestionTrainer() {
     pendingRestore.current = true;
   }, [
     law,
+    routeFilters.edition,
     routeFilters.syllabus,
     routeFilters.contest,
     routeFilters.board,
@@ -399,15 +466,14 @@ function QuestionTrainer() {
     routeFilters.limit,
   ]);
   React.useEffect(() => {
-    if (!pendingRestore.current || loading || error || !userId) return;
+    if (!pendingRestore.current || loading || error || examEdition.isError || !userId) return;
     pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
-      const raw = sessionStorage.getItem(storageKey);
+      const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
       if (!raw) return;
       const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
       if (!restored) return;
-      sessionStorage.removeItem(storageKey);
       const b = restored.bookmark;
       sessionAnswers.current = new Map(
         (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
@@ -431,6 +497,8 @@ function QuestionTrainer() {
       setResults(b.results);
       setSelected(b.selected as Answer | null);
       setStruck(b.struck as Answer[]);
+      restoredSeconds.current = b.questionSeconds ?? 0;
+      setResumeNotice(true);
       setStartedAt(b.startedAt);
       setStarted(true);
       setModal(null);
@@ -456,7 +524,29 @@ function QuestionTrainer() {
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
-  }, [loading, error, userId, routeKey, catalog]);
+  }, [loading, error, examEdition.isError, userId, routeKey, catalog]);
+  const examNotice = routeFilters.edition ? (
+    <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
+      <strong>
+        Prova selecionada:{" "}
+        {examEdition.data
+          ? `${examEdition.data.contest_name} · ${examEdition.data.role_name} · ${examEdition.data.contest_year}`
+          : "Consultando edição"}
+      </strong>
+      <p>
+        {routeFilters.go === "1"
+          ? "Você está resolvendo somente as questões oficiais elegíveis desta prova, com correção após cada resposta."
+          : "Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam essa seleção."}
+      </p>
+      <Link
+        to="/dashboard/edital"
+        search={{ edition: routeFilters.edition }}
+        className="mt-2 inline-block underline"
+      >
+        Voltar ao meu edital
+      </Link>
+    </aside>
+  ) : null;
   const lawNotice =
     law !== undefined ? (
       <aside className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm" role="status">
@@ -676,7 +766,18 @@ function QuestionTrainer() {
   };
   // Veio com ?go=1 (cronograma, cursos, leis): começa direto, com 10 questões ainda não respondidas do assunto.
   React.useEffect(() => {
-    if (!autoStart.current || loading || started) return;
+    if (!autoStart.current || loading || started || examEdition.isError) return;
+    if (routeFilters.edition) {
+      autoStart.current = false;
+      if (!trainingPool.length) {
+        setNotice(
+          "Não há questões elegíveis disponíveis desta prova para iniciar. Nenhuma questão de outra prova será incluída.",
+        );
+        return;
+      }
+      startTraining();
+      return;
+    }
     if (pool.length === 0) {
       // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
       if (topic !== "all") {
@@ -734,6 +835,9 @@ function QuestionTrainer() {
     setYear(selectedYear);
   };
 
+  React.useEffect(() => {
+    if (started && questions.length > 0 && index >= questions.length) clearBookmark();
+  }, [started, questions.length, index, userId]);
   const question = questions[index];
   // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
   const noText = !!question && needsMissingSupportText(question);
@@ -744,8 +848,10 @@ function QuestionTrainer() {
       !!question &&
       catalogReviewKeys.current.has(lockedKey(question.source, question.id)));
   React.useEffect(() => {
-    questionSecsRef.current = 0;
-    setQuestionSecs(0);
+    const seconds = restoredSeconds.current ?? 0;
+    restoredSeconds.current = null;
+    questionSecsRef.current = seconds;
+    setQuestionSecs(seconds);
   }, [startedAt, index, question?.id, question?.source]);
   React.useEffect(() => {
     if (!started || !question || answered || leaveDialogOpen) return;
@@ -907,6 +1013,8 @@ function QuestionTrainer() {
   };
   const next = () => goTo(index + 1);
   const restart = () => {
+    clearBookmark();
+    setResumeNotice(false);
     responseIdRef.current = crypto.randomUUID();
     sessionAnswers.current.clear();
     setStarted(false);
@@ -925,6 +1033,18 @@ function QuestionTrainer() {
       <Center>
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
         <p>{isGuest ? "Redirecionando…" : "Preparando seu treino…"}</p>
+      </Center>
+    );
+  if (routeFilters.edition && examEdition.isError)
+    return (
+      <Center>
+        <p>
+          Não foi possível conferir a prova selecionada. Nenhuma questão de outra prova será usada.
+        </p>
+        <Button onClick={() => void examEdition.refetch()}>Tentar carregar a prova</Button>
+        <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
+          Voltar ao meu edital
+        </Link>
       </Center>
     );
   if (!user)
@@ -947,10 +1067,33 @@ function QuestionTrainer() {
         </Button>
       </Center>
     );
+  if (!started && routeFilters.edition && routeFilters.go === "1")
+    return (
+      <Center>
+        {autoStart.current ? (
+          <Loader2 className="h-7 w-7 animate-spin" />
+        ) : (
+          <Target className="h-8 w-8 text-primary" />
+        )}
+        <p role="status">
+          {autoStart.current
+            ? "Abrindo as questões da prova escolhida…"
+            : notice || "Treino encerrado. Suas respostas confirmadas permanecem no histórico."}
+        </p>
+        {!autoStart.current && catalog.length > 0 && (
+          <Button onClick={startTraining}>Resolver novamente esta prova</Button>
+        )}
+        <Button asChild variant="outline">
+          <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
+            Voltar ao meu edital
+          </Link>
+        </Button>
+      </Center>
+    );
   if (!started)
     return (
       <div className="trainer-workbench">
-        <header className="trainer-workbench-heading">
+        <header className="trainer-workbench-heading trainer-workbench-hero">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
             <h1 id="trainer-title">Treinador de questões</h1>
@@ -1002,6 +1145,7 @@ function QuestionTrainer() {
             </Link>
           </div>
         )}
+        {examNotice}
         {lawNotice}
         <section className="trainer-practice-panel" aria-label="Modo de prática">
           {missingSupportText > 0 && (
@@ -1152,7 +1296,9 @@ function QuestionTrainer() {
     if (library.isError) void library.refetch();
   };
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
-  const certoErrado = !hasOptions && questionAnswers(question).join("") === "CE";
+  const certoErrado =
+    question.kind === "true_false" || (!hasOptions && questionAnswers(question).join("") === "CE");
+  const canStrike = canStrikeQuestion(question);
   const labelFor = (answer: Answer) =>
     hasOptions ? `Alternativa ${answer}` : questionAnswerLabel(answer, question);
   const chooseOption = (letter: Answer) => {
@@ -1161,7 +1307,7 @@ function QuestionTrainer() {
     setSelected(letter);
   };
   const toggleStrike = (letter: Answer) => {
-    if (answered || savingRef.current) return;
+    if (!canStrike || answered || savingRef.current) return;
     setStruck((items) =>
       items.includes(letter) ? items.filter((item) => item !== letter) : [...items, letter],
     );
@@ -1185,22 +1331,37 @@ function QuestionTrainer() {
             <span className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
               <PauseCircle className="h-5 w-5" aria-hidden="true" />
             </span>
-            <DialogTitle>Interromper o treino?</DialogTitle>
+            <DialogTitle>Encerrar este treino?</DialogTitle>
             <DialogDescription>
               {saving
                 ? "Aguarde enquanto sua resposta é salva."
-                : "Você ainda tem questões nesta sessão. As respostas já confirmadas permanecem registradas; a alternativa selecionada só é enviada ao confirmar a resposta."}
+                : "Ao encerrar, a retomada desta sessão será removida. As respostas já confirmadas permanecem no seu histórico. Para continuar depois, você pode atualizar ou fechar a página."}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="gap-2 sm:justify-start">
             <Button onClick={cancelLeave}>Continuar estudando</Button>
             <Button variant="outline" onClick={confirmLeave} disabled={saving}>
-              Sair do treino
+              Encerrar treino
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
+      <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+        <strong>
+          {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
+          {questions.length}
+        </strong>
+        <p>
+          {bookmarkError
+            ? "Não foi possível salvar a retomada neste navegador. Evite recarregar antes de concluir."
+            : "Sua posição é salva automaticamente neste navegador, nesta conta. Você pode atualizar a página e continuar daqui."}
+        </p>
+        <button type="button" className="mt-2 underline" onClick={() => setConfirmStop(true)}>
+          Encerrar este treino
+        </button>
+      </aside>
+      {examNotice}
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
       {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
@@ -1252,13 +1413,14 @@ function QuestionTrainer() {
           <h1>{question.subject}</h1>
         </div>
         <div>
+          {user?.id && <SaveStudyLater userId={user.id} question={question} />}
           <Button variant="outline" onClick={() => setMapOpen(true)}>
             <LayoutGrid className="mr-2 h-4 w-4" />
             Navegar questões
           </Button>
           <Button variant="outline" onClick={() => setConfirmStop(true)}>
             <PauseCircle className="mr-2 h-4 w-4" />
-            Sair do treino
+            Encerrar treino
           </Button>
         </div>
       </header>
@@ -1330,41 +1492,10 @@ function QuestionTrainer() {
                 </div>
               </details>
             )}
-            <SaveStudyLater key={question.id} question={question} userId={user.id} />
             <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>
-            {!answered && (
-              <div className="trainer-elimination-tools">
-                <div>
-                  <p className="flex items-center gap-2 font-semibold">
-                    <Strikethrough aria-hidden="true" className="h-4 w-4" /> Riscar opções
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Descarte opções durante a análise. Para recuperar uma opção, use Desfazer ou
-                    selecione-a novamente.
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Riscar a opção selecionada remove sua seleção, sem enviar uma resposta.
-                  </p>
-                </div>
-                <div className="flex shrink-0 items-center gap-2">
-                  <span role="status" className="text-xs text-muted-foreground">
-                    {struck.length} riscadas
-                  </span>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    disabled={!struck.length || saving}
-                    onClick={() => setStruck([])}
-                  >
-                    Limpar riscos
-                  </Button>
-                </div>
-              </div>
-            )}
             {hasOptions && (
               <div className="mt-3 space-y-2">
                 {parsed.options.map((option) => {
@@ -1402,7 +1533,7 @@ function QuestionTrainer() {
                           </span>
                         )}
                       </button>
-                      {!answered && (
+                      {canStrike && !answered && (
                         <Button
                           type="button"
                           variant={isStruck ? "secondary" : "ghost"}
@@ -1419,7 +1550,6 @@ function QuestionTrainer() {
                           onClick={() => toggleStrike(option.letter)}
                         >
                           <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                          {isStruck ? "Desfazer" : "Riscar"}
                         </Button>
                       )}
                     </div>
@@ -1466,7 +1596,7 @@ function QuestionTrainer() {
                       {labelFor(answer)}
                     </span>
                   </button>
-                  {!answered && (
+                  {canStrike && !answered && (
                     <Button
                       type="button"
                       variant={struck.includes(answer) ? "secondary" : "ghost"}
@@ -1478,7 +1608,6 @@ function QuestionTrainer() {
                       onClick={() => toggleStrike(answer)}
                     >
                       <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                      {struck.includes(answer) ? "Desfazer" : "Riscar"}
                     </Button>
                   )}
                 </div>
