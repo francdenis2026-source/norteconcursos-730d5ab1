@@ -53,3 +53,24 @@ test('platform Links do not request new tabs; trainer bookmarks are scoped to th
  assert.match(trainer,/trainer-bookmark:\$\{saved.userId\}/);assert.match(trainer,/trainer-bookmark:\$\{userId\}/);
  assert.match(trainer,/setAnswered\(false\); \/\/ The saved-answer gate/);
 });
+
+test('restored reinforcement retains answer locks and rejects malformed or contradictory attempts', () => {
+ const b={...bookmark(),practiceMode:'wrong',sessionAttempts:[{index:0,selected:'A',isCorrect:true}]};
+ const restored=restoreTrainerBookmark(b,b.route,catalog,now);
+ assert.equal(restored.bookmark.practiceMode,'wrong');
+ assert.deepEqual(restored.bookmark.sessionAttempts,b.sessionAttempts);
+ for(const attempts of [[{index:5,selected:'A',isCorrect:true}],[{index:0,selected:'X',isCorrect:true}],[{index:0,selected:'A',isCorrect:false}], [...b.sessionAttempts,...b.sessionAttempts], [null]]) assert.equal(restoreTrainerBookmark({...b,sessionAttempts:attempts},b.route,catalog,now),null);
+ assert.equal(restoreTrainerBookmark({...b,practiceMode:'invalid'},b.route,catalog,now),null);
+});
+
+const {trainerSessionSize}=await import('../src/lib/trainerSession.ts');
+test('announced training size respects stock, daily first-answer allowance and review independence', () => {
+ assert.equal(trainerSessionSize(100,'20',3),3);
+ assert.equal(trainerSessionSize(100,'20',0),0);
+ assert.equal(trainerSessionSize(100,'20'),20);
+ assert.equal(trainerSessionSize(4,'20'),4);
+ assert.equal(trainerSessionSize(100,'500'),50);
+ assert.equal(trainerSessionSize(100,'corrupt'),20);
+ assert.equal(trainerSessionSize(100,'10',-1),0);
+ assert.equal(trainerSessionSize(NaN,'20'),0);
+});

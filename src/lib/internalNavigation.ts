@@ -37,6 +37,8 @@ export const trainerFilterKeys = [
 ] as const;
 export type TrainerBookmark = {
   version: 1;
+  practiceMode?: "new" | "wrong" | "all";
+  sessionAttempts?: { index: number; selected: "A" | "B" | "C" | "D" | "E"; isCorrect: boolean }[];
   savedAt: number;
   route: string;
   questions: { id: string; source: string; table?: string | undefined }[];
@@ -84,6 +86,25 @@ export function restoreTrainerBookmark<
     !b.filters ||
     typeof b.filters !== "object" ||
     trainerFilterKeys.some((k) => typeof b.filters[k] !== "string")
+  )
+    return null;
+  if (b.practiceMode !== undefined && !["new", "wrong", "all"].includes(b.practiceMode))
+    return null;
+  if (
+    b.sessionAttempts !== undefined &&
+    (!Array.isArray(b.sessionAttempts) ||
+      b.sessionAttempts.length > b.questions.length ||
+      new Set(b.sessionAttempts.map((a) => a?.index)).size !== b.sessionAttempts.length ||
+      b.sessionAttempts.some(
+        (a) =>
+          !a ||
+          !Number.isInteger(a.index) ||
+          a.index < 0 ||
+          a.index >= b.questions.length ||
+          !["A", "B", "C", "D", "E"].includes(a.selected) ||
+          typeof a.isCorrect !== "boolean" ||
+          b.results[a.index] !== (a.isCorrect ? "ok" : "err"),
+      ))
   )
     return null;
   const key = (q: { id: string; source: string; table?: string | undefined }) =>
