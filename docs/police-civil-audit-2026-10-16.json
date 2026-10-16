@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-16T22:09:12.911Z",
-  "generated_at": "2026-10-16T22:09:35.477Z",
+  "snapshot_at": "2026-10-16T22:25:13.875Z",
+  "generated_at": "2026-10-16T22:25:39.658Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -14,7 +14,6 @@
       "active_with_catalog_flags": 80,
       "active_without_example_marker": 80,
       "flags": {
-        "topic_not_current": 80,
         "edition_without_verified_edital": 80,
         "context_or_visual_flag": 2,
         "app_gate_rejected": 65
@@ -30,7 +29,6 @@
       "active_with_catalog_flags": 69,
       "active_without_example_marker": 69,
       "flags": {
-        "topic_not_current": 69,
         "edition_without_verified_edital": 69,
         "app_gate_rejected": 33,
         "context_or_visual_flag": 4
@@ -121,32 +119,31 @@
       "exam": "Polícia Civil de Pernambuco - Agente de Polícia | 2024 | Agente de Polícia | CEBRASPE",
       "records": 60,
       "status": {
-        "under_review": 18,
-        "active": 35,
+        "under_review": 11,
+        "active": 42,
         "annulled": 7
       },
-      "active_app_eligible": 35,
-      "active_with_catalog_flags": 35,
+      "active_app_eligible": 42,
+      "active_with_catalog_flags": 29,
       "active_without_example_marker": 35,
       "flags": {
-        "topic_not_current": 29,
-        "edition_without_verified_edital": 35
+        "topic_not_current": 29
       }
     },
     {
       "exam": "Polícia Civil de Pernambuco - Delegado de Polícia | 2024 | Delegado de Polícia | CEBRASPE",
       "records": 100,
       "status": {
-        "active": 86,
-        "under_review": 10,
+        "active": 89,
+        "under_review": 6,
+        "obsolete": 1,
         "annulled": 3,
         "archived": 1
       },
-      "active_app_eligible": 86,
-      "active_with_catalog_flags": 86,
+      "active_app_eligible": 89,
+      "active_with_catalog_flags": 66,
       "active_without_example_marker": 86,
       "flags": {
-        "edition_without_verified_edital": 86,
         "topic_not_current": 66
       }
     },
@@ -154,16 +151,15 @@
       "exam": "Polícia Civil de Pernambuco - Escrivão de Polícia | 2024 | Escrivão de Polícia | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 44,
-        "under_review": 11,
+        "active": 45,
+        "under_review": 10,
         "annulled": 5
       },
-      "active_app_eligible": 44,
-      "active_with_catalog_flags": 44,
+      "active_app_eligible": 45,
+      "active_with_catalog_flags": 40,
       "active_without_example_marker": 44,
       "flags": {
-        "topic_not_current": 40,
-        "edition_without_verified_edital": 44
+        "topic_not_current": 40
       }
     },
     {
@@ -477,7 +473,6 @@
       "active_with_catalog_flags": 76,
       "active_without_example_marker": 76,
       "flags": {
-        "topic_not_current": 76,
         "edition_without_verified_edital": 76,
         "app_gate_rejected": 59,
         "context_or_visual_flag": 3
@@ -493,7 +488,6 @@
       "active_with_catalog_flags": 74,
       "active_without_example_marker": 74,
       "flags": {
-        "topic_not_current": 74,
         "edition_without_verified_edital": 74,
         "app_gate_rejected": 41,
         "context_or_visual_flag": 3
@@ -535,23 +529,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2578,
+      "active": 2589,
       "archived": 212,
-      "under_review": 135,
+      "under_review": 123,
       "annulled": 37,
-      "obsolete": 6
+      "obsolete": 7
     },
-    "active_app_eligible": 2148,
-    "active_with_catalog_flags": 1892,
+    "active_app_eligible": 2159,
+    "active_with_catalog_flags": 1862,
     "active_without_example_marker": 2294,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 210,
-    "newly_published": 210,
-    "scope": "PCDF 111 canonical individual reviews. RO 99 individual decisions: 97 activated, two editorially archived for ambiguity with official answers preserved. Not certification of all PC records.",
+    "newly_reviewed": 222,
+    "newly_published": 222,
+    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 12 decisions (11 activated/one obsolete), with 11 contexts restored. Not certification of all PC records.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 135,
+    "pending_under_review_all_pc": 123,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1253,6 +1247,222 @@
           "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
           "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
         }
+      }
+    },
+    "pernambuco_batch1": {
+      "reviewed": 12,
+      "published_active": 11,
+      "published_obsolete": 1,
+      "remaining_under_review_pe": 27,
+      "validation": {
+        "checked_at": "2026-10-16T22:25:13.875Z",
+        "reviewed": 12,
+        "published_active": 11,
+        "published_obsolete": 1,
+        "contexts_restored": 11,
+        "preserved_other_pc_records": 2956,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [
+          {
+            "table": "syllabus_topics",
+            "id": "0ec030bb-fb42-4875-afa6-712428cf1955"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "16539c8c-9212-4544-bb12-9b7bbe2e3da7"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "1695871d-7ac7-40fc-a8c8-26b00eefa079"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "17508d59-afab-4264-a94f-61dbfaffc886"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2a233f18-e893-492c-9f74-2fb1a8da9100"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2b106279-1fd5-4580-a04d-3da0829e1d3a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2b376edb-fecd-49d2-b4bc-1b341b4d3cd9"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2bfe8d07-3adf-4925-ae13-d818583bc2e2"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "2cc876f9-885a-438a-82bd-7b35b2a55079"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "32b33f64-31e2-4bcd-80a3-f9bc28e69628"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "3fd7039b-bdde-458d-9ac3-20cdf7020b3a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "45748196-6284-47e5-b047-18b2f20d41fc"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "46accbb6-2a9c-4185-bf42-856cc8f3e2bb"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "4b058969-78c3-455a-bcb2-0e6b9bdb9054"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "5552a96c-d100-4ce6-90eb-5b6b66370d63"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "55acc377-7117-41e2-9b29-2c6e0159a451"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "62c80a39-2b57-4bfe-901b-dea480d4a543"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "6b961de6-1ad4-4da7-9261-012ebaa6c9f6"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "708266c8-259f-4e60-a5a5-5ee175bc2b14"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "7c49c734-b19a-4cbe-8923-f5f8f60149af"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "83bcf417-d715-4738-962e-5f63cfe881c6"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "8f9cdb9f-e7a5-4b08-99f0-8ee65d8d2485"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "93348e0b-a025-4629-bb7d-98ceff324894"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9b81749d-092a-4ad2-9b69-901b2c947646"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9c99754e-4cd5-43b4-b8fe-1214e03c924f"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "9fc4243b-fe0f-461b-b705-57873fb33563"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "a662e765-8b43-450f-89e1-e39228ec55b4"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "aeb08f94-f5b1-47d8-bed0-e6b09d655d03"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "b85faffd-1051-4ae2-b129-d3d4d6f06e1a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "b9661d05-849c-4b38-8ae5-3c28ee50a948"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "bbfeeaa3-fb62-4b5d-8044-1fac990cc159"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "bd6227f4-9ece-4b9f-948f-e45446a51f90"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "c5f9e371-a50c-47c9-9087-b51a213d0720"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "d7de8327-3793-45a7-94ca-bb87b7a0a86a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "ef5b37af-fe0e-4839-ac45-964449a4639a"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f16d8862-b0b8-4a40-b7fd-c54f1591fff0"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f1ca5e20-6ced-4c32-a7f3-b84bf08f9683"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f4cfb6a9-d5fd-471b-9e3a-f23f0f2f97f3"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "f68fb13d-1bda-4db2-8dbb-c08678406235"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "fd994547-8b8a-4c79-9838-c50dfb5ea8d8"
+          },
+          {
+            "table": "syllabus_topics",
+            "id": "fefb8e9d-a381-432e-80f4-0e11ee68f095"
+          }
+        ],
+        "new_sources": 2,
+        "refreshed_sources": 6,
+        "repaired_editions": 3,
+        "new_topics": 6,
+        "reused_topics": 2,
+        "pc_status": {
+          "active": 2589,
+          "archived": 212,
+          "under_review": 123,
+          "annulled": 37,
+          "obsolete": 7
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Agente de Polícia": 11,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 10,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        },
+        "external_topic_changes_summary": {
+          "changed": 41
+        },
+        "scope_note": "All 2956 other PC question records preserved. Metadata comparison separately observed external topic changes; planned source/edition/topic writes matched and were not overwritten."
       }
     }
   },

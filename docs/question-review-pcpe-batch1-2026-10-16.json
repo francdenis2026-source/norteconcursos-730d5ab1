@@ -1,0 +1,1515 @@
+{
+  "scope": "PCPE 2024: 12 individual decisions, 11 activated and one obsolete for current training; 11 contexts restored without overwriting original extraction/answer/source IDs.",
+  "checked_at": "2026-10-16T22:26:35.619670+00:00",
+  "publication": {
+    "dry_run": false,
+    "reviewed": 12,
+    "updated": [
+      "0248cc9b-ef5b-4064-8939-77eca912ffdd",
+      "07db22c3-409a-4a4e-9e0c-bdfa58e4f1f5",
+      "0b3c89ce-ee49-4f3c-adad-2d6cefd0b094",
+      "133d582d-8876-434d-9c4c-92bd2423b9ae",
+      "642405a1-83c4-4434-97a7-0bdc954f9720",
+      "65d6aa4c-3559-4108-a2cc-6f8b7cb41ae1",
+      "6b2dbcfd-bb5b-4a84-909d-1cccfe495922",
+      "89c045b9-430b-44f0-81ee-e932991d3089",
+      "a9956155-5af4-4e72-9da7-6cec50bb8d9a",
+      "cb26d803-c1aa-41b5-9087-b8c1ca7bf952",
+      "f5428452-40d4-4fe3-8da0-072a59f510c5",
+      "fd758989-470a-49be-991c-a7e3f5a5ed27"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-16T22:23:47.573Z"
+  },
+  "validation": {
+    "checked_at": "2026-10-16T22:25:13.875Z",
+    "reviewed": 12,
+    "published_active": 11,
+    "published_obsolete": 1,
+    "contexts_restored": 11,
+    "preserved_other_pc_records": 2956,
+    "concurrent_changes": [],
+    "metadata_concurrent_changes": [
+      {
+        "table": "syllabus_topics",
+        "id": "0ec030bb-fb42-4875-afa6-712428cf1955"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "16539c8c-9212-4544-bb12-9b7bbe2e3da7"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "1695871d-7ac7-40fc-a8c8-26b00eefa079"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "17508d59-afab-4264-a94f-61dbfaffc886"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "2a233f18-e893-492c-9f74-2fb1a8da9100"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "2b106279-1fd5-4580-a04d-3da0829e1d3a"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "2b376edb-fecd-49d2-b4bc-1b341b4d3cd9"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "2bfe8d07-3adf-4925-ae13-d818583bc2e2"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "2cc876f9-885a-438a-82bd-7b35b2a55079"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "32b33f64-31e2-4bcd-80a3-f9bc28e69628"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "3fd7039b-bdde-458d-9ac3-20cdf7020b3a"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "45748196-6284-47e5-b047-18b2f20d41fc"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "46accbb6-2a9c-4185-bf42-856cc8f3e2bb"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "4b058969-78c3-455a-bcb2-0e6b9bdb9054"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "5552a96c-d100-4ce6-90eb-5b6b66370d63"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "55acc377-7117-41e2-9b29-2c6e0159a451"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "62c80a39-2b57-4bfe-901b-dea480d4a543"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "6b961de6-1ad4-4da7-9261-012ebaa6c9f6"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "708266c8-259f-4e60-a5a5-5ee175bc2b14"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "7c49c734-b19a-4cbe-8923-f5f8f60149af"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "83bcf417-d715-4738-962e-5f63cfe881c6"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "8f9cdb9f-e7a5-4b08-99f0-8ee65d8d2485"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "93348e0b-a025-4629-bb7d-98ceff324894"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "9b81749d-092a-4ad2-9b69-901b2c947646"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "9c99754e-4cd5-43b4-b8fe-1214e03c924f"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "9fc4243b-fe0f-461b-b705-57873fb33563"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "a662e765-8b43-450f-89e1-e39228ec55b4"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "aeb08f94-f5b1-47d8-bed0-e6b09d655d03"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "b85faffd-1051-4ae2-b129-d3d4d6f06e1a"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "b9661d05-849c-4b38-8ae5-3c28ee50a948"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "bbfeeaa3-fb62-4b5d-8044-1fac990cc159"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "bd6227f4-9ece-4b9f-948f-e45446a51f90"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "c5f9e371-a50c-47c9-9087-b51a213d0720"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "d7de8327-3793-45a7-94ca-bb87b7a0a86a"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "ef5b37af-fe0e-4839-ac45-964449a4639a"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "f16d8862-b0b8-4a40-b7fd-c54f1591fff0"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "f1ca5e20-6ced-4c32-a7f3-b84bf08f9683"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "f4cfb6a9-d5fd-471b-9e3a-f23f0f2f97f3"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "f68fb13d-1bda-4db2-8dbb-c08678406235"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "fd994547-8b8a-4c79-9838-c50dfb5ea8d8"
+      },
+      {
+        "table": "syllabus_topics",
+        "id": "fefb8e9d-a381-432e-80f4-0e11ee68f095"
+      }
+    ],
+    "new_sources": 2,
+    "refreshed_sources": 6,
+    "repaired_editions": 3,
+    "new_topics": 6,
+    "reused_topics": 2,
+    "pc_status": {
+      "active": 2589,
+      "archived": 212,
+      "under_review": 123,
+      "annulled": 37,
+      "obsolete": 7
+    },
+    "pending_by_contest": {
+      "Polícia Civil de Pernambuco - Agente de Polícia": 11,
+      "Polícia Civil de Pernambuco - Escrivão de Polícia": 10,
+      "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+      "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+      "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+      "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+      "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+      "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+      "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+      "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+      "Polícia Civil de Minas Gerais": 2,
+      "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+      "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+      "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+      "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+    },
+    "external_topic_changes_summary": {
+      "changed": 41
+    },
+    "scope_note": "All 2956 other PC question records preserved. Metadata comparison separately observed external topic changes; planned source/edition/topic writes matched and were not overwritten."
+  },
+  "official_event": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+  "source_refresh": {
+    "purpose": "official-exam-evidence-refresh",
+    "items": [
+      {
+        "kind": "prova",
+        "expected": {
+          "id": "cb4f3322-79c0-4cc2-9fed-fbb5c865573c",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:45:28.075285+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca."
+        },
+        "row": {
+          "id": "cb4f3322-79c0-4cc2-9fed-fbb5c865573c",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:53.752Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Matriz com justificativas e gabarito preliminar usada para texto; resposta vinculada separadamente à chave definitiva. Captura SHA-256 4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": {
+          "id": "a4445ad3-e948-4f91-9b52-af1ab1382851",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:45:28.546669+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada."
+        },
+        "row": {
+          "id": "a4445ad3-e948-4f91-9b52-af1ab1382851",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:52.104Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Chave definitiva do cargo; X não é alternativa válida. Captura SHA-256 fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "prova",
+        "expected": {
+          "id": "2775d0d6-670b-4147-a705-7959a2fd98e3",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:46:10.435236+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca."
+        },
+        "row": {
+          "id": "2775d0d6-670b-4147-a705-7959a2fd98e3",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:53.366Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Matriz com justificativas e gabarito preliminar usada para texto; resposta vinculada separadamente à chave definitiva. Captura SHA-256 7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": {
+          "id": "519c8e47-658c-4507-a772-87b563a8e3a4",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:46:10.811672+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada."
+        },
+        "row": {
+          "id": "519c8e47-658c-4507-a772-87b563a8e3a4",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:52.491Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Chave definitiva do cargo; X não é alternativa válida. Captura SHA-256 77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "prova",
+        "expected": {
+          "id": "e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:45:56.606631+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca."
+        },
+        "row": {
+          "id": "e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37",
+          "source_type": "outro",
+          "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:52.748Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Matriz oficial (prova com gabarito preliminar e justificativas) do concurso PC-PE (Edital 1/2023, Cebraspe), aplicada em fev/mar de 2024; gabarito definitivo publicado pela banca.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Matriz com justificativas e gabarito preliminar usada para texto; resposta vinculada separadamente à chave definitiva. Captura SHA-256 9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "visually_verified": true
+        }
+      },
+      {
+        "kind": "gabarito",
+        "expected": {
+          "id": "8d8933a2-280c-43bc-9db3-8c5ae328c13c",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-14T00:45:56.942321+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada."
+        },
+        "row": {
+          "id": "8d8933a2-280c-43bc-9db3-8c5ae328c13c",
+          "source_type": "outro",
+          "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+          "issuer": "Cebraspe",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "published_on": null,
+          "checked_at": "2026-10-16T22:08:53.128Z",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Gabarito definitivo publicado pela banca; X = questão anulada.\nConferência individual de identidade documental no catálogo PC_PE_23 e leitura visual em 16/10/2026. Chave definitiva do cargo; X não é alternativa válida. Captura SHA-256 c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac"
+        },
+        "evidence": {
+          "catalog_url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_pe_23",
+          "catalog_path": "outputs/pc-pending-review-2026-10-16/pe-api.json",
+          "catalog_sha256": "3a943d07221bfde7e522f442e8d1ca99a21d2dd1bc71ab007f9858a0428e776e",
+          "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "visually_verified": true
+        }
+      }
+    ]
+  },
+  "edition_publication": [
+    {
+      "role": "agente",
+      "result": {
+        "dry_run": false,
+        "createdSources": [
+          "d09d18a8-b314-5a52-893e-889e793a0b4b"
+        ],
+        "editionSource": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+      }
+    },
+    {
+      "role": "escrivao",
+      "result": {
+        "dry_run": false,
+        "createdSources": [],
+        "editionSource": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+      }
+    },
+    {
+      "role": "delegado",
+      "result": {
+        "dry_run": false,
+        "createdSources": [],
+        "editionSource": "d09d18a8-b314-5a52-893e-889e793a0b4b"
+      }
+    }
+  ],
+  "topic_publication": [
+    {
+      "role": "agente",
+      "result": {
+        "reviewed": 3,
+        "created": 3,
+        "preserved": 0
+      }
+    },
+    {
+      "role": "escrivao",
+      "result": {
+        "reviewed": 2,
+        "created": 2,
+        "preserved": 0
+      }
+    },
+    {
+      "role": "delegado",
+      "result": {
+        "reviewed": 1,
+        "created": 1,
+        "preserved": 0
+      }
+    }
+  ],
+  "reused_topics": [
+    {
+      "row": {
+        "id": "df93826a-3dea-46a4-946c-84f6ab222afa",
+        "edition_id": "82aa522f-8454-48ab-b8f5-671d49557afe",
+        "block_name": "Edital de abertura – conteúdo programático",
+        "discipline": "Direito Constitucional",
+        "topic_order": 30,
+        "topic_text": "DIREITO CONSTITUCIONAL: 1 Direito constitucional. 1.1 Noções gerais, ciclos constitucionais. 2 Classificações das constituições. 3 Poder constituinte. 3.1 Fundamentos do poder constituinte. 3.2 Poder constituinte originário e derivado. 3.3 Reforma e revisão constitucionais. 3.4 Limitação do poder de revisão. 3.5 Emendas à Constituição. 3.6 Poder constituinte e revolução. 4 Controle de constitucionalidade. 4.1 Conceito e sistemas de controle de constitucionalidade. 4.2 Inconstitucionalidade: por ação e por omissão. 4.3 Sistema brasileiro de controle de constitucionalidade. 4.4 Arguição de descumprimento de preceitos fundamentais. 4.5 O fenômeno Jurídico da desconstitucionalização. 5 Interpretação constitucional. 6 Direitos e deveres fundamentais. 6.1 Direitos e deveres individuais e coletivos. 6.2 Direito à vida, à liberdade, à igualdade, à segurança e à propriedade. 6.3 Direitos sociais, nacionalidade, cidadania e direitos políticos. 6.4 Partidos políticos. 6.5 Garantias constitucionais individuais. 6.6 Garantias dos direitos coletivos, sociais e políticos. 6.7 Remédios do direito constitucional. 6.8 Direitos Sociais e sua efetivação. 6.9 Tratados Internacionais de Direitos Humanos e sua posição no ordenamento jurídico brasileiro. 7 Poder legislativo: fundamento, atribuições e garantias de independência. 8 Processo legislativo: fundamento e garantias de independência, 63 conceito, objetos, atos e procedimentos. 9 Poder executivo. 9.1 Forma e sistema de governo. 9.2 Chefia de Estado e chefia de governo. 9.3 Atribuições e responsabilidades do presidente da República. 10 Poder judiciário. 11 Funções essenciais à Justiça. 12 Defesa do Estado e das instituições democráticas. 12.1 Segurança Pública. 12.2 Organização da segurança pública. 13 Atribuições constitucionais da Polícia Judiciária. 14 Ordem social. 15 Tratados e Convenções. 15.1 Convenção de Mérida. 15.2 Convenção de Palermo. 15.3 Convenção de Viena. 15.4 Pacto de São José da Costa Rica. 15.5 Tratado de Roma. 16 Conceito, objeto, elementos e classificações da Constituição. História das Constituições. Supremacia da Constituição. Aplicabilidade das normas constitucionais. Neoconstitucionalismo. Poder constituinte decorrente. 17 Organização do Estado. 17.1 Organização político-administrativa. 17.2 Estado federal brasileiro. 17.3 A União. 17.4 Estados federados. 17.5 Municípios. 17.6 O Distrito Federal. 17.7 Territórios. 18 Administração pública. 18.1 Disposições gerais. 18.2 Servidores públicos. 19 Organização dos poderes no Estado. 19.1 Mecanismos de freios e contrapesos. 19.2 Comissões parlamentares de inquérito. 20 Organização e competências. 21 Conselho Nacional de Justiça (CNJ). 22 Funções essenciais à justiça. 22.1 Ministério Público. Princípios, garantias, vedações, organização e competências. Conselho Nacional do Ministério Público (CNMP). 23 Sistema Tributário Nacional. Princípios gerais. 23.1 Limitações do poder de tributar. 23.2 Impostos da União, dos Estados e dos municípios. 23.3 Repartição das receitas tributárias. 24 Finanças públicas. 24.1 Normas gerais. 25 Ordem econômica e financeira. 25.1 Princípios gerais da atividade econômica. 25.2 Política urbana, agrícola e fundiária e reforma agrária. 26 Sistema Financeiro Nacional. 27 Constituição do Estado de Pernambuco (artigos 101 a 105-B).",
+        "content_status": "current",
+        "created_at": "2026-10-14T00:46:00.947164+00:00"
+      },
+      "evidence": {
+        "row": {
+          "id": "4e99ed37-fe55-5115-95cf-9a42cfa66107",
+          "edition_id": "82aa522f-8454-48ab-b8f5-671d49557afe",
+          "block_name": "Edital PCPE 1/2023 — recorte conferido em 16/10/2026",
+          "discipline": "Direito Constitucional",
+          "topic_order": 30,
+          "topic_text": "1 Direito constitucional. 1.1 Noções gerais, ciclos constitucionais. 2 Classificações das constituições. 3 Poder constituinte. 3.1 Fundamentos do poder constituinte. 3.2 Poder constituinte originário e derivado. 3.3 Reforma e revisão constitucionais. 3.4 Limitação do poder de revisão. 3.5 Emendas à Constituição. 3.6 Poder constituinte e revolução. 4 Controle de constitucionalidade. 4.1 Conceito e sistemas de controle de constitucionalidade. 4.2 Inconstitucionalidade: por ação e por omissão. 4.3 Sistema brasileiro de controle de constitucionalidade. 4.4 Arguição de descumprimento de preceitos fundamentais. 4.5 O fenômeno Jurídico da desconstitucionalização. 5 Interpretação constitucional. 6 Direitos e deveres fundamentais. 6.1 Direitos e deveres individuais e coletivos. 6.2 Direito à vida, à liberdade, à igualdade, à segurança e à propriedade. 6.3 Direitos sociais, nacionalidade, cidadania e direitos políticos. 6.4 Partidos políticos. 6.5 Garantias constitucionais individuais. 6.6 Garantias dos direitos coletivos, sociais e políticos. 6.7 Remédios do direito constitucional. 6.8 Direitos Sociais e sua efetivação. 6.9 Tratados Internacionais de Direitos Humanos e sua posição no ordenamento jurídico brasileiro. 7 Poder legislativo: fundamento, atribuições e garantias de independência. 8 Processo legislativo: fundamento e garantias de independência, conceito, objetos, atos e procedimentos. 9 Poder executivo. 9.1 Forma e sistema de governo. 9.2 Chefia de Estado e chefia de governo. 9.3 Atribuições e responsabilidades do presidente da República. 10 Poder judiciário. 11 Funções essenciais à Justiça. 12 Defesa do Estado e das instituições democráticas. 12.1 Segurança Pública. 12.2 Organização da segurança pública. 13 Atribuições constitucionais da Polícia Judiciária. 14 Ordem social. 15 Tratados e Convenções. 15.1 Convenção de Mérida. 15.2 Convenção de Palermo. 15.3 Convenção de Viena. 15.4 Pacto de São José da Costa Rica. 15.5 Tratado de Roma. 16 Conceito, objeto, elementos e classificações da Constituição. História das Constituições. Supremacia da Constituição. Aplicabilidade das normas constitucionais. Neoconstitucionalismo. Poder constituinte decorrente. 17 Organização do Estado. 17.1 Organização político-administrativa. 17.2 Estado federal brasileiro. 17.3 A União. 17.4 Estados federados. 17.5 Municípios. 17.6 O Distrito Federal. 17.7 Territórios. 18 Administração pública. 18.1 Disposições gerais. 18.2 Servidores públicos. 19 Organização dos poderes no Estado. 19.1 Mecanismos de freios e contrapesos. 19.2 Comissões parlamentares de inquérito. 20 Organização e competências. 21 Conselho Nacional de Justiça (CNJ). 22 Funções essenciais à justiça. 22.1 Ministério Público. Princípios, garantias, vedações, organização e competências. Conselho Nacional do Ministério Público (CNMP). 23 Sistema Tributário Nacional. Princípios gerais. 23.1 Limitações do poder de tributar. 23.2 Impostos da União, dos Estados e dos municípios. 23.3 Repartição das receitas tributárias. 24 Finanças públicas. 24.1 Normas gerais. 25 Ordem econômica e financeira. 25.1 Princípios gerais da atividade econômica. 25.2 Política urbana, agrícola e fundiária e reforma agrária. 26 Sistema Financeiro Nacional. 27 Constituição do Estado de Pernambuco (artigos 101 a 105-B).",
+          "content_status": "current"
+        },
+        "page": 62,
+        "reference": "DIREITO CONSTITUCIONAL: na seção do próprio cargo; normalização da disciplina sem aprovação automática das questões."
+      }
+    },
+    {
+      "row": {
+        "id": "52ff2658-077c-4a53-84f7-0020bd2c553f",
+        "edition_id": "82aa522f-8454-48ab-b8f5-671d49557afe",
+        "block_name": "Edital de abertura – conteúdo programático",
+        "discipline": "Direito Administrativo",
+        "topic_order": 31,
+        "topic_text": "DIREITO ADMINISTRATIVO: 1 Conceito e fontes do direito administrativo. 1.1 Regime jurídico administrativo: princípios do direito administrativo. 1.2 Princípios da Administração Pública. 2 Administração Pública: organização, descentralização, desconcentração, órgãos públicos. 3 Administração indireta e entidades paralelas. 4 Atos administrativos. 4.1 Conceitos, requisitos, elementos, pressupostos e classificação. 4.2 Fato e ato administrativo. 4.3 Atos administrativos em espécie. 4.4 O silêncio no direito administrativo. 4.5 Cassação. 4.6 Revogação e anulação. 4.7 Processo administrativo. 4.8 Fatos da administração pública: atos da administração pública e fatos administrativos. 4.9 Formação do ato administrativo: elementos, procedimento administrativo. 4.10 Validade, eficácia e auto executoriedade do ato administrativo. 4.11 Atos administrativos simples, complexos e compostos. 4.12 Atos administrativos unilaterais, bilaterais e multilaterais. 4.13 Atos administrativos gerais e individuais. 4.14 Atos administrativos vinculados e discricionários. 4.15 Mérito do ato administrativo, discricionariedade. 4.16 Ato administrativo inexistente. 4.17 Teoria das nulidades no direito administrativo. 4.18 Atos administrativos nulos e anuláveis. 4.19 Vícios do ato administrativo. 4.20 Teoria dos motivos determinantes. 4.21 Revogação, anulação e convalidação do ato administrativo. 5 Poderes da administração pública. 5.1 Hierarquia: poder hierárquico e suas manifestações. 5.2 Poder disciplinar. 5.3 Poder de polícia. 5.4 Liberdades públicas e poder de polícia. 6 Serviços públicos: regulação, concessão, permissão e autorização do serviço público. 7 Intervenção do Estado sobre a propriedade privada. 7.1 Intervenção do Estado no domínio econômico. 8 Bens públicos. 8.1 Regime jurídico. 8.2 Aquisição e alienação dos bens públicos. 8.3 Formas de utilização dos bens públicos pelos particulares. 9 Licitações: modalidades e procedimentos. 10 Contratos administrativos. 11 Convênios e consórcios administrativos. 12 Controle e responsabilização da administração: controle administrativo, controle judicial, controle legislativo. 13 Agentes públicos: espécies e classificação. 13.1 Cargo, emprego e função públicos. 13.2 Formas de provimento e vacância dos cargos públicos. 13.3 Responsabilidade civil, penal e administrativa. 14 Sistemas administrativos: sistema inglês, sistema francês e sistema adotado no Brasil. 15 Administração pública. 15.1 Administração Pública em sentido amplo e em sentido estrito. 15.2 Administração Pública em sentido objetivo e em sentido subjetivo. 16 Regime jurídico-administrativo. 16.1 Conceito. 16.2 Conteúdo: supremacia do interesse público sobre o privado e indisponibilidade, pela 64 Administração, dos interesses públicos. 16.3 Princípios expressos e implícitos da administração pública. 16.4 Jurisprudência aplicada dos tribunais superiores. 17 Agências reguladoras. 18 Processo administrativo. 18.1 Lei nº 9.784/1999. 19 Poderes e deveres da administração pública. 19.1 Poder regulamentar. 19.2 Dever de agir. 19.3 Dever de eficiência. 19.4 Dever de probidade. 19.5 Dever de prestação de contas. 19.6 Uso e abuso do poder. 19.7 Jurisprudência aplicada dos tribunais superiores. 20 Lei nº 8.987/1995. 21 Lei nº 11.079/2004 (parceria público-privada). 21.1 Disposições doutrinárias. 21.2 Conceito. 21.3 Delegação: concessão, permissão e autorização. 22 Licitações e contratos administrativos. 22.1 Legislação pertinente. 23 Improbidade administrativa. 23.1 Lei nº 8.429/1992. 24 Processo Administrativo Disciplinar. 25 Lei nº 6.425/1972 - Estatuto do Policial Civil. 26 Lei nº 6.123/1968 - Estatuto do Servidor do Estado de Pernambuco. 27 Lei Complementar nº 137/2008. 33 Lei Complementar nº 317/2015.",
+        "content_status": "current",
+        "created_at": "2026-10-14T00:46:01.259616+00:00"
+      },
+      "evidence": {
+        "row": {
+          "id": "7ecb16f3-9f89-539c-ba79-3c11ef20cee4",
+          "edition_id": "82aa522f-8454-48ab-b8f5-671d49557afe",
+          "block_name": "Edital PCPE 1/2023 — recorte conferido em 16/10/2026",
+          "discipline": "Direito Administrativo",
+          "topic_order": 31,
+          "topic_text": "1 Conceito e fontes do direito administrativo. 1.1 Regime jurídico administrativo: princípios do direito administrativo. 1.2 Princípios da Administração Pública. 2 Administração Pública: organização, descentralização, desconcentração, órgãos públicos. 3 Administração indireta e entidades paralelas. 4 Atos administrativos. 4.1 Conceitos, requisitos, elementos, pressupostos e classificação. 4.2 Fato e ato administrativo. 4.3 Atos administrativos em espécie. 4.4 O silêncio no direito administrativo. 4.5 Cassação. 4.6 Revogação e anulação. 4.7 Processo administrativo. 4.8 Fatos da administração pública: atos da administração pública e fatos administrativos. 4.9 Formação do ato administrativo: elementos, procedimento administrativo. 4.10 Validade, eficácia e auto executoriedade do ato administrativo. 4.11 Atos administrativos simples, complexos e compostos. 4.12 Atos administrativos unilaterais, bilaterais e multilaterais. 4.13 Atos administrativos gerais e individuais. 4.14 Atos administrativos vinculados e discricionários. 4.15 Mérito do ato administrativo, discricionariedade. 4.16 Ato administrativo inexistente. 4.17 Teoria das nulidades no direito administrativo. 4.18 Atos administrativos nulos e anuláveis. 4.19 Vícios do ato administrativo. 4.20 Teoria dos motivos determinantes. 4.21 Revogação, anulação e convalidação do ato administrativo. 5 Poderes da administração pública. 5.1 Hierarquia: poder hierárquico e suas manifestações. 5.2 Poder disciplinar. 5.3 Poder de polícia. 5.4 Liberdades públicas e poder de polícia. 6 Serviços públicos: regulação, concessão, permissão e autorização do serviço público. 7 Intervenção do Estado sobre a propriedade privada. 7.1 Intervenção do Estado no domínio econômico. 8 Bens públicos. 8.1 Regime jurídico. 8.2 Aquisição e alienação dos bens públicos. 8.3 Formas de utilização dos bens públicos pelos particulares. 9 Licitações: modalidades e procedimentos. 10 Contratos administrativos. 11 Convênios e consórcios administrativos. 12 Controle e responsabilização da administração: controle administrativo, controle judicial, controle legislativo. 13 Agentes públicos: espécies e classificação. 13.1 Cargo, emprego e função públicos. 13.2 Formas de provimento e vacância dos cargos públicos. 13.3 Responsabilidade civil, penal e administrativa. 14 Sistemas administrativos: sistema inglês, sistema francês e sistema adotado no Brasil. 15 Administração pública. 15.1 Administração Pública em sentido amplo e em sentido estrito. 15.2 Administração Pública em sentido objetivo e em sentido subjetivo. 16 Regime jurídico-administrativo. 16.1 Conceito. 16.2 Conteúdo: supremacia do interesse público sobre o privado e indisponibilidade, pela Administração, dos interesses públicos. 16.3 Princípios expressos e implícitos da administração pública. 16.4 Jurisprudência aplicada dos tribunais superiores. 17 Agências reguladoras. 18 Processo administrativo. 18.1 Lei nº 9.784/1999. 19 Poderes e deveres da administração pública. 19.1 Poder regulamentar. 19.2 Dever de agir. 19.3 Dever de eficiência. 19.4 Dever de probidade. 19.5 Dever de prestação de contas. 19.6 Uso e abuso do poder. 19.7 Jurisprudência aplicada dos tribunais superiores. 20 Lei nº 8.987/1995. 21 Lei nº 11.079/2004 (parceria público-privada). 21.1 Disposições doutrinárias. 21.2 Conceito. 21.3 Delegação: concessão, permissão e autorização. 22 Licitações e contratos administrativos. 22.1 Legislação pertinente. 23 Improbidade administrativa. 23.1 Lei nº 8.429/1992. 24 Processo Administrativo Disciplinar. 25 Lei nº 6.425/1972 - Estatuto do Policial Civil. 26 Lei nº 6.123/1968 - Estatuto do Servidor do Estado de Pernambuco. 27 Lei Complementar nº 137/2008. 33 Lei Complementar nº 317/2015.",
+          "content_status": "current"
+        },
+        "page": 63,
+        "reference": "DIREITO ADMINISTRATIVO: na seção do próprio cargo; normalização da disciplina sem aprovação automática das questões."
+      }
+    }
+  ],
+  "tests": {
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "Exam-source evidence refresh, official-source creation, publisher, context/provenance repairs and topic registrar. No application changes in this checkpoint; build not rerun."
+  },
+  "items": [
+    {
+      "id": "0248cc9b-ef5b-4064-8939-77eca912ffdd",
+      "item_number": 44,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "145ffd951698484c0fdbcae496c54a798631f1f0a3551869c84762a88c4e512d",
+      "pre_publication_row_sha256": "c06470a815692b0b522298286f5c765a4f42bed9ee838732d00a92aacc9309af",
+      "published_row_sha256": "24931923070bd283ca3555428c7ba68e75ba0250cbecefca4676e8009d4334ac",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-II\nPablo, estudante de direito aprovado em concurso público, foi preso por suspeita de tentativa de roubo, à mão armada, de um celular avaliado em R$ 800,00. Seu nome, o de sua mãe, sua idade e seu local de nascimento coincidiam com as informações apuradas na investigação. Além disso, dados de localização do celular de Pablo, um aparelho de última geração avaliado em mais de R$ 5 mil, indicaram que ele estava na cidade na época do crime.\nEm sua defesa ele alegou o que se segue.\nP1: “Eu estava na cidade porque fui fazer concurso público.”\nP2: “Meu celular vale muito mais que o que me acusam de tentar roubar.”\nP3: “Se meu celular vale muito mais que o que me acusam de tentar roubar, não preciso tentar roubá-lo.”\nP4: “Se não preciso tentar roubá-lo, não cometi esse crime.”\nC: “Logo, não cometi esse crime.”\n\nAssinale a opção em que está apresentada uma proposição equivalente à P4 da situação hipotética 1A3-II.\n(A) “Preciso tentar roubá-lo ou não cometi esse crime.”\n(B) “Se preciso tentar roubá-lo, cometi esse crime.”\n(C) “Preciso tentar roubá-lo, mas não cometi esse crime.”\n(D) “Se não cometi esse crime, não preciso tentar roubá-lo.”\n(E) “Precisava tentar roubá-lo e cometi esse crime.”",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado cita um texto ou situação de apoio que a extração não trouxe; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 11,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-11.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nNa forma de P4, p = preciso tentar roubá-lo e c = cometi esse crime. P4 é ¬p → ¬c. Pela equivalência da condicional, isso corresponde a p OU ¬c: Preciso tentar roubá-lo ou não cometi esse crime. A alternativa D é a recíproca, que não é automaticamente equivalente.\nExemplo: Para uma condicional r → s, use ¬r ∨ s; aqui r já contém negação, por isso a dupla negação produz p.\nTeste rápido — Trocar antecedente e consequente preserva sempre equivalência? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 11,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "07db22c3-409a-4a4e-9e0c-bdfa58e4f1f5",
+      "item_number": 36,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "bbd98401e71c10bcaaa8ea648033a8c98c93c4a4f1d40f3a054c0e59cec4d7c5",
+      "pre_publication_row_sha256": "68a16c97db41d248de847f877d539ff55672b0789881ebeb3e67674175a5f9ed",
+      "published_row_sha256": "e75a61caaaca9bb7827f7b776ecc309a4e9aa75128ecfbee7297ff861821ba3a",
+      "context_patch": {
+        "question_text": "A função Novo Slide, na faixa de opções do PowerPoint, permite escolher\n(A) as dimensões do slide.\n(B) a transição do slide.\n(C) a configuração de impressão do slide.\n(D) o layout do slide.\n(E) a formatação da tela de fundo do slide.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 7,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-7.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nO menu NOVO SLIDE permite escolher o LAYOUT do novo slide: disposição de título, texto, imagens e outros espaços reservados. Não se confunde com tamanho do slide, transição entre slides, impressão ou formatação do plano de fundo. A revisão recuperou o comando que havia sido incluído indevidamente dentro da alternativa A.\nExemplo: Título e conteúdo e Duas partes de conteúdo são escolhas de organização dos espaços do slide; animação ou mudança de página é outra operação.\nTeste rápido — Layout e transição significam a mesma coisa? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "2ecbe729-f51c-55c4-9b13-fcba8257aba8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 7,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "0b3c89ce-ee49-4f3c-adad-2d6cefd0b094",
+      "item_number": 22,
+      "career": "Delegado de Polícia",
+      "pre_context_row_sha256": "6b679f093fe9b384e98668fee8d905ec65362d8508920ca745d9c2802c05aba5",
+      "pre_publication_row_sha256": "0f81e9c9c15aaedb3ea854424d4fc1e97e3e75ed57e2ec52c74a0fa21802dbc6",
+      "published_row_sha256": "fe193633b062b10a5cabd1f0e165a5dbfe45d6fcac4fd936464e01402aad3e71",
+      "context_patch": {
+        "question_text": "A distribuição de competência dentro de uma mesma pessoa jurídica de direito público; a criação de uma autarquia para lhe atribuir a titularidade e a execução de determinado serviço público; e a transferência da execução de determinado serviço público, por meio de contrato ou ato administrativo unilateral, caracterizam-se, respectivamente, como\n(A) desconcentração, descentralização funcional e descentralização por colaboração.\n(B) desconcentração, descentralização funcional e descentralização funcional.\n(C) descentralização funcional, descentralização funcional e descentralização por colaboração.\n(D) descentralização funcional, descentralização por colaboração e descentralização funcional.\n(E) descentralização por colaboração, descentralização por colaboração e descentralização funcional.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "pdf_sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "page": 17,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Delegado-17.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nNa classificação DOUTRINÁRIA cobrada: distribuir competências dentro da MESMA PESSOA é DESCONCENTRAÇÃO; criar autarquia para atribuir titularidade e execução caracteriza descentralização FUNCIONAL; transferir execução por vínculo com outro sujeito caracteriza descentralização por COLABORAÇÃO. A CF fornece referências de organização e prestação de serviços, mas não é definição literal de todas essas categorias. Cada instrumento de delegação mantém seu regime legal próprio.\nExemplo: Secretarias internas permanecem na mesma pessoa; autarquia é pessoa distinta; concessionário recebe execução segundo o regime aplicável.\nTeste rápido — Criar autarquia é apenas distribuir tarefas dentro do mesmo órgão? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "175",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "52ff2658-077c-4a53-84f7-0020bd2c553f",
+        "legal_audit_completed": true,
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "official_pdf_page": 17,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "133d582d-8876-434d-9c4c-92bd2423b9ae",
+      "item_number": 20,
+      "career": "Delegado de Polícia",
+      "pre_context_row_sha256": "6fd9a0fbb712a8d09990507d215e6c8d85ec96a69aedb4682c4e6ebc3db624a8",
+      "pre_publication_row_sha256": "2f5edc7e5451bc5da34fa910f30bb396a23a94dcf06e7e67dd0b061a125e0a52",
+      "published_row_sha256": "23c56d8538eaae7154b12855110c32db0034d458701334236ed748fd821697cd",
+      "context_patch": {
+        "question_text": "A prerrogativa da administração pública de invalidar atos administrativos ilegítimos e revogar atos administrativos inoportunos caracteriza a aplicação do princípio administrativo da\n(A) supremacia do interesse público.\n(B) indisponibilidade.\n(C) continuidade.\n(D) autotutela.\n(E) finalidade.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "pdf_sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "page": 15,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Delegado-15.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nAUTOTUTELA permite à administração anular atos ilegais e revogar atos válidos por conveniência e oportunidade, dentro dos limites legais. Não se troca anulação por revogação. Isso não autoriza suprimir defesa quando o desfazimento atinge situação individual favorável, nem afastar controle judicial, decadência ou direitos adquiridos nos casos pertinentes. O art. 53 é referência legal federal; a questão pede a identificação do princípio.\nExemplo: Vício de legalidade conduz à análise de anulação; mudança de conveniência de ato válido conduz à de revogação, observados seus limites.\nTeste rápido — A administração pode desfazer qualquer ato sem procedimento e sem limites? Não.\nLimite do devido processo, RE 594.296: https://noticias.stf.jus.br/postsnoticias/retirada-de-parcela-salarial-sem-o-devido-processo-legal-e-nula/?amp=1",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "53",
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "52ff2658-077c-4a53-84f7-0020bd2c553f",
+        "legal_audit_completed": true,
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/retirada-de-parcela-salarial-sem-o-devido-processo-legal-e-nula/?amp=1",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/proc.html",
+            "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+            "captured_at": "2026-10-16T20:42:27.528Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/retirada-de-parcela-salarial-sem-o-devido-processo-legal-e-nula/?amp=1",
+            "path": "outputs/pc-pending-review-2026-10-16/stf-autotutela.html",
+            "sha256": "cc01119f8a5b0b1441f25302b622b7da2d718fb94876ceab269b4df570e8248f"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "official_pdf_page": 15,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "642405a1-83c4-4434-97a7-0bdc954f9720",
+      "item_number": 60,
+      "career": "Delegado de Polícia",
+      "pre_context_row_sha256": "0119ef010c51044df3e5af402c2f3b493db8706d62c6ba901c432c48bdfdf683",
+      "pre_publication_row_sha256": "0119ef010c51044df3e5af402c2f3b493db8706d62c6ba901c432c48bdfdf683",
+      "published_row_sha256": "b0f32f8d68243deafdebf9d81d8d92b9772213ceeed91e21381e643ef1c2747c",
+      "context_patch": null,
+      "context_evidence": null,
+      "patch": {
+        "content_status": "obsolete",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nRETIRADA DO TREINO ATUAL COMO OBSOLETA, com gabarito histórico D preservado. O art. 112, § 3º, III, continua prevendo um oitavo para a progressão especial, junto aos requisitos CUMULATIVOS: ausência de violência/grave ameaça, crime não cometido contra filho/dependente, primariedade e bom comportamento, sem integrar organização criminosa. Porém o caderno e suas justificativas de 2024 tratam a coleta genética conforme redação substituída pela Lei 15.295/2025. A referência antiga à proibição expressa de busca familiar saiu do § 5º; não é seguro reproduzi-la como fundamento vigente para excluir B. A lei nova tem vacância de 30 dias após DOU de 22/12/2025. Não se altera a letra oficial nem se afirma novo gabarito sem pronunciamento da banca.\nExemplo: Conhecer um oitavo não basta para ativar uma questão cujos distratores e fundamento genético exigem reconstrução para o regime atual. A fração especial não é benefício automático de toda mãe.\nTeste rápido — Um oitavo é o único requisito da progressão especial? Não: os requisitos são cumulativos.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "artigo": "9-A",
+            "title": "Lei 7.210/1984 — execução, assistência e identificação — texto oficial atualizado"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "artigo": "112",
+            "title": "Lei 7.210/1984 — execução, assistência e identificação — texto oficial atualizado"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "artigo": "126",
+            "title": "Lei 7.210/1984 — execução, assistência e identificação — texto oficial atualizado"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T22:22:12.002556+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/morelaws/lep.html",
+            "sha256": "6c1bd2c3a51916cee40f371ae79537301146e24058d62ef935960904d3a8f8ae",
+            "captured_at": "2026-10-16T21:58:00.730Z",
+            "registered": true
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/morelaws/dna.html",
+            "sha256": "a120ff95907eed72af1e5bdd72736f9ff539c49ea9b752b7ea0ec7b7cd640601",
+            "captured_at": "2026-10-16T22:19:55.839Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "official_pdf_page": 45,
+        "context_repaired": false,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "65d6aa4c-3559-4108-a2cc-6f8b7cb41ae1",
+      "item_number": 39,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "d58ea9391f49dbe84d3ede901f4d61d5faeecdadbd3c3e3f55f9aae1b888a78e",
+      "pre_publication_row_sha256": "dc2744f4b45ec631131faf64a81deeb5c6ef17f6353a45178fc00857abf3e08c",
+      "published_row_sha256": "412690b0bcec84bee29a2aad3030dab135be1eeffbe4764d678e8a2909168c9b",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-I Em uma agência de inteligência, em certo momento, havia 90 casos a serem investigados — 78 deles envolviam roubos e 63 envolviam assassinatos. 30 agentes, trabalhando 6 horas por dia, conseguiram, em 40 dias, reduzir para 70 o número total de casos a serem investigados.\n\nConsidere que, na situação hipotética 1A3-I, o chefe da agência de inteligência tenha decidido realizar um mutirão, aumentando o número de agentes para 50, todos trabalhando 8 horas por dia. Nessas circunstâncias, se novos casos não surgirem e o nível de produtividade do período do mutirão permanecer o mesmo de antes, o número de casos a serem investigados será zerado\n(A) em menos de 45 dias.\n(B) entre 45 e 50 dias.\n(C) entre 50 e 55 dias.\n(D) entre 55 e 60 dias.\n(E) em mais de 60 dias.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado cita um texto ou situação de apoio que a extração não trouxe; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 10,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-10.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa E. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nRestam 70 casos. A produtividade anterior foi de 20 casos em 30 × 6 × 40 = 7.200 horas-agente: 360 horas-agente por caso. Com 50 agentes por oito horas diárias, são 400 horas-agente por dia. Logo, 70 × 360 ÷ 400 = 63 DIAS, mais de 60. Mantêm-se as hipóteses do enunciado: produtividade constante e ausência de novos casos.\nExemplo: Aumentar simultaneamente agentes e jornada diminui o prazo, mas não transforma o estoque remanescente de 70 casos em apenas 20.\nTeste rápido — O mutirão demora 40 dias só porque a primeira etapa durou isso? Não: 63.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 10,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "6b2dbcfd-bb5b-4a84-909d-1cccfe495922",
+      "item_number": 43,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "f0fa134123ce0aba7d9ffba9c7a46a3e7bed5fecab6ba813d5ef77c468540193",
+      "pre_publication_row_sha256": "e97c8242b806eeb16d0cc8550aa08178b9e9fbef3edfc4d0835b02e8d34834a6",
+      "published_row_sha256": "e1f452bda52c41950511eefcc9a34d64bdddf8c7e864df6b7223fd3085c21177",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-II\nPablo, estudante de direito aprovado em concurso público, foi preso por suspeita de tentativa de roubo, à mão armada, de um celular avaliado em R$ 800,00. Seu nome, o de sua mãe, sua idade e seu local de nascimento coincidiam com as informações apuradas na investigação. Além disso, dados de localização do celular de Pablo, um aparelho de última geração avaliado em mais de R$ 5 mil, indicaram que ele estava na cidade na época do crime.\nEm sua defesa ele alegou o que se segue.\nP1: “Eu estava na cidade porque fui fazer concurso público.”\nP2: “Meu celular vale muito mais que o que me acusam de tentar roubar.”\nP3: “Se meu celular vale muito mais que o que me acusam de tentar roubar, não preciso tentar roubá-lo.”\nP4: “Se não preciso tentar roubá-lo, não cometi esse crime.”\nC: “Logo, não cometi esse crime.”\n\nA negação da proposição P2 apresentada na situação hipotética 1A3-II pode ser expressa corretamente por\n(A) “Meu celular vale muito mais que o que não me acusam de tentar roubar.”.\n(B) “Meu celular vale muito menos que o que me acusam de tentar roubar.”.\n(C) “Meu celular não vale muito mais que o que me acusam de tentar roubar.”.\n(D) “Meu celular vale pouco mais que o que me acusam de tentar roubar.”.\n(E) “Meu celular não vale pouco menos que o que não me acusam de não tentar não roubar.”.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 11,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-11.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa C. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nNegar P2 é dizer que o celular NÃO VALE MUITO MAIS que o referido, alternativa C. Trocar muito mais por muito menos não abrange todas as possibilidades da negação: pode valer igual, pouco mais ou pouco menos. Não se nega separadamente a oração que apenas identifica o aparelho.\nExemplo: Se o preço é só um pouco maior, a afirmação muito mais pode ser falsa sem que muito menos seja verdadeira.\nTeste rápido — Negar muito mais é sempre afirmar muito menos? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 11,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "89c045b9-430b-44f0-81ee-e932991d3089",
+      "item_number": 41,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "976e0baabf6b222570a611daf131d67a69d0c49fe24ed008c5bf6c8a7c240204",
+      "pre_publication_row_sha256": "002ef929a7a271bbbd9dc2639879227288700410f4d64e74e85d3db799042568",
+      "published_row_sha256": "c92166e41e10a47b525088b6bffee190b31039c230c3667e99f2866f2525fdf7",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-I Em uma agência de inteligência, em certo momento, havia 90 casos a serem investigados — 78 deles envolviam roubos e 63 envolviam assassinatos. 30 agentes, trabalhando 6 horas por dia, conseguiram, em 40 dias, reduzir para 70 o número total de casos a serem investigados.\n\nNa situação hipotética 1A3-I, o percentual de casos a serem investigados que remanesceram após os 40 primeiros dias de trabalho dos agentes é\n(A) menor que 30%.\n(B) maior que 30% e menor que 55%.\n(C) maior que 55% e menor que 70%.\n(D) maior que 70% e menor que 80%.\n(E) maior que 80%.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado cita um texto ou situação de apoio que a extração não trouxe; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 10,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-10.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nO percentual REMANESCENTE compara 70 casos ainda não investigados com os 90 iniciais: 70/90 × 100 ≈ 77,78%. Está entre 70% e 80%, alternativa D. Os 20 casos resolvidos representam cerca de 22,22%, grandeza diferente da pedida. O suporte necessário foi incluído novamente na questão.\nExemplo: Em um estoque inicial de 90, restar 70 significa restar cerca de 78%, e não concluir 78%.\nTeste rápido — É pedido o percentual concluído? Não: o remanescente.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 10,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "a9956155-5af4-4e72-9da7-6cec50bb8d9a",
+      "item_number": 2,
+      "career": "Delegado de Polícia",
+      "pre_context_row_sha256": "f3fc85293828686c5456ef9e8ce8f707635adce3e25a95733adc4be5f144c0fa",
+      "pre_publication_row_sha256": "fe977f650da3298001fee48def210ef5dd4b4663e6d8fe1732708b2205acd71d",
+      "published_row_sha256": "745491b2e04bd841e05c67cb4d241907d6b75e09ed87ceb1b986b166125f5301",
+      "context_patch": {
+        "question_text": "A arguição de descumprimento de preceito fundamental (ADPF)\n(A) pode ser liminarmente indeferida pelo relator, se sua petição inicial for inepta.\n(B) pode ser proposta por entidade voltada à defesa de direitos difusos e coletivos, desde que constituída há mais de um ano.\n(C) deve ter sua petição inicial acompanhada de certidão autêntica do ato normativo impugnado.\n(D) é cabível, independentemente da existência de outra via processual adequada para impugnar ato normativo, no campo do controle concentrado de constitucionalidade.\n(E) dispensa intervenção do Procurador-Geral da República, se atacar norma infralegal.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado ou as alternativas não saíram completos na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "pdf_sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "page": 1,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Delegado-1.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa A. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nO art. 4º da Lei 9.882/1999 permite ao RELATOR indeferir liminarmente a inicial da ADPF quando for INEPTA, faltar requisito ou não couber a arguição. A subsidiariedade do § 1º exige ausência de outro meio EFICAZ para sanar a lesividade; não basta afirmar que qualquer via é indiferente. Associação civil não recebe, só por existir, a legitimação restrita do art. 2º. O comando foi separado da antiga alternativa A corrompida.\nExemplo: Petição sem condições mínimas legais pode ser indeferida pelo relator; isso não significa que toda questão constitucional deva ser resolvida por ADPF.\nTeste rápido — Qualquer associação pode propor ADPF apenas por ter um ano? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+            "artigo": "1",
+            "title": "Lei 9.882/1999 — ADPF"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+            "artigo": "2",
+            "title": "Lei 9.882/1999 — ADPF"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+            "artigo": "3",
+            "title": "Lei 9.882/1999 — ADPF"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+            "artigo": "4",
+            "title": "Lei 9.882/1999 — ADPF"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "df93826a-3dea-46a4-946c-84f6ab222afa",
+        "legal_audit_completed": true,
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9882.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/morelaws/adpf.html",
+            "sha256": "4ec8943cf529f4467ffe3a7fff0399569cf13eb27a996968d11ed9c001c5865b",
+            "captured_at": "2026-10-16T22:16:25.326Z"
+          }
+        ],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "15/03/2024 10:30",
+          "nomeArquivo": "MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 2_ATUALIZADO",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-03-15T10:30:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+          "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851",
+          "captured_at": "2026-10-16T22:08:52.748Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO (P1) – CARGO 2",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+          "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac",
+          "captured_at": "2026-10-16T22:08:53.128Z"
+        },
+        "official_pdf_page": 1,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "cb26d803-c1aa-41b5-9087-b8c1ca7bf952",
+      "item_number": 45,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "b423b55a304e27c0d2a23d0a43610cea7f0d221edbf566b755b94ebddc2b6be5",
+      "pre_publication_row_sha256": "2190eda374ae295862a232e36b4166c074ffa3abadfa6e5402b1c70e9c024168",
+      "published_row_sha256": "6b4d7d5c3896e80ec945587bf7f6de13429fd51b3cf54e5fbe94f5dbe38bee39",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-II\nPablo, estudante de direito aprovado em concurso público, foi preso por suspeita de tentativa de roubo, à mão armada, de um celular avaliado em R$ 800,00. Seu nome, o de sua mãe, sua idade e seu local de nascimento coincidiam com as informações apuradas na investigação. Além disso, dados de localização do celular de Pablo, um aparelho de última geração avaliado em mais de R$ 5 mil, indicaram que ele estava na cidade na época do crime.\nEm sua defesa ele alegou o que se segue.\nP1: “Eu estava na cidade porque fui fazer concurso público.”\nP2: “Meu celular vale muito mais que o que me acusam de tentar roubar.”\nP3: “Se meu celular vale muito mais que o que me acusam de tentar roubar, não preciso tentar roubá-lo.”\nP4: “Se não preciso tentar roubá-lo, não cometi esse crime.”\nC: “Logo, não cometi esse crime.”\n\nA partir dos dados da situação hipotética 1A3-II e do argumento construído por Pablo em sua defesa, assinale a opção correta.\n(A) Sob o ponto de vista lógico, o argumento não é válido, o que evidencia que Pablo é culpado.\n(B) Sob o ponto de vista lógico, o argumento é válido, o que isenta Pablo de culpa.\n(C) Sob o ponto de vista lógico, o argumento não é válido, mas isso não evidencia a culpa de Pablo.\n(D) O argumento é válido, mas isso não isenta nem evidencia a culpa de Pablo.\n(E) Sob o ponto de vista lógico, o argumento não é válido, o que indica que Pablo precisará juntar novos elementos para provar sua inocência.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado cita um texto ou situação de apoio que a extração não trouxe; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 11,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-11.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nO argumento é LOGICAMENTE VÁLIDO: P2 afirma p, P3 fornece p → q e P4 fornece q → c, portanto c decorre dessas premissas. Validade significa impossibilidade de premissas verdadeiras e conclusão falsa ao mesmo tempo; não prova que as premissas descrevam os fatos reais. Por isso não demonstra culpa nem inocência de Pablo.\nExemplo: Um encadeamento formal correto pode partir de premissa falsa sobre o mundo. A análise lógica do exercício não substitui apuração de autoria criminal.\nTeste rápido — Argumento válido prova sozinho inocência real? Não.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 11,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "f5428452-40d4-4fe3-8da0-072a59f510c5",
+      "item_number": 39,
+      "career": "Escrivão de Polícia",
+      "pre_context_row_sha256": "aa97fea180c44430560261329a57100d7db6501fad1c32fa5f743041d67a7de7",
+      "pre_publication_row_sha256": "bab50ecda9c8e2715448f9990fed907c14144544c790ba54aef0fc83bb0aaa1f",
+      "published_row_sha256": "8a4802508e25e22c12f5c3d016884b7a14aa5fad25beb478afde9d47fbb5d2d3",
+      "context_patch": {
+        "question_text": "Ao voltar de férias, um escrivão esqueceu-se de um dos caracteres de sua senha do computador do trabalho. Apesar de não se recordar do caractere exato, ele se lembrava de que era uma letra e que podia ser ou não maiúscula. Nesse caso hipotético, considerando-se que o sistema faça a distinção entre caracteres maiúsculos e minúsculos, a probabilidade de o escrivão acertar o caractere de sua senha em até quatro tentativas é de\n(A) 1/(13⁴).\n(B) 1/52.\n(C) 1/26.\n(D) 1/13.\n(E) 2/13.",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: as alternativas não saíram na extração do PDF; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+        "page": 8,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Escrivão-8.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa D. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nHá 52 possibilidades equiprováveis no modelo da banca: 26 letras minúsculas e 26 maiúsculas. Em ATÉ QUATRO TENTATIVAS DISTINTAS, sem repetir opção já descartada, a chance de acertar é 4/52 = 1/13, alternativa D. As frações foram recuperadas visualmente; os símbolos ilegíveis não foram reaproveitados. O critério da banca pressupõe tentativas distintas: com reposição aleatória, o modelo probabilístico seria diferente.\nExemplo: Se uma letra minúscula falhou, insistir nela não cria nova possibilidade favorável; experimente outro dos 52 caracteres.\nTeste rápido — A maiúscula e a minúscula contam como uma só possibilidade? Não: duas.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "8def7cc8-7238-5b52-a10b-c1f3c0ae174e",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf",
+          "captured_at": "2026-10-16T22:08:53.366Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+          "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95",
+          "captured_at": "2026-10-16T22:08:52.491Z"
+        },
+        "official_pdf_page": 8,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "fd758989-470a-49be-991c-a7e3f5a5ed27",
+      "item_number": 42,
+      "career": "Agente de Polícia",
+      "pre_context_row_sha256": "ac2a4b8cef4c2aab1c4d8c7e3c22aa32fdfa9239253b23827232144bbad154ed",
+      "pre_publication_row_sha256": "5ceabfe3574d9f3015d129776866e826f66d8408ce64e5c46eaf3eb4cbf879b0",
+      "published_row_sha256": "886057e976e1300de40ef79bbe71a7077d4630d809ceaf0a01b3a2f06e346d59",
+      "context_patch": {
+        "question_text": "Situação hipotética 1A3-II\nPablo, estudante de direito aprovado em concurso público, foi preso por suspeita de tentativa de roubo, à mão armada, de um celular avaliado em R$ 800,00. Seu nome, o de sua mãe, sua idade e seu local de nascimento coincidiam com as informações apuradas na investigação. Além disso, dados de localização do celular de Pablo, um aparelho de última geração avaliado em mais de R$ 5 mil, indicaram que ele estava na cidade na época do crime.\nEm sua defesa ele alegou o que se segue.\nP1: “Eu estava na cidade porque fui fazer concurso público.”\nP2: “Meu celular vale muito mais que o que me acusam de tentar roubar.”\nP3: “Se meu celular vale muito mais que o que me acusam de tentar roubar, não preciso tentar roubá-lo.”\nP4: “Se não preciso tentar roubá-lo, não cometi esse crime.”\nC: “Logo, não cometi esse crime.”\n\nCom base na situação hipotética 1A3-II, assinale a opção que indica o número de linhas da tabela-verdade da proposição P3.\n(A) 2\n(B) 4\n(C) 8\n(D) 16\n(E) 32",
+        "context_review_required": false,
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: o enunciado cita um texto ou situação de apoio que a extração não trouxe; falta transcrição conferida.\nContexto restaurado por leitura visual individual do caderno oficial em 16/10/2026. Comando separado das alternativas; situações de apoio e frações recuperadas quando necessárias. Gabarito e raw_extraction preservados. Permanece em revisão até avaliação pedagógica e de vigência.",
+        "verified_at": "2026-10-16T22:18:03.810224+00:00"
+      },
+      "context_evidence": {
+        "reason": "Restauração individual do texto e das cinco alternativas; suporte compartilhado incluído para tornar cada questão autossuficiente. Não publica nem altera gabarito.",
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "pdf_sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+        "source_url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "page": 10,
+        "visual_path": "outputs/pc-pending-review-2026-10-16/pe/question-Agente-10.png"
+      },
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo oficial: alternativa B. Prova histórica PCPE 2024; conferência individual em 16/10/2026.\nP3 tem DUAS PROPOSIÇÕES SIMPLES relevantes: p = meu celular vale muito mais que o indicado; q = preciso tentar roubá-lo. Sua forma é p → ¬q. A expressão relativa que identifica o aparelho não acrescenta uma variável independente. Duas variáveis geram 2² = QUATRO linhas.\nExemplo: Uma frase longa pode conter só duas variáveis lógicas: comprimento da frase não determina tamanho da tabela.\nTeste rápido — Três verbos implicam obrigatoriamente oito linhas? Não: conte as proposições independentes.",
+        "verified_at": "2026-10-16T22:22:12.002556+00:00",
+        "current_syllabus_topic_id": "a4fe72ff-0915-5adf-8011-6a6a1f5c27f8",
+        "legal_audit_completed": false,
+        "legal_review_required": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Cotejo individual com página oficial e chave definitiva do cargo. Onze contextos restaurados por fluxo separado; cálculos e equivalências resolvidos independentemente. Questões de informática e lógica classificadas como não jurídicas, sem simular auditoria legal. Delegado 60 retirado do treino por alteração do suporte normativo genético, preservando gabarito histórico.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF"
+        ],
+        "law_captures": [],
+        "additional_captures": [],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16",
+          "captured_at": "2026-10-16T22:08:53.752Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS (P2) – CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+          "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6",
+          "captured_at": "2026-10-16T22:08:52.104Z"
+        },
+        "official_pdf_page": 10,
+        "context_repaired": true,
+        "original_answer_preserved": true
+      }
+    }
+  ]
+}
