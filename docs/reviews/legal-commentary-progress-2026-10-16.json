@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 501,
+  "count": 504,
   "fields_read": [
     "simples",
     "pontos",
@@ -26,9 +26,10 @@
     "legal-commentary-block-15-2026-10-16.md",
     "legal-commentary-block-16-2026-10-16.md",
     "legal-commentary-block-17-2026-10-16.md",
-    "legal-commentary-block-18-2026-10-16.md"
+    "legal-commentary-block-18-2026-10-16.md",
+    "legal-commentary-block-19-2026-10-16.md"
   ],
-  "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
+  "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
     {
       "course": "abuso",
@@ -916,6 +917,30 @@
       "unit_id": "6bcda3ca-153f-55bc-a436-8989ca0aa64b",
       "content_sha256": "13f3f8622e430d43793ece63a3239eb09b5de0f08286239d73986aa1a2d8bba9",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-1",
+      "unit_id": "d8bd4c6c-892f-5bf8-bfe6-826012c95fab",
+      "content_sha256": "5f3728702ff8d9e4676a2c1cb9d438cf8e03676706aa5c83fa083865e1ad5cbe",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-2",
+      "unit_id": "666eda4a-354c-5cf4-b3c7-754578779b32",
+      "content_sha256": "a85aafb372dc3771b9a5566e07435b7d232ba8d7b830d1c04d82844679fc10a5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "codigo-processo-penal",
+      "unit_key": "art-3",
+      "unit_id": "dd0cd752-cd39-53b3-850c-6fe8bfd63291",
+      "content_sha256": "b99a3a1c2753d0f0ff37952880ad10b509058e46ad931bfafceaf20f0bafec21",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
       "result": "preserved"
     },
     {
