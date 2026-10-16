@@ -5,11 +5,7 @@ import {sameReviewRow} from './publish-question-review.mjs';
 import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 const kinds=new Set(['edital','prova','gabarito']);
 const filter=row=>Object.entries(row).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
-export async function prepareExamSources(pack,request,{dryRun=false,readPdf=readFile}={}) {
- if(!Array.isArray(pack.sources)||pack.sources.length!==3||new Set(pack.sources.map(s=>s.kind)).size!==3)throw Error('Exactly one caderno, final key and edital required');
- const planned=[];
- for(const item of pack.sources){
-  const {row,evidence,expected,kind}=item;
+export async function verifyOfficialExamCapture({row,evidence,kind},readPdf=readFile) {
   if(!kinds.has(kind)||!row?.id||!row.is_official||row.status!=='vigente'||row.source_type!==(kind==='edital'?'edital':'outro')||!Number.isFinite(Date.parse(row.checked_at))||Date.parse(row.checked_at)>Date.now())throw Error('Invalid official source');
   const url=new URL(row.url),catalog=new URL(evidence?.catalog_url??'');
   const cebraspeApi=url.hostname==='cdn.cebraspe.org.br'&&catalog.hostname==='apis.cebraspe.org.br'&&/^\/cebraspe\/eventos\/[a-z0-9_]+$/i.test(catalog.pathname);
@@ -23,6 +19,13 @@ export async function prepareExamSources(pack,request,{dryRun=false,readPdf=read
    if(String(data.eventoURL).toLowerCase()!==event||!url.pathname.toLowerCase().startsWith(`/concursos/${event}/arquivos/`)||!files.some(f=>f.nomeArquivo===decodeURIComponent(url.pathname.split('/').at(-1))))throw Error('PDF not listed in the official event catalog');
   }
   const bytes=await readPdf(evidence.pdf_path);if(createHash('sha256').update(bytes).digest('hex')!==evidence.sha256||!bytes.subarray(0,4).equals(Buffer.from('%PDF')))throw Error('Source PDF changed');
+}
+export async function prepareExamSources(pack,request,{dryRun=false,readPdf=readFile}={}) {
+ if(!Array.isArray(pack.sources)||pack.sources.length!==3||new Set(pack.sources.map(s=>s.kind)).size!==3)throw Error('Exactly one caderno, final key and edital required');
+ const planned=[];
+ for(const item of pack.sources){
+  const {row,evidence,expected,kind}=item;
+  await verifyOfficialExamCapture(item,readPdf);
   const [actual]=await request(`content_sources?url=eq.${encodeURIComponent(row.url)}&select=*`);
   if(actual&&sameReviewRow(actual,row))continue;
   if(actual&&!sameReviewRow(actual,expected))throw Error('Concurrent source revision');
