@@ -62,3 +62,7 @@ No conjunto canônico de 79 registros, o acumulado é **67 ativos após revisão
 Leitura geral de 16/10/2026 03:57 UTC: **7.768 registros físicos**, **6.371 ativos e 1.064 em revisão** nas quatro tabelas. Não é contagem de questões únicas. Não houve mudança da aplicação; build não foi necessário.
 
 Inventário e hashes: `docs/question-review-pcac-v-batch5-2026-10-16.json`. PDFs, snapshots e evidências brutas permanecem em outputs ignorados. O rascunho de rede inclui domínios adicionais para pesquisa futura; sua ativação requer revisar/salvar e publicar o ambiente. As fontes efetivamente usadas neste lote foram acessadas com sucesso.
+
+## Encerramento posterior das cinco pendências
+
+Após o usuário anexar os PDFs da prova e do gabarito, as questões 2, 6, 7, 8 e 10 foram recuperadas, validadas e publicadas no lote 6. O bloqueio descrito neste relatório histórico foi resolvido; o caderno ficou sem pendências registradas. Consulte `docs/reviews/pcac-v-completion-2026-10-16.md` e o inventário do lote 6 para o estado posterior.

@@ -1,0 +1,66 @@
+{
+  "scope": "Conclusão das cinco pendências de Português após recebimento dos PDFs pelo usuário; gabaritos e questões originais preservados.",
+  "active": [
+    {
+      "item_number": 2,
+      "answer": "A",
+      "norm": null,
+      "matrix": "matrix",
+      "topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+      "explanation": "Resposta: A.\nA forma “nossa” inclui a autora e quem lê no mesmo grupo de referência. Essa primeira pessoa do plural ajuda a construir o diálogo com o leitor, na leitura adotada pela banca. As outras alternativas apresentam afirmações sobre terceiros ou uma orientação geral, sem o mesmo recurso inclusivo. Isso não significa que qualquer pronome de primeira pessoa do plural tenha sempre função idêntica: a interpretação depende do contexto. A análise linguística não endossa as classificações raciais históricas reproduzidas no texto.\nExemplo: Em “Nossa cidade precisa discutir o tema”, o enunciador pode convidar os leitores a uma reflexão compartilhada. Variação: em “A cidade publicou um relatório”, a referência em terceira pessoa não produz automaticamente a mesma inclusão. Fixação: identifique quem participa do grupo indicado pelo pronome.",
+      "extra_sources": [
+        "prova_user_upload",
+        "gabarito_user_upload"
+      ]
+    },
+    {
+      "item_number": 6,
+      "answer": "D",
+      "norm": null,
+      "matrix": "matrix",
+      "topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+      "explanation": "Resposta: D.\n“Houve” tem sentido de existir: é impessoal e permanece na terceira pessoa do singular, mesmo que o termo seguinte vá ao plural. O fragmento não usa haver para indicar um intervalo decorrido, como na construção “há três dias”; por isso C não explica adequadamente o uso. Na segunda passagem, “polui-se” forma construção passiva sintética e concorda com o sujeito paciente, cujo núcleo é “linfa”, no singular. Não concorda com “gota”, que está em outra oração. Impessoalidade não se confunde com verbo defectivo.\nExemplo: “Houve mudanças” conserva haver no singular; “Existiram mudanças” leva existir ao plural. Variação: em “Venderam-se casas”, o verbo vai ao plural para concordar com casas, sujeito paciente. Fixação: determine primeiro o sentido do verbo e o sujeito da sua própria oração.",
+      "extra_sources": [
+        "prova_user_upload",
+        "gabarito_user_upload"
+      ]
+    },
+    {
+      "item_number": 7,
+      "answer": "C",
+      "norm": null,
+      "matrix": "matrix",
+      "topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+      "explanation": "Resposta: C — comparação, conforme a leitura do gabarito oficial.\nNo segmento, a referência introduzida por “tais” aproxima o grupo retomado dos remanescentes mencionados. O ponto cobrado é a relação entre esses elementos no contexto. Os travessões delimitam o trecho; eles não possuem, sozinhos, um significado comparativo fixo. Não se deve transformar a resposta deste item em uma regra de que toda intercalação entre travessões é comparação.\nExemplo: Em “Alguns tecidos, como o linho, exigem cuidado”, a expressão introduzida por como estabelece uma relação com o grupo mencionado. Variação: em “A candidata — que chegou cedo — aguardou a abertura”, o trecho intercalado acrescenta informação, sem produzir automaticamente uma comparação. Fixação: leia o marcador e o referente, além de observar a pontuação.",
+      "extra_sources": [
+        "prova_user_upload",
+        "gabarito_user_upload"
+      ]
+    },
+    {
+      "item_number": 8,
+      "answer": "A",
+      "norm": null,
+      "matrix": "matrix",
+      "topic_id": "13a80069-1852-447d-a71b-1c8f2489c487",
+      "explanation": "Resposta: A.\nNa leitura contextual cobrada, a alternativa conserva o encadeamento e troca o relativo “que” por “a qual”, concordando com o antecedente feminino singular. B compromete a construção da oração principal e altera relações de sentido; C usa “onde” sem antecedente locativo adequado; D muda a organização lógica e introduz restrição incompatível; E substitui o articulador por um conector causal. Não se ensina que “aliás” e “na verdade” sejam intercambiáveis em qualquer texto: a adequação aqui é contextual e deve preservar o conjunto do período.\nExemplo: Em “A proposta, que foi aprovada, será executada”, pode-se examinar a substituição de que por a qual, preservando concordância e pontuação. Variação: um conector de causa não substitui automaticamente uma expressão de confirmação ou retificação. Fixação: confira separadamente a construção gramatical e a relação entre as ideias.",
+      "extra_sources": [
+        "prova_user_upload",
+        "gabarito_user_upload"
+      ]
+    },
+    {
+      "item_number": 10,
+      "answer": "D",
+      "norm": null,
+      "matrix": "matrix",
+      "topic_id": "5873244d-48e6-4241-a474-b5db3317d27f",
+      "explanation": "Resposta: D — II e III.\nI é falsa: em “caímos”, o i tônico forma hiato; na análise escolar cobrada, “indivíduo” é acentuado como paroxítona terminada em ditongo. Não é a mesma regra. II é verdadeira na alteração expressamente proposta: substantivo no plural, com a mantido no singular e sem artigo definido plural, não apresenta a contração indicada por crase. III é verdadeira porque “isso” retoma uma ideia anteriormente apresentada; a referência pode abranger uma proposição, não apenas uma palavra isolada.\nExemplo: “Refiro-me a normas gerais” não contém artigo definido plural; “Refiro-me às normas aprovadas” contém a contração com as. Variação: “Ela apresentou a justificativa. Isso encerrou a discussão” usa o demonstrativo para retomar o fato anterior. Fixação: identifique a regra de acento e os elementos que efetivamente se contraem antes de marcar crase.",
+      "extra_sources": [
+        "prova_user_upload",
+        "gabarito_user_upload"
+      ]
+    }
+  ],
+  "historical": []
+}

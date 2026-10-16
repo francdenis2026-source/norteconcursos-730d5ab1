@@ -324,6 +324,20 @@
       "sha256": "a92f79cbba66cba5c83d9504ef50f83e4cb13edb98d14f35f643d3f0a12059c2",
       "reviewed_at": "2026-10-16T03:49:11.668859+00:00",
       "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "prova_user_upload": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+      "title": "PC-AC 2017 S01-V — caderno anexado pelo usuário",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69",
+      "reviewed_at": "2026-10-16T04:13:51.208651+00:00",
+      "retrieval": "Arquivo fornecido pelo usuário nesta conversa e conferido nesta data. Bytes idênticos ao arquivo oficial anteriormente registrado. Não é declaração de nova obtenção pela internet."
+    },
+    "gabarito_user_upload": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "title": "PC-AC 2017 S01-V — gabarito definitivo anexado pelo usuário",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697",
+      "reviewed_at": "2026-10-16T04:13:51.208651+00:00",
+      "retrieval": "Arquivo fornecido pelo usuário nesta conversa e conferido nesta data. Bytes idênticos ao arquivo oficial anteriormente registrado. Não é declaração de nova obtenção pela internet."
     }
   }
 }

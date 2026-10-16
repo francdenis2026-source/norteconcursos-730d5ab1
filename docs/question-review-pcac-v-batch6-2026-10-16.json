@@ -1,0 +1,160 @@
+{
+  "checked_at": "2026-10-16T04:15:58.867Z",
+  "exam": "PC-AC 2017 Agente S01-V",
+  "scope": "Conclusão das cinco pendências de contexto/editoriais registradas deste caderno após recebimento dos PDFs pelo usuário. Não é certificação de todos os detalhes ou de todo o acervo da plataforma.",
+  "this_batch": {
+    "reviewed_and_published_active": [
+      2,
+      6,
+      7,
+      8,
+      10
+    ],
+    "official_answers": {
+      "2": "A",
+      "6": "D",
+      "7": "C",
+      "8": "A",
+      "10": "D"
+    },
+    "context_repairs": 5,
+    "sources_created": 0,
+    "topics_created": 0,
+    "application_changes": 0,
+    "library_unit_changes": 0
+  },
+  "provided_files": {
+    "prova": {
+      "name": "V-4.pdf",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69",
+      "matches_registered_official_source": true
+    },
+    "gabarito": {
+      "name": "Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697",
+      "matches_registered_official_source": true,
+      "matching_key_page": 2
+    }
+  },
+  "canonical_exam_records": 79,
+  "canonical_exam_status": {
+    "active": 72,
+    "archived": 4,
+    "obsolete": 3,
+    "under_review": 0
+  },
+  "active_eligible": 72,
+  "official_annulled_item_outside_canonical_scope": 26,
+  "physical_records_in_scope_with_archived_aliases": 158,
+  "cumulative_editorial_decisions": 79,
+  "cumulative_recovered_texts": 79,
+  "pending_in_exam": [],
+  "validation": {
+    "mode": "published",
+    "verified_at": "2026-10-16T04:15:56.008Z",
+    "context_repairs_verified": 5,
+    "complete_exam_records_compared": 158,
+    "original_answers_and_raw_preserved": true,
+    "untargeted_records_preserved": 153,
+    "editorial_decisions_checked": 5,
+    "active_eligible": 5,
+    "formula_and_math_checks": true
+  },
+  "eligibility_and_metadata": {
+    "canonical_records": 79,
+    "active_eligible": 72,
+    "pending": 0,
+    "missing_context": 0,
+    "metadata": {
+      "content_sources": {
+        "before": 378,
+        "after": 379,
+        "changed_previous": 0
+      },
+      "syllabus_editions": {
+        "before": 56,
+        "after": 56,
+        "changed_previous": 0
+      },
+      "syllabus_topics": {
+        "before": 709,
+        "after": 709,
+        "changed_previous": 0
+      }
+    }
+  },
+  "tests": {
+    "passed": 202,
+    "failed": 0,
+    "skipped": 0
+  },
+  "build": "Não executado: apenas conteúdo do banco e documentação, sem mudança de aplicação.",
+  "global_snapshot": {
+    "checked_at": "2026-10-16T04:15:58.867Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 4011,
+        "under_review": 553,
+        "archived": 256,
+        "obsolete": 31,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 691,
+        "under_review": 356,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6526,
+      "under_review": 909,
+      "archived": 263,
+      "obsolete": 33,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "external_changes_not_authored_here": {
+    "board_active_delta_since_previous_inventory": 150,
+    "board_under_review_delta_since_previous_inventory": -150,
+    "content_sources_new_since_this_batch_snapshot": 1
+  },
+  "private_artifact_sha256": {
+    "before.json": "661ceeb0795b188b4698d116d776b963d2ed230440b8b30665f92a5822516065",
+    "after.json": "00c9e260d58920762ea5d2a8854a719eb73faa9f5c5839f1d4b75ebb0a2ede0f",
+    "context-pack.json": "d16927447b2777fb00430c22eb92dd84c0799e535072fff20352b7ce5b0db9a0",
+    "review-pack.json": "66f807005c2ebf2cb2066bc250d71653928a85db4e1d744327ad554c065ae258",
+    "validation-final.json": "0948e863f2bad681deb2116ee6e8051841d7b3915ad90aea667aa844f2050753",
+    "eligibility-and-metadata.json": "0c7ce9efda2d70e4ee1a025591320ec54d0f93669bd5f3af369b4bae4221f7f0",
+    "counts-final.json": "fc527e3af6fb8bad3850b3940be3f3205c7a6d1babce4fb9be3b85ca8a38705e"
+  }
+}
