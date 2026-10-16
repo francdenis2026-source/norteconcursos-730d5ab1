@@ -396,7 +396,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigate = useNavigate();
   const { user } = useAuthStatus();
   const [isCollapsed, setIsCollapsed] = React.useState(false);
-  const [isDarkMode, setIsDarkMode] = React.useState(() => getActiveTheme() === "dark");
+  // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
+  // da hidratação para não gerar mismatch (ver src/lib/theme.ts).
+  const [isDarkMode, setIsDarkMode] = React.useState(true);
+  React.useEffect(() => setIsDarkMode(getActiveTheme() === "dark"), []);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);

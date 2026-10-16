@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-16",
+  "course": "codigo-processo-penal",
+  "unit_key": "art-4",
+  "unit_id": "302ec3b5-be62-59e2-90c9-db208ffe1524",
+  "reason": "Aprofundamento das condições de investigação pelo MP, sem alterar o texto legal ou a regra correta anterior.",
+  "source": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2145454",
+  "source_equivalent": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1230",
+  "before_row_md5": "6224b213134dc5a253069d3ead88e14e",
+  "content_sha256": "65bd0eaa1171e3fe676889bd3441442db0520b8aead7a53f7abefb34657d6047",
+  "patch": {
+    "pontos": [
+      "Finalidade: apurar infração e autoria, não condenar.",
+      "Circunscrição delimita atuação policial, não se confunde automaticamente com competência judicial.",
+      "MP pode investigar, com prazo razoável, documentação, garantias e controle judicial, segundo Tema 184/STF.",
+      "ADIs 2943, 3309 e 3318, julgamento de 02/05/2024: instauração e encerramento do procedimento investigatório do MP devem ser imediatamente comunicados ao juiz competente, com registro e distribuição; aplicam-se os prazos e regras dos inquéritos policiais."
+    ],
+    "atencao": [
+      "Não transformar competência investigativa em poder de restringir qualquer direito sem autorização. A reserva de jurisdição e as prerrogativas defensivas permanecem.",
+      "Prorrogações do procedimento do MP exigem autorização judicial; não são permitidas renovações desproporcionais ou sem motivação. Havendo PIC ou inquérito anterior, observar distribuição por dependência para evitar duplicidade. O art. 18 do CPP também se aplica ao PIC."
+    ],
+    "exemplo": "O MP instaura investigação criminal e documenta atos sob controle judicial: não é inválida apenas por não ter sido presidida pela polícia. Variação: Determinar interceptação exige o regime judicial próprio; o poder investigativo do MP não afasta essa reserva. Outra situação: o MP precisa ampliar o prazo de seu procedimento. Deve pedir autorização judicial e justificar a necessidade; renovar o prazo internamente, sem controle judicial, não atende às condições fixadas pelo STF.",
+    "prova": [
+      "A polícia condena ao concluir o inquérito? Não; apura fato e autoria.",
+      "O art. 4º proíbe toda investigação criminal do MP? Não; Tema 184 reconhece competência com garantias e controle.",
+      "O MP pode prorrogar seu procedimento investigatório apenas por decisão interna, sem autorização judicial? Não; as ADIs 2943, 3309 e 3318 exigem autorização judicial e vedam renovações desproporcionais ou imotivadas."
+    ],
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "https://noticias.stf.jus.br/postsnoticias/stf-fixa-requisitos-para-atuacao-do-ministerio-publico-em-investigacoes-penais/",
+      "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=RE&numeroProcesso=593727",
+      "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2145454"
+    ]
+  },
+  "verified_after": {
+    "prova": [
+      "A polícia condena ao concluir o inquérito? Não; apura fato e autoria.",
+      "O art. 4º proíbe toda investigação criminal do MP? Não; Tema 184 reconhece competência com garantias e controle.",
+      "O MP pode prorrogar seu procedimento investigatório apenas por decisão interna, sem autorização judicial? Não; as ADIs 2943, 3309 e 3318 exigem autorização judicial e vedam renovações desproporcionais ou imotivadas."
+    ],
+    "pontos": [
+      "Finalidade: apurar infração e autoria, não condenar.",
+      "Circunscrição delimita atuação policial, não se confunde automaticamente com competência judicial.",
+      "MP pode investigar, com prazo razoável, documentação, garantias e controle judicial, segundo Tema 184/STF.",
+      "ADIs 2943, 3309 e 3318, julgamento de 02/05/2024: instauração e encerramento do procedimento investigatório do MP devem ser imediatamente comunicados ao juiz competente, com registro e distribuição; aplicam-se os prazos e regras dos inquéritos policiais."
+    ],
+    "status": "published",
+    "termos": [
+      {
+        "termo": "Polícia judiciária",
+        "significado": "Função de apuração penal distinta de julgamento e de policiamento ostensivo."
+      }
+    ],
+    "atencao": [
+      "Não transformar competência investigativa em poder de restringir qualquer direito sem autorização. A reserva de jurisdição e as prerrogativas defensivas permanecem.",
+      "Prorrogações do procedimento do MP exigem autorização judicial; não são permitidas renovações desproporcionais ou sem motivação. Havendo PIC ou inquérito anterior, observar distribuição por dependência para evitar duplicidade. O art. 18 do CPP também se aplica ao PIC."
+    ],
+    "exemplo": "O MP instaura investigação criminal e documenta atos sob controle judicial: não é inválida apenas por não ter sido presidida pela polícia. Variação: Determinar interceptação exige o regime judicial próprio; o poder investigativo do MP não afasta essa reserva. Outra situação: o MP precisa ampliar o prazo de seu procedimento. Deve pedir autorização judicial e justificar a necessidade; renovar o prazo internamente, sem controle judicial, não atende às condições fixadas pelo STF.",
+    "simples": "A polícia judiciária apura infrações penais e autoria nas respectivas circunscrições. O parágrafo não exclui autoridades administrativas com função investigativa atribuída por lei; investigação criminal não é monopólio absoluto da polícia.",
+    "unit_id": "302ec3b5-be62-59e2-90c9-db208ffe1524",
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "https://noticias.stf.jus.br/postsnoticias/stf-fixa-requisitos-para-atuacao-do-ministerio-publico-em-investigacoes-penais/",
+      "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=RE&numeroProcesso=593727",
+      "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2145454"
+    ],
+    "created_at": "2026-10-11T13:15:09.415136+00:00",
+    "updated_at": "2026-10-16T18:21:15.653328+00:00",
+    "authored_by": "codex",
+    "reviewed_at": "2026-10-16T18:21:15.653328+00:00",
+    "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+    "content_sha256": "65bd0eaa1171e3fe676889bd3441442db0520b8aead7a53f7abefb34657d6047"
+  },
+  "verification": "Comparação de todos os campos: alterações apenas previstas e datas reviewed_at/updated_at; guardas de publicação, hash, curso e edital ativos; conteúdo pendente não alterado."
+}

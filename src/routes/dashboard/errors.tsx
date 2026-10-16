@@ -115,7 +115,12 @@ function ErrorArsenal({
           <p className="text-sm leading-6">{explanation.example}</p>
         </div>
       )}
-      {question.checkedAt && question.legalBasis.length > 0 && (
+      {question.preliminaryKey && (
+                <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+                  Gabarito preliminar da banca: pode mudar após recursos. Confira o definitivo quando sair.
+                </p>
+              )}
+              {question.checkedAt && question.legalBasis.length > 0 && (
         <p className="text-xs text-muted-foreground">
           Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
         </p>

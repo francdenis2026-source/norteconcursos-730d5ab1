@@ -31,6 +31,7 @@ import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LockedState } from "@/components/dashboard/PageHero";
+import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import type { UserProfile } from "@/types";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -229,6 +230,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           />
         </picture>
       </header>
+      <PcprExamSpotlight />
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric
           icon={BrainCircuit}

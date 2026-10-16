@@ -33,7 +33,14 @@ export type Question = {
   state: string;
   category: string;
   kind?: "true_false" | "multiple_choice";
+  preliminaryKey?: boolean;
+  itemNumber?: number | undefined;
+  testedTopic?: string | null;
+  figures?: string[] | undefined;
 };
+
+// review_note começa com esta marca enquanto o gabarito é o preliminar da banca; remover a marca ao conferir o definitivo.
+export const PRELIMINARY_KEY_MARK = "Gabarito PRELIMINAR";
 
 export const normalizeDifficulty = (value: unknown): Difficulty => {
   const text = String(value ?? "").toLowerCase();
@@ -74,7 +81,7 @@ export const basisHref = (basis: LegalBasis) => {
 // Assembleia Geral da ONU) são verificados diretamente nas fontes primárias
 // dos organismos que os custodiam.
 const OFFICIAL_SOURCE =
-  /(^|\.)(planalto\.gov\.br|sinj\.df\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
+  /(^|\.)(planalto\.gov\.br|sinj\.df\.gov\.br|legislacao\.pr\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|oas\.org|corteidh\.or\.cr|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
 export const isOfficialUrl = (url?: string) => {
   try {
     return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
@@ -177,8 +184,11 @@ export function parseQuestion(raw: string): ParsedQuestion {
   let baseLabel = "Texto de apoio";
   // "Texto-base [Texto 1]:" (rótulo opcional). Quando o texto tem parágrafos separados por linha em branco,
   // o fim do texto vem marcado com "[[/texto-base]]" numa linha própria, para não confundir o 1º parágrafo com o enunciado.
-  const marked = text.match(/^(Texto-base)(?: \[([^\]]+)\])?:\n([\s\S]*)\n\n\[\[\/texto-base\]\]\n/);
-  const head = marked ?? text.match(/^(Texto-base|Comando)(?: \[([^\]]+)\])?:\n([\s\S]*?)\n\n(?=\S)/);
+  const marked = text.match(
+    /^(Texto-base)(?: \[([^\]]+)\])?:\n([\s\S]*)\n\n\[\[\/texto-base\]\]\n/,
+  );
+  const head =
+    marked ?? text.match(/^(Texto-base|Comando)(?: \[([^\]]+)\])?:\n([\s\S]*?)\n\n(?=\S)/);
   if (head) {
     baseLabel = head[1] === "Comando" ? "Comando da questão" : head[2] ? head[2] : "Texto de apoio";
     base = (head[3] ?? "").trim();

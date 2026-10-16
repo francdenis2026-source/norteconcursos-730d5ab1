@@ -1,4 +1,4 @@
-import { SubscriptionTier } from "../types";
+import type { SubscriptionTier } from "../types";
 
 export interface TierFeature {
   name: string;
@@ -15,6 +15,11 @@ export interface TierPlan {
   isPopular?: boolean;
 }
 
+/** Limite diário de questões do plano Gratuito (renova à meia-noite do Acre). */
+export const FREE_DAILY_QUESTIONS = 20;
+/** Materiais da Biblioteca e do percurso de leis que o plano Gratuito abre por dia. */
+export const FREE_DAILY_LIBRARY = 3;
+
 export const SUBSCRIPTION_PLANS: TierPlan[] = [
   {
     id: "free",
@@ -23,11 +28,16 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     description: "Para quem está começando a jornada.",
     features: {
       aiSolver: { name: "Resoluções com IA", included: false },
-      questions: { name: "Questões por dia", included: true, limit: 10 },
+      questions: { name: "Questões por dia", included: true, limit: FREE_DAILY_QUESTIONS },
       mockExams: { name: "Simulados completos", included: false },
       performanceAnalytics: { name: "Análise básica", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos", included: false },
+      notebooks: { name: "Cadernos de estudo", included: false },
+      flashcards: { name: "Flashcards", included: false },
+      library: { name: "Biblioteca e leis (por dia)", included: true, limit: FREE_DAILY_LIBRARY },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: false },
+      essays: { name: "Redação para concursos", included: false },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
@@ -43,6 +53,11 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
       performanceAnalytics: { name: "Análise detalhada", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      essays: { name: "Redação para concursos", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
@@ -59,6 +74,11 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
       performanceAnalytics: { name: "Análise avançada", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos adaptativo", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      essays: { name: "Redação para concursos", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: false },
     },
   },
@@ -74,6 +94,11 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
       performanceAnalytics: { name: "Relatórios consolidados", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos personalizado", included: true },
+      notebooks: { name: "Cadernos de estudo", included: true },
+      flashcards: { name: "Flashcards", included: true },
+      library: { name: "Biblioteca e leis comentadas", included: true },
+      editalRadar: { name: "Radar do edital e Panorama das provas", included: true },
+      essays: { name: "Redação para concursos", included: true },
       examRegistration: { name: "Cadastro e análise das suas provas", included: true },
       prioritySupport: { name: "Suporte Prioritário", included: true },
     },

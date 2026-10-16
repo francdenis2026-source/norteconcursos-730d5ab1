@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import { platformDate } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
 import { canonicalSubject } from "@/lib/subjects";
@@ -37,7 +38,11 @@ export const Route = createFileRoute("/dashboard/flashcards")({
     subject: typeof s["subject"] === "string" ? s["subject"] : undefined,
     topic: typeof s["topic"] === "string" ? s["topic"] : undefined,
   }),
-  component: FlashcardsPage,
+  component: () => (
+    <PlanGate feature="flashcards" title="Flashcards">
+      <FlashcardsPage />
+    </PlanGate>
+  ),
 });
 
 interface Card_ {
