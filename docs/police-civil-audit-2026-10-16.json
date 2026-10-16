@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-16T16:00:44.751Z",
-  "generated_at": "2026-10-16T16:02:06.783Z",
+  "snapshot_at": "2026-10-16T16:05:52.961Z",
+  "generated_at": "2026-10-16T16:06:55.936Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -256,11 +256,11 @@
       "status": {
         "active": 111
       },
-      "active_app_eligible": 50,
-      "active_with_catalog_flags": 61,
-      "active_without_example_marker": 61,
+      "active_app_eligible": 64,
+      "active_with_catalog_flags": 47,
+      "active_without_example_marker": 47,
       "flags": {
-        "app_gate_rejected": 61
+        "app_gate_rejected": 47
       }
     },
     {
@@ -551,24 +551,24 @@
       "annulled": 37,
       "obsolete": 6
     },
-    "active_app_eligible": 1969,
-    "active_with_catalog_flags": 1974,
-    "active_without_example_marker": 2355,
+    "active_app_eligible": 1983,
+    "active_with_catalog_flags": 1960,
+    "active_without_example_marker": 2341,
     "editorial_approvals_this_run": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 50,
-    "newly_published": 50,
+    "newly_reviewed": 64,
+    "newly_published": 64,
     "scope": "PCDF Delegado 2026, individual legal and pedagogical review; status, answers, raw extraction and source IDs preserved. This is not a certificate of all PC exams.",
-    "remaining_pcdf_current_items_this_campaign": 61,
-    "other_active_pc_items_not_yet_covered_this_campaign": 2431,
+    "remaining_pcdf_current_items_this_campaign": 47,
+    "other_active_pc_items_not_yet_covered_this_campaign": 2417,
     "pending_under_review_all_pc": 234,
     "previous_pcpr_review": "b6a1672",
     "validation": {
-      "checked_at": "2026-10-16T16:00:55.415Z",
-      "audited": 50,
-      "eligible_audited": 50,
-      "other_pc_rows_preserved": 2918,
+      "checked_at": "2026-10-16T16:06:00.288Z",
+      "audited": 64,
+      "eligible_audited": 64,
+      "other_pc_rows_preserved": 2904,
       "concurrent_unrelated_pc_rows": [],
       "missing_pc_rows": [],
       "original_texts_answers_sources_subjects_statuses_preserved": true,
@@ -822,6 +822,76 @@
           "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
           "item_number": 34,
           "eligible": true
+        },
+        {
+          "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+          "item_number": 85,
+          "eligible": true
+        },
+        {
+          "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+          "item_number": 115,
+          "eligible": true
+        },
+        {
+          "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+          "item_number": 105,
+          "eligible": true
+        },
+        {
+          "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+          "item_number": 3,
+          "eligible": true
+        },
+        {
+          "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+          "item_number": 48,
+          "eligible": true
+        },
+        {
+          "id": "40aec608-f805-49af-a971-537ab56d2449",
+          "item_number": 113,
+          "eligible": true
+        },
+        {
+          "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+          "item_number": 7,
+          "eligible": true
+        },
+        {
+          "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+          "item_number": 87,
+          "eligible": true
+        },
+        {
+          "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+          "item_number": 45,
+          "eligible": true
+        },
+        {
+          "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+          "item_number": 112,
+          "eligible": true
+        },
+        {
+          "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+          "item_number": 81,
+          "eligible": true
+        },
+        {
+          "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+          "item_number": 88,
+          "eligible": true
+        },
+        {
+          "id": "ef3167f7-b998-406f-b567-e722bc835087",
+          "item_number": 114,
+          "eligible": true
+        },
+        {
+          "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+          "item_number": 41,
+          "eligible": true
         }
       ]
     }
@@ -850,5 +920,870 @@
     "editorial_batch": 50,
     "not_reviewed_editorially_in_this_batch": 61,
     "limitation": "Compared isolated stems and definitive letters; shared support contexts require separate verification before those dependent items are released. No endorsement of all preliminary explanations."
+  },
+  "source_access_check": {
+    "checked_at": "2026-10-16T16:03:25.858Z",
+    "scope": "HTTP/PDF-format access only; no legal, final-answer or source-identity approval",
+    "sources": [
+      {
+        "id": "0679a687-54f5-46d0-a854-5a695b3cd204",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1KBHuiegK67VlDZ9_qlwD2de9QVtE713n/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "0aad1229-5450-4e10-9973-53020b883c59",
+        "title": "Gabarito definitivo PC/ES - Delegado de Polícia - 2022 (Conhecimentos Específicos)",
+        "url": "https://drive.google.com/file/d/1g2lHFTok06Nbpk7ZQS5Ut_8dUkroSklm/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "0c8cd2e4-8436-434e-ac23-04b4cc033e26",
+        "title": "Prova objetiva (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+        "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/oippcceg1.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "0e9fe084-c258-4687-b5b8-86abbbec410d",
+        "title": "Gabarito definitivo PCDF - Delegado - 2026",
+        "url": "http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=gabarito_definitivo_p1",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "067bfc9a-d33e-45b3-a264-a428ec87e226",
+        "title": "Gabarito oficial definitivo (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:13.985Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/067bfc9a-d33e-45b3-a264-a428ec87e226.pdf",
+        "sha256": "66112d99d6dc25ee043e9a6133ccd7955a8fa99350a01d32df2651c2b589ee18"
+      },
+      {
+        "id": "0093adc0-8051-40d3-9dae-a0ea797e9341",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador-de-policia-icns401-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:14.000Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/0093adc0-8051-40d3-9dae-a0ea797e9341.pdf",
+        "sha256": "637c50bf3e64b09c6ef5dba405be25e856fe7b4f9b4c0dad5cb498f57705a42f"
+      },
+      {
+        "id": "12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e01_gabarito_definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:14.106Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74.pdf",
+        "sha256": "1b9b7aff287219efde78779bb2ebdc6ef72442db5b6b58fa549eb33dc8d96a90"
+      },
+      {
+        "id": "17883747-eefc-5cea-8985-8b65bfd85470",
+        "title": "Prova objetiva PCMG TPAG 2026 — Eixo Legislação",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:15.468Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/17883747-eefc-5cea-8985-8b65bfd85470.pdf",
+        "sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a"
+      },
+      {
+        "id": "2321adea-43d7-4b74-8de0-c3ee2dab9b38",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Geral",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_geral",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "24fe9686-3c49-42f1-8a33-061de92bb626",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1wTHKfk4jOxVNcoscagNnV6yOTpV4IMtV/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "1e91ec85-62cf-4cf0-90b0-1e9ee0edce1c",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:15.603Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/1e91ec85-62cf-4cf0-90b0-1e9ee0edce1c.pdf",
+        "sha256": "42e324097435673aa4680632f15accb634c80dacf6df11a49779979f260a62d3"
+      },
+      {
+        "id": "2775d0d6-670b-4147-a705-7959a2fd98e3",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE002_00_COM_JUSTIFICATIVA.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.278Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/2775d0d6-670b-4147-a705-7959a2fd98e3.pdf",
+        "sha256": "7f19b09bb657c4c4630ee15490d26b3487e7b5ac5c2a93218892b4a59e4e33bf"
+      },
+      {
+        "id": "2f09a80d-b038-4a38-ac84-3de98e26184f",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1PgQEOt35VTZ3SR4xLI5uG7Y67D2pnAWG/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "3072439a-64fc-41ad-807d-e578b19e6868",
+        "title": "Prova objetiva PC/ES - Delegado de Polícia - 2022",
+        "url": "https://drive.google.com/file/d/1iXQnSEq7bc-EKkp3a0R3Qx78FWTA4wy9/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "30d1c027-8fc9-450d-b37b-f76fa9aa813e",
+        "title": "Edital nº 001/2017 - Governo do Estado do Acre/SEPC, Polícia Civil do Acre",
+        "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/54462/ibade-2017-pc-ac-agente-de-policia-civil-gabarito.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "2cf1a57e-fa5e-4e97-9728-a9c237624142",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/oficial-investigador-cns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.865Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/2cf1a57e-fa5e-4e97-9728-a9c237624142.pdf",
+        "sha256": "ac6be6effade8bd2a52932af4a0333151fa3d6976bcf40f8be80d7010e2ed991"
+      },
+      {
+        "id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "title": "Gabarito oficial definitivo - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "3198f5dc-172d-42bf-b7a7-acd101f03a44",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpdelegado.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:16.936Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/3198f5dc-172d-42bf-b7a7-acd101f03a44.pdf",
+        "sha256": "445b2d3d1e308f808a11f3a53a891b9775246b1c738b5e99e35f0d98d8897a33"
+      },
+      {
+        "id": "39ab4b9f-faab-480c-88e7-919e898fa1ac",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1-OdntAdaQA_me9NvqCqst4gE5UylcYso/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "391a22cd-a424-4c50-99a0-28a701352bfa",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.093Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/391a22cd-a424-4c50-99a0-28a701352bfa.pdf",
+        "sha256": "e466ffa704b6019ec72708b900b07315523db18663fb09a5866b4c0802b110f8"
+      },
+      {
+        "id": "3cdfcc5f-311e-4f35-a8c3-42b67e4caee2",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_002_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.132Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/3cdfcc5f-311e-4f35-a8c3-42b67e4caee2.pdf",
+        "sha256": "73845f978cc2356f80caa595a34249a35f8e85839129ce97deb0a155178948da"
+      },
+      {
+        "id": "04dc4dc3-565a-4add-bfda-24835caf13aa",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.470Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/04dc4dc3-565a-4add-bfda-24835caf13aa.pdf",
+        "sha256": "fb768889b70e0de41aab14249ef029123b5a578a49bc02c08b7c603c93de1e2a"
+      },
+      {
+        "id": "43c654d1-90c8-4858-8104-6a5a16a0d208",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1ZT5pIIJ9SGqbJ4N9UgPm3QTT-bnWAAPQ/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "43f24940-05a0-44af-9126-2e2f5f6232ba",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/15iSenCLJL3iw9Yo6XnZbjQikU0QI4cmD/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+        "title": "Gabarito oficial definitivo (3 eixos) – Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.656Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/413a3e1e-2740-4e0f-91fd-39259eda81ff.pdf",
+        "sha256": "f79b75c73d2a5814eaa6702d57b215d83fea9c1e6fcb20602cfadeb27d7c2561"
+      },
+      {
+        "id": "412de40f-ade9-41a0-96fc-7e713e81c916",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.834Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/412de40f-ade9-41a0-96fc-7e713e81c916.pdf",
+        "sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f"
+      },
+      {
+        "id": "4e144e78-a97c-4cf5-b72e-bdc47c35aca7",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área II (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/perito-criminal-area-iicns302-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:17.901Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/4e144e78-a97c-4cf5-b72e-bdc47c35aca7.pdf",
+        "sha256": "998ab61ae6fad616779c9863b11ea61fa01db66d27d87dcfe2a6c32d8c75d949"
+      },
+      {
+        "id": "4b14490c-9256-47c2-a38b-d0197a3f4bff",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Delegado de Polícia Substituto (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-substitutocns101-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.098Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/4b14490c-9256-47c2-a38b-d0197a3f4bff.pdf",
+        "sha256": "df92459f8f163457b102f50757fda4614fd955f49f0c118a98ba714b1e13a920"
+      },
+      {
+        "id": "5f0ec510-24d3-4cec-83db-95b6826cca86",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1112eq09B_oV-LwqEtMjVBhbSdJ4ArLKH/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "5f9c5b67-02f7-42d2-8cf4-da9e4f72ba48",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Legislação",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_legislacao",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "652036c6-f316-4a07-9cae-cd47805b4350",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Delegado de Polícia Civil (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.371Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/652036c6-f316-4a07-9cae-cd47805b4350.pdf",
+        "sha256": "95fcf8d73cdb3536788e431c921fb8e110c035a294a919e338ef070c0409af2b"
+      },
+      {
+        "id": "519c8e47-658c-4507-a772-87b563a8e3a4",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Escrivão de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE002_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.644Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/519c8e47-658c-4507-a772-87b563a8e3a4.pdf",
+        "sha256": "77cd092f4ee17d996e2fd101e8e07f05598786da1dc1b6384b34c1c745a26c95"
+      },
+      {
+        "id": "78ee2e01-e59c-4ab2-b792-05bf9d72f037",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-objetivacns100-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.688Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/78ee2e01-e59c-4ab2-b792-05bf9d72f037.pdf",
+        "sha256": "8dc6b30dcf3cc415cae4d486cfbef8d11bf5312abe68e694fd1e8742b4850e6d"
+      },
+      {
+        "id": "7a968028-063d-42ae-8dd1-7cbbe1f6f0df",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Investigador de Polícia I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpinvestigador.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:18.909Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/7a968028-063d-42ae-8dd1-7cbbe1f6f0df.pdf",
+        "sha256": "5cf0a40ee1ee588132ce44ebf31ad9ae92dfdbf8ec6b72c1e41166b62315f444"
+      },
+      {
+        "id": "7d45d86f-97a8-485a-918d-722ce29afe35",
+        "title": "Prova objetiva PCDF - Delegado - 2026",
+        "url": "http://www.cebraspe.org.br/concursos/pc_df_26_delegado?doc=prova_objetiva_p1",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.162Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/7a0a91da-effc-4172-8851-10f2c9e3d52e.pdf",
+        "sha256": "6a79e5708f1fbbfe11ce44ab34642cab00d7c8f508f61d56d915d0ba92919811"
+      },
+      {
+        "id": "825b62a7-96f2-4fcb-a8e5-afa7336824e0",
+        "title": "Prova objetiva PC/ES - Delegado de Polícia - 2022 (Conhecimentos Específicos)",
+        "url": "https://drive.google.com/file/d/14WVhwBnLPmD5jcop3GIHPwyCnfFyhiSp/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "1b1edb83-11b0-4a4f-8cfb-bc64a379bf81",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Escrivão de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/escrivao_de_policia_-_4a_classens200_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.386Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/1b1edb83-11b0-4a4f-8cfb-bc64a379bf81.pdf",
+        "sha256": "62859da728886e595cb6c9df27674bfbad4a83ee64d186db90963f3afa662b46"
+      },
+      {
+        "id": "820f1bba-5903-4511-906b-005e586f18e1",
+        "title": "Prova objetiva - Polícia Civil do Estado do Amazonas - Delegado de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/ns001_-_delegado_de_policia_-_4a_classe_prova_objetivans001_tipo_1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.605Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/820f1bba-5903-4511-906b-005e586f18e1.pdf",
+        "sha256": "0a52be892b45fdc3f633bc1811a1152c2ae6f8fa11441e4f9a9735bf01f27142"
+      },
+      {
+        "id": "8e9a28c2-869b-4515-b624-3d8629e28609",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/134lSzI-OHM5D6tX0zsFn_d5hESStoY57/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "9251ce6c-5a4b-4175-82d2-3d4a75226255",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1ua1_XkBUPzmkao3nmzXvu6UrK4eAVYQi/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "82f21332-fbad-4e7d-b1cb-30d957243912",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Amazonas - Investigador de Polícia (2022, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.724Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/82f21332-fbad-4e7d-b1cb-30d957243912.pdf",
+        "sha256": "a99342fbde7e901ae8f161065ca90e74160fbb3dc4046a3e88825de3abd19868"
+      },
+      {
+        "id": "96470890-4b87-4b7b-b09c-9f8a6b6cf1ad",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1plxOIdpXe9NPVHGgGj5GeRVZ5xD_ll1N/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "8d8933a2-280c-43bc-9db3-8c5ae328c13c",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_955PC_PE_DELEGADO001_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.844Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/8d8933a2-280c-43bc-9db3-8c5ae328c13c.pdf",
+        "sha256": "c70cb708c470d00f844091ac07a55798e0f92003b3f6826bb9def1e305f4b2ac"
+      },
+      {
+        "id": "95433dcb-b5f4-4535-b569-b4be1e612d1e",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmperito1-002pcmg.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.855Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/95433dcb-b5f4-4535-b569-b4be1e612d1e.pdf",
+        "sha256": "b6e69b8293b30921e5fb61294f38758b0495375ec3bafd388cf212ce2dd565ef"
+      },
+      {
+        "id": "9f68a504-9bc1-4a71-b28a-6578a1b2c549",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Médico-Legista (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/medico-legistacns201-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:19.932Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/9f68a504-9bc1-4a71-b28a-6578a1b2c549.pdf",
+        "sha256": "08c04448c722157db49fc143d30e43fda28737866d4dd4d39b1f76c6c7ed36c5"
+      },
+      {
+        "id": "a1e7f1be-34a7-4eb3-bef2-b2bfbcb48484",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.018Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a1e7f1be-34a7-4eb3-bef2-b2bfbcb48484.pdf",
+        "sha256": "0cedb0505640a7401590f19b0955f94c9729f71f1b1c006e7ad590473ec2527d"
+      },
+      {
+        "id": "a469da2f-affd-480a-a0d3-6ee8ba68b070",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1dQDiU3nYBeP7uGmjft99IeR_EAuac3nY/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+        "title": "Gabarito oficial definitivo - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.182Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d.pdf",
+        "sha256": "b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648"
+      },
+      {
+        "id": "a8df0202-d3a3-41b4-ba17-31e57bf14d9b",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Específico",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_especifico",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "a4445ad3-e948-4f91-9b52-af1ab1382851",
+        "title": "Gabarito oficial definitivo - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PE001_00.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.307Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a4445ad3-e948-4f91-9b52-af1ab1382851.pdf",
+        "sha256": "fd21530f9c9f110e7cc6de6a653340888585c6cd5fca5477417c60468f9f6ac6"
+      },
+      {
+        "id": "a347cc8e-21d0-4951-a199-35adb9c2b994",
+        "title": "Prova objetiva – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/084_PC_CE_001_01.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.386Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/a347cc8e-21d0-4951-a199-35adb9c2b994.pdf",
+        "sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba"
+      },
+      {
+        "id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "title": "Prova objetiva - Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia (2022, UFMT)",
+        "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "b167f67e-fcfe-41f6-9b0a-7889770141cd",
+        "title": "Gabarito oficial definitivo - Conhecimentos Especificos - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1Dz_VWJZ5Y6A5-4kMUCjBiZmw5KJnOIOv/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b54f2a42-acd8-47fb-8d8a-6369c7a6b3e1",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/15TDG2Jt1yISfovmZ7XNxRlf-ZzU3VJIU/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b6abbff3-202c-4534-bd13-679403e7d3a3",
+        "title": "Prova objetiva PCMG 2025 TPAG - Eixo Geral",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/prova_objetiva_eixo_geral",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b772f1e9-a83f-4f3d-a0f3-d5c8159d98f6",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Específico",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_especifico",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "b9f3a387-bb3b-4e95-b8d9-3e4043abef48",
+        "title": "Gabarito definitivo PCMG 2025 TPAG - Eixo Legislação",
+        "url": "https://www.cebraspe.org.br/concursos/pc_mg_25_tpag/gabarito_definitivo_eixo_legislacao",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "aa2d07d5-d3c5-4b8d-b499-10c6ba6547d8",
+        "title": "Prova objetiva - Polícia Civil do Estado de Sergipe - Escrivão de Polícia (2021, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_002_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.582Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/aa2d07d5-d3c5-4b8d-b499-10c6ba6547d8.pdf",
+        "sha256": "055ebcb79b6cc53afefa2d76ce25d774f3603410ee5d40a90192c2b0e5d3fdc6"
+      },
+      {
+        "id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+        "title": "Gabarito oficial definitivo PCMG TPAG 2026 — Eixo Legislação",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.958Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c276bc2f-35a7-5581-a35f-e9a805734750.pdf",
+        "sha256": "ad51738a383b463c77d937e613b651ea4cefd9c088eaee6af079dfd4370a74e5"
+      },
+      {
+        "id": "54cb008f-b402-4416-a155-95cc5979167f",
+        "title": "Prova objetiva (Tipo 1) – Polícia Civil de Minas Gerais – Perito Criminal – Área I (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/perito-criminal-area-icns301-tipo-1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:20.967Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/54cb008f-b402-4416-a155-95cc5979167f.pdf",
+        "sha256": "883114bd2482710c94d59ab697ea4e6feebafb468b80773141b406f87385d0a4"
+      },
+      {
+        "id": "cb7de1a3-d416-479c-a5f3-c478931740b1",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil do Piauí – Oficial Investigador (2026, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pc-pi-investigador-e-perito-2025.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.147Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/cb7de1a3-d416-479c-a5f3-c478931740b1.pdf",
+        "sha256": "633328916e6dbca13158883b525a7f5cfdc6b95135eccbcb1933299297428a12"
+      },
+      {
+        "id": "cb4f3322-79c0-4cc2-9fed-fbb5c865573c",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Agente de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_954PC_PE001_00_COM_JUSTIFICATIVA.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.303Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/cb4f3322-79c0-4cc2-9fed-fbb5c865573c.pdf",
+        "sha256": "4120ff7edf7a2c81beda9e66d832598b72e5b66140d34035dc22d0fe71480a16"
+      },
+      {
+        "id": "d7df7669-e14e-4327-b194-9544e064a6e8",
+        "title": "Prova objetiva - Conhecimentos Especificos - PC/RO - Datiloscopista Policial (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1AnSqnfU4uR1mRa1nv_JZSVQ2o-w3D3V1/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "ab306cde-778f-4d56-b92c-9a360a58aab6",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Minas Gerais – Médico-Legista (2025, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/gabaritodefinitivo_pcgmpmedico-002.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.361Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/ab306cde-778f-4d56-b92c-9a360a58aab6.pdf",
+        "sha256": "659babf4d475ce64e9b2a567165fe2f0886111edee5c934a5ba02f22c501824b"
+      },
+      {
+        "id": "ddcd9b4d-2d05-4dab-baee-c7e9a1cd6fd3",
+        "title": "Gabarito definitivo PC/ES - Delegado de Polícia - 2022 (Conhecimentos Gerais)",
+        "url": "https://drive.google.com/file/d/1s7_LQx31L84EdnG-tMsegI6cVCTlI6Fr/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e1eb0476-1753-4067-ad3d-b275daf19014",
+        "title": "Gabarito oficial definitivo - Conhecimentos Gerais - PC/RO - Agente de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1Mnq3QKx7x4HQUu9LnesJ9rxr2ulmvNTD/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e23b3688-b208-40fc-a30b-a7e16937deb1",
+        "title": "Prova objetiva - Conhecimentos Gerais - PC/RO - Escrivão de Polícia Civil (2022, Cebraspe)",
+        "url": "https://drive.google.com/file/d/1TcGn7Rrls3lBDE_KPC2UMdCY_nKoVO1K/view",
+        "metadata_official": true,
+        "result": "not_direct_https_pdf",
+        "editorial_verified": false
+      },
+      {
+        "id": "e29af695-831b-4096-95d7-7c1de62c02d7",
+        "title": "Gabarito oficial definitivo (Gabarito 1) – Polícia Civil do Ceará – Oficial Investigador de Polícia (2025, UECE-CEV)",
+        "url": "https://www.cev.uece.br/wp-content/uploads/2025/08/comunicado1432025cev.pdf",
+        "metadata_official": true,
+        "result": "access_failed",
+        "error": "fetch failed",
+        "editorial_verified": false
+      },
+      {
+        "id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "title": "Prova objetiva (P1) – Polícia Civil do Distrito Federal – Delegado de Polícia (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.468Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/ce56cd4d-eda9-4bd3-8699-034d5386162b.pdf",
+        "sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95"
+      },
+      {
+        "id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+        "title": "Prova objetiva (3 eixos) – Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) (2026, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.654Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/dc50d641-b67c-41bd-b3ea-a49e904b4926.pdf",
+        "sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b"
+      },
+      {
+        "id": "eda8bb9f-2055-4170-8247-bc96743b7190",
+        "title": "Gabarito oficial definitivo (Tipo 1) – Polícia Civil de Santa Catarina – Delegado de Polícia (2024, FGV)",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcscdelegado2024_gabarito_definitivo_20240220.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:21.825Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/eda8bb9f-2055-4170-8247-bc96743b7190.pdf",
+        "sha256": "f634b847fa4c0b754c2d4259fc19fa9b03a465594c23274282c07a0f58073d5c"
+      },
+      {
+        "id": "e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37",
+        "title": "Prova objetiva - Polícia Civil de Pernambuco - Delegado de Polícia (2024, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/PC_PE_23/arquivos/MATRIZ_955PC_PE_DELEGADO001_00_COM_JUSTIFICATIVAS_ATUALIZADO.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.080Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/e70b15c2-4bdd-4598-a4ec-c3c7de9f0a37.pdf",
+        "sha256": "9c8e9dd45fc18b26f52eb8e683f03e57c5ebe2eea14ec867bf4d8727d01c0851"
+      },
+      {
+        "id": "f7e74759-cc7e-495e-ae16-dafeaf0ff784",
+        "title": "Gabarito oficial definitivo – Polícia Civil do Ceará – Delegado de Polícia Civil (2025, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Gab_Definitivo_084_PC_CE_001_01.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.225Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/f7e74759-cc7e-495e-ae16-dafeaf0ff784.pdf",
+        "sha256": "b048d38ed7d377afc844bed448c9facabed949dfa121f9ee91ce22c2646a94a9"
+      },
+      {
+        "id": "c16e5bae-7b88-4ad5-bb3b-7413dccc943b",
+        "title": "Gabarito definitivo – PC-AC 2017 – Prova objetiva – S01 versão V",
+        "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.266Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c16e5bae-7b88-4ad5-bb3b-7413dccc943b.pdf",
+        "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697"
+      },
+      {
+        "id": "c1d10afc1ff4bec3",
+        "title": "gabarito Delegado de Polícia",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.436Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/c1d10afc1ff4bec3.pdf",
+        "sha256": "34ae8a4d379c459448991b5868ab5f31ebf3e02e9a7aad5a09b5533021eda4de"
+      },
+      {
+        "id": "8825fb19cca74200",
+        "title": "prova Delegado de Polícia",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.448Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/8825fb19cca74200.pdf",
+        "sha256": "1f6438069cb18406e7b78b88a07ce5b30812a4f4c731de560d419e765b495312"
+      },
+      {
+        "id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+        "title": "Prova objetiva - Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia (2022, Cebraspe)",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.547Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/e58044c4-c58d-422f-bf22-4a13cbbd9c07.pdf",
+        "sha256": "1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1"
+      },
+      {
+        "id": "0b08f7a16486cdf3",
+        "title": "prova Agente de Polícia Judiciária",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.638Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/0b08f7a16486cdf3.pdf",
+        "sha256": "bfaac1a1dd1bb300d9c2efde0518919c3db64b3e61d9e7d90de4c3c6f8fa0041"
+      },
+      {
+        "id": "f4010d942c872134",
+        "title": "prova Papiloscopista Policial",
+        "url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "metadata_official": null,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:22.830Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/f4010d942c872134.pdf",
+        "sha256": "f60b0de018adf02b962c323383d2369ffa0001fb85b105d28b00bc9bc3dbb718"
+      },
+      {
+        "id": "efaf074c-cd9b-4f55-9b9f-17d7911dc585",
+        "title": "Prova objetiva – PC-AC 2017 – S01 Agente de Polícia Civil – versão V",
+        "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+        "metadata_official": true,
+        "http": 200,
+        "result": "pdf_retrieved",
+        "retrieved_at": "2026-10-16T16:03:25.780Z",
+        "editorial_verified": false,
+        "path": "outputs/pc-all-audit-2026-10-16/source-access/efaf074c-cd9b-4f55-9b9f-17d7911dc585.pdf",
+        "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69"
+      }
+    ]
+  },
+  "network_blocker": {
+    "required_action": "Review and save environment configuration, then publish the cloud environment; draft save alone does not apply network changes.",
+    "added_domains": [
+      "apis.cebraspe.org.br",
+      "ibade.org.br",
+      "www.concursos.ufmt.br",
+      "www.cev.uece.br",
+      "rondonia.ro.gov.br",
+      "www.sinj.df.gov.br",
+      "sinj.df.gov.br",
+      "drive.google.com"
+    ],
+    "existing_custom_domains_preserved": 34
   }
 }
