@@ -207,11 +207,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         channel: "Aprova Concursos",
       },
       {
-        id: "hgF5_RC6H8M",
-        title: "Regras de acentuação — aula grátis de Português",
-        embeddable: false,
-      },
-      {
         id: "NN0IQAx0hA4",
         title: "Português para concursos — ortografia e acentuação",
         channel: "Ciência Exata",
@@ -401,11 +396,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         id: "GuaLFdS-tZY",
         title: "Operações com conjuntos (parte I)",
         channel: "Professor Julio Cesar | Bizutemática",
-      },
-      {
-        id: "I7i8zX7GtxQ",
-        title: "Questão de conjuntos — raciocínio lógico matemático",
-        channel: "PetroDicas",
       },
     ],
     "Análise combinatória": [
@@ -629,7 +619,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         channel: "Revisão Animada",
       },
       { id: "GyXNV_MGIw8", title: "Repartição das competências", channel: "KULTIVI CONCURSOS" },
-      { id: "ueknASmy38M", title: "AGU Explica — competências legislativas", embeddable: false },
       {
         id: "CGUE86C4AaI",
         title: "CF/88 — artigo 23, competência material comum",
@@ -826,11 +815,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
     ],
     "Licitações e contratos": [
       {
-        id: "WAB3R1BTZfE",
-        title: "Nova Lei de Licitações e Contratos",
-        channel: "Professor Leandro Campos",
-      },
-      {
         id: "Czaw9u9MpPY",
         title: "Aula 01 — licitações (Lei 14.133/21), completa e facilitada",
         channel: "FAZ QUESTÃO CONCURSOS PÚBLICOS",
@@ -923,11 +907,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
       },
     ],
     "Improbidade administrativa (Lei 8.429/1992)": [
-      {
-        id: "EbZWtU4L0Yo",
-        title: "Lei 8.429 de 1992 — improbidade administrativa I — Profª Paula Bidoia",
-        embeddable: false,
-      },
       {
         id: "QwNcy04oq8I",
         title: "Improbidade administrativa",
@@ -1135,7 +1114,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         title: "Aplicação da lei penal (tempo e espaço) — resumo fácil",
         channel: "Me Julga - Cíntia Brunelli",
       },
-      { id: "dzMlHeJHf5U", title: "Aplicação da lei penal no espaço — aula 03", embeddable: false },
       {
         id: "W-h8fJcY-kk",
         title: "Princípios e aplicação da lei penal",
@@ -1435,11 +1413,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
     ],
     "Lei de Migração (Lei 13.445/2017)": [
       {
-        id: "gxRwjeEtASo",
-        title: "Lei de Migração (13.445/2017) — resumo + questões comentadas",
-        channel: "Canal Conta que eu te Conto!",
-      },
-      {
         id: "oD56bjXzviI",
         title: "Lei nº 13.445/2017 comentada (Lei de Migração)",
         channel: "Estratégia Carreira Jurídica",
@@ -1509,11 +1482,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         title: "Concurso PF Administrativo: Lei 10.826/2003, Estatuto do Desarmamento",
         channel: "LexPlay",
       },
-      {
-        id: "mXMn167FFfs",
-        title: "Lei 10.826 de 2003 — Estatuto do Desarmamento",
-        embeddable: false,
-      },
     ],
     "Crimes hediondos (Lei 8.072/1990)": [
       {
@@ -1552,11 +1520,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         id: "x6XjasWOJ_M",
         title: "Aula completa: Lei de Tortura para concursos públicos (Lei 9.455/97)",
         channel: "Prof. Eriksen Almerão",
-      },
-      {
-        id: "gr7tf8O8O6M",
-        title: "Lei 9.455/97 — Lei de Tortura, teoria + questões",
-        channel: "Nathy Bueno",
       },
       { id: "LKh0lsfSK-k", title: "Lei esquematizada 9.455/1997", channel: "Nova Concursos" },
     ],
@@ -1756,11 +1719,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
       {
         id: "eF5v7NK0l0s",
         title: "Aula 01 — noções de sistema operacional (Windows e Linux)",
-        channel: "ROMILTON JÚNIOR",
-      },
-      {
-        id: "2jeYg8HDWQg",
-        title: "Noções de sistema operacional Windows 10",
         channel: "ROMILTON JÚNIOR",
       },
     ],
@@ -1989,11 +1947,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
     ],
     "Balancete de verificação": [
       {
-        id: "4gcMUmI4IcI",
-        title: "Aula de balancete de verificação (Contabilidade Geral)",
-        embeddable: false,
-      },
-      {
         id: "jnsBBqUZD84",
         title: "Aula 06/18 — balancete de verificação e exercícios de débito e crédito",
         channel: "Lac Concursos - Principal",
@@ -2021,19 +1974,9 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         channel: "Prof. Camila Sá",
       },
       {
-        id: "Xub5yWJKvXg",
-        title: "Demonstrações contábeis: BP, DRE, DFC, DLPA, DMPL",
-        embeddable: false,
-      },
-      {
         id: "Wv7d8uha6PI",
         title: "Demonstrações contábeis: BP, DRE, DFC e DVA — resumão em 11 minutos",
         channel: "Ricardo Neves",
-      },
-      {
-        id: "EDj1kBdRpZc",
-        title: "Curso de contabilidade grátis — DRE, aula 14",
-        embeddable: false,
       },
       {
         id: "6PzMw91_dHU",
@@ -2103,11 +2046,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         channel: "Camila Gomes",
       },
       {
-        id: "07sA7BIcsPY",
-        title: "Aula de regimes contábeis: competência, caixa e misto",
-        embeddable: false,
-      },
-      {
         id: "dbBXzcNkrYY",
         title: "Regime de caixa e regime de competência — Contabilidade",
         channel: "GCoelho",
@@ -2118,11 +2056,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         id: "K0-xREBmXoc",
         title: "Fatos contábeis: permutativos, modificativos e mistos",
         channel: "Professor Quintino ®️",
-      },
-      {
-        id: "UrFg3kWayB0",
-        title: "Aula de atos e fatos contábeis (Contabilidade Geral)",
-        embeddable: false,
       },
       {
         id: "0EEZldm8Pm4",
@@ -2221,19 +2154,9 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
     ],
     "*": [
       {
-        id: "RgvHY-SY1mQ",
-        title: "Resolva questões de estatística para a Polícia Federal: dicas e estratégias",
-        channel: "Jhoni Zini",
-      },
-      {
         id: "mUWItGU9js0",
         title: "Agente da PF — resolução de estatística CEBRASPE 2021",
         channel: "Estatística para Concurso",
-      },
-      {
-        id: "nBHQToeEaLo",
-        title: "Missão Polícia Federal — questões de estatística",
-        embeddable: false,
       },
       {
         id: "uNCW6rPq9Io",
@@ -2305,11 +2228,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
         id: "hU_4FzEr2sA",
         title: "Curso completo de Legislação de Trânsito para concursos — Prof. Hugo Garotinho",
         channel: "Estratégia Concursos",
-      },
-      {
-        id: "Lbt8095ZDjY",
-        title: "Concurso PRF 2026 — começando do zero: legislação de trânsito",
-        embeddable: false,
       },
       {
         id: "DwdwXeO6dEk",
@@ -2578,11 +2496,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
     ],
     "Sexologia forense": [
       {
-        id: "oZecsJYH-1g",
-        title: "Perícia criminal — Medicina Legal: sexologia forense (Prof. Nelson, aula 03)",
-        embeddable: false,
-      },
-      {
         id: "lVuDu6QTfyU",
         title: "Sexologia forense — exercícios (Medicina Legal 13/19)",
         channel: "Lac Concursos - Principal",
@@ -2613,11 +2526,6 @@ export const TOPIC_VIDEOS: Record<string, Record<string, TopicVideo[]>> = {
       },
     ],
     "Geopolítica brasileira e fronteiras": [
-      {
-        id: "btEEogItU9I",
-        title: "Aulão especial PRF — geopolítica brasileira",
-        embeddable: false,
-      },
       {
         id: "n8KY8nqTeDM",
         title: "Aula de geopolítica para o concurso da PRF — Prof. Italo Trigueiro",
