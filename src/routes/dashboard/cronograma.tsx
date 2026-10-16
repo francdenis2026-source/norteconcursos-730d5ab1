@@ -101,7 +101,7 @@ function CronogramaPage() {
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="journey" size="sm" kicker="Minha preparação" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
+      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
       <StudyPlanningNav active="schedule" />
       {openId === "new" ? (

@@ -229,7 +229,7 @@ function ExamPanoramaPage() {
       <PageHero
         image="field-map"
         size="sm"
-        kicker="Objetivo"
+        kicker="Meu concurso"
         icon={BarChart3}
         title={
           <>
