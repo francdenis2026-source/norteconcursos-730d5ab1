@@ -933,8 +933,8 @@ function ProfessionalSimulator() {
               <Target className="h-5 w-5 text-emerald-600" /> Configure sua prova
             </CardTitle>
             <CardDescription>
-              Escolha uma prova identificada no acervo ou monte seu próprio simulado. O gabarito só
-              aparece ao finalizar.
+              Clique em uma prova identificada no acervo para começar, ou monte seu próprio simulado.
+              O gabarito só aparece ao finalizar.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -961,7 +961,17 @@ function ProfessionalSimulator() {
                 <SimulatorPaperPicker
                   catalog={scopedCatalog}
                   selected={paperKey}
-                  onSelect={setPaperKey}
+                  onSelect={(key) => {
+                    setPaperKey(key);
+                    // Escolher a prova já leva ao início do simulado: abre o compromisso de prova.
+                    if (!hasMockExamAccess) {
+                      toast.error("Simulados completos são um recurso dos planos pagos.");
+                      return;
+                    }
+                    if (resumeDraft) return;
+                    setWarningAccepted(false);
+                    setStartWarningOpen(true);
+                  }}
                 />
                 <p className="rounded-xl bg-muted p-3 text-xs text-muted-foreground">
                   Usamos todas as questões elegíveis disponíveis da prova escolhida, sem sorteio.

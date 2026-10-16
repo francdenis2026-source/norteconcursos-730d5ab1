@@ -272,7 +272,9 @@ function QuestionTrainer() {
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
   const [limit, setLimit] = React.useState(routeFilters.limit || "20");
-  const [orderMode, setOrderMode] = React.useState<OrderMode>("random");
+  const [orderMode, setOrderMode] = React.useState<OrderMode>(
+    routeFilters.limit === "all" ? "exam" : "random",
+  );
   const loading =
     catalogLoading || lockedLoading || (!!routeFilters.edition && examEdition.isPending);
   const [index, setIndex] = React.useState(0);
@@ -436,6 +438,7 @@ function QuestionTrainer() {
     setDifficulty("all");
     setAppliedExam(routeFilters.appliedExam || "all");
     setLimit(routeFilters.limit || "20");
+    setOrderMode(routeFilters.limit === "all" ? "exam" : "random");
     setPracticeMode(
       routeFilters.mode === "catalog"
         ? "catalog"
@@ -796,6 +799,11 @@ function QuestionTrainer() {
           ? "Você já respondeu todas as questões deste tema. Escolha “Reforço” para refazer as que errou ou outro assunto."
           : "Não há questões para este modo de reforço neste tema.",
       );
+      return;
+    }
+    // Link que pede um tamanho (ex.: prova inteira com limit=all): usa o fluxo normal de início, sem sorteio de 10.
+    if (routeFilters.limit) {
+      startTraining();
       return;
     }
     catalogReviewKeys.current = new Set(locked.keys());
