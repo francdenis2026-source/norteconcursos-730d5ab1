@@ -71,7 +71,7 @@ function CareersPage() {
             Carreiras <em>policiais</em>
           </>
         }
-        description="Escolha a carreira para focar seus estudos — dados reais vão se acumulando conforme você envia provas."
+        description="Escolha uma carreira para treinar questões ou rever suas provas. Os números crescem conforme você registra provas e responde questões."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -105,34 +105,33 @@ function CareersPage() {
                     {data.exams !== 1 ? "s" : ""}
                   </span>
                   <span className="flex items-center gap-1">
-                    <BookMarked className="h-3.5 w-3.5" /> {data.questions} questõe
-                    {data.questions !== 1 ? "s" : ""}
+                    <BookMarked className="h-3.5 w-3.5" /> {data.questions} questão
+                    {data.questions !== 1 ? "es" : ""}
                   </span>
                 </div>
-                <Link
-                  to="/dashboard/student-exams"
-                  search={{ career: c.agency }}
-                  className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90"
-                >
-                  Abrir área da carreira
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
+                <div className="grid gap-2">
+                  <Link
+                    to="/dashboard/question-trainer"
+                    search={{ career: c.agency }}
+                    className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90"
+                  >
+                    Treinar questões da carreira
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    to="/dashboard/student-exams"
+                    search={{ career: c.agency }}
+                    className="flex items-center justify-between rounded-xl border px-3 py-2 text-xs font-bold transition hover:bg-muted"
+                  >
+                    Minhas provas desta carreira
+                    <FileStack className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
               </CardContent>
             </Card>
           );
         })}
       </div>
-
-      <Card className="bg-muted/50 border-dashed">
-        <CardContent className="pt-5 flex items-start gap-3">
-          <ShieldCheck className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Plataforma multi-carreira: PF, PRF, DEPEN, PC, PP, Bombeiro e PM. Cada carreira acumula
-            provas reais, banco de questões com explicação pedagógica e legislação sempre verificada
-            no Planalto — igual ao que já foi feito para Polícia Federal.
-          </p>
-        </CardContent>
-      </Card>
     </div>
   );
 }

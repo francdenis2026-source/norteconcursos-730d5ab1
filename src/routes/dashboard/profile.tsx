@@ -16,7 +16,6 @@ import {
   CreditCard,
   Shield,
   LogOut,
-  Check,
   ExternalLink,
   Zap,
   RefreshCw,
@@ -24,15 +23,13 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { SoonBadge } from "@/components/SoonBadge";
 import { CancelSubscriptionDialog } from "@/components/dashboard/CancelSubscriptionDialog";
 import { useMyCancellations } from "@/hooks/useCancellations";
 import { emailStatusLabel, isPaidSubscriber, scheduledCancellation } from "@/lib/cancellation";
 import { PlanStatusCard } from "@/components/dashboard/PlanStatusCard";
 import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
-import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "@/lib/launch.config";
-import { cn, normalizeUppercase } from "@/lib/utils";
-import { createCheckoutSession, createPortalSession } from "@/lib/stripe.functions";
+import { normalizeUppercase } from "@/lib/utils";
+import { createPortalSession } from "@/lib/stripe.functions";
 import { useServerFn } from "@tanstack/react-start";
 
 export const Route = createFileRoute("/dashboard/profile")({
@@ -53,7 +50,6 @@ function ProfilePage() {
   const paid = !!user && isPaidSubscriber(user.subscription_tier, user.subscription_expires_at);
   const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
 
-  const checkout = useServerFn(createCheckoutSession);
   const portal = useServerFn(createPortalSession);
 
   const [formData, setFormData] = React.useState({
@@ -127,22 +123,6 @@ function ProfilePage() {
   const handleLogout = async () => {
     await supabase.auth.signOut();
     window.location.href = "/";
-  };
-
-  const handleUpgrade = async (planId: string) => {
-    if (!PAYMENTS_ENABLED) {
-      toast.info(PAYMENTS_NOTICE);
-      return;
-    }
-    setIsRedirecting(true);
-    try {
-      const { url } = await checkout({ data: { priceId: `price_mock_${planId}`, planId } });
-      if (url) window.location.href = url;
-    } catch (error) {
-      toast.error("Erro ao iniciar pagamento");
-    } finally {
-      setIsRedirecting(false);
-    }
   };
 
   const handleOpenBillingPortal = async () => {
@@ -279,95 +259,19 @@ function ProfilePage() {
             )}
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {SUBSCRIPTION_PLANS.map((plan) => {
-                const isCurrent = user?.subscription_tier === plan.id;
-                return (
-                  <Card
-                    key={plan.id}
-                    className={cn(
-                      "relative overflow-hidden flex flex-col",
-                      plan.isPopular ? "border-secondary ring-1 ring-secondary" : "",
-                      isCurrent ? "bg-muted/50" : "",
-                    )}
-                  >
-                    {plan.isPopular && (
-                      <div className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl-lg uppercase">
-                        Popular
-                      </div>
-                    )}
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-lg">{plan.name}</CardTitle>
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold">
-                          R$ {plan.price.toFixed(2).replace(".", ",")}
-                        </span>
-                        <span className="text-xs text-muted-foreground">/mês</span>
-                      </div>
-                      <CardDescription className="text-xs min-h-[32px]">
-                        {plan.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-grow space-y-3">
-                      <ul className="space-y-2 text-xs">
-                        {Object.entries(plan.features).map(([key, feature], idx) => (
-                          <li key={idx} className="flex items-center gap-2">
-                            <Check
-                              className={cn(
-                                "h-3 w-3",
-                                feature.included ? "text-emerald-500" : "text-muted-foreground/30",
-                              )}
-                            />
-                            <span
-                              className={cn(
-                                "flex flex-wrap items-center gap-1.5",
-                                feature.included ? "" : "text-muted-foreground/50",
-                              )}
-                            >
-                              {feature.name}
-                              {key === "aiSolver" && !AI_ENABLED ? (
-                                <SoonBadge />
-                              ) : (
-                                feature.limit &&
-                                feature.limit !== "unlimited" &&
-                                ` (${feature.limit})`
-                              )}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                    <div className="p-4 pt-0">
-                      {scheduled && !isCurrent ? (
-                        <Button className="w-full" disabled>
-                          Renovar a partir de{" "}
-                          {new Date(scheduled.effective_until).toLocaleDateString("pt-BR", {
-                            timeZone: "America/Rio_Branco",
-                          })}
-                        </Button>
-                      ) : PAYMENTS_ENABLED || isCurrent ? (
-                        <Button
-                          asChild
-                          variant={isCurrent ? "outline" : plan.isPopular ? "secondary" : "default"}
-                          className="w-full"
-                          disabled={isCurrent}
-                        >
-                          <Link to="/checkout/$planId" params={{ planId: plan.id }}>
-                            {isCurrent ? "Plano Atual" : "Selecionar"}
-                          </Link>
-                        </Button>
-                      ) : (
-                        <Button className="w-full" disabled aria-label={`${plan.name} — em breve`}>
-                          Em breve
-                        </Button>
-                      )}
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
+            <p className="text-sm text-muted-foreground">
+              O plano em vigor e o prazo aparecem em <strong>Seu plano</strong>, acima. Para
+              comparar o que cada plano oferece e acompanhar o uso, abra{" "}
+              <Link
+                to="/dashboard/subscriptions"
+                className="font-semibold text-primary hover:underline"
+              >
+                Plano e uso
+              </Link>
+              .
+            </p>
 
-            <div className="mt-8 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="mt-6 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <Shield className="h-5 w-5 text-emerald-500" />
                 <div className="text-sm">
