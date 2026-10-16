@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
-import { confirmDialog } from "@/lib/confirm";
 import { toast } from "sonner";
 import { MockService } from "@/services/mockService";
 import {
@@ -26,6 +25,9 @@ import {
 import { PageHero } from "@/components/dashboard/PageHero";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { SoonBadge } from "@/components/SoonBadge";
+import { CancelSubscriptionDialog } from "@/components/dashboard/CancelSubscriptionDialog";
+import { useMyCancellations } from "@/hooks/useCancellations";
+import { emailStatusLabel, isPaidSubscriber, scheduledCancellation } from "@/lib/cancellation";
 import { PlanStatusCard } from "@/components/dashboard/PlanStatusCard";
 import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
 import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "@/lib/launch.config";
@@ -45,6 +47,10 @@ function ProfilePage() {
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
   const [isRedirecting, setIsRedirecting] = React.useState(false);
+  const [cancelOpen, setCancelOpen] = React.useState(false);
+  const cancellations = useMyCancellations(user?.id);
+  const scheduled = scheduledCancellation(cancellations.list);
+  const paid = !!user && isPaidSubscriber(user.subscription_tier, user.subscription_expires_at);
   const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
 
   const checkout = useServerFn(createCheckoutSession);
@@ -151,32 +157,17 @@ function ProfilePage() {
     }
   };
 
-  const handleCancelSubscription = async () => {
-    const reason = "Solicitado pelo próprio usuário via painel de perfil.";
-    if (
-      !(await confirmDialog({
-        title: "Cancelar assinatura?",
-        message: "Você perderá o acesso aos recursos Premium ao final do ciclo de 30 dias.",
-        confirmLabel: "Cancelar assinatura",
-        cancelLabel: "Manter plano",
-      }))
-    )
-      return;
-
-    setIsUpdating(true);
-    try {
-      const success = await MockService.cancelSubscription(user!.id, reason);
-      if (success) {
-        toast.success(
-          "Assinatura cancelada com sucesso. O acesso Premium continuará ativo pelos próximos 30 dias.",
-        );
-        window.location.reload();
-      } else {
-        toast.error("Erro ao cancelar assinatura.");
-      }
-    } finally {
-      setIsUpdating(false);
-    }
+  const handleCancelled = (
+    record: { receipt_number: string; effective_until: string },
+    emailStatus: string,
+  ) => {
+    void cancellations.refresh();
+    toast.success(
+      `Cancelamento agendado (recibo ${record.receipt_number}). Seu plano continua até ${new Date(record.effective_until).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}.`,
+    );
+    if (emailStatus === "enviado") toast.info("Enviamos a confirmação para o seu e-mail.");
+    else
+      toast.info("O e-mail de confirmação não foi enviado agora; o recibo está no seu histórico.");
   };
 
   if (isLoading) return <div className="p-8">Carregando...</div>;
@@ -347,7 +338,14 @@ function ProfilePage() {
                       </ul>
                     </CardContent>
                     <div className="p-4 pt-0">
-                      {PAYMENTS_ENABLED || isCurrent ? (
+                      {scheduled && !isCurrent ? (
+                        <Button className="w-full" disabled>
+                          Renovar a partir de{" "}
+                          {new Date(scheduled.effective_until).toLocaleDateString("pt-BR", {
+                            timeZone: "America/Rio_Branco",
+                          })}
+                        </Button>
+                      ) : PAYMENTS_ENABLED || isCurrent ? (
                         <Button
                           asChild
                           variant={isCurrent ? "outline" : plan.isPopular ? "secondary" : "default"}
@@ -380,15 +378,25 @@ function ProfilePage() {
                   </p>
                 </div>
               </div>
-              {user?.subscription_tier !== "free" && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]"
-                  onClick={handleCancelSubscription}
-                >
-                  Cancelar Plano
-                </Button>
+              {scheduled ? (
+                <p className="text-xs text-muted-foreground">
+                  Cancelamento agendado: seu plano continua até{" "}
+                  {new Date(scheduled.effective_until).toLocaleDateString("pt-BR", {
+                    timeZone: "America/Rio_Branco",
+                  })}
+                  .
+                </p>
+              ) : (
+                paid && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]"
+                    onClick={() => setCancelOpen(true)}
+                  >
+                    Cancelar Plano
+                  </Button>
+                )
               )}
               <Button
                 variant="ghost"
@@ -441,7 +449,57 @@ function ProfilePage() {
             </CardContent>
           </Card>
         )}
+        {cancellations.list.length > 0 && (
+          <Card className="md:col-span-3">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <HistoryIcon className="h-5 w-5 text-primary" />
+                Cancelamentos e recibos
+              </CardTitle>
+              <CardDescription>
+                Cada cancelamento gera um recibo que você pode consultar e imprimir.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {cancellations.list.map((c) => (
+                <div
+                  key={c.id}
+                  className="flex flex-wrap items-center justify-between gap-3 border-b pb-3 last:border-0"
+                >
+                  <div className="text-sm">
+                    <p className="font-semibold">
+                      {c.receipt_number} · Plano {c.plan_name}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Pedido em{" "}
+                      {acreDate(c.requested_at).toLocaleString("pt-BR", {
+                        timeZone: "America/Rio_Branco",
+                      })}{" "}
+                      · vale até{" "}
+                      {new Date(c.effective_until).toLocaleDateString("pt-BR", {
+                        timeZone: "America/Rio_Branco",
+                      })}{" "}
+                      · e-mail: {emailStatusLabel[c.email_status]}
+                    </p>
+                  </div>
+                  <Button asChild variant="outline" size="sm">
+                    <Link to="/dashboard/cancellation-receipt/$id" params={{ id: c.id }}>
+                      Ver recibo
+                    </Link>
+                  </Button>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        )}
       </div>
+      <CancelSubscriptionDialog
+        open={cancelOpen}
+        onOpenChange={setCancelOpen}
+        planName={SUBSCRIPTION_PLANS.find((p) => p.id === user?.subscription_tier)?.name ?? "atual"}
+        endsAt={user?.subscription_expires_at}
+        onDone={handleCancelled}
+      />
     </div>
   );
 }

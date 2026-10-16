@@ -35,6 +35,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { AdminCancellations } from "@/components/dashboard/AdminCancellations";
 
 export const Route = createFileRoute("/dashboard/admin-finance")({
   head: () => ({
@@ -643,6 +644,7 @@ function AdminFinancePage() {
           </Card>
         </>
       )}
+      <AdminCancellations />
     </div>
   );
 }
