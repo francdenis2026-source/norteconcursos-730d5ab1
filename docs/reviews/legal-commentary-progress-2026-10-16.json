@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 97,
+  "count": 115,
   "fields_read": [
     "simples",
     "pontos",
@@ -13,7 +13,8 @@
     "legal-commentary-audit-2026-10-16.md",
     "legal-commentary-block-3-2026-10-16.md",
     "legal-commentary-block-4-2026-10-16.md",
-    "legal-commentary-block-5-2026-10-16.md"
+    "legal-commentary-block-5-2026-10-16.md",
+    "legal-commentary-block-6-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -791,6 +792,150 @@
       "unit_id": "0b103157-daa5-503f-834b-85f0af8c2a38",
       "content_sha256": "e8a533c889b83e8c7950add9f2ac39cc039b56c816f9ec4dea59024d2b4350d3",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-1",
+      "unit_id": "57eef774-1c77-5f0f-a30b-434b02d460c1",
+      "content_sha256": "0ead09283a07810ad872852d000b2fb0471384fc071af11f20186ccba88490b0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-10",
+      "unit_id": "38b2aaf4-74f6-54d0-8df9-05617a986fd2",
+      "content_sha256": "3ece4593659faf07e5f16f61e846b4e738dd861cdc5f2cb0b42e75386175a08b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-11",
+      "unit_id": "38d130c8-296b-5015-b879-d93fa8fd0848",
+      "content_sha256": "4c4bfe20a7fecc19d5dcc1f28dbccb4fd0fa6c9093c4c724f0417e831b5d618d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-12",
+      "unit_id": "85a46cc1-9f0a-551e-ba62-2cf9bf3373f6",
+      "content_sha256": "3bbe4ddf7ef0d601c6a56f97cfcff504afe6e470f4a1456e2a19cb55cd0d6f94",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-13",
+      "unit_id": "d11c7281-17e5-51f8-aa23-cf677374d8e5",
+      "content_sha256": "b4c0382d668191b22c830c3094a26b27f379ff22cf58d21b84cb410d445c0f83",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-14",
+      "unit_id": "b3ca9e10-932a-528e-859b-db72e477297a",
+      "content_sha256": "8f1bb3a5084d13ea83b8b7d98486e4a76ed360d150062345996f913a53768f66",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-149-a",
+      "unit_id": "8d40c392-2961-561c-8e44-7a20093853e9",
+      "content_sha256": "fe382f9bbeefe923995b84df90d7c3c43ad71073cfb7b11b1feb53978953e75d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-15",
+      "unit_id": "7567eab5-f05c-588b-87cd-e0d5fc09eb79",
+      "content_sha256": "6ce9c9a781b11952109f11e707a37f23e32ec2ea474b16a1d87bffd975a80876",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-16",
+      "unit_id": "deb81809-1477-5eea-8f42-62f8d501bd30",
+      "content_sha256": "c0d9038ac95a76c57cf9e49a59c7f1711cf395003c5cb5c05b886ef18ab0d242",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-17",
+      "unit_id": "d24c2746-8b2c-5b4e-82db-b1f3e482d1f1",
+      "content_sha256": "0d07c380eb22629ff82df40263568ce576d88e9a88f076c4e8d9ef599a5b8ae5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-2",
+      "unit_id": "ed4d1805-e91a-5ff8-97e3-588a9ec22ae2",
+      "content_sha256": "6b4a9581c6553624ef77033cc2898a1125560f66882018b7403853497548786d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-3",
+      "unit_id": "27d74a53-b52f-5022-a361-0cb2a607ecc4",
+      "content_sha256": "c09984574e4d9030d2360177048b2d44c8d042c529e6965aa9ff28f207f20c99",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-4",
+      "unit_id": "4c765c11-382c-5741-a012-040fdb66503a",
+      "content_sha256": "b10b62c12df4b112c81c12d04639367ad29a1936ad43bb204c3802b289733fad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-5",
+      "unit_id": "4057ba81-5077-5b47-bbee-395a0f652476",
+      "content_sha256": "34fbd1ca96f68a53eab7f6a1c854215ed54735924e1e57090e6eedf3a1ad2c1c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-6",
+      "unit_id": "2e829eb4-d323-5a18-9fc7-9bc7e2ce6751",
+      "content_sha256": "dabdb2e8b93eb57b14b60b167ffaeff7aea598676286c5bbe2ab8ca51d25fb65",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-7",
+      "unit_id": "d0fa077e-7b30-5e04-a63d-b9318d236885",
+      "content_sha256": "8a83973989af0450ca646fec688ba2333480aca847934f0d33b93f9bbef03091",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-8",
+      "unit_id": "502d045a-4e67-59cc-b9f6-b990ef4af03d",
+      "content_sha256": "99725a5bd4d8fb49e0a543f926cee9d37e42b1630e7c7028424896abf04b9fbc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "trafico-pessoas",
+      "unit_key": "art-9",
+      "unit_id": "a6207df8-450a-59c8-bbab-d0a577c7c75d",
+      "content_sha256": "a003c99ebbb79475c01bf830004fe9524f7630dc10052e3ea7f9a680fa19252d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
       "result": "preserved"
     }
   ]
