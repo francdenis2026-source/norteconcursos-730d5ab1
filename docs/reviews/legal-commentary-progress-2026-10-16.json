@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 398,
+  "count": 427,
   "fields_read": [
     "simples",
     "pontos",
@@ -23,7 +23,8 @@
     "legal-commentary-block-12-2026-10-16.md",
     "legal-commentary-block-13-2026-10-16.md",
     "legal-commentary-block-14-2026-10-16.md",
-    "legal-commentary-block-15-2026-10-16.md"
+    "legal-commentary-block-15-2026-10-16.md",
+    "legal-commentary-block-16-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -2577,6 +2578,238 @@
       "unit_id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
       "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-1",
+      "unit_id": "b4f660bb-43ca-5695-a05d-0f2fdead2144",
+      "content_sha256": "4ea1f555d76d9bc5398354946eedd02f76e1265c6169b3b7106ac8a5a840a24e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-10",
+      "unit_id": "46b96c19-e088-528f-9824-5c2f42fbd94d",
+      "content_sha256": "48bc255a2182b61591103277762a9a10a91c61ae38535bc94833e2db642b5aba",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-11",
+      "unit_id": "2d379d06-0556-5856-93e0-7f8a32fb34d7",
+      "content_sha256": "b22158854d7668b1ceb54949e39415010351b5ba71c827b0ecdcb75f80688df2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-12",
+      "unit_id": "5b7c45cb-c72c-58fa-8dd9-7d08887fca94",
+      "content_sha256": "2b7927bce0e64d1a2a7379487f2ef7fa89842e61fcf3a4ebb3ad5830896a986b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-13",
+      "unit_id": "cb99be89-5ee9-5514-a629-5aa0faf18005",
+      "content_sha256": "04568692d643003b8a56b8bec8ddcfc9f1e98bdfb18f4c246eae36da3586a5e9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-14",
+      "unit_id": "297b96fe-f6e9-513f-b49e-8eb84490c137",
+      "content_sha256": "11a59eff182b7ea933279bf5256c14b86bffaae95bfb6420853d7b267eb28155",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-15",
+      "unit_id": "bb26357d-fe21-5c2b-bd14-a99e4423ae94",
+      "content_sha256": "12821de4a895ef2f5b7b12c0e990d8fb446921dce6fd9869486bedfb1fee2bf2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-16",
+      "unit_id": "7ad77cf7-554d-5843-9ab4-503b6646c392",
+      "content_sha256": "def2d5de31817b819ca2143d9736537ad72d3185cc34cbab82d8d87f1777fa10",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-17",
+      "unit_id": "74d7a1bf-904a-5403-bc1d-260a6ce6ec50",
+      "content_sha256": "f15d3727c0adf69369165b6b96632716b8b4a77588d262b268f702fa0b77363d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-18",
+      "unit_id": "f70c58d9-b5f9-5077-b2d4-ac0e2041c8db",
+      "content_sha256": "99841f31aa8bbea8996d3827f53b5c3b339a2c0af77460a51468907919973af8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-19",
+      "unit_id": "8a35b7e6-b329-5b14-8a5a-ebdb682f9648",
+      "content_sha256": "3fba354c543afd2dc2d31beb7ae9b0492b791fe8ec3e535c3ae1b7fa95521a0e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-2",
+      "unit_id": "515966e5-4480-5357-843e-61ac1392ff34",
+      "content_sha256": "676663e89950a1fe33cad630ec535dbb0ec6b086e17c8be082c6daf6ba571251",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-20",
+      "unit_id": "b30d838d-9071-506a-aa41-48526ecf14fd",
+      "content_sha256": "941f3d9b82627736c2780161b62b469b89fc34967d2efcc0e321d223d4007637",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-21",
+      "unit_id": "86b1e58f-8367-5553-9e36-8e50a6e29f3d",
+      "content_sha256": "63bc27c144d0cd5c47c923112d0f12c0e89a62eea60728e6d6de3ad15568e686",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-22",
+      "unit_id": "d00d20aa-2818-5a36-83e5-6228b45bf9a5",
+      "content_sha256": "d0e9bf78cd68b8e267928ab748bd0beb8543c51b7fb2c467f012cbbf7421f764",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-23",
+      "unit_id": "cf8d8e03-ecdd-5bdc-b24f-199881307b4a",
+      "content_sha256": "013cda585d14e5dd8e27d1813d8ab4cf5f3cbff1ee24bbbbfcc9524186023386",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-24",
+      "unit_id": "ddd9bcdb-ccf9-5955-9c72-7a7337632228",
+      "content_sha256": "b144d4710e8ea28fd73cbfbbbd055d8359ed9a30574c7fd2e4a84add1fdf2066",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-25",
+      "unit_id": "f17bcb04-58ed-54b9-9761-a01fed5bcd82",
+      "content_sha256": "7f2be2238bf944ef5e3c7eb1c6fb5cb978bea852c94f52ea480ff3be397aa3f6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-26",
+      "unit_id": "44ea24af-1f5f-5fd6-b2e5-6fd81bacae6a",
+      "content_sha256": "0d3e750b6421fc1408d203bfcd68f710fcfd7fbe9976b16de7156e4334ca5460",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-27",
+      "unit_id": "f6ae4f31-b5b8-5ff5-b1c2-c4403f0c9b8a",
+      "content_sha256": "11b96a005c1612f705a9398c95af2d1abb179e39261fe4d5cbe998eccc1e768b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-28",
+      "unit_id": "b982bd25-02c9-53ae-bb69-5dbef60f1392",
+      "content_sha256": "2a204a0de01cf5a678e42491c284b30bb6e6cbbfd01b8c33553348b41657fa4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-29",
+      "unit_id": "e6d48f66-277f-5d0f-aa14-15bb466652d8",
+      "content_sha256": "5982255905f5b6380063d540ab92d4a53129464eba47edc45e6ac9f92b69e81c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-3",
+      "unit_id": "f53b9b41-4ae8-5a0a-987d-cacb9592816d",
+      "content_sha256": "72189785508575e52a70ee55470d690b6cf6c7d92e240e1dfc32137751707f0d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-4",
+      "unit_id": "53b1621f-8369-56c0-bed2-0fc6029ffb04",
+      "content_sha256": "9ee7f9c8b389a30f4649c0f5ae7bd6040f0772c40d3aab492cee7e30ca83e2ba",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-5",
+      "unit_id": "1d88adb4-aac8-5137-b47c-f99fcf128b57",
+      "content_sha256": "7f84d0f328dd778f07f60fd607374945649b35773522b43af48e80231497c9d7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-6",
+      "unit_id": "d825510d-c705-5e6d-8116-87a9d58ab32a",
+      "content_sha256": "baa17848a1004fca023438bb93b6299231e1d5848e933517109445efd293dd50",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-7",
+      "unit_id": "f0ff2fd7-5eb2-5723-9c8a-cb26928b4a28",
+      "content_sha256": "2de2bdc7e3c55d46118636fbefaf455b70d6789ff4f5c5d6bc006d647decab1c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-8",
+      "unit_id": "d2d2a3f6-37b5-576e-bfd0-79adc401e954",
+      "content_sha256": "e195e5533a0d5fd2375214a8994dfc3811a251dcd9f653a5322775a6b83bf66f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "sic",
+      "unit_key": "art-9",
+      "unit_id": "6c12c78f-1911-577f-a3bb-f68924ca6215",
+      "content_sha256": "35e2eb84f67cce083aa95036b3a2e97d15c31cb571b6ece9dcbae1832d8d3e46",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
       "result": "preserved"
     },
     {
