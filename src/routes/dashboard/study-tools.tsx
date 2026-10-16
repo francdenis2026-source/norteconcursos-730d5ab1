@@ -237,7 +237,7 @@ function StudyToolsPage() {
         }
         description={
           ctx.profile
-            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e dos Cursos por disciplina.`
+            ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e das Trilhas por disciplina.`
             : "Foco, revisão e checklist das disciplinas. Defina sua Estratégia de estudos para personalizar com o seu concurso."
         }
         actions={

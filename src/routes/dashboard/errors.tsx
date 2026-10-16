@@ -422,7 +422,7 @@ function ErrorsPage() {
             Caderno de <em>erros</em>
           </>
         }
-        description="Cada falha do Treinador vira uma ordem de revisão clara. Você revisa o gabarito e marca o que já domina; não é possível responder de novo a uma questão já respondida."
+        description="Cada questão que você errou no Treinador vira um item de revisão. Leia o gabarito, marque o que já domina e refaça no modo Reforço do Treinador."
         actions={
           <>
             <Select value={filterSubject} onValueChange={setFilterSubject}>

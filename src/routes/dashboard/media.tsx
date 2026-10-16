@@ -408,18 +408,18 @@ function MediaCenterPage() {
         icon={PlayCircle}
         title={
           <>
-            Central de <em>mídia</em>
+            Videoaulas e <em>podcasts</em>
           </>
         }
-        description="Videoaulas gratuitas por disciplina e podcasts de estudo para aprender em áudio."
+        description="Videoaulas gratuitas que abrem aqui mesmo, por disciplina ou por assunto do edital, e podcasts para estudar em áudio."
       />
       <Tabs defaultValue="videos" className="space-y-4">
         <TabsList>
           <TabsTrigger value="videos" className="gap-1.5">
-            <PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas gratuitas
+            <PlayCircle className="h-4 w-4 !text-rose-500" /> Playlists por disciplina
           </TabsTrigger>
           <TabsTrigger value="assuntos" className="gap-1.5">
-            <ListVideo className="h-4 w-4 !text-violet-500" /> Por assunto
+            <ListVideo className="h-4 w-4 !text-violet-500" /> Por assunto do edital
           </TabsTrigger>
           <TabsTrigger value="enem" className="gap-1.5">
             <GraduationCap className="h-4 w-4 !text-sky-500" /> ENEM

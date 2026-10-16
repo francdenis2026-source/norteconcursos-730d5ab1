@@ -8,7 +8,8 @@ import { FREE_DAILY_LIBRARY, checkFeatureAccess } from "@/lib/subscriptions.conf
 
 const storageKey = (userId: string) => `norte_library_free:${userId}:${acreDateKey()}`;
 
-function readOpened(userId: string): string[] {
+/** Materiais da Biblioteca já abertos hoje neste aparelho (dia do Acre). */
+export function readOpened(userId: string): string[] {
   try {
     const parsed: unknown = JSON.parse(localStorage.getItem(storageKey(userId)) ?? "[]");
     return Array.isArray(parsed) ? parsed.filter((x): x is string => typeof x === "string") : [];

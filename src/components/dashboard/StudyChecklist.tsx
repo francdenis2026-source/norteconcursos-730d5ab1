@@ -133,7 +133,7 @@ export function WeekChecklist({
       await alertDialog({
         title: "Podcasts em breve",
         message:
-          "Os episódios em áudio ainda estão sendo produzidos. Assim que forem publicados, eles aparecem na Central de mídia.",
+          "Os episódios em áudio ainda estão sendo produzidos. Assim que forem publicados, eles aparecem em Videoaulas e podcasts.",
       });
       return;
     }
