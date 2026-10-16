@@ -100,7 +100,7 @@ function EditalRadarPage() {
         icon={Radar}
         title={
           <>
-            Análise dos <em>editais</em>
+            Radar do <em>edital</em>
           </>
         }
         description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."

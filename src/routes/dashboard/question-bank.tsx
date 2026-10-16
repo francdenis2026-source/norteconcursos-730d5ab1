@@ -106,7 +106,7 @@ function QuestionBankPage() {
         <span className="hero-chip">
           <LibraryBig className="mr-1 h-3.5 w-3.5" /> Acervo de questões
         </span>
-        <h1 className="text-3xl font-black md:text-5xl">O que existe na plataforma</h1>
+        <h1 className="text-3xl font-black md:text-5xl">Acervo de questões</h1>
         <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-200 md:text-base">
           Escolha uma disciplina, banca, prova ou ano para abrir o Treinador com a seleção aplicada.
           As quantidades incluem questões novas e já respondidas, com conteúdo disponível.
