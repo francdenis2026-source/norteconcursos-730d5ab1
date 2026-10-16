@@ -5,6 +5,7 @@ import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
 import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
 import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { searchQuestionCatalog } from "@/lib/questionBank";
 import {
   trainerSessionSize,
@@ -1511,6 +1512,7 @@ function QuestionTrainer() {
               </details>
             )}
             <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
+            <QuestionFigures urls={question.figures} />
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>
