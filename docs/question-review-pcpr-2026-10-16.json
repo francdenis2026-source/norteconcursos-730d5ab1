@@ -1,0 +1,79 @@
+{
+  "verified_at": "2026-10-16T04:30:46.238Z",
+  "scope": "PC-PR 2026 (FGV), questões com conferência legal pendente; gabarito preliminar mantido.",
+  "items": [
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "2d67d7bb-0586-4aa0-9f49-0e8f28318b33",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Delegado de Polícia",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 94,
+        "subject": "Direitos Humanos",
+        "support_text": null,
+        "stem": "Durante a lavratura de um auto de prisão em flagrante (APF), o Delegado de Polícia verifica que determinada providência prevista em legislação infraconstitucional brasileira pode, no caso concreto, restringir direito protegido pela Convenção Americana sobre Direitos Humanos. Ao discutir a questão, quatro entendimentos são apresentados: I. O controle de convencionalidade não compete à autoridade policial, pois a aferição da compatibilidade entre o direito interno e os tratados internacionais de direitos humanos constitui função exclusivamente jurisdicional. II. Segundo a jurisprudência da Corte Interamericana de Direitos Humanos, as autoridades públicas estão submetidas às obrigações decorrentes da Convenção Americana e devem exercer, no âmbito de suas respectivas competências e das regulações processuais correspondentes, controle de convencionalidade. III. No ordenamento brasileiro, os tratados internacionais de direitos humanos incorporados sem observância do procedimento previsto no Art. 5º, § 3º, da Constituição possuem, segundo a jurisprudência do STF, natureza supralegal, podendo funcionar como parâmetro para aferição da compatibilidade da legislação infraconstitucional. IV. O reconhecimento de que o Delegado de Polícia participa do controle de convencionalidade permite-lhe declarar, no exercício da função de polícia judiciária, a nulidade da lei incompatível com a Convenção Americana, com eficácia geral e vinculante para os demais órgãos estatais. Considerando o Sistema Interamericano de Direitos Humanos e a jurisprudência do Supremo Tribunal Federal, estão corretos os entendimentos",
+        "options": {
+          "A": "I e III, apenas.",
+          "B": "II e IV, apenas.",
+          "C": "II e III, apenas.",
+          "D": "I, II e III, apenas.",
+          "E": "II, III e IV, apenas."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": true,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns101-delegado-de-policia-cns101-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Conferência legal em 16/10/2026: Resposta depende de jurisprudência do STF/STJ: precedente ainda não conferido no site do tribunal; permanece em revisão (controle de convencionalidade).",
+        "verified_at": "2026-10-16T01:42:25.456031+00:00",
+        "created_at": "2026-10-16T01:42:25.456031+00:00",
+        "syllabus_topic_id": "ef15dea6-43b3-4bf6-a997-ce2610a71f1d",
+        "tested_topic": "Controle de convencionalidade (Convenção Americana)",
+        "figure_urls": []
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.corteidh.or.cr/docs/supervisiones/gelman_20_03_13.pdf",
+            "norma": "Corte IDH, Caso Gelman vs. Uruguai: Resolução de Supervisão de Cumprimento de 20/03/2013 (controle de convencionalidade)",
+            "artigo": "controle de convencionalidade"
+          },
+          {
+            "url": "https://www.stf.jus.br/imprensa/pdf/re466343.pdf",
+            "norma": "RE 466.343 (STF): status supralegal dos tratados de direitos humanos",
+            "artigo": "status supralegal"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+            "norma": "Convenção Americana sobre Direitos Humanos (Decreto 678/1992)",
+            "artigo": "arts. 1º e 2º"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T04:30:46.238Z",
+        "verified_at": "2026-10-16T04:30:46.238Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Vigência conferida em 16/10/2026 no texto consolidado oficial (Corte IDH, Caso Gelman vs. Uruguai: Resolução de Supervisão de Cumprimento de 20/03/2013 (controle de convencionalidade), controle de convencionalidade; RE 466.343 (STF): status supralegal dos tratados de direitos humanos, status supralegal; Convenção Americana sobre Direitos Humanos (Decreto 678/1992), arts. 1º e 2º). Autoridades públicas devem exercer controle de convencionalidade em suas competências (Corte IDH); tratados de direitos humanos sem o rito do art. 5º, § 3º, têm status supralegal (STF). O Delegado não declara a nulidade de lei com eficácia geral."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Autoridades públicas devem exercer controle de convencionalidade em suas competências (Corte IDH); tratados de direitos humanos sem o rito do art. 5º, § 3º, têm status supralegal (STF). O Delegado não declara a nulidade de lei com eficácia geral.",
+        "sources": [
+          "https://www.corteidh.or.cr/docs/supervisiones/gelman_20_03_13.pdf",
+          "https://www.stf.jus.br/imprensa/pdf/re466343.pdf",
+          "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm"
+        ]
+      }
+    }
+  ]
+}

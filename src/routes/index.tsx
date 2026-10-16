@@ -37,6 +37,7 @@ import { PlansSection } from "@/components/landing/PlansSection";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
+import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
 import { AcreSection } from "@/components/landing/AcreSection";
 import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
@@ -367,6 +368,8 @@ function Index() {
             ))}
           </div>
         </div>
+
+        <PcprExamPromo />
 
         <section id="pcac" className="lp-section lp-photo lp-pcac" aria-labelledby="pcac-title">
           <div className="lp-container lp-pcac__layout">

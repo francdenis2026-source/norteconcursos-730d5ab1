@@ -38,6 +38,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { MockService } from "@/services/mockService";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { StudyGoals } from "@/components/dashboard/StudyGoals";
+import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/dashboard/")({
@@ -348,6 +349,8 @@ function DashboardIndex() {
           </Button>
         </section>
       )}
+
+      <PcprExamSpotlight />
 
       <section className="quick-actions no-print" aria-label="Ações rápidas">
         <QuickAction

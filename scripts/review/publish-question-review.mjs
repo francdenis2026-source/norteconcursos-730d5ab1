@@ -75,7 +75,7 @@ export async function publishReview(pack, request) {
   const result={reviewed:pack.items.length,updated:[],preserved:pack.items.length-pending.length};
   for (const {table,expected,patch} of pending) {
     // Filter every original field to avoid overwriting another account's simultaneous work.
-    const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
+    const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(k==='figure_urls'&&Array.isArray(v)?`{${v.map(x=>JSON.stringify(x)).join(',')}}`:typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
     const rows=await request(`${table}?${filters}`,'PATCH',patch);
     if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
     result.updated.push(expected.id);

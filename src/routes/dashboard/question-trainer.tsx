@@ -78,6 +78,8 @@ import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLe
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
+import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -162,9 +164,13 @@ function QuestionTrainer() {
   // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
-    const scoped = law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law));
+    const scoped =
+      law === undefined ? fullCatalog : fullCatalog.filter((q) => questionMatchesLaw(q, law));
     const usable = scoped.filter((q) => !needsMissingSupportText(q));
-    return { catalog: includeNoText ? scoped : usable, missingSupportText: scoped.length - usable.length };
+    return {
+      catalog: includeNoText ? scoped : usable,
+      missingSupportText: scoped.length - usable.length,
+    };
   }, [fullCatalog, law, includeNoText]);
   const library = useStudyMaterialList(canLoad);
   const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
@@ -469,21 +475,41 @@ function QuestionTrainer() {
   );
   // Modos de prática. "new": só questões ainda não respondidas (a 1ª resposta é a que conta para ranking e medalhas).
   // "wrong" e "all": reforço de questões já respondidas; as novas tentativas ficam numa tabela própria e não pontuam.
-  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(routeFilters.mode === "reforco" ? "wrong" : "new");
+  const [practiceMode, setPracticeMode] = React.useState<"new" | "wrong" | "all">(
+    routeFilters.mode === "reforco" ? "wrong" : "new",
+  );
   const [notice, setNotice] = React.useState("");
-  const fresh = React.useMemo(() => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))), [pool, locked]);
-  const answeredPool = React.useMemo(() => pool.filter((q) => locked.has(lockedKey(q.source, q.id))), [pool, locked]);
+  const fresh = React.useMemo(
+    () => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))),
+    [pool, locked],
+  );
+  const answeredPool = React.useMemo(
+    () => pool.filter((q) => locked.has(lockedKey(q.source, q.id))),
+    [pool, locked],
+  );
   // erro na 1ª tentativa e ainda não recuperado no reforço
   const wrongPending = React.useMemo(
-    () => answeredPool.filter((q) => { const k = lockedKey(q.source, q.id); return locked.get(k)?.isCorrect === false && !reinforced.get(k)?.lastCorrect; }),
+    () =>
+      answeredPool.filter((q) => {
+        const k = lockedKey(q.source, q.id);
+        return locked.get(k)?.isCorrect === false && !reinforced.get(k)?.lastCorrect;
+      }),
     [answeredPool, locked, reinforced],
   );
-  const recovered = answeredPool.filter((q) => { const k = lockedKey(q.source, q.id); return locked.get(k)?.isCorrect === false && reinforced.get(k)?.lastCorrect; }).length;
-  const trainingPool = practiceMode === "new" ? fresh : practiceMode === "wrong" ? wrongPending : answeredPool;
+  const recovered = answeredPool.filter((q) => {
+    const k = lockedKey(q.source, q.id);
+    return locked.get(k)?.isCorrect === false && reinforced.get(k)?.lastCorrect;
+  }).length;
+  const trainingPool =
+    practiceMode === "new" ? fresh : practiceMode === "wrong" ? wrongPending : answeredPool;
   const startTraining = () => {
     const ordered = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
     if (!ordered.length) {
-      setNotice(practiceMode === "new" ? "Você já respondeu todas as questões deste filtro. Escolha “Reforço” para refazer as que errou." : "Não há questões para este modo de reforço neste filtro.");
+      setNotice(
+        practiceMode === "new"
+          ? "Você já respondeu todas as questões deste filtro. Escolha “Reforço” para refazer as que errou."
+          : "Não há questões para este modo de reforço neste filtro.",
+      );
       return;
     }
     setSessionReinforce(practiceMode !== "new");
@@ -503,16 +529,20 @@ function QuestionTrainer() {
     if (pool.length === 0) {
       // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
       if (topic !== "all") {
-        setNotice("Ainda há poucas questões deste assunto específico; o treino usa a matéria inteira.");
+        setNotice(
+          "Ainda há poucas questões deste assunto específico; o treino usa a matéria inteira.",
+        );
         setTopic("all");
       }
       return;
     }
     autoStart.current = false;
     if (trainingPool.length === 0) {
-      setNotice(practiceMode === "new"
-        ? "Você já respondeu todas as questões deste tema. Escolha “Reforço” para refazer as que errou ou outro assunto."
-        : "Não há questões para este modo de reforço neste tema.");
+      setNotice(
+        practiceMode === "new"
+          ? "Você já respondeu todas as questões deste tema. Escolha “Reforço” para refazer as que errou ou outro assunto."
+          : "Não há questões para este modo de reforço neste tema.",
+      );
       return;
     }
     setSessionReinforce(practiceMode !== "new");
@@ -626,11 +656,24 @@ function QuestionTrainer() {
           is_correct: isCorrect,
           response_seconds: Math.max(0, questionSecsRef.current),
         });
-        if (error && !/PGRST205|42P01|does not exist|schema cache/i.test(`${error.code ?? ""} ${error.message}`)) throw error;
-        if (error) toast.message("Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.");
+        if (
+          error &&
+          !/PGRST205|42P01|does not exist|schema cache/i.test(
+            `${error.code ?? ""} ${error.message}`,
+          )
+        )
+          throw error;
+        if (error)
+          toast.message(
+            "Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.",
+          );
         setAnswered(true);
         markReinforced(question.source, question.id, isCorrect);
-        setResults((prev) => { const copy = [...prev]; copy[index] = isCorrect ? "ok" : "err"; return copy; });
+        setResults((prev) => {
+          const copy = [...prev];
+          copy[index] = isCorrect ? "ok" : "err";
+          return copy;
+        });
         setModal("result");
       } catch {
         toast.error("Não foi possível salvar sua tentativa de reforço. Tente novamente.");
@@ -726,30 +769,84 @@ function QuestionTrainer() {
     return (
       <div className="space-y-4">
         {lawNotice}
-        <section className="space-y-3 rounded-xl border bg-card p-4 text-sm" aria-label="Modo de prática">
+        <section
+          className="space-y-3 rounded-xl border bg-card p-4 text-sm"
+          aria-label="Modo de prática"
+        >
           {missingSupportText > 0 && (
             <div className="rounded-lg border-2 border-amber-300 bg-amber-50 p-3 text-xs text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100">
-              <p><strong>{missingSupportText} questões de Língua Portuguesa estão sem o texto de apoio</strong> e ficam fora do treino, para você não receber perguntas impossíveis de resolver.</p>
-              <label className="mt-2 flex items-center gap-2 font-semibold"><input type="checkbox" checked={includeNoText} onChange={(e) => setIncludeNoText(e.target.checked)} /> Mostrar mesmo assim (marcadas com aviso, e não contam para o ranking nem para o desempenho)</label>
+              <p>
+                <strong>
+                  {missingSupportText} questões de Língua Portuguesa estão sem o texto de apoio
+                </strong>{" "}
+                e ficam fora do treino, para você não receber perguntas impossíveis de resolver.
+              </p>
+              <label className="mt-2 flex items-center gap-2 font-semibold">
+                <input
+                  type="checkbox"
+                  checked={includeNoText}
+                  onChange={(e) => setIncludeNoText(e.target.checked)}
+                />{" "}
+                Mostrar mesmo assim (marcadas com aviso, e não contam para o ranking nem para o
+                desempenho)
+              </label>
             </div>
           )}
-          {notice && <p className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100" role="status">{notice}</p>}
+          {notice && (
+            <p
+              className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100"
+              role="status"
+            >
+              {notice}
+            </p>
+          )}
           <p className="font-semibold">O que você quer praticar neste filtro?</p>
           <div className="grid gap-2 sm:grid-cols-3">
-            {([
-              ["new", "Questões novas", `${fresh.length} ainda não respondidas. Contam para o ranking.`],
-              ["wrong", "Reforço: o que errei", `${wrongPending.length} erros pendentes${recovered ? ` · ${recovered} já recuperados` : ""}. Não pontuam de novo.`],
-              ["all", "Revisar respondidas", `${answeredPool.length} já respondidas. Não pontuam de novo.`],
-            ] as const).map(([id, title, sub]) => (
-              <label key={id} className={`cursor-pointer rounded-xl border p-3 ${practiceMode === id ? "border-primary bg-primary/5" : "hover:bg-muted/50"}`}>
-                <input type="radio" name="practice-mode" className="mr-2" checked={practiceMode === id} onChange={() => { setPracticeMode(id); setNotice(""); }} />
+            {(
+              [
+                [
+                  "new",
+                  "Questões novas",
+                  `${fresh.length} ainda não respondidas. Contam para o ranking.`,
+                ],
+                [
+                  "wrong",
+                  "Reforço: o que errei",
+                  `${wrongPending.length} erros pendentes${recovered ? ` · ${recovered} já recuperados` : ""}. Não pontuam de novo.`,
+                ],
+                [
+                  "all",
+                  "Revisar respondidas",
+                  `${answeredPool.length} já respondidas. Não pontuam de novo.`,
+                ],
+              ] as const
+            ).map(([id, title, sub]) => (
+              <label
+                key={id}
+                className={`cursor-pointer rounded-xl border p-3 ${practiceMode === id ? "border-primary bg-primary/5" : "hover:bg-muted/50"}`}
+              >
+                <input
+                  type="radio"
+                  name="practice-mode"
+                  className="mr-2"
+                  checked={practiceMode === id}
+                  onChange={() => {
+                    setPracticeMode(id);
+                    setNotice("");
+                  }}
+                />
                 <span className="font-semibold">{title}</span>
                 <span className="mt-1 block text-xs text-muted-foreground">{sub}</span>
               </label>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground">Só a primeira resposta de cada questão conta para ranking, medalhas e seus números de acertos e erros. O reforço registra suas tentativas à parte, para você acompanhar a recuperação dos erros.</p>
+          <p className="text-xs text-muted-foreground">
+            Só a primeira resposta de cada questão conta para ranking, medalhas e seus números de
+            acertos e erros. O reforço registra suas tentativas à parte, para você acompanhar a
+            recuperação dos erros.
+          </p>
         </section>
+        <PcprExamSpotlight compact />
         <TrainerSetup
           total={catalog.length}
           available={trainingPool.length}
@@ -853,9 +950,16 @@ function QuestionTrainer() {
       {lawNotice}
       {noText && <MissingTextNotice scoring />}
       {sessionReinforce && (
-        <div role="status" className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100">
+        <div
+          role="status"
+          className="flex items-start gap-2 rounded-xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-950 dark:border-sky-500/30 dark:bg-sky-950/20 dark:text-sky-100"
+        >
           <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-          <p><strong>Modo reforço.</strong> Esta tentativa fica registrada para você acompanhar sua evolução, mas não conta de novo para o ranking, as medalhas nem o limite diário. A sua primeira resposta continua sendo a oficial.</p>
+          <p>
+            <strong>Modo reforço.</strong> Esta tentativa fica registrada para você acompanhar sua
+            evolução, mas não conta de novo para o ranking, as medalhas nem o limite diário. A sua
+            primeira resposta continua sendo a oficial.
+          </p>
         </div>
       )}
       {routeFilters.reinforce === "1" && !sessionReinforce && (
@@ -923,6 +1027,17 @@ function QuestionTrainer() {
           </span>
         </div>
         <CardContent className="p-3.5 sm:p-5 md:p-7">
+          {question.testedTopic && (
+            <p className="mb-3 text-sm font-semibold leading-snug sm:mb-4 sm:text-base">
+              {question.itemNumber ? (
+                <span className="mr-2 rounded-md bg-primary/10 px-2 py-0.5 font-mono text-xs font-bold text-primary">
+                  Q{question.itemNumber}
+                </span>
+              ) : null}
+              <span className="text-muted-foreground">Cobrado: </span>
+              {question.testedTopic}
+            </p>
+          )}
           <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
             <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
               {question.subject}
@@ -987,13 +1102,19 @@ function QuestionTrainer() {
                 <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
               </summary>
               <div className="max-h-64 overflow-y-auto px-3 pb-3 text-foreground sm:max-h-[26rem] sm:px-4 sm:pb-4">
-                <QuestionSupportText text={parsed.base} citesLines={/(^|\W)linhas?\s+\d+/i.test(`${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`)} />
+                <QuestionSupportText
+                  text={parsed.base}
+                  citesLines={/(^|\W)linhas?\s+\d+/i.test(
+                    `${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`,
+                  )}
+                />
               </div>
             </details>
           )}
           <p className="whitespace-pre-line text-[15px] font-medium leading-6 text-foreground sm:text-base sm:leading-7 md:text-lg">
             {reflowStem(parsed.stem)}
           </p>
+          <QuestionFigures urls={question.figures} />
           <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
             {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
           </p>
@@ -1229,6 +1350,12 @@ function QuestionTrainer() {
                   </p>
                   <p className="text-sm leading-6">{explanation.example}</p>
                 </div>
+              )}
+              {question.preliminaryKey && (
+                <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+                  Gabarito preliminar da banca: pode mudar após recursos. Confira o definitivo
+                  quando sair.
+                </p>
               )}
               {question.checkedAt && question.legalBasis.length > 0 && (
                 <p className="text-xs text-muted-foreground">

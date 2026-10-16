@@ -17,6 +17,7 @@ import {
   normalizeDifficulty,
   parseBasis,
   parseQuestion,
+  PRELIMINARY_KEY_MARK,
 } from "@/lib/questionFormat";
 import { fetchAllRows, isMissingQuestionTable } from "@/lib/catalog";
 
@@ -65,7 +66,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
         const officialQuery = (withSupport: boolean) =>
           query(
             "official_exam_questions",
-            "id,contest_name,exam_year,career_name,exam_board,subject,question_text,official_answer,review_note,legal_basis,state,career_category" +
+            "id,contest_name,exam_year,career_name,exam_board,item_number,tested_topic,subject,question_text,official_answer,review_note,legal_basis,state,career_category" +
               (withSupport ? ",support:question_support_texts(label,body)" : ""),
             "law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
@@ -74,7 +75,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           officialQuery(true).catch(() => officialQuery(false)), // sem a coluna de texto de apoio ainda: segue sem ela
           query(
             "curated_question_catalog",
-            "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+            "id,contest_name,contest_year,career_name,exam_board,tested_topic,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
             "law_version_checked_at",
             (builder) => builder.eq("content_status", "active"),
           ),
@@ -89,7 +90,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
           // Provas de bancas com alternativas A–E (FGV etc.): só entram depois de revisadas e ativadas.
           query(
             "board_exam_questions",
-            "id,board,contest_name,career_name,exam_year,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category",
+            "id,board,contest_name,career_name,exam_year,item_number,tested_topic,figure_urls,subject,support_text,stem,options,official_answer,needs_visual,legal_review_required,law_version_checked_at,legal_basis,explanation,difficulty,state,career_category,review_note",
             "created_at",
             (builder) => builder.eq("content_status", "active").neq("official_answer", "X"),
           ).catch((error: unknown) => {
@@ -145,7 +146,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               answer: String(row["official_answer"]) as Answer,
               explanation: String(
                 row["explanation"] ||
-                  "Gabarito definitivo da banca organizadora. Comentário pedagógico em preparação.",
+                  `Gabarito ${String(row["review_note"] ?? "").includes(PRELIMINARY_KEY_MARK) ? "preliminar" : "definitivo"} da banca organizadora. Comentário pedagógico em preparação.`,
               ),
               legalBasis: parseBasis(row["legal_basis"]),
               checkedAt: row["law_version_checked_at"]
@@ -155,6 +156,12 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               state: String(row["state"] || ""),
               category: String(row["career_category"] || ""),
               kind: "multiple_choice" as const,
+              preliminaryKey: String(row["review_note"] ?? "").includes(PRELIMINARY_KEY_MARK),
+              itemNumber: Number(row["item_number"]) || undefined,
+              testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
+              figures: Array.isArray(row["figure_urls"])
+                ? (row["figure_urls"] as string[])
+                : undefined,
             };
           }),
           ...gate(
@@ -181,6 +188,8 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             difficulty: normalizeDifficulty(row["difficulty"]),
             state: String(row["state"] || ""),
             category: String(row["career_category"] || ""),
+            itemNumber: Number(row["item_number"]) || undefined,
+            testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
           })),
           ...gate(
             (curatedResult.data || []) as Array<Record<string, unknown>>,
@@ -203,6 +212,7 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
             difficulty: normalizeDifficulty(row["difficulty"]),
             state: String(row["state"] || ""),
             category: String(row["career_category"] || ""),
+            testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
           })),
           ...((personalResult.data || []) as Array<Record<string, unknown>>)
             .filter(isEligibleQuestion)
