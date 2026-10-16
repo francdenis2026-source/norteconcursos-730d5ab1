@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 368,
+  "count": 398,
   "fields_read": [
     "simples",
     "pontos",
@@ -22,7 +22,8 @@
     "legal-commentary-block-11-2026-10-16.md",
     "legal-commentary-block-12-2026-10-16.md",
     "legal-commentary-block-13-2026-10-16.md",
-    "legal-commentary-block-14-2026-10-16.md"
+    "legal-commentary-block-14-2026-10-16.md",
+    "legal-commentary-block-15-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -352,6 +353,246 @@
       "unit_id": "6bebe369-b44b-52c4-9568-c31de5356709",
       "content_sha256": "d26620f81ef5f0714c4a20b610f995d3e50cb5dc44bcc928868575dc08aedf42",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-1",
+      "unit_id": "ec32ba62-a5f7-5b1a-85b5-30f04e94804e",
+      "content_sha256": "00c58201e6f772ff44c3d3b8acbb2cf56d525c211dbd1914f51f53e3ff5afb98",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-2",
+      "unit_id": "afdc4ffb-e26e-54e4-aff4-6611bb8a719b",
+      "content_sha256": "63866ef4faffddf61d95282eb0cdb057806dc1dd4b2a58ed3e214aeccc3bdc36",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "anexo-3",
+      "unit_id": "0c8bcf1f-f63d-5539-9936-86dcc03ebc60",
+      "content_sha256": "5b523fe710921342c04a2708bfd5da23b13fdaaede763c431ea11ac57d97c567",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-1",
+      "unit_id": "02676f00-b199-5ccb-919f-fe9a4d6d0714",
+      "content_sha256": "e60cad43be9e2ea1afdcd501f282611ef8479521c2e3ec2ea7387acd8cc6005c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-10",
+      "unit_id": "2634c975-670d-5335-8adf-1abccf47f121",
+      "content_sha256": "158a0bf9ca87725bc98de0eae98ff969337c5c69cae0707eaf33ce59b951e6f4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-11",
+      "unit_id": "3bc5ddad-5eab-5b0a-aabf-9f6ad19e7479",
+      "content_sha256": "190ad3919bbf51569f7758686fa9ec1628d94394ebb71ab5de1fc89f06ddc18f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-12",
+      "unit_id": "66ac26a2-a6d7-5ea4-aa99-09ba3ce0317c",
+      "content_sha256": "c70e9838fc8694299c4ce4f7312e6f83cabe487b72f7d2bfed6df7215646ca01",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-13",
+      "unit_id": "42297de5-9078-573a-a01f-676640b33b48",
+      "content_sha256": "7e7a91bdc9a39d8b02f4bd9a91d33ed9921f65ae5415d03832b3cea9a91b9447",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-14",
+      "unit_id": "e08faa8f-f010-532f-9145-38464103186e",
+      "content_sha256": "73b0c589ef263f8854f7c3c7e31f44e823f7910110d575f9501852a621ddc3f9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-15",
+      "unit_id": "5fc3e923-ffa4-5940-80f7-dc9e65b7ec3d",
+      "content_sha256": "9abea6b5704b4b21d805f44bc2fd071c483e3a250f840c8fcf5b694457f72b86",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-16",
+      "unit_id": "7e917c19-a74d-5a56-ada6-e3747a515edc",
+      "content_sha256": "adfccceacb23be156dfa3d7e2efd791c90160ad1ac8595c9b849a36c9cd20f52",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-17",
+      "unit_id": "5ccda841-a85b-5821-9d90-6e9f454d5ef2",
+      "content_sha256": "54784fefeea4bc8a4a981f179eac8930f784970a9870fdc97a806a22f4c124df",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-19",
+      "unit_id": "171ded57-3abe-5593-a23c-b929e09144a2",
+      "content_sha256": "9738081fdf11158474ef8ed73d2b318d1178906e222a00b6bc2a1c4078ff07c0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-2",
+      "unit_id": "0aaaa4ba-f80d-59cc-b47a-824adae73f47",
+      "content_sha256": "f60f3f205571601cbb101990f92693df9e83b1189776b53c3adb845e6a9a140a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-20",
+      "unit_id": "aa17106a-951d-5d8c-9a23-5943a45688b1",
+      "content_sha256": "316ab8add62d9193a0b0177ef58980f1c0ab7c19efc90ed831c940987e432c79",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-21",
+      "unit_id": "afce68cb-8d78-5ce8-8261-4c2ac9f64e60",
+      "content_sha256": "b450b487727d85d7a7d2119d3fee8eb23869a8f513b029f67fd3d4be44f9f9a7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-22",
+      "unit_id": "a4b96f81-551f-5712-a130-ac3f5ce76cd1",
+      "content_sha256": "ad73f9a0a98aea6fbb7c5d3541e1c45cd7d78c89e4e756cc86ef371ea0936cd0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-23",
+      "unit_id": "72a8f39d-d7de-564b-81b3-ffe75ae38ec9",
+      "content_sha256": "d9df4b827341470306b46929dca62482417038da2ab9090666893eaf158ae941",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-24",
+      "unit_id": "df8c1005-8781-527c-aa8d-480d6cd93484",
+      "content_sha256": "b547e5a1909d8edc42340590d319ddb39272e5f80e4889b3c77bcbf5423285ef",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-25",
+      "unit_id": "40c734d4-743a-5de0-811c-d46590daad42",
+      "content_sha256": "8fd9ec062c35d4d97fcf5f406df045b6da812d33e5093feb9becebfcd01a9d29",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-26",
+      "unit_id": "184ae041-e0fc-556e-baf7-2dbd1802e506",
+      "content_sha256": "b8ec68115fe34818075533d47cd9b23e2db2b976b554aa8a5a98de9e43b9abc5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-27",
+      "unit_id": "d916aa9a-9373-566e-980a-0ddd96cd4d2a",
+      "content_sha256": "dfd15f3940b503c4bd2237e0bbe1712af7e54d3be3c5656281904b79e2f0bb4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-28",
+      "unit_id": "9ace6a06-5f4b-5d1b-83b0-e5c590251326",
+      "content_sha256": "5df29bf5ebeacd0c5c739ae7d11343da67f0e78bb2275969046345276e9aac30",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-3",
+      "unit_id": "8fc853ba-19b4-5429-be82-a901b94e5626",
+      "content_sha256": "8fec3037b148479c7a9e5870878ec9ad101e9e9a2519316edb947fb2e0408812",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-4",
+      "unit_id": "86eb5055-7dbc-5d6c-a6b0-c02d7e3cccc3",
+      "content_sha256": "727420ce204e1ff212b26cfe8464dc5be354074bcadc86b7f2ca50d5bfababd5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-5",
+      "unit_id": "c1b3bbb3-a1f2-56c8-b9fe-90b590104a68",
+      "content_sha256": "dcf9bd6ac04c65df2bd29fff38608795db3b54e0d60d1d6b71e73ad3103ebfcb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-6",
+      "unit_id": "ae0bf553-ed01-56de-a679-abf8cc960d7f",
+      "content_sha256": "8893e3a7d90b05617d63bbe6cc1170e7508b7e0e795d8a42c42e2c6294bfa8a0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-7",
+      "unit_id": "765c04f9-ac50-57d1-95e3-7ab2af966d3b",
+      "content_sha256": "e6d92cebb9bb4549421f4dfb9f9f6b6a23067d64b096df3365e811506282e470",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-8",
+      "unit_id": "bc924f5c-92a2-5ab3-aca5-2ef9739f35d5",
+      "content_sha256": "e203e337445544d5f5d1fb134218ef35f129b226dc02e8ec8591b7cf034228b2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "cin",
+      "unit_key": "art-9",
+      "unit_id": "6bcda3ca-153f-55bc-a436-8989ca0aa64b",
+      "content_sha256": "13f3f8622e430d43793ece63a3239eb09b5de0f08286239d73986aa1a2d8bba9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
       "result": "preserved"
     },
     {
