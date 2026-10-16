@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BarChart3, ChevronDown, FileText, Layers, Loader2, Scale } from "lucide-react";
@@ -34,7 +35,11 @@ export const Route = createFileRoute("/dashboard/exam-panorama")({
   validateSearch: (search: Record<string, unknown>): { pcCargo?: PcAcreRole | undefined } => ({
     pcCargo: search["pcCargo"] ? pcAcreRole(search["pcCargo"]) : undefined,
   }),
-  component: ExamPanoramaPage,
+  component: () => (
+    <PlanGate feature="editalRadar" title="Panorama das provas">
+      <ExamPanoramaPage />
+    </PlanGate>
+  ),
 });
 
 type Row = PanoramaRow;

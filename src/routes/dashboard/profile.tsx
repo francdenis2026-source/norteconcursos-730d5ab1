@@ -26,6 +26,7 @@ import {
 import { PageHero } from "@/components/dashboard/PageHero";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { SoonBadge } from "@/components/SoonBadge";
+import { PlanStatusCard } from "@/components/dashboard/PlanStatusCard";
 import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
 import { AI_ENABLED, PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "@/lib/launch.config";
 import { cn, normalizeUppercase } from "@/lib/utils";
@@ -44,9 +45,7 @@ function ProfilePage() {
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
   const [isRedirecting, setIsRedirecting] = React.useState(false);
-  const [isActivating, setIsActivating] = React.useState(false);
   const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
-  const [activationCode, setActivationCode] = React.useState("");
 
   const checkout = useServerFn(createCheckoutSession);
   const portal = useServerFn(createPortalSession);
@@ -71,31 +70,6 @@ function ProfilePage() {
     };
     loadAudit();
   }, [user]);
-
-  const handleActivate = async () => {
-    if (!activationCode) return;
-    setIsActivating(true);
-    try {
-      const result = await MockService.validateActivationCode(activationCode);
-      if (result.success) {
-        toast.success(result.message);
-        window.location.reload();
-      } else {
-        toast.error(result.message);
-      }
-    } finally {
-      setIsActivating(false);
-    }
-  };
-
-  const handleResendCode = async () => {
-    const success = await MockService.resendActivationEmail();
-    if (success) {
-      toast.success("Novo código enviado para seu e-mail!");
-    } else {
-      toast.error("Erro ao reenviar código.");
-    }
-  };
 
   const handleUpdateName = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -205,21 +179,6 @@ function ProfilePage() {
     }
   };
 
-  const handleReactivateSubscription = async () => {
-    setIsUpdating(true);
-    try {
-      const success = await MockService.reactivateSubscription(user!.id);
-      if (success) {
-        toast.success("Assinatura reativada com sucesso!");
-        window.location.reload();
-      } else {
-        toast.error("Erro ao reativar assinatura.");
-      }
-    } finally {
-      setIsUpdating(false);
-    }
-  };
-
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
   return (
@@ -302,64 +261,7 @@ function ProfilePage() {
           </CardContent>
         </Card>
 
-        {user && !user.is_activated && (
-          <Card className="md:col-span-3 border-secondary bg-secondary/5">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Zap className="h-5 w-5 text-secondary" />
-                {user.subscription_tier === "free" ? "Ativar Assinatura" : "Reativar Assinatura"}
-              </CardTitle>
-              <CardDescription>
-                {user.subscription_tier === "free"
-                  ? "Insira o código enviado para seu e-mail após o pagamento para liberar seu acesso."
-                  : "Sua assinatura está inativa. Você pode reativá-la agora ou inserir um novo código."}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Input
-                  placeholder="Código de ativação (Ex: X8J-29K)"
-                  className="max-w-xs"
-                  value={activationCode}
-                  onChange={(e) => setActivationCode(normalizeUppercase(e.target.value))}
-                  autoCapitalize="characters"
-                  disabled={isActivating || isUpdating}
-                />
-                <Button
-                  onClick={handleActivate}
-                  disabled={isActivating || !activationCode || isUpdating}
-                >
-                  {isActivating ? "Validando..." : "Ativar Agora"}
-                </Button>
-                {user.subscription_tier !== "free" && (
-                  <Button
-                    variant="outline"
-                    onClick={handleReactivateSubscription}
-                    disabled={isUpdating}
-                  >
-                    {isUpdating ? "Processando..." : "Reativar Plano Anterior"}
-                  </Button>
-                )}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="gap-2 text-xs"
-                  onClick={handleResendCode}
-                >
-                  <RefreshCw className="h-3 w-3" /> Reenviar E-mail
-                </Button>
-              </div>
-              <p className="text-[10px] text-muted-foreground italic">
-                * Para o período de testes, utilize o código: <strong>TRIAL-2026</strong>
-              </p>
-              {user?.activation_attempts && user.activation_attempts > 0 && (
-                <p className="text-[10px] text-rose-500 font-medium">
-                  Tentativas: {user.activation_attempts}/5
-                </p>
-              )}
-            </CardContent>
-          </Card>
-        )}
+        <PlanStatusCard />
 
         <Card className="md:col-span-3">
           <CardHeader className="flex flex-row items-center justify-between">
@@ -520,7 +422,9 @@ function ProfilePage() {
                         {log.event_type.replace("_", " ")}
                       </span>
                       <span className="text-[10px] text-muted-foreground">
-                        {acreDate(log.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}
+                        {acreDate(log.created_at).toLocaleString("pt-BR", {
+                          timeZone: "America/Rio_Branco",
+                        })}
                       </span>
                       {typeof log.metadata?.["reason"] === "string" && (
                         <span className="text-[9px] text-rose-500/80 mt-0.5 italic">

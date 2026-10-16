@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { StudyLaterNotebook } from "@/components/dashboard/StudyLaterNotebook";
 import { platformDate } from "@/lib/platformClock";
@@ -34,7 +35,11 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 
 export const Route = createFileRoute("/dashboard/notebooks")({
-  component: NotebooksPage,
+  component: () => (
+    <PlanGate feature="notebooks" title="Cadernos de estudo">
+      <NotebooksPage />
+    </PlanGate>
+  ),
 });
 
 function NotebooksPage() {

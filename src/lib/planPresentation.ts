@@ -9,6 +9,11 @@ export const PLAN_ROWS: [string, string][] = [
   ["performanceAnalytics", "Análise de desempenho"],
   ["examRegistration", "Análise das suas provas"],
   ["prioritySupport", "Suporte prioritário"],
+  ["library", "Biblioteca e leis comentadas"],
+  ["notebooks", "Cadernos de estudo"],
+  ["flashcards", "Flashcards"],
+  ["editalRadar", "Radar do edital e Panorama"],
+  ["essays", "Redação para concursos"],
 ];
 
 export function planValue(key: string, f: TierFeature | undefined): string | null {
@@ -16,11 +21,9 @@ export function planValue(key: string, f: TierFeature | undefined): string | nul
   if (key === "aiSolver" && !AI_ENABLED) return "Em breve";
   if (f.limit === "unlimited") return "Ilimitado";
   if (typeof f.limit === "number")
-    return key === "questions"
+    return key === "questions" || key === "aiSolver" || key === "library"
       ? `${f.limit}/dia`
-      : key === "aiSolver"
-        ? `${f.limit}/dia`
-        : `${f.limit}`;
+      : `${f.limit}`;
   return "Incluído";
 }
 

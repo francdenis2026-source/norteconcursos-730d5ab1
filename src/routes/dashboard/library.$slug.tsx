@@ -1,3 +1,4 @@
+import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { useEffect, useMemo } from "react";
 import { createFileRoute, useNavigate, Link, useParams } from "@tanstack/react-router";
 import {
@@ -39,7 +40,7 @@ import {
 } from "@/lib/studyMaterials";
 
 export const Route = createFileRoute("/dashboard/library/$slug")({
-  component: MaterialPage,
+  component: MaterialPageGated,
   validateSearch: (
     s: Record<string, unknown>,
   ): { back?: string | undefined; tema?: string | undefined; edital?: string | undefined } => ({
@@ -48,6 +49,15 @@ export const Route = createFileRoute("/dashboard/library/$slug")({
     edital: typeof s["edital"] === "string" ? s["edital"] : undefined,
   }),
 });
+
+function MaterialPageGated() {
+  const { slug } = useParams({ from: "/dashboard/library/$slug" });
+  return (
+    <LibraryDailyGate slug={slug}>
+      <MaterialPage />
+    </LibraryDailyGate>
+  );
+}
 
 function MaterialPage() {
   const fm = useFocusMode();

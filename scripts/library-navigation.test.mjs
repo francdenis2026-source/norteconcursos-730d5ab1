@@ -180,6 +180,7 @@ function renderCourseSearch(query, linkedSearch = {}, linkedExplanation = {simpl
   '@/lib/legalCourseSearch':courseSearch,'@/lib/librarySearch':courseSearchLibrary,
   '@/components/library/LibrarySearchMatch':load('src/components/library/LibrarySearchMatch.tsx',{'@/lib/librarySearch':courseSearchLibrary}),
   '@/components/library/LegalRefText':{LegalRefProvider:({children})=>children},
+  '@/components/dashboard/LibraryDailyGate':{LibraryDailyGate:({children})=>children},
   '@/lib/studyMaterials':{useStudyMaterial:()=>({})},'@/lib/mediaStore':{useMediaCatalog:()=>({catalog:[]})},'@/lib/relatedVideos':{lawVideos:()=>[]},
   '@/lib/cobrancaData':{topArticles:()=>[],cobrancaOf:none},'@/lib/cobrancas':{CARGO_GROUPS:[],countFor:()=>0},
   '@/components/study/StudyTools':{toolsAreaFor:none},'@/lib/legalStudyCaveats':{legalStudyCaveat:none},'@/lib/studySourceUrl':{isStudySourceUrl:()=>false},'@/integrations/supabase/client':{supabase:{}},
