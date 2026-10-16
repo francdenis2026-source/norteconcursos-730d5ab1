@@ -35,7 +35,7 @@ export function AgenteContabilidadePlan() {
                 <tr>
                   <th className="py-1 pr-3">#</th>
                   <th className="py-1 pr-3">Tópico do edital</th>
-                  <th className="py-1 pr-3">Caiu ({YEARS.join(", ")})</th>
+                  <th className="py-1 pr-3">Quantas caíram, por ano</th>
                   <th className="py-1 pr-3">% das questões</th>
                   <th className="py-1">Materiais</th>
                 </tr>
@@ -46,10 +46,22 @@ export function AgenteContabilidadePlan() {
                     <td className="py-2 pr-3 font-black">{index + 1}</td>
                     <td className="py-2 pr-3 font-bold">{stat.topic.label}</td>
                     <td className="py-2 pr-3">
-                      <b>{stat.asked}</b>{" "}
-                      <span className="text-muted-foreground">
-                        ({YEARS.map((year) => stat.askedByYear[year] ?? 0).join(" · ")})
-                      </span>
+                      <b>{stat.asked}</b>
+                      {" no total"}
+                      <div className="mt-1 flex flex-wrap gap-1">
+                        {YEARS.map((year) => {
+                          const count = stat.askedByYear[year] ?? 0;
+                          return (
+                            <span
+                              key={year}
+                              title={`${count} questão(ões) em ${year}`}
+                              className={`rounded-md border px-1.5 py-0.5 tabular-nums ${count ? "bg-emerald-50 font-semibold text-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-200" : "text-muted-foreground"}`}
+                            >
+                              {year}: {count}
+                            </span>
+                          );
+                        })}
+                      </div>
                     </td>
                     <td className="py-2 pr-3">
                       <div className="flex items-center gap-2">

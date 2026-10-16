@@ -922,7 +922,7 @@ function StudyPlanPage() {
               Iniciar treino direcionado <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" className="hero-btn-ghost">
             <Link to="/dashboard/cronograma">Ver cronograma por edital</Link>
           </Button>
         </div>
