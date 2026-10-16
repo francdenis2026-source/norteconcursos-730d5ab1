@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 115,
+  "count": 137,
   "fields_read": [
     "simples",
     "pontos",
@@ -14,7 +14,8 @@
     "legal-commentary-block-3-2026-10-16.md",
     "legal-commentary-block-4-2026-10-16.md",
     "legal-commentary-block-5-2026-10-16.md",
-    "legal-commentary-block-6-2026-10-16.md"
+    "legal-commentary-block-6-2026-10-16.md",
+    "legal-commentary-block-7-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -760,6 +761,182 @@
       "unit_id": "524b5f27-2045-5ecc-8f44-d23e15656636",
       "content_sha256": "8aa4050f2f17f3936ab50fd4cdbf08f4f44cd56e34ecf46a4bd7352d90fa8ddf",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-1",
+      "unit_id": "9b6403fa-7d7d-5009-b54c-b5e99539b003",
+      "content_sha256": "a7fc8e1be419b570eee08a336dec52dc5af1fe6b0018ccb48e89091340d1b719",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-10",
+      "unit_id": "99553458-ef8c-5865-b8a4-4ba28e4e1081",
+      "content_sha256": "f462e4074c37d770eed0ca03f1c900e7d42b69999ab494ff85e6fc5fa8e544b0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-11",
+      "unit_id": "d4f5ab9d-91b8-5eb0-9e07-b302ee30d97c",
+      "content_sha256": "beb87f19f8578aa4321179221ce8943a7d2cac391d671177009dcef2f008d020",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-12",
+      "unit_id": "6be28b8a-5204-5130-bb47-0258baa9bac6",
+      "content_sha256": "4581181cd2b516728cb34634f83a4b54e1980503b83e808ba215cf31edb645d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-13",
+      "unit_id": "47f4abb8-1547-552d-8d70-6d33f18b1750",
+      "content_sha256": "26af1f4f3625e92b1c18f248933e8737f164bad9ea736d031219b2012d8e271a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-14",
+      "unit_id": "aef3621a-5e8b-58bb-a1a3-4a0cc89a6243",
+      "content_sha256": "68e812dfc939bb363978899d98e44228494f879126e3404bb7bc762334bb0bc9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-15",
+      "unit_id": "01ff161b-8ba2-5734-9f26-cf372eff0f2f",
+      "content_sha256": "4b0f411f1071cf8f1f4b8a994cedfc1ad201f239e9ebbc47a02a9ed9413e60f7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-16",
+      "unit_id": "1dd184b2-bd59-54ce-81fa-a76bf152a66c",
+      "content_sha256": "cb722b8c1ccf28cb020efe9bb4f5357817f93962687def12f95ab3ea3ba413a3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-17",
+      "unit_id": "ba469acd-e040-5bfd-ae94-dc48a38ded67",
+      "content_sha256": "8194a17b1e3811a5b8440e9002995d189972558c7915146314b9fe7e9367bd23",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-18",
+      "unit_id": "c5a77e3e-d978-5e77-866a-35ba2982dc24",
+      "content_sha256": "7e36115aaa7713f5cd450aa4cf5b6e8858921f723000cd5487c31f93ae71d8ab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-19",
+      "unit_id": "971cbdb8-b4be-5efc-b937-6f024bb38529",
+      "content_sha256": "7899a41eef2b0feaf01c7ce7d63adb41bcd2bbde51a90471548e440429a9b656",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-19-a",
+      "unit_id": "28388a10-1335-552b-af52-617befd4d71e",
+      "content_sha256": "0d07d8339155f50844d8cffe66175d6dca65287e4b9d2ad84592bc61a603ca6d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-2",
+      "unit_id": "9a70beba-7d54-573d-af6e-b8e0d5652159",
+      "content_sha256": "56fb63060e0a1e303056909ca3e1773894561303ebb59717ac1f847ef1709f3c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "deepened"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-20",
+      "unit_id": "c48143a1-85b4-5aec-99b5-2ec4c9952476",
+      "content_sha256": "15ed1f68d526b6fbedfdaec40ce8e911aef0a385250f80db5099e212a099bdff",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-21",
+      "unit_id": "8b22cf52-7f7a-549a-8b3e-fbc8b4efd9d9",
+      "content_sha256": "ddb686eefe727fb4ee86eb5c5ef1a89ca5fe01e43a15b543d15eb65710dc3228",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-3",
+      "unit_id": "3055491b-35bb-526e-bb41-d633eb9b31a8",
+      "content_sha256": "27a85dca60d69ae18b6e4c97f1f5d9612dcc4c67059f74a36612988e9462ac95",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-4",
+      "unit_id": "06d8e512-4905-5b35-bb41-3486050450dd",
+      "content_sha256": "313a3cde37ef7337a35be249df4c6765f27e4590c352c40d1128602a14b6c595",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-5",
+      "unit_id": "7c7e845d-a18d-5d48-b0d2-5c55cdf78d47",
+      "content_sha256": "577bb7b4c699eed2362f81d530ec6b8864426d32ddfccee4be61124d165ff43f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-6",
+      "unit_id": "8f685115-e9bb-5d4f-9ffc-8e5a383285c3",
+      "content_sha256": "0e8475e6c1144955b985ab6d1aceb4ea081b0cf0f23e027539943faea031419c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-7",
+      "unit_id": "2e9d1450-162f-5a0d-b997-642381b2ccc6",
+      "content_sha256": "8b316771662b802da5d6765575e6f419522b8e8e5586e658415a99bb9f6e7f80",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-8",
+      "unit_id": "265958dc-58a1-50a8-b327-93fceb4f4539",
+      "content_sha256": "f9bd4f22a65723da731b1809982afd984ffd38a120db111de81a7e1f1c29fcea",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "testemunhas",
+      "unit_key": "art-9",
+      "unit_id": "5c5ef639-f337-5f78-b74e-b96ee3dbb86a",
+      "content_sha256": "16fee39c17eadc9e4ee05145856de39316f07d6705be0f44536528204ec2f52e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
       "result": "preserved"
     },
     {
