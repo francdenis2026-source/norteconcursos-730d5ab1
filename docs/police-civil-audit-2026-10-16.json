@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-16T21:08:13.328Z",
-  "generated_at": "2026-10-16T21:08:28.986Z",
+  "snapshot_at": "2026-10-16T22:09:12.911Z",
+  "generated_at": "2026-10-16T22:09:35.477Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -265,10 +265,10 @@
       "exam": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil | 2022 | Agente de Polícia Civil | CEBRASPE",
       "records": 94,
       "status": {
-        "active": 85,
-        "under_review": 9
+        "active": 87,
+        "under_review": 7
       },
-      "active_app_eligible": 85,
+      "active_app_eligible": 87,
       "active_with_catalog_flags": 64,
       "active_without_example_marker": 64,
       "flags": {
@@ -280,7 +280,8 @@
       "records": 96,
       "status": {
         "active": 85,
-        "under_review": 11
+        "under_review": 10,
+        "archived": 1
       },
       "active_app_eligible": 85,
       "active_with_catalog_flags": 77,
@@ -293,10 +294,11 @@
       "exam": "Polícia Civil do Estado de Rondônia - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
       "records": 98,
       "status": {
-        "active": 41,
-        "under_review": 57
+        "active": 66,
+        "under_review": 31,
+        "archived": 1
       },
-      "active_app_eligible": 41,
+      "active_app_eligible": 66,
       "active_with_catalog_flags": 19,
       "active_without_example_marker": 19,
       "flags": {
@@ -307,11 +309,11 @@
       "exam": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil | 2022 | Escrivão de Polícia Civil | CEBRASPE",
       "records": 97,
       "status": {
-        "active": 86,
+        "active": 87,
         "archived": 1,
-        "under_review": 10
+        "under_review": 9
       },
-      "active_app_eligible": 86,
+      "active_app_eligible": 87,
       "active_with_catalog_flags": 68,
       "active_without_example_marker": 68,
       "flags": {
@@ -533,23 +535,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2550,
-      "archived": 210,
-      "under_review": 165,
+      "active": 2578,
+      "archived": 212,
+      "under_review": 135,
       "annulled": 37,
       "obsolete": 6
     },
-    "active_app_eligible": 2120,
+    "active_app_eligible": 2148,
     "active_with_catalog_flags": 1892,
     "active_without_example_marker": 2294,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 180,
-    "newly_published": 180,
-    "scope": "PCDF canonical current set: 111 individual reviews, eight contexts restored. RO 2022: 69 pending items individually reviewed and activated with verified official syllabus excerpts and current law. Does not certify all RO or all PC exams.",
+    "newly_reviewed": 210,
+    "newly_published": 210,
+    "scope": "PCDF 111 canonical individual reviews. RO 99 individual decisions: 97 activated, two editorially archived for ambiguity with official answers preserved. Not certification of all PC records.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 165,
+    "pending_under_review_all_pc": 135,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1207,6 +1209,48 @@
           "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
           "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
           "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 10,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        }
+      }
+    },
+    "rondonia_batches4_5": {
+      "reviewed": 30,
+      "published_active": 28,
+      "editorially_archived": 2,
+      "remaining_under_review_ro": 57,
+      "validation": {
+        "checked_at": "2026-10-16T22:09:12.911Z",
+        "published": 30,
+        "eligible": 28,
+        "preserved_other_pc_records": 2938,
+        "concurrent_changes": [],
+        "metadata_changes": [],
+        "new_sources": 5,
+        "new_topics": 6,
+        "pc_status": {
+          "active": 2578,
+          "archived": 212,
+          "under_review": 135,
+          "annulled": 37,
+          "obsolete": 6
+        },
+        "pending_by_contest": {
+          "Polícia Civil de Pernambuco - Agente de Polícia": 18,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 11,
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 10,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
           "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
         }
       }
@@ -2124,8 +2168,9 @@
       "www2.senado.leg.br",
       "www.ibge.gov.br",
       "biblioteca.ibge.gov.br",
-      "www.stf.jus.br"
+      "www.stf.jus.br",
+      "legis.alepe.pe.gov.br"
     ],
-    "pending_state_domains_configuration": "Additive draft saved; requires environment review/application/publication. Saving does not prove live access; SAPL RO returned proxy CONNECT 403."
+    "pending_state_domains_configuration": "Additive draft updated, including ALEPE; runtime application/publication still requires environment settings. No assertion of live access to blocked legislature hosts."
   }
 }
