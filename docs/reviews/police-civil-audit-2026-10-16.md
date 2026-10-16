@@ -31,3 +31,13 @@ Itens 3, 7, 41, 45, 48, 81, 85, 87, 88, 105, 112, 113, 114 e 115 receberam revis
 As 64 revisões acumuladas passaram pela elegibilidade efetiva. A leitura após o complemento confirmou a preservação integral dos outros **2.904 registros da Polícia Civil**, sem concorrência ou desaparecimentos. Permanecem 47 itens atuais da PCDF sem revisão editorial nesta campanha e os 234 `under_review` de outros conjuntos. Não se declarou toda a PCDF auditada.
 
 Foi concluída uma verificação técnica de acesso a 81 referências de prova/gabarito: 48 PDFs recuperados, cinco falhas de acesso e 28 referências sem PDF HTTPS direto. Esses números não equivalem a 48 provas ou gabaritos conferidos. O rascunho de rede preservou os 34 domínios personalizados existentes e acrescentou oito destinos necessários. Sua aplicação exige revisar/salvar as configurações e publicar o ambiente na nuvem; salvar o rascunho não libera a rede em execução. Nenhum token foi salvo na configuração ou no Git.
+
+## Terceiro complemento — acumulado de 76
+
+Itens 6, 9, 10, 14, 16, 20, 22, 28, 32, 65, 71 e 90 publicados após análise individual. Foram confrontados os fundamentos de nepotismo, motivos determinantes, controle interno e preventivo, natureza da OAB, quarto de hotel, poderes de CPI, Conselho Superior da Polícia Civil, comunicabilidade do arrependimento posterior, não incidência de IBS na radiodifusão livre e gratuita e reconhecimento de pessoas.
+
+O Tema 1.258/STJ foi consultado diretamente na página oficial, com tese firmada em 11/06/2025 e trânsito registrado em 03/09/2025. O comentário distingue reconhecimento viciado, prova independente e identificação de pessoa previamente conhecida. A notícia histórica sobre nepotismo não foi usada para universalizar exclusão de cargos políticos; o comentário da OAB também ressalva que vinculação de autarquia não significa subordinação hierárquica.
+
+A conferência posterior confirmou **76 itens elegíveis e os outros 2.892 registros de Polícia Civil integralmente preservados**. Nenhum status ou gabarito foi alterado. Passam pelo filtro atual 1.995 dos 2.481 marcados como ativos, sem que esse número equivalha a revisão editorial integral. Restam 35 itens atuais da PCDF nesta campanha e 234 `under_review` no acervo PC. Há 2.405 ativos ainda não cobertos editorialmente por esta campanha; essa contagem não nega revisões anteriores. Contextos compartilhados, conteúdos técnicos, precedentes adicionais e normas estaduais continuam no escopo.
+
+O commit remoto de outra sessão que documenta a revalidação das 42 fontes legais (`a64efee`) foi integrado por avanço simples, preservando suas alterações. A campanha não está concluída, e não há execução automática prometida após o encerramento desta sessão.
