@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 346,
+  "count": 368,
   "fields_read": [
     "simples",
     "pontos",
@@ -21,7 +21,8 @@
     "legal-commentary-block-10-2026-10-16.md",
     "legal-commentary-block-11-2026-10-16.md",
     "legal-commentary-block-12-2026-10-16.md",
-    "legal-commentary-block-13-2026-10-16.md"
+    "legal-commentary-block-13-2026-10-16.md",
+    "legal-commentary-block-14-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -1719,6 +1720,182 @@
       "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
       "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-1",
+      "unit_id": "743ebcd9-7239-5880-82a4-21b777d4a0d1",
+      "content_sha256": "95c033703c1342b4d23b4780cabf9935edad58192ba50be0661611b78293762b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-10",
+      "unit_id": "535e0fc8-f916-529a-b090-27e2b33ea1c7",
+      "content_sha256": "6f70b3d508a535b1d14d5c26278503c3d38c1ec9baac0593a5923018f79cc7b8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-11",
+      "unit_id": "72154b20-8a62-5fb6-a331-4f9327995d5f",
+      "content_sha256": "ad17cced1b9f47d0a02393406ac877da94147ae514095c30ca8f33f9d0051de7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-12",
+      "unit_id": "a5d85413-a5f2-5688-9e99-8aa37cb514b5",
+      "content_sha256": "5e4043dca9ab052558f977cb8e6b495494b54eb29621dc17579f2bd44e70ec25",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-13",
+      "unit_id": "29efedf2-7fa6-553b-bea8-fee1446934bd",
+      "content_sha256": "bdd3e1cb2e00613f794761c66998c48ce41822b9f0b7c6581901a043f8a940b3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-14",
+      "unit_id": "91ccd39a-f5a5-5086-adfb-106776b3abf1",
+      "content_sha256": "c6652d2f5c75d8605fea564076c979e2f311493529a25259864724167e0575f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-15",
+      "unit_id": "23481fc6-1a3e-5b88-a342-7882165b369d",
+      "content_sha256": "4b0e71136627cf5897756bb7689453e85bb298ff1b8326d1db486dbf7ce48005",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-16",
+      "unit_id": "efacae4d-5b7b-5123-bb1c-5b384840df62",
+      "content_sha256": "12df09e431df8f6eb0f030018aed75187999327e9bdc00a12113cecc177ed51e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-17",
+      "unit_id": "4b0ca10d-d910-5ee8-b12f-1e74591e3943",
+      "content_sha256": "4169dbadd74329544f8eb89abdfc128e93b6df63cef7bc2a25aeaafa711ec648",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-18",
+      "unit_id": "69a78ae0-0653-59da-9097-e968081a0e6d",
+      "content_sha256": "1646a2f2611560126a7645281071b2bf296c7d61fcf3950ef73c9b30fb68cef6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-19",
+      "unit_id": "c373c70e-fd9b-5e6c-bb16-8c8772750848",
+      "content_sha256": "ad69dbac06e3266fc2559390fef6061dad87eb4d267b26454c9b8b703f20ae69",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-2",
+      "unit_id": "d146e51f-31df-5d48-9bf6-8f925c8a416c",
+      "content_sha256": "4f30dc9b47b0c602598851a12b0ff8b9cb318aafc09e0f5a80d221f82ebf5b32",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-20",
+      "unit_id": "681d73b7-5560-583f-9114-8db5b2948390",
+      "content_sha256": "33a235f7c3d11973dcab0b7965daaeb3c9089fc5b2ab03376e724aa3d7b9d6a3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-21",
+      "unit_id": "fa3df2ca-238b-5e95-bc11-1da324f76a05",
+      "content_sha256": "f986af0ce05979c950ef71ce89c2b9e99ccc0ee491f2c78b8f9e350b03686d45",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-22",
+      "unit_id": "934c493e-5bdc-5698-b3e8-05016873840c",
+      "content_sha256": "97429a654af1d05f368395d773b53985ae26c276f703a66833715d79154c8e5d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-3",
+      "unit_id": "2fc602fd-c4bc-54bb-b453-ad142b9d57da",
+      "content_sha256": "a1e61cc3c5077d03a8a7a9ebe63f518fa9d34670a0766102ef3c1cd84a14e80e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-4",
+      "unit_id": "0d2ba006-b198-52bc-ab52-6c7ff8a01231",
+      "content_sha256": "b38e03e7d987c5fb5dd34f6244ebbd84f3ee69651938b5a93c9e15ae4aa56ddf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-5",
+      "unit_id": "e75f289c-b206-50af-88e5-fa33eab2ffff",
+      "content_sha256": "721771055b73d7414957c62115f9fbd3cfdb1f159b0d5b202667be64d8e00203",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-6",
+      "unit_id": "481fe6c7-c7ce-58f6-94db-426635f281e7",
+      "content_sha256": "eefee7876aa7b98c5d6eb8ce8dc88bfb5a4249d7f74a7579dbd05353c64814ca",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-7",
+      "unit_id": "56a4c186-e99d-529a-90f0-f6ca2b130d40",
+      "content_sha256": "17749c377b48ab7d3426b91be3d4e1cc1504847c15ceb4fce118d596a7f2d673",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-8",
+      "unit_id": "863cdc25-8b15-5756-9932-7d696fb91426",
+      "content_sha256": "90678ffc575aa3f589db08d7d9b0f657494625623e7095c2a1bd78beaf2e3efb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "pensao-regulamento",
+      "unit_key": "art-9",
+      "unit_id": "7b6d7837-66ec-5261-b152-3cc6f28f0e68",
+      "content_sha256": "f335c383f3d74f736a093b1300cd9882f9b750a2899ec87791c335fbf7d15192",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
       "result": "preserved"
     },
     {
