@@ -415,7 +415,7 @@ function ErrorsPage() {
     <div className="space-y-6">
       <PageHero
         image="trainer"
-        kicker="Treinamento"
+        kicker="Questões"
         icon={AlertCircle}
         title={
           <>

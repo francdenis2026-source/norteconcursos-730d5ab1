@@ -64,7 +64,7 @@ function CareersPage() {
     <div className="space-y-6">
       <PageHero
         image="careers-team"
-        kicker="Objetivo"
+        kicker="Meu concurso"
         icon={ShieldCheck}
         title={
           <>

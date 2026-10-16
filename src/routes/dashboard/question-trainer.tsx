@@ -990,8 +990,16 @@ function QuestionTrainer() {
         return copy;
       });
       setModal(null);
-    } catch {
-      setSaveError("Não foi possível salvar sua resposta. Tente novamente.");
+    } catch (error) {
+      // O servidor também aplica o limite diário do plano (gatilho no banco).
+      if (/limite di[aá]rio/i.test(String((error as { message?: unknown })?.message ?? ""))) {
+        if (dailyLimit !== "unlimited") setDailyUsed(dailyLimit);
+        setSaveError(
+          "Você atingiu o limite diário de questões do seu plano. Ele renova à meia-noite (horário do Acre).",
+        );
+      } else {
+        setSaveError("Não foi possível salvar sua resposta. Tente novamente.");
+      }
     } finally {
       savingRef.current = false;
       setSaving(false);

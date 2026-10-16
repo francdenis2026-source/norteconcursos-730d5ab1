@@ -186,7 +186,7 @@ function NotebooksPage() {
     <div className="space-y-6">
       <PageHero
         image="study-desk"
-        kicker="Treinamento"
+        kicker="Questões"
         icon={BookOpen}
         title={
           <>

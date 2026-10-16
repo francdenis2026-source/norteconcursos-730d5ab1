@@ -244,7 +244,7 @@ export function LibraryIndex() {
       <PageHero
         image="study-desk"
         size="lg"
-        kicker="Treinamento"
+        kicker="Estudar"
         icon={Library}
         title={
           <>
