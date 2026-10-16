@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import {
   Sheet,
   SheetClose,
@@ -32,15 +32,13 @@ import {
   Trophy,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import "@/styles/home.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
-import { HeroVideo } from "@/components/landing/HeroVideo";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
-import { AcreSection } from "@/components/landing/AcreSection";
-import { MobileHub } from "@/components/landing/MobileHub";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
 export const Route = createFileRoute("/")({
@@ -60,74 +58,67 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image", content: "/media/hero/landing-hero.webp" },
     ],
-    links: [{ rel: "preload", as: "image", href: "/media/hero/landing-hero.webp" }],
   }),
 });
 
 const NAV: [string, string][] = [
-  ["Método", "#metodo"],
-  ["Plataforma", "#plataforma"],
+  ["Como funciona", "#como"],
+  ["Ferramentas", "#ferramentas"],
   ["Carreiras", "#carreiras"],
   ["Planos", "#planos"],
 ];
 
-const ROLES = [
-  "Agente da Polícia Federal",
-  "Escrivão PF",
-  "Delegado de Polícia",
-  "Policial Rodoviário Federal",
-  "Investigador de Polícia",
-  "Perito Criminal",
-  "Policial Penal",
-  "Soldado PM",
-  "Bombeiro Militar",
-  "Guarda Municipal",
-];
-
 const STEP_HUES = ["gold", "sky", "emerald", "rose"] as const;
-const STEPS = [
+const STEPS: [LucideIcon, string, string][] = [
   [
+    Target,
     "Defina a missão",
-    "Escolha carreira, cargo, banca e edital para concentrar energia no que realmente pontua.",
+    "Escolha carreira, cargo, banca e edital para estudar o que realmente pontua.",
   ],
-  ["Faça o reconhecimento", "Resolva um diagnóstico e identifique riscos por disciplina."],
-  ["Entre em treinamento", "Execute questões, revisões e blocos de foco com objetivo claro."],
-  ["Simule sob pressão", "Teste tempo, estratégia e domínio antes do dia decisivo."],
+  [
+    FileSearch,
+    "Faça o reconhecimento",
+    "Resolva um diagnóstico e descubra onde você perde pontos, disciplina por disciplina.",
+  ],
+  [
+    BrainCircuit,
+    "Entre em treinamento",
+    "Questões, revisões e blocos de foco com objetivo claro em cada sessão.",
+  ],
+  [Trophy, "Simule sob pressão", "Teste tempo e estratégia antes do dia decisivo."],
 ];
 
-const TOOLS: { icon: LucideIcon; title: string; text: string; variant?: string }[] = [
+const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[] = [
+  {
+    icon: BrainCircuit,
+    title: "Treinador de questões",
+    text: "Sessões por banca, cargo e disciplina, com correção imediata, explicação e fonte jurídica oficial.",
+    lead: true,
+  },
   {
     icon: Trophy,
-    title: "Simulador profissional",
+    title: "Simulador de provas",
     text: "Cronômetro, mapa de questões e diagnóstico por disciplina no ritmo da prova real.",
-    variant: "lp-tile--brass",
   },
   {
     icon: MapIcon,
     title: "Edital eletrônico",
-    text: "Cada assunto do edital vira uma porta de entrada para resumo, explicações e treino.",
+    text: "Cada assunto do edital vira porta de entrada para resumo, explicações e treino.",
   },
   {
     icon: Compass,
     title: "Plano de estudos",
-    text: "Prioridades alinhadas ao cargo, à banca, ao peso das matérias e ao seu desempenho.",
+    text: "Prioridades pelo cargo, pela banca e pelo seu desempenho, com foco e revisão no mesmo lugar.",
   },
   {
     icon: FileSearch,
     title: "Caderno de erros",
-    text: "Cada falha vira uma ordem de revisão clara, sem repetir estudo no escuro.",
+    text: "Cada falha vira uma ordem de revisão clara, sem estudar no escuro.",
   },
   {
     icon: LineChart,
     title: "Análise de desempenho",
     text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
-    variant: "lp-tile--wide",
-  },
-  {
-    icon: Timer,
-    title: "Foco e revisão",
-    text: "Pomodoro, flashcards e cronômetro de foco no mesmo lugar.",
-    variant: "lp-tile--wide",
   },
 ];
 
@@ -146,7 +137,7 @@ const PILLARS: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: ScrollText,
     title: "Fonte oficial em cada questão jurídica",
-    text: "Questões jurídicas sinalizam fonte, referência e data de verificação quando aplicável.",
+    text: "Questões jurídicas indicam a fonte, a referência e a data de verificação quando aplicável.",
   },
   {
     icon: Landmark,
@@ -156,7 +147,7 @@ const PILLARS: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: ShieldCheck,
     title: "Conteúdo auditado e identificado",
-    text: "Conteúdos auditados são sinalizados para você saber exatamente o que está estudando.",
+    text: "O que foi auditado vem sinalizado, para você saber exatamente o que está estudando.",
   },
 ];
 
@@ -171,40 +162,21 @@ function useScrolled(threshold = 24) {
   return scrolled;
 }
 
-function useReveal() {
-  useEffect(() => {
-    const root = document.documentElement;
-    const targets = document.querySelectorAll<HTMLElement>("[data-reveal]");
-    if (!("IntersectionObserver" in window)) return;
-    root.classList.add("reveal-ready");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        }
-      },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
-    );
-    targets.forEach((el) => observer.observe(el));
-    return () => {
-      observer.disconnect();
-      root.classList.remove("reveal-ready");
-    };
-  }, []);
+function Head({ kicker, children, lead }: { kicker: string; children: React.ReactNode; lead?: string }) {
+  return (
+    <div className="hp-head">
+      <span className="hp-kicker">{kicker}</span>
+      <h2 className="hp-h2">{children}</h2>
+      {lead && <p className="hp-lead">{lead}</p>}
+    </div>
+  );
 }
-
-const delay = (n: number) => ({ "--reveal-delay": n }) as CSSProperties;
 
 function Index() {
   const scrolled = useScrolled();
-  const [heroReady, setHeroReady] = useState(false);
-  useReveal();
 
   return (
-    <div className={`lp${heroReady ? " is-ready" : " is-intro"}`}>
+    <div className="lp is-ready hp">
       <header className="lp-header" data-scrolled={scrolled}>
         <div className="lp-container lp-header__bar">
           <Link to="/" aria-label="Norte Concurso — início">
@@ -216,9 +188,6 @@ function Index() {
                 {label}
               </a>
             ))}
-            <a href="#pcac" className="is-campaign">
-              PCAC 2026
-            </a>
           </nav>
           <div className="lp-header__actions">
             <Link to="/auth" search={{ mode: undefined }} className="lp-header__login">
@@ -243,7 +212,7 @@ function Index() {
                 <p className="lp-sheet__intro">Estude com direção para a carreira que você escolheu.</p>
                 <span className="lp-sheet__label">Explorar</span>
                 <nav className="lp-sheet-nav" aria-label="Navegação móvel">
-                  {[...NAV, ["PCAC 2026", "#pcac"] as [string, string]].map(([label, href]) => (
+                  {NAV.map(([label, href]) => (
                     <SheetClose asChild key={href}>
                       <a href={href}>
                         {label} <ArrowUpRight />
@@ -271,260 +240,173 @@ function Index() {
       </header>
 
       <main>
-        <section className={`lp-hero${heroReady ? " is-ready" : ""}`}>
-          <div className="lp-hero__media" aria-hidden="true">
-            <HeroVideo onDone={() => setHeroReady(true)} />
-          </div>
-          <div className="lp-hero__shade" aria-hidden="true" />
-          <div className="lp-hero__grid" aria-hidden="true" />
-          <div className="lp-container lp-hero__body">
-            <div className="lp-hero__layout">
-              <div className="lp-hero__content">
-                <span className="chip-brass">
-                  <Compass /> Preparação para segurança pública
-                </span>
-                <h1 className="lp-hero__title">
-                  Sua aprovação não é sorte.
-                  <em>É operação bem planejada.</em>
-                </h1>
-                <p className="lp-hero__lead">
-                  Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
-                  Polícia Federal, PRF, Polícias Civis, Penais e Militares.
-                </p>
-                <div className="lp-hero__ctas">
-                  <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                    Iniciar minha preparação <ArrowRight />
-                  </Link>
-                  <a href="#plataforma" className="btn-glass">
-                    <CirclePlay /> Conhecer a plataforma
-                  </a>
-                </div>
-                <ul className="lp-hero__pillars" aria-label="Diferenciais">
-                  {(
-                    [
-                      [BadgeCheck, "emerald", "Edital e lei vigentes conferidos"],
-                      [Target, "sky", "Treino por banca e disciplina"],
-                      [Timer, "rose", "Simulados sob pressão"],
-                    ] as const
-                  ).map(([Icon, hue, label]) => (
-                    <li key={label}>
-                      <i className="app-ico" data-hue={hue} aria-hidden="true">
-                        <Icon />
-                      </i>
-                      {label}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <aside className="lp-hero__panel" aria-label="Destaques">
-                <TestingSeal />
-                <DailyChallengeBadge />
-                <QuestionCountBadge />
-              </aside>
-            </div>
-            <div className="lp-hero__aside" aria-hidden="true">
-              <span className="lp-coord">
-                <b>N</b> · 08°09′S 70°21′W
+        <section className="hp-hero" aria-labelledby="hp-title">
+          <div className="lp-container hp-hero__layout">
+            <div className="hp-hero__copy">
+              <span className="chip-brass">
+                <Compass /> Preparação para segurança pública
               </span>
-              <span className="lp-coord">FEIJÓ — ACRE — BRASIL</span>
+              <h1 id="hp-title" className="hp-hero__title">
+                Sua aprovação não é sorte.
+                <em>É operação bem planejada.</em>
+              </h1>
+              <p className="hp-hero__lead">
+                Questões por banca, simulados cronometrados e um plano que se ajusta ao seu
+                desempenho, para Polícia Federal, PRF, Polícias Civis, Penais e Militares.
+              </p>
+              <div className="hp-hero__ctas">
+                <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
+                  Começar grátis <ArrowRight />
+                </Link>
+                <a href="#como" className="btn-glass">
+                  <CirclePlay /> Ver como funciona
+                </a>
+              </div>
+              <ul className="hp-trust" aria-label="Diferenciais">
+                {(
+                  [
+                    [BadgeCheck, "emerald", "Edital e lei vigentes conferidos"],
+                    [Target, "sky", "Treino por banca e disciplina"],
+                    [Timer, "rose", "Simulados sob pressão"],
+                  ] as const
+                ).map(([Icon, hue, label]) => (
+                  <li key={label}>
+                    <i className="app-ico" data-hue={hue} aria-hidden="true">
+                      <Icon />
+                    </i>
+                    {label}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="lp-rail">
-            <div className="lp-container lp-rail__grid">
-              {(
-                [
-                  [Landmark, "sky", "Federais", "PF · PRF"],
-                  [ShieldCheck, "emerald", "Estaduais", "Civil · Penal"],
-                  [Trophy, "orange", "Militares", "PM · Bombeiros"],
-                  [Compass, "gold", "Metodologia", "Ciclo completo"],
-                ] as const
-              ).map(([Icon, hue, label, value]) => (
-                <div className="lp-rail__item" key={label}>
-                  <i className="app-ico" data-hue={hue} aria-hidden="true">
-                    <Icon />
-                  </i>
-                  <div className="lp-rail__text">
-                    <span>{label}</span>
-                    <strong>{value}</strong>
-                  </div>
-                </div>
-              ))}
+            <div className="hp-hero__visual">
+              <ProductMock />
             </div>
           </div>
         </section>
 
-        <MobileHub
-          steps={STEPS as [string, string][]}
-          tools={TOOLS}
-          careers={CAREERS}
-          pillars={PILLARS}
-        />
-
-        <div className="lp-marquee" aria-hidden="true">
-          <div className="lp-marquee__track">
-            {[...ROLES, ...ROLES].map((role, i) => (
-              <span className="lp-marquee__item" key={`${role}-${i}`}>
-                {role}
-              </span>
-            ))}
+        <section className="hp-strip" aria-label="Destaques de hoje">
+          <div className="lp-container hp-strip__grid">
+            <TestingSeal />
+            <DailyChallengeBadge />
+            <QuestionCountBadge />
           </div>
-        </div>
+        </section>
 
         <PcprExamPromo />
 
-        <section id="pcac" className="lp-section lp-photo lp-pcac" aria-labelledby="pcac-title">
-          <div className="lp-container lp-pcac__layout">
-            <div className="lp-pcac__content" data-reveal>
-              <div className="lp-pcac__emblems" aria-label="Identidade institucional do Acre">
-                <span className="lp-pcac__emblem">
+        <section className="hp-section" aria-label="Campanha PCAC 2026">
+          <div className="lp-container">
+            <div className="hp-campaign">
+              <div>
+                <div className="hp-campaign__emblems" aria-label="Identidade institucional do Acre">
                   <img src="/media/brasao-acre-oficial.svg" alt="Brasão do Estado do Acre" />
-                </span>
-                <hr />
-                <span className="lp-pcac__emblem">
-                  <img src="/media/brasao-pcac-oficial.jpg" alt="Brasão da Polícia Civil do Acre" />
-                </span>
+                  <img
+                    src="/media/brasao-pcac-oficial.jpg"
+                    alt="Brasão da Polícia Civil do Acre"
+                  />
+                </div>
+                <h3>PCAC 2026: sua próxima missão começa agora</h3>
+                <p>
+                  O novo concurso da Polícia Civil do Acre foi anunciado, com vagas previstas para
+                  Delegado, Oficial Investigador e Perito. Comece a treinar desde já.
+                </p>
               </div>
-              <span className="lp-kicker">Campanha especial · PCAC 2026</span>
-              <h2 id="pcac-title" className="lp-h2">
-                PCAC: sua próxima missão <em>começa agora.</em>
-              </h2>
-              <p className="lp-lead">
-                O novo concurso da Polícia Civil do Acre foi anunciado. Prepare-se desde agora para
-                Delegado, Oficial Investigador de Polícia e Perito com treino direcionado, simulados
-                e inteligência de desempenho.
-              </p>
-              <div className="lp-pcac__roles" aria-label="Cargos anunciados">
-                {["Delegado de Polícia", "Oficial Investigador", "Perito"].map((role) => (
-                  <span key={role}>
-                    <Check /> {role}
-                  </span>
-                ))}
-              </div>
-              <div className="lp-pcac__actions">
+              <div className="hp-campaign__side">
                 <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                  Quero me preparar para a PCAC <ArrowRight />
+                  Quero me preparar <ArrowRight />
                 </Link>
-                <span className="lp-pcac__status">
+                <span className="hp-campaign__status">
                   <CalendarClock className="h-3.5 w-3.5" /> Edital ainda não publicado
                 </span>
+                <small>
+                  Campanha educacional independente, sem vínculo ou endosso do Governo do Acre ou
+                  da Polícia Civil.
+                </small>
               </div>
-              <p className="lp-pcac__disclaimer">
-                Campanha educacional independente. A Norte Concursos não possui vínculo ou endosso
-                institucional do Governo do Acre ou da Polícia Civil.
-              </p>
             </div>
-            <figure className="lp-pcac__visual">
-              <img
-                src="/media/hero/landing-pcac.webp"
-                alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
-                width={1672}
-                height={941}
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Preparação direcionada · Polícia Civil do Acre</figcaption>
-            </figure>
           </div>
         </section>
 
-        <AcreSection />
-
-        <section id="metodo" className="lp-section lp-photo lp-method">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
+        <section id="como" className="hp-section hp-section--tint">
           <div className="lp-container">
-            <div className="lp-head" data-reveal>
-              <div>
-                <span className="lp-kicker">Protocolo Norte</span>
-                <h2 className="lp-h2">
-                  Preparação é estratégia, <em>não improviso.</em>
-                </h2>
-              </div>
-              <p className="lp-lead">
-                Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma
-                rotina executável até a prova.
-              </p>
-            </div>
-            <ol className="lp-steps">
-              {STEPS.map(([title, text], i) => (
-                <li className="lp-step" key={title} data-reveal style={delay(i)}>
-                  <span className="lp-step__node">
-                    <i className="app-ico" data-hue={STEP_HUES[i]} aria-hidden="true">
-                      {i === 0 ? (
-                        <Target />
-                      ) : i === 1 ? (
-                        <FileSearch />
-                      ) : i === 2 ? (
-                        <BrainCircuit />
-                      ) : (
-                        <Trophy />
-                      )}
-                    </i>
-                    <b>0{i + 1}</b>
-                  </span>
-                  <div className="lp-step__card">
-                    <h3>{title}</h3>
-                    <p>{text}</p>
+            <Head
+              kicker="Como funciona"
+              lead="Um ciclo objetivo que transforma edital, desempenho e tempo disponível em uma rotina executável até a prova."
+            >
+              Preparação é estratégia, <em>não improviso.</em>
+            </Head>
+            <ol className="hp-grid" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+              {STEPS.map(([Icon, title, text], i) => (
+                <li className="hp-card" key={title}>
+                  <div className="hp-card__top">
+                    <span className="hp-ico" data-hue={STEP_HUES[i]}>
+                      <Icon />
+                    </span>
+                    <span className="hp-step__n">0{i + 1}</span>
                   </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
                 </li>
               ))}
             </ol>
           </div>
         </section>
 
-        <section id="plataforma" className="lp-section lp-platform">
+        <section id="ferramentas" className="hp-section">
           <div className="lp-container">
-            <div className="lp-head" data-reveal>
-              <div>
-                <span className="lp-kicker">Centro de operações</span>
-                <h2 className="lp-h2">
-                  Cada dado aponta para a <em>próxima ação.</em>
-                </h2>
-              </div>
-              <p className="lp-lead">
-                Questões, simulados, rotina e desempenho trabalham no mesmo painel para você entrar
-                em cada sessão sabendo o que treinar e por quê.
-              </p>
+            <Head
+              kicker="Ferramentas"
+              lead="Questões, simulados, rotina e desempenho no mesmo painel: você entra em cada sessão sabendo o que treinar e por quê."
+            >
+              Cada dado aponta para a <em>próxima ação.</em>
+            </Head>
+            <div className="hp-grid hp-tools">
+              {TOOLS.map(({ icon: Icon, title, text, lead }) => (
+                <article key={title} className={`hp-card${lead ? " hp-card--lead" : ""}`}>
+                  <span className="hp-ico">
+                    <Icon />
+                  </span>
+                  <h3>
+                    {title}
+                    {lead && <span className="hp-badge">Principal</span>}
+                  </h3>
+                  <p>{text}</p>
+                </article>
+              ))}
             </div>
+          </div>
+        </section>
 
-            <div className="lp-bento">
-              <article className="lp-tile lp-tile--feature" data-reveal>
-                <div className="lp-feature__copy">
-                  <div className="lp-feature__top">
-                    <span className="lp-tile__icon">
-                      <BrainCircuit />
-                    </span>
-                    <span className="lp-feature__badge">Recurso principal</span>
-                  </div>
-                  <h3>Treinador de questões</h3>
-                  <p>
-                    Sessões por banca, carreira e disciplina com correção imediata, explicação
-                    pedagógica e fonte jurídica oficial.
-                  </p>
-                  <ul className="lp-feature__list">
-                    <li>
-                      <Check /> Filtros por banca e cargo
-                    </li>
-                    <li>
-                      <Check /> Resolução passo a passo com IA · em breve
-                    </li>
-                    <li>
-                      <Check /> Salva no seu caderno de revisão
-                    </li>
-                  </ul>
+        <section id="carreiras" className="hp-section hp-section--tint">
+          <div className="lp-container">
+            <Head kicker="Para quem é">
+              A plataforma de quem escolheu <em>servir e proteger.</em>
+            </Head>
+            <div className="hp-grid hp-careers">
+              {CAREERS.map(([name, roles], i) => (
+                <div className="hp-career" key={name}>
+                  <b>{String(i + 1).padStart(2, "0")}</b>
+                  <strong>{name}</strong>
+                  <small>{roles}</small>
                 </div>
-                <div className="lp-feature__window">
-                  <ProductMock />
-                </div>
-              </article>
-              {TOOLS.map(({ icon: Icon, title, text, variant }, i) => (
-                <article
-                  key={title}
-                  className={`lp-tile ${variant ?? ""}`}
-                  data-reveal
-                  style={delay((i % 3) + 1)}
-                >
-                  <span className="lp-tile__icon">
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="hp-section" aria-label="Rastreabilidade jurídica">
+          <div className="lp-container">
+            <Head
+              kicker="Rastreabilidade jurídica"
+              lead="Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de vigência."
+            >
+              Estude o que é <em>vigente.</em> Com fonte.
+            </Head>
+            <div className="hp-grid" style={{ ["--hp-min" as string]: "280px" }}>
+              {PILLARS.map(({ icon: Icon, title, text }) => (
+                <article className="hp-card" key={title}>
+                  <span className="hp-ico">
                     <Icon />
                   </span>
                   <h3>{title}</h3>
@@ -535,74 +417,21 @@ function Index() {
           </div>
         </section>
 
-        <section id="carreiras" className="lp-section lp-photo lp-careers">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container">
-            <div data-reveal>
-              <span className="lp-kicker">Foco total em segurança pública</span>
-              <h2 className="lp-h2 max-w-[640px]">
-                A plataforma de quem escolheu <em>servir e proteger.</em>
-              </h2>
-            </div>
-            <div className="lp-careers__list" data-reveal style={delay(1)}>
-              {CAREERS.map(([name, roles], i) => (
-                <div className="lp-career" key={name}>
-                  <span>{String(i + 1).padStart(2, "0")}</span>
-                  <strong>{name}</strong>
-                  <small>{roles}</small>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="lp-section lp-photo lp-trust">
-          <div className="lp-photo__media" aria-hidden="true" />
-          <div className="lp-photo__shade" aria-hidden="true" />
-          <div className="lp-container lp-trust__inner">
-            <div className="lp-trust__content" data-reveal>
-              <span className="lp-kicker">Rastreabilidade jurídica</span>
-              <h2 className="lp-h2">
-                Estude o que é <em>vigente.</em> Com fonte.
-              </h2>
-              <p className="lp-lead">
-                Uma base de estudo construída com governança de conteúdo: cada item jurídico ligado
-                ao edital ativo, à fonte oficial e à verificação de vigência.
-              </p>
-              <div className="lp-pillars">
-                {PILLARS.map(({ icon: Icon, title, text }) => (
-                  <div className="lp-pillar" key={title}>
-                    <span>
-                      <Icon />
-                    </span>
-                    <div>
-                      <strong>{title}</strong>
-                      <p>{text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <PlansSection />
 
-        <section className="lp-section lp-final">
-          <div className="lp-final__bg" aria-hidden="true" />
+        <section className="hp-final" aria-labelledby="hp-final-title">
           <div className="lp-container">
-            <div className="lp-final__copy" data-reveal>
+            <div className="hp-final__box">
               <span className="chip-brass">
                 <Sparkles /> Pronto para entrar em operação
               </span>
-              <h2 className="lp-h2">
+              <h2 id="hp-final-title" className="hp-h2">
                 Disciplina sem estratégia desgasta. <em>Treino orientado aprova.</em>
               </h2>
-              <p className="lp-lead">
+              <p className="hp-lead">
                 Defina sua carreira, faça o diagnóstico e comece o primeiro ciclo de treino.
               </p>
-              <div className="lp-final__actions">
+              <div className="hp-final__actions">
                 <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
                   Começar gratuitamente <ArrowRight />
                 </Link>
@@ -611,14 +440,6 @@ function Index() {
                 </Link>
               </div>
             </div>
-          </div>
-          <div className="lp-final__lineup" data-reveal style={delay(1)} aria-hidden="true">
-            <img
-              src="/media/hero/lineup-carreiras-ajustada.webp"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
           </div>
         </section>
       </main>
@@ -632,8 +453,8 @@ function Index() {
           <FooterColumn
             title="Plataforma"
             links={[
-              ["Método", "#metodo"],
-              ["Ferramentas", "#plataforma"],
+              ["Como funciona", "#como"],
+              ["Ferramentas", "#ferramentas"],
               ["Carreiras", "#carreiras"],
               ["Desafio diário", "/desafio-diario"],
             ]}

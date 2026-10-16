@@ -17,6 +17,8 @@ export function MobileNotice() {
 
   useEffect(() => {
     if (!window.matchMedia("(max-width: 767px)").matches) return;
+    // A página inicial já é feita para o celular: o aviso só atrapalharia a primeira impressão.
+    if (window.location.pathname === "/") return;
     try {
       if (localStorage.getItem(KEY)) return;
     } catch {
