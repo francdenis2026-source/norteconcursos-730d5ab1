@@ -141,6 +141,84 @@
       "reviewed_at": "2026-10-16T01:36:12.387668+00:00",
       "published_at": "2025-03-12T09:00:00",
       "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "jec": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "title": "Lei 9.099/1995 — Juizados Especiais",
+      "sha256": "cc28691cf2d77eaeb856ef5015cad24a2a57dfdba24a7c4f8c244139f7630fe7",
+      "reviewed_at": "2026-10-15T19:08:53.767607+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "mariapenha": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "title": "Lei 11.340/2006 — Maria da Penha",
+      "sha256": "3b7ac398d3ccf27033402475339c8933850d7e3b587e2182f3464e0dd2065887",
+      "reviewed_at": "2026-10-15T19:08:56.491483+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503.",
+      "encoding": "UTF-16 com BOM, decodificado antes da leitura"
+    },
+    "interceptacao": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "title": "Lei 9.296/1996 — Interceptação",
+      "sha256": "3858f80c4f18e3c053d063d21ba8f557a2fc33f992289aa118c8c27e7e5dc02c",
+      "reviewed_at": "2026-10-15T19:08:48.665287+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "organizacoes": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+      "title": "Lei 12.850/2013 — Organizações Criminosas",
+      "sha256": "2e8b378775959c7c4f5d02008550c9faed3a86a494c9bd6ff046998a44235abc",
+      "reviewed_at": "2026-10-15T19:08:49.753672+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "lavagem": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "title": "Lei 9.613/1998 — Lavagem",
+      "sha256": "3681fcccf9239250fbc84a4752c3099dc9f3800e8c0d474a3cc7dcfab2f3ba28",
+      "reviewed_at": "2026-10-15T19:08:51.997303+00:00",
+      "retrieval": "Captura oficial bem-sucedida em 15/10 nesta sessão, preservada; nova tentativa do Planalto na retomada retornou 503."
+    },
+    "pcdf_matrix": {
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/409522C3AA9E7D9736EC8A33888E0732BEE4FB07EABC75866BB311B2062C5FF9.pdf",
+      "title": "PCDF Delegado 2026: edital oficial retificado",
+      "sha256": "3b288efc9b596a8f915b38d50f693c2eae464a745ad07eac107283ec2fd876fa",
+      "reviewed_at": "2026-10-16T01:45:29.821400+00:00",
+      "pages_visually_reviewed": [
+        80,
+        83
+      ]
+    },
+    "stf_cpi": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/buscas-e-apreensoes-requeridas-por-cpi-tem-de-ser-fundamentadas/",
+      "title": "Buscas e apreensões requeridas por CPI têm de ser fundamentadas",
+      "sha256": "2da9ff7f22c10a452e3218c9b59c8e9acab412257ae1a289c64c919e6bddb1a5",
+      "reviewed_at": "2026-10-16T01:54:19.386615+00:00",
+      "published_at": "2015-06-22T18:55:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_emendas": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-invalida-norma-do-parana-que-estendia-reajuste-do-tribunal-de-contas-a-servidores-da-assembleia-legislativa/",
+      "title": "STF invalida norma do Paraná que estendia reajuste do Tribunal de Contas a servidores da Assembleia Legislativa",
+      "sha256": "3dd525823e9d9cba4369c9817138b0fd2c15c48fecdd12f805cb86c2361c3a07",
+      "reviewed_at": "2026-10-16T01:53:11.681418+00:00",
+      "published_at": "2025-04-10T21:07:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_adi4424_specific": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/mes-da-mulher-mp-pode-processar-agressor-mesmo-sem-representacao-da-vitima-de-violencia-domestica/",
+      "title": "Mês da Mulher: MP pode processar agressor mesmo sem representação da vítima de violência doméstica",
+      "sha256": "082cb13f188e2771dc59b83d9eca5d657bca39da2ed18eb9f0cad0c113b1782a",
+      "reviewed_at": "2026-10-16T01:53:13.177764+00:00",
+      "published_at": "2023-03-02T09:00:00",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "stf_mi7452": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-amplia-protecao-da-lei-maria-da-penha-a-casais-homoafetivos-do-sexo-masculino-travestis-e-transexuais/",
+      "title": "STF amplia proteção da Lei Maria da Penha a casais homoafetivos do sexo masculino, travestis e transexuais",
+      "sha256": "b2856d7d5ac6a86a52308e6dbeaaa63c55fe216fc3d4a9d232a2b62b365f85cd",
+      "reviewed_at": "2026-10-16T01:58:30.650912+00:00",
+      "published_at": "2025-02-24T18:52:19",
+      "retrieval": "Conteúdo específico conferido na API oficial do STF."
     }
   }
 }

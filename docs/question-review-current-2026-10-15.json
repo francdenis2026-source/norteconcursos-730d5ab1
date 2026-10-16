@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-16T02:08:26.737Z",
+  "scope": "Registros físicos nas quatro tabelas de questões; inclui 34 registros pessoais. Não é contagem de questões únicas ou certificação jurídica do acervo.",
+  "tables": [
+    {
+      "table": "official_exam_questions",
+      "total": 4888,
+      "active": 4078,
+      "under_review": 601,
+      "archived": 142,
+      "obsolete": 30,
+      "annulled": 37,
+      "revoked": 0
+    },
+    {
+      "table": "board_exam_questions",
+      "total": 1054,
+      "active": 447,
+      "under_review": 600,
+      "archived": 7,
+      "obsolete": 0,
+      "annulled": 0,
+      "revoked": 0
+    },
+    {
+      "table": "curated_question_catalog",
+      "total": 1792,
+      "active": 1790,
+      "under_review": 0,
+      "archived": 0,
+      "obsolete": 2,
+      "annulled": 0,
+      "revoked": 0
+    },
+    {
+      "table": "question_bank",
+      "total": 34,
+      "active": 34,
+      "under_review": 0,
+      "archived": 0,
+      "obsolete": 0,
+      "annulled": 0,
+      "revoked": 0
+    }
+  ],
+  "totals": {
+    "total": 7768,
+    "active": 6349,
+    "under_review": 1201,
+    "archived": 149,
+    "obsolete": 32,
+    "annulled": 37,
+    "revoked": 0
+  },
+  "last_published_review": {
+    "contest": "PC-AC 2017 Agente, S01-V",
+    "editorial_decisions": 50,
+    "activated": 47,
+    "archived_historical": 1,
+    "obsolete": 2,
+    "texts_recovered": 69,
+    "pending_in_exam": 29,
+    "external_pending_records_added_during_work": 300
+  },
+  "library_changes_this_batch": 0
+}
