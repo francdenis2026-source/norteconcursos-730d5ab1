@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -25,7 +26,13 @@ import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
 import { PageHero } from "@/components/dashboard/PageHero";
 
-export const Route = createFileRoute("/dashboard/edital-radar")({ component: EditalRadarPage });
+export const Route = createFileRoute("/dashboard/edital-radar")({
+  component: () => (
+    <PlanGate feature="editalRadar" title="Radar do edital">
+      <EditalRadarPage />
+    </PlanGate>
+  ),
+});
 
 const SPHERES: { id: Sphere; label: string }[] = [
   { id: "federal", label: "Concursos federais" },

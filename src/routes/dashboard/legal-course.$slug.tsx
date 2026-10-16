@@ -1,3 +1,4 @@
+import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createFileRoute, Link, useNavigate, useParams } from "@tanstack/react-router";
@@ -38,13 +39,22 @@ import { normalizeLibrarySearch } from "@/lib/librarySearch";
 import { legalStudyCaveat } from "@/lib/legalStudyCaveats";
 
 export const Route = createFileRoute("/dashboard/legal-course/$slug")({
-  component: LegalCoursePage, head: () => ({ meta: [{ title: "Percurso de legislação | Norte Concursos" }] }),
+  component: LegalCoursePageGated, head: () => ({ meta: [{ title: "Percurso de legislação | Norte Concursos" }] }),
   validateSearch: (s: Record<string, unknown>): { art?: string | undefined; par?: string | undefined; find?: string | undefined } => ({
     find: typeof s["find"] === "string" ? s["find"].slice(0,300) : undefined,
     art: typeof s["art"] === "string" ? s["art"] : undefined,
     par: typeof s["par"] === "string" || typeof s["par"] === "number" ? String(s["par"]) : undefined,
   }),
 });
+
+function LegalCoursePageGated() {
+  const { slug } = useParams({ from: "/dashboard/legal-course/$slug" });
+  return (
+    <LibraryDailyGate slug={slug}>
+      <LegalCoursePage />
+    </LibraryDailyGate>
+  );
+}
 
 function LegalCoursePage() {
   const fm = useFocusMode();

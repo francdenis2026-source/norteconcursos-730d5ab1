@@ -1,3 +1,4 @@
+import { PlanGate } from "@/components/dashboard/PlanGate";
 import React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
@@ -10,7 +11,11 @@ import { cn } from "@/lib/utils";
 import { EssayTabs } from "@/components/dashboard/EssayWorkshop";
 
 export const Route = createFileRoute("/dashboard/essays")({
-  component: EssaysPage,
+  component: () => (
+    <PlanGate feature="essays" title="Redação para concursos">
+      <EssaysPage />
+    </PlanGate>
+  ),
 });
 
 interface Topico {

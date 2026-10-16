@@ -1,0 +1,53 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { effectiveTier, planEndsAt, TESTING_OPENED_AT } from "../src/lib/launch.config.ts";
+import { checkFeatureAccess, FREE_DAILY_QUESTIONS, FREE_DAILY_LIBRARY } from "../src/lib/subscriptions.config.ts";
+
+const DAY = 86_400_000;
+const opened = new Date(TESTING_OPENED_AT).getTime();
+
+test("durante os 30 dias de testes, conta nova usa Essencial", () => {
+  const created = new Date(opened + 2 * DAY).toISOString();
+  assert.equal(effectiveTier("free", created, null, opened + 10 * DAY).tier, "essential");
+});
+
+test("ao fim dos 30 dias, a conta é rebaixada ao Gratuito e o aviso lembra o Essencial", () => {
+  const created = new Date(opened).toISOString();
+  const after = effectiveTier("essential", created, null, opened + 31 * DAY);
+  assert.equal(after.tier, "free");
+  assert.equal(after.expiredFrom, "essential");
+  assert.equal(planEndsAt(created, "free", null), new Date(opened + 30 * DAY).toISOString());
+});
+
+test("quem cadastrou antes da abertura ganha 30 dias a partir da abertura", () => {
+  const old = new Date(opened - 90 * DAY).toISOString();
+  assert.equal(effectiveTier("free", old, null, opened + 29 * DAY).tier, "essential");
+  assert.equal(effectiveTier("free", old, null, opened + 31 * DAY).tier, "free");
+});
+
+test("plano pago com vencimento: vencido volta ao Gratuito, vigente continua", () => {
+  const created = new Date(opened - 5 * DAY).toISOString();
+  const future = new Date(opened + 60 * DAY).toISOString();
+  const past = new Date(opened + 1 * DAY).toISOString();
+  assert.equal(effectiveTier("plus", created, future, opened + 10 * DAY).tier, "plus");
+  const lapsed = effectiveTier("plus", created, past, opened + 10 * DAY);
+  assert.equal(lapsed.tier, "free");
+  assert.equal(lapsed.expiredFrom, "plus");
+});
+
+test("plano Gratuito: 20 questões por dia e áreas pagas bloqueadas", () => {
+  assert.equal(FREE_DAILY_QUESTIONS, 20);
+  assert.equal(checkFeatureAccess("free", "questions").limit, 20);
+  for (const feature of ["notebooks", "flashcards", "editalRadar", "essays", "mockExams", "studyPlan"])
+    assert.equal(checkFeatureAccess("free", feature).included, false, feature);
+  assert.deepEqual(
+    [checkFeatureAccess("free", "library").included, checkFeatureAccess("free", "library").limit],
+    [true, FREE_DAILY_LIBRARY],
+  );
+});
+
+test("planos pagos mantêm as áreas liberadas", () => {
+  for (const tier of ["essential", "plus", "premium"])
+    for (const feature of ["notebooks", "flashcards", "editalRadar", "essays"])
+      assert.equal(checkFeatureAccess(tier, feature).included, true, `${tier}:${feature}`);
+});
