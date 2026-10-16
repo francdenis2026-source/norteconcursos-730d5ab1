@@ -1,0 +1,735 @@
+{
+  "verified_at": "2026-10-16T04:29:05.452Z",
+  "scope": "PC-PR 2026: questões sem conferência legal obrigatória; figuras e jurisprudência ficam em revisão.",
+  "items": [
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "02149a24-54cd-4e5d-95f5-28c1bff5058c",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Agente de Polícia Judiciária",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 3,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Observe a seguir o cartaz de campanha divulgado em 23 de abril de 2025, no Instagram da Associação de Assistência Social dos Policiais Militares de São Paulo: https://www.instagram.com/p/DIyLwUtsPMC/ acesso em 15.8.26 A articulação entre os componentes verbais e visuais da campanha contribui para",
+        "options": {
+          "A": "associar a mão levantada à interrupção da violência após o contato com o serviço indicado.",
+          "B": "representar a identidade da vítima como informação necessária à formalização da denúncia policial.",
+          "C": "reforçar o apelo ao rompimento do silêncio por meio do rosto parcialmente encoberto pela mão.",
+          "D": "estabelecer uma sequência entre a situação representada na fotografia e a atuação das autoridades.",
+          "E": "restringir a orientação da campanha às pessoas que vivenciam diretamente situações de violência."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:26.867744+00:00",
+        "created_at": "2026-10-16T01:42:26.867744+00:00",
+        "syllabus_topic_id": "4c435a6b-3212-486b-805a-fc5ca82ae21c",
+        "tested_topic": "Articulação entre texto verbal e imagem em cartaz de campanha",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p4_Image48.jpg"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Articulação entre texto verbal e imagem em cartaz de campanha; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Articulação entre texto verbal e imagem em cartaz de campanha; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "c67624ea-6211-4404-a5ae-78e382285643",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Agente de Polícia Judiciária",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 9,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Observe o cartum a seguir: https://www.folhadelondrina.com.br/folha-2/cartunista-leticia-reis-retrata-o-cotidiano-de-londrina-em-quadrinhos-3292357e.html acesso em 15.8.26 No cartum, o efeito de humor produzido pela resposta de Izuna decorre de a personagem",
+        "options": {
+          "A": "compreender a indicação de economizar como orientação para antecipar compras antes que os preços aumentem.",
+          "B": "considerar que os objetos adquiridos eram necessários, embora essa avaliação não apareça nas falas anteriores.",
+          "C": "associar a compra em promoção à economia, desconsiderando o gasto advindo da quantidade de produtos adquiridos.",
+          "D": "interpretar a expressão “esse mês” como uma indicação de que as compras deveriam ser realizadas no mesmo dia.",
+          "E": "atribuir à palavra “promoção” o sentido de recebimento de uma vantagem financeira posterior às compras."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:26.867744+00:00",
+        "created_at": "2026-10-16T01:42:26.867744+00:00",
+        "syllabus_topic_id": "4c435a6b-3212-486b-805a-fc5ca82ae21c",
+        "tested_topic": "Humor em cartum: leitura de texto verbal e não verbal",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p5_Image51.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Humor em cartum: leitura de texto verbal e não verbal; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Humor em cartum: leitura de texto verbal e não verbal; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "113d7bf4-391b-420a-84b1-d0685fe01ce0",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Agente de Polícia Judiciária",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 20,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Leia o texto a seguir: https://www.tribunapr.com.br/mais-pop/horoscopo/ acesso em 15.8.26 16.8.26 No texto, a função conativa da linguagem é reforçada pela articulação entre",
+        "options": {
+          "A": "imperativos e recursos visuais que destacam apelos ao leitor.",
+          "B": "datas e símbolos que comprovam a precisão das previsões.",
+          "C": "adjetivos e emojis que expressam emoções do enunciador.",
+          "D": "informações pessoais e ícones que descrevem o signo.",
+          "E": "previsões e cores que asseguram a objetividade do conteúdo."
+        },
+        "official_answer": "A",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:26.867744+00:00",
+        "created_at": "2026-10-16T01:42:26.867744+00:00",
+        "syllabus_topic_id": "4c435a6b-3212-486b-805a-fc5ca82ae21c",
+        "tested_topic": "Funções da linguagem: função conativa",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p9_Image60.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Funções da linguagem: função conativa; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Funções da linguagem: função conativa; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "7b801880-6e8d-4972-bcc4-cf1983a2597e",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Agente de Polícia Judiciária",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 30,
+        "subject": "Raciocínio Lógico-matemático",
+        "support_text": null,
+        "stem": "Durante um dia, uma central de atendimento registrou a quantidade de chamados recebidos em quatro turnos consecutivos. O resultado está representado no gráfico a seguir. O número total de chamados recebidos pela central durante esse dia foi",
+        "options": {
+          "A": "120.",
+          "B": "125.",
+          "C": "130.",
+          "D": "135.",
+          "E": "140."
+        },
+        "official_answer": "E",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:26.867744+00:00",
+        "created_at": "2026-10-16T01:42:26.867744+00:00",
+        "syllabus_topic_id": "8873fb11-576a-48bf-a44f-17db3482f9cc",
+        "tested_topic": "Leitura de gráfico: total de chamados por turno",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p11_Image65.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Leitura de gráfico: total de chamados por turno; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Leitura de gráfico: total de chamados por turno; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns201-agente-de-policia-judiciaria-cns201-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "384b2ade-4934-4efc-9d29-9e80da199c01",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 3,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Observe a seguir o cartaz de campanha divulgado em 23 de abril de 2025, no Instagram da Associação de Assistência Social dos Policiais Militares de São Paulo: https://www.instagram.com/p/DIyLwUtsPMC/ acesso em 15.8.26 A articulação entre os componentes verbais e visuais da campanha contribui para",
+        "options": {
+          "A": "associar a mão levantada à interrupção da violência após o contato com o serviço indicado.",
+          "B": "representar a identidade da vítima como informação necessária à formalização da denúncia policial.",
+          "C": "reforçar o apelo ao rompimento do silêncio por meio do rosto parcialmente encoberto pela mão.",
+          "D": "estabelecer uma sequência entre a situação representada na fotografia e a atuação das autoridades.",
+          "E": "restringir a orientação da campanha às pessoas que vivenciam diretamente situações de violência."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:30.611872+00:00",
+        "created_at": "2026-10-16T01:42:30.611872+00:00",
+        "syllabus_topic_id": "5664880c-5647-478a-9487-191f624d6e66",
+        "tested_topic": "Articulação entre texto verbal e imagem em cartaz de campanha",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p4_Image48.jpg"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Articulação entre texto verbal e imagem em cartaz de campanha; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Articulação entre texto verbal e imagem em cartaz de campanha; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "67212024-b080-4d74-b87b-d5cc1b9fd5a9",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 9,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Observe o cartum a seguir: https://www.folhadelondrina.com.br/folha-2/cartunista-leticia-reis-retrata-o-cotidiano-de-londrina-em-quadrinhos-3292357e.html acesso em 15.8.26 No cartum, o efeito de humor produzido pela resposta de Izuna decorre de a personagem",
+        "options": {
+          "A": "compreender a indicação de economizar como orientação para antecipar compras antes que os preços aumentem.",
+          "B": "considerar que os objetos adquiridos eram necessários, embora essa avaliação não apareça nas falas anteriores.",
+          "C": "associar a compra em promoção à economia, desconsiderando o gasto advindo da quantidade de produtos adquiridos.",
+          "D": "interpretar a expressão “esse mês” como uma indicação de que as compras deveriam ser realizadas no mesmo dia.",
+          "E": "atribuir à palavra “promoção” o sentido de recebimento de uma vantagem financeira posterior às compras."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:30.611872+00:00",
+        "created_at": "2026-10-16T01:42:30.611872+00:00",
+        "syllabus_topic_id": "5664880c-5647-478a-9487-191f624d6e66",
+        "tested_topic": "Humor em cartum: leitura de texto verbal e não verbal",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p5_Image51.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Humor em cartum: leitura de texto verbal e não verbal; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Humor em cartum: leitura de texto verbal e não verbal; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "df085e72-e4a2-415a-a6f1-7c27810e1359",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 20,
+        "subject": "Língua Portuguesa",
+        "support_text": null,
+        "stem": "Leia o texto a seguir: https://www.tribunapr.com.br/mais-pop/horoscopo/ acesso em 15.8.26 16.8.26 No texto, a função conativa da linguagem é reforçada pela articulação entre",
+        "options": {
+          "A": "imperativos e recursos visuais que destacam apelos ao leitor.",
+          "B": "datas e símbolos que comprovam a precisão das previsões.",
+          "C": "adjetivos e emojis que expressam emoções do enunciador.",
+          "D": "informações pessoais e ícones que descrevem o signo.",
+          "E": "previsões e cores que asseguram a objetividade do conteúdo."
+        },
+        "official_answer": "A",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:30.611872+00:00",
+        "created_at": "2026-10-16T01:42:30.611872+00:00",
+        "syllabus_topic_id": "5664880c-5647-478a-9487-191f624d6e66",
+        "tested_topic": "Funções da linguagem: função conativa",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p9_Image60.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Funções da linguagem: função conativa; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Funções da linguagem: função conativa; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "9a847793-3f07-4fea-b375-f9b7965388a9",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 30,
+        "subject": "Raciocínio Lógico-matemático",
+        "support_text": null,
+        "stem": "Durante um dia, uma central de atendimento registrou a quantidade de chamados recebidos em quatro turnos consecutivos. O resultado está representado no gráfico a seguir. O número total de chamados recebidos pela central durante esse dia foi",
+        "options": {
+          "A": "120.",
+          "B": "125.",
+          "C": "130.",
+          "D": "135.",
+          "E": "140."
+        },
+        "official_answer": "E",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:30.611872+00:00",
+        "created_at": "2026-10-16T01:42:30.611872+00:00",
+        "syllabus_topic_id": "91982c40-7f11-4395-939b-5dddbb891658",
+        "tested_topic": "Leitura de gráfico: total de chamados por turno",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/agente_p11_Image65.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Leitura de gráfico: total de chamados por turno; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Leitura de gráfico: total de chamados por turno; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "5126d81d-2618-4d6d-a6e1-d0c3cfea8923",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 62,
+        "subject": "Biologia",
+        "support_text": null,
+        "stem": "A compreensão da estrutura da pele (epiderme e derme) é fundamental para a ciência da Papiloscopia. A figura a seguir mostra uma representação esquemática da epiderme humana. Com base nesse esquema, é correto afirmar que",
+        "options": {
+          "A": "1 indica o estrato da epiderme onde as membranas plasmáticas das células adjacentes formam dobras onduladas, que determinam as impressões digitais.",
+          "B": "2 representa o estrato composto principalmente por queratinócitos, células com grande quantidade de ribossomos envolvidos na produção de queratina.",
+          "C": "3 indica o estrato formado por células achatadas e mortas resultantes do processo de diferenciação e apoptose dos queratinócitos.",
+          "D": "4 mostra uma célula de Langerhans, responsável por sintetizar a melanina no R.E.R e exportá-la para os queratinócitos.",
+          "E": "5 representa um desmossomo, célula atravessada por uma rede de filamentos de actina, que promove a adesão entre as células."
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:31.88967+00:00",
+        "created_at": "2026-10-16T01:42:31.88967+00:00",
+        "syllabus_topic_id": "cb03dd55-59ce-4bae-868a-a1ddf0cb404c",
+        "tested_topic": "Histologia: estratos da epiderme",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p21_Image98.jpg"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Histologia: estratos da epiderme; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Histologia: estratos da epiderme; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "082b910f-d260-4582-a9e5-7457e88cf756",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 74,
+        "subject": "Química",
+        "support_text": null,
+        "stem": "A ingestão de Cocaína (Benzoilmetilecgonina) e/ou Heroína (Diacetilmorfina) provoca alterações drásticas e perigosas no sistema nervoso central, com alto risco de dependência química. As duas drogas agem de formas opostas no corpo humano e suas formas estruturais são apresentadas a seguir. Em relação aos dois compostos, assinale a opção que contém as funções orgânicas presentes na cocaína e heroína, respectivamente. Cocaína Heroína",
+        "options": {
+          "A": "Éter – Éster – Amina Primária Éster – Amina Terciária",
+          "B": "Éster – Amina Terciária Éster – Éter – Amina Terciária",
+          "C": "Cetona – Éter – Éster Éter – Amina Secundária",
+          "D": "Éter – Amina Terciária Éster – Éter – Amina Primária",
+          "E": "Éster – Amina Terciária Cetona – Éter – Amina Terciária"
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:31.88967+00:00",
+        "created_at": "2026-10-16T01:42:31.88967+00:00",
+        "syllabus_topic_id": "8a5073c5-846b-441f-bea6-57a9193eb056",
+        "tested_topic": "Química orgânica: funções da cocaína e da heroína",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p23_Image112.png",
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p23_Image114.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Química orgânica: funções da cocaína e da heroína; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Química orgânica: funções da cocaína e da heroína; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "a7823415-479d-47f2-a2b9-9fa4cd3ae63e",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 76,
+        "subject": "Física",
+        "support_text": null,
+        "stem": "Um sistema óptico é formado por duas lentes delgadas alinhadas sobre o mesmo eixo principal: uma lente convergente de vergência +2 di e uma lente divergente. As lentes estão separadas por uma distância de 25 cm. Sabendo que o conjunto constitui um sistema óptico afocal, a vergência da lente divergente é igual a",
+        "options": {
+          "A": "−1 di.",
+          "B": "−2 di.",
+          "C": "−3 di.",
+          "D": "−4 di.",
+          "E": "−5 di."
+        },
+        "official_answer": "D",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:31.88967+00:00",
+        "created_at": "2026-10-16T01:42:31.88967+00:00",
+        "syllabus_topic_id": "1a42f6d4-1809-4fe0-9a70-5537ca3649e0",
+        "tested_topic": "Física: óptica (sistema afocal)",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p24_Image118.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: óptica (sistema afocal); conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: óptica (sistema afocal); conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "bc1f9234-25db-4bdc-b8d6-785e537b07ab",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 78,
+        "subject": "Física",
+        "support_text": null,
+        "stem": "O gráfico a seguir representa a intensidade da corrente elétrica I, em ampères, que percorre um equipamento utilizado em um laboratório de perícia ao longo do tempo t, em segundos. A carga elétrica, em coulombs, que atravessa uma seção transversal do condutor durante os primeiros 8,0 s é igual a",
+        "options": {
+          "A": "4 C.",
+          "B": "8 C.",
+          "C": "12 C.",
+          "D": "14 C.",
+          "E": "16 C."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:31.88967+00:00",
+        "created_at": "2026-10-16T01:42:31.88967+00:00",
+        "syllabus_topic_id": "1a42f6d4-1809-4fe0-9a70-5537ca3649e0",
+        "tested_topic": "Física: carga elétrica a partir de gráfico",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p24_Image119.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: carga elétrica a partir de gráfico; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: carga elétrica a partir de gráfico; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "expected": {
+        "id": "6ae9ae45-256f-4b34-ae04-7508cad511b7",
+        "board": "FGV",
+        "contest_name": "Polícia Civil do Estado do Paraná",
+        "career_name": "Papiloscopista Policial",
+        "exam_year": 2026,
+        "exam_date": "2026-10-11",
+        "exam_type": "Tipo 1",
+        "item_number": 79,
+        "subject": "Física",
+        "support_text": null,
+        "stem": "Considere o circuito elétrico mostrado na figura a seguir, no qual todos os resistores possuem resistência de 10 Ω, e a diferença de potencial entre os pontos 𝐴 e 𝐵é de 9 V. A corrente elétrica que percorre o resistor 𝑅5 é igual a",
+        "options": {
+          "A": "0,225 A.",
+          "B": "0,45 A.",
+          "C": "0,90 A.",
+          "D": "1,35 A.",
+          "E": "1,80 A."
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": null,
+        "legal_basis": [],
+        "explanation": null,
+        "difficulty": "média",
+        "state": "PR",
+        "career_category": "Polícia Civil",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+        "answer_key_url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcpr2026-gabaritos-para-publicacao.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Depende de figura, tabela ou gráfico do caderno (ou de jurisprudência): permanece em revisão até a plataforma exibir a figura.\nContexto conferido em 16/10/2026: enunciado e alternativas idênticos ao caderno oficial FGV (Tipo 1); figura(s) do caderno anexada(s) à questão.",
+        "verified_at": "2026-10-16T01:42:31.88967+00:00",
+        "created_at": "2026-10-16T01:42:31.88967+00:00",
+        "syllabus_topic_id": "1a42f6d4-1809-4fe0-9a70-5537ca3649e0",
+        "tested_topic": "Física: circuitos de resistores",
+        "figure_urls": [
+          "https://gkwphadbveiyjcwiiizw.supabase.co/storage/v1/object/public/question-figures/pcpr-2026/papiloscopista_p24_Image120.png"
+        ]
+      },
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [],
+        "verified_at": "2026-10-16T04:29:05.452Z",
+        "review_note": "Gabarito PRELIMINAR (13/10/2026), pendente de gabarito definitivo FGV: conferir e remover esta marca quando o definitivo sair. Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: circuitos de resistores; conteúdo previsto no Anexo I do edital."
+      },
+      "evidence": {
+        "reason": "Enunciado e alternativas conferidos com o caderno oficial FGV (Tipo 1); assunto: Física: circuitos de resistores; conteúdo previsto no Anexo I do edital.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/cns301-papiloscopista-policial-cns301-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf"
+        ]
+      }
+    }
+  ]
+}

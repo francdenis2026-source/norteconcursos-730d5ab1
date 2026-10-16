@@ -3,6 +3,7 @@ import React from "react";
 import { createFileRoute, Link, type ErrorComponentProps } from "@tanstack/react-router";
 import {
   AlertTriangle,
+  ArrowRight,
   Award,
   BookOpenCheck,
   Brain,
@@ -128,6 +129,8 @@ const questionKey = (contest: string, year: string, item: number) =>
 
 const UNCLASSIFIED = "Sem disciplina cadastrada";
 const ALL_CONTESTS = "__todos__";
+/** Respostas mínimas numa disciplina para ela entrar no diagnóstico (menos que isso é só indício). */
+const MIN_ANSWERED = 10;
 
 interface SubjectReport {
   metrics: SubjectMetric[];
@@ -522,62 +525,35 @@ function StudentExamIntelligence() {
     ? groups
     : groups.filter((group) => group.key === selectedExam);
   const selectedGroup = allSelected ? null : (selectedGroups[0] ?? null);
-  // Métricas, plano de ação e destaques seguem a prova escolhida na linha do tempo (ou todas).
-  const scopeAttempts = selectedGroups.filter(
-    (group) => group.correct + group.wrong + group.blank > 0,
-  );
   const scopeLabel = selectedGroup
     ? `${selectedGroup.contest} — ${selectedGroup.year}`
-    : "Todos os concursos";
-  const totalCorrect = scopeAttempts.reduce((sum, group) => sum + group.correct, 0);
-  const totalWrong = scopeAttempts.reduce((sum, group) => sum + group.wrong, 0);
-  const totalBlank = scopeAttempts.reduce((sum, group) => sum + group.blank, 0);
+    : "Todas as provas";
+  // O diagnóstico usa sempre todas as provas com resultado; só o Análise por disciplina segue a seleção.
+  const totalCorrect = attempts.reduce((sum, group) => sum + group.correct, 0);
+  const totalWrong = attempts.reduce((sum, group) => sum + group.wrong, 0);
+  const totalBlank = attempts.reduce((sum, group) => sum + group.blank, 0);
   const totalItems = totalCorrect + totalWrong + totalBlank;
   const responseAccuracy = percent(totalCorrect, totalCorrect + totalWrong);
   const omissionRate = percent(totalBlank, totalItems);
-  const bestAttempt = [...scopeAttempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
-  // Evolução = variação de aproveitamento (acertos ÷ respondidas) em pontos percentuais.
-  // Uma prova escolhida: contra a edição anterior do MESMO concurso. Todas: média das últimas
-  // provas contra a média das primeiras (comparar só a primeira com a última misturava bancas).
-  const yearOf = (group: ExamGroup) => Number(group.year) || 0;
+  const bestAttempt = [...attempts].sort((a, b) => examAccuracy(b) - examAccuracy(a))[0];
+  // Evolução = média das últimas provas contra a média das primeiras, em pontos percentuais.
   const average = (list: ExamGroup[]) =>
     list.reduce((sum, group) => sum + examAccuracy(group), 0) / list.length;
-  const evolutionInfo: { value: string; detail: string; delta: number | null } = (() => {
-    if (selectedGroup) {
-      const previous = attempts
-        .filter(
-          (group) =>
-            group.contest === selectedGroup.contest && yearOf(group) < yearOf(selectedGroup),
-        )
-        .at(-1);
-      if (!previous || !scopeAttempts.length)
-        return { value: "—", detail: "Primeira prova deste concurso", delta: null };
-      const delta = examAccuracy(selectedGroup) - examAccuracy(previous);
-      return {
-        value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
-        detail: `${previous.year} → ${selectedGroup.year}, mesmo concurso`,
-        delta,
-      };
-    }
-    const count = Math.min(3, Math.floor(scopeAttempts.length / 2));
-    if (count < 1) return { value: "—", detail: "Precisa de pelo menos 2 provas", delta: null };
-    const delta = Math.round(
-      average(scopeAttempts.slice(-count)) - average(scopeAttempts.slice(0, count)),
-    );
-    return {
-      value: `${delta >= 0 ? "+" : ""}${delta} p.p.`,
-      detail: `média das últimas ${count} × primeiras ${count} provas`,
-      delta,
-    };
-  })();
+  const evolutionCount = Math.min(3, Math.floor(attempts.length / 2));
+  const evolutionDelta =
+    evolutionCount < 1
+      ? null
+      : Math.round(
+          average(attempts.slice(-evolutionCount)) - average(attempts.slice(0, evolutionCount)),
+        );
   const scopeReport = computeSubjectReport(selectedGroups, questions, syllabus);
-  const scopeSubjects = scopeReport.metrics.filter(
-    (metric) => metric.subject !== UNCLASSIFIED && metric.total > 0,
+  const diagnosed = overallReport.metrics.filter(
+    (metric) => metric.subject !== UNCLASSIFIED && metric.correct + metric.wrong >= MIN_ANSWERED,
   );
-  const weakest = scopeSubjects[0];
-  const strongest = [...scopeSubjects].sort(
-    (a, b) => b.accuracy - a.accuracy || b.total - a.total,
-  )[0];
+  const weakest = [...diagnosed]
+    .sort((a, b) => a.accuracy - b.accuracy || b.total - a.total)
+    .slice(0, 3);
+  const strongest = [...diagnosed].sort((a, b) => b.accuracy - a.accuracy || b.total - a.total)[0];
 
   const toggleExam = async (group: ExamGroup) => {
     if (openExam === group.key) {
@@ -664,91 +640,142 @@ function StudentExamIntelligence() {
 
   return (
     <div className="space-y-7 pb-10">
-      <Hero attempts={attempts.length} years={new Set(attempts.map((item) => item.year)).size} />
-      <div className="flex flex-wrap gap-3 rounded-2xl border bg-card p-4 text-sm">
-        <Link
-          className="inline-flex min-h-11 items-center rounded-lg border px-4 font-semibold hover:bg-muted"
-          to="/dashboard/study-plan"
-        >
-          Planejar a partir dos resultados →
-        </Link>
-        <Link
-          className="inline-flex min-h-11 items-center rounded-lg border px-4 font-semibold hover:bg-muted"
-          to="/dashboard/performance"
-        >
-          Ver desempenho nos estudos →
-        </Link>
-      </div>
-      <Timeline groups={groups} selectedKey={selectedExam} onSelect={selectExam} />
-      <section className="space-y-4">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <h2 className="text-xl font-black text-primary">Desempenho por prova</h2>
-            <p className="text-sm text-muted-foreground">
-              Clique em uma prova da linha do tempo: as métricas, as disciplinas e a correção abaixo
-              passam a mostrar só ela, com cada edição separada (PF 2014, 2018, 2021…).
-            </p>
-          </div>
+      <Hero
+        attempts={attempts.length}
+        accuracy={attempts.length ? responseAccuracy : null}
+        action={
           <AddExamCard
             user={user}
             contestSuggestions={contests}
             onChanged={() => setReloadKey((v) => v + 1)}
           />
-        </div>
-        <div className="flex flex-wrap items-center gap-3 rounded-2xl border bg-background px-4 py-3 text-sm">
-          <span className="text-muted-foreground">Mostrando:</span>
-          <strong className="min-w-0 break-words">{scopeLabel}</strong>
-          {allSelected ? (
-            <span className="text-xs text-muted-foreground">
-              Clique em uma prova da linha do tempo para ver só ela.
-            </span>
-          ) : (
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={() => setSelectedExam(ALL_CONTESTS)}
-            >
-              Ver todos os concursos
-            </Button>
-          )}
-        </div>
-        <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        }
+      />
+
+      <section className="space-y-4">
+        <SectionTitle
+          step={1}
+          title="Seu diagnóstico"
+          description="Leitura de todas as suas provas com resultado, e o que fazer agora."
+        />
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <MetricCard
             icon={Target}
             label="Precisão ao responder"
             value={`${responseAccuracy}%`}
-            detail={`${scopeLabel}: ${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
+            detail={`${totalCorrect} acertos em ${totalCorrect + totalWrong} respondidas`}
             tone="emerald"
           />
           <MetricCard
             icon={CircleSlash2}
-            label="Taxa de omissão"
+            label="Itens em branco"
             value={`${omissionRate}%`}
-            detail={`${totalBlank} itens deixados em branco`}
+            detail={`${totalBlank} deixados sem resposta`}
             tone={omissionRate > 20 ? "rose" : "amber"}
           />
           <MetricCard
             icon={Award}
-            label="Melhor desempenho"
+            label="Melhor prova"
             value={`${bestAttempt ? examAccuracy(bestAttempt) : 0}%`}
             detail={bestAttempt ? `${bestAttempt.contest} ${bestAttempt.year}` : "Sem dados"}
             tone="navy"
           />
           <MetricCard
-            icon={(evolutionInfo.delta ?? 0) >= 0 ? TrendingUp : TrendingDown}
+            icon={(evolutionDelta ?? 0) >= 0 ? TrendingUp : TrendingDown}
             label="Evolução"
-            value={evolutionInfo.value}
-            detail={evolutionInfo.detail}
-            tone={(evolutionInfo.delta ?? 0) >= 0 ? "emerald" : "rose"}
+            value={
+              evolutionDelta === null
+                ? "—"
+                : `${evolutionDelta >= 0 ? "+" : ""}${evolutionDelta} p.p.`
+            }
+            detail={
+              evolutionDelta === null
+                ? "Precisa de pelo menos 2 provas"
+                : `média das últimas ${evolutionCount} × primeiras ${evolutionCount}`
+            }
+            tone={(evolutionDelta ?? 0) >= 0 ? "emerald" : "rose"}
           />
+        </div>
+        <NextSteps
+          weakest={weakest}
+          strongest={strongest}
+          omissionRate={omissionRate}
+          wrong={totalWrong}
+          blank={totalBlank}
+        />
+      </section>
+
+      <section className="space-y-4">
+        <SectionTitle
+          step={2}
+          title="Sua evolução"
+          description="Aproveitamento (acertos ÷ respondidas) em cada prova. Clique numa prova para ver só ela nas disciplinas e na correção."
+        />
+        <Timeline groups={groups} selectedKey={selectedExam} onSelect={selectExam} />
+      </section>
+
+      <section className="space-y-4">
+        <SectionTitle
+          step={3}
+          title="Onde você acerta e erra"
+          description={`Análise por disciplina: ${scopeLabel}.`}
+          action={
+            allSelected ? null : (
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => setSelectedExam(ALL_CONTESTS)}
+              >
+                Ver todas as provas
+              </Button>
+            )
+          }
+        />
+        <DisciplineAnalysis
+          report={scopeReport}
+          title={`Disciplinas — ${scopeLabel}`}
+          scope={
+            allSelected
+              ? `Soma de ${attempts.length} prova(s) com resultado.`
+              : "Só a prova escolhida na linha do tempo."
+          }
+        />
+      </section>
+
+      {families.length > 0 && (
+        <section className="space-y-4">
+          <SectionTitle
+            step={4}
+            title="Rumo à nota de corte"
+            description="Todas as edições de cada concurso juntas, com o mapa dos seus erros e o caminho até a nota de corte."
+          />
+          {families.map((family) => (
+            <ContestPlanCard
+              key={family.contest}
+              contest={family.contest}
+              editions={family.editions}
+              subjects={family.subjects}
+              weakItems={family.weakItems}
+              cebraspe={family.cebraspe}
+              unclassifiedLabel={UNCLASSIFIED}
+              defaultOpen={family.hasCutoff}
+            />
+          ))}
         </section>
-        {selectedGroups.map((group) => (
+      )}
+
+      <section className="space-y-4">
+        <SectionTitle
+          step={families.length > 0 ? 5 : 4}
+          title="Minhas provas e correção"
+          description="Abra uma prova para ver o resultado, corrigir erros e omissões com a base oficial e consultar o caderno digitalizado."
+        />
+        {[...groups].reverse().map((group) => (
           <ContestCard
             key={group.key}
             group={group}
             references={questions}
-            syllabus={syllabus}
             canUpload={canAdd}
             open={openExam === group.key}
             pageUrls={pageUrls}
@@ -759,41 +786,6 @@ function StudentExamIntelligence() {
             }}
           />
         ))}
-      </section>
-      <section className="space-y-4">
-        <div>
-          <h2 className="text-xl font-black text-primary">Análise e plano por concurso</h2>
-          <p className="text-sm text-muted-foreground">
-            Todas as edições de cada concurso juntas (por exemplo PF 2014, 2018, 2021 e 2025), com o
-            mapa dos seus erros e questões em branco e o caminho até a nota de corte.
-          </p>
-        </div>
-        {families.map((family) => (
-          <ContestPlanCard
-            key={family.contest}
-            contest={family.contest}
-            editions={family.editions}
-            subjects={family.subjects}
-            weakItems={family.weakItems}
-            cebraspe={family.cebraspe}
-            unclassifiedLabel={UNCLASSIFIED}
-            defaultOpen={family.hasCutoff}
-          />
-        ))}
-      </section>
-      <section className="grid gap-5 xl:grid-cols-[1.25fr_1fr]">
-        <DisciplineAnalysis
-          report={overallReport}
-          title="Análise geral — todos os concursos"
-          scope={`Soma de ${attempts.length} prova(s) já realizadas, com todas as disciplinas cobradas em cada concurso.`}
-        />
-        <ActionPlan
-          weakest={weakest}
-          strongest={strongest}
-          omissionRate={omissionRate}
-          wrong={totalWrong}
-          blank={totalBlank}
-        />
       </section>
     </div>
   );
@@ -838,32 +830,68 @@ function AddExamCard({
   );
 }
 
-function Hero({ attempts, years }: { attempts: number; years: number }) {
+function Hero({
+  attempts,
+  accuracy,
+  action,
+}: {
+  attempts: number;
+  accuracy: number | null;
+  action: React.ReactNode;
+}) {
   return (
     <section className="page-hero page-hero--lg" data-hero="exam-hall">
       <div className="page-hero__row">
         <div className="page-hero__text">
-          <span className="hero-chip">Concursos realizados</span>
+          <span className="hero-chip">Seu histórico em concursos</span>
           <h1>
             Minhas provas <em>e diagnóstico</em>
           </h1>
           <p className="page-hero__desc">
-            Envie suas provas, consulte os cadernos e acompanhe resultados por concurso. Compare
-            gabaritos e notas de corte disponíveis, com cada edição identificada.
+            Registre as provas que você fez, descubra onde perde pontos e saia daqui com o próximo
+            passo de estudo.
           </p>
+          {action && <div className="mt-4">{action}</div>}
         </div>
         <div className="flex gap-2 sm:gap-3">
           <div className="hero-stat min-w-[120px]">
-            <span>Provas analisadas</span>
+            <span>Provas com resultado</span>
             <strong className="tabular">{attempts}</strong>
           </div>
           <div className="hero-stat min-w-[120px]">
-            <span>Anos no histórico</span>
-            <strong className="tabular">{years}</strong>
+            <span>Precisão geral</span>
+            <strong className="tabular">{accuracy === null ? "—" : `${accuracy}%`}</strong>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function SectionTitle({
+  step,
+  title,
+  description,
+  action,
+}: {
+  step: number;
+  title: string;
+  description: string;
+  action?: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="flex items-start gap-3">
+        <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground">
+          {step}
+        </span>
+        <div>
+          <h2 className="text-xl font-black text-primary">{title}</h2>
+          <p className="text-sm text-muted-foreground">{description}</p>
+        </div>
+      </div>
+      {action}
+    </div>
   );
 }
 
@@ -883,8 +911,8 @@ function Timeline({
           <TrendingUp className="h-5 w-5 text-emerald-600" /> Linha do tempo geral
         </CardTitle>
         <CardDescription>
-          Aproveitamento nas questões respondidas. Clique em uma prova para ver só ela; clique de
-          novo para voltar a todas. Compare concursos com cautela porque bancas e critérios mudam.
+          Cada círculo é uma prova. Verde: 70% ou mais · amarelo: 50% a 69% · vermelho: abaixo de
+          50%. Compare provas de bancas diferentes com cautela.
         </CardDescription>
       </CardHeader>
       <CardContent className="overflow-x-auto pb-6">
@@ -1057,52 +1085,88 @@ function DisciplineAnalysis({
   );
 }
 
-function ActionPlan({
+function NextSteps({
   weakest,
   strongest,
   omissionRate,
   wrong,
   blank,
 }: {
-  weakest?: SubjectMetric | undefined;
+  weakest: SubjectMetric[];
   strongest?: SubjectMetric | undefined;
   omissionRate: number;
   wrong: number;
   blank: number;
 }) {
-  const steps = [
-    weakest
-      ? `Prioridade 1: revisar ${weakest.subject}, atualmente com ${weakest.accuracy}% de precisão em ${weakest.total} itens mapeados.`
-      : "Prioridade 1: concluir a classificação editorial das disciplinas.",
-    omissionRate > 20
-      ? `Treinar decisão de resposta: ${blank} itens ficaram em branco (${omissionRate}%). Separe desconhecimento de falta de tempo.`
-      : `A taxa de omissão está controlada em ${omissionRate}%; preserve a seleção cuidadosa de respostas.`,
-    `Criar um ciclo de revisão dos ${wrong} erros: conceito → exemplo resolvido → nova questão em 24 horas e novamente em 7 dias.`,
-  ];
   return (
     <Card className="border-emerald-200 bg-gradient-to-br from-emerald-50 to-white shadow-sm dark:from-emerald-950/30 dark:to-card">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
-          <Lightbulb className="h-5 w-5 text-amber-500" /> Plano de ação orientado por dados
+          <Lightbulb className="h-5 w-5 text-amber-500" /> O que fazer agora
         </CardTitle>
         <CardDescription>
           {strongest
-            ? `Ponto forte atual: ${strongest.subject} (${strongest.accuracy}%).`
-            : "Plano atualizado conforme novas provas forem analisadas."}
+            ? `Seu ponto forte: ${strongest.subject} (${strongest.accuracy}%).`
+            : `Só entram aqui disciplinas com ${MIN_ANSWERED} ou mais respostas suas.`}
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-3">
-        {steps.map((step, index) => (
-          <div
-            key={step}
-            className="flex gap-3 rounded-xl border border-emerald-100 bg-white/80 p-3 text-sm dark:bg-slate-950/30"
-          >
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-black text-white">
-              {index + 1}
-            </span>
-            <p className="leading-relaxed">{step}</p>
+      <CardContent className="space-y-4">
+        {weakest.length ? (
+          <div className="space-y-2">
+            <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">
+              Pontos que mais custam pontos
+            </p>
+            {weakest.map((item) => (
+              <div
+                key={item.subject}
+                className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-background p-3"
+              >
+                <div>
+                  <p className="font-bold">{item.subject}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {item.accuracy}% de precisão · {item.correct} acertos, {item.wrong} erros,{" "}
+                    {item.blank} em branco
+                  </p>
+                </div>
+                <div className="flex gap-2">
+                  <Button asChild size="sm">
+                    <Link to="/dashboard/question-trainer" search={{ subject: item.subject }}>
+                      Treinar questões
+                    </Link>
+                  </Button>
+                  <Button asChild size="sm" variant="outline">
+                    <Link to="/dashboard/study-room" search={{ subject: item.subject }}>
+                      Estudar
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        ) : (
+          <p className="text-sm text-muted-foreground">
+            Ainda não há respostas suficientes por disciplina. Cadastre mais provas com o
+            detalhamento por questão para ver seus pontos fracos.
+          </p>
+        )}
+        <ul className="space-y-2 text-sm">
+          <li className="flex gap-2">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            {omissionRate > 20
+              ? `${blank} itens ficaram em branco (${omissionRate}%): descubra se foi falta de conteúdo ou de tempo.`
+              : `Itens em branco sob controle (${omissionRate}%): mantenha a seleção cuidadosa de respostas.`}
+          </li>
+          <li className="flex gap-2">
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
+            Revise os {wrong} erros em ciclo: conceito, exemplo resolvido e nova questão em 24 horas
+            e em 7 dias.
+          </li>
+        </ul>
+        <Button asChild variant="outline">
+          <Link to="/dashboard/study-plan">
+            Montar meu plano por resultados <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
       </CardContent>
     </Card>
   );
@@ -1111,7 +1175,6 @@ function ActionPlan({
 function ContestCard({
   group,
   references,
-  syllabus,
   canUpload,
   open,
   pageUrls,
@@ -1120,7 +1183,6 @@ function ContestCard({
 }: {
   group: ExamGroup;
   references: Map<string, QuestionReference>;
-  syllabus: Map<string, string[]>;
   canUpload: boolean;
   open: boolean;
   pageUrls: Record<string, string>;
@@ -1198,25 +1260,13 @@ function ContestCard({
             </div>
           )}
           {Object.keys(group.analysis?.items || {}).length === 0 &&
-          group.correct + group.wrong > 0 ? (
-            <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
-              Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
-              {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão, por isso
-              não há Análise por disciplina desta edição. Ela entra no Análise do concurso (todas as
-              edições) pelos totais e pela nota de corte, e as outras edições mostram as
-              disciplinas.
-            </div>
-          ) : (
-            <DisciplineAnalysis
-              embedded
-
-              report={computeSubjectReport([group], references, syllabus)}
-
-              title="Análise desta prova"
-
-              scope={`Todas as disciplinas cobradas em ${group.contest} — ${group.year}, só desta prova.`}
-            />
-          )}
+            group.correct + group.wrong > 0 && (
+              <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
+                Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
+                {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão. Ela
+                entra nas somas e na nota de corte, mas não no Análise por disciplina.
+              </div>
+            )}
           <div>
             <h3 className="mb-3 flex items-center gap-2 text-sm font-black">
               <BookOpenCheck className="h-4 w-4" /> Como corrigir erros e omissões

@@ -1,0 +1,30 @@
+-- Vídeos para tópicos de concursos sem videoaula (embed conferido em 16/10/2026: oEmbed 200 + playableInEmbed). Idempotente.
+-- Pendente: "Habilitação" (Legislação de Trânsito) — nenhum candidato específico encontrado.
+insert into public.media_videos (subject, topic, youtube_id, title, channel, embeddable, status, checked_at, sort_order) values
+('Língua Portuguesa','Significação das palavras','jXgaKQZDb_M','SINÔNIMO E ANTÔNIMO || Teoria + Questões de Concurso','Prof. Álvaro Ferreira',true,'ok',now(),5000),
+('Língua Portuguesa','Significação das palavras','QNAYFkJZZ2E','SINÔNIMO x ANTÔNIMO: DIFERENÇAS - Aula 3 - Profa. Pamba - Semântica','Professora Pamba',true,'ok',now(),5001),
+('Raciocínio Lógico','Sequências e padrões','eBjuSzZQ4P4','Como Gabaritar SEQUÊNCIA LÓGICA DE NÚMEROS em Concursos | Felippe Loureiro','Felippe Loureiro',true,'ok',now(),5002),
+('Raciocínio Lógico','Sequências e padrões','AYEcjiNMkps','Aula de Sequências Lógicas Para Concursos','Felippe Loureiro',true,'ok',now(),5003),
+('Direito Administrativo','Controle da Administração','pxSGNzXNg_I','Controle da Administração Pública (Conceito e Classificações)','Prof. Diego Pureza',true,'ok',now(),5004),
+('Direito Administrativo','Controle da Administração','vA18Eea1at0','Concurso PMPA - Direito Administrativo - Controle da Administração Pública','Monster Concursos',true,'ok',now(),5005),
+('Direito Processual Penal','Recursos','BaQ9pOrwqqo','RECURSOS DO PROCESSO PENAL | DIREITO PROCESSUAL PENAL PARA CONCURSOS','Focus Concursos',true,'ok',now(),5006),
+('Direito Processual Penal','Recursos','2E3uOIZE8Y0','Concurso TJ SP: Aulão de Processo Penal - Recursos!','Nova Concursos',true,'ok',now(),5007),
+('Direito Processual Penal','Procedimentos e juizados','balpCDf-QWo','JECRIM - Aula Animada - Juizado Especial Criminal - Lei 9.099/95','Revisão Animada',true,'ok',now(),5008),
+('Direito Processual Penal','Procedimentos e juizados','AWmC-lWkehw','JECRIM - Juizado Especial Criminal - Lei 9.099/95','Me Julga - Cíntia Brunelli',true,'ok',now(),5009),
+('Legislação Especial e Direitos Humanos','Tratados e convenções internacionais','uVVfhu6LOGc','Tratados Internacionais de Direitos Humanos para Concursos Públicos','Focus Concursos',true,'ok',now(),5010),
+('Legislação Especial e Direitos Humanos','Tratados e convenções internacionais','mnAgBG2T0eg','A Constituição e os Tratados Internacionais de Direitos Humanos | Entenda Tudo para a sua Prova','Ricardo Torques',true,'ok',now(),5011),
+('Estatística','Distribuição de frequências','wZ4SyKAnXQQ','DISTRIBUIÇÃO DE FREQUÊNCIA - ESTATÍSTICA','Prof. MURAKAMI - MATEMÁTICA RAPIDOLA',true,'ok',now(),5012),
+('Estatística','Distribuição de frequências','vqZb_Fqj1C0','Distribuição de frequência com classes','Matemática no Papel',true,'ok',now(),5013),
+('Estatística','Variáveis aleatórias','4iR54CDCsIQ','VARIÁVEIS QUALITATIVAS QUANTITATIVAS | ESTATÍSTICA','Gis com Giz',true,'ok',now(),5014),
+('Estatística','Variáveis aleatórias','ke6uLFutDdU','03.00. Aula de Introdução às variáveis aleatórias (Estatística)','TecConcursos',true,'ok',now(),5015),
+('Estatística','Distribuição normal','51NP6_4LoBs','DISTRIBUIÇÃO NORMAL - ESTATÍSTICA (SEFAZ MG | RECEITA FEDERAL)','Exatas pra Gabaritar',true,'ok',now(),5016),
+('Estatística','Distribuição normal','CcIhlbN1U9Q','DISTRIBUIÇÃO NORMAL DE PROBABILIDADES - EP 01','Prof. MURAKAMI - MATEMÁTICA RAPIDOLA',true,'ok',now(),5017),
+('Legislação de Trânsito','Veículos e equipamentos','0Fcui7JIcJQ','Da Segurança dos Veículos | (Art. 103 ao 113) - CTB - Aula 39/60','Lac Concursos - Principal',true,'ok',now(),5018),
+('Legislação de Trânsito','Veículos e equipamentos','nO7kYJ7E4zM','Guia Completo sobre Classificação de Veículos e Equipamentos Obrigatórios no CTB','Serei Nomeado',true,'ok',now(),5019),
+('Legislação de Trânsito','Sinalização','9ByEDSsK2PY','SINALIZAÇÃO DE TRÂNSITO - Significado das placas de Regulamentação','CFC Digital Rafael Almeida',true,'ok',now(),5020),
+('Ética no Serviço Público','Ética no serviço público','GQ6EyOB_xpU','Decreto 1.171/94 - Código de Ética - Completo | Questões resolvidas','Marks EDU',true,'ok',now(),5021),
+('Ética no Serviço Público','Ética no serviço público','sahzgXuMI68','DECRETO 1171/94 - ÉTICA NO SERVIÇO PÚBLICO - CONCURSOS 2023','zero duvidis',true,'ok',now(),5022),
+('Ética no Serviço Público','Cidadania e direitos fundamentais','N4abkOIQ1j4','Direitos e Garantias Fundamentais (Resumo) | Direito Constitucional','Me Julga - Cíntia Brunelli',true,'ok',now(),5023),
+('Ética no Serviço Público','Direitos humanos e atividade policial','PfkWA03OTK4','Direitos Humanos dos Profissionais de Segurança Pública | Direitos Humanos | Kultivi','KULTIVI CONCURSOS',true,'ok',now(),5024),
+('Ética no Serviço Público','Direitos humanos e atividade policial','XaTya7IhXzw','Atividade Policial e Direitos Humanos: Código de Conduta | Prof.ª Elisa Moreira','Supremo',true,'ok',now(),5025)
+on conflict (subject, topic, youtube_id) do nothing;

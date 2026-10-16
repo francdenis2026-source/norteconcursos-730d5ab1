@@ -102,6 +102,7 @@ import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLe
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
+import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
@@ -1201,6 +1202,7 @@ function QuestionTrainer() {
             ))}
           </div>
         </section>
+        <PcprExamSpotlight compact />
         <TrainerSetup
           available={
             practiceMode === "catalog"

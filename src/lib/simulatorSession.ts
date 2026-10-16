@@ -23,7 +23,13 @@ export interface SimulatorQuestion {
   kind?: "true_false" | "multiple_choice";
 }
 export function simulatorAnswers(q: SimulatorQuestion): Answer[] {
-  return questionAnswers({ ...q, source: q.sourceKind, year: String(q.year), difficulty: "média" });
+  return questionAnswers({
+    ...q,
+    itemNumber: q.itemNumber ?? undefined,
+    source: q.sourceKind,
+    year: String(q.year),
+    difficulty: "média",
+  });
 }
 export function simulatorPaperKey(q: SimulatorQuestion) {
   return JSON.stringify([q.contest, q.career, q.board, q.year]);

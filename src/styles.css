@@ -10699,6 +10699,262 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .dark .study-tag-rule { background: #1e3a8a; color: #bfdbfe; }
 .dark .study-tag-tip { background: #164e63; color: #a5f3fc; }
 
+/* Prova PC-PR 2026: chamada na landing */
+.lp-pcpr {
+  background:
+    radial-gradient(60rem 28rem at 85% 0%, oklch(0.8 0.13 78 / 0.12), transparent 60%),
+    linear-gradient(180deg, oklch(0.15 0.03 263), oklch(0.12 0.025 263));
+  border-block: 1px solid oklch(0.8 0.13 78 / 0.18);
+}
+.lp-pcpr__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+}
+.lp-pcpr__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  border: 1px solid oklch(0.8 0.13 78 / 0.4);
+  border-radius: 999px;
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.lp-pcpr__live span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brass);
+  box-shadow: 0 0 0 0 oklch(0.8 0.13 78 / 0.6);
+  animation: pcpr-pulse 2s ease-out infinite;
+}
+@keyframes pcpr-pulse {
+  70% {
+    box-shadow: 0 0 0 10px oklch(0.8 0.13 78 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.8 0.13 78 / 0);
+  }
+}
+.lp-pcpr__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.lp-pcpr__roles li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid oklch(1 0 0 / 0.12);
+  border-radius: 10px;
+  color: oklch(1 0 0 / 0.9);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: oklch(1 0 0 / 0.04);
+}
+.lp-pcpr__roles svg {
+  width: 15px;
+  height: 15px;
+  color: var(--brass);
+}
+.lp-pcpr__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+.lp-pcpr__disclaimer {
+  max-width: 560px;
+  margin-top: 22px;
+  color: oklch(1 0 0 / 0.55);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.lp-pcpr__card {
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid oklch(0.8 0.13 78 / 0.3);
+  border-radius: 22px;
+  background: linear-gradient(160deg, oklch(0.22 0.03 263 / 0.9), oklch(0.16 0.025 263 / 0.9));
+  box-shadow: 0 30px 70px -30px oklch(0 0 0 / 0.8), inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+.lp-pcpr__card header {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid oklch(1 0 0 / 0.1);
+}
+.lp-pcpr__card header span {
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.lp-pcpr__card header strong {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.lp-pcpr__card dl {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0 0;
+}
+.lp-pcpr__card dl > div {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  column-gap: 12px;
+  row-gap: 2px;
+}
+.lp-pcpr__card dl svg {
+  grid-row: span 2;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: var(--brass);
+}
+.lp-pcpr__card dt {
+  color: oklch(1 0 0 / 0.55);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.lp-pcpr__card dd {
+  margin: 0;
+  color: oklch(1 0 0 / 0.92);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+@media (max-width: 880px) {
+  .lp-pcpr__layout {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lp-pcpr__live span {
+    animation: none;
+  }
+}
+
+/* Prova PC-PR 2026: destaque no painel */
+.pcpr-spot {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px 22px;
+  padding: 20px 24px;
+  border: 1px solid oklch(0.8 0.13 78 / 0.45);
+  border-radius: 18px;
+  color: white;
+  background:
+    linear-gradient(120deg, oklch(0.2 0.03 263), oklch(0.15 0.03 263)),
+    linear-gradient(135deg, oklch(0.8 0.13 78 / 0.2), transparent 60%);
+  box-shadow: var(--shadow-card);
+}
+.pcpr-spot__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--brass-foreground);
+  background: var(--brass);
+}
+.pcpr-spot__icon svg {
+  width: 26px;
+  height: 26px;
+}
+.pcpr-spot__kicker {
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.pcpr-spot h2 {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+.pcpr-spot p {
+  margin-top: 6px;
+  color: oklch(1 0 0 / 0.75);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.pcpr-spot__actions {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+.pcpr-spot__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 12px;
+  color: var(--brass-foreground);
+  font-weight: 700;
+  white-space: nowrap;
+  background: var(--brass);
+  transition: transform 0.2s var(--ease-out), background 0.2s;
+}
+.pcpr-spot__cta:hover {
+  background: var(--brass-soft);
+  transform: translateY(-1px);
+}
+.pcpr-spot__cta svg,
+.pcpr-spot__link svg {
+  width: 16px;
+  height: 16px;
+}
+.pcpr-spot__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: oklch(1 0 0 / 0.65);
+  font-size: 0.75rem;
+}
+.pcpr-spot__link:hover {
+  color: white;
+}
+.pcpr-spot--compact {
+  padding: 14px 18px;
+}
+.pcpr-spot--compact .pcpr-spot__icon {
+  width: 42px;
+  height: 42px;
+}
+.pcpr-spot--compact h2 {
+  font-size: 1.1rem;
+}
+@media (max-width: 720px) {
+  .pcpr-spot {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .pcpr-spot__actions {
+    grid-column: 1 / -1;
+    justify-items: stretch;
+  }
+  .pcpr-spot__cta {
+    justify-content: center;
+  }
+
 /* Question practice: calm header and progressive filter disclosure. */
 .trainer-study-hero {
   position: relative;
