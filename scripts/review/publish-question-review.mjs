@@ -110,17 +110,14 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
   const [input,report,mode]=process.argv.slice(2);
   if (!input || !report || (mode && mode!=='--dry-run')) throw Error('Usage: REVIEW_PACK REPORT [--dry-run]');
   const pack=validateReview(JSON.parse(await readFile(input,'utf8')));
-  let result={dry_run:true,reviewed:pack.items.length};
-  if (mode!=='--dry-run' || pack.purpose==='explanation-improvement') {
-    const key=process.env.TASK_SUPABASE_KEY,project=process.env.TASK_SUPABASE_PROJECT;
-    if (!key || project!=='gkwphadbveiyjcwiiizw') throw Error('Project/session credentials required');
-    const request=async(path,method='GET',body)=>{
-      const res=await fetch(`https://${project}.supabase.co/rest/v1/${path}`,{method,headers:{...sessionAuthHeaders(key),'Content-Type':'application/json',Prefer:'return=representation'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});
-      if (!res.ok) throw Error(`Database HTTP ${res.status}`);
-      return res.json();
-    };
-    result={dry_run:mode==='--dry-run',...await publishReview(pack,request,{dryRun:mode==='--dry-run'}),verified_at:new Date().toISOString()};
-  }
+  const key=process.env.TASK_SUPABASE_KEY,project=process.env.TASK_SUPABASE_PROJECT;
+  if (!key || project!=='gkwphadbveiyjcwiiizw') throw Error('Project/session credentials required');
+  const request=async(path,method='GET',body)=>{
+    const res=await fetch(`https://${project}.supabase.co/rest/v1/${path}`,{method,headers:{...sessionAuthHeaders(key),'Content-Type':'application/json',Prefer:'return=representation'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});
+    if (!res.ok) throw Error(`Database HTTP ${res.status}`);
+    return res.json();
+  };
+  const result={dry_run:mode==='--dry-run',...await publishReview(pack,request,{dryRun:mode==='--dry-run'}),verified_at:new Date().toISOString()};
   await writeFile(report,JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify(result));
 }

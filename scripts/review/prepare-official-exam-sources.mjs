@@ -12,7 +12,16 @@ export async function prepareExamSources(pack,request,{dryRun=false,readPdf=read
   const {row,evidence,expected,kind}=item;
   if(!kinds.has(kind)||!row?.id||!row.is_official||row.status!=='vigente'||row.source_type!==(kind==='edital'?'edital':'outro')||!Number.isFinite(Date.parse(row.checked_at))||Date.parse(row.checked_at)>Date.now())throw Error('Invalid official source');
   const url=new URL(row.url),catalog=new URL(evidence?.catalog_url??'');
-  if(url.protocol!=='https:'||catalog.protocol!=='https:'||!['ibade.org.br','www.ibade.org.br','cdn.cebraspe.org.br','www.cebraspe.org.br'].includes(url.hostname)||catalog.hostname!==url.hostname||!url.pathname.toLowerCase().endsWith('.pdf')||!evidence?.visually_verified||!evidence.pdf_path||!/^[a-f0-9]{64}$/.test(evidence.sha256||'')||!row.notes?.includes(evidence.sha256))throw Error('Reviewed official PDF and catalog required');
+  const cebraspeApi=url.hostname==='cdn.cebraspe.org.br'&&catalog.hostname==='apis.cebraspe.org.br'&&/^\/cebraspe\/eventos\/[a-z0-9_]+$/i.test(catalog.pathname);
+  if(url.protocol!=='https:'||catalog.protocol!=='https:'||!['ibade.org.br','www.ibade.org.br','cdn.cebraspe.org.br','www.cebraspe.org.br'].includes(url.hostname)||(!cebraspeApi&&catalog.hostname!==url.hostname)||!url.pathname.toLowerCase().endsWith('.pdf')||!evidence?.visually_verified||!evidence.pdf_path||!/^[a-f0-9]{64}$/.test(evidence.sha256||'')||!row.notes?.includes(evidence.sha256))throw Error('Reviewed official PDF and catalog required');
+  if(cebraspeApi){
+   if(!evidence.catalog_path||!/^[a-f0-9]{64}$/.test(evidence.catalog_sha256||''))throw Error('Captured official catalog required');
+   const captured=await readPdf(evidence.catalog_path);
+   if(createHash('sha256').update(captured).digest('hex')!==evidence.catalog_sha256)throw Error('Official catalog changed');
+   const data=JSON.parse(captured.toString('utf8')),event=catalog.pathname.split('/').at(-1).toLowerCase();
+   const files=[...(data.arquivosEdital||[]),...(data.arquivosGabarito||[])];
+   if(String(data.eventoURL).toLowerCase()!==event||!url.pathname.toLowerCase().startsWith(`/concursos/${event}/arquivos/`)||!files.some(f=>f.nomeArquivo===decodeURIComponent(url.pathname.split('/').at(-1))))throw Error('PDF not listed in the official event catalog');
+  }
   const bytes=await readPdf(evidence.pdf_path);if(createHash('sha256').update(bytes).digest('hex')!==evidence.sha256||!bytes.subarray(0,4).equals(Buffer.from('%PDF')))throw Error('Source PDF changed');
   const [actual]=await request(`content_sources?url=eq.${encodeURIComponent(row.url)}&select=*`);
   if(actual&&sameReviewRow(actual,row))continue;
