@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-16T16:05:52.961Z",
-  "generated_at": "2026-10-16T16:06:55.936Z",
+  "snapshot_at": "2026-10-16T16:15:21.981Z",
+  "generated_at": "2026-10-16T16:18:20.138Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -256,11 +256,11 @@
       "status": {
         "active": 111
       },
-      "active_app_eligible": 64,
-      "active_with_catalog_flags": 47,
-      "active_without_example_marker": 47,
+      "active_app_eligible": 76,
+      "active_with_catalog_flags": 35,
+      "active_without_example_marker": 35,
       "flags": {
-        "app_gate_rejected": 47
+        "app_gate_rejected": 35
       }
     },
     {
@@ -551,24 +551,23 @@
       "annulled": 37,
       "obsolete": 6
     },
-    "active_app_eligible": 1983,
-    "active_with_catalog_flags": 1960,
-    "active_without_example_marker": 2341,
-    "editorial_approvals_this_run": 0
+    "active_app_eligible": 1995,
+    "active_with_catalog_flags": 1948,
+    "active_without_example_marker": 2329,
+    "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 64,
-    "newly_published": 64,
+    "newly_reviewed": 76,
+    "newly_published": 76,
     "scope": "PCDF Delegado 2026, individual legal and pedagogical review; status, answers, raw extraction and source IDs preserved. This is not a certificate of all PC exams.",
-    "remaining_pcdf_current_items_this_campaign": 47,
-    "other_active_pc_items_not_yet_covered_this_campaign": 2417,
+    "remaining_pcdf_current_items_this_campaign": 35,
     "pending_under_review_all_pc": 234,
     "previous_pcpr_review": "b6a1672",
     "validation": {
-      "checked_at": "2026-10-16T16:06:00.288Z",
-      "audited": 64,
-      "eligible_audited": 64,
-      "other_pc_rows_preserved": 2904,
+      "checked_at": "2026-10-16T16:15:26.653Z",
+      "audited": 76,
+      "eligible_audited": 76,
+      "other_pc_rows_preserved": 2892,
       "concurrent_unrelated_pc_rows": [],
       "missing_pc_rows": [],
       "original_texts_answers_sources_subjects_statuses_preserved": true,
@@ -892,9 +891,71 @@
           "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
           "item_number": 41,
           "eligible": true
+        },
+        {
+          "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+          "item_number": 14,
+          "eligible": true
+        },
+        {
+          "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+          "item_number": 71,
+          "eligible": true
+        },
+        {
+          "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+          "item_number": 9,
+          "eligible": true
+        },
+        {
+          "id": "57bf6610-4707-42d5-89d8-59537091e634",
+          "item_number": 16,
+          "eligible": true
+        },
+        {
+          "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+          "item_number": 90,
+          "eligible": true
+        },
+        {
+          "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+          "item_number": 65,
+          "eligible": true
+        },
+        {
+          "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+          "item_number": 32,
+          "eligible": true
+        },
+        {
+          "id": "95823a75-ff66-486d-af04-db532c85a217",
+          "item_number": 20,
+          "eligible": true
+        },
+        {
+          "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+          "item_number": 22,
+          "eligible": true
+        },
+        {
+          "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+          "item_number": 10,
+          "eligible": true
+        },
+        {
+          "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+          "item_number": 6,
+          "eligible": true
+        },
+        {
+          "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+          "item_number": 28,
+          "eligible": true
         }
       ]
-    }
+    },
+    "active_records_not_yet_editorially_reviewed_this_campaign": 2405,
+    "coverage_note": "Uncovered by this campaign does not negate earlier reviews. Archived aliases and excluded questions remain separately accounted for."
   },
   "source_comparison_pcdf": {
     "pdfs": [
