@@ -54,7 +54,9 @@ def build(snapshot,manifest_path,output,exclusions_output,decisions_path=None):
         names+= {32:['stf_promotor'],36:['stf_sigilo'],38:['stf_foro'],40:['stf_extradicao'],67:['stf_ambientais'],68:['hediondos']}.get(n,[])
         if patch['content_status']!='active':
             norm_source=next(s for s in sources if s['url']==source(d['norm'])['url'] and s['is_official'])
-            row=dict(edition_id='59a6294e-7f50-441d-a718-6ffbc02d90ec',original_item=f'PC-AC 2017 S01-V — questão {n} — '+r['id'],exclusion_type='replaced' if n==23 else 'obsolete',reason=d['reason'],replacement_source_id=norm_source['id'])
+            exclusion_type=d.get('exclusion_type','replaced' if n==23 else 'obsolete')
+            if exclusion_type not in ['revoked','replaced','obsolete','time_bound','outside_active_edital']:raise ValueError('Explicit supported exclusion required')
+            row=dict(edition_id='59a6294e-7f50-441d-a718-6ffbc02d90ec',original_item=f'PC-AC 2017 S01-V — questão {n} — '+r['id'],exclusion_type=exclusion_type,reason=d['reason'],replacement_source_id=norm_source['id'])
             exclusions.append(dict(row=row,expected_question=r))
         names+=d.get('extra_sources',[])
         names=list(dict.fromkeys(names));urls=[source(name)['url'] for name in names]

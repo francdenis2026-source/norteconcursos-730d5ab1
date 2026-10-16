@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-16T03:08:29.603Z",
+  "checked_at": "2026-10-16T03:23:35.872Z",
   "tables": [
     {
       "table": "official_exam_questions",
       "total": 4888,
-      "active": 3988,
-      "under_review": 580,
-      "archived": 253,
+      "active": 3994,
+      "under_review": 573,
+      "archived": 254,
       "obsolete": 30,
       "annulled": 37,
       "revoked": 0
@@ -44,9 +44,9 @@
   ],
   "totals": {
     "total": 7768,
-    "active": 6259,
-    "under_review": 1180,
-    "archived": 260,
+    "active": 6265,
+    "under_review": 1173,
+    "archived": 261,
     "obsolete": 32,
     "annulled": 37,
     "revoked": 0
@@ -54,21 +54,27 @@
   "scope": "Registros físicos nas quatro tabelas de questões; inclui 34 registros pessoais. Não é contagem de questões únicas ou certificação jurídica do acervo.",
   "last_published_review": {
     "contest": "PC-AC 2017 Agente, S01-V",
-    "editorial_decisions": 52,
-    "activated": 49,
-    "archived_historical": 1,
+    "editorial_decisions": 59,
+    "activated": 55,
+    "archived_historical": 2,
     "obsolete": 2,
-    "texts_recovered": 69,
-    "pending_in_exam": 27,
+    "texts_recovered": 72,
+    "pending_in_exam": 20,
     "this_batch": {
-      "editorial_decisions": 2,
-      "activated": 2,
+      "editorial_decisions": 7,
+      "activated": 6,
+      "archived_historical": 1,
       "item_numbers": [
-        48,
-        69
+        4,
+        5,
+        9,
+        39,
+        73,
+        76,
+        80
       ]
     },
-    "external_changes": "Entre o checkpoint anterior e esta leitura houve alterações fora deste lote: o delta agregado de official_exam_questions, descontadas nossas duas ativações, é -92 active, -19 under_review e +111 archived. Não executamos essas mudanças; não há atribuição de autoria nem certificação editorial delas."
+    "external_changes": "O delta geral desde o lote anterior corresponde a seis ativações e um arquivamento deste lote. A observação anterior de alterações externas continua registrada nos relatórios históricos; não há atribuição delas a esta revisão."
   },
   "library_changes_this_batch": 0
 }
