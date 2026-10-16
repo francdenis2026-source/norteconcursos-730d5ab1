@@ -61,7 +61,7 @@ function CtbPanelPage() {
     <div className="space-y-6">
       <PageHero
         image="toolkit"
-        kicker="Trânsito"
+        kicker="Ferramentas"
         icon={Gavel}
         title="Painel do Código de Trânsito Brasileiro"
         description="Multas, pontos, velocidades, habilitação, prazos e as resoluções do Contran em um só lugar, conferidos com o texto oficial vigente."

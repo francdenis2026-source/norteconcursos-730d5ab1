@@ -54,7 +54,7 @@ function SubscriptionsPage() {
       <PageHero
         image="dashboard"
         size="sm"
-        kicker="Assinatura"
+        kicker="Conta"
         icon={Crown}
         title={
           <>
