@@ -18,6 +18,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiCancellationEmailRouteImport } from './routes/api/cancellation-email'
 import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
@@ -67,6 +68,7 @@ import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as DashboardTrilhasRouteImport } from './routes/dashboard/trilhas'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
+import { Route as DashboardCancellationReceiptIdRouteImport } from './routes/dashboard/cancellation-receipt.$id'
 import { Route as DashboardEditalIndexRouteImport } from './routes/dashboard/edital.index'
 import { Route as DashboardEditalTopicIdRouteImport } from './routes/dashboard/edital.$topicId'
 import { Route as DashboardLegalCourseSlugRouteImport } from './routes/dashboard/legal-course.$slug'
@@ -116,6 +118,11 @@ const SuporteRoute = SuporteRouteImport.update({
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCancellationEmailRoute = ApiCancellationEmailRouteImport.update({
+  id: '/api/cancellation-email',
+  path: '/api/cancellation-email',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiSolveQuestionRoute = ApiSolveQuestionRouteImport.update({
@@ -366,6 +373,12 @@ const DashboardAdminStudentIdRoute = DashboardAdminStudentIdRouteImport.update({
   path: '/admin-student/$id',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardCancellationReceiptIdRoute =
+  DashboardCancellationReceiptIdRouteImport.update({
+    id: '/cancellation-receipt/$id',
+    path: '/cancellation-receipt/$id',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardEditalIndexRoute = DashboardEditalIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -403,6 +416,7 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -452,6 +466,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -467,6 +482,7 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -514,6 +530,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -531,6 +548,7 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/suporte': typeof SuporteRoute
   '/terms': typeof TermsRoute
+  '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
@@ -580,6 +598,7 @@ export interface FileRoutesById {
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
+  '/dashboard/cancellation-receipt/$id': typeof DashboardCancellationReceiptIdRoute
   '/dashboard/edital/$topicId': typeof DashboardEditalTopicIdRoute
   '/dashboard/legal-course/$slug': typeof DashboardLegalCourseSlugRoute
   '/dashboard/library/$slug': typeof DashboardLibrarySlugRoute
@@ -598,6 +617,7 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -647,6 +667,7 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -662,6 +683,7 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -709,6 +731,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -725,6 +748,7 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/suporte'
     | '/terms'
+    | '/api/cancellation-email'
     | '/api/solve-question'
     | '/checkout/$planId'
     | '/dashboard/admin'
@@ -774,6 +798,7 @@ export interface FileRouteTypes {
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
+    | '/dashboard/cancellation-receipt/$id'
     | '/dashboard/edital/$topicId'
     | '/dashboard/legal-course/$slug'
     | '/dashboard/library/$slug'
@@ -791,6 +816,7 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   SuporteRoute: typeof SuporteRoute
   TermsRoute: typeof TermsRoute
+  ApiCancellationEmailRoute: typeof ApiCancellationEmailRoute
   ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
@@ -859,6 +885,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cancellation-email': {
+      id: '/api/cancellation-email'
+      path: '/api/cancellation-email'
+      fullPath: '/api/cancellation-email'
+      preLoaderRoute: typeof ApiCancellationEmailRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/solve-question': {
@@ -1204,6 +1237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAdminStudentIdRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/cancellation-receipt/$id': {
+      id: '/dashboard/cancellation-receipt/$id'
+      path: '/cancellation-receipt/$id'
+      fullPath: '/dashboard/cancellation-receipt/$id'
+      preLoaderRoute: typeof DashboardCancellationReceiptIdRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/edital/': {
       id: '/dashboard/edital/'
       path: '/'
@@ -1316,6 +1356,7 @@ interface DashboardRouteChildren {
   DashboardTrilhasRoute: typeof DashboardTrilhasRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
   DashboardAdminStudentIdRoute: typeof DashboardAdminStudentIdRoute
+  DashboardCancellationReceiptIdRoute: typeof DashboardCancellationReceiptIdRoute
   DashboardLegalCourseSlugRoute: typeof DashboardLegalCourseSlugRoute
 }
 
@@ -1366,6 +1407,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardTrilhasRoute: DashboardTrilhasRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardAdminStudentIdRoute: DashboardAdminStudentIdRoute,
+  DashboardCancellationReceiptIdRoute: DashboardCancellationReceiptIdRoute,
   DashboardLegalCourseSlugRoute: DashboardLegalCourseSlugRoute,
 }
 
@@ -1383,6 +1425,7 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   SuporteRoute: SuporteRoute,
   TermsRoute: TermsRoute,
+  ApiCancellationEmailRoute: ApiCancellationEmailRoute,
   ApiSolveQuestionRoute: ApiSolveQuestionRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,

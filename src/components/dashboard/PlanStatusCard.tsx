@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
 import { useAuthStatus } from "@/hooks/useDashboard";
+import { useMyCancellations } from "@/hooks/useCancellations";
+import { scheduledCancellation } from "@/lib/cancellation";
 import { TESTING_DAYS, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
 import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
@@ -13,7 +15,9 @@ const planOf = (id: string) => SUBSCRIPTION_PLANS.find((plan) => plan.id === id)
 /** Plano em vigor, prazo do período de testes e o que a conta ganha ou perde quando ele acaba. */
 export function PlanStatusCard() {
   const { user, isAdmin } = useAuthStatus();
+  const cancellations = useMyCancellations(user?.id);
   if (!user || user.id === "demo-user") return null;
+  const scheduled = scheduledCancellation(cancellations.list);
   const current = planOf(user.subscription_tier) ?? SUBSCRIPTION_PLANS[0]!;
   const free = planOf("free")!;
   const testing = TESTING_PHASE && !isAdmin && isTestingTier(current.id) && !!user.plan_ends_at;
@@ -57,6 +61,22 @@ export function PlanStatusCard() {
         </div>
       </CardHeader>
       <CardContent className="space-y-5">
+        {scheduled && (
+          <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100">
+            <p className="font-bold">Cancelamento agendado</p>
+            <p className="mt-1">
+              Você continua no plano {scheduled.plan_name} até{" "}
+              <strong>
+                {new Date(scheduled.effective_until).toLocaleDateString("pt-BR", {
+                  dateStyle: "long",
+                  timeZone: "America/Rio_Branco",
+                })}
+              </strong>
+              . Depois disso a conta volta ao plano Gratuito e a renovação é liberada. Recibo{" "}
+              {scheduled.receipt_number}.
+            </p>
+          </div>
+        )}
         {testing && user.plan_ends_at && (
           <PlanCountdown endsAt={user.plan_ends_at} planName="Essencial (testes)" />
         )}
