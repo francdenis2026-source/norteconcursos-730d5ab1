@@ -1,6 +1,26 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateReview,publishReview,sameReviewRow} from './publish-question-review.mjs';
+import {validateReview,publishReview,sameReviewRow,reviewRowFilters} from './publish-question-review.mjs';
+test('CAS keeps PostgreSQL figure arrays separate from JSONB arrays and preserves escaping',()=>{
+ const expected={id:'q1',figure_urls:[],legal_basis:[],options:{A:'text'},support_text:null};
+ const filters=new URLSearchParams(reviewRowFilters('board_exam_questions',expected));
+ assert.equal(filters.get('figure_urls'),'eq.{}');
+ assert.equal(filters.get('legal_basis'),'eq.[]');
+ assert.equal(filters.get('options'),'eq.{"A":"text"}');
+ assert.equal(filters.get('support_text'),'is.null');
+ const urls=['https://example.test/a,b.png','https://example.test/a"b\\c.png'];
+ assert.equal(new URLSearchParams(reviewRowFilters('board_exam_questions',{figure_urls:urls})).get('figure_urls'),'eq.{"https://example.test/a,b.png","https://example.test/a\\"b\\\\c.png"}');
+ assert.throws(()=>reviewRowFilters('board_exam_questions',{figure_urls:[{}]}),/figure URL array/);
+});
+test('a concurrent image update aborts the batch before writing',async()=>{
+ const p=make();p.items[0].table='board_exam_questions';p.items[0].expected.figure_urls=[];
+ let writes=0;
+ await assert.rejects(()=>publishReview(p,async(path,method)=>{
+  if(method==='PATCH')writes++;
+  return [{...p.items[0].expected,figure_urls:['https://example.test/new.png']}];
+ }),/Concurrent revision/);
+ assert.equal(writes,0);
+});
 test('accepts PostgreSQL timestamp formatting without hiding concurrent microsecond changes',()=>{
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.25871Z'}),true);
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.258711+00:00'}),false);

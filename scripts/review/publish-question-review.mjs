@@ -5,6 +5,19 @@ import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 
 const tables = new Set(['official_exam_questions','curated_question_catalog','board_exam_questions']);
 const allowed = new Set(['content_status','subject','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+// figure_urls is PostgreSQL text[], unlike options/legal_basis (JSONB).
+// Keep it in the compare-and-set predicate using its actual storage syntax.
+export function reviewRowFilters(table, expected) {
+  return Object.entries(expected).map(([key,value])=>{
+    if (value===null) return `${key}=is.null`;
+    let literal;
+    if (table==='board_exam_questions' && key==='figure_urls') {
+      if (!Array.isArray(value) || value.some(v=>typeof v!=='string')) throw Error('Invalid figure URL array');
+      literal='{'+value.map(v=>'"'+v.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'"').join(',')+'}';
+    } else literal=typeof value==='object'?JSON.stringify(value):String(value);
+    return `${key}=eq.${encodeURIComponent(literal)}`;
+  }).join('&');
+}
 // PostgreSQL omits trailing fractional zeroes in timestamptz responses.
 // Preserve microsecond precision: Date parsing would silently round it away.
 export function sameReviewRow(a,b) {
@@ -82,7 +95,7 @@ export async function publishReview(pack, request, {dryRun=false}={}) {
   if (dryRun) return {...result,pending:pending.map(i=>i.expected.id)};
   for (const {table,expected,patch} of pending) {
     // Filter every original field to avoid overwriting another account's simultaneous work.
-    const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
+    const filters=reviewRowFilters(table,expected);
     const rows=await request(`${table}?${filters}`,'PATCH',patch);
     if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
     result.updated.push(expected.id);
