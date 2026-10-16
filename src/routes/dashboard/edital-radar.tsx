@@ -52,7 +52,7 @@ function EditalRadarPage() {
     loadRadarData()
       .then((result) => active && setData(result))
       .catch((loadError) => {
-        console.error("Falha ao carregar o Análise dos editais", loadError);
+        console.error("Falha ao carregar o Radar do edital", loadError);
         if (active) setError("Não foi possível carregar os editais e as provas agora.");
       });
     return () => {
@@ -96,7 +96,7 @@ function EditalRadarPage() {
       <PageHero
         image="dashboard"
         size="sm"
-        kicker="Inteligência de editais"
+        kicker="Meu concurso"
         icon={Radar}
         title={
           <>

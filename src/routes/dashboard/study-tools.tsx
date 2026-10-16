@@ -238,7 +238,7 @@ function StudyToolsPage() {
         description={
           ctx.profile
             ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e dos Cursos por disciplina.`
-            : "Foco, revisão e checklist das disciplinas. Configure o Assistente de estudos para personalizar com o seu concurso."
+            : "Foco, revisão e checklist das disciplinas. Defina sua Estratégia de estudos para personalizar com o seu concurso."
         }
         actions={
           !ctx.profile && !ctx.loading && ctx.real ? (
@@ -819,7 +819,7 @@ function PlanLinkCard({
           <>
             <p className="text-sm text-muted-foreground">
               O cronograma da semana, as horas por matéria e o ajuste conforme seu desempenho ficam
-              no Assistente de estudos. Aqui você executa: foca, revisa e confere o conteúdo.
+              na Estratégia de estudos. Aqui você executa: foca, revisa e confere o conteúdo.
             </p>
             <div className="flex flex-wrap gap-2">
               <Button asChild className="gap-2">

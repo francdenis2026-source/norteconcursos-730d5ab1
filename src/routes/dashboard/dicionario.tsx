@@ -23,7 +23,7 @@ function DictionaryPage() {
   const letters = React.useMemo(() => [...new Set(items.map((e) => normalize(e.term)[0]!.toUpperCase()))], [items]);
   return (
     <div className="space-y-6">
-      <PageHero image="study-desk" kicker="Estudo" icon={BookA} title="Dicionário de estudo" description="Significado, sinônimos e exemplo dos termos que aparecem nas leis e nas matérias. Nos textos de estudo, passe o mouse (ou toque) nos termos sublinhados." />
+      <PageHero image="study-desk" kicker="Estudar" icon={BookA} title="Dicionário de estudo" description="Significado, sinônimos e exemplo dos termos que aparecem nas leis e nas matérias. Nos textos de estudo, passe o mouse (ou toque) nos termos sublinhados." />
       <div className="flex flex-col gap-2 sm:flex-row">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />

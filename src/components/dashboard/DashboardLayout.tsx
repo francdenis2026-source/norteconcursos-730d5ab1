@@ -138,7 +138,7 @@ const MENU: MenuItem[] = [
   { group: "Meu concurso", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
   { group: "Meu concurso", label: "Meu edital", icon: MapPin, href: "/dashboard/edital" },
   { group: "Meu concurso", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { group: "Meu concurso", label: "Buscar concursos e editais", icon: Search, href: "/dashboard/questions" },
+  { group: "Meu concurso", label: "Concursos e editais", icon: Search, href: "/dashboard/questions" },
   { group: "Meu concurso", label: "Radar do edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Meu concurso", label: "Panorama das provas", icon: BarChart3, href: "/dashboard/exam-panorama" },
   { group: "Estudar", label: "Biblioteca de leis e disciplinas", icon: Library, href: "/dashboard/library" },

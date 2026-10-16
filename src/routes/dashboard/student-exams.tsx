@@ -508,7 +508,7 @@ function StudentExamIntelligence() {
     return (
       <EmptyState
         title="Você ainda não cadastrou nenhuma prova"
-        description="Cadastre os concursos que você já fez para ver a linha do tempo, o Análise por disciplina e o seu rendimento."
+        description="Cadastre os concursos que você já fez para ver a linha do tempo, a análise por disciplina e o seu rendimento."
       >
         <AddExamCard
           user={user}
@@ -528,7 +528,7 @@ function StudentExamIntelligence() {
   const scopeLabel = selectedGroup
     ? `${selectedGroup.contest} — ${selectedGroup.year}`
     : "Todas as provas";
-  // O diagnóstico usa sempre todas as provas com resultado; só o Análise por disciplina segue a seleção.
+  // O diagnóstico usa sempre todas as provas com resultado; só a análise por disciplina segue a seleção.
   const totalCorrect = attempts.reduce((sum, group) => sum + group.correct, 0);
   const totalWrong = attempts.reduce((sum, group) => sum + group.wrong, 0);
   const totalBlank = attempts.reduce((sum, group) => sum + group.blank, 0);
@@ -1264,7 +1264,7 @@ function ContestCard({
               <div className="rounded-xl border border-dashed bg-background p-4 text-sm text-muted-foreground">
                 Esta prova foi cadastrada pelo resultado oficial ({group.correct} acertos,{" "}
                 {group.wrong} erros, nota {group.score}) e não tem detalhamento por questão. Ela
-                entra nas somas e na nota de corte, mas não no Análise por disciplina.
+                entra nas somas e na nota de corte, mas não na análise por disciplina.
               </div>
             )}
           <div>

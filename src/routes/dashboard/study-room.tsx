@@ -436,7 +436,7 @@ function StudyRoomPage() {
       <div className="mx-auto max-w-xl space-y-4 py-10 text-center">
         <p className="text-lg font-bold">Escolha um assunto no seu cronograma.</p>
         <Button asChild>
-          <Link to="/dashboard/study-coach">Abrir o Assistente de estudos</Link>
+          <Link to="/dashboard/study-coach">Abrir a Estratégia de estudos</Link>
         </Button>
       </div>
     );

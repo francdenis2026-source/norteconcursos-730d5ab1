@@ -582,7 +582,7 @@ function StudyCoachPage() {
         image="journey"
         title={
           <>
-            Assistente de <em>estudos</em>
+            Estratégia de <em>estudos</em>
           </>
         }
         description="Entre na sua conta para montar um plano que se ajusta aos seus acertos, erros e tempo de estudo."
@@ -607,7 +607,7 @@ function StudyCoachPage() {
       <section className="study-assistant-hero" aria-labelledby="study-assistant-title">
         <div className="study-assistant-hero__content">
           <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
-          <h1 id="study-assistant-title">Assistente de estudos</h1>
+          <h1 id="study-assistant-title">Estratégia de estudos</h1>
           <p>Transforme seu objetivo em uma rotina possível. Planeje a semana, revise o que precisa e acompanhe o que você realmente fez.</p>
           {profile && <a href="#coach-workspace" className="study-assistant-hero__action" onClick={() => setView("week")}>Organizar minha semana <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>}
         </div>
@@ -751,7 +751,7 @@ function StudyCoachPage() {
               <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><Clock className="h-4 w-4" /> Rotina semanal</p><p className="mt-2 text-2xl font-bold">{profile.hours_per_week} horas</p><p className="mt-2 text-xs text-muted-foreground">Distribuídas em {profile.study_days.length} dias de estudo</p></CardContent></Card>
               <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><BookOpenCheck className="h-4 w-4" /> Próximo bloco de hoje</p><p className="mt-2 text-base font-bold">{nextBlock ? nextBlock.subject : summary.todayCount ? "Atividades concluídas" : "Dia sem blocos planejados"}</p><p className="mt-2 text-xs text-muted-foreground">{nextBlock ? `${nextBlock.kind} · ${nextBlock.minutes} minutos` : "Consulte a semana e preserve seu tempo de descanso."}</p></CardContent></Card>
             </div>
-            <div className="coach-view-switch" role="group" aria-label="Visualização do assistente">
+            <div className="coach-view-switch" role="group" aria-label="Visualização da estratégia">
               {([ ["week", "Esta semana"], ["strategy", "Estratégia"], ["history", "Histórico"] ] as const).map(([key, label]) => <button type="button" key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
             </div>
           </section>
