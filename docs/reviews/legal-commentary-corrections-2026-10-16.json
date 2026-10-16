@@ -1,0 +1,87 @@
+{
+  "version": "legal-commentary-corrections-2026-10-16",
+  "scope": "Correções pontuais; não certifica auditoria integral dos 42 percursos.",
+  "corrections": [
+    {
+      "course": "maria-penha",
+      "unit_key": "art-16",
+      "unit_id": "b76b33d6-91a8-5e05-b452-292aa16ddda4",
+      "content_sha256": "51c05e6f2d915ddc6e034b37010089572e461cef0cedfdc5cd8c9c5426f951dc",
+      "changes": [
+        "Tema e link 1160 substituídos por 1167; regra, exemplos e respostas preservados."
+      ],
+      "sources": [
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1167&cod_tema_inicial=1167&novaConsulta=true&tipo_pesquisa=T"
+      ],
+      "patch": {
+        "atencao": [
+          "Tema 1167/STJ e ADI 7267/STF: não comparecimento não vale como retratação tácita; não exigir comparecimento para ratificar representação.",
+          "Súmula 542/STJ: lesão corporal doméstica contra mulher tem ação pública incondicionada. Também observar tipos alterados em 2024, como ameaça por razões da condição feminina; não ensinar que toda ameaça ou toda violência depende sempre de representação.",
+          "O texto usa renúncia, mas o procedimento versa sobre retratação da representação já formulada; não confundir com perdão de crime de ação privada."
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15380.htm",
+          "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1167&cod_tema_inicial=1167&novaConsulta=true&tipo_pesquisa=T",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=512899&tip=UN"
+        ]
+      },
+      "readback_verified": true
+    },
+    {
+      "course": "lep",
+      "unit_key": "art-122",
+      "unit_id": "bbc98275-a676-5a23-bd15-c6321e5b05cf",
+      "content_sha256": "363adc6155e03d87e19d771a288c1d1084345bd889ce5012c29806c1e971f154",
+      "changes": [
+        "Separados Tema 1381 (saída e trabalho externo) e Tema 1408 (exame criminológico).",
+        "Explicitada irretroatividade prejudicial e distinção dos marcos 11/04 e 13/06/2024.",
+        "Caso de crime em 2020, variação posterior, três perguntas resolvidas e glossário coerente com a explicação.",
+        "Substituído link de notícia inacessível pela URL institucional recuperada."
+      ],
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+        "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=7137543&numeroProcesso=1532446&numeroTema=1381",
+        "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=30%2F03%2F2026&num_registro=202501815097"
+      ],
+      "patch": {
+        "simples": "Na disciplina atual do art. 122, a saída temporária do semiaberto, sem vigilância direta, destina-se à frequência a curso profissionalizante, de ensino médio ou superior na comarca da execução; o tempo é o necessário às atividades discentes. A ausência de vigilância direta não impede monitoração eletrônica. O §2º restringe saída e trabalho externo sem vigilância direta para condenados por crime hediondo ou praticado com violência ou grave ameaça. Essas restrições mais gravosas não se aplicam automaticamente a crimes anteriores à vigência: a data do fato e o regime temporal precisam ser examinados.",
+        "pontos": [
+          "Distinguir a redação atual e a lei aplicável ao tempo do crime; o início da execução depois da mudança não autoriza, sozinho, sua retroatividade.",
+          "Saída para estudo no semiaberto: curso profissionalizante, ensino médio ou superior, na comarca da execução; duração necessária às atividades.",
+          "Monitoração eletrônica pode acompanhar a saída sem vigilância direta.",
+          "Saída temporária e trabalho externo são institutos distintos, embora abrangidos pela restrição do §2º."
+        ],
+        "atencao": [
+          "Lei 14.843/2024: publicação inicial em 11/04/2024; partes antes vetadas promulgadas em 12/06/2024 e publicadas em 13/06/2024. A revogação dos incisos I e III do art. 122 não deve ser atribuída indistintamente à publicação inicial.",
+          "STF Tema 1381, RE 1.532.446: controvérsia sobre aplicação da Lei 14.843/2024 a crimes anteriores, em matéria de saída temporária e trabalho externo. Não confundir com Tema 1408, RE 1.536.743, relativo ao exame criminológico.",
+          "STJ, AgRg no HC 1.005.206/SC, julgado em 25/03/2026, DJEN 30/03/2026: as restrições mais gravosas do art. 122 não retroagem para prejudicar quem praticou o crime antes de sua vigência.",
+          "A existência do Tema 1381 não equivale, por si só, a julgamento definitivo de mérito. O acórdão do STJ e decisões concretas não devem ser apresentados como tese final do STF nesse tema.",
+          "Art. 124 revogado não fornece sete dias/cinco saídas como regra geral atual. Eventual aplicação de regime anterior exige análise temporal e dos requisitos do benefício."
+        ],
+        "exemplo": "Crime de roubo foi praticado em 2020 e o pedido de saída é analisado depois de 2024. A nova vedação não pode ser aplicada retroativamente apenas porque a execução ou o pedido são posteriores; o benefício depende da lei temporalmente aplicável e dos demais requisitos. Variação: crime cometido após a vigência da restrição do §2º, com violência ou grave ameaça, deve ser examinado sob a disciplina nova; ser estudante não afasta automaticamente a vedação. Para memorizar: Tema 1381 = saída e trabalho externo; Tema 1408 = exame para progressão.",
+        "prova": [
+          "Um pedido feito depois de 2024 permite aplicar automaticamente a nova vedação a crime de 2020? Não; o STJ afasta retroatividade prejudicial, sem dispensar os demais requisitos do benefício.",
+          "Tema 1381 trata de exame criminológico para progressão? Não; trata de saída temporária e trabalho externo. Exame criminológico é o objeto do Tema 1408.",
+          "Os incisos I e III do art. 122 foram revogados na publicação inicial de 11/04/2024? Não; essas partes haviam sido vetadas e foram promulgadas posteriormente, com publicação em 13/06/2024."
+        ],
+        "remissoes": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "Art. 123",
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14843.htm",
+          "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=7137543&numeroProcesso=1532446&numeroTema=1381",
+          "https://scon.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=30%2F03%2F2026&num_registro=202501815097",
+          "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=542997&tip=UN"
+        ],
+        "termos": [
+          {
+            "termo": "Regra do art. 122",
+            "significado": "Na disciplina atual do art. 122, a saída temporária do semiaberto, sem vigilância direta, destina-se à frequência a curso profissionalizante, de ensino médio ou superior na comarca da execução; o tempo é o necessário às atividades discentes. A ausência de vigilância direta não impede monitoração eletrônica. O §2º restringe saída e trabalho externo sem vigilância direta para condenados por crime hediondo ou praticado com violência ou grave ameaça. Essas restrições mais gravosas não se aplicam automaticamente a crimes anteriores à vigência: a data do fato e o regime temporal precisam ser examinados."
+          }
+        ]
+      },
+      "readback_verified": true
+    }
+  ]
+}
