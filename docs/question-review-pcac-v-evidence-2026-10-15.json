@@ -254,6 +254,76 @@
       "sha256": "4311b2dd6aa53bfd96c965faf3da0941444b5c8582c50fc62974665ca88cd89a",
       "reviewed_at": "2026-10-16T03:18:15.209297+00:00",
       "retrieval": "Conteúdo integral obtido na API oficial, rota postsnoticias/57511, em 16/10/2026; reafirma ADI 5637 para PM."
+    },
+    "nist": {
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+      "title": "NIST SP 800-145 — definição de computação em nuvem (2011)",
+      "sha256": "7b0c1a9fdfc67218b8ba2098f448c100c27070db91736b3c87fed63bfa21d418",
+      "reviewed_at": "2026-10-16T03:34:56.833277+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "who_hymen": {
+      "url": "https://www.who.int/news/item/17-10-2018-united-nations-agencies-call-for-ban-on-virginity-testing",
+      "title": "OMS / ONU — ausência de validade científica dos testes de virgindade (2018)",
+      "sha256": "7f8762a8f3280111879b3b51f89d3f873398cb5203779efc30414c5b7c538854",
+      "reviewed_at": "2026-10-16T03:34:56.887660+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "firstaid": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_primeiros_socorros.pdf",
+      "title": "Ministério da Saúde / Fiocruz — Manual de Primeiros Socorros (2003)",
+      "sha256": "4f110686a10c4e1ecf847397f40340d2df92ad106262729ce524a903bb3d76f2",
+      "reviewed_at": "2026-10-16T03:39:00.308614+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "burn": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/cartilha_tratamento_emergencia_queimaduras.pdf",
+      "title": "Ministério da Saúde — Cartilha para tratamento de emergência das queimaduras (2012)",
+      "sha256": "4b69e98c9886a39dbfd9139db4403f95b10da35313c20034c0aced350bc79a92",
+      "reviewed_at": "2026-10-16T03:35:01.951430+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "work_diseases": {
+      "url": "https://bvsms.saude.gov.br/bvs/publicacoes/doencas_relacionadas_trabalho_manual_procedimentos.pdf",
+      "title": "Ministério da Saúde — Doenças relacionadas ao trabalho (2001), barotrauma",
+      "sha256": "4be73b633c99efb2df090cb71cab1b597aca4ec7aee269961d425f376e37d9b8",
+      "reviewed_at": "2026-10-16T03:36:48.318601+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "drowning": {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/drowning",
+      "title": "OMS — afogamento: definição e prevenção",
+      "sha256": "49de4e5b36a2310793a4178470034d899c92d89f7fa38e988673d3ac3db1d84c",
+      "reviewed_at": "2026-10-16T03:37:30.572682+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cp16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "title": "Código Penal — compilado consultado em 16/10/2026",
+      "sha256": "46f069fb90279de30bf37c677eaae02ee59d0b52926fa0ddcba7bcf0bb42e415",
+      "reviewed_at": "2026-10-16T03:49:11.660860+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cf16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "title": "Constituição Federal — compilada consultada em 16/10/2026",
+      "sha256": "c8f92d74e30a61f201fe8419a9226283357794489cf6f94e3594a3792bc92e69",
+      "reviewed_at": "2026-10-16T03:49:19.153034+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "cdc16": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+      "title": "Código de Defesa do Consumidor — compilado, art. 76",
+      "sha256": "5989829bbdd4de5b685a38a923dd5b93b50a7146655da6ace6db371282ecedc2",
+      "reviewed_at": "2026-10-16T03:48:02.527998+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
+    },
+    "dl20016": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm",
+      "title": "Decreto-Lei 200/1967 — supervisão ministerial, arts. 19, 20 e 26",
+      "sha256": "a92f79cbba66cba5c83d9504ef50f83e4cb13edb98d14f35f643d3f0a12059c2",
+      "reviewed_at": "2026-10-16T03:49:11.668859+00:00",
+      "retrieval": "Captura oficial efetivamente obtida nesta revisão de 16/10/2026. Edição original da publicação preservada; revisão individual dos trechos referidos, sem certificação integral de todo o documento."
     }
   }
 }

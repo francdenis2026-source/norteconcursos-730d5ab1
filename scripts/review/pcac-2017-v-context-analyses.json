@@ -1,0 +1,50 @@
+{
+  "scope": "Análises preparadas; cinco contextos seguem bloqueados. Não são ativações ou questões integrais publicadas.",
+  "items": [
+    {
+      "item_number": 2,
+      "official_answer": "A",
+      "topic": "Interação entre autor e leitor",
+      "analysis": "A forma possessiva de primeira pessoa do plural inclui autor e leitores no mesmo grupo de referência. A banca identifica aí o diálogo com quem lê. A análise da pessoa gramatical é contextual: não significa que toda ocorrência de primeira pessoa do plural tenha necessariamente a mesma função discursiva.",
+      "example": "Em “Nossa cidade precisa discutir o tema”, o enunciador pode convidar os leitores a uma reflexão compartilhada. Variação: uma descrição exclusivamente em terceira pessoa não produz automaticamente essa inclusão.",
+      "publication_status": "under_review",
+      "context_review_required": true
+    },
+    {
+      "item_number": 6,
+      "official_answer": "D",
+      "topic": "Concordância e haver impessoal",
+      "analysis": "Haver com sentido de existir é impessoal e permanece na terceira pessoa do singular, mesmo com complemento no plural. No outro fragmento, a construção com se pode ser lida como passiva sintética: o verbo concorda com o sujeito paciente. A questão não trata de defeito de conjugação nem autoriza relacionar a concordância à palavra mais próxima.",
+      "example": "“Houve mudanças” conserva haver no singular; “Existiram mudanças” leva existir ao plural. Variação: em “Venderam-se casas”, o verbo concorda com casas, sujeito paciente.",
+      "publication_status": "under_review",
+      "context_review_required": true
+    },
+    {
+      "item_number": 7,
+      "official_answer": "C",
+      "topic": "Relação comparativa no contexto",
+      "analysis": "O gabarito identifica relação comparativa do segmento com o grupo retomado. A leitura exige conservar o referente e os marcadores do fragmento. Não se pode concluir que qualquer trecho entre travessões expresse comparação: a pontuação também pode delimitar explicação, comentário ou outros valores conforme o caso.",
+      "example": "“Outros profissionais, tais como os peritos citados, participaram” estabelece uma aproximação com o grupo mencionado. Variação: “O perito — que chegou cedo — iniciou o exame” contém um comentário, não uma comparação automática.",
+      "publication_status": "under_review",
+      "context_review_required": true
+    },
+    {
+      "item_number": 8,
+      "official_answer": "A",
+      "topic": "Reescrita e preservação de sentido",
+      "analysis": "A alternativa indicada pela banca conserva o encadeamento do trecho e emprega pronome relativo concordando com o antecedente. As demais formulações alteram relações de sentido, introduzem elemento locativo sem antecedente adequado ou comprometem a construção. Conectores devem ser analisados no contexto: não se ensina equivalência universal entre palavras apenas porque uma substituição funcionou nesse trecho.",
+      "example": "Em “A proposta, que foi aprovada, será executada”, pode-se examinar a substituição de que por a qual, com concordância e pontuação adequadas. Variação: um conector de causa não substitui automaticamente uma expressão de retificação ou confirmação.",
+      "publication_status": "under_review",
+      "context_review_required": true
+    },
+    {
+      "item_number": 10,
+      "official_answer": "D",
+      "topic": "Acentuação, crase e referência textual",
+      "analysis": "As afirmações II e III são as aceitas no gabarito. A primeira aproxima regras distintas: há acento decorrente de hiato em um dos vocábulos e regra de paroxítona terminada em ditongo no outro. Na mudança proposta, manter a preposição a sem artigo plural diante do substantivo plural impede a contração marcada por crase. O demonstrativo retoma uma ideia já apresentada, estabelecendo referência anafórica.",
+      "example": "“Refiro-me a normas gerais” não tem artigo definido plural; “Refiro-me às normas aprovadas” apresenta a contração com as. Variação: na retomada textual, um pronome pode remeter a uma proposição inteira, e não apenas a um substantivo isolado.",
+      "publication_status": "under_review",
+      "context_review_required": true
+    }
+  ]
+}

@@ -53,7 +53,10 @@ def build(snapshot,manifest_path,output,exclusions_output,decisions_path=None):
             patch.update(legal_basis=bs,law_version_checked_at=source(norm)['reviewed_at'])
         names+= {32:['stf_promotor'],36:['stf_sigilo'],38:['stf_foro'],40:['stf_extradicao'],67:['stf_ambientais'],68:['hediondos']}.get(n,[])
         if patch['content_status']!='active':
-            norm_source=next(s for s in sources if s['url']==source(d['norm'])['url'] and s['is_official'])
+            exclusion_source=d.get('exclusion_source',d['norm'])
+            if not exclusion_source:raise ValueError('Registered individual exclusion reference required')
+            names.append(exclusion_source)
+            norm_source=next(s for s in sources if s['url']==source(exclusion_source)['url'] and s['is_official'] and s['status'] in ['vigente','parcialmente_revogado'])
             exclusion_type=d.get('exclusion_type','replaced' if n==23 else 'obsolete')
             if exclusion_type not in ['revoked','replaced','obsolete','time_bound','outside_active_edital']:raise ValueError('Explicit supported exclusion required')
             row=dict(edition_id='59a6294e-7f50-441d-a718-6ffbc02d90ec',original_item=f'PC-AC 2017 S01-V — questão {n} — '+r['id'],exclusion_type=exclusion_type,reason=d['reason'],replacement_source_id=norm_source['id'])
