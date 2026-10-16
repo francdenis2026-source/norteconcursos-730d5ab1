@@ -1,0 +1,146 @@
+{
+  "sources": {
+    "cp": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "title": "Código Penal",
+      "sha256": "5ead235656cdd2e678a9f43747824f3d00b5b452f4a7c7cc1db1328cfa8d9b23",
+      "reviewed_at": "2026-10-15T19:05:52.123860+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "cpp": {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "title": "Código de Processo Penal",
+      "sha256": "f75248fb8ab6f4e92920a8f961ebdada9b3f7571d27a8dc54b3b80c8d2d4edf3",
+      "reviewed_at": "2026-10-15T19:05:52.079432+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "cf": {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "title": "Constituição Federal",
+      "sha256": "98e7e9a7293948c6c4aac36a22cef3ba2c20d31f19455affdd3f565aaf0719e4",
+      "reviewed_at": "2026-10-15T19:06:02.911990+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l9784": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "title": "Lei 9.784/1999 — Processo Administrativo Federal",
+      "sha256": "1240ebdf6cbf3740fe7e03c786dccf4ad9761a6627a02ac3dd3b16a5098f869d",
+      "reviewed_at": "2026-10-15T19:05:51.003911+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l8112": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+      "title": "Lei 8.112/1990 — Servidores federais",
+      "sha256": "5b898c697149970c7ef71e85529345ec58dd1c67a3742308570afec98bebb4d0",
+      "reviewed_at": "2026-10-15T19:08:56.043504+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "l12830": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "title": "Lei 12.830/2013 — Investigação pelo delegado",
+      "sha256": "c21b058b5eca88e0a4f944dec5bd5f3363347f634820fa0a935536215a894052",
+      "reviewed_at": "2026-10-15T19:08:48.963825+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "drogas": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "title": "Lei 11.343/2006 — Lei de Drogas",
+      "sha256": "ac7182b75693b16e7206ea58756a7c0d22f5109c543fabdb229f334169094f55",
+      "reviewed_at": "2026-10-15T19:08:50.511755+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "tortura": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "title": "Lei 9.455/1997 — Tortura",
+      "sha256": "5ad33369b63c5a3e5ab0653d3831e9088a9bfaa1655a177b9f185ce780b2c6e4",
+      "reviewed_at": "2026-10-15T19:08:48.859830+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "ambientais": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "title": "Lei 9.605/1998 — Crimes Ambientais",
+      "sha256": "ef44ef55597b2cee5f16dda009eddfe591c2f76190f355015254caca8bc484bf",
+      "reviewed_at": "2026-10-15T19:08:51.167725+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "lia": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+      "title": "Lei 8.429/1992 — Improbidade",
+      "sha256": "2df1405ade3fe64630aa3ac50ce1e8940ac11fa3703b02a81f9fe82e29312554",
+      "reviewed_at": "2026-10-15T19:05:50.507934+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "lep": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "title": "Lei 7.210/1984 — LEP",
+      "sha256": "9a3d530dde3cdc3654cee24fc29c31ef81cab3a49e18654738b13bf8f619271a",
+      "reviewed_at": "2026-10-15T19:08:52.623395+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "hediondos": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "title": "Lei 8.072/1990 — Crimes Hediondos",
+      "sha256": "7b14e61b9d3cc106f89bc83615c88dbc1b3e2170bd4443e4afe2aae2c4d63de3",
+      "reviewed_at": "2026-10-15T19:08:51.551708+00:00",
+      "retrieval": "Planalto obtido nesta sessão em 15/10; tentativa nova da retomada retornou 503. Data e bytes da captura original preservados."
+    },
+    "prova": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/V-4.pdf",
+      "title": "Prova objetiva – PC-AC 2017 – S01 Agente de Polícia Civil – versão V",
+      "sha256": "6fc3d1720f125c353d99e08541c67e3baddaaf8de9ac3051a0ca271c1d4cfb69",
+      "reviewed_at": "2026-10-16T01:33:03.988224+00:00"
+    },
+    "gabarito": {
+      "url": "https://ibade.org.br/wp-content/uploads/2026/05/Gabarito-da-Prova-Objetiva-IBADE-PCACRE.pdf",
+      "title": "Gabarito definitivo – PC-AC 2017 – Prova objetiva – S01 versão V",
+      "sha256": "a0d364982268671c13071145da7445923139e8183386eaff8c1999b56d695697",
+      "reviewed_at": "2026-10-15T18:59:33.833492+00:00"
+    },
+    "matrix": {
+      "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "title": "Edital PF 2025 — Agente",
+      "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+      "reviewed_at": "2026-10-16T01:33:07.284074+00:00"
+    },
+    "stf_ambientais": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/primeira-turma-admite-abertura-de-acao-penal-contra-petrobras/",
+      "title": "Primeira Turma admite abertura de ação penal contra Petrobras",
+      "sha256": "d8a41a1c569983a7781750bf93c153fc0b515c4816f501a145a483fb43f190dd",
+      "reviewed_at": "2026-10-16T01:36:12.027684+00:00",
+      "published_at": "2013-08-06T19:45:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_promotor": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-reestruturacao-do-gaeco-do-mp-rj-e-seu-poder-investigativo/",
+      "title": "STF valida reestruturação do Gaeco do MP-RJ e seu poder investigativo",
+      "sha256": "69c262a3b1cf68bc91e9982c4ecee567545a0e1ae116ab6b820be4367dfaf631",
+      "reviewed_at": "2026-10-16T01:36:12.627657+00:00",
+      "published_at": "2023-07-11T17:02:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_sigilo": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/presidente-do-stf-manifesta-apoio-ao-ministro-flavio-dino/",
+      "title": "Presidente do STF manifesta apoio ao ministro Flávio Dino",
+      "sha256": "03f2e6f759831ebbacda586fe2ca79b70a796fcf4a19ec416aa0eb0825246f57",
+      "reviewed_at": "2026-10-16T01:36:12.227675+00:00",
+      "published_at": "2026-08-13T16:07:37",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_extradicao": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-nega-extradicao-de-sul-coreano-responsavel-por-filhos-menores-de-idade/",
+      "title": "STF nega extradição de sul-coreano responsável por filhos menores de idade",
+      "sha256": "33c6e2fcd7b05e52302c21de3eb58750502f589030b819fcf166a051a6b9c9f3",
+      "reviewed_at": "2026-10-16T01:36:12.287672+00:00",
+      "published_at": "2024-04-05T11:50:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    },
+    "stf_foro": {
+      "url": "https://noticias.stf.jus.br/postsnoticias/acoes-contra-autoridades-permanecem-no-stf-mesmo-apos-saida-do-cargo/",
+      "title": "Processos penais contra autoridades permanecem no STF mesmo após saída do cargo",
+      "sha256": "349fb4c27453bf187a747e7dcaa8ec7dd669a8d16011444c3257697eabf32d07",
+      "reviewed_at": "2026-10-16T01:36:12.387668+00:00",
+      "published_at": "2025-03-12T09:00:00",
+      "retrieval": "Conteúdo e URL obtidos na API oficial do STF, conferidos na retomada."
+    }
+  }
+}
