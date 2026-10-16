@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { effectiveTier, planEndsAt, TESTING_OPENED_AT } from "../src/lib/launch.config.ts";
+import { readFileSync } from "node:fs";
+import { effectiveTier, planEndsAt, TESTING_OPENED_AT, TESTING_DAYS, TESTING_PHASE } from "../src/lib/launch.config.ts";
 import { checkFeatureAccess, FREE_DAILY_QUESTIONS, FREE_DAILY_LIBRARY } from "../src/lib/subscriptions.config.ts";
 
 const DAY = 86_400_000;
@@ -50,4 +51,13 @@ test("planos pagos mantêm as áreas liberadas", () => {
   for (const tier of ["essential", "plus", "premium"])
     for (const feature of ["notebooks", "flashcards", "editalRadar", "essays"])
       assert.equal(checkFeatureAccess(tier, feature).included, true, `${tier}:${feature}`);
+});
+
+test("o gatilho do servidor usa as mesmas regras do aplicativo (sem divergência)", () => {
+  const sql = readFileSync("supabase/migrations/20261016160000_server_daily_question_limit.sql", "utf8");
+  const sqlOpened = /testing_opened_at constant timestamptz := timestamptz '([^']+)'/.exec(sql)?.[1];
+  assert.equal(new Date(sqlOpened.replace(" ", "T") + ":00").getTime(), new Date(TESTING_OPENED_AT).getTime());
+  assert.equal(Number(/testing_days constant integer := ([0-9]+)/.exec(sql)?.[1]), TESTING_DAYS);
+  assert.equal(/testing_phase constant boolean := ([a-z]+)/.exec(sql)?.[1], String(TESTING_PHASE));
+  assert.match(sql, new RegExp("when 'free' then " + FREE_DAILY_QUESTIONS + " when 'essential' then " + checkFeatureAccess("essential", "questions").limit + " else null"));
 });
