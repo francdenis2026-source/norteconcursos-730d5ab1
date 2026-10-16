@@ -74,7 +74,7 @@ export const basisHref = (basis: LegalBasis) => {
 // Assembleia Geral da ONU) são verificados diretamente nas fontes primárias
 // dos organismos que os custodiam.
 const OFFICIAL_SOURCE =
-  /(^|\.)(planalto\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
+  /(^|\.)(planalto\.gov\.br|sinj\.df\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
 export const isOfficialUrl = (url?: string) => {
   try {
     return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");

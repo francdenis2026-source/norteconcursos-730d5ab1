@@ -10,3 +10,9 @@ test('dry run and repeated registration preserve the original source',async()=>{
 test('changed bytes or conflicting metadata prevent any insert',async()=>{const p=make(),d=db();await assert.rejects(registerReviewedLegalSources(p,d.request,{readCapture:async()=>Buffer.from('<html>changed</html>')}),/capture changed/);d.rows=[{...p.items[0].row,notes:'Other account'}];await assert.rejects(registerReviewedLegalSources(p,d.request,options),/must be preserved/);assert.equal(d.writes,0);});
 test('a date later than capture or a nonofficial host cannot certify a source',async()=>{for(const change of [p=>p.items[0].row.checked_at='2026-10-16T00:00:00Z',p=>p.items[0].row.url='https://example.org/law']){const p=make(),d=db();change(p);await assert.rejects(registerReviewedLegalSources(p,d.request,options),/individual Planalto/);assert.equal(d.writes,0);}});
 test('failed readback is reported rather than counted as a verified insert',async()=>{const d=db();let posted=false;await assert.rejects(registerReviewedLegalSources(make(),async(path,method,body)=>{if(method==='POST'){posted=true;return[body];}return posted?[{id:'wrong'}]:[];},options),/readback mismatch/);});
+test('district captures require explicit DF jurisdiction and the exact official SINJ norm route',async()=>{
+ const p=make();p.items[0].row.url=p.items[0].evidence.url='https://www.sinj.df.gov.br/sinj/Norma/70196/LC840.html';
+ await assert.rejects(registerReviewedLegalSources(p,db().request,options),/Planalto/);
+ p.jurisdiction='DF';assert.equal((await registerReviewedLegalSources(p,db().request,options)).created,1);
+ for(const url of ['https://www.sinj.df.gov.br/search','https://www.sinj.df.gov.br.evil.test/sinj/Norma/1','https://other.df.gov.br/sinj/Norma/1','http://www.sinj.df.gov.br/sinj/Norma/1']){const x=structuredClone(p);x.items[0].row.url=x.items[0].evidence.url=url;await assert.rejects(registerReviewedLegalSources(x,db().request,options),/SINJ/);}
+});
