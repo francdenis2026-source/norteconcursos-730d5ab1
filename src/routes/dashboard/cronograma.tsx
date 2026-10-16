@@ -1,3 +1,6 @@
+import { platformDate } from "@/lib/platformClock";
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
+import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -21,7 +24,7 @@ import {
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
-import { acreDateKey } from "@/lib/acreTime";
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { DayRun } from "@/components/cronograma/DayRun";
 import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
 import { useQuery } from "@tanstack/react-query";
@@ -98,8 +101,9 @@ function CronogramaPage() {
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="journey" size="sm" kicker="Hoje" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
+      <PageHero image="journey" size="sm" kicker="Minha preparação" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
+      <StudyPlanningNav active="schedule" />
       {openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
       ) : open ? (
@@ -290,7 +294,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         };
       setProgress(m);
     });
-    const since = new Date(Date.now() - 6 * 864e5).toISOString().slice(0, 10);
+    const since = acreDaysAgoKey(6);
     void supabase.from("study_sessions").select("active_seconds").eq("user_id", userId).gte("study_date", since)
       .then(({ data }) => setStudiedMin(Math.round(((data ?? []) as { active_seconds: number }[]).reduce((s, r) => s + r.active_seconds, 0) / 60)));
     return () => Object.values(timers.current).forEach(clearTimeout);
@@ -307,7 +311,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       timers.current[topicId] = setTimeout(() => {
         void supabase.from("cronograma_progress").upsert({
           plan_id: plan.id, user_id: userId, topic_id: topicId, video: p.video, pdf: p.pdf, podcast: p.podcast,
-          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: new Date().toISOString(),
+          qtde: p.qtde, acertos: p.acertos, rev_pdf: p.revPdf, rev_questoes: p.revQuestoes, updated_at: platformDate().toISOString(),
         }).then(({ error }) => error && toast.error("Não foi possível salvar o progresso."));
       }, 500);
       return next;
@@ -318,7 +322,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
     const next = { ...plan, ...patch };
     onChange(next);
     const { error } = await supabase.from("cronograma_plans").update({
-      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: new Date().toISOString(),
+      name: next.name, exam_date: next.exam_date, custom: next.custom, config: next.config, updated_at: platformDate().toISOString(),
     }).eq("id", plan.id);
     if (error) toast.error("Não foi possível salvar as alterações.");
   };
@@ -355,7 +359,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         isSecondLastOrOnly: (studyDays.length > 1 ? studyDays.at(-2) : studyDays[0]) === todayDow,
       })
     : [];
-  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00`).getTime() - Date.now()) / 864e5) : null;
+  const daysLeft = plan.exam_date ? Math.ceil((new Date(`${plan.exam_date}T12:00:00-05:00`).getTime() - Date.now()) / 864e5) : null;
 
   return (
     <div className="space-y-4">
@@ -529,7 +533,7 @@ function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | und
   const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold hover:bg-primary hover:text-primary-foreground";
   return (
     <span className="flex flex-wrap gap-1.5">
-      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
+      {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws" }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
       <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" }} className={cls}><Target className="h-3 w-3" />Questões</Link>
       <Link to="/dashboard/flashcards" search={{ subject: nome }} className={cls}><Layers className="h-3 w-3" />Flashcards</Link>
       <Link to="/dashboard/media" className={cls}><Mic className="h-3 w-3" />Podcast</Link>

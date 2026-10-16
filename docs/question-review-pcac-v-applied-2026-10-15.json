@@ -1,0 +1,419 @@
+{
+  "scope": "PC-AC 2017 Agente S01-V; lote 1 da retomada",
+  "verified_at": "2026-10-16T01:46:26.276Z",
+  "published": {
+    "text_repairs": 69,
+    "editorial_decisions": 35,
+    "activated": 32,
+    "archived_historical": 1,
+    "obsolete": 2,
+    "syllabus_exclusions_created": 3
+  },
+  "preservation": {
+    "exam_records_compared": 158,
+    "original_answers": true,
+    "original_raw_extraction": true,
+    "archived_aliases_untouched": 79,
+    "other_question_tables_not_written": true
+  },
+  "pending": {
+    "pcac_2017": 44,
+    "global_at_checkpoint": 1216,
+    "new_board_under_review_since_start": 300
+  },
+  "counts_at_checkpoint": {
+    "checked_at": "2026-10-16T01:46:06.730Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 4063,
+        "under_review": 616,
+        "archived": 142,
+        "obsolete": 30,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 447,
+        "under_review": 600,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6334,
+      "under_review": 1216,
+      "archived": 149,
+      "obsolete": 32,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "validation": {
+    "targeted_tests_passed": 189,
+    "readback": {
+      "mode": "published",
+      "verified_at": "2026-10-16T01:46:26.276Z",
+      "context_repairs_verified": 69,
+      "complete_exam_records_compared": 158,
+      "original_answers_and_raw_preserved": true,
+      "untargeted_records_preserved": 89,
+      "editorial_decisions_checked": 35,
+      "active_eligible": 32,
+      "formula_and_math_checks": true
+    },
+    "application_changes": false,
+    "build_run": false
+  },
+  "items": [
+    {
+      "id": "311d9ca2-c0cc-4c24-a698-63f3b4c2b98f",
+      "item_number": 11,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "expected_sha256": "780752810e8a4794f7afb93a483cba88b18d744be250f98fbf5896b933384b1b",
+      "patch_sha256": "128c3caff5320a75f94fda32bb9b6d8fc4ce8acdcdf7f03af24e883db3adb942"
+    },
+    {
+      "id": "8b653345-d814-4da7-bf08-688d576996c7",
+      "item_number": 12,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "expected_sha256": "2d12d04069b2d781cdbd6e08134e3d5b714112d29af19e5477f15ae35af1457f",
+      "patch_sha256": "78db06e4349e2bd81510b5cff1e6bc06ef9c0475a95085d1a309086a7fc3f8f6"
+    },
+    {
+      "id": "6dec9435-ccc1-4dce-9842-ef4db5939251",
+      "item_number": 14,
+      "answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "expected_sha256": "407d9b5dac1c9eb531e627dadff2f1d05e589503c3c38e21d1603a7acd4d0933",
+      "patch_sha256": "9db97c84b2c72989a13eb6f0d6312b6c058f0ddabdc268102c881a782d309bb9"
+    },
+    {
+      "id": "4996c657-d59d-4d3d-ace1-9205f274c039",
+      "item_number": 15,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
+      "expected_sha256": "ea16c583431fed89a1ade5c75c3bd9e34fbac0f82727f3c9fc939d48c1f54f7f",
+      "patch_sha256": "581e4e89d754b8cc4e935d14dadf7b17a1283e945bf007e0e6c93353e15996e6"
+    },
+    {
+      "id": "603e9443-29ba-4770-848d-a8d48a4dd8ef",
+      "item_number": 16,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "expected_sha256": "9bb798d2eef416af1d2d8e366114b6b521c86be8e87e709f55009e9f99afe49b",
+      "patch_sha256": "a679d0b8c906e6f049c6a04dd8efc7ecee6e5b105a57478f1d627ba32f5ee2cd"
+    },
+    {
+      "id": "fe346849-3c3b-4208-882d-e42bdd55006b",
+      "item_number": 17,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "expected_sha256": "c63cc47c21dd5a96e79a3e7a8196b84d7d22d1d3862b4d0fe28c7d99c8eb4291",
+      "patch_sha256": "79a42dd2f89b58bc63b7b0a1f469eb5d59adf93b2590f8b0b3c973f2ea2f1b99"
+    },
+    {
+      "id": "349d0b22-a964-4cab-b9fc-0d21c9841d51",
+      "item_number": 18,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "expected_sha256": "cf960b278e3b908982801ad09f90d3e9b04a994d574ada26c1a820cd55e99f3d",
+      "patch_sha256": "ec07f4e6742bc372a20bc65cebd2dab0e201ea6d9256122232d957ae33f2991d"
+    },
+    {
+      "id": "9fbda2e3-cab6-4603-8d9a-118a61001ba6",
+      "item_number": 19,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "a7ae3924-db95-4f19-9d59-67f2c3011458",
+      "expected_sha256": "a6db5d3740b53087dc0cf3f5674e2460d0cec86f0f3924ceb9a33d2de64412b7",
+      "patch_sha256": "8b582870b18ccdd91846f0baec5db2d3da7dbb25c8ee98bd60ba33b47ef518a0"
+    },
+    {
+      "id": "a8d3a01c-31c1-4278-ae0b-20588779c06a",
+      "item_number": 20,
+      "answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "expected_sha256": "e54f8bea4d5a51324ae654e09595238e20151fbfcde80f1b6aed5140e3cc95e8",
+      "patch_sha256": "3c1942cde3c9a13ad25c8fc18ddcc2c0c1dd3c2ad0edc038cb82e3fa55e771af"
+    },
+    {
+      "id": "f075c0b8-532a-4a34-bd17-f80dd99bfa24",
+      "item_number": 21,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "expected_sha256": "e9dd94c19b7917e5b029d7ca2e989e03633d732222bb681a3d41508c7c232e41",
+      "patch_sha256": "cf2eaf9dadb52ae50bd7c29c0298fa22c378f0c423c71551ebb4428a9d3efde3"
+    },
+    {
+      "id": "71934169-e96a-4d5a-a715-aec2a7f8840a",
+      "item_number": 22,
+      "answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "expected_sha256": "ef971ca647516fbbfce6600035ffcef3a2f175fa066aad0f2a424548cb607f28",
+      "patch_sha256": "dd19ea7f55bdff86d0b4a91dbb1fcc11a97bbf6cc5b8b9afe4fe38178e2a86bc"
+    },
+    {
+      "id": "a057e726-63ba-43ee-9948-f58756eb6d43",
+      "item_number": 24,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "d2bdb958-6b28-45c5-8da1-b29dbe72e905",
+      "expected_sha256": "975f6d53e4c7e950a2d6b9b558cc9c7494a26b0e76b7395de402aa1911785997",
+      "patch_sha256": "abb0f5682a7140a1fb6e8cdecca5f0834671c4da5a13b48403988d71e6e35868"
+    },
+    {
+      "id": "07d453f5-4544-41eb-81dc-761bea2202b2",
+      "item_number": 27,
+      "answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "expected_sha256": "eaae05256503f04876670421f6b6694ca336cd916565a919129f0e70fea89961",
+      "patch_sha256": "9723da10fccb4866839119c63a65571db000a9e4238de37f1a61578efca41ed7"
+    },
+    {
+      "id": "9b8ddec7-f856-4a18-9eb0-617bc3a12080",
+      "item_number": 28,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "2e8560fa-c1c5-4753-8ec6-275261802195",
+      "expected_sha256": "fe2b8acf5cec5764dd98a5653c43fa8f13c484f219319bfbfe044ea48281801b",
+      "patch_sha256": "6f04322f8f5fc98cacea474b12638792643b6f393a5a60955649291a7cb323ff"
+    },
+    {
+      "id": "0e2a058c-e4f8-4b98-a6ef-a03913f7bbc8",
+      "item_number": 29,
+      "answer": "A",
+      "decision": "active",
+      "current_syllabus_topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "expected_sha256": "24e83e11dbab8153fd94df322fe7e0298c784ac97d840ba6f73576e10702f4c2",
+      "patch_sha256": "7b4b72360bc9f5695cf09c125a1b341f7c9c3c8c0f8452adb6141f8919d823f6"
+    },
+    {
+      "id": "2cecf36c-f2e3-4124-96ea-db522f9dabb2",
+      "item_number": 30,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "2e8560fa-c1c5-4753-8ec6-275261802195",
+      "expected_sha256": "166e007fc9e65e2ce83ffd3c9476ef7bfc6985e916870f3c803dc12eef5eef04",
+      "patch_sha256": "638022a0268835bd4b82ad83e626c58c49f9d26eea4a992a409684b7d6c5e262"
+    },
+    {
+      "id": "83fbae9b-76c8-429e-89ab-a5b46ce18635",
+      "item_number": 32,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "expected_sha256": "7c69999bc3fec9df8c11724f21a36e1b380b9a98815683c9bf83d5875684f991",
+      "patch_sha256": "cf5af715ec0d148de7f57f6e9693f4ae4e04ed679a77e3db1b22c5d322d07bfd"
+    },
+    {
+      "id": "85d89531-6dd1-4cc6-aedd-4b842955b748",
+      "item_number": 36,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "expected_sha256": "690f4a97ef2fc24673091a734a2c8c0942df217d75fb19154dcd14c8cf9e3bed",
+      "patch_sha256": "988d94f463875682059b7d7c2e9add2f0d7755b82e144d99cb8fe2181e992bf0"
+    },
+    {
+      "id": "0e8495d6-920f-4bed-93ff-a7f6939e7666",
+      "item_number": 40,
+      "answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "expected_sha256": "5f922c8d7379887817c9bfff8b7a554bcd64170348ca1caa52c0297d7e7e2a9d",
+      "patch_sha256": "729ff54d42db22856a16c136a59ab0e03a7bdc2415460e33de244b28be280824"
+    },
+    {
+      "id": "74b0e060-6f71-4df1-82cb-3f01ec5f813b",
+      "item_number": 41,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "expected_sha256": "8405fc2fc16bdf0207a25bddbc73170240611a196779e22c690ab4c812392e2e",
+      "patch_sha256": "bcd92869e96e41aaf675ff4c7868f43cdd9a023b8156c187aaf98f4aef554289"
+    },
+    {
+      "id": "0d6d23e5-3ea1-4806-95cb-5a98e0198ec3",
+      "item_number": 43,
+      "answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "expected_sha256": "206b0b5cdbb7e228d0b9961210982cb013805ac639eb532b186565a064c55b11",
+      "patch_sha256": "930861fec54f6192b34be81583155984a653bf601714e2c530e9ba6995e5429b"
+    },
+    {
+      "id": "768be8d1-d6b4-42db-8321-d380e874b6b8",
+      "item_number": 47,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "expected_sha256": "278d2c3c6ba572d4c015895f6c987a5af1e7024d1649d14c63692d369b105e34",
+      "patch_sha256": "56c333719c8884f218a30561ab3d8dd14b838b5a1d0e9839f30f5b5026163d5f"
+    },
+    {
+      "id": "e2fda7fd-f721-463b-9eb7-907973291012",
+      "item_number": 50,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "expected_sha256": "a192a8e136a41b93d56898ef867cdaa3f8012e3dc34791c5d7939406a9227b11",
+      "patch_sha256": "b2cb437f9da439bb14e8fc7adf3032361de20b073d2dac372cb6227c59badf78"
+    },
+    {
+      "id": "bfb6d2cb-672b-40b9-99c1-193a90e7e9a8",
+      "item_number": 51,
+      "answer": "D",
+      "decision": "active",
+      "current_syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "expected_sha256": "3d4ba0248d053cf527244ddaa45ad558fcbc54215d7ccc81f8a3ab2610c9b152",
+      "patch_sha256": "07f9758feab8f8a0626cc1e1e5d7ffc1adad95c795b6e5e96320c39e8d4f3532"
+    },
+    {
+      "id": "4a0ef077-1504-4b2f-ad81-1e768bae9d3c",
+      "item_number": 52,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "expected_sha256": "d1263a6dfe1a109412d5b2633533112029239fbfea1b25cbf571f1b52816ef18",
+      "patch_sha256": "8c5515b19393ac9c20808f211584b3d819202a3153defc045888863f5ead6c37"
+    },
+    {
+      "id": "b0447beb-36ce-465d-b10b-74f2dd677c7f",
+      "item_number": 55,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "expected_sha256": "b17171d61e4a098ba1c50490d647cac5e65060f9080eb9e38c320572ce6861f6",
+      "patch_sha256": "7cefa715897f9fe65a23152ab04d5e71e0daf9c4d5a4a0d0a404ce1b9c1c1e6a"
+    },
+    {
+      "id": "beb5c96a-fa30-4e96-88f8-3ac1c93392cd",
+      "item_number": 58,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "expected_sha256": "9f1b40f67223ab561357583a27719b4384bf8f3357ae90d51a38b3d238a924ac",
+      "patch_sha256": "1264b05b6d61d4868d9885062a5edca597fd0da2abd716a617a0ef80e99d7331"
+    },
+    {
+      "id": "2ee27c76-d286-47b5-b461-589bed03e7a2",
+      "item_number": 59,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "expected_sha256": "e9af35cb56df1786849e9e46f9a8377e891a095486a5e9fbdc05df6987d2c413",
+      "patch_sha256": "2b319407492b997ef2553f0c79d3c02950b008c696c6ecdc78276ccceb13a522"
+    },
+    {
+      "id": "d3231a59-8ced-4735-ac20-9f16144ef0dc",
+      "item_number": 61,
+      "answer": "E",
+      "decision": "active",
+      "current_syllabus_topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "expected_sha256": "e6d52a70778e786c8b7812d85d34d8c89fbb1ea20d332ff0734634f524cc86db",
+      "patch_sha256": "e06e449fe27dd3bb76e57a7f5c7e9dcafd1d3bd6f5bbc00e561cfbc305d3b26e"
+    },
+    {
+      "id": "bc625837-8b2a-4554-9742-1007727e397a",
+      "item_number": 62,
+      "answer": "C",
+      "decision": "active",
+      "current_syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "expected_sha256": "d3a7572857623f69f863b39f7599ebd4e420567c3c7019db046d669511c580d0",
+      "patch_sha256": "cf5d599d8fb0f590066c541c91671dc841fbc362e753259febb03e9d92193b3d"
+    },
+    {
+      "id": "c808af90-1dfb-42c2-9142-8b834010146e",
+      "item_number": 65,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "expected_sha256": "98da44cdc47a9dd8d0882a22e81bc0701db4e589655962513cffb78da77d9fc7",
+      "patch_sha256": "5f5cd346aa0d366f565d0b0dbea24412e55f1b05a6e1f4c12deac611982b2e14"
+    },
+    {
+      "id": "ca0007f4-f702-428f-a727-e2c8ac49cc01",
+      "item_number": 67,
+      "answer": "B",
+      "decision": "active",
+      "current_syllabus_topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "expected_sha256": "989b6a8c882c86465b5242bfeb1b5d16a80473c36970a8cb9c5d5d3700f65f98",
+      "patch_sha256": "625d73ef4d2b8e5bd5b2f0c136c4224c4901fe9e1812c90eb0be2f12b48f4728"
+    },
+    {
+      "id": "07f8d639-c6e8-47a7-8234-5705c0d0e233",
+      "item_number": 23,
+      "answer": "E",
+      "decision": "archived",
+      "current_syllabus_topic_id": null,
+      "expected_sha256": "efd9c0d86d42d6c51af513882d9c05b83639a7e28f7d740632250af36fea1510",
+      "patch_sha256": "8b46f28ac7d22817d3ac78a8f372e80b0fc6a480f37013734bdc32a390fce411"
+    },
+    {
+      "id": "1da9c9c1-d07d-4148-a065-492f105818ee",
+      "item_number": 38,
+      "answer": "A",
+      "decision": "obsolete",
+      "current_syllabus_topic_id": null,
+      "expected_sha256": "89c89f2ed23d22235365348c70f6bc49992d9f09daf8c09ea972107af8315877",
+      "patch_sha256": "bef5846c52a3d7b3d885c45bb4a645a4ec68eba1a2c5379cb835efbe4a8ccc8f"
+    },
+    {
+      "id": "dc102831-fcd9-4087-a3b9-69214350ab3c",
+      "item_number": 68,
+      "answer": "B",
+      "decision": "obsolete",
+      "current_syllabus_topic_id": null,
+      "expected_sha256": "de5c46aeee431478cd1034dfb1fc707a325b3921c7845cf73c33942aa4ea96ce",
+      "patch_sha256": "b5c9e4fd0bbafdc18577ff41d9aeeb9ae548d18d34bb44dc0b9347b0c9a1feab"
+    }
+  ],
+  "artifact_hashes": {
+    "pcac-resume-2026-10-15/context-pack.json": "3e579b91b1fe255401c781f6c1b817f9835f9a2d85c04c2995e89032e06207f8",
+    "pcac-resume-2026-10-15/review-pack.json": "1a08ec38512ce06ba9adf517c2a16caa8ac5b353f0b99fc6abd91ce2294d5382",
+    "pcac-resume-2026-10-15/review-published-after-batch1.json": "728c667822fbf338db3e0f4d75d96b0aa5de502bb3a70c7a04f577788d8ccab8",
+    "pcac-resume-2026-10-15/validation-published.json": "dbf8e0d6abe061231b1a99decacc4b7edf863a36929565a352e620a79ec71095",
+    "pcac-resume-2026-10-15/editorial-evidence.json": "e29677d6662d75e8d898cc56e5ba2ec79db91a3dfed4fdccf2f9ae6257d57d2a",
+    "pcac-resume-2026-10-15/exclusions-published.json": "de65e61e171dc3df3db1efba157fafe7fe130c1827d6599d9d4b009bee2bc82a"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "checked_at": "2026-10-16T03:23:35.872Z",
+  "exam": "PC-AC 2017 Agente S01-V",
+  "this_batch": {
+    "decisions": 7,
+    "published_active": [
+      4,
+      5,
+      9,
+      73,
+      76,
+      80
+    ],
+    "archived_historical": [
+      39
+    ],
+    "texts_recovered": [
+      4,
+      5,
+      9
+    ],
+    "new_syllabus_topics": 2,
+    "official_sources_created": 0
+  },
+  "canonical_exam_status": {
+    "active": 55,
+    "under_review": 20,
+    "obsolete": 2,
+    "archived": 2
+  },
+  "official_annulled_item_outside_canonical_scope": 26,
+  "pending_items": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    10,
+    13,
+    25,
+    42,
+    44,
+    45,
+    70,
+    71,
+    72,
+    74,
+    75,
+    77,
+    78,
+    79
+  ],
+  "pending_groups": {
+    "Português": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      10
+    ],
+    "Informática": [
+      13
+    ],
+    "Jurídicas": [
+      25,
+      42,
+      44,
+      45,
+      70
+    ],
+    "Medicina Legal": [
+      71,
+      72,
+      74,
+      75,
+      77,
+      78,
+      79
+    ]
+  },
+  "cumulative_editorial_decisions": 59,
+  "cumulative_recovered_texts": 72,
+  "validation": {
+    "mode": "published",
+    "verified_at": "2026-10-16T03:23:32.088Z",
+    "context_repairs_verified": 3,
+    "complete_exam_records_compared": 158,
+    "original_answers_and_raw_preserved": true,
+    "untargeted_records_preserved": 151,
+    "editorial_decisions_checked": 7,
+    "active_eligible": 6,
+    "formula_and_math_checks": true
+  },
+  "preserved_metadata": {
+    "content_sources": 367,
+    "syllabus_editions": 53,
+    "syllabus_topics": 669
+  },
+  "tests": {
+    "passed": 195,
+    "failed": 0,
+    "skipped": 0
+  },
+  "global_snapshot": {
+    "checked_at": "2026-10-16T03:23:35.872Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 3994,
+        "under_review": 573,
+        "archived": 254,
+        "obsolete": 30,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 447,
+        "under_review": 600,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6265,
+      "under_review": 1173,
+      "archived": 261,
+      "obsolete": 32,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "library_changes_this_batch": 0,
+  "limitations": [
+    "Questão 39: arquivamento editorial para evitar uso descontextualizado; não é anulação oficial nem alteração do gabarito histórico C.",
+    "O manual SENASP consultado é de 2013; a consulta em 2026 não atualiza a edição. Só foram utilizados os trechos técnicos identificados, sem certificar todas as regras históricas.",
+    "Planalto retornou HTTP 503 nesta retomada. Fonte constitucional preservada da captura de 15/10; não recebeu data fictícia de nova obtenção.",
+    "OMS, NIST, BVS e ONU-Mulheres bloqueados pela lista de acesso deste ambiente. Rascunho de rede salvo, ainda dependente de revisão, salvamento e publicação do ambiente.",
+    "As questões de Português usam trechos suficientes ao aspecto cobrado; a crônica integral não foi copiada.",
+    "Questões 78 e 79 permanecem bloqueadas; não se ensina certeza de conjunção carnal pela ruptura do hímen nem equivalência irrestrita entre barotrauma e doença descompressiva."
+  ],
+  "evidence_sources": [
+    "pericia_mj",
+    "contran1031",
+    "stf_tco_pm",
+    "stf_tco_prf"
+  ],
+  "private_artifact_sha256": {
+    "before.json": "5539a3947c613c2ed78ea8609bf9b45c1dcee4da17c3f09bab765985ac2d4900",
+    "after.json": "6c4ea78c301d0367f9f32210ed8d5ed1006f83d111fc4111839c5ff215947925",
+    "context-pack-combined.json": "9b2b0b8d5b8281dee0b4b9138d74e527676ee70ace8759958a3b824617dabada",
+    "review-pack-combined.json": "585280adb3a8ee91dbc4a9da35e87140c838c03b7d771a912566b988837a6e2a",
+    "validation-final.json": "4b41299b2ff60413b0d825e7b00d668ca299742f79ac2792f5d418b629a3956b",
+    "topics-pack.json": "bf7b72fd81e050d30b47b20599a57a88853f6b01b021504b6539003e7de8923e",
+    "exclusions-pack.json": "257cec753f94c5334c7f206737ad3ff5fb9c0a8a33b42c8a581465a0151b30f5",
+    "counts-final.json": "a48628dfdcc602fa9581a32056e14c5a29404c8b9f7a9fa21c43e491bc09a202"
+  }
+}

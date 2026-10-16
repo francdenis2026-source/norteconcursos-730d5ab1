@@ -1,0 +1,24 @@
+{
+  "scope": "PC-AC 2017 S01-V; lote 3 individual, cotejo PCDF Delegado 2026",
+  "active": [
+    {
+      "item_number": 48,
+      "answer": "B",
+      "topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93",
+      "matrix": "pcdf_matrix",
+      "norm": "cp",
+      "reference": "arts. 138 a 140 e 331",
+      "explanation": "Resposta: B — injúria.\nNo enunciado, “ladrão” é um xingamento genérico dirigido à pessoa: atinge sua dignidade ou seu decoro. Não foi narrada uma falsa imputação de fato definido como crime, necessária à calúnia, nem um fato determinado ofensivo à reputação, próprio da difamação. Denunciação caluniosa pressupõe, entre outros elementos, provocar uma das atuações estatais descritas no art. 339 contra quem se sabe inocente; o simples envio da mensagem não apresenta isso. O fato de a vítima ser policial não transforma automaticamente qualquer ofensa em desacato: o art. 331 exige relação com o exercício da função. A classificação segue os fatos limitados desta questão e o gabarito oficial, sem concluir que toda ofensa por mensagem tem sempre o mesmo enquadramento.\nExemplo: Uma mensagem que usa “ladrão” apenas para insultar ilustra a ofensa à dignidade. Variação: afirmar falsamente que alguém praticou um furto específico exige examinar a imputação concreta, a ciência por terceiro e os demais requisitos da calúnia; não basta trocar o nome do delito. A análise do meio de divulgação, das circunstâncias e de eventuais causas de aumento depende de dados que o item não fornece."
+    },
+    {
+      "item_number": 69,
+      "answer": "D",
+      "topic_id": "51087a04-d2fb-5df1-9b31-6c3227d516da",
+      "matrix": "pcdf_matrix",
+      "norm": "documentos",
+      "reference": "arts. 1º, 2º, caput e §§ 1º e 2º, e 3º",
+      "explanation": "Resposta: D.\nPara entrada em órgão público ou particular, os dados do documento indispensável devem ser anotados no ato, com devolução imediata ao interessado (art. 2º, § 2º). Isso não se confunde com a regra do caput, que prevê até cinco dias para extrair os dados exigidos na realização de determinado ato, nem com a retenção além desse prazo, admitida somente por ordem judicial (§ 1º). A alternativa A troca contravenção penal por crime; B troca cinco por dez dias; C exclui documentos expressamente abrangidos; E acrescenta ordem policial à hipótese legal. O enunciado usa “identificação criminal”, mas a Lei 5.553/1968 trata da apresentação e do uso de documentos de identificação pessoal; não confundir com a Lei 12.037/2009.\nExemplo: Na portaria de um prédio, exigir documento para liberar a entrada permite anotar seus dados e devolvê-lo imediatamente; não autoriza guardá-lo até a saída. Variação: o prazo de cinco dias do caput não é autorização geral para uma portaria reter a identidade. A multa escrita em moeda antiga no texto histórico não deve ser copiada como valor monetário atual de uma sanção."
+    }
+  ],
+  "historical": []
+}

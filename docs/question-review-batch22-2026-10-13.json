@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-13T23:30:28.730646+00:00",
+  "scope": "Uma questão de história das escolas penais, conferida no caderno, gabarito e pesquisa acadêmica primária. Não se trata de certificação de vigência de norma.",
+  "topics": [
+    {
+      "id": "953084f3-d39e-5793-a13e-66b21f69d131",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Penal",
+      "topic_order": 4,
+      "topic_text": "Escolas penais e evolução epistemológica do direito penal (itens 3 e 4 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [],
+  "items": [
+    {
+      "id": "e8d481cd-6e68-4cf0-ba36-5b7ecccb41ed",
+      "item_number": 22,
+      "original_answer": "E",
+      "decision": "active",
+      "legal_basis": [],
+      "review": {
+        "legal": false,
+        "reason": "Gabarito E confirmado como conteúdo histórico-doutrinário: a Terza Scuola concilia elementos das escolas clássica e positiva, preserva a distinção de imputabilidade e a discussão de medidas de segurança. Não confundir história das ideias com regras brasileiras atuais de aplicação de medidas de segurança.",
+        "sources": [
+          "https://www.iurisdictio.it/wp-content/uploads/2020/10/N.-1-2020-S05.-Vinci.pdf",
+          "https://repositorio.pucp.edu.pe/bitstreams/cd997a7a-37e9-490d-90a0-c1bcbf76c7a6/download",
+          "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf"
+        ]
+      },
+      "explanation": "Alternativa E. A terceira escola, ou eclética, propôs uma conciliação entre ideias clássicas e positivas, com relevância da imputabilidade e de medidas de segurança. As demais alternativas trocam autores ou métodos: Lombroso pertence à escola positiva; o método clássico é lógico-abstrato, e o positivismo enfatiza investigação empírica e determinismo. Esta questão trata da evolução histórica, não define o regime brasileiro atual das medidas de segurança. Fonte: Stefano Vinci, Iurisdictio 0/2019, pp. 166 e 207–210; pesquisa histórica da Terza Scuola."
+    }
+  ]
+}

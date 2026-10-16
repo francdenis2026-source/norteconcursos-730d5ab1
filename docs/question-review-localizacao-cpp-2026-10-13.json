@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-13T23:12:07.477685+00:00",
+  "scope": "Dois itens históricos corrigidos e reaproveitados com vínculo atual PF 2025; não se publica a antiga justificativa de arquivamento.",
+  "current_topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+  "sources": [
+    "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+    "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura.html"
+  ],
+  "items": [
+    {
+      "id": "19f9f8da-0fe2-41a5-be1a-fc4cf1469c76",
+      "item_number": 59,
+      "page": 2,
+      "pdf_sha256": "5bc2375724bffd593b038d181582c86de871b7a98f0876c7a5fc8a13495f2c4f",
+      "original_answer": "E",
+      "review": "Gabarito E confirmado no caderno e gabarito definitivo oficiais. A afirmação geral de requisição de localização sem intervenção judicial omite a autorização do caput do art. 13-B. A exceção do § 4º exige falta de manifestação judicial por 12 horas e comunicação imediata; não é uma licença geral de 30 dias. O § 2º, II, disciplina duração do fornecimento dos sinais, não a dispensa da autorização. Distinguir dados cadastrais (13-A), localização (13-B) e conteúdo de comunicações. Conteúdo federal confrontado também com o item 8 de inquérito policial do edital ativo PF 2025; matriz histórica da prova SE permanece preservada."
+    },
+    {
+      "id": "62c459da-090a-40b1-9837-99d3f8ab3a89",
+      "item_number": 54,
+      "page": 1,
+      "pdf_sha256": "055ebcb79b6cc53afefa2d76ce25d774f3603410ee5d40a90192c2b0e5d3fdc6",
+      "original_answer": "E",
+      "review": "Gabarito E confirmado no caderno e gabarito definitivo oficiais. A afirmação geral de requisição de localização sem intervenção judicial omite a autorização do caput do art. 13-B. A exceção do § 4º exige falta de manifestação judicial por 12 horas e comunicação imediata; não é uma licença geral de 30 dias. O § 2º, II, disciplina duração do fornecimento dos sinais, não a dispensa da autorização. Distinguir dados cadastrais (13-A), localização (13-B) e conteúdo de comunicações. Conteúdo federal confrontado também com o item 8 de inquérito policial do edital ativo PF 2025; matriz histórica da prova SE permanece preservada."
+    }
+  ]
+}

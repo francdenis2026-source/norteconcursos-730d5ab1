@@ -1,0 +1,42 @@
+{
+  "checked_on": "2026-10-14",
+  "edition": 2026,
+  "status": "official",
+  "source_url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/orientacoes/cronograma",
+  "source_updated_at": "2026-06-17 08:56",
+  "source_excerpt": "Aplicação: 8/11 e 15/11/2026",
+  "source_html_sha256": "6b23317be9873cb0a52ea645d1ba6657a58bb4d289be1de1a3aee03daef95e34",
+  "days": [
+    {
+      "date": "2026-11-08",
+      "subjects": [
+        "Linguagens",
+        "Ciências Humanas",
+        "Redação"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "subjects": [
+        "Ciências da Natureza",
+        "Matemática"
+      ]
+    }
+  ],
+  "implementation": "Calendário acima das abas da área ENEM, com contagem em dias no horário de Brasília, fonte e data de conferência, Página do Participante e arquivo ICS com dois eventos de dia inteiro e lembrete de um dia. Não se presume nova edição após o término dessas datas.",
+  "raw_evidence": "outputs/enem-calendar/inep-cronograma-2026-10-14.html (ignorado pelo Git)",
+  "validation": {
+    "typecheck": "passed",
+    "build": "passed",
+    "existing_enem_tests": "3 passed",
+    "chromium_mocked_session": [
+      "official dates, source and countdown",
+      "visible in every study tab",
+      "two all-day ICS events with one-day reminder",
+      "Brasília day boundary",
+      "expired edition notice",
+      "390px mobile width"
+    ],
+    "production_authenticated_session": "not tested"
+  }
+}

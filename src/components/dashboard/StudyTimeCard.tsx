@@ -1,3 +1,4 @@
+import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -10,17 +11,39 @@ const DAYS = 14;
 /** Tempo na plataforma: hoje, últimos dias, média e total, a partir das sessões registradas. */
 export function StudyTimeCard({ userId }: { userId: string }) {
   const [rows, setRows] = useState<{ study_date: string; active_seconds: number }[] | null>(null);
+  const [error, setError] = useState(false);
+  const [revision, setRevision] = useState(0);
   const live = useSyncExternalStore(subscribeStudyClock, getStudyToday, () => 0);
 
   useEffect(() => {
-    void supabase
-      .from("study_sessions")
-      .select("study_date, active_seconds")
-      .eq("user_id", userId)
-      .order("study_date", { ascending: false })
-      .limit(2000)
-      .then(({ data }) => setRows(data ?? []));
-  }, [userId]);
+    let active = true;
+    setRows(null);
+    setError(false);
+    const load = () =>
+      void fetchAllRows<{ study_date: string; active_seconds: number }>((from, to) =>
+        supabase
+          .from("study_sessions")
+          .select("study_date, active_seconds")
+          .eq("user_id", userId)
+          .order("id")
+          .range(from, to),
+      )
+        .then((data) => {
+          if (active) {
+            setRows(data);
+            setError(false);
+          }
+        })
+        .catch(() => {
+          if (active) setError(true);
+        });
+    load();
+    const timer = window.setInterval(load, 60_000);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, [userId, revision]);
 
   const stats = useMemo(() => {
     const today = acreDateKey();
@@ -46,6 +69,32 @@ export function StudyTimeCard({ userId }: { userId: string }) {
     };
   }, [rows, live]);
 
+  if (error)
+    return (
+      <Card id="tempo">
+        <CardHeader>
+          <CardTitle>Tempo na plataforma</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p role="alert">Não foi possível conferir o tempo registrado.</p>
+          <button
+            type="button"
+            className="mt-3 min-h-11 rounded-lg border px-4"
+            onClick={() => setRevision((n) => n + 1)}
+          >
+            Tentar novamente
+          </button>
+        </CardContent>
+      </Card>
+    );
+  if (!rows)
+    return (
+      <Card id="tempo">
+        <CardContent className="p-6" role="status">
+          Carregando tempo ativo de estudo…
+        </CardContent>
+      </Card>
+    );
   return (
     <Card id="tempo">
       <CardHeader>
@@ -53,8 +102,8 @@ export function StudyTimeCard({ userId }: { userId: string }) {
           <Clock className="h-5 w-5 text-primary" aria-hidden /> Tempo na plataforma
         </CardTitle>
         <CardDescription>
-          Soma o tempo com a plataforma aberta e visível, mesmo ao trocar de seção. Dias contados
-          pelo horário do Acre.
+          Soma o tempo ativo de todas as suas sessões, inclusive ao sair e entrar novamente. Pausas
+          por inatividade e abas ocultas não contam. Dias contados pelo horário do Acre.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -79,7 +128,7 @@ export function StudyTimeCard({ userId }: { userId: string }) {
           {stats.days.map((d) => (
             <div
               key={d.k}
-              className="flex min-w-0 flex-1 flex-col items-center gap-1"
+              className="flex h-full min-w-0 flex-1 flex-col items-center gap-1"
               title={`${d.label}: ${fmtHuman(d.s)}`}
             >
               <div className="flex w-full flex-1 items-end">

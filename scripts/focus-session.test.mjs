@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+const nativePerformance = globalThis.performance;
+let monotonicOffset = 0;
+globalThis.performance = { now: () => nativePerformance.now() + monotonicOffset };
 const store = new Map();
 globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, String(v)), removeItem: (k) => store.delete(k) };
 globalThis.document = { visibilityState: 'visible' };
@@ -35,10 +38,12 @@ test('pausa manual e hora parada, aba oculta e inatividade não contam', () => {
   globalThis.document.visibilityState = 'visible';
   const realNow = Date.now;
   Date.now = () => realNow() + 130_000;
+  monotonicOffset = 130_000;
   assert.ok(activity.idleSeconds() >= 120);
   f.tickFocus();
   assert.equal(f.getFocusSession().elapsed, before, 'parado há mais de 2 minutos não conta');
   Date.now = realNow;
+  monotonicOffset = 0;
   activity.markActive(true);
   f.tickFocus();
   assert.equal(f.getFocusSession().elapsed, before + 1);

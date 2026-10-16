@@ -1,0 +1,204 @@
+{
+  "verified_at": "2026-10-13T22:54:14.693157+00:00",
+  "scope": "Sete questões individuais; não declara conclusão do catálogo.",
+  "topics": [
+    {
+      "id": "32c4da69-ded5-5fc8-afbc-41b96299c391",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Ambiental",
+      "topic_order": 1,
+      "topic_text": "Princípios do direito ambiental (item 1 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "c7c6701c-2d04-527a-ac4d-0b5405db872e",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Ambiental",
+      "topic_order": 3,
+      "topic_text": "Legislação florestal e Código Florestal (item 3 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "0467946d-d408-5f49-8536-7373a2718f31",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Ambiental",
+      "topic_order": 4,
+      "topic_text": "Unidades de conservação e Lei 9.985/2000 (item 4 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "8e6ee3fb-ca29-572e-9f4d-f12149538cdd",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Ambiental",
+      "topic_order": 5,
+      "topic_text": "Crimes e infrações ambientais: Lei 9.605/1998 e Decreto 6.514/2008 (item 5 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "848a58f3-d33d-5e6c-8eb9-32aceebfe65c",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Ambiental",
+      "topic_order": 7,
+      "topic_text": "Responsabilidade ambiental, dano e reparação (item 7 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "repairs": [
+    {
+      "id": "eb7077f7-17a3-41f4-864a-968f40d7d8cb",
+      "item_number": 93,
+      "page": 17,
+      "pdf_sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+      "old_text_sha256": "af9c989a5f4a8d806239a50b32adeb65da288aefc2a9df84a8340ab24a5de029",
+      "new_text_sha256": "feb6da32047af81868334ffbfde72b773927dfe83807de5686993c17cc70a300",
+      "raw_preserved": true,
+      "answer_preserved": true
+    }
+  ],
+  "items": [
+    {
+      "id": "eb7077f7-17a3-41f4-864a-968f40d7d8cb",
+      "item_number": 93,
+      "official_answer": "C",
+      "legal_basis": [
+        {
+          "url": "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?sumula=618.num.",
+          "norma": "Súmula 618/STJ",
+          "artigo": "enunciado vigente"
+        },
+        {
+          "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/23062024-Principio-da-precaucao-a-obrigacao-de-proteger-o-meio-ambiente-mesmo-quando-o-dano-e-incerto.aspx",
+          "norma": "STJ — princípio da precaução",
+          "artigo": "fundamentos e precedentes da Súmula 618"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "C. O princípio da precaução fundamenta a inversão do ônus da prova nas ações civis de degradação ambiental, conforme Súmula 618 e precedentes apresentados pelo STJ. Prevenção trabalha com riscos conhecidos; precaução enfrenta incerteza científica de risco relevante. Não transportar automaticamente essa inversão para prova de culpabilidade em processo penal nem confundir o ônus probatório com o dever de antecipar honorários periciais.",
+        "sources": [
+          "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?sumula=618.num.",
+          "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/23062024-Principio-da-precaucao-a-obrigacao-de-proteger-o-meio-ambiente-mesmo-quando-o-dano-e-incerto.aspx"
+        ]
+      }
+    },
+    {
+      "id": "e5c1ba90-c53b-4380-8809-6df94a9027ed",
+      "item_number": 94,
+      "official_answer": "B",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm",
+          "norma": "Lei 12.651/2012",
+          "artigo": "art. 38, I, II e § 1º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "B. A exceção para práticas agropastoris ou florestais requer prévia aprovação do órgão estadual ambiental competente do Sisnama, com monitoramento e controle, por imóvel ou regionalmente (art. 38, I). A autorização do órgão gestor da unidade de conservação corresponde a hipótese distinta de manejo conservacionista (II). A regra é proibição do fogo: necessidade técnica, isoladamente, não equivale a autorização.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+        ]
+      }
+    },
+    {
+      "id": "d0cf00b7-4864-4838-95e5-b915ff7358f1",
+      "item_number": 95,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "norma": "Lei 9.605/1998",
+          "artigo": "arts. 7º e 14"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. A pena inferior a quatro anos é uma das hipóteses do art. 7º, I, da Lei 9.605/1998; o mesmo inciso contempla crime culposo. Ainda são necessários os requisitos pessoais e circunstanciais de suficiência da substituição no inciso II, portanto duração da pena não basta isoladamente. O limite especial é inferior a quatro, sem substituir a literalidade por igual ou inferior. Colaboração, baixa instrução e reparação espontânea são atenuantes (art. 14), não equivalem ao rol de requisitos da substituição.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+        ]
+      }
+    },
+    {
+      "id": "022ed22b-7358-4c16-991a-3a8ef7961490",
+      "item_number": 97,
+      "official_answer": "C",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm",
+          "norma": "Decreto 6.514/2008",
+          "artigo": "arts. 5º e 6º; § 1º do art. 5º alterado pelo Decreto 11.080/2022"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "C. Advertência pode ser aplicada por infração de menor lesividade, mediante auto e garantia de defesa. O art. 5º, § 1º, na redação do Decreto 11.080/2022, usa multa consolidada até R$ 1.000,00 ou o limite previsto na hipótese de multa por unidade de medida. Não vincular a salário mínimo. A advertência é possível, não automática, e não exclui as demais sanções; verificar também a restrição à nova advertência no período legal.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm"
+        ]
+      }
+    },
+    {
+      "id": "440e320d-3d25-4a28-b50a-cecc6976d485",
+      "item_number": 98,
+      "official_answer": "C",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "norma": "Lei 9.605/1998",
+          "artigo": "arts. 14, IV; e 15, II, g e q"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "C. Prática em período de defeso à fauna é agravante do art. 15, II, g, se a circunstância não constitui nem qualifica o delito; evitar dupla valoração. Espécie nativa não significa espécie ameaçada listada oficialmente. Colaboração com fiscalização é atenuante (art. 14, IV). Reincidência penal ambiental não se confunde automaticamente com qualquer infração administrativa anterior.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+        ]
+      }
+    },
+    {
+      "id": "a965ae73-c291-483f-a38b-ddf405c130c2",
+      "item_number": 99,
+      "official_answer": "A",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+          "norma": "Lei 9.985/2000",
+          "artigo": "arts. 14, II; 15 e 16"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. A descrição é de Área de Relevante Interesse Ecológico (ARIE), conforme art. 16. Pode incluir terras públicas ou privadas e integra o grupo de Uso Sustentável (art. 14, II). Distinguir da APA, em geral extensa e com ocupação humana, e da Estação Ecológica, de Proteção Integral.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+        ]
+      }
+    },
+    {
+      "id": "1648232e-e899-422e-9f4f-f1a7c2a72bc7",
+      "item_number": 100,
+      "official_answer": "D",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+          "norma": "Lei 6.938/1981",
+          "artigo": "art. 14, § 1º"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. A dispensa de comprovação de culpa caracteriza responsabilidade civil objetiva: PNMA, art. 14, § 1º. Continuam necessários dano e vínculo causal com a atividade. Não confundir responsabilidade objetiva com dispensa de prova de dano, nem transportá-la automaticamente às responsabilidades penal e administrativa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+        ]
+      }
+    }
+  ]
+}

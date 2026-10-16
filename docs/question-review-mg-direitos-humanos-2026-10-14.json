@@ -1,0 +1,232 @@
+{
+  "verified_at": "2026-10-14T02:48:53.652079+00:00",
+  "scope": "Revisões individuais PCMG 2026 com reparos de proveniência e contexto, conservando originais e gabaritos.",
+  "topics": [
+    {
+      "id": "545fb336-226c-5715-a22d-3a730b010b5b",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direitos Humanos",
+      "topic_order": 7,
+      "topic_text": "Pacto de São José da Costa Rica e Decreto 678/1992 (item 7 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "bd0a2b4c-a8c3-5bd0-8032-8f2cf63683e1",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direitos Humanos",
+      "topic_order": 2,
+      "topic_text": "Afirmação histórica dos direitos humanos (item 2 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "9ee0d48c-5f6e-5d3e-b16b-258a7169635c",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direitos Humanos",
+      "topic_order": 1,
+      "topic_text": "Teoria geral dos direitos humanos: conceitos e fundamentação (itens 1 e 1.1 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "cd4cdd54-8385-5afb-a765-338bcf8c1a32",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direitos Humanos",
+      "topic_order": 3,
+      "topic_text": "Direitos humanos e responsabilidade do Estado (item 3 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "444efab8-b693-584a-a942-628d3e921a97",
+      "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+      "block_name": "Eixo Legislação",
+      "discipline": "Direitos Humanos",
+      "topic_order": 5,
+      "topic_text": "Política Nacional de Direitos Humanos (item 5 de Noções de Direitos Humanos do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "b588d6f3-5ae2-4c44-a77e-2ea6bd31cd24",
+      "n": 16,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "D",
+      "old_text_sha256": "a2e857fa2beb3570d1383977f319d83547095f366357e6d8ce9190d9b5b24b65",
+      "new_text_sha256": "ff7c2e27c41f909878e2fcb8a85cc464d2d1ffa28a207255ab4c09f9361cdf40",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "norma": "Convenção Americana — Decreto 678/1992",
+          "artigo": "preâmbulo e art. 1"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito D. A finalidade do Pacto é proteger direitos essenciais inerentes à pessoa humana. Isso não significa excluir a proteção ambiental ou indígena desenvolvida no sistema interamericano; as alternativas não descrevem a finalidade geral do instrumento.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "117bbbbe-3517-484e-ba98-96fd1d907d92",
+      "n": 17,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "D",
+      "old_text_sha256": "6b78e921b1d1308fc71c06e398f5a4a6d593068247364626412ce2c3f80ab4db",
+      "new_text_sha256": "4a3cac2da5f50bdaf234d38117f366663d749b2f69cd0c5a6b30c6ad10c072d8",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "norma": "PNDH-3 — Decreto 7.037/2009",
+          "artigo": "anexo, introdução do Eixo Orientador I"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito D. A afirmação histórica dos direitos decorre de lutas sociais e transformações graduais, e não de reconhecimento simultâneo em 1948 nem de criação estatal isolada. A introdução do Eixo I do PNDH-3 exemplifica a construção histórica por movimentos sociais e sua participação na Constituição de 1988. A referência serve de fundamento didático, não como descrição de um processo linear sem retrocessos.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "d0e795e8-1145-4bd6-af9f-61e485bc0f1d",
+      "n": 18,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "B",
+      "old_text_sha256": "d55a0b2055525608b7effc26d81e8dd3d0fae059e8e4a7102085531b0f75721d",
+      "new_text_sha256": "1b043964129cdc0add4fb4b53b2df0710e5cf23f78870ed18e241e05cefa1293",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "norma": "PNDH-3 — Decreto 7.037/2009",
+          "artigo": "art. 2º, III, a; anexo, Eixos I e III"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "norma": "Convenção Americana — Decreto 678/1992",
+          "artigo": "preâmbulo e art. 1"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito B. Universalidade, indivisibilidade e historicidade caracterizam os direitos humanos. A proteção não começou com a Constituição de 1988, nem depende da nacionalidade. A Diretriz 7 do PNDH-3 reafirma universalidade e indivisibilidade; a introdução relata a formação histórica. Direitos humanos e fundamentais se relacionam, mas não são categorias restritas ao plano internacional.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "6657f73c-d5cd-47c7-b295-801cd24860a4",
+      "n": 19,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "A",
+      "old_text_sha256": "f652984ab187365956914908fb9c1585f7e07e03027d023da8101f1305d8326a",
+      "new_text_sha256": "291245c6fb1b1db10a6ae63fe6a60055b477b7d32ae728069a057546306a5585",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "norma": "Convenção Americana — Decreto 678/1992",
+          "artigo": "arts. 1.1 e 2"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A. O dever de garantia pode gerar responsabilidade estatal por falha na prevenção, investigação ou resposta a violações praticadas por particulares. Não há responsabilidade automática por qualquer ato privado: exige-se examinar o dever estatal e a devida diligência no caso concreto, conforme a Corte IDH em Velásquez Rodríguez, parágrafo 172.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto/d0678.htm",
+          "https://www.corteidh.or.cr/ver_ficha_tecnica.cfm?lang=es&nId_Ficha=189",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    },
+    {
+      "id": "8c88d6cb-f35a-45fb-b4ee-209e469338ce",
+      "n": 20,
+      "old_question_source_id": "dc50d641-b67c-41bd-b3ea-a49e904b4926",
+      "old_answer_key_source_id": "413a3e1e-2740-4e0f-91fd-39259eda81ff",
+      "new_question_source_id": "17883747-eefc-5cea-8985-8b65bfd85470",
+      "new_answer_key_source_id": "c276bc2f-35a7-5581-a35f-e9a805734750",
+      "verified_page": 1,
+      "original_answer": "A",
+      "old_text_sha256": "803d2faaab822edc618061c03480013615b00ebf1fa7d57e2520c7d11b117148",
+      "new_text_sha256": "9ee78038062ea69e9e98f02c16b4af2bc8f67305731f6773da5e72094703f1bd",
+      "pdf_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+      "raw_preserved": true,
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "norma": "Constituição Federal",
+          "artigo": "art. 1º, III"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "norma": "PNDH-3 — Decreto 7.037/2009",
+          "artigo": "arts. 1º, 2º e 5º; anexo"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Gabarito A. A dignidade da pessoa humana fundamenta constitucionalmente as políticas públicas. O PNDH-3 abrange direitos civis, políticos, econômicos, sociais e culturais e prevê atuação compartilhada. Decreto não equivale a emenda constitucional. Alerta de atualização: o antigo comitê do art. 4º foi revogado em 2019; essa revogação não elimina os eixos do programa usados neste item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d7037.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/3DE09EB25BF7FB9DAD45DD6B6BFD98BEB4081058640F5A31E7B9620D1F9D2A68.html"
+        ]
+      }
+    }
+  ],
+  "matrix_source_repair": {
+    "edition_id": "dc8044dd-1561-4614-a894-1b813d4b03ba",
+    "old_source_id": "f4405972-ed5b-4a97-ac7a-4d37a0c45e61",
+    "new_source_id": "f4405972-ed5b-4a97-ac7a-4d37a0c45e61",
+    "verified": true
+  }
+}

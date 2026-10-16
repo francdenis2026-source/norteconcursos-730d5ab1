@@ -157,7 +157,7 @@ test('LEP disciplina e órgãos integra defesa, estrutura atual e textos residua
  for(const n of [50,52,54]){
   assert.ok(!get(n),'alteração2026 ainda não certificada');
   const caveat=legalStudyCaveat('lep','art-'+n);assert.equal(caveat.literalPractice,false);
-  assert.match(caveat.explanation,/permanece pendente/);
+  assert.match(caveat.explanation,/2026/);
  }
  assert.match(get(51).pontos.join(' '),/INJUSTIFICADAMENTE/);
  assert.match(get(59).simples,/972598.*afasta PAD/s);
@@ -1293,4 +1293,75 @@ test('Article publication rejects a caderno or gabarito as syllabus, even when o
   const bad=fixture();Object.assign(bad.content_sources[0],patch);assert.throws(()=>checkArticlePreflight(pack,bad),/Edital oficial/);
  }
  const missing=fixture();missing.syllabus_editions.forEach(e=>e.source_id='missing');assert.throws(()=>checkArticlePreflight(pack,missing),/Edital oficial/);
+});
+
+test('CTB automatic renewal and repair deadlines retain exceptions and future effect',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-06-2026-10-13.json','utf8'));validateArticlePackage(p);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(JSON.stringify(get('268-a')),/físic.*mental/i);
+ assert.match(JSON.stringify(get(270)),/TRINTA|trinta/);
+ assert.match(JSON.stringify(get(271)),/QUINZE|quinze/);
+ assert.match(JSON.stringify(get(271)),/sessenta.*quinze\/trinta/);
+ assert.match(JSON.stringify(get(271)),/2027.*não já exclusivo/);
+ for(const n of ['268-a',270,271])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB payment discount and criminal speed threshold do not become misleading literal practice',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-06-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(284).simples,/80%.*20%.*60%.*40%.*sem defesa\/recurso/s);
+ assert.match(get(284).exemplo,/DESCONTO DE 20%/);
+ assert.match(get(291).exemplo,/50 km\/h, não 50%/);
+ assert.match(get(294).simples,/CPP 282.*sem ensinar atuação de ofício irrestrita/s);
+ for(const n of [284,291,294])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+
+test('CTB criminal units preserve mental-state, proof and special substitution distinctions',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-07-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,48);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(302).exemplo,/álcool não prova sozinho dolo/);
+ assert.match(get(306).atencao.join(' '),/leitura bruta de 0,30.*margem/s);
+ assert.match(get(310).exemplo,/575.*dispensa lesão ou perigo/s);
+ assert.match(get('312-b').simples,/44.*dois|44.*302.*303/s);
+ for(const n of [298,306,307,309,310,'312-b'])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+});
+test('CTB historical deadlines and annex definitions cannot generate unqualified current exercises',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-ctb-lote-07-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(328).pontos.join(' '),/piso de 50%/);
+ assert.match(get(333).simples,/Cetran quando municipal.*Contran quando estadual/s);
+ assert.match(get('326-c').atencao.join(' '),/30\/6\/2026.*1º\/7\/2026/s);
+ const annex=p.units.find(r=>r.unit_key==='anexo-1');assert.match(annex.simples,/50 cm³ OU elétrico/);
+ assert.match(annex.exemplo,/INTERRUPÇÃO DE MARCHA/);
+ for(const n of [313,316,319,323,331,334,336,339,340])assert.equal(legalStudyCaveat('transito','art-'+n).literalPractice,false);
+ assert.equal(legalStudyCaveat('transito','anexo-1').literalPractice,false);
+});
+
+test('LEP RDD integrates later insertion, judicial decision and actual defense opportunity',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-3-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,55);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(52).atencao.join(' '),/§8º atual desde 21\/5\/2026.*veto anterior/s);
+ assert.match(get(54).simples,/quinze dias.*oportunidade de defesa/s);
+ assert.match(get(50).prova.join(' '),/medidas do art. 22/);
+ for(const n of [50,52,54])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
+test('LEP progression, remission and community service retain temporal and computational safeguards',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-3-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(112).prova.join(' '),/mais gravosa não retroage/);
+ assert.match(get(126).prova.join(' '),/NO MÍNIMO TRÊS DIAS/);
+ assert.match(get(149).simples,/CP 46.*uma hora.*não apresentar oito horas/si);
+ assert.match(get(146).simples+' '+get(146).exemplo,/suspensão/);
+ for(const n of [112,122,126,149])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
+
+test('LEP final units distinguish penalty fine, poverty and current judicial competence',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-4-2026-10-13.json','utf8'));validateArticlePackage(p);assert.equal(p.units.length,56);const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(165).simples,/CP 51.*execução penal.*transferência automática/s);
+ assert.match(get(170).simples,/931.*7032.*não prisão por dívida/s);
+ assert.match(get(181).simples,/remissão antiga.*CP 44/s);
+ assert.match(get(149).pontos.join(' '),/residual.*uma hora.*não oito horas invariáveis/s);
+ for(const n of [164,165,166,170,181])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
+});
+test('LEP care, handcuffs and historical provisions cannot produce automatic unqualified practice',()=>{
+ const p=JSON.parse(readFileSync('docs/library/article-explanations-lep-lote-4-2026-10-13.json','utf8'));const get=n=>p.units.find(r=>r.unit_key==='art-'+n);
+ assert.match(get(108).simples,/não é consequência automática/);
+ assert.match(get(173).prova.join(' '),/limite máximo.*527/s);
+ assert.match(get(199).pontos.join(' '),/POR ESCRITO.*trajeto.*hospitalização/s);
+ assert.match(get(201).simples,/não cria.*depositário infiel/s);
+ assert.match(get(203).simples,/histórica.*Não reinicia/s);
+ for(const n of [108,173,199,201,203])assert.equal(legalStudyCaveat('lep','art-'+n).literalPractice,false);
 });

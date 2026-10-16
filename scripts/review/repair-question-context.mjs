@@ -10,16 +10,21 @@ export function validateRepairs(pack) {
   for (const {expected,patch,evidence} of pack.items) {
     if (!expected?.id || ids.has(expected.id) || expected.content_status!=='under_review') throw Error('Pending distinct questions required');
     ids.add(expected.id);
-    if (Object.keys(patch).some(k=>!['question_text','context_review_required','review_note','verified_at'].includes(k))) throw Error('Repair cannot publish or alter answers, sources or raw extraction');
+    if (Object.keys(patch).some(k=>!['question_text','source_page','context_review_required','review_note','verified_at'].includes(k))) throw Error('Repair cannot publish or alter answers, sources or raw extraction');
     if (!evidence?.reason || !evidence.visually_verified || !/^[a-f0-9]{64}$/.test(evidence.pdf_sha256 || '') || !evidence.pdf_path || !evidence.source_url || !Number.isInteger(evidence.page) || evidence.page<1) throw Error('Visual PDF evidence required');
     const text=patch.question_text || expected.question_text;
-    if (!text || !['A','B','C','D','E'].every(letter=>text.includes(`(${letter})`)) || text.trimStart().startsWith('(A)')) throw Error('Complete stem and alternatives required');
+    const binary=['C','E'].includes(expected.official_answer) && evidence.question_format==='certo_errado';
+    const labels=evidence.alternative_labels || ['A','B','C','D','E'];
+    if (!binary && (!Array.isArray(labels) || !['ABCD','ABCDE'].includes(labels.join('')) || !labels.includes(expected.official_answer))) throw Error('Verified alternative labels required');
+    const complete=binary? /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): labels.every(letter=>(text || '').includes(`(${letter})`)) && !['A','B','C','D','E'].some(letter=>!labels.includes(letter) && (text || '').includes(`(${letter})`));
+    if (!text || !complete || text.trimStart().startsWith('(A)')) throw Error('Complete stem and alternatives required');
+    if (patch.source_page!==undefined && (!Number.isInteger(patch.source_page) || patch.source_page!==evidence.page)) throw Error('Corrected page must match visual evidence');
     if (patch.context_review_required!==false || !patch.review_note || !Number.isFinite(Date.parse(patch.verified_at))) throw Error('Explicit context decision required');
   }
   return pack;
 }
 
-export async function repairContexts(pack,request,readPdf=readFile) {
+export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false}={}) {
   validateRepairs(pack);
   const pending=[];
   for(const item of pack.items) {
@@ -30,13 +35,14 @@ export async function repairContexts(pack,request,readPdf=readFile) {
     // Legacy cadernos use the schema's "outro" category; require the
     // registered title to identify a prova as well as the exact PDF URL.
     const isCaderno=source?.source_type==='prova' || (source?.source_type==='outro' && /^Prova objetiva/i.test(source.title || ''));
-    if (!source?.is_official || !isCaderno || source.url!==evidence.source_url || expected.source_page!==evidence.page) throw Error('Official caderno/page mismatch');
+    if (!source?.is_official || !isCaderno || source.url!==evidence.source_url || (patch.source_page ?? expected.source_page)!==evidence.page) throw Error('Official caderno/page mismatch');
     const [actual]=await request(`official_exam_questions?id=eq.${expected.id}&select=*`);
     if (sameReviewRow(actual,{...expected,...patch}))continue;
     if (!sameReviewRow(actual,expected))throw Error(`Concurrent repair: ${expected.id}`);
     pending.push(item);
   }
   const result={repaired:[],preserved:pack.items.length-pending.length};
+  if(dryRun)return {...result,dry_run:true,pending:pending.map(i=>i.expected.id)};
   for(const {expected,patch} of pending) {
     const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
     const rows=await request(`official_exam_questions?${filters}`,'PATCH',patch);

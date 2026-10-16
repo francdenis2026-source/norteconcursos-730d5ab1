@@ -1,3 +1,7 @@
+import { useAuthStatus } from "@/hooks/useDashboard";
+import { StudyLaterNotebook } from "@/components/dashboard/StudyLaterNotebook";
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -6,8 +10,6 @@ import { Input } from "@/components/ui/input";
 import {
   Plus,
   BookOpen,
-  Trash2,
-  Edit3,
   MoreVertical,
   FileText,
   Search,
@@ -18,7 +20,6 @@ import {
   Printer,
   Eye,
 } from "lucide-react";
-import { MediaViewer } from "@/components/dashboard/MediaViewer";
 import { PageHero } from "@/components/dashboard/PageHero";
 import { AiResolutionsSection } from "@/components/dashboard/AiResolutionsSection";
 import {
@@ -37,6 +38,9 @@ export const Route = createFileRoute("/dashboard/notebooks")({
 });
 
 function NotebooksPage() {
+  const { user, isLoading: authLoading } = useAuthStatus();
+  const owner = user?.id && user.id !== "demo-user" ? user.id : null;
+  const notebookStorageKey = owner ? `norte_notebooks:${owner}` : null;
   const [notebooks, setNotebooks] = useState<Notebook[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -46,27 +50,24 @@ function NotebooksPage() {
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
 
   useEffect(() => {
-    loadData();
-  }, []);
+    setNotebooks([]);
+    if (!owner || authLoading) return;
+    void loadData();
+  }, [owner, authLoading]);
 
   const loadData = async () => {
     setIsLoading(true);
     // Load Notebooks
-    const storedNbs = localStorage.getItem("norte_notebooks");
+    if (!notebookStorageKey) return;
+    const storedNbs = localStorage.getItem(notebookStorageKey);
     if (storedNbs) {
-      setNotebooks(JSON.parse(storedNbs));
+      try {
+        setNotebooks(JSON.parse(storedNbs));
+      } catch {
+        toast.error("Não foi possível ler os cadernos deste navegador.");
+      }
     } else {
-      const initial: Notebook[] = [
-        {
-          id: "nb-1",
-          name: "Revisão Português - Sintaxe",
-          description: "Questões focadas em análise sintática para o concurso da PF",
-          questionIds: ["q1", "q3", "q5"],
-          createdAt: new Date().toISOString(),
-        },
-      ];
-      setNotebooks(initial);
-      localStorage.setItem("norte_notebooks", JSON.stringify(initial));
+      setNotebooks([]);
     }
 
     // Load All Questions for searching context
@@ -82,11 +83,11 @@ function NotebooksPage() {
       name: "Novo Caderno",
       description: "Descrição do caderno",
       questionIds: [],
-      createdAt: new Date().toISOString(),
+      createdAt: platformDate().toISOString(),
     };
     const updated = [...notebooks, newNb];
     setNotebooks(updated);
-    localStorage.setItem("norte_notebooks", JSON.stringify(updated));
+    if (notebookStorageKey) localStorage.setItem(notebookStorageKey, JSON.stringify(updated));
     toast.success("Caderno criado com sucesso!");
     loadData();
   };
@@ -126,7 +127,7 @@ function NotebooksPage() {
       <div style="border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px;">
         <h1 style="font-size: 24px; font-bold; color: #1e293b;">${notebook.name}</h1>
         <p style="color: #64748b;">${notebook.description || ""}</p>
-        <p style="font-size: 12px;">Gerado em: ${new Date().toLocaleDateString()}</p>
+        <p style="font-size: 12px;">Gerado em: ${acreDate().toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</p>
       </div>
       
       <div style="margin-bottom: 30px; background: #f8fafc; padding: 15px; border-radius: 8px;">
@@ -194,6 +195,8 @@ function NotebooksPage() {
           </Button>
         }
       />
+
+      {owner && <StudyLaterNotebook key={owner} userId={owner} />}
 
       <AiResolutionsSection />
 
@@ -294,38 +297,18 @@ function NotebooksPage() {
                 </div>
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 -mr-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-[44px] w-[44px] -mr-2"
+                      aria-label={`Ações do caderno ${nb.name}`}
+                    >
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem className="gap-2" onClick={() => handleExportPDF(nb)}>
                       <Printer className="h-4 w-4" /> Imprimir / PDF
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2">
-                      <Edit3 className="h-4 w-4" /> Renomear
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="gap-2 text-destructive focus:text-destructive">
-                      <Trash2 className="h-4 w-4" /> Excluir
-                    </DropdownMenuItem>
-                    <div className="border-t my-1" />
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="video"
-                        url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        title="Aula Inaugural: Como usar os Cadernos"
-                        triggerLabel="Ver Vídeo Aula"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="p-0">
-                      <MediaViewer
-                        type="pdf"
-                        url="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                        title="Teoria: Guia de Estudos"
-                        triggerLabel="Baixar Guia (PDF)"
-                        className="w-full justify-start border-none h-8 px-2 rounded-none"
-                      />
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>

@@ -1,5 +1,11 @@
+import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  fallbackDifficulty,
+  historicalErrorSummary,
+  performanceSourceResults,
+} from "@/lib/performanceAnalysis";
 import { canonicalSubject } from "@/lib/subjects";
 
 export interface SubjectAccuracy {
@@ -22,6 +28,15 @@ export interface DifficultyStat {
 }
 
 export interface PerformanceOverview {
+  warnings: string[];
+  available: {
+    training: boolean;
+    simulators: boolean;
+    reviews: boolean;
+    streak: boolean;
+    rank: boolean;
+  };
+  updatedAt: string;
   trainer: {
     totalAnswered: number;
     totalCorrect: number;
@@ -52,46 +67,87 @@ export interface PerformanceOverview {
     stars: number;
     levelName: string;
   } | null;
-  cutoffGaps: CutoffGap[];
+  responses: TrainingActivity[];
+  attempts: SimulatorActivity[];
 }
 
-export interface CutoffGap {
-  contestName: string;
-  contestYear: string;
-  cutoffScore: number;
-  bestScore: number;
-  gap: number;
-  source: "prova enviada" | "simulado";
+export interface TrainingActivity {
+  id: string;
+  question_id: string;
+  question_source: string;
+  subject: string;
+  is_correct: boolean;
+  response_seconds: number;
+  selected_answer: string;
+  official_answer: string;
+  created_at: string;
+}
+export interface SimulatorActivity {
+  id: string;
+  title: string;
+  total_questions: number;
+  correct_answers: number;
+  wrong_answers: number;
+  blank_answers: number;
+  accuracy: number;
+  duration_seconds: number;
+  finished_at: string;
+  contest_filter: string | null;
 }
 
-const MIN_ITEMS_FOR_SIGNAL = 3;
+const MIN_ITEMS_FOR_SIGNAL = 5;
 
 export function usePerformanceOverview(userId: string | undefined, enabled: boolean) {
   const [data, setData] = useState<PerformanceOverview | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [loadedFor, setLoadedFor] = useState<string>();
+  const [revision, setRevision] = useState(0);
 
   useEffect(() => {
     if (!enabled || !userId) {
+      setData(null);
       setLoading(false);
       return;
     }
     let active = true;
     setLoading(true);
+    setError(false);
     (async () => {
-      const [responsesRes, attemptsRes, reviewsRes, streakRes, rankRes, examDocsRes, difficultyRes] =
-        await Promise.all([
-          supabase
-            .from("question_training_responses")
-            .select("subject,is_correct,response_seconds")
-            .eq("user_id", userId)
-            .limit(5000),
-          supabase
-            .from("simulator_attempts")
-            .select("accuracy,duration_seconds,finished_at,contest_filter")
-            .eq("user_id", userId)
-            .order("finished_at", { ascending: false })
-            .limit(500),
-          supabase.from("question_error_reviews").select("status").eq("user_id", userId),
+      try {
+        const results = await Promise.allSettled([
+          fetchAllRows<TrainingActivity>((from, to) =>
+            supabase
+              .from("question_training_responses")
+              .select(
+                "id,question_id,question_source,subject,is_correct,response_seconds,selected_answer,official_answer,created_at",
+              )
+              .eq("user_id", userId)
+              .order("created_at")
+              .order("id")
+              .range(from, to),
+          ),
+          fetchAllRows<SimulatorActivity>((from, to) =>
+            supabase
+              .from("simulator_attempts")
+              .select(
+                "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at,contest_filter",
+              )
+              .eq("user_id", userId)
+              .order("finished_at", { ascending: false })
+              .order("id")
+              .range(from, to),
+          ),
+          fetchAllRows<{ question_id: string; question_source: string; status: string }>(
+            (from, to) =>
+              supabase
+                .from("question_error_reviews")
+                .select("question_id,question_source,status")
+                .eq("user_id", userId)
+                .order("question_id")
+                .order("question_source")
+                .range(from, to),
+          ),
           supabase
             .from("user_streaks")
             .select("current_streak,longest_streak")
@@ -102,147 +158,168 @@ export function usePerformanceOverview(userId: string | undefined, enabled: bool
             .select("total_points,stars,level_name")
             .eq("user_id", userId)
             .maybeSingle(),
-          supabase
-            .from("student_exam_documents")
-            .select("contest_name,contest_year,score_net,score_raw")
-            .eq("user_id", userId),
           supabase.rpc("my_difficulty_analysis"),
         ]);
-      if (!active) return;
+        if (!active) return;
 
-      const responses = responsesRes.data ?? [];
-      const bySubjectMap = new Map<string, { correct: number; total: number; seconds: number }>();
-      let totalCorrect = 0;
-      let totalSeconds = 0;
-      for (const r of responses) {
-        const key = canonicalSubject(r.subject);
-        const entry = bySubjectMap.get(key) ?? { correct: 0, total: 0, seconds: 0 };
-        entry.total += 1;
-        if (r.is_correct) {
-          entry.correct += 1;
-          totalCorrect += 1;
+        const state = performanceSourceResults(results);
+        const responsesRes = state.values[0] as TrainingActivity[];
+        const attemptsRes = state.values[1] as SimulatorActivity[];
+        const reviewsRes = state.values[2] as {
+          question_id: string;
+          question_source: string;
+          status: string;
+        }[];
+        const streakRes = {
+          data: state.values[3] as { current_streak: number; longest_streak: number } | null,
+        };
+        const rankRes = {
+          data: state.values[4] as {
+            total_points: number;
+            stars: number;
+            level_name: string;
+          } | null,
+        };
+        const difficultyRes = { data: state.values[5] };
+        if (!state.available.training && !state.available.simulators) setError(true);
+        const seen = new Set<string>();
+        const responses = responsesRes.filter((r) => {
+          const key = JSON.stringify([r.question_source, r.question_id]);
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+        const bySubjectMap = new Map<string, { correct: number; total: number; seconds: number }>();
+        let totalCorrect = 0;
+        let totalSeconds = 0;
+        for (const r of responses) {
+          const key = canonicalSubject(r.subject);
+          const entry = bySubjectMap.get(key) ?? { correct: 0, total: 0, seconds: 0 };
+          entry.total += 1;
+          if (r.is_correct) {
+            entry.correct += 1;
+            totalCorrect += 1;
+          }
+          // Respostas antigas, gravadas quando o cronômetro contava também o tempo parado, podem ter valores
+          // absurdos; limitar a 15 minutos evita distorcer a média de tempo por questão.
+          const secs = Math.max(0, Math.min(r.response_seconds ?? 0, 900));
+          entry.seconds += secs;
+          totalSeconds += secs;
+          bySubjectMap.set(key, entry);
         }
-        // Respostas antigas, gravadas quando o cronômetro contava também o tempo parado, podem ter valores
-        // absurdos; limitar a 15 minutos evita distorcer a média de tempo por questão.
-        const secs = Math.min(r.response_seconds ?? 0, 900);
-        entry.seconds += secs;
-        totalSeconds += secs;
-        bySubjectMap.set(key, entry);
-      }
-      const bySubject: SubjectAccuracy[] = Array.from(bySubjectMap.entries())
-        .map(([subject, { correct, total, seconds }]) => ({
-          subject,
-          correct,
-          total,
-          accuracy: total ? Math.round((correct / total) * 100) : 0,
-          avgSeconds: total ? Math.round(seconds / total) : 0,
-        }))
-        .sort((a, b) => a.accuracy - b.accuracy);
+        const bySubject: SubjectAccuracy[] = Array.from(bySubjectMap.entries())
+          .map(([subject, { correct, total, seconds }]) => ({
+            subject,
+            correct,
+            total,
+            accuracy: total ? Math.round((correct / total) * 100) : 0,
+            avgSeconds: total ? Math.round(seconds / total) : 0,
+          }))
+          .sort((a, b) => a.accuracy - b.accuracy);
 
-      const attempts = attemptsRes.data ?? [];
-      const reviews = (reviewsRes.data ?? []) as { status: "pendente" | "revisado" | "dominado" }[];
-      const errors = {
-        pendente: reviews.filter((r) => r.status === "pendente").length,
-        revisado: reviews.filter((r) => r.status === "revisado").length,
-        dominado: reviews.filter((r) => r.status === "dominado").length,
-        total: reviews.length,
-      };
+        const attempts = attemptsRes;
+        const errors = historicalErrorSummary(responses, reviewsRes);
+        state.available.reviews = state.available.reviews && state.available.training;
 
-      const cutoffGaps: CutoffGap[] = [];
-      const examDocs = examDocsRes.data ?? [];
-      const bestExamScore = new Map<string, number>();
-      for (const doc of examDocs) {
-        if (!doc.contest_name || !doc.contest_year) continue;
-        const key = `${doc.contest_name}__${doc.contest_year}`;
-        const score = doc.score_net ?? doc.score_raw;
-        if (score === null || score === undefined) continue;
-        bestExamScore.set(key, Math.max(bestExamScore.get(key) ?? -Infinity, score));
-      }
-      if (bestExamScore.size > 0) {
-        const { data: refRows } = await supabase
-          .from("contest_reference_info")
-          .select("contest_name,contest_year,cutoff_score")
-          .not("cutoff_score", "is", null);
-        for (const [key, bestScore] of bestExamScore) {
-          const separatorIndex = key.indexOf("__");
-          const contestName = key.slice(0, separatorIndex);
-          const contestYear = key.slice(separatorIndex + 2);
-          const ref = (refRows ?? []).find(
-            (r) => r.contest_name === contestName && r.contest_year === contestYear,
-          );
-          if (ref?.cutoff_score == null) continue;
-          cutoffGaps.push({
-            contestName,
-            contestYear,
-            cutoffScore: ref.cutoff_score,
-            bestScore,
-            gap: bestScore - ref.cutoff_score,
-            source: "prova enviada",
-          });
+        if (!active) return;
+        setData({
+          warnings: state.warnings,
+          available: state.available,
+          updatedAt: new Date().toISOString(),
+          trainer: {
+            totalAnswered: responses.length,
+            totalCorrect,
+            accuracy: responses.length ? Math.round((totalCorrect / responses.length) * 100) : 0,
+            avgSeconds: responses.length ? Math.round(totalSeconds / responses.length) : 0,
+            bySubject,
+          },
+          difficulty: state.difficultyAvailable
+            ? (
+                (difficultyRes.data ?? []) as {
+                  subject: string;
+                  topic: string;
+                  answered: number;
+                  correct: number;
+                  accuracy: number;
+                  avg_seconds: number;
+                  median_seconds: number;
+                  difficulty_score: number;
+                }[]
+              ).map((row) => ({
+                subject: row.subject,
+                topic: row.topic,
+                answered: row.answered,
+                correct: row.correct,
+                accuracy: row.accuracy,
+                avgSeconds: row.avg_seconds,
+                medianSeconds: row.median_seconds,
+                difficultyScore: row.difficulty_score,
+              }))
+            : fallbackDifficulty(responses),
+          simulators: {
+            count: attempts.length,
+            avgAccuracy: attempts.length
+              ? Math.round(attempts.reduce((s, a) => s + a.accuracy, 0) / attempts.length)
+              : 0,
+            bestAccuracy: attempts.length
+              ? Math.round(Math.max(...attempts.map((a) => a.accuracy)))
+              : 0,
+            lastAccuracy: attempts.length ? Math.round(attempts[0]!.accuracy) : null,
+            totalDurationSeconds: attempts.reduce((s, a) => s + (a.duration_seconds ?? 0), 0),
+          },
+          errors,
+          streak: {
+            current: streakRes.data?.current_streak ?? 0,
+            longest: streakRes.data?.longest_streak ?? 0,
+          },
+          rank: rankRes.data
+            ? {
+                totalPoints: rankRes.data.total_points,
+                stars: rankRes.data.stars,
+                levelName: rankRes.data.level_name,
+              }
+            : null,
+          responses: responsesRes,
+          attempts,
+        });
+      } catch (cause) {
+        if (active) {
+          setData(null);
+          setError(true);
+        }
+      } finally {
+        if (active) {
+          setLoadedFor(userId);
+          setLoading(false);
         }
       }
-
-      if (!active) return;
-      setData({
-        trainer: {
-          totalAnswered: responses.length,
-          totalCorrect,
-          accuracy: responses.length ? Math.round((totalCorrect / responses.length) * 100) : 0,
-          avgSeconds: responses.length ? Math.round(totalSeconds / responses.length) : 0,
-          bySubject,
-        },
-        difficulty: ((difficultyRes.data ?? []) as {
-          subject: string;
-          topic: string;
-          answered: number;
-          correct: number;
-          accuracy: number;
-          avg_seconds: number;
-          median_seconds: number;
-          difficulty_score: number;
-        }[]).map((row) => ({
-          subject: row.subject,
-          topic: row.topic,
-          answered: row.answered,
-          correct: row.correct,
-          accuracy: row.accuracy,
-          avgSeconds: row.avg_seconds,
-          medianSeconds: row.median_seconds,
-          difficultyScore: row.difficulty_score,
-        })),
-        simulators: {
-          count: attempts.length,
-          avgAccuracy: attempts.length
-            ? Math.round(attempts.reduce((s, a) => s + a.accuracy, 0) / attempts.length)
-            : 0,
-          bestAccuracy: attempts.length
-            ? Math.round(Math.max(...attempts.map((a) => a.accuracy)))
-            : 0,
-          lastAccuracy: attempts.length ? Math.round(attempts[0]!.accuracy) : null,
-          totalDurationSeconds: attempts.reduce((s, a) => s + (a.duration_seconds ?? 0), 0),
-        },
-        errors,
-        streak: {
-          current: streakRes.data?.current_streak ?? 0,
-          longest: streakRes.data?.longest_streak ?? 0,
-        },
-        rank: rankRes.data
-          ? {
-              totalPoints: rankRes.data.total_points,
-              stars: rankRes.data.stars,
-              levelName: rankRes.data.level_name,
-            }
-          : null,
-        cutoffGaps,
-      });
-      setLoading(false);
     })();
     return () => {
       active = false;
     };
+  }, [userId, enabled, revision]);
+
+  useEffect(() => {
+    if (!enabled || !userId) return;
+    const refresh = () => {
+      if (document.visibilityState !== "hidden") setRevision((n) => n + 1);
+    };
+    const timer = window.setInterval(refresh, 30_000);
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
   }, [userId, enabled]);
 
-  return { data, loading };
+  return {
+    data: loadedFor === userId ? data : null,
+    loading: loading || (enabled && loadedFor !== userId),
+    error: loadedFor === userId && error,
+    retry: () => setRevision((n) => n + 1),
+  };
 }
 
 export { MIN_ITEMS_FOR_SIGNAL };

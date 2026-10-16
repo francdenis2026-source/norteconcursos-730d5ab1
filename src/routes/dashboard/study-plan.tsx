@@ -1,3 +1,4 @@
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -508,6 +509,7 @@ function StudyPlanPage() {
           </div>
         </div>
       </section>
+      <StudyPlanningNav active="diagnosis" />
 
       {error && (
         <Card className="border-amber-300 bg-amber-50 dark:border-amber-500/30 dark:bg-amber-500/10">

@@ -1,0 +1,427 @@
+{
+  "version": "law-source-revalidation-2026-10-16",
+  "checked_at": "2026-10-16T16:07:04.459505+00:00",
+  "scope": "42 percursos ativos e seus 42 materiais associados. Revalidação de texto normativo, não nova auditoria integral de jurisprudência ou de todas as explicações. Pendências excluídas.",
+  "courses": 42,
+  "current_units_compared": 3511,
+  "active_text_divergences": 0,
+  "published_explanation_version_matches": 3511,
+  "method": [
+    "Download dos textos oficiais e comparação dispositivo a dispositivo com o parser do projeto; igualdade exata dos textos current e das identidades de conteúdo.",
+    "Consulta das 42 fontes oficiais também pela ferramenta web; diferenças de HTML bruto não foram tratadas como mudança legislativa.",
+    "Duas ausências de marcadores de veto e duas diferenças editoriais de revogação analisadas; nenhuma corresponde a norma vigente omitida."
+  ],
+  "transport_note": "A conexão direta com verificação de certificado falhou. Downloads em lote restritos a textos públicos do Planalto, sem credenciais, usaram contexto sem verificação de certificado; consultas pela ferramenta web corroboraram as páginas oficiais. Hash de arquivo é evidência de reprodução, não prova isolada de autenticidade.",
+  "records": [
+    {
+      "slug": "cin",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+      "previous_source_sha256": "34cda60d5a0a15d7fa44019415193ab535265921536ee737024276f60656126f",
+      "fetched_source_sha256": "e7ccf384f90b255b4df7fd0308f6d47cd599c118783ce3f9fbb3c2ad0bc3a635",
+      "current_units": 30,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "seguranca-privada",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+      "previous_source_sha256": "19943b67f6a8dec0cbff4ff533f8741fa7670ca04b4d75e9120cb3ab00db8a8e",
+      "fetched_source_sha256": "64df5101d5c061f2f832d2e811263cf208bfc914e9372bb005582c1dbd28bf3d",
+      "current_units": 72,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "codigo-penal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "previous_source_sha256": "2daee32a3073f953391f9be2ebf79f778cae2198b5a61434174e9b3731522537",
+      "fetched_source_sha256": "8c7d70e3badeaf15dbd19243af29b0ebc31e6b731b96e7b1caa590755862cff9",
+      "current_units": 401,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "armas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+      "previous_source_sha256": "bd5431a15da37ea073d3846748a6f0a09938183334e7f00c8af04bc4984a5c5c",
+      "fetched_source_sha256": "bd5431a15da37ea073d3846748a6f0a09938183334e7f00c8af04bc4984a5c5c",
+      "current_units": 41,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "lep",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "previous_source_sha256": "8b95cead39cedad87abfe1d7314e2ddfef82125d22229a3b7a6ed5aba5c273d6",
+      "fetched_source_sha256": "9ae052d65efdd62bfad833a7045c3647795049a187999a138e9bc604832d9096",
+      "current_units": 215,
+      "result": "text_matches",
+      "excluded_difference": "Art. 182 e parágrafos permanecem excluídos por revogação pela Lei 9.268/1996. Não restaurar conversão de multa em detenção."
+    },
+    {
+      "slug": "organizacoes",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+      "previous_source_sha256": "ec1a4ff05ef44ac8084bd5ace7fb746e115c36c7ed0905347257b115242b61ca",
+      "fetched_source_sha256": "064dd75e95a40cbc1a4edc975299695d47a0594ab974a10c414689a3cd85bde4",
+      "current_units": 37,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "terrorismo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+      "previous_source_sha256": "56eb9a1344c0674ec36da8c248bf7b877039c211a285e0f21e57bbb8aaaa4c0f",
+      "fetched_source_sha256": "06209bbe2b279065f5e7c5769ef2cdfe00c155aae3f11523ff79f36a0c199801",
+      "current_units": 17,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "idosa",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+      "previous_source_sha256": "bbddf3d14cc4877d4f62341acf29efdaef9010cd45c8760a7e75040237cd4ea5",
+      "fetched_source_sha256": "241f6f702cbac2a6b274f8e53e81c54a955d1d868e850f5aa9ad4cb5b83a0826",
+      "current_units": 117,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "contravencoes",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+      "previous_source_sha256": "9210d2f83f90e6aa1ed2403fe963a916ec589c3963548ce0fa3db3751cd3c7da",
+      "fetched_source_sha256": "0c1fa57e5b2b054834a171ca6321951ed32cd7c91ba4dd020d12c63b4e207baf",
+      "current_units": 66,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "identificacao-criminal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+      "previous_source_sha256": "78f51a67ca7bf724b299be9a37c4c1a229d17dacdd4e0b7cedb234556c21c241",
+      "fetched_source_sha256": "1ab970c0cbe5406e089dcbee5639f4a651ecc47c0634e1df378bf914639643b0",
+      "current_units": 13,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "quimicos",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+      "previous_source_sha256": "4e60141d9fa96024c1d19871e87891e57f967ffc5176b7a48f5b5e0aad09306e",
+      "fetched_source_sha256": "a32e95081fa5b8ac45d2b63f594cc6b5501d2e0e2c609ab8fccc3b554ee9f8b7",
+      "current_units": 23,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "pf-interestadual",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "previous_source_sha256": "e81f6350a2527a2956a85f3137bc229cd19826c78529b4128b17c4a6647f793b",
+      "fetched_source_sha256": "e1426db6d7ad9120f7fdd21dbb410f557e1e7f475d079e950a0525a3d4313661",
+      "current_units": 2,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "abuso",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "previous_source_sha256": "e0d1f7ebe8f24349226bf5ee30636468fbec5d616b11c4b8cdb2971b36b741ca",
+      "fetched_source_sha256": "1cecfd47a37a4d224c2d5e27ae2bdc2dc21b11f2994a7f682ab81615a57565f4",
+      "current_units": 40,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "icn",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+      "previous_source_sha256": "bfd79bff4026bd4d5af0f25ff0084606539e0b698703fa88bba12c042d00de1c",
+      "fetched_source_sha256": "a562323a757317574c6a4c1a332fb79f9ec9d5af44b1b095794a558f263883c9",
+      "current_units": 13,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "antifaccao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+      "previous_source_sha256": "e70eb9f08c0800120bf82d80e60402255abcd19457c104d90bae300ad5e0a96c",
+      "fetched_source_sha256": "c317e327ec7592c6e7f1e5c099360b02b79fb85283ef5422e0c733119f855ebe",
+      "current_units": 43,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "eca",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+      "previous_source_sha256": "312a7f59594107e6480bd26e0d30e1884f081c8563b33c51b05c3622bdb6f56c",
+      "fetched_source_sha256": "bf159d87cf0ee70c2e012040906870df8d64a0582f31b6af40620dec2fd5556d",
+      "current_units": 326,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "migracao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+      "previous_source_sha256": "e8f3823533d0d3cac4536aea858da3f3d63eb269e06345ca40dd88cad633d5d5",
+      "fetched_source_sha256": "ab54a7cb92ac46c6308213559620355938ae6377a17cfa83acbd36832e4defd0",
+      "current_units": 123,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "racismo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "previous_source_sha256": "770cc81a90187bd21dc3e6e8fac5ec5ea043ae0a3f07af9797a5e2f2fd48101e",
+      "fetched_source_sha256": "c9d40a64e4fb07b65c341a6c422e7e7989c449e64c85fffb01336cd6997c106f",
+      "current_units": 23,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "ric",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "previous_source_sha256": "19fa04063b8a22c80114b0c629f96968cba39263111dc61171d6959598bc4e3d",
+      "fetched_source_sha256": "f5b2b3c27eefbf69c9c0c7a31576f52f9d7f8e50e24d4168c6539c9367d724b9",
+      "current_units": 7,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "pcd",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "previous_source_sha256": "446ed465b3af90ad521d3cb0c6be15d7f3ef581df0f47b97838e2f48d8e36ac3",
+      "fetched_source_sha256": "446e8346dd2c2097e69fde4cd193be9fd6956fb1a9704f81f91879015dc91ff4",
+      "current_units": 127,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "maria-penha",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "previous_source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "fetched_source_sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+      "current_units": 56,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "hediondos",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "previous_source_sha256": "8bbc7febe9e35a64cb2018954cc291ebeeb9f0b15139b171fa9307714e6b61a5",
+      "fetched_source_sha256": "0cebb8424d28ea120d0f0479994303d15a176e5eb2b56e96bab2f4a942cae368",
+      "current_units": 17,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "lavagem",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "previous_source_sha256": "a2e378a41fe90c79443008102f732801e90defcf9d1ef6ad05a39bbf4544e020",
+      "fetched_source_sha256": "214b691415957bedec94cb7c48396a504a00a432daedef20b3b215e20eea2fad",
+      "current_units": 24,
+      "result": "text_matches",
+      "excluded_difference": "Art. 16 permanece excluído por revogação pela Lei 13.974/2020. Preservada a anotação editorial que explicita a revogação."
+    },
+    {
+      "slug": "trafico-pessoas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "previous_source_sha256": "752a0fd642a21f13ba17139424e67cf247ae5f36bb80444a44de370db91d3471",
+      "fetched_source_sha256": "19e8d79283cb55ff4a9c75030af1a2eac512797ce68e9f95c7bab3de2e118258",
+      "current_units": 18,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "interceptacao",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+      "previous_source_sha256": "2640031d55ced5466150b0865dcb3ca4513e95947399f0e3d3ee8d530a6c5730",
+      "fetched_source_sha256": "a7ea57b616d8129543607f55b1917bdde8bcdc68f5e7e51a47740345a430dc42",
+      "current_units": 14,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "transito",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "previous_source_sha256": "0bca56fb64dca5d0c3e77850cf5aed8252e12c603a32c8c6503831686623e7b9",
+      "fetched_source_sha256": "2096cc1bcfb5707a4fceed4b93bdfc990c443ad8dc540db412197b9e875bc09a",
+      "current_units": 365,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "henry-borel",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "previous_source_sha256": "994df0a2b1c83700a2b74a95da17e2bb2479c07689bf064e1a5a34ce33661cf3",
+      "fetched_source_sha256": "7634fdc64d8a111cb431e0d7417874f77d4424ae4bb94c51cb36f07427d6c104",
+      "current_units": 34,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "sic",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+      "previous_source_sha256": "f94c932f50f30631bcd53363d1911335676b060f45b19b934f28a685012c7f0f",
+      "fetched_source_sha256": "b515dbc7d9271b2a3c10a93d91470356256b429cd0e6f2eabbeb0ac47817def5",
+      "current_units": 29,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "delegado",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "previous_source_sha256": "cd1801302f8868a8946a0f764504d96b94e49237c67639a34a1f13f477794d64",
+      "fetched_source_sha256": "fa94b8d40e2bf423c2bc4ad066a750189e807c8da5b035ea2693c68308b960dc",
+      "current_units": 4,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "menor-potencial-ofensivo",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "previous_source_sha256": "8703d5d7600933f44d7847d2bbe2bc1d54389dcf1fe3d5c55d8b0aba8f65600a",
+      "fetched_source_sha256": "17c9a895793f7f2360f3937dc567172ac77c30cdf5ffb3ca5ed8e4298735024a",
+      "current_units": 8,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "tortura",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+      "previous_source_sha256": "a5752a5066edc561f82e7589756ae675ab6aea8f1dbae9c73fd6657af79c5849",
+      "fetched_source_sha256": "a912d9109dd1202c7c6f31ea32abcb4890e2607b4a7c730004fd9ef28a4fa505",
+      "current_units": 4,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "codigo-processo-penal",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "previous_source_sha256": "2d5f2332c6cb006699e0e6f040e20fdb9a8b2de6af15f1976953dcadfc0f5232",
+      "fetched_source_sha256": "5894873d1a2f995ab81af3ee5c997714370401468a17abe6e53e8bc4580d7ccb",
+      "current_units": 808,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "pensao-regulamento",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+      "previous_source_sha256": "0f7fd6052a506ca147da0e7430aa98d95695dccea3274ed5bdbc4257cfd5b389",
+      "fetched_source_sha256": "e20d7563caf0e39ed8beadc11f6c16a1e349bf43d132a9d12a26059a38b5ad8f",
+      "current_units": 22,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "uso-forca",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "previous_source_sha256": "1a6aedbbcd84328a60d5134ac0728d38fcb3e487c798c166151b327e41bfb54e",
+      "fetched_source_sha256": "2949da70d48096700ec610918d421e3c218b22bd830b5e5e42f46336928cd674",
+      "current_units": 11,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "identidade",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+      "previous_source_sha256": "5cd01a175de633b8870aab3bb8f19897f6909bf93513361278bdbab28064f506",
+      "fetched_source_sha256": "15aaf408ddbea08bf16fa080ef9baed7424bd9ddfc3a7f5d62f7cde1bdfb9ec4",
+      "current_units": 13,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "ambientais",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+      "previous_source_sha256": "0c03b41acf28185c782343aca17d013684eb5e18b8992ba51aa7b379b4c1f89b",
+      "fetched_source_sha256": "ef44ef55597b2cee5f16dda009eddfe591c2f76190f355015254caca8bc484bf",
+      "current_units": 79,
+      "result": "text_matches",
+      "excluded_difference": "Art. 1º vetado consta no HTML e não integra a leitura ativa; ausência de marcador no percurso não omite norma vigente."
+    },
+    {
+      "slug": "testemunhas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+      "previous_source_sha256": "578b5fe3b6cc8a18305a87173f9ccabaf8c70738b7301f2cd456751ce02a4230",
+      "fetched_source_sha256": "600ec6a08b0d11b24eaf90377b62fe2c86c0f35a944b959399f901a255215c5f",
+      "current_units": 22,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "temporaria",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+      "previous_source_sha256": "27941d8ec2734d24765411b35f69fee9dc923601230a1740d79e81847ed7cab0",
+      "fetched_source_sha256": "a3594092d5996bad883d0f642378e8b301ba7deaffa90548a1add23e1c01128a",
+      "current_units": 7,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "budapeste",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11491.htm",
+      "previous_source_sha256": "202d5c82b17c92053e60c4db73f6187c0e07e9c4fafaf04b3fb25014aeecf2a6",
+      "fetched_source_sha256": "eea8cfc9816ddbf461ab955f7b86ec0991d742fd8001051e7bd5f217efebabbc",
+      "current_units": 51,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "juizados",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+      "previous_source_sha256": "748eecb84af9642528af8392288028accad36fc21a7c3ea87f17c46e6fd15f88",
+      "fetched_source_sha256": "04250bc364c44e21307d75dd946cf122e77428213c855f6358f6965ab5673a5f",
+      "current_units": 98,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "cpf",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+      "previous_source_sha256": "0d89de4b80b76c51cbe92d650535f6815866989c6552c464f55675a6a3969800",
+      "fetched_source_sha256": "988f9f84f303cfeb649c5d6bf25683ef47a5fcc82818300d33c13ca8f273e699",
+      "current_units": 7,
+      "result": "text_matches",
+      "excluded_difference": null
+    },
+    {
+      "slug": "drogas",
+      "source_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "previous_source_sha256": "9ea95c4ba7f71b22e222639ba03aa3b474578f146abccb1cb7ea54f82762d0dc",
+      "fetched_source_sha256": "5a2e047a006153da43830c92207895f76789c7ff7d6933c31e7f7768b301cce1",
+      "current_units": 84,
+      "result": "text_matches",
+      "excluded_difference": "Art. 65-A vetado consta no HTML e não integra a leitura ativa; ausência de marcador no percurso não omite norma vigente."
+    }
+  ],
+  "pending_content_modified": false,
+  "questions_modified": false,
+  "units_modified": false,
+  "explanations_modified": false,
+  "general_review_dates_modified": false,
+  "database_application": "applied_and_readback_verified",
+  "verification": {
+    "rollback_preflight_passed": true,
+    "courses_verified": 42,
+    "materials_verified": 42,
+    "preserved_tables": [
+      {
+        "table": "legal_course_units",
+        "rows": 3671
+      },
+      {
+        "table": "legal_unit_explanations",
+        "rows": 3513
+      },
+      {
+        "table": "study_material_enrichments",
+        "rows": 244
+      },
+      {
+        "table": "content_sources",
+        "rows": 406
+      }
+    ],
+    "untargeted_materials_preserved": 128,
+    "readback_verified": true
+  },
+  "code_changes": false
+}

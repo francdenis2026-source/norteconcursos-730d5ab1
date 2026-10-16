@@ -4,6 +4,27 @@ import assert from 'node:assert/strict';
 import {usableArticleSource} from './article-explanation-package.mjs';
 import {legalStudyCaveat} from '../src/lib/legalStudyCaveats.ts';
 
+test('LEP 122 distingue saída temporária, exame e aplicação da lei no tempo',()=>{
+ const note=legalStudyCaveat('lep','art-122');
+ assert.equal(note.literalPractice,false);
+ assert.match(note.explanation,/Tema 1381\/STF = saída temporária e trabalho externo/);
+ assert.match(note.explanation,/Tema 1408\/STF = exame criminológico/);
+ assert.match(note.explanation,/não se aplicam automaticamente a crimes anteriores/);
+ assert.match(note.explanation,/13\/06\/2024/);
+ assert.doesNotMatch(note.explanation,/1381 consta na notícia sobre exame/);
+});
+
+test('correção do art. 16 remete ao tema de retratação, sem alterar regra ou gabarito',()=>{
+ const report=JSON.parse(fs.readFileSync('docs/reviews/legal-commentary-corrections-2026-10-16.json','utf8'));
+ const correction=report.corrections.find(c=>c.course==='maria-penha'&&c.unit_key==='art-16');
+ assert.match(correction.patch.atencao.join(' '),/Tema 1167\/STJ/);
+ const source=new URL(correction.patch.remissoes.find(u=>u.includes('cod_tema_inicial=')));
+ assert.equal(source.hostname,'processo.stj.jus.br');
+ assert.equal(source.searchParams.get('cod_tema_inicial'),'1167');
+ assert.equal(source.searchParams.get('cod_tema_final'),'1167');
+ assert.deepEqual(Object.keys(correction.patch).sort(),['atencao','remissoes']);
+});
+
 test('CPP: regras afastadas pelo STF não geram treino literal e custódia integra 2026',()=>{
  for(const key of ['art-1','art-3-a','art-3-b','art-3-c','art-3-d','art-3-e']) {
   assert.equal(legalStudyCaveat('codigo-processo-penal',key)?.literalPractice,false,key);

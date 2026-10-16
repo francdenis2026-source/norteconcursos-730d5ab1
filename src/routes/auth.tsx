@@ -20,7 +20,8 @@ import {
   Trophy,
 } from "lucide-react";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase, isEmailRecoveryPending, completeEmailAuthCallback } from "@/integrations/supabase/client";
+import { callbackErrorMessage, type CallbackError } from "@/lib/authCallback";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { normalizeUppercase, validateCPF } from "@/lib/utils";
@@ -45,9 +46,10 @@ function friendlyAuthError(error: unknown) {
 export const Route = createFileRoute("/auth")({
   validateSearch: (
     search: Record<string, unknown>,
-  ): { mode?: "register" | undefined; recovery?: boolean; reason?: "inactive" | "another-device" | undefined } => ({
+  ): { mode?: "register" | undefined; recovery?: boolean; callbackError?: CallbackError | undefined; reason?: "inactive" | "another-device" | undefined } => ({
     mode: search["mode"] === "register" ? "register" : undefined,
     recovery: search["recovery"] === true || search["recovery"] === "true",
+    callbackError: ["expired", "invalid", "failed"].includes(String(search["callbackError"])) ? search["callbackError"] as CallbackError : undefined,
     reason: search["reason"] === "inactive" || search["reason"] === "another-device" ? search["reason"] : undefined,
   }),
   component: AuthPage,
@@ -94,11 +96,15 @@ function AuthPage() {
   // Entrada automática: ao confirmar o e-mail (link volta para /auth ou outra aba confirma),
   // a sessão chega aqui e o aluno é levado direto ao painel.
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      if (routeSearch.recovery) {
+    let active = true;
+    void completeEmailAuthCallback().then(({ session, error, recovery }) => {
+      if (!active) return;
+      const failure = routeSearch.callbackError ?? error;
+      if (failure) { setFormError(callbackErrorMessage(failure)); return; }
+      if (routeSearch.recovery || recovery) {
         setMode("reset");
-        setRecoverySession(!!data.session);
-      } else if (data.session) navigate({ to: "/dashboard" });
+        setRecoverySession(!!session);
+      } else if (session) navigate({ to: "/dashboard", replace: true });
     });
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "PASSWORD_RECOVERY" && session) {
@@ -106,7 +112,7 @@ function AuthPage() {
         setMode("reset");
         return;
       }
-      if (routeSearch.recovery) return;
+      if (routeSearch.recovery || isEmailRecoveryPending() || routeSearch.callbackError) return;
       if (event === "SIGNED_IN" && session) {
         // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
         if (!manualAuth.current) {
@@ -118,8 +124,8 @@ function AuthPage() {
         navigate({ to: "/dashboard" });
       }
     });
-    return () => sub.subscription.unsubscribe();
-  }, [navigate, routeSearch.recovery]);
+    return () => { active = false; sub.subscription.unsubscribe(); };
+  }, [navigate, routeSearch.recovery, routeSearch.callbackError]);
   useEffect(() => {
     if (routeSearch.reason === "inactive") toast.message("Sessão encerrada por inatividade", { id: "auth-reason", description: "Passaram-se mais de 5 minutos sem interação. Entre novamente para continuar de onde parou." });
     if (routeSearch.reason === "another-device") toast.message("Sessão encerrada", { id: "auth-reason", description: "Sua conta foi aberta em outro aparelho." });

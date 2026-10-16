@@ -1,12 +1,57 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateReview,publishReview,sameReviewRow} from './publish-question-review.mjs';
+import {validateReview,publishReview,sameReviewRow,reviewRowFilters} from './publish-question-review.mjs';
+test('CAS keeps PostgreSQL figure arrays separate from JSONB arrays and preserves escaping',()=>{
+ const expected={id:'q1',figure_urls:[],legal_basis:[],options:{A:'text'},support_text:null};
+ const filters=new URLSearchParams(reviewRowFilters('board_exam_questions',expected));
+ assert.equal(filters.get('figure_urls'),'eq.{}');
+ assert.equal(filters.get('legal_basis'),'eq.[]');
+ assert.equal(filters.get('options'),'eq.{"A":"text"}');
+ assert.equal(filters.get('support_text'),'is.null');
+ const urls=['https://example.test/a,b.png','https://example.test/a"b\\c.png'];
+ assert.equal(new URLSearchParams(reviewRowFilters('board_exam_questions',{figure_urls:urls})).get('figure_urls'),'eq.{"https://example.test/a,b.png","https://example.test/a\\"b\\\\c.png"}');
+ assert.throws(()=>reviewRowFilters('board_exam_questions',{figure_urls:[{}]}),/figure URL array/);
+});
+test('a concurrent image update aborts the batch before writing',async()=>{
+ const p=make();p.items[0].table='board_exam_questions';p.items[0].expected.figure_urls=[];
+ let writes=0;
+ await assert.rejects(()=>publishReview(p,async(path,method)=>{
+  if(method==='PATCH')writes++;
+  return [{...p.items[0].expected,figure_urls:['https://example.test/new.png']}];
+ }),/Concurrent revision/);
+ assert.equal(writes,0);
+});
 test('accepts PostgreSQL timestamp formatting without hiding concurrent microsecond changes',()=>{
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.25871Z'}),true);
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.258710+00:00'},{verified_at:'2026-10-13T00:00:00.258711+00:00'}),false);
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.000000Z',official_answer:'C'},{verified_at:'2026-10-13T00:00:00+00:00',official_answer:'E'}),false);
 });
 const make=()=>({items:[{table:'official_exam_questions',expected:{id:'q1',content_status:'under_review',official_answer:'E',question_text:'Complete question',context_review_required:false},patch:{content_status:'active',current_syllabus_topic_id:'t1',verified_at:'2026-10-13T00:00:00Z',law_version_checked_at:'2026-10-13T00:00:00Z',legal_basis:[{url:'https://www.planalto.gov.br/law'}]},evidence:{legal:true,reason:'Individually verified',sources:['https://www.planalto.gov.br/law']}}]});
+test('active explanation reviews may repair a legal reference without changing identity, status or approval flags',async()=>{
+ const p=make();p.purpose='explanation-improvement';const i=p.items[0];
+ i.expected.content_status='active';i.expected.syllabus_topic_id='t1';
+ i.patch={review_note:'Individual legal explanation with a checked source. '.repeat(6),legal_basis:[{url:'https://www.planalto.gov.br/law'}],law_version_checked_at:'2026-10-13T00:00:00Z'};
+ assert.equal(validateReview(p),p);
+ const confirmed=structuredClone(p);confirmed.items[0].patch.current_syllabus_topic_id='t1';
+ assert.equal(validateReview(confirmed),confirmed);
+ const moved=structuredClone(p);moved.items[0].patch.current_syllabus_topic_id='different-topic';
+ assert.throws(()=>validateReview(moved),/preserve the existing syllabus topic/);
+ const bad=structuredClone(p);bad.items[0].patch.legal_audit_completed=true;
+ assert.throws(()=>validateReview(bad),/identity or publication status/);
+ const missing=structuredClone(p);missing.items[0].patch.legal_basis=[];
+ assert.throws(()=>validateReview(missing),/legal basis/);
+ let writes=0;
+ const request=async(path,method)=>{
+  if(method==='PATCH'){writes++;return [];}
+  if(path.startsWith('official_exam_questions'))return [i.expected];
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  if(path.includes('?url='))return [];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ await assert.rejects(()=>publishReview(p,request),/basis not registered/);
+ assert.equal(writes,0);
+});
 test('forbids changing original answer, incomplete contexts and missing legal sources',()=>{
  const p=make();p.items[0].patch.official_answer='C';assert.throws(()=>validateReview(p));
  const q=make();q.items[0].expected.context_review_required=true;assert.throws(()=>validateReview(q));
@@ -40,4 +85,10 @@ test('duplicate archiving requires matching source, item, answer and syllabus',a
  const canonical={...p.items[0].expected,id:'canonical',career_name:'Agente de Polícia Civil',official_answer:'C'};
  const req=async(path,method)=>{if(method==='PATCH'){writes++;return [];}return path.includes('canonical')?[canonical]:[p.items[0].expected];};
  await assert.rejects(()=>publishReview(p,req),/Duplicate identity mismatch/);assert.equal(writes,0);
+});
+test('classification changes require review and a matching official topic before writes',async()=>{
+ const p=make();p.items[0].patch.subject='Raciocínio Lógico';assert.throws(()=>validateReview(p),/classified subject/);
+ p.items[0].evidence.classification_reviewed=true;assert.equal(validateReview(p),p);
+ let writes=0;const req=async(path,method)=>{if(method==='PATCH'){writes++;return [];}return path.startsWith('official_exam_questions')?[p.items[0].expected]:path.startsWith('syllabus_topics')?[{edition_id:'e1',content_status:'current',discipline:'Direito Penal'}]:path.startsWith('syllabus_editions')?[{source_id:'s1',status:'active'}]:[{is_official:true,source_type:'edital',status:'vigente'}];};
+ await assert.rejects(()=>publishReview(p,req),/subject must match/);assert.equal(writes,0);
 });

@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import meta from "@/data/videoMeta.json";
 import { LAW_CHRONOLOGY } from "@/lib/legalChronology";
 import { CURATED_LEGAL_UPDATES, type CuratedLegalUpdate } from "@/lib/legalUpdates";
@@ -40,5 +41,5 @@ export function videoNotice(id: string, law: { slug: string; materialSlug?: stri
   return changes.length || lastAmendment || old ? { published, changes, lastAmendment, old } : null;
 }
 
-export const fmtMonthYear = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("pt-BR", { month: "short", year: "numeric", timeZone: "UTC" }).replace(".", "");
-export const fmtDate = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("pt-BR", { timeZone: "UTC" });
+export const fmtMonthYear = (iso: string) => acreDate(`${iso}T12:00:00Z`).toLocaleDateString("pt-BR", { month: "short", year: "numeric", timeZone: "UTC" }).replace(".", "");
+export const fmtDate = (iso: string) => acreDate(`${iso}T12:00:00Z`).toLocaleDateString("pt-BR", { timeZone: "UTC" });

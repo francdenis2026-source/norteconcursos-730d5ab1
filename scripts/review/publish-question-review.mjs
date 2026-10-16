@@ -4,12 +4,25 @@ import {pathToFileURL} from 'node:url';
 import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 
 const tables = new Set(['official_exam_questions','curated_question_catalog','board_exam_questions']);
-const allowed = new Set(['content_status','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+const allowed = new Set(['content_status','subject','legal_basis','law_version_checked_at','verified_at','review_note','explanation','current_syllabus_topic_id','syllabus_topic_id','legal_audit_completed','legal_review_required','context_review_required']);
+// figure_urls is PostgreSQL text[], unlike options/legal_basis (JSONB).
+// Keep it in the compare-and-set predicate using its actual storage syntax.
+export function reviewRowFilters(table, expected) {
+  return Object.entries(expected).map(([key,value])=>{
+    if (value===null) return `${key}=is.null`;
+    let literal;
+    if (table==='board_exam_questions' && key==='figure_urls') {
+      if (!Array.isArray(value) || value.some(v=>typeof v!=='string')) throw Error('Invalid figure URL array');
+      literal='{'+value.map(v=>'"'+v.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'"').join(',')+'}';
+    } else literal=typeof value==='object'?JSON.stringify(value):String(value);
+    return `${key}=eq.${encodeURIComponent(literal)}`;
+  }).join('&');
+}
 // PostgreSQL omits trailing fractional zeroes in timestamptz responses.
 // Preserve microsecond precision: Date parsing would silently round it away.
 export function sameReviewRow(a,b) {
   const normalize=row=>row && Object.fromEntries(Object.entries(row).map(([key,value])=>{
-    if (['created_at','verified_at','law_version_checked_at'].includes(key) && typeof value==='string') {
+    if (['created_at','verified_at','law_version_checked_at','checked_at'].includes(key) && typeof value==='string') {
       value=value.replace(/Z$/, '+00:00').replace(/\.(\d+)(?=[+-]\d{2}:\d{2}$)/,(_,fraction)=>{
         const digits=fraction.replace(/0+$/,''); return digits?`.${digits}`:'';
       });
@@ -20,20 +33,28 @@ export function sameReviewRow(a,b) {
 }
 export function validateReview(pack) {
   if (!Array.isArray(pack.items) || !pack.items.length) throw Error('Empty review');
+  const improvement = pack.purpose === 'explanation-improvement';
   const ids = new Set();
   for (const item of pack.items) {
     const {table,expected,patch,evidence} = item;
     const id = `${table}:${expected?.id}`;
-    if (!tables.has(table) || ids.has(id) || expected?.content_status !== 'under_review') throw Error('Invalid or repeated question');
+    if (!tables.has(table) || ids.has(id) || expected?.content_status !== (improvement ? 'active' : 'under_review')) throw Error('Invalid or repeated question');
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
-    if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
+    if (improvement) {
+      if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at','legal_basis','current_syllabus_topic_id'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
+      // Legacy active rows may lack the explicit current pointer required by
+      // the database guard. Confirm the existing topic; never reassign it here.
+      if ('current_syllabus_topic_id' in patch && (!patch.current_syllabus_topic_id || patch.current_syllabus_topic_id!==(expected.current_syllabus_topic_id || expected.syllabus_topic_id))) throw Error('Explanation improvement must preserve the existing syllabus topic');
+      if (!(patch.review_note || patch.explanation)?.trim() || (patch.review_note || patch.explanation).length<200) throw Error('Substantive explanation required');
+    } else if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
     if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
+    if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !patch.current_syllabus_topic_id || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
     for (const url of evidence.sources) if (new URL(url).protocol !== 'https:') throw Error('HTTPS evidence required');
-    if (!Number.isFinite(Date.parse(patch.verified_at)) || Date.parse(patch.verified_at)>Date.now()) throw Error('Invalid review date');
-    if (patch.content_status==='active') {
+    if (!Number.isFinite(Date.parse(improvement ? patch.law_version_checked_at : patch.verified_at)) || Date.parse(improvement ? patch.law_version_checked_at : patch.verified_at)>Date.now()) throw Error('Invalid review date');
+    if (patch.content_status==='active' || improvement) {
       if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
-      if (evidence.legal && (!patch.legal_basis?.length || !patch.law_version_checked_at)) throw Error('Current legal basis required');
+      if (evidence.legal && (!(patch.legal_basis || (improvement ? expected.legal_basis : null))?.length || !patch.law_version_checked_at)) throw Error('Current legal basis required');
       if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
       if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
       if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
@@ -42,7 +63,7 @@ export function validateReview(pack) {
   return pack;
 }
 
-export async function publishReview(pack, request) {
+export async function publishReview(pack, request, {dryRun=false}={}) {
   validateReview(pack);
   // Preflight the entire batch before the first write. Reruns preserve already applied reviews.
   const pending=[];
@@ -59,13 +80,14 @@ export async function publishReview(pack, request) {
       const careerMatches=canonical && (canonical.career_name===expected.career_name || (item.evidence.career_alias_verified && aliases[expected.career_name]===canonical.career_name));
       if (!canonical || !careerMatches || !['active','under_review'].includes(canonical.content_status) || identity.some(k=>!isDeepStrictEqual(canonical[k],expected[k]))) throw Error('Duplicate identity mismatch');
     }
-    if (patch.content_status==='active') {
-      const topicId=patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id;
+    if (patch.content_status==='active' || pack.purpose==='explanation-improvement') {
+      const topicId=patch.current_syllabus_topic_id || patch.syllabus_topic_id || (pack.purpose==='explanation-improvement' ? expected.current_syllabus_topic_id : null) || expected.syllabus_topic_id;
       const [topic]=await request(`syllabus_topics?id=eq.${topicId}&select=*`);
       const [edition]=await request(`syllabus_editions?id=eq.${topic?.edition_id}&select=*`);
       const [source]=await request(`content_sources?id=eq.${edition?.source_id}&select=*`);
       if (topic?.content_status!=='current' || edition?.status!=='active' || !source?.is_official || source.source_type!=='edital' || source.status!=='vigente') throw Error('Verified official active syllabus required');
-      for (const basis of patch.legal_basis || []) {
+      if (patch.subject!==undefined && patch.subject!==topic.discipline) throw Error('Corrected subject must match verified topic discipline');
+      for (const basis of patch.legal_basis || (pack.purpose==='explanation-improvement' ? expected.legal_basis : null) || []) {
         const sources=await request(`content_sources?url=eq.${encodeURIComponent(basis.url)}&select=id,is_official,status`);
         if (!sources.some(s=>s.is_official && ['vigente','parcialmente_revogado'].includes(s.status))) throw Error(`Official basis not registered: ${basis.url}`);
       }
@@ -73,9 +95,10 @@ export async function publishReview(pack, request) {
     pending.push(item);
   }
   const result={reviewed:pack.items.length,updated:[],preserved:pack.items.length-pending.length};
+  if (dryRun) return {...result,pending:pending.map(i=>i.expected.id)};
   for (const {table,expected,patch} of pending) {
     // Filter every original field to avoid overwriting another account's simultaneous work.
-    const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(k==='figure_urls'&&Array.isArray(v)?`{${v.map(x=>JSON.stringify(x)).join(',')}}`:typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
+    const filters=reviewRowFilters(table,expected);
     const rows=await request(`${table}?${filters}`,'PATCH',patch);
     if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch})) throw Error(`Readback mismatch: ${expected.id}`);
     result.updated.push(expected.id);
@@ -88,7 +111,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
   if (!input || !report || (mode && mode!=='--dry-run')) throw Error('Usage: REVIEW_PACK REPORT [--dry-run]');
   const pack=validateReview(JSON.parse(await readFile(input,'utf8')));
   let result={dry_run:true,reviewed:pack.items.length};
-  if (mode!=='--dry-run') {
+  if (mode!=='--dry-run' || pack.purpose==='explanation-improvement') {
     const key=process.env.TASK_SUPABASE_KEY,project=process.env.TASK_SUPABASE_PROJECT;
     if (!key || project!=='gkwphadbveiyjcwiiizw') throw Error('Project/session credentials required');
     const request=async(path,method='GET',body)=>{
@@ -96,7 +119,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       if (!res.ok) throw Error(`Database HTTP ${res.status}`);
       return res.json();
     };
-    result={dry_run:false,...await publishReview(pack,request),verified_at:new Date().toISOString()};
+    result={dry_run:mode==='--dry-run',...await publishReview(pack,request,{dryRun:mode==='--dry-run'}),verified_at:new Date().toISOString()};
   }
   await writeFile(report,JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify(result));

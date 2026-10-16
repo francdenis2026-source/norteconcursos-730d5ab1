@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import * as React from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
@@ -458,7 +459,7 @@ export function StudyRecord({ checks, planId }: { checks: CheckRow[]; planId: st
                     </span>
                     <span className="text-xs tabular-nums text-muted-foreground">
                       {fmtMin(c.minutes)} ·{" "}
-                      {new Date(c.done_at).toLocaleString("pt-BR", {
+                      {acreDate(c.done_at).toLocaleString("pt-BR", {
                         timeZone: "America/Rio_Branco",
                         day: "2-digit",
                         month: "2-digit",

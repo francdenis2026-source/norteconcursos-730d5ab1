@@ -1,0 +1,168 @@
+{
+  "verified_at": "2026-10-13T22:58:26.040831+00:00",
+  "scope": "Quatro questões liberadas; uma retirada do treino literal atual por alteração de setembro/2026.",
+  "topics": [
+    {
+      "id": "5b4864d1-1a31-54ea-a121-55fc58c78409",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 3,
+      "topic_text": "Tributo: conceito e espécies (item 3 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "24516bd8-7f2d-587d-b9a0-0bf4a79b4b3e",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 63,
+      "topic_text": "Sujeitos ativo e passivo da obrigação tributária (item 6.3 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "d4547659-1824-5c14-8da4-6f79fcec8416",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 65,
+      "topic_text": "Capacidade e domicílio tributários (itens 6.5 e 6.6 do edital).",
+      "content_status": "current"
+    },
+    {
+      "id": "ffdd35e5-9439-5518-8335-573ebec8a91e",
+      "edition_id": "54e2aee2-a1bf-4af7-b021-578459270686",
+      "block_name": "Conhecimentos jurídicos",
+      "discipline": "Direito Tributário",
+      "topic_order": 64,
+      "topic_text": "Solidariedade tributária e efeitos na prescrição (itens 6.4 e 7.6 do edital).",
+      "content_status": "current"
+    }
+  ],
+  "items": [
+    {
+      "id": "d7f5ae63-7f94-462a-a490-d91e2c8cecde",
+      "item_number": 85,
+      "original_answer": "D",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "Código Tributário Nacional",
+          "artigo": "arts. 3º e 5º"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+          "norma": "Constituição Federal",
+          "artigo": "arts. 145, 148, 149 e 149-A"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. II e III estão corretos. Tributo não constitui sanção de ato ilícito (CTN, art. 3º), ao contrário do enunciado I. O art. 5º do CTN enumera impostos, taxas e contribuições de melhoria; a Constituição contempla ainda empréstimos compulsórios e contribuições especiais. Novos tributos da reforma do consumo não criam automaticamente novas espécies nessa classificação. Não confundir multa com tributo nem concluir que renda de origem ilícita nunca possa ser tributada.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "2bd55231-45bd-4494-b1b8-94ed6e772ab9",
+      "item_number": 88,
+      "original_answer": "D",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "Código Tributário Nacional",
+          "artigo": "arts. 119, 121 e 123"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "D. II e III estão corretos (arts. 121 e 119). I erra ao afirmar em qualquer hipótese: o art. 123 ressalva disposição legal em contrário. Contrato particular não altera, por si só, o sujeito passivo perante o Fisco. Obrigação principal pode ter por objeto tributo ou penalidade pecuniária, embora multa não seja tributo.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"
+        ]
+      }
+    },
+    {
+      "id": "70548ae8-bb4b-464c-901d-129238b730a9",
+      "item_number": 89,
+      "original_answer": "A",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "Código Tributário Nacional",
+          "artigo": "arts. 126, 127 e 127-A"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm",
+          "norma": "LC 236/2026",
+          "artigo": "art. 1º: inclusão do art. 127-A; art. 3º: vigência"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "A. É a regra do art. 127, II, na ausência de eleição válida de domicílio. Pessoa natural de residência incerta usa o centro habitual de atividade, não qualquer local onde seja encontrada. Capacidade tributária passiva independe de capacidade civil, limitações de atividade e regular constituição da pessoa jurídica (art. 126). Atualização de setembro/2026: a LC 236 acrescentou o art. 127-A sobre intimações por Domicílio Tributário Eletrônico; isso não revogou a regra do art. 127, II, cobrada aqui.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm"
+        ]
+      }
+    },
+    {
+      "id": "5bfb0e80-1f60-4a1e-b5e6-198b8572a78c",
+      "item_number": 91,
+      "original_answer": "C",
+      "decision": "active",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "Código Tributário Nacional",
+          "artigo": "arts. 124, 125 e 174, § 1º, I e II"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm",
+          "norma": "LC 236/2026",
+          "artigo": "art. 1º: alterações no art. 174; art. 3º: vigência"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "C. A interrupção da prescrição contra um obrigado solidário prejudica os demais (art. 125, III), inclusive por despacho que ordena citação em execução fiscal (art. 174, § 1º, I). Solidariedade não tem benefício de ordem e também pode decorrer de designação legal, não apenas interesse comum (art. 124). Pagamento aproveita aos demais; isenção ou remissão pessoal mantém os outros responsáveis pelo saldo. Atualização LC 236/2026: o antigo parágrafo único do art. 174 foi renumerado como § 1º; a redação do inciso II agora menciona expressamente protesto extrajudicial da CDA ou judicial.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm"
+        ]
+      }
+    },
+    {
+      "id": "2c641f9f-0098-4373-8821-491615db95a1",
+      "item_number": 92,
+      "original_answer": "C",
+      "decision": "obsolete",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "norma": "Código Tributário Nacional",
+          "artigo": "arts. 151, III e VII a X; e 156, XII e XIII"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm",
+          "norma": "LC 236/2026",
+          "artigo": "arts. 1º e 3º: alteração vigente desde publicação"
+        }
+      ],
+      "review": {
+        "legal": true,
+        "reason": "Retirado do repertório atual de treino literal, preservando gabarito histórico C. A alternativa correta reproduz a redação anterior do art. 151, III, com reclamações e recursos. A LC 236, de 04/09/2026, vigente desde a publicação (art. 3º), substituiu a redação por impugnações, recursos e manifestação de inconformidade. A alteração pode causar confusão em estudo literal atualizado; não se declara que a banca anulou a questão. Também foram acrescentadas hipóteses de suspensão: arbitragem especial (VII), proposta de transação aceita (VIII), acordo de mediação (IX) e seguro garantia ou fiança bancária aceitos na execução fiscal (X), observados os requisitos específicos; e de extinção (art. 156, XII e XIII). Original e gabarito preservados para histórico, sem publicação como questão vigente.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp236.htm"
+        ]
+      }
+    }
+  ]
+}

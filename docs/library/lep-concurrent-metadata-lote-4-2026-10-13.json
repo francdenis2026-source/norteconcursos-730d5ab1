@@ -1,0 +1,117 @@
+{
+  "kind": "explicit_foreign_metadata_with_edition_source_repairs",
+  "target_course_id": "283d9de3-42ff-5074-b70a-bc273bf40d3f",
+  "target_edition_id": "fcc0cb59-2b57-4b21-8156-bca2312a1200",
+  "tables": {
+    "syllabus_topics": [
+      {
+        "id": "0cdabffb-8e0b-5224-88b6-72f79477bb4f",
+        "sha256": "87e0663aa8d6fba47d51c891c9cdcea8ebe0a6b60483a6756b47a9a509c7b6f3",
+        "title": null
+      },
+      {
+        "id": "8c6ac292-a6ad-5c95-badb-b4cab78d30ed",
+        "sha256": "eae3bca3fd2d3b5bebcb1a3f06d902068d257269a773dbc4f6645479a342d6cc",
+        "title": null
+      }
+    ],
+    "content_sources": [
+      {
+        "id": "6a690f81-51e9-53d4-a722-3ad1041846d6",
+        "sha256": "c5e082673bf09c9eff16c7b15ab54d9ad7bc2edd873f9f4e5c68af39c7557f68",
+        "title": "Lei do Cheque — texto oficial"
+      },
+      {
+        "id": "893ad1e6-2393-5a4a-9512-2533e86c2a1e",
+        "sha256": "2b1ffff4ddc7bafaee8d25837e91f15d13354cfe4466b23102b2bb14cd35010f",
+        "title": "Constituição do Ceará — compilação até EC 136/2026"
+      },
+      {
+        "id": "a05ca69c-66bc-58f1-b771-35c3fdcd1a34",
+        "sha256": "c8871d6747028d0c92e94636efff72f039e7413dd8d433d03983bfca278627c6",
+        "title": "STJ — AgInt no AREsp 2.500.935/SP"
+      },
+      {
+        "id": "abe121a7-b101-58e7-bd67-55faf703c703",
+        "sha256": "dfe5d21ac86b5da07355df7ed7f54b2a5fb40f1ecf93fbd09fc1e4e3a52c071e",
+        "title": "STJ — Tema repetitivo 1004"
+      },
+      {
+        "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "sha256": "23bed67021232cf4e0fd17c4da267e75387a51e985caf65d6777b2e1d274990e",
+        "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão"
+      }
+    ]
+  },
+  "edition_source_repairs": [
+    {
+      "expected": {
+        "id": "1053c168-c3e1-4e07-b101-37649647f535",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Agente de Polícia Judiciária",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:48.226006+00:00"
+      },
+      "applied": {
+        "id": "1053c168-c3e1-4e07-b101-37649647f535",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Agente de Polícia Judiciária",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:48.226006+00:00"
+      },
+      "source": {
+        "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "source_type": "edital",
+        "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+        "issuer": "Cebraspe / Estado de Sergipe",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "published_on": null,
+        "checked_at": "2026-10-13T23:26:46.355+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+      }
+    },
+    {
+      "expected": {
+        "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Escrivão de Polícia",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "7a0a91da-effc-4172-8851-10f2c9e3d52e",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:51.385401+00:00"
+      },
+      "applied": {
+        "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Escrivão de Polícia",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:51.385401+00:00"
+      },
+      "source": {
+        "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "source_type": "edital",
+        "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+        "issuer": "Cebraspe / Estado de Sergipe",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "published_on": null,
+        "checked_at": "2026-10-13T23:26:46.355+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+      }
+    }
+  ],
+  "note": "Dois tópicos de outra edição, cinco fontes novas e correção exclusivamente de source_id em duas edições PC-SE, alheias à LEP. Alterações registradas por IDs, hashes e linhas completas. Nenhuma dessas alterações foi escrita pelo importador do lote. Snapshot por cursor não é transação entre tabelas."
+}

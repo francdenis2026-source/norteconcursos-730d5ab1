@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Sparkles, Trash2 } from "lucide-react";
@@ -60,7 +61,7 @@ export function AiResolutionsSection() {
                 </Button>
               </div>
               <p className="mt-1 text-xs text-muted-foreground">
-                {new Date(r.createdAt).toLocaleString("pt-BR")}
+                {acreDate(r.createdAt).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" })}
               </p>
               {open === r.id && (
                 <div className="mt-3 whitespace-pre-wrap border-t pt-3 text-sm leading-relaxed text-foreground">

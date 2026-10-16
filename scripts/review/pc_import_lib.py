@@ -39,6 +39,9 @@ def url_ok(u):
 
 
 def clean(it):
+    if it.get("ce"):                      # certo/errado: comando + item
+        cmd = re.sub(r"^--[^-]*--\s*", "", it["command"]).strip()
+        return (it["stem"] or "[Enunciado não extraído do PDF; conferir no caderno oficial.]"), cmd, {}
     """Corrige as falhas conhecidas do extrator (estende o enunciado quando a letra A engole a pergunta)."""
     o = dict(it["options"])
     stem, ctx = it["stem"].strip(), it["context"].strip()
@@ -55,14 +58,21 @@ def clean(it):
 
 
 def question_text(stem, ctx, o):
+    if not o:
+        return (("Comando:\n" + ctx + "\n\n") if ctx else "") + "Item: " + stem
     base = ("Texto-base:\n" + ctx + "\n\n") if len(ctx) > 250 else (("Comando:\n" + ctx + "\n\n") if ctx else "")
     return base + stem + "\n" + "\n".join(f"({k}) {o[k]}" for k in "ABCDE")
 
 
 def run(exam, items, gab, decisions, dry=False):
+    from urllib.parse import quote
     e = exam
     who = f"{e['contest']} - {e['role']}"
     assert gab and all(it["n"] in gab for it in items), "gabarito incompleto"
+    # Stop before source/matrix upserts: a repeated import must preserve prior reviews.
+    if not dry:
+        existing = rest("GET", f"official_exam_questions?select=item_number&exam_year=eq.{e['year']}&contest_name=eq.{quote(who)}&limit=1000") or []
+        assert not existing, f"já existem {len(existing)} linhas de {who}; revisões e matrizes preservadas"
     for u in (e["prova_url"], e["gab_url"]):
         assert url_ok(u), "fonte inacessível: " + u
     ids = {}
@@ -119,7 +129,6 @@ def run(exam, items, gab, decisions, dry=False):
                        legal_basis=[dict(title=t, url=u) for t, u in d["basis"]])
             row["law_version_checked_at"] = __import__("datetime").datetime.utcnow().isoformat() + "Z"
         rows.append(row)
-    from urllib.parse import quote
     have = rest("GET", f"official_exam_questions?select=item_number&exam_year=eq.{e['year']}&contest_name=eq.{quote(who)}&limit=1000") or []
     assert not have, f"já existem {len(have)} linhas de {who}; confira antes de regravar"
     for i in range(0, len(rows), 25):

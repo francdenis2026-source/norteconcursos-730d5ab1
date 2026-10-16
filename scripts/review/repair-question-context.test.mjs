@@ -25,3 +25,19 @@ test('an applied repair is preserved on rerun',async()=>{
  };
  assert.deepEqual(await repairContexts(p,req,async()=>bytes),{repaired:[],preserved:1});
 });
+test('binary formula repairs require explicit format, complete context and evidenced page',()=>{
+ const p=make();const i=p.items[0];i.expected.official_answer='E';
+ i.patch.question_text='Comando: X tem densidade f(x). Julgue o item.\nItem: P(X=5)>0.';
+ assert.throws(()=>validateRepairs(p));
+ i.evidence.question_format='certo_errado';i.patch.source_page=4;i.evidence.page=4;
+ assert.equal(validateRepairs(p),p);
+ i.patch.source_page=6;assert.throws(()=>validateRepairs(p),/page/);
+ i.patch.source_page=4;i.patch.question_text='Item: P(X=5)>0.';assert.throws(()=>validateRepairs(p));
+});
+test('four-option exams preserve their original format and refuse invented options',()=>{
+ const p=make();const i=p.items[0];i.patch.question_text='Complete stem (A)a (B)b (C)c (D)d';
+ assert.throws(()=>validateRepairs(p));i.evidence.alternative_labels=['A','B','C','D'];assert.equal(validateRepairs(p),p);
+ i.patch.question_text+=' (E)invented';assert.throws(()=>validateRepairs(p));
+ i.patch.question_text='Complete stem (A)a (B)b (D)d';assert.throws(()=>validateRepairs(p));
+});
+test('database dry run validates source and current row without mutation',async()=>{const p=make();let writes=0;const req=async(path,method='GET')=>{if(method!=='GET'){writes++;throw Error('Unexpected write');}return path.startsWith('content_sources')?[{is_official:true,source_type:'prova',url:p.items[0].evidence.source_url}]:[p.items[0].expected];};const result=await repairContexts(p,req,async()=>bytes,{dryRun:true});assert.deepEqual(result.pending,['q']);assert.equal(writes,0);});

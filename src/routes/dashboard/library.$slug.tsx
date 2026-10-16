@@ -29,6 +29,7 @@ import { BackToPlan } from "@/components/cronograma/BackToPlan";
 import { Skeleton } from "@/components/ui/skeleton";
 import { isStudySourceUrl } from "@/lib/studySourceUrl";
 import { useMediaCatalog } from "@/lib/mediaStore";
+import { libraryCollection } from "@/lib/libraryOrganization";
 import { relatedVideos } from "@/lib/relatedVideos";
 import {
   markSlugRead,
@@ -39,9 +40,12 @@ import {
 
 export const Route = createFileRoute("/dashboard/library/$slug")({
   component: MaterialPage,
-  validateSearch: (s: Record<string, unknown>): { back?: string | undefined; tema?: string | undefined } => ({
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { back?: string | undefined; tema?: string | undefined; edital?: string | undefined } => ({
     back: typeof s["back"] === "string" ? s["back"] : undefined,
     tema: typeof s["tema"] === "string" ? s["tema"] : undefined,
+    edital: typeof s["edital"] === "string" ? s["edital"] : undefined,
   }),
 });
 
@@ -49,7 +53,7 @@ function MaterialPage() {
   const fm = useFocusMode();
   const navigate = useNavigate();
   const { slug } = useParams({ from: "/dashboard/library/$slug" });
-  const { back: backToPlan, tema } = Route.useSearch();
+  const { back: backToPlan, tema, edital } = Route.useSearch();
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data: material, isPending, isError } = useStudyMaterial(slug, signedIn);
@@ -62,12 +66,22 @@ function MaterialPage() {
 
   const videos = useMemo(() => {
     if (!material) return [];
-    return relatedVideos(catalog, material.discipline, material.topic_label ?? material.title);
+    return relatedVideos(
+      catalog,
+      material.discipline,
+      material.topic_label ?? material.title,
+      4,
+      libraryCollection(material) === "enem" ? "enem" : "general",
+    );
   }, [catalog, material]);
 
   const siblings = useMemo(() => {
     if (!material || !list) return { prev: null, next: null };
-    const same = list.filter((item) => item.discipline === material.discipline);
+    const same = list.filter(
+      (item) =>
+        item.discipline === material.discipline &&
+        libraryCollection(item) === libraryCollection(material),
+    );
     const index = same.findIndex((item) => item.slug === material.slug);
     return {
       prev: index > 0 ? (same[index - 1] ?? null) : null,
@@ -89,9 +103,26 @@ function MaterialPage() {
     );
   }
 
-  const back = (
-    <Link to="/dashboard/library" className="library-back">
-      <ArrowLeft /> Biblioteca de leis
+  const back = edital ? (
+    <Link to="/dashboard/edital/$topicId" params={{ topicId: edital }} className="library-back">
+      <ArrowLeft /> Voltar ao assunto do edital
+    </Link>
+  ) : material && libraryCollection(material) === "enem" ? (
+    <Link to="/dashboard/enem" search={{ tab: "materiais" }} className="library-back">
+      <ArrowLeft /> Materiais do ENEM
+    </Link>
+  ) : (
+    <Link
+      to="/dashboard/library"
+      search={{
+        collection: material && libraryCollection(material) === "subjects" ? "subjects" : "laws",
+      }}
+      className="library-back"
+    >
+      <ArrowLeft />{" "}
+      {material && libraryCollection(material) === "subjects"
+        ? "Materiais por disciplina"
+        : "Biblioteca de leis"}
     </Link>
   );
 
@@ -134,15 +165,51 @@ function MaterialPage() {
       {fm.bar({
         kicker: material.discipline,
         title: material.title,
-        onPrev: siblings.prev ? () => void navigate({ to: "/dashboard/library/$slug", params: { slug: siblings.prev!.slug } }) : undefined,
-        onNext: siblings.next ? () => void navigate({ to: "/dashboard/library/$slug", params: { slug: siblings.next!.slug } }) : undefined,
+        onPrev: siblings.prev
+          ? () =>
+              void navigate({
+                to: "/dashboard/library/$slug",
+                params: { slug: siblings.prev!.slug },
+              })
+          : undefined,
+        onNext: siblings.next
+          ? () =>
+              void navigate({
+                to: "/dashboard/library/$slug",
+                params: { slug: siblings.next!.slug },
+              })
+          : undefined,
         prevLabel: "Material anterior",
         nextLabel: "Próximo material",
         tools: toolsAreaFor(material.discipline),
         notesKey: `material:${material.slug}`,
-        extra: <Link to="/dashboard/question-trainer" search={practiceSearch(material.discipline, `${material.topic_label ?? ""} ${material.title}`) as never} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
+        extra: (
+          <Link
+            to="/dashboard/question-trainer"
+            search={
+              {
+                ...practiceSearch(
+                  material.discipline,
+                  `${material.topic_label ?? ""} ${material.title}`,
+                ),
+                ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
+              } as never
+            }
+            className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300"
+          >
+            Questões
+          </Link>
+        ),
       })}
-      {!fm.focus && <div className="flex flex-wrap items-center justify-between gap-2"><div><BackToPlan back={backToPlan} topic={tema} />{back}</div>{fm.button}</div>}
+      {!fm.focus && (
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <BackToPlan back={backToPlan} topic={tema} />
+            {back}
+          </div>
+          {fm.button}
+        </div>
+      )}
 
       <header className="library-header">
         <span className="hero-chip">
@@ -162,7 +229,11 @@ function MaterialPage() {
       <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
 
       <div className="surface-card library-body">
-        {materialLawSlug(material) || material.legal_review ? <LegalStudyReading source={material.body_md} markdown /> : <Markdown source={material.body_md} />}
+        {materialLawSlug(material) || material.legal_review ? (
+          <LegalStudyReading source={material.body_md} markdown />
+        ) : (
+          <Markdown source={material.body_md} />
+        )}
       </div>
 
       <WorkedExamples
@@ -171,7 +242,12 @@ function MaterialPage() {
         enabled={signedIn}
       />
 
-      <LibraryVideos videos={videos} {...(materialLawSlug(material) ? { law: { slug: materialLawSlug(material)!, materialSlug: material.slug } } : {})} />
+      <LibraryVideos
+        videos={videos}
+        {...(materialLawSlug(material)
+          ? { law: { slug: materialLawSlug(material)!, materialSlug: material.slug } }
+          : {})}
+      />
 
       {(sources.length > 0 || material.source_note) && (
         <aside className="surface-card library-sources" aria-label="Fontes">
@@ -203,20 +279,32 @@ function MaterialPage() {
         topic={material.topic_label ?? material.title}
       />
 
-      {materialLawSlug(material) ? <LawPracticeLink law={materialLawSlug(material)!} userId={user!.id} /> : <div className="library-cta no-print">
-        <div>
-          <strong>Hora de fixar</strong>
-          <span>Resolva questões de {material.discipline} para testar o que acabou de ler.</span>
+      {materialLawSlug(material) ? (
+        <LawPracticeLink law={materialLawSlug(material)!} userId={user!.id} />
+      ) : (
+        <div className="library-cta no-print">
+          <div>
+            <strong>Hora de fixar</strong>
+            <span>Resolva questões de {material.discipline} para testar o que acabou de ler.</span>
+          </div>
+          <Button asChild className="hero-btn-primary gap-2">
+            <Link
+              to="/dashboard/question-trainer"
+              search={
+                {
+                  ...practiceSearch(
+                    material.discipline,
+                    `${material.topic_label ?? ""} ${material.title}`,
+                  ),
+                  ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
+                } as never
+              }
+            >
+              <BrainCircuit className="h-4 w-4" /> Treinar questões
+            </Link>
+          </Button>
         </div>
-        <Button asChild className="hero-btn-primary gap-2">
-          <Link
-            to="/dashboard/question-trainer"
-            search={practiceSearch(material.discipline, `${material.topic_label ?? ""} ${material.title}`) as never}
-          >
-            <BrainCircuit className="h-4 w-4" /> Treinar questões
-          </Link>
-        </Button>
-      </div>}
+      )}
 
       <nav className="library-pager no-print" aria-label="Outros materiais da matéria">
         {siblings.prev ? (

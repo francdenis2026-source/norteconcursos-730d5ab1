@@ -1,0 +1,284 @@
+{
+  "scope": "PC-AC 2017 S01-V; revisão individual, sem mudar enunciados ou gabaritos.",
+  "active": [
+    {
+      "item_number": 11,
+      "answer": "B",
+      "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "norm": null,
+      "reference": "Seleção de arquivos",
+      "explanation": "Resposta: B.\nCtrl permite selecionar pastas individualmente. Shift seleciona um intervalo; Tab muda o foco e Fn costuma acionar funções do teclado. Primeiro selecione as pastas; depois execute a cópia.\nExemplo: Para selecionar apenas Documentos e Imagens entre várias pastas, mantenha Ctrl pressionado e clique nas duas. Variação: para selecionar todas as pastas de um intervalo contínuo, use Shift."
+    },
+    {
+      "item_number": 12,
+      "answer": "A",
+      "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "norm": null,
+      "reference": "Sistema operacional",
+      "explanation": "Resposta: A.\nWindows XP é um exemplo histórico de sistema operacional. O sistema operacional gerencia recursos e oferece serviços aos aplicativos; não cuida somente da memória nem tem como única função combater invasores. Linux não pertence à Microsoft e Windows não é software livre de código aberto. A classificação histórica do XP não é recomendação para instalá-lo ou utilizá-lo hoje.\nExemplo: O editor de texto pede ao sistema operacional acesso a um arquivo; quem coordena esse recurso é o sistema operacional, não apenas a memória RAM."
+    },
+    {
+      "item_number": 14,
+      "answer": "D",
+      "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf",
+      "norm": null,
+      "reference": "Planilhas — fórmulas",
+      "explanation": "Resposta: D.\nO sinal de igual (=) é o marcador padrão de início de fórmula no Excel. A célula calcula a expressão, em vez de apenas apresentar o texto digitado. O símbolo $ fixa referências; @ e # têm outras funções. Há formas de entrada que o Excel pode converter em fórmula; a questão cobra a sintaxe padrão.\nExemplo: Digite =2+3 para obter 5. Variação: =SOMA(A1:A3) soma um intervalo, enquanto $A$1 representa referência absoluta dentro de uma fórmula."
+    },
+    {
+      "item_number": 15,
+      "answer": "A",
+      "topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
+      "norm": null,
+      "reference": "Firewall",
+      "explanation": "Resposta: A.\nFirewall pode ser implementado em software ou em equipamento dedicado. Ele controla o tráfego conforme regras. Não é protocolo de transferência nem armazenamento em nuvem. A filtragem de spam não o define, embora soluções integradas possam reunir vários serviços.\nExemplo: Uma regra permite conexões HTTPS e bloqueia uma porta desnecessária. Variação: antivírus procura ameaças em arquivos; firewall controla comunicações. Uma ferramenta não substitui automaticamente a outra."
+    },
+    {
+      "item_number": 16,
+      "answer": "B",
+      "topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "norm": null,
+      "reference": "Soma de progressão geométrica",
+      "explanation": "Resposta: B.\nHá 12 perdas diárias: 1, 2, 4, ..., 2¹¹. A soma é (2¹²−1)/(2−1)=4095 pimenteiras destruídas. Acrescente as cinco sobreviventes: 4095+5=4100. O 13º dia não entra na soma, pois o enunciado informa que a destruição cessou.\nExemplo: Se a destruição ocorresse só por três dias, seriam 1+2+4=7 perdas; com cinco sobreviventes, o total inicial seria 12. Na prova, aplique o mesmo raciocínio aos 12 termos."
+    },
+    {
+      "item_number": 17,
+      "answer": "A",
+      "topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "norm": null,
+      "reference": "Combinações",
+      "explanation": "Resposta: A.\nComo a ordem dos integrantes não importa, use combinações. Separe os casos: 2 mulheres e 4 homens → C(4,2)×C(7,4)=210; 3 e 3 → C(4,3)×C(7,3)=140; 4 e 2 → C(4,4)×C(7,2)=21. Total: 371. O comando diz pelo menos duas mulheres.\nExemplo: Contar só as 210 equipes com exatamente duas mulheres deixa de fora as equipes com três ou quatro. Variação: se fossem exigidas exatamente três, a resposta seria 140."
+    },
+    {
+      "item_number": 18,
+      "answer": "A",
+      "topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "norm": null,
+      "reference": "Probabilidade sem reposição",
+      "explanation": "Resposta: A.\nHá 9×8×7=504 resultados ordenados possíveis. Os favoráveis são 123, 234, 345, 456, 567, 678 e 789: sete resultados. Logo P=7/504=1/72. Não há reposição, e os algarismos devem ser consecutivos e crescentes.\nExemplo: 321 tem algarismos consecutivos, mas está em ordem decrescente e não conta. Variação: permitindo também a ordem decrescente, seriam 14 resultados favoráveis e a probabilidade seria 1/36."
+    },
+    {
+      "item_number": 19,
+      "answer": "B",
+      "topic_id": "a7ae3924-db95-4f19-9d59-67f2c3011458",
+      "norm": null,
+      "reference": "Contraposição",
+      "explanation": "Resposta: B.\nDefina P: Zeca comprou o apontador; Q: João gosta do suco; R: Emílio vai ao cinema. P→Q e Q→R implicam P→R. Como R é falso, conclui-se não P, por contraposição (modus tollens). Não troque os nomes nem atribua preferências sem apoio nas premissas.\nExemplo: Se estudar implicar revisar e revisar implicar fazer exercícios, não fazer exercícios permite concluir, nesse encadeamento, que a primeira condição não ocorreu. A inferência exige tratar as premissas dadas como verdadeiras."
+    },
+    {
+      "item_number": 20,
+      "answer": "E",
+      "topic_id": "3c989c30-37f2-41c5-84f0-65d9bf9e7a45",
+      "norm": null,
+      "reference": "Quantificadores",
+      "explanation": "Resposta: E.\nNo universo de policiais considerado, todo civil investigador estar em ação equivale a negar que exista um civil investigador fora de ação. Formalmente: ∀x[(C(x)∧I(x))→A(x)] equivale a ¬∃x[C(x)∧I(x)∧¬A(x)]. Atenção ao comando: procura-se a proposição cuja verdade está sendo negada.\nExemplo: Um único civil investigador fora de ação basta para contrariar a afirmação universal. Variação: achar alguém em ação não comprova que todos os integrantes do grupo estejam em ação."
+    },
+    {
+      "item_number": 21,
+      "answer": "A",
+      "topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "norm": "cf",
+      "reference": "art. 37, caput e § 1º",
+      "explanation": "Resposta: A.\nPublicidade institucional deve educar, informar ou orientar, sem promover pessoalmente autoridades ou servidores. Eficiência não é princípio absoluto. A alternativa D inverte os conceitos: anulação combate ilegalidade; revogação decorre de conveniência e oportunidade.\nExemplo: Divulgar o horário de vacinação informa a população; transformar o anúncio em campanha pessoal do gestor viola a impessoalidade. A identificação necessária de uma autoridade não se confunde automaticamente com promoção pessoal: finalidade e contexto importam."
+    },
+    {
+      "item_number": 22,
+      "answer": "D",
+      "topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "norm": "cf",
+      "reference": "art. 84, IV",
+      "explanation": "Resposta: D.\nO poder regulamentar permite editar regulamentos para a fiel execução da lei. É diferente do poder disciplinar, que trata de infrações e sanções em relações específicas, e da polícia administrativa, que condiciona atividades e direitos nos limites legais.\nExemplo: Um decreto detalha procedimentos necessários à execução de uma lei, respeitando-a. Variação: punir servidor por infração funcional é exercício do poder disciplinar, com competência e processo adequados, não simples exercício do poder de polícia."
+    },
+    {
+      "item_number": 24,
+      "answer": "C",
+      "topic_id": "d2bdb958-6b28-45c5-8da1-b29dbe72e905",
+      "norm": "cf",
+      "reference": "art. 37, § 6º",
+      "explanation": "Resposta: C.\nÓrgão é um centro de competências dentro de uma pessoa jurídica e não tem personalidade jurídica própria. Eventual responsabilidade patrimonial por dano imputável à atuação da Assembleia Legislativa estadual recai sobre o Estado, conforme os pressupostos da responsabilidade estatal. Capacidade processual excepcional para defender prerrogativas não confere personalidade ao órgão.\nExemplo: O órgão estadual atua, mas é o Estado que integra a relação de responsabilização patrimonial. Variação: autarquia é entidade com personalidade própria; não se confunde com órgão da administração direta."
+    },
+    {
+      "item_number": 27,
+      "answer": "E",
+      "topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "norm": "l9784",
+      "reference": "arts. 56, 57, 61, 64 e 65",
+      "explanation": "Resposta: E.\nNa revisão sancionadora por fatos novos, não se pode agravar a sanção (art. 65). No recurso, eventual agravamento exige prévia ciência para alegações (art. 64, parágrafo único). Cabe recurso por legalidade e mérito; são até três instâncias, salvo lei diversa, e não há efeito suspensivo como regra. A Lei 9.784/1999 rege o processo administrativo federal.\nExemplo: Rever uma multa com base em prova nova não permite aumentá-la. Variação: no recurso administrativo, se houver possibilidade de piorar a situação do recorrente, ele deve ter oportunidade de se manifestar antes da decisão."
+    },
+    {
+      "item_number": 28,
+      "answer": "C",
+      "topic_id": "2e8560fa-c1c5-4753-8ec6-275261802195",
+      "norm": "l9784",
+      "reference": "arts. 12 a 15",
+      "explanation": "Resposta: C.\nNão se delegam atos normativos, decisão de recursos administrativos e competência exclusiva. Fixação: norma, recurso e exclusividade. Decisão adotada por delegação é considerada editada pelo delegado, não pelo delegante. Avocação é excepcional, temporária e exige motivos relevantes justificados. A disciplina citada é a do processo administrativo federal.\nExemplo: Uma autoridade não pode transferir a decisão de um recurso por mera conveniência. Variação: quando a delegação é admitida, o ato deve indicar essa qualidade e seus limites; delegação não é renúncia à competência."
+    },
+    {
+      "item_number": 29,
+      "answer": "A",
+      "topic_id": "4c6b4294-b4c0-4d54-a187-d59dfe6764c9",
+      "norm": "cf",
+      "reference": "arts. 5º, XXV, e 37, § 6º",
+      "explanation": "Resposta: A.\nUm ato estatal lícito também pode gerar indenização quando causar dano indenizável, com os pressupostos próprios da hipótese. Não é obrigatório judicializar toda reparação. A regra geral não é risco integral e o regresso contra o agente exige dolo ou culpa. Servidor estatutário não se define por contrato trabalhista.\nExemplo: Na requisição administrativa por iminente perigo público, a Constituição assegura indenização posterior se houver dano. Variação: mero incômodo comum não produz automaticamente direito à compensação."
+    },
+    {
+      "item_number": 30,
+      "answer": "B",
+      "topic_id": "2e8560fa-c1c5-4753-8ec6-275261802195",
+      "norm": "l8112",
+      "reference": "arts. 121 a 126",
+      "explanation": "Resposta: B.\nUm fato pode gerar responsabilidade civil, penal e administrativa, observados os pressupostos de cada esfera. A Lei 8.112/1990 explicita isso para os servidores federais, referência da matriz PF 2025; ela não substitui o estatuto estadual do Acre. A absolvição criminal que negue o fato ou a autoria afasta a responsabilidade administrativa correspondente (art. 126).\nExemplo: Um desvio pode exigir ressarcimento, gerar processo penal e procedimento disciplinar. Variação: independência das instâncias não elimina a exceção legal ligada à inexistência do fato ou à negativa de autoria."
+    },
+    {
+      "item_number": 32,
+      "answer": "B",
+      "topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "norm": "cf",
+      "reference": "art. 5º, XXXVII e LIII",
+      "explanation": "Resposta: B.\nOs dispositivos apontam para a garantia do juiz natural e, na formulação da alternativa, do promotor natural. Não se escolhe um julgador de exceção para determinado caso; devem ser observadas as regras de competência e atribuição. A ADI 7170, consultada no STF, distingue apoio de grupo especializado de substituição indevida do promotor natural.\nExemplo: Criar um tribunal para julgar especialmente uma pessoa viola essa garantia. Variação: contraditório é a possibilidade de participação e reação; ampla defesa assegura meios defensivos. São garantias relacionadas, mas não resumem os dispositivos transcritos."
+    },
+    {
+      "item_number": 36,
+      "answer": "C",
+      "topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "norm": "cf",
+      "reference": "art. 5º, XII e XIV",
+      "explanation": "Resposta: C.\nNo caso narrado, não se pode interceptar jornalista sem participação no crime apenas para descobrir a fonte. O sigilo da fonte é garantia constitucional do exercício profissional. Isso não cria imunidade absoluta para eventual crime do próprio profissional. O STF reafirmou em 2026 a distinção entre apurar conduta ilícita e investigar atividade jornalística legítima.\nExemplo: Investigar corrupção pode ser legítimo, mas isso não autoriza usar o telefone do jornalista como atalho para revelar sua fonte protegida. Variação: a alternativa A exagera ao afirmar proteção em qualquer hipótese."
+    },
+    {
+      "item_number": 40,
+      "answer": "D",
+      "topic_id": "ef9221e3-d6c4-4b76-b747-e1a1e89fc1a2",
+      "norm": "cf",
+      "reference": "art. 5º, LI",
+      "explanation": "Resposta: D.\nO naturalizado pode ser extraditado nas hipóteses constitucionais, inclusive crime comum anterior à naturalização ou comprovado envolvimento em tráfico ilícito de drogas. Casamento ou filho brasileiro, isoladamente, não impedem a extradição (Súmula 421). A entrega exige tratado e demais requisitos; circunstâncias humanitárias excepcionais também podem ser relevantes, como na EXT 1784.\nExemplo: Naturalizar-se depois do crime não elimina automaticamente a possibilidade de extradição. Variação: a exceção humanitária examinada pelo STF em caso concreto não transforma toda filiação brasileira em impedimento automático."
+    },
+    {
+      "item_number": 41,
+      "answer": "B",
+      "topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "norm": "cp",
+      "reference": "art. 148",
+      "explanation": "Resposta: B.\nSequestro ou cárcere privado é permanente: a consumação se prolonga enquanto a vítima fica privada da liberdade. É de dano porque já existe lesão à liberdade de locomoção. Crime continuado é categoria diferente, ligada a vários crimes nas condições legais. Esta questão cobra classificação, não as penas ou qualificadoras alteradas posteriormente.\nExemplo: Manter alguém trancado por dois dias prolonga a consumação até a libertação. Variação: repetir crimes em ocasiões distintas não faz deles, só por isso, um crime permanente."
+    },
+    {
+      "item_number": 43,
+      "answer": "D",
+      "topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "norm": "cp",
+      "reference": "arts. 29 e 180",
+      "explanation": "Resposta: D.\nQuem participa da encomenda do crime patrimonial anterior responde pela contribuição a esse delito; receber depois seu produto não o torna receptador do próprio crime. A receptação qualificada não se confunde com a modalidade culposa do § 3º. As penas do art. 180 sofreram alterações posteriores: não copie as de 2017.\nExemplo: Encomendar previamente um furto e participar da empreitada é diferente de decidir adquirir o objeto somente depois de um furto alheio, sem participação anterior. O momento e a natureza da contribuição mudam o enquadramento."
+    },
+    {
+      "item_number": 47,
+      "answer": "C",
+      "topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "norm": "cp",
+      "reference": "art. 155, § 5º",
+      "explanation": "Resposta: C.\nArlindo realiza uma nova subtração sem violência ou grave ameaça e transporta o veículo para outro Estado: furto qualificado pelo § 5º. O roubo anterior cometido por outra pessoa não transforma a nova subtração em receptação. A pena do § 5º mudou em 2026; a resposta preservada cobra a classificação do crime.\nExemplo: Quem subtrai o carro e efetivamente o leva a outro Estado pratica a conduta descrita. Variação: receber conscientemente o carro do autor do furto, sem praticar a subtração, exige análise de receptação, não do mesmo comportamento narrado."
+    },
+    {
+      "item_number": 50,
+      "answer": "C",
+      "topic_id": "dcf19caf-aca7-482b-9c9c-bc53f3c0bdf6",
+      "norm": "cp",
+      "reference": "art. 123",
+      "explanation": "Resposta: C.\nInfanticídio é matar o próprio filho, sob influência do estado puerperal, durante o parto ou logo após. O parto não precisa ter terminado: a hipótese já informa seu início e a influência exigida. Ser mãe, isoladamente, não basta para o tipo especial.\nExemplo: Iniciado o parto, matar o próprio filho nas condições do art. 123 pode configurar infanticídio. Variação: sem influência do estado puerperal, o enquadramento deve ser examinado de outra forma. Fixe os três requisitos: próprio filho, influência puerperal e recorte temporal."
+    },
+    {
+      "item_number": 51,
+      "answer": "D",
+      "topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "norm": "cpp",
+      "reference": "arts. 283, § 2º, 284 e 285",
+      "explanation": "Resposta: D.\nA prisão pode ser efetuada em qualquer dia e horário, respeitada a inviolabilidade do domicílio. Horário da prisão não se confunde com autorização de ingresso na casa. Urgência não permite substituir livremente ordem judicial escrita por ordem verbal. A força deve ser indispensável e observar os limites legais.\nExemplo: O mandado pode ser executado em local público à noite. Variação: ingresso domiciliar baseado apenas em determinação judicial obedece ao período diurno; flagrante delito tem disciplina constitucional própria (CF, art. 5º, XI)."
+    },
+    {
+      "item_number": 52,
+      "answer": "C",
+      "topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "norm": "cpp",
+      "reference": "arts. 4º, 6º, 20 e 155",
+      "explanation": "Resposta: C.\nO inquérito é procedimento investigativo de caráter inquisitório e informativo. Apura fatos e reúne elementos para a atuação posterior. Isso não elimina os direitos do investigado nem autoriza prova ilegal. O art. 155 distingue elementos informativos da investigação e prova judicial, ressalvadas suas exceções.\nExemplo: Ouvir testemunhas e colher informações integra a investigação. Variação: sigilo necessário à elucidação não equivale a publicidade irrestrita nem a negar de modo absoluto o acesso defensivo aos elementos já documentados."
+    },
+    {
+      "item_number": 55,
+      "answer": "C",
+      "topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "norm": "cpp",
+      "reference": "art. 10, caput e § 3º",
+      "explanation": "Resposta: C.\nPela regra geral do art. 10, são 10 dias para indiciado preso e 30 para solto. Na hipótese de preventiva, o marco é a execução da ordem, não a expedição do mandado. Leis especiais e hipóteses de prorrogação possuem disciplina própria e controle judicial; não há prazo único e improrrogável para toda investigação.\nExemplo: Um mandado expedido, mas ainda não executado, não equivale à prisão mencionada na alternativa C. Variação: a regra geral do CPP não substitui automaticamente o prazo de uma investigação regida por lei especial."
+    },
+    {
+      "item_number": 58,
+      "answer": "C",
+      "topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "norm": "cpp",
+      "reference": "art. 157, caput e §§ 1º e 2º",
+      "explanation": "Resposta: C.\nA resposta oficial é C, como regra geral da prova ilícita por derivação. Uma prova aparentemente regular pode ser contaminada por sua origem ilícita. Ressalva indispensável: o § 1º admite as hipóteses de ausência de nexo causal e de fonte independente. Boa-fé e utilidade, isoladamente, não são a exceção genérica sugerida em D.\nExemplo: Uma diligência fundada exclusivamente em informação obtida por tortura pode gerar prova derivada inadmissível. Variação: fonte genuinamente independente deve ser examinada conforme os requisitos legais; não decore a alternativa como proibição absoluta de toda prova posterior."
+    },
+    {
+      "item_number": 59,
+      "answer": "B",
+      "topic_id": "a572ead8-4b70-4b28-b5aa-110fff10a435",
+      "norm": "cpp",
+      "reference": "art. 306, caput e §§ 1º e 2º",
+      "explanation": "Resposta: B.\nSe o autuado não informar advogado, uma cópia integral do auto de flagrante deve seguir à Defensoria em até 24 horas após a prisão. A comunicação da prisão ao juiz, ao MP e à família ou pessoa indicada é imediata. O envio do auto ao juiz tem prazo de até 24 horas. Não confunda comunicação e remessa documental.\nExemplo: O preso sem advogado recebe a proteção da Defensoria sem aguardar 48 ou 72 horas. Variação: comunicar imediatamente a família não substitui o envio do auto ao juiz nem da cópia integral à Defensoria quando cabível."
+    },
+    {
+      "item_number": 61,
+      "answer": "E",
+      "topic_id": "922aa7c1-5251-4c3e-8e33-65e4a05f3b14",
+      "norm": "l12830",
+      "reference": "art. 2º, §§ 1º, 2º, 4º, 5º e 6º",
+      "explanation": "Resposta: E.\nIndiciamento é ato privativo do delegado, fundamentado em análise técnico-jurídica com autoria, materialidade e circunstâncias. Não é condenação nem etiqueta automática. As outras opções trocam investigação por processo, infração penal por administrativa ou afastam fundamentação exigida para remoção e avocação.\nExemplo: Explicar como elementos colhidos vinculam alguém ao fato é diferente de apenas reproduzir uma suspeita. Variação: estar indiciado não elimina a presunção de inocência nem dispensa o respeito às garantias do investigado."
+    },
+    {
+      "item_number": 62,
+      "answer": "C",
+      "topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "norm": "drogas",
+      "reference": "art. 40, caput e III",
+      "explanation": "Resposta: C.\nO art. 40, III, prevê aumento de um sexto a dois terços quando a infração ocorre nas dependências ou imediações de estabelecimento prisional, entre outros locais legais. Intermunicipalidade não é transnacionalidade nem tráfico interestadual. Reincidência ou profissão, isoladamente, não substituem os requisitos das hipóteses citadas.\nExemplo: Tráfico destinado a abastecer um presídio exige examinar essa majorante conforme os fatos provados. Variação: estar fisicamente perto de determinado local não autoriza aplicação automática desvinculada do contexto e da interpretação exigida para a hipótese."
+    },
+    {
+      "item_number": 65,
+      "answer": "B",
+      "topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "norm": "tortura",
+      "reference": "art. 2º",
+      "explanation": "Resposta: B.\nA lei alcança o fato cometido fora do território nacional quando a vítima for brasileira OU o agente estiver em local sob jurisdição brasileira. As condições são alternativas, não cumulativas. Não confunda aplicação extraterritorial com dispensa dos demais requisitos processuais. O dispositivo cobrado foi cotejado no texto compilado, que já registra alterações de 2026 em outras partes da lei.\nExemplo: A nacionalidade brasileira da vítima é uma das hipóteses legais mesmo quando o fato ocorre no exterior. Variação: exigir simultaneamente vítima brasileira e agente sob jurisdição brasileira acrescentaria uma condição que o art. 2º não estabelece."
+    },
+    {
+      "item_number": 67,
+      "answer": "B",
+      "topic_id": "012bdb9d-f67d-48e9-911e-10be9fc9226e",
+      "norm": "ambientais",
+      "reference": "art. 3º; CF, art. 225, § 3º",
+      "explanation": "Resposta: B.\nNo RE 548181, o STF afastou a exigência de responsabilização simultânea de pessoa física para processar a pessoa jurídica por crime ambiental. Permanecem os requisitos de imputação do art. 3º: decisão do representante ou órgão colegiado, no interesse ou benefício da entidade. Responsabilidade independente não significa automática.\nExemplo: A dificuldade de individualizar a responsabilidade de um dirigente não impede, por si só, a acusação contra a empresa. Variação: a mera existência de uma empresa não prova que ela praticou o delito nem elimina os requisitos da lei."
+    }
+  ],
+  "historical": [
+    {
+      "item_number": 23,
+      "status": "archived",
+      "norm": "lia",
+      "reason": "A alternativa E reproduz o antigo parágrafo único do art. 1º, revogado na reforma de 2021. A disciplina atual está nos §§ 6º e 7º, e o art. 12 também teve as sanções alteradas. Algumas situações materiais podem continuar abrangidas, mas a transcrição antiga não descreve integralmente o regime atual. Manter como repertório histórico evita decorar o antigo corte percentual e confundir sanção patrimonial com a atual disciplina do ressarcimento.",
+      "explanation": "Repertório histórico — gabarito original preservado.\nA alternativa E reproduz o antigo parágrafo único do art. 1º, revogado na reforma de 2021. A disciplina atual está nos §§ 6º e 7º, e o art. 12 também teve as sanções alteradas. Algumas situações materiais podem continuar abrangidas, mas a transcrição antiga não descreve integralmente o regime atual. Manter como repertório histórico evita decorar o antigo corte percentual e confundir sanção patrimonial com a atual disciplina do ressarcimento.\nExemplo: Para um caso novo, verifique dolo, âmbito de incidência e consequências na redação atual. Não transporte automaticamente o texto da prova de 2017."
+    },
+    {
+      "item_number": 38,
+      "status": "obsolete",
+      "norm": "cf",
+      "reason": "O gabarito A é histórico. Desde a AP 937 (2018), o foro parlamentar depende de crime cometido durante o cargo e em razão das funções. O homicídio anterior ao mandato não vai automaticamente ao STF após a diplomação. A orientação de 2025 sobre manutenção do foro após a saída do cargo preservou os requisitos temporal e funcional.",
+      "explanation": "Repertório histórico — gabarito original preservado.\nO gabarito A é histórico. Desde a AP 937 (2018), o foro parlamentar depende de crime cometido durante o cargo e em razão das funções. O homicídio anterior ao mandato não vai automaticamente ao STF após a diplomação. A orientação de 2025 sobre manutenção do foro após a saída do cargo preservou os requisitos temporal e funcional.\nExemplo: Crime anterior ao mandato não adquire foro apenas porque seu autor foi eleito. A resposta histórica não deve ser ensinada como regra atual; o enunciado e a letra oficial são preservados para consulta histórica."
+    },
+    {
+      "item_number": 68,
+      "status": "obsolete",
+      "norm": "lep",
+      "reason": "O gabarito B cobra a antiga disciplina geral de 2/5 e 3/5. O § 2º do art. 2º da Lei 8.072/1990 foi revogado pela Lei 13.964/2019. A progressão é disciplinada no art. 112 da LEP, novamente alterado em 2026. O regime aplicável depende da hipótese e da lei no tempo: lei penal mais gravosa não retroage; a mais benéfica pode retroagir.",
+      "explanation": "Repertório histórico — gabarito original preservado.\nO gabarito B cobra a antiga disciplina geral de 2/5 e 3/5. O § 2º do art. 2º da Lei 8.072/1990 foi revogado pela Lei 13.964/2019. A progressão é disciplinada no art. 112 da LEP, novamente alterado em 2026. O regime aplicável depende da hipótese e da lei no tempo: lei penal mais gravosa não retroage; a mais benéfica pode retroagir.\nExemplo: Uma fração atual mais severa não pode ser aplicada automaticamente a fato antigo. O item permanece fora do treino atual, com gabarito preservado, sem produzir exercícios novos baseados nas antigas frações gerais."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "checked_at": "2026-10-16T03:08:29.603Z",
+  "exam": "PC-AC 2017 Agente S01-V",
+  "this_batch": {
+    "reviewed": 2,
+    "published_active": 2,
+    "items": [
+      48,
+      69
+    ],
+    "official_source_created": 1,
+    "syllabus_topics_created": 1
+  },
+  "cumulative_editorial_decisions": 52,
+  "cumulative_active": 49,
+  "historical_archived": 1,
+  "obsolete": 2,
+  "pending_in_exam": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    13,
+    25,
+    39,
+    42,
+    44,
+    45,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "pending_count": 27,
+  "validation": {
+    "mode": "published",
+    "verified_at": "2026-10-16T03:08:21.747Z",
+    "context_repairs_verified": 0,
+    "complete_exam_records_compared": 158,
+    "original_answers_and_raw_preserved": true,
+    "untargeted_records_preserved": 156,
+    "editorial_decisions_checked": 2,
+    "active_eligible": 2,
+    "formula_and_math_checks": true
+  },
+  "tests": {
+    "passed": 195,
+    "failed": 0,
+    "skipped": 0
+  },
+  "global_snapshot": {
+    "checked_at": "2026-10-16T03:08:29.603Z",
+    "tables": [
+      {
+        "table": "official_exam_questions",
+        "total": 4888,
+        "active": 3988,
+        "under_review": 580,
+        "archived": 253,
+        "obsolete": 30,
+        "annulled": 37,
+        "revoked": 0
+      },
+      {
+        "table": "board_exam_questions",
+        "total": 1054,
+        "active": 447,
+        "under_review": 600,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "curated_question_catalog",
+        "total": 1792,
+        "active": 1790,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 2,
+        "annulled": 0,
+        "revoked": 0
+      },
+      {
+        "table": "question_bank",
+        "total": 34,
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0,
+        "revoked": 0
+      }
+    ],
+    "totals": {
+      "total": 7768,
+      "active": 6259,
+      "under_review": 1180,
+      "archived": 260,
+      "obsolete": 32,
+      "annulled": 37,
+      "revoked": 0
+    }
+  },
+  "limitations": [
+    "Captura da Lei 5.553/1968 obtida na sessão anterior em 15/10; data preservada. Consulta de 16/10 retornou HTTP 503.",
+    "Questões médicas e itens ambíguos não foram ativados por mera reprodução do gabarito.",
+    "Contagens gerais incluem mudanças fora do lote; apenas as questões 48 e 69 foram alteradas nesta publicação.",
+    "Biblioteca de leis não foi alterada neste lote."
+  ],
+  "private_artifact_sha256": {
+    "before.json": "b74ab3f07886ad037c3e0ed58c19d738f54c0eb4d06e90eda425f269e071bbf6",
+    "after.json": "5539a3947c613c2ed78ea8609bf9b45c1dcee4da17c3f09bab765985ac2d4900",
+    "review-pack.json": "36f8590eebd1cdf037dcaad8473f2c659acbbb4f7b3d3ccb6032f043751629a9",
+    "validation.json": "c6a28d4481233b06f134741b61ef67ecaba13a04074a42e6c1b85b0421912340",
+    "legal-sources-pack.json": "7c721b8843334144d5e503e3e7d1d9a76a8d31a75c89dd048f2a7126c3eee060",
+    "topics-pack.json": "1cfbf0f4c8e7b518ce896247f06279262c814f5411cdbaef380b1addf326672a"
+  },
+  "library_snapshot": {
+    "courses": 42,
+    "current": 3511,
+    "reviewed": 2917,
+    "pending": 594,
+    "published_explanations": 3511
+  },
+  "library_pending": [
+    {
+      "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente",
+      "pending": 322
+    },
+    {
+      "title": "Lei 13.445/2017 — Lei de Migração",
+      "pending": 123
+    },
+    {
+      "title": "Decreto 11.491/2023 — Convenção de Budapeste",
+      "pending": 51
+    },
+    {
+      "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais",
+      "pending": 98
+    }
+  ]
+}

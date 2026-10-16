@@ -31,10 +31,14 @@ export function relatedVideos(
   discipline: string,
   topicLabel: string,
   limit = 4,
+  context: "general" | "enem" = "general",
 ): RelatedVideo[] {
-  const matchingSubjects = Object.keys(catalog.topicVideos).filter((subject) =>
-    correlates(subject, discipline),
-  );
+  const matchingSubjects = Object.keys(catalog.topicVideos).filter((subject) => {
+    const isEnem = /^enem\s*[—–-]/i.test(subject.trim());
+    if (isEnem !== (context === "enem")) return false;
+    const scopedSubject = isEnem ? subject.replace(/^enem\s*[—–-]\s*/i, "") : subject;
+    return correlates(scopedSubject, discipline);
+  });
   if (matchingSubjects.length === 0) return [];
 
   const bySpecificTopic: RelatedVideo[] = [];
@@ -57,7 +61,10 @@ const LAW_VIDEO_MAP: Record<string, { subject: string; topics: string[] | null }
   transito: { subject: "Legislação de Trânsito", topics: null },
   drogas: { subject: "Legislação Especial e Direitos Humanos", topics: ["drogas"] },
   abuso: { subject: "Legislação Especial e Direitos Humanos", topics: ["abuso de autoridade"] },
-  organizacoes: { subject: "Legislação Especial e Direitos Humanos", topics: ["organizacoes criminosas"] },
+  organizacoes: {
+    subject: "Legislação Especial e Direitos Humanos",
+    topics: ["organizacoes criminosas"],
+  },
   eca: { subject: "Legislação Especial e Direitos Humanos", topics: ["crianca e do adolescente"] },
   migracao: { subject: "Legislação Especial e Direitos Humanos", topics: ["migracao"] },
   armas: { subject: "Legislação Especial e Direitos Humanos", topics: ["desarmamento"] },

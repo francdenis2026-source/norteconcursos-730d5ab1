@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-16",
+  "course": "testemunhas",
+  "unit_key": "art-2",
+  "unit_id": "9a70beba-7d54-573d-af6e-b8e0d5652159",
+  "source": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+  "reason": "Explicitar a hipótese de incompatibilidade com restrições de comportamento do programa, preservando a ressalva de integridade física.",
+  "before_row_md5": "3a6757a1b56d1ccb8552ee19afd3e1ed",
+  "patch": {
+    "pontos": [
+      "Anuência + adequação ao caso + sigilo.",
+      "Também são excluídas do programa as pessoas cuja personalidade ou conduta seja incompatível com as restrições de comportamento exigidas. É critério específico de compatibilidade com o programa, não autorização para abandonar a proteção à integridade."
+    ],
+    "prova": [
+      "Excluir do programa elimina toda preservação da integridade do preso? Não; o §2º ressalva medidas pelos órgãos de segurança.",
+      "Pessoa cuja conduta seja incompatível com as restrições exigidas tem ingresso assegurado apenas por estar ameaçada? Não; o art. 2º, §2º, prevê essa exclusão, sem eliminar a preservação da integridade física pelos órgãos de segurança pública."
+    ]
+  },
+  "verified_after": {
+    "prova": [
+      "Excluir do programa elimina toda preservação da integridade do preso? Não; o §2º ressalva medidas pelos órgãos de segurança.",
+      "Pessoa cuja conduta seja incompatível com as restrições exigidas tem ingresso assegurado apenas por estar ameaçada? Não; o art. 2º, §2º, prevê essa exclusão, sem eliminar a preservação da integridade física pelos órgãos de segurança pública."
+    ],
+    "pontos": [
+      "Anuência + adequação ao caso + sigilo.",
+      "Também são excluídas do programa as pessoas cuja personalidade ou conduta seja incompatível com as restrições de comportamento exigidas. É critério específico de compatibilidade com o programa, não autorização para abandonar a proteção à integridade."
+    ],
+    "status": "published",
+    "termos": [],
+    "atencao": [
+      "Não transformar exclusão do programa em abandono de proteção à integridade. Familiares não ingressam automaticamente sem necessidade concreta."
+    ],
+    "exemplo": "A ameaça também alcança dependente de convivência habitual e a extensão é examinada. Variação: O colaborador está preso cautelarmente: a exclusão do programa não elimina medidas especiais de segurança cabíveis.",
+    "simples": "A proteção considera gravidade física/psicológica, dificuldade de resposta convencional e importância para a prova. Pode alcançar familiares/dependentes de convivência habitual. Ingresso e medidas exigem anuência; após ingresso, cumpre-se o programa e sigilo. Condenados em execução e pessoas sob prisão cautelar estão excluídos do programa, mas não da eventual preservação de integridade pelos órgãos de segurança.",
+    "unit_id": "9a70beba-7d54-573d-af6e-b8e0d5652159",
+    "remissoes": [],
+    "created_at": "2026-10-11T14:21:29.901609+00:00",
+    "updated_at": "2026-10-16T18:27:46.293117+00:00",
+    "authored_by": "codex",
+    "reviewed_at": "2026-10-16T18:27:46.293117+00:00",
+    "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+    "content_sha256": "56fb63060e0a1e303056909ca3e1773894561303ebb59717ac1f847ef1709f3c"
+  },
+  "verification": "Todos os campos comparados; somente pontos, prova e datas reviewed_at/updated_at alterados. Curso, unidade, edital, publicação e hash ativos protegidos na gravação."
+}

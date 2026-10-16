@@ -1,0 +1,2998 @@
+{
+  "version": "2026-10-11-transito-targeted",
+  "checked_at": "2026-10-13T22:38:52.110758+00:00",
+  "scope": "Revisão limitada aos artigos explicitamente listados, sem certificar os outros dispositivos.",
+  "laws": [
+    {
+      "slug": "transito",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro",
+      "units": 48,
+      "scope_type": "targeted_correction",
+      "course_current_units": 365,
+      "target_unit_keys": [
+        "art-296",
+        "art-297",
+        "art-298",
+        "art-301",
+        "art-302",
+        "art-303",
+        "art-304",
+        "art-305",
+        "art-306",
+        "art-307",
+        "art-308",
+        "art-309",
+        "art-310",
+        "art-311",
+        "art-312",
+        "art-312-a",
+        "art-312-b",
+        "art-313",
+        "art-314",
+        "art-315",
+        "art-316",
+        "art-317",
+        "art-319",
+        "art-319-a",
+        "art-320",
+        "art-320-a",
+        "art-323",
+        "art-325",
+        "art-326",
+        "art-326-a",
+        "art-326-b",
+        "art-326-c",
+        "art-327",
+        "art-328",
+        "art-329",
+        "art-330",
+        "art-331",
+        "art-332",
+        "art-333",
+        "art-334",
+        "art-336",
+        "art-337",
+        "art-338",
+        "art-338-a",
+        "art-339",
+        "art-340",
+        "art-341",
+        "anexo-1"
+      ],
+      "source_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "source_sha256": "0895770b0a095d5f0f08908c7fb03131d603981c145b97957ef16e3504d7bd69",
+      "source_checked_at": "2026-10-13T06:15:49.054361+00:00"
+    }
+  ],
+  "units": [
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-296",
+      "unit_id": "55053931-8308-57a8-952d-2b7421659c25",
+      "content_sha256": "435b287ce7a9cd4e82f0344deb13ad56fcc2883b6e2e5fe0036763bed6a63a41",
+      "simples": "Se o réu for reincidente na prática de crime previsto no Código, o juiz aplica a penalidade de suspensão da permissão ou habilitação para dirigir veículo automotor, sem prejuízo das demais sanções penais cabíveis.",
+      "pontos": [
+        "Reincidência impõe a suspensão da habilitação."
+      ],
+      "atencao": [
+        "Aplicação obrigatória na reincidência.",
+        "Integrar CP 63/64: não tratar toda condenação antiga como reincidência eterna nem denúncia como condenação."
+      ],
+      "exemplo": "Réu pratica novo crime do CTB após condenação criminal transitada em julgado, preenchidos os requisitos de reincidência. Resposta: a suspensão do art. 296 é obrigatória, sem prejuízo das demais sanções. Variação: Duas multas administrativas ou dois inquéritos não equivalem a reincidência penal.",
+      "prova": [
+        "Duas autuações já tornam o motorista reincidente penal? Não. É preciso condenação criminal anterior definitiva e requisitos dos arts. 63 e 64 do CP, não simples repetição administrativa.",
+        "O juiz pode dispensar livremente a suspensão quando configurada a hipótese? Não. O artigo usa APLICARÁ, sem substituir a análise prévia da reincidência legal."
+      ],
+      "termos": [
+        {
+          "termo": "Reincidência penal",
+          "significado": "Novo crime após condenação definitiva anterior, observados os requisitos e limites legais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 293",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "55053931-8308-57a8-952d-2b7421659c25",
+        "content_sha256": "435b287ce7a9cd4e82f0344deb13ad56fcc2883b6e2e5fe0036763bed6a63a41",
+        "simples": "Se o réu for reincidente na prática de crime previsto no Código, o juiz aplica a penalidade de suspensão da permissão ou habilitação para dirigir veículo automotor, sem prejuízo das demais sanções penais cabíveis.",
+        "pontos": [
+          "Reincidência impõe a suspensão da habilitação."
+        ],
+        "atencao": [
+          "Aplicação obrigatória na reincidência."
+        ],
+        "exemplo": "O reincidente em crime de trânsito tem a habilitação suspensa.",
+        "prova": [
+          "Assertiva que torna facultativa a suspensão na reincidência erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 293"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-297",
+      "unit_id": "70ed264d-f378-539e-b9f6-a68e18fc50e6",
+      "content_sha256": "b3f8a4d6c6e04454c7b767e7f9362513fead664ec6f57cf4ccf44614d9455293",
+      "simples": "A multa reparatória consiste no pagamento, mediante depósito judicial em favor da vítima ou de seus sucessores, de quantia calculada com base no §1º do art. 49 do Código Penal, sempre que houver prejuízo material resultante do crime. Não pode ser superior ao valor do prejuízo demonstrado no processo. Aplicam-se os arts. 50 a 52 do Código Penal. Na indenização civil, o valor da multa reparatória é descontado.",
+      "pontos": [
+        "Depósito judicial em favor da vítima.",
+        "Limite do prejuízo demonstrado.",
+        "Desconto na indenização civil."
+      ],
+      "atencao": [
+        "Limitada ao prejuízo demonstrado.",
+        "Não confundir multa administrativa ao órgão de trânsito, pena de multa comum e reparação à vítima. Remissões CP 49, §1º, e 50–52 exigem integração atual."
+      ],
+      "exemplo": "Prejuízo material demonstrado é R$ 2.000. Resposta: multa reparatória não pode exceder esse valor e é depositada judicialmente em favor da vítima/sucessores. Variação: Esse pagamento será descontado na indenização civil; não somar duas vezes o mesmo valor reparado.",
+      "prova": [
+        "Pode fixar R$ 3.000 de multa reparatória para prejuízo comprovado de R$ 2.000? Não. O §1º limita ao prejuízo demonstrado; não é licença para arbitramento superior.",
+        "O depósito elimina toda discussão sobre saldo indenizatório civil? Não. O §3º determina desconto do valor pago, distinto de extinguir todo dano civil eventualmente comprovado."
+      ],
+      "termos": [
+        {
+          "termo": "Multa reparatória",
+          "significado": "Pagamento judicial em favor da vítima/sucessores, com teto no prejuízo material comprovado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Código Penal, art. 49",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "70ed264d-f378-539e-b9f6-a68e18fc50e6",
+        "content_sha256": "b3f8a4d6c6e04454c7b767e7f9362513fead664ec6f57cf4ccf44614d9455293",
+        "simples": "A multa reparatória consiste no pagamento, mediante depósito judicial em favor da vítima ou de seus sucessores, de quantia calculada com base no §1º do art. 49 do Código Penal, sempre que houver prejuízo material resultante do crime. Não pode ser superior ao valor do prejuízo demonstrado no processo. Aplicam-se os arts. 50 a 52 do Código Penal. Na indenização civil, o valor da multa reparatória é descontado.",
+        "pontos": [
+          "Depósito judicial em favor da vítima.",
+          "Limite do prejuízo demonstrado.",
+          "Desconto na indenização civil."
+        ],
+        "atencao": [
+          "Limitada ao prejuízo demonstrado."
+        ],
+        "exemplo": "O condenado deposita em favor da vítima o valor do dano ao veículo.",
+        "prova": [
+          "Assertiva que permite multa reparatória superior ao prejuízo demonstrado erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Código Penal, art. 49"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-298",
+      "unit_id": "c77bd3bc-1b4c-56f5-af77-3cdf749c434a",
+      "content_sha256": "a0ebe9beae8e2bc5b23081203a069d34b960dc87a99638da4d04f1dc038be7e4",
+      "simples": "O art. 298 enumera sete agravantes dos crimes de trânsito, incluindo risco a duas ou mais pessoas ou grande risco de grave dano patrimonial, placas irregulares, habilitação, cuidados profissionais, adulteração de segurança e faixa de pedestres. A expressão sempre não autoriza dupla valoração: integrar CP 61 e causas específicas, como 302, §1º. Parágrafo vetado não cria regra atual.",
+      "pontos": [
+        "Sete circunstâncias agravantes.",
+        "Placas falsas, falta de habilitação e faixa de pedestres."
+      ],
+      "atencao": [
+        "Não ensinar aplicação automática cumulativa de agravante e majorante pelo mesmo fato.",
+        "Inciso V inclui cuidados especiais com PASSAGEIROS OU CARGA; a majorante do 302, §1º, IV, tem recorte próprio de transporte de passageiros."
+      ],
+      "exemplo": "Crime de trânsito é cometido com placas falsas e a circunstância não constitui elemento ou causa especial já valorada. Resposta: examinar agravante do inciso II. Variação: No homicídio culposo sem habilitação, o mesmo fato já tem majorante específica do 302, §1º, I; não valorar novamente como agravante genérica.",
+      "prova": [
+        "A palavra sempre permite punir duas vezes pelo mesmo fato? Não. Integrar CP 61, caput, e vedação de bis in idem quando a circunstância já constitui ou qualifica o crime ou tem aumento específico.",
+        "A existência de passageiro único já corresponde ao inciso I de duas ou mais pessoas? Não. Há recortes distintos: duas ou mais pessoas OU grande risco de grave dano patrimonial a terceiros."
+      ],
+      "termos": [
+        {
+          "termo": "Bis in idem",
+          "significado": "Dupla valoração punitiva indevida do mesmo fundamento, distinta de circunstâncias independentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 302",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "c77bd3bc-1b4c-56f5-af77-3cdf749c434a",
+        "content_sha256": "a0ebe9beae8e2bc5b23081203a069d34b960dc87a99638da4d04f1dc038be7e4",
+        "simples": "São circunstâncias que sempre agravam as penalidades dos crimes de trânsito ter o condutor cometido a infração com dano potencial para duas ou mais pessoas ou com grande risco de dano patrimonial a terceiros; utilizando o veículo sem placas, com placas falsas ou adulteradas; sem possuir Permissão para Dirigir ou CNH; com habilitação de categoria diferente; quando sua profissão exigir cuidados especiais com passageiros ou carga; com veículo adulterado em equipamentos ou características que afetem a segurança; ou sobre faixa destinada a pedestres.",
+        "pontos": [
+          "Sete circunstâncias agravantes.",
+          "Placas falsas, falta de habilitação e faixa de pedestres."
+        ],
+        "atencao": [
+          "Agravantes sempre aplicáveis aos crimes de trânsito."
+        ],
+        "exemplo": "Cometer o crime sem habilitação agrava a pena.",
+        "prova": [
+          "Assertiva que torna facultativa a aplicação das agravantes do art. 298 erra: elas sempre agravam."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 302"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-301",
+      "unit_id": "c4f175e3-895c-552a-ab3b-12fdc51d3850",
+      "content_sha256": "89e1c80d7413ce0a3a2677551bc72c7c7f24237bfe14fde233ef87826dcea013",
+      "simples": "Ao condutor de veículo, nos casos de sinistros de trânsito que resultem em vítima, não se impõe a prisão em flagrante nem se exige fiança, se prestar pronto e integral socorro àquela.",
+      "pontos": [
+        "Sem prisão em flagrante nem fiança se prestar pronto e integral socorro."
+      ],
+      "atencao": [
+        "Depende de pronto e integral socorro.",
+        "Não estender automaticamente a benefício para todo delito doloso ou flagrante independente."
+      ],
+      "exemplo": "Condutor presta pronto e integral socorro à vítima de sinistro de trânsito. Resposta: o artigo impede prisão em flagrante e exigência de fiança no seu recorte. Variação: Socorrer não torna o homicídio culposo inexistente nem dispensa investigação, responsabilidade civil ou eventual medida judicial cabível.",
+      "prova": [
+        "O socorro extingue todo crime e todo procedimento? Não. A consequência descrita é não impor flagrante nem exigir fiança, sem imunidade penal universal.",
+        "Um telefonema tardio e abandono da vítima bastam sempre? Não. O artigo exige PRONTO E INTEGRAL socorro, a ser aferido concretamente, não mero ato simbólico."
+      ],
+      "termos": [
+        {
+          "termo": "Socorro pronto e integral",
+          "significado": "Condição específica do art. 301, distinta de absolvição ou de imunidade geral."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 304"
+      ],
+      "expected": {
+        "unit_id": "c4f175e3-895c-552a-ab3b-12fdc51d3850",
+        "content_sha256": "89e1c80d7413ce0a3a2677551bc72c7c7f24237bfe14fde233ef87826dcea013",
+        "simples": "Ao condutor de veículo, nos casos de sinistros de trânsito que resultem em vítima, não se impõe a prisão em flagrante nem se exige fiança, se prestar pronto e integral socorro àquela.",
+        "pontos": [
+          "Sem prisão em flagrante nem fiança se prestar pronto e integral socorro."
+        ],
+        "atencao": [
+          "Depende de pronto e integral socorro."
+        ],
+        "exemplo": "O condutor que socorre a vítima imediatamente não é preso em flagrante.",
+        "prova": [
+          "Assertiva que impede a prisão em flagrante mesmo que o condutor deixe de socorrer erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-302",
+      "unit_id": "f14d47ad-e156-51cb-9785-b63856060035",
+      "content_sha256": "9b4d75d445b48a8d0afc1329dba260a179839f86c86e2876ebbd2fe707306ab7",
+      "simples": "Praticar homicídio culposo na direção de veículo automotor é crime punido com detenção de dois a quatro anos e suspensão ou proibição de se obter a permissão ou a habilitação. A pena aumenta de um terço à metade se o agente não possuir permissão ou habilitação, praticar o crime em faixa de pedestres ou na calçada, deixar de prestar socorro quando possível fazê-lo sem risco pessoal, ou, no exercício de sua profissão, estiver conduzindo veículo de transporte de passageiros. Se o agente conduz sob a influência de álcool ou outra substância psicoativa que determine dependência, a pena é de reclusão de cinco a oito anos, e suspensão ou proibição de obter a habilitação.",
+      "pontos": [
+        "Detenção de dois a quatro anos e suspensão da habilitação.",
+        "Aumento de um terço à metade em quatro hipóteses.",
+        "Com álcool: reclusão de cinco a oito anos.",
+        "§3º: RECLUSÃO 5–8 anos, não detenção; integrar a regra especial do art. 312-B."
+      ],
+      "atencao": [
+        "Lei 13.546/2017 incluiu §3º; não chamar genericamente Lei Seca sem identificar alteração.",
+        "§2º e inciso V revogados não são alternativas atuais de pena.",
+        "Majorantes de um terço à metade têm hipóteses expressas; não duplicar fundamento com 298.",
+        "O enquadramento depende de nexo, conduta, culpa/dolo e prova. Não automatizar inferência de dolo por álcool ou velocidade."
+      ],
+      "exemplo": "Motorista causa morte por imprudência, sem influência de substância. Resposta: homicídio CULPOSO na direção, detenção de dois a quatro anos e pena relativa à habilitação. Variação: No §3º, culpa e influência de álcool/substância levam a reclusão de cinco a oito anos; álcool não prova sozinho dolo eventual.",
+      "prova": [
+        "Todo condutor alcoolizado que mata responde automaticamente por homicídio doloso? Não. Dolo exige demonstração própria; o CTB prevê homicídio culposo qualificado no §3º.",
+        "A majorante profissional alcança indistintamente qualquer caminhoneiro só por exercer profissão? Não. O §1º, IV, descreve exercício profissional conduzindo veículo de transporte de PASSAGEIROS; não copiar o rol mais amplo do 298."
+      ],
+      "termos": [
+        {
+          "termo": "Culpa e dolo",
+          "significado": "Imprudência/negligência/imperícia e dolo são fundamentos distintos, não definidos apenas pela ingestão de álcool."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 303",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "f14d47ad-e156-51cb-9785-b63856060035",
+        "content_sha256": "9b4d75d445b48a8d0afc1329dba260a179839f86c86e2876ebbd2fe707306ab7",
+        "simples": "Praticar homicídio culposo na direção de veículo automotor é crime punido com detenção de dois a quatro anos e suspensão ou proibição de se obter a permissão ou a habilitação. A pena aumenta de um terço à metade se o agente não possuir permissão ou habilitação, praticar o crime em faixa de pedestres ou na calçada, deixar de prestar socorro quando possível fazê-lo sem risco pessoal, ou, no exercício de sua profissão, estiver conduzindo veículo de transporte de passageiros. Se o agente conduz sob a influência de álcool ou outra substância psicoativa que determine dependência, a pena é de reclusão de cinco a oito anos, e suspensão ou proibição de obter a habilitação.",
+        "pontos": [
+          "Detenção de dois a quatro anos e suspensão da habilitação.",
+          "Aumento de um terço à metade em quatro hipóteses.",
+          "Com álcool: reclusão de cinco a oito anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §3º (embriaguez, reclusão de cinco a oito anos) foi incluído por lei posterior (Lei Seca ampliada).",
+          "Aumento de um terço à metade."
+        ],
+        "exemplo": "O motorista embriagado que mata no trânsito responde a reclusão de cinco a oito anos.",
+        "prova": [
+          "Assertiva que fixa pena de detenção para o homicídio culposo com embriaguez erra: é reclusão."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 303"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-303",
+      "unit_id": "050f17b9-19ec-5405-a4f1-a4d2d9537d3c",
+      "content_sha256": "70abc3ca992a7486bd88f17ff0b5ba918d38cc42ba46a6c1ad3485e7a644280c",
+      "simples": "Praticar lesão corporal culposa na direção de veículo automotor é crime punido com detenção de seis meses a dois anos e suspensão ou proibição de se obter a permissão ou a habilitação. Aumenta-se a pena de um terço à metade nas hipóteses do §1º do art. 302. A pena é de reclusão de dois a cinco anos se o agente conduz com capacidade psicomotora alterada por álcool ou outra substância psicoativa e se do crime resultar lesão corporal de natureza grave ou gravíssima.",
+      "pontos": [
+        "Detenção de seis meses a dois anos e suspensão da habilitação.",
+        "Mesmo aumento do art. 302.",
+        "Reclusão de dois a cinco anos com embriaguez e lesão grave ou gravíssima."
+      ],
+      "atencao": [
+        "Lei 13.546/2017: alteração psicomotora + lesão grave/gravíssima. Não equiparar influência de álcool isolada à prova de todos os requisitos.",
+        "Integre art. 291 para institutos processuais e 312-B para substituição; não declarar todas as lesões leves automaticamente sujeitas a transação."
+      ],
+      "exemplo": "Motorista com capacidade psicomotora alterada por álcool causa lesão grave culposa. Resposta: §2º, reclusão de dois a cinco anos, sem prejuízo das outras penas. Variação: Lesão leve mesmo com álcool não satisfaz sozinha o §2º; examinar regime próprio e exceções processuais do 291, sem inventar pena qualificada.",
+      "prova": [
+        "Qualquer lesão de motorista que bebeu implica reclusão de dois a cinco anos? Não. Exige alteração psicomotora por substância E lesão grave ou gravíssima, além da culpa e demais elementos.",
+        "O §1º tem majorantes totalmente diferentes das do homicídio? Não. Remete às hipóteses do 302, §1º, com aumento de um terço à metade."
+      ],
+      "termos": [
+        {
+          "termo": "Requisitos cumulativos",
+          "significado": "Elementos que precisam coexistir para a qualificadora, não alternativas independentes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 302"
+      ],
+      "expected": {
+        "unit_id": "050f17b9-19ec-5405-a4f1-a4d2d9537d3c",
+        "content_sha256": "70abc3ca992a7486bd88f17ff0b5ba918d38cc42ba46a6c1ad3485e7a644280c",
+        "simples": "Praticar lesão corporal culposa na direção de veículo automotor é crime punido com detenção de seis meses a dois anos e suspensão ou proibição de se obter a permissão ou a habilitação. Aumenta-se a pena de um terço à metade nas hipóteses do §1º do art. 302. A pena é de reclusão de dois a cinco anos se o agente conduz com capacidade psicomotora alterada por álcool ou outra substância psicoativa e se do crime resultar lesão corporal de natureza grave ou gravíssima.",
+        "pontos": [
+          "Detenção de seis meses a dois anos e suspensão da habilitação.",
+          "Mesmo aumento do art. 302.",
+          "Reclusão de dois a cinco anos com embriaguez e lesão grave ou gravíssima."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o §2º foi incluído por lei posterior.",
+          "Embriaguez com lesão grave ou gravíssima: reclusão."
+        ],
+        "exemplo": "O condutor alcoolizado que causa lesão grave responde por reclusão de dois a cinco anos.",
+        "prova": [
+          "Assertiva que aplica reclusão à lesão culposa comum sem embriaguez erra: é detenção."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 302"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-304",
+      "unit_id": "8b11d682-0561-5adc-9716-cced7ea74e10",
+      "content_sha256": "a47132e7d17daea56a1c8bab9ad9f81b2ceb048b0b43416f49af43c9ed0fb6f2",
+      "simples": "Comete crime o condutor que, na ocasião do sinistro, deixa de prestar imediato socorro à vítima ou, não podendo fazê-lo diretamente, por justa causa, deixa de solicitar auxílio da autoridade pública. A pena é de detenção de seis meses a um ano, ou multa, se o fato não constituir elemento de crime mais grave. Incide nas mesmas penas o condutor ainda que sua omissão seja suprida por terceiros ou que se trate de vítima com morte instantânea ou ferimentos leves.",
+      "pontos": [
+        "Omissão de socorro do condutor.",
+        "Detenção de seis meses a um ano, ou multa.",
+        "Crime ainda que terceiros socorram ou a vítima morra de imediato."
+      ],
+      "atencao": [
+        "O crime persiste mesmo com socorro por terceiros ou morte instantânea.",
+        "Parágrafo menciona morte instantânea/ferimentos leves; não dispensar exame de conduta e culpabilidade nem impor socorro fisicamente impossível."
+      ],
+      "exemplo": "Condutor tem justa causa que impede socorro direto, mas pode pedir auxílio público e não pede. Resposta: a omissão alternativa descrita pode configurar o artigo. Variação: Se omissão já integra crime mais grave, observar subsidiariedade e evitar somar automaticamente 304 à majorante do 302 pela mesma omissão.",
+      "prova": [
+        "O socorro por terceiro sempre apaga a omissão do condutor? Não. O parágrafo expressamente conserva incidência mesmo quando a omissão é suprida por terceiros, observados os elementos do delito.",
+        "Impossibilidade justa de socorro direto autoriza abandonar sem pedir auxílio disponível? Não. O tipo prevê dever de solicitar auxílio da autoridade pública nessa hipótese."
+      ],
+      "termos": [
+        {
+          "termo": "Subsidiariedade",
+          "significado": "Aplicação se o fato não constituir elemento de crime mais grave, evitando duplicidade punitiva."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 176"
+      ],
+      "expected": {
+        "unit_id": "8b11d682-0561-5adc-9716-cced7ea74e10",
+        "content_sha256": "a47132e7d17daea56a1c8bab9ad9f81b2ceb048b0b43416f49af43c9ed0fb6f2",
+        "simples": "Comete crime o condutor que, na ocasião do sinistro, deixa de prestar imediato socorro à vítima ou, não podendo fazê-lo diretamente, por justa causa, deixa de solicitar auxílio da autoridade pública. A pena é de detenção de seis meses a um ano, ou multa, se o fato não constituir elemento de crime mais grave. Incide nas mesmas penas o condutor ainda que sua omissão seja suprida por terceiros ou que se trate de vítima com morte instantânea ou ferimentos leves.",
+        "pontos": [
+          "Omissão de socorro do condutor.",
+          "Detenção de seis meses a um ano, ou multa.",
+          "Crime ainda que terceiros socorram ou a vítima morra de imediato."
+        ],
+        "atencao": [
+          "O crime persiste mesmo com socorro por terceiros ou morte instantânea."
+        ],
+        "exemplo": "Quem foge sem socorrer a vítima, mesmo que outro a socorra, comete o crime.",
+        "prova": [
+          "Assertiva que afasta o crime se terceiros socorrerem a vítima erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 176"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-305",
+      "unit_id": "09c45fa2-0f53-5cf1-893a-51bc406a2abf",
+      "content_sha256": "6207fea9d9b9dd83bf5074e77a87cc6c4ebd9c0a9b6edb80d3d2c220213df8fc",
+      "simples": "Comete crime o condutor que se afasta do local do sinistro para fugir à responsabilidade penal ou civil que lhe possa ser atribuída. A pena é de detenção de seis meses a um ano, ou multa.",
+      "pontos": [
+        "Fuga do local do sinistro.",
+        "Detenção de seis meses a um ano, ou multa."
+      ],
+      "atencao": [
+        "STF reafirmou constitucionalidade na ADC 35, sessão encerrada em 9/10/2020, noticiada em 14/10/2020; Tema 907.",
+        "Não copiar antigo alerta de controvérsia sem registrar entendimento atual nem converter permanência em dever de confissão."
+      ],
+      "exemplo": "Condutor foge para evitar responsabilidade civil pelo sinistro. Resposta: finalidade de fuga à responsabilidade CIVIL OU PENAL integra o tipo, mesmo sem confissão exigida. Variação: Afastar-se para buscar socorro ou por risco concreto não equivale por si à finalidade específica descrita; apurar circunstâncias.",
+      "prova": [
+        "STF considerou o artigo integralmente inconstitucional por não autoincriminação? Não. Tema 907, RE 971959, e ADC 35 reconheceram sua constitucionalidade; permanecer para identificação não equivale a confessar.",
+        "Sair do local já demonstra automaticamente finalidade criminosa? Não. A finalidade de fugir à responsabilidade deve ser aferida; deslocamento por causa diversa não pode ser equiparado sem análise."
+      ],
+      "termos": [
+        {
+          "termo": "Finalidade específica",
+          "significado": "Propósito de fugir à responsabilidade penal ou civil, distinto do simples movimento físico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 304",
+        "https://noticias.stf.jus.br/postsnoticias/stf-reafirma-validade-de-dispositivo-que-tipifica-como-crime-a-fuga-do-local-de-acidente-de-transito/"
+      ],
+      "expected": {
+        "unit_id": "09c45fa2-0f53-5cf1-893a-51bc406a2abf",
+        "content_sha256": "6207fea9d9b9dd83bf5074e77a87cc6c4ebd9c0a9b6edb80d3d2c220213df8fc",
+        "simples": "Comete crime o condutor que se afasta do local do sinistro para fugir à responsabilidade penal ou civil que lhe possa ser atribuída. A pena é de detenção de seis meses a um ano, ou multa.",
+        "pontos": [
+          "Fuga do local do sinistro.",
+          "Detenção de seis meses a um ano, ou multa."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: houve discussão sobre a constitucionalidade do tipo; confira o entendimento do STF."
+        ],
+        "exemplo": "O condutor que foge do local para não ser responsabilizado comete o crime.",
+        "prova": [
+          "Assertiva que classifica a fuga do local como mera infração administrativa erra: também é crime."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 304"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-306",
+      "unit_id": "80bb4d55-009f-546a-8678-c40dd0d20289",
+      "content_sha256": "0a99966a201d764d244caef4b444294e70fb8e0907448f4c04ef4f298eff5b76",
+      "simples": "Comete crime quem conduz veículo automotor com capacidade psicomotora alterada em razão da influência de álcool ou de outra substância psicoativa que determine dependência. A pena é de detenção de seis meses a três anos, multa e suspensão ou proibição de obter a habilitação. A conduta é constatada por concentração igual ou superior a 6 decigramas de álcool por litro de sangue ou igual ou superior a 0,3 miligrama de álcool por litro de ar alveolar, ou por sinais que indiquem alteração da capacidade psicomotora. A verificação pode ser feita por teste de alcoolemia ou toxicológico, exame clínico, perícia, vídeo, prova testemunhal ou outros meios, observado o direito à contraprova.",
+      "pontos": [
+        "Detenção de seis meses a três anos, multa e suspensão da habilitação.",
+        "Limites: 6 decigramas por litro de sangue ou 0,3 miligrama por litro de ar.",
+        "Provas diversas além do bafômetro.",
+        "Direito à contraprova."
+      ],
+      "atencao": [
+        "Não afirmar que leitura bruta de 0,30 mg/L sempre configura crime: aplicar margem e procedimento vigentes.",
+        "Resolução 1031/2026 revogou 432/2013; pré-teste indicativo não substitui teste definitivo. Conjunto de ao menos dois sinais registrado, não sinal único isolado como regra automática.",
+        "Alterações de fichas do Manual 985 só em 17/10/2026; não antecipar na conferência de 13/10.",
+        "Infração administrativa e crime têm elementos próprios; não transformar qualquer quantidade de álcool ou recusa em condenação penal."
+      ],
+      "exemplo": "Etilômetro apresenta medição realizada de 0,34 mg/L, no procedimento metrológico pertinente. Resposta: comparar valor considerado após erro admitido com o limiar penal; não usar leitura bruta como se fosse considerada. Variação: Recusa isolada não prova o crime, mas o conjunto de sinais registrado e outras provas lícitas pode demonstrar alteração psicomotora, com direito à contraprova.",
+      "prova": [
+        "O limite textual 0,3 mg/L elimina a margem metrológica do aparelho? Não. Distinguir limiar legal e medição realizada; Resolução 1031 trabalha com erro admitido e 0,34 mg/L na medição para o recorte criminal.",
+        "Sem teste de sopro é impossível comprovar o crime? Não. O §2º admite exame, perícia, vídeo, testemunhas e demais meios lícitos, com contraprova; recusa isolada não substitui prova."
+      ],
+      "termos": [
+        {
+          "termo": "Medição realizada e considerada",
+          "significado": "Leitura do aparelho e resultado após erro metrológico são valores distintos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 165",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
+      ],
+      "expected": {
+        "unit_id": "80bb4d55-009f-546a-8678-c40dd0d20289",
+        "content_sha256": "0a99966a201d764d244caef4b444294e70fb8e0907448f4c04ef4f298eff5b76",
+        "simples": "Comete crime quem conduz veículo automotor com capacidade psicomotora alterada em razão da influência de álcool ou de outra substância psicoativa que determine dependência. A pena é de detenção de seis meses a três anos, multa e suspensão ou proibição de obter a habilitação. A conduta é constatada por concentração igual ou superior a 6 decigramas de álcool por litro de sangue ou igual ou superior a 0,3 miligrama de álcool por litro de ar alveolar, ou por sinais que indiquem alteração da capacidade psicomotora. A verificação pode ser feita por teste de alcoolemia ou toxicológico, exame clínico, perícia, vídeo, prova testemunhal ou outros meios, observado o direito à contraprova.",
+        "pontos": [
+          "Detenção de seis meses a três anos, multa e suspensão da habilitação.",
+          "Limites: 6 decigramas por litro de sangue ou 0,3 miligrama por litro de ar.",
+          "Provas diversas além do bafômetro.",
+          "Direito à contraprova."
+        ],
+        "atencao": [
+          "Limites de 6 decigramas no sangue e 0,3 miligrama no ar alveolar.",
+          "Pode ser provado por vídeo, testemunhas e exame clínico."
+        ],
+        "exemplo": "Concentração de 0,3 mg de álcool por litro de ar configura o crime.",
+        "prova": [
+          "Assertiva que exige necessariamente o bafômetro para comprovar o crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 165"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-307",
+      "unit_id": "c8674be3-b57e-57ab-ba49-3e1d3a1e62a3",
+      "content_sha256": "8d50cb33f551c2a8543be8239579c59e06ff9222284dd583f299ca5ba774b507",
+      "simples": "Comete crime quem viola a suspensão ou a proibição de se obter a permissão ou a habilitação para dirigir veículo automotor imposta com fundamento no Código. A pena é de detenção de seis meses a um ano e multa, com nova imposição adicional de idêntico prazo de suspensão ou proibição. Incorre nas mesmas penas o condenado que deixa de entregar, no prazo do §1º do art. 293, a Permissão para Dirigir ou a CNH.",
+      "pontos": [
+        "Violar a suspensão ou proibição.",
+        "Detenção de seis meses a um ano e multa.",
+        "Nova imposição de igual prazo.",
+        "Deixar de entregar o documento no prazo."
+      ],
+      "atencao": [
+        "Não deduzir incidência penal universal de toda suspensão administrativa a partir da literalidade; confronto jurisprudencial específico necessário.",
+        "Não certificada neste lote a íntegra da jurisprudência sobre suspensão administrativa: pesquisa oficial não retornou acórdão identificável. Exemplos limitados à suspensão judicial e ao marco textual da entrega.",
+        "Responsabilidade penal não é automática: examinar decisão válida, ciência, conduta e elementos subjetivos."
+      ],
+      "exemplo": "Condenado viola suspensão judicial de direção imposta no processo criminal. Resposta: examinar art. 307, com detenção de seis meses a um ano E multa e nova imposição de idêntico prazo. Variação: Para suspensão administrativa, não presumir responsabilidade criminal só pela palavra suspensão: distinguir art. 162, II, art. 263 e interpretação judicial específica.",
+      "prova": [
+        "No exemplo de suspensão judicial, a nova imposição tem qualquer prazo escolhido livremente pelo artigo? Não. O tipo prevê adicional de IDÊNTICO PRAZO de suspensão/proibição, com os demais requisitos.",
+        "A omissão de entrega do documento dispensa o marco da intimação do 293? Não. O parágrafo remete ao 293, §1º: prazo de 48 horas após intimação pertinente, não ciência informal sem procedimento."
+      ],
+      "termos": [
+        {
+          "termo": "Suspensão judicial",
+          "significado": "Medida imposta no processo penal, cuja violação deve ser distinguida da suspensão administrativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 293"
+      ],
+      "expected": {
+        "unit_id": "c8674be3-b57e-57ab-ba49-3e1d3a1e62a3",
+        "content_sha256": "8d50cb33f551c2a8543be8239579c59e06ff9222284dd583f299ca5ba774b507",
+        "simples": "Comete crime quem viola a suspensão ou a proibição de se obter a permissão ou a habilitação para dirigir veículo automotor imposta com fundamento no Código. A pena é de detenção de seis meses a um ano e multa, com nova imposição adicional de idêntico prazo de suspensão ou proibição. Incorre nas mesmas penas o condenado que deixa de entregar, no prazo do §1º do art. 293, a Permissão para Dirigir ou a CNH.",
+        "pontos": [
+          "Violar a suspensão ou proibição.",
+          "Detenção de seis meses a um ano e multa.",
+          "Nova imposição de igual prazo.",
+          "Deixar de entregar o documento no prazo."
+        ],
+        "atencao": [
+          "Quem não entrega o documento em quarenta e oito horas também comete o crime."
+        ],
+        "exemplo": "Quem dirige durante a suspensão judicial comete o crime e sofre nova suspensão.",
+        "prova": [
+          "Assertiva que isenta o condenado que não entrega o documento no prazo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 293"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-308",
+      "unit_id": "ded8f94f-8946-593d-bd4a-b7663c1e7ffc",
+      "content_sha256": "dcd751a6af86467d37a9aaf4710d07460f002242f38aec3f051d576e3d2bb567",
+      "simples": "Comete crime quem participa, na direção de veículo automotor, em via pública, de corrida, disputa ou competição automobilística ou de exibição ou demonstração de perícia em manobra, não autorizada, gerando situação de risco à incolumidade pública ou privada. A pena é de detenção de seis meses a três anos, multa e suspensão ou proibição de obter a habilitação. Se resultar lesão corporal de natureza grave sem dolo ou assunção do risco, a pena é de reclusão de três a seis anos; se resultar morte, nas mesmas circunstâncias, de cinco a dez anos.",
+      "pontos": [
+        "Racha e exibição de manobras não autorizados.",
+        "Detenção de seis meses a três anos, multa e suspensão.",
+        "Lesão grave: reclusão de três a seis anos.",
+        "Morte: reclusão de cinco a dez anos."
+      ],
+      "atencao": [
+        "Qualificadoras: lesão grave (três a seis anos) e morte (cinco a dez anos).",
+        "Lesão GRAVE: reclusão 3–6; morte: reclusão 5–10, sem prejuízo das outras penas; não trocar faixas."
+      ],
+      "exemplo": "Corrida não autorizada em via pública gera risco à incolumidade. Resposta: examinar caput, detenção de seis meses a três anos, multa e consequência à habilitação. Variação: Competição autorizada em circuito fechado não se equipara automaticamente ao caput. Morte não querida nem assumida tem §2º; dolo exige enquadramento próprio.",
+      "prova": [
+        "A morte do §2º pode ser desejada ou ter risco assumido pelo agente? Não. A qualificadora pressupõe que ele NÃO quis resultado NEM assumiu risco; não copiar como tipo para todo homicídio doloso.",
+        "Qualquer manobra exibida em qualquer espaço é automaticamente art. 308? Não. O tipo exige direção automotora, via pública, ausência de autorização e risco à incolumidade, no recorte descrito."
+      ],
+      "termos": [
+        {
+          "termo": "Resultado não doloso",
+          "significado": "Qualificadora por resultado que não foi querido nem teve risco assumido, distinta de dolo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 173"
+      ],
+      "expected": {
+        "unit_id": "ded8f94f-8946-593d-bd4a-b7663c1e7ffc",
+        "content_sha256": "dcd751a6af86467d37a9aaf4710d07460f002242f38aec3f051d576e3d2bb567",
+        "simples": "Comete crime quem participa, na direção de veículo automotor, em via pública, de corrida, disputa ou competição automobilística ou de exibição ou demonstração de perícia em manobra, não autorizada, gerando situação de risco à incolumidade pública ou privada. A pena é de detenção de seis meses a três anos, multa e suspensão ou proibição de obter a habilitação. Se resultar lesão corporal de natureza grave sem dolo ou assunção do risco, a pena é de reclusão de três a seis anos; se resultar morte, nas mesmas circunstâncias, de cinco a dez anos.",
+        "pontos": [
+          "Racha e exibição de manobras não autorizados.",
+          "Detenção de seis meses a três anos, multa e suspensão.",
+          "Lesão grave: reclusão de três a seis anos.",
+          "Morte: reclusão de cinco a dez anos."
+        ],
+        "atencao": [
+          "Qualificadoras: lesão grave (três a seis anos) e morte (cinco a dez anos)."
+        ],
+        "exemplo": "O racha que causa lesão grave não querida pelo agente tem pena de reclusão de três a seis anos.",
+        "prova": [
+          "Assertiva que fixa pena de reclusão de cinco a dez anos para a lesão grave culposa no racha erra: esse é o patamar da morte."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 173"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-309",
+      "unit_id": "e21a507c-ee0b-5526-8f6a-c8d2ad89da79",
+      "content_sha256": "1155c6d988a36f488bd773bac76466d62aa4c120d13d8589cc8cf4ebc04af919",
+      "simples": "Comete crime quem dirige veículo automotor, em via pública, sem a devida Permissão para Dirigir ou Habilitação ou, ainda, se cassado o direito de dirigir, gerando perigo de dano. A pena é de detenção de seis meses a um ano, ou multa.",
+      "pontos": [
+        "Dirigir sem habilitação gerando perigo de dano.",
+        "Detenção de seis meses a um ano, ou multa."
+      ],
+      "atencao": [
+        "Exige perigo de dano (crime de perigo concreto).",
+        "Via pública e veículo automotor integram o 309; não confundir CNH vencida ou documento não portado com todas as hipóteses penais."
+      ],
+      "exemplo": "Pessoa sem habilitação dirige em via pública criando perigo de dano comprovado. Resposta: tipo penal de perigo concreto, distinto da mera falta documental. Variação: Sem demonstrar perigo de dano do tipo, não concluir crime do 309 apenas porque existe infração administrativa; entregar direção pelo 310 tem entendimento próprio.",
+      "prova": [
+        "A mera ausência de CNH elimina necessidade de provar perigo no 309? Não. O artigo exige GERANDO PERIGO DE DANO; sanção administrativa tem pressupostos próprios.",
+        "O 310 deve receber por analogia todos os elementos do 309? Não. São condutas e regimes distintos; Súmula 575/STJ trata da entrega/permissão sem exigir perigo concreto."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo concreto",
+          "significado": "Perigo de dano exigido no tipo, distinto da presunção suficiente em crime de perigo abstrato."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 162",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=575+INPATH%28NUM%29"
+      ],
+      "expected": {
+        "unit_id": "e21a507c-ee0b-5526-8f6a-c8d2ad89da79",
+        "content_sha256": "1155c6d988a36f488bd773bac76466d62aa4c120d13d8589cc8cf4ebc04af919",
+        "simples": "Comete crime quem dirige veículo automotor, em via pública, sem a devida Permissão para Dirigir ou Habilitação ou, ainda, se cassado o direito de dirigir, gerando perigo de dano. A pena é de detenção de seis meses a um ano, ou multa.",
+        "pontos": [
+          "Dirigir sem habilitação gerando perigo de dano.",
+          "Detenção de seis meses a um ano, ou multa."
+        ],
+        "atencao": [
+          "Exige perigo de dano (crime de perigo concreto)."
+        ],
+        "exemplo": "Dirigir sem habilitação em via movimentada, gerando perigo, é crime.",
+        "prova": [
+          "Assertiva que dispensa o perigo de dano para a configuração do crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 162"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-310",
+      "unit_id": "e309dcf3-97ea-5e27-b6fc-ade7959f2a55",
+      "content_sha256": "5b3635f4f33ddd4d9ab3b90ab36e986a57e970b5fe7ef28b1ca316953a913bab",
+      "simples": "Comete crime quem permite, confia ou entrega a direção de veículo automotor a pessoa não habilitada, com habilitação cassada ou com o direito de dirigir suspenso, ou a quem, por seu estado de saúde, física ou mental, ou por embriaguez, não esteja em condições de conduzi-lo com segurança. A pena é de detenção de seis meses a um ano, ou multa.",
+      "pontos": [
+        "Entregar a direção a não habilitado, cassado, suspenso ou inapto.",
+        "Detenção de seis meses a um ano, ou multa."
+      ],
+      "atencao": [
+        "Também alcança a entrega a pessoa embriagada.",
+        "Súmula 575/STJ julgada em 22/6/2016, DJe 27/6/2016; texto oficial consultado em 13/10/2026.",
+        "Não presumir ciência ou dolo por simples propriedade do veículo; analisar o ato de permitir, confiar ou entregar."
+      ],
+      "exemplo": "Proprietário entrega conscientemente a direção a pessoa não habilitada. Resposta: Súmula 575/STJ dispensa lesão ou perigo de dano concreto para o art. 310. Variação: Dirigir sem habilitação é conduta do 309, com perigo de dano; não copiar sua exigência para aquele que permite/confia/entrega.",
+      "prova": [
+        "Para quem entrega a direção, é indispensável acidente com vítima? Não. Súmula 575: crime independentemente de lesão ou perigo de dano concreto, sem dispensar conduta e demais elementos.",
+        "A deficiência ou diagnóstico tornam toda entrega criminosa? Não. O recorte de saúde exige falta de condições de conduzir com segurança; não presumir incapacidade pela deficiência em si."
+      ],
+      "termos": [
+        {
+          "termo": "Perigo abstrato",
+          "significado": "No recorte da Súmula 575, dispensa prova de perigo concreto, não dispensa os demais elementos do crime."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 166",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&operador=AND&ordenacao=-%40NUM&p=false&sumula=575+INPATH%28NUM%29"
+      ],
+      "expected": {
+        "unit_id": "e309dcf3-97ea-5e27-b6fc-ade7959f2a55",
+        "content_sha256": "5b3635f4f33ddd4d9ab3b90ab36e986a57e970b5fe7ef28b1ca316953a913bab",
+        "simples": "Comete crime quem permite, confia ou entrega a direção de veículo automotor a pessoa não habilitada, com habilitação cassada ou com o direito de dirigir suspenso, ou a quem, por seu estado de saúde, física ou mental, ou por embriaguez, não esteja em condições de conduzi-lo com segurança. A pena é de detenção de seis meses a um ano, ou multa.",
+        "pontos": [
+          "Entregar a direção a não habilitado, cassado, suspenso ou inapto.",
+          "Detenção de seis meses a um ano, ou multa."
+        ],
+        "atencao": [
+          "Também alcança a entrega a pessoa embriagada."
+        ],
+        "exemplo": "Quem empresta o carro a um amigo embriagado comete o crime.",
+        "prova": [
+          "Assertiva que limita o crime à entrega do veículo a quem não tem habilitação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 166"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-311",
+      "unit_id": "e547fdbe-71ae-50e0-8565-963e64de08cc",
+      "content_sha256": "19432f3f8334ad7e8afa1435d1ac72f75d96c7e626d8dd55d8c947c947c8ac72",
+      "simples": "Comete crime quem trafega em velocidade incompatível com a segurança nas proximidades de escolas, hospitais, estações de embarque e desembarque de passageiros, logradouros estreitos, ou onde haja grande movimentação ou concentração de pessoas, gerando perigo de dano. A pena é de detenção de seis meses a um ano, ou multa.",
+      "pontos": [
+        "Velocidade incompatível perto de escolas e outros locais.",
+        "Detenção de seis meses a um ano, ou multa.",
+        "Exige perigo de dano."
+      ],
+      "atencao": [
+        "Exige perigo de dano.",
+        "Integre art. 220 para infração administrativa; não converter todo excesso de velocidade em crime."
+      ],
+      "exemplo": "Condutor passa diante de escola em velocidade incompatível e gera perigo concreto. Resposta: art. 311 exige contexto, incompatibilidade e perigo de dano. Variação: Ultrapassar limite numérico do 218 não satisfaz automaticamente todos os elementos do 311; velocidade formalmente permitida também não garante segurança concreta.",
+      "prova": [
+        "Só radar acima da placa é suficiente para provar todos os elementos do crime? Não. O tipo exige velocidade incompatível nos contextos enumerados e perigo de dano, não mero percentual de excesso.",
+        "A ausência de vítima lesionada impede o tipo? Não. O artigo exige perigo de dano, distinto de lesão consumada, sempre com prova do recorte concreto."
+      ],
+      "termos": [
+        {
+          "termo": "Velocidade incompatível",
+          "significado": "Inadequação à segurança nas condições concretas, distinta de simples comparação numérica com a placa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 220"
+      ],
+      "expected": {
+        "unit_id": "e547fdbe-71ae-50e0-8565-963e64de08cc",
+        "content_sha256": "19432f3f8334ad7e8afa1435d1ac72f75d96c7e626d8dd55d8c947c947c8ac72",
+        "simples": "Comete crime quem trafega em velocidade incompatível com a segurança nas proximidades de escolas, hospitais, estações de embarque e desembarque de passageiros, logradouros estreitos, ou onde haja grande movimentação ou concentração de pessoas, gerando perigo de dano. A pena é de detenção de seis meses a um ano, ou multa.",
+        "pontos": [
+          "Velocidade incompatível perto de escolas e outros locais.",
+          "Detenção de seis meses a um ano, ou multa.",
+          "Exige perigo de dano."
+        ],
+        "atencao": [
+          "Exige perigo de dano."
+        ],
+        "exemplo": "Correr em frente a uma escola, gerando perigo, é crime.",
+        "prova": [
+          "Assertiva que dispensa o perigo de dano nesse crime erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 220"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-312",
+      "unit_id": "c528835f-306c-5b5f-880b-c1376387a670",
+      "content_sha256": "47d07356d518617587f2addd6ee20b2c6acf076e3d58b4052ac98d7676fc7cd9",
+      "simples": "Comete crime quem inova artificiosamente, em caso de sinistro com vítima, na pendência do procedimento policial preparatório, inquérito policial ou processo penal, o estado de lugar, de coisa ou de pessoa, a fim de induzir a erro o agente policial, o perito ou o juiz. A pena é de detenção de seis meses a um ano, ou multa. O tipo se aplica ainda que não iniciados o procedimento, o inquérito ou o processo quando da inovação.",
+      "pontos": [
+        "Fraude processual em sinistro com vítima.",
+        "Detenção de seis meses a um ano, ou multa.",
+        "Aplica-se mesmo antes do início do procedimento."
+      ],
+      "atencao": [
+        "Alcança a inovação antes mesmo de iniciado o inquérito.",
+        "Não omitir COM VÍTIMA e finalidade específica; preservar segurança/socorro e análise da prova."
+      ],
+      "exemplo": "Após sinistro com vítima, condutor altera artificialmente posição de objeto para enganar perícia, antes de aberto inquérito. Resposta: parágrafo permite incidência mesmo antes do procedimento. Variação: Retirar veículo para salvar vítima, sem finalidade de induzir autoridade a erro, não se equipara automaticamente à fraude.",
+      "prova": [
+        "Toda mudança na cena para socorrer é fraude do 312? Não. Exige inovação artificiosa e finalidade de induzir a erro policial, perito ou juiz; socorro não prova esse propósito.",
+        "A inexistência de inquérito já instaurado impede sempre o crime? Não. O parágrafo alcança inovação antes do início dos procedimentos enumerados, no contexto de sinistro com vítima."
+      ],
+      "termos": [
+        {
+          "termo": "Inovação artificiosa",
+          "significado": "Alteração com propósito de enganar os destinatários legais, distinta de qualquer movimentação legítima."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 279"
+      ],
+      "expected": {
+        "unit_id": "c528835f-306c-5b5f-880b-c1376387a670",
+        "content_sha256": "47d07356d518617587f2addd6ee20b2c6acf076e3d58b4052ac98d7676fc7cd9",
+        "simples": "Comete crime quem inova artificiosamente, em caso de sinistro com vítima, na pendência do procedimento policial preparatório, inquérito policial ou processo penal, o estado de lugar, de coisa ou de pessoa, a fim de induzir a erro o agente policial, o perito ou o juiz. A pena é de detenção de seis meses a um ano, ou multa. O tipo se aplica ainda que não iniciados o procedimento, o inquérito ou o processo quando da inovação.",
+        "pontos": [
+          "Fraude processual em sinistro com vítima.",
+          "Detenção de seis meses a um ano, ou multa.",
+          "Aplica-se mesmo antes do início do procedimento."
+        ],
+        "atencao": [
+          "Alcança a inovação antes mesmo de iniciado o inquérito."
+        ],
+        "exemplo": "Mudar a posição dos veículos para enganar a perícia é crime.",
+        "prova": [
+          "Assertiva que só pune a inovação após a abertura do inquérito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 279"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-312-a",
+      "unit_id": "94894157-5534-55af-88ef-5a9161ae74d1",
+      "content_sha256": "9c349c1d69af7a631a68d1907cc29fa730fa504403185175851490e5cf57f499",
+      "simples": "Para os crimes dos arts. 302 a 312, quando o juiz aplicar a substituição da pena privativa de liberdade por pena restritiva de direitos, esta deve ser de prestação de serviço à comunidade ou a entidades públicas, em atividades como trabalho aos fins de semana em equipes de resgate dos bombeiros e outras unidades de atendimento a vítimas de trânsito, trabalho em pronto-socorro da rede pública, trabalho em clínicas ou instituições de recuperação de sinistrados e outras atividades relacionadas a resgate e atendimento.",
+      "pontos": [
+        "Substituição por prestação de serviço relacionada a vítimas de trânsito.",
+        "Resgate, pronto-socorro e recuperação de sinistrados."
+      ],
+      "atencao": [
+        "Lei 13.281/2016 inseriu 312-A; Lei 14.599/2023 atualizou terminologia. Não confundir substituição com suspensão condicional da pena ou do processo."
+      ],
+      "exemplo": "Juiz admite substituição cabível para crime do capítulo. Resposta: o 312-A direciona prestação de serviços a resgate, atendimento ou recuperação de vítimas. Variação: O artigo não torna cabível substituição em todo caso: integrar requisitos CP 44 e exceção do 312-B antes de escolher atividade.",
+      "prova": [
+        "Basta o artigo existir para converter automaticamente qualquer pena do CTB? Não. Ele regula a atividade quando houver substituição cabível; os requisitos e a exceção do 312-B continuam necessários.",
+        "A atividade pode ser livremente escolhida sem vínculo com vítimas de trânsito? Não. O rol e inciso IV vinculam serviço a resgate, atendimento e recuperação de vítimas de sinistros."
+      ],
+      "termos": [
+        {
+          "termo": "Substituição e atividade",
+          "significado": "Cabimento da alternativa e modalidade de seu cumprimento são etapas distintas."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 312-B",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "94894157-5534-55af-88ef-5a9161ae74d1",
+        "content_sha256": "9c349c1d69af7a631a68d1907cc29fa730fa504403185175851490e5cf57f499",
+        "simples": "Para os crimes dos arts. 302 a 312, quando o juiz aplicar a substituição da pena privativa de liberdade por pena restritiva de direitos, esta deve ser de prestação de serviço à comunidade ou a entidades públicas, em atividades como trabalho aos fins de semana em equipes de resgate dos bombeiros e outras unidades de atendimento a vítimas de trânsito, trabalho em pronto-socorro da rede pública, trabalho em clínicas ou instituições de recuperação de sinistrados e outras atividades relacionadas a resgate e atendimento.",
+        "pontos": [
+          "Substituição por prestação de serviço relacionada a vítimas de trânsito.",
+          "Resgate, pronto-socorro e recuperação de sinistrados."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "O condenado cumpre pena restritiva em equipe de resgate dos bombeiros.",
+        "prova": [
+          "Assertiva que permite qualquer pena restritiva de direitos aos crimes dos arts. 302 a 312 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 312-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-312-b",
+      "unit_id": "35d4fc95-a5af-527f-8c0c-ee42d1994c66",
+      "content_sha256": "e7dd56e7b0948fb32bc72e43c4b498810fe328615eda3ead9f4566332cedba06",
+      "simples": "O art. 312-B, incluído pela Lei 14.071/2020, excepciona o inciso I do caput do CP 44 nos crimes do 302, §3º, e 303, §2º. Não aplicar sem ressalva a regra geral de substituição de crimes culposos qualquer que seja a pena. Não confundir substituição por restritivas com suspensão condicional da pena/processo ou ANPP, cujos requisitos são próprios.",
+      "pontos": [
+        "Recorte: 302, §3º, e 303, §2º, não todos os crimes de trânsito.",
+        "Remissão: CP 44, caput, I, incluindo regra geral para crimes culposos.",
+        "Lei 14.071/2020 teve vacância própria de 180 dias, já encerrada na conferência de 2026."
+      ],
+      "atencao": [
+        "A explicação antiga resumia CP 44, I, só como crimes com violência; omitia sua cláusula para culposos. Texto atual integrado.",
+        "Não gerar exercício que estenda a remissão a todo benefício ou a todo delito do CTB."
+      ],
+      "exemplo": "Homicídio culposo do 302, §3º, é invocado como substituível só porque crime culposo admite regra geral do CP 44, I. Resposta: o 312-B excepciona essa via nos dois tipos expressos. Variação: O dispositivo não menciona todos os crimes do CTB nem equivale sozinho a proibir universalmente ANPP, transação ou sursis: cada instituto exige exame próprio.",
+      "prova": [
+        "A regra qualquer que seja a pena se culposo do CP 44, I, pode ser aplicada sem ressalva ao 302, §3º? Não. O 312-B afasta esse inciso para 302, §3º, e 303, §2º; integrar a regra especial.",
+        "O 312-B afasta expressamente todos os benefícios processuais de todo crime de trânsito? Não. Sua remissão é específica ao inciso I do caput do CP 44 e aos dois tipos enumerados."
+      ],
+      "termos": [
+        {
+          "termo": "Exceção à regra geral",
+          "significado": "Restrição especial aos dois delitos expressos, distinta de proibição genérica de todo benefício."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 302",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ],
+      "expected": {
+        "unit_id": "35d4fc95-a5af-527f-8c0c-ee42d1994c66",
+        "content_sha256": "e7dd56e7b0948fb32bc72e43c4b498810fe328615eda3ead9f4566332cedba06",
+        "simples": "Aos crimes do §3º do art. 302 e do §2º do art. 303 não se aplica o disposto no inciso I do caput do art. 44 do Código Penal, ou seja, a substituição da pena privativa de liberdade por restritiva de direitos nos crimes cometidos com violência ou grave ameaça.",
+        "pontos": [
+          "Afasta a substituição da pena nos crimes mais graves com embriaguez."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Alcança homicídio e lesão grave culposos com embriaguez."
+        ],
+        "exemplo": "O condutor alcoolizado que mata no trânsito não tem a pena substituída por restritiva de direitos.",
+        "prova": [
+          "Assertiva que permite a substituição da pena em todos os crimes de trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 302"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-313",
+      "unit_id": "f8029a9c-4e27-5fc8-ad97-e6a43f10124d",
+      "content_sha256": "7cca44c378dd7fd96c313bfaee43bd7d0d6ebbedfc7647f4688090234939d51b",
+      "simples": "O Poder Executivo promoverá a nomeação dos membros do Contran no prazo de sessenta dias da publicação do Código.",
+      "pontos": [
+        "Prazo de sessenta dias."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Trecho histórico de implantação: exemplos explicitamente históricos; não exigir novo cumprimento do prazo original em 2026."
+      ],
+      "exemplo": "Questão histórica pergunta prazo inicial de nomeação dos membros do Contran. Resposta: sessenta dias DA PUBLICAÇÃO do CTB. Variação: A nomeação em 2026 não inaugura outro prazo original de 1997 nem permite ignorar composição atual do art. 10.",
+      "prova": [
+        "O prazo de sessenta dias renova a cada atualização do Código? Não. O marco textual é a publicação original; regra de implantação histórica, não janela anual atual.",
+        "O artigo fixa prazo de vigência geral do CTB? Não. Nomeação inicial e vacância geral do art. 340 são prazos diferentes."
+      ],
+      "termos": [
+        {
+          "termo": "Implantação inicial",
+          "significado": "Obrigação referida à publicação original, sem reinício em atualizações posteriores."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 10"
+      ],
+      "expected": {
+        "unit_id": "f8029a9c-4e27-5fc8-ad97-e6a43f10124d",
+        "content_sha256": "7cca44c378dd7fd96c313bfaee43bd7d0d6ebbedfc7647f4688090234939d51b",
+        "simples": "O Poder Executivo promoverá a nomeação dos membros do Contran no prazo de sessenta dias da publicação do Código.",
+        "pontos": [
+          "Prazo de sessenta dias."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "O Código previu prazo para a nomeação inicial do Contran.",
+        "prova": [
+          "Assertiva que fixa em cento e vinte dias o prazo para nomear os membros do Contran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 10"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-314",
+      "unit_id": "b4f616f2-7e2e-5955-8da2-2035f2ace268",
+      "content_sha256": "59de06129dd19870900bdf5f1663a0006b97bcd4b699c6a6b3f5acecbaf0da4e",
+      "simples": "O Contran tem prazo de duzentos e quarenta dias da publicação do Código para expedir as resoluções necessárias à sua melhor execução e revisar todas as resoluções anteriores, dando prioridade às que visam diminuir o número de sinistros e assegurar a proteção de pedestres. As resoluções do Contran existentes até a data de publicação do Código continuam em vigor naquilo em que não conflitem com ele.",
+      "pontos": [
+        "Prazo de duzentos e quarenta dias.",
+        "Resoluções anteriores vigoram se não conflitarem."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Não certificar vigência atual de todo acervo do Contran por essa regra transitória."
+      ],
+      "exemplo": "No estudo histórico da implantação, o Contran recebeu 240 dias da publicação para resoluções e revisão do acervo anterior. Resposta: prioridade à segurança e pedestres. Variação: Resolução antiga só pode ser usada hoje após confronto com normas posteriores e revogações, não apenas porque não conflitava em 1997.",
+      "prova": [
+        "Toda resolução anterior continua hoje vigente pelo parágrafo? Não. A manutenção era na parte compatível; revogações/substituições posteriores também precisam ser verificadas.",
+        "A atualização de sinistro em 2023 reiniciou o prazo de 240 dias da publicação original? Não. O marco continua histórico; mudança terminológica não cria novo prazo de implantação."
+      ],
+      "termos": [
+        {
+          "termo": "Compatibilidade e sucessão",
+          "significado": "Confronto com CTB e normas posteriores antes de tratar ato anterior como atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "b4f616f2-7e2e-5955-8da2-2035f2ace268",
+        "content_sha256": "59de06129dd19870900bdf5f1663a0006b97bcd4b699c6a6b3f5acecbaf0da4e",
+        "simples": "O Contran tem prazo de duzentos e quarenta dias da publicação do Código para expedir as resoluções necessárias à sua melhor execução e revisar todas as resoluções anteriores, dando prioridade às que visam diminuir o número de sinistros e assegurar a proteção de pedestres. As resoluções do Contran existentes até a data de publicação do Código continuam em vigor naquilo em que não conflitem com ele.",
+        "pontos": [
+          "Prazo de duzentos e quarenta dias.",
+          "Resoluções anteriores vigoram se não conflitarem."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "Resolução anterior ao Código só vale na parte que não o contraria.",
+        "prova": [
+          "Assertiva que revoga todas as resoluções anteriores ao Código erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-315",
+      "unit_id": "1e589271-7698-57d0-a065-52db4c92848d",
+      "content_sha256": "1f9fa16b9f5765b7af6f34fc9383afff0400c7479107f3dc0322f23b61cb6a32",
+      "simples": "O Ministério da Educação, mediante proposta do Contran, deve, no prazo de duzentos e quarenta dias contado da publicação do Código, estabelecer o currículo com conteúdo programático relativo à segurança e à educação de trânsito.",
+      "pontos": [
+        "Prazo de duzentos e quarenta dias.",
+        "Currículo de segurança e educação de trânsito."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Leitura histórica do prazo; integrar educação atual do art. 76, sem alegar conferência integral de atos curriculares."
+      ],
+      "exemplo": "Questão sobre implantação distingue proposta do Contran e estabelecimento do currículo pelo MEC em 240 dias da publicação. Resposta: competências distintas. Variação: Atualização de redação em 2023 não concede automaticamente nova janela inicial nem prova que todo currículo atual foi auditado.",
+      "prova": [
+        "É o Contran sozinho quem estabelece o currículo desse artigo? Não. O MEC atua mediante proposta do Contran, com o marco histórico de publicação do CTB.",
+        "O prazo de 240 dias autoriza adiar hoje toda educação de trânsito por mais oito meses? Não. Trata de implantação original, distinto das obrigações educacionais atuais."
+      ],
+      "termos": [
+        {
+          "termo": "Proposta e decisão curricular",
+          "significado": "Contran propõe; MEC estabelece no recorte normativo, sem confundir os órgãos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 76"
+      ],
+      "expected": {
+        "unit_id": "1e589271-7698-57d0-a065-52db4c92848d",
+        "content_sha256": "1f9fa16b9f5765b7af6f34fc9383afff0400c7479107f3dc0322f23b61cb6a32",
+        "simples": "O Ministério da Educação, mediante proposta do Contran, deve, no prazo de duzentos e quarenta dias contado da publicação do Código, estabelecer o currículo com conteúdo programático relativo à segurança e à educação de trânsito.",
+        "pontos": [
+          "Prazo de duzentos e quarenta dias.",
+          "Currículo de segurança e educação de trânsito."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "O currículo escolar inclui conteúdo de educação para o trânsito.",
+        "prova": [
+          "Assertiva que atribui ao Contran, e não ao MEC, a fixação do currículo erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 76"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-316",
+      "unit_id": "8fcadae9-9081-53bd-8762-6c144e25eea7",
+      "content_sha256": "ecfdfea753c4b2d041c439aaf085d4ed5a07c2facb62d7db489fdff5a7e93d83",
+      "simples": "O prazo de notificação previsto no inciso II do parágrafo único do art. 281 só entra em vigor após duzentos e quarenta dias contados da publicação da lei.",
+      "pontos": [
+        "Vigência diferida do prazo de notificação."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Texto residual remete a parágrafo único do 281; atual estrutura tem parágrafos. Não suspender multas atuais com base na transição original."
+      ],
+      "exemplo": "Estudo histórico mostra que o prazo de notificação teve início diferido por 240 dias da publicação original. Resposta: essa transição já não suspende notificações atuais. Variação: Em 2026, expedição do 281 e regimes especiais vigentes devem ser examinados sem reeditar a carência de 1997.",
+      "prova": [
+        "Cada alteração do 281 reinicia os 240 dias do 316? Não. O marco do artigo é a publicação original desta lei, não toda alteração posterior.",
+        "A remissão antiga parágrafo único dispensa consultar numeração atual do 281? Não. A estrutura foi modificada; integrar dispositivo atual e sua transição específica sem transformar remissão antiga em regra nova."
+      ],
+      "termos": [
+        {
+          "termo": "Vigência diferida histórica",
+          "significado": "Adiamento ligado ao início do CTB, distinto dos prazos atuais de autuação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 281"
+      ],
+      "expected": {
+        "unit_id": "8fcadae9-9081-53bd-8762-6c144e25eea7",
+        "content_sha256": "ecfdfea753c4b2d041c439aaf085d4ed5a07c2facb62d7db489fdff5a7e93d83",
+        "simples": "O prazo de notificação previsto no inciso II do parágrafo único do art. 281 só entra em vigor após duzentos e quarenta dias contados da publicação da lei.",
+        "pontos": [
+          "Vigência diferida do prazo de notificação."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "A regra do prazo de notificação passou a valer depois de duzentos e quarenta dias.",
+        "prova": [
+          "Assertiva que torna imediata a vigência do prazo de notificação erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 281"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-317",
+      "unit_id": "5bb53ffc-4718-575f-a656-f742e9503f27",
+      "content_sha256": "4afbf1916e69e10fedada7abea03fb1a847f9e9256fa53dca17d9084510d8615",
+      "simples": "Os órgãos e entidades de trânsito concederam prazo de até um ano para a adaptação dos veículos de condução de escolares e de aprendizagem às normas da faixa amarela do escolar (art. 136, III) e da identificação dos veículos de autoescola (art. 154).",
+      "pontos": [
+        "Prazo de até um ano para adaptação.",
+        "Veículos escolares e de aprendizagem."
+      ],
+      "atencao": [
+        "Dispositivo transitório, de eficácia já esgotada.",
+        "Não certificar que toda adaptação foi efetivamente cumprida nem abrir carência atual com prazo original."
+      ],
+      "exemplo": "Implantação do CTB concedeu até um ano para adequação da identificação de escolares/aprendizagem. Resposta: prazo histórico, não nova tolerância a partir de cada fiscalização. Variação: Veículo adquirido em 2026 deve atender ao regime atual; o 317 não concede automaticamente um ano sem faixa ou identificação exigível.",
+      "prova": [
+        "Todo escolar irregular hoje recebe um ano automático para se adequar por esse artigo? Não. É regra histórica de implantação; não dispensa obrigações atuais dos 136/154.",
+        "O teto histórico era de dois anos? Não. O artigo estabeleceu ATÉ UM ANO, sem prorrogação universal para cada veículo."
+      ],
+      "termos": [
+        {
+          "termo": "Adaptação histórica",
+          "significado": "Prazo inicial já superado, distinto de autorização atual para operar irregularmente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 136"
+      ],
+      "expected": {
+        "unit_id": "5bb53ffc-4718-575f-a656-f742e9503f27",
+        "content_sha256": "4afbf1916e69e10fedada7abea03fb1a847f9e9256fa53dca17d9084510d8615",
+        "simples": "Os órgãos e entidades de trânsito concederam prazo de até um ano para a adaptação dos veículos de condução de escolares e de aprendizagem às normas da faixa amarela do escolar (art. 136, III) e da identificação dos veículos de autoescola (art. 154).",
+        "pontos": [
+          "Prazo de até um ano para adaptação.",
+          "Veículos escolares e de aprendizagem."
+        ],
+        "atencao": [
+          "Dispositivo transitório, de eficácia já esgotada."
+        ],
+        "exemplo": "As vans escolares tiveram um ano para pintar a faixa amarela.",
+        "prova": [
+          "Assertiva que fixa em dois anos o prazo de adaptação dos veículos escolares erra: era de até um ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 136"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-319",
+      "unit_id": "29935e26-5ad9-5665-8537-49deeedebfa7",
+      "content_sha256": "b5f4858a035e655243b2c1dc011082f9140f2c7ee3861fb399d790e7d00d62b3",
+      "simples": "Enquanto não fossem baixadas novas normas pelo Contran, continuava em vigor o art. 92 do Regulamento do antigo Código Nacional de Trânsito, aprovado por decreto de 1968.",
+      "pontos": [
+        "Manutenção transitória de norma do regulamento anterior."
+      ],
+      "atencao": [
+        "Não certificada neste lote a cadeia completa de todos os atos sucessores da remissão de 1968. Exercícios não ensinam especificação antiga como regra atual."
+      ],
+      "exemplo": "Aluno lê referência ao art. 92 do regulamento de 1968. Resposta: a manutenção dependia da ausência de novas normas, não preservação eterna de todo decreto. Variação: Normas atuais de segurança e identificação exigem confronto próprio; não usar a remissão antiga para afastar resolução posterior válida.",
+      "prova": [
+        "O dispositivo torna íntegro regulamento de 1968 permanentemente vigente? Não. Refere-se ao art. 92 e condição enquanto não baixadas novas normas, com confronto de sucessão normativa.",
+        "Uma questão atual pode copiar regra antiga sem conferir substituição? Não. A remissão de transição não substitui validação das normas atuais aplicáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Manutenção condicionada",
+          "significado": "Ponte transitória até novas normas, distinta de repristinação do regulamento inteiro."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 12"
+      ],
+      "expected": {
+        "unit_id": "29935e26-5ad9-5665-8537-49deeedebfa7",
+        "content_sha256": "b5f4858a035e655243b2c1dc011082f9140f2c7ee3861fb399d790e7d00d62b3",
+        "simples": "Enquanto não fossem baixadas novas normas pelo Contran, continuava em vigor o art. 92 do Regulamento do antigo Código Nacional de Trânsito, aprovado por decreto de 1968.",
+        "pontos": [
+          "Manutenção transitória de norma do regulamento anterior."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "Norma do regulamento antigo valeu provisoriamente até nova regra do Contran.",
+        "prova": [
+          "Assertiva que mantém indefinidamente em vigor o regulamento antigo erra: valia só até as novas normas do Contran."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 12"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-319-a",
+      "unit_id": "d208fd41-0246-59e3-b671-cf57957fba86",
+      "content_sha256": "5670cd613a5010b73c8611024ba33241dad8b6b193276053ac97567903ede491",
+      "simples": "Os valores de multas constantes do Código podem ser corrigidos monetariamente pelo Contran, respeitado o limite da variação do IPCA no exercício anterior. Os novos valores são divulgados pelo Contran com, no mínimo, noventa dias de antecedência de sua aplicação.",
+      "pontos": [
+        "Correção monetária pelo Contran.",
+        "Limite da variação do IPCA.",
+        "Divulgação com noventa dias de antecedência."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Mínimo de noventa dias de antecedência.",
+        "Distinguir valores vigentes do art. 258 de autorização para futura correção; não inventar ato de reajuste não consultado."
+      ],
+      "exemplo": "Contran divulga novo valor de multa. Resposta: correção possível dentro da variação do IPCA anterior e divulgação com no mínimo noventa dias. Variação: A inflação não reajusta automaticamente toda multa sem ato e antecedência; não recalcular multas atuais só aplicando IPCA por conta própria.",
+      "prova": [
+        "A palavra poderão dispensa ato e divulgação para corrigir automaticamente? Não. A autorização é condicionada ao limite e divulgação; não cria atualização automática informal.",
+        "Sessenta dias de antecedência bastam ao parágrafo? Não. O mínimo textual é NOVENTA dias antes da aplicação dos novos valores."
+      ],
+      "termos": [
+        {
+          "termo": "Correção condicionada",
+          "significado": "Possibilidade regulada pelo índice e pela antecedência, distinta de reajuste automático."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 258"
+      ],
+      "expected": {
+        "unit_id": "d208fd41-0246-59e3-b671-cf57957fba86",
+        "content_sha256": "5670cd613a5010b73c8611024ba33241dad8b6b193276053ac97567903ede491",
+        "simples": "Os valores de multas constantes do Código podem ser corrigidos monetariamente pelo Contran, respeitado o limite da variação do IPCA no exercício anterior. Os novos valores são divulgados pelo Contran com, no mínimo, noventa dias de antecedência de sua aplicação.",
+        "pontos": [
+          "Correção monetária pelo Contran.",
+          "Limite da variação do IPCA.",
+          "Divulgação com noventa dias de antecedência."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Mínimo de noventa dias de antecedência."
+        ],
+        "exemplo": "O Contran divulga o reajuste das multas com noventa dias de antecedência.",
+        "prova": [
+          "Assertiva que permite reajuste das multas acima do IPCA erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 258"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-320",
+      "unit_id": "08e19c5a-3500-54c1-b2e4-bce1c0e1c34c",
+      "content_sha256": "577e317383f24abcc22b7ac7507be26c4ecd1a9c6f48ee692039baace5270fba",
+      "simples": "A receita arrecadada com as multas de trânsito é aplicada exclusivamente em sinalização, engenharia de tráfego, engenharia de campo, policiamento, fiscalização, renovação de frota circulante, educação de trânsito e custeio do processo de habilitação de condutores de baixa renda. Cinco por cento do valor das multas arrecadadas é depositado mensalmente em fundo de âmbito nacional destinado à segurança e educação de trânsito. O órgão responsável publica anualmente na internet os dados sobre a receita arrecadada e sua aplicação.",
+      "pontos": [
+        "Destinação vinculada da receita das multas.",
+        "Cinco por cento ao fundo nacional.",
+        "Transparência anual na internet.",
+        "Lei 15.153/2025: custeio inclui TAXAS e demais despesas de formação/concessão; candidato definido por inclusão no CadÚnico.",
+        "§3º: limite da recomposição de perdas de pedágio vinculado à arrecadação do 209-A, ressalvado regulamento."
+      ],
+      "atencao": [
+        "Destinação EXCLUSIVA às finalidades legais.",
+        "Cinco por cento ao fundo nacional de segurança e educação de trânsito.",
+        "Não prometer vaga automática, gratuidade de toda despesa futura ou implantação uniforme de programa em todo ente.",
+        "Fundo do §1º, depósito MENSAL; divulgação de receita/destinação ANUAL, não trocar periodicidades."
+      ],
+      "exemplo": "Candidato inscrito no CadÚnico é analisado em programa de custeio da habilitação. Resposta: §§4º/5º incluem taxas/despesas de formação e documento, com definição legal de baixa renda. Variação: Inscrição no CadÚnico não certifica por si vaga imediata em qualquer programa local nem gratuidade ilimitada sem procedimento.",
+      "prova": [
+        "A inclusão no CadÚnico está fora da definição legal dessa baixa renda? Não. O §5º a utiliza para caracterizar o candidato no regime do §4º, sem dispensar aplicação do programa pertinente.",
+        "Toda arrecadação de multa pode custear livremente qualquer despesa municipal? Não. O caput estabelece destinações EXCLUSIVAS e §1º cinco por cento ao fundo nacional, com transparência anual."
+      ],
+      "termos": [
+        {
+          "termo": "Destinação vinculada",
+          "significado": "Receita com finalidades expressas, distinta de recurso livre do orçamento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 320-A",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15153.htm"
+      ],
+      "expected": {
+        "unit_id": "08e19c5a-3500-54c1-b2e4-bce1c0e1c34c",
+        "content_sha256": "577e317383f24abcc22b7ac7507be26c4ecd1a9c6f48ee692039baace5270fba",
+        "simples": "A receita arrecadada com as multas de trânsito é aplicada exclusivamente em sinalização, engenharia de tráfego, engenharia de campo, policiamento, fiscalização, renovação de frota circulante, educação de trânsito e custeio do processo de habilitação de condutores de baixa renda. Cinco por cento do valor das multas arrecadadas é depositado mensalmente em fundo de âmbito nacional destinado à segurança e educação de trânsito. O órgão responsável publica anualmente na internet os dados sobre a receita arrecadada e sua aplicação.",
+        "pontos": [
+          "Destinação vinculada da receita das multas.",
+          "Cinco por cento ao fundo nacional.",
+          "Transparência anual na internet."
+        ],
+        "atencao": [
+          "Destinação EXCLUSIVA às finalidades legais.",
+          "Cinco por cento ao fundo nacional de segurança e educação de trânsito."
+        ],
+        "exemplo": "O município aplica a arrecadação das multas em sinalização e educação de trânsito.",
+        "prova": [
+          "Assertiva que permite usar a receita das multas em qualquer despesa do município erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 320-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-320-a",
+      "unit_id": "50be5eef-0de9-542f-8fae-404055b0afb3",
+      "content_sha256": "3abc60646c9cb0b41ef9841640694bcbbd5a877b7856c35917cce0a2da59f4fc",
+      "simples": "Os órgãos e entidades do Sistema Nacional de Trânsito podem integrar-se para ampliar e aprimorar a fiscalização de trânsito, inclusive por meio do compartilhamento da receita arrecadada com as multas.",
+      "pontos": [
+        "Integração entre órgãos.",
+        "Compartilhamento da receita das multas."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Não inventar percentuais, convênio concreto ou poder fora da circunscrição sem ato pertinente."
+      ],
+      "exemplo": "Órgãos do SNT pactuam integração de fiscalização e compartilhamento da receita. Resposta: artigo permite integração, mas finalidade legal permanece vinculada. Variação: Compartilhar não libera aplicação em despesas alheias às finalidades do 320 nem confere toda competência indistintamente a qualquer órgão.",
+      "prova": [
+        "A receita compartilhada perde o vínculo às finalidades do 320? Não. A integração não elimina destinação legal; não vira receita livre por mudar o órgão destinatário.",
+        "O artigo torna obrigatória toda divisão de receita em partes iguais? Não. Diz PODERÃO integrar-se, inclusive compartilhar; não fixa divisão universal de cinquenta por cento."
+      ],
+      "termos": [
+        {
+          "termo": "Integração de fiscalização",
+          "significado": "Cooperação possível no SNT, sem divisão fixa de receita nem competência ilimitada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 320"
+      ],
+      "expected": {
+        "unit_id": "50be5eef-0de9-542f-8fae-404055b0afb3",
+        "content_sha256": "3abc60646c9cb0b41ef9841640694bcbbd5a877b7856c35917cce0a2da59f4fc",
+        "simples": "Os órgãos e entidades do Sistema Nacional de Trânsito podem integrar-se para ampliar e aprimorar a fiscalização de trânsito, inclusive por meio do compartilhamento da receita arrecadada com as multas.",
+        "pontos": [
+          "Integração entre órgãos.",
+          "Compartilhamento da receita das multas."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "Município e estado dividem a receita de multas fiscalizadas em conjunto.",
+        "prova": [
+          "Assertiva que proíbe o compartilhamento da receita das multas entre órgãos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 320"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-323",
+      "unit_id": "6b5577b5-38e8-55a2-8c34-e48942a63673",
+      "content_sha256": "288039058664dd7c6741d9a68e3c66123a7bcd9124f23ec41103b7cb037e47a7",
+      "simples": "O Contran fixaria, em cento e oitenta dias, a metodologia de aferição de peso de veículos, estabelecendo percentuais de tolerância, ficando suspensa nesse período a penalidade do inciso V do art. 231 e aplicando-se a penalidade de vinte UFIR por duzentos quilogramas ou fração de excesso.",
+      "pontos": [
+        "Prazo de cento e oitenta dias para a metodologia de pesagem.",
+        "Penalidade provisória de vinte UFIR por duzentos quilogramas."
+      ],
+      "atencao": [
+        "Dispositivo transitório; parágrafo único revogado por lei de 2023.",
+        "Não certificada aqui toda metodologia metrológica de pesagem; exemplos apenas históricos, com ressalva explícita."
+      ],
+      "exemplo": "Questão histórica sobre metodologia de pesagem menciona 180 dias e multa provisória de vinte UFIR por 200 kg/fração. Resposta: regime inicial, não tabela atual. Variação: Cálculo de excesso em 2026 exige art. 231 atual e regulamentação pertinente, sem reeditar fórmula provisória ou parágrafo revogado em 2023.",
+      "prova": [
+        "Pode usar os vinte UFIR como tabela atual de todo excesso? Não. É previsão provisória do período de implantação, distinta do regime atual; não converter UFIR em reais por conta própria.",
+        "O parágrafo único revogado em 2023 gera hoje tolerância adicional? Não. Trecho revogado não pode ser tratado como regra ativa; integrar texto e regulamentação vigentes."
+      ],
+      "termos": [
+        {
+          "termo": "Fórmula provisória",
+          "significado": "Cálculo histórico delimitado à transição, não tarifa atual de multa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 231"
+      ],
+      "expected": {
+        "unit_id": "6b5577b5-38e8-55a2-8c34-e48942a63673",
+        "content_sha256": "288039058664dd7c6741d9a68e3c66123a7bcd9124f23ec41103b7cb037e47a7",
+        "simples": "O Contran fixaria, em cento e oitenta dias, a metodologia de aferição de peso de veículos, estabelecendo percentuais de tolerância, ficando suspensa nesse período a penalidade do inciso V do art. 231 e aplicando-se a penalidade de vinte UFIR por duzentos quilogramas ou fração de excesso.",
+        "pontos": [
+          "Prazo de cento e oitenta dias para a metodologia de pesagem.",
+          "Penalidade provisória de vinte UFIR por duzentos quilogramas."
+        ],
+        "atencao": [
+          "Dispositivo transitório; parágrafo único revogado por lei de 2023."
+        ],
+        "exemplo": "A metodologia de pesagem foi definida pelo Contran depois do prazo.",
+        "prova": [
+          "Assertiva que mantém a penalidade provisória em UFIR como regra atual erra: o dispositivo é transitório."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 231"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-325",
+      "unit_id": "c80e0e98-b8a4-539a-88cc-25e1a942ed0a",
+      "content_sha256": "c2159f6e80ddc40870e703c83b192394114c45175d49ce63643b88124bfb9592",
+      "simples": "As repartições de trânsito conservam por, no mínimo, cinco anos os documentos relativos à habilitação de condutores, ao registro e ao licenciamento de veículos e aos autos de infração de trânsito. Esses documentos podem ser gerados, tramitados, arquivados e armazenados eletronicamente, desde que assegurada a autenticidade, a fidedignidade, a confiabilidade e a segurança, sendo válidos para todos os efeitos e dispensada a guarda física. O Contran regulamenta o procedimento.",
+      "pontos": [
+        "Guarda mínima de cinco anos.",
+        "Documentos eletrônicos válidos.",
+        "Regulamentação pelo Contran.",
+        "§3º: sistema certificado digitalmente conforme autenticidade, integridade, validade jurídica e interoperabilidade da ICP-Brasil."
+      ],
+      "atencao": [
+        "Mínimo de cinco anos.",
+        "ATUALIZAÇÃO: arquivamento digital foi admitido por lei posterior.",
+        "Não certificar conformidade de qualquer sistema concreto apenas porque seus arquivos são eletrônicos."
+      ],
+      "exemplo": "Detran armazena documentos digitalmente com requisitos de autenticidade e sistema certificado conforme ICP-Brasil. Resposta: mínimo de cinco anos e possível dispensa de guarda física nas condições legais. Variação: Fotografia informal sem integridade ou segurança não satisfaz automaticamente todos os requisitos de armazenamento digital.",
+      "prova": [
+        "O prazo mínimo de cinco anos obriga eliminar tudo exatamente ao final? Não. É mínimo de conservação; eliminação exige regime aplicável, não destruição automática pelo aniversário.",
+        "Digitalizar por qualquer meio dispensa sempre o original físico? Não. O §1º condiciona validade e dispensa a autenticidade/fidedignidade/confiabilidade/segurança; §3º exige sistema certificado no recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Conservação mínima",
+          "significado": "Limite inferior de guarda, distinto de prazo máximo ou autorização automática de descarte."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 280"
+      ],
+      "expected": {
+        "unit_id": "c80e0e98-b8a4-539a-88cc-25e1a942ed0a",
+        "content_sha256": "c2159f6e80ddc40870e703c83b192394114c45175d49ce63643b88124bfb9592",
+        "simples": "As repartições de trânsito conservam por, no mínimo, cinco anos os documentos relativos à habilitação de condutores, ao registro e ao licenciamento de veículos e aos autos de infração de trânsito. Esses documentos podem ser gerados, tramitados, arquivados e armazenados eletronicamente, desde que assegurada a autenticidade, a fidedignidade, a confiabilidade e a segurança, sendo válidos para todos os efeitos e dispensada a guarda física. O Contran regulamenta o procedimento.",
+        "pontos": [
+          "Guarda mínima de cinco anos.",
+          "Documentos eletrônicos válidos.",
+          "Regulamentação pelo Contran."
+        ],
+        "atencao": [
+          "Mínimo de cinco anos.",
+          "ATUALIZAÇÃO: arquivamento digital foi admitido por lei posterior."
+        ],
+        "exemplo": "O Detran mantém digitalmente os autos de infração por no mínimo cinco anos.",
+        "prova": [
+          "Assertiva que fixa em dois anos o prazo mínimo de guarda dos documentos erra: são cinco anos."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 280"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-326",
+      "unit_id": "d5f87c60-d989-5f82-a288-6680bce7086d",
+      "content_sha256": "482722113ce90f73e1c3005c9def0d0c7fb338b3971da18422e09f6d71cb44ed",
+      "simples": "A Semana Nacional de Trânsito é comemorada anualmente no período compreendido entre 18 e 25 de setembro.",
+      "pontos": [
+        "De 18 a 25 de setembro."
+      ],
+      "atencao": [
+        "Período fixo de 18 a 25 de setembro.",
+        "Não misturar Semana Nacional de Trânsito, semana de prevenção com motociclistas e memória das vítimas."
+      ],
+      "exemplo": "Calendário educacional marca Semana Nacional de Trânsito entre 18 e 25 de setembro. Resposta: período anual expresso. Variação: Campanhas em julho para motociclistas não alteram setembro; têm previsão própria no 326-B.",
+      "prova": [
+        "O dia 27 de julho substituiu a Semana Nacional de Trânsito? Não. São previsões distintas: 326 em setembro e 326-B em julho, ambas com suas finalidades.",
+        "O período do 326 ocorre só a cada quatro anos? Não. O artigo determina comemoração ANUAL entre 18 e 25 de setembro."
+      ],
+      "termos": [
+        {
+          "termo": "Calendários distintos",
+          "significado": "Datas educativas diferentes coexistem sem revogar umas às outras."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 75"
+      ],
+      "expected": {
+        "unit_id": "d5f87c60-d989-5f82-a288-6680bce7086d",
+        "content_sha256": "482722113ce90f73e1c3005c9def0d0c7fb338b3971da18422e09f6d71cb44ed",
+        "simples": "A Semana Nacional de Trânsito é comemorada anualmente no período compreendido entre 18 e 25 de setembro.",
+        "pontos": [
+          "De 18 a 25 de setembro."
+        ],
+        "atencao": [
+          "Período fixo de 18 a 25 de setembro."
+        ],
+        "exemplo": "As campanhas educativas se intensificam na Semana Nacional de Trânsito.",
+        "prova": [
+          "Assertiva que fixa a Semana Nacional de Trânsito em outro mês erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 75"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-326-a",
+      "unit_id": "30857398-76a2-57ef-8598-c7cc24d29b24",
+      "content_sha256": "930df9a35d881b9bbc111090e4259feb746ef1def1427cec41e6ab956e8c0db1",
+      "simples": "A atuação dos integrantes do Sistema Nacional de Trânsito, no que se refere ao Plano Nacional de Redução de Mortes e Lesões no Trânsito (Pnatrans), é direcionada prioritariamente ao cumprimento da meta anual de redução do índice de mortes por grupo de habitantes, apurado por Estado e pelo Distrito Federal. O objetivo geral é, ao final de 2030, reduzir à metade, no mínimo, o índice de mortes por grupo de habitantes, em relação ao apurado em 2020.",
+      "pontos": [
+        "Meta anual de redução do índice de mortes.",
+        "Objetivo: reduzir pela metade, ao final de 2030, o índice de 2020.",
+        "Metas: Contran mediante propostas de Cetran/Contrandife/PRF; consulta OU audiência pública antes da proposta.",
+        "Propostas até 1º de agosto; índices até 30 de abril; metas/desempenho na Semana de setembro.",
+        "Órgãos estaduais/DF consolidam dados da circunscrição; órgão máximo executivo federal calcula índices com os participantes legais.",
+        "§14: duas classificações, do ano e da evolução, além do relatório do objetivo geral."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Meta: reduzir à metade até o fim de 2030, em relação a 2020.",
+        "Exemplo numérico apenas pedagógico; não é dado real de mortalidade nem certificação de atingimento da meta.",
+        "Não certificada integralmente neste lote a metodologia técnica do Pnatrans ou todas suas resoluções."
+      ],
+      "exemplo": "Índice de mortes de 2020 usado como referência é 20 por grupo de habitantes. Resposta: objetivo mínimo ao fim de 2030 é reduzir pela metade, a 10 ou menos, com metodologia oficial. Variação: Não substituir por reduzir pela metade simples número absoluto sem ajustar grupo de habitantes, nem usar 2018 como base atual.",
+      "prova": [
+        "A base atual da meta é 2018 por ser ano de inclusão do artigo? Não. Redação de 2023 usa índice de 2020 e objetivo ao final de 2030; data original da alteração não é base estatística.",
+        "Todos os dados e metas são divulgados no mesmo dia de agosto? Não. Propostas até 1º/8; índices até 30/4; divulgação de metas e desempenho em setembro, conforme parágrafos próprios."
+      ],
+      "termos": [
+        {
+          "termo": "Índice e número absoluto",
+          "significado": "Relação por grupo de habitantes, distinta da contagem absoluta isolada de mortes."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 6º"
+      ],
+      "expected": {
+        "unit_id": "30857398-76a2-57ef-8598-c7cc24d29b24",
+        "content_sha256": "930df9a35d881b9bbc111090e4259feb746ef1def1427cec41e6ab956e8c0db1",
+        "simples": "A atuação dos integrantes do Sistema Nacional de Trânsito, no que se refere ao Plano Nacional de Redução de Mortes e Lesões no Trânsito (Pnatrans), é direcionada prioritariamente ao cumprimento da meta anual de redução do índice de mortes por grupo de habitantes, apurado por Estado e pelo Distrito Federal. O objetivo geral é, ao final de 2030, reduzir à metade, no mínimo, o índice de mortes por grupo de habitantes, em relação ao apurado em 2020.",
+        "pontos": [
+          "Meta anual de redução do índice de mortes.",
+          "Objetivo: reduzir pela metade, ao final de 2030, o índice de 2020."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Meta: reduzir à metade até o fim de 2030, em relação a 2020."
+        ],
+        "exemplo": "Os órgãos priorizam ações para reduzir mortes por grupo de habitantes.",
+        "prova": [
+          "Assertiva que fixa meta de redução de 10% até 2030 erra: é reduzir à metade, no mínimo."
+        ],
+        "termos": [
+          {
+            "termo": "Pnatrans",
+            "significado": "Plano Nacional de Redução de Mortes e Lesões no Trânsito."
+          }
+        ],
+        "remissoes": [
+          "Art. 6º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-326-b",
+      "unit_id": "3bbd7f8a-6147-5765-a6f4-1c2a9c228197",
+      "content_sha256": "0dbefba1498253fae010eb8f331409777ca5356770fc7886f958d8a23b7279cb",
+      "simples": "É instituída a Semana Nacional de Prevenção a Acidentes com Motociclistas, realizada anualmente na semana que compreender o dia 27 de julho, instituído como o Dia Nacional do Motociclista.",
+      "pontos": [
+        "Semana do dia 27 de julho.",
+        "Dia Nacional do Motociclista."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Não equiparar data original da Lei 15.006/2024 à data de conferência ou à inclusão recente do 326-C."
+      ],
+      "exemplo": "Campanha de prevenção com motociclistas ocorre na semana que contém 27 de julho. Resposta: o dia 27 é o Dia Nacional do Motociclista. Variação: A semana não recebe intervalo fixo universal 20–27 de julho do texto; ela é definida pela semana que compreender o dia.",
+      "prova": [
+        "O artigo fixa literalmente início no dia 20 e fim no dia 27? Não. Prevê semana que COMPREENDER 27 de julho, sem esse intervalo numérico fixo.",
+        "É a mesma comemoração da semana de setembro do 326? Não. A previsão específica de motociclistas foi incluída pela Lei 15.006/2024 e possui calendário próprio."
+      ],
+      "termos": [
+        {
+          "termo": "Semana que compreender",
+          "significado": "Referência ao dia contido na semana, distinta de intervalo de datas inventado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 326"
+      ],
+      "expected": {
+        "unit_id": "3bbd7f8a-6147-5765-a6f4-1c2a9c228197",
+        "content_sha256": "0dbefba1498253fae010eb8f331409777ca5356770fc7886f958d8a23b7279cb",
+        "simples": "É instituída a Semana Nacional de Prevenção a Acidentes com Motociclistas, realizada anualmente na semana que compreender o dia 27 de julho, instituído como o Dia Nacional do Motociclista.",
+        "pontos": [
+          "Semana do dia 27 de julho.",
+          "Dia Nacional do Motociclista."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "Em julho há campanhas voltadas à prevenção de acidentes com motociclistas.",
+        "prova": [
+          "Assertiva que fixa o Dia Nacional do Motociclista em outro dia erra: é o dia 27 de julho."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 326"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-326-c",
+      "unit_id": "c7352c8b-7e1d-583c-a2d8-b65abf094f28",
+      "content_sha256": "d19ef6d198f889d4598b207d236cb50e88d9457dc02de2d3f4eead8c18b23ecb",
+      "simples": "Fica reconhecido o terceiro domingo do mês de novembro de cada ano como o Dia Mundial em Memória das Vítimas do Trânsito.",
+      "pontos": [
+        "Terceiro domingo de novembro."
+      ],
+      "atencao": [
+        "Lei 15.452 de 30/6/2026, DOU de 1º/7/2026, vigência na publicação; conferência em 13/10/2026 são três marcos diferentes."
+      ],
+      "exemplo": "Em 2026, o terceiro domingo de novembro é 15/11. Resposta: aplica-se o critério anual do terceiro domingo, não data fixa permanente do mês. Variação: Em outro ano, o dia numérico pode mudar; permanece TERCEIRO DOMINGO de novembro.",
+      "prova": [
+        "A comemoração ocorre sempre em 15 de novembro? Não. 15/11 é o resultado do calendário de 2026; a regra legal é o terceiro domingo do mês a cada ano.",
+        "A Lei 15.452 começou a vigorar apenas no aniversário de junho de 2027? Não. O art. 2º prevê vigência na publicação; assinada em 30/6/2026 e publicada em 1º/7/2026."
+      ],
+      "termos": [
+        {
+          "termo": "Data móvel anual",
+          "significado": "Dia definido pela posição do domingo no mês, distinto de dia numérico fixo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 326",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15452.htm"
+      ],
+      "expected": {
+        "unit_id": "c7352c8b-7e1d-583c-a2d8-b65abf094f28",
+        "content_sha256": "d19ef6d198f889d4598b207d236cb50e88d9457dc02de2d3f4eead8c18b23ecb",
+        "simples": "Fica reconhecido o terceiro domingo do mês de novembro de cada ano como o Dia Mundial em Memória das Vítimas do Trânsito.",
+        "pontos": [
+          "Terceiro domingo de novembro."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior."
+        ],
+        "exemplo": "Em novembro há homenagem às vítimas do trânsito.",
+        "prova": [
+          "Assertiva que fixa a data no segundo domingo de novembro erra: é o terceiro."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 326"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-327",
+      "unit_id": "9f9ed3bc-ea35-583a-a145-2c2708416440",
+      "content_sha256": "3e4b33aa35d5118a6341e1705af0ceb3818fbfa47dea12c992cf8ae06d8f7813",
+      "simples": "A partir da publicação do Código, somente podem ser fabricados e licenciados veículos que obedeçam aos limites de peso e dimensões fixados na forma da lei, ressalvados os que vierem a ser regulamentados pelo Contran.",
+      "pontos": [
+        "Fabricação e licenciamento só dentro dos limites.",
+        "Ressalva para regulamentação do Contran."
+      ],
+      "atencao": [
+        "Dispositivo de transição.",
+        "Não tratar todo capítulo final como revogado ou de eficácia esgotada; distinguir cada dispositivo."
+      ],
+      "exemplo": "Fabricante pretende licenciar veículo fora de peso/dimensões sem enquadramento em ressalva regulamentar. Resposta: observar limites e norma específica válida. Variação: A ressalva de regulamentação não permite excesso por simples vontade do fabricante ou dispensa geral de autorização pertinente.",
+      "prova": [
+        "O artigo admite veículo fora dos limites por mera declaração privada? Não. A ressalva é para os regulamentados pelo Contran, com requisitos pertinentes, não autocertificação irrestrita.",
+        "Estar entre disposições finais torna a obrigação sem efeito em todo caso atual? Não. O artigo enuncia obrigação a partir da publicação, distinta de prazos iniciais já encerrados."
+      ],
+      "termos": [
+        {
+          "termo": "Obrigação e ressalva",
+          "significado": "Limites legais com exceção regulada, sem autorização privada universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 99"
+      ],
+      "expected": {
+        "unit_id": "9f9ed3bc-ea35-583a-a145-2c2708416440",
+        "content_sha256": "3e4b33aa35d5118a6341e1705af0ceb3818fbfa47dea12c992cf8ae06d8f7813",
+        "simples": "A partir da publicação do Código, somente podem ser fabricados e licenciados veículos que obedeçam aos limites de peso e dimensões fixados na forma da lei, ressalvados os que vierem a ser regulamentados pelo Contran.",
+        "pontos": [
+          "Fabricação e licenciamento só dentro dos limites.",
+          "Ressalva para regulamentação do Contran."
+        ],
+        "atencao": [
+          "Dispositivo de transição."
+        ],
+        "exemplo": "Só se licencia veículo dentro dos limites de peso e dimensões.",
+        "prova": [
+          "Assertiva que permite licenciar veículo fora dos limites sem exceção erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 99"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-328",
+      "unit_id": "43dafe51-abc2-57c5-bd80-9d5cedbb83b9",
+      "content_sha256": "ac3d189466087846b3ec13838862b6dfcfc7e2700386739184599680e18099fc",
+      "simples": "Veículo recolhido e não reclamado em sessenta dias pode seguir avaliação/leilão, preferencialmente eletrônico, observados procedimento e notificações. Preparação após trinta dias não antecipa o leilão. Há categorias conservado/sucata; segundo leilão tem piso de cinquenta por cento da avaliação. Sucata não retorna à circulação. Destinação da receita, desvinculação de débitos, saldo ao antigo proprietário e restrições têm regras próprias. Integrar Resolução 1025/2026; não confundir recolhimento com pena autônoma de apreensão revogada em 2016.",
+      "pontos": [
+        "60 dias do recolhimento; preparação depois de 30 e edital, não leilão antecipado.",
+        "Segundo leilão: maior lance com piso de 50% do avaliado; conservado não arrematado duas vezes: sucata.",
+        "Despesas de depósito limitadas a seis meses; não é período mínimo obrigatório de custódia.",
+        "Custos do leilão primeiro; remanescentes na ordem dos incisos I–VI do §6º.",
+        "Saldo após quitar débitos: notificar até 30 dias do leilão; levantamento em cinco anos; após, fundo nacional.",
+        "Restrição judicial/policial: comunicação e regime §§14–18; não dispensar análise por simples leitura do caput.",
+        "Reciclagem dos §§16–18 não autoriza vender sucata como veículo circulável nem aproveitar livremente peças no §17."
+      ],
+      "atencao": [
+        "O §12 remete historicamente ao parágrafo único do 320: consultar atual §1º, não criar fundo diferente pela renumeração.",
+        "Resolução 1025/2026 revogou 623/2016; Sivec e SNE têm transições próprias. Não certificadas todas as especificações operacionais e anexos do leilão.",
+        "Débitos anteriores desvinculados do veículo não deixam automaticamente de ser cobrados do devedor.",
+        "Apreendido a qualquer título não restaura penalidade administrativa autônoma revogada."
+      ],
+      "exemplo": "Veículo não reclamado atinge sessenta dias do recolhimento. Resposta: examinar avaliação/leilão com requisitos e notificações; preparar após trinta não significa leiloar no dia trinta. Variação: Sucata não volta à circulação; veículo conservado sem arrematação duas vezes passa ao regime de sucata. Não confundir categorias ou fases.",
+      "prova": [
+        "No leilão seguinte qualquer lance inferior a cinquenta por cento pode vencer pelo §2º? Não. O maior lance deve respeitar piso de CINQUENTA POR CENTO do avaliado na hipótese expressa.",
+        "A desvinculação dos débitos extingue toda dívida do antigo proprietário? Não. §9º preserva cobrança contra ele e §11 revincula se reaver o bem; não transferir automaticamente débitos antigos ao comprador."
+      ],
+      "termos": [
+        {
+          "termo": "Preparação e alienação",
+          "significado": "Etapas com prazos e requisitos próprios, distintas do simples tempo de depósito."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 279-A",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10252026c.pdf"
+      ],
+      "expected": {
+        "unit_id": "43dafe51-abc2-57c5-bd80-9d5cedbb83b9",
+        "content_sha256": "ac3d189466087846b3ec13838862b6dfcfc7e2700386739184599680e18099fc",
+        "simples": "O veículo apreendido ou removido a qualquer título e não reclamado por seu proprietário dentro do prazo de sessenta dias, contado da data do recolhimento, é avaliado e levado a leilão, preferencialmente eletrônico. Publicado o edital, a preparação pode ser iniciada após trinta dias do recolhimento, classificando-se o veículo em conservado, se apresenta condições de segurança para trafegar, ou sucata, se não está apto a trafegar. Se não houver oferta igual ou superior à avaliação, o lote vai ao leilão seguinte e é arrematado pelo maior lance.",
+        "pontos": [
+          "Prazo de sessenta dias para reclamar.",
+          "Leilão preferencialmente eletrônico.",
+          "Classificação: conservado ou sucata."
+        ],
+        "atencao": [
+          "Sessenta dias para reclamar; preparação do leilão após trinta dias.",
+          "ATUALIZAÇÃO: a redação foi alterada por lei posterior."
+        ],
+        "exemplo": "O carro não reclamado em sessenta dias vai a leilão.",
+        "prova": [
+          "Assertiva que fixa em noventa dias o prazo para reclamar o veículo removido erra: são sessenta dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 279-A"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-329",
+      "unit_id": "92613724-494b-5602-9261-750a2382a545",
+      "content_sha256": "8c47c6f023ef70870bd9992e3109bd4d70bee9b74bbbea30ebde365feec78381",
+      "simples": "Os condutores dos veículos de aluguel e de escolares, para exercerem suas atividades, devem apresentar previamente certidão negativa do registro de distribuição criminal relativamente aos crimes de homicídio, roubo, estupro e corrupção de menores, renovável a cada cinco anos, junto ao órgão responsável pela concessão ou autorização.",
+      "pontos": [
+        "Certidão negativa criminal prévia.",
+        "Crimes específicos: homicídio, roubo, estupro e corrupção de menores.",
+        "Renovação a cada cinco anos."
+      ],
+      "atencao": [
+        "Renovação a cada cinco anos.",
+        "Não declarar resolvida toda controvérsia constitucional ou modalidade de transporte; aplicar ao âmbito dos arts. 135/136 e procedimento pertinente."
+      ],
+      "exemplo": "Condutor de escolar apresenta certidão prevista no artigo antes de exercer atividade. Resposta: crimes enumerados e renovação a cada cinco anos, no órgão da autorização. Variação: Não substituir automaticamente cinco anos por periodicidade anual de outro documento nem ampliar o rol a todo crime sem fundamento.",
+      "prova": [
+        "A certidão é dispensada por o veículo escolar ter inspeção semestral? Não. São exigências distintas: art. 329 para condutor e art. 136 para veículo, com finalidades e prazos próprios.",
+        "O artigo determina condenação definitiva automática de quem consta em distribuição? Não. Exige certidão de distribuição no recorte, mas não transforma processo em condenação ou dispensa garantias constitucionais."
+      ],
+      "termos": [
+        {
+          "termo": "Certidão de distribuição",
+          "significado": "Documento sobre registros processuais no recorte legal, distinto de sentença condenatória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 135"
+      ],
+      "expected": {
+        "unit_id": "92613724-494b-5602-9261-750a2382a545",
+        "content_sha256": "8c47c6f023ef70870bd9992e3109bd4d70bee9b74bbbea30ebde365feec78381",
+        "simples": "Os condutores dos veículos de aluguel e de escolares, para exercerem suas atividades, devem apresentar previamente certidão negativa do registro de distribuição criminal relativamente aos crimes de homicídio, roubo, estupro e corrupção de menores, renovável a cada cinco anos, junto ao órgão responsável pela concessão ou autorização.",
+        "pontos": [
+          "Certidão negativa criminal prévia.",
+          "Crimes específicos: homicídio, roubo, estupro e corrupção de menores.",
+          "Renovação a cada cinco anos."
+        ],
+        "atencao": [
+          "Renovação a cada cinco anos."
+        ],
+        "exemplo": "O motorista de táxi apresenta a certidão negativa para exercer a atividade.",
+        "prova": [
+          "Assertiva que dispensa a certidão negativa para condutores de transporte escolar erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 135"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-330",
+      "unit_id": "8f2a3395-bea3-5ba1-88b0-db1ef5b1c059",
+      "content_sha256": "f281f090b2f00b986ed3bd8bd05ca4812c70a2df88f9312162109cce9fae22ca",
+      "simples": "Os estabelecimentos onde se executam reformas ou recuperação de veículos e os que compram, vendem ou desmontam veículos, usados ou não, são obrigados a possuir livros de registro de seu movimento de entrada e saída e de uso de placas de experiência, conforme modelos aprovados pelos órgãos de trânsito. Os livros indicam a data de entrada, os dados do proprietário ou vendedor, a data da saída ou baixa, os dados do comprador, as características do veículo e o número da placa de experiência.",
+      "pontos": [
+        "Livros de registro obrigatórios.",
+        "Entrada, saída e placas de experiência.",
+        "Dados do proprietário, do comprador e do veículo.",
+        "§3º: entrada/saída no MESMO DIA, assinaladas horas; §4º acesso sem retirada dos livros.",
+        "§5º: falta, atraso, fraude e recusa de exibição, multa de gravíssima.",
+        "§6º admite substituição eletrônica na forma regulamentada pelo Contran."
+      ],
+      "atencao": [
+        "Aplica-se a oficinas e a quem compra, vende ou desmonta veículos.",
+        "Não presumir adequação regulamentar de software ou planilha concreta. Não confundir recolhimento para regularização e pena autônoma de apreensão do veículo revogada."
+      ],
+      "exemplo": "Oficina registra entrada e saída no próprio dia, com horas, e mantém acesso da autoridade ao registro. Resposta: requisitos não se limitam a anotar nome do veículo. Variação: Sistema eletrônico pode substituir livros NA FORMA regulamentada, não qualquer planilha informal automaticamente válida.",
+      "prova": [
+        "A autoridade pode retirar os livros só por ter direito de acesso pelo §4º? Não. O parágrafo permite acesso mediante solicitação, mas proíbe retirá-los do estabelecimento nesse regime.",
+        "Falha de escrituração é sempre só infração leve sem outras consequências? Não. O §5º prevê multa de gravíssima para as condutas expressas, independentemente das demais cominações cabíveis."
+      ],
+      "termos": [
+        {
+          "termo": "Registro de movimento",
+          "significado": "Controle de entradas/saídas e demais campos exigidos, com acesso e forma regulados."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 126"
+      ],
+      "expected": {
+        "unit_id": "8f2a3395-bea3-5ba1-88b0-db1ef5b1c059",
+        "content_sha256": "f281f090b2f00b986ed3bd8bd05ca4812c70a2df88f9312162109cce9fae22ca",
+        "simples": "Os estabelecimentos onde se executam reformas ou recuperação de veículos e os que compram, vendem ou desmontam veículos, usados ou não, são obrigados a possuir livros de registro de seu movimento de entrada e saída e de uso de placas de experiência, conforme modelos aprovados pelos órgãos de trânsito. Os livros indicam a data de entrada, os dados do proprietário ou vendedor, a data da saída ou baixa, os dados do comprador, as características do veículo e o número da placa de experiência.",
+        "pontos": [
+          "Livros de registro obrigatórios.",
+          "Entrada, saída e placas de experiência.",
+          "Dados do proprietário, do comprador e do veículo."
+        ],
+        "atencao": [
+          "Aplica-se a oficinas e a quem compra, vende ou desmonta veículos."
+        ],
+        "exemplo": "A oficina anota a entrada e a saída de cada veículo em livro próprio.",
+        "prova": [
+          "Assertiva que dispensa o livro de registro nos estabelecimentos que desmontam veículos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 126"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-331",
+      "unit_id": "c4fa186e-bde6-5b13-8f48-d7dc4e14b96e",
+      "content_sha256": "b75fee46c6d62157908c6389232d95fb5b2127a7a69d2cbeed59f9eeb49c3e7b",
+      "simples": "Até a nomeação e posse dos membros dos colegiados destinados ao julgamento dos recursos administrativos previstos no Código, o julgamento dos recursos ficou a cargo dos órgãos então existentes.",
+      "pontos": [
+        "Regra transitória do julgamento de recursos."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Não afirmar historicamente que todas as JARI inexistiam antes do CTB; o texto refere colegiados e órgãos então existentes."
+      ],
+      "exemplo": "Na transição de implantação, órgãos então existentes julgavam recursos até nomeação E posse dos novos colegiados. Resposta: continuidade condicionada, não competência eterna. Variação: Em 2026, recursos seguem órgãos e composição atuais; não justificar julgamento por órgão antigo só com essa disposição.",
+      "prova": [
+        "Nomeação sem posse necessariamente satisfaz as duas condições expressas? Não. O texto fala nomeação E posse; distinguir os marcos de instalação no contexto histórico.",
+        "O dispositivo reinstala hoje órgãos antigos para todos os recursos? Não. É continuidade transitória de implantação, não regra de competência administrativa permanente."
+      ],
+      "termos": [
+        {
+          "termo": "Continuidade transitória",
+          "significado": "Evita vazio de julgamento na implantação, sem substituir o regime atual."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 16"
+      ],
+      "expected": {
+        "unit_id": "c4fa186e-bde6-5b13-8f48-d7dc4e14b96e",
+        "content_sha256": "b75fee46c6d62157908c6389232d95fb5b2127a7a69d2cbeed59f9eeb49c3e7b",
+        "simples": "Até a nomeação e posse dos membros dos colegiados destinados ao julgamento dos recursos administrativos previstos no Código, o julgamento dos recursos ficou a cargo dos órgãos então existentes.",
+        "pontos": [
+          "Regra transitória do julgamento de recursos."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "Os órgãos existentes julgaram recursos até a instalação das JARI.",
+        "prova": [
+          "Assertiva que torna permanente a competência dos órgãos antigos para julgar recursos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 16"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-332",
+      "unit_id": "a34bb78a-4957-54df-9d83-cbf72f0cb488",
+      "content_sha256": "c0b564ba8bd130d2445ca5df70e8231cd5fae8949f0bb883c8108df181517d3e",
+      "simples": "Os órgãos e entidades do Sistema Nacional de Trânsito proporcionam aos membros do Contran, dos Cetran e do Contrandife, em serviço, todas as facilidades para o cumprimento de sua missão, fornecendo as informações que solicitarem, permitindo-lhes inspecionar a execução de serviços e atendendo prontamente as suas requisições.",
+      "pontos": [
+        "Facilidades e informações aos membros dos conselhos.",
+        "Inspeção de serviços e atendimento a requisições."
+      ],
+      "atencao": [
+        "Dever de colaboração dos órgãos do sistema.",
+        "Não converter cooperação em competência penal ou acesso indiscriminado a toda informação sem recorte legal."
+      ],
+      "exemplo": "Membro do Cetran EM SERVIÇO solicita informação pertinente à missão. Resposta: órgão do SNT deve colaborar e atender prontamente a requisição legal. Variação: O artigo não concede prerrogativa pessoal fora da missão nem dispensa proteção de dados, competência e legalidade.",
+      "prova": [
+        "O direito de facilitar a missão vale como privilégio pessoal fora de serviço? Não. A norma menciona membros EM SERVIÇO e facilidades para cumprimento de sua missão.",
+        "Órgãos do sistema podem recusar toda inspeção por ser conselho e não polícia? Não. O artigo prevê informações e inspeção da execução de serviços no recorte legal, com atendimento de requisições."
+      ],
+      "termos": [
+        {
+          "termo": "Colaboração institucional",
+          "significado": "Facilidades para missão funcional, distinta de privilégio pessoal ilimitado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 14"
+      ],
+      "expected": {
+        "unit_id": "a34bb78a-4957-54df-9d83-cbf72f0cb488",
+        "content_sha256": "c0b564ba8bd130d2445ca5df70e8231cd5fae8949f0bb883c8108df181517d3e",
+        "simples": "Os órgãos e entidades do Sistema Nacional de Trânsito proporcionam aos membros do Contran, dos Cetran e do Contrandife, em serviço, todas as facilidades para o cumprimento de sua missão, fornecendo as informações que solicitarem, permitindo-lhes inspecionar a execução de serviços e atendendo prontamente as suas requisições.",
+        "pontos": [
+          "Facilidades e informações aos membros dos conselhos.",
+          "Inspeção de serviços e atendimento a requisições."
+        ],
+        "atencao": [
+          "Dever de colaboração dos órgãos do sistema."
+        ],
+        "exemplo": "O órgão de trânsito fornece os dados que o Cetran requisitar.",
+        "prova": [
+          "Assertiva que isenta os órgãos do sistema de atender às requisições dos conselhos erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-333",
+      "unit_id": "d71e964d-4918-5158-b6ad-87d9986191f3",
+      "content_sha256": "c9a01bab3444df4e46dcf107c8cd862f1df8ec4fbdd8e6dbcabec36ea3f1f680",
+      "simples": "O caput trata de 120 dias após nomeação dos membros do Contran para disposições dos arts. 91/92; §1º, um ano após edição das normas para órgãos existentes. São marcos históricos de implantação. §2º exige cumprimento das condições para órgãos novos: acompanhamento pelo Cetran quando municipal e Contran quando estadual, DF ou União, com integração ao SNT.",
+      "pontos": [
+        "Cento e vinte dias para o Contran.",
+        "Um ano para adequação dos órgãos existentes."
+      ],
+      "atencao": [
+        "Corrigida explicação antiga que atribuía genericamente todo acompanhamento ao Cetran.",
+        "Não reiniciar prazos históricos em cada atualização nem dispensar requisitos de integração atual."
+      ],
+      "exemplo": "Estudo histórico distingue 120 dias após nomeação para Contran editar normas e um ano após edição para adequação de órgãos existentes. Resposta: marcos diferentes. Variação: Órgão municipal novo é acompanhado pelo Cetran; estadual/DF/União pelo Contran no §2º, não todos pelo Cetran.",
+      "prova": [
+        "O §2º manda Cetran acompanhar igualmente todo órgão federal? Não. Cetran para municipal; Contran para estadual, DF ou União, na redação do artigo.",
+        "O prazo de um ano é contado sempre da publicação original do CTB? Não. O §1º o conta após a EDIÇÃO DAS NORMAS, distinto do marco de 120 dias após nomeação."
+      ],
+      "termos": [
+        {
+          "termo": "Marcos de adequação",
+          "significado": "Nomeação, edição de normas e criação de órgão são fatos distintos para cada regra."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 91"
+      ],
+      "expected": {
+        "unit_id": "d71e964d-4918-5158-b6ad-87d9986191f3",
+        "content_sha256": "c9a01bab3444df4e46dcf107c8cd862f1df8ec4fbdd8e6dbcabec36ea3f1f680",
+        "simples": "O Contran estabeleceria, em até cento e vinte dias após a nomeação de seus membros, as disposições dos arts. 91 e 92, a serem atendidas pelos órgãos executivos de trânsito e rodoviários para exercerem suas competências. Os órgãos já existentes teriam prazo de um ano, após a edição das normas, para se adequarem; os a serem criados exerceriam suas competências em cumprimento às exigências do Contran, acompanhados pelo respectivo Cetran.",
+        "pontos": [
+          "Cento e vinte dias para o Contran.",
+          "Um ano para adequação dos órgãos existentes."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "Os órgãos existentes tiveram um ano para se adequar às normas do Contran.",
+        "prova": [
+          "Assertiva que fixa em dois anos o prazo de adequação dos órgãos existentes erra: era de um ano."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 91"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-334",
+      "unit_id": "2e930129-1f7f-5f32-958d-8d816dd106e6",
+      "content_sha256": "bc6b454f23327a41b1d0374db92ca9705f992293727089748e23738d9f005b20",
+      "simples": "As ondulações transversais existentes deveriam ser homologadas pelo órgão ou entidade competente no prazo de um ano, a partir da publicação do Código, devendo ser retiradas em caso contrário.",
+      "pontos": [
+        "Homologação das lombadas em um ano.",
+        "Retirada das não homologadas."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Não certificada neste item toda geometria ou regulamentação técnica de ondulações."
+      ],
+      "exemplo": "Lombada existente na implantação deveria ser homologada em um ano da publicação do CTB ou retirada. Resposta: prazo histórico, não tolerância para qualquer instalação atual. Variação: Lombada criada em 2026 exige requisitos atuais; o prazo de 1997 não permite operar um ano sem homologação.",
+      "prova": [
+        "Toda lombada nova recebe um ano sem atender regra atual? Não. O texto trata das existentes na implantação e marco original; não cria carência para cada instalação nova.",
+        "A ausência de homologação histórica era indiferente segundo o artigo? Não. Previa retirada em caso contrário, distinguindo regularidade da simples presença física."
+      ],
+      "termos": [
+        {
+          "termo": "Homologação histórica",
+          "significado": "Adequação inicial das ondulações existentes, distinta de autorização para instalação atual irregular."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 94"
+      ],
+      "expected": {
+        "unit_id": "2e930129-1f7f-5f32-958d-8d816dd106e6",
+        "content_sha256": "bc6b454f23327a41b1d0374db92ca9705f992293727089748e23738d9f005b20",
+        "simples": "As ondulações transversais existentes deveriam ser homologadas pelo órgão ou entidade competente no prazo de um ano, a partir da publicação do Código, devendo ser retiradas em caso contrário.",
+        "pontos": [
+          "Homologação das lombadas em um ano.",
+          "Retirada das não homologadas."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "As lombadas existentes precisaram ser homologadas ou retiradas.",
+        "prova": [
+          "Assertiva que permite manter lombadas não homologadas erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 94"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-336",
+      "unit_id": "c7a2ddec-86ef-5269-a27f-c5809c094846",
+      "content_sha256": "1ee8012ae07ec4184549a76586b5e371b49d7b6aa89ad791454fcd6a2293a9d1",
+      "simples": "Aplicam-se os sinais de trânsito previstos no Anexo II até a aprovação pelo Contran, no prazo de trezentos e sessenta dias da publicação da lei, após manifestação da Câmara Temática de Engenharia, de Vias e Veículos e obedecidos os padrões internacionais.",
+      "pontos": [
+        "Anexo II vale até a aprovação pelo Contran.",
+        "Prazo de trezentos e sessenta dias."
+      ],
+      "atencao": [
+        "Dispositivo transitório.",
+        "Não certificada a cadeia completa de todos os manuais/volumes de sinalização; não gerar exercício usando placa histórica como atual."
+      ],
+      "exemplo": "Questão histórica menciona sinais do Anexo II até aprovação pelo Contran, com Câmara Temática e padrões internacionais. Resposta: previsão de transição, 360 dias da publicação. Variação: Uma placa atual exige norma vigente específica; a menção ao Anexo II não prova que todo desenho antigo continua aprovado.",
+      "prova": [
+        "O prazo de 360 dias se reinicia a cada consulta do candidato? Não. O marco é publicação original da lei; a disposição trata da implantação da sinalização.",
+        "O artigo elimina manifestação técnica e padrões internacionais na aprovação descrita? Não. Explicita Câmara Temática e padrões, sem substituir consulta às normas atuais de sinalização."
+      ],
+      "termos": [
+        {
+          "termo": "Sinalização de transição",
+          "significado": "Regime inicial até aprovação pertinente, distinto de certificação de todas as placas atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 87"
+      ],
+      "expected": {
+        "unit_id": "c7a2ddec-86ef-5269-a27f-c5809c094846",
+        "content_sha256": "1ee8012ae07ec4184549a76586b5e371b49d7b6aa89ad791454fcd6a2293a9d1",
+        "simples": "Aplicam-se os sinais de trânsito previstos no Anexo II até a aprovação pelo Contran, no prazo de trezentos e sessenta dias da publicação da lei, após manifestação da Câmara Temática de Engenharia, de Vias e Veículos e obedecidos os padrões internacionais.",
+        "pontos": [
+          "Anexo II vale até a aprovação pelo Contran.",
+          "Prazo de trezentos e sessenta dias."
+        ],
+        "atencao": [
+          "Dispositivo transitório."
+        ],
+        "exemplo": "O Contran aprovou a sinalização oficial depois do prazo.",
+        "prova": [
+          "Assertiva que torna definitivo o Anexo II sem aprovação do Contran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 87"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-337",
+      "unit_id": "6223cc14-1170-528d-946f-31b4407cd0f0",
+      "content_sha256": "c6f0a1be898a4b83c8a7103230b94fbf26a7a821cbdc7ee46e92ab8bfb7b511c",
+      "simples": "Os Cetran têm suporte técnico e financeiro dos Estados e Municípios que os compõem e, o Contrandife, do Distrito Federal.",
+      "pontos": [
+        "Suporte técnico e financeiro dos entes que compõem os conselhos."
+      ],
+      "atencao": [
+        "Cetran: Estados e Municípios; Contrandife: Distrito Federal."
+      ],
+      "exemplo": "Cetran recebe suporte técnico/financeiro dos Estados e Municípios que o compõem. Resposta: distinguir Contrandife, cujo suporte é do DF. Variação: O artigo não fixa valor ou divisão de cinquenta por cento para cada ente nem aponta União como responsável universal.",
+      "prova": [
+        "O Contrandife recebe pelo artigo suporte obrigatório de todos os municípios brasileiros? Não. Seu destinatário de suporte é o Distrito Federal, com regra distinta dos Cetran.",
+        "O texto determina percentual igual de contribuição de cada município? Não. Identifica entes de suporte, sem percentual uniforme; não inventar rateio legal."
+      ],
+      "termos": [
+        {
+          "termo": "Suporte técnico e financeiro",
+          "significado": "Responsabilidade institucional dos entes indicados, distinta de fórmula de rateio inventada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 14"
+      ],
+      "expected": {
+        "unit_id": "6223cc14-1170-528d-946f-31b4407cd0f0",
+        "content_sha256": "c6f0a1be898a4b83c8a7103230b94fbf26a7a821cbdc7ee46e92ab8bfb7b511c",
+        "simples": "Os Cetran têm suporte técnico e financeiro dos Estados e Municípios que os compõem e, o Contrandife, do Distrito Federal.",
+        "pontos": [
+          "Suporte técnico e financeiro dos entes que compõem os conselhos."
+        ],
+        "atencao": [
+          "Cetran: Estados e Municípios; Contrandife: Distrito Federal."
+        ],
+        "exemplo": "O Estado financia a estrutura do Cetran.",
+        "prova": [
+          "Assertiva que atribui à União o custeio dos Cetran erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 14"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-338",
+      "unit_id": "520c7dc1-4c6e-5f2c-9954-8f4a0df22542",
+      "content_sha256": "9fccd46ccc5dd98dc9b57802580dc2c5b9770ec176ad702292b4ecfae6a9f65e",
+      "simples": "As montadoras, encarroçadoras, importadores e fabricantes, ao comercializarem veículos automotores de qualquer categoria e ciclos, são obrigados a fornecer, no ato da comercialização, manual com as normas de circulação, infrações, penalidades, direção defensiva, primeiros socorros e Anexos do Código.",
+      "pontos": [
+        "Fornecimento de manual com normas de trânsito.",
+        "Direção defensiva e primeiros socorros."
+      ],
+      "atencao": [
+        "Obrigação do fabricante ou importador na comercialização.",
+        "Não inventar formato exclusivamente impresso/digital nem atestar adequação de manual comercial concreto sem conferência."
+      ],
+      "exemplo": "Importador comercializa veículo automotor e deve fornecer manual com normas, direção defensiva, primeiros socorros e anexos. Resposta: obrigação no ato da comercialização. Variação: O texto inclui CICLOS, não apenas carros de passeio; não reduzir destinatários ou conteúdo a manual mecânico do fabricante.",
+      "prova": [
+        "Manual apenas de manutenção satisfaz necessariamente todo o artigo? Não. Ele enumera conteúdo de trânsito, infrações, penalidades, direção defensiva, primeiros socorros e anexos, além da função mecânica.",
+        "A obrigação textual exclui ciclos por não terem motor? Não. O artigo menciona veículos automotores de qualquer categoria E CICLOS; não restringir a carros."
+      ],
+      "termos": [
+        {
+          "termo": "Manual educativo",
+          "significado": "Conteúdo legal e de segurança exigido na comercialização, distinto do manual só mecânico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 77-B"
+      ],
+      "expected": {
+        "unit_id": "520c7dc1-4c6e-5f2c-9954-8f4a0df22542",
+        "content_sha256": "9fccd46ccc5dd98dc9b57802580dc2c5b9770ec176ad702292b4ecfae6a9f65e",
+        "simples": "As montadoras, encarroçadoras, importadores e fabricantes, ao comercializarem veículos automotores de qualquer categoria e ciclos, são obrigados a fornecer, no ato da comercialização, manual com as normas de circulação, infrações, penalidades, direção defensiva, primeiros socorros e Anexos do Código.",
+        "pontos": [
+          "Fornecimento de manual com normas de trânsito.",
+          "Direção defensiva e primeiros socorros."
+        ],
+        "atencao": [
+          "Obrigação do fabricante ou importador na comercialização."
+        ],
+        "exemplo": "O comprador do veículo recebe o manual com normas de trânsito.",
+        "prova": [
+          "Assertiva que isenta fabricantes da entrega do manual de trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 77-B"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-338-a",
+      "unit_id": "4c27db1a-95a0-5dee-9937-378e571791c6",
+      "content_sha256": "de240d0888ba20f9e333e5d599621bf93b29be153960ac0f6dfeb2e5dbc0f0dc",
+      "simples": "As competências dos arts. 21, XV, e 24, XXII, passaram a ser atribuídas aos órgãos ou entidades ali descritos a partir de 1º de janeiro de 2024. Até 31 de dezembro de 2023, essas competências foram exercidas pelos órgãos executivos de trânsito dos Estados e do Distrito Federal.",
+      "pontos": [
+        "Transferência de competências em 1º de janeiro de 2024.",
+        "Regra provisória até 31 de dezembro de 2023."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+        "Dispositivo de transição, já cumprido.",
+        "Integrar arts. 21/24 atuais; não copiar antigo exercício que afirma inexistência de toda competência estadual após 2023."
+      ],
+      "exemplo": "A partir de 1º/1/2024, aplicam-se competências dos órgãos dos arts. 21, XV, e 24, XXII. Resposta: tratar a regra anterior até 31/12/2023 como histórica. Variação: A transferência dessas competências específicas não retira TODAS as competências estaduais do CTB.",
+      "prova": [
+        "O artigo elimina integralmente a atuação estadual depois de 2023? Não. Trata de competências expressas dos dois incisos; outras atribuições estaduais permanecem no regime pertinente.",
+        "Em 2026 ainda vale por padrão a transição até 31/12/2023? Não. O marco posterior é 1º/1/2024, sem perpetuar regra anterior nem ignorar texto atual dos artigos destinatários."
+      ],
+      "termos": [
+        {
+          "termo": "Transferência delimitada",
+          "significado": "Mudança de atribuições específicas, distinta de extinção total da competência de um ente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 21"
+      ],
+      "expected": {
+        "unit_id": "4c27db1a-95a0-5dee-9937-378e571791c6",
+        "content_sha256": "de240d0888ba20f9e333e5d599621bf93b29be153960ac0f6dfeb2e5dbc0f0dc",
+        "simples": "As competências dos arts. 21, XV, e 24, XXII, passaram a ser atribuídas aos órgãos ou entidades ali descritos a partir de 1º de janeiro de 2024. Até 31 de dezembro de 2023, essas competências foram exercidas pelos órgãos executivos de trânsito dos Estados e do Distrito Federal.",
+        "pontos": [
+          "Transferência de competências em 1º de janeiro de 2024.",
+          "Regra provisória até 31 de dezembro de 2023."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: artigo incluído por lei posterior.",
+          "Dispositivo de transição, já cumprido."
+        ],
+        "exemplo": "A partir de 2024, as competências passaram aos órgãos descritos nos arts. 21 e 24.",
+        "prova": [
+          "Assertiva que mantém a competência dos Estados após 2023 erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 21"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-339",
+      "unit_id": "077d5644-e859-5199-970d-ede020886cb4",
+      "content_sha256": "39525c61d121eb7ad0faba0ff2e808771eb9b9d559019cdae6632fe20840e50d",
+      "simples": "O Poder Executivo foi autorizado a abrir crédito especial de R$ 264.954,00 em favor do ministério ou órgão responsável pela coordenação máxima do Sistema Nacional de Trânsito, para atender às despesas de implantação do Código.",
+      "pontos": [
+        "Crédito especial para implantação do Código."
+      ],
+      "atencao": [
+        "Dispositivo de eficácia esgotada.",
+        "Não certificar eficácia orçamentária atual ou execução efetiva apenas pela preservação do texto compilado."
+      ],
+      "exemplo": "Questão histórica identifica autorização de crédito especial de R$ 264.954,00 para despesas de implantação do CTB. Resposta: verba específica, não repasse anual perpétuo. Variação: Atualização do CTB não reabre automaticamente o crédito original nem prova sua execução orçamentária efetiva.",
+      "prova": [
+        "O artigo cria pagamento anual de R$ 264.954,00 para cada município? Não. Autoriza crédito especial específico à coordenação máxima para implantação, sem essa periodicidade ou rateio.",
+        "A autorização prova sozinha que todo valor foi efetivamente gasto? Não. Autorização e execução orçamentária são fatos distintos; o texto não certifica a despesa realizada."
+      ],
+      "termos": [
+        {
+          "termo": "Crédito de implantação",
+          "significado": "Autorização orçamentária específica histórica, distinta de receita permanente."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 9º"
+      ],
+      "expected": {
+        "unit_id": "077d5644-e859-5199-970d-ede020886cb4",
+        "content_sha256": "39525c61d121eb7ad0faba0ff2e808771eb9b9d559019cdae6632fe20840e50d",
+        "simples": "O Poder Executivo foi autorizado a abrir crédito especial de R$ 264.954,00 em favor do ministério ou órgão responsável pela coordenação máxima do Sistema Nacional de Trânsito, para atender às despesas de implantação do Código.",
+        "pontos": [
+          "Crédito especial para implantação do Código."
+        ],
+        "atencao": [
+          "Dispositivo de eficácia esgotada."
+        ],
+        "exemplo": "A verba especial financiou a implantação do Código.",
+        "prova": [
+          "Assertiva que torna esse crédito uma despesa permanente do sistema erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 9º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-340",
+      "unit_id": "ef68213d-2e2d-5f2e-a4f8-a5e25dd99b0f",
+      "content_sha256": "fd306dd47807840fb7557666dc5b60092ab499812eec9a14ca8b512a10103257",
+      "simples": "O Código entrou em vigor cento e vinte dias após a data de sua publicação.",
+      "pontos": [
+        "Vigência após cento e vinte dias."
+      ],
+      "atencao": [
+        "Dispositivo histórico.",
+        "Não contar vacância apenas da assinatura; texto fala data da PUBLICAÇÃO."
+      ],
+      "exemplo": "Aluno separa data da lei original e início de vigência após 120 dias da publicação. Resposta: a lei não entrou em vigor instantaneamente só por ser assinada. Variação: Leis modificadoras de 2020/2026 possuem próprias cláusulas de vigência; não copiar 120 dias automaticamente para cada alteração.",
+      "prova": [
+        "Toda alteração futura do CTB herda vacância de 120 dias? Não. O artigo rege o Código original; cada lei/ato modificador precisa de sua própria cláusula e data de publicação.",
+        "A data de conferência em 13/10/2026 é a data de vigência original? Não. Conferência editorial, data original e início de efeitos jurídicos são marcos distintos."
+      ],
+      "termos": [
+        {
+          "termo": "Vacância original",
+          "significado": "Intervalo até vigência do Código original, distinto das vacâncias de leis modificadoras."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 341"
+      ],
+      "expected": {
+        "unit_id": "ef68213d-2e2d-5f2e-a4f8-a5e25dd99b0f",
+        "content_sha256": "fd306dd47807840fb7557666dc5b60092ab499812eec9a14ca8b512a10103257",
+        "simples": "O Código entrou em vigor cento e vinte dias após a data de sua publicação.",
+        "pontos": [
+          "Vigência após cento e vinte dias."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "O Código só passou a valer depois do período de vacância.",
+        "prova": [
+          "Assertiva que fixa vigência imediata do Código erra: foram cento e vinte dias."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 341"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "art-341",
+      "unit_id": "252188fa-ce33-59ae-ae7a-6323b36077c9",
+      "content_sha256": "ab7af0fa464ebaa65ee8bccd4d033a50191434c2351caab99e98db4f707d0e19",
+      "simples": "Ficaram revogadas as leis, decretos-leis e artigos listados no dispositivo, que tratavam do trânsito antes do Código atual.",
+      "pontos": [
+        "Revogação das leis anteriores sobre trânsito."
+      ],
+      "atencao": [
+        "Dispositivo histórico.",
+        "Não usar remissões históricas para restaurar regras revogadas ou presumir repristinação."
+      ],
+      "exemplo": "Aluno consulta lei antiga 5.108/1966. Resposta: o art. 341 a incluiu no rol revogado; fonte histórica não deve alimentar exercício como regra atual. Variação: Revogar artigos expressos de decreto-lei não significa revogar qualquer norma antiga não listada; examinar sucessão normativa concreta.",
+      "prova": [
+        "O rol permite apresentar antigo Código Nacional de Trânsito como vigente? Não. Ele está entre diplomas revogados; consulta histórica deve receber ressalva e contraste com o regime atual.",
+        "Revogação de arts. 1º–6º e 11 do decreto-lei citado equivale automaticamente a revogar todos seus artigos? Não. O texto diferencia artigos determinados e diplomas completos; não ampliar o rol sem análise."
+      ],
+      "termos": [
+        {
+          "termo": "Revogação expressa",
+          "significado": "Supressão dos diplomas/dispositivos indicados, distinta de certificação geral de toda norma histórica."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 340"
+      ],
+      "expected": {
+        "unit_id": "252188fa-ce33-59ae-ae7a-6323b36077c9",
+        "content_sha256": "ab7af0fa464ebaa65ee8bccd4d033a50191434c2351caab99e98db4f707d0e19",
+        "simples": "Ficaram revogadas as leis, decretos-leis e artigos listados no dispositivo, que tratavam do trânsito antes do Código atual.",
+        "pontos": [
+          "Revogação das leis anteriores sobre trânsito."
+        ],
+        "atencao": [
+          "Dispositivo histórico."
+        ],
+        "exemplo": "O Código substituiu o regime de trânsito anterior.",
+        "prova": [
+          "Assertiva que mantém em vigor o antigo Código Nacional de Trânsito erra."
+        ],
+        "termos": [],
+        "remissoes": [
+          "Art. 340"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    },
+    {
+      "course_slug": "transito",
+      "course_id": "91889817-ea19-5d79-a77f-cccf4b5484c6",
+      "syllabus_topic_id": "e71a35c8-9283-507b-a172-79f7c7d0fabf",
+      "edition_id": "02caf358-7504-4e09-b4e7-fe04e6bfae44",
+      "unit_key": "anexo-1",
+      "unit_id": "04965359-1a0b-55e0-9b91-a42a20ae9cd3",
+      "content_sha256": "9f285e39f8258c8702daa45d770c4433d1662d72892a32c1e6b3240719d6ce6c",
+      "simples": "O Anexo I define agentes, veículos, vias, sinais e movimentos para aplicação do CTB. Estude por contrastes: parada de passageiros, estacionamento e interrupção de marcha; passagem e ultrapassagem; estrada não pavimentada e rodovia pavimentada; ciclofaixa delimitada e ciclovia fisicamente separada. Ciclomotor: duas/três rodas, motor a combustão até 50 cm³ OU elétrico até 4 kW, velocidade máxima de fabricação até 50 km/h. Para elétricos, integrar classificação específica da Resolução 996/2023. Definição antiga de PATRULHAMENTO está revogada; conceitos atuais próprios não devem ser confundidos.",
+      "pontos": [
+        "Automóvel: até OITO pessoas exclusive condutor; microônibus ATÉ VINTE; ônibus MAIS DE VINTE, mesmo adaptado para menos.",
+        "Caminhonete: carga PBT até 3.500 kg; camioneta: misto no mesmo compartimento; caminhão: PBT superior a 3.500 kg.",
+        "Parada: embarque/desembarque de passageiros pelo tempo necessário; interrupção: circunstância momentânea do trânsito; carga/descarga tem conceito próprio e regime do art. 47.",
+        "Passagem: faixas distintas; ultrapassagem: sair e retornar à faixa de origem, no mesmo sentido.",
+        "Bicicleta/ciclo de propulsão humana; bicicleta elétrica equiparada tem condições da Resolução 996, não todo elétrico é ciclomotor.",
+        "PBT: tara + lotação; capacidade máxima de tração não é sinônimo de PBT.",
+        "Veículo de coleção: MAIS de trinta anos, original OU modificado, com valor histórico próprio; idade sozinha não basta.",
+        "Sinistro: dano a veículo/carga e/ou lesões a pessoas/animais, podendo afetar via/meio ambiente; pelo menos uma parte em movimento no âmbito descrito.",
+        "Agente de trânsito civil efetivo de carreira e agente da autoridade de trânsito não são conceitos idênticos; designações/convênios dependem do recorte.",
+        "Patrulhamento ostensivo da PRF, policiamento ostensivo de trânsito da PM e patrulhamento viário têm atribuições próprias."
+      ],
+      "atencao": [
+        "Conjunção OU para combustão/elétrico no ciclomotor; não ensinar 50 cm³ e 4 kW como requisitos simultâneos.",
+        "Definições devem ser integradas aos artigos e normas atuais: definição de pisca-alerta não elimina uso determinado por sinalização do art. 40.",
+        "Revogação de PATRULHAMENTO em 2023 não revogou todos os conceitos de patrulhamento/policiamento.",
+        "Veículo elétrico/híbrido integra definição de automotor; bonde sobre trilhos tem conceito distinto.",
+        "Revisão da unidade e de seus contrastes; não certifica todos os atos técnicos, sinais e anexos regulamentares externos."
+      ],
+      "exemplo": "Carro fica imobilizado em sinal vermelho. Resposta: INTERRUPÇÃO DE MARCHA, não parada para embarque nem estacionamento. Ao deixar passageiro pelo tempo necessário, é PARADA. Variação: Passar à frente em faixa distinta é PASSAGEM; ultrapassagem exige sair e retornar à faixa de origem. Carga/descarga não se torna parada só por ser rápida.",
+      "prova": [
+        "Ciclomotor exige simultaneamente motor a combustão de até 50 cm³ E motor elétrico de até 4 kW? Não. São alternativas de propulsão, com limites próprios, duas/três rodas e máximo de fabricação de 50 km/h.",
+        "Todo veículo no mesmo local sem se mover é estacionamento pelo anexo? Não. Há parada para passageiros, interrupção momentânea de marcha e estacionamento; finalidade e contexto importam."
+      ],
+      "termos": [
+        {
+          "termo": "Tara e PBT",
+          "significado": "Tara é peso próprio com componentes descritos; PBT corresponde à tara mais lotação."
+        },
+        {
+          "termo": "Passagem e ultrapassagem",
+          "significado": "Passagem em faixas distintas; ultrapassagem sai e retorna à faixa de origem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+        "Art. 4º",
+        "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf"
+      ],
+      "expected": {
+        "unit_id": "04965359-1a0b-55e0-9b91-a42a20ae9cd3",
+        "content_sha256": "9f285e39f8258c8702daa45d770c4433d1662d72892a32c1e6b3240719d6ce6c",
+        "simples": "O Anexo I reúne as definições usadas pelo Código, como acostamento, agente da autoridade de trânsito, automóvel (até oito pessoas, exclusive o condutor), bicicleta, calçada, caminhão (peso bruto total acima de 3.500 kg), ciclomotor (até 50 cm³, 4 kW e 50 km/h), cruzamento, estacionamento, estrada (via rural não pavimentada), rodovia (via rural pavimentada), parada, ultrapassagem, sinistro de trânsito, veículo de coleção (mais de trinta anos) e os tipos de vias urbanas.",
+        "pontos": [
+          "Definições de agentes, vias, veículos e manobras.",
+          "Automóvel: até oito pessoas, exclusive o condutor.",
+          "Ciclomotor: até 50 cm³, 4 kW e 50 km/h.",
+          "Estrada = via rural não pavimentada; rodovia = via rural pavimentada.",
+          "Estacionamento x parada.",
+          "Veículo de coleção: fabricado há mais de trinta anos."
+        ],
+        "atencao": [
+          "ATUALIZAÇÃO: o texto adota o termo \"sinistro de trânsito\" e inclui definições de agente de trânsito e veículo de coleção por leis recentes.",
+          "Parada = tempo estritamente necessário ao embarque ou desembarque; estacionamento = tempo superior.",
+          "Microônibus: até vinte passageiros; ônibus: mais de vinte."
+        ],
+        "exemplo": "Parar para o passageiro descer é parada; ficar além do necessário é estacionamento.",
+        "prova": [
+          "Assertiva que define a estrada como via rural pavimentada erra: é via rural não pavimentada, e a rodovia é a pavimentada."
+        ],
+        "termos": [
+          {
+            "termo": "Sinistro de trânsito",
+            "significado": "Evento com dano ao veículo, à carga ou a pessoas, em que ao menos uma parte está em movimento."
+          },
+          {
+            "termo": "Via de trânsito rápido",
+            "significado": "Via com acessos especiais, sem interseções em nível e sem travessia de pedestres em nível."
+          }
+        ],
+        "remissoes": [
+          "Art. 4º"
+        ],
+        "status": "published",
+        "authored_by": "claude",
+        "reviewed_by": null,
+        "reviewed_at": null,
+        "created_at": "2026-10-11T22:04:17.444592+00:00",
+        "updated_at": "2026-10-11T22:04:17.444592+00:00"
+      }
+    }
+  ]
+}

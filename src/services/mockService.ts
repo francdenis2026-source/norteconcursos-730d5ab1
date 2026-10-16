@@ -1,3 +1,4 @@
+import { acreDate } from "@/lib/acreTime";
 import { userStorageKey } from "@/lib/userStorage";
 import { PAYMENTS_ENABLED, PAYMENTS_NOTICE } from "../lib/launch.config";
 import {
@@ -67,7 +68,11 @@ function mapContest(row: Record<string, unknown>): Contest {
 export const MockService = {
   // Contests
   getContests: async (): Promise<Contest[]> => {
-    const { data, error } = await supabase.from("contests").select("*").eq("is_demo", false);
+    const { data, error } = await supabase
+      .from("contests")
+      .select("*")
+      .eq("is_demo", false)
+      .eq("content_status", "publicado");
     if (error) throw error;
     return (data ?? []).map(mapContest).filter((c) => !/fict[ií]cio/i.test(c.name));
   },
@@ -86,12 +91,20 @@ export const MockService = {
       data: { session },
     } = await supabase.auth.getSession();
     if (!session) throw new Error("Entre na sua conta para definir o concurso.");
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from("profiles")
       .update({ focused_contest_id: id })
-      .eq("id", session.user.id);
+      .eq("id", session.user.id)
+      .select("id,focused_contest_id")
+      .single();
     if (error) throw error;
-    localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
+    if (data?.id !== session.user.id || data?.focused_contest_id !== id)
+      throw new Error("Não foi possível confirmar o concurso salvo na sua conta.");
+    try {
+      localStorage.setItem(STORAGE_KEYS.FOCUSED_CONTEST, id);
+    } catch {
+      /* The database is the source of truth; local cache is optional. */
+    }
   },
   getFocusedContest: async (): Promise<Contest | undefined> => {
     const {
@@ -944,9 +957,9 @@ export const MockService = {
       log.new_tier,
       String(log.metadata?.["reason"] || "N/A"),
       typeof log.metadata?.["effective_date"] === "string"
-        ? new Date(log.metadata["effective_date"]).toLocaleDateString()
+        ? acreDate(log.metadata["effective_date"]).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })
         : "Immediate",
-      new Date(log.created_at).toLocaleString(),
+      acreDate(log.created_at).toLocaleString("pt-BR", { timeZone: "America/Rio_Branco" }),
     ]);
 
     const csvContent = [

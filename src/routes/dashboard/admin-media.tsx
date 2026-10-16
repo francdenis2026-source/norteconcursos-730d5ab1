@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
@@ -210,7 +211,7 @@ function VideosAdmin({ videos, onChange }: { videos: VideoRow[]; onChange: () =>
             status: r.status,
             embeddable: r.status === "ok",
             ...(r.channel ? { channel: r.channel } : {}),
-            checked_at: new Date().toISOString(),
+            checked_at: platformDate().toISOString(),
           })
           .eq("id", v.id);
         done++;
@@ -250,7 +251,7 @@ function VideosAdmin({ videos, onChange }: { videos: VideoRow[]; onChange: () =>
       channel: form.channel.trim() || meta?.channel || null,
       embeddable: meta ? meta.status === "ok" : true,
       status: meta?.status ?? "unchecked",
-      checked_at: meta ? new Date().toISOString() : null,
+      checked_at: meta ? platformDate().toISOString() : null,
     });
     setBusy(false);
     if (error) {

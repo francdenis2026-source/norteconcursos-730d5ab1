@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-16",
+  "course": "hediondos",
+  "unit_key": "art-8",
+  "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+  "reason": "Substituir busca genérica por multa pela página oficial do Tema 1355 citado corretamente na explicação.",
+  "before_row_md5": "bdfb48835500cba9b8ad514521b1f907",
+  "patch": {
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1355&cod_tema_inicial=1355&novaConsulta=true&tipo_pesquisa=T"
+    ]
+  },
+  "verified_after": {
+    "prova": [
+      "A pena atual do art. 35 da Lei de Drogas vira automaticamente três a seis anos? Não; a lei especial prevê três a dez anos e multa."
+    ],
+    "pontos": [
+      "CP 288 especial versus drogas 35; não confundir com organização de 4+."
+    ],
+    "status": "published",
+    "termos": [],
+    "atencao": [
+      "Associação para o tráfico não é automaticamente hedionda. STJ, Tema 1355/2026: fração especial do art. 44 da Lei de Drogas para livramento aplica-se ao art. 35, embora não hediondo. Benefício não se deduz só da etiqueta."
+    ],
+    "exemplo": "Associação estável para tráfico é analisada pela lei especial e seus requisitos. Variação: É associação do CP 288 para crimes hediondos: analise a hipótese deste artigo, sem transplantar elementos de organização.",
+    "simples": "Pena de 3 a 6 anos para associação do CP 288 voltada aos crimes indicados. Desmantelamento possibilitado pela denúncia do participante/associado permite redução de 1/3 a 2/3. Associação para o tráfico atual é tipo especial da Lei 11.343, art. 35, com 3 a 10 anos e dias-multa; não se substitui sua pena por este artigo.",
+    "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+    "remissoes": [
+      "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+      "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1355&cod_tema_inicial=1355&novaConsulta=true&tipo_pesquisa=T"
+    ],
+    "created_at": "2026-10-11T14:20:04.441813+00:00",
+    "updated_at": "2026-10-16T18:35:05.752147+00:00",
+    "authored_by": "codex",
+    "reviewed_at": "2026-10-16T18:35:05.752147+00:00",
+    "reviewed_by": "3ec587f5-0bf5-458d-841e-a19ff9ebbbf6",
+    "content_sha256": "9c937bbc86358cf7c3dd06be4e23c17b8f410b2860bf79711784e34eea0b963d"
+  },
+  "verification": "Comparação integral: somente remissoes e datas reviewed_at/updated_at alteradas; guardas de publicação, hash, curso e edital ativos."
+}

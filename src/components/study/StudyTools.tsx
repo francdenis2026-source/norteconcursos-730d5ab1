@@ -1,3 +1,5 @@
+import { acreDateKey } from "@/lib/acreTime";
+import { acreDate } from "@/lib/acreTime";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { BookOpenText, Calculator, CalendarDays, Cpu, Dices, Gavel, Link2, Network, NotebookPen, Percent, Receipt, Sigma, Table2, Wallet, X, Keyboard, Languages, Shapes, Waves } from "lucide-react";
@@ -395,7 +397,7 @@ function PunctuationTool() {
 
 // ───────── Direito: prazos, multa e calculadora penal ─────────
 function DeadlineTool() {
-  const [inicio, setInicio] = useState(() => new Date().toISOString().slice(0, 10));
+  const [inicio, setInicio] = useState(() => acreDateKey());
   const [dias, setDias] = useState("10");
   const [excluir, setExcluir] = useState(true), [uteis, setUteis] = useState(false);
   let fim: number | null = null;
@@ -408,7 +410,7 @@ function DeadlineTool() {
       <label className="flex items-start gap-2 text-sm"><input className="mt-1" type="checkbox" checked={excluir} onChange={(e) => setExcluir(e.target.checked)} /> Excluir o dia do começo e incluir o do vencimento (regra usual de prazos processuais; ex.: CPP, art. 798, § 1º)</label>
       <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={uteis} onChange={(e) => setUteis(e.target.checked)} /> Contar só dias úteis (sem sábados e domingos)</label>
       {err ? <p className="text-sm text-rose-600">{err}</p> : fim !== null && prorrogado !== null && (
-        <dl className={cn(cardCls, "divide-y")}><Row k="Último dia do prazo" v={`${formatBr(fim)} (${new Date(fim).toLocaleDateString("pt-BR", { weekday: "long", timeZone: "UTC" })})`} />{prorrogado !== fim && <Row k="Se cair em fim de semana, prorroga para" v={formatBr(prorrogado)} />}</dl>
+        <dl className={cn(cardCls, "divide-y")}><Row k="Último dia do prazo" v={`${formatBr(fim)} (${acreDate(fim).toLocaleDateString("pt-BR", { weekday: "long", timeZone: "UTC" })})`} />{prorrogado !== fim && <Row k="Se cair em fim de semana, prorroga para" v={formatBr(prorrogado)} />}</dl>
       )}
       <p className="text-[11px] text-muted-foreground">Feriados e suspensões de prazo não são considerados. Para a contagem de pena, o dia do começo conta (CP, art. 10); desmarque a primeira opção.</p>
     </div>
@@ -453,12 +455,12 @@ function NotesTool({ storageKey }: { storageKey: string }) {
 }
 
 // ───────── Painel ─────────
-export function StudyToolsPanel({ area, notesKey, onClose }: { area: ToolsArea; notesKey: string; onClose: () => void }) {
+export function StudyToolsPanel({ area, notesKey, onClose, topOffset = 68 }: { area: ToolsArea; notesKey: string; onClose: () => void; topOffset?: number }) {
   const ids = BY_AREA[area];
   const [tool, setTool] = useState<ToolId>(ids[0]!);
   const current = ids.includes(tool) ? tool : ids[0]!;
   return (
-    <aside className="fixed bottom-0 right-0 top-[4.25rem] z-[62] flex w-full max-w-sm flex-col border-l bg-background shadow-2xl" aria-label={AREA_TITLE[area]}>
+    <aside style={{top:topOffset}} className="fixed bottom-0 right-0 z-[62] flex w-full max-w-sm flex-col border-l bg-background shadow-2xl" aria-label={AREA_TITLE[area]}>
       <header className="flex items-center justify-between gap-2 border-b bg-gradient-to-r from-indigo-50 to-fuchsia-50 px-4 py-2 dark:from-indigo-950/40 dark:to-fuchsia-950/30">
         <p className="text-sm font-bold">{AREA_TITLE[area]}</p>
         <Button size="sm" variant="ghost" onClick={onClose} aria-label="Fechar ferramentas"><X className="h-4 w-4" /></Button>

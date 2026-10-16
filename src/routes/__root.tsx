@@ -1,3 +1,4 @@
+import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -10,7 +11,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import { supabase, passwordRecoveryPending } from "@/integrations/supabase/client";
+import { supabase, hasPendingEmailAuthCallback, markEmailAuthCallbackHandled, completeEmailAuthCallback } from "@/integrations/supabase/client";
 import { Toaster } from "@/components/ui/sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
@@ -186,11 +187,42 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(() => {
+    let active = true;
+    let pending = false;
+    const sync = async () => {
+      if (pending) return;
+      pending = true;
+      const started = performance.now();
+      try {
+        const { data, error } = await supabase.rpc("server_now").abortSignal(AbortSignal.timeout(10000));
+        if (!error && active && typeof data === "string") synchronizeClock(new Date(data).getTime(), performance.now() - started);
+      } catch {
+        // Keep the last server anchor when offline; the initial fallback uses the device instant.
+      } finally { pending = false; }
+    };
+    void sync();
+    const timer = window.setInterval(() => void sync(), 5 * 60_000);
+    const visible = () => { if (document.visibilityState === "visible") void sync(); };
+    document.addEventListener("visibilitychange", visible);
+    return () => { active = false; window.clearInterval(timer); document.removeEventListener("visibilitychange", visible); };
+  }, []);
+
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
   useEffect(() => {
     let previousUser: string | null = null;
-    if (passwordRecoveryPending) void router.navigate({ to: "/auth", search: { recovery: true } });
+    let active = true;
+    // Supabase may fall back to the site's home URL. Finish verification before
+    // navigating so the SDK can consume the original code/fragment first.
+    if (hasPendingEmailAuthCallback()) void completeEmailAuthCallback().then((result) => {
+      if (!active) return;
+      markEmailAuthCallbackHandled();
+      if (result.error) void router.navigate({ to: "/auth", search: { callbackError: result.error }, hash: "", replace: true });
+      else if (result.session) void router.navigate(result.recovery
+        ? { to: "/auth", search: { recovery: true }, hash: "", replace: true }
+        : { to: "/dashboard", hash: "", replace: true });
+    });
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
       const currentUser = session?.user.id ?? null;
       if (currentUser !== previousUser) queryClient.clear();
@@ -198,10 +230,10 @@ function RootComponent() {
       if ((event === "SIGNED_IN" || event === "INITIAL_SESSION") && session) {
         void claimSingleDeviceSession(session.user.id);
       }
-      if (event === "PASSWORD_RECOVERY")
+      if (event === "PASSWORD_RECOVERY" && !hasPendingEmailAuthCallback())
         void router.navigate({ to: "/auth", search: { recovery: true } });
     });
-    return () => data.subscription.unsubscribe();
+    return () => { active = false; data.subscription.unsubscribe(); };
   }, [router, queryClient]);
 
   useEffect(() => {

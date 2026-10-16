@@ -1,3 +1,4 @@
+import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
@@ -55,9 +56,7 @@ interface Raw {
 /** Últimos N dias em ISO (yyyy-mm-dd), do mais antigo ao mais recente. */
 const lastDays = (n: number) =>
   Array.from({ length: n }, (_, i) => {
-    const d = new Date();
-    d.setDate(d.getDate() - (n - 1 - i));
-    return d.toISOString().slice(0, 10);
+    return acreDaysAgoKey(n - 1 - i);
   });
 
 function AdminMetricsPage() {
@@ -154,15 +153,15 @@ function AdminMetricsPage() {
     const byDay = days.map((day) => ({
       day,
       ai: raw.usage.filter((x) => x.used_on === day).length,
-      exams: raw.results.filter((r) => r.created_at.slice(0, 10) === day).length,
-      signups: raw.profiles.filter((p) => p.created_at.slice(0, 10) === day).length,
+      exams: raw.results.filter((r) => acreDateKey(new Date(r.created_at)) === day).length,
+      signups: raw.profiles.filter((p) => acreDateKey(new Date(p.created_at)) === day).length,
     }));
     // Aluno ativo = usou IA ou concluiu simulado nos últimos 7 dias.
     const since = lastDays(7)[0] ?? "";
     const active = new Set(
       [
         ...raw.usage.filter((x) => x.used_on >= since).map((x) => x.user_id),
-        ...raw.results.filter((r) => r.created_at.slice(0, 10) >= since).map((r) => r.user_id),
+        ...raw.results.filter((r) => acreDateKey(new Date(r.created_at)) >= since).map((r) => r.user_id),
       ].filter((id) => kind.get(id) === "student"),
     ).size;
     return { byPlan, byDay, active, totals, maxAi: Math.max(1, ...byDay.map((d) => d.ai)) };

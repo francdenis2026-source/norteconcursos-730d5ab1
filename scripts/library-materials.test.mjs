@@ -13,7 +13,9 @@ const compile = (path, require) => {
   vm.runInNewContext(code, { module, exports: module.exports, require, URL });
   return module.exports;
 };
-const format = compile('src/lib/questionFormat.ts', () => { throw new Error('Unexpected dependency'); });
+const platformClock = compile('src/lib/platformClock.ts', () => { throw new Error('Unexpected dependency'); });
+const acreTime = compile('src/lib/acreTime.ts', name => { if (name === './platformClock') return platformClock; throw new Error('Unexpected dependency'); });
+const format = compile('src/lib/questionFormat.ts', name => { if (name === '@/lib/acreTime') return acreTime; throw new Error('Unexpected dependency'); });
 const { isStudySourceUrl } = compile('src/lib/studySourceUrl.ts', () => format);
 test('Library primary sources accept HTTPS while rejecting misleading domains and credentials', () => {
   for (const url of ['https://www.planalto.gov.br/ccivil_03/', 'https://www.rfc-editor.org/rfc/rfc9114.html', 'https://support.microsoft.com/en-us/windows/', 'https://cdn.cebraspe.org.br/concursos/PF_25/edital.pdf']) assert.equal(isStudySourceUrl(url), true);

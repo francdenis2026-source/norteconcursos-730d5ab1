@@ -1,3 +1,4 @@
+import { acreDateKey } from "@/lib/acreTime";
 import React from "react";
 import { Link } from "@tanstack/react-router";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -78,11 +79,16 @@ export function StudyGoals({ planTier }: { planTier?: string | undefined }) {
     setGoals(loaded);
     setDraft(loaded);
 
-    const responses = MockService.getUserResponses();
-    const todayStr = new Date().toISOString().split("T")[0];
-    const todayResponses = responses.filter((r) => r.createdAt?.split("T")[0] === todayStr);
-    const seconds = todayResponses.reduce((acc, r) => acc + (r.timeSpent || 0), 0);
-    setToday({ questions: todayResponses.length, minutes: Math.floor(seconds / 60) });
+    const refresh = () => {
+      const responses = MockService.getUserResponses();
+      const todayStr = acreDateKey();
+      const todayResponses = responses.filter((r) => r.createdAt && acreDateKey(new Date(r.createdAt)) === todayStr);
+      const seconds = todayResponses.reduce((acc, r) => acc + (r.timeSpent || 0), 0);
+      setToday({ questions: todayResponses.length, minutes: Math.floor(seconds / 60) });
+    };
+    refresh();
+    const timer = window.setInterval(refresh, 60_000);
+    return () => window.clearInterval(timer);
   }, []);
 
   const save = () => {

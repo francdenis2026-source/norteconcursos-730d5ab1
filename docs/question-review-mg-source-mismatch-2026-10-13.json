@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-10-13T23:42:21.934Z",
+  "scope": "Bloqueio de publicação por contexto e proveniência, sem remoção dos originais.",
+  "registered_prova": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+  "registered_gabarito": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+  "identified_legislation_gabarito": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+  "items": [
+    {
+      "id": "0131fb24-4f6e-49c0-b8ea-fe423774d553",
+      "item_number": 22,
+      "content_status": "under_review",
+      "original_answer_preserved": "A",
+      "review": "Auditoria de proveniência 13/10/2026: os PDFs cadastrados como prova e gabarito de três eixos contêm somente o Eixo Geral, questões 1 a 15; não comprovam os itens 21 e 22 do Eixo Legislação. Há ainda comando incorporado à alternativa A. Manter em revisão até localizar o caderno correto, conferir visualmente e cotejar o gabarito do eixo; não declarar anulação ou modificar gabarito. O fundamento constitucional pode ser conferido nos §§ 1º e 2º do art. 5º, mas isso não substitui a confirmação de proveniência e contexto."
+    },
+    {
+      "id": "60fc8fa5-f499-4ac4-a00f-d7de360b88bf",
+      "item_number": 21,
+      "content_status": "under_review",
+      "original_answer_preserved": "B",
+      "review": "Auditoria de proveniência 13/10/2026: os PDFs cadastrados como prova e gabarito de três eixos contêm somente o Eixo Geral, questões 1 a 15; não comprovam os itens 21 e 22 do Eixo Legislação. Há ainda comando incorporado à alternativa A. Manter em revisão até localizar o caderno correto, conferir visualmente e cotejar o gabarito do eixo; não declarar anulação ou modificar gabarito. O fundamento constitucional pode ser conferido nos §§ 1º e 2º do art. 5º, mas isso não substitui a confirmação de proveniência e contexto."
+    }
+  ],
+  "located_prova_legislacao": "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+  "located_prova_sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+  "visually_checked_page": 1,
+  "next_step": "Corrigir os vínculos específicos de prova e gabarito com trilha de proveniência, preservar os vínculos anteriores no relatório, reparar os comandos de questões A-D e então publicar após cotejo com matriz verificada."
+}

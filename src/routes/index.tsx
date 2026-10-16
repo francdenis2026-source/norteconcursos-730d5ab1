@@ -23,6 +23,7 @@ import {
   LineChart,
   Map as MapIcon,
   Menu,
+  LogIn,
   ScrollText,
   ShieldCheck,
   Sparkles,
@@ -118,7 +119,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; variant?: string }
   },
   {
     icon: LineChart,
-    title: "Raio-X de desempenho",
+    title: "Análise de desempenho",
     text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
     variant: "lp-tile--wide",
   },
@@ -221,7 +222,7 @@ function Index() {
           </nav>
           <div className="lp-header__actions">
             <Link to="/auth" search={{ mode: undefined }} className="lp-header__login">
-              Entrar
+              <LogIn aria-hidden="true" /> Entrar
             </Link>
             <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
               Começar grátis <ArrowRight />

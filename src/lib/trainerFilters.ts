@@ -3,6 +3,13 @@ import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { subjectInArea } from "./questionTopics";
 import { canonicalBoard, canonicalSubject, canonicalCareerName } from "./subjects";
 import {
+  isAppliedExamQuestion,
+  matchesQuestionContest,
+  matchesQuestionCareer,
+  questionContestLabel,
+  questionCareerLabel,
+} from "./questionFilterIdentity";
+import {
   matchesTopicFilter,
   scopedTopic,
   topicLabels,
@@ -41,11 +48,11 @@ export function filterTrainerQuestions(
     (q) =>
       (f.area === "all" || subjectInArea(f.area, q.subject)) &&
       matchesTopicFilter(q.subject, topics.get(q.id), f.topic) &&
-      (f.contest === "all" || q.contest === f.contest) &&
+      matchesQuestionContest(q.contest, f.contest) &&
       (f.board === "all" || canonicalBoard(q.board) === trainerBoard(f.board)) &&
-      (f.career === "all" || canonicalCareerName(q.career) === canonicalCareerName(f.career)) &&
+      matchesQuestionCareer(q.career, q.contest, q.year, f.career, f.contest, f.year) &&
       (f.year === "all" || q.year === f.year) &&
-      (f.appliedExam === "all" || examKey(q) === f.appliedExam) &&
+      (f.appliedExam === "all" || (isAppliedExamQuestion(q) && examKey(q) === f.appliedExam)) &&
       (f.subject === "all" || canonicalSubject(q.subject) === canonicalSubject(f.subject)) &&
       (f.source === "all" || q.source === f.source) &&
       (f.reviewed === "all" ||
@@ -95,6 +102,7 @@ export function trainerFilterFacets(
       topicNames.map((name) => [filterTopicIdentity(name), name]),
     );
     for (const q of rows) {
+      if (key === "exam" && !isAppliedExamQuestion(q)) continue;
       const rawTopic = topics.get(q.id);
       const value =
         key === "exam"
@@ -114,8 +122,10 @@ export function trainerFilterFacets(
                       ) ?? "")
                     : ""
                   : key === "career"
-                    ? canonicalCareerName(q.career)
-                    : q[key];
+                    ? questionCareerLabel(q.career, q.contest, q.year)
+                    : key === "contest"
+                      ? questionContestLabel(q.contest)
+                      : q[key];
       if (value) map.set(value, (map.get(value) ?? 0) + 1);
     }
     // Preserve counts for older plan URLs whose topic has no discipline prefix.
@@ -126,7 +136,39 @@ export function trainerFilterFacets(
       );
     }
     counts[key] = map;
+    if ((key === "contest" || key === "career") && filters[key] !== "all" && !map.has(filters[key]))
+      map.set(filters[key], filterTrainerQuestions(rows, filters, topics).length);
     totals[key] = rows.length;
   }
   return { counts, totals };
+}
+
+/** Scope by exam identity, never by a shared discipline such as Portuguese. */
+export function isEnemContest(contest: string) {
+  const name = contest.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  return /^(?:ENEM\b|Exame Nacional do Ensino Medio\b)/i.test(name);
+}
+export function trainerCollectionQuestions(catalog: Question[], collection: "enem" | "contests") {
+  return catalog.filter((question) => isEnemContest(question.contest) === (collection === "enem"));
+}
+
+export type TrainerPracticeMode = "new" | "wrong" | "all" | "catalog";
+/** Filter the catalog before deriving facets, so options reflect the student's own history. */
+export function trainerPracticeQuestions(
+  catalog: Question[],
+  mode: TrainerPracticeMode,
+  answers: ReadonlyMap<string, { isCorrect: boolean }>,
+  reinforcements: ReadonlyMap<string, { lastCorrect: boolean }>,
+) {
+  return catalog.filter(question => {
+    if (mode === "catalog") return true;
+    const key = `${question.source}:${question.id}`;
+    if (mode === "new") return !answers.has(key);
+    if (mode === "all") return answers.has(key);
+    return answers.get(key)?.isCorrect === false && !reinforcements.get(key)?.lastCorrect;
+  });
+}
+
+export function syllabusQuestions(catalog: Question[], topicId?: string) {
+  return topicId ? catalog.filter(question => question.syllabusTopicId === topicId) : catalog;
 }

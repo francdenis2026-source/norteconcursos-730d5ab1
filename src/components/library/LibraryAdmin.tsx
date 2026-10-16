@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDateKey } from "@/lib/acreTime";
 import { DatePicker } from "@/components/ui/date-picker";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -162,7 +164,7 @@ export function LibraryAdmin() {
           : null,
         content_status: status,
         reviewed_by: publishing ? user?.id : null,
-        reviewed_at: publishing ? new Date().toISOString() : null,
+        reviewed_at: publishing ? platformDate().toISOString() : null,
       };
       const query = d.id
         ? supabase.from("study_materials").update(payload).eq("id", d.id)
@@ -410,7 +412,7 @@ export function LibraryAdmin() {
                   <Field label="Fontes conferidas em">
                     <DatePicker
                       value={draft.law_version_checked_at}
-                      max={new Date().toISOString().slice(0, 10)}
+                      max={acreDateKey()}
                       onChange={(v) => update({ law_version_checked_at: v })}
                     />
                   </Field>

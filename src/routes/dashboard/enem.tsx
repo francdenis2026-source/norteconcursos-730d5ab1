@@ -23,12 +23,22 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { SubjectIcon } from "@/components/ui/subject-icon";
+import { EnemOfficialPractice } from "@/components/enem/EnemOfficialPractice";
+import { EnemStudy } from "@/components/enem/EnemStudy";
 import { EnemVideos } from "@/components/enem/EnemVideos";
+import { EnemCalendar } from "@/components/enem/EnemCalendar";
 import { COMPETENCIAS, ENEM_AREAS, ENEM_FACTS, type EnemArea } from "@/data/enem";
 import { useMediaCatalog } from "@/lib/mediaStore";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/enem")({
+  validateSearch: (search: Record<string, unknown>): { tab?: string } => ({
+    tab: ["visao", "materiais", "videos", "redacao", "questoes", "checklist"].includes(
+      String(search["tab"]),
+    )
+      ? String(search["tab"])
+      : "visao",
+  }),
   head: () => ({ meta: [{ title: "Área ENEM | Norte Concurso" }] }),
   component: EnemPage,
 });
@@ -63,6 +73,7 @@ function useChecks() {
 /** Quantas questões de ENEM existem no banco (0 enquanto ainda não foram importadas). */
 function useEnemQuestionCount() {
   const [n, setN] = React.useState<number | null>(null);
+  const [error, setError] = React.useState(false);
   React.useEffect(() => {
     let alive = true;
     void Promise.all(
@@ -74,21 +85,30 @@ function useEnemQuestionCount() {
           .eq("content_status", "active"),
       ),
     )
-      .then((r) => alive && setN(r.reduce((s, x) => s + (x.count ?? 0), 0)))
-      .catch(() => alive && setN(0));
+      .then((r) => {
+        if (r.some((x) => x.error)) throw new Error("Falha ao consultar questões ENEM");
+        if (alive) setN(r.reduce((s, x) => s + (x.count ?? 0), 0));
+      })
+      .catch(() => {
+        if (alive) setError(true);
+      });
     return () => {
       alive = false;
     };
   }, []);
-  return n;
+  return { count: n, error };
 }
 
 function EnemPage() {
-  const [tab, setTab] = React.useState("visao");
+  const { tab = "visao" } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const setTab = (value: string) => {
+    void navigate({ search: { tab: value }, replace: true });
+  };
   const [subject, setSubject] = React.useState("Matemática");
   const { catalog } = useMediaCatalog();
   const checks = useChecks();
-  const questions = useEnemQuestionCount();
+  const { count: questions, error: questionCountError } = useEnemQuestionCount();
 
   const allTopics = ENEM_AREAS.flatMap((a) =>
     a.subjects.flatMap((s) => s.topics.map((t) => `${s.name}|${t}`)),
@@ -134,10 +154,15 @@ function EnemPage() {
         </div>
       </PageHero>
 
+      <EnemCalendar />
+
       <Tabs value={tab} onValueChange={setTab}>
-        <TabsList className="flex-wrap">
+        <TabsList className="h-auto w-full flex-wrap justify-start gap-1">
           <TabsTrigger value="visao" className="gap-1.5">
             <Layers className="h-4 w-4 !text-sky-500" /> Visão geral
+          </TabsTrigger>
+          <TabsTrigger value="materiais" className="gap-1.5">
+            <BookOpenCheck className="h-4 w-4 !text-sky-500" /> Materiais de estudo
           </TabsTrigger>
           <TabsTrigger value="videos" className="gap-1.5">
             <PlayCircle className="h-4 w-4 !text-rose-500" /> Videoaulas
@@ -175,8 +200,11 @@ function EnemPage() {
           </div>
         </TabsContent>
 
+        <TabsContent value="materiais" className="mt-5">
+          <EnemStudy />
+        </TabsContent>
         <TabsContent value="videos" className="mt-5">
-          <EnemVideos subject={subject} onSubject={setSubject} />
+          <EnemVideos key={subject} subject={subject} onSubject={setSubject} />
         </TabsContent>
 
         <TabsContent value="redacao" className="mt-5 space-y-4">
@@ -222,7 +250,8 @@ function EnemPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="questoes" className="mt-5">
+        <TabsContent value="questoes" className="mt-5 space-y-4">
+          <EnemOfficialPractice />
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
@@ -233,7 +262,25 @@ function EnemPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {questions && questions > 0 ? (
+              <Button asChild variant="outline" className="gap-2">
+                <Link to="/dashboard/mock-exams" search={{ mode: "enem", contest: "ENEM" }}>
+                  <Timer className="h-4 w-4" /> Montar simulado ENEM
+                </Link>
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                Escolha a área do conhecimento, a disciplina, a quantidade e o tempo. O simulador
+                desta área usa somente questões do ENEM; combinações sem questões permanecem vazias.
+              </p>
+              {questionCountError ? (
+                <p role="alert" className="text-sm text-destructive">
+                  Não foi possível consultar o banco ENEM. Recarregue a página para tentar
+                  novamente.
+                </p>
+              ) : questions === null ? (
+                <p role="status" className="text-sm text-muted-foreground">
+                  Consultando questões ENEM…
+                </p>
+              ) : questions > 0 ? (
                 <>
                   <p className="text-sm">
                     Há <b>{questions.toLocaleString("pt-BR")}</b> questões do ENEM disponíveis no
@@ -257,7 +304,8 @@ function EnemPage() {
                 </div>
               )}
               <p className="text-xs text-muted-foreground">
-                Enquanto isso, use as videoaulas e o checklist para organizar os estudos.
+                O simulado mostra acertos e erros. Esse resultado não é uma estimativa da nota TRI
+                do ENEM.
               </p>
             </CardContent>
           </Card>
@@ -336,13 +384,7 @@ function AreaCard({
                   size="sm"
                   variant="outline"
                   className="shrink-0 gap-1.5"
-                  onClick={() =>
-                    onWatch(
-                      s.name === "Artes, Educação Física e Tecnologias"
-                        ? "Língua Portuguesa"
-                        : s.name,
-                    )
-                  }
+                  onClick={() => onWatch(s.name)}
                 >
                   <PlayCircle className="h-4 w-4" /> {videos}
                 </Button>

@@ -1,6 +1,6 @@
-# CTB — revisão em andamento
+# CTB — pendências editoriais do inventário concluídas
 
-Supabase conferido em 13/10/2026: **267/365 unidades atuais com aprovação editorial válida; 98 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
+Supabase conferido em 13/10/2026: **365/365 unidades atuais com aprovação editorial válida; 0 pendentes**. O primeiro lote desta retomada publicou 50 itens, dos arts. 1º–47, incluindo dispositivos com letras. Os 17 anteriormente aprovados foram preservados. A lista exata e o próximo item estão em `ctb-review-progress-2026-10-13.json`.
 
 Cada item do lote tem caso resolvido, variação contrastante, dois exercícios com resposta explicada e termo definido. Foram corrigidas omissões e generalizações, entre elas estacionamentos privados coletivos, composição do SNT/Contran, mandato dos Conselhos, registros nacionais, competências reorganizadas em 2023, delegação de privativas, alcance da polícia legislativa, prioridade de veículos especiais e distinção entre buzina, faróis e DRL. Os alertas antigos sobre apreensão/remoção foram preservados.
 
@@ -12,7 +12,7 @@ Readback: **50/50**, todos os campos autorais e hashes, 3.463 explicações fora
 
 Validação: 421 testes, TypeScript e build aprovados, além das verificações de integração. Pacotes retêm as 50 versões anteriores. Fontes brutas, snapshots e logs ficam apenas nos outputs ignorados; credenciais não são versionadas.
 
-Retomar no **art. 248**. Não declarar conclusão do CTB; a comparação textual não substitui revisão pedagógica/jurídica. Inventário legal geral: **2.710/3.511 revisadas, 801 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
+As pendências editoriais das unidades atuais estão concluídas. Não declarar certificação integral de toda jurisprudência/regulamentação: a comparação textual não substitui auditoria externa de todo detalhe. Inventário legal geral: **2.808/3.511 revisadas, 703 pendentes**. A leitura integral complementar pode exceder o programa do cargo; conferir seu edital.
 
 ## Segundo lote
 
@@ -39,3 +39,25 @@ Mais 50 itens (arts. 193–247, recorte explícito) publicados e conferidos. Cor
 50/50 no readback; 3.463 explicações externas ao lote, incluindo 315 do CTB, preservadas. Todos os registros anteriores das seis tabelas protegidas permaneceram idênticos. Foram adicionados pela outra conta 23 tópicos de edição diferente e 13 fontes: evidência explícita por ID/hash, sem ocultar o crescimento das tabelas ou aceitar alteração de registros anteriores. Seis testes negativos/positivos do readback passaram; 434 testes de aplicação, TypeScript e build passaram. Lote anterior na main: `3e3834e`. A retomada soma 250 novos itens aprovados.
 
 A main recebeu migração concorrente `88d90c3` de rascunhos dos arts. 193–201. Seu conteúdo é preservado no Git; inserção ajustada para não sobrescrever registros já existentes, em especial as aprovações correntes. As demais mudanças remotas tratam principalmente do treinador e não contam como novas revisões editoriais da biblioteca.
+
+
+## Sexto lote
+
+Mais 50 unidades (arts. 248–295, recorte explícito) revisadas, publicadas e confirmadas. Corrigidos descontos de 20%/40% e condições de renúncia, dever de advertência do 267, RNPC sem dispensa dos exames físico/mental, diferenças entre expedição/recebimento de notificação e entre prazos de quinze/trinta/sessenta dias. Resolução 1025/2026 e vigência futura do SNE exclusivo em 2027 explicitadas. Cautelares e expressão de ofício integradas ao CPP atual, sem declarar resolvidas todas as controvérsias.
+
+50/50 no readback; 3.463 explicações fora do lote, incluindo 315 do CTB, preservadas. Todos os registros anteriores das seis tabelas protegidas permaneceram iguais; adições concorrentes de 21 tópicos, duas edições e quatro fontes registradas por ID/hash. Coleta com duplicados foi rejeitada e repetida. Antes da publicação, conferência independente registrou outras adições e duas fontes de disciplinas alheias atualizadas pela outra conta, sem alteração em explicações ou unidades do CTB.
+
+437 testes, TypeScript e build passaram; sete testes de proteção do readback passaram. Esta retomada soma 300 novos itens aprovados; 17 anteriores preservados. Lote anterior enviado com proteção de migração no commit `e9c8f7b`. Próximo lote: 48 unidades do art. 296 ao Anexo I. Não confundir aprovação da unidade com certificação de toda jurisprudência/regulamentação externa.
+
+
+## Sétimo lote e fechamento
+
+As últimas 48 unidades pendentes (arts. 296–341 e Anexo I, com recorte explícito) foram revisadas, publicadas e conferidas. Esta retomada acrescentou 348 aprovações em sete lotes, preservando as 17 anteriores: 365/365 unidades atuais têm aprovação válida; zero pendentes no inventário do CTB. Cada nova unidade contém caso resolvido, variação contrastante, dois exercícios respondidos e glossário.
+
+Corrigidos culpa/dolo, requisitos cumulativos das lesões qualificadas, vedação de dupla valoração, alcance do socorro, constitucionalidade da fuga (Tema 907/ADC 35), medição bruta/considerada de álcool e contraste entre perigo concreto do 309 e perigo abstrato do 310 (Súmula 575/STJ). CP 44 integrado ao 312-B; não generalizar proibição a todos os benefícios. Disposições históricas têm ressalvas e não criam novos prazos de tolerância em 2026. Corrigidos piso do segundo leilão, acompanhamento Cetran/Contran, CadÚnico, metas do Pnatrans e conceitos contrastantes do Anexo I.
+
+48/48 no readback; 3.465 explicações externas ao lote, incluindo as 317 do CTB, preservadas. Seis tópicos concorrentes adicionados em outra edição, com evidência por ID/hash; todos os registros anteriores das seis tabelas protegidas preservados. 440 testes, TypeScript e build passaram, além dos sete testes de proteção do readback. Sexto lote na main: conteúdo `6f16347`, integração `11a7af4`.
+
+Limites explícitos: jurisprudência específica sobre suspensão administrativa do art. 307 não foi integralmente validada; exemplos limitados à judicial, sem exercício automático irrestrito. Não certificadas todas as normas sucessoras das remissões de 1968/sinalização inicial nem todos os anexos técnicos de resoluções, implantação de Sivec/SNE, fichas futuras ou jurisprudência possível. Conclusão refere-se à revisão editorial das unidades existentes com essas ressalvas.
+
+Inventário geral restante: ECA 322, Lei de Migração 123, LEP 109, Juizados Especiais 98 e Convenção de Budapeste 51 — total 703 unidades legais, não questões do treinador. Não houve criação/importação de questões ao treinador por estes lotes.

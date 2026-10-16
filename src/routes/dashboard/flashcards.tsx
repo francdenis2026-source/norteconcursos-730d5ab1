@@ -1,3 +1,5 @@
+import { platformDate } from "@/lib/platformClock";
+import { acreDate } from "@/lib/acreTime";
 import { canonicalSubject } from "@/lib/subjects";
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
@@ -65,7 +67,7 @@ const RATING_STYLE: Record<Rating, string> = {
 const isSameAcreDay = (iso: string | null) =>
   !!iso &&
   new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date(iso)) ===
-    new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(new Date());
+    new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(platformDate());
 
 function CardForm({
   initial,
@@ -218,7 +220,7 @@ function FlashcardsPage() {
   }, [authLoading, real, load]);
 
   const dueNow = React.useMemo(
-    () => cards.filter((c) => new Date(c.due_at) <= new Date()),
+    () => cards.filter((c) => new Date(c.due_at) <= platformDate()),
     [cards],
   );
   const doneToday = cards.filter((c) => isSameAcreDay(c.last_reviewed_at)).length;
@@ -253,7 +255,7 @@ function FlashcardsPage() {
         reps: next.reps,
         lapses: next.lapses,
         due_at: next.due_at,
-        last_reviewed_at: new Date().toISOString(),
+        last_reviewed_at: platformDate().toISOString(),
       };
       setCards((cs) => cs.map((c) => (c.id === card.id ? { ...c, ...patch } : c)));
       const [a, b] = await Promise.all([
@@ -598,7 +600,7 @@ function FlashcardsPage() {
               ) : (
                 <ul className="divide-y">
                   {shown.map((c) => {
-                    const due = new Date(c.due_at) <= new Date();
+                    const due = new Date(c.due_at) <= platformDate();
                     return (
                       <li key={c.id} className="flex items-start justify-between gap-3 py-3">
                         <div className="min-w-0">
@@ -617,7 +619,7 @@ function FlashcardsPage() {
                             >
                               {due
                                 ? "Revisar agora"
-                                : `Próxima: ${new Date(c.due_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco", day: "2-digit", month: "2-digit" })} (${formatInterval(c.interval_days)})`}
+                                : `Próxima: ${acreDate(c.due_at).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco", day: "2-digit", month: "2-digit" })} (${formatInterval(c.interval_days)})`}
                             </span>
                           </div>
                         </div>

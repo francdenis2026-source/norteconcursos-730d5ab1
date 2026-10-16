@@ -1,0 +1,1475 @@
+{
+  "course_slug": "lep",
+  "units": {
+    "art-150": {
+      "simples": "A entidade beneficiada com a prestação de serviços encaminhará mensalmente ao Juiz da execução relatório circunstanciado das atividades do condenado, bem como, a qualquer tempo, comunicação sobre ausência ou falta disciplinar.",
+      "pontos": [
+        "Relatório mensal.",
+        "Comunicação imediata de ausência ou falta."
+      ],
+      "atencao": [
+        "Relatório MENSAL.",
+        "Não equiparar qualquer ausência a falta injustificada sem apuração."
+      ],
+      "exemplo": "Entidade comunica ausência antes de fechar relatório mensal. Resposta: comunicação a qualquer tempo e relatório mensal coexistem. Variação: Não esperar seis meses para comunicar descumprimento só porque o relatório é periódico.",
+      "prova": [
+        "O relatório mensal impede informar falta antes do mês terminar? Não. O artigo prevê comunicação A QUALQUER TEMPO sobre ausência/falta, além do relatório mensal.",
+        "A entidade pode converter a pena apenas por relatar ausência? Não. Comunicação subsidia juízo competente; não é decisão judicial substitutiva."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 150",
+          "significado": "A entidade beneficiada com a prestação de serviços encaminhará mensalmente ao Juiz da execução relatório circunstanciado das atividades do condenado, bem como, a qualquer tempo, comunicação sobre ausência ou falta disciplinar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 149"
+      ]
+    },
+    "art-151": {
+      "simples": "Caberá ao Juiz da execução determinar a intimação do condenado, cientificando-o do local, dias e horário em que deverá cumprir a pena. A execução terá início a partir da data do primeiro comparecimento.",
+      "pontos": [
+        "Intimação do condenado.",
+        "Início no primeiro comparecimento."
+      ],
+      "atencao": [
+        "Mesma regra de início do art. 149."
+      ],
+      "exemplo": "Condenado é intimado de local/dias/horários e comparece pela primeira vez. Resposta: início da execução da limitação no marco do comparecimento. Variação: Data da sentença e primeiro comparecimento são fatos distintos.",
+      "prova": [
+        "A execução do capítulo começa necessariamente na assinatura da sentença? Não. O parágrafo indica PRIMEIRO COMPARECIMENTO, sem dispensar condições judiciais de execução.",
+        "Pode exigir presença sem cientificar local, dias e horário no recorte? Não. Cabe ao juiz determinar intimação com essas informações."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 151",
+          "significado": "Caberá ao Juiz da execução determinar a intimação do condenado, cientificando-o do local, dias e horário em que deverá cumprir a pena. A execução terá início a partir da data do primeiro comparecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 149"
+      ]
+    },
+    "art-152": {
+      "simples": "Poderão ser ministrados ao condenado, durante o tempo de permanência, cursos e palestras, ou atribuídas atividades educativas. Nos casos de violência doméstica e familiar contra a criança, o adolescente e a mulher e de tratamento cruel ou degradante, ou de uso de formas violentas de educação, correção ou disciplina contra a criança e o adolescente, o juiz poderá determinar o comparecimento obrigatório do agressor a programas de recuperação e reeducação.",
+      "pontos": [
+        "Cursos, palestras e atividades educativas.",
+        "Comparecimento obrigatório do agressor a programas de reeducação."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: o parágrafo único foi ampliado por lei posterior (violência contra criança, adolescente e mulher)."
+      ],
+      "exemplo": "Juiz determina comparecimento do agressor a programa de recuperação no caso de violência contra criança. Resposta: parágrafo não é exclusivo de violência contra mulher. Variação: O caput permite atividades educativas; não torna todo curso da unidade automaticamente obrigatório sem fundamento.",
+      "prova": [
+        "O parágrafo só trata de mulher adulta? Não. Redação da Lei 14.344/2022 também abrange criança/adolescente e os contextos de violência/tratamento descritos.",
+        "A possibilidade de o juiz determinar significa livre escolha do agressor depois da ordem válida? Não. A decisão pode tornar o comparecimento OBRIGATÓRIO no recorte, não mera recomendação."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 152",
+          "significado": "Poderão ser ministrados ao condenado, durante o tempo de permanência, cursos e palestras, ou atribuídas atividades educativas. Nos casos de violência doméstica e familiar contra a criança, o adolescente e a mulher e de tratamento cruel ou degradante, ou de uso de formas violentas de educação, correção ou disciplina contra a criança e o adolescente, o juiz poderá determinar o comparecimento obrigatório do agressor a programas de recuperação e reeducação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Lei Maria da Penha"
+      ]
+    },
+    "art-153": {
+      "simples": "O estabelecimento designado encaminhará, mensalmente, ao Juiz da execução relatório, bem assim comunicará, a qualquer tempo, a ausência ou falta disciplinar do condenado.",
+      "pontos": [
+        "Relatório mensal.",
+        "Comunicação imediata de ausência ou falta."
+      ],
+      "atencao": [
+        "Relatório MENSAL."
+      ],
+      "exemplo": "Estabelecimento envia relatório mensal e comunica falta fora desse calendário. Resposta: obrigações de fiscalização do cumprimento. Variação: Comunicar fato não prova por si ausência injustificada ou autoriza condenação automática.",
+      "prova": [
+        "É suficiente um relatório semestral por conter muitos dados? Não. O artigo exige MENSALMENTE, além de comunicação a qualquer tempo dos fatos relevantes.",
+        "A comunicação substitui toda defesa no incidente? Não. Informação e apuração/decisão são etapas distintas, com garantias pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 153",
+          "significado": "O estabelecimento designado encaminhará, mensalmente, ao Juiz da execução relatório, bem assim comunicará, a qualquer tempo, a ausência ou falta disciplinar do condenado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 150"
+      ]
+    },
+    "art-154": {
+      "simples": "Caberá ao Juiz da execução comunicar à autoridade competente a pena aplicada, determinada a intimação do condenado. Na hipótese de pena de interdição do art. 47, inciso I, do Código Penal, a autoridade deverá, em 24 horas contadas do recebimento do ofício, baixar ato, a partir do qual a execução terá início. Nas hipóteses do art. 47, incisos II e III, o juízo determinará a apreensão dos documentos que autorizam o exercício do direito interditado.",
+      "pontos": [
+        "Comunicação da pena à autoridade competente.",
+        "Interdição do inciso I: ato em 24 horas.",
+        "Incisos II e III: apreensão dos documentos."
+      ],
+      "atencao": [
+        "Autoridade tem 24 horas para baixar o ato."
+      ],
+      "exemplo": "Autoridade recebe ofício da interdição do CP 47,I. Resposta: baixar ato em vinte e quatro horas do RECEBIMENTO, marco do início nesse recorte. Variação: Não contar essas vinte e quatro horas da prática do crime nem aplicar indiferentemente a todo inciso do CP 47.",
+      "prova": [
+        "O prazo começa da sentença mesmo antes de recebido o ofício? Não. §1º fixa RECEBIMENTO DO OFÍCIO, com ato a partir do qual se inicia execução.",
+        "As interdições dos incisos II/III seguem apenas o mesmo ato do inciso I? Não. §2º tem determinação judicial de apreensão dos documentos, com objeto específico."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 154",
+          "significado": "Caberá ao Juiz da execução comunicar à autoridade competente a pena aplicada, determinada a intimação do condenado. Na hipótese de pena de interdição do art. 47, inciso I, do Código Penal, a autoridade deverá, em 24 horas contadas do recebimento do ofício, baixar ato, a partir do qual a execução terá início. Nas hipóteses do art. 47, incisos II e III, o juízo determinará a apreensão dos documentos que autorizam o exercício do direito interditado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 47",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-155": {
+      "simples": "A autoridade deverá comunicar imediatamente ao Juiz da execução o descumprimento da pena. A comunicação poderá ser feita por qualquer prejudicado.",
+      "pontos": [
+        "Comunicação imediata do descumprimento.",
+        "Qualquer prejudicado pode comunicar."
+      ],
+      "atencao": [
+        "Qualquer PREJUDICADO pode comunicar."
+      ],
+      "exemplo": "Pessoa prejudicada comunica descumprimento da interdição ao juízo. Resposta: parágrafo admite essa iniciativa. Variação: Comunicante não ganha competência para punir ou impor prisão por conta própria.",
+      "prova": [
+        "Somente autoridade pode informar o descumprimento? Não. Qualquer PREJUDICADO pode fazer comunicação, além do dever imediato da autoridade.",
+        "Toda notícia recebida dispensa verificar fato e ouvir defesa pertinente? Não. A comunicação inicia exame, sem presumir culpa ou sanção automática."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 155",
+          "significado": "A autoridade deverá comunicar imediatamente ao Juiz da execução o descumprimento da pena. A comunicação poderá ser feita por qualquer prejudicado."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 154"
+      ]
+    },
+    "art-156": {
+      "simples": "O Juiz poderá suspender, pelo período de 2 a 4 anos, a execução da pena privativa de liberdade, não superior a 2 anos, na forma prevista nos arts. 77 a 82 do Código Penal.",
+      "pontos": [
+        "Sursis ordinário: prova de dois a quatro anos, pena até dois anos e demais requisitos CP 77.",
+        "Modalidade etária/humanitária: CP 77,§2º, com limites próprios.",
+        "Suspensão da pena é distinta de suspensão condicional do processo."
+      ],
+      "atencao": [
+        "Sursis: 2 a 4 anos de prova, para pena de até 2 anos.",
+        "Suspensão da PENA não é suspensão do PROCESSO do art. 89 da Lei 9.099; não misturar os institutos."
+      ],
+      "exemplo": "Pena de dezoito meses é analisada para sursis, com requisitos do CP 77. Resposta: teto e período ordinários não bastam sozinhos. Variação: CP 77,§2º, tem modalidade etária/humanitária com limites próprios, não negada pelo resumo do art. 156.",
+      "prova": [
+        "Toda pena inferior a dois anos tem sursis automaticamente? Não. É preciso atender requisitos do CP 77 e demais regras, incluindo análise da substituição cabível.",
+        "Dois a quatro anos é a única faixa possível em toda modalidade? Não. CP 77,§2º, contempla regime etário/humanitário, com pena até quatro e prova de quatro a seis anos."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 156",
+          "significado": "O Juiz poderá suspender, pelo período de 2 a 4 anos, a execução da pena privativa de liberdade, não superior a 2 anos, na forma prevista nos arts. 77 a 82 do Código Penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, arts. 77 a 82",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-157": {
+      "simples": "O Juiz ou Tribunal, na sentença que aplicar pena privativa de liberdade, na situação do art. 156, deverá pronunciar-se, motivadamente, sobre a suspensão condicional, quer a conceda, quer a denegue.",
+      "pontos": [
+        "Dever de pronunciar-se sobre o sursis, concedendo ou negando."
+      ],
+      "atencao": [
+        "Manifestação motivada obrigatória."
+      ],
+      "exemplo": "Sentença concede ou nega sursis com fundamentos. Resposta: motivação exigida em ambos os sentidos no recorte. Variação: Omissão de motivo não é suprida pela afirmação abstrata de que o crime é grave.",
+      "prova": [
+        "A negativa pode ser imotivada porque o benefício é facultativo? Não. O artigo exige pronunciamento MOTIVADO tanto para conceder quanto para negar.",
+        "É a direção prisional que decide sursis da sentença? Não. O texto atribui pronunciamento ao juiz ou tribunal na situação descrita."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 157",
+          "significado": "O Juiz ou Tribunal, na sentença que aplicar pena privativa de liberdade, na situação do art. 156, deverá pronunciar-se, motivadamente, sobre a suspensão condicional, quer a conceda, quer a denegue."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 156"
+      ]
+    },
+    "art-158": {
+      "simples": "Concedido sursis, juiz fixa condições adequadas ao fato e à pessoa; prazo começa na audiência do 160. Serviço à comunidade ou limitação de fim de semana têm ressalva do CP 78,§2º, para modalidade especial. Modificação das condições exige ouvir condenado. Entidades fiscalizam e comunicam fatos relevantes; mudança autorizada de residência exige comunicação e apresentação imediata no novo local.",
+      "pontos": [
+        "Condições adequadas ao fato e à pessoa.",
+        "Prazo corre da audiência admonitória.",
+        "Modificação das condições a qualquer tempo.",
+        "Fiscalização por entidades e comunicação de fatos relevantes."
+      ],
+      "atencao": [
+        "O prazo do sursis corre da AUDIÊNCIA admonitória."
+      ],
+      "exemplo": "Condições são fixadas e prazo começa na audiência do 160. Resposta: não contar automaticamente da assinatura da sentença. Variação: Sursis especial do CP 78,§2º, excepciona prestação de serviço/limitação, com condições cumulativas próprias.",
+      "prova": [
+        "Todo sursis sempre inclui serviço comunitário sem exceção? Não. §1º ressalva CP 78,§2º; a modalidade especial exige análise própria.",
+        "O juiz pode mudar condições sem ouvir condenado pelo §2º? Não. A norma admite mudança motivada no recorte, OUVIDO O CONDENADO."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 158",
+          "significado": "Concedido sursis, juiz fixa condições adequadas ao fato e à pessoa; prazo começa na audiência do 160. Serviço à comunidade ou limitação de fim de semana têm ressalva do CP 78,§2º, para modalidade especial. Modificação das condições exige ouvir condenado. Entidades fiscalizam e comunicam fatos relevantes; mudança autorizada de residência exige comunicação e apresentação imediata no novo local."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 160",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-159": {
+      "simples": "Quando a suspensão condicional da pena for concedida por Tribunal, a este caberá estabelecer as condições do benefício, e de igual modo se o Tribunal modificar as condições da sentença recorrida. O Tribunal poderá conferir ao Juízo da execução a incumbência de estabelecer as condições e, em qualquer caso, a de realizar a audiência admonitória.",
+      "pontos": [
+        "Tribunal estabelece as condições do sursis que concede.",
+        "Pode delegar ao juízo da execução.",
+        "Audiência admonitória pelo juízo da execução."
+      ],
+      "atencao": [
+        "§2º: PODERÁ conferir incumbências ao juízo; não afirmar que toda audiência é necessariamente realizada pelo tribunal ou por regra automática única."
+      ],
+      "exemplo": "Tribunal concede sursis e confere ao juízo de execução fixar condições/realizar audiência. Resposta: faculdade prevista no §2º. Variação: Não confundir regra de fixação pelo tribunal e possibilidade de atribuição ao juízo.",
+      "prova": [
+        "O tribunal é obrigado a realizar pessoalmente toda audiência admonitória? Não. §2º permite conferir ao juízo de execução a realização e, no recorte, fixação de condições.",
+        "A possibilidade significa que qualquer servidor pode inventar condições? Não. São atribuições judiciais reguladas, não delegação administrativa irrestrita."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 159",
+          "significado": "Quando a suspensão condicional da pena for concedida por Tribunal, a este caberá estabelecer as condições do benefício, e de igual modo se o Tribunal modificar as condições da sentença recorrida. O Tribunal poderá conferir ao Juízo da execução a incumbência de estabelecer as condições e, em qualquer caso, a de realizar a audiência admonitória."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 158"
+      ]
+    },
+    "art-160": {
+      "simples": "Transitada em julgado a sentença condenatória, o Juiz a lerá ao condenado, em audiência, advertindo-o das consequências de nova infração penal e do descumprimento das condições impostas.",
+      "pontos": [
+        "Leitura da sentença em audiência.",
+        "Advertência das consequências."
+      ],
+      "atencao": [
+        "Audiência admonitória."
+      ],
+      "exemplo": "Após trânsito, juiz lê sentença e adverte condenado das consequências. Resposta: audiência admonitória marca ciência das condições. Variação: Não tratar condenação como revogada só por existir notícia posterior sem procedimento.",
+      "prova": [
+        "A audiência serve para condenar novamente pelo mesmo fato? Não. Tem função de leitura/advertência e início do regime pertinente, distinta de novo julgamento.",
+        "O artigo permite omitir advertência sobre descumprimento? Não. Indica expressamente consequências de nova infração e de descumprir condições."
+      ],
+      "termos": [
+        {
+          "termo": "Audiência admonitória",
+          "significado": "Audiência em que o condenado é advertido das condições do sursis."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 161"
+      ]
+    },
+    "art-161": {
+      "simples": "Se, intimado pessoalmente ou por edital com prazo de 20 dias, o réu não comparecer injustificadamente à audiência admonitória, a suspensão ficará sem efeito e será executada imediatamente a pena.",
+      "pontos": [
+        "Ausência injustificada: o sursis perde efeito.",
+        "Intimação pessoal ou por edital de 20 dias."
+      ],
+      "atencao": [
+        "Edital com prazo de 20 dias."
+      ],
+      "exemplo": "Réu validamente intimado não comparece SEM JUSTIFICATIVA à audiência. Resposta: a ausência injustificada integra a perda de efeito do sursis. Variação: Falha da intimação ou impedimento justificado não são a mesma hipótese.",
+      "prova": [
+        "Toda ausência, inclusive devidamente justificada, faz perder benefício por esse artigo? Não. A norma exige ausência INJUSTIFICADA após intimação pertinente.",
+        "O edital textual tem prazo de dez dias? Não. A hipótese de intimação por edital prevê VINTE dias, distinta de outros prazos da execução."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 161",
+          "significado": "Se, intimado pessoalmente ou por edital com prazo de 20 dias, o réu não comparecer injustificadamente à audiência admonitória, a suspensão ficará sem efeito e será executada imediatamente a pena."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 160"
+      ]
+    },
+    "art-162": {
+      "simples": "A revogação da suspensão condicional da pena e a prorrogação do período de prova dar-se-ão na forma do art. 81 e respectivos parágrafos do Código Penal.",
+      "pontos": [
+        "Revogação e prorrogação conforme o Código Penal."
+      ],
+      "atencao": [
+        "Remissão ao art. 81 do Código Penal."
+      ],
+      "exemplo": "Condenação definitiva por crime doloso no período provoca análise da revogação obrigatória do CP 81. Resposta: distinguir da facultativa. Variação: Condenação por culpa/contravenção ou outras condições tem hipóteses próprias; falta de recursos não equivale a frustrar execução sendo solvente.",
+      "prova": [
+        "Todo descumprimento tem idêntica consequência obrigatória? Não. CP 81 distingue caput,§1º e prorrogações, com requisitos diferentes.",
+        "Estar sendo processado por crime no período equivale a condenação definitiva imediata? Não. §2º prevê prorrogação até julgamento, distinta da revogação por condenação irrecorrível."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 162",
+          "significado": "A revogação da suspensão condicional da pena e a prorrogação do período de prova dar-se-ão na forma do art. 81 e respectivos parágrafos do Código Penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 81",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-163": {
+      "simples": "A sentença condenatória será registrada, com a nota de suspensão, em livro especial do Juízo da execução. Revogada a suspensão ou extinta a pena, será o fato averbado à margem do registro. O registro e a averbação serão sigilosos, salvo para efeito de informações requisitadas por órgão judiciário ou pelo Ministério Público, para instruir processo penal.",
+      "pontos": [
+        "Registro em livro especial.",
+        "Averbação da revogação ou extinção.",
+        "Sigilo, salvo requisição judicial ou do MP."
+      ],
+      "atencao": [
+        "Registro SIGILOSO."
+      ],
+      "exemplo": "Registro do sursis recebe averbação da extinção e permanece sigiloso, com exceções do §2º. Resposta: registro não é certificado público irrestrito. Variação: Sigilo não impede toda requisição judicial/MP para instruir processo penal.",
+      "prova": [
+        "A extinção permite deixar o registro sem averbação? Não. §1º manda averbar revogação ou extinção, mantendo informação correta.",
+        "Qualquer empregador recebe o conteúdo automaticamente por pedir? Não. O artigo conserva sigilo e recorte de requisição judicial/MP para processo penal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 163",
+          "significado": "A sentença condenatória será registrada, com a nota de suspensão, em livro especial do Juízo da execução. Revogada a suspensão ou extinta a pena, será o fato averbado à margem do registro. O registro e a averbação serão sigilosos, salvo para efeito de informações requisitadas por órgão judiciário ou pelo Ministério Público, para instruir processo penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 202"
+      ]
+    },
+    "art-164": {
+      "simples": "Extraída certidão da sentença condenatória com trânsito em julgado, que valerá como título executivo judicial, o Ministério Público requererá, em autos apartados, a citação do condenado para, no prazo de 10 dias, pagar o valor da multa ou nomear bens à penhora. Decorrido o prazo sem pagamento, proceder-se-á à penhora de tantos bens quantos bastem. A nomeação de bens e a execução seguirão a lei processual civil.",
+      "pontos": [
+        "Certidão da sentença como título executivo judicial.",
+        "Citação para pagar em 10 dias ou nomear bens.",
+        "Penhora e execução pela lei processual civil."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: após a Lei 13.964, a execução da multa é feita pelo juízo da execução penal, e a legitimidade da cobrança foi objeto de decisão do STF; confira o entendimento vigente.",
+        "Prazo de 10 dias.",
+        "Competência e legitimidade devem ser integradas ao CP 51 atual; não ensinar cobrança civil isolada como regime universal.",
+        "Tema 931: hipossuficiência alegada, salvo decisão concretamente motivada indicando possibilidade; STF ADI 7032 reconhece hipótese de impossibilidade. Não tratar textos como dispensa universal de análise judicial."
+      ],
+      "exemplo": "MP requer execução da multa com certidão definitiva e citação para dez dias. Resposta: multa permanece sanção penal e exige procedimento próprio. Variação: Inadimplemento por pobreza não autoriza converter dívida em prisão; Tema 931 e ADI 7032 têm parâmetros de extinção.",
+      "prova": [
+        "A multa virou pena de prisão automática por atraso? Não. CP 51 a trata como dívida de valor executada perante juízo penal, sem restaurar conversão revogada.",
+        "É sempre impossível extinguir punibilidade com multa não paga após cumprir pena? Não. Tema 931/STJ e ADI 7032/STF exigem examinar impossibilidade econômica e decisão pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 164",
+          "significado": "Extraída certidão da sentença condenatória com trânsito em julgado, que valerá como título executivo judicial, o Ministério Público requererá, em autos apartados, a citação do condenado para, no prazo de 10 dias, pagar o valor da multa ou nomear bens à penhora. Decorrido o prazo sem pagamento, proceder-se-á à penhora de tantos bens quantos bastem. A nomeação de bens e a execução seguirão a lei processual civil."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 165",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=931&cod_tema_final=931",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-permite-fim-de-processo-de-condenado-que-cumpriu-pena-de-prisao-e-nao-tem-condicoes-de-pagar-multa/"
+      ]
+    },
+    "art-165": {
+      "simples": "O texto do 165 conserva remessa ao Juízo Cível quando a penhora recai em imóvel. Não ler isoladamente como regra atual universal: CP 51, na redação da Lei 13.964/2019, prevê execução da multa perante juiz da execução penal, com normas da dívida de valor. Procedimento e remissões históricas exigem integração; não ensinar transferência automática apenas pelo tipo de bem.",
+      "pontos": [
+        "Referência histórica à remessa ao cível confrontada com CP 51 atual.",
+        "Não deslocar automaticamente competência penal apenas pelo bem penhorado."
+      ],
+      "atencao": [
+        "Texto residual não substitui CP 51 vigente ou decisões competentes.",
+        "Não certificadas todas as controvérsias de competência e atos de expropriação; exemplos não ensinam remessa automática."
+      ],
+      "exemplo": "Penhora de imóvel é examinada na execução da multa. Resposta: referência ao cível no texto antigo deve ser integrada ao CP 51 atual. Variação: Não deslocar automaticamente toda cobrança penal ao cível só porque o bem é imóvel.",
+      "prova": [
+        "A frase do 165 isolada prova competência cível atual exclusiva para toda multa? Não. CP 51 vigente prevê execução perante juiz da execução penal; interpretar a remissão histórica nesse quadro.",
+        "Integrar o regime atual permite executar sem título ou sem defesa? Não. Competência e garantias/título são requisitos distintos, ambos necessários."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 165",
+          "significado": "O texto do 165 conserva remessa ao Juízo Cível quando a penhora recai em imóvel. Não ler isoladamente como regra atual universal: CP 51, na redação da Lei 13.964/2019, prevê execução da multa perante juiz da execução penal, com normas da dívida de valor. Procedimento e remissões históricas exigem integração; não ensinar transferência automática apenas pelo tipo de bem."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 164",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-166": {
+      "simples": "Para penhora de outros bens, há remissão ao 164,§2º, e às normas processuais civis. Integre competência atual do CP 51: aplicar técnica de execução não significa transferir toda multa ao juízo cível. Não criar exercício binário baseado somente no imóvel/móvel dos textos antigos.",
+      "pontos": [
+        "Outros bens: prosseguimento pela lei processual civil."
+      ],
+      "atencao": [
+        "Técnica processual civil e competência jurisdicional não são conceitos idênticos; integrar CP 51."
+      ],
+      "exemplo": "Penhora de veículo segue regras processuais civis pertinentes à execução penal da multa. Resposta: técnica processual não equivale a mudar toda competência. Variação: O texto residual do 165 não deve ser usado como fórmula exclusiva imóvel/cível, móvel/penal sem integração.",
+      "prova": [
+        "Aplicar norma processual civil torna necessariamente cível a competência de toda cobrança? Não. CP 51 fixa quadro penal; técnica processual e competência são questões distintas.",
+        "O artigo permite dispensar defesa de quem sofre penhora? Não. Remissão procedimental preserva garantias e requisitos da execução pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 166",
+          "significado": "Para penhora de outros bens, há remissão ao 164,§2º, e às normas processuais civis. Integre competência atual do CP 51: aplicar técnica de execução não significa transferir toda multa ao juízo cível. Não criar exercício binário baseado somente no imóvel/móvel dos textos antigos."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 164",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-167": {
+      "simples": "A execução da pena de multa será suspensa quando sobrevier ao condenado doença mental, conforme o art. 52 do Código Penal.",
+      "pontos": [
+        "Suspensão da multa por doença mental superveniente."
+      ],
+      "atencao": [
+        "Doença mental SUPERVENIENTE."
+      ],
+      "exemplo": "Doença mental superveniente é reconhecida no recorte de execução da multa. Resposta: suspensão prevista, não extinção automática. Variação: Diagnóstico e capacidade precisam de exame; não eliminar multa de toda pessoa com transtorno por estereótipo.",
+      "prova": [
+        "A suspensão equivale à extinção definitiva da sanção em todo caso? Não. O artigo remete à SUSPENSÃO do CP 52, distinta de extinção e de tratamento penal discriminatório.",
+        "A regra descreve doença anterior como único caso possível? Não. Fala SUPERVENIENTE ao condenado; aplicar conforme situação demonstrada e garantias."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 167",
+          "significado": "A execução da pena de multa será suspensa quando sobrevier ao condenado doença mental, conforme o art. 52 do Código Penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código Penal, art. 52",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-168": {
+      "simples": "O Juiz poderá determinar que a cobrança da multa se efetue mediante desconto no vencimento ou salário do condenado, nas hipóteses do art. 50, §1º, do Código Penal, observando que o limite máximo do desconto mensal será o da quarta parte da remuneração e o mínimo o de um décimo; o desconto será feito mediante ordem do juiz; e o responsável pelo desconto será intimado a recolher mensalmente a importância determinada.",
+      "pontos": [
+        "Desconto no salário.",
+        "Máximo de um quarto e mínimo de um décimo da remuneração.",
+        "Ordem do juiz e recolhimento mensal."
+      ],
+      "atencao": [
+        "Desconto entre UM DÉCIMO e UM QUARTO da remuneração.",
+        "Exemplo aritmético não é ordem real de desconto; hipóteses de cabimento do CP 50,§1º, precisam estar presentes."
+      ],
+      "exemplo": "Remuneração de R$ 2.000 teria faixa textual de R$ 200 a R$ 500 para desconto. Resposta: integrar também recursos indispensáveis ao sustento do CP 50,§2º. Variação: Não impor R$ 500 automaticamente se compromete sustento protegido, nem presumir desconto de metade do salário.",
+      "prova": [
+        "O teto textual permite metade da remuneração? Não. É UM QUARTO, com mínimo de um décimo no recorte e integração das garantias de subsistência.",
+        "A faixa dispensa ordem judicial ou permite afetar livremente sustento da família? Não. Exige ordem e integração ao CP 50,§2º, que protege recursos indispensáveis."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 168",
+          "significado": "O Juiz poderá determinar que a cobrança da multa se efetue mediante desconto no vencimento ou salário do condenado, nas hipóteses do art. 50, §1º, do Código Penal, observando que o limite máximo do desconto mensal será o da quarta parte da remuneração e o mínimo o de um décimo; o desconto será feito mediante ordem do juiz; e o responsável pelo desconto será intimado a recolher mensalmente a importância determinada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 169",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-169": {
+      "simples": "Até o término do prazo do art. 164, poderá o condenado requerer ao Juiz o pagamento da multa em prestações mensais, iguais e sucessivas. O Juiz, antes de decidir, poderá determinar diligências para verificar a situação econômica do condenado e, ouvido o Ministério Público, fixará o número de prestações. Se o condenado for impontual ou melhorar de situação econômica, o Juiz revogará o benefício, executando-se a multa.",
+      "pontos": [
+        "Parcelamento em prestações mensais.",
+        "Diligências sobre a situação econômica.",
+        "Revogação por impontualidade ou melhora econômica."
+      ],
+      "atencao": [
+        "Revogação do parcelamento por impontualidade ou melhora econômica."
+      ],
+      "exemplo": "Condenado requer parcelamento no prazo pertinente e juiz verifica renda, ouvido MP. Resposta: prestações mensais, iguais e sucessivas. Variação: Melhora financeira/impontualidade demandam exame legal; não prender por dívida nem presumir capacidade só por atraso.",
+      "prova": [
+        "O artigo garante parcelamento de qualquer forma escolhida unilateralmente? Não. Há requerimento, situação econômica e decisão judicial com MP.",
+        "Revogar parcelamento converte automaticamente multa em prisão? Não. Retoma execução da multa no regime vigente, sem restaurar conversão em prisão por dívida."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 169",
+          "significado": "Até o término do prazo do art. 164, poderá o condenado requerer ao Juiz o pagamento da multa em prestações mensais, iguais e sucessivas. O Juiz, antes de decidir, poderá determinar diligências para verificar a situação econômica do condenado e, ouvido o Ministério Público, fixará o número de prestações. Se o condenado for impontual ou melhorar de situação econômica, o Juiz revogará o benefício, executando-se a multa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 164",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-170": {
+      "simples": "Multa cumulativa pode ser cobrada no regime próprio e com limites de desconto. Fim da prisão, livramento ou sursis não apagam universalmente a sanção. Ao examinar extinção com multa não paga, integrar Tema 931/STJ e ADI 7032/STF sobre impossibilidade econômica, com decisão competente; não prisão por dívida nem obstáculo absoluto pela pobreza.",
+      "pontos": [
+        "Multa cumulativa pode ser descontada da remuneração durante a pena.",
+        "Após o cumprimento, cobra-se pelo procedimento comum.",
+        "Vale também no sursis."
+      ],
+      "atencao": [
+        "Integrar CP 51 e Tema 931/STJ, não exercício absoluto de pagar sempre ou nunca.",
+        "STF ADI 7032: impossibilidade de pagamento inclusive parcelado; notícia não certifica toda jurisprudência posterior."
+      ],
+      "exemplo": "Pena privativa termina e multa continua sem quitação. Resposta: analisar cobrança e parâmetros de extinção por impossibilidade, não regra absoluta. Variação: Condenado com capacidade concreta não recebe isenção universal apenas porque cumpriu prisão.",
+      "prova": [
+        "A pendência da multa sempre impede extinção, mesmo na hipossuficiência reconhecida? Não. Tema 931 e ADI 7032 exigem exame econômico e decisão pertinente.",
+        "A extinção da pena de prisão apaga automaticamente toda multa em qualquer situação? Não. São sanções distintas; eventual consequência depende do regime e decisão competente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 170",
+          "significado": "Multa cumulativa pode ser cobrada no regime próprio e com limites de desconto. Fim da prisão, livramento ou sursis não apagam universalmente a sanção. Ao examinar extinção com multa não paga, integrar Tema 931/STJ e ADI 7032/STF sobre impossibilidade econômica, com decisão competente; não prisão por dívida nem obstáculo absoluto pela pobreza."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 168",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=931&cod_tema_final=931",
+        "https://noticias.stf.jus.br/postsnoticias/supremo-permite-fim-de-processo-de-condenado-que-cumpriu-pena-de-prisao-e-nao-tem-condicoes-de-pagar-multa/"
+      ]
+    },
+    "art-171": {
+      "simples": "Transitada em julgado a sentença que aplicar medida de segurança, será ordenada a expedição de guia para a execução.",
+      "pontos": [
+        "Guia para a execução da medida de segurança."
+      ],
+      "atencao": [
+        "Trânsito em julgado."
+      ],
+      "exemplo": "Após trânsito da sentença de medida de segurança, é ordenada guia executória. Resposta: formalidade própria da execução da medida. Variação: Internação clínica de saúde fora de execução penal e medida cautelar têm títulos e requisitos próprios.",
+      "prova": [
+        "Toda internação hospitalar civil depende dessa guia de execução penal? Não. O artigo descreve medida de segurança da sentença, distinto de todo atendimento de saúde.",
+        "Diagnóstico isolado substitui sentença e guia da medida? Não. Execução penal precisa de título e formalidades, além do cuidado juridicamente adequado."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 171",
+          "significado": "Transitada em julgado a sentença que aplicar medida de segurança, será ordenada a expedição de guia para a execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 172",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-172": {
+      "simples": "Ninguém será internado em Hospital de Custódia e Tratamento Psiquiátrico, ou submetido a tratamento ambulatorial, para cumprimento de medida de segurança, sem a guia expedida pela autoridade judiciária.",
+      "pontos": [
+        "Sem guia, sem internação ou tratamento ambulatorial."
+      ],
+      "atencao": [
+        "Guia judicial obrigatória."
+      ],
+      "exemplo": "Medida de segurança ambulatorial é executada com guia judicial. Resposta: requisito alcança ambulatório e internação no seu recorte. Variação: Não impedir assistência médica ordinária por ausência de guia penal quando não há execução de medida.",
+      "prova": [
+        "Guia é exigida só na internação, dispensada para toda execução ambulatorial? Não. O artigo inclui ambas as modalidades de cumprimento de medida.",
+        "A regra proíbe todo atendimento de urgência sem guia penal? Não. O recorte é execução da medida, distinto de assistência de saúde por título próprio."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 172",
+          "significado": "Ninguém será internado em Hospital de Custódia e Tratamento Psiquiátrico, ou submetido a tratamento ambulatorial, para cumprimento de medida de segurança, sem a guia expedida pela autoridade judiciária."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 171",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-173": {
+      "simples": "A guia de internamento ou de tratamento ambulatorial, extraída pelo escrivão, que a rubricará em todas as folhas e a subscreverá com o Juiz, será remetida à autoridade administrativa incumbida da execução e conterá a qualificação do agente e o registro geral; o inteiro teor da denúncia e da sentença e a certidão de trânsito; a data em que terminará o prazo mínimo de internação ou de tratamento ambulatorial; e outras peças. Ao Ministério Público será dada ciência, e a guia será retificada sempre que sobrevierem modificações quanto ao prazo.",
+      "pontos": [
+        "Conteúdo da guia de internamento.",
+        "Data final do prazo mínimo.",
+        "Ciência ao Ministério Público.",
+        "Retificação por mudança de prazo."
+      ],
+      "atencao": [
+        "Indica a data de término do PRAZO MÍNIMO.",
+        "Não estender sem exame o mesmo cálculo a toda conversão de pena em medida; há distinções próprias."
+      ],
+      "exemplo": "Guia informa término do prazo mínimo e recebe retificações. Resposta: prazo mínimo não autoriza medida penal perpétua. Variação: Súmula 527 limita duração ao máximo da pena abstrata no seu âmbito; não confundir avaliação mínima e teto aplicável.",
+      "prova": [
+        "Mencionar prazo mínimo significa inexistência de qualquer limite máximo? Não. Integrar CP, Constituição e Súmula 527, respeitando modalidade e regime da medida.",
+        "Mudança do prazo permite conservar guia antiga sem atualização? Não. §2º manda retificar e §1º dar ciência ao MP conforme recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 173",
+          "significado": "A guia de internamento ou de tratamento ambulatorial, extraída pelo escrivão, que a rubricará em todas as folhas e a subscreverá com o Juiz, será remetida à autoridade administrativa incumbida da execução e conterá a qualificação do agente e o registro geral; o inteiro teor da denúncia e da sentença e a certidão de trânsito; a data em que terminará o prazo mínimo de internação ou de tratamento ambulatorial; e outras peças. Ao Ministério Público será dada ciência, e a guia será retificada sempre que sobrevierem modificações quanto ao prazo."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 175",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29"
+      ]
+    },
+    "art-174": {
+      "simples": "Aplicar-se-á, na execução da medida de segurança, naquilo que couber, o disposto nos arts. 8º e 9º da Lei, que tratam do exame criminológico e dos exames da Comissão.",
+      "pontos": [
+        "Aplicação dos arts. 8º e 9º à medida de segurança."
+      ],
+      "atencao": [
+        "Exames aplicados no que couber."
+      ],
+      "exemplo": "Exames dos arts. 8º/9º são integrados à medida NO QUE COUBER. Resposta: remissão limitada à compatibilidade. Variação: Não importar automaticamente todas as exigências de progressão carcerária para qualquer cuidado de saúde.",
+      "prova": [
+        "A expressão no que couber permite aplicar toda regra sem adaptação? Não. Exige pertinência ao regime da medida, com direitos e cuidado individualizado.",
+        "Ela exclui por completo qualquer exame técnico? Não. O artigo admite aplicação compatível dos exames, distinta de dispensá-los universalmente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 174",
+          "significado": "Aplicar-se-á, na execução da medida de segurança, naquilo que couber, o disposto nos arts. 8º e 9º da Lei, que tratam do exame criminológico e dos exames da Comissão."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Arts. 8º e 9º",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-175": {
+      "simples": "A cessação da periculosidade será averiguada no fim do prazo mínimo de duração da medida de segurança, pelo exame das condições pessoais do agente. A autoridade administrativa, até 1 mês antes de expirar o prazo mínimo, remeterá ao Juiz minucioso relatório, instruído com laudo psiquiátrico. Serão ouvidos, sucessivamente, o Ministério Público e o curador ou defensor, no prazo de 3 dias para cada um. O Juiz nomeará curador ou defensor para quem não o tiver, poderá determinar novas diligências e proferirá sua decisão no prazo de 5 dias.",
+      "pontos": [
+        "Averiguação da cessação da periculosidade no fim do prazo mínimo.",
+        "Relatório até 1 mês antes, com laudo psiquiátrico.",
+        "Oitiva do MP e do curador ou defensor em 3 dias cada.",
+        "Decisão em 5 dias."
+      ],
+      "atencao": [
+        "Relatório 1 mês antes; manifestações em 3 dias; decisão em 5 dias.",
+        "Relatório até um mês antes do mínimo; três dias cada; decisão cinco após etapas pertinentes. Não reduzir tudo a um só prazo."
+      ],
+      "exemplo": "Relatório com laudo é enviado antes de terminar prazo mínimo; manifestações têm três dias cada e decisão cinco no rito. Resposta: avaliação e prazos próprios. Variação: Diligência adicional não autoriza manter medida indefinidamente ou ultrapassar teto só por demora.",
+      "prova": [
+        "O prazo de três dias é único e conjunto para MP e defesa? Não. Inciso III prevê SUCESSIVAMENTE três dias para CADA UM.",
+        "Novas diligências autorizam medida perpétua mesmo após limite aplicável? Não. Integrar limites e Súmula 527; rito de avaliação não revoga garantias temporais."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 175",
+          "significado": "A cessação da periculosidade será averiguada no fim do prazo mínimo de duração da medida de segurança, pelo exame das condições pessoais do agente. A autoridade administrativa, até 1 mês antes de expirar o prazo mínimo, remeterá ao Juiz minucioso relatório, instruído com laudo psiquiátrico. Serão ouvidos, sucessivamente, o Ministério Público e o curador ou defensor, no prazo de 3 dias para cada um. O Juiz nomeará curador ou defensor para quem não o tiver, poderá determinar novas diligências e proferirá sua decisão no prazo de 5 dias."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 176",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-176": {
+      "simples": "Em qualquer tempo, ainda no decorrer do prazo mínimo de duração da medida de segurança, poderá o Juiz da execução, diante de requerimento fundamentado do Ministério Público ou do interessado, seu procurador ou defensor, ordenar o exame para que se verifique a cessação da periculosidade, procedendo-se nos termos do artigo anterior.",
+      "pontos": [
+        "Exame de cessação a qualquer tempo, a requerimento fundamentado."
+      ],
+      "atencao": [
+        "Possível mesmo antes do fim do prazo mínimo."
+      ],
+      "exemplo": "Defensor fundamenta pedido de exame antes do mínimo. Resposta: art. 176 permite exame em qualquer tempo no recorte. Variação: Não afirmar que o mínimo torna impossível toda avaliação antecipada favorável ao paciente.",
+      "prova": [
+        "O juiz só pode ordenar exame após cumprir todo prazo mínimo? Não. O artigo permite ainda NO DECORRER do mínimo, mediante requerimento fundamentado dos legitimados.",
+        "Pedido sem fundamento garante liberação automática? Não. A regra permite exame, com avaliação/procedimento, não benefício incondicional."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 176",
+          "significado": "Em qualquer tempo, ainda no decorrer do prazo mínimo de duração da medida de segurança, poderá o Juiz da execução, diante de requerimento fundamentado do Ministério Público ou do interessado, seu procurador ou defensor, ordenar o exame para que se verifique a cessação da periculosidade, procedendo-se nos termos do artigo anterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 175",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-177": {
+      "simples": "Nos exames sucessivos para verificar-se a cessação da periculosidade, observar-se-á, no que lhes for aplicável, o disposto no artigo anterior.",
+      "pontos": [
+        "Exames sucessivos seguem o procedimento do art. 176."
+      ],
+      "atencao": [
+        "Aplicação no que couber."
+      ],
+      "exemplo": "Novo exame é realizado para avaliar cessação. Resposta: aplicar o procedimento anterior no que pertinente. Variação: Repetir avaliação não é renovar infinitamente a medida sem controle ou limite.",
+      "prova": [
+        "Exames sucessivos afastam todos os limites temporais? Não. São avaliações submetidas ao quadro legal/constitucional e limites, não reinício perpétuo.",
+        "O artigo inventa rito inteiramente diferente em cada exame? Não. Remete ao anterior NO QUE APLICÁVEL, com adaptações pertinentes."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 177",
+          "significado": "Nos exames sucessivos para verificar-se a cessação da periculosidade, observar-se-á, no que lhes for aplicável, o disposto no artigo anterior."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 176",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-178": {
+      "simples": "Nas hipóteses de desinternação ou de liberação, conforme o art. 97, §3º, do Código Penal, aplicar-se-á o disposto nos arts. 132 e 133 da Lei, que tratam das condições do livramento condicional.",
+      "pontos": [
+        "Desinternação ou liberação seguem os arts. 132 e 133."
+      ],
+      "atencao": [
+        "Mesmas condições do livramento."
+      ],
+      "exemplo": "Desinternação/liberação recebe condições compatíveis dos arts. 132/133. Resposta: integrar CP 97,§3º, e continuidade de cuidado. Variação: Não chamar desinternação de livramento penal idêntico em todos os efeitos nem usar condição para internar automaticamente sem necessidade.",
+      "prova": [
+        "A remissão faz desaparecer direitos de saúde? Não. Condições precisam ser compatíveis e integradas ao regime da medida e Lei 10.216.",
+        "A liberação dispensa necessariamente toda condição por não ser pena? Não. O artigo remete às condições pertinentes, com quadro próprio e controle."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 178",
+          "significado": "Nas hipóteses de desinternação ou de liberação, conforme o art. 97, §3º, do Código Penal, aplicar-se-á o disposto nos arts. 132 e 133 da Lei, que tratam das condições do livramento condicional."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Arts. 132 e 133",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-179": {
+      "simples": "Transitada em julgado a sentença, o Juiz expedirá ordem para a desinternação ou a liberação.",
+      "pontos": [
+        "Ordem de desinternação ou liberação após o trânsito em julgado."
+      ],
+      "atencao": [
+        "Depende do trânsito em julgado.",
+        "Não certificada toda jurisprudência de liberação provisória/urgente; sem exercício automático de retenção até trânsito em qualquer caso."
+      ],
+      "exemplo": "Decisão de liberação definitiva enseja ordem judicial. Resposta: formalidade não deve virar argumento universal para custódia desnecessária. Variação: Medida urgente ou cessação de fundamento requer exame competente; não manter pessoa indefinidamente apenas por formalidade isolada.",
+      "prova": [
+        "O texto autoriza direção decidir sozinha manter medida perpétua? Não. A ordem e o controle são judiciais, integrados aos limites e direitos aplicáveis.",
+        "Toda decisão de cuidado/liberdade deve ser retardada por fórmula literal isolada? Não. Confrontar título, recursos, urgência e quadro constitucional; este artigo não certifica todas as situações."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 179",
+          "significado": "Transitada em julgado a sentença, o Juiz expedirá ordem para a desinternação ou a liberação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 178",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-180": {
+      "simples": "A pena privativa de liberdade, não superior a 2 anos, poderá ser convertida em restritiva de direitos, desde que o condenado a esteja cumprindo em regime aberto; tenha cumprido pelo menos 1/4 da pena; e os antecedentes e a personalidade indiquem ser a conversão recomendável.",
+      "pontos": [
+        "Pena não superior a 2 anos.",
+        "Regime aberto.",
+        "Cumprimento de pelo menos 1/4.",
+        "Antecedentes e personalidade favoráveis."
+      ],
+      "atencao": [
+        "Pena até 2 anos, regime aberto e 1/4 cumprido."
+      ],
+      "exemplo": "Pena de dois anos no aberto já teve seis meses cumpridos e recomendação examinada. Resposta: atende recortes quantitativos, sem concessão automática. Variação: Substituição na sentença do CP 44 tem requisitos distintos da conversão executória deste artigo.",
+      "prova": [
+        "Qualquer cumprimento de um quarto garante conversão mesmo no fechado? Não. O artigo exige também aberto, pena até dois anos e recomendação dos critérios indicados.",
+        "O artigo revoga todos os requisitos da substituição inicial do CP 44? Não. Trata de conversão durante execução, distinto da decisão originária da sentença."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 180",
+          "significado": "A pena privativa de liberdade, não superior a 2 anos, poderá ser convertida em restritiva de direitos, desde que o condenado a esteja cumprindo em regime aberto; tenha cumprido pelo menos 1/4 da pena; e os antecedentes e a personalidade indiquem ser a conversão recomendável."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 181",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-181": {
+      "simples": "O artigo enumera hipóteses de conversão de restritivas, mas caput conserva remissão antiga ao CP 45. Integre CP 44,§§4º/5º, atual: descumprimento injustificado, decisão competente e análise de nova condenação/compatibilidade. Não converter automaticamente por impedimento justificado nem ignorar crédito de cumprimento e regras atuais.",
+      "pontos": [
+        "Conversão da pena restritiva em privativa.",
+        "Hipóteses da prestação de serviços à comunidade.",
+        "Hipóteses da limitação de fim de semana.",
+        "Hipóteses da interdição temporária."
+      ],
+      "atencao": [
+        "Corrigida explicação antiga que copiava CP 45 como regime atual da conversão.",
+        "Defesa, justificativa e decisão necessária; não prisão automática por qualquer comunicação."
+      ],
+      "exemplo": "Descumprimento injustificado de serviço é apurado antes de decidir conversão. Resposta: integrar CP 44,§§4º/5º, vigente e garantias. Variação: Impossibilidade justificada ou nova pena compatível exige análise, não conversão automática irrestrita.",
+      "prova": [
+        "A remissão antiga ao CP 45 continua descrevendo corretamente toda conversão? Não. CP vigente tem disciplina no 44,§§4º/5º; confrontar atualização antes de aplicar.",
+        "Nova condenação sempre exige conversão sem analisar possibilidade de cumprimento simultâneo? Não. CP 44,§5º, prevê decisão da execução e possibilidade de manter se compatível."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 181",
+          "significado": "O artigo enumera hipóteses de conversão de restritivas, mas caput conserva remissão antiga ao CP 45. Integre CP 44,§§4º/5º, atual: descumprimento injustificado, decisão competente e análise de nova condenação/compatibilidade. Não converter automaticamente por impedimento justificado nem ignorar crédito de cumprimento e regras atuais."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 180",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-183": {
+      "simples": "Quando, no curso da execução da pena privativa de liberdade, sobrevier doença mental ou perturbação da saúde mental, o Juiz, de ofício, a requerimento do Ministério Público, da Defensoria Pública ou da autoridade administrativa, poderá determinar a substituição da pena por medida de segurança.",
+      "pontos": [
+        "Doença mental superveniente.",
+        "Substituição da pena por medida de segurança.",
+        "Legitimados: juiz, MP, Defensoria ou autoridade administrativa."
+      ],
+      "atencao": [
+        "ATUALIZAÇÃO: a Defensoria Pública foi incluída entre os legitimados.",
+        "Conversão do 183 tem limites próprios; não aplicar duração perpétua nem confundir com absolvição imprópria inicial.",
+        "Não certificadas todas as políticas locais/CNJ, sem ensino de internação automática por diagnóstico."
+      ],
+      "exemplo": "Transtorno superveniente leva a pedido fundamentado da Defensoria para substituição por medida. Resposta: faculdade judicial com avaliação. Variação: Doença não elimina automaticamente condenação anterior nem autoriza ampliar execução indefinidamente.",
+      "prova": [
+        "Todo diagnóstico impõe substituição automática pelo diretor? Não. O artigo diz juiz PODERÁ, com elementos e integração ao regime de saúde e da medida.",
+        "A Defensoria está excluída dos legitimados? Não. Lei 12.313/2010 a incluiu expressamente, além dos legitimados do artigo."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 183",
+          "significado": "Quando, no curso da execução da pena privativa de liberdade, sobrevier doença mental ou perturbação da saúde mental, o Juiz, de ofício, a requerimento do Ministério Público, da Defensoria Pública ou da autoridade administrativa, poderá determinar a substituição da pena por medida de segurança."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 108",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    },
+    "art-184": {
+      "simples": "O tratamento ambulatorial poderá ser convertido em internação se o agente revelar incompatibilidade com a medida. Nesta hipótese, o prazo mínimo de internação será de 1 ano.",
+      "pontos": [
+        "Conversão do tratamento ambulatorial em internação.",
+        "Prazo mínimo de 1 ano."
+      ],
+      "atencao": [
+        "Prazo mínimo de 1 ano na internação convertida.",
+        "Não perpetuar custódia por ausência de rede social; Lei 10.216 exige insuficiência de recursos extra-hospitalares para internação."
+      ],
+      "exemplo": "Incompatibilidade com tratamento ambulatorial é examinada tecnicamente. Resposta: eventual internação precisa ser adequada e necessária. Variação: Ausência de rede ou simples pobreza não justificam automaticamente transformar cuidado em internação asilar.",
+      "prova": [
+        "O prazo mínimo de um ano impede qualquer exame antecipado do 176? Não. Integrar o procedimento e limites; mínimo textual não proíbe avaliação antecipada compatível.",
+        "Uma dificuldade de comparecimento basta sempre para internação automática? Não. Examinar causas, recursos extra-hospitalares, necessidade clínica e decisão no regime da Lei 10.216."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 184",
+          "significado": "O tratamento ambulatorial poderá ser convertido em internação se o agente revelar incompatibilidade com a medida. Nesta hipótese, o prazo mínimo de internação será de 1 ano."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 175",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm",
+        "https://processo.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&i=1&l=10&p=false&sumula=527+INPATH%28NUM%29"
+      ]
+    },
+    "art-185": {
+      "simples": "Haverá excesso ou desvio de execução sempre que algum ato for praticado além dos limites fixados na sentença, em normas legais ou regulamentares.",
+      "pontos": [
+        "Excesso ou desvio: ato além dos limites da sentença ou das normas."
+      ],
+      "atencao": [
+        "Incidente da execução."
+      ],
+      "exemplo": "Cálculo conserva pessoa presa além do limite devido. Resposta: suscitar excesso/desvio, com conferência do título e créditos. Variação: Incidente não se restringe à prisão: atos além de normas e sentença têm recorte próprio.",
+      "prova": [
+        "Apenas ultrapassar o tempo de prisão pode ser examinado? Não. O texto alcança atos além dos limites da sentença e normas legais/regulamentares.",
+        "Uma reclamação por conveniência prova sozinha excesso? Não. É preciso examinar ato e limites aplicáveis, com decisão competente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 185",
+          "significado": "Haverá excesso ou desvio de execução sempre que algum ato for praticado além dos limites fixados na sentença, em normas legais ou regulamentares."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 186"
+      ]
+    },
+    "art-186": {
+      "simples": "Podem suscitar o incidente de excesso ou desvio de execução o Ministério Público, o Conselho Penitenciário, o sentenciado e qualquer dos demais órgãos da execução penal.",
+      "pontos": [
+        "MP, Conselho Penitenciário, sentenciado e demais órgãos."
+      ],
+      "atencao": [
+        "O próprio sentenciado pode suscitar."
+      ],
+      "exemplo": "Sentenciado suscita excesso por erro de cálculo. Resposta: legitimidade própria, sem monopólio do MP. Variação: Representar pedido não significa que o próprio sentenciado possa alterar sozinho o cálculo oficial.",
+      "prova": [
+        "Somente o MP pode suscitar o incidente? Não. Rol inclui Conselho, sentenciado e demais órgãos da execução.",
+        "A Defensoria fica necessariamente excluída por não constar num inciso nominal? Não. Integre órgãos da execução do 61 e atribuições próprias, sem restringir defesa por leitura isolada."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 186",
+          "significado": "Podem suscitar o incidente de excesso ou desvio de execução o Ministério Público, o Conselho Penitenciário, o sentenciado e qualquer dos demais órgãos da execução penal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 185"
+      ]
+    },
+    "art-187": {
+      "simples": "Concedida a anistia, o Juiz, de ofício, a requerimento do interessado ou do Ministério Público, por proposta da autoridade administrativa ou do Conselho Penitenciário, declarará extinta a punibilidade.",
+      "pontos": [
+        "Declaração de extinção da punibilidade após a anistia."
+      ],
+      "atencao": [
+        "O juiz declara a extinção."
+      ],
+      "exemplo": "Anistia concedida no regime competente enseja declaração judicial de extinção. Resposta: concessão e aplicação judicial são funções distintas. Variação: Não confundir anistia legislativa e indulto presidencial; pedido de anistia não equivale à sua existência.",
+      "prova": [
+        "O juiz concede livremente anistia só por este artigo? Não. O dispositivo começa CONCEDIDA A ANISTIA e regula declaração da consequência, não competência legislativa substitutiva.",
+        "Somente o preso pode provocar declaração? Não. Há iniciativa judicial e legitimados/propostas enumerados, no recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 187",
+          "significado": "Concedida a anistia, o Juiz, de ofício, a requerimento do interessado ou do Ministério Público, por proposta da autoridade administrativa ou do Conselho Penitenciário, declarará extinta a punibilidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 188",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-188": {
+      "simples": "O indulto individual poderá ser provocado por petição do condenado, por iniciativa do Ministério Público, do Conselho Penitenciário ou da autoridade administrativa.",
+      "pontos": [
+        "Petição do condenado, iniciativa do MP, do Conselho ou da autoridade administrativa."
+      ],
+      "atencao": [
+        "Indulto INDIVIDUAL."
+      ],
+      "exemplo": "Condenado pede indulto individual; pedido segue procedimento, sem garantia de concessão. Resposta: iniciativa e decisão são etapas diferentes. Variação: Não tratar essa petição como indulto coletivo automaticamente aplicável a todos.",
+      "prova": [
+        "Petição do condenado é excluída dos meios de provocação? Não. Está expressamente prevista, além das iniciativas do MP, Conselho e administração.",
+        "A iniciativa do diretor já extingue a pena por si? Não. Provoca pedido, distinto de concessão e aplicação judicial."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 188",
+          "significado": "O indulto individual poderá ser provocado por petição do condenado, por iniciativa do Ministério Público, do Conselho Penitenciário ou da autoridade administrativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 189"
+      ]
+    },
+    "art-189": {
+      "simples": "A petição do indulto, acompanhada dos documentos, será entregue ao Conselho Penitenciário, para a elaboração de parecer e posterior encaminhamento ao Ministério da Justiça.",
+      "pontos": [
+        "Petição ao Conselho Penitenciário.",
+        "Parecer e envio ao Ministério da Justiça."
+      ],
+      "atencao": [
+        "Passa pelo Conselho Penitenciário."
+      ],
+      "exemplo": "Pedido individual com documentos vai ao Conselho para parecer e Ministério da Justiça. Resposta: itinerário do dispositivo. Variação: Indulto coletivo por decreto tem aplicação própria do 193, não idêntica tramitação de toda petição individual.",
+      "prova": [
+        "Parecer favorável do Conselho já vale como decreto de indulto? Não. É etapa preparatória com encaminhamento, distinta da concessão pela autoridade competente.",
+        "Toda aplicação de indulto coletivo precisa repetir essa petição individual? Não. O 193 tem procedimento próprio de aplicação pelo juízo competente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 189",
+          "significado": "A petição do indulto, acompanhada dos documentos, será entregue ao Conselho Penitenciário, para a elaboração de parecer e posterior encaminhamento ao Ministério da Justiça."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 190"
+      ]
+    },
+    "art-190": {
+      "simples": "O Conselho Penitenciário, à vista dos autos e do prontuário, promoverá as diligências necessárias e fará, em relatório, a narração do ilícito penal e dos fundamentos da sentença, a exposição dos antecedentes do condenado e do procedimento deste depois da prisão, emitindo seu parecer sobre o mérito do pedido.",
+      "pontos": [
+        "Relatório do Conselho Penitenciário.",
+        "Parecer sobre o mérito."
+      ],
+      "atencao": [
+        "Relatório e parecer."
+      ],
+      "exemplo": "Conselho reúne dados, diligencia e emite parecer. Resposta: parecer técnico/administrativo não é sentença de extinção. Variação: Prontuário incompleto pode demandar diligências; não presumir inexistência de requisitos apenas por campo vazio.",
+      "prova": [
+        "O Conselho pode diligenciar sobre circunstância omitida? Sim. O artigo prevê diligências necessárias e esclarecimento de formalidades/circunstâncias.",
+        "O parecer transfere ao Conselho o poder presidencial de conceder indulto? Não. Instrução, parecer e concessão têm competências distintas."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 190",
+          "significado": "O Conselho Penitenciário, à vista dos autos e do prontuário, promoverá as diligências necessárias e fará, em relatório, a narração do ilícito penal e dos fundamentos da sentença, a exposição dos antecedentes do condenado e do procedimento deste depois da prisão, emitindo seu parecer sobre o mérito do pedido."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 189"
+      ]
+    },
+    "art-191": {
+      "simples": "Processada no Ministério da Justiça com os documentos e o relatório do Conselho Penitenciário, a petição será submetida a despacho do Presidente da República, a quem serão presentes os autos do processo ou a certidão de qualquer de suas peças, se ele o determinar.",
+      "pontos": [
+        "Processamento no Ministério da Justiça.",
+        "Decisão do Presidente da República."
+      ],
+      "atencao": [
+        "Concessão do indulto: Presidente da República.",
+        "Não inventar delegação concreta ou decreto concedente não verificado; exemplo trata do rito textual."
+      ],
+      "exemplo": "Petição instruída é submetida ao Presidente no rito individual. Resposta: decisão e instrução ministerial se distinguem. Variação: Constituição 84,XII, parágrafo único, permite delegação no recorte constitucional; não enunciar competência indelegável absoluta.",
+      "prova": [
+        "O ministro concede necessariamente por apenas ter processado pedido? Não. O artigo prevê despacho presidencial; eventual delegação depende de quadro constitucional válido.",
+        "A Constituição proíbe qualquer delegação da atribuição de indulto? Não. CF 84, parágrafo único, admite delegação do inciso XII aos destinatários previstos, no recorte."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 191",
+          "significado": "Processada no Ministério da Justiça com os documentos e o relatório do Conselho Penitenciário, a petição será submetida a despacho do Presidente da República, a quem serão presentes os autos do processo ou a certidão de qualquer de suas peças, se ele o determinar."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 192",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      ]
+    },
+    "art-192": {
+      "simples": "Concedido o indulto e anexada aos autos cópia do decreto, o Juiz declarará extinta a pena ou ajustará a execução aos termos do decreto, no caso de comutação.",
+      "pontos": [
+        "Extinção da pena ou ajuste da execução na comutação."
+      ],
+      "atencao": [
+        "Indulto extingue; comutação reduz."
+      ],
+      "exemplo": "Decreto de comutação válido permite reduzir pena nos seus termos. Resposta: ajustar execução, não extinguir universalmente toda pena. Variação: Indulto e comutação têm requisitos/efeitos do ato; não atribuir retroativamente todos os efeitos sem analisar o decreto.",
+      "prova": [
+        "Qualquer comutação equivale a extinção total? Não. O artigo distingue extinção por indulto e ajuste aos termos do decreto na comutação.",
+        "Basta o candidato citar existência de decreto sem verificar requisitos pessoais? Não. A aplicação exige enquadramento no ato pertinente e decisão competente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 192",
+          "significado": "Concedido o indulto e anexada aos autos cópia do decreto, o Juiz declarará extinta a pena ou ajustará a execução aos termos do decreto, no caso de comutação."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 191"
+      ]
+    },
+    "art-193": {
+      "simples": "Se o sentenciado for beneficiado por indulto coletivo, o Juiz, de ofício, a requerimento do interessado, do Ministério Público, ou por iniciativa do Conselho Penitenciário ou da autoridade administrativa, providenciará de acordo com o art. 192.",
+      "pontos": [
+        "Indulto coletivo: o juiz providencia de ofício ou a requerimento."
+      ],
+      "atencao": [
+        "Indulto COLETIVO.",
+        "Não certificada elegibilidade em qualquer decreto anual concreto; exercícios não inventam indulto de 2026."
+      ],
+      "exemplo": "Pessoa preenche decreto coletivo e juiz providencia aplicação de ofício. Resposta: iniciativa não é concessão livre fora do decreto. Variação: Súmula 535: falta grave não interrompe prazo para indulto/comutação, mas o decreto pode conter requisitos próprios.",
+      "prova": [
+        "É obrigatório novo pedido pessoal em toda aplicação? Não. O artigo admite atuação de ofício e dos legitimados, conforme requisitos.",
+        "De ofício permite criar indulto que não consta do decreto? Não. Juiz aplica benefício existente no seu âmbito, não substitui competência concedente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 193",
+          "significado": "Se o sentenciado for beneficiado por indulto coletivo, o Juiz, de ofício, a requerimento do interessado, do Ministério Público, ou por iniciativa do Conselho Penitenciário ou da autoridade administrativa, providenciará de acordo com o art. 192."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 192"
+      ]
+    },
+    "art-194": {
+      "simples": "O procedimento correspondente às situações previstas nesta Lei será judicial, desenvolvendo-se perante o Juízo da execução.",
+      "pontos": [
+        "Procedimento judicial perante o juízo da execução."
+      ],
+      "atencao": [
+        "Procedimento JUDICIAL."
+      ],
+      "exemplo": "Incidente de execução é examinado judicialmente. Resposta: juízo de execução, sem negar atribuições administrativas válidas da LEP. Variação: Advertência administrativa e procedimentos internos não se tornam todos competência judicial exclusiva só por esta frase.",
+      "prova": [
+        "O artigo elimina todas as competências da administração prisional? Não. Regula procedimento judicial das situações legais, sem revogar atribuições administrativas previstas.",
+        "A direção pode substituir decisão judicial de remição no incidente? Não. A competência judicial do procedimento precisa ser preservada no recorte pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 194",
+          "significado": "O procedimento correspondente às situações previstas nesta Lei será judicial, desenvolvendo-se perante o Juízo da execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 195"
+      ]
+    },
+    "art-195": {
+      "simples": "O procedimento judicial iniciar-se-á de ofício, a requerimento do Ministério Público, do interessado, de quem o represente, de seu cônjuge, parente ou descendente, mediante proposta do Conselho Penitenciário, ou, ainda, da autoridade administrativa.",
+      "pontos": [
+        "Início de ofício ou por vários legitimados."
+      ],
+      "atencao": [
+        "Início de OFÍCIO é possível."
+      ],
+      "exemplo": "Interessado ou familiar legitimado provoca procedimento; juiz também atua no recorte de ofício. Resposta: rol amplo. Variação: Iniciar incidente não dispensa contraditório ou fundamento para medidas gravosas.",
+      "prova": [
+        "Só advogado pode sempre provocar qualquer procedimento por este artigo? Não. O rol prevê interessado, representantes/familiares, órgãos e iniciativa judicial, integrado à defesa técnica cabível.",
+        "Iniciativa de ofício permite dispensar manifestação dos afetados em todo caso? Não. A iniciativa e o contraditório são etapas distintas do procedimento."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 195",
+          "significado": "O procedimento judicial iniciar-se-á de ofício, a requerimento do Ministério Público, do interessado, de quem o represente, de seu cônjuge, parente ou descendente, mediante proposta do Conselho Penitenciário, ou, ainda, da autoridade administrativa."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 194"
+      ]
+    },
+    "art-196": {
+      "simples": "A portaria ou petição será autuada, ouvindo-se, em 3 dias, o condenado e o Ministério Público, quando não figurem como requerentes. Sendo desnecessária a produção de prova, o Juiz decidirá de plano, em igual prazo. Entendendo indispensável a prova pericial ou oral, o Juiz a ordenará, decidindo após a produção daquela ou na audiência designada.",
+      "pontos": [
+        "Oitiva do condenado e do MP em 3 dias.",
+        "Decisão de plano, em igual prazo.",
+        "Prova pericial ou oral, se indispensável."
+      ],
+      "atencao": [
+        "Prazo de 3 dias."
+      ],
+      "exemplo": "MP requer medida; o condenado é ouvido em três dias no recorte. Resposta: quem já é requerente não precisa ser ouvido novamente por mera repetição desse artigo. Variação: Se prova oral/pericial é indispensável, não tratar decisão de plano como obrigação de decidir sem prova.",
+      "prova": [
+        "O texto exige nova oitiva idêntica de quem figura como requerente? Não. A condição é QUANDO NÃO FIGUREM COMO REQUERENTES, integrada ao procedimento.",
+        "Toda decisão tem de ser de plano mesmo com prova indispensável? Não. §2º prevê produção e decisão após prova ou audiência pertinente."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 196",
+          "significado": "A portaria ou petição será autuada, ouvindo-se, em 3 dias, o condenado e o Ministério Público, quando não figurem como requerentes. Sendo desnecessária a produção de prova, o Juiz decidirá de plano, em igual prazo. Entendendo indispensável a prova pericial ou oral, o Juiz a ordenará, decidindo após a produção daquela ou na audiência designada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 197"
+      ]
+    },
+    "art-197": {
+      "simples": "Das decisões proferidas pelo Juiz caberá recurso de agravo, sem efeito suspensivo.",
+      "pontos": [
+        "Agravo em execução, sem efeito suspensivo."
+      ],
+      "atencao": [
+        "Agravo SEM efeito suspensivo.",
+        "Não certificada toda jurisprudência recursal ou tutela excepcional; sem exercício de prazo não verificado."
+      ],
+      "exemplo": "Defesa interpõe agravo da execução. Resposta: regra legal sem efeito suspensivo automático. Variação: Ausência de efeito suspensivo ordinário não prova impossibilidade absoluta de tutela judicial urgente no sistema.",
+      "prova": [
+        "O agravo suspende automaticamente a decisão pelo artigo? Não. A regra é SEM EFEITO SUSPENSIVO, distinta de eventual tutela excepcional cabível.",
+        "O artigo sozinho fixa prazo recursal de trinta dias? Não. Ele não indica esse prazo; consultar disciplina/jurisprudência específica sem inventar prazo."
+      ],
+      "termos": [
+        {
+          "termo": "Agravo em execução",
+          "significado": "Recurso cabível contra decisões do juiz da execução."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 196"
+      ]
+    },
+    "art-198": {
+      "simples": "É VEDADA aos integrantes dos órgãos da execução/servidores a divulgação no recorte de perturbação da segurança/disciplina ou exposição à notoriedade inconveniente. Não é sigilo absoluto de toda informação nem proibição universal de fiscalização, transparência ou comunicação legítima de irregularidades.",
+      "pontos": [
+        "Vedada a divulgação de ocorrências que perturbem a segurança.",
+        "Vedada a exposição do preso à notoriedade."
+      ],
+      "atencao": [
+        "Corrigido exemplo antigo que afirmava proibição genérica de divulgar rebelião/expor à imprensa sem os recortes.",
+        "Não certificada toda jurisprudência sobre comunicação e imagem; não usar artigo como censura universal."
+      ],
+      "exemplo": "Servidor divulga imagem para expor preso à notoriedade indevida ou informação prejudicial à segurança. Resposta: examinar proibição no recorte. Variação: Não transformar proteção da pessoa em proibição universal de transparência, fiscalização ou comunicação legítima de irregularidades.",
+      "prova": [
+        "Todo dado sobre estabelecimento é segredo absoluto pelo artigo? Não. A descrição tem recortes de segurança/disciplina e notoriedade inconveniente; integrar transparência e direitos.",
+        "A palavra defesa significa aqui atividade do advogado? Não. É forma de dizer VEDADA, referente à divulgação pelos destinatários do artigo."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 198",
+          "significado": "É VEDADA aos integrantes dos órgãos da execução/servidores a divulgação no recorte de perturbação da segurança/disciplina ou exposição à notoriedade inconveniente. Não é sigilo absoluto de toda informação nem proibição universal de fiscalização, transparência ou comunicação legítima de irregularidades."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 41, VIII"
+      ]
+    },
+    "art-199": {
+      "simples": "O emprego de algemas será disciplinado por decreto federal, e não por regra de cada estabelecimento.",
+      "pontos": [
+        "Algemas disciplinadas por decreto federal.",
+        "Decreto 8.858/2016: resistência, fundado receio de fuga ou perigo; excepcionalidade justificada POR ESCRITO.",
+        "Art. 3º: trabalho de parto, trajeto unidade/hospital e pós-parto durante hospitalização."
+      ],
+      "atencao": [
+        "Ver também a Súmula Vinculante sobre algemas.",
+        "STF SV 11 não concede liberdade irrestrita ao agente; não certificar toda jurisprudência de nulidade de atos específicos."
+      ],
+      "exemplo": "Preso oferece resistência e uso excepcional de algemas é fundamentado por escrito. Resposta: Decreto 8.858 e SV 11 exigem recortes concretos. Variação: Algemar toda pessoa apenas por estar presa ou para exposição midiática não se torna lícito por prática habitual.",
+      "prova": [
+        "A condição de preso autoriza algemas obrigatórias em toda situação? Não. Exige resistência, fundado receio de fuga ou perigo à integridade e justificativa escrita no regime pertinente.",
+        "Parturiente pode ser algemada livremente no trajeto e hospitalização pelo art. 199? Não. Decreto 8.858, art. 3º, veda nas fases enumeradas; integrar CPP e garantias."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 199",
+          "significado": "O emprego de algemas será disciplinado por decreto federal, e não por regra de cada estabelecimento."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Código de Processo Penal",
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8858.htm",
+        "https://noticias.stf.jus.br/postsnoticias/stf-nega-pedidos-que-apontavam-descumprimento-de-sumula-que-limita-uso-de-algemas/"
+      ]
+    },
+    "art-200": {
+      "simples": "O condenado por crime político não está obrigado ao trabalho.",
+      "pontos": [
+        "Condenado por crime político não é obrigado a trabalhar."
+      ],
+      "atencao": [
+        "Exceção à obrigatoriedade do trabalho."
+      ],
+      "exemplo": "Condenado por crime político não é obrigado ao trabalho pelo artigo. Resposta: exceção, não proibição de atividade voluntária. Variação: Rótulo político atribuído por interessado não transforma automaticamente qualquer delito em crime político.",
+      "prova": [
+        "A ausência de obrigação equivale a proibição absoluta de trabalhar? Não. O texto dispensa obrigação, distinto de impedir atividade voluntária lícita.",
+        "Todo crime com repercussão política é enquadrado automaticamente? Não. Qualificação jurídica exige análise; não basta opinião ou rótulo pessoal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 200",
+          "significado": "O condenado por crime político não está obrigado ao trabalho."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 31"
+      ]
+    },
+    "art-201": {
+      "simples": "Na falta de estabelecimento adequado, texto prevê seção especial da cadeia pública para prisão civil e menciona prisão administrativa. Integre Constituição e jurisprudência: regra de local não cria hipótese/título de custódia. Não restaurar prisão do depositário infiel nem poder administrativo civil irrestrito de prender. Prisão civil por alimentos exige seus próprios pressupostos e separação adequada.",
+      "pontos": [
+        "Prisão civil e administrativa em seção especial da Cadeia Pública."
+      ],
+      "atencao": [
+        "Terminologia histórica não basta para autorizar prisão hoje; examinar fundamento constitucional e decisão competente."
+      ],
+      "exemplo": "Prisão civil válida por alimentos, sem estabelecimento adequado, demanda separação pertinente. Resposta: regra de local não cria novo título de prisão. Variação: A expressão histórica prisão administrativa não autoriza autoridade civil a prender livremente; depósito infiel não tem prisão civil admitida pelo STF.",
+      "prova": [
+        "O artigo restaura prisão civil de depositário infiel? Não. STF veda essa prisão em qualquer modalidade; local de cumprimento não cria hipótese válida de custódia.",
+        "A menção à administrativa autoriza prender sem título constitucional? Não. Integrar CF 5,LXI e garantias; texto residual de local não é autorização geral de prisão administrativa."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 201",
+          "significado": "Na falta de estabelecimento adequado, texto prevê seção especial da cadeia pública para prisão civil e menciona prisão administrativa. Integre Constituição e jurisprudência: regra de local não cria hipótese/título de custódia. Não restaurar prisão do depositário infiel nem poder administrativo civil irrestrito de prender. Prisão civil por alimentos exige seus próprios pressupostos e separação adequada."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 102",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "https://noticias.stf.jus.br/postsnoticias/prisao-civil-de-depositario-infiel-e-progressao-de-regime-em-crime-hediondo-sao-tema-de-duas-novas-sumulas-vinculantes/"
+      ]
+    },
+    "art-202": {
+      "simples": "Cumprida ou extinta a pena, não constarão da folha corrida, atestados ou certidões fornecidas por autoridade policial ou por auxiliares da Justiça qualquer notícia ou referência à condenação, salvo para instruir processo pela prática de nova infração penal ou outros casos expressos em lei.",
+      "pontos": [
+        "Sigilo da condenação após o cumprimento ou extinção.",
+        "Exceções: nova infração penal e casos legais."
+      ],
+      "atencao": [
+        "Efeito de proteção do egresso."
+      ],
+      "exemplo": "Após cumprimento/extinção, certidão comum não traz notícia da condenação, ressalvadas hipóteses legais. Resposta: proteção do egresso com exceções. Variação: Não apagar todo registro interno nem impedir instrução de nova infração prevista na ressalva.",
+      "prova": [
+        "O artigo impõe apagar irreversivelmente todos os dados judiciais? Não. Trata de folha/atestados/certidões e ressalva nova infração/outros casos legais, distinto de eliminar todo registro.",
+        "Qualquer empregador recebe automaticamente notícia de condenação cumprida? Não. A proteção legal permanece, salvo hipótese expressamente autorizada."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 202",
+          "significado": "Cumprida ou extinta a pena, não constarão da folha corrida, atestados ou certidões fornecidas por autoridade policial ou por auxiliares da Justiça qualquer notícia ou referência à condenação, salvo para instruir processo pela prática de nova infração penal ou outros casos expressos em lei."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 163"
+      ]
+    },
+    "art-203": {
+      "simples": "Disposição histórica de implantação: seis meses da publicação original para normas e projetos, com possibilidade de ampliação fundamentada pelo Conselho no §3º. Não reinicia carência em cada atualização de 2026. §4º trata de descumprimento injustificado e ajuda para despesas de execução, sem corte automático de todo recurso federal por qualquer irregularidade.",
+      "pontos": [
+        "Prazo de 6 meses para normas complementares.",
+        "Adaptação e construção de estabelecimentos.",
+        "Prorrogação pelo Conselho Nacional.",
+        "Suspensão de ajuda financeira em caso de descumprimento."
+      ],
+      "atencao": [
+        "Disposição histórica de implantação; não certificar execução orçamentária concreta ou suspensão atual automática.",
+        "§3º: Conselho pode ampliar prazo mediante solicitação justificada instruída com projetos, não prorrogação tácita ilimitada."
+      ],
+      "exemplo": "Questão histórica pergunta seis meses da publicação para normas e projetos de implantação. Resposta: marco inicial de 1984. Variação: Uma atualização em 2026 não reinicia toda carência nem suspende automaticamente todo financiamento federal por qualquer irregularidade.",
+      "prova": [
+        "Cada alteração da LEP reinicia os seis meses do artigo? Não. O marco é publicação original, com hipóteses de ampliação e requisitos próprios.",
+        "O texto permite cortar qualquer recurso da União por toda falha estadual? Não. §4º refere descumprimento INJUSTIFICADO e ajuda para execução de penas/medidas, não bloqueio universal."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 203",
+          "significado": "Disposição histórica de implantação: seis meses da publicação original para normas e projetos, com possibilidade de ampliação fundamentada pelo Conselho no §3º. Não reinicia carência em cada atualização de 2026. §4º trata de descumprimento injustificado e ajuda para despesas de execução, sem corte automático de todo recurso federal por qualquer irregularidade."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 204"
+      ]
+    },
+    "art-204": {
+      "simples": "Esta Lei entra em vigor concomitantemente com a lei de reforma da Parte Geral do Código Penal, revogadas as disposições em contrário, especialmente a Lei nº 3.274, de 2 de outubro de 1957.",
+      "pontos": [
+        "Vigência junto com a reforma da Parte Geral do Código Penal.",
+        "Revoga a Lei nº 3.274, de 1957."
+      ],
+      "atencao": [
+        "Dispositivo histórico."
+      ],
+      "exemplo": "Estudo histórico relaciona vigência da LEP à reforma da Parte Geral do CP. Resposta: concomitância, não vigência instantânea pela assinatura. Variação: Leis modificadoras têm suas próprias datas; não herdam automaticamente o marco original de 1984.",
+      "prova": [
+        "Toda alteração de 2026 começou a valer em 1984 por este artigo? Não. A concomitância é do regime original; modificadoras têm publicação/vacância próprias.",
+        "A preservação de lei antiga 3.274/1957 em arquivo a torna vigente? Não. Foi especialmente revogada; consulta histórica deve ser ressalvada."
+      ],
+      "termos": [
+        {
+          "termo": "Regra do art. 204",
+          "significado": "Esta Lei entra em vigor concomitantemente com a lei de reforma da Parte Geral do Código Penal, revogadas as disposições em contrário, especialmente a Lei nº 3.274, de 2 de outubro de 1957."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 203"
+      ]
+    },
+    "art-108": {
+      "simples": "Transtorno mental superveniente na execução exige cuidado e avaliação clínica/judicial. A referência textual ao HCTP deve ser integrada à Lei 10.216: internação depende de insuficiência dos recursos extra-hospitalares e não é consequência automática de qualquer diagnóstico. Distinga tratamento e eventual conversão judicial do art. 183.",
+      "pontos": [
+        "Cuidado individualizado na execução, distinto de capacidade ao tempo do fato.",
+        "Internação não automática: integrar necessidade clínica e Lei 10.216.",
+        "Art. 183: eventual substituição judicial, com pressupostos próprios."
+      ],
+      "atencao": [
+        "Ver também o art. 183 (substituição por medida de segurança).",
+        "Não certificada toda regulamentação antimanicomial ou implantação local; sem treino de internação automática por diagnóstico."
+      ],
+      "exemplo": "Condenado apresenta transtorno mental superveniente e recebe avaliação adequada. Resposta: cuidado exige integração clínica/jurídica, não internação asilar automática. Variação: A doença não prova sozinha inimputabilidade ao tempo do crime nem converte definitivamente a pena sem decisão.",
+      "prova": [
+        "Qualquer diagnóstico superveniente muda automaticamente a sentença para absolvição? Não. É situação da execução, distinta da capacidade ao tempo do fato e de conversão judicial do 183.",
+        "O texto permite abandonar tratamento ou internar sem necessidade clínica? Não. Integrar Lei 10.216, direitos e insuficiência dos recursos extra-hospitalares para internação."
+      ],
+      "termos": [
+        {
+          "termo": "Cuidado individualizado",
+          "significado": "Necessidade clínica e decisão no regime de saúde, sem internação automática por diagnóstico."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 183",
+        "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm"
+      ]
+    },
+    "art-149": {
+      "simples": "Juiz designa entidade credenciada/convencionada, intima para dias/horários e ajusta a forma à jornada. O §1º conserva oito horas semanais no texto; integrar ao CP 46, §§3º/4º, atual, que calcula uma hora de tarefa por dia de condenação e admite condições próprias de cumprimento. Não apresentar oito horas como fórmula invariável de todo caso. §2º: início no primeiro comparecimento.",
+      "pontos": [
+        "Entidade credenciada/convencionada designada judicialmente; tarefas gratuitas conforme aptidões.",
+        "Texto residual do §1º: oito horas semanais; CP 46 atual calcula uma hora de tarefa por dia de condenação.",
+        "Calendário compatível com trabalho e regime aplicável, não oito horas invariáveis.",
+        "Início da execução no primeiro comparecimento."
+      ],
+      "atencao": [
+        "CP 46 foi alterado pela Lei 9.714/1998; distinguir duração total da pena, quantidade de horas e calendário semanal.",
+        "Não prejudicar jornada normal; trabalho é gratuito e conforme aptidões, sem prometer livre escolha de entidade pelo condenado."
+      ],
+      "exemplo": "Juiz organiza tarefas compatíveis com emprego e aptidões. Resposta: considerar CP 46, §3º, uma hora por dia de condenação, não fórmula universal isolada de oito horas. Variação: O texto residual de oito horas semanais da LEP não resolve sozinho duração/calendário de todas as condenações atuais.",
+      "prova": [
+        "Todo caso atual exige invariavelmente oito horas por semana pela frase antiga? Não. Integrar CP 46, §3º/§4º, vigente: uma hora por dia de condenação e possibilidades legais de cumprimento, sem prejudicar jornada.",
+        "A execução tem início só da sentença, sem primeiro comparecimento? Não. §2º do artigo fixa primeiro comparecimento no recorte, distinto do trânsito necessário à execução."
+      ],
+      "termos": [
+        {
+          "termo": "Quantidade e calendário de tarefas",
+          "significado": "Uma hora por dia de condenação não equivale a calendário semanal fixo universal."
+        }
+      ],
+      "remissoes": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+        "Art. 150",
+        "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      ]
+    }
+  }
+}

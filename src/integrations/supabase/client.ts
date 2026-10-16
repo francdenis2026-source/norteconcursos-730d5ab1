@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { createEmailAuthCallbackFlow, readEmailAuthCallback } from "@/lib/authCallback";
 
 // These fallback values are public client credentials. They keep Lovable previews
 // operational when the local `.env.local` file is not available in the cloud build.
@@ -9,11 +10,17 @@ const supabaseAnonKey =
   import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ??
   "sb_publishable_hF4jXHTs4tapaOMX2KdqvA_N_A5Tyqf";
 
-// Capture the recovery intent before the SDK consumes the URL fragment.
-export const passwordRecoveryPending =
-  typeof window !== "undefined" &&
-  new URLSearchParams(window.location.hash.slice(1)).get("type") === "recovery";
+export const emailAuthCallback = typeof window !== "undefined"
+  ? readEmailAuthCallback(window.location.href)
+  : { present: false, recovery: false };
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Reuse verification across the root, auth page and StrictMode mounts: links are single-use.
+const callbackFlow = createEmailAuthCallbackFlow(supabase.auth, emailAuthCallback);
+export const hasPendingEmailAuthCallback = callbackFlow.hasPending;
+export const isEmailRecoveryPending = callbackFlow.recoveryPending;
+export const markEmailAuthCallbackHandled = callbackFlow.markHandled;
+export const completeEmailAuthCallback = callbackFlow.complete;
 
 /** Cliente isolado para fluxos de autenticação que não podem substituir a sessão atual. */
 export function createIsolatedSupabaseClient(storageKey: string) {

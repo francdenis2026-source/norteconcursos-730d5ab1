@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 /**
  * Motor do Assistente de estudos.
  * Estima o esforço necessário e distribui as horas entre as matérias a partir do perfil do aluno
@@ -183,14 +184,14 @@ function statFor(aliases: string[], stats: SubjectStat[]): SubjectStat {
 }
 
 export function buildPlan(input: CoachInput): CoachPlan {
-  const now = input.now ?? new Date();
+  const now = input.now ?? platformDate();
   const career = CAREERS.find((c) => c.id === input.career) ?? CAREERS[CAREERS.length - 1]!;
 
   const weeksLeft = input.examDate
     ? Math.max(
         0,
         Math.ceil(
-          (new Date(`${input.examDate}T12:00:00`).getTime() - now.getTime()) / (7 * 86_400_000),
+          (new Date(`${input.examDate}T12:00:00-05:00`).getTime() - now.getTime()) / (7 * 86_400_000),
         ),
       )
     : null;

@@ -1,3 +1,4 @@
+import { platformDate } from "@/lib/platformClock";
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
@@ -176,7 +177,7 @@ function AdminQuestionsPage() {
     if (!ok) return;
     const { data, error } = await supabase
       .from("board_exam_questions")
-      .update({ content_status: "active", verified_at: new Date().toISOString() })
+      .update({ content_status: "active", verified_at: platformDate().toISOString() })
       .eq("board", "FGV")
       .eq("content_status", "under_review")
       .eq("needs_visual", false)

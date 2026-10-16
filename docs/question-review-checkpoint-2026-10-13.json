@@ -1,0 +1,65 @@
+{
+  "checked_at": "2026-10-13T23:44:03.655Z",
+  "scope": "Esta rodada publicou 32 registros revisados e retirou 6 do treino (5 arquivados por problemas pedagógicos e 1 obsoleto). Totais incluem importações e revisões concorrentes; não equivalem a questões únicas.",
+  "published_in_this_round": 32,
+  "archived_in_this_round": 5,
+  "obsolete_in_this_round": 1,
+  "counts": [
+    {
+      "table": "question_bank",
+      "status": {
+        "active": 34,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0
+      }
+    },
+    {
+      "table": "curated_question_catalog",
+      "status": {
+        "active": 1792,
+        "under_review": 0,
+        "archived": 0,
+        "obsolete": 0,
+        "annulled": 0
+      }
+    },
+    {
+      "table": "official_exam_questions",
+      "status": {
+        "active": 3644,
+        "under_review": 668,
+        "archived": 139,
+        "obsolete": 26,
+        "annulled": 18
+      }
+    },
+    {
+      "table": "board_exam_questions",
+      "status": {
+        "active": 447,
+        "under_review": 300,
+        "archived": 7,
+        "obsolete": 0,
+        "annulled": 0
+      }
+    }
+  ],
+  "remaining_work": [
+    "Resolver proveniência e comandos das duas questões constitucionais PCMG; caderno específico já localizado e conferido visualmente.",
+    "Revisar individualmente o restante da fila oficial e os 300 itens board_exam_questions.",
+    "PRF tem vínculos genéricos, contextos ausentes, classificação misturada e cópias com gabaritos diferentes; cotejar cadernos e gabaritos antes de publicar."
+  ],
+  "preservation": [
+    "Originais, gabaritos, extração bruta e alterações concorrentes preservados.",
+    "PDFs e snapshots completos somente nos outputs ignorados.",
+    "Reimportação agora interrompe antes de alterar matrizes quando o concurso já existe."
+  ],
+  "validation": "10 testes Node e 1 regressão Python passaram; gravações CAS e releitura verificadas.",
+  "usage_last_checked": {
+    "primary_used_percent": 97,
+    "primary_remaining_percent": 3,
+    "stop_threshold_remaining_percent": 2
+  }
+}

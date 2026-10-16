@@ -36,7 +36,9 @@ test('regime inicial pelo art. 33, § 2º', () => {
   assert.equal(c.regimeInicial(c.penaParaDias(P(8, 0, 1)), false, 'reclusão').regime, 'Fechado');
   assert.equal(c.regimeInicial(c.penaParaDias(P(8)), false, 'reclusão').regime, 'Semiaberto');
   assert.equal(c.regimeInicial(c.penaParaDias(P(4)), false, 'reclusão').regime, 'Aberto');
-  assert.match(c.regimeInicial(c.penaParaDias(P(3)), true, 'reclusão').regime, /Fechado/);
+  assert.equal(c.regimeInicial(c.penaParaDias(P(3)), true, 'reclusão').regime, 'Semiaberto possível');
+  assert.equal(c.regimeInicial(c.penaParaDias(P(9)), true, 'detenção').regime, 'Semiaberto, em tese');
+  assert.equal(c.regimeInicial(c.penaParaDias(P(3)), false, 'reclusão', false).regime, 'Depende de fundamentação');
 });
 
 test('progressão: frações do art. 112 da LEP e data pelo calendário', () => {
@@ -62,11 +64,12 @@ test('livramento exige mais que a fração; remição segue o art. 126', () => {
   const ini = c.parseDate('2026-01-01');
   const l = c.marcoExecucao(ini, P(3), { num: 1, den: 3 }, 0, 0, true);
   assert.equal(l.exigidosDias, Math.floor(l.totalDias / 3) + 1);
-  const r = c.remicao(120, 20, 90, false);
+  const r = c.remicaoPorBlocos(10, 90, false);
   assert.equal(r.estudo, 10);
   assert.equal(r.trabalho, 30);
-  assert.equal(c.remicao(120, 20, 0, true).acrescimoConclusao, 3);
-  assert.equal(c.remicao(120, 2, 0, false).estudo, 0, 'horas de estudo devem ser divididas em ao menos 3 dias');
+  assert.equal(c.remicaoPorBlocos(10, 0, true).acrescimoConclusao, 3);
+  assert.throws(() => c.remicaoPorBlocos(1.5, 0, false), /inteiro/);
+  assert.throws(() => c.remicaoPorBlocos(1, -3, false), /inteiro/);
 });
 
 test('prescrição: faixas do art. 109, aumento do art. 110 e redução do art. 115', () => {
@@ -83,4 +86,186 @@ test('prescrição: faixas do art. 109, aumento do art. 110 e redução do art. 
   assert.equal(c.prescricao(y(4), base).meses, 128);
   assert.equal(c.prescricao(y(4), { ...base, executoria: false, reincidente: true, reduzPelaIdade: true }).meses, 48);
   assert.equal(c.prescricao(y(4), { ...base, executoria: false, reincidente: false, reduzPelaIdade: true, violenciaSexualContraMulher: true }).meses, 96);
+});
+
+
+test('benefícios usam pena total, sem redução ao limite de cumprimento (Súmula 715)', () => {
+  const inicio = c.parseDate('2026-01-01');
+  const out = c.marcoExecucao(inicio, P(50), {num:1,den:2}, 0, 0);
+  assert.equal(out.totalDias, c.diasEntre(inicio,c.addPena(inicio,P(50))));
+  assert.equal(out.exigidosDias, Math.ceil(out.totalDias / 2));
+  assert.ok(out.exigidosDias > 24 * 365);
+  assert.equal(out.limiteQuarentaAnos, true);
+});
+
+test('datas civis e fim de mês não dependem do fuso do dispositivo', () => {
+  assert.throws(() => c.parseDate('2026-02-30'), /existente/);
+  assert.throws(() => c.parseDate(''), /válida/);
+  assert.equal(c.formatBr(c.parseDate('2026-10-14')), '14/10/2026');
+  assert.equal(c.toIso(c.addPena(c.parseDate('2026-01-31'),P(0,1))), '2026-02-28');
+  assert.equal(c.toIso(c.addPena(c.parseDate('2024-02-29'),P(1))), '2025-02-28');
+});
+
+test('dosimetria despreza fração de dia e rejeita valores inválidos', () => {
+  const input = {min:P(0,0,1),max:P(0,0,2),circunstanciasNegativas:1,fracaoCircunstancia:{num:1,den:8},agravantes:0,atenuantes:0,fracaoAgravanteAtenuante:{num:1,den:6},aumentos:[{num:2,den:3}],diminuicoes:[]};
+  assert.equal(c.dosimetria(input).final, 1);
+  assert.throws(()=>c.dosimetria({...input,circunstanciasNegativas:9}),/Circunstâncias/);
+  assert.throws(()=>c.dosimetria({...input,diminuicoes:[{num:1,den:0}]}),/Fração/);
+  assert.throws(()=>c.penaParaDias(P(1,12)),/meses/);
+  assert.throws(()=>c.marcoExecucao(c.parseDate('2026-01-01'),P(0),{num:1,den:6},0,0),/zero/);
+  assert.throws(()=>c.prazoPrescricaoAnos(0),/zero/);
+});
+
+
+test('referências de crimes apontam para o diploma e o artigo correto', () => {
+  const targets = ['cp121q','cp217a','d33','a16'].map(id => c.crimeStudyTarget(id));
+  assert.equal(targets[0].art,'art-121');
+  assert.equal(targets[1].art,'art-217-a');
+  assert.equal(targets[2].slug,'drogas');
+  assert.equal(targets[3].slug,'armas');
+  assert.equal(c.crimeStudyTarget('custom'),null);
+  assert.equal(c.crimeStudyTarget('cp9999'),null);
+});
+
+
+test('exemplos acompanham os dados e resultados de cada fase, incluindo ausência de causas', async () => {
+  const { dosimetryExamples } = await import('../src/lib/penalExamples.ts');
+  const input = {min:P(1),max:P(6),circunstanciasNegativas:1,fracaoCircunstancia:{num:1,den:8},agravantes:0,atenuantes:1,fracaoAgravanteAtenuante:{num:1,den:6},aumentos:[],diminuicoes:[]};
+  const output = c.dosimetria(input);
+  const examples = dosimetryExamples(input,output,'furto');
+  assert.equal(examples.length,3);
+  assert.match(examples[0].scenario,/furto/);
+  assert.match(examples[0].steps[1],new RegExp(String(output.passos[0].dias)));
+  assert.match(examples[1].steps[1],new RegExp(String(output.passos[1].dias)));
+  assert.match(examples[2].scenario,/nenhuma causa/);
+  input.aumentos=[{num:1,den:3}];
+  const changed=c.dosimetria(input);
+  const newExamples=dosimetryExamples(input,changed,'furto');
+  assert.equal(newExamples.length,changed.passos.length);
+  assert.match(newExamples.at(-1).steps[0],/1\/3/);
+  assert.match(newExamples.at(-1).steps[1],new RegExp(String(changed.final)));
+});
+
+test('exemplo de remição acompanha a conclusão e o resultado transferível', async () => {
+  const {remitionExample} = await import('../src/lib/penalExamples.ts');
+  const result=c.remicaoPorBlocos(12,90,true);
+  const example=remitionExample(12,90,true,result);
+  assert.equal(result.total,46);
+  assert.match(example.conclusion,/46 dias/);
+  assert.match(example.scenario,/conclusão certificada/);
+  assert.match(example.steps[2],/12 \+ 30 \+ 4 = 46/);
+});
+
+
+test('perfil jurídico distingue hediondez, modalidade e ausência de enquadramento', async () => {
+  const {crimePolicy} = await import('../src/lib/penalPolicy.ts');
+  const common=crimePolicy('cp157');
+  assert.equal(common.classification,'comum');
+  assert.equal(crimePolicy('cp121q').classification,'hediondo');
+  assert.equal(crimePolicy('cp121').classification,'comum');
+  assert.equal(crimePolicy('cp121',true).classification,'hediondo');
+  assert.equal(crimePolicy('d33').classification,'equiparado');
+  assert.equal(crimePolicy('a16').classification,'comum','uso restrito não é automaticamente uso proibido');
+  assert.ok(crimePolicy('custom').rules.every(r=>r.state==='nao-avaliado'));
+  const rules=Object.fromEntries(crimePolicy('cp213').rules.map(r=>[r.title,r]));
+  for(const name of ['Fiança','Indulto','Graça','Anistia']) assert.equal(rules[name].state,'vedado');
+  assert.equal(rules['Progressão'].state,'condicionado','hediondez não elimina progressão');
+  assert.match(rules['Fiança'].explanation,/não determina prisão/);
+  assert.equal(common.rules.find(r=>r.title==='Indulto').label,'Depende do decreto');
+});
+
+test('execução impede perfis incompatíveis sem transformar requisitos em concessões', async () => {
+  const {crimePolicy,compatibleProgression,compatibleParole}=await import('../src/lib/penalPolicy.ts');
+  const rape=crimePolicy('cp213'),murder=crimePolicy('cp121q'),theft=crimePolicy('cp155'),robbery=crimePolicy('cp157');
+  assert.equal(compatibleProgression(rape,'base'),false);
+  assert.equal(compatibleProgression(rape,'v'),true);
+  assert.equal(compatibleProgression(murder,'v'),false);
+  assert.equal(compatibleProgression(murder,'via'),true);
+  assert.equal(compatibleProgression(theft,'i'),false);
+  assert.equal(compatibleProgression(robbery,'base'),false);
+  assert.equal(compatibleProgression(robbery,'i'),true);
+  assert.equal(compatibleParole(rape,'terco','manual',false),false);
+  assert.equal(compatibleParole(rape,'doistercos','v',false),true);
+  assert.equal(compatibleParole(rape,'doistercos','v',true),false);
+  assert.equal(compatibleParole(murder,'doistercos','via',false),false);
+  assert.equal(compatibleParole(theft,'doistercos','base',false),false);
+  assert.equal(compatibleParole(crimePolicy('custom'),'terco','manual',false),false);
+});
+
+test('requisitos objetivos da pena atualizam os avisos de benefícios', async()=>{
+  const {crimePolicy,policyForSentence}=await import('../src/lib/penalPolicy.ts');
+  const map=p=>Object.fromEntries(p.rules.map(r=>[r.title,r.state]));
+  assert.equal(map(policyForSentence(crimePolicy('cp129'),90,true,false))['Livramento condicional'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp157'),2160,true,false))['Substituição'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp157'),2160,true,false))['Sursis'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('d33'),720,false,false))['Sursis'],'vedado');
+  assert.equal(map(policyForSentence(crimePolicy('cp155'),720,false,false))['Substituição'],'condicionado');
+});
+
+
+test('saída temporária e monitoração não são inferidas como concessões', async()=>{
+  const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+  const find=(id,title)=>crimePolicy(id).rules.find(r=>r.title===title);
+  assert.equal(find('cp157','Saída temporária').state,'vedado');
+  assert.equal(find('cp213','Saída temporária').state,'vedado');
+  assert.equal(find('cp155','Saída temporária').state,'condicionado');
+  assert.equal(find('d33','Saída temporária').state,'condicionado','não estender a expressão hediondo sem examinar alcance no equiparado');
+  assert.match(find('cp155','Saída temporária').explanation,/visitas familiares/);
+  assert.equal(find('cp213','Monitoração eletrônica').state,'condicionado');
+  assert.match(find('cp213','Monitoração eletrônica').explanation,/não afasta uma vedação/);
+  assert.equal(find('custom','Monitoração eletrônica').state,'nao-avaliado');
+});
+
+
+test('perfil compartilhado sugere progressão conforme primariedade e espécie de reincidência',async()=>{
+ const {INITIAL_OFFENDER,recommendedProgression,offenderCategoryCompatible}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const primary={...INITIAL_OFFENDER},generic={...primary,kind:'recurrent'},specific={...generic,specificSpecial:true};
+ assert.equal(recommendedProgression(crimePolicy('cp157'),primary).id,'i');
+ assert.equal(recommendedProgression(crimePolicy('cp157'),generic).id,'ii');
+ assert.equal(recommendedProgression(crimePolicy('cp155'),primary).id,'base');
+ assert.equal(recommendedProgression(crimePolicy('cp155'),generic).id,'iii');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),primary).id,'v');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),generic).id,'manual');
+ assert.equal(recommendedProgression(crimePolicy('cp213'),specific).id,'vii');
+ assert.equal(recommendedProgression(crimePolicy('cp121q'),specific).id,'viii');
+ assert.equal(offenderCategoryCompatible(crimePolicy('cp157'),generic,'i'),false);
+});
+
+test('livramento exige antecedentes/natureza informados e respeita a vedação específica',async()=>{
+ const {INITIAL_OFFENDER,recommendedParole}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const common=crimePolicy('cp155'),special=crimePolicy('cp213');
+ assert.equal(recommendedParole(common,INITIAL_OFFENDER,'base').id,'vedado','primariedade não prova antecedentes');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,record:'good'},'base').id,'terco');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,kind:'recurrent'},'iii').id,'vedado');
+ assert.equal(recommendedParole(common,{...INITIAL_OFFENDER,kind:'recurrent',previousIntent:'intentional'},'iii').id,'metade');
+ assert.equal(recommendedParole(special,{...INITIAL_OFFENDER,kind:'recurrent',specificSpecial:true},'vii').id,'vedado');
+ assert.equal(recommendedParole(special,INITIAL_OFFENDER,'v').id,'doistercos');
+});
+
+
+test('avisos do painel acompanham falta de dados e vedação do perfil compartilhado',async()=>{
+ const {INITIAL_OFFENDER,policyForOffender}=await import('../src/lib/penalOffender.ts');
+ const {crimePolicy}=await import('../src/lib/penalPolicy.ts');
+ const rule=(p,title)=>p.rules.find(r=>r.title===title);
+ assert.equal(rule(policyForOffender(crimePolicy('cp155'),INITIAL_OFFENDER),'Livramento condicional').state,'nao-avaliado');
+ const specific={...INITIAL_OFFENDER,kind:'recurrent',specificSpecial:true};
+ assert.equal(rule(policyForOffender(crimePolicy('cp213'),specific),'Livramento condicional').state,'vedado');
+ assert.equal(rule(policyForOffender(crimePolicy('cp213'),{...INITIAL_OFFENDER,kind:'recurrent'}),'Progressão').state,'nao-avaliado');
+});
+
+const catalogModule = { exports: {} };
+vm.runInNewContext(ts.transpileModule(readFileSync('src/lib/penalCatalog.ts', 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText, { module: catalogModule, exports: catalogModule.exports, require: () => ({}), Number, Math });
+const catalog = catalogModule.exports;
+test('sugestão de pena distingue caput, unidades e modalidade, sem aplicar qualificadoras', () => {
+  const r = catalog.suggestCustodialPenalty('Pena - detenção, de 6 (seis) meses a 2 (dois) anos. § 1º Pena - reclusão, de 3 a 5 anos.');
+  assert.equal(r.min.meses, 6); assert.equal(r.max.anos, 2); assert.equal(r.tipo, 'detenção');
+});
+test('sugestão rejeita revogação, penas alternativas e limites incoerentes', () => {
+  for (const text of ['Revogado. Pena - reclusão, de 1 a 3 anos.', 'Pena - reclusão, de 1 a 3 anos, ou multa.', 'Pena - reclusão, de 5 a 2 anos.', 'A reclusão pode ocorrer por 2 a 4 anos.', 'Pena - reclusão, de 1 a 3 anos. Pena - detenção, de 2 a 4 anos.']) assert.equal(catalog.suggestCustodialPenalty(text), null);
+});
+test('catálogo exclui dispositivos sem pena identificada e versões históricas', () => {
+  const rows = [{id:'a',content_status:'current',body_text:'Pena - reclusão, de 1 a 3 anos.'},{id:'b',content_status:'excluded',body_text:'Pena - detenção, de 1 a 2 anos.'},{id:'c',content_status:'current',body_text:'Norma processual.'}];
+  assert.equal(catalog.custodialUnits(rows).map(x=>x.id).join(','),'a');
 });

@@ -61,10 +61,10 @@ export function DailyChallengeBadge() {
     ? "Desafio de hoje concluído"
     : started
       ? `Faltam ${left} de ${GUEST_DAILY_LIMIT} questões hoje`
-      : `${GUEST_DAILY_LIMIT} questões oficiais grátis hoje`;
+      : `${GUEST_DAILY_LIMIT} questões de certo ou errado grátis hoje`;
   const hint = done
     ? "Nova rodada à meia-noite do Acre"
-    : "Sem cadastro · renova todo dia, horário do Acre";
+    : "Segurança pública · sem cadastro · renova no horário do Acre";
 
   const content = (
     <>
