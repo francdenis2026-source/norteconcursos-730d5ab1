@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { fetchUsedToday, getDailyLimit } from "@/lib/aiSolverStore";
+import { fetchQuestionsAnsweredToday, getDailyQuestionLimit } from "@/lib/questionDailyLimit";
+import { readOpened } from "@/components/dashboard/LibraryDailyGate";
+import { FREE_DAILY_LIBRARY, checkFeatureAccess } from "@/lib/subscriptions.config";
 import { cn } from "@/lib/utils";
 import { SoonBadge } from "@/components/SoonBadge";
 import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
@@ -38,17 +41,68 @@ export const Route = createFileRoute("/dashboard/subscriptions")({
   component: SubscriptionsPage,
 });
 
+/** Barra de uso diário: usado / limite, ou só o total quando o plano não tem limite. */
+function UsageMeter({
+  label,
+  used,
+  limit,
+  unit,
+}: {
+  label: string;
+  used: number;
+  limit: number | "unlimited";
+  unit: string;
+}) {
+  const unlimited = limit === "unlimited";
+  const pct = unlimited ? 100 : Math.min(100, Math.round((used / Math.max(1, limit)) * 100));
+  const full = !unlimited && used >= limit;
+  return (
+    <div className="space-y-1.5">
+      <div className="flex flex-wrap justify-between gap-2 text-sm">
+        <span className="font-medium">{label}</span>
+        <span
+          className={cn(
+            "tabular-nums",
+            full ? "font-semibold text-amber-600" : "text-muted-foreground",
+          )}
+        >
+          {unlimited ? `${used} hoje · ilimitado` : `${used} de ${limit} ${unit}`}
+        </span>
+      </div>
+      <div
+        className="h-2 overflow-hidden rounded-full bg-muted"
+        role="progressbar"
+        aria-label={label}
+        aria-valuenow={pct}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+        <div
+          className={cn("h-full transition-all", full ? "bg-amber-500" : "bg-primary")}
+          style={{ width: unlimited ? "0%" : `${pct}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
 function SubscriptionsPage() {
   const { user, isAdmin } = useAuthStatus();
   const tier = user?.subscription_tier ?? "free";
   const limit = getDailyLimit(tier, isAdmin);
   const [used, setUsed] = useState(0);
+  const [answered, setAnswered] = useState(0);
+  const [libraryOpened, setLibraryOpened] = useState(0);
+  const questionLimit = getDailyQuestionLimit(tier, isAdmin);
+  const libraryLimited =
+    !isAdmin && checkFeatureAccess(tier, "library").limit === FREE_DAILY_LIBRARY;
   useEffect(() => {
-    if (user?.id && user.id !== "demo-user") void fetchUsedToday().then(setUsed);
+    if (user?.id && user.id !== "demo-user") {
+      void fetchUsedToday().then(setUsed);
+      void fetchQuestionsAnsweredToday(user.id).then(setAnswered);
+      setLibraryOpened(readOpened(user.id).length);
+    }
   }, [user?.id]);
-  const pct =
-    limit === "unlimited" ? 100 : Math.min(100, Math.round((used / Math.max(1, limit)) * 100));
-
   return (
     <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-6">
       <PageHero
@@ -80,32 +134,35 @@ function SubscriptionsPage() {
       )}
 
       <Card>
-        <CardContent className="space-y-2 pt-6">
-          <div className="flex flex-wrap justify-between gap-2 text-sm">
-            <span className="text-foreground">
-              Plano atual:{" "}
-              <strong>{SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}</strong>
-              {isAdmin && " (administrador)"}
-            </span>
-            {AI_ENABLED ? (
-              <span className="text-muted-foreground">
-                Resoluções com IA hoje: {used} / {limit === "unlimited" ? "ilimitado" : limit}
-              </span>
-            ) : (
-              <span className="flex items-center gap-2 text-muted-foreground">
-                Resoluções com IA <SoonBadge />
-              </span>
-            )}
-          </div>
-          {AI_ENABLED && (
-            <div
-              className="h-2 overflow-hidden rounded-full bg-muted"
-              role="progressbar"
-              aria-valuenow={pct}
-              aria-valuemin={0}
-              aria-valuemax={100}
-            >
-              <div className="h-full bg-primary transition-all" style={{ width: `${pct}%` }} />
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base">
+            Seu plano: {SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}
+            {isAdmin && " (administrador)"}
+          </CardTitle>
+          <CardDescription>
+            Uso de hoje. Os limites renovam à meia-noite (horário do Acre).
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <UsageMeter
+            label="Questões no Treinador"
+            used={answered}
+            limit={questionLimit}
+            unit="questões"
+          />
+          {libraryLimited && (
+            <UsageMeter
+              label="Materiais da Biblioteca e das leis"
+              used={libraryOpened}
+              limit={FREE_DAILY_LIBRARY}
+              unit="materiais"
+            />
+          )}
+          {AI_ENABLED ? (
+            <UsageMeter label="Resoluções com IA" used={used} limit={limit} unit="resoluções" />
+          ) : (
+            <div className="flex items-center justify-between gap-2 text-sm text-muted-foreground">
+              Resoluções com IA <SoonBadge />
             </div>
           )}
         </CardContent>
