@@ -1,0 +1,1332 @@
+{
+  "scope": "PCDF/2026 — 17 novas revisões, acumulado 93; oito contextos recuperados. Não certifica toda a prova ou todo o acervo PC.",
+  "checked_at": "2026-10-16T16:41:56.103652+00:00",
+  "validation": {
+    "checked_at": "2026-10-16T16:41:37.143Z",
+    "audited": 93,
+    "eligible_audited": 93,
+    "other_pc_rows_preserved": 2875,
+    "concurrent_unrelated_pc_rows": [],
+    "missing_pc_rows": [],
+    "original_texts_answers_sources_subjects_statuses_preserved": false,
+    "original_isolated_items_answers_sources_subjects_statuses_preserved": true,
+    "shared_contexts_restored": 8,
+    "items": [
+      {
+        "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+        "item_number": 46,
+        "eligible": true
+      },
+      {
+        "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+        "item_number": 15,
+        "eligible": true
+      },
+      {
+        "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+        "item_number": 27,
+        "eligible": true
+      },
+      {
+        "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+        "item_number": 12,
+        "eligible": true
+      },
+      {
+        "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+        "item_number": 68,
+        "eligible": true
+      },
+      {
+        "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+        "item_number": 111,
+        "eligible": true
+      },
+      {
+        "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+        "item_number": 103,
+        "eligible": true
+      },
+      {
+        "id": "23409872-85b9-4547-9d76-ee840c996f70",
+        "item_number": 40,
+        "eligible": true
+      },
+      {
+        "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+        "item_number": 77,
+        "eligible": true
+      },
+      {
+        "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+        "item_number": 33,
+        "eligible": true
+      },
+      {
+        "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+        "item_number": 39,
+        "eligible": true
+      },
+      {
+        "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+        "item_number": 43,
+        "eligible": true
+      },
+      {
+        "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+        "item_number": 63,
+        "eligible": true
+      },
+      {
+        "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+        "item_number": 42,
+        "eligible": true
+      },
+      {
+        "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+        "item_number": 97,
+        "eligible": true
+      },
+      {
+        "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+        "item_number": 96,
+        "eligible": true
+      },
+      {
+        "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+        "item_number": 78,
+        "eligible": true
+      },
+      {
+        "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+        "item_number": 13,
+        "eligible": true
+      },
+      {
+        "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+        "item_number": 36,
+        "eligible": true
+      },
+      {
+        "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+        "item_number": 8,
+        "eligible": true
+      },
+      {
+        "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+        "item_number": 64,
+        "eligible": true
+      },
+      {
+        "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+        "item_number": 92,
+        "eligible": true
+      },
+      {
+        "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+        "item_number": 76,
+        "eligible": true
+      },
+      {
+        "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+        "item_number": 100,
+        "eligible": true
+      },
+      {
+        "id": "74436292-ad87-456d-870a-f8702db04364",
+        "item_number": 102,
+        "eligible": true
+      },
+      {
+        "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+        "item_number": 106,
+        "eligible": true
+      },
+      {
+        "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+        "item_number": 52,
+        "eligible": true
+      },
+      {
+        "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+        "item_number": 49,
+        "eligible": true
+      },
+      {
+        "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+        "item_number": 11,
+        "eligible": true
+      },
+      {
+        "id": "a1db110e-599c-4503-886b-a2483ac92082",
+        "item_number": 53,
+        "eligible": true
+      },
+      {
+        "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+        "item_number": 44,
+        "eligible": true
+      },
+      {
+        "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+        "item_number": 99,
+        "eligible": true
+      },
+      {
+        "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+        "item_number": 66,
+        "eligible": true
+      },
+      {
+        "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+        "item_number": 26,
+        "eligible": true
+      },
+      {
+        "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+        "item_number": 93,
+        "eligible": true
+      },
+      {
+        "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+        "item_number": 38,
+        "eligible": true
+      },
+      {
+        "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+        "item_number": 47,
+        "eligible": true
+      },
+      {
+        "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+        "item_number": 35,
+        "eligible": true
+      },
+      {
+        "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+        "item_number": 1,
+        "eligible": true
+      },
+      {
+        "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+        "item_number": 101,
+        "eligible": true
+      },
+      {
+        "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+        "item_number": 37,
+        "eligible": true
+      },
+      {
+        "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+        "item_number": 95,
+        "eligible": true
+      },
+      {
+        "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+        "item_number": 110,
+        "eligible": true
+      },
+      {
+        "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+        "item_number": 50,
+        "eligible": true
+      },
+      {
+        "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+        "item_number": 54,
+        "eligible": true
+      },
+      {
+        "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+        "item_number": 98,
+        "eligible": true
+      },
+      {
+        "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+        "item_number": 94,
+        "eligible": true
+      },
+      {
+        "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+        "item_number": 70,
+        "eligible": true
+      },
+      {
+        "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+        "item_number": 25,
+        "eligible": true
+      },
+      {
+        "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+        "item_number": 34,
+        "eligible": true
+      },
+      {
+        "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+        "item_number": 85,
+        "eligible": true
+      },
+      {
+        "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+        "item_number": 115,
+        "eligible": true
+      },
+      {
+        "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+        "item_number": 105,
+        "eligible": true
+      },
+      {
+        "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+        "item_number": 3,
+        "eligible": true
+      },
+      {
+        "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+        "item_number": 48,
+        "eligible": true
+      },
+      {
+        "id": "40aec608-f805-49af-a971-537ab56d2449",
+        "item_number": 113,
+        "eligible": true
+      },
+      {
+        "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+        "item_number": 7,
+        "eligible": true
+      },
+      {
+        "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+        "item_number": 87,
+        "eligible": true
+      },
+      {
+        "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+        "item_number": 45,
+        "eligible": true
+      },
+      {
+        "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+        "item_number": 112,
+        "eligible": true
+      },
+      {
+        "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+        "item_number": 81,
+        "eligible": true
+      },
+      {
+        "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+        "item_number": 88,
+        "eligible": true
+      },
+      {
+        "id": "ef3167f7-b998-406f-b567-e722bc835087",
+        "item_number": 114,
+        "eligible": true
+      },
+      {
+        "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+        "item_number": 41,
+        "eligible": true
+      },
+      {
+        "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+        "item_number": 14,
+        "eligible": true
+      },
+      {
+        "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+        "item_number": 71,
+        "eligible": true
+      },
+      {
+        "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+        "item_number": 9,
+        "eligible": true
+      },
+      {
+        "id": "57bf6610-4707-42d5-89d8-59537091e634",
+        "item_number": 16,
+        "eligible": true
+      },
+      {
+        "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+        "item_number": 90,
+        "eligible": true
+      },
+      {
+        "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+        "item_number": 65,
+        "eligible": true
+      },
+      {
+        "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+        "item_number": 32,
+        "eligible": true
+      },
+      {
+        "id": "95823a75-ff66-486d-af04-db532c85a217",
+        "item_number": 20,
+        "eligible": true
+      },
+      {
+        "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+        "item_number": 22,
+        "eligible": true
+      },
+      {
+        "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+        "item_number": 10,
+        "eligible": true
+      },
+      {
+        "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+        "item_number": 6,
+        "eligible": true
+      },
+      {
+        "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+        "item_number": 28,
+        "eligible": true
+      },
+      {
+        "id": "0a0c814c-0a8c-41ad-920e-751fff7128b1",
+        "item_number": 75,
+        "eligible": true
+      },
+      {
+        "id": "1b870eff-873e-49d2-875e-f52fc74f1c11",
+        "item_number": 19,
+        "eligible": true
+      },
+      {
+        "id": "51116dca-4453-47fb-9e1e-00bf31c0a268",
+        "item_number": 24,
+        "eligible": true
+      },
+      {
+        "id": "6267fc4b-f5e0-4682-b9df-6cd17f00a747",
+        "item_number": 61,
+        "eligible": true
+      },
+      {
+        "id": "779485b3-b3e9-42a7-b7bd-169a84bd6080",
+        "item_number": 104,
+        "eligible": true
+      },
+      {
+        "id": "9ffafcba-c3a0-45e8-b217-4dc299f7485b",
+        "item_number": 89,
+        "eligible": true
+      },
+      {
+        "id": "dcc04649-2d65-4ea0-bf07-2920ad654535",
+        "item_number": 74,
+        "eligible": true
+      },
+      {
+        "id": "3dab4984-aba1-4f12-a458-78f81e6e8aa8",
+        "item_number": 108,
+        "eligible": true
+      },
+      {
+        "id": "3333635d-9de5-4eb2-aa78-3ee914cf3247",
+        "item_number": 56,
+        "eligible": true
+      },
+      {
+        "id": "ce182ec0-b8d4-45e0-81f0-4c81e677d415",
+        "item_number": 59,
+        "eligible": true
+      },
+      {
+        "id": "e8ac7a6f-0f94-41e8-8cd7-1a886fa2cf03",
+        "item_number": 55,
+        "eligible": true
+      },
+      {
+        "id": "f494bd3b-537e-4913-aa26-fe446790ec4d",
+        "item_number": 57,
+        "eligible": true
+      },
+      {
+        "id": "fcb0aa6d-9d7b-4bb1-b9e6-9ab78b4ccc48",
+        "item_number": 58,
+        "eligible": true
+      },
+      {
+        "id": "cafdd2dc-c49b-4fcf-81a1-43cb81d23dea",
+        "item_number": 60,
+        "eligible": true
+      },
+      {
+        "id": "7773cac4-4997-4b13-af4d-c2ca052b4070",
+        "item_number": 62,
+        "eligible": true
+      },
+      {
+        "id": "a58703f7-ce05-4c52-bbd6-ed091cd8abb9",
+        "item_number": 120,
+        "eligible": true
+      },
+      {
+        "id": "fc05803c-c53e-4a7c-b98b-4bd1dd219c0b",
+        "item_number": 119,
+        "eligible": true
+      }
+    ]
+  },
+  "tests": {
+    "passed": 45,
+    "failed": 0,
+    "skipped": 0,
+    "application_build": "not run: no application changes"
+  },
+  "hash_serialization": "UTF-8 JSON, sorted keys, compact separators",
+  "reference_source_registration": {
+    "items": [
+      {
+        "row": {
+          "id": "43e2cd3c-1494-5b81-b0fc-03d3c5d24eac",
+          "source_type": "manual",
+          "title": "SAMU 192 — protocolos de suporte básico de vida — recorte de acionamento e PCR",
+          "issuer": "Ministério da Saúde",
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+          "published_on": null,
+          "checked_at": "2026-10-16T16:36:48.093703+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Referência oficial consultada apenas para acionamento imediato da emergência e reconhecimento de PCR, protocolos BC5/BC9, páginas PDF 37 e 45. O documento contém diretrizes de 2015: não se certifica atualização integral nem se reproduzem parâmetros técnicos históricos. SHA-256 f39edb612b1713ce9027ec58818146342265353ed3aecd8166c2a8c97f90d058"
+        },
+        "evidence": {
+          "reviewed": true,
+          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+          "path": "outputs/pc-all-audit-2026-10-16/samu-sbv.pdf",
+          "format": "pdf",
+          "sha256": "f39edb612b1713ce9027ec58818146342265353ed3aecd8166c2a8c97f90d058",
+          "captured_at": "2026-10-16T16:36:48.093703+00:00"
+        }
+      }
+    ]
+  },
+  "reference_source_publication": {
+    "reviewed": 1,
+    "created": 1,
+    "preserved": 0
+  },
+  "items": [
+    {
+      "id": "0a0c814c-0a8c-41ad-920e-751fff7128b1",
+      "item_number": 75,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "685eb8a938ec5826f91f44824efe323fffb725885111de0decc56bf1952f7617",
+      "published_row_sha256": "b1e527ef639d25a7fe56cd15c1670702fdd54e5255029c1fd51f1a45dc5dd887",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNo RHC 163.334, o STF assentou que o não recolhimento de ICMS cobrado do adquirente pode configurar o art. 2º, II, da Lei 8.137/1990 quando presentes CONTUMÁCIA e DOLO DE APROPRIAÇÃO. Não é criminalização automática de toda inadimplência fiscal. Os elementos subjetivos e as circunstâncias precisam ser demonstrados no caso concreto.\nExemplo: Apropriação deliberada e reiterada do ICMS cobrado pode preencher a tese. Um atraso isolado de pagamento não demonstra, por si, todos os requisitos do crime.\nTeste rápido — Qualquer dívida de ICMS é automaticamente apropriação indébita tributária? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/stf-define-tese-que-criminaliza-nao-recolhimento-intencional-de-icms/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+            "artigo": "2",
+            "title": "Lei 8.137/1990"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+          "https://noticias.stf.jus.br/postsnoticias/stf-define-tese-que-criminaliza-nao-recolhimento-intencional-de-icms/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/taxcrime.html",
+            "sha256": "2e06b85f723a54a30e8dbd05d2d200463831a7eab8cb87d8df545d4f206752d6",
+            "captured_at": "2026-10-16T16:28:22.942Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-tese-que-criminaliza-nao-recolhimento-intencional-de-icms/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/icmsfull.html",
+            "sha256": "d5aa72b9534bf433414a360bde4b481d9a0ba127ead1c3850f21bbd3f5461a28",
+            "retrieved_at": "2026-10-16T16:27:52.162052+00:00"
+          }
+        ],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "1b870eff-873e-49d2-875e-f52fc74f1c11",
+      "item_number": 19,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "5b4c7639035ec93cdab1b2eb9c7565297ec837d09af60e28e61869cd4d429ae1",
+      "published_row_sha256": "2e036e19f93227b3398f5f6762015b4362b3de6e4a4d21cf4936ca287498128d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nNorma anterior à Constituição de 1988 é examinada quanto à recepção: se seu conteúdo for incompatível com a nova Constituição, não é recepcionada. Não é objeto de ADI perante a Constituição posterior. Pode haver ADPF, observados seus pressupostos, inclusive subsidiariedade; isso não torna toda ADPF automaticamente cabível. O STF explica expressamente essa diferença entre os instrumentos.\nExemplo: Uma lei de 1980 incompatível com a CF/1988 não deve ser atacada por ADI como se tivesse sido editada sob a Constituição atual. A análise é de recepção.\nTeste rápido — ADI é o instrumento para qualquer lei, mesmo anterior à Constituição vigente? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/conheca-os-principais-instrumentos-juridicos-para-analise-constitucional-de-leis-e-normas-no-supremo/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "102",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/conheca-os-principais-instrumentos-juridicos-para-analise-constitucional-de-leis-e-normas-no-supremo/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/conheca-os-principais-instrumentos-juridicos-para-analise-constitucional-de-leis-e-normas-no-supremo/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/recepcaofull.html",
+            "sha256": "9744179a453ebf76eebc91233f54dd007d773530139a734b36c6404f5d57472a",
+            "retrieved_at": "2026-10-16T16:27:52.230049+00:00"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "51116dca-4453-47fb-9e1e-00bf31c0a268",
+      "item_number": 24,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "882e1f4b63ab851605c9b7c7414f80514d1bc9f5e90066f3f95e8978848e0cd9",
+      "published_row_sha256": "2b0bea15bc5ded3c8c31b1413f15abd8e068c48864637ae33f62330d83eef153",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA expressão independentemente da forma de aprovação torna o item errado. Pelo art. 5º, § 3º, tratados de direitos humanos aprovados em cada Casa do Congresso, em dois turnos, por TRÊS QUINTOS dos respectivos membros equivalem a emendas constitucionais. Sem esse rito, o STF reconhece posição supralegal aos tratados de direitos humanos: acima da lei e abaixo da Constituição. Atenção: a notícia histórica do STF e a justificativa preliminar da prova mencionam dois terços; esse número não corresponde ao texto constitucional e não deve ser memorizado.\nExemplo: Tratado de direitos humanos aprovado pelo rito comum não ganha hierarquia constitucional só pelo assunto. Com o rito qualificado do § 3º, equivale a emenda.\nTeste rápido — O quórum do § 3º é dois terços? Não: três quintos, em dois turnos em cada Casa.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/direitos-humanos-evoluem-na-jurisprudencia-do-stf-referente-a-prisao-civil-de-depositario-infiel/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/direitos-humanos-evoluem-na-jurisprudencia-do-stf-referente-a-prisao-civil-de-depositario-infiel/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/direitos-humanos-evoluem-na-jurisprudencia-do-stf-referente-a-prisao-civil-de-depositario-infiel/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/tratadosfull.html",
+            "sha256": "f49c210f83c074ba8669400ee0e451fd5475ed5976a01dcbb206863faef0457f",
+            "retrieved_at": "2026-10-16T16:27:52.126054+00:00"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "6267fc4b-f5e0-4682-b9df-6cd17f00a747",
+      "item_number": 61,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "ab9e8851a83da1230446a342c19e3a8a3e0f15f6c82f520f1f67f27dd6ce1aec",
+      "published_row_sha256": "fc998272e8354328fb43bf2d8a7e685e6c200acc585c4a52381c1beed5facdeb",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO art. 40, II, da Lei 11.343/2006 aumenta de UM SEXTO A DOIS TERÇOS as penas dos arts. 33 a 37 quando o agente pratica o crime prevalecendo-se de função pública. O próprio enunciado condiciona a conclusão à prova desse aproveitamento. Ser servidor, isoladamente, não basta: é necessário vínculo entre a função e a prática criminosa. A conclusão independe dos demais detalhes do caso compartilhado.\nExemplo: Servidor usa as facilidades da função para viabilizar o tráfico: a majorante pode incidir. Servidor que trafica em situação sem relação com a função não recebe esse aumento apenas pelo cargo.\nTeste rápido — Basta comprovar que o traficante ocupa função pública? Não; deve ter-se prevalecido dela.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+            "artigo": "40",
+            "title": "Lei nº 11.343/2006 – Lei de Drogas"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/drogas.html",
+            "sha256": "38a8e787bc643b575e482931a1b4b8b1b16b5bff63d8dd64346385b7390bc617",
+            "captured_at": "2026-10-16T15:47:31.180Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "779485b3-b3e9-42a7-b7bd-169a84bd6080",
+      "item_number": 104,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "c9ed5bb14288503609d4035061bad44500cb840f279780f20d07126243920ead",
+      "published_row_sha256": "39f91ffd9a16fe1645c58e7a4bcf0173393383781a2dffa04e16a412f6fb3e23",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nNo AREsp 2.313.729/SP, julgado em 03/06/2025 e divulgado no Informativo 853, o STJ afastou competência federal automática por crime ambiental ocorrido no mar territorial. É necessário interesse federal concreto; no caso, havia parque estadual, dano local e ausência dos elementos apontados para atrair a Justiça Federal. A titularidade do mar territorial pela União, isoladamente, não substitui essa análise.\nExemplo: Pesca proibida em parque marinho estadual não vai automaticamente à Justiça Federal só por ocorrer no mar. Unidade federal ou outros elementos concretos de interesse da União exigem análise própria.\nTeste rápido — Mar territorial implica sempre Justiça Federal? Não.\nFonte judicial: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=2313729",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "20",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "23",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "109",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+            "artigo": "34",
+            "title": "Lei nº 9.605/1998 – Crimes Ambientais"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=2313729"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/amb.html",
+            "sha256": "c0884bcc6197203c2e933811e8bdf904bfaee2d7ec7f4cee1bb7d8be3970daf5",
+            "captured_at": "2026-10-16T15:47:32.351Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=2313729",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/more-mar.html",
+            "sha256": "9e99fbf2e025b33b4c72a46300cb1c67e37b1d5982555e1d077530679b9e73b7",
+            "retrieved_at": "2026-10-16T16:27:22.631393+00:00"
+          }
+        ],
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "9ffafcba-c3a0-45e8-b217-4dc299f7485b",
+      "item_number": 89,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "9774db51f2a51e7fba8c005dad0ab44374ff172240017c1bed1d1494f4d8bb1d",
+      "published_row_sha256": "6a372a4b2439d03d6e14d2ee523a60c6c092bd640f1e53d94e2b68cd62b896c9",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO consentimento VÁLIDO, LIVRE E ESCLARECIDO do morador é fundamento próprio para ingresso domiciliar, inclusive à noite. Não se confunde com entrada forçada por flagrante, que exige fundadas razões anteriores à diligência. O STJ exige controle rigoroso da voluntariedade: coação, indução a erro e autorização presumida não bastam; em caso de dúvida, cabe ao Estado provar a legalidade do consentimento. A documentação da autorização é relevante para o controle judicial posterior.\nExemplo: Morador autoriza espontaneamente a entrada, com circunstâncias comprováveis: hipótese distinta da invasão sem autorização. Abrir o portão porque policiais alegaram perseguir alguém não significa consentir livremente com busca de drogas.\nTeste rápido — Encontrar droga depois da entrada transforma consentimento coagido em válido? Não.\nFonte judicial: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=consentimento%20morador%20noturno",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "240",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=consentimento%20morador%20noturno"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=consentimento%20morador%20noturno",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/more-consentimento.html",
+            "sha256": "8dd5a311f270c44e4be88496f19974394373e6d727921000249f380f9150ff23",
+            "retrieved_at": "2026-10-16T16:27:23.567350+00:00"
+          }
+        ],
+        "official_pdf_page": 10
+      }
+    },
+    {
+      "id": "dcc04649-2d65-4ea0-bf07-2920ad654535",
+      "item_number": 74,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "5b180f46c1c8d9262c25a2272f134d8f8cb90dc174ca9fb0209b16ab6adbf194",
+      "published_row_sha256": "9ff3e88398017c7d7a7009e5ffebc28ad6eccc8f303c2f602534a94505244cac",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA ADI 4.980 manteve a regra do art. 83 da Lei 9.430/1996: a representação fiscal para fins penais é encaminhada pelo agente administrativo após a decisão final administrativa sobre a exigência do crédito tributário. A tese de que a natureza formal dispensaria esse requisito não prevaleceu. Não se deve confundir o momento desse encaminhamento com uma proibição absoluta de atuação autônoma do Ministério Público nem resolver, por esse julgamento, toda controvérsia sobre a natureza do delito.\nExemplo: A fiscalização ainda discute o crédito em recurso administrativo: a representação fiscal obedece ao marco legal da decisão final. O item erra ao dispensar esse requisito pelo simples rótulo de crime formal.\nTeste rápido — Classificar o crime como formal elimina automaticamente a regra de encaminhamento? Não.\nFonte judicial: https://noticias.stf.jus.br/postsnoticias/plenario-conclui-julgamento-de-acao-sobre-judicializacao-de-crimes-previdenciarios/",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "168-A",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:29:13.281321+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://noticias.stf.jus.br/postsnoticias/plenario-conclui-julgamento-de-acao-sobre-judicializacao-de-crimes-previdenciarios/"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/plenario-conclui-julgamento-de-acao-sobre-judicializacao-de-crimes-previdenciarios/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/previdenciafull.html",
+            "sha256": "550cb81c83153dd08b461ccc95611e19de983af1a1a330c6e03c25995311d89a",
+            "retrieved_at": "2026-10-16T16:27:52.058057+00:00"
+          }
+        ],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "3dab4984-aba1-4f12-a458-78f81e6e8aa8",
+      "item_number": 108,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "350093a8336a23d1ce8dd734190c9f58057492d290d21794cc4998343c50d1cc",
+      "published_row_sha256": "ea3fd88d966e822760645de0322137b23ee229137e142cb7b697ec655d304a65",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nLicenciar e fiscalizar são competências distintas. No REsp 1.971.073/MT (julgado em 07/10/2025, divulgado na Edição Extraordinária 28/2026), o STJ afirmou que licença estadual não impede, por si só, fiscalização do Ibama. O AgInt no AREsp 1.624.736/MS distingue fiscalização comum da discussão sobre autuações de entes diferentes: a prevalência do auto do órgão licenciador e a atuação supletiva exigem observar os limites da ADI 4.757. Portanto, a palavra SOMENTE torna o item excessivo; isso não autoriza ignorar as regras de cooperação nem duplicar sanções automaticamente.\nExemplo: Licença estadual não impede toda fiscalização federal. Se há autos de órgãos distintos, devem ser examinadas a prevalência legal e a eventual omissão ou insuficiência fiscalizatória, sem confundir essa situação com a competência geral de fiscalização.\nTeste rápido — Licença estadual torna o empreendimento imune a qualquer fiscalização do Ibama? Não.\nFonte judicial: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22licenciar%22%20%22fiscalizar%22",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "23",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:31:45.276010+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22licenciar%22%20%22fiscalizar%22"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "judicial_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22licenciar%22%20%22fiscalizar%22",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/extra-ibama2.html",
+            "sha256": "6569375c789609d52b76653b0b0b2ed539779a51550d8ed935bf1d4c4418766c",
+            "retrieved_at": "2026-10-16T16:30:01.168195+00:00"
+          }
+        ],
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "3333635d-9de5-4eb2-aa78-3ee914cf3247",
+      "item_number": 56,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "45f444d54ca44f1722f7459cf4c12479ce4aa73c234d1697c4c284b3247afe94",
+      "published_row_sha256": "e636ccc83aba2c3b797537cf54ff1eac2b6e2d608bbf51db06b3034b81ff246e",
+      "patch": {
+        "question_text": "Comando: Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.\nItem: No que se refere à morte da pedestre Helena, Roberto responderá por homicídio culposo, uma vez que não tinha a intenção de matá-la, configurando-se resultado diverso do pretendido.",
+        "source_page": 6,
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nRoberto queria matar Lúcio e, por erro de pontaria, matou Helena. É ERRO NA EXECUÇÃO (aberratio ictus), regido pelo art. 73: responde como se tivesse praticado o crime contra a pessoa que pretendia atingir, considerando as condições ou qualidades da vítima visada. A falta de vontade de matar Helena, especificamente, não transforma esse homicídio em culposo. Não se trata do resultado de natureza diversa do art. 74.\nExemplo: Quem dispara para matar uma pessoa e atinge mortalmente outra, por desvio do tiro, não responde só por homicídio culposo porque errou a vítima.\nTeste rápido — Errar a pessoa atingida elimina o dolo de matar? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "73",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "20",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "121",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:34:25.627041+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "context": "Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "ce182ec0-b8d4-45e0-81f0-4c81e677d415",
+      "item_number": 59,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "439575a32b51bfec7883191b40a18eb1855c6b98c6b0ca4f95b86bceebf3f8cb",
+      "published_row_sha256": "5586921f4db7f375895605d4045c5f0482c3436c3bff5848f1c449ae276bbee1",
+      "patch": {
+        "question_text": "Comando: Joaquim, de 30 anos de idade, ocupante de uma função pública, inconformado com o término de seu relacionamento com Beatriz, passou a persegui-la de forma contumaz. Ele enviava mensagens diárias com insultos, vigiava constantemente a residência e o local de trabalho da ex-namorada, com o claro objetivo de controlar suas ações, tendo-lhe causado severo dano emocional e diminuição da autoestima. Por temer por sua integridade, Beatriz denunciou o fato na delegacia de polícia local e o delegado de polícia, Pedro, encarregado do caso, requereu e obteve judicialmente um mandado de busca e apreensão para a residência de Joaquim. Durante o cumprimento da diligência, os policiais encontram, no interior do quarto de Joaquim, uma arma de fogo com numeração suprimida e apreenderam 500 gramas de cocaína, uma balança de precisão e anotações financeiras que evidenciavam a prática contumaz do tráfico de drogas. Considerando essa situação hipotética, julgue os itens seguintes, com base no disposto na Lei n.º 10.826/2003, na Lei n.º 11.340/2006 e na Lei n.º 11.343/2006.\nItem: A conduta de Joaquim contra Beatriz, caracterizada por perseguição contumaz, vigilância constante e insultos com o objetivo de controlar as ações da ex-namorada e causar-lhe dano emocional, configura, nos termos da Lei n.º 11.340/2006, violência moral contra a mulher.",
+        "source_page": 6,
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA descrição enfatiza dano emocional, diminuição da autoestima, vigilância, perseguição e controle das ações: são elementos da VIOLÊNCIA PSICOLÓGICA do art. 7º, II, da Maria da Penha. Violência moral, no inciso V, compreende calúnia, difamação ou injúria. O gabarito rejeita a troca da classificação central do caso; isso não significa que violência psicológica e moral sejam categorias incompatíveis ou que um insulto jamais possa configurar também injúria.\nExemplo: Vigiar e perseguir para controlar a ex-companheira e causar dano emocional exemplifica violência psicológica. Imputar-lhe falsamente um crime pode configurar também violência moral.\nTeste rápido — Violência psicológica e moral têm requisitos idênticos? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "artigo": "7",
+            "title": "Lei 11.340/2006 — violência e proteção — texto oficial atualizado"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:34:25.627041+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/mp.html",
+            "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+            "captured_at": "2026-10-16T15:48:04.594403+00:00",
+            "encoding": "UTF-16LE BOM"
+          }
+        ],
+        "context": "Joaquim, de 30 anos de idade, ocupante de uma função pública, inconformado com o término de seu relacionamento com Beatriz, passou a persegui-la de forma contumaz. Ele enviava mensagens diárias com insultos, vigiava constantemente a residência e o local de trabalho da ex-namorada, com o claro objetivo de controlar suas ações, tendo-lhe causado severo dano emocional e diminuição da autoestima. Por temer por sua integridade, Beatriz denunciou o fato na delegacia de polícia local e o delegado de polícia, Pedro, encarregado do caso, requereu e obteve judicialmente um mandado de busca e apreensão para a residência de Joaquim. Durante o cumprimento da diligência, os policiais encontram, no interior do quarto de Joaquim, uma arma de fogo com numeração suprimida e apreenderam 500 gramas de cocaína, uma balança de precisão e anotações financeiras que evidenciavam a prática contumaz do tráfico de drogas. Considerando essa situação hipotética, julgue os itens seguintes, com base no disposto na Lei n.º 10.826/2003, na Lei n.º 11.340/2006 e na Lei n.º 11.343/2006.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "e8ac7a6f-0f94-41e8-8cd7-1a886fa2cf03",
+      "item_number": 55,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "39ee75aade2d0a5ca67d60bbaa7e46cb5b66da994875f704c2a0e843a9179898",
+      "published_row_sha256": "b3eeda47176a7e44fb5c7b15240dc3c0a89c390fee70ca32e06606af85a05d5b",
+      "patch": {
+        "question_text": "Comando: Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.\nItem: A conduta de Mário, ao abrir a sala e possibilitar a subtração da obra de arte, não é punível, pois ele agiu sob coação moral irresistível, o que exclui sua culpabilidade, devendo responder pelo crime apenas o autor da coação.",
+        "source_page": 6,
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO art. 22 do CP prevê que, se o fato é cometido sob coação irresistível, só é punível o autor da coação. No caso apresentado pela banca, a grave ameaça contra a esposa, tomada como verdadeira por Mário, retira a exigibilidade de conduta diversa. A exclusão é de culpabilidade: abrir a sala sob essa coação não transforma o ato em conduta lícita nem cria uma absolvição automática para toda pessoa que alegue medo.\nExemplo: Ameaça grave e irresistível contra familiar pode afastar a culpabilidade do coagido. Pressão resistível ou simples receio não recebem automaticamente o mesmo tratamento.\nTeste rápido — A coação moral irresistível exclui a tipicidade? Não: exclui a culpabilidade.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "22",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:34:25.627041+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "context": "Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "f494bd3b-537e-4913-aa26-fe446790ec4d",
+      "item_number": 57,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "49951927643d01bf02bea5d503e37ec99ad9b625e66e05a0513fa9eb9b5128c9",
+      "published_row_sha256": "519384058a5b17cda0e4b87085d203d779afe47c000898d54272627cb272c332",
+      "patch": {
+        "question_text": "Comando: Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.\nItem: A devolução voluntária e intacta da obra de arte por Roberto, ocorrida antes do recebimento da denúncia, configura arrependimento posterior, o que lhe assegura a redução da pena de um a dois terços em relação ao crime contra o patrimônio.",
+        "source_page": 6,
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO arrependimento posterior do art. 16 exige crime cometido SEM violência ou grave ameaça à pessoa, além da reparação ou restituição voluntária até o recebimento da denúncia ou queixa. A obra foi subtraída mediante grave ameaça contra a família do vigilante: a devolução intacta e tempestiva não elimina esse impedimento. Eventual outra atenuante deve ser examinada por seus próprios requisitos, sem confundi-la com a minorante do art. 16.\nExemplo: Devolver bem subtraído sem violência pode permitir a minorante se preenchidos os demais requisitos. Devolver bem tomado sob grave ameaça não dá direito à mesma redução.\nTeste rápido — Restituição antes da denúncia basta, sozinha, para o art. 16? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "16",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "65",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:34:25.627041+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "context": "Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "fcb0aa6d-9d7b-4bb1-b9e6-9ab78b4ccc48",
+      "item_number": 58,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "bd20b9c392970e5b04acac738dc24c1131686df5be03f9275106f05e4c60fb1c",
+      "published_row_sha256": "c8f5b5be3582d1da100a7f29f5e970a2b32cdab3884eb0de1533425eef959f8e",
+      "patch": {
+        "question_text": "Comando: Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.\nItem: Ainda que, em hipótese processual bastante favorável, Roberto viesse a ser condenado a pena privativa de liberdade não superior a 4 anos, o juiz estaria legalmente impedido de substituí-la por penas restritivas de direitos.",
+        "source_page": 6,
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNa hipótese de crime DOLOSO cometido com violência ou grave ameaça à pessoa, a pena de até quatro anos não basta para substituir prisão por penas restritivas de direitos: o art. 44, I, exige também ausência de violência ou grave ameaça. O caso descreve grave ameaça na subtração e disparo intencional contra pessoa. O próprio artigo trata de modo distinto os crimes culposos; não se deve generalizar o impedimento para todo crime com resultado violento.\nExemplo: Roubo doloso não permite substituição apenas porque a pena hipoteticamente ficou em quatro anos. Crime culposo exige exame dos requisitos próprios, previstos no art. 44.\nTeste rápido — Pena de até quatro anos garante substituição em qualquer crime doloso? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "44",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:34:25.627041+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "context": "Roberto, com arma de fogo em punho, abordou Mário, vigilante de um museu, tendo solicitado que ele abrisse a porta da sala principal da instituição. Para convencer Mário a fazer o que pedia, Roberto ameaçou matar a esposa de Mário, tendo afirmado ainda que ela estaria mantida como refém por um comparsa seu naquele exato momento. Aterrorizado e por acreditar plenamente na ameaça, Mário abriu a sala. Roberto então subtraiu uma valiosa obra de arte e empreendeu fuga. Ao sair do museu e caminhar apressadamente pela rua, Roberto avistou seu desafeto Lúcio na calçada oposta, contra quem desferiu disparo de arma de fogo com a intenção de matá-lo. Contudo, por um erro de pontaria, o tiro não atingiu Lúcio, mas Helena, uma pedestre alheia à situação, que faleceu imediatamente em decorrência do disparo. Três dias após os fatos, antes que a polícia ou o Ministério Público concluíssem as investigações, Roberto, com sentimento de profundo remorso por suas ações, dirigiu-se anonimamente à delegacia e devolveu, de forma voluntária, a obra de arte intacta. Posteriormente, ele foi identificado, capturado e levado a julgamento. Com base nessa situação hipotética e no disposto no Código Penal, julgue os itens que se seguem.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "cafdd2dc-c49b-4fcf-81a1-43cb81d23dea",
+      "item_number": 60,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "582a742889ad7df6da27c473a37f28797069d336c5b967215f7ee770d68876c0",
+      "published_row_sha256": "127731dcf96044e88aaae3d90df1809e9a736da45cc6aa63dcbec3f50b8642e1",
+      "patch": {
+        "question_text": "Comando: Joaquim, de 30 anos de idade, ocupante de uma função pública, inconformado com o término de seu relacionamento com Beatriz, passou a persegui-la de forma contumaz. Ele enviava mensagens diárias com insultos, vigiava constantemente a residência e o local de trabalho da ex-namorada, com o claro objetivo de controlar suas ações, tendo-lhe causado severo dano emocional e diminuição da autoestima. Por temer por sua integridade, Beatriz denunciou o fato na delegacia de polícia local e o delegado de polícia, Pedro, encarregado do caso, requereu e obteve judicialmente um mandado de busca e apreensão para a residência de Joaquim. Durante o cumprimento da diligência, os policiais encontram, no interior do quarto de Joaquim, uma arma de fogo com numeração suprimida e apreenderam 500 gramas de cocaína, uma balança de precisão e anotações financeiras que evidenciavam a prática contumaz do tráfico de drogas. Considerando essa situação hipotética, julgue os itens seguintes, com base no disposto na Lei n.º 10.826/2003, na Lei n.º 11.340/2006 e na Lei n.º 11.343/2006.\nItem: Pelo fato de a arma de fogo ter sido encontrada guardada no interior da residência de Joaquim, este responderá, de acordo com a Lei n.º 10.826/2003, pelo crime de posse irregular de arma de fogo de uso permitido, visto que a posse intramuros afasta a configuração dos crimes mais graves relacionados a armamento de uso restrito.",
+        "source_page": 7,
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA posse dentro da residência não afasta os tipos mais graves do Estatuto do Desarmamento. O art. 16, § 1º, IV, alcança arma de fogo com numeração, marca ou outro sinal de identificação raspado, suprimido ou adulterado. Portanto, a arma descrita não é enquadrada como simples posse de uso permitido do art. 12 apenas por estar no quarto. Cuidado: numeração suprimida não significa, automaticamente, que a arma seja tecnicamente de USO PROIBIDO; o § 2º do art. 16 trata especificamente das condutas que envolvem arma de uso proibido.\nExemplo: Arma de uso permitido com numeração suprimida pode enquadrar-se no art. 16, § 1º, IV. Arma de uso proibido exige análise da classificação própria, sem presumi-la pela numeração.\nTeste rápido — Estar guardada em casa torna qualquer arma mera posse de uso permitido? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+            "artigo": "12",
+            "title": "Lei 10.826/2003 — Sinarm, registro e segurança privada — texto oficial atualizado"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+            "artigo": "16",
+            "title": "Lei 10.826/2003 — Sinarm, registro e segurança privada — texto oficial atualizado"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:35:53.061287+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Caso compartilhado omitido na importação recuperado e conferido visualmente na página 6 do caderno oficial; enunciado isolado e gabarito definitivo preservados, com revisão jurídica individual.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/weapons.html",
+            "sha256": "f088eb9b2e06eaeebda81833b9f98b19347cc6a6a597b05b0905098791b62131",
+            "captured_at": "2026-10-16T16:35:21.533Z"
+          }
+        ],
+        "context": "Joaquim, de 30 anos de idade, ocupante de uma função pública, inconformado com o término de seu relacionamento com Beatriz, passou a persegui-la de forma contumaz. Ele enviava mensagens diárias com insultos, vigiava constantemente a residência e o local de trabalho da ex-namorada, com o claro objetivo de controlar suas ações, tendo-lhe causado severo dano emocional e diminuição da autoestima. Por temer por sua integridade, Beatriz denunciou o fato na delegacia de polícia local e o delegado de polícia, Pedro, encarregado do caso, requereu e obteve judicialmente um mandado de busca e apreensão para a residência de Joaquim. Durante o cumprimento da diligência, os policiais encontram, no interior do quarto de Joaquim, uma arma de fogo com numeração suprimida e apreenderam 500 gramas de cocaína, uma balança de precisão e anotações financeiras que evidenciavam a prática contumaz do tráfico de drogas. Considerando essa situação hipotética, julgue os itens seguintes, com base no disposto na Lei n.º 10.826/2003, na Lei n.º 11.340/2006 e na Lei n.º 11.343/2006.",
+        "context_pages": [
+          6
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "7773cac4-4997-4b13-af4d-c2ca052b4070",
+      "item_number": 62,
+      "operation": "explanation-improvement",
+      "previous_row_sha256": "9e9b7d2b1015afa8a6bfc5e2645a064a0603dad150291d8e0879f2ccfd2003a3",
+      "published_row_sha256": "95a422710f3ea52944421dd895c39336ba2e14d638bd6ee73199c35998f40f3a",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA palavra INCONDICIONAL torna o item errado. O art. 30 do CP estabelece que circunstâncias e condições de caráter pessoal não se comunicam, salvo quando elementares do crime. O fato de haver coautoria ou participação não faz qualquer agravante incidir sobre todos automaticamente. A análise das relações domésticas e da violência contra a mulher exige individualizar a situação de cada agente; não se deve transformar a regra sobre elementares em comunicação irrestrita de agravantes.\nExemplo: Participar do mesmo crime não atribui automaticamente a todos os envolvidos toda condição pessoal existente em apenas um deles. Elementares do delito têm regra própria no art. 30.\nTeste rápido — Concurso de pessoas basta para comunicar incondicionalmente qualquer agravante? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "30",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "61",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:35:53.490511+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual do enunciado, gabarito definitivo, texto legal e precedente oficial; correção expressa do quórum do art. 5º, § 3º, e dos limites de cada hipótese.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "judicial_captures": [],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "a58703f7-ce05-4c52-bbd6-ed091cd8abb9",
+      "item_number": 120,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "159b88c9c2fa6662bd94d2784662ac494624ed4967d7b1db7ea90e93ab3ad79f",
+      "published_row_sha256": "0b9b5732642672082c13a02220cc552e0f55d5e2422f39e23e9c8328b256a40f",
+      "patch": {
+        "question_text": "Comando: Um homem com 55 anos de idade, previamente ativo, praticava corrida em pista pública quando, de forma súbita, caiu ao solo. Um transeunte que se aproximou para prestar-lhe socorro constatou que a vítima não respondia quando chamada, não respirava e não realizava movimentos voluntários. Considerando o cenário hipotético descrito, julgue os itens a seguir, relativos a noções de primeiros socorros.\nItem: A vítima deve ser colocada em posição lateral de segurança o mais rapidamente possível.",
+        "source_page": 15,
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA vítima descrita NÃO RESPIRA. Colocá-la simplesmente em posição lateral de segurança não é a resposta inicial adequada para esse cenário: é preciso acionar socorro e conduzir as medidas de suporte básico para suspeita de parada, conforme orientação do serviço de emergência. A posição lateral pode ser considerada em situações de inconsciência com respiração normal, conforme o contexto, mas não substitui a resposta à ausência de respiração.\nExemplo: Pessoa inconsciente que respira normalmente é uma situação diferente de pessoa inconsciente sem respiração. No segundo caso, lateralizá-la e aguardar pode atrasar medidas de ressuscitação.\nTeste rápido — A posição lateral substitui as medidas de ressuscitação de quem não respira? Não.\nFonte técnica: Ministério da Saúde/SAMU, BC5 e BC9. O PDF contém diretrizes de 2015; a conferência deste item limita-se às condutas iniciais descritas, sem certificar todos os parâmetros do protocolo como atualizados.\nReferência técnica consultada: https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+        "legal_basis": [],
+        "law_version_checked_at": "2026-10-16T16:38:45.193063+00:00",
+        "current_syllabus_topic_id": "e7d55399-a589-4b22-b9f5-039da33a8e3f"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Caso compartilhado recuperado da página 15, conferido visualmente; revisão técnica limitada ao acionamento do socorro e à inadequação da lateralização para a vítima sem respiração.",
+        "sources": [
+          "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf"
+        ],
+        "technical_captures": [
+          {
+            "reviewed": true,
+            "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/samu-sbv.pdf",
+            "format": "pdf",
+            "sha256": "f39edb612b1713ce9027ec58818146342265353ed3aecd8166c2a8c97f90d058",
+            "captured_at": "2026-10-16T16:36:48.093703+00:00"
+          }
+        ],
+        "context": "Um homem com 55 anos de idade, previamente ativo, praticava corrida em pista pública quando, de forma súbita, caiu ao solo. Um transeunte que se aproximou para prestar-lhe socorro constatou que a vítima não respondia quando chamada, não respirava e não realizava movimentos voluntários. Considerando o cenário hipotético descrito, julgue os itens a seguir, relativos a noções de primeiros socorros.",
+        "context_pages": [
+          15
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 15,
+        "technical_reference_placement": "Official manual URL in review_note; legal_basis empty for a nonlegal discipline."
+      }
+    },
+    {
+      "id": "fc05803c-c53e-4a7c-b98b-4bd1dd219c0b",
+      "item_number": 119,
+      "operation": "active-missing-context",
+      "previous_row_sha256": "cfc121a9a44f900af7d9e1632e6eafdb131c037ddeb7827909d14f089da6054d",
+      "published_row_sha256": "d973c92339c3f1197715af35d66eed703bf2a2247e2893fddf0b2946bf6965e7",
+      "patch": {
+        "question_text": "Comando: Um homem com 55 anos de idade, previamente ativo, praticava corrida em pista pública quando, de forma súbita, caiu ao solo. Um transeunte que se aproximou para prestar-lhe socorro constatou que a vítima não respondia quando chamada, não respirava e não realizava movimentos voluntários. Considerando o cenário hipotético descrito, julgue os itens a seguir, relativos a noções de primeiros socorros.\nItem: O serviço de emergência deve ser acionado imediatamente.",
+        "source_page": 15,
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO homem do caso está irresponsivo e não respira: é uma emergência com suspeita de parada cardiorrespiratória. O acionamento imediato do socorro integra a resposta inicial, juntamente com as medidas de suporte básico e obtenção de DEA quando disponível. No Brasil, deve-se chamar o SAMU pelo 192 e seguir as instruções da central; acionar socorro não significa aguardar sem prestar a ajuda indicada.\nExemplo: Uma pessoa cai, não responde e não respira normalmente: peça ajuda e acione o 192 imediatamente. Não espere a vítima acordar para só então chamar socorro.\nTeste rápido — Deve-se esperar a recuperação espontânea antes de chamar emergência? Não.\nFonte técnica: Ministério da Saúde/SAMU, BC5 e BC9. O PDF contém diretrizes de 2015; a conferência deste item limita-se às condutas iniciais descritas, sem certificar todos os parâmetros do protocolo como atualizados.\nReferência técnica consultada: https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+        "legal_basis": [],
+        "law_version_checked_at": "2026-10-16T16:38:45.193063+00:00",
+        "current_syllabus_topic_id": "e7d55399-a589-4b22-b9f5-039da33a8e3f"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Caso compartilhado recuperado da página 15, conferido visualmente; revisão técnica limitada ao acionamento do socorro e à inadequação da lateralização para a vítima sem respiração.",
+        "sources": [
+          "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf"
+        ],
+        "technical_captures": [
+          {
+            "reviewed": true,
+            "url": "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/samu-sbv.pdf",
+            "format": "pdf",
+            "sha256": "f39edb612b1713ce9027ec58818146342265353ed3aecd8166c2a8c97f90d058",
+            "captured_at": "2026-10-16T16:36:48.093703+00:00"
+          }
+        ],
+        "context": "Um homem com 55 anos de idade, previamente ativo, praticava corrida em pista pública quando, de forma súbita, caiu ao solo. Um transeunte que se aproximou para prestar-lhe socorro constatou que a vítima não respondia quando chamada, não respirava e não realizava movimentos voluntários. Considerando o cenário hipotético descrito, julgue os itens a seguir, relativos a noções de primeiros socorros.",
+        "context_pages": [
+          15
+        ],
+        "visually_verified": true,
+        "pdf_path": "outputs/pc-all-audit-2026-10-16/dfpaper.pdf",
+        "pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "pdf_source_id": "ce56cd4d-eda9-4bd3-8699-034d5386162b",
+        "pdf_url": "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+        "contest_identifier": "pc_df_26_delegado",
+        "official_pdf_page": 15,
+        "technical_reference_placement": "Official manual URL in review_note; legal_basis empty for a nonlegal discipline."
+      }
+    }
+  ]
+}
