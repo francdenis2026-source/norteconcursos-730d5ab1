@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 201,
+  "count": 218,
   "fields_read": [
     "simples",
     "pontos",
@@ -17,7 +17,8 @@
     "legal-commentary-block-6-2026-10-16.md",
     "legal-commentary-block-7-2026-10-16.md",
     "legal-commentary-block-8-2026-10-16.md",
-    "legal-commentary-block-9-2026-10-16.md"
+    "legal-commentary-block-9-2026-10-16.md",
+    "legal-commentary-block-10-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -443,6 +444,142 @@
       "unit_id": "e80ef30a-d205-5bb1-9004-7e90dbb5eef3",
       "content_sha256": "2f4d3a28266b5bd41f54fcbaeff64f075e960cbaa2f4ddc0dbab8f0d383ee466",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-1",
+      "unit_id": "6570f8b4-c3c6-58c1-af18-3083bc174d83",
+      "content_sha256": "646dcd71464c299a169001e9638bf5e85984889eeaba1d631fc6dd7a34332ddf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-10",
+      "unit_id": "9715e0aa-536f-561d-a728-75cdf06c1b68",
+      "content_sha256": "72276dd85798c646857911dfc82cfb52d47ce77ec065b17263c10a889ece9472",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-12",
+      "unit_id": "79ed83fd-ee5b-57d6-a6f1-366fa5bc3847",
+      "content_sha256": "7537699a66f3a24dc60562276c7af168bf7571ac16b228c0585327d6d2f521f7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-13",
+      "unit_id": "d1c3a6ea-9e23-5dc5-b76e-1b5de2d295a8",
+      "content_sha256": "9ba5091e95b4a04c723beecf9149673286050f830375a68532511661cfe1460d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-159",
+      "unit_id": "3545bc81-fe20-560c-9db5-e18672485ab6",
+      "content_sha256": "8d170bc105add8b3b1cc93dd241a89d25b84b32330c32dd814253823cdb11b2d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-2",
+      "unit_id": "7d540f8d-7610-5836-8dd0-67743176ad70",
+      "content_sha256": "26db3ce460b2d40681912575db696e3bce3d8bbe38752f4a6b2ae9a614ea90e5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-213",
+      "unit_id": "dd5e668a-95fa-566c-951b-1e8e27cfbc31",
+      "content_sha256": "b410b0dd55cab4ff7d1a913f5d2a54b8e60370356270955f8cbfbc34c84e5a07",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-214",
+      "unit_id": "e299187c-f5c3-59ac-9395-a554f50c4bab",
+      "content_sha256": "570645413e3e6e6659f6112690984879e4fc52c038973074a2e08f06d8db5b1d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-223",
+      "unit_id": "db3eb08b-a715-5735-b291-93eb43153504",
+      "content_sha256": "4a266e0eb19b4278b5c1e0948d7d758b4a50793227c67094cbcad7ab556569d5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-267",
+      "unit_id": "f69e00d7-4c55-5c40-be2b-958e53158ae5",
+      "content_sha256": "f7aeb76c11fe0d0973ab4a7eb4bb797810030236b8892fcfa6c38ef9aac94506",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-270",
+      "unit_id": "05af805c-3ccc-5cc3-9ece-103f0101440d",
+      "content_sha256": "e409524d06902bf4f3cc97f13758c0a2627a4d36162ac2a23417eb6313ba95e6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-3",
+      "unit_id": "66a393e2-94fd-55e3-afb1-8947c86bfbf4",
+      "content_sha256": "7e77c136e9439f2583e381fb7ce9843e6a65ba999c2f2bee97d1950dfc73d3cd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-5",
+      "unit_id": "e8f61c7e-4c1a-5161-b3c4-3283cfa38959",
+      "content_sha256": "bfc021223bd27198d792cd0b8aff214a965308af6c71e4a341baef841b6f5cd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-6",
+      "unit_id": "5056b600-da25-53cb-a934-0f5ac70fab30",
+      "content_sha256": "6dca8c136f254b98b2d25e4bbfa89f81bee68b44f33c18a7c3872c6a1ea1d403",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-7",
+      "unit_id": "60391cab-03f1-5e69-86ff-94d4a78d5072",
+      "content_sha256": "ce7bfcdbab2e3764cce3887db37b9d8240babbb0dc659c8f92cf23d66164b4e6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-8",
+      "unit_id": "55f4b997-0066-50b3-b84f-bc265d9a4be2",
+      "content_sha256": "9c937bbc86358cf7c3dd06be4e23c17b8f410b2860bf79711784e34eea0b963d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "corrected"
+    },
+    {
+      "course": "hediondos",
+      "unit_key": "art-9",
+      "unit_id": "f4f988a6-91fb-54ae-996d-9b0870551ba6",
+      "content_sha256": "d2a49a2073f3ce3e0da9688c7e1e9509929b00640b36ec60e404be1e4d3a6115",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
       "result": "preserved"
     },
     {
