@@ -5,6 +5,7 @@ import { Clock, History, Loader2, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
@@ -15,7 +16,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
-import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/history")({
   component: HistoryPage,
@@ -38,14 +38,6 @@ interface Answer {
   response_seconds: number;
   created_at: string;
 }
-interface RankRow {
-  rank_position: number;
-  display_name: string;
-  points: number;
-  stars: number;
-  level_name: string;
-  is_me: boolean;
-}
 interface Me {
   rank_position: number | null;
   total_points: number;
@@ -60,7 +52,6 @@ function HistoryPage() {
   const real = !!user && user.id !== "demo-user";
   const [attempts, setAttempts] = React.useState<Attempt[]>([]);
   const [answers, setAnswers] = React.useState<Answer[]>([]);
-  const [top, setTop] = React.useState<RankRow[]>([]);
   const [me, setMe] = React.useState<Me | null>(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -84,13 +75,11 @@ function HistoryPage() {
         .eq("user_id", user.id)
         .order("created_at", { ascending: false })
         .limit(20),
-      supabase.rpc("get_ranking", { _period: "all", _metric: "points", _limit: 5 }),
       supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle(),
-    ]).then(([a, r, t, m]) => {
+    ]).then(([a, r, m]) => {
       if (!alive) return;
       setAttempts((a.data as Attempt[] | null) ?? []);
       setAnswers((r.data as Answer[] | null) ?? []);
-      setTop((t.data as RankRow[] | null) ?? []);
       setMe((m.data as Me | null) ?? null);
       setLoading(false);
     });
@@ -111,7 +100,7 @@ function HistoryPage() {
         image="dashboard"
         title={
           <>
-            Histórico de <em>estudos</em>
+            Histórico de <em>atividades</em>
           </>
         }
         description="Entre na sua conta para ver seus simulados, respostas e posição no ranking."
@@ -129,7 +118,7 @@ function HistoryPage() {
             Histórico de <em>estudos</em>
           </>
         }
-        description="Seus simulados, suas respostas recentes e a sua posição no ranking."
+        description="Seus simulados e as últimas questões respondidas no Treinador, em ordem cronológica."
       />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -193,7 +182,7 @@ function HistoryPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
-              <Trophy className="h-5 w-5 text-amber-500" /> Ranking geral
+              <Trophy className="h-5 w-5 text-amber-500" /> Sua posição
             </CardTitle>
             <CardDescription>
               {me?.rank_position ? (
@@ -206,48 +195,19 @@ function HistoryPage() {
               )}
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-1.5">
-            {top.length === 0 ? (
-              <p className="py-4 text-center text-sm text-muted-foreground">
-                O ranking aparece assim que os primeiros alunos pontuarem.
-              </p>
-            ) : (
-              top.map((t) => (
-                <div
-                  key={t.rank_position}
-                  className={cn(
-                    "flex items-center justify-between rounded-lg p-2 text-sm",
-                    t.is_me
-                      ? "border border-amber-400 bg-amber-50 dark:bg-amber-950/20"
-                      : "hover:bg-muted/50",
-                  )}
-                >
-                  <span className="flex items-center gap-2">
-                    <span
-                      className={cn(
-                        "grid h-5 w-5 place-items-center rounded-full text-[10px] font-bold",
-                        t.rank_position === 1
-                          ? "bg-amber-400 text-white"
-                          : "bg-muted text-muted-foreground",
-                      )}
-                    >
-                      {t.rank_position}
-                    </span>
-                    <span className="max-w-[120px] truncate font-medium">
-                      {t.display_name}
-                      {t.is_me ? " (você)" : ""}
-                    </span>
-                  </span>
-                  <span className="font-black tabular-nums text-amber-600">{t.points} pts</span>
-                </div>
-              ))
-            )}
-            <Link
-              to="/dashboard/mock-exams"
-              className="block pt-2 text-xs font-semibold text-primary hover:underline"
-            >
-              Ver ranking por semana e mês
-            </Link>
+          <CardContent className="space-y-3">
+            <p className="text-sm text-muted-foreground">
+              A tabela completa, com filtros por semana e mês e a busca de candidatos, fica na
+              página do Ranking.
+            </p>
+            <Button asChild size="sm">
+              <Link
+                to="/dashboard/ranking"
+                search={{ section: "general", page: 1, size: 20, q: "" }}
+              >
+                Abrir o ranking
+              </Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
