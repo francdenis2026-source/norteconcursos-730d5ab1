@@ -11,6 +11,7 @@ import {
   UserRound,
   ShieldCheck,
   GraduationCap,
+  Wrench,
   ChevronRight,
   type LucideIcon,
 } from "lucide-react";
@@ -34,9 +35,10 @@ export type NavigationItem = {
   primary?: boolean;
 };
 const groupIcons: Record<string, LucideIcon> = {
-  "Minha preparação": LayoutDashboard,
-  Objetivo: Target,
-  "Edital e conteúdo": BookOpen,
+  Planejamento: LayoutDashboard,
+  "Meu concurso": Target,
+  Estudar: BookOpen,
+  Ferramentas: Wrench,
   Questões: BrainCircuit,
   Provas: ClipboardList,
   Desempenho: BarChart3,
@@ -45,15 +47,23 @@ const groupIcons: Record<string, LucideIcon> = {
   Administração: ShieldCheck,
 };
 const groupDetails: Record<string, string> = {
-  "Minha preparação": "Plano e rotina de estudo",
-  Objetivo: "Escolha e acompanhe seu concurso",
-  "Edital e conteúdo": "Assuntos, leis e ferramentas",
-  Questões: "Acervo, cadernos e revisão",
-  Provas: "Resultados e concursos realizados",
-  Desempenho: "Indicadores e histórico",
-  ENEM: "Materiais e preparação para o exame",
-  Conta: "Perfil e acesso",
+  Planejamento: "Estratégia, cronograma e metas",
+  "Meu concurso": "Edital, carreira e tendências",
+  Estudar: "Leis, disciplinas e videoaulas",
+  Ferramentas: "Foco, calculadora e painéis",
+  Questões: "Treino, revisão e acervo",
+  Provas: "Simulados e suas provas",
+  Desempenho: "Evolução, ranking e medalhas",
+  ENEM: "Preparação para o exame",
+  Conta: "Perfil, plano e assinatura",
   Administração: "Operação da plataforma",
+};
+/** Rótulo curto do grupo quando a barra lateral está recolhida. */
+const collapsedLabels: Record<string, string> = {
+  Planejamento: "Planejar",
+  "Meu concurso": "Concurso",
+  Desempenho: "Evolução",
+  Administração: "Gestão",
 };
 const shortLabels: Record<string, string> = {
   "/dashboard": "Painel",
@@ -88,7 +98,7 @@ export function DashboardNavigation({
     .filter((item) => item.primary)
     .sort((a, b) => primaryOrder.indexOf(a.href) - primaryOrder.indexOf(b.href));
   const groups = [...new Set(available.filter((item) => !item.primary).map((item) => item.group))];
-  const [expanded, setExpanded] = useState<string[]>(() => [current?.group ?? "Minha preparação"]);
+  const [expanded, setExpanded] = useState<string[]>(() => [current?.group ?? "Planejamento"]);
   const instance = useId();
   useEffect(() => {
     if (current?.group)
@@ -156,15 +166,7 @@ export function DashboardNavigation({
                 >
                   <Icon aria-hidden="true" />
                   <span>
-                    {group === "Minha preparação"
-                      ? "Planejar"
-                      : group === "Edital e conteúdo"
-                        ? "Conteúdo"
-                        : group === "Desempenho"
-                          ? "Evolução"
-                          : group === "Administração"
-                            ? "Gestão"
-                            : group}
+                    {collapsedLabels[group] ?? group}
                   </span>
                 </button>
               </DropdownMenuTrigger>
