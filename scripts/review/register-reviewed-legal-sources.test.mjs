@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {registerReviewedLegalSources} from './register-reviewed-legal-sources.mjs';
+const bytes=Buffer.from('<html>Reviewed official norm</html>');
+const make=()=>{const sha256=createHash('sha256').update(bytes).digest('hex');return {items:[{row:{id:'law',url:'https://www.planalto.gov.br/ccivil_03/leis/l5553.htm',source_type:'lei',is_official:true,status:'vigente',checked_at:'2026-10-15T19:08:51.000Z',notes:sha256},evidence:{reviewed:true,url:'https://www.planalto.gov.br/ccivil_03/leis/l5553.htm',path:'private.html',sha256,captured_at:'2026-10-15T19:08:51.000Z'}}]};};
+const options={readCapture:async()=>bytes};
+function db(){let rows=[],writes=0;return{get writes(){return writes},set rows(r){rows=r},request:async(path,method='GET',body)=>{if(method==='POST'){writes++;rows.push(body);return[body];}return structuredClone(rows);}};}
+test('dry run and repeated registration preserve the original source',async()=>{const d=db(),p=make();assert.equal((await registerReviewedLegalSources(p,d.request,{...options,dryRun:true})).pending,1);assert.equal(d.writes,0);assert.equal((await registerReviewedLegalSources(p,d.request,options)).created,1);assert.equal((await registerReviewedLegalSources(p,d.request,options)).preserved,1);assert.equal(d.writes,1);});
+test('changed bytes or conflicting metadata prevent any insert',async()=>{const p=make(),d=db();await assert.rejects(registerReviewedLegalSources(p,d.request,{readCapture:async()=>Buffer.from('<html>changed</html>')}),/capture changed/);d.rows=[{...p.items[0].row,notes:'Other account'}];await assert.rejects(registerReviewedLegalSources(p,d.request,options),/must be preserved/);assert.equal(d.writes,0);});
+test('a date later than capture or a nonofficial host cannot certify a source',async()=>{for(const change of [p=>p.items[0].row.checked_at='2026-10-16T00:00:00Z',p=>p.items[0].row.url='https://example.org/law']){const p=make(),d=db();change(p);await assert.rejects(registerReviewedLegalSources(p,d.request,options),/individual Planalto/);assert.equal(d.writes,0);}});
+test('failed readback is reported rather than counted as a verified insert',async()=>{const d=db();let posted=false;await assert.rejects(registerReviewedLegalSources(make(),async(path,method,body)=>{if(method==='POST'){posted=true;return[body];}return posted?[{id:'wrong'}]:[];},options),/readback mismatch/);});

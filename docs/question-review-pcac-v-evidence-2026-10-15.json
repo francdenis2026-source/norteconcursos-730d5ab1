@@ -219,6 +219,13 @@
       "reviewed_at": "2026-10-16T01:58:30.650912+00:00",
       "published_at": "2025-02-24T18:52:19",
       "retrieval": "Conteúdo específico conferido na API oficial do STF."
+    },
+    "documentos": {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l5553.htm",
+      "title": "Lei 5.553/1968 — apresentação e uso de documentos de identificação pessoal",
+      "sha256": "26a03a8b2340bb77a1f30159948e978c6167c0fe3853f6cd725f9aaed2ef9936",
+      "reviewed_at": "2026-10-15T19:08:51.259721+00:00",
+      "retrieval": "Captura oficial preservada em 15/10/2026; horário do arquivo local. Nova consulta de 16/10 retornou HTTP 503; não se atribui nova consulta bem-sucedida."
     }
   }
 }

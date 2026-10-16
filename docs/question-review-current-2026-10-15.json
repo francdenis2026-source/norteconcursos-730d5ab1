@@ -1,13 +1,12 @@
 {
-  "checked_at": "2026-10-16T02:08:26.737Z",
-  "scope": "Registros físicos nas quatro tabelas de questões; inclui 34 registros pessoais. Não é contagem de questões únicas ou certificação jurídica do acervo.",
+  "checked_at": "2026-10-16T03:08:29.603Z",
   "tables": [
     {
       "table": "official_exam_questions",
       "total": 4888,
-      "active": 4078,
-      "under_review": 601,
-      "archived": 142,
+      "active": 3988,
+      "under_review": 580,
+      "archived": 253,
       "obsolete": 30,
       "annulled": 37,
       "revoked": 0
@@ -45,22 +44,31 @@
   ],
   "totals": {
     "total": 7768,
-    "active": 6349,
-    "under_review": 1201,
-    "archived": 149,
+    "active": 6259,
+    "under_review": 1180,
+    "archived": 260,
     "obsolete": 32,
     "annulled": 37,
     "revoked": 0
   },
+  "scope": "Registros físicos nas quatro tabelas de questões; inclui 34 registros pessoais. Não é contagem de questões únicas ou certificação jurídica do acervo.",
   "last_published_review": {
     "contest": "PC-AC 2017 Agente, S01-V",
-    "editorial_decisions": 50,
-    "activated": 47,
+    "editorial_decisions": 52,
+    "activated": 49,
     "archived_historical": 1,
     "obsolete": 2,
     "texts_recovered": 69,
-    "pending_in_exam": 29,
-    "external_pending_records_added_during_work": 300
+    "pending_in_exam": 27,
+    "this_batch": {
+      "editorial_decisions": 2,
+      "activated": 2,
+      "item_numbers": [
+        48,
+        69
+      ]
+    },
+    "external_changes": "Entre o checkpoint anterior e esta leitura houve alterações fora deste lote: o delta agregado de official_exam_questions, descontadas nossas duas ativações, é -92 active, -19 under_review e +111 archived. Não executamos essas mudanças; não há atribuição de autoria nem certificação editorial delas."
   },
   "library_changes_this_batch": 0
 }
