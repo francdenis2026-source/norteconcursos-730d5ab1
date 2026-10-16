@@ -8,4 +8,11 @@ export const PCPR_EXAM = {
   officialPage: "https://conhecimento.fgv.br/concursos/pcpr26",
 } as const;
 
-export const PCPR_TRAINER_SEARCH = { contest: PCPR_EXAM.contest, year: PCPR_EXAM.year } as const;
+/** Abre o Treinador já com a prova inteira, em ordem de item, incluindo as questões já respondidas. */
+export const PCPR_TRAINER_SEARCH = {
+  contest: PCPR_EXAM.contest,
+  year: PCPR_EXAM.year,
+  go: "1",
+  mode: "catalog",
+  limit: "all",
+} as const;
