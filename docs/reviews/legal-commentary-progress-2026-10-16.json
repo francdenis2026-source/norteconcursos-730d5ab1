@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 218,
+  "count": 244,
   "fields_read": [
     "simples",
     "pontos",
@@ -18,7 +18,8 @@
     "legal-commentary-block-7-2026-10-16.md",
     "legal-commentary-block-8-2026-10-16.md",
     "legal-commentary-block-9-2026-10-16.md",
-    "legal-commentary-block-10-2026-10-16.md"
+    "legal-commentary-block-10-2026-10-16.md",
+    "legal-commentary-block-11-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -1023,6 +1024,70 @@
       "result": "corrected"
     },
     {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-1",
+      "unit_id": "4cce1450-96e0-50a2-9d28-1ed1c0dd2d5a",
+      "content_sha256": "51a2a68b13137e6a90050847077f383b0007631bef38654389adc0f3355167de",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-2",
+      "unit_id": "44a84df7-f2f9-50a8-aaa9-e82495ab49a6",
+      "content_sha256": "e385c48ce7f22bbc6296e9413bc391c591e5d7be37d44445376ee2a735d8d494",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-3",
+      "unit_id": "9f844e77-10bd-571b-bad2-a27dd48c687b",
+      "content_sha256": "ed001fa0c0d60fb744c7fc9d1cf1211c5a5f567116ecaf6de3bb3c2e87979fb1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-4",
+      "unit_id": "1b39a0bc-3adf-5dfd-ba38-87e683150e0a",
+      "content_sha256": "e7d67c240a39d3701364cc799dc71d3924964a9535d29f3c60e9fa03383ce3bb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-5",
+      "unit_id": "02b63957-598b-53cc-a139-500ed780443d",
+      "content_sha256": "a7d4b981f13325ab58bd3522b5c2fe79be7e78dc19159f291fac34ba86d5205c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-6",
+      "unit_id": "9792e351-20e7-5eb0-9329-8fcac570016d",
+      "content_sha256": "a915bab0eafe30080d5fc40f2dbab660c97bc8c477dae9ccbe3f4aa4b31001d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-7",
+      "unit_id": "fbdb02b3-2ba4-5412-b828-c78666b713c5",
+      "content_sha256": "c9c1640726cfe9f9366f48029e0b855c6034f037997754a80d4adebc05a4bfd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "menor-potencial-ofensivo",
+      "unit_key": "art-8",
+      "unit_id": "8a2af30f-be1c-5f35-97f8-e940e05f32fc",
+      "content_sha256": "4d4fd028ac7ab6ae0cdf2c0625b5628951de256695b974a315d92beb410e0ef9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+      "result": "preserved"
+    },
+    {
       "course": "pf-interestadual",
       "unit_key": "art-1",
       "unit_id": "013e1d8c-0ac9-5240-9d3c-cfe1840cedb7",
@@ -1220,6 +1285,62 @@
       "unit_id": "172c07a6-eadf-5b1e-a534-243a8a6c027b",
       "content_sha256": "63125cc06ec915e61b430401394eb131fd5b652bb466a8480369c7940e7dd770",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-1",
+      "unit_id": "039ebe7d-b2b0-591c-a58c-6d3fb4fc792b",
+      "content_sha256": "d0667d4a6722f947e93b12bf0a33895d9a50dda3afe48210a1a1cbb7899e1296",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-2",
+      "unit_id": "b3c96b35-1fc7-53ea-9922-601bc808ac2a",
+      "content_sha256": "f89e572152f6498ef018c43dcf2e168ec36383d9ea44369e87e9a9592b25167b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-3",
+      "unit_id": "69ab257d-5d03-562f-b2c4-fa9021703f8e",
+      "content_sha256": "57bc1c135d7ece6b16a492ca751d8102b821a8c96d55a611094761154ae7ea44",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-4",
+      "unit_id": "169c5373-7f06-5971-9b60-1496a611ed45",
+      "content_sha256": "ebd7eedeea248a94f5736fe7b3d372b4ebc5a5e6834bd2d8ad80d2efd4d13725",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-5",
+      "unit_id": "b63721a0-5c97-5cd3-ac1b-fe7ff2607f4a",
+      "content_sha256": "94dd3b94abd3a1535d9ad0f11db1b9662090f90567513fb3211658278b418dbc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-7",
+      "unit_id": "177224d3-a968-5923-bf86-9a4d63279d1e",
+      "content_sha256": "7f0ace71f32e64b020d5db883464095c5b0776931c92ab094368c80f9cc361b3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "ric",
+      "unit_key": "art-8",
+      "unit_id": "2e2ed55a-2a0a-5c5a-8fe6-91ba8c43f313",
+      "content_sha256": "bf2e2abfe960551d2cd1f67eda5aa10e1f93837a9d86010db62319e490b11ff3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
       "result": "preserved"
     },
     {
@@ -1764,6 +1885,94 @@
       "unit_id": "a6207df8-450a-59c8-bbab-d0a577c7c75d",
       "content_sha256": "a003c99ebbb79475c01bf830004fe9524f7630dc10052e3ea7f9a680fa19252d",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-1",
+      "unit_id": "bfaf454b-0e7b-58b1-85b9-652a1db6ee3e",
+      "content_sha256": "8c57e53766964ae2b709074ab18ba1cb36930b6a9efe59bb4e795be31a1f25ab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-10",
+      "unit_id": "72f68e20-2e4f-536b-96d6-1e37a70d4b91",
+      "content_sha256": "14ba87793a5bbc4332db3475feba53beef775b43c3abd784f3ab2fcf9dd15682",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-11",
+      "unit_id": "15329da6-21cc-5eda-82d1-501be8af3e4b",
+      "content_sha256": "8fa70b154e94b2c59c3be4c039296a0d44c16c03332a9d32230f8427ea07fadf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-2",
+      "unit_id": "9960f2a1-746d-56c0-a1fa-a5dfd703338a",
+      "content_sha256": "6931d5972431e3ef48a62abf7c44c4e1fcaff0537124243d65227bb41bc07b9b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-3",
+      "unit_id": "c703ca84-9852-55b8-a27b-c901a0258b2d",
+      "content_sha256": "4b26f50ff2bd60e896785ffc3432ba259b7cab4180e318a7fb54813c2ce28a90",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-4",
+      "unit_id": "173109a7-d494-5b82-9224-d79984620ce8",
+      "content_sha256": "1024fd80b19fc54cf6ca295994d73994d2efa9be969af084ab1c02a1003133f1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-5",
+      "unit_id": "67827005-8fe0-50b7-9503-ef5544c25496",
+      "content_sha256": "7bad4d150e240ffdbfdaacabbd7eae45046ac0a56210cdd14b3957a285388737",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-6",
+      "unit_id": "d31612d2-471d-5f2b-8343-13f218cddba3",
+      "content_sha256": "981243095a0561374a5b855bd4dc18719e7e3e643c702332b58871c3a6018ed9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-7",
+      "unit_id": "d4701703-179c-5c48-b2d4-fd4212037cf3",
+      "content_sha256": "7db5cd7c47e2d3269b3547f99b579b080b77d6ae9d6768696d1ed78db1d0ee58",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-8",
+      "unit_id": "9ff7919e-232d-5742-9615-29b62565a380",
+      "content_sha256": "49747d8a39511af36847036eb11277c28c3133447c96c2794e1b630a56a164bc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "uso-forca",
+      "unit_key": "art-9",
+      "unit_id": "35973d52-ecfa-59c0-8c75-cbadce685154",
+      "content_sha256": "b321fd39073dfd006b1db59831c1c512a11dc553bf2ab5fdd698801e349beae4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
       "result": "preserved"
     }
   ]
