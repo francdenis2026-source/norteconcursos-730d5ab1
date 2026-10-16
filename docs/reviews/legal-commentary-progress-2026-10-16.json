@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 137,
+  "count": 160,
   "fields_read": [
     "simples",
     "pontos",
@@ -15,7 +15,8 @@
     "legal-commentary-block-4-2026-10-16.md",
     "legal-commentary-block-5-2026-10-16.md",
     "legal-commentary-block-6-2026-10-16.md",
-    "legal-commentary-block-7-2026-10-16.md"
+    "legal-commentary-block-7-2026-10-16.md",
+    "legal-commentary-block-8-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -569,6 +570,190 @@
       "unit_id": "02bdba23-8d82-5e32-8eaa-952eb599bd92",
       "content_sha256": "b03882bf2d2a3d8c57718ae58b1e0c867c94c53ea5a52f12a5359257eea975b9",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-1",
+      "unit_id": "c3a9a7df-b933-5f4a-8a9d-c19df8b5d33a",
+      "content_sha256": "77506387d0338c45112eb5fe4785c8223d7b72e015f1714058215a5f17e0602c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-10",
+      "unit_id": "a28935ea-b85f-504b-8527-b5a263d1ea5d",
+      "content_sha256": "6d1752fede10b39f492daa2be133f8c476ac566af3f81c5bde9f988f8db68dfa",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-11",
+      "unit_id": "407cbb3f-0973-505d-98d5-2fd3097c0837",
+      "content_sha256": "70e63cd06f7daaebed0ce1f1605619e42f76727ac2768b7a85fc7b27d4abd72f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-12",
+      "unit_id": "30587138-3234-5eb7-82b3-da0d147e22ef",
+      "content_sha256": "be7f538705ba5daecf63df1b0f693d84f075f5ceb4ad0b9344524449d22e4b3f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-13",
+      "unit_id": "c1f62444-5e22-53ef-a778-2147d6c9cd1c",
+      "content_sha256": "97d3f629b479a3f66809d5d3cde70ed773e6bc81a3488e0ea3930571783d6099",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-14",
+      "unit_id": "0e5477f9-5881-55ac-a836-4484e467cb93",
+      "content_sha256": "bdae00406bb43e017b9ba6808526276006bca28f36464a163a7341134c2a7cd6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-16",
+      "unit_id": "14e4b4e8-8595-5f62-b10d-ae354c3a7657",
+      "content_sha256": "00985fd0075d3de595912f9dd6254d22251195b33438bb0ebe125465448f3b78",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-18",
+      "unit_id": "f4cf8c75-79c9-58e8-94bd-63b291d0772c",
+      "content_sha256": "e746f32f86dd97e02414cf155e8e578369e546c927623aa28853524c4b05a62f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-2-a",
+      "unit_id": "22ed7b8e-57ab-58b4-9ce7-b717aa3ccec1",
+      "content_sha256": "5b87b874e75f2db416b9f5e538aeb07314897aaa5e8827ff33ba812dbafeaade",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20",
+      "unit_id": "a03b0a35-21dd-5567-b960-f55b25b23256",
+      "content_sha256": "c038a1ac299f1616d34c6faa619a2d4ab6a0f460299e08391a85301302971192",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-a",
+      "unit_id": "d0c66208-ccd6-590e-bf15-1ea4318a3197",
+      "content_sha256": "25304412a5fe7dbfb722d5ffb9579a5bfac3e20a92c5d1abc91ff26ed45004b7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-b",
+      "unit_id": "0a29959c-efd4-55ae-b7c4-db83dd40df2a",
+      "content_sha256": "8e7e8a7d609a4d176a788b224391a0a13320b8ab23fda7ea10f4246b48896e97",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-c",
+      "unit_id": "ffe154ff-849e-5e58-af6b-f89d3201976f",
+      "content_sha256": "b2779c57626d37c53b04aa3c28e4029214956c9016a65dc9d7cb61f9b0ab9b68",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-20-d",
+      "unit_id": "374831f6-d91b-5159-8381-b927f91c3338",
+      "content_sha256": "3977fb2cea02fc76d634738de162b9ba221a660cbc8d2546e1918ef2fd798b81",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-21",
+      "unit_id": "0446b679-1060-512e-a66c-3a3753e87daf",
+      "content_sha256": "e9199a89c04a947954f5520e239519d59b55622861971bedf1d0dd09658ac964",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-22",
+      "unit_id": "4a764bc9-bb72-568d-9957-465348795c3a",
+      "content_sha256": "e7955e16161fdfe9d86c5560234672c751a1d4b6e3fe3b8d0d7969c279452559",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-3",
+      "unit_id": "0a2b7402-ebfe-509a-bb1f-5a5863939436",
+      "content_sha256": "76c18f812e8d4ec21a7382eae5867f12fef853a5f620b4892948b20158a87ffe",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-4",
+      "unit_id": "07a4d064-2a7b-5367-b89e-7abc5f0b33c1",
+      "content_sha256": "278e5f0cfeaa4f6be0deffb7977e1ddcae29c492c9068b5ce94ebdf492d734d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-5",
+      "unit_id": "7dc34855-b76c-537f-b9d2-24f358497b0c",
+      "content_sha256": "9942d389b5e4f0a82e57a6b41b8f8c06d412b59d2d59b10cb13ba2d1e28576d8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-6",
+      "unit_id": "be6c3154-fef7-5b84-aab3-f3a1257f4340",
+      "content_sha256": "0399c69b7647a22201473032ac851fafdd4d603a75d34bc534cbf34345b2a00a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-7",
+      "unit_id": "2f78f2a5-aa5b-55a3-9a85-30598f554c77",
+      "content_sha256": "245c18abedaf3ecd8e44bb3d2a1b7906ab1ccea5a7b73961ff546a7eec1578ac",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-8",
+      "unit_id": "f68f9ff8-ca74-5eb2-91eb-4e7a139f0eba",
+      "content_sha256": "a70cbf249288a73686516b404d9fbc73468bc551b7ddcb7420e0ab58cee5e312",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "racismo",
+      "unit_key": "art-9",
+      "unit_id": "172c07a6-eadf-5b1e-a534-243a8a6c027b",
+      "content_sha256": "63125cc06ec915e61b430401394eb131fd5b652bb466a8480369c7940e7dd770",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
       "result": "preserved"
     },
     {
