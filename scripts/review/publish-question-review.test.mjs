@@ -27,6 +27,31 @@ test('accepts PostgreSQL timestamp formatting without hiding concurrent microsec
  assert.equal(sameReviewRow({verified_at:'2026-10-13T00:00:00.000000Z',official_answer:'C'},{verified_at:'2026-10-13T00:00:00+00:00',official_answer:'E'}),false);
 });
 const make=()=>({items:[{table:'official_exam_questions',expected:{id:'q1',content_status:'under_review',official_answer:'E',question_text:'Complete question',context_review_required:false},patch:{content_status:'active',current_syllabus_topic_id:'t1',verified_at:'2026-10-13T00:00:00Z',law_version_checked_at:'2026-10-13T00:00:00Z',legal_basis:[{url:'https://www.planalto.gov.br/law'}]},evidence:{legal:true,reason:'Individually verified',sources:['https://www.planalto.gov.br/law']}}]});
+test('active explanation reviews may repair a legal reference without changing identity, status or approval flags',async()=>{
+ const p=make();p.purpose='explanation-improvement';const i=p.items[0];
+ i.expected.content_status='active';i.expected.syllabus_topic_id='t1';
+ i.patch={review_note:'Individual legal explanation with a checked source. '.repeat(6),legal_basis:[{url:'https://www.planalto.gov.br/law'}],law_version_checked_at:'2026-10-13T00:00:00Z'};
+ assert.equal(validateReview(p),p);
+ const confirmed=structuredClone(p);confirmed.items[0].patch.current_syllabus_topic_id='t1';
+ assert.equal(validateReview(confirmed),confirmed);
+ const moved=structuredClone(p);moved.items[0].patch.current_syllabus_topic_id='different-topic';
+ assert.throws(()=>validateReview(moved),/preserve the existing syllabus topic/);
+ const bad=structuredClone(p);bad.items[0].patch.legal_audit_completed=true;
+ assert.throws(()=>validateReview(bad),/identity or publication status/);
+ const missing=structuredClone(p);missing.items[0].patch.legal_basis=[];
+ assert.throws(()=>validateReview(missing),/legal basis/);
+ let writes=0;
+ const request=async(path,method)=>{
+  if(method==='PATCH'){writes++;return [];}
+  if(path.startsWith('official_exam_questions'))return [i.expected];
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  if(path.includes('?url='))return [];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ await assert.rejects(()=>publishReview(p,request),/basis not registered/);
+ assert.equal(writes,0);
+});
 test('forbids changing original answer, incomplete contexts and missing legal sources',()=>{
  const p=make();p.items[0].patch.official_answer='C';assert.throws(()=>validateReview(p));
  const q=make();q.items[0].expected.context_review_required=true;assert.throws(()=>validateReview(q));

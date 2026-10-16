@@ -1,0 +1,2182 @@
+{
+  "scope": "PCDF/2026 first 50 legal comment reviews",
+  "purpose": "explanation-improvement",
+  "checked_at": "2026-10-16T16:02:06.783Z",
+  "validation": {
+    "checked_at": "2026-10-16T16:00:55.415Z",
+    "audited": 50,
+    "eligible_audited": 50,
+    "other_pc_rows_preserved": 2918,
+    "concurrent_unrelated_pc_rows": [],
+    "missing_pc_rows": [],
+    "original_texts_answers_sources_subjects_statuses_preserved": true,
+    "items": [
+      {
+        "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+        "item_number": 46,
+        "eligible": true
+      },
+      {
+        "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+        "item_number": 15,
+        "eligible": true
+      },
+      {
+        "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+        "item_number": 27,
+        "eligible": true
+      },
+      {
+        "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+        "item_number": 12,
+        "eligible": true
+      },
+      {
+        "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+        "item_number": 68,
+        "eligible": true
+      },
+      {
+        "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+        "item_number": 111,
+        "eligible": true
+      },
+      {
+        "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+        "item_number": 103,
+        "eligible": true
+      },
+      {
+        "id": "23409872-85b9-4547-9d76-ee840c996f70",
+        "item_number": 40,
+        "eligible": true
+      },
+      {
+        "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+        "item_number": 77,
+        "eligible": true
+      },
+      {
+        "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+        "item_number": 33,
+        "eligible": true
+      },
+      {
+        "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+        "item_number": 39,
+        "eligible": true
+      },
+      {
+        "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+        "item_number": 43,
+        "eligible": true
+      },
+      {
+        "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+        "item_number": 63,
+        "eligible": true
+      },
+      {
+        "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+        "item_number": 42,
+        "eligible": true
+      },
+      {
+        "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+        "item_number": 97,
+        "eligible": true
+      },
+      {
+        "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+        "item_number": 96,
+        "eligible": true
+      },
+      {
+        "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+        "item_number": 78,
+        "eligible": true
+      },
+      {
+        "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+        "item_number": 13,
+        "eligible": true
+      },
+      {
+        "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+        "item_number": 36,
+        "eligible": true
+      },
+      {
+        "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+        "item_number": 8,
+        "eligible": true
+      },
+      {
+        "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+        "item_number": 64,
+        "eligible": true
+      },
+      {
+        "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+        "item_number": 92,
+        "eligible": true
+      },
+      {
+        "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+        "item_number": 76,
+        "eligible": true
+      },
+      {
+        "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+        "item_number": 100,
+        "eligible": true
+      },
+      {
+        "id": "74436292-ad87-456d-870a-f8702db04364",
+        "item_number": 102,
+        "eligible": true
+      },
+      {
+        "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+        "item_number": 106,
+        "eligible": true
+      },
+      {
+        "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+        "item_number": 52,
+        "eligible": true
+      },
+      {
+        "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+        "item_number": 49,
+        "eligible": true
+      },
+      {
+        "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+        "item_number": 11,
+        "eligible": true
+      },
+      {
+        "id": "a1db110e-599c-4503-886b-a2483ac92082",
+        "item_number": 53,
+        "eligible": true
+      },
+      {
+        "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+        "item_number": 44,
+        "eligible": true
+      },
+      {
+        "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+        "item_number": 99,
+        "eligible": true
+      },
+      {
+        "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+        "item_number": 66,
+        "eligible": true
+      },
+      {
+        "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+        "item_number": 26,
+        "eligible": true
+      },
+      {
+        "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+        "item_number": 93,
+        "eligible": true
+      },
+      {
+        "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+        "item_number": 38,
+        "eligible": true
+      },
+      {
+        "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+        "item_number": 47,
+        "eligible": true
+      },
+      {
+        "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+        "item_number": 35,
+        "eligible": true
+      },
+      {
+        "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+        "item_number": 1,
+        "eligible": true
+      },
+      {
+        "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+        "item_number": 101,
+        "eligible": true
+      },
+      {
+        "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+        "item_number": 37,
+        "eligible": true
+      },
+      {
+        "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+        "item_number": 95,
+        "eligible": true
+      },
+      {
+        "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+        "item_number": 110,
+        "eligible": true
+      },
+      {
+        "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+        "item_number": 50,
+        "eligible": true
+      },
+      {
+        "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+        "item_number": 54,
+        "eligible": true
+      },
+      {
+        "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+        "item_number": 98,
+        "eligible": true
+      },
+      {
+        "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+        "item_number": 94,
+        "eligible": true
+      },
+      {
+        "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+        "item_number": 70,
+        "eligible": true
+      },
+      {
+        "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+        "item_number": 25,
+        "eligible": true
+      },
+      {
+        "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+        "item_number": 34,
+        "eligible": true
+      }
+    ]
+  },
+  "tests": {
+    "passed": 65,
+    "failed": 0,
+    "skipped": 0
+  },
+  "items": [
+    {
+      "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+      "item_number": 46,
+      "previous_row_sha256": "c4f4450a7740924fabcecada432313f15ced6eb606d74985c3bb8cbdf15c8661",
+      "published_row_sha256": "e786f653459e7d86e0bf086e5f25c95740c71556f43c0c024cd3f7d39c70a321",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nDesconsiderar a personalidade jurídica não alcança automaticamente todos os sócios. O art. 50 exige abuso e permite atingir administradores ou sócios beneficiados direta ou indiretamente por ele.\nExemplo: Ocultação patrimonial pode sustentar a desconsideração, mas não dispensa identificar os sujeitos beneficiados e observar os requisitos legais.\nTeste rápido — Provado o abuso, todos os sócios respondem automaticamente? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 50.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "50"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 46: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+      "item_number": 15,
+      "previous_row_sha256": "ed9555be0091f1adb250158fd2d0b85619f9b249d10ff8579d463430edcdbfce",
+      "published_row_sha256": "814f8a242cb5b77e2764f5f76cca68cf7e015f3360bd741ebc1ab250cc2f5f6b",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nRetorno do aposentado por invalidez quando junta médica oficial declara insubsistentes os motivos é reversão. Readaptação é investidura em cargo compatível com limitação física ou mental verificada em inspeção médica.\nExemplo: Servidor aposentado recupera a capacidade: examine a reversão. Servidor com limitação para certas tarefas pode precisar de readaptação.\nTeste rápido — Qual instituto descreve o enunciado? Reversão.\nBase conferida: Lei nº 8.112/1990 – Regime Jurídico dos Servidores Públicos Federais, art. 24; Lei nº 8.112/1990 – Regime Jurídico dos Servidores Públicos Federais, art. 25.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 8.112/1990 – Regime Jurídico dos Servidores Públicos Federais",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112compilado.htm",
+            "artigo": "24"
+          },
+          {
+            "title": "Lei nº 8.112/1990 – Regime Jurídico dos Servidores Públicos Federais",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112compilado.htm",
+            "artigo": "25"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 15: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l8112compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/serv.html",
+            "sha256": "29e6a5c01bd3c96f2ee664ef358dd0075ad03c50be3fff2fd57d060f2fc81a62",
+            "captured_at": "2026-10-16T15:47:26.453Z"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+      "item_number": 27,
+      "previous_row_sha256": "c5a0ea6823d0dbb3ae79b86f0fedaea069c28bfd73240a081ad29e03b03bb056",
+      "published_row_sha256": "136018e4b0371bec45bb6ebe9c09d7049a71bd3d0835885a5505fc25430c996a",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO ocupante exclusivamente de cargo em comissão submete-se ao regime geral de previdência. A contribuição, sozinha, não autoriza lei estadual a incluí-lo no RPPS contra a regra constitucional.\nExemplo: Pessoa nomeada apenas para cargo em comissão contribui para o RGPS; a situação do servidor titular de cargo efetivo deve ser distinguida.\nTeste rápido — Contribuir torna constitucional qualquer filiação ao RPPS? Não.\nBase conferida: Constituição da República Federativa do Brasil de 1988, art. 40.",
+        "legal_basis": [
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "40"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 27: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+      "item_number": 12,
+      "previous_row_sha256": "1adf860fa8cb41d2ad48182c7e6d66328acc01d5199a6c896b5c4d8cddc27e4f",
+      "published_row_sha256": "6c578ebf8fbcb5ee381b136fa294e088d0a42a5b734958a1085950382b074a1c",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nBens públicos de uso especial são inalienáveis enquanto conservarem essa qualificação. A conclusão depende da afetação: não significa impossibilidade perpétua de alienação após regular mudança da destinação e atendimento da lei.\nExemplo: Prédio destinado a escola pública não pode ser vendido como se fosse bem dominical. Uma desafetação regular exige análise própria.\nTeste rápido — A inalienabilidade dura enquanto houver essa qualificação? Sim.\nBase conferida: Código Civil — alimentos e revisão, art. 100.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "100"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 12: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+      "item_number": 68,
+      "previous_row_sha256": "a172690e98fc5cec09f3cbfabc9846d208e6acd51d7ab0a24dd23bdf2219164d",
+      "published_row_sha256": "ae8e42afa5dfcd6f15e200495941b67526d1ea95216bd9adf839b662ef9634df",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA lei de tortura prevê que a condenação acarreta perda do cargo, função ou emprego público e interdição para seu exercício pelo dobro do prazo da pena aplicada. É disciplina própria, distinta dos requisitos gerais do CP.\nExemplo: Agente público condenado por tortura está sujeito ao efeito específico da lei. Não se transportam automaticamente a ela os requisitos de outra lei penal.\nTeste rápido — A duração da interdição é igual à pena aplicada? Não: o texto prevê o dobro.\nBase conferida: Lei nº 9.455/1997 – Crimes de Tortura, art. 1.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 9.455/1997 – Crimes de Tortura",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+            "artigo": "1"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 68: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/tort.html",
+            "sha256": "78f2fed9359242b0346d59cf4a1b47168c9f095021cf7451f2ae7e357d92c002",
+            "captured_at": "2026-10-16T15:47:29.435Z"
+          }
+        ],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+      "item_number": 111,
+      "previous_row_sha256": "de6e3a95f98be4118b6947ade4bcc3a1095b16870a221ba60157be24abb84f97",
+      "published_row_sha256": "674abb7c081a072be85b1b8c2d3b07641e93c28f0397fe6bb86e47d4bf2e1945",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA reserva da biosfera admite áreas-núcleo, zonas de amortecimento e zonas de transição. A expressão sem limites rígidos refere-se às zonas de transição, não indistintamente a todas as partes.\nExemplo: Uma área-núcleo tem finalidade de proteção integral; a zona de transição comporta ocupação e manejo participativos e sustentáveis.\nTeste rápido — Todas as partes da reserva são legalmente descritas como sem limites rígidos? Não.\nBase conferida: Lei 9.985/2000, art. 41.",
+        "legal_basis": [
+          {
+            "title": "Lei 9.985/2000",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+            "artigo": "41"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 111: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/snuc.html",
+            "sha256": "e0ca39f5051dc21bf1b18d357af2be9f67025be049c839756cc6507fe219ff77",
+            "captured_at": "2026-10-16T15:47:32.347Z"
+          }
+        ],
+        "official_pdf_page": 14
+      }
+    },
+    {
+      "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+      "item_number": 103,
+      "previous_row_sha256": "85a52fb8135a5e406200974865353f877a51c9d99ccbeac58adeb1896fb56b06",
+      "published_row_sha256": "dca9e5c1fa1aa22d3a24564c2d621e658bae4c4339bcd78fdd063e592e3957da",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nEm regra, a autoridade policial concede fiança quando a pena privativa de liberdade máxima não supera quatro anos. Devem ser observadas as vedações e os demais requisitos; quatro anos não significa quatro anos de pena concreta já aplicada.\nExemplo: Infração com máximo legal de quatro anos pode admitir fiança policial; hipótese legalmente inafiançável continua vedada.\nTeste rápido — Basta olhar o limite de quatro anos e ignorar as vedações? Não.\nBase conferida: Código de Processo Penal – Decreto-Lei nº 3.689/1941, art. 322.",
+        "legal_basis": [
+          {
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "322"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 103: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "23409872-85b9-4547-9d76-ee840c996f70",
+      "item_number": 40,
+      "previous_row_sha256": "c8352923082e4a88caa7071c7a63bdf225cc881e01313557ee8c0c0902c3cbc4",
+      "published_row_sha256": "38f7cfbcad88f40476ff37f7a47d4912d50e540e074af742667dc6be714b4b67",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA coação que vicia a vontade gera anulabilidade, não nulidade absoluta. Negócio anulável admite confirmação nas condições legais, ressalvado direito de terceiro.\nExemplo: Contrato assinado sob coação deve ser analisado como anulável. Não se aplica a ele, sem distinção, a disciplina do negócio absolutamente nulo.\nTeste rápido — O negócio por coação é sempre nulo e insanável? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 171; Código Civil — alimentos e revisão, art. 172.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "171"
+          },
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "172"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 40: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+      "item_number": 77,
+      "previous_row_sha256": "21c6c9c9920dc496a540c8bf0b2185ef8f380d366462832dcb9948fbf69b36f6",
+      "published_row_sha256": "41004d8501b620a3ba5f87861d4cfff7fe13b18d3c4600c8ec323441a6152295",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA restituição proporcional alcança juros e penalidades, mas ressalva as multas por infrações formais não prejudicadas pela causa da restituição. Por isso, todas as penalidades é uma generalização errada.\nExemplo: Restituir tributo indevido não elimina necessariamente multa por obrigação formal autônoma que permaneça válida.\nTeste rápido — Toda multa desaparece com a restituição do tributo? Não.\nBase conferida: Código Tributário Nacional, art. 167.",
+        "legal_basis": [
+          {
+            "title": "Código Tributário Nacional",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+            "artigo": "167"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 77: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ctn.html",
+            "sha256": "1a770ff60e7f543931d08e51019132aaa01eae8f1af83e39f0386880e2095ab1",
+            "captured_at": "2026-10-16T15:47:25.451Z"
+          }
+        ],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+      "item_number": 33,
+      "previous_row_sha256": "d6ab2f6ff3b5c7dff7385c56d78a7b1f811b2678ec0c1319706c04cdd98f389d",
+      "published_row_sha256": "f0ca7d00c41d1f1bc06b618a4b3499e4c44d4f91b681b43bfa983d7172b2d7b8",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nAo decidir com base em valores jurídicos abstratos, a autoridade deve considerar consequências práticas. A motivação demonstra necessidade e adequação, inclusive diante das alternativas possíveis.\nExemplo: Invocar apenas interesse público sem examinar efeitos e alternativas não basta para justificar medida concreta gravosa.\nTeste rápido — Consequências e alternativas devem integrar a motivação? Sim.\nBase conferida: LINDB, art. 20.",
+        "legal_basis": [
+          {
+            "title": "LINDB",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "artigo": "20"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 33: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lindb.html",
+            "sha256": "009d172a8387b3dd5d63b03fb7c821189693768e98f88055ea6e41a20dcd9529",
+            "captured_at": "2026-10-16T15:47:26.694Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+      "item_number": 39,
+      "previous_row_sha256": "f0dd75fb5fff45fd159cea0c40439e19a62bab45af8452d30260b0b8919d99fe",
+      "published_row_sha256": "071a3c8193216f80c0e261ba5ed475c05a8b979b54a30d520dbd2a516a54ca77",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO silêncio pode importar anuência quando circunstâncias ou usos o autorizarem e não for necessária declaração expressa. Fora dessas condições, não há concordância automática.\nExemplo: Se a lei exige manifestação expressa, o silêncio não supre a forma. Em situação admitida pelos usos, pode ter significado de concordância.\nTeste rápido — Quem cala sempre consente? Não: a regra é condicionada.\nBase conferida: Código Civil — alimentos e revisão, art. 111.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "111"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 39: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+      "item_number": 43,
+      "previous_row_sha256": "45ab661bc022cd9e0687a9eae83b78ca11b2c80da309d3954ede1040b0cf67c3",
+      "published_row_sha256": "d8c2c49b965f2b07aee7c45b851cbf0a85af9111f624b501d4a5073bbae9a0b3",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA renúncia à decadência fixada em lei é nula. O enunciado erra ao qualificá-la apenas como anulável e ao sugerir que a consumação tornaria a renúncia válida.\nExemplo: As partes não podem afastar por acordo uma decadência legal. Decadência convencional tem disciplina própria.\nTeste rápido — Qual a consequência da renúncia à decadência legal? Nulidade.\nBase conferida: Código Civil — alimentos e revisão, art. 209.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "209"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 43: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+      "item_number": 63,
+      "previous_row_sha256": "57d9cb97a6bc978c486d0d519157ffd657edf033934f85c63459f037741f064c",
+      "published_row_sha256": "ac0a3c4a893cf18f8defbe2981e5249f77b15352c07ef4f97f6146db16b23f25",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nDesconhecimento da lei é inescusável. Erro sobre a ilicitude, quando inevitável, isenta de pena; se evitável, pode reduzir a pena de um sexto a um terço. Não confunda erro de proibição com erro de tipo.\nExemplo: Quem conhece os fatos, mas inevitavelmente acredita que a conduta é permitida, pode estar em erro de proibição.\nTeste rápido — Erro de proibição evitável também isenta sempre? Não: pode diminuir a pena.\nBase conferida: Código Penal – Decreto-Lei nº 2.848/1940, art. 21.",
+        "legal_basis": [
+          {
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "21"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 63: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+      "item_number": 42,
+      "previous_row_sha256": "99700ff044c137be6b4304982a93e3d03c3d33ed602b29c151f2391b26b4999f",
+      "published_row_sha256": "e278aad6f49b2401a3f7d6300fd913a892098605b35f7d92633af423524a5409",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA prescrição pode ser alegada em qualquer grau de jurisdição pela parte a quem aproveita, nos termos do Código Civil. A redação trata da alegação de prescrição, não da renúncia a ela.\nExemplo: A parte beneficiada pode suscitar a prescrição em grau recursal, respeitadas as regras processuais pertinentes.\nTeste rápido — O art. 193 restringe a alegação ao primeiro grau? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 193.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "193"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 42: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+      "item_number": 97,
+      "previous_row_sha256": "0ed524c74f8495174cc1f57904fce7673db5076feeadacf1caee288ee2afda87",
+      "published_row_sha256": "55bcddab5c70ce89f5b3b282117bdf08cfc74482dd407ee0caf2240f7c2208a9",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA Lei Maria da Penha veda cesta básica, outras prestações pecuniárias e substituição que implique pagamento isolado de multa. Não se deve converter essa proibição específica em afirmação sobre toda multa prevista em tipo penal.\nExemplo: Pagar cesta básica não é solução substitutiva permitida para o caso abrangido pela lei. Multa cominada no próprio crime é discussão distinta.\nTeste rápido — O art. 17 permite substituir a pena por cesta básica? Não.\nBase conferida: Lei 11.340/2006 — violência e proteção — texto oficial atualizado, art. 17.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.340/2006 — violência e proteção — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "artigo": "17"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 97: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/mp.html",
+            "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+            "captured_at": "2026-10-16T15:48:04.594403+00:00",
+            "encoding": "UTF-16LE BOM"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+      "item_number": 96,
+      "previous_row_sha256": "eae3eafd87b42e1795e92d6957f27b9e2a2541bb0478a9e311f9971bf2c53d84",
+      "published_row_sha256": "2c833a2bbc33a5269d8f4b97fc1838eadc46bf2ac090e25fb050788ddc7709bb",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO § 1º permite concessão imediata de medida protetiva sem audiência das partes e sem manifestação prévia do MP, que deve ser prontamente comunicado. A urgência admite contraditório posterior, sem eliminar fundamentação ou controle.\nExemplo: Risco concreto permite proteger a criança antes de ouvir o investigado. A defesa não é abolida; ocorre no momento processual adequado.\nTeste rápido — Ouvir previamente investigado e MP é requisito universal? Não.\nBase conferida: Lei 14.344/2022 — proteção contra violência doméstica — texto oficial atualizado, art. 16.",
+        "legal_basis": [
+          {
+            "title": "Lei 14.344/2022 — proteção contra violência doméstica — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+            "artigo": "16"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 96: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/henry.html",
+            "sha256": "abfc774bf2260b84ee467338ebdc5cfade6fc9c47cd33c4be3e5afc36d804597",
+            "captured_at": "2026-10-16T15:47:29.825Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+      "item_number": 78,
+      "previous_row_sha256": "45940597f7ef9e2fee9292f6d5f0065ee4118143f74116d2e79c0c576b5b170b",
+      "published_row_sha256": "84eade9319643fc8a95ac1d484883229a951e54017f37dc6d12515698af2eeb0",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nPrescrição tributária integra normas gerais reservadas à lei complementar nacional. Uma lei complementar estadual não pode criar livremente prazo divergente do regime nacional do crédito tributário.\nExemplo: Um estado não pode alterar o prazo geral de cobrança apenas porque o tributo é estadual. Competência para instituir tributo não equivale a alterar normas gerais.\nTeste rápido — Ser lei complementar estadual basta para mudar o prazo nacional? Não.\nBase conferida: Constituição da República Federativa do Brasil de 1988, art. 146; Código Tributário Nacional, art. 174.",
+        "legal_basis": [
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "146"
+          },
+          {
+            "title": "Código Tributário Nacional",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+            "artigo": "174"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 78: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/ctn.html",
+            "sha256": "1a770ff60e7f543931d08e51019132aaa01eae8f1af83e39f0386880e2095ab1",
+            "captured_at": "2026-10-16T15:47:25.451Z"
+          }
+        ],
+        "official_pdf_page": 9
+      }
+    },
+    {
+      "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+      "item_number": 13,
+      "previous_row_sha256": "d93eb7648b4c2f79ffe06b538f236d2010cd8e02617378a2ddaa5d4c797ae99d",
+      "published_row_sha256": "5a3eb97a61b0e8e8321af54faa3ac862941e7f5c0182b5fe5b09f94665dbc27d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nNa modalidade concurso escolhe-se trabalho técnico, científico ou artístico pelo critério de melhor técnica ou conteúdo artístico, com prêmio ou remuneração. Não se escolhe automaticamente o menor preço.\nExemplo: Concurso para projeto artístico avalia o mérito do trabalho. Licitação por menor preço segue outro critério de julgamento.\nTeste rápido — Concurso é decidido pelo menor preço? Não.\nBase conferida: Lei nº 14.133/2021 – Licitações e Contratos Administrativos, art. 6; Lei nº 14.133/2021 – Licitações e Contratos Administrativos, art. 33.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 14.133/2021 – Licitações e Contratos Administrativos",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+            "artigo": "6"
+          },
+          {
+            "title": "Lei nº 14.133/2021 – Licitações e Contratos Administrativos",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+            "artigo": "33"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 13: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/licit.html",
+            "sha256": "bfdb407b3b78ee9b53f2916a6f1daa7e843f40d3fb191a63b542629271e78eba",
+            "captured_at": "2026-10-16T15:47:29.000Z"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+      "item_number": 36,
+      "previous_row_sha256": "38b55e6abb7b3c23a30ee658817fbe99480277d57fc43e55c6c594f6fd2c2b18",
+      "published_row_sha256": "fac10427bba8db0abdc28aadb2a7bd9f9013f767521971c5db98a34d1614424a",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA existência da pessoa natural termina com a morte. Para ausentes, a lei admite presunção nos casos em que autoriza sucessão definitiva. O simples desaparecimento não basta por si só.\nExemplo: Desaparecimento recente não equivale automaticamente a morte. A ausência segue o procedimento e os requisitos legais.\nTeste rápido — Todo desaparecido é imediatamente presumido morto? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 6.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "6"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 36: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+      "item_number": 8,
+      "previous_row_sha256": "36348e813f8b61e0bcd3cdd05e42ec24e3ba1d07d952f37efcb9fcf9aa4d1884",
+      "published_row_sha256": "e178a6ee6fcc80b8c6984c711a3e21402c97fc35febc4e3a28e4329b0d3831b0",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA lei específica autoriza a instituição de empresa pública; não a cria diretamente como ocorre com a autarquia. A personalidade de direito privado surge com os atos constitutivos e o registro pertinente.\nExemplo: Lei autoriza a empresa pública; o registro de seus atos constitutivos integra sua instituição. Para autarquia, a lei cria a entidade.\nTeste rápido — Criar e autorizar são equivalentes no art. 37, XIX? Não.\nBase conferida: Constituição da República Federativa do Brasil de 1988, art. 37.",
+        "legal_basis": [
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 8: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+      "item_number": 64,
+      "previous_row_sha256": "0400756b451932be422ac34ef2f7431009ff6e5bd0b9fc37fe579e9d5af945af",
+      "published_row_sha256": "c216a265616c1e962880a266c2b4f44c39bd2d5a4b6e92fc3264e34f8c771f03",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO art. 4º, I, condiciona a fixação do valor mínimo de reparação ao requerimento do ofendido. Logo, não cabe ensinar que o juiz deve fixá-lo sempre de ofício. O parágrafo único trata especificamente dos efeitos dos incisos II e III; não se deve estendê-lo indistintamente ao inciso I.\nExemplo: O ofendido requer reparação mínima e o juiz examina os prejuízos demonstrados. Isso difere de arbitramento automático sem pedido.\nTeste rápido — O valor mínimo deve ser fixado sempre de ofício? Não.\nBase conferida: Lei nº 13.869/2019 – Abuso de Autoridade, art. 4.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 13.869/2019 – Abuso de Autoridade",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+            "artigo": "4"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 64: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/abuso.html",
+            "sha256": "8cf5dd310d95336a5762c489716cf58b03808eb747f191662798e17e1cb59500",
+            "captured_at": "2026-10-16T15:47:29.573Z"
+          }
+        ],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+      "item_number": 92,
+      "previous_row_sha256": "09edf766712582b2e314ca70c794d2b2ccee947c6e10506bf3e82d01899bd144",
+      "published_row_sha256": "2f7257bce6bfcaa14f53113320ef05a62be350b7f24ff92f75f02630fd753532",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nMedidas protetivas são concedidas em cognição sumária; não dependem de prova inequívoca de autoria e materialidade, tipificação penal, ação judicial, inquérito ou boletim de ocorrência. Vigora a avaliação de risco prevista nos §§ 4º a 6º.\nExemplo: Relato da ofendida pode fundamentar tutela urgente, sem aguardar prova definitiva do crime. Ausência de risco deve ser apreciada nos termos da lei.\nTeste rápido — É obrigatório concluir o inquérito para proteger a vítima? Não.\nBase conferida: Lei 11.340/2006 — violência e proteção — texto oficial atualizado, art. 19.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.340/2006 — violência e proteção — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "artigo": "19"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 92: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/mp.html",
+            "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+            "captured_at": "2026-10-16T15:48:04.594403+00:00",
+            "encoding": "UTF-16LE BOM"
+          }
+        ],
+        "official_pdf_page": 11
+      }
+    },
+    {
+      "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+      "item_number": 76,
+      "previous_row_sha256": "8dd8b5d7c58f12303f7bf8e04fd591aa94dba116c7ae33bc4331267d14e38993",
+      "published_row_sha256": "b5f2bc8b5ed80c0a5aeb0b29ac1ec02edbfb7e0ad214d7c3aac9a0a97353ee9e",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA LC 105 permite exame fiscal de documentos e registros financeiros quando houver processo administrativo instaurado ou procedimento fiscal em curso e o exame for considerado indispensável pela autoridade competente. As informações continuam protegidas por sigilo: não se tornam públicas.\nExemplo: Fiscalização regularmente instaurada e exame indispensável não se confundem com divulgação irrestrita de extratos bancários.\nTeste rápido — Ter acesso fiscal elimina o dever de sigilo? Não.\nBase conferida: LC 105/2001, art. 6.",
+        "legal_basis": [
+          {
+            "title": "LC 105/2001",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+            "artigo": "6"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 76: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/sigilo.html",
+            "sha256": "0e8194ed9c5daa1778e0fbca4962c84b4a989defee67430006ea972243b88740",
+            "captured_at": "2026-10-16T15:47:32.301Z"
+          }
+        ],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+      "item_number": 100,
+      "previous_row_sha256": "7a378c651144c4df38cb07736691aecbbef8ada5eab5bfb5b0d56746f99e7730",
+      "published_row_sha256": "d03d5284a4a8fa8f943fb869464f071c5cb02cec7d7ce422226bad2eea98a20d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA ação controlada prevista na Lei de Drogas admite não atuação imediata para identificar mais integrantes, mediante autorização judicial e oitiva do MP. O parágrafo único exige conhecimento do itinerário provável e identificação dos agentes do delito ou colaboradores.\nExemplo: Acompanhar entrega previamente identificada pode ampliar a investigação; simplesmente deixar de agir sem autorização não atende ao dispositivo.\nTeste rápido — A polícia pode aplicar essa técnica livremente, sem juiz? Não.\nBase conferida: Lei nº 11.343/2006 – Lei de Drogas, art. 53.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 11.343/2006 – Lei de Drogas",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+            "artigo": "53"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0d4c34ba-0268-4d36-8882-0c0139af75e3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 100: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/drogas.html",
+            "sha256": "38a8e787bc643b575e482931a1b4b8b1b16b5bff63d8dd64346385b7390bc617",
+            "captured_at": "2026-10-16T15:47:31.180Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "74436292-ad87-456d-870a-f8702db04364",
+      "item_number": 102,
+      "previous_row_sha256": "f2bb1f7b9fd2a5b0903907a5a70bde352ae87356152ae421bdfae8d0d456a1a2",
+      "published_row_sha256": "f657828c3e976be319711ba298ce2c6262536b80725c01bddfe82c817b4cc2b4",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nSe a prisão temporária for representada pela autoridade policial, o juiz deve ouvir o MP antes de decidir. A necessidade alegada da custódia não elimina esse procedimento nem os demais requisitos legais.\nExemplo: Delegado representa pela temporária: o juiz ouve o MP antes da decisão. Requerimento feito pelo próprio MP é situação diferente.\nTeste rápido — A urgência permite ignorar o § 1º do art. 2º? Não.\nBase conferida: Lei nº 7.960/1989 – Prisão Temporária, art. 2.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 7.960/1989 – Prisão Temporária",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+            "artigo": "2"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 102: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/temp.html",
+            "sha256": "348b6d306b1d3928df54b40b75ca274517780df40d321a5159f8f35a7ab4612c",
+            "captured_at": "2026-10-16T15:47:31.095Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+      "item_number": 106,
+      "previous_row_sha256": "bb30aaaa8983c4d612ac4f43182cf60c73ff6f093d32fea23d974726190d5c6d",
+      "published_row_sha256": "45c3ae80aaa524440507ec3c980cb88b35cd72b345096d6bb28872891edfd6f9",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA Lei de Crimes Ambientais admite aplicação subsidiária do CP. Não existe afastamento geral das regras de prescrição porque o acusado é pessoa jurídica. O cálculo exige distinguir fase processual, pena abstrata ou aplicada e multa isolada ou cumulativa.\nExemplo: Pessoa jurídica condenada por crime ambiental não recebe automaticamente um regime prescricional autônomo inventado pela defesa. Deve-se verificar a regra penal cabível.\nTeste rápido — O art. 79 afasta a aplicação do CP às pessoas jurídicas? Não.\nBase conferida: Lei nº 9.605/1998 – Crimes Ambientais, art. 79; Código Penal – Decreto-Lei nº 2.848/1940, art. 109; Código Penal – Decreto-Lei nº 2.848/1940, art. 114.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 9.605/1998 – Crimes Ambientais",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+            "artigo": "79"
+          },
+          {
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "109"
+          },
+          {
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "114"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 106: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/amb.html",
+            "sha256": "c0884bcc6197203c2e933811e8bdf904bfaee2d7ec7f4cee1bb7d8be3970daf5",
+            "captured_at": "2026-10-16T15:47:32.351Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 13
+      }
+    },
+    {
+      "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+      "item_number": 52,
+      "previous_row_sha256": "3d84e0805bcf1614076061db3079d59ee8896d54a7d868699a70172c0171141e",
+      "published_row_sha256": "991034e058bcdc1a7c9d8b87a1fac253daa2b205324e89f2370780e3a5f283d8",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nEm regra, despesas feitas pelo credor para participar da recuperação ou falência não são exigíveis do devedor. A lei ressalva custas judiciais decorrentes de litígio com o devedor.\nExemplo: Despesa ordinária para acompanhar a recuperação não se transfere automaticamente ao devedor; custas do litígio seguem a ressalva legal.\nTeste rápido — A exceção das custas do litígio deve ser lembrada? Sim.\nBase conferida: Lei 11.101/2005, art. 5.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.101/2005",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+            "artigo": "5"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 52: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/fal.html",
+            "sha256": "a7ba25bd7b4b39d553edfa597b5e78923705ceac1f4b7acd5c210145af1d31ed",
+            "captured_at": "2026-10-16T15:47:28.992Z"
+          }
+        ],
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+      "item_number": 49,
+      "previous_row_sha256": "94df7ab5e53768ff46dee82b7a031cf58287c67c60a8c4a7c1c1a8471c2357ea",
+      "published_row_sha256": "ff65768af0ee8f932d442b996bc77cec9bd11a028f47a5b9a8b0b92371194a1b",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNa sociedade em nome coletivo, os sócios respondem solidária e ilimitadamente pelas obrigações sociais. A limitação pactuada entre eles regula a relação interna, sem afastar a responsabilidade perante terceiros.\nExemplo: Dois sócios dividem internamente um débito em percentuais; esse ajuste não elimina a garantia legal do credor externo.\nTeste rápido — O acordo interno pode ser imposto automaticamente ao credor? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 1039.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1039"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 49: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+      "item_number": 11,
+      "previous_row_sha256": "3da3f206cd31f6a9212c24b7d497e62ff247865e02743c0daa0fe81dd843518d",
+      "published_row_sha256": "11cc4c8d54cd4f87d8ae5fef327d71246055e373a9a5ecddbac6923de115ab2e",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA avocação é excepcional, temporária, justificada por motivos relevantes e relativa a competência de órgão hierarquicamente inferior. A lei não autoriza avocação permanente de competência exclusiva.\nExemplo: Uma autoridade pode avocar temporariamente uma atribuição delegável por razões justificadas; não assumir para sempre uma competência exclusiva alheia.\nTeste rápido — A palavra permanente está correta? Não: contraria o art. 15.\nBase conferida: Lei nº 9.784/1999 – Processo Administrativo Federal, art. 15.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 9.784/1999 – Processo Administrativo Federal",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "artigo": "15"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 11: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/proc.html",
+            "sha256": "2988f1a20fd8355c479fd52b3699c43167599e0c0434c45395f70d0656e04313",
+            "captured_at": "2026-10-16T15:47:28.122Z"
+          }
+        ],
+        "official_pdf_page": 2
+      }
+    },
+    {
+      "id": "a1db110e-599c-4503-886b-a2483ac92082",
+      "item_number": 53,
+      "previous_row_sha256": "622acec005d24007220b551adad6586ee5e18cff3238cb2b24729449f5d6610a",
+      "published_row_sha256": "95be790c3e834205ef890e1764d65b859c8aebaa6b19e3adc5e31c2157292ec0",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nAlienar bens conforme plano de recuperação não é, por si só, causa de falência. A lei distingue meios lícitos de recuperação de atos fraudulentos, liquidação precipitada ou descumprimento das condições legais.\nExemplo: Venda de ativo prevista no plano pode financiar a recuperação. Desvio fraudulento de bens para prejudicar credores é outra situação.\nTeste rápido — Toda venda prevista no plano decreta falência? Não.\nBase conferida: Lei 11.101/2005, art. 50; Lei 11.101/2005, art. 94.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.101/2005",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+            "artigo": "50"
+          },
+          {
+            "title": "Lei 11.101/2005",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+            "artigo": "94"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 53: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/fal.html",
+            "sha256": "a7ba25bd7b4b39d553edfa597b5e78923705ceac1f4b7acd5c210145af1d31ed",
+            "captured_at": "2026-10-16T15:47:28.992Z"
+          }
+        ],
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+      "item_number": 44,
+      "previous_row_sha256": "1d80ea983befc920c0d9ead0f119fd0f7e49c8fd1e099839c407b24d1666028c",
+      "published_row_sha256": "2fbcff38676f35dd5329b7f4da36e07b7854d87bea063d5e4388091673ee68a1",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO possuidor de má-fé responde inclusive por perda ou deterioração acidental, salvo se provar que ocorreria do mesmo modo com o bem na posse de quem o reivindica. O item preserva a exceção.\nExemplo: Incêndio que atingiria igualmente o bem com o proprietário pode afastar essa responsabilidade se houver prova da exceção.\nTeste rápido — Caso fortuito sempre libera o possuidor de má-fé? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 1218.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1218"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 44: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+      "item_number": 99,
+      "previous_row_sha256": "bc39b3e44b3cb0ffad50c09789141063ebbbc141da2cc29758138b881b3829ec",
+      "published_row_sha256": "044dfb1f545381524b25f1bd0aa1707ca65b3dffd3d896bccb1a7c84060fe1e6",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA lavagem tem persecução autônoma em relação à infração antecedente. Não exige condenação antecedente prévia; isso não elimina a necessidade de elementos que indiquem origem ilícita. A denúncia exige indícios suficientes do antecedente, e constrições dependem dos pressupostos e do controle judicial legais.\nExemplo: Investigação da lavagem pode avançar antes da condenação pelo antecedente, mas não autoriza indiciar ou bloquear bens sem base indiciária.\nTeste rápido — Autonomia significa ausência de qualquer indício da origem ilícita? Não.\nBase conferida: Lei 9.613/1998 — ocultação e infração antecedente — texto oficial atualizado, art. 2; Lei 9.613/1998 — ocultação e infração antecedente — texto oficial atualizado, art. 4.",
+        "legal_basis": [
+          {
+            "title": "Lei 9.613/1998 — ocultação e infração antecedente — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+            "artigo": "2"
+          },
+          {
+            "title": "Lei 9.613/1998 — ocultação e infração antecedente — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+            "artigo": "4"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0d4c34ba-0268-4d36-8882-0c0139af75e3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 99: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lav.html",
+            "sha256": "38c2098106588099aa3cbe512fcd5f575f0cdde7c8b70f13f03e27412e7183e3",
+            "captured_at": "2026-10-16T15:47:31.567Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+      "item_number": 66,
+      "previous_row_sha256": "47e47702025eb0a1a5d1ad2eddaf0ae43a89e90e3f1e6155802e57c3855c9b60",
+      "published_row_sha256": "2f6cc763fb4506cb171e2956e65fb0d1b764e62af93f684b69218c97e7bf752f",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNo concurso de crimes, as penas de multa são aplicadas distinta e integralmente. Não se aplica automaticamente à multa o aumento fracionário usado para calcular a pena privativa de liberdade no concurso formal.\nExemplo: Se dois delitos têm multas próprias, calcula-se cada uma integralmente em vez de aplicar apenas uma com aumento.\nTeste rápido — A multa segue necessariamente a mesma exasperação da prisão? Não.\nBase conferida: Código Penal – Decreto-Lei nº 2.848/1940, art. 72.",
+        "legal_basis": [
+          {
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "72"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 66: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 7
+      }
+    },
+    {
+      "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+      "item_number": 26,
+      "previous_row_sha256": "f66a554ca1c6be4368112ab17816495bb4d5331f4090cf60fd42cc7768ea0102",
+      "published_row_sha256": "dceb52790ab8260647a911cd0dc5c3297a99249b47a515d9a110115cde5c65d7",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO Distrito Federal acumula competências legislativas reservadas aos estados e municípios. Isso não permite sua divisão em municípios nem elimina competências exclusivas da União.\nExemplo: O DF legisla sobre matérias estaduais e locais municipais. Brasília não se transforma por isso em município integrante do DF.\nTeste rápido — O DF reúne competências legislativas estaduais e municipais? Sim.\nBase conferida: Constituição da República Federativa do Brasil de 1988, art. 32.",
+        "legal_basis": [
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "32"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 26: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+      "item_number": 93,
+      "previous_row_sha256": "7e1e90031484a00a7eb66b2a555d3de6e930f108ff801d2a5f9a4ad37be5bc77",
+      "published_row_sha256": "27d9bc674c9aea29193ab302f31490d199f686bd72160bbcfcc2eb6e9f09792d",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA revisão ou revogação da medida judicial compete ao juízo. O delegado comunica fatos supervenientes e encaminha os elementos; a concordância da vítima não lhe transfere poder para cancelar ordem judicial. Não confunda isso com hipóteses legais de afastamento emergencial.\nExemplo: A vítima informa reconciliação à delegacia: a ordem não é cancelada ali. O juízo deve examinar a proteção ainda necessária.\nTeste rápido — O delegado pode cancelar sozinho medida judicial com anuência da vítima? Não.\nBase conferida: Lei 11.340/2006 — violência e proteção — texto oficial atualizado, art. 19.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.340/2006 — violência e proteção — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "artigo": "19"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 93: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/mp.html",
+            "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+            "captured_at": "2026-10-16T15:48:04.594403+00:00",
+            "encoding": "UTF-16LE BOM"
+          }
+        ],
+        "official_pdf_page": 11
+      }
+    },
+    {
+      "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+      "item_number": 38,
+      "previous_row_sha256": "7f08d24100a97f8a654975ac80b7586bec38acce6caaf46b7eab708307eacd79",
+      "published_row_sha256": "564f617a6fb1d8a177135504780a3c3c178900e83da0426ce12c4b09ee94b088",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nQuem alterna residência em diversos lugares tem por domicílio qualquer deles. Para relações profissionais, também importa o lugar de exercício da profissão. O item impõe uma exclusividade não prevista.\nExemplo: Quem alterna residências entre duas cidades pode ter qualquer delas como domicílio. Relação profissional pode exigir outro recorte.\nTeste rápido — É obrigatório escolher apenas a residência mais habitual? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 71; Código Civil — alimentos e revisão, art. 72.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "71"
+          },
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "72"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 38: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+      "item_number": 47,
+      "previous_row_sha256": "1365d3cd601990bc6d461998cee567b4eaaed865474fe0d64fea06efbdc74d42",
+      "published_row_sha256": "5bf089ca42eb762989c0d71d84d77c5f9079f20de8f251bb64621a4dbe39e0b7",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA mera denúncia por crime falimentar não equivale à condenação impeditiva. O art. 1.011, § 1º, prevê impedimentos ligados às condenações e à duração de seus efeitos, sem dispensar outros impedimentos legais.\nExemplo: Administrador apenas denunciado não sofre automaticamente a mesma restrição de quem foi condenado nos termos do dispositivo.\nTeste rápido — Denúncia e condenação produzem sempre o mesmo impedimento? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 1011.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1011"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 47: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+      "item_number": 35,
+      "previous_row_sha256": "4fe7b659bdfefb02deeeb9f388d2df34ce5a6983b7998b4e72511da3f60e6b98",
+      "published_row_sha256": "ef5b03675c963b054f0ccb1cc59936254bc6777abfa8e4087c44656142f30bed",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nQuando cabível, a decisão de invalidação indica condições de regularização proporcionais e equânimes, sem impor ônus ou perdas anormais ou excessivos aos atingidos.\nExemplo: A correção de uma irregularidade deve avaliar um modo legal de regularizar efeitos, sem transferir perdas extraordinárias a quem foi atingido.\nTeste rápido — Regularização, quando cabível, deve respeitar proporcionalidade? Sim.\nBase conferida: LINDB, art. 21.",
+        "legal_basis": [
+          {
+            "title": "LINDB",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "artigo": "21"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 35: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lindb.html",
+            "sha256": "009d172a8387b3dd5d63b03fb7c821189693768e98f88055ea6e41a20dcd9529",
+            "captured_at": "2026-10-16T15:47:26.694Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+      "item_number": 1,
+      "previous_row_sha256": "ca3a04ce57d761c7ed8358b5290beaac9e08f893e2d5310148379ebb30f508af",
+      "published_row_sha256": "c5be55f0d68a1a89f63fa0277f43bd722339bcc3c1296780c3f28db775bbd1e3",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO PNCP atende aos entes federativos, não apenas à União. A divulgação centralizada dos atos exigidos é obrigatória; o uso do portal para realizar contratações é facultativo nos termos legais.\nExemplo: Um município também divulga atos exigidos no PNCP. Isso não o obriga a realizar toda contratação dentro do portal.\nTeste rápido — O PNCP é exclusivo da União? Não: a exclusividade torna o item errado.\nBase conferida: Lei nº 14.133/2021 – Licitações e Contratos Administrativos, art. 174.",
+        "legal_basis": [
+          {
+            "title": "Lei nº 14.133/2021 – Licitações e Contratos Administrativos",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+            "artigo": "174"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 1: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/licit.html",
+            "sha256": "bfdb407b3b78ee9b53f2916a6f1daa7e843f40d3fb191a63b542629271e78eba",
+            "captured_at": "2026-10-16T15:47:29.000Z"
+          }
+        ],
+        "official_pdf_page": 1
+      }
+    },
+    {
+      "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+      "item_number": 101,
+      "previous_row_sha256": "224522be2b684b30896055c33019d4564f4514c1abdb9313c7b66e221057ab81",
+      "published_row_sha256": "ac7455b1ba9586917c7ec3204d2d9820212f72067359caf5a9d9ba3c1531a339",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nInafiançabilidade não impõe prisão preventiva automática. Ausentes os requisitos cautelares, a liberdade provisória deve ser examinada, inclusive com outras cautelares cabíveis. A mera classificação como hediondo não substitui fundamentos concretos da prisão.\nExemplo: Um delito inafiançável impede fiança, mas não torna toda prisão processual obrigatória. Fiança e liberdade provisória são conceitos distintos.\nTeste rápido — Inafiançável é sinônimo de prisão preventiva obrigatória? Não.\nBase conferida: Código de Processo Penal – Decreto-Lei nº 3.689/1941, art. 321; Código de Processo Penal – Decreto-Lei nº 3.689/1941, art. 323; Constituição da República Federativa do Brasil de 1988, art. 5.",
+        "legal_basis": [
+          {
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "321"
+          },
+          {
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "323"
+          },
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0a520052-4be4-410b-8444-88a6b8cbd5eb"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 101: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+      "item_number": 37,
+      "previous_row_sha256": "e82c5ae7243efa0666e6329b6b37df5b6ed023c3c85b974b15c7caa325d0fc7a",
+      "published_row_sha256": "8182cd2a06f7e4fa0f89b6f5966bf1647d74095d7183a1376001f4437659fd86",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO pseudônimo adotado para atividades lícitas recebe a proteção conferida ao nome. Ele identifica a pessoa em determinada atividade e não se confunde com anonimato.\nExemplo: Escritor que assina com nome artístico lícito não perde a proteção jurídica de sua identificação.\nTeste rápido — Pseudônimo lícito fica sem proteção? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 19.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "19"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "2ddf0fb4-c0b0-4496-a603-c2c163a2d5f8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 37: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    },
+    {
+      "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+      "item_number": 95,
+      "previous_row_sha256": "8ed37377c16463ec61b0250d298d852ee27c716b972c3142b9a3cce2f07dadd2",
+      "published_row_sha256": "495321a6c98d98b6c2c319b9fadfdc1b37865ba77764e9fd3b00accc68e5f920",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNa hipótese legal de risco e município que não seja sede de comarca, o delegado pode determinar afastamento imediato. Deve comunicar o juiz em até 24 horas; o juiz decide em igual prazo, com ciência concomitante ao MP.\nExemplo: No município sem sede de comarca, a medida urgente não precisa aguardar o juiz, mas deve ser comunicada e submetida ao controle judicial no prazo próprio.\nTeste rápido — A Henry Borel dá 48 horas para a comunicação ao juiz? Não: são até 24 horas para comunicar e igual prazo para a decisão judicial.\nBase conferida: Lei 14.344/2022 — proteção contra violência doméstica — texto oficial atualizado, art. 14.",
+        "legal_basis": [
+          {
+            "title": "Lei 14.344/2022 — proteção contra violência doméstica — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+            "artigo": "14"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 95: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/henry.html",
+            "sha256": "abfc774bf2260b84ee467338ebdc5cfade6fc9c47cd33c4be3e5afc36d804597",
+            "captured_at": "2026-10-16T15:47:29.825Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+      "item_number": 110,
+      "previous_row_sha256": "7995a1c388fec2d70584ae327dc7bec6fbed94380456f0221f2333ac76d8e7f7",
+      "published_row_sha256": "083f063035a9bf06f41d77308bd19ce39db03b2b28bc0b161beda748662f180c",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNo SNUC, o CONAMA é órgão consultivo e deliberativo com atribuição de acompanhar a implementação do sistema. No SISNAMA também assessora, estuda e propõe diretrizes ao Conselho de Governo, além de suas atribuições deliberativas.\nExemplo: O mesmo conselho integra dois sistemas, com funções descritas em leis distintas. Não se deve trocar a função do conselho pela de órgão executor.\nTeste rápido — Participar dos dois sistemas é incompatível? Não.\nBase conferida: Lei 9.985/2000, art. 6; Lei 6.938/1981, art. 6.",
+        "legal_basis": [
+          {
+            "title": "Lei 9.985/2000",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+            "artigo": "6"
+          },
+          {
+            "title": "Lei 6.938/1981",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+            "artigo": "6"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 110: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/snuc.html",
+            "sha256": "e0ca39f5051dc21bf1b18d357af2be9f67025be049c839756cc6507fe219ff77",
+            "captured_at": "2026-10-16T15:47:32.347Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/pma.html",
+            "sha256": "88562a355df317439f66cb6f78e5ed5fa839f3f09f5b9eef14a064499324c103",
+            "captured_at": "2026-10-16T15:47:32.583Z"
+          }
+        ],
+        "official_pdf_page": 14
+      }
+    },
+    {
+      "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+      "item_number": 50,
+      "previous_row_sha256": "3855c935efe7f6197d419106305b547a3adf1b1130db16141a0b389331d7f2c8",
+      "published_row_sha256": "5ca6918daa5229149ef5a1a42a2e57373c37607c18e8cbc49df32e1d8b619665",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nEstabelecimento é o complexo organizado de bens destinado ao exercício da empresa. Não se confunde apenas com o imóvel nem com a própria atividade empresarial.\nExemplo: Uma loja reúne equipamentos, mercadorias e outros bens organizados. O prédio é apenas um possível componente.\nTeste rápido — Estabelecimento significa somente o local físico? Não.\nBase conferida: Código Civil — alimentos e revisão, art. 1142.",
+        "legal_basis": [
+          {
+            "title": "Código Civil — alimentos e revisão",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1142"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 50: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "official_pdf_page": 5
+      }
+    },
+    {
+      "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+      "item_number": 54,
+      "previous_row_sha256": "f5f255413dabb882ad0a3e7d9ca1163d32c4120e2e393295b8ec71be3b755a0a",
+      "published_row_sha256": "abbc6d16f62588b26e4deb28e523384a0a473b33a59f66289bc3c3de03e34abc",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA Administração deve evitar abuso regulatório que impeça indevidamente novos competidores nacionais ou estrangeiros, salvo estrito cumprimento de previsão legal explícita. O item inverte esse dever.\nExemplo: Regra criada apenas para proteger empresas já instaladas pode restringir indevidamente a concorrência. Exigência legal legítima demanda análise própria.\nTeste rápido — A lei manda barrar novos competidores estrangeiros por princípio? Não.\nBase conferida: Lei 13.874/2019, art. 4.",
+        "legal_basis": [
+          {
+            "title": "Lei 13.874/2019",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+            "artigo": "4"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 54: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lib.html",
+            "sha256": "859c86041de518c0891fc15e92630d9bf9ab5b6055862194f2d6e7df18352259",
+            "captured_at": "2026-10-16T15:47:29.372Z"
+          }
+        ],
+        "official_pdf_page": 6
+      }
+    },
+    {
+      "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+      "item_number": 98,
+      "previous_row_sha256": "5c3fe5042e244798973cfa575b5c094866285afdb7e8a6da8159d9c2fd753741",
+      "published_row_sha256": "30e640c40f5c19e2b1b18f3a900a44a059dcafc02e9baa619fe77c9e28781e09",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nColaboração premiada pode ocorrer durante a investigação e em outras fases da persecução, conforme a lei. Não exige denúncia já oferecida. Devem ser observados os sujeitos legitimados, a assistência defensiva e o controle judicial pertinente.\nExemplo: Acordo durante inquérito não é inválido apenas por anteceder a denúncia. Isso não dispensa voluntariedade e controle de legalidade.\nTeste rápido — A colaboração só existe depois da denúncia? Não.\nBase conferida: Lei 12.850/2013 — organização e colaboração — texto oficial atualizado, art. 3; Lei 12.850/2013 — organização e colaboração — texto oficial atualizado, art. 4.",
+        "legal_basis": [
+          {
+            "title": "Lei 12.850/2013 — organização e colaboração — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "artigo": "3"
+          },
+          {
+            "title": "Lei 12.850/2013 — organização e colaboração — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "artigo": "4"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "0d4c34ba-0268-4d36-8882-0c0139af75e3"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 98: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/org.html",
+            "sha256": "2e7ea1d14a0e3f95a2d4e940481e8aee96db5da7104edde082c7fd99129bbd6f",
+            "captured_at": "2026-10-16T15:47:30.690Z"
+          }
+        ],
+        "official_pdf_page": 12
+      }
+    },
+    {
+      "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+      "item_number": 94,
+      "previous_row_sha256": "ac793d1a5eceeff96c49edb8d06d0ed45e90e7f233a3c4abf58cc3d7f75fd913",
+      "published_row_sha256": "7e50897034616d163c1e6d8098d008b7fbe17426738af0ec7157e8535b55a22e",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nDescumprir decisão judicial concessiva de medida protetiva é crime autônomo. A lei não condiciona sua apuração à representação nem ao prosseguimento do inquérito sobre a violência inicial. Não se confunde com a resposta penal ao delito originário.\nExemplo: Mesmo que a investigação inicial tenha outro desfecho, a violação de ordem protetiva vigente exige apuração própria.\nTeste rápido — O delito depende obrigatoriamente da continuidade do inquérito originário? Não.\nBase conferida: Lei 11.340/2006 — violência e proteção — texto oficial atualizado, art. 24-A; Código de Processo Penal – Decreto-Lei nº 3.689/1941, art. 24.",
+        "legal_basis": [
+          {
+            "title": "Lei 11.340/2006 — violência e proteção — texto oficial atualizado",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "artigo": "24-A"
+          },
+          {
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "24"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "8dc4f121-41d9-4287-bb84-a9812a05d5b9"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 94: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/mp.html",
+            "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587",
+            "captured_at": "2026-10-16T15:48:04.594403+00:00",
+            "encoding": "UTF-16LE BOM"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "official_pdf_page": 11
+      }
+    },
+    {
+      "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+      "item_number": 70,
+      "previous_row_sha256": "9ddc5c18a6024cec88e6b3b2bf343abf54d936c8bae2966226d795fb2b486e55",
+      "published_row_sha256": "230ae694a69921f8fe82151b43b0c0b5bd61c2b88319b1370e2ade4e7fd6f693",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nPara efeitos penais de falsificação, o CP equipara a documento público os títulos ao portador ou transmissíveis por endosso, ações de sociedade comercial, livros mercantis e testamento particular. É equiparação para o tipo penal.\nExemplo: Alterar materialmente testamento particular pode enquadrar-se no art. 297 por essa equiparação, embora o documento se chame particular.\nTeste rápido — O nome particular impede a equiparação penal do testamento? Não.\nBase conferida: Código Penal – Decreto-Lei nº 2.848/1940, art. 297.",
+        "legal_basis": [
+          {
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "297"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5b2d8130-5d8b-459f-b5f0-3928b4aadd93"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 70: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "official_pdf_page": 8
+      }
+    },
+    {
+      "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+      "item_number": 25,
+      "previous_row_sha256": "69e58f0537d2d0d561ae4d6c562e597f7ec74bd47259aff0360aa3bb1a1b6331",
+      "published_row_sha256": "a0c3693b9c24e62bc95c3737249bda66df6d9c9abc70b4b41eaf8c4cbfa1f566",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nLei federal superveniente sobre normas gerais suspende a eficácia da lei estadual no ponto contrário; não a revoga. São competências de entes distintos no âmbito concorrente.\nExemplo: Uma regra estadual conflitante deixa de produzir efeitos enquanto incidir a norma geral federal. Não se afirma que o Congresso revogou a lei estadual.\nTeste rápido — A consequência constitucional é revogação? Não: suspensão da eficácia.\nBase conferida: Constituição da República Federativa do Brasil de 1988, art. 24.",
+        "legal_basis": [
+          {
+            "title": "Constituição da República Federativa do Brasil de 1988",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "24"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 25: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "official_pdf_page": 3
+      }
+    },
+    {
+      "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+      "item_number": 34,
+      "previous_row_sha256": "fe3a8163f6853074e43efdce4b3ce45f61930bb0836364c43bda4f5110e88e47",
+      "published_row_sha256": "8b104b010830a14099ef7e07cf45ec92e2e079b823693fb719b33efe64821b50",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA invalidação deve indicar expressamente suas consequências jurídicas e administrativas. A palavra prescinde inverte a obrigação prevista na LINDB.\nExemplo: Ao invalidar um contrato, a decisão deve enfrentar as consequências para os serviços e obrigações envolvidos.\nTeste rápido — A decisão pode dispensar a análise das consequências? Não.\nBase conferida: LINDB, art. 21.",
+        "legal_basis": [
+          {
+            "title": "LINDB",
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "artigo": "21"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T15:51:47.267181+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item 34: texto normalizado e letra confrontados com caderno e gabarito definitivo oficiais; conclusão examinada nos dispositivos capturados, com exemplo e fixação individual. Não altera status nem a identidade do item.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lindb.html",
+            "sha256": "009d172a8387b3dd5d63b03fb7c821189693768e98f88055ea6e41a20dcd9529",
+            "captured_at": "2026-10-16T15:47:26.694Z"
+          }
+        ],
+        "official_pdf_page": 4
+      }
+    }
+  ]
+}

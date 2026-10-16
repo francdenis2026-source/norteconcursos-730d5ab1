@@ -42,7 +42,10 @@ export function validateReview(pack) {
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
     if (improvement) {
-      if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
+      if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at','legal_basis','current_syllabus_topic_id'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
+      // Legacy active rows may lack the explicit current pointer required by
+      // the database guard. Confirm the existing topic; never reassign it here.
+      if ('current_syllabus_topic_id' in patch && (!patch.current_syllabus_topic_id || patch.current_syllabus_topic_id!==(expected.current_syllabus_topic_id || expected.syllabus_topic_id))) throw Error('Explanation improvement must preserve the existing syllabus topic');
       if (!(patch.review_note || patch.explanation)?.trim() || (patch.review_note || patch.explanation).length<200) throw Error('Substantive explanation required');
     } else if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
     if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
