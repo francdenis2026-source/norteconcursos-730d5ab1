@@ -213,7 +213,7 @@ function ExamPanoramaPage() {
         image="field-map"
         title={
           <>
-            Panorama e <em>tendências</em>
+            Panorama das <em>provas</em>
           </>
         }
         description="Entre na sua conta para ver o que mais caiu nas provas já realizadas, por esfera e por carreira."
