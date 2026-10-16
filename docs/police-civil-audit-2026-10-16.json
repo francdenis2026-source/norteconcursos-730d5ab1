@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-16T16:41:33.041Z",
-  "generated_at": "2026-10-16T16:41:55.966Z",
+  "snapshot_at": "2026-10-16T20:26:42.248Z",
+  "generated_at": "2026-10-16T20:27:45.948Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -256,12 +256,10 @@
       "status": {
         "active": 111
       },
-      "active_app_eligible": 93,
-      "active_with_catalog_flags": 18,
-      "active_without_example_marker": 18,
-      "flags": {
-        "app_gate_rejected": 18
-      }
+      "active_app_eligible": 111,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
     },
     {
       "exam": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil | 2022 | Agente de Polícia Civil | CEBRASPE",
@@ -424,12 +422,10 @@
       "status": {
         "active": 100
       },
-      "active_app_eligible": 95,
-      "active_with_catalog_flags": 5,
+      "active_app_eligible": 100,
+      "active_with_catalog_flags": 0,
       "active_without_example_marker": 100,
-      "flags": {
-        "app_gate_rejected": 5
-      }
+      "flags": {}
     },
     {
       "exam": "Polícia Civil do Estado do Paraná | 2026 | Delegado de Polícia | FGV",
@@ -438,12 +434,10 @@
         "active": 98,
         "archived": 2
       },
-      "active_app_eligible": 87,
-      "active_with_catalog_flags": 11,
+      "active_app_eligible": 98,
+      "active_with_catalog_flags": 0,
       "active_without_example_marker": 96,
-      "flags": {
-        "app_gate_rejected": 11
-      }
+      "flags": {}
     },
     {
       "exam": "Polícia Civil do Estado do Paraná | 2026 | Papiloscopista Policial | FGV",
@@ -451,12 +445,10 @@
       "status": {
         "active": 100
       },
-      "active_app_eligible": 95,
-      "active_with_catalog_flags": 5,
+      "active_app_eligible": 100,
+      "active_with_catalog_flags": 0,
       "active_without_example_marker": 100,
-      "flags": {
-        "app_gate_rejected": 5
-      }
+      "flags": {}
     },
     {
       "exam": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
@@ -551,23 +543,23 @@
       "annulled": 37,
       "obsolete": 6
     },
-    "active_app_eligible": 2012,
-    "active_with_catalog_flags": 1931,
-    "active_without_example_marker": 2312,
+    "active_app_eligible": 2051,
+    "active_with_catalog_flags": 1892,
+    "active_without_example_marker": 2294,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 93,
-    "newly_published": 93,
-    "scope": "PCDF Delegado 2026: individual legal/pedagogical review and two limited first-aid reviews; eight omitted shared contexts restored. Original isolated items, answers, raw extraction and source IDs preserved. Not a certificate of all PC exams.",
-    "remaining_pcdf_current_items_this_campaign": 18,
+    "newly_reviewed": 111,
+    "newly_published": 111,
+    "scope": "All 111 current canonical PCDF Delegado 2026 items individually reviewed; eight shared contexts restored. Nine annulled official items are not introduced as active. Archived aliases preserved. Does not certify every doctrine, medical protocol or other PC exam.",
+    "remaining_pcdf_current_items_this_campaign": 0,
     "pending_under_review_all_pc": 234,
     "previous_pcpr_review": "b6a1672",
     "validation": {
-      "checked_at": "2026-10-16T16:41:37.143Z",
-      "audited": 93,
-      "eligible_audited": 93,
-      "other_pc_rows_preserved": 2875,
+      "checked_at": "2026-10-16T20:26:47.135Z",
+      "audited": 111,
+      "eligible_audited": 111,
+      "other_pc_rows_preserved": 2857,
       "concurrent_unrelated_pc_rows": [],
       "missing_pc_rows": [],
       "original_texts_answers_sources_subjects_statuses_preserved": false,
@@ -1038,10 +1030,100 @@
           "id": "fc05803c-c53e-4a7c-b98b-4bd1dd219c0b",
           "item_number": 119,
           "eligible": true
+        },
+        {
+          "id": "0ca16e52-8b0d-4f10-b90b-679a290d5ad9",
+          "item_number": 80,
+          "eligible": true
+        },
+        {
+          "id": "105ed9d5-c787-44c8-bb15-2d0bb91718cc",
+          "item_number": 84,
+          "eligible": true
+        },
+        {
+          "id": "3135eecf-e260-4632-9ca3-659a45b24037",
+          "item_number": 79,
+          "eligible": true
+        },
+        {
+          "id": "31a35825-1130-41ee-90c9-7272cf8454b0",
+          "item_number": 83,
+          "eligible": true
+        },
+        {
+          "id": "3739e072-2498-432a-bca5-7d7fcec0efe9",
+          "item_number": 86,
+          "eligible": true
+        },
+        {
+          "id": "3939fc83-b33a-4b23-b467-a30bb47f2144",
+          "item_number": 4,
+          "eligible": true
+        },
+        {
+          "id": "4a3799c5-0232-4421-ae7e-eef31f4fd73d",
+          "item_number": 51,
+          "eligible": true
+        },
+        {
+          "id": "5b94ad68-90b3-4252-9b58-0600c17da7b0",
+          "item_number": 82,
+          "eligible": true
+        },
+        {
+          "id": "5e621ddf-2343-4df4-8e75-43c255a0ef07",
+          "item_number": 118,
+          "eligible": true
+        },
+        {
+          "id": "667cb95c-a718-466b-8240-57a15326cf4a",
+          "item_number": 117,
+          "eligible": true
+        },
+        {
+          "id": "6b592bf4-381e-45f2-92cf-cee02867bf4c",
+          "item_number": 116,
+          "eligible": true
+        },
+        {
+          "id": "7e8098d6-64fd-4ffb-80b0-1642b9a0f0f0",
+          "item_number": 30,
+          "eligible": true
+        },
+        {
+          "id": "8b3d1164-61a8-4b69-8684-fd907613e88b",
+          "item_number": 18,
+          "eligible": true
+        },
+        {
+          "id": "8c8a15a0-9615-43d4-acb6-0798be589af4",
+          "item_number": 17,
+          "eligible": true
+        },
+        {
+          "id": "bfd3d161-5958-4f41-9e6a-944406c9a2d8",
+          "item_number": 21,
+          "eligible": true
+        },
+        {
+          "id": "cfbe9bdb-ba88-4905-a2f0-a779c0ee404e",
+          "item_number": 5,
+          "eligible": true
+        },
+        {
+          "id": "d80c4bdc-6887-496d-b9a7-f4fab4f11a40",
+          "item_number": 107,
+          "eligible": true
+        },
+        {
+          "id": "e54dc35b-2542-4f2b-87b6-57eeb102edc7",
+          "item_number": 73,
+          "eligible": true
         }
       ]
     },
-    "active_records_not_yet_editorially_reviewed_this_campaign": 2388,
+    "active_records_not_yet_editorially_reviewed_this_campaign": 2370,
     "coverage_note": "Uncovered by this campaign does not negate earlier reviews. Archived aliases and excluded questions remain separately accounted for."
   },
   "source_comparison_pcdf": {
@@ -1932,6 +2014,11 @@
       "sinj.df.gov.br",
       "drive.google.com"
     ],
-    "existing_custom_domains_preserved": 34
+    "existing_custom_domains_preserved": 34,
+    "pcdf_source_access_update": {
+      "checked_at": "2026-10-16T20:27:46.066523+00:00",
+      "sinj_access_verified": true,
+      "scope": "LC 840/2011 and Decree 42590/2021 retrieved from SINJ. Previous source-access failures are historical; this does not certify all other destinations."
+    }
   }
 }

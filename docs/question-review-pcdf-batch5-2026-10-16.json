@@ -1,0 +1,1500 @@
+{
+  "scope": "PCDF/2026: final 18 current items, cumulative 111. Canonical current set completed; not an audit of all PC exams or every possible jurisprudential/clinical detail.",
+  "checked_at": "2026-10-16T20:27:46.066523+00:00",
+  "publication": {
+    "dry_run": false,
+    "reviewed": 18,
+    "updated": [
+      "0ca16e52-8b0d-4f10-b90b-679a290d5ad9",
+      "105ed9d5-c787-44c8-bb15-2d0bb91718cc",
+      "3135eecf-e260-4632-9ca3-659a45b24037",
+      "31a35825-1130-41ee-90c9-7272cf8454b0",
+      "3739e072-2498-432a-bca5-7d7fcec0efe9",
+      "3939fc83-b33a-4b23-b467-a30bb47f2144",
+      "4a3799c5-0232-4421-ae7e-eef31f4fd73d",
+      "5b94ad68-90b3-4252-9b58-0600c17da7b0",
+      "5e621ddf-2343-4df4-8e75-43c255a0ef07",
+      "667cb95c-a718-466b-8240-57a15326cf4a",
+      "6b592bf4-381e-45f2-92cf-cee02867bf4c",
+      "7e8098d6-64fd-4ffb-80b0-1642b9a0f0f0",
+      "8b3d1164-61a8-4b69-8684-fd907613e88b",
+      "8c8a15a0-9615-43d4-acb6-0798be589af4",
+      "bfd3d161-5958-4f41-9e6a-944406c9a2d8",
+      "cfbe9bdb-ba88-4905-a2f0-a779c0ee404e",
+      "d80c4bdc-6887-496d-b9a7-f4fab4f11a40",
+      "e54dc35b-2542-4f2b-87b6-57eeb102edc7"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-16T20:25:53.084Z"
+  },
+  "validation": {
+    "checked_at": "2026-10-16T20:26:47.135Z",
+    "audited": 111,
+    "eligible_audited": 111,
+    "other_pc_rows_preserved": 2857,
+    "concurrent_unrelated_pc_rows": [],
+    "missing_pc_rows": [],
+    "original_texts_answers_sources_subjects_statuses_preserved": false,
+    "original_isolated_items_answers_sources_subjects_statuses_preserved": true,
+    "shared_contexts_restored": 8,
+    "items": [
+      {
+        "id": "077a09b9-0360-4fa6-adeb-549e0e6e1956",
+        "item_number": 46,
+        "eligible": true
+      },
+      {
+        "id": "0996b6a8-db43-4f78-8a95-d3a8d46e4bec",
+        "item_number": 15,
+        "eligible": true
+      },
+      {
+        "id": "0d3a3670-2094-4191-a3c8-6c652d992878",
+        "item_number": 27,
+        "eligible": true
+      },
+      {
+        "id": "16dcc49b-e5a5-4cbf-b66a-cf1442e819e1",
+        "item_number": 12,
+        "eligible": true
+      },
+      {
+        "id": "19bd7f4c-ce24-4779-b298-7cc7abe125a4",
+        "item_number": 68,
+        "eligible": true
+      },
+      {
+        "id": "19e72e2f-25e1-426b-b925-9f8998cdf035",
+        "item_number": 111,
+        "eligible": true
+      },
+      {
+        "id": "20bec0e2-8a24-4799-9959-fd3785f05890",
+        "item_number": 103,
+        "eligible": true
+      },
+      {
+        "id": "23409872-85b9-4547-9d76-ee840c996f70",
+        "item_number": 40,
+        "eligible": true
+      },
+      {
+        "id": "2a8d9594-b449-4aeb-a84e-714a2f7b892c",
+        "item_number": 77,
+        "eligible": true
+      },
+      {
+        "id": "35a284d4-cac0-4197-ab05-ecfa232af2d5",
+        "item_number": 33,
+        "eligible": true
+      },
+      {
+        "id": "40dd1271-f08b-4ad1-aaef-3cbb98560f94",
+        "item_number": 39,
+        "eligible": true
+      },
+      {
+        "id": "45756c9d-0823-432f-9a96-e0d9b812df1a",
+        "item_number": 43,
+        "eligible": true
+      },
+      {
+        "id": "48761397-e147-4db7-974e-e43d6c273ce8",
+        "item_number": 63,
+        "eligible": true
+      },
+      {
+        "id": "48d043f4-c8f0-4ae7-a94f-f03782ad08aa",
+        "item_number": 42,
+        "eligible": true
+      },
+      {
+        "id": "4e859c34-8639-42b2-9476-7feebd9e38ae",
+        "item_number": 97,
+        "eligible": true
+      },
+      {
+        "id": "541fe5a1-7e9f-40ca-b69a-b035466f3636",
+        "item_number": 96,
+        "eligible": true
+      },
+      {
+        "id": "5489bac2-6909-4bec-9e76-6b9449aa81b7",
+        "item_number": 78,
+        "eligible": true
+      },
+      {
+        "id": "5cbd19a5-54c9-48be-bef7-a0295d773a9e",
+        "item_number": 13,
+        "eligible": true
+      },
+      {
+        "id": "62798904-ee99-42ae-8fe8-36d91860d0a3",
+        "item_number": 36,
+        "eligible": true
+      },
+      {
+        "id": "64ba3664-592d-4713-baa9-58d3f675a82b",
+        "item_number": 8,
+        "eligible": true
+      },
+      {
+        "id": "6b3607c6-47f7-457c-8be8-ab2eaae7352b",
+        "item_number": 64,
+        "eligible": true
+      },
+      {
+        "id": "6bd3e6cb-f7e9-4646-ad1b-a67dbfc1004a",
+        "item_number": 92,
+        "eligible": true
+      },
+      {
+        "id": "6f2d5ade-1771-4900-8c98-9613ebbcc162",
+        "item_number": 76,
+        "eligible": true
+      },
+      {
+        "id": "7365a9a6-434c-4037-a7a2-d59c3abbd97c",
+        "item_number": 100,
+        "eligible": true
+      },
+      {
+        "id": "74436292-ad87-456d-870a-f8702db04364",
+        "item_number": 102,
+        "eligible": true
+      },
+      {
+        "id": "76b211e3-4c6f-4832-8631-ef6bee8ba444",
+        "item_number": 106,
+        "eligible": true
+      },
+      {
+        "id": "8da1a2dc-9e0a-473c-9e6a-bb3e4d8bc64e",
+        "item_number": 52,
+        "eligible": true
+      },
+      {
+        "id": "9361073b-b6e9-4f07-b363-bdce9196334b",
+        "item_number": 49,
+        "eligible": true
+      },
+      {
+        "id": "9e143f79-e54b-4b2d-8b2b-d708b574d3b0",
+        "item_number": 11,
+        "eligible": true
+      },
+      {
+        "id": "a1db110e-599c-4503-886b-a2483ac92082",
+        "item_number": 53,
+        "eligible": true
+      },
+      {
+        "id": "ab79729e-4416-4aa4-9364-2fdf9db22d75",
+        "item_number": 44,
+        "eligible": true
+      },
+      {
+        "id": "afb54db5-ca60-4ed7-a9e0-6bcbde23bcf3",
+        "item_number": 99,
+        "eligible": true
+      },
+      {
+        "id": "b32ca96c-886f-420b-857a-e17a5e4b0beb",
+        "item_number": 66,
+        "eligible": true
+      },
+      {
+        "id": "b8f5765b-502a-4c92-b6b3-19096b08e8a6",
+        "item_number": 26,
+        "eligible": true
+      },
+      {
+        "id": "c0840a99-0b42-41ba-9d96-f13cffa56d03",
+        "item_number": 93,
+        "eligible": true
+      },
+      {
+        "id": "c3cc33a8-44c2-4e85-88fd-845c02d85eae",
+        "item_number": 38,
+        "eligible": true
+      },
+      {
+        "id": "c7d74887-4df9-41cf-91f2-48de3e52ade3",
+        "item_number": 47,
+        "eligible": true
+      },
+      {
+        "id": "c80b5b14-777c-439d-b852-47241d529f5f",
+        "item_number": 35,
+        "eligible": true
+      },
+      {
+        "id": "ccf1643f-435f-451d-ae5d-d48ee4df947d",
+        "item_number": 1,
+        "eligible": true
+      },
+      {
+        "id": "d0b03398-8dd0-46b8-9a35-897162e01b22",
+        "item_number": 101,
+        "eligible": true
+      },
+      {
+        "id": "db1dcaed-92eb-4863-910f-52e43f0c2e44",
+        "item_number": 37,
+        "eligible": true
+      },
+      {
+        "id": "dc39ad5c-145d-45f6-8daa-5b98ed988fe8",
+        "item_number": 95,
+        "eligible": true
+      },
+      {
+        "id": "ebf0dd81-fda2-4a00-a907-164c0adafc1d",
+        "item_number": 110,
+        "eligible": true
+      },
+      {
+        "id": "edb8d52a-9e90-46eb-9bcc-27c7b0c7d982",
+        "item_number": 50,
+        "eligible": true
+      },
+      {
+        "id": "ee336203-4d71-40fa-8c06-ec558c2179c7",
+        "item_number": 54,
+        "eligible": true
+      },
+      {
+        "id": "f0c072ad-2792-406c-8dbb-79bc46cfa583",
+        "item_number": 98,
+        "eligible": true
+      },
+      {
+        "id": "f443b3ac-19dc-4d4f-8deb-e51edcb9dbff",
+        "item_number": 94,
+        "eligible": true
+      },
+      {
+        "id": "f5a9fae3-0519-4089-9812-04b28c2965a6",
+        "item_number": 70,
+        "eligible": true
+      },
+      {
+        "id": "f676f9b1-7056-4aad-9ba0-c82a45b9976e",
+        "item_number": 25,
+        "eligible": true
+      },
+      {
+        "id": "f7e3cfb3-9cf2-4bc3-bd42-65ae1a16dae6",
+        "item_number": 34,
+        "eligible": true
+      },
+      {
+        "id": "08f7cd0d-6f07-430d-9d36-2049e98757b5",
+        "item_number": 85,
+        "eligible": true
+      },
+      {
+        "id": "0a99777f-e0b5-41cc-98ea-3ff1cf7bf5e3",
+        "item_number": 115,
+        "eligible": true
+      },
+      {
+        "id": "0bc496da-9b97-4099-8d25-57e75f7e0d48",
+        "item_number": 105,
+        "eligible": true
+      },
+      {
+        "id": "1b2c5ae1-4d5d-4eec-8b5e-a569d1684cdf",
+        "item_number": 3,
+        "eligible": true
+      },
+      {
+        "id": "2b3264f2-e1a8-49e4-aaf6-5346e8dad3f9",
+        "item_number": 48,
+        "eligible": true
+      },
+      {
+        "id": "40aec608-f805-49af-a971-537ab56d2449",
+        "item_number": 113,
+        "eligible": true
+      },
+      {
+        "id": "4f8d70a9-8d8f-449b-91fd-ee9799c8e158",
+        "item_number": 7,
+        "eligible": true
+      },
+      {
+        "id": "5cdcac83-7d81-4eab-aeb1-2dc1750e30a6",
+        "item_number": 87,
+        "eligible": true
+      },
+      {
+        "id": "660a71f0-e897-4911-8bac-a7982a37c1e5",
+        "item_number": 45,
+        "eligible": true
+      },
+      {
+        "id": "80ec0c2a-ee50-4e00-a34d-3f74be0594c4",
+        "item_number": 112,
+        "eligible": true
+      },
+      {
+        "id": "a09af0f2-548f-40de-afad-accd6aa231b6",
+        "item_number": 81,
+        "eligible": true
+      },
+      {
+        "id": "d101bd87-9f20-4fd4-8f13-d2a0bfd44cc9",
+        "item_number": 88,
+        "eligible": true
+      },
+      {
+        "id": "ef3167f7-b998-406f-b567-e722bc835087",
+        "item_number": 114,
+        "eligible": true
+      },
+      {
+        "id": "ef5657db-4e16-4fa0-9a07-32f6794d7466",
+        "item_number": 41,
+        "eligible": true
+      },
+      {
+        "id": "26176d85-3fb2-414a-9419-ff3e7cd6a079",
+        "item_number": 14,
+        "eligible": true
+      },
+      {
+        "id": "5109e4aa-ab46-4892-896b-2402d2177054",
+        "item_number": 71,
+        "eligible": true
+      },
+      {
+        "id": "511a541b-413d-4f1f-b885-a1084fd515d5",
+        "item_number": 9,
+        "eligible": true
+      },
+      {
+        "id": "57bf6610-4707-42d5-89d8-59537091e634",
+        "item_number": 16,
+        "eligible": true
+      },
+      {
+        "id": "6ec666fd-0f5f-4407-9271-3dff272e362b",
+        "item_number": 90,
+        "eligible": true
+      },
+      {
+        "id": "74d1015e-59da-42d6-af89-c58a71e5821d",
+        "item_number": 65,
+        "eligible": true
+      },
+      {
+        "id": "79cd1744-5d60-43e7-8359-76b7d161ddd3",
+        "item_number": 32,
+        "eligible": true
+      },
+      {
+        "id": "95823a75-ff66-486d-af04-db532c85a217",
+        "item_number": 20,
+        "eligible": true
+      },
+      {
+        "id": "c00624ae-9e76-4eb6-997c-a837b764ef1d",
+        "item_number": 22,
+        "eligible": true
+      },
+      {
+        "id": "cd355b35-7bbd-4eca-a92a-3c2a5d23d184",
+        "item_number": 10,
+        "eligible": true
+      },
+      {
+        "id": "e0290882-d05d-48e3-9b91-2f17a0bf336b",
+        "item_number": 6,
+        "eligible": true
+      },
+      {
+        "id": "f733695d-d811-44e5-b30e-a151cfb290dd",
+        "item_number": 28,
+        "eligible": true
+      },
+      {
+        "id": "0a0c814c-0a8c-41ad-920e-751fff7128b1",
+        "item_number": 75,
+        "eligible": true
+      },
+      {
+        "id": "1b870eff-873e-49d2-875e-f52fc74f1c11",
+        "item_number": 19,
+        "eligible": true
+      },
+      {
+        "id": "51116dca-4453-47fb-9e1e-00bf31c0a268",
+        "item_number": 24,
+        "eligible": true
+      },
+      {
+        "id": "6267fc4b-f5e0-4682-b9df-6cd17f00a747",
+        "item_number": 61,
+        "eligible": true
+      },
+      {
+        "id": "779485b3-b3e9-42a7-b7bd-169a84bd6080",
+        "item_number": 104,
+        "eligible": true
+      },
+      {
+        "id": "9ffafcba-c3a0-45e8-b217-4dc299f7485b",
+        "item_number": 89,
+        "eligible": true
+      },
+      {
+        "id": "dcc04649-2d65-4ea0-bf07-2920ad654535",
+        "item_number": 74,
+        "eligible": true
+      },
+      {
+        "id": "3dab4984-aba1-4f12-a458-78f81e6e8aa8",
+        "item_number": 108,
+        "eligible": true
+      },
+      {
+        "id": "3333635d-9de5-4eb2-aa78-3ee914cf3247",
+        "item_number": 56,
+        "eligible": true
+      },
+      {
+        "id": "ce182ec0-b8d4-45e0-81f0-4c81e677d415",
+        "item_number": 59,
+        "eligible": true
+      },
+      {
+        "id": "e8ac7a6f-0f94-41e8-8cd7-1a886fa2cf03",
+        "item_number": 55,
+        "eligible": true
+      },
+      {
+        "id": "f494bd3b-537e-4913-aa26-fe446790ec4d",
+        "item_number": 57,
+        "eligible": true
+      },
+      {
+        "id": "fcb0aa6d-9d7b-4bb1-b9e6-9ab78b4ccc48",
+        "item_number": 58,
+        "eligible": true
+      },
+      {
+        "id": "cafdd2dc-c49b-4fcf-81a1-43cb81d23dea",
+        "item_number": 60,
+        "eligible": true
+      },
+      {
+        "id": "7773cac4-4997-4b13-af4d-c2ca052b4070",
+        "item_number": 62,
+        "eligible": true
+      },
+      {
+        "id": "a58703f7-ce05-4c52-bbd6-ed091cd8abb9",
+        "item_number": 120,
+        "eligible": true
+      },
+      {
+        "id": "fc05803c-c53e-4a7c-b98b-4bd1dd219c0b",
+        "item_number": 119,
+        "eligible": true
+      },
+      {
+        "id": "0ca16e52-8b0d-4f10-b90b-679a290d5ad9",
+        "item_number": 80,
+        "eligible": true
+      },
+      {
+        "id": "105ed9d5-c787-44c8-bb15-2d0bb91718cc",
+        "item_number": 84,
+        "eligible": true
+      },
+      {
+        "id": "3135eecf-e260-4632-9ca3-659a45b24037",
+        "item_number": 79,
+        "eligible": true
+      },
+      {
+        "id": "31a35825-1130-41ee-90c9-7272cf8454b0",
+        "item_number": 83,
+        "eligible": true
+      },
+      {
+        "id": "3739e072-2498-432a-bca5-7d7fcec0efe9",
+        "item_number": 86,
+        "eligible": true
+      },
+      {
+        "id": "3939fc83-b33a-4b23-b467-a30bb47f2144",
+        "item_number": 4,
+        "eligible": true
+      },
+      {
+        "id": "4a3799c5-0232-4421-ae7e-eef31f4fd73d",
+        "item_number": 51,
+        "eligible": true
+      },
+      {
+        "id": "5b94ad68-90b3-4252-9b58-0600c17da7b0",
+        "item_number": 82,
+        "eligible": true
+      },
+      {
+        "id": "5e621ddf-2343-4df4-8e75-43c255a0ef07",
+        "item_number": 118,
+        "eligible": true
+      },
+      {
+        "id": "667cb95c-a718-466b-8240-57a15326cf4a",
+        "item_number": 117,
+        "eligible": true
+      },
+      {
+        "id": "6b592bf4-381e-45f2-92cf-cee02867bf4c",
+        "item_number": 116,
+        "eligible": true
+      },
+      {
+        "id": "7e8098d6-64fd-4ffb-80b0-1642b9a0f0f0",
+        "item_number": 30,
+        "eligible": true
+      },
+      {
+        "id": "8b3d1164-61a8-4b69-8684-fd907613e88b",
+        "item_number": 18,
+        "eligible": true
+      },
+      {
+        "id": "8c8a15a0-9615-43d4-acb6-0798be589af4",
+        "item_number": 17,
+        "eligible": true
+      },
+      {
+        "id": "bfd3d161-5958-4f41-9e6a-944406c9a2d8",
+        "item_number": 21,
+        "eligible": true
+      },
+      {
+        "id": "cfbe9bdb-ba88-4905-a2f0-a779c0ee404e",
+        "item_number": 5,
+        "eligible": true
+      },
+      {
+        "id": "d80c4bdc-6887-496d-b9a7-f4fab4f11a40",
+        "item_number": 107,
+        "eligible": true
+      },
+      {
+        "id": "e54dc35b-2542-4f2b-87b6-57eeb102edc7",
+        "item_number": 73,
+        "eligible": true
+      }
+    ]
+  },
+  "checks": {
+    "application_tests_passed": 589,
+    "review_tests_passed": 50,
+    "failures": 0,
+    "skipped": 0,
+    "production_build": "passed after integration of remote main 2c93168"
+  },
+  "sources_registered": {
+    "jurisdiction": "DF",
+    "items": [
+      {
+        "row": {
+          "id": "40720211-b791-50f0-9e79-46969d5c8ef4",
+          "source_type": "lei",
+          "title": "Lei Complementar distrital 840/2011 — responsabilidade administrativa, art. 181",
+          "issuer": "Governo do Distrito Federal — SINJ",
+          "url": "https://www.sinj.df.gov.br/sinj/Norma/70196/Lei_Complementar_840_23_12_2011.html",
+          "published_on": null,
+          "checked_at": "2026-10-16T16:44:23.701997+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência limitada ao art. 181, § 2º, do texto consolidado. SHA-256 fc02869ce8c132e9bbe62f1355d093115f815e7f7d283b996fba4082d1a6d434"
+        },
+        "evidence": {
+          "reviewed": true,
+          "url": "https://www.sinj.df.gov.br/sinj/Norma/70196/Lei_Complementar_840_23_12_2011.html",
+          "path": "outputs/pc-all-audit-2026-10-16/courts/final-sinj.html",
+          "sha256": "fc02869ce8c132e9bbe62f1355d093115f815e7f7d283b996fba4082d1a6d434",
+          "captured_at": "2026-10-16T16:44:23.701997+00:00"
+        }
+      },
+      {
+        "row": {
+          "id": "8f8d1d39-377f-54a1-ad46-b741fc5add19",
+          "source_type": "decreto",
+          "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento",
+          "issuer": "Governo do Distrito Federal — SINJ",
+          "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+          "published_on": null,
+          "checked_at": "2026-10-16T16:47:39.301392+00:00",
+          "status": "vigente",
+          "is_official": true,
+          "notes": "Conferência dos arts. 5º a 8º e do eixo 9 do anexo do II PDPM, conteúdo expressamente cobrado no edital PCDF/2026. Prazos e metas do ciclo 2020/2023 não são apresentados como prazos novos de 2026. Consulta do SINJ registra ausência de revogação expressa; não certifica integralidade das políticas posteriores. SHA-256 abd3f82e4fd2c8c43d63dd6f16e099ccd0306bca41097c12c774b645a81c1907"
+        },
+        "evidence": {
+          "reviewed": true,
+          "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+          "path": "outputs/pc-all-audit-2026-10-16/courts/final-pdpm.html",
+          "sha256": "abd3f82e4fd2c8c43d63dd6f16e099ccd0306bca41097c12c774b645a81c1907",
+          "captured_at": "2026-10-16T16:47:39.301392+00:00"
+        }
+      }
+    ]
+  },
+  "sources_publication": {
+    "reviewed": 2,
+    "created": 2,
+    "preserved": 0
+  },
+  "hash_serialization": "UTF-8 JSON, sorted keys, compact separators",
+  "items": [
+    {
+      "id": "0ca16e52-8b0d-4f10-b90b-679a290d5ad9",
+      "item_number": 80,
+      "previous_row_sha256": "f35a0402d07b10dc5b6719d2072e68eee39d95ecd2312597938f684c2989cb8b",
+      "published_row_sha256": "74264aa20a0f485cda1621fb388773af4a88bd353d018b614961a210bf521851",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNo modelo clássico de documentos médico-legais cobrado, o RELATÓRIO registra o exame realizado, com descrição dos achados; o PARECER analisa tecnicamente uma questão ou perícia já documentada, desenvolvendo discussão e conclusão, sem descrição de exame direto próprio. A Resolução CFM 2.381/2024 define o parecer técnico como documento opinativo fundamentado e distingue laudo médico-pericial. A estrutura didática da banca não deve ser apresentada como proibição universal de um parecer descrever documentos ou fatos.\nExemplo: Perito relata as lesões que examinou: relatório/laudo. Especialista analisa os documentos e responde a uma controvérsia técnica: parecer.\nTeste rápido — A ausência de exame direto torna parecer uma opinião sem fundamentação? Não.\nFontes consultadas: https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2024/2381_2024.pdf\nRecorte doutrinário da banca: caderno oficial PCDF/2026, página 9. A formulação classificatória não é apresentada como transcrição de lei.",
+        "legal_basis": [],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2024/2381_2024.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [],
+        "additional_captures": [
+          {
+            "url": "https://sistemas.cfm.org.br/normas/arquivos/resolucoes/BR/2024/2381_2024.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-cfmpdf.pdf",
+            "sha256": "f13b856f495ecce99cc72fa17356805c7561b957b393b9318624a4be6de37524",
+            "captured_at": "2026-10-16T16:47:39.465384+00:00"
+          }
+        ],
+        "official_pdf_page": 9,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": "Classificação teórica da banca no caderno oficial; não certifica todas as correntes doutrinárias."
+      }
+    },
+    {
+      "id": "105ed9d5-c787-44c8-bb15-2d0bb91718cc",
+      "item_number": 84,
+      "previous_row_sha256": "dd39a077cb0ec7bd46f0ade9238bfd1ec25c61be16802b75602b7a524b2c4673",
+      "published_row_sha256": "670ed763bbbe0223f11722c12597254407f648d082e80ea6dcd3ca54196de0f1",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA comparação genética entre o suspeito e o filho pode estabelecer vínculo de paternidade, mesmo sem vestígios do agressor coletados à época. O Ministério da Saúde reconhece a utilidade da análise comparativa de DNA para identificação biológica em violência sexual. O gabarito C admite seu valor probatório robusto no contexto narrado; não autoriza condenação automática. Paternidade, sozinha, não prova violência, ausência de consentimento nem a data exata do ato: é necessário avaliar o conjunto probatório e o contraditório.\nExemplo: DNA compatível com paternidade pode corroborar o relato e os demais elementos. Não demonstra isoladamente que a relação foi forçada.\nTeste rápido — Confirmar paternidade equivale, por si, a comprovar todos os elementos do estupro? Não.\nFontes consultadas: https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "155",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "158",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-sexual.pdf",
+            "sha256": "537ca75fb987e14fd74a6343b4c5c0b7774c69ba14b8378388fd8f4e3f06224a",
+            "captured_at": "2026-10-16T16:44:37.969378+00:00"
+          }
+        ],
+        "official_pdf_page": 9,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "3135eecf-e260-4632-9ca3-659a45b24037",
+      "item_number": 79,
+      "previous_row_sha256": "e4ebd3629d1d6f83937e780ecb63271dc16f9ca6175508e3555814dba7e846af",
+      "published_row_sha256": "6f9c470e07409bb87e6a46fa5c4426ed78c6019a1675a33dbfb5a4874ea4cd69",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nAs figuras de Lichtenberg são marcas cutâneas ramificadas, com aspecto de árvore ou samambaia, associadas classicamente à descarga de raio. No vocabulário cobrado, fulminação indica morte por eletricidade natural; fulguração refere-se aos efeitos não fatais. O padrão não precisa estar presente em toda vítima. A literatura científica consultada também descreve ocorrência rara após lesão elétrica de alta tensão: por isso não se deve ensinar exclusividade absoluta nem usar a figura isolada para concluir todas as circunstâncias da morte.\nExemplo: Desenho avermelhado arboriforme após descarga é compatível com figura de Lichtenberg. Não é sinônimo de qualquer queimadura elétrica nem prova isolada de que toda vítima sofreu descarga natural fatal.\nTeste rápido — A figura precisa aparecer em toda vítima de raio? Não.\nFontes consultadas: https://pmc.ncbi.nlm.nih.gov/articles/PMC8226253/",
+        "legal_basis": [],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC8226253/",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [],
+        "additional_captures": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8226253/",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-lichtenberg-article.html",
+            "sha256": "2aeaa6d4871b0f662e7d7a440e4f52e8e43cc1199c237e561c3c923626f3b9c4",
+            "captured_at": "2026-10-16T16:50:54.304000+00:00"
+          }
+        ],
+        "official_pdf_page": 9,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "31a35825-1130-41ee-90c9-7272cf8454b0",
+      "item_number": 83,
+      "previous_row_sha256": "59be6ac79d7450d5ba46a40bfa33aa84fb270e1fe0f30e2b482ce6aad9560b74",
+      "published_row_sha256": "306113a89f4cd812fbb931893c1b8162eef89d913e74368e7f5ec576f30dbf3e",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO art. 213 não exige hímen rompido nem espermatozoides na vagina: também alcança outro ato libidinoso mediante violência ou grave ameaça. O quadro descrito pela questão reúne achados compatíveis com a agressão e não pode ser descartado por esses dois resultados negativos. A perícia e as demais provas devem ser avaliadas em conjunto; uma lesão, isoladamente, tampouco autoriza concluir automaticamente autoria e todas as circunstâncias do delito.\nExemplo: Vestígios de ato libidinoso anal violento não deixam de ser relevantes porque o exame vaginal não encontrou sêmen ou ruptura himenal.\nTeste rápido — Hímen íntegro e ausência de sêmen excluem sempre estupro? Não.\nFontes consultadas: https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "213",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "158",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-sexual.pdf",
+            "sha256": "537ca75fb987e14fd74a6343b4c5c0b7774c69ba14b8378388fd8f4e3f06224a",
+            "captured_at": "2026-10-16T16:44:37.969378+00:00"
+          }
+        ],
+        "official_pdf_page": 9,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "3739e072-2498-432a-bca5-7d7fcec0efe9",
+      "item_number": 86,
+      "previous_row_sha256": "f03f6cbca9d81a4f25190dfc1b04c11cf688ba0a74a176c9e2352af42b9a9294",
+      "published_row_sha256": "6a6c549bd8fbaa82b2a6fbbe5c96fe4462589b1b568da1da2604236816a024e6",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nBeta-hCG positivo NÃO é prova absoluta de interrupção provocada por meio mecânico. A OMS, no manual clínico de 2023, informa que testes de gravidez de alta sensibilidade podem permanecer positivos por até cinco semanas após aborto medicamentoso bem-sucedido: o resultado não identifica sozinho o mecanismo nem a ilicitude. Achados, história clínica e exames disponíveis precisam ser correlacionados. Não se deve inverter a pegadinha e afirmar que anatomopatológico é sempre possível ou sempre obrigatório: o CPP admite outras provas quando os vestígios desapareceram.\nExemplo: Hormônio detectável após o término da gestação não prova uso de objeto. Lesão suspeita exige investigação, mas não transforma o exame hormonal em prova absoluta do meio empregado.\nTeste rápido — Beta-hCG positivo identifica sozinho aborto criminoso por instrumento? Não.\nFontes consultadas: https://iris.who.int/server/api/core/bitstreams/44ba191a-1e0c-4d5a-9383-45a1d7aa4d60/content",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "158",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "167",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://iris.who.int/server/api/core/bitstreams/44ba191a-1e0c-4d5a-9383-45a1d7aa4d60/content",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cpp.html",
+            "sha256": "ba4d0052175e3f0f1525cb4f2f38cf727d1cef5c935be39b6c016f119bb20340",
+            "captured_at": "2026-10-16T15:47:25.887Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://iris.who.int/server/api/core/bitstreams/44ba191a-1e0c-4d5a-9383-45a1d7aa4d60/content",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-whopdf.pdf",
+            "sha256": "1201363b0a23c436f7e342a1cf05d3fb0164e48e02d80ac5f5494def43e08730",
+            "captured_at": "2026-10-16T16:51:52.425225+00:00"
+          }
+        ],
+        "official_pdf_page": 10,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "3939fc83-b33a-4b23-b467-a30bb47f2144",
+      "item_number": 4,
+      "previous_row_sha256": "689e145a73ae6db951d1dba9445247ef216371e79927a2df079d1a8d9c5e63b7",
+      "published_row_sha256": "28096abdbba5c9679b10085749dfa84eec5f30774f724d81659433aa38ec5387",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO art. 181, § 2º, da LC distrital 840/2011 afasta a responsabilidade administrativa quando a absolvição penal definitiva NEGA A EXISTÊNCIA DO FATO ou A AUTORIA. Reconhecer apenas que o fato não constitui infração penal não equivale a negar que ocorreu: a mesma conduta ainda pode constituir infração administrativa. A análise pressupõe decisão transitada em julgado e o fundamento exato da absolvição.\nExemplo: O fato ocorreu, mas não é crime: a esfera administrativa pode examinar eventual falta funcional. Se a decisão definitiva nega que o servidor praticou o fato, aplica-se a hipótese de afastamento.\nTeste rápido — Absolvição por atipicidade penal é sempre igual a negativa de autoria? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/70196/Lei_Complementar_840_23_12_2011.html",
+            "artigo": "181",
+            "title": "Lei Complementar distrital 840/2011 — responsabilidade administrativa, art. 181"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.sinj.df.gov.br/sinj/Norma/70196/Lei_Complementar_840_23_12_2011.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "reviewed": true,
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/70196/Lei_Complementar_840_23_12_2011.html",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-sinj.html",
+            "sha256": "fc02869ce8c132e9bbe62f1355d093115f815e7f7d283b996fba4082d1a6d434",
+            "captured_at": "2026-10-16T16:44:23.701997+00:00"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 1,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "4a3799c5-0232-4421-ae7e-eef31f4fd73d",
+      "item_number": 51,
+      "previous_row_sha256": "ffe94d57074490ebce5f6493d563004578d366d26693c92b6511cd09c77238bb",
+      "published_row_sha256": "67576a4e97bf3b289ee86ee3d86b483144fca5043fd7dff43725bc1ec70db741",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO art. 970 do Código Civil menciona EMPRESÁRIO RURAL e PEQUENO EMPRESÁRIO quanto ao tratamento favorecido, diferenciado e simplificado na inscrição. A assertiva substitui essas categorias por empresa de pequeno porte e sociedade unipessoal. Porte econômico e número de sócios são critérios distintos; a unipessoalidade admitida no art. 1.052 não concede, por si, todo benefício registral. Isso não nega regimes simplificados específicos que uma EPP possa obter por legislação própria: é preciso conferir seus requisitos, sem misturar as categorias.\nExemplo: Uma sociedade com um só sócio pode ter porte elevado. Uma empresa enquadrada como EPP não se torna automaticamente empresário rural pelo porte.\nTeste rápido — Ter sócio único é, por si só, a condição mencionada no art. 970? Não.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "970",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "1052",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+            "artigo": "7",
+            "title": "Lei 13.874/2019"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "61c9eca3-8972-4149-a6ba-4c50a1975b8b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13874.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/lib.html",
+            "sha256": "859c86041de518c0891fc15e92630d9bf9ab5b6055862194f2d6e7df18352259",
+            "captured_at": "2026-10-16T15:47:29.372Z"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 5,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "5b94ad68-90b3-4252-9b58-0600c17da7b0",
+      "item_number": 82,
+      "previous_row_sha256": "2864e0033ed9b91e32642a9e449596336038a86eb6f38ad0a90f207510c35067",
+      "published_row_sha256": "45b0e54572c7176b29c186a8d1e139de8f6f41dde881c412189344f7aeddd490",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nConjunção carnal, no sentido técnico empregado pela banca, é a penetração do pênis na vagina, ainda que parcial. Ejaculação e ruptura do hímen NÃO são requisitos necessários. Além disso, o art. 213 abrange também outro ato libidinoso mediante violência ou grave ameaça: ausência de conjunção carnal não exclui automaticamente estupro. A norma do Ministério da Saúde distingue penetração vaginal dos demais atos e trata a coleta de material como parte da avaliação, sem reduzir o crime à presença de sêmen.\nExemplo: Penetração vaginal parcial sem ejaculação pode caracterizar conjunção carnal. Ato libidinoso violento sem penetração vaginal exige exame próprio e também pode integrar o art. 213.\nTeste rápido — É indispensável ejacular ou romper o hímen para haver conjunção carnal? Não.\nFontes consultadas: https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf\nRecorte doutrinário da banca: caderno oficial PCDF/2026, página 9. A formulação classificatória não é apresentada como transcrição de lei.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "213",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "9aea4137-d3b1-4065-a1f7-3cd55d325f5c"
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cp.html",
+            "sha256": "c4c2eee7fc52513d8b1fb6e66c1db1f91ee7ca2b490925b7a8f4d7ba8308451b",
+            "captured_at": "2026-10-16T15:47:26.458Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://bvsms.saude.gov.br/bvs/publicacoes/prevencao_agravo_violencia_sexual_mulheres_3ed.pdf",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-sexual.pdf",
+            "sha256": "537ca75fb987e14fd74a6343b4c5c0b7774c69ba14b8378388fd8f4e3f06224a",
+            "captured_at": "2026-10-16T16:44:37.969378+00:00"
+          }
+        ],
+        "official_pdf_page": 9,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": "Classificação teórica da banca no caderno oficial; não certifica todas as correntes doutrinárias."
+      }
+    },
+    {
+      "id": "5e621ddf-2343-4df4-8e75-43c255a0ef07",
+      "item_number": 118,
+      "previous_row_sha256": "14fe42e2ca1240a28dc3d10c8a0606616a616084cacae08910507151e2949025",
+      "published_row_sha256": "9233b619dd6369278a66c6177158c75d5c4b0e2ecc9142978f78b4251b6aa6f4",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO eixo 9 do anexo do II PDPM trata da igualdade para mulheres JOVENS, IDOSAS e COM DEFICIÊNCIA. Entre seus objetivos específicos está garantir igualdade de direitos e oportunidades no ACESSO, PERMANÊNCIA e PROMOÇÃO desses grupos no mercado de trabalho. Não basta memorizar apenas o ingresso: a política também alcança manutenção e progressão. O recorte é o plano indicado no edital, sem presumir que todas as metas de seu ciclo histórico tenham sido cumpridas ou renovadas.\nExemplo: Além de facilitar a contratação, combater barreiras à permanência e à promoção de mulher com deficiência integra o objetivo descrito.\nTeste rápido — O objetivo se limita ao primeiro acesso ao emprego? Não: inclui permanência e promoção.",
+        "legal_basis": [
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "artigo": "Eixo 9",
+            "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "reviewed": true,
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-pdpm.html",
+            "sha256": "abd3f82e4fd2c8c43d63dd6f16e099ccd0306bca41097c12c774b645a81c1907",
+            "captured_at": "2026-10-16T16:47:39.301392+00:00"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 15,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "667cb95c-a718-466b-8240-57a15326cf4a",
+      "item_number": 117,
+      "previous_row_sha256": "ea325fa4f4c43f0bb7c3ce78e25776559097bae2dbef4bbab63e86711625f5e6",
+      "published_row_sha256": "7b025cf4fa6546902d199a02a4fd46e654d59ea5f720aaf0835f8806ee6440db",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nArticular, monitorar e avaliar periodicamente o cumprimento dos objetivos, metas e ações é o OBJETIVO GERAL do Comitê, conforme art. 6º do Decreto 42.590/2021. O item erra ao chamar essa fórmula de objetivos específicos, que são enumerados no art. 7º. A nomenclatura faz parte do conteúdo cobrado e deve ser distinguida das competências do art. 5º. Menções ao ciclo 2020/2023 são históricas, sem reinício automático de prazos.\nExemplo: Acompanhar globalmente a execução do plano corresponde ao objetivo geral. Promover participação e controle social é um dos objetivos específicos do art. 7º.\nTeste rápido — A frase do enunciado está no art. 6º como objetivo geral? Sim.",
+        "legal_basis": [
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "artigo": "6",
+            "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento"
+          },
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "artigo": "7",
+            "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "reviewed": true,
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-pdpm.html",
+            "sha256": "abd3f82e4fd2c8c43d63dd6f16e099ccd0306bca41097c12c774b645a81c1907",
+            "captured_at": "2026-10-16T16:47:39.301392+00:00"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 15,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "6b592bf4-381e-45f2-92cf-cee02867bf4c",
+      "item_number": 116,
+      "previous_row_sha256": "767150f52958ae8d2d141ed53259eb7ecba6be46ac244039639a76b613b74a10",
+      "published_row_sha256": "fa76e955b42e41f89456e8148596acfe308686a3217873ed637c08771778ba09",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNo Decreto distrital 42.590/2021, art. 5º, V, o Comitê pode ajustar objetivos, ações e metas do II PDPM. Pelo art. 8º, delibera mediante RESOLUÇÃO, por MAIORIA SIMPLES DOS PRESENTES, com voto de qualidade da coordenadora em empate. Trata-se do II PDPM expressamente cobrado no edital; não se apresenta o antigo ciclo de metas 2020/2023 como novo prazo de 2026. A atribuição de ajuste não elimina as demais competências e limites legais.\nExemplo: Em deliberação válida, o empate é decidido pelo voto de qualidade da coordenadora; a regra descrita não exige maioria absoluta de toda a composição.\nTeste rápido — A referência é maioria simples dos presentes ou unanimidade? Maioria simples dos presentes.",
+        "legal_basis": [
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "artigo": "5",
+            "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento"
+          },
+          {
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "artigo": "8",
+            "title": "Decreto distrital 42.590/2021 — II PDPM e Comitê de Articulação e Monitoramento"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "719b8f2c-2d38-4995-8c2b-8539d5fbe217"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "reviewed": true,
+            "url": "https://www.sinj.df.gov.br/sinj/Norma/85eba02ace75477997b3e4b91ee27d9d/exec_dec_42590_2021.html",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-pdpm.html",
+            "sha256": "abd3f82e4fd2c8c43d63dd6f16e099ccd0306bca41097c12c774b645a81c1907",
+            "captured_at": "2026-10-16T16:47:39.301392+00:00"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 15,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "7e8098d6-64fd-4ffb-80b0-1642b9a0f0f0",
+      "item_number": 30,
+      "previous_row_sha256": "8a9e9a299d63f90cbe78d9a55a35ef4fbb0d1c0c76502fc2e0b2dee8583ebfea",
+      "published_row_sha256": "cfa19dcbcf7b284472da7e21f83933f94360195eb2b75e70935305245d91d296",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nA banca considera correto o caráter taxativo do modelo constitucional dos órgãos de segurança pública, a ser observado por estados e DF. Isso NÃO autoriza ensinar que guardas municipais estão fora do sistema: o § 8º do art. 144 deve ser considerado, a ADPF 995 afastou essa exclusão e o Tema 656 admitiu ações de segurança urbana, inclusive policiamento ostensivo comunitário, respeitadas as demais atribuições e excluída polícia judiciária. O caput também passou a incluir polícias penais pela EC 104/2019; a referência histórica apenas a incisos I a V não reproduz todo o texto vigente.\nExemplo: Estado não pode inventar órgão policial em desconformidade com o modelo constitucional. Isso é diferente de negar o lugar e as atribuições constitucionais das guardas municipais.\nTeste rápido — Taxatividade permite excluir automaticamente guardas municipais do sistema? Não.\nFontes consultadas: https://noticias.stf.jus.br/postsnoticias/guardas-municipais-integram-o-sistema-de-seguranca-publica-decide-stf/?amp=1 ; https://noticias.stf.jus.br/postsnoticias/guardas-municipais-podem-fazer-policiamento-urbano-decide-stf/?amp=1",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "144",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-integram-o-sistema-de-seguranca-publica-decide-stf/?amp=1",
+          "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-podem-fazer-policiamento-urbano-decide-stf/?amp=1",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-integram-o-sistema-de-seguranca-publica-decide-stf/?amp=1",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-guardasfull.html",
+            "sha256": "f8879189d3742503eed7d47ca9716baa9382f419a2700bd62b98e7e070a4f592",
+            "captured_at": "2026-10-16T16:49:10.237191+00:00"
+          },
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/guardas-municipais-podem-fazer-policiamento-urbano-decide-stf/?amp=1",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-guardas656.html",
+            "sha256": "ffa21292d3e454fa8d8f39e123f54f114dcdac67adfbca93105707d9e075410e",
+            "captured_at": "2026-10-16T16:49:09.533284+00:00"
+          }
+        ],
+        "official_pdf_page": 4,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "8b3d1164-61a8-4b69-8684-fd907613e88b",
+      "item_number": 18,
+      "previous_row_sha256": "374f9793a0b0358daeb6a5d2164d7f28415f1d58d734f2adaf3fcff291ab94bc",
+      "published_row_sha256": "630345b7f56e67436ca78bf362cf3e30b5384d4c35c1f7e51a8851a185657573",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO item adota a posição doutrinária de que há limites materiais IMPLÍCITOS ao poder de reforma. A vedação à dupla revisão impede retirar primeiro a proteção das cláusulas pétreas para depois abolir o núcleo protegido, contornando o art. 60, § 4º. Essa proibição não aparece com esse nome em um inciso: é construção interpretativa sobre os limites do poder derivado. Não se apresenta como consenso sobre todos os limites implícitos nem como impossibilidade de qualquer alteração do texto de um direito fundamental.\nExemplo: Reforma elimina a proteção às garantias individuais para, numa segunda etapa, abolir seu núcleo: é a tentativa de contorno que essa doutrina rejeita.\nTeste rápido — A expressão dupla revisão está escrita literalmente no rol do § 4º? Não; o limite descrito é implícito.\nRecorte doutrinário da banca: caderno oficial PCDF/2026, página 2. A formulação classificatória não é apresentada como transcrição de lei.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "60",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 2,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": "Classificação teórica da banca no caderno oficial; não certifica todas as correntes doutrinárias."
+      }
+    },
+    {
+      "id": "8c8a15a0-9615-43d4-acb6-0798be589af4",
+      "item_number": 17,
+      "previous_row_sha256": "d81ada5760ac657e2618a577b99033ffa0fa7bc8b7beb3daa118251dac106213",
+      "published_row_sha256": "d846a6e6c5c257752985531c9ea727b5ed6f87023bbd8886938842b23d104521",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nNa classificação DOUTRINÁRIA de Karl Loewenstein adotada no caderno oficial, constituição semântica funciona como instrumento de legitimação dos detentores do poder, em vez de limitá-los efetivamente. A normativa conforma o exercício do poder à Constituição; a nominal ainda não consegue concretizar plenamente essa função. Não se deve confundir essa classificação da relação entre norma e realidade com constituição escrita ou costumeira. O art. 1º da CF descreve o Estado Democrático brasileiro, mas não é uma enumeração dessa tipologia doutrinária.\nExemplo: Um regime usa sua Constituição para formalizar o poder já concentrado, sem o submeter a limites reais: é o perfil semântico descrito na classificação, não simplesmente toda Constituição escrita.\nTeste rápido — Semântica significa a mesma coisa que escrita? Não.\nRecorte doutrinário da banca: caderno oficial PCDF/2026, página 2. A formulação classificatória não é apresentada como transcrição de lei.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "1",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "additional_captures": [],
+        "official_pdf_page": 2,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": "Classificação teórica da banca no caderno oficial; não certifica todas as correntes doutrinárias."
+      }
+    },
+    {
+      "id": "bfd3d161-5958-4f41-9e6a-944406c9a2d8",
+      "item_number": 21,
+      "previous_row_sha256": "6e7cb81a53bb87e99809670865ca801ac5a18f78ea024a73335b98bc01dfa756",
+      "published_row_sha256": "48e6cb0212fc993a6d8aead71b2a6889e991c4d5232b9970c4940625ffc36a44",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nO enunciado troca dois princípios. MÁXIMA EFETIVIDADE orienta atribuir à norma constitucional o sentido que lhe dê maior eficácia. EFEITO INTEGRADOR privilegia soluções que favoreçam integração política e social e reforcem a unidade política. O STJ, no REsp 1.292.335/RO (Informativo 519), emprega expressamente essa distinção na interpretação constitucional. Nenhum deles autoriza ignorar o texto ou criar competência sem fundamento.\nExemplo: Procurar a maior realização prática de um direito remete à máxima efetividade. Preferir interpretação que fortaleça integração social e unidade política remete ao efeito integrador.\nTeste rápido — Maior eficácia e efeito integrador são rótulos intercambiáveis? Não.\nFontes consultadas: https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22efeito%20integrador%22",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "1",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "5a657141-5ce8-41d5-98ac-820519ee06dc"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22efeito%20integrador%22",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?aplicacao=informativo&acao=pesquisar&livre=%22efeito%20integrador%22",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-integrador.html",
+            "sha256": "cfd8ede58f529ee188bf790f34b5abe7fe12cddaa06feb58688a26a113ed38f2",
+            "captured_at": "2026-10-16T16:44:22.226061+00:00"
+          }
+        ],
+        "official_pdf_page": 3,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "cfbe9bdb-ba88-4905-a2f0-a779c0ee404e",
+      "item_number": 5,
+      "previous_row_sha256": "16be37673174889bc5b44afadff559d09b013a15e12f177f1b715970276e3b88",
+      "published_row_sha256": "c0c5cf2c678ce27129f3eec0d9ad01bcdec5175f1c9f6152edcab81e3bd6acee",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nNo Tema 1.260, o STF admitiu responsabilização por caixa dois eleitoral e por improbidade em razão da mesma conduta. A Constituição, art. 37, § 4º, prevê sanções de improbidade sem prejuízo da ação penal cabível. Independência das instâncias não dispensa os requisitos de cada ilícito e não significa condenação automática. A tese ressalva absolvição criminal por inexistência do fato ou negativa de autoria, com efeitos na esfera civil.\nExemplo: Um fato pode preencher crime eleitoral e improbidade, mas cada enquadramento precisa de seus requisitos. Absolvição por inexistência do fato não pode ser simplesmente ignorada para condenar por improbidade sobre o mesmo fato.\nTeste rápido — É proibida, em qualquer caso, a dupla responsabilização? Não.\nFontes consultadas: https://noticias.stf.jus.br/postsnoticias/stf-autoriza-dupla-responsabilizacao-de-agente-publico-por-caixa-dois-e-improbidade-administrativa/?amp=1",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "artigo": "12",
+            "title": "Lei 8.429/1992 — texto vigente"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "885aaa49-cb28-4700-ba93-e6f20d521bc8"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+          "https://noticias.stf.jus.br/postsnoticias/stf-autoriza-dupla-responsabilizacao-de-agente-publico-por-caixa-dois-e-improbidade-administrativa/?amp=1",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cf.html",
+            "sha256": "1cc2cfc9199333668e3e46c9acae51af7d246523386f6e66128bfb5c99e178c7",
+            "captured_at": "2026-10-16T15:47:33.224Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/improb.html",
+            "sha256": "bb48d95bf8d1b0b76fa929ca813208179f820dc5196c313e5ee4b9bc6ae8d214",
+            "captured_at": "2026-10-16T16:30:44.226Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/stf-autoriza-dupla-responsabilizacao-de-agente-publico-por-caixa-dois-e-improbidade-administrativa/?amp=1",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-caixadois.html",
+            "sha256": "38a8bc5a912d87e1ab13853660349801c48a7c7a394c49bae7a3fc1f742596c3",
+            "captured_at": "2026-10-16T16:44:22.478050+00:00"
+          }
+        ],
+        "official_pdf_page": 1,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "d80c4bdc-6887-496d-b9a7-f4fab4f11a40",
+      "item_number": 107,
+      "previous_row_sha256": "1f928f60e16bce1fc4d0b4e4ba9c1f2c52e614838eab835baeafd05bf5f35315",
+      "published_row_sha256": "459081751037dc378df8998a1aa9bc05de924a950c0df7e5be434a1d8c78fff6",
+      "patch": {
+        "review_note": "Gabarito definitivo: Certo (C). Conferência individual em 16/10/2026.\nO STJ, na tese 3 da edição 257 de Jurisprudência em Teses, afirma o caráter reparatório e punitivo-pedagógico da responsabilidade civil ambiental, citando o AgInt no AREsp 1.890.696/RJ. Reparação aquém da integralidade pode deixar parte do custo da degradação com a coletividade e enfraquecer essa função. Isso não dispensa prova do dano e dos pressupostos aplicáveis, nem transforma toda indenização ambiental em multa penal ou importação automática de punitive damages.\nExemplo: Se reparar apenas uma fração do dano compensa economicamente ao degradador, o restante do prejuízo fica com a coletividade. A reparação integral enfrenta essa distorção.\nTeste rápido — A função pedagógica permite arbitrar qualquer valor sem fundamentação? Não.\nFontes consultadas: https://scon.stj.jus.br/SCON/jt/doc.jsp?livre=%22PUNITIVO%22&b=TEMA&p=true&l=20&i=2&ordenacao=MAT,@NUM,-@DOCN&h=true",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+            "artigo": "14",
+            "title": "Lei 6.938/1981"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "944",
+            "title": "Código Civil — alimentos e revisão"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "d0732ea1-c547-4378-8509-d52e3cb11741"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://scon.stj.jus.br/SCON/jt/doc.jsp?livre=%22PUNITIVO%22&b=TEMA&p=true&l=20&i=2&ordenacao=MAT,@NUM,-@DOCN&h=true",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/pma.html",
+            "sha256": "88562a355df317439f66cb6f78e5ed5fa839f3f09f5b9eef14a064499324c103",
+            "captured_at": "2026-10-16T15:47:32.583Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/cc.html",
+            "sha256": "74066d2293fdc18ccd574e8e7f7a38a833ce65899d16a92c4cef8b90a41a6cb8",
+            "captured_at": "2026-10-16T15:47:28.719Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://scon.stj.jus.br/SCON/jt/doc.jsp?livre=%22PUNITIVO%22&b=TEMA&p=true&l=20&i=2&ordenacao=MAT,@NUM,-@DOCN&h=true",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-stj257.html",
+            "sha256": "58ef145f1b722c5dafc9b62f985a08b3613fb0e013eb98efe81931c5fb728467",
+            "captured_at": "2026-10-16T16:51:53.001197+00:00"
+          }
+        ],
+        "official_pdf_page": 13,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    },
+    {
+      "id": "e54dc35b-2542-4f2b-87b6-57eeb102edc7",
+      "item_number": 73,
+      "previous_row_sha256": "cedab2b56b28313ad7cb503b64236c301ec575861911bd2ed012967ffc7278d1",
+      "published_row_sha256": "8548ae10a4e649dd79eb8f37bfe19c99b0354da2653265923630c6ea32c86c38",
+      "patch": {
+        "review_note": "Gabarito definitivo: Errado (E). Conferência individual em 16/10/2026.\nA Súmula Vinculante 24 exige lançamento definitivo para tipificação dos crimes MATERIAIS do art. 1º, I a IV, da Lei 8.137/1990. Não há uma dispensa geral só porque a persecução está no inquérito: por isso a ressalva exceto a investigação policial torna o item errado. Contudo, não se deve transformar a súmula em proibição absoluta de toda diligência antes do lançamento. Na Rcl 28.147, o STF distinguiu investigação com indícios de outros crimes, que não dependem dessa constituição definitiva.\nExemplo: Investigar lavagem ou falsificação com indícios próprios não é automaticamente o mesmo que instaurar persecução exclusivamente pelo crime tributário material ainda não constituído.\nTeste rápido — Estar na fase policial afasta sempre a exigência para o crime material tributário? Não.\nFontes consultadas: https://noticias.stf.jus.br/postsnoticias/site-traz-os-verbetes-das-24-sumulas-vinculantes-aprovadas-ate-agora-pelo-stf/?amp=1 ; https://noticias.stf.jus.br/postsnoticias/1a-turma-nega-trancamento-de-inquerito-contra-investigados-por-crimes-contra-a-ordem-tributaria/?amp=1",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+            "artigo": "1",
+            "title": "Lei 8.137/1990"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T16:54:09.636257+00:00",
+        "current_syllabus_topic_id": "b587cbe4-c0e6-4c91-8383-fe3774afde4b"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual da letra definitiva e do tema. Fontes primárias legais e judiciais conferidas; classificação doutrinária distinguida do texto normativo. Nos itens médicos, evidências técnicas e limites probatórios explicitados, sem presumir diagnóstico ou condenação a partir de teste isolado.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+          "https://noticias.stf.jus.br/postsnoticias/site-traz-os-verbetes-das-24-sumulas-vinculantes-aprovadas-ate-agora-pelo-stf/?amp=1",
+          "https://noticias.stf.jus.br/postsnoticias/1a-turma-nega-trancamento-de-inquerito-contra-investigados-por-crimes-contra-a-ordem-tributaria/?amp=1",
+          "https://cdn.cebraspe.org.br/concursos/pc_df_26_delegado/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+            "path": "outputs/pc-all-audit-2026-10-16/laws/taxcrime.html",
+            "sha256": "2e06b85f723a54a30e8dbd05d2d200463831a7eab8cb87d8df545d4f206752d6",
+            "captured_at": "2026-10-16T16:28:22.942Z"
+          }
+        ],
+        "additional_captures": [
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/site-traz-os-verbetes-das-24-sumulas-vinculantes-aprovadas-ate-agora-pelo-stf/?amp=1",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-sv24full.html",
+            "sha256": "18b2d7825a3627d38af79a97c88c4a08541348107f7310c17bf40218379aac8c",
+            "captured_at": "2026-10-16T16:49:10.245190+00:00"
+          },
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/1a-turma-nega-trancamento-de-inquerito-contra-investigados-por-crimes-contra-a-ordem-tributaria/?amp=1",
+            "path": "outputs/pc-all-audit-2026-10-16/courts/final-taxexception.html",
+            "sha256": "4c658c7ef8c8f74f337e09f7935c55464c2a4b5cf18696ae742ea289284dfc3f",
+            "captured_at": "2026-10-16T16:50:37.516810+00:00"
+          }
+        ],
+        "official_pdf_page": 8,
+        "official_pdf_sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+        "doctrinal_scope": null
+      }
+    }
+  ]
+}
