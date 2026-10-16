@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 291,
+  "count": 346,
   "fields_read": [
     "simples",
     "pontos",
@@ -20,7 +20,8 @@
     "legal-commentary-block-9-2026-10-16.md",
     "legal-commentary-block-10-2026-10-16.md",
     "legal-commentary-block-11-2026-10-16.md",
-    "legal-commentary-block-12-2026-10-16.md"
+    "legal-commentary-block-12-2026-10-16.md",
+    "legal-commentary-block-13-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -1210,11 +1211,451 @@
     },
     {
       "course": "maria-penha",
+      "unit_key": "art-1",
+      "unit_id": "9e88a238-bda7-51cc-b43c-fcfd174627ce",
+      "content_sha256": "20d0b5dce8ba5794bee87647500bb70bd11e0534235dffb4c8ce1e31ad26f455",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-10",
+      "unit_id": "3cfc53ff-2c1e-522f-8aae-fc4a679c4f41",
+      "content_sha256": "538384392b765b58e6d9cc18a6e9b82e9cf1c08b17232b80d3f4fba8e76a9b70",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-10-a",
+      "unit_id": "4ab5b054-fc92-5418-8811-1c872b049c8d",
+      "content_sha256": "4d7d0aefe8fb0a35b2eaef276091420aac56fea523f05768894550e9d7428777",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-11",
+      "unit_id": "eb192041-8f9d-5133-9237-1915cf47dd45",
+      "content_sha256": "25f3b0e6c84b393d7af8d1f3950f918b5979798d81f1794eeb3b6f8f4f2a1714",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12",
+      "unit_id": "bd82798c-2969-58aa-9726-ec2cc2fa8962",
+      "content_sha256": "2c8f6638ef2c6714cd850a7f4e2bea1570d956ee0bb52ece96be5bd3790873f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-a",
+      "unit_id": "386513d2-8efb-566b-ba9d-fb236eb3c845",
+      "content_sha256": "ec8cadd4419a62b84a418206e8c3087d5cdad96a728307ced2e7d1111151530a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-c",
+      "unit_id": "a9e3b77e-c95f-5356-a46f-5f6f0a46e6e9",
+      "content_sha256": "00b8802d26727644970f6080fa7c68be5625de8b88b5d41c7d03eb55036cf2fa",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-12-d",
+      "unit_id": "ba58c930-64ae-519f-bf54-e95797be1723",
+      "content_sha256": "27c9ab8a5dda33b361ef87f04ba80561b7fcb32f692eebc16233c62b1e299181",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-13",
+      "unit_id": "675d9d8a-179d-5921-9456-d501d68e21f5",
+      "content_sha256": "9f24616d4a9635a2d42f7b945333688a1e702acf94931556107ce854e37299b1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-14",
+      "unit_id": "215670ac-8d62-554d-b16a-05749899c5e0",
+      "content_sha256": "9815d653fd9075f588ee1ca21759ab0b10908c7a2817b58c61766ce56df7aa70",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-14-a",
+      "unit_id": "5c02d9b5-aed2-59f7-8aef-84195e61c5c8",
+      "content_sha256": "d6362fb0fcb26ca4dcdd4bf17be76b4927b7836bdbe5840619201a70cb69071f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-15",
+      "unit_id": "801003a5-eaac-5e6e-b717-28081b8a07a2",
+      "content_sha256": "0c415919dfc3d5106d27510c1ae7664b37b670b80217f1acae1bf22a630973d5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
       "unit_key": "art-16",
       "unit_id": "b76b33d6-91a8-5e05-b452-292aa16ddda4",
       "content_sha256": "51c05e6f2d915ddc6e034b37010089572e461cef0cedfdc5cd8c9c5426f951dc",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
       "result": "corrected"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-16-a",
+      "unit_id": "e78086f6-4f2a-5ebf-95ae-1484ca1e07a6",
+      "content_sha256": "5b927bbe9cc705ad8d22132b36c22b379c3154e26dc7544ed95bf7f2e3dc5635",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-17",
+      "unit_id": "57a76532-7ea6-55f3-b365-6a5684a81aa6",
+      "content_sha256": "f70fa09a3dad17be0d1e41c3f9a15cbdeb0c5befc688cead1ae43d767c842b86",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-17-a",
+      "unit_id": "bc006104-a091-5721-9a2c-fc0291fe3170",
+      "content_sha256": "73b4ff7fe232e4774b0d22113dce208c59de63a498c2e8cdf1f9738517e3ae74",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-18",
+      "unit_id": "3392ea58-c0b0-5269-9cc5-a0fd82d2a283",
+      "content_sha256": "baa7b2859f3c51938eb1314fa6c2c61f690da40af5edd78354f961d2f884820b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-19",
+      "unit_id": "b5b6ce03-e78e-5635-a26d-944d27452834",
+      "content_sha256": "b3a6e2d193d57f381c8f6d4e98fa62c052870832a40a4f57454f7574c8db129a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-2",
+      "unit_id": "410b9b84-f828-5f82-9fca-4acd76e98d39",
+      "content_sha256": "38604e70b0bd254b38bb9842f42a5622e5be6d1524090795550c82c3475153e4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-20",
+      "unit_id": "1a2fa4f8-9774-5072-848f-99afac82dd39",
+      "content_sha256": "0f22be1f6a91be584bdcf9bf81158c8b54faa4b13adfb536d0e6e1ee0de62d59",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-21",
+      "unit_id": "bc196173-8880-56f6-8b97-4a4a0e161f1f",
+      "content_sha256": "f8b489fa368328d6a4b29e420304bcfbd7b69b432e05578db5c19dd93ef0c621",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-22",
+      "unit_id": "20304c1d-7cb5-5e56-9218-977f903c2495",
+      "content_sha256": "6c67fe76fcad025964573de118854e0d2a7797ea29c0258c7003242ad155608a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-23",
+      "unit_id": "f3dc334e-60c0-5e5f-b701-fd9b4fe21d45",
+      "content_sha256": "9b340db8b783c095ab6ce2a03853cb878c1ccb3090b34faf4fefa01f5570a186",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-24",
+      "unit_id": "d52a6d32-4604-55f8-aece-1cd440f6e504",
+      "content_sha256": "eaba0353e16438bdecf3c8993d4d19e1e58e32b69e4e5cc4a683f80b78dc5cc7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-24-a",
+      "unit_id": "55d49c2a-43d4-53f2-b49d-f40afe6994ba",
+      "content_sha256": "399a1095322d31c77af7588ec06660b97c7bb41af2a24217ecdbdd23182b3f22",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-25",
+      "unit_id": "82056158-4f1c-5ea3-b1b7-73f800a5d995",
+      "content_sha256": "2eaa9c54e60c4b8b98d3d91853916dca4f761f3f8c69466ca99a63edd9e51d3b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-26",
+      "unit_id": "48229982-ba1e-501c-ba20-ebfc716f9600",
+      "content_sha256": "127b89533e6e3b4a8419036743a8bb4c3e7651ca43cdb2a4bd0610026f3a9ebd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-27",
+      "unit_id": "423f6166-b856-5cf3-b292-1d2258958cb8",
+      "content_sha256": "24b3e6d4e34f57466b754948c2fa85b0eb45487ad80ec77f0628c0616ef0323d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-28",
+      "unit_id": "206e05b3-6d2e-52bb-921d-9b37a85f9c94",
+      "content_sha256": "7d240dbcf7096f7469dd032d43da8012b9f0aa489eb26877b145d829ad1144bf",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-29",
+      "unit_id": "30ca5a1e-4be2-58dc-98d4-256c21df6c96",
+      "content_sha256": "2efa7404b5fc42c992e12699007c79c9a0d2928da1c2ffac05eebdad4354f4a7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-3",
+      "unit_id": "34b54df2-5d36-5e91-9312-9fa47a571842",
+      "content_sha256": "62de027e7377489acc36154ae5690da5df750ac2fd2c863e38db0e6d26ffd466",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-30",
+      "unit_id": "2423bdec-db6f-593c-994c-cb773706b453",
+      "content_sha256": "d1ba88edb06deae35b51540d01200d93245fbb99efe745f2d15a5773f8369c55",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-31",
+      "unit_id": "fefb9932-2f09-5753-ba74-b93d9aefef6f",
+      "content_sha256": "8ebe21a952717ab525fb07480a2c92fc5c42d7e66af7fcc535167f79fe3e43b2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-32",
+      "unit_id": "e08dd47b-7c52-5b7e-b883-0a6d2b1fed4e",
+      "content_sha256": "beb7c0c8a92672992be48ef634c5c95134b3bf2bfaf7162f72a55e57d2600665",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-33",
+      "unit_id": "44e68548-1d31-5da1-911b-3ae456338411",
+      "content_sha256": "87c3e7de05692ff8edf49e5bea91f3a8e4e006b88e9c345b781b6df47fd9d6f0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-34",
+      "unit_id": "ed495d3c-f3ac-5535-afaf-8eecd46640ff",
+      "content_sha256": "2ea6c3c5cc5bc139e9950fa0dbae2e9dfaecb17f1bc2194f6835b86fdd7f8128",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-35",
+      "unit_id": "dc53f041-3b8a-5f54-9f3d-c21daa839455",
+      "content_sha256": "1808141759f78ba7348e8caba9e286305b8358087d42645b2708693925aba370",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-36",
+      "unit_id": "08d72967-5be6-532d-9c58-9eaec191def2",
+      "content_sha256": "1a7176fee719883e50adeb79542b3199bf5b023ebedbff7db34434beea05a35e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-37",
+      "unit_id": "58132585-3812-52a3-ba15-abb344bdd9eb",
+      "content_sha256": "021712f9facc01cbab8b69b5ed67a30f0751bc24f79701f11988c898eb69117b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-38",
+      "unit_id": "580ca45d-f324-56b6-ae08-277ece8492aa",
+      "content_sha256": "f0c4037cacc8019da2765a8f74adc8eed03a50ef08c076a0afde28e8be65317f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-38-a",
+      "unit_id": "9f203628-d8a6-5169-bb9b-93782faf2e28",
+      "content_sha256": "6f5e42579ba983063f727267c9dd862ac0d0f634ae79c364a092f1932048cb72",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-39",
+      "unit_id": "53fcd2d9-b3fc-5cde-8eb9-93ea07526cae",
+      "content_sha256": "d582b7efca5f3a54c67a19297db7e17f99a4807fc2fd4d2d2ddd17d4d7c03286",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-4",
+      "unit_id": "0961ca54-c52d-5b02-b5cb-794a77372c96",
+      "content_sha256": "f2b37bc223df2a3b12946705bd5be7470f5503167b66d163ab9fa2fac50fdc75",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-40",
+      "unit_id": "47350586-eeca-5942-a797-a6fb71b8bd9f",
+      "content_sha256": "3bcf2a037a923a8c8ef22f3f6f493fabda6309f0b9889781628959f734c9a2c2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-40-a",
+      "unit_id": "cd790ba2-a053-547a-9bec-a5f006332c86",
+      "content_sha256": "e9ab0b42c1cdcc5d09334bf521737eabb73de83c1b94e4a10b433bfc4dd4b114",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-41",
+      "unit_id": "5344253b-ec9b-5f6b-ac64-5ae0faac5023",
+      "content_sha256": "01d28a03f7b52b679410c9cde30b3da0f67e919c35ee5abef4c567abe74ef6ef",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-42",
+      "unit_id": "8d6b0f78-15ce-5031-8d42-65291adb6941",
+      "content_sha256": "2275aaf644964d5e58975dcfc0449e7b78695d6926e7a9607261c4d7accc3aab",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-43",
+      "unit_id": "a25b8e15-ddf6-5248-b725-5cfa00d1f958",
+      "content_sha256": "3906d12e5334eef5bfa9a58bc1af2a1f08611e8dee7990f556e1e6dbce9ec523",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-44",
+      "unit_id": "9882f379-1c69-51c0-8afd-ccf08028c1a3",
+      "content_sha256": "734e2ca9c2866aab3e8e8dfef244f9fcfbf1c82713bebabf49cdf5095aca4fc2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-45",
+      "unit_id": "c36571f8-112e-5f5e-a602-adebbdbc42b5",
+      "content_sha256": "c88a122397b23c5b671d7679960ef94333feb03f1c7cae1bbf00ffa63764701b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-46",
+      "unit_id": "c22cf3b2-434d-58fc-938a-ee0a950b629f",
+      "content_sha256": "72a229a6f00e4b7be0245161361a1b8fef7873785572a0746a18d9e4140a2ca6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-5",
+      "unit_id": "52ccbbf8-39ca-57ac-823a-23b791a1cabf",
+      "content_sha256": "b93c8840d29312b2bb0f36cf8ddca7a0fbe99e98e23b2c2d77f6cbcb4e6da6d2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-6",
+      "unit_id": "bf193a34-2dc9-5c7f-aff0-1b9880467025",
+      "content_sha256": "4c228430771280fb2f2eebddb7c37aae50fe021ce2360805dfe0e00b71aea0bd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-7",
+      "unit_id": "6524002f-57e6-53de-b9d9-7502493de36a",
+      "content_sha256": "feb7d7316070b26f8a0fa8ba5b140be559c7f771f05364d4be00a124142cee4f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-8",
+      "unit_id": "a2501606-af92-561b-a946-290107094bd3",
+      "content_sha256": "af55169bafb4b39b07954fd15647a85336cc9f8672af5fce9a58290f5f5e733d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "maria-penha",
+      "unit_key": "art-9",
+      "unit_id": "76d52d2a-5fce-5acf-9589-7c3ccab82a1e",
+      "content_sha256": "52270909920eb0a35574e936bdaa21e5cf8ece10293f2ff7ab35b602c460918a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+      "result": "deepened"
     },
     {
       "course": "menor-potencial-ofensivo",
