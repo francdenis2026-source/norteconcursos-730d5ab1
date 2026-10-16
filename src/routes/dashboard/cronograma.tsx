@@ -96,12 +96,12 @@ function CronogramaPage() {
   if (isLoading || (real && !plans))
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
   if (!real)
-    return <LockedState image="journey" title={<>Meu <em>cronograma</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
+    return <LockedState image="journey" title={<>Cronograma <em>por edital</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
 
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Meu <em>cronograma</em></>}
+      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Cronograma <em>por edital</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
       <StudyPlanningNav active="schedule" />
       {openId === "new" ? (
@@ -119,6 +119,13 @@ function CronogramaPage() {
 
 function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new") => void }) {
   return (
+    <div className="space-y-3">
+      {plans.length === 0 && (
+        <p className="rounded-xl border bg-card p-4 text-sm text-muted-foreground">
+          Você ainda não tem cronograma. Escolha o modelo do edital do seu concurso: ele já traz as
+          disciplinas e os tópicos, e a semana se ajusta ao que você estuda.
+        </p>
+      )}
     <div className="grid gap-3 sm:grid-cols-2">
       {plans.map((p) => (
         <button key={p.id} type="button" onClick={() => onOpen(p.id)} className="rounded-xl border bg-card p-4 text-left transition hover:border-primary">
@@ -132,6 +139,7 @@ function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new
       <button type="button" onClick={() => onOpen("new")} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary">
         <Plus className="h-4 w-4" /> Novo cronograma
       </button>
+    </div>
     </div>
   );
 }
