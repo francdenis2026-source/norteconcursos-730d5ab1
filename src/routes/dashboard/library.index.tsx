@@ -267,7 +267,7 @@ export function LibraryIndex() {
         actions={
           <Button asChild className="hero-btn-ghost gap-2" variant="outline">
             <Link to="/dashboard/edital">
-              <MapPin className="h-4 w-4" /> Edital eletrônico
+              <MapPin className="h-4 w-4" /> Meu edital
             </Link>
           </Button>
         }

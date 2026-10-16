@@ -1,6 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { BookOpenText, Calendar, ChevronRight, Target } from "lucide-react";
+import {
+  BarChart3,
+  BookOpenText,
+  Calendar,
+  CalendarClock,
+  ChevronRight,
+  ClipboardList,
+  Radar,
+  Target,
+} from "lucide-react";
 import { useAuthStatus, useDashboardData } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
@@ -13,6 +22,33 @@ import {
 import { platformDate } from "@/lib/platformClock";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+const NEXT_STEPS = [
+  {
+    to: "/dashboard/edital-radar",
+    title: "Radar do edital",
+    text: "O que mais cai e o que tende a cair no seu edital.",
+    icon: Radar,
+  },
+  {
+    to: "/dashboard/exam-panorama",
+    title: "Panorama das provas",
+    text: "O peso de cada disciplina nas provas já realizadas.",
+    icon: BarChart3,
+  },
+  {
+    to: "/dashboard/cronograma",
+    title: "Cronograma por edital",
+    text: "Disciplinas e tópicos distribuídos até a prova.",
+    icon: CalendarClock,
+  },
+  {
+    to: "/dashboard/study-plan",
+    title: "Plano por resultados",
+    text: "Prioridades a partir das provas que você já fez.",
+    icon: ClipboardList,
+  },
+] as const;
 
 export const Route = createFileRoute("/dashboard/my-contest")({ component: MyContestPage });
 function MyContestPage() {
@@ -110,18 +146,39 @@ function MyContestPage() {
           </p>
         )}
         <div className="flex flex-wrap gap-2">
-          <Button asChild>
+          <Button asChild variant={focusedContest ? "default" : "outline"}>
             <Link to="/dashboard/edital">
               <BookOpenText className="mr-2 h-4 w-4" />
               Ver todos os editais
             </Link>
           </Button>
-          <Button asChild variant="outline">
-            <Link to="/dashboard/study-coach">Definir meu objetivo</Link>
+          <Button asChild variant={focusedContest ? "outline" : "default"}>
+            <Link to="/dashboard/questions">
+              {focusedContest ? "Trocar meu concurso" : "Escolher meu concurso"}
+            </Link>
           </Button>
-          <Button asChild variant="outline">
-            <Link to="/dashboard/performance">Consultar meu desempenho</Link>
-          </Button>
+        </div>
+      </section>
+      <section aria-labelledby="my-contest-next" className="space-y-3">
+        <h2 id="my-contest-next" className="text-lg font-black">
+          Próximos passos
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {NEXT_STEPS.map(({ to, title, text, icon: Icon }) => (
+            <Link
+              key={to}
+              to={to}
+              className="flex gap-3 rounded-2xl border bg-card p-4 transition-colors hover:bg-muted/60"
+            >
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                <Icon className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <span>
+                <strong className="block text-sm">{title}</strong>
+                <small className="text-xs text-muted-foreground">{text}</small>
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

@@ -150,7 +150,7 @@ const MENU: MenuItem[] = [
   { group: "Ferramentas", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
   { group: "Ferramentas", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
   { group: "Questões", label: "Treinador de questões", icon: BrainCircuit, href: "/dashboard/question-trainer", primary: true },
-  { group: "Questões", label: "Revisar erros", icon: NotebookPen, href: "/dashboard/errors" },
+  { group: "Questões", label: "Caderno de erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
   { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
   { group: "Questões", label: "Acervo de questões", icon: BookMarked, href: "/dashboard/question-bank" },

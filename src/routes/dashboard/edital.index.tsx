@@ -158,7 +158,7 @@ function EditalPage() {
     <div className="edital-workspace space-y-5 pb-8">
       <header className="edital-heading">
         <div>
-          <span className="edital-eyebrow">EDITAL E CONTEÚDO</span>
+          <span className="edital-eyebrow">MEU CONCURSO</span>
           <h1>Meu edital</h1>
           <p>Encontre seu concurso e transforme o programa em uma sequência de estudo e prática.</p>
         </div>
