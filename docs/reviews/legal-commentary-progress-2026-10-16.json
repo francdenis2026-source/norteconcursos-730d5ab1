@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 461,
+  "count": 501,
   "fields_read": [
     "simples",
     "pontos",
@@ -25,10 +25,331 @@
     "legal-commentary-block-14-2026-10-16.md",
     "legal-commentary-block-15-2026-10-16.md",
     "legal-commentary-block-16-2026-10-16.md",
-    "legal-commentary-block-17-2026-10-16.md"
+    "legal-commentary-block-17-2026-10-16.md",
+    "legal-commentary-block-18-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
+    {
+      "course": "abuso",
+      "unit_key": "art-1",
+      "unit_id": "fb2304a8-b1f8-53a0-92ff-f64ecf9739ff",
+      "content_sha256": "19819193196ee499df17652d5cbc656f3055f689f05e50ef3eab032b90e819a4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-10",
+      "unit_id": "3c670d54-69e4-5dda-8dd4-5295d7e9207d",
+      "content_sha256": "4b4b3f2a6a63f80b8ef8e005cc1551bdfa572e700477cb62ec59d8fde12992b8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-12",
+      "unit_id": "e57cb90c-6f93-5ddd-96dd-8c1db8731197",
+      "content_sha256": "ca32d6abcae0dc4e23bfbba41bee55c6b499c04171f32024ec515e3e703d3486",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-13",
+      "unit_id": "7101aec4-b723-5781-a910-17c4630b9644",
+      "content_sha256": "7166e99a291ba98819d0f668147717876c86322a98b015ed61eab918317bc58a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-15",
+      "unit_id": "0bd106b0-b8a4-519e-a5c3-c5662fc802bd",
+      "content_sha256": "af21f539cb3d80f2212df6e1bf97cc6688306e16b4b75bc5b99a0e67ea6a3dd7",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-15-a",
+      "unit_id": "253278c0-7ad2-568a-a8d4-aa0458f51894",
+      "content_sha256": "57817db60b2b0b49e71e57b1abf9bbb2e5ceedf151c94c1daa2f54107152d30e",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-16",
+      "unit_id": "442fd600-1b8b-5b23-b00d-37c4875d0ab1",
+      "content_sha256": "7cd3f5a8b7c072db028e12c5cc30e527f2db699cbb58dccf0bff66852da3548b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-18",
+      "unit_id": "3b3446ad-7999-5487-8749-09c247d0051c",
+      "content_sha256": "ef44a8c271f03a443061b257d3dd09abd506cc2b124ae80ce426f92957df68d6",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-19",
+      "unit_id": "01bdce89-0576-530a-9993-bf6a39194c62",
+      "content_sha256": "0bb3c8cab803aa0eeca117dcdb98832462e1fcaafe765bb51c3a55821e083893",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-2",
+      "unit_id": "eb911c53-91a0-5525-bfb3-0a2f3ed15f52",
+      "content_sha256": "97e24c6a133e97debccf7d34c7563fb055625882311e15a561b9f088990aa519",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-20",
+      "unit_id": "be568fd0-19c5-5487-9374-5beffbcbbac4",
+      "content_sha256": "730d0a0d599f69df6acbf3e7461f2cdb911cf477f41dab1a73f59ea2bded9042",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-21",
+      "unit_id": "20ec9373-e3f8-5424-be7b-b34138349d6f",
+      "content_sha256": "e2098a5efd10e3014eb2bf9b6f237762fedafb28b01e9f94741b0da72730e0c3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-22",
+      "unit_id": "109c3f88-c8e6-5c08-8701-ffe73245f126",
+      "content_sha256": "19ada4544ac5e46c26b633b6ab840facde48bb16ff23310885fd120ccc9ef4da",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-23",
+      "unit_id": "5bc4ba6a-9246-5337-8372-55e69267ce0d",
+      "content_sha256": "8f4241ed8a82b95b355ab94bf3e99fc6725e7ddc7bf5eb7b2d338569bb5c6ed3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-24",
+      "unit_id": "dcd0b00a-9534-52c6-b76b-6b2294974074",
+      "content_sha256": "0a6564c8fff41630fef1a8b06065c386f9bba326d3ac6639f0c58fc1c641fac9",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-25",
+      "unit_id": "d81ac0cf-e2e7-54f9-8e72-8d2c54fd626a",
+      "content_sha256": "947ccc2e2c0ee79cfa92312c669d32ba634efead0c9dad5ede2fb7624bd10ff5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-27",
+      "unit_id": "16a0e7cb-d24e-5d12-a26e-2926c2b73b0d",
+      "content_sha256": "d16a768d7ce6d96c29bdcac7098ee7424bea50ec5f606ea403e7ec3300efb849",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-28",
+      "unit_id": "ec21a74d-761f-5e7e-8994-aee637322fb6",
+      "content_sha256": "a3b6d694742a96af4d4b8ac4089b3179c713b5b6e0e5b500be8e4f6b2bb60a1b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-29",
+      "unit_id": "d522b95c-e24c-523b-80bb-5207f9a8ff66",
+      "content_sha256": "70e96541dbc8861c5a10adcb3a16279f00d7c3ab33f0ce7d67b13bd3883210a0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-3",
+      "unit_id": "5089dcf1-4222-5f65-bbb1-e92d6b3cad24",
+      "content_sha256": "7f0f3fa3002440902ed4fd9d71e7089a8be64c0b5f765da751c2ff26ec0c3200",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-30",
+      "unit_id": "0637683a-4203-5c41-b629-38d86c695e1f",
+      "content_sha256": "056f1c37adff17c081e3140cec9ac55a22811a7d46b7996d8064028918e79737",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-31",
+      "unit_id": "8c726752-3c36-52bf-b12f-305e0a0661dc",
+      "content_sha256": "a36e5aead65b70a407fb89666decfda6fac430c9e705d28dde4fa64609ab7a25",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-32",
+      "unit_id": "376c0575-558a-52d9-b22f-98dcd430f3e4",
+      "content_sha256": "52bc18476d287bae3a99ad697704bbb008bb7bd7a2e6e76fc34743de179acf2c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-33",
+      "unit_id": "6af93b9b-b7c5-56d1-8675-00fbc0e26995",
+      "content_sha256": "2fdaa21724984cfc09f4f71dfd999e499d480814d0b50568798a44ca51b1f229",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-36",
+      "unit_id": "45ef0648-9cc1-5969-b3c8-d718bf59f0ea",
+      "content_sha256": "75c79204c0793783713bfd1b5d769eb54484caacbd6f7f921031c6214d7ab6ad",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-37",
+      "unit_id": "7d2dfe3e-75c1-5554-a9f9-263004c7f15b",
+      "content_sha256": "9237816fdf631adf3e605021583d7093bdbfc57bba6edfac904f240751e12aed",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-38",
+      "unit_id": "b9ddc625-aced-5ee4-b446-90bc50c494d7",
+      "content_sha256": "7437700518f02b5c6e6763063188ebd54b1a48faa080f34d3353ecdb8813bd55",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-39",
+      "unit_id": "9c3f4cd4-8c8a-5985-998d-6dc2a9766cdb",
+      "content_sha256": "f58387aa5432af53d66312713b6e8fed3e7c2b44b5e07adf5f1a146beafd692b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-4",
+      "unit_id": "0379516c-acce-5c62-b3bd-67c55057fd22",
+      "content_sha256": "27f1b81fad25eec2788d94f58d4b30cad45f896becc17cb1172d6f8497510296",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-40",
+      "unit_id": "516f313f-f29f-54dc-ad4b-19e7130cc875",
+      "content_sha256": "240c27eb35f55c0e7d58f35b9e19fa440da48fd23a814632897ef3f56e2b5f22",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-41",
+      "unit_id": "29fcef80-67fb-5fc5-ac7f-680bce6ee202",
+      "content_sha256": "c8f0ad98a6a02f7d7f9ec75c97897ca9e4183fdeac245ea0b83c144d727e82f5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-42",
+      "unit_id": "0b25493a-4ba8-5b4c-926d-dd06f00044a5",
+      "content_sha256": "9bf0ccbd4f361c6944c7a5135a806da3e8956803da6813fb5f974e46293e8687",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-43",
+      "unit_id": "1f1cf46b-0926-598a-8181-4b872811fd62",
+      "content_sha256": "3caf5ac937aaf8662ebc54479e92255ce67ad1b5470bd593b1baf4d35ff40539",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-44",
+      "unit_id": "9b04b2db-dfc3-5f2a-97cc-2b2eae02de86",
+      "content_sha256": "2e6fe8e58907b957d75de20ba61d5f25b8edac3a5e3d4758187ef64a9869dd9f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-45",
+      "unit_id": "4eff134e-7977-5db7-9384-b324c8792025",
+      "content_sha256": "a29c2422cb89b2f2689f37101195d4a9c564161b1016c6ff6d3ecc9621f58c84",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-5",
+      "unit_id": "a4c94931-2525-5b20-89ad-b8e8f26100d6",
+      "content_sha256": "85d1bf4a09a38bb3139d123b81c0431dec4a8f62a0181378a762441ee6b48358",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-6",
+      "unit_id": "570d5122-c93d-5aba-8bd1-8ce82287a958",
+      "content_sha256": "6de020dd2acbe2e6a72dbb5bb6bc158e211871a04f166da087d5c2f88d56be0d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-7",
+      "unit_id": "1084470e-e723-5a5e-bf6b-25da8fdc2921",
+      "content_sha256": "4ac2a0213d3b88394891fa678367fe29841f3ea0ecaa611e7d2dc668cdf20128",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-8",
+      "unit_id": "f89c6b4c-687a-5573-bad7-2305e3a2c0cc",
+      "content_sha256": "067da5a314ed6377224a17f8aa17ca0aae85d47c8b8199cca3dadaf3acc4458a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "abuso",
+      "unit_key": "art-9",
+      "unit_id": "262c9e27-26e7-526d-a4af-f6804d616a29",
+      "content_sha256": "e96d01bfe34ef157b00db4f2c6fad75c4ca66d8a827ac75431e8515d257abc87",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+      "result": "preserved"
+    },
     {
       "course": "armas",
       "unit_key": "anexo-1",
