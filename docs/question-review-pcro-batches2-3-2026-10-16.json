@@ -1,0 +1,874 @@
+{
+  "scope": "Ten further individual RO 2022 reviews: three delegate, four agent and three clerk questions. No original question, answer or source rewrite. Not a certificate of all exams or all cited norms.",
+  "publication": [
+    {
+      "dry_run": false,
+      "reviewed": 3,
+      "updated": [
+        "1acfd6b9-e3d0-439a-9db3-fbf8da64c78a",
+        "3e342de4-7238-4af8-95b7-47683d509537",
+        "9d7b5062-a8bd-41fc-b33a-28e252d37a41"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-16T21:05:32.473Z"
+    },
+    {
+      "dry_run": false,
+      "reviewed": 7,
+      "updated": [
+        "2cb9d6d6-479b-494e-bc45-3c225e09c634",
+        "3e7e168b-cc80-4f34-8083-e7e0e58d7fb4",
+        "5d913ab3-4fe7-48a4-bf9d-c24369f382c1",
+        "5f994395-1732-41a1-94dc-a5047682cbf9",
+        "7cd418ec-ba8e-49ca-bb16-4ccc3de391d4",
+        "df98e794-b486-460c-abbd-4c141eadee2c",
+        "e0c114dd-9ca1-4b6b-813f-22c68c67743d"
+      ],
+      "preserved": 0,
+      "verified_at": "2026-10-16T21:07:56.876Z"
+    }
+  ],
+  "validation": {
+    "checked_at": "2026-10-16T21:08:13.328Z",
+    "published": 10,
+    "eligible": 10,
+    "preserved_other_pc_records": 2958,
+    "concurrent_changes": [],
+    "metadata_changes": [],
+    "pc_status": {
+      "active": 2550,
+      "archived": 210,
+      "under_review": 165,
+      "annulled": 37,
+      "obsolete": 6
+    },
+    "pending_by_contest": {
+      "Polícia Civil de Pernambuco - Agente de Polícia": 18,
+      "Polícia Civil de Pernambuco - Escrivão de Polícia": 11,
+      "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+      "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+      "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 57,
+      "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 9,
+      "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+      "Polícia Civil de Pernambuco - Delegado de Polícia": 10,
+      "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+      "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 11,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+      "Polícia Civil de Minas Gerais": 2,
+      "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+      "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+      "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+      "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 10,
+      "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+    }
+  },
+  "items": [
+    {
+      "id": "1acfd6b9-e3d0-439a-9db3-fbf8da64c78a",
+      "item_number": 15,
+      "career": "Delegado de Polícia",
+      "previous_row_sha256": "576762d809acbb8788cc2a38807e005b55c573ce15d47921ce2da4fd7d02be1d",
+      "published_row_sha256": "f56cf582b69f7f332e2719ed9f9c010c8df7eb0f5dc4b2d4b6db80216040ec93",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "73ad486f-79b4-50fa-9d8f-58555a8d5e58",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "136",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "139",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:05:10.200198+00:00",
+        "review_note": "Gabarito definitivo: alternativa E. Prova histórica PC/RO 2022. Texto, cinco alternativas, gabarito e fundamentos atuais conferidos individualmente em 16/10/2026.\nESTADO DE DEFESA admite restrição ao sigilo de comunicação telegráfica e telefônica, nos termos e limites do art. 136, § 1º, I, c. A incomunicabilidade do preso é expressamente VEDADA. Não confunda com as medidas do estado de sítio do art. 139: obrigação de permanência em localidade determinada, busca domiciliar e intervenção nas empresas de serviços públicos. Ocupação e uso temporário de bens e serviços públicos na calamidade do art. 136 não equivalem à intervenção em empresas da alternativa A.\nExemplo: Em estado de defesa regularmente decretado, a restrição ao sigilo telefônico precisa respeitar os limites legais; isso não torna o preso incomunicável.\nTeste rápido — Estado de defesa autoriza incomunicabilidade? Não.",
+        "verified_at": "2026-10-16T21:05:10.200198+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Leitura individual integral e cotejo visual com o PDF oficial: divergências automáticas nos itens 15 e 95 eram contaminação de cabeçalhos no extrator, não erro do banco. Texto e letra preservados; pertinência ao edital do cargo e recorte normativo vigentes conferidos.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        },
+        "official_pdf_page": 1,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/delegado-next-1.png",
+          "sha256": "ff54802ccb3710da66f405df1b3749e8377cbc53545752055c5b56c033fabc92"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "3e342de4-7238-4af8-95b7-47683d509537",
+      "item_number": 95,
+      "career": "Delegado de Polícia",
+      "previous_row_sha256": "9aa9deec2f5f2b7477fc9bb7930a197ccd0d6f84a31351d2265ec5a3e8ac6d84",
+      "published_row_sha256": "a30f90be796bb46c121e7732775c0927758a1878b2d052346e416776d55129a3",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "bd2c478b-f01b-5395-a3de-63b57681d9c3",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "85",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "86",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "87",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "89",
+            "title": "Código Civil — alimentos e revisão"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "artigo": "92",
+            "title": "Código Civil — alimentos e revisão"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:05:10.200198+00:00",
+        "review_note": "Gabarito definitivo: alternativa E. Prova histórica PC/RO 2022. Texto, cinco alternativas, gabarito e fundamentos atuais conferidos individualmente em 16/10/2026.\nBem INCONSUMÍVEL permite uso reiterado sem destruição imediata de sua substância. O art. 86 define os consumíveis pelo uso que importa destruição imediata da substância e também inclui os destinados à alienação. Desgaste natural ao longo do tempo não torna todo bem consumível. Fungibilidade, divisibilidade, singularidade e relação principal/acessório são critérios distintos e podem coexistir.\nExemplo: Uma cadeira utilizada repetidamente é, em regra, inconsumível; o alimento consumido na refeição é consumível. A classificação considera também a destinação jurídica do bem.\nTeste rápido — Inconsumível significa que nunca sofre desgaste? Não.",
+        "verified_at": "2026-10-16T21:05:10.200198+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Leitura individual integral e cotejo visual com o PDF oficial: divergências automáticas nos itens 15 e 95 eram contaminação de cabeçalhos no extrator, não erro do banco. Texto e letra preservados; pertinência ao edital do cargo e recorte normativo vigentes conferidos.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cc.html",
+            "sha256": "4bde5e59b23f50aafcc1aa5907d3c092115c284c66b26e58361342bd5dc3e61c",
+            "captured_at": "2026-10-16T20:42:30.992Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        },
+        "official_pdf_page": 13,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/delegado-next-13.png",
+          "sha256": "c036c281d1e84f9068ecfeafcb79d20c3b9e61799ba3f0848860ad3682755005"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "9d7b5062-a8bd-41fc-b33a-28e252d37a41",
+      "item_number": 33,
+      "career": "Delegado de Polícia",
+      "previous_row_sha256": "258b02d005fb141e2400ddb935f36a1f5055fa30cf1b013ee81bbbb6e016db73",
+      "published_row_sha256": "0a7466864e7c0d2f58679194a1ea0b2a17516b8dbe2945c7256f7021f758eb26",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "dbbb14d6-e5ad-5a81-87a3-09efbda3833b",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "20",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "21",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:05:10.200198+00:00",
+        "review_note": "Gabarito definitivo: alternativa C. Prova histórica PC/RO 2022. Texto, cinco alternativas, gabarito e fundamentos atuais conferidos individualmente em 16/10/2026.\nA banca reconhece ERRO DE PROIBIÇÃO INEVITÁVEL: Francisco compreende o que faz, mas não alcança a ilicitude na situação narrada. O art. 21 isenta de pena se o erro for inevitável; se evitável, prevê redução de um sexto a um terço. A categoria da culpabilidade atingida é a potencial consciência da ilicitude, e não a exigibilidade de conduta diversa. Viver na zona rural NÃO gera isenção automática: é indispensável avaliar se, nas circunstâncias, era possível atingir a consciência da ilicitude. Erro sobre elemento do tipo segue o art. 20.\nExemplo: Conhecer os fatos e acreditar inevitavelmente que a conduta é permitida difere de desconhecer um elemento factual do tipo.\nTeste rápido — Todo erro de proibição exclui a culpabilidade? Não: o evitável permite redução de pena.",
+        "verified_at": "2026-10-16T21:05:10.200198+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Leitura individual integral e cotejo visual com o PDF oficial: divergências automáticas nos itens 15 e 95 eram contaminação de cabeçalhos no extrator, não erro do banco. Texto e letra preservados; pertinência ao edital do cargo e recorte normativo vigentes conferidos.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        },
+        "official_pdf_page": 4,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/delegado-next-4.png",
+          "sha256": "a2f47c09786add516516e522a29760c65f8a3f702eacd459c57e5633dc2a9a72"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "2cb9d6d6-479b-494e-bc45-3c225e09c634",
+      "item_number": 82,
+      "career": "Escrivão de Polícia Civil",
+      "previous_row_sha256": "ed8ca9c1f3e1b89cf8e302757179803178f4a6271364d2c361b09e21a793eee9",
+      "published_row_sha256": "4a58b15e19dc8847545bf58cc0c6e51aa6f8c5c9186c44d45923e707acf42b61",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "7830a6db-bca9-547a-aca9-0528ca9908fb",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "15",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "37",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa D. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nImprobidade administrativa pode gerar SUSPENSÃO dos direitos políticos, conforme art. 15, V, combinado com art. 37, § 4º. Cassação é constitucionalmente vedada. A suspensão depende da aplicação do regime legal e da decisão cabível: não é consequência automática de qualquer irregularidade administrativa ou de mera investigação.\nExemplo: Sanção de suspensão aplicada por improbidade não equivale à cassação permanente dos direitos políticos.\nTeste rápido — Improbidade autoriza cassação de direitos políticos? Não.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 6,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-002-6.png",
+          "sha256": "e780641b2ee7abb882179ed4ef9e8b2edb3d237875bfb2bca67705496dc4951c"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "3e7e168b-cc80-4f34-8083-e7e0e58d7fb4",
+      "item_number": 71,
+      "career": "Agente de Polícia Civil",
+      "previous_row_sha256": "a06c34263c3d21f886f8d3a4b4880668716b7e4d96a792cca84286cef1412b25",
+      "published_row_sha256": "19b78d0825855ebb16f8afbd9da3cb071eda7bfcd21af73373f22134c9cade79",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "351457b0-d427-5f7e-bc58-3402ab7dde1a",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "121-A",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "158",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "197",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "304",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "318",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa E. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nGabarito E preservado, com ATUALIZAÇÃO EXPRESSA. Na prova de 2022, feminicídio era qualificadora do homicídio; desde a Lei 14.994/2024 passou a crime autônomo no art. 121-A, com pena de 20 a 40 anos. O atual § 2º, I, prevê aumento de um terço até a metade nos três meses posteriores ao parto e também quando a vítima é mãe ou responsável pelas pessoas ali indicadas. A violência doméstica narrada e o filho de dois meses sustentam a resposta, sem exigir presença física da criança para essa causa. Não se aplica retroativamente lei penal mais gravosa ao fato histórico. Confissão não substitui exame de corpo de delito quando a infração deixa vestígios nem basta, sozinha, para manter preventiva.\nExemplo: Matar a companheira no contexto de violência doméstica dois meses depois do parto deve ser distinguido da majorante diferente de cometer o fato na presença de descendente.\nTeste rápido — Para a causa relativa aos três meses após o parto é indispensável que o bebê veja o crime? Não.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cpp.html",
+            "sha256": "e233e15f5c0d7c7fb19d418f7ceddc2f6d0f0b43adab0114367acec072ae7cf6",
+            "captured_at": "2026-10-16T20:42:26.376Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 5,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-001-5.png",
+          "sha256": "eb3b7ef975aa11ee6c58ca7687e3b0ee296cb6f8f444233b1658f2f4535bcd8a"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "5d913ab3-4fe7-48a4-bf9d-c24369f382c1",
+      "item_number": 66,
+      "career": "Agente de Polícia Civil",
+      "previous_row_sha256": "abb95be3d06cb4b6156d5e4863cc903e12ed78aedf671ac26e47d6b2ced49121",
+      "published_row_sha256": "757bc8e216f8c0f8ab10327e3c5236c2e01e8098194f544ce63c22f52b95c89f",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "351457b0-d427-5f7e-bc58-3402ab7dde1a",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "311",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "312",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "artigo": "313",
+            "title": "Código de Processo Penal – Decreto-Lei nº 3.689/1941"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa A. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nO art. 313, § 1º, admite preventiva quando houver dúvida sobre a IDENTIDADE CIVIL ou insuficiência de elementos para esclarecê-la. Isso não cria prisão automática por falta de documento: devem ser observados os pressupostos e garantias da cautelar. Esclarecida a identidade, exige-se imediata liberdade, salvo outra hipótese que recomende a manutenção. Preventiva não é a temporária de cinco dias e não pode ser decretada de ofício.\nExemplo: Pessoa cuja identidade está efetivamente em dúvida exige análise judicial fundamentada; perder o documento não basta, isoladamente, para mantê-la presa.\nTeste rápido — Esclarecer a identidade permite prolongar automaticamente a prisão? Não.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cpp.html",
+            "sha256": "e233e15f5c0d7c7fb19d418f7ceddc2f6d0f0b43adab0114367acec072ae7cf6",
+            "captured_at": "2026-10-16T20:42:26.376Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 5,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-001-5.png",
+          "sha256": "eb3b7ef975aa11ee6c58ca7687e3b0ee296cb6f8f444233b1658f2f4535bcd8a"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "5f994395-1732-41a1-94dc-a5047682cbf9",
+      "item_number": 75,
+      "career": "Agente de Polícia Civil",
+      "previous_row_sha256": "8693571f1552f1ae02a832baa8f65178a804e26270f98f9deb493ef2124b9d32",
+      "published_row_sha256": "1a84dc9a67daa99538ee887b8823bc215f878f19be13a356e2b934d59497397e",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "f0e1f4d6-cd69-5f2e-9a38-22b13e67c781",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "1",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "341",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "343",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "344",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "348",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "349",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa A. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nAUTOACUSAÇÃO FALSA, art. 341, refere-se a CRIME inexistente ou praticado por outrem. O caso da alternativa A trata de CONTRAVENÇÃO: não se amplia o tipo por analogia contra o acusado. Essa atipicidade é relativa ao enquadramento descrito, não licença para cometer outros delitos. A imunidade familiar do favorecimento pessoal não se transfere ao favorecimento REAL do art. 349; coação no processo também pode alcançar procedimento policial ou administrativo. Suborno de testemunha tem tipo próprio no art. 343.\nExemplo: Assumir falsamente uma contravenção não se torna autoacusação de crime apenas pela semelhança entre as infrações.\nTeste rápido — Pode-se trocar a palavra crime por contravenção para ampliar o art. 341? Não.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 6,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-001-6.png",
+          "sha256": "b58ad79b41015e4a53fe8df1c0718c4d0488234b0470f3518c31f96ade94a8ff"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "7cd418ec-ba8e-49ca-bb16-4ccc3de391d4",
+      "item_number": 85,
+      "career": "Escrivão de Polícia Civil",
+      "previous_row_sha256": "c7ddf88d2492d66d795b2eca9395225d1aa6f28a515a186c462b166f7cf89cda",
+      "published_row_sha256": "a0e9249f830240884ef5a463cd1de4aca79a370268051537dd584bf859892516",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "7830a6db-bca9-547a-aca9-0528ca9908fb",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "5",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa D. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nA entrada em casa por DETERMINAÇÃO JUDICIAL, sem consentimento, tem a limitação constitucional de ser DURANTE O DIA. Flagrante delito, desastre e prestação de socorro são hipóteses constitucionais distintas e não se limitam, por esse inciso, ao período diurno. A alternativa D é a que reproduz a regra. Isso não significa que qualquer alegação de flagrante legitime ingresso: os pressupostos concretos precisam existir.\nExemplo: Mandado judicial não autoriza, por si só, ingresso noturno sem consentimento; socorro efetivamente necessário pode justificar a entrada à noite.\nTeste rápido — Toda entrada noturna sem consentimento é proibida? Não: há exceções constitucionais.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 6,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-002-6.png",
+          "sha256": "e780641b2ee7abb882179ed4ef9e8b2edb3d237875bfb2bca67705496dc4951c"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "df98e794-b486-460c-abbd-4c141eadee2c",
+      "item_number": 85,
+      "career": "Agente de Polícia Civil",
+      "previous_row_sha256": "6e074a4f39386fd8674739ffb1dd9cde66be2f94fb23c9301f1f644f09df043a",
+      "published_row_sha256": "01289fe15d39009ad5847950deee957026165861d02656aa5282e4903f008a55",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "f52b14f3-32ac-577e-966f-6e7a6bb64564",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "14",
+            "title": "Constituição da República Federativa do Brasil de 1988"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa D. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nO art. 14, § 8º, I, determina que o militar ALISTÁVEL com MENOS DE DEZ ANOS de serviço deve afastar-se da atividade para ser elegível. A alternativa D reproduz essa condição. Não substitua o marco por três, cinco, quinze ou vinte anos. O inciso II disciplina hipótese diferente de tempo de serviço, com agregação e passagem à inatividade na diplomação se eleito.\nExemplo: Militar alistável com oito anos de serviço deve observar o afastamento previsto no inciso I, além dos demais requisitos eleitorais.\nTeste rápido — O inciso I fixa menos de vinte anos? Não: menos de dez.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:02",
+          "nomeArquivo": "733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:02:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_001_01.PDF",
+          "sha256": "8e181fe2d57994e05523d6b2860129e04ec08155e2fd278ea65f39801b6ec25b",
+          "captured_at": "2026-10-16T20:36:46.322Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 1",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_001_01.PDF",
+          "sha256": "60a247040c41856a840f28d3f6cb07c0b8ea4c22f49e27881ab5f7b62a8d1062",
+          "captured_at": "2026-10-16T20:36:45.471Z"
+        },
+        "official_pdf_page": 7,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-001-7.png",
+          "sha256": "e7c438ab766d727eb4239ee253bfffa1830b62c1aff7f536c5c3a2284c597438"
+        },
+        "text_options_and_key_matched": true
+      }
+    },
+    {
+      "id": "e0c114dd-9ca1-4b6b-813f-22c68c67743d",
+      "item_number": 75,
+      "career": "Escrivão de Polícia Civil",
+      "previous_row_sha256": "89f4ff4423f8de1fcd57bb85314455e74b285f9da79f9b317517a03921db03ed",
+      "published_row_sha256": "98139891119a5c49dd9068948b9ad37e8e0c4ec5d920d81502d7ea3aa90db7ff",
+      "patch": {
+        "content_status": "active",
+        "legal_audit_completed": true,
+        "current_syllabus_topic_id": "d678b40c-fd9d-5189-abdb-f3c923ee2b37",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "artigo": "28",
+            "title": "Código Penal – Decreto-Lei nº 2.848/1940"
+          }
+        ],
+        "law_version_checked_at": "2026-10-16T21:07:08.509827+00:00",
+        "review_note": "Gabarito definitivo: alternativa A. Prova histórica PC/RO 2022; texto, alternativas, letra e fundamentos atuais conferidos individualmente em 16/10/2026.\nEmbriaguez CULPOSA, assim como a voluntária, NÃO exclui a imputabilidade penal, mesmo quando completa. No caso narrado, o agente bebeu e se embriagou sem pretender isso; não se descreve caso fortuito ou força maior. Embriaguez completa fortuita tem pressupostos diferentes no § 1º: incapacidade inteira de entendimento ou autodeterminação no momento da conduta.\nExemplo: Beber por decisão própria e calcular mal a quantidade não se confunde com ser inesperadamente intoxicado por situação fortuita.\nTeste rápido — Basta estar completamente embriagado para ficar isento de pena? Não.",
+        "verified_at": "2026-10-16T21:07:08.509827+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo visual individual de enunciado e cinco alternativas com PDF oficial e chave definitiva; divergências do extrator foram verificadas visualmente, sem alterar o texto original. Recorte do edital do próprio cargo e norma atual conferidos. Item 71 explicita mudança normativa e irretroatividade da lei mais gravosa.",
+        "sources": [
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF"
+        ],
+        "law_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          }
+        ],
+        "paper": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "19/10/2022 19:03",
+          "nomeArquivo": "733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-10-19T19:03:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/733_PCROAGENTE_002_01.PDF",
+          "sha256": "e5a846b8ac1c84cd634444b11d23eea5dd099e3078b3441467e8376c82ae02cc",
+          "captured_at": "2026-10-16T20:36:46.318Z"
+        },
+        "final_key": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 4",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_733_PCROAGENTE_002_01.PDF",
+          "sha256": "55ef642a7f9b1d1ef670e17b497148e000044123ec1f78e5f3a1e101825c56c4",
+          "captured_at": "2026-10-16T20:36:45.342Z"
+        },
+        "official_pdf_page": 5,
+        "visual_evidence": {
+          "path": "outputs/pc-pending-review-2026-10-16/next-002-5.png",
+          "sha256": "d5c6c5405972036c0710a5af8eb9cbedc07de71f27e135f92b57f3404fabec59"
+        },
+        "text_options_and_key_matched": true
+      }
+    }
+  ]
+}

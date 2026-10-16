@@ -25,3 +25,13 @@ Restam **175 questões `under_review`**: RO 97, PE 39, MT 20, MG seis, AM cinco,
 Os portais legislativos necessários a algumas questões estaduais não estão liberados na rede atual. A chamada ao SAPL/RO teve erro de proxy `CONNECT 403`. Um rascunho aditivo preservou os 42 domínios existentes e acrescentou 13 destinos de fontes estaduais, Senado, IBGE e STF. É necessário revisar/aplicar e publicar a configuração do ambiente; salvar o rascunho não aplica a liberação em execução. A tarefa prossegue com as fontes disponíveis, sem substituir norma estadual por lei federal apenas para liberar questões.
 
 Snapshots, PDFs, capturas e pacotes completos permanecem em `outputs/pc-pending-review-2026-10-16/`, fora do Git. O relatório JSON versiona comentários, escopo e hashes, sem credenciais.
+
+## Continuação — mais dez questões publicadas
+
+Foram conferidas visualmente e publicadas outras dez questões: delegado 15, 33 e 95; agente 66, 71, 75 e 85; escrivão 75, 82 e 85. Os falsos sinais de divergência do extrator foram confrontados com as páginas oficiais, sem alterar enunciados, alternativas ou letras definitivas. Cada item recebeu comentário, exemplo e exercício respondido, com referência normativa atual.
+
+A questão 71 de agente distingue expressamente o feminicídio como qualificadora histórica de 2022 e como crime autônomo atual do art. 121-A, com a mudança da Lei 14.994/2024 e vedação de retroatividade mais gravosa. A causa de aumento relativa ao pós-parto não foi confundida com presença de descendente. Os demais comentários abordam limites do estado de defesa, erro de proibição inevitável, bens inconsumíveis, suspensão de direitos políticos, ingresso domiciliar, embriaguez culposa, identificação civil na preventiva, elegibilidade militar e legalidade estrita na autoacusação falsa de contravenção.
+
+Os dois pacotes passaram por pré-validação integral no banco sem escrita e publicação com comparação de todos os campos anteriores. O snapshot posterior confirmou os dez ativos e elegíveis e a preservação dos outros 2.958 registros de Polícia Civil, sem alterações nos metadados. Não houve mudanças de aplicação nem necessidade de build adicional.
+
+**Resultado acumulado desta etapa: 69 questões de RO publicadas; pendências de Polícia Civil reduzidas de 234 para 165.** Restam RO 87, PE 39, MT 20, MG seis, AM cinco, PI quatro, RJ duas e SE duas. O conjunto tem 2.968 registros físicos: 2.550 ativos (2.120 elegíveis pelo filtro atual da aplicação), 165 em revisão, 210 arquivados, seis obsoletos e 37 anulados. Ativo não significa integralmente auditado nesta campanha.
