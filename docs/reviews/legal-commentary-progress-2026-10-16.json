@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-16",
   "scope": "Leitura dos campos didáticos das explicações publicadas conforme relatórios vinculados; não certifica todo o diploma nem materiais independentes. Hash é do texto legal, não da explicação.",
-  "count": 427,
+  "count": 461,
   "fields_read": [
     "simples",
     "pontos",
@@ -24,7 +24,8 @@
     "legal-commentary-block-13-2026-10-16.md",
     "legal-commentary-block-14-2026-10-16.md",
     "legal-commentary-block-15-2026-10-16.md",
-    "legal-commentary-block-16-2026-10-16.md"
+    "legal-commentary-block-16-2026-10-16.md",
+    "legal-commentary-block-17-2026-10-16.md"
   ],
   "excluded_from_count": "Bloco 2: conferência de referências específicas em cinco outros dispositivos; CPP 1–3 e 5–10: leitura preliminar ainda sem fechamento.",
   "units": [
@@ -826,6 +827,278 @@
       "unit_id": "f4f988a6-91fb-54ae-996d-9b0870551ba6",
       "content_sha256": "d2a49a2073f3ce3e0da9688c7e1e9509929b00640b36ec60e404be1e4d3a6115",
       "official_text_source": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-1",
+      "unit_id": "0f186384-f484-5089-94ad-47bdcc4c6500",
+      "content_sha256": "6b335231d60e2cdaf9523efa01273fb36000bcf45b0a68c777c90c1a15d1f6cd",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-10",
+      "unit_id": "9dc7c653-d2de-5965-bf77-3039b9a5a00f",
+      "content_sha256": "e9462ec684e056a4505df6b4ac60295b53d69c535263afa859ed6fd8f5a439c0",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-11",
+      "unit_id": "f2c970b7-a2e0-51f9-86ea-cfe8374dd689",
+      "content_sha256": "d77649c4e7a329a51fe713a1cbd5a22c254fc4254c337002652df035dd449a81",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-12",
+      "unit_id": "109b9922-79d7-57ff-bb27-7a6c1617af2b",
+      "content_sha256": "fd996c62d9f737a2268862c9fa841097b101d868d8126a8ad016e843f1ecc445",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-13",
+      "unit_id": "a9d2df21-03ae-59fa-8119-2ca8e9271e2c",
+      "content_sha256": "f781a8ce334835723c652efab5830bc3d1a2a3c443a0655113086a150c9fe311",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-14",
+      "unit_id": "f2a4621f-c707-5b81-89da-211a429cd716",
+      "content_sha256": "734d5a5b4def81e481d1e9ef877992ac882f742327221c1a2b5e8d23a6e0479d",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-15",
+      "unit_id": "aa573e25-baa4-58eb-950f-610db22645eb",
+      "content_sha256": "468867fc8cde0d2ed7b3552aec339e71d4fed50950409a7498a1891a9c057906",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-16",
+      "unit_id": "a0e6b46f-bbc2-561d-bf6a-f24d4e402639",
+      "content_sha256": "5db7f5ff61e28e3a133f36dad863717289f641dec17f16ddd474f88af349e01a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-17",
+      "unit_id": "4dac8825-35c0-5db8-92e7-36d40ed9ef45",
+      "content_sha256": "6d0558d53eff0bc49001ec4708ebe82b634d8188a4b212bba45dd7d3a3e294c2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-18",
+      "unit_id": "34124215-89c8-5e5e-a795-8ffd93d376cf",
+      "content_sha256": "db15eae36150267447ada0e7da92853263cf01176d6f32e3fbe61dbca5bd84d3",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-19",
+      "unit_id": "8f0cc0b3-53cd-5e73-848a-c12dd147220c",
+      "content_sha256": "8e3bcdce4957c214520f141b186f4b054de50f5588527750626dd5678d4d0248",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-2",
+      "unit_id": "790db9fa-3a50-5db4-9c2d-52c63d2a3326",
+      "content_sha256": "d1081852ad2986e7e1e887460a0d5a95cf99d5358bc51a4641bb400ad70133cc",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-20",
+      "unit_id": "71308b4b-6fe7-5bf2-bc24-a76d93f8547c",
+      "content_sha256": "ac19c37f3157e4f936298b912e557b8581390275ebb00f476d75a8273a256144",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-21",
+      "unit_id": "9bc1fd99-71db-5c87-81ce-5417985dfc1c",
+      "content_sha256": "efb11627055eb6fecc4a8db92ba13cfd2b9792d1c8d7d4f8bce98d6e7c0654c4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-22",
+      "unit_id": "a8d38eb3-70f5-5326-ac34-e74ef2297718",
+      "content_sha256": "963f6f31f5cf4900b5cffed76b893c658d8bca0bacca88777bb665608f57060c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-23",
+      "unit_id": "e514029c-bf3b-516c-bbdc-6485dd3d6fbd",
+      "content_sha256": "2e6418c784bbed051524c2523674b91f63e265f327a393bb5f2da5c94a2ea195",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-24",
+      "unit_id": "58d0da0a-f0ad-53b0-afe6-2897df1fcb60",
+      "content_sha256": "9ad9172dd3829f5108fb572131ada6adbec53961aa8238fae232c593a4dacda2",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-25",
+      "unit_id": "0d84a25a-153f-50bf-ac64-14bc5c81f532",
+      "content_sha256": "7ad6fe63fff568748fdaa48c26840b627d668a476b94fd7de9d21dcf832302e4",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-26",
+      "unit_id": "616dedf5-9b75-5125-b7ca-37e6b72c5b06",
+      "content_sha256": "ef4b79485e1f4a32966848b0909f1d67c4ddca1d6a51e0702ba0acee8cd190f8",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-27",
+      "unit_id": "5bcc45a1-3afa-5a0c-9fcc-020cf265f400",
+      "content_sha256": "78c597e62c9d7e48cd73de689102fe67d329f129addbde9bef5785941b7b633a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-28",
+      "unit_id": "c07e32f4-3860-55b2-aca2-7b53e5b702b3",
+      "content_sha256": "006518070df0a8edb3999e16d90c74a306a00731302bc900f1461dced83e1f13",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-29",
+      "unit_id": "a41e09df-5a8c-50f3-a37d-102979ef0e8b",
+      "content_sha256": "edebe7a9bb5dc52b7d22a459afba00121a80949f147a4684739e53a1d562e43a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-3",
+      "unit_id": "5ec9630b-6ec9-5674-b8bf-66b1718a0d53",
+      "content_sha256": "f1b2f42a248f4b95262ebe92ac2c4a97d43bd3c28e49bac838e7c934f6942926",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-30",
+      "unit_id": "96125cd8-0974-50ca-98ee-fa80093f4d76",
+      "content_sha256": "ca8120c3a539b3d2618863fa9be9739cf24dd17c1779ceb59d0cb147cc3c023c",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-31",
+      "unit_id": "e1f546bf-6fea-5d13-a9be-bf842de125c1",
+      "content_sha256": "3bc5bd99308f3a6ddab35f91b546138ebb145d09932aeee2a78ca4598f9bb24b",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-32",
+      "unit_id": "99991865-6519-5509-bfb3-8c310d477c08",
+      "content_sha256": "7f290701c8ab4d6e3aceb53f7e470295338a23b053b7cfaad5346545488d0788",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-33",
+      "unit_id": "c07c7410-75cf-5687-824a-73f3c3f73700",
+      "content_sha256": "f15f1ab3e405d4a8265fe5efc2c04f7754e708d97d40b4c5dab2c25865aacdbb",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-34",
+      "unit_id": "516f37d9-ce5c-5ef9-a4eb-5ffe0c8ca2ed",
+      "content_sha256": "bbc3c937e19069bcb6fe1fe053183999a15273f2fa376745880b0252b5451bb5",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-4",
+      "unit_id": "2c872803-e5aa-5585-82ad-91154b8dcc74",
+      "content_sha256": "49bcb3e5b6ff20fe479c9ffb75df3e05d32d387df03856d6d08135e0c58dec62",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-5",
+      "unit_id": "a42800b2-6942-5b9d-9a1d-c27bf82ef7da",
+      "content_sha256": "0082caa048e258362fc18169976a9466639008b701e8a131bed192a3a5324a1f",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-6",
+      "unit_id": "4e391654-9f4c-5f06-b5d4-34aa5dbc2d0c",
+      "content_sha256": "33cb7ea6231242383d29e87728942e6ceb692e02ae464dbc4dd42fbd00841f95",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-7",
+      "unit_id": "a1edb285-3d21-5e73-a7ed-c809127484f4",
+      "content_sha256": "2e23e0a5168db1d9802cac12e07d8b50231558d4a8aee9f285af34058ce8472a",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-8",
+      "unit_id": "f63d95ec-0d2c-582f-ba43-2acf98184897",
+      "content_sha256": "5d95a45c57244e5e8d60c55d6bbbb78282c1871bd744f9e0192720c6b20feda1",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+      "result": "preserved"
+    },
+    {
+      "course": "henry-borel",
+      "unit_key": "art-9",
+      "unit_id": "9163b84e-b469-508e-a0b5-c3c788dbb7a7",
+      "content_sha256": "344515913e3bf8de5edb419ba06f692f6527becf9f76f906d148ea8577988015",
+      "official_text_source": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
       "result": "preserved"
     },
     {
