@@ -277,3 +277,12 @@ Main integrada até `f68ddb0`, preservando publicação da outra conta. Novo sna
 MT60 (dois cargos): a revogação do art.119 pela LC803/2024 não alcança a devolução de equipamentos, prevista no art.301, parágrafo único. Não usar essa revogação como motivo para retirar as questões. Mantida pendência relativa à assertiva I/art.120.
 
 MG48: localizada página correta do manual OPAS, com link para biblioteca bloqueada pelo proxy. Obtida edição árabe OMS2007, digitalizada sem texto extraível; ainda não comprova a proposição técnica. Evidências e hashes no relatório `pc-remaining16-recheck-2026-10-17.json`; PDFs e snapshots ignorados em outputs.
+
+
+### Nova análise e correção de transcrição — 17/10/2026, 19h54 (Brasília)
+
+Conferência visual da questão60 no caderno UFMT/PJC2022, página física24 (impressa22), confirmou que REDAÇÃO não integra a alternativa E. Corrigidos os dois registros (Investigador e Escrivão), incluindo a página, usando dry-run com banco, comparação de todos os campos antes da gravação e leitura posterior. Gabarito B, extração bruta, fontes e status under_review preservados. Isso é correção de transcrição, não conclusão da revisão jurídica.
+
+O snapshot posterior confirmou preservação dos outros2.966 registros PC e de todas as fontes, edições e tópicos. Oito testes do mecanismo de reparo passaram. Nenhuma mudança de aplicação nesta rodada.
+
+Situação:2.624 ativos,279 arquivados,37 anulados,12 obsoletos e16 em revisão. Pendentes:RO8,MT2,AM2,RJ2,PE1,MG1. Cadastro oficial LC68/1992 localizado no SAPL/ALERO; rota de texto compilado exige login, sem validar o recorte atual. Detalhes e evidências em `pc-remaining16-context-reanalysis-2026-10-17.json`.

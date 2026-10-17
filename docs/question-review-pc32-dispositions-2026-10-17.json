@@ -368,5 +368,12 @@
       "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
       "comment_sha256": "0ad8c456822abe17b3716e2f07994a67990f000bb4d246f11fc184808d31ee6f"
     }
-  ]
+  ],
+  "last_context_reanalysis": {
+    "checked_at": "2026-10-17T22:54:52.342Z",
+    "published_transcription_repairs": 2,
+    "newly_resolved": 0,
+    "pending": 16,
+    "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
+  }
 }

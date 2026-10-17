@@ -1,0 +1,188 @@
+{
+  "checked_at": "2026-10-17T22:54:52.342Z",
+  "scope": "Reanalysis of16 pending Polícia Civil records; two transcription/page repairs, no new active release.",
+  "published_context_repairs": 2,
+  "newly_activated": 0,
+  "pending": 16,
+  "pc_status": {
+    "active": 2624,
+    "archived": 279,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 16
+  },
+  "pending_by_state": {
+    "RO": 8,
+    "PE": 1,
+    "RJ": 2,
+    "AM": 2,
+    "MT": 2,
+    "MG": 1
+  },
+  "preserved_other_pc_records": 2966,
+  "all_metadata_unchanged": true,
+  "items": [
+    {
+      "id": "8842e03d-5136-4daa-9335-caec2e9bafad",
+      "item_number": 60,
+      "career": "Investigador de Polícia",
+      "before_source_page": 0,
+      "after_source_page": 24,
+      "patch": {
+        "question_text": "De acordo com as normas previstas no regime jurídico dos servidores da Polícia Judiciária Civil do Estado de Mato Grosso (Lei Complementar Estadual nº 407/2010), analise as afirmativas. I- A função policial fundamenta-se na hierarquia e na disciplina, sendo incompatível com qualquer outra função, exceto atividade relativa ao ensino. II- A função policial sujeita-se à prestação de serviços em condições adversas de segurança, com risco de vida, plantões noturnos e chamadas a qualquer hora, desde que justificada a necessidade, inclusive com a realização de diligências policiais em todo o Estado de Mato Grosso ou fora dele. III- Ao policial civil é vedado acumular funções em mais de uma unidade policial. IV- O policial civil é obrigado a devolver, no dia da publicação do ato de aposentadoria, exoneração ou demissão, as armas, munição, algema e outros objetos recebidos do Estado para o exercício da função. Estão corretas as afirmativas\n(A) I, II e III, apenas.\n(B) I, II e IV, apenas.\n(C) II, III e IV, apenas.\n(D) I e IV, apenas.\n(E) I e III, apenas.",
+        "source_page": 24,
+        "context_review_required": false,
+        "verified_at": "2026-10-17T22:54:28.489061+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende da Lei Complementar Estadual 407/2010 (MT), cujo texto vigente não foi conferido em fonte oficial. | Revisão 17/10/2026, retida: Item I diverge do texto da LC 407/2010 (art. 120: 'exceto nos casos previstos em lei', não 'exceto ensino') e o III, de 'duas unidades' (art. 164); chave B depende de versão do texto que não foi localizada.\nConferência visual 17/10/2026: removida a palavra REDAÇÃO, que não integra a alternativa E; página física corrigida para24 (impressa22). Cinco alternativas, gabarito e extração bruta preservados. Revisão jurídica ainda pendente: assertiva I/art.120. A devolução de objetos está no art.301, parágrafo único; revogação do art.119 não se aplica."
+      },
+      "evidence": {
+        "reason": "Remover texto estranho à alternativa E e corrigir página física, conforme caderno oficial. Não libera conteúdo jurídico.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 24
+      }
+    },
+    {
+      "id": "9eaec00d-5904-4113-97d6-e4c217da178e",
+      "item_number": 60,
+      "career": "Escrivão de Polícia",
+      "before_source_page": 0,
+      "after_source_page": 24,
+      "patch": {
+        "question_text": "De acordo com as normas previstas no regime jurídico dos servidores da Polícia Judiciária Civil do Estado de Mato Grosso (Lei Complementar Estadual nº 407/2010), analise as afirmativas. I- A função policial fundamenta-se na hierarquia e na disciplina, sendo incompatível com qualquer outra função, exceto atividade relativa ao ensino. II- A função policial sujeita-se à prestação de serviços em condições adversas de segurança, com risco de vida, plantões noturnos e chamadas a qualquer hora, desde que justificada a necessidade, inclusive com a realização de diligências policiais em todo o Estado de Mato Grosso ou fora dele. III- Ao policial civil é vedado acumular funções em mais de uma unidade policial. IV- O policial civil é obrigado a devolver, no dia da publicação do ato de aposentadoria, exoneração ou demissão, as armas, munição, algema e outros objetos recebidos do Estado para o exercício da função. Estão corretas as afirmativas\n(A) I, II e III, apenas.\n(B) I, II e IV, apenas.\n(C) II, III e IV, apenas.\n(D) I e IV, apenas.\n(E) I e III, apenas.",
+        "source_page": 24,
+        "context_review_required": false,
+        "verified_at": "2026-10-17T22:54:28.489061+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende da Lei Complementar Estadual 407/2010 (MT), cujo texto vigente não foi conferido em fonte oficial. | Revisão 17/10/2026, retida: Item I diverge do texto da LC 407/2010 (art. 120: 'exceto nos casos previstos em lei', não 'exceto ensino') e o III, de 'duas unidades' (art. 164); chave B depende de versão do texto que não foi localizada.\nConferência visual 17/10/2026: removida a palavra REDAÇÃO, que não integra a alternativa E; página física corrigida para24 (impressa22). Cinco alternativas, gabarito e extração bruta preservados. Revisão jurídica ainda pendente: assertiva I/art.120. A devolução de objetos está no art.301, parágrafo único; revogação do art.119 não se aplica."
+      },
+      "evidence": {
+        "reason": "Remover texto estranho à alternativa E e corrigir página física, conforme caderno oficial. Não libera conteúdo jurídico.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 24
+      }
+    }
+  ],
+  "additional_findings": [
+    {
+      "source": "https://sapl.al.ro.leg.br/norma/3785?display",
+      "finding": "Cadastro oficial LC68/1992 localizado; link compilado /norma/3785/ta redireciona para login/?next=/ta/28/text. Não foi consultado texto compilado público por essa rota. Questão RO92 mantida em revisão."
+    }
+  ],
+  "pending_items": [
+    {
+      "id": "12f59e04-60f5-46ff-9aeb-98ef6ac6c6b3",
+      "state": "RO",
+      "career": "Datiloscopista Policial",
+      "item_number": 92
+    },
+    {
+      "id": "4c8e3631-ef13-4420-b488-419e4ffedea3",
+      "state": "PE",
+      "career": "Escrivão de Polícia",
+      "item_number": 2
+    },
+    {
+      "id": "76a0df58-50ad-465e-af73-12763e76347f",
+      "state": "RJ",
+      "career": "Delegado de Polícia",
+      "item_number": 48
+    },
+    {
+      "id": "8691e77b-0ba1-4789-ab11-13457340308d",
+      "state": "AM",
+      "career": "Delegado de Polícia",
+      "item_number": 44
+    },
+    {
+      "id": "8842e03d-5136-4daa-9335-caec2e9bafad",
+      "state": "MT",
+      "career": "Investigador de Polícia",
+      "item_number": 60
+    },
+    {
+      "id": "90d83666-4647-4228-9c76-1c7869240968",
+      "state": "RO",
+      "career": "Delegado de Polícia",
+      "item_number": 78
+    },
+    {
+      "id": "94a5990c-4243-42d3-a45b-e0361f65812f",
+      "state": "RO",
+      "career": "Delegado de Polícia",
+      "item_number": 40
+    },
+    {
+      "id": "9eaec00d-5904-4113-97d6-e4c217da178e",
+      "state": "MT",
+      "career": "Escrivão de Polícia",
+      "item_number": 60
+    },
+    {
+      "id": "a2ab2b89-eea8-481e-b67f-82853648c460",
+      "state": "RO",
+      "career": "Delegado de Polícia",
+      "item_number": 14
+    },
+    {
+      "id": "b20bd1e1-8388-4069-aff1-689070b28009",
+      "state": "RO",
+      "career": "Delegado de Polícia",
+      "item_number": 60
+    },
+    {
+      "id": "bd9495a0-e158-41eb-92e2-38ad99b635eb",
+      "state": "RO",
+      "career": "Datiloscopista Policial",
+      "item_number": 29
+    },
+    {
+      "id": "c12a8254-148f-4b63-b48c-5bfaecccdb6b",
+      "state": "AM",
+      "career": "Investigador de Polícia",
+      "item_number": 40
+    },
+    {
+      "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",
+      "state": "MG",
+      "career": "Técnico-Assistente – Auxiliar de Perícia (TPAG)",
+      "item_number": 48
+    },
+    {
+      "id": "e837718c-b3e6-44cf-aa22-762f176e9862",
+      "state": "RO",
+      "career": "Datiloscopista Policial",
+      "item_number": 80
+    },
+    {
+      "id": "e9685709-2891-4be5-8e0a-cfdf17dd2026",
+      "state": "RJ",
+      "career": "Delegado de Polícia",
+      "item_number": 75
+    },
+    {
+      "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
+      "state": "RO",
+      "career": "Delegado de Polícia",
+      "item_number": 9
+    }
+  ]
+}
