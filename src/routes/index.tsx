@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import {
   Sheet,
   SheetClose,
@@ -17,6 +17,8 @@ import {
   BrainCircuit,
   CalendarClock,
   ChevronRight,
+  ChevronDown,
+  Plus,
   Compass,
   FileSearch,
   Landmark,
@@ -160,6 +162,7 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
 }
 
 function Index() {
+  const [introPlaying, setIntroPlaying] = useState(false);
   return (
     <div className="home">
       <a href="#conteudo" className="home-skip">
@@ -248,8 +251,9 @@ function Index() {
       </header>
 
       <main id="conteudo" tabIndex={-1}>
-        <section className="home-hero" aria-labelledby="home-title">
-          <div className="home-container">
+        <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
+          <HeroVideo onIntroChange={setIntroPlaying} />
+          <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
                 <span className="home-eyebrow">
@@ -270,7 +274,7 @@ function Index() {
                     search={{ mode: "register" }}
                     className="home-button home-button--gold"
                   >
-                    Iniciar minha preparação
+                    Começar grátis
                     <ArrowUpRight />
                   </Link>
                   <a href="#plataforma" className="home-hero__explore">
@@ -281,19 +285,6 @@ function Index() {
                 <span className="home-hero__note">
                   Comece gratuitamente. No seu ritmo, com um objetivo claro.
                 </span>
-              </div>
-              <div className="home-hero__visual">
-                <div className="home-hero__visual-label">
-                  <span>O seu futuro começa no próximo passo.</span>
-                  <Compass aria-hidden="true" />
-                </div>
-                <HeroVideo />
-                <div className="home-hero__caption">
-                  <span>De Feijó, Acre. Para todo o Brasil.</span>
-                  <span>
-                    ESTUDE COM DIREÇÃO <ArrowUpRight aria-hidden="true" />
-                  </span>
-                </div>
               </div>
             </div>
             <ul className="home-trust" aria-label="Diferenciais">
@@ -340,18 +331,19 @@ function Index() {
             </div>
             <div className="home-tools">
               {TOOLS.map(({ icon: Icon, title, text, lead }) => (
-                <article key={title} className={`home-tool${lead ? " home-tool--featured" : ""}`}>
-                  <span className="home-icon">
-                    <Icon aria-hidden="true" />
-                  </span>
-                  <div>
+                <details key={title} className={`home-tool${lead ? " home-tool--featured" : ""}`}>
+                  <summary>
+                    <span className="home-icon">
+                      <Icon aria-hidden="true" />
+                    </span>
                     <h3>
                       {title}
                       {lead && <span className="home-tag">Principal</span>}
                     </h3>
-                    <p>{text}</p>
-                  </div>
-                </article>
+                    <Plus aria-hidden="true" />
+                  </summary>
+                  <p>{text}</p>
+                </details>
               ))}
             </div>
           </div>
@@ -428,10 +420,13 @@ function Index() {
                     </div>
                   </div>
                   <h3 id="pcac-title">Polícia Civil do Acre</h3>
-                  <p>
-                    O novo concurso foi anunciado, com vagas previstas para Delegado, Oficial
-                    Investigador e Perito. Sua preparação pode começar agora.
-                  </p>
+                  <details className="home-exam-details">
+                    <summary>Cargos e informações</summary>
+                    <p>
+                      O novo concurso foi anunciado, com vagas previstas para Delegado, Oficial
+                      Investigador e Perito. Sua preparação pode começar agora.
+                    </p>
+                  </details>
                   <div className="home-opportunity__bottom">
                     <Link
                       to="/auth"
@@ -460,14 +455,6 @@ function Index() {
                 <br />
                 <em>A sua carreira.</em>
               </Head>
-              <p className="home-section-intro">
-                Preparação para Polícia Federal, PRF, Polícias Civis, Penais, Militares e outras
-                carreiras da segurança pública.
-              </p>
-              <a className="home-text-link" href="#planos">
-                Encontre seu ponto de partida
-                <ArrowRight />
-              </a>
             </div>
             <div className="home-careers__grid">
               {CAREERS.map(([name, roles], i) => (
@@ -483,31 +470,48 @@ function Index() {
           </div>
         </section>
 
-        <section className="home-section home-sources" aria-label="Rastreabilidade jurídica">
+        <section className="home-sources" aria-label="Rastreabilidade jurídica">
           <div className="home-container">
-            <Head
-              kicker="Rastreabilidade jurídica"
-              lead="Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de vigência."
-            >
-              Estude com fonte. <em>Avance com confiança.</em>
-            </Head>
-            <div className="home-sources__grid">
-              {PILLARS.map(({ icon: Icon, title, text }) => (
-                <article key={title}>
-                  <Icon aria-hidden="true" />
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{text}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <details className="home-source-details">
+              <summary>
+                <ShieldCheck aria-hidden="true" />
+                <span>
+                  Conteúdo jurídico com fonte e verificação de vigência
+                  <small>Conheça os critérios de revisão</small>
+                </span>
+                <ChevronDown aria-hidden="true" />
+              </summary>
+              <p>
+                Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de
+                vigência.
+              </p>
+              <div className="home-sources__grid">
+                {PILLARS.map(({ icon: Icon, title, text }) => (
+                  <article key={title}>
+                    <Icon aria-hidden="true" />
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </details>
           </div>
         </section>
 
         <PlansSection />
 
         <section className="home-final" aria-labelledby="home-final-title">
+          <img
+            className="home-final__image"
+            src="/media/hero/lineup-carreiras-ajustada.webp"
+            alt=""
+            aria-hidden="true"
+            width={1896}
+            height={830}
+            loading="lazy"
+          />
           <div className="home-container">
             <div className="home-final__inner">
               <div>
@@ -547,7 +551,6 @@ function Index() {
             <div className="home-footer__brand">
               <NorteBrand />
               <p>Inteligência de estudo para as carreiras que protegem o Brasil.</p>
-              <span>De Feijó, Acre, para todo o Brasil.</span>
             </div>
             <FooterColumn
               title="Plataforma"
@@ -578,7 +581,7 @@ function Index() {
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
             <span>Desenvolvido por Franc D'nis</span>
-            <span>08°09′S 70°21′W</span>
+            <span>Feijó, Acre · 08°09′S 70°21′W</span>
           </div>
         </div>
       </footer>
@@ -588,8 +591,11 @@ function Index() {
 
 function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
   return (
-    <div>
-      <h3>{title}</h3>
+    <details className="home-footer__links">
+      <summary>
+        {title}
+        <ChevronDown aria-hidden="true" />
+      </summary>
       <ul>
         {links.map(([label, href]) => (
           <li key={label}>
@@ -597,6 +603,6 @@ function FooterColumn({ title, links }: { title: string; links: [string, string]
           </li>
         ))}
       </ul>
-    </div>
+    </details>
   );
 }

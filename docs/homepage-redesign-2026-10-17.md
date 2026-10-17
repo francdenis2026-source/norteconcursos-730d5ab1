@@ -1,24 +1,27 @@
-# Homepage — reorganização visual de 17/10/2026
+# Homepage — imagens restauradas e layout compacto
 
-A homepage foi refeita para reduzir a fragmentação, dar hierarquia ao conteúdo e acomodar os blocos no desktop e no celular. Os estilos agora usam o escopo próprio `.home`, em vez de depender das várias gerações de regras `.lp` e `.hp` do arquivo global. As páginas internas mantêm seus layouts.
+A abertura voltou a usar a imagem original `landing-hero.webp` como fundo. O vídeo de introdução toca uma vez e, ao terminar, sai com uma transição breve e é removido do DOM. A imagem e o conteúdo assumem a mesma área, sem player permanente nem aumento de altura. O visitante pode pular a introdução. Redução de movimento e economia de dados mostram a imagem diretamente; bloqueio de autoplay, erro ou carregamento travado também liberam a imagem. O cabeçalho continua disponível durante a abertura.
 
-A abertura combina uma mensagem principal com o vídeo de introdução em uma área própria. O conteúdo e a navegação ficam disponíveis durante a reprodução. O vídeo mantém a proporção integral de 1280 × 660, oferece pausa e repetição e não baixa automaticamente com redução de movimento ou economia de dados. Falhas de carregamento mantêm a página utilizável.
+As imagens originais `careers-team.webp` e `lineup-carreiras-ajustada.webp` foram restauradas nas seções de carreiras e encerramento. A campanha PCAC mantém sua imagem. O layout continua com temas claro e escuro, navegação móvel e acesso ao Desafio diário.
 
-O acesso gratuito, o Desafio diário e o catálogo foram agrupados; as seis ferramentas usam uma grade; as quatro etapas seguem uma sequência; as campanhas PCPR e PCAC compartilham a mesma seção. Os detalhes da prova do Paraná ficam em um bloco expansível. Carreiras, rastreabilidade, quatro planos, perguntas frequentes e todos os destinos institucionais foram preservados. As faixas animadas e chamadas decorativas repetidas deram lugar a informações estáticas organizadas.
+Para encurtar a página, as descrições das seis ferramentas, os detalhes das provas, os recursos dos quatro planos e os critérios de revisão jurídica ficam em blocos expansíveis. As oito carreiras permanecem visíveis. O rodapé passou a ter três grupos expansíveis, preservando todos os links institucionais e de acesso. Não foram reduzidas as cotas gratuitas nem modificados dados de questões ou planos.
 
-A paleta usa azul profundo na abertura e no encerramento, superfícies neutras e dourado com contraste ajustado. Os temas claro e escuro continuam disponíveis e persistem após recarga. O cabeçalho tem menu móvel com navegação por âncoras e acesso à conta. As correções acessíveis incluem nome do botão do vídeo coerente com seu texto, marca identificada como imagem e nome nativo do link do desafio.
+## Medições e validação
 
-## Validação
+As medições abaixo usam Chromium, na mesma largura de janela e com os detalhes recolhidos. A coluna anterior corresponde à versão `9a87879`.
 
-- Os 602 testes existentes passaram. O lint dos arquivos TS/TSX alterados e a verificação de whitespace passaram.
-- O build de produção Vite/Nitro foi validado em uma cópia descartável, preservando os identificadores de versão rastreados no checkout.
-- Chromium/Playwright: larguras de 320, 360, 390, 768, 1440 e 1920 pixels, com tema claro e também escuro no celular. Nenhum elemento ultrapassou a largura da janela; nenhuma âncora interna ficou sem destino. Menu móvel, seis ferramentas, detalhes da prova e perguntas expansíveis foram verificados. Não houve erro de execução capturado nesses cenários.
-- Reprodução automática, pausa, repetição, preferência por movimento reduzido, economia de dados, bloqueio de autoplay e falha de mídia foram exercitados. O vídeo só foi solicitado após interação nos dois modos de economia. A contagem de questões foi exercitada também com dados simulados grandes, e a persistência do tema foi conferida após recarga.
-- axe-core: nenhuma violação nos critérios automatizados WCAG A/AA executados na homepage clara em 1440 e 390 pixels e escura em 390 pixels. Isso não substitui uma auditoria manual completa de acessibilidade.
-- O typecheck do repositório continua com cinco diagnósticos anteriores, fora da homepage: propriedades opcionais de `QuestionFigures` em errors, mock-exams, question-trainer e desafio-diario, além de `SimulatorQuestion.figures`. Não houve diagnóstico nos arquivos alterados.
+| Tela                 | Altura anterior | Altura atual | Rodapé fechado |
+| -------------------- | --------------: | -----------: | -------------: |
+| desktop (1440 px)    |         4991 px |      3567 px |         117 px |
+| mobile (390 px)      |         7713 px |      5026 px |         158 px |
+| mobile-dark (390 px) |         7713 px |      5026 px |         158 px |
+| narrow (320 px)      |         8838 px |      5334 px |         158 px |
+| tablet (768 px)      |         5532 px |      3861 px |         161 px |
 
-A lógica de limite e renovação das dez questões gratuitas diárias no horário do Acre foi preservada. Não houve alteração de questões ou de configurações de pagamento neste trabalho. O envio à `main` sincroniza as alterações com o repositório conectado; a publicação do site depende do pipeline existente.
+- Chromium/Playwright: imagens carregadas, nenhuma largura excedida, âncoras válidas, oito carreiras e quatro planos preservados; abertura e fechamento dos detalhes de ferramentas, recursos dos planos, fontes, rodapé e provas; menu móvel fechando por Escape. Sem erros de execução capturados nesses cenários.
+- Oito cenários da introdução: desktop, celular, pular, movimento reduzido, economia de dados, autoplay bloqueado, mídia indisponível e conexão travada. Todos terminaram sem vídeo no DOM, com foto carregada e conteúdo visível. Os dois modos de economia não solicitaram o vídeo.
+- O build padrão Cloudflare de produção foi concluído com sucesso. Os 602 testes existentes passaram. Lint dos arquivos alterados e verificação de whitespace passaram.
+- axe-core: nenhuma violação detectada nos critérios automatizados WCAG A/AA executados na homepage clara em 1440 e 390 pixels e escura em 390 pixels. Isso não substitui uma auditoria manual completa.
+- O typecheck continua com os cinco diagnósticos anteriores, fora da homepage, sobre propriedades opcionais de `QuestionFigures` e `SimulatorQuestion.figures`. Nenhum diagnóstico nos arquivos desta alteração.
 
-## Execução local do build
-
-O build padrão Cloudflare foi gerado com sucesso. O comando existente `npm run preview` procura `dist/server/server.js`, enquanto o Nitro gera `.output`; essa incompatibilidade de preview não foi alterada nesta tarefa. Para verificar também a renderização de produção local, a cópia descartável foi construída com `NITRO_PRESET=node-server npm run build` e servida pelo entrypoint `.output/server/index.mjs`, sem mudar o preset ou o script do repositório. O servidor retornou HTTP 200 com HTML da homepage renderizado, e as verificações de layout e interação também passaram nesse build.
+O build de produção é executado em cópia descartável para preservar os identificadores de versão rastreados no checkout. O script de preview existente procura `dist/server/server.js`, enquanto o Nitro gera `.output`; essa configuração anterior não foi alterada. A publicação do site segue o pipeline do repositório conectado após o envio à `main`.

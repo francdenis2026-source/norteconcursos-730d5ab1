@@ -46,20 +46,24 @@ export function PcprExamPromo() {
         </div>
         <h3 id="pcpr-title">Polícia Civil do Paraná</h3>
         <p>
-          Resolva questão por questão da prova da {PCPR_EXAM.board}, aplicada em{" "}
-          {PCPR_EXAM.appliedOn}. Direito, Legislação e Direitos Humanos no treinador, com base legal
-          conferida e correção imediata.
+          Prova {PCPR_EXAM.board} · {PCPR_EXAM.appliedOn}. Treine com correção imediata.
         </p>
-        <ul className="home-exam-roles" aria-label="Cargos da prova">
-          {PCPR_EXAM.roles.map((role) => (
-            <li key={role}>
-              <Check aria-hidden="true" />
-              {role}
-            </li>
-          ))}
-        </ul>
         <details className="home-exam-details">
           <summary>Detalhes da prova</summary>
+          <p>
+            Resolva questão por questão da prova da {PCPR_EXAM.board}, aplicada em{" "}
+            {PCPR_EXAM.appliedOn}. Direito, Legislação e Direitos Humanos no treinador, com base
+            legal conferida e correção imediata.
+          </p>
+          <ul className="home-exam-roles" aria-label="Cargos da prova">
+            {PCPR_EXAM.roles.map((role) => (
+              <li key={role}>
+                <Check aria-hidden="true" />
+                {role}
+              </li>
+            ))}
+          </ul>
+
           <dl>
             {FACTS.map(([Icon, label, text]) => (
               <div key={label}>

@@ -57,21 +57,27 @@ export function PlansSection() {
                         : "Disponível em breve"
                       : "Escolha o plano ideal para você"}
                 </p>
-                <ul>
-                  {PLAN_ROWS.slice(0, 6).map(([key, label]) => {
-                    const value = planValue(key, plan.features[key]);
-                    return (
-                      <li key={key} className={value ? "" : "is-unavailable"}>
-                        {value ? <Check aria-hidden="true" /> : <Minus aria-hidden="true" />}
-                        <span>
-                          {label}
-                          {value && <small> · {value}</small>}
-                          {!value && <span className="sr-only"> (não incluído)</span>}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <details className="home-plan__features">
+                  <summary>
+                    O que está incluído
+                    <Plus aria-hidden="true" />
+                  </summary>
+                  <ul>
+                    {PLAN_ROWS.slice(0, 6).map(([key, label]) => {
+                      const value = planValue(key, plan.features[key]);
+                      return (
+                        <li key={key} className={value ? "" : "is-unavailable"}>
+                          {value ? <Check aria-hidden="true" /> : <Minus aria-hidden="true" />}
+                          <span>
+                            {label}
+                            {value && <small> · {value}</small>}
+                            {!value && <span className="sr-only"> (não incluído)</span>}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </details>
                 <Link
                   to="/auth"
                   search={{ mode: "register" }}
