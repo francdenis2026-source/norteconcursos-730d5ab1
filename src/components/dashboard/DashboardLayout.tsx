@@ -568,36 +568,38 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span>Ir para…</span>
                 <span className="kbd">Ctrl K</span>
               </button>
-              <AcreClock />
-              {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
-              {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Link
-                      to="/dashboard/subscriptions"
-                      className="app-streak app-trial"
-                      aria-label="Fase de testes: tempo restante de acesso"
-                    >
-                      <FlaskConical />
-                      <span className="app-trial__label">Teste</span>
-                      <span className="app-trial__full">
-                        <PlanCountdownInline endsAt={user.plan_ends_at} />
-                      </span>
-                      <span className="app-trial__short">
-                        <PlanCountdownShort endsAt={user.plan_ends_at} />
-                      </span>
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent side="bottom">
-                    Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no
-                    plano Gratuito.
-                  </TooltipContent>
-                </Tooltip>
-              )}
-              <span className="app-streak" title="Dias seguidos de estudo">
-                <Flame />
-                <span className="tabular">{streak?.currentStreak ?? 0}</span>
-              </span>
+              <div className="app-chips">
+                <AcreClock />
+                {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
+                {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link
+                        to="/dashboard/subscriptions"
+                        className="app-streak app-trial"
+                        aria-label="Fase de testes: tempo restante de acesso"
+                      >
+                        <FlaskConical />
+                        <span className="app-trial__label">Teste</span>
+                        <span className="app-trial__full">
+                          <PlanCountdownInline endsAt={user.plan_ends_at} />
+                        </span>
+                        <span className="app-trial__short">
+                          <PlanCountdownShort endsAt={user.plan_ends_at} />
+                        </span>
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom">
+                      Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no
+                      plano Gratuito.
+                    </TooltipContent>
+                  </Tooltip>
+                )}
+                <span className="app-streak" title="Dias seguidos de estudo">
+                  <Flame />
+                  <span className="tabular">{streak?.currentStreak ?? 0}</span>
+                </span>
+              </div>
               <button
                 type="button"
                 className="app-top-btn app-theme-toggle"
