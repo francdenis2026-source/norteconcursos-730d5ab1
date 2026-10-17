@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T17:05:39.863Z",
-  "generated_at": "2026-10-17T17:06:22.389Z",
+  "snapshot_at": "2026-10-17T17:34:03.919Z",
+  "generated_at": "2026-10-17T17:35:18.947Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -323,10 +323,9 @@
       "records": 100,
       "status": {
         "annulled": 6,
-        "active": 93,
-        "under_review": 1
+        "active": 94
       },
-      "active_app_eligible": 91,
+      "active_app_eligible": 92,
       "active_with_catalog_flags": 73,
       "active_without_example_marker": 92,
       "flags": {
@@ -338,11 +337,10 @@
       "exam": "Polícia Civil do Estado de Sergipe - Escrivão de Polícia | 2021 | Escrivão de Polícia | CEBRASPE",
       "records": 100,
       "status": {
-        "active": 95,
-        "annulled": 4,
-        "under_review": 1
+        "active": 96,
+        "annulled": 4
       },
-      "active_app_eligible": 94,
+      "active_app_eligible": 95,
       "active_with_catalog_flags": 77,
       "active_without_example_marker": 94,
       "flags": {
@@ -529,23 +527,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2670,
+      "active": 2672,
       "archived": 215,
       "annulled": 37,
-      "under_review": 38,
+      "under_review": 36,
       "obsolete": 8
     },
-    "active_app_eligible": 2230,
+    "active_app_eligible": 2232,
     "active_with_catalog_flags": 1720,
     "active_without_example_marker": 2323,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 278,
-    "newly_published": 278,
-    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions.",
+    "newly_reviewed": 280,
+    "newly_published": 280,
+    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 38,
+    "pending_under_review_all_pc": 36,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1713,6 +1711,16 @@
         "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
       },
       "report": "docs/question-review-pcro-judicial-continuation-2026-10-17.json"
+    },
+    "sergipe_item14": {
+      "reviewed_records": 2,
+      "unique_questions": 1,
+      "published_active": 2,
+      "preserved_other_pc_records": 2966,
+      "tests": {
+        "publication_and_topics": 13
+      },
+      "report": "docs/question-review-pcse-item14-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {

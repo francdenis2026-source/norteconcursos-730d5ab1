@@ -157,3 +157,16 @@ Foram recapturadas quatro notas específicas do STJ e a publicação institucion
 Pré-validação real no banco, CAS e readback passaram. **15 testes de publicação/proveniência passaram**, e ambas as ativas têm cinco alternativas, explicações visíveis, exemplos e exercícios respondidos. Sem alterações de aplicação; não foi necessário novo build. O snapshot posterior confirmou **os outros 2.966 registros PC preservados**. Nenhum metadado foi modificado por esta operação; uma fonte inserida por outra sessão foi identificada e preservada.
 
 **Restam 38 pendências: MT 14, RO dez, AM cinco, PI três, RJ duas, SE duas, PE uma e MG uma.** Acervo físico de 2.968 registros: **2.670 ativos, 215 arquivados, 38 em revisão, 37 anulados e oito obsoletos**. Esses estados não equivalem à certificação integral do acervo; não houve teste visual em produção nesta etapa.
+
+
+## Sergipe — justificativa oficial do item 14 — 17/10/2026
+
+Resolvidas as duas pendências listadas de Sergipe: **um mesmo item histórico, 14, nos cargos de Agente e Escrivão**. Não são duas questões físicas distintas nem certificação de toda a prova. O enunciado, o comando e o excerto atribuído a Manuel Curvelo foram cotejados com a página 1 do caderno comum. A chave definitiva E foi conferida no PDF próprio.
+
+A consulta ao catálogo oficial PC_SE_21 recuperou o documento de justificativas de alteração. Na página 1, a banca registra expressamente mudança de C para E e explica: “A coroa portuguesa comandada por Filipe II, em 1590, foi quem criou A Capitania de Sergipe del-Rei.” A explicação publicada informa esse critério — autoria formal atribuída à Coroa — e não inventa erro de data no trecho sobre subordinação à Bahia, nem nega toda participação de Cristóvão de Barros. Distingue criação formal, atuação local e possíveis alcances historiográficos dos termos. O texto não declara consenso absoluto sobre qualquer narrativa histórica de fundação. Inclui exemplo hipotético contrastante e exercício respondido sobre a alteração do gabarito, que não foi anulação.
+
+O programa foi conferido no edital oficial, página 38: pontos 3 (ocupação e povoamento) e 6 (estrutura do poder e sociedade colonial). Os editais 2 e 4 foram lidos: retificam outros subitens. Inserido um recorte por edição/cargo, preservando os tópicos provisórios anteriores e todos os metadados existentes. O livro completo do Senado não foi obtido — o portal retornou verificação de segurança — e não é apresentado como evidência recuperada. A fonte que explica a resposta é o documento primário de julgamento do recurso da banca.
+
+Pré-validações reais, CAS e readback passaram; **13 testes de publicação/tópicos passaram**. Formato C/E, letra E, comandos, extrações brutas e páginas originais foram preservados; as explicações são visíveis no filtro da aplicação. Nenhuma mudança de aplicação ou build adicional. O snapshot confirmou os outros **2.966 registros PC preservados**, nenhuma alteração em metadados preexistentes e somente dois tópicos inseridos. Não houve teste visual em produção.
+
+**Restam 36 pendências: MT 14, RO dez, AM cinco, PI três, RJ duas, PE uma e MG uma.** Não há item SE em under_review neste inventário, o que não implica auditoria integral das questões ativas. Acervo PC: **2.968 registros — 2.672 ativos, 215 arquivados, 36 em revisão, 37 anulados e oito obsoletos**.

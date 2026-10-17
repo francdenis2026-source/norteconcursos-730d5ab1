@@ -1,0 +1,303 @@
+{
+  "checked_at": "2026-10-17T17:34:03.919Z",
+  "scope": "One common historical PCSE item 14, two careers. Exam-board justification confirmed; not a full historiographical review of Sergipe.",
+  "reviewed": 2,
+  "published_active": 2,
+  "preserved_other_pc_records": 2966,
+  "concurrent_changes": [],
+  "metadata_changes": [
+    {
+      "table": "syllabus_topics",
+      "id": "5083ccd9-ec59-51b7-b2e4-64d10659c91d",
+      "change": "inserted"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "dc5b5cb4-788e-5d40-b3df-7e621cd1d56b",
+      "change": "inserted"
+    }
+  ],
+  "pc_status": {
+    "active": 2672,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 36,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 7,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "tests": {
+    "publication_and_topics": 13
+  },
+  "application_changes": false,
+  "items": [
+    {
+      "id": "0a919712-668e-41db-84d4-03a71e8234a3",
+      "item_number": 14,
+      "answer": "E",
+      "status": "active",
+      "source_page": 1,
+      "eligible": true,
+      "before_sha256": "401c775d39dab854d40b8a8e926905b767ce7070adb303e16ab63d4b2903cc52",
+      "after_sha256": "34dd5e18c43f7ce62e7e5076c83ee029e8bc6fe4696d2cb18df6f4e5c50b0ecc",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "dc5b5cb4-788e-5d40-b3df-7e621cd1d56b",
+        "review_note": "Gabarito DEFINITIVO: ERRADO (E). A própria banca mudou a resposta preliminar C para E após recurso. Na justificativa oficial do item 14, página 1, consta: “A coroa portuguesa comandada por Filipe II, em 1590, foi quem criou A Capitania de Sergipe del-Rei.” O fundamento expresso foi, portanto, a ATRIBUIÇÃO DA CRIAÇÃO FORMAL À COROA, em vez da atribuição pessoal a Cristóvão de Barros na assertiva.\nPara estudar este item, separe a autoria formal do ato e a atuação de personagens no processo de ocupação. A justificativa não afirma que Cristóvão de Barros não teve qualquer participação nesse processo. Também não aponta o trecho sobre subordinação à Bahia como razão da mudança: não invente uma data alternativa de autonomia para explicar o E. Relatos podem empregar fundação, conquista e criação formal com alcances diferentes; aqui está explicitado o critério adotado pela banca após recurso, sem tratar toda formulação historiográfica como incontroversa.\nExemplo: em uma situação hipotética, a implantação de uma escola pode ser associada a uma liderança local, enquanto seu ato formal de criação é atribuído ao poder público. Uma prova que cobra especificamente o ato formal exige distinguir os dois planos, em vez de tratar os sujeitos como intercambiáveis.\nTeste rápido — A banca anulou o item 14? Não. O documento registra “Deferido com alteração”: a resposta final é E, e não o C preliminar.\nJustificativa oficial, página 1: https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+        "verified_at": "2026-10-17T17:30:49.876975+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Comando e item conferidos visualmente no caderno comum, chave definitiva E e justificativa expressa de alteração C→E recuperada no catálogo oficial. Programa do próprio cargo conferido na página 38, pontos 3 e 6. Explicação distingue critério da banca de certificação historiográfica geral.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF"
+        ],
+        "official_pdf_page": 1,
+        "question_format": "certo_errado",
+        "justification": {
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/se-justifications.pdf",
+          "sha256": "d69b91dd99c9d6bef81637e1fbfbae60c45378edd4ed832abf0968b35366419d",
+          "reviewed_page": 1,
+          "preliminary_answer": "C",
+          "definitive_answer": "E",
+          "decision": "Deferido com alteração"
+        },
+        "exam_captures": [
+          {
+            "name": "se-api",
+            "url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_se_21",
+            "path": "outputs/pc-pending-review-2026-10-16/se-api.json",
+            "sha256": "d6207f268df7e44579ebf6fb308475c996a314e187568cb2d8b7adf7c431721b",
+            "captured_at": "2026-10-17T17:25:53.805Z"
+          },
+          {
+            "name": "se-paper",
+            "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/se-paper.pdf",
+            "sha256": "6a79e5708f1fbbfe11ce44ab34642cab00d7c8f508f61d56d915d0ba92919811",
+            "captured_at": "2026-10-17T17:25:53.075Z"
+          },
+          {
+            "name": "se-key",
+            "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/se-key.pdf",
+            "sha256": "0cedb0505640a7401590f19b0955f94c9729f71f1b1c006e7ad590473ec2527d",
+            "captured_at": "2026-10-17T17:25:53.228Z"
+          }
+        ],
+        "edital_capture": {
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/se-edital.pdf",
+          "sha256": "33509d883295f195ce9cb16a6607b000843b0189d465fb01ae3e9275bc20e5d5",
+          "captured_at": "2026-10-17T17:28:23.883Z"
+        },
+        "retifications": [
+          {
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_2_PC_SE_2021_RET_PRORROGAO.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/ED_2_PC_SE_2021_RET_PRORROGAO.PDF",
+            "sha256": "8be11bb7da9c8bc79ca8ead1faba2fa08c824173a1a6aececc874fa4b2970687"
+          },
+          {
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_4_PC_SE_2021_RET.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/ED_4_PC_SE_2021_RET.PDF",
+            "sha256": "ddee6e4fce7b3d523c29dcc059d5773057412916283eed1219975ba4dd5b098d"
+          }
+        ],
+        "original_answer_preserved": true,
+        "source_limitation": "Senado returned a security-verification page; no successful capture of the complete 1896 book is claimed. The primary decision resolving the exam key is the official Cebraspe justification."
+      }
+    },
+    {
+      "id": "b2e02502-6250-4627-8a21-6c60ed1356d0",
+      "item_number": 14,
+      "answer": "E",
+      "status": "active",
+      "source_page": 1,
+      "eligible": true,
+      "before_sha256": "aa0362acd6f47ae345fb23cead45061fec04b9f9fc48bfb6fc3e51aefd110901",
+      "after_sha256": "0dd66e25f6ec90ded7cde40a5d5a6ffe5dcc0a307e61171fb2158fc992bb7290",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "5083ccd9-ec59-51b7-b2e4-64d10659c91d",
+        "review_note": "Gabarito DEFINITIVO: ERRADO (E). A própria banca mudou a resposta preliminar C para E após recurso. Na justificativa oficial do item 14, página 1, consta: “A coroa portuguesa comandada por Filipe II, em 1590, foi quem criou A Capitania de Sergipe del-Rei.” O fundamento expresso foi, portanto, a ATRIBUIÇÃO DA CRIAÇÃO FORMAL À COROA, em vez da atribuição pessoal a Cristóvão de Barros na assertiva.\nPara estudar este item, separe a autoria formal do ato e a atuação de personagens no processo de ocupação. A justificativa não afirma que Cristóvão de Barros não teve qualquer participação nesse processo. Também não aponta o trecho sobre subordinação à Bahia como razão da mudança: não invente uma data alternativa de autonomia para explicar o E. Relatos podem empregar fundação, conquista e criação formal com alcances diferentes; aqui está explicitado o critério adotado pela banca após recurso, sem tratar toda formulação historiográfica como incontroversa.\nExemplo: em uma situação hipotética, a implantação de uma escola pode ser associada a uma liderança local, enquanto seu ato formal de criação é atribuído ao poder público. Uma prova que cobra especificamente o ato formal exige distinguir os dois planos, em vez de tratar os sujeitos como intercambiáveis.\nTeste rápido — A banca anulou o item 14? Não. O documento registra “Deferido com alteração”: a resposta final é E, e não o C preliminar.\nJustificativa oficial, página 1: https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+        "verified_at": "2026-10-17T17:30:49.876975+00:00",
+        "legal_review_required": false,
+        "legal_audit_completed": false
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Comando e item conferidos visualmente no caderno comum, chave definitiva E e justificativa expressa de alteração C→E recuperada no catálogo oficial. Programa do próprio cargo conferido na página 38, pontos 3 e 6. Explicação distingue critério da banca de certificação historiográfica geral.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF"
+        ],
+        "official_pdf_page": 1,
+        "question_format": "certo_errado",
+        "justification": {
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/PC_SE_JUSTIFICATIVAS_ALTERAO_DE_GABARITO.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/se-justifications.pdf",
+          "sha256": "d69b91dd99c9d6bef81637e1fbfbae60c45378edd4ed832abf0968b35366419d",
+          "reviewed_page": 1,
+          "preliminary_answer": "C",
+          "definitive_answer": "E",
+          "decision": "Deferido com alteração"
+        },
+        "exam_captures": [
+          {
+            "name": "se-api",
+            "url": "https://apis.cebraspe.org.br/cebraspe/eventos/pc_se_21",
+            "path": "outputs/pc-pending-review-2026-10-16/se-api.json",
+            "sha256": "d6207f268df7e44579ebf6fb308475c996a314e187568cb2d8b7adf7c431721b",
+            "captured_at": "2026-10-17T17:25:53.805Z"
+          },
+          {
+            "name": "se-paper",
+            "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/605_PCSE_CG1_01.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/se-paper.pdf",
+            "sha256": "6a79e5708f1fbbfe11ce44ab34642cab00d7c8f508f61d56d915d0ba92919811",
+            "captured_at": "2026-10-17T17:25:53.075Z"
+          },
+          {
+            "name": "se-key",
+            "url": "https://cdn.cebraspe.org.br/concursos/PC_SE_21/arquivos/GAB_DEFINITIVO_605_PCSE_CG1_01.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/se-key.pdf",
+            "sha256": "0cedb0505640a7401590f19b0955f94c9729f71f1b1c006e7ad590473ec2527d",
+            "captured_at": "2026-10-17T17:25:53.228Z"
+          }
+        ],
+        "edital_capture": {
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/se-edital.pdf",
+          "sha256": "33509d883295f195ce9cb16a6607b000843b0189d465fb01ae3e9275bc20e5d5",
+          "captured_at": "2026-10-17T17:28:23.883Z"
+        },
+        "retifications": [
+          {
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_2_PC_SE_2021_RET_PRORROGAO.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/ED_2_PC_SE_2021_RET_PRORROGAO.PDF",
+            "sha256": "8be11bb7da9c8bc79ca8ead1faba2fa08c824173a1a6aececc874fa4b2970687"
+          },
+          {
+            "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_4_PC_SE_2021_RET.PDF",
+            "path": "outputs/pc-pending-review-2026-10-16/ED_4_PC_SE_2021_RET.PDF",
+            "sha256": "ddee6e4fce7b3d523c29dcc059d5773057412916283eed1219975ba4dd5b098d"
+          }
+        ],
+        "original_answer_preserved": true,
+        "source_limitation": "Senado returned a security-verification page; no successful capture of the complete 1896 book is claimed. The primary decision resolving the exam key is the official Cebraspe justification."
+      }
+    }
+  ],
+  "unique_questions": 1,
+  "program_topics": [
+    {
+      "expected_edition": {
+        "id": "1053c168-c3e1-4e07-b101-37649647f535",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Agente de Polícia Judiciária",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:48.226006+00:00"
+      },
+      "expected_source": {
+        "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "source_type": "edital",
+        "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+        "issuer": "Cebraspe / Estado de Sergipe",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "published_on": null,
+        "checked_at": "2026-10-13T23:26:46.355+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+      },
+      "evidence": {
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/se-edital.pdf",
+        "sha256": "33509d883295f195ce9cb16a6607b000843b0189d465fb01ae3e9275bc20e5d5",
+        "visually_verified": true
+      },
+      "items": [
+        {
+          "row": {
+            "id": "dc5b5cb4-788e-5d40-b3df-7e621cd1d56b",
+            "edition_id": "1053c168-c3e1-4e07-b101-37649647f535",
+            "block_name": "Conhecimentos Gerais — Sergipe",
+            "discipline": "Atualidades e Conhecimentos sobre Sergipe",
+            "topic_order": 20,
+            "topic_text": "3 Processo de ocupação e povoamento do território sergipano. 6 Estrutura do poder e a sociedade colonial sergipana.",
+            "content_status": "current"
+          },
+          "page": 38,
+          "reference": "Item 18, Conhecimentos Gerais, ATUALIDADES E CONHECIMENTOS SOBRE O ESTADO DE SERGIPE, pontos 3 e 6. Os editais 2 e 4 retificam outros subitens, não este recorte."
+        }
+      ]
+    },
+    {
+      "expected_edition": {
+        "id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+        "contest_name": "Polícia Civil do Estado de Sergipe",
+        "role_name": "Escrivão de Polícia",
+        "contest_year": 2021,
+        "exam_board": "Cebraspe",
+        "source_id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "status": "active",
+        "created_at": "2026-10-13T22:29:51.385401+00:00"
+      },
+      "expected_source": {
+        "id": "f7d4ef39-3d37-4749-a549-3c8d11585964",
+        "source_type": "edital",
+        "title": "PC-SE — Edital 1 de 1º de julho de 2021 — Agente e Escrivão",
+        "issuer": "Cebraspe / Estado de Sergipe",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "published_on": null,
+        "checked_at": "2026-10-13T23:26:46.355+00:00",
+        "status": "vigente",
+        "is_official": true,
+        "notes": "Fonte histórica do edital conferida no documento oficial. Não certifica atualização de todas as questões ou vigência de cada lei nele citada."
+      },
+      "evidence": {
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_se_21/arquivos/ED_1_PC_SE_2021_ABERTURA.PDF",
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/se-edital.pdf",
+        "sha256": "33509d883295f195ce9cb16a6607b000843b0189d465fb01ae3e9275bc20e5d5",
+        "visually_verified": true
+      },
+      "items": [
+        {
+          "row": {
+            "id": "5083ccd9-ec59-51b7-b2e4-64d10659c91d",
+            "edition_id": "c12469c7-5198-4427-8285-b77ec8cbee17",
+            "block_name": "Conhecimentos Gerais — Sergipe",
+            "discipline": "Atualidades e Conhecimentos sobre Sergipe",
+            "topic_order": 20,
+            "topic_text": "3 Processo de ocupação e povoamento do território sergipano. 6 Estrutura do poder e a sociedade colonial sergipana.",
+            "content_status": "current"
+          },
+          "page": 38,
+          "reference": "Item 18, Conhecimentos Gerais, ATUALIDADES E CONHECIMENTOS SOBRE O ESTADO DE SERGIPE, pontos 3 e 6. Os editais 2 e 4 retificam outros subitens, não este recorte."
+        }
+      ]
+    }
+  ],
+  "source_scope": "Official exam-board explanation of its final answer, not an assertion that every historical account uses creation/foundation/conquest in the same sense. The complete 1896 book was not retrieved; Senado presented a security check."
+}
