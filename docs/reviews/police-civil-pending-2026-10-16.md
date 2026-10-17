@@ -240,3 +240,12 @@ O registro da fonte e sua aceitação no filtro da aplicação foram ampliados s
 - RO14: páginas oficiais do STF sobre bloqueadores e Tema1019 foram obtidas. A primeira confirma a inconstitucionalidade de imposição estadual às operadoras. A segunda, de22/09/2023, admite integralidade e paridade sob condições, incluindo previsão complementar anterior à EC103/2019; não tratar a alternativaE abstrata como resolvida sem confrontar seus limites. Item permanece retido.
 - HistóriaRO: recuperada https://rondonia.ro.gov.br/rondonia/historia/, que contextualiza BR364 e ciclos migratórios, mas não basta para certificar cada alternativa. Confirmado que Delegado9 trocaA/B em relação ao Datiloscopista29. O gabarito definitivo de Datiloscopista realmente mostra29D; não trocar porA por mera suposição. Falta esclarecer a divergência material com fonte específica/justificativa. Sem publicação ou adulteração de chave.
 - MG48: API oficial WHOIRIS passou a responder; o handle10665/43402 pertence a documento cardiovascular, não ao manual de cadáveres e não foi usado como fundamento. Pesquisa de título ainda não recuperou o manual específico em inglês. Não confundir simples retornoHTTP200 com fonte adequada.
+
+
+## Matriz das 32 e conferência adicional — 17/10/2026
+
+O arquivo `docs/question-review-pc32-dispositions-2026-10-17.json` identifica individualmente os 32 registros iniciais: **dez decisões concluídas e publicadas (seis ativos, quatro obsoletos) e 22 ainda retidos por validação incompleta**. A triagem dos 32 não equivale a concluir a revisão substantiva dos 32. Cada retenção aponta o ponto ainda não comprovado; nenhuma foi arquivada por mera dificuldade de obter fonte.
+
+Foi obtido e examinado adicionalmente o ato relacionado de 2009: **Lei 3.374/2009**, ficha ALEAM `/norma/7829` e PDF oficial vinculado. Altera a Lei 3.278/2008, inclusive o procedimento de revisão do art. 125, § 1º (art. 37 do modificador); não altera o art. 159 nem restaura os arts. 36–91 do Estatuto de 1994. Mantida a conclusão dos dois itens históricos obsoletos. A busca de notícias do STF sem resultados não é apresentada como prova de inexistência de controle judicial. Hash e URL do ato adicional constam da matriz; nenhum dado do banco foi alterado nessa conferência adicional.
+
+A página PAHO tentada para o manual de gestão de cadáveres devolveu um catálogo genérico de documentos, apesar do HTTP 200; não foi apresentada como manual obtido. A pesquisa WHOIRIS por título não recuperou fonte específica suficiente. Esses retornos não fundamentam a liberação de MG48.
