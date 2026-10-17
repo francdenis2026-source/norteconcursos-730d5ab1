@@ -1,0 +1,2127 @@
+{
+ "origem": "Questões de informática.pdf (apostila do usuário); banca/ano não informados; não está no banco em 17/10/2026; gabarito NÃO conferido com prova oficial",
+ "itens": [
+  {
+   "n": 1,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Os metadados descritivos incluem aqueles usados para indexação, recuperação e identificação dos recursos digitais, enquanto os administrativos servem para gestão desses recursos. Considerando que o fragmento de texto acima tem carácter unicamente motivador, julgue os itens a seguir, relativos aos serviços de referência e automação.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 2,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Os metadados, comumente definidos como dados sobre dados, são descrições de dados armazenados em banco de dados cuja finalidade principal é documentar e organizar, de forma estruturada, os dados, gerenciando-os de maneira eficiente.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 3,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A biblioteca digital é um espaço informativo onde as coleções digitais, os serviços de acesso e as pessoas interagem em apoio ao ciclo de criação, preservação e utilização do documento digital. Com relação a esse assunto, julgue os itens subsequentes.",
+   "enunciado": "Os metadados dos objetos digitais estruturados segundo formatos precisos de gravação devem ser usados tanto pelas pessoas quanto pelo sistema informatizado.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 4,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Os metadados podem ser definidos como Elementos de descrição/definição/avaliação de recursos informacionais armazenados em sistemas computadorizados e organizados por padrões específicos, deforma estruturada.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 5,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "No ambiente digital, a representação dos recursos informativos por meio de metadados é essencial, tendo-se em vista que são eles que permitem a recuperação e o acesso ao documento.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 6,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item que se segue acerca de engenharia de software e inteligência computacional.",
+   "enunciado": "São exemplos de técnicas de inteligência computacional os algoritmos genéticos, as redes neurais e a lógica nebulosa (fuzzy).",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 7,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item que se segue acerca de engenharia de software e inteligência computacional.",
+   "enunciado": "Inteligência computacional é um conjunto de métodos e(ou) técnicas que procura desenvolver sistemas dotados de comportamento semelhante a certos aspectos do comportamento inteligente.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 8,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com referência aos gêneros digitais, julgue os item que se segue.",
+   "enunciado": "Digitalização é a transformação de informações textuais, sonoras ou gráficas no código binário 0 ou 1, que por sua vez é uma linguagem matemática para a qual essas informações são traduzidas e ambientadas em um suporte virtual.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 9,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Acerca da Internet das Coisas, assinale a alternativa correta.",
+   "alternativas": [
+    "a) Internet das Coisas é uma forma mais econômica de acesso à internet, a qual permite que dispositivos como geladeiras ofereçam internet a celulares e computadores de usuários, dispensando a necessidade de aquisição de roteadores ADSL à parte.",
+    "b) Como exemplo de Internet das Coisas, é correto citar um dispositivo que mede a temperatura ambiente interna de um escritório e envia essa informação pela internet.",
+    "c) Um exemplo de Internet das Coisas é o bitcoin, que é uma moeda virtual e iniciou a era da Internet das Moedas, com bancos virtuais sem agências.",
+    "d) A Internet das Coisas opera separadamente da Internet das Pessoas e, por isso, não é possível enviar os dados coletados por dispositivos conectados à Internet das Coisas para a nuvem.",
+    "e) A Internet das Coisas tem grande aplicação em ambientes domésticos e escritórios, mas pouca em ambientes industriais."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 10,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o seguinte item, a respeito de big data.",
+   "enunciado": "O objetivo da técnica de sequência de tempo é identificar a ocorrência de dois eventos diferentes no mesmo momento.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 11,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o seguinte item, a respeito de big data.",
+   "enunciado": "Aprendizagem de máquina pode ajudar a clusterização na identificação de outliers, que são objetos completamente diferentes do padrão da amostra.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 12,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Com relação a fundamentos e conceitos de Big Data, julgue os itens a seguir. I. O volume de dados é uma característica importante de Big Data. II. Em Big Data, a qualidade do dado não tem importância, porque a transformação dos dados não impacta os negócios. III. A característica de velocidade de entrada dos dados impacta o modelo de processamento e armazenamento. IV A variedade dos dados não é característica intrínseca nos fundamentos de Big Data. Estão certos apenas os itens",
+   "alternativas": [
+    "a) I e II.",
+    "b) I e III.",
+    "c) II e IV.",
+    "d) I, III e IV.",
+    "e) II, III e IV. No que concerne a data mining (mineração de dados) e big data, julgue o seguinte item."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 13,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Devido à quantidade de informações manipuladas, a (cloud computing) computação em nuvem torna-se inviável para soluções de big data.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 14,
+   "tipo": "multipla",
+   "texto_de_apoio": "A principal definição de Big Data parte de três características, conhecidas como 3 V do Big Data, a saber: velocidade, variedade e volume.",
+   "enunciado": "O termo velocidade refere-se, principalmente, à",
+   "alternativas": [
+    "a) necessidade das aplicações de gerar respostas rapidamente, a partir de grandes massas de dados.",
+    "b) existência de um alto fluxo de dados na entrada.",
+    "c) necessidade de gerar aplicações rapidamente, em função da demanda do negócio.",
+    "d) importância da facilidade de manipular cubos de visualização de dados, rapidamente.",
+    "e) rapidez com que os dados se tornam inválidos com o tempo."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 15,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Big Data requer clusters de servidores de apoio às ferramentas que processam grandes volumes, alta velocidade e formatos variados de Big Data. Nesse sentido, é correto afirmar que Hadoop refere-se a",
+   "alternativas": [
+    "a) um sistema de armazenamento e processamento de dados massivamente escalável – não é um banco de dados.",
+    "b) uma estratégia baseada em tecnologia que permite a coleta de insights mais profundos e relevantes dos clientes, parceiros e sobre o negócio.",
+    "c) um banco de dados com capacidade melhorada.",
+    "d) um equipamento de hardware que permite que sistemas administrem crescentes cargas de processamento.",
+    "e) um banco de dados com tecnologia de virtualização."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 16,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue os itens que se seguem, no que se refere a Big Data.",
+   "enunciado": "Em soluções Big Data, a análise dos dados comumente precisa ser precedida de uma transformação de dados não estruturados em dados estruturados",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 17,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Big Data é:",
+   "alternativas": [
+    "a) volume + variedade + agilidade + efetividade, tudo agregando + valor + atualidade.",
+    "b) volume + oportunidade + segurança + veracidade, tudo agregando + valor.",
+    "c) dimensão + variedade + otimização + veracidade, tudo agregando + agilidade.",
+    "d) volume + variedade + velocidade + veracidade, tudo agregando + valor.",
+    "e) volume + disponibilidade + velocidade + portabilidade, tudo requerendo - valor."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 18,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de dados, informação, conhecimento e inteligência, julgue o próximo item.",
+   "enunciado": "Integridade é a característica que garante o acesso à informação somente para quem estiver autorizado.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 19,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item a seguir, referente a criptografia e protocolos criptográficos.",
+   "enunciado": "Em criptografia, denomina-se integridade a propriedade que garante que apenas o destinatário seja capaz de extrair o conteúdo da mensagem criptografada.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 20,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de segurança da informação, julgue o seguinte item.",
+   "enunciado": "A criptografia hash é one-way, pois, uma vez obtido um valor hash h para uma string x, é computacionalmente impossível encontrar um valor de x que gere o hash h.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 21,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue os próximos itens, relativos ao uso de soluções criptográficas.",
+   "enunciado": "A colisão de hashes ocorre quando duas entradas de mensagens idênticas resultam em dois valores diversos de message digest ou hash, e pode decorrer, por exemplo, de exploração do tipo força bruta (ataque de dicionário)",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 22,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue os próximos itens, relativos ao uso de soluções criptográficas.",
+   "enunciado": "A colisão de hashes ocorre quando duas entradas de mensagens idênticas resultam em dois valores diversos de message digest ou hash, e pode decorrer, por exemplo, de exploração do tipo força bruta (ataque de dicionário)",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 23,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere à segurança da informação, julgue os itens a seguir.",
+   "enunciado": "Para averiguar a integridade de um arquivo de computador a ser transmitido por um meio inseguro, pode-se gerar um hash antes da transmissão e verificar o hash após a transmissão.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 24,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca das funções hash, julgue o item subsequente.",
+   "enunciado": "As funções hash são utilizadas em diversos meios computacionais, sendo uma de suas aplicações a verificação de integridade dos dados de uma transmissão.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 25,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Para o estabelecimento de padrões de segurança, um dos princípios críticos é a necessidade de se verificar a legitimidade de uma comunicação, de uma transação ou de um acesso a algum serviço. Esse princípio refere-se à",
+   "alternativas": [
+    "a) confidencialidade.",
+    "b) autenticidade.",
+    "c) integridade.",
+    "d) conformidade.",
+    "e) disponibilidade."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 26,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de segurança da informação, julgue o item subsequente.",
+   "enunciado": "Autenticação é o requisito básico de segurança da informação cujo objetivo é evitar que uma entidade possa negar a autoria da execução de uma ação.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 27,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere à segurança de sistemas, julgue os itens que se seguem.",
+   "enunciado": "Para autenticar uma comunicação que utiliza assinaturas de chave pública, o emitente e o receptor devem ter a mesma chave.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 28,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A informação é fundamental para a continuidade dos negócios de uma organização e consequentemente necessita ser adequadamente protegida. No que se refere a esse assunto, julgue o item subsecutivo.",
+   "enunciado": "A verificação da autenticidade é necessária para o processo de identificação de usuários e dispensável para a identificação de sistemas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 29,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Considerando que as técnicas associadas à criptografia são comumente empregadas para se atingir requisitos de segurança, julgue os itens a seguir.",
+   "enunciado": "Em conjunto com as funções de resumo criptográfico (hash), a criptografia simétrica proporciona autenticidade.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 30,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em relação a conceitos de segurança da informação, julgue o item que se segue.",
+   "enunciado": "Ao se utilizar o mesmo algoritmo de hash para verificação de integridade, dois arquivos com nomes diferentes, mas idênticos em termos binários, terão o mesmo resultado de hash.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 31,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a segurança da informação, criptografia e sua aplicação em sistemas de tecnologia da informação, julgue o item que se segue.",
+   "enunciado": "Uma característica fundamental de uma função de hash é que esta recebe uma mensagem de tamanho variável como entrada e possui uma saída de tamanho fixo.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 32,
+   "tipo": "multipla",
+   "texto_de_apoio": "Existe uma tecnologia que torna o livro-razão independente de aplicativos e de participantes individuais, replicando-o em uma rede distribuída para criar um registro consensual de autoridade de eventos significativos. Nesse contexto, o livro-razão distribuído é uma lista de registros transacionais irrevogáveis assinados criptograficamente, sendo essa lista ordenada cronologicamente e compartilhada por todos os participantes de uma rede.",
+   "enunciado": "Assinale a opção que apresenta o nome da tecnologia de que trata o texto anterior.",
+   "alternativas": [
+    "a) rede virtual privada (VPN, do inglês Virtual Private Network)",
+    "b) blockchain",
+    "c) criptografia por chave simétrica",
+    "d) criptografia por chave pública",
+    "e) HTTPS (hypertext transfer protocol secure)"
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 33,
+   "tipo": "multipla",
+   "texto_de_apoio": "A respeito de segurança da informação, julgue os itens a seguir. I. Autenticidade se refere às ações tomadas para assegurar que informações confidenciais e críticas não sejam roubadas do sistema. II. A gestão de segurança da informação deve garantir a disponibilidade da informação. III. A confidencialidade garante a identidade de quem envia a informação. IV. De acordo com o conceito de integridade, os dados devem ser mantidos intactos, sem alteração, conforme foram criados e fornecidos.",
+   "enunciado": "Estão certos apenas os itens",
+   "alternativas": [
+    "a) I e II.",
+    "b) I e III.",
+    "c) II e IV",
+    "d) I, III e IV",
+    "e) II, III e IV."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 34,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Com relação aos conceitos de disponibilidade, confidencialidade e integridade, assinale a opção incorreta.",
+   "alternativas": [
+    "a) Todo software desenvolvido atualmente traz, implantadas em seu núcleo, a disponibilidade, a confidencialidade e a integridade.",
+    "b) A propriedade de não-modificação de uma informação por entidades não-autorizadas está relacionada ao conceito de integridade.",
+    "c) A confidencialidade versa sobre o acesso à informação por aqueles que têm direito.",
+    "d) A disponibilidade versa sobre a informação acessível a entidade de direito no momento em que for solicitada."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 35,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, relativo a segurança da informação.",
+   "enunciado": "Identificação e autenticação são requisitos de segurança da informação que consistem em identificar usuários do sistema e verificar as suas identidades, como pré-requisito para permitir o acesso desses usuários ao sistema.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 37,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de segurança no desenvolvimento de aplicações, julgue o item que segue.",
+   "enunciado": "A autenticação de múltiplos fatores é um processo de verificação da representação de múltiplos caracteres capazes de produzir efeitos indesejáveis sobre operações de aplicações dos sistemas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 38,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos mecanismos de autenticação, julgue o seguinte item.",
+   "enunciado": "Os benefícios providos pelos mecanismos de autenticação incluem a corroboração da identidade das partes e da origem da informação e o controle de acesso.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 39,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos mecanismos de autenticação, julgue o seguinte item.",
+   "enunciado": "Mecanismo que usa token, verificação biométrica de impressão digital e PIN é exemplo de mecanismo de três fatores.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 40,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue os itens de 110 a 115, relativos à segurança de sistemas.",
+   "enunciado": "Uma das formas mais seguras de se garantir autenticação a um sistema por meio de senha consiste na geração de um código de acesso a cada sessão utilizada; assim, ao se finalizar uma sessão, é necessário que seja gerado um novo código de acesso.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 41,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que concerne à segurança da gestão de áreas e instalações e à segurança das telecomunicações, julgue os próximos itens.",
+   "enunciado": "A autenticação assegura e valida a identidade do usuário, permitindo que toda informação contida no sistema da empresa seja autêntica e esteja disponível.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 42,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Acerca dos métodos de autenticação de usuários, assinale a opção correta.",
+   "alternativas": [
+    "a) O método de autenticação embasado no que você sabe é adotado, por exemplo, quando se utiliza um pendrive com senha para auxiliar na autenticação de um usuário na rede.",
+    "b) As senhas são armazenadas em arquivos que jamais podem ser acessados ou decriptografados; por isso, a autenticação por meio de senha é a mais segura e a mais utilizada",
+    "c) Os métodos de autenticação embasados no que você é consistem na utilização de mecanismo de autenticação relacionado à posição hierárquica que o indivíduo ocupa em uma organização, permitindo-se mais privilégios de uso do ambiente computacional àqueles que ocupam posições superiores.",
+    "d) O método embasado no que você sabe é relacionado ao uso de senhas de acesso e de logon para identificar o usuário na rede.",
+    "e) A administração de privilégios de acesso refere-se à possibilidade de leitura, escrita, gravação e exclusão de arquivos, procedimentos que não podem estar associados a métodos de autenticação, pois podem gerar muitas variáveis na administração da autenticação dos usuários."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 43,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, acerca de segurança da informação",
+   "enunciado": "No que tange à autenticação, a confiabilidade trata especificamente da proteção contra negação, por parte das entidades envolvidas em uma comunicação, de ter participado de toda ou parte desta comunicação.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 44,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A superexposição em redes sociais virtuais, com a publicação indiscriminada de informações e imagens pessoais do usuário, seus dados profissionais, seus hábitos, sua localização, seu patrimônio e seus relacionamentos, aumenta significativamente o risco de",
+   "alternativas": [
+    "a) bloqueio das senhas de acesso a programas instalados.",
+    "b) exploração de vulnerabilidades dos programas instalados.",
+    "c) criação de perfis falsos em redes sociais.",
+    "d) ataques de ransomware."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 46,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "O mecanismo de embaralhamento ou codificação utilizado para proteger a confidencialidade de dados transmitidos ou armazenados denomina-se",
+   "alternativas": [
+    "a) assinatura digital.",
+    "b) certificação digital.",
+    "c) biometria.",
+    "d) criptografia.",
+    "e) proxy."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 47,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o seguinte item, a respeito de testes de invasão (pentest) em aplicações web, banco de dados, sistemas operacionais e dispositivos de redes.",
+   "enunciado": "Apesar de a criptografia moderna estar presente no cotidiano dos usuários, a implantação de mecanismos criptográficos requer diversos cuidados, como a utilização de algoritmos e protocolos conhecidos e extensivamente analisados e o uso de primitivas criptográficas adequadas para cada situação.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 48,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, a respeito de criptografia, ataque a rede de computadores e segurança de servidores e de estações de trabalho.",
+   "enunciado": "Esteganografia é uma técnica que consiste em ocultar uma mensagem dentro da outra, enquanto a criptografia é uma técnica que codifica o conteúdo da mensagem.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 49,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, relativo a segurança da informação.",
+   "enunciado": "A criptografia provê métodos de disfarçar informações; a criptografia de chave pública é simétrica quando envolve a utilização de duas chaves separadas, mas correlacionadas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 50,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A respeito da criptografia com uso de chave pública assimétrica e com uso de chaves simétricas, assinale a opção correta.",
+   "alternativas": [
+    "a) A criptografia simétrica caiu em desuso a partir dos atuais esquemas de criptografia com chave pública.",
+    "b) Os procedimentos da criptografia de chave pública são mais simples que os adotados pela criptografia simétrica.",
+    "c) Sob o ponto de vista da criptoanálise, a criptografia de chave pública é mais resistente à descoberta do texto original cifrado do que a criptografia simétrica.",
+    "d) Tal como na criptografia simétrica, na criptografia assimétrica é preciso que a mensagem inteira seja criptografada para se garantir a sua autenticidade.",
+    "e) Tanto a criptografia simétrica quanto a encriptação de chave pública são vulneráveis a um ataque de força bruta. No que diz respeito à criptografia, aos sistemas de detecção de intrusão (IDS) e à certificação digital, julgue o item seguinte."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 51,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Diffie-Hellman e RSA são exemplos de algoritmos de chave simétrica, a qual utiliza uma chave simples tanto para criptografar quanto para decriptografar.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 52,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a criptografia simétrica e assimétrica e a algoritmos de criptografia, julgue o item subsecutivo.",
+   "enunciado": "O algoritmo AES (advanced encryption standard) apresenta algumas anomalias a depender da chave utilizada; esse fato deu origem ao algoritmo DES (data encryption standard).",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 53,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item a seguir, referente a criptografia e protocolos criptográficos.",
+   "enunciado": "O objetivo da criptografia é transformar informações de forma que se tornem incompreensíveis para pessoas não autorizadas, garantindo-se, assim, a confidencialidade das informações.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 54,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item seguinte, acerca de criptografia.",
+   "enunciado": "Para cifrar dados, sistemas criptográficos assimétricos são mais rápidos que sistemas simétricos.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 55,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Considere que um usuário, embora tenha procurado seguir regras de proteção e segurança da informação, teve seu computador infectado por um malware. Dentre as razões abaixo, a que pode ter contribuído para este fato é o",
+   "alternativas": [
+    "a) programa antimalware ter sido atualizado, incluindo o arquivo de assinaturas.",
+    "b) computador ter um firewall pessoal instalado e ativo.",
+    "c) programa leitor de e-mails ter a auto-execução de arquivos anexados a mensagens habilitadas.",
+    "d) sistema operacional do computador ter como configuração padrão não ocultar a extensão de tipos de arquivos.",
+    "e) computador estar configurado para solicitar senha na tela inicial."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 57,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de malwares, julgue o item subsecutivo.",
+   "enunciado": "Ransomware é um tipo de malware que cifra os arquivos armazenados no computador da vítima e solicita um resgate para decifrá-los.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 58,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item a seguir, em relação às características de software malicioso.",
+   "enunciado": "Formatos comuns de arquivos, como, por exemplo, .docx ou .xlsx, são utilizados como vetor de infecção por ransomware, um tipo de software malicioso que encripta os dados do usuário e solicita resgate.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 59,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em determinada organização, não existem vulnerabilidades de segurança conhecidas nos servidores e os sistemas estão atualizados e bem configurados. Considerando essa situação hipotética, julgue o item seguinte.",
+   "enunciado": "Eventual ataque bem-sucedido de ransomware contra os servidores dessa organização poderá ser revertido por meio de um bem elaborado contra-ataque de quebra das chaves criptográficas por força bruta.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 61,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a dispositivos de segurança de redes, julgue os próximos itens.",
+   "enunciado": "Um worm é um método oculto para contornar os mecanismos de autenticação em sistemas computacionais.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 62,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a códigos maliciosos, julgue os itens a seguir.",
+   "enunciado": "Worm é um programa que possui código malicioso, capaz de se disseminar, por meio de uma rede, para vários computadores.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 63,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a malware, julgue o próximo item.",
+   "enunciado": "Worm é um programa que aparenta ter uma finalidade atraente, mas que esconde alguma funcionalidade maliciosa.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 64,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de redes de computadores e segurança, julgue o item que segue.",
+   "enunciado": "No processo conhecido como scanning, o worm, em sua fase de propagação, procura outros sistemas para infectar.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 65,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere à segurança da informação, julgue o item que se segue.",
+   "enunciado": "Worm é um software que, de forma semelhante a um vírus, infecta um programa, usando-o como hospedeiro para se multiplicar e infectar outros computadores.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 66,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a Internet, correio eletrônico e navegadores da Internet, julgue os itens seguintes.",
+   "enunciado": "O termo worm é usado na informática para designar programas que combatem tipos específicos de vírus de computador que costumam se disseminar criando cópias de si mesmos em outros sistemas e são transmitidos por conexão de rede ou por anexos de e-mail.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 67,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de procedimentos de segurança e de ensino a distância, julgue o item subsecutivo.",
+   "enunciado": "Botnet é uma rede formada por inúmeros computadores zumbis e que permite potencializar as ações danosas executadas pelos bots, os quais são programas similares ao worm e que possuem mecanismos de controle remoto.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 68,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue os itens subsecutivos, referentes a conceitos de segurança da informação.",
+   "enunciado": "Para proteger um computador contra os efeitos de um worm, pode-se utilizar, como recurso, um firewall pessoal.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 69,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação à segurança em redes de computadores, julgue os itens que se seguem.",
+   "enunciado": "Os bots são programas maliciosos armazenados na área de boot do disco de uma estação de trabalho. Eles são capazes de se reproduzir, de modo que o invasor consegue orientar o bot a realizar ataques em um ambiente em rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 70,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Assinale a opção que designa uma rede de objetos físicos que são incorporados a sensores, softwares e outras tecnologias, com o objetivo de conectar e trocar dados com outros dispositivos e sistemas pela Internet, sem intervenção humana.",
+   "alternativas": [
+    "a) rede neural",
+    "b) cloud computing (computação em nuvem)",
+    "c) hiperconvergência",
+    "d) IoT (Internet of Things ou, em português, Internet das Coisas)",
+    "e) rede 5G"
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 71,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Acerca das principais tecnologias associadas ao cenário da Indústria 4.0, julgue os itens seguintes. I. A Internet das Coisas (IoT, do inglês Internet of Things) é a conexão entre objetos físicos, ambientes e pessoas em uma rede, possibilitada por dispositivos eletrônicos que viabilizam a coleta e a troca de dados. II. A computação em nuvem é uma tecnologia que une eficiência, redução de custo e otimização do tempo. III. Big data está ligado à captura e à análise de quantidades massivas de dados, por meio de sistemas de informação robustos. Assinale a opção correta.",
+   "alternativas": [
+    "a) Apenas o item I está certo.",
+    "b) Apenas o item III está certo.",
+    "c) Apenas os itens I e II estão certos.",
+    "d) Apenas os itens II e III estão certos.",
+    "e) Todos os itens estão certos. No que se refere às novas tecnologias, ao programa Microsoft Excel 2013 e ao sistema operacional Windows 10, julgue o item."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 72,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A tecnologia computação em nuvem não traz algumas das vantagens já identificadas nos sistemas tradicionais, como, por exemplo, a diminuição de custos e o aumento da confiabilidade.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 73,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "São exemplos de serviços de armazenamento em nuvem:",
+   "alternativas": [
+    "a) Dropbox, iCloud, OneNote",
+    "b) iCloud, Box Drive, Mega",
+    "c) Google Meet, Mega, OneDrive",
+    "d) Google Drive, Warp Drive, Mega Drive",
+    "e) OneNote, OneDrive, Mega Drive"
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 74,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre Computação em Nuvem, assinale a alternativa CORRETA.",
+   "alternativas": [
+    "a) Uma das desvantagens da Computação em Nuvem é a capacidade em aumentar os custos dos empreendimentos de uma empresa que contrata esse serviço com infraestrutura de TI.",
+    "b) São exemplos de plataformas que se especializaram em fornecer serviços em nuvem: Microsoft Azure, Amazon AWS, Google Cloud e Oracle Cloud.",
+    "c) Os principais exemplos de Computação em Nuvem são: Infraestrutura como Serviço (IaaS), Software como Serviço (SaaS) e Usuário como Serviço (UaaS).",
+    "d) Uma vantagem da Infraestrutura como Serviço (IaaS), para quem contrata um serviço em nuvem, é que não há necessidade de compra de licenças vitalícias de software ou preocupações com atualizações.",
+    "e) A Computação em Nuvem é uma tecnologia que permite acesso remoto a apenas os seguintes tipos de arquivos: fotos e vídeos."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 75,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Na Internet, cookies são informações",
+   "alternativas": [
+    "a) armazenadas em um servidor web por um sítio que o usuário visita.",
+    "b) armazenadas no computador do usuário por um sítio que ele visita.",
+    "c) sobre o tamanho do disco rígido do computador do usuário.",
+    "d) acerca do tipo e da velocidade do processador do computador do usuário.",
+    "e) armazenadas secretamente no computador do usuário e depois movidas para outro computador."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 76,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre os cookies, utilizado por sites e navegadores, assinale a alternativa CORRETA.",
+   "alternativas": [
+    "a) Os cookies contêm apenas três campos: application, content e expiration.",
+    "b) Cookies são arquivos texto que armazenam informações sobre o contexto de navegação de um determinado usuário.",
+    "c) Cookies são programas executáveis.",
+    "d) Não é possível configurar um tempo de expiração para cookies.",
+    "e) O cookie é um certificado digital que comprova a idoneidade de um site."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 77,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Com relação à internet, analise as afirmativas abaixo: I. é um exemplo de um navegador Web. II. é o envio de informações/arquivos a computador remoto. III. é o protocolo usado para visualizar páginas Web. IV. é a linguagem utilizada para criar páginas Web. Assinale a alternativa que preenche corretamente as lacunas:",
+   "alternativas": [
+    "a) Opera; Download; HTML; JavaScript",
+    "b) Edge; Upload; HTTP; HTML",
+    "c) Skype; Download; IP; XML",
+    "d) Firefox; FTP; HTTP; JavaScript",
+    "e) Chrome; FTP; IP; HTML"
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 78,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos de redes de computadores, do programa de navegação Mozilla Firefox, em sua versão mais recente, e dos procedimentos de segurança da informação, julgue o item.",
+   "enunciado": "Em redes de computadores, um dos protocolos da camada de rede do modelo OSI é o IP, do TCP/IP.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 79,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos de redes de computadores, do programa de navegação Mozilla Firefox, em sua versão mais recente, e dos procedimentos de segurança da informação, julgue o item.",
+   "enunciado": "Em redes de computadores, um dos protocolos da camada de rede do modelo OSI é o IP, do TCP/IP.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 80,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de redes de computadores, endereçamento e protocolos da família TCP/IP e gerenciamento de redes TCP/IP, julgue o item a seguir.",
+   "enunciado": "Apesar de não ser orientado a conexão, o UDP (user datagram protocol) disponibiliza opcionalmente checksum e controle de fluxo para fornecer confiabilidade adicional ao protocolo.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 81,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de redes de computadores, endereçamento e protocolos da família TCP/IP e gerenciamento de redes TCP/IP, julgue o item a seguir.",
+   "enunciado": "Detecção e correção de erros são mecanismos que acrescentam informações redundantes ao tráfego da rede de computadores, com o objetivo de viabilizar a identificação e a mitigação de eventuais falhas nos dados recebidos da transmissão.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 82,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Analise as afirmativas a seguir. I. O File Transfer Protocol é um protocolo orientado à transferência de arquivos. A execução de aplicações web ocorre via HTTP. II. Caso o endereço que o usuário esteja acessando se inicie por ftp://, o navegador Internet Explorer usará o protocolo de transferência de arquivos ftp. III. Deep Web é o conjunto de conteúdos da Internet não acessível diretamente por sítios de busca, o que inclui, por exemplo, documentos hospedados em sítios que exigem login e senha. A origem e a proposta original da Deep Web são legítimas, afinal nem todo material deve ser acessado por qualquer usuário. O problema é que, longe da vigilância pública, essa enorme área secreta foi tomada pelo desregramento, e está repleta de atividades ilegais. Marque a opção que indica a(s) afirmativa(s) CORRETA(S).",
+   "alternativas": [
+    "a) I – II – III.",
+    "b) I",
+    "c) II – III.",
+    "d) I – II.",
+    "e) III."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 83,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Julgue os itens em verdadeiro (V) ou falso (F) e em seguida assinale a alternativa que apresenta a sequência, de cima para baixo, correta: ( ) Tudo que é disponível na web tem seu próprio endereço, chamado URL, é o endereço de algo que você procura na internet, é formada por um protocolo de administração. ( ) HTTP é um protocolo ou língua específica da internet, responsável pela comunicação entre computadores. A sigla HTTP é encontrada nos endereços de páginas web seguida de ://. Ela informa ao servidor de que forma deve ser atendido o pedido do cliente. ( ) Os endereços que começam com www são servidores de Web e contém principalmente páginas de hipertexto. Já os que começam com ftp, referem-se a lugares onde pode-se copiar arquivos. ( ) Link é uma ligação que é feita apenas em palavras indicando um caminho para você acessar outro endereço com a informação que esta procurando.",
+   "alternativas": [
+    "a) F - V - V - F",
+    "b) V - F - F - V",
+    "c) V - V - V - F",
+    "d) F - V - F – V"
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 84,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Acerca de redes de computadores, assinale a opção correta.",
+   "alternativas": [
+    "a) Em redes de comutação de circuitos, os recursos não são reservados, logo as mensagens de uma sessão usam os recursos por demanda.",
+    "b) O papel da camada de sessão no OSI é prover serviços que permitam que as aplicações de comunicação interpretem o significado dos dados trocados.",
+    "c) IPv6 é um protocolo da camada de aplicação do TCP/IP.",
+    "d) A fibra óptica conduz pulsos de luz e permite elevadas taxas de transmissão de dados, mas sofre interferência eletromagnética.",
+    "e) Hub é um dispositivo de camada física que atua sobre bits individuais, mas não sobre quadros."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 85,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "No contexto de rede virtuais privadas, VPN, qual protocolo é responsável por encapsular os protocolos IP em datagramas do PPP?",
+   "alternativas": [
+    "a) IMAP",
+    "b) SMTP.",
+    "c) TLS.",
+    "d) RDP.",
+    "e) PPTP."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 86,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "No contexto de acesso a terminais remotos via ssh, o que é o ssh-keygen?",
+   "alternativas": [
+    "a) É uma ferramenta de acesso remoto a servidores que exige autenticação do usuário.",
+    "b) É um módulo de autenticação de usuários, com senha, do conjunto de bibliotecas compartilhadas PAM.",
+    "c) Componente do SSH usado para estabelecer sessões seguras entre computadores remotos, através do uso de técnicas criptográficas, sem a necessidade da digitação de senhas.",
+    "d) É uma implementação dos protocolos SSL e TLS.",
+    "e) É um protocolo padrão da internet que permite a interface de terminais e de aplicações através da internet."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 87,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Quantas e quais são as camadas do modelo OSI?",
+   "alternativas": [
+    "a) 7 - Física, Enlace, Rede, Transporte, Sessão, Apresentação e Aplicação.",
+    "b) 4 - Enlace, Internet, Transporte e Aplicação.",
+    "c) 7 - Física, Enlace, Internet, Transporte, Sessão, Apresentação e Aplicação.",
+    "d) 4 - Física, Transporte, Sessão e Aplicação.",
+    "e) 5 - Enlace, Internet, Transporte, Apresentação e Aplicação."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 88,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A respeito do protocolo IP – Internet Protocol, é correto afirmar: I. O endereço IP é responsável por identificar um computador em uma rede. II. O endereço IP é um endereço físico, que já vem na placa de rede quando você compra um computador ou notebook. III. O endereço IP é um endereço lógico, que você pode configurar em uma placa de rede. Qual(is) alternativa(s) está(ão) correta(s)?",
+   "alternativas": [
+    "a) Apenas I.",
+    "b) Apenas I e III.",
+    "c) Apenas II.",
+    "d) Apenas III."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 89,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Avalie as proposições com (V) para as verdadeiras e (F) para as falsas. Em seguida responda o que se pede. ( ) A “CIA-triad” faz referência aos termos Confidentiality, Integrity e Availability, os quais compõem o tripé da segurança da informação. ( ) Integridade se refere à ameaça da ocorrência de alterações indevidas das informações. ( ) O TCP(Transmission Control Protocol) possui uma versão conhecida como Secure Sochets Layer (SSL), a qual é um protocolo que provê integridade e disponibilidade na comunicação entre dois pontos de rede. ( ) A identificação do uso de SSL é possível em navegações web quando o endereço começa com a expressão “https” que significa Hyper Text Transfer Secure. Este é um protocolo utilizado por browsers para se ter a garantia de sigilo do conteúdo da mensagem entre origem e destino. A sequência CORRETA de preenchimento dos parênteses é:",
+   "alternativas": [
+    "a) V, F, F e V.",
+    "b) F, V, V e F.",
+    "c) V, V, F e V.",
+    "d) V, V, F e F.",
+    "e) F, V, V e V."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 90,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Analise as afirmações abaixo sobre o tema protocolos de internet e suas funções e assinale a alternativa correta.",
+   "alternativas": [
+    "a) FTP (File Transfer Protocol/Protocolo de transferência de arquivo) é um recurso utilizado para transferência de arquivos pela internet. Este protocolo permite a leitura, o envio e o recebimento dos arquivos.",
+    "b) Hypertext Transfer Protocol, sigla HTTP (em português Protocolo de Transferência de Hipertexto) é um protocolo de comunicação utilizado especificamente para transferências de e-mails do servidor para o computador local.",
+    "c) TCP/IP (Transmission Control Protocol/Protocolo de controle de transmissão/protocolo Internet) é uma forma padronizada de comunicação para os computadores na internet. O TCP faz a divisão dos dados que será enviada em segmentos de dados.",
+    "d) IMAP (Internet Message Access Protocol/Protocolo de acesso ao correio da internet) permite somente a manipulação de caixas postais locais, permitindo a organização da forma que melhor convier."
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 91,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Dado o endereço de e-mail: lontras@lontras.sc.gov.br, assinale a alternativa correta:",
+   "alternativas": [
+    "a) Endereço de e-mail institucional",
+    "b) Endereço de e-mail comercial",
+    "c) Endereço de e-mail estadual",
+    "d) Nenhuma resposta correta"
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 92,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de noções de informática, julgue o item a seguir.",
+   "enunciado": "O POP3 é um protocolo utilizado para serviços de correio eletrônico e tem a função de transporte no envio de emails do cliente para o destinatário. Pretende-se construir uma aplicação que permita ao usuário o recebimento de emails sem que eles sejam apagados do servidor.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 93,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Para atender ao objetivo mencionado nessa situação, é correto utilizar o protocolo",
+   "alternativas": [
+    "a) SMTP.",
+    "b) POP3.",
+    "c) FTP.",
+    "d) IMAP.",
+    "e) UDP."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 94,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Dispositivo de uma rede de computadores constituído de um programa ou equipamento físico que objetiva aplicar uma política de segurança e acesso ao conteúdo dos computadores ligados à rede. Este texto se refere ao",
+   "alternativas": [
+    "a) Firewall",
+    "b) TCP/IP",
+    "c) Antivírus",
+    "d) Gateway",
+    "e) Intranet"
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 95,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre a segurança da informação, é correto afirmar:",
+   "alternativas": [
+    "a) Bitcoin é um software malicioso que infecta computadores, criptografando arquivos e exigindo o pagamento de uma taxa para descriptografar o sistema.",
+    "b) É importante manter sempre atualizado o sistema operacional de um computador, pois as atualizações normalmente corrigem falhas de segurança conhecidas.",
+    "c) Computadores que rodam o Sistema Operacional Linux são imunes a vírus.",
+    "d) Os antivírus modernos se utilizam da criptografia, em dois fatores, para garantir a segurança do sistema operacional.",
+    "e) Apenas a presença de um software de Firewall garante a segurança de um computador."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 96,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos de redes de computadores, do programa de navegação Mozilla Firefox, em sua versão mais recente, e dos procedimentos de segurança da informação, julgue o item.",
+   "enunciado": "O controle das estruturas organizacionais não é considerado como um dos tipos de controle julgados importantes para se alcançar a segurança da informação em uma empresa.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 97,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a segurança em recursos humanos, julgue o item subsequente, de acordo com a NBR ISO/IEC 27001:2013.",
+   "enunciado": "Durante processos de contratação de recursos humanos, a norma preconiza que todos os funcionários da organização devem receber treinamento, educação e conscientização apropriados, bem como as atualizações regulares das políticas e os procedimentos organizacionais relevantes para as suas funções.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 98,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a segurança em recursos humanos, julgue o item subsequente, de acordo com a NBR ISO/IEC 27001:2013.",
+   "enunciado": "Segundo essa norma, funcionários e partes externas devem, somente após a sua contratação, entender suas responsabilidades e estar em conformidade com os papéis para os quais tenham sido selecionados.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 99,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item seguinte, a respeito de cloud computing, virtualização, servidores de aplicação e tecnologias e arquiteturas de data center.",
+   "enunciado": "A realização de becape com deduplicação de destino caracteriza-se pela realização do processamento e da remoção dos dados redundantes após o envio dos dados do ambiente de produção para o sistema servidor de becape.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 100,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a procedimentos de segurança de redes de comunicação, julgue o próximo item.",
+   "enunciado": "Se, para criptografar a disponibilização de um sítio, tiver sido utilizado o HTTPS, então a criptografia utilizada nesse ambiente é simétrica.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 101,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a procedimentos de segurança de redes de comunicação, julgue o próximo item.",
+   "enunciado": "Um dispositivo configurado como IPS (intrusion prevention system) analisa tráfegos na rede de computadores, em busca de assinaturas de ataques, e notifica os administradores, porém não possui autonomia para bloquear o tráfego de rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 102,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, a respeito de segurança de redes de computadores e proteção contra softwares maliciosos.",
+   "enunciado": "A instalação e a execução de um ou mais sistemas antimalware em um computador garantem proteção contra softwares maliciosos, mesmo que o usuário execute frequentemente arquivos recebidos em mensagens e não atualize seus programas e o sistema operacional.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 103,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "No que se refere aos mecanismos de segurança e as ameaças à segurança, é correto afirmar que:",
+   "alternativas": [
+    "a) São exemplos de controles técnicos: câmeras de segurança; treinamento e conscientização; e biometria.",
+    "b) São exemplos de controles físicos: criptografia; registro e avaliação de pessoal; cartões de acesso.",
+    "c) Na perda de integridade informações restritas são expostas pela quebra da senha de usuário ou administrador.",
+    "d) Na perda de confiabilidade a informação é alterada indevidamente ou não se pode garantir que a informação seja a mais recente.",
+    "e) Na perda por disponibilidade a informação deixa de estar acessível por quem necessita dela ou não se tem o acesso esperado."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 104,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de segurança em redes de computadores e criptografia, julgue o item seguinte.",
+   "enunciado": "O objetivo principal de um ataque DDoS é invadir bases de dados para coletar informações sensíveis; para isso, ele realiza a sobrecarga dos recursos do servidor, por meio do envio de excessiva quantidade de requisições ou por meio da geração de grande tráfego de dados na rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 105,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "No contexto de segurança de redes o que é sniffing?",
+   "alternativas": [
+    "a) Ataque que consiste na negação de serviço onde é feita a tentativa de sobrecarga em um servidor, de forma distribuída através de máquinas zumbis.",
+    "b) Ataque que consiste na negação de serviço onde é feita a tentativa de sobrecarga em um servidor, de forma que ele fique indisponível.",
+    "c) Ataque que consiste em mascarar pacotes IP utilizando endereços de remetentes falsos.",
+    "d) Ataque que consiste no roubo de dados através da interceptação do tráfego.",
+    "e) Ataque que consiste em uma verificação sistemática de todas as possíveis chaves e senhas."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 106,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca dos conceitos de redes de computadores, da organização e do gerenciamento de arquivos e dos procedimentos de segurança da informação, julgue o item.",
+   "enunciado": "Uma das formas de o usuário prevenir o phishing é ficando atento a mensagens, recebidas em nome de alguma instituição, que o estimulem a instalar programas ou a clicar em links.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 107,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca dos conceitos de redes de computadores, do programa de navegação Mozilla Firefox, em sua versão mais atual, e das noções de vírus, worms e pragas virtuais, julgue o item.",
+   "enunciado": "O phishing manifesta-se por meio do envio de mensagens eletrônicas que procuram atrair a atenção do usuário pela possibilidade de obter alguma vantagem financeira.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 108,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em determinada organização, não existem vulnerabilidades de segurança conhecidas nos servidores e os sistemas estão atualizados e bem configurados. Considerando essa situação hipotética, julgue o item seguinte.",
+   "enunciado": "Eventual ocorrência de um ataque de phishing em que um usuário seja convencido a clicar um link malicioso específico recebido em uma mensagem de email poderá viabilizar um subsequente ataque de ransomware contra os computadores dessa organização.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 109,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre a segurança da informação, analise as afirmativas abaixo e identifique as corretas: I. Cavalo de Troia pode ser entendido como um software que se apresenta como benigno, mas que, quando executado, opera ações maliciosas, diversas ao propósito originalmente apresentado ao usuário. II. A autenticação em dois fatores é um mecanismo de prevenção de perda de dados. III. Criptografia é o ato de embaralhar informações de maneira que apenas quem as embaralhou consegue desembaralhar (descriptografar). É correto o que se afirma em:",
+   "alternativas": [
+    "a) III, apenas.",
+    "b) I, apenas.",
+    "c) I e III, apenas.",
+    "d) I, II e III.",
+    "e) II, apenas."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 110,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Assinale a alternativa que apresenta o número de malwares com capacidade de autoduplicação que constam na tabela acima.",
+   "alternativas": [
+    "a) ",
+    "b) ",
+    "c) ",
+    "d) ",
+    "e) "
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 111,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Acerca dos malwares, dos vírus e dos worms, julgue os itens a seguir. I. Os worms precisam de um programa host para serem executados, replicados e propagados. Depois que um worm entra no sistema, ele pode se copiar várias vezes e se propagar pela rede ou pela conexão de Internet, infectando outros computadores e servidores. II. Uma distinção importante entre vírus e worms é que os vírus precisam de um programa host ativo ou de um sistema operacional ativo já infectado para serem executados, para causar danos e para infectar outros documentos ou arquivos executáveis, enquanto os worms são programas maliciosos autônomos, que se replicam e se propagam por redes de computadores, sem a ajuda das pessoas. III. Os vírus costumam ser anexados a um arquivo executável ou a um documento do Word. Muitas vezes, eles se propagam por compartilhamento de arquivos P2P, por sites infectados e pelos downloads de anexos de e‐mail. Depois que um vírus encontra uma passagem pelo sistema, ele permanece dormente até que o arquivo ou o programa host infectado seja ativado. Assinale a alternativa correta.",
+   "alternativas": [
+    "a) Apenas o item I está certo.",
+    "b) Apenas o item II está certo.",
+    "c) Apenas o item III está certo.",
+    "d) Apenas os itens I e III estão certos.",
+    "e) Apenas os itens II e III estão certos."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 112,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos de redes de computadores, do programa de navegação Mozilla Firefox, em sua versão mais recente, e dos procedimentos de segurança da informação, julgue o item.",
+   "enunciado": "A maneira mais eficaz de o usuário de computador se prevenir de ataques como keyloggers ou spywares é navegar na Internet com o Firefox, no modo navegação privativa.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 113,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em determinada organização, não existem vulnerabilidades de segurança conhecidas nos servidores e os sistemas estão atualizados e bem configurados. Considerando essa situação hipotética, julgue o item seguinte.",
+   "enunciado": "Eventual ataque bem-sucedido de ransomware contra os servidores dessa organização poderá ser revertido por meio de um bem elaborado contra-ataque de quebra das chaves criptográficas por força bruta..",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 114,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "“Este malware finge ser um software legítimo para enganar o usuário e abrir as portas para que uma pessoa acesse seu computador ou colete seus dados sem seu consentimento. Esta pessoa por ter acesso ao seu computador pode enviar spans, infectar outros computadores e atacar seu servido”. O conceito refere-se à:",
+   "alternativas": [
+    "a) Worms.",
+    "b) Cavalos de Troia (Trojans).",
+    "c) Spyware.",
+    "d) Bot e botnet.",
+    "e) Hijackers (sequestrador de navegador)."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 115,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Malwares são tipos de softwares maliciosos que se infiltram em computadores para causar danos ou, em muitos casos, roubar dados do proprietário. Um deles tem função de exibir vários anúncios indesejáveis, geralmente surgindo na forma de pop-ups, deixando o computador cada vez mais lento. Os softwares que exibem anúncios indesejados são chamados de:",
+   "alternativas": [
+    "a) Adware",
+    "b) Keylogger",
+    "c) Backdoor",
+    "d) Worm",
+    "e) Nenhuma das alternativas."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 116,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item seguinte, a respeito de cloud computing, virtualização, servidores de aplicação e tecnologias e arquiteturas de data center.",
+   "enunciado": "A realização de becape com deduplicação de destino caracteriza-se pela realização do processamento e da remoção dos dados redundantes após o envio dos dados do ambiente de produção para o sistema servidor de becape.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 117,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "O principal objetivo do backup é criar uma cópia dos dados, protegendo-os contra perdas acidentais, como por exemplo falhas de hardware, especialmente falhas de dispositivos de armazenamento. Sobre os diferentes tipos de backup, é INCORRETO afirmar:",
+   "alternativas": [
+    "a) O backup incremental sempre copia os dados alterados desde o último backup completo.",
+    "b) O benefício de um backup incremental é que será copiada uma menor quantidade de dados do que um backup completo.",
+    "c) O backup completo consiste simplesmente em fazer a cópia de todos os arquivos para o diretório de destino ou dispositivo de backup correspondente.",
+    "d) Para uma mesma situação, o backup diferencial sempre copiaria uma quantidade de informações maior ou igual ao backup incremental.",
+    "e) Backups incrementais são sempre mais econômicos que backups diferenciais, e backups diferenciais são sempre mais econômicos que backups completos. Uma empresa tem unidades físicas localizadas em diferentes capitais do Brasil, cada uma delas com uma rede local, além de uma rede que integra a comunicação entre as unidades. Essa rede de integração facilita a centralização do serviço de email, que é compartilhado para todas as unidades da empresa e outros sistemas de informação. Tendo como referência inicial as informações apresentadas, julgue o item subsecutivo."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 118,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Se as redes locais das unidades da empresa estiverem interligadas por redes de operadoras de telecomunicação, então elas formarão a WAN (wide area network) da empresa.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 119,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca das características de Internet, intranet e rede de computadores, julgue o próximo item.",
+   "enunciado": "A Internet e a intranet, devido às suas características específicas, operam com protocolos diferentes, adequados a cada situação.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 120,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca das características de Internet, intranet e rede de computadores, julgue o próximo item.",
+   "enunciado": "A Internet pode ser dividida em intranet, restrita aos serviços disponibilizados na rede interna de uma organização, e extranet, com os demais serviços (exemplo: redes sociais e sítios de outras organizações).",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 122,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, em relação aos conceitos da arquitetura cliente-servidor e de Internet e intranet.",
+   "enunciado": "A intranet é uma rede de equipamentos que permite acesso externo controlado, para negócios específicos ou propósitos educacionais, sendo uma extensão da rede local de uma organização, disponibilizada para usuários externos à organização.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 123,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Algumas empresas interconectam todas as suas redes internas, frequentemente usando a mesma tecnologia da Internet. Essas ____I_____ em geral só estão acessíveis dentro da empresa, mas, em todos os outros aspectos, funcionam do mesmo modo que a ____II___. As lacunas I e II são, CORRETA e respectivamente, preenchidas pelos termos indicados na alternativa",
+   "alternativas": [
+    "a) Intranets / Internet",
+    "b) MAN (Metropolitan Area Network) / Intranet",
+    "c) WAN (wide area network) / Extranet",
+    "d) Extranets / Internet",
+    "e) Intranets / Extranet"
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 124,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o próximo item, em relação aos conceitos da arquitetura cliente-servidor e de Internet e intranet.",
+   "enunciado": "A Internet foi projetada para ser altamente tolerante a falhas, continuando a transmitir o tráfego mesmo no caso de ocorrer ataques nucleares em várias partes da rede de computadores.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 125,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "O próximo item, que abordam procedimentos de informática e conceitos de Internet e intranet, apresenta uma situação hipotética, seguida de uma assertiva a ser julgada.",
+   "enunciado": "A área administrativa do INSS informou a todos os servidores públicos lotados nesse órgão que o acesso a determinado sistema de consulta de dados cadastrais seria disponibilizado por meio da Internet, em substituição ao acesso realizado somente por meio da intranet do órgão. Nessa situação, não haverá similaridade entre os sistemas de consulta, porque sistemas voltados para intranet, diferentemente dos voltados para Internet, não são compatíveis com o ambiente web.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 126,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre Redes Internas, considere as seguintes afirmativas: I. Em uma rede com cabos, é indispensável o roteador de wireless. II. A capacidade de processamento do servidor que é medida em Gb determina a velocidade de acesso dos computares ligados na rede. III. Pode-se conectar uma impressora multifuncional, para uso geral, através da rede sem fio. IV. Documentos que devem ser impressos de um notebook devem ser colocados no desktop ligado à rede e configurado para acessar a impressora. Assinale a alternativa correta.",
+   "alternativas": [
+    "a) Somente a afirmativa 2 é verdadeira.",
+    "b) Somente a afirmativa 3 é verdadeira.",
+    "c) Somente as afirmativas 1 e 3 são verdadeiras.",
+    "d) Somente as afirmativas 2 e 4 são verdadeiras.",
+    "e) As afirmativas 1, 2, 3 e 4 são verdadeiras."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 127,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Há soluções tecnológicas que visam reduzir os custos de aquisição e manutenção de computadores. Qual é o nome atribuído a computadores de rede, sem disco rígido, que acessam programas de um servidor ao invés de armazená-los?",
+   "alternativas": [
+    "a) Uplink.",
+    "b) Viewer.",
+    "c) VRML.",
+    "d) Thin client.",
+    "e) Path-to-Profitability (P2P)."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 128,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Assinale a alternativa que corresponde ao nome dado a um conjunto de computadores que compartilham informações e softwares em uma rede local, em uma área delimitada, como, por exemplo, escritórios e edifícios.",
+   "alternativas": [
+    "a) MAN – Metropolitan Area Network.",
+    "b) WORD – Word Area Network.",
+    "c) DNS – Domain Name System.",
+    "d) VPN – Virtual Private Network.",
+    "e) LAN – Local Area Network."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 129,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Em um edital para aquisição de uma impressora laser, consta que ela deve possuir interface compatível com os padrões 802.11b/g/n. Essa interface refere-se a:",
+   "alternativas": [
+    "a) conexão wireless.",
+    "b) conexão de rede ethernet com fio.",
+    "c) conexão com o computador por cabo USB.",
+    "d) conexão com o computador por cabo paralelo.",
+    "e) conexão por meio bluetooth."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 130,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "É uma funcionalidade de um firewall pessoal.",
+   "alternativas": [
+    "a) Separar os e-mails desejados dos indesejados (spams).",
+    "b) Analisar continuamente o conteúdo das conexões, filtrando diversos tipos de códigos maliciosos e barrando a comunicação entre um invasor e um código malicioso já instalado.",
+    "c) Verificar vulnerabilidades nos programas instalados no computador e determinar quais devem ser atualizados.",
+    "d) Alertar o usuário quando uma página suspeita de ser falsa é acessada."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 131,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "É uma parte da hierarquia de nomes da Internet – DNS – que permite identificar as instituições ou conjunto de instituições na rede.",
+   "alternativas": [
+    "a) Domínio.",
+    "b) FTP.",
+    "c) Host.",
+    "d) TCP/IP."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 132,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Um sistema de uma empresa está acessível aos seus colaboradores através da sua Intranet. Isso significa que",
+   "alternativas": [
+    "a) o sistema pode ser acessado somente por colaboradores internos ou usuários previamente autorizados, e somente através da rede local da organização (o usuário deve estar fisicamente nas instalações da empresa).",
+    "b) qualquer usuário na Internet pode acessar o sistema.",
+    "c) faz parte da Deep Web.",
+    "d) o sistema pode ser acessado somente por usuários previamente autorizados, mas também pode ser possível o acesso através da Internet, dependendo de como a Intranet foi configurada.",
+    "e) as tecnologias utilizadas pela rede que armazena o sistema são diferentes das utilizadas na Internet."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 133,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Considerando que, em uma empresa, um computador seja usado por várias pessoas para acesso à Intranet, julgue os itens que se seguem.",
+   "enunciado": "TCP/IP é o protocolo padrão para o acesso à Internet. No caso da intranet, o acesso é realizado, por padrão, com o uso do protocolo IPv6.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 134,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Em uma situação normal, caso um usuário deseje acessar a Internet e a intranet da empresa ao mesmo tempo, ele deve usar duas versões diferentes de navegador, por questão de incompatibilidade de tecnologia entre a Internet e a intranet.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 135,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Quanto ao uso seguro das tecnologias de informação e comunicação, julgue os itens que se seguem.",
+   "enunciado": "As intranets são estruturadas de maneira que as organizações possam disponibilizar suas informações internas de forma segura, irrestrita e pública, sem que os usuários necessitem de autenticação, ou seja, de fornecimento de nome de login e senha.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 136,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a tecnologias da informação, Internet e intranet, julgue os seguintes itens.",
+   "enunciado": "Intranets são redes que utilizam os mesmos recursos e protocolos da Internet, mas são restritas a um grupo predefinido de usuários de uma instituição específica.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 137,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito da Internet e de intranets, julgue os itens subsequentes.",
+   "enunciado": "As intranets possuem as características e fundamentos semelhantes aos da Internet e baseiam-se no mesmo conjunto de protocolos utilizados na Internet. Entre outros, são exemplos de protocolos para intranets: transmission control protocol (TCP) e internet protocol (IP).",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 138,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito da Internet e de intranets, julgue os itens subsequentes.",
+   "enunciado": "As máquinas na Internet comunicam-se entre si por meio do conjunto de protocolos TCP/ IP, o qual permite que sistemas heterogêneos operem por meio de redes inteiramente diversas.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 139,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação aos ambientes Windows, Internet e intranet, julgue os itens a seguir.",
+   "enunciado": "Intranet é uma rede, restrita a um grupo de usuários, que utiliza os mesmos recursos e protocolos que a Internet, como o TCP/IP, o FTP, o SMTP, entre outros.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 140,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de conceitos e tecnologias relacionados à Internet, julgue os itens subsequentes.",
+   "enunciado": "A Internet é controlada no Brasil pela ANATEL, órgão governamental regulamentador de telecomunicação no país.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 141,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de conceitos e tecnologias relacionados à Internet, julgue os itens subsequentes.",
+   "enunciado": "Intranet e extranet são redes de computadores em que se utiliza a tecnologia da Internet para o fornecimento de serviços.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 142,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação às tecnologias utilizadas na Internet e intranet, julgue os itens a seguir.",
+   "enunciado": "Intranet designa basicamente o sítio interno de uma corporação, distinguindo-se da Internet por ser uma rede isolada e segura, que não requer o uso de senhas para acesso de usuários.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 143,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em relação aos conceitos de Internet, julgue os itens a seguir.",
+   "enunciado": "Redes de acesso situadas na borda da Internet são conectadas ao restante da rede segundo uma hierarquia de níveis de ISPs (Internet service providers). Os ISPs de nível 1 estão no nível mais alto dessa hierarquia.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 144,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de fundamentos de computação, julgue os itens seguintes.",
+   "enunciado": "Intranet é uma rede de computadores interna à organização e mantida com a finalidade de possibilitar o compartilhamento de dados e informações, agilizando o trabalho e reduzindo custos.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 145,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Considerando os conceitos básicos de tecnologias e ferramentas associadas à Internet e intranet, julgue os próximos itens.",
+   "enunciado": "Para se acessar a Internet ou uma intranet, é suficiente que o usuário tenha o Internet Explorer instalado em seu computador.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 146,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A intranet disponibiliza serviços semelhantes aos da Internet dentro de uma rede local, mas não permite que esses serviços sejam acessados de outros locais.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 147,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de Internet e de intranet, julgue os itens subsequentes.",
+   "enunciado": "Se a página da intranet estiver inacessível, significa que o computador em uso não tem permissão de acesso aos recursos da rede, devido à ausência do protocolo IP.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 148,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca de informática, julgue o item a seguir.",
+   "enunciado": "A Internet se caracteriza por ser uma rede do tipo cliente/servidor, na qual cada computador é independente um do outro e compartilha os dados sem uma centralização, e qualquer computador do tipo cliente é um servidor independente de informações ou serviços.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 149,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a Internet e intranet, julgue os itens subsecutivos.",
+   "enunciado": "A intranet utiliza os protocolos da Internet, mas no âmbito interno de empresas, para que os empregados possam acessar remotamente dados e informações corporativas a partir de suas residências. O protocolo específico para transferência de arquivos na Internet, que deve ser configurado de forma diferenciado quando utilizado na intranet, é o IN-FTP (file transfer protocol-intranet).",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 150,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca dos conceitos de Internet e intranet, bem como de suas tecnologias e seus serviços, julgue o item a seguir.",
+   "enunciado": "Não é possível disponibilizar o serviço de correio eletrônico em redes intranet, em razão de essas redes serem privadas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 151,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A secretaria de segurança pública do DF necessitou criar uma ferramenta de compartilhamento de chamados e instruções, como também de comunicação interna para os agentes de polícia. Contudo não pode criar tal ferramenta em sua Intranet, apesar de ser mais seguro, pois os protocolos desse ambiente não condizem com a aplicação, assim a ferramenta terá de ser criada na Internet, o que a torna acessível por todos, mesmo não possuam usuário e senha.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 152,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Em um ambiente de rede qualquer usuário pode criar uma VPN com outra rede privada, independente de esta opção ser desbloqueada no firewall da rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 153,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Sobre os conceitos de Internet e redes de computadores julgue os próximos itens.",
+   "enunciado": "A Internet é composta por várias Intranets que compartilham informações entre si, a fim de tornar mais rápida à comunicação entre os usuários da rede mundial de computadores.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 154,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Sobre os conceitos de Internet e redes de computadores julgue os próximos itens.",
+   "enunciado": "Uma VPN pode ser constituída sem o uso de criptografia, uma vez que é utilizada para ligar duas redes, possibilitando o tráfego de informações entre elas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 155,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Uma Intranet é uma rede privada, assim sendo deve ser mantido a restrição de acesso a este ambiente exclusivamente aos funcionários da empresa por meio de usuário e senha, não sendo possível compartilhar informações para mais de uma pessoa por meio dessa infraestrutura.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 156,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos fundamentais de informática, julgue os itens a seguir.",
+   "enunciado": "A única diferença entre navegação na Internet e navegação na intranet é a necessidade de se configurar, na intranet, o endereço interno padrão no navegador, uma vez que os dados serão acessados internamente.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 157,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Residências tipicamente empregam uma LAN para se conectar à Internet WAN através de um Internet Service Provider (ISP) utilizando um modem de banda larga. O ISP fornece um endereço IP da WAN para o modem, e geralmente todos os computadores da rede LAN usam endereços IP privados. Todos os computadores da LAN podem se comunicar diretamente uns com os outros, mas devem passar por um nó central chamado de gateway de rede, tipicamente um modem-roteador de banda larga, para conectar-se ao ISP.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 158,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Uma VPN fornece conectividade de rede através de uma distância física normalmente longa. A este respeito, uma VPN permite o compartilhamento de arquivos, videoconferência e serviços de rede semelhantes. As redes privadas virtuais em geral não fornecem novas funcionalidades em comparação com os mecanismos alternativos, mas uma VPN implementa os serviços de forma mais eficiente e barata que na maioria dos casos. Tecnologias VPN incluem diversos mecanismos de segurança para proteger as conexões, virtuais privadas.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 159,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "As Redes Locais de Computadores − LAN são construídas, em sua grande maioria, utilizando cabos de pares trançados, padrão Ethernet e o equipamento denominado Switch, que tem a função de gerenciar as conexões lógicas dos cabos utilizando, para isso, o endereço MAC.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 160,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A Intranet possui características técnicas próprias que a diferenciam quanto a Internet. Uma dessas características técnicas que a distingue é o fato da Intranet ser:",
+   "alternativas": [
+    "a) desenvolvida com base no protocolo TCP/IP.",
+    "b) a única que possui Grupos de Discussão.",
+    "c) a única que possui banda larga.",
+    "d) privada e não pública"
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 161,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Várias empresas utilizam a intranet por diversas razões. A principal delas é a necessidade de",
+   "alternativas": [
+    "a) oferecer treinamento on-line.",
+    "b) reduzir custos.",
+    "c) autorizar processos empresariais.",
+    "d) permitir que funcionários obtenham informações."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 162,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Cada interface em uma LAN tem um endereço IP e um endereço MAC.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 163,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com base nos conceitos e definições de Internet, Intranet, Extranet e VPN julgue se corretas as questões a seguir.",
+   "enunciado": "Para acessar externamente uma Intranet corporativa há necessidade de usar recursos de segurança uma vez que a Intranet é um ambiente de acesso restrito e protegido por vários recursos de segurança como o Firewall.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 164,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com base nos conceitos e definições de Internet, Intranet, Extranet e VPN julgue se corretas as questões a seguir.",
+   "enunciado": "Tanto a Internet como a Intranet, usam as mesmas tecnologias e para finalidades similares, como compartilhar conteúdo entre aqueles que possuem acesso, embora tenham níveis de acesso diferentes.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 165,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com base nos conceitos e definições de Internet, Intranet, Extranet e VPN julgue se corretas as questões a seguir.",
+   "enunciado": "A Intranet é uma rede de computadores aberta quer pode ser usada por qualquer pessoa desde que tenha acesso à Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 166,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Uma Intranet é o ambiente físico de conexão de dispositivos de uma empresa, no qual somente pessoas autorizadas tem acesso, normalmente seus funcionários.",
+   "enunciado": "Por questões de segurança um ambiente de rede interno de uma instituição não pode ser acessado por usuários que se encontrem fisicamente fora desta instituição.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 167,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Um usuário deseja acessar a rede da empresa a partir de outra cidade, para tanto foi recomendado que realizasse o acesso via link dedicado uma vez que utilizar uma VPN não seria uma opção financeiramente acessível.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 168,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A Intranet é uma rede de computadores privada mantida dentro de uma organização.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 169,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "O backbone de uma intranet é uma estrutura de rede cabeada de alta velocidade.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 170,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com base nos conceitos e definições de Internet, Intranet, Extranet e VPN julgue se corretas as questões a seguir.",
+   "enunciado": "Para acessar externamente uma Intranet corporativa não há necessidade de usar recursos de segurança uma vez que a Intranet é um ambiente de acesso restrito e protegido por vários recursos de segurança como o Firewall.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 171,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Um agente de Polícia Rodoviária Federal estando em um posto avançado do órgão necessitava acessar o sistema de consultas de placas de transito, porém, todos os computadores do posto encontravam-se em uso por outros agentes, então para poder acessar o sistema o agente usou seu notebook, porém mesmo conectando o seu notebook ao cabo de rede ele não conseguiu acessar ao sistema, outro agente então comentou que era necessário conectar ao mesmo domínio de rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 172,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Tanto a Internet como a Intranet, embora usem tecnologias diferentes, são usadas para finalidades similares, como compartilhar conteúdo entre aqueles que possuem acesso.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 173,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A Intranet de uma empresa é uma rede de computadores de uso exclusivo desta, que só pode ser acessada internamente pelos seus funcionários.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 174,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Uma Extranet é uma rede proprietária que interliga toda uma rede interna de uma empresa a outra empresa, de forma controlada, permitindo acesso apenas à pessoas autorizadas.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 175,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Em uma VPN (Virtual Private Network) o tráfego de dados é levado pela rede pública utilizando protocolos padrões, não necessariamente seguros. Para que a conexão seja segura as VPNs usam protocolos de criptografia por tunelamento que fornecem a confidencialidade, autenticação e integridade necessárias para garantir a privacidade das comunicações requeridas.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 176,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Para conectar uma rede privada a uma rede pública é comum o emprego de um servidor Proxy, que tem por função armazenar uma cópia do conteúdo solicitado pelo dispositivo da rede privada.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 177,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Para criar ambientes virtuais com servidores de páginas para manterem sites, servidores de e-mail para permitir a comunicação via correio eletrônico e até mesmo servidores de arquivos para uma comunicação mais rápida e centralizada entre os funcionários da empresa, apenas, é necessário usar a Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 178,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de redes de computadores e seus dispositivos julgue os itens que se seguem.",
+   "enunciado": "Para que uma rede de computadores possa ser dividida em grupos menores que podem ou não se “enxergar” na rede é necessário que seja usado pelo menos um roteador.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 179,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Sobre tipos de Grupo do Google “Fórum de Perguntas e Respostas”, nas configurações predefinidas, considere as seguintes afirmativas: 1. Os tópicos podem ser marcados como resolvidos ou classificados pelos usuários. 2. As pessoas devem postar usando a interface da Web, mas ainda podem receber atualizações por e-mail. 3. Os tópicos podem ser atribuídos a outros membros e tratados como tarefas que podem ser resolvidas ou reatribuídas. Assinale a alternativa correta.",
+   "alternativas": [
+    "a) Somente a afirmativa 1 é verdadeira.",
+    "b) Somente as afirmativas 1 e 2 são verdadeiras.",
+    "c) Somente a afirmativa 3 é verdadeira.",
+    "d) Somente as afirmativas 2 e 3 são verdadeiras.",
+    "e) As afirmativas 1, 2 e 3 são verdadeiras."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 180,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "As VPNs (virtual private network) são túneis criados em redes públicas para que essas redes apresentem nível de segurança equivalente ao das redes privadas. Na criação desses túneis, utilizam-se algoritmos criptográficos, devendo o gerenciamento de chaves criptográficas ser eficiente, para garantir-se segurança.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 181,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A rede privada virtual (VPN) do tipo site-to-site constitui-se, entre outros elementos, de um canal de comunicação criptografado entre dois gateways de rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 182,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Considerando as definições de Internet e Intranet, analise as assertivas e assinale a alternativa correta. I. A Intranet é uma rede de computadores privada que assenta sobre a suíte de protocolos da Internet, porém de uso exclusivo de um determinado local como, por exemplo, a rede de uma empresa, que só pode ser acessada pelos seus utilizadores ou colaboradores internos. II. A Internet é um sistema global de redes de computadores interligadas que utilizam um conjunto próprio de protocolos (Internet Protocol Suite ou TCP/IP) com o propósito de servir progressivamente usuários no mundo inteiro. É uma rede de várias outras redes, que consiste de milhões de empresas privadas, públicas, acadêmicas e de governo, com alcance local e global e que está ligada por uma ampla variedade de tecnologias de rede eletrônica, sem fio e ópticas. III. A Intranet por ser uma rede de computadores privada, nunca poderá ser acessada através de uma conexão de Internet. Esta restrição é importante para garantir a segurança de acesso da Intranet.",
+   "alternativas": [
+    "a) Apenas I está correta.",
+    "b) Apenas II está correta.",
+    "c) Apenas III está correta.",
+    "d) Apenas I e II estão corretas.",
+    "e) Apenas I, II e III estão corretas."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 183,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "O backbone, ou espinha dorsal, da Internet no Brasil é administrado por empresas privadas que detêm o poder de exploração do acesso à Internet. Essas empresas, também conhecidas como provedores de acesso, cobram uma taxa a pessoas físicas ou jurídicas, as quais podem, também, armazenar seus dados na rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 186,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item subsequente, a respeito de conceitos e modos de utilização de tecnologias, ferramentas, aplicativos e procedimentos associados à Internet.",
+   "enunciado": "Por meio de uma aplicação de acesso remoto, um computador é capaz de acessar e controlar outro computador, independentemente da distância física entre eles, desde que ambos os computadores estejam conectados à Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 187,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a redes de computadores, julgue o item a seguir.",
+   "enunciado": "No fluxo de pacotes em uma rede de computadores, a qualidade de serviço é determinada pelos parâmetros relacionados a propagação, recuperação, interferência e perda de dados.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 188,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "No que se refere a tecnologias de Internet e intranet e à segurança da informação, julgue os itens subsequentes.",
+   "enunciado": "A Internet por rádio, no Brasil, ainda é um serviço de baixa velocidade, sujeito a intempéries e inoperante no caso de dias nublados, porque utiliza infraestrutura por satélite.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 189,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A tecnologia 3G disponibiliza serviços de telefonia e transmissão de dados a longas distâncias, em um ambiente móvel, incluindo o acesso a Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 190,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "ADSL é um serviço implementado pelo Internet Explorer que permite aumentar a velocidade de acesso a Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 191,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Sobre os conceitos de Internet e redes de computadores julgue os próximos itens.",
+   "enunciado": "Através de uma conexão 3G é possível se atingir taxas superiores a 1 megabit por segundo.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 192,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "No modelo cliente/servidor é chamado de cliente o host que inicia a comunicação, ou seja, a partir do qual o usuário executa o comando de teste de disponibilidade. Servidor é o alvo do teste, pois este deve possuir um serviço habilitado para ser capaz de receber o pacote do cliente e respondê-lo.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 193,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Em uma rede ponto a ponto (peer-to-peer), o usuário controla seus próprios recursos por meio de um ponto central de controle ou de administração da rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 194,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "O modelo de rede onde o computador atua como cliente e servidor é relativamente simples e que não possuem hierarquia, esse modelo possui, tipicamente, menos de 10 computadores. Nesse modelo também inexistem servidores dedicados.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 195,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Um cabeamento estruturado de rede constitui-se de cabeamento horizontal, também chamado de Backbone, e o cabeamento Vertical que interliga os armários principais às tomadas em que serão ligados os computadores.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 196,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "ADSL é a forma mais conhecida para acesso banda larga via Internet. No ADSL, os dados são transmitidos de forma Simétrica. A taxa de transmissão na direção do assinante é a mesma que no sentido contrário até 24Mbps no ADSL2+.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 197,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "A tecnologia ADSL é utilizada para sistemas de acesso por meio de banda larga e geralmente é oferecida por empresas de telefonia fixa.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 198,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Em redes de computadores, um servidor é um computador projetado para processar pedidos e fornecer dados a outros computadores em uma rede local ou pela Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 199,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Peer to peer é uma abordagem para redes de computadores onde todos os computadores compartilham a responsabilidade equivalente para processamento de dados. Difere da rede cliente-servidor, em que certos dispositivos têm a responsabilidade de servir dados e outros dispositivos de consumir.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 200,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "No que tange aos conceitos de redes de computadores, SAN e NAS são modelos de armazenamento de dados em rede, que podem ser acessadas através de VPN.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 201,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A internet pode ser considerada uma rede de várias redes, por serem interligadas por vários roteadores que fazem com que computadores, em qualquer parte do mundo, sejam conectados à grande rede. Várias formas de conexão à internet são possíveis; analise‐as. I. Por linha telefônica discada é também chamada de conexão ADSL (Asymmetric Subscriber Digital Line), com velocidades mais lentas, porém mais estáveis. II. A Banda Larga é amplamente utilizada em diversas localidades em que a empresa telefônica exerce o papel de provedor de acesso e é conhecida como PLC (Power Line Communication). III. Por conexão de dados, utilizadas nos smartphones, conhecida por GPRS (General Packet Radio Service) e EDGE (Enhanced Data GSM Environment). IV. Via satélite é uma alternativa para as localidades que não possuem outro tipo de acesso, mas esse sistema é normalmente muito caro e sua velocidade é muito boa. O grande problema é sua instabilidade. Estão corretas apenas as afirmativas:",
+   "alternativas": [
+    "a) I e II.",
+    "b) I e III.",
+    "c) II e IV.",
+    "d) III e IV."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 202,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos de redes e conexão de computadores e outros dispositivos julgue.",
+   "enunciado": "Internet das Coisas (IoT), é uma rede de objetos físicos, veículos, prédios e outros que possuem tecnologia embarcada, sensores e conexão e é com rede capaz de coletar e transmitir dados.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 203,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "RFID é um método de identificação automática através de sinais de rádio, recuperando e armazenando dados remotamente através de dispositivos denominados etiquetas RFID.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 204,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item que se segue, a respeito de DNS (domain name service).",
+   "enunciado": "As atualizações entre servidores DNS utilizam o UDP, enquanto as consultas feitas a servidores DNS utilizam o TCP (ou, opcionalmente, o SCTP).",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 205,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Em cada item a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada, a respeito de sistemas operacionais, intranet e Internet.",
+   "enunciado": "Em determinado computador, no histórico de navegação de um usuário do Google Chrome, observou-se que havia, na lista de endereços acessados, mais sítios com endereços iniciados com https:// do que com http://. Nessa situação, com base somente nessa informação, conclui-se que esse usuário acessa mais sítios de intranet do que de Internet, uma vez que uma das prerrogativas da intranet é o caráter limitado ao seu acesso. Uma empresa tem unidades físicas localizadas em diferentes capitais do Brasil, cada uma delas com uma rede local, além de uma rede que integra a comunicação entre as unidades. Essa rede de integração facilita a centralização do serviço de email, que é compartilhado para todas as unidades da empresa e outros sistemas de informação. Tendo como referência inicial as informações apresentadas, julgue o item subsecutivo.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 206,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Definir os processos de acesso ao meio físico e fornecer endereçamento para a camada de aplicação são funções do controle de acesso ao meio físico (MAC).",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 207,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Acerca das características de Internet, intranet e rede de computadores, julgue o próximo item.",
+   "enunciado": "As informações do DNS (domain name system) estão distribuídas em várias máquinas e o tamanho de sua base de dados é ilimitado.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 208,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Na internet, há a possibilidade de se fazer a encriptação dos dados trocados entre computadores. Para tanto, esse protocolo é apresentado antes do endereço eletrônico do site que o usuário deseja acessar. Qual é o nome desse protocolo?",
+   "alternativas": [
+    "a) FTP",
+    "b) IDC",
+    "c) HTTPS",
+    "d) HTTP",
+    "e) HTML ou HTM"
+   ],
+   "gabarito_apostila": "C"
+  },
+  {
+   "n": 209,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Ao digitar um novo e válido endereço da internet no browser em um equipamento devidamente configurado e conectado na internet, o serviço que traduz o nome do site para o respectivo endereço IP denomina-se:",
+   "alternativas": [
+    "a) HTTP.",
+    "b) NTP.",
+    "c) SMTP.",
+    "d) DNS.",
+    "e) POP3."
+   ],
+   "gabarito_apostila": "D"
+  },
+  {
+   "n": 210,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Preencha a lacuna e assinale a alternativa correta. O _____ é uma aplicação que funciona sobre o protocolo TCP e pode ser utilizada para copiar arquivos entre máquinas ligadas à Internet.",
+   "alternativas": [
+    "a) NTP",
+    "b) FTP",
+    "c) DHCP",
+    "d) FSP"
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 213,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Julgue o item subsecutivo a respeito de redes de computadores e conceitos de proteção e segurança.",
+   "enunciado": "Por meio de uma LAN sem fio embasada na tecnologia IEEE 802.11, é possível que os usuários transmitam (e recebam) pacotes para (e de) um ponto de acesso conectado a uma rede de computadores com fio conectada à Internet.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 214,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Os programas de transferência de arquivos usualmente utilizam um protocolo padrão para essa tarefa, conhecido pela sigla:",
+   "alternativas": [
+    "a) FTP;",
+    "b) HTTP;",
+    "c) POP;",
+    "d) SMTP;",
+    "e) VPN."
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 215,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "A camada de aplicação do TCP-IP contém protocolos de nível mais alto. Entre eles, inclui-se o",
+   "alternativas": [
+    "a) SMTP para transferência de arquivos.",
+    "b) FTP para e-mail.",
+    "c) TCP para as aplicações enviarem datagramas IP encapsulados, sem que seja necessário se estabelecer uma conexão.",
+    "d) UDP para cuidar do controle de fluxo.",
+    "e) HTTP para navegar na Internet."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 216,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "O protocolo que permite a navegação na internet segura através de criptografia de informações é o",
+   "alternativas": [
+    "a) HTTPS",
+    "b) HTTP",
+    "c) HTML",
+    "d) XHTML",
+    "e) XML"
+   ],
+   "gabarito_apostila": "A"
+  },
+  {
+   "n": 217,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de redes de computadores julgue o que se segue.",
+   "enunciado": "Sistemas finais são conectados entre si por enlaces de comunicação e comutadores de pacotes.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 218,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Todos os recursos presentes na Internet são localizados por meio de um endereço único conhecido como:",
+   "alternativas": [
+    "a) DNS",
+    "b) FTP.",
+    "c) HTML.",
+    "d) HTTP.",
+    "e) URL."
+   ],
+   "gabarito_apostila": "E"
+  },
+  {
+   "n": 219,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Com relação aos conceitos sobre Intranet, Internet e os protocolos envolvidos nessas tecnologias, assinale a única alternativa INCORRETA.",
+   "alternativas": [
+    "a) O protocolo FTP permite realizar transferência de arquivos entre diferentes computadores.",
+    "b) HTTPS é um protocolo de comunicação seguro, utilizado para entregar mensagens de correio eletrônico na Internet.",
+    "c) A Intranet é uma rede de computadores privada dentro de uma organização.",
+    "d) O padrão TCP/IP é um conjunto de protocolos de comunicação utilizados na Internet.",
+    "e) O protocolo IP é responsável por endereçar e encaminhar pacotes que trafegam pela rede mundial de computadores."
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 220,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito de redes de computadores julgue o que se segue.",
+   "enunciado": "Na Internet, todas as comunicações entre dois dispositivos conectados são governadas por um ou mais protocolos.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 221,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "Com relação a informática, julgue o item que se segue.",
+   "enunciado": "Na Internet, os endereços IP (Internet Protocol) constituem recursos que podem ser utilizados para identificação de microcomputadores que acessam a rede.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 222,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito dos conceitos relacionados à Internet, julgue o item que se segue.",
+   "enunciado": "Com o surgimento da WWW (world wide web), o acesso a arquivos de conteúdo apenas textual evoluiu para arquivos que agregam diversos formatos, com destaque para os documentos hipermídia, que são a união de hipertexto com multimídia, ou seja, textos com links, imagens, sons, vídeos, entre outros recursos.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 223,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "O websites dos Correios (www.correios.com.br) está instalado em uma máquina cujo endereço IP é 200.252.60.24 . Ele usa a porta padrão do protocolo http. Qual URL permite acessar corretamente a página inicial desse website?",
+   "alternativas": [
+    "a) http://200.252.60.24/100",
+    "b) http://200.252.60.24:80",
+    "c) http://200.252.60.24:100",
+    "d) http://200.252.60.24/100.html",
+    "e) http://200.252.60.24/80"
+   ],
+   "gabarito_apostila": "B"
+  },
+  {
+   "n": 224,
+   "tipo": "certo_errado",
+   "texto_de_apoio": null,
+   "enunciado": "Na tecnologia TCP/IP, usada na Internet, um arquivo, ao ser transferido, é transferido inteiro (sem ser dividido em vários pedaços), e transita sempre por uma única rota entre os computadores de origem e de destino, sempre que ocorre uma transmissão.",
+   "alternativas": [],
+   "gabarito_apostila": "Errado"
+  },
+  {
+   "n": 225,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito das ferramentas utilizadas na Internet, julgue o item seguinte.",
+   "enunciado": "Os sítios da Internet acessíveis por meio de protocolo FTP são usados para a transferência de arquivos em diversos formatos, permitindo tanto a cópia quanto a gravação de arquivos no sítio.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 226,
+   "tipo": "certo_errado",
+   "texto_de_apoio": "A respeito da Internet e de intranets, julgue os itens subsequentes.",
+   "enunciado": "O domain name system (DNS) pode ser compreendido como um esquema de atribuição de nomes que possui estrutura hierárquica e natureza distribuída.",
+   "alternativas": [],
+   "gabarito_apostila": "Certo"
+  },
+  {
+   "n": 227,
+   "tipo": "multipla",
+   "texto_de_apoio": null,
+   "enunciado": "Analise as afirmações com relação a instalações físicas de redes de computadores, utilizando a tecnologia Ethernet com cabos de pares trançados. I. O conector utilizado nas terminações dos cabos é denominado de UTP. II. A topologia de rede mais comumente implementada é do tipo Estrela/HUB. III. Na topologia Estrela, um defeito em um dos computadores conectados não afeta o funcionamento da rede. Está(ão) CORRETA(S) apenas",
+   "alternativas": [
+    "a) I e II.",
+    "b) I e III.",
+    "c) II e III.",
+    "d) I.",
+    "e) II. GABARITO"
+   ],
+   "gabarito_apostila": "C"
+  }
+ ]
+}
