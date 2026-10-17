@@ -1,0 +1,686 @@
+{
+  "batch_id": "cespe2016-adapted-cpc-publication-01-2026-10-17",
+  "checked_at": "2026-10-17T21:38:14.792016+00:00",
+  "original_exam_items_published": 0,
+  "items": [
+    {
+      "origin_candidate_id": "9ca46f82649f9349bd53d5876218a91ac9e9d32ef684716023c515e9d37be1d9",
+      "origin_page": 260,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "e9ce1424-544e-5798-9bc8-934b3ca3a827",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f4a32a84-7259-5dbc-b91c-eb69bbe11e0a",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:9ca46f82649f9349bd53d5876218a91ac9e9d32ef684716023c515e9d37be1d9",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Indeclinabilidade da jurisdição",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSe a lei aplicável apresentar uma lacuna, o juiz poderá deixar de decidir o pedido exclusivamente por esse motivo.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 140 do CPC proíbe o juiz de se eximir de decidir sob alegação de lacuna ou obscuridade do ordenamento jurídico. A ausência de regra expressa não autoriza a recusa da prestação jurisdicional. Isso também não significa liberdade para decidir por equidade em qualquer caso: o parágrafo único permite a equidade somente nos casos previstos em lei.\n\nExemplo prático: Uma demanda envolve situação nova sem disciplina legal específica. O magistrado deve buscar uma solução no ordenamento e fundamentá-la; não pode encerrar sua atuação dizendo apenas que falta uma regra expressa.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "140"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Indeclinabilidade da jurisdição"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.1818,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1569,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1538,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "1b6bb1977e942f3c1cde6f8adc0945e59ede30811d54f4ae980f64761fe5c8dd",
+      "origin_page": 262,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "22a62073-b01f-53bc-a3a6-8f4f64dfff5d",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f4a32a84-7259-5dbc-b91c-eb69bbe11e0a",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:1b6bb1977e942f3c1cde6f8adc0945e59ede30811d54f4ae980f64761fe5c8dd",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Duração razoável e satisfação do direito",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA duração razoável do processo compreende a obtenção da solução integral do mérito e inclui a atividade satisfativa.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 4º do CPC assegura às partes a solução integral do mérito em prazo razoável, incluída a atividade satisfativa. O art. 139, II, atribui ao juiz o dever de velar pela duração razoável do processo. A garantia abrange a efetivação do resultado, sem afastar o contraditório e as demais garantias processuais.\n\nExemplo prático: Depois de reconhecer judicialmente um crédito, o processo ainda precisa viabilizar seu cumprimento. A preocupação com o prazo razoável não se encerra na sentença que reconheceu a dívida.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "4"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "139"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Duração razoável e satisfação do direito"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.2807,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2759,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2188,
+            "table": "official_exam_questions",
+            "id": "9c9fa1ad-a8c0-4304-90a5-e4ddc97e9142",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "33263c72f073fbfc732d81dca21fda805ac3be59dce9dd51c575688fc38d36e0",
+      "origin_page": 304,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "508570a6-1876-563a-8c24-5aa1e6f71061",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:33263c72f073fbfc732d81dca21fda805ac3be59dce9dd51c575688fc38d36e0",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Aquisição da prova e ônus probatório",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nUma prova apresentada pelo réu pode demonstrar o fato constitutivo alegado pelo autor; a distribuição do ônus da prova não impede que o juiz a considere em favor do autor.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. Pelo art. 371 do CPC, o juiz aprecia a prova constante dos autos independentemente de quem a produziu e deve indicar as razões de seu convencimento. O art. 373, I e II, estabelece a distribuição geral do ônus: fato constitutivo para o autor; impeditivo, modificativo ou extintivo para o réu. Essa distribuição não reserva a cada parte a exclusividade na produção das provas que possam beneficiá-la.\n\nExemplo prático: O autor cobra uma entrega contratual. O réu junta um relatório que, apesar de sua tese defensiva, confirma a falta da entrega. O juiz pode usar esse documento para reconhecer o fato alegado pelo autor.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "371"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "373"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Aquisição da prova e ônus probatório"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.2192,
+            "table": "official_exam_questions",
+            "id": "298ad4bc-0eba-45ae-8467-86ec623e827b",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2121,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1791,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "f53499913a5f971a3f8f45e7bec21b48351793a03fe76f40f2b9f53d0779d69c",
+      "origin_page": 309,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "6bbceb92-2e38-55c7-b58e-6d95540b4e97",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:f53499913a5f971a3f8f45e7bec21b48351793a03fe76f40f2b9f53d0779d69c",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Limites da convenção sobre ônus da prova",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nAs partes podem convencionar livremente a distribuição do ônus da prova, inclusive quando a convenção recair sobre direito indisponível de uma delas.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 373, § 3º, do CPC admite convenção sobre a distribuição do ônus da prova, mas a proíbe quando recair sobre direito indisponível da parte ou tornar excessivamente difícil a uma parte o exercício do direito. O § 4º admite a convenção antes ou durante o processo. Portanto, a autorização legal não é irrestrita.\n\nExemplo prático: Em disputa sobre direito indisponível, uma cláusula que transfira por convenção o ônus probatório encontra a vedação do § 3º, I. A simples concordância das partes não afasta essa proteção.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "373"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Limites da convenção sobre ônus da prova"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.254,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2373,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "e2bf008143e056446051bf08143b430068b05017b1b3a4d904f70ef940b25df3",
+      "origin_page": 304,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "a701cc55-89cc-57d1-93a1-1d0f0462e2b9",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:e2bf008143e056446051bf08143b430068b05017b1b3a4d904f70ef940b25df3",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Valoração da prova emprestada",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO juiz pode admitir prova produzida em outro processo e atribuir-lhe o valor que considerar adequado, observado o contraditório.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 372 do CPC admite expressamente a prova produzida em outro processo, cabendo ao juiz atribuir-lhe o valor adequado com observância do contraditório. A admissão não transforma a conclusão do processo anterior em resultado obrigatório no novo processo. O enunciado corresponde à regra legal, sem presumir que qualquer documento trasladado seja automaticamente suficiente.\n\nExemplo prático: Um laudo de outro processo é apresentado em uma nova demanda. As partes devem poder se manifestar sobre ele, e o juiz deve avaliar seu alcance para os fatos discutidos nessa demanda.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "372"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Valoração da prova emprestada"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.1429,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1154,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1132,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "e03cd47f8f2993d37028c1eb967555ffb14ac7f9b09660c41ea0401043d510b0",
+      "origin_page": 281,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "9a65ad92-9c69-52ec-a1c3-ea1ee48b4509",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "f22d5f26-e928-5d30-8c82-f74ac52bdf45",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:e03cd47f8f2993d37028c1eb967555ffb14ac7f9b09660c41ea0401043d510b0",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Efeitos das decisões do juízo incompetente",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSalvo decisão judicial em sentido contrário, os efeitos de decisão proferida por juízo incompetente são conservados até que outra seja proferida pelo juízo competente, se for o caso.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 64, § 4º, do CPC estabelece a conservação dos efeitos das decisões do juízo incompetente, salvo decisão judicial em sentido contrário, até que o juízo competente profira outra decisão, se for o caso. O reconhecimento da incompetência não implica, por si só, a eliminação imediata e automática de todos esses efeitos.\n\nExemplo prático: Uma medida provisória foi deferida antes de reconhecida a incompetência. Na ausência de decisão em contrário, seus efeitos podem continuar até que o juízo competente a examine e profira nova decisão, se necessário.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "64"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Efeitos das decisões do juízo incompetente"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.1389,
+            "table": "official_exam_questions",
+            "id": "298ad4bc-0eba-45ae-8467-86ec623e827b",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1231,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1159,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "a3b18454bec1539e4edc19660d345d6d67fc38d56cb73b32f22270948fad892d",
+      "origin_page": 292,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "49f64e22-bbe2-5418-8b53-be4c4da3b5ad",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:a3b18454bec1539e4edc19660d345d6d67fc38d56cb73b32f22270948fad892d",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Requisitos da tutela de urgência",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nA probabilidade do direito, isoladamente, basta para conceder tutela de urgência, ainda que não exista perigo de dano nem risco ao resultado útil do processo.",
+        "official_answer": "E",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nErrado. O art. 300 do CPC exige elementos que evidenciem a probabilidade do direito e o perigo de dano ou o risco ao resultado útil do processo. A probabilidade, sozinha, não preenche os requisitos da tutela de urgência. Não se deve confundir essa modalidade com a tutela da evidência, regida por hipóteses próprias.\n\nExemplo prático: Uma cobrança pode estar bem documentada sem que haja risco concreto decorrente da espera pelo julgamento. Essa documentação, por si só, não demonstra a urgência exigida pelo art. 300.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "300"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Requisitos da tutela de urgência"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.2034,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.127,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          },
+          {
+            "score": 0.117,
+            "table": "official_exam_questions",
+            "id": "5dc1d121-2329-442c-ac5c-a68666797ef1",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "94066910a5c3358204b33fb355cbffc5d36d92e7b8adec95a3518933663155cd",
+      "origin_page": 292,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "a3b3f89b-048f-55f6-9092-2425da0b3fb1",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:94066910a5c3358204b33fb355cbffc5d36d92e7b8adec95a3518933663155cd",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Revogação ou modificação da tutela provisória",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nDurante a pendência do processo, a tutela provisória conserva sua eficácia, mas pode ser revogada ou modificada a qualquer tempo.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 296 do CPC prevê a conservação da eficácia da tutela provisória na pendência do processo e admite sua revogação ou modificação a qualquer tempo. A medida não se torna imutável apenas porque foi concedida. O parágrafo único ainda prevê, salvo decisão judicial em contrário, a conservação da eficácia durante a suspensão do processo.\n\nExemplo prático: Uma tutela foi concedida com base nos elementos iniciais. Se surgirem provas que alterem essa avaliação, o juiz pode modificar ou revogar a medida por decisão fundamentada.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "296"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Revogação ou modificação da tutela provisória"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.2182,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1481,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1379,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "1263de0a241dc5d08ca73534664f76781a4155209d636a76e63984250c13905e",
+      "origin_page": 293,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "a969e893-a29f-5357-aee6-7bb8dd365237",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "90baa514-6522-5257-a606-c1f300933939",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:1263de0a241dc5d08ca73534664f76781a4155209d636a76e63984250c13905e",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Reversibilidade da tutela antecipada",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nSegundo o texto do CPC, a tutela de urgência de natureza antecipada não será concedida quando houver perigo de irreversibilidade dos efeitos da decisão.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 300, § 3º, do CPC enuncia expressamente essa restrição para a tutela de urgência de natureza antecipada. O item cobra o texto legal. Não estende automaticamente essa vedação a toda providência cautelar nem resolve situações excepcionais de conflito entre riscos, que exigem análise própria.\n\nExemplo prático: Ao analisar uma antecipação que permita alteração material definitiva de um bem, o juiz deve examinar o perigo de irreversibilidade de seus efeitos, além dos requisitos gerais de urgência.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "300"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Reversibilidade da tutela antecipada"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.2414,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.2235,
+            "table": "official_exam_questions",
+            "id": "5dc1d121-2329-442c-ac5c-a68666797ef1",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1695,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    },
+    {
+      "origin_candidate_id": "3284ab4f8bc0f415f2353088e7c786bff7b5dff91eed9d062451306cf0d89707",
+      "origin_page": 303,
+      "kind": "author_adaptation_not_original_exam",
+      "row": {
+        "id": "3aeef6f0-e61a-536b-94ef-2b2f30546d7c",
+        "source_id": "c86d23dc-7f4f-4e22-80bb-4244855dc1ce",
+        "syllabus_topic_id": "a36d772c-4674-52c0-8d07-1d9bd6dd7b21",
+        "external_item_key": "cespe2016:adapted-cpc2015-v1:3284ab4f8bc0f415f2353088e7c786bff7b5dff91eed9d062451306cf0d89707",
+        "contest_name": "Polícia Civil do Ceará",
+        "contest_year": 2025,
+        "career_name": "Delegado de Polícia Civil",
+        "exam_board": "Autoral (adaptação)",
+        "subject": "Direito Processual Civil",
+        "subtopic": "Iniciativa probatória e fundamentação",
+        "question_text": "Treino adaptado e atualizado — CPC/2015. Julgue o item.\n\nO juiz pode determinar de ofício as provas necessárias ao julgamento do mérito e deve indeferir, por decisão fundamentada, diligências inúteis ou meramente protelatórias.",
+        "official_answer": "C",
+        "explanation": "Versão autoral adaptada; o gabarito é desta versão, não uma certificação da resposta histórica da banca.\n\nCerto. O art. 370 do CPC autoriza o juiz a determinar, de ofício ou a requerimento da parte, as provas necessárias ao julgamento do mérito. Seu parágrafo único exige decisão fundamentada para o indeferimento de diligências inúteis ou meramente protelatórias. A iniciativa probatória não elimina a necessidade de fundamentar a decisão.\n\nExemplo prático: Em uma controvérsia técnica, o juiz pode determinar perícia necessária ao julgamento. Já um pedido de repetir diligência sem utilidade para esclarecer os fatos pode ser indeferido, com exposição dos motivos.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+            "checked_at": "2026-10-17T21:38:14.792016+00:00",
+            "title": "Código de Processo Civil — Lei nº 13.105/2015",
+            "lei": "Lei nº 13.105/2015",
+            "artigo": "370"
+          }
+        ],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": true,
+        "law_version_checked_at": "2026-10-17T21:38:14.792016+00:00",
+        "verified_at": "2026-10-17T21:38:14.792016+00:00",
+        "state": "CE",
+        "career_category": "Polícia Civil",
+        "role_type": "Delegado",
+        "tested_topic": "Iniciativa probatória e fundamentação"
+      },
+      "duplicate_review": {
+        "nearest": [
+          {
+            "score": 0.1587,
+            "table": "official_exam_questions",
+            "id": "10a071a9-6773-4ff1-a4ce-d826bc5652f4",
+            "content_status": "active"
+          },
+          {
+            "score": 0.129,
+            "table": "official_exam_questions",
+            "id": "5141eaff-48b0-4a37-bc85-6c84373478fb",
+            "content_status": "active"
+          },
+          {
+            "score": 0.1212,
+            "table": "official_exam_questions",
+            "id": "1a5d544b-4842-45cc-a25e-7298b40dff78",
+            "content_status": "active"
+          }
+        ],
+        "decision": "distinct_authored_formulation_requires_live_exact_recheck",
+        "scope": "Text comparison in three public catalogs; relation to private origin is intentional"
+      }
+    }
+  ],
+  "primary_evidence": {
+    "cpc": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+      "sha256": "d3967a559c7eacc4d5279c780b8cf639160b6d0014e7d9073def5e42b94d4faa",
+      "checked_at": "2026-10-17T17:43:25.133377+00:00",
+      "status": 200,
+      "cache_reused": true,
+      "checked_at_source_capture": "2026-10-17T17:43:25.133377+00:00",
+      "path": "/workspace/cespe7000-audit/batch-04/cpc.html"
+    },
+    "edital": {
+      "url": "https://cdn.cebraspe.org.br/concursos/pc_ce_25_delegado/arquivos/Ed_1_2025_PC_CE_Delegado_Abertura.pdf",
+      "sha256": "af5cd9c5b324c6abc53954bc43c313b056cdf53b0e48257b9a8089bea0020f40",
+      "bytes": 584448,
+      "captured_at": "2026-10-17T21:36:38.896058+00:00",
+      "path": "/workspace/cespe7000-audit/publication-01/edital.pdf"
+    }
+  },
+  "publication_result": {
+    "batch_id": "cespe2016-adapted-cpc-publication-01-2026-10-17",
+    "applied": true,
+    "inserted_ids": [
+      "e9ce1424-544e-5798-9bc8-934b3ca3a827",
+      "22a62073-b01f-53bc-a3a6-8f4f64dfff5d",
+      "508570a6-1876-563a-8c24-5aa1e6f71061",
+      "6bbceb92-2e38-55c7-b58e-6d95540b4e97",
+      "a701cc55-89cc-57d1-93a1-1d0f0462e2b9",
+      "9a65ad92-9c69-52ec-a1c3-ea1ee48b4509",
+      "49f64e22-bbe2-5418-8b53-be4c4da3b5ad",
+      "a3b3f89b-048f-55f6-9092-2425da0b3fb1",
+      "a969e893-a29f-5357-aee6-7bb8dd365237",
+      "3aeef6f0-e61a-536b-94ef-2b2f30546d7c"
+    ],
+    "preserved_ids": [],
+    "original_exam_items_published": 0,
+    "original_rows_modified": 0,
+    "verified": true,
+    "compared_counts": {
+      "official_exam_questions": 4888,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 1992
+    },
+    "checked_at": "2026-10-17T21:42:05.521100+00:00"
+  }
+}
