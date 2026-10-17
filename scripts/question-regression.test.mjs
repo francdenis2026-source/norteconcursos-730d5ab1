@@ -5,6 +5,7 @@ import {
   questionAnswers,
   questionAnswerLabel,
   isLegallyVerified,
+  isOfficialUrl,
   isEligibleQuestion,
 } from "../src/lib/questionFormat.ts";
 import { fetchAllRows } from "../src/lib/catalog.ts";
@@ -103,4 +104,18 @@ test("pagination does not silently accept failed requests", async () => {
     fetchAllRows(() => Promise.resolve({ data: null, error: new Error("offline") })),
     /offline/,
   );
+});
+
+test('reviewed ALEPE norms pass legal eligibility while search pages and lookalike hosts stay blocked', () => {
+  const url = 'https://legis.alepe.pe.gov.br/texto.aspx?id=4937&tipo=TEXTOATUALIZADO';
+  assert.equal(isOfficialUrl(url), true);
+  assert.equal(isOfficialUrl(url.replace('TEXTOATUALIZADO', 'TEXTOORIGINAL')), true);
+  const row = {content_status:'active', official_answer:'C', subject:'Legislação Estadual de Pernambuco', legal_review_required:true, legal_audit_completed:true, context_review_required:false, legal_basis:[{url}], law_version_checked_at:'2026-10-16T00:00:00Z'};
+  assert.equal(isEligibleQuestion(row), true);
+  assert.equal(isEligibleQuestion({...row, legal_audit_completed:false}), false);
+  assert.equal(isEligibleQuestion({...row, law_version_checked_at:null}), false);
+  for (const invalid of ['https://legis.alepe.pe.gov.br/pesquisaAvancada.aspx', url.replace('https:', 'http:'), url.replace('legis.alepe.pe.gov.br', 'legis.alepe.pe.gov.br.evil.example'), url.replace('4937', 'not-a-norm'), url.replace('TEXTOATUALIZADO', 'SEARCH'), url.replace('https://', 'https://user:password@')]) {
+    assert.equal(isOfficialUrl(invalid), false);
+    assert.equal(isEligibleQuestion({...row, legal_basis:[{url:invalid}]}), false);
+  }
 });

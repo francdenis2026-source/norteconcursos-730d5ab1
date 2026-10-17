@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T01:43:58.765Z",
-  "generated_at": "2026-10-17T01:44:00.092Z",
+  "snapshot_at": "2026-10-17T02:06:08.160Z",
+  "generated_at": "2026-10-17T02:09:36.972Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -119,11 +119,11 @@
       "exam": "Polícia Civil de Pernambuco - Agente de Polícia | 2024 | Agente de Polícia | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 50,
+        "active": 52,
         "annulled": 7,
-        "under_review": 3
+        "obsolete": 1
       },
-      "active_app_eligible": 50,
+      "active_app_eligible": 52,
       "active_with_catalog_flags": 29,
       "active_without_example_marker": 35,
       "flags": {
@@ -134,13 +134,12 @@
       "exam": "Polícia Civil de Pernambuco - Delegado de Polícia | 2024 | Delegado de Polícia | CEBRASPE",
       "records": 100,
       "status": {
-        "active": 89,
-        "under_review": 6,
+        "active": 95,
         "obsolete": 1,
         "annulled": 3,
         "archived": 1
       },
-      "active_app_eligible": 89,
+      "active_app_eligible": 95,
       "active_with_catalog_flags": 66,
       "active_without_example_marker": 86,
       "flags": {
@@ -151,11 +150,11 @@
       "exam": "Polícia Civil de Pernambuco - Escrivão de Polícia | 2024 | Escrivão de Polícia | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 48,
+        "active": 54,
         "annulled": 5,
-        "under_review": 7
+        "under_review": 1
       },
-      "active_app_eligible": 48,
+      "active_app_eligible": 54,
       "active_with_catalog_flags": 40,
       "active_without_example_marker": 44,
       "flags": {
@@ -529,23 +528,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2600,
+      "active": 2614,
       "archived": 212,
       "annulled": 37,
-      "under_review": 112,
-      "obsolete": 7
+      "under_review": 97,
+      "obsolete": 8
     },
-    "active_app_eligible": 2170,
+    "active_app_eligible": 2184,
     "active_with_catalog_flags": 1862,
     "active_without_example_marker": 2294,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 233,
-    "newly_published": 233,
-    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 23 decisions (22 activated/one obsolete), with 21 contexts restored. Not certification of all PC records.",
+    "newly_reviewed": 248,
+    "newly_published": 248,
+    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 38 decisions (36 activated/two obsolete). Not certification of all PC records.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 112,
+    "pending_under_review_all_pc": 97,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1550,6 +1549,48 @@
         }
       },
       "report": "docs/question-review-pcpe-batches4-5-2026-10-16.json"
+    },
+    "pernambuco_batch6": {
+      "reviewed": 15,
+      "published_active": 14,
+      "published_obsolete": 1,
+      "validation": {
+        "checked_at": "2026-10-17T02:06:08.160Z",
+        "reviewed": 15,
+        "published_active": 14,
+        "published_obsolete": 1,
+        "provenance_repaired": 7,
+        "preserved_other_pc_records": 2953,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [],
+        "new_topics": 4,
+        "new_sources": 10,
+        "pc_status": {
+          "active": 2614,
+          "archived": 212,
+          "annulled": 37,
+          "under_review": 97,
+          "obsolete": 8
+        },
+        "pending_by_contest": {
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1
+        }
+      },
+      "report": "docs/question-review-pcpe-batch6-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {
@@ -2464,9 +2505,13 @@
       "www2.senado.leg.br",
       "www.ibge.gov.br",
       "biblioteca.ibge.gov.br",
-      "www.stf.jus.br",
-      "legis.alepe.pe.gov.br"
+      "www.stf.jus.br"
     ],
-    "pending_state_domains_configuration": "Additive draft updated, including ALEPE; runtime application/publication still requires environment settings. No assertion of live access to blocked legislature hosts."
+    "pending_state_domains_configuration": "Additive draft updated, including ALEPE; runtime application/publication still requires environment settings. No assertion of live access to blocked legislature hosts.",
+    "pernambuco_access_update": {
+      "checked_at": "2026-10-17T02:06:08.160Z",
+      "official_norms_retrieved": 8,
+      "scope": "ALEPE root, advanced search and eight exact norm routes retrieved successfully. Earlier failures are historical. RO SAPL still returned HTTP 503; other legislative root access alone does not certify a current norm."
+    }
   }
 }

@@ -85,7 +85,16 @@ const OFFICIAL_SOURCE =
   /(^|\.)(planalto\.gov\.br|sinj\.df\.gov\.br|legislacao\.pr\.gov\.br|stf\.jus\.br|stj\.jus\.br|tst\.jus\.br|tse\.jus\.br|oas\.org|corteidh\.or\.cr|ohchr\.org|unodc\.org|un\.org)(\/|$)/i;
 export const isOfficialUrl = (url?: string) => {
   try {
-    return Boolean(url) && OFFICIAL_SOURCE.test(new URL(String(url)).hostname + "/");
+    if (!url) return false;
+    const parsed = new URL(String(url));
+    // Normas estaduais conferidas na ALEPE: reconhecer a página da norma,
+    // sem liberar buscas, páginas pessoais ou qualquer domínio .gov.br.
+    if (parsed.hostname === "legis.alepe.pe.gov.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
+        parsed.pathname === "/texto.aspx" && /^\d+$/.test(parsed.searchParams.get("id") ?? "") &&
+        ["TEXTOATUALIZADO", "TEXTOORIGINAL"].includes(parsed.searchParams.get("tipo") ?? "");
+    }
+    return OFFICIAL_SOURCE.test(parsed.hostname + "/");
   } catch {
     return false;
   }
