@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T17:52:45.507Z",
-  "generated_at": "2026-10-17T17:52:46.922Z",
+  "snapshot_at": "2026-10-17T21:14:08.185Z",
+  "generated_at": "2026-10-17T21:14:15.637Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -436,11 +436,12 @@
       "exam": "Polícia Civil do Estado do Paraná | 2026 | Papiloscopista Policial | FGV",
       "records": 100,
       "status": {
-        "active": 100
+        "active": 36,
+        "archived": 64
       },
-      "active_app_eligible": 100,
+      "active_app_eligible": 36,
       "active_with_catalog_flags": 0,
-      "active_without_example_marker": 100,
+      "active_without_example_marker": 36,
       "flags": {}
     },
     {
@@ -465,14 +466,13 @@
       "exam": "Polícia Civil do Piauí – Delegado de Polícia Civil | 2026 | Delegado de Polícia Civil | FGV",
       "records": 80,
       "status": {
-        "active": 77,
-        "under_review": 3
+        "active": 79,
+        "under_review": 1
       },
-      "active_app_eligible": 18,
-      "active_with_catalog_flags": 77,
+      "active_app_eligible": 20,
+      "active_with_catalog_flags": 59,
       "active_without_example_marker": 77,
       "flags": {
-        "edition_without_verified_edital": 77,
         "app_gate_rejected": 59,
         "context_or_visual_flag": 3
       }
@@ -497,52 +497,56 @@
       "records": 60,
       "status": {
         "annulled": 2,
-        "active": 51,
-        "under_review": 7
+        "active": 52,
+        "obsolete": 1,
+        "under_review": 5
       },
       "active_app_eligible": 51,
-      "active_with_catalog_flags": 39,
-      "active_without_example_marker": 48,
+      "active_with_catalog_flags": 40,
+      "active_without_example_marker": 49,
       "flags": {
-        "topic_not_current": 39
+        "topic_not_current": 39,
+        "app_gate_rejected": 1
       }
     },
     {
       "exam": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia | 2022 | Investigador de Polícia | UFMT",
       "records": 60,
       "status": {
-        "active": 51,
-        "under_review": 7,
-        "annulled": 2
+        "active": 52,
+        "under_review": 5,
+        "annulled": 2,
+        "obsolete": 1
       },
       "active_app_eligible": 51,
-      "active_with_catalog_flags": 39,
-      "active_without_example_marker": 48,
+      "active_with_catalog_flags": 40,
+      "active_without_example_marker": 49,
       "flags": {
-        "topic_not_current": 39
+        "topic_not_current": 39,
+        "app_gate_rejected": 1
       }
     }
   ],
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2674,
-      "archived": 215,
+      "active": 2614,
+      "archived": 279,
       "annulled": 37,
-      "under_review": 34,
-      "obsolete": 8
+      "under_review": 28,
+      "obsolete": 10
     },
-    "active_app_eligible": 2234,
-    "active_with_catalog_flags": 1694,
-    "active_without_example_marker": 2323,
+    "active_app_eligible": 2172,
+    "active_with_catalog_flags": 1678,
+    "active_without_example_marker": 2261,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 282,
-    "newly_published": 282,
-    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams. AM: one Delegado item (25), confirmed with Tema 1100, final key and updated official program; item 44 retained. RO Delegado item 29: LEP sanction and explicit execution-penal program verified; not certification of all remaining items.",
+    "newly_reviewed": 286,
+    "newly_published": 286,
+    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams. AM: one Delegado item (25), confirmed with Tema 1100, final key and updated official program; item 44 retained. RO Delegado item 29: LEP sanction and explicit execution-penal program verified; not certification of all remaining items. New baseline: 32 pending, preserving other-account decisions. This batch: PCPI2/4 active, MT59 two career records obsolete after LC803/2024; not blanket approval.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 34,
+    "pending_under_review_all_pc": 28,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1736,6 +1740,12 @@
       "tests": 15,
       "preserved_other_pc_records": 2967,
       "report": "docs/question-review-pcro-item29-2026-10-17.json"
+    },
+    "pcpi_mt803": {
+      "reviewed_records": 4,
+      "published_active": 2,
+      "published_obsolete": 2,
+      "report": "docs/question-review-pcpi-mt803-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {

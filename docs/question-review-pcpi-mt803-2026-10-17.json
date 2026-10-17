@@ -1,0 +1,229 @@
+{
+  "checked_at": "2026-10-17T21:14:08.185Z",
+  "reviewed": 4,
+  "published_active": 2,
+  "published_obsolete": 2,
+  "preserved_other_pc_records": 2964,
+  "concurrent_changes": [],
+  "verified_metadata_changes": [
+    {
+      "table": "content_sources",
+      "id": "391a22cd-a424-4c50-99a0-28a701352bfa"
+    },
+    {
+      "table": "content_sources",
+      "id": "3b94c985-ab2d-57df-b788-7ce22a20910a"
+    },
+    {
+      "table": "content_sources",
+      "id": "652036c6-f316-4a07-9cae-cd47805b4350"
+    },
+    {
+      "table": "content_sources",
+      "id": "6d246b75-f48d-5433-804e-8c2999e120bb"
+    },
+    {
+      "table": "syllabus_editions",
+      "id": "c0ea9fc5-d65d-4f8c-a936-729f8824a072"
+    }
+  ],
+  "pc_status": {
+    "active": 2614,
+    "archived": 279,
+    "annulled": 37,
+    "under_review": 28,
+    "obsolete": 10
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 5,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 5,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 6,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 1,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "tests": {
+    "application": 603,
+    "source_guards": 21
+  },
+  "build_passed": true,
+  "items": [
+    {
+      "id": "34f65807-668d-4b0b-9047-03d45ca385f1",
+      "item_number": 59,
+      "before_sha256": "cd3349a5939a95b8b761ce00cfaef00cd1a9b00e8a963f1d04b5543d0f6fe48b",
+      "after_sha256": "65317811ebb51d52dba506a8dfa322599c92600984ea182bca5f9c6197fe513e",
+      "patch": {
+        "content_status": "obsolete",
+        "verified_at": "2026-10-17T21:13:38.009208+00:00",
+        "law_version_checked_at": "2026-10-17T21:13:38.009208+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "review_note": "QUESTÃO HISTÓRICA SUPERADA — fora do treino atual. A letra A do caderno de 2022 é preservada como gabarito histórico, não como regra vigente de atribuições. A LC 803, de 19/12/2024, alterou os arts. 115, 116 e 117 da LC 407/2010, com vigência na publicação (art. 9º). O art. 5º do ato modificador passou a prever, no art. 117, III, o cumprimento de mandados judiciais de prisão, busca e apreensão e sequestro de bens como atribuição COMUM a Escrivão e Investigador. O item 4 da questão chama essa atribuição de PRIVATIVA do Investigador. Essa classificação histórica não deve ser ensinada como atual. Também houve nova redação das atribuições privativas dos dois cargos.\nExemplo: para estudar a regra atual, não memorize que cumprir os mandados mencionados é exclusividade do Investigador; o dispositivo de 2024 o inclui entre atribuições comuns. Em contraste, ao consultar o caderno de 2022 como documento histórico, a letra da banca permanece A, sem adulteração.\nTeste rápido — A letra histórica foi trocada para adaptar a questão? Resposta: não. O registro foi marcado como obsoleto e retirado do treino atual; sua resposta original foi preservada."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Incompatibilidade normativa específica demonstrada: art. 117, III, com redação da LC803/2024, torna comum atribuição qualificada de privativa pelo item4. Sem inventar nova letra ou publicar exercício com regra superada.",
+        "sources": [
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf"
+        ],
+        "amendment_capture": {
+          "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/mt803.html",
+          "status": 200,
+          "sha256": "c2c5d9cd69ce374381468699291e28e49de4e84755d80aec6ab206a576e301c7",
+          "captured_at": "2026-10-17T21:12:02.443Z"
+        },
+        "reviewed_articles": [
+          "LC803 arts.3,4,5,9",
+          "LC407 art.117III na redação de 2024"
+        ],
+        "paper_page": 23,
+        "original_answer_preserved": true,
+        "final_key_scope": "O PDF rotulado preliminar foi confrontado com o comunicado final de 02/03/2022: apenas 2 e 10 anuladas; letra A do59 não alterada.",
+        "final_key_confirmation_sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774"
+      }
+    },
+    {
+      "id": "66a98722-e75c-49ee-9a7b-4edb99348724",
+      "item_number": 2,
+      "before_sha256": "94921b4a47e46322e536bb6a30bed1f75bfe58001afea52f4250ca89ff732432",
+      "after_sha256": "a4047c375c4089448ee79eb7a72191611573e5394f22feacc3649a636f97e4f0",
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo: E. O Conselho Superior da Polícia Civil do Piauí NÃO é composto exclusivamente por eleitos nem apenas por membros natos. O art. 71 da LC 37/2004 prevê ambas as categorias. O caput e os membros natos devem ser lidos na redação da LC 277/2023: não se deve ensinar como atual a antiga presidência do Secretário da Segurança Pública. A presidência prevista na redação consultada é do Delegado-geral.\nPara os eleitos, o inciso II prevê quatro representantes dos policiais civis, com respectivos suplentes, indicados por suas entidades sindicais representativas, mandato de DOIS ANOS e uma recondução admitida. Pelo parágrafo único, perde automaticamente o mandato o conselheiro eleito que faltar SEM JUSTIFICATIVA a TRÊS sessões plenárias consecutivas ou SEIS intercaladas por ano de exercício. Não basta qualquer ausência isolada.\nA e B erram ao deixar a estrutura e a composição livremente para decreto ou resolução, ignorando a previsão legal. C e D erram ao excluir uma das duas categorias de integrantes.\nExemplo: um conselheiro eleito falta injustificadamente a três sessões plenárias seguidas: incide a regra legal de perda do mandato. Variação: uma falta justificada não pode ser contada automaticamente como injustificada para esse efeito.\nTeste rápido — Seis faltas intercaladas sem justificativa no ano podem gerar a consequência prevista, mesmo sem três consecutivas? Resposta: sim. As hipóteses são alternativas.",
+        "current_syllabus_topic_id": "2cc876f9-885a-438a-82bd-7b35b2a55079",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://sapl.al.pi.leg.br/ta/59/text",
+            "title": "LC 37/2004 PI compilada — art. 71, redação atual do caput e membros natos conforme LC 277/2023"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T21:12:37.276930+00:00",
+        "verified_at": "2026-10-17T21:12:37.276930+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Confronto individual de texto, cinco alternativas, letra definitiva e programa do edital atualizado; compilação oficial consultada com diferenciação de versões históricas. Item 1 ainda retido; não certificação integral da prova.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/edital_delegado.22.12_0.pdf",
+          "https://sapl.al.pi.leg.br/ta/59/text"
+        ],
+        "legal_capture": {
+          "name": "pi-compiled",
+          "url": "https://sapl.al.pi.leg.br/ta/59/text",
+          "path": "outputs/pc-pending-review-2026-10-16/all-next/pi-compiled.html",
+          "status": 200,
+          "bytes": 490700,
+          "sha256": "d7b9e7de628d06ba126f8a4be99c97a4a53915172552597c67ba7b597d9a17b2",
+          "captured_at": "2026-10-17T17:51:19.734Z"
+        },
+        "reviewed_articles": [
+          "71"
+        ],
+        "paper_page": 3,
+        "key_page": 1,
+        "edital_page": 41,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "80a4ac8d-f333-4824-b402-af0fb5b6c873",
+      "item_number": 4,
+      "before_sha256": "858c3e6bbed0e65219e9e8c1028b75ee8cba9c5df0ca7681021a7baddeadebf4",
+      "after_sha256": "f7b546c055bfc724cfabe4a968cf8d32fe79bee37e98bdc5a6dca2f811cb3133",
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo: D. O controle FINALÍSTICO do processo administrativo disciplinar tratado neste Estatuto cabe à PROCURADORIA-GERAL DO ESTADO, quando o processo não for presidido por Procurador do Estado. Não confunda com o controle externo da atividade policial exercido pelo Ministério Público: são funções e objetos distintos.\nO art. 62 da LC 37/2004 enumera instauração, inquérito administrativo (instrução, defesa e relatório), controle finalístico da PGE e julgamento. No inciso III, a manifestação da consultoria jurídica tem prazo máximo de DEZ DIAS. O § 2º ressalva que, quando presidido por Procurador do Estado, o processo não compreende essa fase, nem se aplica o artigo seguinte. O art. 63 prevê a remessa à PGE para manifestação sobre a legalidade e posterior encaminhamento à autoridade competente para julgar. Emitir parecer não equivale a assumir todo julgamento.\nA atribui o controle ao órgão errado. B ignora a participação da PGE prevista no procedimento. C transforma a sindicância em abertura necessária de todo PAD, o que não corresponde às fases do art. 62. E confunde o parecer jurídico com competência decisória geral do Procurador-Geral.\nExemplo: comissão presidida por policial civil conclui o relatório; observa-se o controle finalístico da PGE antes do encaminhamento à autoridade julgadora. Variação: se o procedimento é presidido por Procurador do Estado, aplica-se a exceção específica do § 2º.\nTeste rápido — O parecer da PGE faz dela automaticamente a autoridade que julga todo PAD? Resposta: não. Controle de legalidade e julgamento não são a mesma atribuição.",
+        "current_syllabus_topic_id": "2cc876f9-885a-438a-82bd-7b35b2a55079",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://sapl.al.pi.leg.br/ta/59/text",
+            "title": "LC 37/2004 PI compilada — arts. 62 e 63, controle finalístico e exceção do § 2º"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T21:12:37.276930+00:00",
+        "verified_at": "2026-10-17T21:12:37.276930+00:00"
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Confronto individual de texto, cinco alternativas, letra definitiva e programa do edital atualizado; compilação oficial consultada com diferenciação de versões históricas. Item 1 ainda retido; não certificação integral da prova.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/edital_delegado.22.12_0.pdf",
+          "https://sapl.al.pi.leg.br/ta/59/text"
+        ],
+        "legal_capture": {
+          "name": "pi-compiled",
+          "url": "https://sapl.al.pi.leg.br/ta/59/text",
+          "path": "outputs/pc-pending-review-2026-10-16/all-next/pi-compiled.html",
+          "status": 200,
+          "bytes": 490700,
+          "sha256": "d7b9e7de628d06ba126f8a4be99c97a4a53915172552597c67ba7b597d9a17b2",
+          "captured_at": "2026-10-17T17:51:19.734Z"
+        },
+        "reviewed_articles": [
+          "62",
+          "63"
+        ],
+        "paper_page": 3,
+        "key_page": 1,
+        "edital_page": 41,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "e96cf33a-a403-4367-872f-2bdecde623b0",
+      "item_number": 59,
+      "before_sha256": "20799c94260e8a6408d0f2dfac9e68dfa82e14e993f8fa69fa4336d65a677369",
+      "after_sha256": "fef62964585227af9c68b22c1b71744ba0fe83c1c02e498e26d326081b442cdc",
+      "patch": {
+        "content_status": "obsolete",
+        "verified_at": "2026-10-17T21:13:38.009208+00:00",
+        "law_version_checked_at": "2026-10-17T21:13:38.009208+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "review_note": "QUESTÃO HISTÓRICA SUPERADA — fora do treino atual. A letra A do caderno de 2022 é preservada como gabarito histórico, não como regra vigente de atribuições. A LC 803, de 19/12/2024, alterou os arts. 115, 116 e 117 da LC 407/2010, com vigência na publicação (art. 9º). O art. 5º do ato modificador passou a prever, no art. 117, III, o cumprimento de mandados judiciais de prisão, busca e apreensão e sequestro de bens como atribuição COMUM a Escrivão e Investigador. O item 4 da questão chama essa atribuição de PRIVATIVA do Investigador. Essa classificação histórica não deve ser ensinada como atual. Também houve nova redação das atribuições privativas dos dois cargos.\nExemplo: para estudar a regra atual, não memorize que cumprir os mandados mencionados é exclusividade do Investigador; o dispositivo de 2024 o inclui entre atribuições comuns. Em contraste, ao consultar o caderno de 2022 como documento histórico, a letra da banca permanece A, sem adulteração.\nTeste rápido — A letra histórica foi trocada para adaptar a questão? Resposta: não. O registro foi marcado como obsoleto e retirado do treino atual; sua resposta original foi preservada."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Incompatibilidade normativa específica demonstrada: art. 117, III, com redação da LC803/2024, torna comum atribuição qualificada de privativa pelo item4. Sem inventar nova letra ou publicar exercício com regra superada.",
+        "sources": [
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf"
+        ],
+        "amendment_capture": {
+          "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/mt803.html",
+          "status": 200,
+          "sha256": "c2c5d9cd69ce374381468699291e28e49de4e84755d80aec6ab206a576e301c7",
+          "captured_at": "2026-10-17T21:12:02.443Z"
+        },
+        "reviewed_articles": [
+          "LC803 arts.3,4,5,9",
+          "LC407 art.117III na redação de 2024"
+        ],
+        "paper_page": 23,
+        "original_answer_preserved": true,
+        "final_key_scope": "O PDF rotulado preliminar foi confrontado com o comunicado final de 02/03/2022: apenas 2 e 10 anuladas; letra A do59 não alterada.",
+        "final_key_confirmation_sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774"
+      }
+    }
+  ]
+}

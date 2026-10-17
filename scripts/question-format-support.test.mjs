@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseQuestion } from '../src/lib/questionFormat.ts';
+import { parseQuestion, isOfficialUrl } from '../src/lib/questionFormat.ts';
 
 test('texto de apoio ligado: rótulo, parágrafos em branco e enunciado separados', () => {
   const raw = 'Texto-base [Texto 1]:\nPrimeiro parágrafo do texto.\n\nSegundo parágrafo do texto.\n\n[[/texto-base]]\nDe acordo com o texto, assinale a correta.\n(A) um\n(B) dois\n(C) três\n(D) quatro\n(E) cinco';
@@ -16,4 +16,9 @@ test('formato antigo (sem marcador) continua funcionando', () => {
   assert.equal(p.baseLabel, 'Texto de apoio');
   assert.equal(p.base, 'Um texto curto.');
   assert.equal(p.options.length, 4);
+});
+
+test('PI primary legal URLs accept only the reviewed SAPL compilation', () => {
+  assert.equal(isOfficialUrl('https://sapl.al.pi.leg.br/ta/59/text'), true);
+  for (const u of ['https://sapl.al.pi.leg.br/ta/60/text','https://sapl.al.pi.leg.br/ta/59/text?old=1','https://sapl.al.pi.leg.br.evil.test/ta/59/text','http://sapl.al.pi.leg.br/ta/59/text']) assert.equal(isOfficialUrl(u), false);
 });

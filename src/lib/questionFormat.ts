@@ -87,6 +87,11 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Somente os recortes da LC 37/2004 conferidos na compilação da ALEPI.
+    if (parsed.hostname === "sapl.al.pi.leg.br") {
+      return parsed.protocol === "https:" && parsed.pathname === "/ta/59/text" &&
+        !parsed.search && !parsed.username && !parsed.password && !parsed.port;
+    }
     // Recorte da RDC 222/2018 conferido na Biblioteca Virtual do Ministério
     // da Saúde. Não libera páginas genéricas nem outras normas desse domínio.
     if (parsed.hostname === "bvsms.saude.gov.br") {

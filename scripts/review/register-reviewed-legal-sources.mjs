@@ -14,7 +14,10 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     const pernambuco=pack.jurisdiction==='PE';
     const rondonia=pack.jurisdiction==='RO';
     const anvisa=pack.jurisdiction==='BR-ANVISA';
-    const primary=anvisa
+    const piaui=pack.jurisdiction==='PI';
+    const primary=piaui
+      ? url.hostname==='sapl.al.pi.leg.br' && url.pathname==='/ta/59/text' && !url.search && !url.username && !url.password && !url.port && row.source_type==='lei'
+      : anvisa
       ? url.hostname==='bvsms.saude.gov.br' && url.pathname==='/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf' && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
       : rondonia
       ? url.hostname==='www.al.ro.leg.br' && url.pathname==='/downloads/constituicao-do-estado-de-rondonia' && !url.search && row.source_type==='constituicao'
@@ -26,6 +29,7 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
     if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa ? bytes.subarray(0,4).toString()!=='%PDF' : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(piaui&&(!evidence.current_effect_reviewed||evidence.norm!=='LC 37/2004'||!row.notes.includes(evidence.norm)||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.reviewed_articles.some(a=>!['62','63','71'].includes(a))||!bytes.toString('utf8').includes('dptt15181')||!bytes.toString('utf8').includes('Lei Complementar nº 318')))throw Error('Individually reviewed current SAPL PI excerpts required');
     if(anvisa&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.reviewed_articles.some(a=>!['11','13','43'].includes(a))||evidence.norm!=='RDC 222/2018'||!row.notes.includes(evidence.norm)))throw Error('Individually reviewed RDC 222/2018 excerpts required');
     if(rondonia&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.compilation!=='EC 179/2026'||!row.notes.includes(evidence.compilation)))throw Error('Individually reviewed current ALE-RO compilation required');
     if(pernambuco){
