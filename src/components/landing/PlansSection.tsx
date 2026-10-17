@@ -58,7 +58,7 @@ export function PlansSection() {
                   </p>
                 )}
                 <ul className="mt-5 flex-1 space-y-2.5 text-sm">
-                  {PLAN_ROWS.map(([key, label]) => {
+                  {PLAN_ROWS.slice(0, 6).map(([key, label]) => {
                     const v = planValue(key, plan.features[key]);
                     return (
                       <li

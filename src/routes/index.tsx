@@ -37,6 +37,7 @@ import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
+import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
@@ -66,6 +67,19 @@ const NAV: [string, string][] = [
   ["Ferramentas", "#ferramentas"],
   ["Carreiras", "#carreiras"],
   ["Planos", "#planos"],
+];
+
+const ROLES = [
+  "Agente da Polícia Federal",
+  "Escrivão PF",
+  "Delegado de Polícia",
+  "Policial Rodoviário Federal",
+  "Investigador de Polícia",
+  "Perito Criminal",
+  "Policial Penal",
+  "Soldado PM",
+  "Bombeiro Militar",
+  "Guarda Municipal",
 ];
 
 const STEP_HUES = ["gold", "sky", "emerald", "rose"] as const;
@@ -174,9 +188,10 @@ function Head({ kicker, children, lead }: { kicker: string; children: React.Reac
 
 function Index() {
   const scrolled = useScrolled();
+  const [heroReady, setHeroReady] = useState(false);
 
   return (
-    <div className="lp is-ready hp">
+    <div className={`lp hp${heroReady ? " is-ready" : " is-intro"}`}>
       <header className="lp-header" data-scrolled={scrolled}>
         <div className="lp-container lp-header__bar">
           <Link to="/" aria-label="Norte Concurso — início">
@@ -240,64 +255,103 @@ function Index() {
       </header>
 
       <main>
-        <section className="hp-hero" aria-labelledby="hp-title">
-          <div className="lp-container hp-hero__layout">
-            <div className="hp-hero__copy">
-              <span className="chip-brass">
-                <Compass /> Preparação para segurança pública
-              </span>
-              <h1 id="hp-title" className="hp-hero__title">
-                Sua aprovação não é sorte.
-                <em>É operação bem planejada.</em>
-              </h1>
-              <p className="hp-hero__lead">
-                Questões por banca, simulados cronometrados e um plano que se ajusta ao seu
-                desempenho, para Polícia Federal, PRF, Polícias Civis, Penais e Militares.
-              </p>
-              <div className="hp-hero__ctas">
-                <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                  Começar grátis <ArrowRight />
-                </Link>
-                <a href="#como" className="btn-glass">
-                  <CirclePlay /> Ver como funciona
-                </a>
+        <section className={`lp-hero${heroReady ? " is-ready" : ""}`}>
+          <div className="lp-hero__media" aria-hidden="true">
+            <HeroVideo onDone={() => setHeroReady(true)} />
+          </div>
+          <div className="lp-hero__shade" aria-hidden="true" />
+          <div className="lp-hero__grid" aria-hidden="true" />
+          <div className="lp-container lp-hero__body">
+            <div className="lp-hero__layout">
+              <div className="lp-hero__content">
+                <span className="chip-brass">
+                  <Compass /> Preparação para segurança pública
+                </span>
+                <h1 className="lp-hero__title">
+                  Sua aprovação não é sorte.
+                  <em>É operação bem planejada.</em>
+                </h1>
+                <p className="lp-hero__lead">
+                  Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
+                  Polícia Federal, PRF, Polícias Civis, Penais e Militares.
+                </p>
+                <div className="lp-hero__ctas">
+                  <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
+                    Iniciar minha preparação <ArrowRight />
+                  </Link>
+                  <a href="#plataforma" className="btn-glass">
+                    <CirclePlay /> Conhecer a plataforma
+                  </a>
+                </div>
+                <ul className="lp-hero__pillars" aria-label="Diferenciais">
+                  {(
+                    [
+                      [BadgeCheck, "emerald", "Edital e lei vigentes conferidos"],
+                      [Target, "sky", "Treino por banca e disciplina"],
+                      [Timer, "rose", "Simulados sob pressão"],
+                    ] as const
+                  ).map(([Icon, hue, label]) => (
+                    <li key={label}>
+                      <i className="app-ico" data-hue={hue} aria-hidden="true">
+                        <Icon />
+                      </i>
+                      {label}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="hp-trust" aria-label="Diferenciais">
-                {(
-                  [
-                    [BadgeCheck, "emerald", "Edital e lei vigentes conferidos"],
-                    [Target, "sky", "Treino por banca e disciplina"],
-                    [Timer, "rose", "Simulados sob pressão"],
-                  ] as const
-                ).map(([Icon, hue, label]) => (
-                  <li key={label}>
-                    <i className="app-ico" data-hue={hue} aria-hidden="true">
-                      <Icon />
-                    </i>
-                    {label}
-                  </li>
-                ))}
-              </ul>
+              <aside className="lp-hero__panel" aria-label="Destaques">
+                <TestingSeal />
+                <DailyChallengeBadge />
+                <QuestionCountBadge />
+              </aside>
             </div>
-            <div className="hp-hero__visual">
-              <ProductMock />
+            <div className="lp-hero__aside" aria-hidden="true">
+              <span className="lp-coord">
+                <b>N</b> · 08°09′S 70°21′W
+              </span>
+              <span className="lp-coord">FEIJÓ — ACRE — BRASIL</span>
+            </div>
+          </div>
+          <div className="lp-rail">
+            <div className="lp-container lp-rail__grid">
+              {(
+                [
+                  [Landmark, "sky", "Federais", "PF · PRF"],
+                  [ShieldCheck, "emerald", "Estaduais", "Civil · Penal"],
+                  [Trophy, "orange", "Militares", "PM · Bombeiros"],
+                  [Compass, "gold", "Metodologia", "Ciclo completo"],
+                ] as const
+              ).map(([Icon, hue, label, value]) => (
+                <div className="lp-rail__item" key={label}>
+                  <i className="app-ico" data-hue={hue} aria-hidden="true">
+                    <Icon />
+                  </i>
+                  <div className="lp-rail__text">
+                    <span>{label}</span>
+                    <strong>{value}</strong>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="hp-strip" aria-label="Destaques de hoje">
-          <div className="lp-container hp-strip__grid">
-            <TestingSeal />
-            <DailyChallengeBadge />
-            <QuestionCountBadge />
+        <div className="lp-marquee" aria-hidden="true">
+          <div className="lp-marquee__track">
+            {[...ROLES, ...ROLES].map((role, i) => (
+              <span className="lp-marquee__item" key={`${role}-${i}`}>
+                {role}
+              </span>
+            ))}
           </div>
-        </section>
+        </div>
 
         <PcprExamPromo />
 
         <section className="hp-section" aria-label="Campanha PCAC 2026">
           <div className="lp-container">
-            <div className="hp-campaign">
+            <div className="hp-campaign hp-campaign--image">
               <div>
                 <div className="hp-campaign__emblems" aria-label="Identidade institucional do Acre">
                   <img src="/media/brasao-acre-oficial.svg" alt="Brasão do Estado do Acre" />
@@ -312,6 +366,16 @@ function Index() {
                   Delegado, Oficial Investigador e Perito. Comece a treinar desde já.
                 </p>
               </div>
+              <figure className="hp-campaign__visual">
+                <img
+                  src="/media/hero/landing-pcac.webp"
+                  alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
+                  width={1672}
+                  height={941}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
               <div className="hp-campaign__side">
                 <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
                   Quero me preparar <ArrowRight />
@@ -378,7 +442,7 @@ function Index() {
           </div>
         </section>
 
-        <section id="carreiras" className="hp-section hp-section--tint">
+        <section id="carreiras" className="hp-section hp-section--photo">
           <div className="lp-container">
             <Head kicker="Para quem é">
               A plataforma de quem escolheu <em>servir e proteger.</em>
@@ -439,6 +503,14 @@ function Index() {
                   <BookOpenCheck /> Fazer o desafio diário
                 </Link>
               </div>
+              <img
+                className="hp-final__img"
+                src="/media/hero/lineup-carreiras-ajustada.webp"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </section>

@@ -7163,20 +7163,11 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   display: none;
 }
 @media (max-width: 767px) {
-  #pcac,
-  #acre,
-  #metodo,
-  #plataforma,
-  #carreiras,
-  #planos,
-  .lp-trust,
-  .lp-final,
+  /* As seções da página inicial agora são fluidas e aparecem também no celular. */
   .lp-marquee,
   .lp-rail,
   .lp-hero__pillars,
-  .question-count-badge,
-  .lp-hero__aside,
-  .lp-footer__grid > :not(.lp-footer__brand) {
+  .lp-hero__aside {
     display: none !important;
   }
   .lp-hero {

@@ -546,3 +546,103 @@
     grid-column: 1 / -1;
   }
 }
+
+/* ---------- Abertura com vídeo/foto: mais baixa e sempre dentro da tela ---------- */
+.hp .lp-hero {
+  min-height: clamp(560px, 86svh, 780px);
+}
+
+/* ---------- Campanha com imagem ---------- */
+.hp-campaign--image {
+  grid-template-columns: minmax(0, 1fr);
+}
+.hp-campaign__visual {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--hp-line);
+  box-shadow: 0 24px 60px -30px oklch(0 0 0 / 0.8);
+}
+.hp-campaign__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+@media (min-width: 980px) {
+  .hp-campaign--image {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: stretch;
+  }
+  .hp-campaign--image .hp-campaign__side {
+    grid-column: 1;
+  }
+  .hp-campaign--image .hp-campaign__visual {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .hp-campaign__visual img {
+    height: 100%;
+  }
+}
+
+/* ---------- Seção com foto de fundo ---------- */
+.hp-section--photo {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, oklch(0.12 0.025 263 / 0.92), oklch(0.12 0.025 263 / 0.78) 50%, oklch(0.12 0.025 263 / 0.94)),
+    url("/media/hero/careers-team.webp") center / cover no-repeat;
+}
+
+/* ---------- CTA final com a foto das carreiras ---------- */
+.hp-final__img {
+  width: min(100%, 780px);
+  height: auto;
+  margin-top: clamp(6px, 1.5vw, 18px);
+  border-radius: 18px 18px 0 0;
+  mask-image: linear-gradient(180deg, #000 72%, transparent);
+}
+
+/* ---------- Celular: cartões mais compactos (ícone ao lado do texto) ---------- */
+@media (max-width: 599px) {
+  .hp-section {
+    padding-block: clamp(36px, 9vw, 52px);
+  }
+  .hp-head {
+    margin-bottom: 22px;
+  }
+  .hp-card {
+    padding: 16px;
+  }
+  .hp-tools .hp-card,
+  .hp-card:has(> .hp-ico) {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+  }
+  .hp-card > .hp-ico {
+    grid-row: span 2;
+    width: 44px;
+    height: 44px;
+  }
+  .hp-card:has(> .hp-ico) h3 {
+    margin: 0 0 4px;
+  }
+  .hp-card__top {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .hp-card__top + h3 {
+    margin-top: 10px;
+  }
+  .hp-step__n {
+    font-size: 1.1rem !important;
+  }
+  .hp-career {
+    padding: 12px 14px;
+  }
+}
