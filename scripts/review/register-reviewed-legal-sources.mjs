@@ -15,7 +15,12 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     const rondonia=pack.jurisdiction==='RO';
     const anvisa=pack.jurisdiction==='BR-ANVISA';
     const piaui=pack.jurisdiction==='PI';
-    const primary=piaui
+    const matogrosso=pack.jurisdiction==='MT';
+    const mtPath='/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado';
+    const mtQuery=u=>u.searchParams.get('exibirAnotacao')==='1'&&u.searchParams.get('marcoHistorico')==='2026-10-17'&&[...u.searchParams].length===2&&!u.username&&!u.password&&!u.port;
+    const primary=matogrosso
+      ? url.hostname==='www.al.mt.gov.br' && url.pathname===mtPath && mtQuery(url) && row.source_type==='lei'
+      : piaui
       ? url.hostname==='sapl.al.pi.leg.br' && url.pathname==='/ta/59/text' && !url.search && !url.username && !url.password && !url.port && row.source_type==='lei'
       : anvisa
       ? url.hostname==='bvsms.saude.gov.br' && url.pathname==='/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf' && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
@@ -28,7 +33,15 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
       : url.hostname==='www.planalto.gov.br' && row.source_type==='lei';
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
-    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa ? bytes.subarray(0,4).toString()!=='%PDF' : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(matogrosso){
+      const required=['464','494','540','565','575','597','679','691','694','702','736','737','787','803','831','851','853'];
+      if(!evidence.current_effect_reviewed||evidence.norm!=='LC 407/2010'||!row.notes.includes(evidence.norm)||!evidence.reviewed_articles?.length||evidence.reviewed_articles.some(a=>!['2','3','7','8','10','16','19','20','63','141','142','143','144','157'].includes(a))||!Array.isArray(evidence.amendments)||JSON.stringify(evidence.amendments.map(a=>a.num).sort())!==JSON.stringify(required))throw Error('Scoped LC407 review and complete amendment captures required');
+      for(const c of evidence.amendments){
+        const u=new URL(c.url),b=await readCapture(c.path);
+        if(!c.reviewed||u.protocol!=='https:'||u.hostname!=='www.al.mt.gov.br'||!new RegExp('^/norma-juridica/urn:lex:br;mato\\.grosso:estadual:lei\\.complementar:\\d{4}-\\d{2}-\\d{2};'+c.num+'/compilado$').test(u.pathname)||!mtQuery(u)||createHash('sha256').update(b).digest('hex')!==c.sha256||!b.toString('utf8').includes('<turbo-frame'))throw Error('Official amendment evidence changed or unreviewed');
+      }
+    }
     if(piaui&&(!evidence.current_effect_reviewed||evidence.norm!=='LC 37/2004'||!row.notes.includes(evidence.norm)||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.reviewed_articles.some(a=>!['62','63','71'].includes(a))||!bytes.toString('utf8').includes('dptt15181')||!bytes.toString('utf8').includes('Lei Complementar nº 318')))throw Error('Individually reviewed current SAPL PI excerpts required');
     if(anvisa&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.reviewed_articles.some(a=>!['11','13','43'].includes(a))||evidence.norm!=='RDC 222/2018'||!row.notes.includes(evidence.norm)))throw Error('Individually reviewed RDC 222/2018 excerpts required');
     if(rondonia&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.compilation!=='EC 179/2026'||!row.notes.includes(evidence.compilation)))throw Error('Individually reviewed current ALE-RO compilation required');

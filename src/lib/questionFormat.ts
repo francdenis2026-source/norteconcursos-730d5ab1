@@ -87,6 +87,13 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Recortes da LC407 confrontados com os atos modificadores até 17/10/2026.
+    if (parsed.hostname === "www.al.mt.gov.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
+        parsed.pathname === "/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado" &&
+        parsed.searchParams.get("exibirAnotacao") === "1" && parsed.searchParams.get("marcoHistorico") === "2026-10-17" &&
+        [...parsed.searchParams].length === 2;
+    }
     // Somente os recortes da LC 37/2004 conferidos na compilação da ALEPI.
     if (parsed.hostname === "sapl.al.pi.leg.br") {
       return parsed.protocol === "https:" && parsed.pathname === "/ta/59/text" &&

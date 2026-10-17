@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-17T21:23:02.313Z",
-  "scope": "All32 baseline pending records triaged;10 individual decisions completed,22 still require substantive validation. This is NOT certification of all32.",
-  "resolved": 10,
-  "published_active": 6,
+  "checked_at": "2026-10-17T21:38:45.893Z",
+  "scope": "All32 baseline records triaged;16 individual decisions complete (12active,4obsolete),16 retain incomplete substantive validation. Not certification of all32.",
+  "resolved": 16,
+  "published_active": 12,
   "published_obsolete": 4,
-  "retained_under_review": 22,
+  "retained_under_review": 16,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -89,9 +89,9 @@
       "item_number": 56,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Fonte da LC407 no portal da ALMT não demonstrou integração de todas as alterações. LC803 foi obtida e não altera este recorte, mas isso não certifica a consolidação atual nem encerra controles constitucionais sobre organização."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "e7e2c8276478a5a6f233b91026ed6bd13cf47a45b6317d17b211c9e446ac2d4d"
     },
     {
       "id": "6b7f5982-454d-45a1-9d8d-336110760d3a",
@@ -111,9 +111,9 @@
       "item_number": 56,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Fonte da LC407 no portal da ALMT não demonstrou integração de todas as alterações. LC803 foi obtida e não altera este recorte, mas isso não certifica a consolidação atual nem encerra controles constitucionais sobre organização."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "e7e2c8276478a5a6f233b91026ed6bd13cf47a45b6317d17b211c9e446ac2d4d"
     },
     {
       "id": "76a0df58-50ad-465e-af73-12763e76347f",
@@ -243,9 +243,9 @@
       "item_number": 58,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Necessário confrontar estrutura organizacional vigente com alterações e regulamentos posteriores; o organograma original não basta para certificar nomes e funções atuais."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "0ad8c456822abe17b3716e2f07994a67990f000bb4d246f11fc184808d31ee6f"
     },
     {
       "id": "b856f028-7564-4a68-ba11-b3dafa414097",
@@ -254,9 +254,9 @@
       "item_number": 57,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Necessário confirmar redação vigente completa dos dispositivos de estágio probatório e remoção; texto original e ausência de alteração na LC803 isoladamente não certificam vigência."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "3ca2f69d6268d802668c1252f0bcc25943afb2949a53581410f9bd65f2f0cd8b"
     },
     {
       "id": "bd9495a0-e158-41eb-92e2-38ad99b635eb",
@@ -331,9 +331,9 @@
       "item_number": 57,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Necessário confirmar redação vigente completa dos dispositivos de estágio probatório e remoção; texto original e ausência de alteração na LC803 isoladamente não certificam vigência."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "3ca2f69d6268d802668c1252f0bcc25943afb2949a53581410f9bd65f2f0cd8b"
     },
     {
       "id": "edeacfb3-e0a4-4d5f-a51f-7a6cfefdadca",
@@ -364,9 +364,9 @@
       "item_number": 58,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Necessário confrontar estrutura organizacional vigente com alterações e regulamentos posteriores; o organograma original não basta para certificar nomes e funções atuais."
+      "after_status": "active",
+      "decision": "Published MT organization/probation review; see docs/question-review-mt-organization-probation-2026-10-17.json",
+      "comment_sha256": "0ad8c456822abe17b3716e2f07994a67990f000bb4d246f11fc184808d31ee6f"
     }
   ]
 }

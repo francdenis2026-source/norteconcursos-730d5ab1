@@ -22,3 +22,6 @@ test('PI primary legal URLs accept only the reviewed SAPL compilation', () => {
   assert.equal(isOfficialUrl('https://sapl.al.pi.leg.br/ta/59/text'), true);
   for (const u of ['https://sapl.al.pi.leg.br/ta/60/text','https://sapl.al.pi.leg.br/ta/59/text?old=1','https://sapl.al.pi.leg.br.evil.test/ta/59/text','http://sapl.al.pi.leg.br/ta/59/text']) assert.equal(isOfficialUrl(u), false);
 });
+test('MT URL approval is limited to the individually reviewed LC407 dated compilation',()=>{
+ const u='https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17';assert.equal(isOfficialUrl(u),true);for(const x of[u.replace(';407/',';408/'),u.replace('2026-10-17','2020-01-01'),u+'&extra=1',u.replace('www.al.mt.gov.br','www.al.mt.gov.br.evil.test')])assert.equal(isOfficialUrl(x),false);
+});
