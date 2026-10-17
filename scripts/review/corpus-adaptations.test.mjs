@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { isEligibleQuestion, parseQuestion, splitExplanation, questionAnswers, hasReviewedExplanation, basisHref } from '../../src/lib/questionFormat.ts';
 
-const pack = JSON.parse(readFileSync(new URL('../../docs/reviews/cespe2016-adapted-cpc-publication-01-2026-10-17.json', import.meta.url)));
+const packs = ['01', '02'].map(batch => JSON.parse(readFileSync(new URL(`../../docs/reviews/cespe2016-adapted-cpc-publication-${batch}-2026-10-17.json`, import.meta.url))));
+const pack = { original_exam_items_published: 0, items: packs.flatMap(p => p.items) };
 
 test('published adaptations remain eligible and render as true/false with a distinct example', () => {
   for (const { row } of pack.items) {
@@ -20,7 +21,8 @@ test('published adaptations remain eligible and render as true/false with a dist
 });
 
 test('new wording and current answers cannot be presented as original CESPE exam items', () => {
-  assert.equal(pack.original_exam_items_published, 0);
+  for (const batch of packs) assert.equal(batch.original_exam_items_published, 0);
+  assert.equal(new Set(pack.items.map(item => item.origin_candidate_id)).size, pack.items.length);
   for (const item of pack.items) {
     assert.equal(item.kind, 'author_adaptation_not_original_exam');
     assert.equal(item.row.exam_board, 'Autoral (adaptação)');
