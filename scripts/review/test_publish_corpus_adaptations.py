@@ -18,6 +18,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_full_authored_pack_validates(self):
         self.assertEqual(len(m.validate(self.pack)), 10)
+        second = json.loads(PACK.with_name('cespe2016-adapted-cpc-publication-02-2026-10-17.json').read_text())
+        self.assertEqual(len(m.validate(second)), 20)
 
     def test_cannot_relabel_adaptations_as_official_exam(self):
         self.pack['items'][0]['row']['exam_board'] = 'CEBRASPE'
