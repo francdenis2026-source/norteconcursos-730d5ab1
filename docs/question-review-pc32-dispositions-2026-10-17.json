@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-17T23:10:13.438Z",
-  "scope": "All32 baseline records triaged;19 individual decisions complete (15active,4obsolete),13 retain incomplete substantive validation. Not certification of all32.",
-  "resolved": 19,
+  "checked_at": "2026-10-17T23:19:12.279Z",
+  "scope": "All32 baseline records triaged;20 individual dispositions complete (15active,4obsolete,1editorially archived),12 retain incomplete substantive validation. Editorial archive is not official annulment or approval of another answer.",
+  "resolved": 20,
   "published_active": 15,
   "published_obsolete": 4,
-  "retained_under_review": 13,
+  "retained_under_review": 12,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -144,9 +144,9 @@
       "item_number": 44,
       "original_answer": "A",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta resolver a redação absoluta da regressão obrigatória. Tema1347 distingue cautelar e definitiva, não resolve sozinho a questão44."
+      "after_status": "archived",
+      "decision": "Arquivamento editorial fundamentado; não anulação da banca; gabaritoA preservado. docs/question-review-am44-editorial-disposition-2026-10-17.json",
+      "comment_sha256": "a1a43479f51ea23229a5ece34412a11a04d2906103e72d3fb632fe57eea16b68"
     },
     {
       "id": "8842e03d-5136-4daa-9335-caec2e9bafad",
@@ -375,5 +375,6 @@
     "newly_resolved": 0,
     "pending": 16,
     "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
-  }
+  },
+  "archived_editorially": 1
 }
