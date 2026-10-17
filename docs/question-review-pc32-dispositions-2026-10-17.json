@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T23:06:47.849Z",
+  "checked_at": "2026-10-17T23:10:13.438Z",
   "scope": "All32 baseline records triaged;19 individual decisions complete (15active,4obsolete),13 retain incomplete substantive validation. Not certification of all32.",
   "resolved": 19,
   "published_active": 15,
@@ -278,7 +278,7 @@
       "before_status": "under_review",
       "after_status": "under_review",
       "decision": "Retained; substantive review incomplete",
-      "missing_validation": "ChaveA reproduzida numericamente; falta obter norma contábil primária CPC27/CPC23 e concluir vínculo programático. Tentativas em CPC/CFC/CVM não recuperaram a norma; HTTP403 no proxy de conteudo.cvm.gov.br observado."
+      "missing_validation": "Programa do edital retificado em30/09/2022 conferido nas páginas48–49 e edição corrigida; tópico real de depreciação inserido. Cálculo confirma19.000; falta acesso direto conferido à fonte CPC27/CPC23. Ver docs/reviews/pcam-investigador-edital-contabilidade-2026-10-17.json."
     },
     {
       "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",

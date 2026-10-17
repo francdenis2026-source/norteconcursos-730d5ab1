@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T23:06:47.849Z",
-  "generated_at": "2026-10-17T23:07:30.840Z",
+  "snapshot_at": "2026-10-17T23:10:13.438Z",
+  "generated_at": "2026-10-17T23:10:31.331Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -388,10 +388,9 @@
         "under_review": 1
       },
       "active_app_eligible": 77,
-      "active_with_catalog_flags": 77,
+      "active_with_catalog_flags": 58,
       "active_without_example_marker": 77,
       "flags": {
-        "edition_without_verified_edital": 77,
         "topic_not_current": 58
       }
     },
@@ -535,7 +534,7 @@
       "under_review": 13
     },
     "active_app_eligible": 2185,
-    "active_with_catalog_flags": 1678,
+    "active_with_catalog_flags": 1659,
     "active_without_example_marker": 2265,
     "editorial_approvals_generated_by_this_script": 0
   },
@@ -1760,6 +1759,11 @@
       "reviewed_records": 3,
       "published_active": 3,
       "report": "docs/question-review-pe2-mt60-2026-10-17.json"
+    },
+    "am_investigador_edital_repair": {
+      "new_approvals": 0,
+      "pending_outside_ro": 5,
+      "report": "docs/reviews/pcam-investigador-edital-contabilidade-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {
