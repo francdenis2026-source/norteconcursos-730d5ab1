@@ -2,6 +2,7 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {sameReviewRow} from './publish-question-review.mjs';
+import {extractQuestionIllustrations} from '../../src/lib/questionMedia.ts';
 import {sessionAuthHeaders} from '../supabase-session-auth.mjs';
 
 export function validateRepairs(pack) {
@@ -18,19 +19,41 @@ export function validateRepairs(pack) {
     if (!binary && (!Array.isArray(labels) || !['ABCD','ABCDE'].includes(labels.join('')) || !labels.includes(expected.official_answer))) throw Error('Verified alternative labels required');
     const complete=binary? /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): labels.every(letter=>(text || '').includes(`(${letter})`)) && !['A','B','C','D','E'].some(letter=>!labels.includes(letter) && (text || '').includes(`(${letter})`));
     if (!text || !complete || text.trimStart().startsWith('(A)')) throw Error('Complete stem and alternatives required');
+    const media=extractQuestionIllustrations(text);
+    if (/^\s*!\[/m.test(media.text)) throw Error('Unsupported or malformed figure marker');
+    const figures=evidence.figures||[];
+    if (!Array.isArray(figures)||figures.length!==media.illustrations.length||figures.length>10||new Set(figures.map(f=>f.url)).size!==figures.length) throw Error('Every figure requires distinct reviewed evidence');
+    for (const image of media.illustrations) {
+      const f=figures.find(f=>f.url===image.url);
+      if(!f?.path||!/^[a-f0-9]{64}$/.test(f.sha256||'')) throw Error('Reviewed figure capture required');
+    }
     if (patch.source_page!==undefined && (!Number.isInteger(patch.source_page) || patch.source_page!==evidence.page)) throw Error('Corrected page must match visual evidence');
     if (patch.context_review_required!==false || !patch.review_note || !Number.isFinite(Date.parse(patch.verified_at))) throw Error('Explicit context decision required');
   }
   return pack;
 }
 
-export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false}={}) {
+async function readPublicFigure(url) {
+  const response=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(30000)});
+  if(!response.ok||Number(response.headers.get('content-length')||0)>5242880)throw Error('Public figure unavailable or too large');
+  const bytes=Buffer.from(await response.arrayBuffer());
+  if(bytes.length>5242880)throw Error('Public figure too large');
+  return bytes;
+}
+export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false,readFigure=readPublicFigure}={}) {
   validateRepairs(pack);
   const pending=[];
   for(const item of pack.items) {
     const {expected,patch,evidence}=item;
     const bytes=await readPdf(evidence.pdf_path);
     if(createHash('sha256').update(bytes).digest('hex')!==evidence.pdf_sha256) throw Error('Reviewed PDF changed');
+    for(const f of evidence.figures||[]) {
+      const local=await readPdf(f.path);
+      const raster=local.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]))||local.subarray(0,3).equals(Buffer.from([255,216,255]))||(local.subarray(0,4).toString()==='RIFF'&&local.subarray(8,12).toString()==='WEBP');
+      if(!raster||local.length>5242880||createHash('sha256').update(local).digest('hex')!==f.sha256)throw Error('Reviewed figure changed or invalid');
+      const published=await readFigure(f.url);
+      if(createHash('sha256').update(published).digest('hex')!==f.sha256)throw Error('Public figure differs from reviewed capture');
+    }
     const [source]=await request(`content_sources?id=eq.${expected.question_source_id}&select=*`);
     // Legacy cadernos use the schema's "outro" category; require the
     // registered title to identify a prova as well as the exact PDF URL.
