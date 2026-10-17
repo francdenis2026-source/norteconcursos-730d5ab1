@@ -12028,3 +12028,72 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 @media (max-width: 640px) {
   .trainer-workbench-heading.trainer-workbench-hero { align-items: flex-start; flex-direction: column; gap: 20px; min-height: 215px; background-position: 63% center; }
 }
+
+/* ===== Barra superior do painel: título legível e itens que cedem espaço conforme a largura =====
+   Em telas de computador/tablet os indicadores (data, tempo na plataforma, teste e sequência) formam
+   uma única peça com divisórias; a busca vira ícone e os itens menos importantes saem quando a barra
+   fica estreita (medida pela própria barra, não pela janela, porque o menu lateral ocupa espaço). */
+@media (min-width: 768px) {
+  .app-topbar {
+    container: topbar / inline-size;
+    gap: 14px;
+  }
+  .app-crumbs {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .app-crumbs strong {
+    min-width: 8ch;
+  }
+  .app-topbar__actions {
+    flex: 0 1 auto;
+    gap: 10px;
+  }
+  .app-chips {
+    display: flex;
+    align-items: stretch;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--color-card) 88%, transparent);
+    box-shadow: var(--shadow-xs);
+  }
+  .app-chips > .app-streak {
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .app-chips > .app-streak + .app-streak {
+    border-left: 1px solid var(--color-border);
+  }
+  .app-chips > .app-streak:hover {
+    background: color-mix(in oklab, var(--color-foreground) 5%, transparent);
+  }
+}
+@container topbar (max-width: 1180px) {
+  .app-top-search {
+    width: 40px;
+    justify-content: center;
+    padding: 0;
+  }
+  .app-top-search > span {
+    display: none;
+  }
+}
+@container topbar (max-width: 960px) {
+  .app-chips .app-clock {
+    display: none;
+  }
+}
+@container topbar (max-width: 780px) {
+  .app-chips > .app-streak:has(.lucide-timer) {
+    display: none;
+  }
+  .app-crumbs > span,
+  .app-crumbs > svg {
+    display: none;
+  }
+}
