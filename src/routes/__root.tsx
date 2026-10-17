@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 
 import { supabase, hasPendingEmailAuthCallback, markEmailAuthCallbackHandled, completeEmailAuthCallback } from "@/integrations/supabase/client";
 import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { MobileNotice } from "@/components/MobileNotice";
 import { InstallAppPrompt } from "@/components/InstallAppPrompt";
@@ -219,9 +220,16 @@ function RootComponent() {
       if (!active) return;
       markEmailAuthCallbackHandled();
       if (result.error) void router.navigate({ to: "/auth", search: { callbackError: result.error }, hash: "", replace: true });
-      else if (result.session) void router.navigate(result.recovery
+      else if (result.session) {
+        if (!result.recovery) toast.success("E-mail confirmado com sucesso!", {
+          id: "auth-welcome",
+          description: "Seu acesso está liberado. Bem-vindo à sua área de estudos da Norte Concurso.",
+          duration: 7000,
+        });
+        void router.navigate(result.recovery
         ? { to: "/auth", search: { recovery: true }, hash: "", replace: true }
         : { to: "/dashboard", hash: "", replace: true });
+      }
     });
     const { data } = supabase.auth.onAuthStateChange((event, session) => {
       const currentUser = session?.user.id ?? null;

@@ -116,9 +116,10 @@ function AuthPage() {
       if (event === "SIGNED_IN" && session) {
         // Entrada sem passar pelo formulário = clique no link de confirmação (outra aba ou e-mail).
         if (!manualAuth.current) {
-          toast.success("E-mail confirmado", {
+          toast.success("E-mail confirmado com sucesso!", {
             id: "auth-welcome",
-            description: "Sua conta está ativa. Boa preparação!",
+            description: "Seu acesso está liberado. Bem-vindo à sua área de estudos da Norte Concurso.",
+            duration: 7000,
           });
         }
         navigate({ to: "/dashboard" });
@@ -295,18 +296,21 @@ function AuthPage() {
                 <Mail className="h-7 w-7" />
               </div>
               <div className="auth-heading">
-                <h2>Bem-vindo à Norte Concurso!</h2>
+                <h2>Falta só confirmar seu e-mail</h2>
                 <p>
-                  Sua conta foi criada. Enviamos um link de confirmação para{" "}
-                  <strong className="text-foreground">{pendingEmail}</strong>. Clique no link para
-                  ativar o acesso — você entrará automaticamente.
+                  Cadastro realizado! Enviamos as instruções para{" "}
+                  <strong className="break-all text-foreground">{pendingEmail}</strong>.
                 </p>
               </div>
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Loader2 className="h-4 w-4 animate-spin" /> Aguardando confirmação do e-mail…
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-left text-sm text-foreground">
+                <ol className="list-decimal space-y-3 pl-5">
+                  <li>Abra sua <strong>caixa de entrada</strong> e procure o e-mail de confirmação da Norte Concurso.</li>
+                  <li>Não encontrou? Confira também <strong>Spam, Lixo eletrônico e Promoções</strong>. A mensagem pode levar alguns minutos para chegar.</li>
+                  <li>Clique no <strong>link de confirmação</strong> para ativar sua conta e acessar a plataforma.</li>
+                </ol>
               </div>
-              <p className="text-xs text-muted-foreground">
-                Não encontrou? Verifique a caixa de spam ou promoções.
+              <p className="text-sm text-muted-foreground">
+                Após confirmar, você será direcionado à sua área de estudos. Se o acesso não abrir automaticamente, volte aqui e entre com seu e-mail e senha.
               </p>
               <button
                 type="button"
