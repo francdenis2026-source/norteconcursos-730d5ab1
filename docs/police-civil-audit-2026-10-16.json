@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T01:39:35.185Z",
-  "generated_at": "2026-10-17T01:39:58.085Z",
+  "snapshot_at": "2026-10-17T01:43:58.765Z",
+  "generated_at": "2026-10-17T01:44:00.092Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -151,11 +151,11 @@
       "exam": "Polícia Civil de Pernambuco - Escrivão de Polícia | 2024 | Escrivão de Polícia | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 46,
-        "under_review": 9,
-        "annulled": 5
+        "active": 48,
+        "annulled": 5,
+        "under_review": 7
       },
-      "active_app_eligible": 46,
+      "active_app_eligible": 48,
       "active_with_catalog_flags": 40,
       "active_without_example_marker": 44,
       "flags": {
@@ -529,23 +529,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2598,
+      "active": 2600,
       "archived": 212,
-      "under_review": 114,
       "annulled": 37,
+      "under_review": 112,
       "obsolete": 7
     },
-    "active_app_eligible": 2168,
+    "active_app_eligible": 2170,
     "active_with_catalog_flags": 1862,
     "active_without_example_marker": 2294,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 231,
-    "newly_published": 231,
-    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 21 decisions (20 activated/one obsolete), with 19 contexts restored. Not certification of all PC records.",
+    "newly_reviewed": 233,
+    "newly_published": 233,
+    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 23 decisions (22 activated/one obsolete), with 21 contexts restored. Not certification of all PC records.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 114,
+    "pending_under_review_all_pc": 112,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1506,6 +1506,50 @@
         }
       },
       "report": "docs/question-review-pcpe-batches2-3-2026-10-16.json"
+    },
+    "pernambuco_batches4_5": {
+      "reviewed": 2,
+      "published_active": 2,
+      "cumulative_validation_current_resume": {
+        "checked_at": "2026-10-17T01:43:58.765Z",
+        "reviewed": 11,
+        "published_active": 11,
+        "contexts_restored": 10,
+        "figures_restored": 3,
+        "preserved_other_pc_records": 2957,
+        "concurrent_changes": [],
+        "metadata_concurrent_changes": [],
+        "new_topics": 2,
+        "new_sources": 2,
+        "provenance_repaired": 1,
+        "pc_status": {
+          "active": 2600,
+          "archived": 212,
+          "annulled": 37,
+          "under_review": 112,
+          "obsolete": 7
+        },
+        "pending_by_contest": {
+          "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+          "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 4,
+          "Polícia Civil de Pernambuco - Escrivão de Polícia": 7,
+          "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 31,
+          "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil": 7,
+          "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+          "Polícia Civil do Piauí – Delegado de Polícia Civil": 4,
+          "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 10,
+          "Polícia Civil de Pernambuco - Delegado de Polícia": 6,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+          "Polícia Civil de Minas Gerais": 2,
+          "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+          "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+          "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+          "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil": 9,
+          "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+          "Polícia Civil de Pernambuco - Agente de Polícia": 3
+        }
+      },
+      "report": "docs/question-review-pcpe-batches4-5-2026-10-16.json"
     }
   },
   "source_comparison_pcdf": {
