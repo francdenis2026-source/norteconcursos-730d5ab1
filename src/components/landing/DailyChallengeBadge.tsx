@@ -100,14 +100,12 @@ export function DailyChallengeBadge() {
     </>
   );
 
-  const label = `${title}. ${hint}.`;
-
   return done ? (
-    <Link to="/auth" search={{ mode: "register" }} className="daily-badge" aria-label={label}>
+    <Link to="/auth" search={{ mode: "register" }} className="daily-badge">
       {content}
     </Link>
   ) : (
-    <Link to="/desafio-diario" className="daily-badge" aria-label={label}>
+    <Link to="/desafio-diario" className="daily-badge">
       {content}
     </Link>
   );

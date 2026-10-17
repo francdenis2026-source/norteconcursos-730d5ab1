@@ -19,6 +19,7 @@ export function NorteBrand({ className, compact = false, light = false }: NorteB
         light && "is-light",
         className,
       )}
+      role="img"
       aria-label="Norte Concursos"
     >
       <svg className="norte-brand__mark" viewBox="0 0 64 64" role="img" aria-hidden="true">

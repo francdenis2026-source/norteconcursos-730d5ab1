@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -15,8 +16,7 @@ import {
   BookOpenCheck,
   BrainCircuit,
   CalendarClock,
-  Check,
-  CirclePlay,
+  ChevronRight,
   Compass,
   FileSearch,
   Landmark,
@@ -26,9 +26,7 @@ import {
   LogIn,
   ScrollText,
   ShieldCheck,
-  Sparkles,
   Target,
-  Timer,
   Trophy,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -69,20 +67,6 @@ const NAV: [string, string][] = [
   ["Planos", "#planos"],
 ];
 
-const ROLES = [
-  "Agente da Polícia Federal",
-  "Escrivão PF",
-  "Delegado de Polícia",
-  "Policial Rodoviário Federal",
-  "Investigador de Polícia",
-  "Perito Criminal",
-  "Policial Penal",
-  "Soldado PM",
-  "Bombeiro Militar",
-  "Guarda Municipal",
-];
-
-const STEP_HUES = ["gold", "sky", "emerald", "rose"] as const;
 const STEPS: [LucideIcon, string, string][] = [
   [
     Target,
@@ -165,85 +149,94 @@ const PILLARS: { icon: LucideIcon; title: string; text: string }[] = [
   },
 ];
 
-function useScrolled(threshold = 24) {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > threshold);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [threshold]);
-  return scrolled;
-}
-
-function Head({ kicker, children, lead }: { kicker: string; children: React.ReactNode; lead?: string }) {
+function Head({ kicker, children, lead }: { kicker: string; children: ReactNode; lead?: string }) {
   return (
-    <div className="hp-head">
-      <span className="hp-kicker">{kicker}</span>
-      <h2 className="hp-h2">{children}</h2>
-      {lead && <p className="hp-lead">{lead}</p>}
+    <div className="home-heading">
+      <span className="home-eyebrow">{kicker}</span>
+      <h2>{children}</h2>
+      {lead && <p>{lead}</p>}
     </div>
   );
 }
 
 function Index() {
-  const scrolled = useScrolled();
-  const [heroReady, setHeroReady] = useState(false);
-
   return (
-    <div className={`lp hp${heroReady ? " is-ready" : " is-intro"}`}>
-      <header className="lp-header" data-scrolled={scrolled}>
-        <div className="lp-container lp-header__bar">
-          <Link to="/" aria-label="Norte Concurso — início">
-            <NorteBrand light />
+    <div className="home">
+      <a href="#conteudo" className="home-skip">
+        Pular para o conteúdo
+      </a>
+      <header className="home-header">
+        <div className="home-container home-header__inner">
+          <Link to="/">
+            <NorteBrand />
           </Link>
-          <nav className="lp-nav" aria-label="Navegação principal">
+          <nav className="home-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
               <a key={href} href={href}>
                 {label}
               </a>
             ))}
           </nav>
-          <div className="lp-header__actions">
-            <Link to="/auth" search={{ mode: undefined }} className="lp-header__login">
-              <LogIn aria-hidden="true" /> Entrar
+          <div className="home-header__actions">
+            <Link to="/auth" search={{ mode: undefined }} className="home-login">
+              <LogIn /> Entrar
             </Link>
-            <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-              Começar grátis <ArrowRight />
+            <Link
+              to="/auth"
+              search={{ mode: "register" }}
+              className="home-button home-button--primary home-header__register"
+            >
+              Começar grátis <ArrowUpRight />
             </Link>
             <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <button type="button" className="lp-menu-btn" aria-label="Abrir menu">
+                <button type="button" className="home-menu-trigger" aria-label="Abrir menu">
                   <Menu />
                 </button>
               </SheetTrigger>
-              <SheetContent className="lp-sheet flex flex-col">
-                <SheetHeader className="text-left">
+              <SheetContent className="home-menu">
+                <SheetHeader>
                   <SheetTitle>
-                    <NorteBrand light />
+                    <NorteBrand />
                   </SheetTitle>
+                  <SheetDescription>
+                    Estude com direção para a carreira que você escolheu.
+                  </SheetDescription>
                 </SheetHeader>
-                <p className="lp-sheet__intro">Estude com direção para a carreira que você escolheu.</p>
-                <span className="lp-sheet__label">Explorar</span>
-                <nav className="lp-sheet-nav" aria-label="Navegação móvel">
+                <nav aria-label="Navegação móvel">
                   {NAV.map(([label, href]) => (
                     <SheetClose asChild key={href}>
                       <a href={href}>
-                        {label} <ArrowUpRight />
+                        {label}
+                        <ChevronRight />
                       </a>
                     </SheetClose>
                   ))}
-                </nav>
-                <div className="mt-auto grid gap-3 pt-10">
-                  <span className="lp-sheet__label">Acesso rápido</span>
                   <SheetClose asChild>
-                    <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                      Começar grátis <ArrowRight />
+                    <Link to="/desafio-diario">
+                      Desafio diário
+                      <ChevronRight />
+                    </Link>
+                  </SheetClose>
+                </nav>
+                <div className="home-menu__access">
+                  <SheetClose asChild>
+                    <Link
+                      to="/auth"
+                      search={{ mode: "register" }}
+                      className="home-button home-button--primary"
+                    >
+                      Começar grátis
+                      <ArrowRight />
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/auth" search={{ mode: undefined }} className="btn-glass">
+                    <Link
+                      to="/auth"
+                      search={{ mode: undefined }}
+                      className="home-button home-button--secondary"
+                    >
                       Já tenho conta
                     </Link>
                   </SheetClose>
@@ -254,160 +247,130 @@ function Index() {
         </div>
       </header>
 
-      <main>
-        <section className={`lp-hero${heroReady ? " is-ready" : ""}`}>
-          <div className="lp-hero__media" aria-hidden="true">
-            <HeroVideo onDone={() => setHeroReady(true)} />
-          </div>
-          <div className="lp-hero__shade" aria-hidden="true" />
-          <div className="lp-hero__grid" aria-hidden="true" />
-          <div className="lp-container lp-hero__body">
-            <div className="lp-hero__layout">
-              <div className="lp-hero__content">
-                <span className="chip-brass">
-                  <Compass /> Preparação para segurança pública
+      <main id="conteudo" tabIndex={-1}>
+        <section className="home-hero" aria-labelledby="home-title">
+          <div className="home-container">
+            <div className="home-hero__grid">
+              <div className="home-hero__copy">
+                <span className="home-eyebrow">
+                  <span /> Carreiras policiais e segurança pública
                 </span>
-                <h1 className="lp-hero__title">
-                  Sua aprovação não é sorte.
-                  <em>É operação bem planejada.</em>
+                <h1 id="home-title">
+                  Sua aprovação
+                  <br />
+                  tem <em>direção.</em>
                 </h1>
-                <p className="lp-hero__lead">
-                  Conteúdo direcionado, treino por banca e simulados de alta pressão para quem mira
-                  Polícia Federal, PRF, Polícias Civis, Penais e Militares.
+                <p>
+                  Do edital ao próximo treino. Questões, simulados e um plano de estudos para
+                  transformar sua dedicação em uma preparação bem planejada.
                 </p>
-                <div className="lp-hero__ctas">
-                  <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                    Iniciar minha preparação <ArrowRight />
+                <div className="home-actions">
+                  <Link
+                    to="/auth"
+                    search={{ mode: "register" }}
+                    className="home-button home-button--gold"
+                  >
+                    Iniciar minha preparação
+                    <ArrowUpRight />
                   </Link>
-                  <a href="#plataforma" className="btn-glass">
-                    <CirclePlay /> Conhecer a plataforma
+                  <a href="#plataforma" className="home-hero__explore">
+                    Conhecer a plataforma
+                    <ArrowRight />
                   </a>
                 </div>
-                <ul className="lp-hero__pillars" aria-label="Diferenciais">
-                  {(
-                    [
-                      [BadgeCheck, "emerald", "Edital e lei vigentes conferidos"],
-                      [Target, "sky", "Treino por banca e disciplina"],
-                      [Timer, "rose", "Simulados sob pressão"],
-                    ] as const
-                  ).map(([Icon, hue, label]) => (
-                    <li key={label}>
-                      <i className="app-ico" data-hue={hue} aria-hidden="true">
-                        <Icon />
-                      </i>
-                      {label}
-                    </li>
-                  ))}
-                </ul>
+                <span className="home-hero__note">
+                  Comece gratuitamente. No seu ritmo, com um objetivo claro.
+                </span>
               </div>
-              <aside className="lp-hero__panel" aria-label="Destaques">
-                <TestingSeal />
-                <DailyChallengeBadge />
-                <QuestionCountBadge />
-              </aside>
-            </div>
-            <div className="lp-hero__aside" aria-hidden="true">
-              <span className="lp-coord">
-                <b>N</b> · 08°09′S 70°21′W
-              </span>
-              <span className="lp-coord">FEIJÓ — ACRE — BRASIL</span>
-            </div>
-          </div>
-          <div className="lp-rail">
-            <div className="lp-container lp-rail__grid">
-              {(
-                [
-                  [Landmark, "sky", "Federais", "PF · PRF"],
-                  [ShieldCheck, "emerald", "Estaduais", "Civil · Penal"],
-                  [Trophy, "orange", "Militares", "PM · Bombeiros"],
-                  [Compass, "gold", "Metodologia", "Ciclo completo"],
-                ] as const
-              ).map(([Icon, hue, label, value]) => (
-                <div className="lp-rail__item" key={label}>
-                  <i className="app-ico" data-hue={hue} aria-hidden="true">
-                    <Icon />
-                  </i>
-                  <div className="lp-rail__text">
-                    <span>{label}</span>
-                    <strong>{value}</strong>
-                  </div>
+              <div className="home-hero__visual">
+                <div className="home-hero__visual-label">
+                  <span>O seu futuro começa no próximo passo.</span>
+                  <Compass aria-hidden="true" />
                 </div>
+                <HeroVideo />
+                <div className="home-hero__caption">
+                  <span>De Feijó, Acre. Para todo o Brasil.</span>
+                  <span>
+                    ESTUDE COM DIREÇÃO <ArrowUpRight aria-hidden="true" />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <ul className="home-trust" aria-label="Diferenciais">
+              <li>
+                <BadgeCheck /> Edital e lei vigentes conferidos
+              </li>
+              <li>
+                <Target /> Treino por banca e disciplina
+              </li>
+              <li>
+                <Trophy /> Simulados no ritmo da prova
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <div className="home-start home-container">
+          <TestingSeal />
+          <div className="home-start__grid">
+            <DailyChallengeBadge />
+            <QuestionCountBadge />
+          </div>
+        </div>
+
+        <section
+          id="plataforma"
+          className="home-section home-platform"
+          aria-labelledby="platform-title"
+        >
+          <div className="home-container">
+            <div id="ferramentas" className="home-section-top">
+              <div className="home-heading">
+                <span className="home-eyebrow">Sua preparação, em um só lugar</span>
+                <h2 id="platform-title">
+                  Mais clareza.
+                  <br />
+                  <em>Menos abas abertas.</em>
+                </h2>
+              </div>
+              <p className="home-section-intro">
+                Questões, simulados, rotina e desempenho conectados. Entre em cada sessão sabendo o
+                que treinar e por quê.
+              </p>
+            </div>
+            <div className="home-tools">
+              {TOOLS.map(({ icon: Icon, title, text, lead }) => (
+                <article key={title} className={`home-tool${lead ? " home-tool--featured" : ""}`}>
+                  <span className="home-icon">
+                    <Icon aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3>
+                      {title}
+                      {lead && <span className="home-tag">Principal</span>}
+                    </h3>
+                    <p>{text}</p>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        <div className="lp-marquee" aria-hidden="true">
-          <div className="lp-marquee__track">
-            {[...ROLES, ...ROLES].map((role, i) => (
-              <span className="lp-marquee__item" key={`${role}-${i}`}>
-                {role}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <PcprExamPromo />
-
-        <section className="hp-section" aria-label="Campanha PCAC 2026">
-          <div className="lp-container">
-            <div className="hp-campaign hp-campaign--image">
-              <div>
-                <div className="hp-campaign__emblems" aria-label="Identidade institucional do Acre">
-                  <img src="/media/brasao-acre-oficial.svg" alt="Brasão do Estado do Acre" />
-                  <img
-                    src="/media/brasao-pcac-oficial.jpg"
-                    alt="Brasão da Polícia Civil do Acre"
-                  />
-                </div>
-                <h3>PCAC 2026: sua próxima missão começa agora</h3>
-                <p>
-                  O novo concurso da Polícia Civil do Acre foi anunciado, com vagas previstas para
-                  Delegado, Oficial Investigador e Perito. Comece a treinar desde já.
-                </p>
-              </div>
-              <figure className="hp-campaign__visual">
-                <img
-                  src="/media/hero/landing-pcac.webp"
-                  alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
-                  width={1672}
-                  height={941}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div className="hp-campaign__side">
-                <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                  Quero me preparar <ArrowRight />
-                </Link>
-                <span className="hp-campaign__status">
-                  <CalendarClock className="h-3.5 w-3.5" /> Edital ainda não publicado
-                </span>
-                <small>
-                  Campanha educacional independente, sem vínculo ou endosso do Governo do Acre ou
-                  da Polícia Civil.
-                </small>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="como" className="hp-section hp-section--tint">
-          <div className="lp-container">
+        <section id="como" className="home-section home-method">
+          <div className="home-container">
             <Head
               kicker="Como funciona"
-              lead="Um ciclo objetivo que transforma edital, desempenho e tempo disponível em uma rotina executável até a prova."
+              lead="Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma rotina até a prova."
             >
-              Preparação é estratégia, <em>não improviso.</em>
+              Cada etapa tem <em>um propósito.</em>
             </Head>
-            <ol className="hp-grid" style={{ listStyle: "none", margin: 0, padding: 0 }}>
+            <ol className="home-steps">
               {STEPS.map(([Icon, title, text], i) => (
-                <li className="hp-card" key={title}>
-                  <div className="hp-card__top">
-                    <span className="hp-ico" data-hue={STEP_HUES[i]}>
-                      <Icon />
-                    </span>
-                    <span className="hp-step__n">0{i + 1}</span>
+                <li key={title}>
+                  <div className="home-step__top">
+                    <span>0{i + 1}</span>
+                    <Icon aria-hidden="true" />
                   </div>
                   <h3>{title}</h3>
                   <p>{text}</p>
@@ -417,64 +380,125 @@ function Index() {
           </div>
         </section>
 
-        <section id="ferramentas" className="hp-section">
-          <div className="lp-container">
+        <section id="concursos" className="home-section">
+          <div className="home-container">
             <Head
-              kicker="Ferramentas"
-              lead="Questões, simulados, rotina e desempenho no mesmo painel: você entra em cada sessão sabendo o que treinar e por quê."
+              kicker="No seu radar"
+              lead="Uma prova para praticar agora. Uma próxima oportunidade para começar a se preparar."
             >
-              Cada dado aponta para a <em>próxima ação.</em>
+              Seu próximo <em>objetivo.</em>
             </Head>
-            <div className="hp-grid hp-tools">
-              {TOOLS.map(({ icon: Icon, title, text, lead }) => (
-                <article key={title} className={`hp-card${lead ? " hp-card--lead" : ""}`}>
-                  <span className="hp-ico">
-                    <Icon />
+            <div className="home-opportunities">
+              <PcprExamPromo />
+              <article
+                className="home-opportunity home-opportunity--acre"
+                aria-labelledby="pcac-title"
+              >
+                <div className="home-opportunity__image">
+                  <img
+                    src="/media/hero/landing-pcac.webp"
+                    alt="Composição ilustrativa de profissionais da Polícia Civil do Acre"
+                    width={1672}
+                    height={941}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="home-status">
+                    <CalendarClock /> Edital ainda não publicado
                   </span>
-                  <h3>
-                    {title}
-                    {lead && <span className="hp-badge">Principal</span>}
-                  </h3>
-                  <p>{text}</p>
-                </article>
-              ))}
+                </div>
+                <div className="home-opportunity__body">
+                  <div className="home-opportunity__identity">
+                    <span className="home-eyebrow">Preparação antecipada · PCAC 2026</span>
+                    <div>
+                      <img
+                        src="/media/brasao-acre-oficial.svg"
+                        alt="Brasão do Estado do Acre"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                      />
+                      <img
+                        src="/media/brasao-pcac-oficial.jpg"
+                        alt="Brasão da Polícia Civil do Acre"
+                        width={32}
+                        height={32}
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <h3 id="pcac-title">Polícia Civil do Acre</h3>
+                  <p>
+                    O novo concurso foi anunciado, com vagas previstas para Delegado, Oficial
+                    Investigador e Perito. Sua preparação pode começar agora.
+                  </p>
+                  <div className="home-opportunity__bottom">
+                    <Link
+                      to="/auth"
+                      search={{ mode: "register" }}
+                      className="home-button home-button--secondary"
+                    >
+                      Quero me preparar
+                      <ArrowUpRight />
+                    </Link>
+                    <small>
+                      Campanha educacional independente, sem vínculo ou endosso do Governo do Acre
+                      ou da Polícia Civil.
+                    </small>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section id="carreiras" className="hp-section hp-section--photo">
-          <div className="lp-container">
-            <Head kicker="Para quem é">
-              A plataforma de quem escolheu <em>servir e proteger.</em>
-            </Head>
-            <div className="hp-grid hp-careers">
+        <section id="carreiras" className="home-section home-careers">
+          <div className="home-container home-careers__layout">
+            <div>
+              <Head kicker="Para quem escolheu servir e proteger">
+                Uma plataforma.
+                <br />
+                <em>A sua carreira.</em>
+              </Head>
+              <p className="home-section-intro">
+                Preparação para Polícia Federal, PRF, Polícias Civis, Penais, Militares e outras
+                carreiras da segurança pública.
+              </p>
+              <a className="home-text-link" href="#planos">
+                Encontre seu ponto de partida
+                <ArrowRight />
+              </a>
+            </div>
+            <div className="home-careers__grid">
               {CAREERS.map(([name, roles], i) => (
-                <div className="hp-career" key={name}>
-                  <b>{String(i + 1).padStart(2, "0")}</b>
-                  <strong>{name}</strong>
-                  <small>{roles}</small>
+                <div className="home-career" key={name}>
+                  <span>{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{name}</h3>
+                    <p>{roles}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="hp-section" aria-label="Rastreabilidade jurídica">
-          <div className="lp-container">
+        <section className="home-section home-sources" aria-label="Rastreabilidade jurídica">
+          <div className="home-container">
             <Head
               kicker="Rastreabilidade jurídica"
               lead="Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de vigência."
             >
-              Estude o que é <em>vigente.</em> Com fonte.
+              Estude com fonte. <em>Avance com confiança.</em>
             </Head>
-            <div className="hp-grid" style={{ ["--hp-min" as string]: "280px" }}>
+            <div className="home-sources__grid">
               {PILLARS.map(({ icon: Icon, title, text }) => (
-                <article className="hp-card" key={title}>
-                  <span className="hp-ico">
-                    <Icon />
-                  </span>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
+                <article key={title}>
+                  <Icon aria-hidden="true" />
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -483,163 +507,81 @@ function Index() {
 
         <PlansSection />
 
-        <section className="hp-final" aria-labelledby="hp-final-title">
-          <div className="lp-container">
-            <div className="hp-final__box">
-              <span className="chip-brass">
-                <Sparkles /> Pronto para entrar em operação
-              </span>
-              <h2 id="hp-final-title" className="hp-h2">
-                Disciplina sem estratégia desgasta. <em>Treino orientado aprova.</em>
-              </h2>
-              <p className="hp-lead">
-                Defina sua carreira, faça o diagnóstico e comece o primeiro ciclo de treino.
-              </p>
-              <div className="hp-final__actions">
-                <Link to="/auth" search={{ mode: "register" }} className="btn-brass">
-                  Começar gratuitamente <ArrowRight />
+        <section className="home-final" aria-labelledby="home-final-title">
+          <div className="home-container">
+            <div className="home-final__inner">
+              <div>
+                <span className="home-eyebrow">O próximo passo é seu</span>
+                <h2 id="home-final-title">
+                  Dedicação você já tem.
+                  <br />
+                  <em>Agora, estude com direção.</em>
+                </h2>
+                <p>
+                  Defina sua carreira, faça o diagnóstico e comece seu primeiro ciclo de treino.
+                </p>
+              </div>
+              <div className="home-final__actions">
+                <Link
+                  to="/auth"
+                  search={{ mode: "register" }}
+                  className="home-button home-button--gold"
+                >
+                  Começar gratuitamente
+                  <ArrowUpRight />
                 </Link>
-                <Link to="/desafio-diario" className="btn-glass">
-                  <BookOpenCheck /> Fazer o desafio diário
+                <Link to="/desafio-diario" className="home-final__challenge">
+                  <BookOpenCheck />
+                  Fazer o desafio diário
+                  <ArrowRight />
                 </Link>
               </div>
-              <img
-                className="hp-final__img"
-                src="/media/hero/lineup-carreiras-ajustada.webp"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="lp-footer">
-        <div className="lp-container lp-footer__grid">
-          <div className="lp-footer__brand">
-            <NorteBrand light />
-            <p>Inteligência de estudo para as carreiras que protegem o Brasil.</p>
+      <footer className="home-footer">
+        <div className="home-container">
+          <div className="home-footer__grid">
+            <div className="home-footer__brand">
+              <NorteBrand />
+              <p>Inteligência de estudo para as carreiras que protegem o Brasil.</p>
+              <span>De Feijó, Acre, para todo o Brasil.</span>
+            </div>
+            <FooterColumn
+              title="Plataforma"
+              links={[
+                ["Como funciona", "#como"],
+                ["Ferramentas", "#ferramentas"],
+                ["Carreiras", "#carreiras"],
+                ["Desafio diário", "/desafio-diario"],
+              ]}
+            />
+            <FooterColumn
+              title="Institucional"
+              links={[
+                ["Nossa história", "/sobre"],
+                ["Privacidade", "/privacy"],
+                ["Termos de uso", "/terms"],
+                ["Central de suporte", "/suporte"],
+              ]}
+            />
+            <FooterColumn
+              title="Acesso"
+              links={[
+                ["Entrar", "/auth"],
+                ["Criar conta", "/auth?mode=register"],
+              ]}
+            />
           </div>
-          <FooterColumn
-            title="Plataforma"
-            links={[
-              ["Como funciona", "#como"],
-              ["Ferramentas", "#ferramentas"],
-              ["Carreiras", "#carreiras"],
-              ["Desafio diário", "/desafio-diario"],
-            ]}
-          />
-          <FooterColumn
-            title="Institucional"
-            links={[
-              ["Nossa história", "/sobre"],
-              ["Privacidade", "/privacy"],
-              ["Termos de uso", "/terms"],
-              ["Central de suporte", "/suporte"],
-            ]}
-          />
-          <FooterColumn
-            title="Acesso"
-            links={[
-              ["Entrar", "/auth"],
-              ["Criar conta", "/auth?mode=register"],
-            ]}
-          />
-        </div>
-        <div className="lp-container lp-footer__bottom">
-          <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
-          <span className="lp-footer__dev">Desenvolvido por Franc D'nis</span>
-          <span className="lp-coord">
-            <b>N</b> · De Feijó-Acre para todo o Brasil
-          </span>
+          <div className="home-footer__bottom">
+            <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
+            <span>Desenvolvido por Franc D'nis</span>
+            <span>08°09′S 70°21′W</span>
+          </div>
         </div>
       </footer>
-    </div>
-  );
-}
-
-function ProductMock() {
-  const progress = ["ok", "ok", "ko", "ok", "ok", "ok", "ko", "ok", "ok", "ok", "ok", "now"];
-  const options: [string, string, boolean?][] = [
-    ["A", "o recebimento da denúncia pelo juiz"],
-    ["B", "o trânsito em julgado de sentença penal condenatória", true],
-    ["C", "a prolação da sentença em primeiro grau"],
-    ["D", "a confirmação da condenação em segunda instância"],
-  ];
-  return (
-    <div className="lp-mock" aria-hidden="true">
-      <div className="lp-mock__chrome">
-        <span className="lp-mock__dots">
-          <i />
-          <i />
-          <i />
-        </span>
-        <span className="lp-mock__title">Treinador de questões</span>
-        <span className="lp-mock__live">
-          <b /> Correção imediata
-        </span>
-      </div>
-      <div className="lp-mock__app">
-        <div className="lp-mock__head">
-          <div>
-            <span className="lp-mock__tag">Direito Constitucional</span>
-            <strong>
-              Questão 12 <em>de 30</em>
-            </strong>
-          </div>
-          <span className="lp-mock__timer">
-            <Timer /> 01:42
-          </span>
-        </div>
-        <div className="lp-mock__progress">
-          {progress.map((state, i) => (
-            <i key={i} className={state} />
-          ))}
-          {[0, 1, 2].map((i) => (
-            <i key={`rest-${i}`} />
-          ))}
-        </div>
-        <p className="lp-mock__stem">
-          Segundo a Constituição Federal de 1988, a presunção de inocência prevalece até:
-        </p>
-        <div className="lp-mock__opts">
-          {options.map(([letter, text, correct]) => (
-            <div className={`lp-mock__opt${correct ? " is-correct" : ""}`} key={letter}>
-              <b>{letter}</b>
-              <span>{text}</span>
-              {correct && (
-                <small>
-                  <Check /> Correta
-                </small>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="lp-mock__explain">
-          <ScrollText />
-          <div>
-            <strong>Por que a alternativa B está correta</strong>
-            <p>
-              Ninguém será considerado culpado até o trânsito em julgado de sentença penal
-              condenatória.
-            </p>
-            <span>
-              <ShieldCheck /> CF/88, art. 5º, LVII · fonte oficial verificada
-            </span>
-          </div>
-        </div>
-        <div className="lp-mock__stats">
-          <span>
-            <b>83%</b> acertos
-          </span>
-          <span>
-            <b>9</b> em sequência
-          </span>
-          <span className="lp-mock__ai">✦ IA explicou · salvo no caderno</span>
-        </div>
-      </div>
     </div>
   );
 }
@@ -647,7 +589,7 @@ function ProductMock() {
 function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
   return (
     <div>
-      <h4>{title}</h4>
+      <h3>{title}</h3>
       <ul>
         {links.map(([label, href]) => (
           <li key={label}>
