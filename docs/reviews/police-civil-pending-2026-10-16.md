@@ -268,3 +268,12 @@ Cada comentário contém exemplos contrastantes e exercício respondido. Inserid
 **Restam 16 pendências: RO oito, MT duas (item 60 nos dois cargos), AM duas, RJ duas, PE uma e MG uma.** Acervo PC: 2.968 registros — 2.624 ativos, 279 arquivados, 37 anulados, 12 obsoletos e 16 em revisão. Ativos elegíveis pelo filtro da aplicação: 2.182, sem certificação integral de todos. Das 32 pendências da retomada anterior, 16 têm decisão concluída (12 ativos e quatro obsoletos); a matriz individual foi atualizada.
 
 O item 60 continua retido: o caderno restringe a exceção do art. 120 a ensino, enquanto o texto legal consultado usa casos previstos em lei. O confronto dos modificadores não demonstrou alteração desse artigo que esclarecesse integralmente a formulação; não foi inventada resposta nem descartada a controvérsia por analogia.
+
+
+### Rechecagem das 16 pendências — 17/10/2026
+
+Main integrada até `f68ddb0`, preservando publicação da outra conta. Novo snapshot confirmou 2.968 registros PC sem alterações desde a publicação anterior: 2.624 ativos, 279 arquivados, 37 anulados, 12 obsoletos e 16 em revisão. Nenhuma gravação no banco nesta rechecagem.
+
+MT60 (dois cargos): a revogação do art.119 pela LC803/2024 não alcança a devolução de equipamentos, prevista no art.301, parágrafo único. Não usar essa revogação como motivo para retirar as questões. Mantida pendência relativa à assertiva I/art.120.
+
+MG48: localizada página correta do manual OPAS, com link para biblioteca bloqueada pelo proxy. Obtida edição árabe OMS2007, digitalizada sem texto extraível; ainda não comprova a proposição técnica. Evidências e hashes no relatório `pc-remaining16-recheck-2026-10-17.json`; PDFs e snapshots ignorados em outputs.
