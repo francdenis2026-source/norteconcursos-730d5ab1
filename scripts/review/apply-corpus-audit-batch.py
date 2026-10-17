@@ -25,6 +25,8 @@ def fingerprint(value):
 def validate(pack):
     if not pack.get('batch_id') or not pack.get('items'):
         raise ValueError('Nonempty identified batch required')
+    if len(pack['items']) > 100:
+        raise ValueError('A private audit batch may contain at most 100 candidates')
     seen = set()
     now = datetime.datetime.now(datetime.timezone.utc)
     for item in pack['items']:
@@ -41,6 +43,8 @@ def validate(pack):
             raise ValueError('Individual explanation and example required')
         if not item.get('reason') or not item.get('evidence'):
             raise ValueError('Individual reason and official evidence required')
+        if 'legal_current' in item and not isinstance(item['legal_current'], bool):
+            raise ValueError('Explicit legal verification must be boolean')
         for evidence in item['evidence']:
             url = urllib.parse.urlsplit(evidence['url'])
             stamp = datetime.datetime.fromisoformat(evidence['checked_at'].replace('Z', '+00:00'))
@@ -59,15 +63,15 @@ def next_payload(actual, item):
         publication_approved=False,
         explanation=item['explanation'], example=item['example'], reason=item['reason'],
         reviewed_at=item['evidence'][0]['checked_at'],
-        legal_current=item['next_status'] == 'reviewed',
+        legal_current=item.get('legal_current', item['next_status'] == 'reviewed'),
         answer_verified=False, context_complete=False,
         original_exam_answer_not_verified=True,
-        primary_evidence=[dict(e, verified=True, title='CPC/2015 — texto oficial do Planalto')
+        primary_evidence=[dict(e, verified=True, title=e.get('title', 'CPC/2015 — texto oficial do Planalto'))
                           for e in item['evidence']],
         batch_id=item['batch_id'],
         remaining_blockers=['Conferir prova e gabarito definitivo oficial',
                             'Confirmar contexto, figuras e segmentação',
-                            'Conferir vínculo individual ao edital vigente antes de publicar'])
+                            'Conferir vínculo individual ao edital vigente antes de publicar'] + item.get('additional_blockers', []))
     return payload
 
 

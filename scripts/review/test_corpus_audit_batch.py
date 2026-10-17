@@ -78,6 +78,27 @@ class BatchTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Publication'):
                 module.apply_batch(pack, lambda *a: [row], pathlib.Path(folder) / 'report.json')
 
+    def test_partial_legal_review_is_not_upgraded_and_keeps_specific_authority(self):
+        row, pack = self.fixture()
+        item = {**pack['items'][0], 'batch_id': pack['batch_id'], 'legal_current': False,
+                'additional_blockers': ['Locate the competent court decision']}
+        item['evidence'][0]['title'] = 'Constituição Federal — Planalto'
+        payload = module.next_payload(row, item)
+        review = payload['individual_review']
+        self.assertFalse(review['legal_current'])
+        self.assertFalse(review['publication_approved'])
+        self.assertEqual(review['primary_evidence'][0]['title'], 'Constituição Federal — Planalto')
+        self.assertIn('Locate the competent court decision', review['remaining_blockers'])
+        pack['items'][0]['legal_current'] = 'false'
+        with self.assertRaisesRegex(ValueError, 'boolean'):
+            module.validate(pack)
+
+    def test_larger_than_user_requested_batch_is_rejected(self):
+        _, pack = self.fixture()
+        pack['items'] *= 101
+        with self.assertRaisesRegex(ValueError, 'at most 100'):
+            module.validate(pack)
+
 
 if __name__ == '__main__':
     unittest.main()
