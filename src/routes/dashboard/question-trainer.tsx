@@ -1,3 +1,4 @@
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { useQuery } from "@tanstack/react-query";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
@@ -1511,6 +1512,7 @@ function QuestionTrainer() {
               </details>
             )}
             <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
+            <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
               {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
             </p>

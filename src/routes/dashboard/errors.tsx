@@ -1,3 +1,4 @@
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 // Caderno de erros: toda questão que o aluno errou no Treinador entra aqui
 // automaticamente (vem de question_training_responses, a mesma fonte de
 // verdade do Treinador — nada de mock). O aluno não responde de novo aqui;
@@ -553,6 +554,7 @@ function ErrorsPage() {
                     <p className="whitespace-pre-line text-sm leading-6">
                       {parseQuestion(detail.text).stem}
                     </p>
+                    <QuestionFigures urls={detail.figures} illustrations={parseQuestion(detail.text).illustrations} />
                     <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
                       <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
                         Resposta correta

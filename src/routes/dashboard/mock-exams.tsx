@@ -1,3 +1,5 @@
+import { QuestionSupportText } from "@/components/library/QuestionSupportText";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { SimulatorPaperPicker } from "@/components/dashboard/SimulatorPaperPicker";
 import {
   saveSimulatorResult,
@@ -933,8 +935,8 @@ function ProfessionalSimulator() {
               <Target className="h-5 w-5 text-emerald-600" /> Configure sua prova
             </CardTitle>
             <CardDescription>
-              Clique em uma prova identificada no acervo para começar, ou monte seu próprio simulado.
-              O gabarito só aparece ao finalizar.
+              Clique em uma prova identificada no acervo para começar, ou monte seu próprio
+              simulado. O gabarito só aparece ao finalizar.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -1556,9 +1558,26 @@ function ActiveSimulator(p: {
             </div>
           </CardHeader>
           <CardContent className="space-y-7 p-6 md:p-9">
+            {parseQuestion(current.text).base && (
+              <details open className="rounded-xl border bg-muted/30 p-4">
+                <summary className="cursor-pointer text-sm font-semibold">
+                  {parseQuestion(current.text).baseLabel}
+                </summary>
+                <div className="mt-3 max-h-96 overflow-y-auto">
+                  <QuestionSupportText
+                    text={parseQuestion(current.text).base}
+                    citesLines={/linhas?\s+\d+/i.test(current.text)}
+                  />
+                </div>
+              </details>
+            )}
             <p className="mx-auto max-w-5xl whitespace-pre-wrap text-base font-medium leading-8 md:text-lg">
               {parseQuestion(current.text).stem}
             </p>
+            <QuestionFigures
+              urls={current.figures}
+              illustrations={parseQuestion(current.text).illustrations}
+            />
             <div className="rounded-2xl border bg-muted/20 p-5">
               <p className="mb-4 text-sm font-bold">
                 {simulatorAnswers(current).join("") === "CE"

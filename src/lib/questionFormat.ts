@@ -1,3 +1,4 @@
+import { extractQuestionIllustrations, type QuestionIllustration } from "@/lib/questionMedia";
 import { acreDate } from "@/lib/acreTime";
 // Tipos e helpers de formatação de questão compartilhados entre o Treinador
 // de Questões (área logada, /dashboard/question-trainer) e o Desafio Diário
@@ -170,6 +171,7 @@ export function shuffled<T>(items: T[]) {
 }
 
 export type ParsedQuestion = {
+  illustrations?: QuestionIllustration[];
   baseLabel: string;
   base: string;
   stem: string;
@@ -179,6 +181,12 @@ export type ParsedQuestion = {
 // question_text guarda tudo num campo só: "Texto-base:\n…\n\n<enunciado>\n(A) …\n(B) …" (ou
 // "Comando:\n…\n\nItem: …" nos itens Certo/Errado). Separamos texto de apoio, enunciado e alternativas.
 export function parseQuestion(raw: string): ParsedQuestion {
+  const { text, illustrations } = extractQuestionIllustrations(raw);
+  const parsed = parseQuestionContent(text);
+  return illustrations.length ? { ...parsed, illustrations } : parsed;
+}
+
+function parseQuestionContent(raw: string): ParsedQuestion {
   let text = raw.replace(/\r/g, "").trim();
   let base = "";
   let baseLabel = "Texto de apoio";
