@@ -1,0 +1,278 @@
+{
+  "checked_at": "2026-10-17T17:05:39.863Z",
+  "scope": "Two individual judicial questions, PCRO Delegado 20 and 41; no certification of the other pending questions or the whole laws.",
+  "reviewed": 2,
+  "published_active": 2,
+  "preserved_other_pc_records": 2966,
+  "concurrent_changes": [],
+  "metadata_changes": [
+    {
+      "table": "content_sources",
+      "id": "5dec6f4e-222a-4d85-9448-ca998d146c1e",
+      "change": "inserted"
+    }
+  ],
+  "pc_status": {
+    "active": 2670,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 38,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+    "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 7,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "tests": {
+    "publication_and_provenance": 15
+  },
+  "application_changes": false,
+  "items": [
+    {
+      "id": "0bfa2d6d-e3ac-4c22-9088-907906ec544c",
+      "item_number": 20,
+      "answer": "E",
+      "status": "active",
+      "source_page": 2,
+      "eligible": true,
+      "before_sha256": "be367914c195c1c52ea591aac22b29ed3ee1ff321d869f47ab567b68ffde5674",
+      "after_sha256": "1652a46199446b9fafc14247463d121ad3c9e63cf716fd3013b5253e2647301b",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "73ad486f-79b4-50fa-9d8f-58555a8d5e58",
+        "review_note": "Gabarito definitivo: E. HABEAS DATA protege o conhecimento e a retificação de dados relativos à pessoa do impetrante, em bancos governamentais ou de caráter público (CF, art. 5º, LXXII). Não é instrumento para pedir simplesmente CÓPIA INTEGRAL de um processo administrativo. No REsp 904.447/RJ (STJ, 08/05/2007; Informativo 319), o tribunal apontou a inadequação do HD e a possibilidade de mandado de segurança na hipótese. Isso não transforma todo dado pessoal inserido em um processo em informação inacessível: é preciso distinguir o objeto efetivo do pedido.\nA: a ação constitucional é gratuita (CF, art. 5º, LXXVII); não se deve tratá-la como ação comum com condenação sucumbencial. Isso não significa gratuidade obrigatória de honorários contratuais de advogado particular. B: o STF, RE 673.707, Tema 582, admite HD pelo próprio contribuinte para obter seus dados de pagamento de tributos nos sistemas fazendários. C: a formulação absoluta é falsa: no HD 147/DF (STJ, 12/12/2007; Informativo 342), reconheceu-se legitimidade da viúva para defender o interesse do falecido, com pretensão resistida. Isso não libera qualquer herdeiro a consultar indiscriminadamente dados de terceiros. D: não se pode transplantar automaticamente ao HD a legitimação do mandado de injunção coletivo; o objeto constitucional aqui são os dados pessoais do impetrante.\nExemplo: corrigir um dado pessoal incorreto em banco público é finalidade própria do HD, observados os requisitos. Solicitar o inteiro teor de um processo para acompanhar sua tramitação é outro pedido, para o qual o HD não substitui o instrumento adequado.\nTeste rápido — O próprio contribuinte está impedido de usar HD só porque o banco de dados é tributário? Não; o Tema 582 reconhece essa possibilidade para os seus dados.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "title": "Constituição Federal, art. 5º, LXXII e LXXVII — habeas data; STJ REsp 904.447/RJ e HD 147/DF; STF Tema 582"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T17:02:58.849062+00:00",
+        "verified_at": "2026-10-17T17:02:58.849062+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual de comando, alternativas, chave e programa do cargo. Julgados identificados e lidos no próprio STJ/STF; recortes de leis federais relidos nas capturas oficiais com hashes preservados.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=007629",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=008202",
+          "https://noticias.stf.jus.br/postsnoticias/plenario-habeas-data-e-adequado-para-obtencao-de-informacoes-fiscais/",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "court_captures": [
+          {
+            "name": "hd-processo",
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=007629",
+            "path": "outputs/pc-pending-review-2026-10-16/ro-next-hd-processo.html",
+            "sha256": "c7f536445ede2510e72312c217986173f636aeb32077bb58aa47b84f6020fdc5",
+            "captured_at": "2026-10-17T17:01:19.560Z"
+          },
+          {
+            "name": "hd-viuva",
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=008202",
+            "path": "outputs/pc-pending-review-2026-10-16/ro-next-hd-viuva.html",
+            "sha256": "e75aaa35ca8338d254033ef34886d4c907f5991447372c9efb94d19bd221a335",
+            "captured_at": "2026-10-17T17:01:19.655Z"
+          },
+          {
+            "url": "https://noticias.stf.jus.br/postsnoticias/plenario-habeas-data-e-adequado-para-obtencao-de-informacoes-fiscais/",
+            "path": "outputs/pc-pending-review-2026-10-16/ro-next-tax-decision.html",
+            "sha256": "dcd84d829e914a33c21fb32e793960425aa2c30a1a47a44a26b3c5594bfe39f4"
+          }
+        ],
+        "federal_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          }
+        ],
+        "source_limitations": "A nova tentativa de obter Lei 9507 no Planalto retornou 503; ela não foi apresentada como captura obtida. Bases publicadas são os recortes oficiais já capturados da CF e, no item 41, Lei 12850. Resolução CNMP 20/2007 é referência histórica dos julgados, não foi certificada como regulamentação vigente.",
+        "official_pdf_page": 2,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "2113a3d2-fa29-47b7-9358-244320c3ef45",
+      "item_number": 41,
+      "answer": "D",
+      "status": "active",
+      "source_page": 5,
+      "eligible": true,
+      "before_sha256": "6ced167fac92233e471edbfc825b78525820b9434414cf1a6117bb822015ee6a",
+      "after_sha256": "16d187c176cd6cad0df3b087fe588f8bde7c7d8a1d755382f9f3692ae52b8dc6",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "d24db1cb-d91c-5d6f-b3b9-9d96ae9f1469",
+        "review_note": "Gabarito definitivo: D. SIGILO não elimina o controle externo da atividade policial. No REsp 1.365.910/RS (STJ, 05/04/2016; Informativo 590), o MP pode acessar ordens de missão policial. Na situação específica de cooperação internacional exclusiva da PF com acordo de sigilo, o precedente admite acesso A POSTERIORI, em vez de imunidade ao controle. A função constitucional está no art. 129, VII, da CF.\nA: ouvir o MP é diferente de exigir sua concordância. O art. 4º, § 6º, da Lei 12.850/2013 prevê manifestação do MP na negociação pelo delegado; a alternativa dispensa a manifestação anterior à decisão judicial. B: no REsp 1.439.193/RJ (STJ, 14/06/2016; Informativo 587), o controle externo não confere acesso irrestrito a todos os relatórios de inteligência da PF, mas aos ligados à persecução penal. Esse limite específico NÃO significa que o MP deixe de fiscalizar a atividade policial ostensiva nem que possa acessar qualquer relatório com outro fundamento sem observar os requisitos próprios. C: é incorreto excluir em bloco a polícia técnica da atividade-fim fiscalizável. E: também é incorreta uma proibição absoluta de inspeção de salas de inteligência; devem ser respeitados o objeto legítimo da fiscalização, o sigilo e as atribuições constitucionais.\nExemplo: uma missão sigilosa de cooperação internacional não se torna uma área sem fiscalização; no caso tratado pelo STJ, a documentação é controlável depois da atuação, preservados os pressupostos do sigilo. Em contraste, o rótulo controle externo não autoriza acesso ilimitado a toda informação de inteligência sem nexo com sua finalidade.\nTeste rápido — Acesso posterior é o mesmo que proibição permanente de acesso? Não. É uma forma de compatibilizar controle e sigilo no caso descrito.",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "title": "Constituição Federal, art. 129, VII — controle externo da atividade policial"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "title": "Lei 12.850/2013, art. 4º, § 6º — manifestação do MP na colaboração negociada pelo delegado"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T17:02:58.849062+00:00",
+        "verified_at": "2026-10-17T17:02:58.849062+00:00",
+        "legal_review_required": true,
+        "legal_audit_completed": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revisão individual de comando, alternativas, chave e programa do cargo. Julgados identificados e lidos no próprio STJ/STF; recortes de leis federais relidos nas capturas oficiais com hashes preservados.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=016041",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=015977",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm"
+        ],
+        "court_captures": [
+          {
+            "name": "controle-omp",
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=016041",
+            "path": "outputs/pc-pending-review-2026-10-16/ro-next-controle-omp.html",
+            "sha256": "7a6d5b368873c10c9aea674016ed2213c8505584d9f81a7b7f2b559122fcb879",
+            "captured_at": "2026-10-17T17:01:19.294Z"
+          },
+          {
+            "name": "controle-inteligencia",
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=@CNOT=015977",
+            "path": "outputs/pc-pending-review-2026-10-16/ro-next-controle-inteligencia.html",
+            "sha256": "32f8c535f28bc2c124b164831733dd527af0433aedb99d0f6bad296425c3e518",
+            "captured_at": "2026-10-17T17:01:19.650Z"
+          }
+        ],
+        "federal_captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+            "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+            "captured_at": "2026-10-16T20:42:33.965Z"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/morelaws/org.html",
+            "sha256": "510ed9f0f4892bfee3a10172930c0ae826c83a4cb1d55aabc37d6f2f1f763223",
+            "captured_at": "2026-10-16T21:57:58.570Z",
+            "registered": true
+          }
+        ],
+        "source_limitations": "A nova tentativa de obter Lei 9507 no Planalto retornou 503; ela não foi apresentada como captura obtida. Bases publicadas são os recortes oficiais já capturados da CF e, no item 41, Lei 12850. Resolução CNMP 20/2007 é referência histórica dos julgados, não foi certificada como regulamentação vigente.",
+        "official_pdf_page": 5,
+        "original_answer_preserved": true
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "0bfa2d6d-e3ac-4c22-9088-907906ec544c",
+      "patch": {
+        "question_source_id": "8c82ad79-7d5d-58cc-b716-0e6096fd04cd",
+        "answer_key_source_id": "3250d046-3bd8-5789-a75c-924e6df54eca",
+        "source_page": 2,
+        "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO). | Revisão 17/10/2026, retida: Afirmações de jurisprudência do STF/STJ sobre habeas data (honorários, legitimidade de sucessores, HD coletivo, dados fazendários) não confirmadas no tribunal.\nProveniência conferida no caderno oficial de Delegado e chave definitiva do próprio cargo; texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T17:02:58.849062+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual do caderno de Delegado 732_PCRO_002_01 e chave definitiva; página real confirmada, sem usar caderno de outra carreira.",
+        "visually_verified": true,
+        "item_number": 20,
+        "official_answer": "E",
+        "page": 2,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        }
+      }
+    },
+    {
+      "id": "2113a3d2-fa29-47b7-9358-244320c3ef45",
+      "patch": {
+        "question_source_id": "8c82ad79-7d5d-58cc-b716-0e6096fd04cd",
+        "answer_key_source_id": "3250d046-3bd8-5789-a75c-924e6df54eca",
+        "source_page": 5,
+        "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO). | Revisão 17/10/2026, retida: Afirmações sobre controle externo da atividade policial (STF/STJ) não confirmadas no tribunal.\nProveniência conferida no caderno oficial de Delegado e chave definitiva do próprio cargo; texto, letra e extração bruta preservados.",
+        "verified_at": "2026-10-17T17:02:58.849062+00:00"
+      },
+      "evidence": {
+        "reason": "Cotejo visual individual do caderno de Delegado 732_PCRO_002_01 e chave definitiva; página real confirmada, sem usar caderno de outra carreira.",
+        "visually_verified": true,
+        "item_number": 41,
+        "official_answer": "D",
+        "page": 5,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        }
+      }
+    }
+  ],
+  "metadata_scope": "No metadata writes by this operation. One source inserted concurrently by another session was observed and preserved; no existing source, edition or topic changed.",
+  "federal_capture_limitations": "New requests for CF, Lei 12850 and Lei 9507 returned HTTP 503. CF and Lei 12850 excerpts were reread from the preserved official 16/10 captures; no successful new federal capture is claimed. Four STJ notes and the STF tax-data decision were retrieved during this continuation."
+}

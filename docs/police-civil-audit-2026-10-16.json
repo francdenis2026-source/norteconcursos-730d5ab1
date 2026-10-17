@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T16:50:37.706Z",
-  "generated_at": "2026-10-17T16:51:41.420Z",
+  "snapshot_at": "2026-10-17T17:05:39.863Z",
+  "generated_at": "2026-10-17T17:06:22.389Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -291,11 +291,11 @@
       "exam": "Polícia Civil do Estado de Rondônia - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
       "records": 98,
       "status": {
-        "active": 88,
-        "under_review": 9,
+        "active": 90,
+        "under_review": 7,
         "archived": 1
       },
-      "active_app_eligible": 86,
+      "active_app_eligible": 88,
       "active_with_catalog_flags": 10,
       "active_without_example_marker": 37,
       "flags": {
@@ -529,23 +529,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2668,
+      "active": 2670,
       "archived": 215,
       "annulled": 37,
-      "under_review": 40,
+      "under_review": 38,
       "obsolete": 8
     },
-    "active_app_eligible": 2228,
+    "active_app_eligible": 2230,
     "active_with_catalog_flags": 1720,
     "active_without_example_marker": 2323,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 276,
-    "newly_published": 276,
-    "scope": "PCDF 111 canonical reviews; RO 116 decisions (113 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions.",
+    "newly_reviewed": 278,
+    "newly_published": 278,
+    "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 40,
+    "pending_under_review_all_pc": 38,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1682,6 +1682,37 @@
         "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
       },
       "report": "docs/question-review-pcmt-batch1-2026-10-17.json"
+    },
+    "rondonia_judicial_continuation": {
+      "reviewed": 2,
+      "published_active": 2,
+      "preserved_other_pc_records": 2966,
+      "concurrent_changes": [],
+      "metadata_changes": [
+        {
+          "table": "content_sources",
+          "id": "5dec6f4e-222a-4d85-9448-ca998d146c1e",
+          "change": "inserted"
+        }
+      ],
+      "tests": {
+        "publication_and_provenance": 15
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 7,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcro-judicial-continuation-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {
