@@ -12,14 +12,22 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     // explicit jurisdiction and the official SINJ norm route, never any .gov URL.
     const district=pack.jurisdiction==='DF';
     const pernambuco=pack.jurisdiction==='PE';
-    const primary=pernambuco
+    const rondonia=pack.jurisdiction==='RO';
+    const anvisa=pack.jurisdiction==='BR-ANVISA';
+    const primary=anvisa
+      ? url.hostname==='bvsms.saude.gov.br' && url.pathname==='/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf' && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
+      : rondonia
+      ? url.hostname==='www.al.ro.leg.br' && url.pathname==='/downloads/constituicao-do-estado-de-rondonia' && !url.search && row.source_type==='constituicao'
+      : pernambuco
       ? url.hostname==='legis.alepe.pe.gov.br' && url.pathname==='/texto.aspx' && /^\d+$/.test(url.searchParams.get('id')||'') && ['TEXTOATUALIZADO','TEXTOORIGINAL'].includes(url.searchParams.get('tipo')) && ['lei','decreto','constituicao'].includes(row.source_type)
       : district
       ? ['sinj.df.gov.br','www.sinj.df.gov.br'].includes(url.hostname) && url.pathname.startsWith('/sinj/Norma/') && ['lei','decreto'].includes(row.source_type)
       : url.hostname==='www.planalto.gov.br' && row.source_type==='lei';
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
-    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || !/<html[\s>]/i.test(bytes.toString('latin1'))) throw Error('Reviewed capture changed');
+    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa ? bytes.subarray(0,4).toString()!=='%PDF' : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(anvisa&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.reviewed_articles.some(a=>!['11','13','43'].includes(a))||evidence.norm!=='RDC 222/2018'||!row.notes.includes(evidence.norm)))throw Error('Individually reviewed RDC 222/2018 excerpts required');
+    if(rondonia&&(!evidence.current_effect_reviewed||!Array.isArray(evidence.reviewed_articles)||!evidence.reviewed_articles.length||evidence.compilation!=='EC 179/2026'||!row.notes.includes(evidence.compilation)))throw Error('Individually reviewed current ALE-RO compilation required');
     if(pernambuco){
       const text=bytes.toString('utf8');
       if(!evidence.current_effect_reviewed||!evidence.reviewed_articles?.length||!text.includes('id="divTexto"')||/Página não encontrada/.test(text))throw Error('Reviewed ALEPE legal body required');

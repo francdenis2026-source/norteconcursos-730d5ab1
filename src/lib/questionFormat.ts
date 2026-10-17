@@ -87,6 +87,16 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Recorte da RDC 222/2018 conferido na Biblioteca Virtual do Ministério
+    // da Saúde. Não libera páginas genéricas nem outras normas desse domínio.
+    if (parsed.hostname === "bvsms.saude.gov.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
+        parsed.pathname === "/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf" && !parsed.search;
+    }
+    if (parsed.hostname === "www.al.ro.leg.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
+        parsed.pathname === "/downloads/constituicao-do-estado-de-rondonia" && !parsed.search;
+    }
     // Normas estaduais conferidas na ALEPE: reconhecer a página da norma,
     // sem liberar buscas, páginas pessoais ou qualquer domínio .gov.br.
     if (parsed.hostname === "legis.alepe.pe.gov.br") {

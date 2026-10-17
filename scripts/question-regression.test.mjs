@@ -119,3 +119,14 @@ test('reviewed ALEPE norms pass legal eligibility while search pages and lookali
     assert.equal(isEligibleQuestion({...row, legal_basis:[{url:invalid}]}), false);
   }
 });
+test('ALE-RO constitutional compilation is accepted without opening generic legislature pages',()=>{
+ const url='https://www.al.ro.leg.br/downloads/constituicao-do-estado-de-rondonia';assert.equal(isOfficialUrl(url),true);
+ for(const wrong of ['https://www.al.ro.leg.br/','https://www.al.ro.leg.br/noticias/lei',url+'?redirect=elsewhere',url.replace('https:','http:'),url.replace('www.al.ro.leg.br','www.al.ro.leg.br.evil.example')])assert.equal(isOfficialUrl(wrong),false);
+});
+
+test('reviewed biosafety source accepts only the exact Ministry of Health RDC capture',()=>{
+ const url='https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf';
+ assert.equal(isLegallyVerified([{url}],'2026-10-15T00:00:00Z',true),true);
+ for(const wrong of [url.replace('https:','http:'),url+'?preview=1',url.replace('2018.pdf','2019.pdf'),url.replace('bvsms.saude.gov.br','bvsms.saude.gov.br.evil.test'),'https://bvsms.saude.gov.br/'])assert.equal(isOfficialUrl(wrong),false);
+ assert.equal(isLegallyVerified([{url}],null,true),false);
+});

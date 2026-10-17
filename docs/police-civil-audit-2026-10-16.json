@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T02:06:08.160Z",
-  "generated_at": "2026-10-17T02:09:36.972Z",
+  "snapshot_at": "2026-10-17T16:32:49.456Z",
+  "generated_at": "2026-10-17T16:34:27.474Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -86,11 +86,11 @@
       "exam": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) | 2026 | Técnico-Assistente – Auxiliar de Perícia (TPAG) | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 55,
-        "under_review": 4,
-        "archived": 1
+        "active": 58,
+        "archived": 1,
+        "under_review": 1
       },
-      "active_app_eligible": 45,
+      "active_app_eligible": 48,
       "active_with_catalog_flags": 47,
       "active_without_example_marker": 55,
       "flags": {
@@ -104,7 +104,7 @@
       "records": 60,
       "status": {
         "active": 58,
-        "under_review": 2
+        "archived": 2
       },
       "active_app_eligible": 36,
       "active_with_catalog_flags": 58,
@@ -260,59 +260,62 @@
       "exam": "Polícia Civil do Estado de Rondônia - Agente de Polícia Civil | 2022 | Agente de Polícia Civil | CEBRASPE",
       "records": 94,
       "status": {
-        "active": 87,
-        "under_review": 7
+        "active": 93,
+        "archived": 1
       },
-      "active_app_eligible": 87,
-      "active_with_catalog_flags": 64,
-      "active_without_example_marker": 64,
+      "active_app_eligible": 90,
+      "active_with_catalog_flags": 31,
+      "active_without_example_marker": 68,
       "flags": {
-        "topic_not_current": 64
+        "topic_not_current": 28,
+        "app_gate_rejected": 3
       }
     },
     {
       "exam": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial | 2022 | Datiloscopista Policial | CEBRASPE",
       "records": 96,
       "status": {
-        "active": 85,
-        "under_review": 10,
+        "active": 92,
+        "under_review": 3,
         "archived": 1
       },
-      "active_app_eligible": 85,
-      "active_with_catalog_flags": 77,
-      "active_without_example_marker": 77,
+      "active_app_eligible": 90,
+      "active_with_catalog_flags": 29,
+      "active_without_example_marker": 79,
       "flags": {
-        "topic_not_current": 77
+        "topic_not_current": 27,
+        "app_gate_rejected": 2
       }
     },
     {
       "exam": "Polícia Civil do Estado de Rondônia - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
       "records": 98,
       "status": {
-        "active": 66,
-        "under_review": 31,
+        "active": 88,
+        "under_review": 9,
         "archived": 1
       },
-      "active_app_eligible": 66,
-      "active_with_catalog_flags": 19,
-      "active_without_example_marker": 19,
+      "active_app_eligible": 86,
+      "active_with_catalog_flags": 10,
+      "active_without_example_marker": 37,
       "flags": {
-        "topic_not_current": 19
+        "app_gate_rejected": 2,
+        "topic_not_current": 8
       }
     },
     {
       "exam": "Polícia Civil do Estado de Rondônia - Escrivão de Polícia Civil | 2022 | Escrivão de Polícia Civil | CEBRASPE",
       "records": 97,
       "status": {
-        "active": 87,
-        "archived": 1,
-        "under_review": 9
+        "active": 96,
+        "archived": 1
       },
-      "active_app_eligible": 87,
-      "active_with_catalog_flags": 68,
-      "active_without_example_marker": 68,
+      "active_app_eligible": 93,
+      "active_with_catalog_flags": 33,
+      "active_without_example_marker": 72,
       "flags": {
-        "topic_not_current": 68
+        "topic_not_current": 30,
+        "app_gate_rejected": 3
       }
     },
     {
@@ -465,14 +468,14 @@
       "exam": "Polícia Civil do Piauí – Delegado de Polícia Civil | 2026 | Delegado de Polícia Civil | FGV",
       "records": 80,
       "status": {
-        "active": 76,
-        "under_review": 4
+        "active": 77,
+        "under_review": 3
       },
-      "active_app_eligible": 17,
-      "active_with_catalog_flags": 76,
-      "active_without_example_marker": 76,
+      "active_app_eligible": 18,
+      "active_with_catalog_flags": 77,
+      "active_without_example_marker": 77,
       "flags": {
-        "edition_without_verified_edital": 76,
+        "edition_without_verified_edital": 77,
         "app_gate_rejected": 59,
         "context_or_visual_flag": 3
       }
@@ -528,23 +531,23 @@
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2614,
-      "archived": 212,
+      "active": 2662,
+      "archived": 215,
       "annulled": 37,
-      "under_review": 97,
+      "under_review": 46,
       "obsolete": 8
     },
-    "active_app_eligible": 2184,
-    "active_with_catalog_flags": 1862,
-    "active_without_example_marker": 2294,
+    "active_app_eligible": 2222,
+    "active_with_catalog_flags": 1738,
+    "active_without_example_marker": 2323,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 248,
-    "newly_published": 248,
-    "scope": "PCDF 111 canonical reviews; RO 99 decisions (97 activated/two archived); PE 38 decisions (36 activated/two obsolete). Not certification of all PC records.",
+    "newly_reviewed": 270,
+    "newly_published": 270,
+    "scope": "PCDF 111 canonical reviews; RO 116 decisions (113 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 97,
+    "pending_under_review_all_pc": 46,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1114,8 +1117,8 @@
         }
       ]
     },
-    "active_records_not_yet_editorially_reviewed_this_campaign": 2370,
-    "coverage_note": "Uncovered by this campaign does not negate earlier reviews. Archived aliases and excluded questions remain separately accounted for.",
+    "active_records_not_yet_editorially_reviewed_this_campaign": 2399,
+    "coverage_note": "Count means not tracked by this campaign, not necessarily unaudited. Twenty-nine pending records were activated by another session between snapshots and were preserved, without our certification of that review.",
     "rondonia_batch1": {
       "reviewed": 59,
       "published_active": 59,
@@ -1591,6 +1594,34 @@
         }
       },
       "report": "docs/question-review-pcpe-batch6-2026-10-17.json"
+    },
+    "rondonia_mg_continuation": {
+      "reviewed": 22,
+      "published_active": 19,
+      "published_archived": 3,
+      "this_resumption_reviewed": 7,
+      "pc_status": {
+        "active": 2662,
+        "archived": 215,
+        "annulled": 37,
+        "under_review": 46,
+        "obsolete": 8
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 10,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 10,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcro-mg-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {
@@ -2512,6 +2543,18 @@
       "checked_at": "2026-10-17T02:06:08.160Z",
       "official_norms_retrieved": 8,
       "scope": "ALEPE root, advanced search and eight exact norm routes retrieved successfully. Earlier failures are historical. RO SAPL still returned HTTP 503; other legislative root access alone does not certify a current norm."
+    },
+    "latest_actual_access": {
+      "checked_at": "2026-10-17T16:32:49.456Z",
+      "reachable": [
+        "www.al.ro.leg.br official constitutional PDF EC 179/2026",
+        "sapl.al.am.leg.br original norm and amendment references",
+        "sapl.al.pi.leg.br articulated LC 37",
+        "www.al.mt.gov.br individual norm pages",
+        "www.concursos.ufmt.br opening edital, program, paper, key and changes notice",
+        "bvsms.saude.gov.br RDC 222/2018"
+      ],
+      "note": "Earlier failures and draft configuration records are historical. Successful retrieval does not certify current legal effect, final answers or the whole corpus. UFMT final key must be read with 02/03/2022 changes (questions 2 and 10 annulled); not as the preliminary PDF alone."
     }
   }
 }
