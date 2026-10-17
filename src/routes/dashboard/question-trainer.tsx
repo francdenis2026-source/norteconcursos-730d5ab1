@@ -1,4 +1,3 @@
-import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { useQuery } from "@tanstack/react-query";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
@@ -6,6 +5,7 @@ import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
 import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
 import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
+import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { searchQuestionCatalog } from "@/lib/questionBank";
 import {
   trainerSessionSize,
