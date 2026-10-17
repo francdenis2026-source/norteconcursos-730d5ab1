@@ -1,0 +1,13 @@
+{
+  "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "source_status_counts": {
+    "under_review": 2922,
+    "reviewed": 269,
+    "obsolete": 0,
+    "duplicate": 1,
+    "rejected": 0
+  },
+  "total_candidates": 3192,
+  "checked_at": "2026-10-17T18:11:36.002552+00:00",
+  "scope": "Only this imported PDF; excludes other platform corpora and public catalogs"
+}
