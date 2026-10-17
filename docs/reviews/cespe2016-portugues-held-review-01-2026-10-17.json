@@ -1,0 +1,1907 @@
+{
+  "batch_id": "cespe2016-portugues-held-review-01-2026-10-17",
+  "checked_at": "2026-10-17T23:00:07.622660+00:00",
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "triage_count": 100,
+  "detailed_review_count": 20,
+  "publications": 0,
+  "official_final_keys_confirmed": 0,
+  "triage": [
+    {
+      "candidate_id": "e14f74335b82dd6043b24f2dcfb44333d757533b38faade1b0b7812dc927c7e7",
+      "source_page": 5,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5214635fedcd6437861770bf00a14342a1c97503100dfcdb941fde5846836752",
+      "source_page": 5,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "3f7a7ea7ce791d8961fe1991028a4165e512623bebc90d7c5134acb47e8c49d4",
+      "source_page": 5,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "9e52eeecf29354c1523cf269eecca2fd37fb41b407a4137468a902cddcc463e3",
+      "source_page": 5,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "2e7523705ea5bf8b9eec63551dec5135a5463cf1d37c8f320ae265ccdd3f7bc5",
+      "source_page": 6,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "editorial_note_inside_support_text"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "cda55c6e76b5cbba9ade2b8282d60f68be9a652aef1f9468fd0566fb80bbb691",
+      "source_page": 6,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "editorial_note_inside_support_text"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "15638393d4ebd2d0df4a98385f7d4b2b67ef633fc4ed2cdafc2461343443e87b",
+      "source_page": 6,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "00efc0fd00d96f43aaeaa9e7b5a4847548e0f4b6306a94c1dc031bf246dc56b9",
+      "source_page": 6,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "252e5f31f595ee4286ae845d536d0c69658fae7915f17b0d8734b47f46e313f9",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "00070cbddb3150c03aba2803a2df7512e89abf5bf8e73cafcafd1a4666c26b46",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "8faebf506743e43dacbacc45aeb7e69d369a5e8621e7d4d44724e807fdda1eca",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "d448ae3e2d8eadd8d6c5f800c8e4bc5567d73c3aabb75f7060a9e05c8dfe3e8a",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008",
+        "legal_subject_reclassification_and_official_law_check_required"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "source_page": 7,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00",
+      "source_page": 8,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ef9efc178c73199888e9b72daf06bebb90d0558bf7368746dbf57c01575ae9ef",
+      "source_page": 8,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": true,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "cf97f11ae1cb7e5cbb4e3e88c6ffc334ee06e60a88cd1ab8c3b8c5a8e9f43699",
+      "source_page": 8,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "38c780ab910134c197b8fc159acc2f616078c5bde486722c1ef8d15bdcd82320",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "3b90f809a67272d738b72882ca844a6a1f91e42eb46acb14044894e850ff988a",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "1208a6bddf582253512da52ca03b5592be7eb02fd94358b09d1c6de7cd0fea5a",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "6bd091315637dfa63f44fe01e787b8b3c797236b390353b979e4a4c800232d81",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "dbc7c6a37debff905959d5580d993537b24a7f12370123c81916b424422f700e",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "13696d1e5ea9ae74909b8569d3aa70b955c8358c1739c88965eae0575b1b29e7",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "legal_subject_reclassification_and_official_law_check_required"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b8f795d9bb9bf90f59121db6d1bbc94236a2ada2baa45767b7ed6dd992fe9934",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "legal_subject_reclassification_and_official_law_check_required"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "224f2fb00ea95d2c5f739b1f912aba61b1ecdc787823be0511242b9591f0ce13",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "f95d99efd6b9b7dcf75983eb1e29b3beec9fea79c588515e0298ea84954938cf",
+      "source_page": 9,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "606bfe96f354aaa483a3273034d2009006ec603fe39eb835b7035a724aab76fb",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "af0c251e5e68f4bf577ddc25fc7026c826b266edef17de5c549cd822ce890be1",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ebdd5bb7f0e2d6d7250802f5743e86d165158d0ab6760e3e951e1a7cfeca402f",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b5a2937596fb6e2f5c0298ee368d064c1829188fc8ddd463b57adcc615daaf4f",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "7190b517d10ee53e6b7c1f0365673ca19d4e2afdf882c85bc52b55f22e2253db",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b17769c1d0c018ba701ea8964456ed16714656375f629a360c3d26067bba252a",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "bedbc8bbde075cf1d386921d0ce52fbba75ba5a648a00572ee4739bac78ec104",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "401fd9cadda942d285d666f907b6415bb9ac433f6d42c36ca8bcdafec0c67519",
+      "source_page": 10,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "867c381798440a191c0594edc45f1398869e91baadb064cb7de472094476f501",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b4a70694b8808fff4bad2ae0272c3448959c60d4ead828724d58ed703d8ca3af",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "21021cbc4fafadbcd9dcc3ef82197cbd29efcb92e6bb1b77d0848612c3e00d5b",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "dc63a712065735080db849a995808a0cd23090ede8f51d6edac553776aaaeda4",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5334cb14b08875f150d75caf4286c93997c295f9a7754a58b576df2bccdad39e",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "8c51a5b30d06d00e3e8c9090612ea85904828601e59a4ea0fb2b2021ebe67898",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5d58ff1070d545869cf8a5fbff39ef2654a1857c7ff1078b5a251754ad6072ff",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "da20f5d8ab09adaa3a3170a8186adcd453c84dfee9193d593cb8be25cac3406b",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "6531d34f56452d7deb2ff5f7533c3d5fb6c84e10ddec4992424bf26ab18590b8",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "9bc0c7140865e1b477426727afe999022a590168293845cf78a2222852474076",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "3ed311c92c3be57a00631337848322e6e8f04f0c08b31415ee14f2f1ee129107",
+      "source_page": 11,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "172a0baf2c0ff3a9a2b7f09bfc3290a8a56f0212c085e8faaaa3a09d59878691",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "d9b652f44ee27eac3caf10f6cff7f34a1a9117c26fc194e60ea730013fd13bde",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ddeb4d4bff7cc6dce3faa8417af5fce71c08900e11445f853c953b5901ae0dda",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "7e29142f3bfaef1071e714595c5e96c529e56e9225e1f1fc8042537f35e065b7",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "d32b2076f4ef1956a87e5a1308e617ffd37ca04981a66ab05cff60283411efc8",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "295a19c6dc596badf38818a6e63e50e0736d2699a80060f12696641321ebb453",
+      "source_page": 12,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "bc6ef67a498845a9a0a6a2a5fdfa1d1901b82f1da3d27b46639a09f8ae7822f5",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "909ddd22c397cd6f66fedee82df1b027b8cb847e282b3a3d569b3f4e19cff407",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "08d1d28f37d7c444a3ee47141174a8772b278ab9ad3260b770b1c15fe9e56424",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "162f37cd39a4e7b329db03a87e8a364423c65a5a2ee98aec98558ce64f91bef8",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "92752c88460462d5a15c601aac9802f13537a3ce0dc0738eb773b1f8fe09e3e6",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5b2d2d015fea74e0aeccc0f6655afd7e4cc1ac83c1a212c4dd2bb066d849f952",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "7cbf96c81a95f898a33fd2016da692f170b61d85922ca9062c8ecf54ce6c7ad7",
+      "source_page": 13,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "447f51981f156194752d5c04917cdba8fa761b4faeb27ffb2c732b0caf3a4f95",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "possible_incomplete_item_stem"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "614a95f82a3e995885b383ecf7e8abb082db2da345663237268ece86a970a689",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "possible_incomplete_item_stem"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "e3af80fa74444e3198f97bac353aa38985f902afcbf13c4b09c706de863d3d1f",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "possible_incomplete_item_stem"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "0c086365a312db67c7ed8be94dc5ea27516ad55d67a8f5db97f13fcb240dbedc",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "possible_incomplete_item_stem"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "4bf66fc56c456dfc72f42629a22c2978fa2920474583401295f6242fbb1f6501",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "possible_incomplete_item_stem"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "4410679921a9d6a6dbeba3e96d3e0420b40f55e23831a1f90aabe58ce013f378",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "bd296a692ade246a701ba96847edaa2395fd3095756ce40c4c2e8cc564ce6705",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "73ab7895482847a0359c204c9e164970c380e309ff724f5a0b192b8ef5880fe8",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "42b59ff6ba12c4244fe723afdb9a8a15708f5a17fb19f67e0bcb6f82f5aad401",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ba804e855c95fe5893a7f2eb2e93df23e1047c375014cbcf36c6d867e01b3155",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b78de4ab48702a38f3ff81969e3d1e1bd6e95c1e879985015f24615085903567",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "a979b30bfcc2286bf60aad99a103cc296d58d78980529bddf05cddb10df4e8d3",
+      "source_page": 14,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "488bcd4001fd1eb4b69e347529712f4ffbe49555a3847a0830bd7bb110ea5e1d",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "91aa58dea6a83ad21621f3f825a8d975fb5e60cc001f129cc624a4bc870a99ac",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "00dd5455f8918df7b60b26ff54fc7bc3cf769366048c715956f3977d0033df51",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "52f081d760d2cf50a0ca8812f9d824cf01f6b4890393a7f80a84b0e4c9df6da9",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "705ee4660e7ce61348e3653893ff953a582a5b4e89d35c84fc995ca5980965e9",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "f8b83ca52f99ef9d41a24c2ef918e65e9f646b4d5da73729a82bccf9f68182f6",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "dc12c38a5fb4b73875d6f9e3bf408acc4965b54cbe76897a970b0331ce0bd96c",
+      "source_page": 15,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "675771af1b4f3df4b9bb021e7029ddb17aabe5ed15ab104c0d1bb1c576a09ca8",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "15cfb5659a4209fc74947cafcff6375445861353fb8a9bf5bc58534d5c92e9c9",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "9e23ac0fd2805525c011fe8368c929127e0b0ece088aa8dfed8c879887a134fe",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "5f1785f11af8fcc59f010e421e95d7fac92c9a5764878c46fc294589eacb7cfb",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b305e45887d3a23d9bcfc0c780ef27cc915aa4290d99c213076fe0beed55e65b",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "c372ab9ebbac94bec75d9cb11245cbe42ea4fd549cc3bc10dd3f168bf3bbaeab",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "006f8766abb5226569ad5851da3bd4b2ad814b7771cc0975dd86556e35bb9668",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "2a723739b76e386a66ef41f47d5449ab1ec162b5f2468b99c45bc8456bc43005",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ca50585b2cc63355ae810079a3dd0355bc717482c4768942f0c5a4ad7c2e4e3b",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "7b24989fc11271d0ee21aea06bba8eed724c1204ff8bdd9efe7173a7decd39c2",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ff9b9fcf36bbed00e4f304e18729c7a4f54f6c5008ab6422b69ac066ef924eb5",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "dacf715e67affd2fd86a4c4d1da223989f9804c931382742cb18a20c37f9c497",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "623824d8dc5e0ab24410bd878763e5e43b50d6bf3a25665c6beb59e8526fd804",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "d7faba186e01513a42331a53251867bb88c8fa8fa1864ec1bafb12349b21f32a",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "ecf4c3faf9ba3ae1953cc29713cce1d14cf2232d336a18e4717dfe9c5141fccc",
+      "source_page": 16,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "b472b8a45042c7fc650caab6c0bccb953468ed41fbf53e708c0c1533a43a0d4c",
+      "source_page": 17,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "95151bdd0057a058ff634105fc9392750348e00273e84d8319dad15e6a610415",
+      "source_page": 17,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "1c3bc04d289270246da746fa7ca4646284d130634525732db642e7ca7660ae7b",
+      "source_page": 17,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    },
+    {
+      "candidate_id": "4984028f1e716a98accbd2a9fdfc16266f6e5766f784e9791fd6d1dc0f1dc04d",
+      "source_page": 18,
+      "triage_method": "Structural and scope checks; not semantic approval",
+      "flags": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "technical_commentary_complete": false,
+      "publication_approved": false
+    }
+  ],
+  "items": [
+    {
+      "candidate_id": "e14f74335b82dd6043b24f2dcfb44333d757533b38faade1b0b7812dc927c7e7",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 5,
+      "technical_answer_candidate": "E",
+      "explanation": "O início do texto apresenta uma avaliação sobre a percepção ingênua dos mercados e abre o desenvolvimento da argumentação. Não constitui, por isso, uma conclusão fundamentada de parecer. Acrescentar a fórmula “É o parecer” não transforma uma introdução em conclusão nem supre a fundamentação exigida pelo gênero. A análise é textual, sem certificar a resposta definitiva do concurso.",
+      "example": "Um relatório começa anunciando um problema. Colocar “Concluo” no final dessa frase não substitui a análise e a conclusão que deveriam vir depois.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 5,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "048ba9bc291bd805a12247f6f1b9e74c73aa2749f99ae8c488c149f1c2096de1"
+    },
+    {
+      "candidate_id": "5214635fedcd6437861770bf00a14342a1c97503100dfcdb941fde5846836752",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 5,
+      "technical_answer_candidate": "C",
+      "explanation": "A reescrita mantém duas orações com sentido completo, agora separadas por ponto e vírgula. A oposição entre imperfeição e poder dos mercados continua compreensível. A locução enfática “isto sim” pode integrar a segunda oração sem as duas vírgulas da versão anterior. Trata-se de avaliação técnica da pontuação; a correspondência com o gabarito definitivo da prova ainda depende da fonte da banca.",
+      "example": "A equipe não é infalível; é, isto sim, experiente. O ponto e vírgula permite manter próximas duas afirmações sintaticamente completas.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 5,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "048ba9bc291bd805a12247f6f1b9e74c73aa2749f99ae8c488c149f1c2096de1"
+    },
+    {
+      "candidate_id": "3f7a7ea7ce791d8961fe1991028a4165e512623bebc90d7c5134acb47e8c49d4",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 5,
+      "technical_answer_candidate": "E",
+      "explanation": "No contexto, a crise “aflora”: torna-se perceptível em determinados momentos. “Desencadeia” acrescentaria a ideia de provocar ou iniciar um processo, mudando a relação semântica atribuída à própria crise. O pico de viagens é a circunstância em que o problema se manifesta; não se deve confundir essa manifestação com o ato de causar outro evento.",
+      "example": "Uma dificuldade aparece durante a reunião. Dizer que a dificuldade provoca a reunião modifica a relação entre os acontecimentos.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 5,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "36be521c55607939c94b439a85910d7b9cdae59f84f038576f19c6b5c744abc7"
+    },
+    {
+      "candidate_id": "9e52eeecf29354c1523cf269eecca2fd37fb41b407a4137468a902cddcc463e3",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 5,
+      "technical_answer_candidate": "E",
+      "explanation": "A metáfora “coquetel” retoma a combinação de educação geral sólida com conhecimentos específicos. Reduzi-la apenas aos conhecimentos específicos elimina um dos componentes expressamente coordenados no período. A leitura deve respeitar a estrutura “combinação de ... com ...”, que apresenta o referente da metáfora como conjunto, e não como uma parte isolada.",
+      "example": "O plano combina estudo e descanso, formando uma mistura equilibrada. A palavra “mistura” não designa apenas o descanso.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 5,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "0000b7bb3b5ab80a6ce0e10cead71e9c66989c48cec2baf6c91bf2e72872f0ec"
+    },
+    {
+      "candidate_id": "2e7523705ea5bf8b9eec63551dec5135a5463cf1d37c8f320ae265ccdd3f7bc5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 6,
+      "technical_answer_candidate": "C",
+      "explanation": "O texto contrapõe o trabalho como potencial de transformação humana ao trabalho reduzido a desgaste, rotina e alienação. As expressões citadas no item pertencem a esses dois polos da argumentação. A compreensão dessa oposição não exige aceitar a tese do autor como fato universal; exige reconhecer como o raciocínio foi organizado no texto apresentado. O contexto extraído contém uma nota editorial intrusa, que deve ser tratada antes da publicação.",
+      "example": "Um autor contrasta a tecnologia que aproxima as pessoas com a tecnologia que as isola. Identificar a oposição não significa afirmar que um dos efeitos sempre predomina.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "editorial_note_inside_support_text"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 6,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "4ee67ef23964cf13f2f6443fbccaacc9adc78828cfa6ea180c715189ccf5b5d4"
+    },
+    {
+      "candidate_id": "cda55c6e76b5cbba9ade2b8282d60f68be9a652aef1f9468fd0566fb80bbb691",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 6,
+      "technical_answer_candidate": "C",
+      "explanation": "A mudança para a terceira pessoa permite relacionar os verbos ao núcleo coletivo singular “a grande maioria”, em vez de conservar a concordância discursiva inclusiva da primeira pessoa do plural. Ao retirar o “nós” verbal, a reformulação reduz a participação explícita do enunciador no grupo. A observação sobre efeito argumentativo é distinta da conferência do gabarito definitivo. A nota editorial misturada ao contexto ainda precisa ser removida de uma versão de apresentação.",
+      "example": "Em “Nós preferimos estudar cedo”, o falante se inclui no grupo. Em “A maioria prefere estudar cedo”, a formulação se apresenta de modo mais distanciado.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "editorial_note_inside_support_text"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 6,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "4ee67ef23964cf13f2f6443fbccaacc9adc78828cfa6ea180c715189ccf5b5d4"
+    },
+    {
+      "candidate_id": "15638393d4ebd2d0df4a98385f7d4b2b67ef633fc4ed2cdafc2461343443e87b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 6,
+      "technical_answer_candidate": "C",
+      "explanation": "A repetição de “votos” dá relevo às práticas enumeradas; “esbirros” é explicado pelo contexto de intimidação; e “a ele” explicita o destinatário retomado por “lhe”. A última afirmação é inadequada porque o próprio trecho distingue corrupção de fraude e compara suas intensidades. Assim, a leitura técnica aponta três afirmações corretas, correspondentes à alternativa C, sem somar cada afirmação como uma questão nova.",
+      "example": "Em “A omissão era menor que a mentira”, o autor diferencia os dois comportamentos. A comparação impede tratá-los automaticamente como expressões de sentido idêntico.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 6,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "216d6e71496eda08643f63b5e85f0c3a6689f4fe54babf9c93e87c4be2963a75"
+    },
+    {
+      "candidate_id": "00efc0fd00d96f43aaeaa9e7b5a4847548e0f4b6306a94c1dc031bf246dc56b9",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 6,
+      "technical_answer_candidate": "C",
+      "explanation": "A expressão “nessa área” retoma o domínio de atividades eleitorais descrito no parágrafo. O tratamento “você” dirige-se ao eleitor como público, e não prova a existência de um único destinatário concreto. Na alternativa sobre “definir-se-ão”, o advérbio inicial “Amanhã”, sem pausa, exige exame da atração pronominal; não basta reconhecer uma forma verbal de futuro aparentemente bem construída. A leitura favorece a alternativa C, ainda sujeita à conferência oficial.",
+      "example": "Um aviso afirma que as inscrições e a seleção foram rápidas e conclui: “Somos referência nessa área”. A expressão retoma o conjunto de atividades descrito, não apenas uma palavra isolada.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 6,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "2f285ddf13c10b3a4857620bb99b71c2e972eeb13e616e7b9071544622b682ec"
+    },
+    {
+      "candidate_id": "252e5f31f595ee4286ae845d536d0c69658fae7915f17b0d8734b47f46e313f9",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "C",
+      "explanation": "O texto afirma que a ética que sustenta determinado projeto político presta homenagem a princípios resumidos na ideia de coisa pública. As demais alternativas deslocam ou invertem o contraste que o autor estabelece entre tradição religiosa e laicização. A questão exige reconhecer a tese do texto, sem convertê-la em uma afirmação factual atual sobre todos os países ou sociedades mencionados.",
+      "example": "Para resumir uma opinião, deve-se identificar o que o autor defende. Acrescentar uma generalização que ele não formulou muda o objeto da interpretação.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "0d99747f96ae962f06a4070f1ac7fb927aa3ef079ecc05a8e46f3de130f3e2d6"
+    },
+    {
+      "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "E",
+      "explanation": "O fragmento informa práticas de gestão e resultados apresentados como experiência concreta de escolas, com dados, fonte jornalística e descrição de procedimentos. A presença de ações e sequência temporal não basta para caracterizar predomínio de narrativa ficcional. O item avalia a organização textual do material de 2008; os números do texto não foram validados como indicadores educacionais atuais.",
+      "example": "Uma notícia relata que uma escola aplicou avaliações em três anos. Essa sequência de fatos não transforma a notícia em um conto inventado.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "61419caeef8a85869db22e6c436f18cc66413ec3aee9bea292b26f21c9e7d3a2"
+    },
+    {
+      "candidate_id": "00070cbddb3150c03aba2803a2df7512e89abf5bf8e73cafcafd1a4666c26b46",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": null,
+      "explanation": "O item pede comparação com o “atual cenário educacional”, expressão ligada à data da prova de 2008. O texto-base descreve uma experiência destacada, mas não fornece levantamento suficiente para comparar a maioria das redes estaduais e municipais. A extração também deixou esse bloco sem seu texto-base próprio, cuja associação ao candidato anterior foi confirmada visualmente na página 7. Não há base nesta revisão para certificar a comparação histórica ou apresentá-la como diagnóstico de hoje.",
+      "example": "Uma reportagem sobre uma escola bem-sucedida não demonstra, sozinha, que a maioria das escolas do país utiliza o mesmo modelo.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": {
+        "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+        "pdf_page": 7,
+        "association_visually_confirmed": true
+      },
+      "expected_raw_text_sha256": "8b70b360737859c39f6047965e720600367801eeb6126c9f7fae1fb5ce37038e"
+    },
+    {
+      "candidate_id": "8faebf506743e43dacbacc45aeb7e69d369a5e8621e7d4d44724e807fdda1eca",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": null,
+      "explanation": "A proposição trata de problemas nas redes pública e privada e de mecanismos de avaliação existentes na época do concurso. A passagem sobre as escolas pernambucanas não apresenta dados suficientes para certificar essa comparação ampla. O gabarito editorial foi preservado, mas sua confirmação exige fonte da prova e delimitação histórica. A ausência de texto-base na extração do bloco constitui uma pendência adicional de apresentação.",
+      "example": "Um resultado de determinada rede pública não permite concluir automaticamente qual é a situação de todas as escolas particulares.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": {
+        "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+        "pdf_page": 7,
+        "association_visually_confirmed": true
+      },
+      "expected_raw_text_sha256": "8b70b360737859c39f6047965e720600367801eeb6126c9f7fae1fb5ce37038e"
+    },
+    {
+      "candidate_id": "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "C",
+      "explanation": "No texto-base da página 7, metas, avaliações de alunos e acompanhamento do desempenho docente aparecem associados à experiência de melhora descrita. Isso sustenta uma inferência sobre o conjunto de ações relatado, sem demonstrar que um único fator seja causa exclusiva do resultado. O bloco precisa recuperar a associação ao texto anterior e preservar a referência temporal de 2008 antes de qualquer apresentação ao aluno.",
+      "example": "Se um texto relaciona estudo orientado, prática e acompanhamento à melhora, é possível reconhecer um conjunto de fatores, sem atribuir todo o efeito a apenas um deles.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": {
+        "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+        "pdf_page": 7,
+        "association_visually_confirmed": true
+      },
+      "expected_raw_text_sha256": "8b70b360737859c39f6047965e720600367801eeb6126c9f7fae1fb5ce37038e"
+    },
+    {
+      "candidate_id": "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "E",
+      "explanation": "O texto enfatiza resultados de aprendizagem e práticas de gestão, não estabelece que o problema principal da educação básica seja a falta de vagas. A afirmação introduz uma prioridade que não está demonstrada pela passagem. Isso é uma limitação da inferência textual, sem pretender medir qual é o principal problema educacional no presente. A instrução sobre cenário atual da prova exige tratamento histórico e recuperação do contexto compartilhado.",
+      "example": "Um texto sobre baixa aprendizagem não autoriza concluir, sem outra informação, que a maior dificuldade seja a quantidade de matrículas disponíveis.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": {
+        "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+        "pdf_page": 7,
+        "association_visually_confirmed": true
+      },
+      "expected_raw_text_sha256": "8b70b360737859c39f6047965e720600367801eeb6126c9f7fae1fb5ce37038e"
+    },
+    {
+      "candidate_id": "d448ae3e2d8eadd8d6c5f800c8e4bc5567d73c3aabb75f7060a9e05c8dfe3e8a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": null,
+      "explanation": "Este item, embora localizado na seção de Português da apostila, envolve a existência de lei geral de educação e o cenário educacional da prova. É necessário separar interpretação, conhecimento de políticas públicas e verificação jurídica. A alegação de inexistência de uma lei de diretrizes e bases demanda confronto com fonte oficial e referência temporal adequada; o comentário da editora não substitui essa conferência. Por isso, não foi certificado um gabarito técnico neste lote.",
+      "example": "Encontrar uma pergunta jurídica em um capítulo de linguagem não elimina a necessidade de conferir a norma oficial antes de apresentá-la como conteúdo atualizado.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified",
+        "support_context_not_attached",
+        "historical_current_affairs_scope_2008",
+        "legal_subject_reclassification_and_official_law_check_required"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": {
+        "candidate_id": "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+        "pdf_page": 7,
+        "association_visually_confirmed": true
+      },
+      "expected_raw_text_sha256": "8b70b360737859c39f6047965e720600367801eeb6126c9f7fae1fb5ce37038e"
+    },
+    {
+      "candidate_id": "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "E",
+      "explanation": "O trecho relaciona programas de transferência de renda e outros fatores à dinâmica econômica das cidades, mas não afirma que os beneficiários dos programas sejam, por isso, empregados. O item transforma a participação em um programa em condição ocupacional, inferência não sustentada pelos dados narrados. A análise recai sobre a informação do texto de 2008 e não certifica números atuais de emprego ou de benefícios.",
+      "example": "Uma família recebe um benefício e compra alimentos. Isso não permite concluir apenas desse dado que todos os seus integrantes tenham emprego.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "8eceb8482953cb68222dc5f456066c0f4baf2944e3c259d659614b9e0f1bb57b"
+    },
+    {
+      "candidate_id": "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "C",
+      "explanation": "O primeiro período, “Um Brasil com desemprego zero”, não apresenta verbo expresso e tem natureza nominal. O substantivo central recebe complementação, mas essa estrutura não passa a ser uma oração verbal apenas porque os períodos seguintes desenvolvem o assunto. A conclusão se refere à forma linguística da frase, não à veracidade de uma taxa de desemprego no presente.",
+      "example": "A expressão “Uma cidade sem trânsito” pode formar um enunciado nominal. Já “A cidade não tem trânsito” apresenta verbo expresso.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "8eceb8482953cb68222dc5f456066c0f4baf2944e3c259d659614b9e0f1bb57b"
+    },
+    {
+      "candidate_id": "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 7,
+      "technical_answer_candidate": "E",
+      "explanation": "No texto, as cidades são apresentadas como exceções ao quadro geral de desemprego. A expressão figurada “fora das estatísticas” não prova que os municípios deixem de ser contabilizados em pesquisas oficiais. O item converte a excepcionalidade descrita em ausência de cobertura estatística, mudando o sentido. A leitura deve conservar o contexto jornalístico e sua data.",
+      "example": "Dizer que um atleta está “fora da curva” destaca seu desempenho. Isso não significa que ele tenha sido excluído do registro dos resultados.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 7,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "8eceb8482953cb68222dc5f456066c0f4baf2944e3c259d659614b9e0f1bb57b"
+    },
+    {
+      "candidate_id": "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 8,
+      "technical_answer_candidate": "C",
+      "explanation": "A passagem compara uma previsão anterior de crescimento do consumo, de 6,2%, com nova estimativa de 7,5%, ambas situadas no contexto de 2008. Há, portanto, mudança nas perspectivas descritas. A expressão “até hoje” deve ser entendida na referência temporal do texto e da prova, não como atualização para 2026. A validade do exercício de interpretação depende de apresentar essa data e o texto-base.",
+      "example": "Uma notícia de certa data informa que a previsão passou de 4% para 5%. Houve revisão da estimativa naquele período, sem que isso informe qual é a previsão de hoje.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 8,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "53d91ef874b1259964d6b09778c45a22348a5c9ae62e0b770858b60fe95e1fbb"
+    },
+    {
+      "candidate_id": "ef9efc178c73199888e9b72daf06bebb90d0558bf7368746dbf57c01575ae9ef",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 8,
+      "technical_answer_candidate": "C",
+      "explanation": "O autor contrasta uma percepção circular do tempo, ligada a ciclos e acontecimentos da vida dos maxacalis, com a medição fragmentada e precisa da tradição científica ocidental. A comparação é explicitada no próprio texto e inclui a referência à organização de “nossa vida”. A análise identifica o contraste apresentado pelo autor, sem assumir que o trecho seja uma descrição antropológica atual e exaustiva.",
+      "example": "Um texto compara um calendário guiado pelas estações com uma agenda dividida em minutos. A oposição entre as formas de organizar o tempo está expressa, sem exigir que uma elimine a outra.",
+      "remaining_blockers": [
+        "official_final_key_not_verified",
+        "original_exam_item_number_not_verified",
+        "current_syllabus_mapping_not_verified",
+        "cross_catalog_duplicates_not_verified"
+      ],
+      "source_evidence": {
+        "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "pdf_page": 8,
+        "source_kind": "user_supplied_commented_book",
+        "is_official_exam_key": false
+      },
+      "support_reference": null,
+      "expected_raw_text_sha256": "2d3c660ce8eacae4ab3c4d7a4adf011997b3f94a509ff77e5c2eabf883b96a2d"
+    }
+  ],
+  "official_source_attempts": {
+    "checked_at": "2026-10-17T22:57:45.634313+00:00",
+    "attempts": [
+      {
+        "url": "https://portal.stf.jus.br/concursos/",
+        "error": "HTTPError",
+        "official_final_key_verified": false
+      },
+      {
+        "url": "https://www.tse.jus.br/institucional/concursos-publicos/concurso-de-2006",
+        "http_status": 204,
+        "final_url": "https://www.tse.jus.br/institucional/concursos-publicos/concurso-de-2006",
+        "bytes": 0,
+        "official_final_key_verified": false
+      },
+      {
+        "url": "https://www.cespe.unb.br/concursos/STF2008/",
+        "error": "HTTPError",
+        "official_final_key_verified": false
+      }
+    ]
+  },
+  "saved_snapshot_duplicate_comparison": {
+    "scope": "Normalized exact wording against previously saved snapshots, not a fresh current semantic review",
+    "snapshot_counts": {
+      "official_exam_questions": 4888,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 1992,
+      "question_corpus_candidates": 1503
+    },
+    "candidates_compared": 100,
+    "candidates_with_matches": 0,
+    "matches": [],
+    "automatic_duplicate_decisions": 0
+  },
+  "applied_result": {
+    "batch_id": "cespe2016-portugues-held-review-01-2026-10-17",
+    "apply": true,
+    "complete": true,
+    "updated": [
+      "e14f74335b82dd6043b24f2dcfb44333d757533b38faade1b0b7812dc927c7e7",
+      "5214635fedcd6437861770bf00a14342a1c97503100dfcdb941fde5846836752",
+      "3f7a7ea7ce791d8961fe1991028a4165e512623bebc90d7c5134acb47e8c49d4",
+      "9e52eeecf29354c1523cf269eecca2fd37fb41b407a4137468a902cddcc463e3",
+      "2e7523705ea5bf8b9eec63551dec5135a5463cf1d37c8f320ae265ccdd3f7bc5",
+      "cda55c6e76b5cbba9ade2b8282d60f68be9a652aef1f9468fd0566fb80bbb691",
+      "15638393d4ebd2d0df4a98385f7d4b2b67ef633fc4ed2cdafc2461343443e87b",
+      "00efc0fd00d96f43aaeaa9e7b5a4847548e0f4b6306a94c1dc031bf246dc56b9",
+      "252e5f31f595ee4286ae845d536d0c69658fae7915f17b0d8734b47f46e313f9",
+      "006995b7f64e132000e47ba96c1379380add47eb8d25661205350cda0db38c02",
+      "00070cbddb3150c03aba2803a2df7512e89abf5bf8e73cafcafd1a4666c26b46",
+      "8faebf506743e43dacbacc45aeb7e69d369a5e8621e7d4d44724e807fdda1eca",
+      "df4d4d885e5383fcea238eda5800be3ffbc3832612db0a6d7497c4a1a36b88b3",
+      "5c523ee9a7d4c455e1b6254aac7417c1fe7df0b17db0cb32f8ab202080a6d380",
+      "d448ae3e2d8eadd8d6c5f800c8e4bc5567d73c3aabb75f7060a9e05c8dfe3e8a",
+      "f2006f26ba07bdefc42dec04b6d0495f6994686cdc66f8ed21fd5ae1d830e41b",
+      "9f46603dc7647f6dcec4b94e3125d6e5d1bebe3b9cd3ab19573b70aaeeb7f669",
+      "fb994003825510eae41593d4d5a20dd4948f26a58ffa1b0ed7509740f6e7172c",
+      "6fc8a12b8f903bc55714eba8c455ec6998a7b638ea0cdf66d25b1d9cc49e1c00",
+      "ef9efc178c73199888e9b72daf06bebb90d0558bf7368746dbf57c01575ae9ef"
+    ],
+    "preserved": [],
+    "detailed_reviews": 20,
+    "publications": 0,
+    "official_final_keys_confirmed": 0,
+    "publication_approved": false
+  }
+}
