@@ -1,0 +1,2379 @@
+{
+  "batch_id": "cespe2016-portugues-held-review-02-2026-10-17",
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "checked_at": "2026-10-17T23:26:26.667575+00:00",
+  "publications": 0,
+  "official_final_keys_confirmed": 0,
+  "scope": "50 individual technical reviews; official exam release audit pending",
+  "source_item_range_zero_based": [
+    20,
+    69
+  ],
+  "official_catalog_research": [
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/",
+      "status": 200,
+      "sha256": "39b2a6d431082aeaab3bf9d2d4fc2370b2dfadfdf891ac1d967081381542102c",
+      "capture": "_antigos_2004_STJ2004.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_10_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_9_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_8_RES_FIN_PROVAS_PRATICAS_TIT_E_CONC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_7_PRORR.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_6_RES_PROV_PROVAS_PRATICAS_E_TIT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_5_RETI.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/GAB_DEFINITIVO_STJ.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_4_FIN_OBJ_E_PROV_DISC_CONV_PROVAS_PRATICAS_E_TIT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/GAB_PRELIMINAR_STJ.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_3_LOCAIS_E_HORARIOS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_2_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/ED_2004_STJ_ABT_III.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_AREA_ADMINISTRAT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_ARQUIVOLOGIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_BIBLIOTECONOMIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_COMUNIC_SOCIL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_INFORMATICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_ENDOCRINOLOGIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_PSICOLOGIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NS_AREA_JUDICIARIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_VERDE_ADMINISTRAT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_AZUL_ADMINISTRAT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_INFORMATICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_TELEC_ELETRIC.PDF"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/",
+      "status": 200,
+      "sha256": "e1c170bb6e9f0df08a7bb7ade7c4a723875b204571d61e518061b7d7bdbc1630",
+      "capture": "_antigos_2004_STM2004.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2005_STM_7_RES_FIN_CAP_FIS_E_CONC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/COMUNICADO_RECURSO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2005_STM_6_RES_FIN_DIS_E_CONC_E_PROV_CAP_FIS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/JUSTIFICATIVAS_DE_ALTERACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/GAB_DEFINITIVO_STM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2004_STM_5__CAP_FIS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/GAB_PRELIMINAR_STM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/DEMANDA_CARGO_VAGA_-_STM_04.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2004_STM_4_LOCAIS_DE_PROVAS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/COMUNICADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2004_STM_3_PRORR.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2004_STM_2_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ED_2004_STM_1_ABT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ANAL_JUD_AREA_ADMINISTRAT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ANAL_JUD_AREA_JUDIC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ANAL_JUD_EXEC_MANDADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/ANAL_JUD_ENGENHARIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/TEC_JUD_AREA_ADM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/TEC_JUD_CONTABILID.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/TEC_JUD_SEG_TRANSP.PDF"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/STM2010/",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TST2007/",
+      "status": 200,
+      "sha256": "d1f614df452b17691dad61b6d96eccf255e84ea912e8921f194460f73c1a0ffd",
+      "capture": "TST2007.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/MARIA_LUCIA_LOBO_MAGALHAES___ED_22___TST_ASSINADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_21_2008_TST_RETIFICA_SUB_JUDICE_DENISE_ALTERADA_07.10.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_20_2009_TST_RET_JOSE_FRANCISCO_ARAUJO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_19_2008_TST_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_18_2008_TST_RES_FIN_PERICIA_TEC_SEG_E_AN.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/CAPA_DE_RECURSO_1.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_17_2008_TST_RES_PROV_PERICIA_TEC_SEG_E_AN.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_16_2008_TST_RES_FIN_PERICIA_E_CONC_ANALISTA__EXCETO_CARGO_2_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_15_2008_TST_RES_FIN_CARGO_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_14_2008_TST_RES_FIN_FIS_E_DIG_E_CONV_PERICIA__TEC_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_13_2008_TST_RES_PROV_PERICIA_AN.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_12_2008_TST_HOMOL_CONC_TECNICO___PROGRAMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_11_2008_TST_RES_FIN_DISC__PROV_FIS_E_DIG.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_10_2008_TST_RES_FIN_PERICIA_E_CONC_TECNICO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/COMUNICADO_PERICIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_9_2008_TST_RES_PROV_PERICIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST_2008_JUSTIFICATIVAS_DE_ALTERA____O_DE_GABARITO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_8_2008_TST_RES_FIN_OBJ_CONV_PERICIA_FIS_DIG_E_PROV_DISC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_7_2008_TST_RET_E_INLCUS__O.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_6_2008_TST_INLCUS__O.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_5_2008_TST_LOCAIS_E_HORARIO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/RELA____O_DE_PORTADORES_DE_DEFICIENCIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/RELA____O_DE_ATENDIMENTO_ESPECIAL_DEFERIDO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_4_2007_TST_ISENCAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_3_2007_TST_RET_PRORROGACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_2_2007_TST_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/Comunicado_isencao.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/ED_1_2007_TST_ABT_FINAL_FORM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_010_36.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_009_33.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_008_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_007_21.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_006_19.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_005_17.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_004_14.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_003_11.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_002_6.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_001_1.pdf ",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_010_36.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_009_33.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_008_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_007_21.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_006_19.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_005_17.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_004_14.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_003_11.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_002_6.pdf",
+        "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_001_1.pdf "
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/",
+      "status": 200,
+      "sha256": "58afcf77b4784f7b4f7632089559d61f3327a725c140db9e4795e687827d94f6",
+      "capture": "TRT17REGIAO2009.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_9_2010_TRT_17_EXCLUSO_SUB_JUDICE_MARCUS_VINICIUS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_8_2009_TRT_17_RET_SUB_JUDICE_MARCUS_VINICIUS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_7_2009_TRT_17_RES_FINAL_PERICIA_E_CONCURSO_ATUALIZADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_6_2009_TRT_17_RES_PROVISORIO_PERICIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_5_2009_TRT_17_RES_FINAL_DISCURSIVA_E_CONVOCA_PERICIA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT_17_09JUSTIFICATIVAS_DE_ALTERAO_DE_GABARITO__SALVO_AUTOMATICAMENTE_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_4_2009_TRT_17_RES_FINAL_OBJETIVA_E_PROVISORIO_DISCURSIVA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/COMUNICADO_TRT17_RESULTADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT17_09_DEMANDA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT17_09_LISTA_DEFISICO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT17_09_LISTA_ATENDIMENTO_ESPECIAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_3_2009_TRT_17_REGIAO_LOCAIS_E_HORARIO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT_17_REGIAO_ISENCAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_2_2009_TRT_17_RETI.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/ED_1_2009_TRT_17_ABT_FINAL_28_1_09_2_FORMATADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_013_20_VENUS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_013_19_MARTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_012_18_TERRA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_012_17_SOL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_012_16_LUA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_011_15.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_010_14.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_009_13.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_008_12.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_007_11.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_006_10.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_005_9.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_004_8.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_003_7.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_003_6.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_002_5.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_002_4.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_001_3.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_001_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_001_1.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_013_20.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_013_19.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_012_18.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_012_17.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_012_16.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_011_15.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_010_14.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_009_13.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_008_12.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_007_11.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_006_10.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_005_9.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_004_8.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_003_7.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_003_6.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_002_5.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_002_4.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_001_3.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_001_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/TRT17REGIAO2009/arquivos/TRT1709_Gab_Definitivo_001_1.PDF"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/",
+      "status": 200,
+      "sha256": "c730cbc3ef1817e58603545ce6cf1286a053ae985ff2bf379e4d02267063c53f",
+      "capture": "_antigos_2008_PMVV2007.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_13_2008_PREF_VILA_VELHA_FIN_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_12_2008_PREF_VILA_VELHA_4A_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_11_2008_PREF_VILA_VELHA_3A_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_10_2008_PREF_VILA_VELHA_2A_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_9_2008_PREF_VILA_VELHA_FIN_TIT_E_CONC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PMVV_JUSTIFICATIVAS_DE_ALTERA____O_DE_GABARITO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_8_2008_PREF_VILA_VELHA_FIN_OBJ_E_PROV_TIT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/COMUNICADO_RESULTADO_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/COMUNICADO_RESULTADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREF_VILAVELHA_08_DEMANDA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_7_2008_PREF_VILA_VELHA_RETIFICACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_6_2008_PREF_VILA_VELHA_LOCAL_E_HORARIO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_5_2008_PREF_VILA_VELHA_RET_CARGO_21.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_4_2008_PREF_VILA_VELHA_RET_CARGO_25.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_3_2008_PREF_VILA_VELHA_ISENCAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_2_2007_PREF_VILA_VELHA_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/ED_1_2007_PREF_VILA_VELHA_ABT_III__VERS__O_FINAL_FORM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PMVV_GAB_PRELIMINAR_001_1_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PMVV_CF_MONTADA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_027_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_026_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_025_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_024_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_023_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_022_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_021_22.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_020_21.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_019_20.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_018_19.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_017_18.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_016_17.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_015_16.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_014_15.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_013_14.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_012_13.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_011_12.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_010_11.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_009_10.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_008_9.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_007_8.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_006_7.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_005_6.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_004_5.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_003_4.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_002_3.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_001_1.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_027_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_026_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_025_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_024_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_023_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_022_23.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_021_22.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_020_21.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_019_20.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_018_19.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_017_18.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_016_17.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_015_16.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_014_15.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_013_14.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_012_13.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_011_12.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_010_11.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_009_10.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_008_9.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_007_8.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_006_7.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_005_6.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_004_5.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_003_4.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_002_3.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2008/PMVV2007/arquivos/PREFVV_08_Gab_Definitivo_001_1.pdf"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/",
+      "status": 200,
+      "sha256": "eb85faa3244c143112487ed52f7f2a02b2440a473ca326402f134864f7c0f604",
+      "capture": "_antigos_2002_sefaz.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Gab_Def_CFSEFAZ.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Gab_Pre2.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Gab_Preliminar_CFSEFAZ.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Ed2002_SEFAZ5_sj.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/ED2002_SEFAZ4_final.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Gab_DEFINITIVO_SEFAZ.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Gab_Preliminar_SEFAZ.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/ED2002_SEFAZ3_hl2.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/ED2002_Sefaz2_ret.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/ED2002_Sefaz1.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Prova_CF_AGENTE_CONTROL.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Prova_CF_FISCAL_TRIBUTOS.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/Prova_CF_TECNICO_FINANCAS.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/AGENTE_CONTROL.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/FISCAL_TRIBUTOS.pdf",
+        "https://cdn.cebraspe.org.br/concursos/_antigos/2002/sefaz/arquivos/TECNICO_FINANCAS.pdf"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/",
+      "status": 200,
+      "sha256": "13e17f67ef6802eced91b64f025c310e2f83dfd9aa9bb209d3c0893b9eb583c1",
+      "capture": "DPFAGENTE2009.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_2_2009_DPF_Agente_Conv_FIC_Valter.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_1_PF_CONCURSOS ANTERIORES_conv_sub_judice.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_130_PF_2009_retomada do CFP_mauricio_igor.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_109_PF_2009_Convocacao_sub_judice_mauricio.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_87_PF_2009_Convocacao_sub_judice_igor.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_53_PF_18_CONVOCAO_DE_CANDIDATOS_DE_CONCURSOS_ANTERIORES_PARA_O_CFP___APF_2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/Ed_38_PF_18_Convoca&#231;&#227;o de candidatos de concursos anteriores para o CFP - APF 2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_18_2010_DGP_DPF___APF___EXCLUSO_DE_CANDIDATOS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL__N_16_2010__DGP_DPF_DE_29_DE_JUNHO_DE_2010___05.07.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/PORTARIA______N__1_070_DE_25_DE_JUNHO_DE_2010_25.06.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_14_EPF_APF_CONCURSOS_ANTIGOS___QUARTA_CHAMADA______RE_MATRICULAS_DE_SJ_E_ELIMINAES_25.06.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_13_APF___QUARTA_CHAMADA_______RE_MATRICULAS_DE_SJ_E_ELIMINACOES___DEFINITIVO__2__25.06.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_11_2010_DPF_AGENTE_EXCLUSAO_17.06.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_9_2010_DPF_AGENTE_3A_CONVOCACAO_CFP___08.02.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_10_DPF_CONCURSOS_ANTERIORES___3A_CONVOCACAO_CFP___08.02.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/RASCUNHO_APF_DIA_05022010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___CONTA_CORRENTE_PARA_PAGAMENTO_DE_AUXILIO_FINANCEIRO_PARA_O_CURSO_DE_FORMAO_PROFISSIONAL___APF___01.02.2010.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_5_DPF_CONCURSOS_ANTERIORES___CONVOCA_CFP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_4_2010_DPF_AGENTE_CONVOCA_CFP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___PERODO_DE_APRESENTAO_PARA_O_CURSO_DE_FORMAO_PROFISSIONAL___APF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_2_2010_DPFAGENTE_CONVOCACAO_SUB_JUDICE_ENTREGA_CERTIDAO___11.01.2010T.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_47_2009_APF23.12.2009T.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_2009_DPF_AGENTE_RESULTADO_SUB_JUDICE21.12.2009T.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_43_2009_DPF_AGENTE_EXCLUSAO_EXAMES_MEDICOS15.12.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_41_CONCURSOS_ANTERIORES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_40_2009_DPF_AGENTE_RES_FINAL_AV_PSIC__EX_FS__EX_MD.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_2009_DPF_AGENTE_INCLUSAO_DE_CANDIDATO_NO_RES_PROV_EXAME_MEDICO__2__17.11.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_RECURSO_AVALIACAO_PSICOLGICA_17.11.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_FIC_E_DATAS_11.11.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_35_2009_DGP_DPF___RESULTADO_DEFINITIVO_DAS_PROVAS_PRATICAS_11.11.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_37_2009_DPF_AGENTE_RES_PROV_EXAME_FS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_RESIDENTES_NO_EXTERIOR_ALTERADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/EDITAL_34_CONCURSOS_ANTERIORES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_33_2009_DPF_AGENTE_CONVOCACOES_FASES_PENDENTES_ALTERADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_CONVOCACOES_FISICO_E_MEDICO_16.10.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_31_2009_DPF_AGENTE_RES_FINAL_DISCURSIVA_E_CONVOCACOES_ATUALIZADO_13.10.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/AGENTE_JUSTIFICATIVAS_DE_ANULA____O_E_DE_MANUTEN____O_DE_GABARITO_05.10.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_29_2009_DPF_AGENTE_RES_FINAL_OBJETIVA_E_PROVISORIO_DISCURSIVA_NOVO_05.10.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_TORNA_SEM_EFEITO_RESULTADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_27_2009_DPF_AGENTE_TORNA_SEM_EFEITO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_24_2009_DPF_AGENTE_RES_FINAL_OBJETIVA_E_PROVISORIO_DISCURSIVA_30.09.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_22_2009_DPF_AGENTE_RET_DATA_E_TOXICOLOGICO_28.09.2009.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF_09_AGENTE_DEMANDA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF_09_AGENTE_LISTA_ATENDIMENTO_ESPECIAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_2009_DPF_AGENTE_LOCAIS_E_HORARIO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_LOCAIS_DE_PROVA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_REABERTURA_DE_PAGAMENTO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/COMUNICADO___AGENTE_INSCRIO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF_AGENTE_ISENCAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_17_DPF_AGENTE_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/IN_004_EXAME_DE_APTIDAO_FSICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/IN_003_INVESTIGAO_SOCIAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/IN_002_EXAME_MDICO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/IN_001_AVALIAO_PSICOLGICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/ED_2009_DPF_AGENTE_ABT_24_7_FINAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF09AGENTE_001_1_prova.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF09AGENTE_Gab_Definitivo_001_1.PDF"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/",
+      "status": 200,
+      "sha256": "3faf949e884cb5bfcabbcc4a6e93a3d09a347f9c14709c26f0b2a4b06f81b4d0",
+      "capture": "DPF_2004_NAC.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/Ed_1_PF_CONCURSOS ANTERIORES_conv_sub_judice.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/Edital24-ConvocacaodecandidatodoconcursoPF2004.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/Edital_167_candidata_sub_judice_oriunda_do_concurso_público_regido_pelo_Edital_242004__DGPDPF.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/11. Edital corrigido Cebraspe - Ed_149_PF_2004_Convocação de sub judice CFP - 2004 Nacional.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/edital_144_pf.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_81_PF_18_ELIMINAO_DE_CANDIDATOS_DE_CONCURSOS_ANTERIORES_PARA_O_CFP___2004_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_50_PF_18_CONVOCAO_DE_CANDIDATOS_DE_CONCURSOS_ANTERIORES_PARA_O_CFP___2004_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/Ed_35_PF_2004_Convocação de candidatos de concursos anteriores para o CFP - 2004 Nacional.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/EDITAL_46_2014_DGP_DPF___LIMINARISTAS___PENDENCIAS_CFP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_010_2009___5_CHAMADA_E_HOMOLOGAES_CFP_1_09__CESPE_002__NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_009_2009___4_CHAMADA_CFP_1_09__COREC_001___2_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_007_2009___3_CHAMADA_CFP_1_09__COREC_001___2_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_5_2009_NACIONAL__2_CHAMADA___COREC_001_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_3_2009_NACIONAL_1_CONVOCACAO_1_TURMA_DE_2009_SEM_ANEXO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_13_2008_NACIONAL___HOMOLOGACOES_E_RETIFICACOES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2008_PF_NACIONAL_CONV_CF_2_2008.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2008_PF_NACIONAL_SEXTA_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2008_PF_NACIONAL_007_QUINTA_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/EDITAL_QUARTA_CHAMADA_NACIONAL___14_2_2008.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_POLICIA_FEDERAL_VACINA____O.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_1_08_NACIONAL_CONV_CF_3_CHAMADA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_25_NACIONAL_CONV_CF_2_CHAMADA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_22_NACIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_NACIONAL_19_HOMOL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_NACIONAL_17_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_NACIONAL_15_HOMOL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_12_2007_PF_NACIONAL_RET_GUILHERME___2_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_NACIONAL_3_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_8_NAC_2_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_6_NACIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2007_PF_3_NACIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_01-2007_PF_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_20_NACIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_18_NACIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_017_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/AVISO_-_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED 2006 PF 015 nacional 4 conv CF.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_013_NACIONAL_3_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_011_NACIONAL_2_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_NACIONAL_09_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_007_NACIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_005_NACIONAL_HOMOL_E_RELACOES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_003_NACIONAL_EXCLUSAO_CANDIDATA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2006_PF_001_NACIONAL_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_PF_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_112_NACIONAL_CONV_CURSO_DE_FORMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_110_NACIONAL_HOMOL_MAT_REL_CAND_ELIM_E_REMANEJ.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_106_NACIONAL_CONV_CF_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_105_NACIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_NACIONAL_DATA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_98_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_96_NACIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_94_NACIONAL_CONV_CURSO_DE_FORMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_89_NACIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_86_NACIONAL_RES_FIN_FASES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_84_NACIONAL_RES_PROV_FASES_PENDENTES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_83_NACIONAL_INCLUSAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_81_NACIONAL_CONV_FASES_PENDENTES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_80_NACIONAL_RES_FIN_PRAT__ESCRIVAO__E_RES_FIN_1_ETA_CONC_E_RETIFICACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_79_NACIONAL_RES_PROV_PRAT__ESCRIVAO_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/QUADRO_DE_REMANEJAMENTO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/NOTA_REMANEJAMENTO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_77_NACIONAL_CONV_CF_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_76_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/REMANEJAMENTO_-_MATRICULA_ANP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/EDITAL_75.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ENXOVAL__CF_PPPF_II.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/DOCUMENTACAO_NECESSARIA_A_MATRICULA_NO_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_POLICIA_FEDERAL_CURSO_DE_FORMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_72_NACIONAL_RES_PROV_CAP_FIS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ENXOVAL__CFPPPF_II.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_26-01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_NACIONAL_69_CONV_CAP_FIS_FEM_SUB_I.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_PF_CONV_LIMINARISTAS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_68_NACIONAL_CONV_CAP_FIS_FEMIN.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2005_PF_67_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_66_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_RESULTADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_POLICIA_FEDERAL_I.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_14-12.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_59.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/MANUTENCAO_DE_GABARITO5.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/MANUTENCAO_DE_GABARITO4.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_19-11.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_53_NACIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_52.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_COMUNICADO_9-11-2004.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ALTERACAO_CARGO2_GAB_DPF_NACIONAL_NOVO_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_PRELIMINAR_DPF_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_47_NAC_LOCAIS_DE_PROVAS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/DEMANDA_NAC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_39_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FICHA_DE_AVAL_FISICA_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/COMUNICADO_POLICIA_FEDERAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_35_PRORR_ATEND.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_32_NACIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_003-2004_-_CAPACIDADE__FINAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FICHA_DE_AVALIACAO_FISICA_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_003-2004_-_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_002-2004_-_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FICHA_MEDICA-VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FICHA_DE_CAPAC_FISICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_003-2004_-_CAPACIDADE_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FICHA_MEDICA_IN_N_002_-2004-DGP-DPF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_002-2004_-_EXAME_MEDICO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/FIC_-_ANEXO_DA_IN_001-04.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/IN_N_001-2004_-_INVESTIGACAO_SOCIAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_27_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/ED_2004_PF_ABT_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_01_DELEG_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_01_DELEG_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_01_DELEG_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_02_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_03_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_04_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_05_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_06_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_07_PERITO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_08_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_09_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_10_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_11_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_12_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_13_PERITO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_14_PERITO_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_15_PEITO_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_16_PERITO_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_17_PERITO_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_18_PERITO_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_VERMELHO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_20__ESCRIVAO_AZUL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_20_ESCRIVAO_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_20_ESCRIVAO_VERMELHO.PDF"
+      ]
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/",
+      "status": 200,
+      "sha256": "cc04bce41ebd555d68d77984920601bf3f6e21e746e782c12b2a4c92a211304a",
+      "capture": "DPF_2004_REG.html",
+      "pdf_links": [
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Ed_2_PF_2004_REGIONAL_Conv_sub_judice_FIC_Mauro.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Ed_1_PF_CONCURSOS ANTERIORES_conv_sub_judice.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Edital_8825075_edital_92_pf_luciano.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Edital_8716779_N__84___DGPPF__21_DE_SETEMBRO_DE_2022.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Minuta_5959241_minuta_gilberto.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Minuta_5955069_minuta_edital_162.pdf",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Ed_129_PF_2004_REGIONAL_retomada_CFP_claudinei.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Ed_119_PF_18_convocacao_sub_judice_CFP_claudinei.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_51_PF_18_CONVOCAO_DE_CANDIDATOS_DE_CONCURSOS_ANTERIORES_PARA_O_CFP___2004_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/Ed_36_PF_18_Convocação de candidatos de concursos anteriores para o CFP - 2004 Regional.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_011_2009___5_CHAMADA_E_HOMOLOGAES_CFP_1_09__CESPE_002__REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_008_2009___3_CHAMADA_CFP_1_09__COREC_001_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_6_2009_REGIONAL__2_CHAMADA___COREC_001_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_4_2009_REGIONAL_1_CONVOCACAO_1_TURMA_DE_2009_SEM_ARQUIVO_ANEXO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_14_2008_REGIONAL_HOMOLOGACOES_E_RETIFICAOES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_REGIONAL_CONV_CF_2_2008.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_REGIONAL_SEXTA_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_REGIONAL_RES_FIN_CAP_FIS_SUB_JUDICE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_REGIONAL_006_QUINTA_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/EDITAL_QUARTA_CHAMADA_REGIONAL___14_2_2008.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/COMUNICADO_POLICIA_FEDERAL_VACINA____O.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_REGIONAL_RES_PROV_CAP_FIS_SUB_JUDICE________CORRE____O_COREC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/COMUNICADO_REGIONAL_CAP_FISICA_SUB_JUDICE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2008_PF_2_08_REGIONAL_CONV_CF_3_CHAMADA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_26_REGIONAL_CONV_CF_2_CHAMADA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_24_CONV_CAP_FIS_SUB_JUDICE_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_23_REGIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_20_HOMOL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_18_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_16_HOMOL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_13_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_REGIONAL_3_CHAMADA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_9_REGIONAL_2_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_7_RET_GEISA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_5_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2007_PF_4_REG_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_02-2007_PF_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_21_REGIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_19_REGIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_016_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/AVISO_-_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_014_REGIONAL_4__CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_012_REGIONAL_3_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_010_REGIONAL_2_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_REGIONAL_08_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_006_REGIONAL_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_004_REGIONAL_HOMOL_E_REL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2006_PF_002_REGIONAL_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_114_REGIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/COMUNICADO_PF_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_113_REGIONAL_CONV_CURSO_DE_FORMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_111__REGIONAL_HOMOL__REMANEJ_E_ELIM.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_109_EXCLUSAO_E_INCLUSAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_107_REG_CONV_CF_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/COMUNICADO_REGIONAL_DATA_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_104_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_97_REGIONAL_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_95_REGIONAL_CONV_CURSO_DE_FORMACAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_90_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_87_REGIONAL_RES_FIN_FASES_PENDENTES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_85_REGIONAL_RES_PROV_FASES_PENDENTES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_82_REGIONAL_CONV_FASES_PENDENTES.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/QUADRO_DE_REMANEJAMENTO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/NOTA_REMANEJAMENTO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_78_CONV_CF_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/REMANEJAMENTO_-_MATRICULA_ANP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ENXOVAL__CFPPPF_II.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/DOCUMENTACAO_NECESSARIA_A_MATRICULA_NA_ANP.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_74_CONV_CF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REG_73_RES_FIN_PRAT_E_CONC_ESCRIVAO_II.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_71_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2005_PF_REGIONAL_70_RES_PROV_PRAT__ESCRIVAO_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_65_-_ESCRIVAO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_64_RESULTADO_FINAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_61_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/EDITAL_2004_PF_REGIONAL_60.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_COMUNICADO_REGIONAL_22-11.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_54_RESULTADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/RAZOES_PARA_ANULACAO_ALTERACAO_DE_GABARITO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_COMUNICADO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/GABARITO_DEFINITIVO_DPF_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_51_RES_FIN_OBJ_E_PROV_DISC.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/GABARITO_PREL_DPF_REGIONAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/DEMANDA_REGIONAL_FINAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_44_LOCAIS_E_HORARIOS.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_40_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/COMUNICADO_POLICIA_FEDERAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_36_PRORR_ATEND.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_33_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_003-2004_-_CAPACIDADE__FINAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FICHA_DE_AVALIACAO_FISICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FICHA_DE_AVALIACAO_FISICA_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_003-2004_-_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_002-2004_-_VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FICHA_MEDICA-VIGENTE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FICHA_DE_CAPAC_FISICA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_003-2004_-_CAPACIDADE_.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FICHA_MEDICA_IN_N_002_-2004-DGP-DPF.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_002-2004_-_EXAME_MEDICO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/FIC_-_ANEXO_DA_IN_001-04.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/IN_N_001-2004_-_INVESTIGACAO_SOCIAL.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_28_RET.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/ED_2004_PF_REGIONAL_ABT.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_01_DELEG_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_01_DELEG_LARANJA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_01_DELEG_VERDE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_02_PERITO_AREA_1.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_03_PERITO_AREA_2.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_04_PERITO_AREA_3.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_05_PERITO_AREA_4.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_06_PERITO_AREA_5.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_07_PERITO_AREA_6.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_08_PERITO_AREA_7.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_09_PERITO_AREA_8.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_10_PERITO_AREA_9.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_11_PERITO_AREA_10.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_12_PERITO_AREA_14.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_13_PERITO_AREA_15.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_14_AGENTE_BRANCO.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_14_AGENTE_LARANJA.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_14_AGENTE_VERDE.PDF",
+        "https://cdn.cebraspe.org.br/concursos/DPF_2004_REG/arquivos/CARGO_15_ESCRIVAO.PDF"
+      ]
+    }
+  ],
+  "downloaded_official_documents": [
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/GAB_DEFINITIVO_STJ.PDF",
+      "sha256": "b313219e0dc487c55a65468bc9e6752a7b3176f259ee162231ff5beb80265140",
+      "file": "GAB_DEFINITIVO_STJ.PDF",
+      "pages": 7,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_VERDE_ADMINISTRAT.PDF",
+      "sha256": "e4ba8944e40c2dcddf85e6f39f80ed43fb636afab63db84a2dbb8ffad3a75ee3",
+      "file": "NM_VERDE_ADMINISTRAT.PDF",
+      "pages": 10,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STJ2004/arquivos/NM_AZUL_ADMINISTRAT.PDF",
+      "sha256": "6005fd65a6beab2a5534bf7b7a611c87a09ddf9435c3e718b4e31468637c5ead",
+      "file": "NM_AZUL_ADMINISTRAT.PDF",
+      "pages": 10,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/JUSTIFICATIVAS_DE_ALTERACAO.PDF",
+      "sha256": "506d545b627b7f8c661876a3ec1ba0461fa19293af3daa47cb9c463992ffd7d6",
+      "file": "JUSTIFICATIVAS_DE_ALTERACAO.PDF",
+      "pages": 3,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/GAB_DEFINITIVO_STM.PDF",
+      "sha256": "04fcbf8281986a3245cdf0a05ee2295c89da8b566d7b81a676b04cdf62b9beea",
+      "file": "GAB_DEFINITIVO_STM.PDF",
+      "pages": 2,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/2004/STM2004/arquivos/TEC_JUD_AREA_ADM.PDF",
+      "sha256": "79e0aee05d19a82b23ae433079f813865ec871d9000dba33c92344b29b11980b",
+      "file": "TEC_JUD_AREA_ADM.PDF",
+      "pages": 11,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_010_36.pdf",
+      "sha256": "a1f33e837d51e1c962f6ae038de4616b502c117b664f7576cca3fe0d71c0ddea",
+      "file": "TST07_Gab_Definitivo_010_36.pdf",
+      "pages": 1,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_Gab_Definitivo_007_21.pdf",
+      "sha256": "99c7295bc98ae35fbb92c196e600a7d4d786220ba7fda112894575454237d0b2",
+      "file": "TST07_Gab_Definitivo_007_21.pdf",
+      "pages": 1,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_010_36.pdf",
+      "sha256": "7de128984b40b4cb8ff9eafbc1b7c3c4cfe77e0d8b1c9936b5cee14c583b81a8",
+      "file": "TST07_010_36.pdf",
+      "pages": 10,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/TST2007/arquivos/TST07_007_21.pdf",
+      "sha256": "b0e27c4a4bdb4a2b71a4ab59a50008afa5a635334cfaa03d7784cf81a97b28c2",
+      "file": "TST07_007_21.pdf",
+      "pages": 16,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF09AGENTE_001_1_prova.pdf",
+      "sha256": "93172f70278f51694592a363e825cf2c301d2b4a8103dc659d935ff7418e8be9",
+      "file": "DPF09AGENTE_001_1_prova.pdf",
+      "pages": 12,
+      "status": "downloaded_not_yet_fully_matched"
+    },
+    {
+      "url": "https://cdn.cebraspe.org.br/concursos/DPFAGENTE2009/arquivos/DPF09AGENTE_Gab_Definitivo_001_1.PDF",
+      "sha256": "25aa893a53cb6df9fa085acae91ec0e7f601ef966116db1a804e810cc2d5c728",
+      "file": "DPF09AGENTE_Gab_Definitivo_001_1.PDF",
+      "pages": 1,
+      "status": "downloaded_not_yet_fully_matched"
+    }
+  ],
+  "items": [
+    {
+      "candidate_id": "cf97f11ae1cb7e5cbb4e3e88c6ffc334ee06e60a88cd1ab8c3b8c5a8e9f43699",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 8,
+      "source_item_index_zero_based": 20,
+      "expected_raw_text_sha256": "7cf72343bb1dd59da8928984fc375f034c199880ce5d4606b08cd3da50909c56",
+      "question_text_candidate": "O desenvolvimento das ideias do texto leva a concluir que a\n“economia de hoje” (l.1-2) tem força, e não entra em colapso,\nporque cria forças de autocorreção no seu declínio.",
+      "shared_instruction_candidate": "Com referência ao texto\nacima, julgue o item subsequente.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "modalidade: tendência versus garantia absoluta",
+      "explanation": "O fecho afirma que os declínios tendem a criar forças de autocorreção. A expressão de tendência não garante que a economia jamais entre em colapso. É preciso confrontar a redação integral da prova e seu gabarito definitivo antes de aceitar a conclusão categórica acrescentada no item.",
+      "example": "Dizer que uma febre tende a baixar não garante que todo paciente ficará curado.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: modalidade: tendência versus garantia absoluta. Não adotar automaticamente a resposta editorial."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 8,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 8,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "38c780ab910134c197b8fc159acc2f616078c5bde486722c1ef8d15bdcd82320",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 21,
+      "expected_raw_text_sha256": "39dba28d1983287f44570d19be28812d311372e5f7312ba3b2eadeb0b835d3b9",
+      "question_text_candidate": "O texto, apesar de falar em “argumentação” (l.12 e 30),\né predominantemente descritivo, uma vez que apresenta\nos contornos e as características da parte da população\nbrasileira considerada “pobre”.",
+      "shared_instruction_candidate": "Acerca do texto acima,\njulgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "tipologia textual",
+      "explanation": "O texto sobre pobreza desenvolve uma tese, escolhe uma definição operacional e examina políticas para combatê-la. Descrever características de um grupo pode integrar a exposição, mas não transforma a organização predominantemente argumentativa em descrição.",
+      "example": "Um artigo que compara propostas e defende uma delas continua argumentativo mesmo ao descrever os beneficiários.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "3b90f809a67272d738b72882ca844a6a1f91e42eb46acb14044894e850ff988a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 22,
+      "expected_raw_text_sha256": "39dba28d1983287f44570d19be28812d311372e5f7312ba3b2eadeb0b835d3b9",
+      "question_text_candidate": "No primeiro parágrafo, a ideia central pode ser resumida\nda seguinte forma: é necessário dar bens de subsistência\npara quem já se encontra em situação de miséria extrema.",
+      "shared_instruction_candidate": "Acerca do texto acima,\njulgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "inferência contextual",
+      "explanation": "O início contrapõe ensinar a pescar à situação de extrema privação, para a qual ensinar pode ser insuficiente. A interpretação proposta é compatível com a defesa de atendimento imediato à subsistência. Essa inferência deve permanecer restrita ao texto, sem substituir a avaliação das políticas atuais.",
+      "example": "Oferecer um curso profissionalizante não elimina a necessidade imediata de alimento de quem está passando fome.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "1208a6bddf582253512da52ca03b5592be7eb02fd94358b09d1c6de7cd0fea5a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 23,
+      "expected_raw_text_sha256": "39dba28d1983287f44570d19be28812d311372e5f7312ba3b2eadeb0b835d3b9",
+      "question_text_candidate": "Do segundo ao quinto parágrafos, é apresentada, entre dis-\ntintas acepções de pobreza, a que será adotada pelo autor e\nmediante a qual devem ser entendidas as suas ideias.",
+      "shared_instruction_candidate": "Acerca do texto acima,\njulgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "delimitação de parágrafos e conceito",
+      "explanation": "A delimitação de pobreza aparece explicitamente na passagem em que o autor diz tratar como pobres as famílias sem renda para alimentos e outros bens essenciais. Outros parágrafos fixam a inaceitabilidade dessa situação e o prazo de enfrentamento. A distribuição exata entre segundo e quinto parágrafos exige confirmar a diagramação original.",
+      "example": "Definir quem será atendido e fixar em quanto tempo ocorrerá o atendimento são decisões distintas.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: delimitação de parágrafos e conceito. Não adotar automaticamente a resposta editorial."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "6bd091315637dfa63f44fe01e787b8b3c797236b390353b979e4a4c800232d81",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 24,
+      "expected_raw_text_sha256": "39dba28d1983287f44570d19be28812d311372e5f7312ba3b2eadeb0b835d3b9",
+      "question_text_candidate": "Nos parágrafos sexto e sétimo, o autor associa a pobreza,\nfundamentalmente, a aspectos econômicos e financeiros,\nargumentando que, para saná-la, é imperioso elevar a renda\nper capita.",
+      "shared_instruction_candidate": "Acerca do texto acima,\njulgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "restrição indevida de alternativas",
+      "explanation": "O argumento não se limita a elevar a renda por habitante: apresenta tanto o aumento dos recursos disponíveis quanto sua melhor distribuição. A assertiva apaga essa segunda via e transforma uma alternativa debatida em exigência exclusiva do autor, alterando a relação argumentativa.",
+      "example": "Se um texto admite produzir mais ou distribuir melhor, não se pode atribuir a ele apenas a primeira solução.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "dbc7c6a37debff905959d5580d993537b24a7f12370123c81916b424422f700e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 25,
+      "expected_raw_text_sha256": "39dba28d1983287f44570d19be28812d311372e5f7312ba3b2eadeb0b835d3b9",
+      "question_text_candidate": "No último parágrafo, a proposta de diminuição da taxa\ndemográfica de pobres, com o estímulo ao controle e à\nredução da natalidade, é defendida pelo autor.",
+      "shared_instruction_candidate": "Acerca do texto acima,\njulgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "voz alheia e refutação",
+      "explanation": "O último parágrafo relata a proposta de controle da natalidade para em seguida rejeitar sua viabilidade como meio de erradicar a pobreza. Mencionar uma posição para refutá-la não equivale a defendê-la; é necessário observar a avaliação que acompanha a apresentação da tese alheia.",
+      "example": "A frase 'alguns propõem a medida, mas os resultados a refutam' apresenta uma opinião sem apoiá-la.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 8,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "13696d1e5ea9ae74909b8569d3aa70b955c8358c1739c88965eae0575b1b29e7",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 26,
+      "expected_raw_text_sha256": "1d1c64b33b2809f5e8b74b10b508ef9288b081fc2003bd8823648dec96bb4c99",
+      "question_text_candidate": "Se houver 36 ministros no STJ, então pode-se garantir\nque 24 deles foram escolhidos, em partes iguais, entre os\njuízes de TRFs e entre os desembargadores dos tribunais\nde justiça.",
+      "shared_instruction_candidate": "A respeito das infor-\nmações e da estrutura do texto acima, julgue os itens que se\nseguem.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "conteúdo constitucional: art. 104",
+      "explanation": "No cenário hipotético de 36 vagas, um terço corresponde a 12 e dois terços a 24, distribuídos entre as duas categorias mencionadas. A conta é compatível com o texto histórico, mas o conteúdo trata da composição constitucional do STJ e exige auditoria jurídica oficial antes de publicação.",
+      "example": "Em um conjunto hipotético de 36 lugares, duas parcelas de um terço somam 12 mais 12, isto é, 24.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Conteúdo constitucional ou penal: confrontar a norma aplicável com fonte oficial vigente; preservar contexto histórico sem ensinar regra superada."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "b8f795d9bb9bf90f59121db6d1bbc94236a2ada2baa45767b7ed6dd992fe9934",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 27,
+      "expected_raw_text_sha256": "1d1c64b33b2809f5e8b74b10b508ef9288b081fc2003bd8823648dec96bb4c99",
+      "question_text_candidate": "De acordo com a Constituição brasileira, qualquer brasileiro\nque tenha entre 35 e 65 anos de idade pode ser ministro\ndo STJ.",
+      "shared_instruction_candidate": "A respeito das infor-\nmações e da estrutura do texto acima, julgue os itens que se\nseguem.",
+      "exam_metadata_candidate": "Técnico Judiciário – STJ – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "regra etária histórica; auditoria constitucional obrigatória",
+      "explanation": "A expressão qualquer brasileiro elimina requisitos como notável saber jurídico e reputação ilibada, de modo que a idade isolada não basta nem no texto histórico. Além disso, a faixa etária do enunciado demanda confronto com o art. 104 vigente: o limite histórico não deve ser ensinado como regra atual.",
+      "example": "Ter a idade mínima para um cargo não dispensa a formação e os demais requisitos exigidos para ocupá-lo.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Conteúdo constitucional ou penal: confrontar a norma aplicável com fonte oficial vigente; preservar contexto histórico sem ensinar regra superada."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "224f2fb00ea95d2c5f739b1f912aba61b1ecdc787823be0511242b9591f0ce13",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 28,
+      "expected_raw_text_sha256": "cd71c5778b9d9f51cd526cce543c91e0211e64e783925b2b940cc9e0043a3ca8",
+      "question_text_candidate": "Infere-se do texto que, para o diretor do Instituto do Sono\nda Universidade Federal de São Paulo, a má qualidade do\nsono é um dos males da vida moderna.",
+      "shared_instruction_candidate": "Julgue os itens abaixo, referen-\ntes aos aspectos estruturais e interpretativos do texto acima.",
+      "exam_metadata_candidate": "Técnico – STM – 2011 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "inferência; pesquisa histórica",
+      "explanation": "A fala do especialista relaciona a restrição de sono à vida moderna e destaca a importância de compensá-la. Isso permite a inferência proposta dentro do contexto, sem transformar o resultado de uma pesquisa mencionada em 2010 em recomendação médica ou constatação científica atual.",
+      "example": "Se alguém recomenda compensar um prejuízo cada vez mais comum, é possível inferir sua avaliação negativa desse prejuízo.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "f95d99efd6b9b7dcf75983eb1e29b3beec9fea79c588515e0298ea84954938cf",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 9,
+      "source_item_index_zero_based": 29,
+      "expected_raw_text_sha256": "cd71c5778b9d9f51cd526cce543c91e0211e64e783925b2b940cc9e0043a3ca8",
+      "question_text_candidate": "O texto tem por objetivo principal alertar para os prejuízos\ncausados ao organismo em decorrência da má qualidade\ndo sono.",
+      "shared_instruction_candidate": "Julgue os itens abaixo, referen-\ntes aos aspectos estruturais e interpretativos do texto acima.",
+      "exam_metadata_candidate": "Técnico – STM – 2011 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "objetivo predominante do texto",
+      "explanation": "A abertura anuncia os benefícios de cochilar para aprendizagem e memória; o relato de perdas por privação do sono serve à explicação desse tema. A alternativa desloca o foco para um alerta geral de danos ao organismo, ampliando o objeto e deixando em segundo plano o propósito predominante.",
+      "example": "Uma notícia sobre melhora de memória após um cochilo não é necessariamente um alerta geral sobre todas as doenças do sono.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 9,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 9,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "606bfe96f354aaa483a3273034d2009006ec603fe39eb835b7035a724aab76fb",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 30,
+      "expected_raw_text_sha256": "2202f16e515c2c87c04aa75ec13133d22c1f223a28829a30b29c6fbcf3191c84",
+      "question_text_candidate": "O desenvolvimento do texto apresenta como deve ser\nentendido o significado do verbo “pegam” (l.2) a respeito\nde algumas leis: sair do papel.",
+      "shared_instruction_candidate": "Julgue os seguintes\nitens, a respeito das ideias e das estruturas linguísticas do\ntexto acima.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "sentido contextual e eficácia",
+      "explanation": "O verbo pegar tem sentido figurado de obter aplicação efetiva, explicado pelo contraste com leis que não saem do papel. O item reconhece uma equivalência construída pelo contexto; não se trata de promulgar uma norma, mas de observar sua eficácia na prática descrita pelo autor.",
+      "example": "Quando uma regra sai do papel e passa a orientar condutas, pode-se dizer informalmente que ela pegou.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "af0c251e5e68f4bf577ddc25fc7026c826b266edef17de5c549cd822ce890be1",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 31,
+      "expected_raw_text_sha256": "2202f16e515c2c87c04aa75ec13133d22c1f223a28829a30b29c6fbcf3191c84",
+      "question_text_candidate": "Na argumentação do texto, o termo “jabuticaba” (l.3) está\nservindo como exemplificação para algo que é tão tipica-\nmente brasileiro como as leis que podem pegar ou não\npegar; isto é, dar certo ou não dar certo.",
+      "shared_instruction_candidate": "Julgue os seguintes\nitens, a respeito das ideias e das estruturas linguísticas do\ntexto acima.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "comparação e distanciamento argumentativo",
+      "explanation": "A jabuticaba funciona como comparação com algo tomado como caracteristicamente brasileiro. O autor apresenta essa suposta exclusividade para depois contestá-la, pois identifica o problema também em outros países. A comparação não significa que ele aceite a exclusividade como conclusão.",
+      "example": "Comparar um costume a um produto típico pode apresentar uma crença que será contestada no período seguinte.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "ebdd5bb7f0e2d6d7250802f5743e86d165158d0ab6760e3e951e1a7cfeca402f",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 32,
+      "expected_raw_text_sha256": "2202f16e515c2c87c04aa75ec13133d22c1f223a28829a30b29c6fbcf3191c84",
+      "question_text_candidate": "A oração “É uma injustiça” (l.3) classifica qualquer opinião\nque restrinja o Brasil às suas características agrícolas, ou\na um simples cultivador de jabuticabas.",
+      "shared_instruction_candidate": "Julgue os seguintes\nitens, a respeito das ideias e das estruturas linguísticas do\ntexto acima.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "referente de avaliação e leitura literal indevida",
+      "explanation": "A avaliação de injustiça retoma a ideia de atribuir exclusivamente ao Brasil o problema da falta de aplicação das leis. O objeto da crítica não é reduzir o país à agricultura ou ao cultivo de uma fruta; essa leitura toma literalmente uma imagem usada para construir uma comparação.",
+      "example": "Ao criticar uma comparação injusta, o autor pode rejeitar sua generalização sem discutir a produção agrícola mencionada.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "b5a2937596fb6e2f5c0298ee368d064c1829188fc8ddd463b57adcc615daaf4f",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 33,
+      "expected_raw_text_sha256": "2202f16e515c2c87c04aa75ec13133d22c1f223a28829a30b29c6fbcf3191c84",
+      "question_text_candidate": "A expressão “o mesmo problema” (l.4) retoma a ideia intro-\nduzida pela expressão “É comum ouvir” (l.1) e mostra que\nem outros países também são ditas muitas coisas que não\ncorrespondem à verdade.",
+      "shared_instruction_candidate": "Julgue os seguintes\nitens, a respeito das ideias e das estruturas linguísticas do\ntexto acima.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "coesão referencial",
+      "explanation": "A expressão o mesmo problema recupera a existência de leis sem aplicação efetiva, apresentada no início. Ela não retoma apenas o ato de ouvir opiniões falsas. A progressão compara países quanto ao problema da aplicação das leis, mantendo o referente temático do trecho.",
+      "example": "Em 'a cidade tem enchentes; outras sofrem o mesmo problema', o problema retomado são as enchentes.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 9,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "7190b517d10ee53e6b7c1f0365673ca19d4e2afdf882c85bc52b55f22e2253db",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 34,
+      "expected_raw_text_sha256": "396cd51b3cb8859b0137ec4042adb23901618a5234acbd0763abb91dac2ee4c8",
+      "question_text_candidate": "A argumentação do texto opõe “vizinho” (l.2) e “exterior”\n(l.3) a “Filhos” (l.1) para reforçar que o problema “É nosso”\n(l.3).",
+      "shared_instruction_candidate": "Considere as ideias\ne as estruturas linguísticas do texto acima para julgar os itens\na seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "oposição lexical com formulação discutível",
+      "explanation": "O contraste lexical põe a distância atribuída ao vizinho e ao exterior em oposição à proximidade marcada por nosso. A formulação do item atribui essa oposição diretamente a Filhos, o que exige cautela: é necessário confirmar o enunciado original e o critério do gabarito definitivo, sem repetir a resposta da apostila como prova.",
+      "example": "Em 'não é problema alheio, é nosso', a oposição explícita é entre alheio e nosso, mesmo que o assunto seja a família.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: oposição lexical com formulação discutível. Não adotar automaticamente a resposta editorial."
+      ],
+      "support_reference": {
+        "context_start_page": 10,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "b17769c1d0c018ba701ea8964456ed16714656375f629a360c3d26067bba252a",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 35,
+      "expected_raw_text_sha256": "396cd51b3cb8859b0137ec4042adb23901618a5234acbd0763abb91dac2ee4c8",
+      "question_text_candidate": "Ao intensificar com o advérbio “mais” (l.4) o que deveria ser\na medida “natural” (l.5), a autora demonstra que a angústia\nna juventude deve ser evitada.",
+      "shared_instruction_candidate": "Considere as ideias\ne as estruturas linguísticas do texto acima para julgar os itens\na seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "intensificação e alcance da negação",
+      "explanation": "O trecho admite uma dose de angústia como natural na juventude e identifica um excesso na situação descrita. O intensificador mais marca ultrapassagem desse patamar, mas não implica que toda angústia deva ser evitada. A assertiva troca a crítica ao excesso por uma negação absoluta.",
+      "example": "Dizer que o consumo foi maior que o adequado não significa defender que qualquer consumo seja eliminado.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 10,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "bedbc8bbde075cf1d386921d0ce52fbba75ba5a648a00572ee4739bac78ec104",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 36,
+      "expected_raw_text_sha256": "dd86f7f5d85fcdb9a129ae4c6329698f44de23e3b49484a601b893cd037208eb",
+      "question_text_candidate": "O último período sintático do texto constitui um argumento a\nfavor da ideia expressa no primeiro parágrafo: a diminuição\nda idade para a responsabilidade penal.",
+      "shared_instruction_candidate": "Julgue o seguinte item,\na respeito do texto acima.",
+      "exam_metadata_candidate": "Técnico Judiciário – STM – 2004 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "argumentação em texto de tema jurídico histórico",
+      "explanation": "A sequência final com idades cada vez menores projeta uma consequência indesejada da proposta de redução. Ela contesta a eficácia da medida apresentada como opinião de seus defensores no início. A análise é de orientação argumentativa, não uma certificação da legislação penal atual.",
+      "example": "Apontar que uma solução apenas deslocaria o problema para outro grupo é um argumento contrário à sua eficácia.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Conteúdo constitucional ou penal: confrontar a norma aplicável com fonte oficial vigente; preservar contexto histórico sem ensinar regra superada."
+      ],
+      "support_reference": {
+        "context_start_page": 10,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "401fd9cadda942d285d666f907b6415bb9ac433f6d42c36ca8bcdafec0c67519",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 10,
+      "source_item_index_zero_based": 37,
+      "expected_raw_text_sha256": "b62dfd88c7fca24617383833cd0c7034e0faf95c9c281bcf22c116e9ad0db6cd",
+      "question_text_candidate": "O desenvolvimento da argumentação do segundo parágrafo\ndo texto propõe algumas soluções para se combaterem\nas “doses crescentes de pessimismo”, citadas no primeiro\nparágrafo.",
+      "shared_instruction_candidate": "A partir do texto acima,\njulgue o item subsequente.",
+      "exam_metadata_candidate": "Técnico Judiciário – TST – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "problema e propostas de solução",
+      "explanation": "O segundo parágrafo enumera investir no povo, considerar o interesse público e proteger o ambiente e o bem-estar. Essas propostas respondem ao quadro pessimista inicialmente descrito. A ressalva sobre a dificuldade de execução não apaga seu caráter de alternativas apresentadas no texto.",
+      "example": "Um artigo pode propor políticas e, em seguida, reconhecer obstáculos à execução dessas mesmas propostas.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 10,
+        "source_end_page": 10,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 10,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "867c381798440a191c0594edc45f1398869e91baadb064cb7de472094476f501",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 38,
+      "expected_raw_text_sha256": "baaba38c36bf982a436daf7f9a3c67c51d70f69ee1fdfd5d864a506e722e202b",
+      "question_text_candidate": "Pela organização das ideias do texto, a frase nominal “Sempre\napressado, eternamente atrasado” (l.4-5) qualifica o compor-\ntamento do “Coelho Branco” (l.3) e do “homem moderno” (l.3).",
+      "shared_instruction_candidate": "Com relação ao texto\nacima, julgue o item a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – TST – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "comparação e frase nominal",
+      "explanation": "A aproximação entre o homem moderno e o Coelho Branco permite que a frase nominal sobre pressa e atraso caracterize ambos. A comparação sustenta a crítica à aceleração cotidiana; a ausência de verbo nessa frase não impede sua função de caracterização no encadeamento do texto.",
+      "example": "Em 'a criança parece um furacão: agitada, incansável', os qualificativos participam da comparação entre os dois termos.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 10,
+        "source_end_page": 11,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "b4a70694b8808fff4bad2ae0272c3448959c60d4ead828724d58ed703d8ca3af",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 39,
+      "expected_raw_text_sha256": "c1d71a34df8600ad53f20a0684d21e6c27f017dafdaadcab79c454770aa2f9da",
+      "question_text_candidate": "Conclui-se do desenvolvimento das ideias do texto que, nos\ntempos atuais, “o relógio de pulso e o despertador” (l.13)\nforam substituídos pelo “nosso relógio interno” (l.12).",
+      "shared_instruction_candidate": "Com relação ao texto\nacima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – TST – 2008 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "inversão da relação semântica",
+      "explanation": "O texto diz que o relógio interno virou o relógio de pulso e o despertador, representando a submissão do ritmo pessoal a marcações externas. O item inverte a direção dessa transformação ao afirmar que os instrumentos externos foram substituídos pelo ritmo interno.",
+      "example": "Se a rotina pessoal passou a obedecer ao alarme, não se pode dizer que o alarme foi substituído pela rotina espontânea.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 11,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "21021cbc4fafadbcd9dcc3ef82197cbd29efcb92e6bb1b77d0848612c3e00d5b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 40,
+      "expected_raw_text_sha256": "c1d71a34df8600ad53f20a0684d21e6c27f017dafdaadcab79c454770aa2f9da",
+      "question_text_candidate": "A expressão “Esse é o começo” (l.16-17) refere-se à ideia inicial\ndo texto, expressa por “Trabalho demais, agenda cheia” (l.1).",
+      "shared_instruction_candidate": "Com relação ao texto\nacima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Técnico Judiciário – TST – 2008 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "anáfora e progressão temática",
+      "explanation": "O demonstrativo esse retoma as iniciativas imediatamente anteriores que valorizam bem-estar, simplicidade, história e hospitalidade. Não recupera como seu referente a agenda cheia do início, pois o começo da mudança cultural é associado às reações ao excesso de velocidade.",
+      "example": "Em 'surgiram ações de preservação; esse é o começo da mudança', o demonstrativo aponta para as ações recém-mencionadas.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 11,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "dc63a712065735080db849a995808a0cd23090ede8f51d6edac553776aaaeda4",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 41,
+      "expected_raw_text_sha256": "506113e07aeb2cf6f409c593f10dfbdf83dac5bb8ea56bf21acadfdead7d1732",
+      "question_text_candidate": "A linguagem empregada no texto permite caracterizá-lo\ncomo predominantemente informativo.",
+      "shared_instruction_candidate": "Com relação às\nideias, à organização e à tipologia do texto, julgue o item que\nse segue.",
+      "exam_metadata_candidate": "Técnico Judiciário – TRT/17ª – 2009 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "tipologia; dados científicos históricos",
+      "explanation": "O texto apresenta informações sobre calvície, pesquisas e perspectivas de tratamento, recorrendo a especialistas e dados. Essa finalidade de informar predomina sobre eventual descrição ou explicação. Os dados médicos históricos não devem, contudo, aparecer como orientação clínica atual sem revisão específica.",
+      "example": "Uma reportagem que explica uma pesquisa com falas de especialistas costuma ter finalidade predominantemente informativa.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 11,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "5334cb14b08875f150d75caf4286c93997c295f9a7754a58b576df2bccdad39e",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 42,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "De acordo com o texto, não ocorrem crimes violentos, como\nhomicídio, latrocínio, sequestro e estupro, na cidade de Tupã.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "inferência sem apoio textual",
+      "explanation": "O texto discute capacidade de acolhimento de presos e consequências alegadas por autoridades, sem afirmar inexistência de crimes violentos em Tupã. A alternativa transforma uma questão de administração prisional em uma afirmação absoluta sobre criminalidade que o texto não autoriza.",
+      "example": "Uma notícia sobre falta de vagas em hospitais não permite concluir que não ocorram doenças na cidade.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "8c51a5b30d06d00e3e8c9090612ea85904828601e59a4ea0fb2b2021ebe67898",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 43,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "Depreende-se do texto que a crise do sistema prisional de\nSão Paulo pode ser resolvida com a adoção de medidas que\nrestrinjam o deslocamento dos presos e dos seus familiares.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "inversão de finalidade",
+      "explanation": "A sentença busca aproximar presos de suas famílias para favorecer visitas e ressocialização. O texto não apresenta restringir o deslocamento dos familiares como solução para a crise. Confundir a delimitação territorial de acolhimento com impedir visitas inverte a justificativa atribuída ao juiz.",
+      "example": "Aproximar uma unidade de atendimento das famílias facilita o acesso; isso não equivale a proibir o deslocamento das famílias.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "5d58ff1070d545869cf8a5fbff39ef2654a1857c7ff1078b5a251754ad6072ff",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 44,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "Infere-se do texto que o juiz mencionado, ao proferir sua\nsentença, preocupou-se com a reabilitação dos presos.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "inferência sobre finalidade atribuída",
+      "explanation": "A referência à reeducação e à ressocialização indica preocupação do magistrado com a reintegração dos presos, favorecida pelo contato familiar. Trata-se de inferência ancorada nas razões relatadas na notícia, sem atestar que a sentença histórica esteja vigente ou seja modelo jurídico atual.",
+      "example": "Se uma medida é justificada por facilitar reinserção social, pode-se inferir preocupação com a reabilitação de seus destinatários.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "da20f5d8ab09adaa3a3170a8186adcd453c84dfee9193d593cb8be25cac3406b",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 45,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "Subentende-se da leitura do terceiro parágrafo que o\ngoverno de São Paulo considera inviável cumprir a sentença\ne recorrerá à instância superior.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "informação explícita e inferência histórica",
+      "explanation": "O terceiro parágrafo informa o anúncio de recurso do governo estadual e expõe as dificuldades alegadas para executar a decisão. Isso sustenta a leitura de resistência à implementação e de encaminhamento à instância superior, restrita à situação histórica narrada na notícia.",
+      "example": "Quando uma autoridade anuncia recurso e alega impossibilidade de execução, o texto indica oposição ao cumprimento nos termos fixados.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "6531d34f56452d7deb2ff5f7533c3d5fb6c84e10ddec4992424bf26ab18590b8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 46,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "De acordo com o terceiro parágrafo do texto, o encarcera-\nmento de criminosos em diferentes penitenciárias possibilita\na desmobilização de quadrilhas.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "atribuição de argumentos a fontes",
+      "explanation": "As autoridades citadas atribuem à distribuição de integrantes entre estabelecimentos diferentes a finalidade de impedir comando criminoso e formação de facções. O item acompanha esse argumento relatado; não o transforma em conclusão científica universal nem em validação jurídica da política prisional.",
+      "example": "Relatar que uma gestão defende separar grupos para reduzir articulação descreve a justificativa dessa gestão.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "9bc0c7140865e1b477426727afe999022a590168293845cf78a2222852474076",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 47,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "Segundo o autor do texto, a sentença salienta a necessidade\nde uma solução para a grave situação do sistema prisional\nde São Paulo.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "avaliação autoral e concessão",
+      "explanation": "O fechamento reconhece como mérito da sentença lembrar ao governo a urgência de solucionar a crise prisional. A questão identifica a avaliação explícita do autor, independentemente da previsão de que a decisão dificilmente seria confirmada por uma instância superior.",
+      "example": "Um editorial pode considerar improvável manter uma decisão e ainda elogiar sua capacidade de chamar atenção para o problema.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "3ed311c92c3be57a00631337848322e6e8f04f0c08b31415ee14f2f1ee129107",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 11,
+      "source_item_index_zero_based": 48,
+      "expected_raw_text_sha256": "4e0d63c006cceb181dfba63b3dd242e0e9c822b17f3796b676a6cad3b3266b3b",
+      "question_text_candidate": "O texto caracteriza-se como texto descritivo devido à sua\ncomplexidade e à apresentação de fatos que ocorreram\ncom personagens reais.",
+      "shared_instruction_candidate": "Com referência às\nideias do texto, julgue os itens de 1 a 7.",
+      "exam_metadata_candidate": "Fiscal de Tributos/V. Velha-ES – 2008 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "critério inadequado de tipologia",
+      "explanation": "A presença de personagens reais e de fatos concretos não define a tipologia como descritiva. A notícia também expõe justificativas e avaliações sobre uma decisão e a crise prisional. É preciso observar a organização discursiva predominante, não a realidade dos envolvidos ou a complexidade do assunto.",
+      "example": "Um editorial sobre um fato real pode ser argumentativo; a existência real dos personagens não o torna uma descrição.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 11,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 11,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "172a0baf2c0ff3a9a2b7f09bfc3290a8a56f0212c085e8faaaa3a09d59878691",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 49,
+      "expected_raw_text_sha256": "d517f6f57f099bcd94845eacb368c92fb269beea285955e3996d5e63e76a0064",
+      "question_text_candidate": "De acordo com o texto, os alemães Spix e Martius integraram\nas primeiras expedições oficiais aos rios Juruá e Purus.",
+      "shared_instruction_candidate": "Considerando\no texto acima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Fiscal de Tributos/Rio Branco-AC – 2007 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "distinção entre eventos históricos no texto",
+      "explanation": "O texto distingue a passagem dos naturalistas no início do século XIX das primeiras expedições oficiais, atribuídas a Cametá e Oliveira em meados desse século. A alternativa funde os dois episódios e transfere aos naturalistas a participação nas expedições oficiais sem apoio no trecho.",
+      "example": "Visitar um local antes de uma missão oficial não torna automaticamente o visitante integrante dessa missão posterior.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "d9b652f44ee27eac3caf10f6cff7f34a1a9117c26fc194e60ea730013fd13bde",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 50,
+      "expected_raw_text_sha256": "d517f6f57f099bcd94845eacb368c92fb269beea285955e3996d5e63e76a0064",
+      "question_text_candidate": "Os objetivos das expedições lideradas por João Rodrigues\nCametá e Romão José de Oliveira, de acordo com o texto,\ncircunscreviam-se à pacificação dos índios da região.",
+      "shared_instruction_candidate": "Considerando\no texto acima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Fiscal de Tributos/Rio Branco-AC – 2007 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "restrição indevida por exclusividade",
+      "explanation": "Circunscrever os objetivos à pacificação elimina a exploração da região e de suas riquezas e a atração dos indígenas, também mencionadas. O erro está na restrição de alcance: apresentar um dos objetivos como único modifica a enumeração de finalidades presente no texto histórico.",
+      "example": "Se uma viagem visa mapear rios e estudar plantas, afirmar que visa exclusivamente às plantas apaga um de seus objetivos.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "ddeb4d4bff7cc6dce3faa8417af5fce71c08900e11445f853c953b5901ae0dda",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 51,
+      "expected_raw_text_sha256": "d517f6f57f099bcd94845eacb368c92fb269beea285955e3996d5e63e76a0064",
+      "question_text_candidate": "O emprego de itálico em “entradas” (l.11) indica que essa\nexpressão está sendo utilizada com sentido adaptado ao\ncontexto, pois seu sentido original não abrange expedições\nda região Norte.",
+      "shared_instruction_candidate": "Considerando\no texto acima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Fiscal de Tributos/Rio Branco-AC – 2007 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "justificativa lexical não demonstrada",
+      "explanation": "O itálico pode assinalar emprego especializado ou histórico de uma palavra, mas não comprova sozinho que seu sentido original exclua a região Norte. A explicação da apostila é genérica e insuficiente para essa restrição geográfica. O item exige fonte lexical histórica e gabarito oficial antes de uma decisão segura.",
+      "example": "Destacar em itálico uma palavra técnica não demonstra, por si, que ela só possa ser usada para uma região geográfica.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: justificativa lexical não demonstrada. Não adotar automaticamente a resposta editorial."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "7e29142f3bfaef1071e714595c5e96c529e56e9225e1f1fc8042537f35e065b7",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 52,
+      "expected_raw_text_sha256": "d517f6f57f099bcd94845eacb368c92fb269beea285955e3996d5e63e76a0064",
+      "question_text_candidate": "O uso de vírgula após “Chandless” (l.16) justifica-se por\nisolar oração subordinada adjetiva explicativa.",
+      "shared_instruction_candidate": "Considerando\no texto acima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Fiscal de Tributos/Rio Branco-AC – 2007 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "oração adjetiva explicativa",
+      "explanation": "A sequência iniciada por que acrescenta informação sobre William Chandless, já identificado pelo nome, sem selecionar um indivíduo entre outros. A vírgula marca a leitura explicativa da oração adjetiva; sua função não se resume a separar sujeito de predicado.",
+      "example": "Em 'Ana, que chegou ontem, fará a palestra', a oração entre vírgulas acrescenta uma explicação sobre Ana.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "d32b2076f4ef1956a87e5a1308e617ffd37ca04981a66ab05cff60283411efc8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 53,
+      "expected_raw_text_sha256": "d517f6f57f099bcd94845eacb368c92fb269beea285955e3996d5e63e76a0064",
+      "question_text_candidate": "O termo “Todavia” (l.17) pode, sem prejuízo para a correção\ngramatical e para as informações originais do período, ser\nsubstituído por qualquer um dos seguintes: Porém, Contudo,\nEntretanto, No entanto, Porquanto, Conquanto.",
+      "shared_instruction_candidate": "Considerando\no texto acima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Fiscal de Tributos/Rio Branco-AC – 2007 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "conectores adversativos, causais e concessivos",
+      "explanation": "Todavia estabelece contraste e admite adversativas como porém, contudo, entretanto e no entanto no contexto. A lista também inclui porquanto, de valor causal ou explicativo, e conquanto, concessivo. A proposta de substituir por qualquer elemento da lista falha porque não preserva a mesma relação em todos os casos.",
+      "example": "A frase 'estudou, porém não passou' muda de relação se porém for trocado por porque; conectores não são intercambiáveis em bloco.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "295a19c6dc596badf38818a6e63e50e0736d2699a80060f12696641321ebb453",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 12,
+      "source_item_index_zero_based": 54,
+      "expected_raw_text_sha256": "00e0780f6997706a30bc489a89b005036bcbbb073186ada9abf63bf1d2370aaa",
+      "question_text_candidate": "Assinale a opção\ncorreta de acordo com as ideias do texto.\n(A)\t Para ser um herói é preciso enfrentar perigos, lutar por uma\ncausa injusta e escapar de muitas armadilhas.\n(B)\t Muitas vezes, o jovem quer ser um verdadeiro super-herói,\no que consiste em participar de grandes aventuras e fazer\no bem.\n(C)\t Os heróis vivem em mundos hipotéticos, às vezes paradi-\nsíacos, construídos basicamente pela linguagem.\n(D)\t O fato de haver heróis em todas as culturas e épocas faz que\na tipologia desses personagens tenha contornos variados.",
+      "shared_instruction_candidate": "",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AC – 2006 – CESPE",
+      "publisher_answer_candidate": "D",
+      "technical_answer_candidate": "D",
+      "technical_focus": "múltipla escolha; generalização apoiada em enumeração",
+      "explanation": "A enumeração de heróis sociais, velhos, jovens, cotidianos e outros sustenta a diversidade de tipos indicada na alternativa D. As demais inserem condições necessárias, desejos ou cenários hipotéticos não afirmados no texto. A justificativa deve se apoiar na enumeração, sem universalizar um exemplo isolado.",
+      "example": "Uma lista com professor, socorrista e trabalhador como heróis evidencia variedade, sem exigir que todos enfrentem a mesma aventura.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 12,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 12,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "bc6ef67a498845a9a0a6a2a5fdfa1d1901b82f1da3d27b46639a09f8ae7822f5",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 55,
+      "expected_raw_text_sha256": "a2d3a98fe93b2f96baccd656682e206f67d8895928f0a27c0f5487fcb7d93336",
+      "question_text_candidate": "Com base nas\nideias desenvolvidas nos parágrafos do texto, assinale a opção\nincorreta.\n(A)\t O primeiro parágrafo apresenta uma visão retrospectiva da\nhistória da Suprema Corte, a partir da distribuição sexista\ndos membros titulares do STF, praxe quebrada pela juíza,\nque mandou construir um sanitário novo, para seu uso\nexclusivo.\n(B)\t O segundo e o terceiro parágrafos abordam, respectiva-\nmente, o significativo aumento da presença feminina entre\nos magistrados e a diferença da atuação das mulheres em\nrelação aos homens, na esfera judicial.\n(C)\t O quarto parágrafo situa a presença da juíza, doutora Ellen\nGracie, como presidente do STF, no quarto lugar na linha\nhierárquica da substituição presidencial.\n(D)\t O último parágrafo antevê a possibilidade de, em maio,\npela primeira vez na história, o Brasil ficar sob a presi-\ndência de uma mulher, desde que os três homens que\na antecedem na linha de sucessão presidencial estejam\nausentes do país.",
+      "shared_instruction_candidate": "",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AC – 2006 – CESPE",
+      "publisher_answer_candidate": "A",
+      "technical_answer_candidate": null,
+      "technical_focus": "justificativa editorial insuficiente; contexto histórico e constitucional",
+      "explanation": "A opção A é apontada como incorreta na apostila, mas atribuir a reforma a uma ordem pessoal da ministra e caracterizar uma prática histórica exige leitura cuidadosa do original. A justificativa editorial de que o rodízio excluiria sexismo não demonstra essa conclusão. O item também exige preservar a data de 2006 e a situação sucessória relatada.",
+      "example": "Um sistema de rodízio para a presidência não demonstra, sozinho, ausência de desigualdade no acesso aos cargos que o compõem.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: justificativa editorial insuficiente; contexto histórico e constitucional. Não adotar automaticamente a resposta editorial.",
+        "Conteúdo constitucional ou penal: confrontar a norma aplicável com fonte oficial vigente; preservar contexto histórico sem ensinar regra superada.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 12,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "909ddd22c397cd6f66fedee82df1b027b8cb847e282b3a3d569b3f4e19cff407",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 56,
+      "expected_raw_text_sha256": "75c17cb0b700e5ec535d7cc34134a71311bb74bb10e85972c6b3982cd5d3c6c6",
+      "question_text_candidate": "De acordo com\no texto, assinale a opção correta.\n(A)\t O texto faz um percurso tipológico singular: partindo de uma\nsequência narrativa, no início, passa para o predomínio da\nestrutura dissertativa, ao meio, até chegar ao predomínio\nda descrição, no último parágrafo.\n(B)\t A palavra “peça” (l.5) está empregada no sentido de docu-\nmento incorporado aos autos para instruir um processo.\n(C)\t Uma mulher ocupar o cargo mais elevado do Poder Judici-\nário brasileiro é um fato singular, apesar de a percentagem\nde pessoas do sexo feminino no STF ter aumentado muito\nno último sesquicentenário.\n(D)\t Ao afirmar que as juízas são “mais éticas e preocupadas\ncom as questões humanas, tendendo à individuação das\nsentenças” (l. 21-22), o texto deixa implícita uma compa-\nração com os juízes, que refletem menos a respeito da\nessência dos valores e das normas humanas.",
+      "shared_instruction_candidate": "",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AC – 2006 – CESPE",
+      "publisher_answer_candidate": "D",
+      "technical_answer_candidate": "D",
+      "technical_focus": "comparação atribuída; contexto histórico",
+      "explanation": "O texto apresenta uma comparação atribuída à pesquisa sobre a atuação de magistradas e magistrados, que sustenta a alternativa D no plano da interpretação. Essa atribuição precisa ser preservada: uma opinião relatada em notícia de 2006 não deve aparecer como conclusão factual atual sobre mulheres e homens.",
+      "example": "Dizer que 'segundo a pesquisa, um grupo agiu de modo diferente' atribui a comparação à pesquisa, sem convertê-la em verdade universal.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "08d1d28f37d7c444a3ee47141174a8772b278ab9ad3260b770b1c15fe9e56424",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 57,
+      "expected_raw_text_sha256": "e440633e833baa702a5ad11a3ee8e7a35ab2c5d1a7361e089224c0428f64da76",
+      "question_text_candidate": "O censo demográfico pode ser considerado a mais\nimportante fonte de informações sobre as condições de\nvida da população brasileira, já que a parte divulgada\nrefere-se ao questionário respondido em todos os domi-\ncílios visitados.",
+      "shared_instruction_candidate": "Analisando as\nideias explícitas e implícitas do texto I, julgue os seguintes itens.",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "relação causal indevidamente estabelecida",
+      "explanation": "O fato de um questionário ter sido respondido em todos os domicílios caracteriza a parte divulgada, mas não é apresentado como justificativa direta da afirmação inicial sobre importância. A assertiva cria uma ligação causal específica entre informações que o trecho organiza de outro modo.",
+      "example": "A frase 'o relatório é importante; foi publicado ontem' não permite concluir que ele seja importante por ter sido publicado ontem.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "162f37cd39a4e7b329db03a87e8a364423c65a5a2ee98aec98558ce64f91bef8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 58,
+      "expected_raw_text_sha256": "e440633e833baa702a5ad11a3ee8e7a35ab2c5d1a7361e089224c0428f64da76",
+      "question_text_candidate": "A parte divulgada do censo pode ser considerada um calha-\nmaço, uma vez que compreende meio milhão de páginas\nde informações colhidas por duas centenas de milhar de\nrecenseadores que laboraram, por quatro meses, para\nprovar que o país avançou.",
+      "shared_instruction_candidate": "Analisando as\nideias explícitas e implícitas do texto I, julgue os seguintes itens.",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "números e confusão entre finalidade e conclusão",
+      "explanation": "O texto menciona 500 páginas, enquanto meio milhão corresponde a 500 mil. Além da alteração quantitativa, o item atribui aos recenseadores o propósito de provar um avanço; no original, avançar é uma conclusão da leitura dos dados, e não a finalidade de sua coleta.",
+      "example": "Reunir dados para conhecer uma situação e depois concluir que ela melhorou não equivale a coletá-los com o objetivo de provar melhora.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "92752c88460462d5a15c601aac9802f13537a3ce0dc0738eb773b1f8fe09e3e6",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 59,
+      "expected_raw_text_sha256": "e440633e833baa702a5ad11a3ee8e7a35ab2c5d1a7361e089224c0428f64da76",
+      "question_text_candidate": "O Censo 2000 demonstrou, a partir da análise dos dados\ncoletados, que a totalidade dos brasileiros registrados vive,\nem linhas gerais, melhor do que vivia há uma década.",
+      "shared_instruction_candidate": "Analisando as\nideias explícitas e implícitas do texto I, julgue os seguintes itens.",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "quantificação absoluta versus avaliação agregada",
+      "explanation": "O texto fala em melhora em linhas gerais da população registrada. A assertiva acrescenta totalidade, expressão que pode universalizar indevidamente um resultado agregado. Há tensão entre esse quantificador e a ressalva em linhas gerais; o gabarito C da apostila precisa ser confrontado com o definitivo oficial, sem aprovação automática.",
+      "example": "A renda média de um grupo pode aumentar enquanto alguns integrantes têm perda de renda; média não garante melhora individual universal.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: quantificação absoluta versus avaliação agregada. Não adotar automaticamente a resposta editorial.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "5b2d2d015fea74e0aeccc0f6655afd7e4cc1ac83c1a212c4dd2bb066d849f952",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 60,
+      "expected_raw_text_sha256": "e440633e833baa702a5ad11a3ee8e7a35ab2c5d1a7361e089224c0428f64da76",
+      "question_text_candidate": "Segundo a análise feita pela autora do texto, realizar um\nrecenseamento periodicamente é necessário mas insufi-\nciente, porque é preciso avançar muito mais, e rapidamente,\npara se pôr fim à injustiça social.",
+      "shared_instruction_candidate": "Analisando as\nideias explícitas e implícitas do texto I, julgue os seguintes itens.",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "mudança do objeto avaliado",
+      "explanation": "A autora destaca que é necessário avançar mais para enfrentar a injustiça social, mas não avalia a periodicidade do censo como necessária e insuficiente. O item transfere para o ato de recensear uma avaliação que o texto dirige ao progresso social, alterando o objeto da afirmação.",
+      "example": "Afirmar que faltam melhorias nos serviços não equivale a dizer que a pesquisa que mediu esses serviços seja insuficiente.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "7cbf96c81a95f898a33fd2016da692f170b61d85922ca9062c8ecf54ce6c7ad7",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 13,
+      "source_item_index_zero_based": 61,
+      "expected_raw_text_sha256": "e440633e833baa702a5ad11a3ee8e7a35ab2c5d1a7361e089224c0428f64da76",
+      "question_text_candidate": "De acordo com a analogia com o copo com água pela\nmetade, feita pelo presidente do IBGE, os resultados do\nCenso 2000 podem ser alvo de um julgamento favorável\nou desfavorável, conforme o ponto de vista adotado.",
+      "shared_instruction_candidate": "Analisando as\nideias explícitas e implícitas do texto I, julgue os seguintes itens.",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "analogia e pontos de vista",
+      "explanation": "A imagem do copo pela metade comporta uma avaliação favorável do que já se alcançou e uma avaliação desfavorável do que falta. Ela sintetiza a coexistência de avanço e desafios, sem alterar os dados do censo. O contexto histórico deve permanecer identificado como referente ao Censo 2000.",
+      "example": "Diante de cinquenta por cento de uma tarefa concluída, alguém destaca o progresso e outra pessoa destaca o trabalho restante.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 13,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 13,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "447f51981f156194752d5c04917cdba8fa761b4faeb27ffb2c732b0caf3a4f95",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 62,
+      "expected_raw_text_sha256": "4bec7282b20a319fb61dd34e955c38d18c1cac3a045f597280bd3b79c69da4f5",
+      "question_text_candidate": "superioridade o termo “sobre” (l.2), que pode ser substituído\npor a respeito de.",
+      "shared_instruction_candidate": "No texto I, cor-\nresponde à circunstância de",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "preposição de assunto; comando comum obrigatório",
+      "explanation": "Em informações sobre as condições de vida, a preposição sobre indica assunto, e a locução a respeito de pode preservar essa relação. Não há superioridade espacial ou hierárquica. O item é errado porque combina uma substituição contextual possível com uma classificação semântica incompatível.",
+      "example": "Em 'conversamos sobre o edital', sobre significa acerca de; em 'o livro está sobre a mesa', a relação é espacial.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "614a95f82a3e995885b383ecf7e8abb082db2da345663237268ece86a970a689",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 63,
+      "expected_raw_text_sha256": "4bec7282b20a319fb61dd34e955c38d18c1cac3a045f597280bd3b79c69da4f5",
+      "question_text_candidate": "causa o termo “Por” (l.4), que pode ser substituído por\nDevido a.",
+      "shared_instruction_candidate": "No texto I, cor-\nresponde à circunstância de",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "causa; preservar construção completa",
+      "explanation": "A construção Por ser a única pesquisa que abrange todos os municípios apresenta a razão pela qual o censo é considerado instrumento precioso. Devido a pode introduzir o mesmo fundamento quando a construção completa é mantida. A análise deve incluir o comando comum e o segmento infinitivo, não apenas a preposição isolada.",
+      "example": "A frase 'por estar chovendo, ficamos' admite a leitura causal 'devido a estar chovendo, ficamos'.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "e3af80fa74444e3198f97bac353aa38985f902afcbf13c4b09c706de863d3d1f",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 64,
+      "expected_raw_text_sha256": "4bec7282b20a319fb61dd34e955c38d18c1cac3a045f597280bd3b79c69da4f5",
+      "question_text_candidate": "finalidade o termo “para” (l.6), que pode ser substituído por\na fim de que.",
+      "shared_instruction_candidate": "No texto I, cor-\nresponde à circunstância de",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "regência da locução e estrutura da oração",
+      "explanation": "A locução a fim de que introduz oração com verbo e não substitui mecanicamente para diante de um sintagma nominal como o planejamento. Mesmo havendo relação de destinação, a troca proposta exige reestruturação sintática; a equivalência temática não basta para garantir a correção da substituição literal.",
+      "example": "Em 'material para a aula', não se pode apenas trocar para por a fim de que: é preciso construir uma oração verbal.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "0c086365a312db67c7ed8be94dc5ea27516ad55d67a8f5db97f13fcb240dbedc",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 65,
+      "expected_raw_text_sha256": "4bec7282b20a319fb61dd34e955c38d18c1cac3a045f597280bd3b79c69da4f5",
+      "question_text_candidate": "adversidade o termo “Mas” (l.17), que pode ser substituído\npor Todavia.",
+      "shared_instruction_candidate": "No texto I, cor-\nresponde à circunstância de",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "adversidade e substituição de conector",
+      "explanation": "Mas introduz uma ressalva em relação à expectativa apresentada antes, estabelecendo contraste argumentativo. Todavia pode preservar esse valor adversativo no período indicado. O julgamento depende da função do conector no texto, não de atribuir adversidade ao conteúdo de toda a notícia.",
+      "example": "Em 'o prazo é curto, mas permite agir', todavia pode introduzir a mesma contraposição entre as duas ideias.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "4bf66fc56c456dfc72f42629a22c2978fa2920474583401295f6242fbb1f6501",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 66,
+      "expected_raw_text_sha256": "4bec7282b20a319fb61dd34e955c38d18c1cac3a045f597280bd3b79c69da4f5",
+      "question_text_candidate": "tempo a expressão “Em 1991” (l.21), que pode ser substi-\ntuída por Há pouco mais de uma década.",
+      "shared_instruction_candidate": "No texto I, cor-\nresponde à circunstância de",
+      "exam_metadata_candidate": "Fiscal de Tributos Estaduais/AL – 2002 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": null,
+      "technical_focus": "dêixis temporal; não atualizar silenciosamente",
+      "explanation": "Em 1991 localiza um evento no tempo, mas a substituição por há pouco mais de uma década depende do momento de enunciação. O texto é de dezembro de 2001, e a leitura pode ser compatível com esse quadro histórico. Sem preservar essa data, a equivalência deixa de valer para o leitor atual; a redação e o gabarito originais precisam ser confirmados.",
+      "example": "Em um texto de 2001, há dez anos aponta para 1991; em um texto de 2026, a mesma expressão aponta para 2016.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar.",
+        "Divergência ou ambiguidade técnica: dêixis temporal; não atualizar silenciosamente. Não adotar automaticamente a resposta editorial.",
+        "Preservar data e atribuição histórica; não apresentar pesquisa, estatística, sucessão ou referência temporal como fato atual.",
+        "O enunciado é fragmento dependente do comando comum; nunca publicar isoladamente."
+      ],
+      "support_reference": {
+        "context_start_page": 13,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "4410679921a9d6a6dbeba3e96d3e0420b40f55e23831a1f90aabe58ce013f378",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 67,
+      "expected_raw_text_sha256": "f7e8bed9dc665ab047c6decd80b87cc29d99ea8f4bd8863af23cf6733d07c07e",
+      "question_text_candidate": "Infere-se da leitura do texto que o futuro de um país seria\n“obra do acaso” (l.3) se a modernidade não assegurasse\num padrão de vida democrático a todos os seus cidadãos.",
+      "shared_instruction_candidate": "Considerando a argu-\nmentação do texto acima bem como as estruturas linguísticas\nnele utilizadas, julgue o item a seguir.",
+      "exam_metadata_candidate": "Agente de Polícia Federal – 2009 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "condicional inferida sem fundamento",
+      "explanation": "O autor afirma que uma nação se constrói por disputas entre projetos e rejeita a explicação pelo acaso. A proposta de modernidade inclusiva é um dos critérios debatidos, não condição para que exista construção histórica. O item cria uma hipótese inversa que o desenvolvimento argumentativo não sustenta.",
+      "example": "Dizer que um resultado decorre de escolhas não implica que, sem a escolha preferida pelo autor, ele passaria a decorrer do acaso.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 14,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "bd296a692ade246a701ba96847edaa2395fd3095756ce40c4c2e8cc564ce6705",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 68,
+      "expected_raw_text_sha256": "c6c48448aed78501067784c78b0b964bc293213a250383c55937b58480899ff9",
+      "question_text_candidate": "Depreende-se da argumentação do texto que o autor con-\nsidera as instituições como as únicas “características fixas”\n(l.8-9) aceitáveis de “democracia” (l.1 e 7).",
+      "shared_instruction_candidate": "Com base nas estrutu-\nras linguísticas e nas relações argumentativas do texto acima,\njulgue o item a seguir.",
+      "exam_metadata_candidate": "Agente de Polícia Federal – 2009 – CESPE",
+      "publisher_answer_candidate": "E",
+      "technical_answer_candidate": "E",
+      "technical_focus": "negação de exclusividade e conceito processual",
+      "explanation": "O trecho recusa reduzir democracia a um regime de características fixas e a descreve como processo que constitui instituições sem se esgotar nelas. A assertiva inverte essa tese ao atribuir exclusividade às instituições e fixidez ao conceito que o autor apresenta como aberto e dinâmico.",
+      "example": "Se uma formação inclui a escola, mas não se esgota nela, não é correto afirmar que a escola seja sua única dimensão.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 14,
+        "source_end_page": 14,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    },
+    {
+      "candidate_id": "73ab7895482847a0359c204c9e164970c380e309ff724f5a0b192b8ef5880fe8",
+      "corpus_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+      "source_page": 14,
+      "source_item_index_zero_based": 69,
+      "expected_raw_text_sha256": "38e6ae0d8b9f2f8798e72e10d9b1077c09bff00b0c628aaab813ac448a806279",
+      "question_text_candidate": "O texto estrutura-se de forma argumentativa em torno de\numa ideia fundamental e constante: a vida humana como\num bem indeclinável.",
+      "shared_instruction_candidate": "Com base no texto\nacima, julgue os itens a seguir.",
+      "exam_metadata_candidate": "Agente de Polícia Federal – 2004 – CESPE",
+      "publisher_answer_candidate": "C",
+      "technical_answer_candidate": "C",
+      "technical_focus": "tese e unidade argumentativa",
+      "explanation": "Os parágrafos retomam a defesa da vida em conflitos, na ciência, nas relações internacionais e na sobrevivência cotidiana. Essa recorrência sustenta a leitura de uma tese central sobre o valor indeclinável da vida. A análise é de estrutura argumentativa, sem certificar normas jurídicas eventualmente evocadas no texto.",
+      "example": "Um texto que reúne exemplos de saúde, paz e proteção para defender a vida organiza os exemplos em torno de uma mesma tese.",
+      "remaining_blockers": [
+        "Conferir individualmente número, caderno e gabarito definitivo oficial; o gabarito da apostila não é prova oficial.",
+        "Reconstruir e conferir integralmente o texto de apoio e o comando na prova original.",
+        "Concluir vínculo individual ao tópico de edital ativo e verificar duplicidade semântica antes de publicar."
+      ],
+      "support_reference": {
+        "context_start_page": 14,
+        "source_end_page": 15,
+        "official_context_verified": false
+      },
+      "source_evidence": {
+        "source_pdf_sha256": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+        "source_page": 14,
+        "is_official_exam_key": false,
+        "method": "Individual analysis of the question with the source PDF supporting passage. Official catalog/PDF discovery is recorded separately and is not a completed final-key match."
+      }
+    }
+  ],
+  "duplicate_check": {
+    "method": "Exact normalized text only; selected private rows excluded; not exhaustive semantic matching",
+    "compared_counts": {
+      "official_exam_questions": 4895,
+      "board_exam_questions": 1054,
+      "curated_question_catalog": 2022,
+      "question_corpus_candidates": 4982
+    },
+    "matches": []
+  },
+  "application_result": {
+    "batch_id": "cespe2016-portugues-held-review-02-2026-10-17",
+    "apply": true,
+    "complete": true,
+    "updated": [
+      "cf97f11ae1cb7e5cbb4e3e88c6ffc334ee06e60a88cd1ab8c3b8c5a8e9f43699",
+      "38c780ab910134c197b8fc159acc2f616078c5bde486722c1ef8d15bdcd82320",
+      "3b90f809a67272d738b72882ca844a6a1f91e42eb46acb14044894e850ff988a",
+      "1208a6bddf582253512da52ca03b5592be7eb02fd94358b09d1c6de7cd0fea5a",
+      "6bd091315637dfa63f44fe01e787b8b3c797236b390353b979e4a4c800232d81",
+      "dbc7c6a37debff905959d5580d993537b24a7f12370123c81916b424422f700e",
+      "13696d1e5ea9ae74909b8569d3aa70b955c8358c1739c88965eae0575b1b29e7",
+      "b8f795d9bb9bf90f59121db6d1bbc94236a2ada2baa45767b7ed6dd992fe9934",
+      "224f2fb00ea95d2c5f739b1f912aba61b1ecdc787823be0511242b9591f0ce13",
+      "f95d99efd6b9b7dcf75983eb1e29b3beec9fea79c588515e0298ea84954938cf",
+      "606bfe96f354aaa483a3273034d2009006ec603fe39eb835b7035a724aab76fb",
+      "af0c251e5e68f4bf577ddc25fc7026c826b266edef17de5c549cd822ce890be1",
+      "ebdd5bb7f0e2d6d7250802f5743e86d165158d0ab6760e3e951e1a7cfeca402f",
+      "b5a2937596fb6e2f5c0298ee368d064c1829188fc8ddd463b57adcc615daaf4f",
+      "7190b517d10ee53e6b7c1f0365673ca19d4e2afdf882c85bc52b55f22e2253db",
+      "b17769c1d0c018ba701ea8964456ed16714656375f629a360c3d26067bba252a",
+      "bedbc8bbde075cf1d386921d0ce52fbba75ba5a648a00572ee4739bac78ec104",
+      "401fd9cadda942d285d666f907b6415bb9ac433f6d42c36ca8bcdafec0c67519",
+      "867c381798440a191c0594edc45f1398869e91baadb064cb7de472094476f501",
+      "b4a70694b8808fff4bad2ae0272c3448959c60d4ead828724d58ed703d8ca3af",
+      "21021cbc4fafadbcd9dcc3ef82197cbd29efcb92e6bb1b77d0848612c3e00d5b",
+      "dc63a712065735080db849a995808a0cd23090ede8f51d6edac553776aaaeda4",
+      "5334cb14b08875f150d75caf4286c93997c295f9a7754a58b576df2bccdad39e",
+      "8c51a5b30d06d00e3e8c9090612ea85904828601e59a4ea0fb2b2021ebe67898",
+      "5d58ff1070d545869cf8a5fbff39ef2654a1857c7ff1078b5a251754ad6072ff",
+      "da20f5d8ab09adaa3a3170a8186adcd453c84dfee9193d593cb8be25cac3406b",
+      "6531d34f56452d7deb2ff5f7533c3d5fb6c84e10ddec4992424bf26ab18590b8",
+      "9bc0c7140865e1b477426727afe999022a590168293845cf78a2222852474076",
+      "3ed311c92c3be57a00631337848322e6e8f04f0c08b31415ee14f2f1ee129107",
+      "172a0baf2c0ff3a9a2b7f09bfc3290a8a56f0212c085e8faaaa3a09d59878691",
+      "d9b652f44ee27eac3caf10f6cff7f34a1a9117c26fc194e60ea730013fd13bde",
+      "ddeb4d4bff7cc6dce3faa8417af5fce71c08900e11445f853c953b5901ae0dda",
+      "7e29142f3bfaef1071e714595c5e96c529e56e9225e1f1fc8042537f35e065b7",
+      "d32b2076f4ef1956a87e5a1308e617ffd37ca04981a66ab05cff60283411efc8",
+      "295a19c6dc596badf38818a6e63e50e0736d2699a80060f12696641321ebb453",
+      "bc6ef67a498845a9a0a6a2a5fdfa1d1901b82f1da3d27b46639a09f8ae7822f5",
+      "909ddd22c397cd6f66fedee82df1b027b8cb847e282b3a3d569b3f4e19cff407",
+      "08d1d28f37d7c444a3ee47141174a8772b278ab9ad3260b770b1c15fe9e56424",
+      "162f37cd39a4e7b329db03a87e8a364423c65a5a2ee98aec98558ce64f91bef8",
+      "92752c88460462d5a15c601aac9802f13537a3ce0dc0738eb773b1f8fe09e3e6",
+      "5b2d2d015fea74e0aeccc0f6655afd7e4cc1ac83c1a212c4dd2bb066d849f952",
+      "7cbf96c81a95f898a33fd2016da692f170b61d85922ca9062c8ecf54ce6c7ad7",
+      "447f51981f156194752d5c04917cdba8fa761b4faeb27ffb2c732b0caf3a4f95",
+      "614a95f82a3e995885b383ecf7e8abb082db2da345663237268ece86a970a689",
+      "e3af80fa74444e3198f97bac353aa38985f902afcbf13c4b09c706de863d3d1f",
+      "0c086365a312db67c7ed8be94dc5ea27516ad55d67a8f5db97f13fcb240dbedc",
+      "4bf66fc56c456dfc72f42629a22c2978fa2920474583401295f6242fbb1f6501",
+      "4410679921a9d6a6dbeba3e96d3e0420b40f55e23831a1f90aabe58ce013f378",
+      "bd296a692ade246a701ba96847edaa2395fd3095756ce40c4c2e8cc564ce6705",
+      "73ab7895482847a0359c204c9e164970c380e309ff724f5a0b192b8ef5880fe8"
+    ],
+    "preserved": [],
+    "detailed_reviews": 50,
+    "publications": 0,
+    "official_final_keys_confirmed": 0,
+    "publication_approved": false
+  }
+}
