@@ -10,17 +10,18 @@ export async function verifyOfficialExamCapture({row,evidence,kind},readPdf=read
   const url=new URL(row.url),catalog=new URL(evidence?.catalog_url??'');
   const cebraspeApi=url.hostname==='cdn.cebraspe.org.br'&&catalog.hostname==='apis.cebraspe.org.br'&&/^\/cebraspe\/eventos\/[a-z0-9_]+$/i.test(catalog.pathname);
   const ufmt=url.hostname==='www.concursos.ufmt.br'&&catalog.hostname===url.hostname&&catalog.pathname==='/Portal/noticias.asp'&&/^\d+$/.test(catalog.searchParams.get('NOTICIA')||'')&&[...catalog.searchParams.keys()].length===1&&url.pathname.startsWith('/Portal/Concursos/PJC2022/')&&!url.search&&![url,catalog].some(u=>u.username||u.password||u.port);
-  if(url.protocol!=='https:'||catalog.protocol!=='https:'||(!ufmt&&!['ibade.org.br','www.ibade.org.br','cdn.cebraspe.org.br','www.cebraspe.org.br'].includes(url.hostname))||(!cebraspeApi&&catalog.hostname!==url.hostname)||!url.pathname.toLowerCase().endsWith('.pdf')||!evidence?.visually_verified||!evidence.pdf_path||!/^[a-f0-9]{64}$/.test(evidence.sha256||'')||!row.notes?.includes(evidence.sha256))throw Error('Reviewed official PDF and catalog required');
-  if(ufmt){
-   if(!evidence.catalog_path||!/^[a-f0-9]{64}$/.test(evidence.catalog_sha256||''))throw Error('Captured UFMT catalog required');
+  const fgv=url.hostname==='conhecimento.fgv.br'&&catalog.hostname===url.hostname&&/^\/concursos\/pcam21\/(01|02)$/.test(catalog.pathname)&&url.pathname.startsWith('/sites/default/files/concursos/')&&!url.search&&!catalog.search&&![url,catalog].some(u=>u.username||u.password||u.port);
+  if(url.protocol!=='https:'||catalog.protocol!=='https:'||(!ufmt&&!fgv&&!['ibade.org.br','www.ibade.org.br','cdn.cebraspe.org.br','www.cebraspe.org.br'].includes(url.hostname))||(!cebraspeApi&&catalog.hostname!==url.hostname)||!url.pathname.toLowerCase().endsWith('.pdf')||!evidence?.visually_verified||!evidence.pdf_path||!/^[a-f0-9]{64}$/.test(evidence.sha256||'')||!row.notes?.includes(evidence.sha256))throw Error('Reviewed official PDF and catalog required');
+  if(ufmt||fgv){
+   if(!evidence.catalog_path||!/^[a-f0-9]{64}$/.test(evidence.catalog_sha256||''))throw Error('Captured official HTML catalog required');
    const captured=await readPdf(evidence.catalog_path);
-   if(createHash('sha256').update(captured).digest('hex')!==evidence.catalog_sha256)throw Error('Official UFMT catalog changed');
+   if(createHash('sha256').update(captured).digest('hex')!==evidence.catalog_sha256)throw Error('Official HTML catalog changed');
    const html=captured.toString('utf8').replace(/<!--[\s\S]*?-->|<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
    const listed=[...html.matchAll(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["']/gi)].some(m=>{try{const link=new URL(m[1].replace(/&amp;/g,'&'),catalog);return link.origin===url.origin&&decodeURIComponent(link.pathname)===decodeURIComponent(url.pathname)&&!link.search&&!link.username&&!link.password;}catch{return false;}});
-   if(!/CONCURSO=204\b/.test(html)||!listed)throw Error('PDF not listed in the official UFMT PJC2022 notice');
+   if((ufmt&&!/CONCURSO=204\b/.test(html))||!listed)throw Error('PDF not listed in the official exam notice');
    // This PDF is the preliminary key. Its final force depends on the separate
    // official 02/03/2022 notice annulling 2 and 10; never certify it in isolation.
-   if(kind==='gabarito'){
+   if(ufmt&&kind==='gabarito'){
     const c=evidence.final_key_confirmation;
     if(!c?.visually_verified||c.url!=='https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf'||c.publication_date!=='2022-03-02'||JSON.stringify(c.annulled_items)!=='[2,10]'||!c.path||!/^[a-f0-9]{64}$/.test(c.sha256||'')||!row.notes.includes(c.sha256))throw Error('UFMT final key requires the reviewed changes notice');
     const confirmation=await readPdf(c.path);

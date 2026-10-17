@@ -170,3 +170,16 @@ O programa foi conferido no edital oficial, página 38: pontos 3 (ocupação e p
 Pré-validações reais, CAS e readback passaram; **13 testes de publicação/tópicos passaram**. Formato C/E, letra E, comandos, extrações brutas e páginas originais foram preservados; as explicações são visíveis no filtro da aplicação. Nenhuma mudança de aplicação ou build adicional. O snapshot confirmou os outros **2.966 registros PC preservados**, nenhuma alteração em metadados preexistentes e somente dois tópicos inseridos. Não houve teste visual em produção.
 
 **Restam 36 pendências: MT 14, RO dez, AM cinco, PI três, RJ duas, PE uma e MG uma.** Não há item SE em under_review neste inventário, o que não implica auditoria integral das questões ativas. Acervo PC: **2.968 registros — 2.672 ativos, 215 arquivados, 36 em revisão, 37 anulados e oito obsoletos**.
+
+
+## Amazonas — Delegado, item 25 — 17/10/2026
+
+**Uma questão ativada**, preservada a letra E. Caderno oficial Tipo 1 (página 8), gabarito definitivo (página 1) e edital atualizado em 30/09/2022 (página 44) cotejados visualmente. O programa contempla prescrição e causas interruptivas. A edição apontava para o caderno; foi vinculada ao edital oficial, preservados os tópicos anteriores e inserido somente o recorte de prescrição ausente.
+
+O Informativo 744 do STJ, consultado diretamente em 17/10, registra o Tema 1100 (REsp 1.930.130/MG, julgamento em 10/08/2022): o acórdão confirmatório interrompe a prescrição, mantendo, reduzindo ou aumentando a pena. O comentário trata das alternativas, inclui exemplos contrastantes e exercício respondido, ressalvando a irretroatividade gravosa da inovação de 2007 e a impossibilidade de ressuscitar prescrição consumada. Corrige a indicação do precedente: o informativo refere HC 176.473/RR, embora a alternativa D traga PR. O Código Penal foi relido na captura oficial de 16/10; novas consultas ao Planalto retornaram 503, sem alegação de nova captura bem-sucedida.
+
+**Item 44 não liberado.** A letra A foi confirmada no gabarito. O Tema 1347 distingue regressão cautelar e definitiva, mas não encerra por si só a dúvida sobre a redação absoluta da alternativa. Não foram alterados seu comentário ou seu status. A questão contábil do Investigador também segue retida: cálculo revisitado, mas as tentativas de obter a norma contábil primária não tiveram sucesso.
+
+Foram executadas pré-validações reais, escritas com comparação integral e leitura posterior. **24 testes de fontes, atualização de evidências, tópicos e publicação passaram.** Questão aprovada pelo filtro da aplicação, com cinco alternativas e comentário sem marcador provisório. Os outros **2.967 registros PC** permaneceram idênticos. As cinco mudanças de metadados corresponderam exatamente ao plano: dois acréscimos de evidências em fontes existentes, um edital inserido, um vínculo de edição corrigido e um tópico inserido. Sem mudança de aplicação, build adicional ou teste visual em produção. Integrado o commit remoto 9bc7a3a da outra conta, sem substituir seu lote CPC.
+
+**Restam 35 pendências: MT 14, RO dez, AM quatro, PI três, RJ duas, PE uma e MG uma.** Acervo PC: 2.968 registros — 2.673 ativos, 215 arquivados, 35 em revisão, 37 anulados e oito obsoletos. O inventário estrutural conta 2.233 ativos elegíveis pelo filtro; não declara todos eles integralmente auditados.

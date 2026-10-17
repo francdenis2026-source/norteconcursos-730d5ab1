@@ -1,0 +1,193 @@
+{
+  "checked_at": "2026-10-17T17:44:27.165Z",
+  "scope": "PCAM Delegado item 25: Tema 1100, original key E, current verified program. Item 44 remains retained.",
+  "reviewed": 1,
+  "published_active": 1,
+  "preserved_other_pc_records": 2967,
+  "concurrent_changes": [],
+  "metadata_changes": [
+    {
+      "table": "content_sources",
+      "id": "12f6cf0a-5a05-4480-b69d-5cc0bc7f5e74",
+      "change": "changed_or_removed"
+    },
+    {
+      "table": "content_sources",
+      "id": "820f1bba-5903-4511-906b-005e586f18e1",
+      "change": "changed_or_removed"
+    },
+    {
+      "table": "content_sources",
+      "id": "c5ceda9c-a05f-5514-a9f6-0b7a1b764ec4",
+      "change": "inserted"
+    },
+    {
+      "table": "syllabus_editions",
+      "id": "160dc91d-6e46-473d-a584-93077555dad5",
+      "change": "changed_or_removed"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "131e6446-e01a-5f3c-b2bc-948af52f3bb5",
+      "change": "inserted"
+    }
+  ],
+  "pc_status": {
+    "active": 2673,
+    "archived": 215,
+    "annulled": 37,
+    "under_review": 35,
+    "obsolete": 8
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 2,
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 7,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "tests": {
+    "source_refresh_publication_and_topics": 24
+  },
+  "application_changes": false,
+  "items": [
+    {
+      "id": "6b9ae8d5-8c7b-4c9d-a411-13c94f8f9c7c",
+      "item_number": 25,
+      "answer": "E",
+      "status": "active",
+      "source_page": 8,
+      "eligible": true,
+      "before_sha256": "edc2df883e2d7a0d23528059aa18e4193f8f65a4978085810b14ed08889d33f4",
+      "after_sha256": "5b5c5201caa9cb916332a397684a0f356b86ba542ec986040b98cb485be5cf28",
+      "patch": {
+        "content_status": "active",
+        "review_note": "Gabarito definitivo: E. O acórdão condenatório, INCLUSIVE o que confirma a sentença, interrompe a prescrição: não precisa aumentar a pena. Essa é a tese do Tema 1100 do STJ (REsp 1.930.130/MG, Terceira Seção, julgamento em 10/08/2022; Informativo 744), em interpretação do art. 117, IV, do Código Penal. A interrupção pode ocorrer com a publicação do acórdão que mantém, reduz ou aumenta a pena.\nPor que as outras não servem? A e B criam condições de aumento ou de não redução inexistentes na tese. C reproduz entendimento superado. D transforma a data de julgamento do habeas corpus mencionado em marco legal para os fatos; esse não é o critério temporal da norma. Atenção: o precedente é identificado no informativo oficial como HC 176.473/RR; a alternativa D traz PR.\nRESSALVA TEMPORAL: a introdução desse marco interruptivo pela Lei 11.596/2007 não retroage em prejuízo do réu a fatos anteriores à sua vigência. A expressão “sempre” da alternativa deve ser lida nesse âmbito normativo; não significa ressuscitar uma pretensão punitiva já prescrita, nem tornar qualquer decisão judicial uma nova causa interruptiva. A norma trata da publicação de sentença ou acórdão condenatórios recorríveis.\nExemplo: para um fato submetido à redação da Lei 11.596/2007, o tribunal mantém a condenação e a pena: o acórdão também é marco interruptivo. Variação: se o tribunal reduz a pena, isso, por si só, não elimina o efeito interruptivo. Em contraste, não se aplica retroativamente a inovação mais gravosa a um fato anterior à sua vigência.\nTeste rápido — O acórdão precisa aumentar a pena para interromper a prescrição? Resposta: não; manter ou reduzir a pena também se enquadra na tese do Tema 1100, respeitados os limites temporais.",
+        "current_syllabus_topic_id": "131e6446-e01a-5f3c-b2bc-948af52f3bb5",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "title": "Código Penal compilado — art. 117, IV e § 2º; redação da Lei 11.596/2007"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T17:43:33.240878+00:00",
+        "verified_at": "2026-10-17T17:43:33.240878+00:00",
+        "legal_audit_completed": true,
+        "legal_review_required": true
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Item e letra definitiva cotejados visualmente; Tema 1100 consultado diretamente no STJ. Retenção por suposta divergência jurisprudencial afastada; programa de prescrição conferido no edital oficial atualizado. Textos, resposta e fontes originais preservados.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/ns001_-_delegado_de_policia_-_4a_classe_prova_objetivans001_tipo_1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e01_gabarito_definitivo.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_11_delegado.pdf",
+          "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+          "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=%40CNOT%3D019265"
+        ],
+        "captures": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/laws/cp.html",
+            "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2",
+            "captured_at": "2026-10-16T20:42:27.509Z"
+          },
+          {
+            "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?livre=%40CNOT%3D019265",
+            "path": "outputs/pc-pending-review-2026-10-16/am-next/stj1100.html",
+            "sha256": "6fe7c18fc8ad7f80ac2a924b937936944ed7db26667b2af18b145ae429ef3487",
+            "captured_at": "2026-10-17T17:42:44.761Z"
+          }
+        ],
+        "paper_page": 8,
+        "key_page": 1,
+        "edital_page": 44,
+        "original_answer_preserved": true,
+        "current_capture_limitation": "Planalto retornou 503 nas novas tentativas; recorte legal relido na captura oficial de 16/10 com hash preservado. STJ capturado com sucesso em 17/10.",
+        "retained_item44": "Tema 1347 confirma distinção entre regressão cautelar e definitiva; pesquisa não encerrou a dúvida específica da redação absoluta da alternativa A. Item permanece under_review."
+      }
+    }
+  ],
+  "metadata_verified_against_exact_plans": true,
+  "exam_captures": [
+    {
+      "kind": "edital",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_11_delegado.pdf",
+      "path": "outputs/pc-pending-review-2026-10-16/am-next/edital.pdf",
+      "sha256": "2491571703481eb278ab81f15cf5b458ece3800690596fb8e1d60bfddeb8fc3b",
+      "captured_at": "2026-10-17T17:36:50.737Z"
+    },
+    {
+      "kind": "prova",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/ns001_-_delegado_de_policia_-_4a_classe_prova_objetivans001_tipo_1.pdf",
+      "path": "outputs/pc-pending-review-2026-10-16/am-next/prova.pdf",
+      "sha256": "0a52be892b45fdc3f633bc1811a1152c2ae6f8fa11441e4f9a9735bf01f27142",
+      "captured_at": "2026-10-17T17:36:45.783Z"
+    },
+    {
+      "kind": "gabarito",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e01_gabarito_definitivo.pdf",
+      "path": "outputs/pc-pending-review-2026-10-16/am-next/gabarito.pdf",
+      "sha256": "1b9b7aff287219efde78779bb2ebdc6ef72442db5b6b58fa549eb33dc8d96a90",
+      "captured_at": "2026-10-17T17:36:46.430Z"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://conhecimento.fgv.br/concursos/pcam21/01",
+      "path": "outputs/pc-pending-review-2026-10-16/am-next/catalog.html",
+      "sha256": "aa5f94f3d199a55c9087548b6706dff1e70a6e1cd06cfb9fbeb717c20f6d95f7",
+      "captured_at": "2026-10-17T17:36:45.248Z"
+    }
+  ],
+  "program_topic": {
+    "expected_edition": {
+      "id": "160dc91d-6e46-473d-a584-93077555dad5",
+      "contest_name": "Polícia Civil do Estado do Amazonas",
+      "role_name": "Delegado de Polícia",
+      "contest_year": 2022,
+      "exam_board": "FGV",
+      "source_id": "c5ceda9c-a05f-5514-a9f6-0b7a1b764ec4",
+      "status": "active",
+      "created_at": "2026-10-13T23:09:12.735155+00:00"
+    },
+    "expected_source": {
+      "id": "c5ceda9c-a05f-5514-a9f6-0b7a1b764ec4",
+      "source_type": "edital",
+      "title": "Edital de abertura PCAM Delegado — retificado até 30/09/2022",
+      "issuer": "FGV / Polícia Civil do Amazonas",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_11_delegado.pdf",
+      "published_on": null,
+      "checked_at": "2026-10-17T17:43:33.240878+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Conferência individual do item 25, página PDF 8, chave definitiva E (Tipo 1, página 1) e recorte de prescrição no edital atualizado em 30/09/2022, página 44. Não certificação integral da prova ou do programa. SHA-256 2491571703481eb278ab81f15cf5b458ece3800690596fb8e1d60bfddeb8fc3b"
+    },
+    "evidence": {
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_retificado_11_delegado.pdf",
+      "pdf_path": "outputs/pc-pending-review-2026-10-16/am-next/edital.pdf",
+      "sha256": "2491571703481eb278ab81f15cf5b458ece3800690596fb8e1d60bfddeb8fc3b",
+      "visually_verified": true
+    },
+    "items": [
+      {
+        "row": {
+          "id": "131e6446-e01a-5f3c-b2bc-948af52f3bb5",
+          "edition_id": "160dc91d-6e46-473d-a584-93077555dad5",
+          "block_name": "Conhecimentos Específicos — edital atualizado",
+          "discipline": "Direito Penal",
+          "topic_order": 33,
+          "topic_text": "Causas extintivas da punibilidade. Prescrição: termos iniciais, causas suspensivas ou impeditivas e interruptivas.",
+          "content_status": "current"
+        },
+        "page": 44,
+        "reference": "Direito Penal — prescrição; recorte literal do programa no edital atualizado em 30/09/2022."
+      }
+    ]
+  },
+  "retained_item44": "Final key A confirmed. Tema 1347 distinguishes provisional and definitive regression; it does not by itself resolve the absolute wording of this item. No activation or comment change to item 44."
+}
