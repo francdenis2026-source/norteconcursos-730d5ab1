@@ -286,3 +286,14 @@ Conferência visual da questão60 no caderno UFMT/PJC2022, página física24 (im
 O snapshot posterior confirmou preservação dos outros2.966 registros PC e de todas as fontes, edições e tópicos. Oito testes do mecanismo de reparo passaram. Nenhuma mudança de aplicação nesta rodada.
 
 Situação:2.624 ativos,279 arquivados,37 anulados,12 obsoletos e16 em revisão. Pendentes:RO8,MT2,AM2,RJ2,PE1,MG1. Cadastro oficial LC68/1992 localizado no SAPL/ALERO; rota de texto compilado exige login, sem validar o recorte atual. Detalhes e evidências em `pc-remaining16-context-reanalysis-2026-10-17.json`.
+
+
+## Pernambuco2 e Mato Grosso60 — 17/10/2026
+
+Ativados três registros: PE Escrivão2(E), MT Escrivão60(B) e MT Investigador60(B). Rondônia não foi alterada, conforme pedido do usuário.
+
+**PE2:** a compilação atualizada ALEPE e a justificativa oficial da banca confirmam a classificação literal: art.31I/VIII remetem à demissão (art.49XII); art.31IV integra o rol de suspensão (art.37, parágrafo único). Não se inventou jurisprudência: o comentário ressalva a liberdade de expressão, o devido processo e que o enquadramento literal não certifica a recepção constitucional de toda punição concreta. Fonte de prova/key corrigida separadamente: o item pertence ao bloco básico PECB2 (página1), não ao específico PE002. Letra E conferida visualmente no definitivo. Tópico real de Legislação Estadual já existente foi reutilizado.
+
+**MT60:** a pendência de leitura foi resolvida pelo confronto sistemático com dispositivo não considerado nas tentativas anteriores: art.220, item2, XXXII, prevê expressamente a exceção de ensino, em conjunto com a ressalva geral do art.120. Não há necessidade de inventar versão anterior do art.120. Art.164 proíbe mais de DUAS unidades, tornando III falsa; art.301, parágrafo único, exige devolução na publicação, confirmando IV. Conferidos os17 modificadores já capturados, que não alteram esses recortes. Comentário diferencia transcrição literal e combinação dos dispositivos e preserva as demais ressalvas legais/constitucionais. Chave B composta com comunicado final UFMT02/03/2022 e caderno página24 foram conferidos visualmente; usados os dois tópicos reais já registrados, um por cargo.
+
+Dry-run real, CAS, readback e gate da aplicação passaram para os três. Quinze testes do publicador e de proveniência passaram. Outros2.965 registros PC e todos os metadados ficaram iguais. Sem alteração de aplicação/build nesta rodada. Atual:2.627 ativos,279 arquivados,37 anulados,12 obsoletos,13 em revisão; elegíveis no filtro da aplicação2.185 (não certificação editorial de todos). Restam RO8,AM2,RJ2,MG1; cinco no escopo atual que exclui Rondônia. Na campanha de32:19 concluídas(15ativas,4obsoletas),13 retidas. Relatório `docs/question-review-pe2-mt60-2026-10-17.json`.

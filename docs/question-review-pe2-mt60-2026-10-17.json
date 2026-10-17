@@ -1,0 +1,489 @@
+{
+  "checked_at": "2026-10-17T23:06:47.849Z",
+  "reviewed": 3,
+  "published_active": 3,
+  "under_review_to_active": 3,
+  "preserved_other_pc_records": 2965,
+  "all_metadata_unchanged": true,
+  "pc_status": {
+    "active": 2627,
+    "archived": 279,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 13
+  },
+  "pending_by_state": {
+    "RO": 8,
+    "RJ": 2,
+    "AM": 2,
+    "MG": 1
+  },
+  "rondonia_untouched": true,
+  "tests_passed": 15,
+  "application_changes": false,
+  "items": [
+    {
+      "id": "4c8e3631-ef13-4420-b488-419e4ffedea3",
+      "item_number": 2,
+      "career": "Escrivão de Polícia",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO",
+            "title": "Lei PE 6.425/1972, arts.31 I/IV/VIII,37 e49 XII — texto atualizado ALEPE"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T23:00:21.446066+00:00",
+        "verified_at": "2026-10-17T23:00:21.446066+00:00",
+        "review_note": "Resposta: E — Marcos, somente.\n\nA pergunta pede o enquadramento das três condutas na Lei pernambucana nº 6.425/1972. Não basta perceber que todas são transgressões: cada uma pode ter uma penalidade diferente.\n\n• Pedro: acumulação fora das exceções legais — art. 31, I. Esse inciso consta do art. 49, XII, que prevê demissão, e não do rol de suspensão do art. 37, parágrafo único.\n• Lucas: ato que compromete a dignidade da função — art. 31, VIII. Também está no art. 49, XII; portanto, não é a hipótese de suspensão solicitada.\n• Marcos: manifestação de desapreço a autoridade — art. 31, IV. O inciso IV está expressamente no art. 37, parágrafo único: o enquadramento literal cobrado é suspensão de até 30 dias.\n\nA informação de que ninguém é reincidente impede que a regra de reincidência do art. 37 leve você a incluir Pedro e Lucas. Por isso, A, B, C e D estão erradas; somente E mantém apenas Marcos.\n\nExemplo para fixar: em uma questão que pede uma penalidade específica, primeiro localize a conduta e depois confira o rol da penalidade. Não conclua que toda falta grave ou toda conduta reprovável tem a mesma consequência.\n\nAtenção constitucional: esta resposta explica a classificação literal exigida pela prova e confirmada pela banca; não significa autorização para punir automaticamente críticas legítimas ou manifestações protegidas pela liberdade de expressão. Uma punição concreta exige tipicidade, devido processo, contraditório, proporcionalidade e controle de constitucionalidade. A consulta ao texto compilado estadual não resolve, por si só, toda controvérsia sobre recepção constitucional desses dispositivos.\n\nConferência em 17/10/2026: ALEPE, arts. 31, I, IV e VIII, 37 e 49, XII; caderno básico PECB2 e gabarito definitivo do cargo de Escrivão, questão 2, letra E. O assunto consta do tópico de Legislação Estadual do edital cadastrado. Não confundir a data de conferência com a data original da lei (1972).",
+        "current_syllabus_topic_id": "d638054b-316a-51bc-8554-811060d39a7e",
+        "legal_audit_completed": true,
+        "legal_review_required": false,
+        "context_review_required": false
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Enquadramento literal confrontado com compilação ALEPE, justificativa oficial da banca e chave definitiva; ressalva constitucional expressa sem declarar controvérsia resolvida. Proveniência reparada separadamente.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/ED_1_2023_PC_PE_ABERTURA_ATUALIZADO_ED_4.PDF",
+          "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO"
+        ],
+        "paper_page": 1,
+        "key_page": 1,
+        "original_answer_preserved": true,
+        "reviewed_articles": [
+          "31,I,IV,VIII",
+          "37",
+          "49,XII"
+        ],
+        "legal_capture": {
+          "path": "outputs/pc-pending-review-2026-10-16/nonro8-pe.html",
+          "sha256": "b75b10d41b6196c2099f4298d1eb3b72fe1f0f616be3da843b2d37e776b6e6b6",
+          "url": "https://legis.alepe.pe.gov.br/texto.aspx?id=11&tipo=TEXTOATUALIZADO"
+        }
+      }
+    },
+    {
+      "id": "8842e03d-5136-4daa-9335-caec2e9bafad",
+      "item_number": 60,
+      "career": "Investigador de Polícia",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "title": "LC407/2010 MT — arts.120,164,220 item2 XXXII e301; leitura conjunta e atos modificadores conferidos"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T23:04:47.231753+00:00",
+        "verified_at": "2026-10-17T23:04:47.231753+00:00",
+        "review_note": "Resposta: B — I, II e IV, apenas.\n\nI — Correta na leitura conjunta do estatuto. O art. 120 afirma que a função policial se fundamenta na hierarquia e na disciplina e admite os casos previstos em lei. A exceção relativa ao ensino aparece expressamente no art. 220, item 2 (infrações de segundo grau), XXXII: é proibido exercer outro cargo, função ou emprego, mesmo na folga, exceto atividade relativa ao ensino. A assertiva combina esses dispositivos; não é transcrição literal isolada do art. 120.\n\nII — Correta. O parágrafo único do art. 120 prevê condições adversas, risco de vida, plantões noturnos e chamadas a qualquer hora, desde que justificada a necessidade, inclusive diligências dentro ou fora de Mato Grosso. Atenção à exigência de necessidade justificada.\n\nIII — Incorreta. O art. 164 veda acumular funções em MAIS DE DUAS unidades policiais. A questão trocou isso por MAIS DE UMA. Esse é o erro que exclui A, C e E.\n\nIV — Correta. Pelo art. 301, parágrafo único, os objetos fornecidos pelo Estado devem ser devolvidos no dia da publicação da aposentadoria, exoneração ou demissão. Não é regra do art. 119, que foi revogado pela LC 803/2024 e tratava de outras atribuições.\n\nExemplo: uma designação para duas unidades não ultrapassa, por si só, o limite numérico do art. 164; a acumulação em três unidades ultrapassa. Isso não dispensa a regularidade da designação nem autoriza acumular cargos diferentes.\n\nVariação de prova: se a afirmativa III dissesse “mais de duas unidades”, desapareceria o erro numérico; se a IV adiasse a devolução para trinta dias depois da publicação, contrariaria o art. 301.\n\nAtenção: o exercício do ensino deve respeitar as condições legais e constitucionais aplicáveis. Não substitua a ressalva geral do art. 120 pela ideia de que o estatuto afasta todas as demais hipóteses que a Constituição ou a lei assegurem. A resposta trata da composição literal cobrada pela UFMT, com chave B mantida no comunicado final de 02/03/2022.\n\nConferência em 17/10/2026: arts. 120 e parágrafo único, 164, 220 (item 2, XXXII) e 301 e parágrafo único, no portal oficial da ALMT, confrontados com os 17 atos modificadores identificados até a data. Esses recortes não foram alterados pelos atos consultados; o portal não foi tratado como consolidação integral certificada. Programa da LC 407/2010 e alterações conferido no Anexo III do edital, página física 39, para ambos os cargos. Data original da lei: 30/06/2010; data desta conferência: 17/10/2026.",
+        "current_syllabus_topic_id": "4898c6e4-788c-5984-af54-058894830681",
+        "legal_audit_completed": true,
+        "legal_review_required": false,
+        "context_review_required": false
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Leitura sistemática art120 combinado com art220,item2,XXXII resolve a exceção do ensino; confronto individual dos quatro enunciados, programa de ambos cargos e chave definitiva composta.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;853/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-09-02;702/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2016-02-12;575/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2015-05-13;565/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;851/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-04;737/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-06-01;691/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2017-10-24;597/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2025-12-10;831/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-01-18;787/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-01;736/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-07-01;694/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2020-11-04;679/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2014-07-03;540/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2013-04-15;494/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2012-05-08;464/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17"
+        ],
+        "legal_capture": {
+          "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "path": "outputs/pc-pending-review-2026-10-16/finish22/mt407-base.html",
+          "sha256": "569772f4ab4cfbf8db26c99ab2f5e6528ba760551ed2dd448b7bdb95568cd497",
+          "captured_at": "2026-10-17T21:34:36.286Z"
+        },
+        "amendment_captures": [
+          {
+            "num": "853",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;853/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-853.html",
+            "sha256": "f9559dc11b4366ff061e622b451d441ba83995473e9f5bf5f737c0ec48b85144",
+            "captured_at": "2026-10-17T21:32:36.672Z"
+          },
+          {
+            "num": "803",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-803.html",
+            "sha256": "6c52c663d787381264747f6f29a6bd8ee5fc925770542a353b1c565c36ee7539",
+            "captured_at": "2026-10-17T21:32:38.001Z"
+          },
+          {
+            "num": "702",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-09-02;702/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-702.html",
+            "sha256": "e7c28cca307c87fdd32cc917b269cb6092dc3caf91de6af0d56a09fd0b2ab9bc",
+            "captured_at": "2026-10-17T21:32:39.060Z"
+          },
+          {
+            "num": "575",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2016-02-12;575/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-575.html",
+            "sha256": "25faca5032849219cd7a74357e0924beb4c4b6557272992653459b7d8f223117",
+            "captured_at": "2026-10-17T21:32:39.500Z"
+          },
+          {
+            "num": "565",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2015-05-13;565/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-565.html",
+            "sha256": "59c1c03a764c4d8b22badd5f459539d196647115a33038103b94929c30fb7462",
+            "captured_at": "2026-10-17T21:32:41.136Z"
+          },
+          {
+            "num": "851",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;851/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-851.html",
+            "sha256": "86d3c43d3bd83ed330f4852dde014c9e4c9446d31303b6daa4f5bcc59cf09169",
+            "captured_at": "2026-10-17T21:32:37.232Z"
+          },
+          {
+            "num": "737",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-04;737/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-737.html",
+            "sha256": "e7d8c49e3f074a8443e43d09cd29cecbd743dd56dfc017e5617b13c359e0d7eb",
+            "captured_at": "2026-10-17T21:32:38.481Z"
+          },
+          {
+            "num": "691",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-06-01;691/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-691.html",
+            "sha256": "d080b4ded46840a5173ee4a599b4818ffc3fc9a4f85d68f405f7a807a2de0ca2",
+            "captured_at": "2026-10-17T21:32:38.875Z"
+          },
+          {
+            "num": "597",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2017-10-24;597/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-597.html",
+            "sha256": "587ee10c95c7fba88f2983ae50cab9a1bfbbbfa80d3123ea8bab7c645e5ddddf",
+            "captured_at": "2026-10-17T21:32:41.634Z"
+          },
+          {
+            "num": "831",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2025-12-10;831/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-831.html",
+            "sha256": "b31d8c12ba38fe86d6904acb81d845cabbdd665dde4e2cba1edf5d0091946d46",
+            "captured_at": "2026-10-17T21:32:36.941Z"
+          },
+          {
+            "num": "787",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-01-18;787/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-787.html",
+            "sha256": "257f07518b4aa1dda45dc186b38d46711ac95dc4fe8fd921a023c42257e07b21",
+            "captured_at": "2026-10-17T21:32:37.381Z"
+          },
+          {
+            "num": "736",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-01;736/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-736.html",
+            "sha256": "ef7352de53a1b54f4b9e82cd7d669469be3e55514561b21901bd32204402d443",
+            "captured_at": "2026-10-17T21:32:38.283Z"
+          },
+          {
+            "num": "694",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-07-01;694/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-694.html",
+            "sha256": "ba010be27b95edee5e4af2f29d10741fbad2ec1858e14fb1916220f770c59948",
+            "captured_at": "2026-10-17T21:32:38.743Z"
+          },
+          {
+            "num": "679",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2020-11-04;679/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-679.html",
+            "sha256": "1b8285814a930ac602e4daaeb018a2e5f8579cc86faaa01526b576cf356bd547",
+            "captured_at": "2026-10-17T21:32:39.534Z"
+          },
+          {
+            "num": "540",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2014-07-03;540/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-540.html",
+            "sha256": "ad84972337088ac6e86da836a3ef3a4add50f886df92252d21cbbbc7ecf156b7",
+            "captured_at": "2026-10-17T21:32:40.186Z"
+          },
+          {
+            "num": "494",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2013-04-15;494/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-494.html",
+            "sha256": "6bfff67609ebd298bad171f258bd8cd005b5f3aba7024ce6dd827db22ee9ebdc",
+            "captured_at": "2026-10-17T21:32:40.614Z"
+          },
+          {
+            "num": "464",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2012-05-08;464/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-464.html",
+            "sha256": "c3fc643cfbfce670e4fec04419a42de14019cc6461c22d312d5c43a29216065e",
+            "captured_at": "2026-10-17T21:32:42.433Z"
+          }
+        ],
+        "paper_page": 24,
+        "edital_page": 39,
+        "original_answer_preserved": true,
+        "scope": "Somente questões56/57/58 dos dois cargos; item60 continua pendente por redação e alcance das exceções. Sem certificação integral da lei.",
+        "reviewed_articles": [
+          "120",
+          "164",
+          "220,2,XXXII",
+          "301"
+        ],
+        "key_page": 1
+      }
+    },
+    {
+      "id": "9eaec00d-5904-4113-97d6-e4c217da178e",
+      "item_number": 60,
+      "career": "Escrivão de Polícia",
+      "patch": {
+        "content_status": "active",
+        "legal_basis": [
+          {
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "title": "LC407/2010 MT — arts.120,164,220 item2 XXXII e301; leitura conjunta e atos modificadores conferidos"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T23:04:47.231753+00:00",
+        "verified_at": "2026-10-17T23:04:47.231753+00:00",
+        "review_note": "Resposta: B — I, II e IV, apenas.\n\nI — Correta na leitura conjunta do estatuto. O art. 120 afirma que a função policial se fundamenta na hierarquia e na disciplina e admite os casos previstos em lei. A exceção relativa ao ensino aparece expressamente no art. 220, item 2 (infrações de segundo grau), XXXII: é proibido exercer outro cargo, função ou emprego, mesmo na folga, exceto atividade relativa ao ensino. A assertiva combina esses dispositivos; não é transcrição literal isolada do art. 120.\n\nII — Correta. O parágrafo único do art. 120 prevê condições adversas, risco de vida, plantões noturnos e chamadas a qualquer hora, desde que justificada a necessidade, inclusive diligências dentro ou fora de Mato Grosso. Atenção à exigência de necessidade justificada.\n\nIII — Incorreta. O art. 164 veda acumular funções em MAIS DE DUAS unidades policiais. A questão trocou isso por MAIS DE UMA. Esse é o erro que exclui A, C e E.\n\nIV — Correta. Pelo art. 301, parágrafo único, os objetos fornecidos pelo Estado devem ser devolvidos no dia da publicação da aposentadoria, exoneração ou demissão. Não é regra do art. 119, que foi revogado pela LC 803/2024 e tratava de outras atribuições.\n\nExemplo: uma designação para duas unidades não ultrapassa, por si só, o limite numérico do art. 164; a acumulação em três unidades ultrapassa. Isso não dispensa a regularidade da designação nem autoriza acumular cargos diferentes.\n\nVariação de prova: se a afirmativa III dissesse “mais de duas unidades”, desapareceria o erro numérico; se a IV adiasse a devolução para trinta dias depois da publicação, contrariaria o art. 301.\n\nAtenção: o exercício do ensino deve respeitar as condições legais e constitucionais aplicáveis. Não substitua a ressalva geral do art. 120 pela ideia de que o estatuto afasta todas as demais hipóteses que a Constituição ou a lei assegurem. A resposta trata da composição literal cobrada pela UFMT, com chave B mantida no comunicado final de 02/03/2022.\n\nConferência em 17/10/2026: arts. 120 e parágrafo único, 164, 220 (item 2, XXXII) e 301 e parágrafo único, no portal oficial da ALMT, confrontados com os 17 atos modificadores identificados até a data. Esses recortes não foram alterados pelos atos consultados; o portal não foi tratado como consolidação integral certificada. Programa da LC 407/2010 e alterações conferido no Anexo III do edital, página física 39, para ambos os cargos. Data original da lei: 30/06/2010; data desta conferência: 17/10/2026.",
+        "current_syllabus_topic_id": "5d826ea8-c0bd-5fb1-83dd-ad07fbd533fe",
+        "legal_audit_completed": true,
+        "legal_review_required": false,
+        "context_review_required": false
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Leitura sistemática art120 combinado com art220,item2,XXXII resolve a exceção do ensino; confronto individual dos quatro enunciados, programa de ambos cargos e chave definitiva composta.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;853/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-09-02;702/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2016-02-12;575/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2015-05-13;565/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;851/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-04;737/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-06-01;691/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2017-10-24;597/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2025-12-10;831/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-01-18;787/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-01;736/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-07-01;694/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2020-11-04;679/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2014-07-03;540/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2013-04-15;494/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2012-05-08;464/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17"
+        ],
+        "legal_capture": {
+          "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+          "path": "outputs/pc-pending-review-2026-10-16/finish22/mt407-base.html",
+          "sha256": "569772f4ab4cfbf8db26c99ab2f5e6528ba760551ed2dd448b7bdb95568cd497",
+          "captured_at": "2026-10-17T21:34:36.286Z"
+        },
+        "amendment_captures": [
+          {
+            "num": "853",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;853/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-853.html",
+            "sha256": "f9559dc11b4366ff061e622b451d441ba83995473e9f5bf5f737c0ec48b85144",
+            "captured_at": "2026-10-17T21:32:36.672Z"
+          },
+          {
+            "num": "803",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-12-19;803/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-803.html",
+            "sha256": "6c52c663d787381264747f6f29a6bd8ee5fc925770542a353b1c565c36ee7539",
+            "captured_at": "2026-10-17T21:32:38.001Z"
+          },
+          {
+            "num": "702",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-09-02;702/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-702.html",
+            "sha256": "e7c28cca307c87fdd32cc917b269cb6092dc3caf91de6af0d56a09fd0b2ab9bc",
+            "captured_at": "2026-10-17T21:32:39.060Z"
+          },
+          {
+            "num": "575",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2016-02-12;575/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-575.html",
+            "sha256": "25faca5032849219cd7a74357e0924beb4c4b6557272992653459b7d8f223117",
+            "captured_at": "2026-10-17T21:32:39.500Z"
+          },
+          {
+            "num": "565",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2015-05-13;565/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-565.html",
+            "sha256": "59c1c03a764c4d8b22badd5f459539d196647115a33038103b94929c30fb7462",
+            "captured_at": "2026-10-17T21:32:41.136Z"
+          },
+          {
+            "num": "851",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2026-07-03;851/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-851.html",
+            "sha256": "86d3c43d3bd83ed330f4852dde014c9e4c9446d31303b6daa4f5bcc59cf09169",
+            "captured_at": "2026-10-17T21:32:37.232Z"
+          },
+          {
+            "num": "737",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-04;737/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-737.html",
+            "sha256": "e7d8c49e3f074a8443e43d09cd29cecbd743dd56dfc017e5617b13c359e0d7eb",
+            "captured_at": "2026-10-17T21:32:38.481Z"
+          },
+          {
+            "num": "691",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-06-01;691/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-691.html",
+            "sha256": "d080b4ded46840a5173ee4a599b4818ffc3fc9a4f85d68f405f7a807a2de0ca2",
+            "captured_at": "2026-10-17T21:32:38.875Z"
+          },
+          {
+            "num": "597",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2017-10-24;597/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-597.html",
+            "sha256": "587ee10c95c7fba88f2983ae50cab9a1bfbbbfa80d3123ea8bab7c645e5ddddf",
+            "captured_at": "2026-10-17T21:32:41.634Z"
+          },
+          {
+            "num": "831",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2025-12-10;831/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-831.html",
+            "sha256": "b31d8c12ba38fe86d6904acb81d845cabbdd665dde4e2cba1edf5d0091946d46",
+            "captured_at": "2026-10-17T21:32:36.941Z"
+          },
+          {
+            "num": "787",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2024-01-18;787/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-787.html",
+            "sha256": "257f07518b4aa1dda45dc186b38d46711ac95dc4fe8fd921a023c42257e07b21",
+            "captured_at": "2026-10-17T21:32:37.381Z"
+          },
+          {
+            "num": "736",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2022-04-01;736/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-736.html",
+            "sha256": "ef7352de53a1b54f4b9e82cd7d669469be3e55514561b21901bd32204402d443",
+            "captured_at": "2026-10-17T21:32:38.283Z"
+          },
+          {
+            "num": "694",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2021-07-01;694/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-694.html",
+            "sha256": "ba010be27b95edee5e4af2f29d10741fbad2ec1858e14fb1916220f770c59948",
+            "captured_at": "2026-10-17T21:32:38.743Z"
+          },
+          {
+            "num": "679",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2020-11-04;679/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-679.html",
+            "sha256": "1b8285814a930ac602e4daaeb018a2e5f8579cc86faaa01526b576cf356bd547",
+            "captured_at": "2026-10-17T21:32:39.534Z"
+          },
+          {
+            "num": "540",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2014-07-03;540/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-540.html",
+            "sha256": "ad84972337088ac6e86da836a3ef3a4add50f886df92252d21cbbbc7ecf156b7",
+            "captured_at": "2026-10-17T21:32:40.186Z"
+          },
+          {
+            "num": "494",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2013-04-15;494/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-494.html",
+            "sha256": "6bfff67609ebd298bad171f258bd8cd005b5f3aba7024ce6dd827db22ee9ebdc",
+            "captured_at": "2026-10-17T21:32:40.614Z"
+          },
+          {
+            "num": "464",
+            "url": "https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2012-05-08;464/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17",
+            "path": "outputs/pc-pending-review-2026-10-16/finish22/mt-amendment-464.html",
+            "sha256": "c3fc643cfbfce670e4fec04419a42de14019cc6461c22d312d5c43a29216065e",
+            "captured_at": "2026-10-17T21:32:42.433Z"
+          }
+        ],
+        "paper_page": 24,
+        "edital_page": 39,
+        "original_answer_preserved": true,
+        "scope": "Somente questões56/57/58 dos dois cargos; item60 continua pendente por redação e alcance das exceções. Sem certificação integral da lei.",
+        "reviewed_articles": [
+          "120",
+          "164",
+          "220,2,XXXII",
+          "301"
+        ],
+        "key_page": 1
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "4c8e3631-ef13-4420-b488-419e4ffedea3",
+      "patch": {
+        "question_source_id": "0a07cb10-8846-541a-8723-359757f9b4e6",
+        "answer_key_source_id": "84260811-6cea-5584-9d07-5d327667416e",
+        "source_page": 1,
+        "verified_at": "2026-10-17T23:00:21.446066+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de norma estadual de Pernambuco (Constituição, Estatuto ou lei complementar), cujo texto vigente não foi conferido em fonte oficial. | Revisão 17/10/2026, retida: Depende da Lei 6.425/1972 (PE), texto vigente não conferido em fonte oficial.\nProveniência corrigida: questão2 consta do bloco básico PECB2, página1; chave definitiva E conferida visualmente. Fontes anteriores PE002 eram do bloco específico."
+      },
+      "evidence": {
+        "visually_verified": true,
+        "reason": "Cotejo visual questão2 PECB2, página1, e chave definitiva E; fonte anterior PE002 não contém o item.",
+        "item_number": 2,
+        "official_answer": "E",
+        "page": 1,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "27/02/2024 19:00",
+          "nomeArquivo": "MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-02-27T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/MATRIZ_954PC_PECB2_00_COM_JUSTIFICATIVA.PDF",
+          "sha256": "50cf489f49dc942f8c72601dd296d693234748e2dc5582dee4e862cede5ad10e",
+          "captured_at": "2026-10-16T22:08:53.355Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "01/04/2024 17:40",
+          "nomeArquivo": "GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS (P1) – CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2024-04-01T17:40:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_pe_23/arquivos/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/pe/GAB_DEFINITIVO_MATRIZ_954PC_PECB2_00.PDF",
+          "sha256": "c01fa9c561a099cae2ff630829a182a37395b74bf989f3024fa70506525830a0",
+          "captured_at": "2026-10-16T22:08:51.759Z"
+        }
+      }
+    }
+  ]
+}

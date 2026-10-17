@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-17T21:38:45.893Z",
-  "scope": "All32 baseline records triaged;16 individual decisions complete (12active,4obsolete),16 retain incomplete substantive validation. Not certification of all32.",
-  "resolved": 16,
-  "published_active": 12,
+  "checked_at": "2026-10-17T23:06:47.849Z",
+  "scope": "All32 baseline records triaged;19 individual decisions complete (15active,4obsolete),13 retain incomplete substantive validation. Not certification of all32.",
+  "resolved": 19,
+  "published_active": 15,
   "published_obsolete": 4,
-  "retained_under_review": 16,
+  "retained_under_review": 13,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -67,9 +67,9 @@
       "item_number": 2,
       "original_answer": "E",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta concluir vigência do recorte disciplinar da Lei6425/1972 e controle constitucional aplicável à manifestação de desapreço. Julgamento de outra norma não pode ser aplicado automaticamente."
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "6a3a491d9a1049c9bb80afcc3890f8f281097a3aa56ce33a21f559d85358f830"
     },
     {
       "id": "66a98722-e75c-49ee-9a7b-4edb99348724",
@@ -155,9 +155,9 @@
       "item_number": 60,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "AfirmativaI restringe exceção a ensino, enquanto texto consultado usa casos previstos em lei; III fala em uma unidade e norma consultada em duas. Falta resolver a redação e a chaveB com versão normativa aplicável, sem forçar a resposta."
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "fd9cf214b0d580c8cd3009b1a4c30c3a6b534b17786db1c98197abc0806209d4"
     },
     {
       "id": "8eecb36b-1c60-4019-a495-f3523af08d08",
@@ -199,9 +199,9 @@
       "item_number": 60,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "AfirmativaI restringe exceção a ensino, enquanto texto consultado usa casos previstos em lei; III fala em uma unidade e norma consultada em duas. Falta resolver a redação e a chaveB com versão normativa aplicável, sem forçar a resposta."
+      "after_status": "active",
+      "decision": "Revisão individual concluída: docs/question-review-pe2-mt60-2026-10-17.json",
+      "comment_sha256": "fd9cf214b0d580c8cd3009b1a4c30c3a6b534b17786db1c98197abc0806209d4"
     },
     {
       "id": "a2ab2b89-eea8-481e-b67f-82853648c460",
