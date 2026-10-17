@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-17T16:32:49.456Z",
-  "generated_at": "2026-10-17T16:34:27.474Z",
+  "snapshot_at": "2026-10-17T16:50:37.706Z",
+  "generated_at": "2026-10-17T16:51:41.420Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -500,54 +500,52 @@
       "records": 60,
       "status": {
         "annulled": 2,
-        "active": 48,
-        "under_review": 10
+        "active": 51,
+        "under_review": 7
       },
-      "active_app_eligible": 48,
-      "active_with_catalog_flags": 48,
+      "active_app_eligible": 51,
+      "active_with_catalog_flags": 39,
       "active_without_example_marker": 48,
       "flags": {
-        "topic_not_current": 39,
-        "edition_without_verified_edital": 48
+        "topic_not_current": 39
       }
     },
     {
       "exam": "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia | 2022 | Investigador de Polícia | UFMT",
       "records": 60,
       "status": {
-        "active": 48,
-        "under_review": 10,
+        "active": 51,
+        "under_review": 7,
         "annulled": 2
       },
-      "active_app_eligible": 48,
-      "active_with_catalog_flags": 48,
+      "active_app_eligible": 51,
+      "active_with_catalog_flags": 39,
       "active_without_example_marker": 48,
       "flags": {
-        "topic_not_current": 39,
-        "edition_without_verified_edital": 48
+        "topic_not_current": 39
       }
     }
   ],
   "totals": {
     "records": 2968,
     "status": {
-      "active": 2662,
+      "active": 2668,
       "archived": 215,
       "annulled": 37,
-      "under_review": 46,
+      "under_review": 40,
       "obsolete": 8
     },
-    "active_app_eligible": 2222,
-    "active_with_catalog_flags": 1738,
+    "active_app_eligible": 2228,
+    "active_with_catalog_flags": 1720,
     "active_without_example_marker": 2323,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 270,
-    "newly_published": 270,
-    "scope": "PCDF 111 canonical reviews; RO 116 decisions (113 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records.",
+    "newly_reviewed": 276,
+    "newly_published": 276,
+    "scope": "PCDF 111 canonical reviews; RO 116 decisions (113 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 46,
+    "pending_under_review_all_pc": 40,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1622,6 +1620,68 @@
         "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
       },
       "report": "docs/question-review-pcro-mg-2026-10-17.json"
+    },
+    "matogrosso_batch1": {
+      "reviewed_records": 6,
+      "unique_questions": 3,
+      "published_active": 6,
+      "preserved_other_pc_records": 2962,
+      "concurrent_changes": [],
+      "metadata": [
+        {
+          "table": "content_sources",
+          "planned_created": [
+            "5980a42c-020b-5b97-9e4e-418c39fa7c47"
+          ],
+          "planned_updated": [
+            "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+            "35c523d9-d59e-478d-b975-83b755bb639d"
+          ],
+          "concurrent_unrelated_changes": []
+        },
+        {
+          "table": "syllabus_editions",
+          "planned_created": [],
+          "planned_updated": [
+            "04dc75bb-eefe-44ca-99f6-a5c78bac332d",
+            "cc62e866-9796-47f5-a8b9-3fbaf86031af"
+          ],
+          "concurrent_unrelated_changes": []
+        },
+        {
+          "table": "syllabus_topics",
+          "planned_created": [
+            "1281d202-3241-5a5a-861c-195357c3ce25",
+            "f7c3488f-1d44-50bf-a4b7-06d8ea890749",
+            "6b2ca36b-726a-54ab-8e52-512524eaa14b",
+            "6ecfcba0-f520-586c-8f6e-4fb6ff06f5ed",
+            "4dfa4659-e9ed-5e63-8317-37f00585b1bf",
+            "840ac8d1-78d2-516d-ab91-c761af8444b8"
+          ],
+          "planned_updated": [],
+          "concurrent_unrelated_changes": []
+        }
+      ],
+      "tests": {
+        "application_passed": 602,
+        "review_guards_passed": 44,
+        "source_workflow_passed": 10
+      },
+      "pending_by_contest": {
+        "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 3,
+        "Polícia Civil do Estado de Sergipe - Agente de Polícia Judiciária": 1,
+        "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 9,
+        "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 7,
+        "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 2,
+        "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 7,
+        "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+        "Polícia Civil do Piauí – Delegado de Polícia Civil": 3,
+        "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+        "Polícia Civil do Estado de Sergipe - Escrivão de Polícia": 1,
+        "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+      },
+      "report": "docs/question-review-pcmt-batch1-2026-10-17.json"
     }
   },
   "source_comparison_pcdf": {
@@ -2555,6 +2615,12 @@
         "bvsms.saude.gov.br RDC 222/2018"
       ],
       "note": "Earlier failures and draft configuration records are historical. Successful retrieval does not certify current legal effect, final answers or the whole corpus. UFMT final key must be read with 02/03/2022 changes (questions 2 and 10 annulled); not as the preliminary PDF alone."
+    },
+    "ufmt_documentary_update": {
+      "checked_at": "2026-10-17T16:50:37.706Z",
+      "official_documents_retrieved": true,
+      "verified_final_key_composition": true,
+      "scope": "Opening edital and retification, common program, official caderno, preliminary key plus 02/03/2022 changes. Approval restricted to items 7, 19 and 45 in two careers; 14 MT records remain under_review. No whole-exam legal certification."
     }
   }
 }
