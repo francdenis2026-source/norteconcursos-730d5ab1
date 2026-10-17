@@ -1,0 +1,542 @@
+{
+  "checked_at": "2026-10-17T21:23:02.313Z",
+  "reviewed": 6,
+  "published_active": 4,
+  "published_obsolete": 2,
+  "preserved_other_pc_records": 2962,
+  "concurrent_changes": [],
+  "verified_metadata_changes": [
+    {
+      "table": "syllabus_topics",
+      "id": "3fffed4b-b213-5fe0-bedf-12344aa567f8"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "c6fb9def-6642-5c0d-9e40-96cbf0a090cf"
+    }
+  ],
+  "pc_status": {
+    "active": 2618,
+    "archived": 279,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 22
+  },
+  "pending_by_contest": {
+    "Polícia Civil do Estado de Rondônia - Datiloscopista Policial": 3,
+    "Polícia Civil de Pernambuco - Escrivão de Polícia": 1,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Investigador de Polícia": 4,
+    "Polícia Judiciária Civil do Estado de Mato Grosso - Escrivão de Polícia": 4,
+    "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia": 2,
+    "Polícia Civil do Estado do Amazonas - Delegado de Polícia": 1,
+    "Polícia Civil do Estado de Rondônia - Delegado de Polícia": 5,
+    "Polícia Civil do Estado do Amazonas - Investigador de Polícia": 1,
+    "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG)": 1
+  },
+  "application_changes": false,
+  "items": [
+    {
+      "id": "04aeaabe-62e9-43dc-b843-e09efc388451",
+      "item_number": 65,
+      "before_sha256": "d7476fb312e21ca7480d80c0697e536ec8eb74fcf4ccc1e4876f2ae0b3be34a0",
+      "after_sha256": "b721ceb301b8b5668f7580f0971aa7d0dcce8a017c67cf511c00fcac31aa93c6",
+      "patch": {
+        "content_status": "obsolete",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "verified_at": "2026-10-17T21:18:26.740699+00:00",
+        "law_version_checked_at": "2026-10-17T21:18:26.740699+00:00",
+        "review_note": "QUESTÃO HISTÓRICA COM FUNDAMENTO REVOGADO — fora do treino atual. A Lei amazonense 3.278/2008 instituiu o regime disciplinar do sistema de segurança pública. Seu art. 159 REVOGOU EXPRESSAMENTE os arts. 36 a 91 da Lei 2.271/1994; o art. 161 fixou vigência sessenta dias após a publicação. O dispositivo cobrado está dentro desse intervalo. O comando se apoia no antigo art. 81, que previa revisão a qualquer tempo, e a letra B histórica foi preservada. Isso não certifica a aplicação atual do artigo revogado, nem afirma inexistência de revisão no regime que o substituiu.\nA lei revogadora foi conferida diretamente no PDF oficial da ALEAM, página 32; não se inferiu revogação total do Estatuto. Foram recuperadas também as alterações relacionadas de 2012, 2019 e 2021, sem identificar nelas restauração expressa dos artigos aqui cobrados. Alterar outras partes da Lei 2.271/1994 não restaura automaticamente seu capítulo disciplinar revogado.\nExemplo: encontrar o antigo artigo no PDF original de 1994 não o torna vigente. Variação: uma lei posterior pode alterar outro artigo do mesmo Estatuto sem reativar os arts. 36–91.\nTeste rápido — Este registro foi liberado como exercício de legislação vigente? Resposta: não. Sua letra e seu texto foram mantidos como histórico inativo, com o alerta de revogação."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revogação expressa do próprio fundamento indicado pelo comando: Lei3278/2008 art159 alcança arts36–91, incluindo antigoart81. Não se altera a letra histórica nem se conclui que o novo regime tenha resultado material oposto; exercício original não é publicado como lei vigente.",
+        "sources": [
+          "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2008/7733/7733_texto_integral.pdf",
+          "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/1994/6725/6725_texto_integral.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/ns001_-_delegado_de_policia_-_4a_classe_prova_objetivans001_tipo_1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e01_gabarito_definitivo.pdf"
+        ],
+        "revocation_capture": {
+          "id": "7733",
+          "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2008/7733/7733_texto_integral.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/am-7733.pdf",
+          "sha256": "e85e0cf29f237f92b22ff32db12100c6606be69b94fff9af0e8ad4c1ad92fb53",
+          "captured_at": "2026-10-17T21:16:28.577Z"
+        },
+        "old_statute_capture": {
+          "id": "6725",
+          "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/1994/6725/6725_texto_integral.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/am-6725.pdf",
+          "sha256": "a9efdb05f40a1108691a7d2f122617c393827b51eed95fa924beabb8afdb67f5",
+          "captured_at": "2026-10-17T21:16:28.772Z"
+        },
+        "related_amendments": [
+          {
+            "id": "8176",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2012/8176/8176_texto_integral.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-8176.pdf",
+            "sha256": "d408fc351579283fa1326f439076491a88fb91253e90d826ceff33c08cadeeb3",
+            "captured_at": "2026-10-17T21:16:29.116Z"
+          },
+          {
+            "id": "8303",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2012/8303/8303_texto_integral.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-8303.pdf",
+            "sha256": "8f04f2a39a494c0f735d4376b461004e874fd4013e9d8f3832899f47cdd728b3",
+            "captured_at": "2026-10-17T21:16:28.626Z"
+          },
+          {
+            "id": "10489",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2019/10489/4866.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-10489.pdf",
+            "sha256": "101b43c4807f2103945745d60559c70213e6e36023a7756c7e5400455a03c8b9",
+            "captured_at": "2026-10-17T21:16:28.866Z"
+          },
+          {
+            "id": "11612",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2021/11612/5694.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-11612.pdf",
+            "sha256": "3cf8bc7a09f24be9c35ebd6ebdada96725806b93ddf0c543573260f4da9ccec6",
+            "captured_at": "2026-10-17T21:16:29.113Z"
+          }
+        ],
+        "revocation_page": 32,
+        "old_article": "81",
+        "paper_page": 16,
+        "key_page": 1,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "3b024557-dfed-40fe-9bba-bf3f32a02f20",
+      "item_number": 80,
+      "before_sha256": "a7eb4c226357f34eebaa0b97dc087c9e6bddbecd562d860f169b3072bd09ddb0",
+      "after_sha256": "a0f66e4fdc9007c45fcf6d682c4c61cdddba08bf5a625687379ef91b92c755f8",
+      "patch": {
+        "content_status": "obsolete",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "verified_at": "2026-10-17T21:18:26.740699+00:00",
+        "law_version_checked_at": "2026-10-17T21:18:26.740699+00:00",
+        "review_note": "QUESTÃO HISTÓRICA COM FUNDAMENTO REVOGADO — fora do treino atual. A Lei amazonense 3.278/2008 instituiu o regime disciplinar do sistema de segurança pública. Seu art. 159 REVOGOU EXPRESSAMENTE os arts. 36 a 91 da Lei 2.271/1994; o art. 161 fixou vigência sessenta dias após a publicação. O dispositivo cobrado está dentro desse intervalo. O comando se apoia no antigo art. 47, VI, sobre insubordinação grave e demissão; a letra E histórica foi preservada. Isso não significa que a conduta tenha deixado de admitir sanção grave: significa que o artigo revogado não pode ser ensinado como fundamento atual.\nA lei revogadora foi conferida diretamente no PDF oficial da ALEAM, página 32; não se inferiu revogação total do Estatuto. Foram recuperadas também as alterações relacionadas de 2012, 2019 e 2021, sem identificar nelas restauração expressa dos artigos aqui cobrados. Alterar outras partes da Lei 2.271/1994 não restaura automaticamente seu capítulo disciplinar revogado.\nExemplo: encontrar o antigo artigo no PDF original de 1994 não o torna vigente. Variação: uma lei posterior pode alterar outro artigo do mesmo Estatuto sem reativar os arts. 36–91.\nTeste rápido — Este registro foi liberado como exercício de legislação vigente? Resposta: não. Sua letra e seu texto foram mantidos como histórico inativo, com o alerta de revogação."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Revogação expressa do próprio fundamento indicado pelo comando: Lei3278/2008 art159 alcança arts36–91, incluindo antigoart47, VI. Não se altera a letra histórica nem se conclui que o novo regime tenha resultado material oposto; exercício original não é publicado como lei vigente.",
+        "sources": [
+          "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2008/7733/7733_texto_integral.pdf",
+          "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/1994/6725/6725_texto_integral.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/investigador_de_policia_-_4a_classens100_tipo_1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcam2021e02_gabarito_definitivo.pdf"
+        ],
+        "revocation_capture": {
+          "id": "7733",
+          "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2008/7733/7733_texto_integral.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/am-7733.pdf",
+          "sha256": "e85e0cf29f237f92b22ff32db12100c6606be69b94fff9af0e8ad4c1ad92fb53",
+          "captured_at": "2026-10-17T21:16:28.577Z"
+        },
+        "old_statute_capture": {
+          "id": "6725",
+          "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/1994/6725/6725_texto_integral.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/am-6725.pdf",
+          "sha256": "a9efdb05f40a1108691a7d2f122617c393827b51eed95fa924beabb8afdb67f5",
+          "captured_at": "2026-10-17T21:16:28.772Z"
+        },
+        "related_amendments": [
+          {
+            "id": "8176",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2012/8176/8176_texto_integral.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-8176.pdf",
+            "sha256": "d408fc351579283fa1326f439076491a88fb91253e90d826ceff33c08cadeeb3",
+            "captured_at": "2026-10-17T21:16:29.116Z"
+          },
+          {
+            "id": "8303",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2012/8303/8303_texto_integral.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-8303.pdf",
+            "sha256": "8f04f2a39a494c0f735d4376b461004e874fd4013e9d8f3832899f47cdd728b3",
+            "captured_at": "2026-10-17T21:16:28.626Z"
+          },
+          {
+            "id": "10489",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2019/10489/4866.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-10489.pdf",
+            "sha256": "101b43c4807f2103945745d60559c70213e6e36023a7756c7e5400455a03c8b9",
+            "captured_at": "2026-10-17T21:16:28.866Z"
+          },
+          {
+            "id": "11612",
+            "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2021/11612/5694.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/final32/am-11612.pdf",
+            "sha256": "3cf8bc7a09f24be9c35ebd6ebdada96725806b93ddf0c543573260f4da9ccec6",
+            "captured_at": "2026-10-17T21:16:29.113Z"
+          }
+        ],
+        "revocation_page": 32,
+        "old_article": "47, VI",
+        "paper_page": 17,
+        "key_page": 5,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "6b7f5982-454d-45a1-9d8d-336110760d3a",
+      "item_number": 14,
+      "before_sha256": "fbbe4a755b89834bb9d3285d1171fb3a6e782be8a5de4d4034fb765e093bea45",
+      "after_sha256": "91a192930d10d6b34c23fc52165a5cf15b4ac9e887f532aaae799b416768d4d9",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "3fffed4b-b213-5fe0-bedf-12344aa567f8",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Gabarito definitivo: A — commodities agrícolas. Este é um EXERCÍCIO HISTÓRICO do contexto de 2021 reproduzido na prova de2022: não são taxas atuais nem números finais certificados nesta revisão. O gráfico tem o título “Estimativa de crescimento do PIB estadual entre2010 e2022” e mostra variação acumulada projetada. O texto abaixo menciona separadamente uma projeção para2021 de4,97%; não confunda esse dado anual com os41,1% do período do gráfico.\nA expressão “ciclo favorável das commodities agrícolas” é a opção da banca para o contexto do agronegócio destacado. Commodities são produtos padronizados negociados em mercados amplos, como soja e milho. Um ciclo favorável de preços e comercialização pode elevar a renda desse setor. Não se deve concluir, apenas pelo gráfico agregado, que toda a diferença decorreu de uma única causa ou que houve expansão da área plantada. A alternativa E se refere à expansão agropecuária; não substitui o fator específico do ciclo de commodities cobrado no comando. As opções de commodities industriais e mineração não correspondem ao setor enfatizado.\nExemplo hipotético: com a mesma quantidade vendida, um preço maior pode elevar a receita; isso é diferente de produzir mais por aumentar a área. Variação: área e produtividade podem mudar a produção, mas o gráfico, sozinho, não separa esses efeitos.\nTeste rápido — Os41,1% do gráfico podem ser apresentados como crescimento efetivo de Mato Grosso apenas em2021? Resposta: não. O título se refere à estimativa acumulada2010–2022; o texto traz outra projeção anual."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Contexto visual e página reparados em operações auditadas; leitura de gráfico histórico com transcrição integral e ressalva de projeção, chaveA e programa da carreira confirmados. Não há atualização artificial de dado histórico.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf"
+        ],
+        "paper_page": 8,
+        "original_answer_preserved": true,
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "8eecb36b-1c60-4019-a495-f3523af08d08",
+      "item_number": 79,
+      "before_sha256": "475069f218ba3627f2ef851e73262859f223f32141885902d4064d7e2d64c46b",
+      "after_sha256": "97d95e2fa5ba22191a8177ae218c767d8279eae3f08b5c55b25213c7ea473d36",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "eb9bd24f-0fe2-56a4-aff1-d8af05113cdc",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "title": "Constituição Federal — arts. 195, §6º e 150, III, b/c; distinção de noventena e exercício"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T21:21:20.882143+00:00",
+        "verified_at": "2026-10-17T21:21:20.882143+00:00",
+        "review_note": "Gabarito definitivo: B, lida como contribuição social para a SEGURIDADE SOCIAL. A resposta tem fundamento direto na CF, art. 195, § 6º: essas contribuições só podem ser exigidas depois de NOVENTA DIAS da publicação da lei que as instituiu ou modificou, não se lhes aplicando o art. 150, III, b (espera pelo exercício financeiro seguinte). Isso é a anterioridade nonagesimal, ou noventena, sem a anterioridade de exercício.\nCUIDADO COM A TERMINOLOGIA DO CADERNO: o comando usa “anterioridade” para a espera de noventa dias e “anualidade” para a regra de exercício seguinte. Para estudar com precisão, prefira os nomes ANTERIORIDADE NONAGESIMAL e ANTERIORIDADE ANUAL/DE EXERCÍCIO. Não confunda esse emprego do caderno com o princípio orçamentário da anualidade: a Constituição não exige uma nova autorização orçamentária anual para cobrar cada tributo existente.\nA expressão genérica contribuição social não autoriza aplicar o art. 195, § 6º, indistintamente a toda contribuição de qualquer espécie ou finalidade. O recorte é o das contribuições para a seguridade previstas nesse artigo. Também não se pode dizer que qualquer imposto ou qualquer empréstimo compulsório tenha regime idêntico: existem exceções constitucionais específicas por espécie.\nExemplo hipotético: uma lei aumenta a Cofins e é publicada em novembro. A simples chegada de 1º de janeiro não dispensa completar a noventena; por outro lado, a regra não exige esperar todo o ano seguinte mais noventa dias. A hipótese pressupõe alteração sujeita à noventena, respeitadas regras específicas de vigência e transição.\nTeste rápido — A dispensa de anterioridade anual permite cobrar imediatamente a contribuição de seguridade aumentada? Resposta: não. Permanece a espera constitucional de noventa dias."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "O impedimento terminológico foi tratado com explicação explícita do vocabulário histórico da banca e limitação às contribuições de seguridade do art195. Base normativa direta conferida, sem inventar precedente ou generalizar para qualquer contribuição social. Programa de limitações ao poder de tributar e espécies, edital página61; tópico real reutilizado.",
+        "sources": [
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/ED_1_PCRO_2022_ABERTURA.PDF",
+          "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        ],
+        "federal_capture": {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "path": "outputs/pc-pending-review-2026-10-16/laws/cf.html",
+          "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+          "captured_at": "2026-10-16T20:42:33.965Z"
+        },
+        "paper_page": 11,
+        "key_page": 1,
+        "edital_page": 61,
+        "original_answer_preserved": true,
+        "capture_scope": "CF compilada oficial capturada em16/10, recorte195§6º relido em17/10; sem alegação de captura nova nesta operação."
+      }
+    },
+    {
+      "id": "b48ed163-8694-4b8b-bb8d-d4ee8a49ad02",
+      "item_number": 1,
+      "before_sha256": "d2c2ce2c4c953f420981b4c473729d7929bf660212327f0b2ad1da7e06cf08ea",
+      "after_sha256": "e91c3957a5d6ced2f32e3af2a05233c039a8d4744ae68337c42a734e56be5acd",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "2cc876f9-885a-438a-82bd-7b35b2a55079",
+        "legal_review_required": true,
+        "legal_audit_completed": true,
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14735.htm",
+            "title": "Lei Orgânica Nacional das Polícias Civis — art. 6º, X"
+          }
+        ],
+        "law_version_checked_at": "2026-10-17T21:16:16.832611+00:00",
+        "verified_at": "2026-10-17T21:16:16.832611+00:00",
+        "review_note": "Gabarito definitivo: B. A Lei Orgânica Nacional das Polícias Civis (Lei 14.735/2023, art. 6º, X) prevê apoiar, contribuir e cooperar com o PODER JUDICIÁRIO e com o MINISTÉRIO PÚBLICO mediante acordos de cooperação mútua, nos limites das competências constitucionais e legais. A situação usa o Estado Alfa: a resposta não depende de uma regra local exclusiva do Piauí.\nA afirma proibição incompatível com a competência legal. C erra porque o Ministério Público não integra o Poder Executivo nem está sujeito a uma chefia comum com a polícia. D acrescenta exigência geral de aprovação posterior do Chefe do Executivo que não consta desse inciso. E confunde controle externo da atividade policial com subordinação hierárquica: fiscalizar não torna o Ministério Público chefe administrativo da Polícia Civil. A competência institucional não autoriza qualquer agente a assinar qualquer ajuste sem observar representação, procedimento e legislação aplicáveis.\nExemplo: um instrumento de cooperação pode organizar a troca de conhecimento técnico entre Polícia Civil e Ministério Público, respeitadas as atribuições de cada instituição. Variação: a cooperação com o Judiciário também é prevista, mas não permite que o acordo elimine garantias legais ou transfira competências constitucionalmente reservadas.\nTeste rápido — A cooperação prevista no art. 6º, X, se limita ao Ministério Público? Resposta: não; o dispositivo também menciona expressamente o Poder Judiciário."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Norma nacional vigente obtida diretamente no Planalto e inciso6X conferido. Caderno/definitivo Tipo1 confirmam B. Capa removida em operação auditada separada; programa oficial inclui Lei14735/2023 na página41.",
+        "sources": [
+          "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/pcpi-delegado-gabarito-definitivo.pdf",
+          "https://conhecimento.fgv.br/sites/default/files/concursos/edital_delegado.22.12_0.pdf",
+          "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14735.htm"
+        ],
+        "legal_capture": {
+          "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14735.htm",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/lon-upper.html",
+          "status": 200,
+          "sha256": "a174ad08288541f5cf9f1980e125ea5273fafe899bcd4c550b777c664ea6c422",
+          "captured_at": "2026-10-17T21:15:19.320Z"
+        },
+        "paper_page": 3,
+        "key_page": 1,
+        "edital_page": 41,
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "f47b64c0-e6d0-4e57-a711-bc144b132506",
+      "item_number": 14,
+      "before_sha256": "693c73366627cd1f1b1c465804039c6ff3cc5d8f1880c056a3fcc55c6bb73b1e",
+      "after_sha256": "060c84f7f6dac1617e6e6face4e9f3fe990f20b4e117ec8ea4c5caa202816d08",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "c6fb9def-6642-5c0d-9e40-96cbf0a090cf",
+        "legal_review_required": false,
+        "legal_audit_completed": false,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Gabarito definitivo: A — commodities agrícolas. Este é um EXERCÍCIO HISTÓRICO do contexto de 2021 reproduzido na prova de2022: não são taxas atuais nem números finais certificados nesta revisão. O gráfico tem o título “Estimativa de crescimento do PIB estadual entre2010 e2022” e mostra variação acumulada projetada. O texto abaixo menciona separadamente uma projeção para2021 de4,97%; não confunda esse dado anual com os41,1% do período do gráfico.\nA expressão “ciclo favorável das commodities agrícolas” é a opção da banca para o contexto do agronegócio destacado. Commodities são produtos padronizados negociados em mercados amplos, como soja e milho. Um ciclo favorável de preços e comercialização pode elevar a renda desse setor. Não se deve concluir, apenas pelo gráfico agregado, que toda a diferença decorreu de uma única causa ou que houve expansão da área plantada. A alternativa E se refere à expansão agropecuária; não substitui o fator específico do ciclo de commodities cobrado no comando. As opções de commodities industriais e mineração não correspondem ao setor enfatizado.\nExemplo hipotético: com a mesma quantidade vendida, um preço maior pode elevar a receita; isso é diferente de produzir mais por aumentar a área. Variação: área e produtividade podem mudar a produção, mas o gráfico, sozinho, não separa esses efeitos.\nTeste rápido — Os41,1% do gráfico podem ser apresentados como crescimento efetivo de Mato Grosso apenas em2021? Resposta: não. O título se refere à estimativa acumulada2010–2022; o texto traz outra projeção anual."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Contexto visual e página reparados em operações auditadas; leitura de gráfico histórico com transcrição integral e ressalva de projeção, chaveA e programa da carreira confirmados. Não há atualização artificial de dado histórico.",
+        "sources": [
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/Edital%20PJC%20001%20-%20P%c3%a1gina.pdf",
+          "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf"
+        ],
+        "paper_page": 8,
+        "original_answer_preserved": true,
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    }
+  ],
+  "tests": {
+    "context_and_publication": 19,
+    "application_previous_unchanged_code": 603
+  },
+  "context_repairs": [
+    {
+      "id": "b48ed163-8694-4b8b-bb8d-d4ee8a49ad02",
+      "patch": {
+        "question_text": "Um Delegado de Polícia do Estado Alfa entendia que a existência de uma cooperação institucional da Polícia Civil com o Ministério Público seria muito proveitosa para ambas as estruturas, que poderiam compartilhar expertise em temas específicos, além de uniformizar práticas e procedimentos em prol do interesse público. Ao submeter suas reflexões à Chefia, de modo a estimular a celebração de acordos em temas específicos, foi corretamente esclarecido ao Delegado de Polícia que a Polícia Civil\r\n(A) carece de personalidade jurídica, logo, somente a Chefia do Poder Executivo pode celebrar o ajuste almejado.\r\n(B) tem competência para celebrar acordos de cooperação mútua, não só com o Ministério Público, como também com o Poder Judiciário.\r\n(C) integra o Poder Executivo juntamente com o Ministério Público, logo, a cooperação deve decorrer de uma determinação da chefia comum, não de acordos.\r\n(D) pode celebrar acordos que tenham por objetivo apoiar, contribuir e cooperar com o Ministério Público, o que deve ser feito ad referendum do Chefe do Poder Executivo.\r\n(E) está sujeita ao controle externo do Ministério Público, logo, em razão dessa subordinação, deve cumprir as determinações que lhe sejam encaminhadas, o que é incompatível com acordos.",
+        "context_review_required": false,
+        "verified_at": "2026-10-17T21:16:16.832611+00:00",
+        "review_note": "Importada do caderno oficial (Tipo 1) e conferida com o gabarito definitivo em 27/09/2026; aguardando revisão de conteúdo. | Revisão 17/10/2026, retida: Depende de lei do Piauí (estrutura/cooperação da Polícia Civil), texto vigente não conferido em fonte oficial.\nCapa e instruções gerais retiradas do texto-base por cotejo visual do item1 na página3 do Tipo1. Comando e cinco alternativas preservados; extração bruta mantida."
+      },
+      "evidence": {
+        "reason": "Capa e instruções não pertencem ao texto do item; restauração do comando pela página3 oficial, sem alterar alternativas ou letra B.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/final32/pi-prova.pdf",
+        "pdf_sha256": "e466ffa704b6019ec72708b900b07315523db18663fb09a5866b4c0802b110f8",
+        "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/delegado-de-policia-cns100-tipo-1.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "f47b64c0-e6d0-4e57-a711-bc144b132506",
+      "patch": {
+        "question_text": "Texto-base [Gráfico histórico — transcrição textual]:\nEstimativa de crescimento do PIB estadual entre 2010 e 2022. Variação acumulada no período (taxa, em %).\nMato Grosso: 41,1; Piauí: 34,5; Roraima: 28,3; Tocantins: 28,1; Mato Grosso do Sul: 28,1; Acre: 26,1; Maranhão: 22,4; Amazonas: 21,0; Goiás: 19,7; Alagoas: 19,6; Pará: 18,5; Rondônia: 17,8; Paraíba: 16,5; Amapá: 15,4; Santa Catarina: 15,3; Distrito Federal: 13,5; Ceará: 12,5; Pernambuco: 11,8; Rio Grande do Norte: 11,5; Rio Grande do Sul: 8,7; Espírito Santo: 8,3; Paraná: 8,2; Brasil: 7,9; Minas Gerais: 4,4; Bahia: 3,4; São Paulo: 3,1; Rio de Janeiro: 0,9; Sergipe: −2,2.\nFonte indicada no gráfico do caderno: IBGE e projeção MB Associados.\n\n[[/texto-base]]\nConsidere a transcrição textual do gráfico acima. (Disponível em: http://www.mt.gov.br/-/17158888-mato-grosso-lidera-retomada-da-economia-brasileira-aponta-estudo. Acessado em: 07/12/2021. Adaptado) Mato Grosso também lidera na projeção de crescimento para 2021, com aumento de 4,97%. Conforme a análise, o agronegócio é o principal condutor do crescimento do PIB estadual. A consultoria projeta que a renda total gerada no país pelo agronegócio deverá atingir em 2021 o volume recorde de R$ 965 bilhões, com um salto de 40% na comparação com 2020 (R$ 687 bilhões). (Disponível em: http://www.mt.gov.br/-/17158888-mato-grosso-lidera-retomada-da-economia-brasileira-aponta-estudo. Acessado em: 07/12/2021. Adaptado) O crescimento do PIB no estado de Mato Grosso acima da média nacional registrado no ano de 2021 se deve ao ciclo favorável\n(A) das commodities agrícolas.\n(B) da arrecadação de impostos.\n(C) das commodities industriais.\n(D) da produção mineral.\n(E) da expansão agropecuária.",
+        "context_review_required": false,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de um gráfico (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de gráfico (imagem) sem transcrição visual conferida.\nPágina física8/impressa6 e chave A conferidas visualmente no caderno comum e chave UFMT composta com comunicado final; texto e chave originais preservados nesta operação.\nGráfico transcrito em texto acessível, com título, todas as taxas e fonte indicada, distinguindo projeção2010–2022 da referência anual2021. Alternativas e extração bruta preservadas."
+      },
+      "evidence": {
+        "reason": "Reposição acessível do conteúdo do gráfico mediante transcrição visual integral dos28 valores (27UFs e Brasil), sem inventar série atual ou trocar alternativas.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 8
+      }
+    },
+    {
+      "id": "6b7f5982-454d-45a1-9d8d-336110760d3a",
+      "patch": {
+        "question_text": "Texto-base [Gráfico histórico — transcrição textual]:\nEstimativa de crescimento do PIB estadual entre 2010 e 2022. Variação acumulada no período (taxa, em %).\nMato Grosso: 41,1; Piauí: 34,5; Roraima: 28,3; Tocantins: 28,1; Mato Grosso do Sul: 28,1; Acre: 26,1; Maranhão: 22,4; Amazonas: 21,0; Goiás: 19,7; Alagoas: 19,6; Pará: 18,5; Rondônia: 17,8; Paraíba: 16,5; Amapá: 15,4; Santa Catarina: 15,3; Distrito Federal: 13,5; Ceará: 12,5; Pernambuco: 11,8; Rio Grande do Norte: 11,5; Rio Grande do Sul: 8,7; Espírito Santo: 8,3; Paraná: 8,2; Brasil: 7,9; Minas Gerais: 4,4; Bahia: 3,4; São Paulo: 3,1; Rio de Janeiro: 0,9; Sergipe: −2,2.\nFonte indicada no gráfico do caderno: IBGE e projeção MB Associados.\n\n[[/texto-base]]\nConsidere a transcrição textual do gráfico acima. (Disponível em: http://www.mt.gov.br/-/17158888-mato-grosso-lidera-retomada-da-economia-brasileira-aponta-estudo. Acessado em: 07/12/2021. Adaptado) Mato Grosso também lidera na projeção de crescimento para 2021, com aumento de 4,97%. Conforme a análise, o agronegócio é o principal condutor do crescimento do PIB estadual. A consultoria projeta que a renda total gerada no país pelo agronegócio deverá atingir em 2021 o volume recorde de R$ 965 bilhões, com um salto de 40% na comparação com 2020 (R$ 687 bilhões). (Disponível em: http://www.mt.gov.br/-/17158888-mato-grosso-lidera-retomada-da-economia-brasileira-aponta-estudo. Acessado em: 07/12/2021. Adaptado) O crescimento do PIB no estado de Mato Grosso acima da média nacional registrado no ano de 2021 se deve ao ciclo favorável\n(A) das commodities agrícolas.\n(B) da arrecadação de impostos.\n(C) das commodities industriais.\n(D) da produção mineral.\n(E) da expansão agropecuária.",
+        "context_review_required": false,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de um gráfico (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de gráfico (imagem) sem transcrição visual conferida.\nPágina física8/impressa6 e chave A conferidas visualmente no caderno comum e chave UFMT composta com comunicado final; texto e chave originais preservados nesta operação.\nGráfico transcrito em texto acessível, com título, todas as taxas e fonte indicada, distinguindo projeção2010–2022 da referência anual2021. Alternativas e extração bruta preservadas."
+      },
+      "evidence": {
+        "reason": "Reposição acessível do conteúdo do gráfico mediante transcrição visual integral dos28 valores (27UFs e Brasil), sem inventar série atual ou trocar alternativas.",
+        "visually_verified": true,
+        "alternative_labels": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "pdf_path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+        "pdf_sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78",
+        "source_url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+        "page": 8
+      }
+    }
+  ],
+  "provenance_repairs": [
+    {
+      "id": "f47b64c0-e6d0-4e57-a711-bc144b132506",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 8,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de um gráfico (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de gráfico (imagem) sem transcrição visual conferida.\nPágina física8/impressa6 e chave A conferidas visualmente no caderno comum e chave UFMT composta com comunicado final; texto e chave originais preservados nesta operação."
+      },
+      "evidence": {
+        "reason": "Página8 do caderno comum, gráfico integral e definitivo composto conferidos; chaveA do14 não alterada pelo comunicado final.",
+        "visually_verified": true,
+        "item_number": 14,
+        "official_answer": "A",
+        "page": 8,
+        "prova": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78"
+        },
+        "gabarito": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "6b7f5982-454d-45a1-9d8d-336110760d3a",
+      "patch": {
+        "question_source_id": "b102734e-f3ee-419d-bb09-5db56dd1aa6f",
+        "answer_key_source_id": "35c523d9-d59e-478d-b975-83b755bb639d",
+        "source_page": 8,
+        "verified_at": "2026-10-17T21:19:59.855177+00:00",
+        "review_note": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de um gráfico (imagem) que o PDF não traz em texto; falta transcrição visual conferida. | Revisão 17/10/2026, retida: Depende de gráfico (imagem) sem transcrição visual conferida.\nPágina física8/impressa6 e chave A conferidas visualmente no caderno comum e chave UFMT composta com comunicado final; texto e chave originais preservados nesta operação."
+      },
+      "evidence": {
+        "reason": "Página8 do caderno comum, gráfico integral e definitivo composto conferidos; chaveA do14 não alterada pelo comunicado final.",
+        "visually_verified": true,
+        "item_number": 14,
+        "official_answer": "A",
+        "page": 8,
+        "prova": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/CADERNO%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-pdf.html",
+          "sha256": "b43f3cabcfb8bcf18e79c04a99e14e358f190b75bf5a38d67fb8cc5efe66ea78"
+        },
+        "gabarito": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/GABARITO%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/verify112-pjc-key.pdf",
+          "sha256": "cd6f1ec7e3ca6ef27b84544b256bd1c9c5c09f16f0f24f20d50217266fe84e58"
+        },
+        "final_key_confirmation": {
+          "url": "https://www.concursos.ufmt.br/Portal/Concursos/PJC2022/COMUNICADO%20ALTERA%c3%87%c3%83O%20DE%20GABARITO%20-%20PJC.pdf",
+          "path": "outputs/pc-pending-review-2026-10-16/resume-mt-key-alterations.pdf",
+          "sha256": "1e3104759d60a77a13108150ea06c856a356374f430c5f8c78fad01a33434774",
+          "publication_date": "2022-03-02",
+          "annulled_items": [
+            2,
+            10
+          ],
+          "visually_verified": true
+        }
+      }
+    },
+    {
+      "id": "8eecb36b-1c60-4019-a495-f3523af08d08",
+      "patch": {
+        "question_source_id": "8c82ad79-7d5d-58cc-b716-0e6096fd04cd",
+        "answer_key_source_id": "3250d046-3bd8-5789-a75c-924e6df54eca",
+        "source_page": 11,
+        "verified_at": "2026-10-17T21:21:20.882143+00:00",
+        "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Delegado de Polícia) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO). | Revisão 17/10/2026, retida: 'Princípio da anualidade' é conceito orçamentário e doutrinário; a chave B depende de doutrina, sem fonte oficial.\nCaderno específico Delegado, página11, chave definitiva B da página1 cotejados visualmente; letra, texto e extração bruta preservados."
+      },
+      "evidence": {
+        "reason": "Proveniência corrigida para o original oficial de Delegado; comando e B do79 conferidos, página11.",
+        "visually_verified": true,
+        "item_number": 79,
+        "official_answer": "B",
+        "page": 11,
+        "prova": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "29/09/2022 19:00",
+          "nomeArquivo": "732_PCRO_002_01.PDF",
+          "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-09-29T19:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_002_01.PDF",
+          "sha256": "8a037ebd67576be8874504fa1a5708272e8299dc55eac94ee05191777d53c61f",
+          "captured_at": "2026-10-16T20:36:46.799Z"
+        },
+        "gabarito": {
+          "tipoExtensaoArquivo": "_pdf",
+          "dataArquivo": "10/11/2022 10:00",
+          "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 3",
+          "isDataValid": true,
+          "isGuid": false,
+          "dataArquivoObj": "2022-11-10T10:00:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_002_01.PDF",
+          "sha256": "f02f98465d8c8e939e2a8c7505ed081b3cdbeebb9bc922a7daa504b42f5dd07d",
+          "captured_at": "2026-10-16T20:36:46.163Z"
+        }
+      }
+    }
+  ]
+}
