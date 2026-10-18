@@ -23,7 +23,7 @@ export function BackToPlan({ back, topic }: { back: unknown; topic?: string | un
         {topic && <p className="truncate text-xs text-white/85">{topic}</p>}
       </div>
       <Link to={b.path as never} search={b.search as never}
-        className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-bold text-violet-700 shadow hover:bg-white/90">
+        className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-sm font-bold text-amber-800 shadow hover:bg-white/90">
         <ArrowLeft className="h-4 w-4" /> Voltar ao painel do dia
       </Link>
     </div>
