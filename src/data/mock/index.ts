@@ -100,7 +100,7 @@ for (let i = 3; i <= 42; i++) {
 
   const question: Question = {
     id: `q${i}`,
-    text: `Questão demonstrativa ${i} sobre ${disc.name}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+    text: `Questão demonstrativa ${i} sobre ${disc.name}. Analise o enunciado e escolha a resposta mais adequada ao conteúdo estudado.`,
     type: isCertoErrado ? "Certo ou Errado" : "Múltipla Escolha",
     explanation: `Explicação detalhada da questão ${i}. Esta é uma questão de demonstração.`,
     disciplineId: disc.id,
