@@ -379,10 +379,9 @@ function Index() {
               Cada etapa tem <em>um propósito.</em>
             </Head>
             <ol className="home-steps">
-              {STEPS.map(([Icon, title, text], i) => (
+              {STEPS.map(([Icon, title, text]) => (
                 <li key={title}>
                   <div className="home-step__top">
-                    <span>0{i + 1}</span>
                     <Icon aria-hidden="true" />
                   </div>
                   <h3>{title}</h3>
@@ -478,9 +477,8 @@ function Index() {
               </Head>
             </div>
             <div className="home-careers__grid">
-              {CAREERS.map(([name, roles], i) => (
+              {CAREERS.map(([name, roles]) => (
                 <div className="home-career" key={name}>
-                  <span>{String(i + 1).padStart(2, "0")}</span>
                   <div>
                     <h3>{name}</h3>
                     <p>{roles}</p>

@@ -14,7 +14,7 @@
   color: var(--home-text);
   background: var(--home-bg);
   font-family: "Archivo", "Inter", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -132,7 +132,7 @@
   align-items: center;
   gap: 8px;
   color: var(--home-accent);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -920,15 +920,9 @@
 }
 .home-step__top {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
-}
-.home-step__top span {
-  color: var(--home-accent);
-  font:
-    500 11px "JetBrains Mono",
-    monospace;
 }
 .home-step__top svg {
   width: 17px;
@@ -936,13 +930,13 @@
   color: var(--home-muted);
 }
 .home-steps h3 {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 650;
 }
 .home-steps p {
   margin-top: 6px;
   color: var(--home-muted);
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.75;
 }
 /* Two related opportunities, with secondary exam detail progressively disclosed. */
@@ -1167,7 +1161,7 @@
 .home-career {
   display: flex;
   align-items: start;
-  gap: 10px;
+  gap: 0;
   min-width: 0;
   padding-block: 11px;
   border-bottom: 1px solid #ffffff35;
@@ -1175,22 +1169,15 @@
 .home-career:nth-last-child(-n + 2) {
   border: 0;
 }
-.home-career > span {
-  margin-top: 3px;
-  color: var(--home-gold);
-  font:
-    500 10px "JetBrains Mono",
-    monospace;
-}
 .home-career h3 {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 650;
   text-wrap: initial;
 }
 .home-career p {
   margin-top: 3px;
   color: #d4cdc3;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .home-sources {
