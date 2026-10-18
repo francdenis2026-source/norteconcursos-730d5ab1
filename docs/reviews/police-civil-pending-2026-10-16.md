@@ -338,3 +338,18 @@ Dry-runs reais, CAS e readback passaram. O primeiro preflight de publicação ex
 Atual:2.628 ativos,281 arquivados,37 anulados,12 obsoletos e10 em revisão;2.186 elegíveis no filtro, sem certificação editorial integral de todos. Restam RO6,RJ2,AM1 eMG1. Na campanha32:22 disposições concluídas(16ativas,4obsoletas,2arquivadas editorialmente),10 retidas. Não foram declaradas concluídas as demais questões das12 solicitadas.
 
 Os acessos CPC e pesquisa STF continuaram bloqueados; a biblioteca OPAS retornou erro de servidor e o endereço original do manual excedeu o tempo da consulta. A liberação de rede permanece preparada conforme relatório `docs/reviews/pc-four-pending-access-2026-10-17.md`; não foi presumida aplicada. Não houve novos arquivamentos por mera indisponibilidade de fonte.
+
+
+## AM Investigador40 — publicação individual — 18/10/2026
+
+Uma questão ativada, gabaritoA preservado, com explicação passo a passo, exemplo e exercício respondido. Base de R$40.000; primeira depreciação acumulada R$10.000 em15meses; revisão prospectiva sobre R$21.000 em21meses; nove meses adicionais de R$1.000 resultam em R$19.000 acumulados. Antivírus separado do equipamento. O total pedido é dos dez computadores.
+
+Fontes efetivamente lidas: PDFs consolidados oficiais CFC NBC TG27(R4), revisão18, itens50/51/53, página11; NBC TG23(R2), revisão13, itens36/38, página8; histórico SRE de ambas e Revisão NBC31. A norma de2025 foi publicada em25/02/2026, com aplicação das alterações aos exercícios iniciados em ou após01/01/2027. Conferidos os recortes de NBC23 e27 e a cláusula final da revisão; não certificação integral das normas. Fonte antiga sem as revisões não foi usada para decidir vigência. Edital, caderno e definitivo específicos do Investigador já conferidos e preservados.
+
+Publicação passou por dry-run real, comparação de versão original, gravação e leitura posterior. Os demais2.967 registros PC e todos os metadados preexistentes ficaram iguais. Duas fontes CFC foram adicionadas. O filtro da aplicação foi ajustado para reconhecer exclusivamente os dois PDFs contábeis conferidos, sem liberar outros documentos do domínio. Evidências e hashes: `docs/question-review-am40-2026-10-18.json`; PDFs e snapshots privados permanecem em outputs ignorados.
+
+Inventário atualizado:2.968 registros PC —2.629 ativos,281 arquivados,37 anulados,12 obsoletos e9 pendentes. Há2.187 elegíveis no filtro, sem equivaler a certificação editorial integral. Campanha32:23 disposições concluídas, das quais17ativas,4obsoletas e2arquivadas editorialmente;9 pendentes: RO6,RJ2,MG1.
+
+Limitações atuais: STF jurisprudência ainda403; compilação SAPL de LC68 redireciona para login; duas rotas oficiais do manual PAHO excederam o tempo de acesso. Nenhum controle de acesso foi contornado, nenhuma busca sem resultado foi tratada como inexistência de jurisprudência e nenhum dos nove itens foi liberado sem fundamento suficiente. A liberação de fontes no ambiente, quando necessária, continua sendo um requisito técnico separado da validação de conteúdo.
+
+Validação final:616 testes da aplicação e23 testes das salvaguardas passaram; build de produção concluído com sucesso. Arquivos de versão gerados no build não incluídos no commit.

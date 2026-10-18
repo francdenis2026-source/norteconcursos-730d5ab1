@@ -34,3 +34,10 @@ A leitura da configuração mostrou política de rede restrita. A inclusão dos 
 A [skill cloud-environment-onboarding:setup](skill://plugin_connector_1p_ed5feb9070a08191b08c81c47947bc16/setup/SKILL.md) distingue expressamente essas etapas: “Saving persists configuration; it does not execute scripts, apply runtime changes, or publish.” O requisito de publicação também foi informado explicitamente pela ferramenta. Não é um pedido de nova autorização para atualizar banco ou main, já autorizados pelo usuário; é um pré-requisito técnico para acessar as fontes que faltam.
 
 Não houve mudança de aplicação nesta rodada; não foi executado build nem criada validação fictícia para documentar acesso indisponível. As alterações remotas da outra conta foram integradas sem reescrever histórico.
+
+
+## Atualização em18/10/2026
+
+AM Investigador40 foi concluída e publicada: o domínio www1.cfc.org.br respondeu200 e permitiu consultar os PDFs consolidados, histórico SRE e Revisão NBC31. Não se presume publicação do rascunho de rede a partir desse resultado isolado. A aplicação passou a reconhecer somente os dois PDFs contábeis verificados. Evidência: `docs/question-review-am40-2026-10-18.json`.
+
+Restam neste recorte RJ48/75 e MG48; somadas às seis pendências de Rondônia, são nove no banco atual. O teste do serviço jurisprudencia.stf.jus.br ainda retornou403, e iris.paho.org excedeu o tempo de resposta nas duas rotas já identificadas. A compilação SAPL da LC68 exige login. Esses resultados não autorizam presumir o conteúdo das fontes nem concluir divergências jurídicas ainda abertas.

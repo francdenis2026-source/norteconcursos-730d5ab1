@@ -87,6 +87,11 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Normas contábeis primárias conferidas no CFC, incluindo a transição NBC31.
+    if (parsed.hostname === "www1.cfc.org.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&
+        ["/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf", "/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf"].includes(parsed.pathname);
+    }
     // Recortes da LC407 confrontados com os atos modificadores até 17/10/2026.
     if (parsed.hostname === "www.al.mt.gov.br") {
       return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&

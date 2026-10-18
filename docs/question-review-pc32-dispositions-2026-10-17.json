@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-18T02:18:28.784Z",
-  "scope": "All32 baseline records triaged;22 individual dispositions complete (16active,4obsolete,2editorially archived),10 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
-  "resolved": 22,
-  "published_active": 16,
+  "checked_at": "2026-10-18T03:07:25.085Z",
+  "scope": "All32 baseline records triaged;23 individual dispositions complete (17active,4obsolete,2editorially archived),9 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
+  "resolved": 23,
+  "published_active": 17,
   "published_obsolete": 4,
-  "retained_under_review": 10,
+  "retained_under_review": 9,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -276,9 +276,9 @@
       "item_number": 40,
       "original_answer": "A",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Programa do edital retificado em30/09/2022 conferido nas páginas48–49 e edição corrigida; tópico real de depreciação inserido. Cálculo confirma19.000; falta acesso direto conferido à fonte CPC27/CPC23. Ver docs/reviews/pcam-investigador-edital-contabilidade-2026-10-17.json."
+      "after_status": "active",
+      "decision": "CFC oficial, chaveA reproduzida e edital real conferido; docs/question-review-am40-2026-10-18.json",
+      "comment_sha256": "0917fa734ca09b5e58e6ddc3d53d624acf3a0d5fb3dd45534ff5a3c1528508fe"
     },
     {
       "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",

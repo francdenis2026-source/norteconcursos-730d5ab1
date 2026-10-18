@@ -25,3 +25,9 @@ test('PI primary legal URLs accept only the reviewed SAPL compilation', () => {
 test('MT URL approval is limited to the individually reviewed LC407 dated compilation',()=>{
  const u='https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado?exibirAnotacao=1&marcoHistorico=2026-10-17';assert.equal(isOfficialUrl(u),true);for(const x of[u.replace(';407/',';408/'),u.replace('2026-10-17','2020-01-01'),u+'&extra=1',u.replace('www.al.mt.gov.br','www.al.mt.gov.br.evil.test')])assert.equal(isOfficialUrl(x),false);
 });
+test('CFC approval accepts only the reviewed primary accounting PDFs',()=>{
+ for(const name of ['NBCTG27(R4)_rev18.pdf','NBCTG23(R2)_rev13.pdf']){
+  const url='https://www1.cfc.org.br/sisweb/SRE/docs/'+name;assert.equal(isOfficialUrl(url),true);
+  for(const bad of [url+'?old=1',url.replace('https:','http:'),url.replace('www1.cfc.org.br','www1.cfc.org.br.evil.test'),url.replace('/docs/','/personal/'),'https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG99.pdf'])assert.equal(isOfficialUrl(bad),false);
+ }
+});

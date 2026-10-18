@@ -16,9 +16,12 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     const anvisa=pack.jurisdiction==='BR-ANVISA';
     const piaui=pack.jurisdiction==='PI';
     const matogrosso=pack.jurisdiction==='MT';
+    const cfc=pack.jurisdiction==='BR-CFC';
     const mtPath='/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado';
     const mtQuery=u=>u.searchParams.get('exibirAnotacao')==='1'&&u.searchParams.get('marcoHistorico')==='2026-10-17'&&[...u.searchParams].length===2&&!u.username&&!u.password&&!u.port;
-    const primary=matogrosso
+    const primary=cfc
+      ? url.hostname==='www1.cfc.org.br' && ['/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf','/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf'].includes(url.pathname) && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
+      : matogrosso
       ? url.hostname==='www.al.mt.gov.br' && url.pathname===mtPath && mtQuery(url) && row.source_type==='lei'
       : piaui
       ? url.hostname==='sapl.al.pi.leg.br' && url.pathname==='/ta/59/text' && !url.search && !url.username && !url.password && !url.port && row.source_type==='lei'
@@ -33,7 +36,17 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
       : url.hostname==='www.planalto.gov.br' && row.source_type==='lei';
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
-    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa||cfc ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(cfc){
+      const expectedItems=url.pathname.includes('TG27')?['50','51','53']:['36','38'];
+      if(!evidence.current_effect_reviewed || JSON.stringify(evidence.reviewed_articles)!==JSON.stringify(expectedItems) || !evidence.revision31_reviewed || !row.notes.includes('2027'))throw Error('Scoped CFC estimate review and transition required');
+      for(const [kind,c] of Object.entries({history:evidence.history_capture,transition:evidence.transition_capture})){
+        if(!c?.path || !/^[a-f0-9]{64}$/.test(c.sha256||''))throw Error('CFC history and transition captures required');
+        const u=new URL(c.url),b=await readCapture(c.path);
+        if(u.protocol!=='https:' || u.hostname!=='www1.cfc.org.br' || u.username || u.password || u.port || createHash('sha256').update(b).digest('hex')!==c.sha256)throw Error('CFC supporting capture changed');
+        if(kind==='transition' ? u.pathname!=='/sisweb/SRE/docs/RevisaoNBC31.pdf'||b.subarray(0,4).toString()!=='%PDF' : u.pathname!=='/sisweb/SRE/detalhes_sre.aspx'||u.searchParams.get('codigo')!==(url.pathname.includes('TG27')?'2017/NBCTG27(R4)':'2017/NBCTG23(R2)')||!/em vigor:<\/b>[\s\S]*?<font[^>]*>SIM<\/font>/.test(b.toString('utf8')))throw Error('Official CFC history or transition required');
+      }
+    }
     if(matogrosso){
       const required=['464','494','540','565','575','597','679','691','694','702','736','737','787','803','831','851','853'];
       if(!evidence.current_effect_reviewed||evidence.norm!=='LC 407/2010'||!row.notes.includes(evidence.norm)||!evidence.reviewed_articles?.length||evidence.reviewed_articles.some(a=>!['2','3','7','8','10','16','19','20','63','141','142','143','144','157'].includes(a))||!Array.isArray(evidence.amendments)||JSON.stringify(evidence.amendments.map(a=>a.num).sort())!==JSON.stringify(required))throw Error('Scoped LC407 review and complete amendment captures required');
