@@ -21,6 +21,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ApiCancellationEmailRouteImport } from './routes/api/cancellation-email'
 import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
 import { Route as ApiVoiceSpeechRouteImport } from './routes/api/voice-speech'
+import { Route as ApiVoiceStudioAdminRouteImport } from './routes/api/voice-studio-admin'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
@@ -33,6 +34,7 @@ import { Route as DashboardAdminQuestionsRouteImport } from './routes/dashboard/
 import { Route as DashboardAdminSignupsRouteImport } from './routes/dashboard/admin-signups'
 import { Route as DashboardAdminStudentsRouteImport } from './routes/dashboard/admin-students'
 import { Route as DashboardAdminSupportRouteImport } from './routes/dashboard/admin-support'
+import { Route as DashboardAdminVoiceStudioRouteImport } from './routes/dashboard/admin-voice-studio'
 import { Route as DashboardAiSolverRouteImport } from './routes/dashboard/ai-solver'
 import { Route as DashboardCalculadoraPenalRouteImport } from './routes/dashboard/calculadora-penal'
 import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers'
@@ -137,6 +139,11 @@ const ApiVoiceSpeechRoute = ApiVoiceSpeechRouteImport.update({
   path: '/api/voice-speech',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiVoiceStudioAdminRoute = ApiVoiceStudioAdminRouteImport.update({
+  id: '/api/voice-studio-admin',
+  path: '/api/voice-studio-admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CheckoutPlanIdRoute = CheckoutPlanIdRouteImport.update({
   id: '/checkout/$planId',
   path: '/checkout/$planId',
@@ -198,6 +205,12 @@ const DashboardAdminSupportRoute = DashboardAdminSupportRouteImport.update({
   path: '/admin-support',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardAdminVoiceStudioRoute =
+  DashboardAdminVoiceStudioRouteImport.update({
+    id: '/admin-voice-studio',
+    path: '/admin-voice-studio',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardAiSolverRoute = DashboardAiSolverRouteImport.update({
   id: '/ai-solver',
   path: '/ai-solver',
@@ -431,6 +444,7 @@ export interface FileRoutesByFullPath {
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -442,6 +456,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
@@ -499,6 +514,7 @@ export interface FileRoutesByTo {
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -510,6 +526,7 @@ export interface FileRoutesByTo {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
@@ -567,6 +584,7 @@ export interface FileRoutesById {
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
   '/api/voice-speech': typeof ApiVoiceSpeechRoute
+  '/api/voice-studio-admin': typeof ApiVoiceStudioAdminRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -578,6 +596,7 @@ export interface FileRoutesById {
   '/dashboard/admin-signups': typeof DashboardAdminSignupsRoute
   '/dashboard/admin-students': typeof DashboardAdminStudentsRoute
   '/dashboard/admin-support': typeof DashboardAdminSupportRoute
+  '/dashboard/admin-voice-studio': typeof DashboardAdminVoiceStudioRoute
   '/dashboard/ai-solver': typeof DashboardAiSolverRoute
   '/dashboard/calculadora-penal': typeof DashboardCalculadoraPenalRoute
   '/dashboard/careers': typeof DashboardCareersRoute
@@ -638,6 +657,7 @@ export interface FileRouteTypes {
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -649,6 +669,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
     | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
@@ -706,6 +727,7 @@ export interface FileRouteTypes {
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -717,6 +739,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
     | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
@@ -773,6 +796,7 @@ export interface FileRouteTypes {
     | '/api/cancellation-email'
     | '/api/solve-question'
     | '/api/voice-speech'
+    | '/api/voice-studio-admin'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -784,6 +808,7 @@ export interface FileRouteTypes {
     | '/dashboard/admin-signups'
     | '/dashboard/admin-students'
     | '/dashboard/admin-support'
+    | '/dashboard/admin-voice-studio'
     | '/dashboard/ai-solver'
     | '/dashboard/calculadora-penal'
     | '/dashboard/careers'
@@ -843,6 +868,7 @@ export interface RootRouteChildren {
   ApiCancellationEmailRoute: typeof ApiCancellationEmailRoute
   ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
   ApiVoiceSpeechRoute: typeof ApiVoiceSpeechRoute
+  ApiVoiceStudioAdminRoute: typeof ApiVoiceStudioAdminRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -933,6 +959,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiVoiceSpeechRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/voice-studio-admin': {
+      id: '/api/voice-studio-admin'
+      path: '/api/voice-studio-admin'
+      fullPath: '/api/voice-studio-admin'
+      preLoaderRoute: typeof ApiVoiceStudioAdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/checkout/$planId': {
       id: '/checkout/$planId'
       path: '/checkout/$planId'
@@ -1015,6 +1048,13 @@ declare module '@tanstack/react-router' {
       path: '/admin-support'
       fullPath: '/dashboard/admin-support'
       preLoaderRoute: typeof DashboardAdminSupportRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/admin-voice-studio': {
+      id: '/dashboard/admin-voice-studio'
+      path: '/admin-voice-studio'
+      fullPath: '/dashboard/admin-voice-studio'
+      preLoaderRoute: typeof DashboardAdminVoiceStudioRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/ai-solver': {
@@ -1359,6 +1399,7 @@ interface DashboardRouteChildren {
   DashboardAdminSignupsRoute: typeof DashboardAdminSignupsRoute
   DashboardAdminStudentsRoute: typeof DashboardAdminStudentsRoute
   DashboardAdminSupportRoute: typeof DashboardAdminSupportRoute
+  DashboardAdminVoiceStudioRoute: typeof DashboardAdminVoiceStudioRoute
   DashboardAiSolverRoute: typeof DashboardAiSolverRoute
   DashboardCalculadoraPenalRoute: typeof DashboardCalculadoraPenalRoute
   DashboardCareersRoute: typeof DashboardCareersRoute
@@ -1411,6 +1452,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAdminSignupsRoute: DashboardAdminSignupsRoute,
   DashboardAdminStudentsRoute: DashboardAdminStudentsRoute,
   DashboardAdminSupportRoute: DashboardAdminSupportRoute,
+  DashboardAdminVoiceStudioRoute: DashboardAdminVoiceStudioRoute,
   DashboardAiSolverRoute: DashboardAiSolverRoute,
   DashboardCalculadoraPenalRoute: DashboardCalculadoraPenalRoute,
   DashboardCareersRoute: DashboardCareersRoute,
@@ -1469,6 +1511,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiCancellationEmailRoute: ApiCancellationEmailRoute,
   ApiSolveQuestionRoute: ApiSolveQuestionRoute,
   ApiVoiceSpeechRoute: ApiVoiceSpeechRoute,
+  ApiVoiceStudioAdminRoute: ApiVoiceStudioAdminRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }

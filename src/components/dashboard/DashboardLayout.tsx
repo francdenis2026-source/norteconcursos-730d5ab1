@@ -55,6 +55,7 @@ import {
   Gavel,
   Scale,
   BookA,
+  Headphones,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -206,6 +207,13 @@ const MENU: MenuItem[] = [
     label: "Central de mídia (admin)",
     icon: PlayCircle,
     href: "/dashboard/admin-media",
+    adminOnly: true,
+  },
+  {
+    group: "Administração",
+    label: "Leitura em voz alta",
+    icon: Headphones,
+    href: "/dashboard/admin-voice-studio",
     adminOnly: true,
   },
   {
