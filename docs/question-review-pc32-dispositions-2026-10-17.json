@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-18T03:07:25.085Z",
-  "scope": "All32 baseline records triaged;23 individual dispositions complete (17active,4obsolete,2editorially archived),9 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
-  "resolved": 23,
+  "checked_at": "2026-10-18T03:27:27.118Z",
+  "scope": "All32 baseline records triaged;24 individual dispositions complete (17active,4obsolete,3editorially archived),8 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
+  "resolved": 24,
   "published_active": 17,
   "published_obsolete": 4,
-  "retained_under_review": 9,
+  "retained_under_review": 8,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -210,9 +210,9 @@
       "item_number": 14,
       "original_answer": "A",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "STF: fontes sobre bloqueadores e Tema1019 obtidas. Falta concluir todos os precedentes e o efeito do recorte temporal/lei complementar da alternativaE; não certificar resposta única atual."
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por ambiguidade da alternativaE no contexto posterior ao Tema1019; A preservada, sem anulação oficial. docs/question-review-ro14-2026-10-18.json",
+      "comment_sha256": "fb29dc40750a189784e44204cef6a8a2e016f0ab39c36d3c03c19bbdb75856de"
     },
     {
       "id": "b20bd1e1-8388-4069-aff1-689070b28009",
@@ -376,5 +376,5 @@
     "pending": 16,
     "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
   },
-  "archived_editorially": 2
+  "archived_editorially": 3
 }

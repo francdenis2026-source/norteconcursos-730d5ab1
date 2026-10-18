@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-18T03:27:27.118Z",
+  "new_active": 0,
+  "archived_editorially": 1,
+  "not_official_annulment": true,
+  "preserved_other_pc_records": 2967,
+  "all_preexisting_metadata_unchanged": true,
+  "concurrent_additions_preserved": [],
+  "new_official_sources": [],
+  "tests_passed": 11,
+  "application_changes": false,
+  "pc_status": {
+    "active": 2629,
+    "archived": 282,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 8
+  },
+  "pending_by_state": {
+    "RO": 5,
+    "RJ": 2,
+    "MG": 1
+  },
+  "item": {
+    "id": "a2ab2b89-eea8-481e-b67f-82853648c460",
+    "item_number": 14,
+    "official_answer_preserved": "A",
+    "patch": {
+      "content_status": "archived",
+      "verified_at": "2026-10-18T03:27:15.113505+00:00",
+      "review_note": "Arquivamento editorial para treino atual, sem anulação oficial e sem trocar o gabaritoA da prova de2022.\n\nA alternativaA continua amparada pelo STF: a obrigação estadual de instalar bloqueadores em presídios invade a competência da União sobre telecomunicações. O problema de reutilização está na alternativaE, que apresenta de modo genérico a constitucionalidade de norma estadual sobre integralidade e paridade na aposentadoria policial, sem identificar a lei, o período ou os requisitos.\n\nLinha do tempo: na ADI5039, julgada em2020, o STF invalidou dispositivos específicos de Rondônia sobre paridade e vantagens de aposentadoria. Em setembro de2023, depois da prova, o RE1.162.672, Tema1019, reconheceu integralidade na aposentadoria especial voluntária da LC51/1985 e paridade quando também prevista em lei complementar estadual, no quadro constitucional anterior à EC103/2019. Esse precedente não tornou qualquer norma estadual válida nem restaurou automaticamente os dispositivos invalidados na ADI5039.\n\nConsequência pedagógica: não se deve ensinar a alternativaE como uma proibição absoluta de paridade, nem como autorização irrestrita. A redação sem os condicionantes permite uma leitura compatível com a hipótese admitida no Tema1019, comprometendo a segurança da resposta única para estudo atual. Preservados texto, alternativas, extração e letraA da banca; o item não foi considerado oficialmente anulado, nem a letraE foi adotada como novo gabarito.\n\nExemplo: policial que preenche os requisitos da aposentadoria especial e tem paridade prevista na lei complementar estadual pertinente ao regime anterior à EC103/2019 está em situação diferente de uma norma que concede vantagens indistintamente ou remuneração de classe superior. Conferir sempre o regime e os requisitos, não só o nome da carreira.\n\nOutra distinção de competência: na ADI4924, o STF admitiu o fornecimento de dados cadastrais de autores de trotes aos serviços de emergência, no contexto da lei examinada; isso não corresponde a interceptar o conteúdo das conversas. Assim, não copie para a alternativaB a solução dos bloqueadores de celular.\n\nExercício: o Tema1019 permite conceder paridade por qualquer lei estadual, sem verificar a época e os requisitos? Não. A previsão em lei complementar e o regime constitucional aplicável fazem parte da análise. O precedente também não permite concluir, por si só, que uma norma já invalidada voltou a vigorar.\n\nFontes oficiais: STF, notícia da ADI5039 de16/11/2020; RE1.162.672/Tema1019, notícia de22/09/2023; ADI4924, notícia de04/11/2021; decisão sobre bloqueadores em presídios. O cotejo é específico para a disposição editorial desta questão, sem declarar revisão integral desses temas. A reativação depende de abordagem que preserve o caráter histórico e impeça apresentar a alternativaE sem os condicionantes do precedente posterior."
+    },
+    "evidence": {
+      "legal": true,
+      "reason": "Comparação documental da ADI5039, usada no contexto anterior à prova, com o Tema1019 posterior à prova: alternativaE genérica exige condicionantes ausentes. Arquivamento editorial por ambiguidade relevante ao treino atual; A não foi considerada incorreta, não há anulação oficial nem restauração automática de normas invalidadas.",
+      "sources": [
+        "https://noticias.stf.jus.br/postsnoticias/paridade-de-vencimentos-entre-policiais-ativos-e-inativos-de-rondonia-e-inconstitucional/",
+        "https://noticias.stf.jus.br/postsnoticias/policial-civil-pode-ter-aposentadoria-especial-com-proventos-integrais-e-paridade/",
+        "https://noticias.stf.jus.br/postsnoticias/stf-valida-lei-que-obriga-fornecimento-de-dados-telefonicos-em-trote-em-servicos-de-emergencia/",
+        "https://noticias.stf.jus.br/postsnoticias/somente-a-uniao-pode-legislar-sobre-bloqueadores-de-sinal-de-celular-em-presidios-decide-stf/"
+      ],
+      "captures": [
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/paridade-de-vencimentos-entre-policiais-ativos-e-inativos-de-rondonia-e-inconstitucional/",
+          "path": "outputs/pc-pending-review-2026-10-16/nine-ro-paridade2018.html",
+          "sha256": "5bb38214efbd2e2617525a2b894a90d93a31a4558e0526ea6ca6cb88488c33d4",
+          "captured_at": "2026-10-18T03:25:12.573281+00:00"
+        },
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/policial-civil-pode-ter-aposentadoria-especial-com-proventos-integrais-e-paridade/",
+          "path": "outputs/pc-pending-review-2026-10-16/nine-ro-paridade2023.html",
+          "sha256": "b3d9d29a152219e75fe0a9fcaa413fd5642bcf1e1b83ba5e90b37b7d01f14550",
+          "captured_at": "2026-10-18T03:25:12.857037+00:00"
+        },
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/stf-valida-lei-que-obriga-fornecimento-de-dados-telefonicos-em-trote-em-servicos-de-emergencia/",
+          "path": "outputs/pc-pending-review-2026-10-16/nine-ro-trotes.html",
+          "sha256": "1ccc8cf641e1fc46fdf9370aea78c0456fc6982f405dc35ffcfce47cee1a4d6d",
+          "captured_at": "2026-10-18T03:25:13.255764+00:00"
+        },
+        {
+          "url": "https://noticias.stf.jus.br/postsnoticias/somente-a-uniao-pode-legislar-sobre-bloqueadores-de-sinal-de-celular-em-presidios-decide-stf/",
+          "path": "outputs/pc-pending-review-2026-10-16/final32/ro-block-judgment.html",
+          "status": 200,
+          "sha256": "e622707b14b95e4243a0ed7634fec5e618664dbc72ec037887745ad7b74e1f71",
+          "captured_at": "2026-10-17T21:22:24.414Z"
+        }
+      ],
+      "not_official_annulment": true,
+      "original_answer_preserved": true
+    }
+  }
+}

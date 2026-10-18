@@ -353,3 +353,14 @@ Inventário atualizado:2.968 registros PC —2.629 ativos,281 arquivados,37 anul
 Limitações atuais: STF jurisprudência ainda403; compilação SAPL de LC68 redireciona para login; duas rotas oficiais do manual PAHO excederam o tempo de acesso. Nenhum controle de acesso foi contornado, nenhuma busca sem resultado foi tratada como inexistência de jurisprudência e nenhum dos nove itens foi liberado sem fundamento suficiente. A liberação de fontes no ambiente, quando necessária, continua sendo um requisito técnico separado da validação de conteúdo.
 
 Validação final:616 testes da aplicação e23 testes das salvaguardas passaram; build de produção concluído com sucesso. Arquivos de versão gerados no build não incluídos no commit.
+
+
+## RO Delegado14 — disposição editorial — 18/10/2026
+
+Um arquivamento editorial, sem nova ativação, troca da letraA ou anulação atribuída à banca. Conferidas diretamente as publicações STF da ADI5039 (16/11/2020), Tema1019/RE1.162.672 (22/09/2023), ADI4924 (04/11/2021) e bloqueadores de celular. A alternativaA continua amparada; a alternativaE genérica sobre integralidade/paridade deixa de ser segura como distrator atual após o Tema1019, que admite a hipótese mediante condicionantes. Não se declarou constitucional qualquer lei estadual nem restauração dos dispositivos invalidados na ADI5039. O comentário preserva a cronologia, diferencia regimes e inclui exemplo e exercício respondido. Evidência: `docs/question-review-ro14-2026-10-18.json`.
+
+Dry-run real, CAS e leitura posterior passaram; preservados outros2.967 registros PC e todos os metadados preexistentes. Onze testes do publicador passaram. Sem alteração de aplicação; build anterior segue registrado no lote AM40, sem atribuí-lo a este lote.
+
+Total atual:2.968 PC,2.629 ativas,282 arquivadas,37 anuladas,12 obsoletas,8 em revisão (RO5,RJ2,MG1). Campanha32:24 disposições concluídas,17ativas/4obsoletas/3arquivadas editorialmente;8 pendentes. Elegíveis no filtro:2.187, sem certificação integral.
+
+Tentativas adicionais sem evidência suficiente: CTN compilado no Planalto excedeu o tempo; API pública BioC do NCBI retornou429 para os dois artigos identificados, sem insistência ou contorno; pesquisa WHO não trouxe material específico suficiente. Ausência de acesso ou de resultado não foi usada para decidir os demais itens. Permanecem pendentes RO92(apuração administrativa),78(capacidade tributária),40(prisão preventiva),60(contravenções),80(falsa perícia); RJ48(requisições ao TCE)/75(reclamação); MG48(refrigeração/autólise/putrefação).
