@@ -257,11 +257,16 @@ function RootComponent() {
     // Dá tempo para a sessão recém-criada ser registrada antes da primeira
     // verificação, evitando logout durante o redirecionamento inicial.
     const first = window.setTimeout(check, 8000);
-    const timer = window.setInterval(check, 30000);
+    const timer = window.setInterval(check, 10000);
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") void check();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
     return () => {
       cancelled = true;
       window.clearTimeout(first);
       window.clearInterval(timer);
+      document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
 

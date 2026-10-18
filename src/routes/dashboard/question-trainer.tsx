@@ -50,6 +50,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { ownsSingleDeviceSession } from "@/lib/singleDeviceSession";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
@@ -949,6 +950,10 @@ function QuestionTrainer() {
       lockedLoading
     )
       return;
+    if (!(await ownsSingleDeviceSession(user.id))) {
+      setSaveError("Esta conta foi aberta em outra aba ou navegador. Recarregue esta página para continuar.");
+      return;
+    }
     savingRef.current = true;
     setSaving(true);
     setSaveError("");

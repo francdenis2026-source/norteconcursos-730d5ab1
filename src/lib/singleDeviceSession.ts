@@ -2,14 +2,14 @@ import { supabase } from "@/integrations/supabase/client";
 
 const STORAGE_KEY = "norte-active-session";
 
-/** Identifica o aparelho/navegador (não a aba): abas do mesmo navegador compartilham a chave e não se derrubam. */
+/** Identifica a aba atual: outra aba ou navegador do mesmo usuário recebe uma chave diferente. */
 function sessionKey(userId: string) {
   const key = `${STORAGE_KEY}:${userId}`;
   try {
-    let value = localStorage.getItem(key);
+    let value = sessionStorage.getItem(key);
     if (!value) {
       value = crypto.randomUUID();
-      localStorage.setItem(key, value);
+      sessionStorage.setItem(key, value);
     }
     return value;
   } catch {
