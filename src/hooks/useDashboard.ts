@@ -86,7 +86,11 @@ export function useAuthStatus() {
           subscription_expires_at: profile?.subscription_expires_at,
           plan_ends_at: expiredFrom
             ? null
-            : planEndsAt(profile?.created_at, profile?.subscription_tier ?? "free", profile?.subscription_expires_at),
+            : planEndsAt(
+                profile?.created_at,
+                profile?.subscription_tier ?? "free",
+                profile?.subscription_expires_at,
+              ),
           on_trial: eff.trial === true,
           expired_plan: expiredFrom,
           onboarding_completed: !!profile?.onboarding_completed,

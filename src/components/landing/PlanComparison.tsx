@@ -6,14 +6,23 @@ import { TESTING_DAYS, TESTING_PHASE, TESTING_TIER } from "@/lib/launch.config";
 /** Tabela lado a lado: mostra de uma vez o que muda de um plano para o outro. */
 export function PlanComparison() {
   return (
-    <div className="home-compare" role="region" aria-label="Comparação entre os planos" tabIndex={0}>
+    <div
+      className="home-compare"
+      role="region"
+      aria-label="Comparação entre os planos"
+      tabIndex={0}
+    >
       <table>
         <caption>Compare os planos</caption>
         <thead>
           <tr>
             <th scope="col">Recurso</th>
             {SUBSCRIPTION_PLANS.map((plan) => (
-              <th key={plan.id} scope="col" className={plan.id === TESTING_TIER ? "is-trial" : undefined}>
+              <th
+                key={plan.id}
+                scope="col"
+                className={plan.id === TESTING_TIER ? "is-trial" : undefined}
+              >
                 {plan.name}
                 {TESTING_PHASE && plan.id === TESTING_TIER && (
                   <small>grátis por {TESTING_DAYS} dias</small>
@@ -33,7 +42,9 @@ export function PlanComparison() {
                     {value ? (
                       <>
                         <Check aria-hidden="true" />
-                        <span>{value === "Incluído" ? <span className="sr-only">Incluído</span> : value}</span>
+                        <span>
+                          {value === "Incluído" ? <span className="sr-only">Incluído</span> : value}
+                        </span>
                       </>
                     ) : (
                       <>
