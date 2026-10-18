@@ -1077,9 +1077,9 @@
 }
 .home-opportunity__image > img {
   width: 100%;
-  height: 100px;
+  height: 124px;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 16%;
 }
 .home-status {
   position: absolute;
@@ -1941,7 +1941,8 @@
     font-size: 22px;
   }
   .home-opportunity__image > img {
-    height: 100px;
+    height: 112px;
+    object-position: center 18%;
   }
   .home-opportunity__body > p {
     font-size: 13px;
