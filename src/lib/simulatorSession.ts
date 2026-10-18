@@ -21,6 +21,7 @@ export interface SimulatorQuestion {
   difficulty: string | null;
   legalBasis: Question["legalBasis"];
   kind?: "true_false" | "multiple_choice";
+  figures?: string[];
 }
 export function simulatorAnswers(q: SimulatorQuestion): Answer[] {
   return questionAnswers({

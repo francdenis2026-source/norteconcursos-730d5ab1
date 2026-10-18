@@ -12,8 +12,8 @@ export function QuestionFigures({
   urls,
   illustrations,
 }: {
-  urls?: string[];
-  illustrations?: QuestionIllustration[];
+  urls?: string[] | undefined;
+  illustrations?: QuestionIllustration[] | undefined;
 }) {
   const figures = new Map<string, string>();
   for (const url of urls ?? []) figures.set(url, "Figura original do enunciado");
