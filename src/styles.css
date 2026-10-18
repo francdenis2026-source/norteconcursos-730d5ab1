@@ -8516,7 +8516,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-nav__group {
   padding: 20px 12px 8px;
   color: oklch(1 0 0 / 0.48);
-  font-size: 0.58rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 .app-nav__link {
   height: 44px;
@@ -8524,7 +8526,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   padding-inline: 13px;
   border: 1px solid transparent;
   border-radius: 12px;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
+  font-weight: 600;
   transition:
     color 0.2s var(--ease-out),
     background 0.2s var(--ease-out),
@@ -8565,6 +8568,12 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 .app-user:hover {
   border-color: oklch(1 0 0 / 0.08);
+}
+.app-user__meta strong {
+  font-size: 0.92rem;
+}
+.app-user__meta span {
+  font-size: 0.78rem;
 }
 .app-main {
   min-width: 0;
@@ -8811,7 +8820,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     min-height: 48px;
     align-content: center;
     border-radius: 11px;
-    font-size: 0.62rem;
+    font-size: 0.75rem;
+    font-weight: 650;
   }
   .app-shell[data-area="admin"] .app-sidebar__head::after {
     display: none;
