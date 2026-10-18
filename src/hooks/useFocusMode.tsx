@@ -308,7 +308,7 @@ export function useFocusMode() {
               aria-label="Progresso do curso"
             >
               <div
-                className="h-full bg-gradient-to-r from-amber-300 to-emerald-300 transition-all"
+                className="h-full bg-gradient-to-r from-amber-300 to-emerald-300 transition-[width]"
                 style={{ width: `${Math.min(100, Math.max(0, p.progress))}%` }}
               />
             </div>
