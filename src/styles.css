@@ -12161,7 +12161,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
     inset: 0;
     top: var(--app-viewport-top, 0px);
     display: flex;
-    height: var(--app-viewport-height, 100dvh);
+    height: var(--app-viewport-height, 100svh);
     min-height: 0;
     overflow: hidden;
   }
@@ -12245,7 +12245,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   }
   .app-sheet {
     top: var(--app-viewport-top, 0px);
-    max-height: var(--app-viewport-height, 100dvh);
+    max-height: var(--app-viewport-height, 100svh);
     padding-top: env(safe-area-inset-top) !important;
     padding-bottom: env(safe-area-inset-bottom) !important;
     overflow: hidden;
@@ -12255,10 +12255,10 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .app-sheet > button:first-child { top: calc(16px + env(safe-area-inset-top)); }
   html[data-app-keyboard="true"] .app-shell.navigation-v2 .app-bottom-nav { display: none; }
   .cmd-dialog {
-    top: calc(var(--app-viewport-top, 0px) + var(--app-viewport-height, 100dvh) / 2);
-    max-height: calc(var(--app-viewport-height, 100dvh) - 24px);
+    top: calc(var(--app-viewport-top, 0px) + var(--app-viewport-height, 100svh) / 2);
+    max-height: calc(var(--app-viewport-height, 100svh) - 24px);
   }
-  .cmd-dialog [cmdk-list] { max-height: calc(var(--app-viewport-height, 100dvh) - 110px); }
+  .cmd-dialog [cmdk-list] { max-height: calc(var(--app-viewport-height, 100svh) - 110px); }
   .app-shell > .app-focus-return {
     position: relative;
     inset: auto;

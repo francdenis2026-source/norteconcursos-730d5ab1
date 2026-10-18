@@ -15,3 +15,9 @@ O aviso modal global de preferência por computador foi removido. O manifesto pa
 - Na confirmação: documento sem rolagem horizontal, barras dentro do viewport, conteúdo com rolagem própria, menu acessível, posição zerada em nova navegação e restaurada para 400px no retorno após carregamento assíncrono, teclado simulado reduzindo o viewport/ocultando a navegação inferior e página pública sem o bloqueio de rolagem do painel.
 
 A simulação de teclado verifica a integração com VisualViewport; não substitui teste físico do teclado/instalação em iOS e Android. O fluxo de foco pausado foi ajustado para participar do layout mobile, em vez de encobrir o cabeçalho.
+
+## Correção da oscilação no navegador
+
+O shell, menu e busca usam `100svh` fora do teclado. Eventos de rolagem e redimensionamento do VisualViewport não aplicam mais altura e deslocamento ao painel inteiro durante animações da barra de endereço. A altura visual é aplicada apenas com campo editável em foco e redução superior a 120px; ao fechar o teclado, as propriedades temporárias são removidas. A referência de altura é renovada quando a largura muda, incluindo rotação.
+
+Confirmação em Chromium mobile: três pares simulados de redução/deslocamento do VisualViewport (40/15px, 70/30px e 0/0px) preservaram exatamente o retângulo do shell. Retrato, paisagem, rolagem interna, menu, retorno com restauração para 400px, teclado simulado e saída para página pública passaram. Typecheck, 27 testes e build de produção passaram. A animação de barras foi simulada; não houve verificação em aparelho físico.

@@ -44,6 +44,8 @@ export function useMobileAppShell() {
     const root = document.documentElement;
     const mobile = window.matchMedia(MOBILE_APP_QUERY);
     const viewport = window.visualViewport;
+    let viewportWidth = window.innerWidth;
+    let baselineHeight = window.innerHeight;
     let frame = 0;
     const update = () => {
       cancelAnimationFrame(frame);
@@ -59,12 +61,25 @@ export function useMobileAppShell() {
         // Pinch zoom must remain under the browser's control.
         if (viewport && viewport.scale !== 1) return;
         const height = viewport?.height ?? window.innerHeight;
-        root.style.setProperty("--app-viewport-height", `${height}px`);
-        root.style.setProperty("--app-viewport-top", `${viewport?.offsetTop ?? 0}px`);
+        if (window.innerWidth !== viewportWidth) {
+          viewportWidth = window.innerWidth;
+          baselineHeight = window.innerHeight;
+        }
         const active = document.activeElement;
         const editing = active instanceof HTMLElement &&
           active.matches('input, textarea, [contenteditable="true"]');
-        root.dataset["appKeyboard"] = String(editing && window.innerHeight - height > 120);
+        if (!editing) baselineHeight = Math.max(baselineHeight, window.innerHeight);
+        const keyboard = editing && Math.max(baselineHeight, window.innerHeight) - height > 120;
+        root.dataset["appKeyboard"] = String(keyboard);
+        // Browser chrome and rubber-band scrolling must not resize or translate
+        // the workspace. CSS uses the stable small viewport outside the keyboard.
+        if (keyboard) {
+          root.style.setProperty("--app-viewport-height", `${height}px`);
+          root.style.setProperty("--app-viewport-top", `${viewport?.offsetTop ?? 0}px`);
+        } else {
+          root.style.removeProperty("--app-viewport-height");
+          root.style.removeProperty("--app-viewport-top");
+        }
       });
     };
     update();
