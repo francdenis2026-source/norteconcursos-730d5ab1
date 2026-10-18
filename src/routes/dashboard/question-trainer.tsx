@@ -106,6 +106,7 @@ import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButto
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
 
 export const Route = createFileRoute("/dashboard/question-trainer")({
   validateSearch: (
@@ -275,6 +276,10 @@ function QuestionTrainer() {
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
   const [currency, setCurrency] = React.useState(routeFilters.currency || "all");
+  // O filtro "Atual" é do Essencial para cima (durante o período de testes todas as contas têm Essencial).
+  const currencyAllowed =
+    isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "currencyFilter").included;
+  const activeCurrency = currencyAllowed ? currency : "all";
   const [limit, setLimit] = React.useState(routeFilters.limit || "20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>(
     routeFilters.limit === "all" ? "exam" : "random",
@@ -612,7 +617,7 @@ function QuestionTrainer() {
           source,
           reviewed,
           difficulty,
-          currency,
+          currency: activeCurrency,
           state,
           category,
         },
@@ -631,7 +636,7 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
-      currency,
+      activeCurrency,
       state,
       category,
       topicOf,
@@ -689,7 +694,7 @@ function QuestionTrainer() {
           source,
           reviewed,
           difficulty,
-          currency,
+          currency: activeCurrency,
           state,
           category,
         },
@@ -709,7 +714,7 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
-      currency,
+      activeCurrency,
       state,
       category,
     ],
@@ -1250,6 +1255,7 @@ function QuestionTrainer() {
           dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
           choices={choices}
           facets={facets}
+          currencyLocked={!currencyAllowed}
           values={{
             contest,
             board,
@@ -1260,7 +1266,7 @@ function QuestionTrainer() {
             source,
             reviewed,
             difficulty,
-            currency,
+            currency: activeCurrency,
             state,
             category,
             area,
@@ -1487,7 +1493,7 @@ function QuestionTrainer() {
               >
                 {DIFFICULTY_LABEL[question.difficulty]}
               </Badge>
-              {question.currencyTags?.length ? (
+              {currencyAllowed && question.currencyTags?.length ? (
                 <Badge
                   variant="outline"
                   className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
@@ -1949,10 +1955,12 @@ function TrainerSetup({
   dailyRemaining,
   choices,
   facets,
+  currencyLocked,
   values,
   setters,
   start,
 }: {
+  currencyLocked: boolean;
   available: number;
   dailyRemaining?: number | undefined;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
@@ -2141,16 +2149,35 @@ function TrainerSetup({
             <ChevronDown aria-hidden="true" />
           </summary>
           <div className="trainer-filter-grid">
-            <TrainerFilter
-              label="Atualidade"
-              value={values.currency}
-              setValue={setters.setCurrency}
-              options={["recent", ...choices.currencies]}
-              labels={{ recent: "Tudo que é atual" }}
-              counts={facets.counts["currency"]}
-              allCount={facets.totals["currency"]}
-              allLabel="Todas as questões"
-            />
+            {currencyLocked ? (
+              <div
+                role="note"
+                className="flex items-center gap-2 rounded-lg border border-dashed p-3 text-sm text-muted-foreground"
+              >
+                <Lock className="h-4 w-4 shrink-0" aria-hidden="true" />
+                <span>
+                  <strong className="text-foreground">Atualidade</strong>: conteúdo novo e em alta
+                  nas provas, a partir do plano Essencial.{" "}
+                  <Link
+                    to="/dashboard/subscriptions"
+                    className="font-semibold text-primary underline"
+                  >
+                    Ver planos
+                  </Link>
+                </span>
+              </div>
+            ) : (
+              <TrainerFilter
+                label="Atualidade"
+                value={values.currency}
+                setValue={setters.setCurrency}
+                options={["recent", ...choices.currencies]}
+                labels={{ recent: "Tudo que é atual" }}
+                counts={facets.counts["currency"]}
+                allCount={facets.totals["currency"]}
+                allLabel="Todas as questões"
+              />
+            )}
             <TrainerFilter
               label="Prova aplicada"
               value={values.appliedExam}

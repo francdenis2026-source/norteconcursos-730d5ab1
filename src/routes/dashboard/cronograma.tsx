@@ -4,7 +4,7 @@ import { libraryCollection } from "@/lib/libraryOrganization";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
+  ArrowLeft, BookOpen, Play, CalendarClock, Layers, Loader2, Lock, Mic, NotebookPen, Plus, Sparkles, Target, Trash2, Trophy,
 } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -24,6 +24,7 @@ import {
   type CronoConfig, type CronoDisc, type TopicProgress,
 } from "@/lib/cronograma";
 import { confirmDialog } from "@/lib/confirm";
+import { checkFeatureAccess } from "@/lib/subscriptions.config";
 import { acreDateKey, acreDaysAgoKey } from "@/lib/acreTime";
 import { DayRun } from "@/components/cronograma/DayRun";
 import { ContentTab, TheoryButton } from "@/components/cronograma/ContentTab";
@@ -71,8 +72,10 @@ const CATALOGO = (() => {
 })();
 
 function CronogramaPage() {
-  const { user, isLoading } = useAuthStatus();
+  const { user, isLoading, isAdmin } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
+  // Criar cronograma é do Essencial para cima; no Gratuito os cronogramas já criados continuam abertos para leitura.
+  const canCreate = isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "cronograma").included;
   const [plans, setPlans] = React.useState<Plan[] | null>(null);
   const [openId, setOpenId] = React.useState<string | "new" | null>(null);
   const { plano, painel } = Route.useSearch();
@@ -104,20 +107,35 @@ function CronogramaPage() {
       <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Cronograma <em>por edital</em></>}
         description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
       <StudyPlanningNav active="schedule" />
-      {openId === "new" ? (
+      {openId === "new" && !canCreate ? (
+        <CreateLocked onBack={() => setOpenId(null)} />
+      ) : openId === "new" ? (
         <NewPlan userId={user!.id} onBack={() => setOpenId(null)} onCreated={async (id) => { await load(); setOpenId(id); }} />
       ) : open ? (
         <PlanView key={open.id} plan={open} userId={user!.id} autoRun={painel === "1" && open.id === plano} onBack={() => setOpenId(null)}
           onChange={(p) => setPlans((all) => all!.map((x) => (x.id === p.id ? p : x)))}
           onDeleted={async () => { setOpenId(null); await load(); }} />
       ) : (
-        <PlanList plans={plans!} onOpen={setOpenId} />
+        <PlanList plans={plans!} onOpen={setOpenId} canCreate={canCreate} />
       )}
     </div>
   );
 }
 
-function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new") => void }) {
+function CreateLocked({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="space-y-4 rounded-xl border bg-card p-6">
+      <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Voltar</Button>
+      <p className="font-bold">Montar cronograma por edital é do plano Essencial em diante</p>
+      <p className="text-sm text-muted-foreground">
+        Seus cronogramas já criados continuam disponíveis para consulta. Para criar um novo, conheça os planos.
+      </p>
+      <Button asChild><Link to="/dashboard/subscriptions">Ver planos</Link></Button>
+    </div>
+  );
+}
+
+function PlanList({ plans, onOpen, canCreate }: { plans: Plan[]; onOpen: (id: string | "new") => void; canCreate: boolean }) {
   return (
     <div className="space-y-3">
       {plans.length === 0 && (
@@ -137,7 +155,7 @@ function PlanList({ plans, onOpen }: { plans: Plan[]; onOpen: (id: string | "new
         </button>
       ))}
       <button type="button" onClick={() => onOpen("new")} className="flex items-center justify-center gap-2 rounded-xl border border-dashed p-6 text-sm font-semibold text-muted-foreground hover:border-primary hover:text-primary">
-        <Plus className="h-4 w-4" /> Novo cronograma
+        {canCreate ? <Plus className="h-4 w-4" /> : <Lock className="h-4 w-4" />} Novo cronograma
       </button>
     </div>
     </div>

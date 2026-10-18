@@ -1283,6 +1283,12 @@
     sans-serif;
   letter-spacing: 0;
 }
+.home-plan__annual {
+  margin: -6px 0 8px;
+  color: var(--home-muted, #5b6472);
+  font-size: 12px;
+  font-weight: 600;
+}
 .home-plan__availability {
   min-height: 34px;
   color: var(--home-accent);
