@@ -12136,3 +12136,12 @@ html { scroll-behavior: smooth; }
 body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 @media (max-width: 640px) { body { overflow-x: hidden; } :where(input, select, textarea) { font-size: 16px; } .container, .page-container, .shell-container { width: min(100% - 2rem, 72rem); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+/* Impeccable pass 1: reduce decorative chrome while preserving semantic accents. */
+.side-tab {
+  border-left-width: 1px !important;
+}
+.side-tab::before,
+.side-tab::after {
+  border-left-width: 1px !important;
+}
