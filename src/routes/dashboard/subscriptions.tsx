@@ -77,7 +77,7 @@ function UsageMeter({
         aria-valuemax={100}
       >
         <div
-          className={cn("h-full transition-all", full ? "bg-amber-500" : "bg-primary")}
+          className={cn("h-full transition-[width]", full ? "bg-amber-500" : "bg-primary")}
           style={{ width: unlimited ? "0%" : `${pct}%` }}
         />
       </div>

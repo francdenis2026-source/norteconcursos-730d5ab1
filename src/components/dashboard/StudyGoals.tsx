@@ -60,7 +60,7 @@ function GoalBar({
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-muted">
         <div
-          className={`h-full rounded-full transition-all ${done ? "bg-emerald-500" : "bg-primary"}`}
+          className={`h-full rounded-full transition-[width] ${done ? "bg-emerald-500" : "bg-primary"}`}
           style={{ width: `${percent}%` }}
         />
       </div>

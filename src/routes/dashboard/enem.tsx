@@ -374,7 +374,7 @@ function AreaCard({
                 </div>
                 <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
                   <div
-                    className={cn("h-full rounded-full transition-all", HUE_BAR[area.hue])}
+                    className={cn("h-full rounded-full transition-[width]", HUE_BAR[area.hue])}
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -426,7 +426,7 @@ function Checklist({
         </CardDescription>
         <div className="h-2 overflow-hidden rounded-full bg-muted">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-emerald-500 transition-all"
+            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-emerald-500 transition-[width]"
             style={{ width: `${pct}%` }}
           />
         </div>
