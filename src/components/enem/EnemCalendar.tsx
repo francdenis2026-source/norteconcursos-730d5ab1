@@ -97,7 +97,7 @@ export function EnemCalendar() {
   return (
     <section
       aria-labelledby="enem-calendar-title"
-      className="rounded-2xl border border-sky-500/30 bg-gradient-to-br from-sky-500/10 to-violet-500/10 p-4 sm:p-6"
+      className="rounded-2xl border border-sky-500/30 bg-gradient-to-br from-sky-500/10 to-amber-500/10 p-4 sm:p-6"
     >
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 id="enem-calendar-title" className="flex items-center gap-2 text-xl font-bold">

@@ -43,7 +43,7 @@ function Actions({ nome, topic, theoryOf }: { nome: string; topic: string; theor
     <span className="flex flex-wrap items-center gap-1.5">
       <TheoryButton target={t} />
       <Link to="/dashboard/question-trainer" search={{ area: nome, go: "1" } as never} className={cn(chip, "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200")}><Target className="h-3 w-3" />Questões</Link>
-      <Link to="/dashboard/flashcards" search={{ subject: nome } as never} className={cn(chip, "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200")}><Layers className="h-3 w-3" />Flashcards</Link>
+      <Link to="/dashboard/flashcards" search={{ subject: nome } as never} className={cn(chip, "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200")}><Layers className="h-3 w-3" />Flashcards</Link>
       {t.direct && <span className="max-w-64 truncate text-[11px] text-muted-foreground" title={t.label}>↳ {t.label}</span>}
     </span>
   );
@@ -131,13 +131,13 @@ export function ContentTab({ cfg, progress, setTopic, theoryOf }: {
                   <label className="flex items-center gap-1 text-xs"><Checkbox checked={!!p[key]} onCheckedChange={(v) => setTopic(t.id, { [key]: !!v })} />{label}</label>
                 );
                 return (
-                  <li key={t.id} className={cn("space-y-2 rounded-lg border p-3 text-sm", st === "concluido" && "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20", focusIds.has(t.id) && "ring-2 ring-indigo-400")}>
+                  <li key={t.id} className={cn("space-y-2 rounded-lg border p-3 text-sm", st === "concluido" && "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20", focusIds.has(t.id) && "ring-2 ring-amber-400")}>
                     <div className="flex flex-wrap items-start gap-2">
                       <span className={cn("mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-black text-white", col.bar)}>{i + 1}</span>
                       <p className="min-w-0 flex-1 font-medium">{t.t}</p>
                       {focusIds.has(t.id) && <Badge className="bg-amber-600 hover:bg-amber-600">▶ Próximo</Badge>}
                       <span className={cn("rounded-full px-2.5 py-0.5 text-[11px] font-bold", STATUS_UI[st].cls)}>{STATUS_UI[st].label}</span>
-                      {reviewDue && <span className="rounded-full bg-fuchsia-100 px-2.5 py-0.5 text-[11px] font-bold text-fuchsia-800 dark:bg-fuchsia-500/20 dark:text-fuchsia-200">Revisar</span>}
+                      {reviewDue && <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[11px] font-bold text-amber-800 dark:bg-amber-500/20 dark:text-amber-200">Revisar</span>}
                     </div>
                     <Actions nome={d.nome} topic={t.t} theoryOf={theoryOf} />
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t pt-2">

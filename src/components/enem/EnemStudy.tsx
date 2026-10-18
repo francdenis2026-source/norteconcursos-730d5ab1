@@ -16,7 +16,7 @@ export function EnemStudy() {
   const visible = items.filter((m) => matchesEnemMaterial(m, area, search));
   return (
     <section className="space-y-5" aria-label="Materiais de estudo do ENEM">
-      <div className="rounded-2xl border bg-gradient-to-br from-sky-500/10 to-violet-500/10 p-5">
+      <div className="rounded-2xl border bg-gradient-to-br from-sky-500/10 to-amber-500/10 p-5">
         <BookOpenCheck className="h-7 w-7 text-sky-600 dark:text-sky-400" />
         <h2 className="mt-3 text-xl font-bold">Entenda, aplique e revise</h2>
         <p className="mt-2 text-sm text-muted-foreground">
