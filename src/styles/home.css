@@ -33,7 +33,7 @@
   z-index: 0;
   pointer-events: none;
   background: url("/media/textura-acre-profissionais-v2.webp") center / cover no-repeat;
-  opacity: 0.045;
+  opacity: 0.09;
   filter: grayscale(1) saturate(0.25) contrast(0.85);
 }
 .dark .home,
@@ -47,7 +47,16 @@
   --home-accent: #e0a65a;
   --home-accent-bg: #3a2d22;
 }
-.dark .home::before { opacity: 0.075; }
+.dark .home::before { opacity: 0.12; }
+
+/* Let the backdrop breathe through long content sections without reducing
+   contrast inside cards, tables or the navigation chrome. */
+.home > .home-section,
+.home > .home-start,
+.home > .home-plans,
+.home > .home-footer {
+  background-color: color-mix(in srgb, var(--home-bg) 88%, transparent);
+}
 .home *,
 .home *::before,
 .home *::after {
@@ -2077,6 +2086,14 @@
     font-size: 9px;
     padding-block: 10px;
   }
+}
+
+/* Keep the subtle security-professional backdrop visible below the fold. */
+.home > .home-section,
+.home > .home-start,
+.home > .home-plans,
+.home > .home-footer {
+  background-color: color-mix(in srgb, var(--home-bg) 88%, transparent);
 }
 @media (max-width: 359px) {
   .home-container {
