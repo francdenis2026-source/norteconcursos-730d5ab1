@@ -85,7 +85,7 @@ export function ContentTab({ cfg, progress, setTopic, theoryOf }: {
           <p className="text-xs text-muted-foreground">O próximo conteúdo de cada disciplina que mais precisa de você (peso, o que falta e desempenho).</p>
           <ol className="mt-3 space-y-2">
             {focus.map(({ d, t }, i) => (
-              <li key={t.id} className={cn("space-y-2 rounded-xl border-l-4 bg-white/80 p-3 text-sm dark:bg-white/5", discColor(cfg, d.id).border)}>
+              <li key={t.id} className={cn("space-y-2 rounded-xl border-l bg-white/80 p-3 text-sm dark:bg-white/5", discColor(cfg, d.id).border)}>
                 <p><span className="mr-2 inline-grid h-6 w-6 place-items-center rounded-full bg-indigo-600 text-xs font-black text-white">{i + 1}</span>
                   <span className={cn("mr-2 rounded-full px-2 py-0.5 text-xs font-bold", discColor(cfg, d.id).chip)}>{d.nome}</span>{t.t}</p>
                 <Actions nome={d.nome} topic={t.t} theoryOf={theoryOf} />
@@ -115,7 +115,7 @@ export function ContentTab({ cfg, progress, setTopic, theoryOf }: {
         if ((q || filter !== "todos") && !rows.length) return null;
         const col = discColor(cfg, d.id);
         return (
-          <details key={d.id} open={focus[0]?.d.id === d.id || !!q} className={cn("overflow-hidden rounded-xl border border-l-4 bg-card", col.border)}>
+          <details key={d.id} open={focus[0]?.d.id === d.id || !!q} className={cn("overflow-hidden rounded-xl border border-l bg-card", col.border)}>
             <summary className="flex cursor-pointer flex-wrap items-center gap-2 p-3">
               <span className={cn("rounded-full px-3 py-1 text-sm font-bold", col.chip)}>{d.nome}</span>
               <span className="min-w-24 flex-1"><span className="block h-1.5 overflow-hidden rounded-full bg-muted"><span className={cn("block h-full rounded-full", col.bar)} style={{ width: `${s.total ? (100 * s.done) / s.total : 0}%` }} /></span></span>

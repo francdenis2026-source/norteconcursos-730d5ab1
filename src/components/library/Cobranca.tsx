@@ -35,7 +35,7 @@ export function CobrancaCard({ stat, group }: { stat: ArtStat | undefined; group
   const groups = CARGO_GROUPS.filter((g) => (stat.g[g] ?? 0) > 0).sort((a, b) => (stat.g[b] ?? 0) - (stat.g[a] ?? 0));
   const inferred = stat.n - stat.r;
   return (
-    <section className={cn("space-y-2 rounded-xl border-l-4 p-3", heat === "alta" ? "border-l-rose-500 bg-rose-50/70 dark:bg-rose-950/20" : heat === "media" ? "border-l-amber-500 bg-amber-50/70 dark:bg-amber-950/20" : "border-l-sky-500 bg-sky-50/70 dark:bg-sky-950/20")} aria-label="Cobrança em provas">
+    <section className={cn("space-y-2 rounded-xl border-l p-3", heat === "alta" ? "border-l-rose-500 bg-rose-50/70 dark:bg-rose-950/20" : heat === "media" ? "border-l-amber-500 bg-amber-50/70 dark:bg-amber-950/20" : "border-l-sky-500 bg-sky-50/70 dark:bg-sky-950/20")} aria-label="Cobrança em provas">
       <div className="flex flex-wrap items-center gap-2">
         <span className={cn("inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-bold ring-1", HEAT_CLASS[heat])}><Flame className="h-3.5 w-3.5" aria-hidden /> {HEAT_LABEL[heat]}</span>
         <p className="text-sm font-semibold">{stat.n} {stat.n === 1 ? "questão" : "questões"} das provas citam este artigo{group !== "all" && <span className="font-normal text-muted-foreground"> · {n} para {CARGO_LABEL[group]}</span>}</p>

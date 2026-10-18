@@ -28,7 +28,7 @@ export const KINDS: Record<StepKind, KindMeta> = {
   },
   flashcards: {
     label: "Flashcards", emoji: "🃏", guide: "Revise os cartões: responda de cabeça antes de virar. Marque o que errou.",
-    bg: "from-violet-500 to-purple-600", soft: "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200", ring: "stroke-violet-500", bar: "bg-violet-500",
+    bg: "from-sky-500 to-purple-600", soft: "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200", ring: "stroke-violet-500", bar: "bg-violet-500",
   },
   questoes: {
     label: "Questões", emoji: "🎯", guide: "Resolva questões do assunto, sem consultar. Cronometre o ritmo e anote os acertos.",

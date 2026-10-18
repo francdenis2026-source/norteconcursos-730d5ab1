@@ -14,7 +14,7 @@ const Block = ({ icon, title, tone, children }: { icon: string; title: string; t
 const isUpdate = (t: string) => /^atualiza[çc][ãa]o/i.test(t);
 /** Itens de ATUALIZAÇÃO viram um aviso colorido, para o aluno não perder a mudança da lei. */
 const List = ({ items }: { items: string[] }) => <ul className="list-disc space-y-1.5 pl-5">{items.map((t) => isUpdate(t)
-  ? <li key={t} className="-ml-5 list-none rounded-lg border-l-4 border-l-amber-500 bg-amber-50 p-2.5 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100"><LegalRefText text={t} /></li>
+  ? <li key={t} className="-ml-5 list-none rounded-lg border-l border-l-amber-500 bg-amber-50 p-2.5 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100"><LegalRefText text={t} /></li>
   : <li key={t}><LegalRefText text={t} /></li>)}</ul>;
 
 /** Keep the answer closed while the learner attempts the authored question. */
@@ -47,14 +47,14 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
         {e.status === "published" && !stale && hasCurrentExplanationReview(e, unit.content_sha256) && <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200">✓ Revisado em {acreDate(e.reviewed_at!).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</span>}
       </header>
       <HighlightToggle />
-      <Block icon="📘" title="Em palavras simples" tone="border-l-4 border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
-      {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l-4 border-l-indigo-500"><List items={e.pontos} /></Block>}
-      {atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l-4 border-l-amber-500"><List items={atencao} /></Block>}
-      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l-4 border-l-emerald-500"><p><LegalRefText text={example.scenario} /></p>
+      <Block icon="📘" title="Em palavras simples" tone="border-l border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
+      {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l border-l-indigo-500"><List items={e.pontos} /></Block>}
+      {atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l border-l-amber-500"><List items={atencao} /></Block>}
+      {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l border-l-emerald-500"><p><LegalRefText text={example.scenario} /></p>
         {example.variation && <div className="mt-3 rounded-lg border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100"><strong>Altere o fato, confira a regra</strong><p className="mt-1"><LegalRefText text={example.variation} /></p></div>}
       </Block>}
-      {e.prova.length > 0 && <Block icon="🎯" title="Fixação para a prova" tone="border-l-4 border-l-rose-500"><ExplanationChecks items={e.prova} /></Block>}
-      {e.termos.length > 0 && <Block icon="📖" title="Termos" tone="border-l-4 border-l-violet-500"><dl className="space-y-1">{e.termos.map((t) => <div key={t.termo}><dt className="inline font-bold">{t.termo}: </dt><dd className="inline">{t.significado}</dd></div>)}</dl></Block>}
+      {e.prova.length > 0 && <Block icon="🎯" title="Fixação para a prova" tone="border-l border-l-rose-500"><ExplanationChecks items={e.prova} /></Block>}
+      {e.termos.length > 0 && <Block icon="📖" title="Termos" tone="border-l border-l-violet-500"><dl className="space-y-1">{e.termos.map((t) => <div key={t.termo}><dt className="inline font-bold">{t.termo}: </dt><dd className="inline">{t.significado}</dd></div>)}</dl></Block>}
       {e.remissoes.length > 0 && <p className="text-xs text-muted-foreground">🔗 Veja também: {e.remissoes.map((r, i) => <span key={r}>{i > 0 && " · "}<LegalRefText text={r} /></span>)}</p>}
       <p className="text-[11px] text-muted-foreground">Texto explicativo baseado no dispositivo oficial abaixo. Em caso de dúvida, vale sempre a redação da lei.</p>
     </section>

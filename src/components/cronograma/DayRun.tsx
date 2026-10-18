@@ -337,7 +337,7 @@ export function DayRun({
                     {step.topic && (
                       <p
                         className={cn(
-                          "rounded-lg border-l-4 bg-muted/50 p-3 text-sm font-semibold",
+                          "rounded-lg border-l bg-muted/50 p-3 text-sm font-semibold",
                           dc?.border,
                         )}
                       >

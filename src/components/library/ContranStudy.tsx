@@ -38,11 +38,11 @@ function OfficialText({ guide }: { guide: ContranGuide }) {
 
 function DidaticaBlock({ d }: { d: ContranDidatica }) {
   return <div className="space-y-4">
-    <section className="rounded-xl border-l-4 border-sky-500 bg-sky-50/60 p-3 dark:bg-sky-950/20">
+    <section className="rounded-xl border-l border-sky-500 bg-sky-50/60 p-3 dark:bg-sky-950/20">
       <h4 className="text-sm font-bold">Explicação passo a passo</h4>
       <div className="mt-2 space-y-2 text-sm leading-6">{d.simples.map((p) => <p key={p}><StudyText text={p} /></p>)}</div>
     </section>
-    {d.atualizacoes && d.atualizacoes.length > 0 && <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
+    {d.atualizacoes && d.atualizacoes.length > 0 && <section className="rounded-xl border-l border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
       <h4 className="text-sm font-bold">Atualização: o que mudou depois</h4>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.atualizacoes.map((a) => <li key={a}><StudyText text={a} /></li>)}</ul>
     </section>}
@@ -50,11 +50,11 @@ function DidaticaBlock({ d }: { d: ContranDidatica }) {
       <h4 className="text-sm font-bold">{d.quadro.titulo}</h4>
       <dl className="mt-2 divide-y text-sm">{d.quadro.linhas.map(([k, v]) => <div key={k} className="grid gap-1 py-2 sm:grid-cols-[11rem_1fr]"><dt className="font-semibold">{k}</dt><dd><StudyText text={v} /></dd></div>)}</dl>
     </section>}
-    {d.exemplos.length > 0 && <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
+    {d.exemplos.length > 0 && <section className="rounded-xl border-l border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
       <h4 className="text-sm font-bold">Aplique em situações reais</h4>
       <ul className="mt-2 space-y-3 text-sm leading-6">{d.exemplos.map((e) => <li key={e.situacao}><p className="font-semibold"><StudyText text={e.situacao} /></p><details className="mt-1"><summary className="cursor-pointer text-xs font-semibold underline">Ver a resposta</summary><p className="mt-1"><StudyText text={e.resposta} /></p></details></li>)}</ul>
     </section>}
-    {d.pegadinhas.length > 0 && <section className="rounded-xl border-l-4 border-rose-500 bg-rose-50 p-3 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100">
+    {d.pegadinhas.length > 0 && <section className="rounded-xl border-l border-rose-500 bg-rose-50 p-3 text-rose-950 dark:bg-rose-950/30 dark:text-rose-100">
       <h4 className="text-sm font-bold">Onde o candidato erra</h4>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{d.pegadinhas.map((p) => <li key={p}><StudyText text={p} /></li>)}</ul>
     </section>}
@@ -107,18 +107,18 @@ export function ContranStudy({ query = "" }: { query?: string }) {
           </TabsList>
           <TabsContent value="entenda" className="mt-4 space-y-4">
             {CONTRAN_DIDATICA[guideKey(guide)] && <DidaticaBlock d={CONTRAN_DIDATICA[guideKey(guide)]!} />}
-            <section className="rounded-xl border-l-4 border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
+            <section className="rounded-xl border-l border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
               <h4 className="text-sm font-bold">Em resumo</h4>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}><StudyText text={point} /></li>)}</ul>
             </section>
-            <section className="rounded-xl border-l-4 border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
+            <section className="rounded-xl border-l border-amber-500 bg-amber-50 p-3 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100">
               <h4 className="text-sm font-bold">Cuidado na prova</h4>
               <p className="mt-1 text-sm leading-6"><StudyText text={guide.warning} /></p>
             </section>
             <p className="text-xs text-muted-foreground">Explicação elaborada pelo Norte a partir do texto oficial, para estudo. Em caso de dúvida, vale o texto da norma (aba Fonte oficial).</p>
           </TabsContent>
           <TabsContent value="pratica" className="mt-4 space-y-4">
-            <section className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
+            <section className="rounded-xl border-l border-emerald-500 bg-emerald-50 p-3 text-emerald-950 dark:bg-emerald-950/30 dark:text-emerald-100">
               <h4 className="flex items-center gap-1 text-sm font-bold"><Lightbulb size={15} /> Caso prático</h4>
               <p className="mt-2 text-sm leading-6"><StudyText text={guide.example.scenario} /></p>
               <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
