@@ -192,7 +192,7 @@
   --secondary: oklch(0.78 0.13 76);
   --secondary-foreground: oklch(0.22 0.012 85);
   --muted: oklch(0.935 0.018 88);
-  --muted-foreground: oklch(0.48 0.012 85);
+  --muted-foreground: oklch(0.42 0.012 85);
   --accent: oklch(0.92 0.025 88);
   --accent-foreground: oklch(0.22 0.012 85);
   --destructive: oklch(0.585 0.19 22);
@@ -240,7 +240,7 @@
   --secondary: oklch(0.8 0.13 78);
   --secondary-foreground: oklch(0.2 0.035 190);
   --muted: oklch(0.29 0.014 85);
-  --muted-foreground: oklch(0.76 0.012 85);
+  --muted-foreground: oklch(0.82 0.012 85);
   --accent: oklch(0.32 0.014 85);
   --accent-foreground: oklch(0.96 0.012 88);
   --destructive: oklch(0.62 0.18 22);
@@ -9728,9 +9728,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 .app-shell[data-area="student"] .app-nav__group {
   padding: 14px 10px 6px;
-  color: oklch(1 0 0 / 0.42);
+  color: oklch(1 0 0 / 0.58);
   font-family: var(--font-sans);
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   letter-spacing: 0.12em;
 }
 .app-shell[data-area="student"] .app-nav__link {
@@ -9738,7 +9738,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   margin-block: 1px;
   padding-inline: 11px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 14.5px;
 }
 .app-shell[data-area="student"] .app-sidebar__foot {
   padding: 10px 12px;
@@ -9824,7 +9824,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-shell .catalog-command-hero > p {
   max-width: 560px;
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   line-height: 1.55;
 }
 .app-shell .hero-stat {

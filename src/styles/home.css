@@ -5,7 +5,7 @@
   --home-surface: #fffdf8;
   --home-tint: #e9e3d8;
   --home-text: #252525;
-  --home-muted: #6d6a64;
+  --home-muted: #4f4b46;
   --home-line: #d8d0c3;
   --home-accent: #a86625;
   --home-accent-bg: #f3e5d1;
@@ -42,7 +42,7 @@
   --home-surface: #222426;
   --home-tint: #2d2f31;
   --home-text: #f4efe6;
-  --home-muted: #b6b0a6;
+  --home-muted: #d2cbc1;
   --home-line: #414143;
   --home-accent: #e0a65a;
   --home-accent-bg: #3a2d22;
@@ -123,7 +123,7 @@
 .home-section-intro {
   margin-top: 14px;
   color: var(--home-muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   max-width: 58ch;
 }
@@ -168,7 +168,7 @@
   border: 1px solid transparent;
   border-radius: 8px;
   font:
-    600 13px/1.35 "Inter",
+    600 14px/1.35 "Archivo",
     sans-serif;
   text-align: center;
   text-decoration: none;
@@ -240,7 +240,7 @@
   padding: 10px 14px 4px;
   text-align: left;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 16px;
 }
 .home-compare th,
 .home-compare td {
