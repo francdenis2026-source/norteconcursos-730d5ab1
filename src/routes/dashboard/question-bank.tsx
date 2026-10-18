@@ -332,7 +332,7 @@ function QuestionBankPage() {
                 <span className="font-mono">{y}</span>
                 <span className="h-2 overflow-hidden rounded-full bg-muted">
                   <span
-                    className="block h-full rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500"
+                    className="block h-full rounded-full bg-gradient-to-r from-sky-500 to-amber-400"
                     style={{ width: `${(n / Math.max(1, ...byYear.map((r) => r[1]))) * 100}%` }}
                   />
                 </span>

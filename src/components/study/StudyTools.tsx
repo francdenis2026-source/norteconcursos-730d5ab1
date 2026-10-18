@@ -461,7 +461,7 @@ export function StudyToolsPanel({ area, notesKey, onClose, topOffset = 68 }: { a
   const current = ids.includes(tool) ? tool : ids[0]!;
   return (
     <aside style={{top:topOffset}} className="fixed bottom-0 right-0 z-[62] flex w-full max-w-sm flex-col border-l bg-background shadow-2xl" aria-label={AREA_TITLE[area]}>
-      <header className="flex items-center justify-between gap-2 border-b bg-gradient-to-r from-indigo-50 to-fuchsia-50 px-4 py-2 dark:from-indigo-950/40 dark:to-fuchsia-950/30">
+      <header className="flex items-center justify-between gap-2 border-b bg-gradient-to-r from-slate-100 to-amber-50 px-4 py-2 dark:from-slate-900/70 dark:to-amber-950/30">
         <p className="text-sm font-bold">{AREA_TITLE[area]}</p>
         <Button size="sm" variant="ghost" onClick={onClose} aria-label="Fechar ferramentas"><X className="h-4 w-4" /></Button>
       </header>
