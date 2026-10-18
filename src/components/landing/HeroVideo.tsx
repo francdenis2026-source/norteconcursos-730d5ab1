@@ -10,7 +10,12 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
   useEffect(() => {
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
       ?.saveData;
-    if (!saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) setLoadVideo(true);
+    // Keep the mobile first fold focused on the message and avoid a heavy
+    // intro layer creating dark letterbox space on narrow screens.
+    const compactViewport = window.matchMedia("(max-width: 767px)").matches;
+    if (!compactViewport && !saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setLoadVideo(true);
+    }
   }, []);
 
   useEffect(() => {
