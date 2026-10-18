@@ -128,7 +128,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1, viewport-fit=cover",
+        content:
+          "width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content",
       },
       { title: "Norte Concurso" },
       {
@@ -140,7 +141,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Estude com direção. Evolua com clareza." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#0a0f1c" },
+      { name: "theme-color", content: "#f4f0e8" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
       { name: "mobile-web-app-capable", content: "yes" },
