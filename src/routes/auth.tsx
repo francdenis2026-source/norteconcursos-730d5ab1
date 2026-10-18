@@ -25,6 +25,7 @@ import { callbackErrorMessage, type CallbackError } from "@/lib/authCallback";
 import { toast } from "sonner";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { normalizeUppercase, validateCPF } from "@/lib/utils";
+import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 
 function friendlyAuthError(error: unknown) {
   const raw = error instanceof Error ? error.message : "";
@@ -365,6 +366,15 @@ function AuthPage() {
                     : "Leva menos de dois minutos para começar."}
                 </p>
               </div>
+              {mode === "register" && TESTING_PHASE && (
+                <p className="auth-trial" role="note">
+                  <Sparkles aria-hidden="true" />
+                  <span>
+                    <strong>{TESTING_DAYS} dias com tudo do plano Essencial</strong>, sem cartão.
+                    Depois, sua conta segue no plano Gratuito.
+                  </span>
+                </p>
+              )}
               <form onSubmit={handleAuth} className="auth-form">
                 {mode === "register" && (
                   <div className="auth-field">

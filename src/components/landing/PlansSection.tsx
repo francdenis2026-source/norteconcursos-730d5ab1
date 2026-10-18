@@ -10,6 +10,14 @@ import {
   TESTING_PHASE,
 } from "@/lib/launch.config";
 
+/** Uma imagem por plano (cenas do próprio produto). O enquadramento corta o lado vazio das imagens panorâmicas. */
+const PLAN_IMAGES: Record<string, { src: string; position: string }> = {
+  free: { src: "/media/hero/study-desk.webp", position: "70% 55%" },
+  essential: { src: "/media/hero/trainer-study.webp", position: "88% 60%" },
+  plus: { src: "/media/hero/exam-simulator.webp", position: "82% 55%" },
+  premium: { src: "/media/hero/command-room.webp", position: "40% 50%" },
+};
+
 export function PlansSection() {
   return (
     <section id="planos" className="home-section home-plans" aria-labelledby="planos-title">
@@ -35,6 +43,19 @@ export function PlansSection() {
                 key={plan.id}
                 className={`home-plan${testing ? " home-plan--featured" : ""}`}
               >
+                {PLAN_IMAGES[plan.id] && (
+                  <div className="home-plan__media" aria-hidden="true">
+                    <img
+                      src={PLAN_IMAGES[plan.id]!.src}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      width={640}
+                      height={264}
+                      style={{ objectPosition: PLAN_IMAGES[plan.id]!.position }}
+                    />
+                  </div>
+                )}
                 <div className="home-plan__top">
                   <h3>{plan.name}</h3>
                   {(testing || plan.isPopular) && (

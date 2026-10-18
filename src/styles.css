@@ -3849,6 +3849,24 @@ html {
   color: var(--color-muted-foreground);
   font-size: 0.9rem;
 }
+.auth-trial {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+.auth-trial svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
 .auth-form {
   --auth-gap: clamp(10px, 1.9vh, 16px);
   display: grid;
