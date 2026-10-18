@@ -705,14 +705,14 @@
 .home .daily-badge__live {
   color: var(--home-accent);
   font:
-    650 9px/1.4 "Inter",
+    650 11px/1.4 "Inter",
     sans-serif;
   letter-spacing: 0.08em;
 }
 .home .daily-badge__timer {
   color: var(--home-muted);
   font:
-    400 10px/1.4 "Inter",
+    400 12px/1.4 "Inter",
     sans-serif;
 }
 .home .daily-badge__timer svg {
@@ -726,7 +726,7 @@
 .home .daily-badge__main small {
   margin-top: 3px;
   color: var(--home-muted);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.6;
 }
 .home .daily-badge__body {
@@ -739,7 +739,7 @@
   background: none;
   color: var(--home-accent);
   box-shadow: none;
-  font-size: 12px;
+  font-size: 13px;
 }
 .home .daily-badge__dots i {
   height: 3px;
@@ -751,7 +751,7 @@
 }
 .home .daily-badge__count {
   color: var(--home-muted);
-  font-size: 9px;
+  font-size: 11px;
 }
 .home .daily-badge__pulse {
   height: 5px;
@@ -872,7 +872,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 5px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 650;
   line-height: 1.5;
   text-wrap: initial;
@@ -880,7 +880,7 @@
 .home-tool p {
   padding: 0 16px 16px;
   color: var(--home-muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
 }
 .home-voice-promo {
@@ -892,7 +892,7 @@
   padding: 20px;
   border: 1px solid color-mix(in srgb, var(--home-accent) 45%, var(--home-line));
   border-radius: 16px;
-  background: linear-gradient(110deg, var(--home-tint), var(--home-surface));
+  background: var(--home-tint);
 }
 .home-voice-promo__icon {
   display: grid;
@@ -905,7 +905,7 @@
 }
 .home-voice-promo__icon svg { width: 22px; height: 22px; }
 .home-voice-promo__copy h3 { margin: 3px 0 5px; font-size: 18px; }
-.home-voice-promo__copy p { max-width: 720px; color: var(--home-muted); font-size: 13px; line-height: 1.7; }
+.home-voice-promo__copy p { max-width: 720px; color: var(--home-muted); font-size: 15px; line-height: 1.7; }
 .home-voice-promo .home-button { white-space: nowrap; }
 .home-method {
   background: var(--home-tint);
@@ -1324,7 +1324,8 @@
 }
 .home-plan--featured {
   border-color: var(--home-accent);
-  box-shadow: 0 0 0 1px var(--home-accent);
+  border-width: 2px;
+  box-shadow: none;
   background: var(--home-surface);
 }
 .home-plan__top {
