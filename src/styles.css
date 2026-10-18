@@ -12127,3 +12127,12 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     radial-gradient(1100px 560px at 85% -10%, oklch(0.55 0.15 258 / 0.14), transparent 70%),
     var(--color-background);
 }
+
+/* UI/UX Pro Max quality layer: shared web and mobile safeguards */
+:where(button, a, input, select, textarea, [role="button"]):focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; }
+:where(button, a, [role="button"]):not(.icon-only) { min-height: 44px; }
+img, video, canvas, svg { max-width: 100%; }
+html { scroll-behavior: smooth; }
+body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+@media (max-width: 640px) { body { overflow-x: hidden; } :where(input, select, textarea) { font-size: 16px; } .container, .page-container, .shell-container { width: min(100% - 2rem, 72rem); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
