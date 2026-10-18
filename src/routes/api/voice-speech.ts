@@ -1,7 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const VOICESTUDIO_URL = (process.env["VOICESTUDIO_API_URL"] ?? "").replace(/\/$/, "");
-const VOICESTUDIO_MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "kittentts";
+// The public Render endpoint keeps the integration usable when the hosting
+// provider has not yet exposed custom environment variables. Deployments may
+// override it with VOICESTUDIO_API_URL as usual.
+const VOICESTUDIO_URL = (
+  process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
+).replace(/\/$/, "");
+const VOICESTUDIO_MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "pockettts";
 const VOICESTUDIO_VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
 
 /**

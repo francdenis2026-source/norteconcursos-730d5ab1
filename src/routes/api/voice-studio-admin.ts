@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const VOICESTUDIO_URL = (process.env["VOICESTUDIO_API_URL"] ?? "").replace(/\/$/, "");
-const MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "kittentts";
+const VOICESTUDIO_URL = (
+  process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
+).replace(/\/$/, "");
+const MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "pockettts";
 const VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
 
 type Health = { status: string; device?: string; version?: string };
