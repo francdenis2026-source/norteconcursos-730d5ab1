@@ -1,8 +1,14 @@
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Check, Minus, Plus } from "lucide-react";
+import { ArrowUpRight, Check, Clock, Info, Minus, Plus } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { PAYMENTS_ENABLED, TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
+import {
+  PAYMENTS_ENABLED,
+  PAYMENTS_NOTICE,
+  SOON_LABEL,
+  TESTING_DAYS,
+  TESTING_PHASE,
+} from "@/lib/launch.config";
 
 export function PlansSection() {
   return (
@@ -78,22 +84,40 @@ export function PlansSection() {
                     })}
                   </ul>
                 </details>
-                <Link
-                  to="/auth"
-                  search={{ mode: "register" }}
-                  className={`home-button ${plan.price === 0 || testing ? "home-button--primary" : "home-button--secondary"}`}
-                >
-                  {plan.price === 0
-                    ? "Criar conta grátis"
-                    : testing
-                      ? "Testar grátis"
-                      : "Começar grátis"}
-                  <ArrowUpRight />
-                </Link>
+                {plan.price > 0 && !PAYMENTS_ENABLED ? (
+                  <button
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    className="home-button home-button--disabled"
+                    title={PAYMENTS_NOTICE}
+                  >
+                    {SOON_LABEL}
+                    <Clock aria-hidden="true" />
+                  </button>
+                ) : (
+                  <Link
+                    to="/auth"
+                    search={{ mode: "register" }}
+                    className={`home-button ${plan.price === 0 ? "home-button--primary" : "home-button--secondary"}`}
+                  >
+                    {plan.price === 0 ? "Criar conta grátis" : "Começar grátis"}
+                    <ArrowUpRight />
+                  </Link>
+                )}
               </article>
             );
           })}
         </div>
+        {!PAYMENTS_ENABLED && (
+          <p className="home-plans__notice" role="note">
+            <Info aria-hidden="true" />
+            <span>
+              Pagamentos ainda não ativados. Os planos Essencial, Plus e Premium serão liberados em
+              breve; por enquanto, o acesso é gratuito, em fase de testes.
+            </span>
+          </p>
+        )}
         <div className="home-faq">
           <div>
             <span className="home-eyebrow">Sem dúvidas no caminho</span>

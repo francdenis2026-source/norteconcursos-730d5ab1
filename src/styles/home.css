@@ -185,6 +185,33 @@
   background: var(--home-tint);
   border-color: var(--home-muted);
 }
+/* Planos ainda não liberados: mesmo visual nos três, sem aparência de ação. */
+.home-button--disabled,
+.home-button--disabled:hover {
+  color: var(--home-muted);
+  background: transparent;
+  border-color: var(--home-line);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.85;
+}
+.home-plans__notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px auto 0 !important;
+  max-width: 720px;
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+.home-plans__notice svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
 .home-button--gold {
   background: #e6bf70;
   color: #17263b;
