@@ -25,6 +25,8 @@ export const FREE_DAILY_LIBRARY = 3;
 /** Simulados por mês (mês do Acre) do Gratuito e do Essencial; o Gratuito faz só simulados curtos. */
 export const FREE_MONTHLY_MOCKS = 1;
 export const ESSENTIAL_MONTHLY_MOCKS = 2;
+/** Simulados por mês do Plus; somente o Premium não tem limite. */
+export const PLUS_MONTHLY_MOCKS = 4;
 export const FREE_MOCK_MAX_QUESTIONS = 20;
 
 export const SUBSCRIPTION_PLANS: TierPlan[] = [
@@ -55,12 +57,12 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
   {
     id: "essential",
     name: "Essencial",
-    price: 24.9,
-    annualPrice: 249,
+    price: 19.9,
+    annualPrice: 199,
     description: "Foco total em resolução de questões.",
     features: {
       aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 10 },
-      questions: { name: "Questões por dia", included: true, limit: 100 },
+      questions: { name: "Questões por dia", included: true, limit: 60 },
       mockExams: { name: "Simulados por mês", included: true, limit: ESSENTIAL_MONTHLY_MOCKS },
       performanceAnalytics: { name: "Análise detalhada", included: true },
       timer: { name: "Cronômetro", included: true },
@@ -80,14 +82,14 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
   {
     id: "plus",
     name: "Plus",
-    price: 39.9,
-    annualPrice: 399,
+    price: 34.9,
+    annualPrice: 349,
     description: "O melhor custo-benefício para sua aprovação.",
     isPopular: true,
     features: {
       aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 30 },
-      questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
-      mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
+      questions: { name: "Questões por dia", included: true, limit: 180 },
+      mockExams: { name: "Simulados por mês", included: true, limit: PLUS_MONTHLY_MOCKS },
       performanceAnalytics: { name: "Análise avançada", included: true },
       timer: { name: "Cronômetro", included: true },
       studyPlan: { name: "Plano de Estudos", included: true },
@@ -106,8 +108,8 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
   {
     id: "premium",
     name: "Premium",
-    price: 59.9,
-    annualPrice: 599,
+    price: 49.9,
+    annualPrice: 499,
     description: "Acompanhamento completo e ferramentas exclusivas.",
     features: {
       aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 100 },
