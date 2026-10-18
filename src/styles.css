@@ -12156,15 +12156,15 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
-/* Fundo da área do usuário: leve degradê azulado (claro) e profundidade (escuro) */
+/* Fundo da área do usuário: luz quente discreta e profundidade no escuro. */
 .app-shell {
   background:
-    radial-gradient(1100px 520px at 85% -10%, oklch(0.62 0.16 258 / 0.07), transparent 70%),
+    radial-gradient(1100px 520px at 85% -10%, oklch(0.74 0.12 78 / 0.08), transparent 70%),
     var(--color-background);
 }
 .dark .app-shell {
   background:
-    radial-gradient(1100px 560px at 85% -10%, oklch(0.55 0.15 258 / 0.14), transparent 70%),
+    radial-gradient(1100px 560px at 85% -10%, oklch(0.62 0.13 78 / 0.13), transparent 70%),
     var(--color-background);
 }
 
