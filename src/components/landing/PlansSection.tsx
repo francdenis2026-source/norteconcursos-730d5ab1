@@ -24,18 +24,28 @@ export function PlansSection() {
   return (
     <section id="planos" className="home-section home-plans" aria-labelledby="planos-title">
       <div className="home-container">
-        <div className="home-heading">
-          <span className="home-eyebrow">Seu ritmo. Seu plano.</span>
-          <h2 id="planos-title">
-            Comece grátis.
-            <br />
-            <em>Evolua quando fizer sentido.</em>
-          </h2>
-          <p>
-            {TESTING_PHASE
-              ? `Por ${TESTING_DAYS} dias, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
-              : "Escolha o plano que acompanha o seu ritmo de estudo."}
-          </p>
+        <div className="home-plans__intro">
+          <div className="home-heading">
+            <span className="home-eyebrow">Seu ritmo. Seu plano.</span>
+            <h2 id="planos-title">
+              Comece grátis.
+              <br />
+              <em>Evolua quando fizer sentido.</em>
+            </h2>
+            <p>
+              {TESTING_PHASE
+                ? `Por ${TESTING_DAYS} dias, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
+                : "Escolha o plano que acompanha o seu ritmo de estudo."}
+            </p>
+          </div>
+          <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
+            <span className="home-plans__signal-icon"><Clock aria-hidden="true" /></span>
+            <div>
+              <strong>{TESTING_PHASE ? `${TESTING_DAYS} dias para testar` : "Planos para cada fase"}</strong>
+              <p><Check aria-hidden="true" /> Sem cartão e sem cobrança durante o teste</p>
+              <p><Check aria-hidden="true" /> Estude no seu ritmo e mude quando quiser</p>
+            </div>
+          </aside>
         </div>
         <div className="home-plans__grid">
           {SUBSCRIPTION_PLANS.map((plan) => {
