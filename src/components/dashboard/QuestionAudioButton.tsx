@@ -1,5 +1,6 @@
 import { Loader2, Pause, Play, Volume2 } from "lucide-react";
 import * as React from "react";
+import { requestQuestionAudio } from "@/lib/requestQuestionAudio";
 import { Button } from "@/components/ui/button";
 
 type QuestionAudioButtonProps = {
@@ -7,12 +8,14 @@ type QuestionAudioButtonProps = {
   naturalVoiceEnabled?: boolean;
 };
 
-/** Optional VoiceStudio-powered reading control for a question. */
+/** Optional Kokoro-powered reading control for a question. */
 export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: QuestionAudioButtonProps) {
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
   const browserSpeechRef = React.useRef<SpeechSynthesisUtterance | null>(null);
   const audioUrl = React.useRef<string | null>(null);
   const requestRef = React.useRef<AbortController | null>(null);
+  const [deviceVoice, setDeviceVoice] = React.useState(false);
+  const [progress, setProgress] = React.useState<number | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [playing, setPlaying] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -60,21 +63,17 @@ export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: Quest
         return;
       }
       // Start device speech directly within the tap when no remote voice is used.
-      if (!naturalVoiceEnabled) {
+      if (!naturalVoiceEnabled || deviceVoice) {
         speakInBrowser();
         return;
       }
       setLoading(true);
+      setProgress(null);
       const controller = new AbortController();
       requestRef.current = controller;
-      const timeout = window.setTimeout(() => controller.abort(), 12000);
+      const timeout = window.setTimeout(() => controller.abort(), 630000);
       try {
-        const response = await fetch("/api/voice-speech", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text }),
-          signal: controller.signal,
-        });
+        const response = await requestQuestionAudio(text, controller.signal, setProgress);
         if (!response.ok) throw new Error("Serviço de voz indisponível.");
         const blob = await response.blob();
         if (!blob.size || !blob.type.startsWith("audio/")) throw new Error("Áudio inválido.");
@@ -100,6 +99,7 @@ export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: Quest
         audioRef.current = null;
         if (audioUrl.current) URL.revokeObjectURL(audioUrl.current);
         audioUrl.current = null;
+        setDeviceVoice(true);
         speakInBrowser();
         setError("Usando a voz do aparelho; a voz natural está indisponível.");
       } finally {
@@ -118,6 +118,7 @@ export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: Quest
   React.useEffect(() => {
     setPlaying(false);
     setLoading(false);
+    setDeviceVoice(false);
     setError(null);
     return () => {
       const request = requestRef.current;
@@ -160,8 +161,20 @@ export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: Quest
         ) : (
           <Volume2 className="h-4 w-4" aria-hidden="true" />
         )}
-        {loading ? "Preparando áudio…" : playing ? "Pausar leitura" : "Ouvir questão"}
+        {loading ? `Preparando áudio…${progress === null ? "" : ` ${progress}%`}` : playing ? "Pausar leitura" : "Ouvir questão"}
       </Button>
+      {loading && (
+        <Button type="button" variant="ghost" size="sm" onClick={() => {
+          const request = requestRef.current;
+          requestRef.current = null;
+          request?.abort();
+          setLoading(false);
+          setDeviceVoice(true);
+          try { speakInBrowser(); setError("Usando a voz do aparelho."); }
+          catch (cause) { setError(cause instanceof Error ? cause.message : "Voz indisponível."); }
+        }}>Usar voz do aparelho agora</Button>
+      )}
+      {loading && progress !== null && <p role="status" className="max-w-64 text-right text-[11px] text-muted-foreground">A primeira geração pode levar alguns minutos.</p>}
       {error && (
         <p
           role="status"

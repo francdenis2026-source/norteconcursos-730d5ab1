@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const VOICESTUDIO_URL = (
-  process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
-).replace(/\/$/, "");
-const MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "omnivoice";
-const VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
+import { voiceServiceConfig } from "@/lib/voiceService";
+
+const config = voiceServiceConfig();
+const VOICESTUDIO_URL = config.url;
+const MODEL = config.model;
+const VOICE = config.voice;
 
 type Health = { status: string; device?: string; version?: string };
 
@@ -60,6 +61,7 @@ async function handle(): Promise<Response> {
   return Response.json(
     {
       configured,
+      providerName: config.name,
       endpointHost: configured
         ? (() => {
             try {

@@ -1,84 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { generateVoiceAudio, voiceJobRequest } from "@/lib/voiceService";
 
-// The public Render endpoint keeps the integration usable when the hosting
-// provider has not yet exposed custom environment variables. Deployments may
-// override it with VOICESTUDIO_API_URL as usual.
-const VOICESTUDIO_URL = (
-  process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
-).replace(/\/$/, "");
-// VoiceStudio's current OpenAI-compatible engine id. `pockettts` is not
-// included in the deployed VoiceStudio catalogue and causes model_not_found.
-// Keep the environment override for deployments that intentionally select a
-// different installed engine.
-const VOICESTUDIO_MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "omnivoice";
-const VOICESTUDIO_VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
-
-/**
- * Small server-side bridge for the optional VoiceStudio integration.
- * The browser never receives the VoiceStudio URL or any server configuration.
- * Keep this route disabled until a licensed model is installed and the API URL
- * is configured in the deployment environment.
- */
 async function handle(request: Request): Promise<Response> {
-  if (!VOICESTUDIO_URL) {
-    return Response.json(
-      { error: "A leitura em voz alta ainda não foi configurada nesta plataforma." },
-      { status: 503 },
-    );
+  const body = (await request.json().catch(() => null)) as { text?: unknown; action?: unknown; jobId?: unknown } | null;
+  if (body?.action === "start" || body?.action === "status" || body?.action === "audio") {
+    return voiceJobRequest(body.action, typeof body.text === "string" ? body.text : "", typeof body.jobId === "string" ? body.jobId : "");
   }
-
-  const body = (await request.json().catch(() => null)) as { text?: unknown } | null;
-  const text = typeof body?.text === "string" ? body.text.trim() : "";
-  if (!text || text.length > 4096) {
-    return Response.json({ error: "O texto para leitura é inválido." }, { status: 400 });
-  }
-
-  try {
-    const upstream = await fetch(`${VOICESTUDIO_URL}/v1/audio/speech`, {
-      method: "POST",
-      signal: AbortSignal.timeout(15000),
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: VOICESTUDIO_MODEL,
-        voice: VOICESTUDIO_VOICE,
-        input: text,
-        language: "pt",
-        response_format: "mp3",
-        speed: 1,
-      }),
-    });
-
-    if (!upstream.ok) {
-      const detail = await upstream.text().catch(() => "");
-      return Response.json(
-        {
-          error:
-            upstream.status === 403
-              ? "O modelo de voz ainda não teve a licença aceita no VoiceStudio."
-              : "O serviço de leitura em voz alta está indisponível no momento.",
-          detail: detail.slice(0, 300),
-        },
-        { status: upstream.status === 403 ? 503 : 502 },
-      );
-    }
-
-    if (!upstream.headers.get("content-type")?.startsWith("audio/")) {
-      return Response.json({ error: "O serviço de voz não retornou um áudio válido." }, { status: 502 });
-    }
-
-    return new Response(upstream.body, {
-      status: 200,
-      headers: {
-        "Content-Type": upstream.headers.get("content-type") ?? "audio/mpeg",
-        "Cache-Control": "private, no-store",
-      },
-    });
-  } catch {
-    return Response.json(
-      { error: "Não foi possível conectar ao serviço de leitura em voz alta." },
-      { status: 503 },
-    );
-  }
+  return generateVoiceAudio(typeof body?.text === "string" ? body.text : "");
 }
 
 export const Route = createFileRoute("/api/voice-speech")({

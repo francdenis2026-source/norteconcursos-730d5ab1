@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PageHero } from "@/components/dashboard/PageHero";
+import { requestQuestionAudio } from "@/lib/requestQuestionAudio";
 import { useAuthStatus } from "@/hooks/useDashboard";
 
 export const Route = createFileRoute("/dashboard/admin-voice-studio")({
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/dashboard/admin-voice-studio")({
 
 type Status = {
   configured: boolean;
+  providerName?: string;
   endpointHost: string | null;
   model: string;
   voice: string;
@@ -54,7 +56,7 @@ function AdminVoiceStudioPage() {
     setError(null);
     try {
       const response = await fetch("/api/voice-studio-admin", { cache: "no-store" });
-      if (!response.ok) throw new Error("Não foi possível consultar o VoiceStudio.");
+      if (!response.ok) throw new Error("Não foi possível consultar o serviço de voz.");
       setStatus((await response.json()) as Status);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Falha ao consultar a integração.");
@@ -82,14 +84,10 @@ function AdminVoiceStudioPage() {
     if (testAudioUrl) URL.revokeObjectURL(testAudioUrl);
     setTestAudioUrl(null);
     try {
-      const response = await fetch("/api/voice-speech", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
+      const response = await requestQuestionAudio(text, AbortSignal.timeout(630000));
       if (!response.ok) {
         const payload = (await response.json().catch(() => null)) as { error?: string; detail?: string } | null;
-        throw new Error(payload?.error ?? "O VoiceStudio não respondeu ao teste.");
+        throw new Error(payload?.error ?? "O serviço de voz não respondeu ao teste.");
       }
       setTestAudioUrl(URL.createObjectURL(await response.blob()));
     } catch (cause) {
@@ -123,7 +121,7 @@ function AdminVoiceStudioPage() {
             Leitura <em>em voz alta</em>
           </>
         }
-        description="Gerencie a conexão do VoiceStudio usada para ler questões, alternativas e materiais para os alunos."
+        description="Confira o serviço de voz usado para ler questões e alternativas para os alunos."
         actions={
           <Button
             className="hero-btn-ghost gap-2"
@@ -160,7 +158,7 @@ function AdminVoiceStudioPage() {
           tone={online && status?.installedModels ? "success" : "warning"}
           detail={
             status?.health
-              ? `VoiceStudio ${status.health.version ?? ""} · ${status.health.device ?? "dispositivo não informado"}`
+              ? `${status.providerName ?? "Serviço de voz"} ${status.health.version ?? ""} · ${status.health.device ?? "dispositivo não informado"}`
               : "Ainda não respondeu ao health check"
           }
         />
@@ -169,7 +167,7 @@ function AdminVoiceStudioPage() {
           label="Modelos instalados"
           value={String(status?.installedModels ?? 0)}
           tone={status?.installedModels ? "success" : "warning"}
-          detail={status ? status.installedModels === 0 ? "Voz natural indisponível: instale um modelo no VoiceStudio." : `${status.modelCount} modelos catalogados; confirme o modelo ativo no teste abaixo.` : "Consultando catálogo"}
+          detail={status ? status.installedModels === 0 ? "Voz natural indisponível: confira o deploy do serviço." : `${status.modelCount} modelos catalogados; confirme o modelo ativo no teste abaixo.` : "Consultando catálogo"}
         />
       </div>
 
@@ -188,8 +186,9 @@ function AdminVoiceStudioPage() {
             <div className="rounded-xl border border-amber-400/40 bg-amber-50 p-4 text-amber-950 dark:bg-amber-950/20 dark:text-amber-100">
               <p className="font-semibold">Como habilitar</p>
               <p className="mt-1 leading-6">
-                Configure <code>VOICESTUDIO_API_URL</code>, instale um modelo com licença compatível
-                e aceite a licença no VoiceStudio. Depois, use “Atualizar status”.
+                O serviço padrão usa Kokoro ONNX com a voz brasileira Dora. Confira o deploy e use
+                “Atualizar status”. Para um serviço próprio, configure <code>VOICESTUDIO_API_URL</code>,
+                <code> VOICESTUDIO_TTS_MODEL</code> e <code> VOICESTUDIO_TTS_VOICE</code> no servidor.
               </p>
             </div>
           </CardContent>
@@ -215,8 +214,8 @@ function AdminVoiceStudioPage() {
               <div>
                 <p className="font-semibold">Ponto de uso</p>
                 <p className="text-sm leading-5 text-muted-foreground">
-                  O botão aparece no Treinador, ao lado do título da questão. Enquanto o VoiceStudio
-                  não está conectado, a voz nativa em português do navegador é usada
+                  O botão aparece no Treinador, ao lado do título da questão. Quando o serviço de voz
+                  está indisponível, a voz nativa em português do navegador é usada
                   automaticamente.
                 </p>
               </div>
@@ -228,11 +227,11 @@ function AdminVoiceStudioPage() {
             </Button>
             <a
               className="flex items-center justify-center gap-2 text-sm text-primary underline"
-              href="https://github.com/debpalash/VoiceStudio"
+              href="https://github.com/thewh1teagle/kokoro-onnx"
               target="_blank"
               rel="noreferrer"
             >
-              Documentação do VoiceStudio <ExternalLink className="h-3.5 w-3.5" />
+              Documentação do Kokoro <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </CardContent>
         </Card>
@@ -242,7 +241,7 @@ function AdminVoiceStudioPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2"><Volume2 className="h-5 w-5 text-primary" aria-hidden="true" /> Testar leitura em voz alta</CardTitle>
           <CardDescription>
-            Use o mesmo caminho de áudio dos alunos para confirmar se o VoiceStudio está online e com
+            Use o mesmo caminho de áudio dos alunos para confirmar se o serviço está online e com
             um modelo instalado.
           </CardDescription>
         </CardHeader>

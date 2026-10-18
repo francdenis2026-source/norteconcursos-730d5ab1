@@ -20,6 +20,12 @@ window.renderVoice();
 MOCKS = '''() => {
 window.audioLog=[]; window.utterances=[]; window.remoteStatus=200;
 window.fetch=async (_url,options)=>{
+ if(window.remoteStatus==='jobs') {
+  const request=JSON.parse(options.body);
+  if(request.action==='start') return Response.json({job_id:'d'.repeat(32),status:'pending',progress:0});
+  if(request.action==='status') return Response.json({job_id:'d'.repeat(32),status:'ready',progress:100});
+  return new Response('fake-audio',{headers:{'Content-Type':'audio/wav'}});
+ }
  if(window.remoteStatus==='pending') return new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new Error('aborted'))));
  if(window.remoteStatus==='network') throw new Error('offline');
  return new Response(window.remoteStatus===200?'fake-audio':'{}',{status:window.remoteStatus,headers:{'Content-Type':window.remoteStatus===200?'audio/mpeg':'application/json'}});
@@ -58,6 +64,18 @@ async def main():
    assert await button.get_attribute('aria-label')=='Ouvir questão'
    await button.click();assert await page.evaluate('audioLog.at(-1)')=='speech-resume'
    assert await button.get_attribute('aria-label')=='Pausar leitura da questão'
+  await page.evaluate("remoteStatus='jobs';renderVoice('Questão gerada em segundo plano.')");await page.wait_for_timeout(100)
+  await button.click();await page.get_by_text('Preparando áudio… 0%',exact=True).wait_for()
+  await page.wait_for_timeout(2800)
+  assert await button.get_attribute('aria-label')=='Pausar leitura da questão'
+  print('PASS: background generation progress and playback.')
+  await page.evaluate("remoteStatus='pending';renderVoice('Ouvir sem aguardar.')");await page.wait_for_timeout(100)
+  await button.click()
+  await page.get_by_role('button',name='Usar voz do aparelho agora',exact=True).click()
+  await page.wait_for_timeout(100)
+  assert await page.evaluate('utterances.at(-1).text')=='Ouvir sem aguardar.'
+  assert await button.get_attribute('aria-label')=='Pausar leitura da questão'
+  print('PASS: device voice can replace pending natural generation immediately.')
   await page.evaluate("remoteStatus='pending';renderVoice('Aguardando serviço.')");await page.wait_for_timeout(100)
   await button.click();await page.wait_for_timeout(100)
   count=await page.evaluate('utterances.length')
