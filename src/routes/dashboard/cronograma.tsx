@@ -528,16 +528,16 @@ function CustomEditor({ cfg, setCfg }: { cfg: CronoConfig; setCfg: (p: Partial<C
   };
   return (
     <div className="space-y-3 border-t pt-3">
-      <div className="flex gap-2">
-        <Input list="cronograma-catalogo" placeholder="Adicionar disciplina (ex.: Direito Penal)" value={disc} onChange={(e) => setDisc(e.target.value)} />
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <Input className="min-w-0 flex-1" list="cronograma-catalogo" placeholder="Adicionar disciplina (ex.: Direito Penal)" value={disc} onChange={(e) => setDisc(e.target.value)} />
         <datalist id="cronograma-catalogo">{CATALOGO.map((c) => <option key={c.nome} value={c.nome} />)}</datalist>
         <Button variant="outline" onClick={addDisc}><Plus className="h-4 w-4" /></Button>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <select aria-label="Disciplina do conteúdo" className="h-10 rounded-md border bg-background px-2 text-sm" value={topicDisc || cfg.discs[0]?.id || ""} onChange={(e) => setTopicDisc(e.target.value)}>
+      <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+        <select aria-label="Disciplina do conteúdo" className="h-10 min-w-0 rounded-md border bg-background px-2 text-sm sm:max-w-[18rem]" value={topicDisc || cfg.discs[0]?.id || ""} onChange={(e) => setTopicDisc(e.target.value)}>
           {cfg.discs.map((d) => <option key={d.id} value={d.id}>{d.nome}</option>)}
         </select>
-        <Input className="min-w-48 flex-1" placeholder="Adicionar conteúdo" value={topic} onChange={(e) => setTopic(e.target.value)} />
+        <Input className="min-w-0 flex-1" placeholder="Adicionar conteúdo" value={topic} onChange={(e) => setTopic(e.target.value)} />
         <Button variant="outline" onClick={addTopic}><Plus className="h-4 w-4" /></Button>
       </div>
     </div>

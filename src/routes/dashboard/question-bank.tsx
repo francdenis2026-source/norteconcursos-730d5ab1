@@ -194,7 +194,7 @@ function QuestionBankPage() {
               ))}
             </div>
           </fieldset>
-          <div className="relative min-w-60 flex-1">
+          <div className="relative min-w-0 w-full flex-1 sm:min-w-60">
             <Search
               className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-muted-foreground"
               aria-hidden
