@@ -18,6 +18,20 @@
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+.home {
+  position: relative;
+  isolation: isolate;
+}
+.home::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/media/textura-acre-profissionais-v2.webp") center / cover no-repeat;
+  opacity: 0.045;
+  filter: grayscale(1) saturate(0.25) contrast(0.85);
+}
 .dark .home,
 .dark .home-menu {
   --home-bg: #171819;
@@ -29,6 +43,7 @@
   --home-accent: #e0a65a;
   --home-accent-bg: #3a2d22;
 }
+.dark .home::before { opacity: 0.075; }
 .home *,
 .home *::before,
 .home *::after {
@@ -196,7 +211,7 @@
   opacity: 0.85;
 }
 .home-compare {
-  margin-top: 26px;
+  margin-top: 16px;
   overflow-x: auto;
   border: 1px solid var(--home-line);
   border-radius: 10px;
@@ -209,14 +224,14 @@
   font-size: 13px;
 }
 .home-compare caption {
-  padding: 14px 16px 6px;
+  padding: 10px 14px 4px;
   text-align: left;
   font-weight: 800;
   font-size: 15px;
 }
 .home-compare th,
 .home-compare td {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border-top: 1px solid var(--home-line);
   text-align: center;
   vertical-align: middle;
@@ -1208,6 +1223,7 @@
 }
 /* Pricing and questions */
 .home-plans {
+  padding-block: 26px;
   background: var(--home-surface);
 }
 .home-plans__grid {
@@ -1222,13 +1238,13 @@
   overflow: hidden;
   border: 1px solid var(--home-line);
   border-radius: 14px;
-  padding: 22px 18px;
+  padding: 16px 14px;
   background: var(--home-bg);
 }
 .home-plan__media {
   position: relative;
-  height: 150px;
-  margin: -22px -18px 16px;
+  height: 108px;
+  margin: -16px -14px 12px;
   overflow: hidden;
   border-bottom: 1px solid var(--home-line);
   background: var(--home-navy);
@@ -1272,7 +1288,7 @@
 .home-plan__price {
   margin-top: 12px !important;
   font-family: "Archivo", sans-serif;
-  font-size: 31px;
+  font-size: 27px;
   font-weight: 750;
   line-height: 1.4;
   letter-spacing: -0.04em;
@@ -1389,7 +1405,7 @@
 }
 
 .home-plan__features {
-  margin: 14px 0;
+  margin: 10px 0;
   border-block: 1px solid var(--home-line);
 }
 .home-plan__features summary {
