@@ -2217,3 +2217,48 @@
     transition: none !important;
   }
 }
+
+/* Layout pass: fewer competing surfaces, clearer operational hierarchy. */
+.home-tools,
+.home-opportunities {
+  gap: 16px;
+}
+.home-tool,
+.home-opportunity {
+  border-radius: 14px;
+  box-shadow: 0 10px 24px -24px color-mix(in srgb, var(--home-navy) 50%, transparent);
+}
+.home-tool summary {
+  min-height: 64px;
+  padding: 13px 15px;
+}
+.home-tool p {
+  max-width: 44ch;
+  padding: 0 15px 15px 60px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.home-opportunity__body {
+  padding: 22px;
+}
+.home-opportunity h3 {
+  font-size: clamp(20px, 1.7vw, 23px);
+}
+.home-opportunity__image > img {
+  height: 116px;
+}
+.home-section-top {
+  margin-bottom: 16px;
+}
+@media (max-width: 760px) {
+  .home-tools,
+  .home-opportunities {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-tool p {
+    padding-left: 15px;
+  }
+  .home-opportunity__body {
+    padding: 18px;
+  }
+}

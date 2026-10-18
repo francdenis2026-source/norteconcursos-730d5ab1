@@ -5905,6 +5905,96 @@ html {
   }
 }
 
+/* Shared surface system: consistent density across student and admin workspaces. */
+.app-content__inner > :is(.page-hero, .tactical-feature-hero, .catalog-command-hero) {
+  min-height: 184px;
+  padding: clamp(22px, 3vw, 34px);
+  border-radius: 18px;
+}
+.app-content__inner > :is(.page-hero, .tactical-feature-hero, .catalog-command-hero) h1 {
+  letter-spacing: -0.035em;
+}
+.app-content .surface-card,
+.app-content .card,
+.app-content [data-slot="card"] {
+  box-shadow: 0 12px 28px -30px oklch(0.12 0.03 262 / 0.8);
+}
+.student-home {
+  --hub-accent: #a96f17;
+  --hub-soft: #f7edcf;
+  --hub-line: #d8dde0;
+  gap: 18px;
+}
+.dark .student-home {
+  --hub-accent: #efbb58;
+  --hub-soft: #3a301c;
+  --hub-line: #374149;
+}
+.student-home__metrics,
+.student-hub__shortcuts > a,
+.student-home__card {
+  border-radius: 14px;
+}
+.student-home__metric {
+  padding: 17px;
+}
+.student-home__card {
+  padding: 20px;
+}
+.student-hub__workspace {
+  gap: 18px;
+}
+.student-hub__resume {
+  background: #182229;
+  border: 1px solid #3b474d;
+  border-radius: 16px;
+}
+.student-hub__resume::before {
+  background: linear-gradient(90deg, #182229 26%, rgb(24 34 41 / .94) 56%, rgb(24 34 41 / .4));
+}
+.student-hub__kicker {
+  color: #efbb58;
+}
+.student-hub__kicker > span {
+  background: #efbb58;
+}
+.student-home__primary {
+  border-color: #efbb58;
+  background: #efbb58;
+  color: #1c2023;
+}
+.student-home__primary:hover {
+  background: #f5ca73;
+  color: #1c2023;
+}
+.app-shell[data-area="admin"] .app-content [data-slot="card"] {
+  border-radius: 14px;
+}
+.app-shell[data-area="admin"] .app-content > .app-content__inner {
+  gap: 18px;
+}
+@media (max-width: 767px) {
+  .app-content__inner > :is(.page-hero, .tactical-feature-hero, .catalog-command-hero) {
+    min-height: 164px;
+    padding: 18px !important;
+  }
+  .student-home__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .student-home__metric {
+    padding: 14px;
+  }
+  .student-home__metric + .student-home__metric {
+    border-left: 0;
+  }
+  .student-home__metric:nth-child(n + 3) {
+    border-top: 1px solid var(--hub-line);
+  }
+  .student-hub__workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Onboarding banner */
 .onboarding-banner {
   position: relative;
