@@ -393,7 +393,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Meus cronogramas</Button>
         <Button variant="ghost" size="sm" className="text-destructive" onClick={remove}><Trash2 className="mr-1 h-4 w-4" /> Excluir</Button>
       </div>
-      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-lg">
+      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 p-5 text-white shadow-lg">
         <div className="grid gap-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
           <div>
             <p className="text-xl font-black">{plan.name}</p>
@@ -432,7 +432,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         </div>
       )}
       <Tabs defaultValue="semana">
-        <TabsList className="grid h-auto w-full grid-cols-3 bg-gradient-to-r from-indigo-100 via-violet-100 to-fuchsia-100 p-1 dark:from-indigo-950/40 dark:via-violet-950/40 dark:to-fuchsia-950/40"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
+        <TabsList className="grid h-auto w-full grid-cols-3 bg-slate-100 p-1 dark:bg-slate-900/70"><TabsTrigger value="semana">Semana</TabsTrigger><TabsTrigger value="conteudo">Conteúdo</TabsTrigger><TabsTrigger value="ajustes">Ajustes</TabsTrigger></TabsList>
 
         <TabsContent value="semana" className="space-y-3">
           <p className="text-xs text-muted-foreground">Tempo por disciplina = peso × o que falta × reforço para desempenho abaixo de 70%. Mude o progresso e a semana se reorganiza.</p>

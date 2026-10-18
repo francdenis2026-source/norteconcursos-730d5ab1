@@ -118,13 +118,13 @@ function Lesson({ focus = false, trackSlug, lesson, onNext, onPrev, done, toggle
         <h3 className="text-sm font-semibold">Pontos-chave</h3>
         <ul className="list-disc space-y-1 pl-5 leading-7">{lesson.pontos.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
       </section>
-      <section className="rounded-xl border-l-4 border-l-emerald-500 bg-card p-4">
+      <section className="rounded-xl border-l border-l-emerald-500 bg-card p-4">
         <h3 className="text-sm font-semibold">Exemplo prático</h3>
         <p className="mt-1 leading-7"><GlossaryText text={lesson.exemplo} /></p>
       </section>
       </div>
       <div className="space-y-5">
-      <section className="rounded-xl border-l-4 border-l-amber-500 bg-card p-4">
+      <section className="rounded-xl border-l border-l-amber-500 bg-card p-4">
         <h3 className="text-sm font-semibold">Atenção: onde o candidato erra</h3>
         <ul className="mt-1 list-disc space-y-1 pl-5 leading-7">{lesson.atencao.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
       </section>
