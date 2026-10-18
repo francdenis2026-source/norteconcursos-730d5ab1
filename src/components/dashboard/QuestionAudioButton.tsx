@@ -9,21 +9,20 @@ type QuestionAudioButtonProps = {
 /** Optional VoiceStudio-powered reading control for a question. */
 export function QuestionAudioButton({ text }: QuestionAudioButtonProps) {
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
+  const browserSpeechRef = React.useRef<SpeechSynthesisUtterance | null>(null);
   const [audioUrl, setAudioUrl] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [playing, setPlaying] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
-  React.useEffect(
-    () => () => {
-      audioRef.current?.pause();
-      if (audioUrl) URL.revokeObjectURL(audioUrl);
-    },
-    [audioUrl],
-  );
-
   const play = async () => {
     setError(null);
+    if (browserSpeechRef.current) {
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+      else window.speechSynthesis.pause();
+      setPlaying(window.speechSynthesis.paused);
+      return;
+    }
     if (audioRef.current) {
       if (playing) {
         audioRef.current.pause();
@@ -43,6 +42,30 @@ export function QuestionAudioButton({ text }: QuestionAudioButtonProps) {
         body: JSON.stringify({ text }),
       });
       if (!response.ok) {
+        // The browser voice is an immediate, license-safe fallback while the
+        // optional VoiceStudio service is being provisioned.
+        if (response.status === 503 && "speechSynthesis" in window) {
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = "pt-BR";
+          const ptVoice = window.speechSynthesis
+            .getVoices()
+            .find((voice) => /^pt(-BR)?$/i.test(voice.lang));
+          if (ptVoice) utterance.voice = ptVoice;
+          utterance.onend = () => {
+            browserSpeechRef.current = null;
+            setPlaying(false);
+          };
+          utterance.onerror = () => {
+            browserSpeechRef.current = null;
+            setPlaying(false);
+            setError("A voz do navegador não pôde ser iniciada.");
+          };
+          browserSpeechRef.current = utterance;
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.speak(utterance);
+          setPlaying(true);
+          return;
+        }
         const payload = (await response.json().catch(() => null)) as { error?: string } | null;
         throw new Error(payload?.error ?? "A leitura em voz alta não está disponível.");
       }
@@ -59,6 +82,15 @@ export function QuestionAudioButton({ text }: QuestionAudioButtonProps) {
       setLoading(false);
     }
   };
+
+  React.useEffect(
+    () => () => {
+      audioRef.current?.pause();
+      window.speechSynthesis?.cancel();
+      if (audioUrl) URL.revokeObjectURL(audioUrl);
+    },
+    [audioUrl],
+  );
 
   return (
     <div className="flex min-w-0 flex-col items-end gap-1">

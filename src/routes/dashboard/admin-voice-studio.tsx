@@ -179,7 +179,9 @@ function AdminVoiceStudioPage() {
               <div>
                 <p className="font-semibold">Ponto de uso</p>
                 <p className="text-sm leading-5 text-muted-foreground">
-                  O botão aparece no Treinador, ao lado do título da questão.
+                  O botão aparece no Treinador, ao lado do título da questão. Enquanto o VoiceStudio
+                  não está conectado, a voz nativa em português do navegador é usada
+                  automaticamente.
                 </p>
               </div>
             </div>
