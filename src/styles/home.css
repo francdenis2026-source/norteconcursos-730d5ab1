@@ -799,7 +799,7 @@
 .home-tool {
   min-width: 0;
   border: 1px solid var(--home-line);
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--home-surface);
 }
 .home-tool--featured {
@@ -825,10 +825,10 @@
 .home-icon {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
-  border-radius: 7px;
+  border-radius: 50%;
   color: var(--home-accent);
   background: var(--home-accent-bg);
 }
@@ -1221,7 +1221,7 @@
   min-width: 0;
   overflow: hidden;
   border: 1px solid var(--home-line);
-  border-radius: 10px;
+  border-radius: 14px;
   padding: 22px 18px;
   background: var(--home-bg);
 }
@@ -1243,7 +1243,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 22, 52, 0) 45%, rgba(7, 22, 52, 0.45));
+  background: linear-gradient(180deg, transparent 45%, color-mix(in srgb, var(--home-navy) 45%, transparent));
   pointer-events: none;
 }
 .home-plan--featured {
