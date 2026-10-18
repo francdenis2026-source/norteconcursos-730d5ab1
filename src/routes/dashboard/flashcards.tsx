@@ -1,3 +1,4 @@
+import { scrollAppToTop } from "@/lib/appScroll";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import { platformDate } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
@@ -635,7 +636,7 @@ function FlashcardsPage() {
                             aria-label="Editar cartão"
                             onClick={() => {
                               setEditing(c);
-                              window.scrollTo({ top: 0, behavior: "smooth" });
+                              scrollAppToTop();
                             }}
                           >
                             <Pencil className="h-4 w-4" />

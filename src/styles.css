@@ -12145,3 +12145,135 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 .side-tab::after {
   border-left-width: 1px !important;
 }
+
+/* Mobile workspace: persistent chrome with a single content scroll owner. */
+.app-mobile-title { display: none; }
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  html[data-mobile-app="true"],
+  html[data-mobile-app="true"] body {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  .app-shell.navigation-v2 {
+    --app-topbar-h: 56px;
+    position: fixed;
+    inset: 0;
+    top: var(--app-viewport-top, 0px);
+    display: flex;
+    height: var(--app-viewport-height, 100dvh);
+    min-height: 0;
+    overflow: hidden;
+  }
+  .app-shell.navigation-v2 .app-main {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .app-shell.navigation-v2 .app-topbar {
+    position: relative;
+    top: auto;
+    height: calc(var(--app-topbar-h) + env(safe-area-inset-top, 0px));
+    padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right));
+    color: var(--color-foreground);
+    background: var(--color-background);
+    box-shadow: none;
+  }
+  .app-shell.navigation-v2 .app-sidebar, .app-shell .app-crumbs { display: none; }
+  .app-shell .app-mobile-bar { display: flex; flex: 1; gap: 8px; }
+  .app-shell .app-mobile-bar .norte-brand__mark { width: 30px; height: 30px; }
+  .app-mobile-title {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 650;
+  }
+  .app-shell .app-topbar__actions { flex: none; gap: 2px; }
+  .app-shell .app-topbar :is(.app-top-btn, .app-top-search) { color: var(--color-foreground); }
+  .app-shell .app-topbar .app-chips { display: none; }
+  .app-shell.navigation-v2 .app-content {
+    --app-topbar-h: 0px;
+    flex: 1 1 0%;
+    min-height: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-block: 16px;
+    padding: 16px max(12px, env(safe-area-inset-right)) 24px max(12px, env(safe-area-inset-left));
+  }
+  .app-shell .app-content__inner { width: 100%; min-height: 100%; }
+  .app-shell .app-footer { display: none; }
+  .app-shell .app-content :is(.session-status-bar, .exam-status-bar) { top: 12px !important; }
+  .app-shell.navigation-v2 .app-bottom-nav {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    flex: none;
+    width: 100%;
+    margin: 0;
+    padding: 4px max(8px, env(safe-area-inset-right)) max(4px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    border-radius: 0;
+    background: var(--color-background);
+    box-shadow: none;
+  }
+  .app-shell .app-bottom-nav :is(a, button) {
+    min-height: 56px;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--color-muted-foreground);
+  }
+  .app-shell .app-bottom-nav .app-ico {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+  }
+  .app-shell .app-bottom-nav :is(a[data-active="true"], button[aria-expanded="true"]) {
+    color: var(--color-foreground);
+    background: color-mix(in oklab, var(--brass) 17%, transparent);
+  }
+  .app-sheet {
+    top: var(--app-viewport-top, 0px);
+    max-height: var(--app-viewport-height, 100dvh);
+    padding-top: env(safe-area-inset-top) !important;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+    overflow: hidden;
+  }
+  .app-sheet .app-nav { flex: 1; min-height: 0; overflow-y: auto; }
+  .app-sheet :is(.app-sidebar__head, .app-sidebar__foot) { flex: none; }
+  .app-sheet > button:first-child { top: calc(16px + env(safe-area-inset-top)); }
+  html[data-app-keyboard="true"] .app-shell.navigation-v2 .app-bottom-nav { display: none; }
+  .cmd-dialog {
+    top: calc(var(--app-viewport-top, 0px) + var(--app-viewport-height, 100dvh) / 2);
+    max-height: calc(var(--app-viewport-height, 100dvh) - 24px);
+  }
+  .cmd-dialog [cmdk-list] { max-height: calc(var(--app-viewport-height, 100dvh) - 110px); }
+  .app-shell > .app-focus-return {
+    position: relative;
+    inset: auto;
+    flex: none;
+    padding-top: max(8px, env(safe-area-inset-top));
+  }
+  .app-shell.navigation-v2:has(> .app-focus-return) { flex-direction: column; }
+  .app-shell:has(> .app-focus-return) .app-main { height: auto; flex: 1; }
+  .app-shell:has(> .app-focus-return) .app-topbar { height: 56px; padding-top: 0; }
+  /* Avoid iOS input zoom while keeping pinch-to-zoom available. */
+  .app-shell :is(input, select, textarea), .app-sheet input, .cmd-dialog input { font-size: max(16px, 1em); }
+}
+@media print {
+  html[data-mobile-app="true"], html[data-mobile-app="true"] body { height: auto; overflow: visible; }
+  .app-shell.navigation-v2, .app-shell.navigation-v2 .app-main, .app-shell.navigation-v2 .app-content {
+    position: static; height: auto; overflow: visible; display: block;
+  }
+}

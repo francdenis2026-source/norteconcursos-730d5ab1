@@ -1,3 +1,4 @@
+import { scrollAppToTop } from "@/lib/appScroll";
 import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { SimulatorPaperPicker } from "@/components/dashboard/SimulatorPaperPicker";
@@ -574,7 +575,7 @@ function ProfessionalSimulator() {
     setElapsedSeconds(0);
     setTimeLeft(durationMinutes * 60);
     setStage("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollAppToTop();
   }
 
   function cancelSimulator() {
@@ -725,7 +726,7 @@ function ProfessionalSimulator() {
       setSaving(false);
     }
     if (automatic) toast.warning("Tempo encerrado. O simulado foi finalizado automaticamente.");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollAppToTop();
   }
   function resetSimulator(discard = false) {
     if (saving) return;

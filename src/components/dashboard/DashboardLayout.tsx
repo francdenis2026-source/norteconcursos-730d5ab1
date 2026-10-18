@@ -1,5 +1,6 @@
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
+import { useMobileAppShell } from "@/hooks/useMobileAppShell";
 import { PlatformBack } from "./PlatformBack";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
 import {
@@ -261,6 +262,7 @@ interface DashboardLayoutProps {
 }
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
+  useMobileAppShell();
   const location = useLocation();
   const navigate = useNavigate();
   const { user } = useAuthStatus();
@@ -551,6 +553,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               >
                 <NorteBrand light compact />
               </Link>
+              <span className="app-mobile-title">{current?.label ?? "Minha preparação"}</span>
             </div>
 
             <div className="app-crumbs">
@@ -615,6 +618,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </header>
 
           <main
+            id="dashboard-content"
+            data-scroll-restoration-id="dashboard-content"
+            tabIndex={-1}
             className="app-content"
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >

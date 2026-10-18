@@ -9,6 +9,7 @@ export const getRouter = () => {
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
+    scrollToTopSelectors: ["#dashboard-content"],
     // Mantém as rotas pré-carregadas por um curto período. Com zero, cada
     // passagem do cursor pelo menu refazia o carregamento do chunk e deixava
     // a navegação interna perceptivelmente lenta.

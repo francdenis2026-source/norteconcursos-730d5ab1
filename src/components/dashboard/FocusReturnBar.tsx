@@ -13,7 +13,7 @@ export function FocusReturnBar() {
   const session = useSyncExternalStore(subscribeFocusSession, getFocusSession, () => null);
   if (!session?.away) return null;
   return (
-    <div className="no-print fixed inset-x-0 top-0 z-[70] flex flex-wrap items-center gap-3 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 px-4 py-2 text-sm text-white shadow-lg" role="status">
+    <div className="app-focus-return no-print fixed inset-x-0 top-0 z-[70] flex flex-wrap items-center gap-3 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 px-4 py-2 text-sm text-white shadow-lg" role="status">
       <p className="flex-1 basis-60">
         <strong>Relógio de estudo em pausa</strong> · parado em <span className="font-mono font-bold">{hms(session.elapsed)}</span>. Ele continua de onde parou quando você voltar.
       </p>

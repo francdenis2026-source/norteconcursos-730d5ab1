@@ -1,3 +1,4 @@
+import { scrollAppToTop } from "@/lib/appScroll";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -241,7 +242,7 @@ function TopicsTab() {
                   type="button"
                   onClick={() => {
                     setVideo(v);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    scrollAppToTop();
                   }}
                   className={cn(
                     "flex w-full items-start gap-2 rounded-lg px-2 py-1.5 text-left text-xs hover:bg-muted",
@@ -272,7 +273,7 @@ function TopicsTab() {
                   type="button"
                   onClick={() => {
                     setVideo(v);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    scrollAppToTop();
                   }}
                   className="flex items-start gap-2 rounded-lg px-2 py-1.5 text-left text-xs hover:bg-muted"
                 >

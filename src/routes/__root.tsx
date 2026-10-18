@@ -15,7 +15,6 @@ import { supabase, hasPendingEmailAuthCallback, markEmailAuthCallbackHandled, co
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
-import { MobileNotice } from "@/components/MobileNotice";
 import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
 import appCss from "../styles.css?url";
@@ -281,7 +280,6 @@ function RootComponent() {
       <Outlet />
       <Toaster position="top-center" closeButton />
       <ConfirmHost />
-      <MobileNotice />
       <InstallAppPrompt />
       <UpdateAvailablePrompt />
     </QueryClientProvider>
