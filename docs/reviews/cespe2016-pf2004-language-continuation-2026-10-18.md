@@ -15,3 +15,11 @@ Passaram cinco testes específicos: correspondência oficial, rejeição de resp
 A situação deste percurso de Português passa de 43 para **49 originais ativos entre 76 candidatos analisados**. Os 27 retidos dos primeiros 70 continuam retidos; os itens autorais adaptados de CPC ficam fora dessa contagem. O restante da apostila não foi considerado auditado por esta liberação.
 
 Fontes: [caderno oficial](https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/CARGO_19_AGENTE_AZUL.PDF) e [gabarito definitivo oficial](https://cdn.cebraspe.org.br/concursos/DPF_2004_NAC/arquivos/GAB_DEFINITIVO_DPF_NACIONAL.PDF). Metadados, identidades e resultado aplicado constam no JSON ao lado.
+
+## Nova conferência solicitada pelo usuário
+
+Foi encontrada e corrigida uma falha de delimitação na questão 24: o comando do bloco de itens 25–28 estava anexado ao final do enunciado. O texto público e a extração oficial segmentada foram corrigidos com filtro de concorrência, sem mudar o gabarito E, o comentário, o vínculo ou a decisão de publicação. O material bruto privado e o gabarito editorial foram preservados. A leitura posterior reconfirmou os seis enunciados, apoios integrais, aprovação privada e vínculo ao tópico do edital ativo.
+
+A validação agora compara o segmento exato de cada item com o caderno; a mera presença do enunciado em algum trecho do PDF não basta. Sete testes específicos passaram, incluindo rejeição de comando do bloco seguinte e de enunciado truncado. O JSON registra o resultado aplicado desta correção.
+
+**Limite da auditoria:** os seis itens são de compreensão de textos históricos. Não exigem atualização de regra jurídica para resolver o julgamento textual. As informações da reportagem sobre perícia, as referências temporais e a grafia de 2004 foram mantidas como fonte histórica, sem certificação factual ou normativa de atualidade. A presente conferência não certifica o restante da apostila.

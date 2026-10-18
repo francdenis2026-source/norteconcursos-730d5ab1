@@ -59,6 +59,22 @@ def checked_bytes(e):
     return data
 
 
+def extract_original_statement(path,number,page):
+    """Keep the exact item span; item 24 ends before the next block's command."""
+    with base.pymupdf.open(path) as document:
+        text=document[page-1].get_text()
+    marker=chr(number//10)+chr(number%10)
+    start=text.index('\n'+marker+'\n')+len(marker)+2
+    if number==18:
+        end=len(text)
+    elif number==24:
+        end=text.index('\nOs fragmentos contidos nos itens seguintes',start)
+    else:
+        next_marker=chr((number+1)//10)+chr((number+1)%10)
+        end=text.index('\n'+next_marker+'\n',start)
+    return re.sub(r'\s+',' ',text[start:end]).strip()
+
+
 def verify(pack):
     ds=pack['decisions'];byindex={d['source_item_index_zero_based']:d for d in ds}
     if (pack['source_id']!=stage.SOURCE or len(ds)!=6 or set(byindex)!=set(range(70,76))
@@ -96,6 +112,9 @@ def verify(pack):
     for d in ds:
         code=d.get('exam_code')
         if d['answer_verified']:
+            expected=extract_original_statement(groups[code]['question']['path'],d['original_item_number'],d['source_page'])
+            if d['official_statement']!=expected:
+                raise ValueError('Item boundary differs from the official original')
             key=(d['original_question_number'],d['original_subitem_number'])if 'original_subitem_number'in d else d['original_item_number']
             if keys[code].get(key)!=d['official_answer']or d['official_answer']not in ['C','E']:
                 raise ValueError('Final key mismatch/annulled item')

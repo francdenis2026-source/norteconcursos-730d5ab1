@@ -16,6 +16,16 @@ class PFContinuationTests(unittest.TestCase):
   m.verify(self.p)
   self.assertEqual([d['original_item_number']for d in self.p['decisions']],[15,16,17,18,21,24])
   self.assertEqual([d['official_answer']for d in self.p['decisions']],list('CECEEE'))
+ def test_next_block_command_rejected(self):
+  d=self.p['decisions'][-1]
+  extra=' Os fragmentos contidos nos itens seguintes, na ordem em que são apresentados, constituem reescrituras sucessivas de parágrafos de notícia assinada por Julita Lemgruber e publicada no Jornal do Brasil'
+  d['official_statement']+=extra
+  d['row']['raw_extraction']=d['official_statement']
+  d['row']['question_text']=d['original_instruction']+'\n\n'+d['official_statement']
+  with self.assertRaisesRegex(ValueError,'boundary'):m.verify(self.p)
+ def test_truncated_statement_rejected(self):
+  d=self.p['decisions'][0];d['official_statement']=d['official_statement'][:100]
+  with self.assertRaisesRegex(ValueError,'boundary'):m.verify(self.p)
  def test_different_final_key_rejected(self):
   self.p['decisions'][0]['official_answer']='E'
   with self.assertRaises(ValueError):m.verify(self.p)

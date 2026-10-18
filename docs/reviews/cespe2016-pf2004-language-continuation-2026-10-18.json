@@ -364,7 +364,7 @@
       "exam_code": "DPF_2004_NAC:cargo19:azul",
       "original_item_number": 24,
       "official_answer": "E",
-      "official_statement": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses. Os fragmentos contidos nos itens seguintes, na ordem em que são apresentados, constituem reescrituras sucessivas de parágrafos de notícia assinada por Julita Lemgruber e publicada no Jornal do Brasil (Internet: <http://www.cesec.ucam.edu.br/artigos.asp>. Acesso em ago./2004). Julgue-os quanto ao emprego do sinal indicativo de crase, à regência, à concordância e à grafia.",
+      "official_statement": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
       "original_instruction": "A respeito do texto acima, julgue os itens subseqüentes.",
       "source_page": 4,
       "answer_verified": true,
@@ -385,8 +385,8 @@
         "exam_board": "CEBRASPE",
         "item_number": 24,
         "subject": "Língua Portuguesa",
-        "question_text": "A respeito do texto acima, julgue os itens subseqüentes.\n\nEstá explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses. Os fragmentos contidos nos itens seguintes, na ordem em que são apresentados, constituem reescrituras sucessivas de parágrafos de notícia assinada por Julita Lemgruber e publicada no Jornal do Brasil (Internet: <http://www.cesec.ucam.edu.br/artigos.asp>. Acesso em ago./2004). Julgue-os quanto ao emprego do sinal indicativo de crase, à regência, à concordância e à grafia.",
-        "raw_extraction": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses. Os fragmentos contidos nos itens seguintes, na ordem em que são apresentados, constituem reescrituras sucessivas de parágrafos de notícia assinada por Julita Lemgruber e publicada no Jornal do Brasil (Internet: <http://www.cesec.ucam.edu.br/artigos.asp>. Acesso em ago./2004). Julgue-os quanto ao emprego do sinal indicativo de crase, à regência, à concordância e à grafia.",
+        "question_text": "A respeito do texto acima, julgue os itens subseqüentes.\n\nEstá explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
+        "raw_extraction": "Está explícita no último parágrafo do texto a seguinte relação de causa e conseqüência: o perito examina o local do crime, faz o exame externo da vítima e coleta qualquer tipo de vestígio porque precisa levar as evidências para análise nos laboratórios forenses.",
         "official_answer": "E",
         "source_page": 4,
         "content_status": "active",
@@ -489,5 +489,65 @@
         "original_preserved": true
       }
     ]
+  },
+  "boundary_correction": {
+    "item_number": 24,
+    "reason": "Comando dos itens 25–28 anexado indevidamente ao final do item 24; limite corrigido conforme original.",
+    "official_answer_changed": false,
+    "original_private_extraction_changed": false,
+    "status": "corrected_and_readback_confirmed",
+    "verification": {
+      "checked_at": "2026-10-18T03:27:27.754943+00:00",
+      "corrected_item": 24,
+      "answer_unchanged": true,
+      "private_original_preserved": true,
+      "checks": [
+        {
+          "item_number": 15,
+          "active": true,
+          "answer": "C",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 16,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 17,
+          "active": true,
+          "answer": "C",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 18,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 21,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        },
+        {
+          "item_number": 24,
+          "active": true,
+          "answer": "E",
+          "complete_support_confirmed": true,
+          "official_item_boundary_confirmed": true
+        }
+      ],
+      "active_syllabus_confirmed": true,
+      "legal_currency_audit_applicable": false,
+      "historical_context_required": true
+    }
   }
 }
