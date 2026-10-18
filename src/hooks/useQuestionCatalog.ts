@@ -253,6 +253,43 @@ export function useQuestionCatalog(userId: string | undefined, enabled: boolean)
               category: String(row["career_category"] || ""),
             })),
         ];
+        // Etiquetas do filtro "Atual" (question_currency). Tabela ainda não criada ou sem permissão: segue sem elas.
+        try {
+          const rows = await queryClient.fetchQuery({
+            queryKey: ["question-currency", userId],
+            staleTime: 300_000,
+            retry: 0,
+            queryFn: () =>
+              fetchAllRows<Record<string, unknown>>((from, to) =>
+                supabase
+                  .from("question_currency" as never)
+                  .select("question_table,question_id,tags,note")
+                  .order("question_id")
+                  .range(from, to) as unknown as PromiseLike<{
+                  data: Record<string, unknown>[] | null;
+                  error: unknown;
+                }>,
+              ),
+          });
+          const marks = new Map<string, { tags: string[]; note?: string }>();
+          for (const row of rows) {
+            const tags = Array.isArray(row["tags"]) ? (row["tags"] as string[]) : [];
+            if (!tags.length) continue;
+            const note = row["note"] ? String(row["note"]) : undefined;
+            marks.set(`${String(row["question_table"])}:${String(row["question_id"])}`, {
+              tags,
+              ...(note ? { note } : {}),
+            });
+          }
+          for (const question of built) {
+            const mark = question.table ? marks.get(`${question.table}:${question.id}`) : undefined;
+            if (!mark) continue;
+            question.currencyTags = mark.tags;
+            if (mark.note) question.currencyNote = mark.note;
+          }
+        } catch {
+          /* Marcação de atualidade é um recurso extra: nunca impede o treino. */
+        }
         if (active) {
           setCatalog(built);
           setHidden(hiddenCount);

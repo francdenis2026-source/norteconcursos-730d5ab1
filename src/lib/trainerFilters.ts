@@ -20,6 +20,13 @@ export function trainerBoard(value?: string) {
   return !value || value.trim().toLowerCase() === "all" ? "all" : canonicalBoard(value);
 }
 
+// "currency" é o filtro inteligente "Atual": "recent" = qualquer questão com tema novo ou prova recente; ou uma etiqueta
+// específica (ex.: "IA e tecnologia"). Opcional para não quebrar quem monta os filtros sem ele.
+export const CURRENCY_ANY = "recent";
+// "Prova recente" (exame dos últimos anos) é só um recorte por data: não entra no "tudo que é atual", que mostra
+// conteúdo novo de verdade (lei alterada, IA, reforma tributária...). Continua selecionável à parte.
+const RECENT_EXAM_TAG = "Prova recente";
+const hasNewContent = (tags?: string[]) => !!tags?.some((tag) => tag !== RECENT_EXAM_TAG);
 export type TrainerFilters = Record<
   | "area"
   | "topic"
@@ -35,7 +42,7 @@ export type TrainerFilters = Record<
   | "state"
   | "category",
   string
->;
+> & { currency?: string };
 
 // An empty combination stays empty: selecting a board must never fall back to another.
 export function filterTrainerQuestions(
@@ -61,7 +68,12 @@ export function filterTrainerQuestions(
           : f.reviewed === "pending" && !hasReviewedExplanation(q))) &&
       (f.difficulty === "all" || q.difficulty === f.difficulty) &&
       (f.state === "all" || q.state === f.state) &&
-      (f.category === "all" || q.category === f.category),
+      (f.category === "all" || q.category === f.category) &&
+      (f.currency === undefined ||
+        f.currency === "all" ||
+        (f.currency === CURRENCY_ANY
+          ? hasNewContent(q.currencyTags)
+          : !!q.currencyTags?.includes(f.currency))),
   );
 }
 
@@ -78,6 +90,7 @@ export const TRAINER_FACET_KEYS = [
   "source",
   "reviewed",
   "difficulty",
+  "currency",
 ] as const;
 export function trainerFilterFacets(
   catalog: Question[],
@@ -103,6 +116,13 @@ export function trainerFilterFacets(
     );
     for (const q of rows) {
       if (key === "exam" && !isAppliedExamQuestion(q)) continue;
+      if (key === "currency") {
+        // Uma questão pode ter várias etiquetas; "recent" conta cada questão atual uma única vez.
+        const tags = q.currencyTags ?? [];
+        if (hasNewContent(tags)) map.set(CURRENCY_ANY, (map.get(CURRENCY_ANY) ?? 0) + 1);
+        for (const tag of tags) map.set(tag, (map.get(tag) ?? 0) + 1);
+        continue;
+      }
       const rawTopic = topics.get(q.id);
       const value =
         key === "exam"
