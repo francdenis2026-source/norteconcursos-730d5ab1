@@ -1,16 +1,16 @@
 /* Homepage styles are independent of the historical .lp/.hp layouts. */
 .home,
 .home-menu {
-  --home-bg: #f7f8fa;
-  --home-surface: #ffffff;
-  --home-tint: #eef2f6;
-  --home-text: #15263c;
-  --home-muted: #58677a;
-  --home-line: #dce3eb;
-  --home-accent: #80551a;
-  --home-accent-bg: #f6eddc;
-  --home-navy: #102239;
-  --home-gold: #e6bf70;
+  --home-bg: #f7f4ec;
+  --home-surface: #fffdf8;
+  --home-tint: #eee9dd;
+  --home-text: #213238;
+  --home-muted: #64727a;
+  --home-line: #ded8ca;
+  --home-accent: #8d641f;
+  --home-accent-bg: #f4ead4;
+  --home-navy: #183c43;
+  --home-gold: #d9ad55;
   color: var(--home-text);
   background: var(--home-bg);
   font-family: "Archivo", "Inter", sans-serif;
@@ -20,14 +20,14 @@
 }
 .dark .home,
 .dark .home-menu {
-  --home-bg: #0e1827;
-  --home-surface: #152236;
-  --home-tint: #111f31;
-  --home-text: #edf2f8;
-  --home-muted: #acb9ca;
-  --home-line: #2b3a4e;
-  --home-accent: #e6bf70;
-  --home-accent-bg: #302c27;
+  --home-bg: #101b1d;
+  --home-surface: #18282b;
+  --home-tint: #203436;
+  --home-text: #f3eee3;
+  --home-muted: #b8c2be;
+  --home-line: #34494b;
+  --home-accent: #e2b961;
+  --home-accent-bg: #353126;
 }
 .home *,
 .home *::before,
