@@ -21,7 +21,7 @@ export function showAchievementNotification(achievement: Achievement) {
 
       return (
         <div className="max-w-md w-full bg-card border-2 border-emerald-500/50 shadow-2xl rounded-xl pointer-events-auto p-4 flex items-center gap-4 animate-in fade-in slide-in-from-top-4">
-          <div className="bg-emerald-500/10 p-3 rounded-full animate-bounce">
+          <div className="bg-emerald-500/10 p-3 rounded-full animate-pulse">
             {getIcon(achievement.code)}
           </div>
           <div className="flex-1">
