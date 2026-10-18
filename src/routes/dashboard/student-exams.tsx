@@ -1066,7 +1066,7 @@ function DisciplineAnalysis({
     return (
       <div className="space-y-3">
         <h3 className="flex items-center gap-2 text-sm font-black">
-          <Brain className="h-4 w-4 text-violet-600" /> {title}
+          <Brain className="h-4 w-4 text-amber-600" /> {title}
         </h3>
         <p className="text-xs text-muted-foreground">{scope}</p>
         {body}
@@ -1076,7 +1076,7 @@ function DisciplineAnalysis({
     <Card className="border-slate-200 shadow-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
-          <Brain className="h-5 w-5 text-violet-600" /> {title}
+          <Brain className="h-5 w-5 text-amber-600" /> {title}
         </CardTitle>
         <CardDescription>{scope}</CardDescription>
       </CardHeader>

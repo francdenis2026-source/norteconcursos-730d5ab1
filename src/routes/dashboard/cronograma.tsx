@@ -425,7 +425,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
       </div>
       {running && <DayRun planId={plan.id} dateKey={dateKey} title={plan.name} cfg={cfg} steps={todaySteps} progress={progress} setTopic={setTopic} theoryOf={theoryOf} onClose={() => setRunning(false)} />}
       {next && (
-        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-indigo-50 p-3 text-sm dark:from-sky-950/30 dark:to-indigo-950/30">
+        <div className="flex flex-wrap items-center gap-3 rounded-xl border border-sky-300 bg-gradient-to-r from-sky-50 to-amber-50 p-3 text-sm dark:from-sky-950/30 dark:to-amber-950/30">
           <Target className="h-4 w-4 text-sky-600" />
           <span className="min-w-0 flex-1"><b>Próximo passo:</b> {next.d.nome} — {next.t.t}</span>
           <ToolLinks nome={next.d.nome} theory={theoryOf(next.d.nome, next.t.t)} />

@@ -84,10 +84,10 @@ export function TrainerLearningMaterials({
                   {detail.data.flashcards.slice(0, 3).map((card, index) => (
                     <details
                       key={`${chosen.slug}-${index}`}
-                      className="rounded-lg border border-violet-200 bg-violet-50 p-3 text-sm dark:border-violet-800 dark:bg-violet-950/30"
+                      className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm dark:border-amber-800 dark:bg-amber-950/30"
                     >
                       <summary className="cursor-pointer font-medium">{card.f}</summary>
-                      <p className="mt-3 border-t border-violet-200 pt-3 leading-6 dark:border-violet-800">
+                      <p className="mt-3 border-t border-amber-200 pt-3 leading-6 dark:border-amber-800">
                         {card.b}
                       </p>
                     </details>

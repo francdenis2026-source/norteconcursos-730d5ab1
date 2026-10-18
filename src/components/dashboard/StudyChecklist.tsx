@@ -50,7 +50,7 @@ const KIND_STYLE: Record<BlockKind, string> = {
   Podcast: "border-fuchsia-500/40 bg-fuchsia-500/10",
   Questões: "border-emerald-500/40 bg-emerald-500/10",
   "Revisão de erros": "border-amber-500/40 bg-amber-500/10",
-  Redação: "border-violet-500/40 bg-violet-500/10",
+  Redação: "border-amber-500/40 bg-amber-500/10",
   Simulado: "border-rose-500/40 bg-rose-500/10",
 };
 const inRoom = (k: BlockKind) => k === "Teoria" || k === "Flashcards" || k === "Questões";

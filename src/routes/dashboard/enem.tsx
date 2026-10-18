@@ -174,7 +174,7 @@ function EnemPage() {
             <BrainCircuit className="h-4 w-4 !text-emerald-500" /> Questões
           </TabsTrigger>
           <TabsTrigger value="checklist" className="gap-1.5">
-            <ListChecks className="h-4 w-4 !text-violet-500" /> Checklist
+            <ListChecks className="h-4 w-4 !text-amber-500" /> Checklist
           </TabsTrigger>
         </TabsList>
 
@@ -329,7 +329,7 @@ const HUE_BAR: Record<EnemArea["hue"], string> = {
   orange: "bg-orange-500",
   emerald: "bg-emerald-500",
   sky: "bg-sky-500",
-  violet: "bg-violet-500",
+  violet: "bg-amber-500",
   teal: "bg-teal-500",
   gold: "bg-amber-400",
 };

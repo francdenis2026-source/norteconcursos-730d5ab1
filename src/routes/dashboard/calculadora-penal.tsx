@@ -150,7 +150,7 @@ const Result = ({
     className={cn(
       "penal-result rounded-xl border-l p-4",
       tone === "primary"
-        ? "border-l-indigo-500 bg-indigo-50/60 dark:bg-indigo-950/20"
+        ? "border-l-amber-500 bg-amber-50/60 dark:bg-amber-950/20"
         : "border-l-amber-500 bg-amber-50 dark:bg-amber-950/20",
     )}
   >

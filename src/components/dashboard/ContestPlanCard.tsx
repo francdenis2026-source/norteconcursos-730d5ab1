@@ -169,7 +169,7 @@ export function ContestPlanCard({
 
           <section className="space-y-3">
             <h3 className="flex items-center gap-2 text-sm font-black">
-              <Brain className="h-4 w-4 text-violet-600" /> Análise de todas as edições
+              <Brain className="h-4 w-4 text-amber-600" /> Análise de todas as edições
             </h3>
             <p className="text-xs text-muted-foreground">
               {detailedEditions} de {editions.length} edição(ões) têm detalhe por questão; as demais

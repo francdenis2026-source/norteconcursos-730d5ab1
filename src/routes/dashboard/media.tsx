@@ -419,7 +419,7 @@ function MediaCenterPage() {
             <PlayCircle className="h-4 w-4 !text-rose-500" /> Playlists por disciplina
           </TabsTrigger>
           <TabsTrigger value="assuntos" className="gap-1.5">
-            <ListVideo className="h-4 w-4 !text-violet-500" /> Por assunto do edital
+            <ListVideo className="h-4 w-4 !text-amber-500" /> Por assunto do edital
           </TabsTrigger>
           <TabsTrigger value="enem" className="gap-1.5">
             <GraduationCap className="h-4 w-4 !text-sky-500" /> ENEM

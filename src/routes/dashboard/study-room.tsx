@@ -835,7 +835,7 @@ function StudyRoomPage() {
                 to="/dashboard/library"
                 className="flex items-center gap-2 rounded-lg border p-2.5 font-medium hover:border-primary/50"
               >
-                <Library className="h-4 w-4 text-violet-600" /> Biblioteca completa
+                <Library className="h-4 w-4 text-amber-600" /> Biblioteca completa
               </Link>
             </CardContent>
           </Card>

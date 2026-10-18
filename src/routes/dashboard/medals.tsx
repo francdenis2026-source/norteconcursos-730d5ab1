@@ -92,9 +92,9 @@ const TRACKS: Track[] = [
     unit: "simulados",
     icon: Trophy,
     tone: {
-      tile: "bg-violet-500/12",
-      text: "text-violet-600 dark:text-violet-400",
-      bar: "bg-violet-500",
+      tile: "bg-amber-500/12",
+      text: "text-amber-600 dark:text-amber-400",
+      bar: "bg-amber-500",
     },
     to: "/dashboard/mock-exams",
     cta: "Fazer um simulado",
