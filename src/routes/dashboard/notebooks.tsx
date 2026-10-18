@@ -286,7 +286,7 @@ function NotebooksPage() {
           {filteredNotebooks.map((nb) => (
             <Card
               key={nb.id}
-              className="hover:border-secondary/50 transition-all group shadow-sm hover:shadow-md"
+              className="group shadow-sm transition-[border-color,box-shadow] hover:border-secondary/50 hover:shadow-md"
             >
               <CardHeader className="pb-2 flex flex-row items-start justify-between space-y-0">
                 <div className="flex items-center gap-3">

@@ -232,7 +232,7 @@ function TrackCard({
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-muted">
           <div
-            className={cn("h-full rounded-full transition-all", track.tone.bar)}
+            className={cn("h-full rounded-full transition-[width]", track.tone.bar)}
             style={{ width: `${pct}%` }}
           />
         </div>

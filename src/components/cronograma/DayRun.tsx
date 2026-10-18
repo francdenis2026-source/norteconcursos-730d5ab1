@@ -269,7 +269,7 @@ export function DayRun({
             </span>
             <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/25">
               <div
-                className="h-full rounded-full bg-white transition-all"
+                className="h-full rounded-full bg-white transition-[width]"
                 style={{ width: `${studySteps ? (100 * doneSteps) / studySteps : 0}%` }}
               />
             </div>

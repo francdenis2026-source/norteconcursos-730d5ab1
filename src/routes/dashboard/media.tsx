@@ -85,7 +85,7 @@ function VideosTab() {
               setSelected(null);
             }}
             className={cn(
-              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:-translate-y-px hover:shadow-sm",
+              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-[border-color,transform,box-shadow] hover:-translate-y-px hover:shadow-sm",
               discipline === d
                 ? "border-primary bg-primary text-primary-foreground"
                 : "hover:border-primary/50",
@@ -179,7 +179,7 @@ function TopicsTab() {
               setVideo(null);
             }}
             className={cn(
-              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:-translate-y-px hover:shadow-sm",
+              "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-[border-color,transform,box-shadow] hover:-translate-y-px hover:shadow-sm",
               subject === s
                 ? "border-primary bg-primary text-primary-foreground"
                 : "hover:border-primary/50",

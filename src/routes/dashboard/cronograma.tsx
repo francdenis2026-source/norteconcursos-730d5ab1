@@ -397,7 +397,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <div className="grid gap-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
           <div>
             <p className="text-xl font-black">{plan.name}</p>
-            <div className="mt-3 flex items-center gap-2"><div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/25"><div className="h-full rounded-full bg-white transition-all" style={{ width: `${pct}%` }} /></div><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
+            <div className="mt-3 flex items-center gap-2"><div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/25"><div className="h-full rounded-full bg-white transition-[width]" style={{ width: `${pct}%` }} /></div><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
             <p className="mt-1 text-xs text-white/80">{done} de {total} conteúdos concluídos</p>
           </div>
           <Stat label="Estudado (7 dias)" value={studiedMin === null ? "…" : fmtH(studiedMin)} sub={`meta ${cfg.weeklyHours} h`} />

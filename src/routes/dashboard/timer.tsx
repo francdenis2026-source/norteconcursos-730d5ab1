@@ -184,7 +184,7 @@ function TimerPage() {
                   strokeDasharray={753.98}
                   strokeDashoffset={753.98 * (1 - progress / 100)}
                   className={cn(
-                    "transition-all duration-1000",
+                    "transition-[stroke-dashoffset,color] duration-1000",
                     MODES[mode].color.replace("text-", "stroke-"),
                   )}
                   strokeLinecap="round"

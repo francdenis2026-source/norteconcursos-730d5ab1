@@ -522,7 +522,7 @@ function FocusCard({
                 aria-selected={pomo.mode === m}
                 onClick={() => pomo.setMode(m)}
                 className={cn(
-                  "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-all",
+                  "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-bold transition-[color,background-color,box-shadow]",
                   pomo.mode === m
                     ? m === 5
                       ? "bg-emerald-500 text-white shadow"
@@ -928,7 +928,7 @@ function ChecklistCard({
         </CardDescription>
         <div className="h-2 overflow-hidden rounded-full bg-muted">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-amber-400 to-emerald-500 transition-all"
+            className="h-full rounded-full bg-gradient-to-r from-amber-400 to-emerald-500 transition-[width]"
             style={{ width: `${pct}%` }}
           />
         </div>

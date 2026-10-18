@@ -540,7 +540,7 @@ function StudyPlanPage() {
                   onClick={() => setCareer(id)}
                   aria-pressed={career === id}
                   className={cn(
-                    "rounded-xl px-3 py-2.5 text-left transition-all",
+                    "rounded-xl px-3 py-2.5 text-left transition-[color,background-color,box-shadow]",
                     career === id
                       ? "bg-primary text-primary-foreground shadow-md"
                       : "hover:bg-muted",
