@@ -25,7 +25,7 @@ lock = threading.Lock()
 MAX_CACHE_BYTES = 32 * 1024 * 1024
 
 
-def chunks(text, limit=32):
+def chunks(text, limit=20):
     """Bound intermediate ONNX allocations, including long words and numbers."""
     words = re.findall(r"\S+", text)
     current = ""
@@ -53,7 +53,7 @@ async def lifespan(_app):
     options.enable_cpu_mem_arena = False
     options.enable_mem_pattern = False
     options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_DISABLE_ALL
-    session = ort.InferenceSession(str(MODEL_DIR / "model.onnx"), sess_options=options,
+    session = ort.InferenceSession(str(MODEL_DIR / os.environ.get("KOKORO_MODEL_FILE", "model.onnx")), sess_options=options,
                                    providers=["CPUExecutionProvider"])
     engine = Kokoro.from_session(session, str(MODEL_DIR / "voices.bin"))
     CACHE_DIR.mkdir(parents=True, exist_ok=True)

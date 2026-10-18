@@ -7,7 +7,7 @@ import urllib.request
 ROOT = Path(os.environ.get("KOKORO_MODEL_DIR", "models"))
 RELEASE = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.1/"
 FILES = {
-    "model.onnx": ("kokoro-v1.0.int8.onnx", "ae315a79b623f244700e4afb9246c46a26066782e049ba174bf3ba433970ee9c"),
+    "model.onnx": ("https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX/resolve/1939ad2a8e416c0acfeecc08a694d14ef25f2231/onnx/model_quantized.onnx", "fbae9257e1e05ffc727e951ef9b9c98418e6d79f1c9b6b13bd59f5c9028a1478"),
     "voices.bin": ("voices-v1.0.bin", "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d"),
 }
 
@@ -19,7 +19,7 @@ def main():
         if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == expected:
             continue
         temp = path.with_suffix(".download")
-        request = urllib.request.Request(RELEASE + asset, headers={"User-Agent": "norte-kokoro-build/1"})
+        request = urllib.request.Request(asset if asset.startswith("https://") else RELEASE + asset, headers={"User-Agent": "norte-kokoro-build/1"})
         checksum = hashlib.sha256()
         try:
             with urllib.request.urlopen(request, timeout=120) as response, temp.open("wb") as output:

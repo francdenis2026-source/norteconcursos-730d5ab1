@@ -4,8 +4,9 @@ Serviço Python independente para leitura de questões com Kokoro ONNX INT8,
 CPU e uma única inferência por vez. Não precisa de cartão, chave de modelo,
 Hugging Face token, PyTorch ou GPU. A hospedagem tem seus próprios limites.
 
-Vozes: `pf_dora`, `pm_alex`, `pm_santa`. Modelo/vozes oficiais: release
-`model-files-v1.1` de thewh1teagle/kokoro-onnx, com SHA-256 verificado no build.
+Vozes: `pf_dora`, `pm_alex`, `pm_santa`. Modelo ONNX de onnx-community fixado na revisão
+`1939ad2a8e416c0acfeecc08a694d14ef25f2231`; vozes do release
+`model-files-v1.1` de thewh1teagle/kokoro-onnx. Ambos com SHA-256 verificado no build.
 Código kokoro-onnx MIT; pesos Kokoro Apache-2.0. Preservar as licenças dos autores.
 
 ## Render gratuito
@@ -18,7 +19,7 @@ Código kokoro-onnx MIT; pesos Kokoro Apache-2.0. Preservar as licenças dos aut
 - Health: `/health`.
 - Plano: `free`. Sem disco pago. Pesos fazem parte do build.
 
-Não executar mais de um worker. Textos são divididos em trechos de até 32
+Não executar mais de um worker. Textos são divididos em trechos de até 20
 caracteres para limitar alocações intermediárias. Texto máximo de 4096 caracteres;
 o serviço interrompe a geração após o limite de tempo entre trechos. Uma
 requisição concorrente recebe 503 em vez de enfileirar mais inferências.

@@ -30,7 +30,7 @@ class SpeechTests(unittest.TestCase):
     def test_chunking_bounds_long_words_and_preserves_text(self):
         for text in ['Uma questão de português, com alternativas e comentários.', 'a' * 130]:
             parts = list(server.chunks(text))
-            self.assertTrue(all(0 < len(part) <= 32 for part in parts))
+            self.assertTrue(all(0 < len(part) <= 20 for part in parts))
             self.assertEqual(''.join(parts).replace(' ', ''), text.replace(' ', ''))
     def test_wav_and_cache_avoid_repeat_inference(self):
         request = server.SpeechRequest(input='Leia esta questão e suas alternativas com atenção.')
