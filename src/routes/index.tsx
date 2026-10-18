@@ -30,6 +30,7 @@ import {
   ShieldCheck,
   Target,
   Trophy,
+  Volume2,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
@@ -119,6 +120,11 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[]
     icon: LineChart,
     title: "Análise de desempenho",
     text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
+  },
+  {
+    icon: Volume2,
+    title: "Leitura em voz alta",
+    text: "Ouça questões e materiais em português enquanto revisa, treina no deslocamento ou descansa os olhos. A voz natural do VoiceStudio é uma vantagem dos planos pagos.",
   },
 ];
 
@@ -346,6 +352,21 @@ function Index() {
                 </details>
               ))}
             </div>
+            <article className="home-voice-promo" aria-labelledby="home-voice-title">
+              <div className="home-voice-promo__icon"><Volume2 aria-hidden="true" /></div>
+              <div className="home-voice-promo__copy">
+                <span className="home-eyebrow">Novo recurso para estudar melhor</span>
+                <h3 id="home-voice-title">Sua preparação também pode ser ouvida.</h3>
+                <p>
+                  Nos planos pagos, o VoiceStudio transforma questões e materiais em áudio com voz
+                  natural em português. Revise no trânsito, na academia ou quando seus olhos pedirem
+                  uma pausa. No plano Gratuito, você ainda conta com a leitura nativa do navegador.
+                </p>
+              </div>
+              <a className="home-button home-button--gold" href="#planos">
+                Conhecer os planos <ArrowRight aria-hidden="true" />
+              </a>
+            </article>
           </div>
         </section>
 

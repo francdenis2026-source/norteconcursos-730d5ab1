@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, Crown, X } from "lucide-react";
+import { Check, Crown, Volume2, X } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -131,6 +131,29 @@ function SubscriptionsPage() {
           planName={SUBSCRIPTION_PLANS.find((p) => p.id === tier)?.name ?? "Gratuito"}
         />
       )}
+
+      <Card className="border-primary/30 bg-primary/5">
+        <CardContent className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-start gap-3">
+            <span className="rounded-xl bg-primary/10 p-2 text-primary">
+              <Volume2 className="h-5 w-5" aria-hidden="true" />
+            </span>
+            <div>
+              <p className="font-semibold">Estude também ouvindo</p>
+              <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+                A leitura em voz alta com voz natural em português é uma vantagem dos planos pagos.
+                Ouça questões e materiais enquanto revisa ou descansa os olhos.
+              </p>
+            </div>
+          </div>
+          <a
+            href="/#planos"
+            className="inline-flex shrink-0 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            Comparar planos
+          </a>
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader className="pb-2">
