@@ -13,7 +13,7 @@
   --home-gold: #e6bf70;
   color: var(--home-text);
   background: var(--home-bg);
-  font-family: "Inter", sans-serif;
+  font-family: "Archivo", "Inter", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
