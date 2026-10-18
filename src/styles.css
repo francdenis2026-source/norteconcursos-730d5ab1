@@ -12529,3 +12529,8 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 .dark .app-shell .app-topbar {
   border-bottom-color: color-mix(in srgb, var(--brass) 28%, transparent);
 }
+
+/* Scroll runs continuously; changing header height every frame is unnecessary layout work. */
+.lp-header__bar {
+  transition: none;
+}
