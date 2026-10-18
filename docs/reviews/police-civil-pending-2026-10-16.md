@@ -321,3 +321,20 @@ Dry-run real, CAS e readback passaram; outros2.967 registros PC preservados e11 
 Restam12 questões PC em revisão: RO8 fora do escopo, AM Investigador40, RJ Delegado48/75 e MG TPAG48. Total:2.627 ativas,280 arquivadas,37 anuladas,12 obsoletas e12 em revisão;2.185 elegíveis no filtro, sem certificação editorial integral. Campanha32:20 disposições concluídas(15ativas,4obsoletas,1arquivada editorialmente),12 pendentes.
 
 Limitações verificadas nesta rodada: Planalto503 para leis8625/12830; CPC/CFC e destinos técnicos bloqueados; NCBI retornou tela de verificação de navegador, sem acessar publicação ou contornar verificação. Consulta SCON redirecionou à página inicial inclusive para furto usado como controle: ausência de resultado não foi tratada como ausência de jurisprudência. As quatro pendências restantes não foram arquivadas por mera dificuldade de acesso a fontes.
+
+
+## Rondônia — história, transcrição e divergência de chaves — 17/10/2026 (Brasília)
+
+Duas disposições das12 pendências foram concluídas: **Delegado9(CG2) ativo, letraB; Datiloscopista29(CG1) arquivado editorialmente, letraD preservada.** O arquivo não é anulação oficial da banca nem troca de resposta.
+
+Novas evidências primárias: Governo de Rondônia, “História de Rondônia: governador Paulo Leal inspirou JK para abrir a rodovia BR-29, depois364” (17/12/2018) e “Estado de Rondônia completa39 anos concretizando sonhos acalentados desde1960” (04/01/2021). Fontes documentam a abertura no períodoJK, a Caravana Ford de1960 e o processo posterior de ocupação/agropecuária. Os números demográficos históricos não foram ensinados como atuais.
+
+Cotejo visual confirmou que **as alternativasA/B do Delegado9 estavam invertidas na importação**: o próprio cadernoCG2 coloca na letraB a proposição da BR-029/fronteira agrícola, exatamente a letra do definitivo. Registrados dois documentos oficiaisCG2 ausentes, preservando os links antigos; reparada a proveniência para página2 e restaurada a ordenação em operações separadas com CAS. Texto bruto e letraB preservados. Inserido somente um tópico real ausente do item23.2.3 do edital, página54, para História e Geografia de Rondônia; tópico provisório anterior preservado. Comentário inclui explicação, exemplo e exercício respondido.
+
+No Datiloscopista29, a proposição da BR-029 é alternativaA, mas o definitivoCG1 registraD. O conteúdo das proposições é o mesmo no cadernoCG2, cuja chaveB corresponde à proposição histórica corroborada pelas fontes. Essa divergência documental concreta inviabiliza apresentar a chaveD como solução única confiável. Não se transferiu a letra do outro cargo nem se atribuiu anulação à banca; mantidos todos os campos originais além do status editorial, nota e data de revisão.
+
+Dry-runs reais, CAS e readback passaram. O primeiro preflight de publicação exigiu declaração explícita da reclassificação para História e Geografia, então foi incluída a evidência do programa já conferido antes da gravação de status; a salvaguarda não foi removida. **33 testes pertinentes passaram.** Outros2.966 registros PC e todos os metadados preexistentes permaneceram iguais. Somente duas fontes e um tópico foram inseridos por este lote;25 inclusões concorrentes de metadados foram preservadas e separadas no relatório. Sem alteração de aplicação; build não necessário.
+
+Atual:2.628 ativos,281 arquivados,37 anulados,12 obsoletos e10 em revisão;2.186 elegíveis no filtro, sem certificação editorial integral de todos. Restam RO6,RJ2,AM1 eMG1. Na campanha32:22 disposições concluídas(16ativas,4obsoletas,2arquivadas editorialmente),10 retidas. Não foram declaradas concluídas as demais questões das12 solicitadas.
+
+Os acessos CPC e pesquisa STF continuaram bloqueados; a biblioteca OPAS retornou erro de servidor e o endereço original do manual excedeu o tempo da consulta. A liberação de rede permanece preparada conforme relatório `docs/reviews/pc-four-pending-access-2026-10-17.md`; não foi presumida aplicada. Não houve novos arquivamentos por mera indisponibilidade de fonte.

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-17T23:19:12.279Z",
-  "scope": "All32 baseline records triaged;20 individual dispositions complete (15active,4obsolete,1editorially archived),12 retain incomplete substantive validation. Editorial archive is not official annulment or approval of another answer.",
-  "resolved": 20,
-  "published_active": 15,
+  "checked_at": "2026-10-18T02:18:28.784Z",
+  "scope": "All32 baseline records triaged;22 individual dispositions complete (16active,4obsolete,2editorially archived),10 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
+  "resolved": 22,
+  "published_active": 16,
   "published_obsolete": 4,
-  "retained_under_review": 12,
+  "retained_under_review": 10,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -265,9 +265,9 @@
       "item_number": 29,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "PDF e definitivo do próprio cargo confirmam29D. A divergência material com a leitura histórica permanece; não transplantar letra de Delegado nem substituir o gabarito por suposição."
+      "after_status": "archived",
+      "decision": "Cotejo histórico e documental individual; docs/question-review-ro-history-2026-10-17.json",
+      "comment_sha256": "5f4a63c7ba2b1b50495c46d131ab2734bdb4359b9fb4de7a75f3140c8e07b704"
     },
     {
       "id": "c12a8254-148f-4b63-b48c-5bfaecccdb6b",
@@ -342,9 +342,9 @@
       "item_number": 9,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Caderno de Delegado troca as alternativas A/B em relação à importação. Página oficial de história obtida não certifica todos os detalhes da alternativa correta, inclusive marco Juscelino. Reparar identidade e conferir fonte histórica específica antes de ativar."
+      "after_status": "active",
+      "decision": "Cotejo histórico e documental individual; docs/question-review-ro-history-2026-10-17.json",
+      "comment_sha256": "5f556186b040bd3a57526c7440508920663876914b37aaffd73fc3c707d6fa78"
     },
     {
       "id": "f47b64c0-e6d0-4e57-a711-bc144b132506",
@@ -376,5 +376,5 @@
     "pending": 16,
     "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
   },
-  "archived_editorially": 1
+  "archived_editorially": 2
 }
