@@ -195,6 +195,63 @@
   transform: none;
   opacity: 0.85;
 }
+.home-compare {
+  margin-top: 26px;
+  overflow-x: auto;
+  border: 1px solid var(--home-line);
+  border-radius: 10px;
+  background: var(--home-bg);
+}
+.home-compare table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.home-compare caption {
+  padding: 14px 16px 6px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 15px;
+}
+.home-compare th,
+.home-compare td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--home-line);
+  text-align: center;
+  vertical-align: middle;
+}
+.home-compare thead th {
+  font-weight: 800;
+}
+.home-compare thead th small {
+  display: block;
+  color: var(--home-accent);
+  font-size: 10px;
+  font-weight: 700;
+}
+.home-compare tbody th {
+  text-align: left;
+  font-weight: 600;
+}
+.home-compare td svg {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+  color: var(--home-accent);
+}
+.home-compare td svg + span {
+  margin-left: 6px;
+  font-weight: 700;
+}
+.home-compare td:has(> svg.lucide-minus) svg {
+  color: var(--home-muted);
+  opacity: 0.55;
+}
+.home-compare .is-trial {
+  background: var(--home-accent-bg);
+}
 .home-plans__notice {
   display: flex;
   align-items: center;

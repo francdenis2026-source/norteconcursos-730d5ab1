@@ -370,7 +370,7 @@ function AuthPage() {
                 <p className="auth-trial" role="note">
                   <Sparkles aria-hidden="true" />
                   <span>
-                    <strong>{TESTING_DAYS} dias com tudo do plano Essencial</strong>, sem cartão.
+                    <strong>{TESTING_DAYS} dias com a plataforma liberada (plano Plus)</strong>, sem cartão.
                     Depois, sua conta segue no plano Gratuito.
                   </span>
                 </p>

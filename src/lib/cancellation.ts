@@ -23,11 +23,15 @@ const squash = (value: string) => value.trim().replace(/\s+/g, " ").toUpperCase(
 export const phraseMatches = (typed: string) => squash(typed) === CANCEL_PHRASE;
 
 /**
- * Só quem tem assinatura paga pode cancelar. Na fase de testes todos usam o Essencial sem pagar:
+ * Só quem tem assinatura paga pode cancelar. Na fase de testes todos usam o Plus sem pagar:
  * Gratuito/Essencial sem vencimento definido não é assinatura.
  */
-export function isPaidSubscriber(tier: string, expiresAt?: string | null): boolean {
-  if (tier === "free") return false;
+export function isPaidSubscriber(
+  tier: string,
+  expiresAt?: string | null,
+  onTrial = false,
+): boolean {
+  if (tier === "free" || onTrial) return false;
   if (TESTING_PHASE && isTestingTier(tier) && !expiresAt) return false;
   return true;
 }

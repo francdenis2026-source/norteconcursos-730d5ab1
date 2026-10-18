@@ -30,7 +30,7 @@ export function planValue(key: string, f: TierFeature | undefined): string | nul
 export const FAQ: [string, string][] = [
   [
     "Como funciona o período de testes?",
-    `Por ${TESTING_DAYS} dias a plataforma está aberta e gratuita: ao criar a conta você usa os recursos do plano Essencial, sem cartão e sem cobrança.`,
+    `Por ${TESTING_DAYS} dias a plataforma está aberta e gratuita: ao criar a conta você usa tudo do plano Plus (só a análise das suas provas, exclusiva do Premium, fica de fora), sem cartão e sem cobrança.`,
   ],
   [
     "O que acontece quando os 30 dias terminam?",

@@ -19,7 +19,6 @@ import {
   PAYMENTS_NOTICE,
   TESTING_NOTICE,
   TESTING_PHASE,
-  isTestingTier,
 } from "@/lib/launch.config";
 import { PageHero } from "@/components/dashboard/PageHero";
 
@@ -120,8 +119,8 @@ function SubscriptionsPage() {
 
       {!PAYMENTS_ENABLED && (
         <p role="status" className="text-sm text-muted-foreground">
-          {TESTING_PHASE && isTestingTier(tier) && user?.plan_ends_at
-            ? "Fase de testes: o plano Essencial é gratuito para todos. Os planos pagos serão ativados em breve."
+          {TESTING_PHASE && user?.on_trial && user?.plan_ends_at
+            ? "Fase de testes: o plano Plus é gratuito para todos, com tudo da plataforma exceto a análise das suas provas. Os planos pagos serão ativados em breve."
             : PAYMENTS_NOTICE}
         </p>
       )}
