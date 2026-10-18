@@ -5,7 +5,12 @@
 export interface BancaQuestion {
   board: string;
   contest: string;
+  /** Cargo unificado (ver unifiedCareer): o mesmo cargo com nomes diferentes entre órgãos vira um só. */
   career: string;
+  /** Nome do cargo como veio da prova; só serve para separar provas de cargos diferentes. */
+  rawCareer?: string;
+  /** Órgão (Polícia Federal, PRF, Polícia Civil...) para filtrar sem perder a unificação do cargo. */
+  org?: string;
   year: number;
   subject: string;
   topic: string | null;
@@ -33,10 +38,11 @@ export const examKey = (q: Pick<BancaQuestion, "contest" | "year">) => `${q.cont
  */
 export function splitByKind(rows: BancaQuestion[]): { ce: BancaQuestion[]; mc: BancaQuestion[] } {
   const mcExams = new Set<string>();
-  for (const r of rows) if (/^[ABD]$/.test(r.answer)) mcExams.add(`${examKey(r)}|${r.career}`);
+  for (const r of rows)
+    if (/^[ABD]$/.test(r.answer)) mcExams.add(`${examKey(r)}|${r.rawCareer ?? r.career}`);
   const ce: BancaQuestion[] = [];
   const mc: BancaQuestion[] = [];
-  for (const r of rows) (mcExams.has(`${examKey(r)}|${r.career}`) ? mc : ce).push(r);
+  for (const r of rows) (mcExams.has(`${examKey(r)}|${r.rawCareer ?? r.career}`) ? mc : ce).push(r);
   return { ce, mc };
 }
 
@@ -68,6 +74,73 @@ export const CONFIDENCE_LABEL: Record<Confidence, string> = {
 };
 
 const pct = (value: number, digits = 0) => `${(value * 100).toFixed(digits).replace(".", ",")}%`;
+
+// ------------------------------------------------------------------ cargos
+
+const ident = (t: string) =>
+  t
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[-–—]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+/**
+ * Junta o mesmo cargo escrito de formas diferentes entre órgãos e anos ("Agente de Polícia",
+ * "Agente de Polícia Judiciária", "Investigador de Polícia I"...), para ter amostra maior e
+ * leitura mais precisa. Cargos sem regra mantêm o nome original.
+ */
+export function unifiedCareer(rawCareer: string, contest = ""): string {
+  const raw = rawCareer.trim();
+  const t = ident(raw);
+  const c = ident(contest);
+  if (/delegado/.test(t)) return "Delegado de Polícia";
+  if (/escrivao/.test(t)) return "Escrivão de Polícia";
+  if (/papiloscopista|datiloscopista/.test(t)) return "Papiloscopista / Datiloscopista";
+  if (/medico.?legista/.test(t)) return "Médico-Legista";
+  if (/perito/.test(t)) return "Perito Criminal";
+  if (/rodoviari/.test(t)) return "Policial Rodoviário Federal";
+  if (/agente de policia penal|execucao penal|agente penitenciario/.test(t))
+    return "Agente de Polícia Penal";
+  if (t === "departamento penitenciario nacional" || (/penitenciario nacional/.test(c) && !t))
+    return "Agente de Polícia Penal";
+  if (/agente de policia|investigador/.test(t)) return "Agente / Investigador de Polícia";
+  if (/tecnico.*(pericia|policia civil|tpag)/.test(t)) return "Técnico de Perícia (apoio)";
+  return raw;
+}
+
+export interface Option {
+  value: string;
+  items: number;
+  exams: number;
+}
+
+const countOptions = (
+  rows: BancaQuestion[],
+  key: (q: BancaQuestion) => string | undefined,
+  min: number,
+): Option[] => {
+  const by = new Map<string, BancaQuestion[]>();
+  for (const r of rows) {
+    const k = key(r);
+    if (!k) continue;
+    if (!by.has(k)) by.set(k, []);
+    by.get(k)!.push(r);
+  }
+  return [...by.entries()]
+    .map(([value, list]) => {
+      const d = dedupeQuestions(list);
+      return { value, items: d.length, exams: new Set(d.map(examKey)).size };
+    })
+    .filter((o) => o.items >= min)
+    .sort((a, b) => b.items - a.items);
+};
+
+export const careerOptions = (rows: BancaQuestion[], min = 40) =>
+  countOptions(rows, (q) => q.career, min);
+export const orgOptions = (rows: BancaQuestion[], min = 40) =>
+  countOptions(rows, (q) => q.org, min);
 
 // ---------------------------------------------------------------- gabarito
 
@@ -163,7 +236,7 @@ export function sequenceStats(rows: BancaQuestion[]): SequenceStats {
   const byExam = new Map<string, BancaQuestion[]>();
   for (const r of rows) {
     if (r.item == null || (r.answer !== "C" && r.answer !== "E")) continue;
-    const key = `${examKey(r)}|${r.career}`;
+    const key = `${examKey(r)}|${r.rawCareer ?? r.career}`;
     if (!byExam.has(key)) byExam.set(key, []);
     byExam.get(key)!.push(r);
   }
@@ -311,7 +384,6 @@ export interface BancaSummary {
   firstYear: number;
   lastYear: number;
   confidence: Confidence;
-  careers: { career: string; items: number; exams: number }[];
 }
 
 export function summarizeBoards(rows: BancaQuestion[]): BancaSummary[] {
@@ -324,13 +396,6 @@ export function summarizeBoards(rows: BancaQuestion[]): BancaSummary[] {
   for (const [board, list] of by) {
     const deduped = dedupeQuestions(list);
     const exams = new Set(deduped.map(examKey));
-    const careers = new Map<string, { items: number; exams: Set<string> }>();
-    for (const r of list) {
-      const c = careers.get(r.career) ?? { items: 0, exams: new Set<string>() };
-      c.items += 1;
-      c.exams.add(examKey(r));
-      careers.set(r.career, c);
-    }
     const years = deduped.map((r) => r.year);
     out.push({
       board,
@@ -340,10 +405,6 @@ export function summarizeBoards(rows: BancaQuestion[]): BancaSummary[] {
       firstYear: Math.min(...years),
       lastYear: Math.max(...years),
       confidence: confidence(deduped.length, exams.size),
-      careers: [...careers.entries()]
-        .map(([career, c]) => ({ career, items: c.items, exams: c.exams.size }))
-        .filter((c) => c.items >= 40)
-        .sort((a, b) => b.items - a.items),
     });
   }
   return out.sort((a, b) => b.items - a.items);

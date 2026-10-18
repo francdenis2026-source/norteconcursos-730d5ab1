@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   answerStats,
+  careerOptions,
   confidence,
   dedupeQuestions,
   recommendations,
@@ -10,6 +11,7 @@ import {
   splitByKind,
   subjectProfile,
   summarizeBoards,
+  unifiedCareer,
 } from "../src/lib/bancaProfile.ts";
 
 const q = (over = {}) => ({
@@ -52,26 +54,34 @@ test("múltipla escolha uniforme não gera padrão e viés forte gera", () => {
 test("sequência alternada perfeita é detectada; sequência embaralhada não", () => {
   const alternate = [];
   for (const contest of ["A", "B", "C"])
-    for (let i = 1; i <= 60; i++) alternate.push(q({ contest, item: i, answer: i % 2 ? "C" : "E" }));
+    for (let i = 1; i <= 60; i++)
+      alternate.push(q({ contest, item: i, answer: i % 2 ? "C" : "E" }));
   assert.notEqual(sequenceStats(alternate).verdict.level, "sem_padrao");
   let seed = 7;
-  const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
   const random = [];
   for (const contest of ["A", "B", "C", "D"])
-    for (let i = 1; i <= 80; i++) random.push(q({ contest, item: i, answer: rnd() < 0.5 ? "C" : "E" }));
+    for (let i = 1; i <= 80; i++)
+      random.push(q({ contest, item: i, answer: rnd() < 0.5 ? "C" : "E" }));
   assert.notEqual(sequenceStats(random).verdict.level, "padrao"); // aleatório não deve virar "padrão" (indício isolado pode ocorrer por acaso)
 });
 
 test("itens repetidos entre cargos da mesma prova contam uma vez", () => {
-  const rows = [q({ text: "mesma", career: "Agente" }), q({ text: "mesma", career: "Escrivão" }), q({ text: "outra" })];
+  const rows = [
+    q({ text: "mesma", career: "Agente" }),
+    q({ text: "mesma", career: "Escrivão" }),
+    q({ text: "outra" }),
+  ];
   assert.equal(dedupeQuestions(rows).length, 2);
 });
 
 test("perfil por disciplina: média por prova e tendência", () => {
   const rows = [];
   const exam = (contest, year, penal, adm) => {
-    for (let i = 0; i < penal; i++) rows.push(q({ contest, year, subject: "Direito Penal", text: `p${contest}${i}` }));
-    for (let i = 0; i < adm; i++) rows.push(q({ contest, year, subject: "Direito Administrativo", text: `a${contest}${i}` }));
+    for (let i = 0; i < penal; i++)
+      rows.push(q({ contest, year, subject: "Direito Penal", text: `p${contest}${i}` }));
+    for (let i = 0; i < adm; i++)
+      rows.push(q({ contest, year, subject: "Direito Administrativo", text: `a${contest}${i}` }));
   };
   exam("P1", 2018, 20, 20);
   exam("P2", 2021, 20, 20);
@@ -106,7 +116,6 @@ test("resumo por banca ignora cargos com poucos itens e recomendações respeita
   const rows = Array.from({ length: 80 }, (_, i) => q({ text: `t${i}` }));
   const s = summarizeBoards(rows);
   assert.equal(s[0].board, "CEBRASPE");
-  assert.equal(s[0].careers[0].career, "Agente");
   const r = recommendations({
     board: "X",
     career: null,
@@ -119,10 +128,63 @@ test("resumo por banca ignora cargos com poucos itens e recomendações respeita
 });
 
 test("provas Certo/Errado e de múltipla escolha da mesma banca são separadas por prova, não por letra", () => {
-  const ce = Array.from({ length: 10 }, (_, i) => q({ contest: "CE", answer: i % 2 ? "C" : "E", item: i + 1 }));
-  const mc = Array.from({ length: 10 }, (_, i) => q({ contest: "MC", answer: "ABCDE"[i % 5], item: i + 1 }));
+  const ce = Array.from({ length: 10 }, (_, i) =>
+    q({ contest: "CE", answer: i % 2 ? "C" : "E", item: i + 1 }),
+  );
+  const mc = Array.from({ length: 10 }, (_, i) =>
+    q({ contest: "MC", answer: "ABCDE"[i % 5], item: i + 1 }),
+  );
   const { ce: a, mc: b } = splitByKind([...ce, ...mc]);
   assert.equal(a.length, 10);
   assert.equal(b.length, 10);
   assert.ok(b.every((r) => r.contest === "MC"));
+});
+
+test("cargos iguais com nomes diferentes entre órgãos são unificados", () => {
+  for (const n of [
+    "Delegado de Polícia",
+    "Delegado de Polícia Civil",
+    "Delegado de Polícia Substituto",
+    "Delegado de Polícia Federal",
+  ])
+    assert.equal(unifiedCareer(n), "Delegado de Polícia");
+  for (const n of [
+    "Escrivão de Polícia",
+    "Escrivão de Polícia Civil",
+    "Escrivão de Polícia Federal",
+  ])
+    assert.equal(unifiedCareer(n), "Escrivão de Polícia");
+  for (const n of [
+    "Agente de Polícia Civil",
+    "Agente de Polícia Judiciária",
+    "Agente de Polícia Federal",
+    "Investigador de Polícia I",
+    "Oficial Investigador",
+  ])
+    assert.equal(unifiedCareer(n), "Agente / Investigador de Polícia");
+  assert.equal(unifiedCareer("Perito Criminal – Área II"), "Perito Criminal");
+  assert.equal(unifiedCareer("Papiloscopista Policial Federal"), "Papiloscopista / Datiloscopista");
+  assert.equal(unifiedCareer("Datiloscopista Policial"), "Papiloscopista / Datiloscopista");
+  assert.equal(unifiedCareer("Policial Rodoviário Federal"), "Policial Rodoviário Federal");
+  assert.equal(
+    unifiedCareer("Departamento Penitenciário Nacional", "Departamento Penitenciário Nacional"),
+    "Agente de Polícia Penal",
+  );
+  assert.equal(unifiedCareer("Auditor"), "Auditor");
+});
+
+test("opções de cargo juntam amostras do mesmo cargo unificado", () => {
+  const rows = [
+    ...Array.from({ length: 30 }, (_, i) =>
+      q({ career: "Agente / Investigador de Polícia", contest: "A", text: `a${i}` }),
+    ),
+    ...Array.from({ length: 30 }, (_, i) =>
+      q({ career: "Agente / Investigador de Polícia", contest: "B", text: `b${i}` }),
+    ),
+    ...Array.from({ length: 10 }, (_, i) => q({ career: "Auditor", text: `c${i}` })),
+  ];
+  const opts = careerOptions(rows);
+  assert.equal(opts.length, 1);
+  assert.equal(opts[0].items, 60);
+  assert.equal(opts[0].exams, 2);
 });
