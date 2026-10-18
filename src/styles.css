@@ -24,7 +24,7 @@
    ========================================================================== */
 
 @theme {
-  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Archivo", "Segoe UI", system-ui, sans-serif;
   --font-display: "Archivo", "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
   --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
 

@@ -61,7 +61,7 @@ async function handle(request: Request): Promise<Response> {
     await mark("nao_configurado");
     return Response.json({ status: "nao_configurado" });
   }
-  const html = `<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto">
+  const html = `<div style="font-family:ui-sans-serif,system-ui,sans-serif;max-width:560px;margin:auto">
     <h2>Cancelamento agendado</h2>
     <p>Olá, ${esc(row.user_name ?? "aluno")}. Recebemos o seu pedido de cancelamento do plano <b>${esc(row.plan_name)}</b>.</p>
     <p>Você continua com acesso ao plano <b>até ${esc(fmt(row.effective_until))}</b> (horário do Acre). Depois dessa data a conta volta ao plano Gratuito e você poderá assinar de novo.</p>
