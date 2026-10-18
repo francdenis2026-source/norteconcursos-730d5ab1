@@ -12068,14 +12068,14 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .trainer-workbench-hero p { max-width: 420px; color: #d3e1ef; }
 .trainer-workbench-hero .trainer-catalog-link { color: #f8fafc; border-color: rgb(255 255 255 / .28); background: rgb(7 28 52 / .65); }
 .app-shell .app-topbar {
-  border-bottom-color: rgb(72 117 172 / .25);
-  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  border-bottom-color: rgb(168 132 73 / .28);
+  background: linear-gradient(110deg, rgb(247 243 235 / .94), rgb(255 253 248 / .92) 62%, rgb(247 234 208 / .88));
   -webkit-backdrop-filter: blur(20px) saturate(1.45);
   backdrop-filter: blur(20px) saturate(1.45);
-  box-shadow: 0 5px 22px -15px rgb(19 58 105 / .38);
+  box-shadow: 0 5px 22px -15px rgb(120 85 35 / .28);
 }
 .app-shell[data-area="student"] .app-topbar {
-  background: linear-gradient(110deg, rgb(213 231 250 / .8), rgb(244 249 255 / .70) 62%, rgb(248 232 191 / .72));
+  background: linear-gradient(110deg, rgb(247 243 235 / .94), rgb(255 253 248 / .92) 62%, rgb(247 234 208 / .88));
   -webkit-backdrop-filter: blur(20px) saturate(1.45);
   backdrop-filter: blur(20px) saturate(1.45);
 }
