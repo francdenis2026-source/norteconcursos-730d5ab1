@@ -124,7 +124,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[]
   {
     icon: Volume2,
     title: "Leitura em voz alta",
-    text: "Ouça questões e materiais em português enquanto revisa, treina no deslocamento ou descansa os olhos. A voz natural do VoiceStudio é uma vantagem dos planos pagos.",
+    text: "Ouça enunciados e alternativas em português enquanto revisa ou descansa os olhos. A leitura com voz natural está disponível nos planos pagos.",
   },
 ];
 
@@ -358,9 +358,9 @@ function Index() {
                 <span className="home-eyebrow">Novo recurso para estudar melhor</span>
                 <h3 id="home-voice-title">Sua preparação também pode ser ouvida.</h3>
                 <p>
-                  Nos planos pagos, o VoiceStudio transforma questões e materiais em áudio com voz
-                  natural em português. Revise no trânsito, na academia ou quando seus olhos pedirem
-                  uma pausa. No plano Gratuito, você ainda conta com a leitura nativa do navegador.
+                  Nos planos pagos, ouça enunciados e alternativas com voz natural em português
+                  brasileiro. O áudio é preparado na primeira leitura e reutilizado nas próximas.
+                  No plano Gratuito, use a voz do aparelho, quando disponível no navegador.
                 </p>
               </div>
               <a className="home-button home-button--gold" href="#planos">
