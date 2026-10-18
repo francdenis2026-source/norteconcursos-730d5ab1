@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-18T03:52:26.155Z",
-  "scope": "All32 baseline records triaged;28 individual dispositions complete (20active,4obsolete,4editorially archived),4 remain substantively incomplete.",
-  "resolved": 28,
+  "checked_at": "2026-10-18T04:07:39.215Z",
+  "scope": "All32 baseline records investigated;31 editorial dispositions complete (20active,4obsolete,7editorially archived),1 remains under_review. Editorial archives are not official annulments, approval of another key, or certification that every legal controversy was resolved.",
+  "resolved": 31,
   "published_active": 20,
   "published_obsolete": 4,
-  "retained_under_review": 4,
+  "retained_under_review": 1,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -188,9 +188,9 @@
       "item_number": 40,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta identificar e confrontar precedentes específicos de contemporaneidade e descumprimento de cautelar, especialmente alternativasC/D; gravidez não gera domiciliar automática em caso violento."
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "ea75cfd02d09766a8fbdb81091f84c9135076989eda877a323cffc774a75d649"
     },
     {
       "id": "9eaec00d-5904-4113-97d6-e4c217da178e",
@@ -221,9 +221,9 @@
       "item_number": 60,
       "original_answer": "C",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Ambiguidade de culpabilidade e subsidiariedade: não usar art3LCP para ensinar responsabilidade penal objetiva ou declarar B falsa sem fundamento específico."
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "c5f8bfc24cbbae37ef0a3705942dd014252fa53ca97635616ec0446788e46a0f"
     },
     {
       "id": "b48ed163-8694-4b8b-bb8d-d4ee8a49ad02",
@@ -298,9 +298,9 @@
       "item_number": 80,
       "original_answer": "A",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Distinguir falsa perícia, recebimento versus promessa de vantagem, aumento por suborno e natureza ilícita da prova. A aparente concorrência entre A/E exige fundamento específico antes de liberar."
+      "after_status": "archived",
+      "decision": "Arquivamento editorial por insegurança específica de resposta única; não anulação oficial nem controvérsia jurídica declarada resolvida. docs/question-review-last-four-dispositions-2026-10-18.json",
+      "comment_sha256": "50b849d1711c15fe8816d1af2f448c2a9a7b2105f02d278ff9729bad07c43931"
     },
     {
       "id": "e9685709-2891-4be5-8e0a-cfdf17dd2026",
@@ -376,5 +376,5 @@
     "pending": 16,
     "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
   },
-  "archived_editorially": 4
+  "archived_editorially": 7
 }
