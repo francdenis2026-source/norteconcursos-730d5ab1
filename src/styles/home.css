@@ -1299,12 +1299,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(1.12) saturate(0.92);
 }
 .home-plan__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 45%, color-mix(in srgb, var(--home-navy) 45%, transparent));
+  background: linear-gradient(180deg, transparent 64%, color-mix(in srgb, var(--home-navy) 20%, transparent));
   pointer-events: none;
 }
 .home-plan--featured {
