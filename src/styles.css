@@ -12420,3 +12420,61 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
     position: static; height: auto; overflow: visible; display: block;
   }
 }
+
+/* Accessibility pass: secondary copy remains readable in every workspace. */
+.app-content__inner :is(.text-xs, .text-\[10px\], .text-\[11px\], .text-\[12px\]) {
+  line-height: 1.45;
+}
+.app-content__inner :is(small, .student-home__footnote, .trainer-builder-note, .trainer-picker-hint) {
+  font-size: max(0.72rem, 11px);
+}
+.app-content__inner :is(p, li, dd) {
+  text-wrap: pretty;
+}
+.app-shell :is(a, button, input, select, textarea, [role="button"]):focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--brass) 22%, transparent);
+}
+.navigation-workspace .app-nav__link,
+.navigation-workspace .app-nav__heading,
+.navigation-workspace .nav-group-trigger {
+  color: #d4dde2;
+}
+.navigation-workspace .nav-section-label {
+  color: #b8c3c9;
+}
+.navigation-workspace .app-nav__link[data-active="true"] {
+  color: #fff4d7;
+}
+.student-home__metric h2,
+.student-home__metric p,
+.student-hub__shortcuts small,
+.student-home__quiet,
+.student-home__signals small,
+.student-home__review-count {
+  color: color-mix(in srgb, var(--foreground) 62%, var(--muted-foreground));
+}
+.trainer-map-progress progress::-webkit-progress-value,
+.trainer-map-progress progress::-moz-progress-bar,
+.trainer-result-score progress {
+  accent-color: var(--brass);
+}
+.trainer-practice-mode:hover,
+.trainer-collection button:hover,
+.trainer-question-grid button[aria-current="step"] {
+  border-color: var(--brass);
+}
+.trainer-question-grid button[aria-current="step"] {
+  outline-color: var(--brass);
+}
+@media (max-width: 767px) {
+  .app-shell .app-bottom-nav :is(a, button) {
+    min-height: 52px;
+    font-size: 12px;
+  }
+  .navigation-workspace .app-nav__link,
+  .navigation-workspace .app-nav__entries .app-nav__link {
+    min-height: 46px;
+  }
+}
