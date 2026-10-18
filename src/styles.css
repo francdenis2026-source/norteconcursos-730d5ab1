@@ -4820,15 +4820,15 @@ html {
 }
 .page-hero {
   display: flex;
-  min-height: var(--hero-min, 220px);
+  min-height: var(--hero-min, 188px);
   flex-direction: column;
   justify-content: flex-end;
 }
 .page-hero--lg {
-  --hero-min: 300px;
+  --hero-min: 248px;
 }
 .page-hero--sm {
-  --hero-min: 170px;
+  --hero-min: 156px;
 }
 .page-hero__row {
   display: flex;
@@ -4887,8 +4887,8 @@ html {
   gap: 6px;
   color: oklch(1 0 0 / 0.62);
   font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .hero-stat span svg {
