@@ -47,7 +47,7 @@ export interface CheckRow {
 const KIND_STYLE: Record<BlockKind, string> = {
   Teoria: "border-sky-500/40 bg-sky-500/10",
   Flashcards: "border-cyan-500/40 bg-cyan-500/10",
-  Podcast: "border-fuchsia-500/40 bg-fuchsia-500/10",
+  Podcast: "border-cyan-500/40 bg-cyan-500/10",
   Questões: "border-emerald-500/40 bg-emerald-500/10",
   "Revisão de erros": "border-amber-500/40 bg-amber-500/10",
   Redação: "border-amber-500/40 bg-amber-500/10",

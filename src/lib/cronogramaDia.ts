@@ -28,7 +28,7 @@ export const KINDS: Record<StepKind, KindMeta> = {
   },
   flashcards: {
     label: "Flashcards", emoji: "🃏", guide: "Revise os cartões: responda de cabeça antes de virar. Marque o que errou.",
-    bg: "from-sky-500 to-purple-600", soft: "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200", ring: "stroke-violet-500", bar: "bg-violet-500",
+    bg: "from-sky-500 to-cyan-600", soft: "bg-cyan-100 text-cyan-800 dark:bg-cyan-500/20 dark:text-cyan-200", ring: "stroke-cyan-500", bar: "bg-cyan-500",
   },
   questoes: {
     label: "Questões", emoji: "🎯", guide: "Resolva questões do assunto, sem consultar. Cronometre o ritmo e anote os acertos.",
@@ -44,7 +44,7 @@ export const KINDS: Record<StepKind, KindMeta> = {
   },
   redacao: {
     label: "Redação", emoji: "✍️", guide: "Escreva um texto completo à mão ou no Caderno de 30 linhas e confira estrutura e gramática.",
-    bg: "from-fuchsia-500 to-pink-600", soft: "bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-500/20 dark:text-fuchsia-200", ring: "stroke-fuchsia-500", bar: "bg-fuchsia-500",
+    bg: "from-amber-500 to-orange-600", soft: "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200", ring: "stroke-amber-500", bar: "bg-amber-500",
   },
   pausa: {
     label: "Pausa", emoji: "☕", guide: "Levante, beba água, descanse a vista. Sem celular: volte renovado.",
@@ -56,14 +56,14 @@ export const KINDS: Record<StepKind, KindMeta> = {
 export const DISC_COLORS = [
   { bar: "bg-sky-500", chip: "bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200", border: "border-sky-300" },
   { bar: "bg-emerald-500", chip: "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200", border: "border-emerald-300" },
-  { bar: "bg-violet-500", chip: "bg-violet-100 text-violet-800 dark:bg-violet-500/20 dark:text-violet-200", border: "border-violet-300" },
+  { bar: "bg-cyan-500", chip: "bg-cyan-100 text-cyan-800 dark:bg-cyan-500/20 dark:text-cyan-200", border: "border-cyan-300" },
   { bar: "bg-amber-500", chip: "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200", border: "border-amber-300" },
   { bar: "bg-rose-500", chip: "bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200", border: "border-rose-300" },
   { bar: "bg-cyan-500", chip: "bg-cyan-100 text-cyan-800 dark:bg-cyan-500/20 dark:text-cyan-200", border: "border-cyan-300" },
-  { bar: "bg-fuchsia-500", chip: "bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-500/20 dark:text-fuchsia-200", border: "border-fuchsia-300" },
+  { bar: "bg-orange-500", chip: "bg-orange-100 text-orange-800 dark:bg-orange-500/20 dark:text-orange-200", border: "border-orange-300" },
   { bar: "bg-lime-500", chip: "bg-lime-100 text-lime-800 dark:bg-lime-500/20 dark:text-lime-200", border: "border-lime-300" },
   { bar: "bg-orange-500", chip: "bg-orange-100 text-orange-800 dark:bg-orange-500/20 dark:text-orange-200", border: "border-orange-300" },
-  { bar: "bg-indigo-500", chip: "bg-indigo-100 text-indigo-800 dark:bg-indigo-500/20 dark:text-indigo-200", border: "border-indigo-300" },
+  { bar: "bg-slate-500", chip: "bg-slate-100 text-slate-800 dark:bg-slate-500/20 dark:text-slate-200", border: "border-slate-300" },
 ] as const;
 export const discColor = (cfg: CronoConfig, discId: string) =>
   DISC_COLORS[Math.max(0, cfg.discs.findIndex((d) => d.id === discId)) % DISC_COLORS.length]!;

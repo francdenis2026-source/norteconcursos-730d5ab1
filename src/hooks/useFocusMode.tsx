@@ -268,7 +268,7 @@ export function useFocusMode() {
                   onClick={p.onNext}
                   aria-label={p.nextLabel ?? "Próxima"}
                   title={p.nextLabel ?? "Próxima"}
-                  className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-indigo-800 hover:bg-white/90 disabled:opacity-40"
+                  className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-amber-800 hover:bg-white/90 disabled:opacity-40"
                 >
                   <span className="hidden sm:inline">Próxima</span>{" "}
                   <ChevronRight className="h-4 w-4" />
