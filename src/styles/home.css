@@ -513,7 +513,9 @@
   transition: opacity 0.32s;
 }
 .home-hero[data-intro="true"] .home-hero__content {
-  opacity: 0;
+  /* Keep the first message visible while the intro loads. A temporary video
+     must never replace the hero with an empty dark frame. */
+  opacity: 1;
 }
 .home-hero__grid {
   display: block;
@@ -597,7 +599,7 @@
   place-items: center;
   opacity: 0;
   pointer-events: none;
-  background: var(--home-navy);
+  background: transparent;
   transition: opacity 0.3s;
 }
 .home-intro[data-phase="playing"] {
@@ -609,7 +611,8 @@
   height: 100%;
   position: absolute;
   inset: 0;
-  object-fit: contain;
+  object-fit: cover;
+  opacity: 0.34;
 }
 .home-intro button {
   position: absolute;
