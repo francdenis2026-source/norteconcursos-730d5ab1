@@ -1,16 +1,16 @@
 /* Homepage styles are independent of the historical .lp/.hp layouts. */
 .home,
 .home-menu {
-  --home-bg: #f4f0e8;
-  --home-surface: #fffdf8;
-  --home-tint: #e9e3d8;
-  --home-text: #252525;
-  --home-muted: #4f4b46;
-  --home-line: #d8d0c3;
-  --home-accent: #a86625;
-  --home-accent-bg: #f3e5d1;
-  --home-navy: #24272a;
-  --home-gold: #d7a24b;
+  --home-bg: #f4f6f5;
+  --home-surface: #ffffff;
+  --home-tint: #e8eceb;
+  --home-text: #182027;
+  --home-muted: #4a555d;
+  --home-line: #d1d8dc;
+  --home-accent: #b77a1f;
+  --home-accent-bg: #f7edcf;
+  --home-navy: #151b22;
+  --home-gold: #e3ad4c;
   color: var(--home-text);
   background: var(--home-bg);
   font-family: "Archivo", "Inter", sans-serif;
@@ -38,14 +38,14 @@
 }
 .dark .home,
 .dark .home-menu {
-  --home-bg: #171819;
-  --home-surface: #222426;
-  --home-tint: #2d2f31;
-  --home-text: #f4efe6;
-  --home-muted: #d2cbc1;
-  --home-line: #414143;
-  --home-accent: #e0a65a;
-  --home-accent-bg: #3a2d22;
+  --home-bg: #11161c;
+  --home-surface: #1d242b;
+  --home-tint: #293139;
+  --home-text: #f1f4f4;
+  --home-muted: #c8d0d4;
+  --home-line: #3b454d;
+  --home-accent: #efbb58;
+  --home-accent-bg: #3a301c;
 }
 .dark .home::before { opacity: 0.12; }
 
@@ -1267,8 +1267,8 @@
   gap: 12px;
   padding: 16px;
   border: 1px solid var(--home-line);
-  border-left: 3px solid var(--home-accent);
-  border-radius: 0 12px 12px 0;
+  border-top: 2px solid var(--home-accent);
+  border-radius: 12px;
   background: color-mix(in srgb, var(--home-accent-bg) 68%, transparent);
 }
 .home-plans__signal-icon {
@@ -1427,8 +1427,8 @@
 .home-faq > :first-child {
   align-self: center;
   padding: 24px 22px;
-  border-left: 3px solid var(--home-accent);
-  border-radius: 0 12px 12px 0;
+  border-top: 2px solid var(--home-accent);
+  border-radius: 12px;
   background: color-mix(in srgb, var(--home-accent-bg) 72%, transparent);
 }
 .home-faq h3 {
@@ -2215,5 +2215,50 @@
   .home *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* Layout pass: fewer competing surfaces, clearer operational hierarchy. */
+.home-tools,
+.home-opportunities {
+  gap: 16px;
+}
+.home-tool,
+.home-opportunity {
+  border-radius: 14px;
+  box-shadow: 0 10px 24px -24px color-mix(in srgb, var(--home-navy) 50%, transparent);
+}
+.home-tool summary {
+  min-height: 64px;
+  padding: 13px 15px;
+}
+.home-tool p {
+  max-width: 44ch;
+  padding: 0 15px 15px 60px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.home-opportunity__body {
+  padding: 22px;
+}
+.home-opportunity h3 {
+  font-size: clamp(20px, 1.7vw, 23px);
+}
+.home-opportunity__image > img {
+  height: 116px;
+}
+.home-section-top {
+  margin-bottom: 16px;
+}
+@media (max-width: 760px) {
+  .home-tools,
+  .home-opportunities {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-tool p {
+    padding-left: 15px;
+  }
+  .home-opportunity__body {
+    padding: 18px;
   }
 }
