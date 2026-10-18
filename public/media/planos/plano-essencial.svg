@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="ebg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071634"/><stop offset=".55" stop-color="#0f2a56"/><stop offset="1" stop-color="#17386b"/></linearGradient>
+<radialGradient id="eglow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#e6bf70" stop-opacity=".35"/><stop offset="1" stop-color="#e6bf70" stop-opacity="0"/></radialGradient>
+<linearGradient id="egold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dc9a"/><stop offset="1" stop-color="#b98a2e"/></linearGradient>
+<pattern id="edots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#fff" fill-opacity=".07"/></pattern>
+</defs>
+<rect width="640" height="400" fill="url(#ebg)"/>
+<rect width="640" height="400" fill="url(#edots)"/>
+<ellipse cx="320" cy="205" rx="250" ry="170" fill="url(#eglow)"/>
+<g transform="rotate(-9 325.0 183.0)"><rect x="190" y="78" width="270" height="210" rx="16" fill="#f7f3ea" fill-opacity="0.16"/></g>
+<g transform="rotate(-4 335.0 171.0)"><rect x="200" y="66" width="270" height="210" rx="16" fill="#f7f3ea" fill-opacity="0.3"/></g>
+<g transform="rotate(2 330.0 180.0)">
+<rect x="195" y="62" width="270" height="236" rx="18" fill="#f9f6ee"/>
+<rect x="217" y="84" width="86" height="9" rx="4.5" fill="#b98a2e"/>
+<rect x="217" y="106" width="226" height="8" rx="4" fill="#1b2d52" fill-opacity=".85"/>
+<rect x="217" y="122" width="186" height="8" rx="4" fill="#1b2d52" fill-opacity=".55"/>
+<rect x="213" y="147" width="234" height="24" rx="12" fill="#eef1f7" stroke="none" stroke-width="1.6"/>
+<circle cx="228" cy="159" r="9" fill="#c9d2e4"/>
+<text x="228" y="163" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#4a5a7c">A</text>
+<rect x="247" y="155" width="120" height="7" rx="3.5" fill="#1b2d52" fill-opacity="0.35"/>
+<rect x="213" y="175" width="234" height="24" rx="12" fill="#eef1f7" stroke="none" stroke-width="1.6"/>
+<circle cx="228" cy="187" r="9" fill="#c9d2e4"/>
+<text x="228" y="191" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#4a5a7c">B</text>
+<rect x="247" y="183" width="114" height="7" rx="3.5" fill="#1b2d52" fill-opacity="0.35"/>
+<rect x="213" y="203" width="234" height="24" rx="12" fill="#fff3d4" stroke="#b98a2e" stroke-width="1.6"/>
+<circle cx="228" cy="215" r="9" fill="url(#egold)"/>
+<text x="228" y="219" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#fff">C</text>
+<rect x="247" y="211" width="150" height="7" rx="3.5" fill="#1b2d52" fill-opacity="0.8"/>
+<rect x="213" y="231" width="234" height="24" rx="12" fill="#eef1f7" stroke="none" stroke-width="1.6"/>
+<circle cx="228" cy="243" r="9" fill="#c9d2e4"/>
+<text x="228" y="247" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#4a5a7c">D</text>
+<rect x="247" y="239" width="102" height="7" rx="3.5" fill="#1b2d52" fill-opacity="0.35"/>
+<rect x="213" y="259" width="234" height="24" rx="12" fill="#eef1f7" stroke="none" stroke-width="1.6"/>
+<circle cx="228" cy="271" r="9" fill="#c9d2e4"/>
+<text x="228" y="275" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#4a5a7c">E</text>
+<rect x="247" y="267" width="96" height="7" rx="3.5" fill="#1b2d52" fill-opacity="0.35"/>
+<path d="M420 215 l5 5 l10 -11" fill="none" stroke="#1d7a46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<circle cx="500" cy="118" r="34" fill="#0a1d40" fill-opacity=".8" stroke="#ffffff" stroke-opacity=".15" stroke-width="7"/>
+<path d="M500 84 A34 34 0 1 1 466.6 111.6" fill="none" stroke="url(#egold)" stroke-width="7" stroke-linecap="round"/>
+<text x="500" y="124" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#fff">78%</text>
+</svg>
