@@ -33,7 +33,7 @@ export const ENEM_STUDY_GROUPS = [
     id: "redacao",
     name: "Redação",
     subjects: ["Redação"],
-    color: "border-violet-500 text-violet-700 dark:text-violet-300",
+    color: "border-amber-500 text-amber-700 dark:text-amber-300",
   },
 ];
 const fold = (s: string) =>

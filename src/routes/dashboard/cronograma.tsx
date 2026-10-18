@@ -466,7 +466,7 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
                 <div className="space-y-1.5"><Label>Data da prova</Label><Input type="date" value={plan.exam_date ?? ""} onChange={(e) => void save({ exam_date: e.target.value || null })} /></div>
               </div>
               <SettingsFields cfg={cfg} onChange={setCfg} />
-              <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-fuchsia-50 p-3 dark:from-amber-950/20 dark:to-fuchsia-950/20">
+              <div className="space-y-2 rounded-xl border bg-gradient-to-r from-amber-50 to-sky-50 p-3 dark:from-amber-950/20 dark:to-sky-950/20">
                 <p className="text-sm font-bold">Extras no painel do dia</p>
                 <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.simulado} onCheckedChange={(v) => setCfg({ simulado: !!v })} />🏆 Simulado de 1 h no último dia de estudo da semana</label>
                 <label className="flex items-center gap-2 text-sm"><Checkbox checked={!!cfg.essay} onCheckedChange={(v) => setCfg({ essay: !!v })} />✍️ Redação de 40 min no penúltimo dia de estudo</label>

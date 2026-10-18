@@ -7895,7 +7895,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .library-tone-slate { --library-accent:#334155; --library-ink:#334155; --library-soft:#f1f5f9; --library-line:#cbd5e1; }
 .library-tone-amber { --library-accent:#b45309; --library-ink:#92400e; --library-soft:#fff7e6; --library-line:#f3d08c; }
 .library-tone-blue { --library-accent:#2563eb; --library-ink:#1e40af; --library-soft:#eff6ff; --library-line:#bfdbfe; }
-.library-tone-violet { --library-accent:#7c3aed; --library-ink:#6d28d9; --library-soft:#f5f3ff; --library-line:#ddd6fe; }
+.library-tone-violet { --library-accent:#b45309; --library-ink:#92400e; --library-soft:#fff7e6; --library-line:#f3d08c; }
 .library-tone-rose { --library-accent:#be185d; --library-ink:#9d174d; --library-soft:#fff1f2; --library-line:#fecdd3; }
 .library-tone-teal { --library-accent:#0f766e; --library-ink:#115e59; --library-soft:#f0fdfa; --library-line:#99d6cc; }
 .library-tone-cyan { --library-accent:#0e7490; --library-ink:#155e75; --library-soft:#ecfeff; --library-line:#a5dce6; }
