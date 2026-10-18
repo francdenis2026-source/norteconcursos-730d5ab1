@@ -1537,13 +1537,6 @@ function QuestionTrainer() {
                 </p>
               </div>
               <div className="flex items-end gap-2 sm:gap-3">
-                <QuestionAudioButton
-                  text={[
-                    reflowStem(parsed.stem),
-                    ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
-                  ].join("\n")}
-                  naturalVoiceEnabled={isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "voiceReading").included}
-                />
                 {!reviewingPast && <ElapsedTimer seconds={questionSecs} />}
               </div>
             </div>
@@ -1572,6 +1565,14 @@ function QuestionTrainer() {
                 </div>
               </details>
             )}
+            <div className="mb-3 flex flex-wrap items-center gap-2 border-b pb-3">
+              <QuestionAudioButton
+                text={[
+                  reflowStem(parsed.stem),
+                  ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
+                ].join("\n")}
+              />
+            </div>
             <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
             <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">

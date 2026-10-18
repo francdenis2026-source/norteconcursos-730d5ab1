@@ -124,7 +124,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[]
   {
     icon: Volume2,
     title: "Leitura em voz alta",
-    text: "Ouça enunciados e alternativas em português enquanto revisa ou descansa os olhos. A leitura com voz natural está disponível nos planos pagos.",
+    text: "Ouça enunciados e alternativas em português enquanto revisa ou descansa os olhos. Use a voz padrão do navegador, quando disponível, em todos os planos.",
   },
 ];
 
@@ -358,9 +358,8 @@ function Index() {
                 <span className="home-eyebrow">Novo recurso para estudar melhor</span>
                 <h3 id="home-voice-title">Sua preparação também pode ser ouvida.</h3>
                 <p>
-                  Nos planos pagos, ouça enunciados e alternativas com voz natural em português
-                  brasileiro. O áudio é preparado na primeira leitura e reutilizado nas próximas.
-                  No plano Gratuito, use a voz do aparelho, quando disponível no navegador.
+                  Ouça enunciados e alternativas com a voz padrão do navegador, em todos os planos.
+                  A leitura começa no próprio aparelho, sem esperar a geração de um arquivo de áudio.
                 </p>
               </div>
               <a className="home-button home-button--gold" href="#planos">

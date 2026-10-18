@@ -3,7 +3,7 @@ import { AI_ENABLED, TESTING_DAYS } from "@/lib/launch.config";
 
 export const PLAN_ROWS: [string, string][] = [
   ["questions", "Questões"],
-  ["voiceReading", "Leitura em voz alta com voz natural"],
+  ["voiceReading", "Leitura com voz do navegador"],
   ["mockExams", "Simulados"],
   ["cronograma", "Cronograma por edital"],
   ["bankProfile", "Perfil das bancas"],

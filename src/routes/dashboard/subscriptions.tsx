@@ -141,8 +141,8 @@ function SubscriptionsPage() {
             <div>
               <p className="font-semibold">Estude também ouvindo</p>
               <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-                A leitura em voz alta com voz natural em português é uma vantagem dos planos pagos.
-                Ouça questões e materiais enquanto revisa ou descansa os olhos.
+                A leitura das questões usa a voz padrão do navegador e está disponível em todos os planos,
+                quando o dispositivo oferece esse recurso.
               </p>
             </div>
           </div>
