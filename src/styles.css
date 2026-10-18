@@ -9888,6 +9888,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   padding-block: 11px;
 }
 
+/* Performance is a decision screen: keep labels readable beside the numbers. */
+.performance-page .text-xs,
+.performance-page .text-\[10px\],
+.performance-page .text-\[11px\] {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+.performance-page [data-slot="card"] {
+  overflow: hidden;
+}
+.performance-page [role="progressbar"] {
+  min-height: 8px;
+}
+
 @media (max-width: 1023px) {
   .app-shell[data-area="student"] .app-sidebar { width: 280px; }
   .app-shell[data-area="student"] .app-top-search { width: 40px; }
@@ -11027,12 +11041,12 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 }
 
 /* Simulator setup: examination imagery and focused configuration. */
-.exam-simulator-hero { position: relative; overflow: hidden; min-height: 220px; border-radius: 22px; padding: clamp(24px, 4vw, 40px); color: white; background: #081b30 url('/media/hero/exam-simulator.webp') center / cover no-repeat; }
+.exam-simulator-hero { position: relative; overflow: hidden; min-height: 188px; border-radius: 22px; padding: clamp(24px, 4vw, 40px); color: white; background: #081b30 url('/media/hero/exam-simulator.webp') center / cover no-repeat; }
 .exam-simulator-hero__content { position: relative; max-width: 58%; }
-.exam-simulator-hero__eyebrow { color: #efc980; font-size: .75rem; font-weight: 650; letter-spacing: .09em; text-transform: uppercase; }
+.exam-simulator-hero__eyebrow { color: #efc980; font-size: .82rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
 .exam-simulator-hero h1 { margin: 12px 0; font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 750; line-height: 1.15; }
 .exam-simulator-hero p { color: #d3dfeb; line-height: 1.7; font-size: .95rem; }
-.exam-simulator-hero__catalog { display: block; margin-top: 16px; color: #b8cadc; font-size: .8rem; }
+.exam-simulator-hero__catalog { display: block; margin-top: 16px; color: #b8cadc; font-size: .88rem; }
 .simulator-extra-filters { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: var(--card); }
 .simulator-extra-filters summary { cursor: pointer; font-size: .9rem; font-weight: 650; }
 .simulator-extra-filters summary span { display: block; margin-top: 4px; color: var(--muted-foreground); font-size: .8rem; font-weight: 400; }
