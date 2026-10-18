@@ -12478,3 +12478,54 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
     min-height: 46px;
   }
 }
+
+/* Final palette cleanup: remove legacy teal/blue accents from study surfaces. */
+.student-home,
+.trainer-workbench,
+.trainer-resolution-workspace {
+  --trainer-accent: #a96f17;
+  --trainer-soft: #f7edcf;
+  --trainer-line: #d8dde0;
+}
+.dark .student-home,
+.dark .trainer-workbench,
+.dark .trainer-resolution-workspace {
+  --trainer-accent: #efbb58;
+  --trainer-soft: #3a301c;
+  --trainer-line: #374149;
+}
+.student-hub__resume {
+  background: #182229;
+}
+.student-hub__resume::before {
+  background: linear-gradient(90deg, #182229 25%, rgb(24 34 41 / .96) 52%, rgb(24 34 41 / .4));
+}
+.student-home__primary,
+.student-home .student-home__primary.student-home__wide-action,
+.trainer-workbench .trainer-main-action,
+.trainer-resolution-workspace .trainer-main-action {
+  border-color: var(--brass);
+  background: var(--brass);
+  color: #1c2023;
+}
+.student-home__primary:hover,
+.student-home .student-home__primary.student-home__wide-action:hover,
+.trainer-workbench .trainer-main-action:hover,
+.trainer-resolution-workspace .trainer-main-action:hover {
+  background: var(--brass-soft);
+  color: #1c2023;
+}
+.trainer-workbench-heading.trainer-workbench-hero {
+  border-color: color-mix(in srgb, var(--brass) 30%, transparent);
+  background: linear-gradient(90deg, rgb(18 25 30 / .96), rgb(18 25 30 / .7) 46%, rgb(18 25 30 / .12)), url('/media/hero/trainer-study.webp') center / cover;
+  box-shadow: 0 18px 42px -26px rgb(18 25 30 / .72);
+}
+.trainer-workbench-hero p {
+  color: #d7dfe1;
+}
+.trainer-workbench-hero .trainer-catalog-link {
+  background: rgb(18 25 30 / .72);
+}
+.dark .app-shell .app-topbar {
+  border-bottom-color: color-mix(in srgb, var(--brass) 28%, transparent);
+}
