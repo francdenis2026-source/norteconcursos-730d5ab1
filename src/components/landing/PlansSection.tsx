@@ -12,12 +12,12 @@ import {
   TESTING_TIER,
 } from "@/lib/launch.config";
 
-/** Uma imagem por plano (cenas do próprio produto). O enquadramento corta o lado vazio das imagens panorâmicas. */
+/** Uma ilustração por plano, no mesmo estilo (azul e ouro), centrada para o corte nos cards. */
 const PLAN_IMAGES: Record<string, { src: string; position: string }> = {
-  free: { src: "/media/hero/study-desk.webp", position: "70% 55%" },
-  essential: { src: "/media/hero/trainer-study.webp", position: "88% 60%" },
-  plus: { src: "/media/hero/exam-simulator.webp", position: "82% 55%" },
-  premium: { src: "/media/hero/command-room.webp", position: "40% 50%" },
+  free: { src: "/media/planos/plano-gratuito.svg", position: "50% 50%" },
+  essential: { src: "/media/planos/plano-essencial.svg", position: "50% 50%" },
+  plus: { src: "/media/planos/plano-plus.svg", position: "50% 50%" },
+  premium: { src: "/media/planos/plano-premium.svg", position: "50% 50%" },
 };
 
 export function PlansSection() {
@@ -53,7 +53,7 @@ export function PlansSection() {
                       loading="lazy"
                       decoding="async"
                       width={640}
-                      height={264}
+                      height={400}
                       style={{ objectPosition: PLAN_IMAGES[plan.id]!.position }}
                     />
                   </div>
