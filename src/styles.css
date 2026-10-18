@@ -8716,6 +8716,20 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-shell[data-area="admin"] .catalog-command-hero {
   border-color: oklch(0.77 0.14 72 / 0.3);
 }
+.app-shell[data-area="admin"] .app-content .text-xs,
+.app-shell[data-area="admin"] .app-content .text-\[10px\],
+.app-shell[data-area="admin"] .app-content .text-\[11px\] {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+.app-shell[data-area="admin"] .app-content [role="tab"],
+.app-shell[data-area="admin"] .app-content [role="button"] {
+  min-height: 40px;
+}
+.app-shell[data-area="admin"] .app-content [data-slot="card"]:has(table) {
+  overflow: hidden;
+  border-color: color-mix(in oklab, var(--admin-accent) 24%, var(--color-border));
+}
 
 @media (max-width: 1023px) {
   .app-sidebar {
