@@ -1,16 +1,16 @@
 /* Homepage styles are independent of the historical .lp/.hp layouts. */
 .home,
 .home-menu {
-  --home-bg: #f7f4ec;
+  --home-bg: #f4f0e8;
   --home-surface: #fffdf8;
-  --home-tint: #eee9dd;
-  --home-text: #213238;
-  --home-muted: #64727a;
-  --home-line: #ded8ca;
-  --home-accent: #8d641f;
-  --home-accent-bg: #f4ead4;
-  --home-navy: #183c43;
-  --home-gold: #d9ad55;
+  --home-tint: #e9e3d8;
+  --home-text: #252525;
+  --home-muted: #6d6a64;
+  --home-line: #d8d0c3;
+  --home-accent: #a86625;
+  --home-accent-bg: #f3e5d1;
+  --home-navy: #24272a;
+  --home-gold: #d7a24b;
   color: var(--home-text);
   background: var(--home-bg);
   font-family: "Archivo", "Inter", sans-serif;
@@ -20,14 +20,14 @@
 }
 .dark .home,
 .dark .home-menu {
-  --home-bg: #101b1d;
-  --home-surface: #18282b;
-  --home-tint: #203436;
-  --home-text: #f3eee3;
-  --home-muted: #b8c2be;
-  --home-line: #34494b;
-  --home-accent: #e2b961;
-  --home-accent-bg: #353126;
+  --home-bg: #171819;
+  --home-surface: #222426;
+  --home-tint: #2d2f31;
+  --home-text: #f4efe6;
+  --home-muted: #b6b0a6;
+  --home-line: #414143;
+  --home-accent: #e0a65a;
+  --home-accent-bg: #3a2d22;
 }
 .home *,
 .home *::before,
@@ -46,7 +46,7 @@
 }
 .home :is(a, button, summary):focus-visible,
 .home-menu :is(a, button):focus-visible {
-  outline: 3px solid #4f91dc;
+  outline: 3px solid var(--home-accent);
   outline-offset: 4px;
 }
 .home :is(h1, h2, h3, p, a, small, span) {
@@ -726,7 +726,7 @@
   height: 5px;
   width: 5px;
   margin-inline: 0 2px;
-  background: #268361;
+  background: var(--home-accent);
 }
 .home .question-count-badge {
   display: flex;
@@ -1419,7 +1419,7 @@
   isolation: isolate;
   overflow: hidden;
   padding-block: 32px;
-  background: #102239;
+  background: var(--home-navy);
   color: #fff;
 }
 .home-final__image {
@@ -1436,7 +1436,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, #102239f5, #102239ed 35%, #10223988 65%, #102239e8);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--home-navy) 96%, transparent), color-mix(in srgb, var(--home-navy) 88%, transparent) 35%, color-mix(in srgb, var(--home-navy) 50%, transparent) 65%, color-mix(in srgb, var(--home-navy) 90%, transparent));
 }
 .home-final__inner {
   display: flex;
@@ -1987,7 +1987,7 @@
     object-position: 68% 8%;
   }
   .home-final::after {
-    background: linear-gradient(90deg, #102239ed, #102239b5);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--home-navy) 92%, transparent), color-mix(in srgb, var(--home-navy) 70%, transparent));
   }
   .home-final__inner {
     flex-direction: column;
