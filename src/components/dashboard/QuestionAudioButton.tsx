@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 
 type QuestionAudioButtonProps = {
   text: string;
+  naturalVoiceEnabled?: boolean;
 };
 
 /** Optional VoiceStudio-powered reading control for a question. */
-export function QuestionAudioButton({ text }: QuestionAudioButtonProps) {
+export function QuestionAudioButton({ text, naturalVoiceEnabled = false }: QuestionAudioButtonProps) {
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
   const browserSpeechRef = React.useRef<SpeechSynthesisUtterance | null>(null);
   const [audioUrl, setAudioUrl] = React.useState<string | null>(null);
@@ -36,11 +37,13 @@ export function QuestionAudioButton({ text }: QuestionAudioButtonProps) {
 
     setLoading(true);
     try {
-      const response = await fetch("/api/voice-speech", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
+      const response = naturalVoiceEnabled
+        ? await fetch("/api/voice-speech", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text }),
+          })
+        : new Response(null, { status: 503 });
       if (!response.ok) {
         // The browser voice is an immediate, license-safe fallback while the
         // optional VoiceStudio service is being provisioned.

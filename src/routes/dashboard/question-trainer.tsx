@@ -1532,6 +1532,7 @@ function QuestionTrainer() {
                     reflowStem(parsed.stem),
                     ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
                   ].join("\n")}
+                  naturalVoiceEnabled={isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "voiceReading").included}
                 />
                 {!reviewingPast && <ElapsedTimer seconds={questionSecs} />}
               </div>
