@@ -264,7 +264,7 @@ function AdminVoiceStudioPage() {
           </div>
           {testError && (
             <p role="alert" className="rounded-xl border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
-              {testError} Verifique se o Render está online, se o modelo PocketTTS foi instalado e se a licença foi aceita.
+              {testError} Verifique se o Render está online, se o modelo OmniVoice foi instalado e se a licença foi aceita.
             </p>
           )}
           {!testError && testAudioUrl && <p role="status" className="text-sm text-emerald-700 dark:text-emerald-300">Áudio gerado com sucesso. O serviço de voz respondeu.</p>}

@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const VOICESTUDIO_URL = (
   process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
 ).replace(/\/$/, "");
-const MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "pockettts";
+const MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "omnivoice";
 const VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
 
 type Health = { status: string; device?: string; version?: string };
@@ -24,7 +24,7 @@ async function handle(): Promise<Response> {
       health = null;
     }
     try {
-      const response = await fetch(`${VOICESTUDIO_URL}/models`, { signal: timeoutSignal() });
+      const response = await fetch(`${VOICESTUDIO_URL}/v1/models`, { signal: timeoutSignal() });
       if (response.ok) {
         const payload = (await response.json()) as unknown;
         const nested =
@@ -40,6 +40,17 @@ async function handle(): Promise<Response> {
             "installed" in model &&
             model.installed === true,
         ).length;
+        // The OpenAI-compatible catalogue exposes only engines that are
+        // available on this instance. Older VoiceStudio builds omitted the
+        // `installed` field, so a non-empty catalogue still proves that at
+        // least one usable engine is registered.
+        if (installedModels === 0) {
+          installedModels = models.filter(
+            (model: unknown) => typeof model === "object" && model !== null &&
+              typeof (model as { id?: unknown }).id === "string" &&
+              (model as { id: string }).id === MODEL,
+          ).length;
+        }
       }
     } catch {
       // Health remains useful even if the catalogue endpoint is unavailable.

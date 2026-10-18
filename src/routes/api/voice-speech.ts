@@ -6,7 +6,11 @@ import { createFileRoute } from "@tanstack/react-router";
 const VOICESTUDIO_URL = (
   process.env["VOICESTUDIO_API_URL"] ?? "https://norte-voicestudio.onrender.com"
 ).replace(/\/$/, "");
-const VOICESTUDIO_MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "pockettts";
+// VoiceStudio's current OpenAI-compatible engine id. `pockettts` is not
+// included in the deployed VoiceStudio catalogue and causes model_not_found.
+// Keep the environment override for deployments that intentionally select a
+// different installed engine.
+const VOICESTUDIO_MODEL = process.env["VOICESTUDIO_TTS_MODEL"] ?? "omnivoice";
 const VOICESTUDIO_VOICE = process.env["VOICESTUDIO_TTS_VOICE"] ?? "default";
 
 /**
