@@ -87,6 +87,11 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Recortes de responsabilidade da LC68: compilação oficial e atos posteriores conferidos.
+    if (parsed.hostname === "sapl.al.ro.leg.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&
+        parsed.pathname === "/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx";
+    }
     // Normas contábeis primárias conferidas no CFC, incluindo a transição NBC31.
     if (parsed.hostname === "www1.cfc.org.br") {
       return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&

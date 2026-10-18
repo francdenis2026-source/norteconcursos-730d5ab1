@@ -1,0 +1,348 @@
+{
+  "checked_at": "2026-10-18T03:42:58.431Z",
+  "scope": "Eight pending baseline questions investigated; three dispositions completed, five remain substantively incomplete.",
+  "new_active": 2,
+  "archived_editorially": 1,
+  "not_official_annulment": true,
+  "preserved_other_preexisting_pc_records": 2965,
+  "all_preexisting_metadata_unchanged": true,
+  "concurrent_additions_preserved": [
+    {
+      "table": "board_exam_questions",
+      "id": "8519b2a6-170b-5e52-acdf-b00673590424",
+      "our_write": false,
+      "contest": "Polícia Civil do Pará",
+      "status": "active"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "87c399f3-41ad-5fae-8359-0608d799e303",
+      "our_write": false,
+      "contest": "Polícia Civil da Paraíba",
+      "status": "active"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "ade1523d-7356-5a06-99fb-709c3d967683",
+      "our_write": false,
+      "contest": "Polícia Civil da Paraíba",
+      "status": "active"
+    },
+    {
+      "table": "board_exam_questions",
+      "id": "f318a5b3-9e78-5fa8-94c2-bd48d99327e9",
+      "our_write": false,
+      "contest": "Polícia Civil do Pará",
+      "status": "active"
+    },
+    {
+      "table": "content_sources",
+      "id": "2a7f94db-2d4a-44f6-a5e7-8ce26ce00a56",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "48ba35c5-264c-5d07-a757-b3e43936ffed",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "55fd449a-5ea5-5f3f-8698-36f57a8b5c5d",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "72f88d40-b9ae-540f-9d3b-ee8459f602fd",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "98d8b359-6a24-5a56-9004-8475a7b81d39",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a25deb7c-4ee1-43ed-b87a-1257a708db72",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "a86d22be-e261-4832-9be8-bd9667fe4697",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "bce28d6f-18b7-553f-8e96-d5db1d2620a3",
+      "our_write": false
+    },
+    {
+      "table": "content_sources",
+      "id": "c000c72b-87f5-5b17-aaaf-fc078d1ad7d2",
+      "our_write": false
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "07f9615d-857e-4b1f-bc95-ca5e6570bbf5",
+      "our_write": false,
+      "status": "current"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "13c69deb-9a53-4ed6-bcad-4854c654214f",
+      "our_write": false,
+      "status": "current"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "4d7196b8-fb13-4e38-857a-da9481297c62",
+      "our_write": false,
+      "status": "current"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "4e2909cb-c684-463a-ab40-9d0d54e3796d",
+      "our_write": false,
+      "status": "current"
+    },
+    {
+      "table": "syllabus_topics",
+      "id": "e7af2ee0-64f1-46af-aeb3-8a1f9bb629f0",
+      "our_write": false,
+      "status": "current"
+    },
+    {
+      "table": "syllabus_editions",
+      "id": "a95217a8-13ae-49e4-b4be-ffdd222218db",
+      "our_write": false,
+      "contest": "Polícia Penal do Estado do Rio Grande do Sul"
+    }
+  ],
+  "new_official_source": {
+    "id": "c6c35bae-e308-53e1-b1de-6812c3ff68f9",
+    "source_type": "lei",
+    "title": "LC68/1992 RO — responsabilidade do servidor e apuração administrativa (recortes conferidos)",
+    "issuer": "Assembleia Legislativa de Rondônia",
+    "url": "https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx",
+    "published_on": "1992-12-09",
+    "checked_at": "2026-10-18T03:33:36.260171+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Recortes160/161/163/164/165/181/192 da compilação oficial até LC1001/2018, cotejados com atos posteriores relacionados no SAPL: LC1158/2022 (art53), Lei5348/2022 (art118-A) e LC 1306/2025 (arts83/84); não modificam esses recortes. Não certificação integral da lei. SHA-256 12c2b1694d1d41b2c293f8a36c36ffe8c06db8e7302eb7f268ea5e424ed85ebd"
+  },
+  "guard_tests_passed": 24,
+  "application_tests_passed": 617,
+  "production_build": "passed",
+  "application_changes": "Recognize only the checked official LC68 compilation URL; scoped registration requires later amendment captures.",
+  "pc_status": {
+    "active": 2635,
+    "archived": 283,
+    "annulled": 37,
+    "obsolete": 12,
+    "under_review": 5
+  },
+  "pending_by_state": {
+    "RJ": 2,
+    "RO": 3
+  },
+  "items": [
+    {
+      "id": "12f59e04-60f5-46ff-9aeb-98ef6ac6c6b3",
+      "state": "RO",
+      "item_number": 92,
+      "official_answer_preserved": "D",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "42a8d806-75a3-50e5-9bd9-180a3c686be3",
+        "legal_basis": [
+          {
+            "url": "https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx",
+            "title": "LC68/1992 RO — arts160–165,181 e192"
+          }
+        ],
+        "law_version_checked_at": "2026-10-18T03:38:24.218773+00:00",
+        "verified_at": "2026-10-18T03:38:24.218773+00:00",
+        "legal_audit_completed": true,
+        "review_note": "Resposta: D — a própria Administração deve apurar a responsabilidade do servidor.\n\nO fundamento não está apenas no capítulo das responsabilidades. O art.181 da LC68/1992 de Rondônia determina que a autoridade que tomar ciência de irregularidade promova sua apuração, mediante sindicância ou processo disciplinar; o art.192 trata do processo administrativo destinado a apurar responsabilidade por infração funcional. A apuração exige defesa e não significa condenação automática.\n\nA lei distingue três planos: responsabilidade civil, penal e administrativa (art.160). A civil depende de procedimento doloso ou culposo que cause prejuízo ao Estado ou a terceiros (art.161). A administrativa pode resultar de ação ou omissão no exercício do cargo (art.163). Uma não depende automaticamente da outra (art.164), ressalvada a absolvição criminal que negue a existência do fato ou a autoria (art.165).\n\nPor que as demais estão erradas: A elimina indevidamente culpa e dolo na reparação pelo servidor; B desconsidera que a omissão também pode gerar responsabilidade; C transforma a perda do cargo em consequência obrigatória de qualquer dano, sem considerar infração, procedimento e sanção cabível; E subordina toda apuração funcional à responsabilidade civil, contrariando a distinção entre as esferas.\n\nExemplo: um servidor danifica um equipamento por negligência. A Administração deve apurar os fatos e ouvir sua defesa; pode haver reparação e consequência disciplinar conforme a lei. Não se conclui que ele perdeu o cargo só porque houve dano.\n\nVariação: se a falha foi deixar de realizar um dever funcional, a omissão não impede a apuração. Por outro lado, se não houver conduta imputável ao servidor, não basta constatar o equipamento quebrado para responsabilizá-lo.\n\nExercício: pagar o prejuízo elimina necessariamente a consequência disciplinar? Não. O art.164 distingue a indenização da responsabilidade administrativa. Também não se deve confundir a apuração administrativa com autorização para qualquer cobrança automática ou com exclusão do controle judicial.\n\nFontes: LC68/1992, arts160,161,163,164,165,181 e192, na compilação oficial SAPL/ALE-RO até LC1001/2018. Conferidos os atos posteriores relacionados: LC1158/2022, Lei5348/2022 e LC1306/2025, que não alteram os recortes utilizados. Usada a redação posterior aos trechos históricos riscados da compilação, especialmente nos arts181 e192. Não é revisão integral de toda a lei. Caderno oficial CE de Datiloscopista, questão92, página10; definitivo específico, página1, letraD. Programa de Direito Administrativo do próprio cargo conferido e preservado."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Fundamento direto da apuração nos arts181/192, além da diferenciação das esferas dos arts160–165. Compilação pública e atos posteriores conferidos, proveniência oficial reparada separadamente.",
+        "sources": [
+          "https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+          "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF"
+        ],
+        "captures": [
+          {
+            "url": "https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-compiled2018.docx",
+            "sha256": "12c2b1694d1d41b2c293f8a36c36ffe8c06db8e7302eb7f268ea5e424ed85ebd",
+            "captured_at": "2026-10-18T03:33:36.260171+00:00"
+          },
+          {
+            "url": "https://sapl.al.ro.leg.br/norma/10487",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-amend-10487.html",
+            "sha256": "d3369c65a266f6ca462ce8fd387508feeef31083b8580fdf24ce3993a36a212f",
+            "captured_at": "2026-10-18T03:33:37.732338+00:00"
+          },
+          {
+            "url": "https://sapl.al.ro.leg.br/norma/10728",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-amend-10728.html",
+            "sha256": "8b691ae0eb5368097d56252dd47c9a30af7bb742161d01588902653633d15630",
+            "captured_at": "2026-10-18T03:33:38.943166+00:00"
+          },
+          {
+            "url": "https://sapl.al.ro.leg.br/norma/13188",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-amend-13188.html",
+            "sha256": "c2051a10fef74a01caeca025588e4b55eb93b79462e4f4953b080cba4a762936",
+            "captured_at": "2026-10-18T03:33:40.612748+00:00"
+          },
+          {
+            "num": "1306",
+            "url": "https://sapl.al.ro.leg.br/media/sapl/public/normajuridica/2025/13188/lc1306.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-modifier-1306.pdf",
+            "sha256": "7c4c6adf994cb9cac1cb7a2566523fe68ab55bf26bc0cbfa0110bfd56a3dc8ed",
+            "captured_at": "2026-10-18T03:34:26.678263+00:00"
+          },
+          {
+            "num": "1158",
+            "url": "https://sapl.al.ro.leg.br/media/sapl/public/normajuridica/2022/10487/lc_no_1158-22.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-modifier-1158.pdf",
+            "sha256": "02a849467feaf33f3721d9918704c53de51ae0ca7c95c0b73bc685a1c22f612b",
+            "captured_at": "2026-10-18T03:34:27.338383+00:00"
+          },
+          {
+            "num": "5348",
+            "url": "https://sapl.al.ro.leg.br/media/sapl/public/normajuridica/2022/10728/l5348.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ro68-modifier-5348.pdf",
+            "sha256": "306c770cb99b51be4a7b0de37ca44b5a17fb495b379cf80a4504a873691b1f80",
+            "captured_at": "2026-10-18T03:34:27.357852+00:00"
+          }
+        ],
+        "original_answer_preserved": true
+      }
+    },
+    {
+      "id": "e281ddd1-a91e-4235-a3af-8c87ef544b70",
+      "state": "MG",
+      "item_number": 48,
+      "official_answer_preserved": "B",
+      "patch": {
+        "content_status": "active",
+        "current_syllabus_topic_id": "39b59c97-d64b-54d9-8a53-f0feabe48242",
+        "verified_at": "2026-10-18T03:38:24.218773+00:00",
+        "review_note": "Resposta: B — a refrigeração retarda a autólise e a putrefação; não conserva os tecidos indefinidamente.\n\nAutólise é a transformação dos tecidos pela ação de enzimas do próprio organismo. Putrefação envolve a atividade de microrganismos. O frio reduz a velocidade desses processos, mas refrigerar não equivale a esterilizar, fixar quimicamente ou eliminar toda atividade biológica. Por isso, o método tem limitação para exames prolongados.\n\nA OMS recomenda armazenamento temporário de corpos sob refrigeração de2°C a4°C e diferencia essa medida das providências para armazenamento de longo prazo. O POP de Perícia Criminal da SENASP distingue autólise e putrefação e exige cuidados específicos conforme o vestígio e o tempo de envio. Essas orientações apoiam a distinção pedagógica entre retardar a deterioração e interrompê-la por completo; não constituem uma garantia de conservação ilimitada.\n\nA está errada porque inverte o efeito esperado do resfriamento, afirmando que ele acelera a decomposição. C confunde refrigeração com um endurecimento irreversível que inviabilizaria a manipulação, o que não é consequência necessária da faixa indicada. D inventa um impedimento absoluto de coleta toxicológica após24horas: a viabilidade depende, entre outros fatores, da amostra, do analito, do estado de conservação e do procedimento do laboratório.\n\nExemplo: colocar um corpo em câmara refrigerada ajuda a preservar suas condições para o exame posterior; não transforma o tempo de espera em um intervalo sem mudanças nos tecidos. Temperatura e período de armazenamento precisam ser registrados.\n\nVariação: refrigerar um corpo inteiro não é a mesma coisa que escolher como conservar uma amostra para histologia ou toxicologia. O meio adequado depende do exame; não se deve recomendar formol, congelamento ou qualquer conservante indistintamente para todos os materiais.\n\nExercício: uma amostra refrigerada fica automaticamente adequada para qualquer exame, por tempo ilimitado? Não. É preciso avaliar o material, o exame pretendido e o protocolo específico. O frio ajuda na conservação, sem criar essa garantia.\n\nAtenção aos prazos: o POP SENASP admite refrigeração de0°C a7°C em determinado contexto de vestígios úmidos enviados em menos de48horas. Esse é um procedimento específico; não é prazo universal de conservação do cadáver nem limite de24horas para toxicologia.\n\nFontes de apoio técnico: OMS, Floods and health: fact sheets for health professionals (2014), seção4, página impressa4/PDF9; SENASP, Procedimento Operacional Padrão — Perícia Criminal (2013), preservação de vestígios úmidos, página impressa68/PDF69, e glossário de autólise/putrefação. A explicação dos mecanismos é síntese pedagógica, não citação literal de um ensaio experimental na exata faixa da questão. Caderno específico PCMG TPAG, questão48, página3; definitivo específico, página1, letraB; edital, item4.4 de técnicas de preservação. Os documentos técnicos têm suas datas originais, distintas desta conferência; não são apresentados como norma nova de2026."
+      },
+      "evidence": {
+        "legal": false,
+        "reason": "Revisão técnica por síntese das orientações oficiais OMS sobre refrigeração temporária2–4°C e SENASP sobre preservação e mecanismos, com distinção explícita entre corpo e amostras; sem inventar prazo universal ou atribuir citação experimental inexistente.",
+        "sources": [
+          "https://iris.who.int/server/api/core/bitstreams/1cd2e954-7025-4b01-9f27-289fa0d3046d/content",
+          "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/analise-e-pesquisa/download/pop/procedimento_operacional_padrao-pericia_criminal.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "https://cdn.cebraspe.org.br/concursos/pc_mg_25_tpag/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf"
+        ],
+        "captures": [
+          {
+            "url": "https://iris.who.int/server/api/core/bitstreams/1cd2e954-7025-4b01-9f27-289fa0d3046d/content",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-who-floods.pdf",
+            "sha256": "5520fe1a6808cc3023f1eeeb372c019a91c1cd95d8e4f4a30f0f2bc9832f39bb",
+            "captured_at": "2026-10-18T03:35:43.503613+00:00"
+          },
+          {
+            "url": "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/analise-e-pesquisa/download/pop/procedimento_operacional_padrao-pericia_criminal.pdf",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-senasp-pericia.pdf",
+            "sha256": "1c18a20c0f57c320bbc38ebc5d6a698b50f129213c8bd4661c987135a54ccadb",
+            "captured_at": "2026-10-18T03:37:30.047975+00:00"
+          }
+        ],
+        "who_pdf_page": 9,
+        "senasp_pdf_pages": [
+          69,
+          217,
+          220
+        ],
+        "original_answer_preserved": true,
+        "paper_page": 3,
+        "key_page": 1,
+        "technical_synthesis_not_verbatim_experimental_result": true
+      }
+    },
+    {
+      "id": "90d83666-4647-4228-9c76-1c7869240968",
+      "state": "RO",
+      "item_number": 78,
+      "official_answer_preserved": "B",
+      "patch": {
+        "content_status": "archived",
+        "verified_at": "2026-10-18T03:42:32.126195+00:00",
+        "review_note": "Arquivamento editorial por insuficiência da formulação para uma resposta única segura; gabarito oficialB preservado. Não é anulação atribuída à banca nem troca para outra letra.\n\nO comando oficial pergunta quem é tributariamente incapaz. O art.126 do CTN afirma que a capacidade tributária passiva independe da capacidade civil (incisoI), de restrições ao exercício de atividades (incisoII) e da constituição regular da pessoa jurídica, bastando unidade econômica ou profissional (incisoIII).\n\nAssim, ser menor de idade, não conseguir exprimir a vontade ou estar privado do exercício profissional não torna a pessoa automaticamente incapaz para efeitos tributários. Também não basta faltar constituição regular a uma unidade profissional. Esses fundamentos afastam as alternativasA,C,D eE.\n\nA dificuldade é a conclusão sobreB: a expressão genérica “unidades sociais” não permite afirmar incapacidade tributária por si só. A alternativa não declara ausência de atividade econômica ou profissional nem delimita uma categoria legal excluída pelo CTN. A ausência de personalidade jurídica não pode ser transformada em incapacidade automática. A eliminação das outras opções não supre essa informação.\n\nExemplo: a denominação social ou a finalidade associativa de uma entidade não bastam para decidir se ela pode ser sujeito passivo de um tributo. É necessário analisar a situação prevista na legislação tributária. Uma entidade que preencha a condição legal de proprietária de imóvel não fica fora da análise do IPTU apenas por se apresentar como uma organização social; verificar os arts32/34 do CTN e eventuais hipóteses próprias de imunidade ou isenção. Imunidade/isenção não são sinônimos de incapacidade tributária.\n\nVariação: uma unidade econômica informal pode ter capacidade tributária, embora não esteja regularmente constituída. Por outro lado, dizer apenas que um agrupamento é social não demonstra que configure, ou deixe de configurar, unidade econômica ou profissional.\n\nExercício: menoridade civil impede, por si só, capacidade tributária passiva? Não; o art.126,I, separa os conceitos. Atribuir a todos os menores incapacidade tributária copiaria indevidamente uma regra de capacidade civil.\n\nMantidos enunciado oficial, alternativas, extração bruta, fontes e letraB da questão78 de Delegado PCRO2022. A revisão editorial não afirma que a banca anulou a questão ou que uma das demais letras deva substituirB. O item permanece consultável no acervo histórico, fora do treino automático, até esclarecimento suficiente da formulaçãoB.\n\nFonte primária consultada: CTN compilado no Planalto, arts32,34,121 e126, captura desta conferência. A diferença de maiúsculas no endereço consultado corresponde à rota efetivamente acessada, sem alteração do texto legal. Não se corrigiu silenciosamente o comando “incapazes” para “capazes”."
+      },
+      "evidence": {
+        "legal": true,
+        "reason": "Cotejo literal do art126 e do comando oficial: categoria genérica unidades sociais não permite deduzir incapacidade nem ausência de unidade econômica/profissional. Arquivamento editorial motivado, sem anulação oficial ou alteração da letraB.",
+        "sources": [
+          "https://www.planalto.gov.br/CCIVIL_03/LEIS/L5172Compilado.htm"
+        ],
+        "captures": [
+          {
+            "url": "https://www.planalto.gov.br/CCIVIL_03/LEIS/L5172Compilado.htm",
+            "path": "outputs/pc-pending-review-2026-10-16/eight-ctn-case.html",
+            "sha256": "2806f312421303c90422b6e7f1035fcbc00d295a7dd228cb4788c6d7d3605946",
+            "captured_at": "2026-10-18T03:39:48.460350+00:00"
+          }
+        ],
+        "reviewed_articles": [
+          "32",
+          "34",
+          "121",
+          "126"
+        ],
+        "original_answer_preserved": true,
+        "not_official_annulment": true
+      }
+    }
+  ],
+  "provenance_repair": {
+    "patch": {
+      "question_source_id": "6dea9d54-55da-59ed-91c0-a82bb1436130",
+      "answer_key_source_id": "578cf5ef-3f7c-5606-b501-38a213434b12",
+      "source_page": 10,
+      "verified_at": "2026-10-18T03:38:24.218773+00:00",
+      "review_note": "Importado do caderno oficial (Prova Objetiva Conhecimentos Especificos - Cargo Datiloscopista Policial) e conferido com o gabarito oficial definitivo publicado pela banca (aplicacao 9/10/2022 CG / 25/9/2022 CE). Transcricao verbatim; aguardando revisao de conteudo antes de content_status=active. Edital 02/2022/PC-DGPC (PC/RO). | Revisão 17/10/2026, retida: A chave D ('apurada pela própria administração') não tem respaldo textual direto na LC 68/1992 (arts. 160-165); por exclusão das demais. Conferir com a banca.\nProveniência conferida no caderno oficial CE, página10, item92, definitivo página1, letraD; referências antigas preservadas nos metadados."
+    },
+    "evidence": {
+      "reason": "Troca de links de repositório por originais oficiais e correção da página1 para10, sem mudar enunciado ou chaveD.",
+      "visually_verified": true,
+      "item_number": 92,
+      "official_answer": "D",
+      "page": 10,
+      "prova": {
+        "tipoExtensaoArquivo": "_pdf",
+        "dataArquivo": "29/09/2022 19:00",
+        "nomeArquivo": "732_PCRO_001_01.PDF",
+        "descricaoArquivo": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+        "isDataValid": true,
+        "isGuid": false,
+        "dataArquivoObj": "2022-09-29T19:00:00",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/732_PCRO_001_01.PDF",
+        "path": "outputs/pc-pending-review-2026-10-16/732_PCRO_001_01.PDF",
+        "sha256": "ad1344d1d2c8782db7f46593f9b0b236f839b2a98c97b551667543eb026c1717",
+        "captured_at": "2026-10-16T20:36:47.102Z"
+      },
+      "gabarito": {
+        "tipoExtensaoArquivo": "_pdf",
+        "dataArquivo": "10/11/2022 10:00",
+        "nomeArquivo": "GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+        "descricaoArquivo": "GABARITO DEFINITIVO - CONHECIMENTOS ESPECÍFICOS - CARGO 2",
+        "isDataValid": true,
+        "isGuid": false,
+        "dataArquivoObj": "2022-11-10T10:00:00",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_ro_22/arquivos/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+        "path": "outputs/pc-pending-review-2026-10-16/GAB_DEFINITIVO_732_PCRO_001_01.PDF",
+        "sha256": "fc06f5796d1162b95cd9471e2537c5f705baa2c697eb58bb839729537d1a7d27",
+        "captured_at": "2026-10-16T20:36:45.743Z"
+      }
+    }
+  }
+}

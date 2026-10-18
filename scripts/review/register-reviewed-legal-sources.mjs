@@ -17,9 +17,13 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     const piaui=pack.jurisdiction==='PI';
     const matogrosso=pack.jurisdiction==='MT';
     const cfc=pack.jurisdiction==='BR-CFC';
+    const roStatute=pack.jurisdiction==='RO-LC68';
+    const roStatutePath='/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx';
     const mtPath='/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado';
     const mtQuery=u=>u.searchParams.get('exibirAnotacao')==='1'&&u.searchParams.get('marcoHistorico')==='2026-10-17'&&[...u.searchParams].length===2&&!u.username&&!u.password&&!u.port;
-    const primary=cfc
+    const primary=roStatute
+      ? url.hostname==='sapl.al.ro.leg.br' && url.pathname===roStatutePath && !url.search && !url.username && !url.password && !url.port && row.source_type==='lei'
+      : cfc
       ? url.hostname==='www1.cfc.org.br' && ['/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf','/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf'].includes(url.pathname) && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
       : matogrosso
       ? url.hostname==='www.al.mt.gov.br' && url.pathname===mtPath && mtQuery(url) && row.source_type==='lei'
@@ -36,7 +40,15 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
       : url.hostname==='www.planalto.gov.br' && row.source_type==='lei';
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
-    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (rondonia||anvisa||cfc ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (roStatute ? bytes.subarray(0,2).toString()!=='PK' : rondonia||anvisa||cfc ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(roStatute){
+      const modifiers={1158:'/media/sapl/public/normajuridica/2022/10487/lc_no_1158-22.pdf',5348:'/media/sapl/public/normajuridica/2022/10728/l5348.pdf',1306:'/media/sapl/public/normajuridica/2025/13188/lc1306.pdf'};
+      if(!evidence.current_effect_reviewed || evidence.norm!=='LC 68/1992' || evidence.compilation!=='LC 1001/2018' || !row.notes.includes('LC 1306/2025') || !evidence.reviewed_articles?.length || evidence.reviewed_articles.some(a=>!['160','161','163','164','165','181','192'].includes(a)) || JSON.stringify(evidence.amendments?.map(c=>c.num).sort())!==JSON.stringify(Object.keys(modifiers).sort()))throw Error('Scoped LC68 review and later amendments required');
+      for(const c of evidence.amendments){
+        const u=new URL(c.url),b=await readCapture(c.path);
+        if(!c.reviewed || u.protocol!=='https:' || u.hostname!=='sapl.al.ro.leg.br' || u.pathname!==modifiers[c.num] || u.search || u.username || u.password || u.port || createHash('sha256').update(b).digest('hex')!==c.sha256 || b.subarray(0,4).toString()!=='%PDF')throw Error('LC68 official amendment capture changed');
+      }
+    }
     if(cfc){
       const expectedItems=url.pathname.includes('TG27')?['50','51','53']:['36','38'];
       if(!evidence.current_effect_reviewed || JSON.stringify(evidence.reviewed_articles)!==JSON.stringify(expectedItems) || !evidence.revision31_reviewed || !row.notes.includes('2027'))throw Error('Scoped CFC estimate review and transition required');

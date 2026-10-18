@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-18T03:27:27.118Z",
-  "scope": "All32 baseline records triaged;24 individual dispositions complete (17active,4obsolete,3editorially archived),8 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
-  "resolved": 24,
-  "published_active": 17,
+  "checked_at": "2026-10-18T03:42:58.431Z",
+  "scope": "All32 baseline records triaged;27 individual dispositions complete (19active,4obsolete,4editorially archived),5 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
+  "resolved": 27,
+  "published_active": 19,
   "published_obsolete": 4,
-  "retained_under_review": 8,
+  "retained_under_review": 5,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -34,9 +34,9 @@
       "item_number": 92,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta conferir em compilação oficial atual os dispositivos de apuração administrativa e alcance da responsabilidade do servidor na LC68/1992; não ativar apenas por exclusão das alternativas."
+      "after_status": "active",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "d2e52eea4755818e99c65d8915b5a3cacc1f52c07d35c05a169c4b1bea3b507d"
     },
     {
       "id": "34f65807-668d-4b0b-9047-03d45ca385f1",
@@ -177,9 +177,9 @@
       "item_number": 78,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "O original oficial realmente usa incapazes. Confronto com CTN126 não esclarece por si só a classificação de unidades sociais versus profissionais na chaveB; sem errata/justificativa específica localizada."
+      "after_status": "archived",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "d3601d591280da7766a53e8cdf5465b821657a130e579aa43c74cbd21d3c5148"
     },
     {
       "id": "94a5990c-4243-42d3-a45b-e0361f65812f",
@@ -287,9 +287,9 @@
       "item_number": 48,
       "original_answer": "B",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta fonte técnica primária específica para o alcance da refrigeração de cadáveres/tecidos. POP SENASP, documento WHO2020 e buscas WHOIRIS recuperadas não fundamentam integralmente a proposição; páginas genéricas/handles de outro assunto não foram usados."
+      "after_status": "active",
+      "decision": "Individual disposition; docs/question-review-eight-pc-2026-10-18.json",
+      "comment_sha256": "67f513146e5046053320ec6012e60cda86989b3b21a1fc24c1b9a3ed662dafdb"
     },
     {
       "id": "e837718c-b3e6-44cf-aa22-762f176e9862",
@@ -376,5 +376,5 @@
     "pending": 16,
     "report": "docs/reviews/pc-remaining16-context-reanalysis-2026-10-17.json"
   },
-  "archived_editorially": 3
+  "archived_editorially": 4
 }

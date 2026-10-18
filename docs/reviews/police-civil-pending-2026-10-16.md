@@ -364,3 +364,9 @@ Dry-run real, CAS e leitura posterior passaram; preservados outros2.967 registro
 Total atual:2.968 PC,2.629 ativas,282 arquivadas,37 anuladas,12 obsoletas,8 em revisão (RO5,RJ2,MG1). Campanha32:24 disposições concluídas,17ativas/4obsoletas/3arquivadas editorialmente;8 pendentes. Elegíveis no filtro:2.187, sem certificação integral.
 
 Tentativas adicionais sem evidência suficiente: CTN compilado no Planalto excedeu o tempo; API pública BioC do NCBI retornou429 para os dois artigos identificados, sem insistência ou contorno; pesquisa WHO não trouxe material específico suficiente. Ausência de acesso ou de resultado não foi usada para decidir os demais itens. Permanecem pendentes RO92(apuração administrativa),78(capacidade tributária),40(prisão preventiva),60(contravenções),80(falsa perícia); RJ48(requisições ao TCE)/75(reclamação); MG48(refrigeração/autólise/putrefação).
+
+## Oito pendências — nova investigação e três disposições — 18/10/2026
+
+Publicadas duas ativas (RO Datiloscopista92 e MG TPAG48) e um arquivamento editorial (RO Delegado78, sem anulação da banca ou troca de letra). Explicações, fontes e limites em `docs/reviews/eight-pc-source-review-2026-10-18.md`; patches, hashes, leitura posterior e concorrência em `docs/question-review-eight-pc-2026-10-18.json`.
+
+Restam5 em revisão: RO Delegado40/60, Datiloscopista80 e RJ Delegado48/75. Não se apresentou a análise parcial dessas cinco como aprovação. Inventário atual inclui quatro adições PC ativas pela outra conta:2.972 registros,2.635 ativos,283 arquivados,37 anulados,12 obsoletos,5 em revisão. Campanha32:27 disposições concluídas,5 pendentes. Preservados os demais2.965 PC preexistentes e todos os metadados preexistentes. Passaram617 testes da aplicação,24 das salvaguardas e build.

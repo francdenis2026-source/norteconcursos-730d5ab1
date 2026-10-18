@@ -31,3 +31,6 @@ test('CFC approval accepts only the reviewed primary accounting PDFs',()=>{
   for(const bad of [url+'?old=1',url.replace('https:','http:'),url.replace('www1.cfc.org.br','www1.cfc.org.br.evil.test'),url.replace('/docs/','/personal/'),'https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG99.pdf'])assert.equal(isOfficialUrl(bad),false);
  }
 });
+test('LC68 URL approval is restricted to the checked public SAPL compilation',()=>{
+ const u='https://sapl.al.ro.leg.br/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx';assert.equal(isOfficialUrl(u),true);for(const bad of[u+'?old=1',u.replace('https:','http:'),u.replace('sapl.al.ro.leg.br','sapl.al.ro.leg.br.evil.test'),'https://sapl.al.ro.leg.br/norma/3785'])assert.equal(isOfficialUrl(bad),false);
+});

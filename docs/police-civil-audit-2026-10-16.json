@@ -1,9 +1,20 @@
 {
-  "snapshot_at": "2026-10-18T03:27:27.118Z",
-  "generated_at": "2026-10-18T03:28:06.018Z",
+  "snapshot_at": "2026-10-18T03:42:58.431Z",
+  "generated_at": "2026-10-18T03:43:35.539Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
+    {
+      "exam": "Polícia Civil da Paraíba | 2009 | Agente de Investigação e Escrivão de Polícia | CEBRASPE",
+      "records": 2,
+      "status": {
+        "active": 2
+      },
+      "active_app_eligible": 2,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
     {
       "exam": "Polícia Civil de Minas Gerais – Delegado de Polícia Substituto | 2025 | Delegado de Polícia Substituto | FGV",
       "records": 80,
@@ -86,11 +97,10 @@
       "exam": "Polícia Civil de Minas Gerais – Técnico-Assistente – Auxiliar de Perícia (TPAG) | 2026 | Técnico-Assistente – Auxiliar de Perícia (TPAG) | CEBRASPE",
       "records": 60,
       "status": {
-        "active": 58,
-        "archived": 1,
-        "under_review": 1
+        "active": 59,
+        "archived": 1
       },
-      "active_app_eligible": 48,
+      "active_app_eligible": 49,
       "active_with_catalog_flags": 47,
       "active_without_example_marker": 55,
       "flags": {
@@ -274,11 +284,11 @@
       "exam": "Polícia Civil do Estado de Rondônia - Datiloscopista Policial | 2022 | Datiloscopista Policial | CEBRASPE",
       "records": 96,
       "status": {
-        "active": 92,
-        "under_review": 2,
-        "archived": 2
+        "active": 93,
+        "archived": 2,
+        "under_review": 1
       },
-      "active_app_eligible": 90,
+      "active_app_eligible": 91,
       "active_with_catalog_flags": 29,
       "active_without_example_marker": 79,
       "flags": {
@@ -291,8 +301,8 @@
       "records": 98,
       "status": {
         "active": 93,
-        "under_review": 3,
-        "archived": 2
+        "archived": 3,
+        "under_review": 2
       },
       "active_app_eligible": 91,
       "active_with_catalog_flags": 10,
@@ -462,6 +472,17 @@
       }
     },
     {
+      "exam": "Polícia Civil do Pará | 2006 | Escrivão de Polícia Civil | CEBRASPE",
+      "records": 2,
+      "status": {
+        "active": 2
+      },
+      "active_app_eligible": 2,
+      "active_with_catalog_flags": 0,
+      "active_without_example_marker": 0,
+      "flags": {}
+    },
+    {
       "exam": "Polícia Civil do Piauí – Delegado de Polícia Civil | 2026 | Delegado de Polícia Civil | FGV",
       "records": 80,
       "status": {
@@ -524,25 +545,25 @@
     }
   ],
   "totals": {
-    "records": 2968,
+    "records": 2972,
     "status": {
-      "active": 2629,
-      "archived": 282,
+      "active": 2635,
+      "archived": 283,
       "annulled": 37,
       "obsolete": 12,
-      "under_review": 8
+      "under_review": 5
     },
-    "active_app_eligible": 2187,
+    "active_app_eligible": 2193,
     "active_with_catalog_flags": 1659,
     "active_without_example_marker": 2266,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 306,
+    "newly_reviewed": 309,
     "newly_published": 302,
     "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams. AM: one Delegado item (25), confirmed with Tema 1100, final key and updated official program; item 44 retained. RO Delegado item 29: LEP sanction and explicit execution-penal program verified; not certification of all remaining items. New baseline: 32 pending, preserving other-account decisions. This batch: PCPI2/4 active, MT59 two career records obsolete after LC803/2024; not blanket approval. Second batch: PCPI1, MT14 x2, RO79 active; AM65/80 obsolete after express repeal. Total resolved from32baseline:10 (6active,4obsolete). MT organization/probation: six individually activated (56/57/58, both careers), source confronted with17amendments. No approval of item60 or entire statute.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 8,
+    "pending_under_review_all_pc": 5,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1783,6 +1804,12 @@
       "archived": 1,
       "not_official_annulment": true,
       "report": "docs/question-review-ro14-2026-10-18.json"
+    },
+    "eight_pending_followup": {
+      "new_active": 2,
+      "archived_editorially": 1,
+      "remaining": 5,
+      "report": "docs/question-review-eight-pc-2026-10-18.json"
     }
   },
   "source_comparison_pcdf": {
