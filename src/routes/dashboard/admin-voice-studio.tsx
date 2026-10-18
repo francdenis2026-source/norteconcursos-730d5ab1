@@ -44,6 +44,10 @@ function AdminVoiceStudioPage() {
   const [status, setStatus] = React.useState<Status | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [testText, setTestText] = React.useState("Teste de leitura em voz alta da Norte Concursos.");
+  const [testLoading, setTestLoading] = React.useState(false);
+  const [testError, setTestError] = React.useState<string | null>(null);
+  const [testAudioUrl, setTestAudioUrl] = React.useState<string | null>(null);
 
   const loadStatus = React.useCallback(async () => {
     setLoading(true);
@@ -62,6 +66,38 @@ function AdminVoiceStudioPage() {
   React.useEffect(() => {
     if (isAdmin) void loadStatus();
   }, [isAdmin, loadStatus]);
+
+  React.useEffect(() => () => {
+    if (testAudioUrl) URL.revokeObjectURL(testAudioUrl);
+  }, [testAudioUrl]);
+
+  const runVoiceTest = async () => {
+    const text = testText.trim();
+    if (!text) {
+      setTestError("Digite uma frase para testar.");
+      return;
+    }
+    setTestLoading(true);
+    setTestError(null);
+    if (testAudioUrl) URL.revokeObjectURL(testAudioUrl);
+    setTestAudioUrl(null);
+    try {
+      const response = await fetch("/api/voice-speech", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      if (!response.ok) {
+        const payload = (await response.json().catch(() => null)) as { error?: string; detail?: string } | null;
+        throw new Error(payload?.error ?? "O VoiceStudio não respondeu ao teste.");
+      }
+      setTestAudioUrl(URL.createObjectURL(await response.blob()));
+    } catch (cause) {
+      setTestError(cause instanceof Error ? cause.message : "Não foi possível gerar o áudio.");
+    } finally {
+      setTestLoading(false);
+    }
+  };
 
   if (authLoading) {
     return (
@@ -201,6 +237,39 @@ function AdminVoiceStudioPage() {
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2"><Volume2 className="h-5 w-5 text-primary" aria-hidden="true" /> Testar leitura em voz alta</CardTitle>
+          <CardDescription>
+            Use o mesmo caminho de áudio dos alunos para confirmar se o VoiceStudio está online e com
+            um modelo instalado.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <textarea
+            value={testText}
+            onChange={(event) => setTestText(event.target.value)}
+            maxLength={4096}
+            rows={3}
+            aria-label="Texto para teste de voz"
+            className="w-full resize-y rounded-xl border bg-background px-3 py-2 text-sm leading-6 outline-none ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring"
+          />
+          <div className="flex flex-wrap items-center gap-3">
+            <Button type="button" onClick={() => void runVoiceTest()} disabled={testLoading} className="gap-2">
+              {testLoading ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
+              {testLoading ? "Gerando áudio…" : "Gerar teste de voz"}
+            </Button>
+            {testAudioUrl && <audio controls preload="metadata" src={testAudioUrl} aria-label="Resultado do teste de voz" />}
+          </div>
+          {testError && (
+            <p role="alert" className="rounded-xl border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
+              {testError} Verifique se o Render está online, se o modelo PocketTTS foi instalado e se a licença foi aceita.
+            </p>
+          )}
+          {!testError && testAudioUrl && <p role="status" className="text-sm text-emerald-700 dark:text-emerald-300">Áudio gerado com sucesso. O serviço de voz respondeu.</p>}
+        </CardContent>
+      </Card>
 
       {status?.checkedAt && (
         <p className="text-xs text-muted-foreground">
