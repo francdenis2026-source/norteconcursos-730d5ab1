@@ -1162,10 +1162,24 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
+  overflow: hidden;
   border: 1px solid var(--home-line);
   border-radius: 10px;
   padding: 22px 18px;
   background: var(--home-bg);
+}
+.home-plan__media {
+  height: 118px;
+  margin: -22px -18px 16px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--home-line);
+  background: #0b1b3a;
+}
+.home-plan__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .home-plan--featured {
   border-color: var(--home-accent);
@@ -1831,6 +1845,10 @@
   }
   .home-plan {
     padding: 16px 12px;
+  }
+  .home-plan__media {
+    height: 84px;
+    margin: -16px -12px 12px;
   }
   .home-plan__top {
     align-content: start;
