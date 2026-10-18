@@ -1526,7 +1526,15 @@ function QuestionTrainer() {
                   {correct} acertos · {wrong} erros
                 </p>
               </div>
-              {!reviewingPast && <ElapsedTimer seconds={questionSecs} />}
+              <div className="flex items-end gap-2 sm:gap-3">
+                <QuestionAudioButton
+                  text={[
+                    reflowStem(parsed.stem),
+                    ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
+                  ].join("\n")}
+                />
+                {!reviewingPast && <ElapsedTimer seconds={questionSecs} />}
+              </div>
             </div>
             <progress
               className="trainer-question-progress"
@@ -1534,14 +1542,6 @@ function QuestionTrainer() {
               max={Math.max(1, questions.length)}
               aria-label="Questões respondidas nesta sessão"
             />
-            <div className="mt-3 flex justify-end">
-              <QuestionAudioButton
-                text={[
-                  reflowStem(parsed.stem),
-                  ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
-                ].join("\n")}
-              />
-            </div>
             {parsed.base && (
               <details
                 open
