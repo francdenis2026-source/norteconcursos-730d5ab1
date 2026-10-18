@@ -75,6 +75,11 @@ export function PlansSection() {
                     </>
                   )}
                 </p>
+                {plan.annualPrice ? (
+                  <p className="home-plan__annual">
+                    ou R$ {plan.annualPrice.toFixed(0)}/ano · 2 meses grátis
+                  </p>
+                ) : null}
                 <p className="home-plan__availability">
                   {plan.price === 0
                     ? "Para começar e continuar estudando"
@@ -90,7 +95,7 @@ export function PlansSection() {
                     <Plus aria-hidden="true" />
                   </summary>
                   <ul>
-                    {PLAN_ROWS.slice(0, 6).map(([key, label]) => {
+                    {PLAN_ROWS.slice(0, 8).map(([key, label]) => {
                       const value = planValue(key, plan.features[key]);
                       return (
                         <li key={key} className={value ? "" : "is-unavailable"}>
