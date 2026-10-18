@@ -1,3 +1,4 @@
+import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { useQuery } from "@tanstack/react-query";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
@@ -46,7 +47,6 @@ import {
   Sparkles,
   Strikethrough,
   Target,
-  Timer,
   XCircle,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -1526,9 +1526,9 @@ function QuestionTrainer() {
                 envio.
               </div>
             )}
-            <div className="mb-3 flex items-end justify-between gap-3">
-              <div>
-                <h2 className="font-display text-2xl font-extrabold leading-none text-foreground sm:text-3xl">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+              <div className="min-w-0 flex-1 basis-24">
+                <h2 className="font-display text-xl font-extrabold leading-none text-foreground sm:text-3xl">
                   Questão {index + 1}{" "}
                   <span className="text-muted-foreground">de {questions.length}</span>
                 </h2>
@@ -1537,7 +1537,7 @@ function QuestionTrainer() {
                 </p>
               </div>
               <div className="flex items-end gap-2 sm:gap-3">
-                {!reviewingPast && <ElapsedTimer seconds={questionSecs} />}
+                {!reviewingPast && <QuestionTimer seconds={questionSecs} completed={answered} />}
               </div>
             </div>
             <progress
@@ -2459,20 +2459,5 @@ function TrainingResult({
         </section>
       </div>
     </section>
-  );
-}
-
-function ElapsedTimer({ seconds }: { seconds: number }) {
-  const secs = seconds;
-  const mm = String(Math.floor(secs / 60)).padStart(2, "0");
-  const ss = String(secs % 60).padStart(2, "0");
-  return (
-    <span
-      className="flex items-center gap-1.5 rounded-xl border border-border bg-muted/50 px-3 py-1.5 font-mono text-sm font-semibold tabular-nums text-foreground"
-      role="timer"
-      aria-label="Tempo nesta questão"
-    >
-      <Timer className="h-4 w-4 text-amber-400" aria-hidden /> {mm}:{ss}
-    </span>
   );
 }
