@@ -160,21 +160,21 @@
 }
 .home-button--primary {
   color: #fff;
-  background: #193c60;
-  border-color: #193c60;
+  background: var(--home-navy);
+  border-color: var(--home-navy);
 }
 .home-button--primary:hover {
-  background: #24517c;
-  border-color: #24517c;
+  background: var(--home-text);
+  border-color: var(--home-text);
 }
 .dark .home-button--primary {
-  color: #102239;
-  background: #e6bf70;
-  border-color: #e6bf70;
+  color: var(--home-navy);
+  background: var(--home-gold);
+  border-color: var(--home-gold);
 }
 .dark .home-button--primary:hover {
-  background: #f1cf8c;
-  border-color: #f1cf8c;
+  background: #f0cc7a;
+  border-color: #f0cc7a;
 }
 .home-button--secondary {
   color: var(--home-text);
@@ -456,7 +456,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #0b2038;
+  background: var(--home-navy);
   color: #fff;
 }
 .home-hero__image {
@@ -569,7 +569,7 @@
   place-items: center;
   opacity: 0;
   pointer-events: none;
-  background: #0a1729;
+  background: var(--home-navy);
   transition: opacity 0.3s;
 }
 .home-intro[data-phase="playing"] {
@@ -1231,7 +1231,7 @@
   margin: -22px -18px 16px;
   overflow: hidden;
   border-bottom: 1px solid var(--home-line);
-  background: #0b1b3a;
+  background: var(--home-navy);
 }
 .home-plan__media img {
   display: block;
