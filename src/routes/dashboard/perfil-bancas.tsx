@@ -18,18 +18,22 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchAllRows } from "@/lib/catalog";
 import { canonicalBoard, canonicalCareerName, canonicalSubject } from "@/lib/subjects";
+import { panoramaOrganization } from "@/lib/panoramaFilters";
 import {
   CONFIDENCE_LABEL,
   answerStats,
+  careerOptions,
   confidence,
   dedupeQuestions,
   examKey,
+  orgOptions,
   recommendations,
   recurringThemes,
   sequenceStats,
   splitByKind,
   subjectProfile,
   summarizeBoards,
+  unifiedCareer,
   type BancaQuestion,
   type Verdict,
 } from "@/lib/bancaProfile";
@@ -66,7 +70,12 @@ async function loadQuestions(): Promise<BancaQuestion[]> {
     out.push({
       board,
       contest: String(r["contest_name"] ?? ""),
-      career: canonicalCareerName(String(r["career_name"] ?? "")),
+      career: unifiedCareer(
+        canonicalCareerName(String(r["career_name"] ?? "")),
+        String(r["contest_name"] ?? ""),
+      ),
+      rawCareer: String(r["career_name"] ?? ""),
+      org: panoramaOrganization(String(r["contest_name"] ?? "")).family,
       year: Number(r["exam_year"]),
       subject: canonicalSubject(String(r["subject"] ?? "")),
       topic: r["tested_topic"] ? String(r["tested_topic"]) : null,
@@ -117,6 +126,7 @@ function PerfilBancasPage() {
     queryFn: loadQuestions,
   });
   const [boardChoice, setBoardChoice] = React.useState<string | null>(null);
+  const [orgChoice, setOrgChoice] = React.useState<string>("");
   const [careerChoice, setCareerChoice] = React.useState<string>("");
 
   const rows = React.useMemo(() => query.data ?? [], [query.data]);
@@ -124,21 +134,26 @@ function PerfilBancasPage() {
   const board =
     boardChoice ?? boards.find((b) => b.board === "CEBRASPE")?.board ?? boards[0]?.board ?? null;
   const summary = boards.find((b) => b.board === board) ?? null;
-  const career = summary?.careers.some((c) => c.career === careerChoice) ? careerChoice : "";
+  const boardRows = React.useMemo(() => rows.filter((r) => r.board === board), [rows, board]);
+  const orgs = React.useMemo(() => orgOptions(boardRows), [boardRows]);
+  const org = orgs.some((o) => o.value === orgChoice) ? orgChoice : "";
+  const orgRows = React.useMemo(
+    () => (org ? boardRows.filter((r) => r.org === org) : boardRows),
+    [boardRows, org],
+  );
+  const careers = React.useMemo(() => careerOptions(orgRows), [orgRows]);
+  const career = careers.some((c) => c.value === careerChoice) ? careerChoice : "";
 
   const view = React.useMemo(() => {
     if (!board) return null;
-    const boardRows = rows.filter((r) => r.board === board);
-    const scope = career
-      ? boardRows.filter((r) => r.career === career)
-      : dedupeQuestions(boardRows);
+    const scope = career ? orgRows.filter((r) => r.career === career) : dedupeQuestions(orgRows);
     const deduped = career ? dedupeQuestions(scope) : scope;
     const exams = new Set(deduped.map(examKey)).size;
     const conf = confidence(deduped.length, exams);
     const kinds = splitByKind(deduped);
     const answersCe = kinds.ce.length ? answerStats(kinds.ce) : null;
     const answersMc = kinds.mc.length ? answerStats(kinds.mc) : null;
-    const sequence = answersCe ? sequenceStats(splitByKind(career ? scope : boardRows).ce) : null;
+    const sequence = answersCe ? sequenceStats(splitByKind(career ? scope : orgRows).ce) : null;
     const answerKinds: ("ce" | "mc")[] = [
       ...(answersCe ? (["ce"] as const) : []),
       ...(answersMc ? (["mc"] as const) : []),
@@ -169,7 +184,7 @@ function PerfilBancasPage() {
         conf,
       }),
     };
-  }, [rows, board, career]);
+  }, [board, orgRows, career]);
 
   if (authLoading || (real && query.isLoading))
     return (
@@ -225,7 +240,7 @@ function PerfilBancasPage() {
       />
 
       <Card>
-        <CardContent className="grid gap-3 pt-6 sm:grid-cols-2">
+        <CardContent className="grid gap-3 pt-6 sm:grid-cols-3">
           <label className="space-y-1 text-sm">
             <span className="font-medium">Banca</span>
             <select
@@ -233,6 +248,7 @@ function PerfilBancasPage() {
               value={board ?? ""}
               onChange={(e) => {
                 setBoardChoice(e.target.value);
+                setOrgChoice("");
                 setCareerChoice("");
               }}
             >
@@ -244,20 +260,43 @@ function PerfilBancasPage() {
             </select>
           </label>
           <label className="space-y-1 text-sm">
-            <span className="font-medium">Cargo</span>
+            <span className="font-medium">Órgão</span>
+            <select
+              className="h-10 w-full rounded-md border border-input bg-background px-3"
+              value={org}
+              onChange={(e) => {
+                setOrgChoice(e.target.value);
+                setCareerChoice("");
+              }}
+            >
+              <option value="">Todos os órgãos</option>
+              {orgs.map((o) => (
+                <option key={o.value} value={o.value}>
+                  {o.value} · {o.items} itens
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="space-y-1 text-sm">
+            <span className="font-medium">Cargo (unificado)</span>
             <select
               className="h-10 w-full rounded-md border border-input bg-background px-3"
               value={career}
               onChange={(e) => setCareerChoice(e.target.value)}
             >
-              <option value="">Todos os cargos da banca</option>
-              {summary.careers.map((c) => (
-                <option key={c.career} value={c.career}>
-                  {c.career} · {c.items} itens
+              <option value="">Todos os cargos</option>
+              {careers.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.value} · {c.items} itens · {c.exams} {c.exams === 1 ? "prova" : "provas"}
                 </option>
               ))}
             </select>
           </label>
+          <p className="text-xs text-muted-foreground sm:col-span-3">
+            Cargos iguais com nomes diferentes entre órgãos e anos (por exemplo, Agente de Polícia,
+            Agente de Polícia Judiciária e Investigador) aparecem juntos para dar mais precisão. Use
+            o filtro de órgão para separar.
+          </p>
         </CardContent>
       </Card>
 
@@ -276,8 +315,8 @@ function PerfilBancasPage() {
             {view.first != null
               ? ` (${view.first === view.last ? view.first : `${view.first} a ${view.last}`})`
               : ""}
-            {career ? `, cargo ${career}` : ""}. Questões repetidas entre cargos da mesma prova
-            contam uma vez.
+            {career ? `, cargo ${career}` : ""}
+            {org ? `, ${org}` : ""}. Questões repetidas entre cargos da mesma prova contam uma vez.
           </CardDescription>
         </CardHeader>
         {view.conf === "insuficiente" || view.conf === "baixa" ? (
