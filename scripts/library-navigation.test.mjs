@@ -74,7 +74,7 @@ test('CONTRAN library link respects discipline and contest filters, and cases ke
  const result=renderToStaticMarkup(React.createElement(reader,{query:'1031'}));
  assert.ok(result.includes('Caso prático'));assert.ok(result.includes('Agora é com você'));assert.ok(result.includes('Ver resposta comentada'));
  assert.ok(!/<details[^>]*\bopen(?:=|\s|>)/.test(result));
- assert.ok(result.includes('border-emerald-500')&&result.includes('border-violet-300'));
+ assert.ok(result.includes('border-emerald-500')&&result.includes('border-amber-300'));
  assert.ok(!result.includes('Resolução 1.029/2026'));
 });
 const sample=(slug,discipline)=>({id:slug,slug,discipline,title:slug,topic_label:slug,summary:null,contest_name:'PF',content_status:'active',sort_order:1,syllabus_topic_order:1,law_version_checked_at:null});

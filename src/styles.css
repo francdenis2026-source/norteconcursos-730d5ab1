@@ -278,6 +278,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
     scroll-padding-top: 88px;
   }
 
@@ -310,6 +311,16 @@
   :where(a, button, input, select, textarea, [tabindex]):focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
+  }
+
+  :where(button, a, [role="button"]) {
+    touch-action: manipulation;
+  }
+
+  :where(button, [role="button"]) {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
   }
 
   img {

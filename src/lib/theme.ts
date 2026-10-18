@@ -4,7 +4,7 @@ const STORAGE_KEY = "theme";
 
 /** Script embutido no <head>, antes de qualquer renderização, para o tema
  * já nascer correto (sem piscar entre claro e escuro ao carregar a página). */
-export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);if(!t)localStorage.setItem('${STORAGE_KEY}',d?'dark':'light');}catch(e){}})();`;
+export const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light';var m=document.querySelector('meta[name="theme-color"]')||document.createElement('meta');m.setAttribute('name','theme-color');m.setAttribute('content',d?'#0a0f1c':'#f4f0e8');if(!m.parentNode)document.head.appendChild(m);if(!t)localStorage.setItem('${STORAGE_KEY}',d?'dark':'light');}catch(e){}})();`;
 
 export function getActiveTheme(): Theme {
   if (typeof document === "undefined") return "dark";
@@ -13,6 +13,9 @@ export function getActiveTheme(): Theme {
 
 export function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle("dark", theme === "dark");
+  document.documentElement.style.colorScheme = theme;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  themeColor?.setAttribute("content", theme === "dark" ? "#0a0f1c" : "#f4f0e8");
   try {
     localStorage.setItem(STORAGE_KEY, theme);
   } catch {
