@@ -173,8 +173,8 @@
   border-color: var(--home-gold);
 }
 .dark .home-button--primary:hover {
-  background: #f0cc7a;
-  border-color: #f0cc7a;
+  background: var(--home-gold);
+  border-color: var(--home-gold);
 }
 .home-button--secondary {
   color: var(--home-text);
@@ -270,13 +270,13 @@
   flex-shrink: 0;
 }
 .home-button--gold {
-  background: #e6bf70;
-  color: #17263b;
-  border-color: #e6bf70;
+  background: var(--home-gold);
+  color: var(--home-navy);
+  border-color: var(--home-gold);
 }
 .home-button--gold:hover {
-  background: #f3d18e;
-  border-color: #f3d18e;
+  background: #e8b96b;
+  border-color: #e8b96b;
 }
 .home-text-link {
   display: inline-flex;
@@ -473,7 +473,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, #071c35f2 0%, #071c35cf 32%, #071c3533 66%, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--home-navy) 95%, transparent) 0%, color-mix(in srgb, var(--home-navy) 80%, transparent) 32%, color-mix(in srgb, var(--home-navy) 20%, transparent) 66%, transparent);
 }
 .home-hero__content {
   position: relative;
@@ -495,7 +495,7 @@
   width: 52%;
 }
 .home-hero__copy > .home-eyebrow {
-  color: #e6bf70;
+  color: var(--home-gold);
   font-size: 10px;
 }
 .home-hero h1 {
@@ -505,12 +505,12 @@
   letter-spacing: -0.045em;
 }
 .home-hero h1 em {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-hero__copy > p {
   margin-top: 16px;
   max-width: 46ch;
-  color: #d1dbea;
+  color: #e1dbd0;
   font-size: 14px;
   line-height: 1.75;
 }
@@ -526,19 +526,19 @@
   align-items: center;
   gap: 8px;
   min-height: 44px;
-  color: #edf2f8;
+  color: #f4efe6;
   font-size: 12px;
 }
 .home-hero__explore svg {
   width: 15px;
 }
 .home-hero__explore:hover {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-hero__note {
   display: block;
   margin-top: 10px;
-  color: #c0cddd;
+  color: #c9c2b8;
   font-size: 11px;
 }
 .home-trust {
@@ -553,13 +553,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #e0e7f0;
+  color: #e7e0d5;
   font-size: 11px;
 }
 .home-trust svg {
   width: 16px;
   height: 16px;
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-intro {
   position: absolute;
@@ -594,7 +594,7 @@
   padding: 10px 16px;
   border: 1px solid #718198;
   border-radius: 6px;
-  background: #102239ed;
+  background: color-mix(in srgb, var(--home-navy) 92%, transparent);
   color: #fff;
   font:
     600 12px "Inter",
@@ -1063,7 +1063,7 @@
   padding: 5px 9px;
   border-radius: 5px;
   color: #fff;
-  background: #13263ce8;
+  background: color-mix(in srgb, var(--home-navy) 90%, transparent);
   font-size: 9px;
 }
 .home-status svg {
@@ -1088,7 +1088,7 @@
 /* Restore the careers photograph, with contrast behind all text. */
 .home-careers {
   background:
-    linear-gradient(90deg, #091b31f5 8%, #091b31c9 50%, #091b3182),
+    linear-gradient(90deg, color-mix(in srgb, var(--home-navy) 96%, transparent) 8%, color-mix(in srgb, var(--home-navy) 80%, transparent) 50%, color-mix(in srgb, var(--home-navy) 50%, transparent)),
     url("/media/hero/careers-team.webp") center 38% / cover;
   color: #fff;
 }
@@ -1102,10 +1102,10 @@
   margin: 0;
 }
 .home-careers .home-eyebrow {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-careers .home-heading h2 em {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-careers__grid {
   display: grid;
@@ -1125,7 +1125,7 @@
 }
 .home-career > span {
   margin-top: 3px;
-  color: #e6bf70;
+  color: var(--home-gold);
   font:
     500 10px "JetBrains Mono",
     monospace;
@@ -1137,7 +1137,7 @@
 }
 .home-career p {
   margin-top: 3px;
-  color: #d0dbea;
+  color: #d4cdc3;
   font-size: 11px;
   line-height: 1.6;
 }
@@ -1448,19 +1448,19 @@
   max-width: 540px;
 }
 .home-final .home-eyebrow {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-final h2 {
   font-size: clamp(26px, 2.5vw, 32px);
   line-height: 1.2;
 }
 .home-final h2 em {
-  color: #e6bf70;
+  color: var(--home-gold);
 }
 .home-final p {
   margin-top: 10px;
   max-width: 46ch;
-  color: #d0dbea;
+  color: #d4cdc3;
   font-size: 12px;
 }
 .home-final__actions {
@@ -1474,7 +1474,7 @@
   justify-content: center;
   gap: 8px;
   min-height: 36px;
-  color: #edf2f8;
+  color: #f4efe6;
   font-size: 11px;
 }
 .home-final__challenge svg {
@@ -1659,7 +1659,7 @@
     object-position: 66% center;
   }
   .home-hero::after {
-    background: linear-gradient(180deg, #071c3520 0%, #071c3550 13%, #071c35bd 38%, #071c35ed 88%);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--home-navy) 12%, transparent) 0%, color-mix(in srgb, var(--home-navy) 30%, transparent) 13%, color-mix(in srgb, var(--home-navy) 72%, transparent) 38%, color-mix(in srgb, var(--home-navy) 92%, transparent) 88%);
   }
   .home-hero__content {
     min-height: 460px;
