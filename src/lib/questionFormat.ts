@@ -38,6 +38,9 @@ export type Question = {
   itemNumber?: number | undefined;
   testedTopic?: string | null;
   figures?: string[] | undefined;
+  /** Etiquetas do filtro "Atual" (conteúdo novo ou cobrado recentemente), vindas de question_currency. */
+  currencyTags?: string[] | undefined;
+  currencyNote?: string | undefined;
 };
 
 // review_note começa com esta marca enquanto o gabarito é o preliminar da banca; remover a marca ao conferir o definitivo.

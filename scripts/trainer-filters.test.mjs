@@ -199,3 +199,24 @@ test('historical material and study repertoire cannot be labeled as an applied o
  assert.equal(trainerFilterFacets(study,all,new Map()).counts.exam.size,0);
  assert.deepEqual(filterTrainerQuestions(study,{...all,appliedExam:examKey(study[0])},new Map()),[]);
 });
+
+test("filtro Atual: 'recent' pega qualquer etiqueta, uma etiqueta pega só ela, e a contagem não duplica questões", () => {
+  const tagged = [
+    { ...q("a", "FGV"), currencyTags: ["IA e tecnologia", "Prova recente"] },
+    { ...q("b", "FGV"), currencyTags: ["Lei recente"] },
+    q("c", "FGV"),
+    { ...q("d", "FGV"), currencyTags: ["Prova recente"] },
+  ];
+  const ids = (currency) => filterTrainerQuestions(tagged, { ...all, currency }, new Map()).map((r) => r.id);
+  assert.deepEqual(ids("all"), ["a", "b", "c", "d"]);
+  assert.deepEqual(ids("recent"), ["a", "b"]); // só prova recente não conta como conteúdo novo
+  assert.deepEqual(ids("Prova recente"), ["a", "d"]);
+  assert.deepEqual(ids("IA e tecnologia"), ["a"]);
+  assert.deepEqual(ids("Reforma tributária"), []);
+  // sem o campo (quem monta filtros sem ele) nada muda
+  assert.equal(filterTrainerQuestions(tagged, all, new Map()).length, 4);
+  const facets = trainerFilterFacets(tagged, { ...all, currency: "all" }, new Map());
+  assert.equal(facets.counts.currency.get("recent"), 2);
+  assert.equal(facets.counts.currency.get("Prova recente"), 2);
+  assert.equal(facets.totals.currency, 4);
+});

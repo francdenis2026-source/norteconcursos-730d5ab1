@@ -131,6 +131,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       | "mode"
       | "appliedExam"
       | "catalogQuery"
+      | "currency"
       | "limit",
       string | undefined
     >
@@ -154,6 +155,7 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     mode: typeof search["mode"] === "string" ? search["mode"] : undefined,
     appliedExam: typeof search["appliedExam"] === "string" ? search["appliedExam"] : undefined,
     catalogQuery: typeof search["catalogQuery"] === "string" ? search["catalogQuery"] : undefined,
+    currency: typeof search["currency"] === "string" ? search["currency"] : undefined,
     limit:
       typeof search["limit"] === "string" &&
       ["5", "10", "20", "30", "50", "all"].includes(search["limit"])
@@ -272,6 +274,7 @@ function QuestionTrainer() {
   const [topic, setTopic] = React.useState(routeFilters.topic || "all");
   const autoStart = React.useRef(routeFilters.go === "1");
   const [difficulty, setDifficulty] = React.useState("all");
+  const [currency, setCurrency] = React.useState(routeFilters.currency || "all");
   const [limit, setLimit] = React.useState(routeFilters.limit || "20");
   const [orderMode, setOrderMode] = React.useState<OrderMode>(
     routeFilters.limit === "all" ? "exam" : "random",
@@ -437,6 +440,7 @@ function QuestionTrainer() {
     setArea(routeFilters.area || "all");
     setTopic(routeFilters.topic || "all");
     setDifficulty("all");
+    setCurrency(routeFilters.currency || "all");
     setAppliedExam(routeFilters.appliedExam || "all");
     setLimit(routeFilters.limit || "20");
     setOrderMode(routeFilters.limit === "all" ? "exam" : "random");
@@ -608,6 +612,7 @@ function QuestionTrainer() {
           source,
           reviewed,
           difficulty,
+          currency,
           state,
           category,
         },
@@ -626,6 +631,7 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
+      currency,
       state,
       category,
       topicOf,
@@ -643,11 +649,24 @@ function QuestionTrainer() {
       topics: options("topic", topic),
       states: options("state", state),
       categories: options("category", category),
+      currencies: options("currency", currency).filter((key) => key !== "recent"),
       exams: options("exam", appliedExam).map(
         (key) => [key, key.split("::").join(" · ")] as [string, string],
       ),
     };
-  }, [facets, contest, board, career, year, subject, topic, state, category, appliedExam]);
+  }, [
+    facets,
+    contest,
+    board,
+    career,
+    year,
+    subject,
+    topic,
+    state,
+    category,
+    currency,
+    appliedExam,
+  ]);
   const manual =
     <T,>(setter: (value: T) => void) =>
     (value: T) => {
@@ -670,6 +689,7 @@ function QuestionTrainer() {
           source,
           reviewed,
           difficulty,
+          currency,
           state,
           category,
         },
@@ -689,6 +709,7 @@ function QuestionTrainer() {
       source,
       reviewed,
       difficulty,
+      currency,
       state,
       category,
     ],
@@ -1239,6 +1260,7 @@ function QuestionTrainer() {
             source,
             reviewed,
             difficulty,
+            currency,
             state,
             category,
             area,
@@ -1259,6 +1281,7 @@ function QuestionTrainer() {
             setSource: setSource,
             setReviewed: setReviewed,
             setDifficulty: setDifficulty,
+            setCurrency: setCurrency,
             setState: setState,
             setCategory: setCategory,
             setArea: (value: string) => {
@@ -1464,6 +1487,18 @@ function QuestionTrainer() {
               >
                 {DIFFICULTY_LABEL[question.difficulty]}
               </Badge>
+              {question.currencyTags?.length ? (
+                <Badge
+                  variant="outline"
+                  className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
+                  title={question.currencyNote ?? question.currencyTags.join(" · ")}
+                >
+                  <Sparkles className="h-3 w-3" aria-hidden="true" />
+                  Atual:{" "}
+                  {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
+                    "Prova recente"}
+                </Badge>
+              ) : null}
               <span className="ml-auto">
                 <ReportQuestionButton question={question} />
               </span>
@@ -1882,6 +1917,7 @@ type SetupValues = {
   source: string;
   reviewed: string;
   difficulty: string;
+  currency: string;
   state: string;
   category: string;
   area: string;
@@ -1899,6 +1935,7 @@ type SetupSetters = {
   setSource: (value: string) => void;
   setReviewed: (value: string) => void;
   setDifficulty: (value: string) => void;
+  setCurrency: (value: string) => void;
   setState: (value: string) => void;
   setCategory: (value: string) => void;
   setArea: (value: string) => void;
@@ -1928,6 +1965,7 @@ function TrainerSetup({
     topics: string[];
     states: string[];
     categories: string[];
+    currencies: string[];
     exams: Array<[string, string]>;
   };
   values: SetupValues;
@@ -1945,6 +1983,7 @@ function TrainerSetup({
     setters.setSource("all");
     setters.setReviewed("all");
     setters.setDifficulty("all");
+    setters.setCurrency("all");
     setters.setState("all");
     setters.setCategory("all");
     setters.setArea("all");
@@ -2082,19 +2121,36 @@ function TrainerSetup({
         <details
           className="trainer-refinements"
           open={
-            ["appliedExam", "source", "reviewed", "difficulty", "state", "category"].some(
-              (key) => values[key as keyof SetupValues] !== "all",
-            ) || undefined
+            [
+              "currency",
+              "appliedExam",
+              "source",
+              "reviewed",
+              "difficulty",
+              "state",
+              "category",
+            ].some((key) => values[key as keyof SetupValues] !== "all") || undefined
           }
         >
           <summary>
             <SlidersHorizontal aria-hidden="true" />
             <span>
-              Mais critérios<small>Prova aplicada, origem, dificuldade e localização</small>
+              Mais critérios
+              <small>Atualidade, prova aplicada, origem, dificuldade e localização</small>
             </span>
             <ChevronDown aria-hidden="true" />
           </summary>
           <div className="trainer-filter-grid">
+            <TrainerFilter
+              label="Atualidade"
+              value={values.currency}
+              setValue={setters.setCurrency}
+              options={["recent", ...choices.currencies]}
+              labels={{ recent: "Tudo que é atual" }}
+              counts={facets.counts["currency"]}
+              allCount={facets.totals["currency"]}
+              allLabel="Todas as questões"
+            />
             <TrainerFilter
               label="Prova aplicada"
               value={values.appliedExam}
