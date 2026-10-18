@@ -14,6 +14,8 @@ export const getRouter = () => {
     // passagem do cursor pelo menu refazia o carregamento do chunk e deixava
     // a navegação interna perceptivelmente lenta.
     defaultPreloadStaleTime: 30_000,
+    defaultPreload: "intent",
+    defaultPreloadDelay: 50,
   });
 
   return router;

@@ -1,8 +1,6 @@
-import { platformDate } from "@/lib/platformClock";
 import { useState, useEffect } from "react";
 import { MockService } from "../services/mockService";
 import { Contest, PerformanceStats, UserResponse } from "../types";
-import { supabase } from "@/integrations/supabase/client";
 
 export function useDashboardData() {
   const [stats, setStats] = useState<PerformanceStats | null>(null);
@@ -13,9 +11,11 @@ export function useDashboardData() {
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
-      const performance = await MockService.getPerformanceStats();
-      const contest = await MockService.getFocusedContest().catch(() => undefined);
-      const allContests = await MockService.getContests().catch(() => []);
+      const [performance, contest, allContests] = await Promise.all([
+        MockService.getPerformanceStats(),
+        MockService.getFocusedContest().catch(() => undefined),
+        MockService.getContests().catch(() => []),
+      ]);
       setStats(performance);
       setFocusedContest(contest);
       setContests(allContests);
@@ -32,116 +32,4 @@ export function useDashboardData() {
   return { stats, focusedContest, contests, isLoading, refreshStats };
 }
 
-import { SubscriptionTier, UserProfile } from "../types";
-import { setStorageOwner } from "@/lib/userStorage";
-import { effectiveTier, planEndsAt } from "@/lib/launch.config";
-
-export function useAuthStatus() {
-  const [user, setUser] = useState<UserProfile | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    let active = true;
-    const applySession = async (
-      session: Awaited<ReturnType<typeof supabase.auth.getSession>>["data"]["session"],
-    ) => {
-      setStorageOwner(session?.user.id ?? null);
-      if (session) {
-        // Buscando perfil e roles diretamente do banco
-        const [profileRes, rolesRes] = await Promise.all([
-          supabase.from("profiles").select("*").eq("id", session.user.id).single(),
-          supabase.from("user_roles").select("role").eq("user_id", session.user.id),
-        ]);
-
-        const profile = profileRes.data;
-        const roleList = (rolesRes.data ?? []).map((r) => r.role);
-        const topRole = roleList.includes("admin")
-          ? "admin"
-          : roleList.includes("moderator")
-            ? "moderator"
-            : "user";
-
-        // Lógica de data efetiva: se o plano expirou, volta para free
-        // Plano em vigor: vencimento próprio e fase de testes (regra única em launch.config).
-        const eff = effectiveTier(
-          profile?.subscription_tier,
-          profile?.created_at,
-          profile?.subscription_expires_at,
-        );
-        const currentTier = eff.tier as SubscriptionTier;
-        const expiredFrom = eff.expiredFrom;
-        const expiredByDate =
-          !!profile?.subscription_expires_at &&
-          new Date(profile.subscription_expires_at) < platformDate();
-        const isActivated = expiredByDate ? false : !!profile?.is_activated;
-
-        if (!active) return;
-        setUser({
-          id: session.user.id,
-          avatar_url: profile?.avatar_url ?? undefined,
-          full_name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
-          name: profile?.full_name || session.user.user_metadata["full_name"] || "Usuário",
-          email: session.user.email || "",
-          subscription_tier: currentTier,
-          subscription_expires_at: profile?.subscription_expires_at,
-          plan_ends_at: expiredFrom
-            ? null
-            : planEndsAt(
-                profile?.created_at,
-                profile?.subscription_tier ?? "free",
-                profile?.subscription_expires_at,
-              ),
-          on_trial: eff.trial === true,
-          expired_plan: expiredFrom,
-          onboarding_completed: !!profile?.onboarding_completed,
-          onboarding_progress: profile?.onboarding_progress || {},
-          is_activated: isActivated,
-          role: topRole as "admin" | "moderator" | "user",
-        });
-      } else {
-        // Fallback para modo demo/visitante
-        if (!active) return;
-        setUser(null);
-      }
-    };
-
-    const checkAuth = async () => {
-      try {
-        const { data, error } = await supabase.auth.getSession();
-        if (error) throw error;
-        await applySession(data.session);
-      } catch (error) {
-        console.error("Falha ao verificar autenticação", error);
-        if (active) setUser(null);
-      } finally {
-        if (active) setIsLoading(false);
-      }
-    };
-
-    void checkAuth();
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      // Do not call getSession from inside the auth callback. It can wait on
-      // the same auth lock and leave every dashboard route loading forever.
-      window.setTimeout(() => {
-        void applySession(session).finally(() => {
-          if (active) setIsLoading(false);
-        });
-      }, 0);
-    });
-
-    return () => {
-      active = false;
-      subscription.unsubscribe();
-    };
-  }, []);
-
-  return {
-    user,
-    isAuthenticated: !!user && user.id !== "demo-user",
-    isLoading,
-    isAdmin: user?.role === "admin",
-  };
-}
+export { useAuthStatus } from "@/components/auth/AuthStatusProvider";

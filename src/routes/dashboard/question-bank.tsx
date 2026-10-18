@@ -475,9 +475,15 @@ function Metric({
 }
 function Loading() {
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center">
-      <Loader2 className="h-9 w-9 animate-spin text-emerald-600" />
-      <p className="mt-3 text-sm text-muted-foreground">Organizando o acervo…</p>
+    <div aria-busy="true" className="space-y-5">
+      <section className="page-hero page-hero--lg" data-hero="trainer">
+        <h1>Acervo de questões</h1>
+        <p>Consulte e organize suas questões para estudar.</p>
+      </section>
+      <div role="status" className="flex items-center gap-3 rounded-2xl border bg-card p-5">
+        <Loader2 className="h-5 w-5 animate-spin text-emerald-600" />
+        <p className="text-sm text-muted-foreground">Organizando o acervo…</p>
+      </div>
     </div>
   );
 }

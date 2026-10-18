@@ -199,7 +199,7 @@ function QuestionTrainer() {
   const {
     catalog: fullCatalog,
     loading: catalogLoading,
-    error,
+    error: catalogError,
   } = useQuestionCatalog(userId, canLoad);
   const examEdition = useQuery({
     queryKey: ["trainer-exam-edition", userId, routeFilters.edition],
@@ -248,7 +248,8 @@ function QuestionTrainer() {
     routeFilters.edition,
     examEdition.data,
   ]);
-  const { locked, loading: lockedLoading, markLocked } = useLockedAnswers(userId, canLoad);
+  const { locked, loading: lockedLoading, error: historyError, reload: reloadHistory, markLocked } = useLockedAnswers(userId, canLoad);
+  const error = catalogError ?? historyError;
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
@@ -758,6 +759,7 @@ function QuestionTrainer() {
       ? Math.max(0, dailyLimit - dailyUsed)
       : undefined;
   const startTraining = () => {
+    if (loading || authLoading || error || !canLoad) return;
     responseIdRef.current = crypto.randomUUID();
     const orderedPool = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
     const ordered =
@@ -1078,7 +1080,7 @@ function QuestionTrainer() {
     setSupportNotice(false);
   };
 
-  if (authLoading || loading || isGuest)
+  if (authLoading || isGuest)
     return (
       <Center>
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -1112,12 +1114,13 @@ function QuestionTrainer() {
       <Center>
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
+        {historyError && <Button onClick={() => void reloadHistory()}>Conferir histórico novamente</Button>}
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
         </Button>
       </Center>
     );
-  if (!started && routeFilters.edition && routeFilters.go === "1")
+  if (!started && !loading && routeFilters.edition && routeFilters.go === "1")
     return (
       <Center>
         {autoStart.current ? (
@@ -1142,7 +1145,7 @@ function QuestionTrainer() {
     );
   if (!started)
     return (
-      <div className="trainer-workbench">
+      <div className="trainer-workbench" aria-busy={loading}>
         <header className="trainer-workbench-heading trainer-workbench-hero">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
@@ -1155,6 +1158,7 @@ function QuestionTrainer() {
             <ArrowRight aria-hidden="true" />
           </Link>
         </header>
+        {loading && <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />Carregando questões e conferindo seu histórico…</p>}
         {practiceMode === "catalog" && (
           <div className="trainer-catalog-scope" role="status">
             <p className="font-semibold">
@@ -1246,13 +1250,14 @@ function QuestionTrainer() {
                   onChange={() => changePracticeMode(id)}
                 />
                 <span className="trainer-practice-mode__title">{title}</span>
-                <span className="mt-1 block text-xs text-muted-foreground">{sub}</span>
+                <span className="mt-1 block text-xs text-muted-foreground">{loading ? "Consultando questões disponíveis…" : sub}</span>
               </label>
             ))}
           </div>
         </section>
         <PcprExamSpotlight compact />
         <TrainerSetup
+          loading={loading}
           available={
             practiceMode === "catalog"
               ? catalogSessionQuestions(trainingPool, locked, dailyRemaining).length
@@ -1966,6 +1971,7 @@ type SetupSetters = {
 };
 
 function TrainerSetup({
+  loading,
   available,
   dailyRemaining,
   choices,
@@ -1975,6 +1981,7 @@ function TrainerSetup({
   setters,
   start,
 }: {
+  loading: boolean;
   currencyLocked: boolean;
   available: number;
   dailyRemaining?: number | undefined;
@@ -2267,7 +2274,7 @@ function TrainerSetup({
         <span className="trainer-panel-kicker">PRONTO PARA PRATICAR</span>
         <h2 id="trainer-session-title">Sua sessão</h2>
         <div className="trainer-stock">
-          <strong>{available.toLocaleString("pt-BR")}</strong>
+          <strong>{loading ? "…" : available.toLocaleString("pt-BR")}</strong>
           <span>questões disponíveis neste modo</span>
         </div>
         <TrainerFilter
@@ -2294,7 +2301,7 @@ function TrainerSetup({
         </div>
         <div className="trainer-start-bar">
           <p>
-            {dailyRemaining === 0
+            {loading ? "Conferindo as questões disponíveis…" : dailyRemaining === 0
               ? "Limite de novas respostas atingido hoje"
               : sessionSize
                 ? `${sessionSize} ${sessionSize === 1 ? "questão" : "questões"} nesta sessão`
@@ -2305,7 +2312,7 @@ function TrainerSetup({
               {dailyRemaining} novas respostas disponíveis hoje. Revisões não consomem esse limite.
             </small>
           )}
-          <Button disabled={!sessionSize} onClick={start} className="trainer-main-action">
+          <Button disabled={loading || !sessionSize} onClick={start} className="trainer-main-action">
             <span>Começar sessão</span>
             <ArrowRight aria-hidden="true" />
           </Button>

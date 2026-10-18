@@ -19,3 +19,9 @@ export async function fetchAllRows<T>(
     offset += data.length - pageSize;
   }
 }
+
+/** Retry without an optional support join only for schema compatibility errors. */
+export function isMissingQuestionSupport(error: unknown): boolean {
+  if (!error || typeof error !== "object" || !("code" in error)) return false;
+  return ["PGRST200", "PGRST204", "42703"].includes(String(error.code));
+}

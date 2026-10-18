@@ -1,3 +1,4 @@
+import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
@@ -282,11 +283,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
-      <Toaster position="top-center" closeButton />
-      <ConfirmHost />
-      <InstallAppPrompt />
-      <UpdateAvailablePrompt />
+      <AuthStatusProvider>
+        <Outlet />
+        <Toaster position="top-center" closeButton />
+        <ConfirmHost />
+        <InstallAppPrompt />
+        <UpdateAvailablePrompt />
+      </AuthStatusProvider>
     </QueryClientProvider>
   );
 }

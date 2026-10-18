@@ -334,6 +334,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       known = a.length;
     });
     const interval = window.setInterval(async () => {
+      if (document.visibilityState === "hidden" || !navigator.onLine) return;
       await MockService.awardAchievements();
       const latest = await MockService.getAchievements();
       if (cancelled || latest.length <= known) return;
@@ -345,7 +346,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           await import("@/components/dashboard/AchievementNotification");
         showAchievementNotification(newest);
       }
-    }, 5000);
+    }, 30000);
     return () => {
       cancelled = true;
       window.clearInterval(interval);
@@ -650,6 +651,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <Link
                 key={item.href}
                 to={item.href}
+                preload="viewport"
                 activeOptions={{ exact: true, includeSearch: false }}
                 data-active={isActive(location.pathname, item.href)}
                 aria-current={isActive(location.pathname, item.href) ? "page" : undefined}

@@ -114,6 +114,7 @@ export function DashboardNavigation({
       <Link
         key={navigationKey(item)}
         to={item.href}
+        preload={item.href === "/dashboard/question-trainer" || item.href === "/dashboard" ? "viewport" : "intent"}
         activeOptions={{ exact: true, includeSearch: true }}
         search={item.search ?? {}}
         className="app-nav__link"
