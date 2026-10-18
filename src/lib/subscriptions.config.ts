@@ -112,7 +112,7 @@ export const SUBSCRIPTION_PLANS: TierPlan[] = [
     annualPrice: 499,
     description: "Acompanhamento completo e ferramentas exclusivas.",
     features: {
-      aiSolver: { name: "Resoluções com IA por dia", included: true, limit: 100 },
+      aiSolver: { name: "Resoluções com IA", included: true, limit: "unlimited" },
       questions: { name: "Questões ilimitadas", included: true, limit: "unlimited" },
       mockExams: { name: "Simulados ilimitados", included: true, limit: "unlimited" },
       performanceAnalytics: { name: "Relatórios consolidados", included: true },

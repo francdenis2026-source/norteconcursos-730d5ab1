@@ -163,7 +163,7 @@ test("estrutura aprovada: preços, anual com 2 meses grátis e degraus de recurs
   // IA nunca é ilimitada em plano pago: cota crescente
   assert.deepEqual(
     ["essential", "plus", "premium"].map((t) => checkFeatureAccess(t, "aiSolver").limit),
-    [10, 30, 100],
+    [10, 30, "unlimited"],
   );
   assert.deepEqual(
     ["free", "essential", "plus", "premium"].map((t) => checkFeatureAccess(t, "questions").limit),
