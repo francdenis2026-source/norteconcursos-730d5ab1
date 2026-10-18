@@ -8,7 +8,7 @@ assert [r['item_number']for r in rows]==list(range(1,61))
 assert len({r['id']for r in rows})==60
 assert [r['item_number']for r in rows if r['official_answer']=='X']==[3]
 # Matriz do gabarito pós-recurso, lida por linhas de cinco itens.
-expected='CDXCABBADC'+'ABDADDACAA'+'CABDBCCADB'+'DCBACBDCCA'+'CDBDABCDDA'+'CBCACBCDDA'
+expected='CDXCABBADC'+'ABDADDACAA'+'CABDBCCADB'+'DCBACBDCCA'+'CDBDABCDDA'+'CBDCABCDDA'
 assert ''.join(r['official_answer']for r in rows)==expected
 for i in p['items']:
  r=i['row'];n=r['item_number']
