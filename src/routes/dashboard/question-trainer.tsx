@@ -102,6 +102,7 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
+import { QuestionAudioButton } from "@/components/dashboard/QuestionAudioButton";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
@@ -1533,6 +1534,14 @@ function QuestionTrainer() {
               max={Math.max(1, questions.length)}
               aria-label="Questões respondidas nesta sessão"
             />
+            <div className="mt-3 flex justify-end">
+              <QuestionAudioButton
+                text={[
+                  reflowStem(parsed.stem),
+                  ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
+                ].join("\n")}
+              />
+            </div>
             {parsed.base && (
               <details
                 open

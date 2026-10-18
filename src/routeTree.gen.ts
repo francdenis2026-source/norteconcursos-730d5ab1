@@ -20,6 +20,7 @@ import { Route as SuporteRouteImport } from './routes/suporte'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ApiCancellationEmailRouteImport } from './routes/api/cancellation-email'
 import { Route as ApiSolveQuestionRouteImport } from './routes/api/solve-question'
+import { Route as ApiVoiceSpeechRouteImport } from './routes/api/voice-speech'
 import { Route as CheckoutPlanIdRouteImport } from './routes/checkout.$planId'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as DashboardAdminRouteImport } from './routes/dashboard/admin'
@@ -129,6 +130,11 @@ const ApiCancellationEmailRoute = ApiCancellationEmailRouteImport.update({
 const ApiSolveQuestionRoute = ApiSolveQuestionRouteImport.update({
   id: '/api/solve-question',
   path: '/api/solve-question',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiVoiceSpeechRoute = ApiVoiceSpeechRouteImport.update({
+  id: '/api/voice-speech',
+  path: '/api/voice-speech',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutPlanIdRoute = CheckoutPlanIdRouteImport.update({
@@ -424,6 +430,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -491,6 +498,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -558,6 +566,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/api/cancellation-email': typeof ApiCancellationEmailRoute
   '/api/solve-question': typeof ApiSolveQuestionRoute
+  '/api/voice-speech': typeof ApiVoiceSpeechRoute
   '/checkout/$planId': typeof CheckoutPlanIdRoute
   '/dashboard/admin': typeof DashboardAdminRoute
   '/dashboard/admin-contests': typeof DashboardAdminContestsRoute
@@ -628,6 +637,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -695,6 +705,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -761,6 +772,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/api/cancellation-email'
     | '/api/solve-question'
+    | '/api/voice-speech'
     | '/checkout/$planId'
     | '/dashboard/admin'
     | '/dashboard/admin-contests'
@@ -830,6 +842,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   ApiCancellationEmailRoute: typeof ApiCancellationEmailRoute
   ApiSolveQuestionRoute: typeof ApiSolveQuestionRoute
+  ApiVoiceSpeechRoute: typeof ApiVoiceSpeechRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -911,6 +924,13 @@ declare module '@tanstack/react-router' {
       path: '/api/solve-question'
       fullPath: '/api/solve-question'
       preLoaderRoute: typeof ApiSolveQuestionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/voice-speech': {
+      id: '/api/voice-speech'
+      path: '/api/voice-speech'
+      fullPath: '/api/voice-speech'
+      preLoaderRoute: typeof ApiVoiceSpeechRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/checkout/$planId': {
@@ -1448,6 +1468,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   ApiCancellationEmailRoute: ApiCancellationEmailRoute,
   ApiSolveQuestionRoute: ApiSolveQuestionRoute,
+  ApiVoiceSpeechRoute: ApiVoiceSpeechRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
