@@ -11,6 +11,7 @@ import {
   Loader2,
   RefreshCw,
   Search,
+  Sparkles,
   TextSearch,
   Trophy,
 } from "lucide-react";
@@ -118,6 +119,15 @@ function QuestionBankPage() {
               search={questionBankSearch(collection, source, search, {})}
             >
               <BookOpenCheck className="h-4 w-4" /> Ir para o Treinador
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="gap-2 border-white/40 bg-white/10 text-white hover:bg-white/20"
+          >
+            <Link to="/dashboard/question-trainer" search={{ currency: "recent" }}>
+              <Sparkles className="h-4 w-4" /> Questões em alta
             </Link>
           </Button>
           <Button
