@@ -1,0 +1,876 @@
+{
+  "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+  "current_edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+  "current_edital_source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
+  "pf_syllabus_evidence": {
+    "file": "PF_25_edital_atualizado.pdf",
+    "path": "/workspace/cespe7000-audit/official-exams-check/PF_25_edital_atualizado.pdf",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "final_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "captured_at": "2026-10-17T23:07:12.549045+00:00",
+    "bytes": 1505541
+  },
+  "batch_id": "cespe2016-pf2002-recovered-subitems-2026-10-18",
+  "checked_at": "2026-10-18T03:50:34.083057+00:00",
+  "exam": {
+    "code": "PF2002:escrivao:caderno1",
+    "question": {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+      "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+      "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/5f2b4c324e-ESCRIVAO1.pdf",
+      "sha256": "95cc50663401196bdf3fdff8b39f6769095f155eefbf3e1d1c534c22f2669c19",
+      "bytes": 582789,
+      "official_host": true,
+      "pages": 17,
+      "text_start": "UnB / CESPE – MJ / DPF / ANP / DRS\nConcurso Público – Aplicação: 26/1/2002\nCargo: Escrivão de Polícia Federal – 1 / 17\nÉ permitida a reprodução, desde que citada a fonte.\nMINISTÉRI"
+    },
+    "answer_key": {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+      "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+      "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/f7966d9695-Gab_Def_Agente_Escrivao.pdf",
+      "sha256": "b3e4803854fcbc569f25879cd03d8330af08789c23e2130027d6e91fab720005",
+      "bytes": 42367,
+      "official_host": true,
+      "pages": 2,
+      "text_start": " \nU N I V E R S I D A D E   D E   B R A S Í L I A (UnB) \nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS (CESPE) \n \n \n \nMINISTÉRIO DA JUSTIÇA (MJ) / DEPARTAMENTO DE POLÍCIA FEDERAL (DPF"
+    },
+    "catalog_evidence": {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/",
+      "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/",
+      "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/b7374d92c9-Arquivos",
+      "sha256": "982b149c5dc186f8dc28f0f09b44f2be0edc1c06c04faf3c083f4befa8975c45",
+      "bytes": 10893,
+      "official_host": true,
+      "links": []
+    }
+  },
+  "support_label": "Texto V — Jurandir Freire Costa, fonte de 2000; prova PF/Escrivão de 26/01/2002; referências e afirmações históricas",
+  "support_body": "A maioria dos comentários sobre crimes ou se limitam a pedir de volta o autoritarismo ou a culpar a violência do cinema e da televisão, por excitar a imaginação criminosa dos jovens. Poucos pensam que vivemos em uma sociedade que estimula, de forma sistemática, a passividade, o rancor, a impotência, a inveja e o sentimento de nulidade nas pessoas. Não podemos interferir na política, porque nos ensinaram a perder o gosto pelo bem comum; não podemos tentar mudar nossas relações afetivas, porque isso é assunto de cientistas; não podemos, enfim, imaginar modos de viver mais dignos, mais cooperativos e solidários, porque isso é coisa de “obscurantista, idealista, perdedor ou ideólogo fanático”, e o mundo é dos fazedores de dinheiro. Somos uma espécie que possui o poder da imaginação, da criatividade, da afirmação e da agressividade. Se isso não pode aparecer, surge, no lugar, a reação cega ao que nos impede de criar, de colocar no mundo algo de nossa marca, de nosso desejo, de nossa vontade de poder. Quem sabe e pode usar — com firmeza, agressividade, criatividade e afirmatividade — a sua capacidade de doar e transformar a vida, raramente precisa matar inocentes, de maneira bruta. Existem mil outras maneiras de nos sentirmos potentes, de nos sentirmos capazes de imprimir um curso à vida que não seja pela força das armas, da violência física ou da evasão pelas drogas, legais ou ilegais, pouco importa. Jurandir Freire Costa. In: Quatro autores em busca do Brasil. Rio de Janeiro: Rocco, 2000, p. 43 (com adaptações).",
+  "decisions": [
+    {
+      "origin_candidate_id": "00dd5455f8918df7b60b26ff54fc7bc3cf769366048c715956f3977d0033df51",
+      "source_item_index_zero_based": 76,
+      "original_question_number": 32,
+      "original_subitem_number": 1,
+      "official_answer": "C",
+      "official_statement": "Muitos acreditam que a censura aos meios de comunicação seria uma forma de reduzir a violência entre jovens.",
+      "original_instruction": "Acerca das idéias do texto V, julgue os seguintes itens.",
+      "source_page": 13,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": false,
+      "remaining_blockers": [
+        "Gabarito oficial C confirmado; permanece ressalva técnica sobre a inferência de censura, que não é expressa no texto."
+      ],
+      "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738"
+    },
+    {
+      "origin_candidate_id": "52f081d760d2cf50a0ca8812f9d824cf01f6b4890393a7f80a84b0e4c9df6da9",
+      "source_item_index_zero_based": 77,
+      "original_question_number": 32,
+      "original_subitem_number": 2,
+      "official_answer": "C",
+      "official_statement": "A argumentação do texto põe em confronto atitudes possíveis: uma que se caracteriza por passividade e impotência, outra, por resistência criativa.",
+      "original_instruction": "Acerca das idéias do texto V, julgue os seguintes itens.",
+      "source_page": 13,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+      "row": {
+        "id": "c12f9567-aed2-57a6-a2e7-2be0ecf82226",
+        "source_id": "e734671e-f6dc-5261-be90-25c19fa6578f",
+        "external_item_key": "official:PF2002:escrivao:caderno1:question:32:subitem:2",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "contest_year": 2002,
+        "career_name": "Escrivão de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "subject": "Língua Portuguesa",
+        "subtopic": "Compreensão e interpretação de textos",
+        "question_text": "Texto-base [Texto V — Jurandir Freire Costa, fonte de 2000; prova PF/Escrivão de 26/01/2002; referências e afirmações históricas]:\nA maioria dos comentários sobre crimes ou se limitam a pedir de volta o autoritarismo ou a culpar a violência do cinema e da televisão, por excitar a imaginação criminosa dos jovens. Poucos pensam que vivemos em uma sociedade que estimula, de forma sistemática, a passividade, o rancor, a impotência, a inveja e o sentimento de nulidade nas pessoas. Não podemos interferir na política, porque nos ensinaram a perder o gosto pelo bem comum; não podemos tentar mudar nossas relações afetivas, porque isso é assunto de cientistas; não podemos, enfim, imaginar modos de viver mais dignos, mais cooperativos e solidários, porque isso é coisa de “obscurantista, idealista, perdedor ou ideólogo fanático”, e o mundo é dos fazedores de dinheiro. Somos uma espécie que possui o poder da imaginação, da criatividade, da afirmação e da agressividade. Se isso não pode aparecer, surge, no lugar, a reação cega ao que nos impede de criar, de colocar no mundo algo de nossa marca, de nosso desejo, de nossa vontade de poder. Quem sabe e pode usar — com firmeza, agressividade, criatividade e afirmatividade — a sua capacidade de doar e transformar a vida, raramente precisa matar inocentes, de maneira bruta. Existem mil outras maneiras de nos sentirmos potentes, de nos sentirmos capazes de imprimir um curso à vida que não seja pela força das armas, da violência física ou da evasão pelas drogas, legais ou ilegais, pouco importa. Jurandir Freire Costa. In: Quatro autores em busca do Brasil. Rio de Janeiro: Rocco, 2000, p. 43 (com adaptações).\n\n[[/texto-base]]\nQuestão 32 — Subitem 2 (original PF/Escrivão, 2002).\n\nAcerca das idéias do texto V, julgue os seguintes itens.\n\nA argumentação do texto põe em confronto atitudes possíveis: uma que se caracteriza por passividade e impotência, outra, por resistência criativa.",
+        "official_answer": "C",
+        "explanation": "Certo. O primeiro movimento do texto apresenta uma sociedade que desestimula a participação, a imaginação e a solidariedade. O segundo destaca a capacidade de criar, doar e transformar como alternativa à reação violenta. O contraste entre impotência e ação criativa estrutura a argumentação, sem exigir aceitar como atuais as afirmações sociológicas do autor.\n\nExemplo: Um argumento pode contrapor a frase 'nada podemos mudar' a exemplos de participação comunitária para defender uma atitude ativa.",
+        "legal_basis": [],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": false,
+        "verified_at": "2026-10-18T03:50:34.083057+00:00",
+        "law_version_checked_at": null,
+        "tested_topic": "Questão 32, subitem 2, PF/Escrivão 2002 — contraste argumentativo"
+      }
+    },
+    {
+      "origin_candidate_id": "705ee4660e7ce61348e3653893ff953a582a5b4e89d35c84fc995ca5980965e9",
+      "source_item_index_zero_based": 78,
+      "original_question_number": 32,
+      "original_subitem_number": 3,
+      "official_answer": "C",
+      "official_statement": "O trecho “Não podemos (...) dinheiro” (R.7-14) apresenta exemplificações que funcionam como argumentos para a afirmação do período que o antecede.",
+      "original_instruction": "Acerca das idéias do texto V, julgue os seguintes itens.",
+      "source_page": 13,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+      "row": {
+        "id": "d373935e-8ddb-5598-86fc-5f39d1f7d2e4",
+        "source_id": "e734671e-f6dc-5261-be90-25c19fa6578f",
+        "external_item_key": "official:PF2002:escrivao:caderno1:question:32:subitem:3",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "contest_year": 2002,
+        "career_name": "Escrivão de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "subject": "Língua Portuguesa",
+        "subtopic": "Compreensão e interpretação de textos",
+        "question_text": "Texto-base [Texto V — Jurandir Freire Costa, fonte de 2000; prova PF/Escrivão de 26/01/2002; referências e afirmações históricas]:\nA maioria dos comentários sobre crimes ou se limitam a pedir de volta o autoritarismo ou a culpar a violência do cinema e da televisão, por excitar a imaginação criminosa dos jovens. Poucos pensam que vivemos em uma sociedade que estimula, de forma sistemática, a passividade, o rancor, a impotência, a inveja e o sentimento de nulidade nas pessoas. Não podemos interferir na política, porque nos ensinaram a perder o gosto pelo bem comum; não podemos tentar mudar nossas relações afetivas, porque isso é assunto de cientistas; não podemos, enfim, imaginar modos de viver mais dignos, mais cooperativos e solidários, porque isso é coisa de “obscurantista, idealista, perdedor ou ideólogo fanático”, e o mundo é dos fazedores de dinheiro. Somos uma espécie que possui o poder da imaginação, da criatividade, da afirmação e da agressividade. Se isso não pode aparecer, surge, no lugar, a reação cega ao que nos impede de criar, de colocar no mundo algo de nossa marca, de nosso desejo, de nossa vontade de poder. Quem sabe e pode usar — com firmeza, agressividade, criatividade e afirmatividade — a sua capacidade de doar e transformar a vida, raramente precisa matar inocentes, de maneira bruta. Existem mil outras maneiras de nos sentirmos potentes, de nos sentirmos capazes de imprimir um curso à vida que não seja pela força das armas, da violência física ou da evasão pelas drogas, legais ou ilegais, pouco importa. Jurandir Freire Costa. In: Quatro autores em busca do Brasil. Rio de Janeiro: Rocco, 2000, p. 43 (com adaptações).\n\n[[/texto-base]]\nQuestão 32 — Subitem 3 (original PF/Escrivão, 2002).\n\nAcerca das idéias do texto V, julgue os seguintes itens.\n\nO trecho “Não podemos (...) dinheiro” (R.7-14) apresenta exemplificações que funcionam como argumentos para a afirmação do período que o antecede.",
+        "official_answer": "C",
+        "explanation": "Certo. As construções repetidas com Não podemos concretizam o diagnóstico anterior de passividade e sentimento de nulidade. Os exemplos mostram campos em que as pessoas são desencorajadas a agir e funcionam como sustentação da avaliação geral. As referências de linha precisam ser conferidas no original, pois pertencem à diagramação da prova.\n\nExemplo: Depois de afirmar que uma instituição desestimula iniciativas, o autor pode citar entraves a projetos, reuniões e propostas como argumentos exemplificativos.",
+        "legal_basis": [],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": false,
+        "verified_at": "2026-10-18T03:50:34.083057+00:00",
+        "law_version_checked_at": null,
+        "tested_topic": "Questão 32, subitem 3, PF/Escrivão 2002 — exemplificação; conferir linhas no original"
+      }
+    },
+    {
+      "origin_candidate_id": "f8b83ca52f99ef9d41a24c2ef918e65e9f646b4d5da73729a82bccf9f68182f6",
+      "source_item_index_zero_based": 79,
+      "original_question_number": 32,
+      "original_subitem_number": 4,
+      "official_answer": "E",
+      "official_statement": "Infere-se do texto que o autor culpa a violência do cinema e da televisão pela disseminação da violência nos dias atuais.",
+      "original_instruction": "Acerca das idéias do texto V, julgue os seguintes itens.",
+      "source_page": 13,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+      "row": {
+        "id": "b7072093-5df2-5341-afd9-0556f6a35fca",
+        "source_id": "e734671e-f6dc-5261-be90-25c19fa6578f",
+        "external_item_key": "official:PF2002:escrivao:caderno1:question:32:subitem:4",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "contest_year": 2002,
+        "career_name": "Escrivão de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "subject": "Língua Portuguesa",
+        "subtopic": "Compreensão e interpretação de textos",
+        "question_text": "Texto-base [Texto V — Jurandir Freire Costa, fonte de 2000; prova PF/Escrivão de 26/01/2002; referências e afirmações históricas]:\nA maioria dos comentários sobre crimes ou se limitam a pedir de volta o autoritarismo ou a culpar a violência do cinema e da televisão, por excitar a imaginação criminosa dos jovens. Poucos pensam que vivemos em uma sociedade que estimula, de forma sistemática, a passividade, o rancor, a impotência, a inveja e o sentimento de nulidade nas pessoas. Não podemos interferir na política, porque nos ensinaram a perder o gosto pelo bem comum; não podemos tentar mudar nossas relações afetivas, porque isso é assunto de cientistas; não podemos, enfim, imaginar modos de viver mais dignos, mais cooperativos e solidários, porque isso é coisa de “obscurantista, idealista, perdedor ou ideólogo fanático”, e o mundo é dos fazedores de dinheiro. Somos uma espécie que possui o poder da imaginação, da criatividade, da afirmação e da agressividade. Se isso não pode aparecer, surge, no lugar, a reação cega ao que nos impede de criar, de colocar no mundo algo de nossa marca, de nosso desejo, de nossa vontade de poder. Quem sabe e pode usar — com firmeza, agressividade, criatividade e afirmatividade — a sua capacidade de doar e transformar a vida, raramente precisa matar inocentes, de maneira bruta. Existem mil outras maneiras de nos sentirmos potentes, de nos sentirmos capazes de imprimir um curso à vida que não seja pela força das armas, da violência física ou da evasão pelas drogas, legais ou ilegais, pouco importa. Jurandir Freire Costa. In: Quatro autores em busca do Brasil. Rio de Janeiro: Rocco, 2000, p. 43 (com adaptações).\n\n[[/texto-base]]\nQuestão 32 — Subitem 4 (original PF/Escrivão, 2002).\n\nAcerca das idéias do texto V, julgue os seguintes itens.\n\nInfere-se do texto que o autor culpa a violência do cinema e da televisão pela disseminação da violência nos dias atuais.",
+        "official_answer": "E",
+        "explanation": "Errado. A abertura relata uma explicação recorrente sobre a influência dos meios de comunicação para, em seguida, deslocar o foco à passividade social e à falta de realização criativa. Atribuir ao autor a culpa que ele apresenta como opinião de muitos confunde a posição relatada com a tese efetivamente desenvolvida no texto.\n\nExemplo: Quando um artigo diz 'muitos culpam a internet, mas precisamos examinar a escola', não é correto resumir sua posição como uma acusação à internet.",
+        "legal_basis": [],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": false,
+        "verified_at": "2026-10-18T03:50:34.083057+00:00",
+        "law_version_checked_at": null,
+        "tested_topic": "Questão 32, subitem 4, PF/Escrivão 2002 — distinção entre tese e opinião relatada"
+      }
+    },
+    {
+      "origin_candidate_id": "dc12c38a5fb4b73875d6f9e3bf408acc4965b54cbe76897a970b0331ce0bd96c",
+      "source_item_index_zero_based": 80,
+      "original_question_number": 32,
+      "original_subitem_number": 5,
+      "official_answer": "C",
+      "official_statement": "De acordo com as idéias defendidas no texto, as formas positivas de dar sentido à vida e experimentar a sensação de poder vinculam-se à maneira como se usa a capacidade de doação e de transformação.",
+      "original_instruction": "Acerca das idéias do texto V, julgue os seguintes itens.",
+      "source_page": 13,
+      "answer_verified": true,
+      "context_complete": true,
+      "publication_approved": true,
+      "remaining_blockers": [],
+      "expected_raw_text_sha256": "85de42409220b22acaac0192e4cfad2a6409ac990d1cda1627f2fa1e5a5eb738",
+      "row": {
+        "id": "9f27afbb-87d3-5ccf-8b15-9b7c44fe6beb",
+        "source_id": "e734671e-f6dc-5261-be90-25c19fa6578f",
+        "external_item_key": "official:PF2002:escrivao:caderno1:question:32:subitem:5",
+        "syllabus_topic_id": "2ab9d0f8-22f6-467b-bb30-cd0c5cff4b7f",
+        "contest_name": "Polícia Federal",
+        "contest_year": 2002,
+        "career_name": "Escrivão de Polícia Federal",
+        "exam_board": "CEBRASPE",
+        "subject": "Língua Portuguesa",
+        "subtopic": "Compreensão e interpretação de textos",
+        "question_text": "Texto-base [Texto V — Jurandir Freire Costa, fonte de 2000; prova PF/Escrivão de 26/01/2002; referências e afirmações históricas]:\nA maioria dos comentários sobre crimes ou se limitam a pedir de volta o autoritarismo ou a culpar a violência do cinema e da televisão, por excitar a imaginação criminosa dos jovens. Poucos pensam que vivemos em uma sociedade que estimula, de forma sistemática, a passividade, o rancor, a impotência, a inveja e o sentimento de nulidade nas pessoas. Não podemos interferir na política, porque nos ensinaram a perder o gosto pelo bem comum; não podemos tentar mudar nossas relações afetivas, porque isso é assunto de cientistas; não podemos, enfim, imaginar modos de viver mais dignos, mais cooperativos e solidários, porque isso é coisa de “obscurantista, idealista, perdedor ou ideólogo fanático”, e o mundo é dos fazedores de dinheiro. Somos uma espécie que possui o poder da imaginação, da criatividade, da afirmação e da agressividade. Se isso não pode aparecer, surge, no lugar, a reação cega ao que nos impede de criar, de colocar no mundo algo de nossa marca, de nosso desejo, de nossa vontade de poder. Quem sabe e pode usar — com firmeza, agressividade, criatividade e afirmatividade — a sua capacidade de doar e transformar a vida, raramente precisa matar inocentes, de maneira bruta. Existem mil outras maneiras de nos sentirmos potentes, de nos sentirmos capazes de imprimir um curso à vida que não seja pela força das armas, da violência física ou da evasão pelas drogas, legais ou ilegais, pouco importa. Jurandir Freire Costa. In: Quatro autores em busca do Brasil. Rio de Janeiro: Rocco, 2000, p. 43 (com adaptações).\n\n[[/texto-base]]\nQuestão 32 — Subitem 5 (original PF/Escrivão, 2002).\n\nAcerca das idéias do texto V, julgue os seguintes itens.\n\nDe acordo com as idéias defendidas no texto, as formas positivas de dar sentido à vida e experimentar a sensação de poder vinculam-se à maneira como se usa a capacidade de doação e de transformação.",
+        "official_answer": "C",
+        "explanation": "Certo. O fecho relaciona a capacidade de doar, transformar e imprimir uma marca à vida a formas de sentir potência sem recorrer à violência física. A questão resume essa relação entre ação criativa e realização pessoal. A interpretação se limita ao argumento do texto e não demonstra causalidade científica universal sobre prevenção da violência.\n\nExemplo: Organizar uma ação solidária pode ilustrar o uso construtivo de uma capacidade de transformação que o texto contrapõe à agressão física.",
+        "legal_basis": [],
+        "difficulty": "média",
+        "content_status": "active",
+        "is_original": false,
+        "verified_at": "2026-10-18T03:50:34.083057+00:00",
+        "law_version_checked_at": null,
+        "tested_topic": "Questão 32, subitem 5, PF/Escrivão 2002 — síntese do argumento; evitar universalização factual"
+      }
+    }
+  ],
+  "applied": {
+    "batch_id": "cespe2016-pf2002-recovered-subitems-2026-10-18",
+    "apply": true,
+    "complete": true,
+    "decisions": 5,
+    "approved": 4,
+    "retained": 1,
+    "compared_counts": {
+      "official_exam_questions": 5126,
+      "board_exam_questions": 1118,
+      "curated_question_catalog": 2031,
+      "question_corpus_candidates": 4982
+    },
+    "private_refined_ids": [
+      "00dd5455f8918df7b60b26ff54fc7bc3cf769366048c715956f3977d0033df51",
+      "52f081d760d2cf50a0ca8812f9d824cf01f6b4890393a7f80a84b0e4c9df6da9",
+      "705ee4660e7ce61348e3653893ff953a582a5b4e89d35c84fc995ca5980965e9",
+      "f8b83ca52f99ef9d41a24c2ef918e65e9f646b4d5da73729a82bccf9f68182f6",
+      "dc12c38a5fb4b73875d6f9e3bf408acc4965b54cbe76897a970b0331ce0bd96c"
+    ],
+    "published_ids": [
+      "c12f9567-aed2-57a6-a2e7-2be0ecf82226",
+      "d373935e-8ddb-5598-86fc-5f39d1f7d2e4",
+      "b7072093-5df2-5341-afd9-0556f6a35fca",
+      "9f27afbb-87d3-5ccf-8b15-9b7c44fe6beb"
+    ]
+  },
+  "pf2000_held_research": {
+    "checked_at": "2026-10-18T03:53:50.995886+00:00",
+    "official_key": {
+      "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Gab_Def_PF.PDF",
+      "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Gab_Def_PF.PDF",
+      "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/98a8c9cce3-Gab_Def_PF.PDF",
+      "sha256": "d5116edc40f8740ae546d81f1f981dec4e7aa3eba8c7f9d15d0ca68662009548",
+      "bytes": 56422,
+      "official_host": true,
+      "pages": 1,
+      "text_start": "U N I V E R S I D A D E   D E   B R A S Í L I A – UnB\nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS – CESPE\nMINISTÉRIO DA JUSTIÇA – MJ\nDEPARTAMENTO DE POLÍCIA FEDERAL – DPF\nACADEMIA N"
+    },
+    "secondary_paper": {
+      "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+      "final_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+      "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/a52e2f8524-cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+      "sha256": "74f0513b6e358e064ede8ee7546c954bbb726ddda2960c3b2e78870a2b6e1135",
+      "bytes": 359163,
+      "official_host": false,
+      "pages": 34,
+      "text_start": "POLÍCIA FEDERAL - 2000 \nCONCURSO PARA  AGENTE DA POLÍCIA FEDERAL  \n \n \nINFORMÁTICA \n \nNas questões de 1 a 5, considere que todos os programas mencionados estão em \nconfiguração-pad"
+    },
+    "updated": [
+      {
+        "candidate_id": "675771af1b4f3df4b9bb021e7029ddb17aabe5ed15ab104c0d1bb1c576a09ca8",
+        "source_index": 81,
+        "question_candidate": 40,
+        "subitem_candidate": 1,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "15cfb5659a4209fc74947cafcff6375445861353fb8a9bf5bc58534d5c92e9c9",
+        "source_index": 82,
+        "question_candidate": 40,
+        "subitem_candidate": 2,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "9e23ac0fd2805525c011fe8368c929127e0b0ece088aa8dfed8c879887a134fe",
+        "source_index": 83,
+        "question_candidate": 40,
+        "subitem_candidate": 3,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "5f1785f11af8fcc59f010e421e95d7fac92c9a5764878c46fc294589eacb7cfb",
+        "source_index": 84,
+        "question_candidate": 40,
+        "subitem_candidate": 4,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "b305e45887d3a23d9bcfc0c780ef27cc915aa4290d99c213076fe0beed55e65b",
+        "source_index": 85,
+        "question_candidate": 40,
+        "subitem_candidate": 5,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "c372ab9ebbac94bec75d9cb11245cbe42ea4fd549cc3bc10dd3f168bf3bbaeab",
+        "source_index": 86,
+        "question_candidate": 41,
+        "subitem_candidate": 1,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "006f8766abb5226569ad5851da3bd4b2ad814b7771cc0975dd86556e35bb9668",
+        "source_index": 87,
+        "question_candidate": 41,
+        "subitem_candidate": 2,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "2a723739b76e386a66ef41f47d5449ab1ec162b5f2468b99c45bc8456bc43005",
+        "source_index": 88,
+        "question_candidate": 41,
+        "subitem_candidate": 3,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "ca50585b2cc63355ae810079a3dd0355bc717482c4768942f0c5a4ad7c2e4e3b",
+        "source_index": 89,
+        "question_candidate": 41,
+        "subitem_candidate": 4,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "7b24989fc11271d0ee21aea06bba8eed724c1204ff8bdd9efe7173a7decd39c2",
+        "source_index": 90,
+        "question_candidate": 41,
+        "subitem_candidate": 5,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "ff9b9fcf36bbed00e4f304e18729c7a4f54f6c5008ab6422b69ac066ef924eb5",
+        "source_index": 91,
+        "question_candidate": 43,
+        "subitem_candidate": 1,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "dacf715e67affd2fd86a4c4d1da223989f9804c931382742cb18a20c37f9c497",
+        "source_index": 92,
+        "question_candidate": 43,
+        "subitem_candidate": 2,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "623824d8dc5e0ab24410bd878763e5e43b50d6bf3a25665c6beb59e8526fd804",
+        "source_index": 93,
+        "question_candidate": 43,
+        "subitem_candidate": 3,
+        "official_cell": "E"
+      },
+      {
+        "candidate_id": "d7faba186e01513a42331a53251867bb88c8fa8fa1864ec1bafb12349b21f32a",
+        "source_index": 94,
+        "question_candidate": 43,
+        "subitem_candidate": 4,
+        "official_cell": "C"
+      },
+      {
+        "candidate_id": "ecf4c3faf9ba3ae1953cc29713cce1d14cf2232d336a18e4717dfe9c5141fccc",
+        "source_index": 95,
+        "question_candidate": 43,
+        "subitem_candidate": 5,
+        "official_cell": "C"
+      }
+    ],
+    "published": 0,
+    "official_original_paper_verified": false
+  },
+  "platform_lookup": {
+    "checked_at": "2026-10-18T03:54:48.521047+00:00",
+    "official_exam_documents_consulted": [
+      {
+        "id": "01853b95-3308-44c4-978a-5f28eec8100d",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2018",
+        "doc_type": "prova",
+        "role_cargo": null,
+        "file_name": "Discursiva.PDF",
+        "storage_path": "policia-federal/2018/discursiva.pdf",
+        "notes": null
+      },
+      {
+        "id": "061bb69d-d2e2-4f86-a74b-407645446389",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2014",
+        "doc_type": "gabarito",
+        "role_cargo": null,
+        "file_name": "gabarito-definitivo-pdf.PDF.pdf",
+        "storage_path": "policia-federal/2014/gabarito-definitivo-pdf.pdf.pdf",
+        "notes": null
+      },
+      {
+        "id": "222d0511-f98b-4609-9280-cf89a65a8e57",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2021",
+        "doc_type": "gabarito",
+        "role_cargo": null,
+        "file_name": "GAB_DEFINITIVO_APF.PDF",
+        "storage_path": "policia-federal/2021/gab_definitivo_apf.pdf",
+        "notes": null
+      },
+      {
+        "id": "25c18403-65fc-4dfa-99a2-4da9390eb51f",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2021",
+        "doc_type": "padrao_resposta",
+        "role_cargo": "Demais Cargos",
+        "file_name": "PF_DISC_PADRO_DE_RESPOSTA_DEFINITIVO__DEMAIS_CARGOS.PDF",
+        "storage_path": "policia-federal/2021/pf_disc_padro_de_resposta_definitivo__demais_cargos.pdf",
+        "notes": null
+      },
+      {
+        "id": "28c13fa8-6c26-4400-82cb-5d2f66dbc9af",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2018",
+        "doc_type": "padrao_resposta",
+        "role_cargo": null,
+        "file_name": "Discursiva - padrão de resposta.PDF",
+        "storage_path": "policia-federal/2018/discursiva-padrao-de-resposta.pdf",
+        "notes": null
+      },
+      {
+        "id": "2cfda78f-3bb5-4788-bd16-bdea5e669947",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2021",
+        "doc_type": "prova",
+        "role_cargo": "Agente de Polícia Federal",
+        "file_name": "prova_CARGO_2_AGENTE_DE_POLCIA_FEDERAL.PDF",
+        "storage_path": "policia-federal/2021/prova_cargo_2_agente_de_polcia_federal.pdf",
+        "notes": null
+      },
+      {
+        "id": "48bcbe4c-8a02-41b2-9a70-3476acc1e74d",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2014",
+        "doc_type": "padrao_resposta",
+        "role_cargo": null,
+        "file_name": "padrao-de-resposta-definitivo-pdf.PDF.pdf",
+        "storage_path": "policia-federal/2014/padrao-de-resposta-definitivo-pdf.pdf.pdf",
+        "notes": null
+      },
+      {
+        "id": "af72da93-060f-4593-8892-f9605f98e40c",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2014",
+        "doc_type": "prova",
+        "role_cargo": "Agente de Polícia Federal",
+        "file_name": "prova-de-apf-pdf.PDF.pdf",
+        "storage_path": "policia-federal/2014/prova-de-apf-pdf.pdf.pdf",
+        "notes": null
+      },
+      {
+        "id": "c15eed32-b8e5-4ac8-bf43-d412d69329fa",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2021",
+        "doc_type": "prova",
+        "role_cargo": "Demais Cargos",
+        "file_name": "PF_21_PROVA_DISCURSIVA_DEMAIS_CARGOS.PDF",
+        "storage_path": "policia-federal/2021/pf_21_prova_discursiva_demais_cargos.pdf",
+        "notes": null
+      },
+      {
+        "id": "ce9ccd98-3e7a-433d-8628-ce75206a0f4e",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2018",
+        "doc_type": "gabarito",
+        "role_cargo": null,
+        "file_name": "Gabarito objetiva.PDF",
+        "storage_path": "policia-federal/2018/gabarito-objetiva.pdf",
+        "notes": null
+      },
+      {
+        "id": "dfb55502-2ba7-48b8-a576-a80f9af4933d",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2018",
+        "doc_type": "matriz",
+        "role_cargo": null,
+        "file_name": "MATRIZ_408_DGPPF012__PAG_9.PDF",
+        "storage_path": "policia-federal/2018/matriz_408_dgppf012__pag_9.pdf",
+        "notes": null
+      },
+      {
+        "id": "eef495af-bace-4b28-941c-42d4ec1f055b",
+        "contest_name": "Polícia Federal",
+        "contest_year": "2018",
+        "doc_type": "outro",
+        "role_cargo": null,
+        "file_name": "view.htm",
+        "storage_path": "policia-federal/2018/view.htm",
+        "notes": null
+      }
+    ],
+    "matching_pf2000_2002_documents_found": 0,
+    "public_text_search_hits": 4,
+    "exact_target_matches": 0,
+    "matching_support_texts_found": 0,
+    "scope": "Registered official_exam_documents, content_sources, three public question catalogs and question_support_texts. No access to student documents or orphan Storage object scan."
+  },
+  "sources_research": {
+    "official_downloads": [
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/5f2b4c324e-ESCRIVAO1.pdf",
+        "sha256": "95cc50663401196bdf3fdff8b39f6769095f155eefbf3e1d1c534c22f2669c19",
+        "bytes": 582789,
+        "official_host": true,
+        "pages": 17,
+        "text_start": "UnB / CESPE – MJ / DPF / ANP / DRS\nConcurso Público – Aplicação: 26/1/2002\nCargo: Escrivão de Polícia Federal – 1 / 17\nÉ permitida a reprodução, desde que citada a fonte.\nMINISTÉRI"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/f7966d9695-Gab_Def_Agente_Escrivao.pdf",
+        "sha256": "b3e4803854fcbc569f25879cd03d8330af08789c23e2130027d6e91fab720005",
+        "bytes": 42367,
+        "official_host": true,
+        "pages": 2,
+        "text_start": " \nU N I V E R S I D A D E   D E   B R A S Í L I A (UnB) \nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS (CESPE) \n \n \n \nMINISTÉRIO DA JUSTIÇA (MJ) / DEPARTAMENTO DE POLÍCIA FEDERAL (DPF"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/Anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/Anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/c5d07a186b-Gab_Def_Agente_Escrivao.pdf",
+        "sha256": "b3e4803854fcbc569f25879cd03d8330af08789c23e2130027d6e91fab720005",
+        "bytes": 42367,
+        "official_host": true,
+        "pages": 2,
+        "text_start": " \nU N I V E R S I D A D E   D E   B R A S Í L I A (UnB) \nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS (CESPE) \n \n \n \nMINISTÉRIO DA JUSTIÇA (MJ) / DEPARTAMENTO DE POLÍCIA FEDERAL (DPF"
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/6e9a9f35d7-pf2001",
+        "sha256": "d5267fea69d5e818afed61fe72771dbb1cf2653292ba93de505d2e746fd501e3",
+        "bytes": 434,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/2e619a250d-anteriores_2002",
+        "sha256": "111add417e994c6a33989b33b61442a7e28a32da4ff2debe29422fe2ddc2b098",
+        "bytes": 996,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/pf2000/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/pf2000/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/f71dd48122-pf2000",
+        "sha256": "ad2d5b5d9420cb1e590d7f177b8b5957c2ade3699eaa4a690c0695c0199f0fe6",
+        "bytes": 434,
+        "official_host": true,
+        "links": []
+      }
+    ],
+    "official_indexes": [
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/d7a2722374-PF2000",
+        "sha256": "ff092de9fb0f5b9f6d7d4f0d9290e61cad61e52c5ef52ee46a08de469995bb67",
+        "bytes": 434,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/aa81f72a80-Arquivos",
+        "sha256": "8df5ce2db03f4bcfbd1293f2eb30b1d54a098184736ffd77988c6c58b6d382f9",
+        "bytes": 1438,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/43e03283b9-Agente",
+        "sha256": "980ac3e49994f267512eea7600fcf2eee7b0965979614749f2a4baa1b48351b6",
+        "bytes": 5795,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Indice.txt",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Indice.txt",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/bc90d5ac4e-Indice.txt",
+        "sha256": "764d3f43169714fc9805aaab94c486c753bd9fe5d046b1e6640547b7afa06581",
+        "bytes": 4815,
+        "official_host": true,
+        "links": []
+      },
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/b7374d92c9-Arquivos",
+        "sha256": "982b149c5dc186f8dc28f0f09b44f2be0edc1c06c04faf3c083f4befa8975c45",
+        "bytes": 10893,
+        "official_host": true,
+        "links": []
+      }
+    ],
+    "pf2000_downloads": [
+      {
+        "url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Gab_Def_PF.PDF",
+        "final_url": "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Gab_Def_PF.PDF",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/98a8c9cce3-Gab_Def_PF.PDF",
+        "sha256": "d5116edc40f8740ae546d81f1f981dec4e7aa3eba8c7f9d15d0ca68662009548",
+        "bytes": 56422,
+        "official_host": true,
+        "pages": 1,
+        "text_start": "U N I V E R S I D A D E   D E   B R A S Í L I A – UnB\nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS – CESPE\nMINISTÉRIO DA JUSTIÇA – MJ\nDEPARTAMENTO DE POLÍCIA FEDERAL – DPF\nACADEMIA N"
+      },
+      {
+        "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+        "final_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/a52e2f8524-cespe-2000-policia-federal-agente-federal-da-policia-federal-prova.pdf",
+        "sha256": "74f0513b6e358e064ede8ee7546c954bbb726ddda2960c3b2e78870a2b6e1135",
+        "bytes": 359163,
+        "official_host": false,
+        "pages": 34,
+        "text_start": "POLÍCIA FEDERAL - 2000 \nCONCURSO PARA  AGENTE DA POLÍCIA FEDERAL  \n \n \nINFORMÁTICA \n \nNas questões de 1 a 5, considere que todos os programas mencionados estão em \nconfiguração-pad"
+      },
+      {
+        "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-gabarito.pdf",
+        "final_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-gabarito.pdf",
+        "path": "/workspace/cespe7000-audit/pf2000-2002-recovery/b3e29094a8-cespe-2000-policia-federal-agente-federal-da-policia-federal-gabarito.pdf",
+        "sha256": "d5116edc40f8740ae546d81f1f981dec4e7aa3eba8c7f9d15d0ca68662009548",
+        "bytes": 56422,
+        "official_host": false,
+        "pages": 1,
+        "text_start": "U N I V E R S I D A D E   D E   B R A S Í L I A – UnB\nCENTRO DE SELEÇÃO E DE PROMOÇÃO DE EVENTOS – CESPE\nMINISTÉRIO DA JUSTIÇA – MJ\nDEPARTAMENTO DE POLÍCIA FEDERAL – DPF\nACADEMIA N"
+      }
+    ],
+    "searches": [
+      {
+        "query": "\"polícia federal\" \"2000\" \"agente\" prova pdf",
+        "url": "https://html.duckduckgo.com/html/?q=%22pol%C3%ADcia+federal%22+%222000%22+%22agente%22+prova+pdf",
+        "file": "duck-ee4719639c.html",
+        "results": []
+      },
+      {
+        "query": "\"polícia federal\" \"2002\" \"escrivão\" gabarito",
+        "url": "https://html.duckduckgo.com/html/?q=%22pol%C3%ADcia+federal%22+%222002%22+%22escriv%C3%A3o%22+gabarito",
+        "file": "duck-6a171ff780.html",
+        "results": []
+      },
+      {
+        "query": "PF 2000 agente gabarito pdf",
+        "url": "https://html.duckduckgo.com/html/?q=PF+2000+agente+gabarito+pdf",
+        "file": "duck-dbf3a4f17f.html",
+        "results": []
+      },
+      {
+        "query": "PF 2002 escrivão gabarito definitivo",
+        "url": "https://html.duckduckgo.com/html/?q=PF+2002+escriv%C3%A3o+gabarito+definitivo",
+        "file": "duck-ff41995d15.html",
+        "results": [
+          "http://www.cespe.unb.br/concursos/_antigos/Anteriores_2002/2001/pf2001/Arquivos/Gab_Def_Agente_Escrivao.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2001/pf2001/Arquivos/ESCRIVAO1.pdf",
+          "https://gabarite.com.br/provas-de-concursos/cargo/escrivao-de-policia-federal",
+          "https://jrconcursos.com.br/provas-anteriores-de-escrivao-de-policia-federal/",
+          "https://jrconcursos.com.br/provas-da-policia-federal-em-pdf-com-gabarito/",
+          "https://www.concursosaz.com.br/provas-de-concursos/prova-policia-federal-escrivao-da-policia-federal-2002-43686",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2025/provas-objetivas/gabaritos/gabaritos-definitivos",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-plano-especial-de-cargos-2025/provas-objetivas/gabaritos",
+          "https://www.pciconcursos.com.br/provas/download/escrivao-de-policia-policia-federal-cespe-2002"
+        ]
+      },
+      {
+        "query": "PF 2000 agente gabarito definitivo",
+        "url": "https://html.duckduckgo.com/html/?q=PF+2000+agente+gabarito+definitivo",
+        "file": "duck-00711a70ba.html",
+        "results": [
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+          "https://arquivos.qconcursos.com/prova/arquivo_gabarito/281/cespe-2000-policia-federal-agente-federal-da-policia-federal-gabarito.pdf",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Indice.txt",
+          "https://jrconcursos.com.br/provas-da-policia-federal-em-pdf-com-gabarito/",
+          "https://pt.scribd.com/document/793812148/cespe-2000-policia-federal-agente-federal-da-policia-federal-gabarito",
+          "https://pt.scribd.com/document/947670676/gabaritos-policia-federal",
+          "https://www.estudegratis.com.br/provas/cespe-2000-policia-federal-agente-federal-da-policia-federal",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2025/provas-objetivas/gabaritos/gabaritos-definitivos",
+          "https://www.scribd.com/document/513055190/GABARITO-PF"
+        ]
+      },
+      {
+        "query": "site:cespe.unb.br pf2000 agente",
+        "url": "https://html.duckduckgo.com/html/?q=site%3Acespe.unb.br+pf2000+agente",
+        "file": "duck-46ec3f6fff.html",
+        "results": [
+          "http://www.cespe.unb.br/CONCURSOS/_ANTIGOS/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_Agente_25.pdf",
+          "http://www.cespe.unb.br/Concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_2001_Agente_22.pdf",
+          "http://www.cespe.unb.br/concursoS/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_Agente_7_2001.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/ED_PF_2000_Ag_1.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_2001_Agente_16.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_Agente_13.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_Agente_30.pdf",
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Indice.txt"
+        ]
+      },
+      {
+        "query": "site:cdn.cebraspe.org.br anteriores_2002 2000 policia",
+        "url": "https://html.duckduckgo.com/html/?q=site%3Acdn.cebraspe.org.br+anteriores_2002+2000+policia",
+        "file": "duck-17ece33c47.html",
+        "results": [
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/CEB/Arquivos/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/MA/Arquivos/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/Ed_PF2000_Agente_21.pdf",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/SI/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/SI/Arquivos/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/TJDFT/Arquivos/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/petrobras/Arquivos/"
+        ]
+      },
+      {
+        "query": "\"Um desafio cotidiano\" \"agente\"",
+        "url": "https://html.duckduckgo.com/html/?q=%22Um+desafio+cotidiano%22+%22agente%22",
+        "file": "duck-8cbdc590bf.html",
+        "results": []
+      },
+      {
+        "query": "PF2000 prova agente PDF original",
+        "url": "https://html.duckduckgo.com/html/?q=PF2000+prova+agente+PDF+original",
+        "file": "duck-b1428396fc.html",
+        "results": [
+          "http://www.cespe.unb.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Agente/",
+          "https://cdn.cebraspe.org.br/concursos/_antigos/anteriores_2002/2000/PF2000/Arquivos/Papiloscopista/",
+          "https://jrconcursos.com.br/provas-da-policia-federal-em-pdf-com-gabarito/",
+          "https://pt.scribd.com/document/1057836969/ED-19-PF2000-Agente-19",
+          "https://queropassaremconcursos.com.br/provas-anteriores-concurso-para-agente-de-policia-federal/",
+          "https://www.acheprovas.com.br/provas-anteriores-policia-federal",
+          "https://www.estudegratis.com.br/provas/cespe-2000-policia-federal-agente-federal-da-policia-federal",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/agente-de-policia-federal-2009/caderno-de-prova.pdf",
+          "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos/provas-e-gabaritos-de-concursos-anteriores/concurso-carreira-policial-2025/provas-objetivas/cadernos-de-prova",
+          "https://www.provasbrasil.com.br/provas-anteriores/policia-federal/"
+        ]
+      },
+      {
+        "query": "site:cdn.cebraspe.org.br PF2000 prova português",
+        "url": "https://html.duckduckgo.com/html/?q=site%3Acdn.cebraspe.org.br+PF2000+prova+portugu%C3%AAs",
+        "file": "duck-3bbb724afc.html",
+        "results": []
+      }
+    ]
+  },
+  "current_corpus_counts": {
+    "checked_at": "2026-10-18T03:54:32.660566+00:00",
+    "source_id": "cd1bd6a9eb5e62e0cf6b5ae0be4d5f332b968432c419733878d30956d45ec705",
+    "total": 3256,
+    "statuses": {
+      "under_review": 2886,
+      "reviewed": 369,
+      "duplicate": 1
+    },
+    "subjects": {
+      "Contabilidade": {
+        "total": 284,
+        "status_under_review": 284,
+        "pending": 284,
+        "without_completed_review": 284
+      },
+      "Direito Processual Civil": {
+        "total": 655,
+        "status_under_review": 386,
+        "pending": 655,
+        "without_completed_review": 386,
+        "status_reviewed": 269,
+        "partial_review": 269
+      },
+      "Economia": {
+        "total": 103,
+        "status_under_review": 103,
+        "pending": 103,
+        "without_completed_review": 103
+      },
+      "Geografia": {
+        "total": 155,
+        "status_under_review": 155,
+        "pending": 155,
+        "without_completed_review": 155
+      },
+      "História Mundial": {
+        "total": 239,
+        "status_under_review": 239,
+        "pending": 239,
+        "without_completed_review": 239
+      },
+      "História do Brasil": {
+        "total": 245,
+        "status_under_review": 245,
+        "pending": 245,
+        "without_completed_review": 245
+      },
+      "Legislação Institucional": {
+        "total": 355,
+        "status_under_review": 354,
+        "pending": 354,
+        "without_completed_review": 354,
+        "status_duplicate": 1,
+        "excluded": 1
+      },
+      "Legislação da Pessoa Idosa": {
+        "total": 44,
+        "status_under_review": 44,
+        "pending": 44,
+        "without_completed_review": 44
+      },
+      "Legislação da Pessoa com Deficiência": {
+        "total": 25,
+        "status_under_review": 25,
+        "pending": 25,
+        "without_completed_review": 25
+      },
+      "Legislação de Trânsito": {
+        "total": 134,
+        "status_under_review": 134,
+        "pending": 134,
+        "without_completed_review": 134
+      },
+      "Língua Espanhola": {
+        "total": 34,
+        "status_under_review": 34,
+        "pending": 34,
+        "without_completed_review": 34
+      },
+      "Língua Inglesa": {
+        "total": 260,
+        "status_under_review": 260,
+        "pending": 260,
+        "without_completed_review": 260
+      },
+      "Língua Portuguesa": {
+        "total": 357,
+        "status_reviewed": 100,
+        "pending": 300,
+        "partial_review": 43,
+        "status_under_review": 257,
+        "without_completed_review": 257,
+        "approved_original": 57
+      },
+      "Política Internacional": {
+        "total": 266,
+        "status_under_review": 266,
+        "pending": 266,
+        "without_completed_review": 266
+      },
+      "Ética Profissional": {
+        "total": 100,
+        "status_under_review": 100,
+        "pending": 100,
+        "without_completed_review": 100
+      }
+    },
+    "scope": "Current remaining imported candidates only; removed obsolete records and separate adapted questions excluded",
+    "pending_total": 3198,
+    "approved_originals": 57,
+    "excluded_total": 1
+  }
+}
