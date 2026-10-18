@@ -58,6 +58,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
+import { acreMonthStartISO, mockQuota, mockQuotaMessage } from "@/lib/mockQuota";
+import type { SubscriptionTier } from "@/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -152,6 +154,9 @@ function ProfessionalSimulator() {
   const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const hasMockExamAccess =
     isAdmin || checkFeatureAccess(user?.subscription_tier ?? "free", "mockExams").included;
+  const tierName = (user?.subscription_tier ?? "free") as SubscriptionTier;
+  // Simulados já feitos neste mês (mês do Acre): o Gratuito tem 1 curto e o Essencial 2; Plus e Premium não têm limite.
+  const [monthlyMocks, setMonthlyMocks] = React.useState(0);
   const [stage, setStage] = React.useState<SimulatorStage>("setup");
   const [buildMode, setBuildMode] = React.useState<"paper" | "custom">("paper");
   const [paperKey, setPaperKey] = React.useState("");
@@ -170,6 +175,21 @@ function ProfessionalSimulator() {
   const [invalidDraft, setInvalidDraft] = React.useState(false);
   const [storageError, setStorageError] = React.useState(false);
   const [saveStatus, setSaveStatus] = React.useState<"idle" | "saving" | "saved" | "error">("idle");
+  React.useEffect(() => {
+    if (!user || user.id === "demo-user" || isAdmin) return;
+    let active = true;
+    void supabase
+      .from("simulator_attempts")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", user.id)
+      .gte("created_at", acreMonthStartISO())
+      .then(({ count }) => {
+        if (active) setMonthlyMocks(count ?? 0);
+      });
+    return () => {
+      active = false;
+    };
+  }, [user, isAdmin, saveStatus]);
   const finishing = React.useRef(false);
   const draftLoaded = React.useRef("");
   const scope = isEnemMode ? "enem" : "contests";
@@ -511,6 +531,10 @@ function ProfessionalSimulator() {
   const chosenPaper = papers.find((p) => p.key === paperKey);
   const sessionPool = paperMode ? (chosenPaper?.questions ?? []) : available;
   const sessionCount = paperMode ? sessionPool.length : Math.min(limit, sessionPool.length);
+  const quota = isAdmin
+    ? ({ allowed: true, limit: null, remaining: null } as const)
+    : mockQuota(tierName, monthlyMocks, sessionCount);
+  const quotaMessage = mockQuotaMessage(quota);
   const current = questions[currentIndex];
   const answeredCount = Object.keys(answers).length;
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
@@ -518,6 +542,10 @@ function ProfessionalSimulator() {
   function startSimulator() {
     if (!hasMockExamAccess) {
       toast.error("Simulados completos são um recurso dos planos pagos.");
+      return;
+    }
+    if (!quota.allowed) {
+      toast.error(quotaMessage ?? "Simulado indisponível no seu plano.");
       return;
     }
     if (!sessionPool.length) {
@@ -971,6 +999,14 @@ function ProfessionalSimulator() {
                       return;
                     }
                     if (resumeDraft) return;
+                    const paperSize = papers.find((p) => p.key === key)?.questions.length ?? 0;
+                    const paperQuota = isAdmin
+                      ? null
+                      : mockQuotaMessage(mockQuota(tierName, monthlyMocks, paperSize));
+                    if (paperQuota) {
+                      toast.error(paperQuota);
+                      return;
+                    }
                     setWarningAccepted(false);
                     setStartWarningOpen(true);
                   }}
@@ -1258,7 +1294,9 @@ function ProfessionalSimulator() {
                   setWarningAccepted(false);
                   setStartWarningOpen(true);
                 }}
-                disabled={!sessionPool.length || !hasMockExamAccess || !!resumeDraft}
+                disabled={
+                  !sessionPool.length || !hasMockExamAccess || !quota.allowed || !!resumeDraft
+                }
                 className="hero-primary-action gap-2 rounded-lg"
               >
                 <Play className="h-4 w-4 fill-current" /> Iniciar simulado
@@ -1278,6 +1316,24 @@ function ProfessionalSimulator() {
               >
                 Limpar filtros
               </Button>
+            )}
+            {hasMockExamAccess && quotaMessage && (
+              <div
+                role="status"
+                className="flex items-start gap-2 rounded-md border border-primary/30 bg-primary/10 p-4 text-sm text-foreground"
+              >
+                <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+                <span>
+                  {quotaMessage}{" "}
+                  <Link
+                    to="/dashboard/subscriptions"
+                    className="font-semibold text-primary underline"
+                  >
+                    Veja os planos
+                  </Link>
+                  .
+                </span>
+              </div>
             )}
             {!hasMockExamAccess && (
               <div

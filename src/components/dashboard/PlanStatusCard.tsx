@@ -6,7 +6,7 @@ import { PlanCountdown } from "@/components/dashboard/PlanCountdown";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { useMyCancellations } from "@/hooks/useCancellations";
 import { scheduledCancellation } from "@/lib/cancellation";
-import { TESTING_DAYS, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
+import { TESTING_DAYS, TESTING_PHASE } from "@/lib/launch.config";
 import { PLAN_ROWS, planValue } from "@/lib/planPresentation";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 
@@ -20,7 +20,7 @@ export function PlanStatusCard() {
   const scheduled = scheduledCancellation(cancellations.list);
   const current = planOf(user.subscription_tier) ?? SUBSCRIPTION_PLANS[0]!;
   const free = planOf("free")!;
-  const testing = TESTING_PHASE && !isAdmin && isTestingTier(current.id) && !!user.plan_ends_at;
+  const testing = TESTING_PHASE && !isAdmin && !!user.on_trial && !!user.plan_ends_at;
   const expired = !isAdmin && !!user.expired_plan;
   const paidEnds =
     !testing && !isAdmin && current.id !== "free" ? user.subscription_expires_at : null;
@@ -44,7 +44,7 @@ export function PlanStatusCard() {
                 : expired
                   ? "Seu período de testes terminou e a conta voltou ao plano Gratuito."
                   : testing
-                    ? `Fase de testes: ${TESTING_DAYS} dias com os recursos do plano Essencial, de graça.`
+                    ? `Fase de testes: ${TESTING_DAYS} dias com os recursos do plano Plus, de graça.`
                     : current.description}
             </CardDescription>
           </div>
@@ -78,7 +78,7 @@ export function PlanStatusCard() {
           </div>
         )}
         {testing && user.plan_ends_at && (
-          <PlanCountdown endsAt={user.plan_ends_at} planName="Essencial (testes)" />
+          <PlanCountdown endsAt={user.plan_ends_at} planName="Plus (testes)" />
         )}
         {paidEnds && <PlanCountdown endsAt={paidEnds} planName={current.name} />}
         {!isAdmin && (testing || expired || current.id === "free") && (

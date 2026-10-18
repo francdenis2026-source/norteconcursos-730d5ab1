@@ -135,6 +135,8 @@ export interface UserProfile {
   subscription_expires_at?: string;
   /** Fim do plano para o contador (vencimento real ou fim da fase de testes). */
   plan_ends_at?: string | null;
+  /** Está usando o plano de testes gratuito (30 dias), e não um plano contratado. */
+  on_trial?: boolean;
   /** Plano que acabou de vencer (o aluno voltou ao Gratuito e deve ver o convite de renovação). */
   expired_plan?: string | undefined;
   onboarding_completed: boolean;

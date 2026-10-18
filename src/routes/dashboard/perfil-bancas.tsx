@@ -41,7 +41,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/perfil-bancas")({
   component: () => (
-    <PlanGate feature="editalRadar" title="Perfil das bancas">
+    <PlanGate feature="bankProfile" title="Perfil das bancas">
       <PerfilBancasPage />
     </PlanGate>
   ),
