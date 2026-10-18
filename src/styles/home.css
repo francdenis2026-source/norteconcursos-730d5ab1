@@ -1226,7 +1226,8 @@
   background: var(--home-bg);
 }
 .home-plan__media {
-  height: 118px;
+  position: relative;
+  height: 150px;
   margin: -22px -18px 16px;
   overflow: hidden;
   border-bottom: 1px solid var(--home-line);
@@ -1237,6 +1238,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.home-plan__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 22, 52, 0) 45%, rgba(7, 22, 52, 0.45));
+  pointer-events: none;
 }
 .home-plan--featured {
   border-color: var(--home-accent);
@@ -1910,7 +1918,7 @@
     padding: 16px 12px;
   }
   .home-plan__media {
-    height: 84px;
+    height: 104px;
     margin: -16px -12px 12px;
   }
   .home-plan__top {

@@ -12,12 +12,12 @@ import {
   TESTING_TIER,
 } from "@/lib/launch.config";
 
-/** Uma ilustração por plano, no mesmo estilo (azul e ouro), centrada para o corte nos cards. */
+/** Uma foto por plano (do acervo da plataforma), enquadrada no rosto e no assunto de cada cena. */
 const PLAN_IMAGES: Record<string, { src: string; position: string }> = {
-  free: { src: "/media/planos/plano-gratuito.svg", position: "50% 50%" },
-  essential: { src: "/media/planos/plano-essencial.svg", position: "50% 50%" },
-  plus: { src: "/media/planos/plano-plus.svg", position: "50% 50%" },
-  premium: { src: "/media/planos/plano-premium.svg", position: "50% 50%" },
+  free: { src: "/media/hero/painel-aluno-estudo.webp", position: "55% 28%" },
+  essential: { src: "/media/hero/exam-hall.webp", position: "90% 32%" },
+  plus: { src: "/media/hero/meu-concurso-seguranca-publica.webp", position: "82% 30%" },
+  premium: { src: "/media/hero/careers-team.webp", position: "78% 25%" },
 };
 
 export function PlansSection() {
@@ -52,8 +52,8 @@ export function PlansSection() {
                       alt=""
                       loading="lazy"
                       decoding="async"
-                      width={640}
-                      height={400}
+                      width={960}
+                      height={640}
                       style={{ objectPosition: PLAN_IMAGES[plan.id]!.position }}
                     />
                   </div>
