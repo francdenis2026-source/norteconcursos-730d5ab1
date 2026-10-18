@@ -1611,7 +1611,7 @@
 }
 @media (max-width: 767px) {
   .home-container {
-    width: calc(100% - 40px);
+    width: calc(100% - 32px);
   }
   .home-section {
     padding-block: 26px;
@@ -1674,7 +1674,8 @@
     letter-spacing: 0.09em;
   }
   .home-hero h1 {
-    font-size: 44px;
+    font-size: clamp(38px, 11vw, 42px);
+    line-height: 0.98;
   }
   .home-hero__copy > p {
     font-size: 13px;
