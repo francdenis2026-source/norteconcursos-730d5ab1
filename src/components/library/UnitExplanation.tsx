@@ -48,13 +48,13 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
       </header>
       <HighlightToggle />
       <Block icon="📘" title="Em palavras simples" tone="border-l border-l-sky-500"><p><LegalRefText text={e.simples} /></p></Block>
-      {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l border-l-indigo-500"><List items={e.pontos} /></Block>}
+      {e.pontos.length > 0 && <Block icon="🔑" title="Pontos-chave" tone="border-l border-l-amber-500"><List items={e.pontos} /></Block>}
       {atencao.length > 0 && <Block icon="⚠️" title="Atenção: onde o candidato erra" tone="border-l border-l-amber-500"><List items={atencao} /></Block>}
       {e.exemplo && <Block icon="🧩" title="Exemplo prático" tone="border-l border-l-emerald-500"><p><LegalRefText text={example.scenario} /></p>
-        {example.variation && <div className="mt-3 rounded-lg border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100"><strong>Altere o fato, confira a regra</strong><p className="mt-1"><LegalRefText text={example.variation} /></p></div>}
+        {example.variation && <div className="mt-3 rounded-lg border border-amber-300 bg-amber-50 p-3 text-amber-950 dark:border-amber-400/30 dark:bg-amber-950/30 dark:text-amber-100"><strong>Altere o fato, confira a regra</strong><p className="mt-1"><LegalRefText text={example.variation} /></p></div>}
       </Block>}
       {e.prova.length > 0 && <Block icon="🎯" title="Fixação para a prova" tone="border-l border-l-rose-500"><ExplanationChecks items={e.prova} /></Block>}
-      {e.termos.length > 0 && <Block icon="📖" title="Termos" tone="border-l border-l-violet-500"><dl className="space-y-1">{e.termos.map((t) => <div key={t.termo}><dt className="inline font-bold">{t.termo}: </dt><dd className="inline">{t.significado}</dd></div>)}</dl></Block>}
+      {e.termos.length > 0 && <Block icon="📖" title="Termos" tone="border-l border-l-sky-500"><dl className="space-y-1">{e.termos.map((t) => <div key={t.termo}><dt className="inline font-bold">{t.termo}: </dt><dd className="inline">{t.significado}</dd></div>)}</dl></Block>}
       {e.remissoes.length > 0 && <p className="text-xs text-muted-foreground">🔗 Veja também: {e.remissoes.map((r, i) => <span key={r}>{i > 0 && " · "}<LegalRefText text={r} /></span>)}</p>}
       <p className="text-[11px] text-muted-foreground">Texto explicativo baseado no dispositivo oficial abaixo. Em caso de dúvida, vale sempre a redação da lei.</p>
     </section>

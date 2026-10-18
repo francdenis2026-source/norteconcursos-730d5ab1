@@ -107,7 +107,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
           </TabsList>
           <TabsContent value="entenda" className="mt-4 space-y-4">
             {CONTRAN_DIDATICA[guideKey(guide)] && <DidaticaBlock d={CONTRAN_DIDATICA[guideKey(guide)]!} />}
-            <section className="rounded-xl border-l border-indigo-500 bg-indigo-50/50 p-3 dark:bg-indigo-950/20">
+            <section className="rounded-xl border-l border-amber-500 bg-amber-50/60 p-3 dark:bg-amber-950/20">
               <h4 className="text-sm font-bold">Em resumo</h4>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-6">{guide.points.map((point) => <li key={point}><StudyText text={point} /></li>)}</ul>
             </section>
@@ -124,7 +124,7 @@ export function ContranStudy({ query = "" }: { query?: string }) {
               <p className="mt-2 text-sm font-semibold">{guide.example.question}</p>
               <details className="mt-2 text-sm"><summary className="cursor-pointer font-semibold">Ver resposta comentada</summary><p className="mt-2 leading-6"><StudyText text={guide.example.answer} /></p></details>
             </section>
-            <section className="rounded-xl border border-violet-300 bg-violet-50 p-3 text-violet-950 dark:border-violet-400/30 dark:bg-violet-950/30 dark:text-violet-100">
+            <section className="rounded-xl border border-amber-300 bg-amber-50 p-3 text-amber-950 dark:border-amber-400/30 dark:bg-amber-950/30 dark:text-amber-100">
               <h4 className="text-sm font-bold">Agora é com você: o mesmo caso, com um detalhe diferente</h4>
               <p className="mt-1 text-xs">Mudar um detalhe pode mudar a resposta. Leia, decida sozinho e só depois confira.</p>
               <ol className="mt-3 space-y-3 text-sm leading-6">
