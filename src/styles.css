@@ -9879,8 +9879,8 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .app-shell table th {
   color: var(--color-muted-foreground);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .app-shell table td,
@@ -10560,7 +10560,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .app-shell[data-area="student"] .app-content .text-xs,
   .app-shell[data-area="student"] .app-content .text-\[11px\],
   .app-shell[data-area="student"] .app-content .text-\[10px\] {
-    font-size: 0.74rem;
+    font-size: 0.8rem;
     line-height: 1.4;
   }
   .app-shell[data-area="student"] .app-content .text-sm {
