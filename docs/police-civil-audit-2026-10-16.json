@@ -1,6 +1,6 @@
 {
-  "snapshot_at": "2026-10-18T03:42:58.431Z",
-  "generated_at": "2026-10-18T03:43:35.539Z",
+  "snapshot_at": "2026-10-18T03:52:26.155Z",
+  "generated_at": "2026-10-18T03:52:59.967Z",
   "scope": "Structural inventory of PC records in official_exam_questions and board_exam_questions. Flags are triage signals, not proof of legal error. No text/answer/source audit or new editorial approval is implied.",
   "counting": "Groups by original contest/year/career/board; not deduplicated physical exam booklets. Archived aliases remain visible.",
   "groups": [
@@ -457,17 +457,16 @@
       "exam": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia | 2022 | Delegado de Polícia | CEBRASPE",
       "records": 100,
       "status": {
-        "active": 89,
+        "active": 90,
         "archived": 6,
         "annulled": 3,
-        "under_review": 2
+        "under_review": 1
       },
-      "active_app_eligible": 87,
-      "active_with_catalog_flags": 89,
+      "active_app_eligible": 88,
+      "active_with_catalog_flags": 56,
       "active_without_example_marker": 89,
       "flags": {
         "topic_not_current": 56,
-        "edition_without_verified_edital": 89,
         "app_gate_rejected": 2
       }
     },
@@ -547,23 +546,23 @@
   "totals": {
     "records": 2972,
     "status": {
-      "active": 2635,
+      "active": 2636,
       "archived": 283,
       "annulled": 37,
       "obsolete": 12,
-      "under_review": 5
+      "under_review": 4
     },
-    "active_app_eligible": 2193,
-    "active_with_catalog_flags": 1659,
+    "active_app_eligible": 2194,
+    "active_with_catalog_flags": 1626,
     "active_without_example_marker": 2266,
     "editorial_approvals_generated_by_this_script": 0
   },
   "editorial_campaign": {
-    "newly_reviewed": 309,
+    "newly_reviewed": 310,
     "newly_published": 302,
     "scope": "PCDF 111 canonical reviews; RO 118 decisions (115 activated/three archived); PE 38 decisions (36 activated/two obsolete); MG five decisions (three activated/two archived). Other-session progress is not claimed as our editorial approval. Not certification of all PC records. MT: six records activated (three shared questions, two careers), not six distinct physical questions. SE: two records (one common historical item), using the explicit official appeal justification. Not certification of the full SE exams. AM: one Delegado item (25), confirmed with Tema 1100, final key and updated official program; item 44 retained. RO Delegado item 29: LEP sanction and explicit execution-penal program verified; not certification of all remaining items. New baseline: 32 pending, preserving other-account decisions. This batch: PCPI2/4 active, MT59 two career records obsolete after LC803/2024; not blanket approval. Second batch: PCPI1, MT14 x2, RO79 active; AM65/80 obsolete after express repeal. Total resolved from32baseline:10 (6active,4obsolete). MT organization/probation: six individually activated (56/57/58, both careers), source confronted with17amendments. No approval of item60 or entire statute.",
     "remaining_pcdf_current_items_this_campaign": 0,
-    "pending_under_review_all_pc": 5,
+    "pending_under_review_all_pc": 4,
     "previous_pcpr_review": "b6a1672",
     "validation": {
       "checked_at": "2026-10-16T20:26:47.135Z",
@@ -1810,6 +1809,11 @@
       "archived_editorially": 1,
       "remaining": 5,
       "report": "docs/question-review-eight-pc-2026-10-18.json"
+    },
+    "rj75_followup": {
+      "new_active": 1,
+      "remaining": 4,
+      "report": "docs/question-review-rj75-2026-10-18.json"
     }
   },
   "source_comparison_pcdf": {

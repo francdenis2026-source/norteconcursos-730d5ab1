@@ -370,3 +370,14 @@ Tentativas adicionais sem evidência suficiente: CTN compilado no Planalto exced
 Publicadas duas ativas (RO Datiloscopista92 e MG TPAG48) e um arquivamento editorial (RO Delegado78, sem anulação da banca ou troca de letra). Explicações, fontes e limites em `docs/reviews/eight-pc-source-review-2026-10-18.md`; patches, hashes, leitura posterior e concorrência em `docs/question-review-eight-pc-2026-10-18.json`.
 
 Restam5 em revisão: RO Delegado40/60, Datiloscopista80 e RJ Delegado48/75. Não se apresentou a análise parcial dessas cinco como aprovação. Inventário atual inclui quatro adições PC ativas pela outra conta:2.972 registros,2.635 ativos,283 arquivados,37 anulados,12 obsoletos,5 em revisão. Campanha32:27 disposições concluídas,5 pendentes. Preservados os demais2.965 PC preexistentes e todos os metadados preexistentes. Passaram617 testes da aplicação,24 das salvaguardas e build.
+
+
+## RJ Delegado75 — 18/10/2026
+
+Questão75 ativa, letraD e texto original preservados, com exemplo e exercício. Conferência de finalidade constitucional da reclamação e do controle parlamentar das cautelares (ADI5526), conjugada à extensão das imunidades (ADIs5824/5825). A revogação regular descrita não implica automaticamente violação de competência ou decisão do STF; não foi ensinada impossibilidade absoluta de reclamação contra ato legislativo. Esclarecida a expressão problemática “autoridade do parlamentar”: o fundamento constitucional da reclamação se refere à competência/autoridade do STF.
+
+Fonte constitucional lida em captura oficial de16/10, sem trocar sua data por uma suposta captura nova; ADIs e edital obtidos diretamente nesta rodada. Corrigido o vínculo da edição, que apontava para caderno de prova, para o edital oficial histórico de origem; programa real de Direito Constitucional nas páginas74–75. Tópico já existente reutilizado, sem duplicação. Acrescentadas evidências/hash aos dois metadados de prova/definitivo por atualização protegida, preservando notas anteriores. Isso não certifica revisão de todo o edital ou dos demais itens da edição.
+
+Dry-runs reais, CAS e leitura posterior passaram; preservados os demais2.971 PC e todas as identidades. Uma fonte de edital criada, duas evidências atualizadas e uma edição vinculada ao edital correto. Passaram23 testes pertinentes; sem alteração de aplicação, não se repetiu build. Relatório: `docs/question-review-rj75-2026-10-18.json`.
+
+Restam4: RO Delegado40/60, Datiloscopista80 e RJ Delegado48. Pesquisa adicional de MPRJ bloqueada403; LCP não respondeu no prazo; resultado STJ sobre contravenção/dolo trouxe temas diversos, sem resolver a proposição específica. Não se tratou ausência de resultado como validação. Campanha32:28 disposições concluídas (20ativas,4obsoletas,4arquivadas editorialmente),4 pendentes. Total PC atual:2.972,2.636 ativas,283 arquivadas,37 anuladas,12 obsoletas,4 em revisão.

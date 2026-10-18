@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-18T03:42:58.431Z",
-  "scope": "All32 baseline records triaged;27 individual dispositions complete (19active,4obsolete,4editorially archived),5 retain incomplete substantive validation. Editorial archives are not official annulments or substituted answer keys.",
-  "resolved": 27,
-  "published_active": 19,
+  "checked_at": "2026-10-18T03:52:26.155Z",
+  "scope": "All32 baseline records triaged;28 individual dispositions complete (20active,4obsolete,4editorially archived),4 remain substantively incomplete.",
+  "resolved": 28,
+  "published_active": 20,
   "published_obsolete": 4,
-  "retained_under_review": 5,
+  "retained_under_review": 4,
   "supplementary_amazonas_check": {
     "capture": {
       "url": "https://sapl.al.am.leg.br/media/sapl/public/normajuridica/2009/7829/7829_texto_integral.pdf",
@@ -309,9 +309,9 @@
       "item_number": 75,
       "original_answer": "D",
       "before_status": "under_review",
-      "after_status": "under_review",
-      "decision": "Retained; substantive review incomplete",
-      "missing_validation": "Falta localizar precedente específico sobre cabimento da reclamação após revogação parlamentar de medida cautelar de suspensão de mandato estadual e concluir cotejo do edital."
+      "after_status": "active",
+      "decision": "Constitutional purpose of reclamação, ADIs5526/5824/5825; limited to regular legislative review, no absolute bar. docs/question-review-rj75-2026-10-18.json",
+      "comment_sha256": "f573ef4e04a7a1264479494fe641cb1b52df5f71f27f9ac68f1a9d81a4d27bfa"
     },
     {
       "id": "e96cf33a-a403-4367-872f-2bdecde623b0",
