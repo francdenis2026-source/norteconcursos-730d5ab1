@@ -21,7 +21,7 @@ export function showAchievementNotification(achievement: Achievement) {
 
       return (
         <div className="max-w-md w-full bg-card border-2 border-emerald-500/50 shadow-2xl rounded-xl pointer-events-auto p-4 flex items-center gap-4 animate-in fade-in slide-in-from-top-4">
-          <div className="bg-emerald-500/10 p-3 rounded-full animate-pulse">
+          <div className="bg-emerald-500/10 p-3 rounded-full">
             {getIcon(achievement.code)}
           </div>
           <div className="flex-1">
@@ -29,7 +29,7 @@ export function showAchievementNotification(achievement: Achievement) {
               <p className="text-xs font-black text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
                 Nova Medalha Ganha!
               </p>
-              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
             </div>
             <h3 className="font-black text-lg text-foreground leading-tight">{achievement.name}</h3>
             <p className="text-sm text-muted-foreground">{achievement.description}</p>
