@@ -1,6 +1,6 @@
 # Análise dos planos (18/10/2026)
 
-Base: `subscriptions.config.ts`, `launch.config.ts`, `planPresentation.ts`, `PlanGate`, migrações de limites no servidor, menu do painel e a landing. Nada aqui altera preços: os números da seção 4 são **proposta a validar**.
+Base: `subscriptions.config.ts`, `launch.config.ts`, `planPresentation.ts`, `PlanGate`, migrações de limites no servidor, menu do painel e a landing. A proposta da seção 4 foi **aprovada e implementada** (ver seção 7); as seções 1 a 3 descrevem o estado anterior.
 
 ## 1. O que cada plano entrega hoje
 
@@ -62,3 +62,13 @@ Fórmula para fechar o preço de cada plano:
 
 - Imagem de cena do próprio produto no topo de cada card de plano (uma por plano, enquadrada para desktop e celular).
 - Faixa dos 30 dias no formulário de cadastro.
+
+## 7. Implementação da proposta aprovada
+
+- Preços: Essencial R$ 24,90, Plus R$ 39,90 e Premium R$ 59,90 por mês; anual R$ 249, R$ 399 e R$ 599 (informativo até os pagamentos serem ligados).
+- Simulados por mês (mês do Acre): Gratuito 1 e só curto (até 20 questões), Essencial 2, Plus e Premium ilimitados. Aplicado no aplicativo (`mockQuota`) e no servidor (gatilho em `simulator_attempts`).
+- IA por dia ao ligar: 10, 30 e 100 (cota, nunca ilimitada).
+- Cronograma por edital: criar é do Essencial em diante (servidor e aplicativo); cronogramas já criados seguem abertos para consulta.
+- Perfil das bancas: do Plus em diante. Filtro "Atual": do Essencial em diante.
+- Suporte do Premium: texto "resposta em até 1 dia útil". **O fluxo e o prazo ainda precisam ser cumpridos na operação** (não há fila prioritária no sistema).
+- Migração do servidor: `supabase/migrations/20261018100000_plan_structure_limits.sql`.
