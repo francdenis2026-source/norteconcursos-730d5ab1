@@ -23,6 +23,13 @@ Não executar mais de um worker. Textos são divididos em trechos de até 20
 caracteres para limitar alocações intermediárias. Texto máximo de 4096 caracteres;
 o serviço interrompe a geração após o limite de tempo entre trechos. Uma
 requisição concorrente recebe 503 em vez de enfileirar mais inferências.
+A plataforma usa geração em segundo plano (`POST /v1/audio/jobs`), consulta
+progresso (`GET /v1/audio/jobs/{id}`) e baixa o WAV pronto em
+`GET /v1/audio/jobs/{id}/audio`. Isso evita manter uma requisição aberta
+durante toda a síntese. Gerações longas têm limite de 10 minutos; no plano
+gratuito, a primeira geração pode levar alguns minutos. Repetições reutilizam
+o cache e pedidos iguais compartilham a geração em andamento.
+
 O cache temporário em disco tem limite de 32 MB e é perdido em reinícios.
 Não há garantia de latência ou disponibilidade no plano gratuito.
 

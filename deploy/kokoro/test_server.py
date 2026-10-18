@@ -22,6 +22,7 @@ class SpeechTests(unittest.TestCase):
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
         self.engine = FakeEngine()
+        server.jobs.clear()
         self.settings = patch.multiple(server, engine=self.engine, CACHE_DIR=Path(self.directory.name))
         self.settings.start()
     def tearDown(self):
@@ -40,6 +41,14 @@ class SpeechTests(unittest.TestCase):
         count = len(self.engine.parts)
         self.assertEqual(first.body, server.speech(request).body)
         self.assertEqual(count, len(self.engine.parts))
+    def test_cached_audio_is_available_during_other_inference(self):
+        request = server.SpeechRequest(input='Questão já lida.')
+        first = server.speech(request)
+        server.lock.acquire()
+        try:
+            self.assertEqual(first.body, server.speech(request).body)
+        finally:
+            server.lock.release()
     def test_busy_service_does_not_queue_inference(self):
         server.lock.acquire()
         try:
@@ -56,6 +65,32 @@ class SpeechTests(unittest.TestCase):
     def test_failed_inference_releases_lock(self):
         with patch.object(self.engine, 'create', side_effect=RuntimeError('failure')):
             with self.assertRaises(RuntimeError):server.speech(server.SpeechRequest(input='Teste'))
+        self.assertFalse(server.lock.locked())
+    def test_cached_job_returns_ready_audio_without_inference(self):
+        request = server.SpeechRequest(input='Questão pronta.')
+        response = server.speech(request)
+        count = len(self.engine.parts)
+        job = server.start_job(request)
+        self.assertEqual(job['status'], 'ready')
+        self.assertEqual(server.job_status(job['job_id'])['progress'], 100)
+        self.assertEqual(server.job_audio(job['job_id']).body, response.body)
+        self.assertEqual(len(self.engine.parts), count)
+    def test_pending_jobs_are_shared_and_other_questions_are_not_queued(self):
+        with patch('server.threading.Thread'):
+            first = server.start_job(server.SpeechRequest(input='Primeira questão.'))
+            second = server.start_job(server.SpeechRequest(input='Primeira questão.'))
+            self.assertEqual(first['job_id'], second['job_id'])
+            with self.assertRaises(HTTPException) as error:
+                server.start_job(server.SpeechRequest(input='Outra questão.'))
+            self.assertEqual(error.exception.status_code, 503)
+        server.run_job(first['job_id'], server.SpeechRequest(input='Primeira questão.'))
+        self.assertEqual(server.job_status(first['job_id'])['status'], 'ready')
+    def test_failed_job_reports_error_and_releases_lock(self):
+        with patch('server.threading.Thread'):
+            job = server.start_job(server.SpeechRequest(input='Questão com falha.'))
+        with patch.object(self.engine, 'create', side_effect=RuntimeError('failure')):
+            server.run_job(job['job_id'], server.SpeechRequest(input='Questão com falha.'))
+        self.assertEqual(server.job_status(job['job_id'])['status'], 'error')
         self.assertFalse(server.lock.locked())
     def test_cache_is_bounded(self):
         for index in range(4):(server.CACHE_DIR / f'{index}.wav').write_bytes(bytes(10))
