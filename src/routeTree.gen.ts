@@ -52,6 +52,7 @@ import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
 import { Route as DashboardMyContestRouteImport } from './routes/dashboard/my-contest'
 import { Route as DashboardNotebooksRouteImport } from './routes/dashboard/notebooks'
+import { Route as DashboardPerfilBancasRouteImport } from './routes/dashboard/perfil-bancas'
 import { Route as DashboardPerformanceRouteImport } from './routes/dashboard/performance'
 import { Route as DashboardProfileRouteImport } from './routes/dashboard/profile'
 import { Route as DashboardQuestionBankRouteImport } from './routes/dashboard/question-bank'
@@ -292,6 +293,11 @@ const DashboardNotebooksRoute = DashboardNotebooksRouteImport.update({
   path: '/notebooks',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardPerfilBancasRoute = DashboardPerfilBancasRouteImport.update({
+  id: '/perfil-bancas',
+  path: '/perfil-bancas',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardPerformanceRoute = DashboardPerformanceRouteImport.update({
   id: '/performance',
   path: '/performance',
@@ -449,6 +455,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -513,6 +520,7 @@ export interface FileRoutesByTo {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -581,6 +589,7 @@ export interface FileRoutesById {
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
   '/dashboard/my-contest': typeof DashboardMyContestRoute
   '/dashboard/notebooks': typeof DashboardNotebooksRoute
+  '/dashboard/perfil-bancas': typeof DashboardPerfilBancasRoute
   '/dashboard/performance': typeof DashboardPerformanceRoute
   '/dashboard/profile': typeof DashboardProfileRoute
   '/dashboard/question-bank': typeof DashboardQuestionBankRoute
@@ -650,6 +659,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -714,6 +724,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -781,6 +792,7 @@ export interface FileRouteTypes {
     | '/dashboard/mock-exams'
     | '/dashboard/my-contest'
     | '/dashboard/notebooks'
+    | '/dashboard/perfil-bancas'
     | '/dashboard/performance'
     | '/dashboard/profile'
     | '/dashboard/question-bank'
@@ -1125,6 +1137,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardNotebooksRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/perfil-bancas': {
+      id: '/dashboard/perfil-bancas'
+      path: '/perfil-bancas'
+      fullPath: '/dashboard/perfil-bancas'
+      preLoaderRoute: typeof DashboardPerfilBancasRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/performance': {
       id: '/dashboard/performance'
       path: '/performance'
@@ -1340,6 +1359,7 @@ interface DashboardRouteChildren {
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
   DashboardMyContestRoute: typeof DashboardMyContestRoute
   DashboardNotebooksRoute: typeof DashboardNotebooksRoute
+  DashboardPerfilBancasRoute: typeof DashboardPerfilBancasRoute
   DashboardPerformanceRoute: typeof DashboardPerformanceRoute
   DashboardProfileRoute: typeof DashboardProfileRoute
   DashboardQuestionBankRoute: typeof DashboardQuestionBankRoute
@@ -1391,6 +1411,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardMockExamsRoute: DashboardMockExamsRoute,
   DashboardMyContestRoute: DashboardMyContestRoute,
   DashboardNotebooksRoute: DashboardNotebooksRoute,
+  DashboardPerfilBancasRoute: DashboardPerfilBancasRoute,
   DashboardPerformanceRoute: DashboardPerformanceRoute,
   DashboardProfileRoute: DashboardProfileRoute,
   DashboardQuestionBankRoute: DashboardQuestionBankRoute,
