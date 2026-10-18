@@ -156,8 +156,8 @@ function AdminVoiceStudioPage() {
         <StatusCard
           icon={Wifi}
           label="Serviço"
-          value={online ? "Online" : "Offline"}
-          tone={online ? "success" : "warning"}
+          value={online ? "Servidor online" : "Offline"}
+          tone={online && status?.installedModels ? "success" : "warning"}
           detail={
             status?.health
               ? `VoiceStudio ${status.health.version ?? ""} · ${status.health.device ?? "dispositivo não informado"}`
@@ -169,7 +169,7 @@ function AdminVoiceStudioPage() {
           label="Modelos instalados"
           value={String(status?.installedModels ?? 0)}
           tone={status?.installedModels ? "success" : "warning"}
-          detail={status ? `${status.modelCount} modelos catalogados` : "Consultando catálogo"}
+          detail={status ? status.installedModels === 0 ? "Voz natural indisponível: instale um modelo no VoiceStudio." : `${status.modelCount} modelos catalogados; confirme o modelo ativo no teste abaixo.` : "Consultando catálogo"}
         />
       </div>
 

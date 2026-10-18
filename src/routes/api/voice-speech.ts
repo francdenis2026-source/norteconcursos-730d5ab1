@@ -32,6 +32,7 @@ async function handle(request: Request): Promise<Response> {
   try {
     const upstream = await fetch(`${VOICESTUDIO_URL}/v1/audio/speech`, {
       method: "POST",
+      signal: AbortSignal.timeout(15000),
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: VOICESTUDIO_MODEL,
@@ -55,6 +56,10 @@ async function handle(request: Request): Promise<Response> {
         },
         { status: upstream.status === 403 ? 503 : 502 },
       );
+    }
+
+    if (!upstream.headers.get("content-type")?.startsWith("audio/")) {
+      return Response.json({ error: "O serviço de voz não retornou um áudio válido." }, { status: 502 });
     }
 
     return new Response(upstream.body, {
