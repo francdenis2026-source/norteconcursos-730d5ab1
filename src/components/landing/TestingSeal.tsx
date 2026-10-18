@@ -8,7 +8,7 @@ export function TestingSeal() {
       <BadgeCheck aria-hidden="true" />
       <p>
         <strong>Acesso aberto · Fase de testes</strong>
-        <span>Grátis por {TESTING_DAYS} dias no plano Essencial · depois, planos pagos</span>
+        <span>Grátis por {TESTING_DAYS} dias com tudo do plano Plus · depois, planos pagos</span>
       </p>
       <a href="#planos">
         Entenda os planos <ArrowUpRight aria-hidden="true" />

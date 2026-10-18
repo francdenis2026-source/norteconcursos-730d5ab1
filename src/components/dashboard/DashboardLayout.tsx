@@ -7,7 +7,7 @@ import {
   navigationActive as isActive,
   type NavigationItem,
 } from "./DashboardNavigation";
-import { AI_ENABLED, TESTING_PHASE, isTestingTier } from "@/lib/launch.config";
+import { AI_ENABLED, TESTING_PHASE } from "@/lib/launch.config";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { getActiveTheme, toggleTheme as toggleStoredTheme } from "@/lib/theme";
 import {
@@ -573,7 +573,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <div className="app-chips">
                 <AcreClock />
                 {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
-                {TESTING_PHASE && !isAdmin && isTestingTier(tier) && !!user?.plan_ends_at && (
+                {TESTING_PHASE && !isAdmin && !!user?.on_trial && !!user?.plan_ends_at && (
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Link
@@ -592,7 +592,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent side="bottom">
-                      Fase de testes: você usa o plano Essencial de graça. Depois, a conta segue no
+                      Fase de testes: você usa o plano Plus de graça. Depois, a conta segue no
                       plano Gratuito.
                     </TooltipContent>
                   </Tooltip>

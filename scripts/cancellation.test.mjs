@@ -29,6 +29,8 @@ test("na fase de testes, Gratuito/Essencial sem vencimento não é assinatura pa
   assert.equal(isPaidSubscriber("essential", "2026-12-01T00:00:00Z"), true);
   assert.equal(isPaidSubscriber("plus", null), true);
   assert.equal(isPaidSubscriber("premium", "2026-12-01T00:00:00Z"), true);
+  // plano de testes (Plus gratuito por 30 dias) não é assinatura e não tem o que cancelar
+  assert.equal(isPaidSubscriber("plus", null, true), false);
 });
 
 test("cancelamento agendado vale até o vencimento; depois disso a renovação é liberada", () => {

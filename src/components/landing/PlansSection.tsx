@@ -1,5 +1,6 @@
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
+import { PlanComparison } from "@/components/landing/PlanComparison";
 import { ArrowUpRight, Check, Clock, Info, Minus, Plus } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import {
@@ -8,6 +9,7 @@ import {
   SOON_LABEL,
   TESTING_DAYS,
   TESTING_PHASE,
+  TESTING_TIER,
 } from "@/lib/launch.config";
 
 /** Uma imagem por plano (cenas do próprio produto). O enquadramento corta o lado vazio das imagens panorâmicas. */
@@ -31,13 +33,13 @@ export function PlansSection() {
           </h2>
           <p>
             {TESTING_PHASE
-              ? `Por ${TESTING_DAYS} dias, estude com os recursos do plano Essencial gratuitamente. Depois, sua conta segue no plano Gratuito.`
+              ? `Por ${TESTING_DAYS} dias, use tudo do plano Plus gratuitamente (só a análise das suas provas é exclusiva do Premium). Depois, sua conta segue no plano Gratuito.`
               : "Escolha o plano que acompanha o seu ritmo de estudo."}
           </p>
         </div>
         <div className="home-plans__grid">
           {SUBSCRIPTION_PLANS.map((plan) => {
-            const testing = TESTING_PHASE && plan.id === "essential";
+            const testing = TESTING_PHASE && plan.id === TESTING_TIER;
             return (
               <article
                 key={plan.id}
@@ -75,6 +77,11 @@ export function PlansSection() {
                     </>
                   )}
                 </p>
+                {plan.annualPrice ? (
+                  <p className="home-plan__annual">
+                    ou R$ {plan.annualPrice.toFixed(0)}/ano · 2 meses grátis
+                  </p>
+                ) : null}
                 <p className="home-plan__availability">
                   {plan.price === 0
                     ? "Para começar e continuar estudando"
@@ -90,7 +97,7 @@ export function PlansSection() {
                     <Plus aria-hidden="true" />
                   </summary>
                   <ul>
-                    {PLAN_ROWS.slice(0, 6).map(([key, label]) => {
+                    {PLAN_ROWS.slice(0, 8).map(([key, label]) => {
                       const value = planValue(key, plan.features[key]);
                       return (
                         <li key={key} className={value ? "" : "is-unavailable"}>
@@ -130,6 +137,7 @@ export function PlansSection() {
             );
           })}
         </div>
+        <PlanComparison />
         {!PAYMENTS_ENABLED && (
           <p className="home-plans__notice" role="note">
             <Info aria-hidden="true" />

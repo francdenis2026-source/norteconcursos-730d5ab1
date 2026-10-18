@@ -47,7 +47,7 @@ function ProfilePage() {
   const [cancelOpen, setCancelOpen] = React.useState(false);
   const cancellations = useMyCancellations(user?.id);
   const scheduled = scheduledCancellation(cancellations.list);
-  const paid = !!user && isPaidSubscriber(user.subscription_tier, user.subscription_expires_at);
+  const paid = !!user && isPaidSubscriber(user.subscription_tier, user.subscription_expires_at, user.on_trial);
   const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
 
   const portal = useServerFn(createPortalSession);
