@@ -9,6 +9,7 @@ import {
   activityTopic,
   otherStudentStats,
   type ActivityQuestion,
+  type StudyPeriod,
 } from "@/lib/dailyStudyActivity";
 import { canonicalSubject } from "@/lib/subjects";
 import { acreDateKey, ACRE_TZ } from "@/lib/acreTime";
@@ -110,14 +111,14 @@ async function questionInfo(row: Response, userId: string): Promise<QuestionInfo
 export function DailyStudyActivity({
   userId,
   day,
-  week,
+  period,
 }: {
   userId: string;
   day: string;
-  week: boolean;
+  period: StudyPeriod;
 }) {
   const [limit, setLimit] = useState(15);
-  const range = activityDateRange(day, week);
+  const range = activityDateRange(day, period);
   const query = useQuery({
     queryKey: ["daily-study-activity", userId, range.start, range.end],
     staleTime: 15000,
@@ -216,7 +217,7 @@ export function DailyStudyActivity({
   const correct = data.training.filter((r) => r.is_correct).length;
   return (
     <section className="daily-study-activity" aria-label="Atividades realizadas">
-      <h3>O que você estudou {week ? "no período" : "neste dia"}</h3>
+      <h3>O que você estudou {period !== "day" ? "no período" : "neste dia"}</h3>
       {data.errors.length > 0 && (
         <p role="alert">
           Parte do histórico está indisponível (

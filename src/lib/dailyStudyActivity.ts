@@ -2,15 +2,80 @@ import { canonicalSubject } from "./subjects";
 import { classifyTopic } from "./questionTopics";
 import type { Question } from "./questionFormat";
 
-export function activityDateRange(day: string, week = false) {
+export type StudyPeriod = "day" | "7d" | "15d" | "30d" | "6m" | "1y";
+export const STUDY_PERIODS: { value: StudyPeriod; label: string }[] = [
+  { value: "day", label: "Dia" },
+  { value: "7d", label: "7 dias" },
+  { value: "15d", label: "15 dias" },
+  { value: "30d", label: "30 dias" },
+  { value: "6m", label: "6 meses" },
+  { value: "1y", label: "1 ano" },
+];
+export function activityDateRange(day: string, period: StudyPeriod | boolean = "day") {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) throw Error("Invalid study date");
   const end = new Date(`${day}T05:00:00Z`);
   if (!Number.isFinite(end.getTime()) || end.toISOString().slice(0, 10) !== day)
     throw Error("Invalid study date");
-  const start = new Date(end);
-  if (week) start.setUTCDate(start.getUTCDate() - 6);
   end.setUTCDate(end.getUTCDate() + 1);
+  const start = new Date(end);
+  const value = typeof period === "boolean" ? (period ? "7d" : "day") : period;
+  if (value === "6m" || value === "1y") {
+    const date = start.getUTCDate();
+    start.setUTCDate(1);
+    start.setUTCMonth(start.getUTCMonth() - (value === "6m" ? 6 : 12));
+    const last = new Date(
+      Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 0),
+    ).getUTCDate();
+    start.setUTCDate(Math.min(date, last));
+  } else start.setUTCDate(start.getUTCDate() - { day: 1, "7d": 7, "15d": 15, "30d": 30 }[value]);
   return { start: start.toISOString(), end: end.toISOString() };
+}
+
+export function studyPeriodSummary(
+  rows: { study_date: string; active_seconds: number }[],
+  live: number,
+  today: string,
+  day: string,
+  period: StudyPeriod,
+) {
+  const range = activityDateRange(day, period),
+    start = range.start.slice(0, 10),
+    end = range.end.slice(0, 10);
+  const byDay = new Map<string, number>();
+  for (const row of rows)
+    if (row.study_date >= start && row.study_date < end && Number.isFinite(row.active_seconds))
+      byDay.set(row.study_date, (byDay.get(row.study_date) ?? 0) + Math.max(0, row.active_seconds));
+  if (today >= start && today < end)
+    byDay.set(
+      today,
+      Math.max(byDay.get(today) ?? 0, Number.isFinite(live) ? Math.max(0, live) : 0),
+    );
+  const days = [];
+  for (
+    let date = new Date(range.start);
+    date.toISOString() < range.end;
+    date.setUTCDate(date.getUTCDate() + 1)
+  ) {
+    const key = date.toISOString().slice(0, 10);
+    days.push({ date: key, seconds: byDay.get(key) ?? 0 });
+  }
+  const total = days.reduce((sum, d) => sum + d.seconds, 0),
+    activeDays = days.filter((d) => d.seconds > 0).length;
+  const monthly = period === "6m" || period === "1y";
+  const buckets = new Map<string, number>();
+  for (const d of days) {
+    const key = monthly ? d.date.slice(0, 7) : d.date;
+    buckets.set(key, (buckets.get(key) ?? 0) + d.seconds);
+  }
+  return {
+    range,
+    days,
+    total,
+    activeDays,
+    average: Math.round(total / days.length),
+    monthly,
+    buckets: [...buckets].map(([date, seconds]) => ({ date, seconds })),
+  };
 }
 export type ActivityQuestion = {
   subject: string;

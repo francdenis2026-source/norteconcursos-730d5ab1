@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { STUDY_PERIODS, studyPeriodSummary, type StudyPeriod } from "@/lib/dailyStudyActivity";
 import { DailyStudyActivity } from "@/components/dashboard/DailyStudyActivity";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, ListChecks, TrendingUp } from "lucide-react";
@@ -5,7 +7,6 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/compone
 import { acreDateKey } from "@/lib/acreTime";
 import {
   summarizeTraining,
-  summarizeStudyTime,
   type TrainingRecord,
   type ActivityRecord,
 } from "@/lib/studentDashboard";
@@ -68,14 +69,43 @@ export function StudentMetricPanel({
   onClose: () => void;
   returnFocus: HTMLElement | null;
 }) {
-  const historical = metric === "today" && selectedDate && selectedDate !== acreDateKey(now);
-  const definition = historical
-    ? {
-        ...definitions.today,
-        title: `Tempo ativo em ${selectedDate.split("-").reverse().join("/")}`,
-        description:
-          "Seu tempo e suas sessões registrados exclusivamente neste dia, no horário do Acre.",
-      }
+  const [selection, setSelection] = useState<{
+    key: string;
+    period: StudyPeriod;
+    day: string;
+  } | null>(null);
+  const today = acreDateKey(now);
+  const selectionKey = `${userId}:${metric}:${selectedDate}`;
+  const active =
+    selection?.key === selectionKey
+      ? selection
+      : {
+          key: selectionKey,
+          period: metric === "week" ? ("7d" as const) : ("day" as const),
+          day: selectedDate ?? today,
+        };
+  const setPeriod = (period: StudyPeriod) => setSelection({ ...active, period });
+  const setDay = (day: string) => {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(day) && day <= today) setSelection({ ...active, day });
+  };
+  const timeMetric = metric === "today" || metric === "week";
+  const definition = timeMetric
+    ? active.period === "day"
+      ? {
+          ...definitions.today,
+          title:
+            active.day === today
+              ? "Tempo ativo hoje"
+              : `Tempo ativo em ${active.day.split("-").reverse().join("/")}`,
+          description: "Seu tempo e suas atividades na data selecionada, no horário do Acre.",
+        }
+      : active.period === "7d" && active.day === today
+        ? definitions.week
+        : {
+            ...definitions.week,
+            title: `Histórico de estudo · ${STUDY_PERIODS.find((p) => p.value === active.period)?.label}`,
+            description: "Tempo ativo e atividades no período selecionado, no horário do Acre.",
+          }
     : metric
       ? definitions[metric]
       : null;
@@ -83,7 +113,10 @@ export function StudentMetricPanel({
     <Dialog
       open={!!metric}
       onOpenChange={(open) => {
-        if (!open) onClose();
+        if (!open) {
+          setSelection(null);
+          onClose();
+        }
       }}
     >
       {definition && (
@@ -123,7 +156,10 @@ export function StudentMetricPanel({
               <StudentMetricDetails
                 metric={metric}
                 userId={userId}
-                selectedDate={selectedDate}
+                selectedDate={active.day}
+                period={active.period}
+                onPeriodChange={setPeriod}
+                onDayChange={setDay}
                 training={training ?? []}
                 activity={activity ?? []}
                 live={live}
@@ -142,6 +178,9 @@ export function StudentMetricDetails({
   metric,
   userId,
   selectedDate,
+  period,
+  onPeriodChange,
+  onDayChange,
   training,
   activity,
   live,
@@ -150,6 +189,9 @@ export function StudentMetricDetails({
   metric: StudentMetric;
   userId: string;
   selectedDate: string | null;
+  period: StudyPeriod;
+  onPeriodChange: (period: StudyPeriod) => void;
+  onDayChange: (day: string) => void;
   training: TrainingRecord[];
   activity: ActivityRecord[];
   live: number;
@@ -278,40 +320,67 @@ export function StudentMetricDetails({
       </div>
     );
   }
-  const time = summarizeStudyTime(activity, live, now);
-  const activeDays = time.days.filter((d) => d.seconds > 0).length;
-  const peak = Math.max(1, ...time.days.map((d) => d.seconds));
   const day = selectedDate ?? today;
   const isToday = day === today;
-  const todayRows = activity.filter(
+  const time = studyPeriodSummary(activity, live, today, day, period);
+  const peak = Math.max(1, ...time.buckets.map((d) => d.seconds));
+  const dayRows = activity.filter(
     (r) => r.study_date === day && Number.isFinite(r.active_seconds) && r.active_seconds > 0,
   );
-  const savedToday = todayRows.reduce((sum, r) => sum + r.active_seconds, 0);
-  const daySeconds = isToday ? time.today : savedToday;
+  const savedDay = dayRows.reduce((sum, r) => sum + r.active_seconds, 0);
+  const fullDate = (date: string) => date.split("-").reverse().join("/");
   return (
     <div className="student-metric-panel__body" data-metric={metric}>
+      <div className="study-period-controls">
+        <div
+          role="group"
+          aria-label="Período do histórico"
+          className="study-period-controls__options"
+        >
+          {STUDY_PERIODS.map((p) => (
+            <button
+              key={p.value}
+              type="button"
+              aria-pressed={period === p.value}
+              onClick={() => onPeriodChange(p.value)}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+        <label>
+          {period === "day" ? "Data" : "Até a data"}
+          <input
+            aria-label="Data final do histórico"
+            type="date"
+            value={day}
+            max={today}
+            onChange={(event) => onDayChange(event.target.value)}
+          />
+        </label>
+      </div>
       <div className="student-metric-panel__summary">
         <div>
           <span>
-            {metric === "today"
-              ? `${isToday ? "Hoje, " : ""}${dateLabel(day)} · Acre`
-              : `${dateLabel(time.days[0]?.date ?? today)} a ${dateLabel(today)} · Acre`}
+            {period === "day"
+              ? `${isToday ? "Hoje, " : ""}${fullDate(day)} · Acre`
+              : `${fullDate(time.days[0]?.date ?? day)} a ${fullDate(day)} · Acre`}
           </span>
-          <strong>{duration(metric === "today" ? daySeconds : time.week)}</strong>
+          <strong>{duration(time.total)}</strong>
           <p>Tempo ativo de estudo</p>
         </div>
         <Clock aria-hidden="true" />
       </div>
-      {metric === "today" ? (
+      {period === "day" ? (
         <>
           <dl className="student-metric-panel__facts">
             <div>
               <dt>Tempo sincronizado do dia</dt>
-              <dd>{duration(savedToday)}</dd>
+              <dd>{duration(savedDay)}</dd>
             </div>
             <div>
               <dt>Sessões com atividade no dia</dt>
-              <dd>{count(todayRows.length)}</dd>
+              <dd>{count(dayRows.length)}</dd>
             </div>
           </dl>
           <section>
@@ -326,33 +395,38 @@ export function StudentMetricDetails({
               para atualizar.
             </p>
           </section>
-          {!daySeconds && (
-            <p className="student-metric-panel__empty">Não há tempo ativo registrado neste dia.</p>
-          )}
         </>
       ) : (
         <>
           <dl className="student-metric-panel__facts">
             <div>
               <dt>Dias com atividade</dt>
-              <dd>{activeDays} de 7</dd>
+              <dd>
+                {time.activeDays} de {time.days.length}
+              </dd>
             </div>
             <div>
               <dt>Média por dia no período</dt>
-              <dd>{duration(Math.round(time.week / 7))}</dd>
+              <dd>{duration(time.average)}</dd>
             </div>
           </dl>
-          <section aria-label="Tempo por dia">
-            <h3>Tempo por dia</h3>
+          <section aria-label={time.monthly ? "Tempo por mês" : "Tempo por dia"}>
+            <h3>{time.monthly ? "Tempo por mês" : "Tempo por dia"}</h3>
+            {time.monthly && (
+              <p className="daily-study-activity__note">
+                Os meses nas extremidades incluem somente os dias dentro do intervalo exibido acima.
+              </p>
+            )}
             <ol className="student-metric-panel__days">
-              {time.days.map((d) => (
+              {time.buckets.map((d) => (
                 <li key={d.date}>
                   <span>
-                    {dateLabel(d.date)}
-                    {d.date === today ? " · Hoje" : ""}
+                    {time.monthly
+                      ? `${d.date.slice(5, 7)}/${d.date.slice(2, 4)}`
+                      : `${dateLabel(d.date)}${d.date === today ? " · Hoje" : ""}`}
                   </span>
                   <progress
-                    aria-label={`Tempo em ${dateLabel(d.date)}: ${duration(d.seconds)}`}
+                    aria-label={`Tempo em ${d.date}: ${duration(d.seconds)}`}
                     value={d.seconds}
                     max={peak}
                   />
@@ -361,18 +435,18 @@ export function StudentMetricDetails({
               ))}
             </ol>
           </section>
-          {!time.week && (
-            <p className="student-metric-panel__empty">
-              Ainda não há atividade registrada neste período.
-            </p>
-          )}
         </>
       )}
+      {!time.total && (
+        <p className="student-metric-panel__empty">
+          Não há tempo ativo registrado {period === "day" ? "neste dia" : "neste período"}.
+        </p>
+      )}
       <DailyStudyActivity
-        key={`${userId}:${metric}:${day}`}
+        key={`${userId}:${period}:${day}`}
         userId={userId}
-        day={metric === "today" ? day : today}
-        week={metric === "week"}
+        day={day}
+        period={period}
       />
     </div>
   );
