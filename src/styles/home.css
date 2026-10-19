@@ -2505,3 +2505,104 @@
 @media(forced-colors:active) {
   .home-menu-overlay { backdrop-filter:none; -webkit-backdrop-filter:none; }
 }
+
+/* ==========================================================================
+   Modo claro da homepage — realces coloridos sobre os tokens semânticos
+   compartilhados (--c-*, definidos em styles.css). Seções com foto mantêm
+   seus tokens próprios; o modo escuro não é alterado.
+   ========================================================================== */
+:root:not(.dark) .home {
+  --home-tint: oklch(0.96 0.014 255);
+  --home-line: oklch(0.89 0.016 255);
+}
+:root:not(.dark) .home-eyebrow { color: var(--c-blue); }
+:root:not(.dark) .home-heading em,
+:root:not(.dark) .home-section h2 em {
+  font-style: normal;
+  background: linear-gradient(95deg, var(--c-blue), var(--c-teal));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+/* Faixas de seção com tons alternados */
+:root:not(.dark) .home-method {
+  background: linear-gradient(180deg, var(--c-blue-soft), oklch(0.975 0.01 255));
+  border-block: 1px solid oklch(0.9 0.03 262);
+}
+:root:not(.dark) .home-careers {
+  background: linear-gradient(180deg, oklch(0.965 0.02 195), oklch(0.975 0.01 255));
+  border-block: 1px solid oklch(0.9 0.035 195);
+}
+:root:not(.dark) .home-plans {
+  background: linear-gradient(180deg, #fff, var(--c-violet-soft) 120%);
+}
+
+/* Etapas: numeração em fichas coloridas */
+:root:not(.dark) .home-steps > li { padding: 16px; border: 1px solid oklch(0.9 0.03 262); border-radius: 12px; background: #fff; box-shadow: var(--shadow-card); border-top: 3px solid var(--step-c, var(--c-blue)); }
+:root:not(.dark) .home-steps > li:nth-child(2) { --step-c: var(--c-teal); }
+:root:not(.dark) .home-steps > li:nth-child(3) { --step-c: var(--c-violet); }
+:root:not(.dark) .home-steps > li:nth-child(4) { --step-c: var(--c-amber); }
+:root:not(.dark) .home-step__top { border-bottom-color: oklch(0.92 0.01 255); }
+:root:not(.dark) .home-step__top > span { color: var(--step-c, var(--c-blue)); }
+:root:not(.dark) .home-step__top > svg { color: var(--step-c, var(--c-blue)); }
+:root:not(.dark) .home-steps h3 { font-size: 14px; color: var(--foreground); }
+
+/* Ferramentas principais e secundárias */
+:root:not(.dark) .home-core-tool__number { color: #fff; background: var(--tool-c, var(--c-blue)); border-radius: 999px; min-width: 26px; height: 26px; display: grid; place-items: center; padding: 0; font-weight: 700; }
+:root:not(.dark) .home-core-tool:nth-child(2) { --tool-c: var(--c-teal); }
+:root:not(.dark) .home-core-tool:nth-child(3) { --tool-c: var(--c-violet); }
+:root:not(.dark) .home-core-tool h3 svg { color: var(--tool-c, var(--c-blue)); }
+:root:not(.dark) .home-tools { border-color: oklch(0.88 0.03 262); box-shadow: var(--shadow-card); }
+:root:not(.dark) .home-tool > summary svg:first-child { color: var(--tool-c, var(--c-blue)); }
+:root:not(.dark) .home-tool:nth-child(4n+2) { --tool-c: var(--c-teal); }
+:root:not(.dark) .home-tool:nth-child(4n+3) { --tool-c: var(--c-violet); }
+:root:not(.dark) .home-tool:nth-child(4n) { --tool-c: var(--c-amber); }
+:root:not(.dark) .home-tool[open], :root:not(.dark) .home-tool:hover { background: var(--c-blue-soft); }
+
+/* Carreiras */
+:root:not(.dark) .home-career { padding-left: 14px; border-left: 3px solid var(--car-c, var(--c-teal)); border-bottom-color: oklch(0.9 0.02 195); transition: background .2s; }
+:root:not(.dark) .home-career:nth-child(3n+2) { --car-c: var(--c-blue); }
+:root:not(.dark) .home-career:nth-child(3n) { --car-c: var(--c-violet); }
+:root:not(.dark) .home-career:hover { background: #fff; }
+
+/* Objetivos / provas */
+:root:not(.dark) .home-opportunity { border-color: oklch(0.88 0.03 262); border-top: 4px solid var(--c-blue); box-shadow: var(--shadow-card); background: #fff; }
+:root:not(.dark) .home-opportunity:nth-child(2) { border-top-color: var(--c-teal); }
+:root:not(.dark) .home-opportunity:nth-child(3) { border-top-color: var(--c-violet); }
+
+/* Planos: cada nível com sua cor; o Plus (em teste) em destaque */
+:root:not(.dark) .home-plan {
+  --plan-c: var(--c-green); --plan-soft: var(--c-green-soft);
+  border: 1px solid color-mix(in oklab, var(--plan-c) 30%, #fff);
+  border-top: 4px solid var(--plan-c);
+  background: linear-gradient(180deg, var(--plan-soft) 0, #fff 42%);
+  box-shadow: var(--shadow-card);
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
+}
+:root:not(.dark) article.home-plan:nth-of-type(2) { --plan-c: var(--c-teal); --plan-soft: var(--c-teal-soft); }
+:root:not(.dark) article.home-plan:nth-of-type(3) { --plan-c: var(--c-blue); --plan-soft: var(--c-blue-soft); }
+:root:not(.dark) article.home-plan:nth-of-type(4) { --plan-c: var(--c-violet); --plan-soft: var(--c-violet-soft); }
+:root:not(.dark) .home-plan:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+:root:not(.dark) .home-plan--featured {
+  border-color: var(--c-blue); border-top-width: 5px;
+  box-shadow: 0 0 0 2px oklch(0.5 0.18 262 / .22), var(--shadow-lift);
+  background: linear-gradient(180deg, var(--c-blue-soft) 0, #fff 48%);
+}
+:root:not(.dark) .home-plan h3 { color: color-mix(in oklab, var(--plan-c) 70%, #000); font-weight: 700; }
+:root:not(.dark) .home-plan__price { color: color-mix(in oklab, var(--plan-c) 75%, #000); }
+:root:not(.dark) .home-plan__annual { color: color-mix(in oklab, var(--plan-c) 70%, #000); font-weight: 600; }
+:root:not(.dark) .home-plan__features li > svg { color: var(--plan-c); }
+:root:not(.dark) .home-plan__features summary svg { color: var(--plan-c); }
+:root:not(.dark) .home-plan .home-tag { background: var(--c-blue); color: #fff; border-color: var(--c-blue); font-weight: 700; }
+:root:not(.dark) .home-plan > .home-button { border-color: color-mix(in oklab, var(--plan-c) 45%, #fff); background: #fff; color: color-mix(in oklab, var(--plan-c) 75%, #000); font-weight: 700; }
+:root:not(.dark) .home-plan > .home-button:not([disabled]):not([aria-disabled="true"]):hover { background: var(--plan-c); color: #fff; }
+:root:not(.dark) .home-plan:first-of-type > .home-button,
+:root:not(.dark) .home-plan--featured > .home-button { background: var(--plan-c); color: #fff; border-color: var(--plan-c); }
+:root:not(.dark) .home-plans__signal-icon { background: var(--c-blue-soft); color: var(--c-blue); }
+:root:not(.dark) .home-plan-comparison { border-color: oklch(0.88 0.03 262); box-shadow: var(--shadow-card); }
+
+/* Faixa de confiança, desafio do dia e botões de texto */
+:root:not(.dark) .home-text-link, :root:not(.dark) .home-trust a { color: var(--c-blue); }
+:root:not(.dark) .home-source-details, :root:not(.dark) .home-exam-details { border-color: oklch(0.88 0.03 262); }
+@media (max-width: 760px) {
+  :root:not(.dark) .home-steps > li { padding: 14px; }
+}
