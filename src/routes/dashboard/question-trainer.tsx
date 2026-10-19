@@ -1440,7 +1440,7 @@ function QuestionTrainer() {
         </DialogContent>
       </Dialog>
 
-      <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+      <aside role="status" className="trainer-resume-banner rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
         <strong>
           {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
           {questions.length}
