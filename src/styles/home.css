@@ -1,12 +1,12 @@
 /* Homepage: one scoped visual system. Intro media state is owned by HeroVideo. */
 .home,
 .home-menu {
-  --home-bg: #e8edf3;
-  --home-surface: #f7f9fc;
-  --home-tint: #e2e8f0;
-  --home-text: #202834;
-  --home-muted: #536171;
-  --home-line: #c8d1dc;
+  --home-bg: #efefef;
+  --home-surface: #ffffff;
+  --home-tint: #f3f3f3;
+  --home-text: #262626;
+  --home-muted: #595959;
+  --home-line: #d6d6d6;
   --home-accent: #87570f;
   --home-accent-bg: #f9f1df;
   --home-navy: #252a32;
@@ -2318,14 +2318,13 @@
 @media(max-width:639px) { .home-opportunity--pcpr .home-pcpr-hero { height:190px; } .home-pcpr-hero > span { inset-inline:20px; font-size:9px; } }
 
 :root:not(.dark) .home-header {
-  --home-bg:#303c4e; --home-surface:#354154; --home-tint:#45556d; --home-line:#657489; --home-text:#f2f5fa; --home-muted:#ced7e4; --home-accent:#f3cd82;
-  background:linear-gradient(110deg,rgb(35 44 58 / .96),rgb(49 62 80 / .94));
-  border-bottom-color:#bf9750;
-  -webkit-backdrop-filter:blur(18px) saturate(1.12); backdrop-filter:blur(18px) saturate(1.12);
-  box-shadow:0 6px 20px rgb(24 33 46 / .14);
+  background: rgb(255 255 255 / .97);
+  border-bottom-color: var(--home-line);
+  -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+  box-shadow: 0 2px 10px rgb(0 0 0 / .04);
 }
-:root:not(.dark) .home-header .norte-brand__type span { color:#f3cd82; }
-:root:not(.dark) .home-header .home-presence { background:#354154; border-color:#718096; }
+:root:not(.dark) .home-header .norte-brand__type span { color:var(--home-accent); }
+:root:not(.dark) .home-header .home-presence { background:var(--home-tint); border-color:var(--home-line); }
 @media(forced-colors:active) {
   :root:not(.dark) .home-header { background:Canvas; color:CanvasText; border-color:CanvasText; backdrop-filter:none; }
   :root:not(.dark) .home-header :is(a,button,span,strong) { color:CanvasText; }
@@ -2458,4 +2457,23 @@
   .home-header__inner { gap:6px; }
   .home-header__actions { gap:4px; }
   .home-header__register { padding-inline:9px; }
+}
+
+/* White cards carry the content; the neutral canvas separates each surface. */
+:root:not(.dark) .home :is(.home-plan,.home-opportunity) {
+  background: var(--home-surface);
+  box-shadow: 0 2px 8px rgb(0 0 0 / .045);
+}
+:root:not(.dark) .home :is(.home-plan,.home-opportunity):hover {
+  box-shadow: 0 5px 16px rgb(0 0 0 / .075);
+}
+/* Reading copy must remain comfortable on both desktop and small screens. */
+.home :is(.home-plan__description,.home-plan__annual,.home-plan__availability,
+.home-plan__features summary,.home-plan__features li,.home-plans__signal p,
+.home-opportunity__intro>p,.home-opportunity__bottom>small,.home-rail__hint,
+.home-rail__position) { font-size: 14px; line-height: 1.6; }
+.home :is(.home-button,.home-text-link) { font-size: 14px; }
+@media(max-width:600px) {
+  .home .home-header__register { font-size:12px; }
+  .home .home-plan__top .home-tag { font-size:11px; }
 }
