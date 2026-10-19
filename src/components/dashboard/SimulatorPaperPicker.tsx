@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import { simulatorPapers, type SimulatorQuestion } from "@/lib/simulatorSession";
+import { examCoverage } from "@/lib/examCoverage";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -52,6 +53,11 @@ export function SimulatorPaperPicker({
               {p.questions.length} questões disponíveis ·{" "}
               {new Set(p.questions.map((q) => q.subject)).size} disciplinas
             </span>
+            {examCoverage(p.question, p.questions.length) && (
+              <span className="block text-xs font-medium">
+                {examCoverage(p.question, p.questions.length)}
+              </span>
+            )}
           </button>
         ))}
       </div>

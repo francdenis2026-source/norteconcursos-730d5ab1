@@ -2,9 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarCheck, Check, FileCheck2, Scale, ShieldCheck } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
+import { usePcprAvailability } from "@/hooks/usePcprAvailability";
 
 const FACTS = [
-  [FileCheck2, "Formato", "100 questões objetivas por cargo"],
+  [
+    FileCheck2,
+    "Prova original",
+    "100 itens por cargo; a disponibilidade na plataforma pode ser parcial",
+  ],
   [Scale, "Base legal", "Conferida nos textos oficiais do Planalto"],
   [
     CalendarCheck,
@@ -17,13 +22,14 @@ const FACTS = [
 /** Chamada da prova PC-PR 2026: leva ao treinador com a prova inteira (logado) ou ao cadastro (visitante). */
 export function PcprExamPromo() {
   const { isAuthenticated } = useAuthStatus();
+  const { counts, checkedAt, loading } = usePcprAvailability();
   const cta = isAuthenticated ? (
     <Link
       to="/dashboard/question-trainer"
       search={PCPR_TRAINER_SEARCH}
       className="home-button home-button--primary"
     >
-      Resolver a prova agora <ArrowRight />
+      Resolver prova de Agente <ArrowRight />
     </Link>
   ) : (
     <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--primary">
@@ -70,13 +76,37 @@ export function PcprExamPromo() {
             legal conferida e correção imediata.
           </p>
           <ul className="home-exam-roles" aria-label="Cargos da prova">
-            {PCPR_EXAM.roles.map((role) => (
+            {PCPR_EXAM.roles.map((role, index) => (
               <li key={role}>
                 <Check aria-hidden="true" />
-                {role}
+                <span>
+                  {isAuthenticated ? (
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={{ ...PCPR_TRAINER_SEARCH, career: role }}
+                      className="underline underline-offset-2"
+                    >
+                      {role}
+                    </Link>
+                  ) : (
+                    role
+                  )}
+                  :{" "}
+                  {counts
+                    ? `${counts[index]} disponíveis de 100 originais`
+                    : loading
+                      ? "conferindo disponibilidade…"
+                      : "disponibilidade não confirmada"}
+                </span>
               </li>
             ))}
           </ul>
+          <p>
+            {checkedAt
+              ? `Conferência de ${checkedAt}. Confira a quantidade atual ao iniciar o treino.`
+              : "Disponibilidade do acervo elegível por cargo."}{" "}
+            Questões arquivadas não entram no treino. A seleção pode ser parcial.
+          </p>
 
           <dl>
             {FACTS.map(([Icon, label, text]) => (

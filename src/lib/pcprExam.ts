@@ -8,10 +8,11 @@ export const PCPR_EXAM = {
   officialPage: "https://conhecimento.fgv.br/concursos/pcpr26",
 } as const;
 
-/** Abre o Treinador já com a prova inteira, em ordem de item, incluindo as questões já respondidas. */
+/** Abre todos os itens elegíveis disponíveis; não promete que o caderno esteja completo. */
 export const PCPR_TRAINER_SEARCH = {
   contest: PCPR_EXAM.contest,
   year: PCPR_EXAM.year,
+  career: "Agente de Polícia Judiciária",
   go: "1",
   mode: "catalog",
   limit: "all",

@@ -1,26 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { usePcprAvailability } from "@/hooks/usePcprAvailability";
 import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
 
 /** Destaque da prova PC-PR 2026 no painel e no treinador; some sozinho se não houver questões ativas. */
 export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
-  const { data: count } = useQuery({
-    queryKey: ["pcpr-2026-active-count"],
-    staleTime: 5 * 60_000,
-    queryFn: async () => {
-      const { count, error } = await supabase
-        .from("board_exam_questions")
-        .select("id", { count: "exact", head: true })
-        .eq("contest_name", PCPR_EXAM.contest)
-        .eq("exam_year", Number(PCPR_EXAM.year))
-        .eq("content_status", "active");
-      if (error) throw error;
-      return count ?? 0;
-    },
-  });
-  if (!count) return null;
+  const { counts } = usePcprAvailability();
+  if (!counts || !counts.some(Boolean)) return null;
 
   return (
     <section
@@ -41,9 +27,22 @@ export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
         <span className="pcpr-spot__kicker">Em destaque · prova de {PCPR_EXAM.appliedOn}</span>
         <h2>Prova da Polícia Civil do Paraná 2026</h2>
         <p>
-          {count.toLocaleString("pt-BR")} questões de Direito e Legislação ({PCPR_EXAM.board})
-          prontas para resolver. Gabarito preliminar da banca, atualizado quando o definitivo sair.
+          Questões disponíveis por cargo ({PCPR_EXAM.board}). O caderno original tem 100 itens por
+          cargo; o acervo da plataforma pode estar parcial. Gabarito preliminar da banca.
         </p>
+        <ul className="mt-2 space-y-1 text-sm">
+          {PCPR_EXAM.roles.map((role, index) => (
+            <li key={role}>
+              <Link
+                to="/dashboard/question-trainer"
+                search={{ ...PCPR_TRAINER_SEARCH, career: role }}
+                className="underline underline-offset-2"
+              >
+                {role}: <strong>{counts[index]} de 100 disponíveis</strong>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="pcpr-spot__actions">
         <Link
@@ -51,7 +50,7 @@ export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
           search={PCPR_TRAINER_SEARCH}
           className="pcpr-spot__cta"
         >
-          Resolver a prova <ArrowRight />
+          Resolver prova de Agente <ArrowRight />
         </Link>
         {!compact && (
           <a

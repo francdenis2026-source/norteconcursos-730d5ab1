@@ -1,4 +1,5 @@
 import { scrollAppToTop } from "@/lib/appScroll";
+import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import { SimulatorPaperPicker } from "@/components/dashboard/SimulatorPaperPicker";
@@ -1413,6 +1414,13 @@ function ProfessionalSimulator() {
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-3 rounded-xl border bg-muted/30 p-4 text-sm">
+            {paperMode && chosenPaper && (
+              <p className="font-semibold">
+                {chosenPaper.question.career}:{" "}
+                {examCoverage(chosenPaper.question, sessionCount) ??
+                  `${sessionCount} questões nesta sessão.`}
+              </p>
+            )}
             <p className="font-bold">Durante o simulado:</p>
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
               <li>o gabarito e os comentários ficam ocultos até a finalização;</li>
@@ -1598,6 +1606,7 @@ function ActiveSimulator(p: {
         </div>
       </div>
       <p role="status" className="border-b bg-muted/30 px-4 py-2 text-xs">
+        {sessionExamCoverage(questions)}{" "}
         {storageError
           ? "Não foi possível salvar a retomada neste navegador. Evite atualizar antes de finalizar."
           : "Sessão salva neste navegador, por conta. Atualizar a página não pausa o prazo."}

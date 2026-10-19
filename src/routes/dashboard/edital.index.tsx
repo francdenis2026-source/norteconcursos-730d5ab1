@@ -1,4 +1,5 @@
 import { editalExamQuestions, editalPracticeSearch } from "@/lib/editalPractice";
+import { examCoverage } from "@/lib/examCoverage";
 import { EditalEditionCatalog } from "@/components/dashboard/EditalEditionCatalog";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import React from "react";
@@ -224,6 +225,14 @@ function EditalPage() {
                   </Link>
                 </Button>
                 <p className="mt-2 text-xs text-muted-foreground">
+                  {examCoverage(
+                    {
+                      contest: edition.contest_name,
+                      career: edition.role_name,
+                      year: edition.contest_year,
+                    },
+                    examQuestions.length,
+                  )}{" "}
                   Quantidade disponível no acervo revisado; pode ser menor que a prova completa.
                   Respostas anteriores ficam em revisão. Os limites diários do seu plano continuam
                   valendo.

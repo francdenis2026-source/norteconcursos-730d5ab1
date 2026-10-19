@@ -4,6 +4,7 @@ import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { useQuery } from "@tanstack/react-query";
 import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
+import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
 import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
@@ -563,6 +564,19 @@ function QuestionTrainer() {
           ? "Você está resolvendo somente as questões oficiais elegíveis desta prova, com correção após cada resposta."
           : "Este treino está restrito às questões oficiais elegíveis dessa prova. Os filtros só refinam essa seleção."}
       </p>
+      {examEdition.data && !catalogLoading && (
+        <p className="mt-2 font-semibold">
+          {examCoverage(
+            {
+              contest: examEdition.data.contest_name,
+              career: examEdition.data.role_name,
+              year: examEdition.data.contest_year,
+            },
+            catalog.length,
+            true,
+          )}
+        </p>
+      )}
       <Link
         to="/dashboard/edital"
         search={{ edition: routeFilters.edition }}
@@ -1181,6 +1195,7 @@ function QuestionTrainer() {
             <p className="font-semibold">
               {pool.length.toLocaleString("pt-BR")} questões na seleção atual
             </p>
+            <p className="text-sm">{examCoverage({ contest, career, year }, pool.length, true)}</p>
             <p className="mt-1 text-xs text-muted-foreground">
               Ajuste disciplina, banca, ano ou assunto abaixo. Questões já respondidas são revisadas
               sem pontuar novamente.
@@ -1430,6 +1445,7 @@ function QuestionTrainer() {
           {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
           {questions.length}
         </strong>
+        {sessionExamCoverage(questions) && <p>{sessionExamCoverage(questions)}</p>}
         <p>
           {bookmarkError
             ? "Não foi possível salvar a retomada neste navegador. Evite recarregar antes de concluir."
