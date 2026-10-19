@@ -12642,3 +12642,52 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 @media(max-width:480px) {
   .pcpr-spot--cover,.pcpr-spot--cover.pcpr-spot--compact { padding:14px; }
 }
+
+
+/* Navigation panels use a short, compositor-only entrance rather than the
+   generic full-width sheet slide. Radix keeps the exit mounted until it ends. */
+.menu-sheet-overlay {
+  background: rgb(5 10 18 / 46%);
+  animation-duration: 180ms;
+  animation-timing-function: ease-out;
+}
+[data-menu-motion] {
+  transition: none;
+  animation-duration: 240ms;
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: both;
+  box-shadow: 0 20px 64px rgb(0 0 0 / 24%);
+}
+[data-menu-motion="popover"] { transform-origin: top right; }
+[data-menu-motion="popover"][data-state="open"] { animation-name: menu-popover-in; }
+[data-menu-motion="popover"][data-state="closed"] { animation-name: menu-popover-out; }
+[data-menu-motion="drawer"][data-state="open"] { animation-name: menu-drawer-in; }
+[data-menu-motion="drawer"][data-state="closed"] { animation-name: menu-drawer-out; }
+[data-menu-motion="drawer"] { --menu-entry-x: -24px; }
+[data-menu-motion="drawer"][data-menu-side="right"] { --menu-entry-x: 24px; }
+[data-menu-motion][data-state="closed"] {
+  animation-duration: 160ms;
+  animation-timing-function: ease-in;
+}
+@keyframes menu-popover-in {
+  from { opacity: 0; transform: translate3d(0, -8px, 0) scale(.98); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes menu-popover-out {
+  from { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+  to { opacity: 0; transform: translate3d(0, -6px, 0) scale(.99); }
+}
+@keyframes menu-drawer-in {
+  from { opacity: 0; transform: translate3d(var(--menu-entry-x), 0, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes menu-drawer-out {
+  from { opacity: 1; transform: translate3d(0, 0, 0); }
+  to { opacity: 0; transform: translate3d(var(--menu-entry-x), 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-menu-motion], .menu-sheet-overlay {
+    animation: none !important;
+    transition: none !important;
+  }
+}

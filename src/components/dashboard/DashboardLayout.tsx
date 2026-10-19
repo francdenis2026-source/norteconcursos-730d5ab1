@@ -535,7 +535,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     <Menu />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="left" className="app-sheet">
+                <SheetContent side="left" menuMotion="drawer" className="app-sheet">
                   <SheetTitle className="sr-only">Menu principal</SheetTitle>
                   <div className="app-sidebar__head">
                     <NorteBrand light />
