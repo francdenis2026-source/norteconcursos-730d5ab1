@@ -1,3 +1,4 @@
+import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -91,6 +92,12 @@ function DashboardIndex() {
 }
 function StudentHome({ user }: { user: UserProfile }) {
   const [now, setNow] = React.useState(platformDate);
+  const [metric, setMetric] = React.useState<StudentMetric | null>(null);
+  const metricTrigger = React.useRef<HTMLElement | null>(null);
+  const openMetric = (value: StudentMetric, trigger: HTMLElement) => {
+    metricTrigger.current = trigger;
+    setMetric(value);
+  };
   const [selectedId, setSelectedId] = React.useState(() => {
     try {
       return localStorage.getItem(`norte:dashboard-plan:${user.id}`) ?? "";
@@ -235,12 +242,14 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={BrainCircuit}
           label="Questões resolvidas"
+          onOpen={(event) => openMetric("questions", event.currentTarget)}
           value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
           detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
         />
         <Metric
           icon={CheckCircle2}
           label="Taxa de acerto"
+          onOpen={(event) => openMetric("accuracy", event.currentTarget)}
           value={
             q.training.isError
               ? "Indisponível"
@@ -259,16 +268,41 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={Clock}
           label="Tempo ativo hoje"
+          onOpen={(event) => openMetric("today", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
           detail="Somando suas sessões"
         />
         <Metric
           icon={TrendingUp}
           label="Estudo nesta semana"
+          onOpen={(event) => openMetric("week", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
           detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
         />
       </section>
+      <StudentMetricPanel
+        metric={metric}
+        userName={user.full_name?.trim() || "Estudante"}
+        training={q.training.data}
+        activity={q.activity.data}
+        live={live}
+        now={now}
+        loading={
+          metric === "questions" || metric === "accuracy"
+            ? q.training.isPending
+            : q.activity.isPending
+        }
+        error={
+          metric === "questions" || metric === "accuracy" ? q.training.isError : q.activity.isError
+        }
+        onRetry={() => {
+          void (metric === "questions" || metric === "accuracy"
+            ? q.training.refetch()
+            : q.activity.refetch());
+        }}
+        onClose={() => setMetric(null)}
+        returnFocus={metricTrigger.current}
+      />
       <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
         {destinations.map(({ to, title, text, icon: Icon }, i) => (
           <Link key={to} to={to} data-tone={i}>
@@ -730,14 +764,22 @@ function Metric({
   label,
   value,
   detail,
+  onOpen,
 }: {
   icon: LucideIcon;
   label: string;
   value: string;
   detail: string;
+  onOpen: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <article className="student-home__metric">
+    <button
+      type="button"
+      className="student-home__metric"
+      onClick={onOpen}
+      aria-haspopup="dialog"
+      aria-label={`${label}: ${value}. Ver detalhes`}
+    >
       <span>
         <Icon aria-hidden="true" />
       </span>
@@ -746,7 +788,8 @@ function Metric({
         <strong>{value}</strong>
         <p>{detail}</p>
       </div>
-    </article>
+      <ArrowRight className="student-home__metric-arrow" aria-hidden="true" />
+    </button>
   );
 }
 function SectionTitle({
