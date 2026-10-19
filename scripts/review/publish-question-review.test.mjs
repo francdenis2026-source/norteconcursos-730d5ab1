@@ -58,6 +58,28 @@ test('forbids changing original answer, incomplete contexts and missing legal so
  const r=make();r.items[0].patch.legal_basis=[];assert.throws(()=>validateReview(r));
  const s=make();s.items[0].expected.question_text='(A) Stem incorrectly embedded';assert.throws(()=>validateReview(s));
 });
+test('archived commentary can improve without activating an item or changing its answer or legal-check date',async()=>{
+ const p=make();p.purpose='explanation-improvement';const i=p.items[0];
+ i.expected.content_status='archived';i.expected.syllabus_topic_id='t1';
+ i.expected.law_version_checked_at='2026-10-13T00:00:00Z';
+ i.patch={explanation:'Pedagogical commentary; preliminary answer preserved and final key still pending. '.repeat(5),law_version_checked_at:i.expected.law_version_checked_at,legal_basis:[{url:'https://www.planalto.gov.br/law'}]};
+ assert.equal(validateReview(p),p);
+ for(const field of ['content_status','official_answer','verified_at','legal_review_required']){
+  const bad=structuredClone(p);bad.items[0].patch[field]=field==='content_status'?'active':field==='official_answer'?'C':true;assert.throws(()=>validateReview(bad));
+ }
+ const pending=structuredClone(p);pending.items[0].expected.content_status='under_review';assert.throws(()=>validateReview(pending));
+ let row=structuredClone(i.expected),writes=0;
+ const request=async(path,method,patch)=>{
+  if(method==='PATCH'){writes++;row={...row,...patch};return [row];}
+  if(path.startsWith('official_exam_questions'))return [row];
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ assert.equal((await publishReview(p,request,{dryRun:true})).pending.length,1);assert.equal(writes,0);
+ assert.equal((await publishReview(p,request)).updated.length,1);assert.equal(row.content_status,'archived');assert.equal(row.official_answer,'E');assert.equal(row.law_version_checked_at,i.expected.law_version_checked_at);
+ assert.equal((await publishReview(p,request)).preserved,1);
+});
 test('checks all prior rows before any write',async()=>{
  const p=make();p.items.push({...p.items[0],expected:{...p.items[0].expected,id:'q2'}});
  let writes=0;

@@ -40,7 +40,8 @@ export function validateReview(pack) {
   for (const item of pack.items) {
     const {table,expected,patch,evidence} = item;
     const id = `${table}:${expected?.id}`;
-    if (!tables.has(table) || ids.has(id) || expected?.content_status !== (restoration ? 'archived' : improvement ? 'active' : 'under_review')) throw Error('Invalid or repeated question');
+    const validStatus = improvement ? ['active','archived'].includes(expected?.content_status) : expected?.content_status === (restoration ? 'archived' : 'under_review');
+    if (!tables.has(table) || ids.has(id) || !validStatus) throw Error('Invalid or repeated question');
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
     if (pack.purpose==='pcpr-papiloscopista-restoration') {
