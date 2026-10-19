@@ -2156,24 +2156,28 @@
     min-width: 0;
   }
 }
+.home-rail__track.home-opportunities {
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 20px) / 2);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 3px;
+  overscroll-behavior-x: contain;
+  padding: 3px 3px 8px;
+  gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--home-line) transparent;
+}
+.home-rail__track.home-opportunities > .home-opportunity {
+  scroll-snap-align: start;
+  min-width: 0;
+}
 @media (max-width: 700px) {
   .home-rail__track.home-opportunities {
-    display: grid;
-    grid-template-columns: none;
-    grid-auto-flow: column;
     grid-auto-columns: 88%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 3px;
-    overscroll-behavior-x: contain;
-    padding: 3px 3px 8px;
     gap: 14px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--home-line) transparent;
-  }
-  .home-rail__track.home-opportunities > .home-opportunity {
-    scroll-snap-align: start;
-    min-width: 0;
   }
 }
 @media (max-width: 600px) {
@@ -2384,9 +2388,4 @@
 .home-pcpi-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
 .home-pcpi-actions > div { min-width:0; display:flex; flex-direction:column; gap:10px; }
 .home-pcpi-actions .home-button { margin-top:auto; padding-inline:12px; font-size:11px; }
-@media(min-width:701px) {
-  .home-opportunities > .home-opportunity--acre:last-child { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); align-items:center; }
-  .home-opportunities > .home-opportunity--acre:last-child .home-opportunity__header { padding:20px; }
-  .home-opportunities > .home-opportunity--acre:last-child .home-opportunity__body { padding:20px; }
-}
 @media(max-width:359px) { .home-pcpi-actions { grid-template-columns:1fr; } }

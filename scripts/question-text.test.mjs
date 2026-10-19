@@ -58,3 +58,14 @@ test('questões que dependem de um texto ausente são detectadas', () => {
   assert.equal(needsMissingSupportText({ subject: pt, text: 'O trecho "Embora tivesse provas" pode ser reescrito como…' }), false);
   assert.equal(needsMissingSupportText({ subject: 'Direito Penal', text: 'De acordo com o texto legal, o crime…' }), false);
 });
+
+test('inline cited reading passages and attached visual bases are not mistaken for missing support',()=>{
+ const passage='Uma notícia apresenta informações verificáveis e organiza os fatos para o leitor. '.repeat(5);
+ const command=' No texto, o segundo parágrafo apresenta qual relação?\n(A) alternativa um\n(B) alternativa dois';
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: '+passage+' https://example.test/noticia Acesso em 15.8.26.'+command}),false);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/noticia'+command}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/noticia'+command+'\n(A) '+passage}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/cartaz'+command,figures:['https://example.test/verified.png']}),false);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/cartaz'+command,figures:['javascript:alert(1)']}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'De acordo com o texto ausente, julgue a oração.',figures:['https://example.test/unrelated.png']}),true);
+});

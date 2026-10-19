@@ -76,12 +76,22 @@ const REFERS_TO_TEXT = new RegExp(
 const SELF_CONTAINED = /(?:^|\n)\s*(?:texto|leia(?: o texto| o trecho)?|observe(?: o texto| o trecho)?)\s*[:：]\s*["“«]/i;
 
 /** Questões de Português que remetem a "o texto" sem o texto de apoio. O treinador as deixa de fora até o texto ser cadastrado. */
-export function needsMissingSupportText(q: { subject: string; text: string; source?: string }): boolean {
+export function needsMissingSupportText(q: { subject: string; text: string; source?: string; figures?: string[] | undefined }): boolean {
   // itens autorais e do caderno pessoal trazem o seu contexto no próprio enunciado
   if (q.source === "curated" || q.source === "personal") return false;
   if (!/portugu|reda[çc][ãa]o|interpreta/i.test(q.subject.normalize("NFC"))) return false;
   if (/^(Texto-base|Comando)(?: \[[^\]]+\])?:\n/.test(q.text)) return false;
   if (SELF_CONTAINED.test(q.text)) return false;
+  // Some FGV papers put the complete passage inline, without quotation marks or
+  // a separate support_text field. Inspect only the passage before its citation,
+  // never the length of the answer options or the command that follows it.
+  const readingIntro = /^\s*(?:Leia|Observe)[^:：]{0,200}[:：]/i;
+  if (readingIntro.test(q.text)) {
+    const passage = q.text.match(/^\s*(?:Leia|Observe)[^:：]{0,200}[:：]\s*([\s\S]+?)https?:\/\/\S+/i)?.[1]?.trim();
+    if (passage && passage.length >= 200 && /[.!?]/.test(passage)) return false;
+    // Audited figures can contain the passage itself (cartaz, tirinha etc.).
+    if (q.figures?.some(url => /^https:\/\//i.test(url))) return false;
+  }
   // enunciado com texto longo entre aspas dentro dele é autossuficiente
   const quoted = [...q.text.matchAll(/["“«]([^"”»]{200,})["”»]/g)];
   if (quoted.length) return false;

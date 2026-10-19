@@ -97,3 +97,41 @@ test('pending-review CLI dry run reads current database and syllabus without wri
  try{const p=make(),input=join(dir,'pack.json'),report=join(dir,'report.json'),calls=join(dir,'calls.json'),mock=join(dir,'fetch.mjs');await writeFile(input,JSON.stringify(p));await writeFile(mock,`import{writeFileSync}from'node:fs';const calls=[];globalThis.fetch=async(url,options)=>{calls.push({url:String(url),method:options.method});writeFileSync(${JSON.stringify(calls)},JSON.stringify(calls));if(options.method!=='GET')throw Error('Dry run attempted write');const path=new URL(url).pathname;const rows=path.endsWith('/official_exam_questions')?[${JSON.stringify(p.items[0].expected)}]:path.endsWith('/syllabus_topics')?[{edition_id:'e',content_status:'current'}]:path.endsWith('/syllabus_editions')?[{source_id:'s',status:'active'}]:[{id:'s',is_official:true,source_type:'edital',status:'vigente'}];return new Response(JSON.stringify(rows),{status:200});};`);const child=spawnSync(process.execPath,['--import',mock,fileURLToPath(new URL('./publish-question-review.mjs',import.meta.url)),input,report,'--dry-run'],{env:{...process.env,TASK_SUPABASE_KEY:'test-session',TASK_SUPABASE_PROJECT:'gkwphadbveiyjcwiiizw'},encoding:'utf8'});assert.equal(child.status,0,child.stderr);const result=JSON.parse(await readFile(report));assert.deepEqual(result.pending,['q1']);assert.deepEqual(result.updated,[]);const requests=JSON.parse(await readFile(calls));assert.equal(requests.length,5);assert.ok(requests.every(r=>r.method==='GET'));
  }finally{await rm(dir,{recursive:true,force:true});}
 });
+
+function restorationPack() {
+ const shared={contest_name:'Polícia Civil do Estado do Paraná',exam_year:2026,board:'FGV',item_number:1,stem:'Original shared stem',options:{A:'One',B:'Two'},official_answer:'A',support_text:null,legal_basis:[],law_version_checked_at:null,needs_visual:false,legal_review_required:false};
+ const expected={...shared,id:'papilo-1',career_name:'Papiloscopista Policial',content_status:'archived',syllabus_topic_id:'t1',verified_at:'2026-10-16T00:00:00Z'};
+ return {purpose:'pcpr-papiloscopista-restoration',items:[{table:'board_exam_questions',expected,patch:{content_status:'active'},evidence:{reason:'Explicitly authorized status restoration with active shared counterpart',legal:false,sources:['https://example.test/paper.pdf'],restore_expected:{...shared,id:'agente-1',career_name:'Agente de Polícia Judiciária',content_status:'active'}}}]};
+}
+function restorationRequest(pack,{changedCanonical=false,changeBeforeWrite=false}={}) {
+ let row=structuredClone(pack.items[0].expected),reads=0,writes=0;
+ const request=async(path,method,patch)=>{
+  if(method==='PATCH'){writes++;assert.deepEqual(patch,{content_status:'active'});row={...row,...patch};return [row];}
+  if(path.startsWith('board_exam_questions')){
+   if(path.includes('agente-1')){reads++;return [{...pack.items[0].evidence.restore_expected,...(changedCanonical || (changeBeforeWrite&&reads>1)?{official_answer:'B'}:{})}];}
+   return [row];
+  }
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ return {request,writes:()=>writes};
+}
+test('restoration is restricted to the authorized Papiloscopista items and status only',()=>{
+ const pack=restorationPack();assert.equal(validateReview(pack),pack);
+ for(const change of [p=>delete p.purpose,p=>p.items[0].expected.career_name='Delegado de Polícia',p=>p.items[0].expected.item_number=51,p=>p.items[0].patch.review_note='overwrite audit',p=>p.items.push({...p.items[0],expected:{...p.items[0].expected,id:'duplicate-item'}})]){
+  const bad=structuredClone(pack);change(bad);assert.throws(()=>validateReview(bad));
+ }
+});
+test('restoration dry-run, write and retry preserve text, audit dates and canonical rows',async()=>{
+ const pack=restorationPack(),port=restorationRequest(pack);
+ const dry=await publishReview(pack,port.request,{dryRun:true});assert.equal(dry.pending.length,1);assert.equal(port.writes(),0);
+ const result=await publishReview(pack,port.request);assert.deepEqual(result.updated,['papilo-1']);assert.equal(port.writes(),1);
+ const again=await publishReview(pack,port.request);assert.equal(again.preserved,1);assert.equal(port.writes(),1);
+});
+test('restoration rechecks the shared active item both before batch and before writing',async()=>{
+ for(const options of [{changedCanonical:true},{changeBeforeWrite:true}]){
+  const pack=restorationPack(),port=restorationRequest(pack,options);
+  await assert.rejects(()=>publishReview(pack,port.request),/changed or mismatched/);assert.equal(port.writes(),0);
+ }
+});
