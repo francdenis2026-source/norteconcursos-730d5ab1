@@ -4021,3 +4021,39 @@
   .home::before { position: absolute; background-size: auto 100%; opacity: .05; }
   .dark .home::before { opacity: .07; }
 }
+
+/* Texture visibility pass: reveal the atmosphere through section canvases while
+   keeping cards and copy surfaces opaque and readable. */
+.home::before { opacity: .045; }
+:root:not(.dark) .home::before { opacity: .022; }
+.dark .home::before { opacity: .06; }
+.home-platform,
+.home-method,
+.home-careers,
+.home-sources,
+.home-plans,
+.home-footer {
+  background-image: none !important;
+  background-color: color-mix(in oklab, var(--home-bg) 91%, transparent) !important;
+}
+.home-start { background-color: transparent; }
+.home-final {
+  background-color: #111a25;
+  background-image:
+    linear-gradient(90deg, rgb(17 26 37 / .94), rgb(17 26 37 / .78)),
+    url("/media/hero/home-bg-texture.webp");
+  background-position: center, center;
+  background-size: cover;
+}
+.home-footer {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--home-bg) 92%, transparent), color-mix(in oklab, var(--home-bg) 92%, transparent)),
+    url("/media/hero/home-bg-texture.webp") !important;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+@media (max-width: 700px) {
+  .home::before { opacity: .028; }
+  .dark .home::before { opacity: .045; }
+  .home-final { background-image: linear-gradient(rgb(17 26 37 / .96), rgb(17 26 37 / .9)), url("/media/hero/home-bg-texture.webp"); }
+}
