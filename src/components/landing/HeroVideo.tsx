@@ -12,9 +12,8 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
   useEffect(() => {
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
       ?.saveData;
-    // Small phones retain the image-first experience. Portrait tablets can play inline.
-    const compactViewport = window.matchMedia("(max-width: 599px)").matches;
-    if (!compactViewport && !saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Plays on phones and tablets too; only data saver and reduced motion keep the still image.
+    if (!saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setLoadVideo(true);
     }
   }, []);

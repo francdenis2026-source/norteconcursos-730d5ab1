@@ -2618,3 +2618,19 @@
 :root:not(.dark) :is(.home-hero, .home-final) :is(.home-eyebrow, .home-text-link, .home-trust a) { color: var(--brass-soft); }
 :root:not(.dark) :is(.home-hero, .home-final) .home-eyebrow > span { background: var(--brass); }
 :root:not(.dark) .home-final h2 em { color: var(--brass); background: none; -webkit-text-fill-color: currentColor; }
+
+/* Cards de oportunidades: mesma altura no carrossel, com as ações alinhadas na base. */
+.home-rail__track.home-opportunities { align-items: stretch; }
+.home-rail__track.home-opportunities > .home-opportunity { height: 100%; }
+.home-opportunity__body { flex: 1 1 auto; }
+.home-opportunity__body > .home-opportunity__bottom,
+.home-opportunity__bottom { margin-top: auto; }
+
+/* Vídeo de introdução em tablet e celular: ocupa a mesma faixa da imagem do hero,
+   em vez de se espalhar com transparência atrás do texto. */
+@media (max-width: 900px) {
+  .home-intro { inset: 0 0 auto 0; height: 240px; background: var(--home-navy); }
+  .home-intro video { opacity: 1; object-fit: contain; object-position: center; }
+  .home-intro button { right: 12px; bottom: 12px; min-height: 40px; padding: 8px 12px; }
+  .home-intro-start { top: 12px; right: 12px; }
+}
