@@ -1,0 +1,130 @@
+{
+  "scope": "Completed individual legal/editorial review and actual release of PCRJ Delegado 2022 question 48. Does not certify the remaining 73 questions or the whole exam.",
+  "publication": {
+    "sources_dry_run": {
+      "reviewed": 1,
+      "created": 0,
+      "preserved": 1,
+      "dry_run": true,
+      "pending": 0
+    },
+    "question_preflight": {
+      "reviewed": 1,
+      "updated": [],
+      "preserved": 0,
+      "pending": [
+        "76a0df58-50ad-465e-af73-12763e76347f"
+      ]
+    },
+    "sources": {
+      "reviewed": 1,
+      "created": 0,
+      "preserved": 1
+    },
+    "question_dry_run": {
+      "reviewed": 1,
+      "updated": [],
+      "preserved": 0,
+      "pending": [
+        "76a0df58-50ad-465e-af73-12763e76347f"
+      ]
+    },
+    "question": {
+      "reviewed": 1,
+      "updated": [
+        "76a0df58-50ad-465e-af73-12763e76347f"
+      ],
+      "preserved": 0
+    },
+    "checked_at": "2026-10-19T19:22:30.592Z",
+    "scope_readback": {
+      "question_updated": 1,
+      "other_questions_preserved": 73,
+      "answer_and_original_stem_preserved": true
+    },
+    "counts": {
+      "tables": {
+        "official_exam_questions": {
+          "under_review": 39,
+          "administrative_pending": 4
+        },
+        "board_exam_questions": {
+          "under_review": 358,
+          "administrative_pending": 69
+        }
+      },
+      "under_review": 397,
+      "administrative_pending": 73
+    }
+  },
+  "question": {
+    "id": "76a0df58-50ad-465e-af73-12763e76347f",
+    "item": 48,
+    "contest": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia",
+    "career": "Delegado de Polícia",
+    "original_key_preserved": "A",
+    "status_after": "active",
+    "topic_id": "d46e9663-f7aa-5ccb-a571-894b924f919e",
+    "comment_field": "review_note",
+    "comment_sha256": "3a795f3cec5ba7afed47b284d2d92046b4d17c770ff127a1e8e4b7243b849007",
+    "comment": "Importada do caderno oficial e conferida com o gabarito definitivo da banca; revisada em 13/10/2026. Retida: depende de doutrina e de norma estadual (TCE-RJ) que não foram conferidas em fonte oficial. | Revisão 17/10/2026, retida: Depende de doutrina e de norma estadual (TCE-RJ) não conferidas em fonte oficial.\n\nRegularização documental de 19/10/2026: vínculo atual corrigido para o recorte oficial de Direito Administrativo, Ponto 5 (controle externo, Tribunais de Contas e LRF), página PDF 73 do edital de abertura. Cópia oficial de 18/10 conferida por hash e inspeção visual. Preservados enunciado, gabarito A, tópico original, data jurídica nula, ausência de aprovação legal e status em revisão. Continua pendente a norma estadual de requisições ao TCE-RJ e a conferência jurídica integral; este ajuste não libera a questão nem certifica sua resposta.\n\nRevisão pontual concluída em 19/10/2026: localizada a LC estadual 106/2003 no portal oficial do MPRJ, art. 35, § 1º, página 28. Caderno página 14 e gabarito definitivo página 1 conferidos: item 48, A. Pendência estadual resolvida; comentário distingue requisições aos membros do Tribunal de Contas de toda comunicação administrativa. Fonte federal Planalto preservada de 16/10, sem alegar nova captura online.\n\nGABARITO DEFINITIVO: A — conferido no documento oficial do Cebraspe, questão 48, caderno 662_PCRJ_001_01.\n\nENTENDA A RESPOSTA\nO delegado com atribuição conduz a investigação criminal e pode requisitar perícias, informações, documentos e dados que interessem à apuração dos fatos: é a regra do art. 2º, § 2º, da Lei 12.830/2013. Essa atribuição não se confunde com o regime de encaminhamento interno previsto na lei orgânica do Ministério Público.\nNo Rio de Janeiro, o art. 35, § 1º, da Lei Complementar estadual 106/2003 determina que as notificações e requisições ali previstas, quando dirigidas aos membros dos Tribunais de Contas, sejam encaminhadas pelo Procurador-Geral de Justiça. Esse é o fundamento específico da distinção cobrada pela alternativa A.\n\nATENÇÃO AO ALCANCE\nA expressão “oficiar à Corte de Contas”, empregada na alternativa, deve ser compreendida no contexto dessas notificações e requisições e dos destinatários expressamente enumerados na lei. Não transforme a resposta em uma proibição de toda e qualquer comunicação administrativa direta de um promotor com o órgão. A lei menciona membros dos Tribunais de Contas, não indistintamente qualquer servidor ou mensagem enviada ao tribunal.\nTambém não se conclui que o delegado tenha poderes ilimitados: a requisição deve ter relação com investigação de sua atribuição, observar o regime de sigilo aplicável e respeitar as hipóteses sujeitas à autorização judicial. A comunicação direta, por si só, não afasta esses limites.\n\nEXEMPLO: durante investigação de sua atribuição, o delegado necessita de documento relacionado ao fato investigado e pode requisitá-lo nos limites legais. Não se aplica a ele, por simples analogia, a regra de encaminhamento pelo chefe do Ministério Público.\nVARIAÇÃO: se um membro do MPRJ expede uma das requisições do art. 35 com destinatário enquadrado no § 1º, como um membro do Tribunal de Contas, o encaminhamento deve observar a via do Procurador-Geral de Justiça.\nCONTRASTE: enviar uma comunicação administrativa ordinária a um setor do tribunal não é automaticamente a mesma situação normativa de requisitar informações de um destinatário enumerado no § 1º.\n\nFIXAÇÃO\n1. A lei orgânica do MPRJ rege automaticamente o encaminhamento de atos de um delegado? Não; cada instituição tem suas atribuições e seu regime legal.\n2. O art. 35, § 1º, impede qualquer mensagem direta do promotor ao tribunal? Não; disciplina as notificações/requisições e os destinatários nele previstos.\n3. Requisitar documentos dispensa sempre autorização judicial? Não; devem ser respeitadas as reservas e os limites legais aplicáveis.\n\nFONTES E DATAS\nLC estadual 106/2003, art. 35, § 1º: PDF obtido do portal oficial do MPRJ em 19/10/2026, página 28 (https://www.mprj.mp.br/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80?t=1764846735952).\nLei 12.830/2013, art. 2º, § 2º: cópia oficial do Planalto capturada em 16/10/2026, hash reconferido nesta revisão (https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm). A tentativa de nova transferência do Planalto foi bloqueada pela configuração de rede; a data da captura federal não foi avançada.\nCaderno, página 14, e gabarito oficial definitivo, página 1: cópias oficiais preservadas, hashes e questão/letra conferidos visualmente. Trata-se de revisão pontual da questão 48, sem certificação integral da prova, da lei orgânica ou de jurisprudência não consultada."
+  },
+  "state_legal_source": {
+    "id": "b1b34d14-9682-56fd-88d5-468da18b5853",
+    "source_type": "lei",
+    "title": "LC estadual 106/2003 — MPRJ — art. 35, § 1º (requisições e notificações)",
+    "issuer": "Ministério Público do Estado do Rio de Janeiro",
+    "url": "https://www.mprj.mp.br/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80?t=1764846735952",
+    "published_on": "2003-01-03",
+    "checked_at": "2026-10-19T19:16:37.466322+00:00",
+    "status": "vigente",
+    "is_official": true,
+    "notes": "Texto compilado disponibilizado pelo MPRJ na página oficial de atos normativos externos. Conferência pontual do art. 35, § 1º, página 28: encaminhamento pelo PGJ das notificações/requisições aos membros dos Tribunais de Contas. Não certifica todas as disposições do diploma. SHA-256 110e2d486e27ea232e74fddcbaedeb8496383655505a2d4b7d6ecc0ffbf7b405. Catálogo SHA-256 de4e5714a6ad8d1dad2cfceaad40f29cf48d7859a0e710193adba362d096c100."
+  },
+  "evidence": {
+    "mprj_pdf_sha256": "110e2d486e27ea232e74fddcbaedeb8496383655505a2d4b7d6ecc0ffbf7b405",
+    "reviewed_pdf_page": 28,
+    "reviewed_article": "35 § 1º",
+    "catalog_url": "https://www.mprj.mp.br/web/guest/servicos/consulta-juridica/atos-normativos-entendimentos-institucionais/atos-normativos-externos",
+    "catalog_sha256": "de4e5714a6ad8d1dad2cfceaad40f29cf48d7859a0e710193adba362d096c100",
+    "federal_capture": {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+      "sha256": "1780e7518aea120aeba1f86ff5b439d5ed789971e1b41db1453a2010927f65f6",
+      "captured_at": "2026-10-16T20:42:30.683Z"
+    },
+    "exam_documents": [
+      {
+        "source_id": "e58044c4-c58d-422f-bf22-4a13cbbd9c07",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/662_PCRJ_001_01.PDF",
+        "sha256": "1b180b7557ba0e8d82066668550eafd61e1382c85e6fdfdcf18803bf5c2bd0c1",
+        "page": 14,
+        "visually_verified": true,
+        "item": 48,
+        "official_answer": "A"
+      },
+      {
+        "source_id": "a5a3bcba-64ef-42a4-8cb8-67f8bfe8614d",
+        "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/GAB_DEFINITIVO_662_PCRJ_001_01.PDF",
+        "sha256": "b730a5a74fd43abfd7658344263e8e3892c45d99cf6533dd5e958da376c82648",
+        "page": 1,
+        "visually_verified": true,
+        "item": 48,
+        "official_answer": "A"
+      }
+    ]
+  },
+  "validation": {
+    "targeted_tests": 43,
+    "typecheck": "passed",
+    "build": "passed in isolated temporary copy",
+    "actual_saved_row_eligibility": "passed; five original alternatives and A preserved",
+    "scope_readback": "74 rows checked, exactly one question updated, 73 unchanged"
+  },
+  "network_configuration": {
+    "draft_saved": true,
+    "requires_publish": true,
+    "runtime_update_claimed": false,
+    "note": "Official-domain allowlist additions saved while preserving existing Supabase/MPRJ destinations; user must review/save environment settings and publish to activate. Fresh MPRJ retrieval worked using an already allowed domain."
+  },
+  "publication_failure_recovered": "First question PATCH rejected with PGRST204 because official_exam_questions has no explanation column. No question changed in that attempt. The source registration was preserved and safely reused. The final comment uses review_note; added regression guard rejects explanation for this table before sending any write."
+}

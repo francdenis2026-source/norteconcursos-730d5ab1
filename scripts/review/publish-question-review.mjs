@@ -44,6 +44,7 @@ export function validateReview(pack) {
     if (!tables.has(table) || ids.has(id) || !validStatus) throw Error('Invalid or repeated question');
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
+    if (table==='official_exam_questions' && 'explanation' in patch) throw Error('Official question commentary must use review_note');
     if (pack.purpose==='pcpr-papiloscopista-restoration') {
       if (table!=='board_exam_questions' || expected.contest_name!=='Polícia Civil do Estado do Paraná' || expected.exam_year!==2026 || expected.career_name!=='Papiloscopista Policial' || !restoreItems.delete(expected.item_number) || pack.items.length>64 || patch.content_status!=='active' || Object.keys(patch).length!==1 || !evidence?.restore_expected || evidence.restore_expected.career_name!=='Agente de Polícia Judiciária' || evidence.restore_expected.content_status!=='active') throw Error('Restoration is restricted to the 64 shared PCPR Papiloscopista items and status only');
     }

@@ -62,7 +62,7 @@ test('archived commentary can improve without activating an item or changing its
  const p=make();p.purpose='explanation-improvement';const i=p.items[0];
  i.expected.content_status='archived';i.expected.syllabus_topic_id='t1';
  i.expected.law_version_checked_at='2026-10-13T00:00:00Z';
- i.patch={explanation:'Pedagogical commentary; preliminary answer preserved and final key still pending. '.repeat(5),law_version_checked_at:i.expected.law_version_checked_at,legal_basis:[{url:'https://www.planalto.gov.br/law'}]};
+ i.patch={review_note:'Pedagogical commentary; preliminary answer preserved and final key still pending. '.repeat(5),law_version_checked_at:i.expected.law_version_checked_at,legal_basis:[{url:'https://www.planalto.gov.br/law'}]};
  assert.equal(validateReview(p),p);
  for(const field of ['content_status','official_answer','verified_at','legal_review_required']){
   const bad=structuredClone(p);bad.items[0].patch[field]=field==='content_status'?'active':field==='official_answer'?'C':true;assert.throws(()=>validateReview(bad));
@@ -176,4 +176,9 @@ test('restoring a previously verified board status preserves original comments a
   return [{is_official:true,source_type:'edital',status:'vigente'}];
  };
  await publishReview(p,request,{dryRun:true});assert.equal(writes,0);await publishReview(p,request);assert.equal(writes,1);
+});
+
+test('official commentary uses the existing review_note column; board explanations remain supported',()=>{
+ const p=make();p.items[0].patch.explanation='Substantive commentary. '.repeat(15);assert.throws(()=>validateReview(p),/must use review_note/);
+ const board=structuredClone(p);board.items[0].table='board_exam_questions';assert.equal(validateReview(board),board);
 });

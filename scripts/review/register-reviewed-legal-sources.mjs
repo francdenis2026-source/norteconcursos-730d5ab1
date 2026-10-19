@@ -18,10 +18,14 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
     const matogrosso=pack.jurisdiction==='MT';
     const cfc=pack.jurisdiction==='BR-CFC';
     const roStatute=pack.jurisdiction==='RO-LC68';
+    const rjMprj=pack.jurisdiction==='RJ-MPRJ-LC106';
+    const rjMprjPath='/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80';
     const roStatutePath='/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx';
     const mtPath='/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado';
     const mtQuery=u=>u.searchParams.get('exibirAnotacao')==='1'&&u.searchParams.get('marcoHistorico')==='2026-10-17'&&[...u.searchParams].length===2&&!u.username&&!u.password&&!u.port;
-    const primary=roStatute
+    const primary=rjMprj
+      ? url.hostname==='www.mprj.mp.br' && url.pathname===rjMprjPath && /^\d+$/.test(url.searchParams.get('t')||'') && [...url.searchParams].length===1 && !url.username && !url.password && !url.port && row.source_type==='lei'
+      : roStatute
       ? url.hostname==='sapl.al.ro.leg.br' && url.pathname===roStatutePath && !url.search && !url.username && !url.password && !url.port && row.source_type==='lei'
       : cfc
       ? url.hostname==='www1.cfc.org.br' && ['/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf','/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf'].includes(url.pathname) && !url.search && !url.username && !url.password && !url.port && row.source_type==='outro'
@@ -40,7 +44,15 @@ export async function registerReviewedLegalSources(pack, request, {dryRun=false,
       : url.hostname==='www.planalto.gov.br' && row.source_type==='lei';
     if (url.protocol!=='https:' || !primary || !row.is_official || row.status!=='vigente' || !row.id || ids.has(row.id) || urls.has(row.url) || !evidence?.reviewed || evidence.url!==row.url || !evidence.path || !/^[a-f0-9]{64}$/.test(evidence.sha256||'') || !row.notes?.includes(evidence.sha256) || !Number.isFinite(Date.parse(row.checked_at)) || Date.parse(row.checked_at)>Date.now() || row.checked_at!==evidence.captured_at) throw Error(district?'Dated individual SINJ district review required':'Dated individual Planalto review required');
     const bytes=await readCapture(evidence.path);
-    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (roStatute ? bytes.subarray(0,2).toString()!=='PK' : rondonia||anvisa||cfc ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if (createHash('sha256').update(bytes).digest('hex')!==evidence.sha256 || (roStatute ? bytes.subarray(0,2).toString()!=='PK' : rondonia||anvisa||cfc||rjMprj ? bytes.subarray(0,4).toString()!=='%PDF' : matogrosso ? !bytes.toString('utf8').includes('<turbo-frame id="norma-juridica-compilado-2026-10-17"') : !/<html[\s>]/i.test(bytes.toString('latin1')))) throw Error('Reviewed capture changed');
+    if(rjMprj){
+      const c=evidence.catalog_capture;
+      if(!evidence.current_effect_reviewed || evidence.norm!=='LC 106/2003' || JSON.stringify(evidence.reviewed_articles)!=='["35 § 1º"]' || evidence.page!==28 || !row.notes.includes('35') || !c?.path || !/^[a-f0-9]{64}$/.test(c.sha256||'') || c.url!=='https://www.mprj.mp.br/web/guest/servicos/consulta-juridica/atos-normativos-entendimentos-institucionais/atos-normativos-externos')throw Error('Scoped LC106 article and official MPRJ catalog required');
+      const catalog=await readCapture(c.path);
+      const html=catalog.toString('utf8').replace(/<!--[\s\S]*?-->|<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
+      const listed=[...html.matchAll(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["']/gi)].some(m=>{try{return new URL(m[1].replace(/&amp;/g,'&'),c.url).href===url.href;}catch{return false;}});
+      if(createHash('sha256').update(catalog).digest('hex')!==c.sha256 || !listed)throw Error('Official MPRJ catalog changed or PDF not listed');
+    }
     if(roStatute){
       const modifiers={1158:'/media/sapl/public/normajuridica/2022/10487/lc_no_1158-22.pdf',5348:'/media/sapl/public/normajuridica/2022/10728/l5348.pdf',1306:'/media/sapl/public/normajuridica/2025/13188/lc1306.pdf'};
       if(!evidence.current_effect_reviewed || evidence.norm!=='LC 68/1992' || evidence.compilation!=='LC 1001/2018' || !row.notes.includes('LC 1306/2025') || !evidence.reviewed_articles?.length || evidence.reviewed_articles.some(a=>!['160','161','163','164','165','181','192'].includes(a)) || JSON.stringify(evidence.amendments?.map(c=>c.num).sort())!==JSON.stringify(Object.keys(modifiers).sort()))throw Error('Scoped LC68 review and later amendments required');

@@ -130,3 +130,12 @@ test('reviewed biosafety source accepts only the exact Ministry of Health RDC ca
  for(const wrong of [url.replace('https:','http:'),url+'?preview=1',url.replace('2018.pdf','2019.pdf'),url.replace('bvsms.saude.gov.br','bvsms.saude.gov.br.evil.test'),'https://bvsms.saude.gov.br/'])assert.equal(isOfficialUrl(wrong),false);
  assert.equal(isLegallyVerified([{url}],null,true),false);
 });
+
+test('MPRJ LC106 gate accepts only the reviewed official PDF and retains legal/date/context safeguards', () => {
+  const url='https://www.mprj.mp.br/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80?t=1764846735952';
+  assert.equal(isOfficialUrl(url),true);
+  for(const invalid of ['https://www.mprj.mp.br/',url.replace('106_2003','999_2026'),url.replace('www.mprj.mp.br','www.mprj.mp.br.evil.test'),url.replace('https:','http:'),url+'&old=1',url.split('?')[0]])assert.equal(isOfficialUrl(invalid),false);
+  const row={content_status:'active',official_answer:'A',subject:'Direito Administrativo',legal_review_required:false,legal_audit_completed:true,context_review_required:false,legal_basis:[{url},{url:'https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm'}],law_version_checked_at:'2026-10-19T19:00:00Z'};
+  assert.equal(isEligibleQuestion(row),true);
+  for(const patch of [{content_status:'under_review'},{context_review_required:true},{law_version_checked_at:null},{law_version_checked_at:'2999-01-01'},{legal_basis:[{url:'https://www.mprj.mp.br/'}]}])assert.equal(isEligibleQuestion({...row,...patch}),false);
+});
