@@ -22,6 +22,14 @@
   --home-accent: var(--brass);
 }
 
+/* Keep the hero and navigation on the same neutral canvas in dark mode. */
+.dark .home-header {
+  background: var(--header-glass);
+}
+.dark .home-hero {
+  background: var(--home-bg);
+}
+
 .home {
   position: relative;
   isolation: isolate;
