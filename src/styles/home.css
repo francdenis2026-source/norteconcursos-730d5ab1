@@ -2046,6 +2046,89 @@
     padding: 28px 20px;
   }
 }
+
+/* Navigation focus: replace the card glow with clear color transitions in the
+   top bar and mobile menu. */
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
+  display: none;
+}
+.home-nav a,
+.home-login,
+.home-menu nav a {
+  position: relative;
+  transition: color 220ms ease;
+}
+.home-nav a::after,
+.home-login::after,
+.home-menu nav a::after {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  left: 10px;
+  height: 2px;
+  content: "";
+  border-radius: 999px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms var(--ease-out);
+}
+.home-nav a:hover,
+.home-nav a:focus-visible,
+.home-login:hover,
+.home-login:focus-visible {
+  color: var(--c-blue, var(--home-accent));
+}
+.home-nav a:hover::after,
+.home-nav a:focus-visible::after,
+.home-login:hover::after,
+.home-login:focus-visible::after {
+  transform: scaleX(1);
+}
+.home-nav a:nth-child(2):hover,
+.home-nav a:nth-child(2):focus-visible {
+  color: var(--c-teal, var(--home-accent));
+}
+.home-nav a:nth-child(3):hover,
+.home-nav a:nth-child(3):focus-visible {
+  color: var(--c-violet, var(--home-accent));
+}
+.home-nav a:nth-child(4):hover,
+.home-nav a:nth-child(4):focus-visible {
+  color: var(--c-amber, var(--home-accent));
+}
+.home-menu nav a:hover,
+.home-menu nav a:focus-visible {
+  color: var(--c-blue, var(--home-accent));
+}
+.home-menu nav a:nth-child(2):hover,
+.home-menu nav a:nth-child(2):focus-visible {
+  color: var(--c-teal, var(--home-accent));
+}
+.home-menu nav a:nth-child(3):hover,
+.home-menu nav a:nth-child(3):focus-visible {
+  color: var(--c-violet, var(--home-accent));
+}
+.home-menu nav a:nth-child(4):hover,
+.home-menu nav a:nth-child(4):focus-visible {
+  color: var(--c-amber, var(--home-accent));
+}
+.home-menu nav a::after {
+  right: 34px;
+  bottom: 7px;
+  left: 0;
+  transform-origin: left;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-nav a,
+  .home-login,
+  .home-menu nav a,
+  .home-nav a::after,
+  .home-login::after,
+  .home-menu nav a::after {
+    transition: none;
+  }
+}
 @media (max-width: 359px) {
   .home-header__register {
     padding-inline: 8px;
