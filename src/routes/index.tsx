@@ -43,6 +43,7 @@ import { TestingSeal } from "@/components/landing/TestingSeal";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
+import { PcpiExamPromo } from "@/components/landing/PcpiExamPromo";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
 export const Route = createFileRoute("/")({
@@ -421,12 +422,13 @@ function Index() {
           <div className="home-container">
             <Head
               kicker="No seu radar"
-              lead="Uma prova para praticar agora. Uma próxima oportunidade para começar a se preparar."
+              lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
             >
               Seu próximo <em>objetivo.</em>
             </Head>
             <HomeRail className="home-opportunities" label="Oportunidades de concursos">
               <PcprExamPromo />
+              <PcpiExamPromo />
               <article
                 className="home-opportunity home-opportunity--acre"
                 aria-labelledby="pcac-title"

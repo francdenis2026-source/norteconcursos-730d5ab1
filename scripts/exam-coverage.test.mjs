@@ -22,3 +22,24 @@ test('resumed and mixed sessions report only their actual question scope', () =>
  assert.equal(sessionExamCoverage([paper,{...paper,career:'Agente de Polícia Judiciária'}]),null);
  assert.equal(sessionExamCoverage([]),null);
 });
+
+import { examAvailableCounts } from '../src/lib/examAvailability.ts';
+import { PCPI_EXAM, pcpiTrainerSearch } from '../src/lib/pcpiExam.ts';
+import { matchesQuestionContest, matchesQuestionCareer } from '../src/lib/questionFilterIdentity.ts';
+test('Piauí availability and direct links keep roles, years, sources and original paper identity separate', () => {
+ const row=(career,n,extra={})=>({id:career+n,source:'official',contest:`Polícia Civil do Piauí – ${career}`,career,year:'2026',board:'FGV',subject:'Ciências Forenses',text:'Item autossuficiente de teste.',itemNumber:n,...extra});
+ const catalog=[row(PCPI_EXAM.roles[0],1),row(PCPI_EXAM.roles[1],1),row(PCPI_EXAM.roles[1],2),row(PCPI_EXAM.roles[1],2),row(PCPI_EXAM.roles[1],3,{source:'curated'}),row(PCPI_EXAM.roles[1],4,{year:'2025'}),row(PCPI_EXAM.roles[1],5,{contest:'Polícia Civil do Paraná'})];
+ assert.deepEqual(examAvailableCounts(catalog,PCPI_EXAM),[1,2]);
+ for (const role of PCPI_EXAM.roles) {
+  const search=pcpiTrainerSearch(role);
+  const matched=catalog.filter(q=>q.source==='official'&&q.year===search.year&&matchesQuestionContest(q.contest,search.contest)&&matchesQuestionCareer(q.career,q.contest,q.year,search.career,search.contest,search.year));
+  assert.ok(matched.length);assert.ok(matched.every(q=>q.career===role&&q.contest===search.contest));
+  assert.equal(search.go,'1');assert.equal(search.mode,'catalog');assert.equal(search.limit,'all');assert.equal(search.board,'FGV');
+ }
+});
+
+test('shared availability preserves the Paraná role counts while excluding Piauí', () => {
+ const exam={contest:paper.contest,year:'2026',board:'FGV',roles:['Delegado de Polícia','Agente de Polícia Judiciária','Papiloscopista Policial']};
+ const q={...paper,year:'2026',id:'pr-one',itemNumber:1,source:'official',board:'FGV',subject:'Ciências Forenses',text:'Questão autossuficiente.'};
+ assert.deepEqual(examAvailableCounts([q,{...q,id:'pi-one',contest:PCPI_EXAM.contest}],exam),[0,0,1]);
+});
