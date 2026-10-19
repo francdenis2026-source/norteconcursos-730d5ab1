@@ -73,28 +73,28 @@ const NAV: [string, string][] = [
 const STEPS: [LucideIcon, string, string][] = [
   [
     Target,
-    "Defina a missão",
+    "Escolha seu objetivo",
     "Escolha carreira, cargo, banca e edital para estudar o que realmente pontua.",
   ],
   [
     FileSearch,
-    "Faça o reconhecimento",
+    "Entenda seu ponto de partida",
     "Resolva um diagnóstico e descubra onde você perde pontos, disciplina por disciplina.",
   ],
   [
     BrainCircuit,
-    "Entre em treinamento",
+    "Pratique e revise",
     "Questões, revisões e blocos de foco com objetivo claro em cada sessão.",
   ],
-  [Trophy, "Simule sob pressão", "Teste tempo e estratégia antes do dia decisivo."],
+  [Trophy, "Prepare o ritmo da prova", "Teste tempo e estratégia antes do dia decisivo."],
 ];
 
-const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[] = [
+const TOOLS: { icon: LucideIcon; title: string; text: string; featured?: boolean }[] = [
   {
     icon: BrainCircuit,
     title: "Treinador de questões",
     text: "Sessões por banca, cargo e disciplina, com correção imediata, explicação e fonte jurídica oficial.",
-    lead: true,
+    featured: true,
   },
   {
     icon: Trophy,
@@ -104,6 +104,7 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[]
   {
     icon: MapIcon,
     title: "Edital eletrônico",
+    featured: true,
     text: "Cada assunto do edital vira porta de entrada para resumo, explicações e treino.",
   },
   {
@@ -114,11 +115,12 @@ const TOOLS: { icon: LucideIcon; title: string; text: string; lead?: boolean }[]
   {
     icon: FileSearch,
     title: "Caderno de erros",
-    text: "Cada falha vira uma ordem de revisão clara, sem estudar no escuro.",
+    text: "Retome as questões que errou e transforme suas dificuldades em prioridades de revisão.",
   },
   {
     icon: LineChart,
     title: "Análise de desempenho",
+    featured: true,
     text: "Precisão, ritmo, lacunas e constância traduzidos em decisões para o próximo ciclo.",
   },
   {
@@ -325,47 +327,65 @@ function Index() {
               <div className="home-heading">
                 <span className="home-eyebrow">Sua preparação, em um só lugar</span>
                 <h2 id="platform-title">
-                  Mais clareza.
+                  Seu estudo conectado.
                   <br />
-                  <em>Menos abas abertas.</em>
+                  <em>Da teoria à próxima questão.</em>
                 </h2>
               </div>
               <p className="home-section-intro">
-                Questões, simulados, rotina e desempenho conectados. Entre em cada sessão sabendo o
-                que treinar e por quê.
+                Encontre o conteúdo, pratique e acompanhe sua evolução. Cada recurso tem um papel no
+                próximo passo da sua preparação.
               </p>
             </div>
-            <div className="home-tools">
-              {TOOLS.map(({ icon: Icon, title, text, lead }) => (
-                <details key={title} className={`home-tool${lead ? " home-tool--featured" : ""}`}>
+            <div className="home-platform__workspace">
+              <figure className="home-platform__visual">
+                <img
+                  src="/media/hero/painel-aluno-estudo.webp"
+                  alt="Ambiente de estudo com materiais para a preparação de concursos"
+                  width={960}
+                  height={640}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  <BookOpenCheck aria-hidden="true" />
+                  <span>
+                    Do conteúdo à prática.<strong>Um lugar para seguir evoluindo.</strong>
+                  </span>
+                </figcaption>
+              </figure>
+              <div className="home-core-tools">
+                {TOOLS.filter(({ featured }) => featured).map(
+                  ({ icon: Icon, title, text }, index) => (
+                    <article className="home-core-tool" key={title}>
+                      <span className="home-core-tool__number">0{index + 1}</span>
+                      <div>
+                        <h3>
+                          <Icon aria-hidden="true" />
+                          {title}
+                        </h3>
+                        <p>{text}</p>
+                      </div>
+                    </article>
+                  ),
+                )}
+                <Link to="/auth" search={{ mode: "register" }} className="home-text-link">
+                  Organizar minha preparação <ArrowRight aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+            <div className="home-tools" aria-label="Mais recursos de estudo">
+              {TOOLS.filter(({ featured }) => !featured).map(({ icon: Icon, title, text }) => (
+                <details key={title} className="home-tool">
                   <summary>
-                    <span className="home-icon">
-                      <Icon aria-hidden="true" />
-                    </span>
-                    <h3>
-                      {title}
-                      {lead && <span className="home-tag">Principal</span>}
-                    </h3>
+                    <Icon aria-hidden="true" />
+                    <h3>{title}</h3>
                     <Plus aria-hidden="true" />
                   </summary>
                   <p>{text}</p>
                 </details>
               ))}
             </div>
-            <article className="home-voice-promo" aria-labelledby="home-voice-title">
-              <div className="home-voice-promo__icon"><Volume2 aria-hidden="true" /></div>
-              <div className="home-voice-promo__copy">
-                <span className="home-eyebrow">Novo recurso para estudar melhor</span>
-                <h3 id="home-voice-title">Sua preparação também pode ser ouvida.</h3>
-                <p>
-                  Ouça enunciados e alternativas com a voz padrão do navegador, em todos os planos.
-                  A leitura começa no próprio aparelho, sem esperar a geração de um arquivo de áudio.
-                </p>
-              </div>
-              <a className="home-button home-button--gold" href="#planos">
-                Conhecer os planos <ArrowRight aria-hidden="true" />
-              </a>
-            </article>
           </div>
         </section>
 
@@ -378,9 +398,10 @@ function Index() {
               Cada etapa tem <em>um propósito.</em>
             </Head>
             <ol className="home-steps">
-              {STEPS.map(([Icon, title, text]) => (
+              {STEPS.map(([Icon, title, text], index) => (
                 <li key={title}>
                   <div className="home-step__top">
+                    <span>0{index + 1}</span>
                     <Icon aria-hidden="true" />
                   </div>
                   <h3>{title}</h3>
@@ -609,11 +630,8 @@ function Index() {
 
 function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
   return (
-    <details className="home-footer__links">
-      <summary>
-        {title}
-        <ChevronDown aria-hidden="true" />
-      </summary>
+    <nav className="home-footer__links" aria-label={title}>
+      <h3>{title}</h3>
       <ul>
         {links.map(([label, href]) => (
           <li key={label}>
@@ -621,6 +639,6 @@ function FooterColumn({ title, links }: { title: string; links: [string, string]
           </li>
         ))}
       </ul>
-    </details>
+    </nav>
   );
 }

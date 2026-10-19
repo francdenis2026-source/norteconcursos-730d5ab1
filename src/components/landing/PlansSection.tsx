@@ -1,7 +1,7 @@
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
 import { PlanComparison } from "@/components/landing/PlanComparison";
-import { ArrowUpRight, Check, Clock, Info, Minus, Plus } from "lucide-react";
+import { ArrowUpRight, Check, ChevronDown, Clock, Info, Minus, Plus } from "lucide-react";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import {
   PAYMENTS_ENABLED,
@@ -39,11 +39,19 @@ export function PlansSection() {
             </p>
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
-            <span className="home-plans__signal-icon"><Clock aria-hidden="true" /></span>
+            <span className="home-plans__signal-icon">
+              <Clock aria-hidden="true" />
+            </span>
             <div>
-              <strong>{TESTING_PHASE ? `${TESTING_DAYS} dias para testar` : "Planos para cada fase"}</strong>
-              <p><Check aria-hidden="true" /> Sem cartão e sem cobrança durante o teste</p>
-              <p><Check aria-hidden="true" /> Estude no seu ritmo e mude quando quiser</p>
+              <strong>
+                {TESTING_PHASE ? `${TESTING_DAYS} dias para testar` : "Planos para cada fase"}
+              </strong>
+              <p>
+                <Check aria-hidden="true" /> Sem cartão e sem cobrança durante o teste
+              </p>
+              <p>
+                <Check aria-hidden="true" /> Estude no seu ritmo e mude quando quiser
+              </p>
             </div>
           </aside>
         </div>
@@ -147,7 +155,15 @@ export function PlansSection() {
             );
           })}
         </div>
-        <PlanComparison />
+        <details className="home-plan-comparison">
+          <summary>
+            <span>
+              Compare todos os recursos<span>Veja o que muda entre os planos</span>
+            </span>
+            <ChevronDown aria-hidden="true" />
+          </summary>
+          <PlanComparison />
+        </details>
         {!PAYMENTS_ENABLED && (
           <p className="home-plans__notice" role="note">
             <Info aria-hidden="true" />
