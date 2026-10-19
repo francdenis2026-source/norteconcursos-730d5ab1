@@ -1,3 +1,4 @@
+import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { useQuery } from "@tanstack/react-query";
@@ -1502,320 +1503,326 @@ function QuestionTrainer() {
         </div>
       </header>
       <div className="trainer-session-layout">
-        <Card
-          id="trainer-question"
-          className="question-window trainer-question-paper"
-          key={question.id}
-        >
-          <CardContent className="trainer-question-content">
-            <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-              <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
-                {question.subject}
-              </span>
-              <Badge variant="outline">{question.board}</Badge>
-              <Badge variant="outline">
-                {question.contest} · {question.year}
-              </Badge>
-              <Badge
-                variant="outline"
-                className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
-              >
-                {DIFFICULTY_LABEL[question.difficulty]}
-              </Badge>
-              {currencyAllowed && question.currencyTags?.length ? (
+        <div className="trainer-question-column">
+          <Card
+            id="trainer-question"
+            className="question-window trainer-question-paper"
+            key={question.id}
+          >
+            <CardContent className="trainer-question-content">
+              <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+                <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
+                  {question.subject}
+                </span>
+                <Badge variant="outline">{question.board}</Badge>
+                <Badge variant="outline">
+                  {question.contest} · {question.year}
+                </Badge>
                 <Badge
                   variant="outline"
-                  className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
-                  title={question.currencyNote ?? question.currencyTags.join(" · ")}
+                  className={cn("font-bold", DIFFICULTY_STYLE[question.difficulty])}
                 >
-                  <Sparkles className="h-3 w-3" aria-hidden="true" />
-                  Atual:{" "}
-                  {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
-                    "Prova recente"}
+                  {DIFFICULTY_LABEL[question.difficulty]}
                 </Badge>
-              ) : null}
-              <span className="ml-auto">
-                <ReportQuestionButton question={question} />
-              </span>
-            </div>
-            {reviewingPast && (
-              <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
-                <Lock className="h-3.5 w-3.5 shrink-0" /> Resposta já registrada — revisão sem novo
-                envio.
+                {currencyAllowed && question.currencyTags?.length ? (
+                  <Badge
+                    variant="outline"
+                    className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
+                    title={question.currencyNote ?? question.currencyTags.join(" · ")}
+                  >
+                    <Sparkles className="h-3 w-3" aria-hidden="true" />
+                    Atual:{" "}
+                    {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
+                      "Prova recente"}
+                  </Badge>
+                ) : null}
+                <span className="ml-auto">
+                  <ReportQuestionButton question={question} />
+                </span>
               </div>
-            )}
-            <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-              <div className="min-w-0 flex-1 basis-24">
-                <h2 className="font-display text-xl font-extrabold leading-none text-foreground sm:text-3xl">
-                  Questão {index + 1}{" "}
-                  <span className="text-muted-foreground">de {questions.length}</span>
-                </h2>
-                <p className="mt-1.5 text-xs text-muted-foreground">
-                  {correct} acertos · {wrong} erros
-                </p>
-              </div>
-              <div className="flex items-end gap-2 sm:gap-3">
-                {!reviewingPast && <QuestionTimer seconds={questionSecs} completed={answered} />}
-              </div>
-            </div>
-            <progress
-              className="trainer-question-progress"
-              value={correct + wrong}
-              max={Math.max(1, questions.length)}
-              aria-label="Questões respondidas nesta sessão"
-            />
-            {parsed.base && (
-              <details
-                open
-                className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
-              >
-                <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
-                  {parsed.baseLabel}
-                  <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
-                </summary>
-                <div className="max-h-64 overflow-y-auto px-3 pb-3 text-foreground sm:max-h-[26rem] sm:px-4 sm:pb-4">
-                  <QuestionSupportText
-                    text={parsed.base}
-                    citesLines={/(^|\W)linhas?\s+\d+/i.test(
-                      `${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`,
-                    )}
-                  />
+              {reviewingPast && (
+                <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
+                  <Lock className="h-3.5 w-3.5 shrink-0" /> Resposta já registrada — revisão sem
+                  novo envio.
                 </div>
-              </details>
-            )}
-            <div className="mb-3 flex flex-wrap items-center gap-2 border-b pb-3">
-              <QuestionAudioButton
-                text={[
-                  reflowStem(parsed.stem),
-                  ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
-                ].join("\n")}
+              )}
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+                <div className="min-w-0 flex-1 basis-24">
+                  <h2 className="font-display text-xl font-extrabold leading-none text-foreground sm:text-3xl">
+                    Questão {index + 1}{" "}
+                    <span className="text-muted-foreground">de {questions.length}</span>
+                  </h2>
+                  <p className="mt-1.5 text-xs text-muted-foreground">
+                    {correct} acertos · {wrong} erros
+                  </p>
+                </div>
+                <div className="flex items-end gap-2 sm:gap-3">
+                  {!reviewingPast && <QuestionTimer seconds={questionSecs} completed={answered} />}
+                </div>
+              </div>
+              <progress
+                className="trainer-question-progress"
+                value={correct + wrong}
+                max={Math.max(1, questions.length)}
+                aria-label="Questões respondidas nesta sessão"
               />
-            </div>
-            <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
-            <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
-            <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
-              {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
-            </p>
-            {hasOptions && (
-              <div className="mt-3 space-y-2">
-                {parsed.options.map((option) => {
-                  const isStruck = !answered && struck.includes(option.letter);
-                  const isSelected = selected === option.letter;
-                  const isRight = answered && option.letter === question.answer;
-                  const isWrong = answered && isSelected && option.letter !== question.answer;
-                  return (
-                    <div key={option.letter} className="flex items-start gap-2">
-                      <button
-                        type="button"
-                        aria-pressed={isSelected}
-                        disabled={answered || saving}
-                        onClick={() => chooseOption(option.letter)}
+              {parsed.base && (
+                <details
+                  open
+                  className="mb-3 rounded-lg border bg-muted/40 sm:mb-4 sm:rounded-xl [&_summary::-webkit-details-marker]:hidden"
+                >
+                  <summary className="flex cursor-pointer select-none items-center justify-between px-4 py-2 text-xs font-black uppercase tracking-wider text-muted-foreground">
+                    {parsed.baseLabel}
+                    <span className="text-[10px] font-medium normal-case">mostrar / ocultar</span>
+                  </summary>
+                  <div className="max-h-64 overflow-y-auto px-3 pb-3 text-foreground sm:max-h-[26rem] sm:px-4 sm:pb-4">
+                    <QuestionSupportText
+                      text={parsed.base}
+                      citesLines={/(^|\W)linhas?\s+\d+/i.test(
+                        `${parsed.stem} ${parsed.options.map((o) => o.text).join(" ")}`,
+                      )}
+                    />
+                  </div>
+                </details>
+              )}
+              <div className="mb-3 flex flex-wrap items-center gap-2 border-b pb-3">
+                <QuestionAudioButton
+                  text={[
+                    reflowStem(parsed.stem),
+                    ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
+                  ].join("\n")}
+                />
+              </div>
+              <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
+              <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+              <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
+                {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
+              </p>
+              {hasOptions && (
+                <div className="mt-3 space-y-2">
+                  {parsed.options.map((option) => {
+                    const isStruck = !answered && struck.includes(option.letter);
+                    const isSelected = selected === option.letter;
+                    const isRight = answered && option.letter === question.answer;
+                    const isWrong = answered && isSelected && option.letter !== question.answer;
+                    return (
+                      <div key={option.letter} className="flex items-start gap-2">
+                        <button
+                          type="button"
+                          aria-pressed={isSelected}
+                          disabled={answered || saving}
+                          onClick={() => chooseOption(option.letter)}
+                          className={cn(
+                            "trainer-option",
+                            isStruck && "is-eliminated",
+                            isSelected && !answered && "is-selected",
+                            isRight && "is-correct",
+                            isWrong && "is-incorrect",
+                          )}
+                        >
+                          <span className="trainer-option-letter">{option.letter}</span>
+                          <span className={cn("flex-1", isStruck && "line-through")}>
+                            {option.text}
+                          </span>
+                          {isRight && (
+                            <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
+                              <Check className="h-3.5 w-3.5 text-current" /> Correta
+                            </span>
+                          )}
+                          {isWrong && (
+                            <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
+                              <XCircle className="h-3.5 w-3.5 text-current" /> Sua resposta
+                            </span>
+                          )}
+                        </button>
+                        {canStrike && !answered && (
+                          <Button
+                            type="button"
+                            variant={isStruck ? "secondary" : "ghost"}
+                            size="sm"
+                            className="min-h-11 shrink-0 gap-1.5 px-2"
+                            disabled={answered || saving}
+                            aria-pressed={isStruck}
+                            aria-label={
+                              isStruck
+                                ? `Desfazer risco da alternativa ${option.letter}`
+                                : `Riscar alternativa ${option.letter}`
+                            }
+                            title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
+                            onClick={() => toggleStrike(option.letter)}
+                          >
+                            <Strikethrough aria-hidden="true" className="h-4 w-4" />
+                          </Button>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+              <div
+                className={cn(
+                  "mt-3 grid gap-2",
+                  hasOptions && "hidden",
+                  questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
+                )}
+              >
+                {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
+                  <div key={answer} className="flex min-w-0 items-center gap-2">
+                    <button
+                      type="button"
+                      aria-pressed={selected === answer}
+                      disabled={answered || saving}
+                      onClick={() => chooseOption(answer)}
+                      className={cn(
+                        "trainer-verdict min-w-0 flex-1",
+                        !answered && struck.includes(answer) && "is-eliminated",
+                        selected === answer && !answered && "is-selected",
+                        answered && answer === question.answer && "is-correct",
+                        answered &&
+                          selected === answer &&
+                          answer !== question.answer &&
+                          "is-incorrect",
+                      )}
+                    >
+                      <span
                         className={cn(
-                          "trainer-option",
-                          isStruck && "is-eliminated",
-                          isSelected && !answered && "is-selected",
-                          isRight && "is-correct",
-                          isWrong && "is-incorrect",
+                          "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
+                          selected === answer &&
+                            !answered &&
+                            "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
                         )}
                       >
-                        <span className="trainer-option-letter">{option.letter}</span>
-                        <span className={cn("flex-1", isStruck && "line-through")}>
-                          {option.text}
-                        </span>
-                        {isRight && (
-                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                            <Check className="h-3.5 w-3.5 text-current" /> Correta
-                          </span>
-                        )}
-                        {isWrong && (
-                          <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
-                            <XCircle className="h-3.5 w-3.5 text-current" /> Sua resposta
-                          </span>
-                        )}
-                      </button>
-                      {canStrike && !answered && (
-                        <Button
-                          type="button"
-                          variant={isStruck ? "secondary" : "ghost"}
-                          size="sm"
-                          className="min-h-11 shrink-0 gap-1.5 px-2"
-                          disabled={answered || saving}
-                          aria-pressed={isStruck}
-                          aria-label={
-                            isStruck
-                              ? `Desfazer risco da alternativa ${option.letter}`
-                              : `Riscar alternativa ${option.letter}`
-                          }
-                          title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
-                          onClick={() => toggleStrike(option.letter)}
-                        >
-                          <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                        </Button>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-            <div
-              className={cn(
-                "mt-3 grid gap-2",
-                hasOptions && "hidden",
-                questionAnswers(question).length <= 2 ? "sm:grid-cols-2" : "sm:grid-cols-5",
-              )}
-            >
-              {(hasOptions ? [] : questionAnswers(question)).map((answer) => (
-                <div key={answer} className="flex min-w-0 items-center gap-2">
-                  <button
-                    type="button"
-                    aria-pressed={selected === answer}
-                    disabled={answered || saving}
-                    onClick={() => chooseOption(answer)}
-                    className={cn(
-                      "trainer-verdict min-w-0 flex-1",
-                      !answered && struck.includes(answer) && "is-eliminated",
-                      selected === answer && !answered && "is-selected",
-                      answered && answer === question.answer && "is-correct",
-                      answered &&
-                        selected === answer &&
-                        answer !== question.answer &&
-                        "is-incorrect",
-                    )}
-                  >
-                    <span
-                      className={cn(
-                        "flex h-8 w-8 items-center justify-center rounded-lg bg-muted text-xs transition-colors group-hover:bg-primary group-hover:text-primary-foreground",
-                        selected === answer &&
-                          !answered &&
-                          "bg-white text-amber-700 group-hover:bg-white group-hover:text-amber-700",
-                      )}
-                    >
-                      {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
-                    </span>
-                    <span className={cn(!answered && struck.includes(answer) && "line-through")}>
-                      {labelFor(answer)}
-                    </span>
-                    {answered && (answer === question.answer || selected === answer) && (
-                      <span className="trainer-verdict__outcome">
-                        {answer === question.answer ? (
-                          <Check aria-hidden="true" size={14} className="text-current" />
-                        ) : (
-                          <XCircle aria-hidden="true" size={14} className="text-current" />
-                        )}
-                        {answer === question.answer ? "Gabarito" : "Sua resposta"}
+                        {selected === answer && !answered ? <Check className="h-4 w-4" /> : answer}
                       </span>
+                      <span className={cn(!answered && struck.includes(answer) && "line-through")}>
+                        {labelFor(answer)}
+                      </span>
+                      {answered && (answer === question.answer || selected === answer) && (
+                        <span className="trainer-verdict__outcome">
+                          {answer === question.answer ? (
+                            <Check aria-hidden="true" size={14} className="text-current" />
+                          ) : (
+                            <XCircle aria-hidden="true" size={14} className="text-current" />
+                          )}
+                          {answer === question.answer ? "Gabarito" : "Sua resposta"}
+                        </span>
+                      )}
+                    </button>
+                    {canStrike && !answered && (
+                      <Button
+                        type="button"
+                        variant={struck.includes(answer) ? "secondary" : "ghost"}
+                        size="sm"
+                        className="min-h-11 shrink-0 gap-1.5 px-2"
+                        disabled={saving}
+                        aria-pressed={struck.includes(answer)}
+                        aria-label={`${struck.includes(answer) ? "Desfazer risco de" : "Riscar"} ${labelFor(answer)}`}
+                        onClick={() => toggleStrike(answer)}
+                      >
+                        <Strikethrough aria-hidden="true" className="h-4 w-4" />
+                      </Button>
                     )}
-                  </button>
-                  {canStrike && !answered && (
-                    <Button
-                      type="button"
-                      variant={struck.includes(answer) ? "secondary" : "ghost"}
-                      size="sm"
-                      className="min-h-11 shrink-0 gap-1.5 px-2"
-                      disabled={saving}
-                      aria-pressed={struck.includes(answer)}
-                      aria-label={`${struck.includes(answer) ? "Desfazer risco de" : "Riscar"} ${labelFor(answer)}`}
-                      onClick={() => toggleStrike(answer)}
-                    >
-                      <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                    </Button>
-                  )}
-                </div>
-              ))}
-            </div>
-            {answered && (
-              <AnswerFeedback
-                selected={selected ? labelFor(selected) : "—"}
-                answer={labelFor(question.answer)}
-                correct={isCorrect}
-                sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
-              >
-                {!isPlaceholderExplanation(explanation.main) && (
-                  <p>
-                    {explanation.main.length > 420
-                      ? `${explanation.main.slice(0, 420)}…`
-                      : explanation.main}
-                  </p>
-                )}
-              </AnswerFeedback>
-            )}
-            <div className="trainer-answer-actions">
-              <Button
-                variant="outline"
-                disabled={index === 0 || saving}
-                onClick={() => goTo(index - 1)}
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Questão anterior
-              </Button>
-              {!answered ? (
-                <>
-                  <Button
-                    size="lg"
-                    disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
-                    onClick={submit}
-                    className="trainer-main-action"
-                  >
-                    {saving ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Salvando resposta…
-                      </>
-                    ) : (
-                      <>
-                        Confirmar resposta <Check className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button variant="outline" onClick={openLearning}>
-                    <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Comentário e
-                    materiais
-                  </Button>
-                  <Button size="lg" onClick={next} className="trainer-main-action">
-                    {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </>
-              )}
-            </div>
-            {saveError && (
-              <p
-                role="alert"
-                className="mt-3 rounded-xl border border-rose-300 bg-rose-50 p-3 text-sm text-rose-900 dark:border-rose-800 dark:bg-rose-950/30 dark:text-rose-100"
-              >
-                {saveError}
-              </p>
-            )}
-            {supportNotice && !supportAvailable && (
-              <div
-                id={supportNoticeId}
-                role="status"
-                className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
-              >
-                <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                <p>
-                  {saving
-                    ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
-                    : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
-                </p>
+                  </div>
+                ))}
               </div>
-            )}
-            {answered && (
-              <details
-                className="trainer-community"
-                onToggle={(event) => setCommunityOpen(event.currentTarget.open)}
-              >
-                <summary>Discussão desta questão</summary>
-                {communityOpen && (
-                  <QuestionSocialPanel questionId={question.id} questionSource={question.source} />
+              {answered && (
+                <AnswerFeedback
+                  selected={selected ? labelFor(selected) : "—"}
+                  answer={labelFor(question.answer)}
+                  correct={isCorrect}
+                  sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
+                >
+                  {!isPlaceholderExplanation(explanation.main) && (
+                    <p>
+                      {explanation.main.length > 420
+                        ? `${explanation.main.slice(0, 420)}…`
+                        : explanation.main}
+                    </p>
+                  )}
+                </AnswerFeedback>
+              )}
+              <div className="trainer-answer-actions">
+                <Button
+                  variant="outline"
+                  disabled={index === 0 || saving}
+                  onClick={() => goTo(index - 1)}
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Questão anterior
+                </Button>
+                {!answered ? (
+                  <>
+                    <Button
+                      size="lg"
+                      disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
+                      onClick={submit}
+                      className="trainer-main-action"
+                    >
+                      {saving ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Salvando resposta…
+                        </>
+                      ) : (
+                        <>
+                          Confirmar resposta <Check className="ml-2 h-4 w-4" />
+                        </>
+                      )}
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button variant="outline" onClick={openLearning}>
+                      <BookOpenCheck className="mr-2 h-4 w-4" aria-hidden="true" /> Comentário e
+                      materiais
+                    </Button>
+                    <Button size="lg" onClick={next} className="trainer-main-action">
+                      {index + 1 === questions.length ? "Ver resultado" : "Próxima questão"}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </>
                 )}
-              </details>
-            )}
-          </CardContent>
-        </Card>
+              </div>
+              {saveError && (
+                <p
+                  role="alert"
+                  className="mt-3 rounded-xl border border-rose-300 bg-rose-50 p-3 text-sm text-rose-900 dark:border-rose-800 dark:bg-rose-950/30 dark:text-rose-100"
+                >
+                  {saveError}
+                </p>
+              )}
+              {supportNotice && !supportAvailable && (
+                <div
+                  id={supportNoticeId}
+                  role="status"
+                  className="mt-3 flex items-start gap-2 rounded-lg border bg-muted/40 px-3 py-2 text-xs leading-5 text-muted-foreground"
+                >
+                  <Lock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                  <p>
+                    {saving
+                      ? "Sua resposta está sendo salva. A revisão será liberada em seguida."
+                      : "Confirme sua resposta para acessar a explicação, os materiais e os exercícios de revisão."}
+                  </p>
+                </div>
+              )}
+              {answered && (
+                <details
+                  className="trainer-community"
+                  onToggle={(event) => setCommunityOpen(event.currentTarget.open)}
+                >
+                  <summary>Discussão desta questão</summary>
+                  {communityOpen && (
+                    <QuestionSocialPanel
+                      questionId={question.id}
+                      questionSource={question.source}
+                    />
+                  )}
+                </details>
+              )}
+            </CardContent>
+          </Card>
+          <QuestionStudyCompanion subject={question.subject} answered={answered} />
+        </div>
         <aside className="trainer-session-overview">
           <TrainerSessionMap
             total={questions.length}

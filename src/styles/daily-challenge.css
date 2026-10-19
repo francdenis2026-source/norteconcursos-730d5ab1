@@ -619,3 +619,10 @@
   font-size: 10px;
   font-weight: 650;
 }
+
+/* Keep the question natural in height; use portrait-tablet space for study guidance. */
+.daily-question-column { display:flex; flex-direction:column; }
+.daily-question-heading { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:22px; }
+.daily-question-heading h2 { margin-top:6px; font-size:25px; line-height:1.2; font-weight:750; letter-spacing:-.025em; }
+.daily-question-heading h2 > span { font-weight:500; color:var(--muted-foreground); }
+@media(max-width:480px) { .daily-question-heading { gap:12px; } .daily-question-heading h2 { font-size:21px; } }

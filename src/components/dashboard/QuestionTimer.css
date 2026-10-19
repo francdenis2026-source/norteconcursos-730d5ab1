@@ -29,3 +29,8 @@
   .question-stopwatch { border-color: CanvasText; background: Canvas; color: CanvasText; }
   .question-stopwatch__label, .question-stopwatch__time, .question-stopwatch__status { color: CanvasText; }
 }
+.question-stopwatch { background:linear-gradient(145deg,#303640,#1c2028); border-color:#c5a158; }
+.question-stopwatch__dial { width:36px; height:42px; }
+.question-stopwatch[data-paused] { border-style:dashed; }
+.question-stopwatch[data-paused] .question-stopwatch__status { color:#d2d3d0; }
+.question-stopwatch__status i { box-shadow:0 0 0 3px rgb(228 200 136 / .1); }

@@ -1,3 +1,6 @@
+import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
+import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
+import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
@@ -371,6 +374,7 @@ function DesafioDiario() {
 
           {step === "playing" && question && (
             <QuestionPlayer
+              key={question.id}
               question={question}
               index={index}
               total={questions.length}
@@ -429,6 +433,7 @@ function QuestionPlayer({
   onNext: () => void;
   isLast: boolean;
 }) {
+  const { seconds, paused } = useGuestQuestionTimer(answered);
   const parsed = parseQuestion(question.text);
   const explanation = splitExplanation(question.explanation);
   const isCorrect = selected === question.answer;
@@ -471,6 +476,15 @@ function QuestionPlayer({
       <div className="daily-question-column">
         <Card className="daily-question-card overflow-hidden">
           <CardContent className="p-5 md:p-7">
+            <div className="daily-question-heading">
+              <div>
+                <span className="daily-eyebrow">SUA PRÁTICA DE HOJE</span>
+                <h2>
+                  Questão {index + 1} <span>de {total}</span>
+                </h2>
+              </div>
+              <QuestionTimer seconds={seconds} completed={answered} paused={paused} />
+            </div>
             <div className="mb-5 flex flex-wrap gap-2">
               <Badge>{question.board}</Badge>
               <Badge variant="outline">Certo ou errado</Badge>
@@ -588,6 +602,7 @@ function QuestionPlayer({
             </section>
           </>
         )}
+        <QuestionStudyCompanion subject={question.subject} answered={answered} />
       </div>
     </div>
   );

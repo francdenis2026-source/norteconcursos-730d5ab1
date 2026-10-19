@@ -10,7 +10,7 @@ async def main():
  async with async_playwright() as p:
   browser=await p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox'])
   context=await browser.new_context(viewport={'width':1280,'height':900})
-  await context.add_init_script("localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',"+json.dumps(json.dumps(session))+");")
+  await context.add_init_script("if (location.hostname === 'localhost') localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',"+json.dumps(json.dumps(session))+");")
   counts={}
   from urllib.parse import urlparse,parse_qs
   async def backend(route):
@@ -26,7 +26,7 @@ async def main():
    else:data=[]
    await route.fulfill(status=200,content_type='application/json',body=json.dumps(data))
   await context.route('**/*.supabase.co/**',backend)
-  page=await context.new_page();await page.goto('http://localhost:5173/dashboard/profile',wait_until='domcontentloaded');await page.wait_for_selector('.app-shell',timeout=60000);await page.wait_for_timeout(2000)
+  page=await context.new_page();await page.goto('http://localhost:8080/dashboard/profile',wait_until='domcontentloaded');await page.wait_for_selector('.app-shell',timeout=60000);await page.wait_for_timeout(2000)
   await page.add_init_script("window.__spoken=[];window.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[],cancel:()=>{},speak:u=>window.__spoken.push(u.text),pause:()=>{},resume:()=>{}}});")
   await page.reload();await page.wait_for_selector('.app-shell')
   await page.locator('a[href="/dashboard/question-trainer"]').first.click()
@@ -41,10 +41,13 @@ async def main():
   timer=page.locator('.question-stopwatch')
   await timer.wait_for()
   before=await timer.inner_text();await page.wait_for_timeout(1500);assert before != await timer.inner_text()
-  for width in [320,390,1280]:
+  for width in [320,390,768,1024,1280]:
    await page.set_viewport_size({'width':width,'height':900});await page.wait_for_timeout(300)
+   await page.get_by_role('region',name='Orientação de estudo').wait_for()
+   assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
    box=await timer.bounding_box();assert box['x']>=0 and box['x']+box['width']<=width
    await page.locator('#trainer-question').screenshot(path=f'/tmp/question-timer-{width}.png')
-  print('PASS: stopwatch advances, fits 320/390/1280px; screenshots captured')
+  await page.set_viewport_size({'width':1024,'height':1366});await page.screenshot(path='/tmp/trainer-tablet-portrait.png',full_page=True)
+  print('PASS: stopwatch advances, fits 320/390/768/1024/1280px; screenshots captured')
   await browser.close()
 asyncio.run(main())

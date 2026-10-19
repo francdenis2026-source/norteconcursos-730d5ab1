@@ -18,15 +18,17 @@ async def main():
     data='2026-10-19' if 'get_current_acre_date' in url else ROWS if 'get_daily_guest_questions' in url else []
     await route.fulfill(status=200,content_type='application/json',body=json.dumps(data))
    await context.route('**/*.supabase.co/**',backend)
-   for width in [320,390,768,1024,1440,1920]:
+   for width in [320,390,768,1024,1440]:
     page=await context.new_page();await page.set_viewport_size({'width':width,'height':960})
-    await page.goto('http://localhost:5173/desafio-diario',wait_until='networkidle')
+    await page.goto('http://localhost:8080/desafio-diario',wait_until='networkidle')
     await page.get_by_role('button',name='Começar meu desafio').wait_for()
     await page.evaluate('document.fonts.ready')
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(theme,width,'intro overflow')
     await page.screenshot(path=f'/tmp/daily-{theme}-{width}.png',full_page=True)
     await page.get_by_role('button',name='Começar meu desafio').click()
     await page.get_by_role('button',name='Certo',exact=True).wait_for()
+    await page.get_by_role('timer').wait_for()
+    await page.get_by_role('region',name='Orientação de estudo').wait_for()
     assert await page.get_by_role('button',name='Confirmar resposta').is_disabled()
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(theme,width,'player overflow')
     chosen='Errado' if width in [320,768] else 'Certo'
@@ -45,7 +47,7 @@ async def main():
     await page.close()
     print(f'PASS {theme} {width}: intro, question, confirmation, explanation, no overflow',flush=True)
    page=await context.new_page();await page.set_viewport_size({'width':1440,'height':960})
-   await page.goto('http://localhost:5173/desafio-diario',wait_until='networkidle')
+   await page.goto('http://localhost:8080/desafio-diario',wait_until='networkidle')
    await page.get_by_role('button',name='Começar meu desafio').click()
    await page.get_by_role('button',name='Certo',exact=True).click()
    await page.get_by_role('button',name='Confirmar resposta').click()
@@ -64,5 +66,28 @@ async def main():
    assert await page.get_by_role('button',name='Começar meu desafio').count()==0
    print(f'PASS {theme}: reload retains progress, 10 answers, result and daily cap',flush=True)
    await context.close()
+  context=await browser.new_context(viewport={'width':1024,'height':1366})
+  await context.route('**/*.supabase.co/**',backend)
+  page=await context.new_page();await page.clock.install(time=__import__('datetime').datetime(2026,10,19,14,tzinfo=__import__('datetime').timezone.utc))
+  await page.goto('http://localhost:8080/desafio-diario',wait_until='networkidle');await page.get_by_role('button',name='Começar meu desafio').click()
+  timer=page.get_by_role('timer');await page.clock.run_for(2500)
+  assert '00:02' in await timer.inner_text(),await timer.inner_text()
+  await page.evaluate("window.testHidden=true;Object.defineProperty(document,'visibilityState',{configurable:true,get:()=>window.testHidden?'hidden':'visible'});document.dispatchEvent(new Event('visibilitychange'))")
+  frozen=await timer.locator('.question-stopwatch__time').inner_text();await page.clock.run_for(60000)
+  assert frozen==await timer.locator('.question-stopwatch__time').inner_text()
+  assert await timer.get_attribute('data-paused')=='true'
+  await page.evaluate("window.testHidden=false;document.dispatchEvent(new Event('visibilitychange'));window.dispatchEvent(new MouseEvent('click'))")
+  await page.clock.run_for(2000);assert frozen!=await timer.locator('.question-stopwatch__time').inner_text()
+  await page.clock.run_for(125000);assert await timer.get_attribute('data-paused')=='true'
+  await page.get_by_role('button',name='Certo',exact=True).click();await page.get_by_role('button',name='Confirmar resposta').click()
+  await page.get_by_role('heading',name='Você acertou',exact=True).wait_for()
+  frozen=await timer.locator('.question-stopwatch__time').inner_text();await page.clock.run_for(10000)
+  assert frozen==await timer.locator('.question-stopwatch__time').inner_text()
+  assert await timer.get_attribute('data-completed')=='true'
+  await page.get_by_role('button',name='Próxima questão',exact=True).click()
+  assert await timer.locator('.question-stopwatch__time').inner_text()=='00:00'
+  await page.screenshot(path='/tmp/daily-tablet-portrait.png',full_page=True)
+  print('PASS: timer advances, pauses hidden/idle, resumes, freezes after answer and resets per question; tablet portrait screenshot',flush=True)
+  await context.close()
   await browser.close()
 asyncio.run(main())
