@@ -1,0 +1,190 @@
+{
+  "scope": "Completed individual review and release of PRF 2019 item 94; no blanket review of the historical syllabus.",
+  "publication": {
+    "sources_dry_run": {
+      "dry_run": true,
+      "sourcesToCreate": [
+        "a98a9a33-f02f-51b9-8266-0816918ebc7f",
+        "e9d264f2-561c-509a-8bb9-aa58b0b34e08",
+        "1d04617f-9668-5a60-ae87-e7f935542a82"
+      ],
+      "editionToRepair": true
+    },
+    "sources": {
+      "dry_run": false,
+      "createdSources": [
+        "a98a9a33-f02f-51b9-8266-0816918ebc7f",
+        "e9d264f2-561c-509a-8bb9-aa58b0b34e08",
+        "1d04617f-9668-5a60-ae87-e7f935542a82"
+      ],
+      "editionSource": "a98a9a33-f02f-51b9-8266-0816918ebc7f"
+    },
+    "topic_dry_run": {
+      "reviewed": 1,
+      "created": 0,
+      "preserved": 0,
+      "dry_run": true,
+      "pending": 1
+    },
+    "topic": {
+      "reviewed": 1,
+      "created": 1,
+      "preserved": 0
+    },
+    "provenance_dry_run": {
+      "updated": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ]
+    },
+    "provenance": {
+      "updated": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ],
+      "preserved": 0
+    },
+    "context_dry_run": {
+      "repaired": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ]
+    },
+    "context": {
+      "repaired": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ],
+      "preserved": 0
+    },
+    "legal_dry_run": {
+      "reviewed": 1,
+      "updated": [],
+      "preserved": 0,
+      "pending": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ]
+    },
+    "legal": {
+      "reviewed": 1,
+      "updated": [
+        "b47e9f19-31a4-49d0-871b-c4e6d9c03147"
+      ],
+      "preserved": 0
+    },
+    "checked_at": "2026-10-19T20:41:30.536Z",
+    "readback": {
+      "questions_in_scope": 216,
+      "updated": 1,
+      "other_questions_preserved": 215,
+      "original_item_and_key_preserved": true,
+      "original_raw_extraction_preserved": true
+    },
+    "counts": {
+      "tables": {
+        "official_exam_questions": {
+          "under_review": 36,
+          "administrative_pending": 1
+        },
+        "board_exam_questions": {
+          "under_review": 358,
+          "administrative_pending": 69
+        }
+      },
+      "under_review": 394,
+      "administrative_pending": 70
+    }
+  },
+  "question": {
+    "id": "b47e9f19-31a4-49d0-871b-c4e6d9c03147",
+    "item": 94,
+    "final_status": "active",
+    "official_key_preserved": "E",
+    "comment": "GABARITO DEFINITIVO: ERRADO (E), questão 94 da PRF 2019.\n\nONDE ESTÁ O ERRO?\nO erro está em afirmar que o abuso de poder “não decorre de conduta omissiva”. A atuação abusiva também pode resultar de uma omissão: a autoridade deixa injustificadamente de praticar um ato que tinha o dever jurídico de realizar.\nExcesso de poder envolve ultrapassar os limites de competência. Desvio de finalidade envolve utilizar a atuação administrativa para finalidade incompatível com aquela prevista juridicamente. A referência a essas espécies não permite concluir que toda conduta abusiva deva ser uma ação positiva: também é necessário examinar a inércia diante de um dever de agir.\n\nBASE NORMATIVA E SEU ALCANCE\nA Constituição, art. 37, caput, exige atuação administrativa conforme os princípios ali previstos. Na Administração Pública federal, a Lei 9.784/1999, art. 2º, impõe, entre outros, legalidade, finalidade e motivação. Seu art. 48 estabelece o dever de emitir decisão nos processos administrativos e sobre solicitações ou reclamações em matéria de competência do órgão. Há, portanto, deveres positivos de atuação; descumpri-los de modo abusivo não se torna lícito apenas porque a autoridade ficou inerte.\nA Lei 9.784/1999 disciplina o processo administrativo federal: o exemplo baseado nela não significa aplicar automaticamente o mesmo regime a qualquer Estado ou Município.\n\nEXEMPLO: a autoridade competente mantém deliberadamente sem decisão um requerimento já apto a ser decidido, sem justificativa, para prejudicar o interessado. A omissão precisa ser examinada à luz do dever de decidir, da finalidade e das demais circunstâncias: não há imunidade apenas porque não foi expedido um ato positivo.\nVARIAÇÃO: a demora decorre de diligência necessária e devidamente justificada. Não se conclui automaticamente que qualquer atraso é abuso de poder. Deve-se verificar o dever jurídico, os fatos, os prazos e a motivação.\nCONTRASTE: agir além da competência e deixar abusivamente de cumprir um dever de atuação são formas distintas de violar os limites jurídicos. A expressão “não decorre” exclui indevidamente a segunda possibilidade.\n\nCUIDADO COM O PRAZO\nNo regime do art. 49 da Lei 9.784/1999, o prazo de até 30 dias para decidir é contado após a conclusão da instrução, com possibilidade de prorrogação por igual período expressamente motivada. Não se deve contar automaticamente esse prazo desde qualquer protocolo nem considerar a prorrogação livre de justificativa.\n\nFIXAÇÃO\n1. Abuso de poder exige sempre uma ação positiva? Não; pode decorrer de omissão diante de um dever de agir.\n2. Toda demora é automaticamente abuso? Não; é necessário verificar a situação concreta e o regime aplicável.\n3. Identificar abuso administrativo significa automaticamente comprovar crime de abuso de autoridade? Não. A tipificação penal tem requisitos próprios e não se presume a partir da classificação administrativa.\n\nNÃO CONFUNDA REGIMES\nA questão cobra poderes administrativos. Não deve ser usada para ensinar automaticamente os crimes e penas da antiga Lei 4.898/1965, mencionada em outra parte do edital histórico e posteriormente revogada. Esta revisão não ativa nem certifica esses outros dispositivos do programa.\n\nFONTES E DATAS\nConstituição, art. 37, caput (https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm); Lei 9.784/1999, arts. 2º, 48 e 49 (https://www.planalto.gov.br/ccivil_03/leis/l9784.htm). Cópias oficiais do Planalto capturadas em 16/10/2026, com hashes reconferidos nesta revisão; não se declarou nova captura online nem precedente judicial não consultado.\nCaderno, gabarito definitivo e edital obtidos diretamente do Cebraspe em 19/10/2026: item 94, páginas PDF 8 e 1, letra E; programa de poderes administrativos na página 39 do edital. Revisão individual, sem certificação integral do concurso.\n\nHISTÓRICO EDITORIAL — registros anteriores preservados; pendências de origem, contexto e revisão resolvidas nesta conferência pontual:\nRetirada de publicação em 17/10/2026 (estava ativa sem base legal): Item doutrinário (abuso de poder por omissão): sem texto legal para validar a chave. Chave oficial conferida com o gabarito definitivo, mas sem validação legal; permanece em revisão.\n\nConferência documental de 19/10/2026: prova original PRF aplicada em 03/02/2019, questão 94, página PDF 8; gabarito oficial definitivo, página 1, E. Referências genéricas substituídas pelos PDFs exatos listados no catálogo PRF_18. Contexto e fundamento jurídico conferidos nas etapas próprias.\n\nComando geral do bloco restaurado a partir da página PDF 8, preservando a frase original do item após “Item:” e a extração original. Não há caso ou imagem faltante para esta questão.",
+    "comment_sha256": "920c20faa708f0307b610c29f5afe4768a1006ea56f485c194b4f3bbafb76671",
+    "original_item_preserved_verbatim_after_command": true,
+    "raw_extraction_unchanged": true
+  },
+  "sources": [
+    {
+      "id": "a98a9a33-f02f-51b9-8266-0816918ebc7f",
+      "source_type": "edital",
+      "title": "Edital nº 1 — PRF 2018/2019 — abertura (recorte de poderes administrativos)",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_18/arquivos/ED_1_PRF_2018_ABT.PDF",
+      "published_on": "2018-11-28",
+      "checked_at": "2026-10-19T20:37:56.090896+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Concurso histórico: edital de 2018, prova aplicada em 03/02/2019. Documento listado no catálogo oficial PRF_18. Conferência pontual do item 94: prova página PDF 8, definitivo página 1, resposta E; edital página 39, Direito Administrativo, item 4.2 (uso e abuso do poder). Não certifica os demais itens nem a vigência atual de todas as normas do edital histórico. SHA-256 80126f3dadbeb7b60eaff797341c9bfcd2411590b08a80f293b818bc4c795421. Catálogo SHA-256 e315506d8588705e44129fd88c5fbeb4f2473f39e501abe416ebf8af4f50b8ea."
+    },
+    {
+      "id": "e9d264f2-561c-509a-8bb9-aa58b0b34e08",
+      "source_type": "outro",
+      "title": "Prova objetiva — PRF 2019 — matriz 440_PRF_001_00",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_18/arquivos/440_PRF_001_00_PAG_9.PDF",
+      "published_on": "2019-02-06",
+      "checked_at": "2026-10-19T20:37:56.267366+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Concurso histórico: edital de 2018, prova aplicada em 03/02/2019. Documento listado no catálogo oficial PRF_18. Conferência pontual do item 94: prova página PDF 8, definitivo página 1, resposta E; edital página 39, Direito Administrativo, item 4.2 (uso e abuso do poder). Não certifica os demais itens nem a vigência atual de todas as normas do edital histórico. SHA-256 e9d4a9d8bef2c1321695df82599488225c8c9c84fb4475a68729390d12022c49. Catálogo SHA-256 e315506d8588705e44129fd88c5fbeb4f2473f39e501abe416ebf8af4f50b8ea."
+    },
+    {
+      "id": "1d04617f-9668-5a60-ae87-e7f935542a82",
+      "source_type": "outro",
+      "title": "Gabarito oficial definitivo — PRF 2019 — matriz 440_PRF_001_00",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_18/arquivos/GAB_DEFINITIVO_MATRIZ_440_PRF_001_00_PAG_9.PDF",
+      "published_on": "2019-02-28",
+      "checked_at": "2026-10-19T20:37:56.804033+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Concurso histórico: edital de 2018, prova aplicada em 03/02/2019. Documento listado no catálogo oficial PRF_18. Conferência pontual do item 94: prova página PDF 8, definitivo página 1, resposta E; edital página 39, Direito Administrativo, item 4.2 (uso e abuso do poder). Não certifica os demais itens nem a vigência atual de todas as normas do edital histórico. SHA-256 3ff3f423d75d3727fbba4736d0573150dc16cbd84e39d02a744fd0d0a02d026c. Catálogo SHA-256 e315506d8588705e44129fd88c5fbeb4f2473f39e501abe416ebf8af4f50b8ea."
+    }
+  ],
+  "topic": {
+    "id": "9ba6a0f7-2335-5ebd-8c8d-1f3013ef6451",
+    "edition_id": "39433bcf-e8e3-4ffc-9013-83e11468334c",
+    "block_name": "Edital histórico oficial — Bloco III, item 4",
+    "discipline": "Direito Administrativo",
+    "topic_order": 2,
+    "topic_text": "4 Poderes administrativos. 4.1 Hierárquico, disciplinar, regulamentar e de polícia. 4.2 Uso e abuso do poder.",
+    "content_status": "current"
+  },
+  "edition_source_repaired": {
+    "id": "39433bcf-e8e3-4ffc-9013-83e11468334c",
+    "original": "23ea6109-6a53-459b-8d73-5cae73821c37",
+    "new": "a98a9a33-f02f-51b9-8266-0816918ebc7f",
+    "other_fields_preserved": true
+  },
+  "verified_pages": {
+    "prova": 8,
+    "gabarito": 1,
+    "edital": 39
+  },
+  "federal_captures": [
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+      "captured_at": "2026-10-16T20:42:33.965Z"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+      "sha256": "3343cb35d79155485a9cae4372ebf89a864af111cdbaa5aa7598d11364109b41",
+      "captured_at": "2026-10-16T20:42:27.528Z"
+    }
+  ],
+  "validation": {
+    "targeted_tests_passed": 42,
+    "saved_row_gate": "passed; C/E, key E, original item suffix and raw extraction preserved",
+    "other_prf_2019_rows_preserved": 215,
+    "application_changes": false
+  },
+  "limits": [
+    "Preserved official Planalto captures dated 16/10; no new federal download or unconsulted judicial holding claimed.",
+    "No automatic inference of criminal abuse-of-authority liability; historical Lei 4898 material elsewhere in the syllabus not activated."
+  ]
+}
