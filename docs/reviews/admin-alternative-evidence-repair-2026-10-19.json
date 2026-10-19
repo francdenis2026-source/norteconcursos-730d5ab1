@@ -1,0 +1,119 @@
+{
+  "scope": "Actual database syllabus repair for PCRJ Delegado question 48; no legal clearance or question release.",
+  "publication": {
+    "topic_dry_run": {
+      "reviewed": 1,
+      "created": 0,
+      "preserved": 0,
+      "dry_run": true,
+      "pending": 1
+    },
+    "topic": {
+      "reviewed": 1,
+      "created": 1,
+      "preserved": 0
+    },
+    "link_dry_run": {
+      "updated": 0,
+      "pending": 1,
+      "dry_run": true
+    },
+    "link": {
+      "updated": 1,
+      "preserved": 0,
+      "dry_run": false
+    },
+    "checked_at": "2026-10-19T19:05:35.379Z",
+    "status_preserved": "under_review",
+    "answer_preserved": "A",
+    "source_checked_at_preserved": "2026-10-18T03:48:38.986772+00:00",
+    "updated_question": "76a0df58-50ad-465e-af73-12763e76347f",
+    "topic_id": "d46e9663-f7aa-5ccb-a571-894b924f919e"
+  },
+  "topic": {
+    "id": "d46e9663-f7aa-5ccb-a571-894b924f919e",
+    "edition_id": "5457e548-388c-4b4a-a2ac-a99c820e88f1",
+    "block_name": "Edital histórico oficial — Direito Administrativo, Ponto 5",
+    "discipline": "Direito Administrativo",
+    "topic_order": 22,
+    "topic_text": "Gestão financeira: orçamento, receita e despesa, execução orçamentária. Fiscalização contábil, financeira, orçamentária e patrimonial. Sistemas de controle externo e interno. Tribunais e Conselheiros de Contas. Responsabilidade Fiscal – Lei Complementar nº 101/2000. Controle da atividade administrativa. Controle parlamentar. Controle pelos Tribunais de Contas. Controle jurisdicional e autocontrole. [Edital de abertura, página PDF 73; recorte específico, sem certificar atualização integral do edital.]",
+    "content_status": "current"
+  },
+  "source": {
+    "id": "b0fe87a8-c1c6-586d-80f6-96a983c184d7",
+    "url": "https://cdn.cebraspe.org.br/concursos/pc_rj_21_delegado/arquivos/ED_1_PCRJ_ABT.PDF",
+    "previous_capture_at": "2026-10-18T03:48:38.986772+00:00",
+    "sha256": "2a850b854502276947bab5b712b51e9aaa72804bfee12b6540a7f5019fb8a2d8",
+    "pdf_page_visually_checked": 73
+  },
+  "question": {
+    "id": "76a0df58-50ad-465e-af73-12763e76347f",
+    "item": 48,
+    "contest": "Polícia Civil do Estado do Rio de Janeiro - Delegado de Polícia",
+    "career": "Delegado de Polícia",
+    "original_topic_preserved": "e225a287-4b17-4102-a41b-253049c72549",
+    "new_current_topic": "d46e9663-f7aa-5ccb-a571-894b924f919e",
+    "note_appended": "Regularização documental de 19/10/2026: vínculo atual corrigido para o recorte oficial de Direito Administrativo, Ponto 5 (controle externo, Tribunais de Contas e LRF), página PDF 73 do edital de abertura. Cópia oficial de 18/10 conferida por hash e inspeção visual. Preservados enunciado, gabarito A, tópico original, data jurídica nula, ausência de aprovação legal e status em revisão. Continua pendente a norma estadual de requisições ao TCE-RJ e a conferência jurídica integral; este ajuste não libera a questão nem certifica sua resposta.",
+    "changed_fields": [
+      "current_syllabus_topic_id",
+      "review_note"
+    ],
+    "remaining_blocker": "State rule on requests to TCE-RJ and full legal/key validation not confirmed.",
+    "answer_preserved": "A",
+    "status_preserved": "under_review"
+  },
+  "alternatives_attempted": [
+    {
+      "name": "camara-lgpd",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-norma-pl.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "senado-cf",
+      "url": "https://www25.senado.leg.br/web/atividade/legislacao/constituicao-federal",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "camara-concessoes",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/1995/lei-8987-13-fevereiro-1995-349810-norma-pl.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "lexml",
+      "url": "https://www.lexml.gov.br/urn/urn:lex:br:federal:lei:2018-08-14;13709",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "fgv-cgm-page",
+      "url": "https://conhecimento.fgv.br/concursos/cgmrj23",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "tce-to",
+      "url": "https://www.tceto.tc.br/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "alerj",
+      "url": "https://www.alerj.rj.gov.br/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "retry_error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "direct_network_diagnostic": "Direct authorized connections also failed: temporary failure in name resolution.",
+  "released": 0,
+  "administrative_pending": 74,
+  "overall_pending_last_count": 398,
+  "syllabus_blockers_after_targeted_repair": {
+    "missing_topic": 67,
+    "topic_without_verified_official_active_edital": 6,
+    "topic_not_current": 0
+  },
+  "tests": "22 targeted tests passed; topic dry-run/create, link dry-run/CAS write and independent full-row readback passed."
+}
