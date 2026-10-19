@@ -142,7 +142,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Estude com direção. Evolua com clareza." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#f4f6f3" },
+      { name: "theme-color", content: "#f5f6f8" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
       { name: "mobile-web-app-capable", content: "yes" },

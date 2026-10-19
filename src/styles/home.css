@@ -1,15 +1,15 @@
 /* Homepage styles are independent of the historical .lp/.hp layouts. */
 .home,
 .home-menu {
-  --home-bg: #f4f6f3;
+  --home-bg: #f5f6f8;
   --home-surface: #ffffff;
-  --home-tint: #e3ebe2;
-  --home-text: #202a23;
-  --home-muted: #59635c;
-  --home-line: #d8e0d8;
-  --home-accent: #b77a1f;
+  --home-tint: #eef0f3;
+  --home-text: #252a32;
+  --home-muted: #606773;
+  --home-line: #dfe3e8;
+  --home-accent: #87570f;
   --home-accent-bg: #f7edcf;
-  --home-navy: #203b2b;
+  --home-navy: #252a32;
   --home-gold: #e3ad4c;
   color: var(--home-text);
   background: var(--home-bg);
@@ -33,21 +33,21 @@
   z-index: 0;
   pointer-events: none;
   background: url("/media/textura-acre-profissionais-v2.webp") center / cover no-repeat;
-  opacity: 0.025;
+  opacity: 0;
   filter: grayscale(1) saturate(0.25) contrast(0.85);
 }
 .dark .home,
 .dark .home-menu {
-  --home-bg: #101b14;
-  --home-surface: #19291f;
-  --home-tint: #293e30;
-  --home-text: #eef3ed;
-  --home-muted: #becbbf;
-  --home-line: #3e5845;
+  --home-bg: #14171d;
+  --home-surface: #1e232c;
+  --home-tint: #2b323d;
+  --home-text: #eef0f4;
+  --home-muted: #bac1cc;
+  --home-line: #414955;
   --home-accent: #efbb58;
   --home-accent-bg: #3a301c;
 }
-.dark .home::before { opacity: 0.12; }
+.dark .home::before { opacity: 0; }
 
 /* Let the backdrop breathe through long content sections without reducing
    contrast inside cards, tables or the navigation chrome. */
@@ -2262,3 +2262,16 @@
     padding: 18px;
   }
 }
+
+/* Light editorial hero, with a neutral counterpart when the reader chooses dark mode. */
+.home-hero { background: var(--home-surface); color: var(--home-text); }
+.home-hero::after { background: linear-gradient(90deg,var(--home-surface),color-mix(in srgb,var(--home-surface) 97%,transparent) 34%,color-mix(in srgb,var(--home-surface) 45%,transparent) 60%,transparent); }
+.home-hero h1 em { color: var(--home-text); text-decoration: underline; text-decoration-color: var(--home-gold); text-decoration-thickness: 4px; text-underline-offset: 7px; }
+.home-hero__copy>p,.home-hero__explore,.home-hero__note,.home-trust li { color: var(--home-muted); }
+.home-trust { border-top-color: var(--home-line); background: color-mix(in srgb,var(--home-surface) 94%,transparent); border-radius: 8px; padding: 12px !important; }
+.home-hero__copy>.home-eyebrow { color: var(--hero-kicker); }
+.home-header__register { background: var(--home-gold); color: #252A32; border-color: var(--home-gold); }
+@media(max-width:760px) { .home-hero::after { background: linear-gradient(90deg,color-mix(in srgb,var(--home-surface) 96%,transparent),color-mix(in srgb,var(--home-surface) 90%,transparent)); } }
+
+.home-header__register:hover { background: #E8B96B; border-color: #E8B96B; color: #252A32; }
+.home-hero__explore:hover { color: var(--hero-kicker); }
