@@ -103,11 +103,16 @@ def split_ce(segment):
         if row['bbox'][0]<=left+8 and re.match(r'^(JULGUE|ACERCA|A RESPEITO|COM (BASE|RELACAO)|CONSIDERANDO|NO QUE|A LUZ|EM RELACAO|SOBRE |QUANTO |NO TOCANTE|NOS ITENS|TENDO |TEXTO\b)',t):
             start=k
             first=segment[0]
-            changed=next((j for j,r in enumerate(segment[1:k],1)
-                          if (r['page'],r['column'])!=(first['page'],first['column'])
-                          or not set(r['blocks']).intersection(first['blocks'])),None)
-            if changed is not None and re.search(r'[.!?]$',segment[changed-1]['text']):
-                start=changed
+            # Some PDFs split the last line of an item into a separate block.
+            # Consider every completed boundary, not only the first block change.
+            for j,r in enumerate(segment[1:k],1):
+                previous=segment[j-1]
+                region_change=(r['page'],r['column'])!=(previous['page'],previous['column'])
+                block_change=not set(r['blocks']).intersection(previous['blocks'])
+                margin=28 if r['column']==0 else 303
+                context_indent=r['bbox'][0]<=margin+8 or r['bbox'][0]>=margin+24
+                if (region_change or (block_change and context_indent)) and re.search(r'[.!?]$',previous['text']):
+                    start=j;break
             return segment[:start],segment[start:]
     return segment,[]
 

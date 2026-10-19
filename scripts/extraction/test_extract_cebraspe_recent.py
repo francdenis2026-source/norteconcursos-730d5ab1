@@ -47,6 +47,9 @@ class ExtractionTests(unittest.TestCase):
  def test_mc_comments_without_title_are_not_in_alternatives(self):
   stem,comment,following=m.separate_justification([row('E última opção.'),row('||A|| - Incorreta. */'),row('||E|| - Correta. */')])
   self.assertEqual(m.joined(stem),'E última opção.');self.assertIn('||E||',comment);self.assertEqual(following,[])
+ def test_passage_after_split_last_stem_line_is_inherited(self):
+  rs=[row('O período inicia a informação',x=321,col=1,block=22),row('nuclear do texto.',x=321,col=1,block=23),row('Medos e fobias compõem uma lista.',x=56,page=2,col=0,block=3),row('A passagem continua.',page=2,col=0,block=3),row('Julgue os itens relativos ao texto.',page=2,col=0,block=5)]
+  stem,support=m.split_ce(rs);self.assertEqual(len(stem),2);self.assertIn('Medos e fobias',m.joined(support));self.assertNotIn('Medos e fobias',m.joined(stem))
  def test_table_at_new_column_attaches_to_following_group(self):
   rs=[row('O direito deve ser apropriado mensalmente.',x=42,block=1),row('conta saldo (R$)',x=350,col=1,block=2),row('bancos 95.000',x=350,col=1,block=2),row('Com base nos dados precedentes, julgue.',x=303,col=1,block=3)]
   stem,support=m.split_ce(rs);self.assertEqual(len(stem),1);self.assertIn('95.000',m.joined(support))

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T16:26:11.819010+00:00",
+  "generated_at": "2026-10-19T18:06:24.118685+00:00",
   "booklets": 18,
   "original_page_previews": 24,
   "extracted_occurrences": 1020,
@@ -29,7 +29,7 @@
     "legal_currency_audit_pending": 443,
     "accounting_official_standard_audit_pending": 42,
     "formula_or_symbol_review": 32,
-    "visual_or_table_review": 23,
+    "visual_or_table_review": 26,
     "preliminary_justification_not_final": 200,
     "officially_annulled": 62,
     "short_stem_review": 1,
@@ -354,10 +354,11 @@
     }
   ],
   "validation": {
-    "unit_tests_passed": 15,
+    "unit_tests_passed": 16,
     "real_pdf_checks_passed": true,
     "zip_integrity_passed": true,
     "question_publication_performed": false,
-    "platform_duplicate_check_performed": false
+    "platform_duplicate_check_performed": true,
+    "duplicate_check_method": "Comparação preliminar de enunciados normalizados com 8.279 registros; candidatos exigem conferência de texto-base e imagens."
   }
 }
