@@ -3961,3 +3961,32 @@
   .home-interstitial__content { right: 18px; left: 18px; width: auto; }
   .home-interstitial__content strong { font-size: 28px; }
 }
+
+/* Careers backdrop: atmospheric support behind the content, never a competing card. */
+.home-careers {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.home-careers::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background: url("/media/hero/careers-team.webp") 78% center / cover no-repeat;
+  filter: grayscale(.35) saturate(.7) contrast(1.05);
+  opacity: .14;
+}
+.home-careers::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, color-mix(in oklab, var(--home-bg) 96%, transparent) 0%, color-mix(in oklab, var(--home-bg) 92%, transparent) 52%, color-mix(in oklab, var(--home-bg) 72%, transparent) 100%);
+}
+.dark .home-careers::before { opacity: .2; }
+@media (max-width: 700px) {
+  .home-careers::before { background-position: 70% center; opacity: .1; }
+  .dark .home-careers::before { opacity: .14; }
+}
