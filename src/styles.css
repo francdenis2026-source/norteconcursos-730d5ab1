@@ -12871,3 +12871,27 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
   mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
 }
+
+/* ==========================================================================
+   Sem "emenda" entre texto e foto (claro e escuro): nenhuma faixa dissolvida,
+   gradiente ou máscara sobre a imagem. A foto entra com corte limpo.
+   ========================================================================== */
+.student-hub__hero-visual::after { display: none !important; }
+.student-hub__hero-visual img { -webkit-mask-image: none !important; mask-image: none !important; filter: none !important; }
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before,
+:root:not(.dark) .study-assistant-hero::before,
+:root:not(.dark) .exam-simulator-hero::before,
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::after {
+  -webkit-mask-image: none; mask-image: none;
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);
+}
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero {
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+}
+@media (max-width: 760px) {
+  :root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before,
+  :root:not(.dark) .study-assistant-hero::before,
+  :root:not(.dark) .exam-simulator-hero::before { clip-path: none; }
+}
+.student-hub__hero-visual { clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
+@media (max-width: 640px) { .student-hub__hero-visual { clip-path: none; } }
