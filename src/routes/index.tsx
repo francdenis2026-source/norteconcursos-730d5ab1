@@ -213,7 +213,11 @@ function Index() {
                   <Menu />
                 </button>
               </SheetTrigger>
-              <SheetContent className="home-menu">
+              <SheetContent
+                className="home-menu"
+                overlayClassName="home-menu-overlay"
+                closeLabel="Fechar menu"
+              >
                 <SheetHeader className="home-menu__header">
                   <SheetTitle>
                     <NorteBrand />
