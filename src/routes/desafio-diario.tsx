@@ -1,3 +1,4 @@
+import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
@@ -12,7 +13,6 @@ import {
   ArrowLeft,
   ArrowRight,
   Check,
-  CheckCircle2,
   Loader2,
   ShieldCheck,
   Sparkles,
@@ -519,7 +519,17 @@ function QuestionPlayer({
                       "border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
                   )}
                 >
-                  {answer === "C" ? "Certo" : "Errado"}
+                  <span>{answer === "C" ? "Certo" : "Errado"}</span>
+                  {answered && (answer === question.answer || selected === answer) && (
+                    <span className="daily-answer__outcome">
+                      {answer === question.answer ? (
+                        <Check aria-hidden="true" size={14} />
+                      ) : (
+                        <XCircle aria-hidden="true" size={14} />
+                      )}
+                      {answer === question.answer ? "Gabarito" : "Sua resposta"}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
@@ -533,61 +543,50 @@ function QuestionPlayer({
           </CardContent>
         </Card>
         {answered && (
-          <section
-            aria-label="Explicação da resposta"
-            aria-live="polite"
-            className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
-          >
-            <div className="flex items-center gap-3">
-              {isCorrect ? (
-                <CheckCircle2 className="h-6 w-6 text-emerald-600" />
-              ) : (
-                <XCircle className="h-6 w-6 text-rose-600" />
-              )}
+          <>
+            <AnswerFeedback
+              selected={selected === "C" ? "Certo" : "Errado"}
+              answer={question.answer === "C" ? "Certo" : "Errado"}
+              correct={isCorrect}
+              sourceLabel="Gabarito oficial"
+            />
+            <section
+              aria-label="Explicação da resposta"
+              className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
+            >
               <div>
-                <h2 className="text-lg font-bold">
-                  {isCorrect ? "Resposta correta" : "Vamos revisar este ponto"}
-                </h2>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Gabarito oficial:{" "}
-                  <strong className="text-foreground">
-                    {question.answer === "C" ? "Certo" : "Errado"}
-                  </strong>
-                </p>
+                <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
+                <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
               </div>
-            </div>
-            <div>
-              <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
-              <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
-            </div>
-            {explanation.example && (
-              <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
-                <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
-                <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+              {explanation.example && (
+                <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+                  <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
+                  <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+                </div>
+              )}
+              {question.legalBasis.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {question.legalBasis.map((basis, i) => (
+                    <a
+                      key={i}
+                      href={basisHref(basis)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-lg border px-3 py-2 text-xs underline"
+                    >
+                      {basis.title || basis.lei || "Consultar fonte oficial"}
+                    </a>
+                  ))}
+                </div>
+              )}
+              <div className="flex justify-end">
+                <Button size="lg" onClick={onNext}>
+                  {isLast ? "Ver resultado" : "Próxima questão"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
-            )}
-            {question.legalBasis.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {question.legalBasis.map((basis, i) => (
-                  <a
-                    key={i}
-                    href={basisHref(basis)}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-lg border px-3 py-2 text-xs underline"
-                  >
-                    {basis.title || basis.lei || "Consultar fonte oficial"}
-                  </a>
-                ))}
-              </div>
-            )}
-            <div className="flex justify-end">
-              <Button size="lg" onClick={onNext}>
-                {isLast ? "Ver resultado" : "Próxima questão"}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </section>
+            </section>
+          </>
         )}
       </div>
     </div>

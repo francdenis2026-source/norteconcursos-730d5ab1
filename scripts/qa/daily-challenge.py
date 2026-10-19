@@ -29,10 +29,16 @@ async def main():
     await page.get_by_role('button',name='Certo',exact=True).wait_for()
     assert await page.get_by_role('button',name='Confirmar resposta').is_disabled()
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(theme,width,'player overflow')
-    await page.get_by_role('button',name='Certo',exact=True).click()
+    chosen='Errado' if width in [320,768] else 'Certo'
+    await page.get_by_role('button',name=chosen,exact=True).click()
     await page.get_by_role('button',name='Confirmar resposta').click()
-    await page.get_by_role('heading',name='Resposta correta',exact=True).wait_for()
-    assert await page.get_by_text('Gabarito oficial:',exact=False).count()>0
+    await page.get_by_role('heading',name='Você acertou' if chosen=='Certo' else 'Você errou',exact=True).wait_for()
+    feedback=page.get_by_role('status',name='Correção da resposta')
+    assert await feedback.locator('.answer-feedback__selected strong').inner_text()==chosen
+    assert await feedback.locator('.answer-feedback__official strong').inner_text()=='Certo'
+    await page.wait_for_timeout(150)
+    bounds=await feedback.bounding_box();assert bounds['y']>=60 and bounds['y']+bounds['height']<=960,(width,bounds)
+    assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     await page.screenshot(path=f'/tmp/daily-player-{theme}-{width}.png',full_page=True)
     # Reset only the local fixture context between widths.
     await page.evaluate('localStorage.clear()')
@@ -43,14 +49,14 @@ async def main():
    await page.get_by_role('button',name='Começar meu desafio').click()
    await page.get_by_role('button',name='Certo',exact=True).click()
    await page.get_by_role('button',name='Confirmar resposta').click()
-   await page.get_by_role('heading',name='Resposta correta',exact=True).wait_for()
+   await page.get_by_role('heading',name='Você acertou',exact=True).wait_for()
    await page.reload(wait_until='networkidle')
    assert await page.locator('.daily-metrics strong').first.inner_text()=='09'
    await page.get_by_role('button',name='Começar meu desafio').click()
    for i in range(9):
     await page.get_by_role('button',name='Certo',exact=True).click()
     await page.get_by_role('button',name='Confirmar resposta').click()
-    await page.get_by_role('heading',name='Resposta correta',exact=True).wait_for()
+    await page.get_by_role('heading',name='Você acertou',exact=True).wait_for()
     await page.get_by_role('button',name='Ver resultado' if i==8 else 'Próxima questão',exact=True).click()
    await page.get_by_role('heading',name='100%',exact=True).wait_for()
    await page.reload(wait_until='networkidle')

@@ -605,3 +605,17 @@
     scroll-behavior: auto !important;
   }
 }
+.daily-answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.daily-answer__outcome {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 650;
+}

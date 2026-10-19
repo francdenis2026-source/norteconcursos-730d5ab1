@@ -1,3 +1,4 @@
+import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { useQuery } from "@tanstack/react-query";
 import { fetchEditalEditions } from "@/lib/editalEditions";
@@ -248,7 +249,13 @@ function QuestionTrainer() {
     routeFilters.edition,
     examEdition.data,
   ]);
-  const { locked, loading: lockedLoading, error: historyError, reload: reloadHistory, markLocked } = useLockedAnswers(userId, canLoad);
+  const {
+    locked,
+    loading: lockedLoading,
+    error: historyError,
+    reload: reloadHistory,
+    markLocked,
+  } = useLockedAnswers(userId, canLoad);
   const error = catalogError ?? historyError;
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
@@ -953,7 +960,9 @@ function QuestionTrainer() {
     )
       return;
     if (!(await ownsSingleDeviceSession(user.id))) {
-      setSaveError("Esta conta foi aberta em outra aba ou navegador. Recarregue esta página para continuar.");
+      setSaveError(
+        "Esta conta foi aberta em outra aba ou navegador. Recarregue esta página para continuar.",
+      );
       return;
     }
     savingRef.current = true;
@@ -1114,7 +1123,9 @@ function QuestionTrainer() {
       <Center>
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
-        {historyError && <Button onClick={() => void reloadHistory()}>Conferir histórico novamente</Button>}
+        {historyError && (
+          <Button onClick={() => void reloadHistory()}>Conferir histórico novamente</Button>
+        )}
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
         </Button>
@@ -1158,7 +1169,12 @@ function QuestionTrainer() {
             <ArrowRight aria-hidden="true" />
           </Link>
         </header>
-        {loading && <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />Carregando questões e conferindo seu histórico…</p>}
+        {loading && (
+          <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+            Carregando questões e conferindo seu histórico…
+          </p>
+        )}
         {practiceMode === "catalog" && (
           <div className="trainer-catalog-scope" role="status">
             <p className="font-semibold">
@@ -1250,7 +1266,9 @@ function QuestionTrainer() {
                   onChange={() => changePracticeMode(id)}
                 />
                 <span className="trainer-practice-mode__title">{title}</span>
-                <span className="mt-1 block text-xs text-muted-foreground">{loading ? "Consultando questões disponíveis…" : sub}</span>
+                <span className="mt-1 block text-xs text-muted-foreground">
+                  {loading ? "Consultando questões disponíveis…" : sub}
+                </span>
               </label>
             ))}
           </div>
@@ -1606,12 +1624,12 @@ function QuestionTrainer() {
                         </span>
                         {isRight && (
                           <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
-                            <Check className="h-3.5 w-3.5" /> Correta
+                            <Check className="h-3.5 w-3.5 text-current" /> Correta
                           </span>
                         )}
                         {isWrong && (
                           <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-rose-700 dark:text-rose-400">
-                            <XCircle className="h-3.5 w-3.5" /> Sua resposta
+                            <XCircle className="h-3.5 w-3.5 text-current" /> Sua resposta
                           </span>
                         )}
                       </button>
@@ -1677,6 +1695,16 @@ function QuestionTrainer() {
                     <span className={cn(!answered && struck.includes(answer) && "line-through")}>
                       {labelFor(answer)}
                     </span>
+                    {answered && (answer === question.answer || selected === answer) && (
+                      <span className="trainer-verdict__outcome">
+                        {answer === question.answer ? (
+                          <Check aria-hidden="true" size={14} className="text-current" />
+                        ) : (
+                          <XCircle aria-hidden="true" size={14} className="text-current" />
+                        )}
+                        {answer === question.answer ? "Gabarito" : "Sua resposta"}
+                      </span>
+                    )}
                   </button>
                   {canStrike && !answered && (
                     <Button
@@ -1696,31 +1724,20 @@ function QuestionTrainer() {
               ))}
             </div>
             {answered && (
-              <section
-                className={cn("trainer-answer-feedback", isCorrect ? "is-correct" : "is-incorrect")}
-                role="status"
-                aria-label="Correção da resposta"
+              <AnswerFeedback
+                selected={selected ? labelFor(selected) : "—"}
+                answer={labelFor(question.answer)}
+                correct={isCorrect}
+                sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
               >
-                <div className="flex items-center gap-2 font-semibold">
-                  {isCorrect ? (
-                    <CheckCircle2 aria-hidden="true" className="h-5 w-5" />
-                  ) : (
-                    <XCircle aria-hidden="true" className="h-5 w-5" />
-                  )}
-                  {isCorrect ? "Resposta correta" : "Resposta incorreta"}
-                </div>
-                <p>
-                  Você marcou <strong>{selected ? labelFor(selected) : "—"}</strong>. Gabarito:{" "}
-                  <strong>{labelFor(question.answer)}</strong>.
-                </p>
                 {!isPlaceholderExplanation(explanation.main) && (
-                  <p className="trainer-answer-feedback__comment">
+                  <p>
                     {explanation.main.length > 420
                       ? `${explanation.main.slice(0, 420)}…`
                       : explanation.main}
                   </p>
                 )}
-              </section>
+              </AnswerFeedback>
             )}
             <div className="trainer-answer-actions">
               <Button
@@ -2302,18 +2319,24 @@ function TrainerSetup({
         </div>
         <div className="trainer-start-bar">
           <p>
-            {loading ? "Conferindo as questões disponíveis…" : dailyRemaining === 0
-              ? "Limite de novas respostas atingido hoje"
-              : sessionSize
-                ? `${sessionSize} ${sessionSize === 1 ? "questão" : "questões"} nesta sessão`
-                : "Nenhuma questão para estes filtros"}
+            {loading
+              ? "Conferindo as questões disponíveis…"
+              : dailyRemaining === 0
+                ? "Limite de novas respostas atingido hoje"
+                : sessionSize
+                  ? `${sessionSize} ${sessionSize === 1 ? "questão" : "questões"} nesta sessão`
+                  : "Nenhuma questão para estes filtros"}
           </p>
           {dailyRemaining !== undefined && (
             <small>
               {dailyRemaining} novas respostas disponíveis hoje. Revisões não consomem esse limite.
             </small>
           )}
-          <Button disabled={loading || !sessionSize} onClick={start} className="trainer-main-action">
+          <Button
+            disabled={loading || !sessionSize}
+            onClick={start}
+            className="trainer-main-action"
+          >
             <span>Começar sessão</span>
             <ArrowRight aria-hidden="true" />
           </Button>
