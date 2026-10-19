@@ -2474,6 +2474,67 @@
   .home-header__register { padding-inline:9px; }
 }
 
+/* Pointer-led interaction: cards respond to the cursor with a restrained 3D
+   tilt and a soft light spot. Touch and reduced-motion users keep a static UI. */
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details) {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --card-lift: 0px;
+  position: relative;
+  transform: perspective(1000px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translateY(var(--card-lift));
+  transform-style: preserve-3d;
+  transition:
+    transform 360ms var(--ease-out),
+    box-shadow 260ms var(--ease-out),
+    border-color 220ms ease,
+    background-color 220ms ease;
+  will-change: transform;
+}
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), color-mix(in oklab, var(--home-accent) 15%, transparent), transparent 42%);
+  transition: opacity 220ms ease;
+}
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details):hover {
+  --card-lift: -4px;
+  cursor: pointer;
+}
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details):hover::after {
+  opacity: 1;
+}
+.home :is(a, button, summary) {
+  cursor: pointer;
+}
+.home :is(.home-button, .home-text-link, .home-final__challenge) {
+  transition:
+    transform 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out),
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+.home :is(.home-button, .home-text-link, .home-final__challenge):hover {
+  transform: translateY(-2px);
+}
+.home :is(.home-button, .home-text-link, .home-final__challenge):active {
+  transform: translateY(0) scale(0.98);
+}
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details) {
+    transform: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
+    display: none;
+  }
+}
+
 /* White cards carry the content; the neutral canvas separates each surface. */
 :root:not(.dark) .home :is(.home-plan,.home-opportunity) {
   background: var(--home-surface);
