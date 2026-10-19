@@ -97,3 +97,23 @@ test('pending-review CLI dry run reads current database and syllabus without wri
  try{const p=make(),input=join(dir,'pack.json'),report=join(dir,'report.json'),calls=join(dir,'calls.json'),mock=join(dir,'fetch.mjs');await writeFile(input,JSON.stringify(p));await writeFile(mock,`import{writeFileSync}from'node:fs';const calls=[];globalThis.fetch=async(url,options)=>{calls.push({url:String(url),method:options.method});writeFileSync(${JSON.stringify(calls)},JSON.stringify(calls));if(options.method!=='GET')throw Error('Dry run attempted write');const path=new URL(url).pathname;const rows=path.endsWith('/official_exam_questions')?[${JSON.stringify(p.items[0].expected)}]:path.endsWith('/syllabus_topics')?[{edition_id:'e',content_status:'current'}]:path.endsWith('/syllabus_editions')?[{source_id:'s',status:'active'}]:[{id:'s',is_official:true,source_type:'edital',status:'vigente'}];return new Response(JSON.stringify(rows),{status:200});};`);const child=spawnSync(process.execPath,['--import',mock,fileURLToPath(new URL('./publish-question-review.mjs',import.meta.url)),input,report,'--dry-run'],{env:{...process.env,TASK_SUPABASE_KEY:'test-session',TASK_SUPABASE_PROJECT:'gkwphadbveiyjcwiiizw'},encoding:'utf8'});assert.equal(child.status,0,child.stderr);const result=JSON.parse(await readFile(report));assert.deepEqual(result.pending,['q1']);assert.deepEqual(result.updated,[]);const requests=JSON.parse(await readFile(calls));assert.equal(requests.length,5);assert.ok(requests.every(r=>r.method==='GET'));
  }finally{await rm(dir,{recursive:true,force:true});}
 });
+
+test('restoring a previously verified board status preserves original comments and review dates',async()=>{
+ const p=make();p.purpose='restore-reviewed-status';const item=p.items[0];item.table='board_exam_questions';
+ item.expected={...item.expected,content_status:'archived',syllabus_topic_id:'t1',verified_at:'2026-10-13T00:00:00Z',law_version_checked_at:'2026-10-13T00:00:00Z',legal_basis:[{url:'https://www.planalto.gov.br/law'}],explanation:'Previously reviewed explanation',needs_visual:false};
+ item.patch={content_status:'active'};item.evidence.previous_review_verified=true;
+ assert.equal(validateReview(p),p);
+ const changed=structuredClone(p);changed.items[0].patch.explanation='Changed';assert.throws(()=>validateReview(changed),/preserve every reviewed field/);
+ const noDate=structuredClone(p);delete noDate.items[0].expected.verified_at;assert.throws(()=>validateReview(noDate),/Existing verified review/);
+ const noBasis=structuredClone(p);noBasis.items[0].expected.legal_basis=[];assert.throws(()=>validateReview(noBasis),/legal basis/);
+ let writes=0;
+ const request=async(path,method,patch)=>{
+  if(method==='PATCH'){writes++;assert.deepEqual(patch,{content_status:'active'});return [{...item.expected,...patch}];}
+  if(path.startsWith('board_exam_questions'))return [item.expected];
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  if(path.includes('?url='))return [{is_official:true,status:'vigente'}];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ await publishReview(p,request,{dryRun:true});assert.equal(writes,0);await publishReview(p,request);assert.equal(writes,1);
+});

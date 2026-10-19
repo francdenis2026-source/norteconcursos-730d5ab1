@@ -58,3 +58,14 @@ test('questões que dependem de um texto ausente são detectadas', () => {
   assert.equal(needsMissingSupportText({ subject: pt, text: 'O trecho "Embora tivesse provas" pode ser reescrito como…' }), false);
   assert.equal(needsMissingSupportText({ subject: 'Direito Penal', text: 'De acordo com o texto legal, o crime…' }), false);
 });
+
+test('FGV inline full text and reviewed image support are recognized without accepting a missing text',()=>{
+ const subject='Língua Portuguesa';
+ const body='A biblioteca pública promove a leitura e reúne a comunidade em atividades culturais. Os participantes encontram livros e compartilham suas experiências, enquanto os profissionais organizam oficinas para diferentes públicos. ';
+ for(const intro of ['Leia: ','Leia o texto a seguir: ','Leia a notícia a seguir, publicada em junho: ','Leia o seguinte trecho de poema, de um autor: ','Leia, a seguir, um trecho do texto de apresentação: '])assert.equal(needsMissingSupportText({subject,text:intro+body+' No texto, a ideia principal é apresentada.'}),false);
+ assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: https://example.test/texto. No texto, a função conativa aparece.',figures:['https://example.test/support.png']}),false);
+ assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: https://example.test/texto. No texto, a função conativa aparece.'}),true);
+ assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, assinale a opção que apresenta a ideia correta. '+body}),true);
+ assert.equal(needsMissingSupportText({subject,text:'Segundo o texto, qual a ideia principal?',figures:['https://example.test/decorative.png']}),true);
+ assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, julgue a afirmação.',figures:['javascript:alert(1)']}),true);
+});

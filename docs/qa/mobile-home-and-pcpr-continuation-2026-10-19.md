@@ -1,0 +1,15 @@
+# Retomada de PCPR e ajustes mobile
+
+Integrada a main por fast-forward até `4edb074`, preservando as melhorias de progresso, imagens e provas já publicadas por outra conta. A leitura do banco confirmou 100 registros ativos para Papiloscopista e 100 para Agente; Delegado permanece com 98 ativos e 2 arquivados. O lote de 64 reativações mencionado pelo usuário não foi repetido.
+
+O reconhecimento de apoio aceita agora o texto incorporado em instruções como “Leia o texto a seguir:” e “Leia, a seguir, um trecho ...:”, mesmo sem aspas, com conteúdo textual substancial. Também reconhece uma imagem cadastrada quando há uma instrução explícita de leitura. Comandos sem apoio, links isolados e imagens meramente decorativas continuam retidos. Os controles de elegibilidade e revisão não foram removidos.
+
+O simulador passou a carregar `figure_urls` e `item_number`, mostrar a imagem de apoio e preservar a numeração original. O snapshot real foi reproduzido em chamadas locais interceptadas: Treinador e Simulador identificaram 100 itens de Papiloscopista. Nenhuma resposta foi enviada ao banco real. O publicador recebeu uma finalidade explícita para restaurar somente o status de itens de banca já verificados, com evidência individual, validação de edital/fundamentos e comparação integral antes da escrita. Esse fluxo foi testado com fixtures; não reexecutou a restauração em produção.
+
+O carrossel de oportunidades funciona também em desktop/tablet, preservando conteúdo e navegação por botões/teclado. O deslocamento usa o recuo de snap calculado. Testado em cinco larguras (320/390/768/1024/1440) e nos temas claro/escuro, sem overflow.
+
+Os planos usam oito linhas compartilhadas (subgrid), com fallback flex. Imagens, preço, disponibilidade, recursos e ações ficam alinhados; a linha anual vazia do Gratuito conserva o alinhamento, sem informação fictícia. A altura também permanece igual quando uma lista de recursos é expandida. O menu público deixa de ter altura integral e margem automática antes dos botões: seu tamanho acompanha o conteúdo, limitado pelo viewport dinâmico e pelas áreas seguras. Telas baixas permitem rolagem até os botões. Textos de leitura passam a 14 px em telas menores; metadados e controles usam tamanhos maiores. A escala/zoom do navegador permanece disponível.
+
+Conferidos em Chromium: 320×568, 360×640, 390×844, 430×932, 600×960, 768×1024 e 844×390, ambos os temas. Cards e imagens com alturas iguais, textos legíveis, menu dentro da tela, espaço entre navegação e acesso até 24 px, botões alcançáveis, fechamento por Escape e ausência de overflow horizontal. Capturas de planos e menu inspecionadas. Uma resposta malformada do resumo de questões não derruba mais a homepage: mantém o texto genérico.
+
+Typecheck, build e regressões direcionadas aprovados. `scripts/qa/home-mobile-layout.py` permite recortes por `HOME_THEME`, `HOME_MIN_WIDTH` e `HOME_MAX_WIDTH`; `scripts/qa/pcpr-restoration.py` usa `PCPR_FIXTURE_FILE` com o snapshot local e não contém credenciais. Não houve teste em aparelho físico.

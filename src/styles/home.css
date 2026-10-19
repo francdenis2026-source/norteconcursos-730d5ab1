@@ -2156,26 +2156,28 @@
     min-width: 0;
   }
 }
-@media (max-width: 700px) {
-  .home-rail__track.home-opportunities {
-    display: grid;
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 88%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 3px;
-    overscroll-behavior-x: contain;
-    padding: 3px 3px 8px;
-    gap: 14px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--home-line) transparent;
-  }
-  .home-rail__track.home-opportunities > .home-opportunity {
-    scroll-snap-align: start;
-    min-width: 0;
-  }
+.home-rail__track.home-opportunities {
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 20px) / 2);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 3px;
+  overscroll-behavior-x: contain;
+  padding: 3px 3px 8px;
+  gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--home-line) transparent;
 }
+.home-rail__track.home-opportunities > .home-opportunity {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+@media (max-width: 700px) {
+  .home-rail__track.home-opportunities { grid-auto-columns:88%; gap:14px; }
+}
+
 @media (max-width: 600px) {
   .home-rail__track.home-plans__grid {
     grid-auto-columns: 86%;
@@ -2384,9 +2386,76 @@
 .home-pcpi-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
 .home-pcpi-actions > div { min-width:0; display:flex; flex-direction:column; gap:10px; }
 .home-pcpi-actions .home-button { margin-top:auto; padding-inline:12px; font-size:11px; }
-@media(min-width:701px) {
-  .home-opportunities > .home-opportunity--acre:last-child { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); align-items:center; }
-  .home-opportunities > .home-opportunity--acre:last-child .home-opportunity__header { padding:20px; }
-  .home-opportunities > .home-opportunity--acre:last-child .home-opportunity__body { padding:20px; }
-}
+
 @media(max-width:359px) { .home-pcpi-actions { grid-template-columns:1fr; } }
+
+/* Shared content rows keep every plan and its action aligned, even when one feature list expands. */
+.home-rail__track.home-plans__grid {
+  grid-template-rows: repeat(8, auto);
+  grid-auto-flow: column;
+  align-items: stretch;
+  row-gap: 10px;
+}
+.home-rail__track.home-plans__grid > .home-plan {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1 / span 8;
+  align-self: stretch;
+  row-gap: 10px;
+}
+.home-plan__media { flex-shrink:0; }
+.home-plan__annual { min-block-size:1.6em; }
+.home-plan__features { margin-top:0; }
+@supports not (grid-template-rows:subgrid) {
+  .home-rail__track.home-plans__grid > .home-plan { display:flex; height:100%; }
+  .home-plan__features { margin-top:auto; }
+}
+
+/* This public menu is a compact panel, bounded by the visible viewport and safe areas. */
+.home-menu {
+  top:max(12px,env(safe-area-inset-top));
+  right:max(12px,env(safe-area-inset-right));
+  bottom:auto;
+  height:auto;
+  width:min(360px,calc(100vw - 24px));
+  max-width:calc(100vw - 24px);
+  max-height:calc(100dvh - max(12px,env(safe-area-inset-top)) - max(12px,env(safe-area-inset-bottom)));
+  padding:24px 20px 20px;
+  border:1px solid var(--home-line);
+  border-radius:16px;
+  gap:16px;
+  overscroll-behavior-y:contain;
+  scrollbar-gutter:stable;
+  overflow-x:hidden;
+}
+.home-menu__header { padding-right:28px; text-align:left; flex:none; }
+.home-menu__header p { font-size:14px; line-height:1.6; }
+.home-menu nav { margin-top:0; flex:none; }
+.home-menu nav a { min-height:46px; font-size:15px; gap:12px; }
+.home-menu__access { margin-top:0; padding-top:16px; border-top:1px solid var(--home-line); gap:10px; flex:none; }
+.home-menu__access .home-button { min-height:46px; font-size:14px; }
+.home-menu > button:first-child { top:8px; right:8px; }
+
+@media(max-width:1100px) {
+  .home p:not(.home-plan__price) { font-size:14px; line-height:1.65; }
+  .home :is(.home-tag,.home-status,.home-eyebrow,.home-hero__copy>.home-eyebrow) { font-size:11px; line-height:1.5; }
+  .home :is(.home-core-tool h3,.home-tool h3,.home-steps h3,.home-footer__links h3) { font-size:14px; }
+  .home :is(.home-tool summary,.home-faq__list summary,.home-plan__features summary,.home-plan>.home-button,.home-opportunity .home-button) { font-size:14px; }
+  .home .home-plan__features li,.home .home-plan__features li small { font-size:13px; line-height:1.6; }
+  .home :is(.home-plan__price small,.home-plan__price>span) { font-size:13px; }
+  .home .home-plan__top .home-tag { font-size:11px; }
+  .home .home-plan__top { min-height:32px; }
+  .home .home-plan__description { min-height:0; }
+  .home :is(.home-text-link,.home-footer__links a,.home-final__challenge,.home-rail__hint,.home-rail__position,.home-compare table,.home-compare th small) { font-size:13px; }
+  .home :is(.daily-badge__main small,.question-count-detail,.daily-badge__cta,.daily-badge__timer,.daily-badge__live,.daily-badge__count) { font-size:12px; }
+  .home .home-presence { font-size:12px; }
+  .home-header__register { font-size:12px; }
+  .home-footer__bottom { font-size:12px; line-height:1.6; }
+  .home-plan-comparison > summary { font-size:14px; }
+  .home-plan-comparison > summary > span > span { font-size:13px; }
+}
+@media(max-width:359px) {
+  .home-header__inner { gap:6px; }
+  .home-header__actions { gap:4px; }
+  .home-header__register { padding-inline:9px; }
+}

@@ -213,7 +213,7 @@ function Index() {
                 </button>
               </SheetTrigger>
               <SheetContent className="home-menu">
-                <SheetHeader>
+                <SheetHeader className="home-menu__header">
                   <SheetTitle>
                     <NorteBrand />
                   </SheetTitle>

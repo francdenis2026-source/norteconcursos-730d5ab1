@@ -34,13 +34,19 @@ export function sameReviewRow(a,b) {
 export function validateReview(pack) {
   if (!Array.isArray(pack.items) || !pack.items.length) throw Error('Empty review');
   const improvement = pack.purpose === 'explanation-improvement';
+  const restoration = pack.purpose === 'restore-reviewed-status';
   const ids = new Set();
   for (const item of pack.items) {
     const {table,expected,patch,evidence} = item;
     const id = `${table}:${expected?.id}`;
-    if (!tables.has(table) || ids.has(id) || expected?.content_status !== (improvement ? 'active' : 'under_review')) throw Error('Invalid or repeated question');
+    if (!tables.has(table) || ids.has(id) || expected?.content_status !== (improvement ? 'active' : restoration ? 'archived' : 'under_review')) throw Error('Invalid or repeated question');
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
+    if (restoration) {
+      if (table!=='board_exam_questions' || patch.content_status!=='active' || Object.keys(patch).length!==1 || evidence?.previous_review_verified!==true) throw Error('Status restoration must preserve every reviewed field');
+      if ((evidence?.legal || expected.legal_review_required) && (!Number.isFinite(Date.parse(expected.law_version_checked_at)) || Date.parse(expected.law_version_checked_at)>Date.now())) throw Error('Existing current legal review required');
+      if (!(expected.explanation || expected.review_note)?.trim() || !Number.isFinite(Date.parse(expected.verified_at)) || Date.parse(expected.verified_at)>Date.now()) throw Error('Existing verified review required');
+    }
     if (improvement) {
       if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at','legal_basis','current_syllabus_topic_id'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
       // Legacy active rows may lack the explicit current pointer required by
@@ -51,10 +57,10 @@ export function validateReview(pack) {
     if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
     if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !patch.current_syllabus_topic_id || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
     for (const url of evidence.sources) if (new URL(url).protocol !== 'https:') throw Error('HTTPS evidence required');
-    if (!Number.isFinite(Date.parse(improvement ? patch.law_version_checked_at : patch.verified_at)) || Date.parse(improvement ? patch.law_version_checked_at : patch.verified_at)>Date.now()) throw Error('Invalid review date');
+    if (!Number.isFinite(Date.parse(improvement ? patch.law_version_checked_at : restoration ? expected.verified_at : patch.verified_at)) || Date.parse(improvement ? patch.law_version_checked_at : restoration ? expected.verified_at : patch.verified_at)>Date.now()) throw Error('Invalid review date');
     if (patch.content_status==='active' || improvement) {
       if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
-      if (evidence.legal && (!(patch.legal_basis || (improvement ? expected.legal_basis : null))?.length || !patch.law_version_checked_at)) throw Error('Current legal basis required');
+      if ((evidence.legal || (restoration && expected.legal_review_required)) && (!(patch.legal_basis || ((improvement || restoration) ? expected.legal_basis : null))?.length || !(patch.law_version_checked_at || (restoration ? expected.law_version_checked_at : null)))) throw Error('Current legal basis required');
       if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
       if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
       if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
@@ -87,7 +93,7 @@ export async function publishReview(pack, request, {dryRun=false}={}) {
       const [source]=await request(`content_sources?id=eq.${edition?.source_id}&select=*`);
       if (topic?.content_status!=='current' || edition?.status!=='active' || !source?.is_official || source.source_type!=='edital' || source.status!=='vigente') throw Error('Verified official active syllabus required');
       if (patch.subject!==undefined && patch.subject!==topic.discipline) throw Error('Corrected subject must match verified topic discipline');
-      for (const basis of patch.legal_basis || (pack.purpose==='explanation-improvement' ? expected.legal_basis : null) || []) {
+      for (const basis of patch.legal_basis || (['explanation-improvement','restore-reviewed-status'].includes(pack.purpose) ? expected.legal_basis : null) || []) {
         const sources=await request(`content_sources?url=eq.${encodeURIComponent(basis.url)}&select=id,is_official,status`);
         if (!sources.some(s=>s.is_official && ['vigente','parcialmente_revogado'].includes(s.status))) throw Error(`Official basis not registered: ${basis.url}`);
       }
