@@ -1,7 +1,7 @@
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   Sheet,
   SheetClose,
@@ -173,8 +173,50 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
   );
 }
 
+function usePointerInteractions() {
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotion.matches) return;
+
+    const cards = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)",
+      ),
+    );
+    const cleanups: (() => void)[] = [];
+
+    cards.forEach((card) => {
+      const handleMove = (event: PointerEvent) => {
+        if (event.pointerType === "touch") return;
+        const bounds = card.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        card.style.setProperty("--tilt-x", `${(x * 5).toFixed(2)}deg`);
+        card.style.setProperty("--tilt-y", `${(-y * 5).toFixed(2)}deg`);
+        card.style.setProperty("--pointer-x", `${(x + 0.5) * 100}%`);
+        card.style.setProperty("--pointer-y", `${(y + 0.5) * 100}%`);
+      };
+      const reset = () => {
+        card.style.setProperty("--tilt-x", "0deg");
+        card.style.setProperty("--tilt-y", "0deg");
+        card.style.setProperty("--pointer-x", "50%");
+        card.style.setProperty("--pointer-y", "50%");
+      };
+      card.addEventListener("pointermove", handleMove);
+      card.addEventListener("pointerleave", reset);
+      cleanups.push(() => {
+        card.removeEventListener("pointermove", handleMove);
+        card.removeEventListener("pointerleave", reset);
+      });
+    });
+
+    return () => cleanups.forEach((cleanup) => cleanup());
+  }, []);
+}
+
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
+  usePointerInteractions();
   return (
     <div className="home">
       <a href="#conteudo" className="home-skip">

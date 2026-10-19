@@ -45,3 +45,13 @@ test('FGV PCPI sources require an exact official catalog link and preserved capt
  await assert.rejects(prepareExamSources(p,database(p).request,{dryRun:true,readPdf:async path=>path==='fgv.html'?Buffer.from('changed'):bytes}),/catalog changed/);
  const commented=Buffer.from('<html><!-- <a href="/sites/default/files/concursos/edital.pdf">Not a listed document</a> --></html>'),x=structuredClone(p);for(const i of x.sources)i.evidence.catalog_sha256=createHash('sha256').update(commented).digest('hex');await assert.rejects(prepareExamSources(x,database(x).request,{dryRun:true,readPdf:async path=>path==='fgv.html'?commented:bytes}),/not listed/);
 });
+
+test('FGV TCE-TO and CGM-Rio catalogs require hashed official links, never a generic or unlisted document',async()=>{
+ for(const slug of['tceto22','cgmrj23']){
+  const p=make();for(const i of p.sources)i.row.url=`https://conhecimento.fgv.br/sites/default/files/concursos/${i.kind}.pdf`;
+  const html=Buffer.from('<html>'+p.sources.map(i=>`<a href="/sites/default/files/concursos/${i.kind}.pdf">${i.kind}</a>`).join('')+'</html>');
+  for(const i of p.sources)Object.assign(i.evidence,{catalog_url:'https://conhecimento.fgv.br/concursos/'+slug,catalog_path:'fgv.html',catalog_sha256:createHash('sha256').update(html).digest('hex')});
+  const opts={readPdf:async path=>path==='fgv.html'?html:bytes};assert.equal((await prepareExamSources(p,database(p).request,{...opts,dryRun:true})).sourcesToCreate.length,3);
+  for(const mutate of[x=>x.sources[0].evidence.catalog_url+='?search=1',x=>x.sources[0].evidence.catalog_url=x.sources[0].evidence.catalog_url.replace(slug,'unverified'),x=>x.sources[0].row.url=x.sources[0].row.url.replace('edital.pdf','unlisted.pdf'),x=>x.sources[0].evidence.catalog_sha256='0'.repeat(64)]){const x=structuredClone(p),d=database(x);mutate(x);await assert.rejects(prepareExamSources(x,d.request,{...opts,dryRun:true}));assert.equal(d.writes,0);}
+ }
+});

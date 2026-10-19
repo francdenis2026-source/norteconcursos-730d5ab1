@@ -1,0 +1,136 @@
+{
+  "scope": "Completed review and release of PRF 2021 item 86 only.",
+  "publication": {
+    "provenance_dry_run": {
+      "updated": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ]
+    },
+    "provenance": {
+      "updated": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ],
+      "preserved": 0
+    },
+    "context_dry_run": {
+      "repaired": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ]
+    },
+    "context": {
+      "repaired": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ],
+      "preserved": 0
+    },
+    "legal_dry_run": {
+      "reviewed": 1,
+      "updated": [],
+      "preserved": 0,
+      "pending": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ]
+    },
+    "legal": {
+      "reviewed": 1,
+      "updated": [
+        "e06f3ad5-8c0d-4b20-885e-486c3ebb9275"
+      ],
+      "preserved": 0
+    },
+    "checked_at": "2026-10-19T20:36:37.087Z",
+    "readback": {
+      "questions_in_scope": 220,
+      "updated": 1,
+      "other_questions_preserved": 219,
+      "original_item_and_key_preserved": true,
+      "shared_support_preserved": true
+    },
+    "counts": {
+      "tables": {
+        "official_exam_questions": {
+          "under_review": 37,
+          "administrative_pending": 2
+        },
+        "board_exam_questions": {
+          "under_review": 358,
+          "administrative_pending": 69
+        }
+      },
+      "under_review": 395,
+      "administrative_pending": 71
+    }
+  },
+  "question": {
+    "id": "e06f3ad5-8c0d-4b20-885e-486c3ebb9275",
+    "item": 86,
+    "status_after": "active",
+    "official_key_preserved": "E",
+    "original_statement_preserved": true,
+    "shared_support_preserved": true,
+    "changed_fields": [
+      "question_source_id",
+      "answer_key_source_id",
+      "source_page",
+      "content_status",
+      "legal_review_required",
+      "context_review_required",
+      "legal_basis",
+      "law_version_checked_at",
+      "review_note",
+      "verified_at",
+      "current_syllabus_topic_id"
+    ],
+    "comment": "GABARITO DEFINITIVO: ERRADO (E), questão 86 da PRF 2021.\n\nPOR QUE ESTÁ ERRADA?\nNo caso da prova, a empresa impetrou mandado de segurança contra a multa aplicada sem prévia oitiva. O que se questiona é a regularidade jurídica da atuação administrativa. Isso é controle de legalidade/juridicidade, não a substituição do mérito administrativo por uma preferência do juiz.\nO art. 5º, LXIX, da Constituição prevê o mandado de segurança para proteger direito líquido e certo diante de ilegalidade ou abuso de poder, quando presentes os demais requisitos. Já o art. 5º, LV, assegura contraditório e ampla defesa nos processos administrativos. São parâmetros jurídicos de controle da atuação descrita no enunciado.\n\nDISTINGA PARA NÃO ERRAR\nLegalidade/juridicidade: o ato respeitou a lei, o procedimento, a finalidade e as garantias aplicáveis? O controle pode examinar esses limites.\nMérito administrativo: escolha legítima de conveniência e oportunidade dentro do espaço permitido pelo direito. O juiz não passa a ser o gestor nem pode simplesmente trocar uma escolha administrativa lícita pela que pessoalmente considera melhor.\nEssa distinção não torna o ato discricionário imune ao Judiciário. Uma alegação de discricionariedade não protege ilegalidade ou abuso de poder. Ao mesmo tempo, a propositura do mandado de segurança não garante sua concessão: é preciso demonstrar direito líquido e certo e cumprir os requisitos da via escolhida.\n\nEXEMPLO: a empresa sustenta que a Administração aplicou uma sanção sem permitir defesa. Examinar essa alegação e as garantias procedimentais é controle de legalidade, ainda que o ato tenha conteúdo administrativo.\nVARIAÇÃO: o interessado apenas prefere que a Administração adote outra escolha, sem demonstrar violação jurídica, e pede que o juiz imponha sua preferência ao gestor. Isso não equivale à finalidade constitucional do mandado de segurança.\nCONTRASTE COM A QUESTÃO 90: a 90 afirma que buscar controle judicial de abusos é aplicação da sindicabilidade — Certo. A 86 qualifica o mandado de segurança como controle judicial de mérito administrativo — Errado. Ter controle judicial não significa substituir livremente a escolha administrativa.\n\nFIXAÇÃO\n1. O mandado de segurança protege uma preferência pessoal do impetrante por outra decisão administrativa? Não; exige direito líquido e certo e ilegalidade ou abuso de poder, além dos demais requisitos.\n2. Ato discricionário fica imune ao controle judicial? Não; seus limites jurídicos podem ser controlados.\n3. No cenário narrado, analisar a falta de prévia oitiva equivale a escolher por conveniência do juiz qual contrato celebrar? Não; são análises distintas.\n\nALERTA HISTÓRICO\nO cenário é o da prova de 2021. Sua descrição da contratação de treinamento não é uma explicação do regime licitatório atual. Esta revisão se limita ao controle judicial cobrado na questão 86, sem declarar atualizadas as regras de contratação mencionadas no caso.\n\nFONTES E DATAS\nConstituição, art. 5º, LXIX, LV e XXXV: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Cópia oficial do Planalto capturada em 16/10/2026, hash reconferido nesta revisão. A nova consulta ao Planalto não foi concluída; não se atribui a esta revisão captura nova nem precedente judicial que não tenha sido consultado.\nCaderno e gabarito definitivo oficiais do Cebraspe obtidos em 19/10/2026: páginas PDF 5 e 1, item 86, letra E. Vínculo ao edital: página 39, Bloco III — Direito Administrativo, controle judicial. O caso compartilhado e o comando foram conferidos no original.\n\nHISTÓRICO EDITORIAL — registros anteriores preservados; as pendências descritas abaixo foram resolvidas nesta revisão pontual:\nRetirada de publicação em 17/10/2026 (estava ativa sem base legal): Item doutrinário (limites do controle judicial do mérito): sem texto legal que valide a chave. Chave oficial conferida com o gabarito definitivo, mas sem validação legal; permanece em revisão.\n\nConferência documental de 19/10/2026: item 86, caderno oficial PRF 2021 página PDF 5 e gabarito definitivo página 1, letra E. Substituídas as referências genéricas pelos documentos exatos; revisão de contexto e jurídica tratadas nas etapas seguintes.\n\nContexto conferido na página 5: contrato de treinamento, multa por inexecução, ausência de prévia oitiva e impetração de mandado de segurança. Mantidos o texto de apoio compartilhado e a frase original do item, sem duplicação do cenário no enunciado.",
+    "comment_sha256": "e8f99c3708b4e8fa2a3bcfa005a4c3bf78220423aede34d38768c2e848f0de8c"
+  },
+  "legal_capture": {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+    "captured_at": "2026-10-16T20:42:33.965Z"
+  },
+  "verified_pages": {
+    "prova": 5,
+    "gabarito": 1,
+    "edital": 39
+  },
+  "official_sources_reused": [
+    "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/578_PRF_001_01.PDF",
+    "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+    "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/ED_1_PRF_2021_ABERTURA.PDF"
+  ],
+  "fresh_source_attempts": [
+    {
+      "name": "cf",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/Constituicao.htm",
+      "error": "The read operation timed out"
+    },
+    {
+      "name": "prf-decree",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/decreto/d8282.htm",
+      "error": "The read operation timed out"
+    },
+    {
+      "name": "stf-sumulas",
+      "url": "https://portal.stf.jus.br/arquivo/cms/jurisprudenciaSumula/anexo/Sumulas.pdf",
+      "sha256": "cf28f572189dc6d3249d027d398f49a1f13c709e43ffe4f23749164a7072269c",
+      "captured_at": "2026-10-19T20:33:07.419200+00:00",
+      "status": 200,
+      "bytes": 54470
+    }
+  ],
+  "validation": {
+    "targeted_tests_passed": 42,
+    "actual_saved_row": "eligible, original C/E format and E key preserved, new teaching comment first and no duplicated scenario",
+    "other_prf_2021_rows_preserved": 219,
+    "app_changes": false
+  },
+  "limits": "Constitutional article 5 LXIX/LV/XXXV reviewed from the preserved official Planalto capture of 16/10. Fresh Planalto attempts timed out; the STF PDF request returned HTML and was not used as jurisprudential evidence. No unconsulted precedent or current procurement regime claimed."
+}

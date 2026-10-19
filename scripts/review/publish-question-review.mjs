@@ -45,6 +45,7 @@ export function validateReview(pack) {
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
     if (table==='official_exam_questions' && 'explanation' in patch) throw Error('Official question commentary must use review_note');
+    if (table==='board_exam_questions' && 'current_syllabus_topic_id' in patch) throw Error('Board questions must use syllabus_topic_id');
     if (pack.purpose==='pcpr-papiloscopista-restoration') {
       if (table!=='board_exam_questions' || expected.contest_name!=='Polícia Civil do Estado do Paraná' || expected.exam_year!==2026 || expected.career_name!=='Papiloscopista Policial' || !restoreItems.delete(expected.item_number) || pack.items.length>64 || patch.content_status!=='active' || Object.keys(patch).length!==1 || !evidence?.restore_expected || evidence.restore_expected.career_name!=='Agente de Polícia Judiciária' || evidence.restore_expected.content_status!=='active') throw Error('Restoration is restricted to the 64 shared PCPR Papiloscopista items and status only');
     }
@@ -61,7 +62,7 @@ export function validateReview(pack) {
       if (!(patch.review_note || patch.explanation)?.trim() || (patch.review_note || patch.explanation).length<200) throw Error('Substantive explanation required');
     } else if (!['active','archived','obsolete'].includes(patch.content_status)) throw Error('Explicit decision required');
     if (!evidence?.reason || !Array.isArray(evidence.sources) || !evidence.sources.length) throw Error('Individual evidence required');
-    if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !patch.current_syllabus_topic_id || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
+    if (patch.subject!==undefined && (typeof patch.subject!=='string' || !patch.subject.trim() || patch.subject!==patch.subject.trim() || patch.subject.length>120 || !(table==='board_exam_questions'?patch.syllabus_topic_id:patch.current_syllabus_topic_id) || evidence.classification_reviewed!==true)) throw Error('Explicit classified subject and verified topic required');
     for (const url of evidence.sources) if (new URL(url).protocol !== 'https:') throw Error('HTTPS evidence required');
     const reviewDate=restoration ? expected.verified_at : improvement ? patch.law_version_checked_at : patch.verified_at;
     if (!Number.isFinite(Date.parse(reviewDate)) || Date.parse(reviewDate)>Date.now()) throw Error('Invalid review date');
