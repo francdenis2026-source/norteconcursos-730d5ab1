@@ -33,3 +33,6 @@ Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as 
 - A data é reconferida a cada 60 s (`src/lib/guestQuota.ts`); a página `/desafio-diario` recarrega sozinha na virada do dia (sem interromper quem está respondendo).
 - As 10 questões do dia são as mesmas para todos (`get_daily_guest_questions`). A contagem de respondidas fica no `localStorage` de cada aparelho, com a chave da data do Acre.
 - O selo da hero (`DailyChallengeBadge`) mostra quantas restam hoje e a contagem até a renovação; ao concluir, convida a criar conta.
+
+## Theme architecture
+- Homepage color aliases must inherit shared semantic theme tokens; image-backed sections use dedicated on-image tokens to maintain contrast without a second competing palette.
