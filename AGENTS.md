@@ -36,3 +36,4 @@ Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as 
 
 ## Theme architecture
 - Homepage color aliases must inherit shared semantic theme tokens; image-backed sections use dedicated on-image tokens to maintain contrast without a second competing palette.
+- Install missing-module recovery before hydration as well as in the React boundary, sharing a session throttle to avoid reload loops after version changes.
