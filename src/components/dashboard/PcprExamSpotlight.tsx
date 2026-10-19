@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight, ExternalLink, Gavel } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PCPR_EXAM, PCPR_TRAINER_SEARCH } from "@/lib/pcprExam";
 
@@ -24,12 +24,19 @@ export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
 
   return (
     <section
-      className={`pcpr-spot no-print${compact ? " pcpr-spot--compact" : ""}`}
+      className={`pcpr-spot pcpr-spot--illustrated no-print${compact ? " pcpr-spot--compact" : ""}`}
       aria-label="Prova da Polícia Civil do Paraná 2026"
     >
-      <span className="pcpr-spot__icon" aria-hidden="true">
-        <Gavel />
-      </span>
+      <img
+        className="pcpr-spot__hero"
+        src="/media/hero/pcpr-investigacao.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        width="1672"
+        height="940"
+      />
       <div className="pcpr-spot__body">
         <span className="pcpr-spot__kicker">Em destaque · prova de {PCPR_EXAM.appliedOn}</span>
         <h2>Prova da Polícia Civil do Paraná 2026</h2>

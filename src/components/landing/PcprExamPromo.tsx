@@ -37,6 +37,17 @@ export function PcprExamPromo() {
       className="home-opportunity home-opportunity--pcpr"
       aria-labelledby="pcpr-title"
     >
+      <div className="home-opportunity__image home-pcpr-hero">
+        <img
+          src="/media/hero/pcpr-investigacao.webp"
+          alt="Cena ilustrativa de investigação, com profissionais em um escritório e araucárias ao fundo"
+          loading="lazy"
+          decoding="async"
+          width="1672"
+          height="940"
+        />
+        <span>PCPR · FOCO NA SUA PREPARAÇÃO</span>
+      </div>
       <div className="home-opportunity__body">
         <div className="home-opportunity__identity">
           <span className="home-eyebrow">Prova disponível · PCPR {PCPR_EXAM.year}</span>

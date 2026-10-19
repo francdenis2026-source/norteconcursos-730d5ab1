@@ -2282,3 +2282,10 @@
     display: inline;
   }
 }
+
+/* Exclusive Paraná hero keeps faces visible without putting copy over the photograph. */
+.home-opportunity--pcpr .home-pcpr-hero { height:220px; flex-shrink:0; overflow:hidden; background:#222731; }
+.home-pcpr-hero > img { object-position:65% 10%; }
+.home-pcpr-hero::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(20,24,31,.85),transparent 55%); pointer-events:none; }
+.home-pcpr-hero > span { position:absolute; z-index:1; inset-inline:24px; bottom:16px; color:#f7dfab; font-size:10px; font-weight:700; letter-spacing:.12em; line-height:1.5; }
+@media(max-width:639px) { .home-opportunity--pcpr .home-pcpr-hero { height:190px; } .home-pcpr-hero > span { inset-inline:20px; font-size:9px; } }
