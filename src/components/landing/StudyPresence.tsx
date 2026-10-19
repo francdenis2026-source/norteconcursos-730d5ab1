@@ -1,75 +1,48 @@
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import { parseStudyPresence, freshStudyPresence, studyPresenceLabel } from "@/lib/studyPresence";
+import { useOnlinePresence } from "@/hooks/useOnlinePresence";
+import { studyPresenceLabel } from "@/lib/studyPresence";
 
-/** Only an aggregate from recent study heartbeats is public. No individual sessions are fetched. */
+/** The shared root connection includes anonymous visitors and signed-in browsers on all routes. */
 export function StudyPresence() {
-  const [now, setNow] = useState(() => performance.now());
-  useEffect(() => {
-    const refreshAge = () => setNow(performance.now());
-    const interval = window.setInterval(refreshAge, 15_000);
-    document.addEventListener("visibilitychange", refreshAge);
-    return () => {
-      window.clearInterval(interval);
-      document.removeEventListener("visibilitychange", refreshAge);
-    };
-  }, []);
-  const query = useQuery({
-    queryKey: ["public-study-presence"],
-    staleTime: 20_000,
-    retry: 0,
-    refetchInterval: 30_000,
-    refetchIntervalInBackground: false,
-    refetchOnWindowFocus: true,
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .rpc("get_public_study_presence")
-        .abortSignal(AbortSignal.timeout(8000));
-      if (error) throw error;
-      const presence = parseStudyPresence(data);
-      if (!presence) throw new Error("Contagem de atividade indisponível");
-      const receivedAt = performance.now();
-      setNow(receivedAt);
-      return { presence, receivedAt };
-    },
-  });
-  const data = !query.isError ? freshStudyPresence(query.data, now) : null;
-  const count = data?.studying_now ?? 0;
+  const presence = useOnlinePresence();
+  const available = presence.state === "ready" && presence.count !== null;
+  const count = presence.count ?? 0;
   const formatted = new Intl.NumberFormat("pt-BR", {
     notation: count >= 1000 ? "compact" : "standard",
     maximumFractionDigits: 1,
   }).format(count);
+  const status = presence.state === "connecting" ? "Conectando presença" : "Presença indisponível";
   return (
     <span
       className="home-presence"
-      data-available={!!data}
-      data-active={count > 0}
-      data-state={data ? "ready" : query.isPending ? "loading" : "unavailable"}
+      data-available={available}
+      data-active={available && count > 0}
+      data-state={presence.state}
       role="status"
-      aria-label={
-        data
-          ? studyPresenceLabel(count)
-          : query.isPending
-            ? "Consultando presença"
-            : "Presença indisponível"
-      }
+      aria-label={available ? studyPresenceLabel(count) : status}
       title={
-        data
-          ? `${studyPresenceLabel(count)}. Contas com atividade de estudo nos últimos 90 segundos. Atualização a cada 30 segundos.`
-          : "Não foi possível obter uma contagem atual. A consulta será refeita automaticamente."
+        available
+          ? `${studyPresenceLabel(count)}. Navegadores com uma aba visível da plataforma, com ou sem login. Abas do mesmo navegador contam uma vez.`
+          : "A conexão de presença está sendo restabelecida. A contagem aparecerá assim que estiver disponível."
       }
     >
       <i className="home-presence__dot" aria-hidden="true" />
       <span aria-hidden="true">
-        {data ? (
+        {available ? (
           <>
             <strong>{formatted}</strong>
-            <span className="home-presence__full"> estudando agora</span>
-            <span className="home-presence__short"> em estudo</span>
+            <span className="home-presence__full">
+              {" "}
+              {count === 1 ? "visitante online" : "visitantes online"}
+            </span>
+            <span className="home-presence__short"> online</span>
           </>
         ) : (
-          <span>{query.isPending ? "Consultando presença" : "Presença indisponível"}</span>
+          <>
+            <span className="home-presence__full">{status}</span>
+            <span className="home-presence__short">
+              {presence.state === "connecting" ? "Conectando…" : "Indisponível"}
+            </span>
+          </>
         )}
       </span>
     </span>

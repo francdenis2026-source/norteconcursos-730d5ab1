@@ -28,3 +28,15 @@ export function createIsolatedSupabaseClient(storageKey: string) {
     auth: { persistSession: false, autoRefreshToken: false, storageKey },
   });
 }
+
+/** Public presence never receives account tokens or consumes an email callback URL. */
+export function createPublicPresenceClient() {
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+      storageKey: "norte-public-presence",
+    },
+  });
+}

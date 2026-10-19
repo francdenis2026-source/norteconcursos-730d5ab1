@@ -1,3 +1,4 @@
+import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -189,6 +190,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(startOnlinePresence, []);
   useEffect(() => {
     let active = true;
     let pending = false;
