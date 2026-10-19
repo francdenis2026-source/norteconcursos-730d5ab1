@@ -23,3 +23,14 @@ export function trainerContext(
     automatic: false,
   };
 }
+
+/** External discipline links stay scoped; the sidebar opens the unfiltered trainer. */
+export function lockedTrainerSubject(value: string | undefined) {
+  return value && value.trim() && value !== "all" ? canonicalSubject(value) : null;
+}
+export function trainerDisciplineCatalog<T extends { subject: string }>(
+  catalog: T[],
+  subject: string | null,
+): T[] {
+  return subject ? catalog.filter((q) => canonicalSubject(q.subject) === subject) : catalog;
+}

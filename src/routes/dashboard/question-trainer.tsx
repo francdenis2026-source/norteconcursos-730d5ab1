@@ -1,5 +1,9 @@
 import { scrollAppToSection } from "@/lib/appScroll";
-import { trainerContext } from "@/lib/trainerContext";
+import {
+  trainerContext,
+  lockedTrainerSubject,
+  trainerDisciplineCatalog,
+} from "@/lib/trainerContext";
 import { useUnseenActivity } from "@/hooks/useUnseenActivity";
 import { freshActivityQuestions } from "@/lib/dailyStudyActivity";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
@@ -185,6 +189,7 @@ type OrderMode = "random" | "exam";
 
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
+  const lockedSubject = lockedTrainerSubject(routeFilters.subject);
   const navigate = useNavigate();
   const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const userId = user?.id;
@@ -261,6 +266,10 @@ function QuestionTrainer() {
     routeFilters.edition,
     examEdition.data,
   ]);
+  const subjectCatalog = React.useMemo(
+    () => trainerDisciplineCatalog(catalog, lockedSubject),
+    [catalog, lockedSubject],
+  );
   const {
     locked,
     loading: lockedLoading,
@@ -520,7 +529,7 @@ function QuestionTrainer() {
       const storageKey = `trainer-bookmark:${userId}`;
       const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
       if (!raw) return;
-      const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, catalog);
+      const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, subjectCatalog);
       if (!restored) return;
       const b = restored.bookmark;
       sessionAnswers.current = new Map(
@@ -558,7 +567,7 @@ function QuestionTrainer() {
       setCareer(selectedQuestionCareer(f.career, f.contest, f.year));
       setYear(f.year);
       setAppliedExam(f.appliedExam);
-      setSubject(f.subject);
+      setSubject(lockedSubject ?? f.subject);
       setSource(f.source);
       setReviewed(f.reviewed);
       setState(f.state);
@@ -572,7 +581,7 @@ function QuestionTrainer() {
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
-  }, [loading, error, examEdition.isError, userId, routeKey, catalog]);
+  }, [loading, error, examEdition.isError, userId, routeKey, subjectCatalog, lockedSubject]);
   const examNotice = routeFilters.edition ? (
     <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
       <strong>
@@ -649,14 +658,14 @@ function QuestionTrainer() {
     () =>
       routeFilters.unseen === "1"
         ? freshActivityQuestions(
-            catalog,
+            subjectCatalog,
             new Set([...(unseenHistory.data ?? []), ...locked.keys(), ...reinforced.keys()]),
             routeFilters.subject,
             routeFilters.studyTopic,
           )
-        : catalog,
+        : subjectCatalog,
     [
-      catalog,
+      subjectCatalog,
       routeFilters.unseen,
       routeFilters.subject,
       routeFilters.studyTopic,
@@ -1402,6 +1411,7 @@ function QuestionTrainer() {
             setup
           />
           <TrainerSetup
+            lockedSubject={lockedSubject}
             loading={loading}
             available={
               practiceMode === "catalog"
@@ -1437,6 +1447,7 @@ function QuestionTrainer() {
               setYear: manual(setYear),
               setAppliedExam: selectAppliedExam,
               setSubject: (value: string) => {
+                if (lockedSubject) return;
                 setSubject(value);
                 setTopic("all");
               },
@@ -1448,7 +1459,7 @@ function QuestionTrainer() {
               setCategory: setCategory,
               setArea: (value: string) => {
                 setArea(value);
-                setSubject("all");
+                if (!lockedSubject) setSubject("all");
                 setTopic("all");
               },
               setTopic: setTopic,
@@ -2133,6 +2144,7 @@ type SetupSetters = {
 
 function TrainerSetup({
   loading,
+  lockedSubject,
   available,
   dailyRemaining,
   choices,
@@ -2143,6 +2155,7 @@ function TrainerSetup({
   start,
 }: {
   loading: boolean;
+  lockedSubject: string | null;
   currencyLocked: boolean;
   available: number;
   dailyRemaining?: number | undefined;
@@ -2170,7 +2183,7 @@ function TrainerSetup({
     setters.setCareer("all");
     setters.setYear("all");
     setters.setAppliedExam("all");
-    setters.setSubject("all");
+    if (!lockedSubject) setters.setSubject("all");
     setters.setSource("all");
     setters.setReviewed("all");
     setters.setDifficulty("all");
@@ -2246,15 +2259,33 @@ function TrainerSetup({
           </p>
         )}
         <div className="trainer-filter-grid">
-          <TrainerFilter
-            label="Disciplina"
-            value={values.subject}
-            setValue={setters.setSubject}
-            options={choices.subjects}
-            counts={facets.counts["subject"]}
-            allCount={facets.totals["subject"]}
-            allLabel="Todas as disciplinas"
-          />
+          {lockedSubject ? (
+            <div
+              className="trainer-field trainer-fixed-discipline"
+              role="group"
+              aria-label="Disciplina fixa neste treino"
+            >
+              <span className="trainer-field__label">Disciplina</span>
+              <div>
+                <strong>{lockedSubject}</strong>
+                <Lock aria-hidden="true" />
+              </div>
+              <p>
+                Para trocar de disciplina, abra <strong>Treinador de questões</strong> na barra
+                lateral.
+              </p>
+            </div>
+          ) : (
+            <TrainerFilter
+              label="Disciplina"
+              value={values.subject}
+              setValue={setters.setSubject}
+              options={choices.subjects}
+              counts={facets.counts["subject"]}
+              allCount={facets.totals["subject"]}
+              allLabel="Todas as disciplinas"
+            />
+          )}
           <TrainerFilter
             label="Assunto"
             value={values.topic}

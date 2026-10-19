@@ -60,13 +60,26 @@ async def main():
      await page.get_by_role('button',name='Começar sessão',exact=True).wait_for(timeout=60000)
      await expect(page.get_by_role('button',name='Começar sessão',exact=True)).to_be_enabled()
      assert await page.locator('.trainer-resume-banner').count()==0
-     await expect(page.get_by_role('combobox',name='Disciplina',exact=True)).to_contain_text(subject)
-     await expect(page.get_by_role('combobox',name='Disciplina',exact=True)).to_have_attribute('data-filtered','true')
+     fixed=page.get_by_role('group',name='Disciplina fixa neste treino',exact=True)
+     await expect(fixed).to_contain_text(subject)
+     assert await page.get_by_role('combobox',name='Disciplina',exact=True).count()==0
      await expect(page.get_by_role('combobox',name='Assunto',exact=True)).to_contain_text('Todos os assuntos')
+     await page.get_by_role('button',name='Limpar filtros',exact=True).click()
+     await expect(fixed).to_contain_text(subject)
+     assert await page.get_by_role('combobox',name='Disciplina',exact=True).count()==0
      assert 'go=' not in page.url
      assert subject in page.url or 'subject=' in page.url
-     results.append({'width':width,'metric':label,'subject':subject,'exact_discipline_setup_without_autostart':True})
-     await page.go_back(wait_until='domcontentloaded')
+     results.append({'width':width,'metric':label,'subject':subject,'exact_discipline_setup_without_autostart':True,'locked_after_reset':True,'sidebar_unlocks_all_disciplines':True})
+     await page.locator('a[href="/dashboard/question-trainer"]').first.evaluate('(element)=>element.click()')
+     chooser=page.get_by_role('combobox',name='Disciplina',exact=True)
+     await expect(chooser).to_contain_text('Todas as disciplinas')
+     assert await page.get_by_role('group',name='Disciplina fixa neste treino',exact=True).count()==0
+     await chooser.click()
+     target='Matemática' if subject=='Língua Portuguesa' else 'Língua Portuguesa'
+     await page.get_by_role('option',name=target,exact=False).click()
+     await expect(chooser).to_contain_text(target)
+     assert 'subject=' not in page.url
+     await page.goto('http://localhost:8080/dashboard',wait_until='domcontentloaded')
      await page.get_by_role('button',name='Taxa de acerto: 75%. Ver detalhes',exact=True).wait_for()
   assert not errors,errors
   print(json.dumps({'cases':results,'browser_errors':errors}))

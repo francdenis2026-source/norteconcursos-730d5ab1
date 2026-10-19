@@ -13268,3 +13268,8 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .trainer-focus-target { scroll-margin-block-start: 90px; }
 .trainer-focus-target:focus { outline: none; }
 @media(max-width:600px) { .trainer-context { grid-template-columns: minmax(0,1fr); padding: 16px; gap: 16px; margin-bottom: 16px; } }
+
+.trainer-fixed-discipline > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--muted); color: var(--foreground); }
+.trainer-fixed-discipline > div strong { font-size: 14px; overflow-wrap: anywhere; }
+.trainer-fixed-discipline > div svg { width: 16px; height: 16px; flex: none; color: var(--muted-foreground); }
+.trainer-fixed-discipline p { font-size: 12px; line-height: 1.6; color: var(--muted-foreground); margin-top: 7px; }
