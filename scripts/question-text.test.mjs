@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseSupportLines, reflowParagraphs, reflowStem, needsMissingSupportText } from '../src/lib/questionText.ts';
+import { parseSupportLines, reflowParagraphs, reflowStem, needsMissingSupportText, classifySupportBlock } from '../src/lib/questionText.ts';
 
 const PF = `  1 Imagine uma operação de busca na selva. Sem mapas,
     binóculos ou apoio logístico; somente com um facão. Assim
@@ -59,6 +59,17 @@ test('questões que dependem de um texto ausente são detectadas', () => {
   assert.equal(needsMissingSupportText({ subject: 'Direito Penal', text: 'De acordo com o texto legal, o crime…' }), false);
 });
 
+test('inline cited reading passages and attached visual bases are not mistaken for missing support',()=>{
+ const passage='Uma notícia apresenta informações verificáveis e organiza os fatos para o leitor. '.repeat(5);
+ const command=' No texto, o segundo parágrafo apresenta qual relação?\n(A) alternativa um\n(B) alternativa dois';
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: '+passage+' https://example.test/noticia Acesso em 15.8.26.'+command}),false);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/noticia'+command}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/noticia'+command+'\n(A) '+passage}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/cartaz'+command,figures:['https://example.test/verified.png']}),false);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'Leia o texto a seguir: https://example.test/cartaz'+command,figures:['javascript:alert(1)']}),true);
+ assert.equal(needsMissingSupportText({subject:'Língua Portuguesa',source:'official',text:'De acordo com o texto ausente, julgue a oração.',figures:['https://example.test/unrelated.png']}),true);
+});
+
 test('FGV inline full text and reviewed image support are recognized without accepting a missing text',()=>{
  const subject='Língua Portuguesa';
  const body='A biblioteca pública promove a leitura e reúne a comunidade em atividades culturais. Os participantes encontram livros e compartilham suas experiências, enquanto os profissionais organizam oficinas para diferentes públicos. ';
@@ -68,4 +79,11 @@ test('FGV inline full text and reviewed image support are recognized without acc
  assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, assinale a opção que apresenta a ideia correta. '+body}),true);
  assert.equal(needsMissingSupportText({subject,text:'Segundo o texto, qual a ideia principal?',figures:['https://example.test/decorative.png']}),true);
  assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, julgue a afirmação.',figures:['javascript:alert(1)']}),true);
+});
+
+test('classifySupportBlock separa título, fonte, fala e corpo', () => {
+  assert.equal(classifySupportBlock('O futuro da escrita', 0), 'title');
+  assert.equal(classifySupportBlock('Disponível em: https://exemplo.gov.br. Acesso em: 10 out. 2025.', 3), 'source');
+  assert.equal(classifySupportBlock('— Onde você vai? — perguntou ela.', 2), 'dialogue');
+  assert.equal(classifySupportBlock('A polícia civil exerce funções de polícia judiciária, conforme a Constituição.', 1), 'body');
 });

@@ -54,23 +54,36 @@ interface SheetContentProps
     React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {
   menuMotion?: "popover" | "drawer";
+  overlayClassName?: string;
+  closeLabel?: string;
 }
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", menuMotion, className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay className={menuMotion ? "menu-sheet-overlay" : undefined} />
-    <SheetPrimitive.Content ref={ref} data-menu-motion={menuMotion} data-menu-side={side} className={cn(sheetVariants({ side }), className)} {...props}>
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background cursor-pointer transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
-        <span className="sr-only">{menuMotion ? "Fechar menu" : "Fechar"}</span>
-      </SheetPrimitive.Close>
-      {children}
-    </SheetPrimitive.Content>
-  </SheetPortal>
-));
+>(
+  (
+    { side = "right", menuMotion, className, children, overlayClassName, closeLabel = "Fechar", ...props },
+    ref,
+  ) => (
+    <SheetPortal>
+      <SheetOverlay className={cn(menuMotion && "menu-sheet-overlay", overlayClassName)} />
+      <SheetPrimitive.Content
+        ref={ref}
+        data-menu-motion={menuMotion}
+        data-menu-side={side}
+        className={cn(sheetVariants({ side }), className)}
+        {...props}
+      >
+        <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background cursor-pointer transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+          <X className="h-4 w-4" />
+          <span className="sr-only">{closeLabel}</span>
+        </SheetPrimitive.Close>
+        {children}
+      </SheetPrimitive.Content>
+    </SheetPortal>
+  ),
+);
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
 const SheetHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (

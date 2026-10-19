@@ -102,7 +102,7 @@ export function HomeRail({
       </div>
       {state.overflow && (
         <div className="home-rail__controls">
-          <span className="home-rail__hint">Deslize para explorar</span>
+          <span className="home-rail__hint">Use as setas ou deslize</span>
           <span className="home-rail__position" role="status" aria-live="polite">
             {state.first === state.last ? state.first : `${state.first}–${state.last}`} de {count}
           </span>

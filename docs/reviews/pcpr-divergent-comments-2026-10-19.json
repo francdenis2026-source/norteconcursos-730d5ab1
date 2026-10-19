@@ -1,0 +1,63 @@
+{
+  "scope": "Commentary enrichment for PCPR 2026 Delegado items 14 and 51. No new legal clearance or reactivation.",
+  "published_at": "2026-10-19T18:47:21.245Z",
+  "updated": 2,
+  "online_reverification": "HTTP 403 on Planalto, STF and STJ; retry outside sandbox also failed. Prior legal-check dates preserved.",
+  "sources": [
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/",
+      "sha256": "beebfb44c4905adcce78e9e41d1471c350f7d94b4e4238eba92e4c68ac8887fe",
+      "retrieval_completed_at": "2026-10-16T15:26:15.841861+00:00",
+      "reviewed": true
+    },
+    {
+      "url": "https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%22439%22.num.&O=JT",
+      "sha256": "54134bc4b75764c37a0484f792c02d75312bd355087e7ca47deaedd14d82f083",
+      "retrieval_completed_at": "2026-10-16T15:24:46.417912+00:00",
+      "reviewed": true
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "status": 200,
+      "sha256": "07e12b2a357170b8bd691f7e7c7931277f2dd32c1f04f1d57e80a2c9ceec7794",
+      "captured_at": "2026-10-16T15:24:50.092Z",
+      "reviewed": true
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+      "status": 200,
+      "sha256": "1ea84e6c53926ec566881cf77d317f77c70161054734b06fd62826f344373b6e",
+      "captured_at": "2026-10-16T15:24:48.774Z",
+      "reviewed": true
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+      "status": 200,
+      "sha256": "ff9e7d9d88a5ff3edc788f82fac735402e54eebea822832b7d16a1b91198a851",
+      "captured_at": "2026-10-16T15:24:49.302Z",
+      "reviewed": true
+    }
+  ],
+  "readback": "All 300 PCPR rows compared; exactly two commentary updates and 298 unchanged rows. Original questions, preliminary keys, status, syllabus and legal-check dates preserved.",
+  "tests": "16 publisher tests passed; dry-run passed; full-row compare-and-set publication and independent readback passed.",
+  "items": [
+    {
+      "id": "e5102a44-dd59-42d4-a938-0769effe8495",
+      "item": 14,
+      "status": "archived",
+      "preliminary_key": "A",
+      "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+      "comment_sha256": "74a2495a398a91fc21a327f580fbd91a48236db0ec768c4492c2b865e17ab1d0",
+      "comment": "QUESTÃO 14 — CORRUPÇÃO PASSIVA E AUTOLAVAGEM\nGabarito preliminar registrado: A. Conclusão jurídica editorial: C é compatível com os atos autônomos de dissimulação descritos; isso não é retificação oficial da FGV.\n\nENTENDA EM DUAS ETAPAS\n1. Solicitar ou receber vantagem indevida em razão da função caracteriza corrupção passiva (art. 317 do Código Penal).\n2. Depois, simular uma compra e emitir documentação falsa para esconder a origem da propina pode configurar lavagem (art. 1º da Lei 9.613/1998). Quando o próprio autor da infração antecedente pratica esses atos autônomos, fala-se em autolavagem. Não basta presumir lavagem porque houve corrupção: é preciso identificar a ocultação ou dissimulação adicional.\nNo caso, a operação simulada com obras de arte e notas falsas fornece a razão jurídica para sustentar C, com concurso material quando se reconhecem condutas autônomas (art. 69 do CP).\n\nCOMENTÁRIO DAS ALTERNATIVAS\nA: não é seguro tratar como mero exaurimento uma operação autônoma montada para dissimular a origem dos valores. A divergência incide exatamente aqui.\nB: a Lei 9.613/1998 não prevê modalidade culposa. Saber que Ricardo ocupa cargo público, isoladamente, não demonstra ciência da origem criminosa do dinheiro. A responsabilização de Amanda exige prova dos elementos do tipo e do dolo; não se presume culpa penal por sua profissão ou pelo cargo do cliente.\nC: juridicamente compatível com a descrição de corrupção seguida de atos próprios de ocultação ou dissimulação. Não transforma todo gasto de dinheiro ilícito em autolavagem.\nD: incorreta. O art. 2º, II, estabelece a autonomia processual em relação à infração antecedente. Seu § 1º exige indícios suficientes da existência da infração antecedente, não condenação prévia do seu autor.\nE: não há absorção automática da corrupção pela lavagem quando existem condutas autônomas.\n\nEXEMPLO: receber propina e usá-la diretamente para uma despesa cotidiana não comprova, por si só, uma nova lavagem.\nVARIAÇÃO: encenar a venda de um quadro e produzir notas falsas para apresentar a propina como receita lícita revela uma etapa adicional de dissimulação, se comprovados os elementos do crime.\nFIXAÇÃO: o autor da corrupção pode cometer lavagem do mesmo dinheiro? Sim, se praticar atos autônomos que preencham o tipo; o simples recebimento ou gasto não basta automaticamente.\n\nFONTES: Lei 9.613/1998, arts. 1º e 2º, II e § 1º (https://www.planalto.gov.br/ccivil_03/leis/l9613.htm); Código Penal, arts. 317 e 69 (https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm). A conclusão decorre desses dispositivos e dos fatos descritos; nenhum novo precedente específico de autolavagem foi certificado nesta atualização.\n\nNota de atualização editorial — 19/10/2026: comentários ampliados com base nas cópias oficiais consultadas em 16/10/2026. A nova consulta online ao Planalto, STF e STJ foi bloqueada por erro HTTP 403. A data da conferência jurídica anterior foi preservada. Não se certificam alterações normativas, decisões posteriores nem gabarito definitivo ainda não conferidos. Item mantido fora do treino pontuado; comentário para estudo, sem substituir a resposta oficial."
+    },
+    {
+      "id": "64dbf18e-c8d8-493b-92c5-46c9080c6a88",
+      "item": 51,
+      "status": "archived",
+      "preliminary_key": "E",
+      "law_version_checked_at": "2026-10-16T15:30:46.041061+00:00",
+      "comment_sha256": "bee8b56d7079d78c7859fda8f3c129da6e1428067a600c5fded8cee2499833c1",
+      "comment": "QUESTÃO 51 — EXAME CRIMINOLÓGICO E PROGRESSÃO DE REGIME\nGabarito preliminar registrado: E. A alternativa expressa a exigência de motivação concreta na sistemática jurisprudencial da Súmula 439/STJ. Sua aplicação deve ser situada no tempo.\n\nENTENDA A DIFERENÇA\nCumprir a fração da pena é o requisito temporal. Bom comportamento e a avaliação dos requisitos subjetivos constituem análise distinta. O prazo cumprido não torna automática a progressão.\nA Súmula 439/STJ enuncia: “Admite-se o exame criminológico pelas peculiaridades do caso, desde que em decisão motivada.” Nos precedentes da súmula, a exigência excepcional do exame deve se apoiar nas particularidades concretas; a gravidade abstrata do delito e a extensão da pena, isoladamente, não individualizam essa necessidade.\nEntretanto, a Lei 14.843/2024 modificou o art. 112, § 1º, da LEP: o texto passou a mencionar a boa conduta e os resultados do exame criminológico. Por isso, não se pode ensinar que o exame foi abolido nem transportar automaticamente a sistemática anterior para todo fato posterior.\n\nA DATA DO CRIME IMPORTA\nÉ necessário separar o regime anterior e os fatos alcançados pela nova exigência. A lei penal mais gravosa não retroage (Constituição, art. 5º, XL). A notícia oficial do STF de 07/07/2025 registra o reconhecimento da repercussão geral no Tema 1408, RE 1.536.743, sobre a incidência temporal do exame. Reconhecer repercussão geral não equivale a julgar o mérito. Esta atualização não certifica o andamento posterior. Tema 1381, sobre saída temporária e trabalho externo, é assunto diferente.\nO enunciado cita as reformas de 2003 e 2024, mas omite a data do crime. Essa omissão impede apresentar E como regra universal atual sem ressalva.\n\nCOMENTÁRIO DAS ALTERNATIVAS\nA: não resolve a questão dizer que basta ser crime hediondo e ignorar o regime temporal; o texto novo do § 1º tampouco se limita aos hediondos.\nB: incorreta; o exame não foi definitivamente banido.\nC: não basta invocar discricionariedade ou gravidade abstrata para justificar a exigência individual na sistemática da Súmula 439.\nD: incorreta; atestado de comportamento e parecer favorável não vinculam automaticamente o juiz nem eliminam os demais requisitos. Além disso, o enunciado não afirma manifestação favorável do MP.\nE: corresponde ao fundamento da Súmula 439 e à linha do gabarito preliminar, com a ressalva temporal exposta acima.\n\nEXEMPLO: em caso submetido ao regime anterior, a decisão diz apenas “o crime é grave e a pena é longa”. Essa justificativa genérica não demonstra peculiaridade concreta para exigir o exame.\nVARIAÇÃO: fatos individualizados da execução, devidamente demonstrados e motivados, podem justificar o exame na sistemática da súmula. Para um fato alcançado pela redação nova, é preciso examinar a exigência legal do art. 112, § 1º, e o controle judicial aplicável, sem repetir automaticamente a regra antiga.\nFIXAÇÃO: completar o prazo dispensa os demais requisitos? Não. A Súmula 439 afirma que o exame é proibido? Não. A notícia sobre repercussão geral já traz uma tese final vinculante? Não.\n\nFONTES: LEP, art. 112, §§ 1º e 2º (https://www.planalto.gov.br/ccivil_03/leis/l7210.htm); Súmula 439/STJ (https://scon.stj.jus.br/SCON/sumstj/toc.jsp?livre=%22439%22.num.&O=JT); STF, notícia de 07/07/2025 sobre o Tema 1408 (https://noticias.stf.jus.br/postsnoticias/stf-vai-decidir-se-exigencia-de-exame-criminologico-para-progressao-de-regime-vale-para-crimes-anteriores/); Constituição, art. 5º, XL (https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm).\n\nNota de atualização editorial — 19/10/2026: comentários ampliados com base nas cópias oficiais consultadas em 16/10/2026. A nova consulta online ao Planalto, STF e STJ foi bloqueada por erro HTTP 403. A data da conferência jurídica anterior foi preservada. Não se certificam alterações normativas, decisões posteriores nem gabarito definitivo ainda não conferidos. Item mantido fora do treino pontuado; comentário para estudo, sem substituir a resposta oficial."
+    }
+  ]
+}

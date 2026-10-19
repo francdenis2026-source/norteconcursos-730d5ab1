@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { parseSupportLines, reflowParagraphs } from "@/lib/questionText";
+import { classifySupportBlock, parseSupportLines, reflowParagraphs } from "@/lib/questionText";
 import { cn } from "@/lib/utils";
 
 /**
@@ -23,7 +23,7 @@ export function QuestionSupportText({ text, citesLines }: { text: string; citesL
         </div>
       )}
       {mode === "lines" ? (
-        <ol className="space-y-0.5 font-serif text-[15px] leading-7">
+        <ol lang="pt-BR" className="mx-auto max-w-[72ch] space-y-0.5 font-serif text-[15px] leading-7">
           {lines.map((l, i) => (
             <li key={i} className="grid grid-cols-[2.25rem_1fr] gap-2">
               <span className="select-none text-right font-mono text-[11px] leading-7 text-muted-foreground">{l.n ?? ""}</span>
@@ -32,8 +32,17 @@ export function QuestionSupportText({ text, citesLines }: { text: string; citesL
           ))}
         </ol>
       ) : (
-        <div className="space-y-3 font-serif text-[15px] leading-7 sm:text-base sm:leading-8">
-          {paragraphs.map((p, i) => <p key={i} className={/^[—–-]\s?\S/.test(p) ? "pl-3" : undefined}>{p}</p>)}
+        <div
+          lang="pt-BR"
+          className="mx-auto max-w-[68ch] space-y-3 font-serif text-[15px] leading-7 text-foreground sm:text-base sm:leading-8"
+        >
+          {paragraphs.map((p, i) => {
+            const kind = classifySupportBlock(p, i);
+            if (kind === "title") return <p key={i} className="pt-1 text-center font-sans text-sm font-bold uppercase tracking-wide">{p}</p>;
+            if (kind === "source") return <p key={i} className="text-right font-sans text-xs leading-5 text-muted-foreground">{p}</p>;
+            if (kind === "dialogue") return <p key={i} className="pl-6 -indent-3 text-justify [hyphens:auto]">{p}</p>;
+            return <p key={i} className="indent-8 text-justify [hyphens:auto] [text-wrap:pretty]">{p}</p>;
+          })}
         </div>
       )}
     </div>

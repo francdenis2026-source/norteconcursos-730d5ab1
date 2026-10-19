@@ -1,0 +1,220 @@
+{
+  "scope": "Individual completed review and release of PRF 2021 item 90, not an audit of the whole event.",
+  "publication": {
+    "sources_dry_run": {
+      "dry_run": true,
+      "sourcesToCreate": [
+        "c991ed39-636c-535f-a55a-d721b47e4ae8",
+        "167943f0-ae50-50fb-8fea-bd414b7f9547",
+        "5d856d09-d026-5085-b6a9-3eb8d456e2c7"
+      ],
+      "editionToRepair": true
+    },
+    "sources": {
+      "dry_run": false,
+      "createdSources": [
+        "c991ed39-636c-535f-a55a-d721b47e4ae8",
+        "167943f0-ae50-50fb-8fea-bd414b7f9547",
+        "5d856d09-d026-5085-b6a9-3eb8d456e2c7"
+      ],
+      "editionSource": "c991ed39-636c-535f-a55a-d721b47e4ae8"
+    },
+    "topic_dry_run": {
+      "reviewed": 1,
+      "created": 0,
+      "preserved": 0,
+      "dry_run": true,
+      "pending": 1
+    },
+    "topic": {
+      "reviewed": 1,
+      "created": 1,
+      "preserved": 0
+    },
+    "provenance_dry_run": {
+      "updated": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ]
+    },
+    "provenance": {
+      "updated": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ],
+      "preserved": 0
+    },
+    "context_dry_run": {
+      "repaired": [],
+      "preserved": 0,
+      "dry_run": true,
+      "pending": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ]
+    },
+    "context": {
+      "repaired": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ],
+      "preserved": 0
+    },
+    "legal_dry_run": {
+      "reviewed": 1,
+      "updated": [],
+      "preserved": 0,
+      "pending": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ]
+    },
+    "legal": {
+      "reviewed": 1,
+      "updated": [
+        "8fd7fd64-a6ef-416d-b92a-426091e3cc13"
+      ],
+      "preserved": 0
+    },
+    "checked_at": "2026-10-19T19:36:08.965Z",
+    "readback": {
+      "questions_in_scope": 220,
+      "updated": 1,
+      "other_questions_preserved": 219,
+      "original_item_and_key_preserved": true,
+      "shared_support_preserved": true
+    },
+    "counts": {
+      "tables": {
+        "official_exam_questions": {
+          "under_review": 38,
+          "administrative_pending": 3
+        },
+        "board_exam_questions": {
+          "under_review": 358,
+          "administrative_pending": 69
+        }
+      },
+      "under_review": 396,
+      "administrative_pending": 72
+    }
+  },
+  "question": {
+    "id": "8fd7fd64-a6ef-416d-b92a-426091e3cc13",
+    "item": 90,
+    "status_after": "active",
+    "key_preserved": "C",
+    "original_item_preserved": true,
+    "shared_context_id_preserved": true,
+    "changed_fields": [
+      "question_source_id",
+      "answer_key_source_id",
+      "source_page",
+      "content_status",
+      "legal_review_required",
+      "context_review_required",
+      "legal_basis",
+      "law_version_checked_at",
+      "review_note",
+      "verified_at",
+      "current_syllabus_topic_id"
+    ],
+    "comment_field": "review_note",
+    "comment_sha256": "1538f11a8b667d7ca245377c355a7b4c166764fb608023167bf3b7a3f801cc38",
+    "comment": "Retirada de publicação em 17/10/2026 (estava ativa sem base legal): Item doutrinário (princípio da sindicabilidade): sem texto legal que valide a chave. Chave oficial conferida com o gabarito definitivo, mas sem validação legal; permanece em revisão.\n\nConferência documental de 19/10/2026: substituídas as referências genéricas pelos PDFs oficiais do Cebraspe, listados no catálogo PRF_21. Item 90, caderno página 5, gabarito definitivo página 1: C. A questão permanece em revisão até concluir contexto e fundamento jurídico.\n\nContexto conferido na página 5 do PDF: o texto compartilhado existente corresponde ao caso de contrato de treinamento, multa por inexecução e impetração de mandado de segurança, seguido do comando de julgamento dos itens. Texto de apoio e enunciado originais preservados; sem duplicar o caso no enunciado.\n\nRevisão jurídica/editorial concluída em 19/10/2026: fundamento constitucional do controle judicial identificado no art. 5º, XXXV; gabarito C confirmado, contexto e origem documental corrigidos; liberada apenas esta questão.\n\nGABARITO DEFINITIVO: CERTO (C), item 90 da PRF 2021.\n\nENTENDA EM LINGUAGEM SIMPLES\nSindicabilidade é a possibilidade de submeter a atuação administrativa a controle. No item, a empresa recorre ao Judiciário para questionar um possível abuso da Administração: esse acesso ao controle judicial concretiza a sindicabilidade.\nO nome do princípio é uma construção doutrinária; não é necessário que a Constituição utilize literalmente a palavra “sindicabilidade”. Seu fundamento normativo, para o aspecto judicial cobrado, está no art. 5º, XXXV, da Constituição: “a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito”.\n\nAPLICAÇÃO AO CASO\nO contexto informa que foi aplicada multa sem prévia oitiva e que a empresa impetrou mandado de segurança. A questão 90 cobra a possibilidade de questionar o ato em juízo. Não afirma que a empresa necessariamente vencerá nem que toda ação ou via processual escolhida será admissível: o resultado depende dos requisitos da medida e da análise do caso.\nTambém não autoriza o juiz a substituir livremente a conveniência e a oportunidade da Administração. Possibilidade de controle não é sinônimo de revisão irrestrita do mérito administrativo. No caso narrado, a ausência de prévia oitiva suscita controle da regularidade do procedimento; não se confunde com o juiz escolher qual seria o contrato mais conveniente.\n\nEXEMPLO: uma empresa é multada pela Administração e busca tutela judicial alegando que não pôde se defender. O ato administrativo pode ser examinado pelo Judiciário: há aplicação da sindicabilidade.\nVARIAÇÃO: o interessado identifica ameaça concreta a seu direito antes de o dano se consumar. O art. 5º, XXXV, também menciona ameaça; a garantia não depende sempre de esperar um prejuízo já ocorrido.\nCONTRASTE: permitir ajuizar a ação não significa dar razão antecipada ao autor. O pedido pode ser rejeitado se não houver a ilegalidade alegada ou se faltarem requisitos processuais.\n\nFIXAÇÃO\n1. A palavra sindicabilidade precisa aparecer literalmente no art. 5º para existir fundamento constitucional? Não. A norma assegura apreciação judicial de lesão ou ameaça a direito.\n2. Ajuizar a ação garante vitória? Não; garante-se acesso ao controle, nos termos do sistema processual.\n3. Controle judicial e livre substituição de conveniência administrativa são a mesma coisa? Não.\n\nALERTA HISTÓRICO\nO caso foi redigido para a prova de 2021. Sua descrição de contratação de treinamento não deve ser utilizada isoladamente para ensinar o atual regime de dispensa/inexigibilidade. Este item trata de controle da Administração, não de atualizar automaticamente as regras licitatórias do cenário.\n\nFONTES E DATAS\nConstituição, art. 5º, XXXV: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Utilizada a cópia oficial do Planalto capturada em 16/10/2026, com hash reconferido em 19/10. As tentativas de nova captura do Planalto retornaram HTTP 503; não foi declarada transferência nova ou julgamento jurisprudencial não consultado.\nCaderno original e gabarito definitivo obtidos do Cebraspe em 19/10/2026: item 90, páginas PDF 5 e 1, resposta C. Edital de abertura, página 39, Bloco III — Direito Administrativo, controle judicial. Revisão pontual do item, sem certificação integral do edital ou dos demais itens."
+  },
+  "official_sources": [
+    {
+      "id": "c991ed39-636c-535f-a55a-d721b47e4ae8",
+      "source_type": "edital",
+      "title": "Edital nº 1 — PRF 2021 — abertura (recorte de controle judicial)",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/ED_1_PRF_2021_ABERTURA.PDF",
+      "published_on": "2021-01-18",
+      "checked_at": "2026-10-19T19:30:39.860761+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Documento original do concurso histórico PRF 2021, listado no catálogo oficial capturado nesta execução. Conferência individual do item 90: prova página 5, gabarito definitivo página 1, resposta C; edital página 39, Direito Administrativo, item 6.2 (controle judicial). Não é nova abertura nem revisão integral do concurso. SHA-256 1d1460e62050be1e077c61aed862f91d62d24febcd9490bf56026257ed8a1183. Catálogo SHA-256 d342e8b0d226a2d1ef8dff79332e63845de37559af713e0582510ca1b5ef5916."
+    },
+    {
+      "id": "167943f0-ae50-50fb-8fea-bd414b7f9547",
+      "source_type": "outro",
+      "title": "Prova objetiva — PRF 2021 — itens 9 a 120 — caderno 578_PRF_001_01",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/578_PRF_001_01.PDF",
+      "published_on": "2021-05-31",
+      "checked_at": "2026-10-19T19:30:39.091891+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Documento original do concurso histórico PRF 2021, listado no catálogo oficial capturado nesta execução. Conferência individual do item 90: prova página 5, gabarito definitivo página 1, resposta C; edital página 39, Direito Administrativo, item 6.2 (controle judicial). Não é nova abertura nem revisão integral do concurso. SHA-256 6c795d351085976400c140bf89a06bf9ff9fcbb0624a7401b991caa961d7a02f. Catálogo SHA-256 d342e8b0d226a2d1ef8dff79332e63845de37559af713e0582510ca1b5ef5916."
+    },
+    {
+      "id": "5d856d09-d026-5085-b6a9-3eb8d456e2c7",
+      "source_type": "outro",
+      "title": "Gabarito oficial definitivo — PRF 2021 — itens 9 a 120 — 578_PRF_001_01",
+      "issuer": "PRF / Cebraspe",
+      "url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+      "published_on": "2021-05-31",
+      "checked_at": "2026-10-19T19:30:39.232287+00:00",
+      "status": "vigente",
+      "is_official": true,
+      "notes": "Documento original do concurso histórico PRF 2021, listado no catálogo oficial capturado nesta execução. Conferência individual do item 90: prova página 5, gabarito definitivo página 1, resposta C; edital página 39, Direito Administrativo, item 6.2 (controle judicial). Não é nova abertura nem revisão integral do concurso. SHA-256 48b945fad23ba4ac4af8ef2eb48f097a8fe1fe078d7abaa7773e519cc7d7cab5. Catálogo SHA-256 d342e8b0d226a2d1ef8dff79332e63845de37559af713e0582510ca1b5ef5916."
+    }
+  ],
+  "catalog": {
+    "url": "https://apis.cebraspe.org.br/cebraspe/eventos/PRF_21",
+    "sha256": "d342e8b0d226a2d1ef8dff79332e63845de37559af713e0582510ca1b5ef5916"
+  },
+  "verified_pages": {
+    "paper": 5,
+    "final_key": 1,
+    "edital": 39
+  },
+  "new_topic": {
+    "id": "2bb66da9-031d-56be-a234-f50241b6be22",
+    "edition_id": "1503387b-c4a4-48ec-a249-9a514bf60e51",
+    "block_name": "Edital histórico oficial — Bloco III, item 6",
+    "discipline": "Direito Administrativo",
+    "topic_order": 2,
+    "topic_text": "6 Controle da Administração Pública. 6.1 Controle exercido pela Administração Pública. 6.2 Controle judicial. 6.3 Controle legislativo.",
+    "content_status": "current"
+  },
+  "edition_source_repaired": {
+    "id": "1503387b-c4a4-48ec-a249-9a514bf60e51",
+    "old_source": "23ea6109-6a53-459b-8d73-5cae73821c37",
+    "new_source": "c991ed39-636c-535f-a55a-d721b47e4ae8",
+    "all_other_edition_fields_preserved": true
+  },
+  "retification2": {
+    "url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/ED_2_PRF_2021_RETIFICACAO.PDF",
+    "sha256": "d8f3b5660030883f754b6ab5c4ccab383e2253b6a7941ee96ef53dfae05c8c45",
+    "captured_at": "2026-10-19T19:32:00.326107+00:00"
+  },
+  "legal_capture": {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "sha256": "7daaa6b968cb6181b69fd07893efa932fa4217be90ddc06ba2ec5c4d4ba1c788",
+    "captured_at": "2026-10-16T20:42:33.965Z"
+  },
+  "fresh_planalto_attempts": [
+    {
+      "name": "cf-current",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "cf-compiled",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "error": "HTTP Error 503: Service Unavailable"
+    }
+  ],
+  "validation": {
+    "targeted_tests_passed": 42,
+    "real_saved_row_gate": "passed; C/E format, original C key, original shared scenario included once",
+    "other_prf_2021_records_preserved": 219,
+    "app_changes": false,
+    "build": "not required; only review tooling and content changed"
+  },
+  "limits": [
+    "The item tests judicial control. The 2021 procurement scenario is identified as historical and is not taught as a statement of current procurement law.",
+    "No claim of a newly retrieved Planalto document or unconsulted court holding; the preserved official constitutional capture is dated 16/10/2026.",
+    "Only item 90 was activated. Restored official references/edital metadata do not certify all other questions."
+  ]
+}

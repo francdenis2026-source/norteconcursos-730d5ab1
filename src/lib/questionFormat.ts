@@ -90,6 +90,13 @@ export const isOfficialUrl = (url?: string) => {
   try {
     if (!url) return false;
     const parsed = new URL(String(url));
+    // Compilação da LC 106/2003 conferida no catálogo oficial do MPRJ.
+    // Não autoriza páginas genéricas do portal nem outros documentos.
+    if (parsed.hostname === "www.mprj.mp.br") {
+      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
+        parsed.pathname === "/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80" &&
+        /^\d+$/.test(parsed.searchParams.get("t") ?? "") && [...parsed.searchParams].length === 1;
+    }
     // Recortes de responsabilidade da LC68: compilação oficial e atos posteriores conferidos.
     if (parsed.hostname === "sapl.al.ro.leg.br") {
       return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&

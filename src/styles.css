@@ -12643,6 +12643,339 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .pcpr-spot--cover,.pcpr-spot--cover.pcpr-spot--compact { padding:14px; }
 }
 
+/* ==========================================================================
+   Modo claro — identidade azul/verde-azulado com realces coloridos.
+   Substitui o dourado apagado por cores com contraste AA e dá destaque às áreas.
+   Somente :root:not(.dark); o modo escuro e a marca (logo) não mudam.
+   ========================================================================== */
+:root:not(.dark) {
+  --c-blue: oklch(0.5 0.18 262);
+  --c-blue-soft: oklch(0.95 0.03 262);
+  --c-teal: oklch(0.52 0.11 195);
+  --c-teal-soft: oklch(0.95 0.035 195);
+  --c-violet: oklch(0.5 0.17 295);
+  --c-violet-soft: oklch(0.95 0.03 295);
+  --c-amber: oklch(0.58 0.14 68);
+  --c-amber-soft: oklch(0.96 0.045 85);
+  --c-green: oklch(0.5 0.13 155);
+  --c-green-soft: oklch(0.95 0.04 155);
+  --c-rose: oklch(0.55 0.18 15);
+  --c-rose-soft: oklch(0.96 0.03 15);
+
+  --ring: var(--c-blue);
+  --hero-kicker: var(--c-blue);
+  --brass-deep: var(--c-blue);
+  --accent: var(--c-blue-soft);
+  --accent-foreground: oklch(0.32 0.12 262);
+  --sidebar-accent: var(--c-blue-soft);
+  --sidebar-accent-foreground: oklch(0.32 0.12 262);
+  --sidebar-primary: var(--c-blue);
+  --background: oklch(0.972 0.008 255);
+  --muted: oklch(0.955 0.012 255);
+  --border: oklch(0.9 0.014 255);
+  --chart-1: var(--c-blue);
+  --chart-2: var(--c-teal);
+  --chart-3: var(--c-green);
+  --chart-4: var(--c-amber);
+  --chart-5: var(--c-violet);
+}
+:root:not(.dark) :is(.student-home,.trainer-workbench,.trainer-resolution-workspace) { --hub-accent: var(--c-blue); --hub-soft: var(--c-blue-soft); --trainer-accent: var(--c-blue); }
+:root:not(.dark) .app-shell :is(a,button,input,select,textarea,[role="button"]):focus-visible { outline-color: var(--c-blue); box-shadow: 0 0 0 5px oklch(0.5 0.18 262 / .14); }
+:root:not(.dark) .app-shell .app-topbar :is(a,button):focus-visible { outline-color: var(--c-blue); box-shadow: 0 0 0 5px oklch(0.5 0.18 262 / .14); }
+:root:not(.dark) .app-shell .app-topbar :is(.app-top-btn,.app-top-search,.app-streak) svg { color: var(--c-blue); }
+:root:not(.dark) .navigation-workspace .app-nav__link[data-active="true"] { border-color: var(--c-blue); box-shadow: inset 3px 0 0 var(--c-blue); }
+:root:not(.dark) .navigation-workspace .app-nav__link[data-active="true"] .app-ico { color: var(--c-blue); }
+:root:not(.dark) .navigation-workspace .app-nav__link:hover:not([data-active="true"]) { background: var(--c-blue-soft); }
+:root:not(.dark) .app-shell .app-bottom-nav [data-active="true"] { color: var(--c-blue); }
+
+/* Hero do Painel do aluno */
+:root:not(.dark) .student-hub__masthead {
+  position: relative;
+  border: 1px solid oklch(0.88 0.03 262);
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 48%);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
+}
+:root:not(.dark) .student-hub__masthead::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; z-index: 1;
+  background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
+}
+:root:not(.dark) .student-hub__masthead .student-hub__welcome {
+  display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px;
+  background: var(--c-blue-soft); color: var(--c-blue); font-size: 12px; font-weight: 700; letter-spacing: .02em;
+}
+:root:not(.dark) .student-hub__masthead h1 { color: oklch(0.25 0.07 262); font-weight: 800; }
+:root:not(.dark) .student-hub__masthead h1 + p { color: oklch(0.42 0.03 262); }
+:root:not(.dark) .student-hub__masthead .student-hub__date { color: oklch(0.38 0.05 262); font-weight: 600; }
+:root:not(.dark) .student-hub__masthead .student-hub__date svg { color: var(--c-teal); }
+:root:not(.dark) .student-hub__masthead .student-hub__date small { color: var(--c-teal); border-color: oklch(0.52 0.11 195 / .4); background: var(--c-teal-soft); }
+:root:not(.dark) .student-hub__masthead-actions > a {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 18px; border-radius: 999px;
+  background: var(--c-blue); color: #fff; font-weight: 700; text-decoration: none;
+  box-shadow: 0 8px 18px -10px oklch(0.5 0.18 262 / .7);
+  transition: background .2s, transform .2s;
+}
+:root:not(.dark) .student-hub__masthead-actions > a:hover { background: oklch(0.44 0.18 262); transform: translateY(-1px); }
+:root:not(.dark) .student-hub__hero-visual::after { background: linear-gradient(90deg, oklch(0.97 0.025 262), oklch(0.97 0.025 262 / .5) 14%, transparent 42%), linear-gradient(0deg, oklch(0.4 0.14 262 / .12), transparent 40%); }
+:root:not(.dark) .student-hub__hero-visual img { filter: saturate(1.05) contrast(1.02); }
+@media (max-width: 640px) {
+  :root:not(.dark) .student-hub__masthead::before { inset: 0 0 auto 0; width: auto; height: 4px; }
+  :root:not(.dark) .student-hub__hero-visual::after { background: linear-gradient(0deg, oklch(0.97 0.025 262), transparent 45%); }
+}
+
+/* Hero do Treinador de questões */
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero {
+  position: relative; overflow: hidden; min-height: 210px;
+  border: 1px solid oklch(0.88 0.03 262);
+  background:
+    linear-gradient(90deg, oklch(0.97 0.025 262) 0%, oklch(0.97 0.025 262 / .96) 38%, oklch(0.97 0.025 262 / .55) 58%, transparent 80%),
+    url('/media/hero/trainer-study.webp') center / cover;
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
+}
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px;
+  background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
+}
+:root:not(.dark) .trainer-workbench-hero .trainer-panel-kicker {
+  display: inline-block; width: fit-content; padding: 4px 12px; border-radius: 999px;
+  background: var(--c-blue-soft); color: var(--c-blue); letter-spacing: .1em;
+}
+:root:not(.dark) .trainer-workbench-hero h1 { color: oklch(0.25 0.07 262); font-weight: 800; margin-top: 10px; }
+:root:not(.dark) .trainer-workbench-hero p { color: oklch(0.38 0.04 262); }
+:root:not(.dark) .trainer-workbench-hero .trainer-catalog-link {
+  background: var(--c-blue); color: #fff; border-color: var(--c-blue); border-radius: 999px; padding: 10px 20px; font-weight: 700;
+  box-shadow: 0 10px 22px -12px oklch(0.5 0.18 262 / .8); transition: background .2s, transform .2s;
+}
+:root:not(.dark) .trainer-workbench-hero .trainer-catalog-link:hover { background: oklch(0.44 0.18 262); transform: translateY(-1px); }
+
+/* Realces coloridos nas áreas do sistema */
+:root:not(.dark) .student-home__metrics { border-color: oklch(0.9 0.014 255); box-shadow: var(--shadow-card); }
+:root:not(.dark) .student-home__metric { position: relative; }
+:root:not(.dark) .student-home__metric::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--c-blue); }
+:root:not(.dark) .student-home__metric:nth-child(2)::before { background: var(--c-green); }
+:root:not(.dark) .student-home__metric:nth-child(3)::before { background: var(--c-amber); }
+:root:not(.dark) .student-home__metric:nth-child(4)::before { background: var(--c-violet); }
+:root:not(.dark) .student-home__metric:nth-child(2) > span { background: var(--c-green-soft); color: var(--c-green); }
+:root:not(.dark) .student-home__metric:nth-child(3) > span { background: var(--c-amber-soft); color: var(--c-amber); }
+:root:not(.dark) .student-home__metric:nth-child(4) > span { background: var(--c-violet-soft); color: var(--c-violet); }
+:root:not(.dark) .student-home__card,
+:root:not(.dark) [data-slot="card"] { border-color: oklch(0.9 0.014 255); box-shadow: var(--shadow-card); }
+:root:not(.dark) .student-home__card { border-top: 3px solid var(--c-blue); }
+:root:not(.dark) .student-home__card:nth-of-type(3n+2) { border-top-color: var(--c-teal); }
+:root:not(.dark) .student-home__card:nth-of-type(3n) { border-top-color: var(--c-violet); }
+:root:not(.dark) .student-home__section-title { color: oklch(0.28 0.08 262); }
+:root:not(.dark) .student-home__primary,
+:root:not(.dark) .student-home .student-home__primary.student-home__wide-action,
+:root:not(.dark) .trainer-workbench .trainer-main-action,
+:root:not(.dark) .trainer-resolution-workspace .trainer-main-action { background: var(--c-blue); color: #fff; border-color: var(--c-blue); }
+:root:not(.dark) .student-home__primary:hover,
+:root:not(.dark) .student-home .student-home__primary.student-home__wide-action:hover,
+:root:not(.dark) .trainer-workbench .trainer-main-action:hover,
+:root:not(.dark) .trainer-resolution-workspace .trainer-main-action:hover { background: oklch(0.44 0.18 262); color: #fff; }
+:root:not(.dark) .student-home__text-link { color: var(--c-blue); }
+:root:not(.dark) .trainer-session-builder { border-top: 3px solid var(--c-teal); }
+:root:not(.dark) .trainer-config-card { border-top: 3px solid var(--c-blue); }
+:root:not(.dark) .trainer-stock strong { color: var(--c-blue); }
+:root:not(.dark) .trainer-practice-mode[aria-pressed="true"],
+:root:not(.dark) .trainer-practice-mode[data-active="true"] { border-color: var(--c-blue); background: var(--c-blue-soft); }
+:root:not(.dark) .page-hero[data-hero] .page-hero__kicker,
+:root:not(.dark) .internal-hero-kicker { color: var(--c-blue); }
+:root:not(.dark) .page-hero { border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, var(--c-blue), var(--c-teal), var(--c-violet)) 1; }
+:root:not(.dark) .page-hero[data-hero="public-security"] { background-color: oklch(0.97 0.025 262); }
+:root:not(.dark) .page-hero[data-hero="public-security"]::before { background: linear-gradient(90deg, oklch(0.97 0.025 262) 20%, oklch(0.97 0.025 262 / .94) 48%, transparent 74%); }
+:root:not(.dark) .page-hero[data-hero="public-security"] h1 { color: oklch(0.25 0.07 262); }
+
+/* ==========================================================================
+   Modo claro — heroes internos limpos: sem camada escura, grade, brilho radial
+   ou luz no hover. A foto se dissolve no fundo claro por máscara. Resultados
+   de simulado (.mock-result-hero) e o hero escuro da homepage não mudam.
+   ========================================================================== */
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh) {
+  color: var(--foreground);
+  border: 1px solid oklch(0.88 0.03 262);
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+  isolation: isolate;
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh):hover {
+  border-color: oklch(0.82 0.06 262);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before {
+  inset: 0 0 0 48%; z-index: -1;
+  background: var(--hero-image) var(--hero-position, 70% center) / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::after { display: none; }
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before { border-left: 0; }
+:root:not(.dark) .page-hero:not(.min-h-svh) h1,
+:root:not(.dark) .catalog-command-hero h1 { color: oklch(0.25 0.07 262); text-shadow: none; }
+:root:not(.dark) .page-hero:not(.min-h-svh) h1 em { color: var(--c-blue); }
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__desc,
+:root:not(.dark) .catalog-command-hero > p { color: oklch(0.4 0.03 262); }
+:root:not(.dark) :is(.page-hero:not(.min-h-svh), .catalog-command-hero) :is(.hero-chip, .internal-hero-kicker) {
+  color: var(--c-blue) !important; background: var(--c-blue-soft) !important;
+  border-color: oklch(0.5 0.18 262 / .25) !important; backdrop-filter: none;
+}
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__actions :is(a, button).border-input {
+  color: var(--c-blue); background: #fff; border-color: oklch(0.5 0.18 262 / .35);
+}
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__actions :is(a, button).border-input:hover { background: var(--c-blue-soft); }
+@media (max-width: 760px) {
+  :root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before { inset: 0; opacity: .18; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Simulador e Assistente de estudos: mesma linguagem clara */
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) {
+  color: var(--foreground);
+  border: 1px solid oklch(0.88 0.03 262);
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+  isolation: isolate;
+}
+:root:not(.dark) .study-assistant-hero::before,
+:root:not(.dark) .exam-simulator-hero::before {
+  content: ""; position: absolute; inset: 0 0 0 50%; z-index: -1;
+  background: var(--sa-img) center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+:root:not(.dark) .study-assistant-hero { --sa-img: url('/media/hero/study-assistant.webp'); }
+:root:not(.dark) .exam-simulator-hero { --sa-img: url('/media/hero/exam-simulator.webp'); }
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) h1 { color: oklch(0.25 0.07 262); }
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) p { color: oklch(0.4 0.03 262); }
+:root:not(.dark) :is(.study-assistant-hero__eyebrow, .exam-simulator-hero__eyebrow) { color: var(--c-blue); }
+:root:not(.dark) .exam-simulator-hero__catalog { color: var(--c-teal); font-weight: 600; }
+:root:not(.dark) .study-assistant-hero__action { background: var(--c-blue); color: #fff; }
+:root:not(.dark) .study-assistant-hero__action:hover { background: oklch(0.44 0.18 262); }
+@media (max-width: 760px) {
+  :root:not(.dark) .study-assistant-hero::before,
+  :root:not(.dark) .exam-simulator-hero::before { inset: 0; opacity: .16; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Hero do Painel: foto com transição por máscara, sem camada sobre a imagem */
+:root:not(.dark) .student-hub__hero-visual::after { display: none; }
+:root:not(.dark) .student-hub__hero-visual img { filter: none; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 28%); mask-image: linear-gradient(90deg, transparent 0%, #000 28%); }
+:root:not(.dark) .student-hub__masthead-actions > a svg { color: #fff; }
+@media (max-width: 640px) {
+  :root:not(.dark) .student-hub__hero-visual img { -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%); mask-image: linear-gradient(180deg, transparent 0%, #000 30%); }
+}
+/* Treinador: sem véu sobre a foto, só a máscara */
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero {
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  isolation: isolate;
+}
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::after {
+  content: ""; position: absolute; inset: 0 0 0 50%; z-index: -1;
+  background: url('/media/hero/trainer-study.webp') center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+
+/* ==========================================================================
+   Sem "emenda" entre texto e foto (claro e escuro): nenhuma faixa dissolvida,
+   gradiente ou máscara sobre a imagem. A foto entra com corte limpo.
+   ========================================================================== */
+.student-hub__hero-visual::after { display: none !important; }
+.student-hub__hero-visual img { -webkit-mask-image: none !important; mask-image: none !important; filter: none !important; }
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before,
+:root:not(.dark) .study-assistant-hero::before,
+:root:not(.dark) .exam-simulator-hero::before,
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::after {
+  -webkit-mask-image: none; mask-image: none;
+  clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);
+}
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero {
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+}
+@media (max-width: 760px) {
+  :root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before,
+  :root:not(.dark) .study-assistant-hero::before,
+  :root:not(.dark) .exam-simulator-hero::before { clip-path: none; }
+}
+.student-hub__hero-visual { clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
+@media (max-width: 640px) { .student-hub__hero-visual { clip-path: none; } }
+
+/* ==========================================================================
+   Modo escuro — área do aluno com cores de destaque nas funções principais.
+   Tons claros e dessaturados (contraste AA sobre o cinza-grafite), sem brilho.
+   Só .dark; o modo claro e a marca não mudam.
+   ========================================================================== */
+.dark {
+  --d-blue: oklch(0.74 0.13 255);
+  --d-teal: oklch(0.8 0.1 190);
+  --d-violet: oklch(0.76 0.13 295);
+  --d-green: oklch(0.8 0.13 155);
+  --d-amber: oklch(0.82 0.12 82);
+  --d-rose: oklch(0.76 0.13 15);
+  --chart-1: var(--d-blue);
+  --chart-2: var(--d-teal);
+  --chart-3: var(--d-green);
+  --chart-4: var(--d-amber);
+  --chart-5: var(--d-violet);
+}
+/* Aviso "Treino retomado / em andamento": faixa lateral e rótulo coloridos */
+.dark .trainer-resume-banner {
+  position: relative;
+  border-color: color-mix(in oklab, var(--d-teal) 35%, var(--border));
+  background: linear-gradient(90deg, color-mix(in oklab, var(--d-teal) 14%, var(--card)), var(--card) 70%);
+  padding-left: 1.1rem;
+  box-shadow: inset 4px 0 0 var(--d-teal);
+}
+.dark .trainer-resume-banner strong { color: var(--d-teal); }
+.dark .trainer-resume-banner button { color: var(--d-teal); text-decoration-color: color-mix(in oklab, var(--d-teal) 55%, transparent); }
+.dark .trainer-resume-banner button:hover { color: oklch(0.88 0.09 190); }
+:root:not(.dark) .trainer-resume-banner {
+  border-color: oklch(0.52 0.11 195 / .35); background: linear-gradient(90deg, var(--c-teal-soft), #fff 70%);
+  box-shadow: inset 4px 0 0 var(--c-teal); padding-left: 1.1rem;
+}
+:root:not(.dark) .trainer-resume-banner strong { color: var(--c-teal); }
+
+/* Painel: métricas com cores distintas */
+.dark .student-home__metrics { box-shadow: var(--shadow-card); }
+.dark .student-home__metric { position: relative; --m: var(--d-blue); }
+.dark .student-home__metric:nth-child(2) { --m: var(--d-green); }
+.dark .student-home__metric:nth-child(3) { --m: var(--d-amber); }
+.dark .student-home__metric:nth-child(4) { --m: var(--d-violet); }
+.dark .student-home__metric::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--m); opacity: .9; }
+.dark .student-home__metric > span { background: color-mix(in oklab, var(--m) 16%, var(--card)); color: var(--m); }
+.dark .student-home__metric strong { color: color-mix(in oklab, var(--m) 35%, #fff); }
+
+/* Hero do Painel e cartões */
+.dark .student-hub__masthead { position: relative; border-color: color-mix(in oklab, var(--d-blue) 28%, var(--border)); }
+.dark .student-hub__masthead::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; z-index: 1; background: linear-gradient(180deg, var(--d-blue), var(--d-teal)); }
+.dark .student-hub__masthead .student-hub__welcome { display: inline-flex; padding: 4px 12px; border-radius: 999px; background: color-mix(in oklab, var(--d-blue) 16%, transparent); color: var(--d-blue); font-weight: 700; }
+.dark .student-hub__masthead .student-hub__date svg { color: var(--d-teal); }
+.dark .student-hub__masthead .student-hub__date small { color: var(--d-teal); border-color: color-mix(in oklab, var(--d-teal) 45%, transparent); }
+.dark .student-hub__masthead-actions > a { color: var(--d-blue); }
+.dark .student-home__card { border-top: 3px solid var(--d-blue); }
+.dark .student-home__card:nth-of-type(3n+2) { border-top-color: var(--d-teal); }
+.dark .student-home__card:nth-of-type(3n) { border-top-color: var(--d-violet); }
+.dark .student-home__section-title { color: color-mix(in oklab, var(--d-blue) 30%, #fff); }
+.dark .student-home__text-link { color: var(--d-blue); }
+
+/* Treinador de questões */
+.dark .trainer-panel-kicker { color: var(--d-teal); }
+.dark .trainer-config-card { border-top: 3px solid var(--d-blue); }
+.dark .trainer-session-builder { border-top: 3px solid var(--d-teal); }
+.dark .trainer-stock strong { color: var(--d-teal); }
+.dark .trainer-practice-mode[aria-pressed="true"], .dark .trainer-practice-mode[data-active="true"] {
+  border-color: var(--d-blue); background: color-mix(in oklab, var(--d-blue) 14%, var(--card));
+}
+.dark .trainer-catalog-link { border-color: color-mix(in oklab, var(--d-blue) 45%, var(--border)); color: var(--d-blue); }
+.dark .trainer-catalog-link:hover { background: color-mix(in oklab, var(--d-blue) 14%, var(--card)); }
+.dark .trainer-question-progress { color: var(--d-teal); }
+.dark .trainer-option-letter { color: var(--d-blue); }
+
+/* Menu lateral: ícones por área e item ativo com realce */
+.dark .navigation-workspace .app-nav__link .app-ico { color: var(--nav-c, var(--d-blue)); }
+.dark .navigation-workspace :is(.app-nav__link, li, a):nth-of-type(5n+2) { --nav-c: var(--d-teal); }
+.dark .navigation-workspace :is(.app-nav__link, li, a):nth-of-type(5n+3) { --nav-c: var(--d-violet); }
+.dark .navigation-workspace :is(.app-nav__link, li, a):nth-of-type(5n+4) { --nav-c: var(--d-green); }
+.dark .navigation-workspace :is(.app-nav__link, li, a):nth-of-type(5n) { --nav-c: var(--d-amber); }
+.dark .navigation-workspace .app-nav__link[data-active="true"] { box-shadow: inset 3px 0 0 var(--nav-c, var(--d-blue)); border-color: color-mix(in oklab, var(--nav-c, var(--d-blue)) 50%, transparent); }
+.dark .app-shell .app-bottom-nav [data-active="true"] { color: var(--d-blue); }
+.dark .app-shell .app-topbar :is(.app-top-btn, .app-top-search, .app-streak) svg { color: var(--d-teal); }
 
 /* Navigation panels use a short, compositor-only entrance rather than the
    generic full-width sheet slide. Radix keeps the exit mounted until it ends. */
