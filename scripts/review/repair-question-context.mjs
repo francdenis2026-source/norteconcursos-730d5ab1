@@ -17,7 +17,10 @@ export function validateRepairs(pack) {
     const binary=['C','E'].includes(expected.official_answer) && evidence.question_format==='certo_errado';
     const labels=evidence.alternative_labels || ['A','B','C','D','E'];
     if (!binary && (!Array.isArray(labels) || !['ABCD','ABCDE'].includes(labels.join('')) || !labels.includes(expected.official_answer))) throw Error('Verified alternative labels required');
-    const complete=binary? /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): labels.every(letter=>(text || '').includes(`(${letter})`)) && !['A','B','C','D','E'].some(letter=>!labels.includes(letter) && (text || '').includes(`(${letter})`));
+    const support=evidence.support_expected;
+    const shared=binary && support?.id===expected.support_text_id && typeof support?.body==='string' && support.body.length>=100 && support.body===evidence.reviewed_context && support.contest_name===expected.contest_name && support.exam_year===expected.exam_year && support.exam_board===expected.exam_board && !('question_text' in patch);
+    const complete=binary? shared || /^Comando:\s*\S[\s\S]+\nItem:\s*\S[\s\S]+$/.test(text || ''): labels.every(letter=>(text || '').includes(`(${letter})`)) && !['A','B','C','D','E'].some(letter=>!labels.includes(letter) && (text || '').includes(`(${letter})`));
+    if(support && !shared)throw Error('Verified shared context must match the original item and exam');
     if (!text || !complete || text.trimStart().startsWith('(A)')) throw Error('Complete stem and alternatives required');
     const media=extractQuestionIllustrations(text);
     if (/^\s*!\[/m.test(media.text)) throw Error('Unsupported or malformed figure marker');
@@ -40,6 +43,11 @@ async function readPublicFigure(url) {
   if(bytes.length>5242880)throw Error('Public figure too large');
   return bytes;
 }
+async function verifySharedContext(evidence,request) {
+  if(!evidence.support_expected)return;
+  const [actual]=await request(`question_support_texts?id=eq.${evidence.support_expected.id}&select=*`);
+  if(!sameReviewRow(actual,evidence.support_expected))throw Error('Concurrent shared context revision');
+}
 export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false,readFigure=readPublicFigure}={}) {
   validateRepairs(pack);
   const pending=[];
@@ -59,6 +67,7 @@ export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false
     // registered title to identify a prova as well as the exact PDF URL.
     const isCaderno=source?.source_type==='prova' || (source?.source_type==='outro' && /^Prova objetiva/i.test(source.title || ''));
     if (!source?.is_official || !isCaderno || source.url!==evidence.source_url || (patch.source_page ?? expected.source_page)!==evidence.page) throw Error('Official caderno/page mismatch');
+    await verifySharedContext(evidence,request);
     const [actual]=await request(`official_exam_questions?id=eq.${expected.id}&select=*`);
     if (sameReviewRow(actual,{...expected,...patch}))continue;
     if (!sameReviewRow(actual,expected))throw Error(`Concurrent repair: ${expected.id}`);
@@ -66,7 +75,8 @@ export async function repairContexts(pack,request,readPdf=readFile,{dryRun=false
   }
   const result={repaired:[],preserved:pack.items.length-pending.length};
   if(dryRun)return {...result,dry_run:true,pending:pending.map(i=>i.expected.id)};
-  for(const {expected,patch} of pending) {
+  for(const {expected,patch,evidence} of pending) {
+    await verifySharedContext(evidence,request);
     const filters=Object.entries(expected).map(([k,v])=>v===null?`${k}=is.null`:`${k}=eq.${encodeURIComponent(typeof v==='object'?JSON.stringify(v):String(v))}`).join('&');
     const rows=await request(`official_exam_questions?${filters}`,'PATCH',patch);
     if (rows.length!==1 || !sameReviewRow(rows[0],{...expected,...patch}))throw Error(`Repair readback mismatch: ${expected.id}`);
