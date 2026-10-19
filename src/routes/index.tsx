@@ -445,12 +445,25 @@ function Index() {
 
         <section id="como" className="home-section home-method">
           <div className="home-container">
-            <Head
-              kicker="Como funciona"
-              lead="Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma rotina até a prova."
-            >
-              Cada etapa tem <em>um propósito.</em>
-            </Head>
+            <div className="home-method__intro">
+              <Head
+                kicker="Como funciona"
+                lead="Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma rotina até a prova."
+              >
+                Cada etapa tem <em>um propósito.</em>
+              </Head>
+              <figure className="home-method__visual">
+                <img
+                  src="/media/hero/journey.webp"
+                  alt="Pessoa organizando uma jornada de estudos para a prova"
+                  width={960}
+                  height={540}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Da primeira meta ao dia da prova.</figcaption>
+              </figure>
+            </div>
             <ol className="home-steps">
               {STEPS.map(([Icon, title, text], index) => (
                 <li key={title}>
@@ -554,6 +567,17 @@ function Index() {
                 <br />
                 <em>A sua carreira.</em>
               </Head>
+              <figure className="home-careers__visual">
+                <img
+                  src="/media/hero/careers-team.webp"
+                  alt="Profissionais representando carreiras da segurança pública"
+                  width={960}
+                  height={640}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Escolha um caminho. Construa seu preparo.</figcaption>
+              </figure>
             </div>
             <div className="home-careers__grid">
               {CAREERS.map(([name, roles]) => (

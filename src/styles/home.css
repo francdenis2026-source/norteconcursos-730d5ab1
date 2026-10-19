@@ -915,6 +915,51 @@
 .home-method {
   padding-block: 36px;
 }
+.home-method__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: end;
+  margin-bottom: 28px;
+}
+.home-method__intro .home-heading {
+  margin-bottom: 0;
+}
+.home-method__visual,
+.home-careers__visual {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 14px;
+  background: var(--home-bg);
+  box-shadow: var(--shadow-card);
+}
+.home-method__visual {
+  min-height: 180px;
+}
+.home-method__visual img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: center 44%;
+  filter: saturate(0.86) contrast(1.04);
+}
+.home-method__visual figcaption,
+.home-careers__visual figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 9px 12px;
+  border: 1px solid color-mix(in oklab, var(--home-line) 70%, transparent);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--home-surface) 88%, transparent);
+  color: var(--home-text);
+  font-size: 11px;
+  font-weight: 650;
+  backdrop-filter: blur(10px);
+}
 .home-method .home-heading {
   max-width: none;
   display: grid;
@@ -1138,6 +1183,17 @@
   grid-template-columns: 1fr 1.7fr;
   gap: 48px;
   align-items: start;
+}
+.home-careers__visual {
+  margin-top: 28px;
+}
+.home-careers__visual img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 36%;
+  filter: saturate(0.82) contrast(1.05);
 }
 .home-careers__grid {
   display: grid;
@@ -2044,6 +2100,42 @@
   }
   .home-menu {
     padding: 28px 20px;
+  }
+
+  .home-method__intro {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .home-method__visual {
+    margin-top: 22px;
+  }
+
+  .home-method__visual img {
+    height: 170px;
+  }
+
+  .home-careers__visual {
+    margin-top: 20px;
+  }
+
+  .home-careers__visual img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .home-method__intro {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
+    gap: 24px;
+  }
+
+  .home-method__visual img {
+    height: 180px;
+  }
+
+  .home-careers__visual img {
+    height: 220px;
   }
 }
 
