@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseSupportLines, reflowParagraphs, reflowStem, needsMissingSupportText } from '../src/lib/questionText.ts';
+import { parseSupportLines, reflowParagraphs, reflowStem, needsMissingSupportText, classifySupportBlock } from '../src/lib/questionText.ts';
 
 const PF = `  1 Imagine uma operação de busca na selva. Sem mapas,
     binóculos ou apoio logístico; somente com um facão. Assim
@@ -68,4 +68,11 @@ test('FGV inline full text and reviewed image support are recognized without acc
  assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, assinale a opção que apresenta a ideia correta. '+body}),true);
  assert.equal(needsMissingSupportText({subject,text:'Segundo o texto, qual a ideia principal?',figures:['https://example.test/decorative.png']}),true);
  assert.equal(needsMissingSupportText({subject,text:'Leia o texto a seguir: No texto, julgue a afirmação.',figures:['javascript:alert(1)']}),true);
+});
+
+test('classifySupportBlock separa título, fonte, fala e corpo', () => {
+  assert.equal(classifySupportBlock('O futuro da escrita', 0), 'title');
+  assert.equal(classifySupportBlock('Disponível em: https://exemplo.gov.br. Acesso em: 10 out. 2025.', 3), 'source');
+  assert.equal(classifySupportBlock('— Onde você vai? — perguntou ela.', 2), 'dialogue');
+  assert.equal(classifySupportBlock('A polícia civil exerce funções de polícia judiciária, conforme a Constituição.', 1), 'body');
 });

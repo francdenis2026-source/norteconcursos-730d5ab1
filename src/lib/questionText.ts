@@ -135,3 +135,17 @@ export function needsMissingSupportText(q: {
   if (quoted.length) return false;
   return REFERS_TO_TEXT.test(q.text);
 }
+
+export type SupportBlockKind = "title" | "source" | "dialogue" | "body";
+
+const SOURCE_START =
+  /^(dispon[ií]vel em|fonte|internet|adaptad[oa]|texto adaptado|acesso em|in:|apud|\(?\s*(?:adaptad[oa]|com adapta)|[A-ZÀ-Ú][A-ZÀ-Ú.\s,'-]{2,}\.\s)/i;
+
+/** Classifica um parágrafo reorganizado para dar a cada tipo o estilo de leitura adequado. */
+export function classifySupportBlock(p: string, index: number): SupportBlockKind {
+  if (/^[—–-]\s?\S/.test(p)) return "dialogue";
+  if (SOURCE_START.test(p) && p.length < 220) return "source";
+  if (index === 0 && p.length < 80 && !/[.!?…:]\s*$/.test(p)) return "title";
+  if (p.length < 60 && !/[.!?…:,;]\s*$/.test(p) && !/^[a-zà-ú]/.test(p)) return "title";
+  return "body";
+}
