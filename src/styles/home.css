@@ -2489,16 +2489,8 @@
 .home-menu-overlay[data-state="open"] { animation-duration:240ms; }
 .home-menu-overlay[data-state="closed"] { animation-duration:180ms; }
 .home-menu { background:var(--home-surface); box-shadow:var(--shadow-lift); }
-.home-menu[data-state="open"] { animation:home-menu-enter 240ms cubic-bezier(.2,.8,.2,1) both; }
-.home-menu[data-state="closed"] { animation:home-menu-exit 180ms ease-in both; }
-@keyframes home-menu-enter {
-  from { opacity:0; transform:translate3d(24px,0,0); }
-  to { opacity:1; transform:translate3d(0,0,0); }
-}
-@keyframes home-menu-exit {
-  from { opacity:1; transform:translate3d(0,0,0); }
-  to { opacity:0; transform:translate3d(16px,0,0); }
-}
+.home-menu[data-state="open"] { animation:menu-popover-in 240ms cubic-bezier(.22,1,.36,1) both; }
+.home-menu[data-state="closed"] { animation:menu-popover-out 160ms ease-in both; }
 @media(prefers-reduced-motion:reduce) {
   .home-menu,.home-menu-overlay { animation:none !important; transition:none !important; }
 }

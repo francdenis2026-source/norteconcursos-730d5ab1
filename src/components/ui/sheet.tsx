@@ -53,6 +53,7 @@ interface SheetContentProps
   extends
     React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {
+  menuMotion?: "popover" | "drawer";
   overlayClassName?: string;
   closeLabel?: string;
 }
@@ -62,13 +63,15 @@ const SheetContent = React.forwardRef<
   SheetContentProps
 >(
   (
-    { side = "right", className, children, overlayClassName, closeLabel = "Close", ...props },
+    { side = "right", menuMotion, className, children, overlayClassName, closeLabel = "Fechar", ...props },
     ref,
   ) => (
     <SheetPortal>
-      <SheetOverlay className={overlayClassName} />
+      <SheetOverlay className={cn(menuMotion && "menu-sheet-overlay", overlayClassName)} />
       <SheetPrimitive.Content
         ref={ref}
+        data-menu-motion={menuMotion}
+        data-menu-side={side}
         className={cn(sheetVariants({ side }), className)}
         {...props}
       >

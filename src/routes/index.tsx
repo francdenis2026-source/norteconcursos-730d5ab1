@@ -215,6 +215,7 @@ function Index() {
               </SheetTrigger>
               <SheetContent
                 className="home-menu"
+                menuMotion="popover"
                 overlayClassName="home-menu-overlay"
                 closeLabel="Fechar menu"
               >
