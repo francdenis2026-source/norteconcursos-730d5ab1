@@ -1,5 +1,4 @@
 import { disciplinePracticeSearch } from "@/lib/practiceLink";
-import { ProgressSummary } from "@/components/dashboard/ProgressSummary";
 import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
 import { canonicalSubject } from "@/lib/subjects";
@@ -38,7 +37,7 @@ function PerformancePage() {
   const { user, isLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const { data, loading, error, retry } = usePerformanceOverview(user?.id, real);
-  const { data: libraryMaterials, isError: libraryError } = useStudyMaterialList(real);
+  const { data: libraryMaterials } = useStudyMaterialList(real);
   if (isLoading) return <p role="status">Carregando seu desempenho…</p>;
   if (!real || !user)
     return (
@@ -79,14 +78,6 @@ function PerformancePage() {
           Minhas provas e diagnóstico →
         </Link>
       </div>
-      {data && !error && (
-        <ProgressSummary
-          key={user.id}
-          overview={data}
-          materials={libraryMaterials}
-          materialsError={libraryError}
-        />
-      )}
       <StudyTimeCard key={user.id} userId={user.id} />
       <LearningJourney key={user.id} userId={user.id} overview={data} />
       {error ? (
@@ -235,7 +226,7 @@ function PerformanceOverviewTab({
   });
 
   return (
-    <div className="space-y-6">
+    <div className="performance-overview space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
         <p>Atualização automática a cada 30 segundos enquanto esta página estiver visível.</p>
         <span>
@@ -257,7 +248,7 @@ function PerformanceOverviewTab({
           </ul>
         </div>
       )}
-      <h2 className="text-lg font-semibold">Histórico completo</h2>
+      <h2 className="performance-overview__heading text-lg font-semibold">Visão geral do desempenho</h2>
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           icon={ListChecks}
@@ -271,6 +262,7 @@ function PerformanceOverviewTab({
                 : "Comece no Treinador"
           }
           tone="navy"
+          to="/dashboard/question-trainer"
         />
         <MetricCard
           icon={Brain}
@@ -284,6 +276,7 @@ function PerformanceOverviewTab({
                 : "Ainda nenhum simulado"
           }
           tone="amber"
+          to="/dashboard/mock-exams"
         />
         <MetricCard
           icon={Flame}
@@ -295,6 +288,7 @@ function PerformanceOverviewTab({
               : "Consulta indisponível"
           }
           tone={streak.current > 0 ? "emerald" : "rose"}
+          to="/dashboard"
         />
         <MetricCard
           icon={Trophy}
@@ -308,6 +302,7 @@ function PerformanceOverviewTab({
                 : "Consulta indisponível"
           }
           tone="navy"
+          to="/dashboard/ranking"
         />
       </section>
 
@@ -628,15 +623,17 @@ function MetricCard({
   value,
   detail,
   tone = "navy",
+  to,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
   value: string;
   detail?: string;
   tone?: keyof typeof TONE_STYLES;
+  to?: "/dashboard/question-trainer" | "/dashboard/mock-exams" | "/dashboard" | "/dashboard/ranking";
 }) {
-  return (
-    <Card className={cn("border-none shadow-sm", TONE_STYLES[tone])}>
+  const card = (
+    <Card className={cn("border-none shadow-sm performance-metric-card", TONE_STYLES[tone])}>
       <CardContent className="flex items-start gap-3 p-4">
         <Icon className="mt-0.5 h-5 w-5 shrink-0 opacity-80" />
         <div className="min-w-0">
@@ -646,6 +643,13 @@ function MetricCard({
         </div>
       </CardContent>
     </Card>
+  );
+  return to ? (
+    <Link to={to} className="performance-metric-link">
+      {card}
+    </Link>
+  ) : (
+    card
   );
 }
 

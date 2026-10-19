@@ -237,6 +237,8 @@ function StudentHome({ user }: { user: UserProfile }) {
           label="Questões resolvidas"
           value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
           detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
+          to="/dashboard/question-trainer"
+          tone="blue"
         />
         <Metric
           icon={CheckCircle2}
@@ -255,18 +257,24 @@ function StudentHome({ user }: { user: UserProfile }) {
               ? `${number(stats.correct)} acertos · ${number(stats.wrong)} erros`
               : "Comece pelas questões"
           }
+          to="/dashboard/performance"
+          tone="teal"
         />
         <Metric
           icon={Clock}
           label="Tempo ativo hoje"
           value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
           detail="Somando suas sessões"
+          to="/dashboard/performance"
+          tone="amber"
         />
         <Metric
           icon={TrendingUp}
           label="Estudo nesta semana"
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
           detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
+          to="/dashboard/performance"
+          tone="violet"
         />
       </section>
       <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
@@ -730,14 +738,18 @@ function Metric({
   label,
   value,
   detail,
+  to,
+  tone,
 }: {
   icon: LucideIcon;
   label: string;
   value: string;
   detail: string;
+  to?: "/dashboard/question-trainer" | "/dashboard/performance";
+  tone?: "blue" | "teal" | "amber" | "violet";
 }) {
-  return (
-    <article className="student-home__metric">
+  const content = (
+    <>
       <span>
         <Icon aria-hidden="true" />
       </span>
@@ -746,6 +758,15 @@ function Metric({
         <strong>{value}</strong>
         <p>{detail}</p>
       </div>
+    </>
+  );
+  return to ? (
+    <Link to={to} className="student-home__metric" data-tone={tone}>
+      {content}
+    </Link>
+  ) : (
+    <article className="student-home__metric" data-tone={tone}>
+      {content}
     </article>
   );
 }
