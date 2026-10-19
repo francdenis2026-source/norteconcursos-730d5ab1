@@ -1,7 +1,7 @@
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-/** Plays once, then removes the video and reveals the original hero photograph. */
+/** Plays once, then removes the video and reveals the homepage photograph. */
 export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean) => void }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
@@ -92,7 +92,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
     <>
       <img
         className="home-hero__image"
-        src="/media/hero/landing-hero.webp"
+        src="/media/hero/preparacao-norte.webp"
         alt=""
         aria-hidden="true"
         width={1672}
