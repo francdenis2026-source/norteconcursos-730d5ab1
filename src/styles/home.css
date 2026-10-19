@@ -3871,3 +3871,75 @@
   .home-sources__visual img { height: 160px; }
   .home-plan__media { height: 82px; }
 }
+
+/* Narrative banner between legal trust and plans. Its fixed frame fills the gap
+   without changing the dimensions of the surrounding sections. */
+.home-interstitial {
+  padding-block: 28px;
+  background: var(--home-bg);
+}
+.home-interstitial__frame {
+  position: relative;
+  min-height: 286px;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 18px;
+  background: #101722;
+  box-shadow: var(--shadow-card);
+}
+.home-interstitial__frame img {
+  display: block;
+  width: 100%;
+  height: 286px;
+  object-fit: cover;
+  object-position: center;
+  opacity: .9;
+}
+.home-interstitial__frame::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(9 14 21 / .15) 0%, rgb(9 14 21 / .2) 42%, rgb(9 14 21 / .9) 78%, #090e15 100%);
+}
+.home-interstitial__content {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: clamp(24px, 7vw, 92px);
+  display: grid;
+  width: min(360px, 38%);
+  gap: 8px;
+  transform: translateY(-50%);
+  color: #f4f7fa;
+}
+.home-interstitial__content .home-eyebrow {
+  margin-bottom: 2px;
+  color: #8fc8ff;
+}
+.home-interstitial__content strong {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+.home-interstitial__content > span:not(.home-eyebrow) {
+  max-width: 30ch;
+  color: rgb(238 244 249 / .76);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.home-interstitial__content .home-button {
+  width: fit-content;
+  margin-top: 8px;
+}
+@media (max-width: 700px) {
+  .home-interstitial { padding-block: 20px; }
+  .home-interstitial__frame,
+  .home-interstitial__frame img { min-height: 220px; height: 220px; }
+  .home-interstitial__frame img { object-position: 34% center; opacity: .7; }
+  .home-interstitial__frame::after { background: linear-gradient(90deg, rgb(9 14 21 / .32), rgb(9 14 21 / .92)); }
+  .home-interstitial__content { right: 20px; left: 20px; width: auto; }
+  .home-interstitial__content strong { font-size: 32px; }
+  .home-interstitial__content .home-button { min-height: 40px; }
+}

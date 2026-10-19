@@ -638,6 +638,29 @@ function Index() {
           </div>
         </section>
 
+        <section className="home-interstitial" aria-label="Preparação orientada para carreiras policiais">
+          <div className="home-container">
+            <figure className="home-interstitial__frame">
+              <img
+                src="/media/hero/home-interstitial.webp"
+                alt="Profissional de segurança pública em uma paisagem urbana noturna"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="home-interstitial__content">
+                <span className="home-eyebrow">Norte · operação</span>
+                <strong>Treino com direção.</strong>
+                <span>Seu próximo avanço começa com uma sessão bem escolhida.</span>
+                <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
+                  Começar grátis <ArrowUpRight aria-hidden="true" />
+                </Link>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <PlansSection />
 
         <section className="home-final" aria-labelledby="home-final-title">
