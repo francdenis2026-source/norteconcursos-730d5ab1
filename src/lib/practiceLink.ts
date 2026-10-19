@@ -27,3 +27,8 @@ export function disciplinePracticeSearch(subject: string) {
   const discipline = canonicalSubject(subject);
   return { ...practiceSearch(discipline), subject: discipline } as const;
 }
+
+/** Open the exact discipline for topic selection and explicit session confirmation. */
+export function disciplineSetupSearch(subject: string, fresh: string) {
+  return { subject: canonicalSubject(subject), unseen: "1", fresh } as const;
+}

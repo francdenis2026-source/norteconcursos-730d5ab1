@@ -28,3 +28,13 @@ test("diagnosis practice links preserve the exact discipline and start the train
   assert.equal(search.go, "1");
   assert.equal(search.topic, undefined);
 });
+
+
+test("discipline history opens exact subject setup without autostart or a preselected topic", async () => {
+  const { disciplineSetupSearch } = await import("../src/lib/practiceLink.ts");
+  for (const subject of ["Direito Constitucional", "Redação Oficial", "Contabilidade Geral"]) {
+    const s=disciplineSetupSearch(subject,"fresh-click");
+    assert.equal(s.subject,subject);assert.equal(s.unseen,"1");assert.equal(s.fresh,"fresh-click");
+    assert.equal(s.go,undefined);assert.equal(s.studyTopic,undefined);assert.equal(s.topic,undefined);assert.equal(s.area,undefined);
+  }
+});

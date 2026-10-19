@@ -1,3 +1,4 @@
+import { disciplineSetupSearch } from "@/lib/practiceLink";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
@@ -349,8 +350,15 @@ function SimulatorResult({ userId, attempt }: { userId: string; attempt: Simulat
             <ul>
               {[...subjects].map(([subject, s]) => (
                 <li key={subject}>
-                  {subject}: {s.correct}/{s.total} acertos (
-                  {Math.round((s.correct / s.total) * 100)}%)
+                  <Link
+                    className="student-metric-panel__history-discipline"
+                    to="/dashboard/question-trainer"
+                    search={disciplineSetupSearch(subject, String(Date.now()))}
+                    aria-label={`Treinar ${subject}`}
+                  >
+                    {subject}: {s.correct}/{s.total} acertos (
+                    {Math.round((s.correct / s.total) * 100)}%) →
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -496,6 +504,17 @@ function ActivityQuestionRow({
               <p>
                 O enunciado original não está disponível no catálogo. Seu resultado registrado foi
                 preservado.
+              </p>
+            )}
+            {info && info.subject && (
+              <p>
+                <Link
+                  className="student-metric-panel__history-discipline"
+                  to="/dashboard/question-trainer"
+                  search={disciplineSetupSearch(info.subject, fresh)}
+                >
+                  Escolher assunto de {info.subject} →
+                </Link>
               </p>
             )}
             {info && info.subject && (

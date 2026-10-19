@@ -1,3 +1,4 @@
+import { disciplineSetupSearch } from "@/lib/practiceLink";
 import { useState } from "react";
 import { STUDY_PERIODS, studyPeriodSummary, type StudyPeriod } from "@/lib/dailyStudyActivity";
 import { DailyStudyActivity } from "@/components/dashboard/DailyStudyActivity";
@@ -198,6 +199,7 @@ export function StudentMetricDetails({
   now: Date;
 }) {
   const today = acreDateKey(now);
+  const [setupFresh] = useState(() => String(Date.now()));
   if (metric === "questions" || metric === "accuracy") {
     const stats = summarizeTraining(training, null, today);
     const first = new Map<string, TrainingRecord>();
@@ -259,7 +261,13 @@ export function StudentMetricDetails({
               </h3>
               <div className="student-metric-panel__subjects">
                 {stats.subjects.map((s) => (
-                  <div key={s.subject}>
+                  <Link
+                    key={s.subject}
+                    to="/dashboard/question-trainer"
+                    search={disciplineSetupSearch(s.subject, setupFresh)}
+                    className="student-metric-panel__discipline"
+                    aria-label={`Treinar ${s.subject}`}
+                  >
                     <div>
                       <strong>{s.subject}</strong>
                       <span>
@@ -275,7 +283,10 @@ export function StudentMetricDetails({
                       {count(s.correct)} acertos · {count(s.total - s.correct)} erros ·{" "}
                       {count(s.total)} respondidas
                     </p>
-                  </div>
+                    <small>
+                      Escolher assunto ou iniciar treino <ArrowRight aria-hidden="true" />
+                    </small>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -286,7 +297,18 @@ export function StudentMetricDetails({
                   {recent.map((r) => (
                     <li key={JSON.stringify([r.question_source, r.question_id])}>
                       <div>
-                        <strong>{r.subject || "Sem disciplina identificada"}</strong>
+                        {r.subject ? (
+                          <Link
+                            className="student-metric-panel__history-discipline"
+                            to="/dashboard/question-trainer"
+                            search={disciplineSetupSearch(r.subject, setupFresh)}
+                          >
+                            {r.subject}
+                            <ArrowRight aria-hidden="true" />
+                          </Link>
+                        ) : (
+                          <strong>Sem disciplina identificada</strong>
+                        )}
                         <span>
                           {new Intl.DateTimeFormat("pt-BR", {
                             day: "2-digit",
