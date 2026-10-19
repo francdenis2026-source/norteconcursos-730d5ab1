@@ -2197,3 +2197,87 @@
   width: 16px;
   height: 16px;
 }
+
+/* Live aggregate, kept within the brand area so account actions never compete for space. */
+.home-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+.home-presence {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 142px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  background: var(--home-bg);
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.home-presence[data-available="false"] {
+  visibility: hidden;
+}
+.home-presence strong {
+  color: var(--home-text);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.home-presence__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--home-muted);
+  flex: none;
+}
+.home-presence[data-active="true"] .home-presence__dot {
+  background: var(--home-gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--home-gold) 18%, transparent);
+}
+.home-presence__short {
+  display: none;
+}
+@media (max-width: 1140px) {
+  .home-nav {
+    display: none;
+  }
+  .home-menu-trigger {
+    display: grid;
+  }
+}
+@media (max-width: 900px) {
+  .home-brand-lockup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .home-presence {
+    min-width: 0;
+    min-height: 14px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 10px;
+  }
+  .home-presence__dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .home-presence {
+    font-size: 9px;
+    gap: 6px;
+  }
+  .home-presence__full {
+    display: none;
+  }
+  .home-presence__short {
+    display: inline;
+  }
+}

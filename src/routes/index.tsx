@@ -1,3 +1,4 @@
+import { StudyPresence } from "@/components/landing/StudyPresence";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
@@ -179,9 +180,12 @@ function Index() {
       </a>
       <header className="home-header">
         <div className="home-container home-header__inner">
-          <Link to="/">
-            <NorteBrand />
-          </Link>
+          <div className="home-brand-lockup">
+            <Link to="/" aria-label="Norte Concurso — início">
+              <NorteBrand />
+            </Link>
+            <StudyPresence />
+          </div>
           <nav className="home-nav" aria-label="Navegação principal">
             {NAV.map(([label, href]) => (
               <a key={href} href={href}>
