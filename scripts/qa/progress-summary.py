@@ -27,10 +27,14 @@ async def main():
      await route.fulfill(status=403,content_type='application/json',body=json.dumps({'message':'fixture unavailable'}));return
     slug=parse_qs(urlparse(url).query).get('slug',[''])[0].removeprefix('eq.')
     data=next((m for m in materials if m['slug']==slug),None) if slug else materials if mode['theory']=='ready' else []
+   elif table=='curated_question_catalog':
+    offset=int(parse_qs(urlparse(url).query).get('offset',['0'])[0])
+    data=[] if offset else [{'id':f'qa-practice-{i}','contest_name':'Teste local','contest_year':2025,'career_name':'Polícia Civil','exam_board':'CEBRASPE','subject':subject,'question_text':f'Questão local de teste de {subject}.','official_answer':'C','content_status':'active','legal_basis':[{'url':'https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm'}],'law_version_checked_at':'2026-10-01T00:00:00Z','explanation':'Conteúdo fictício somente para teste de navegação.','difficulty':'facil'} for i,subject in enumerate(['Direito Penal','Direito Processual Penal','Matemática'])]
    elif table=='question_training_responses':
     if mode['value']=='unavailable':
      await route.fulfill(status=403,content_type='application/json',body=json.dumps({'message':'fixture unavailable'}));return
     data=rows if mode['value']=='normal' and int(parse_qs(urlparse(url).query).get('offset',['0'])[0])==0 else []
+   elif table=='my_difficulty_analysis':data=[{'subject':'Direito Penal','topic':'Visão por disciplina','answered':10,'correct':2,'accuracy':20,'avg_seconds':30,'median_seconds':30,'difficulty_score':56}]
    elif table=='get_current_acre_date':data=(now-timedelta(hours=5)).strftime('%Y-%m-%d')
    else:data=[]
    await route.fulfill(status=200,content_type='application/json',body=json.dumps(data))
@@ -46,6 +50,18 @@ async def main():
   print('Training link:',href,flush=True)
   params=parse_qs(urlparse(href).query)
   assert 'question-trainer' in href and params.get('area')==['Direito Penal'] and json.loads(params['go'][0])=='1'
+  assert params.get('subject')==['Direito Penal']
+  for label in ['Treinar Direito Penal pelo ritmo','Treinar Direito Penal pelo diagnóstico','Treinar Direito Penal pela análise de dificuldade','Treinar Direito Penal pelo detalhamento','Treinar Direito Penal pela trilha']:
+   diagnosis=page.get_by_role('link',name=label,exact=True)
+   await diagnosis.wait_for();query=parse_qs(urlparse(await diagnosis.get_attribute('href')).query)
+   assert query.get('subject')==['Direito Penal'] and query.get('area')==['Direito Penal'] and json.loads(query['go'][0])=='1'
+   assert (await diagnosis.bounding_box())['height']>=44
+  await page.get_by_role('link',name='Treinar Direito Penal pelo diagnóstico',exact=True).focus()
+  await page.keyboard.press('Enter')
+  await page.locator('#trainer-question').wait_for(timeout=30000)
+  assert 'Questão local de teste de Direito Penal.' in await page.locator('#trainer-question').inner_text()
+  assert 'Questão local de teste de Direito Processual Penal.' not in await page.locator('#trainer-question').inner_text()
+  await page.goto('http://localhost:8080/dashboard/performance',wait_until='networkidle');await panel.wait_for()
   heading=panel.get_by_role('link',name='Abrir questões de Direito Penal')
   assert await heading.get_attribute('href')==href
   theory=panel.get_by_role('link',name='Estudar teoria de Direito Penal: Fundamentos de Direito Penal',exact=True)
@@ -76,6 +92,6 @@ async def main():
   mode['value']='unavailable';await page.reload(wait_until='networkidle');await panel.get_by_text('Respostas indisponíveis',exact=True).wait_for()
   assert '0 acertos' not in await panel.inner_text()
   assert not errors,errors
-  print('PASS: period totals, keyboard, subject and theory navigation, extra readings, missing/unavailable theory, 320/390/768/1280 widths, dark, empty and unavailable sources; no JS errors')
+  print('PASS: period totals, keyboard, all diagnosis blocks clickable, actual filtered trainer start, subject and theory navigation, extra readings, missing/unavailable theory, 320/390/768/1280 widths, dark, empty and unavailable sources; no JS errors')
   await browser.close()
 asyncio.run(main())

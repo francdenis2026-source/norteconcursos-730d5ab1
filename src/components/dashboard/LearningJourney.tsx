@@ -1,3 +1,4 @@
+import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
@@ -108,14 +109,21 @@ export function LearningJourney({
               {weak.map((s) => (
                 <li key={s.subject}>
                   <p>
-                    <strong>{s.subject}</strong>: {s.correct} acertos em {s.total} questões (
-                    {s.accuracy}%). Revise os erros e faça uma nova sessão curta após estudar o
-                    conteúdo.
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={disciplinePracticeSearch(s.subject)}
+                      aria-label={`Treinar ${s.subject} pela trilha`}
+                      className="inline-flex min-h-11 items-center font-bold underline underline-offset-4 hover:text-primary"
+                    >
+                      {s.subject}
+                    </Link>
+                    : {s.correct} acertos em {s.total} questões ({s.accuracy}%). Revise os erros e
+                    faça uma nova sessão curta após estudar o conteúdo.
                   </p>
                   <Link
-                    className="text-sm underline"
+                    className="inline-flex min-h-11 items-center text-sm underline"
                     to="/dashboard/question-trainer"
-                    search={{ subject: s.subject }}
+                    search={disciplinePracticeSearch(s.subject)}
                   >
                     Treinar esta disciplina
                   </Link>

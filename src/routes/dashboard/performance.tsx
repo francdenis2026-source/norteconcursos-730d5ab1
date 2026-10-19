@@ -1,3 +1,4 @@
+import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { ProgressSummary } from "@/components/dashboard/ProgressSummary";
 import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
@@ -168,7 +169,14 @@ function RhythmCard({
         {items.map((i) => (
           <div key={i.subject} className="rounded-xl border p-3">
             <div className="flex flex-wrap items-center gap-2">
-              <p className="font-semibold">{i.subject}</p>
+              <Link
+                to="/dashboard/question-trainer"
+                search={disciplinePracticeSearch(i.subject)}
+                aria-label={`Treinar ${i.subject} pelo ritmo`}
+                className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4 hover:text-primary"
+              >
+                {i.subject}
+              </Link>
               <span
                 className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${RHYTHM_STYLE[i.kind].cls}`}
               >
@@ -333,13 +341,20 @@ function PerformanceOverviewTab({
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {strongSubjects.map((s) => (
-                        <Badge
+                        <Link
                           key={s.subject}
-                          variant="outline"
-                          className="border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+                          to="/dashboard/question-trainer"
+                          search={disciplinePracticeSearch(s.subject)}
+                          aria-label={`Treinar ${s.subject} pelo diagnóstico`}
+                          className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
                         >
-                          {s.subject} · {s.accuracy}%
-                        </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+                          >
+                            {s.subject} · {s.accuracy}%
+                          </Badge>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -351,13 +366,20 @@ function PerformanceOverviewTab({
                     </p>
                     <div className="flex flex-wrap gap-1.5">
                       {weakSubjects.map((s) => (
-                        <Badge
+                        <Link
                           key={s.subject}
-                          variant="outline"
-                          className="border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300"
+                          to="/dashboard/question-trainer"
+                          search={disciplinePracticeSearch(s.subject)}
+                          aria-label={`Treinar ${s.subject} pelo diagnóstico`}
+                          className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
                         >
-                          {s.subject} · {s.accuracy}%
-                        </Badge>
+                          <Badge
+                            variant="outline"
+                            className="border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300"
+                          >
+                            {s.subject} · {s.accuracy}%
+                          </Badge>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -436,9 +458,15 @@ function PerformanceOverviewTab({
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-bold" title={item.subject}>
+                      <Link
+                        to="/dashboard/question-trainer"
+                        search={disciplinePracticeSearch(item.subject)}
+                        aria-label={`Treinar ${item.subject} pela análise de dificuldade`}
+                        className="inline-flex min-h-11 items-center break-words text-sm font-bold underline underline-offset-4 hover:text-primary"
+                        title={item.subject}
+                      >
                         {item.subject}
-                      </p>
+                      </Link>
                       <p className="truncate text-xs text-muted-foreground" title={item.topic}>
                         {item.topic}
                       </p>
@@ -637,9 +665,14 @@ function SubjectTable({
             key={s.subject}
             className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-2 text-xs"
           >
-            <span className="col-span-2 min-w-0 break-words font-semibold sm:col-span-1">
+            <Link
+              to="/dashboard/question-trainer"
+              search={disciplinePracticeSearch(s.subject)}
+              aria-label={`Treinar ${s.subject} pelo detalhamento`}
+              className="col-span-2 inline-flex min-h-11 min-w-0 items-center break-words font-semibold underline underline-offset-4 hover:text-primary sm:col-span-1"
+            >
               {s.subject}
-            </span>
+            </Link>
             <div className="col-span-2 flex min-w-0 flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end">
               <span className="tabular-nums text-muted-foreground">
                 {s.correct}/{s.total} ({s.accuracy}%)

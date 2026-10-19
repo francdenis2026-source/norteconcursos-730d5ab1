@@ -46,3 +46,11 @@ Os cartões agora permitem clicar no nome da matéria para iniciar o treinador c
 As sugestões usam o catálogo existente e somente materiais ativos da mesma disciplina canônica, por ordem editorial. Materiais de outras matérias, arquivados, obsoletos, em revisão e do contexto ENEM são excluídos. Nenhum novo material foi criado. A indisponibilidade da consulta é diferenciada da ausência de teoria publicada; ambas preservam o acesso ao treino. Os limites do treinador e da biblioteca continuam nas páginas de destino.
 
 Validação adicional: 650 testes passaram, incluindo correspondência de disciplina, estado de publicação, separação do ENEM, ordenação e duplicatas nas leituras. TypeScript e build passaram. No navegador com fixtures: nome da matéria e botão levam à mesma sessão filtrada; botão de teoria abre o material e seu título; outras leituras expandem; ausência e falha na consulta da teoria preservam o treino; modos claro/escuro e larguras 320–1280 px sem overflow. Nenhuma alteração no banco.
+
+## Correção — disciplinas clicáveis em todos os diagnósticos
+
+O resumo “Pontos a fortalecer” já possuía links, porém os blocos históricos “Precisam de reforço”, “Seu ritmo por matéria”, “Onde você precisa de mais atenção” e “Detalhamento por matéria” ainda exibiam os nomes sem navegação. A trilha tinha um atalho separado que apenas selecionava a disciplina, sem início automático.
+
+Todos esses nomes agora são links reais, sublinhados, com alvo de toque mínimo de 44 px e operação por teclado. O resumo, os diagnósticos e a trilha compartilham `disciplinePracticeSearch`: disciplina canônica nos parâmetros `subject` e `area`, com `go=1` para iniciar diretamente. O filtro exato de disciplina evita ampliar para outras matérias relacionadas à área. As leituras de teoria e as regras de publicação, quota e resposta permanecem nos fluxos existentes.
+
+Validação: 651 testes passaram; TypeScript e build passaram. Chromium com fixtures conferiu os links de todos os blocos, acionou o diagnóstico por teclado e abriu uma sessão real do treinador com uma questão da matéria selecionada, diante de catálogo contendo também outras disciplinas. Os testes de teoria, filtros por período, telas 320–1280 px e estados sem histórico/consulta indisponível foram preservados. Sem escrita no banco e sem uso de dados privados de alunos.

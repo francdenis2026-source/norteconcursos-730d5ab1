@@ -1,3 +1,4 @@
+import { canonicalSubject } from "@/lib/subjects";
 import { classifyTopic } from "@/lib/questionTopics";
 
 /** Disciplina de questões correspondente a cada curso por disciplina. */
@@ -19,4 +20,10 @@ export const TRACK_SUBJECT: Record<string, string> = {
 export function practiceSearch(subject: string, text?: string) {
   const topic = text ? classifyTopic(subject, text) : null;
   return { area: subject, ...(topic ? { topic } : {}), go: "1", reinforce: "1" } as const;
+}
+
+/** Diagnosis links target the exact recorded discipline, without widening to related subjects. */
+export function disciplinePracticeSearch(subject: string) {
+  const discipline = canonicalSubject(subject);
+  return { ...practiceSearch(discipline), subject: discipline } as const;
 }

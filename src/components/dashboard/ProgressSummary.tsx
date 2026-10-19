@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, Target, Trophy, TrendingUp } from "lucide-react";
 import type { PerformanceOverview } from "@/hooks/usePerformanceOverview";
 import { progressSummary, type ProgressPeriod } from "@/lib/progressSummary";
 import { platformDate } from "@/lib/platformClock";
-import { practiceSearch } from "@/lib/practiceLink";
+import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { reinforcementMaterials } from "@/lib/reinforcementMaterials";
 import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 
@@ -141,7 +141,7 @@ export function ProgressSummary({
                     <h4 className="font-semibold break-words">
                       <Link
                         to="/dashboard/question-trainer"
-                        search={practiceSearch(subject.subject)}
+                        search={disciplinePracticeSearch(subject.subject)}
                         aria-label={`Abrir questões de ${subject.subject}`}
                         className="inline-flex min-h-11 items-center underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
                       >
@@ -157,7 +157,7 @@ export function ProgressSummary({
                     <div className="mt-3 flex flex-wrap gap-2">
                       <Link
                         to="/dashboard/question-trainer"
-                        search={practiceSearch(subject.subject)}
+                        search={disciplinePracticeSearch(subject.subject)}
                         aria-label={`Treinar ${subject.subject}`}
                         className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-3 text-sm font-semibold hover:bg-muted"
                       >
