@@ -1,16 +1,16 @@
 /* Homepage: one scoped visual system. Intro media state is owned by HeroVideo. */
 .home,
 .home-menu {
-  --home-bg: #efefef;
-  --home-surface: #ffffff;
-  --home-tint: #f3f3f3;
-  --home-text: #262626;
-  --home-muted: #595959;
-  --home-line: #d6d6d6;
-  --home-accent: #87570f;
-  --home-accent-bg: #f9f1df;
-  --home-navy: #252a32;
-  --home-gold: #e3ad4c;
+  --home-bg: var(--background);
+  --home-surface: var(--card);
+  --home-tint: var(--muted);
+  --home-text: var(--foreground);
+  --home-muted: var(--muted-foreground);
+  --home-line: var(--border);
+  --home-accent: var(--brass-deep);
+  --home-accent-bg: var(--accent);
+  --home-navy: var(--ink);
+  --home-gold: var(--brass);
   color: var(--home-text);
   background: var(--home-bg);
   font-family: "Archivo", system-ui, sans-serif;
@@ -19,15 +19,17 @@
 }
 .dark .home,
 .dark .home-menu {
-  --home-bg: #14171d;
-  --home-surface: #1e232c;
-  --home-tint: #2b323d;
-  --home-text: #eef0f4;
-  --home-muted: #bac1cc;
-  --home-line: #414955;
-  --home-accent: #e3ad4c;
-  --home-accent-bg: #363127;
+  --home-accent: var(--brass);
 }
+
+/* Keep the hero and navigation on the same neutral canvas in dark mode. */
+.dark .home-header {
+  background: var(--header-glass);
+}
+.dark .home-hero {
+  background: var(--home-bg);
+}
+
 .home {
   position: relative;
   isolation: isolate;
@@ -154,11 +156,11 @@
 .home-button--gold {
   background: var(--home-gold);
   border-color: var(--home-gold);
-  color: #252a32;
+  color: var(--brass-foreground);
 }
 .home-button--gold:hover {
-  background: #e8b96b;
-  border-color: #e8b96b;
+  background: var(--brass-hover);
+  border-color: var(--brass-hover);
 }
 .home-button--primary {
   background: var(--home-text);
@@ -519,11 +521,11 @@
 }
 /* Existing hero photography and intro overlay retain the same geometry and timing. */
 .home-hero {
-  --home-surface: #202834;
-  --home-text: #f3f5f8;
-  --home-muted: #c9d1dc;
-  --home-accent: #e3ad4c;
-  --home-line: #516072;
+  --home-surface: var(--ink);
+  --home-text: var(--on-ink);
+  --home-muted: var(--on-ink-muted);
+  --home-accent: var(--brass);
+  --home-line: var(--on-ink-line);
   background: var(--home-surface);
   color: var(--home-text);
 }
@@ -554,12 +556,12 @@
 }
 .home-header__register {
   background: var(--home-gold);
-  color: #252a32;
+  color: var(--brass-foreground);
   border-color: var(--home-gold);
 }
 .home-header__register:hover {
-  background: #e8b96b;
-  border-color: #e8b96b;
+  background: var(--brass-hover);
+  border-color: var(--brass-hover);
   opacity: 1;
 }
 .home-hero__explore:hover {
@@ -2318,7 +2320,7 @@
 @media(max-width:639px) { .home-opportunity--pcpr .home-pcpr-hero { height:190px; } .home-pcpr-hero > span { inset-inline:20px; font-size:9px; } }
 
 :root:not(.dark) .home-header {
-  background: rgb(255 255 255 / .97);
+  background: var(--header-glass);
   border-bottom-color: var(--home-line);
   -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
   box-shadow: 0 2px 10px rgb(0 0 0 / .04);
@@ -2462,10 +2464,10 @@
 /* White cards carry the content; the neutral canvas separates each surface. */
 :root:not(.dark) .home :is(.home-plan,.home-opportunity) {
   background: var(--home-surface);
-  box-shadow: 0 2px 8px rgb(0 0 0 / .045);
+  box-shadow: var(--shadow-card);
 }
 :root:not(.dark) .home :is(.home-plan,.home-opportunity):hover {
-  box-shadow: 0 5px 16px rgb(0 0 0 / .075);
+  box-shadow: var(--shadow-lift);
 }
 /* Reading copy must remain comfortable on both desktop and small screens. */
 .home :is(.home-plan__description,.home-plan__annual,.home-plan__availability,
