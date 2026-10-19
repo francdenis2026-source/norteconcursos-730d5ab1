@@ -2611,3 +2611,10 @@
 :root:not(.dark) .home-hero .home-eyebrow,
 :root:not(.dark) .home-hero__copy .home-eyebrow { color: var(--brass-soft); }
 :root:not(.dark) .home-hero .home-eyebrow > span { background: var(--brass); }
+
+/* Seções com fundo escuro fixo (hero e chamada final): os realces azuis do modo
+   claro não valem aqui. Restaura o dourado com contraste sobre o fundo escuro. */
+:root:not(.dark) :is(.home-hero, .home-final) { --home-accent: var(--brass); }
+:root:not(.dark) :is(.home-hero, .home-final) :is(.home-eyebrow, .home-text-link, .home-trust a) { color: var(--brass-soft); }
+:root:not(.dark) :is(.home-hero, .home-final) .home-eyebrow > span { background: var(--brass); }
+:root:not(.dark) .home-final h2 em { color: var(--brass); background: none; -webkit-text-fill-color: currentColor; }
