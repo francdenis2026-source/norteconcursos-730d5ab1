@@ -2740,3 +2740,18 @@
 .dark .home-plan--featured > .home-button[disabled],
 .dark .home-plan--featured > .home-button[aria-disabled="true"] { background: var(--d-blue); color: oklch(0.2 0.03 262); border-color: var(--d-blue); }
 .dark .home-plan--featured > .home-button svg { color: inherit; }
+
+/* Cards de oportunidades mais compactos: mesma arte da campanha (proporção e tamanho
+   preservados); só o espaçamento vertical entre os blocos diminui. */
+.home-opportunity .home-opportunity__header { padding: 14px 18px 0; gap: 14px; }
+.home-opportunity .home-opportunity__identity { margin-bottom: 8px; }
+.home-opportunity .home-opportunity__intro > p { margin-top: 6px; line-height: 1.5; }
+.home-opportunity .home-opportunity__body,
+.home-opportunity--pcpr .home-opportunity__body { padding: 0 18px 14px; }
+.home-opportunity .home-exam-details { margin: 6px 0 0; }
+.home-opportunity--pcpr .home-exam-details { margin: 8px 0 0; }
+.home-opportunity .home-exam-details summary { min-height: 40px; }
+.home-opportunity .home-pcpi-actions { margin-top: 10px; gap: 10px; }
+.home-opportunity .home-pcpi-actions > div { gap: 6px; }
+.home-opportunity .home-opportunity__bottom { padding-top: 6px; gap: 6px 14px; }
+.home-opportunity .home-opportunity__bottom > small { line-height: 1.45; }
