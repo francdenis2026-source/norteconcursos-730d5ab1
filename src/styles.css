@@ -12783,3 +12783,91 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 :root:not(.dark) .page-hero[data-hero="public-security"] { background-color: oklch(0.97 0.025 262); }
 :root:not(.dark) .page-hero[data-hero="public-security"]::before { background: linear-gradient(90deg, oklch(0.97 0.025 262) 20%, oklch(0.97 0.025 262 / .94) 48%, transparent 74%); }
 :root:not(.dark) .page-hero[data-hero="public-security"] h1 { color: oklch(0.25 0.07 262); }
+
+/* ==========================================================================
+   Modo claro — heroes internos limpos: sem camada escura, grade, brilho radial
+   ou luz no hover. A foto se dissolve no fundo claro por máscara. Resultados
+   de simulado (.mock-result-hero) e o hero escuro da homepage não mudam.
+   ========================================================================== */
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh) {
+  color: var(--foreground);
+  border: 1px solid oklch(0.88 0.03 262);
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+  isolation: isolate;
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh):hover {
+  border-color: oklch(0.82 0.06 262);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before {
+  inset: 0 0 0 48%; z-index: -1;
+  background: var(--hero-image) var(--hero-position, 70% center) / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::after { display: none; }
+:root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before { border-left: 0; }
+:root:not(.dark) .page-hero:not(.min-h-svh) h1,
+:root:not(.dark) .catalog-command-hero h1 { color: oklch(0.25 0.07 262); text-shadow: none; }
+:root:not(.dark) .page-hero:not(.min-h-svh) h1 em { color: var(--c-blue); }
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__desc,
+:root:not(.dark) .catalog-command-hero > p { color: oklch(0.4 0.03 262); }
+:root:not(.dark) :is(.page-hero:not(.min-h-svh), .catalog-command-hero) :is(.hero-chip, .internal-hero-kicker) {
+  color: var(--c-blue) !important; background: var(--c-blue-soft) !important;
+  border-color: oklch(0.5 0.18 262 / .25) !important; backdrop-filter: none;
+}
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__actions :is(a, button).border-input {
+  color: var(--c-blue); background: #fff; border-color: oklch(0.5 0.18 262 / .35);
+}
+:root:not(.dark) .page-hero:not(.min-h-svh) .page-hero__actions :is(a, button).border-input:hover { background: var(--c-blue-soft); }
+@media (max-width: 760px) {
+  :root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before { inset: 0; opacity: .18; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Simulador e Assistente de estudos: mesma linguagem clara */
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) {
+  color: var(--foreground);
+  border: 1px solid oklch(0.88 0.03 262);
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 16px 36px -26px oklch(0.4 0.14 262 / .35);
+  isolation: isolate;
+}
+:root:not(.dark) .study-assistant-hero::before,
+:root:not(.dark) .exam-simulator-hero::before {
+  content: ""; position: absolute; inset: 0 0 0 50%; z-index: -1;
+  background: var(--sa-img) center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}
+:root:not(.dark) .study-assistant-hero { --sa-img: url('/media/hero/study-assistant.webp'); }
+:root:not(.dark) .exam-simulator-hero { --sa-img: url('/media/hero/exam-simulator.webp'); }
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) h1 { color: oklch(0.25 0.07 262); }
+:root:not(.dark) :is(.study-assistant-hero, .exam-simulator-hero) p { color: oklch(0.4 0.03 262); }
+:root:not(.dark) :is(.study-assistant-hero__eyebrow, .exam-simulator-hero__eyebrow) { color: var(--c-blue); }
+:root:not(.dark) .exam-simulator-hero__catalog { color: var(--c-teal); font-weight: 600; }
+:root:not(.dark) .study-assistant-hero__action { background: var(--c-blue); color: #fff; }
+:root:not(.dark) .study-assistant-hero__action:hover { background: oklch(0.44 0.18 262); }
+@media (max-width: 760px) {
+  :root:not(.dark) .study-assistant-hero::before,
+  :root:not(.dark) .exam-simulator-hero::before { inset: 0; opacity: .16; -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Hero do Painel: foto com transição por máscara, sem camada sobre a imagem */
+:root:not(.dark) .student-hub__hero-visual::after { display: none; }
+:root:not(.dark) .student-hub__hero-visual img { filter: none; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 28%); mask-image: linear-gradient(90deg, transparent 0%, #000 28%); }
+:root:not(.dark) .student-hub__masthead-actions > a svg { color: #fff; }
+@media (max-width: 640px) {
+  :root:not(.dark) .student-hub__hero-visual img { -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%); mask-image: linear-gradient(180deg, transparent 0%, #000 30%); }
+}
+/* Treinador: sem véu sobre a foto, só a máscara */
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero {
+  background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 55%);
+  isolation: isolate;
+}
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::after {
+  content: ""; position: absolute; inset: 0 0 0 50%; z-index: -1;
+  background: url('/media/hero/trainer-study.webp') center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
+}

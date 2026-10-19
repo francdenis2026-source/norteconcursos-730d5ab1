@@ -2606,3 +2606,8 @@
 @media (max-width: 760px) {
   :root:not(.dark) .home-steps > li { padding: 14px; }
 }
+
+/* O hero da homepage tem foto escura: o destaque precisa de contraste claro. */
+:root:not(.dark) .home-hero .home-eyebrow,
+:root:not(.dark) .home-hero__copy .home-eyebrow { color: var(--brass-soft); }
+:root:not(.dark) .home-hero .home-eyebrow > span { background: var(--brass); }
