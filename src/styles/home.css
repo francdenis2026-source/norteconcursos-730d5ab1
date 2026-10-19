@@ -1,12 +1,12 @@
 /* Homepage: one scoped visual system. Intro media state is owned by HeroVideo. */
 .home,
 .home-menu {
-  --home-bg: #f5f6f8;
-  --home-surface: #ffffff;
-  --home-tint: #eef0f3;
-  --home-text: #252a32;
-  --home-muted: #606773;
-  --home-line: #dfe3e8;
+  --home-bg: #e8edf3;
+  --home-surface: #f7f9fc;
+  --home-tint: #e2e8f0;
+  --home-text: #202834;
+  --home-muted: #536171;
+  --home-line: #c8d1dc;
   --home-accent: #87570f;
   --home-accent-bg: #f9f1df;
   --home-navy: #252a32;
@@ -2289,3 +2289,21 @@
 .home-pcpr-hero::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(20,24,31,.85),transparent 55%); pointer-events:none; }
 .home-pcpr-hero > span { position:absolute; z-index:1; inset-inline:24px; bottom:16px; color:#f7dfab; font-size:10px; font-weight:700; letter-spacing:.12em; line-height:1.5; }
 @media(max-width:639px) { .home-opportunity--pcpr .home-pcpr-hero { height:190px; } .home-pcpr-hero > span { inset-inline:20px; font-size:9px; } }
+
+:root:not(.dark) .home-header {
+  --home-bg:#303c4e; --home-surface:#354154; --home-tint:#45556d; --home-line:#657489; --home-text:#f2f5fa; --home-muted:#ced7e4; --home-accent:#f3cd82;
+  background:linear-gradient(110deg,rgb(35 44 58 / .96),rgb(49 62 80 / .94));
+  border-bottom-color:#bf9750;
+  -webkit-backdrop-filter:blur(18px) saturate(1.12); backdrop-filter:blur(18px) saturate(1.12);
+  box-shadow:0 6px 20px rgb(24 33 46 / .14);
+}
+:root:not(.dark) .home-header .norte-brand__type span { color:#f3cd82; }
+:root:not(.dark) .home-header .home-presence { background:#354154; border-color:#718096; }
+/* Reduce the milky veil on photography without changing the intro/video behavior. */
+@media(min-width:768px) {
+  :root:not(.dark) .home-hero::after { background:linear-gradient(90deg,var(--home-surface),color-mix(in srgb,var(--home-surface) 97%,transparent) 34%,color-mix(in srgb,var(--home-surface) 32%,transparent) 60%,transparent 80%); }
+}
+@media(forced-colors:active) {
+  :root:not(.dark) .home-header { background:Canvas; color:CanvasText; border-color:CanvasText; backdrop-filter:none; }
+  :root:not(.dark) .home-header :is(a,button,span,strong) { color:CanvasText; }
+}
