@@ -2755,3 +2755,15 @@
 .home-opportunity .home-pcpi-actions > div { gap: 6px; }
 .home-opportunity .home-opportunity__bottom { padding-top: 6px; gap: 6px 14px; }
 .home-opportunity .home-opportunity__bottom > small { line-height: 1.45; }
+
+/* Rodapé do card: ações no topo do bloco e aviso legal sempre na base, sem vão entre
+   "Detalhes" e os botões quando o card é esticado para igualar a altura. */
+.home-opportunity .home-opportunity__bottom {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto 1fr;
+  align-items: center; column-gap: 14px; row-gap: 2px; flex: 1 1 auto; margin-top: 0;
+}
+.home-opportunity .home-opportunity__bottom > small { grid-column: 1 / -1; grid-row: 2; align-self: end; }
+/* Tablet: um card por vez (com o próximo à vista), arte da campanha maior e legível. */
+@media (min-width: 601px) and (max-width: 900px) {
+  .home-rail__track.home-opportunities { grid-auto-columns: 86%; gap: 16px; }
+}
