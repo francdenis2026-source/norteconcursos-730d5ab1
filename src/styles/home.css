@@ -1215,6 +1215,50 @@
 .home-sources {
   padding-bottom: 32px;
 }
+.home-sources__layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(20px, 4vw, 52px);
+  align-items: start;
+}
+.home-sources__visual {
+  position: relative;
+  min-height: 230px;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 14px;
+  background: var(--home-surface);
+  box-shadow: var(--shadow-card);
+}
+.home-sources__visual img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.82) contrast(1.05);
+}
+.home-sources__visual figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in oklab, var(--home-line) 72%, transparent);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--home-surface) 88%, transparent);
+  color: var(--home-text);
+  font-size: 11px;
+  font-weight: 650;
+  backdrop-filter: blur(10px);
+}
+.home-sources__visual figcaption svg {
+  width: 17px;
+  color: var(--home-accent);
+}
 .home-source-details {
   border: 1px solid var(--home-line);
   border-radius: 10px;
@@ -2002,6 +2046,16 @@
   }
   .home-sources {
     padding-bottom: 24px;
+  }
+  .home-sources__layout {
+    display: block;
+  }
+  .home-sources__visual {
+    min-height: 0;
+    margin-bottom: 16px;
+  }
+  .home-sources__visual img {
+    height: 190px;
   }
   .home-source-details {
     padding-inline: 14px;

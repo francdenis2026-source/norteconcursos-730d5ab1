@@ -594,31 +594,47 @@ function Index() {
 
         <section className="home-sources" aria-label="Rastreabilidade jurídica">
           <div className="home-container">
-            <details className="home-source-details">
-              <summary>
-                <ShieldCheck aria-hidden="true" />
-                <span>
-                  Conteúdo jurídico com fonte e verificação de vigência
-                  <small>Conheça os critérios de revisão</small>
-                </span>
-                <ChevronDown aria-hidden="true" />
-              </summary>
-              <p>
-                Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de
-                vigência.
-              </p>
-              <div className="home-sources__grid">
-                {PILLARS.map(({ icon: Icon, title, text }) => (
-                  <article key={title}>
-                    <Icon aria-hidden="true" />
-                    <div>
-                      <h3>{title}</h3>
-                      <p>{text}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </details>
+            <div className="home-sources__layout">
+              <figure className="home-sources__visual">
+                <img
+                  src="/media/hero/toolkit.webp"
+                  alt="Materiais de estudo organizados para consulta e revisão"
+                  width={960}
+                  height={640}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  <ShieldCheck aria-hidden="true" />
+                  <span>Estude com fonte, contexto e vigência.</span>
+                </figcaption>
+              </figure>
+              <details className="home-source-details">
+                <summary>
+                  <ShieldCheck aria-hidden="true" />
+                  <span>
+                    Conteúdo jurídico com fonte e verificação de vigência
+                    <small>Conheça os critérios de revisão</small>
+                  </span>
+                  <ChevronDown aria-hidden="true" />
+                </summary>
+                <p>
+                  Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de
+                  vigência.
+                </p>
+                <div className="home-sources__grid">
+                  {PILLARS.map(({ icon: Icon, title, text }) => (
+                    <article key={title}>
+                      <Icon aria-hidden="true" />
+                      <div>
+                        <h3>{title}</h3>
+                        <p>{text}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </details>
+            </div>
           </div>
         </section>
 
