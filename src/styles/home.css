@@ -3990,3 +3990,34 @@
   .home-careers::before { background-position: 70% center; opacity: .1; }
   .dark .home-careers::before { opacity: .14; }
 }
+
+/* Homepage atmosphere: the supplied emblem becomes a quiet texture layer, not a competing panel. */
+.home {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--home-bg);
+}
+.home::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: url("/media/hero/home-bg-texture.webp") center top / cover no-repeat;
+  opacity: .075;
+  mix-blend-mode: screen;
+}
+.home-platform,
+.home-method,
+.home-careers,
+.home-sources,
+.home-plans,
+.home-footer {
+  background-color: color-mix(in oklab, var(--home-bg) 94%, transparent);
+}
+:root:not(.dark) .home::before { opacity: .045; mix-blend-mode: multiply; }
+.dark .home::before { opacity: .095; }
+@media (max-width: 700px) {
+  .home::before { position: absolute; background-size: auto 100%; opacity: .05; }
+  .dark .home::before { opacity: .07; }
+}
