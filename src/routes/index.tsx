@@ -431,40 +431,44 @@ function Index() {
                 className="home-opportunity home-opportunity--acre"
                 aria-labelledby="pcac-title"
               >
-                <div className="home-opportunity__image">
-                  <img
-                    src="/media/hero/pcac-capa.webp"
-                    alt="Capa PC-AC — Polícia Civil do Estado do Acre, com agente, viatura e identidade Norte Concursos"
-                    width={1672}
-                    height={940}
-                    loading="lazy"
-                    decoding="async"
-                  />
+                <div className="home-opportunity__header">
+                  <div className="home-opportunity__image">
+                    <img
+                      src="/media/hero/pcac-capa.webp"
+                      alt="Capa PC-AC — Polícia Civil do Estado do Acre, com agente, viatura e identidade Norte Concursos"
+                      width={1672}
+                      height={940}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="home-opportunity__intro">
+                    <span className="home-status home-status--inline">
+                      <CalendarClock /> Edital ainda não publicado
+                    </span>
+                    <div className="home-opportunity__identity">
+                      <span className="home-eyebrow">Preparação antecipada · PCAC 2026</span>
+                      <div>
+                        <img
+                          src="/media/brasao-acre-oficial.svg"
+                          alt="Brasão do Estado do Acre"
+                          width={32}
+                          height={32}
+                          loading="lazy"
+                        />
+                        <img
+                          src="/media/brasao-pcac-oficial.jpg"
+                          alt="Brasão da Polícia Civil do Acre"
+                          width={32}
+                          height={32}
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <h3 id="pcac-title">Polícia Civil do Acre</h3>
+                  </div>
                 </div>
                 <div className="home-opportunity__body">
-                  <span className="home-status home-status--inline">
-                    <CalendarClock /> Edital ainda não publicado
-                  </span>
-                  <div className="home-opportunity__identity">
-                    <span className="home-eyebrow">Preparação antecipada · PCAC 2026</span>
-                    <div>
-                      <img
-                        src="/media/brasao-acre-oficial.svg"
-                        alt="Brasão do Estado do Acre"
-                        width={32}
-                        height={32}
-                        loading="lazy"
-                      />
-                      <img
-                        src="/media/brasao-pcac-oficial.jpg"
-                        alt="Brasão da Polícia Civil do Acre"
-                        width={32}
-                        height={32}
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                  <h3 id="pcac-title">Polícia Civil do Acre</h3>
                   <details className="home-exam-details">
                     <summary>Cargos e informações</summary>
                     <p>

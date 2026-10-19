@@ -92,7 +92,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
     <>
       <img
         className="home-hero__image"
-        src="/media/hero/preparacao-norte.webp"
+        src="/media/hero/preparacao-n-cenas.webp"
         alt=""
         aria-hidden="true"
         width={1672}

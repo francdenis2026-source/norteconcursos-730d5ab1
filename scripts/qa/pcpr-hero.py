@@ -22,6 +22,7 @@ async def main():
    elif table=='board_exam_questions' and route.request.method=='HEAD':
     await route.fulfill(status=200,headers={'content-range':'0-0/300','access-control-expose-headers':'content-range'},body='');return
    elif table=='get_current_acre_date':data='2026-10-19'
+   elif table=='get_public_question_summary':data={'registered':100,'available':90}
    else:data=[]
    await route.fulfill(status=200,content_type='application/json',body=json.dumps(data))
   await context.route('**/*.supabase.co/**',backend)
@@ -45,9 +46,9 @@ async def main():
     image=acre.locator('.home-opportunity__image > img')
     assert (await image.get_attribute('src')).endswith('pcac-capa.webp')
     assert await image.evaluate("e=>getComputedStyle(e).objectFit")=='contain'
-    image_box=await image.bounding_box();status_box=await acre.locator('.home-status').bounding_box()
-    assert status_box['y']>=image_box['y']+image_box['height']-1
-    if width<=700:assert (await acre.bounding_box())['height'] < (await card.bounding_box())['height']
+    identity_box=await acre.locator('.home-opportunity__identity').bounding_box();status_box=await acre.locator('.home-status').bounding_box()
+    assert status_box['y']+status_box['height']<=identity_box['y']+1
+    assert (await acre.bounding_box())['height'] < (await card.bounding_box())['height']
     await acre.screenshot(path=f'/tmp/pcac-home-{theme}-{width}.png')
   await context.add_init_script("if(location.hostname==='localhost')localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',"+json.dumps(json.dumps(session))+");")
   for route,kind in [('dashboard','full'),('dashboard/question-trainer','compact')]:

@@ -369,8 +369,8 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
+  object-fit: contain;
+  object-position: right center;
 }
 .home-hero::after {
   content: "";
@@ -516,16 +516,19 @@
 }
 /* Existing hero photography and intro overlay retain the same geometry and timing. */
 .home-hero {
+  --home-surface: #202834;
+  --home-text: #f3f5f8;
+  --home-muted: #c9d1dc;
+  --home-accent: #e3ad4c;
+  --home-line: #516072;
   background: var(--home-surface);
   color: var(--home-text);
 }
 .home-hero::after {
   background: linear-gradient(
     90deg,
-    var(--home-surface),
-    color-mix(in srgb, var(--home-surface) 97%, transparent) 34%,
-    color-mix(in srgb, var(--home-surface) 45%, transparent) 60%,
-    transparent
+    var(--home-surface) max(24%, calc(100% - 820px)),
+    transparent max(48%, calc(100% - 580px))
   );
 }
 .home-hero h1 em {
@@ -969,7 +972,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  align-items: stretch;
+  align-items: start;
 }
 .home-opportunity {
   border: 1px solid var(--home-line);
@@ -980,10 +983,23 @@
   min-width: 0;
 }
 .home-opportunity__body {
-  padding: 24px;
+  padding: 0 20px 20px;
   display: flex;
   flex-direction: column;
-  flex: 1;
+}
+.home-opportunity__header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px 0;
+}
+.home-opportunity__intro {
+  min-width: 0;
+}
+.home-opportunity__header .home-opportunity__image {
+  border-radius: 8px;
+  overflow: hidden;
 }
 .home-opportunity__identity {
   display: flex;
@@ -1009,11 +1025,11 @@
   color: var(--home-accent);
 }
 .home-opportunity h3 {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 1.15;
   letter-spacing: -0.03em;
 }
-.home-opportunity__body > p {
+.home-opportunity__intro > p {
   color: var(--home-muted);
   font-size: 13px;
   margin-top: 10px;
@@ -1091,7 +1107,7 @@
   margin: 0;
 }
 .home-opportunity__bottom {
-  margin-top: auto;
+  margin-top: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1108,12 +1124,12 @@
   background: var(--home-bg);
 }
 .home-opportunity--pcpr .home-opportunity__body {
-  padding: 30px;
+  padding: 0 20px 20px;
 }
 .home-opportunity--pcpr .home-exam-details {
-  padding-block: 12px;
-  border-block: 1px solid var(--home-line);
-  margin-top: 20px;
+  padding-block: 0;
+  border-top: 1px solid var(--home-line);
+  margin: 14px 0 0;
 }
 /* Career index and sources remain easy to find without a separate card for every paragraph. */
 .home-careers__layout {
@@ -1884,7 +1900,17 @@
   }
   .home-opportunity__body,
   .home-opportunity--pcpr .home-opportunity__body {
-    padding: 20px;
+    padding: 0 16px 16px;
+  }
+  .home-opportunity__header {
+    display: block;
+    padding: 0;
+  }
+  .home-opportunity__intro {
+    padding: 16px 16px 0;
+  }
+  .home-opportunity__header .home-opportunity__image {
+    border-radius: 0;
   }
   .home-opportunity h3 {
     font-size: 23px;
@@ -2299,10 +2325,6 @@
 }
 :root:not(.dark) .home-header .norte-brand__type span { color:#f3cd82; }
 :root:not(.dark) .home-header .home-presence { background:#354154; border-color:#718096; }
-/* Reduce the milky veil on photography without changing the intro/video behavior. */
-@media(min-width:768px) {
-  :root:not(.dark) .home-hero::after { background:linear-gradient(90deg,var(--home-surface),color-mix(in srgb,var(--home-surface) 97%,transparent) 34%,color-mix(in srgb,var(--home-surface) 32%,transparent) 60%,transparent 80%); }
-}
 @media(forced-colors:active) {
   :root:not(.dark) .home-header { background:Canvas; color:CanvasText; border-color:CanvasText; backdrop-filter:none; }
   :root:not(.dark) .home-header :is(a,button,span,strong) { color:CanvasText; }
@@ -2314,5 +2336,43 @@
 .home-opportunity--pcpr .home-pcpr-hero > img,
 .home-opportunity--acre .home-opportunity__image > img { width:100%; height:100%; object-fit:contain; object-position:center; }
 .home-opportunity--pcpr .home-pcpr-hero::after { display:none; }
-.home-opportunity--acre .home-status--inline { position:static; align-self:flex-start; margin:0 0 14px; border:1px solid var(--home-line); }
-@media(max-width:700px) { .home-rail__track.home-opportunities { align-items:start; } }
+.home-opportunity--acre .home-status--inline { position:static; width:fit-content; margin:0 0 10px; border:1px solid var(--home-line); }
+
+/* Keep the scene-filled N visible instead of washing it out behind mobile copy. */
+@media (max-width: 900px) {
+  .home-hero__image {
+    height: 240px;
+    object-fit: contain;
+    object-position: center;
+  }
+  .home-hero::after {
+    background: none;
+  }
+  .home-hero__content {
+    padding-top: 260px;
+  }
+  .home-hero__copy {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  .home-opportunity__header {
+    display: grid;
+    padding: 16px 16px 0;
+  }
+  .home-opportunity__intro {
+    padding: 0;
+  }
+  .home-opportunity__header .home-opportunity__image {
+    border-radius: 8px;
+  }
+}
+@media (forced-colors: active) {
+  .home-hero__image {
+    visibility: hidden;
+  }
+  .home-hero::after {
+    background: Canvas;
+  }
+}
