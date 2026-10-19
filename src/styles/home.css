@@ -3990,3 +3990,70 @@
   .home-careers::before { background-position: 70% center; opacity: .1; }
   .dark .home-careers::before { opacity: .14; }
 }
+
+/* Homepage atmosphere: the supplied emblem becomes a quiet texture layer, not a competing panel. */
+.home {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--home-bg);
+}
+.home::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background: url("/media/hero/home-bg-texture.webp") center top / cover no-repeat;
+  opacity: .075;
+  mix-blend-mode: screen;
+}
+.home-platform,
+.home-method,
+.home-careers,
+.home-sources,
+.home-plans,
+.home-footer {
+  background-color: color-mix(in oklab, var(--home-bg) 94%, transparent);
+}
+:root:not(.dark) .home::before { opacity: .045; mix-blend-mode: multiply; }
+.dark .home::before { opacity: .095; }
+@media (max-width: 700px) {
+  .home::before { position: absolute; background-size: auto 100%; opacity: .05; }
+  .dark .home::before { opacity: .07; }
+}
+
+/* Texture visibility pass: reveal the atmosphere through section canvases while
+   keeping cards and copy surfaces opaque and readable. */
+.home::before { opacity: .045; }
+:root:not(.dark) .home::before { opacity: .022; }
+.dark .home::before { opacity: .06; }
+.home-platform,
+.home-method,
+.home-careers,
+.home-sources,
+.home-plans,
+.home-footer {
+  background-image: none !important;
+  background-color: color-mix(in oklab, var(--home-bg) 91%, transparent) !important;
+}
+.home-start { background-color: transparent; }
+.home-final {
+  background-color: #111a25;
+  background-image:
+    linear-gradient(90deg, rgb(17 26 37 / .94), rgb(17 26 37 / .78)),
+    url("/media/hero/home-bg-texture.webp");
+  background-position: center, center;
+  background-size: cover;
+}
+.home-footer {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--home-bg) 92%, transparent), color-mix(in oklab, var(--home-bg) 92%, transparent)),
+    url("/media/hero/home-bg-texture.webp") !important;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+@media (max-width: 700px) {
+  .home::before { opacity: .028; }
+  .dark .home::before { opacity: .045; }
+  .home-final { background-image: linear-gradient(rgb(17 26 37 / .96), rgb(17 26 37 / .9)), url("/media/hero/home-bg-texture.webp"); }
+}
