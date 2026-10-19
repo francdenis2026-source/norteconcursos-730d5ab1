@@ -1,0 +1,221 @@
+{
+  "checked_at": "2026-10-19T15:59:30.234821+00:00",
+  "initial_under_review": {
+    "official_exam_questions": 42,
+    "curated_question_catalog": 1,
+    "board_exam_questions": 359
+  },
+  "initial_total": 402,
+  "applied": {
+    "dry_run": false,
+    "reviewed": 2,
+    "updated": [
+      "d4e8232c-6154-4f05-aded-4709e7555b5b",
+      "5d4ad07a-d437-4d07-a6bd-9f07371927ff"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-19T15:58:22.804Z"
+  },
+  "active_items": [
+    {
+      "id": "d4e8232c-6154-4f05-aded-4709e7555b5b",
+      "table": "official_exam_questions",
+      "contest_name": "Polícia Militar de Santa Catarina",
+      "subject": "Legislação Institucional",
+      "item_number": 29,
+      "answer_preserved": "E",
+      "decision": "active",
+      "reason": "Alternativa E. O art. 24, alínea b, da Lei estadual 6.215/1983 prevê promoção post mortem quando o oficial falece em consequência de ferimento recebido na manutenção da ordem pública. A letra A erra ao ignorar as regras específicas de antiguidade nas promoções excepcionais; B erra porque o oficial agregado promovido que permanece nessa situação não preenche vaga; C erra porque o art. 23, § 2º, dispensa as exigências dos demais critérios na promoção por bravura; D erra porque a comissão é permanente, com membros natos e efetivos (art. 26). Exemplo: o falecimento decorrente de ferimento sofrido em atuação de manutenção da ordem pública se enquadra na hipótese expressa do art. 24, b. Gabarito definitivo do Cebraspe: E; item não anulado.",
+      "legal_basis": [
+        {
+          "fonte": "Lei SC 6.215/1983, arts. 14, 19, 23, 24 e 26",
+          "url": "https://leis.alesc.sc.gov.br/html/1983/6215_1983_lei.html"
+        }
+      ],
+      "syllabus_topic_id": "f6d2fd5f-a0e1-4d8f-8dfb-ef11c7d1130f",
+      "sources": [
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/862_PMSC_SOLDADO_001_01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/GAB_DEFINITIVO_862_PMSC_SOLDADO_001_01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/Ed_2_2022_PMSC_Abertura_Soldado_atualizado.pdf",
+        "https://leis.alesc.sc.gov.br/html/1983/6215_1983_lei.html"
+      ]
+    },
+    {
+      "id": "5d4ad07a-d437-4d07-a6bd-9f07371927ff",
+      "table": "official_exam_questions",
+      "contest_name": "Polícia Militar de Santa Catarina",
+      "subject": "Legislação Institucional",
+      "item_number": 31,
+      "answer_preserved": "A",
+      "decision": "active",
+      "reason": "Alternativa A. O art. 8º da LC estadual 614/2013, na redação dada pela Lei 16.773/2015, define o banco de horas como registro de horas excedentes ou insuficientes em relação à jornada individual do militar estadual. B generaliza indevidamente os proventos do subtenente: a legislação prevê hipótese de referência ao posto de segundo-tenente, observados os requisitos legais. C contraria o art. 4º, I, que compreendeu e extinguiu as VPNI do regime anterior. D contraria o art. 6º, § 2º: a indenização por regime especial é indenizatória, não se incorpora e é isenta de contribuição previdenciária. E troca os percentuais da ajuda de custo: sem dependentes, o percentual é de 50%, não 75% (art. 12). Exemplo: horas cumpridas acima ou abaixo da jornada são registradas no banco, conforme regulamentação; isso não transforma o banco em vantagem remuneratória. Gabarito definitivo do Cebraspe: A; item não anulado.",
+      "legal_basis": [
+        {
+          "fonte": "LC SC 614/2013, arts. 4º, 6º, § 2º, 8º e 12; Lei SC 6.218/1983, art. 50, § 1º, III",
+          "url": "https://leis.alesc.sc.gov.br/html/2013/614_2013_lei_complementar.html"
+        },
+        {
+          "fonte": "Lei SC 6.218/1983, art. 50, § 1º, III",
+          "url": "https://leis.alesc.sc.gov.br/html/1983/6218_1983_lei.html"
+        }
+      ],
+      "syllabus_topic_id": "f6d2fd5f-a0e1-4d8f-8dfb-ef11c7d1130f",
+      "sources": [
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/862_PMSC_SOLDADO_001_01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/GAB_DEFINITIVO_862_PMSC_SOLDADO_001_01.PDF",
+        "https://cdn.cebraspe.org.br/concursos/PM_SC_23_SOLDADO/arquivos/Ed_2_2022_PMSC_Abertura_Soldado_atualizado.pdf",
+        "https://leis.alesc.sc.gov.br/html/2013/614_2013_lei_complementar.html",
+        "https://leis.alesc.sc.gov.br/html/1983/6218_1983_lei.html"
+      ]
+    },
+    {
+      "id": "2873c813-88cd-4f2e-9952-193d93984130",
+      "table": "board_exam_questions",
+      "contest_name": "Tribunal de Contas do Estado do Tocantins",
+      "subject": "Direito Penal",
+      "item_number": 60,
+      "answer_preserved": "C",
+      "decision": "active",
+      "reason": "Alternativa C. O art. 1º, § 4º, da Lei 9.613/1998 prevê aumento de um terço a dois terços quando a lavagem é praticada por intermédio de organização criminosa. O texto compilado atual também prevê reiteração e utilização de ativo virtual; a alternativa C apresenta uma das hipóteses e continua correta. A erra porque a lei se refere a infração penal antecedente, sem a antiga lista restrita a certos crimes. B erra porque a tentativa é punível (art. 1º, § 3º). D erra porque converter bens ou valores em ativos lícitos para ocultar ou dissimular sua origem é conduta expressamente alcançada (art. 1º, § 1º, I). E erra porque a extinção da punibilidade da infração antecedente não impede a punição da lavagem (art. 2º, § 1º). Exemplo: converter valores de uma infração penal em ativos aparentemente lícitos pode configurar lavagem; a aparência lícita do ativo final não exclui o delito. Gabarito definitivo FGV, Auditor de Controle Externo – Direito, Tipo 1, TCE-TO 2022, questão 60: C, não anulada. Conferência de vigência em 19/10/2026 no Planalto. Vínculo de repertório corrigido para legislação complementar de Direito Penal do edital PF Delegado 2025, item 10.18 (Lei 9.613/1998), sem alterar o concurso de origem.",
+      "legal_basis": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/L9613compilado.htm",
+          "fonte": "Lei 9.613/1998, arts. 1º, caput, §§ 1º, 3º e 4º, e 2º, § 1º"
+        }
+      ],
+      "original_syllabus_topic_id": "2c6b8dfc-bca9-45b4-bbca-d3535cd0ca2b",
+      "syllabus_topic_id": "65741d6e-c94c-595b-ba10-6b2b9280695f",
+      "sources": [
+        "https://conhecimento.fgv.br/sites/default/files/concursos/auditor_de_controle_externo_-_direitoauddireito_tipo_1.pdf",
+        "https://conhecimento.fgv.br/sites/default/files/concursos/tceto2022_gabarito_definitivo_164151578464.pdf",
+        "https://www.planalto.gov.br/ccivil_03/leis/L9613compilado.htm",
+        "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf"
+      ]
+    }
+  ],
+  "server_eligibility_confirmed": true,
+  "original_text_answers_and_support_preserved": true,
+  "official_edital_source_type_corrected": {
+    "id": "61d11008-7d69-47eb-88ea-3bfe64ba8edb",
+    "before": "outro",
+    "after": "edital",
+    "other_fields_preserved": true
+  },
+  "download_hashes": {
+    "sc-paper.pdf": "584100a0231cb6fb935d11a4bea330c2c2b76c5c803fbf0b8ccef14b15d1dc22",
+    "sc-key.pdf": "357bcd2884e5de6e33da366cc3ce78c4a6e41e5c426cb9e0974cc81d732376b1",
+    "sc-edital.pdf": "707f23f56d7a24e5f12997112d6082accd09c956d732915d89d565744d659608",
+    "sc-6215.html": "c6455664e9b40ab4f95fd8260c13ab64382b6a03fc16e4821103e273ec528e22",
+    "sc-614.html": "719046ad0fc909426b5bbd97953a56963cfd6e865e735daf654884863e89bb81",
+    "sc-6218.html": "5d107926b896e961cc8211e352f5eab0d660c8539079141cc7036ded222dc256",
+    "sp-constituicao.html": "5307b3800c1ebbe0a74c0b3572a2346174953fed59da141730b72c270b271b14",
+    "sp-decreto.html": "a7db1272e7404b25c91519d7ab53e15c345829241c5ae627506fa0d0e8ac84de",
+    "to-paper.pdf": "e19bb34e6af41405bff97347024412477056383cbcffcb7c32392b4a76bd8907",
+    "to-key.pdf": "206b7d4414d085301206e21e4697cf03dd9d9783ec02c2ecbe981a59210c71c8",
+    "lei9613-compilado.html": "4bee328e13df6bdb722dcec4552a9e6d3d0033283ac273737668082a6e28b094",
+    "lavagem-current-edital.pdf": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b"
+  },
+  "not_released": [
+    {
+      "id": "139a880e-5943-4a35-9d90-ea2d63e83df7",
+      "item": 56,
+      "contest": "PM-SP 2026",
+      "reason": "Art. 139 da CE-SP compilada confere com C; gabarito definitivo oficial retorna HTTP 503 nesta sessão; não liberada."
+    },
+    {
+      "id": "7cc20d45-9e19-430c-9959-44ac724214d7",
+      "item": 59,
+      "contest": "PM-SP 2026",
+      "reason": "Arts. 40 e 41 da CE-SP compilada sustentam A; gabarito definitivo oficial retorna HTTP 503; considerar também nota de inconstitucionalidade do art. 41, § 1º, sem a confundir com o caput; não liberada."
+    },
+    {
+      "id": "546fae9e-ae81-4b83-bc0b-84a76d9d1140",
+      "item": 60,
+      "contest": "PM-SP 2026",
+      "reason": "Enunciado inclui textos e instruções da redação seguinte. Exige reparo separado e nova comparação com original, além de gabarito oficial indisponível."
+    },
+    {
+      "id": "0b4a4336-1c07-4e90-8f77-2f3d8911de8a",
+      "item": 26,
+      "contest": "PM-SC 2023",
+      "reason": "Gabarito B confirmado; regulamento disciplinar não obtido em URL oficial contendo o decreto. Rota tentada retornou apenas página de pesquisa, não aceita como evidência."
+    },
+    {
+      "id": "0e4a28e8-332f-4e8d-bb14-6358ccfd5d58",
+      "item": 32,
+      "contest": "PM-SC 2023",
+      "reason": "Gabarito A confirmado; Decreto 1.601/2021 não obtido em URL oficial com o texto. Rota tentada retornou página de pesquisa, não o decreto."
+    },
+    {
+      "id": "ac5d26e2-d855-4294-917e-eb32c62d386b",
+      "item": 25,
+      "contest": "PM-SC 2023",
+      "reason": "Gabarito D e arts. 152/153 da Lei 6.218/1983 encontrados; não ativada sem concluir controle de atualidade e compatibilidade constitucional da restrição ao casamento. A presença no texto da lei não encerra essa análise."
+    }
+  ],
+  "remaining_under_review": {
+    "official_exam_questions": 40,
+    "curated_question_catalog": 1,
+    "board_exam_questions": 358
+  },
+  "remaining_total": 399,
+  "remaining_by_subject": {
+    "Direito Administrativo": 74,
+    "Direito Constitucional": 62,
+    "Conhecimentos Específicos": 30,
+    "Língua Portuguesa": 28,
+    "Governança, Riscos e Controles": 15,
+    "Matemática": 12,
+    "Legislação Institucional (PM-SP)": 12,
+    "Direito Penal": 10,
+    "Processo Legislativo": 10,
+    "Legislação de Controle Interno": 10,
+    "Geografia": 10,
+    "História": 10,
+    "História e Geografia do Acre": 10,
+    "Informática Básica": 10,
+    "Física": 9,
+    "Legislação Especial e Direitos Humanos": 8,
+    "Auditoria": 7,
+    "Informática": 6,
+    "Direitos Humanos": 5,
+    "Direito Tributário": 5,
+    "Sociologia e Filosofia": 5,
+    "Pedagogia": 4,
+    "Redação Oficial": 4,
+    "Direito Processual Penal": 3,
+    "Legislação Institucional": 3,
+    "Noções de Administração Pública": 3,
+    "Direito Financeiro": 3,
+    "Contabilidade Pública": 3,
+    "Direito Empresarial": 3,
+    "Direito Civil": 3,
+    "Direito Penal e Processual Penal": 2,
+    "Administração Pública": 2,
+    "Administração Financeira e Orçamentária": 2,
+    "Administração Geral": 2,
+    "Raciocínio Lógico": 2,
+    "Ética Profissional": 2,
+    "Literatura": 2,
+    "Raciocínio Lógico-Matemático": 1,
+    "Ética no Serviço Público": 1,
+    "Conhecimentos Gerais": 1,
+    "Noções Básicas de Informática": 1,
+    "Arquivologia": 1,
+    "Direito Penal Militar": 1,
+    "Química": 1,
+    "Biologia": 1
+  },
+  "final_readback_at": "2026-10-19T16:02:49.710267+00:00",
+  "additional_applied": {
+    "dry_run": false,
+    "reviewed": 1,
+    "updated": [
+      "2873c813-88cd-4f2e-9952-193d93984130"
+    ],
+    "preserved": 0,
+    "verified_at": "2026-10-19T16:02:23.196Z"
+  },
+  "scope": "Auditoria individual concluída em três itens; seis outros investigados permanecem retidos pelos motivos registrados. Inventário inicial de 402 registros não equivale a revisão substantiva dos 402.",
+  "new_active": 3
+}

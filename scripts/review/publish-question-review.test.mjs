@@ -135,3 +135,23 @@ test('restoration rechecks the shared active item both before batch and before w
   await assert.rejects(()=>publishReview(pack,port.request),/changed or mismatched/);assert.equal(port.writes(),0);
  }
 });
+
+test('restoring a previously verified board status preserves original comments and review dates',async()=>{
+ const p=make();p.purpose='restore-reviewed-status';const item=p.items[0];item.table='board_exam_questions';
+ item.expected={...item.expected,content_status:'archived',syllabus_topic_id:'t1',verified_at:'2026-10-13T00:00:00Z',law_version_checked_at:'2026-10-13T00:00:00Z',legal_basis:[{url:'https://www.planalto.gov.br/law'}],explanation:'Previously reviewed explanation',needs_visual:false};
+ item.patch={content_status:'active'};item.evidence.previous_review_verified=true;
+ assert.equal(validateReview(p),p);
+ const changed=structuredClone(p);changed.items[0].patch.explanation='Changed';assert.throws(()=>validateReview(changed),/preserve every reviewed field/);
+ const noDate=structuredClone(p);delete noDate.items[0].expected.verified_at;assert.throws(()=>validateReview(noDate),/Existing verified review/);
+ const noBasis=structuredClone(p);noBasis.items[0].expected.legal_basis=[];assert.throws(()=>validateReview(noBasis),/legal basis/);
+ let writes=0;
+ const request=async(path,method,patch)=>{
+  if(method==='PATCH'){writes++;assert.deepEqual(patch,{content_status:'active'});return [{...item.expected,...patch}];}
+  if(path.startsWith('board_exam_questions'))return [item.expected];
+  if(path.startsWith('syllabus_topics'))return [{edition_id:'e1',content_status:'current'}];
+  if(path.startsWith('syllabus_editions'))return [{source_id:'s1',status:'active'}];
+  if(path.includes('?url='))return [{is_official:true,status:'vigente'}];
+  return [{is_official:true,source_type:'edital',status:'vigente'}];
+ };
+ await publishReview(p,request,{dryRun:true});assert.equal(writes,0);await publishReview(p,request);assert.equal(writes,1);
+});

@@ -1,40 +1,63 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  parseStudyPresence,
-  freshStudyPresence,
+  browserPresenceId,
+  countOnlineBrowsers,
   studyPresenceLabel,
+  BROWSER_PRESENCE_KEY,
 } from "../src/lib/studyPresence.ts";
-const base = { studying_now: 12, as_of: "2026-10-19T05:00:00Z", window_seconds: 90 };
-test("presence accepts a server aggregate including genuine zero independently of device date", () => {
-  for (const count of [0, 1, 1200]) {
-    const data = { ...base, studying_now: count };
-    assert.deepEqual(parseStudyPresence(data), data);
-    assert.deepEqual(freshStudyPresence({ presence: data, receivedAt: 1000 }, 1500), data);
-  }
+const ID = "00000000-0000-4000-8000-000000000001";
+test("tabs and login changes reuse a random browser ID, without needing account data", () => {
+  const values = new Map();
+  const storage = { getItem: (k) => values.get(k), setItem: (k, v) => values.set(k, v) };
+  assert.equal(
+    browserPresenceId(storage, () => ID),
+    ID,
+  );
+  assert.equal(
+    browserPresenceId(storage, () => {
+      throw new Error("must reuse existing ID");
+    }),
+    ID,
+  );
+  assert.equal(values.get(BROWSER_PRESENCE_KEY), ID);
 });
-test("malformed aggregates never produce a count", () => {
-  for (const data of [
-    null,
-    {},
-    10,
-    { ...base, studying_now: -1 },
-    { ...base, studying_now: 1.5 },
-    { ...base, studying_now: "10" },
-    { ...base, as_of: "invalid" },
-    { ...base, window_seconds: 600 },
-  ])
-    assert.equal(parseStudyPresence(data), null);
+test("blocked or corrupt storage has a functional temporary anonymous identifier", () => {
+  assert.equal(
+    browserPresenceId(
+      {
+        getItem: () => {
+          throw new Error("blocked");
+        },
+        setItem: () => {
+          throw new Error("blocked");
+        },
+      },
+      () => ID,
+    ),
+    ID,
+  );
+  assert.equal(
+    browserPresenceId({ getItem: () => "account@example.invalid", setItem: () => {} }, () => ID),
+    ID,
+  );
 });
-test("cached responses expire by monotonic elapsed time without trusting the wall clock", () => {
-  const snapshot = { presence: base, receivedAt: 1000 };
-  assert.deepEqual(freshStudyPresence(snapshot, 61000), base);
-  for (const now of [61001, 999, NaN, Infinity])
-    assert.equal(freshStudyPresence(snapshot, now), null);
-  assert.equal(freshStudyPresence(undefined, 2000), null);
+test("multiple tabs count once, anonymous and authenticated browsers both count, hidden tabs do not", () => {
+  assert.equal(
+    countOnlineBrowsers({
+      browser1: [{ visible: true }, { visible: true }],
+      browser2: [{ visible: true }],
+      browser3: [],
+      browser4: [{ visible: false }],
+    }),
+    2,
+  );
+  assert.equal(countOnlineBrowsers({}), 0);
+  assert.equal(countOnlineBrowsers({ browser1: [{ visible: true }, { visible: false }] }), 1);
+  for (const value of [null, undefined, 2, []]) assert.equal(countOnlineBrowsers(value), null);
 });
-test("accessible descriptions use correct singular and full counts", () => {
-  assert.equal(studyPresenceLabel(0), "0 pessoas estudando agora");
-  assert.equal(studyPresenceLabel(1), "1 pessoa estudando agora");
-  assert.equal(studyPresenceLabel(1200), "1.200 pessoas estudando agora");
+test("presence labels accurately describe visitors rather than registered students", () => {
+  assert.equal(studyPresenceLabel(0), "0 visitantes online");
+  assert.equal(studyPresenceLabel(1), "1 visitante online");
+  assert.equal(studyPresenceLabel(1200), "1.200 visitantes online");
 });

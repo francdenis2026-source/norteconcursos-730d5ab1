@@ -34,7 +34,7 @@ export function sameReviewRow(a,b) {
 export function validateReview(pack) {
   if (!Array.isArray(pack.items) || !pack.items.length) throw Error('Empty review');
   const improvement = pack.purpose === 'explanation-improvement';
-  const restoration = pack.purpose === 'pcpr-papiloscopista-restoration';
+  const restoration = ['pcpr-papiloscopista-restoration','restore-reviewed-status'].includes(pack.purpose);
   const restoreItems = new Set([...Array.from({length:50},(_,i)=>i+1),81,82,83,84,85,92,93,94,95,96,97,98,99,100]);
   const ids = new Set();
   for (const item of pack.items) {
@@ -43,8 +43,13 @@ export function validateReview(pack) {
     if (!tables.has(table) || ids.has(id) || expected?.content_status !== (restoration ? 'archived' : improvement ? 'active' : 'under_review')) throw Error('Invalid or repeated question');
     ids.add(id);
     if (Object.keys(patch).some(key=>!allowed.has(key))) throw Error('Original text/answer/source cannot be overwritten');
-    if (restoration) {
+    if (pack.purpose==='pcpr-papiloscopista-restoration') {
       if (table!=='board_exam_questions' || expected.contest_name!=='Polícia Civil do Estado do Paraná' || expected.exam_year!==2026 || expected.career_name!=='Papiloscopista Policial' || !restoreItems.delete(expected.item_number) || pack.items.length>64 || patch.content_status!=='active' || Object.keys(patch).length!==1 || !evidence?.restore_expected || evidence.restore_expected.career_name!=='Agente de Polícia Judiciária' || evidence.restore_expected.content_status!=='active') throw Error('Restoration is restricted to the 64 shared PCPR Papiloscopista items and status only');
+    }
+    if (pack.purpose==='restore-reviewed-status') {
+      if (table!=='board_exam_questions' || patch.content_status!=='active' || Object.keys(patch).length!==1 || evidence?.previous_review_verified!==true) throw Error('Status restoration must preserve every reviewed field');
+      if ((evidence?.legal || expected.legal_review_required) && (!Number.isFinite(Date.parse(expected.law_version_checked_at)) || Date.parse(expected.law_version_checked_at)>Date.now())) throw Error('Existing current legal review required');
+      if (!(expected.explanation || expected.review_note)?.trim() || !Number.isFinite(Date.parse(expected.verified_at)) || Date.parse(expected.verified_at)>Date.now()) throw Error('Existing verified review required');
     }
     if (improvement) {
       if (Object.keys(patch).some(k=>!['review_note','explanation','law_version_checked_at','legal_basis','current_syllabus_topic_id'].includes(k))) throw Error('Explanation improvement cannot alter question identity or publication status');
@@ -60,7 +65,7 @@ export function validateReview(pack) {
     if (!Number.isFinite(Date.parse(reviewDate)) || Date.parse(reviewDate)>Date.now()) throw Error('Invalid review date');
     if (patch.content_status==='active' || improvement) {
       if (!(patch.current_syllabus_topic_id || patch.syllabus_topic_id || expected.syllabus_topic_id)) throw Error('Syllabus required');
-      if (evidence.legal && (!(patch.legal_basis || (improvement || restoration ? expected.legal_basis : null))?.length || !(patch.law_version_checked_at || (restoration && expected.law_version_checked_at)))) throw Error('Current legal basis required');
+      if ((evidence.legal || (restoration && expected.legal_review_required)) && (!(patch.legal_basis || (improvement || restoration ? expected.legal_basis : null))?.length || !(patch.law_version_checked_at || (restoration && expected.law_version_checked_at)))) throw Error('Current legal basis required');
       if (expected.needs_visual || expected.context_review_required) throw Error('Context/visual must be repaired in a separately audited operation');
       if ((expected.question_text || '').trimStart().startsWith('(A)')) throw Error('Stem embedded in an option must be repaired before publication');
       if (/TEXTO VERBATIM.*NÃO CONFIRMADO/.test(expected.question_text || '')) throw Error('Placeholder cannot be published');
@@ -101,7 +106,7 @@ export async function publishReview(pack, request, {dryRun=false,onProgress=()=>
       const [source]=await request(`content_sources?id=eq.${edition?.source_id}&select=*`);
       if (topic?.content_status!=='current' || edition?.status!=='active' || !source?.is_official || source.source_type!=='edital' || source.status!=='vigente') throw Error('Verified official active syllabus required');
       if (patch.subject!==undefined && patch.subject!==topic.discipline) throw Error('Corrected subject must match verified topic discipline');
-      for (const basis of patch.legal_basis || (['explanation-improvement','pcpr-papiloscopista-restoration'].includes(pack.purpose) ? expected.legal_basis : null) || []) {
+      for (const basis of patch.legal_basis || (['explanation-improvement','pcpr-papiloscopista-restoration','restore-reviewed-status'].includes(pack.purpose) ? expected.legal_basis : null) || []) {
         const sources=await request(`content_sources?url=eq.${encodeURIComponent(basis.url)}&select=id,is_official,status`);
         if (!sources.some(s=>s.is_official && ['vigente','parcialmente_revogado'].includes(s.status))) throw Error(`Official basis not registered: ${basis.url}`);
       }

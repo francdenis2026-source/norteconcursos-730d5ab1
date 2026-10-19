@@ -61,7 +61,8 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
       },
-      { property: "og:image", content: "/media/hero/landing-hero.webp" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
@@ -213,7 +214,7 @@ function Index() {
                 </button>
               </SheetTrigger>
               <SheetContent className="home-menu">
-                <SheetHeader>
+                <SheetHeader className="home-menu__header">
                   <SheetTitle>
                     <NorteBrand />
                   </SheetTitle>

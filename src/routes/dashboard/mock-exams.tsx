@@ -333,7 +333,7 @@ function ProfessionalSimulator() {
         ),
         query(
           "board_exam_questions",
-          "id,contest_name,exam_year,career_name,board,item_number,figure_urls,subject,support_text,stem,options,official_answer,explanation,legal_basis,legal_review_required,needs_visual",
+          "id,contest_name,exam_year,career_name,board,subject,item_number,figure_urls,support_text,stem,options,official_answer,explanation,legal_basis,legal_review_required,needs_visual",
         ).catch((error: unknown) => {
           if (isMissingQuestionTable(error)) return { data: [], error: null };
           throw error;
@@ -408,7 +408,7 @@ function ProfessionalSimulator() {
           subject: canonicalSubject(String(row["subject"])),
           subtopic: null,
           itemNumber: Number(row["item_number"]) || null,
-          figures: Array.isArray(row["figure_urls"]) ? row["figure_urls"] as string[] : [],
+          ...(Array.isArray(row["figure_urls"]) ? { figures: row["figure_urls"] as string[] } : {}),
           state: String(row["state"] || ""),
           category: String(row["career_category"] || ""),
           checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,

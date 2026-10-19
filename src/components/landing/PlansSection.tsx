@@ -109,11 +109,11 @@ export function PlansSection() {
                     </>
                   )}
                 </p>
-                {plan.annualPrice ? (
-                  <p className="home-plan__annual">
-                    ou R$ {plan.annualPrice.toFixed(0)}/ano · 2 meses grátis
-                  </p>
-                ) : null}
+                <p className="home-plan__annual" aria-hidden={!plan.annualPrice}>
+                  {plan.annualPrice
+                    ? `ou R$ ${plan.annualPrice.toFixed(0)}/ano · 2 meses grátis`
+                    : ""}
+                </p>
                 <p className="home-plan__availability">
                   {plan.price === 0
                     ? "Para começar e continuar estudando"

@@ -11,7 +11,10 @@ const GUTTER = /^\s*(\d{1,3})\s{1,3}(\S.*)$/;
 
 /** Separa a numeração de linhas do texto, quando ela existe (números crescentes em várias linhas). */
 export function parseSupportLines(raw: string): { lines: SupportLine[]; numbered: boolean } {
-  const rows = raw.replace(/\r/g, "").split("\n").filter((l) => l.trim() !== "");
+  const rows = raw
+    .replace(/\r/g, "")
+    .split("\n")
+    .filter((l) => l.trim() !== "");
   const parsed = rows.map((r): SupportLine => {
     const m = GUTTER.exec(r);
     return m ? { n: Number(m[1]), text: m[2]!.trim() } : { n: null, text: r.trim() };
@@ -20,8 +23,11 @@ export function parseSupportLines(raw: string): { lines: SupportLine[]; numbered
   let increasing = 0;
   for (let i = 1; i < nums.length; i++) if (nums[i]! > nums[i - 1]!) increasing++;
   // texto numerado: pelo menos 3 linhas numeradas em ordem crescente (a numeração não pode ser parte de uma lista comum)
-  const numbered = nums.length >= 3 && increasing >= nums.length - 2 && nums.length >= parsed.length / 6;
-  return numbered ? { lines: parsed, numbered } : { lines: rows.map((r) => ({ n: null, text: r.trim() })), numbered: false };
+  const numbered =
+    nums.length >= 3 && increasing >= nums.length - 2 && nums.length >= parsed.length / 6;
+  return numbered
+    ? { lines: parsed, numbered }
+    : { lines: rows.map((r) => ({ n: null, text: r.trim() })), numbered: false };
 }
 
 const END = /[.!?…:»”"')\]]\s*$/;
@@ -40,8 +46,15 @@ export function reflowParagraphs(lines: string[]): string[] {
     const shortLine = line.length < longest * 0.62;
     // título curto sem pontuação final (ex.: nome do texto ou do autor)
     const heading = shortLine && !END.test(line) && line.length < 60 && cur === line;
-    const endsParagraph = !next || (END.test(line) && (shortLine || DASH_START.test(next))) || heading || (shortLine && DASH_START.test(next));
-    if (endsParagraph) { out.push(cur); cur = ""; }
+    const endsParagraph =
+      !next ||
+      (END.test(line) && (shortLine || DASH_START.test(next))) ||
+      heading ||
+      (shortLine && DASH_START.test(next));
+    if (endsParagraph) {
+      out.push(cur);
+      cur = "";
+    }
   });
   return out;
 }
@@ -55,7 +68,8 @@ export function reflowStem(text: string): string {
     const line = raw.trim();
     const prev = out[out.length - 1];
     const isListItem = /^(\(?[a-eA-E]\)|[IVX]+\s*[-–.)]|\d+\s*[-–.)]|[-•*])\s/.test(line);
-    if (prev !== undefined && line && !isListItem && !END.test(prev) && /^[a-zà-ú]/.test(line)) out[out.length - 1] = `${prev} ${line}`;
+    if (prev !== undefined && line && !isListItem && !END.test(prev) && /^[a-zà-ú]/.test(line))
+      out[out.length - 1] = `${prev} ${line}`;
     else out.push(raw.trimEnd());
   }
   return out.join("\n");
@@ -73,25 +87,49 @@ const REFERS_TO_TEXT = new RegExp(
   ].join("|"),
   "i",
 );
-const SELF_CONTAINED = /(?:^|\n)\s*(?:texto|leia(?: o texto| o trecho)?|observe(?: o texto| o trecho)?)\s*[:：]\s*["“«]/i;
+const SELF_CONTAINED =
+  /(?:^|\n)\s*(?:texto|leia(?: o texto| o trecho)?|observe(?: o texto| o trecho)?)\s*[:：]\s*["“«]/i;
+
+// Provas FGV frequentemente trazem o texto integral depois de “Leia ...:”, sem aspas.
+const INLINE_PROMPT =
+  /^\s*Leia(?:,\s*a seguir,)?(?:\s*[:：]\s*|\s+(?:o|a|um|uma)(?:\s+seguinte)?\s+(?:texto|trecho|not[íi]cia|excerto|fragmento|poema|cr[ôo]nica)\b[^:\n]{0,180}[:：]\s*)/i;
+const ONLY_COMMAND =
+  /^(?:https?:\/\/|no texto|segundo o texto|de acordo com o texto|com base n[eo]s?s?e? texto|assinale|julgue|considere as|(?:a|o) (?:expressão|termo|vocábulo|trecho)\b)/i;
+function embeddedSupportText(text: string, figures?: string[]) {
+  const prompt = INLINE_PROMPT.exec(text);
+  if (!prompt) return false;
+  // A reviewed image can be the support itself. Unresolved visuals remain blocked by catalog eligibility.
+  if (
+    figures?.some((url) => {
+      try {
+        return new URL(url).protocol === "https:";
+      } catch {
+        return false;
+      }
+    })
+  )
+    return true;
+  const body = text
+    .slice(prompt[0].length)
+    .split(/\n\s*\(?[A-E]\)/)[0]!
+    .trim();
+  return (
+    !ONLY_COMMAND.test(body) && body.length >= 120 && (body.match(/\p{L}+/gu)?.length ?? 0) >= 20
+  );
+}
 
 /** Questões de Português que remetem a "o texto" sem o texto de apoio. O treinador as deixa de fora até o texto ser cadastrado. */
-export function needsMissingSupportText(q: { subject: string; text: string; source?: string; figures?: string[] | undefined }): boolean {
+export function needsMissingSupportText(q: {
+  subject: string;
+  text: string;
+  source?: string;
+  figures?: string[] | undefined;
+}): boolean {
   // itens autorais e do caderno pessoal trazem o seu contexto no próprio enunciado
   if (q.source === "curated" || q.source === "personal") return false;
   if (!/portugu|reda[çc][ãa]o|interpreta/i.test(q.subject.normalize("NFC"))) return false;
   if (/^(Texto-base|Comando)(?: \[[^\]]+\])?:\n/.test(q.text)) return false;
-  if (SELF_CONTAINED.test(q.text)) return false;
-  // Some FGV papers put the complete passage inline, without quotation marks or
-  // a separate support_text field. Inspect only the passage before its citation,
-  // never the length of the answer options or the command that follows it.
-  const readingIntro = /^\s*(?:Leia|Observe)[^:：]{0,200}[:：]/i;
-  if (readingIntro.test(q.text)) {
-    const passage = q.text.match(/^\s*(?:Leia|Observe)[^:：]{0,200}[:：]\s*([\s\S]+?)https?:\/\/\S+/i)?.[1]?.trim();
-    if (passage && passage.length >= 200 && /[.!?]/.test(passage)) return false;
-    // Audited figures can contain the passage itself (cartaz, tirinha etc.).
-    if (q.figures?.some(url => /^https:\/\//i.test(url))) return false;
-  }
+  if (SELF_CONTAINED.test(q.text) || embeddedSupportText(q.text, q.figures)) return false;
   // enunciado com texto longo entre aspas dentro dele é autossuficiente
   const quoted = [...q.text.matchAll(/["“«]([^"”»]{200,})["”»]/g)];
   if (quoted.length) return false;

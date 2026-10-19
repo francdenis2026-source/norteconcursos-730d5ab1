@@ -9,7 +9,19 @@ export function QuestionCountBadge() {
     queryFn: async () => {
       const { data, error } = await supabase.rpc("get_public_question_summary");
       if (error) throw error;
-      return data as { registered: number; available: number };
+      const summary = data as { registered?: unknown; available?: unknown } | null;
+      if (
+        !summary ||
+        typeof summary.registered !== "number" ||
+        typeof summary.available !== "number" ||
+        !Number.isSafeInteger(summary.registered) ||
+        summary.registered < 0 ||
+        !Number.isSafeInteger(summary.available) ||
+        summary.available < 0
+      ) {
+        throw new Error("Resumo de questões indisponível");
+      }
+      return summary as { registered: number; available: number };
     },
   });
   const format = (n: number) => n.toLocaleString("pt-BR");

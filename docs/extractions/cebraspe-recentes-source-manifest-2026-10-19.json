@@ -1,0 +1,559 @@
+{
+  "checked_at": "2026-10-19T16:14:30.391019+00:00",
+  "official_listing": "https://www.cebraspe.org.br/concursos/",
+  "note": "Document publication dates are not necessarily exam application dates. PDFs contain unreviewed educational material. Download is not extraction/publication approval. PM-MA has no definitive key listed in this check. PF selection includes basic blocks, Agente (16), Perito Contábil-Financeiro (2).",
+  "events": [
+    {
+      "event": "PM_MA_26",
+      "page": "https://www.cebraspe.org.br/concursos/PM_MA_26",
+      "name": "PM MA 26",
+      "roles": [
+        "CARGO 1: SOLDADO DO QUADRO DE PRAÇAS (QP)",
+        "CARGO 2: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: BOMBARDINO EUFÔNICO",
+        "CARGO 3: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: CLARINETE",
+        "CARGO 4: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: FLAUTA/FLAUTIM",
+        "CARGO 5: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: PERCUSSÃO E BATERIA",
+        "CARGO 6: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: SAXOFONE ALTO",
+        "CARGO 7: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: SAXOFONE BARÍTONO",
+        "CARGO 8: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: SAXOFONE TENOR",
+        "CARGO 9: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: TROMBONE TENOR",
+        "CARGO 10: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: TROMPA",
+        "CARGO 11: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: TROMPETE",
+        "CARGO 12: SOLDADO DO QUADRO DE PRAÇAS MÚSICOS (QPMus) – ESPECIALIDADE: TUBA"
+      ],
+      "definitive_key_listed": false,
+      "documents": [
+        {
+          "event": "PM_MA_26",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS GERAIS PARA O CARGO 1",
+          "published_at": "16/10/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/2BD20327ADB11C02921463426A2191602087FCEF6B074E0224F6A30AD455CBAB.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_MA_26/2BD20327ADB11C02921463426A2191602087FCEF6B074E0224F6A30AD455CBAB.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 295293,
+          "sha256": "77aafdc3aa25397d1916fbfd45dd1a60374d9d2c755cb4d3fd45b2ced00a4980",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_MA_26/2BD20327ADB11C02921463426A2191602087FCEF6B074E0224F6A30AD455CBAB.txt"
+        },
+        {
+          "event": "PM_MA_26",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS GERAIS PARA OS CARGOS DE 2 A 12",
+          "published_at": "16/10/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/EE3D215A5CF12F282D0A612CF7A10FB1B2523AA2D225DA82E8D52441694A008E.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_MA_26/EE3D215A5CF12F282D0A612CF7A10FB1B2523AA2D225DA82E8D52441694A008E.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 100203,
+          "sha256": "3bcda1c565aa368bf6918a4176cd8b45b24f7147b128f8de26682c9d9c186ce3",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_MA_26/EE3D215A5CF12F282D0A612CF7A10FB1B2523AA2D225DA82E8D52441694A008E.txt"
+        },
+        {
+          "event": "PM_MA_26",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS ESPECÍFICOS – CARGO 1",
+          "published_at": "16/10/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/10872F825D02C6880B51CF35ABFA56C48E2812B4BC061C21027EA38E4CFE1228.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_MA_26/10872F825D02C6880B51CF35ABFA56C48E2812B4BC061C21027EA38E4CFE1228.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 180759,
+          "sha256": "17dabb30498a3997e22e8b590a30e87a44eb741667c77056f0b40e342b6b8bbc",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_MA_26/10872F825D02C6880B51CF35ABFA56C48E2812B4BC061C21027EA38E4CFE1228.txt"
+        },
+        {
+          "event": "PM_MA_26",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS ESPECÍFICOS PARA OS CARGOS DE 2 A 12",
+          "published_at": "16/10/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/17A5074E57DEF0F85AA70F72BBC68B87F9812CA89B2A4A32576D6866F9BD89C0.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_MA_26/17A5074E57DEF0F85AA70F72BBC68B87F9812CA89B2A4A32576D6866F9BD89C0.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 586170,
+          "sha256": "0d1cfeb2ee09f7245b931d604518c89f861d4f20cb90d61266613c49dcfb8809",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_MA_26/17A5074E57DEF0F85AA70F72BBC68B87F9812CA89B2A4A32576D6866F9BD89C0.txt"
+        }
+      ]
+    },
+    {
+      "event": "PC_DF_26_DELEGADO",
+      "page": "https://www.cebraspe.org.br/concursos/PC_DF_26_DELEGADO",
+      "name": "PC DF 26 DELEGADO",
+      "roles": [
+        "DELEGADO DE POLÍCIA DO DISTRITO FEDERAL"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "PC_DF_26_DELEGADO",
+          "title": "GABARITO DEFINITIVO – PROVA OBJETIVA (P1)",
+          "published_at": "10/08/2026 14:32",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_DF_26_DELEGADO/arquivos/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_DF_26_DELEGADO/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 205353,
+          "sha256": "66112d99d6dc25ee043e9a6133ccd7955a8fa99350a01d32df2651c2b589ee18",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_DF_26_DELEGADO/793E15AB2B5B357F2DD614A0ACAEE093B9DFE97618931164855D005CDFF89841.txt"
+        },
+        {
+          "event": "PC_DF_26_DELEGADO",
+          "title": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS",
+          "published_at": "07/07/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_DF_26_DELEGADO/arquivos/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_DF_26_DELEGADO/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 724904,
+          "sha256": "7cffe418e091007c1d3190a47775e67466b744293da54cee7b0942c3b899bd95",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_DF_26_DELEGADO/710BA7293977732DDD213CAE2E329E52507C348D3E446135F8978861CDA880F1.txt"
+        }
+      ]
+    },
+    {
+      "event": "CD_26_PL",
+      "page": "https://www.cebraspe.org.br/concursos/CD_26_PL",
+      "name": "CÂMARA DOS DEPUTADOS 26 POLICIAL LEGISLATIVO FEDERAL",
+      "roles": [
+        "CARGO DE TÉCNICO LEGISLATIVO – ESPECIALIDADE: POLICIAL LEGISLATIVO FEDERAL – CÓDIGO: CDAL- 015"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "CD_26_PL",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS GERAIS",
+          "published_at": "22/05/2026 16:35",
+          "url": "https://cdn.cebraspe.org.br/concursos/CD_26_PL/arquivos/8F0511C4502CAC8A5705D0E0CEFA75BF710D19558FF34EB0A66FAD449B8863AC.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/CD_26_PL/8F0511C4502CAC8A5705D0E0CEFA75BF710D19558FF34EB0A66FAD449B8863AC.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 306322,
+          "sha256": "28f80fa6b53e01267dfe154e84f6c913d3a3ea94a1196a613a4c59b47b74e75c",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/CD_26_PL/8F0511C4502CAC8A5705D0E0CEFA75BF710D19558FF34EB0A66FAD449B8863AC.txt"
+        },
+        {
+          "event": "CD_26_PL",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS",
+          "published_at": "22/05/2026 16:35",
+          "url": "https://cdn.cebraspe.org.br/concursos/CD_26_PL/arquivos/B1299DE1DBF3E992798D6B33BAC91F9ADD685A19F304BF315A0764E04A4A7EB7.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/CD_26_PL/B1299DE1DBF3E992798D6B33BAC91F9ADD685A19F304BF315A0764E04A4A7EB7.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 305751,
+          "sha256": "36b3f5c419f60705b04f0dc9b808cce3f0c00af9a0310d68f755702b5c75aa54",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/CD_26_PL/B1299DE1DBF3E992798D6B33BAC91F9ADD685A19F304BF315A0764E04A4A7EB7.txt"
+        },
+        {
+          "event": "CD_26_PL",
+          "title": "PROVA OBJETIVA - CONHECIMENTOS GERAIS",
+          "published_at": "30/04/2026 18:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/CD_26_PL/arquivos/6BA6C911910A9996895927100E426BD4733C0601F6E27F998FD96D420A356EDC.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/CD_26_PL/6BA6C911910A9996895927100E426BD4733C0601F6E27F998FD96D420A356EDC.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 800635,
+          "sha256": "799960b06bf959b8d165e74b46b2b56bf935c8db754ac060913ab4a848f7b8bd",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/CD_26_PL/6BA6C911910A9996895927100E426BD4733C0601F6E27F998FD96D420A356EDC.txt"
+        },
+        {
+          "event": "CD_26_PL",
+          "title": "PROVA OBJETIVA - CONHECIMENTOS ESPECÍFICOS",
+          "published_at": "30/04/2026 18:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/CD_26_PL/arquivos/883961147167BD024D88844195C9BCEF43F921F5EA554762C4678B7FA172E509.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/CD_26_PL/883961147167BD024D88844195C9BCEF43F921F5EA554762C4678B7FA172E509.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 599366,
+          "sha256": "0a7e379244ecbba979fc877c3fc13b24adc2052548c30b64f4bfabe6a382f2b0",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/CD_26_PL/883961147167BD024D88844195C9BCEF43F921F5EA554762C4678B7FA172E509.txt"
+        }
+      ]
+    },
+    {
+      "event": "PM_DF_25_CFO",
+      "page": "https://www.cebraspe.org.br/concursos/PM_DF_25_CFO",
+      "name": "PM DF 25 CFO",
+      "roles": [
+        "CARGO DE OFICIAL POLICIAL MILITAR – 2º TENENTE"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "PM_DF_25_CFO",
+          "title": "GABARITO DEFINITIVO – PROVA OBJETIVA (P1)",
+          "published_at": "15/07/2026 15:22",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_DF_25_CFO/arquivos/A96422546BECE1549DF7D22DB41B62D73693B46A4796413A1F9CAA4DE6F8DE83.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/A96422546BECE1549DF7D22DB41B62D73693B46A4796413A1F9CAA4DE6F8DE83.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 202796,
+          "sha256": "98476ae45d9282311db6839ab8595f385f84c9cba9fef7d8fc3e47a65f5424d7",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/A96422546BECE1549DF7D22DB41B62D73693B46A4796413A1F9CAA4DE6F8DE83.txt"
+        },
+        {
+          "event": "PM_DF_25_CFO",
+          "title": "GABARITO DEFINITIVO – PROVA OBJETIVA (P2)",
+          "published_at": "15/07/2026 15:22",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_DF_25_CFO/arquivos/685494F9EF71F1305C3826D04333FEB1FA7676647783FD56F4522FD13CDBD5FD.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/685494F9EF71F1305C3826D04333FEB1FA7676647783FD56F4522FD13CDBD5FD.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 202258,
+          "sha256": "759ebb39132d620e5e17f0c9ab8472741ca47e9be94cb43d1f08c0c30bcd4914",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/685494F9EF71F1305C3826D04333FEB1FA7676647783FD56F4522FD13CDBD5FD.txt"
+        },
+        {
+          "event": "PM_DF_25_CFO",
+          "title": "PROVA OBJETIVA (P1) E GABARITO PRELIMINAR COM JUSTIFICATIVAS",
+          "published_at": "16/06/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_DF_25_CFO/arquivos/337DECAC06D244D3DFDF2269644D44FDB33CCFFA7FABB0CB9EC8A5E044FB48A1.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/337DECAC06D244D3DFDF2269644D44FDB33CCFFA7FABB0CB9EC8A5E044FB48A1.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 576253,
+          "sha256": "f6f00d916f0bab23599efddc8c6d07cadbef2f6715b3377211b6bbc3b4c4cdac",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/337DECAC06D244D3DFDF2269644D44FDB33CCFFA7FABB0CB9EC8A5E044FB48A1.txt"
+        },
+        {
+          "event": "PM_DF_25_CFO",
+          "title": "PROVA OBJETIVA (P2) E GABARITO PRELIMINAR COM JUSTIFICATIVAS",
+          "published_at": "16/06/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PM_DF_25_CFO/arquivos/B66B3302CAE22A39004125DC8158C5F6406471EE44C4F694EC73E44B2CCEDB84.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/B66B3302CAE22A39004125DC8158C5F6406471EE44C4F694EC73E44B2CCEDB84.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 731650,
+          "sha256": "542d9db8947ddb670c494fa822b4f00f015d5ae6ef40d08e2d6e58ca72cd6686",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PM_DF_25_CFO/B66B3302CAE22A39004125DC8158C5F6406471EE44C4F694EC73E44B2CCEDB84.txt"
+        }
+      ]
+    },
+    {
+      "event": "PC_MG_25_TPAG",
+      "page": "https://www.cebraspe.org.br/concursos/PC_MG_25_TPAG",
+      "name": "PC MG 25 TPAG",
+      "roles": [
+        "TÉCNICO-ASSISTENTE DA POLÍCIA CIVIL E DE ATIVIDADES GOVERNAMENTAIS (TPAG), ÁREA DE CONHECIMENTO AUXILIAR DE PERÍCIA"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "GABARITO DEFINITIVO – EIXO GERAL",
+          "published_at": "28/04/2026 10:35",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 301933,
+          "sha256": "f79b75c73d2a5814eaa6702d57b215d83fea9c1e6fcb20602cfadeb27d7c2561",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/C61D250D6FA81D954109D271929695930BDC2CF6E777C9B9BF32B966811EB72E.txt"
+        },
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "GABARITO DEFINITIVO – EIXO LEGISLAÇÃO",
+          "published_at": "28/04/2026 10:35",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 302268,
+          "sha256": "ad51738a383b463c77d937e613b651ea4cefd9c088eaee6af079dfd4370a74e5",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/982FAA75AC3D0AF6CA2FB43803C8C0233309F3F2F1802CF44235B0EF6F914B27.txt"
+        },
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "GABARITO DEFINITIVO – EIXO ESPECÍFICO",
+          "published_at": "28/04/2026 10:35",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 302059,
+          "sha256": "edfd5f570aa2d9cc325f1f029f36c55d8a25083397ff84a1735ea3dd3a55979a",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/D127CA9DB485BDFFD7CD053335ACE89962D7A841B50452E032D876BF5D65A350.txt"
+        },
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "PROVA OBJETIVA – EIXO GERAL",
+          "published_at": "02/04/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 796861,
+          "sha256": "4499023d02891c85363a2ccce602887a9d54f007464d684a4fda092d9397d27b",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/31AD6B36C6C09518DD76EEECD97707FCCC25AF3CBF9C9643A3A5B739E548A0A6.txt"
+        },
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "PROVA OBJETIVA – EIXO LEGISLAÇÃO",
+          "published_at": "02/04/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 729223,
+          "sha256": "cf768260f267e9550ccdb7a59241e29b0bf14542480d32ae6021c2939b480d8a",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/50D3F9E7506CE63891F71B5BDBA44934CC632924A7F8C9EA8376ADDAF0BC88BC.txt"
+        },
+        {
+          "event": "PC_MG_25_TPAG",
+          "title": "PROVA OBJETIVA – EIXO ESPECÍFICO",
+          "published_at": "02/04/2026 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_MG_25_TPAG/arquivos/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 801333,
+          "sha256": "114d5b94dbc7bf7e5a43627e1e61e5f92c431716dcfc822bd43bbc9e59984716",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_MG_25_TPAG/8D683FFE837383D55B0EF95FC92CE94231092310AF95E8B27A51C0D48A365F56.txt"
+        }
+      ]
+    },
+    {
+      "event": "PC_CE_25_DELEGADO",
+      "page": "https://www.cebraspe.org.br/concursos/PC_CE_25_DELEGADO",
+      "name": "Concurso Público de Delegado de Polícia Civil",
+      "roles": [
+        "DELEGADO DE POLÍCIA CIVIL"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "PC_CE_25_DELEGADO",
+          "title": "GABARITO DEFINITIVO – PROVA OBJETIVA",
+          "published_at": "18/06/2025 09:55",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_CE_25_DELEGADO/arquivos/Gab_Definitivo_084_PC_CE_001_01.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_CE_25_DELEGADO/Gab_Definitivo_084_PC_CE_001_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 204464,
+          "sha256": "b048d38ed7d377afc844bed448c9facabed949dfa121f9ee91ce22c2646a94a9",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_CE_25_DELEGADO/Gab_Definitivo_084_PC_CE_001_01.txt"
+        },
+        {
+          "event": "PC_CE_25_DELEGADO",
+          "title": "PROVA OBJETIVA",
+          "published_at": "30/05/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PC_CE_25_DELEGADO/arquivos/084_PC_CE_001_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PC_CE_25_DELEGADO/084_PC_CE_001_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 668358,
+          "sha256": "24314c95f3b0ddf488e27e51184515612787656e186f7869644758979b2f72ba",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PC_CE_25_DELEGADO/084_PC_CE_001_01.txt"
+        }
+      ]
+    },
+    {
+      "event": "PF_25",
+      "page": "https://www.cebraspe.org.br/concursos/PF_25",
+      "name": "PF 25",
+      "roles": [
+        "Cargo 1: Delegado de Polícia Federal",
+        "Cargo 2: Perito Criminal Federal – Área 1: Contábil-Financeira",
+        "Cargo 3: Perito Criminal Federal – Área 2: Engenharia Elétrica/Eletrônica",
+        "Cargo 4: Perito Criminal Federal – Área 3: Informática Forense",
+        "Cargo 5: Perito Criminal Federal – Área 5: Geologia Forense",
+        "Cargo 6: Perito Criminal Federal – Área 7: Engenharia Civil",
+        "Cargo 7: Perito Criminal Federal – Área 11: Engenharia Cartográfica",
+        "Cargo 8: Perito Criminal Federal – Área 12: Medicina Legal",
+        "Cargo 9: Perito Criminal Federal – Área 16: Física Forense",
+        "Cargo 10: Perito Criminal Federal – Área 17: Engenharia de Minas",
+        "Cargo 11: Perito Criminal Federal – Área 19: Genética Forense",
+        "Cargo 12: Perito Criminal Federal – Área 20: Engenharia Ambiental",
+        "Cargo 13: Perito Criminal Federal – Área 21: Antropologia Forense",
+        "Cargo 14: Perito Criminal Federal – Área 22: Meio Ambiente",
+        "Cargo 15: Escrivão de Polícia Federal",
+        "Cargo 16: Agente de Polícia Federal",
+        "Cargo 17: Papiloscopista Policial Federal"
+      ],
+      "definitive_key_listed": true,
+      "documents": [
+        {
+          "event": "PF_25",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS PARA TODOS OS CARGOS DE PERITO CRIMINAL FEDERAL",
+          "published_at": "20/08/2025 10:10",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/5A49198A6084706823226C79C28FFDBB1129FD5D938C9919AD9C1FC97E54701A.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/5A49198A6084706823226C79C28FFDBB1129FD5D938C9919AD9C1FC97E54701A.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 209384,
+          "sha256": "ff75dc45f1bf683e5708d18fe943d227bc25f231076a27c6d73b4b1254e80c49",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/5A49198A6084706823226C79C28FFDBB1129FD5D938C9919AD9C1FC97E54701A.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS – BLOCO I – PARA OS CARGOS 15, 16 E 17",
+          "published_at": "20/08/2025 10:10",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/D0F881898A969B6733B878291FC1201E6CFE079281391E04B7EE322628BC888C.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/D0F881898A969B6733B878291FC1201E6CFE079281391E04B7EE322628BC888C.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 210432,
+          "sha256": "7b98a362feefd04ea74422ee2d66307414ce706408fbbb3b8745b8f47c41e46c",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/D0F881898A969B6733B878291FC1201E6CFE079281391E04B7EE322628BC888C.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS BÁSICOS – BLOCO II – PARA OS CARGOS 15, 16 E 17",
+          "published_at": "20/08/2025 10:10",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/A78F5BA07173AF0B8A5E611A1D7AAB166B7BD473E5D7AC2220F0F1B7DDB641E9.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/A78F5BA07173AF0B8A5E611A1D7AAB166B7BD473E5D7AC2220F0F1B7DDB641E9.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 209756,
+          "sha256": "f4f075f7e42dacfa04727f291e2b55c15b50ce1bd51930e7773169cc3b33c783",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/A78F5BA07173AF0B8A5E611A1D7AAB166B7BD473E5D7AC2220F0F1B7DDB641E9.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS – CARGO 2",
+          "published_at": "20/08/2025 10:10",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/B918D6A805194D299F15922339CA17D2C3921BF015DFD2B258EEFFE487A53F22.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/B918D6A805194D299F15922339CA17D2C3921BF015DFD2B258EEFFE487A53F22.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 211829,
+          "sha256": "94551ad5e43a4d54514942f67e0841ed67a8e5683fb85689e256bc09fae81a29",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/B918D6A805194D299F15922339CA17D2C3921BF015DFD2B258EEFFE487A53F22.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "GABARITO DEFINITIVO – CONHECIMENTOS ESPECÍFICOS – CARGO 16",
+          "published_at": "20/08/2025 10:10",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/CDC24D454696C9FE260E6C50FE758707F322649AEE24B6FB664FDDA10E307BCF.pdf",
+          "document_type": "definitive_answer_key",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/CDC24D454696C9FE260E6C50FE758707F322649AEE24B6FB664FDDA10E307BCF.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 208179,
+          "sha256": "629456cbe67ffb38507dd1744719baa260e77dbea8eaca3172190894c29cd2f2",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/CDC24D454696C9FE260E6C50FE758707F322649AEE24B6FB664FDDA10E307BCF.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS BÁSICOS PARA TODOS OS CARGOS DE PERITO CRIMINAL FEDERAL",
+          "published_at": "01/08/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/106_PF_CB1_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CB1_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 125300,
+          "sha256": "08574b971d557f9eba566567bab3dc48594ca9b86647530e6576cf5bd1d172bb",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CB1_01.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS BÁSICOS – BLOCO I – PARA OS CARGOS 15, 16 E 17",
+          "published_at": "01/08/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/106_PF_CB2_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CB2_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 136700,
+          "sha256": "61c731f9638643a84a21188a0bcd6e9b85949604e8ba75051c971411641890a7",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CB2_01.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS BÁSICOS – BLOCO II – PARA OS CARGOS 15, 16 E 17",
+          "published_at": "01/08/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/106_PF_CG1_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CG1_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 98321,
+          "sha256": "25c6783ccbfc3d72fbb0913da58372e344ba45fc6e1ba74250727fa3e56e51f3",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_CG1_01.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS ESPECÍFICOS – CARGO 2",
+          "published_at": "01/08/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/106_PF_002_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_002_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 238694,
+          "sha256": "43f01f62df2b140abf3c561191103bd2f6fb3e56777e4ddc0f90b451383ccae0",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_002_01.txt"
+        },
+        {
+          "event": "PF_25",
+          "title": "PROVA OBJETIVA – CONHECIMENTOS ESPECÍFICOS – CARGO 16",
+          "published_at": "01/08/2025 19:00",
+          "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/106_PF_016_01.pdf",
+          "document_type": "question_booklet",
+          "local_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_016_01.pdf",
+          "downloaded": true,
+          "http_status": 200,
+          "bytes": 68886,
+          "sha256": "8f5962ae0dde2d3cf2652c3eff3e3c263c12486952f45ab4761b7dc0d1550f06",
+          "text_extraction_ok": true,
+          "text_file": "outputs/cebraspe-2026-10-19/PF_25/106_PF_016_01.txt"
+        }
+      ]
+    }
+  ]
+}

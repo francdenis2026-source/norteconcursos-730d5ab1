@@ -65,8 +65,9 @@ export function HomeRail({
     if (!element) return;
     const cards = Array.from(element.children);
     const left = element.getBoundingClientRect().left;
+    const inset = Number.parseFloat(getComputedStyle(element).scrollPaddingInlineStart) || 0;
     const positions = cards.map(
-      (card) => card.getBoundingClientRect().left - left + element.scrollLeft - 3,
+      (card) => card.getBoundingClientRect().left - left + element.scrollLeft - inset,
     );
     const target =
       direction > 0

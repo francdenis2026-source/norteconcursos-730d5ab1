@@ -13,3 +13,5 @@ Os três cards de concursos agora usam carrossel também em desktop, mostrando d
 Validação: 60 testes pertinentes passaram, typecheck e build. Conferência do carrossel nos temas claro e escuro em 320, 390, 768, 1024 e 1440 px; navegação de ida/volta e teclado sem overflow horizontal. A regra de limites dos planos permanece aplicável ao tamanho de cada sessão.
 
 A conferência do navegador com o snapshot real pós-publicação confirmou 100 questões de Papiloscopista tanto no treinador quanto no seletor do simulador. O simulador passou também a carregar `figure_urls` e o número original dos itens de bancas; antes ele descartava a referência à figura ao verificar apoio ausente. Isso preserva as imagens já cadastradas e a ordem da prova.
+
+Integração com a main concorrente: preservados o detector de passagem incorporada, a restauração genérica previamente revisada, ajustes de tema e layout móvel recebidos da outra conta. Os dois conjuntos de testes de restauração e de apoio foram combinados; 62 testes passaram após a integração. As duas finalidades do publicador permanecem distintas, mantendo a restrição adicional deste lote aos 64 itens de Papiloscopista.

@@ -1,3 +1,4 @@
+import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -21,6 +22,7 @@ import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
+import { CHUNK_RECOVERY_SCRIPT } from "../lib/chunkRecovery";
 import { claimSingleDeviceSession, ownsSingleDeviceSession } from "../lib/singleDeviceSession";
 
 function StatusScreen({
@@ -142,7 +144,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Estude com direção. Evolua com clareza." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#f5f6f8" },
+      { name: "theme-color", content: "#f4f5f6" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
       { name: "mobile-web-app-capable", content: "yes" },
@@ -174,10 +176,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         {/* Aplica claro/escuro antes da primeira pintura, para não piscar. */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
         <HeadContent />
       </head>
       <body>
@@ -189,6 +192,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(startOnlinePresence, []);
   useEffect(() => {
     let active = true;
     let pending = false;
