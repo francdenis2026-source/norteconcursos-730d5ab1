@@ -242,6 +242,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={BrainCircuit}
           label="Questões resolvidas"
+          tone="blue"
           onOpen={(event) => openMetric("questions", event.currentTarget)}
           value={q.training.isError ? "Indisponível" : stats ? number(stats.total) : "…"}
           detail={stats ? `${number(stats.today)} hoje` : "Dados do treinador"}
@@ -249,6 +250,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={CheckCircle2}
           label="Taxa de acerto"
+          tone="teal"
           onOpen={(event) => openMetric("accuracy", event.currentTarget)}
           value={
             q.training.isError
@@ -268,6 +270,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={Clock}
           label="Tempo ativo hoje"
+          tone="amber"
           onOpen={(event) => openMetric("today", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.today) : "…"}
           detail="Somando suas sessões"
@@ -275,6 +278,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         <Metric
           icon={TrendingUp}
           label="Estudo nesta semana"
+          tone="violet"
           onOpen={(event) => openMetric("week", event.currentTarget)}
           value={q.activity.isError ? "Indisponível" : time ? duration(time.week) : "…"}
           detail={time ? `${duration(time.total)} no total` : "Últimos 7 dias"}
@@ -765,17 +769,20 @@ function Metric({
   value,
   detail,
   onOpen,
+  tone,
 }: {
   icon: LucideIcon;
   label: string;
   value: string;
   detail: string;
   onOpen: React.MouseEventHandler<HTMLButtonElement>;
+  tone?: "blue" | "teal" | "amber" | "violet";
 }) {
   return (
     <button
       type="button"
       className="student-home__metric"
+      data-tone={tone}
       onClick={onOpen}
       aria-haspopup="dialog"
       aria-label={`${label}: ${value}. Ver detalhes`}

@@ -1,0 +1,666 @@
+{
+ "gerado_em": "2026-10-19",
+ "modo": "dry-run (nenhuma gravação)",
+ "sources": {
+  "tceto": {
+   "title": "Edital nº 01/2022 – Concurso Público TCE-TO (retificado em 02/09/2022)",
+   "issuer": "Tribunal de Contas do Estado do Tocantins / FGV",
+   "url": "https://conhecimento.fgv.br/sites/default/files/concursos/tce-to_-_edital_retificado_004_-_02092022.pdf",
+   "pdf": "tceto.pdf",
+   "source_type": "edital",
+   "is_official": true,
+   "sha256": "6b43ba67128780ec357eeca38672e2be657f9a53c173790a598c038472c3febf",
+   "published_on": null
+  },
+  "cgm": {
+   "title": "Edital – Concurso Público CGM-Rio 2023 (retificado em 30/01/2023)",
+   "issuer": "Controladoria Geral do Município do Rio de Janeiro / FGV",
+   "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital_cgm_-_retificado_2.pdf",
+   "pdf": "cgmrj.pdf",
+   "source_type": "edital",
+   "is_official": true,
+   "sha256": "328f186e5dfef1ed9bb219cae3c8a5e8b5e1c74bf3867f91f9a70a14c42be396",
+   "published_on": null
+  },
+  "cgesc": {
+   "title": "Edital SEF/CGE nº 01/2022 – 1ª retificação (06/10/2022)",
+   "issuer": "Controladoria-Geral do Estado de Santa Catarina / FGV",
+   "url": "https://conhecimento.fgv.br/sites/default/files/concursos/1a_retificacao_-_edital-cge_06.10.2022.pdf",
+   "pdf": "cgesc.pdf",
+   "source_type": "edital",
+   "is_official": true,
+   "sha256": "e5d275067a2d7778707362351dc08afee281b8747a6b0abd454fbcb171c3335b",
+   "published_on": null
+  },
+  "alema": {
+   "title": "Edital nº 01/2023 – Concurso Público ALEMA (retificado em 25/10/2023)",
+   "issuer": "Assembleia Legislativa do Estado do Maranhão / FGV",
+   "url": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-retificado-4-25.10.2023.pdf",
+   "pdf": "alema.pdf",
+   "source_type": "edital",
+   "is_official": true,
+   "sha256": "c0282d1aba7a52d60883e3379db98df87ff59c7c34384a99b3e711739a32b284",
+   "published_on": null
+  }
+ },
+ "editions": {
+  "TCE_LETRAS": {
+   "contest_name": "Tribunal de Contas do Estado do Tocantins",
+   "role_name": "Analista Técnico – Letras",
+   "contest_year": 2022,
+   "exam_board": "FGV",
+   "source": "tceto"
+  },
+  "TCE_CONT": {
+   "contest_name": "Tribunal de Contas do Estado do Tocantins",
+   "role_name": "Auditor de Controle Externo – Ciências Contábeis",
+   "contest_year": 2022,
+   "exam_board": "FGV",
+   "source": "tceto"
+  },
+  "TCE_DIR": {
+   "contest_name": "Tribunal de Contas do Estado do Tocantins",
+   "role_name": "Auditor de Controle Externo – Direito",
+   "contest_year": 2022,
+   "exam_board": "FGV",
+   "source": "tceto"
+  },
+  "CGM_TCI": {
+   "contest_name": "Controladoria Geral do Município do Rio de Janeiro",
+   "role_name": "Técnico de Controle Interno",
+   "contest_year": 2023,
+   "exam_board": "FGV",
+   "source": "cgm"
+  },
+  "CGM_CON": {
+   "contest_name": "Controladoria Geral do Município do Rio de Janeiro",
+   "role_name": "Contador",
+   "contest_year": 2023,
+   "exam_board": "FGV",
+   "source": "cgm"
+  },
+  "CGE_DIR": {
+   "contest_name": "Controladoria-Geral do Estado de Santa Catarina",
+   "role_name": "Auditor do Estado – Direito",
+   "contest_year": 2022,
+   "exam_board": "FGV",
+   "source": "cgesc"
+  },
+  "ALEMA_CON": {
+   "contest_name": "Assembleia Legislativa do Estado do Maranhão",
+   "role_name": "Técnico de Gestão Administrativa – Contador",
+   "contest_year": 2023,
+   "exam_board": "FGV",
+   "source": "alema"
+  }
+ },
+ "topics": {
+  "TCE_LETRAS_DC": {
+   "edition": "TCE_LETRAS",
+   "block_name": "Conhecimentos Básicos – Noções de Direito",
+   "discipline": "Noções de Direito Constitucional",
+   "topic_text": "Noções de Direito Constitucional. Constituição: conceito, origens, conteúdo, estrutura e classificação. Supremacia da Constituição. Poder Constituinte. Interpretação Constitucional e Aplicabilidade das Normas Constitucionais. Princípios Constitucionais. Direitos e Deveres Individuais, Difusos e Coletivos. Direitos Sociais. Controle de Constitucionalidade. Emenda, Reforma e Revisão Constitucional. Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Lei nº 9.868/1999). Arguição de Descumprimento de Preceito Fundamental (Lei nº 9.882/1999). Súmula vinculante (Lei nº 11.417/2006). Organização do Estado Brasileiro: divisão espacial do poder; Estado Federal; União; Estados; Distrito Federal; Municípios; intervenção federal; intervenção do Estado nos Municípios, repartição de competências. Poder Legislativo: Organização, Atribuições, Garantias e Processo Legislativo. Fiscalização Contábil, Financeira e Orçamentária. Poder Executivo: Presidente, Vice-Presidente da República e Ministros de Estado; Governador, Vice-Governador e Secretários de Estado; Prefeito, Vice-Prefeito e Secretários Municipais; Atribuições e Responsabilidades; Poder Regulamentar e Medidas Provisórias. Poder Judiciário: Disposições Gerais; Organização; Supremo Tribunal Federal, Superior Tribunal de Justiça e Tribunais de Justiça Estaduais; Garantias da Magistratura. Funções essenciais à Justiça. Ministério Público: Natureza, Atribuições, Princípios Institucionais, Garantias e Vedações de seus Membros. Da Administração Pública: Disposições Gerais e Servidores Públicos. Sistema Tributário Nacional. Finanças Públicas. Ordem Econômica e Financeira. Princípios constitucionais da seguridade social. Constituição do Estado do Tocantins."
+  },
+  "TCE_LETRAS_DA": {
+   "edition": "TCE_LETRAS",
+   "block_name": "Conhecimentos Básicos – Noções de Direito",
+   "discipline": "Noções de Direito Administrativo",
+   "topic_text": "Noções de Direito Administrativo. Princípios da Administração Pública. Ato administrativo. Poderes Administrativos. Organização administrativa. Administração Direta e Indireta. Entidades do Terceiro Setor. Serviços públicos. Licitação. Contratos administrativos. Lei Federal nº 8.666/1993. Lei Federal nº 14.133/2021. Lei Federal nº 10.520/2002. Lei nº 12.462/2011. Decreto nº 7.581/2011. Lei nº 11.079/2004. Lei nº 8.987/1995. Lei nº 9.074/1995. Lei nº 9.637/1998. Lei nº 9.790/1999. Agentes públicos. Processo administrativo. Lei Federal nº 9.784/1999 (Lei do Processo Administrativo Federal). Responsabilidade Civil do Estado. Lei de acesso à informação (Lei Federal nº 12.527/2011). Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD). Controle da Administração Pública. Improbidade Administrativa (Leis nº 8.429/1992 e 14.230/2021). Lei Anticorrupção (Lei nº 12.846/2013). Lei Complementar nº 101, de 4/05/2000 (Lei da Responsabilidade Fiscal). Controle dos Tribunais de Contas. Lei Orgânica do Tribunal de Contas do Estado do Tocantins (Lei Estadual nº 1.284/2001 e alterações). Regimento Interno do Tribunal de Contas do Estado do Tocantins. Código de Ética dos Servidores do Tribunal de Contas do Estado do Tocantins (Resolução Administrativa nº 01/2012). Estatuto dos Servidores Públicos do Estado do Tocantins (Lei Estadual nº 1.818/2007)."
+  },
+  "TCE_CONT_DC": {
+   "edition": "TCE_CONT",
+   "block_name": "Conhecimentos Básicos – Noções de Direito",
+   "discipline": "Noções de Direito Constitucional",
+   "topic_text": "Noções de Direito Constitucional. Constituição: conceito, origens, conteúdo, estrutura e classificação. Supremacia da Constituição. Poder Constituinte. Interpretação Constitucional e Aplicabilidade das Normas Constitucionais. Princípios Constitucionais. Direitos e Deveres Individuais, Difusos e Coletivos. Direitos Sociais. Controle de Constitucionalidade. Emenda, Reforma e Revisão Constitucional. Ação Direta de Inconstitucionalidade e Ação Declaratória de Constitucionalidade (Lei nº 9.868/1999). Arguição de Descumprimento de Preceito Fundamental (Lei nº 9.882/1999). Súmula vinculante (Lei nº 11.417/2006). Organização do Estado Brasileiro: divisão espacial do poder; Estado Federal; União; Estados; Distrito Federal; Municípios; intervenção federal; intervenção do Estado nos Municípios, repartição de competências. Poder Legislativo: Organização, Atribuições, Garantias e Processo Legislativo. Fiscalização Contábil, Financeira e Orçamentária. Poder Executivo: Presidente, Vice-Presidente da República e Ministros de Estado; Governador, Vice-Governador e Secretários de Estado; Prefeito, Vice-Prefeito e Secretários Municipais; Atribuições e Responsabilidades; Poder Regulamentar e Medidas Provisórias. Poder Judiciário: Disposições Gerais; Organização; Supremo Tribunal Federal, Superior Tribunal de Justiça e Tribunais de Justiça Estaduais; Garantias da Magistratura. Funções essenciais à Justiça. Ministério Público: Natureza, Atribuições, Princípios Institucionais, Garantias e Vedações de seus Membros. Da Administração Pública: Disposições Gerais e Servidores Públicos. Sistema Tributário Nacional. Finanças Públicas. Ordem Econômica e Financeira. Princípios constitucionais da seguridade social. Constituição do Estado do Tocantins."
+  },
+  "TCE_DIR_DC": {
+   "edition": "TCE_DIR",
+   "block_name": "Conhecimentos Específicos – Direito",
+   "discipline": "Direito Constitucional",
+   "topic_text": "Direito Constitucional. Constituição: conceito, objeto, elementos e classificações; supremacia da Constituição; aplicabilidade das normas constitucionais. Interpretação do texto constitucional. Poder Constituinte: originário, derivado e decorrente. Princípios fundamentais. Direitos e garantias fundamentais: direitos e deveres individuais e coletivos; direitos sociais; nacionalidade; direitos políticos; partidos políticos. Organização do Estado: organização político-administrativa: União; Estados federados; Municípios; Distrito Federal; Territórios; intervenção. Administração Pública: disposições gerais; servidores públicos; militares dos Estados, do Distrito Federal e dos Territórios. Organização dos poderes no Estado: Poder Legislativo: estrutura, funcionamento e atribuições; Comissões Parlamentares de Inquérito; Tribunal de Contas do Estado: composição e competência. Processo legislativo; Poder Executivo: Presidente da República: atribuições, prerrogativas e responsabilidades; Ministros de Estado; Conselhos da República e de Defesa Nacional. Poder Judiciário: disposições gerais; órgãos do Poder Judiciário: organização e competências; Conselho Nacional de Justiça (CNJ); funções essenciais à Justiça: Ministério Público: princípios, garantias, vedações, organização e competências; advocacia pública, advocacia e defensoria pública; controle de constitucionalidade: sistemas gerais e sistema brasileiro; controle incidental ou concreto; controle abstrato de constitucionalidade; Ação Declaratória de Constitucionalidade; Ação Direta de Inconstitucionalidade; Arguição de Descumprimento de Preceito Fundamental; Ação Direta de Inconstitucionalidade por Omissão; Ação Direta de Inconstitucionalidade Interventiva; controle concreto e abstrato de constitucionalidade do direito estadual. Súmula Vinculante. Defesa do Estado e das instituições democráticas. Sistema Tributário Nacional: princípios gerais, limitações do poder de tributar, impostos da União, dos Estados e dos Municípios. Ordem social. Habeas corpus. Mandado de segurança. Mandado de injunção. Habeas data."
+  },
+  "TCE_DIR_DA": {
+   "edition": "TCE_DIR",
+   "block_name": "Conhecimentos Específicos – Direito",
+   "discipline": "Direito Administrativo",
+   "topic_text": "Direito Administrativo. Princípios da Administração Pública. Ato administrativo. Poderes Administrativos. Organização administrativa. Administração Direta e Indireta. Entidades do Terceiro Setor. Serviços públicos. Licitação. Contratos administrativos. Lei Federal nº 8.666/1993. Lei Federal nº 14.133/2021. Lei Federal nº 10.520/2002. Lei nº 12.462/2011. Decreto nº 7.581/2011. Lei nº 11.079/2004. Lei nº 8.987/1995. Lei nº 9.074/1995. Lei nº 9.637/1998. Lei nº 9.790/1999. Agentes públicos. Regimes Previdenciários. Lei do Regime Próprio de Previdência Social do Tocantins - IGEPREV (Lei Estadual nº 1.940, de 11/07/2008). Processo administrativo. Lei Federal nº 9.784/1999 (Lei do Processo Administrativo Federal). Responsabilidade Civil do Estado. Lei de acesso à informação (Lei Federal nº 12.527/2011). Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD). Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015). Segurança jurídica e eficiência na criação e na aplicação do Direito Público (Lei nº 13.655/2018). Decreto-Lei nº 4.657/1942 (Lei de Introdução às normas do Direito Brasileiro). Intervenção do Estado sobre a propriedade privada. Bens públicos. Controle da Administração Pública. Decisões dos Tribunais de Contas. Execução das decisões dos Tribunais de Contas. Improbidade Administrativa (Leis nº 8.429/1992 e 14.230/2021). Lei Anticorrupção (Lei nº 12.846/2013). Lei Complementar nº 101, de 4/05/2000 (Lei da Responsabilidade Fiscal). Controle dos Tribunais de Contas. Lei Orgânica do Tribunal de Contas do Estado do Tocantins (Lei Estadual nº 1.284/2001 e alterações). Regimento Interno do Tribunal de Contas do Estado do Tocantins. Código de Ética dos Servidores do Tribunal de Contas do Estado do Tocantins (Resolução Administrativa nº 01/2012). Estatuto dos Servidores Públicos do Estado do Tocantins (Lei Estadual nº 1.818/2007). Decreto Federal 20.910/32."
+  },
+  "CGM_TCI_DAI": {
+   "edition": "CGM_TCI",
+   "block_name": "Conhecimentos Gerais",
+   "discipline": "Direito Administrativo I",
+   "topic_text": "DIREITO ADMINISTRATIVO I: 1. Direito Administrativo e Administração Pública. 1.1 Introdução: O Estado; Poderes e Funções; Função Administrativa; Federação. Administração Direta e Indireta. Terceiro Setor. 1.2 Órgãos Públicos. 1.3 Princípios Administrativos: Princípios Expressos; Princípios Reconhecidos. 2.Poderes Administrativos. 3. Ato Administrativo. 4. Contratos Administrativos. 5. Licitações. 6. Serviços Públicos. 7. Agentes Públicos. 8. Improbidade Administrativa. 9. Estatuto dos Funcionários Públicos do Poder Executivo do Município do Rio de Janeiro (Lei nº 94, de 14 de março de 1979). 10. Integridade - Código de Integridade do Agente Público do Poder Executivo do Município do Rio de Janeiro (Decreto Rio nº 50.021/2021). 11. Responsabilidade civil do Estado. 12. Controle da Administração Pública. 13. Lei Anticorrupção. 14. Acesso à Informação. Lei nº 12.527/2011. Decreto Rio nº 44.745/2018."
+  },
+  "CGM_TCI_DAII": {
+   "edition": "CGM_TCI",
+   "block_name": "Conhecimentos Específicos",
+   "discipline": "Direito Administrativo II",
+   "topic_text": "DIREITO ADMINISTRATIVO II: 1. Direito Administrativo e Administração Pública. 1.1 Introdução: O Estado; Poderes e Funções; Função Administrativa; Federação. Administração Direta e Indireta. Terceiro Setor. 1.2 Órgãos Públicos. 1.3 Princípios Administrativos: Princípios Expressos; Princípios Reconhecidos. 2. Poderes Administrativos 3. Ato Administrativo. 4.Responsabilidade Civil do Estado. 5. Controle da Administração Pública. 6. Lei de Introdução às Normas do Direito Brasileiro (Decreto-Lei nº 4.657/1942). 7. Agentes Públicos. 8. Estatuto dos Funcionários Públicos do Poder Executivo do Município do Rio de Janeiro (Lei nº 94, de 14 de março de 1979). 9. Sistema Normativo Anticorrupção. 9.1 Lei Anticorrupção (Lei Federal nº 12.846/2013) e Decreto Rio nº 46.195/20197. 9.2 Lei de abuso de autoridade (Lei Federal nº 13.869/2019). 9.3 Lei de Improbidade Administrativa (Lei Federal nº 8.429/1992, e alterações posteriores). 10. Direito de acesso à informação no Brasil. 10.1 Normas constitucionais. 10.2 Lei nº 12.527/2011 e Decreto Rio nº 44.745/2018. 10.3. Tratamento de dados pessoais pelo Poder Público: Capítulos II e IV da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD); Decreto Rio nº 49.558/2021; Decreto Rio nº 50.523/2022. 11. Bens públicos. 12. Intervenção do Estado na propriedade."
+  },
+  "CGM_CON_DC": {
+   "edition": "CGM_CON",
+   "block_name": "Conhecimentos Gerais",
+   "discipline": "Direito Constitucional",
+   "topic_text": "DIREITO CONSTITUCIONAL: 1. Do Direito Constitucional. 1.1 Natureza e conceito. 1.2 Objeto. 1.3 Conteúdo científico. 2. Dos Princípios Fundamentais. 2.1 Príncipios e normas. 2.2 Os princípios contitucionais positivos. 2.3 Conceito e conteúdo dos pricípios fundamentais. 2.4 Princípios fundamentais e princípios gerais do Direito Constitucional. 2.5 Função e relevância dos princípios fundamentais. 3. Dos Direitos e Deveres Individuais e Coletivos. 3.1 Fundamentos Constitucionais. 3.2 Do Direito à Vida e do Direito à Privacidade. 3.3 Do Direito da Liberdade: Liberdade de Pensamento. 4. Direitos Sociais. 4.1 Fundamentos Constitucionais dos Direitos Sociais. 5. Da Estrutura Básica da Federação. 5.1 Das entidades Componentes da Federação Brasileira. 5.2 Da Repartição de Competências. 6. Do Governo da União. 6.1 Da União como Entidade Federativa: Natureza da União. 6.2 Do Poder Judiciário: Jurisdição. 7. Dos Estados, Dos Municípios e do Distrito Federal. 7.1 Dos Municípios. 8. Da Administração Pública. 8.1 Estruturas Básicas da Administração Pública: Organização Administrativa. 8.2 Dos Princípios Constitucionais da Administração Pública. 8.3 Dos Servidores Públicos: Agentes Públicos; Servidores Públicos. 9. Bases Constitucionais das Instituições Financeiras. 9.1 Das Finanças Públicas e do Sistema Orçamentário 9.2 Da Fiscalização Contábil, Financeira e Orçamentária. 10 Lei Orgânica do Município, de 05/04/1990."
+  },
+  "CGE_DIR_DC": {
+   "edition": "CGE_DIR",
+   "block_name": "Conhecimentos Gerais",
+   "discipline": "Direito Constitucional",
+   "topic_text": "Constituição da República Federativa do Brasil. Princípios Fundamentais e Aplicabilidade das normas constitucionais. Normas de eficácia plena, contida e limitada. Normas programáticas. Direitos e garantias fundamentais: direitos e deveres individuais e coletivos, direitos sociais, direitos de nacionalidade, direitos políticos, partidos políticos. Organização político-administrativa do Estado: Estado federal brasileiro, União, estados, Distrito Federal, municípios e territórios. Administração Pública. Disposições gerais. Servidores públicos. Poder Executivo: atribuições e responsabilidades do presidente da República. Poder Legislativo: estrutura, funcionamento e atribuições, processo legislativo, fiscalização contábil, financeira e orçamentária, comissões parlamentares de inquérito. Poder Judiciário: disposições gerais, órgãos do poder judiciário e organização e competências, Conselho Nacional de Justiça. Funções essenciais à justiça: Ministério Público, Advocacia Pública, Defensoria Pública. Ordem Econômica e Financeira: princípios gerais da atividade econômica. Atividade econômica do Estado."
+  },
+  "CGE_DIR_DA": {
+   "edition": "CGE_DIR",
+   "block_name": "Conhecimentos Gerais",
+   "discipline": "Direito Administrativo",
+   "topic_text": "Estado, governo e administração pública. Conceitos. Direito administrativo. Conceito. Objeto. Fontes. Ato administrativo. Agentes públicos. Poderes da administração pública. Regime jurídico-administrativo. Princípios expressos e implícitos da administração pública. Responsabilidade civil do Estado. Serviços públicos. Regulação Estatal. Organização administrativa. Autarquias, fundações, empresas públicas e sociedades de economia mista. Agência Reguladoras. Entidades paraestatais e terceiro setor. Serviços sociais autônomos, entidades de apoio, organizações sociais, organizações da sociedade civil de interesse público. Processo Administrativo. Controle e responsabilização da administração: controle administrativo; controle judicial; controle legislativo. Improbidade Administrativa. Responsabilidade civil do Estado. Licitação e Contratos. Leis nos 8.666/1993, 10.520/2002 e 14.133/2021. Lei de Introdução às Normas do Direito Brasileiro (Decreto-Lei nº 4.657/1942 e suas alterações). Lei nº 13.303/2016. Decreto nº 1.007/2016. Lei nº 13.019/2014 e suas alterações. Lei nº 6.745/1985 (Estatuto dos Servidores do Estado de Santa Catarina) e suas alterações. Lei Complementar nº 741/2019 e suas alterações. Tratamento de dados pessoais pelo Poder Público: Capítulos II e IV da Lei nº 13.709/2018 e alterações (Lei Geral de Proteção de Dados Pessoais - LGPD). Transferências Voluntárias. Decreto nº 127/2011 e suas alterações (Convênios). Prestação de Contas. Tomada de Contas Especial - Decreto nº 1.886 de 02/12/2013 (e suas alterações). Decreto nº 650/2020 (Diárias). Decreto nº 1.322/2017 (Adiantamentos)."
+  },
+  "CGE_DIR_SANC": {
+   "edition": "CGE_DIR",
+   "block_name": "Conhecimentos Específicos – Área Direito",
+   "discipline": "Direito Administrativo Sancionador",
+   "topic_text": "DIREITO ADMINISTRATIVO SANCIONADOR: Lei de Introdução às Normas do Direito Brasileiro - LINDB (Decreto-Lei nº 4.657/1942). Decreto regulamentador dos arts. 20 a 30 da LINDB: Decreto nº 9.830/2019. Princípios constitucionais aplicáveis aos processos administrativo, civil e penal. Processo administrativo no âmbito da Administração Pública Federal (Lei nº 9.784/1999). Sistema Normativo Anticorrupção. Tratados internacionais. Convenção das Nações Unidas contra a Corrupção (Decreto nº 5.687/2006). Convenção das Nações Unidas contra o Crime Organizado Transnacional (Decreto nº 5.015/2004). Convenção sobre o Combate da Corrupção de Funcionários Públicos Estrangeiros em Transações Comerciais Internacionais (Decreto nº 3.678/2000). Convenção Interamericana contra a Corrupção (Decreto nº 4.410/2002). Lei Anticorrupção (Lei nº 12.846/2013) e decreto regulamentador (Decreto nº 1.106/2017). Lei do crime organizado (Lei nº 12.850/2013). Lei dos crimes de lavagem de dinheiro (Lei nº 9.613/1998). Lei de abuso de autoridade (Lei nº 13.869/2019). Lei de Improbidade Administrativa (Lei nº 8.429/1992 e Lei nº 14.230/2021)."
+  },
+  "ALEMA_CON_LIC": {
+   "edition": "ALEMA_CON",
+   "block_name": "Conhecimentos Específicos – Contador",
+   "discipline": "Contabilidade Pública (licitações e contratos)",
+   "topic_text": "Conhecimentos gerais sobre licitações em todas as suas modalidades e contratos administrativos. Administração geral de convênios, ajustes, acordos. Prestações de contas em geral."
+  }
+ },
+ "items": [
+  {
+   "id": "033378c3-3ced-4ee5-b2e4-64344da95c35",
+   "short": "033378c3",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 21,
+   "chave_banco": "C",
+   "chave_fgv_definitivo": "C",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Reintegração do servidor estável (CF, art. 41, §2º)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 41, §2º"
+    }
+   ],
+   "explanation": "Alternativa C. Quando a demissão do servidor estável é invalidada por sentença judicial, o art. 41, §2º, da CF manda reintegrá-lo; o eventual ocupante da vaga, se estável, é reconduzido ao cargo de origem, sem indenização, ou aproveitado em outro cargo ou posto em disponibilidade. A reversão é o retorno do aposentado; a recondução é o retorno ao cargo de origem; a readaptação é a mudança para cargo compatível com limitação sofrida; a disponibilidade é a inatividade remunerada do estável cujo cargo foi extinto ou declarado desnecessário. Exemplo: servidor demitido com provas nulas que vence a ação volta ao mesmo cargo, com direito aos efeitos funcionais da anulação.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "04722ed5-9df3-4989-884f-1c1bb7d41f06",
+   "short": "04722ed5",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Auditor de Controle Externo – Direito",
+   "ano": 2022,
+   "item": 27,
+   "chave_banco": "B",
+   "chave_fgv_definitivo": "B",
+   "chave_confere": true,
+   "edicao": "Auditor de Controle Externo – Direito",
+   "topico": "TCE_DIR_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Intervenção do Estado no Município por dívida fundada (CF, art. 35, I)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 35, I"
+    },
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm",
+     "fonte": "Lei 4.320/1964, art. 98"
+    }
+   ],
+   "explanation": "Alternativa B. O art. 35, I, da CF permite ao Estado intervir no Município que deixa de pagar, sem motivo de força maior, por dois anos consecutivos, a dívida fundada. Dívida fundada é a de exigibilidade superior a doze meses, contraída para equilibrar o orçamento ou financiar obras e serviços (Lei 4.320/1964, art. 98); financiamentos de obras por instituições financeiras governamentais se enquadram. Como o texto não menciona provimento de representação pelo Tribunal de Justiça (hipótese do inciso IV), a intervenção decorre de decreto do Governador, isto é, é espontânea. A e D erram ao chamar a dívida de flutuante (curto prazo). C e E erram ao exigir intervenção provocada. E ainda erra ao chamar a dívida de mobiliária.",
+   "residuos_de_importacao": [
+    "retação da intervenção provocada. Tipo 1 – Branca – Página 8"
+   ],
+   "observacao": null
+  },
+  {
+   "id": "0660c154-794d-4131-b6ea-1ea32967beb7",
+   "short": "0660c154",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 32,
+   "chave_banco": "D",
+   "chave_fgv_definitivo": "D",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DA",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Transferências voluntárias e arrecadação de impostos (LRF, arts. 11 e 25)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm",
+     "fonte": "LC 101/2000, arts. 11, parágrafo único, e 25"
+    },
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 156, II"
+    }
+   ],
+   "explanation": "Alternativa D. O art. 11 da LRF exige a instituição, previsão e efetiva arrecadação de todos os tributos da competência do ente, e o parágrafo único veda transferências voluntárias ao ente que não cumpra isso \"no que se refere aos impostos\". Só a situação 1 envolve imposto: o ITBI (CF, art. 156, II). Contribuição de melhoria (2) e taxa de lixo (3) não são impostos, logo não bloqueiam a transferência. A, B e C erram ao incluir tributos que não são impostos; E erra porque a autonomia política não afasta a exigência de arrecadação dos impostos. Exemplo: o Município que não institui o ITBI fica impedido de receber transferência voluntária, mesmo arrecadando bem os demais tributos.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "18b947a7-f674-419f-ade2-df123bd71a47",
+   "short": "18b947a7",
+   "concurso": "Controladoria Geral do Município do Rio de Janeiro",
+   "cargo": "Técnico de Controle Interno",
+   "ano": 2023,
+   "item": 29,
+   "chave_banco": "E",
+   "chave_fgv_definitivo": "E",
+   "chave_confere": true,
+   "edicao": "Técnico de Controle Interno",
+   "topico": "CGM_TCI_DAI",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Intervenção na concessão de serviço público (Lei 8.987/1995, arts. 32 a 34)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/leis/l8987cons.htm",
+     "fonte": "Lei 8.987/1995, arts. 32 a 34"
+    }
+   ],
+   "explanation": "Alternativa E. Pela Lei 8.987/1995, o poder concedente pode intervir na concessão para assegurar a adequação do serviço e o fiel cumprimento das normas (art. 32), por decreto que fixa interventor, prazo, objetivos e limites. Cessada a intervenção, se a concessão não for extinta, a administração do serviço volta à concessionária, precedida de prestação de contas pelo interventor (art. 34). A erra: a intervenção é possível antes do fim do prazo. B erra: a intervenção não se limita a análise contábil. C erra: o decreto deve fixar prazo, e o procedimento administrativo deve ser concluído em até 180 dias, sob pena de invalidade (art. 33, §2º). D erra: a ampla defesa é assegurada no procedimento instaurado em 30 dias após declarada a intervenção (art. 33), não antes dela.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "1933bff6-a104-4a4c-801a-0dbda4f9fa2d",
+   "short": "1933bff6",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 28,
+   "chave_banco": "B",
+   "chave_fgv_definitivo": "B",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DA",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Dado pessoal sensível e pesquisa (LGPD, arts. 5º, II, e 11, II, c)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+     "fonte": "Lei 13.709/2018, arts. 5º, II, e 11, II, c"
+    }
+   ],
+   "explanation": "Alternativa B. Filiação a organização de caráter político é dado pessoal sensível (LGPD, art. 5º, II). O tratamento de dado sensível sem consentimento é possível quando indispensável para a realização de estudos por órgão de pesquisa, garantida, sempre que possível, a anonimização (art. 11, II, c). A erra: ter fornecido o dado não dispensa base legal adequada ao novo fim. C e D erram: o dado não é anonimizado nem \"público\" por constar da base administrativa. E erra: o consentimento não é imprescindível, pois o art. 11, II, afasta essa exigência nas hipóteses que enumera. Exemplo: um órgão de pesquisa pode usar dados de filiação para estudo estatístico, preferindo a versão anonimizada.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "1a9f27c8-87b9-478a-a556-fce007319be0",
+   "short": "1a9f27c8",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Auditor de Controle Externo – Ciências Contábeis",
+   "ano": 2022,
+   "item": 24,
+   "chave_banco": "D",
+   "chave_fgv_definitivo": "D",
+   "chave_confere": true,
+   "edicao": "Auditor de Controle Externo – Ciências Contábeis",
+   "topico": "TCE_CONT_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Critérios especiais de tributação e concorrência (CF, art. 146-A)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 146-A"
+    }
+   ],
+   "explanation": "Alternativa D. O art. 146-A da CF diz que lei complementar poderá estabelecer critérios especiais de tributação para prevenir desequilíbrios da concorrência, sem prejuízo de a União, por lei, estabelecer normas de igual objetivo. A proposição da deputada é, portanto, compatível se veiculada em lei complementar, sem afastar a competência da União para legislar por lei ordinária no mesmo sentido. A e B erram ao negar a possibilidade do instrumento tributário com fim extrafiscal. C erra ao exigir lei ordinária de cada ente. E erra ao ver ofensa ao pacto federativo.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "2115e829-9c59-422e-9d84-f288f07c57c2",
+   "short": "2115e829",
+   "concurso": "Controladoria-Geral do Estado de Santa Catarina",
+   "cargo": "Auditor do Estado – Direito",
+   "ano": 2022,
+   "item": 44,
+   "chave_banco": "E",
+   "chave_fgv_definitivo": "E",
+   "chave_confere": true,
+   "edicao": "Auditor do Estado – Direito",
+   "topico": "CGE_DIR_DC",
+   "cobertura": "coberto_com_ressalva",
+   "status": "pronto",
+   "tested_topic": "Aposentadoria no regime próprio (CF, art. 40, §1º)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 40, §1º, II e III"
+    }
+   ],
+   "explanation": "Alternativa E. O art. 40, §1º, III, da CF (EC 103/2019) fixa, para a aposentadoria voluntária no regime próprio, 62 anos (mulher) e 65 anos (homem) no âmbito da União e, nos Estados, DF e Municípios, a idade mínima estabelecida por emenda às respectivas Constituições e Leis Orgânicas, observados tempo de contribuição e demais requisitos de lei complementar do ente. A erra porque a compulsória é aos 70 ou aos 75 anos, na forma de lei complementar (art. 40, §1º, II). B erra porque a aposentadoria por incapacidade permanente ocorre quando o servidor é insuscetível de readaptação. C e D reproduzem regras anteriores à EC 103/2019.",
+   "residuos_de_importacao": [],
+   "observacao": "O edital da CGE-SC não lista regimes previdenciários; o tópico \"Servidores públicos\" (Direito Constitucional) é o mais próximo. Decisão editorial: aceitar o vínculo ou manter fora."
+  },
+  {
+   "id": "26b6b175-8c12-4bc5-b2dd-2fdaa06a26ae",
+   "short": "26b6b175",
+   "concurso": "Controladoria Geral do Município do Rio de Janeiro",
+   "cargo": "Contador",
+   "ano": 2023,
+   "item": 24,
+   "chave_banco": "E",
+   "chave_fgv_definitivo": "E",
+   "chave_confere": true,
+   "edicao": "Contador",
+   "topico": "CGM_CON_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Readaptação do servidor (CF, art. 37, §13)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 37, §13"
+    }
+   ],
+   "explanation": "Alternativa E. O art. 37, §13, da CF (EC 103/2019) permite readaptar o servidor titular de cargo efetivo para cargo cujas atribuições e responsabilidades sejam compatíveis com a limitação sofrida na capacidade física ou mental, enquanto durar a condição, desde que possua a habilitação e o nível de escolaridade exigidos para o cargo de destino, mantida a remuneração do cargo de origem. A erra: reintegração decorre de invalidação judicial da demissão. B trata de aproveitamento, que não é o instituto. C erra: reversão é o retorno do aposentado. D erra: não se pode escolher qualquer cargo nem desprezar escolaridade e habilitação.",
+   "residuos_de_importacao": [
+    "exigidos para o cargo de destino. Tipo 1 ̶ Branca – Página 8"
+   ],
+   "observacao": null
+  },
+  {
+   "id": "39babbe1-3886-4b57-b944-7a1894c47488",
+   "short": "39babbe1",
+   "concurso": "Controladoria-Geral do Estado de Santa Catarina",
+   "cargo": "Auditor do Estado – Direito",
+   "ano": 2022,
+   "item": 39,
+   "chave_banco": "A",
+   "chave_fgv_definitivo": "A",
+   "chave_confere": true,
+   "edicao": "Auditor do Estado – Direito",
+   "topico": "CGE_DIR_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Cláusula de desempenho e mandato (CF, art. 17, §§ 3º e 5º)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 17, §§ 3º, 5º e 6º"
+    }
+   ],
+   "explanation": "Alternativa A. O art. 17, §5º, da CF (EC 97/2017) assegura o mandato ao eleito por partido que não atingiu a cláusula de desempenho do §3º e faculta a filiação a outro que a tenha atingido, sem perda do mandato; essa nova filiação não é considerada para distribuição do fundo partidário e do tempo gratuito de rádio e televisão. Não depende de anuência do partido nem de justa causa (B, C), nem o mandato proporcional pertence ao partido nessa hipótese (D); a cláusula de desempenho também não se limita ao funcionamento parlamentar (E). O §6º, incluído pela EC 111/2021, trata de outra situação: o desligamento voluntário comum, que gera perda do mandato salvo anuência ou justa causa.",
+   "residuos_de_importacao": [
+    " tendo relação com o mandato de João. Direito Administrativo"
+   ],
+   "observacao": null
+  },
+  {
+   "id": "3d17f139-aa84-4959-976d-43d810581666",
+   "short": "3d17f139",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 26,
+   "chave_banco": "E",
+   "chave_fgv_definitivo": "E",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Direito adquirido e benefício episódico (CF, art. 5º, XXXVI; LINDB, art. 6º, §2º)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 5º, XXXVI"
+    },
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+     "fonte": "Decreto-Lei 4.657/1942, art. 6º, §2º"
+    }
+   ],
+   "explanation": "Alternativa E. O servidor que preencheu os requisitos objetivos fixados pela lei para o benefício antes de sua revogação tem direito adquirido (CF, art. 5º, XXXVI; LINDB, art. 6º, §2º, que alcança quem pode exercer o direito ou cujo exercício tem termo ou condição já definidos), ainda que não o tenha exercido. A lei posterior que extingue o benefício não o retroage; o servidor pode requerê-lo dentro do prazo prescricional aplicável à Fazenda Pública. B trata Pedro como detentor de mera expectativa. C e D inventam exigências (contemporaneidade do pedido, previsão orçamentária) que não afastam o direito adquirido. A erra ao afirmar que o regime jurídico dos servidores é imutável: o que não pode ser suprimido é o direito já adquirido.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "4558e3ef-8dfa-4eaa-a856-346522a631fc",
+   "short": "4558e3ef",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Auditor de Controle Externo – Direito",
+   "ano": 2022,
+   "item": 28,
+   "chave_banco": "A",
+   "chave_fgv_definitivo": "A",
+   "chave_confere": true,
+   "edicao": "Auditor de Controle Externo – Direito",
+   "topico": "TCE_DIR_DA",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Vedação de novos regimes próprios (CF, art. 40, §22)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 40, §22"
+    }
+   ],
+   "explanation": "Alternativa A. Desde a EC 103/2019, o art. 40, §22, da CF veda a instituição de novos regimes próprios de previdência social, cabendo à lei complementar federal fixar normas gerais para os que já existem. Um Município sem regime próprio não pode criá-lo, seja por lei ordinária, lei orgânica ou lei complementar. B, C, D e E supõem uma permissão que o texto atual não contém. Exemplo: Município que contribui para o RGPS segue nele; o regime próprio só continua onde já existia.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "97f485d0-44bd-4d30-90c0-fc0c865d9741",
+   "short": "97f485d0",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 31,
+   "chave_banco": "B",
+   "chave_fgv_definitivo": "B",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Emendas ao orçamento e anulação de despesas (CF, art. 166, §3º, II)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 166, §3º, II"
+    }
+   ],
+   "explanation": "Alternativa B. O art. 166, §3º, II, da CF admite emendas ao orçamento que indiquem recursos provenientes de anulação de despesa, excluídas as que incidam sobre dotações para pessoal e seus encargos, serviço da dívida e transferências tributárias constitucionais. Transferências voluntárias aos Municípios não integram essas vedações e podem ser anuladas. A (contribuição previdenciária) e C (benefícios dos servidores) integram pessoal e encargos; D (juros) integra o serviço da dívida; E é transferência tributária constitucional.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "aabd1019-7669-4b8c-8763-1501a2ea550c",
+   "short": "aabd1019",
+   "concurso": "Controladoria-Geral do Estado de Santa Catarina",
+   "cargo": "Auditor do Estado – Direito",
+   "ano": 2022,
+   "item": 43,
+   "chave_banco": "A",
+   "chave_fgv_definitivo": "A",
+   "chave_confere": true,
+   "edicao": "Auditor do Estado – Direito",
+   "topico": "CGE_DIR_SANC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Segurança jurídica e caráter vinculante de respostas a consultas (LINDB, art. 30)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm",
+     "fonte": "Decreto-Lei 4.657/1942, arts. 24, 27, 29 e 30"
+    }
+   ],
+   "explanation": "Alternativa A. O art. 30 da LINDB impõe às autoridades atuarem para aumentar a segurança jurídica, inclusive por regulamentos, súmulas administrativas e respostas a consultas, e o parágrafo único dá a esses instrumentos caráter vinculante em relação ao órgão ou entidade a que se destinam, até ulterior revisão. B erra ao falar em mera recomendação. C erra: o art. 27 admite compensação por benefícios indevidos ou prejuízos anormais. D erra: o art. 29 diz que atos normativos, salvo os de mera organização interna, poderão ser precedidos de consulta pública. E erra: o art. 24 manda considerar as orientações gerais da época e veda declarar inválidas situações plenamente constituídas por mudança posterior.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "ae444cda-d6ae-43e3-9bb3-20a791a3c958",
+   "short": "ae444cda",
+   "concurso": "Controladoria Geral do Município do Rio de Janeiro",
+   "cargo": "Técnico de Controle Interno",
+   "ano": 2023,
+   "item": 47,
+   "chave_banco": "B",
+   "chave_fgv_definitivo": "B",
+   "chave_confere": true,
+   "edicao": "Técnico de Controle Interno",
+   "topico": "CGM_TCI_DAII",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Classificação de informações sigilosas (LAI, arts. 23 e 24)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm",
+     "fonte": "Lei 12.527/2011, arts. 23 e 24"
+    }
+   ],
+   "explanation": "Alternativa B. A LAI permite classificar como ultrassecreta, secreta ou reservada a informação cuja divulgação cause risco à segurança da sociedade ou do Estado (art. 24), com prazos máximos de 25, 15 e 5 anos (art. 24, §1º). A erra: o art. 23, III, inclui entre as hipóteses o risco à vida, segurança ou saúde da população. C erra: o termo final por evento deve ocorrer antes do prazo máximo (§3º). D erra: decorrido o prazo ou consumado o evento, a informação torna-se pública automaticamente (§4º). E erra: projetos de pesquisa e desenvolvimento científico ou tecnológico de interesse estratégico são hipótese de classificação (art. 23, VI), não objeto de acesso garantido.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "b0a7e713-cba2-4189-87cd-068f8b9deedb",
+   "short": "b0a7e713",
+   "concurso": "Controladoria Geral do Município do Rio de Janeiro",
+   "cargo": "Técnico de Controle Interno",
+   "ano": 2023,
+   "item": 30,
+   "chave_banco": "A",
+   "chave_fgv_definitivo": "A",
+   "chave_confere": true,
+   "edicao": "Técnico de Controle Interno",
+   "topico": "CGM_TCI_DAII",
+   "cobertura": "coberto",
+   "status": "pronto_com_pendencia",
+   "tested_topic": "Improbidade: sanções e requisitos (Lei 8.429/1992, arts. 10, 12 e 23)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+     "fonte": "Lei 8.429/1992, arts. 10, 12, II, e 23"
+    }
+   ],
+   "explanation": "Alternativa A. Pela Lei 8.429/1992 (redação da Lei 14.230/2021), o ato que causa lesão ao erário, inclusive por apropriação de bens (art. 10), sujeita o responsável à suspensão dos direitos políticos até 12 anos, além de perda de bens, da função e multa (art. 12, II). B erra: o art. 10 exige ação ou omissão dolosa, e a modalidade culposa foi extinta. C erra: a ação prescreve em 8 anos, contados do fato ou do fim da permanência (art. 23). As alternativas D e E tratam de indisponibilidade de bens e legitimidade para acordo de não persecução cível, temas em que a jurisprudência do STF deve ser conferida (ADI 7042 e ADI 7043) antes da liberação.",
+   "residuos_de_importacao": [],
+   "observacao": "Chave A e comentário A/B/C conferem com a Lei 8.429/1992 (Lei 14.230/2021). Alternativas D e E dependem de jurisprudência do STF (ADI 7042/7043) ainda não conferida no site do tribunal; publicar só após essa conferência."
+  },
+  {
+   "id": "c89b2e81-6cdf-4164-8476-3bc62393b18a",
+   "short": "c89b2e81",
+   "concurso": "Assembleia Legislativa do Estado do Maranhão",
+   "cargo": "Técnico de Gestão Administrativa – Contador",
+   "ano": 2023,
+   "item": 45,
+   "chave_banco": "C",
+   "chave_fgv_definitivo": "C",
+   "chave_confere": true,
+   "edicao": "Técnico de Gestão Administrativa – Contador",
+   "topico": "ALEMA_CON_LIC",
+   "cobertura": "coberto_com_ressalva",
+   "status": "pronto",
+   "tested_topic": "Edital de leilão (Lei 14.133/2021, art. 31, §2º)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+     "fonte": "Lei 14.133/2021, art. 31, §2º"
+    }
+   ],
+   "explanation": "Alternativa C. O art. 31, §2º, da Lei 14.133/2021 manda que o leilão seja precedido de edital em sítio eletrônico oficial contendo: descrição do bem (com matrícula e registros, se imóvel); valor da avaliação, preço mínimo, condições de pagamento e comissão do leiloeiro; lugar onde estão móveis, veículos e semoventes; sítio da internet e período do leilão; e ônus, gravames ou pendências sobre os bens. A lei não exige a indicação dos antigos proprietários nem do motivo do leilão, por isso C é a exceção pedida.",
+   "residuos_de_importacao": [],
+   "observacao": "O edital ALEMA do Contador diz \"licitações em todas as suas modalidades e contratos administrativos\", sem citar a Lei 14.133; vínculo aceito por abranger o leilão como modalidade."
+  },
+  {
+   "id": "d097fd39-beba-4299-ba14-cc06e19ea410",
+   "short": "d097fd39",
+   "concurso": "Tribunal de Contas do Estado do Tocantins",
+   "cargo": "Analista Técnico – Letras",
+   "ano": 2022,
+   "item": 34,
+   "chave_banco": "E",
+   "chave_fgv_definitivo": "E",
+   "chave_confere": true,
+   "edicao": "Analista Técnico – Letras",
+   "topico": "TCE_LETRAS_DC",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Estatuto da Magistratura (CF, art. 93, caput)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+     "fonte": "CF/1988, art. 93, caput"
+    }
+   ],
+   "explanation": "Alternativa E. O art. 93, caput, da CF reserva ao Estatuto da Magistratura lei complementar de iniciativa do Supremo Tribunal Federal; o Tribunal de Justiça estadual não tem iniciativa para propor Estatuto próprio, e a Constituição apenas prevê a existência desse estatuto nacional. A proposição do TJ do Estado Alfa é, portanto, formalmente inconstitucional. A afirma o contrário com base na forma federativa. B e D indicam formas inadequadas (emenda constitucional e projeto de lei complementar do TJ). C erra ao dizer que a matéria é exclusivamente constitucional, quando a CF a reserva à lei complementar.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  },
+  {
+   "id": "da0d6c9d-41e1-4015-a75d-1018ccf2f01f",
+   "short": "da0d6c9d",
+   "concurso": "Controladoria Geral do Município do Rio de Janeiro",
+   "cargo": "Técnico de Controle Interno",
+   "ano": 2023,
+   "item": 25,
+   "chave_banco": "C",
+   "chave_fgv_definitivo": "C",
+   "chave_confere": true,
+   "edicao": null,
+   "topico": null,
+   "cobertura": "fora_do_edital",
+   "status": "bloqueado",
+   "tested_topic": "Responsabilidade do operador (LGPD, art. 42)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+     "fonte": "Lei 13.709/2018, arts. 42 e 43"
+    }
+   ],
+   "explanation": null,
+   "residuos_de_importacao": [],
+   "observacao": "Enunciado e chave conferem com LGPD arts. 42 e 43 e com o gabarito definitivo, mas o edital CGM-Rio limita o tópico a \"Capítulos II e IV da Lei nº 13.709/2018\"; o art. 42 está no Capítulo VI. Sem tópico do edital que o abranja, o publicador deve continuar bloqueando; não há vínculo honesto a cadastrar."
+  },
+  {
+   "id": "e57176bb-9fc1-40d2-b6c3-3ae6aa609ded",
+   "short": "e57176bb",
+   "concurso": "Controladoria-Geral do Estado de Santa Catarina",
+   "cargo": "Auditor do Estado – Direito",
+   "ano": 2022,
+   "item": 45,
+   "chave_banco": "D",
+   "chave_fgv_definitivo": "D",
+   "chave_confere": true,
+   "edicao": "Auditor do Estado – Direito",
+   "topico": "CGE_DIR_DA",
+   "cobertura": "coberto",
+   "status": "pronto",
+   "tested_topic": "Bases legais do tratamento de dados (LGPD, art. 7º, VIII)",
+   "legal_basis": [
+    {
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm",
+     "fonte": "Lei 13.709/2018, art. 7º, VIII"
+    }
+   ],
+   "explanation": "Alternativa D, que é a exceção pedida. O art. 7º, VIII, da LGPD autoriza o tratamento de dados para a tutela da saúde exclusivamente em procedimento realizado por profissionais de saúde, serviços de saúde ou autoridade sanitária; a alternativa amplia a hipótese (\"em sentido amplo\"), o que a lei não permite. As demais reproduzem hipóteses do art. 7º: proteção da vida ou da incolumidade física (VII), obrigação legal ou regulatória (II), estudos por órgão de pesquisa com anonimização sempre que possível (IV) e execução de contrato (V). A redação da alternativa D no caderno oficial contém a expressão \"sem exclusivamente\", mantida como publicada.",
+   "residuos_de_importacao": [],
+   "observacao": null
+  }
+ ]
+}

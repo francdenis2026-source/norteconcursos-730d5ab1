@@ -2,7 +2,7 @@
 import asyncio, base64, json, time
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse, parse_qs
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, expect
 UID='00000000-0000-4000-8000-000000000123'
 user={'id':UID,'aud':'authenticated','role':'authenticated','email':'metric-test@example.invalid','user_metadata':{'full_name':'ALUNO DE TESTE'},'created_at':'2026-01-01T00:00:00Z'}
 def enc(value):return base64.urlsafe_b64encode(json.dumps(value).encode()).decode().rstrip('=')
@@ -65,7 +65,7 @@ async def main():
      assert await panel.evaluate('(e)=>e.scrollWidth<=e.clientWidth')
      if w==390:await panel.screenshot(path=f'/tmp/metric-{theme}-{metric}.png')
      await page.keyboard.press('Escape');await panel.wait_for(state='detached')
-     assert await button.evaluate('(e)=>e===document.activeElement')
+     await expect(button).to_be_focused()
     results.append({'theme':theme,'viewport':[w,h],'four_scoped_panels':True})
   for state in ['empty','error']:
    mode['value']=state;await page.reload(wait_until='domcontentloaded')
