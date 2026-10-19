@@ -2759,3 +2759,42 @@
 @media (min-width: 601px) and (max-width: 900px) {
   .home-rail__track.home-opportunities { grid-auto-columns: 86%; gap: 16px; }
 }
+
+
+/* Static, first-party QR with an untouched white quiet zone in both themes. */
+.home-platform-qr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 276px;
+  padding: 8px;
+  border: 1px solid var(--home-line);
+  border-radius: 12px;
+  color: var(--home-text);
+  text-decoration: none;
+  background: var(--home-surface);
+}
+.home-platform-qr img {
+  display: block;
+  width: 112px;
+  height: 112px;
+  flex: none;
+  border-radius: 6px;
+  background: #fff;
+}
+.home-platform-qr > span { display: grid; gap: 5px; min-width: 0; }
+.home-platform-qr strong { font-size: 13px; line-height: 1.4; }
+.home-platform-qr span > span { color: var(--home-muted); font-size: 12px; line-height: 1.5; }
+.home-platform-qr small { display: flex; align-items: center; gap: 3px; color: var(--home-muted); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.home-platform-qr small svg { width: 13px; height: 13px; flex: none; color: var(--home-gold); }
+.home-platform-qr:focus-visible { outline: 2px solid var(--home-gold); outline-offset: 4px; }
+@media (max-width: 1100px) {
+  .home-footer__grid { flex-wrap: wrap; }
+  .home-platform-qr { flex-basis: 276px; }
+}
+@media (max-width: 600px) {
+  .home-platform-qr { flex: 1 0 100%; margin-top: 16px; box-sizing: border-box; }
+  .home-platform-qr strong { font-size: 14px; }
+  .home-platform-qr span > span { font-size: 13px; }
+  .home-platform-qr small { font-size: 12px; }
+}

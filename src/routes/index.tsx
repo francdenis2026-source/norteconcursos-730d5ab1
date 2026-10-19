@@ -633,6 +633,24 @@ function Index() {
                 ["Criar conta", "/auth?mode=register"],
               ]}
             />
+            <a
+              className="home-platform-qr"
+              href="https://norteconcursos.xyz/"
+              aria-label="Abrir a plataforma Norte Concurso. Aponte a câmera do celular para o QR Code."
+            >
+              <img
+                src="/media/brand/platform-qr.svg"
+                width={112}
+                height={112}
+                loading="lazy"
+                alt="QR Code para https://norteconcursos.xyz/"
+              />
+              <span>
+                <strong>Continue no celular</strong>
+                <span>Aponte a câmera e acesse a plataforma.</span>
+                <small>norteconcursos.xyz <ArrowUpRight aria-hidden="true" /></small>
+              </span>
+            </a>
           </div>
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
