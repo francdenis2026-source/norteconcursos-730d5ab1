@@ -10655,32 +10655,6 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
-/* Daily challenge: a useful introduction instead of an empty mobile canvas. */
-.daily-intro__guide { display:grid; grid-template-columns:1fr 1fr; margin-top:16px; border:1px solid var(--border); border-radius:18px; overflow:hidden; background:var(--card); color:var(--foreground); }
-.daily-intro__visual { position:relative; min-width:0; margin:0; background:var(--ink-deep); }
-.daily-intro__visual img { display:block; width:100%; height:100%; object-fit:cover; }
-.daily-intro__visual figcaption { position:absolute; inset:auto 0 0; padding:32px 20px 18px; background:linear-gradient(transparent, rgb(8 15 28 / .95)); color:#fff; font-size:.9rem; font-weight:650; }
-.daily-intro__steps { padding:24px; }
-.daily-intro__steps h2 { font-size:1.15rem; font-weight:800; }
-.daily-intro__steps ol { display:grid; gap:16px; margin:20px 0; list-style:none; }
-.daily-intro__steps li { display:flex; gap:12px; }
-.daily-intro__steps li > b { display:grid; place-items:center; align-self:flex-start; flex:none; width:32px; height:32px; border-radius:10px; background:var(--muted); color:var(--foreground); font-size:.7rem; }
-.daily-intro__steps strong { font-size:.875rem; }
-.daily-intro__steps p { margin-top:3px; color:var(--muted-foreground); font-size:.8rem; line-height:1.5; }
-@media(max-width:767px) {
-  .daily-intro__hero .page-hero__stats { grid-template-columns:repeat(3,minmax(0,1fr)); }
-  .daily-intro__hero .page-hero__desc { display:block; overflow:visible; -webkit-line-clamp:unset; }
-  .daily-intro__hero .page-hero__actions { width:100%; }
-  .daily-intro__hero .page-hero__actions .btn-brass { width:100%; justify-content:center; min-height:44px; }
-  .daily-intro__guide { grid-template-columns:1fr; margin-top:12px; border-radius:14px; }
-  .daily-intro__visual { height:150px; }
-  .daily-intro__visual img { object-position:center 45%; }
-  .daily-intro__visual figcaption { padding:28px 16px 12px; font-size:.82rem; }
-  .daily-intro__steps { padding:16px; }
-  .daily-intro__steps ol { gap:12px; margin:14px 0; }
-  .daily-intro__steps .btn-brass { width:100%; justify-content:center; min-height:44px; }
-}
-
 /* Student workspace mobile pass: readable type, calmer cards and colored icons
    in the light theme. */
 @media (max-width: 767px) {

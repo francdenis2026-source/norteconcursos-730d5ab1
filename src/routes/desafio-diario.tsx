@@ -1,3 +1,4 @@
+import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
   dailyGuestQuestions,
@@ -20,7 +21,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
+import { PageHero } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -180,23 +181,20 @@ function DesafioDiario() {
   };
 
   return (
-    <div className="min-h-[100svh] bg-background">
-      <header className="sticky top-0 z-30 border-b border-white/10 bg-[oklch(0.12_0.025_263/0.92)] pt-[env(safe-area-inset-top)] backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
+    <div className="daily-page min-h-[100svh] bg-background">
+      <header className="daily-header sticky top-0 z-30 pt-[env(safe-area-inset-top)]">
+        <div className="daily-container flex min-h-18 items-center justify-between gap-3">
           <Link to="/" aria-label="Norte Concurso — início">
-            <NorteBrand light />
+            <NorteBrand />
           </Link>
           <div className="flex items-center gap-2">
-            <Link
-              to="/"
-              className="app-top-btn !w-auto gap-1.5 px-3 text-sm font-semibold text-white/75 hover:!bg-white/10 hover:!text-white"
-            >
+            <Link to="/" className="daily-home-link">
               <ArrowLeft className="h-4 w-4" /> Início
             </Link>
             <Link
               to="/auth"
               search={{ mode: "register" }}
-              className="btn-brass !h-9 !px-4 !text-sm"
+              className="btn-brass !min-h-11 !px-4 !text-sm"
             >
               Criar conta
             </Link>
@@ -204,7 +202,7 @@ function DesafioDiario() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-3 py-6 sm:px-4 sm:py-10">
+      <main className="daily-container daily-main">
         {step === "loading" && (
           <Center>
             <Loader2 className="h-8 w-8 animate-spin text-brass" />
@@ -246,7 +244,7 @@ function DesafioDiario() {
                 Você já respondeu <em>hoje.</em>
               </>
             }
-            description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo amanhã, ou crie uma conta para treinar sem limite agora mesmo.`}
+            description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo à meia-noite do Acre. Crie uma conta para conhecer os planos e continuar sua preparação.`}
             actions={
               <>
                 <Link
@@ -269,87 +267,104 @@ function DesafioDiario() {
         )}
 
         {step === "intro" && (
-          <div className="daily-intro">
-            <PageHero
-              className="daily-intro__hero"
-              image="trainer"
-              size="lg"
-              kicker="Sem cadastro · grátis"
-              icon={Zap}
-              title={
-                <>
-                  Desafio diário <em>Norte Concurso</em>
-                </>
-              }
-              description={`${questions.length} questões de certo ou errado de segurança pública disponíveis para você hoje, com explicação após cada resposta. A rodada é compartilhada entre os visitantes e renova à meia-noite do Acre.`}
-              actions={
-                <button type="button" className="btn-brass" onClick={startChallenge}>
-                  Começar agora <ArrowRight />
-                </button>
-              }
-            >
-              <div className="page-hero__stats max-w-xl">
-                <HeroStat icon={Zap} label="Questões" value={questions.length} />
-                <HeroStat icon={ShieldCheck} label="Gabarito" value="Oficial" />
-                <HeroStat
-                  icon={Sparkles}
-                  label="Disciplinas"
-                  value={new Set(questions.map((q) => q.subject)).size}
-                />
+          <div className="daily-overview">
+            <div className="daily-heading">
+              <div>
+                <span className="daily-eyebrow">SUA PREPARAÇÃO, TODOS OS DIAS</span>
+                <h1>Desafio diário</h1>
               </div>
-            </PageHero>
-            <p
-              className="flex flex-wrap gap-2 text-sm text-muted-foreground"
-              aria-label="Formato do desafio"
-            >
-              <Badge variant="outline">Cebraspe / Cespe · Certo ou errado</Badge>
-              <Badge variant="outline">Segurança pública</Badge>
-              <span>Confira a explicação após confirmar a resposta.</span>
-            </p>
-            <section className="daily-intro__guide" aria-labelledby="daily-guide-title">
-              <figure className="daily-intro__visual">
+              <p>
+                Segurança pública <span aria-hidden="true">/</span> Cebraspe e Cespe
+              </p>
+            </div>
+            <div className="daily-intro-grid">
+              <section className="daily-cover" aria-labelledby="daily-cover-title">
                 <img
-                  src="/media/hero/study-desk.webp"
-                  alt="Ambiente de estudo e preparação para concursos"
-                  width={960}
-                  height={540}
+                  src="/media/hero/trainer.webp"
+                  alt=""
+                  width={1536}
+                  height={1024}
+                  fetchPriority="high"
                 />
-                <figcaption>Um treino por dia. Mais direção para sua preparação.</figcaption>
-              </figure>
-              <div className="daily-intro__steps">
-                <h2 id="daily-guide-title">Seu treino em três passos</h2>
-                <ol>
-                  <li>
-                    <b>01</b>
-                    <div>
-                      <strong>Resolva no seu ritmo</strong>
-                      <p>Leia o enunciado e marque Certo ou Errado.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <b>02</b>
-                    <div>
-                      <strong>Entenda a resposta</strong>
-                      <p>Confira o gabarito e a explicação após responder.</p>
-                    </div>
-                  </li>
-                  <li>
-                    <b>03</b>
-                    <div>
-                      <strong>Veja seu resultado</strong>
-                      <p>Ao concluir, acompanhe seus acertos e pontos de revisão.</p>
-                    </div>
-                  </li>
-                </ol>
-                <button type="button" className="btn-brass" onClick={startChallenge}>
-                  Iniciar meu desafio <ArrowRight />
-                </button>
-              </div>
+                <div className="daily-cover__content">
+                  <span className="daily-cover__badge">
+                    <Zap size={14} /> GRÁTIS · SEM CADASTRO
+                  </span>
+                  <h2 id="daily-cover-title">
+                    Um desafio hoje.
+                    <br />
+                    <em>Mais preparo amanhã.</em>
+                  </h2>
+                  <p>
+                    Questões de concursos de segurança pública para testar seus conhecimentos e
+                    aprender com cada resposta.
+                  </p>
+                  <button type="button" className="btn-brass" onClick={startChallenge}>
+                    Começar meu desafio <ArrowRight size={18} />
+                  </button>
+                  <span className="daily-cover__note">
+                    <ShieldCheck size={16} /> Gabarito oficial e explicação após responder
+                  </span>
+                </div>
+              </section>
+              <aside className="daily-round" aria-labelledby="daily-round-title">
+                <div className="daily-round__heading">
+                  <span className="daily-eyebrow">SUA RODADA</span>
+                  <span className="daily-round__tag">Disponível hoje</span>
+                </div>
+                <h2 id="daily-round-title">Pronto para começar?</h2>
+                <div className="daily-metrics">
+                  <div>
+                    <strong>{questions.length.toString().padStart(2, "0")}</strong>
+                    <span>questões disponíveis</span>
+                  </div>
+                  <div>
+                    <strong>
+                      {new Set(questions.map((q) => q.subject)).size.toString().padStart(2, "0")}
+                    </strong>
+                    <span>disciplinas</span>
+                  </div>
+                </div>
+                <h3>Neste desafio</h3>
+                <ul className="daily-subjects">
+                  {Array.from(new Set(questions.map((q) => q.subject))).map((subject) => (
+                    <li key={subject}>
+                      <BookOpenCheck size={15} />
+                      <span>{subject}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="daily-round__renewal">
+                  <Sparkles size={18} />
+                  <p>
+                    <strong>Uma nova rodada a cada dia</strong>
+                    <span>
+                      Renova à meia-noite do Acre. Até {GUEST_DAILY_LIMIT} respostas grátis por dia
+                      neste aparelho.
+                    </span>
+                  </p>
+                </div>
+              </aside>
+            </div>
+            <section className="daily-method" aria-label="Como funciona o desafio">
+              {[
+                ["01", "Resolva no seu ritmo", "Leia o enunciado e escolha Certo ou Errado."],
+                ["02", "Aprenda com a resposta", "Confirme sua escolha para ver a explicação."],
+                ["03", "Acompanhe seu resultado", "Veja seus acertos e o que precisa revisar."],
+              ].map(([number, title, description]) => (
+                <div key={number}>
+                  <span>{number}</span>
+                  <div>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                  </div>
+                </div>
+              ))}
             </section>
           </div>
         )}
 
-        <div className="mx-auto max-w-3xl">
+        <div className={step === "done" ? "daily-result" : "daily-workspace"}>
           {step === "done" && (
             <TrainingResult total={correct + wrong} correct={correct} wrong={wrong} />
           )}
@@ -418,142 +433,163 @@ function QuestionPlayer({
   const explanation = splitExplanation(question.explanation);
   const isCorrect = selected === question.answer;
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <Badge variant="secondary">Desafio de segurança pública</Badge>
-        <Badge variant="outline">{remaining} restantes hoje</Badge>
-      </div>
-      <div className="rounded-xl border bg-card px-4 py-3">
-        <div className="mb-2 flex flex-wrap items-center justify-between gap-2 text-xs">
-          <span className="font-bold">
-            Questão {index + 1} de {total}
-          </span>
-          <span className="text-muted-foreground">
-            {correct} certas · {wrong} erradas
-          </span>
+    <div className="daily-player">
+      <aside className="daily-session" aria-label="Progresso do desafio">
+        <span className="daily-eyebrow">DESAFIO DIÁRIO</span>
+        <h1>Seu treino de hoje</h1>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <Badge variant="secondary">Desafio de segurança pública</Badge>
+          <Badge variant="outline">{remaining} restantes hoje</Badge>
         </div>
-        <Progress value={((index + (answered ? 1 : 0)) / total) * 100} className="h-1.5" />
-      </div>
-      <Card className="overflow-hidden">
-        <CardContent className="p-5 md:p-7">
-          <div className="mb-5 flex flex-wrap gap-2">
-            <Badge>{question.board}</Badge>
-            <Badge variant="outline">Certo ou errado</Badge>
-            <Badge variant="outline">{question.subject}</Badge>
-            <Badge variant="outline">
-              {question.contest} · {question.year}
-            </Badge>
-            <Badge variant="outline">{question.career}</Badge>
+        <div className="rounded-xl border bg-card px-4 py-3">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <span className="font-bold">
+              Questão {index + 1} de {total}
+            </span>
+            <span className="text-muted-foreground">
+              {Math.round(((index + (answered ? 1 : 0)) / total) * 100)}% da rodada
+            </span>
           </div>
-          {parsed.base && (
-            <details open className="mb-4 rounded-xl border bg-muted/40">
-              <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">
-                {parsed.baseLabel}
-              </summary>
-              <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7">
-                {parsed.base}
-              </div>
-            </details>
-          )}
-          <p className="whitespace-pre-line text-base font-medium leading-7 md:text-lg">
-            {parsed.stem}
-          </p>
-          <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
-          <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
-            Julgue o item
-          </p>
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            {(["C", "E"] as const).map((answer) => (
-              <button
-                key={answer}
-                type="button"
-                aria-pressed={selected === answer}
-                disabled={answered}
-                onClick={() => onSelect(answer)}
-                className={cn(
-                  "min-h-16 rounded-xl border-2 px-4 font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary",
-                  selected === answer && !answered
-                    ? "border-blue-600 bg-blue-600 text-white"
-                    : "border-border bg-background",
-                  answered &&
-                    answer === question.answer &&
-                    "border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200",
-                  answered &&
-                    selected === answer &&
-                    !isCorrect &&
-                    "border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
-                )}
-              >
-                {answer === "C" ? "Certo" : "Errado"}
-              </button>
-            ))}
-          </div>
-          {!answered && (
-            <div className="mt-6 flex justify-end">
-              <Button size="lg" disabled={!selected} onClick={onSubmit}>
-                Confirmar resposta <Check className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-      {answered && (
-        <section
-          aria-label="Explicação da resposta"
-          aria-live="polite"
-          className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
-        >
-          <div className="flex items-center gap-3">
-            {isCorrect ? (
-              <CheckCircle2 className="h-6 w-6 text-emerald-600" />
-            ) : (
-              <XCircle className="h-6 w-6 text-rose-600" />
-            )}
-            <div>
-              <h2 className="text-lg font-bold">
-                {isCorrect ? "Resposta correta" : "Vamos revisar este ponto"}
-              </h2>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Gabarito oficial:{" "}
-                <strong className="text-foreground">
-                  {question.answer === "C" ? "Certo" : "Errado"}
-                </strong>
-              </p>
-            </div>
+          <Progress value={((index + (answered ? 1 : 0)) / total) * 100} className="h-1.5" />
+        </div>
+        <div className="daily-session__scores">
+          <div>
+            <strong>{correct}</strong>
+            <span>Certas hoje</span>
           </div>
           <div>
-            <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
-            <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
+            <strong>{wrong}</strong>
+            <span>Erradas hoje</span>
           </div>
-          {explanation.example && (
-            <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
-              <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
-              <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+        </div>
+        <p className="daily-session__tip">
+          <BookOpenCheck size={18} /> Leia com atenção. A explicação aparece depois de confirmar sua
+          resposta.
+        </p>
+        <p className="daily-session__renewal">Nova rodada à meia-noite do Acre.</p>
+      </aside>
+      <div className="daily-question-column">
+        <Card className="daily-question-card overflow-hidden">
+          <CardContent className="p-5 md:p-7">
+            <div className="mb-5 flex flex-wrap gap-2">
+              <Badge>{question.board}</Badge>
+              <Badge variant="outline">Certo ou errado</Badge>
+              <Badge variant="outline">{question.subject}</Badge>
+              <Badge variant="outline">
+                {question.contest} · {question.year}
+              </Badge>
+              <Badge variant="outline">{question.career}</Badge>
             </div>
-          )}
-          {question.legalBasis.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {question.legalBasis.map((basis, i) => (
-                <a
-                  key={i}
-                  href={basisHref(basis)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg border px-3 py-2 text-xs underline"
+            {parsed.base && (
+              <details open className="mb-4 rounded-xl border bg-muted/40">
+                <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">
+                  {parsed.baseLabel}
+                </summary>
+                <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7">
+                  {parsed.base}
+                </div>
+              </details>
+            )}
+            <p className="whitespace-pre-line text-base font-medium leading-7 md:text-lg">
+              {parsed.stem}
+            </p>
+            <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+            <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+              Julgue o item
+            </p>
+            <div className="mt-3 grid grid-cols-2 gap-3">
+              {(["C", "E"] as const).map((answer) => (
+                <button
+                  key={answer}
+                  type="button"
+                  aria-pressed={selected === answer}
+                  disabled={answered}
+                  onClick={() => onSelect(answer)}
+                  className={cn(
+                    "daily-answer min-h-16 rounded-xl border-2 px-4 font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary",
+                    selected === answer && !answered
+                      ? "daily-answer-selected"
+                      : "border-border bg-background",
+                    answered &&
+                      answer === question.answer &&
+                      "border-emerald-500 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200",
+                    answered &&
+                      selected === answer &&
+                      !isCorrect &&
+                      "border-rose-500 bg-rose-50 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200",
+                  )}
                 >
-                  {basis.title || basis.lei || "Consultar fonte oficial"}
-                </a>
+                  {answer === "C" ? "Certo" : "Errado"}
+                </button>
               ))}
             </div>
-          )}
-          <div className="flex justify-end">
-            <Button size="lg" onClick={onNext}>
-              {isLast ? "Ver resultado" : "Próxima questão"}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </section>
-      )}
+            {!answered && (
+              <div className="mt-6 flex justify-end">
+                <Button size="lg" disabled={!selected} onClick={onSubmit}>
+                  Confirmar resposta <Check className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+        {answered && (
+          <section
+            aria-label="Explicação da resposta"
+            aria-live="polite"
+            className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
+          >
+            <div className="flex items-center gap-3">
+              {isCorrect ? (
+                <CheckCircle2 className="h-6 w-6 text-emerald-600" />
+              ) : (
+                <XCircle className="h-6 w-6 text-rose-600" />
+              )}
+              <div>
+                <h2 className="text-lg font-bold">
+                  {isCorrect ? "Resposta correta" : "Vamos revisar este ponto"}
+                </h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Gabarito oficial:{" "}
+                  <strong className="text-foreground">
+                    {question.answer === "C" ? "Certo" : "Errado"}
+                  </strong>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
+              <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
+            </div>
+            {explanation.example && (
+              <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+                <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
+                <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+              </div>
+            )}
+            {question.legalBasis.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {question.legalBasis.map((basis, i) => (
+                  <a
+                    key={i}
+                    href={basisHref(basis)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg border px-3 py-2 text-xs underline"
+                  >
+                    {basis.title || basis.lei || "Consultar fonte oficial"}
+                  </a>
+                ))}
+              </div>
+            )}
+            <div className="flex justify-end">
+              <Button size="lg" onClick={onNext}>
+                {isLast ? "Ver resultado" : "Próxima questão"}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </section>
+        )}
+      </div>
     </div>
   );
 }
@@ -586,8 +622,8 @@ function TrainingResult({
         <Progress value={accuracy} />
         <div className="space-y-3">
           <p className="text-sm text-muted-foreground">
-            Foi seu desafio diário grátis. Crie uma conta pra treinar sem limite e desbloquear o
-            acervo autoral completo.
+            Foi seu desafio diário grátis. Crie uma conta para conhecer os planos e continuar sua
+            preparação com o acervo da plataforma.
           </p>
           <div className="flex flex-col gap-2 sm:flex-row">
             <Button className="flex-1" asChild>
