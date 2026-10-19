@@ -1,3 +1,4 @@
+import { ProgressSummary } from "@/components/dashboard/ProgressSummary";
 import { LearningJourney } from "@/components/dashboard/LearningJourney";
 import { PlatformActivityHistory } from "@/components/dashboard/PlatformActivityHistory";
 import { canonicalSubject } from "@/lib/subjects";
@@ -77,6 +78,7 @@ function PerformancePage() {
           Minhas provas e diagnóstico →
         </Link>
       </div>
+      {data && !error && <ProgressSummary key={user.id} overview={data} />}
       <StudyTimeCard key={user.id} userId={user.id} />
       <LearningJourney key={user.id} userId={user.id} overview={data} />
       {error ? (
@@ -240,6 +242,7 @@ function PerformanceOverviewTab({
           </ul>
         </div>
       )}
+      <h2 className="text-lg font-semibold">Histórico completo</h2>
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           icon={ListChecks}
