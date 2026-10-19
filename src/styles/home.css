@@ -3943,3 +3943,21 @@
   .home-interstitial__content strong { font-size: 32px; }
   .home-interstitial__content .home-button { min-height: 40px; }
 }
+
+/* Careers and legal sources now share one purposeful visual band. */
+.home-careers__layout { grid-template-columns: minmax(240px, .62fr) minmax(0, 1.38fr); gap: 34px; }
+.home-sources__layout { display: block; }
+.home-interstitial { padding-block: 20px; }
+.home-interstitial__frame,
+.home-interstitial__frame img { min-height: 220px; height: 220px; }
+.home-interstitial__frame img { object-position: center 22%; }
+.home-interstitial__content { right: clamp(20px, 6vw, 84px); width: min(360px, 40%); }
+@media (max-width: 700px) {
+  .home-careers__layout { grid-template-columns: 1fr; gap: 18px; }
+  .home-interstitial { padding-block: 16px; }
+  .home-interstitial__frame,
+  .home-interstitial__frame img { min-height: 176px; height: 176px; }
+  .home-interstitial__frame img { object-position: center top; }
+  .home-interstitial__content { right: 18px; left: 18px; width: auto; }
+  .home-interstitial__content strong { font-size: 28px; }
+}

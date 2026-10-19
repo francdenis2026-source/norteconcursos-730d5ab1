@@ -567,17 +567,6 @@ function Index() {
                 <br />
                 <em>A sua carreira.</em>
               </Head>
-              <figure className="home-careers__visual">
-                <img
-                  src="/media/hero/careers-team.webp"
-                  alt="Profissionais representando carreiras da segurança pública"
-                  width={960}
-                  height={640}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Escolha um caminho. Construa seu preparo.</figcaption>
-              </figure>
             </div>
             <div className="home-careers__grid">
               {CAREERS.map(([name, roles]) => (
@@ -592,23 +581,32 @@ function Index() {
           </div>
         </section>
 
+        <section className="home-interstitial" aria-label="Preparação orientada para carreiras policiais">
+          <div className="home-container">
+            <figure className="home-interstitial__frame">
+              <img
+                src="/media/hero/home-interstitial.webp"
+                alt="Profissional de segurança pública em uma paisagem urbana noturna"
+                width={2048}
+                height={683}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption className="home-interstitial__content">
+                <span className="home-eyebrow">Norte · operação</span>
+                <strong>Treino com direção.</strong>
+                <span>Fonte, carreira e prática em um só caminho.</span>
+                <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
+                  Começar grátis <ArrowUpRight aria-hidden="true" />
+                </Link>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className="home-sources" aria-label="Rastreabilidade jurídica">
           <div className="home-container">
             <div className="home-sources__layout">
-              <figure className="home-sources__visual">
-                <img
-                  src="/media/hero/toolkit.webp"
-                  alt="Materiais de estudo organizados para consulta e revisão"
-                  width={960}
-                  height={640}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  <ShieldCheck aria-hidden="true" />
-                  <span>Estude com fonte, contexto e vigência.</span>
-                </figcaption>
-              </figure>
               <details className="home-source-details">
                 <summary>
                   <ShieldCheck aria-hidden="true" />
@@ -635,29 +633,6 @@ function Index() {
                 </div>
               </details>
             </div>
-          </div>
-        </section>
-
-        <section className="home-interstitial" aria-label="Preparação orientada para carreiras policiais">
-          <div className="home-container">
-            <figure className="home-interstitial__frame">
-              <img
-                src="/media/hero/home-interstitial.webp"
-                alt="Profissional de segurança pública em uma paisagem urbana noturna"
-                width={1672}
-                height={941}
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption className="home-interstitial__content">
-                <span className="home-eyebrow">Norte · operação</span>
-                <strong>Treino com direção.</strong>
-                <span>Seu próximo avanço começa com uma sessão bem escolhida.</span>
-                <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
-                  Começar grátis <ArrowUpRight aria-hidden="true" />
-                </Link>
-              </figcaption>
-            </figure>
           </div>
         </section>
 
