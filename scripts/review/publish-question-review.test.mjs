@@ -13,7 +13,7 @@ test('CAS keeps PostgreSQL figure arrays separate from JSONB arrays and preserve
  assert.throws(()=>reviewRowFilters('board_exam_questions',{figure_urls:[{}]}),/figure URL array/);
 });
 test('a concurrent image update aborts the batch before writing',async()=>{
- const p=make();p.items[0].table='board_exam_questions';p.items[0].expected.figure_urls=[];
+ const p=make();p.items[0].table='board_exam_questions';p.items[0].expected.figure_urls=[];p.items[0].patch.syllabus_topic_id=p.items[0].patch.current_syllabus_topic_id;delete p.items[0].patch.current_syllabus_topic_id;
  let writes=0;
  await assert.rejects(()=>publishReview(p,async(path,method)=>{
   if(method==='PATCH')writes++;
@@ -180,5 +180,13 @@ test('restoring a previously verified board status preserves original comments a
 
 test('official commentary uses the existing review_note column; board explanations remain supported',()=>{
  const p=make();p.items[0].patch.explanation='Substantive commentary. '.repeat(15);assert.throws(()=>validateReview(p),/must use review_note/);
- const board=structuredClone(p);board.items[0].table='board_exam_questions';assert.equal(validateReview(board),board);
+ const board=structuredClone(p);board.items[0].table='board_exam_questions';board.items[0].patch.syllabus_topic_id=board.items[0].patch.current_syllabus_topic_id;delete board.items[0].patch.current_syllabus_topic_id;assert.equal(validateReview(board),board);
+});
+
+test('board subject correction uses its real syllabus column and still checks topic discipline',async()=>{
+ const p=make(),i=p.items[0];i.table='board_exam_questions';i.patch.subject='Direito Constitucional';delete i.patch.current_syllabus_topic_id;i.patch.syllabus_topic_id='t1';i.evidence.classification_reviewed=true;
+ assert.equal(validateReview(p),p);
+ const bad=structuredClone(p);bad.items[0].patch.current_syllabus_topic_id='t1';assert.throws(()=>validateReview(bad),/must use syllabus_topic_id/);
+ let writes=0;const req=async(path,method)=>{if(method==='PATCH'){writes++;return[];}if(path.startsWith('board_exam_questions'))return[i.expected];if(path.startsWith('syllabus_topics'))return[{edition_id:'e',content_status:'current',discipline:'Wrong discipline'}];if(path.startsWith('syllabus_editions'))return[{source_id:'s',status:'active'}];return[{is_official:true,source_type:'edital',status:'vigente'}];};
+ await assert.rejects(publishReview(p,req),/match verified topic discipline/);assert.equal(writes,0);
 });
