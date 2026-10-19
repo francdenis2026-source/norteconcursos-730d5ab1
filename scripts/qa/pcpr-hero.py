@@ -37,7 +37,18 @@ async def main():
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth')
     assert await card.get_by_role('link',name='Resolver a prova grátis').get_attribute('href')=='/auth?mode=register'
     await card.locator('summary').click();assert await card.locator('details').evaluate('e=>e.open')
+    assert await card.locator('img').first.evaluate("e=>getComputedStyle(e).objectFit")=='contain'
+    assert (await card.locator('img').first.get_attribute('src')).endswith('pcpr-capa.webp')
     await card.screenshot(path=f'/tmp/pcpr-home-{theme}-{width}.png')
+    acre=page.locator('.home-opportunity--acre');await acre.scroll_into_view_if_needed()
+    await page.wait_for_function("document.querySelector('.home-opportunity--acre img').naturalWidth>0")
+    image=acre.locator('.home-opportunity__image > img')
+    assert (await image.get_attribute('src')).endswith('pcac-capa.webp')
+    assert await image.evaluate("e=>getComputedStyle(e).objectFit")=='contain'
+    image_box=await image.bounding_box();status_box=await acre.locator('.home-status').bounding_box()
+    assert status_box['y']>=image_box['y']+image_box['height']-1
+    if width<=700:assert (await acre.bounding_box())['height'] < (await card.bounding_box())['height']
+    await acre.screenshot(path=f'/tmp/pcac-home-{theme}-{width}.png')
   await context.add_init_script("if(location.hostname==='localhost')localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',"+json.dumps(json.dumps(session))+");")
   for route,kind in [('dashboard','full'),('dashboard/question-trainer','compact')]:
    for theme,width in [('light',1440),('light',768),('light',390),('light',320),('dark',1024),('dark',390)]:
@@ -49,7 +60,8 @@ async def main():
     link=card.get_by_role('link',name='Resolver a prova',exact=True);params=parse_qs(urlparse(await link.get_attribute('href')).query)
     assert params['contest']==['Polícia Civil do Estado do Paraná'] and params['mode']==['catalog'] and json.loads(params['go'][0])=='1'
     assert (await link.bounding_box())['height']>=44
+    assert await card.locator('.pcpr-spot__hero').evaluate("e=>getComputedStyle(e).objectFit")=='contain'
     await card.screenshot(path=f'/tmp/pcpr-{kind}-{theme}-{width}.png')
-  print('PASS: homepage and both authenticated hero variants; image loads; 320/390/768/1024/1440 widths, light/dark; no overflow; registration and exact exam links preserved')
+  print('PASS: Paraná and Acre text-bearing covers, no crops or status overlap; both authenticated hero variants; images load; 320/390/768/1024/1440 widths, light/dark; no overflow; registration and exact exam links preserved')
   await browser.close()
 asyncio.run(main())

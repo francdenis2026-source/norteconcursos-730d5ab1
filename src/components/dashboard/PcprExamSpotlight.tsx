@@ -24,12 +24,12 @@ export function PcprExamSpotlight({ compact = false }: { compact?: boolean }) {
 
   return (
     <section
-      className={`pcpr-spot pcpr-spot--illustrated no-print${compact ? " pcpr-spot--compact" : ""}`}
+      className={`pcpr-spot pcpr-spot--cover no-print${compact ? " pcpr-spot--compact" : ""}`}
       aria-label="Prova da Polícia Civil do Paraná 2026"
     >
       <img
         className="pcpr-spot__hero"
-        src="/media/hero/pcpr-investigacao.webp"
+        src="/media/hero/pcpr-capa.webp"
         alt=""
         aria-hidden="true"
         loading="lazy"

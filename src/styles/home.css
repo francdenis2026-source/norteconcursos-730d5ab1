@@ -2307,3 +2307,12 @@
   :root:not(.dark) .home-header { background:Canvas; color:CanvasText; border-color:CanvasText; backdrop-filter:none; }
   :root:not(.dark) .home-header :is(a,button,span,strong) { color:CanvasText; }
 }
+
+/* Text-bearing campaign artwork must stay intact at every card width. */
+.home-opportunity--pcpr .home-pcpr-hero,
+.home-opportunity--acre .home-opportunity__image { height:auto; aspect-ratio:1672 / 940; background:#171b22; flex-shrink:0; }
+.home-opportunity--pcpr .home-pcpr-hero > img,
+.home-opportunity--acre .home-opportunity__image > img { width:100%; height:100%; object-fit:contain; object-position:center; }
+.home-opportunity--pcpr .home-pcpr-hero::after { display:none; }
+.home-opportunity--acre .home-status--inline { position:static; align-self:flex-start; margin:0 0 14px; border:1px solid var(--home-line); }
+@media(max-width:700px) { .home-rail__track.home-opportunities { align-items:start; } }

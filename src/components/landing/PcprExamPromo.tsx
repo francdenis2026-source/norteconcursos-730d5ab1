@@ -39,14 +39,13 @@ export function PcprExamPromo() {
     >
       <div className="home-opportunity__image home-pcpr-hero">
         <img
-          src="/media/hero/pcpr-investigacao.webp"
-          alt="Cena ilustrativa de investigação, com profissionais em um escritório e araucárias ao fundo"
+          src="/media/hero/pcpr-capa.webp"
+          alt="Capa PCPR — Polícia Civil do Paraná, com brasão dourado e identidade Norte Concursos"
           loading="lazy"
           decoding="async"
           width="1672"
           height="940"
         />
-        <span>PCPR · FOCO NA SUA PREPARAÇÃO</span>
       </div>
       <div className="home-opportunity__body">
         <div className="home-opportunity__identity">
