@@ -11,6 +11,8 @@ async def main():
   browser=await p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox'])
   context=await browser.new_context(viewport={'width':1280,'height':900})
   counts={}
+  # Reproduce devices whose wall clock is three hours ahead of the server.
+  await context.add_init_script('const realNow = Date.now.bind(Date); Date.now = () => realNow() + 3 * 60 * 60 * 1000;')
   from urllib.parse import urlparse,parse_qs
   async def backend(route):
    url=route.request.url;table=urlparse(url).path.split('/')[-1];counts[table]=counts.get(table,0)+1
@@ -48,9 +50,11 @@ async def main():
    fixtures['count']=count;await page.reload(wait_until='networkidle');await page.locator('.home-presence[data-available=true]').wait_for()
    assert str(count).replace('12500','12.500') in await page.locator('.home-presence').get_attribute('aria-label')
   fixtures['mode']='error';await page.reload(wait_until='networkidle');await page.wait_for_timeout(200)
-  indicator=page.locator('.home-presence');assert await indicator.get_attribute('aria-hidden')=='true';assert not await indicator.is_visible()
-  fixtures['mode']='ok';fixtures['count']=12;await page.reload(wait_until='networkidle');await page.locator('.home-presence[data-available=true]').wait_for()
+  indicator=page.locator('.home-presence');assert await indicator.is_visible();assert await indicator.get_attribute('aria-label')=='Presença indisponível';assert await indicator.locator('strong').count()==0
+  fixtures['mode']='ok';fixtures['count']=12
+  # Missing RPC must recover without reloading, unlike the previous permanent stop.
+  await page.locator('.home-presence[data-available=true]').wait_for(timeout=35000)
   await page.evaluate("document.documentElement.classList.add('dark')");await page.screenshot(path='/tmp/study-presence-dark-mobile.png')
-  print('PASS: responsive header, genuine zero, singular/large counts, unavailable count hidden, dark mode',flush=True)
+  print('PASS: responsive header, genuine zero, singular/large counts, clock skew, visible unavailable status, recovery without reload, dark mode',flush=True)
   await browser.close()
 asyncio.run(main())
