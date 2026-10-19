@@ -38,3 +38,11 @@ Aproveitamento usa a **primeira resposta histórica** a cada par origem/questão
 - Testes existentes de presença passaram. A presença foi consultada na API real; a interface de desempenho foi validada com fixtures, não com o histórico privado de um aluno.
 
 O progresso usa a atualização já existente de 30 segundos enquanto a página está visível. Não é uma previsão de aprovação nem certificação de domínio. A disponibilidade dos atalhos depende do acervo elegível na disciplina e do plano do aluno.
+
+## Complemento — teoria junto dos pontos a fortalecer
+
+Os cartões agora permitem clicar no nome da matéria para iniciar o treinador com a disciplina selecionada, além do botão “Treinar questões”. “Estudar teoria” abre diretamente a leitura sugerida na biblioteca; o título da leitura fica visível no cartão. Havendo outras leituras, uma lista expansível oferece os demais links, todos na mesma aba.
+
+As sugestões usam o catálogo existente e somente materiais ativos da mesma disciplina canônica, por ordem editorial. Materiais de outras matérias, arquivados, obsoletos, em revisão e do contexto ENEM são excluídos. Nenhum novo material foi criado. A indisponibilidade da consulta é diferenciada da ausência de teoria publicada; ambas preservam o acesso ao treino. Os limites do treinador e da biblioteca continuam nas páginas de destino.
+
+Validação adicional: 650 testes passaram, incluindo correspondência de disciplina, estado de publicação, separação do ENEM, ordenação e duplicatas nas leituras. TypeScript e build passaram. No navegador com fixtures: nome da matéria e botão levam à mesma sessão filtrada; botão de teoria abre o material e seu título; outras leituras expandem; ausência e falha na consulta da teoria preservam o treino; modos claro/escuro e larguras 320–1280 px sem overflow. Nenhuma alteração no banco.

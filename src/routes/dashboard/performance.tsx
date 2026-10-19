@@ -37,7 +37,7 @@ function PerformancePage() {
   const { user, isLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
   const { data, loading, error, retry } = usePerformanceOverview(user?.id, real);
-  const { data: libraryMaterials } = useStudyMaterialList(real);
+  const { data: libraryMaterials, isError: libraryError } = useStudyMaterialList(real);
   if (isLoading) return <p role="status">Carregando seu desempenho…</p>;
   if (!real || !user)
     return (
@@ -78,7 +78,14 @@ function PerformancePage() {
           Minhas provas e diagnóstico →
         </Link>
       </div>
-      {data && !error && <ProgressSummary key={user.id} overview={data} />}
+      {data && !error && (
+        <ProgressSummary
+          key={user.id}
+          overview={data}
+          materials={libraryMaterials}
+          materialsError={libraryError}
+        />
+      )}
       <StudyTimeCard key={user.id} userId={user.id} />
       <LearningJourney key={user.id} userId={user.id} overview={data} />
       {error ? (

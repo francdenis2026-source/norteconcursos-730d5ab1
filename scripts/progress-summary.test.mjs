@@ -86,3 +86,30 @@ test("all-time comparisons ignore later repeats but practice days include them",
   assert.equal(d.days, 2);
   assert.equal(d.evolution, null);
 });
+
+test("theory reinforcement keeps only published materials in the exact canonical discipline and context", async () => {
+  const { reinforcementMaterials } = await import("../src/lib/reinforcementMaterials.ts");
+  const material = (slug, extra = {}) => ({
+    slug,
+    discipline: "Direito Penal",
+    title: slug,
+    sort_order: 1,
+    content_status: "active",
+    ...extra,
+  });
+  const rows = [
+    material("later", { sort_order: 2 }),
+    material("first"),
+    material("archived", { content_status: "archived" }),
+    material("other", { discipline: "Direito Processual Penal" }),
+    material("enem", { contest_name: "ENEM" }),
+    material("review", { content_status: "under_review" }),
+    material("first"),
+  ];
+  assert.deepEqual(
+    reinforcementMaterials("Noções de Direito Penal", rows).map((m) => m.slug),
+    ["first", "later"],
+  );
+  assert.deepEqual(reinforcementMaterials("Informática", rows), []);
+  assert.equal(rows[0].slug, "later");
+});

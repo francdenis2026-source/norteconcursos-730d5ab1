@@ -1,12 +1,22 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Target, Trophy, TrendingUp } from "lucide-react";
+import { ArrowRight, BookOpen, Target, Trophy, TrendingUp } from "lucide-react";
 import type { PerformanceOverview } from "@/hooks/usePerformanceOverview";
 import { progressSummary, type ProgressPeriod } from "@/lib/progressSummary";
 import { platformDate } from "@/lib/platformClock";
 import { practiceSearch } from "@/lib/practiceLink";
+import { reinforcementMaterials } from "@/lib/reinforcementMaterials";
+import type { StudyMaterialSummary } from "@/lib/studyMaterials";
 
-export function ProgressSummary({ overview }: { overview: PerformanceOverview }) {
+export function ProgressSummary({
+  overview,
+  materials,
+  materialsError = false,
+}: {
+  overview: PerformanceOverview;
+  materials?: StudyMaterialSummary[] | undefined;
+  materialsError?: boolean;
+}) {
   const [period, setPeriod] = useState<ProgressPeriod>(30);
   const data = progressSummary(overview.responses, overview.attempts, period, platformDate());
   const training = overview.available.training;
@@ -123,27 +133,88 @@ export function ProgressSummary({ overview }: { overview: PerformanceOverview })
           </p>
           {training && data.weak.length > 0 ? (
             <ul className="mt-3 grid gap-3 lg:grid-cols-2">
-              {data.weak.map((subject) => (
-                <li
-                  key={subject.subject}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-muted/30 p-3"
-                >
-                  <div className="min-w-0 flex-1">
-                    <p className="font-semibold break-words">{subject.subject}</p>
+              {data.weak.map((subject) => {
+                const readings = reinforcementMaterials(subject.subject, materials ?? []);
+                const firstReading = readings[0];
+                return (
+                  <li key={subject.subject} className="min-w-0 rounded-xl border bg-muted/30 p-4">
+                    <h4 className="font-semibold break-words">
+                      <Link
+                        to="/dashboard/question-trainer"
+                        search={practiceSearch(subject.subject)}
+                        aria-label={`Abrir questões de ${subject.subject}`}
+                        className="inline-flex min-h-11 items-center underline decoration-primary/30 underline-offset-4 hover:decoration-primary"
+                      >
+                        {subject.subject}
+                      </Link>
+                    </h4>
                     <p className="text-sm text-muted-foreground">
                       {subject.accuracy}% · {subject.correct}/{subject.total} acertos
                     </p>
-                  </div>
-                  <Link
-                    to="/dashboard/question-trainer"
-                    search={practiceSearch(subject.subject)}
-                    aria-label={`Treinar ${subject.subject}`}
-                    className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-3 text-sm font-semibold hover:bg-muted"
-                  >
-                    Treinar <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </li>
-              ))}
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Revise a teoria e depois pratique uma nova sessão desta matéria.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <Link
+                        to="/dashboard/question-trainer"
+                        search={practiceSearch(subject.subject)}
+                        aria-label={`Treinar ${subject.subject}`}
+                        className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-3 text-sm font-semibold hover:bg-muted"
+                      >
+                        Treinar questões <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      </Link>
+                      {firstReading && (
+                        <Link
+                          to="/dashboard/library/$slug"
+                          params={{ slug: firstReading.slug }}
+                          search={{}}
+                          aria-label={`Estudar teoria de ${subject.subject}: ${firstReading.title}`}
+                          className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-card px-3 text-sm font-semibold hover:bg-muted"
+                        >
+                          <BookOpen className="h-4 w-4" aria-hidden="true" />
+                          Estudar teoria
+                        </Link>
+                      )}
+                    </div>
+                    {firstReading ? (
+                      <>
+                        <p className="mt-2 text-xs text-muted-foreground">
+                          Leitura sugerida: {firstReading.title}
+                        </p>
+                        {readings.length > 1 && (
+                          <details className="mt-2">
+                            <summary className="min-h-11 cursor-pointer py-3 text-sm font-semibold">
+                              Outras leituras da matéria ({readings.length - 1})
+                            </summary>
+                            <ul className="space-y-1">
+                              {readings.slice(1).map((material) => (
+                                <li key={material.slug}>
+                                  <Link
+                                    to="/dashboard/library/$slug"
+                                    params={{ slug: material.slug }}
+                                    search={{}}
+                                    className="inline-flex min-h-11 items-center text-sm underline underline-offset-4 hover:text-primary"
+                                  >
+                                    {material.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </details>
+                        )}
+                      </>
+                    ) : (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        {materialsError
+                          ? "Não foi possível consultar a teoria agora. O treino continua disponível."
+                          : materials === undefined
+                            ? "Buscando materiais de teoria…"
+                            : "Ainda não há teoria publicada para esta matéria."}
+                      </p>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             <p className="mt-3 rounded-xl bg-muted/40 p-4 text-sm">
