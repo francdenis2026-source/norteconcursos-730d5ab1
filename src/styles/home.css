@@ -1287,7 +1287,7 @@
 }
 .home-plan__media {
   margin: -16px -16px 4px;
-  height: 76px;
+  height: 128px;
   overflow: hidden;
 }
 .home-plan__media img {
@@ -2182,7 +2182,7 @@
     grid-auto-columns: 86%;
   }
   .home-rail .home-plan__media {
-    height: 110px;
+    height: 128px;
   }
   .home-rail .home-plan__description {
     min-height: 0;
