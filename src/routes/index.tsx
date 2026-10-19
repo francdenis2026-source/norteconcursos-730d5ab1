@@ -1,3 +1,4 @@
+import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import {
@@ -420,7 +421,7 @@ function Index() {
             >
               Seu próximo <em>objetivo.</em>
             </Head>
-            <div className="home-opportunities">
+            <HomeRail className="home-opportunities" label="Oportunidades de concursos">
               <PcprExamPromo />
               <article
                 className="home-opportunity home-opportunity--acre"
@@ -483,7 +484,7 @@ function Index() {
                   </div>
                 </div>
               </article>
-            </div>
+            </HomeRail>
           </div>
         </section>
 

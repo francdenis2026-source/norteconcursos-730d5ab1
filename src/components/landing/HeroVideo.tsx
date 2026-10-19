@@ -1,18 +1,19 @@
+import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /** Plays once, then removes the video and reveals the original hero photograph. */
 export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean) => void }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
-  const [phase, setPhase] = useState<"image" | "playing" | "fading">("image");
+  const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
   const finishRef = useRef<() => void>(() => {});
+  const retryRef = useRef<() => void>(() => {});
 
   useEffect(() => {
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
       ?.saveData;
-    // Keep the mobile first fold focused on the message and avoid a heavy
-    // intro layer creating dark letterbox space on narrow screens.
-    const compactViewport = window.matchMedia("(max-width: 767px)").matches;
+    // Small phones retain the image-first experience. Portrait tablets can play inline.
+    const compactViewport = window.matchMedia("(max-width: 599px)").matches;
     if (!compactViewport && !saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setLoadVideo(true);
     }
@@ -54,8 +55,25 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
     element.addEventListener("playing", started);
     element.addEventListener("ended", finish);
     element.addEventListener("error", finish);
+    // Safari/iPad needs the DOM properties set before play, not only React's attribute.
+    element.muted = true;
+    element.defaultMuted = true;
+    element.playsInline = true;
+    element.setAttribute("webkit-playsinline", "");
+    const play = () => {
+      if (!active || finished) return;
+      void element.play().catch((error: unknown) => {
+        if (!active || finished) return;
+        if (error instanceof DOMException && error.name === "NotAllowedError") {
+          window.clearTimeout(loadTimer);
+          setPhase("ready");
+          onIntroChange(false);
+        } else finish();
+      });
+    };
+    retryRef.current = play;
     element.load();
-    void element.play().catch(finish);
+    play();
     return () => {
       active = false;
       window.clearTimeout(loadTimer);
@@ -66,6 +84,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
       element.removeEventListener("error", finish);
       element.pause();
       finishRef.current = () => {};
+      retryRef.current = () => {};
     };
   }, [loadVideo, onIntroChange]);
 
@@ -80,11 +99,23 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
         height={941}
         fetchPriority="high"
       />
+      {loadVideo && phase === "ready" && (
+        <button type="button" className="home-intro-start" onClick={() => retryRef.current()}>
+          <Play aria-hidden="true" /> Ver introdução
+        </button>
+      )}
       {loadVideo && (
         <div className="home-intro" data-phase={phase}>
-          <video ref={video} muted playsInline preload="auto" aria-hidden="true">
-            <source src="/media/hero/hero-intro.webm" type="video/webm" />
+          <video
+            ref={video}
+            muted
+            playsInline
+            preload="auto"
+            disablePictureInPicture
+            aria-hidden="true"
+          >
             <source src="/media/hero/hero-intro.mp4" type="video/mp4" />
+            <source src="/media/hero/hero-intro.webm" type="video/webm" />
           </video>
           {phase === "playing" && (
             <button type="button" onClick={() => finishRef.current()}>

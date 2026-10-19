@@ -2060,3 +2060,140 @@
     color: CanvasText;
   }
 }
+
+/* Manual rails keep cards discoverable, with native swipe and visible controls. */
+.home-rail {
+  min-width: 0;
+}
+.home-rail__track {
+  min-width: 0;
+}
+.home-rail__track:focus-visible {
+  outline: 3px solid var(--home-accent);
+  outline-offset: 3px;
+}
+.home-rail__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+}
+.home-rail__hint {
+  margin-right: auto;
+  font-size: 11px;
+  color: var(--home-muted);
+}
+.home-rail__position {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--home-muted);
+  margin-right: 4px;
+}
+.home-rail__controls button {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--home-line);
+  border-radius: 50%;
+  background: var(--home-surface);
+  color: var(--home-text);
+}
+.home-rail__controls button:hover:not(:disabled) {
+  border-color: var(--home-accent);
+  background: var(--home-accent-bg);
+}
+.home-rail__controls button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.home-rail__controls svg {
+  width: 17px;
+  height: 17px;
+}
+@media (max-width: 1100px) {
+  .home-rail__track.home-plans__grid {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 30px) / 2.15);
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 3px;
+    overscroll-behavior-x: contain;
+    padding: 3px 3px 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--home-line) transparent;
+  }
+  .home-rail__track.home-plans__grid > .home-plan {
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+}
+@media (max-width: 700px) {
+  .home-rail__track.home-opportunities {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 88%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 3px;
+    overscroll-behavior-x: contain;
+    padding: 3px 3px 8px;
+    gap: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--home-line) transparent;
+  }
+  .home-rail__track.home-opportunities > .home-opportunity {
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .home-rail__track.home-plans__grid {
+    grid-auto-columns: 86%;
+  }
+  .home-rail .home-plan__media {
+    height: 110px;
+  }
+  .home-rail .home-plan__description {
+    min-height: 0;
+    font-size: 12px;
+  }
+  .home-rail .home-plan__price {
+    font-size: 32px;
+  }
+  .home-rail .home-plan h3 {
+    font-size: 18px;
+  }
+  .home-rail .home-plan__top .home-tag {
+    font-size: 9px;
+  }
+  .home-rail .home-plan__features summary,
+  .home-rail .home-plan > .home-button {
+    font-size: 12px;
+  }
+}
+.home-intro-start {
+  position: absolute;
+  top: 16px;
+  right: max(16px, calc((100% - 1200px) / 2));
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--home-line);
+  border-radius: 8px;
+  background: var(--home-surface);
+  color: var(--home-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+.home-intro-start svg {
+  width: 16px;
+  height: 16px;
+}

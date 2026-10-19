@@ -1,3 +1,4 @@
+import { HomeRail } from "@/components/landing/HomeRail";
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
 import { PlanComparison } from "@/components/landing/PlanComparison";
@@ -55,7 +56,7 @@ export function PlansSection() {
             </div>
           </aside>
         </div>
-        <div className="home-plans__grid">
+        <HomeRail className="home-plans__grid" label="Planos de estudo">
           {SUBSCRIPTION_PLANS.map((plan) => {
             const testing = TESTING_PHASE && plan.id === TESTING_TIER;
             return (
@@ -154,7 +155,7 @@ export function PlansSection() {
               </article>
             );
           })}
-        </div>
+        </HomeRail>
         <details className="home-plan-comparison">
           <summary>
             <span>
