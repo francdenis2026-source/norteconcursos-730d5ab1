@@ -13268,3 +13268,12 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .trainer-focus-target { scroll-margin-block-start: 90px; }
 .trainer-focus-target:focus { outline: none; }
 @media(max-width:600px) { .trainer-context { grid-template-columns: minmax(0,1fr); padding: 16px; gap: 16px; margin-bottom: 16px; } }
+
+/* Session clock tooltip: concise, readable and contained on desktop and mobile. */
+.app-session-tooltip {
+  max-width: 250px;
+  padding: 8px 11px;
+  text-align: center;
+  line-height: 1.4;
+  white-space: normal;
+}

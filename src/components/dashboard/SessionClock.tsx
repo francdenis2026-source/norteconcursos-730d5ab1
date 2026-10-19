@@ -29,8 +29,8 @@ export function SessionClock({ userId }: { userId: string }) {
           <span className="tabular">{fmtClock(today)}</span>
         </Link>
       </TooltipTrigger>
-      <TooltipContent side="bottom">
-        Tempo ativo acumulado hoje, no dia do Acre. Soma suas sessões; pausas e abas ocultas não contam. Clique para ver seu histórico.
+      <TooltipContent side="bottom" className="app-session-tooltip">
+        Tempo ativo hoje · Acre. Clique para ver o histórico.
       </TooltipContent>
     </Tooltip>
   );
