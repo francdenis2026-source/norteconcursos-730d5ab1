@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { activityDateRange,activityPracticeSearch,freshActivityQuestions,otherStudentStats,studyPeriodSummary } from '../src/lib/dailyStudyActivity.ts';
+import { activityDateRange,activityPracticeSearch,freshActivityQuestions,otherStudentStats,studyPeriodSummary,trainingPeriodRows } from '../src/lib/dailyStudyActivity.ts';
 test('daily and seven-day history use exclusive Acre boundaries, including month changes',()=>{
  assert.deepEqual(activityDateRange('2026-11-01'),{start:'2026-11-01T05:00:00.000Z',end:'2026-11-02T05:00:00.000Z'});
  assert.deepEqual(activityDateRange('2026-11-01',true),{start:'2026-10-26T05:00:00.000Z',end:'2026-11-02T05:00:00.000Z'});
@@ -39,4 +39,12 @@ test('period totals, daily averages and monthly buckets agree without live-time 
  const month=studyPeriodSummary(rows,100,'2026-10-19','2026-10-19','30d');assert.equal(month.total,520);assert.equal(month.days.length,30);
  const half=studyPeriodSummary(rows,100,'2026-10-19','2026-10-19','6m');assert.equal(half.total,520);assert.equal(half.monthly,true);assert.equal(half.buckets.reduce((s,d)=>s+d.seconds,0),520);
  const old=studyPeriodSummary(rows,10000,'2026-10-19','2026-09-25','day');assert.equal(old.total,300);assert.equal(old.days.length,1);
+});
+
+test('question history periods filter first responses before computing discipline totals',()=>{
+ const row=(id,created_at,extra={})=>({id,question_id:id,question_source:'official',is_correct:true,created_at,...extra});
+ const rows=[row('a','2026-10-19T05:00:00Z'),row('b','2026-10-13T05:00:00Z'),row('c','2026-10-05T05:00:00Z'),row('d','2026-09-20T05:00:00Z'),row('e','2026-04-20T05:00:00Z'),row('f','2025-10-20T05:00:00Z'),row('g','2025-10-19T05:00:00Z'),row('a-repeat','2026-10-19T20:00:00Z',{question_id:'g'}),row('invalid','not-a-date')];
+ for(const [period,count] of [['day',1],['7d',2],['15d',3],['30d',4],['6m',5],['1y',6],['all',7]]) assert.equal(trainingPeriodRows(rows,period,'2026-10-19').length,count,period);
+ assert.equal(trainingPeriodRows(rows,'7d','2026-10-19').some(r=>r.id==='a-repeat'),false);
+ assert.equal(trainingPeriodRows([row('other-source','2026-10-19T05:00:00Z',{question_id:'a',question_source:'curated'}),...rows],'day','2026-10-19').length,2);
 });

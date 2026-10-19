@@ -13252,3 +13252,7 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .student-metric-panel__discipline:focus-visible, .student-metric-panel__history-discipline:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
 .student-metric-panel__history-discipline { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--foreground); font-weight: 650; font-size: 14px; }
 .student-metric-panel__history-discipline:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.student-metric-panel__range { margin: 0 0 16px; font-size: 13px; color: var(--muted-foreground); line-height: 1.6; }
+@media(max-width:480px) { .study-period-controls__options > button[data-period="all"] { grid-column: 1 / -1; } }
+@media(max-width:480px) { .study-period-controls__options button { padding-inline: 8px; font-size: 12px; white-space: nowrap; } }

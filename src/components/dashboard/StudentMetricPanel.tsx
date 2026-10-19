@@ -1,6 +1,11 @@
 import { disciplineSetupSearch } from "@/lib/practiceLink";
 import { useState } from "react";
-import { STUDY_PERIODS, studyPeriodSummary, type StudyPeriod } from "@/lib/dailyStudyActivity";
+import {
+  STUDY_PERIODS,
+  studyPeriodSummary,
+  trainingPeriodRows,
+  type StudyPeriod,
+} from "@/lib/dailyStudyActivity";
 import { DailyStudyActivity } from "@/components/dashboard/DailyStudyActivity";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, ListChecks, TrendingUp } from "lucide-react";
@@ -13,6 +18,7 @@ import {
 } from "@/lib/studentDashboard";
 import { fmtHuman } from "@/lib/studyClock";
 
+type MetricPeriod = StudyPeriod | "all";
 export type StudentMetric = "questions" | "accuracy" | "today" | "week";
 const definitions = {
   questions: {
@@ -72,7 +78,7 @@ export function StudentMetricPanel({
 }) {
   const [selection, setSelection] = useState<{
     key: string;
-    period: StudyPeriod;
+    period: MetricPeriod;
     day: string;
   } | null>(null);
   const today = acreDateKey(now);
@@ -82,10 +88,15 @@ export function StudentMetricPanel({
       ? selection
       : {
           key: selectionKey,
-          period: metric === "week" ? ("7d" as const) : ("day" as const),
+          period:
+            metric === "questions" || metric === "accuracy"
+              ? ("all" as const)
+              : metric === "week"
+                ? ("7d" as const)
+                : ("day" as const),
           day: selectedDate ?? today,
         };
-  const setPeriod = (period: StudyPeriod) => setSelection({ ...active, period });
+  const setPeriod = (period: MetricPeriod) => setSelection({ ...active, period });
   const setDay = (day: string) => {
     if (/^\d{4}-\d{2}-\d{2}$/.test(day) && day <= today) setSelection({ ...active, day });
   };
@@ -190,8 +201,8 @@ export function StudentMetricDetails({
   metric: StudentMetric;
   userId: string;
   selectedDate: string | null;
-  period: StudyPeriod;
-  onPeriodChange: (period: StudyPeriod) => void;
+  period: MetricPeriod;
+  onPeriodChange: (period: MetricPeriod) => void;
   onDayChange: (day: string) => void;
   training: TrainingRecord[];
   activity: ActivityRecord[];
@@ -201,20 +212,29 @@ export function StudentMetricDetails({
   const today = acreDateKey(now);
   const [setupFresh] = useState(() => String(Date.now()));
   if (metric === "questions" || metric === "accuracy") {
-    const stats = summarizeTraining(training, null, today);
-    const first = new Map<string, TrainingRecord>();
-    for (const row of [...training].sort(
-      (a, b) => Date.parse(a.created_at) - Date.parse(b.created_at) || a.id.localeCompare(b.id),
-    )) {
-      const key = JSON.stringify([row.question_source, row.question_id]);
-      if (row.question_id && typeof row.is_correct === "boolean" && !first.has(key))
-        first.set(key, row);
-    }
-    const recent = [...first.values()]
+    const day = selectedDate ?? today;
+    const filtered = trainingPeriodRows(training, period, day);
+    const stats = summarizeTraining(filtered, null, today);
+    const recent = [...filtered]
       .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
       .slice(0, 10);
+    const range = period === "all" ? null : studyPeriodSummary([], 0, today, day, period).range;
     return (
       <div className="student-metric-panel__body" data-metric={metric}>
+        <StudyPeriodControls
+          period={period}
+          day={day}
+          today={today}
+          onPeriodChange={onPeriodChange}
+          onDayChange={onDayChange}
+          includeAll
+        />
+        <p className="student-metric-panel__range" role="status">
+          {range
+            ? `${range.start.slice(0, 10).split("-").reverse().join("/")} a ${day.split("-").reverse().join("/")} · Acre`
+            : "Todo o histórico registrado"}
+        </p>
+
         <div className="student-metric-panel__summary">
           <div>
             <span>
@@ -229,7 +249,9 @@ export function StudentMetricDetails({
             </strong>
             <p>
               {metric === "questions"
-                ? `${count(stats.today)} respondidas hoje`
+                ? period === "all"
+                  ? `${count(stats.today)} respondidas hoje`
+                  : `${count(stats.total)} primeiras respostas no período`
                 : `${count(stats.correct)} acertos em ${count(stats.total)} questões`}
             </p>
           </div>
@@ -246,8 +268,9 @@ export function StudentMetricDetails({
         </div>
         {!stats.total ? (
           <p className="student-metric-panel__empty">
-            Você ainda não tem respostas registradas no treinador. Resolva sua primeira questão para
-            acompanhar esta métrica.
+            {training.length
+              ? "Nenhuma primeira resposta registrada neste período. Escolha outro intervalo para consultar seu histórico."
+              : "Você ainda não tem respostas registradas no treinador. Resolva sua primeira questão para acompanhar esta métrica."}
           </p>
         ) : (
           <>
@@ -344,7 +367,8 @@ export function StudentMetricDetails({
   }
   const day = selectedDate ?? today;
   const isToday = day === today;
-  const time = studyPeriodSummary(activity, live, today, day, period);
+  const timePeriod = period === "all" ? "7d" : period;
+  const time = studyPeriodSummary(activity, live, today, day, timePeriod);
   const peak = Math.max(1, ...time.buckets.map((d) => d.seconds));
   const dayRows = activity.filter(
     (r) => r.study_date === day && Number.isFinite(r.active_seconds) && r.active_seconds > 0,
@@ -353,34 +377,13 @@ export function StudentMetricDetails({
   const fullDate = (date: string) => date.split("-").reverse().join("/");
   return (
     <div className="student-metric-panel__body" data-metric={metric}>
-      <div className="study-period-controls">
-        <div
-          role="group"
-          aria-label="Período do histórico"
-          className="study-period-controls__options"
-        >
-          {STUDY_PERIODS.map((p) => (
-            <button
-              key={p.value}
-              type="button"
-              aria-pressed={period === p.value}
-              onClick={() => onPeriodChange(p.value)}
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
-        <label>
-          {period === "day" ? "Data" : "Até a data"}
-          <input
-            aria-label="Data final do histórico"
-            type="date"
-            value={day}
-            max={today}
-            onChange={(event) => onDayChange(event.target.value)}
-          />
-        </label>
-      </div>
+      <StudyPeriodControls
+        period={timePeriod}
+        day={day}
+        today={today}
+        onPeriodChange={onPeriodChange}
+        onDayChange={onDayChange}
+      />
       <div className="student-metric-panel__summary">
         <div>
           <span>
@@ -468,8 +471,65 @@ export function StudentMetricDetails({
         key={`${userId}:${period}:${day}`}
         userId={userId}
         day={day}
-        period={period}
+        period={timePeriod}
       />
+    </div>
+  );
+}
+
+function StudyPeriodControls({
+  period,
+  day,
+  today,
+  onPeriodChange,
+  onDayChange,
+  includeAll = false,
+}: {
+  period: MetricPeriod;
+  day: string;
+  today: string;
+  onPeriodChange: (period: MetricPeriod) => void;
+  onDayChange: (day: string) => void;
+  includeAll?: boolean;
+}) {
+  const options = [
+    ...(includeAll ? [{ value: "all" as const, label: "Todo histórico" }] : []),
+    ...STUDY_PERIODS.map((p) => ({
+      ...p,
+      label: includeAll && p.value === "1y" ? "12 meses" : p.label,
+    })),
+  ];
+  return (
+    <div className="study-period-controls">
+      <div
+        role="group"
+        aria-label="Período do histórico"
+        className="study-period-controls__options"
+      >
+        {options.map((p) => (
+          <button
+            key={p.value}
+            type="button"
+            data-period={p.value}
+            aria-pressed={period === p.value}
+            onClick={() => onPeriodChange(p.value)}
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+      {period !== "all" && (
+        <label>
+          {period === "day" ? "Data" : "Até a data"}
+          <input
+            aria-label="Data final do histórico"
+            type="date"
+            value={day}
+            max={today}
+            onChange={(event) => onDayChange(event.target.value)}
+          />
+        </label>
+      )}
     </div>
   );
 }

@@ -134,3 +134,35 @@ export function otherStudentStats(
   if (total < 5 || correct + wrong !== total) return null;
   return { total, correct, wrong, accuracy: Math.round((correct / total) * 1000) / 10 };
 }
+
+/** Deduplicate before applying the date filter: a later repeat never becomes a new first answer. */
+export function trainingPeriodRows<
+  T extends {
+    id: string;
+    question_source: string;
+    question_id: string;
+    is_correct: boolean;
+    created_at: string;
+  },
+>(rows: T[], period: StudyPeriod | "all", day: string): T[] {
+  const first = new Map<string, T>();
+  for (const row of [...rows].sort(
+    (a, b) => Date.parse(a.created_at) - Date.parse(b.created_at) || a.id.localeCompare(b.id),
+  )) {
+    const key = JSON.stringify([row.question_source, row.question_id]);
+    if (
+      row.question_id &&
+      typeof row.is_correct === "boolean" &&
+      Number.isFinite(Date.parse(row.created_at)) &&
+      !first.has(key)
+    )
+      first.set(key, row);
+  }
+  const range = period === "all" ? null : activityDateRange(day, period);
+  return [...first.values()].filter(
+    (row) =>
+      !range ||
+      (Date.parse(row.created_at) >= Date.parse(range.start) &&
+        Date.parse(row.created_at) < Date.parse(range.end)),
+  );
+}
