@@ -1,3 +1,4 @@
+import { DailyStudyActivity } from "@/components/dashboard/DailyStudyActivity";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Clock, ListChecks, TrendingUp } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
@@ -42,6 +43,7 @@ export function StudentMetricPanel({
   metric,
   selectedDate,
   userName,
+  userId,
   training,
   activity,
   live,
@@ -55,6 +57,7 @@ export function StudentMetricPanel({
   metric: StudentMetric | null;
   selectedDate: string | null;
   userName: string;
+  userId: string;
   training: TrainingRecord[] | undefined;
   activity: ActivityRecord[] | undefined;
   live: number;
@@ -119,6 +122,7 @@ export function StudentMetricPanel({
             metric && (
               <StudentMetricDetails
                 metric={metric}
+                userId={userId}
                 selectedDate={selectedDate}
                 training={training ?? []}
                 activity={activity ?? []}
@@ -136,6 +140,7 @@ export function StudentMetricPanel({
 /** All views share the exact summary functions used by the dashboard cards. */
 export function StudentMetricDetails({
   metric,
+  userId,
   selectedDate,
   training,
   activity,
@@ -143,6 +148,7 @@ export function StudentMetricDetails({
   now,
 }: {
   metric: StudentMetric;
+  userId: string;
   selectedDate: string | null;
   training: TrainingRecord[];
   activity: ActivityRecord[];
@@ -362,6 +368,12 @@ export function StudentMetricDetails({
           )}
         </>
       )}
+      <DailyStudyActivity
+        key={`${userId}:${metric}:${day}`}
+        userId={userId}
+        day={metric === "today" ? day : today}
+        week={metric === "week"}
+      />
     </div>
   );
 }

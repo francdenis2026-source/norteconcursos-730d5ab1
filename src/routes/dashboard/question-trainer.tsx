@@ -1,3 +1,5 @@
+import { useUnseenActivity } from "@/hooks/useUnseenActivity";
+import { freshActivityQuestions } from "@/lib/dailyStudyActivity";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
@@ -118,6 +120,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "studyTopic"
+      | "unseen"
+      | "fresh"
       | "edition"
       | "syllabus"
       | "law"
@@ -142,6 +147,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    studyTopic: typeof search["studyTopic"] === "string" ? search["studyTopic"] : undefined,
+    unseen: search["unseen"] === "1" ? "1" : undefined,
+    fresh: typeof search["fresh"] === "string" ? search["fresh"] : undefined,
     edition: typeof search["edition"] === "string" ? search["edition"] : undefined,
     syllabus: typeof search["syllabus"] === "string" ? search["syllabus"] : undefined,
     law: typeof search["law"] === "string" ? search["law"] : undefined,
@@ -258,7 +266,13 @@ function QuestionTrainer() {
     reload: reloadHistory,
     markLocked,
   } = useLockedAnswers(userId, canLoad);
-  const error = catalogError ?? historyError;
+  const unseenHistory = useUnseenActivity(userId, canLoad && routeFilters.unseen === "1");
+  const error =
+    catalogError ??
+    historyError ??
+    (routeFilters.unseen === "1" && unseenHistory.isError
+      ? "Não foi possível conferir as questões feitas em simulados. Nenhuma questão será repetida sem essa conferência."
+      : null);
   const { reinforced, markReinforced } = useReinforcement(userId, canLoad);
   const [questions, setQuestions] = React.useState<Question[]>([]);
   const [started, setStarted] = React.useState(false);
@@ -297,7 +311,10 @@ function QuestionTrainer() {
     routeFilters.limit === "all" ? "exam" : "random",
   );
   const loading =
-    catalogLoading || lockedLoading || (!!routeFilters.edition && examEdition.isPending);
+    catalogLoading ||
+    lockedLoading ||
+    (!!routeFilters.edition && examEdition.isPending) ||
+    (routeFilters.unseen === "1" && (unseenHistory.isPending || unseenHistory.isFetching));
   const [index, setIndex] = React.useState(0);
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
@@ -486,6 +503,9 @@ function QuestionTrainer() {
     routeFilters.area,
     routeFilters.topic,
     routeFilters.go,
+    routeFilters.unseen,
+    routeFilters.studyTopic,
+    routeFilters.fresh,
     routeFilters.mode,
     routeFilters.appliedExam,
     routeFilters.catalogQuery,
@@ -607,12 +627,45 @@ function QuestionTrainer() {
         </Link>
       </aside>
     ) : null;
+  const activityNotice =
+    routeFilters.unseen === "1" ? (
+      <aside role="status" className="rounded-xl border bg-muted p-4 text-sm">
+        <strong>
+          Questões novas · {routeFilters.subject}
+          {routeFilters.studyTopic ? ` · ${routeFilters.studyTopic}` : ""}
+        </strong>
+        <p>
+          Somente itens deste assunto ainda não feitos no treinador, no reforço ou nos simulados. Se
+          não houver itens inéditos disponíveis, o assunto será mantido.
+        </p>
+      </aside>
+    ) : null;
   const correct = results.filter((r) => r === "ok").length;
   const wrong = results.filter((r) => r === "err").length;
 
+  const activityCatalog = React.useMemo(
+    () =>
+      routeFilters.unseen === "1"
+        ? freshActivityQuestions(
+            catalog,
+            new Set([...(unseenHistory.data ?? []), ...locked.keys(), ...reinforced.keys()]),
+            routeFilters.subject,
+            routeFilters.studyTopic,
+          )
+        : catalog,
+    [
+      catalog,
+      routeFilters.unseen,
+      routeFilters.subject,
+      routeFilters.studyTopic,
+      unseenHistory.data,
+      locked,
+      reinforced,
+    ],
+  );
   const practiceCatalog = React.useMemo(
-    () => trainerPracticeQuestions(catalog, practiceMode, locked, reinforced),
-    [catalog, practiceMode, locked, reinforced],
+    () => trainerPracticeQuestions(activityCatalog, practiceMode, locked, reinforced),
+    [activityCatalog, practiceMode, locked, reinforced],
   );
   const changePracticeMode = (mode: "new" | "wrong" | "all" | "catalog") => {
     if (mode === practiceMode) return;
@@ -706,7 +759,7 @@ function QuestionTrainer() {
   const pool = React.useMemo(
     () =>
       filterTrainerQuestions(
-        catalog,
+        activityCatalog,
         {
           area,
           topic,
@@ -726,7 +779,7 @@ function QuestionTrainer() {
         topicOf,
       ),
     [
-      catalog,
+      activityCatalog,
       area,
       topic,
       topicOf,
@@ -833,6 +886,13 @@ function QuestionTrainer() {
         return;
       }
       startTraining();
+      return;
+    }
+    if (pool.length === 0 && routeFilters.unseen === "1") {
+      autoStart.current = false;
+      setNotice(
+        "Não há questões novas disponíveis para este assunto no momento. Nenhuma questão já feita ou de outro assunto será incluída.",
+      );
       return;
     }
     if (pool.length === 0) {
@@ -1139,7 +1199,14 @@ function QuestionTrainer() {
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
         {historyError && (
-          <Button onClick={() => void reloadHistory()}>Conferir histórico novamente</Button>
+          <Button
+            onClick={() => {
+              void reloadHistory();
+              if (routeFilters.unseen === "1") void unseenHistory.refetch();
+            }}
+          >
+            Conferir histórico novamente
+          </Button>
         )}
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
@@ -1233,6 +1300,7 @@ function QuestionTrainer() {
         )}
         {examNotice}
         {lawNotice}
+        {activityNotice}
         <section className="trainer-practice-panel" aria-label="Modo de prática">
           {missingSupportText > 0 && (
             <details className="trainer-quality-note">
@@ -1440,7 +1508,10 @@ function QuestionTrainer() {
         </DialogContent>
       </Dialog>
 
-      <aside role="status" className="trainer-resume-banner rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+      <aside
+        role="status"
+        className="trainer-resume-banner rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm"
+      >
         <strong>
           {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
           {questions.length}
@@ -1457,6 +1528,7 @@ function QuestionTrainer() {
       </aside>
       {examNotice}
       {lawNotice}
+      {activityNotice}
       {noText && <MissingTextNotice scoring />}
       {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
         <div

@@ -288,6 +288,7 @@ function StudentHome({ user }: { user: UserProfile }) {
       </section>
       <StudentMetricPanel
         metric={metric}
+        userId={user.id}
         selectedDate={metricDate}
         userName={user.full_name?.trim() || "Estudante"}
         training={q.training.data}
