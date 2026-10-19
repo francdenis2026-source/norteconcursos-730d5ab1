@@ -2178,6 +2178,132 @@
   }
 }
 
+/* Last density override, after the complete theme layer. */
+.home-section { padding-block: clamp(42px, 5vw, 64px); }
+.home-start { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 10px; padding-block: 12px 18px; }
+.home-start__grid { gap: 10px; }
+.home-start .home-testing, .home-start .daily-badge, .home-start .question-count-badge { min-height: 52px; padding: 9px 12px; border-radius: 10px; }
+.home-start .home-testing p span, .home-start .question-count-eyebrow, .home-start .question-count-detail { display: none; }
+.home-start .daily-badge__progress { display: none; }
+.home-start .question-count-main strong { font-size: 1.5rem; }
+.home-platform__visual > img { height: 300px; }
+.home-core-tools { padding: 18px; }
+.home-core-tool { padding-block: 12px; }
+.home-tools { gap: 8px; margin-top: 14px; }
+.home-tool summary { min-height: 54px; padding: 11px 12px; }
+.home-tool p { padding: 0 12px 12px; }
+.home-method__intro { margin-bottom: 22px; }
+.home-method__visual img { height: 170px; }
+.home-steps > li { padding: 16px; }
+.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
+.home-opportunity__image { height: 116px; }
+.home-opportunity__body { padding: 0 14px 14px; }
+.home-exam-details { margin: 8px 0; }
+.home-career { padding: 12px; }
+.home-sources { padding-block: 36px 42px; }
+.home-sources__visual img { height: 210px; }
+.home-source-details { padding-inline: 14px; }
+.home-source-details > summary { min-height: 60px; }
+.home-plan { padding: 12px; gap: 7px; }
+.home-plan__media { height: 94px; margin: -12px -12px 2px; }
+.home-plan__price { font-size: 26px; }
+@media (max-width: 900px) {
+  .home-start { grid-template-columns: 1fr; }
+  .home-start .home-testing { width: 100%; }
+  .home-platform__visual > img { height: 250px; }
+  .home-sources__visual img { height: 190px; }
+}
+@media (max-width: 600px) {
+  .home-section { padding-block: 38px; }
+  .home-start { display: block; padding-block: 10px 14px; }
+  .home-start .home-testing { margin-bottom: 8px; }
+  .home-start__grid { grid-template-columns: 1fr; gap: 8px; }
+  .home-start .daily-badge, .home-start .question-count-badge { min-height: 50px; }
+  .home-platform__visual > img { height: 190px; }
+  .home-method__visual img { height: 150px; }
+  .home-opportunity__image { height: 112px; }
+  .home-sources__visual img { height: 160px; }
+  .home-plan__media { height: 82px; }
+}
+
+/* Density pass: keep the homepage informative without oversized card surfaces. */
+.home-section { padding-block: clamp(42px, 5vw, 64px); }
+.home-start {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  gap: 10px;
+  padding-block: 12px 18px;
+}
+.home-start__grid { gap: 10px; }
+.home-start .home-testing,
+.home-start .daily-badge,
+.home-start .question-count-badge {
+  min-height: 52px;
+  padding: 9px 12px;
+  border-radius: 10px;
+}
+.home-start .home-testing p { line-height: 1.25; }
+.home-start .home-testing p span { display: none; }
+.home-start .home-testing a { font-size: 11px; }
+.home-start .daily-badge { gap: .45rem; }
+.home-start .daily-badge__progress { display: none; }
+.home-start .daily-badge__body { gap: .5rem; }
+.home-start .daily-badge__main strong { font-size: .95rem; }
+.home-start .daily-badge__main small { font-size: .68rem; }
+.home-start .question-count-badge { gap: 10px; }
+.home-start .question-count-content { min-width: 0; }
+.home-start .question-count-eyebrow,
+.home-start .question-count-detail { display: none; }
+.home-start .question-count-main strong { font-size: 1.5rem; }
+.home-start .question-count-main span { font-size: .7rem; }
+.home-platform__visual > img { height: 300px; }
+.home-core-tools { padding: 18px; }
+.home-core-tool { padding-block: 12px; }
+.home-core-tool p { margin-top: 4px; line-height: 1.5; }
+.home-tools { margin-top: 14px; gap: 8px; }
+.home-tool summary { min-height: 54px; padding: 11px 12px; }
+.home-tool p { padding: 0 12px 12px; line-height: 1.5; }
+.home-method__intro { margin-bottom: 22px; }
+.home-method__visual img { height: 170px; }
+.home-steps > li { padding: 16px; }
+.home-steps p { line-height: 1.5; }
+.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
+.home-opportunity__image { height: 116px; }
+.home-opportunity__body { padding: 0 14px 14px; }
+.home-exam-details { margin: 8px 0; }
+.home-exam-details summary { min-height: 38px; }
+.home-careers__visual { margin-top: 18px; }
+.home-careers__visual img { height: 180px; }
+.home-career { padding: 12px; }
+.home-sources { padding-block: 36px 42px; }
+.home-sources__visual img { height: 210px; }
+.home-source-details { padding-inline: 14px; }
+.home-source-details > summary { min-height: 60px; }
+.home-sources__grid { gap: 14px; padding-bottom: 14px; }
+.home-plan { padding: 12px; gap: 7px; }
+.home-plan__media { height: 94px; margin: -12px -12px 2px; }
+.home-plan__price { font-size: 26px; }
+.home-final { padding-top: 52px; }
+.home-final__lineup { margin-top: 34px; }
+@media (max-width: 900px) {
+  .home-start { grid-template-columns: 1fr; }
+  .home-start .home-testing { width: 100%; }
+  .home-platform__visual > img { height: 250px; }
+  .home-sources__visual img { height: 190px; }
+}
+@media (max-width: 600px) {
+  .home-section { padding-block: 38px; }
+  .home-start { display: block; padding-block: 10px 14px; }
+  .home-start .home-testing { margin-bottom: 8px; }
+  .home-start__grid { grid-template-columns: 1fr; gap: 8px; }
+  .home-start .daily-badge,
+  .home-start .question-count-badge { min-height: 50px; }
+  .home-platform__visual > img { height: 190px; }
+  .home-method__visual img { height: 150px; }
+  .home-opportunity__image { height: 112px; }
+  .home-sources__visual img { height: 160px; }
+  .home-plan__media { height: 82px; }
+}
+
 @media (min-width: 601px) and (max-width: 900px) {
   .home-method__intro {
     grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
@@ -3696,4 +3822,52 @@
   .home-careers__grid { grid-template-columns: 1fr; }
   .home-careers__visual img, .home-sources__visual img { height: 190px; }
   .home-final { padding-top: 52px; }
+}
+
+/* Final density correction */
+.home-section { padding-block: clamp(42px, 5vw, 64px); }
+.home-start { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 10px; padding-block: 12px 18px; }
+.home-start__grid { gap: 10px; }
+.home-start .home-testing, .home-start .daily-badge, .home-start .question-count-badge { min-height: 52px; padding: 9px 12px; border-radius: 10px; }
+.home-start .home-testing p span, .home-start .question-count-eyebrow, .home-start .question-count-detail { display: none; }
+.home-start .daily-badge__progress { display: none; }
+.home-start .question-count-main strong { font-size: 1.5rem; }
+.home-platform__visual > img { height: 300px; }
+.home-core-tools { padding: 18px; }
+.home-core-tool { padding-block: 12px; }
+.home-tools { gap: 8px; margin-top: 14px; }
+.home-tool summary { min-height: 54px; padding: 11px 12px; }
+.home-tool p { padding: 0 12px 12px; }
+.home-method__intro { margin-bottom: 22px; }
+.home-method__visual img { height: 170px; }
+.home-steps > li { padding: 16px; }
+.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
+.home-opportunity__image { height: 116px; }
+.home-opportunity__body { padding: 0 14px 14px; }
+.home-exam-details { margin: 8px 0; }
+.home-career { padding: 12px; }
+.home-sources { padding-block: 36px 42px; }
+.home-sources__visual img { height: 210px; }
+.home-source-details { padding-inline: 14px; }
+.home-source-details > summary { min-height: 60px; }
+.home-plan { padding: 12px; gap: 7px; }
+.home-plan__media { height: 94px; margin: -12px -12px 2px; }
+.home-plan__price { font-size: 26px; }
+@media (max-width: 900px) {
+  .home-start { grid-template-columns: 1fr; }
+  .home-start .home-testing { width: 100%; }
+  .home-platform__visual > img { height: 250px; }
+  .home-sources__visual img { height: 190px; }
+}
+@media (max-width: 600px) {
+  .home-section { padding-block: 38px; }
+  .home-start { display: block; padding-block: 10px 14px; }
+  .home-start .home-testing { margin-bottom: 8px; }
+  .home-start__grid { grid-template-columns: 1fr; gap: 8px; }
+  .home-start .daily-badge, .home-start .question-count-badge { min-height: 50px; }
+  .home-platform__visual > img { height: 190px; }
+  .home-method__visual img { height: 150px; }
+  .home-opportunity__image { height: 112px; }
+  .home-sources__visual img { height: 160px; }
+  .home-plan__media { height: 82px; }
 }
