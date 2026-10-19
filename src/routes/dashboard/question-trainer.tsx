@@ -1,3 +1,5 @@
+import { scrollAppToSection } from "@/lib/appScroll";
+import { trainerContext } from "@/lib/trainerContext";
 import { useUnseenActivity } from "@/hooks/useUnseenActivity";
 import { freshActivityQuestions } from "@/lib/dailyStudyActivity";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
@@ -961,6 +963,36 @@ function QuestionTrainer() {
     if (started && questions.length > 0 && index >= questions.length) clearBookmark();
   }, [started, questions.length, index, userId]);
   const question = questions[index];
+  const focusTarget = !started
+    ? "trainer-setup"
+    : question
+      ? "trainer-question"
+      : "trainer-result-title";
+  const focusKey = `${routeKey}:${focusTarget}:${index}:${question?.source ?? ""}:${question?.id ?? ""}`;
+  const focusedEntry = React.useRef("");
+  React.useEffect(() => {
+    if (!canLoad || loading || error || focusedEntry.current === focusKey) return;
+    let second = 0;
+    const first = window.requestAnimationFrame(() => {
+      second = window.requestAnimationFrame(() => {
+        if (scrollAppToSection(focusTarget)) focusedEntry.current = focusKey;
+      });
+    });
+    return () => {
+      window.cancelAnimationFrame(first);
+      window.cancelAnimationFrame(second);
+    };
+  }, [canLoad, loading, error, focusKey, focusTarget]);
+  const setupSubjects = question
+    ? []
+    : [...new Set(trainingPool.map((q) => canonicalSubject(q.subject)))];
+  const context = trainerContext(
+    question,
+    subject === "all" && setupSubjects.length === 1 ? setupSubjects[0] || subject : subject,
+    topic,
+    routeFilters.studyTopic,
+  );
+
   // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
   const noText = !!question && needsMissingSupportText(question);
   const nonScoring =
@@ -1143,9 +1175,8 @@ function QuestionTrainer() {
     setSaveError("");
     setCommunityOpen(false);
     setIndex(target);
-    window.requestAnimationFrame(() =>
-      document.getElementById("trainer-question")?.scrollIntoView({ block: "start" }),
-    );
+    if (target === index)
+      window.requestAnimationFrame(() => scrollAppToSection("trainer-question"));
   };
   const next = () => goTo(index + 1);
   const restart = () => {
@@ -1358,62 +1389,75 @@ function QuestionTrainer() {
           </div>
         </section>
         <PcprExamSpotlight compact />
-        <TrainerSetup
-          loading={loading}
-          available={
-            practiceMode === "catalog"
-              ? catalogSessionQuestions(trainingPool, locked, dailyRemaining).length
-              : trainingPool.length
-          }
-          dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
-          choices={choices}
-          facets={facets}
-          currencyLocked={!currencyAllowed}
-          values={{
-            contest,
-            board,
-            career,
-            year,
-            appliedExam,
-            subject,
-            source,
-            reviewed,
-            difficulty,
-            currency: activeCurrency,
-            state,
-            category,
-            area,
-            topic,
-            limit,
-            orderMode,
-          }}
-          setters={{
-            setContest: manual(setContest),
-            setBoard: manual(setBoard),
-            setCareer: manual(setCareer),
-            setYear: manual(setYear),
-            setAppliedExam: selectAppliedExam,
-            setSubject: (value: string) => {
-              setSubject(value);
-              setTopic("all");
-            },
-            setSource: setSource,
-            setReviewed: setReviewed,
-            setDifficulty: setDifficulty,
-            setCurrency: setCurrency,
-            setState: setState,
-            setCategory: setCategory,
-            setArea: (value: string) => {
-              setArea(value);
-              setSubject("all");
-              setTopic("all");
-            },
-            setTopic: setTopic,
-            setLimit,
-            setOrderMode,
-          }}
-          start={startTraining}
-        />
+        <div
+          id="trainer-setup"
+          tabIndex={-1}
+          className="trainer-focus-target"
+          aria-label="Configurar treino de questões"
+        >
+          <TrainerContextBanner
+            discipline={context.discipline}
+            topic={context.topic}
+            automatic={context.automatic}
+            setup
+          />
+          <TrainerSetup
+            loading={loading}
+            available={
+              practiceMode === "catalog"
+                ? catalogSessionQuestions(trainingPool, locked, dailyRemaining).length
+                : trainingPool.length
+            }
+            dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
+            choices={choices}
+            facets={facets}
+            currencyLocked={!currencyAllowed}
+            values={{
+              contest,
+              board,
+              career,
+              year,
+              appliedExam,
+              subject,
+              source,
+              reviewed,
+              difficulty,
+              currency: activeCurrency,
+              state,
+              category,
+              area,
+              topic,
+              limit,
+              orderMode,
+            }}
+            setters={{
+              setContest: manual(setContest),
+              setBoard: manual(setBoard),
+              setCareer: manual(setCareer),
+              setYear: manual(setYear),
+              setAppliedExam: selectAppliedExam,
+              setSubject: (value: string) => {
+                setSubject(value);
+                setTopic("all");
+              },
+              setSource: setSource,
+              setReviewed: setReviewed,
+              setDifficulty: setDifficulty,
+              setCurrency: setCurrency,
+              setState: setState,
+              setCategory: setCategory,
+              setArea: (value: string) => {
+                setArea(value);
+                setSubject("all");
+                setTopic("all");
+              },
+              setTopic: setTopic,
+              setLimit,
+              setOrderMode,
+            }}
+            start={startTraining}
+          />
+        </div>
       </div>
     );
   if (!questions.length)
@@ -1594,14 +1638,18 @@ function QuestionTrainer() {
         <div className="trainer-question-column">
           <Card
             id="trainer-question"
-            className="question-window trainer-question-paper"
+            tabIndex={-1}
+            aria-label="Questão atual do treino"
+            className="question-window trainer-question-paper trainer-focus-target"
             key={question.id}
           >
             <CardContent className="trainer-question-content">
+              <TrainerContextBanner
+                discipline={context.discipline}
+                topic={context.topic}
+                automatic={context.automatic}
+              />
               <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-                <span className="rounded-full border border-amber-400/50 bg-amber-400/10 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-800 dark:text-amber-300">
-                  {question.subject}
-                </span>
                 <Badge variant="outline">{question.board}</Badge>
                 <Badge variant="outline">
                   {question.contest} · {question.year}
@@ -2522,7 +2570,9 @@ function TrainingResult({
         </span>
         <div>
           <p className="trainer-panel-kicker">RESULTADOS DESTA SESSÃO</p>
-          <h1 id="trainer-result-title">Treino concluído</h1>
+          <h1 id="trainer-result-title" tabIndex={-1}>
+            Treino concluído
+          </h1>
           <p>Confira suas respostas e escolha o próximo passo.</p>
         </div>
       </header>
@@ -2577,5 +2627,39 @@ function TrainingResult({
         </section>
       </div>
     </section>
+  );
+}
+
+function TrainerContextBanner({
+  discipline,
+  topic,
+  automatic,
+  setup = false,
+}: {
+  discipline: string;
+  topic: string;
+  automatic: boolean;
+  setup?: boolean;
+}) {
+  return (
+    <div
+      className="trainer-context"
+      aria-label={
+        setup ? "Disciplina e assunto selecionados" : "Disciplina e assunto da questão atual"
+      }
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div>
+        <span>{setup ? "Disciplina selecionada" : "Disciplina desta questão"}</span>
+        <strong>{discipline}</strong>
+      </div>
+      <div>
+        <span>{setup ? "Assunto selecionado" : "Assunto desta questão"}</span>
+        <strong>{topic}</strong>
+        {automatic && <small>Identificado automaticamente pelo enunciado</small>}
+      </div>
+      {setup && <p>Escolha o assunto nos filtros abaixo ou confirme para iniciar o treino.</p>}
+    </div>
   );
 }
