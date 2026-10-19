@@ -67,6 +67,23 @@ async def main():
      await page.keyboard.press('Escape');await panel.wait_for(state='detached')
      await expect(button).to_be_focused()
     results.append({'theme':theme,'viewport':[w,h],'four_scoped_panels':True})
+  rhythm=page.locator('section[aria-labelledby="dashboard-rhythm-title"]')
+  day_buttons=rhythm.locator('.student-home__week-day')
+  assert await day_buttons.count()==7
+  for i in range(7):
+   button=day_buttons.nth(i);await button.click()
+   panel=page.get_by_role('dialog');await panel.wait_for()
+   assert await panel.locator('[data-metric]').get_attribute('data-metric')=='today'
+   expected='30 min' if i==4 else '15 min' if i==6 else '0 min'
+   assert await panel.locator('.student-metric-panel__summary strong').inner_text()==expected
+   if i!=6:assert await panel.get_by_role('heading',name='Tempo ativo em',exact=False).count()==1
+   assert 'Tempo por dia' not in await panel.inner_text()
+   await page.keyboard.press('Escape');await panel.wait_for(state='detached');await expect(button).to_be_focused()
+  for name in ['Seu ritmo na semana','Ver histórico de tempo']:
+   await rhythm.get_by_role('button',name=name,exact=True).click()
+   panel=page.get_by_role('dialog');await panel.wait_for()
+   assert await panel.locator('[data-metric]').get_attribute('data-metric')=='week'
+   await page.keyboard.press('Escape');await panel.wait_for(state='detached')
   for state in ['empty','error']:
    mode['value']=state;await page.reload(wait_until='domcontentloaded')
    button=page.get_by_role('button',name='Questões resolvidas:',exact=False);await button.wait_for();await page.wait_for_timeout(2500);await button.click()
@@ -75,6 +92,6 @@ async def main():
    else:await panel.get_by_role('alert').wait_for();assert await panel.locator('[data-metric]').count()==0
    await page.keyboard.press('Escape')
   assert scoped and not errors,errors
-  print(json.dumps({'cases':results,'first_response_preserved':True,'empty_and_error_states':True,'user_scoped_queries':True,'browser_errors':errors}))
+  print(json.dumps({'cases':results,'first_response_preserved':True,'empty_and_error_states':True,'user_scoped_queries':True,'seven_day_drilldowns_and_history':True,'browser_errors':errors}))
   await browser.close()
 asyncio.run(main())

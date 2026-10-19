@@ -40,6 +40,7 @@ const dateLabel = (date: string) => `${date.slice(8, 10)}/${date.slice(5, 7)}`;
 
 export function StudentMetricPanel({
   metric,
+  selectedDate,
   userName,
   training,
   activity,
@@ -52,6 +53,7 @@ export function StudentMetricPanel({
   returnFocus,
 }: {
   metric: StudentMetric | null;
+  selectedDate: string | null;
   userName: string;
   training: TrainingRecord[] | undefined;
   activity: ActivityRecord[] | undefined;
@@ -63,7 +65,17 @@ export function StudentMetricPanel({
   onClose: () => void;
   returnFocus: HTMLElement | null;
 }) {
-  const definition = metric ? definitions[metric] : null;
+  const historical = metric === "today" && selectedDate && selectedDate !== acreDateKey(now);
+  const definition = historical
+    ? {
+        ...definitions.today,
+        title: `Tempo ativo em ${selectedDate.split("-").reverse().join("/")}`,
+        description:
+          "Seu tempo e suas sessões registrados exclusivamente neste dia, no horário do Acre.",
+      }
+    : metric
+      ? definitions[metric]
+      : null;
   return (
     <Dialog
       open={!!metric}
@@ -107,6 +119,7 @@ export function StudentMetricPanel({
             metric && (
               <StudentMetricDetails
                 metric={metric}
+                selectedDate={selectedDate}
                 training={training ?? []}
                 activity={activity ?? []}
                 live={live}
@@ -123,12 +136,14 @@ export function StudentMetricPanel({
 /** All views share the exact summary functions used by the dashboard cards. */
 export function StudentMetricDetails({
   metric,
+  selectedDate,
   training,
   activity,
   live,
   now,
 }: {
   metric: StudentMetric;
+  selectedDate: string | null;
   training: TrainingRecord[];
   activity: ActivityRecord[];
   live: number;
@@ -260,20 +275,23 @@ export function StudentMetricDetails({
   const time = summarizeStudyTime(activity, live, now);
   const activeDays = time.days.filter((d) => d.seconds > 0).length;
   const peak = Math.max(1, ...time.days.map((d) => d.seconds));
+  const day = selectedDate ?? today;
+  const isToday = day === today;
   const todayRows = activity.filter(
-    (r) => r.study_date === today && Number.isFinite(r.active_seconds) && r.active_seconds > 0,
+    (r) => r.study_date === day && Number.isFinite(r.active_seconds) && r.active_seconds > 0,
   );
   const savedToday = todayRows.reduce((sum, r) => sum + r.active_seconds, 0);
+  const daySeconds = isToday ? time.today : savedToday;
   return (
     <div className="student-metric-panel__body" data-metric={metric}>
       <div className="student-metric-panel__summary">
         <div>
           <span>
             {metric === "today"
-              ? `Hoje, ${dateLabel(today)} · Acre`
+              ? `${isToday ? "Hoje, " : ""}${dateLabel(day)} · Acre`
               : `${dateLabel(time.days[0]?.date ?? today)} a ${dateLabel(today)} · Acre`}
           </span>
-          <strong>{duration(metric === "today" ? time.today : time.week)}</strong>
+          <strong>{duration(metric === "today" ? daySeconds : time.week)}</strong>
           <p>Tempo ativo de estudo</p>
         </div>
         <Clock aria-hidden="true" />
@@ -282,27 +300,28 @@ export function StudentMetricDetails({
         <>
           <dl className="student-metric-panel__facts">
             <div>
-              <dt>Tempo sincronizado de hoje</dt>
+              <dt>Tempo sincronizado do dia</dt>
               <dd>{duration(savedToday)}</dd>
             </div>
             <div>
-              <dt>Sessões com atividade registrada hoje</dt>
+              <dt>Sessões com atividade no dia</dt>
               <dd>{count(todayRows.length)}</dd>
             </div>
           </dl>
           <section>
             <h3>Como o tempo é contado</h3>
             <p>
-              O relógio considera sua atividade na plataforma. O total de hoje usa o maior valor
-              entre as sessões sincronizadas e o relógio deste aparelho, sem somá-los duas vezes.
+              {isToday
+                ? "O relógio considera sua atividade na plataforma. O total de hoje usa o maior valor entre as sessões sincronizadas e o relógio deste aparelho, sem somá-los duas vezes."
+                : "Este total considera apenas as sessões sincronizadas na data selecionada. O tempo de hoje não é incluído neste histórico."}
             </p>
             <p>
               O dia renova à meia-noite do Acre. O registro sincronizado pode levar até um minuto
               para atualizar.
             </p>
           </section>
-          {!time.today && (
-            <p className="student-metric-panel__empty">Ainda não há tempo ativo registrado hoje.</p>
+          {!daySeconds && (
+            <p className="student-metric-panel__empty">Não há tempo ativo registrado neste dia.</p>
           )}
         </>
       ) : (

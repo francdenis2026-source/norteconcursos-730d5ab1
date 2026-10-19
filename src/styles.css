@@ -13187,3 +13187,12 @@ button.student-home__metric:focus-visible { outline: 2px solid var(--ring); outl
 
 button.student-home__metric { position: relative; padding-right: 28px; }
 .student-home__metric > svg.student-home__metric-arrow { position: absolute; top: 12px; right: 10px; width: 13px; height: 13px; color: var(--muted-foreground); opacity: .7; }
+
+.student-home__week > div:has(.student-home__week-day) { padding: 0; }
+.student-home__week-day { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; min-height: 44px; padding: 8px 0; border-radius: 8px; cursor: pointer; color: inherit; background: transparent; border: 0; font: inherit; }
+.student-home__week-day > span { order: 2; font-size: 10px; color: var(--muted-foreground); }
+.student-home__week-day > strong { order: 0; font-size: 11px; font-weight: 550; color: var(--muted-foreground); }
+.student-home__week-day:hover { background: var(--muted); }
+.student-home__week-day:focus-visible, .student-home__section-button:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.student-home__section-button { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-align: left; cursor: pointer; font: inherit; color: inherit; }
+.student-home__section-button svg { width: 15px; height: 15px; color: var(--muted-foreground); }

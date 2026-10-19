@@ -94,7 +94,9 @@ function StudentHome({ user }: { user: UserProfile }) {
   const [now, setNow] = React.useState(platformDate);
   const [metric, setMetric] = React.useState<StudentMetric | null>(null);
   const metricTrigger = React.useRef<HTMLElement | null>(null);
-  const openMetric = (value: StudentMetric, trigger: HTMLElement) => {
+  const [metricDate, setMetricDate] = React.useState<string | null>(null);
+  const openMetric = (value: StudentMetric, trigger: HTMLElement, date: string | null = null) => {
+    setMetricDate(date);
     metricTrigger.current = trigger;
     setMetric(value);
   };
@@ -286,6 +288,7 @@ function StudentHome({ user }: { user: UserProfile }) {
       </section>
       <StudentMetricPanel
         metric={metric}
+        selectedDate={metricDate}
         userName={user.full_name?.trim() || "Estudante"}
         training={q.training.data}
         activity={q.activity.data}
@@ -504,6 +507,7 @@ function StudentHome({ user }: { user: UserProfile }) {
               icon={TrendingUp}
               title="Seu ritmo na semana"
               id="dashboard-rhythm-title"
+              onOpen={(event) => openMetric("week", event.currentTarget)}
               description="Seu tempo ativo nos últimos 7 dias."
             />
             {q.activity.isError ? (
@@ -517,33 +521,36 @@ function StudentHome({ user }: { user: UserProfile }) {
               <>
                 <div className="student-home__week" role="list" aria-label="Tempo ativo por dia">
                   {time.days.map((d) => (
-                    <div
-                      role="listitem"
-                      key={d.date}
-                      aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}`}
-                      data-today={d.date === today}
-                    >
-                      <span>
-                        {d.date.slice(8)}/{d.date.slice(5, 7)}
-                      </span>
-                      <div className="student-home__bar-track">
-                        <i
-                          style={{
-                            height: d.seconds
-                              ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
-                              : "0%",
-                          }}
-                        />
-                      </div>
-                      <strong>
-                        {d.seconds
-                          ? d.seconds < 60
-                            ? "<1 min"
-                            : d.seconds < 3600
-                              ? `${Math.floor(d.seconds / 60)} min`
-                              : `${Math.round(d.seconds / 360) / 10} h`
-                          : "—"}
-                      </strong>
+                    <div role="listitem" key={d.date} data-today={d.date === today}>
+                      <button
+                        type="button"
+                        className="student-home__week-day"
+                        aria-haspopup="dialog"
+                        aria-label={`${d.date.split("-").reverse().join("/")}: ${duration(d.seconds)}. Ver detalhes do dia`}
+                        onClick={(event) => openMetric("today", event.currentTarget, d.date)}
+                      >
+                        <span>
+                          {d.date.slice(8)}/{d.date.slice(5, 7)}
+                        </span>
+                        <div className="student-home__bar-track">
+                          <i
+                            style={{
+                              height: d.seconds
+                                ? `${Math.max(6, (d.seconds / Math.max(1, ...time.days.map((d) => d.seconds))) * 100)}%`
+                                : "0%",
+                            }}
+                          />
+                        </div>
+                        <strong>
+                          {d.seconds
+                            ? d.seconds < 60
+                              ? "<1 min"
+                              : d.seconds < 3600
+                                ? `${Math.floor(d.seconds / 60)} min`
+                                : `${Math.round(d.seconds / 360) / 10} h`
+                            : "—"}
+                        </strong>
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -553,10 +560,15 @@ function StudentHome({ user }: { user: UserProfile }) {
                     aparecerão aqui.
                   </p>
                 )}
-                <Link to="/dashboard/performance" hash="tempo" className="student-home__text-link">
+                <button
+                  type="button"
+                  className="student-home__text-link"
+                  aria-haspopup="dialog"
+                  onClick={(event) => openMetric("week", event.currentTarget)}
+                >
                   Ver histórico de tempo
                   <ArrowRight aria-hidden="true" />
-                </Link>
+                </button>
               </>
             )}
           </section>
@@ -804,11 +816,13 @@ function SectionTitle({
   title,
   id,
   description,
+  onOpen,
 }: {
   icon: LucideIcon;
   title: string;
   id: string;
   description?: string;
+  onOpen?: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
     <header className="student-home__section-title">
@@ -816,7 +830,21 @@ function SectionTitle({
         <Icon aria-hidden="true" />
       </span>
       <div>
-        <h2 id={id}>{title}</h2>
+        <h2 id={id}>
+          {onOpen ? (
+            <button
+              type="button"
+              className="student-home__section-button"
+              aria-haspopup="dialog"
+              onClick={onOpen}
+            >
+              {title}
+              <ArrowRight aria-hidden="true" />
+            </button>
+          ) : (
+            title
+          )}
+        </h2>
         {description && <p>{description}</p>}
       </div>
     </header>
