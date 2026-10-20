@@ -1,4 +1,5 @@
 import "@/styles/dashboard-glass.css";
+import "@/styles/dashboard-light.css";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";

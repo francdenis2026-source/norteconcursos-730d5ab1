@@ -1,0 +1,144 @@
+/* Dashboard light palette. Scoped to the application; dark mode and public pages are untouched. */
+:root:not(.dark) .app-shell,
+:root:not(.dark) body:has(.app-shell) [role="dialog"] {
+  --background: #eef3fa;
+  --foreground: #172a46;
+  --card: #ffffff;
+  --card-foreground: #172a46;
+  --popover: #ffffff;
+  --popover-foreground: #172a46;
+  --primary: #2454c6;
+  --primary-foreground: #ffffff;
+  --secondary: #e9effa;
+  --secondary-foreground: #294467;
+  --muted: #e8eef7;
+  --muted-foreground: #52637c;
+  --accent: #e6eeff;
+  --accent-foreground: #1d449c;
+  --border: #d2deed;
+  --input: #7e94b3;
+  --ring: #3066dc;
+  --chart-1: #2454c6;
+  --chart-2: #087c73;
+  --chart-3: #7950c5;
+  --chart-4: #b36c14;
+  --chart-5: #c03e63;
+}
+:root:not(.dark) #dashboard-content {
+  --panel-accent: #2454c6;
+  background-color: var(--background);
+}
+:root:not(.dark) #dashboard-content[data-hue="teal"] { --panel-accent: #08776e; }
+:root:not(.dark) #dashboard-content[data-hue="violet"] { --panel-accent: #7044b7; }
+:root:not(.dark) #dashboard-content[data-hue="gold"] { --panel-accent: #93601a; }
+:root:not(.dark) #dashboard-content[data-hue="rose"] { --panel-accent: #b3385c; }
+
+/* Keep the glass, with a clear edge and a restrained accent instead of grey-on-grey. */
+:root:not(.dark) #dashboard-content[data-header-style="glass"] :is(
+  .page-hero, .tactical-feature-hero, .catalog-command-hero,
+  .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+  .library-header, .edital-heading, .edital-topic-heading, .ranking-glass-header
+) {
+  background: linear-gradient(120deg, rgb(255 255 255 / .96) 18%, color-mix(in srgb, var(--panel-accent) 9%, white)) !important;
+  border-color: color-mix(in srgb, var(--panel-accent) 20%, #d5e0ef) !important;
+  box-shadow: inset 0 3px 0 color-mix(in srgb, var(--panel-accent) 78%, white), inset 0 1px 0 white, 0 10px 28px -16px rgb(31 57 100 / .3) !important;
+}
+:root:not(.dark) #dashboard-content[data-header-style="glass"] :is(
+  .hero-chip, .internal-hero-kicker, .study-assistant-hero__eyebrow,
+  .exam-simulator-hero__eyebrow, .trainer-panel-kicker, .edital-eyebrow,
+  .ranking-glass-header__kicker
+) {
+  color: var(--panel-accent) !important;
+}
+:root:not(.dark) #dashboard-content[data-header-style="glass"] .hero-chip {
+  border-color: color-mix(in srgb, var(--panel-accent) 22%, white) !important;
+  background: color-mix(in srgb, var(--panel-accent) 7%, white) !important;
+}
+:root:not(.dark) #dashboard-content[data-header-style="glass"] :is(.page-hero, .ranking-glass-header) h1 :is(em, span) { color: var(--panel-accent) !important; }
+
+/* White reading surfaces sit above a cooler canvas; semantic tinted cards retain their color. */
+:root:not(.dark) #dashboard-content [data-slot="card"] {
+  box-shadow: 0 2px 4px rgb(21 46 87 / .025), 0 12px 28px -21px rgb(21 46 87 / .32);
+}
+/* Explicit semantic borders (success, warning, error) keep their meaning. */
+:root:not(.dark) #dashboard-content [data-slot="card"]:not([class*="border-emerald"]):not([class*="border-rose"]):not([class*="border-red"]):not([class*="border-amber"]):not([class*="border-sky"]):not([class*="border-primary"]) { border-color: #cddbed; }
+:root:not(.dark) #dashboard-content [data-slot="card"] > [data-slot="card-header"] {
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: linear-gradient(115deg, #f3f7fe, rgb(255 255 255 / .35) 80%);
+  border-bottom: 1px solid #e1e9f4;
+  margin-bottom: 1rem;
+}
+:root:not(.dark) #dashboard-content [data-slot="card-title"] {
+  color: #203d65;
+  font-weight: 750;
+  line-height: 1.4;
+}
+:root:not(.dark) #dashboard-content [data-slot="card-title"] > svg { color: var(--primary); }
+:root:not(.dark) #dashboard-content [data-slot="card-description"] { color: var(--muted-foreground); line-height: 1.65; }
+
+/* Fields and focus states remain identifiable against both white and tinted surfaces. */
+:root:not(.dark) #dashboard-content :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]), select, textarea, button[role="combobox"]) {
+  color: var(--foreground);
+  border-color: var(--input);
+  background-color: #ffffff;
+  min-height: 42px;
+  box-shadow: inset 0 1px 2px rgb(21 46 87 / .025);
+}
+:root:not(.dark) #dashboard-content :is(input, select, textarea, button[role="combobox"]):focus-visible {
+  border-color: var(--ring);
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgb(48 102 220 / .12);
+}
+:root:not(.dark) #dashboard-content :is(input, textarea)::placeholder { color: #63748d; opacity: 1; }
+
+/* Selected navigation and tab states use color as well as weight and shape. */
+:root:not(.dark) #dashboard-content [role="tablist"] {
+  background: #e7eef9;
+  border: 1px solid #cfdbed;
+  padding: 4px;
+  border-radius: .875rem;
+}
+:root:not(.dark) #dashboard-content [role="tab"] { color: #415775; }
+:root:not(.dark) #dashboard-content [role="tab"][data-state="active"] {
+  color: white;
+  background: var(--primary);
+  box-shadow: 0 3px 8px rgb(36 84 198 / .2);
+}
+:root:not(.dark) #dashboard-content table thead {
+  background: #edf3fc;
+  border-bottom: 1px solid #cedbed;
+}
+:root:not(.dark) #dashboard-content table th { color: #344f75; font-weight: 700; }
+:root:not(.dark) #dashboard-content table tbody tr { border-color: #e0e8f3; }
+:root:not(.dark) #dashboard-content table tbody tr:hover { background-color: #f1f6fe; }
+:root:not(.dark) #dashboard-content table tr[data-state="selected"] { background-color: #e7efff; }
+
+:root:not(.dark) .app-shell .app-nav__link[data-active="true"] {
+  background: #e8efff;
+  color: #1d449c;
+  box-shadow: inset 0 0 0 1px #d1ddf7;
+}
+:root:not(.dark) .app-shell .app-nav__link[data-active="true"]::before { background: #2454c6; }
+:root:not(.dark) .app-shell .app-nav__link[data-active="true"] svg { color: #2454c6; }
+:root:not(.dark) .app-shell .app-topbar {
+  background: rgb(255 255 255 / .94);
+  border-bottom-color: #d5e0ee;
+  box-shadow: 0 3px 16px rgb(24 51 94 / .045);
+}
+@media (forced-colors: active) {
+  :root:not(.dark) #dashboard-content [role="tab"][data-state="active"] { outline: 2px solid Highlight; }
+}
+
+/* Buttons share the blue elevation, without carrying a gold glow from the dark theme. */
+:root:not(.dark) #dashboard-content [data-slot="button"][data-variant="default"] {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .15), 0 5px 12px -7px rgb(36 84 198 / .65);
+}
+:root:not(.dark) #dashboard-content [data-slot="button"][data-variant="secondary"] {
+  border: 1px solid #d9e3f2;
+  box-shadow: inset 0 1px 0 white, 0 2px 4px rgb(21 46 87 / .035);
+}
+:root:not(.dark) #dashboard-content [data-slot="button"][data-variant="outline"] { border-color: #b9cbe3; }
+:root:not(.dark) #dashboard-content [data-slot="button"]:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
