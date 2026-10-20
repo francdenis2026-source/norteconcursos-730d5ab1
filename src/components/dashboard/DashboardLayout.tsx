@@ -4,6 +4,8 @@ import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
 import { PlatformBack } from "./PlatformBack";
+import { ReadingSizeControl } from "@/components/accessibility/ReadingSizeControl";
+import { showsReadingControl } from "@/lib/readingScale";
 import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import {
   DashboardNavigation,
@@ -716,6 +718,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               <PlatformBack />
               {children}
             </div>
+            {showsReadingControl(location.pathname) && <ReadingSizeControl />}
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>

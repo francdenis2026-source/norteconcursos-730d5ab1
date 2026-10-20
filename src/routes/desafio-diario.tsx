@@ -1,3 +1,4 @@
+import { ReadingSizeControl } from "@/components/accessibility/ReadingSizeControl";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
@@ -189,6 +190,7 @@ function DesafioDiario() {
 
   return (
     <div className="daily-page min-h-[100svh] bg-background">
+      <ReadingSizeControl />
       <header className="daily-header sticky top-0 z-30 pt-[env(safe-area-inset-top)]">
         <div className="daily-container flex min-h-18 items-center justify-between gap-3">
           <Link to="/" aria-label="Norte Concurso — início">

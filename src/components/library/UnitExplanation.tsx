@@ -38,7 +38,7 @@ export function UnitExplanation({ unit, userId }: { unit: LegalUnit; userId: str
   // avisos de conferência editorial ficam fora da leitura do aluno
   const atencao = e.atencao.filter((t) => !/^Correção editorial/i.test(t));
   return (
-    <section className="space-y-3" aria-label="Entenda este artigo">
+    <section className="reading-text space-y-3" aria-label="Entenda este artigo">
       <header className="flex flex-wrap items-center gap-2">
         <h3 className="text-lg font-bold">Entenda este artigo</h3>
         {e.status === "under_review" && <span className="rounded-full bg-amber-200 px-2.5 py-0.5 text-xs font-bold text-amber-900">Em revisão: só administradores veem</span>}

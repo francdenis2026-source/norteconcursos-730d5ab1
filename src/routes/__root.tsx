@@ -24,6 +24,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
 import { CHUNK_RECOVERY_SCRIPT } from "../lib/chunkRecovery";
+import { READING_SCALE_INIT_SCRIPT } from "../lib/readingScale";
 import { claimSingleDeviceSession, ownsSingleDeviceSession } from "../lib/singleDeviceSession";
 
 function StatusScreen({
@@ -177,6 +178,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         {/* Aplica claro/escuro antes da primeira pintura, para não piscar. */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: READING_SCALE_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
         <HeadContent />
       </head>
