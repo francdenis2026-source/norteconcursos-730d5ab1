@@ -26,7 +26,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { RankingHeader } from "@/components/dashboard/RankingHeader";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -391,18 +391,7 @@ function RankingPage() {
 
   return (
     <div className="space-y-6">
-      <PageHero
-        image="command-room"
-        size="sm"
-        kicker="Desempenho"
-        icon={Trophy}
-        title={
-          <>
-            Ranking <em>geral</em>
-          </>
-        }
-        description="Compare seu desempenho, encontre candidatos e acompanhe sua posição. Sobrenomes ficam protegidos e administradores não participam."
-      />
+      <RankingHeader />
       <Card className="border-0 shadow-lg ring-1 ring-border/70">
         <CardHeader className="space-y-3">
           <div className="flex gap-1.5" role="group" aria-label="Seção do ranking">

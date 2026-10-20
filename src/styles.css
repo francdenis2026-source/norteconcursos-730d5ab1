@@ -13572,3 +13572,65 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .student-metric-panel__chips > button:not(:disabled):hover .student-metric-panel__chip-go { transform: translateX(2px); color: var(--chip-accent); }
 @media (max-width: 520px) { .student-metric-panel__chips { flex-basis: 100%; max-width: none; } }
 @media (prefers-reduced-motion: reduce) { .student-metric-panel__chips > button, .student-metric-panel__chip-go { transition: none; } }
+
+/* Ranking: translucent typography panel, independent of image-backed page heroes. */
+.ranking-glass-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--background) 84%, transparent);
+  color: var(--foreground);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--foreground) 9%, transparent), 0 12px 36px rgb(0 0 0 / .08);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+.ranking-glass-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(115deg, color-mix(in srgb, var(--primary) 7%, transparent), transparent 65%);
+}
+.ranking-glass-header__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0 0 .9rem;
+  color: var(--primary);
+  font-size: .6875rem;
+  font-weight: 750;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.ranking-glass-header__kicker svg { width: .875rem; height: .875rem; }
+.ranking-glass-header h1 {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  line-height: 1.12;
+  font-weight: 850;
+  letter-spacing: -.04em;
+}
+.ranking-glass-header h1 span { color: var(--primary); }
+.ranking-glass-header__description {
+  max-width: 66ch;
+  margin: .9rem 0 0;
+  font-size: clamp(.9375rem, 1.4vw, 1rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.ranking-glass-header__privacy {
+  max-width: 70ch;
+  margin: .35rem 0 0;
+  color: var(--muted-foreground);
+  font-size: .8125rem;
+  line-height: 1.65;
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .ranking-glass-header { background: var(--background); }
+}
