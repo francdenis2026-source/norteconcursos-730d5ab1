@@ -1,4 +1,7 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { useSessionHydration } from "@/hooks/useSessionHydration";
+import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
+import { openRow, recordLocalSave } from "@/lib/sessionSnapshots";
 import { LawText } from "@/components/dashboard/LawText";
 import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import { QuestionText } from "@/components/dashboard/QuestionText";
@@ -383,6 +386,8 @@ function QuestionTrainer() {
   const clearBookmark = () => {
     bookmarkRef.current = null;
     if (!userId) return;
+    // A sessão encerrada também sai da conta, para outros aparelhos não oferecerem retomada.
+    void snapshotUploader(userId).close("trainer", "trainer", Date.now());
     try {
       localStorage.removeItem(`trainer-bookmark:${userId}`);
       sessionStorage.removeItem(`trainer-bookmark:${userId}`);
@@ -406,6 +411,8 @@ function QuestionTrainer() {
   React.useEffect(() => startActivityTracking(), []);
   const questionSecsRef = React.useRef(0);
   const routeKey = trainerRouteKey(routeFilters);
+  // Traz da conta a sessão mais recente antes de tentar retomar (outro aparelho).
+  const sessionsReady = useSessionHydration(userId, canLoad);
   const pendingRestore = React.useRef(false);
   const [resumeNotice, setResumeNotice] = React.useState(false);
   const [bookmarkError, setBookmarkError] = React.useState(false);
@@ -457,10 +464,18 @@ function QuestionTrainer() {
     if (!saved) return;
     try {
       localStorage.setItem(`trainer-bookmark:${saved.userId}`, JSON.stringify(saved.value));
+      recordLocalSave(localStorage, "trainer", saved.userId, "trainer", saved.value.savedAt);
       setBookmarkError(false);
     } catch {
       setBookmarkError(true);
     }
+    // Espelho na conta: conteúdo sem relógios, para só enviar quando algo mudou de fato.
+    const { savedAt, questionSeconds, ...stable } = saved.value;
+    void questionSeconds;
+    snapshotUploader(saved.userId).schedule(
+      openRow("trainer", "trainer", saved.value, savedAt),
+      JSON.stringify(stable),
+    );
   }, []);
   // Save selections, position and active time before a browser reload can discard React.
   React.useEffect(() => {
@@ -549,7 +564,8 @@ function QuestionTrainer() {
     routeFilters.limit,
   ]);
   React.useEffect(() => {
-    if (!pendingRestore.current || loading || error || examEdition.isError || !userId) return;
+    if (!pendingRestore.current || loading || error || examEdition.isError || !userId || !sessionsReady)
+      return;
     pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
@@ -619,6 +635,7 @@ function QuestionTrainer() {
     subjectCatalog,
     lockedSubject,
     lockedCollection,
+    sessionsReady,
   ]);
   const examNotice = routeFilters.edition ? (
     <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">

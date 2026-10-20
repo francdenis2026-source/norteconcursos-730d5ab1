@@ -96,5 +96,8 @@ no celular, poemas e tabelas preservados. Alternativas ficam sempre à esquerda.
 puladas e o que falta no treino; respondidas, puladas, em branco e prazo na prova (o gabarito só aparece
 na entrega). O link reabre a tela com exatamente os filtros em que a sessão foi salva, que é o que faz o
 marcador ser reconhecido. Respostas confirmadas continuam no histórico da conta.
-Limite: o marcador é do navegador. Em outro aparelho a sessão não aparece; isso exigiria guardar o
-marcador na conta (tabela nova), não feito nesta entrega.
+Sincronização com a conta: `src/lib/sessionSnapshots.ts` espelha o marcador do treinador e o rascunho do simulado em
+`study_session_snapshots` (migração `20261020150000_study_session_snapshots.sql`, **criada, a aplicar**). Vale a
+gravação mais nova (o banco também recusa trocar por uma mais antiga); encerrar a sessão grava uma linha `closed`
+para os outros aparelhos limparem a cópia. As telas só tentam retomar depois de consultar a conta
+(`useSessionHydration`). Sem a tabela, tudo segue só no navegador. As respostas confirmadas já eram da conta.

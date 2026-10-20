@@ -1,4 +1,7 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { useSessionHydration } from "@/hooks/useSessionHydration";
+import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
+import { openRow, recordLocalSave } from "@/lib/sessionSnapshots";
 import { LawText } from "@/components/dashboard/LawText";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { simulatorReference } from "@/lib/questionIdentity";
@@ -220,6 +223,8 @@ function ProfessionalSimulator() {
   }, [user, isAdmin, saveStatus]);
   const finishing = React.useRef(false);
   const draftLoaded = React.useRef("");
+  // Traz da conta a prova mais recente antes de oferecer a retomada (outro aparelho).
+  const sessionsReady = useSessionHydration(user?.id, !!user && user.id !== "demo-user");
   const scope = isEnemMode ? "enem" : "contests";
   const paperMode = buildMode === "paper" && !isEnemMode;
 
@@ -698,6 +703,8 @@ function ProfessionalSimulator() {
 
   function clearSimulatorDraft() {
     if (!user) return;
+    // Prova encerrada ou descartada também sai da conta, para outros aparelhos não oferecerem retomada.
+    void snapshotUploader(user.id).close("simulator", scope, Date.now());
     try {
       localStorage.removeItem(`norte:simulator:v1:${user.id}:${scope}`);
     } catch {
@@ -963,9 +970,16 @@ function ProfessionalSimulator() {
     } catch {
       setStorageError(true);
     }
+    // Espelho na conta (envio com espera e só quando o conteúdo muda).
+    const savedAt = Date.now();
+    recordLocalSave(localStorage, "simulator", draft.owner, draft.scope, savedAt);
+    snapshotUploader(draft.owner).schedule(
+      openRow("simulator", draft.scope, draft, savedAt),
+      JSON.stringify(draft),
+    );
   }, [draft]);
   React.useEffect(() => {
-    if (loading || loadError || !user || user.id === "demo-user") return;
+    if (loading || loadError || !user || user.id === "demo-user" || !sessionsReady) return;
     const key = `norte:simulator:v1:${user.id}:${scope}`;
     if (draftLoaded.current === key) return;
     draftLoaded.current = key;
@@ -988,7 +1002,7 @@ function ProfessionalSimulator() {
     } catch {
       setInvalidDraft(true);
     }
-  }, [loading, loadError, user?.id, scope, catalog, isEnemMode]);
+  }, [loading, loadError, user?.id, scope, catalog, isEnemMode, sessionsReady]);
   React.useEffect(() => {
     if (sessionConfig && (sessionConfig.owner !== user?.id || sessionConfig.scope !== scope)) {
       setStage("setup");

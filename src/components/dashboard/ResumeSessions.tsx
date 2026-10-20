@@ -7,6 +7,7 @@ import { Clock3, PlayCircle, SkipForward } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { platformNow } from "@/lib/platformClock";
+import { useSessionHydration } from "@/hooks/useSessionHydration";
 import { readInProgressSessions, type ResumeSession } from "@/lib/sessionResume";
 
 function minutes(seconds: number) {
@@ -29,8 +30,10 @@ export function ResumeSessions({
   className?: string;
 }) {
   const [sessions, setSessions] = React.useState<ResumeSession[]>([]);
+  // Sessões iniciadas em outro aparelho chegam da conta antes da primeira leitura.
+  const synced = useSessionHydration(userId);
   React.useEffect(() => {
-    if (!userId) return;
+    if (!userId || !synced) return;
     const load = () => {
       try {
         setSessions(readInProgressSessions(localStorage, userId, platformNow()));
@@ -45,7 +48,7 @@ export function ResumeSessions({
       window.removeEventListener("storage", load);
       window.removeEventListener("focus", load);
     };
-  }, [userId]);
+  }, [userId, synced]);
   const visible = sessions.filter(
     (s) =>
       (!only || s.kind === only) &&
