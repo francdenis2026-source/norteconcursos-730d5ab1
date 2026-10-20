@@ -12,15 +12,27 @@ export function HeroVideo({
 }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
+  // Celular e tablet recebem uma versão menor (640 px, ~85 KB): o vídeo ocupa só uma faixa de 240 px
+  // nessas telas, e o arquivo grande demorava a chegar em conexões móveis.
+  const [compact, setCompact] = useState(false);
   const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
   const finishRef = useRef<() => void>(() => {});
   const retryRef = useRef<() => void>(() => {});
 
   useEffect(() => {
-    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
-      ?.saveData;
-    // Plays on phones and tablets too; only data saver and reduced motion keep the still image.
-    if (!saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const connection = (
+      navigator as Navigator & {
+        connection?: { saveData?: boolean; effectiveType?: string; downlink?: number };
+      }
+    ).connection;
+    // Conexão claramente lenta: a introdução chegaria tarde demais e "apareceria" por cima da página
+    // já lida, então ela nem começa (a hero aparece de imediato).
+    const slow =
+      /(^|-)2g$/.test(connection?.effectiveType ?? "") ||
+      (connection?.downlink !== undefined && connection.downlink > 0 && connection.downlink < 0.7);
+    // Plays on phones and tablets too; only data saver, slow networks and reduced motion keep the still image.
+    if (!connection?.saveData && !slow && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCompact(matchMedia("(max-width: 900px)").matches);
       setLoadVideo(true);
     } else onIntroSettled?.();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,7 +71,7 @@ export function HeroVideo({
       // Never leave the visitor behind an intro stalled by the connection.
       if (!playbackTimer) playbackTimer = window.setTimeout(finish, 9000);
     };
-    const loadTimer = window.setTimeout(finish, 5000);
+    const loadTimer = window.setTimeout(finish, 8000);
     element.addEventListener("playing", started);
     element.addEventListener("ended", finish);
     element.addEventListener("error", finish);
@@ -124,8 +136,14 @@ export function HeroVideo({
             disablePictureInPicture
             aria-hidden="true"
           >
-            <source src="/media/hero/hero-intro.mp4" type="video/mp4" />
-            <source src="/media/hero/hero-intro.webm" type="video/webm" />
+            <source
+              src={`/media/hero/hero-intro${compact ? "-mobile" : ""}.mp4`}
+              type="video/mp4"
+            />
+            <source
+              src={`/media/hero/hero-intro${compact ? "-mobile" : ""}.webm`}
+              type="video/webm"
+            />
           </video>
           {phase === "playing" && (
             <button type="button" onClick={() => finishRef.current()}>
