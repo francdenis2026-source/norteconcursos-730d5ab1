@@ -32,8 +32,7 @@ export function PcpiExamPromo() {
           </div>
           <h3 id="pcpi-title">Polícia Civil do Piauí</h3>
           <p>
-            Provas FGV. Escolha o cargo e entre direto nas questões, com correção após cada
-            resposta.
+            FGV · Treino por cargo.
           </p>
         </div>
       </div>
@@ -54,18 +53,20 @@ export function PcpiExamPromo() {
                 <Link
                   to="/dashboard/question-trainer"
                   search={pcpiTrainerSearch(role)}
+                  aria-label={`Resolver questões de ${role}`}
                   className={`home-button ${index === 0 ? "home-button--primary" : "home-button--secondary"}`}
                 >
-                  Resolver {index === 0 ? "Delegado" : "Investigador"}
+                  Resolver
                   <ArrowRight aria-hidden="true" />
                 </Link>
               ) : (
                 <Link
                   to="/auth"
                   search={{ mode: "register" }}
+                  aria-label={`Treinar questões de ${role}`}
                   className={`home-button ${index === 0 ? "home-button--primary" : "home-button--secondary"}`}
                 >
-                  Treinar {index === 0 ? "Delegado" : "Investigador"}
+                  Treinar
                   <ArrowRight aria-hidden="true" />
                 </Link>
               )}

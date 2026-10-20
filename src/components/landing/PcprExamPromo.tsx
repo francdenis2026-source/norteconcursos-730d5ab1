@@ -63,7 +63,7 @@ export function PcprExamPromo() {
           </div>
           <h3 id="pcpr-title">Polícia Civil do Paraná</h3>
           <p>
-            Prova {PCPR_EXAM.board} · {PCPR_EXAM.appliedOn}. Treine com correção imediata.
+            {PCPR_EXAM.board} · Prova de {PCPR_EXAM.appliedOn}.
           </p>
         </div>
       </div>
@@ -122,10 +122,7 @@ export function PcprExamPromo() {
         </details>
         <div className="home-opportunity__bottom">
           {cta}
-          <Link to="/desafio-diario" className="home-text-link">
-            Ou faça o desafio diário
-            <ArrowRight />
-          </Link>
+
           <small>
             Iniciativa educacional independente, sem vínculo com a Polícia Civil do Paraná nem com a
             FGV. Gabarito preliminar da banca, sujeito a alterações após os recursos.

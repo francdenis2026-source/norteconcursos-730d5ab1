@@ -4371,3 +4371,78 @@
   border-radius: 11px 11px 0 0;
 }
 .home.home .home-plan[data-plan] .home-plan__media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* FAQ answers remain distinct from the question in both themes. */
+.home.home .home-faq__list details[open] {
+  padding: 0 14px 14px;
+  border: 1px solid color-mix(in srgb, var(--home-teal) 28%, var(--border));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--home-teal) 5%, var(--card));
+}
+.home.home .home-faq__list details[open] > summary { color: var(--foreground); }
+.home.home .home-faq__list details[open] > summary > svg { color: var(--home-teal); }
+.home.home .home-faq__list details > p {
+  color: var(--home-teal);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.75;
+  padding: 2px 0 2px 12px;
+  border-left: 2px solid color-mix(in srgb, var(--home-teal) 45%, transparent);
+  max-width: 76ch;
+}
+@media (forced-colors: active) {
+  .home.home .home-faq__list details[open], .home.home .home-faq__list details > p { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
+
+/* Compact exam cards: complete campaign artwork, natural height, no empty filler. */
+.home.home .home-rail__track.home-opportunities {
+  grid-auto-columns: calc((100% - 24px) / 3);
+  gap: 12px;
+  align-items: start;
+}
+.home.home .home-rail__track.home-opportunities > .home-opportunity {
+  height: auto;
+  min-height: 0;
+  border-radius: 12px;
+}
+.home.home .home-opportunity .home-opportunity__header { padding: 0; }
+.home.home .home-opportunity .home-opportunity__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 940;
+  border-radius: 0;
+  background: var(--ink);
+}
+.home.home .home-opportunity .home-opportunity__image > img {
+  width: 100%; height: 100%; object-fit: contain; object-position: center;
+}
+.home.home .home-opportunity .home-opportunity__intro { padding: 12px 12px 6px; }
+.home.home .home-opportunity .home-opportunity__identity { margin-bottom: 6px; gap: 8px; }
+.home.home .home-opportunity h3 { font-size: 17px; line-height: 1.3; }
+.home.home .home-opportunity .home-opportunity__intro > p { font-size: 13px; line-height: 1.5; margin-top: 6px; }
+.home.home .home-opportunity .home-opportunity__body { flex: none; padding: 0 12px 12px; }
+.home.home .home-opportunity .home-opportunity__bottom {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0;
+  padding-top: 8px;
+}
+.home.home .home-opportunity .home-opportunity__bottom > small { flex-basis: 100%; margin-top: 4px; font-size: 11px; line-height: 1.5; }
+.home.home .home-opportunity .home-button { min-height: 40px; padding: 8px 10px; gap: 6px; font-size: 12px; }
+.home.home .home-opportunity .home-text-link { min-height: 36px; font-size: 12px; }
+.home.home .home-opportunity .home-exam-details { margin: 0; }
+.home.home .home-opportunity .home-exam-details > summary { min-height: 36px; font-size: 12px; }
+.home.home .home-opportunity .home-pcpi-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 6px; }
+.home.home .home-opportunity .home-pcpi-actions > div { display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.home.home .home-opportunity .home-pcpi-actions p { font-size: 12px; line-height: 1.5; }
+.home.home .home-opportunity .home-pcpi-actions .home-button { width: auto; }
+@media (min-width: 700px) and (max-width: 959px) {
+  .home.home .home-rail__track.home-opportunities { grid-auto-columns: calc((100% - 12px) / 2); }
+}
+@media (max-width: 699px) {
+  .home.home .home-rail__track.home-opportunities { grid-auto-columns: 88%; }
+  .home.home .home-opportunity h3 { font-size: 17px; }
+}
