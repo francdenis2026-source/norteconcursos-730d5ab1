@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
+import "@/styles/home-operations.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -471,14 +472,25 @@ function Index() {
           </div>
         </section>
 
-        <section id="concursos" className="home-section">
+        <section id="concursos" className="home-section home-operations">
           <div className="home-container">
-            <Head
-              kicker="No seu radar"
-              lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
-            >
-              Seu próximo <em>objetivo.</em>
-            </Head>
+            <div className="home-operations__heading">
+              <Head
+                kicker="No seu radar"
+                lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
+              >
+                Seu próximo <em>objetivo.</em>
+              </Head>
+              <img
+                className="home-operations__art"
+                src="/media/hero/auth-carreiras-composicao.webp"
+                alt=""
+                width={1440}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <HomeRail className="home-opportunities" label="Oportunidades de concursos">
               <PcprExamPromo />
               <PcpiExamPromo />
@@ -555,12 +567,15 @@ function Index() {
 
       </main>
 
-      <footer className="home-footer">
+      <footer className="home-footer home-footer--command">
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <NorteBrand />
-              <p>Seu norte na preparação para carreiras policiais.</p>
+              <img className="home-footer__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
+              <div>
+                <NorteBrand />
+                <p>Seu norte na preparação para carreiras policiais.</p>
+              </div>
             </div>
             <FooterColumn
               title="Plataforma"

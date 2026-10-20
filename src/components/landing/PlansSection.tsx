@@ -36,7 +36,7 @@ const PLAN_IMAGES: Record<
 
 export function PlansSection() {
   return (
-    <section id="planos" className="home-section home-plans" aria-labelledby="planos-title">
+    <section id="planos" className="home-section home-plans home-plans--insignia" aria-labelledby="planos-title">
       <div className="home-container">
         <div className="home-plans__intro">
           <div className="home-heading">
@@ -53,6 +53,7 @@ export function PlansSection() {
             </p>
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
+            <img className="home-plans__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
             <span className="home-plans__signal-icon">
               <Clock aria-hidden="true" />
             </span>
