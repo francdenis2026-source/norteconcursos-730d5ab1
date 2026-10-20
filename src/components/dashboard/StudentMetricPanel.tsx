@@ -17,6 +17,7 @@ import {
   type ActivityRecord,
 } from "@/lib/studentDashboard";
 import { fmtHuman } from "@/lib/studyClock";
+import { pendingSkipped, useSkippedQuestions } from "@/hooks/useSkippedQuestions";
 
 type MetricPeriod = StudyPeriod | "all";
 export type StudentMetric = "questions" | "accuracy" | "today" | "week";
@@ -211,6 +212,7 @@ export function StudentMetricDetails({
 }) {
   const today = acreDateKey(now);
   const [setupFresh] = useState(() => String(Date.now()));
+  const skippedQuery = useSkippedQuestions(userId);
   if (metric === "questions" || metric === "accuracy") {
     const day = selectedDate ?? today;
     const filtered = trainingPeriodRows(training, period, day);
@@ -219,6 +221,16 @@ export function StudentMetricDetails({
       .sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
       .slice(0, 10);
     const range = period === "all" ? null : studyPeriodSummary([], 0, today, day, period).range;
+    // Puladas: do treino, ainda sem resposta. No período escolhido valem as puladas salvas nele.
+    const answeredIds = new Set(training.map((r) => r.question_id));
+    const skippedPending = pendingSkipped(skippedQuery.data?.items ?? [], answeredIds).filter(
+      (item) => {
+        if (period === "all") return true;
+        const date = acreDateKey(new Date(item.saved_at));
+        return date <= day && (!range || date >= range.start.slice(0, 10));
+      },
+    );
+    const answered = stats.correct + stats.wrong;
     return (
       <div className="student-metric-panel__body" data-metric={metric}>
         <StudyPeriodControls
@@ -263,6 +275,14 @@ export function StudentMetricDetails({
             <div>
               <dt>Erros</dt>
               <dd>{count(stats.wrong)}</dd>
+            </div>
+            <div>
+              <dt>Respondidas</dt>
+              <dd>{count(answered)}</dd>
+            </div>
+            <div title="Puladas no treino que ainda não foram respondidas nem marcadas como revisadas">
+              <dt>Puladas</dt>
+              <dd>{skippedQuery.isError ? "—" : skippedQuery.isPending ? "…" : count(skippedPending.length)}</dd>
             </div>
           </dl>
         </div>

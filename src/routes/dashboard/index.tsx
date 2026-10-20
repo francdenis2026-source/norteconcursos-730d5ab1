@@ -1,4 +1,6 @@
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -11,6 +13,7 @@ import {
   Clock,
   FileText,
   Loader2,
+  Medal,
   RefreshCw,
   Sparkles,
   Target,
@@ -77,6 +80,12 @@ const destinations = [
     text: "Prepare seu ritmo de prova",
     icon: Trophy,
   },
+  {
+    to: "/dashboard/ranking",
+    title: "Ranking",
+    text: "Veja sua posição entre os alunos",
+    icon: Medal,
+  },
 ];
 function DashboardIndex() {
   const { user, isLoading } = useAuthStatus();
@@ -109,6 +118,25 @@ function StudentHome({ user }: { user: UserProfile }) {
     }
   });
   const q = useStudentDashboard(user.id, selectedId || undefined);
+  // Posição no ranking geral no atalho (quando o servidor responde); sem ela, o texto padrão.
+  const rank = useQuery({
+    queryKey: ["home-rank-summary", user.id],
+    staleTime: 60_000,
+    retry: 0,
+    queryFn: async () => {
+      const response = (await supabase
+        .rpc("my_rank_summary", { _period: "all", _metric: "points" })
+        .maybeSingle()) as unknown as {
+        data: { rank_position: number | null; total_points: number } | null;
+        error: unknown;
+      };
+      if (response.error) throw response.error;
+      return response.data;
+    },
+  });
+  const rankText = rank.data?.rank_position
+    ? `${rank.data.rank_position}º lugar · ${rank.data.total_points} pts`
+    : null;
   const plan = q.plans.data?.find((p) => p.id === selectedId) ?? q.plans.data?.[0];
   React.useEffect(() => {
     if (q.plans.isSuccess && plan?.id !== selectedId) setSelectedId(plan?.id ?? "");
@@ -314,13 +342,20 @@ function StudentHome({ user }: { user: UserProfile }) {
       />
       <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
         {destinations.map(({ to, title, text, icon: Icon }, i) => (
-          <Link key={to} to={to} data-tone={i}>
+          <Link
+            key={to}
+            to={to}
+            data-tone={i}
+            {...(to === "/dashboard/ranking"
+              ? { search: { section: "general", page: 1, size: 20, q: "" } as never, "data-rank": "" }
+              : {})}
+          >
             <span className="student-home__tool-icon">
               <Icon aria-hidden="true" />
             </span>
             <div>
               <strong>{title}</strong>
-              <small>{text}</small>
+              <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
             </div>
             <ArrowRight aria-hidden="true" />
           </Link>
