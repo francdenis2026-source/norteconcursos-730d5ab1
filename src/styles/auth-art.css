@@ -1,14 +1,15 @@
 /* Artwork frames the access experience; form controls retain theme contrast. */
-.auth {
-  height: auto;
-  min-height: 100svh;
-  overflow: visible;
+.auth.auth {
+  height: 100svh;
+  overflow: hidden;
   align-items: stretch;
+  min-height: 0;
 }
 .auth .auth-visual {
   justify-content: space-between;
-  gap: 28px;
-  padding: clamp(28px, 4vw, 64px);
+  gap: clamp(16px, 2.5vh, 28px);
+  padding: clamp(20px, 3.5vh, 48px) clamp(28px, 4vw, 64px);
+  min-height: 0;
   background: #101214;
   border-right: 1px solid rgb(202 167 104 / 20%);
 }
@@ -34,8 +35,9 @@
 .auth .auth-visual p { color: #c5c9ce; }
 .auth .auth-benefits span { color: #b5bbc3; }
 .auth .auth-panel {
-  overflow: visible;
-  padding: 88px clamp(24px, 3vw, 48px) 40px;
+  overflow: auto;
+  min-height: 0;
+  padding: 64px clamp(24px, 3vw, 48px) 20px;
   isolation: isolate;
   background: #11171c url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
 }
@@ -62,7 +64,7 @@
 
 /* A continuous visual environment across both columns. */
 .auth .auth-visual > a { position: relative; z-index: 1; }
-.auth .auth-visual-copy { margin-top: clamp(240px, 35vh, 440px); }
+.auth .auth-visual-copy { margin-top: auto; padding-top: 24px; }
 .auth .auth-panel::before {
   display: block;
   z-index: -1;
@@ -107,4 +109,64 @@
 @media (forced-colors: active) {
   .auth .auth-back { color: LinkText; }
   .auth .auth-panel { background: Canvas; }
+}
+
+/* Compact the composition by available height rather than scaling the page. */
+@media (max-height: 960px) {
+  .auth .auth-card { padding: 22px; }
+  .auth .auth-identity { margin: -22px -22px 18px; padding: 16px 22px; gap: 16px; }
+  .auth .auth-identity img { width: 54px; height: 66px; }
+  .auth .auth-identity strong { font-size: 1rem; margin-top: 5px; }
+  .auth .auth-identity p { margin-top: 5px; }
+  .auth .auth-tabs { margin-bottom: 16px; }
+  .auth .auth-heading h2 { font-size: 1.65rem; }
+  .auth .auth-form { gap: 14px; margin-top: 18px; }
+  .auth .auth-security { margin-top: 14px; }
+  .auth .auth-dev-signature { margin-top: 10px; }
+  .auth .auth-visual h1 { font-size: clamp(2rem, 3vw, 3rem); }
+  .auth .auth-benefits div { padding-top: 12px; gap: 6px; }
+  .auth[data-auth-mode="register"] .auth-identity p { display: none; }
+  .auth[data-auth-mode="register"] .auth-form { gap: 10px; margin-top: 14px; }
+  .auth[data-auth-mode="register"] .auth-trial { margin-top: 12px; padding: 10px 12px; }
+}
+@media (max-height: 700px) {
+  .auth .auth-identity { padding-block: 12px; margin-bottom: 14px; }
+  .auth .auth-identity img { width: 44px; height: 54px; }
+  .auth .auth-identity p { display: none; }
+  .auth .auth-heading p { display: none; }
+  .auth .auth-form { gap: 12px; margin-top: 14px; }
+  .auth .auth-benefits span { display: none; }
+  .auth .auth-visual h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+  .auth .auth-visual p { font-size: 0.875rem; }
+}
+@media (max-width: 960px) {
+  .auth .auth-panel { padding-top: 64px; padding-bottom: 20px; align-items: safe center; }
+}
+@media (max-height: 560px) {
+  .auth .auth-panel { align-items: start; }
+  .auth .auth-visual-copy { padding-top: 0; }
+  .auth .auth-benefits { display: none; }
+}
+.auth .auth-terms button[role="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  flex: 0 0 18px;
+  align-self: start;
+}
+@media (min-width: 961px) {
+  .auth[data-auth-mode="register"] .auth-form { grid-template-columns: 1fr 1fr; }
+  .auth[data-auth-mode="register"] .auth-form > :not(.auth-field) { grid-column: 1 / -1; }
+  .auth[data-auth-mode="register"] .auth-form > .auth-field { min-width: 0; }
+}
+@media (max-height: 960px) {
+  .auth[data-auth-mode="register"] .auth-identity { padding-block: 10px; margin-bottom: 14px; }
+  .auth[data-auth-mode="register"] .auth-identity img { width: 40px; height: 48px; }
+  .auth[data-auth-mode="register"] .auth-heading p,
+  .auth[data-auth-mode="register"] .auth-security { display: none; }
+  .auth[data-auth-mode="register"] .auth-tabs { margin-bottom: 14px; }
+  .auth[data-auth-mode="register"] .auth-tabs button { padding-block: 8px; min-height: 38px; }
+}
+@media (max-height: 700px) {
+  .auth .auth-panel { padding-top: 56px; padding-bottom: 12px; }
 }
