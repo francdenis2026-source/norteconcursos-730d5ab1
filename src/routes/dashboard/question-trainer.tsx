@@ -1,4 +1,5 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { useResponseSeconds } from "@/hooks/useResponseSeconds";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
 import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
 import { openRow, recordLocalSave } from "@/lib/sessionSnapshots";
@@ -357,7 +358,10 @@ function QuestionTrainer() {
   const [selected, setSelected] = React.useState<Answer | null>(null);
   const [struck, setStruck] = React.useState<Answer[]>([]);
   const [communityOpen, setCommunityOpen] = React.useState(false);
-  const sessionAnswers = React.useRef(new Map<number, { selected: Answer; isCorrect: boolean }>());
+  // seconds: tempo ativo até responder, guardado aqui para não depender do relógio nem do histórico remoto.
+  const sessionAnswers = React.useRef(
+    new Map<number, { selected: Answer; isCorrect: boolean; seconds?: number }>(),
+  );
   const [saving, setSaving] = React.useState(false);
   const [saveError, setSaveError] = React.useState("");
   const savingRef = React.useRef(false);
@@ -564,7 +568,14 @@ function QuestionTrainer() {
     routeFilters.limit,
   ]);
   React.useEffect(() => {
-    if (!pendingRestore.current || loading || error || examEdition.isError || !userId || !sessionsReady)
+    if (
+      !pendingRestore.current ||
+      loading ||
+      error ||
+      examEdition.isError ||
+      !userId ||
+      !sessionsReady
+    )
       return;
     pendingRestore.current = false;
     try {
@@ -880,13 +891,18 @@ function QuestionTrainer() {
     () =>
       answeredPool.filter((q) => {
         const k = questionIdentity(q);
-        return locked.get(k)?.isCorrect === false && !reinforced.get(lockedKey(q.source, q.id))?.lastCorrect;
+        return (
+          locked.get(k)?.isCorrect === false &&
+          !reinforced.get(lockedKey(q.source, q.id))?.lastCorrect
+        );
       }),
     [answeredPool, locked, reinforced],
   );
   const recovered = answeredPool.filter((q) => {
     const k = questionIdentity(q);
-    return locked.get(k)?.isCorrect === false && reinforced.get(lockedKey(q.source, q.id))?.lastCorrect;
+    return (
+      locked.get(k)?.isCorrect === false && reinforced.get(lockedKey(q.source, q.id))?.lastCorrect
+    );
   }).length;
   const trainingPool =
     practiceMode === "catalog"
@@ -1065,9 +1081,17 @@ function QuestionTrainer() {
   // Questão sem o texto de apoio (só aparece se o aluno pediu): é marcada e não pontua.
   const noText = !!question && needsMissingSupportText(question);
   const nonScoring =
-    sessionReinforce ||
-    noText ||
-    (!!question && locked.has(questionIdentity(question)));
+    sessionReinforce || noText || (!!question && locked.has(questionIdentity(question)));
+  // Tempo da resposta: o desta sessão; senão, o gravado na conta (questão revista depois); senão, nada.
+  const sessionSeconds = sessionAnswers.current.get(index)?.seconds;
+  const storedSeconds = useResponseSeconds(
+    userId,
+    question?.id,
+    answered && sessionSeconds === undefined && reviewingPast,
+  );
+  const shownSeconds =
+    sessionSeconds ??
+    (answered && !reviewingPast ? questionSecs : (storedSeconds.data ?? undefined));
   React.useEffect(() => {
     const seconds = restoredSeconds.current ?? 0;
     restoredSeconds.current = null;
@@ -1170,7 +1194,11 @@ function QuestionTrainer() {
           toast.message(
             "Reforço registrado só nesta sessão: o histórico de reforço ainda não foi habilitado no banco.",
           );
-        sessionAnswers.current.set(index, { selected, isCorrect });
+        sessionAnswers.current.set(index, {
+          selected,
+          isCorrect,
+          seconds: Math.max(0, questionSecsRef.current),
+        });
         setAnswered(true);
         markReinforced(question.source, question.id, isCorrect);
         setResults((prev) => {
@@ -1207,12 +1235,25 @@ function QuestionTrainer() {
         { onConflict: "id", ignoreDuplicates: true },
       );
       if (error) throw error;
-      const { data: savedResponse, error: verifyError } = await supabase.from("question_training_responses")
+      const { data: savedResponse, error: verifyError } = await supabase
+        .from("question_training_responses")
         .select("question_id,question_source,selected_answer,is_correct")
-        .eq("id", responseIdRef.current).eq("user_id", user.id).single();
-      if (verifyError || savedResponse.question_id !== question.id || savedResponse.question_source !== question.source || savedResponse.selected_answer !== selected || savedResponse.is_correct !== isCorrect)
+        .eq("id", responseIdRef.current)
+        .eq("user_id", user.id)
+        .single();
+      if (
+        verifyError ||
+        savedResponse.question_id !== question.id ||
+        savedResponse.question_source !== question.source ||
+        savedResponse.selected_answer !== selected ||
+        savedResponse.is_correct !== isCorrect
+      )
         throw new Error("A resposta salva diverge do conteúdo exibido. Atualize a questão.");
-      sessionAnswers.current.set(index, { selected, isCorrect });
+      sessionAnswers.current.set(index, {
+        selected,
+        isCorrect,
+        seconds: Math.max(0, questionSecsRef.current),
+      });
       setAnswered(true);
       setDailyUsed((n) => n + 1);
       markLocked(question, { selected, isCorrect });
@@ -1627,7 +1668,7 @@ function QuestionTrainer() {
     setModal("help");
     if (library.isError) void library.refetch();
   };
-  const priorAnswer = nonScoring ? locked.get(lockedKey(question.source, question.id)) : undefined;
+  const priorAnswer = nonScoring ? locked.get(questionIdentity(question)) : undefined;
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado =
     question.kind === "true_false" || (!hasOptions && questionAnswers(question).join("") === "CE");
@@ -1805,7 +1846,15 @@ function QuestionTrainer() {
                   <ReportQuestionButton question={question} />
                 </span>
               </div>
-              {results[index] === "skipped" && !answered && <p role="status" className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não respondida.</p>}
+              {results[index] === "skipped" && !answered && (
+                <p
+                  role="status"
+                  className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm"
+                >
+                  Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não
+                  respondida.
+                </p>
+              )}
               {(reviewingPast || priorAnswer) && (
                 <div
                   role="status"
@@ -1813,8 +1862,7 @@ function QuestionTrainer() {
                 >
                   <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
                   <span>
-                    Você já respondeu esta questão
-                    .{" "}
+                    Você já respondeu esta questão .{" "}
                     {reviewingPast ? "Resposta já registrada — revisão sem novo envio. " : ""}
                     Esta tentativa não gera novos pontos no ranking.
                   </span>
@@ -1827,11 +1875,14 @@ function QuestionTrainer() {
                     <span className="text-muted-foreground">de {questions.length}</span>
                   </h2>
                   <p className="mt-1.5 text-xs text-muted-foreground">
-                    {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped} puladas
+                    {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped}{" "}
+                    puladas
                   </p>
                 </div>
                 <div className="flex items-end gap-2 sm:gap-3">
-                  {!reviewingPast && <QuestionTimer seconds={questionSecs} completed={answered} />}
+                  {(!reviewingPast || sessionSeconds !== undefined) && (
+                    <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
+                  )}
                 </div>
               </div>
               <progress
@@ -2005,7 +2056,7 @@ function QuestionTrainer() {
                   answer={labelFor(question.answer)}
                   correct={isCorrect}
                   sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
-                  elapsedSeconds={reviewingPast ? undefined : questionSecs}
+                  elapsedSeconds={shownSeconds}
                 >
                   {!isPlaceholderExplanation(explanation.main) && (
                     <QuestionProse
@@ -2765,7 +2816,7 @@ function TrainingResult({
             Treino concluído
           </h1>
           <p>Confira suas respostas e escolha o próximo passo.</p>
-                  </div>
+        </div>
       </header>
       <div className="trainer-result-layout">
         <section className="trainer-result-score" aria-label="Resumo do treino">

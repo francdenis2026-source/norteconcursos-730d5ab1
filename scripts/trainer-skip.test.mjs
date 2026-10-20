@@ -68,3 +68,12 @@ test("attempt details: rule, score and ranking stay separate", () => {
   assert.equal(withRecords.skipped, 1);
   assert.deepEqual(withRecords.ranking, { answered: 8, counted: 5, repeated: 3, points: 12, attemptValid: true });
 });
+
+test("the time spent on each answer survives a page refresh and is validated", () => {
+  const attempts = (seconds) => [{ index: 0, selected: "A", isCorrect: true, ...(seconds === undefined ? {} : { seconds }) }];
+  const ok = restoreTrainerBookmark(bookmark(["ok"], { sessionAttempts: attempts(42) }), "r", catalog, 10);
+  assert.equal(ok.bookmark.sessionAttempts[0].seconds, 42);
+  assert.ok(restoreTrainerBookmark(bookmark(["ok"], { sessionAttempts: attempts() }), "r", catalog, 10), "older bookmarks without time still restore");
+  assert.equal(restoreTrainerBookmark(bookmark(["ok"], { sessionAttempts: attempts(-1) }), "r", catalog, 10), null);
+  assert.equal(restoreTrainerBookmark(bookmark(["ok"], { sessionAttempts: attempts(Number.NaN) }), "r", catalog, 10), null);
+});

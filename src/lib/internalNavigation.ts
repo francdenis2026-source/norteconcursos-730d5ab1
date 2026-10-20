@@ -38,7 +38,12 @@ export const trainerFilterKeys = [
 export type TrainerBookmark = {
   version: 1;
   practiceMode?: "new" | "wrong" | "all" | "catalog";
-  sessionAttempts?: { index: number; selected: "A" | "B" | "C" | "D" | "E"; isCorrect: boolean }[];
+  sessionAttempts?: {
+    index: number;
+    selected: "A" | "B" | "C" | "D" | "E";
+    isCorrect: boolean;
+    seconds?: number;
+  }[];
   questionSeconds?: number;
   savedAt: number;
   route: string;
@@ -105,6 +110,7 @@ export function restoreTrainerBookmark<
           a.index >= b.questions.length ||
           !["A", "B", "C", "D", "E"].includes(a.selected) ||
           typeof a.isCorrect !== "boolean" ||
+          (a.seconds !== undefined && (!Number.isFinite(a.seconds) || a.seconds < 0)) ||
           b.results[a.index] !== (a.isCorrect ? "ok" : "err"),
       ))
   )
