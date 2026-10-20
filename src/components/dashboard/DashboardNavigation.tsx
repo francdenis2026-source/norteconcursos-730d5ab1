@@ -37,7 +37,7 @@ export type NavigationItem = {
 const groupIcons: Record<string, LucideIcon> = {
   Planejamento: LayoutDashboard,
   "Meu concurso": Target,
-  Estudar: BookOpen,
+  "Material didático": BookOpen,
   Ferramentas: Wrench,
   Questões: BrainCircuit,
   Provas: ClipboardList,
@@ -49,7 +49,7 @@ const groupIcons: Record<string, LucideIcon> = {
 const groupDetails: Record<string, string> = {
   Planejamento: "Estratégia, cronograma e metas",
   "Meu concurso": "Edital, carreira e tendências",
-  Estudar: "Leis, disciplinas e videoaulas",
+  "Material didático": "Leis, súmulas, disciplinas e vídeos",
   Ferramentas: "Foco, calculadora e painéis",
   Questões: "Treino, revisão e acervo",
   Provas: "Simulados e suas provas",

@@ -14,8 +14,13 @@ export function navigationKey(item: NavigationTarget) {
 export function activeNavigation<T extends NavigationTarget>(
   items: T[],
   pathname: string,
-  search: Record<string, unknown> = {},
+  rawSearch: Record<string, unknown> = {},
 ) {
+  // Os artigos de lei (legal-course) pertencem à coleção de legislação do menu.
+  const search =
+    pathname.startsWith("/dashboard/legal-course/") && rawSearch["collection"] === undefined
+      ? { ...rawSearch, collection: "laws" }
+      : rawSearch;
   return items
     .filter(
       (item) =>

@@ -405,7 +405,7 @@ function MediaCenterPage() {
       <PageHero
         image="toolkit"
         size="sm"
-        kicker="Estudar"
+        kicker="Material didático"
         icon={PlayCircle}
         title={
           <>

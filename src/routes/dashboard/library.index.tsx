@@ -53,10 +53,16 @@ export const Route = createFileRoute("/dashboard/library/")({
   component: LibraryIndex,
   validateSearch: (
     s: Record<string, unknown>,
-  ): { q?: string | undefined; back?: string | undefined; collection?: "laws" | "subjects" } => ({
+  ): {
+    q?: string | undefined;
+    back?: string | undefined;
+    collection?: "laws" | "subjects";
+    discipline?: string | undefined;
+  } => ({
     collection: s["collection"] === "subjects" ? "subjects" : "laws",
     q: typeof s["q"] === "string" || typeof s["q"] === "number" ? String(s["q"]) : undefined,
     back: typeof s["back"] === "string" ? s["back"] : undefined,
+    discipline: typeof s["discipline"] === "string" ? s["discipline"] : undefined,
   }),
   head: () => ({ meta: [{ title: "Biblioteca de leis | Norte Concurso" }] }),
 });
@@ -65,16 +71,21 @@ function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
-  const { q: initialQuery, back, collection = "laws" } = Route.useSearch();
+  const {
+    q: initialQuery,
+    back,
+    collection = "laws",
+    discipline: initialDiscipline,
+  } = Route.useSearch();
   const lawsOnly = collection === "laws";
   const [query, setQuery] = useState(initialQuery ?? "");
   const [area, setArea] = useState<LibraryArea>("all");
-  const [discipline, setDiscipline] = useState<string>("all");
+  const [discipline, setDiscipline] = useState<string>(initialDiscipline ?? "all");
   const [contest, setContest] = useState<string>("all");
   const [topic, setTopic] = useState("all");
   const [law, setLaw] = useState("all");
   const restoredFilters = useRef(false);
-  const filterKey = `library-filters:v2:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}`;
+  const filterKey = `library-filters:v2:${collection}:${user?.id}:${initialQuery ?? ""}:${back ?? ""}:${initialDiscipline ?? ""}`;
   useEffect(() => {
     restoredFilters.current = false;
     try {
@@ -96,14 +107,14 @@ function LibraryIndex() {
               ? saved.area
               : "all",
         );
-        setDiscipline(saved.discipline);
+        setDiscipline(initialDiscipline ?? saved.discipline);
         setContest(saved.contest);
         setTopic(saved.topic);
         setLaw(typeof saved.law === "string" ? saved.law : "all");
       } else {
         setQuery(initialQuery ?? "");
         setArea("all");
-        setDiscipline("all");
+        setDiscipline(initialDiscipline ?? "all");
         setContest("all");
         setTopic("all");
         setLaw("all");
@@ -112,7 +123,7 @@ function LibraryIndex() {
       /* Session storage is optional. */
     }
     restoredFilters.current = true;
-  }, [filterKey, initialQuery, lawsOnly]);
+  }, [filterKey, initialQuery, initialDiscipline, lawsOnly]);
   useEffect(() => {
     if (!restoredFilters.current) return;
     try {
@@ -244,7 +255,7 @@ function LibraryIndex() {
       <PageHero
         image="study-desk"
         size="lg"
-        kicker="Estudar"
+        kicker="Material didático"
         icon={Library}
         title={
           <>

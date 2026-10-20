@@ -50,6 +50,7 @@ import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/ex
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
+import { Route as DashboardMaterialRouteImport } from './routes/dashboard/material'
 import { Route as DashboardMedalsRouteImport } from './routes/dashboard/medals'
 import { Route as DashboardMediaRouteImport } from './routes/dashboard/media'
 import { Route as DashboardMockExamsRouteImport } from './routes/dashboard/mock-exams'
@@ -287,6 +288,11 @@ const DashboardLibraryRoute = DashboardLibraryRouteImport.update({
   path: '/library',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardMaterialRoute = DashboardMaterialRouteImport.update({
+  id: '/material',
+  path: '/material',
+  getParentRoute: () => DashboardRoute,
+} as any)
 const DashboardMedalsRoute = DashboardMedalsRouteImport.update({
   id: '/medals',
   path: '/medals',
@@ -472,6 +478,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
@@ -540,6 +547,7 @@ export interface FileRoutesByTo {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
@@ -612,6 +620,7 @@ export interface FileRoutesById {
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
+  '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
   '/dashboard/media': typeof DashboardMediaRoute
   '/dashboard/mock-exams': typeof DashboardMockExamsRoute
@@ -685,6 +694,7 @@ export interface FileRouteTypes {
     | '/dashboard/flashcards'
     | '/dashboard/history'
     | '/dashboard/library'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
@@ -753,6 +763,7 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
@@ -824,6 +835,7 @@ export interface FileRouteTypes {
     | '/dashboard/flashcards'
     | '/dashboard/history'
     | '/dashboard/library'
+    | '/dashboard/material'
     | '/dashboard/medals'
     | '/dashboard/media'
     | '/dashboard/mock-exams'
@@ -1162,6 +1174,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardLibraryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/material': {
+      id: '/dashboard/material'
+      path: '/material'
+      fullPath: '/dashboard/material'
+      preLoaderRoute: typeof DashboardMaterialRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/medals': {
       id: '/dashboard/medals'
       path: '/medals'
@@ -1415,6 +1434,7 @@ interface DashboardRouteChildren {
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
+  DashboardMaterialRoute: typeof DashboardMaterialRoute
   DashboardMedalsRoute: typeof DashboardMedalsRoute
   DashboardMediaRoute: typeof DashboardMediaRoute
   DashboardMockExamsRoute: typeof DashboardMockExamsRoute
@@ -1468,6 +1488,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
+  DashboardMaterialRoute: DashboardMaterialRoute,
   DashboardMedalsRoute: DashboardMedalsRoute,
   DashboardMediaRoute: DashboardMediaRoute,
   DashboardMockExamsRoute: DashboardMockExamsRoute,

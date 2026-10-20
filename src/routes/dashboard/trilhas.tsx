@@ -192,7 +192,7 @@ function TracksPage() {
       })}
       {!fm.focus && <PageHero
         image="study-desk"
-        kicker="Estudar"
+        kicker="Material didático"
         icon={GraduationCap}
         title={track.title}
         description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}

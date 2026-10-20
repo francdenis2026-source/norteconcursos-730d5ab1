@@ -92,7 +92,7 @@ function EssaysPage() {
     <div className="space-y-6">
       <PageHero
         image="toolkit"
-        kicker="Estudar"
+        kicker="Material didático"
         icon={PenLine}
         title={
           <>
