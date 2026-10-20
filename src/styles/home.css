@@ -4065,11 +4065,11 @@
   }
   .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]),
   .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]) * {
-    cursor: url("/media/cursor-target.svg") 16 16, pointer;
+    cursor: url("/media/cursor-optic-reticle.svg") 18 18, pointer;
   }
   .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active,
   .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active * {
-    cursor: url("/media/cursor-target-pressed.svg") 16 16, pointer;
+    cursor: url("/media/cursor-optic-reticle-active.svg") 18 18, pointer;
   }
   .home :is(input, textarea, [contenteditable="true"]),
   .home [contenteditable="true"] * { cursor: text; }

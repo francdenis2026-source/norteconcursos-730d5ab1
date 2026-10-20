@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <linearGradient id="steel" x1="5" y1="4" x2="30" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#edf0f2"/><stop offset=".19" stop-color="#68717b"/>
+      <stop offset=".46" stop-color="#202731"/><stop offset=".72" stop-color="#98a0a8"/>
+      <stop offset="1" stop-color="#303a46"/>
+    </linearGradient>
+    <radialGradient id="lens" cx=".35" cy=".25" r=".8">
+      <stop stop-color="#b3d2df" stop-opacity=".12"/><stop offset="1" stop-color="#101c29" stop-opacity=".03"/>
+    </radialGradient>
+  </defs>
+  <!-- Thin optical housing; transparent lens keeps the target visible. -->
+  <circle cx="18" cy="18" r="14.25" fill="url(#lens)" stroke="#101820" stroke-width="2.7"/>
+  <circle cx="18" cy="18" r="14.25" fill="none" stroke="url(#steel)" stroke-width="1.5"/>
+  <circle cx="18" cy="18" r="12.6" fill="none" stroke="#edf0ef" stroke-opacity=".85" stroke-width=".6"/>
+  <circle cx="18" cy="18" r="15.45" fill="none" stroke="#d3dbe1" stroke-opacity=".75" stroke-width=".45"/>
+  <!-- Fine duplex crosshair and evenly spaced ranging marks. -->
+  <path id="reticle" d="M18 5.8v9.2m0 6v9.2M5.8 18H15m6 0h9.2M10 16.7v2.6m3-2.1v1.6m10-1.6v1.6m3-2.1v2.6M16.7 10h2.6m-2.1 3h1.6m-1.6 10h1.6m-2.1 3h2.6" fill="none"/>
+  <use href="#reticle" fill="none" stroke="#101820" stroke-width="1.8"/>
+  <use href="#reticle" fill="none" stroke="#f1eee5" stroke-width=".85"/>
+  <circle cx="18" cy="18" r="2.4" fill="#17212a"/>
+  <circle cx="18" cy="18" r="1.35" fill="#ffe3a3"/>
+</svg>
