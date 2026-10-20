@@ -4114,25 +4114,6 @@
   }
 }
 
-/* Discreet ballistic-glass detail in the hero. */
-.home-hero::before {
-  position: absolute;
-  z-index: -1;
-  top: 8%;
-  right: 7%;
-  width: clamp(190px, 22vw, 320px);
-  aspect-ratio: 1;
-  content: "";
-  pointer-events: none;
-  background: url("/media/hero/hero-impact-overlay.webp") center / contain no-repeat;
-  opacity: .1;
-  mix-blend-mode: screen;
-  transform: rotate(-8deg);
-}
-@media (max-width: 700px) {
-  .home-hero::before { top: 9%; right: 3%; width: 180px; opacity: .07; }
-}
-
 /* Selos do início: com a coluna estreita o total de questões ficava espremido; empilha e mostra o texto inteiro. */
 .home-start { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 700px) {
