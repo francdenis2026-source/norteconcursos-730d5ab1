@@ -16,12 +16,10 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
-  BookOpenCheck,
   BrainCircuit,
   CalendarClock,
   ChevronRight,
   ChevronDown,
-  Plus,
   Compass,
   FileSearch,
   Landmark,
@@ -374,100 +372,67 @@ function Index() {
           </div>
         </div>
 
-        <section
-          id="plataforma"
-          className="home-section home-platform"
-          aria-labelledby="platform-title"
-        >
+        <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-container">
-            <div id="ferramentas" className="home-section-top">
-              <div className="home-heading">
-                <span className="home-eyebrow">Sua preparação, em um só lugar</span>
-                <h2 id="platform-title">
-                  Do edital ao treino.
-                  <br />
-                  <em>Veja sua evolução.</em>
-                </h2>
+            <div className="home-preparation__band">
+              <img
+                className="home-preparation__art"
+                src="/media/hero/auth-carreiras-composicao.webp"
+                alt=""
+                width={1440}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="home-preparation__intro">
+                <span className="home-preparation__eyebrow">Para quem escolheu servir e proteger</span>
+                <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
+                <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
+                <div className="home-preparation__actions">
+                  <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
+                    Começar gratuitamente <ArrowUpRight aria-hidden="true" />
+                  </Link>
+                  <Link to="/desafio-diario" className="home-preparation__challenge">
+                    Fazer o desafio diário <ArrowRight aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
-              <p className="home-section-intro">
-                Estude a teoria, resolva questões e identifique o que precisa reforçar.
-                Sua próxima sessão começa com uma prioridade clara.
-              </p>
-            </div>
-            <div className="home-platform__workspace">
-              <figure className="home-platform__visual">
-                <img
-                  src="/media/hero/painel-aluno-estudo.webp"
-                  alt="Ambiente de estudo com materiais para a preparação de concursos"
-                  width={960}
-                  height={640}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  <BookOpenCheck aria-hidden="true" />
-                  <span>
-                    Teoria, prática e revisão.<strong>Cada sessão com uma direção.</strong>
-                  </span>
-                </figcaption>
-              </figure>
-              <div className="home-core-tools">
-                {TOOLS.filter(({ featured }) => featured).map(
-                  ({ icon: Icon, title, text }, index) => (
-                    <article className="home-core-tool" key={title}>
-                      <span className="home-core-tool__number">0{index + 1}</span>
-                      <div>
-                        <h3>
-                          <Icon aria-hidden="true" />
-                          {title}
-                        </h3>
-                        <p>{text}</p>
-                      </div>
-                    </article>
-                  ),
-                )}
-                <Link to="/auth" search={{ mode: "register" }} className="home-text-link">
-                  Organizar minha preparação <ArrowRight aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-            <div className="home-tools" aria-label="Mais recursos de estudo">
-              {TOOLS.filter(({ featured }) => !featured).map(({ icon: Icon, title, text }) => (
-                <details key={title} className="home-tool">
-                  <summary>
-                    <Icon aria-hidden="true" />
-                    <h3>{title}</h3>
-                    <Plus aria-hidden="true" />
-                  </summary>
-                  <p>{text}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="como" className="home-section home-method">
-          <div className="home-container">
-            <div className="home-method__intro">
-              <Head
-                kicker="Como funciona"
-                lead="Escolha seu objetivo, descubra o que reforçar e pratique no seu ritmo até a prova."
-              >
-                Uma rotina clara. <em>Um passo de cada vez.</em>
-              </Head>
-            </div>
-            <ol className="home-steps">
-              {STEPS.map(([Icon, title, text], index) => (
-                <li key={title}>
-                  <div className="home-step__top">
-                    <span>0{index + 1}</span>
-                    <Icon aria-hidden="true" />
+              <div className="home-preparation__groups">
+                <details id="ferramentas" className="home-preparation__group">
+                  <summary><span>Ferramentas de preparação<small>Teoria, prática e evolução em um só lugar</small></span><ChevronDown aria-hidden="true" /></summary>
+                  <div className="home-preparation__tools">
+                    {TOOLS.map(({ title, text }) => (
+                      <div key={title}><h3>{title}</h3><p>{text}</p></div>
+                    ))}
                   </div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </li>
-              ))}
-            </ol>
+                </details>
+                <details id="como" className="home-preparation__group">
+                  <summary><span>Como funciona<small>Do seu objetivo ao ritmo da prova</small></span><ChevronDown aria-hidden="true" /></summary>
+                  <ol className="home-preparation__steps">
+                    {STEPS.map(([, title, text]) => (
+                      <li key={title}><h3>{title}</h3><p>{text}</p></li>
+                    ))}
+                  </ol>
+                </details>
+                <details id="carreiras" className="home-preparation__group">
+                  <summary><span>Carreiras atendidas<small>Encontre seu caminho na segurança pública</small></span><ChevronDown aria-hidden="true" /></summary>
+                  <div className="home-preparation__tools">
+                    {CAREERS.map(([name, roles]) => (
+                      <div key={name}><h3>{name}</h3><p>{roles}</p></div>
+                    ))}
+                  </div>
+                </details>
+                <details className="home-preparation__group">
+                  <summary><span>Conteúdo e fontes oficiais<small>Critérios de revisão e verificação de vigência</small></span><ChevronDown aria-hidden="true" /></summary>
+                  <div className="home-preparation__sources">
+                    <p>Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de vigência.</p>
+                    {PILLARS.map(({ title, text }) => (
+                      <div key={title}><h3>{title}</h3><p>{text}</p></div>
+                    ))}
+                  </div>
+                </details>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -551,115 +516,8 @@ function Index() {
           </div>
         </section>
 
-        <section id="carreiras" className="home-section home-careers">
-          <div className="home-container">
-            <figure className="home-careers-artwork">
-              <img
-                src="/media/hero/auth-carreiras-composicao.webp"
-                alt="Emblema Carreiras Policiais entre agentes táticos, com cão policial, algemas e impressão digital"
-                width={1440}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-          </div>
-          <div className="home-container home-careers__layout">
-            <div>
-              <Head kicker="Para quem escolheu servir e proteger">
-                Uma plataforma.
-                <br />
-                <em>A sua carreira.</em>
-              </Head>
-            </div>
-            <div className="home-careers__grid">
-              {CAREERS.map(([name, roles]) => (
-                <div className="home-career" key={name}>
-                  <div>
-                    <h3>{name}</h3>
-                    <p>{roles}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="home-sources" aria-label="Rastreabilidade jurídica">
-          <div className="home-container">
-            <div className="home-sources__layout">
-              <details className="home-source-details">
-                <summary>
-                  <ShieldCheck aria-hidden="true" />
-                  <span>
-                    Conteúdo jurídico com fonte e verificação de vigência
-                    <small>Conheça os critérios de revisão</small>
-                  </span>
-                  <ChevronDown aria-hidden="true" />
-                </summary>
-                <p>
-                  Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de
-                  vigência.
-                </p>
-                <div className="home-sources__grid">
-                  {PILLARS.map(({ icon: Icon, title, text }) => (
-                    <article key={title}>
-                      <Icon aria-hidden="true" />
-                      <div>
-                        <h3>{title}</h3>
-                        <p>{text}</p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </details>
-            </div>
-          </div>
-        </section>
-
         <PlansSection />
 
-        <section className="home-final" aria-labelledby="home-final-title">
-          <img
-            className="home-final__image"
-            src="/media/hero/lineup-carreiras-ajustada.webp"
-            alt="Representação de profissionais de segurança pública de diferentes carreiras, diante de uma paisagem amazônica"
-            width={1896}
-            height={830}
-            loading="lazy"
-            decoding="async"
-          />
-          <div className="home-container">
-            <div className="home-final__inner">
-              <div>
-                <span className="home-eyebrow">O próximo passo é seu</span>
-                <h2 id="home-final-title">
-                  Dedicação você já tem.
-                  <br />
-                  <em>Agora, estude com direção.</em>
-                </h2>
-                <p>
-                  Defina sua carreira, faça o diagnóstico e comece seu primeiro ciclo de treino.
-                </p>
-              </div>
-              <div className="home-final__actions">
-                <Link
-                  to="/auth"
-                  search={{ mode: "register" }}
-                  className="home-button home-button--gold"
-                >
-                  Começar gratuitamente
-                  <ArrowUpRight />
-                </Link>
-                <Link to="/desafio-diario" className="home-final__challenge">
-                  <BookOpenCheck />
-                  Fazer o desafio diário
-                  <ArrowRight />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="home-footer">
