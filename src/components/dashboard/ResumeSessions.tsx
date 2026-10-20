@@ -3,12 +3,26 @@
 // o marcador local só guarda a posição e a lista de questões da sessão (src/lib/sessionResume.ts).
 import * as React from "react";
 import { Link } from "@tanstack/react-router";
-import { Clock3, PlayCircle, SkipForward } from "lucide-react";
+import { Clock3, PlayCircle, SkipForward, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { platformNow } from "@/lib/platformClock";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
-import { readInProgressSessions, type ResumeSession } from "@/lib/sessionResume";
+import {
+  discardLocalSession,
+  readInProgressSessions,
+  sessionSnapshotScope,
+  type ResumeSession,
+} from "@/lib/sessionResume";
+import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 function minutes(seconds: number) {
   const h = Math.floor(seconds / 3600);
@@ -49,6 +63,19 @@ export function ResumeSessions({
       window.removeEventListener("focus", load);
     };
   }, [userId, synced]);
+  const [closing, setClosing] = React.useState<ResumeSession | null>(null);
+  const closeSession = (session: ResumeSession) => {
+    if (!userId) return;
+    // Sai da conta também, para outro aparelho não oferecer a retomada de novo.
+    void snapshotUploader(userId).close(session.kind, sessionSnapshotScope(session), Date.now());
+    try {
+      discardLocalSession(localStorage, userId, session, sessionStorage);
+    } catch {
+      /* Armazenamento bloqueado: a barra some nesta tela mesmo assim. */
+    }
+    setSessions((current) => current.filter((item) => item !== session));
+    setClosing(null);
+  };
   const visible = sessions.filter(
     (s) =>
       (!only || s.kind === only) &&
@@ -79,12 +106,24 @@ export function ResumeSessions({
                   Você parou na questão {s.position} de {s.total}.
                 </p>
               </div>
-              <Button asChild>
-                <Link to={s.to} search={s.search as never}>
-                  <PlayCircle className="mr-2 h-4 w-4" aria-hidden="true" />
-                  {s.unsavedResult ? "Salvar resultado" : "Continuar"}
-                </Link>
-              </Button>
+              <div className="flex shrink-0 items-center gap-2">
+                <Button asChild>
+                  <Link to={s.to} search={s.search as never}>
+                    <PlayCircle className="mr-2 h-4 w-4" aria-hidden="true" />
+                    {s.unsavedResult ? "Salvar resultado" : "Continuar"}
+                  </Link>
+                </Button>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setClosing(s)}
+                  aria-label={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}
+                  title={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}
+                >
+                  <X className="h-4 w-4" aria-hidden="true" />
+                </Button>
+              </div>
             </div>
             <Progress
               className="mt-3 h-2"
@@ -127,6 +166,28 @@ export function ResumeSessions({
           </article>
         );
       })}
+      <Dialog open={closing !== null} onOpenChange={(open) => !open && setClosing(null)}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>
+              {closing?.kind === "simulator" ? "Fechar esta prova?" : "Fechar este treino?"}
+            </DialogTitle>
+            <DialogDescription>
+              {closing?.kind === "simulator"
+                ? "A prova em andamento será descartada e o tempo deixa de contar. O que você já respondeu antes continua no seu histórico."
+                : "Você deixa de ver a opção de continuar. As questões que já respondeu continuam no seu histórico e nas suas métricas."}
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button type="button" variant="outline" onClick={() => setClosing(null)}>
+              Manter aberto
+            </Button>
+            <Button type="button" onClick={() => closing && closeSession(closing)}>
+              Fechar {closing?.kind === "simulator" ? "prova" : "treino"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

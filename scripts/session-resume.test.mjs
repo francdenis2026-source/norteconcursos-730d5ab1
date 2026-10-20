@@ -82,3 +82,21 @@ test("guests and demo users have nothing to resume", () => {
   assert.deepEqual(readInProgressSessions(store({}), "demo-user", 0), []);
   assert.deepEqual(readInProgressSessions(store({}), "", 0), []);
 });
+
+import { discardLocalSession, sessionSnapshotScope, sessionStorageKeys } from "../src/lib/sessionResume.ts";
+
+test("closing a session removes only its own local marker and names its account row", () => {
+  const trainer = trainerResume(store({ "trainer-bookmark:u": JSON.stringify(bookmark()) }), "u");
+  const enem = { kind: "simulator", search: { mode: "enem" } };
+  const contests = { kind: "simulator", search: {} };
+  assert.deepEqual(sessionStorageKeys(trainer, "u"), ["trainer-bookmark:u"]);
+  assert.deepEqual(sessionStorageKeys(enem, "u"), ["norte:simulator:v1:u:enem"]);
+  assert.deepEqual(sessionStorageKeys(contests, "u"), ["norte:simulator:v1:u:contests"]);
+  assert.equal(sessionSnapshotScope(trainer), "trainer");
+  assert.equal(sessionSnapshotScope(enem), "enem");
+  assert.equal(sessionSnapshotScope(contests), "contests");
+  const removed = [];
+  const throwing = { removeItem: () => { throw new Error("blocked"); } };
+  discardLocalSession({ removeItem: (k) => removed.push(k) }, "u", trainer, throwing);
+  assert.deepEqual(removed, ["trainer-bookmark:u"]);
+});
