@@ -4712,3 +4712,17 @@
     opacity: 0;
   }
 }
+
+/* Celular/tablet: "Ver introdução" (aparece quando o navegador bloqueia o autoplay) fica no canto
+   esquerdo, longe do distintivo (à direita), e a hero ganha uma faixa para ele não cobrir o texto. */
+@media (max-width: 900px) {
+  .home-intro-start {
+    top: 10px;
+    right: auto;
+    left: 12px;
+    min-height: 40px;
+  }
+  .home-hero:has(.home-intro-start) .home-hero__content {
+    padding-top: 64px;
+  }
+}
