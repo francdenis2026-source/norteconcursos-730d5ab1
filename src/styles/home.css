@@ -4446,3 +4446,27 @@
   .home.home .home-rail__track.home-opportunities { grid-auto-columns: 88%; }
   .home.home .home-opportunity h3 { font-size: 17px; }
 }
+
+/* Final homepage accessibility and motion pass. */
+.home :where(section, [id]) {
+  scroll-margin-top: 90px;
+}
+.home :where(a, button, summary):focus-visible,
+.home-menu :where(a, button):focus-visible {
+  outline: 3px solid var(--home-accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+.home-skip {
+  border: 1px solid var(--home-accent);
+  border-radius: 8px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home,
+  .home * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
