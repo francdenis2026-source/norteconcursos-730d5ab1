@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import * as React from "react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import {
   Atom,
   BarChart3,
@@ -17,6 +18,8 @@ import {
   PlayCircle,
   Scale,
   ScrollText,
+  Search,
+  X,
   Sigma,
   Wallet,
   type LucideIcon,
@@ -25,7 +28,9 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
-import { hubLaws, hubSubjects, type SubjectIcon } from "@/lib/materialHub";
+import { hubLaws, hubSubjects, type HubSubject, type SubjectIcon } from "@/lib/materialHub";
+import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
+import { normalizeLibrarySearch } from "@/lib/librarySearch";
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -91,6 +96,131 @@ const OTHER_RESOURCES: {
   },
 ];
 
+type Suggestion = { key: string; label: string; hint: string; go: () => void; icon: LucideIcon };
+
+/** Busca única do material: leis (por número, nome, sigla ou tema) e disciplinas, com resposta ao digitar. */
+function HubSearch({ subjects }: { subjects: HubSubject[] }) {
+  const navigate = useNavigate();
+  const [query, setQuery] = React.useState("");
+  const [active, setActive] = React.useState(0);
+  const text = query.trim();
+  const suggestions = React.useMemo<Suggestion[]>(() => {
+    if (!text) return [];
+    const normalized = normalizeLibrarySearch(text);
+    const list: Suggestion[] = [];
+    for (const subject of subjects) {
+      if (!normalizeLibrarySearch(subject.name).includes(normalized) || subject.count === 0)
+        continue;
+      list.push({
+        key: `d:${subject.name}`,
+        label: subject.name,
+        hint: `Disciplina · ${subject.count} ${subject.count === 1 ? "material" : "materiais"}`,
+        icon: SUBJECT_ICONS[subject.icon],
+        go: () =>
+          void navigate({
+            to: "/dashboard/library",
+            search: { collection: "subjects", discipline: subject.name },
+          }),
+      });
+    }
+    for (const { row } of searchLaws(text).slice(0, 6))
+      list.push({
+        key: `l:${row.slug}`,
+        label: row.nickname,
+        hint: `${row.kind !== "Outro" && row.numberLabel ? `${row.kind} ${row.numberLabel}` : row.group} · lei`,
+        icon: Scale,
+        go: () =>
+          void navigate({ to: "/dashboard/legal-course/$slug", params: { slug: row.slug } }),
+      });
+    list.push({
+      key: "all-laws",
+      label: `Ver todas as leis para “${text}”`,
+      hint: "Localizador de leis",
+      icon: Search,
+      go: () => void navigate({ to: "/dashboard/leis", search: { q: text } }),
+    });
+    list.push({
+      key: "texts",
+      label: `Pesquisar “${text}” nos textos`,
+      hint: "Dentro dos guias e artigos",
+      icon: Library,
+      go: () =>
+        void navigate({ to: "/dashboard/library", search: { collection: "laws", q: text } }),
+    });
+    return list;
+  }, [text, subjects, navigate]);
+  React.useEffect(() => setActive(0), [text]);
+  const onKey = (event: React.KeyboardEvent) => {
+    if (!suggestions.length) return;
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setActive((value) => (value + 1) % suggestions.length);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActive((value) => (value - 1 + suggestions.length) % suggestions.length);
+    } else if (event.key === "Enter") {
+      event.preventDefault();
+      suggestions[active]?.go();
+    } else if (event.key === "Escape") setQuery("");
+  };
+  return (
+    <section className="hub-search" aria-label="Buscar no material didático">
+      <label htmlFor="hub-search-input" className="hub-search__label">
+        O que você quer estudar? Digite o número da lei, o nome ou a disciplina.
+      </label>
+      <div className="hub-search__box">
+        <Search aria-hidden="true" size={22} />
+        <input
+          id="hub-search-input"
+          type="search"
+          role="combobox"
+          aria-expanded={suggestions.length > 0}
+          aria-controls="hub-search-list"
+          aria-activedescendant={suggestions.length ? `hub-opt-${active}` : undefined}
+          autoComplete="off"
+          spellCheck={false}
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          onKeyDown={onKey}
+          placeholder="Ex.: 11.343 · Maria da Penha · armas · português · química"
+        />
+        {query && (
+          <button type="button" onClick={() => setQuery("")} aria-label="Limpar a busca">
+            <X aria-hidden="true" size={18} />
+          </button>
+        )}
+      </div>
+      {suggestions.length > 0 && (
+        <ul className="hub-search__list" id="hub-search-list" role="listbox">
+          {suggestions.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <li
+                key={item.key}
+                id={`hub-opt-${index}`}
+                role="option"
+                aria-selected={index === active}
+                data-active={index === active}
+                onMouseEnter={() => setActive(index)}
+                onMouseDown={(event) => {
+                  event.preventDefault();
+                  item.go();
+                }}
+              >
+                <Icon aria-hidden="true" size={18} />
+                <span>
+                  <strong>{item.label}</strong>
+                  <small>{item.hint}</small>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
+  );
+}
+
 function MaterialHub() {
   const { user, isLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
@@ -130,9 +260,29 @@ function MaterialHub() {
       >
         <div className="page-hero__stats max-w-xl">
           <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
-          <HeroStat icon={BookOpen} label="Materiais de disciplinas" value={isPending ? "—" : subjectTotal} />
+          <HeroStat
+            icon={BookOpen}
+            label="Materiais de disciplinas"
+            value={isPending ? "—" : subjectTotal}
+          />
         </div>
       </PageHero>
+
+      <HubSearch subjects={subjects} />
+
+      <Link to="/dashboard/leis" className="material-finder">
+        <span className="material-card__icon" data-tone="law">
+          <Scale aria-hidden="true" />
+        </span>
+        <span className="material-card__body">
+          <strong>Leis extravagantes e especiais: {LAW_ROWS.length} leis, de A a Z</strong>
+          <span>
+            Localizador com busca por número, nome, sigla ou tema, e filtros por assunto (drogas e
+            armas, crime organizado, proteção de pessoas e outros).
+          </span>
+        </span>
+        <span className="material-finder__go">Abrir o localizador →</span>
+      </Link>
 
       <section aria-labelledby="hub-laws" className="space-y-3">
         <header className="flex flex-wrap items-end justify-between gap-2">
