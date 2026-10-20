@@ -6,22 +6,17 @@ import {
   Copy,
   Download,
   ArrowUpRight,
-  ArrowLeft,
   ArrowRight,
   Send,
   Search,
   ChevronDown,
-  KeyRound,
-  BookOpenCheck,
-  CreditCard,
   ShieldCheck,
-  Headphones,
   CheckCircle2,
   Loader2,
   FileText,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { NorteBrand } from "@/components/brand/NorteBrand";
+import { InstitutionalWindow, WindowSections } from "@/components/landing/InstitutionalWindow";
 import "@/styles/support-center.css";
 
 export const Route = createFileRoute("/suporte")({
@@ -39,7 +34,7 @@ const FAQ = [
   ],
   [
     "Encontrei uma questão com erro. Como relatar?",
-    "Selecione ‘Conteúdo ou gabarito’ no relato abaixo. Inclua o identificador da questão, a alternativa ou trecho questionado e uma fonte oficial, quando houver. Para legislação, informe também a data da consulta.",
+    "Na aba Enviar pedido, selecione ‘Conteúdo ou gabarito’. Inclua o identificador da questão, a alternativa ou trecho questionado e uma fonte oficial, quando houver. Para legislação, informe também a data da consulta.",
   ],
   [
     "Não consigo entrar na minha conta.",
@@ -55,6 +50,7 @@ const FAQ = [
   ],
 ];
 function Support() {
+  const [supportTab, setSupportTab] = useState("duvidas");
   const [search, setSearch] = useState("");
   const [topic, setTopic] = useState("Acesso à conta");
   const [description, setDescription] = useState("");
@@ -118,308 +114,254 @@ function Support() {
     description.trim().length >= 10 &&
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(replyEmail.trim());
   return (
-    <div className="support-center">
-      <a className="sc-skip" href="#support-main">
-        Pular para o atendimento
-      </a>
-      <header className="sc-header sc-container">
-        <Link to="/" aria-label="Norte Concursos — início">
-          <NorteBrand light />
-        </Link>
-        <nav aria-label="Navegação do suporte">
-          <Link to="/" className="sc-back">
-            <ArrowLeft size={15} aria-hidden="true" /> Início
-          </Link>
-          <Link to="/auth" className="sc-button sc-button--outline">
-            Acessar minha conta <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-        </nav>
-      </header>
-      <main id="support-main" tabIndex={-1} className="sc-container">
-        <section className="sc-hero" aria-labelledby="support-title">
-          <div className="sc-hero__copy">
-            <span className="sc-eyebrow">
-              <Headphones size={15} aria-hidden="true" /> Central de suporte
-            </span>
-            <h1 id="support-title">
-              Conte com um norte.
-              <br />
-              <em>Continue sua preparação.</em>
-            </h1>
-            <p>
-              Da dúvida ao próximo passo. Encontre uma orientação ou fale com a equipe sobre o que
-              está impedindo seu estudo.
-            </p>
-            <a href="#support-request" className="sc-button sc-button--gold">
-              Preciso de ajuda <ArrowRight size={16} aria-hidden="true" />
-            </a>
-          </div>
-          <div className="sc-hero__identity" aria-hidden="true">
-            <img
-              src="/media/hero/auth-distintivo.webp"
-              alt=""
-              width={96}
-              height={116}
-              fetchPriority="high"
-              decoding="async"
-            />
-            <span>
-              NORTE CONCURSOS<small>ATENDIMENTO AO ALUNO</small>
-            </span>
-          </div>
-        </section>
-        <nav className="sc-topics" aria-label="Escolha o assunto do atendimento">
-          {[
-            {
-              icon: KeyRound,
-              title: "Acesso e senha",
-              text: "Ajuda para voltar à sua conta.",
-              value: "Acesso à conta",
-            },
-            {
-              icon: BookOpenCheck,
-              title: "Questões e conteúdo",
-              text: "Relate um erro ou uma dúvida de gabarito.",
-              value: "Conteúdo ou gabarito",
-            },
-            {
-              icon: CreditCard,
-              title: "Planos e assinatura",
-              text: "Entenda seu acesso e os recursos do plano.",
-              value: "Plano e assinatura",
-            },
-          ].map(({ icon: Icon, title, text, value }) => (
-            <a
-              key={value}
-              href="#support-request"
-              onClick={() => {
-                if (!protocol && !sending) {
-                  setTopic(value);
-                  setStatus("");
-                }
-              }}
-            >
-              <span className="sc-topic-icon">
-                <Icon size={21} aria-hidden="true" />
-              </span>
-              <span>
-                <strong>{title}</strong>
-                <small>{text}</small>
-              </span>
-              <ArrowUpRight size={17} aria-hidden="true" />
-            </a>
-          ))}
-        </nav>
-        <div className="sc-workspace">
-          <section className="sc-help" aria-labelledby="support-faq-title">
-            <span className="sc-eyebrow">Orientação rápida</span>
-            <h2 id="support-faq-title">Talvez a resposta esteja aqui.</h2>
-            <p className="sc-section-intro">
-              Consulte as dúvidas mais comuns antes de preparar seu pedido.
-            </p>
-            <label className="sc-search" htmlFor="support-search">
-              <Search size={17} aria-hidden="true" />
-              <span className="sr-only">Buscar nas perguntas frequentes</span>
-              <input
-                id="support-search"
-                type="search"
-                placeholder="Busque por acesso, plano, questões…"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                aria-controls="support-faq-list"
-              />
-            </label>
-            <div className="sc-faq" id="support-faq-list">
-              {matchingFaq.map(([question, answer]) => (
-                <details key={question}>
-                  <summary>
-                    {question}
-                    <ChevronDown size={16} aria-hidden="true" />
-                  </summary>
-                  <p>{answer}</p>
-                </details>
-              ))}
-              {matchingFaq.length === 0 && (
-                <p className="sc-empty" role="status">
-                  Não encontramos uma resposta para essa busca. Você pode descrever sua dúvida no
-                  formulário.
-                </p>
-              )}
-            </div>
-            <aside className="sc-note">
-              <ShieldCheck size={21} aria-hidden="true" />
+    <InstitutionalWindow
+      page="/suporte"
+      title="Como podemos ajudar?"
+      description="Consulte as orientações ou envie um pedido à equipe. Seu relato continua disponível ao trocar de aba."
+      image="/media/hero/auth-carreiras-composicao.webp"
+    >
+      <WindowSections
+        label="Opções de suporte"
+        value={supportTab}
+        onValueChange={setSupportTab}
+        sections={[
+          {
+            id: "duvidas",
+            label: "Dúvidas frequentes",
+            content: (
               <div>
-                <h3>Seu relato, com segurança.</h3>
-                <p>
-                  Compartilhe apenas o necessário. Senhas e dados de cartão nunca devem fazer parte
-                  de um pedido de suporte.
-                </p>
-                <Link to="/privacy">
-                  Conheça nossa política de privacidade{" "}
-                  <ArrowUpRight size={13} aria-hidden="true" />
-                </Link>
-              </div>
-            </aside>
-            <div className="sc-help-links">
-              <Link to="/auth">
-                Recuperar meu acesso <ArrowUpRight size={14} aria-hidden="true" />
-              </Link>
-              <Link to="/desafio-diario">
-                Conhecer o desafio diário <ArrowUpRight size={14} aria-hidden="true" />
-              </Link>
-            </div>
-          </section>
-          <section
-            id="support-request"
-            className="sc-request"
-            aria-labelledby="support-request-title"
-          >
-            <div className="sc-request__heading">
-              <span className="sc-topic-icon">
-                <FileText size={21} aria-hidden="true" />
-              </span>
-              <div>
-                <span className="sc-eyebrow">Fale com a equipe</span>
-                <h2 id="support-request-title">Como podemos ajudar?</h2>
-              </div>
-            </div>
-            <p className="sc-section-intro">
-              Conte o que aconteceu. Após o envio, guarde o protocolo do seu pedido.
-            </p>
-            <form
-              onSubmit={(event) => {
-                event.preventDefault();
-                if (canSend) void send();
-              }}
-              aria-busy={sending}
-            >
-              <fieldset disabled={sending || !!protocol}>
-                <legend className="sr-only">Dados do pedido de suporte</legend>
-                <div className="sc-form-row">
-                  <div>
-                    <label htmlFor="support-topic">Assunto</label>
-                    <select
-                      id="support-topic"
-                      value={topic}
-                      onChange={(event) => {
-                        setTopic(event.target.value);
-                        setStatus("");
-                      }}
-                    >
-                      {[
-                        "Acesso à conta",
-                        "Conteúdo ou gabarito",
-                        "Plano e assinatura",
-                        "Privacidade e dados",
-                        "Sugestão de melhoria",
-                      ].map((item) => (
-                        <option key={item}>{item}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="support-email">E-mail para retorno</label>
-                    <Input
-                      id="support-email"
-                      type="email"
-                      autoComplete="email"
-                      maxLength={254}
-                      required
-                      value={replyEmail}
-                      onChange={(event) => setReplyEmail(event.target.value)}
-                      placeholder="voce@exemplo.com"
+                {" "}
+                <section className="sc-help" aria-labelledby="support-faq-title">
+                  <span className="sc-eyebrow">Orientação rápida</span>
+                  <h2 id="support-faq-title">Talvez a resposta esteja aqui.</h2>
+                  <p className="sc-section-intro">
+                    Consulte as dúvidas mais comuns antes de preparar seu pedido.
+                  </p>
+                  <label className="sc-search" htmlFor="support-search">
+                    <Search size={17} aria-hidden="true" />
+                    <span className="sr-only">Buscar nas perguntas frequentes</span>
+                    <input
+                      id="support-search"
+                      type="search"
+                      placeholder="Busque por acesso, plano, questões…"
+                      value={search}
+                      onChange={(event) => setSearch(event.target.value)}
+                      aria-controls="support-faq-list"
                     />
+                  </label>
+                  <div className="sc-faq" id="support-faq-list">
+                    {matchingFaq.map(([question, answer]) => (
+                      <details key={question}>
+                        <summary>
+                          {question}
+                          <ChevronDown size={16} aria-hidden="true" />
+                        </summary>
+                        <p>{answer}</p>
+                      </details>
+                    ))}
+                    {matchingFaq.length === 0 && (
+                      <p className="sc-empty" role="status">
+                        Não encontramos uma resposta para essa busca. Você pode descrever sua dúvida
+                        no formulário.
+                      </p>
+                    )}
                   </div>
-                </div>
-                <label htmlFor="support-description">O que aconteceu?</label>
-                <textarea
-                  id="support-description"
-                  rows={6}
-                  minLength={10}
-                  maxLength={5000}
-                  required
-                  value={description}
-                  onChange={(event) => {
-                    setDescription(event.target.value);
-                    setStatus("");
-                  }}
-                  placeholder="Informe a tela, o que tentou fazer e o resultado. Se for uma questão, inclua o identificador e a fonte consultada."
-                  aria-describedby="support-description-help"
-                />
-                <div className="sc-field-hint" id="support-description-help">
-                  <span>De 10 a 5.000 caracteres. Não inclua senhas.</span>
-                  <span>{description.length.toLocaleString("pt-BR")}/5.000</span>
-                </div>
-              </fieldset>
-              <button
-                type="submit"
-                className="sc-button sc-button--gold sc-submit"
-                disabled={!canSend}
-              >
-                {sending ? (
-                  <Loader2 className="sc-spinner" size={16} aria-hidden="true" />
-                ) : protocol ? (
-                  <CheckCircle2 size={16} aria-hidden="true" />
-                ) : (
-                  <Send size={16} aria-hidden="true" />
-                )}
-                {protocol
-                  ? "Pedido enviado"
-                  : sending
-                    ? "Enviando pedido…"
-                    : "Enviar pedido de suporte"}
-              </button>
-            </form>
-            <div className="sc-export">
-              <span>Prefere guardar uma cópia?</span>
-              <div>
-                <button type="button" disabled={!description.trim()} onClick={copy}>
-                  <Copy size={14} aria-hidden="true" /> Copiar
-                </button>
-                <button type="button" disabled={!description.trim()} onClick={download}>
-                  <Download size={14} aria-hidden="true" /> Baixar relato
+                  <aside className="sc-note">
+                    <ShieldCheck size={21} aria-hidden="true" />
+                    <div>
+                      <h3>Seu relato, com segurança.</h3>
+                      <p>
+                        Compartilhe apenas o necessário. Senhas e dados de cartão nunca devem fazer
+                        parte de um pedido de suporte.
+                      </p>
+                      <Link to="/privacy">
+                        Conheça nossa política de privacidade{" "}
+                        <ArrowUpRight size={13} aria-hidden="true" />
+                      </Link>
+                    </div>
+                  </aside>
+                  <div className="sc-help-links">
+                    <Link to="/auth">
+                      Recuperar meu acesso <ArrowUpRight size={14} aria-hidden="true" />
+                    </Link>
+                    <Link to="/desafio-diario">
+                      Conhecer o desafio diário <ArrowUpRight size={14} aria-hidden="true" />
+                    </Link>
+                  </div>
+                </section>
+                <button
+                  type="button"
+                  className="iw-about-cta"
+                  onClick={() => setSupportTab("support-request")}
+                >
+                  Não encontrei a resposta · Enviar pedido{" "}
+                  <ArrowRight size={14} aria-hidden="true" />
                 </button>
               </div>
-            </div>
-            <div className="sc-feedback" role="status" aria-atomic="true">
-              {status && <p>{status}</p>}
-              {protocol && (
-                <p className="sc-protocol">
-                  Protocolo <strong>{protocol}</strong>
-                </p>
-              )}
-            </div>
-            {sendError && (
-              <p className="sc-error" role="alert">
-                {sendError}
-              </p>
-            )}
-            {email ? (
-              <a
-                className="sc-email"
-                href={`mailto:${email}?subject=${encodeURIComponent(`Norte Concursos — ${topic}`)}&body=${encodeURIComponent(description)}`}
-              >
-                Abrir e-mail para o suporte <ArrowUpRight size={14} aria-hidden="true" />
-              </a>
-            ) : (
-              <p className="sc-channel">
-                Seu pedido é encaminhado à administração da Norte Concursos por esta página.
-              </p>
-            )}
-          </section>
-        </div>
-      </main>
-      <footer className="sc-footer sc-container">
-        <span>Norte Concursos · De Feijó para todo o Brasil</span>
-        <nav aria-label="Links institucionais">
-          <Link to="/sobre">Nossa história</Link>
-          <Link to="/privacy">Privacidade</Link>
-          <Link to="/terms">Termos de uso</Link>
-          <Link to="/">
-            Voltar ao início <ArrowUpRight size={13} aria-hidden="true" />
-          </Link>
-        </nav>
-      </footer>
-    </div>
+            ),
+          },
+          {
+            id: "support-request",
+            label: "Enviar pedido",
+            content: (
+              <div>
+                <h2>Fale com a equipe.</h2>
+                <div className="iw-support-topics">
+                  {["Acesso à conta", "Conteúdo ou gabarito", "Plano e assinatura"].map((item) => (
+                    <button
+                      type="button"
+                      key={item}
+                      aria-pressed={topic === item}
+                      disabled={sending || !!protocol}
+                      onClick={() => setTopic(item)}
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>{" "}
+                <section
+                  id="support-request"
+                  className="sc-request"
+                  aria-labelledby="support-request-title"
+                >
+                  <div className="sc-request__heading">
+                    <span className="sc-topic-icon">
+                      <FileText size={21} aria-hidden="true" />
+                    </span>
+                    <div>
+                      <span className="sc-eyebrow">Fale com a equipe</span>
+                      <h2 id="support-request-title">Como podemos ajudar?</h2>
+                    </div>
+                  </div>
+                  <p className="sc-section-intro">
+                    Conte o que aconteceu. Após o envio, guarde o protocolo do seu pedido.
+                  </p>
+                  <form
+                    onSubmit={(event) => {
+                      event.preventDefault();
+                      if (canSend) void send();
+                    }}
+                    aria-busy={sending}
+                  >
+                    <fieldset disabled={sending || !!protocol}>
+                      <legend className="sr-only">Dados do pedido de suporte</legend>
+                      <div className="sc-form-row">
+                        <div>
+                          <label htmlFor="support-topic">Assunto</label>
+                          <select
+                            id="support-topic"
+                            value={topic}
+                            onChange={(event) => {
+                              setTopic(event.target.value);
+                              setStatus("");
+                            }}
+                          >
+                            {[
+                              "Acesso à conta",
+                              "Conteúdo ou gabarito",
+                              "Plano e assinatura",
+                              "Privacidade e dados",
+                              "Sugestão de melhoria",
+                            ].map((item) => (
+                              <option key={item}>{item}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="support-email">E-mail para retorno</label>
+                          <Input
+                            id="support-email"
+                            type="email"
+                            autoComplete="email"
+                            maxLength={254}
+                            required
+                            value={replyEmail}
+                            onChange={(event) => setReplyEmail(event.target.value)}
+                            placeholder="voce@exemplo.com"
+                          />
+                        </div>
+                      </div>
+                      <label htmlFor="support-description">O que aconteceu?</label>
+                      <textarea
+                        id="support-description"
+                        rows={6}
+                        minLength={10}
+                        maxLength={5000}
+                        required
+                        value={description}
+                        onChange={(event) => {
+                          setDescription(event.target.value);
+                          setStatus("");
+                        }}
+                        placeholder="Informe a tela, o que tentou fazer e o resultado. Se for uma questão, inclua o identificador e a fonte consultada."
+                        aria-describedby="support-description-help"
+                      />
+                      <div className="sc-field-hint" id="support-description-help">
+                        <span>De 10 a 5.000 caracteres. Não inclua senhas.</span>
+                        <span>{description.length.toLocaleString("pt-BR")}/5.000</span>
+                      </div>
+                    </fieldset>
+                    <button
+                      type="submit"
+                      className="sc-button sc-button--gold sc-submit"
+                      disabled={!canSend}
+                    >
+                      {sending ? (
+                        <Loader2 className="sc-spinner" size={16} aria-hidden="true" />
+                      ) : protocol ? (
+                        <CheckCircle2 size={16} aria-hidden="true" />
+                      ) : (
+                        <Send size={16} aria-hidden="true" />
+                      )}
+                      {protocol
+                        ? "Pedido enviado"
+                        : sending
+                          ? "Enviando pedido…"
+                          : "Enviar pedido de suporte"}
+                    </button>
+                  </form>
+                  <div className="sc-export">
+                    <span>Prefere guardar uma cópia?</span>
+                    <div>
+                      <button type="button" disabled={!description.trim()} onClick={copy}>
+                        <Copy size={14} aria-hidden="true" /> Copiar
+                      </button>
+                      <button type="button" disabled={!description.trim()} onClick={download}>
+                        <Download size={14} aria-hidden="true" /> Baixar relato
+                      </button>
+                    </div>
+                  </div>
+                  <div className="sc-feedback" role="status" aria-atomic="true">
+                    {status && <p>{status}</p>}
+                    {protocol && (
+                      <p className="sc-protocol">
+                        Protocolo <strong>{protocol}</strong>
+                      </p>
+                    )}
+                  </div>
+                  {sendError && (
+                    <p className="sc-error" role="alert">
+                      {sendError}
+                    </p>
+                  )}
+                  {email ? (
+                    <a
+                      className="sc-email"
+                      href={`mailto:${email}?subject=${encodeURIComponent(`Norte Concursos — ${topic}`)}&body=${encodeURIComponent(description)}`}
+                    >
+                      Abrir e-mail para o suporte <ArrowUpRight size={14} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <p className="sc-channel">
+                      Seu pedido é encaminhado à administração da Norte Concursos por esta página.
+                    </p>
+                  )}
+                </section>
+              </div>
+            ),
+          },
+        ]}
+      />
+    </InstitutionalWindow>
   );
 }
