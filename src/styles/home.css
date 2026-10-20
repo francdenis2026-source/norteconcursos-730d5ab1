@@ -4058,16 +4058,23 @@
   .home-final { background-image: linear-gradient(rgb(17 26 37 / .96), rgb(17 26 37 / .9)), url("/media/hero/home-bg-texture.webp"); }
 }
 
-/* Native cursor keeps the bullet aligned with the pointer and always has a fallback. */
+/* Native cursor assets keep their hotspot accurate and retain system fallbacks. */
 @media (hover: hover) and (pointer: fine) {
   .home, .home * {
-    cursor: url("/media/bullet-cursor-metal.svg") 7 3, auto;
+    cursor: url("/media/cursor-cartridge-photo.png") 5 2, auto;
   }
-  .home :is(a, button, summary, [role="button"]) {
-    cursor: url("/media/bullet-cursor-metal.svg") 7 3, pointer;
+  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]),
+  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]) * {
+    cursor: url("/media/cursor-target.svg") 16 16, pointer;
   }
-  .home :is(input, textarea, [contenteditable="true"]) { cursor: text; }
-  .home :disabled { cursor: not-allowed; }
+  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active,
+  .home :is(a[href], button, summary, [role="button"], [role="combobox"], [role="option"], [role="tab"]):active * {
+    cursor: url("/media/cursor-target-pressed.svg") 16 16, pointer;
+  }
+  .home :is(input, textarea, [contenteditable="true"]),
+  .home [contenteditable="true"] * { cursor: text; }
+  .home :is(:disabled, [aria-disabled="true"]),
+  .home :is(:disabled, [aria-disabled="true"]) * { cursor: not-allowed !important; }
 }
 
 /* Selos do início: com a coluna estreita o total de questões ficava espremido; empilha e mostra o texto inteiro. */
