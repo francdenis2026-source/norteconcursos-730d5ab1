@@ -3,6 +3,7 @@ import { useSessionHydration } from "@/hooks/useSessionHydration";
 import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
 import { openRow, recordLocalSave } from "@/lib/sessionSnapshots";
 import { LawText } from "@/components/dashboard/LawText";
+import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { simulatorReference } from "@/lib/questionIdentity";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -1909,6 +1910,7 @@ function ActiveSimulator(p: {
                 </div>
               </details>
             )}
+            <ReadingSizeInline className="justify-end" />
             <QuestionProse
               text={parseQuestion(current.text).stem}
               className="mx-auto max-w-5xl text-base font-medium md:text-lg"

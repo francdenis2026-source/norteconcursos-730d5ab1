@@ -33,9 +33,9 @@ test("stepping up and down clamps at 100% and 200%", () => {
 test("percent labels and the screens that show the control", () => {
   assert.equal(readingScalePercent(1.15), "115%");
   assert.equal(readingScalePercent(7), "100%");
-  for (const p of ["/dashboard/question-trainer", "/dashboard/mock-exams", "/dashboard/library/codigo-penal", "/desafio-diario", "/dashboard/legal-course/x"])
+  for (const p of ["/dashboard/library/codigo-penal", "/dashboard/legal-course/x", "/dashboard/errors"])
     assert.ok(showsReadingControl(p), p);
-  for (const p of ["/dashboard", "/dashboard/ranking", "/dashboard/profile", "/", "/dashboard/libraryx"])
+  for (const p of ["/dashboard/question-trainer", "/dashboard/mock-exams", "/desafio-diario", "/dashboard", "/dashboard/ranking", "/dashboard/profile", "/", "/dashboard/libraryx"])
     assert.ok(!showsReadingControl(p), p);
 });
 

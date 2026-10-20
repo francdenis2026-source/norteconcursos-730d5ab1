@@ -134,6 +134,7 @@ import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
+import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
 import { QuestionAudioButton } from "@/components/dashboard/QuestionAudioButton";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
@@ -1917,6 +1918,7 @@ function QuestionTrainer() {
                     ...parsed.options.map((option) => `${option.letter}. ${option.text}`),
                   ].join("\n")}
                 />
+                <ReadingSizeInline className="ml-auto" />
               </div>
               <QuestionProse text={reflowStem(parsed.stem)} className="trainer-question-stem" />
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />

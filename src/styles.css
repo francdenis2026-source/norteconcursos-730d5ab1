@@ -13762,3 +13762,43 @@ html[data-read-scale] :is(.q-text, .study-prose, .reading-text) .q-option-text {
 .reading-size__reset svg { width: 15px; height: 15px; }
 .reading-size__reset:disabled { opacity: 0.45; cursor: not-allowed; }
 @media print { .reading-size { display: none; } }
+
+/* Controle de tamanho do texto junto da questão (ver ReadingSizeInline). */
+.reading-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 4px 6px 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--muted) 70%, transparent);
+  color: var(--foreground);
+}
+.reading-inline__label { margin-right: 4px; font-size: 12px; font-weight: 700; color: var(--muted-foreground); white-space: nowrap; }
+.reading-inline__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1px;
+  min-width: 44px;
+  height: 40px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--foreground);
+  font-weight: 800;
+  cursor: pointer;
+}
+.reading-inline__btn { align-items: center; }
+.reading-inline__btn svg { width: 12px; height: 12px; margin-left: 1px; stroke-width: 3; }
+.reading-inline__small { font-size: 13px; }
+.reading-inline__big { font-size: 20px; line-height: 1; }
+.reading-inline__btn:hover:not(:disabled) { background: var(--accent); }
+.reading-inline__btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.reading-inline__btn:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline-offset: 2px; }
+.reading-inline__value { min-width: 3.4ch; text-align: center; font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; }
+@media (max-width: 479px) { .reading-inline__label { display: none; } .reading-inline { padding-left: 6px; } }
+@media print { .reading-inline { display: none; } }

@@ -55,11 +55,8 @@ export function applyReadingScale(scale: number, persist = true) {
 /** Roda no <head> antes da pintura, para o texto já nascer no tamanho escolhido (sem "pulo"). */
 export const READING_SCALE_INIT_SCRIPT = `(function(){try{var v=parseFloat(localStorage.getItem('${READING_SCALE_KEY}'));var ok=[${READING_SCALES.join(",")}];if(ok.indexOf(v)>0){var r=document.documentElement;r.setAttribute('data-read-scale',String(v));r.style.setProperty('--read-scale',String(v));}}catch(e){}})();`;
 
-/** Telas em que há leitura longa e vale mostrar o controle. */
+/** Telas de leitura longa que usam o botão flutuante (questões e simulados têm o controle junto do enunciado). */
 const READING_PREFIXES = [
-  "/dashboard/question-trainer",
-  "/dashboard/mock-exams",
-  "/dashboard/enem",
   "/dashboard/library",
   "/dashboard/legal-course",
   "/dashboard/errors",
@@ -73,7 +70,6 @@ const READING_PREFIXES = [
   "/dashboard/dicionario",
   "/dashboard/ctb",
   "/dashboard/notebooks",
-  "/desafio-diario",
 ];
 export const showsReadingControl = (pathname: string) =>
   READING_PREFIXES.some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"));

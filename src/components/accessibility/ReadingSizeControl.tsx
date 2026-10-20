@@ -1,32 +1,17 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Minus, Plus, RotateCcw, Type } from "lucide-react";
-import {
-  READING_SCALES,
-  READING_SCALE_EVENT,
-  applyReadingScale,
-  normalizeReadingScale,
-  readStoredReadingScale,
-  readingScalePercent,
-  stepReadingScale,
-} from "@/lib/readingScale";
+import { useReadingScale } from "@/hooks/useReadingScale";
+import { READING_SCALES, readingScalePercent, stepReadingScale } from "@/lib/readingScale";
 
 /**
  * Controle de tamanho do texto de leitura (questões, simulados e materiais). Só aumenta a partir do
  * padrão: o botão de diminuir para em 100%. A preferência fica salva neste aparelho.
  */
 export function ReadingSizeControl() {
-  const [scale, setScale] = useState(1);
+  const { scale, change } = useReadingScale();
   const [open, setOpen] = useState(false);
   const box = useRef<HTMLDivElement>(null);
   const panelId = useId();
-
-  useEffect(() => {
-    setScale(readStoredReadingScale());
-    const sync = (event: Event) =>
-      setScale(normalizeReadingScale((event as CustomEvent<number>).detail));
-    window.addEventListener(READING_SCALE_EVENT, sync);
-    return () => window.removeEventListener(READING_SCALE_EVENT, sync);
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -46,12 +31,16 @@ export function ReadingSizeControl() {
 
   const index = READING_SCALES.findIndex((step) => step === scale);
   const percent = readingScalePercent(scale);
-  const change = (next: number) => setScale(applyReadingScale(next));
 
   return (
     <div className="reading-size" ref={box} data-open={open}>
       {open && (
-        <div className="reading-size__panel" id={panelId} role="group" aria-label="Tamanho do texto">
+        <div
+          className="reading-size__panel"
+          id={panelId}
+          role="group"
+          aria-label="Tamanho do texto"
+        >
           <p className="reading-size__title">Tamanho do texto</p>
           <div className="reading-size__row">
             <button
@@ -92,8 +81,8 @@ export function ReadingSizeControl() {
             <span>Máximo</span>
           </div>
           <p className="reading-size__hint">
-            Aumenta só as letras de questões, alternativas e materiais; as caixas e botões
-            continuam do mesmo tamanho.
+            Aumenta só as letras de questões, alternativas e materiais; as caixas e botões continuam
+            do mesmo tamanho.
           </p>
           <button
             type="button"
