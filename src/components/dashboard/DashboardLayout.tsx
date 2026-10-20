@@ -269,6 +269,26 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
+/* Painéis sem texto denso que recebem a faixa e a marca d'água da marca (ver styles.css). */
+const BRAND_BG_ROUTES = new Set([
+  "/dashboard",
+  "/dashboard/my-contest",
+  "/dashboard/careers",
+  "/dashboard/cronograma",
+  "/dashboard/study-plan",
+  "/dashboard/trilhas",
+  "/dashboard/medals",
+  "/dashboard/ranking",
+  "/dashboard/study-tools",
+  "/dashboard/timer",
+  "/dashboard/profile",
+  "/dashboard/subscriptions",
+  "/dashboard/edital-radar",
+  "/dashboard/exam-panorama",
+  "/dashboard/perfil-bancas",
+  "/dashboard/performance",
+]);
+
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
   const location = useLocation();
@@ -292,6 +312,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, []);
 
   const isAdmin = user?.role === "admin";
+  const brandBg = !isAdmin && BRAND_BG_ROUTES.has(location.pathname.replace(/\/+$/, "") || "/");
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
   const items = React.useMemo(
     () =>
@@ -468,7 +489,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <div className="app-shell navigation-v2" data-area={isAdmin ? "admin" : "student"}>
+      <div
+        className="app-shell navigation-v2"
+        data-area={isAdmin ? "admin" : "student"}
+        data-brand-bg={brandBg ? "on" : "off"}
+      >
         {user && user.id !== "demo-user" && <IdleGuard />}
         <FocusReturnBar />
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
