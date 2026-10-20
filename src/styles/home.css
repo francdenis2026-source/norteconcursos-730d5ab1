@@ -4057,3 +4057,78 @@
   .dark .home::before { opacity: .045; }
   .home-final { background-image: linear-gradient(rgb(17 26 37 / .96), rgb(17 26 37 / .9)), url("/media/hero/home-bg-texture.webp"); }
 }
+
+/* Desktop cursor: restrained bullet silhouette with a soft operational glow. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .home.has-bullet-cursor,
+  .home.has-bullet-cursor * { cursor: none !important; }
+  .home-bullet-cursor {
+    position: fixed;
+    z-index: 200;
+    width: 24px;
+    height: 34px;
+    pointer-events: none;
+    transform-origin: 8px 18px;
+    opacity: 1;
+    transition: opacity .16s ease, filter .18s ease;
+    filter: drop-shadow(0 3px 8px rgb(0 0 0 / .42));
+  }
+  .home-bullet-cursor.is-hidden { opacity: 0; }
+  .home-bullet-cursor svg {
+    display: block;
+    width: 24px;
+    height: 34px;
+    overflow: visible;
+  }
+  .home-bullet-cursor svg path:first-child {
+    fill: var(--home-accent);
+    stroke: color-mix(in oklab, var(--home-accent) 65%, #fff);
+    stroke-width: 1.2;
+  }
+  .home-bullet-cursor svg path:last-child {
+    fill: none;
+    stroke: color-mix(in oklab, var(--home-bg) 65%, #fff);
+    stroke-linecap: round;
+    stroke-width: 1.1;
+  }
+  .home-bullet-cursor i {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 9px;
+    height: 9px;
+    border: 1px solid color-mix(in oklab, var(--home-accent) 55%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px color-mix(in oklab, var(--home-accent) 8%, transparent), 0 0 18px color-mix(in oklab, var(--home-accent) 34%, transparent);
+    opacity: .72;
+    transition: transform .18s var(--ease-out), border-color .18s ease, box-shadow .18s ease;
+  }
+  .home-bullet-cursor.is-action {
+    filter: drop-shadow(0 4px 10px color-mix(in oklab, var(--home-gold) 40%, transparent));
+  }
+  .home-bullet-cursor.is-action svg path:first-child { fill: var(--home-gold); }
+  .home-bullet-cursor.is-action i {
+    transform: scale(1.35);
+    border-color: color-mix(in oklab, var(--home-gold) 72%, transparent);
+    box-shadow: 0 0 0 7px color-mix(in oklab, var(--home-gold) 10%, transparent), 0 0 20px color-mix(in oklab, var(--home-gold) 44%, transparent);
+  }
+}
+
+/* Discreet ballistic-glass detail in the hero. */
+.home-hero::before {
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+  right: 7%;
+  width: clamp(190px, 22vw, 320px);
+  aspect-ratio: 1;
+  content: "";
+  pointer-events: none;
+  background: url("/media/hero/hero-impact-overlay.webp") center / contain no-repeat;
+  opacity: .1;
+  mix-blend-mode: screen;
+  transform: rotate(-8deg);
+}
+@media (max-width: 700px) {
+  .home-hero::before { top: 9%; right: 3%; width: 180px; opacity: .07; }
+}

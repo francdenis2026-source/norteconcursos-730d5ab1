@@ -1,7 +1,7 @@
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Sheet,
   SheetClose,
@@ -214,11 +214,69 @@ function usePointerInteractions() {
   }, []);
 }
 
+function BulletCursor() {
+  const cursorRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!finePointer.matches || reduceMotion.matches) return;
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+    const root = cursor.closest(".home");
+    root?.classList.add("has-bullet-cursor");
+    let frame = 0;
+    let x = -40;
+    let y = -40;
+    let nextX = x;
+    let nextY = y;
+    const move = (event: PointerEvent) => {
+      nextX = event.clientX;
+      nextY = event.clientY;
+      cursor.classList.toggle(
+        "is-action",
+        Boolean((event.target as HTMLElement | null)?.closest("a,button,summary,[role='button']")),
+      );
+      if (!frame) {
+        frame = window.requestAnimationFrame(() => {
+          x += (nextX - x) * 0.28;
+          y += (nextY - y) * 0.28;
+          cursor.style.transform = `translate3d(${x - 8}px, ${y - 18}px, 0) rotate(28deg)`;
+          frame = 0;
+        });
+      }
+    };
+    const leave = () => cursor.classList.add("is-hidden");
+    const enter = () => cursor.classList.remove("is-hidden");
+    window.addEventListener("pointermove", move, { passive: true });
+    window.addEventListener("pointerleave", leave);
+    window.addEventListener("pointerenter", enter);
+    return () => {
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerleave", leave);
+      window.removeEventListener("pointerenter", enter);
+      if (frame) window.cancelAnimationFrame(frame);
+      root?.classList.remove("has-bullet-cursor");
+    };
+  }, []);
+
+  return (
+    <span ref={cursorRef} className="home-bullet-cursor is-hidden" aria-hidden="true">
+      <svg viewBox="0 0 24 34" role="presentation">
+        <path d="M12 1.5 17.2 7v9.2l-2.1 14.2h-6.2L6.8 16.2V7L12 1.5Z" />
+        <path d="M7 9.2h10M8.3 15.8h7.4" />
+      </svg>
+      <i />
+    </span>
+  );
+}
+
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   usePointerInteractions();
   return (
     <div className="home">
+      <BulletCursor />
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
