@@ -232,7 +232,7 @@ function AuthPage() {
   };
 
   return (
-    <main className="auth">
+    <main className="auth" data-auth-mode={mode}>
       <section className="auth-visual">
         <Link to="/" aria-label="Norte Concurso — início" className="w-fit">
           <NorteBrand light />
