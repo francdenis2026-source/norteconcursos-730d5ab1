@@ -1,6 +1,7 @@
 import type { Question } from "./questionFormat";
 import { examKey } from "./questionFormat";
 import { needsMissingSupportText } from "./questionText";
+import { parseQuestionCode, questionCode } from "./questionIdentity";
 import { trainerCollectionQuestions } from "./trainerFilters";
 import {
   questionContestValue,
@@ -18,10 +19,18 @@ const fold = (text: string) =>
     .trim();
 /** Search the same provenance metadata in the bank and at the trainer destination. */
 export function searchQuestionCatalog(catalog: Question[], query: string) {
+  // Um código permanente completo (ex.: BD-1A2B-3C4D-5E6F) localiza exatamente aquela questão.
+  const code = parseQuestionCode(query);
+  if (code) {
+    const exact = questionCode({ id: `${code.idPrefix}`, source: "official", table: code.table });
+    return catalog.filter((q) => questionCode(q) === exact);
+  }
   const text = fold(query);
   return text
     ? catalog.filter((q) =>
-        fold(`${q.contest} ${q.board} ${q.subject} ${q.career} ${q.year}`).includes(text),
+        fold(`${q.contest} ${q.board} ${q.subject} ${q.career} ${q.year} ${questionCode(q)}`).includes(
+          text,
+        ),
       )
     : catalog;
 }

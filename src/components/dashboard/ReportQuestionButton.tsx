@@ -15,6 +15,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import type { Question } from "@/lib/questionFormat";
+import { questionCode } from "@/lib/questionIdentity";
 import { toast } from "sonner";
 
 export function ReportQuestionButton({ question }: { question: Question }) {
@@ -39,6 +40,8 @@ export function ReportQuestionButton({ question }: { question: Question }) {
         reported_by: auth.user.id,
         reason: trimmed,
         question_snapshot: {
+          // Código permanente: o mesmo que o aluno vê e copia na tela da questão.
+          code: questionCode(question),
           contest: question.contest,
           board: question.board,
           career: question.career,
@@ -76,6 +79,9 @@ export function ReportQuestionButton({ question }: { question: Question }) {
             <DialogDescription>
               Descreva o que está errado — enunciado, gabarito, alternativa, digitação. Um
               administrador vai revisar direto na fonte.
+              <span className="mt-2 block font-mono text-xs">
+                Questão {questionCode(question)}
+              </span>
             </DialogDescription>
           </DialogHeader>
           <Textarea

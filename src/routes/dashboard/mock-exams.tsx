@@ -10,9 +10,30 @@ import {
   randomSimulator,
   simulatorFingerprint,
   restoreSimulatorDraft,
+  simulatorComparable,
+  simulatorProgress,
+  nextUnansweredIndex,
+  simulatorItemStatus,
+  simulatorReportQuestion,
   type SimulatorDraft,
   type SimulatorQuestion,
 } from "@/lib/simulatorSession";
+import {
+  resolveScoringRule,
+  scoreAttempt,
+  formatScore,
+  SIMPLE_RULE,
+  NET_RULE,
+  type ReferenceRuleRow,
+  type ScoringRule,
+} from "@/lib/examScoring";
+import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
+import { AttemptHistoryItem } from "@/components/dashboard/AttemptHistoryList";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
+import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
+import { simulatorQuestionCode } from "@/lib/questionIdentity";
+import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
+import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
 import { parseQuestion } from "@/lib/questionFormat";
 import { Input } from "@/components/ui/input";
 import { platformNow } from "@/lib/platformClock";
@@ -50,6 +71,7 @@ import {
   Loader2,
   Play,
   RotateCcw,
+  SkipForward,
   ShieldCheck,
   Target,
   TimerReset,
@@ -124,16 +146,12 @@ export const Route = createFileRoute("/dashboard/mock-exams")({
 
 type Answer = "A" | "B" | "C" | "D" | "E";
 type SimulatorStage = "setup" | "active" | "result";
-interface AttemptHistory {
-  id: string;
-  title: string;
-  total_questions: number;
-  correct_answers: number;
-  wrong_answers: number;
-  blank_answers: number;
-  accuracy: number;
-  duration_seconds: number;
-  finished_at: string;
+interface RankingSummary {
+  answered: number;
+  counted: number;
+  repeated: number;
+  points: number;
+  attemptValid: boolean;
 }
 interface SubjectResult {
   subject: string;
@@ -170,7 +188,10 @@ function ProfessionalSimulator() {
     title: string;
     contestFilter: string | null;
     subjectFilter: string | null;
+    rule: ScoringRule;
   } | null>(null);
+  const [skipped, setSkipped] = React.useState<Set<string>>(new Set());
+  const [rankingSummary, setRankingSummary] = React.useState<RankingSummary | null>(null);
   const [endedAt, setEndedAt] = React.useState<number | null>(null);
   const [resumeDraft, setResumeDraft] =
     React.useState<ReturnType<typeof restoreSimulatorDraft>>(null);
@@ -199,7 +220,8 @@ function ProfessionalSimulator() {
 
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
   const [historyUnavailable, setHistoryUnavailable] = React.useState(false);
-  const [history, setHistory] = React.useState<AttemptHistory[]>([]);
+  const [history, setHistory] = React.useState<AttemptWithDetails[]>([]);
+  const [rulesRegistry, setRulesRegistry] = React.useState<ReferenceRuleRow[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [loadError, setLoadError] = React.useState<string | null>(null);
   const [contest, setContest] = React.useState(
@@ -304,20 +326,28 @@ function ProfessionalSimulator() {
         }),
       });
       const loadHistory = () => {
-        if (!user || user.id === "demo-user") return Promise.resolve({ data: [], error: null });
-        let request = supabase
-          .from("simulator_attempts")
-          .select(
-            "id,title,total_questions,correct_answers,wrong_answers,blank_answers,accuracy,duration_seconds,finished_at",
-          )
-          .eq("user_id", user.id);
-        if (isEnemMode) request = request.eq("contest_filter", "ENEM");
-        return request
-          .abortSignal(AbortSignal.timeout(8000))
-          .order("finished_at", { ascending: false })
-          .limit(8);
+        if (!user || user.id === "demo-user")
+          return Promise.resolve({ data: [] as AttemptWithDetails[], error: null as unknown });
+        return fetchAttemptHistory(user.id, 8, isEnemMode ? "ENEM" : undefined).then(
+          (data) => ({ data, error: null as unknown }),
+          (error: unknown) => ({ data: [] as AttemptWithDetails[], error }),
+        );
       };
-      const [officialResult, curatedResult, boardResult, historyResult] = await Promise.all([
+      // Regra de correção registrada por edição (opcional: sem ela vale a pontuação simples).
+      const loadRules = () =>
+        Promise.resolve(
+          supabase
+            .from("contest_reference_info" as never)
+            .select("contest_name,contest_year,exam_board,scoring_rule"),
+        ).then(
+          (r) =>
+            (r as unknown as { data: ReferenceRuleRow[] | null; error: unknown }).error
+              ? ([] as ReferenceRuleRow[])
+              : (((r as unknown as { data: ReferenceRuleRow[] | null }).data ??
+                  []) as ReferenceRuleRow[]),
+          () => [] as ReferenceRuleRow[],
+        );
+      const [officialResult, curatedResult, boardResult, historyResult, rules] = await Promise.all([
         query(
           "official_exam_questions",
           "id,contest_name,exam_year,career_name,exam_board,subject,item_number,question_text,official_answer,review_note,legal_basis,legal_review_required,legal_audit_completed,context_review_required,support:question_support_texts(label,body)",
@@ -339,6 +369,7 @@ function ProfessionalSimulator() {
           throw error;
         }),
         loadHistory(),
+        loadRules(),
       ]);
       if (generation !== loadGeneration.current) return;
       if (officialResult.error) throw officialResult.error;
@@ -438,11 +469,8 @@ function ProfessionalSimulator() {
         ),
       );
       setHistoryUnavailable(!!historyResult.error);
-      setHistory(
-        ((historyResult.data || []) as AttemptHistory[]).filter(
-          (item) => !isEnemMode || /ENEM/i.test(item.title),
-        ),
-      );
+      setRulesRegistry(rules);
+      setHistory(historyResult.data.filter((item) => !isEnemMode || /ENEM/i.test(item.title)));
     } catch (error) {
       if (generation !== loadGeneration.current) return;
       setLoadError("Não foi possível carregar as questões. Confira sua conexão e tente novamente.");
@@ -532,8 +560,29 @@ function ProfessionalSimulator() {
     [scopedCatalog, filters],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
+  // Respostas anteriores em qualquer modalidade (Treinador, outras provas): mostram o aviso "já respondida".
+  const { locked: answeredHistory } = useLockedAnswers(user?.id, !!user && user.id !== "demo-user");
+  const priorAnswers = React.useMemo(
+    () =>
+      expandAnsweredBySiblings(answeredHistory, catalog.map(simulatorComparable), (q) =>
+        lockedKey(q.source, q.id),
+      ),
+    [answeredHistory, catalog],
+  );
+  const isRepeated = React.useCallback(
+    (q: SimulatorQuestion) => priorAnswers.has(lockedKey(q.sourceKind, q.originalId)),
+    [priorAnswers],
+  );
   const chosenPaper = papers.find((p) => p.key === paperKey);
-  const sessionPool = paperMode ? (chosenPaper?.questions ?? []) : available;
+  // Prova oficial mantém todos os itens do caderno; montagem livre não repete o mesmo item de duas versões.
+  const customPool = React.useMemo(
+    () =>
+      dedupeSharedExamItems(available.map((q) => ({ ...simulatorComparable(q), original: q }))).map(
+        (entry) => entry.original,
+      ),
+    [available],
+  );
+  const sessionPool = paperMode ? (chosenPaper?.questions ?? []) : customPool;
   const sessionCount = paperMode ? sessionPool.length : Math.min(limit, sessionPool.length);
   const quota = isAdmin
     ? ({ allowed: true, limit: null, remaining: null } as const)
@@ -558,6 +607,8 @@ function ProfessionalSimulator() {
     }
     setInvalidDraft(false);
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
+    setSkipped(new Set());
+    setRankingSummary(null);
     setSessionConfig({
       owner: user!.id,
       scope,
@@ -567,6 +618,18 @@ function ProfessionalSimulator() {
         : `${isEnemMode ? "ENEM — " : ""}${customTitle.trim() || "Meu simulado"}`,
       contestFilter: paperMode ? chosenPaper!.question.contest : contest === "all" ? null : contest,
       subjectFilter: paperMode || subject === "all" ? null : subject,
+      // Só uma prova específica pode ter regra de correção registrada; montagem livre usa pontuação simples.
+      rule: paperMode
+        ? resolveScoringRule(
+            {
+              contest: chosenPaper!.question.contest,
+              career: chosenPaper!.question.career,
+              board: chosenPaper!.question.board,
+              year: chosenPaper!.question.year,
+            },
+            rulesRegistry,
+          )
+        : SIMPLE_RULE,
     });
     setEndedAt(null);
     setSaveStatus("idle");
@@ -589,6 +652,7 @@ function ProfessionalSimulator() {
     setQuestions([]);
     setAnswers({});
     setFlagged(new Set());
+    setSkipped(new Set());
     setStartedAt(null);
     setTimeLeft(0);
     setElapsedSeconds(0);
@@ -622,10 +686,12 @@ function ProfessionalSimulator() {
       title: d.title,
       contestFilter: d.contestFilter,
       subjectFilter: d.subjectFilter,
+      rule: d.rule === "net_one_to_one" ? { ...NET_RULE } : SIMPLE_RULE,
     });
     setQuestions(items);
     setAnswers(d.answers);
     setFlagged(new Set(d.flagged));
+    setSkipped(new Set((d.skipped ?? []).filter((id) => !d.answers[id])));
     setCurrentIndex(d.currentIndex);
     setDurationMinutes(d.durationMinutes);
     setStartedAt(d.startedAt);
@@ -635,6 +701,58 @@ function ProfessionalSimulator() {
     setStage(d.phase === "result" ? "result" : "active");
     setSaveStatus(d.phase === "result" ? "error" : "idle");
     setResumeDraft(null);
+  }
+  async function recordAttemptExtras(
+    attemptId: string,
+    ownerId: string,
+    scored: ReturnType<typeof scoreAttempt>,
+    skippedCount: number,
+  ) {
+    try {
+      await Promise.resolve(
+        supabase.from("simulator_attempt_results" as never).upsert(
+          {
+            attempt_id: attemptId,
+            user_id: ownerId,
+            scoring_rule: scored.rule.id,
+            rule_verified: scored.rule.verified,
+            score: scored.score,
+            max_score: scored.maxScore,
+            answered_count: scored.answered,
+            skipped_count: skippedCount,
+          } as never,
+          { onConflict: "attempt_id", ignoreDuplicates: true } as never,
+        ),
+      );
+    } catch {
+      /* Tabela opcional: a nota continua visível aqui e é recalculada sem desconto no histórico. */
+    }
+    try {
+      const response = (await supabase.rpc(
+        "simulator_attempt_ranking" as never,
+        { _attempt_ids: [attemptId] } as never,
+      )) as unknown as {
+        data: Array<{
+          answered: number;
+          counted: number;
+          repeated: number;
+          points: number;
+          attempt_valid: boolean;
+        }> | null;
+        error: unknown;
+      };
+      const row = response.error ? null : response.data?.[0];
+      if (row)
+        setRankingSummary({
+          answered: row.answered,
+          counted: row.counted,
+          repeated: row.repeated,
+          points: row.points,
+          attemptValid: row.attempt_valid,
+        });
+    } catch {
+      /* Sem o resumo de ranking do servidor, a tela mostra só a contagem local de repetidas. */
+    }
   }
   async function finishSimulator(automatic = false) {
     if (
@@ -655,6 +773,15 @@ function ProfessionalSimulator() {
     setElapsedSeconds(clock.elapsed);
     setStage("result");
     const computed = calculateResult(questions, answers);
+    const scored = scoreAttempt(
+      {
+        total: questions.length,
+        correct: computed.correct,
+        wrong: computed.wrong,
+        blank: computed.blank,
+      },
+      sessionConfig.rule,
+    );
     const attempt = {
       id: sessionConfig.attemptId,
       user_id: user.id,
@@ -719,6 +846,8 @@ function ProfessionalSimulator() {
       });
       setSaveStatus("saved");
       clearSimulatorDraft();
+      // Dados extras (regra, nota, ranking): complementam o resultado já confirmado e nunca o desfazem.
+      void recordAttemptExtras(sessionConfig.attemptId, user.id, scored, skipped.size);
     } catch {
       setSaveStatus("error");
       toast.error(
@@ -745,6 +874,8 @@ function ProfessionalSimulator() {
     setQuestions([]);
     setAnswers({});
     setFlagged(new Set());
+    setSkipped(new Set());
+    setRankingSummary(null);
     setStartedAt(null);
     setEndedAt(null);
     void loadData();
@@ -772,6 +903,8 @@ function ProfessionalSimulator() {
             questions: questions.map((q) => ({ id: q.id, fingerprint: simulatorFingerprint(q) })),
             answers,
             flagged: [...flagged],
+            skipped: [...skipped].filter((id) => !answers[id]),
+            rule: sessionConfig.rule.id,
             currentIndex,
           }
         : null,
@@ -787,6 +920,7 @@ function ProfessionalSimulator() {
       endedAt,
       answers,
       flagged,
+      skipped,
       currentIndex,
     ],
   );
@@ -864,9 +998,12 @@ function ProfessionalSimulator() {
         answeredCount={answeredCount}
         saving={saving}
         storageError={storageError}
+        skipped={skipped}
+        isRepeated={isRepeated}
         setCurrentIndex={setCurrentIndex}
         setAnswers={setAnswers}
         setFlagged={setFlagged}
+        setSkipped={setSkipped}
         finish={finishSimulator}
         cancel={cancelSimulator}
       />
@@ -883,6 +1020,10 @@ function ProfessionalSimulator() {
         retrySave={() => void finishSimulator()}
         discard={() => resetSimulator(true)}
         title={sessionConfig.title}
+        rule={sessionConfig.rule}
+        skippedCount={skipped.size}
+        repeatedLocal={questions.filter((q) => answers[q.id] && isRepeated(q)).length}
+        ranking={rankingSummary}
       />
     );
 
@@ -913,8 +1054,10 @@ function ProfessionalSimulator() {
       >
         <p>
           <strong>Simulador: teste seu desempenho.</strong> Resolva sem consultar o gabarito,
-          acompanhe o prazo e receba a correção ao finalizar. O aproveitamento exibido não é nota
-          oficial, nota com penalização nem TRI.
+          acompanhe o prazo e receba a correção ao finalizar. Questões podem ser puladas e retomadas
+          antes da entrega; em branco não conta como erro. A nota segue a regra de correção indicada
+          no resultado — o desconto de erro só é aplicado quando a regra da prova está registrada —
+          e é diferente do aproveitamento e dos pontos do ranking. Não é nota oficial nem TRI.
         </p>
         <p className="mt-2 text-muted-foreground">
           Para aprender com correção imediata a cada questão, use o{" "}
@@ -1374,9 +1517,11 @@ function ProfessionalSimulator() {
               </p>
             ) : history.length ? (
               <div className="space-y-3">
-                {history.slice(0, 5).map((i) => (
-                  <HistoryRow key={i.id} item={i} />
-                ))}
+                <ul className="space-y-3" aria-label="Últimas tentativas">
+                  {history.slice(0, 5).map((i) => (
+                    <AttemptHistoryItem key={i.id} item={i} />
+                  ))}
+                </ul>
               </div>
             ) : (
               <div className="flex min-h-56 flex-col items-center justify-center rounded-2xl border border-dashed text-center">
@@ -1474,9 +1619,12 @@ function ActiveSimulator(p: {
   answeredCount: number;
   saving: boolean;
   storageError: boolean;
+  skipped: Set<string>;
+  isRepeated: (question: SimulatorQuestion) => boolean;
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
   setAnswers: React.Dispatch<React.SetStateAction<Record<string, Answer>>>;
   setFlagged: React.Dispatch<React.SetStateAction<Set<string>>>;
+  setSkipped: React.Dispatch<React.SetStateAction<Set<string>>>;
   finish: (automatic?: boolean) => Promise<void>;
   cancel: () => void;
 }) {
@@ -1491,12 +1639,40 @@ function ActiveSimulator(p: {
     answeredCount,
     saving,
     storageError,
+    skipped,
+    isRepeated,
     setCurrentIndex,
     setAnswers,
     setFlagged,
+    setSkipped,
     finish,
     cancel,
   } = p;
+  const progressSummary = simulatorProgress(questions, answers, skipped);
+  const reportQuestion = simulatorReportQuestion(current);
+  const repeatedHere = isRepeated(current);
+  // Pular/limpar: nunca escolhe alternativa nem conta como erro; a questão fica "em branco" até ser respondida.
+  const markSkipped = (id: string, on: boolean) =>
+    setSkipped((old) => {
+      const next = new Set(old);
+      if (on) next.add(id);
+      else next.delete(id);
+      return next;
+    });
+  const skipCurrent = () => {
+    markSkipped(current.id, true);
+    const target = nextUnansweredIndex(questions, answers, currentIndex);
+    if (target >= 0 && target !== currentIndex) setCurrentIndex(target);
+    else setFinishOpen(true);
+  };
+  const clearCurrent = () => {
+    setAnswers((old) => {
+      const next = { ...old };
+      delete next[current.id];
+      return next;
+    });
+    markSkipped(current.id, true);
+  };
   const progress = (answeredCount / questions.length) * 100;
   const [cancelOpen, setCancelOpen] = React.useState(false);
   const [finishOpen, setFinishOpen] = React.useState(false);
@@ -1604,6 +1780,7 @@ function ActiveSimulator(p: {
           <Progress value={progress} className="h-2" />
           <span className="whitespace-nowrap text-xs font-semibold">
             {answeredCount}/{questions.length} respondidas
+            {progressSummary.blank > 0 && ` · ${progressSummary.blank} em branco`}
           </span>
         </div>
       </div>
@@ -1623,9 +1800,27 @@ function ActiveSimulator(p: {
                 {current.contest} · {current.year}
                 {current.itemNumber ? ` · Item ${current.itemNumber}` : ""}
               </span>
+              <QuestionCode code={simulatorQuestionCode(current)} />
+              {reportQuestion && (
+                <span className="ml-auto">
+                  <ReportQuestionButton question={reportQuestion} />
+                </span>
+              )}
             </div>
           </CardHeader>
           <CardContent className="space-y-7 p-6 md:p-9">
+            {repeatedHere && (
+              <div
+                role="status"
+                className="flex items-start gap-2 rounded-xl border border-amber-400/40 bg-amber-400/10 p-3 text-sm font-medium text-amber-900 dark:text-amber-100"
+              >
+                <Lock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                <span>
+                  Você já respondeu esta questão. Esta tentativa conta na nota desta prova, mas não
+                  gera novos pontos no ranking.
+                </span>
+              </div>
+            )}
             {parseQuestion(current.text).base && (
               <details open className="rounded-xl border bg-muted/30 p-4">
                 <summary className="cursor-pointer text-sm font-semibold">
@@ -1697,6 +1892,22 @@ function ActiveSimulator(p: {
                 <Flag className={cn("h-4 w-4", flagged.has(current.id) && "fill-current")} />
                 {flagged.has(current.id) ? "Marcada para revisão" : "Marcar para revisão"}
               </Button>
+              {answers[current.id] ? (
+                <Button
+                  variant="outline"
+                  className="gap-2"
+                  disabled={saving}
+                  onClick={clearCurrent}
+                >
+                  <SkipForward className="h-4 w-4" aria-hidden="true" />
+                  Limpar resposta (deixar em branco)
+                </Button>
+              ) : (
+                <Button variant="outline" className="gap-2" disabled={saving} onClick={skipCurrent}>
+                  <SkipForward className="h-4 w-4" aria-hidden="true" />
+                  {skipped.has(current.id) ? "Pular de novo" : "Pular questão"}
+                </Button>
+              )}
               <div className="flex gap-2">
                 <Button
                   variant="outline"
@@ -1737,7 +1948,7 @@ function ActiveSimulator(p: {
                 }}
                 disabled={answeredCount === questions.length}
               >
-                Ir à primeira pendente ({questions.length - answeredCount})
+                Ir à primeira em branco ({questions.length - answeredCount})
               </Button>
               <Button
                 variant="outline"
@@ -1755,7 +1966,7 @@ function ActiveSimulator(p: {
               {questions.map((q, i) => (
                 <button
                   key={q.id}
-                  aria-label={`Questão ${i + 1}, ${answers[q.id] ? "respondida" : "pendente"}${flagged.has(q.id) ? ", marcada para revisão" : ""}`}
+                  aria-label={`Questão ${i + 1}, ${{ answered: "respondida", skipped: "pulada, em branco", pending: "ainda não respondida" }[simulatorItemStatus(q.id, answers, skipped)]}${flagged.has(q.id) ? ", marcada para revisão" : ""}`}
                   aria-current={i === currentIndex ? "step" : undefined}
                   onClick={() => setCurrentIndex(i)}
                   className={cn(
@@ -1764,7 +1975,9 @@ function ActiveSimulator(p: {
                       ? "border-primary bg-primary text-primary-foreground"
                       : answers[q.id]
                         ? "border-emerald-300 bg-emerald-50 text-emerald-800"
-                        : "hover:bg-muted",
+                        : skipped.has(q.id)
+                          ? "border-dashed border-amber-500 bg-amber-50 text-amber-900"
+                          : "hover:bg-muted",
                   )}
                 >
                   {i + 1}
@@ -1777,6 +1990,7 @@ function ActiveSimulator(p: {
             <div className="mt-5 space-y-2 text-xs text-muted-foreground">
               <Legend color="bg-primary" label="Questão atual" />
               <Legend color="bg-emerald-400" label="Respondida" />
+              <Legend color="bg-amber-200" label="Pulada / em branco" />
               <Legend color="bg-amber-500" label="Marcada para revisão" />
             </div>
           </CardContent>
@@ -1795,12 +2009,36 @@ function ActiveSimulator(p: {
               <strong className="block text-xl">{answeredCount}</strong>Respondidas
             </div>
             <div>
-              <strong className="block text-xl">{questions.length - answeredCount}</strong>Em branco
+              <strong className="block text-xl">{progressSummary.blank}</strong>Em branco
             </div>
             <div>
               <strong className="block text-xl">{flagged.size}</strong>Marcadas
             </div>
           </div>
+          {progressSummary.blank > 0 && (
+            <div className="space-y-2 text-sm">
+              <p>
+                Questões em branco não são contadas como erro. Toque num número para voltar a ela
+                antes de entregar.
+              </p>
+              <div className="flex max-h-28 flex-wrap gap-1.5 overflow-y-auto">
+                {progressSummary.unansweredIndexes.map((index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    className="min-h-9 min-w-9 rounded-md border border-dashed border-amber-500 bg-amber-50 px-2 text-xs font-bold text-amber-900"
+                    aria-label={`Voltar à questão ${index + 1}`}
+                    onClick={() => {
+                      setCurrentIndex(index);
+                      setFinishOpen(false);
+                    }}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <DialogFooter>
             <Button variant="outline" onClick={() => setFinishOpen(false)} disabled={saving}>
               Continuar prova
@@ -1852,7 +2090,15 @@ function ResultView({
   retrySave,
   discard,
   title,
+  rule,
+  skippedCount,
+  repeatedLocal,
+  ranking,
 }: {
+  rule: ScoringRule;
+  skippedCount: number;
+  repeatedLocal: number;
+  ranking: RankingSummary | null;
   questions: SimulatorQuestion[];
   answers: Record<string, Answer>;
   result: ReturnType<typeof calculateResult>;
@@ -1864,6 +2110,11 @@ function ResultView({
   title: string;
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
+  const scored = scoreAttempt(
+    { total: questions.length, correct: result.correct, wrong: result.wrong, blank: result.blank },
+    rule,
+  );
+  const repeated = ranking ? ranking.repeated : repeatedLocal;
   return (
     <div className="space-y-6 pb-8">
       <section role="status" className="rounded-xl border bg-card p-4 text-sm">
@@ -1891,9 +2142,16 @@ function ResultView({
               Diagnóstico concluído
             </Badge>
             <h1 className="text-3xl font-black md:text-4xl">
-              Seu aproveitamento: {result.accuracy}%
+              Nota da prova: {formatScore(scored.score)}
+              <span className="text-xl font-semibold text-slate-200">
+                {" "}
+                de {formatScore(scored.maxScore)}
+              </span>
             </h1>
-            <p className="mt-2 text-slate-200">{performanceMessage(result.accuracy)}</p>
+            <p className="mt-2 text-slate-200">
+              Aproveitamento: {result.accuracy}% das questões ·{" "}
+              {performanceMessage(result.accuracy)}
+            </p>
           </div>
           <div className="flex h-32 w-32 items-center justify-center rounded-full border-[10px] border-emerald-300/20 bg-white/10">
             <span className="text-3xl font-black">
@@ -1909,12 +2167,51 @@ function ResultView({
         <ResultMetric icon={Gauge} label="Acerto bruto" value={`${result.accuracy}%`} tone="blue" />
         <ResultMetric icon={TimerReset} label="Tempo" value={formatTime(elapsed)} tone="slate" />
       </div>
+      <Card aria-label="Regra de correção e ranking">
+        <CardContent className="grid gap-4 p-5 sm:grid-cols-2">
+          <div>
+            <p className="text-sm text-muted-foreground">Regra de correção aplicada</p>
+            <p className="mt-1 font-bold">{rule.label}</p>
+            <p className="mt-1 text-xs text-muted-foreground">{rule.description}</p>
+            {rule.id === "net_one_to_one" && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                {result.correct} acertos − {result.wrong} erros = {formatScore(scored.score)};{" "}
+                {result.blank} em branco valem 0.
+              </p>
+            )}
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground">Pontuação do ranking (separada da nota)</p>
+            {ranking ? (
+              <>
+                <p className="mt-1 text-xl font-bold">+{ranking.points} pontos</p>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Só a primeira resposta de cada questão pontua.{" "}
+                  {repeated > 0
+                    ? `${repeated} ${repeated === 1 ? "resposta desta prova era" : "respostas desta prova eram"} de ${repeated === 1 ? "questão já respondida" : "questões já respondidas"} e não ${repeated === 1 ? "gerou" : "geraram"} novos pontos.`
+                    : "Todas as respostas desta prova eram inéditas."}
+                  {!ranking.attemptValid &&
+                    " O tempo total ficou abaixo do mínimo para valer no ranking."}
+                </p>
+              </>
+            ) : (
+              <p className="mt-1 text-xs text-muted-foreground">
+                {repeated > 0
+                  ? `${repeated} ${repeated === 1 ? "questão respondida já tinha" : "questões respondidas já tinham"} resposta anterior e não gera novos pontos no ranking. `
+                  : ""}
+                Os pontos finais são calculados no servidor depois que o resultado é salvo.
+              </p>
+            )}
+          </div>
+        </CardContent>
+      </Card>
       <Card>
         <CardContent className="grid gap-4 p-5 sm:grid-cols-3">
           <div>
             <p className="text-sm text-muted-foreground">Conclusão da prova</p>
             <p className="mt-1 text-xl font-bold">
-              {Math.round(((result.correct + result.wrong) / questions.length) * 100)}% respondida
+              {scored.completion}% respondida
+              {skippedCount > 0 ? ` · ${skippedCount} puladas` : ""}
             </p>
           </div>
           <div>
@@ -2133,36 +2430,6 @@ function Legend({ color, label }: { color: string; label: string }) {
     <div className="flex items-center gap-2">
       <span className={cn("h-2.5 w-2.5 rounded-full", color)} />
       {label}
-    </div>
-  );
-}
-function HistoryRow({ item }: { item: AttemptHistory }) {
-  return (
-    <div className="flex items-center justify-between gap-3 rounded-xl border p-3">
-      <div className="min-w-0">
-        <p className="truncate text-sm font-bold">{item.title}</p>
-        <p className="text-[11px] text-muted-foreground">
-          {acreDate(item.finished_at).toLocaleDateString("pt-BR", {
-            timeZone: "America/Rio_Branco",
-          })}{" "}
-          · {item.total_questions} questões
-        </p>
-      </div>
-      <div className="text-right">
-        <p
-          className={cn(
-            "text-lg font-black",
-            item.accuracy >= 70
-              ? "text-emerald-600"
-              : item.accuracy >= 50
-                ? "text-amber-600"
-                : "text-red-600",
-          )}
-        >
-          {Math.round(item.accuracy)}%
-        </p>
-        <p className="text-[10px] text-muted-foreground">{item.correct_answers} acertos</p>
-      </div>
     </div>
   );
 }

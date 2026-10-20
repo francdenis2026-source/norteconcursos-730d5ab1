@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { BookmarkCheck, BookOpen, Download } from "lucide-react";
+import { BookmarkCheck, BookOpen, Download, RotateCcw, SkipForward } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { parseQuestion } from "@/lib/questionFormat";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
+import { questionCode } from "@/lib/questionIdentity";
+import { accountStudyLaterPort } from "@/lib/studyLaterAccount";
+import { pushStudyLaterItem, removeStudyLaterItem, syncStudyLater } from "@/lib/studyLaterSync";
 import {
   readStudyLater,
   writeStudyLater,
@@ -14,6 +18,12 @@ import {
 import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { libraryCollection } from "@/lib/libraryOrganization";
+
+/** Assunto só é "confirmado" quando vem do cadastro (edital/assunto cobrado) ou foi editado pelo aluno. */
+const topicConfirmed = (item: StudyLaterItem) =>
+  item.topicSource === "user" ||
+  !!item.question.syllabusTopicId ||
+  (!!item.question.testedTopic && item.topic === item.question.testedTopic);
 
 const fold = (value: string) =>
   value
@@ -26,7 +36,10 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
   const [search, setSearch] = useState("");
   const [subject, setSubject] = useState("all");
   const [status, setStatus] = useState("pending");
+  const [origin, setOrigin] = useState("all");
   const [limit, setLimit] = useState(20);
+  // null = ainda conferindo; false = a tabela da conta não existe e o caderno vale só neste navegador.
+  const [account, setAccount] = useState<boolean | null>(null);
   const library = useStudyMaterialList(!!userId);
   useEffect(() => {
     const load = () => {
@@ -41,21 +54,50 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
       }
     };
     load();
+    // Mescla com o caderno da conta sem apagar nada: o que só existe aqui sobe, o que só existe lá desce.
+    let active = true;
+    try {
+      const local = readStudyLater(localStorage, userId);
+      void syncStudyLater(userId, local, accountStudyLaterPort(userId))
+        .then((result) => {
+          if (!active) return;
+          setAccount(result.account);
+          if (result.account) {
+            writeStudyLater(localStorage, userId, result.items);
+            setItems(result.items);
+          }
+        })
+        .catch(() => active && setAccount(false));
+    } catch {
+      setAccount(false);
+    }
     const onStorage = (event: StorageEvent) => {
       if (event.key === studyLaterKey(userId)) load();
     };
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
+    return () => {
+      active = false;
+      window.removeEventListener("storage", onStorage);
+    };
   }, [userId]);
-  useEffect(() => setLimit(20), [search, subject, status]);
+  useEffect(() => setLimit(20), [search, subject, status, origin]);
   const change = (key: string, update: (item: StudyLaterItem) => StudyLaterItem | null) => {
     try {
       const fresh = readStudyLater(localStorage, userId);
+      const before = fresh.find((item) => item.key === key);
       const next = fresh.flatMap((item) =>
         item.key !== key ? [item] : [update(item)].filter((x): x is StudyLaterItem => !!x),
       );
       writeStudyLater(localStorage, userId, next);
       setItems(next);
+      const after = next.find((item) => item.key === key);
+      const port = accountStudyLaterPort(userId);
+      if (account !== false && before)
+        void (
+          after ? pushStudyLaterItem(userId, after, port) : removeStudyLaterItem(before, port)
+        ).catch(() =>
+          toast.message("Alteração salva neste navegador; a conta será atualizada na próxima vez."),
+        );
     } catch {
       toast.error("Não foi possível salvar a alteração. Os dados anteriores foram preservados.");
     }
@@ -74,6 +116,7 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
     (item) =>
       (subject === "all" || item.question.subject === subject) &&
       (status === "all" || item.reviewed === (status === "reviewed")) &&
+      (origin === "all" || (item.reason === "skipped" ? "skipped" : "saved") === origin) &&
       fold(
         [
           item.question.text,
@@ -81,6 +124,7 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
           item.question.contest,
           item.topic,
           item.notes,
+          questionCode(item.question),
           ...item.alternatives.map((a) => `${a.subject} ${a.topic ?? ""}`),
         ].join(" "),
       ).includes(fold(search)),
@@ -96,7 +140,7 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
             <BookmarkCheck className="h-5 w-5 text-sky-600 dark:text-sky-400" /> Estudar depois
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Questões salvas no treinador, com assuntos e anotações para sua revisão.
+            Questões salvas ou puladas no treinador, com assuntos e anotações para sua revisão.
           </p>
         </div>
         <Button variant="outline" disabled={!items.length || !!error} onClick={exportBackup}>
@@ -104,14 +148,17 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
         </Button>
       </header>
       <p className="rounded-lg border bg-card p-3 text-xs text-muted-foreground">
-        Salvo apenas neste navegador e separado por conta. Ainda não há sincronização entre
-        dispositivos. Exporte um backup para guardar uma cópia.
+        {account === true
+          ? "Sincronizado com a sua conta: o caderno acompanha você em outros aparelhos. Este navegador guarda uma cópia."
+          : account === false
+            ? "Salvo apenas neste navegador e separado por conta: a sincronização com a conta ainda não está ativa no banco. Exporte um backup para guardar uma cópia."
+            : "Conferindo a sincronização com a sua conta…"}
       </p>
       {error ? (
         <p role="alert">{error}</p>
       ) : (
         <>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <label className="text-sm">
               Buscar questões e anotações
               <Input
@@ -131,6 +178,18 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
                 {[...new Set(items.map((item) => item.question.subject))].sort().map((name) => (
                   <option key={name}>{name}</option>
                 ))}
+              </select>
+            </label>
+            <label className="text-sm">
+              Origem
+              <select
+                className="mt-1 w-full rounded-md border bg-background p-2"
+                value={origin}
+                onChange={(e) => setOrigin(e.target.value)}
+              >
+                <option value="all">Salvas e puladas</option>
+                <option value="skipped">Puladas no treino</option>
+                <option value="saved">Salvas por mim</option>
               </select>
             </label>
             <label className="text-sm">
@@ -161,6 +220,11 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
               <summary className="cursor-pointer">
                 <span className="text-xs font-semibold text-sky-700 dark:text-sky-300">
                   {item.question.subject} · {item.topic ?? "Assunto a identificar"}
+                  {item.reason === "skipped" && (
+                    <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-amber-500/50 bg-amber-500/10 px-2 py-0.5 text-[10px] text-amber-800 dark:text-amber-200">
+                      <SkipForward className="h-3 w-3" aria-hidden="true" /> Pulada no treino
+                    </span>
+                  )}
                 </span>
                 <span className="mt-1 block font-semibold">
                   {parseQuestion(item.question.text).stem.slice(0, 180)}
@@ -171,11 +235,33 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
                 </span>
               </summary>
               <div className="mt-4 space-y-4">
-                <p className="whitespace-pre-wrap text-sm leading-relaxed">{item.question.text}</p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <QuestionCode code={questionCode(item.question)} />
+                  <Button asChild variant="outline" size="sm">
+                    <Link
+                      to="/dashboard/question-trainer"
+                      search={{
+                        catalogQuery: questionCode(item.question),
+                        mode: "catalog",
+                        limit: "all",
+                        go: "1",
+                      }}
+                    >
+                      <RotateCcw className="mr-1.5 h-3.5 w-3.5" aria-hidden="true" /> Voltar a
+                      treinar
+                    </Link>
+                  </Button>
+                </div>
+                <p className="question-prose-block text-sm leading-relaxed">{item.question.text}</p>
                 <p className="text-xs text-muted-foreground">
                   Cópia salva em {new Date(item.savedAt).toLocaleDateString("pt-BR")}. O conteúdo e
                   as fontes podem receber atualizações; confira os materiais atuais. Assuntos
                   inferidos são sugestões: revise e ajuste quando necessário.
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {topicConfirmed(item)
+                    ? "Assunto vinculado ao cadastro da questão ou confirmado por você."
+                    : "Assunto sugerido automaticamente pelo enunciado: confira e ajuste antes de confiar nos materiais indicados."}
                 </p>
                 <label className="block text-sm font-medium">
                   Assunto principal
@@ -186,7 +272,11 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
                     onBlur={(e) => {
                       const value = e.target.value.trim();
                       if (value !== (item.topic ?? ""))
-                        change(item.key, (current) => ({ ...current, topic: value || null }));
+                        change(item.key, (current) => ({
+                          ...current,
+                          topic: value || null,
+                          topicSource: value ? "user" : undefined,
+                        }));
                     }}
                   />
                 </label>

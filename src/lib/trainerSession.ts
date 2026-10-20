@@ -33,11 +33,36 @@ export function catalogSessionQuestions<T extends { source: string; id: string }
   });
 }
 
-/** Sequential practice can revisit saved answers; the next unanswered item remains the frontier. */
+/** "skip" = o aluno pulou a questão: nada foi respondido, nada conta como erro e nenhum ponto é gerado. */
+export type TrainerResult = "ok" | "err" | "skip";
+
+/** Sequential practice can revisit saved answers; the next unanswered item remains the frontier. A skipped item is passed, not answered. */
 export function trainerReachableIndex(
   results: readonly (string | null | undefined)[],
   total: number,
 ) {
-  const hole = results.findIndex((value) => value !== "ok" && value !== "err");
+  const hole = results.findIndex(
+    (value) => value !== "ok" && value !== "err" && value !== "skip",
+  );
   return Math.max(0, Math.min(total - 1, hole < 0 ? results.length : hole));
+}
+
+/** Contagens separadas: respondidas (acertos + erros) nunca incluem as puladas. */
+export function trainerTally(results: readonly (string | null | undefined)[], total: number) {
+  const correct = results.filter((value) => value === "ok").length;
+  const wrong = results.filter((value) => value === "err").length;
+  const skipped = results.filter((value) => value === "skip").length;
+  return {
+    correct,
+    wrong,
+    skipped,
+    answered: correct + wrong,
+    remaining: Math.max(0, total - correct - wrong - skipped),
+  };
+}
+
+/** The session can end when every item was answered or consciously skipped. */
+export function trainerCanFinish(results: readonly (string | null | undefined)[], total: number) {
+  const { answered, skipped } = trainerTally(results, total);
+  return answered + skipped >= total;
 }

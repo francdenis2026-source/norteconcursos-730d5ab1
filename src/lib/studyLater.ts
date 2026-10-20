@@ -1,6 +1,7 @@
 import { parseQuestion, questionAnswers, type Question } from "./questionFormat";
 import { questionTopic } from "./filterTaxonomy";
 import { classifyTopic } from "./questionTopics";
+import { questionRef } from "./questionIdentity";
 
 export type StudyLaterItem = {
   key: string;
@@ -10,14 +11,30 @@ export type StudyLaterItem = {
   savedAt: string;
   notes: string;
   reviewed: boolean;
+  /** "skipped": o aluno pulou a questão no treino; "saved" (ou ausente): salva por escolha. */
+  reason?: "saved" | "skipped";
+  /** "user": o aluno definiu o assunto; ausente = sugestão automática ou do cadastro. */
+  topicSource?: "user" | undefined;
 };
 export interface StudyLaterStorage {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
 }
 export const studyLaterKey = (userId: string) => `norte:study-later:v1:${userId}`;
-export const studyLaterIdentity = (question: Pick<Question, "source" | "id">) =>
+/** Identidade pela tabela física (official e board dividem a origem "official"). */
+export const studyLaterIdentity = (question: Pick<Question, "source" | "id" | "table">) =>
+  questionRef(question);
+/** Itens salvos antes da identidade por tabela usavam "origem:id"; continuam reconhecidos. */
+export const studyLaterLegacyIdentity = (question: Pick<Question, "source" | "id">) =>
   `${question.source}:${question.id}`;
+export const studyLaterHas = (
+  items: readonly Pick<StudyLaterItem, "key">[],
+  question: Pick<Question, "source" | "id" | "table">,
+) =>
+  items.some(
+    (item) =>
+      item.key === studyLaterIdentity(question) || item.key === studyLaterLegacyIdentity(question),
+  );
 export function canStrikeQuestion(question: Question) {
   return (
     question.kind !== "true_false" &&
@@ -62,10 +79,11 @@ export function saveStudyLater(
   userId: string,
   question: Question,
   now = new Date().toISOString(),
+  reason: "saved" | "skipped" = "saved",
 ) {
   const items = readStudyLater(storage, userId);
   const key = studyLaterIdentity(question);
-  if (items.some((item) => item.key === key)) return items;
+  if (studyLaterHas(items, question)) return items;
   const parsed = parseQuestion(question.text);
   const item: StudyLaterItem = {
     key,
@@ -79,6 +97,7 @@ export function saveStudyLater(
     savedAt: now,
     notes: "",
     reviewed: false,
+    reason,
   };
   const result = [item, ...items];
   writeStudyLater(storage, userId, result);

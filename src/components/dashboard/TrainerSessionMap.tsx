@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, CheckCircle2, XCircle, CircleDot, Lock } from "lucide-react";
-import { trainerReachableIndex } from "@/lib/trainerSession";
+import {
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle2,
+  XCircle,
+  CircleDot,
+  Lock,
+  SkipForward,
+} from "lucide-react";
+import { trainerReachableIndex, trainerTally } from "@/lib/trainerSession";
 export function TrainerSessionMap({
   total,
   index,
@@ -19,8 +27,7 @@ export function TrainerSessionMap({
   const pages = Math.max(1, Math.ceil(total / 20));
   const current = Math.min(page, pages - 1);
   const frontier = trainerReachableIndex(results, total);
-  const correct = results.filter((value) => value === "ok").length;
-  const wrong = results.filter((value) => value === "err").length;
+  const { correct, wrong, skipped, remaining } = trainerTally(results, total);
   return (
     <div className="trainer-map-content">
       <span className="trainer-panel-kicker">ACOMPANHAMENTO</span>
@@ -54,10 +61,17 @@ export function TrainerSessionMap({
         </div>
         <div>
           <dt>
+            <SkipForward aria-hidden="true" />
+            Puladas
+          </dt>
+          <dd>{skipped}</dd>
+        </div>
+        <div>
+          <dt>
             <CircleDot aria-hidden="true" />
             Restantes
           </dt>
-          <dd>{total - correct - wrong}</dd>
+          <dd>{remaining}</dd>
         </div>
       </dl>
       <h3>Mapa de questões</h3>
@@ -68,7 +82,7 @@ export function TrainerSessionMap({
             <button
               key={i}
               type="button"
-              aria-label={`Ir para questão ${i + 1}${results[i] === "ok" ? ", correta" : results[i] === "err" ? ", incorreta" : ""}`}
+              aria-label={`Ir para questão ${i + 1}${results[i] === "ok" ? ", correta" : results[i] === "err" ? ", incorreta" : results[i] === "skip" ? ", pulada" : ""}`}
               aria-current={i === index ? "step" : undefined}
               data-result={results[i] ?? "pending"}
               disabled={saving || i > frontier}
@@ -104,7 +118,8 @@ export function TrainerSessionMap({
       )}
       <p className="trainer-map-note">
         <Lock aria-hidden="true" />
-        Responda a questão atual para liberar a próxima. Você pode voltar às respostas registradas.
+        Responda ou pule a questão atual para liberar a próxima. Você pode voltar às respostas
+        registradas e às questões puladas.
       </p>
     </div>
   );

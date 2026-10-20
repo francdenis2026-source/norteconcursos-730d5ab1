@@ -16,6 +16,12 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
 import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
+import { questionCode } from "@/lib/questionIdentity";
+import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
+import { accountStudyLaterPort } from "@/lib/studyLaterAccount";
+import { pushStudyLaterItem } from "@/lib/studyLaterSync";
+import { readStudyLater, saveStudyLater, studyLaterHas } from "@/lib/studyLater";
 import { canStrikeQuestion } from "@/lib/studyLater";
 import { TrainerSessionMap } from "@/components/dashboard/TrainerSessionMap";
 import { QuestionFilterPicker } from "@/components/dashboard/QuestionFilterPicker";
@@ -25,6 +31,9 @@ import {
   trainerSessionSize,
   catalogSessionQuestions,
   trainerReachableIndex,
+  trainerTally,
+  trainerCanFinish,
+  type TrainerResult,
 } from "@/lib/trainerSession";
 import {
   questionContestValue,
@@ -58,6 +67,7 @@ import {
   Loader2,
   RotateCcw,
   Sparkles,
+  SkipForward,
   Strikethrough,
   Target,
   XCircle,
@@ -276,12 +286,17 @@ function QuestionTrainer() {
     [catalog, lockedSubject],
   );
   const {
-    locked,
+    locked: answeredHistory,
     loading: lockedLoading,
     error: historyError,
     reload: reloadHistory,
     markLocked,
   } = useLockedAnswers(userId, canLoad);
+  // O mesmo item cadastrado para dois cargos da mesma prova (ex.: Agente e Papiloscopista) é uma questão só.
+  const locked = React.useMemo(
+    () => expandAnsweredBySiblings(answeredHistory, fullCatalog, (q) => lockedKey(q.source, q.id)),
+    [answeredHistory, fullCatalog],
+  );
   const unseenHistory = useUnseenActivity(userId, canLoad && routeFilters.unseen === "1");
   const error =
     catalogError ??
@@ -347,7 +362,7 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | null>(null);
   const [mapOpen, setMapOpen] = React.useState(false);
   const library = useStudyMaterialList(canLoad && answered && modal === "help");
-  const [results, setResults] = React.useState<("ok" | "err")[]>([]);
+  const [results, setResults] = React.useState<TrainerResult[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
   const [confirmStop, setConfirmStop] = React.useState(false);
   const sessionInProgress = started && questions.length > 0 && index < questions.length;
@@ -671,8 +686,7 @@ function QuestionTrainer() {
         </p>
       </aside>
     ) : null;
-  const correct = results.filter((r) => r === "ok").length;
-  const wrong = results.filter((r) => r === "err").length;
+  const { correct, wrong, skipped } = trainerTally(results, questions.length);
 
   const activityCatalog = React.useMemo(
     () =>
@@ -789,25 +803,27 @@ function QuestionTrainer() {
     };
   const pool = React.useMemo(
     () =>
-      filterTrainerQuestions(
-        activityCatalog,
-        {
-          area,
-          topic,
-          contest,
-          board,
-          career,
-          year,
-          appliedExam,
-          subject,
-          source,
-          reviewed,
-          difficulty,
-          currency: activeCurrency,
-          state,
-          category,
-        },
-        topicOf,
+      dedupeSharedExamItems(
+        filterTrainerQuestions(
+          activityCatalog,
+          {
+            area,
+            topic,
+            contest,
+            board,
+            career,
+            year,
+            appliedExam,
+            subject,
+            source,
+            reviewed,
+            difficulty,
+            currency: activeCurrency,
+            state,
+            category,
+          },
+          topicOf,
+        ),
       ),
     [
       activityCatalog,
@@ -1203,7 +1219,10 @@ function QuestionTrainer() {
     if (savingRef.current || target < 0 || target > questions.length) return;
     if (target < questions.length && target > trainerReachableIndex(results, questions.length))
       return;
-    if (target === questions.length && correct + wrong < questions.length) return;
+    if (target === questions.length && !trainerCanFinish(results, questions.length)) return;
+    moveTo(target);
+  };
+  const moveTo = (target: number) => {
     setMapOpen(false);
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
@@ -1214,6 +1233,32 @@ function QuestionTrainer() {
       window.requestAnimationFrame(() => scrollAppToSection("trainer-question"));
   };
   const next = () => goTo(index + 1);
+  // Pular não responde, não conta como erro e não pontua; a questão fica em "Estudar depois" para revisão.
+  const skipQuestion = () => {
+    if (!question || answered || savingRef.current || !user) return;
+    setResults((prev) => {
+      const copy = [...prev];
+      copy[index] = "skip";
+      return copy;
+    });
+    try {
+      const before = readStudyLater(localStorage, user.id);
+      const items = saveStudyLater(
+        localStorage,
+        user.id,
+        question,
+        new Date().toISOString(),
+        "skipped",
+      );
+      const item = items.find((entry) => studyLaterHas([entry], question));
+      if (item && !studyLaterHas(before, question))
+        void pushStudyLaterItem(user.id, item, accountStudyLaterPort(user.id)).catch(() => false);
+      toast.message("Questão pulada. Ela ficou em Meus cadernos → Estudar depois.");
+    } catch {
+      toast.message("Questão pulada, mas não foi possível guardá-la em Estudar depois.");
+    }
+    moveTo(index + 1);
+  };
   const restart = () => {
     clearBookmark();
     setResumeNotice(false);
@@ -1533,7 +1578,9 @@ function QuestionTrainer() {
         restart={restart}
         review={sessionReinforce}
         mixed={practiceMode === "catalog"}
+        skipped={skipped}
         reviewFirstError={() => goTo(results.findIndex((result) => result === "err"))}
+        reviewFirstSkipped={() => goTo(results.findIndex((result) => result === "skip"))}
       />
     );
 
@@ -1556,6 +1603,7 @@ function QuestionTrainer() {
     setModal("help");
     if (library.isError) void library.refetch();
   };
+  const priorAnswer = nonScoring ? locked.get(lockedKey(question.source, question.id)) : undefined;
   const correctOption = parsed.options.find((option) => option.letter === question.answer);
   const certoErrado =
     question.kind === "true_false" || (!hasOptions && questionAnswers(question).join("") === "CE");
@@ -1728,14 +1776,23 @@ function QuestionTrainer() {
                       "Prova recente"}
                   </Badge>
                 ) : null}
+                <QuestionCode code={questionCode(question)} />
                 <span className="ml-auto">
                   <ReportQuestionButton question={question} />
                 </span>
               </div>
-              {reviewingPast && (
-                <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
-                  <Lock className="h-3.5 w-3.5 shrink-0" /> Resposta já registrada — revisão sem
-                  novo envio.
+              {(reviewingPast || priorAnswer) && (
+                <div
+                  role="status"
+                  className="mb-3 flex items-start gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200"
+                >
+                  <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                  <span>
+                    Você já respondeu esta questão
+                    {priorAnswer?.origin === "simulator" ? " em uma prova ou simulado" : ""}.{" "}
+                    {reviewingPast ? "Resposta já registrada — revisão sem novo envio. " : ""}
+                    Esta tentativa não gera novos pontos no ranking.
+                  </span>
                 </div>
               )}
               <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
@@ -1746,6 +1803,7 @@ function QuestionTrainer() {
                   </h2>
                   <p className="mt-1.5 text-xs text-muted-foreground">
                     {correct} acertos · {wrong} erros
+                    {skipped > 0 ? ` · ${skipped} ${skipped === 1 ? "pulada" : "puladas"}` : ""}
                   </p>
                 </div>
                 <div className="flex items-end gap-2 sm:gap-3">
@@ -1944,6 +2002,10 @@ function QuestionTrainer() {
                 </Button>
                 {!answered ? (
                   <>
+                    <Button variant="outline" disabled={saving} onClick={skipQuestion}>
+                      <SkipForward className="mr-2 h-4 w-4" aria-hidden="true" />
+                      Pular questão
+                    </Button>
                     <Button
                       size="lg"
                       disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
@@ -2647,16 +2709,20 @@ function TrainingResult({
   mixed,
   correct,
   wrong,
+  skipped,
   restart,
   reviewFirstError,
+  reviewFirstSkipped,
 }: {
   total: number;
   review: boolean;
   mixed: boolean;
   correct: number;
   wrong: number;
+  skipped: number;
   restart: () => void;
   reviewFirstError: () => void;
+  reviewFirstSkipped: () => void;
 }) {
   const answered = correct + wrong;
   const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
@@ -2689,6 +2755,10 @@ function TrainingResult({
               <dd>{wrong}</dd>
             </div>
             <div>
+              <dt>Puladas</dt>
+              <dd>{skipped}</dd>
+            </div>
+            <div>
               <dt>Questões</dt>
               <dd>{total}</dd>
             </div>
@@ -2708,6 +2778,21 @@ function TrainingResult({
               ? "Retome o primeiro erro, confira o raciocínio e use o mapa para localizar as outras respostas que merecem revisão."
               : "Você concluiu esta seleção. Consulte sua evolução ou configure outra sessão para continuar praticando."}
           </p>
+          {skipped > 0 && (
+            <>
+              <p>
+                {skipped} {skipped === 1 ? "questão foi pulada" : "questões foram puladas"}: não
+                contam como erro nem geram pontos. Elas estão em Meus cadernos → Estudar depois.
+              </p>
+              <Button variant="outline" onClick={reviewFirstSkipped}>
+                <SkipForward className="mr-2 h-4 w-4" />
+                Voltar às questões puladas
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/dashboard/notebooks">Abrir Estudar depois</Link>
+              </Button>
+            </>
+          )}
           {wrong > 0 && (
             <Button variant="outline" onClick={reviewFirstError}>
               <BookOpenCheck className="mr-2 h-4 w-4" />

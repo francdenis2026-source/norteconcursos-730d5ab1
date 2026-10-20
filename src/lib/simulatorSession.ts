@@ -1,5 +1,7 @@
 import { questionAnswers, type Answer, type Question } from "./questionFormat";
 import { isAppliedExamQuestion } from "./questionFilterIdentity";
+import { parseQuestionRef, simulatorQuestionRef } from "./questionIdentity";
+import type { QuestionTable } from "./questionFormat";
 
 export interface SimulatorQuestion {
   id: string;
@@ -91,7 +93,57 @@ export interface SimulatorDraft {
   questions: { id: string; fingerprint: string }[];
   answers: Record<string, Answer>;
   flagged: string[];
+  /** Regra de correção da tentativa ("net_one_to_one" só quando registrada para a edição). */
+  rule?: "simple" | "net_one_to_one";
+  /** Questões que o aluno pulou ou deixou em branco de propósito; nunca contam como resposta. */
+  skipped?: string[];
   currentIndex: number;
+}
+
+export type SimulatorItemStatus = "answered" | "skipped" | "pending";
+export function simulatorItemStatus(
+  id: string,
+  answers: Readonly<Record<string, Answer>>,
+  skipped: ReadonlySet<string>,
+): SimulatorItemStatus {
+  return answers[id] ? "answered" : skipped.has(id) ? "skipped" : "pending";
+}
+/** Resumo exibido antes de entregar: pular não responde nada nem conta como erro. */
+export function simulatorProgress(
+  questions: readonly { id: string }[],
+  answers: Readonly<Record<string, Answer>>,
+  skipped: ReadonlySet<string>,
+) {
+  const unanswered: number[] = [];
+  let answered = 0;
+  let skippedCount = 0;
+  questions.forEach((q, index) => {
+    const status = simulatorItemStatus(q.id, answers, skipped);
+    if (status === "answered") answered++;
+    else {
+      unanswered.push(index);
+      if (status === "skipped") skippedCount++;
+    }
+  });
+  return {
+    answered,
+    blank: questions.length - answered,
+    skipped: skippedCount,
+    unvisited: questions.length - answered - skippedCount,
+    unansweredIndexes: unanswered,
+  };
+}
+/** Próxima questão sem resposta depois de `from`, dando a volta na prova; -1 quando todas têm resposta. */
+export function nextUnansweredIndex(
+  questions: readonly { id: string }[],
+  answers: Readonly<Record<string, Answer>>,
+  from: number,
+) {
+  for (let step = 1; step <= questions.length; step++) {
+    const index = (from + step) % questions.length;
+    if (!answers[questions[index]!.id]) return index;
+  }
+  return -1;
 }
 /** Re-resolve against the current eligible catalog; never restore stale/revoked questions. */
 export function restoreSimulatorDraft(
@@ -125,6 +177,8 @@ export function restoreSimulatorDraft(
     !d.answers ||
     typeof d.answers !== "object" ||
     !Array.isArray(d.flagged) ||
+    !(d.skipped === undefined || Array.isArray(d.skipped)) ||
+    !(d.rule === undefined || d.rule === "simple" || d.rule === "net_one_to_one") ||
     !(d.contestFilter === null || typeof d.contestFilter === "string") ||
     !(d.subjectFilter === null || typeof d.subjectFilter === "string") ||
     (d.phase === "active" && d.endedAt !== null) ||
@@ -143,6 +197,7 @@ export function restoreSimulatorDraft(
   const ids = new Set(questions.map((q) => q.id));
   if (
     d.flagged.some((id) => !ids.has(id)) ||
+    (d.skipped ?? []).some((id) => !ids.has(id)) ||
     Object.entries(d.answers).some(
       ([id, answer]) => !ids.has(id) || !simulatorAnswers(byId.get(id)!).includes(answer),
     )
@@ -191,4 +246,48 @@ export async function saveSimulatorResult(
     throw Error(
       "Não foi possível confirmar todas as respostas no histórico. Tente salvar novamente.",
     );
+}
+
+/** Adapta o item do simulador à identidade usada por denúncias e códigos (tabela física + id). */
+export function simulatorReportQuestion(q: SimulatorQuestion): Question | null {
+  const ref = simulatorQuestionRef(q);
+  const target = ref ? parseQuestionRef(ref) : null;
+  if (!target) return null;
+  return {
+    id: target.id,
+    source: q.sourceKind,
+    table: target.table,
+    contest: q.contest,
+    year: String(q.year),
+    career: q.career,
+    board: q.board,
+    subject: q.subject,
+    subtopic: q.subtopic,
+    text: q.text,
+    answer: q.answer,
+    explanation: q.explanation,
+    legalBasis: q.legalBasis,
+    checkedAt: q.checkedAt,
+    difficulty: "média",
+    state: q.state,
+    category: q.category,
+    ...(q.kind ? { kind: q.kind } : {}),
+    ...(q.itemNumber != null ? { itemNumber: q.itemNumber } : {}),
+  };
+}
+
+/** Forma comparável (duplicatas e respostas anteriores) de um item do simulador. */
+export function simulatorComparable(q: SimulatorQuestion) {
+  const ref = simulatorQuestionRef(q);
+  const target = ref ? parseQuestionRef(ref) : null;
+  return {
+    id: q.originalId,
+    source: q.sourceKind,
+    table: (target?.table ?? undefined) as QuestionTable | undefined,
+    contest: q.contest,
+    year: String(q.year),
+    board: q.board,
+    answer: q.answer,
+    text: q.text,
+  } as const;
 }
