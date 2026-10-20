@@ -605,6 +605,15 @@ function Index() {
         <PlansSection />
 
         <section className="home-final" aria-labelledby="home-final-title">
+          <img
+            className="home-final__image"
+            src="/media/hero/lineup-carreiras-ajustada.webp"
+            alt="Representação de profissionais de segurança pública de diferentes carreiras, diante de uma paisagem amazônica"
+            width={1896}
+            height={830}
+            loading="lazy"
+            decoding="async"
+          />
           <div className="home-container">
             <div className="home-final__inner">
               <div>

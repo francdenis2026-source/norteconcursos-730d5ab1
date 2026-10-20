@@ -22,6 +22,12 @@ async def main():
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),f'overflow {w}'
     assert await page.locator('.home-hero').evaluate('e=>e.offsetHeight')<550
     assert await page.locator('.home-interstitial').count()==0
+    portrait=page.locator('.home-final__image')
+    assert await portrait.get_attribute('src')=='/media/hero/lineup-carreiras-ajustada.webp'
+    if w<=1100:
+     assert await portrait.evaluate('e=>getComputedStyle(e).position')=='relative'
+    else:
+     assert await portrait.evaluate('e=>getComputedStyle(e).position')=='absolute'
     accents=await page.locator('.home-platform, .home-method, .home-careers').evaluate_all('els=>els.map(e=>getComputedStyle(e).getPropertyValue("--section-color").trim())')
     assert len(set(accents))==3, 'Sections must retain distinct accent colors in both themes'
     assert await page.locator('.home-core-tool p').first.evaluate('e=>parseFloat(getComputedStyle(e).fontSize)')>=14

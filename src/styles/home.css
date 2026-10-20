@@ -4261,3 +4261,63 @@
   .home.home .home-heading h2 em { color: CanvasText; text-decoration-color: CanvasText; }
   .home.home :is(.home-eyebrow, .home-section-intro, .home-core-tools, .home-plans__signal) { background: Canvas; color: CanvasText; border-color: CanvasText; backdrop-filter: none; }
 }
+
+/* Existing career portrait: keep faces clear of the closing message and actions. */
+.home.home .home-final { padding-block: 0; background: var(--ink); }
+.home.home .home-final__image {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 auto;
+  width: 58%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  opacity: 1;
+}
+.home.home .home-final::after {
+  background: linear-gradient(90deg, var(--ink) 0%, var(--ink) 41%, color-mix(in srgb, var(--ink) 55%, transparent) 46%, transparent 53%);
+}
+.home.home .home-final__inner {
+  display: grid;
+  max-width: 42%;
+  min-height: 360px;
+  padding-block: 28px;
+  align-content: center;
+  gap: 18px;
+}
+.home.home .home-final h2 { font-size: clamp(27px, 2.5vw, 34px); line-height: 1.16; }
+.home.home .home-final p { font-size: 14px; line-height: 1.65; }
+.home.home .home-final__actions { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.home.home .home-final__challenge { font-size: 12px; color: var(--on-ink); }
+@media (max-width: 1100px) {
+  .home.home .home-final__image {
+    position: relative;
+    z-index: 0;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1896 / 830;
+    max-height: 300px;
+    object-position: center 15%;
+  }
+  .home.home .home-final::after { content: none; }
+  .home.home .home-final__inner {
+    max-width: none;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    padding-block: 24px;
+  }
+  .home.home .home-final__actions { display: grid; gap: 4px; }
+}
+@media (max-width: 700px) {
+  .home.home .home-final__inner { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .home.home .home-final h2 { font-size: 27px; }
+  .home.home .home-final__actions { justify-items: start; }
+}
+@media (forced-colors: active) {
+  .home.home .home-final { background: Canvas; color: CanvasText; }
+  .home.home .home-final::after { content: none; }
+  .home.home .home-final__challenge { color: LinkText; }
+}

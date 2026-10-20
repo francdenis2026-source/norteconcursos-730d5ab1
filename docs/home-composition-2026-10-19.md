@@ -21,3 +21,7 @@ As seções receberam tons de azul, verde-azulado e violeta a partir dos tokens 
 O vidro é limitado aos painéis principais, aos selos de entrada e ao aviso do teste: transparência moderada, borda e desfoque estático. Há superfície sólida como alternativa sem suporte a blur e para a preferência de transparência reduzida. A hero oficial e a arte do fundo permanecem preservadas.
 
 A verificação visual cobre agora cinco larguras (320, 390, 768, 1024 e 1440 px), nos dois temas, cores distintas por seção, efeito de vidro aplicado, leitura mínima dos parágrafos e contraste de quatro textos representativos em relação à superfície de leitura do tema. Essa medição pontual não certifica o contraste de todos os pixels sobre fotografias.
+
+## Retrato das carreiras na chamada final
+
+A imagem existente `lineup-carreiras-ajustada.webp` volta à chamada antes do rodapé. Acima de 1100 px, ocupa a direita da faixa e a mensagem fica à esquerda; até 1100 px, aparece acima do texto, com proporção preservada e enquadramento voltado aos rostos. A fotografia oficial da hero e a arte escolhida para o fundo continuam independentes. A imagem tem descrição de representação ilustrativa, carregamento adiado e dimensões explícitas.
