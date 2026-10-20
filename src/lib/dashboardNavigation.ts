@@ -5,6 +5,8 @@ export interface NavigationTarget {
 export function navigationActive(pathname: string, href: string) {
   const path = pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname;
   if (href === "/dashboard/library" && path.startsWith("/dashboard/legal-course/")) return true;
+  // Trilhas e materiais de disciplina pertencem à área de disciplinas.
+  if (href === "/dashboard/disciplinas" && path === "/dashboard/trilhas") return true;
   return href === "/dashboard" ? path === href : path === href || path.startsWith(`${href}/`);
 }
 export function navigationKey(item: NavigationTarget) {

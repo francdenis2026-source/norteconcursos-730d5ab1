@@ -41,6 +41,7 @@ import { Route as DashboardCareersRouteImport } from './routes/dashboard/careers
 import { Route as DashboardCronogramaRouteImport } from './routes/dashboard/cronograma'
 import { Route as DashboardCtbRouteImport } from './routes/dashboard/ctb'
 import { Route as DashboardDicionarioRouteImport } from './routes/dashboard/dicionario'
+import { Route as DashboardDisciplinasRouteImport } from './routes/dashboard/disciplinas'
 import { Route as DashboardEditalRouteImport } from './routes/dashboard/edital'
 import { Route as DashboardEditalRadarRouteImport } from './routes/dashboard/edital-radar'
 import { Route as DashboardEnemRouteImport } from './routes/dashboard/enem'
@@ -242,6 +243,11 @@ const DashboardCtbRoute = DashboardCtbRouteImport.update({
 const DashboardDicionarioRoute = DashboardDicionarioRouteImport.update({
   id: '/dicionario',
   path: '/dicionario',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardDisciplinasRoute = DashboardDisciplinasRouteImport.update({
+  id: '/disciplinas',
+  path: '/disciplinas',
   getParentRoute: () => DashboardRoute,
 } as any)
 const DashboardEditalRoute = DashboardEditalRouteImport.update({
@@ -475,6 +481,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
   '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -547,6 +554,7 @@ export interface FileRoutesByTo {
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
   '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
   '/dashboard/errors': typeof DashboardErrorsRoute
@@ -619,6 +627,7 @@ export interface FileRoutesById {
   '/dashboard/cronograma': typeof DashboardCronogramaRoute
   '/dashboard/ctb': typeof DashboardCtbRoute
   '/dashboard/dicionario': typeof DashboardDicionarioRoute
+  '/dashboard/disciplinas': typeof DashboardDisciplinasRoute
   '/dashboard/edital': typeof DashboardEditalRouteWithChildren
   '/dashboard/edital-radar': typeof DashboardEditalRadarRoute
   '/dashboard/enem': typeof DashboardEnemRoute
@@ -694,6 +703,7 @@ export interface FileRouteTypes {
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
     | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -766,6 +776,7 @@ export interface FileRouteTypes {
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
     | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
     | '/dashboard/errors'
@@ -837,6 +848,7 @@ export interface FileRouteTypes {
     | '/dashboard/cronograma'
     | '/dashboard/ctb'
     | '/dashboard/dicionario'
+    | '/dashboard/disciplinas'
     | '/dashboard/edital'
     | '/dashboard/edital-radar'
     | '/dashboard/enem'
@@ -1121,6 +1133,13 @@ declare module '@tanstack/react-router' {
       path: '/dicionario'
       fullPath: '/dashboard/dicionario'
       preLoaderRoute: typeof DashboardDicionarioRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/disciplinas': {
+      id: '/dashboard/disciplinas'
+      path: '/disciplinas'
+      fullPath: '/dashboard/disciplinas'
+      preLoaderRoute: typeof DashboardDisciplinasRouteImport
       parentRoute: typeof DashboardRoute
     }
     '/dashboard/edital': {
@@ -1444,6 +1463,7 @@ interface DashboardRouteChildren {
   DashboardCronogramaRoute: typeof DashboardCronogramaRoute
   DashboardCtbRoute: typeof DashboardCtbRoute
   DashboardDicionarioRoute: typeof DashboardDicionarioRoute
+  DashboardDisciplinasRoute: typeof DashboardDisciplinasRoute
   DashboardEditalRoute: typeof DashboardEditalRouteWithChildren
   DashboardEditalRadarRoute: typeof DashboardEditalRadarRoute
   DashboardEnemRoute: typeof DashboardEnemRoute
@@ -1499,6 +1519,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardCronogramaRoute: DashboardCronogramaRoute,
   DashboardCtbRoute: DashboardCtbRoute,
   DashboardDicionarioRoute: DashboardDicionarioRoute,
+  DashboardDisciplinasRoute: DashboardDisciplinasRoute,
   DashboardEditalRoute: DashboardEditalRouteWithChildren,
   DashboardEditalRadarRoute: DashboardEditalRadarRoute,
   DashboardEnemRoute: DashboardEnemRoute,

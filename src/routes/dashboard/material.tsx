@@ -28,7 +28,10 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
-import { hubLaws, hubSubjects, type HubSubject, type SubjectIcon } from "@/lib/materialHub";
+import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
+import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
+import { TRACKS } from "@/data/tracks";
+import { PLAYLISTS } from "@/data/mediaCatalog";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
 
@@ -96,10 +99,19 @@ const OTHER_RESOURCES: {
   },
 ];
 
+const summary = (card: DisciplineCard) =>
+  [
+    card.materials > 0 && `${card.materials} ${card.materials === 1 ? "material" : "materiais"}`,
+    card.lessons > 0 && `${card.lessons} ${card.lessons === 1 ? "aula" : "aulas"}`,
+    card.videos > 0 && `${card.videos} ${card.videos === 1 ? "videoaula" : "videoaulas"}`,
+  ]
+    .filter(Boolean)
+    .join(" · ") || "Em preparação";
+
 type Suggestion = { key: string; label: string; hint: string; go: () => void; icon: LucideIcon };
 
 /** Busca única do material: leis (por número, nome, sigla ou tema) e disciplinas, com resposta ao digitar. */
-function HubSearch({ subjects }: { subjects: HubSubject[] }) {
+function HubSearch({ subjects }: { subjects: DisciplineCard[] }) {
   const navigate = useNavigate();
   const [query, setQuery] = React.useState("");
   const [active, setActive] = React.useState(0);
@@ -109,17 +121,17 @@ function HubSearch({ subjects }: { subjects: HubSubject[] }) {
     const normalized = normalizeLibrarySearch(text);
     const list: Suggestion[] = [];
     for (const subject of subjects) {
-      if (!normalizeLibrarySearch(subject.name).includes(normalized) || subject.count === 0)
+      if (!normalizeLibrarySearch(subject.name).includes(normalized) || !subject.hasContent)
         continue;
       list.push({
         key: `d:${subject.name}`,
         label: subject.name,
-        hint: `Disciplina · ${subject.count} ${subject.count === 1 ? "material" : "materiais"}`,
+        hint: `Disciplina · ${summary(subject)}`,
         icon: SUBJECT_ICONS[subject.icon],
         go: () =>
           void navigate({
-            to: "/dashboard/library",
-            search: { collection: "subjects", discipline: subject.name },
+            to: "/dashboard/disciplinas",
+            search: { d: subject.name },
           }),
       });
     }
@@ -227,9 +239,12 @@ function MaterialHub() {
   const { data, isPending } = useStudyMaterialList(signedIn);
   const items = data ?? [];
   const laws = hubLaws(items);
-  const subjects = hubSubjects(items);
+  const subjects = disciplineCards(items, TRACKS, PLAYLISTS);
   const lawTotal = laws.reduce((sum, entry) => sum + entry.count, 0);
-  const subjectTotal = subjects.reduce((sum, entry) => sum + entry.count, 0);
+  const subjectTotal = subjects.reduce(
+    (sum, entry) => sum + entry.materials + entry.lessons + entry.videos,
+    0,
+  );
 
   if (!isLoading && !signedIn)
     return (
@@ -262,7 +277,7 @@ function MaterialHub() {
           <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
           <HeroStat
             icon={BookOpen}
-            label="Materiais de disciplinas"
+            label="Conteúdos de disciplinas"
             value={isPending ? "—" : subjectTotal}
           />
         </div>
@@ -360,8 +375,7 @@ function MaterialHub() {
             </p>
           </div>
           <Link
-            to="/dashboard/library"
-            search={{ collection: "subjects" }}
+            to="/dashboard/disciplinas"
             className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
           >
             Abrir todas as disciplinas →
@@ -384,20 +398,16 @@ function MaterialHub() {
                   </span>
                   <span className="material-card__body">
                     <strong>{entry.name}</strong>
-                    <span>
-                      {entry.count > 0
-                        ? `${entry.count} ${entry.count === 1 ? "material" : "materiais"}`
-                        : "Em preparação"}
-                    </span>
+                    <span>{summary(entry)}</span>
                   </span>
                 </>
               );
               return (
                 <li key={entry.name}>
-                  {entry.count > 0 ? (
+                  {entry.hasContent ? (
                     <Link
-                      to="/dashboard/library"
-                      search={{ collection: "subjects", discipline: entry.name }}
+                      to="/dashboard/disciplinas"
+                      search={{ d: entry.name }}
                       className="material-card"
                     >
                       {content}
