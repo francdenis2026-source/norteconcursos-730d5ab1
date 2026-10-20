@@ -134,7 +134,7 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-contests",
     adminOnly: true,
   },
-  { group: "Planejamento", label: "Painel do aluno", icon: LayoutDashboard, href: "/dashboard", primary: true },
+  { group: "Planejamento", label: "Área do aluno", icon: LayoutDashboard, href: "/dashboard", primary: true },
   { group: "Planejamento", label: "Estratégia de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
   { group: "Planejamento", label: "Cronograma por edital", icon: CalendarClock, href: "/dashboard/cronograma" },
   { group: "Planejamento", label: "Plano por resultados", icon: ClipboardList, href: "/dashboard/study-plan" },
@@ -662,7 +662,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             className="app-content"
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >
-            {brandBg && <div className="app-brand-background no-print" aria-hidden="true" />}
             <div className="app-content__inner">
               <PlatformBack />
               {children}

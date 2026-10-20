@@ -38,7 +38,7 @@ import type { UserProfile } from "@/types";
 export const Route = createFileRoute("/dashboard/")({
   head: () => ({
     meta: [
-      { title: "Painel do aluno | Norte Concurso" },
+      { title: "Área do aluno | Norte Concursos" },
       {
         name: "description",
         content:
@@ -84,7 +84,7 @@ function DashboardIndex() {
     return (
       <LockedState
         image="journey"
-        title="Painel do aluno"
+        title="Área do aluno"
         description="Entre na sua conta para acompanhar sua preparação e seus registros de estudo."
       />
     );
@@ -205,12 +205,12 @@ function StudentHome({ user }: { user: UserProfile }) {
   };
   return (
     <div className="student-home student-hub">
-      <header className="student-hub__masthead">
+      <header className="student-hub__masthead student-hub__masthead--insignia">
         <div className="student-hub__hero-copy">
           <p className="student-hub__welcome">
             {hello}, {firstName}.
           </p>
-          <h1 id="student-home-title">Painel do aluno</h1>
+          <h1 id="student-home-title">Área do aluno</h1>
           <p>Seu estudo, suas prioridades e sua evolução.</p>
           <div className="student-hub__masthead-actions">
             <span className="student-hub__date">
@@ -228,12 +228,11 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
         </div>
         <picture className="student-hub__hero-visual" aria-hidden="true">
-          <source media="(max-width: 640px)" srcSet="/media/hero/painel-aluno-estudo-small.webp" />
           <img
-            src="/media/hero/painel-aluno-estudo.webp"
+            src="/media/hero/area-aluno-distintivo.webp"
             alt=""
-            width={960}
-            height={640}
+            width={1448}
+            height={1086}
             fetchPriority="high"
             decoding="async"
           />

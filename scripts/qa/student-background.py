@@ -1,4 +1,4 @@
-"""Verify full artwork visibility in the student shell. Auth and all backend traffic are mocked."""
+"""Student identity layout with mocked auth/backend; no production data or login is used."""
 import asyncio,json,runpy
 from pathlib import Path
 from playwright.async_api import async_playwright
@@ -18,27 +18,30 @@ async def main():
     await page.evaluate('(dark)=>document.documentElement.classList.toggle("dark",dark)',theme=='dark')
     for w in [320,390,768,1024,1440]:
      await page.set_viewport_size({'width':w,'height':950})
-     art=page.locator('.app-brand-background');await art.wait_for(state='visible')
-     style=await art.evaluate('e=>{const s=getComputedStyle(e);return {size:s.backgroundSize,opacity:s.opacity,ratio:s.aspectRatio,image:s.backgroundImage,mask:s.maskImage}}')
-     assert style['size']=='contain' and style['opacity']=='1' and style['mask']=='none',style
-     assert 'carreiras-' in style['image']
-     a,b=map(float,style['ratio'].split('/'));box=await art.bounding_box()
-     assert abs(box['width']/box['height']-a/b)<.02,box
-     assert box['x']>=0 and box['x']+box['width']<=w+1,box
-     inner=await page.locator('.app-content__inner').bounding_box()
-     assert box['y']+box['height']<=inner['y']+1,'Reading content covers the artwork'
+     assert await page.locator('.app-brand-background').count()==0,'Standalone top image must be removed'
+     bg=await page.locator('.app-content').evaluate('e=>getComputedStyle(e).backgroundImage')
+     assert 'carreiras-' in bg
      assert '780px' not in await page.locator('.app-content').evaluate('e=>getComputedStyle(e).backgroundSize')
-     if path in ['/dashboard','/dashboard/subscriptions'] and w in [390,1440]:
-      await art.scroll_into_view_if_needed()
-      await art.screenshot(path=f'outputs/qa/student-art-{path.rsplit("/",1)[-1]}-{theme}-{w}.png')
-      if path=='/dashboard':await page.screenshot(path=f'outputs/qa/student-art-page-{theme}-{w}.png')
-     results.append({'path':path,'theme':theme,'width':w,'full_art':True})
-   await page.emulate_media(media='print');assert not await page.locator('.app-brand-background').is_visible();await page.emulate_media(media='screen')
+     if path=='/dashboard':
+      hero=page.locator('.student-hub__masthead');image=hero.locator('img')
+      await image.evaluate('e=>e.decode()');await page.evaluate('document.fonts.ready')
+      assert (await hero.locator('h1').text_content()).strip()=='Área do aluno'
+      assert await image.get_attribute('src')=='/media/hero/area-aluno-distintivo.webp'
+      assert await hero.locator('source').count()==0,'Mobile must use the new artwork too'
+      assert await image.evaluate('e=>getComputedStyle(e).objectFit')=='contain'
+      assert await hero.locator('.student-hub__welcome').is_visible()
+      assert await hero.locator('.student-hub__date').is_visible()
+      assert await hero.get_by_role('link',name='Meu desempenho').get_attribute('href')=='/dashboard/performance'
+      assert 'Norte Insignia' in await hero.locator('h1').evaluate('e=>getComputedStyle(e).fontFamily')
+      # Reading copy must retain the on-image token in both themes.
+      for target in ['h1 + p','.student-hub__date']:
+       assert await hero.locator(target).evaluate('e=>{const s=getComputedStyle(e);const c=document.createElement("span");c.style.color="var(--on-ink-muted)";e.append(c);const expected=getComputedStyle(c).color;c.remove();return s.color===expected}')
+      box=await hero.bounding_box();assert box['width']<=w and box['height']<650,box
+      assert await hero.evaluate('e=>e.scrollWidth<=e.clientWidth')
+      await hero.screenshot(path=f'outputs/qa/student-identity-{theme}-{w}.png')
+     results.append({'path':path,'theme':theme,'width':w})
   await page.goto('http://localhost:8080/dashboard/enem',wait_until='domcontentloaded');await page.locator('.app-shell').wait_for()
-  assert await page.locator('.app-brand-background').count()==0
-  await page.goto('http://localhost:8080/dashboard',wait_until='domcontentloaded');await page.locator('.app-shell').wait_for()
-  await page.locator('.app-shell').evaluate('e=>e.dataset.area="admin"')
-  assert not await page.locator('.app-brand-background').is_visible()
-  print(json.dumps({'checked':len(results),'full_art':True,'no_content_overlap':True,'print_enem_admin_excluded':True}))
+  assert await page.locator('.app-shell').get_attribute('data-brand-bg')=='off'
+  print(json.dumps({'checked':len(results),'single_hero':True,'new_art_mobile_and_desktop':True,'title_and_actions_preserved':True}))
   await c.close();await browser.close()
 asyncio.run(main())

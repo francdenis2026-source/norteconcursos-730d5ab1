@@ -13315,27 +13315,67 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .dark .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-content {
   background-image: linear-gradient(color-mix(in srgb, var(--background) 86%, transparent), color-mix(in srgb, var(--background) 97%, transparent)), var(--brand-banner);
 }
-.app-brand-background { display: none; }
-.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-brand-background {
-  display: block;
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: var(--brand-aspect);
-  margin: 0 auto 20px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: var(--brand-banner) center / contain no-repeat var(--ink);
-  box-shadow: var(--shadow-card);
-  opacity: 1;
-  pointer-events: none;
-}
-@media (max-width: 700px) {
-  .app-shell[data-area="student"][data-brand-bg] .app-brand-background { margin-bottom: 14px; border-radius: 10px; }
-}
 @media print, (prefers-reduced-transparency: reduce), (forced-colors: active) {
   .app-shell[data-area="student"][data-brand-bg] .app-content { background-image: none; }
 }
 
-@media print, (forced-colors: active) {
-  .app-shell[data-area="student"][data-brand-bg] .app-brand-background { display: none; }
+
+/* Student identity is a single hero; the heading remains accessible HTML. */
+@font-face {
+  font-family: "Norte Insignia";
+  src: url("/media/fonts/norte-insignia-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
+.app-shell .student-hub__masthead.student-hub__masthead--insignia {
+  background: var(--ink);
+  color: var(--on-ink);
+  border-color: var(--on-ink-line);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: 280px;
+}
+.app-shell .student-hub__masthead--insignia #student-home-title {
+  font-family: "Norte Insignia", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(27px, 3.1vw, 43px);
+  letter-spacing: .025em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--brass-soft);
+  text-shadow: 0 1px 0 rgb(0 0 0 / .7), 0 2px 2px rgb(0 0 0 / .45);
+}
+@supports (background-clip: text) {
+  .app-shell .student-hub__masthead--insignia #student-home-title {
+    background: linear-gradient(180deg, var(--on-ink) 8%, var(--brass-soft) 45%, var(--brass) 75%, var(--brass-soft));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / .5));
+  }
+}
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__welcome {
+  color: var(--brass-soft);
+  background: color-mix(in srgb, var(--brass) 12%, var(--ink));
+}
+.app-shell .student-hub__masthead.student-hub__masthead--insignia h1 + p { color: var(--on-ink-muted); }
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date,
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date small { color: var(--on-ink-muted); }
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__masthead-actions > a { color: var(--brass-soft); background: color-mix(in srgb, var(--brass) 12%, var(--ink)); border: 1px solid var(--on-ink-line); }
+.app-shell .student-hub__masthead--insignia .student-hub__hero-visual {
+  clip-path: none;
+  background: var(--ink);
+  min-height: 260px;
+}
+.app-shell .student-hub__masthead--insignia .student-hub__hero-visual img { object-fit: contain; object-position: center; }
+@media (max-width: 640px) {
+  .app-shell .student-hub__masthead.student-hub__masthead--insignia { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .app-shell .student-hub__masthead--insignia .student-hub__hero-visual { min-height: 0; height: auto; aspect-ratio: 1448 / 1086; }
+  .app-shell .student-hub__masthead--insignia #student-home-title { font-size: clamp(25px, 7vw, 34px); }
+}
+@media (forced-colors: active), print {
+  .app-shell .student-hub__masthead--insignia #student-home-title { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; filter: none; }
+}
+
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date small { background: transparent; border-color: var(--on-ink-line); }
