@@ -444,8 +444,10 @@ function Index() {
         </div>
 
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
-          <div className="home-container">
+          <div className="home-preparation__fullwidth">
             <div className="home-preparation__band">
+              <span className="home-preparation__frame" aria-hidden="true" />
+              <span className="home-preparation__sweep" aria-hidden="true" />
               <img
                 className="home-preparation__art"
                 src="/media/hero/auth-carreiras-composicao.webp"
