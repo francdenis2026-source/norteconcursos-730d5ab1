@@ -151,6 +151,7 @@ const MENU: MenuItem[] = [
   { group: "Meu concurso", label: "Perfil das bancas", icon: Landmark, href: "/dashboard/perfil-bancas" },
   { group: "Material didático", label: "Visão geral do material", icon: Library, href: "/dashboard/material" },
   { group: "Material didático", label: "Legislação e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
+  { group: "Material didático", label: "Leis extravagantes", icon: Gavel, href: "/dashboard/leis" },
   { group: "Material didático", label: "Disciplinas", icon: BookOpen, href: "/dashboard/library", search: { collection: "subjects" } },
   { group: "Material didático", label: "Trilhas por disciplina", icon: GraduationCap, href: "/dashboard/trilhas" },
   { group: "Material didático", label: "Videoaulas e podcasts", icon: PlayCircle, href: "/dashboard/media" },
