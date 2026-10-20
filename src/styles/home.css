@@ -4114,3 +4114,150 @@
 @media (max-width: 700px) {
   .home { background-attachment: scroll; background-size: auto, auto 820px; background-repeat: repeat, repeat-y; }
 }
+
+/* Editorial hierarchy and section colors share the platform's light/dark accents. */
+.home {
+  --home-blue: var(--c-blue);
+  --home-teal: var(--c-teal);
+  --home-violet: var(--c-violet);
+  --home-green: var(--c-green);
+  --home-glass: color-mix(in srgb, var(--card) 88%, transparent);
+}
+.dark .home {
+  --home-blue: var(--d-blue);
+  --home-teal: var(--d-teal);
+  --home-violet: var(--d-violet);
+  --home-green: var(--d-green);
+  --home-glass: color-mix(in srgb, var(--card) 90%, transparent);
+}
+.home.home .home-section {
+  --section-color: var(--home-blue);
+  background: linear-gradient(125deg, color-mix(in srgb, var(--section-color) 11%, var(--home-glass)), color-mix(in srgb, var(--home-bg) 86%, transparent) 75%);
+  border-block: 1px solid color-mix(in srgb, var(--section-color) 22%, var(--home-line));
+  padding-block: 36px;
+}
+.home.home .home-method { --section-color: var(--home-teal); }
+.home.home .home-careers { --section-color: var(--home-violet); }
+.home.home .home-plans { --section-color: var(--home-violet); }
+.home.home #concursos { --section-color: var(--home-blue); }
+.home.home .home-heading { min-width: 0; max-width: 760px; }
+.home.home .home-heading h2 {
+  font-size: clamp(28px, 2.8vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -.035em;
+  max-width: 26ch;
+}
+.home.home .home-heading h2 em {
+  color: var(--section-color, var(--home-blue));
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--section-color, var(--home-blue)) 35%, transparent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+.home.home :is(.home-heading, .home-section-top) .home-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--section-color, var(--home-blue)) 24%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--section-color, var(--home-blue)) 9%, var(--card));
+  color: var(--section-color, var(--home-blue));
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .07em;
+  margin-bottom: 12px;
+}
+.home.home .home-section-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.home.home .home-section-intro {
+  padding: 14px 18px;
+  border: 1px solid color-mix(in srgb, var(--section-color) 24%, var(--home-line));
+  border-left: 3px solid var(--section-color);
+  border-radius: 0 12px 12px 0;
+  color: var(--home-text);
+  background: var(--card);
+  margin: 0;
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.home.home .home-heading > p { font-size: 14px; line-height: 1.7; margin-top: 14px; max-width: 58ch; }
+.home.home .home-method .home-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0 28px; align-items: start; }
+.home.home .home-method .home-heading > p { margin: 0; align-self: center; }
+.home.home .home-core-tools { border-color: color-mix(in srgb, var(--home-blue) 30%, var(--home-line)); box-shadow: var(--shadow-card); }
+.home.home .home-core-tool h3 { font-size: 16px; line-height: 1.4; font-weight: 700; }
+.home.home .home-core-tool p { font-size: 14px; line-height: 1.6; margin-top: 6px; }
+.home.home .home-core-tool__number { align-self: start; margin-top: 2px; }
+.home.home .home-core-tool { align-items: start; gap: 12px; }
+.home.home .home-core-tool h3 svg { display: none; }
+.home.home .home-steps > li {
+  background: linear-gradient(155deg, color-mix(in srgb, var(--step-c, var(--home-teal)) 9%, var(--card)), var(--card));
+  border-top: 3px solid var(--step-c, var(--home-teal));
+}
+.home.home .home-steps h3 { font-size: 15px; line-height: 1.4; font-weight: 700; }
+.home.home .home-steps p { font-size: 13px; line-height: 1.65; margin-top: 8px; }
+.home.home .home-tool { border-color: color-mix(in srgb, var(--tool-c, var(--home-blue)) 28%, var(--home-line)); }
+.home.home .home-tool summary h3 { font-size: 13px; line-height: 1.4; }
+.home.home .home-tool p { font-size: 14px; line-height: 1.6; }
+.home.home .home-career { border-left: 3px solid var(--section-color); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
+.home.home .home-career h3 { font-size: 14px; line-height: 1.4; }
+.home.home .home-career p { font-size: 12px; line-height: 1.5; margin-top: 5px; }
+.home.home .home-plans__signal { padding: 14px 16px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--home-violet) 28%, var(--home-line)); background: var(--card); }
+.home.home .home-plans__signal strong { font-size: 15px; color: var(--home-violet); }
+.home.home .home-plan { background: linear-gradient(155deg, color-mix(in srgb, var(--plan-c, var(--home-blue)) 8%, var(--card)), var(--card)); }
+.home.home .home-source-details { border-left: 3px solid var(--home-teal); }
+.home.home .home-start .daily-badge { border-left: 3px solid var(--home-teal); }
+.home.home .home-start .question-count-badge { border-left: 3px solid var(--home-blue); }
+.home.home .home-hero__copy > p { font-size: 15px; line-height: 1.7; }
+.home.home .home-hero__note { font-size: 12px; }
+.home.home .home-trust li { font-size: 12px; line-height: 1.5; }
+/* The solid surfaces above remain the fallback when blur is unavailable. */
+@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+  .home.home :is(.home-core-tools, .home-section-intro, .home-plans__signal, .home-start .daily-badge, .home-start .question-count-badge) {
+    background: var(--home-glass);
+    -webkit-backdrop-filter: blur(14px) saturate(125%);
+    backdrop-filter: blur(14px) saturate(125%);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--foreground) 6%, transparent), var(--shadow-card);
+  }
+}
+@media (max-width: 1000px) {
+  .home.home .home-section-top { grid-template-columns: 1fr; gap: 16px; }
+  .home.home .home-platform__workspace { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: stretch; }
+  .home.home .home-platform__visual > img { height: 100%; min-height: 280px; }
+  .home.home .home-plans__intro { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 20px; }
+  .home.home .home-plans__signal { min-width: 0; }
+}
+@media (max-width: 700px) {
+  .home.home .home-section { padding-block: 28px; }
+  .home.home .home-heading h2 { font-size: clamp(27px, 6.9vw, 34px); max-width: 25ch; }
+  .home.home .home-heading > p, .home.home .home-section-intro { font-size: 14px; }
+  .home.home .home-method .home-heading, .home.home .home-plans__intro, .home.home .home-platform__workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .home.home .home-method .home-heading .home-eyebrow { margin-bottom: 0; }
+  .home.home .home-platform__visual > img { height: 200px; min-height: 0; }
+  .home.home .home-core-tools { padding: 14px 16px; }
+  .home.home .home-core-tool { padding-block: 12px; }
+  .home.home .home-tool summary { padding: 10px; min-height: 64px; gap: 8px; }
+  .home.home .home-tool summary > svg { width: 16px; height: 16px; }
+  .home.home .home-tool summary h3 { font-size: 13px; }
+  .home.home .home-hero__copy > p { font-size: 14px; }
+  .home.home .home-trust { gap: 8px 14px; }
+  .home.home .home-trust li { font-size: 11px; }
+  .home.home .home-plans__signal p { font-size: 13px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .home.home :is(.home-core-tools, .home-section-intro, .home-plans__signal, .home-start .daily-badge, .home-start .question-count-badge) { background: var(--card); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media (forced-colors: active) {
+  .home.home .home-section { background: Canvas; border-color: CanvasText; }
+  .home.home .home-heading h2 em { color: CanvasText; text-decoration-color: CanvasText; }
+  .home.home :is(.home-eyebrow, .home-section-intro, .home-core-tools, .home-plans__signal) { background: Canvas; color: CanvasText; border-color: CanvasText; backdrop-filter: none; }
+}

@@ -381,14 +381,14 @@ function Index() {
               <div className="home-heading">
                 <span className="home-eyebrow">Sua preparação, em um só lugar</span>
                 <h2 id="platform-title">
-                  Seu estudo conectado.
+                  Do edital ao treino.
                   <br />
-                  <em>Da teoria à próxima questão.</em>
+                  <em>Veja sua evolução.</em>
                 </h2>
               </div>
               <p className="home-section-intro">
-                Encontre o conteúdo, pratique e acompanhe sua evolução. Cada recurso tem um papel no
-                próximo passo da sua preparação.
+                Estude a teoria, resolva questões e identifique o que precisa reforçar.
+                Sua próxima sessão começa com uma prioridade clara.
               </p>
             </div>
             <div className="home-platform__workspace">
@@ -404,7 +404,7 @@ function Index() {
                 <figcaption>
                   <BookOpenCheck aria-hidden="true" />
                   <span>
-                    Do conteúdo à prática.<strong>Um lugar para seguir evoluindo.</strong>
+                    Teoria, prática e revisão.<strong>Cada sessão com uma direção.</strong>
                   </span>
                 </figcaption>
               </figure>
@@ -448,11 +448,10 @@ function Index() {
             <div className="home-method__intro">
               <Head
                 kicker="Como funciona"
-                lead="Um ciclo objetivo para transformar edital, desempenho e tempo disponível em uma rotina até a prova."
+                lead="Escolha seu objetivo, descubra o que reforçar e pratique no seu ritmo até a prova."
               >
-                Cada etapa tem <em>um propósito.</em>
+                Uma rotina clara. <em>Um passo de cada vez.</em>
               </Head>
-
             </div>
             <ol className="home-steps">
               {STEPS.map(([Icon, title, text], index) => (
