@@ -1,5 +1,6 @@
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import * as PreparationTabs from "@radix-ui/react-tabs";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
@@ -19,7 +20,6 @@ import {
   BrainCircuit,
   CalendarClock,
   ChevronRight,
-  ChevronDown,
   Compass,
   FileSearch,
   Landmark,
@@ -213,6 +213,77 @@ function usePointerInteractions() {
   }, []);
 }
 
+const PREPARATION_TABS = [
+  ["ferramentas", "Ferramentas"],
+  ["como", "Como funciona"],
+  ["carreiras", "Carreiras"],
+  ["fontes", "Fontes oficiais"],
+] as const;
+
+function PreparationInfo() {
+  const [active, setActive] = useState("ferramentas");
+  useEffect(() => {
+    const selectHash = (hash: string) => {
+      const value = hash.replace(/^#/, "");
+      if (PREPARATION_TABS.some(([id]) => id === value)) setActive(value);
+    };
+    const onHashChange = () => selectHash(window.location.hash);
+    const onAnchorClick = (event: MouseEvent) => {
+      const anchor = event.target instanceof Element ? event.target.closest("a") : null;
+      const href = anchor?.getAttribute("href");
+      if (href?.startsWith("#")) selectHash(href);
+    };
+    onHashChange();
+    window.addEventListener("hashchange", onHashChange);
+    document.addEventListener("click", onAnchorClick);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      document.removeEventListener("click", onAnchorClick);
+    };
+  }, []);
+  return (
+    <PreparationTabs.Root value={active} onValueChange={setActive} className="home-preparation__info">
+      <PreparationTabs.List className="home-preparation__tabs" aria-label="Conheça a preparação">
+        {PREPARATION_TABS.map(([id, label]) => (
+          <div key={id} id={id} className="home-preparation__tab-anchor">
+            <PreparationTabs.Trigger value={id} className="home-preparation__tab">
+              {label}
+            </PreparationTabs.Trigger>
+          </div>
+        ))}
+      </PreparationTabs.List>
+      <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
+        <div className="home-preparation__items">
+          {TOOLS.map(({ icon: Icon, title, text }) => (
+            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="como" className="home-preparation__panel">
+        <ol className="home-preparation__items home-preparation__steps">
+          {STEPS.map(([Icon, title, text], index) => (
+            <li key={title}><span className="home-preparation__number">0{index + 1}</span><div><h3><Icon aria-hidden="true" />{title}</h3><p>{text}</p></div></li>
+          ))}
+        </ol>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="carreiras" className="home-preparation__panel">
+        <div className="home-preparation__items home-preparation__careers">
+          {CAREERS.map(([name, roles]) => (
+            <article key={name}><ShieldCheck aria-hidden="true" /><div><h3>{name}</h3><p>{roles}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="fontes" className="home-preparation__panel">
+        <div className="home-preparation__items">
+          {PILLARS.map(({ icon: Icon, title, text }) => (
+            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+    </PreparationTabs.Root>
+  );
+}
+
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
@@ -397,41 +468,7 @@ function Index() {
                   </Link>
                 </div>
               </div>
-              <div className="home-preparation__groups">
-                <details id="ferramentas" className="home-preparation__group">
-                  <summary><span>Ferramentas de preparação<small>Teoria, prática e evolução em um só lugar</small></span><ChevronDown aria-hidden="true" /></summary>
-                  <div className="home-preparation__tools">
-                    {TOOLS.map(({ title, text }) => (
-                      <div key={title}><h3>{title}</h3><p>{text}</p></div>
-                    ))}
-                  </div>
-                </details>
-                <details id="como" className="home-preparation__group">
-                  <summary><span>Como funciona<small>Do seu objetivo ao ritmo da prova</small></span><ChevronDown aria-hidden="true" /></summary>
-                  <ol className="home-preparation__steps">
-                    {STEPS.map(([, title, text]) => (
-                      <li key={title}><h3>{title}</h3><p>{text}</p></li>
-                    ))}
-                  </ol>
-                </details>
-                <details id="carreiras" className="home-preparation__group">
-                  <summary><span>Carreiras atendidas<small>Encontre seu caminho na segurança pública</small></span><ChevronDown aria-hidden="true" /></summary>
-                  <div className="home-preparation__tools">
-                    {CAREERS.map(([name, roles]) => (
-                      <div key={name}><h3>{name}</h3><p>{roles}</p></div>
-                    ))}
-                  </div>
-                </details>
-                <details className="home-preparation__group">
-                  <summary><span>Conteúdo e fontes oficiais<small>Critérios de revisão e verificação de vigência</small></span><ChevronDown aria-hidden="true" /></summary>
-                  <div className="home-preparation__sources">
-                    <p>Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de vigência.</p>
-                    {PILLARS.map(({ title, text }) => (
-                      <div key={title}><h3>{title}</h3><p>{text}</p></div>
-                    ))}
-                  </div>
-                </details>
-              </div>
+              <PreparationInfo />
             </div>
           </div>
         </section>
