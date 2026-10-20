@@ -101,7 +101,12 @@ export function trainerFilterFacets(
   const totals = {} as Record<(typeof TRAINER_FACET_KEYS)[number], number>;
   for (const key of TRAINER_FACET_KEYS) {
     const field = key === "exam" ? "appliedExam" : key;
-    const rows = filterTrainerQuestions(catalog, { ...filters, [field]: "all" }, topics);
+    // Changing discipline also clears its dependent topic and schedule area.
+    const candidateFilters =
+      key === "subject"
+        ? { ...filters, subject: "all", topic: "all", area: "all" }
+        : { ...filters, [field]: "all" };
+    const rows = filterTrainerQuestions(catalog, candidateFilters, topics);
     const map = new Map<string, number>();
     const topicNames =
       key === "topic"
@@ -165,7 +170,10 @@ export function trainerFilterFacets(
 
 /** Scope by exam identity, never by a shared discipline such as Portuguese. */
 export function isEnemContest(contest: string) {
-  const name = contest.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const name = contest
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
   return /^(?:ENEM\b|Exame Nacional do Ensino Medio\b)/i.test(name);
 }
 export function trainerCollectionQuestions(catalog: Question[], collection: "enem" | "contests") {
@@ -180,7 +188,7 @@ export function trainerPracticeQuestions(
   answers: ReadonlyMap<string, { isCorrect: boolean }>,
   reinforcements: ReadonlyMap<string, { lastCorrect: boolean }>,
 ) {
-  return catalog.filter(question => {
+  return catalog.filter((question) => {
     if (mode === "catalog") return true;
     const key = `${question.source}:${question.id}`;
     if (mode === "new") return !answers.has(key);
@@ -190,5 +198,5 @@ export function trainerPracticeQuestions(
 }
 
 export function syllabusQuestions(catalog: Question[], topicId?: string) {
-  return topicId ? catalog.filter(question => question.syllabusTopicId === topicId) : catalog;
+  return topicId ? catalog.filter((question) => question.syllabusTopicId === topicId) : catalog;
 }

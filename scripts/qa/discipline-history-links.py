@@ -31,7 +31,7 @@ async def main():
      await route.fulfill(status=503,content_type='application/json',body=json.dumps({'message':'fixture unavailable'}));return
     data=[] if mode['value']=='empty' or int(params.get('offset',['0'])[0])>0 else rows if table=='question_training_responses' else activity
    elif table=='curated_question_catalog':
-    data=[] if int(params.get('offset',['0'])[0]) else [{'id':'new-'+subject,'subject':subject,'contest_name':'Teste','contest_year':2025,'career_name':'Teste','exam_board':'CEBRASPE','question_text':'O aluno estuda diariamente.' if subject=='Língua Portuguesa' else 'Dois mais dois resulta em quatro.','official_answer':'C','explanation':'Certo. Exemplo de teste.','legal_basis':[],'content_status':'active'} for subject in ['Língua Portuguesa','Matemática']]
+    data=[] if int(params.get('offset',['0'])[0]) else [{'id':'new-'+subject,'subject':subject,'contest_name':'Teste','contest_year':2025,'career_name':'Teste','exam_board':'CEBRASPE','question_text':'O aluno estuda diariamente.' if subject=='Língua Portuguesa' else 'Dois mais dois resulta em quatro.','subtopic':'Crase' if subject=='Língua Portuguesa' else 'Porcentagem','official_answer':'C','explanation':'Certo. Exemplo de teste.','legal_basis':[],'content_status':'active'} for subject in ['Língua Portuguesa','Matemática']]
    elif table=='get_current_acre_date' :data=str(today)
    elif table=='study_time_today':data=900
    elif '/rpc/' in url:data=None
@@ -62,6 +62,7 @@ async def main():
      assert await page.locator('.trainer-resume-banner').count()==0
      fixed=page.get_by_role('group',name='Disciplina fixa neste treino',exact=True)
      await expect(fixed).to_contain_text(subject)
+     await expect(page.get_by_role('button',name='ENEM',exact=True)).to_be_disabled()
      assert await page.get_by_role('combobox',name='Disciplina',exact=True).count()==0
      await expect(page.get_by_role('combobox',name='Assunto',exact=True)).to_contain_text('Todos os assuntos')
      await page.get_by_role('button',name='Limpar filtros',exact=True).click()
@@ -71,16 +72,30 @@ async def main():
      assert subject in page.url or 'subject=' in page.url
      results.append({'width':width,'metric':label,'subject':subject,'exact_discipline_setup_without_autostart':True,'locked_after_reset':True,'sidebar_unlocks_all_disciplines':True})
      await page.locator('a[href="/dashboard/question-trainer"]').first.evaluate('(element)=>element.click()')
+     await expect(page.get_by_role('button',name='ENEM',exact=True)).to_be_enabled()
      chooser=page.get_by_role('combobox',name='Disciplina',exact=True)
      await expect(chooser).to_contain_text('Todas as disciplinas')
      assert await page.get_by_role('group',name='Disciplina fixa neste treino',exact=True).count()==0
+     topic_picker=page.get_by_role('combobox',name='Assunto',exact=True)
+     await topic_picker.click()
+     await page.get_by_role('option',name='Crase',exact=False).click()
+     await expect(chooser).to_contain_text('Língua Portuguesa')
      await chooser.click()
      target='Matemática' if subject=='Língua Portuguesa' else 'Língua Portuguesa'
      await page.get_by_role('option',name=target,exact=False).click()
      await expect(chooser).to_contain_text(target)
+     await expect(topic_picker).to_contain_text('Todos os assuntos')
      assert 'subject=' not in page.url
      await page.goto('http://localhost:8080/dashboard',wait_until='domcontentloaded')
      await page.get_by_role('button',name='Taxa de acerto: 75%. Ver detalhes',exact=True).wait_for()
+  await page.goto('http://localhost:8080/dashboard/question-trainer?contest=ENEM&subject=Matem%C3%A1tica',wait_until='domcontentloaded')
+  await expect(page.get_by_role('button',name='Concursos públicos',exact=True)).to_be_disabled()
+  await expect(page.get_by_role('button',name='ENEM',exact=True)).to_have_attribute('aria-pressed','true')
+  await page.get_by_role('button',name='Limpar filtros',exact=True).click()
+  await expect(page.get_by_role('button',name='Concursos públicos',exact=True)).to_be_disabled()
+  await page.locator('summary').filter(has_text='Mais critérios').click()
+  await expect(page.get_by_role('combobox',name='Estado',exact=True)).to_be_disabled()
+  await expect(page.get_by_role('combobox',name='Categoria',exact=True)).to_be_disabled()
   assert not errors,errors
   print(json.dumps({'cases':results,'browser_errors':errors}))
   await browser.close()

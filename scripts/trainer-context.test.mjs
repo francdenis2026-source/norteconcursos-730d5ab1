@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { trainerContext,lockedTrainerSubject,trainerDisciplineCatalog } from '../src/lib/trainerContext.ts';
+import { trainerContext,lockedTrainerSubject,trainerDisciplineCatalog,lockedTrainerCollection,trainerTopicSubject } from '../src/lib/trainerContext.ts';
 test('setup shows the selected discipline and topic without inventing a current question',()=>{
  assert.deepEqual(trainerContext(undefined,'Direito Constitucional','Direito Constitucional::Direitos fundamentais'),{discipline:'Direito Constitucional',topic:'Direitos fundamentais',automatic:false});
  assert.equal(trainerContext(undefined,'Língua Portuguesa','all','Concordância verbal').topic,'Concordância verbal');
@@ -21,4 +21,15 @@ test('entry discipline is immutable in the candidate pool while the general trai
  const rows=[{subject:'Direito Penal'},{subject:'Língua Portuguesa'},{subject:'Noções de Direito Penal'}];
  assert.deepEqual(trainerDisciplineCatalog(rows,'Direito Penal'),[rows[0],rows[2]]);
  assert.equal(trainerDisciplineCatalog(rows,null),rows);
+});
+
+test('contextual entries lock preparation area, while the sidebar stays free',()=>{
+ assert.equal(lockedTrainerCollection({}),null);
+ assert.equal(lockedTrainerCollection({subject:'all',contest:'all'}),null);
+ assert.equal(lockedTrainerCollection({subject:'Língua Portuguesa'}),'contests');
+ assert.equal(lockedTrainerCollection({contest:'ENEM 2025',subject:'Matemática'}),'enem');
+ assert.equal(lockedTrainerCollection({appliedExam:'ENEM::Estudante::INEP::2025'}),'enem');
+ assert.equal(lockedTrainerCollection({edition:'edital-1'}),'contests');
+ assert.equal(trainerTopicSubject('Noções de Direito Penal::Crimes'),'Direito Penal');
+ assert.equal(trainerTopicSubject('all'),null);
 });

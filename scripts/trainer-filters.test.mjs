@@ -220,3 +220,15 @@ test("filtro Atual: 'recent' pega qualquer etiqueta, uma etiqueta pega só ela, 
   assert.equal(facets.counts.currency.get("Prova recente"), 2);
   assert.equal(facets.totals.currency, 4);
 });
+
+test('topics and content facets follow discipline without trapping the general discipline chooser',()=>{
+ const catalog=[q('pt','FGV'),{...q('math','IBFC'),subject:'Matemática'}];
+ const topics=new Map([['pt','Crase'],['math','Porcentagem']]);
+ const filters={...all,subject:'Língua Portuguesa',topic:'Língua Portuguesa::Crase'};
+ const facets=trainerFilterFacets(catalog,filters,topics);
+ assert.equal(facets.counts.subject.size,2);
+ assert.deepEqual([...facets.counts.topic.keys()],['Língua Portuguesa::Crase']);
+ assert.deepEqual([...facets.counts.board.keys()],['FGV']);
+ assert.deepEqual(filterTrainerQuestions(catalog,filters,topics).map(q=>q.id),['pt']);
+ assert.deepEqual(filterTrainerQuestions(catalog,{...filters,subject:'Matemática'},topics),[]);
+});

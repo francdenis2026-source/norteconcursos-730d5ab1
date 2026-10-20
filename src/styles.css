@@ -13282,3 +13282,10 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   line-height: 1.4;
   white-space: normal;
 }
+
+.trainer-collection button:disabled,
+.trainer-picker-trigger:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  filter: saturate(.4);
+}

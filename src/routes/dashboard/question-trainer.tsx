@@ -2,6 +2,8 @@ import { scrollAppToSection } from "@/lib/appScroll";
 import {
   trainerContext,
   lockedTrainerSubject,
+  lockedTrainerCollection,
+  trainerTopicSubject,
   trainerDisciplineCatalog,
 } from "@/lib/trainerContext";
 import { useUnseenActivity } from "@/hooks/useUnseenActivity";
@@ -190,6 +192,7 @@ type OrderMode = "random" | "exam";
 function QuestionTrainer() {
   const routeFilters = Route.useSearch();
   const lockedSubject = lockedTrainerSubject(routeFilters.subject);
+  const lockedCollection = lockedTrainerCollection(routeFilters);
   const navigate = useNavigate();
   const { user, isLoading: authLoading, isAdmin } = useAuthStatus();
   const userId = user?.id;
@@ -232,8 +235,10 @@ function QuestionTrainer() {
   // Questões sem o texto de apoio ficam fora do treino até que o conteúdo esteja disponível.
 
   const law = routeFilters.law;
-  const [contest, setContest] = React.useState(questionContestValue(routeFilters.contest || "all"));
-  const collection = isEnemContest(contest) ? "enem" : "contests";
+  const [contest, setContest] = React.useState(
+    questionContestValue(routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all")),
+  );
+  const collection = lockedCollection ?? (isEnemContest(contest) ? "enem" : "contests");
   // Questões de Português que remetem a "o texto" sem o texto de apoio ficam fora do treino até o texto ser cadastrado:
   // sem ele, o aluno não consegue resolver.
   const { catalog, missingSupportText } = React.useMemo(() => {
@@ -296,7 +301,7 @@ function QuestionTrainer() {
   const [career, setCareer] = React.useState(
     selectedQuestionCareer(
       routeFilters.career || "all",
-      routeFilters.contest || "all",
+      routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all"),
       routeFilters.year || 0,
     ),
   );
@@ -467,12 +472,14 @@ function QuestionTrainer() {
     setResults([]);
     setIndex(0);
     setModal(null);
-    setContest(questionContestValue(routeFilters.contest || "all"));
+    setContest(
+      questionContestValue(routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all")),
+    );
     setBoard(trainerBoard(routeFilters.board));
     setCareer(
       selectedQuestionCareer(
         routeFilters.career || "all",
-        routeFilters.contest || "all",
+        routeFilters.contest || (lockedCollection === "enem" ? "ENEM" : "all"),
         routeFilters.year || 0,
       ),
     );
@@ -562,7 +569,11 @@ function QuestionTrainer() {
       setAnswered(false); // The saved-answer gate is always reconstructed from the database.
       restoredSelection.current = restored.questions[b.index]?.id ?? null;
       const f = b.filters;
-      setContest(questionContestValue(f.contest));
+      setContest(
+        lockedCollection === "enem" && !isEnemContest(f.contest)
+          ? "ENEM"
+          : questionContestValue(f.contest),
+      );
       setBoard(f.board);
       setCareer(selectedQuestionCareer(f.career, f.contest, f.year));
       setYear(f.year);
@@ -581,7 +592,16 @@ function QuestionTrainer() {
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
-  }, [loading, error, examEdition.isError, userId, routeKey, subjectCatalog, lockedSubject]);
+  }, [
+    loading,
+    error,
+    examEdition.isError,
+    userId,
+    routeKey,
+    subjectCatalog,
+    lockedSubject,
+    lockedCollection,
+  ]);
   const examNotice = routeFilters.edition ? (
     <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
       <strong>
@@ -954,6 +974,12 @@ function QuestionTrainer() {
     setStarted(true);
   }, [loading, started, pool, trainingPool, practiceMode, topic]);
   const selectAppliedExam = (value: string) => {
+    if (
+      value !== "all" &&
+      lockedCollection &&
+      (isEnemContest(value.split("::")[0] ?? "") ? "enem" : "contests") !== lockedCollection
+    )
+      return;
     setAppliedExam(value);
     if (value === "all") return;
     const [
@@ -1412,6 +1438,7 @@ function QuestionTrainer() {
           />
           <TrainerSetup
             lockedSubject={lockedSubject}
+            lockedCollection={lockedCollection}
             loading={loading}
             available={
               practiceMode === "catalog"
@@ -1441,7 +1468,16 @@ function QuestionTrainer() {
               orderMode,
             }}
             setters={{
-              setContest: manual(setContest),
+              setContest: (value: string) => {
+                if (
+                  value !== "all" &&
+                  lockedCollection &&
+                  (isEnemContest(value) ? "enem" : "contests") !== lockedCollection
+                )
+                  return;
+                setAppliedExam("all");
+                setContest(value === "all" && lockedCollection === "enem" ? "ENEM" : value);
+              },
               setBoard: manual(setBoard),
               setCareer: manual(setCareer),
               setYear: manual(setYear),
@@ -1449,6 +1485,7 @@ function QuestionTrainer() {
               setSubject: (value: string) => {
                 if (lockedSubject) return;
                 setSubject(value);
+                setArea("all");
                 setTopic("all");
               },
               setSource: setSource,
@@ -1462,7 +1499,15 @@ function QuestionTrainer() {
                 if (!lockedSubject) setSubject("all");
                 setTopic("all");
               },
-              setTopic: setTopic,
+              setTopic: (value: string) => {
+                const topicSubject = trainerTopicSubject(value);
+                if (lockedSubject && topicSubject && topicSubject !== lockedSubject) return;
+                if (topicSubject && !lockedSubject) {
+                  setSubject(topicSubject);
+                  setArea("all");
+                }
+                setTopic(value);
+              },
               setLimit,
               setOrderMode,
             }}
@@ -2145,6 +2190,7 @@ type SetupSetters = {
 function TrainerSetup({
   loading,
   lockedSubject,
+  lockedCollection,
   available,
   dailyRemaining,
   choices,
@@ -2156,6 +2202,7 @@ function TrainerSetup({
 }: {
   loading: boolean;
   lockedSubject: string | null;
+  lockedCollection: "enem" | "contests" | null;
   currencyLocked: boolean;
   available: number;
   dailyRemaining?: number | undefined;
@@ -2218,9 +2265,15 @@ function TrainerSetup({
                   key={collection}
                   type="button"
                   aria-pressed={active}
+                  disabled={!!lockedCollection && collection !== lockedCollection}
+                  title={
+                    lockedCollection && collection !== lockedCollection
+                      ? "Abra o Treinador de questões pela barra lateral para mudar a área de preparação."
+                      : undefined
+                  }
                   aria-label={collection === "enem" ? "ENEM" : "Concursos públicos"}
                   onClick={() => {
-                    if (active) return;
+                    if (active || (lockedCollection && collection !== lockedCollection)) return;
                     reset();
                     setters.setContest(collection === "enem" ? "ENEM" : "all");
                   }}
@@ -2244,6 +2297,12 @@ function TrainerSetup({
             })}
           </div>
         </fieldset>
+        {lockedCollection && (
+          <p className="trainer-scope-note">
+            Área vinculada a este treino. Para mudar, abra o Treinador de questões pela barra
+            lateral.
+          </p>
+        )}
         {values.area !== "all" && (
           <p className="trainer-scope-note">
             Área do cronograma: <strong>{values.area}</strong>

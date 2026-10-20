@@ -50,6 +50,8 @@ export function QuestionFilterPicker({
   const usable = options.filter(
     (option) => !counts || (counts.get(option) ?? 0) > 0 || option === value,
   );
+  // Keep a stale selected value clearable; disable only empty unselected criteria.
+  const unavailable = value === "all" && usable.length === 0;
   const entries = [
     ...(!hideAll ? [{ key: "all", label: allLabel, count: allCount }] : []),
     ...usable.map((key) => ({
@@ -72,6 +74,8 @@ export function QuestionFilterPicker({
             aria-label={label}
             aria-haspopup="dialog"
             aria-expanded={open}
+            disabled={unavailable}
+            title={unavailable ? "Sem opções compatíveis com os filtros deste treino." : undefined}
             className="trainer-picker-trigger"
             data-filtered={value !== "all"}
           >
