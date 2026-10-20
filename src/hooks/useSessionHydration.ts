@@ -6,13 +6,18 @@ import { accountSnapshotPort } from "@/lib/sessionSnapshotsAccount";
 
 const done = new Map<string, Promise<void>>();
 
+/** Espera no máximo 8 s pela conta: sem rede, a tela segue com o que o navegador guardou. */
+const HYDRATION_TIMEOUT_MS = 8000;
+
 export function hydrateOnce(userId: string): Promise<void> {
   let promise = done.get(userId);
   if (!promise) {
-    promise = hydrateSnapshots(localStorage, userId, accountSnapshotPort(userId)).then(
+    const work = hydrateSnapshots(localStorage, userId, accountSnapshotPort(userId)).then(
       () => undefined,
       () => undefined,
     );
+    const limit = new Promise<void>((resolve) => setTimeout(resolve, HYDRATION_TIMEOUT_MS));
+    promise = Promise.race([work, limit]);
     done.set(userId, promise);
   }
   return promise;

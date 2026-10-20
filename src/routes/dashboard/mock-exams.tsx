@@ -580,13 +580,20 @@ function ProfessionalSimulator() {
     [scopedCatalog, filters],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
+  // Comparáveis do acervo, calculados uma vez por carga: filtros e respostas só reaproveitam as chaves.
+  const comparables = React.useMemo(
+    () => catalog.map((q) => ({ ...simulatorComparable(q), original: q })),
+    [catalog],
+  );
+  const comparableByOriginal = React.useMemo(
+    () => new Map(comparables.map((entry) => [entry.original, entry])),
+    [comparables],
+  );
   // Respostas anteriores em qualquer modalidade; cadastros idênticos da mesma prova valem como um só.
   const priorAnswers = React.useMemo(
     () =>
-      expandAnsweredBySiblings(answeredHistory, catalog.map(simulatorComparable), (q) =>
-        questionIdentity(q as never),
-      ),
-    [answeredHistory, catalog],
+      expandAnsweredBySiblings(answeredHistory, comparables, (q) => questionIdentity(q as never)),
+    [answeredHistory, comparables],
   );
   const isRepeated = React.useCallback(
     (q: SimulatorQuestion) => priorAnswers.has(questionIdentity(simulatorReference(q))),
@@ -596,10 +603,13 @@ function ProfessionalSimulator() {
   // Prova oficial mantém todos os itens do caderno; montagem livre não repete o mesmo item de duas versões.
   const dedupedPool = React.useMemo(
     () =>
-      dedupeSharedExamItems(available.map((q) => ({ ...simulatorComparable(q), original: q }))).map(
-        (entry) => entry.original,
-      ),
-    [available],
+      dedupeSharedExamItems(
+        available.flatMap((q) => {
+          const entry = comparableByOriginal.get(q);
+          return entry ? [entry] : [];
+        }),
+      ).map((entry) => entry.original),
+    [available, comparableByOriginal],
   );
   // Inéditas: ainda sem resposta no treinador nem em outras provas (cadastros idênticos valem como um só).
   const repeatedInPool = React.useMemo(
