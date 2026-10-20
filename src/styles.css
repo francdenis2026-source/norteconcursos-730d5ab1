@@ -13362,7 +13362,7 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .app-shell .student-hub__masthead.student-hub__masthead--insignia h1 + p { color: var(--on-ink-muted); }
 .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date,
 .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date small { color: var(--on-ink-muted); }
-.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__masthead-actions > a { color: var(--brass-soft); background: color-mix(in srgb, var(--brass) 12%, var(--ink)); border: 1px solid var(--on-ink-line); }
+.app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__masthead-actions > a { color: var(--brass-soft); background: color-mix(in srgb, var(--brass) 12%, var(--ink)); border: 1px solid var(--on-ink-line); border-radius: 8px; padding: 8px 12px; min-height: 40px; display: inline-flex; align-items: center; gap: 8px; box-shadow: none; }
 .app-shell .student-hub__masthead--insignia .student-hub__hero-visual {
   clip-path: none;
   background: var(--ink);
@@ -13379,3 +13379,39 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 }
 
 .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__date small { background: transparent; border-color: var(--on-ink-line); }
+
+/* A small exam shortcut instead of a second promotional hero. */
+.pcpr-spot.pcpr-spot--notice {
+  display: block;
+  min-height: 0;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: none;
+}
+.pcpr-spot--notice .pcpr-spot__summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.pcpr-spot--notice h2 { font-size: 15px; line-height: 1.4; margin: 0; color: var(--foreground); }
+.pcpr-spot--notice p { font-size: 12px; line-height: 1.5; margin: 4px 0 0; color: var(--muted-foreground); }
+.pcpr-spot--notice .pcpr-spot__cta { min-height: 40px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--accent); color: var(--accent-foreground); font-size: 12px; }
+.pcpr-spot--notice .pcpr-spot__details { margin-top: 4px; font-size: 12px; }
+.pcpr-spot--notice .pcpr-spot__details summary { min-height: 32px; display: list-item; width: fit-content; padding-block: 6px; color: var(--muted-foreground); cursor: pointer; }
+.pcpr-spot--notice .pcpr-spot__details[open] summary { color: var(--foreground); }
+.pcpr-spot--notice .pcpr-spot__details ul { display: grid; gap: 8px; margin-block: 12px; line-height: 1.6; }
+.pcpr-spot--notice .pcpr-spot__link { color: var(--foreground); font-size: 12px; min-height: 32px; }
+
+/* Isolated logo: compact placement, with no scene or image backdrop. */
+.app-shell .student-hub__masthead.student-hub__masthead--insignia { grid-template-columns: minmax(0, 1fr) 220px; min-height: 220px; }
+.app-shell .student-hub__masthead--insignia .student-hub__hero-visual { min-height: 0; height: 220px; background: transparent; align-self: center; }
+.app-shell .student-hub__masthead--insignia .student-hub__hero-visual img { padding: 14px 20px 14px 0; }
+.app-shell .student-hub__masthead--insignia #student-home-title { font-size: clamp(26px, 2.7vw, 37px); }
+@media (max-width: 900px) {
+  .app-shell .student-hub__masthead.student-hub__masthead--insignia { position: relative; display: block; min-height: 0; }
+  .app-shell .student-hub__masthead--insignia .student-hub__hero-visual { position: absolute; top: 14px; right: 10px; width: 82px; height: 104px; aspect-ratio: auto; }
+  .app-shell .student-hub__masthead--insignia .student-hub__hero-visual img { padding: 0; }
+  .app-shell .student-hub__masthead--insignia .student-hub__hero-copy { padding: 18px; }
+  .app-shell .student-hub__masthead--insignia #student-home-title { font-size: 25px; max-width: calc(100% - 85px); }
+  .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__welcome { max-width: calc(100% - 85px); font-size: 11px; }
+  .app-shell .student-hub__masthead--insignia h1 + p { margin-top: 18px; }
+}

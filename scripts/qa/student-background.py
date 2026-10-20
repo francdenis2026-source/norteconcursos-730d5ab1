@@ -26,7 +26,7 @@ async def main():
       hero=page.locator('.student-hub__masthead');image=hero.locator('img')
       await image.evaluate('e=>e.decode()');await page.evaluate('document.fonts.ready')
       assert (await hero.locator('h1').text_content()).strip()=='Área do aluno'
-      assert await image.get_attribute('src')=='/media/hero/area-aluno-distintivo.webp'
+      assert await image.get_attribute('src')=='/media/hero/area-aluno-emblema.webp'
       assert await hero.locator('source').count()==0,'Mobile must use the new artwork too'
       assert await image.evaluate('e=>getComputedStyle(e).objectFit')=='contain'
       assert await hero.locator('.student-hub__welcome').is_visible()

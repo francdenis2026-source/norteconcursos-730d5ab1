@@ -229,10 +229,10 @@ function StudentHome({ user }: { user: UserProfile }) {
         </div>
         <picture className="student-hub__hero-visual" aria-hidden="true">
           <img
-            src="/media/hero/area-aluno-distintivo.webp"
+            src="/media/hero/area-aluno-emblema.webp"
             alt=""
-            width={1448}
-            height={1086}
+            width={1312}
+            height={1199}
             fetchPriority="high"
             decoding="async"
           />
