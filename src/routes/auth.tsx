@@ -1,3 +1,4 @@
+import "@/styles/auth-art.css";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PasswordRecovery } from "@/components/PasswordRecovery";
 import { Input } from "@/components/ui/input";
@@ -236,7 +237,10 @@ function AuthPage() {
         <Link to="/" aria-label="Norte Concurso — início" className="w-fit">
           <NorteBrand light />
         </Link>
-        <div>
+        <figure className="auth-artwork">
+          <img src="/media/hero/auth-carreiras-composicao.webp" alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
+        </figure>
+        <div className="auth-visual-copy">
           <span className="chip-brass">
             <Sparkles /> Preparação para carreiras policiais
           </span>
@@ -272,11 +276,11 @@ function AuthPage() {
         </Link>
         <div className="auth-card">
           <img
-            src="/media/hero/auth-seguranca.jpg"
-            alt="Policiais e bombeiro da segurança pública"
+            src="/media/hero/auth-carreiras-composicao.webp"
+            alt="Distintivo Carreiras Policiais com equipe tática"
             className="auth-photo"
-            width={1600}
-            height={1200}
+            width={1440}
+            height={600}
           />
           <div className="auth-mobile-brand">
             <NorteBrand />

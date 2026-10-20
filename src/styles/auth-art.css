@@ -1,0 +1,71 @@
+/* Artwork frames the access experience; form controls retain theme contrast. */
+.auth {
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
+  align-items: stretch;
+}
+.auth .auth-visual {
+  justify-content: center;
+  gap: clamp(24px, 4vh, 40px);
+  padding: clamp(28px, 4vw, 64px);
+  background: #101214;
+  border-right: 1px solid rgb(202 167 104 / 20%);
+}
+.auth .auth-visual::before {
+  background: radial-gradient(ellipse at 50% 35%, rgb(175 135 65 / 12%), transparent 70%);
+  animation: none;
+}
+.auth .auth-visual::after { background: none; }
+.auth-artwork {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgb(202 167 104 / 26%);
+  box-shadow: 0 24px 64px -24px rgb(0 0 0 / 80%);
+  background: #101214;
+}
+.auth-artwork img { display: block; width: 100%; height: auto; }
+.auth .auth-visual h1 {
+  font-size: clamp(2rem, 3.3vw, 3.5rem);
+  line-height: 1.04;
+}
+.auth .auth-visual p { color: #c5c9ce; }
+.auth .auth-benefits span { color: #b5bbc3; }
+.auth .auth-panel {
+  overflow: visible;
+  padding: 88px clamp(24px, 3vw, 48px) 40px;
+  background: radial-gradient(ellipse at 85% 0%, color-mix(in srgb, var(--brass) 9%, transparent), transparent 58%), var(--background);
+}
+.auth .auth-panel::before { display: none; }
+.auth .auth-card {
+  width: min(100%, 460px);
+  padding: clamp(24px, 2.5vw, 36px);
+  border: 1px solid color-mix(in srgb, var(--brass) 22%, var(--border));
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  box-shadow: 0 24px 64px -32px rgb(0 0 0 / 24%);
+}
+.auth .auth-mobile-brand { display: none; }
+.auth .auth-heading h2 { font-size: clamp(1.6rem, 2.1vw, 2rem); }
+@media (max-width: 960px) {
+  .auth .auth-visual { display: none; }
+  .auth .auth-panel { padding: 76px 24px 32px; align-items: center; }
+  .auth .auth-card { padding: 24px; }
+  .auth .auth-photo {
+    display: block;
+    width: calc(100% + 48px);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 2.4;
+    object-fit: cover;
+    object-position: center;
+    margin: -24px -24px 26px;
+    border-radius: 23px 23px 0 0;
+    border-bottom: 1px solid rgb(202 167 104 / 26%);
+    box-shadow: none;
+  }
+}
+@media (max-width: 380px) {
+  .auth .auth-panel { padding-inline: 16px; }
+}
