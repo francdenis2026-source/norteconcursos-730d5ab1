@@ -3982,10 +3982,11 @@
 /* Norte editorial composition: shared canvas, compact rhythm, opaque reading surfaces. */
 .home {
   background-color: var(--home-bg);
-  background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 90%, transparent), color-mix(in srgb, var(--home-bg) 90%, transparent)), url('/media/hero/norte-atmosphere.webp');
-  background-size: auto, 1600px auto;
-  background-position: center, center top;
-  background-repeat: repeat, repeat-y;
+  background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 84%, transparent), color-mix(in srgb, var(--home-bg) 84%, transparent)), url('/media/hero/carreiras-background.webp');
+  background-size: auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
 }
 .home::before { content: none; }
 .home .home-container { width: min(1160px, calc(100% - 48px)); }
@@ -4006,11 +4007,11 @@
   color: var(--on-ink);
 }
 .home .home-hero__image {
-  width: 100%; height: 100%; object-fit: cover; object-position: center;
-  opacity: 1; mask-image: none; -webkit-mask-image: none;
+  width: 64%; height: 100%; object-fit: cover; object-position: right center;
+  opacity: 1; mask-image: linear-gradient(90deg, transparent, #000 18%); -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%);
 }
 .home .home-hero::after {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 86%, transparent), color-mix(in srgb, var(--ink) 55%, transparent) 48%, transparent 76%);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 44%, transparent), color-mix(in srgb, var(--ink) 18%, transparent) 48%, transparent 68%);
 }
 .home .home-hero__content { min-height: 440px; height: auto; padding-block: 42px 20px; justify-content: center; }
 .home .home-hero__copy { width: 60%; max-width: 660px; }
@@ -4047,7 +4048,7 @@
 .home .home-source-details { background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 12px; }
 .home .home-plan { background: var(--home-surface); }
 .home .home-final {
-  background: linear-gradient(90deg, var(--ink), color-mix(in srgb, var(--ink) 78%, transparent)), url('/media/hero/norte-atmosphere.webp') center / cover;
+  background: linear-gradient(90deg, var(--ink), color-mix(in srgb, var(--ink) 78%, transparent)), url('/media/hero/carreiras-background.webp') center / cover;
   padding-block: 28px; min-height: 0; border-top: 1px solid var(--on-ink-line);
 }
 .home .home-final__inner { padding: 0; min-height: 0; gap: 24px; }
@@ -4077,7 +4078,7 @@
   .home .home-hero, .home .home-hero__content { min-height: 460px; }
   .home .home-hero__content { padding-block: 36px 20px; }
   .home .home-hero__copy { width: 100%; max-width: 510px; }
-  .home .home-hero__image { object-position: 62% center; opacity: .7; }
+  .home .home-hero__image { width: 100%; object-position: 72% center; opacity: .7; mask-image: none; -webkit-mask-image: none; }
   .home .home-hero::after { background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 90%, transparent), color-mix(in srgb, var(--ink) 58%, transparent)); }
   .home .home-hero h1 { font-size: clamp(34px, 8.5vw, 48px); }
   .home .home-trust { gap: 8px 14px; margin-top: 20px !important; }
@@ -4105,4 +4106,11 @@
 @media (min-width: 370px) and (max-width: 700px) {
   .home .home-steps, .home .home-careers__grid, .home .home-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home .home-tool summary h3 { font-size: 12px; }
+}
+
+.dark .home {
+  background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 70%, transparent), color-mix(in srgb, var(--home-bg) 70%, transparent)), url('/media/hero/carreiras-background.webp');
+}
+@media (max-width: 700px) {
+  .home { background-attachment: scroll; background-size: auto, auto 820px; background-repeat: repeat, repeat-y; }
 }

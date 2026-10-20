@@ -91,11 +91,11 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
     <>
       <img
         className="home-hero__image"
-        src="/media/hero/norte-atmosphere.webp"
+        src="/media/hero/hero-norte-impacto.webp"
         alt=""
         aria-hidden="true"
-        width={1942}
-        height={809}
+        width={1774}
+        height={887}
         fetchPriority="high"
       />
       {loadVideo && phase === "ready" && (

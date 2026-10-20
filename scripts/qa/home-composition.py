@@ -17,6 +17,8 @@ async def main():
     await page.locator('#home-title').wait_for()
     await page.wait_for_timeout(350)
     await page.wait_for_function('document.querySelector(".home-hero__image").naturalWidth>0')
+    assert await page.locator('.home-hero__image').get_attribute('src')=='/media/hero/hero-norte-impacto.webp'
+    assert 'carreiras-background.webp' in await page.locator('.home').evaluate('e=>getComputedStyle(e).backgroundImage')
     assert await page.evaluate('document.documentElement.scrollWidth<=innerWidth'),f'overflow {w}'
     assert await page.locator('.home-hero').evaluate('e=>e.offsetHeight')<550
     assert await page.locator('.home-interstitial').count()==0
