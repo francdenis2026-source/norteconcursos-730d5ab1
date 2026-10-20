@@ -2,7 +2,14 @@ import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /** Plays once, then removes the video and reveals the homepage photograph. */
-export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean) => void }) {
+export function HeroVideo({
+  onIntroChange,
+  onIntroSettled,
+}: {
+  onIntroChange: (playing: boolean) => void;
+  /** A introdução acabou, foi pulada ou nem vai tocar: a hero está pronta para o que entra depois dela. */
+  onIntroSettled?: () => void;
+}) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
   const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
@@ -15,7 +22,8 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
     // Plays on phones and tablets too; only data saver and reduced motion keep the still image.
     if (!saveData && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setLoadVideo(true);
-    }
+    } else onIntroSettled?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -34,6 +42,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
       element.pause();
       setPhase("fading");
       onIntroChange(false);
+      onIntroSettled?.();
       fadeTimer = window.setTimeout(() => {
         if (active) {
           setPhase("image");
@@ -67,6 +76,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
           window.clearTimeout(loadTimer);
           setPhase("ready");
           onIntroChange(false);
+          onIntroSettled?.();
         } else finish();
       });
     };
@@ -85,6 +95,7 @@ export function HeroVideo({ onIntroChange }: { onIntroChange: (playing: boolean)
       finishRef.current = () => {};
       retryRef.current = () => {};
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadVideo, onIntroChange]);
 
   return (

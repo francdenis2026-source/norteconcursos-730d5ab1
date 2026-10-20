@@ -217,6 +217,7 @@ function usePointerInteractions() {
 
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
+  const [introSettled, setIntroSettled] = useState(false);
   usePointerInteractions();
   return (
     <div className="home">
@@ -315,9 +316,9 @@ function Index() {
 
       <main id="conteudo" tabIndex={-1}>
         <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
-          <HeroVideo onIntroChange={setIntroPlaying} />
+          <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <div className="home-container home-hero__content" inert={introPlaying}>
-            <HeroBadge />
+            <HeroBadge show={introSettled} />
             <div className="home-hero__grid">
               <div className="home-hero__copy">
                 <span className="home-eyebrow">
