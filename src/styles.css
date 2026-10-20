@@ -13541,11 +13541,11 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 @media (prefers-reduced-motion: no-preference) { .pcpr-spot--notice .pcpr-spot__art { transition: opacity .2s; } }
 
 /* Perfil do ranking: cabeçalho com a arte do Norte, identidade e posição sobre fundo escuro. */
-.ranking-profile__hero { position: relative; isolation: isolate; min-height: 132px; display: flex; align-items: flex-end; background: #11151b; }
+.ranking-profile__hero { position: relative; isolation: isolate; min-height: 92px; display: flex; align-items: flex-end; background: #11151b; }
 .ranking-profile__hero > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; }
 .ranking-profile__hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(10, 13, 18, .94) 0%, rgba(10, 13, 18, .78) 48%, rgba(10, 13, 18, .25) 100%), linear-gradient(0deg, rgba(10, 13, 18, .6), transparent 60%); }
-.ranking-profile__identity { display: flex; align-items: center; gap: 12px; width: 100%; padding: 16px 52px 16px 20px; }
-.ranking-profile__avatar { display: grid; place-items: center; flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #e7c26b; background: rgba(231, 194, 107, .14); color: #f4d78f; font-size: 20px; font-weight: 800; }
+.ranking-profile__identity { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 52px 14px 18px; }
+.ranking-profile__avatar { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid #e7c26b; background: rgba(231, 194, 107, .14); color: #f4d78f; font-size: 20px; font-weight: 800; }
 .ranking-profile__position { margin-left: auto; flex: none; display: grid; justify-items: center; padding: 6px 12px; border: 1px solid rgba(231, 194, 107, .6); border-radius: 12px; background: rgba(10, 13, 18, .55); color: #f4d78f; line-height: 1.1; }
 .ranking-profile__position strong { font-size: 20px; font-variant-numeric: tabular-nums; }
 .ranking-profile__position small { font-size: 10px; color: rgba(255, 255, 255, .7); }

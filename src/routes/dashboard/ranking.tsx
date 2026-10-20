@@ -145,7 +145,7 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
   const missing = p?.next_level_at ? Math.max(0, p.next_level_at - p.general_points) : 0;
   return (
     <Dialog open={!!userId} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="ranking-profile max-w-md gap-0 overflow-hidden p-0">
+      <DialogContent className="ranking-profile max-h-[92dvh] max-w-md grid-rows-[auto_minmax(0,1fr)] gap-0 overflow-hidden p-0">
         {p === undefined ? (
           <div className="flex justify-center py-14">
             <Loader2
@@ -195,7 +195,7 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 </div>
               </div>
             </header>
-            <div className="space-y-5 p-5">
+            <div className="min-h-0 space-y-4 overflow-y-auto overscroll-contain p-4">
               <section aria-label="Progresso de nível" className="space-y-2">
                 <div className="flex items-baseline justify-between gap-3">
                   <p className="text-2xl font-black tabular-nums">
@@ -217,7 +217,7 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                   className="h-2"
                 />
               </section>
-              <dl className="grid grid-cols-2 gap-3">
+              <dl className="grid grid-cols-2 gap-2">
                 <Tile
                   label="Questões resolvidas"
                   value={p.questions}
@@ -245,10 +245,10 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                 />
               </dl>
               <section aria-label="Composição dos pontos">
-                <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <h3 className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   De onde vêm os pontos
                 </h3>
-                <dl className="divide-y rounded-xl border text-sm">
+                <dl className="grid grid-cols-5 divide-x rounded-xl border text-center">
                   {(
                     [
                       ["Questões", p.question_points],
@@ -258,23 +258,27 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
                       ["Constância", p.consistency_points],
                     ] as const
                   ).map(([label, points]) => (
-                    <div key={label} className="flex items-center justify-between px-3 py-2">
-                      <dt className="text-muted-foreground">{label}</dt>
-                      <dd className="font-bold tabular-nums">{points}</dd>
+                    <div key={label} className="min-w-0 px-1 py-2">
+                      <dt className="truncate text-[10px] text-muted-foreground">{label}</dt>
+                      <dd className="text-base font-black tabular-nums">{points}</dd>
                     </div>
                   ))}
                 </dl>
+                <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
+                  Pontos não são a quantidade de questões: contam só a primeira resposta de cada uma
+                  (acerto soma, erro desconta) e dependem do aproveitamento do dia.
+                </p>
               </section>
               <section aria-label="Medalhas">
-                <h3 className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                <h3 className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   <Medal className="h-3.5 w-3.5" aria-hidden="true" /> Medalhas ({p.medals.length})
                 </h3>
                 {p.medals.length ? (
-                  <ul className="flex flex-wrap gap-1.5">
+                  <ul className="flex max-h-24 flex-wrap gap-1.5 overflow-y-auto pr-1">
                     {p.medals.map((m) => (
                       <li
                         key={m}
-                        className="rounded-full border bg-muted/60 px-2.5 py-1 text-xs font-semibold"
+                        className="rounded-full border bg-muted/60 px-2 py-0.5 text-[11px] font-semibold"
                       >
                         {m}
                       </li>
@@ -294,12 +298,12 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
 
 function Tile({ label, value, note }: { label: string; value: React.ReactNode; note: string }) {
   return (
-    <div className="rounded-xl border bg-muted/30 p-3">
-      <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+    <div className="rounded-xl border bg-muted/30 px-3 py-2">
+      <dt className="truncate text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
         {label}
       </dt>
-      <dd className="mt-1 text-xl font-black tabular-nums">{value}</dd>
-      <p className="text-[11px] text-muted-foreground">{note}</p>
+      <dd className="text-lg font-black leading-tight tabular-nums">{value}</dd>
+      <p className="truncate text-[11px] text-muted-foreground">{note}</p>
     </div>
   );
 }
