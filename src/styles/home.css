@@ -4100,15 +4100,16 @@
 .dark .home {
   background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 70%, transparent), color-mix(in srgb, var(--home-bg) 70%, transparent)), url('/media/hero/carreiras-background.webp');
 }
-/* The light theme changes reading surfaces, never the original artwork colors. */
+/* Tema claro: a arte de fundo aparece como marca d'água sob um véu claro (84%), para o texto e os
+   cartões lerem bem; no escuro o véu é de 70% (regra acima). */
 :root:not(.dark) .home {
-  background-image: url('/media/hero/carreiras-background.webp');
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 84%, transparent), color-mix(in srgb, var(--home-bg) 84%, transparent)), url('/media/hero/carreiras-background.webp');
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
 }
 @media (max-width: 700px) {
   .home { background-attachment: scroll; background-size: auto, auto 820px; background-repeat: repeat, repeat-y; }
-  :root:not(.dark) .home { background-size: auto 820px; background-repeat: repeat-y; }
+  :root:not(.dark) .home { background-size: auto, auto 820px; background-repeat: repeat, repeat-y; background-attachment: scroll; }
 }
 
 /* Editorial hierarchy and section colors share the platform's light/dark accents. */
