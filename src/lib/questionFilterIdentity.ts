@@ -126,3 +126,18 @@ export function matchesQuestionCareer(
       fold(selectedQuestionCareer(selected, selectedContest, selectedYear))
   );
 }
+
+/** Institution/material metadata must not become a job option; original provenance is preserved. */
+export function isSpecificQuestionCareer(career: string, contest: string, year: string | number) {
+  const label = fold(questionCareerLabel(career, contest, year));
+  if (
+    !label ||
+    /^(?:all|geral|diversos?|varios|nao informado|nao identificado|sem cargo|todos(?: os cargos)?|enem|estudante)$/.test(
+      label,
+    )
+  )
+    return false;
+  return !/^(?:policia (?:civil|federal|rodoviaria federal|penal|militar)(?:\b|$)|departamento penitenciario nacional(?:\b|$)|repertorio(?:\b|$)|material (?:historico|de estudo)(?:\b|$)|apostilas?(?:\b|$))/.test(
+    label,
+  );
+}

@@ -33,6 +33,7 @@ export function QuestionFilterPicker({
   hideAll = false,
   allLabel = "Todas as opções",
   quantity = false,
+  description,
 }: {
   label: string;
   value: string;
@@ -44,6 +45,7 @@ export function QuestionFilterPicker({
   hideAll?: boolean | undefined;
   allLabel?: string | undefined;
   quantity?: boolean;
+  description?: string | undefined;
 }) {
   const [open, setOpen] = useState(false);
   const id = useId();
@@ -72,6 +74,7 @@ export function QuestionFilterPicker({
             type="button"
             role="combobox"
             aria-label={label}
+            aria-describedby={description ? `${id}-description` : undefined}
             aria-haspopup="dialog"
             aria-expanded={open}
             disabled={unavailable}
@@ -94,7 +97,7 @@ export function QuestionFilterPicker({
             <div>
               <DialogTitle>Selecionar {label.toLocaleLowerCase("pt-BR")}</DialogTitle>
               <DialogDescription>
-                Busque uma opção. As quantidades respeitam os outros filtros.
+                {description || "Busque uma opção. As quantidades respeitam os outros filtros."}
               </DialogDescription>
             </div>
           </div>
@@ -132,6 +135,11 @@ export function QuestionFilterPicker({
           </p>
         </DialogContent>
       </Dialog>
+      {description && (
+        <p id={`${id}-description`} className="trainer-field__description">
+          {description}
+        </p>
+      )}
     </div>
   );
 }

@@ -2378,7 +2378,9 @@ function TrainerSetup({
             allLabel="Todos os anos"
           />
           <TrainerFilter
-            label="Concurso ou material"
+            label="Concurso / material de origem"
+            description="De onde vêm as questões: órgão do concurso ou material de estudo."
+            allLabel="Todos os concursos e materiais"
             value={values.contest}
             setValue={setters.setContest}
             options={choices.contests}
@@ -2389,15 +2391,18 @@ function TrainerSetup({
             )}
             hideAll={isEnemContest(values.contest)}
           />
-          <TrainerFilter
-            label="Cargo"
-            value={values.career}
-            setValue={setters.setCareer}
-            options={choices.careers}
-            counts={facets.counts["career"]}
-            allCount={facets.totals["career"]}
-            allLabel="Todos os cargos"
-          />
+          {!isEnemContest(values.contest) && (
+            <TrainerFilter
+              label="Cargo da prova"
+              description="Função disputada, como Agente, Escrivão ou Perito. Apenas cargos identificados."
+              value={values.career}
+              setValue={setters.setCareer}
+              options={choices.careers}
+              counts={facets.counts["career"]}
+              allCount={facets.totals["career"]}
+              allLabel="Qualquer cargo"
+            />
+          )}
         </div>
         <details
           className="trainer-refinements"
@@ -2585,6 +2590,7 @@ function TrainerSetup({
 
 function TrainerFilter({
   label,
+  description,
   value,
   setValue,
   options,
@@ -2597,6 +2603,7 @@ function TrainerFilter({
   counts?: Map<string, number> | undefined;
   allCount?: number | undefined;
   label: string;
+  description?: string;
   value: string;
   setValue: (value: string) => void;
   options: string[];
@@ -2607,6 +2614,7 @@ function TrainerFilter({
   return (
     <QuestionFilterPicker
       label={label}
+      description={description}
       value={value}
       onChange={setValue}
       options={options}

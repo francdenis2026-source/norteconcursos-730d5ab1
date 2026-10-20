@@ -232,3 +232,14 @@ test('topics and content facets follow discipline without trapping the general d
  assert.deepEqual(filterTrainerQuestions(catalog,filters,topics).map(q=>q.id),['pt']);
  assert.deepEqual(filterTrainerQuestions(catalog,{...filters,subject:'Matemática'},topics),[]);
 });
+
+test('origin and job facets stay distinct and unattributed jobs do not remove questions',()=>{
+ const catalog=[{...q('job','FGV'),contest:'Polícia Federal',career:'Agente de Polícia Federal'},
+ {...q('org','FGV'),contest:'Polícia Federal',career:'Polícia Federal'},
+ {...q('material','FGV'),contest:'Repertório — Apostilas Opção',career:'Diversos'}];
+ const facets=trainerFilterFacets(catalog,all,new Map());
+ assert.equal(facets.counts.contest.size,2);
+ assert.deepEqual([...facets.counts.career.keys()],['Agente de Polícia Federal']);
+ assert.equal(filterTrainerQuestions(catalog,all,new Map()).length,3);
+ assert.deepEqual(filterTrainerQuestions(catalog,{...all,career:'Agente de Polícia Federal'},new Map()).map(q=>q.id),['job']);
+});

@@ -8,6 +8,7 @@ import {
   matchesQuestionCareer,
   questionContestLabel,
   questionCareerLabel,
+  isSpecificQuestionCareer,
 } from "./questionFilterIdentity";
 import {
   matchesTopicFilter,
@@ -121,6 +122,7 @@ export function trainerFilterFacets(
     );
     for (const q of rows) {
       if (key === "exam" && !isAppliedExamQuestion(q)) continue;
+      if (key === "career" && !isSpecificQuestionCareer(q.career, q.contest, q.year)) continue;
       if (key === "currency") {
         // Uma questão pode ter várias etiquetas; "recent" conta cada questão atual uma única vez.
         const tags = q.currencyTags ?? [];

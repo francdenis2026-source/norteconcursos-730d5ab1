@@ -178,3 +178,14 @@ test("trainer and simulator use the same grouped contest and role identities", (
     1,
   );
 });
+
+test('job choices reject institutions and material labels without inventing a role', async()=>{
+ const {isSpecificQuestionCareer}=await import('../src/lib/questionFilterIdentity.ts');
+ for(const career of ['Polícia Federal','Polícia Civil de outro estado','Repertório — Apostilas Opção','Diversos','ENEM','Departamento Penitenciário Nacional'])
+   assert.equal(isSpecificQuestionCareer(career,career,2030),false,career);
+ for(const career of ['Agente de Polícia Federal','Policial Penal','Soldado da Polícia Militar','Perito Criminal Federal'])
+   assert.equal(isSpecificQuestionCareer(career,'Polícia Federal',2025),true,career);
+ assert.equal(isSpecificQuestionCareer('Departamento Penitenciário Nacional','Departamento Penitenciário Nacional',2021),true);
+ assert.equal(isSpecificQuestionCareer('Polícia Civil do Acre','Polícia Civil do Acre',2017),true);
+ assert.equal(isSpecificQuestionCareer('Polícia Rodoviária Federal','Polícia Rodoviária Federal',2021),true);
+});
