@@ -135,3 +135,75 @@
   .home.home #concursos.home-operations, :root .home.home .home-footer.home-footer--command { background: Canvas; }
   .home-plans--insignia::before { display: none; }
 }
+
+/* Navigation shares one metal accent instead of a different color per link. */
+:root { --landing-nav-active: color-mix(in srgb, var(--brass-soft) 35%, #30200b); }
+:root.dark { --landing-nav-active: var(--brass-soft); }
+.home.home .home-nav { gap: 8px; }
+.home.home :is(.home-nav a, .home-login) {
+  position: relative;
+  padding-inline: 12px;
+  border-radius: 7px;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+.home.home :is(.home-nav a, .home-login):is(:hover, :focus-visible) {
+  color: var(--landing-nav-active);
+  background: color-mix(in srgb, var(--landing-nav-active) 9%, transparent);
+}
+.home.home :is(.home-nav a, .home-login)::after {
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 1px;
+  background: var(--landing-nav-active);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+.home.home .home-header__register {
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.home.home .home-header__register:is(:hover, :focus-visible) {
+  background: var(--brass-hover);
+  border-color: var(--brass-hover);
+  color: var(--brass-foreground);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brass) 17%, transparent);
+}
+.home.home .home-header :is(a, button):focus-visible {
+  outline: 2px solid var(--landing-nav-active);
+  outline-offset: 3px;
+}
+.home-menu nav a { border-radius: 6px; padding-inline: 10px; transition: color 180ms ease, background-color 180ms ease; }
+.home-menu nav a:is(:hover, :focus-visible) { color: var(--landing-nav-active); background: color-mix(in srgb, var(--landing-nav-active) 9%, transparent); }
+.home-menu nav a::after { background: var(--landing-nav-active); transform-origin: left; }
+.home-menu nav a:focus-visible { outline: 2px solid var(--landing-nav-active); outline-offset: 2px; }
+.home.home .home-footer--command .home-footer__links a {
+  gap: 8px;
+  padding-inline: 8px;
+  margin-inline: -8px;
+  border-radius: 5px;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+.home.home .home-footer--command .home-footer__links a::after {
+  content: "↗";
+  color: var(--stage-gold);
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.home.home .home-footer--command .home-footer__links a:is(:hover, :focus-visible) {
+  color: var(--stage-gold);
+  background: rgb(232 205 153 / 9%);
+}
+.home.home .home-footer--command .home-footer__links a:is(:hover, :focus-visible)::after { opacity: 1; transform: translateX(0); }
+.home.home .home-footer--command .home-platform-qr { transition: border-color 180ms ease, background-color 180ms ease; }
+.home.home .home-footer--command .home-platform-qr:is(:hover, :focus-visible) { border-color: var(--stage-gold); background: rgb(232 205 153 / 9%); }
+@media (prefers-reduced-motion: reduce) {
+  .home.home :is(.home-nav a, .home-login, .home-header__register, .home-footer__links a, .home-platform-qr),
+  .home.home :is(.home-nav a, .home-login, .home-footer__links a)::after,
+  .home-menu nav a, .home-menu nav a::after { transition: none; }
+}
+@media (forced-colors: active) {
+  :root { --landing-nav-active: LinkText; }
+  .home.home .home-footer--command .home-footer__links a:is(:hover, :focus-visible),
+  .home.home .home-footer--command .home-platform-qr:is(:hover, :focus-visible) { color: HighlightText; background: Highlight; }
+}

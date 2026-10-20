@@ -68,9 +68,8 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV: [string, string][] = [
-  ["Como funciona", "#como"],
-  ["Ferramentas", "#ferramentas"],
-  ["Carreiras", "#carreiras"],
+  ["A plataforma", "#plataforma"],
+  ["Concursos", "#concursos"],
   ["Planos", "#planos"],
 ];
 
@@ -580,7 +579,6 @@ function Index() {
             <FooterColumn
               title="Plataforma"
               links={[
-                ["Como funciona", "#como"],
                 ["Ferramentas", "#ferramentas"],
                 ["Carreiras", "#carreiras"],
                 ["Desafio diário", "/desafio-diario"],
@@ -599,7 +597,8 @@ function Index() {
               title="Acesso"
               links={[
                 ["Entrar", "/auth"],
-                ["Criar conta", "/auth?mode=register"],
+                ["Começar grátis", "/auth?mode=register"],
+                ["Planos e condições", "#planos"],
               ]}
             />
             <a
