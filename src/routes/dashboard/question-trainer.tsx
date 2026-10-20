@@ -1,4 +1,5 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { LawText } from "@/components/dashboard/LawText";
 import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -1878,7 +1879,7 @@ function QuestionTrainer() {
                         >
                           <span className="trainer-option-letter">{option.letter}</span>
                           <span className={cn("q-option-text flex-1", isStruck && "line-through")}>
-                            {option.text}
+                            <LawText text={option.text} />
                           </span>
                           {isRight && (
                             <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
@@ -1987,6 +1988,7 @@ function QuestionTrainer() {
                   answer={labelFor(question.answer)}
                   correct={isCorrect}
                   sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
+                  elapsedSeconds={reviewingPast ? undefined : questionSecs}
                 >
                   {!isPlaceholderExplanation(explanation.main) && (
                     <QuestionProse

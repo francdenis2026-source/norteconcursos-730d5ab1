@@ -569,6 +569,7 @@ function QuestionPlayer({
               answer={question.answer === "C" ? "Certo" : "Errado"}
               correct={isCorrect}
               sourceLabel="Gabarito oficial"
+              elapsedSeconds={seconds}
             />
             <section
               aria-label="Explicação da resposta"

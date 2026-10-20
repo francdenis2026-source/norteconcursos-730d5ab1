@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { LawText } from "@/components/dashboard/LawText";
 import { classifySupportBlock, parseSupportLines, reflowParagraphs } from "@/lib/questionText";
 import { cn } from "@/lib/utils";
 
@@ -44,8 +45,8 @@ export function QuestionSupportText({ text, citesLines }: { text: string; citesL
             const kind = classifySupportBlock(p, i);
             if (kind === "title") return <p key={i} className="pt-1 text-center font-sans text-sm font-bold uppercase tracking-wide">{p}</p>;
             if (kind === "source") return <p key={i} className="text-right font-sans text-xs leading-5 text-muted-foreground">{p}</p>;
-            if (kind === "dialogue") return <p key={i} className="pl-4 -indent-2 text-left [overflow-wrap:anywhere]">{p}</p>;
-            return <p key={i} className={cn("text-left [overflow-wrap:anywhere]", p.length > 240 && "sm:text-justify sm:[hyphens:auto] sm:[text-wrap:pretty]")}>{p}</p>;
+            if (kind === "dialogue") return <p key={i} className="pl-4 -indent-2 text-left [overflow-wrap:anywhere]"><LawText text={p} /></p>;
+            return <p key={i} className={cn("text-left [overflow-wrap:anywhere]", p.length > 240 && "sm:text-justify sm:[hyphens:auto] sm:[text-wrap:pretty]")}><LawText text={p} /></p>;
           })}
         </div>
       )}

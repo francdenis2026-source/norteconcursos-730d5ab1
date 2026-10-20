@@ -1,4 +1,5 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { LawText } from "@/components/dashboard/LawText";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { simulatorReference } from "@/lib/questionIdentity";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -183,6 +184,8 @@ function ProfessionalSimulator() {
   const [buildMode, setBuildMode] = React.useState<"paper" | "custom">("paper");
   const [paperKey, setPaperKey] = React.useState("");
   const [customTitle, setCustomTitle] = React.useState("Meu simulado");
+  // Montagem livre começa só com questões inéditas, para não repetir o que o aluno já respondeu.
+  const [onlyNew, setOnlyNew] = React.useState(true);
   const [sessionConfig, setSessionConfig] = React.useState<{
     owner: string;
     scope: "enem" | "contests";
@@ -586,12 +589,21 @@ function ProfessionalSimulator() {
   );
   const chosenPaper = papers.find((p) => p.key === paperKey);
   // Prova oficial mantém todos os itens do caderno; montagem livre não repete o mesmo item de duas versões.
-  const customPool = React.useMemo(
+  const dedupedPool = React.useMemo(
     () =>
       dedupeSharedExamItems(available.map((q) => ({ ...simulatorComparable(q), original: q }))).map(
         (entry) => entry.original,
       ),
     [available],
+  );
+  // Inéditas: ainda sem resposta no treinador nem em outras provas (cadastros idênticos valem como um só).
+  const repeatedInPool = React.useMemo(
+    () => dedupedPool.filter(isRepeated).length,
+    [dedupedPool, isRepeated],
+  );
+  const customPool = React.useMemo(
+    () => (onlyNew ? dedupedPool.filter((q) => !isRepeated(q)) : dedupedPool),
+    [dedupedPool, onlyNew, isRepeated],
   );
   const sessionPool = paperMode ? (chosenPaper?.questions ?? []) : customPool;
   const sessionCount = paperMode ? sessionPool.length : Math.min(limit, sessionPool.length);
@@ -618,7 +630,11 @@ function ProfessionalSimulator() {
       return;
     }
     if (!sessionPool.length) {
-      toast.error("Nenhuma questão ativa corresponde aos filtros escolhidos.");
+      toast.error(
+        onlyNew && !paperMode && repeatedInPool > 0
+          ? "Você já respondeu todas as questões deste filtro. Desmarque “Somente questões inéditas” para revisá-las."
+          : "Nenhuma questão ativa corresponde aos filtros escolhidos.",
+      );
       return;
     }
     setInvalidDraft(false);
@@ -1406,6 +1422,25 @@ function ProfessionalSimulator() {
                       </SelectContent>
                     </Select>
                   </Field>
+                )}
+                {!paperMode && (
+                  <label className="flex items-start gap-3 rounded-xl border p-3 text-sm sm:col-span-2">
+                    <Checkbox
+                      checked={onlyNew}
+                      onCheckedChange={(value) => setOnlyNew(value === true)}
+                      aria-describedby="only-new-help"
+                    />
+                    <span>
+                      <strong className="block">Somente questões inéditas</strong>
+                      <span id="only-new-help" className="text-xs text-muted-foreground">
+                        {historyLoading
+                          ? "Conferindo o que você já respondeu…"
+                          : onlyNew
+                            ? `Fora do sorteio as ${repeatedInPool} ${repeatedInPool === 1 ? "questão" : "questões"} que você já respondeu no treinador ou em outras provas.`
+                            : `Podem entrar questões que você já respondeu (${repeatedInPool} nesta seleção). Elas contam na nota da prova, mas não geram novos pontos no ranking.`}
+                      </span>
+                    </span>
+                  </label>
                 )}
                 <Field label="Tempo de prova">
                   <Select
@@ -2367,7 +2402,9 @@ function ResultView({
                   correct ? "border-emerald-200" : "border-red-200",
                 )}
               >
-                <div className="px-4"><QuestionCode question={simulatorReference(q)} /></div>
+                <div className="px-4">
+                  <QuestionCode question={simulatorReference(q)} />
+                </div>
                 <button
                   className="flex w-full flex-wrap items-center gap-3 p-4 text-left"
                   onClick={() => setOpen(isOpen ? null : q.id)}
@@ -2433,7 +2470,7 @@ function AnswerOption({
     >
       <RadioGroupItem value={value} />
       <span className="q-option-text min-w-0 font-bold">
-        {value} — {label}
+        {value} — <LawText text={label} />
       </span>
     </label>
   );
