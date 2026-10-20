@@ -85,3 +85,19 @@ Leitura apenas; nada gravado. Chaves de todos os itens abaixo conferem com o gab
 ### Aplicação da segunda rodada (19/10/2026)
 
 Liberados e conferidos no banco: `d34512bf`, `1a920d3b`, `4afc8741` e `5e5e9c88` (vínculo a tópicos já existentes das edições CGM-Rio e TCE-TO, comentário citando as fontes, `legal_basis`, leitura de confirmação). `50db64f2` permanece em revisão, por decisão do usuário, junto de `85f8fae8`, `4f00e3d0`, `d178c050`, `f2591759` e `de3424ff`.
+
+### Terceira rodada (19/10/2026): federais, histórico e jurisprudência restante
+
+Leitura apenas; nada gravado nesta etapa. Normas locais foram deixadas de lado por decisão do usuário.
+
+| ID | Item | Chave | Base conferida |
+|---|---|---|---|
+| `b0a7e713` | CGM-Rio TCI #30 | A | Lei 8.429, arts. 3º, §1º, 10, 12, II, 16 e 23; [STF, ADI 7042](https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&queryString=ADI%207042&classeNumeroIncidente=%22ADI%207042%22): legitimidade concorrente e disjuntiva entre MP e pessoas jurídicas interessadas para a ação e para o acordo de não persecução civil, o que afasta a alternativa E. A alternativa D cai pelo art. 3º, §1º (sócios não respondem pelo ato imputado à pessoa jurídica, salvo participação e benefício direto) e pelo art. 16 (indisponibilidade de bens dos réus) |
+| `fd51b530` | CGM-Rio Contador #25 | C | Lei 8.666/1993, art. 59, caput e parágrafo único (nulidade retroativa; dever de indenizar "contanto que não lhe seja imputável"); Lei 14.133, arts. 190 e 193, II (contrato assinado antes da vigência segue a lei revogada; a Lei 8.666 foi revogada em 30/12/2023) |
+| `d178c050` | CGM-Rio TCI #54 | E | [STF, ACO 1208-AgR](https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&queryString=ACO%201208&classeNumeroIncidente=%22ACO%201208%22) (competência comum; a hierarquia da desapropriação não se aplica ao tombamento; tombamento por lei na fase provisória, com procedimento posterior do Executivo) e [STF, ADI 5670](https://jurisprudencia.stf.jus.br/pages/search?base=acordaos&queryString=ADI%205670&classeNumeroIncidente=%22ADI%205670%22) (lei de efeitos concretos; ampla defesa e contraditório depois, no rito do DL 25/1937). O STF decidiu o caso do Estado que tomba bem da União; a extensão ao Município decorre da mesma competência comum |
+
+Sem fonte suficiente: `f2591759` (decretos regulamentares), `85f8fae8` (aposentadoria e liminar revogada; Tema 476 só afasta A, B e D), `4f00e3d0` (STJ, verificação anti-robô). Doutrina: `6ed22466`, `746cc300`. `50db64f2` em revisão por decisão do usuário; `de3424ff` depende de lei municipal; `da0d6c9d` fora do edital.
+
+### Aplicação da terceira rodada (19/10/2026)
+
+Liberados e conferidos no banco: `b0a7e713`, `fd51b530` e `d178c050` (vínculo a tópicos existentes da edição CGM-Rio, comentário citando as fontes, `legal_basis`, leitura de confirmação). Em `b0a7e713` a marca "visual" foi desfeita após conferir a página original (sem figura). Em `d178c050` o comentário registra que o precedente do STF trata de Estado que tomba bem da União, estendido ao Município pelo mesmo fundamento. Das 74 questões, 42 estão ativas e 32 em revisão (24 de norma local e 8 outras).
