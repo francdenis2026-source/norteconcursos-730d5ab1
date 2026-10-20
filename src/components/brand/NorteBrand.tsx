@@ -64,7 +64,12 @@ export function NorteBrand({ className, compact = false, light = false }: NorteB
       {!compact && (
         <span className="norte-brand__type" aria-hidden="true">
           <strong>NORTE</strong>
-          <span>CONCURSOS</span>
+          {/* Letras espaçadas por flex: a linha CONCURSOS ocupa exatamente a largura de NORTE, em qualquer fonte. */}
+          <span>
+            {[..."CONCURSOS"].map((letter, index) => (
+              <i key={index}>{letter}</i>
+            ))}
+          </span>
         </span>
       )}
     </span>

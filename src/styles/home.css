@@ -235,22 +235,17 @@
 }
 .home-header .norte-brand__mark,
 .home-footer .norte-brand__mark {
-  width: 36px;
-  height: 38px;
+  width: 40px;
+  height: 42px;
   filter: none;
 }
-.home-header .norte-brand__type strong,
-.home-footer .norte-brand__type strong {
-  font-size: 23px;
+.home-header .norte-brand__type,
+.home-footer .norte-brand__type {
+  --brand-size: 27px;
 }
 .home-header .norte-brand__type span,
 .home-footer .norte-brand__type span {
-  color: var(--home-muted);
-  font-size: 8px;
-}
-.home-header .norte-brand__type span::before,
-.home-footer .norte-brand__type span::before {
-  display: none;
+  color: var(--home-accent);
 }
 .home-nav {
   display: flex;
@@ -1822,14 +1817,11 @@
     gap: 7px;
   }
   .home-header .norte-brand__mark {
-    width: 28px;
-    height: 30px;
+    width: 32px;
+    height: 34px;
   }
-  .home-header .norte-brand__type strong {
-    font-size: 18px;
-  }
-  .home-header .norte-brand__type span {
-    font-size: 6px;
+  .home-header .norte-brand__type {
+    --brand-size: 21px;
   }
   .home-header__actions {
     gap: 6px;
@@ -2803,11 +2795,8 @@
   .home-header__register {
     padding-inline: 8px;
   }
-  .home-header .norte-brand__type strong {
-    font-size: 16px;
-  }
-  .home-header .norte-brand__type span {
-    font-size: 5px;
+  .home-header .norte-brand__type {
+    --brand-size: 19px;
   }
   .home .lp-theme-toggle {
     display: none;
