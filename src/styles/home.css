@@ -4061,10 +4061,10 @@
 /* Native cursor keeps the bullet aligned with the pointer and always has a fallback. */
 @media (hover: hover) and (pointer: fine) {
   .home, .home * {
-    cursor: url("/media/bullet-cursor.svg") 12 2, auto;
+    cursor: url("/media/bullet-cursor-metal.svg") 7 3, auto;
   }
   .home :is(a, button, summary, [role="button"]) {
-    cursor: url("/media/bullet-cursor.svg") 12 2, pointer;
+    cursor: url("/media/bullet-cursor-metal.svg") 7 3, pointer;
   }
   .home :is(input, textarea, [contenteditable="true"]) { cursor: text; }
   .home :disabled { cursor: not-allowed; }
