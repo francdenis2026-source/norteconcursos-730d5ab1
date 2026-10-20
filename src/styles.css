@@ -16,7 +16,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ==========================================================================
+/* ===================================================================
    NORTE — Design System "Porcelain & Gold"
    Porcelain reading surfaces, neutral structure and the preserved gold accent.
    All colors in oklch. Tailwind palettes below are re-tuned so every page
@@ -282,7 +282,7 @@
   --sidebar-accent-foreground: var(--accent-foreground);
 }
 
-/* ==========================================================================
+/* ===================================================================
    Base
    ========================================================================== */
 
@@ -344,7 +344,7 @@
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Scrollbars — visible, colored, theme aware
    ========================================================================== */
 
@@ -413,7 +413,7 @@ html {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Typography helpers
    ========================================================================== */
 
@@ -432,7 +432,7 @@ html {
   text-transform: uppercase;
 }
 
-/* ==========================================================================
+/* ===================================================================
    Brand
    ========================================================================== */
 
@@ -499,7 +499,7 @@ html {
   height: 2.4rem;
 }
 
-/* ==========================================================================
+/* ===================================================================
    Primitives shared by public and app surfaces
    ========================================================================== */
 
@@ -669,7 +669,7 @@ html {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Landing
    ========================================================================== */
 
@@ -3712,7 +3712,7 @@ html {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Authentication
    ========================================================================== */
 
@@ -4103,7 +4103,7 @@ html {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Application shell
    ========================================================================== */
 
@@ -4807,7 +4807,7 @@ html {
   color: var(--brass);
 }
 
-/* ==========================================================================
+/* ===================================================================
    Page hero (every internal area) + legacy hero classes
    ========================================================================== */
 
@@ -5103,7 +5103,7 @@ html {
   min-height: 210px;
 }
 
-/* ==========================================================================
+/* ===================================================================
    Application surfaces
    ========================================================================== */
 
@@ -6248,7 +6248,7 @@ html {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Motion & print
    ========================================================================== */
 
@@ -6819,7 +6819,7 @@ iframe[src*="gpteng.co"] {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Celular compacto: menos espaço, textos menores e cabeçalhos enxutos.
    --spacing é a base do Tailwind (padding, gap, margin...): reduzir aqui compacta tudo.
    ========================================================================== */
@@ -7851,7 +7851,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Instalar app (PWA) — banner discreto, só aparece no celular quando o
    navegador dispara beforeinstallprompt (hoje, principalmente Chrome/Android).
    ========================================================================== */
@@ -7887,7 +7887,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Nova versão disponível — banner discreto, qualquer tela (não só celular):
    SPA instalado como app não recarrega sozinho quando um deploy novo sai.
    ========================================================================== */
@@ -8606,7 +8606,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Application shell refresh: student and admin workspaces
    ========================================================================== */
 .app-shell {
@@ -10096,7 +10096,7 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background: var(--scroll-thumb-hover) !important;
 }
 
-/* ==========================================================================
+/* ===================================================================
    Cursor: hand on everything interactive
    Kept outside any @layer so it also wins over utility classes such as
    `cursor-default` baked into the dropdown, select and menu components.
@@ -12727,7 +12727,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .pcpr-spot--cover,.pcpr-spot--cover.pcpr-spot--compact { padding:14px; }
 }
 
-/* ==========================================================================
+/* ===================================================================
    Modo claro — identidade azul/verde-azulado com realces coloridos.
    Substitui o dourado apagado por cores com contraste AA e dá destaque às áreas.
    Somente :root:not(.dark); o modo escuro e a marca (logo) não mudam.
@@ -12868,7 +12868,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 :root:not(.dark) .page-hero[data-hero="public-security"]::before { background: linear-gradient(90deg, oklch(0.97 0.025 262) 20%, oklch(0.97 0.025 262 / .94) 48%, transparent 74%); }
 :root:not(.dark) .page-hero[data-hero="public-security"] h1 { color: oklch(0.25 0.07 262); }
 
-/* ==========================================================================
+/* ===================================================================
    Modo claro — heroes internos limpos: sem camada escura, grade, brilho radial
    ou luz no hover. A foto se dissolve no fundo claro por máscara. Resultados
    de simulado (.mock-result-hero) e o hero escuro da homepage não mudam.
@@ -12956,7 +12956,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   mask-image: linear-gradient(90deg, transparent 0%, #000 30%);
 }
 
-/* ==========================================================================
+/* ===================================================================
    Sem "emenda" entre texto e foto (claro e escuro): nenhuma faixa dissolvida,
    gradiente ou máscara sobre a imagem. A foto entra com corte limpo.
    ========================================================================== */
@@ -12980,7 +12980,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 .student-hub__hero-visual { clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%); }
 @media (max-width: 640px) { .student-hub__hero-visual { clip-path: none; } }
 
-/* ==========================================================================
+/* ===================================================================
    Modo escuro — área do aluno com cores de destaque nas funções principais.
    Tons claros e dessaturados (contraste AA sobre o cinza-grafite), sem brilho.
    Só .dark; o modo claro e a marca não mudam.
@@ -13273,3 +13273,12 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .trainer-fixed-discipline > div strong { font-size: 14px; overflow-wrap: anywhere; }
 .trainer-fixed-discipline > div svg { width: 16px; height: 16px; flex: none; color: var(--muted-foreground); }
 .trainer-fixed-discipline p { font-size: 12px; line-height: 1.6; color: var(--muted-foreground); margin-top: 7px; }
+
+/* Session clock tooltip: concise, readable and contained on desktop and mobile. */
+.app-session-tooltip {
+  max-width: 250px;
+  padding: 8px 11px;
+  text-align: center;
+  line-height: 1.4;
+  white-space: normal;
+}
