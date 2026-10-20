@@ -2183,7 +2183,7 @@
 .home-start { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 10px; padding-block: 12px 18px; }
 .home-start__grid { gap: 10px; }
 .home-start .home-testing, .home-start .daily-badge, .home-start .question-count-badge { min-height: 52px; padding: 9px 12px; border-radius: 10px; }
-.home-start .home-testing p span, .home-start .question-count-eyebrow, .home-start .question-count-detail { display: none; }
+.home-start .home-testing p span, .home-start .question-count-eyebrow { display: none; }
 .home-start .daily-badge__progress { display: none; }
 .home-start .question-count-main strong { font-size: 1.5rem; }
 .home-platform__visual > img { height: 300px; }
@@ -2251,8 +2251,7 @@
 .home-start .daily-badge__main small { font-size: .68rem; }
 .home-start .question-count-badge { gap: 10px; }
 .home-start .question-count-content { min-width: 0; }
-.home-start .question-count-eyebrow,
-.home-start .question-count-detail { display: none; }
+.home-start .question-count-eyebrow { display: none; }
 .home-start .question-count-main strong { font-size: 1.5rem; }
 .home-start .question-count-main span { font-size: .7rem; }
 .home-platform__visual > img { height: 300px; }
@@ -3829,7 +3828,8 @@
 .home-start { grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 10px; padding-block: 12px 18px; }
 .home-start__grid { gap: 10px; }
 .home-start .home-testing, .home-start .daily-badge, .home-start .question-count-badge { min-height: 52px; padding: 9px 12px; border-radius: 10px; }
-.home-start .home-testing p span, .home-start .question-count-eyebrow, .home-start .question-count-detail { display: none; }
+.home-start .home-testing p span, .home-start .question-count-eyebrow { display: none; }
+.home-start .question-count-detail { display: block; line-height: 1.3; overflow-wrap: anywhere; }
 .home-start .daily-badge__progress { display: none; }
 .home-start .question-count-main strong { font-size: 1.5rem; }
 .home-platform__visual > img { height: 300px; }
@@ -4131,4 +4131,10 @@
 }
 @media (max-width: 700px) {
   .home-hero::before { top: 9%; right: 3%; width: 180px; opacity: .07; }
+}
+
+/* Selos do início: com a coluna estreita o total de questões ficava espremido; empilha e mostra o texto inteiro. */
+.home-start { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 700px) {
+  .home-start__grid { grid-template-columns: minmax(0, 1fr); }
 }
