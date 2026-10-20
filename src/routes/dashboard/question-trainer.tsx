@@ -1,4 +1,5 @@
 import { questionIdentity } from "@/lib/questionIdentity";
+import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToSection } from "@/lib/appScroll";
@@ -1354,6 +1355,7 @@ function QuestionTrainer() {
   if (!started)
     return (
       <div className="trainer-workbench" aria-busy={loading}>
+        <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} />
         <header className="trainer-workbench-heading trainer-workbench-hero">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>

@@ -88,3 +88,13 @@ recalcula a nota simples a partir de `simulator_attempts` e avisa que não há r
 `questionTextLayout()` classifica o trecho (corrido, curto, poema, tabela/código/fórmula) e
 `QuestionProse` aplica o estilo `.q-text`: justificado com hifenização de tablet para cima, à esquerda
 no celular, poemas e tabelas preservados. Alternativas ficam sempre à esquerda.
+
+## Continuar de onde parou
+
+`src/lib/sessionResume.ts` lê (sem gravar) o marcador do treinador e o rascunho do simulado deste navegador e
+`ResumeSessions` os mostra no painel do aluno e na tela inicial do treinador: posição, acertos, erros,
+puladas e o que falta no treino; respondidas, puladas, em branco e prazo na prova (o gabarito só aparece
+na entrega). O link reabre a tela com exatamente os filtros em que a sessão foi salva, que é o que faz o
+marcador ser reconhecido. Respostas confirmadas continuam no histórico da conta.
+Limite: o marcador é do navegador. Em outro aparelho a sessão não aparece; isso exigiria guardar o
+marcador na conta (tabela nova), não feito nesta entrega.

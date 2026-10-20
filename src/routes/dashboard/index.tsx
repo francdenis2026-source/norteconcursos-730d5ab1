@@ -1,4 +1,5 @@
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
+import { ResumeSessions } from "@/components/dashboard/ResumeSessions";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -239,6 +240,7 @@ function StudentHome({ user }: { user: UserProfile }) {
         </picture>
       </header>
       <PcprExamSpotlight />
+      <ResumeSessions userId={user.id} className="mb-4 space-y-3" />
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric
           icon={BrainCircuit}
