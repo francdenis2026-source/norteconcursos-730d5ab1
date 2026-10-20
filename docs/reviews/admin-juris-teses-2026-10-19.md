@@ -101,3 +101,18 @@ Sem fonte suficiente: `f2591759` (decretos regulamentares), `85f8fae8` (aposenta
 ### Aplicação da terceira rodada (19/10/2026)
 
 Liberados e conferidos no banco: `b0a7e713`, `fd51b530` e `d178c050` (vínculo a tópicos existentes da edição CGM-Rio, comentário citando as fontes, `legal_basis`, leitura de confirmação). Em `b0a7e713` a marca "visual" foi desfeita após conferir a página original (sem figura). Em `d178c050` o comentário registra que o precedente do STF trata de Estado que tomba bem da União, estendido ao Município pelo mesmo fundamento. Das 74 questões, 42 estão ativas e 32 em revisão (24 de norma local e 8 outras).
+
+### Encerramento da frente (19/10/2026)
+
+Liberado e confirmado: `50db64f2` (Sistema S; Tema 569 e ADI 1864 do STF). A parte final da alternativa C ("princípios gerais nas contratações") não consta dos acórdãos lidos; ficou registrada no comentário e no `review_note`.
+
+Permanecem em revisão, por não haver fonte oficial que sustente a chave:
+
+- `85f8fae8`: o Tema 476/STF (RE 608482) diz que, revogada a liminar, é incabível invocar fato consumado, segurança jurídica ou proteção da confiança legítima, e que a revogação opera efeito ex tunc. Isso sustenta a alternativa B e contraria a chave C (que protege Luiz, aposentado). Só pode ser liberada se aparecer precedente específico para o aposentado; caso contrário, convém tratar a chave como contestável.
+- `4f00e3d0`: só há fontes secundárias para o entendimento do STJ sobre assalto em ônibus (REsp 435.865 e REsp 822.666 citados por terceiros); falta a fonte oficial.
+- `f2591759`: sem precedente localizado.
+- `6ed22466` e `746cc300`: chaves doutrinárias, sem fonte oficial que as fixe.
+- `de3424ff`: depende da Lei Municipal 94/1979 (norma local).
+- `da0d6c9d`: o art. 42 da LGPD está fora do que o edital CGM-Rio cobre.
+
+Das 74 questões, 43 estão ativas e 31 em revisão (24 de norma local e 7 outras).
