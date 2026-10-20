@@ -1,5 +1,7 @@
 import { platformDate } from "@/lib/platformClock";
 import {
+  lazy,
+  Suspense,
   useCallback,
   useEffect,
   useRef,
@@ -10,7 +12,7 @@ import {
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { StudyToolsPanel, type ToolsArea } from "@/components/study/StudyTools";
+import type { ToolsArea } from "@/components/study/StudyTools";
 import { confirmDialog } from "@/lib/confirm";
 import {
   beginFocus,
@@ -21,6 +23,11 @@ import {
   subscribeFocusSession,
   tickFocus,
 } from "@/lib/focusSession";
+
+// O painel de ferramentas só abre sob demanda: fora do pacote inicial de todas as páginas do painel.
+const StudyToolsPanel = lazy(() =>
+  import("@/components/study/StudyTools").then((m) => ({ default: m.StudyToolsPanel })),
+);
 
 const pad = (n: number) => String(n).padStart(2, "0");
 export const hms = (s: number) =>
@@ -315,12 +322,14 @@ export function useFocusMode() {
           )}
         </header>
         {p.tools && toolsOpen && (
-          <StudyToolsPanel
-            area={p.tools}
-            notesKey={p.notesKey}
-            topOffset={barHeight}
-            onClose={() => setToolsOpen(false)}
-          />
+          <Suspense fallback={null}>
+            <StudyToolsPanel
+              area={p.tools}
+              notesKey={p.notesKey}
+              topOffset={barHeight}
+              onClose={() => setToolsOpen(false)}
+            />
+          </Suspense>
         )}
       </>
     );

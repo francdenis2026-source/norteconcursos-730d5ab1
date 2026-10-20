@@ -1,5 +1,5 @@
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { useOfficialYearQuestions } from "@/hooks/useQuestionCatalog";
 import { examAvailableCounts, type ExamAvailabilityIdentity } from "@/lib/examAvailability";
 
 export function useExamAvailability(
@@ -8,7 +8,8 @@ export function useExamAvailability(
 ) {
   const { user, isAuthenticated } = useAuthStatus();
   const enabled = isAuthenticated && !!user && user.id !== "demo-user";
-  const { catalog, loading, error } = useQuestionCatalog(user?.id, enabled);
+  // Só os itens do ano da prova: o acervo inteiro pesa dezenas de milhares de linhas e travava o painel.
+  const { catalog, loading, error } = useOfficialYearQuestions(exam.year, enabled);
   return {
     counts: !enabled
       ? reference.counts

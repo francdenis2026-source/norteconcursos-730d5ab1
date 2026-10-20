@@ -3,7 +3,9 @@ import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
-  const queryClient = new QueryClient();
+  // gcTime maior: voltar ao treinador/simulador na mesma sessão reaproveita o acervo já baixado
+  // (a atualização em segundo plano continua regida pelo staleTime de cada consulta).
+  const queryClient = new QueryClient({ defaultOptions: { queries: { gcTime: 30 * 60_000 } } });
 
   const router = createRouter({
     routeTree,

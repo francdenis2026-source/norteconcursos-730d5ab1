@@ -2,7 +2,7 @@ import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
 import { PlatformBack } from "./PlatformBack";
-import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import {
   DashboardNavigation,
   navigationActive as isActive,
@@ -294,7 +294,54 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
   const location = useLocation();
   const navigate = useNavigate();
+  const router = useRouter();
   const { user } = useAuthStatus();
+  // Depois que a tela principal já está pronta, baixa em segundo plano o código das seções mais
+  // usadas, uma por vez, para o clique no menu abrir na hora. Respeita "economia de dados".
+  React.useEffect(() => {
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+    if (connection?.saveData || /(^|-)2g$/.test(connection?.effectiveType ?? "")) return;
+    const sections = [
+      "/dashboard/question-trainer",
+      "/dashboard/mock-exams",
+      "/dashboard/study-plan",
+      "/dashboard/my-contest",
+      "/dashboard/performance",
+      "/dashboard/ranking",
+      "/dashboard/history",
+      "/dashboard/medals",
+      "/dashboard/enem",
+      "/dashboard/library",
+      "/dashboard/study-tools",
+      "/dashboard/questions",
+      "/dashboard/student-exams",
+      "/dashboard/profile",
+    ];
+    let cancelled = false;
+    let handle = 0;
+    const idle = (callback: () => void) =>
+      typeof window.requestIdleCallback === "function"
+        ? window.requestIdleCallback(callback, { timeout: 4000 })
+        : window.setTimeout(callback, 800);
+    const next = (index: number) => {
+      if (cancelled || index >= sections.length) return;
+      handle = idle(() => {
+        void router
+          .preloadRoute({ to: sections[index] as never })
+          .catch(() => undefined)
+          .finally(() => next(index + 1));
+      });
+    };
+    const start = window.setTimeout(() => next(0), 1500);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(start);
+      if (typeof window.cancelIdleCallback === "function") window.cancelIdleCallback(handle);
+      window.clearTimeout(handle);
+    };
+  }, [router]);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
   // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
   // da hidratação para não gerar mismatch (ver src/lib/theme.ts).

@@ -30,6 +30,89 @@ function withSupportText(support: unknown, text: string): string {
 
 const EMPTY_CATALOG: Question[] = [];
 
+/** Linha de official_exam_questions -> questão do acervo (mesma regra no treinador e na contagem de provas). */
+function officialRowToQuestion(row: Record<string, unknown>): Question {
+  return {
+    id: String(row["id"]),
+    source: "official" as const,
+    table: "official_exam_questions" as const,
+    syllabusTopicId:
+      (row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"])
+        ? String(row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"])
+        : null,
+    contest: String(row["contest_name"]),
+    year: String(row["exam_year"]),
+    career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
+    board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
+    subject: canonicalSubject(String(row["subject"])),
+    subtopic: null,
+    text: withSupportText(row["support"], String(row["question_text"])),
+    answer: String(row["official_answer"]) as Answer,
+    explanation: String(
+      row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
+    ),
+    legalBasis: parseBasis(row["legal_basis"]),
+    checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
+    difficulty: normalizeDifficulty(row["difficulty"]),
+    state: String(row["state"] || ""),
+    category: String(row["career_category"] || ""),
+    itemNumber: Number(row["item_number"]) || undefined,
+    testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
+  } as Question;
+}
+
+/** Linha elegível de prova oficial (mesmo filtro jurídico do acervo completo). */
+const officialRowEligible = (row: Record<string, unknown>) =>
+  !(row["legal_review_required"] && !row["legal_audit_completed"]) && isEligibleQuestion(row);
+
+const OFFICIAL_COLUMNS =
+  "id,syllabus_topic_id,current_syllabus_topic_id,contest_name,exam_year,career_name,exam_board,item_number,tested_topic,subject,question_text,official_answer,review_note,legal_basis,state,career_category,content_status,law_version_checked_at,legal_review_required,legal_audit_completed,context_review_required,difficulty";
+
+/**
+ * Itens oficiais de UM ano de prova, para contar disponibilidade sem baixar o acervo inteiro
+ * (a tela inicial só precisa de poucos números; o acervo completo tem dezenas de milhares de linhas).
+ */
+export function useOfficialYearQuestions(year: string, enabled: boolean) {
+  const result = useQuery({
+    queryKey: ["official-year-questions", year],
+    enabled,
+    staleTime: 5 * 60_000,
+    retry: 0,
+    queryFn: async ({ signal }) => {
+      const load = (withSupport: boolean) =>
+        fetchAllRows<Record<string, unknown>>(
+          (from, to) =>
+            supabase
+              .from("official_exam_questions")
+              .select(
+                OFFICIAL_COLUMNS +
+                  (withSupport ? ",support:question_support_texts(label,body)" : ""),
+              )
+              .eq("content_status", "active")
+              .neq("official_answer", "X")
+              .eq("exam_year", Number(year))
+              .abortSignal(AbortSignal.any([signal, AbortSignal.timeout(20000)]))
+              .order("id")
+              .range(from, to) as unknown as PromiseLike<{
+              data: Record<string, unknown>[] | null;
+              error: unknown;
+            }>,
+          1000,
+        );
+      const rows = await load(true).catch((error: unknown) => {
+        if (isMissingQuestionSupport(error)) return load(false);
+        throw error;
+      });
+      return rows.filter(officialRowEligible).map(officialRowToQuestion);
+    },
+  });
+  return {
+    catalog: result.data ?? EMPTY_CATALOG,
+    loading: result.isPending,
+    error: result.error ? "Não foi possível carregar a disponibilidade da prova." : null,
+  };
+}
+
 async function loadQuestionCatalog(queryClient: QueryClient, userId: string | undefined) {
   const query = async (
     table:
@@ -184,33 +267,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
       (officialResult.data || []) as Array<Record<string, unknown>>,
       officialResult.gated,
       (row) => !(row["legal_review_required"] && !row["legal_audit_completed"]),
-    ).map((row) => ({
-      id: String(row["id"]),
-      source: "official" as const,
-      table: "official_exam_questions" as const,
-      syllabusTopicId:
-        (row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"])
-          ? String(row["current_syllabus_topic_id"] ?? row["syllabus_topic_id"])
-          : null,
-      contest: String(row["contest_name"]),
-      year: String(row["exam_year"]),
-      career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
-      board: canonicalBoard(String(row["exam_board"] ?? "")) || "Não informada",
-      subject: canonicalSubject(String(row["subject"])),
-      subtopic: null,
-      text: withSupportText(row["support"], String(row["question_text"])),
-      answer: String(row["official_answer"]) as Answer,
-      explanation: String(
-        row["review_note"] || "Item conferido com o gabarito definitivo da prova oficial.",
-      ),
-      legalBasis: parseBasis(row["legal_basis"]),
-      checkedAt: row["law_version_checked_at"] ? String(row["law_version_checked_at"]) : null,
-      difficulty: normalizeDifficulty(row["difficulty"]),
-      state: String(row["state"] || ""),
-      category: String(row["career_category"] || ""),
-      itemNumber: Number(row["item_number"]) || undefined,
-      testedTopic: row["tested_topic"] ? String(row["tested_topic"]) : null,
-    })),
+    ).map(officialRowToQuestion),
     ...gate((curatedResult.data || []) as Array<Record<string, unknown>>, curatedResult.gated).map(
       (row) => ({
         id: String(row["id"]),

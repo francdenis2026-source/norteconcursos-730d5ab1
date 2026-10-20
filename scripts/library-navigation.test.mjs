@@ -329,8 +329,8 @@ function renderGlobalLibrary(filters={}) {
  };
  const nullModule=new Proxy({}, {get:()=>none});
  for(const m of readFileSync('src/routes/dashboard/library.index.tsx','utf8').matchAll(/from "([^"]+)"/g))if(!stubs[m[1]])stubs[m[1]]=nullModule;
- const {LibraryIndex}=load('src/routes/dashboard/library.index.tsx',stubs);
- return {html:renderToStaticMarkup(React.createElement(LibraryIndex)),calls};
+ const {Route}=load('src/routes/dashboard/library.index.tsx',stubs);
+ return {html:renderToStaticMarkup(React.createElement(Route.component)),calls};
 }
 test('Library page unifies guide and article results and passes selected discipline and law into the actual search panel',()=>{
  const all=renderGlobalLibrary();

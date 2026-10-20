@@ -61,7 +61,7 @@ export const Route = createFileRoute("/dashboard/library/")({
   head: () => ({ meta: [{ title: "Biblioteca de leis | Norte Concurso" }] }),
 });
 
-export function LibraryIndex() {
+function LibraryIndex() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const signedIn = !!user && user.id !== "demo-user";
   const { data, isPending, isError, refetch } = useStudyMaterialList(signedIn);
