@@ -1,3 +1,4 @@
+import { questionIdentity } from "@/lib/questionIdentity";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { simulatorReference } from "@/lib/questionIdentity";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -35,7 +36,7 @@ import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHisto
 import { AttemptHistoryItem } from "@/components/dashboard/AttemptHistoryList";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
-import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
+import { useLockedAnswers } from "@/hooks/useLockedAnswers";
 import { parseQuestion } from "@/lib/questionFormat";
 import { Input } from "@/components/ui/input";
 import { platformNow } from "@/lib/platformClock";
@@ -167,7 +168,6 @@ const LIMITS = [10, 20, 30, 50, 120];
 const DURATIONS = [15, 30, 60, 120, 180, 240, 300];
 
 function ProfessionalSimulator() {
-  const queryClient = useQueryClient();
   const loadGeneration = React.useRef(0);
   const routeSearch = Route.useSearch();
   const isEnemMode =
@@ -221,6 +221,16 @@ function ProfessionalSimulator() {
   const paperMode = buildMode === "paper" && !isEnemMode;
 
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
+  const queryClient = useQueryClient();
+  const historyCatalog = React.useMemo(() => catalog.map(simulatorReference), [catalog]);
+  const {
+    locked: answeredHistory,
+    identityReady,
+    loading: historyLoading,
+    error: historyError,
+    reload: reloadAnswerHistory,
+  } = useLockedAnswers(user?.id, !!user && user.id !== "demo-user", historyCatalog);
+
   const [historyUnavailable, setHistoryUnavailable] = React.useState(false);
   const [history, setHistory] = React.useState<AttemptWithDetails[]>([]);
   const [rulesRegistry, setRulesRegistry] = React.useState<ReferenceRuleRow[]>([]);
@@ -562,17 +572,16 @@ function ProfessionalSimulator() {
     [scopedCatalog, filters],
   );
   const papers = React.useMemo(() => simulatorPapers(scopedCatalog), [scopedCatalog]);
-  // Respostas anteriores em qualquer modalidade (Treinador, outras provas): mostram o aviso "já respondida".
-  const { locked: answeredHistory } = useLockedAnswers(user?.id, !!user && user.id !== "demo-user");
+  // Respostas anteriores em qualquer modalidade; cadastros idênticos da mesma prova valem como um só.
   const priorAnswers = React.useMemo(
     () =>
       expandAnsweredBySiblings(answeredHistory, catalog.map(simulatorComparable), (q) =>
-        lockedKey(q.source, q.id),
+        questionIdentity(q as never),
       ),
     [answeredHistory, catalog],
   );
   const isRepeated = React.useCallback(
-    (q: SimulatorQuestion) => priorAnswers.has(lockedKey(q.sourceKind, q.originalId)),
+    (q: SimulatorQuestion) => priorAnswers.has(questionIdentity(simulatorReference(q))),
     [priorAnswers],
   );
   const chosenPaper = papers.find((p) => p.key === paperKey);
@@ -595,6 +604,11 @@ function ProfessionalSimulator() {
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
   function startSimulator() {
+    if (historyLoading || historyError) {
+      toast.error("Aguarde a conferência do histórico antes de iniciar.");
+      void reloadAnswerHistory();
+      return;
+    }
     if (!hasMockExamAccess) {
       toast.error("Simulados completos são um recurso dos planos pagos.");
       return;
@@ -608,6 +622,7 @@ function ProfessionalSimulator() {
       return;
     }
     setInvalidDraft(false);
+    setRankingSummary(null);
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
     setSkipped(new Set());
     setRankingSummary(null);
@@ -730,27 +745,21 @@ function ProfessionalSimulator() {
       /* Tabela opcional: a nota continua visível aqui e é recalculada sem desconto no histórico. */
     }
     try {
+      await queryClient.invalidateQueries({ queryKey: ["question-locked-answers", ownerId] });
       const response = (await supabase.rpc(
-        "simulator_attempt_ranking" as never,
-        { _attempt_ids: [attemptId] } as never,
+        "get_simulator_ranking_result" as never,
+        { _attempt: attemptId } as never,
       )) as unknown as {
-        data: Array<{
-          answered: number;
-          counted: number;
-          repeated: number;
-          points: number;
-          attempt_valid: boolean;
-        }> | null;
+        data: { eligible: number; repeated: number; points: number } | null;
         error: unknown;
       };
-      const row = response.error ? null : response.data?.[0];
-      if (row)
+      if (!response.error && response.data)
         setRankingSummary({
-          answered: row.answered,
-          counted: row.counted,
-          repeated: row.repeated,
-          points: row.points,
-          attemptValid: row.attempt_valid,
+          answered: response.data.eligible + response.data.repeated,
+          counted: response.data.eligible,
+          repeated: response.data.repeated,
+          points: response.data.points,
+          attemptValid: true,
         });
     } catch {
       /* Sem o resumo de ranking do servidor, a tela mostra só a contagem local de repetidas. */
@@ -804,6 +813,7 @@ function ProfessionalSimulator() {
       user_id: user.id,
       question_id: q.originalId,
       question_source: q.sourceKind,
+      ...(identityReady ? { question_table: simulatorReference(q).table } : {}),
       question_order: index + 1,
       subject: q.subject,
       selected_answer: answers[q.id] ?? null,
@@ -848,7 +858,7 @@ function ProfessionalSimulator() {
       });
       setSaveStatus("saved");
       clearSimulatorDraft();
-      // Dados extras (regra, nota, ranking): complementam o resultado já confirmado e nunca o desfazem.
+      // Regra, nota e pontos de ranking da tentativa (ver recordAttemptExtras).
       void recordAttemptExtras(sessionConfig.attemptId, user.id, scored, skipped.size);
     } catch {
       setSaveStatus("error");
@@ -993,6 +1003,7 @@ function ProfessionalSimulator() {
         questions={questions}
         currentIndex={currentIndex}
         current={current}
+        repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
         answers={answers}
         flagged={flagged}
         timeLeft={timeLeft}
@@ -1026,6 +1037,7 @@ function ProfessionalSimulator() {
         skippedCount={skipped.size}
         repeatedLocal={questions.filter((q) => answers[q.id] && isRepeated(q)).length}
         ranking={rankingSummary}
+        attemptId={sessionConfig.attemptId}
       />
     );
 
@@ -1614,6 +1626,7 @@ function ActiveSimulator(p: {
   questions: SimulatorQuestion[];
   currentIndex: number;
   current: SimulatorQuestion;
+  repeated: boolean;
   answers: Record<string, Answer>;
   flagged: Set<string>;
   timeLeft: number;
@@ -1634,6 +1647,7 @@ function ActiveSimulator(p: {
     questions,
     currentIndex,
     current,
+    repeated,
     answers,
     flagged,
     timeLeft,
@@ -2093,6 +2107,7 @@ function ResultView({
   retrySave,
   discard,
   title,
+  attemptId,
   rule,
   skippedCount,
   repeatedLocal,
@@ -2111,6 +2126,7 @@ function ResultView({
   retrySave: () => void;
   discard: () => void;
   title: string;
+  attemptId: string;
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
   const scored = scoreAttempt(
@@ -2122,6 +2138,7 @@ function ResultView({
     <div className="space-y-6 pb-8">
       <section role="status" className="rounded-xl border bg-card p-4 text-sm">
         <p className="font-semibold">{title}</p>
+        <p className="break-all text-xs text-muted-foreground">Tentativa: {attemptId}</p>
         <p className="mt-1">
           {saveStatus === "saving"
             ? "Salvando e conferindo seu resultado…"

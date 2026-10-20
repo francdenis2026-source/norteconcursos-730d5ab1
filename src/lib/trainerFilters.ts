@@ -1,3 +1,4 @@
+import { questionIdentity } from "./questionIdentity";
 import type { Question } from "./questionFormat";
 import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { subjectInArea } from "./questionTopics";
@@ -192,10 +193,12 @@ export function trainerPracticeQuestions(
 ) {
   return catalog.filter((question) => {
     if (mode === "catalog") return true;
-    const key = `${question.source}:${question.id}`;
-    if (mode === "new") return !answers.has(key);
-    if (mode === "all") return answers.has(key);
-    return answers.get(key)?.isCorrect === false && !reinforcements.get(key)?.lastCorrect;
+    const legacy = `${question.source}:${question.id}`;
+    const key = questionIdentity(question);
+    const answer = answers.get(key) ?? (!question.table ? answers.get(legacy) : undefined);
+    if (mode === "new") return !answer;
+    if (mode === "all") return !!answer;
+    return answer?.isCorrect === false && !reinforcements.get(legacy)?.lastCorrect;
   });
 }
 

@@ -6,16 +6,16 @@ Resumo técnico da entrega de 2026-10-20. Estado de cada parte está marcado com
 
 ## Código permanente da questão (no código, sem migração)
 
-- `src/lib/questionIdentity.ts`: o código é `<prefixo da tabela>-<12 primeiros caracteres do UUID>`,
-  por exemplo `BD-1A2B-3C4D-5E6F`. Prefixos: `OF` official_exam_questions, `BD` board_exam_questions,
-  `CU` curated_question_catalog, `PE` question_bank (caderno pessoal).
+- `src/lib/questionIdentity.ts`: o código é `NC-<prefixo da tabela>-<UUID completo>`,
+  por exemplo `NC-BA-<uuid>`. Prefixos: `OF` official_exam_questions, `BA` board_exam_questions,
+  `AU` curated_question_catalog, `PE` question_bank (caderno pessoal).
 - A identidade real é `(tabela física, id)` (`questionRef`). `source` = official cobre duas tabelas,
   então nunca basta o `id`. O mesmo cálculo existe no banco em `public.question_public_code()`.
 - Nada é gravado nas questões: o código nasce da identidade existente, não muda com filtro, ordem,
   atualização ou nova sessão. Aparece no treinador, simulado, caderno de erros, Estudar depois e
   no painel de denúncias; `QuestionCode` copia com um toque. A denúncia guarda o código no
   `question_snapshot` e a tabela física em `question_table` (já existia).
-- A busca do treinador/acervo (`catalogQuery`) aceita o código completo e encontra exatamente a questão.
+- A busca do treinador/acervo (`catalogQuery`) aceita o código completo (`NC-…`) e encontra exatamente a questão.
 
 ## Itens repetidos na mesma prova (no código)
 
@@ -29,25 +29,24 @@ para o cargo escolhido continuar com a sua linha), na montagem livre do simulado
 
 `scripts/db/audit-shared-exam-items.sql` (somente leitura) lista no banco os grupos duplicados.
 
-## Primeira tentativa e ranking (depende da migração)
+## Primeira tentativa e ranking (depende de migrações — nenhuma aplicada)
 
-`score_events()` já contava só a 1ª resposta de cada questão, somando treinador e simulados. A migração:
+A reserva da primeira resposta no banco vem de `20261020120000_cross_mode_question_identity.sql`
+(ver `docs/releases/2026-10-20-cross-mode-history.md`): tabela `question_first_answers` com chave única
+`(user_id, tabela, questão)`, gravada por gatilho na mesma transação; qualquer primeira tentativa, certa,
+errada ou rápida, consome a questão, e repetições ficam com `ranking_first = false`.
 
-1. faz **qualquer** primeira tentativa consumir a questão. Antes, uma resposta de treinador com menos de
-   4 s era descartada e uma repetição posterior passava a valer como inédita; o mesmo valia para
-   simulados com duração curta demais. Errar primeiro e repetir até acertar não rende ponto;
-2. trata cadastros idênticos da mesma prova como uma questão (`question_canonical_map()`), e aceita
-   aliases explícitos entre tabelas em `question_identity_aliases` (somente administrador);
-3. expõe `my_answered_questions()` e `simulator_attempt_ranking()` para o aviso "você já respondeu"
-   e para separar a pontuação elegível de cada tentativa.
+Esta entrega acrescenta, em `20261020130000_attempt_results_and_study_later.sql`, só o que aquela não tem:
+`question_public_code()` (mesmo código NC-…), `simulator_attempt_results` e `study_later_items`.
 
-Nada é apagado nem recalculado em massa: os pontos continuam derivados na leitura. Pontos de quem
-repetiu uma questão que já tinha consumido com resposta rápida podem diminuir (efeito desejado).
-Teste da lógica contra PostgreSQL descartável: `scripts/db/first-attempt/README.md`.
+Limite conhecido: a reserva é por `(tabela, id)`. Dois cadastros idênticos da mesma prova (ex.: Agente e
+Papiloscopista da PC-PR 2026) são ids diferentes e, no ranking, ainda contam como duas questões.
+Na interface eles já são unidos (próxima seção). Unir também no ranking exige o gatilho de reserva
+resolver o id canônico; não foi feito sem poder auditar os pares no banco real
+(`scripts/db/audit-shared-exam-items.sql`).
 
-Sem a migração aplicada, o app continua funcionando: o aviso de repetição usa as respostas lidas pelo
-cliente (`useLockedAnswers` agora inclui `simulator_responses`) e a pontuação do servidor segue a regra
-anterior.
+Sem as migrações aplicadas, o app funciona: `useLockedAnswers` usa a leitura compatível das duas
+modalidades e a pontuação do servidor segue a regra anterior.
 
 ## Nota, aproveitamento e ranking
 
@@ -58,7 +57,7 @@ Três medidas distintas (`src/lib/examScoring.ts`, `src/lib/attemptDetails.ts`):
   (corretas - erradas ...)". Qualquer outra situação (montagem livre, edição sem registro,
   registros divergentes) usa pontuação simples, e a tela diz isso. Em branco vale 0 em ambas.
 - **Aproveitamento**: acertos / total e acertos / respondidas.
-- **Ranking**: `simulator_attempt_ranking()`; repetidas não somam.
+- **Ranking**: `get_simulator_ranking_result()`; repetidas não somam.
 
 `simulator_attempt_results` (migração) guarda regra, nota e puladas por tentativa; sem ela a tela
 recalcula a nota simples a partir de `simulator_attempts` e avisa que não há regra registrada.

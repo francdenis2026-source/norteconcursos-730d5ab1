@@ -56,15 +56,32 @@ export async function fetchAttemptHistory(
       (r) => (r.error ? [] : ((r.data as ResultRow[] | null) ?? [])),
       () => [] as ResultRow[],
     ),
-    Promise.resolve(
-      supabase.rpc("simulator_attempt_ranking" as never, { _attempt_ids: ids } as never),
-    ).then(
-      (r) => {
-        const response = r as unknown as { data: RankingRow[] | null; error: unknown };
-        return response.error ? [] : (response.data ?? []);
-      },
-      () => [] as RankingRow[],
-    ),
+    // Pontos de ranking elegíveis por tentativa (get_simulator_ranking_result): só o dono consulta; tentativas
+    // anteriores à reserva da primeira resposta devolvem nulo e aparecem sem dados de ranking.
+    Promise.all(
+      ids.map((id) =>
+        Promise.resolve(
+          supabase.rpc("get_simulator_ranking_result" as never, { _attempt: id } as never),
+        ).then(
+          (r): RankingRow | null => {
+            const response = r as unknown as {
+              data: { eligible: number; repeated: number; points: number } | null;
+              error: unknown;
+            };
+            if (response.error || !response.data) return null;
+            return {
+              attempt_id: id,
+              answered: response.data.eligible + response.data.repeated,
+              counted: response.data.eligible,
+              repeated: response.data.repeated,
+              points: response.data.points,
+              attempt_valid: true,
+            };
+          },
+          () => null,
+        ),
+      ),
+    ).then((rows) => rows.filter((row): row is RankingRow => row !== null)),
   ]);
   const resultById = new Map(results.map((r) => [r.attempt_id, r]));
   const rankingById = new Map(ranking.map((r) => [r.attempt_id, r]));
