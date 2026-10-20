@@ -14,5 +14,10 @@ export const CHUNK_RECOVERY_SCRIPT = `(function(){
   }
   window.addEventListener('vite:preloadError',function(event){recover(event.payload);});
   window.addEventListener('unhandledrejection',function(event){recover(event.reason);});
-  window.addEventListener('error',function(event){recover(event.error||event.message);});
+  window.addEventListener('error',function(event){
+    var t=event.target;
+    // Failed <script type=module>/<link rel=modulepreload> loads fire a plain Event on the element (no message, no bubbling): capture them.
+    if(t&&t!==window&&(t.tagName==='SCRIPT'&&t.type==='module'||t.tagName==='LINK'&&/modulepreload/.test(t.rel||''))){recover('failed to load module script');return;}
+    recover(event.error||event.message);
+  },true);
 })();`;
