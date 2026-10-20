@@ -8,7 +8,18 @@ import {
 } from "@/lib/dailyStudyActivity";
 import { DailyStudyActivity } from "@/components/dashboard/DailyStudyActivity";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Clock, ListChecks, TrendingUp } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ChevronRight,
+  Clock,
+  ListChecks,
+  SkipForward,
+  TrendingUp,
+  XCircle,
+} from "lucide-react";
+import { MetricQuestionList } from "@/components/dashboard/MetricQuestionList";
+import { buildMetricLists, type MetricListKind } from "@/lib/metricQuestionLists";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { acreDateKey } from "@/lib/acreTime";
 import {
@@ -213,6 +224,7 @@ export function StudentMetricDetails({
   const today = acreDateKey(now);
   const [setupFresh] = useState(() => String(Date.now()));
   const skippedQuery = useSkippedQuestions(userId);
+  const [openList, setOpenList] = useState<MetricListKind | null>(null);
   if (metric === "questions" || metric === "accuracy") {
     const day = selectedDate ?? today;
     const filtered = trainingPeriodRows(training, period, day);
@@ -231,6 +243,7 @@ export function StudentMetricDetails({
       },
     );
     const answered = stats.correct + stats.wrong;
+    const lists = buildMetricLists(filtered, skippedPending);
     return (
       <div className="student-metric-panel__body" data-metric={metric}>
         <StudyPeriodControls
@@ -267,25 +280,61 @@ export function StudentMetricDetails({
                 : `${count(stats.correct)} acertos em ${count(stats.total)} questões`}
             </p>
           </div>
-          <dl>
-            <div>
-              <dt>Acertos</dt>
-              <dd>{count(stats.correct)}</dd>
-            </div>
-            <div>
-              <dt>Erros</dt>
-              <dd>{count(stats.wrong)}</dd>
-            </div>
-            <div>
-              <dt>Respondidas</dt>
-              <dd>{count(answered)}</dd>
-            </div>
-            <div title="Puladas no treino que ainda não foram respondidas nem marcadas como revisadas">
-              <dt>Puladas</dt>
-              <dd>{skippedQuery.isError ? "—" : skippedQuery.isPending ? "…" : count(skippedPending.length)}</dd>
-            </div>
-          </dl>
+          <div
+            className="student-metric-panel__chips"
+            role="group"
+            aria-label="Detalhar por resultado"
+          >
+            {(
+              [
+                ["correct", "Acertos", stats.correct, CheckCircle2, "ok"],
+                ["wrong", "Erros", stats.wrong, XCircle, "bad"],
+                ["answered", "Respondidas", answered, ListChecks, "info"],
+                [
+                  "skipped",
+                  "Puladas",
+                  skippedQuery.isError
+                    ? null
+                    : skippedQuery.isPending
+                      ? undefined
+                      : skippedPending.length,
+                  SkipForward,
+                  "warn",
+                ],
+              ] as const
+            ).map(([kind, label, value, Icon, tone]) => (
+              <button
+                key={kind}
+                type="button"
+                data-tone={tone}
+                disabled={!value}
+                onClick={() => setOpenList(kind)}
+                aria-label={
+                  value
+                    ? `${label}: ${count(value)}. Abrir a lista de questões`
+                    : `${label}: ${value === undefined ? "carregando" : value === null ? "indisponível" : "nenhuma"}`
+                }
+              >
+                <span className="student-metric-panel__chip-icon">
+                  <Icon aria-hidden="true" />
+                </span>
+                <span className="student-metric-panel__chip-text">
+                  <small>{label}</small>
+                  <strong>{value === undefined ? "…" : value === null ? "—" : count(value)}</strong>
+                </span>
+                {!!value && (
+                  <ChevronRight className="student-metric-panel__chip-go" aria-hidden="true" />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
+        <MetricQuestionList
+          kind={openList}
+          items={openList ? lists[openList] : []}
+          userId={userId}
+          onClose={() => setOpenList(null)}
+        />
         {!stats.total ? (
           <p className="student-metric-panel__empty">
             {training.length

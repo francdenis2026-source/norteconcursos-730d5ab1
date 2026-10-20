@@ -13551,3 +13551,24 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 .ranking-profile__position small { font-size: 10px; color: rgba(255, 255, 255, .7); }
 .ranking-profile > button:last-child { z-index: 2; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: rgba(10, 13, 18, .55); color: #fff; opacity: 1; }
 @media (max-width: 420px) { .ranking-profile__identity { padding-right: 48px; gap: 10px; } .ranking-profile__position { padding: 5px 9px; } }
+
+/* Painel de métricas: resultados em botões (acertos, erros, respondidas, puladas) que abrem a lista de questões. */
+.student-metric-panel__summary { align-items: stretch; }
+.student-metric-panel__chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; flex: 1 1 290px; max-width: 360px; }
+.student-metric-panel__chips > button { --chip-accent: var(--primary); position: relative; display: flex; align-items: center; gap: 10px; min-height: 62px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); color: var(--foreground); text-align: left; cursor: pointer; transition: border-color .15s, transform .15s, box-shadow .15s; }
+.student-metric-panel__chips > button[data-tone="ok"] { --chip-accent: #16a34a; }
+.student-metric-panel__chips > button[data-tone="bad"] { --chip-accent: #e11d48; }
+.student-metric-panel__chips > button[data-tone="info"] { --chip-accent: #2563eb; }
+.student-metric-panel__chips > button[data-tone="warn"] { --chip-accent: #d97706; }
+.student-metric-panel__chips > button:not(:disabled):hover { border-color: var(--chip-accent); transform: translateY(-1px); box-shadow: 0 8px 18px -14px var(--chip-accent); }
+.student-metric-panel__chips > button:focus-visible { outline: 2px solid var(--chip-accent); outline-offset: 2px; }
+.student-metric-panel__chips > button:disabled { opacity: .55; cursor: default; }
+.student-metric-panel__chip-icon { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 10px; background: color-mix(in oklab, var(--chip-accent) 16%, transparent); color: var(--chip-accent); }
+.student-metric-panel__chip-icon svg { width: 18px; height: 18px; }
+.student-metric-panel__chip-text { display: grid; gap: 2px; min-width: 0; }
+.student-metric-panel__chip-text small { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted-foreground); }
+.student-metric-panel__chip-text strong { font-size: 22px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.student-metric-panel__chip-go { margin-left: auto; flex: none; width: 15px; height: 15px; color: var(--muted-foreground); transition: transform .15s; }
+.student-metric-panel__chips > button:not(:disabled):hover .student-metric-panel__chip-go { transform: translateX(2px); color: var(--chip-accent); }
+@media (max-width: 520px) { .student-metric-panel__chips { flex-basis: 100%; max-width: none; } }
+@media (prefers-reduced-motion: reduce) { .student-metric-panel__chips > button, .student-metric-panel__chip-go { transition: none; } }
