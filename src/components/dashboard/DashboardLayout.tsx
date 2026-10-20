@@ -269,7 +269,7 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-/* Painéis sem texto denso que recebem a arte decorativa de fundo; ver styles.css.
+/* Variantes da identidade visual; demais áreas de concursos usam azul. ENEM e administração têm identidade própria.
    "blue" = imagem azul-marinho; "gold" = imagem preto e dourado (planos e premiação). */
 const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
   "/dashboard": "blue",
@@ -313,7 +313,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, []);
 
   const isAdmin = user?.role === "admin";
-  const brandBg = isAdmin ? undefined : BRAND_BG_ROUTES[location.pathname.replace(/\/+$/, "") || "/"];
+  const brandPath = location.pathname.replace(/\/+$/, "") || "/";
+  const brandBg = isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
+    ? undefined
+    : BRAND_BG_ROUTES[brandPath] ?? "blue";
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
   const items = React.useMemo(
     () =>
@@ -659,6 +662,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             className="app-content"
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >
+            {brandBg && <div className="app-brand-background no-print" aria-hidden="true" />}
             <div className="app-content__inner">
               <PlatformBack />
               {children}

@@ -45,7 +45,7 @@ async def main():
   await context.add_init_script("localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',"+json.dumps(json.dumps(session))+");")
   await context.route('**/*.supabase.co/**',backend)
   page=await context.new_page()
-  for path,has_art in [('/dashboard',True),('/dashboard/performance',True),('/dashboard/subscriptions',True),('/dashboard/library',False),('/dashboard/question-trainer',False),('/dashboard/enem',False)]:
+  for path,has_art in [('/dashboard',True),('/dashboard/performance',True),('/dashboard/subscriptions',True),('/dashboard/library',True),('/dashboard/question-trainer',True),('/dashboard/enem',False)]:
    await page.goto('http://localhost:8080'+path,wait_until='domcontentloaded')
    await page.locator('.app-shell').wait_for()
    actual=await page.locator('.app-shell').get_attribute('data-brand-bg')
@@ -60,10 +60,11 @@ async def main():
       assert await page.locator('.app-main').evaluate('e=>getComputedStyle(e,"::after").content')=='none'
       await page.screenshot(path=f'outputs/qa/internal-{path.rsplit("/",1)[-1]}-{theme}-{w}.png')
    results.append({'path':path,'art':has_art})
-  # The decoration is excluded from admin and reduced-transparency reading modes.
+  # The decoration is excluded from the admin identity.
   await page.goto('http://localhost:8080/dashboard',wait_until='domcontentloaded');await page.locator('.app-shell').wait_for()
   await page.locator('.app-shell').evaluate('e=>e.dataset.area="admin"')
   assert 'carreiras-' not in await page.locator('.app-content').evaluate('e=>getComputedStyle(e).backgroundImage')
   await context.close();await b.close()
-  print(json.dumps(results));print('PASS: image framing, plan actions, student backgrounds and plain reading areas')
-asyncio.run(main())
+  print(json.dumps(results));print('PASS: image framing, plan actions, student backgrounds and excluded identities')
+if __name__=='__main__':
+ asyncio.run(main())
