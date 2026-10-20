@@ -49,14 +49,14 @@ import { ThemeToggle } from "@/components/landing/ThemeToggle";
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
-    title: "Norte Concurso | Preparação de elite para carreiras policiais",
+    title: "Norte Concursos | Sua preparação tem direção",
     meta: [
       {
         name: "description",
         content:
           "Plataforma de estudo para Polícia Federal, PRF, Polícias Civis, Penais e Militares, com questões, simulados e inteligência de desempenho.",
       },
-      { property: "og:title", content: "Norte Concurso — Sua aprovação tem direção" },
+      { property: "og:title", content: "Norte Concursos — Sua preparação tem direção" },
       {
         property: "og:description",
         content: "Treino orientado por dados para quem escolheu servir e proteger.",
@@ -322,13 +322,13 @@ function Index() {
                   <span /> Carreiras policiais e segurança pública
                 </span>
                 <h1 id="home-title">
-                  Sua aprovação
+                  Sua preparação
                   <br />
-                  tem <em>direção.</em>
+                  <em>tem um norte.</em>
                 </h1>
                 <p>
-                  Do edital ao próximo treino. Questões, simulados e um plano de estudos para
-                  transformar sua dedicação em uma preparação bem planejada.
+                  Questões, legislação e simulados para carreiras policiais. Organize seu estudo,
+                  fortaleça suas dificuldades e acompanhe cada avanço em um só lugar.
                 </p>
                 <div className="home-actions">
                   <Link
@@ -351,7 +351,7 @@ function Index() {
             </div>
             <ul className="home-trust" aria-label="Diferenciais">
               <li>
-                <BadgeCheck /> Edital e lei vigentes conferidos
+                <BadgeCheck /> Fontes e revisões identificadas
               </li>
               <li>
                 <Target /> Treino por banca e disciplina
@@ -452,17 +452,7 @@ function Index() {
               >
                 Cada etapa tem <em>um propósito.</em>
               </Head>
-              <figure className="home-method__visual">
-                <img
-                  src="/media/hero/journey.webp"
-                  alt="Pessoa organizando uma jornada de estudos para a prova"
-                  width={960}
-                  height={540}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Da primeira meta ao dia da prova.</figcaption>
-              </figure>
+
             </div>
             <ol className="home-steps">
               {STEPS.map(([Icon, title, text], index) => (
@@ -581,29 +571,6 @@ function Index() {
           </div>
         </section>
 
-        <section className="home-interstitial" aria-label="Preparação orientada para carreiras policiais">
-          <div className="home-container">
-            <figure className="home-interstitial__frame">
-              <img
-                src="/media/hero/home-interstitial.webp"
-                alt="Profissional de segurança pública em uma paisagem urbana noturna"
-                width={2048}
-                height={683}
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption className="home-interstitial__content">
-                <span className="home-eyebrow">Norte · operação</span>
-                <strong>Treino com direção.</strong>
-                <span>Fonte, carreira e prática em um só caminho.</span>
-                <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
-                  Começar grátis <ArrowUpRight aria-hidden="true" />
-                </Link>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
         <section className="home-sources" aria-label="Rastreabilidade jurídica">
           <div className="home-container">
             <div className="home-sources__layout">
@@ -639,15 +606,6 @@ function Index() {
         <PlansSection />
 
         <section className="home-final" aria-labelledby="home-final-title">
-          <img
-            className="home-final__image"
-            src="/media/hero/lineup-carreiras-ajustada.webp"
-            alt=""
-            aria-hidden="true"
-            width={1896}
-            height={830}
-            loading="lazy"
-          />
           <div className="home-container">
             <div className="home-final__inner">
               <div>
@@ -686,7 +644,7 @@ function Index() {
           <div className="home-footer__grid">
             <div className="home-footer__brand">
               <NorteBrand />
-              <p>Inteligência de estudo para as carreiras que protegem o Brasil.</p>
+              <p>Seu norte na preparação para carreiras policiais.</p>
             </div>
             <FooterColumn
               title="Plataforma"
@@ -733,9 +691,9 @@ function Index() {
             </a>
           </div>
           <div className="home-footer__bottom">
-            <span>© 2026 Norte Concurso. Todos os direitos reservados.</span>
+            <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
             <span>Desenvolvido por Franc D'nis</span>
-            <span>Feijó, Acre · 08°09′S 70°21′W</span>
+            <span>Feijó · Acre</span>
           </div>
         </div>
       </footer>

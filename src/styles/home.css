@@ -2321,26 +2321,6 @@
 /* ==========================================================================\n+   Homepage professional pass
    Compact product-led layout with one visual language in both themes.
    ========================================================================== */
-:root:not(.dark) .home {
-  --home-bg: #f4f7fa;
-  --home-surface: #ffffff;
-  --home-tint: #edf3f8;
-  --home-text: #17232f;
-  --home-muted: #5d6c79;
-  --home-line: #d8e2ea;
-  --home-accent: #2766d8;
-  --home-gold: #c88d24;
-}
-.dark .home {
-  --home-bg: #0d131b;
-  --home-surface: #151d27;
-  --home-tint: #1d2935;
-  --home-text: #edf3f8;
-  --home-muted: #9cabb9;
-  --home-line: #2a3745;
-  --home-accent: #72b8ff;
-  --home-gold: #e2b45c;
-}
 .home {
   background: var(--home-bg);
   color: var(--home-text);
@@ -3722,26 +3702,9 @@
 }
 
 /* Final layout lock: the homepage stays compact after all legacy theme rules. */
-:root:not(.dark) .home {
-  --home-bg: #f4f7fa;
-  --home-surface: #fff;
-  --home-tint: #edf3f8;
-  --home-text: #17232f;
-  --home-muted: #5d6c79;
-  --home-line: #d8e2ea;
-  --home-accent: #2766d8;
-  --home-gold: #c88d24;
-}
-.dark .home {
-  --home-bg: #0d131b;
-  --home-surface: #151d27;
-  --home-tint: #1d2935;
-  --home-text: #edf3f8;
-  --home-muted: #9cabb9;
-  --home-line: #2a3745;
-  --home-accent: #72b8ff;
-  --home-gold: #e2b45c;
-}
+/* Theme aliases inherit the shared platform tokens. */
+.home { --home-bg: var(--background); --home-surface: var(--card); --home-tint: var(--muted); --home-text: var(--foreground); --home-muted: var(--muted-foreground); --home-line: var(--border); --home-accent: var(--brass-deep); --home-gold: var(--brass); }
+.dark .home { --home-accent: var(--brass); }
 .home { background: var(--home-bg); color: var(--home-text); }
 .home-container { width: min(1160px, calc(100% - 48px)); }
 .home-section { padding-block: clamp(56px, 7vw, 88px); }
@@ -3991,73 +3954,6 @@
   .dark .home-careers::before { opacity: .14; }
 }
 
-/* Homepage atmosphere: the supplied emblem becomes a quiet texture layer, not a competing panel. */
-.home {
-  position: relative;
-  isolation: isolate;
-  background-color: var(--home-bg);
-}
-.home::before {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  pointer-events: none;
-  background: url("/media/hero/home-bg-texture.webp") center top / cover no-repeat;
-  opacity: .075;
-  mix-blend-mode: screen;
-}
-.home-platform,
-.home-method,
-.home-careers,
-.home-sources,
-.home-plans,
-.home-footer {
-  background-color: color-mix(in oklab, var(--home-bg) 94%, transparent);
-}
-:root:not(.dark) .home::before { opacity: .045; mix-blend-mode: multiply; }
-.dark .home::before { opacity: .095; }
-@media (max-width: 700px) {
-  .home::before { position: absolute; background-size: auto 100%; opacity: .05; }
-  .dark .home::before { opacity: .07; }
-}
-
-/* Texture visibility pass: reveal the atmosphere through section canvases while
-   keeping cards and copy surfaces opaque and readable. */
-.home::before { opacity: .045; }
-:root:not(.dark) .home::before { opacity: .022; }
-.dark .home::before { opacity: .06; }
-.home-platform,
-.home-method,
-.home-careers,
-.home-sources,
-.home-plans,
-.home-footer {
-  background-image: none !important;
-  background-color: color-mix(in oklab, var(--home-bg) 91%, transparent) !important;
-}
-.home-start { background-color: transparent; }
-.home-final {
-  background-color: #111a25;
-  background-image:
-    linear-gradient(90deg, rgb(17 26 37 / .94), rgb(17 26 37 / .78)),
-    url("/media/hero/home-bg-texture.webp");
-  background-position: center, center;
-  background-size: cover;
-}
-.home-footer {
-  background-image:
-    linear-gradient(color-mix(in oklab, var(--home-bg) 92%, transparent), color-mix(in oklab, var(--home-bg) 92%, transparent)),
-    url("/media/hero/home-bg-texture.webp") !important;
-  background-position: center, center;
-  background-size: cover, cover;
-}
-@media (max-width: 700px) {
-  .home::before { opacity: .028; }
-  .dark .home::before { opacity: .045; }
-  .home-final { background-image: linear-gradient(rgb(17 26 37 / .96), rgb(17 26 37 / .9)), url("/media/hero/home-bg-texture.webp"); }
-}
-
 /* Native cursor assets keep their hotspot accurate and retain system fallbacks. */
 @media (hover: hover) and (pointer: fine) {
   .home, .home * {
@@ -4081,4 +3977,132 @@
 .home-start { grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 700px) {
   .home-start__grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Norte editorial composition: shared canvas, compact rhythm, opaque reading surfaces. */
+.home {
+  background-color: var(--home-bg);
+  background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 90%, transparent), color-mix(in srgb, var(--home-bg) 90%, transparent)), url('/media/hero/norte-atmosphere.webp');
+  background-size: auto, 1600px auto;
+  background-position: center, center top;
+  background-repeat: repeat, repeat-y;
+}
+.home::before { content: none; }
+.home .home-container { width: min(1160px, calc(100% - 48px)); }
+.home .home-section { padding-block: 32px; }
+.home.home :is(.home-platform, .home-method, .home-careers, .home-sources, .home-plans, .home-footer) {
+  background: transparent;
+  border-color: var(--home-line);
+}
+.home .home-header {
+  background: color-mix(in srgb, var(--header-glass) 96%, transparent);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid color-mix(in srgb, var(--home-gold) 32%, var(--home-line));
+}
+.home .home-header__inner { min-height: 68px; }
+.home .home-hero {
+  background: var(--ink);
+  min-height: 440px;
+  color: var(--on-ink);
+}
+.home .home-hero__image {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  opacity: 1; mask-image: none; -webkit-mask-image: none;
+}
+.home .home-hero::after {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 86%, transparent), color-mix(in srgb, var(--ink) 55%, transparent) 48%, transparent 76%);
+}
+.home .home-hero__content { min-height: 440px; height: auto; padding-block: 42px 20px; justify-content: center; }
+.home .home-hero__copy { width: 60%; max-width: 660px; }
+.home .home-hero h1 { max-width: 17ch; font-size: clamp(36px, 4.2vw, 58px); line-height: 1.06; }
+.home .home-hero h1 em { color: var(--brass); text-decoration: none; background: none; -webkit-text-fill-color: currentColor; }
+.home .home-hero__copy > p { max-width: 49ch; color: var(--on-ink-muted); font-size: 14px; }
+.home .home-trust { width: fit-content; margin-top: 24px !important; padding: 12px 0 0 !important; border-radius: 0; background: transparent; gap: 12px 22px; }
+.home .home-start { display: block; padding-block: 14px 8px; }
+.home .home-testing { border: 0; min-height: 32px; background: transparent; padding: 0; margin-bottom: 8px; }
+.home .home-start__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.home .home-start :is(.daily-badge, .question-count-badge) { min-height: 82px; padding: 14px 16px; }
+.home .home-heading h2 { font-size: clamp(25px, 2.6vw, 34px); }
+.home .home-section-top { margin-bottom: 22px; gap: 24px; }
+.home .home-platform__workspace { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 20px; }
+.home .home-platform__visual { border-radius: 14px; overflow: hidden; }
+.home .home-platform__visual > img { height: 280px; object-fit: cover; }
+.home .home-core-tools { padding: 16px 20px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-surface); }
+.home .home-core-tool { padding-block: 10px; }
+.home .home-tool { background: var(--home-surface); }
+.home .home-method__intro { display: block; margin-bottom: 20px; }
+.home .home-method__intro .home-heading { max-width: 760px; }
+.home .home-steps { gap: 12px; }
+.home .home-steps > li { padding: 16px; background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 12px; }
+.home .home-opportunity { background: var(--home-surface); }
+.home .home-opportunity__header { padding: 0; display: block; }
+.home .home-opportunity__image { height: 150px; border-radius: 0; }
+.home .home-opportunity__image img { width: 100%; height: 100%; object-fit: cover; }
+.home .home-opportunity__intro { padding: 14px 16px 8px; }
+.home .home-opportunity__body { padding: 0 16px 16px; }
+.home .home-careers__layout { gap: 24px; }
+.home .home-careers::before, .home .home-careers::after { content: none; }
+.home .home-career { background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 10px; }
+.home .home-sources { padding-block: 8px 24px; }
+.home .home-source-details { background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 12px; }
+.home .home-plan { background: var(--home-surface); }
+.home .home-final {
+  background: linear-gradient(90deg, var(--ink), color-mix(in srgb, var(--ink) 78%, transparent)), url('/media/hero/norte-atmosphere.webp') center / cover;
+  padding-block: 28px; min-height: 0; border-top: 1px solid var(--on-ink-line);
+}
+.home .home-final__inner { padding: 0; min-height: 0; gap: 24px; }
+.home .home-final h2 { font-size: clamp(26px, 3vw, 36px); max-width: 24ch; }
+.home .home-final__inner p { max-width: 50ch; }
+.home .home-footer { padding-block: 26px 14px; }
+.home .home-footer__grid { display: grid; grid-template-columns: minmax(180px, 1.3fr) repeat(3, minmax(90px, .6fr)) minmax(170px, 1fr); gap: 20px; align-items: start; }
+.home .home-footer__brand p { max-width: 25ch; font-size: 12px; }
+.home .home-footer__links a { min-height: 32px; font-size: 12px; }
+.home .home-footer__links h3 { margin-bottom: 8px; }
+.home .home-platform-qr { width: 100%; padding: 8px; gap: 8px; margin: 0; grid-column: auto; }
+.home .home-platform-qr img { width: 72px; height: 72px; }
+.home .home-platform-qr span > span { display: none; }
+.home .home-platform-qr strong { font-size: 11px; }
+.home .home-platform-qr small { font-size: 10px; }
+.home .home-footer__bottom { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; padding-top: 12px; font-size: 10px; }
+@media (max-width: 1000px) {
+  .home .home-footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home .home-footer__brand { grid-column: 1 / 3; display: block; }
+  .home .home-platform-qr { grid-column: 3; grid-row: 1; max-width: 220px; }
+  .home .home-platform__workspace { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .home .home-container { width: calc(100% - 32px); }
+  .home .home-section { padding-block: 24px; }
+  .home .home-header__inner { min-height: 60px; }
+  .home .home-hero, .home .home-hero__content { min-height: 460px; }
+  .home .home-hero__content { padding-block: 36px 20px; }
+  .home .home-hero__copy { width: 100%; max-width: 510px; }
+  .home .home-hero__image { object-position: 62% center; opacity: .7; }
+  .home .home-hero::after { background: linear-gradient(90deg, color-mix(in srgb, var(--ink) 90%, transparent), color-mix(in srgb, var(--ink) 58%, transparent)); }
+  .home .home-hero h1 { font-size: clamp(34px, 8.5vw, 48px); }
+  .home .home-trust { gap: 8px 14px; margin-top: 20px !important; }
+  .home .home-start__grid, .home .home-platform__workspace { grid-template-columns: minmax(0, 1fr); }
+  .home .home-platform__visual > img { height: 190px; }
+  .home .home-opportunity__image { height: 140px; }
+  .home .home-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .home .home-footer__brand { grid-column: 1 / -1; display: flex; gap: 18px; }
+  .home .home-footer__brand p { margin: 0; }
+  .home .home-platform-qr { grid-column: 2; grid-row: 3; align-self: end; }
+  .home .home-footer__links a { min-height: 40px; }
+  .home .home-footer__bottom { display: grid; gap: 4px; }
+  .home .home-final { padding-block: 24px; }
+}
+.home .home-opportunity__header .home-opportunity__image { width: 100%; max-width: none; aspect-ratio: auto; }
+.home .home-opportunity__header .home-opportunity__image > img { object-fit: cover; }
+.home #concursos { background: transparent; }
+@media (max-width: 700px) {
+  .home .home-footer__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home .home-platform-qr { grid-column: 1 / -1; grid-row: auto; max-width: none; width: 100%; justify-content: center; }
+  .home .home-platform-qr img { width: 60px; height: 60px; }
+  .home .home-platform-qr > span { max-width: none; }
+  .home .home-footer__links ul { display: block; }
+}
+@media (min-width: 370px) and (max-width: 700px) {
+  .home .home-steps, .home .home-careers__grid, .home .home-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home .home-tool summary h3 { font-size: 12px; }
 }
