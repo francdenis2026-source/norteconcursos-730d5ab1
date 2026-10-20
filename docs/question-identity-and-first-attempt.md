@@ -39,11 +39,12 @@ errada ou rápida, consome a questão, e repetições ficam com `ranking_first =
 Esta entrega acrescenta, em `20261020130000_attempt_results_and_study_later.sql`, só o que aquela não tem:
 `question_public_code()` (mesmo código NC-…), `simulator_attempt_results` e `study_later_items`.
 
-Limite conhecido: a reserva é por `(tabela, id)`. Dois cadastros idênticos da mesma prova (ex.: Agente e
-Papiloscopista da PC-PR 2026) são ids diferentes e, no ranking, ainda contam como duas questões.
-Na interface eles já são unidos (próxima seção). Unir também no ranking exige o gatilho de reserva
-resolver o id canônico; não foi feito sem poder auditar os pares no banco real
-(`scripts/db/audit-shared-exam-items.sql`).
+A reserva é por `(tabela, id)`. Dois cadastros idênticos da mesma prova em cargos diferentes eram duas
+questões no ranking. A auditoria no banco real (2026-10-20) achou itens ativos em dobro em PC-PR 2026
+(74 grupos), PF 2021 (79+4+2), PF 2025 (59) e Polícia Penal do Acre 2023 (30). A migração
+`20261020140000_equivalent_first_answer_reservation.sql` (criada, **a aplicar**) faz o gatilho tratar
+cadastros equivalentes como uma questão para respostas NOVAS, sem reescrever reservas antigas. Grupos com
+várias linhas iguais no mesmo cargo (PC Acre 2017, 11 a 19 linhas) são ignorados: não provam duplicata.
 
 **Estado em 2026-10-20:** as duas migrações (`20261020120000_cross_mode_question_identity.sql` e
 `20261020130000_attempt_results_and_study_later.sql`) foram aplicadas no Supabase pelo responsável

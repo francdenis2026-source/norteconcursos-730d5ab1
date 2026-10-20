@@ -15,7 +15,7 @@ import { questionRef } from "./questionIdentity";
 type Comparable = Pick<
   Question,
   "id" | "source" | "contest" | "year" | "board" | "answer" | "text"
-> & { table?: Question["table"] };
+> & { table?: Question["table"]; career?: string };
 
 const fold = (value: string) =>
   value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
@@ -42,17 +42,35 @@ export function dedupeSharedExamItems<T extends Comparable>(
   questions: readonly T[],
   prefer: (question: T) => number = () => 0,
 ): T[] {
+  const groups = validGroups(questions);
   const best = new Map<string, T>();
-  for (const question of questions) {
-    const key = questionContentKey(question);
-    if (!key) continue;
-    const current = best.get(key);
-    if (!current || prefer(question) > prefer(current)) best.set(key, question);
-  }
+  for (const [key, members] of groups)
+    best.set(
+      key,
+      members.reduce((top, member) => (prefer(member) > prefer(top) ? member : top)),
+    );
   return questions.filter((question) => {
     const key = questionContentKey(question);
-    return !key || best.get(key) === question;
+    return !key || !groups.has(key) || best.get(key) === question;
   });
+}
+
+/**
+ * Grupos de itens iguais que contam como duplicata: pelo menos dois cadastros e nenhum cargo repetido.
+ * Várias linhas iguais no MESMO cargo (ex.: PC Acre 2017, 11 a 19 linhas) não provam duplicata e ficam como estão.
+ */
+function validGroups<T extends Comparable>(questions: readonly T[]): Map<string, T[]> {
+  const all = new Map<string, T[]>();
+  for (const question of questions) {
+    const key = questionContentKey(question);
+    if (key) all.set(key, [...(all.get(key) ?? []), question]);
+  }
+  for (const [key, members] of all) {
+    const careers = members.map((member) => member.career ?? "");
+    if (members.length < 2 || careers.some((c) => !c) || new Set(careers).size !== members.length)
+      all.delete(key);
+  }
+  return all;
 }
 
 /**
@@ -60,15 +78,15 @@ export function dedupeSharedExamItems<T extends Comparable>(
  * Usado para que uma resposta dada a um cadastro valha para o outro.
  */
 export function sharedItemSiblings(questions: readonly Comparable[]): Map<string, string[]> {
-  const groups = new Map<string, string[]>();
-  for (const question of questions) {
-    const key = questionContentKey(question);
-    if (!key) continue;
-    groups.set(key, [...(groups.get(key) ?? []), questionRef({ id: question.id, source: question.source, ...(question.table ? { table: question.table } : {}) })]);
-  }
   const siblings = new Map<string, string[]>();
-  for (const refs of groups.values()) {
-    if (refs.length < 2) continue;
+  for (const members of validGroups(questions).values()) {
+    const refs = members.map((question) =>
+      questionRef({
+        id: question.id,
+        source: question.source,
+        ...(question.table ? { table: question.table } : {}),
+      }),
+    );
     for (const ref of refs)
       siblings.set(
         ref,
@@ -89,13 +107,7 @@ export function expandAnsweredBySiblings<V>(
   keyOf: (question: Comparable) => string,
 ): Map<string, V> {
   const expanded = new Map(answered);
-  const groups = new Map<string, Comparable[]>();
-  for (const question of catalog) {
-    const content = questionContentKey(question);
-    if (content) groups.set(content, [...(groups.get(content) ?? []), question]);
-  }
-  for (const members of groups.values()) {
-    if (members.length < 2) continue;
+  for (const members of validGroups(catalog).values()) {
     const holder = members.find((member) => answered.has(keyOf(member)));
     if (!holder) continue;
     const value = answered.get(keyOf(holder))!;

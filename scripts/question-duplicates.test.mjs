@@ -71,3 +71,16 @@ test("siblings are indexed by table:id", () => {
   const siblings = sharedItemSiblings([agente, papiloscopista]);
   assert.deepEqual(siblings.get(`board_exam_questions:${agente.id}`), [`board_exam_questions:${papiloscopista.id}`]);
 });
+
+test("several identical rows in the SAME role are not proof of a duplicate and stay untouched", () => {
+  const same = [1, 2, 3].map((n) => ({ ...agente, id: `acre-${n}` }));
+  assert.equal(dedupeSharedExamItems(same).length, 3);
+  assert.equal(sharedItemSiblings(same).size, 0);
+  const answered = new Map([[key(same[0]), true]]);
+  assert.equal(expandAnsweredBySiblings(answered, same, key).size, 1);
+});
+
+test("rows without a role are never merged by content", () => {
+  const anonymous = [{ ...agente, career: undefined }, { ...papiloscopista, career: undefined, id: "x" }];
+  assert.equal(dedupeSharedExamItems(anonymous).length, 2);
+});

@@ -295,6 +295,7 @@ export function simulatorComparable(q: SimulatorQuestion) {
     contest: q.contest,
     year: String(q.year),
     board: q.board,
+    career: q.career,
     answer: q.answer,
     text: q.text,
   } as const;
