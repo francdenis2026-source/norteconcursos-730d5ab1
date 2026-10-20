@@ -1,5 +1,6 @@
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import * as PreparationTabs from "@radix-ui/react-tabs";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
@@ -16,12 +17,9 @@ import {
   ArrowRight,
   ArrowUpRight,
   BadgeCheck,
-  BookOpenCheck,
   BrainCircuit,
   CalendarClock,
   ChevronRight,
-  ChevronDown,
-  Plus,
   Compass,
   FileSearch,
   Landmark,
@@ -37,6 +35,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
+import "@/styles/home-operations.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -69,9 +68,8 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV: [string, string][] = [
-  ["Como funciona", "#como"],
-  ["Ferramentas", "#ferramentas"],
-  ["Carreiras", "#carreiras"],
+  ["A plataforma", "#plataforma"],
+  ["Concursos", "#concursos"],
   ["Planos", "#planos"],
 ];
 
@@ -215,6 +213,77 @@ function usePointerInteractions() {
   }, []);
 }
 
+const PREPARATION_TABS = [
+  ["ferramentas", "Ferramentas"],
+  ["como", "Como funciona"],
+  ["carreiras", "Carreiras"],
+  ["fontes", "Fontes oficiais"],
+] as const;
+
+function PreparationInfo() {
+  const [active, setActive] = useState("ferramentas");
+  useEffect(() => {
+    const selectHash = (hash: string) => {
+      const value = hash.replace(/^#/, "");
+      if (PREPARATION_TABS.some(([id]) => id === value)) setActive(value);
+    };
+    const onHashChange = () => selectHash(window.location.hash);
+    const onAnchorClick = (event: MouseEvent) => {
+      const anchor = event.target instanceof Element ? event.target.closest("a") : null;
+      const href = anchor?.getAttribute("href");
+      if (href?.startsWith("#")) selectHash(href);
+    };
+    onHashChange();
+    window.addEventListener("hashchange", onHashChange);
+    document.addEventListener("click", onAnchorClick);
+    return () => {
+      window.removeEventListener("hashchange", onHashChange);
+      document.removeEventListener("click", onAnchorClick);
+    };
+  }, []);
+  return (
+    <PreparationTabs.Root value={active} onValueChange={setActive} className="home-preparation__info">
+      <PreparationTabs.List className="home-preparation__tabs" aria-label="Conheça a preparação">
+        {PREPARATION_TABS.map(([id, label]) => (
+          <div key={id} id={id} className="home-preparation__tab-anchor">
+            <PreparationTabs.Trigger value={id} className="home-preparation__tab">
+              {label}
+            </PreparationTabs.Trigger>
+          </div>
+        ))}
+      </PreparationTabs.List>
+      <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
+        <div className="home-preparation__items">
+          {TOOLS.map(({ icon: Icon, title, text }) => (
+            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="como" className="home-preparation__panel">
+        <ol className="home-preparation__items home-preparation__steps">
+          {STEPS.map(([Icon, title, text], index) => (
+            <li key={title}><span className="home-preparation__number">0{index + 1}</span><div><h3><Icon aria-hidden="true" />{title}</h3><p>{text}</p></div></li>
+          ))}
+        </ol>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="carreiras" className="home-preparation__panel">
+        <div className="home-preparation__items home-preparation__careers">
+          {CAREERS.map(([name, roles]) => (
+            <article key={name}><ShieldCheck aria-hidden="true" /><div><h3>{name}</h3><p>{roles}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+      <PreparationTabs.Content value="fontes" className="home-preparation__panel">
+        <div className="home-preparation__items">
+          {PILLARS.map(({ icon: Icon, title, text }) => (
+            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+          ))}
+        </div>
+      </PreparationTabs.Content>
+    </PreparationTabs.Root>
+  );
+}
+
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
@@ -347,9 +416,13 @@ function Index() {
                     <ArrowRight />
                   </a>
                 </div>
-                <span className="home-hero__note">
-                  Comece gratuitamente. No seu ritmo, com um objetivo claro.
-                </span>
+                <div className="home-hero__study-entry" aria-label="Comece sua preparação">
+                  <TestingSeal />
+                  <div className="home-hero__study-links">
+                    <DailyChallengeBadge />
+                    <QuestionCountBadge />
+                  </div>
+                </div>
               </div>
             </div>
             <ul className="home-trust" aria-label="Diferenciais">
@@ -366,119 +439,57 @@ function Index() {
           </div>
         </section>
 
-        <div className="home-start home-container">
-          <TestingSeal />
-          <div className="home-start__grid">
-            <DailyChallengeBadge />
-            <QuestionCountBadge />
-          </div>
-        </div>
-
-        <section
-          id="plataforma"
-          className="home-section home-platform"
-          aria-labelledby="platform-title"
-        >
-          <div className="home-container">
-            <div id="ferramentas" className="home-section-top">
-              <div className="home-heading">
-                <span className="home-eyebrow">Sua preparação, em um só lugar</span>
-                <h2 id="platform-title">
-                  Do edital ao treino.
-                  <br />
-                  <em>Veja sua evolução.</em>
-                </h2>
+        <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
+          <div className="home-preparation__fullwidth">
+            <div className="home-preparation__band">
+              <span className="home-preparation__frame" aria-hidden="true" />
+              <span className="home-preparation__sweep" aria-hidden="true" />
+              <img
+                className="home-preparation__art"
+                src="/media/hero/auth-carreiras-composicao.webp"
+                alt=""
+                width={1440}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="home-preparation__intro">
+                <span className="home-preparation__eyebrow">Para quem escolheu servir e proteger</span>
+                <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
+                <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
+                <div className="home-preparation__actions">
+                  <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
+                    Começar gratuitamente <ArrowUpRight aria-hidden="true" />
+                  </Link>
+                  <Link to="/desafio-diario" className="home-preparation__challenge">
+                    Fazer o desafio diário <ArrowRight aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
-              <p className="home-section-intro">
-                Estude a teoria, resolva questões e identifique o que precisa reforçar.
-                Sua próxima sessão começa com uma prioridade clara.
-              </p>
-            </div>
-            <div className="home-platform__workspace">
-              <figure className="home-platform__visual">
-                <img
-                  src="/media/hero/painel-aluno-estudo.webp"
-                  alt="Ambiente de estudo com materiais para a preparação de concursos"
-                  width={960}
-                  height={640}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  <BookOpenCheck aria-hidden="true" />
-                  <span>
-                    Teoria, prática e revisão.<strong>Cada sessão com uma direção.</strong>
-                  </span>
-                </figcaption>
-              </figure>
-              <div className="home-core-tools">
-                {TOOLS.filter(({ featured }) => featured).map(
-                  ({ icon: Icon, title, text }, index) => (
-                    <article className="home-core-tool" key={title}>
-                      <span className="home-core-tool__number">0{index + 1}</span>
-                      <div>
-                        <h3>
-                          <Icon aria-hidden="true" />
-                          {title}
-                        </h3>
-                        <p>{text}</p>
-                      </div>
-                    </article>
-                  ),
-                )}
-                <Link to="/auth" search={{ mode: "register" }} className="home-text-link">
-                  Organizar minha preparação <ArrowRight aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-            <div className="home-tools" aria-label="Mais recursos de estudo">
-              {TOOLS.filter(({ featured }) => !featured).map(({ icon: Icon, title, text }) => (
-                <details key={title} className="home-tool">
-                  <summary>
-                    <Icon aria-hidden="true" />
-                    <h3>{title}</h3>
-                    <Plus aria-hidden="true" />
-                  </summary>
-                  <p>{text}</p>
-                </details>
-              ))}
+              <PreparationInfo />
             </div>
           </div>
         </section>
 
-        <section id="como" className="home-section home-method">
+        <section id="concursos" className="home-section home-operations">
           <div className="home-container">
-            <div className="home-method__intro">
+            <div className="home-operations__heading">
               <Head
-                kicker="Como funciona"
-                lead="Escolha seu objetivo, descubra o que reforçar e pratique no seu ritmo até a prova."
+                kicker="No seu radar"
+                lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
               >
-                Uma rotina clara. <em>Um passo de cada vez.</em>
+                Seu próximo <em>objetivo.</em>
               </Head>
+              <img
+                className="home-operations__art"
+                src="/media/hero/auth-carreiras-composicao.webp"
+                alt=""
+                width={1440}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <ol className="home-steps">
-              {STEPS.map(([Icon, title, text], index) => (
-                <li key={title}>
-                  <div className="home-step__top">
-                    <span>0{index + 1}</span>
-                    <Icon aria-hidden="true" />
-                  </div>
-                  <h3>{title}</h3>
-                  <p>{text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section id="concursos" className="home-section">
-          <div className="home-container">
-            <Head
-              kicker="No seu radar"
-              lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
-            >
-              Seu próximo <em>objetivo.</em>
-            </Head>
             <HomeRail className="home-opportunities" label="Oportunidades de concursos">
               <PcprExamPromo />
               <PcpiExamPromo />
@@ -551,116 +562,23 @@ function Index() {
           </div>
         </section>
 
-        <section id="carreiras" className="home-section home-careers">
-          <div className="home-container home-careers__layout">
-            <div>
-              <Head kicker="Para quem escolheu servir e proteger">
-                Uma plataforma.
-                <br />
-                <em>A sua carreira.</em>
-              </Head>
-            </div>
-            <div className="home-careers__grid">
-              {CAREERS.map(([name, roles]) => (
-                <div className="home-career" key={name}>
-                  <div>
-                    <h3>{name}</h3>
-                    <p>{roles}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="home-sources" aria-label="Rastreabilidade jurídica">
-          <div className="home-container">
-            <div className="home-sources__layout">
-              <details className="home-source-details">
-                <summary>
-                  <ShieldCheck aria-hidden="true" />
-                  <span>
-                    Conteúdo jurídico com fonte e verificação de vigência
-                    <small>Conheça os critérios de revisão</small>
-                  </span>
-                  <ChevronDown aria-hidden="true" />
-                </summary>
-                <p>
-                  Cada item jurídico fica ligado ao edital ativo, à fonte oficial e à verificação de
-                  vigência.
-                </p>
-                <div className="home-sources__grid">
-                  {PILLARS.map(({ icon: Icon, title, text }) => (
-                    <article key={title}>
-                      <Icon aria-hidden="true" />
-                      <div>
-                        <h3>{title}</h3>
-                        <p>{text}</p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </details>
-            </div>
-          </div>
-        </section>
-
         <PlansSection />
 
-        <section className="home-final" aria-labelledby="home-final-title">
-          <img
-            className="home-final__image"
-            src="/media/hero/lineup-carreiras-ajustada.webp"
-            alt="Representação de profissionais de segurança pública de diferentes carreiras, diante de uma paisagem amazônica"
-            width={1896}
-            height={830}
-            loading="lazy"
-            decoding="async"
-          />
-          <div className="home-container">
-            <div className="home-final__inner">
-              <div>
-                <span className="home-eyebrow">O próximo passo é seu</span>
-                <h2 id="home-final-title">
-                  Dedicação você já tem.
-                  <br />
-                  <em>Agora, estude com direção.</em>
-                </h2>
-                <p>
-                  Defina sua carreira, faça o diagnóstico e comece seu primeiro ciclo de treino.
-                </p>
-              </div>
-              <div className="home-final__actions">
-                <Link
-                  to="/auth"
-                  search={{ mode: "register" }}
-                  className="home-button home-button--gold"
-                >
-                  Começar gratuitamente
-                  <ArrowUpRight />
-                </Link>
-                <Link to="/desafio-diario" className="home-final__challenge">
-                  <BookOpenCheck />
-                  Fazer o desafio diário
-                  <ArrowRight />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
-      <footer className="home-footer">
+      <footer className="home-footer home-footer--command">
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <NorteBrand />
-              <p>Seu norte na preparação para carreiras policiais.</p>
+              <img className="home-footer__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
+              <div>
+                <NorteBrand />
+                <p>Seu norte na preparação para carreiras policiais.</p>
+              </div>
             </div>
             <FooterColumn
               title="Plataforma"
               links={[
-                ["Como funciona", "#como"],
                 ["Ferramentas", "#ferramentas"],
                 ["Carreiras", "#carreiras"],
                 ["Desafio diário", "/desafio-diario"],
@@ -679,7 +597,8 @@ function Index() {
               title="Acesso"
               links={[
                 ["Entrar", "/auth"],
-                ["Criar conta", "/auth?mode=register"],
+                ["Começar grátis", "/auth?mode=register"],
+                ["Planos e condições", "#planos"],
               ]}
             />
             <a

@@ -234,7 +234,7 @@ function StudentHome({ user }: { user: UserProfile }) {
   };
   return (
     <div className="student-home student-hub">
-      <header className="student-hub__masthead student-hub__masthead--insignia">
+      <header className="student-hub__masthead student-hub__masthead--careers">
         <div className="student-hub__hero-copy">
           <p className="student-hub__welcome">
             {hello}, {firstName}.
@@ -258,10 +258,10 @@ function StudentHome({ user }: { user: UserProfile }) {
         </div>
         <picture className="student-hub__hero-visual" aria-hidden="true">
           <img
-            src="/media/hero/area-aluno-emblema.webp"
+            src="/media/hero/auth-carreiras-composicao.webp"
             alt=""
-            width={1312}
-            height={1199}
+            width={1440}
+            height={600}
             fetchPriority="high"
             decoding="async"
           />

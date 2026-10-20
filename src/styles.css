@@ -13924,3 +13924,42 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .discipline-practice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-weight: 700; text-decoration: none; }
 .discipline-h { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 19px; font-weight: 700; }
 .discipline-none { margin: 0; padding: 14px 16px; border: 1px dashed var(--border); border-radius: 14px; font-size: 14px; color: var(--muted-foreground); }
+
+/* The complete careers artwork sits above the student greeting, never under controls. */
+.app-shell .student-hub__masthead.student-hub__masthead--careers {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  min-height: 0;
+  background: var(--card);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+.app-shell .student-hub__masthead--careers .student-hub__hero-visual {
+  order: -1;
+  position: relative;
+  clip-path: none;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  background: var(--ink);
+}
+.app-shell .student-hub__masthead--careers .student-hub__hero-visual img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+}
+.app-shell .student-hub__masthead--careers .student-hub__hero-visual::after { content: none; }
+.app-shell .student-hub__masthead--careers .student-hub__hero-copy {
+  padding: 18px 24px 22px;
+}
+.app-shell .student-hub__masthead--careers .student-hub__masthead-actions { margin-top: 12px; }
+@media (max-width: 640px) {
+  .app-shell .student-hub__masthead--careers .student-hub__hero-copy { padding: 16px 18px 20px; }
+}
