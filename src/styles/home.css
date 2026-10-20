@@ -4100,8 +4100,15 @@
 .dark .home {
   background-image: linear-gradient(color-mix(in srgb, var(--home-bg) 70%, transparent), color-mix(in srgb, var(--home-bg) 70%, transparent)), url('/media/hero/carreiras-background.webp');
 }
+/* The light theme changes reading surfaces, never the original artwork colors. */
+:root:not(.dark) .home {
+  background-image: url('/media/hero/carreiras-background.webp');
+  background-size: cover;
+  background-attachment: fixed;
+}
 @media (max-width: 700px) {
   .home { background-attachment: scroll; background-size: auto, auto 820px; background-repeat: repeat, repeat-y; }
+  :root:not(.dark) .home { background-size: auto 820px; background-repeat: repeat-y; }
 }
 
 /* Editorial hierarchy and section colors share the platform's light/dark accents. */
@@ -4458,4 +4465,13 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Keep footer copy readable on the full-color canvas, without washing the page background. */
+:root:not(.dark) .home.home .home-footer {
+  background: color-mix(in srgb, var(--card) 95%, transparent);
+  border-top: 1px solid var(--border);
+}
+@media print, (forced-colors: active) {
+  :root:not(.dark) .home { background-image: none; background-color: Canvas; }
 }
