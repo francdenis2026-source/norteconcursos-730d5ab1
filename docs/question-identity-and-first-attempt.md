@@ -29,7 +29,7 @@ para o cargo escolhido continuar com a sua linha), na montagem livre do simulado
 
 `scripts/db/audit-shared-exam-items.sql` (somente leitura) lista no banco os grupos duplicados.
 
-## Primeira tentativa e ranking (depende de migrações — nenhuma aplicada)
+## Primeira tentativa e ranking
 
 A reserva da primeira resposta no banco vem de `20261020120000_cross_mode_question_identity.sql`
 (ver `docs/releases/2026-10-20-cross-mode-history.md`): tabela `question_first_answers` com chave única
@@ -45,7 +45,15 @@ Na interface eles já são unidos (próxima seção). Unir também no ranking ex
 resolver o id canônico; não foi feito sem poder auditar os pares no banco real
 (`scripts/db/audit-shared-exam-items.sql`).
 
-Sem as migrações aplicadas, o app funciona: `useLockedAnswers` usa a leitura compatível das duas
+**Estado em 2026-10-20:** as duas migrações (`20261020120000_cross_mode_question_identity.sql` e
+`20261020130000_attempt_results_and_study_later.sql`) foram aplicadas no Supabase pelo responsável
+do projeto. Conferido por consulta ao catálogo: as tabelas `question_first_answers`,
+`simulator_attempt_results` e `study_later_items` e as funções `get_question_first_answers()`,
+`get_simulator_ranking_result(uuid)` e `question_public_code(text,uuid)` existem; 224 respostas
+já estão reservadas e `score_events()` responde (10 participantes). Isso confirma a existência dos objetos,
+não um teste de ponta a ponta com duas sessões reais; a implantação do app é conferida à parte.
+
+Antes de aplicar, o app funcionava assim: `useLockedAnswers` usa a leitura compatível das duas
 modalidades e a pontuação do servidor segue a regra anterior.
 
 ## Nota, aproveitamento e ranking
