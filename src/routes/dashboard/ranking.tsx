@@ -141,97 +141,166 @@ function ProfileDialog({ userId, onClose }: { userId: string | null; onClose: ()
       alive = false;
     };
   }, [userId]);
-  const Row2 = ({ k, v }: { k: string; v: React.ReactNode }) => (
-    <div className="flex justify-between border-b py-1.5 text-sm last:border-0">
-      <span className="text-muted-foreground">{k}</span>
-      <b className="tabular-nums">{v}</b>
-    </div>
-  );
+  const initial = (p?.display_name ?? "?").trim().charAt(0).toUpperCase() || "?";
+  const missing = p?.next_level_at ? Math.max(0, p.next_level_at - p.general_points) : 0;
   return (
     <Dialog open={!!userId} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="max-w-md">
+      <DialogContent className="ranking-profile max-w-md gap-0 overflow-hidden p-0">
         {p === undefined ? (
-          <div className="flex justify-center py-10">
+          <div className="flex justify-center py-14">
             <Loader2
               className="h-5 w-5 animate-spin text-muted-foreground"
               aria-label="Carregando"
             />
+            <DialogTitle className="sr-only">Carregando perfil</DialogTitle>
           </div>
         ) : p === null ? (
-          <DialogHeader>
+          <DialogHeader className="p-6">
             <DialogTitle>Perfil indisponível</DialogTitle>
             <DialogDescription>Não foi possível carregar este candidato.</DialogDescription>
           </DialogHeader>
         ) : (
           <>
-            <DialogHeader>
-              <DialogTitle>{p.display_name}</DialogTitle>
-              <DialogDescription className="flex items-center gap-2">
-                <Stars n={p.stars} /> Nível {p.level_name} · {p.general_position}º de{" "}
-                {p.participants}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="space-y-1">
-              <div className="flex justify-between text-xs">
-                <span>{p.general_points} pts</span>
-                <span>
-                  {p.next_level_at ? `próximo nível em ${p.next_level_at} pts` : "nível máximo"}
+            <header className="ranking-profile__hero">
+              <img
+                src="/media/hero/norte-atmosphere.webp"
+                alt=""
+                aria-hidden="true"
+                width={1942}
+                height={809}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="ranking-profile__identity">
+                <span className="ranking-profile__avatar" aria-hidden="true">
+                  {initial}
                 </span>
-              </div>
-              <Progress
-                value={
-                  p.next_level_at ? Math.min(100, (100 * p.general_points) / p.next_level_at) : 100
-                }
-                className="h-2"
-              />
-            </div>
-            <div>
-              <Row2 k="Questões resolvidas" v={`${p.questions} (${p.accuracy}% de acertos)`} />
-              <Row2
-                k="Simulados concluídos"
-                v={`${p.simulators} (melhor ${Math.round(Number(p.best_accuracy))}%)`}
-              />
-              <Row2 k="Horas de estudo" v={`${p.study_hours} h`} />
-              <Row2 k="Pontos de questões" v={p.question_points} />
-              <Row2 k="Pontos de simulados" v={p.simulator_points} />
-              <Row2 k="Horas de estudo (métrica)" v={`${p.study_hours} h`} />
-              <Row2
-                k="Flashcards / redação / constância"
-                v={`${p.flashcard_points} / ${p.essay_points} / ${p.consistency_points}`}
-              />
-              <Row2
-                k="Maior sequência de dias"
-                v={
-                  <span className="inline-flex items-center gap-1">
-                    <Flame className="h-3.5 w-3.5 text-orange-500" />
-                    {p.streak}
-                  </span>
-                }
-              />
-            </div>
-            <div>
-              <p className="mb-1 text-xs font-semibold text-muted-foreground">
-                Medalhas ({p.medals.length})
-              </p>
-              {p.medals.length ? (
-                <div className="flex flex-wrap gap-1.5">
-                  {p.medals.map((m) => (
-                    <span
-                      key={m}
-                      className="rounded-full bg-muted px-2.5 py-1 text-xs font-semibold"
-                    >
-                      {m}
-                    </span>
-                  ))}
+                <div className="min-w-0">
+                  <DialogTitle className="truncate text-lg font-bold text-white">
+                    {p.display_name}
+                  </DialogTitle>
+                  <DialogDescription asChild>
+                    <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/80">
+                      <Stars n={p.stars} />
+                      <span>Nível {p.level_name}</span>
+                    </div>
+                  </DialogDescription>
                 </div>
-              ) : (
-                <p className="text-xs text-muted-foreground">Ainda sem medalhas.</p>
-              )}
+                <div
+                  className="ranking-profile__position"
+                  aria-label={`${p.general_position}º lugar entre ${p.participants}`}
+                >
+                  <strong>{p.general_position}º</strong>
+                  <small>de {p.participants}</small>
+                </div>
+              </div>
+            </header>
+            <div className="space-y-5 p-5">
+              <section aria-label="Progresso de nível" className="space-y-2">
+                <div className="flex items-baseline justify-between gap-3">
+                  <p className="text-2xl font-black tabular-nums">
+                    {p.general_points}
+                    <span className="ml-1 text-xs font-semibold text-muted-foreground">pontos</span>
+                  </p>
+                  <p className="text-right text-xs text-muted-foreground">
+                    {p.next_level_at
+                      ? `faltam ${missing} pts para ${p.next_level_at} pts`
+                      : "nível máximo"}
+                  </p>
+                </div>
+                <Progress
+                  value={
+                    p.next_level_at
+                      ? Math.min(100, (100 * p.general_points) / p.next_level_at)
+                      : 100
+                  }
+                  className="h-2"
+                />
+              </section>
+              <dl className="grid grid-cols-2 gap-3">
+                <Tile
+                  label="Questões resolvidas"
+                  value={p.questions}
+                  note={p.questions ? `${p.accuracy}% de acertos` : "Ainda sem respostas"}
+                />
+                <Tile
+                  label="Simulados"
+                  value={p.simulators}
+                  note={
+                    p.simulators
+                      ? `melhor ${Math.round(Number(p.best_accuracy))}%`
+                      : "Nenhum concluído"
+                  }
+                />
+                <Tile label="Horas de estudo" value={`${p.study_hours} h`} note="dedicação total" />
+                <Tile
+                  label="Maior sequência"
+                  value={
+                    <span className="inline-flex items-center gap-1.5">
+                      <Flame className="h-5 w-5 text-orange-500" aria-hidden="true" />
+                      {p.streak}
+                    </span>
+                  }
+                  note={p.streak === 1 ? "dia seguido" : "dias seguidos"}
+                />
+              </dl>
+              <section aria-label="Composição dos pontos">
+                <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  De onde vêm os pontos
+                </h3>
+                <dl className="divide-y rounded-xl border text-sm">
+                  {(
+                    [
+                      ["Questões", p.question_points],
+                      ["Simulados", p.simulator_points],
+                      ["Flashcards", p.flashcard_points],
+                      ["Redação", p.essay_points],
+                      ["Constância", p.consistency_points],
+                    ] as const
+                  ).map(([label, points]) => (
+                    <div key={label} className="flex items-center justify-between px-3 py-2">
+                      <dt className="text-muted-foreground">{label}</dt>
+                      <dd className="font-bold tabular-nums">{points}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+              <section aria-label="Medalhas">
+                <h3 className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <Medal className="h-3.5 w-3.5" aria-hidden="true" /> Medalhas ({p.medals.length})
+                </h3>
+                {p.medals.length ? (
+                  <ul className="flex flex-wrap gap-1.5">
+                    {p.medals.map((m) => (
+                      <li
+                        key={m}
+                        className="rounded-full border bg-muted/60 px-2.5 py-1 text-xs font-semibold"
+                      >
+                        {m}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-xs text-muted-foreground">Ainda sem medalhas.</p>
+                )}
+              </section>
             </div>
           </>
         )}
       </DialogContent>
     </Dialog>
+  );
+}
+
+function Tile({ label, value, note }: { label: string; value: React.ReactNode; note: string }) {
+  return (
+    <div className="rounded-xl border bg-muted/30 p-3">
+      <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+        {label}
+      </dt>
+      <dd className="mt-1 text-xl font-black tabular-nums">{value}</dd>
+      <p className="text-[11px] text-muted-foreground">{note}</p>
+    </div>
   );
 }
 
