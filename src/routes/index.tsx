@@ -416,9 +416,13 @@ function Index() {
                     <ArrowRight />
                   </a>
                 </div>
-                <span className="home-hero__note">
-                  Comece gratuitamente. No seu ritmo, com um objetivo claro.
-                </span>
+                <div className="home-hero__study-entry" aria-label="Comece sua preparação">
+                  <TestingSeal />
+                  <div className="home-hero__study-links">
+                    <DailyChallengeBadge />
+                    <QuestionCountBadge />
+                  </div>
+                </div>
               </div>
             </div>
             <ul className="home-trust" aria-label="Diferenciais">
@@ -434,14 +438,6 @@ function Index() {
             </ul>
           </div>
         </section>
-
-        <div className="home-start home-container">
-          <TestingSeal />
-          <div className="home-start__grid">
-            <DailyChallengeBadge />
-            <QuestionCountBadge />
-          </div>
-        </div>
 
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">

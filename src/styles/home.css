@@ -4857,3 +4857,51 @@
   .home-preparation__art, .home-preparation__band::before, .home-preparation__band::after, .home-preparation__frame, .home-preparation__sweep { display: none; }
   .home-preparation__band { --preparation-text: CanvasText; --preparation-muted: CanvasText; background: Canvas; border-color: CanvasText; }
 }
+
+/* Study entry belongs to the opening hero instead of a separate promotional strip. */
+.home-hero__study-entry { margin-top: 16px; width: 100%; max-width: 680px; }
+.home.home .home-hero__study-entry .home-testing { min-height: 28px; margin: 0 0 6px; gap: 7px; padding: 0; border: 0; background: none; color: var(--on-ink-muted); font-size: 10px; }
+.home.home .home-hero__study-entry .home-testing strong { color: var(--brass-soft); font-size: 10px; }
+.home-hero__study-entry .home-testing p span { display: none; }
+.home-hero__study-entry .home-testing > svg { color: var(--brass-soft); width: 13px; height: 13px; flex: none; }
+.home-hero__study-entry .home-testing > a { display: flex; min-height: 32px; font-size: 10px; color: var(--brass-soft); }
+.home-hero__study-entry .home-testing > a svg { width: 12px; height: 12px; }
+.home-hero__study-links { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 12px; }
+.home-hero__study-links > :only-child { grid-column: 1 / -1; }
+.home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  padding: 10px 12px;
+  gap: 7px;
+  border: 1px solid rgb(240 205 139 / 24%);
+  border-radius: 8px;
+  background: rgb(10 13 16 / 82%);
+  color: var(--on-ink);
+}
+.home-hero__study-links .daily-badge::before { display: none; }
+.home.home .home-hero__study-links :is(.daily-badge, .question-count-badge):hover { border-color: var(--brass-soft); background: rgb(24 25 25 / 96%); }
+.home.home .home-hero__study-links .daily-badge__top { gap: 4px; flex-wrap: wrap; }
+.home.home .home-hero__study-links :is(.daily-badge__live, .daily-badge__timer) { font-size: 9px; color: var(--brass-soft); }
+.home.home .home-hero__study-links .daily-badge__body { display: block; }
+.home.home .home-hero__study-links .daily-badge__main { gap: 3px; }
+.home.home .home-hero__study-links .daily-badge__main strong { font-size: 12px; line-height: 1.4; }
+.home.home .home-hero__study-links :is(.daily-badge__main small, .question-count-detail) { font-size: 10px; line-height: 1.5; color: var(--on-ink-muted); }
+.home.home .home-hero__study-links .daily-badge__cta { display: inline-flex; margin-top: 5px; min-height: 0; padding: 0; font-size: 10px; color: var(--brass-soft); }
+.home.home .home-hero__study-links .daily-badge__progress { display: none; }
+.home.home .home-hero__study-links .question-count-badge { justify-content: center; align-items: flex-start; }
+.home-hero__study-links :is(.question-count-icon, .question-count-eyebrow) { display: none; }
+.home.home .home-hero__study-links .question-count-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 6px; }
+.home.home .home-hero__study-links .question-count-main strong { font-size: 22px; line-height: 1.2; color: var(--brass-soft); }
+.home.home .home-hero__study-links .question-count-main > span { font-size: 11px; color: var(--on-ink); }
+.home-hero__study-links .question-count-arrow { position: absolute; right: 10px; bottom: 10px; width: 13px; height: 13px; color: var(--brass-soft); }
+.home-hero__study-links .question-count-content { padding-right: 8px; gap: 5px; }
+.home.home .home-hero:has(.home-hero__study-entry) .home-trust { margin-top: 14px !important; padding-top: 8px !important; }
+@media (max-width: 520px) {
+  .home-hero__study-links { grid-template-columns: 1fr; gap: 7px; }
+  .home.home .home-hero__study-links .question-count-badge { padding-block: 9px; }
+  .home.home .home-hero__study-links .question-count-main strong { font-size: 18px; }
+}
+@media (forced-colors: active) {
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
