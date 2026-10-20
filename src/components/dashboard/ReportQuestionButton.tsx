@@ -1,3 +1,4 @@
+import { questionCode, questionIdentity } from "@/lib/questionIdentity";
 // Botão do aluno pra avisar o administrador que uma questão está errada
 // (enunciado, gabarito, alternativa, digitação) — vai para a fila de revisão
 // em /dashboard/admin-question-reports.
@@ -39,6 +40,8 @@ export function ReportQuestionButton({ question }: { question: Question }) {
         reported_by: auth.user.id,
         reason: trimmed,
         question_snapshot: {
+          code: questionCode(question),
+          identity: questionIdentity(question),
           contest: question.contest,
           board: question.board,
           career: question.career,
@@ -75,7 +78,7 @@ export function ReportQuestionButton({ question }: { question: Question }) {
             <DialogTitle>Reportar problema nesta questão</DialogTitle>
             <DialogDescription>
               Descreva o que está errado — enunciado, gabarito, alternativa, digitação. Um
-              administrador vai revisar direto na fonte.
+              administrador vai revisar direto na fonte. Código: {questionCode(question)}.
             </DialogDescription>
           </DialogHeader>
           <Textarea

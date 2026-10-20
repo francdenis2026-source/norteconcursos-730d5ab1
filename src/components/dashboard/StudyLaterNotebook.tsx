@@ -1,3 +1,5 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { BookmarkCheck, BookOpen, Download } from "lucide-react";
@@ -171,7 +173,8 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
                 </span>
               </summary>
               <div className="mt-4 space-y-4">
-                <p className="whitespace-pre-wrap text-sm leading-relaxed">{item.question.text}</p>
+                <QuestionCode question={item.question} />
+                <QuestionText text={item.question.text} />
                 <p className="text-xs text-muted-foreground">
                   Cópia salva em {new Date(item.savedAt).toLocaleDateString("pt-BR")}. O conteúdo e
                   as fontes podem receber atualizações; confira os materiais atuais. Assuntos

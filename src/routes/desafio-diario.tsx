@@ -1,3 +1,5 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
@@ -504,9 +506,8 @@ function QuestionPlayer({
                 </div>
               </details>
             )}
-            <p className="whitespace-pre-line text-base font-medium leading-7 md:text-lg">
-              {parsed.stem}
-            </p>
+            <QuestionCode question={question} />
+            <QuestionText text={parsed.stem} />
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
             <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
               Julgue o item

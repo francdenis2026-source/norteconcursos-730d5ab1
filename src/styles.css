@@ -13415,3 +13415,25 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__welcome { max-width: calc(100% - 85px); font-size: 11px; }
   .app-shell .student-hub__masthead--insignia h1 + p { margin-top: 18px; }
 }
+
+/* Scoped reading surface: never changes global poems, tables or code blocks. */
+.question-readable {
+  min-width: 0;
+  max-width: 72ch;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-align: left;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.8;
+  tab-size: 4;
+}
+.question-readable img { max-width: 100%; height: auto; }
+.question-readable pre, .question-readable table { max-width: 100%; overflow-x: auto; }
+@media (max-width: 639px) {
+  .question-readable { font-size: 1rem; line-height: 1.75; }
+  .trainer-question-column, .trainer-question-paper, .trainer-question-content { min-width: 0; }
+  .trainer-option { overflow-wrap: anywhere; text-align: left; }
+}
+
+.trainer-question-grid button[data-result="skipped"] { border-color: var(--warning, #b7791f); background: color-mix(in srgb, #b7791f 12%, transparent); color: var(--foreground); }

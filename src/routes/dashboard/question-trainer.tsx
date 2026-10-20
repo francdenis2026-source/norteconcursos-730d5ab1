@@ -1,3 +1,6 @@
+import { saveStudyLater } from "@/lib/studyLater";
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToSection } from "@/lib/appScroll";
 import {
   trainerContext,
@@ -347,7 +350,7 @@ function QuestionTrainer() {
   const [modal, setModal] = React.useState<"help" | null>(null);
   const [mapOpen, setMapOpen] = React.useState(false);
   const library = useStudyMaterialList(canLoad && answered && modal === "help");
-  const [results, setResults] = React.useState<("ok" | "err")[]>([]);
+  const [results, setResults] = React.useState<("ok" | "err" | "skipped")[]>([]);
   const [startedAt, setStartedAt] = React.useState(Date.now());
   const [confirmStop, setConfirmStop] = React.useState(false);
   const sessionInProgress = started && questions.length > 0 && index < questions.length;
@@ -673,6 +676,7 @@ function QuestionTrainer() {
     ) : null;
   const correct = results.filter((r) => r === "ok").length;
   const wrong = results.filter((r) => r === "err").length;
+  const skipped = results.filter((r) => r === "skipped").length;
 
   const activityCatalog = React.useMemo(
     () =>
@@ -1203,7 +1207,7 @@ function QuestionTrainer() {
     if (savingRef.current || target < 0 || target > questions.length) return;
     if (target < questions.length && target > trainerReachableIndex(results, questions.length))
       return;
-    if (target === questions.length && correct + wrong < questions.length) return;
+    if (target === questions.length && correct + wrong + skipped < questions.length) return;
     setMapOpen(false);
     responseIdRef.current = crypto.randomUUID();
     setModal(null);
@@ -1212,6 +1216,21 @@ function QuestionTrainer() {
     setIndex(target);
     if (target === index)
       window.requestAnimationFrame(() => scrollAppToSection("trainer-question"));
+  };
+  const skipQuestion = () => {
+    if (!question || !userId || answered || savingRef.current) return;
+    try {
+      saveStudyLater(localStorage, userId, question);
+    } catch {
+      toast.error("Não foi possível salvar para revisão. A questão continua aberta.");
+      return;
+    }
+    setResults((old) => { const next = [...old]; next[index] = "skipped"; return next; });
+    setSelected(null);
+    setStruck([]);
+    responseIdRef.current = crypto.randomUUID();
+    setIndex(index + 1);
+    toast.message("Questão pulada, sem resposta nem pontuação. Salva em Estudar depois neste navegador.");
   };
   const next = () => goTo(index + 1);
   const restart = () => {
@@ -1530,6 +1549,8 @@ function QuestionTrainer() {
         total={questions.length}
         correct={correct}
         wrong={wrong}
+        skipped={skipped}
+        reviewSkipped={() => goTo(results.findIndex((result) => result === "skipped"))}
         restart={restart}
         review={sessionReinforce}
         mixed={practiceMode === "catalog"}
@@ -1700,6 +1721,7 @@ function QuestionTrainer() {
             key={question.id}
           >
             <CardContent className="trainer-question-content">
+              <QuestionCode question={question} />
               <TrainerContextBanner
                 discipline={context.discipline}
                 topic={context.topic}
@@ -1732,6 +1754,7 @@ function QuestionTrainer() {
                   <ReportQuestionButton question={question} />
                 </span>
               </div>
+              {results[index] === "skipped" && !answered && <p role="status" className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não respondida.</p>}
               {reviewingPast && (
                 <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
                   <Lock className="h-3.5 w-3.5 shrink-0" /> Resposta já registrada — revisão sem
@@ -1745,7 +1768,7 @@ function QuestionTrainer() {
                     <span className="text-muted-foreground">de {questions.length}</span>
                   </h2>
                   <p className="mt-1.5 text-xs text-muted-foreground">
-                    {correct} acertos · {wrong} erros
+                    {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped} puladas
                   </p>
                 </div>
                 <div className="flex items-end gap-2 sm:gap-3">
@@ -1785,7 +1808,7 @@ function QuestionTrainer() {
                   ].join("\n")}
                 />
               </div>
-              <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
+              <QuestionText className="trainer-question-stem" text={parsed.stem} />
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
               <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
                 {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
@@ -1944,6 +1967,7 @@ function QuestionTrainer() {
                 </Button>
                 {!answered ? (
                   <>
+                    <Button variant="outline" onClick={skipQuestion} disabled={saving}>Pular questão · estudar depois</Button>
                     <Button
                       size="lg"
                       disabled={!selected || saving || (reachedDailyLimit && !nonScoring)}
@@ -2647,6 +2671,8 @@ function TrainingResult({
   mixed,
   correct,
   wrong,
+  skipped,
+  reviewSkipped,
   restart,
   reviewFirstError,
 }: {
@@ -2655,6 +2681,8 @@ function TrainingResult({
   mixed: boolean;
   correct: number;
   wrong: number;
+  skipped: number;
+  reviewSkipped: () => void;
   restart: () => void;
   reviewFirstError: () => void;
 }) {
@@ -2672,6 +2700,7 @@ function TrainingResult({
             Treino concluído
           </h1>
           <p>Confira suas respostas e escolha o próximo passo.</p>
+          {skipped > 0 && <Button variant="outline" onClick={reviewSkipped}>Voltar às {skipped} questões puladas</Button>}
         </div>
       </header>
       <div className="trainer-result-layout">
@@ -2687,6 +2716,10 @@ function TrainingResult({
             <div>
               <dt>Erros</dt>
               <dd>{wrong}</dd>
+            </div>
+            <div>
+              <dt>Puladas (sem resposta)</dt>
+              <dd>{skipped}</dd>
             </div>
             <div>
               <dt>Questões</dt>

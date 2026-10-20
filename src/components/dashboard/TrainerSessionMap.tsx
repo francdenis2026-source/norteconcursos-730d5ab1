@@ -21,6 +21,7 @@ export function TrainerSessionMap({
   const frontier = trainerReachableIndex(results, total);
   const correct = results.filter((value) => value === "ok").length;
   const wrong = results.filter((value) => value === "err").length;
+  const skipped = results.filter((value) => value === "skipped").length;
   return (
     <div className="trainer-map-content">
       <span className="trainer-panel-kicker">ACOMPANHAMENTO</span>
@@ -55,10 +56,11 @@ export function TrainerSessionMap({
         <div>
           <dt>
             <CircleDot aria-hidden="true" />
-            Restantes
+            Ainda não visitadas
           </dt>
-          <dd>{total - correct - wrong}</dd>
+          <dd>{total - correct - wrong - skipped}</dd>
         </div>
+        <div><dt>Puladas</dt><dd>{skipped}</dd></div>
       </dl>
       <h3>Mapa de questões</h3>
       <nav className="trainer-question-grid" aria-label="Navegar pelas questões da sessão">
@@ -68,7 +70,7 @@ export function TrainerSessionMap({
             <button
               key={i}
               type="button"
-              aria-label={`Ir para questão ${i + 1}${results[i] === "ok" ? ", correta" : results[i] === "err" ? ", incorreta" : ""}`}
+              aria-label={`Ir para questão ${i + 1}${results[i] === "ok" ? ", correta" : results[i] === "err" ? ", incorreta" : results[i] === "skipped" ? ", pulada, sem resposta" : ""}`}
               aria-current={i === index ? "step" : undefined}
               data-result={results[i] ?? "pending"}
               disabled={saving || i > frontier}
@@ -104,7 +106,7 @@ export function TrainerSessionMap({
       )}
       <p className="trainer-map-note">
         <Lock aria-hidden="true" />
-        Responda a questão atual para liberar a próxima. Você pode voltar às respostas registradas.
+        Responda ou pule para avançar. Volte às questões puladas pelo mapa; elas também ficam em Estudar depois.
       </p>
     </div>
   );

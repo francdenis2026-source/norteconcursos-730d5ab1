@@ -1,3 +1,6 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { simulatorReference } from "@/lib/questionIdentity";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { QuestionSupportText } from "@/components/library/QuestionSupportText";
@@ -1625,7 +1628,8 @@ function ActiveSimulator(p: {
               </span>
             </div>
           </CardHeader>
-          <CardContent className="space-y-7 p-6 md:p-9">
+          <CardContent className="space-y-7 p-4 sm:p-6 md:p-9">
+            <QuestionCode question={simulatorReference(current)} />
             {parseQuestion(current.text).base && (
               <details open className="rounded-xl border bg-muted/30 p-4">
                 <summary className="cursor-pointer text-sm font-semibold">
@@ -1639,9 +1643,7 @@ function ActiveSimulator(p: {
                 </div>
               </details>
             )}
-            <p className="mx-auto max-w-5xl whitespace-pre-wrap text-base font-medium leading-8 md:text-lg">
-              {parseQuestion(current.text).stem}
-            </p>
+            <QuestionText text={parseQuestion(current.text).stem} />
             <QuestionFigures
               urls={current.figures}
               illustrations={parseQuestion(current.text).illustrations}
@@ -1697,7 +1699,20 @@ function ActiveSimulator(p: {
                 <Flag className={cn("h-4 w-4", flagged.has(current.id) && "fill-current")} />
                 {flagged.has(current.id) ? "Marcada para revisão" : "Marcar para revisão"}
               </Button>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
+                <Button
+                  variant="outline"
+                  disabled={saving}
+                  onClick={() => {
+                    setAnswers((old) => { const next = { ...old }; delete next[current.id]; return next; });
+                    toast.message("Questão em branco: sem resposta e sem penalização automática.");
+                  }}
+                >Deixar em branco</Button>
+                {!answers[current.id] && <Button
+                  variant="outline"
+                  disabled={saving}
+                  onClick={() => currentIndex === questions.length - 1 ? setFinishOpen(true) : setCurrentIndex((i) => i + 1)}
+                >Pular questão</Button>}
                 <Button
                   variant="outline"
                   disabled={currentIndex === 0}
@@ -2050,8 +2065,9 @@ function ResultView({
                   correct ? "border-emerald-200" : "border-red-200",
                 )}
               >
+                <div className="px-4"><QuestionCode question={simulatorReference(q)} /></div>
                 <button
-                  className="flex w-full items-center gap-3 p-4 text-left"
+                  className="flex w-full flex-wrap items-center gap-3 p-4 text-left"
                   onClick={() => setOpen(isOpen ? null : q.id)}
                 >
                   {correct ? (

@@ -38,6 +38,6 @@ export function trainerReachableIndex(
   results: readonly (string | null | undefined)[],
   total: number,
 ) {
-  const hole = results.findIndex((value) => value !== "ok" && value !== "err");
+  const hole = results.findIndex((value) => value !== "ok" && value !== "err" && value !== "skipped");
   return Math.max(0, Math.min(total - 1, hole < 0 ? results.length : hole));
 }

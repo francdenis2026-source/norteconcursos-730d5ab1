@@ -152,3 +152,14 @@ test('unfinished sessions remain resumable after days and preserve active questi
  assert.equal(restoreTrainerBookmark(b,b.route,catalog,now).bookmark.questionSeconds,42);
  assert.equal(restoreTrainerBookmark({...b,questionSeconds:-1},b.route,catalog,now),null);
 });
+
+test('explicit skips survive reload without becoming answers or blocking the next item', async () => {
+ const {trainerReachableIndex}=await import('../src/lib/trainerSession.ts');
+ const b={...bookmark(),selected:null,results:['skipped'],sessionAttempts:[]};
+ const restored=restoreTrainerBookmark(JSON.parse(JSON.stringify(b)),b.route,catalog,now);
+ assert.equal(restored.bookmark.results[0],'skipped');
+ assert.deepEqual(restored.bookmark.sessionAttempts,[]);
+ assert.equal(trainerReachableIndex(restored.bookmark.results,catalog.length),1);
+ const contradictory={...b,sessionAttempts:[{index:0,selected:'A',isCorrect:false}]};
+ assert.equal(restoreTrainerBookmark(contradictory,b.route,catalog,now),null);
+});
