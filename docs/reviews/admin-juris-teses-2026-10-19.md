@@ -45,3 +45,43 @@ Leitura apenas; nada gravado. As teses foram lidas no portal do STF (páginas de
 ## Aplicação (19/10/2026)
 
 Liberados e conferidos no banco: `204e9848`, `520ff652`, `827852e2`, `73cdc78c`, `ec6c078a`, `4e732f4b`, `8e2dcff5`, `c29e6efb`, `200767d8` e `2a867d6d`. Comentários citam a tese; `legal_basis` aponta para o texto compilado do Planalto e para a página do tema no STF. Criado o tópico "Direito Administrativo I" na edição CGM-Rio Contador e removido o resíduo de paginação da alternativa E de `204e9848`. Seguem em revisão `de3424ff`, `5e5e9c88`, `4afc8741` e os demais listados acima.
+
+## Segunda rodada: itens restantes de jurisprudência (19/10/2026)
+
+Leitura apenas; nada gravado. Chaves de todos os itens abaixo conferem com o gabarito definitivo da FGV.
+
+### Fontes novas obtidas
+
+| Fonte | Conteúdo |
+|---|---|
+| [STF, Tema 130 (RE 591874)](https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=130) | Responsabilidade de PJ de direito privado prestadora de serviço público é objetiva perante terceiros usuários e não usuários (CF, art. 37, §6º) |
+| [STF, Tema 476 (RE 608482)](https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=476) | Incompatível com o acesso a cargos públicos manter, por fato consumado, candidato não aprovado empossado por liminar ou provimento precário depois revogado |
+| [STF, Tema 569 (RE 789874)](https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=569) | Sistema "S" não está sujeito a concurso público; entidades privadas, fora da Administração, com controle finalístico pelo Tribunal de Contas |
+| [STF, Tema 897 (RE 852475)](https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=897) | Imprescritíveis as ações de ressarcimento ao erário fundadas em ato doloso tipificado na Lei de Improbidade |
+| STF, Súmula 18 | Pela falta residual, não compreendida na absolvição criminal, é admissível a punição administrativa do servidor |
+| STF, MS 24831 | Cumpridos os requisitos do art. 58, §3º (um terço, fato determinado, prazo certo), a CPI deve ser criada e instalada, sem depender da maioria; o Presidente da Casa não aprecia o mérito |
+| STF, MS 23452 | A CPI pode quebrar, por autoridade própria e com fundamentação, os sigilos bancário, fiscal e telefônico (dados); a interceptação telefônica integra a reserva de jurisdição (CF, art. 5º, XII) |
+| STF, ADI 1864 | A exigência de licitação do art. 37, XXI, alcança a Administração direta e indireta, não entidades privadas que colaboram com ela (serviço social autônomo) |
+| [STJ, Súmula 641](https://www.stj.jus.br/internet_docs/biblioteca/clippinglegislacao/Sumula_640_641_2020_primeira_secao.pdf) | A portaria de instauração do PAD prescinde da exposição detalhada dos fatos a serem apurados |
+| Planalto | CC, arts. 205 (prescrição de dez anos), 935 e 943; CPP, art. 386, VII; Lei 8.429, art. 13 |
+
+### Prontos para vínculo + comentário
+
+| ID | Item | Chave | Base |
+|---|---|---|---|
+| `d34512bf` | CGM-Rio Contador #30 | B | Tema 130; CF, art. 37, §6º |
+| `1a920d3b` | CGM-Rio Contador #21 | C | CC 935 e 943; CPP 386, VII; STF Súmula 18; Tema 897. D erra duas vezes: o art. 205 do CC fixa dez anos, não oito, e o ressarcimento por ato doloso é imprescritível |
+| `4afc8741` | TCE-TO Direito #29 | B | CF, art. 58, §3º; MS 24831; MS 23452 |
+| `5e5e9c88` | CGM-Rio TCI #50 | B | SV 5; STJ 591, 592, 611 e 641 (todos conferidos) |
+
+### Dependem de decisão ou de mais fonte
+
+- `50db64f2` (Sistema S, C). A, B, D e E ficam descartadas por Tema 569 e ADI 1864; mas "deve observar os princípios gerais da Administração nas contratações" não consta dos acórdãos lidos. Decisão editorial: aceitar C como única compatível ou manter em revisão.
+- `85f8fae8` (posse por liminar e aposentadoria, C). O Tema 476 descarta A, B e D; a manutenção da situação do aposentado (C) precisa de precedente específico do STF ou STJ, ainda não encontrado.
+- `4f00e3d0` (assalto em ônibus, B). Depende de jurisprudência do STJ sobre fortuito externo; o site de consulta do STJ exige verificação anti-robô, que não contornei.
+- `d178c050` (tombamento por lei municipal de bem estadual, E) e `f2591759` (decretos regulamentares, C). Sem precedente do STF localizado ainda.
+- `de3424ff` (SV 43): falta o texto oficial da Lei Municipal 94/1979 (Rio).
+
+### Aplicação da segunda rodada (19/10/2026)
+
+Liberados e conferidos no banco: `d34512bf`, `1a920d3b`, `4afc8741` e `5e5e9c88` (vínculo a tópicos já existentes das edições CGM-Rio e TCE-TO, comentário citando as fontes, `legal_basis`, leitura de confirmação). `50db64f2` permanece em revisão, por decisão do usuário, junto de `85f8fae8`, `4f00e3d0`, `d178c050`, `f2591759` e `de3424ff`.
