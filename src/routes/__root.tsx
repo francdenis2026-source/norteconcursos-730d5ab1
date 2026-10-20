@@ -157,10 +157,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400..700&display=swap",
-      },
-      {
-        rel: "stylesheet",
         href: appCss,
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
@@ -193,6 +189,17 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   useEffect(startOnlinePresence, []);
+  useEffect(() => {
+    // External typography must never block first paint or auth initialization.
+    // Keep the shared system-font fallbacks until the optional sheet has loaded.
+    const fonts = document.createElement("link");
+    fonts.rel = "stylesheet";
+    fonts.media = "print";
+    fonts.href = "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400..700&display=swap";
+    fonts.onload = () => { fonts.media = "all"; };
+    document.head.appendChild(fonts);
+    return () => { fonts.onload = null; fonts.remove(); };
+  }, []);
   useEffect(() => {
     let active = true;
     let pending = false;

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import type { SubscriptionTier, UserProfile } from "@/types";
@@ -12,6 +12,8 @@ type AuthStatus = {
   isLoading: boolean;
   isAuthenticated: boolean;
   isAdmin: boolean;
+  error: string | null;
+  retry: () => void;
 };
 const AuthContext = createContext<AuthStatus | null>(null);
 
@@ -78,8 +80,21 @@ async function loadProfile(session: Session): Promise<UserProfile> {
 export function AuthStatusProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
+  const retry = useCallback(() => setAttempt((value) => value + 1), []);
   useEffect(() => {
     let active = true;
+    let settled = false;
+    setError(null);
+    setIsLoading(true);
+    // getSession can wait for a stalled refresh before any auth event is emitted.
+    // End the loading screen without discarding tokens or treating timeout as logout.
+    const deadline = window.setTimeout(() => {
+      if (!active || settled) return;
+      setError("Não foi possível verificar seu acesso. Confira sua conexão e tente novamente.");
+      setIsLoading(false);
+    }, 15_000);
     let eventVersion = 0;
     let currentSession: Session | null = null;
     let lastRefresh = 0;
@@ -88,6 +103,9 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
       identify: (session) => session.user.id,
       load: loadProfile,
       publish: (profile) => {
+        settled = true;
+        window.clearTimeout(deadline);
+        setError(null);
         setUser((previous) =>
           JSON.stringify(previous) === JSON.stringify(profile) ? previous : profile,
         );
@@ -95,12 +113,20 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
         lastRefresh = Date.now();
       },
       change: (session) => {
+        if (session === null) {
+          settled = true;
+          window.clearTimeout(deadline);
+        }
+        setError(null);
         setStorageOwner(session?.user.id ?? null);
         setUser(null);
         setIsLoading(session !== null);
       },
       fail: (error) => {
         console.error("Falha ao verificar perfil", error);
+        settled = true;
+        window.clearTimeout(deadline);
+        setError("Não foi possível carregar seu perfil. Confira sua conexão e tente novamente.");
         setIsLoading(false);
       },
     });
@@ -128,7 +154,9 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
       .catch((error) => {
         if (!active || eventVersion !== initialVersion) return;
         console.error("Falha ao verificar autenticação", error);
-        loader.select(null);
+        settled = true;
+        window.clearTimeout(deadline);
+        setError("Não foi possível verificar seu acesso. Confira sua conexão e tente novamente.");
         setIsLoading(false);
       });
     const refresh = () => {
@@ -144,6 +172,7 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
     window.addEventListener("norte:profile-updated", refreshProfile);
     return () => {
       active = false;
+      window.clearTimeout(deadline);
       loader.dispose();
       data.subscription.unsubscribe();
       deferred.forEach((timer) => window.clearTimeout(timer));
@@ -151,15 +180,17 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
       document.removeEventListener("visibilitychange", refresh);
       window.removeEventListener("norte:profile-updated", refreshProfile);
     };
-  }, []);
+  }, [attempt]);
   const value = useMemo(
     () => ({
       user,
       isLoading,
       isAuthenticated: !!user && user.id !== "demo-user",
       isAdmin: user?.role === "admin",
+      error,
+      retry,
     }),
-    [user, isLoading],
+    [user, isLoading, error, retry],
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
