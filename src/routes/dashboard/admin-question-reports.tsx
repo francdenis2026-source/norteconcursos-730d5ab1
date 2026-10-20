@@ -24,7 +24,6 @@ import {
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { confirmDialog } from "@/lib/confirm";
 import type { QuestionTable } from "@/lib/questionFormat";
-import { questionCode } from "@/lib/questionIdentity";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
 
 export const Route = createFileRoute("/dashboard/admin-question-reports")({
@@ -252,13 +251,7 @@ function AdminQuestionReportsPage() {
                   </p>
                   <p className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                     Código da questão:{" "}
-                    <QuestionCode
-                      code={questionCode({
-                        id: report.question_id,
-                        source: "official",
-                        table: report.question_table,
-                      })}
-                    />
+                    <QuestionCode question={{ id: report.question_id, source: "official", table: report.question_table }} />
                   </p>
                 </div>
                 <Badge variant="outline" className={STATUS_STYLE[report.status]}>

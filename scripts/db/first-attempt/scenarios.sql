@@ -65,6 +65,6 @@ begin
   assert exists (select 1 from public.my_answered_questions()
                  where question_id = '10000000-0000-0000-0000-000000000001' and not counts_for_ranking),
          'fast first answer should consume the question';
-  assert public.question_public_code('board_exam_questions', '30000000-0000-0000-0000-00000000000a') = 'BD-3000-0000-0000';
+  assert public.question_public_code('board_exam_questions', '30000000-0000-0000-0000-00000000000a') = 'NC-BA-30000000-0000-0000-0000-00000000000a';
 end $$;
 select 'ok: first-attempt scenarios passed' as result;

@@ -214,6 +214,12 @@ function SubscriptionsPage() {
                     <span className="text-sm font-normal text-muted-foreground">/mês</span>
                   )}
                 </p>
+                {plan.annualPrice != null && (
+                  <p className="text-sm text-muted-foreground">
+                    Ou R$ {plan.annualPrice.toFixed(2).replace(".", ",")} por 12 meses
+                    <span className="block text-xs">Economize 2 mensalidades no anual. Contratacao em breve.</span>
+                  </p>
+                )}
               </CardHeader>
               <CardContent className="flex flex-1 flex-col gap-4">
                 <ul className="flex-1 space-y-2 text-sm">

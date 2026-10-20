@@ -1,3 +1,4 @@
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { useEffect, useState } from "react";
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import { Link } from "@tanstack/react-router";
@@ -6,7 +7,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { parseQuestion } from "@/lib/questionFormat";
-import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { questionCode } from "@/lib/questionIdentity";
 import { accountStudyLaterPort } from "@/lib/studyLaterAccount";
 import { pushStudyLaterItem, removeStudyLaterItem, syncStudyLater } from "@/lib/studyLaterSync";
@@ -237,7 +237,7 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
               </summary>
               <div className="mt-4 space-y-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  <QuestionCode code={questionCode(item.question)} />
+                  <QuestionCode question={item.question} />
                   <Button asChild variant="outline" size="sm">
                     <Link
                       to="/dashboard/question-trainer"

@@ -5,21 +5,21 @@ import { restoreTrainerBookmark } from "../src/lib/internalNavigation.ts";
 import { attemptDetails } from "../src/lib/attemptDetails.ts";
 
 test("skipped questions are counted apart and never as answers or errors", () => {
-  const tally = trainerTally(["ok", "skip", "err", "skip", undefined], 6);
+  const tally = trainerTally(["ok", "skipped", "err", "skipped", undefined], 6);
   assert.deepEqual(tally, { correct: 1, wrong: 1, skipped: 2, answered: 2, remaining: 2 });
 });
 
 test("a skipped question is passed, so the student can move on and come back", () => {
-  assert.equal(trainerReachableIndex(["skip"], 10), 1);
-  assert.equal(trainerReachableIndex(["ok", "skip", undefined], 10), 2);
+  assert.equal(trainerReachableIndex(["skipped"], 10), 1);
+  assert.equal(trainerReachableIndex(["ok", "skipped", undefined], 10), 2);
   assert.equal(trainerReachableIndex(["ok", null, "err"], 100), 1);
   assert.equal(trainerReachableIndex(["ok", "ok"], 2), 1);
 });
 
 test("the session can end only when every item was answered or consciously skipped", () => {
-  assert.equal(trainerCanFinish(["ok", "skip"], 2), true);
-  assert.equal(trainerCanFinish(["ok", "skip"], 3), false);
-  assert.equal(trainerCanFinish(["skip", "skip"], 2), true);
+  assert.equal(trainerCanFinish(["ok", "skipped"], 2), true);
+  assert.equal(trainerCanFinish(["ok", "skipped"], 3), false);
+  assert.equal(trainerCanFinish(["skipped", "skipped"], 2), true);
 });
 
 const catalog = [1, 2, 3].map((n) => ({ id: `q${n}`, source: "official", table: "board_exam_questions" }));
@@ -41,14 +41,14 @@ const bookmark = (results, extra = {}) => ({
 });
 
 test("a refresh restores skipped questions in the saved session", () => {
-  const restored = restoreTrainerBookmark(bookmark(["ok", "skip"]), "r", catalog, 10);
-  assert.deepEqual(restored.bookmark.results, ["ok", "skip"]);
+  const restored = restoreTrainerBookmark(bookmark(["ok", "skipped"]), "r", catalog, 10);
+  assert.deepEqual(restored.bookmark.results, ["ok", "skipped"]);
   assert.equal(restoreTrainerBookmark(bookmark(["ok", "pulei"]), "r", catalog, 10), null);
 });
 
 test("a saved answer must still match its result, a skip cannot hide it", () => {
   const attempts = [{ index: 1, selected: "A", isCorrect: true }];
-  assert.equal(restoreTrainerBookmark(bookmark(["ok", "skip"], { sessionAttempts: attempts }), "r", catalog, 10), null);
+  assert.equal(restoreTrainerBookmark(bookmark(["ok", "skipped"], { sessionAttempts: attempts }), "r", catalog, 10), null);
 });
 
 test("attempt details: rule, score and ranking stay separate", () => {

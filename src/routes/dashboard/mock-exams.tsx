@@ -1,3 +1,6 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { simulatorReference } from "@/lib/questionIdentity";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
@@ -30,9 +33,7 @@ import {
 } from "@/lib/examScoring";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 import { AttemptHistoryItem } from "@/components/dashboard/AttemptHistoryList";
-import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
-import { simulatorQuestionCode } from "@/lib/questionIdentity";
 import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
 import { useLockedAnswers, lockedKey } from "@/hooks/useLockedAnswers";
 import { parseQuestion } from "@/lib/questionFormat";
@@ -1801,7 +1802,6 @@ function ActiveSimulator(p: {
                 {current.contest} · {current.year}
                 {current.itemNumber ? ` · Item ${current.itemNumber}` : ""}
               </span>
-              <QuestionCode code={simulatorQuestionCode(current)} />
               {reportQuestion && (
                 <span className="ml-auto">
                   <ReportQuestionButton question={reportQuestion} />
@@ -1809,7 +1809,8 @@ function ActiveSimulator(p: {
               )}
             </div>
           </CardHeader>
-          <CardContent className="space-y-7 p-6 md:p-9">
+          <CardContent className="space-y-7 p-4 sm:p-6 md:p-9">
+            <QuestionCode question={simulatorReference(current)} />
             {repeatedHere && (
               <div
                 role="status"
@@ -1910,7 +1911,7 @@ function ActiveSimulator(p: {
                   {skipped.has(current.id) ? "Pular de novo" : "Pular questão"}
                 </Button>
               )}
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Button
                   variant="outline"
                   disabled={currentIndex === 0}
@@ -2349,8 +2350,9 @@ function ResultView({
                   correct ? "border-emerald-200" : "border-red-200",
                 )}
               >
+                <div className="px-4"><QuestionCode question={simulatorReference(q)} /></div>
                 <button
-                  className="flex w-full items-center gap-3 p-4 text-left"
+                  className="flex w-full flex-wrap items-center gap-3 p-4 text-left"
                   onClick={() => setOpen(isOpen ? null : q.id)}
                 >
                   {correct ? (

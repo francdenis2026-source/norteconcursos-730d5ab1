@@ -1,6 +1,6 @@
 -- Identidade de questão, primeira tentativa no ranking e histórico de tentativas.
 --
--- 1. question_public_code(): código público estável (mesmo cálculo de src/lib/questionIdentity.ts).
+-- 1. question_public_code(): código público NC-<prefixo>-<uuid> (mesmo cálculo de src/lib/questionIdentity.ts).
 -- 2. question_identity_aliases + question_canonical_map(): cadastros idênticos da mesma prova (ex.:
 --    itens comuns a Agente e Papiloscopista na PC-PR 2026) respondem como UMA questão. Duplicatas
 --    entre fontes diferentes só são unidas por registro explícito (alias) de um administrador.
@@ -24,15 +24,12 @@ language sql
 immutable
 set search_path = public
 as $$
-  select case _table
+  select 'NC-' || case _table
       when 'official_exam_questions' then 'OF'
-      when 'board_exam_questions' then 'BD'
-      when 'curated_question_catalog' then 'CU'
+      when 'board_exam_questions' then 'BA'
+      when 'curated_question_catalog' then 'AU'
       when 'question_bank' then 'PE'
-    end
-    || '-' || upper(substr(replace(_id::text, '-', ''), 1, 4))
-    || '-' || upper(substr(replace(_id::text, '-', ''), 5, 4))
-    || '-' || upper(substr(replace(_id::text, '-', ''), 9, 4))
+    end || '-' || _id::text
 $$;
 grant execute on function public.question_public_code(text, uuid) to authenticated;
 

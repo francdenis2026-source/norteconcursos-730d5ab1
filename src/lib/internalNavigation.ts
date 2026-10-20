@@ -46,7 +46,7 @@ export type TrainerBookmark = {
   index: number;
   selected: string | null;
   struck: string[];
-  results: ("ok" | "err" | "skip")[];
+  results: ("ok" | "err" | "skipped")[];
   startedAt: number;
   filters: Record<(typeof trainerFilterKeys)[number], string>;
 };
@@ -80,7 +80,7 @@ export function restoreTrainerBookmark<
     b.index > b.questions.length ||
     !Array.isArray(b.results) ||
     b.results.length > b.questions.length ||
-    b.results.some((r) => r !== null && r !== "ok" && r !== "err" && r !== "skip") ||
+    b.results.some((r) => r !== null && r !== "ok" && r !== "err" && r !== "skipped") ||
     !Array.isArray(b.struck) ||
     b.struck.some((r) => !["A", "B", "C", "D", "E"].includes(r)) ||
     (b.selected !== null && !["A", "B", "C", "D", "E"].includes(b.selected)) ||
@@ -114,9 +114,9 @@ export function restoreTrainerBookmark<
   const byId = new Map(catalog.map((q) => [key(q), q]));
   if (b.questions.some((q) => !q || typeof q.id !== "string" || !byId.has(key(q)))) return null;
   if (new Set(b.questions.map(key)).size !== b.questions.length) return null;
-  const results: ("ok" | "err" | "skip")[] = [];
+  const results: ("ok" | "err" | "skipped")[] = [];
   b.results.forEach((r, i) => {
-    if (r === "ok" || r === "err" || r === "skip") results[i] = r;
+    if (r === "ok" || r === "err" || r === "skipped") results[i] = r;
   });
   return { bookmark: { ...b, results }, questions: b.questions.map((q) => byId.get(key(q))!) };
 }

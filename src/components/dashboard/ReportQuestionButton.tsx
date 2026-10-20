@@ -1,3 +1,4 @@
+import { questionCode, questionIdentity } from "@/lib/questionIdentity";
 // Botão do aluno pra avisar o administrador que uma questão está errada
 // (enunciado, gabarito, alternativa, digitação) — vai para a fila de revisão
 // em /dashboard/admin-question-reports.
@@ -15,7 +16,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import type { Question } from "@/lib/questionFormat";
-import { questionCode } from "@/lib/questionIdentity";
 import { toast } from "sonner";
 
 export function ReportQuestionButton({ question }: { question: Question }) {
@@ -42,6 +42,7 @@ export function ReportQuestionButton({ question }: { question: Question }) {
         question_snapshot: {
           // Código permanente: o mesmo que o aluno vê e copia na tela da questão.
           code: questionCode(question),
+          identity: questionIdentity(question),
           contest: question.contest,
           board: question.board,
           career: question.career,
@@ -79,7 +80,7 @@ export function ReportQuestionButton({ question }: { question: Question }) {
             <DialogDescription>
               Descreva o que está errado — enunciado, gabarito, alternativa, digitação. Um
               administrador vai revisar direto na fonte.
-              <span className="mt-2 block font-mono text-xs">
+              <span className="mt-2 block break-all font-mono text-xs">
                 Questão {questionCode(question)}
               </span>
             </DialogDescription>

@@ -11917,7 +11917,6 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .trainer-question-grid button[aria-current="step"] { outline:2px solid #a96f17; outline-offset:1px; }
 .trainer-question-grid button[data-result="ok"] { background:#d8f3e6; border-color:#8ac6a8; color:#14532d; }
 .trainer-question-grid button[data-result="err"] { background:#fde3e8; border-color:#dda1af; color:#881337; }
-.trainer-question-grid button[data-result="skip"] { background:#fff4d6; border:1px dashed #c58a06; color:#6b4600; }
 .trainer-question-grid button:disabled { opacity:.35; cursor:not-allowed; }
 .trainer-map-pages { display:flex; justify-content:space-between; align-items:center; margin-top:12px; font-size:12px; }
 .trainer-map-pages button { display:grid; place-items:center; width:36px; height:36px; border:1px solid var(--border); border-radius:7px; }
@@ -13468,3 +13467,25 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   .trainer-question-stem.q-text { font-size: 16px; }
 }
 .question-prose-block { white-space: pre-line; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; max-width: 72ch; }
+
+/* Scoped reading surface: never changes global poems, tables or code blocks. */
+.question-readable {
+  min-width: 0;
+  max-width: 72ch;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  text-align: left;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.8;
+  tab-size: 4;
+}
+.question-readable img { max-width: 100%; height: auto; }
+.question-readable pre, .question-readable table { max-width: 100%; overflow-x: auto; }
+@media (max-width: 639px) {
+  .question-readable { font-size: 1rem; line-height: 1.75; }
+  .trainer-question-column, .trainer-question-paper, .trainer-question-content { min-width: 0; }
+  .trainer-option { overflow-wrap: anywhere; text-align: left; }
+}
+
+.trainer-question-grid button[data-result="skipped"] { border-color: var(--warning, #b7791f); background: color-mix(in srgb, #b7791f 12%, transparent); color: var(--foreground); }

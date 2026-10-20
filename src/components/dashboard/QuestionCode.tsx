@@ -3,18 +3,25 @@
 import * as React from "react";
 import { Check, Copy } from "lucide-react";
 import { toast } from "sonner";
+import { questionCode, type QuestionReference } from "@/lib/questionIdentity";
 import { cn } from "@/lib/utils";
 
-export function QuestionCode({ code, className }: { code: string; className?: string }) {
+export function QuestionCode({
+  question,
+  className,
+}: {
+  question: QuestionReference;
+  className?: string;
+}) {
+  const code = questionCode(question);
   const [copied, setCopied] = React.useState(false);
   const timer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   React.useEffect(() => () => clearTimeout(timer.current), []);
-  if (!code) return null;
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(code);
     } catch {
-      // Navegadores sem permissão de área de transferência: seleção manual do texto.
+      // Navegadores sem permissão de área de transferência: cópia por seleção temporária.
       const field = document.createElement("textarea");
       field.value = code;
       field.setAttribute("readonly", "");
@@ -30,12 +37,12 @@ export function QuestionCode({ code, className }: { code: string; className?: st
       }
       field.remove();
       if (!ok) {
-        toast.error("Não foi possível copiar. Selecione e copie o código manualmente.");
+        toast.error("Não foi possível copiar. Selecione o código exibido.");
         return;
       }
     }
     setCopied(true);
-    toast.success(`Código ${code} copiado.`);
+    toast.success("Código da questão copiado.");
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setCopied(false), 2000);
   };
@@ -44,18 +51,18 @@ export function QuestionCode({ code, className }: { code: string; className?: st
       type="button"
       onClick={() => void copy()}
       title="Copiar o código desta questão"
-      aria-label={`Código da questão ${code}. Toque para copiar.`}
+      aria-label={`Copiar código da questão ${code}`}
       data-question-code={code}
       className={cn(
-        "inline-flex min-h-7 items-center gap-1.5 rounded-md border border-border bg-muted/50 px-2 py-0.5 font-mono text-[11px] font-semibold tracking-wide text-muted-foreground transition hover:bg-muted hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+        "my-1 flex min-h-11 max-w-full items-center gap-2 rounded-md border bg-muted/40 px-3 py-2 text-left text-xs text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
         className,
       )}
     >
-      <span className="select-all">{code}</span>
+      <span className="min-w-0 break-all font-mono">{code}</span>
       {copied ? (
-        <Check className="h-3 w-3 text-emerald-600" aria-hidden="true" />
+        <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
       ) : (
-        <Copy className="h-3 w-3" aria-hidden="true" />
+        <Copy className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
       )}
     </button>
   );

@@ -1,3 +1,5 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToSection } from "@/lib/appScroll";
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import {
@@ -17,8 +19,6 @@ import { fetchEditalEditions } from "@/lib/editalEditions";
 import { editalExamQuestions } from "@/lib/editalPractice";
 import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { SaveStudyLater } from "@/components/dashboard/SaveStudyLater";
-import { QuestionCode } from "@/components/dashboard/QuestionCode";
-import { questionCode } from "@/lib/questionIdentity";
 import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
 import { accountStudyLaterPort } from "@/lib/studyLaterAccount";
 import { pushStudyLaterItem } from "@/lib/studyLaterSync";
@@ -1239,7 +1239,7 @@ function QuestionTrainer() {
     if (!question || answered || savingRef.current || !user) return;
     setResults((prev) => {
       const copy = [...prev];
-      copy[index] = "skip";
+      copy[index] = "skipped";
       return copy;
     });
     try {
@@ -1581,7 +1581,7 @@ function QuestionTrainer() {
         mixed={practiceMode === "catalog"}
         skipped={skipped}
         reviewFirstError={() => goTo(results.findIndex((result) => result === "err"))}
-        reviewFirstSkipped={() => goTo(results.findIndex((result) => result === "skip"))}
+        reviewFirstSkipped={() => goTo(results.findIndex((result) => result === "skipped"))}
       />
     );
 
@@ -1749,6 +1749,7 @@ function QuestionTrainer() {
             key={question.id}
           >
             <CardContent className="trainer-question-content">
+              <QuestionCode question={question} />
               <TrainerContextBanner
                 discipline={context.discipline}
                 topic={context.topic}
@@ -1777,11 +1778,11 @@ function QuestionTrainer() {
                       "Prova recente"}
                   </Badge>
                 ) : null}
-                <QuestionCode code={questionCode(question)} />
                 <span className="ml-auto">
                   <ReportQuestionButton question={question} />
                 </span>
               </div>
+              {results[index] === "skipped" && !answered && <p role="status" className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não respondida.</p>}
               {(reviewingPast || priorAnswer) && (
                 <div
                   role="status"
@@ -1803,8 +1804,7 @@ function QuestionTrainer() {
                     <span className="text-muted-foreground">de {questions.length}</span>
                   </h2>
                   <p className="mt-1.5 text-xs text-muted-foreground">
-                    {correct} acertos · {wrong} erros
-                    {skipped > 0 ? ` · ${skipped} ${skipped === 1 ? "pulada" : "puladas"}` : ""}
+                    {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped} puladas
                   </p>
                 </div>
                 <div className="flex items-end gap-2 sm:gap-3">
@@ -2741,7 +2741,7 @@ function TrainingResult({
             Treino concluído
           </h1>
           <p>Confira suas respostas e escolha o próximo passo.</p>
-        </div>
+                  </div>
       </header>
       <div className="trainer-result-layout">
         <section className="trainer-result-score" aria-label="Resumo do treino">
@@ -2758,7 +2758,7 @@ function TrainingResult({
               <dd>{wrong}</dd>
             </div>
             <div>
-              <dt>Puladas</dt>
+              <dt>Puladas (sem resposta)</dt>
               <dd>{skipped}</dd>
             </div>
             <div>

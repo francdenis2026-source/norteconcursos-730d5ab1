@@ -64,7 +64,7 @@ export function sharedItemSiblings(questions: readonly Comparable[]): Map<string
   for (const question of questions) {
     const key = questionContentKey(question);
     if (!key) continue;
-    groups.set(key, [...(groups.get(key) ?? []), questionRef(question)]);
+    groups.set(key, [...(groups.get(key) ?? []), questionRef({ id: question.id, source: question.source, ...(question.table ? { table: question.table } : {}) })]);
   }
   const siblings = new Map<string, string[]>();
   for (const refs of groups.values()) {

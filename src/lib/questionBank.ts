@@ -21,10 +21,7 @@ const fold = (text: string) =>
 export function searchQuestionCatalog(catalog: Question[], query: string) {
   // Um código permanente completo (ex.: BD-1A2B-3C4D-5E6F) localiza exatamente aquela questão.
   const code = parseQuestionCode(query);
-  if (code) {
-    const exact = questionCode({ id: `${code.idPrefix}`, source: "official", table: code.table });
-    return catalog.filter((q) => questionCode(q) === exact);
-  }
+  if (code) return catalog.filter((q) => q.table === code.table && q.id.toLowerCase() === code.id);
   const text = fold(query);
   return text
     ? catalog.filter((q) =>

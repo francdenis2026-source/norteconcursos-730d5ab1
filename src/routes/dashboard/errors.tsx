@@ -1,3 +1,5 @@
+import { QuestionText } from "@/components/dashboard/QuestionText";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 // Caderno de erros: toda questão que o aluno errou no Treinador entra aqui
 // automaticamente (vem de question_training_responses, a mesma fonte de
@@ -5,7 +7,6 @@ import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 // ele revisa e marca o progresso (pendente/revisado/dominado) pra focar no
 // que ainda precisa estudar.
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
-import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { questionCode } from "@/lib/questionIdentity";
 import { MissingTextNotice } from "@/components/library/MissingTextNotice";
 import { needsMissingSupportText } from "@/lib/questionText";
@@ -365,7 +366,7 @@ function ErrorsPage() {
               >
                 {DIFFICULTY_LABEL[question.difficulty]}
               </Badge>
-              <QuestionCode code={questionCode(question)} />
+              <QuestionCode question={question} />
             </div>
             <QuestionProse text={parsed.stem} className="text-base" />
             <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
@@ -489,7 +490,7 @@ function ErrorsPage() {
                     </Badge>
                     <Badge variant="outline">{question.subject}</Badge>
                     <Badge variant="outline">{question.board}</Badge>
-                    <QuestionCode code={questionCode(question)} />
+                    <QuestionCode question={question} />
                   </div>
                   <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
                     {question.contest} · {question.year}
@@ -558,7 +559,7 @@ function ErrorsPage() {
                   <div className="space-y-4">
                     {needsMissingSupportText(detail) && <MissingTextNotice />}
                     <QuestionProse text={parseQuestion(detail.text).stem} className="text-sm" />
-                    <QuestionCode code={questionCode(detail)} />
+                    <QuestionCode question={detail} />
                     <QuestionFigures
                       urls={detail.figures}
                       illustrations={parseQuestion(detail.text).illustrations}

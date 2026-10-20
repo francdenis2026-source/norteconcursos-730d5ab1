@@ -1,6 +1,6 @@
 import { questionAnswers, type Answer, type Question } from "./questionFormat";
 import { isAppliedExamQuestion } from "./questionFilterIdentity";
-import { parseQuestionRef, simulatorQuestionRef } from "./questionIdentity";
+import { simulatorReference } from "./questionIdentity";
 import type { QuestionTable } from "./questionFormat";
 
 export interface SimulatorQuestion {
@@ -250,9 +250,13 @@ export async function saveSimulatorResult(
 
 /** Adapta o item do simulador à identidade usada por denúncias e códigos (tabela física + id). */
 export function simulatorReportQuestion(q: SimulatorQuestion): Question | null {
-  const ref = simulatorQuestionRef(q);
-  const target = ref ? parseQuestionRef(ref) : null;
-  if (!target) return null;
+  let target: { id: string; table?: QuestionTable | undefined } | null = null;
+  try {
+    target = simulatorReference(q);
+  } catch {
+    return null;
+  }
+  if (!target.table) return null;
   return {
     id: target.id,
     source: q.sourceKind,
@@ -278,12 +282,16 @@ export function simulatorReportQuestion(q: SimulatorQuestion): Question | null {
 
 /** Forma comparável (duplicatas e respostas anteriores) de um item do simulador. */
 export function simulatorComparable(q: SimulatorQuestion) {
-  const ref = simulatorQuestionRef(q);
-  const target = ref ? parseQuestionRef(ref) : null;
+  let table: QuestionTable | undefined;
+  try {
+    table = simulatorReference(q).table;
+  } catch {
+    table = undefined;
+  }
   return {
     id: q.originalId,
     source: q.sourceKind,
-    table: (target?.table ?? undefined) as QuestionTable | undefined,
+    ...(table ? { table } : {}),
     contest: q.contest,
     year: String(q.year),
     board: q.board,
