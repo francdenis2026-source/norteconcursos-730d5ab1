@@ -16,20 +16,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { AttemptHistoryList } from "@/components/dashboard/AttemptHistoryList";
+import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 
 export const Route = createFileRoute("/dashboard/history")({
   component: HistoryPage,
   head: () => ({ meta: [{ title: "Histórico de estudos | Norte Concurso" }] }),
 });
 
-interface Attempt {
-  id: string;
-  title: string;
-  total_questions: number;
-  correct_answers: number;
-  accuracy: number;
-  finished_at: string;
-}
 interface Answer {
   id: string;
   subject: string;
@@ -50,7 +44,7 @@ const fmtDate = (iso: string) =>
 function HistoryPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const real = !!user && user.id !== "demo-user";
-  const [attempts, setAttempts] = React.useState<Attempt[]>([]);
+  const [attempts, setAttempts] = React.useState<AttemptWithDetails[]>([]);
   const [answers, setAnswers] = React.useState<Answer[]>([]);
   const [me, setMe] = React.useState<Me | null>(null);
   const [loading, setLoading] = React.useState(true);
@@ -63,12 +57,10 @@ function HistoryPage() {
     }
     let alive = true;
     void Promise.all([
-      supabase
-        .from("simulator_attempts")
-        .select("id,title,total_questions,correct_answers,accuracy,finished_at")
-        .eq("user_id", user.id)
-        .order("finished_at", { ascending: false })
-        .limit(20),
+      fetchAttemptHistory(user.id, 20).then(
+        (data) => ({ data, error: null }),
+        (error: unknown) => ({ data: [] as AttemptWithDetails[], error }),
+      ),
       supabase
         .from("question_training_responses")
         .select("id,subject,contest_name,is_correct,response_seconds,created_at")
@@ -78,7 +70,7 @@ function HistoryPage() {
       supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle(),
     ]).then(([a, r, m]) => {
       if (!alive) return;
-      setAttempts((a.data as Attempt[] | null) ?? []);
+      setAttempts(a.data);
       setAnswers((r.data as Answer[] | null) ?? []);
       setMe((m.data as Me | null) ?? null);
       setLoading(false);
@@ -127,55 +119,19 @@ function HistoryPage() {
             <CardTitle className="flex items-center gap-2">
               <Trophy className="h-5 w-5 text-primary" /> Histórico de simulados
             </CardTitle>
-            <CardDescription>Suas tentativas completas e a precisão em cada uma.</CardDescription>
+            <CardDescription>
+              Cada tentativa mostra a nota pela regra de correção, o aproveitamento e os pontos de
+              ranking — três medidas diferentes.
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto rounded-md border">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Data</TableHead>
-                    <TableHead>Simulado</TableHead>
-                    <TableHead>Acertos</TableHead>
-                    <TableHead>Desempenho</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {attempts.length === 0 ? (
-                    <TableRow>
-                      <TableCell colSpan={4} className="py-8 text-center text-muted-foreground">
-                        Nenhum simulado realizado ainda.
-                      </TableCell>
-                    </TableRow>
-                  ) : (
-                    attempts.map((a) => (
-                      <TableRow key={a.id}>
-                        <TableCell className="whitespace-nowrap text-xs">
-                          {fmtDate(a.finished_at)}
-                        </TableCell>
-                        <TableCell className="text-sm font-medium">{a.title}</TableCell>
-                        <TableCell className="font-bold tabular-nums">
-                          {a.correct_answers}/{a.total_questions}
-                        </TableCell>
-                        <TableCell>
-                          <div className="flex items-center gap-2">
-                            <div className="h-1.5 w-16 overflow-hidden rounded-full bg-muted">
-                              <div
-                                className="h-full bg-primary"
-                                style={{ width: `${Math.round(Number(a.accuracy))}%` }}
-                              />
-                            </div>
-                            <span className="text-[10px] font-bold tabular-nums">
-                              {Math.round(Number(a.accuracy))}%
-                            </span>
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                    ))
-                  )}
-                </TableBody>
-              </Table>
-            </div>
+            {attempts.length === 0 ? (
+              <p className="rounded-md border py-8 text-center text-sm text-muted-foreground">
+                Nenhum simulado realizado ainda.
+              </p>
+            ) : (
+              <AttemptHistoryList items={attempts} />
+            )}
           </CardContent>
         </Card>
 

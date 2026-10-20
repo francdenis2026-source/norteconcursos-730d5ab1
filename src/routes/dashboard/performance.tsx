@@ -22,6 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { LockedState } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 import { StudyTimeCard } from "@/components/dashboard/StudyTimeCard";
+import { RecentAttempts } from "@/components/dashboard/RecentAttempts";
 import { usePerformanceOverview, type SubjectAccuracy } from "@/hooks/usePerformanceOverview";
 import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
@@ -248,7 +249,9 @@ function PerformanceOverviewTab({
           </ul>
         </div>
       )}
-      <h2 className="performance-overview__heading text-lg font-semibold">Visão geral do desempenho</h2>
+      <h2 className="performance-overview__heading text-lg font-semibold">
+        Visão geral do desempenho
+      </h2>
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <MetricCard
           icon={ListChecks}
@@ -305,6 +308,7 @@ function PerformanceOverviewTab({
           to="/dashboard/ranking"
         />
       </section>
+      <RecentAttempts />
 
       <RhythmCard subjects={trainer.bySubject} />
 
@@ -630,7 +634,8 @@ function MetricCard({
   value: string;
   detail?: string;
   tone?: keyof typeof TONE_STYLES;
-  to?: "/dashboard/question-trainer" | "/dashboard/mock-exams" | "/dashboard" | "/dashboard/ranking";
+  to?:
+    "/dashboard/question-trainer" | "/dashboard/mock-exams" | "/dashboard" | "/dashboard/ranking";
 }) {
   const card = (
     <Card className={cn("border-none shadow-sm performance-metric-card", TONE_STYLES[tone])}>

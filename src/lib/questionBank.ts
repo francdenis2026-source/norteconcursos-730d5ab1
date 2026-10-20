@@ -28,9 +28,9 @@ export function searchQuestionCatalog(catalog: Question[], query: string) {
   const text = fold(query);
   return text
     ? catalog.filter((q) =>
-        fold(`${q.contest} ${q.board} ${q.subject} ${q.career} ${q.year} ${questionCode(q)}`).includes(
-          text,
-        ),
+        fold(
+          `${q.contest} ${q.board} ${q.subject} ${q.career} ${q.year} ${questionCode(q)}`,
+        ).includes(text),
       )
     : catalog;
 }

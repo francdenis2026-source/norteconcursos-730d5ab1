@@ -59,6 +59,39 @@ export function reflowParagraphs(lines: string[]): string[] {
   return out;
 }
 
+/**
+ * Como um trecho de questão deve ser disposto:
+ *  - "prose": texto corrido longo, que lê melhor justificado e com hifenização;
+ *  - "short": enunciado/alternativa curtos, sempre à esquerda (justificar frases curtas abre espaços);
+ *  - "verse": poema, letra ou lista de linhas curtas, em que cada quebra é do autor;
+ *  - "preserve": tabela, código ou fórmula em várias linhas, que dependem da formatação original.
+ */
+export type QuestionTextLayout = "prose" | "short" | "verse" | "preserve";
+const LIST_ITEM = /^\s*(\(?[a-eA-E]\)|[IVX]+\s*[-–.)]|\d+\s*[-–.)]|[-•*])\s/;
+export function questionTextLayout(text: string): QuestionTextLayout {
+  const value = text.replace(/\r/g, "");
+  const lines = value.split("\n").map((line) => line.replace(/\s+$/, ""));
+  const filled = lines.filter((line) => line.trim());
+  if (
+    /```/.test(value) ||
+    /\t/.test(value) ||
+    /\\(?:frac|sqrt|sum|int|begin)\b/.test(value) ||
+    /[─│┌┐└┘├┤┬┴┼]/.test(value) ||
+    filled.filter((line) => /\S {3,}\S/.test(line)).length >= 2 ||
+    filled.filter((line) => (line.match(/\|/g) ?? []).length >= 2).length >= 2 ||
+    filled.filter((line) => /^ {4,}\S/.test(line)).length >= 2
+  )
+    return "preserve";
+  const body = filled.filter((line) => !LIST_ITEM.test(line));
+  if (body.length >= 4) {
+    const lengths = body.map((line) => line.trim().length);
+    const average = lengths.reduce((sum, n) => sum + n, 0) / lengths.length;
+    const shortLines = lengths.filter((n) => n <= 58).length;
+    if (shortLines / body.length >= 0.75 && average <= 46) return "verse";
+  }
+  return value.trim().length < 220 ? "short" : "prose";
+}
+
 /** Reorganiza um enunciado quebrado em linhas curtas, sem mexer em listas e itens numerados. */
 export function reflowStem(text: string): string {
   const lines = text.replace(/\r/g, "").split("\n");

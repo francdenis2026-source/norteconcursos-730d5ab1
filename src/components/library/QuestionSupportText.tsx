@@ -40,8 +40,8 @@ export function QuestionSupportText({ text, citesLines }: { text: string; citesL
             const kind = classifySupportBlock(p, i);
             if (kind === "title") return <p key={i} className="pt-1 text-center font-sans text-sm font-bold uppercase tracking-wide">{p}</p>;
             if (kind === "source") return <p key={i} className="text-right font-sans text-xs leading-5 text-muted-foreground">{p}</p>;
-            if (kind === "dialogue") return <p key={i} className="pl-6 -indent-3 text-justify [hyphens:auto]">{p}</p>;
-            return <p key={i} className="indent-8 text-justify [hyphens:auto] [text-wrap:pretty]">{p}</p>;
+            if (kind === "dialogue") return <p key={i} className="pl-6 -indent-3 text-left sm:text-justify [hyphens:auto]">{p}</p>;
+            return <p key={i} className="indent-8 text-left sm:text-justify [hyphens:auto] [text-wrap:pretty]">{p}</p>;
           })}
         </div>
       )}

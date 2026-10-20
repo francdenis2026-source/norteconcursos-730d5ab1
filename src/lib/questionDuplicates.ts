@@ -18,12 +18,7 @@ type Comparable = Pick<
 > & { table?: Question["table"] };
 
 const fold = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim();
+  value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 
 /** Chave de conteúdo de um item de prova; null para o que não deve ser unido (autoral, pessoal, sem texto). */
 export function questionContentKey(question: Comparable): string | null {
@@ -74,7 +69,11 @@ export function sharedItemSiblings(questions: readonly Comparable[]): Map<string
   const siblings = new Map<string, string[]>();
   for (const refs of groups.values()) {
     if (refs.length < 2) continue;
-    for (const ref of refs) siblings.set(ref, refs.filter((other) => other !== ref));
+    for (const ref of refs)
+      siblings.set(
+        ref,
+        refs.filter((other) => other !== ref),
+      );
   }
   return siblings;
 }
@@ -100,7 +99,8 @@ export function expandAnsweredBySiblings<V>(
     const holder = members.find((member) => answered.has(keyOf(member)));
     if (!holder) continue;
     const value = answered.get(keyOf(holder))!;
-    for (const member of members) if (!expanded.has(keyOf(member))) expanded.set(keyOf(member), value);
+    for (const member of members)
+      if (!expanded.has(keyOf(member))) expanded.set(keyOf(member), value);
   }
   return expanded;
 }

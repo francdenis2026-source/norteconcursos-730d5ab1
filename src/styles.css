@@ -13416,3 +13416,55 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   .app-shell .student-hub__masthead.student-hub__masthead--insignia .student-hub__welcome { max-width: calc(100% - 85px); font-size: 11px; }
   .app-shell .student-hub__masthead--insignia h1 + p { margin-top: 18px; }
 }
+
+/* ───────── Texto de questão: leitura em celular, tablet e computador ─────────
+   A disposição vem de questionTextLayout() (data-layout): corrido longo é justificado com
+   hifenização; curto fica à esquerda; poema preserva as quebras; tabela/código/fórmula preservam
+   a formatação original e rolam na horizontal em vez de quebrar. */
+.q-text {
+  max-width: 72ch;
+  margin-inline: 0;
+  line-height: 1.75;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  text-wrap: pretty;
+  text-align: left;
+  color: inherit;
+}
+.q-text[data-layout="prose"] { text-align: justify; text-justify: inter-word; }
+.q-text[data-layout="short"] { text-align: left; }
+.q-text[data-layout="verse"] { white-space: pre-wrap; hyphens: none; -webkit-hyphens: none; text-align: left; }
+.q-text[data-layout="preserve"] {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 4;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-align: left;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em;
+  line-height: 1.6;
+  padding: .75rem .9rem;
+  border-radius: .5rem;
+  background: var(--muted);
+  color: var(--foreground);
+  -webkit-overflow-scrolling: touch;
+}
+/* Celular: a coluna tem ~30 caracteres e justificar abre buracos entre as palavras (mesmo com
+   hifenização), então o texto corrido fica à esquerda; a justificação vale de tablet para cima. */
+@media (max-width: 599px) {
+  .q-text[data-layout="prose"] { text-align: left; }
+}
+/* Alternativas: sempre à esquerda, quebrando dentro da coluna sem estourar o cartão. */
+.q-option-text { text-align: left; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: anywhere; text-wrap: pretty; line-height: 1.6; }
+/* Telas pequenas: enunciado e comentário ocupam a largura útil, sem a margem de leitura do computador. */
+@media (max-width: 639px) {
+  .q-text { max-width: 100%; line-height: 1.7; }
+  .trainer-question-stem.q-text { font-size: 16px; }
+}
+.question-prose-block { white-space: pre-line; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; max-width: 72ch; }

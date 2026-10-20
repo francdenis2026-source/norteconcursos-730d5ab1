@@ -4,6 +4,9 @@ import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 // verdade do Treinador — nada de mock). O aluno não responde de novo aqui;
 // ele revisa e marca o progresso (pendente/revisado/dominado) pra focar no
 // que ainda precisa estudar.
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
+import { QuestionCode } from "@/components/dashboard/QuestionCode";
+import { questionCode } from "@/lib/questionIdentity";
 import { MissingTextNotice } from "@/components/library/MissingTextNotice";
 import { needsMissingSupportText } from "@/lib/questionText";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -117,11 +120,11 @@ function ErrorArsenal({
         </div>
       )}
       {question.preliminaryKey && (
-                <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
-                  Gabarito preliminar da banca: pode mudar após recursos. Confira o definitivo quando sair.
-                </p>
-              )}
-              {question.checkedAt && question.legalBasis.length > 0 && (
+        <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs font-semibold text-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+          Gabarito preliminar da banca: pode mudar após recursos. Confira o definitivo quando sair.
+        </p>
+      )}
+      {question.checkedAt && question.legalBasis.length > 0 && (
         <p className="text-xs text-muted-foreground">
           Vigência conferida na fonte oficial em {formatDate(question.checkedAt)}.
         </p>
@@ -180,7 +183,8 @@ function ErrorArsenal({
           to="/dashboard/question-trainer"
           search={{ subject: question.subject, go: "1", mode: "reforco" }}
         >
-          <Target className="h-4 w-4" /> Refazer meus erros de {question.subject} (reforço, não pontua de novo)
+          <Target className="h-4 w-4" /> Refazer meus erros de {question.subject} (reforço, não
+          pontua de novo)
         </Link>
       </Button>
       <Button asChild variant="outline" className="w-full gap-2">
@@ -361,8 +365,9 @@ function ErrorsPage() {
               >
                 {DIFFICULTY_LABEL[question.difficulty]}
               </Badge>
+              <QuestionCode code={questionCode(question)} />
             </div>
-            <p className="whitespace-pre-line text-base leading-6">{parsed.stem}</p>
+            <QuestionProse text={parsed.stem} className="text-base" />
             <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
               <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
                 Resposta correta
@@ -484,6 +489,7 @@ function ErrorsPage() {
                     </Badge>
                     <Badge variant="outline">{question.subject}</Badge>
                     <Badge variant="outline">{question.board}</Badge>
+                    <QuestionCode code={questionCode(question)} />
                   </div>
                   <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
                     {question.contest} · {question.year}
@@ -551,10 +557,12 @@ function ErrorsPage() {
                   </DialogHeader>
                   <div className="space-y-4">
                     {needsMissingSupportText(detail) && <MissingTextNotice />}
-                    <p className="whitespace-pre-line text-sm leading-6">
-                      {parseQuestion(detail.text).stem}
-                    </p>
-                    <QuestionFigures urls={detail.figures} illustrations={parseQuestion(detail.text).illustrations} />
+                    <QuestionProse text={parseQuestion(detail.text).stem} className="text-sm" />
+                    <QuestionCode code={questionCode(detail)} />
+                    <QuestionFigures
+                      urls={detail.figures}
+                      illustrations={parseQuestion(detail.text).illustrations}
+                    />
                     <div className="rounded-xl border-2 border-emerald-500 bg-emerald-50 p-4 dark:bg-emerald-950/30">
                       <p className="mb-1 text-xs font-black uppercase tracking-wider text-emerald-700">
                         Resposta correta

@@ -87,3 +87,26 @@ test('classifySupportBlock separa título, fonte, fala e corpo', () => {
   assert.equal(classifySupportBlock('— Onde você vai? — perguntou ela.', 2), 'dialogue');
   assert.equal(classifySupportBlock('A polícia civil exerce funções de polícia judiciária, conforme a Constituição.', 1), 'body');
 });
+
+import { questionTextLayout } from "../src/lib/questionText.ts";
+test("text layout: long prose is justified, short statements stay left", () => {
+  const prose = "A autoridade policial, ao tomar conhecimento da prática de infração penal, deverá adotar as providências previstas em lei, preservando o local do crime e os elementos que auxiliem a apuração dos fatos e de sua autoria. ".repeat(2);
+  assert.equal(questionTextLayout(prose), "prose");
+  assert.equal(questionTextLayout("Julgue o item a seguir: o inquérito é dispensável."), "short");
+  assert.equal(questionTextLayout("Texto: 1) Primeiro\n2) Segundo\n" + "x".repeat(10)), "short");
+});
+test("text layout: poems keep the author's line breaks", () => {
+  const poem = "No meio do caminho tinha uma pedra\ntinha uma pedra no meio do caminho\ntinha uma pedra\nno meio do caminho tinha uma pedra";
+  assert.equal(questionTextLayout(poem), "verse");
+});
+test("text layout: tables, code and formulas keep their original formatting", () => {
+  assert.equal(questionTextLayout("Nome | Idade | Cidade\nAna | 30 | Rio Branco\nBia | 25 | Cruzeiro"), "preserve");
+  assert.equal(questionTextLayout("for (i = 0; i < n; i++) {\n    soma += i;\n    total += soma;\n}"), "preserve");
+  assert.equal(questionTextLayout("Considere:\n```\nSELECT * FROM t;\n```"), "preserve");
+  assert.equal(questionTextLayout("A\t10\nB\t20"), "preserve");
+  assert.equal(questionTextLayout("Resolva \\frac{a}{b} = 2\ne depois simplifique."), "preserve");
+});
+test("text layout: lettered alternatives are not mistaken for verse", () => {
+  const options = "Assinale a correta:\n(A) um\n(B) dois\n(C) três\n(D) quatro\n(E) cinco";
+  assert.notEqual(questionTextLayout(options), "verse");
+});

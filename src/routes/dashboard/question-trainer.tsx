@@ -1,4 +1,5 @@
 import { scrollAppToSection } from "@/lib/appScroll";
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import {
   trainerContext,
   lockedTrainerSubject,
@@ -1843,7 +1844,7 @@ function QuestionTrainer() {
                   ].join("\n")}
                 />
               </div>
-              <p className="trainer-question-stem">{reflowStem(parsed.stem)}</p>
+              <QuestionProse text={reflowStem(parsed.stem)} className="trainer-question-stem" />
               <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
               <p className="mt-3 text-[10px] font-black uppercase tracking-wider text-muted-foreground sm:mt-5 sm:text-xs">
                 {certoErrado ? "Julgue o item" : "Assinale a alternativa correta"}
@@ -1871,7 +1872,7 @@ function QuestionTrainer() {
                           )}
                         >
                           <span className="trainer-option-letter">{option.letter}</span>
-                          <span className={cn("flex-1", isStruck && "line-through")}>
+                          <span className={cn("q-option-text flex-1", isStruck && "line-through")}>
                             {option.text}
                           </span>
                           {isRight && (
@@ -1983,11 +1984,13 @@ function QuestionTrainer() {
                   sourceLabel={question.source === "official" ? "Gabarito oficial" : "Gabarito"}
                 >
                   {!isPlaceholderExplanation(explanation.main) && (
-                    <p>
-                      {explanation.main.length > 420
-                        ? `${explanation.main.slice(0, 420)}…`
-                        : explanation.main}
-                    </p>
+                    <QuestionProse
+                      text={
+                        explanation.main.length > 420
+                          ? `${explanation.main.slice(0, 420)}…`
+                          : explanation.main
+                      }
+                    />
                   )}
                 </AnswerFeedback>
               )}
@@ -2146,7 +2149,7 @@ function QuestionTrainer() {
                   <p className="mb-1 text-xs font-black uppercase tracking-wider text-primary">
                     Comentário da questão
                   </p>
-                  <p className="text-sm leading-6">{explanation.main}</p>
+                  <QuestionProse text={explanation.main} className="text-sm" />
                 </div>
               )}
               {explanation.example && (

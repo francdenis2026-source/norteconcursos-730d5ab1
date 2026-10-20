@@ -13,7 +13,12 @@ const table = () =>
       eq(
         column: string,
         value: string,
-      ): { eq(column: string, value: string): { eq(column: string, value: string): PromiseLike<Result> } };
+      ): {
+        eq(
+          column: string,
+          value: string,
+        ): { eq(column: string, value: string): PromiseLike<Result> };
+      };
     };
   };
 

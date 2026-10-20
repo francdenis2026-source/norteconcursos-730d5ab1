@@ -1,4 +1,5 @@
 import { scrollAppToTop } from "@/lib/appScroll";
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import { examCoverage, sessionExamCoverage } from "@/lib/examCoverage";
 import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
@@ -1834,9 +1835,10 @@ function ActiveSimulator(p: {
                 </div>
               </details>
             )}
-            <p className="mx-auto max-w-5xl whitespace-pre-wrap text-base font-medium leading-8 md:text-lg">
-              {parseQuestion(current.text).stem}
-            </p>
+            <QuestionProse
+              text={parseQuestion(current.text).stem}
+              className="mx-auto max-w-5xl text-base font-medium md:text-lg"
+            />
             <QuestionFigures
               urls={current.figures}
               illustrations={parseQuestion(current.text).illustrations}
@@ -2365,7 +2367,7 @@ function ResultView({
                 </button>
                 {isOpen && (
                   <div className="border-t bg-muted/20 p-5">
-                    <p className="whitespace-pre-wrap text-sm leading-6">{q.explanation}</p>
+                    <QuestionProse text={q.explanation} className="text-sm" />
                     {q.legalBasis.length > 0 && (
                       <div className="mt-4 flex flex-wrap gap-2">
                         {q.legalBasis
@@ -2411,7 +2413,7 @@ function AnswerOption({
       )}
     >
       <RadioGroupItem value={value} />
-      <span className="font-bold">
+      <span className="q-option-text min-w-0 font-bold">
         {value} — {label}
       </span>
     </label>

@@ -51,17 +51,14 @@ export interface PaperIdentity {
 }
 
 const fold = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim();
+  value.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
 
 /** Só reconhece a regra de desconto 1 para 1 escrita no registro; o resto fica como não verificado. */
 export function ruleFromRegistry(text: string | null | undefined): ScoringRule | null {
   if (!text) return null;
-  return /nota\s+l[ií]quida/i.test(text) && /corretas?\s*-\s*erradas?/i.test(text) ? NET_RULE : null;
+  return /nota\s+l[ií]quida/i.test(text) && /corretas?\s*-\s*erradas?/i.test(text)
+    ? NET_RULE
+    : null;
 }
 
 /**

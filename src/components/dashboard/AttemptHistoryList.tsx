@@ -3,16 +3,8 @@
 import { Clock, Medal } from "lucide-react";
 import { acreDate } from "@/lib/acreTime";
 import { formatScore } from "@/lib/examScoring";
-import type { AttemptWithDetails } from "@/lib/attemptHistory";
+import { formatDuration, type AttemptWithDetails } from "@/lib/attemptDetails";
 import { cn } from "@/lib/utils";
-
-export function formatDuration(seconds: number) {
-  const total = Math.max(0, Math.round(seconds));
-  const h = Math.floor(total / 3600);
-  const m = Math.floor((total % 3600) / 60);
-  const s = total % 60;
-  return h > 0 ? `${h}h${String(m).padStart(2, "0")}min` : m > 0 ? `${m}min ${s}s` : `${s}s`;
-}
 
 export function AttemptHistoryItem({ item }: { item: AttemptWithDetails }) {
   const { details } = item;

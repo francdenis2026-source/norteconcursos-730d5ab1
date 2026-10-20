@@ -1,4 +1,6 @@
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
+import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
@@ -499,14 +501,15 @@ function QuestionPlayer({
                 <summary className="cursor-pointer px-4 py-3 text-sm font-semibold">
                   {parsed.baseLabel}
                 </summary>
-                <div className="max-h-80 overflow-y-auto whitespace-pre-line px-4 pb-4 text-sm leading-7">
-                  {parsed.base}
+                <div className="max-h-80 overflow-y-auto px-4 pb-4">
+                  <QuestionSupportText
+                    text={parsed.base}
+                    citesLines={/(^|\W)linhas?\s+\d+/i.test(parsed.stem)}
+                  />
                 </div>
               </details>
             )}
-            <p className="whitespace-pre-line text-base font-medium leading-7 md:text-lg">
-              {parsed.stem}
-            </p>
+            <QuestionProse text={parsed.stem} className="text-base font-medium md:text-lg" />
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
             <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
               Julgue o item

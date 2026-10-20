@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { QuestionProse } from "@/components/dashboard/QuestionProse";
 import { Link } from "@tanstack/react-router";
 import { BookmarkCheck, BookOpen, Download, RotateCcw, SkipForward } from "lucide-react";
 import { toast } from "sonner";
@@ -252,7 +253,7 @@ export function StudyLaterNotebook({ userId }: { userId: string }) {
                     </Link>
                   </Button>
                 </div>
-                <p className="question-prose-block text-sm leading-relaxed">{item.question.text}</p>
+                <QuestionProse text={item.question.text} className="text-sm" />
                 <p className="text-xs text-muted-foreground">
                   Cópia salva em {new Date(item.savedAt).toLocaleDateString("pt-BR")}. O conteúdo e
                   as fontes podem receber atualizações; confira os materiais atuais. Assuntos

@@ -81,7 +81,11 @@ export function useLockedAnswers(userId: string | undefined, enabled: boolean) {
       for (const row of attempts) {
         const key = lockedKey(row.source, row.id);
         if (!row.selected || answers.has(key)) continue;
-        answers.set(key, { selected: row.selected as Answer, isCorrect: row.ok, origin: row.origin });
+        answers.set(key, {
+          selected: row.selected as Answer,
+          isCorrect: row.ok,
+          origin: row.origin,
+        });
       }
       return answers;
     },
