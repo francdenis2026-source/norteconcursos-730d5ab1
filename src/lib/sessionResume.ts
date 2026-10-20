@@ -199,3 +199,41 @@ export function readInProgressSessions(
     simulatorResume(storage, userId, "enem", now),
   ].filter((session): session is ResumeSession => session !== null);
 }
+
+export interface DiscardStorage {
+  removeItem(key: string): void;
+}
+
+/** Chaves locais que guardam a sessão; apagá-las é o que faz a barra "em andamento" sumir. */
+export function sessionStorageKeys(session: ResumeSession, userId: string): string[] {
+  return session.kind === "trainer"
+    ? [`trainer-bookmark:${userId}`]
+    : [`norte:simulator:v1:${userId}:${session.search["mode"] === "enem" ? "enem" : "contests"}`];
+}
+
+/** Escopo da linha espelhada na conta (study_session_snapshots) para a sessão. */
+export function sessionSnapshotScope(session: ResumeSession): "trainer" | "enem" | "contests" {
+  return session.kind === "trainer"
+    ? "trainer"
+    : session.search["mode"] === "enem"
+      ? "enem"
+      : "contests";
+}
+
+/** Fecha a sessão neste navegador. As respostas já confirmadas continuam no histórico da conta. */
+export function discardLocalSession(
+  local: DiscardStorage,
+  userId: string,
+  session: ResumeSession,
+  session2?: DiscardStorage,
+) {
+  for (const key of sessionStorageKeys(session, userId)) {
+    for (const store of [local, session2]) {
+      try {
+        store?.removeItem(key);
+      } catch {
+        /* Um armazenamento bloqueado não impede fechar a sessão. */
+      }
+    }
+  }
+}

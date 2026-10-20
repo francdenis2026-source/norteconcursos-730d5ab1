@@ -19,6 +19,7 @@ import { toast } from "sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
+import { OfflineBanner } from "../components/OfflineBanner";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
@@ -284,8 +285,8 @@ function RootComponent() {
   }, []);
 
   useEffect(() => {
-    // Registra o service worker de app-shell (só ícone/manifesto em cache,
-    // sem afetar dados ao vivo) — habilita "Adicionar à tela inicial" no celular.
+    // Registra o service worker de app-shell (guarda o app para abrir offline;
+    // dados ao vivo nunca ficam em cache) — habilita "Adicionar à tela inicial" no celular.
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js").catch(() => {
         // instalação do app ainda funciona sem SW (só perde o cache do shell)
@@ -301,6 +302,7 @@ function RootComponent() {
         <ConfirmHost />
         <InstallAppPrompt />
         <UpdateAvailablePrompt />
+        <OfflineBanner />
       </AuthStatusProvider>
     </QueryClientProvider>
   );
