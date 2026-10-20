@@ -269,25 +269,26 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-/* Painéis sem texto denso que recebem a faixa e a marca d'água da marca (ver styles.css). */
-const BRAND_BG_ROUTES = new Set([
-  "/dashboard",
-  "/dashboard/my-contest",
-  "/dashboard/careers",
-  "/dashboard/cronograma",
-  "/dashboard/study-plan",
-  "/dashboard/trilhas",
-  "/dashboard/medals",
-  "/dashboard/ranking",
-  "/dashboard/study-tools",
-  "/dashboard/timer",
-  "/dashboard/profile",
-  "/dashboard/subscriptions",
-  "/dashboard/edital-radar",
-  "/dashboard/exam-panorama",
-  "/dashboard/perfil-bancas",
-  "/dashboard/performance",
-]);
+/* Painéis sem texto denso que recebem a faixa (escuro) e a marca d'água (claro) da marca; ver styles.css.
+   "blue" = imagem azul-marinho; "gold" = imagem preto e dourado (planos e premiação). */
+const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
+  "/dashboard": "blue",
+  "/dashboard/my-contest": "blue",
+  "/dashboard/careers": "blue",
+  "/dashboard/cronograma": "blue",
+  "/dashboard/study-plan": "blue",
+  "/dashboard/trilhas": "blue",
+  "/dashboard/study-tools": "blue",
+  "/dashboard/timer": "blue",
+  "/dashboard/profile": "blue",
+  "/dashboard/edital-radar": "blue",
+  "/dashboard/exam-panorama": "blue",
+  "/dashboard/perfil-bancas": "blue",
+  "/dashboard/performance": "blue",
+  "/dashboard/subscriptions": "gold",
+  "/dashboard/medals": "gold",
+  "/dashboard/ranking": "gold",
+};
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
@@ -312,7 +313,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, []);
 
   const isAdmin = user?.role === "admin";
-  const brandBg = !isAdmin && BRAND_BG_ROUTES.has(location.pathname.replace(/\/+$/, "") || "/");
+  const brandBg = isAdmin ? undefined : BRAND_BG_ROUTES[location.pathname.replace(/\/+$/, "") || "/"];
   // Administrador vê só a administração (e o próprio perfil); aluno vê só a área de estudo.
   const items = React.useMemo(
     () =>
@@ -492,7 +493,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div
         className="app-shell navigation-v2"
         data-area={isAdmin ? "admin" : "student"}
-        data-brand-bg={brandBg ? "on" : "off"}
+        data-brand-bg={brandBg ?? "off"}
       >
         {user && user.id !== "demo-user" && <IdleGuard />}
         <FocusReturnBar />
