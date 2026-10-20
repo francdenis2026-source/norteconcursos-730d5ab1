@@ -269,7 +269,7 @@ interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-/* Painéis sem texto denso que recebem a faixa (escuro) e a marca d'água (claro) da marca; ver styles.css.
+/* Painéis sem texto denso que recebem a arte decorativa de fundo; ver styles.css.
    "blue" = imagem azul-marinho; "gold" = imagem preto e dourado (planos e premiação). */
 const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
   "/dashboard": "blue",

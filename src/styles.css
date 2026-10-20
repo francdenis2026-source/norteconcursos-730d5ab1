@@ -13301,50 +13301,24 @@ button.student-home__metric { position: relative; padding-right: 28px; }
   grid-template-rows: auto 48px 1fr;
 }
 
-/* Identidade "Carreiras Policiais" no painel do aluno: faixa (só no escuro) e marca d'água (só no claro, onde não há faixa).
-   Só nas páginas listadas em BRAND_BG_ROUTES (DashboardLayout); nunca no admin nem em páginas de texto denso. */
-.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main {
-  position: relative;
-  isolation: isolate;
-}
-.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::before,
-.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::after {
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  content: "";
-}
-.dark .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::before {
-  inset: 0 0 auto 0;
-  height: clamp(150px, 20vw, 230px);
-  background: var(--brand-banner) center 40% / cover no-repeat;
-  opacity: 0.55;
-  -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent);
-  mask-image: linear-gradient(180deg, #000 30%, transparent);
-}
-.app-shell[data-area="student"][data-brand-bg="blue"] { --brand-banner: url("/media/brand/carreiras-faixa-azul.webp"); }
+/* Identity artwork only on the existing light-reading student panels.
+   Questions, library, ENEM and administration retain their plain reading canvas. */
+.app-shell[data-area="student"][data-brand-bg="blue"] { --brand-banner: url("/media/hero/carreiras-background.webp"); }
 .app-shell[data-area="student"][data-brand-bg="gold"] { --brand-banner: url("/media/brand/carreiras-faixa-dourada.webp"); }
-.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::after {
-  position: fixed;
-  right: clamp(12px, 3.5vw, 48px);
-  bottom: clamp(12px, 3.5vh, 40px);
-  width: clamp(110px, 14vw, 200px);
-  aspect-ratio: 285 / 394;
-  background: url("/media/brand/carreiras-marca-claro.webp") center / contain no-repeat;
-  opacity: 0.07;
+.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::before,
+.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::after { content: none; }
+.app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-content {
+  background-image: linear-gradient(color-mix(in srgb, var(--background) 94%, transparent), color-mix(in srgb, var(--background) 98%, transparent)), var(--brand-banner);
+  background-size: auto, min(1200px, 100%) auto;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
-.dark .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::after {
-  display: none;
+.dark .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-content {
+  background-image: linear-gradient(color-mix(in srgb, var(--background) 86%, transparent), color-mix(in srgb, var(--background) 97%, transparent)), var(--brand-banner);
 }
 @media (max-width: 700px) {
-  .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-main::after {
-    width: 96px;
-    opacity: 0.05;
-  }
+  .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) .app-content { background-size: auto, 780px auto; }
 }
-@media print {
-  .app-shell[data-brand-bg] .app-main::before,
-  .app-shell[data-brand-bg] .app-main::after {
-    display: none;
-  }
+@media print, (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .app-shell[data-area="student"][data-brand-bg] .app-content { background-image: none; }
 }

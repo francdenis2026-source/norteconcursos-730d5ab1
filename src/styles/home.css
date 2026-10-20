@@ -4119,14 +4119,14 @@
 .home {
   --home-blue: var(--c-blue);
   --home-teal: var(--c-teal);
-  --home-violet: var(--c-violet);
+  --home-violet: var(--c-blue);
   --home-green: var(--c-green);
   --home-glass: color-mix(in srgb, var(--card) 88%, transparent);
 }
 .dark .home {
   --home-blue: var(--d-blue);
   --home-teal: var(--d-teal);
-  --home-violet: var(--d-violet);
+  --home-violet: var(--d-blue);
   --home-green: var(--d-green);
   --home-glass: color-mix(in srgb, var(--card) 90%, transparent);
 }
@@ -4321,3 +4321,53 @@
   .home.home .home-final::after { content: none; }
   .home.home .home-final__challenge { color: LinkText; }
 }
+
+/* One palette across the public page: navy/blue, teal, and the brand's gold. */
+.home { --home-action-text: var(--primary-foreground); }
+.home.home .home-method { --section-color: var(--home-teal); }
+.home.home .home-careers { --section-color: var(--home-teal); }
+.home.home .home-plans { --section-color: var(--home-blue); }
+.home.home .home-section {
+  background: linear-gradient(125deg, color-mix(in srgb, var(--section-color) 7%, var(--home-glass)), color-mix(in srgb, var(--home-bg) 90%, transparent) 75%);
+}
+.home.home .home-core-tool { --tool-c: var(--home-blue); }
+.home.home .home-core-tool:nth-child(2) { --tool-c: var(--home-teal); }
+.home.home .home-core-tool:nth-child(3) { --tool-c: var(--home-blue); }
+.home.home .home-tool { --tool-c: var(--home-blue); }
+.home.home .home-tool:nth-child(even) { --tool-c: var(--home-teal); }
+.home.home .home-steps > li { --step-c: var(--home-blue); }
+.home.home .home-steps > li:nth-child(even) { --step-c: var(--home-teal); }
+.home.home .home-core-tool__number { color: var(--tool-c); background: color-mix(in srgb, var(--tool-c) 12%, var(--card)); border: 1px solid color-mix(in srgb, var(--tool-c) 25%, var(--border)); }
+.home.home .home-plan[data-plan] {
+  --plan-c: var(--home-blue);
+  --plan-soft: color-mix(in srgb, var(--plan-c) 5%, var(--card));
+  padding: 16px;
+  gap: 10px;
+  border: 1px solid color-mix(in srgb, var(--plan-c) 24%, var(--border));
+  border-top: 3px solid var(--plan-c);
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--plan-soft), var(--card) 65%);
+  box-shadow: var(--shadow-card);
+}
+.home.home .home-plan[data-plan="plus"] { --plan-c: var(--home-teal); }
+.home.home .home-plan[data-plan].home-plan--featured { box-shadow: 0 0 0 1px color-mix(in srgb, var(--plan-c) 35%, transparent), var(--shadow-card); }
+.home.home .home-plan[data-plan] h3 { color: var(--plan-c); }
+.home.home .home-plan[data-plan] .home-plan__price { color: var(--foreground); }
+.home.home .home-plan[data-plan] .home-plan__annual { color: var(--plan-c); }
+.home.home .home-plan[data-plan] .home-tag { background: color-mix(in srgb, var(--plan-c) 10%, var(--card)); border: 1px solid color-mix(in srgb, var(--plan-c) 24%, var(--border)); color: var(--plan-c); }
+.home.home .home-plan[data-plan] > .home-button { background: var(--card); color: var(--plan-c); border-color: color-mix(in srgb, var(--plan-c) 35%, var(--border)); }
+.home.home .home-plan[data-plan="free"] > .home-button { background: var(--plan-c); border-color: var(--plan-c); color: var(--home-action-text); }
+.home.home .home-plan[data-plan] > .home-button:not(:disabled):hover { background: var(--plan-c); color: var(--home-action-text); }
+.home.home .home-plan[data-plan] > .home-button:disabled { opacity: 1; background: var(--muted); color: var(--muted-foreground); border-color: var(--border); }
+/* A 16:10 frame retains the subjects instead of reducing each scene to a strip. */
+.home.home .home-plan[data-plan] .home-plan__media {
+  flex: none;
+  width: calc(100% + 32px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: -16px -16px 4px;
+  overflow: hidden;
+  border-radius: 11px 11px 0 0;
+}
+.home.home .home-plan[data-plan] .home-plan__media img { width: 100%; height: 100%; object-fit: cover; }

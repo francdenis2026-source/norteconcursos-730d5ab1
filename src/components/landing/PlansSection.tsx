@@ -18,17 +18,17 @@ const PLAN_IMAGES: Record<
   string,
   { src: string; position: string; width?: number; height?: number }
 > = {
-  free: { src: "/media/hero/painel-aluno-estudo.webp", position: "55% 28%" },
-  essential: { src: "/media/hero/exam-hall.webp", position: "90% 32%" },
+  free: { src: "/media/hero/painel-aluno-estudo.webp", position: "55% 42%", width: 960, height: 640 },
+  essential: { src: "/media/hero/exam-hall.webp", position: "76% 44%", width: 1672, height: 941 },
   plus: {
     src: "/media/hero/plano-plus-carreira.webp",
-    position: "center 8%",
+    position: "68% 42%",
     width: 1672,
     height: 941,
   },
   premium: {
     src: "/media/hero/plano-premium-equipe.webp",
-    position: "center 12%",
+    position: "50% 42%",
     width: 1672,
     height: 941,
   },
@@ -75,6 +75,7 @@ export function PlansSection() {
             return (
               <article
                 key={plan.id}
+                data-plan={plan.id}
                 className={`home-plan${testing ? " home-plan--featured" : ""}`}
               >
                 {PLAN_IMAGES[plan.id] && (

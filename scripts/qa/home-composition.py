@@ -29,7 +29,7 @@ async def main():
     else:
      assert await portrait.evaluate('e=>getComputedStyle(e).position')=='absolute'
     accents=await page.locator('.home-platform, .home-method, .home-careers').evaluate_all('els=>els.map(e=>getComputedStyle(e).getPropertyValue("--section-color").trim())')
-    assert len(set(accents))==3, 'Sections must retain distinct accent colors in both themes'
+    assert len(set(accents))==2, 'Sections must share the coordinated blue/teal accents in both themes'
     assert await page.locator('.home-core-tool p').first.evaluate('e=>parseFloat(getComputedStyle(e).fontSize)')>=14
     assert 'blur' in await page.locator('.home-core-tools').evaluate('e=>getComputedStyle(e).backdropFilter')
     if w<=1000:

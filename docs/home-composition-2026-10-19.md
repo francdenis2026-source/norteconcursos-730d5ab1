@@ -25,3 +25,10 @@ A verificação visual cobre agora cinco larguras (320, 390, 768, 1024 e 1440 px
 ## Retrato das carreiras na chamada final
 
 A imagem existente `lineup-carreiras-ajustada.webp` volta à chamada antes do rodapé. Acima de 1100 px, ocupa a direita da faixa e a mensagem fica à esquerda; até 1100 px, aparece acima do texto, com proporção preservada e enquadramento voltado aos rostos. A fotografia oficial da hero e a arte escolhida para o fundo continuam independentes. A imagem tem descrição de representação ilustrativa, carregamento adiado e dimensões explícitas.
+
+## Planos e continuidade visual na área do aluno
+
+- Imagens dos quatro planos em proporção 16:10, com enquadramentos individuais e dimensões declaradas corretas. Os planos continuam com os mesmos preços, condições, acesso gratuito e botões de disponibilidade.
+- Paleta pública coordenada em azul/azul-marinho e verde-azulado, com dourado reservado à marca e chamadas. Os títulos, preços, contornos e estados dos planos deixam de usar quatro cores concorrentes. Cores de acerto/erro e indicadores funcionais da área interna não foram alterados.
+- A área do aluno reutiliza a arte escolhida em baixa intensidade no fundo do conteúdo, usando a lista de painéis já existente. O painel, desempenho e assinaturas recebem a decoração; biblioteca, treinador de questões, ENEM e administração permanecem fora desse tratamento. A decoração é omitida na impressão, em cores forçadas e com transparência reduzida.
+- `scripts/qa/brand-surfaces.py` verifica os quatro planos em três larguras e dois temas, imagens carregadas, proporção dos quadros, CTA gratuito e planos indisponíveis. Verifica também a aplicação/exclusão dos fundos nas rotas internas com sessão e todas as chamadas ao backend simuladas. Testes visuais gerais da homepage, build e 42 regressões de planos/navegação/progresso/cobertura passaram. Não houve escrita no Supabase.
