@@ -1,3 +1,5 @@
+import { questionIdentity } from "./questionIdentity";
+import type { Question } from "./questionFormat";
 /** Keep the announced session within the available catalog and first-answer allowance. */
 export function trainerSessionSize(
   available: number,
@@ -18,7 +20,7 @@ export function trainerSessionSize(
 }
 
 /** In catalog practice, limit only NEW answers; already answered items remain available for review. */
-export function catalogSessionQuestions<T extends { source: string; id: string }>(
+export function catalogSessionQuestions<T extends Pick<Question, "id" | "source" | "table">>(
   questions: T[],
   answers: ReadonlyMap<string, unknown>,
   remaining?: number,
@@ -26,7 +28,7 @@ export function catalogSessionQuestions<T extends { source: string; id: string }
   if (remaining === undefined) return questions;
   let allowance = Number.isFinite(remaining) ? Math.max(0, Math.floor(remaining)) : 0;
   return questions.filter((q) => {
-    if (answers.has(`${q.source}:${q.id}`)) return true;
+    if (answers.has(questionIdentity(q)) || (!q.table && answers.has(`${q.source}:${q.id}`))) return true;
     if (allowance <= 0) return false;
     allowance--;
     return true;

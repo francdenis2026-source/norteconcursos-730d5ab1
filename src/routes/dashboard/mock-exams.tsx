@@ -1,3 +1,5 @@
+import { useLockedAnswers } from "@/hooks/useLockedAnswers";
+import { questionIdentity } from "@/lib/questionIdentity";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { simulatorReference } from "@/lib/questionIdentity";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -150,7 +152,6 @@ const LIMITS = [10, 20, 30, 50, 120];
 const DURATIONS = [15, 30, 60, 120, 180, 240, 300];
 
 function ProfessionalSimulator() {
-  const queryClient = useQueryClient();
   const loadGeneration = React.useRef(0);
   const routeSearch = Route.useSearch();
   const isEnemMode =
@@ -201,6 +202,12 @@ function ProfessionalSimulator() {
   const paperMode = buildMode === "paper" && !isEnemMode;
 
   const [catalog, setCatalog] = React.useState<SimulatorQuestion[]>([]);
+  const queryClient = useQueryClient();
+  const historyCatalog = React.useMemo(() => catalog.map(simulatorReference), [catalog]);
+  const { locked: priorAnswers, identityReady, loading: historyLoading, error: historyError, reload: reloadAnswerHistory } = useLockedAnswers(user?.id, !!user && user.id !== "demo-user", historyCatalog);
+  const summaryAttempt = React.useRef<string | null>(null);
+  const [rankingSummary, setRankingSummary] = React.useState<{ eligible: number; repeated: number; points: number } | null>(null);
+
   const [historyUnavailable, setHistoryUnavailable] = React.useState(false);
   const [history, setHistory] = React.useState<AttemptHistory[]>([]);
   const [loading, setLoading] = React.useState(true);
@@ -547,6 +554,11 @@ function ProfessionalSimulator() {
   const result = React.useMemo(() => calculateResult(questions, answers), [questions, answers]);
 
   function startSimulator() {
+    if (historyLoading || historyError) {
+      toast.error("Aguarde a conferência do histórico antes de iniciar.");
+      void reloadAnswerHistory();
+      return;
+    }
     if (!hasMockExamAccess) {
       toast.error("Simulados completos são um recurso dos planos pagos.");
       return;
@@ -560,6 +572,8 @@ function ProfessionalSimulator() {
       return;
     }
     setInvalidDraft(false);
+    setRankingSummary(null);
+    summaryAttempt.current = null;
     setQuestions(paperMode ? [...sessionPool] : randomSimulator(sessionPool, limit));
     setSessionConfig({
       owner: user!.id,
@@ -678,6 +692,7 @@ function ProfessionalSimulator() {
       user_id: user.id,
       question_id: q.originalId,
       question_source: q.sourceKind,
+      ...(identityReady ? { question_table: simulatorReference(q).table } : {}),
       question_order: index + 1,
       subject: q.subject,
       selected_answer: answers[q.id] ?? null,
@@ -722,6 +737,18 @@ function ProfessionalSimulator() {
       });
       setSaveStatus("saved");
       clearSimulatorDraft();
+      summaryAttempt.current = sessionConfig.attemptId;
+      void (async () => {
+        await queryClient.invalidateQueries({ queryKey: ["question-locked-answers", user.id] });
+        if (identityReady) {
+          const { data, error } = await supabase.rpc("get_simulator_ranking_result" as never, { _attempt: sessionConfig.attemptId } as never);
+          if (!error && data && summaryAttempt.current === sessionConfig.attemptId)
+            setRankingSummary(data as { eligible: number; repeated: number; points: number });
+        }
+      })().catch(() => {
+        // The attempt was verified; unavailable ranking metadata does not undo its saved status.
+        if (summaryAttempt.current === sessionConfig.attemptId) setRankingSummary(null);
+      });
     } catch {
       setSaveStatus("error");
       toast.error(
@@ -860,6 +887,7 @@ function ProfessionalSimulator() {
         questions={questions}
         currentIndex={currentIndex}
         current={current}
+        repeated={priorAnswers.has(questionIdentity(simulatorReference(current)))}
         answers={answers}
         flagged={flagged}
         timeLeft={timeLeft}
@@ -886,6 +914,8 @@ function ProfessionalSimulator() {
         retrySave={() => void finishSimulator()}
         discard={() => resetSimulator(true)}
         title={sessionConfig.title}
+        rankingSummary={rankingSummary}
+        attemptId={sessionConfig.attemptId}
       />
     );
 
@@ -1378,7 +1408,7 @@ function ProfessionalSimulator() {
             ) : history.length ? (
               <div className="space-y-3">
                 {history.slice(0, 5).map((i) => (
-                  <HistoryRow key={i.id} item={i} />
+                  <HistoryRow key={i.id} item={i} identityReady={identityReady} />
                 ))}
               </div>
             ) : (
@@ -1470,6 +1500,7 @@ function ActiveSimulator(p: {
   questions: SimulatorQuestion[];
   currentIndex: number;
   current: SimulatorQuestion;
+  repeated: boolean;
   answers: Record<string, Answer>;
   flagged: Set<string>;
   timeLeft: number;
@@ -1487,6 +1518,7 @@ function ActiveSimulator(p: {
     questions,
     currentIndex,
     current,
+    repeated,
     answers,
     flagged,
     timeLeft,
@@ -1630,6 +1662,7 @@ function ActiveSimulator(p: {
           </CardHeader>
           <CardContent className="space-y-7 p-4 sm:p-6 md:p-9">
             <QuestionCode question={simulatorReference(current)} />
+            {repeated && <p role="status" className="rounded-lg border bg-muted p-3 text-sm">Você já respondeu esta questão. Esta tentativa não gera novos pontos no ranking. Sua resposta continua contando normalmente no resultado desta prova.</p>}
             {parseQuestion(current.text).base && (
               <details open className="rounded-xl border bg-muted/30 p-4">
                 <summary className="cursor-pointer text-sm font-semibold">
@@ -1867,6 +1900,8 @@ function ResultView({
   retrySave,
   discard,
   title,
+  rankingSummary,
+  attemptId,
 }: {
   questions: SimulatorQuestion[];
   answers: Record<string, Answer>;
@@ -1877,12 +1912,16 @@ function ResultView({
   retrySave: () => void;
   discard: () => void;
   title: string;
+  attemptId: string;
+  rankingSummary: { eligible: number; repeated: number; points: number } | null;
 }) {
   const [open, setOpen] = React.useState<string | null>(null);
   return (
     <div className="space-y-6 pb-8">
       <section role="status" className="rounded-xl border bg-card p-4 text-sm">
         <p className="font-semibold">{title}</p>
+        <p className="break-all text-xs text-muted-foreground">Tentativa: {attemptId}</p>
+        {rankingSummary ? <p>{rankingSummary.eligible} primeiras respostas · {rankingSummary.repeated} repetidas respondidas · {rankingSummary.points} pontos elegíveis para o ranking. O resultado da prova considera todas as questões.</p> : <p className="text-muted-foreground">Pontuação do ranking ainda não confirmada pelo servidor. O resultado abaixo é o desempenho desta tentativa.</p>}
         <p className="mt-1">
           {saveStatus === "saving"
             ? "Salvando e conferindo seu resultado…"
@@ -2152,7 +2191,9 @@ function Legend({ color, label }: { color: string; label: string }) {
     </div>
   );
 }
-function HistoryRow({ item }: { item: AttemptHistory }) {
+function HistoryRow({ item, identityReady }: { item: AttemptHistory; identityReady: boolean }) {
+  const [ranking, setRanking] = React.useState<{ eligible: number; repeated: number; points: number } | null>(null);
+  const [rankingState, setRankingState] = React.useState<"idle" | "loading" | "done">("idle");
   return (
     <div className="flex items-center justify-between gap-3 rounded-xl border p-3">
       <div className="min-w-0">
@@ -2161,8 +2202,21 @@ function HistoryRow({ item }: { item: AttemptHistory }) {
           {acreDate(item.finished_at).toLocaleDateString("pt-BR", {
             timeZone: "America/Rio_Branco",
           })}{" "}
-          · {item.total_questions} questões
+          · {item.total_questions} questões · {item.total_questions - item.blank_answers} respondidas
         </p>
+        <details className="mt-2 text-xs" onToggle={(event) => {
+          if (!event.currentTarget.open || !identityReady || rankingState !== "idle") return;
+          setRankingState("loading");
+          void Promise.resolve(supabase.rpc("get_simulator_ranking_result" as never, { _attempt: item.id } as never)).then(({data, error}) => {
+            if (!error && data) setRanking(data as { eligible: number; repeated: number; points: number });
+            setRankingState("done");
+          }).catch(() => setRankingState("done"));
+        }}>
+          <summary className="cursor-pointer font-semibold">Detalhes da tentativa</summary>
+          <p className="mt-2 break-all">Tentativa: {item.id}</p>
+          <p>{item.correct_answers} acertos · {item.wrong_answers} erros · {item.blank_answers} em branco · {Math.floor(item.duration_seconds / 60)} min {item.duration_seconds % 60} s</p>
+          <p>{ranking ? `${ranking.eligible} primeiras respostas · ${ranking.repeated} repetidas respondidas · ${ranking.points} pontos elegíveis no ranking` : rankingState === "loading" ? "Consultando pontuação do ranking…" : "Pontuação do ranking não confirmada para esta tentativa."}</p>
+        </details>
       </div>
       <div className="text-right">
         <p

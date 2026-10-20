@@ -1,3 +1,4 @@
+import { questionIdentity } from "./questionIdentity";
 import { canonicalSubject } from "./subjects";
 import { classifyTopic } from "./questionTopics";
 import type { Question } from "./questionFormat";
@@ -99,16 +100,17 @@ export function freshActivityQuestions(
   subject?: string,
   topic?: string,
 ) {
+  const hasSeen = (q: Question) => seen.has(questionIdentity(q)) || seen.has(`${q.source}:${q.id}`);
   const fingerprint = (text: string) =>
     text.normalize("NFC").replace(/\s+/g, " ").trim().toLocaleLowerCase("pt-BR");
   const seenTexts = new Set(
     catalog
-      .filter((q) => seen.has(`${q.source}:${q.id}`) && q.text.trim())
+      .filter((q) => hasSeen(q) && q.text.trim())
       .map((q) => fingerprint(q.text)),
   );
   return catalog.filter(
     (q) =>
-      !seen.has(`${q.source}:${q.id}`) &&
+      !hasSeen(q) &&
       !seenTexts.has(fingerprint(q.text)) &&
       (!subject || canonicalSubject(q.subject) === canonicalSubject(subject)) &&
       (!topic || fold(activityTopic(q) || "") === fold(topic)),

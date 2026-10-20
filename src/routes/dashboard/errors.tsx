@@ -1,3 +1,4 @@
+import { questionIdentity } from "@/lib/questionIdentity";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
@@ -202,7 +203,7 @@ function ErrorsPage() {
   const real = !!user && user.id !== "demo-user";
   const userId = real ? user?.id : undefined;
   const { catalog, loading: catalogLoading } = useQuestionCatalog(userId, real);
-  const { locked, loading: lockedLoading } = useLockedAnswers(userId, real);
+  const { locked, loading: lockedLoading } = useLockedAnswers(userId, real, catalog);
   const { data: libraryMaterials } = useStudyMaterialList(real);
   const { catalog: mediaCatalog } = useMediaCatalog();
   const libraryByDiscipline = useMemo(() => {
@@ -252,7 +253,7 @@ function ErrorsPage() {
 
   const catalogById = useMemo(() => {
     const map = new Map<string, Question>();
-    for (const question of catalog) map.set(`${question.source}:${question.id}`, question);
+    for (const question of catalog) map.set(questionIdentity(question), question);
     return map;
   }, [catalog]);
 
@@ -262,7 +263,7 @@ function ErrorsPage() {
       if (answer.isCorrect) continue;
       const question = catalogById.get(key);
       if (!question) continue; // questão saiu de circulação (inativada) desde o erro
-      entries.push({ question, status: reviewStatus[key] ?? "pendente" });
+      entries.push({ question, status: reviewStatus[`${question.source}:${question.id}`] ?? "pendente" });
     }
     return entries;
   }, [locked, catalogById, reviewStatus]);
@@ -475,7 +476,7 @@ function ErrorsPage() {
         {visibleErrors.length > 0 ? (
           visibleErrors.map(({ question, status }) => (
             <Card
-              key={`${question.source}:${question.id}`}
+              key={questionIdentity(question)}
               className="hover:border-primary/50 transition-colors"
             >
               <CardContent className="pt-6">

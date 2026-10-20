@@ -14,6 +14,7 @@ export function useUnseenActivity(userId: string | undefined, enabled: boolean) 
         supabase
           .from("simulator_responses")
           .select("question_id,question_source")
+          .not("selected_answer", "is", null)
           .eq("user_id", userId!)
           .order("id")
           .range(from, to),

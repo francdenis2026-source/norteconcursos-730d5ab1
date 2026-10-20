@@ -1,3 +1,4 @@
+import { questionIdentity } from "@/lib/questionIdentity";
 import { saveStudyLater } from "@/lib/studyLater";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -280,11 +281,12 @@ function QuestionTrainer() {
   );
   const {
     locked,
+    identityReady,
     loading: lockedLoading,
     error: historyError,
     reload: reloadHistory,
     markLocked,
-  } = useLockedAnswers(userId, canLoad);
+  } = useLockedAnswers(userId, canLoad, catalog);
   const unseenHistory = useUnseenActivity(userId, canLoad && routeFilters.unseen === "1");
   const error =
     catalogError ??
@@ -299,7 +301,6 @@ function QuestionTrainer() {
     routeFilters.mode === "catalog" ? "catalog" : routeFilters.mode === "reforco" ? "wrong" : "new",
   );
   const [sessionReinforce, setSessionReinforce] = React.useState(false);
-  const catalogReviewKeys = React.useRef(new Set<string>());
   const [board, setBoard] = React.useState(trainerBoard(routeFilters.board));
   const [career, setCareer] = React.useState(
     selectedQuestionCareer(
@@ -545,7 +546,6 @@ function QuestionTrainer() {
       sessionAnswers.current = new Map(
         (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
       );
-      catalogReviewKeys.current = new Set(locked.keys());
       setPracticeMode(
         b.practiceMode ??
           (routeFilters.mode === "catalog"
@@ -836,25 +836,25 @@ function QuestionTrainer() {
   // "wrong" e "all": reforço de questões já respondidas; as novas tentativas ficam numa tabela própria e não pontuam.
   const [notice, setNotice] = React.useState("");
   const fresh = React.useMemo(
-    () => pool.filter((q) => !locked.has(lockedKey(q.source, q.id))),
+    () => pool.filter((q) => !locked.has(questionIdentity(q))),
     [pool, locked],
   );
   const answeredPool = React.useMemo(
-    () => pool.filter((q) => locked.has(lockedKey(q.source, q.id))),
+    () => pool.filter((q) => locked.has(questionIdentity(q))),
     [pool, locked],
   );
   // erro na 1ª tentativa e ainda não recuperado no reforço
   const wrongPending = React.useMemo(
     () =>
       answeredPool.filter((q) => {
-        const k = lockedKey(q.source, q.id);
-        return locked.get(k)?.isCorrect === false && !reinforced.get(k)?.lastCorrect;
+        const k = questionIdentity(q);
+        return locked.get(k)?.isCorrect === false && !reinforced.get(lockedKey(q.source, q.id))?.lastCorrect;
       }),
     [answeredPool, locked, reinforced],
   );
   const recovered = answeredPool.filter((q) => {
-    const k = lockedKey(q.source, q.id);
-    return locked.get(k)?.isCorrect === false && reinforced.get(k)?.lastCorrect;
+    const k = questionIdentity(q);
+    return locked.get(k)?.isCorrect === false && reinforced.get(lockedKey(q.source, q.id))?.lastCorrect;
   }).length;
   const trainingPool =
     practiceMode === "catalog"
@@ -884,7 +884,6 @@ function QuestionTrainer() {
       );
       return;
     }
-    catalogReviewKeys.current = new Set(locked.keys());
     setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
     const count = trainerSessionSize(
       ordered.length,
@@ -954,7 +953,6 @@ function QuestionTrainer() {
       startTraining();
       return;
     }
-    catalogReviewKeys.current = new Set(locked.keys());
     setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
     setLimit("10");
     const count = trainerSessionSize(trainingPool.length, 10, dailyRemaining);
@@ -1037,9 +1035,7 @@ function QuestionTrainer() {
   const nonScoring =
     sessionReinforce ||
     noText ||
-    (practiceMode === "catalog" &&
-      !!question &&
-      catalogReviewKeys.current.has(lockedKey(question.source, question.id)));
+    (!!question && locked.has(questionIdentity(question)));
   React.useEffect(() => {
     const seconds = restoredSeconds.current ?? 0;
     restoredSeconds.current = null;
@@ -1065,7 +1061,7 @@ function QuestionTrainer() {
     if (lockedLoading) return;
     const past =
       sessionAnswers.current.get(index) ??
-      (nonScoring ? undefined : locked.get(lockedKey(question.source, question.id)));
+      (nonScoring ? undefined : locked.get(questionIdentity(question)));
     if (past) {
       setSelected(past.selected);
       setAnswered(true);
@@ -1166,6 +1162,7 @@ function QuestionTrainer() {
           user_id: user.id,
           question_id: question.id,
           question_source: question.source,
+          ...(identityReady ? { question_table: question.table } : {}),
           contest_name: question.contest,
           subject: question.subject,
           selected_answer: selected,
@@ -1175,13 +1172,19 @@ function QuestionTrainer() {
           asked_for_help: false,
           response_seconds: Math.max(0, questionSecsRef.current),
         },
-        { onConflict: "id" },
+        { onConflict: "id", ignoreDuplicates: true },
       );
       if (error) throw error;
+      const { data: savedResponse, error: verifyError } = await supabase.from("question_training_responses")
+        .select("question_id,question_source,selected_answer,is_correct")
+        .eq("id", responseIdRef.current).eq("user_id", user.id).single();
+      if (verifyError || savedResponse.question_id !== question.id || savedResponse.question_source !== question.source || savedResponse.selected_answer !== selected || savedResponse.is_correct !== isCorrect)
+        throw new Error("A resposta salva diverge do conteúdo exibido. Atualize a questão.");
       sessionAnswers.current.set(index, { selected, isCorrect });
       setAnswered(true);
       setDailyUsed((n) => n + 1);
-      markLocked(question.source, question.id, { selected, isCorrect });
+      markLocked(question, { selected, isCorrect });
+      void reloadHistory();
       setResults((prev) => {
         const copy = [...prev];
         copy[index] = isCorrect ? "ok" : "err";
@@ -1564,7 +1567,7 @@ function QuestionTrainer() {
   const explanation = splitExplanation(question.explanation);
   const relatedMaterials = relatedTrainerMaterials(question, library.data ?? []);
   const supportAvailable = canOpenTrainerLearning(
-    answered && locked.has(lockedKey(question.source, question.id)),
+    answered && locked.has(questionIdentity(question)),
     saving,
     lockedLoading,
   );
@@ -1755,6 +1758,7 @@ function QuestionTrainer() {
                 </span>
               </div>
               {results[index] === "skipped" && !answered && <p role="status" className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">Questão pulada — disponível em Meus cadernos → Estudar depois. Ainda não respondida.</p>}
+              {locked.has(questionIdentity(question)) && <p role="status" className="mb-3 rounded-lg border bg-muted p-3 text-sm">Você já respondeu esta questão. Esta tentativa não gera novos pontos no ranking.</p>}
               {reviewingPast && (
                 <div className="mb-3 flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3 py-2 text-xs font-semibold text-amber-800 dark:text-amber-200">
                   <Lock className="h-3.5 w-3.5 shrink-0" /> Resposta já registrada — revisão sem
