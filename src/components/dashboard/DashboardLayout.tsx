@@ -1,3 +1,4 @@
+import "@/styles/dashboard-glass.css";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
@@ -704,6 +705,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
           <main
             id="dashboard-content"
+            data-header-style={brandPath === "/dashboard" ? "original" : "glass"}
             data-scroll-restoration-id="dashboard-content"
             tabIndex={-1}
             className="app-content"
