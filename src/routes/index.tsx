@@ -1,3 +1,4 @@
+import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -316,6 +317,7 @@ function Index() {
         <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} />
           <div className="home-container home-hero__content" inert={introPlaying}>
+            <HeroBadge />
             <div className="home-hero__grid">
               <div className="home-hero__copy">
                 <span className="home-eyebrow">
