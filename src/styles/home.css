@@ -4726,3 +4726,22 @@
     padding-top: 64px;
   }
 }
+
+/* Preserve the original careers composition, including both lateral scenes. */
+.home .home-careers-artwork {
+  margin: 0 0 clamp(24px, 4vw, 44px);
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  border-radius: 18px;
+  background: var(--ink);
+}
+.home-careers-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+}
+@media (max-width: 640px) {
+  .home .home-careers-artwork { border-radius: 12px; }
+}

@@ -552,6 +552,18 @@ function Index() {
         </section>
 
         <section id="carreiras" className="home-section home-careers">
+          <div className="home-container">
+            <figure className="home-careers-artwork">
+              <img
+                src="/media/hero/auth-carreiras-composicao.webp"
+                alt="Emblema Carreiras Policiais entre agentes táticos, com cão policial, algemas e impressão digital"
+                width={1440}
+                height={600}
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
           <div className="home-container home-careers__layout">
             <div>
               <Head kicker="Para quem escolheu servir e proteger">
