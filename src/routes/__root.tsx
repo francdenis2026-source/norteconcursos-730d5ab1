@@ -1,3 +1,4 @@
+import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { PlatformSignature } from "@/components/brand/PlatformSignature";
@@ -57,6 +58,7 @@ function StatusScreen({
 }
 
 function NotFoundComponent() {
+  useEffect(finishInitialLoading, []);
   return (
     <StatusScreen
       code="404"
@@ -74,6 +76,7 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
+  useEffect(finishInitialLoading, []);
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -180,9 +183,15 @@ function RootShell({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: READING_SCALE_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
+        <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
+        <link rel="preload" as="image" href="/media/loading/norte-abertura-mobile.webp" media="(max-width: 640px)" type="image/webp" />
+        <link rel="preload" as="image" href="/media/loading/norte-abertura.webp" media="(min-width: 641px)" type="image/webp" />
         <HeadContent />
       </head>
       <body>
+        <InitialLoadingScreen />
+        <script dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_WATCHDOG }} />
+        <noscript><style>{"#norte-initial-loading{display:none}html:not([data-norte-boot=ready]){overflow:auto}"}</style></noscript>
         {children}
         <PlatformSignature />
         <Scripts />
@@ -269,7 +278,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthStatusProvider>
+      <AuthStatusProvider statusObserver={<InitialLoadingReady />}>
         <Outlet />
         <Toaster position="top-center" closeButton />
         <ConfirmHost />

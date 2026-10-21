@@ -1,0 +1,62 @@
+import { useEffect } from "react";
+import { useRouterState } from "@tanstack/react-router";
+import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
+
+/** Inline critical styles keep the initial server-rendered screen independent of route JS/fonts. */
+export const INITIAL_LOADING_CSS = `
+html:not([data-norte-boot=ready]){overflow:hidden}
+#norte-initial-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:end center;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
+#norte-initial-loading picture{position:absolute;inset:0;pointer-events:none}
+#norte-initial-loading img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.86}
+#norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09 0%,rgba(8,10,9,.88) 12%,transparent 45%),linear-gradient(90deg,rgba(8,10,9,.25),transparent 45%,rgba(8,10,9,.25))}
+#norte-initial-loading .norte-boot-copy{position:relative;z-index:1;text-align:center;max-width:calc(100% - 48px);padding-bottom:max(32px,7vh);margin:0}
+#norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:.28em;line-height:1.2}
+#norte-initial-loading .norte-boot-tagline{display:block;margin-top:10px;font-size:13px;letter-spacing:.025em;color:#e1ddd3}
+#norte-initial-loading .norte-boot-status{display:block;margin-top:22px;font-size:11px;color:#bdb8ad}
+#norte-initial-loading .norte-boot-track{display:block;position:relative;overflow:hidden;width:100px;height:2px;border-radius:2px;background:rgba(239,208,144,.18);margin:12px auto 0}
+#norte-initial-loading .norte-boot-track:after{content:'';position:absolute;inset:0;width:35%;background:#efd090;animation:norte-boot-progress 1.6s ease-in-out infinite}
+@keyframes norte-boot-progress{from{transform:translateX(-100%)}to{transform:translateX(390%)}}
+html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-width:640px){#norte-initial-loading picture{inset:0 0 auto;height:70%}#norte-initial-loading img{object-position:center 30%}#norte-initial-loading .norte-boot-copy{padding-bottom:max(32px,9vh)}#norte-initial-loading:after{background:linear-gradient(0deg,#080a09 12%,transparent 55%)}}
+@media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
+@media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading .norte-boot-brand,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-status{color:CanvasText}}
+@media print{#norte-initial-loading{display:none}}
+`;
+
+// If hydration fails entirely, reveal SSR/error content instead of trapping the visitor.
+export const INITIAL_LOADING_WATCHDOG = `(()=>{const t=setTimeout(()=>{document.documentElement.dataset.norteBoot='ready'},20000);window.addEventListener('norte:boot-ready',()=>clearTimeout(t),{once:true})})();`;
+
+export function InitialLoadingScreen() {
+  return (
+    <div id="norte-initial-loading" role="status" aria-label="Preparando a plataforma Norte Concursos">
+      <picture aria-hidden="true">
+        <source media="(max-width: 640px)" srcSet="/media/loading/norte-abertura-mobile.webp" />
+        <img src="/media/loading/norte-abertura.webp" width={800} height={533} alt="" fetchPriority="high" decoding="async" />
+      </picture>
+      <div className="norte-boot-copy">
+        <strong className="norte-boot-brand">NORTE</strong>
+        <span className="norte-boot-tagline">Sua preparação tem um norte.</span>
+        <span className="norte-boot-status">Preparando sua plataforma…</span>
+        <span className="norte-boot-track" aria-hidden="true" />
+      </div>
+    </div>
+  );
+}
+
+export function finishInitialLoading() {
+  if (typeof document === "undefined" || document.documentElement.dataset["norteBoot"] === "ready") return;
+  document.documentElement.dataset["norteBoot"] = "ready";
+  window.dispatchEvent(new Event("norte:boot-ready"));
+}
+
+/** Called only inside the auth provider; public pages never wait for account requests. */
+export function InitialLoadingReady() {
+  const { isLoading, error } = useAuthStatus();
+  const { pathname, status } = useRouterState({ select: state => ({ pathname: state.location.pathname, status: state.status }) });
+  useEffect(() => {
+    if (status === "pending") return;
+    if (pathname.startsWith("/dashboard") && isLoading && !error) return;
+    finishInitialLoading();
+  }, [pathname, status, isLoading, error]);
+  return null;
+}

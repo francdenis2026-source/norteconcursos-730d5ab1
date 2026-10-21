@@ -82,7 +82,7 @@ async function loadProfile(session: Session): Promise<UserProfile> {
 }
 
 /** One verified profile for the whole application, never persisted between users. */
-export function AuthStatusProvider({ children }: { children: ReactNode }) {
+export function AuthStatusProvider({ children, statusObserver }: { children: ReactNode; statusObserver?: ReactNode }) {
   const [sessionKey, setSessionKey] = useState<string | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -201,6 +201,7 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
     [user, isLoading, error, retry],
   );
   return <AuthContext.Provider value={value}>
+    {statusObserver}
     <SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard>
   </AuthContext.Provider>;
 }
