@@ -62,6 +62,8 @@ const groupDetails: Record<string, string> = {
 const collapsedLabels: Record<string, string> = {
   Planejamento: "Planejar",
   "Meu concurso": "Concurso",
+  "Material didático": "Materiais",
+  Ferramentas: "Recursos",
   Desempenho: "Evolução",
   Administração: "Gestão",
 };
@@ -78,6 +80,7 @@ export function DashboardNavigation({
   collapsed,
   hues,
   onNavigate,
+  appearance = "default",
 }: {
   items: NavigationItem[];
   pathname: string;
@@ -85,6 +88,7 @@ export function DashboardNavigation({
   collapsed: boolean;
   hues: Record<string, string>;
   onNavigate?: () => void;
+  appearance?: "default" | "student";
 }) {
   const available = items.filter((item) => !item.soon);
   const current = activeNavigation(available, pathname, search);
@@ -121,7 +125,7 @@ export function DashboardNavigation({
         data-active={isCurrent(item)}
         aria-current={isCurrent(item) ? "page" : undefined}
         aria-label={compact ? item.label : undefined}
-        title={compact ? item.label : undefined}
+        title={item.label}
         onClick={onNavigate}
       >
         <span className="app-ico" data-hue={hues[item.group] ?? "gold"}>
@@ -138,6 +142,7 @@ export function DashboardNavigation({
     <nav className="app-nav scroll-dark navigation-workspace" aria-label="Menu principal">
       {primary.length > 0 && (
         <div className="nav-primary" aria-label="Acessos principais">
+          {appearance === "student" && !collapsed && <p className="nav-primary__label">Acessos rápidos</p>}
           {primary.map((item) => link(item, collapsed))}
         </div>
       )}
@@ -145,7 +150,7 @@ export function DashboardNavigation({
         <p className="nav-section-label">
           {available.some((item) => item.adminOnly)
             ? "Gestão da plataforma"
-            : "Explore sua preparação"}
+            : appearance === "student" ? "Sua jornada" : "Explore sua preparação"}
         </p>
       )}
       {groups.map((group, i) => {
@@ -176,7 +181,7 @@ export function DashboardNavigation({
                 align="start"
                 sideOffset={12}
                 collisionPadding={12}
-                className="nav-flyout"
+                className={`nav-flyout${appearance === "student" ? " nav-flyout--student" : ""}`}
               >
                 <DropdownMenuLabel>
                   {group}
@@ -208,6 +213,7 @@ export function DashboardNavigation({
               data-active={active}
               aria-expanded={open}
               aria-controls={id}
+              title={groupDetails[group]}
               onClick={() =>
                 setExpanded((previous) =>
                   open ? previous.filter((value) => value !== group) : [...previous, group],

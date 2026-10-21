@@ -2,6 +2,7 @@ import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
 import "@/styles/student-canvas.css";
 import "@/styles/dashboard-artwork.css";
+import "@/styles/student-navigation.css";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
@@ -494,6 +495,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       search={location.search}
       collapsed={collapsed}
       hues={GROUP_HUE}
+      appearance={isAdmin ? "default" : "student"}
       onNavigate={() => setMobileOpen(false)}
     />
   );
@@ -557,7 +559,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}
         {user && user.id !== "demo-user" && <ActivityTracker />}
         <FocusReturnBar />
-        <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
+        <aside className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`} data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">
             <Link
               to="/dashboard"
@@ -622,7 +624,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     <Menu />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="left" menuMotion="drawer" className="app-sheet">
+                <SheetContent side="left" menuMotion="drawer" className={`app-sheet${isAdmin ? "" : " student-navigation"}`}>
                   <SheetTitle className="sr-only">Menu principal</SheetTitle>
                   <div className="app-sidebar__head">
                     <NorteBrand light />
