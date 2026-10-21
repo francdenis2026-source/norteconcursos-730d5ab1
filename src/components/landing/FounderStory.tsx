@@ -46,15 +46,7 @@ export function FounderStory({ full = false }: { full?: boolean }) {
                 loading="lazy"
                 decoding="async"
               />
-              <img
-                className="founder-portrait-badge"
-                src="/media/hero/auth-distintivo.webp"
-                alt=""
-                width={96}
-                height={116}
-                loading="lazy"
-                decoding="async"
-              />
+
             </figure>
             <span className="founder-location">
               <MapPin size={15} /> Feijó · Acre · Brasil
