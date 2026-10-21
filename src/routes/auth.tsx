@@ -1,4 +1,6 @@
 import "@/styles/auth-art.css";
+import authComposition from "@/assets/auth/carreiras-composicao.webp";
+import authBadge from "@/assets/auth/distintivo.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PasswordRecovery } from "@/components/PasswordRecovery";
 import { Input } from "@/components/ui/input";
@@ -238,7 +240,7 @@ function AuthPage() {
           <NorteBrand light />
         </Link>
         <figure className="auth-artwork">
-          <img src="/media/hero/auth-carreiras-composicao.webp" alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
+          <img src={authComposition} alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
         </figure>
         <div className="auth-visual-copy">
           <span className="chip-brass">
@@ -276,7 +278,7 @@ function AuthPage() {
         </Link>
         <div className="auth-card">
           <div className="auth-identity">
-            <img src="/media/hero/auth-distintivo.webp" alt="Distintivo Carreiras Policiais" width={96} height={116} />
+            <img src={authBadge} alt="Distintivo Carreiras Policiais" width={96} height={116} />
             <div><span>CARREIRAS POLICIAIS</span><strong>Sua próxima conquista começa aqui.</strong><p>Questões, simulados e evolução em um só lugar.</p></div>
           </div>
           <div className="auth-mobile-brand">
