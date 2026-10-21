@@ -96,7 +96,7 @@ export const PLAYLISTS: VideoPlaylist[] = [
 
 export const youtubePlaylistUrl = (id: string) => `https://www.youtube.com/playlist?list=${id}`;
 export const youtubeEmbedUrl = (id: string) =>
-  `https://www.youtube-nocookie.com/embed/videoseries?list=${id}&rel=0`;
+  `https://www.youtube-nocookie.com/embed/videoseries?list=${id}&rel=0&enablejsapi=1`;
 export const youtubeSearchUrl = (discipline: string) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(`${discipline} concurso aula grátis`)}`;
 

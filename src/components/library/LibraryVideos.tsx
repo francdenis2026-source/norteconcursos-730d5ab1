@@ -29,7 +29,7 @@ export function LibraryVideos({ videos, law }: { videos: RelatedVideo[]; law?: {
                 src={
                   isPlaylistId(video.id)
                     ? youtubeEmbedUrl(video.id)
-                    : `https://www.youtube-nocookie.com/embed/${video.id}?rel=0`
+                    : `https://www.youtube-nocookie.com/embed/${video.id}?rel=0&enablejsapi=1`
                 }
               />
             </div>
