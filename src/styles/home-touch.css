@@ -1,0 +1,144 @@
+/* Reading and navigation refinements belong only to the phone/tablet layout. */
+@media (max-width: 1100px) {
+  :root:is(.dark, :not(.dark)) .home.home {
+    --home-glass-fill: color-mix(in srgb, var(--card) 97%, transparent);
+    --home-glass-edge: color-mix(in srgb, var(--foreground) 17%, transparent);
+    --home-canvas-veil: color-mix(in srgb, var(--background) 94%, transparent);
+  }
+  :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 76%, transparent); }
+  :root:is(.dark, :not(.dark)) .home.home :is(
+    .home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading,
+    .home-preparation__info, .home-opportunity, .home-plan[data-plan],
+    .home-plans__signal, .home-plan-comparison, .home-plans__notice,
+    .home-hero__copy > p, .home-hero__study-links .daily-badge,
+    .home-hero__study-links .question-count-badge
+  ) {
+    background: var(--home-glass-fill);
+    border: 1px solid var(--home-glass-edge);
+    box-shadow: inset 0 1px 0 var(--home-glass-light), 0 8px 24px -20px rgb(0 0 0 / 35%);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-header {
+    background: color-mix(in srgb, var(--background) 97%, transparent);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  .home.home .home-hero__copy > p { padding: 12px 14px; border-radius: 12px; }
+  .home.home :is(.home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading) {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-preparation__tabs { background: var(--muted); padding: 6px; }
+  .home.home .home-preparation__tab { min-height: 44px; font-size: 12px; }
+  .home.home .home-preparation__tool summary { min-height: 48px; }
+  .home.home .home-plan[data-plan] :is(.home-plan__description, .home-plan__features),
+  .home.home .home-opportunity__body { line-height: 1.65; }
+  .home.home .home-plan[data-plan] > .home-button { min-height: 44px; }
+  .home.home .home-trust {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    overflow: visible;
+  }
+  .home.home .home-trust li { min-width: 0; white-space: normal; min-height: 40px; background: var(--home-glass-fill); }
+  .home.home .home-trust li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  /* The compact footer keeps only the ownership line; its directory lives in the menu. */
+  .home.home .home-footer--command :is(.home-footer__grid, .home-footer__contact) { display: none; }
+  :root:is(.dark, :not(.dark)) .home.home .home-footer--command > .home-container {
+    padding: 16px 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .home.home .home-footer--command .home-footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    margin: 0;
+    padding-top: 14px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+/* The header opens this menu up to 1140px, including narrow desktop windows. */
+@media (max-width: 1140px) {
+  /* Opaque menu groups make every directory entry easy to scan and tap. */
+  .home-menu {
+    width: min(420px, calc(100vw - 24px));
+    max-height: calc(100dvh - 24px);
+    padding: 24px 20px 20px;
+    gap: 18px;
+    background: var(--card);
+    color: var(--foreground);
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+  }
+  .home-menu__header { flex: none; padding-right: 30px; }
+  .home-menu__groups { display: grid; gap: 8px; flex: none; }
+  .home-menu__group { min-width: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .home-menu__group > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 12px 14px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--muted);
+  }
+  .home-menu__group > summary::-webkit-details-marker { display: none; }
+  .home-menu__group > summary svg { width: 16px; height: 16px; flex: none; }
+  .home-menu__group[open] > summary { border-bottom: 1px solid var(--border); }
+  .home-menu__group[open] > summary svg { transform: rotate(90deg); }
+  .home-menu .home-menu__group nav { margin: 0; padding: 4px 14px; }
+  .home-menu .home-menu__group nav a { min-height: 44px; padding-block: 8px; font-size: 13px; color: var(--foreground); }
+  .home-menu .home-menu__group nav a:last-child { border-bottom: 0; }
+  .home-menu .home-menu__group nav a:hover { color: var(--brass-deep); }
+  .dark .home-menu .home-menu__group nav a:hover { color: var(--brass); }
+  .home-menu__contact { display: grid; padding: 8px 14px; }
+  .home-menu__contact :is(address, a) { display: flex; gap: 10px; align-items: flex-start; padding-block: 12px; font-size: 12px; font-style: normal; line-height: 1.6; overflow-wrap: anywhere; }
+  .home-menu__contact a { min-height: 48px; border-top: 1px solid var(--border); }
+  .home-menu__contact svg { width: 16px; height: 16px; margin-top: 2px; flex: none; color: var(--brass-deep); }
+  .dark .home-menu__contact svg { color: var(--brass); }
+  .home-menu__contact small { display: block; font-size: 11px; color: var(--muted-foreground); }
+  .home-menu__access { flex: none; margin: 0; padding-top: 0; }
+  .home-menu__group > summary:focus-visible,
+  .home-menu__contact a:focus-visible { outline: 2px solid var(--ring); outline-offset: -3px; }
+}
+@media (min-width: 600px) and (max-width: 1100px) {
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track:is(.home-opportunities, .home-plans__grid) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 18px;
+    overflow: visible;
+    padding: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-opportunity, .home-plan[data-plan]) { min-width: 0; height: auto; }
+  .home.home .home-plan[data-plan] .home-plan__media { height: 140px; }
+  .home.home .home-operations .home-rail__track > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 9px);
+    justify-self: center;
+  }
+}
+@media (max-width: 599px) {
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > :is(.home-opportunity, .home-plan) { flex-basis: min(88%, 360px); }
+  .home.home .home-plan[data-plan] .home-plan__media { height: 132px; }
+  .home.home .home-rail__controls { padding: 8px 0; gap: 10px; }
+  .home.home .home-faq__list summary { padding-block: 14px; font-size: 13px; line-height: 1.5; }
+}
+@media (max-width: 1100px) and (prefers-reduced-transparency: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home { --home-glass-fill: var(--card); }
+}
+@media (max-width: 1100px) and (forced-colors: active) {
+  .home-menu, .home-menu__group > summary { background: Canvas; color: CanvasText; }
+}

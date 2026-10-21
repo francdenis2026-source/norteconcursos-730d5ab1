@@ -47,6 +47,7 @@ import "@/styles/home-interactions.css";
 import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
+import "@/styles/home-touch.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -86,6 +87,19 @@ const NAV: [string, string][] = [
   ["A plataforma", "#plataforma"],
   ["Concursos", "#concursos"],
   ["Planos", "#planos"],
+];
+
+const EXPLORE_LINKS: [string, string][] = [
+  ["Ferramentas", "#ferramentas"],
+  ["Carreiras", "#carreiras"],
+  ["Desafio diário", "/desafio-diario"],
+  ["Planos e condições", "#planos"],
+];
+const INSTITUTIONAL_LINKS: [string, string][] = [
+  ["Nossa história", "/sobre"],
+  ["Privacidade", "/privacy"],
+  ["Termos de uso", "/terms"],
+  ["Central de suporte", "/suporte"],
 ];
 
 const STEPS: [LucideIcon, string, string][] = [
@@ -334,33 +348,36 @@ function Index() {
                     Estude com direção para a carreira que você escolheu.
                   </SheetDescription>
                 </SheetHeader>
-                <nav aria-label="Navegação móvel">
-                  {NAV.map(([label, href]) => (
-                    <SheetClose asChild key={href}>
-                      <a href={href}>
-                        {label}
-                        <ChevronRight />
-                      </a>
-                    </SheetClose>
-                  ))}
-                  <SheetClose asChild>
-                    <Link to="/desafio-diario">
-                      Desafio diário
-                      <ChevronRight />
-                    </Link>
-                  </SheetClose>
-                  <div className="home-menu__label" aria-hidden="true">Institucional</div>
-                  {[
-                    ["Nossa história", "/sobre"],
-                    ["Privacidade", "/privacy"],
-                    ["Termos de uso", "/terms"],
-                    ["Central de suporte", "/suporte"],
-                  ].map(([label, href]) => (
-                    <SheetClose asChild key={href}>
-                      <a href={href}>{label}<ChevronRight /></a>
-                    </SheetClose>
-                  ))}
-                </nav>
+                <div className="home-menu__groups">
+                  <details className="home-menu__group" open>
+                    <summary>Explore<ChevronRight aria-hidden="true" /></summary>
+                    <nav aria-label="Navegação móvel">
+                      {[...NAV, ...EXPLORE_LINKS.filter(([, href]) => href !== "#planos")].map(([label, href]) => (
+                        <SheetClose asChild key={href}>
+                          <a href={href}>{label}<ChevronRight aria-hidden="true" /></a>
+                        </SheetClose>
+                      ))}
+                    </nav>
+                  </details>
+                  <details className="home-menu__group">
+                    <summary>Institucional<ChevronRight aria-hidden="true" /></summary>
+                    <nav aria-label="Informações institucionais">
+                      {INSTITUTIONAL_LINKS.map(([label, href]) => (
+                        <SheetClose asChild key={href}>
+                          <a href={href}>{label}<ChevronRight aria-hidden="true" /></a>
+                        </SheetClose>
+                      ))}
+                    </nav>
+                  </details>
+                  <details className="home-menu__group">
+                    <summary>Contato e localização<ChevronRight aria-hidden="true" /></summary>
+                    <div className="home-menu__contact">
+                      <address><MapPin aria-hidden="true" /><span>Rua Joel Fereira de Sousa, Bela Vista<br />Feijó, Acre · CEP 69960-000</span></address>
+                      <a href="mailto:francdenis2026@gmail.com"><Mail aria-hidden="true" /><span>E-mail<small>francdenis2026@gmail.com</small></span></a>
+                      <a href="https://wa.me/5568992031340" target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /><span>WhatsApp<small>(68) 99203-1340 · abre em nova aba</small></span></a>
+                    </div>
+                  </details>
+                </div>
                 <div className="home-menu__access">
                   <SheetClose asChild>
                     <Link
@@ -580,22 +597,12 @@ function Index() {
             <FooterColumn
               title="Explore"
               compact={compactHero}
-              links={[
-                ["Ferramentas", "#ferramentas"],
-                ["Carreiras", "#carreiras"],
-                ["Desafio diário", "/desafio-diario"],
-                ["Planos e condições", "#planos"],
-              ]}
+              links={EXPLORE_LINKS}
             />
             <FooterColumn
               title="Institucional"
               compact={compactHero}
-              links={[
-                ["Nossa história", "/sobre"],
-                ["Privacidade", "/privacy"],
-                ["Termos de uso", "/terms"],
-                ["Central de suporte", "/suporte"],
-              ]}
+              links={INSTITUTIONAL_LINKS}
             />
             <a
               className="home-platform-qr"

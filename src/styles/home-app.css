@@ -119,7 +119,7 @@
   :root:is(.dark, :not(.dark)) .home.home .home-hero { min-height: 0; padding-bottom: 12px; }
   :root:is(.dark, :not(.dark)) .home.home .home-hero__content { min-height: 0; padding-block: 20px 8px; }
   :root:is(.dark, :not(.dark)) .home.home .home-hero__image {
-    top: 48px;
+    top: clamp(100px, calc(44vw - 41px), 148px);
     right: -12px;
     bottom: auto;
     width: 43%;
@@ -130,9 +130,23 @@
     -webkit-mask-image: linear-gradient(#000 65%, transparent);
     mask-image: linear-gradient(#000 65%, transparent);
   }
-  :root:is(.dark, :not(.dark)) .home.home .home-hero h1 { max-width: 80%; font-size: clamp(30px, 7.8vw, 38px); line-height: 1.08; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero h1 {
+    max-width: calc(100% - clamp(94px, 22vw + 16px, 112px));
+    min-height: 144px;
+    font-size: clamp(30px, 7.8vw, 38px);
+    line-height: 1.08;
+  }
   :root:is(.dark, :not(.dark)) .home.home .home-hero__copy > p { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--home-glass-edge); border-radius: 10px; background: color-mix(in srgb, var(--card) 94%, transparent); font-size: 13px; line-height: 1.65; }
-  :root:is(.dark, :not(.dark)) .home.home .hero-badge { top: 72px; bottom: auto; right: 8px; --badge-w: 52px; }
+  /* A dedicated upper-right corner keeps the badge clear of the agent and header. */
+  :root:is(.dark, :not(.dark)) .home.home .hero-badge {
+    --badge-w: clamp(78px, 22vw, 96px);
+    top: 16px;
+    bottom: auto;
+    right: 16px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__copy > .home-eyebrow {
+    max-width: calc(100% - clamp(94px, 22vw + 16px, 112px));
+  }
   :root:is(.dark, :not(.dark)) .home.home .home-intro { top: 48px; bottom: auto; right: 0; left: auto; width: 43%; height: 200px; }
   .home.home .home-hero .home-actions { margin-top: 16px; gap: 8px; }
   .home.home .home-hero .home-actions > :is(a, button) { padding-inline: 12px; font-size: 11px; }
