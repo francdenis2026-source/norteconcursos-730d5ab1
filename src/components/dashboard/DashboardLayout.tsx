@@ -1,6 +1,7 @@
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
 import "@/styles/student-canvas.css";
+import "@/styles/dashboard-artwork.css";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
@@ -717,6 +718,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <main
             id="dashboard-content"
             data-header-style={brandPath === "/dashboard" ? "original" : "glass"}
+            data-section-art={current?.group ?? "Planejamento"}
             data-scroll-restoration-id="dashboard-content"
             tabIndex={-1}
             className="app-content"

@@ -1,0 +1,94 @@
+/* One composition per client journey. The student home retains its existing artwork. */
+.app-shell[data-area="student"] #dashboard-content {
+  --section-art: url('/media/hero/auth-carreiras-composicao.webp');
+}
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Planejamento"] { --section-art: url('/media/hero/study-assistant.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Meu concurso"] { --section-art: url('/media/hero/meu-concurso-seguranca-publica.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Material didático"] { --section-art: url('/media/hero/study-desk.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Ferramentas"] { --section-art: url('/media/hero/toolkit.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Questões"] { --section-art: url('/media/hero/trainer-study.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Provas"] { --section-art: url('/media/hero/exam-simulator.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="ENEM"] { --section-art: url('/media/hero/exam-simulator.webp'); }
+.app-shell[data-area="student"] #dashboard-content[data-section-art="Desempenho"] { --section-art: url('/media/hero/command-room.webp'); }
+
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+  .page-hero, .tactical-feature-hero, .catalog-command-hero,
+  .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+  .library-header, .edital-heading, .edital-topic-heading,
+  .ranking-glass-header, .video-study-page__header
+) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0 !important;
+  padding: clamp(18px, 2.2vw, 24px) !important;
+  border: 1px solid var(--border) !important;
+  border-left: 3px solid var(--panel-accent, var(--primary)) !important;
+  border-radius: 16px;
+  color: var(--foreground);
+  background:
+    linear-gradient(90deg, var(--card) 12%, color-mix(in srgb, var(--card) 98%, transparent) 38%, color-mix(in srgb, var(--card) 95%, transparent) 62%, color-mix(in srgb, var(--card) 8%, transparent) 94%),
+    var(--section-art) right center / auto 100% no-repeat,
+    var(--card) !important;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--foreground) 5%, transparent), 0 10px 28px -20px rgb(0 0 0 / 24%) !important;
+}
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+  .page-hero__text, .study-assistant-hero__content, .exam-simulator-hero__content
+) { max-width: 64%; }
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+  .page-hero, .tactical-feature-hero, .catalog-command-hero,
+  .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+  .library-header, .edital-heading, .edital-topic-heading,
+  .ranking-glass-header, .video-study-page__header
+) h1 {
+  max-width: 28ch;
+  color: var(--foreground) !important;
+  font-size: clamp(27px, 2.8vw, 35px) !important;
+  line-height: 1.12 !important;
+  text-wrap: balance;
+}
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+  .page-hero__desc, .ranking-glass-header__description, .ranking-glass-header__privacy,
+  .study-assistant-hero__content > p, .exam-simulator-hero__content > p,
+  .trainer-workbench-hero > div > p, .edital-heading > div > p, .edital-topic-heading > p
+) { max-width: 60ch; color: var(--muted-foreground) !important; line-height: 1.6; }
+/* Custom headers get the same protected copy column as the shared PageHero. */
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+  .trainer-workbench-hero > div, .edital-heading > div, .ranking-glass-header > p,
+  .ranking-glass-header > h1, .catalog-command-hero > p, .catalog-command-hero > h1,
+  .video-study-page__header > div, .edital-topic-heading > h1, .edital-topic-heading > p,
+  .library-header > h1, .library-header > p, .tactical-feature-hero > h1, .tactical-feature-hero > p
+) { max-width: 64%; }
+.app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] .page-hero__stats {
+  width: fit-content;
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  .app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+    .page-hero, .tactical-feature-hero, .catalog-command-hero,
+    .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+    .library-header, .edital-heading, .edital-topic-heading,
+    .ranking-glass-header, .video-study-page__header
+  ) {
+    background:
+      linear-gradient(90deg, color-mix(in srgb, var(--card) 98%, transparent), color-mix(in srgb, var(--card) 94%, transparent) 50%, color-mix(in srgb, var(--card) 90%, transparent)),
+      var(--section-art) right center / auto 100% no-repeat,
+      var(--card) !important;
+  }
+  .app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+    .page-hero__text, .study-assistant-hero__content, .exam-simulator-hero__content,
+    .trainer-workbench-hero > div, .edital-heading > div, .ranking-glass-header > p,
+    .ranking-glass-header > h1, .catalog-command-hero > p, .catalog-command-hero > h1,
+    .video-study-page__header > div, .edital-topic-heading > h1, .edital-topic-heading > p,
+  .library-header > h1, .library-header > p, .tactical-feature-hero > h1, .tactical-feature-hero > p
+  ) { max-width: 100%; }
+}
+@media print, (forced-colors: active), (prefers-reduced-transparency: reduce) {
+  .app-shell[data-area="student"] #dashboard-content[data-header-style="glass"] :is(
+    .page-hero, .tactical-feature-hero, .catalog-command-hero,
+    .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+    .library-header, .edital-heading, .edital-topic-heading,
+    .ranking-glass-header, .video-study-page__header
+  ) { background: var(--card) !important; backdrop-filter: none; }
+}
