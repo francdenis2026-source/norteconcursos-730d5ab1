@@ -3216,40 +3216,13 @@
   .home-header__register { padding-inline:9px; }
 }
 
-/* Pointer-led interaction: cards respond to the cursor with a restrained 3D
-   tilt and a soft light spot. Touch and reduced-motion users keep a static UI. */
+/* Content cards remain stable; feedback belongs to their actions and borders. */
 .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details) {
-  --tilt-x: 0deg;
-  --tilt-y: 0deg;
-  --pointer-x: 50%;
-  --pointer-y: 50%;
-  --card-lift: 0px;
   position: relative;
-  transform: perspective(1000px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x)) translateY(var(--card-lift));
-  transform-style: preserve-3d;
   transition:
-    transform 360ms var(--ease-out),
-    box-shadow 260ms var(--ease-out),
-    border-color 220ms ease,
-    background-color 220ms ease;
-  will-change: transform;
-}
-.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  border-radius: inherit;
-  opacity: 0;
-  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), color-mix(in oklab, var(--home-accent) 15%, transparent), transparent 42%);
-  transition: opacity 220ms ease;
-}
-.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details):hover {
-  --card-lift: -4px;
-  cursor: pointer;
-}
-.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details):hover::after {
-  opacity: 1;
+    box-shadow 180ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
 }
 .home :is(a, button, summary) {
   cursor: pointer;
@@ -3261,8 +3234,10 @@
     background-color 180ms ease,
     border-color 180ms ease;
 }
-.home :is(.home-button, .home-text-link, .home-final__challenge):hover {
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .home :is(.home-button, .home-text-link, .home-final__challenge):hover {
+    transform: translateY(-2px);
+  }
 }
 .home :is(.home-button, .home-text-link, .home-final__challenge):active {
   transform: translateY(0) scale(0.98);
@@ -3305,8 +3280,8 @@
 .home-menu-overlay[data-state="open"] { animation-duration:240ms; }
 .home-menu-overlay[data-state="closed"] { animation-duration:180ms; }
 .home-menu { background:var(--home-surface); box-shadow:var(--shadow-lift); }
-.home-menu[data-state="open"] { animation:menu-popover-in 240ms cubic-bezier(.22,1,.36,1) both; }
-.home-menu[data-state="closed"] { animation:menu-popover-out 160ms ease-in both; }
+.home-menu[data-state="open"] { animation:menu-popover-in 180ms var(--ease-out) both; }
+.home-menu[data-state="closed"] { animation:menu-popover-out 120ms var(--ease-out) both; }
 @media(prefers-reduced-motion:reduce) {
   .home-menu,.home-menu-overlay { animation:none !important; transition:none !important; }
 }
@@ -4737,9 +4712,9 @@
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
   align-items: center;
-  min-height: 440px;
+  min-height: 400px;
   gap: clamp(24px, 4vw, 56px);
-  padding: 48px max(40px, calc((100% - 1360px) / 2));
+  padding: 32px max(40px, calc((100% - 1360px) / 2));
   overflow: hidden;
   border: 1px solid var(--on-ink-line);
   border-inline: 0;
@@ -4818,9 +4793,11 @@
 .home-preparation__tab-anchor { min-width: 0; scroll-margin-top: 100px; }
 .home-preparation__tab-anchor > button { width: 100%; height: 100%; }
 .home-preparation__tab { min-width: 0; min-height: 44px; padding: 8px 6px; border-radius: 8px; font-size: 11px; font-weight: 650; color: var(--preparation-muted); cursor: pointer; scroll-margin-top: 100px; }
-.home-preparation__tab:hover { color: var(--brass-soft); background: rgb(240 198 115 / 8%); }
+@media (hover: hover) and (pointer: fine) {
+  .home-preparation__tab:not([data-state="active"]):hover { color: var(--brass-soft); background: rgb(240 198 115 / 8%); }
+}
 .home-preparation__tab[data-state="active"] { background: var(--brass-soft); color: var(--brass-foreground); }
-.home-preparation__panel { height: 292px; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--brass) transparent; padding: 8px 18px; }
+.home-preparation__panel { height: 272px; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: var(--brass) transparent; padding: 8px 18px; }
 .home-preparation__panel[data-state="inactive"] { display: none; }
 .home-preparation__items { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
 .home-preparation__items > :is(article, li) { display: flex; align-items: flex-start; gap: 12px; padding: 13px 0; border-bottom: 1px solid rgb(240 198 115 / 14%); }

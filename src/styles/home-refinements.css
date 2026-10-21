@@ -1,0 +1,82 @@
+/* Polish the existing homepage without replacing its layout or artwork. */
+.home.home .home-preparation {
+  padding-block: 0;
+}
+
+.home-preparation__items > :is(article, li) > div {
+  min-width: 0;
+}
+
+.home-preparation__items p {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.home :is(a, button, summary),
+.home-menu :is(a, button) {
+  touch-action: manipulation;
+}
+
+.home button,
+.home-menu button {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.home :is(.home-nav a, .home-login, .home-footer__links a, .home-preparation__tab),
+.home-menu nav a {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+/* Keyboard feedback is immediate; hover never needs to move a content card. */
+.home :is(a, button, summary):focus-visible,
+.home-menu :is(a, button):focus-visible {
+  transition: none;
+}
+
+.home :is(.home-nav a, .home-login):focus-visible::after,
+.home-menu nav a:focus-visible::after {
+  transition: none;
+}
+
+.home-menu[data-keyboard],
+.home-menu-overlay--keyboard {
+  animation: none;
+}
+
+.home :is(.home-button, .home-text-link, .home-final__challenge):active:not(:focus-visible) {
+  transition-duration: 100ms;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-preparation__challenge:hover {
+    color: var(--brass-soft);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .home :is(.home-button, .home-text-link, .home-final__challenge):hover {
+    transform: none;
+  }
+  .home :is(.home-button, .home-text-link, .home-final__challenge):active:not(:focus-visible) {
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 699px) {
+  .home.home .home-opportunity :is(.home-button, .home-text-link),
+  .home.home .home-opportunity .home-exam-details > summary {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home :is(.home-button, .home-text-link, .home-final__challenge):active {
+    transform: none;
+  }
+}

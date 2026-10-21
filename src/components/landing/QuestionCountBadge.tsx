@@ -34,11 +34,17 @@ export function QuestionCountBadge() {
         <span className="question-count-eyebrow">Seu próximo nível começa aqui</span>
         <span className="question-count-main">
           <strong>{data ? format(data.available) : "Questões"}</strong>
-          <span>{data ? "questões disponíveis" : "para sua preparação"}</span>
+          <span>
+            {data
+              ? data.available === 1
+                ? "questão disponível"
+                : "questões disponíveis"
+              : "para sua preparação"}
+          </span>
         </span>
         <span className="question-count-detail">
           {data
-            ? `${format(data.registered)} cadastradas · oficiais e autorais`
+            ? `${format(data.registered)} ${data.registered === 1 ? "cadastrada" : "cadastradas"} · oficiais e autorais`
             : "Oficiais e autorais · liberação após revisão"}
         </span>
       </span>

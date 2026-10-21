@@ -37,6 +37,7 @@ import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
 import "@/styles/home-operations.css";
 import "@/styles/home-light.css";
+import "@/styles/home-refinements.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -176,47 +177,6 @@ function Head({ kicker, children, lead }: { kicker: string; children: ReactNode;
   );
 }
 
-function usePointerInteractions() {
-  useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (reduceMotion.matches) return;
-
-    const cards = Array.from(
-      document.querySelectorAll<HTMLElement>(
-        ".home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)",
-      ),
-    );
-    const cleanups: (() => void)[] = [];
-
-    cards.forEach((card) => {
-      const handleMove = (event: PointerEvent) => {
-        if (event.pointerType === "touch") return;
-        const bounds = card.getBoundingClientRect();
-        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-        card.style.setProperty("--tilt-x", `${(x * 5).toFixed(2)}deg`);
-        card.style.setProperty("--tilt-y", `${(-y * 5).toFixed(2)}deg`);
-        card.style.setProperty("--pointer-x", `${(x + 0.5) * 100}%`);
-        card.style.setProperty("--pointer-y", `${(y + 0.5) * 100}%`);
-      };
-      const reset = () => {
-        card.style.setProperty("--tilt-x", "0deg");
-        card.style.setProperty("--tilt-y", "0deg");
-        card.style.setProperty("--pointer-x", "50%");
-        card.style.setProperty("--pointer-y", "50%");
-      };
-      card.addEventListener("pointermove", handleMove);
-      card.addEventListener("pointerleave", reset);
-      cleanups.push(() => {
-        card.removeEventListener("pointermove", handleMove);
-        card.removeEventListener("pointerleave", reset);
-      });
-    });
-
-    return () => cleanups.forEach((cleanup) => cleanup());
-  }, []);
-}
-
 const PREPARATION_TABS = [
   ["ferramentas", "Ferramentas"],
   ["como", "Como funciona"],
@@ -291,7 +251,7 @@ function PreparationInfo() {
 function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
-  usePointerInteractions();
+  const [menuKeyboard, setMenuKeyboard] = useState(false);
   return (
     <div className="home">
       <a href="#conteudo" className="home-skip">
@@ -326,14 +286,22 @@ function Index() {
             <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <button type="button" className="home-menu-trigger" aria-label="Abrir menu">
+                <button
+                  type="button"
+                  className="home-menu-trigger"
+                  aria-label="Abrir menu"
+                  onPointerDown={() => setMenuKeyboard(false)}
+                  onKeyDown={() => setMenuKeyboard(true)}
+                >
                   <Menu />
                 </button>
               </SheetTrigger>
               <SheetContent
                 className="home-menu"
+                data-keyboard={menuKeyboard || undefined}
+                onKeyDownCapture={() => setMenuKeyboard(true)}
                 menuMotion="popover"
-                overlayClassName="home-menu-overlay"
+                overlayClassName={`home-menu-overlay${menuKeyboard ? " home-menu-overlay--keyboard" : ""}`}
                 closeLabel="Fechar menu"
               >
                 <SheetHeader className="home-menu__header">
