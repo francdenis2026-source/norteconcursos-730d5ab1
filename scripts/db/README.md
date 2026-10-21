@@ -42,10 +42,14 @@ for f in scripts/db/equivalent-reservation-stub.sql \
 
 ### Erro `42601: unterminated dollar-quoted string`
 
-Esse erro ocorre ao executar somente uma parte do arquivo: o bloco `do $$` precisa chegar
-até `end $$;`. No SQL Editor, limpe a seleção de texto e execute o arquivo completo
+Esse erro indica uma consulta cortada no meio de um bloco. A migração agora usa comandos
+explícitos para cada tabela, sem o antigo `do $$`/`foreach`. Sua lógica e transação são as mesmas.
+
+No SQL Editor, abra uma **nova consulta** e cole o arquivo completo
 `supabase/migrations/20261021100000_question_import_duplicate_guard.sql`, desde `begin;`
-até o último `commit;`. Não execute os arquivos de teste em produção.
+até o último `commit;`. Execute sem selecionar apenas parte do texto. Se a linha 89 ainda
+mostrar `do $$`, o editor continua com uma cópia antiga. Não execute os arquivos de teste
+em produção.
 
 Se estiver reutilizando uma conexão que ficou em transação com erro, execute `rollback;`
 antes de tentar novamente. Não basta adicionar `$$` ao trecho cortado: faltariam os índices,

@@ -86,19 +86,87 @@ begin
   return new;
 end $$;
 
-do $$
-declare target text;
-begin
-  foreach target in array array['question_support_texts', 'official_exam_questions', 'board_exam_questions', 'curated_question_catalog', 'question_bank'] loop
-    execute format('lock table public.%I in share row exclusive mode', target);
-    execute format('alter table public.%I add column import_content_key text, add column import_unique_key text', target);
-    execute format('update public.%I q set import_content_key = public.question_import_content_key(%L, to_jsonb(q))', target, target);
-    execute format('with ranked as (select id, import_content_key, row_number() over (partition by import_content_key order by id) n from public.%I where import_content_key is not null) update public.%I q set import_unique_key = r.import_content_key from ranked r where r.id=q.id and r.n=1', target, target);
-    execute format('create index %I on public.%I(import_content_key)', target || '_import_content_lookup', target);
-    execute format('create unique index %I on public.%I(import_unique_key)', target || '_import_content_unique', target);
-    execute format('create trigger question_import_duplicate_guard before insert or update on public.%I for each row execute function public.guard_question_import_duplicate()', target);
-  end loop;
-end $$;
+-- Explicit DDL keeps the SQL Editor script free of anonymous DO blocks.
+
+lock table public.question_support_texts in share row exclusive mode;
+alter table public.question_support_texts
+  add column import_content_key text, add column import_unique_key text;
+update public.question_support_texts q
+  set import_content_key = public.question_import_content_key('question_support_texts', to_jsonb(q));
+with ranked as (
+  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
+  from public.question_support_texts where import_content_key is not null
+)
+update public.question_support_texts q set import_unique_key = r.import_content_key
+  from ranked r where r.id = q.id and r.n = 1;
+create index question_support_texts_import_content_lookup on public.question_support_texts(import_content_key);
+create unique index question_support_texts_import_content_unique on public.question_support_texts(import_unique_key);
+create trigger question_import_duplicate_guard before insert or update on public.question_support_texts
+  for each row execute function public.guard_question_import_duplicate();
+
+lock table public.official_exam_questions in share row exclusive mode;
+alter table public.official_exam_questions
+  add column import_content_key text, add column import_unique_key text;
+update public.official_exam_questions q
+  set import_content_key = public.question_import_content_key('official_exam_questions', to_jsonb(q));
+with ranked as (
+  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
+  from public.official_exam_questions where import_content_key is not null
+)
+update public.official_exam_questions q set import_unique_key = r.import_content_key
+  from ranked r where r.id = q.id and r.n = 1;
+create index official_exam_questions_import_content_lookup on public.official_exam_questions(import_content_key);
+create unique index official_exam_questions_import_content_unique on public.official_exam_questions(import_unique_key);
+create trigger question_import_duplicate_guard before insert or update on public.official_exam_questions
+  for each row execute function public.guard_question_import_duplicate();
+
+lock table public.board_exam_questions in share row exclusive mode;
+alter table public.board_exam_questions
+  add column import_content_key text, add column import_unique_key text;
+update public.board_exam_questions q
+  set import_content_key = public.question_import_content_key('board_exam_questions', to_jsonb(q));
+with ranked as (
+  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
+  from public.board_exam_questions where import_content_key is not null
+)
+update public.board_exam_questions q set import_unique_key = r.import_content_key
+  from ranked r where r.id = q.id and r.n = 1;
+create index board_exam_questions_import_content_lookup on public.board_exam_questions(import_content_key);
+create unique index board_exam_questions_import_content_unique on public.board_exam_questions(import_unique_key);
+create trigger question_import_duplicate_guard before insert or update on public.board_exam_questions
+  for each row execute function public.guard_question_import_duplicate();
+
+lock table public.curated_question_catalog in share row exclusive mode;
+alter table public.curated_question_catalog
+  add column import_content_key text, add column import_unique_key text;
+update public.curated_question_catalog q
+  set import_content_key = public.question_import_content_key('curated_question_catalog', to_jsonb(q));
+with ranked as (
+  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
+  from public.curated_question_catalog where import_content_key is not null
+)
+update public.curated_question_catalog q set import_unique_key = r.import_content_key
+  from ranked r where r.id = q.id and r.n = 1;
+create index curated_question_catalog_import_content_lookup on public.curated_question_catalog(import_content_key);
+create unique index curated_question_catalog_import_content_unique on public.curated_question_catalog(import_unique_key);
+create trigger question_import_duplicate_guard before insert or update on public.curated_question_catalog
+  for each row execute function public.guard_question_import_duplicate();
+
+lock table public.question_bank in share row exclusive mode;
+alter table public.question_bank
+  add column import_content_key text, add column import_unique_key text;
+update public.question_bank q
+  set import_content_key = public.question_import_content_key('question_bank', to_jsonb(q));
+with ranked as (
+  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
+  from public.question_bank where import_content_key is not null
+)
+update public.question_bank q set import_unique_key = r.import_content_key
+  from ranked r where r.id = q.id and r.n = 1;
+create index question_bank_import_content_lookup on public.question_bank(import_content_key);
+create unique index question_bank_import_content_unique on public.question_bank(import_unique_key);
+create trigger question_import_duplicate_guard before insert or update on public.question_bank
+  for each row execute function public.guard_question_import_duplicate();
 
 -- A support-text edit also refreshes the identities of the questions using that text.
 create or replace function public.refresh_support_question_import_keys()
