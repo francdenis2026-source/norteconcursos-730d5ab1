@@ -1,3 +1,4 @@
+import { studentSections } from "@/lib/studentNavigation";
 import { useEffect, useId, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
@@ -73,7 +74,50 @@ const shortLabels: Record<string, string> = {
   "/dashboard/mock-exams": "Simular",
   "/dashboard/enem": "ENEM",
 };
-export function DashboardNavigation({
+type NavigationProps = {
+  items: NavigationItem[];
+  pathname: string;
+  search?: Record<string, unknown>;
+  collapsed: boolean;
+  hues: Record<string, string>;
+  onNavigate?: () => void;
+  appearance?: "default" | "student";
+};
+
+export function DashboardNavigation(props: NavigationProps) {
+  return props.appearance === "student" ? <StudentDashboardNavigation {...props} /> : <GroupedDashboardNavigation {...props} />;
+}
+
+function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, hues, onNavigate }: NavigationProps) {
+  const available = items.filter(item => !item.soon && !item.adminOnly);
+  const current = activeNavigation(available, pathname, search);
+  const home = available.find(item => item.href === "/dashboard");
+  return (
+    <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
+      {home && <div className="nav-primary" aria-label="Área do aluno">
+        {!collapsed && <p className="nav-primary__label">Minha preparação</p>}
+        <Link to={home.href} search={home.search ?? {}} className="app-nav__link" title={home.label} aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
+          <span className="app-ico" data-hue="gold"><home.icon aria-hidden="true" /></span>
+          <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
+        </Link>
+      </div>}
+      {!collapsed && <p className="nav-section-label">Sua jornada</p>}
+      {studentSections(available).map(({ group, entry }) => {
+        const Icon = groupIcons[group] ?? BookOpen;
+        const active = current?.href !== "/dashboard" && current?.group === group;
+        return <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} title={`${group} — ${groupDetails[group] ?? "Abrir área"}`} onClick={onNavigate}>
+          <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
+          {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
+            <span className="app-nav__label"><strong>{group}</strong><small>{groupDetails[group]}</small></span>
+            <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
+          </>}
+        </Link>;
+      })}
+    </nav>
+  );
+}
+
+function GroupedDashboardNavigation({
   items,
   pathname,
   search = {},

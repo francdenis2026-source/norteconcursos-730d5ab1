@@ -1,3 +1,4 @@
+import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
 import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
@@ -710,6 +711,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </button>
             </div>
           </header>
+
+          {!isAdmin && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 
           <main
             id="dashboard-content"

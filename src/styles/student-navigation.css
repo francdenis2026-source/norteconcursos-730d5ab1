@@ -196,3 +196,40 @@
   .app-shell.navigation-v2 .app-sidebar.student-navigation, .app-sheet.student-navigation { background: Canvas !important; color: CanvasText; }
   .student-navigation .navigation-workspace .app-nav__link[data-active="true"] { color: HighlightText; background: Highlight; border-color: Highlight; }
 }
+
+/* Student sections are direct destinations in both expanded and compact sidebars. */
+.student-navigation .student-direct-navigation .nav-section-link { margin-block: 3px; height: 56px; min-height: 56px; }
+.student-navigation .student-direct-navigation .nav-section-link .app-nav__label { display: grid; gap: 2px; -webkit-line-clamp: unset; }
+.student-navigation .student-direct-navigation .nav-section-link strong { font-size: 13px; line-height: 18px; font-weight: 650; }
+.student-navigation .student-direct-navigation .nav-section-link small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--student-nav-muted); font-size: 10px; line-height: 14px; font-weight: 400; }
+.student-navigation .student-direct-navigation .nav-section-link__arrow { width: 14px; height: 14px; color: var(--student-nav-muted); }
+.student-navigation .student-direct-navigation .nav-section-link[data-active="true"] .nav-section-link__arrow { color: var(--student-nav-accent); }
+.workspace-section-nav {
+  position: sticky;
+  top: calc(var(--app-topbar-h, 72px) + env(safe-area-inset-top, 0px));
+  z-index: 18;
+  display: flex;
+  align-items: center;
+  flex: none;
+  min-width: 0;
+  gap: 6px;
+  padding: 7px clamp(12px, 2.2vw, 32px);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.workspace-section-nav a { display: inline-flex; align-items: center; justify-content: center; gap: 7px; flex: none; min-height: 36px; padding: 7px 10px; border: 1px solid transparent; border-radius: 8px; color: var(--muted-foreground); font-size: 11px; font-weight: 550; line-height: 1.3; text-decoration: none; white-space: nowrap; }
+.workspace-section-nav a > svg { width: 15px; height: 15px; flex: none; }
+.workspace-section-nav a:hover { background: var(--muted); color: var(--foreground); }
+.workspace-section-nav a[aria-current="page"] { color: var(--foreground); border-color: color-mix(in srgb, var(--brass) 35%, var(--border)); background: color-mix(in srgb, var(--brass) 12%, var(--card)); }
+.workspace-section-nav a:focus-visible { outline: 2px solid var(--ring); outline-offset: -2px; }
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .workspace-section-nav { position: relative; top: auto; padding-block: 4px; }
+  .workspace-section-nav a { min-height: 44px; }
+}
+@media (forced-colors: active) {
+  .workspace-section-nav { background: Canvas; border-color: CanvasText; }
+  .workspace-section-nav a[aria-current="page"] { color: HighlightText; background: Highlight; border-color: Highlight; }
+}
