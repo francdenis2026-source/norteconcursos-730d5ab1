@@ -36,7 +36,11 @@ const PLAN_IMAGES: Record<
 
 export function PlansSection() {
   return (
-    <section id="planos" className="home-section home-plans home-plans--insignia" aria-labelledby="planos-title">
+    <section
+      id="planos"
+      className="home-section home-plans home-plans--insignia"
+      aria-labelledby="planos-title"
+    >
       <div className="home-container">
         <div className="home-plans__intro">
           <div className="home-heading">
@@ -53,7 +57,15 @@ export function PlansSection() {
             </p>
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
-            <img className="home-plans__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
+            <img
+              className="home-plans__insignia"
+              src="/media/hero/auth-distintivo.webp"
+              alt=""
+              width={96}
+              height={116}
+              loading="lazy"
+              decoding="async"
+            />
             <span className="home-plans__signal-icon">
               <Clock aria-hidden="true" />
             </span>
@@ -190,9 +202,18 @@ export function PlansSection() {
           </p>
         )}
         <div className="home-faq">
-          <div>
+          <div className="home-faq__intro">
             <span className="home-eyebrow">Sem dúvidas no caminho</span>
             <h3>Antes de começar</h3>
+            <img
+              className="home-faq__art"
+              src="/media/hero/faq-preparacao-norte.webp"
+              alt=""
+              width={768}
+              height={512}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div className="home-faq__list">
             {FAQ.map(([question, answer]) => (
