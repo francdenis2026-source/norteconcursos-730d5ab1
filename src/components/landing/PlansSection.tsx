@@ -207,7 +207,7 @@ export function PlansSection() {
             <h3>Antes de começar</h3>
             <img
               className="home-faq__art"
-              src="/media/hero/faq-preparacao-norte.webp"
+              src="/media/hero/faq-preparacao-operacional.webp"
               alt=""
               width={768}
               height={512}
