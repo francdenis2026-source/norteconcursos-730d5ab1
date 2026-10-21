@@ -254,6 +254,15 @@ function Index() {
   const [menuKeyboard, setMenuKeyboard] = useState(false);
   return (
     <div className="home">
+      <div
+        className="home-signature"
+        role="img"
+        aria-label="Criação e desenvolvimento por Franc D'nis, em Feijó, Acre"
+      >
+        <span className="home-signature__mark" aria-hidden="true">FD</span>
+        <span aria-hidden="true">Franc D’nis · Feijó, Acre</span>
+        <span className="home-signature__credit" aria-hidden="true">Criação e desenvolvimento</span>
+      </div>
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
@@ -594,7 +603,7 @@ function Index() {
           </div>
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
-            <span>Desenvolvido por Franc D'nis</span>
+            <span>Tecnologia a serviço da sua preparação</span>
             <span>Feijó · Acre</span>
           </div>
         </div>
