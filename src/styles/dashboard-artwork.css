@@ -1,5 +1,6 @@
 /* One composition per client journey. The student home retains its existing artwork.
  * Shared by client menu headers; spacing and reading colors inherit the dashboard theme.
+ * Approved artwork: auth-carreiras-composicao.webp and auth-distintivo.webp.
  */
 .app-shell[data-area="student"] #dashboard-content {
   --section-art: url('/media/hero/auth-carreiras-composicao.webp');
