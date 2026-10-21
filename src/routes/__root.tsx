@@ -1,3 +1,4 @@
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { DARK_INSIGNIA, LIGHT_INSIGNIA } from "@/lib/policeInsignia";
 import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_ART, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
@@ -281,7 +282,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthStatusProvider statusObserver={<InitialLoadingReady />}>
-        <Outlet />
+        <TooltipProvider delayDuration={200}><Outlet /></TooltipProvider>
         <Toaster position="top-center" closeButton />
         <ConfirmHost />
         <InstallAppPrompt />
