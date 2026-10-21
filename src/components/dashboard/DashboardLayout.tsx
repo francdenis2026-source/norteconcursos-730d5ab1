@@ -473,7 +473,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const reallySignOut = async () => {
     await flushStudyClock();
     stopStudyClock();
-    await supabase.auth.signOut();
+    await supabase.auth.signOut({ scope: "local" });
     await navigate({ to: "/", replace: true });
   };
   const signOut = async () => {

@@ -1,3 +1,4 @@
+import { DeviceSessionGuard } from "./DeviceSessionGuard";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -202,7 +203,7 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
   );
   return <AuthContext.Provider value={value}>
     {statusObserver}
-    <SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard>
+    <DeviceSessionGuard sessionKey={sessionKey} isAdmin={value.isAdmin}><SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard></DeviceSessionGuard>
   </AuthContext.Provider>;
 }
 

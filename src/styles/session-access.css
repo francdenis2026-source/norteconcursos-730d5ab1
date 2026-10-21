@@ -116,3 +116,20 @@
   .session-access__card { background: Canvas !important; border: 1px solid CanvasText; color: CanvasText; --access-ink: CanvasText !important; --access-muted: CanvasText !important; --access-gold: CanvasText !important; }
   .session-access .session-access__retry { background: ButtonFace; color: ButtonText; border-color: ButtonText; }
 }
+
+/* Keep the tactical composition visible while device ownership is verified. */
+.session-access--verification .session-access__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 420px); }
+.session-access--verification .session-access__editorial { gap: clamp(140px, 28vh, 260px); }
+.session-access__verification-status { margin-top: 36px; }
+.session-access__spinner { animation: access-session-spin 1.2s linear infinite; }
+@keyframes access-session-spin { to { transform: rotate(360deg); } }
+@media (max-width: 760px) {
+  .session-access--verification .session-access__layout { grid-template-columns: minmax(0, 420px); padding-top: clamp(180px, 32svh, 300px); }
+  .session-access--verification .session-access__scene { background: linear-gradient(0deg, #090b0ef0, #090b0e45 70%, #090b0e15), url('../assets/auth/carreiras-composicao.webp') center top / auto 64svh no-repeat; }
+  .session-access__verification-status { margin-top: 26px; }
+}
+@media (max-width: 760px) and (max-height: 600px) {
+  .session-access--verification .session-access__layout { padding-top: 20px; }
+  .session-access--verification .session-access__scene { background-size: auto 100svh; }
+}
+@media (prefers-reduced-motion: reduce) { .session-access__spinner { animation: none; } }
