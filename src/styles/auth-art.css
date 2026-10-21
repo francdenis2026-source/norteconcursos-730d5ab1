@@ -64,13 +64,21 @@
 .auth-identity span { color: var(--brass-deep); font: 650 .625rem / 1.5 var(--font-mono); letter-spacing: .1em; }
 .dark .auth-identity span { color: var(--brass); }
 .auth-identity strong { display: block; margin-top: 5px; color: var(--foreground); font-size: 1rem; line-height: 1.35; }
-.auth-insignia { flex: 0 0 50px; width: 50px; height: 58px; perspective: 450px; pointer-events: none; }
-.auth-insignia__relief { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; animation: auth-insignia-arrive 1.3s ease-out both; }
+.auth-insignia { position: relative; --auth-insignia-scale: 1.24; flex: 0 0 50px; width: 50px; height: 58px; perspective: 450px; pointer-events: none; }
+.auth-insignia__relief { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform-origin: center; animation: auth-insignia-float 10s ease-in-out infinite; }
 .auth-insignia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 5px rgb(0 0 0 / 25%)); }
-.auth-insignia .auth-insignia__edge { transform: translateZ(-3px) translateX(1px); filter: brightness(.45); }
-.auth-insignia__reflection { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgb(255 242 211 / 38%) 50%, transparent 70%); mask: var(--police-insignia-art) center / contain no-repeat; animation: auth-insignia-reflect 2s .4s ease-out both; }
-@keyframes auth-insignia-arrive { from { transform: rotateY(-28deg); } to { transform: rotateY(-8deg); } }
-@keyframes auth-insignia-reflect { from { opacity: 0; } 45% { opacity: .65; } to { opacity: 0; } }
+.auth-insignia .auth-insignia__edge { transform: translateZ(-4px) translate(2px, 1px); filter: brightness(.4); }
+.auth-insignia__reflection { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 38%, rgb(255 242 211 / 42%) 50%, transparent 62%) 160% 0 / 220% 100% no-repeat; mask: var(--police-insignia-art) center / contain no-repeat; transform: translateZ(1px); animation: auth-insignia-reflect 12s ease-in-out infinite; }
+/* Scale the artwork only: the header slot and all form geometry stay unchanged. */
+@keyframes auth-insignia-float {
+  0%, 100% { transform: scale(var(--auth-insignia-scale)) translateY(1px) rotateX(4deg) rotateY(-10deg) rotateZ(-1deg); }
+  50% { transform: scale(var(--auth-insignia-scale)) translateY(-2px) rotateX(-4deg) rotateY(10deg) rotateZ(1deg); }
+}
+@keyframes auth-insignia-reflect {
+  0%, 68%, 100% { opacity: 0; background-position: 160% 0; }
+  74% { opacity: .45; }
+  84% { opacity: 0; background-position: -60% 0; }
+}
 .auth .auth-tabs { margin-bottom: 18px; }
 .auth .auth-tabs button { min-height: 38px; }
 .auth .auth-heading h2 { font-size: clamp(1.5rem, 2vw, 1.9rem); line-height: 1.12; }
@@ -143,7 +151,7 @@
   .auth[data-auth-mode="register"] .auth-row input { padding-left: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .auth-insignia__relief { animation: none; transform: rotateY(-8deg); }
+  .auth-insignia__relief { animation: none; transform: scale(var(--auth-insignia-scale)) rotateY(-6deg); }
   .auth-insignia__reflection { display: none; }
 }
 @media (prefers-reduced-transparency: reduce) {
