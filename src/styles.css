@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 @import "./styles/platform-signature.css";
 @import "./styles/police-insignia.css";
+@import "./styles/theme-switch.css";
 
 @utility no-print {
   @media print {
