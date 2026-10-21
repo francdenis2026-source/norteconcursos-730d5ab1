@@ -345,14 +345,6 @@
 }
 
 @media (max-width: 1100px) {
-  /* Blur only the fixed decorative canvas; the agent and every text stay sharp. */
-  .home-backdrop {
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    height: calc(100lvh + 20px);
-    filter: blur(3px);
-  }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading) {
     padding: 16px;
     border: 1px solid var(--home-glass-edge);
@@ -450,7 +442,6 @@
   .home.home .home-footer--command .home-footer__bottom { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 1100px) and (prefers-reduced-transparency: reduce) {
-  .home-backdrop { filter: none; }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading, .home-footer--command > .home-container) {
     background: var(--card);
     -webkit-backdrop-filter: none;

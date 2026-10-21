@@ -45,6 +45,7 @@ import "@/styles/home-refinements.css";
 import "@/styles/home-interactions.css";
 import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
+import "@/styles/home-app.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -53,6 +54,7 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
 import { PcpiExamPromo } from "@/components/landing/PcpiExamPromo";
+import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
 export const Route = createFileRoute("/")({
@@ -375,7 +377,7 @@ function Index() {
       </header>
 
       <main id="conteudo" tabIndex={-1}>
-        <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
+        <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying && !compactHero}>
@@ -416,7 +418,7 @@ function Index() {
                 </div>
               </div>
             </div>
-            <ul className="home-trust" aria-label="Diferenciais">
+            <ul className="home-trust" aria-label="Diferenciais" tabIndex={0}>
               <li>
                 <BadgeCheck /> Fontes e revisões identificadas
               </li>
@@ -565,6 +567,7 @@ function Index() {
             </div>
             <FooterColumn
               title="Explore"
+              compact={compactHero}
               links={[
                 ["Ferramentas", "#ferramentas"],
                 ["Carreiras", "#carreiras"],
@@ -574,6 +577,7 @@ function Index() {
             />
             <FooterColumn
               title="Institucional"
+              compact={compactHero}
               links={[
                 ["Nossa história", "/sobre"],
                 ["Privacidade", "/privacy"],
@@ -603,10 +607,17 @@ function Index() {
           <section className="home-footer__contact" aria-labelledby="footer-contact-title">
             <h3 id="footer-contact-title" className="sr-only">Endereço e contato</h3>
             <div className="home-footer__contact-grid">
-              <div className="home-footer__contact-card">
-                <MapPin aria-hidden="true" />
-                <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · <span className="whitespace-nowrap">CEP 69960-000</span></address>
-              </div>
+              {compactHero ? (
+                <details className="home-footer__address">
+                  <summary><MapPin aria-hidden="true" /><span>Feijó · Acre</span><ChevronRight aria-hidden="true" /></summary>
+                  <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · CEP 69960-000</address>
+                </details>
+              ) : (
+                <div className="home-footer__contact-card">
+                  <MapPin aria-hidden="true" />
+                  <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · <span className="whitespace-nowrap">CEP 69960-000</span></address>
+                </div>
+              )}
               <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
                 <Mail aria-hidden="true" />
                 <span className="home-footer__contact-detail">francdenis2026@gmail.com</span>
@@ -631,21 +642,24 @@ function Index() {
           </div>
         </div>
       </footer>
+      <HomeAppNavigation />
     </div>
   );
 }
 
-function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
-  return (
-    <nav className="home-footer__links" aria-label={title}>
-      <h3>{title}</h3>
-      <ul>
-        {links.map(([label, href]) => (
-          <li key={label}>
-            <a href={href}>{label}</a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+function FooterColumn({ title, links, compact = false }: { title: string; links: [string, string][]; compact?: boolean }) {
+  const list = (
+    <ul>
+      {links.map(([label, href]) => (
+        <li key={label}><a href={href}>{label}</a></li>
+      ))}
+    </ul>
   );
+  if (compact) return (
+    <details className="home-footer__section" name="home-footer-sections">
+      <summary>{title}<Plus aria-hidden="true" /></summary>
+      <nav className="home-footer__links" aria-label={title}>{list}</nav>
+    </details>
+  );
+  return <nav className="home-footer__links" aria-label={title}><h3>{title}</h3>{list}</nav>;
 }
