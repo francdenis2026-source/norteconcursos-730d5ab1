@@ -1,27 +1,29 @@
 import loadingArtwork from "@/assets/auth/carreiras-composicao.webp";
+import portraitArtwork from "@/assets/auth/carreiras-abertura-vertical.webp";
 import { useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
 
 export const INITIAL_LOADING_ART = loadingArtwork;
+export const INITIAL_LOADING_PORTRAIT_ART = portraitArtwork;
 
 /** Inline critical styles keep the initial server-rendered screen independent of route JS/fonts. */
 export const INITIAL_LOADING_CSS = `
-html:not([data-norte-boot=ready]){overflow:hidden}
-#norte-initial-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;align-content:center;gap:clamp(16px,4vh,36px);padding:clamp(12px,3vh,28px) 16px;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
-#norte-initial-loading picture{position:relative;width:min(100%,1440px);height:min(70vh,calc((100vw - 32px)*5/12));max-height:calc(100dvh - 172px);display:flex;align-items:center;justify-content:center;pointer-events:none}
-#norte-initial-loading img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;opacity:.9}
-#norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09 0%,rgba(8,10,9,.45) 12%,transparent 30%)}
-#norte-initial-loading .norte-boot-copy{position:relative;z-index:1;text-align:center;max-width:calc(100% - 48px);padding-bottom:0;margin:0}
-#norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:.28em;line-height:1.2}
+html:not([data-norte-boot=ready]){overflow:hidden;scrollbar-gutter:auto!important;background:#080a09}
+#norte-initial-loading{position:fixed;inset:0;width:100vw;z-index:10000;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
+#norte-initial-loading picture{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
+#norte-initial-loading img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+#norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09f5 0%,#080a09c9 12%,#080a0933 32%,transparent 55%)}
+#norte-initial-loading .norte-boot-copy{position:absolute;inset:auto auto max(28px,6dvh,env(safe-area-inset-bottom)) clamp(24px,5vw,96px);width:min(420px,calc(100% - 48px));z-index:1;text-align:left;padding:0;margin:0;text-shadow:0 2px 16px #000}
+#norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:0;line-height:1.2}
 #norte-initial-loading .norte-boot-tagline{display:block;margin-top:10px;font-size:13px;letter-spacing:.025em;color:#e1ddd3}
 #norte-initial-loading .norte-boot-status{display:block;margin-top:22px;font-size:11px;color:#bdb8ad}
-#norte-initial-loading .norte-boot-track{display:block;position:relative;overflow:hidden;width:100px;height:2px;border-radius:2px;background:rgba(239,208,144,.18);margin:12px auto 0}
+#norte-initial-loading .norte-boot-track{display:block;position:relative;overflow:hidden;width:100px;height:2px;border-radius:2px;background:rgba(239,208,144,.18);margin:12px 0 0}
 #norte-initial-loading .norte-boot-track:after{content:'';position:absolute;inset:0;width:35%;background:#efd090;animation:norte-boot-progress 1.6s ease-in-out infinite}
 @keyframes norte-boot-progress{from{transform:translateX(-100%)}to{transform:translateX(390%)}}
 html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
-@media(max-width:640px){#norte-initial-loading{padding: max(20px,env(safe-area-inset-top)) 12px max(20px,env(safe-area-inset-bottom))}#norte-initial-loading picture{height:min(70vh,calc((100vw - 24px)*5/12))}}
-@media(max-height:500px){#norte-initial-loading picture{max-height:calc(100dvh - 140px)}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
+@media(orientation:portrait){#norte-initial-loading img{object-position:50% 35%}#norte-initial-loading .norte-boot-copy{inset:auto 20px max(32px,7dvh,env(safe-area-inset-bottom));width:auto;text-align:center}#norte-initial-loading .norte-boot-brand{padding-left:.28em}#norte-initial-loading .norte-boot-track{margin-inline:auto}}
+@media(max-height:500px){#norte-initial-loading .norte-boot-copy{bottom:max(16px,env(safe-area-inset-bottom))}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
 @media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading .norte-boot-brand,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-status{color:CanvasText}}
 @media print{#norte-initial-loading{display:none}}
@@ -34,6 +36,7 @@ export function InitialLoadingScreen() {
   return (
     <div id="norte-initial-loading" role="status" aria-label="Preparando a plataforma Norte Concursos">
       <picture aria-hidden="true">
+        <source media="(orientation: portrait)" srcSet={INITIAL_LOADING_PORTRAIT_ART} type="image/webp" />
         <img src={INITIAL_LOADING_ART} width={1440} height={600} alt="" fetchPriority="high" decoding="async" />
       </picture>
       <div className="norte-boot-copy">

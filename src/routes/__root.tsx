@@ -1,6 +1,6 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DARK_INSIGNIA, LIGHT_INSIGNIA } from "@/lib/policeInsignia";
-import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_ART, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
+import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_ART, INITIAL_LOADING_PORTRAIT_ART, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
 import { PlatformSignature } from "@/components/brand/PlatformSignature";
@@ -186,7 +186,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: READING_SCALE_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
         <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
-        <link rel="preload" as="image" href={INITIAL_LOADING_ART} type="image/webp" />
+        <link rel="preload" as="image" href={INITIAL_LOADING_ART} media="(orientation: landscape)" type="image/webp" />
+        <link rel="preload" as="image" href={INITIAL_LOADING_PORTRAIT_ART} media="(orientation: portrait)" type="image/webp" />
         <link rel="preload" as="image" href={LIGHT_INSIGNIA} type="image/webp" />
         <link rel="preload" as="image" href={DARK_INSIGNIA} type="image/webp" />
         <HeadContent />
