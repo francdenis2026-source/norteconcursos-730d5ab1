@@ -1,0 +1,225 @@
+/* Compact identification bands for student and admin pages, using on-image tokens.
+   The same bundled artwork is shared with login/startup; route context supplies the accent. */
+.app-shell[data-area] #dashboard-content[data-header-style] {
+  --workspace-banner-accent: #e6c486;
+  --workspace-banner-position: right center;
+}
+.app-shell[data-area] #dashboard-content[data-hue="emerald"] { --workspace-banner-accent: #a5cbb4; }
+.app-shell[data-area] #dashboard-content[data-hue="teal"] { --workspace-banner-accent: #a6cac4; }
+.app-shell[data-area] #dashboard-content[data-hue="sky"] { --workspace-banner-accent: #b6c8d4; }
+.app-shell[data-area] #dashboard-content[data-hue="violet"] { --workspace-banner-accent: #cbbddc; }
+.app-shell[data-area] #dashboard-content[data-hue="rose"] { --workspace-banner-accent: #d8bab1; }
+.app-shell[data-area] #dashboard-content[data-hue="orange"] { --workspace-banner-accent: #dfbe95; }
+.app-shell[data-area] #dashboard-content[data-section-art="Material didático"] { --workspace-banner-position: right 40%; }
+.app-shell[data-area] #dashboard-content[data-section-art="Questões"] { --workspace-banner-position: right 58%; }
+.app-shell[data-area] #dashboard-content[data-section-art="Provas"] { --workspace-banner-position: right 65%; }
+.app-shell[data-area="admin"] #dashboard-content { --workspace-banner-position: right 45%; }
+
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner {
+  --hero-image: none;
+  --hero-title: var(--on-ink);
+  --hero-copy: var(--on-ink-muted);
+  --hero-kicker: var(--workspace-banner-accent);
+  --hero-min: 0px;
+  position: relative;
+  isolation: isolate;
+  display: block;
+  min-width: 0;
+  min-height: 0 !important;
+  height: auto;
+  padding: 14px 18px !important;
+  overflow: hidden;
+  border: 1px solid #e1d3b52e !important;
+  border-left: 3px solid var(--workspace-banner-accent) !important;
+  border-image: none !important;
+  border-radius: 14px;
+  color: var(--on-ink) !important;
+  background:
+    linear-gradient(90deg, #151817 0%, #151817fa 36%, #151817e8 58%, #1518178c 78%, #15181740),
+    var(--workspace-banner-art) var(--workspace-banner-position) / auto 100% no-repeat,
+    #151817 !important;
+  box-shadow: inset 0 1px 0 #ffffff0a, 0 8px 24px -20px #0008 !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner::before,
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner::after { content: none !important; display: none !important; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner h1 {
+  max-width: 100%;
+  margin: 5px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.1vw, 28px) !important;
+  font-weight: 750 !important;
+  font-stretch: normal;
+  line-height: 1.15 !important;
+  letter-spacing: -.025em !important;
+  color: var(--on-ink) !important;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  text-shadow: none;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner h1 :is(em, span) { color: var(--workspace-banner-accent) !important; font-style: normal; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(
+  .page-hero__desc, .ranking-glass-header__description, .ranking-glass-header__privacy,
+  .study-assistant-hero__content > p, .exam-simulator-hero__content > p,
+  .trainer-workbench-hero > div > p, .edital-heading > div > p, .edital-topic-heading > p,
+  .student-hub__hero-copy > p:not(.student-hub__welcome), .library-header > p,
+  .catalog-command-hero > p, .video-study-page__header > div > p
+),
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner > p:not([class*="kicker"]) {
+  max-width: 80ch;
+  margin: 6px 0 0;
+  color: var(--on-ink-muted) !important;
+  font-size: 13px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(
+  .hero-chip, .internal-hero-kicker, .study-assistant-hero__eyebrow,
+  .exam-simulator-hero__eyebrow, .trainer-panel-kicker, .edital-eyebrow,
+  .ranking-glass-header__kicker, .workspace-banner__kicker, .student-hub__welcome
+) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  color: var(--workspace-banner-accent) !important;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-chip svg { width: 14px; height: 14px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(
+  .page-hero__text, .study-assistant-hero__content, .exam-simulator-hero__content,
+  .trainer-workbench-hero > div, .edital-heading > div, .ranking-glass-header > p,
+  .ranking-glass-header > h1, .catalog-command-hero > p, .catalog-command-hero > h1,
+  .video-study-page__header > div, .edital-topic-heading > h1, .edital-topic-heading > p,
+  .library-header > h1, .library-header > p
+) { min-width: 0; max-width: 100%; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__text { flex: 1 1 360px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__actions { width: auto; max-width: 100%; gap: 6px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(.page-hero__actions a, .page-hero__actions button, .hero-btn-ghost, .hero-btn-secondary, .trainer-catalog-link, .study-assistant-hero__action) {
+  min-height: 40px;
+  height: auto;
+  padding: 8px 12px;
+  border: 1px solid #e2d6bf4a !important;
+  border-radius: 8px;
+  background: #161b19e8 !important;
+  color: var(--on-ink) !important;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: normal;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(a, button):focus-visible { outline: 2px solid var(--workspace-banner-accent); outline-offset: 2px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: none;
+  gap: 6px;
+  margin-top: 10px;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 128px;
+  min-width: 0;
+  min-height: 42px;
+  padding: 7px 10px;
+  border: 1px solid #e2d6bf29;
+  border-radius: 8px;
+  background: #101613dc;
+  color: var(--on-ink);
+  backdrop-filter: none;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat span { color: var(--on-ink-muted); font-size: 10px; line-height: 1.4; letter-spacing: 0; text-transform: none; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat strong { margin: 0; color: var(--on-ink); font-size: 19px; line-height: 1.2; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat span svg { color: var(--workspace-banner-accent); }
+/* The student greeting shares one low band, with date and next action alongside. */
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 18px;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy > :not(.student-hub__masthead-actions) { grid-column: 1; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #111713bf;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__date { color: var(--on-ink-muted); font-size: 11px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__date :is(svg, small) { color: var(--workspace-banner-accent); border-color: #e2d6bf4a; background: transparent; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions > a { color: var(--workspace-banner-accent); background: transparent; min-height: 36px; padding: 4px 0; font-size: 12px; box-shadow: none; }
+/* Custom tool headers retain their content and controls, with compact inner spacing. */
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .space-y-3 { padding: 0; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid { margin-top: 10px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid > div { padding: 7px 10px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--calculator > div > span { color: var(--workspace-banner-accent); font-size: 10px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--calculator > div > p { margin-top: 6px; color: var(--on-ink-muted); font-size: 13px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--calculator > div > .mt-5 { margin-top: 10px; gap: 6px; }
+@media (max-width: 640px) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner {
+    padding: 12px !important;
+    border-radius: 12px;
+    background:
+      linear-gradient(90deg, #151817f5, #151817e8 54%, #151817b8),
+      var(--workspace-banner-art) var(--workspace-banner-position) / auto 100% no-repeat,
+      #151817 !important;
+  }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner h1 { font-size: 22px !important; }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat { flex-basis: 108px; }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__actions :is(a, button) { min-height: 44px; }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions { grid-column: 1; grid-row: auto; flex-direction: row; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: 4px 16px; margin-top: 4px; padding: 0; background: transparent; }
+}
+@media print, (forced-colors: active) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner { background: Canvas !important; color: CanvasText !important; box-shadow: none !important; border-color: CanvasText !important; }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(h1, p, span, strong, a, button, em) { color: CanvasText !important; -webkit-text-fill-color: currentColor; }
+}
+
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .exam-simulator-hero__catalog { display: inline-block; margin-top: 8px; color: var(--workspace-banner-accent); font-size: 11px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.video-study-page__header { display: flex; align-items: center; gap: 10px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner.video-study-page__header > svg { color: var(--workspace-banner-accent); width: 22px; height: 22px; flex: none; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .edital-heading-icon { display: none; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .space-y-3 > p:first-child { color: var(--workspace-banner-accent); font-size: 10px; margin: 0; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .space-y-3 > p:last-child { color: var(--on-ink-muted); font-size: 13px; line-height: 1.5; margin-top: 6px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid > div { background: #18211c; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid > div > p { color: var(--on-ink); }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid > div > p:last-child { color: var(--on-ink-muted); }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--study-room :is(.text-muted-foreground, [data-slot="badge"]) { color: var(--on-ink-muted); }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--study-room > button { color: var(--on-ink); }
+@media print, (forced-colors: active) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner :is(.hero-stat, .student-hub__masthead-actions, .student-hub__date small),
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--reading > .grid > div { background: Canvas; color: CanvasText; }
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner--calculator > svg { display: none; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__date small { display: inline-flex; align-items: center; padding: 2px 5px; font-size: 10px; line-height: 1.2; }

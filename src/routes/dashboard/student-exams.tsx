@@ -840,7 +840,7 @@ function Hero({
   action: React.ReactNode;
 }) {
   return (
-    <section className="page-hero page-hero--lg" data-hero="exam-hall">
+    <section className="page-hero page-hero--lg workspace-banner" data-hero="exam-hall">
       <div className="page-hero__row">
         <div className="page-hero__text">
           <span className="hero-chip">Seu histórico em concursos</span>

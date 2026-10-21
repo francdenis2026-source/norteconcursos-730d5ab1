@@ -448,7 +448,7 @@ function StudyRoomPage() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-5">
-      <div>
+      <div className="workspace-banner workspace-banner--study-room">
         <Button asChild variant="ghost" size="sm" className="-ml-2 mb-2 gap-1.5">
           {sp.edital ? (
             <Link to="/dashboard/edital/$topicId" params={{ topicId: sp.edital }}>

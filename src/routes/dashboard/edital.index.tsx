@@ -157,7 +157,7 @@ function EditalPage() {
     );
   return (
     <div className="edital-workspace space-y-5 pb-8">
-      <header className="edital-heading">
+      <header className="edital-heading workspace-banner">
         <div>
           <span className="edital-eyebrow">MEU CONCURSO</span>
           <h1>Meu edital</h1>

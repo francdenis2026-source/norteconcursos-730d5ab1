@@ -102,7 +102,7 @@ function QuestionsCatalog() {
       : "A confirmar";
   return (
     <section className="space-y-6">
-      <header className="catalog-command-hero tactical-feature-hero">
+      <header className="catalog-command-hero tactical-feature-hero workspace-banner">
         <span className="internal-hero-kicker">Seu próximo objetivo</span>
         <h1>Concursos e editais</h1>
         <p>Encontre uma oportunidade acompanhada ou escolha uma edição para orientar seu estudo.</p>

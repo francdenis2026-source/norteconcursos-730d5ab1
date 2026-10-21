@@ -1,8 +1,10 @@
+import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
 import "@/styles/student-canvas.css";
 import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
+import "@/styles/workspace-banners.css";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
@@ -554,6 +556,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div
         className="app-shell navigation-v2"
         data-area={isAdmin ? "admin" : "student"}
+        style={{ "--workspace-banner-art": `url("${workspaceBannerArt}")` } as React.CSSProperties}
         data-brand-bg={brandBg ?? "off"}
       >
         {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}

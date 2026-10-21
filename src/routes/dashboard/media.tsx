@@ -122,7 +122,7 @@ function MediaCenterPage() {
   const { isAdmin } = useAuthStatus();
   return (
     <div className="video-study-page">
-      <header className="video-study-page__header">
+      <header className="video-study-page__header workspace-banner">
         <PlayCircle size={28} aria-hidden="true" />
         <div>
           <h1>Videoaulas e podcasts</h1>

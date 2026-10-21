@@ -1084,7 +1084,7 @@ function ProfessionalSimulator() {
 
   return (
     <div className="simulator-workspace mx-auto max-w-6xl space-y-6 pb-6">
-      <section className="exam-simulator-hero" aria-labelledby="simulator-title">
+      <section className="exam-simulator-hero workspace-banner" aria-labelledby="simulator-title">
         <div className="exam-simulator-hero__content">
           <span className="exam-simulator-hero__eyebrow">Preparação em condições de prova</span>
           <h1 id="simulator-title">{isEnemMode ? "Simulador ENEM" : "Simulador de provas"}</h1>
@@ -2216,7 +2216,7 @@ function ResultView({
           </div>
         )}
       </section>
-      <section className="mock-result-hero tactical-feature-hero rounded-2xl p-7 text-white shadow-xl md:p-10">
+      <section className="mock-result-hero tactical-feature-hero rounded-2xl p-7 text-white shadow-xl md:p-10 workspace-banner">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <Badge className="mb-3 bg-white/10 text-emerald-100 hover:bg-white/10">

@@ -604,7 +604,7 @@ function StudyCoachPage() {
 
   return (
     <div className="study-assistant mx-auto max-w-6xl space-y-6">
-      <section className="study-assistant-hero" aria-labelledby="study-assistant-title">
+      <section className="study-assistant-hero workspace-banner" aria-labelledby="study-assistant-title">
         <div className="study-assistant-hero__content">
           <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
           <h1 id="study-assistant-title">Estratégia de estudos</h1>

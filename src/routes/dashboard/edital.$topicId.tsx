@@ -253,7 +253,7 @@ function TopicPage() {
         </Link>
       </Button>
 
-      <header className="edital-topic-heading">
+      <header className="edital-topic-heading workspace-banner">
         <div className="edital-eyebrow">{topic.discipline}</div>
         <h1>Estudar este assunto</h1>
         <p className="text-sm text-muted-foreground">

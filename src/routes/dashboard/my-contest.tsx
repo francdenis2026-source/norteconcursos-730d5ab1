@@ -84,7 +84,7 @@ function MyContestPage() {
     : null;
   return (
     <div className="edital-workspace space-y-5">
-      <header className="edital-heading">
+      <header className="edital-heading workspace-banner">
         <div>
           <span className="edital-eyebrow">SEU OBJETIVO</span>
           <h1>{focusedContest?.agency || "Meu concurso"}</h1>

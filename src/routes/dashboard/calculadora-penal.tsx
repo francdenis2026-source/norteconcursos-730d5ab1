@@ -1283,7 +1283,7 @@ function PenalCalculatorPage() {
   };
   return (
     <div className="mx-auto max-w-7xl space-y-6 pb-8">
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#081c30] via-[#123653] to-[#155e75] p-6 text-white md:p-9">
+      <section className="workspace-banner workspace-banner--calculator relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#081c30] via-[#123653] to-[#155e75] p-6 text-white md:p-9">
         <Scale
           aria-hidden
           className="pointer-events-none absolute -right-8 -top-8 h-64 w-64 text-white/5"

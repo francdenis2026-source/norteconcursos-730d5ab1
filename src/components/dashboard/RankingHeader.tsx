@@ -2,7 +2,7 @@ import { Trophy } from "lucide-react";
 
 export function RankingHeader() {
   return (
-    <header className="ranking-glass-header" aria-labelledby="ranking-page-title">
+    <header className="ranking-glass-header workspace-banner" aria-labelledby="ranking-page-title">
       <p className="ranking-glass-header__kicker">
         <Trophy aria-hidden="true" /> Desempenho
       </p>

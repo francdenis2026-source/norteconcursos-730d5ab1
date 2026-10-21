@@ -42,7 +42,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section
-      className={cn("page-hero", size !== "md" && `page-hero--${size}`, className)}
+      className={cn("page-hero workspace-banner", size !== "md" && `page-hero--${size}`, className)}
       data-hero={image}
     >
       <div className="page-hero__row">

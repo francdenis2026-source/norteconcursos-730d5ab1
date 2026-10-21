@@ -103,7 +103,7 @@ function QuestionBankPage() {
   const maxBoard = byBoard[0]?.[1] ?? 1;
   return (
     <div className="space-y-6 pb-8">
-      <section className="page-hero page-hero--lg" data-hero="trainer">
+      <section className="page-hero page-hero--lg workspace-banner" data-hero="trainer">
         <span className="hero-chip">
           <LibraryBig className="mr-1 h-3.5 w-3.5" /> Acervo de questões
         </span>
@@ -476,7 +476,7 @@ function Metric({
 function Loading() {
   return (
     <div aria-busy="true" className="space-y-5">
-      <section className="page-hero page-hero--lg" data-hero="trainer">
+      <section className="page-hero page-hero--lg workspace-banner" data-hero="trainer">
         <h1>Acervo de questões</h1>
         <p>Consulte e organize suas questões para estudar.</p>
       </section>

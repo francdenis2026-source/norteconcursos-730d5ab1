@@ -1409,7 +1409,7 @@ function QuestionTrainer() {
     return (
       <div className="trainer-workbench" aria-busy={loading}>
         <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} />
-        <header className="trainer-workbench-heading trainer-workbench-hero">
+        <header className="trainer-workbench-heading trainer-workbench-hero workspace-banner">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
             <h1 id="trainer-title">Treinador de questões</h1>

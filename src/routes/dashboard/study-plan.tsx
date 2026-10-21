@@ -476,7 +476,7 @@ function StudyPlanPage() {
 
   return (
     <div className="space-y-7 pb-10">
-      <section className="page-hero page-hero--lg" data-hero="journey">
+      <section className="page-hero page-hero--lg workspace-banner" data-hero="journey">
         <div className="grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:items-end">
           <div>
             <span className="hero-chip">
@@ -896,7 +896,7 @@ function StudyPlanPage() {
       </Card>
 
       <section
-        className="page-hero page-hero--sm md:!flex-row md:!items-end md:!justify-between"
+        className="page-hero page-hero--sm md:!flex-row md:!items-end md:!justify-between workspace-banner"
         data-hero="exam-hall"
       >
         <div>

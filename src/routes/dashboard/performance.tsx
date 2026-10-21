@@ -50,7 +50,7 @@ function PerformancePage() {
     );
   return (
     <div className="performance-page space-y-6">
-      <section className="page-hero page-hero--lg" data-hero="dashboard">
+      <section className="page-hero page-hero--lg workspace-banner" data-hero="dashboard">
         <div className="page-hero__text">
           <span className="hero-chip">
             <Activity /> Estudos na plataforma

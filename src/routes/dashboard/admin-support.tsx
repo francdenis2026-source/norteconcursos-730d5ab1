@@ -45,11 +45,14 @@ function AdminSupport() {
   if (!isAdmin) return <p>Acesso restrito ao administrador.</p>;
   return (
     <section className="space-y-6">
-      <h1 className="text-3xl font-bold">Central de atendimento</h1>
-      <p>
-        Últimos 100 pedidos enviados pelo suporte. Faça o retorno ao contato indicado e mantenha o
-        andamento atualizado.
-      </p>
+      <header className="workspace-banner">
+        <span className="workspace-banner__kicker">Administração · suporte</span>
+        <h1 className="text-3xl font-bold">Central de atendimento</h1>
+        <p>
+          Últimos 100 pedidos enviados pelo suporte. Faça o retorno ao contato indicado e mantenha o
+          andamento atualizado.
+        </p>
+      </header>
       {isLoading && <p role="status">Carregando pedidos…</p>}
       {isError && <p role="alert">Não foi possível carregar os pedidos.</p>}
       {data?.length === 0 && <p>Nenhum pedido recebido.</p>}

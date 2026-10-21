@@ -221,7 +221,7 @@ function MaterialPage() {
         </div>
       )}
 
-      <header className="library-header">
+      <header className="library-header workspace-banner">
         <span className="hero-chip">
           <ScrollText /> {material.discipline}
         </span>
