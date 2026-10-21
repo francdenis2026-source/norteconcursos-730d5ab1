@@ -73,10 +73,16 @@
 
 :root:is(.dark, :not(.dark)) .home.home .home-header {
   border-bottom: 0;
-  background: color-mix(in srgb, var(--home-bg) 88%, transparent);
-  -webkit-backdrop-filter: blur(20px) saturate(125%);
-  backdrop-filter: blur(20px) saturate(125%);
-  box-shadow: 0 4px 24px -16px color-mix(in srgb, var(--foreground) 30%, transparent);
+  background: linear-gradient(115deg,
+    color-mix(in srgb, var(--card) 24%, transparent),
+    color-mix(in srgb, var(--card) 4%, transparent) 65%
+  ), color-mix(in srgb, var(--home-bg) 76%, transparent);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--background) 65%, transparent),
+    inset 0 -1px 0 color-mix(in srgb, var(--foreground) 7%, transparent),
+    0 8px 32px -20px color-mix(in srgb, var(--foreground) 24%, transparent);
 }
 
 :root:is(.dark, :not(.dark)) .home.home .home-hero__explore {
@@ -196,11 +202,17 @@
 @supports not (backdrop-filter: blur(1px)) {
   :root:is(.dark, :not(.dark)) .home.home { --home-glass-fill: var(--card); }
   :root.dark .home.home { --home-glass-fill: var(--ink-raised); }
+  :root:is(.dark, :not(.dark)) .home.home .home-header { background: var(--home-bg); }
 }
 
 @media (prefers-reduced-transparency: reduce) {
   :root:is(.dark, :not(.dark)) .home.home { --home-glass-fill: var(--card); }
   :root.dark .home.home { --home-glass-fill: var(--ink-raised); }
+  :root:is(.dark, :not(.dark)) .home.home .home-header {
+    background: var(--home-bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-opportunity, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
@@ -209,6 +221,12 @@
 
 @media (forced-colors: active) {
   :root:is(.dark, :not(.dark)) .home.home { background: Canvas; }
+  :root:is(.dark, :not(.dark)) .home.home .home-header {
+    background: Canvas;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__art, .home-hero__image) { display: none; }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-opportunity, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
     background: Canvas;

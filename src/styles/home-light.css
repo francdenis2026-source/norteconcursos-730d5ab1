@@ -19,6 +19,7 @@
 }
 
 /* Topo */
+:root:not(.dark) .home.home .home-header :is(.home-nav a, .home-login, .home-menu-toggle) { color: var(--stage-ink); }
 :root:not(.dark) .home.home .home-hero { background: linear-gradient(180deg, oklch(0.985 0.006 255), oklch(0.955 0.016 255)); color: var(--stage-ink); }
 :root:not(.dark) .home.home .home-hero h1 { color: var(--stage-ink); }
 :root:not(.dark) .home.home .home-hero h1 em { color: var(--stage-accent); }
@@ -30,11 +31,12 @@
 :root:not(.dark) .home.home .home-hero__explore { color: var(--stage-ink); background: oklch(1 0 0 / 0.85); border-color: var(--stage-line); }
 :root:not(.dark) .home.home .home-hero__note,
 :root:not(.dark) .home.home .home-hero :is(.home-trust, .home-trust span, .home-testing) { color: var(--stage-muted); }
-:root:not(.dark) .home.home .home-hero :is(.home-daily, .home-count, .home-hero__card, .home-hero__stat),
-:root:not(.dark) .home.home .home-hero [class*="daily"],
-:root:not(.dark) .home.home .home-hero [class*="count"] { background: var(--stage-card); color: var(--stage-ink); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
-:root:not(.dark) .home.home .home-hero [class*="daily"] :is(p, small, span, strong, a),
-:root:not(.dark) .home.home .home-hero [class*="count"] :is(p, small, span, strong, a) { color: inherit; }
+:root:not(.dark) .home.home .home-hero :is(.home-daily, .home-count, .home-hero__card, .home-hero__stat, .daily-badge, .question-count-badge) { background: var(--stage-card); color: var(--stage-ink); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
+/* Style the reading surface itself; inner labels must not become white cards. */
+:root:not(.dark) .home.home .home-hero :is(.daily-badge__main strong, .question-count-main) { color: var(--stage-ink); }
+:root:not(.dark) .home.home .home-hero :is(.daily-badge__main small, .question-count-detail, .question-count-eyebrow, .daily-badge__count) { color: var(--stage-muted); }
+:root:not(.dark) .home.home .home-hero :is(.daily-badge__live, .daily-badge__timer, .daily-badge__cta, .question-count-main strong, .question-count-arrow, .question-count-icon) { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero :is(.daily-badge__timer, .question-count-icon) svg { color: var(--stage-accent); }
 
 /* Concursos, Planos e Rodapé */
 :root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) {
@@ -123,12 +125,38 @@
 :root:not(.dark) .home.home .home-preparation__band .home-preparation__items h3 { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-preparation__panel { scrollbar-color: var(--stage-accent) transparent; }
 
+/* Deliberate light-theme hierarchy, including expandable and secondary content. */
+:root:not(.dark) .home.home :is(.home-opportunity h3, .home-plan__price, .home-faq h3, .home-plan-comparison > summary) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home :is(.home-preparation__number, .home-preparation__challenge, .home-faq__list summary, .home-plan__features summary) {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home :is(.home-preparation__tab:not([data-state="active"]), .home-faq__list p, .home-plan__features li, .home-exam-details p, .home-exam-details li, .home-compare td) {
+  color: var(--stage-muted);
+}
+:root:not(.dark) .home.home .home-faq__list details[open] > summary {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home .home-faq__list details > p {
+  color: var(--stage-muted);
+  border-left-color: var(--stage-accent);
+}
+:root:not(.dark) .home.home .home-faq__list details[open] > summary > svg {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home .home-footer--command .home-footer__bottom {
+  color: var(--stage-muted);
+  font-size: 12px;
+}
+
 /* Topo: selo de acesso, link de planos e itens de confiança com contraste adequado */
 :root:not(.dark) .home.home :is(.home-testing, .home-testing strong) { color: var(--stage-amber); }
 :root:not(.dark) .home.home .home-trust :is(span, svg) { color: var(--stage-muted); }
 :root:not(.dark) .home.home .home-trust svg { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-hero a:not(.home-button):not(.home-hero__explore) { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-testing a { background: oklch(1 0 0 / 0.92); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--stage-line); font-weight: 600; }
+:root:not(.dark) .home.home .home-hero__study-entry .home-testing > svg { color: var(--stage-amber); }
 
 /* Celular/tablet: a foto vira textura suave atrás do texto, que mantém contraste total */
 @media (max-width: 900px) {
