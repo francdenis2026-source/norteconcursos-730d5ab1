@@ -188,10 +188,7 @@ function DesafioDiario() {
 
   return (
     <div className="daily-page" data-step={step}>
-      <div className="daily-art" aria-hidden="true">
-        <img src="/media/hero/distintivo-carreiras.webp" alt="" />
-        <img src="/media/hero/auth-distintivo.webp" alt="" />
-      </div>
+      <div className="daily-art" aria-hidden="true" />
       <div className="daily-controls">
         <div className="daily-identity"><ShieldCheck aria-hidden="true" /><span>NORTE <small>CAMPO DE TREINO</small></span></div>
         <Link to="/" className="daily-exit"><ArrowLeft aria-hidden="true" /> Sair do treino</Link>

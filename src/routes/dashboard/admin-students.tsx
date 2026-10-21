@@ -154,8 +154,8 @@ function AdminStudentsPage() {
         supabase.from("user_roles").select("user_id").eq("role", "admin"),
         supabase.rpc("admin_students_access"),
         supabase.rpc("admin_students_online"),
-        Promise.all(Array.from({ length: Math.min(6, profiles.length) }, loadActivity)),
       ]);
+      await Promise.all(Array.from({ length: Math.min(6, profiles.length) }, loadActivity));
       const onlineIds = new Set((onlineRes.data ?? []).map((o: { user_id: string }) => o.user_id));
       const lastLogin = new Map<string, string | null>(
         (access.data ?? []).map(
@@ -204,6 +204,12 @@ function AdminStudentsPage() {
 
   useEffect(() => {
     void load();
+    // A presença expira após 90 s; atualizar periodicamente mantém entrada e saída
+    // refletidas no painel sem exigir que o administrador recarregue a página.
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === "visible") void load();
+    }, 15000);
+    return () => window.clearInterval(timer);
   }, [load]);
 
   const visible = useMemo(() => {

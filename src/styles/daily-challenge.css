@@ -39,8 +39,6 @@ body:has(.daily-page) { overflow: hidden; }
   background: repeating-linear-gradient(90deg, transparent 0 79px, var(--daily-edge) 79px 80px),
     repeating-linear-gradient(0deg, transparent 0 79px, var(--daily-edge) 79px 80px);
 }
-.daily-art img:first-child { position: absolute; width: min(52vw, 680px); right: 6%; top: 12%; opacity: .07; transform: rotate(-12deg); }
-.daily-art img:last-child { position: absolute; width: 230px; left: -55px; bottom: -45px; opacity: .045; transform: rotate(18deg); }
 .daily-controls, .daily-main { width: 100%; max-width: 1480px; margin-inline: auto; min-width: 0; min-height: 0; }
 .daily-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .daily-identity { display: flex; align-items: center; gap: 9px; color: var(--daily-accent); }
