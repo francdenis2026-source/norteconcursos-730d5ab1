@@ -18,3 +18,14 @@ O usuário esclareceu que deseja aperfeiçoar a página atual, sem substituí-la
 Validação: título, lista/ordem das quatro seções principais e URLs de imagens comparados automaticamente com a página anterior, sem mudanças. As quatro abas foram verificadas em 320/390/768/1440 px, claro/escuro: 32 estados, sem overflow horizontal e sem aumento da faixa ao alternar. Cadastro e desafio usam os componentes reais; a contagem unitária foi simulada apenas no navegador. Teclado nas abas, foco ao fechar o menu, Escape, abertura por teclado sem animação e abertura por ponteiro em 180 ms passaram. Sem exceções JavaScript.
 
 Typecheck e build de produção passaram. ESLint de lógica passou para os arquivos TSX alterados; o arquivo index.tsx contém formatação Prettier preexistente e foi verificado com essa regra desativada para evitar reformatar toda a página. Não houve verificação de toque, safe areas ou PWA em aparelho físico. Nenhuma alteração em quota ou renovação do desafio diário.
+
+## Correção dos fundos das faixas
+
+| Before | After | Why |
+| --- | --- | --- |
+| Arte de concursos limitada a uma miniatura lateral de 166 px | A mesma imagem como fundo absoluto da seção inteira | Recuperar a faixa ilustrada de ponta a ponta |
+| Fundo de planos com 58% de largura, 280 px de altura, opacidade 16% e máscara que o apaga | Fundo de largura/altura integral, incluindo comparação e FAQ, sem máscara | Manter a composição contínua até o final da seção |
+| Opacidade do fundo reduzida a 5% no claro | Imagem com opacidade integral e véu de contraste próprio do tema | Preservar a imagem sem perder o tema claro |
+| Leitura diretamente sobre detalhes da arte | Proteção localizada nas condições do teste, aviso, comparação e FAQ | Evitar apagar o fundo inteiro para proteger textos pequenos |
+
+Chromium: 320/390/768/1440 px em claro/escuro, sem overflow horizontal, arte de concursos cobrindo a seção e fundo de planos com a mesma altura da área completa. Abertura do FAQ e da comparação verificada. Sem exceções JavaScript; typecheck e build passaram. Capturas verificadas em desktop e celular emulado. Conteúdo, imagens e destinos das ações preservados. As imagens usam enquadramento responsivo `cover`, sem o recorte fixo anterior em uma miniatura. Validação em hardware físico continua pendente.

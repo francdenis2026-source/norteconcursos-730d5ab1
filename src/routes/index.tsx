@@ -444,6 +444,15 @@ function Index() {
         </section>
 
         <section id="concursos" className="home-section home-operations">
+          <img
+            className="home-operations__art"
+            src="/media/hero/auth-carreiras-composicao.webp"
+            alt=""
+            width={1440}
+            height={600}
+            loading="lazy"
+            decoding="async"
+          />
           <div className="home-container">
             <div className="home-operations__heading">
               <Head
@@ -452,15 +461,6 @@ function Index() {
               >
                 Seu próximo <em>objetivo.</em>
               </Head>
-              <img
-                className="home-operations__art"
-                src="/media/hero/auth-carreiras-composicao.webp"
-                alt=""
-                width={1440}
-                height={600}
-                loading="lazy"
-                decoding="async"
-              />
             </div>
             <HomeRail className="home-opportunities" label="Oportunidades de concursos">
               <PcprExamPromo />

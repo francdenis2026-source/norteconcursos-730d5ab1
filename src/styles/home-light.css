@@ -48,7 +48,24 @@
 :root:not(.dark) .home.home #concursos.home-operations,
 :root:not(.dark) .home.home .home-operations { background: linear-gradient(180deg, oklch(0.955 0.018 255), oklch(0.975 0.01 255)); }
 :root:not(.dark) .home.home .home-plans--insignia { background: linear-gradient(180deg, oklch(0.985 0.006 80), oklch(0.97 0.012 255)); border-top-color: var(--stage-line); }
-:root:not(.dark) .home-plans--insignia::before { opacity: .05; }
+/* Keep the artwork visible; opaque reading surfaces protect the content. */
+:root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia) {
+  --band-veil: linear-gradient(90deg,
+    color-mix(in srgb, var(--background) 96%, transparent),
+    color-mix(in srgb, var(--background) 78%, transparent) 48%,
+    color-mix(in srgb, var(--background) 48%, transparent));
+}
+:root:not(.dark) .home.home .home-plans--insignia .home-plans__signal,
+:root:not(.dark) .home.home .home-plans--insignia .home-plans__notice {
+  background: color-mix(in srgb, var(--stage-card) 90%, transparent);
+}
+:root:not(.dark) .home.home .home-plans--insignia .home-plans__signal {
+  padding: 16px 20px;
+  border: 1px solid var(--stage-line);
+  border-radius: 10px;
+}
+:root:not(.dark) .home.home .home-plans--insignia .home-faq { padding: 22px 20px; border-radius: 10px; background: color-mix(in srgb, var(--stage-card) 68%, transparent); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plans__notice { padding: 10px 12px; border-radius: 6px; }
 :root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia) .home-heading h2 em { color: var(--stage-amber); }
 :root:not(.dark) .home.home .home-operations .home-opportunity,
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan],
@@ -62,7 +79,7 @@
 :root:not(.dark) .home.home .home-operations .home-opportunity .home-button { background: var(--stage-accent); color: oklch(0.99 0 0); border-color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:disabled { color: oklch(0.5 0.02 260); background: oklch(0.94 0.008 255); border-color: var(--stage-line); }
 :root:not(.dark) .home.home .home-plans--insignia .home-compare .is-trial { background: oklch(0.96 0.03 262); }
-:root:not(.dark) .home.home .home-operations__art { border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
+
 :root:not(.dark) .home-plans__insignia { filter: drop-shadow(0 8px 12px oklch(0.25 0.04 262 / 0.25)); }
 
 /* Rodapé claro */

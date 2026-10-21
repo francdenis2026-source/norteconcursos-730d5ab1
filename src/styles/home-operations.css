@@ -20,15 +20,45 @@
 .home.home :is(.home-operations, .home-plans--insignia) .home-heading h2 em { color: var(--stage-gold); text-decoration: none; }
 .home.home :is(.home-operations, .home-plans--insignia) .home-heading > p { color: var(--home-muted); font-size: 14px; max-width: 55ch; }
 .home.home :is(.home-operations, .home-plans--insignia) .home-heading .home-eyebrow { background: none; border: 0; padding: 0; color: var(--stage-gold); letter-spacing: .16em; font-size: 10px; min-height: 0; margin-bottom: 12px; }
-/* Concursos: a horizontal editorial header and three equally weighted dossiers. */
+/* Full-band artwork stays behind the existing content in both sections. */
+.home.home :is(.home-operations, .home-plans--insignia) {
+  --band-veil: linear-gradient(90deg,
+    color-mix(in srgb, var(--ink-deep) 94%, transparent),
+    color-mix(in srgb, var(--ink-deep) 72%, transparent) 48%,
+    color-mix(in srgb, var(--ink-deep) 46%, transparent));
+  overflow: clip;
+}
+.home.home .home-operations::before,
+.home.home .home-plans--insignia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--band-veil);
+  pointer-events: none;
+}
+/* Concursos: preserve the heading and cards over one continuous backdrop. */
 .home.home #concursos.home-operations {
   padding-block: 40px;
   border-block: 1px solid var(--home-line);
   background: radial-gradient(ellipse at 100% 0%, rgb(51 74 83 / 32%), transparent 60%), #0d1418;
 }
-.home-operations__heading { display: grid; grid-template-columns: 1fr minmax(260px, .75fr); align-items: center; gap: 32px; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--home-line); }
+.home-operations__heading { display: block; padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--home-line); }
 .home-operations__heading .home-heading { margin: 0; }
-.home-operations__art { display: block; width: 100%; height: 166px; object-fit: cover; object-position: center; border-radius: 4px 32px 4px 4px; border: 1px solid var(--home-line); mask-image: linear-gradient(90deg, transparent, #000 12%); }
+.home.home .home-operations__art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border: 0;
+  border-radius: 0;
+  mask-image: none;
+  box-shadow: none;
+  pointer-events: none;
+}
 .home.home .home-operations .home-rail__track.home-opportunities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
 .home.home .home-operations .home-opportunity { min-width: 0; background: var(--stage-surface); border: 1px solid var(--home-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px -28px #000; }
 .home.home .home-operations .home-opportunity__image { height: auto; aspect-ratio: 16 / 8; }
@@ -49,7 +79,15 @@
   border-bottom: 0;
   background: radial-gradient(ellipse at 80% 0%, rgb(139 103 46 / 18%), transparent 50%), #151514;
 }
-.home-plans--insignia::before { content: ""; position: absolute; z-index: -1; inset: 0 0 auto auto; width: 58%; height: 280px; background: url('/media/hero/home-bg-texture.webp') center / cover no-repeat; opacity: .16; mask-image: linear-gradient(180deg, #000, transparent); pointer-events: none; }
+.home-plans--insignia::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: url('/media/hero/home-bg-texture.webp') center top / cover no-repeat;
+  opacity: 1;
+  pointer-events: none;
+}
 .home.home .home-plans--insignia .home-plans__intro { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, .8fr); gap: 48px; align-items: center; margin-bottom: 28px; }
 .home.home .home-plans--insignia .home-plans__signal { display: flex; align-items: center; gap: 20px; padding: 0 0 0 24px; border: 0; border-left: 1px solid var(--home-line); border-radius: 0; background: none; box-shadow: none; backdrop-filter: none; }
 .home-plans__insignia { width: 94px; height: 116px; object-fit: contain; flex: none; filter: drop-shadow(0 10px 16px rgb(0 0 0 / 40%)); }
@@ -79,6 +117,26 @@
 .home.home .home-plans--insignia .home-faq { border-color: var(--home-line); margin-top: 24px; padding-top: 22px; }
 .home.home .home-plans--insignia .home-faq .home-eyebrow { color: var(--stage-gold); }
 .home.home .home-plans--insignia .home-faq h3 { color: var(--home-text); font-size: 22px; }
+/* Local reading surfaces leave the surrounding artwork exposed. */
+.dark .home.home .home-plans--insignia .home-plans__signal {
+  padding: 12px 20px;
+  border: 1px solid var(--home-line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ink-deep) 82%, transparent);
+}
+.dark .home.home .home-plans--insignia .home-faq {
+  padding: 22px 20px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ink-deep) 48%, transparent);
+}
+.dark .home.home .home-plans--insignia .home-plan-comparison {
+  background: color-mix(in srgb, var(--ink-deep) 82%, transparent);
+}
+.dark .home.home .home-plans--insignia .home-plans__notice {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ink-deep) 82%, transparent);
+}
 /* Footer: one textured end panel; identity, navigation and QR have clear zones. */
 :root .home.home .home-footer.home-footer--command {
   padding-block: 32px 16px;
@@ -113,7 +171,6 @@
   .home.home :is(.home-operations, .home-plans--insignia) { padding-block: 28px; }
   .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) > .home-container { width: calc(100% - 32px); }
   .home-operations__heading { grid-template-columns: 1fr; gap: 16px; margin-bottom: 18px; padding-bottom: 18px; }
-  .home-operations__art { height: 112px; border-radius: 8px; mask-image: none; }
   .home.home .home-operations .home-rail__track.home-opportunities { display: flex; gap: 12px; }
   .home.home .home-operations .home-rail__track.home-opportunities > .home-opportunity { flex: 0 0 86%; scroll-snap-align: start; }
   .home.home .home-plans--insignia .home-plans__intro { grid-template-columns: 1fr; gap: 20px; }
@@ -133,7 +190,7 @@
 @media (forced-colors: active) {
   .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) { background: Canvas; color: CanvasText; --home-text: CanvasText; --home-muted: CanvasText; --stage-gold: LinkText; --stage-surface: Canvas; }
   .home.home #concursos.home-operations, :root .home.home .home-footer.home-footer--command { background: Canvas; }
-  .home-plans--insignia::before { display: none; }
+  .home-plans--insignia::before, .home.home .home-operations__art, .home.home .home-operations::before, .home.home .home-plans--insignia::after { display: none; }
 }
 
 /* Navigation shares one metal accent instead of a different color per link. */
