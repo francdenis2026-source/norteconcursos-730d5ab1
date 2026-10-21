@@ -1,4 +1,5 @@
 import { HeroBadge } from "@/components/landing/HeroBadge";
+import { useHomeMicroInteractions } from "@/hooks/useHomeMicroInteractions";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { HomeRail } from "@/components/landing/HomeRail";
@@ -41,6 +42,7 @@ import "@/styles/home.css";
 import "@/styles/home-operations.css";
 import "@/styles/home-light.css";
 import "@/styles/home-refinements.css";
+import "@/styles/home-interactions.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -252,6 +254,7 @@ function PreparationInfo() {
 }
 
 function Index() {
+  useHomeMicroInteractions();
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
@@ -596,24 +599,15 @@ function Index() {
             </a>
           </div>
           <section className="home-footer__contact" aria-labelledby="footer-contact-title">
-            <h3 id="footer-contact-title">Endereço e contato</h3>
+            <h3 id="footer-contact-title" className="sr-only">Endereço e contato</h3>
             <div className="home-footer__contact-grid">
-              <address className="home-footer__contact-card">
+              <div className="home-footer__contact-card">
                 <MapPin aria-hidden="true" />
-                <div>
-                  <span className="home-footer__contact-label">Nosso endereço</span>
-                  <strong>Rua Joel Fereira de Sousa</strong>
-                  <span>Bela Vista · Feijó, Acre</span>
-                  <span>CEP 69960-000</span>
-                </div>
-              </address>
+                <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · <span className="whitespace-nowrap">CEP 69960-000</span></address>
+              </div>
               <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com">
                 <Mail aria-hidden="true" />
-                <div>
-                  <span className="home-footer__contact-label">E-mail</span>
-                  <strong>francdenis2026@gmail.com</strong>
-                  <span>Envie sua mensagem <ArrowUpRight aria-hidden="true" /></span>
-                </div>
+                <span>francdenis2026@gmail.com</span>
               </a>
               <a
                 className="home-footer__contact-card"
@@ -623,11 +617,7 @@ function Index() {
                 aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
               >
                 <MessageCircle aria-hidden="true" />
-                <div>
-                  <span className="home-footer__contact-label">WhatsApp</span>
-                  <strong>(68) 99203-1340</strong>
-                  <span>Iniciar conversa <ArrowUpRight aria-hidden="true" /></span>
-                </div>
+                <span>WhatsApp · (68) 99203-1340</span>
               </a>
             </div>
           </section>
