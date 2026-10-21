@@ -1,6 +1,7 @@
 export type Theme = "light" | "dark";
 
 const STORAGE_KEY = "theme";
+let transitionCleanup: number | null = null;
 
 /** Script embutido no <head>, antes de qualquer renderização, para o tema
  * já nascer correto (sem piscar entre claro e escuro ao carregar a página). */
@@ -12,6 +13,17 @@ export function getActiveTheme(): Theme {
 }
 
 export function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  if (transitionCleanup !== null) window.cancelAnimationFrame(transitionCleanup);
+  root.setAttribute("data-theme-switching", "");
+  // Keep transitions disabled through the first paint, including React's icon updates.
+  // No forced layout, timer delay, or wait for image/network work is needed.
+  transitionCleanup = window.requestAnimationFrame(() => {
+    transitionCleanup = window.requestAnimationFrame(() => {
+      root.removeAttribute("data-theme-switching");
+      transitionCleanup = null;
+    });
+  });
   document.documentElement.classList.toggle("dark", theme === "dark");
   document.documentElement.style.colorScheme = theme;
   const themeColor = document.querySelector('meta[name="theme-color"]');
