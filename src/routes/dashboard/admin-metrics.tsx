@@ -17,6 +17,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Hint } from "@/components/ui/hint";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { QuestionTotals } from "@/components/dashboard/QuestionTotals";
 import { canonicalBoard } from "@/lib/subjects";
@@ -305,11 +306,11 @@ function AdminMetricsPage() {
                 <thead>
                   <tr className="text-left text-xs text-muted-foreground [&>th]:px-2 [&>th]:py-2 [&>th]:font-medium">
                     <th className="pl-0">Disciplina</th>
-                    <th title="Todas as cadastradas">Total</th>
-                    <th title="Liberadas para treino dos alunos">No treino</th>
-                    <th title="Com explicação e fonte verificadas">Revisadas</th>
-                    <th title="De provas reais">Oficiais</th>
-                    <th title="Criadas pela plataforma">Autorais</th>
+                    <Hint content="Todas as cadastradas"><th>Total</th></Hint>
+                    <Hint content="Liberadas para treino dos alunos"><th>No treino</th></Hint>
+                    <Hint content="Com explicação e fonte verificadas"><th>Revisadas</th></Hint>
+                    <Hint content="De provas reais"><th>Oficiais</th></Hint>
+                    <Hint content="Criadas pela plataforma"><th>Autorais</th></Hint>
                   </tr>
                 </thead>
                 <tbody>

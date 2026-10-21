@@ -5,6 +5,7 @@ import { acreDate } from "@/lib/acreTime";
 import { formatScore } from "@/lib/examScoring";
 import { formatDuration, type AttemptWithDetails } from "@/lib/attemptDetails";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 export function AttemptHistoryItem({ item }: { item: AttemptWithDetails }) {
   const { details } = item;
@@ -29,19 +30,20 @@ export function AttemptHistoryItem({ item }: { item: AttemptWithDetails }) {
           </p>
         </div>
         <div className="text-right">
-          <p
-            className={cn(
-              "text-lg font-black leading-none",
-              details.score < 0 ? "text-red-600" : "text-foreground",
-            )}
-            title={details.rule.description}
-          >
-            {formatScore(details.score)}
-            <span className="text-xs font-semibold text-muted-foreground">
-              {" "}
-              / {formatScore(details.maxScore)}
-            </span>
-          </p>
+          <Hint content={details.rule.description}>
+            <p
+              className={cn(
+                "text-lg font-black leading-none",
+                details.score < 0 ? "text-red-600" : "text-foreground",
+              )}
+            >
+              {formatScore(details.score)}
+              <span className="text-xs font-semibold text-muted-foreground">
+                {" "}
+                / {formatScore(details.maxScore)}
+              </span>
+            </p>
+          </Hint>
           <p className="text-[10px] text-muted-foreground">nota · {details.rule.label}</p>
         </div>
       </div>
