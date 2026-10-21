@@ -1,5 +1,6 @@
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 import "@/styles/auth-art.css";
+import authComposition from "@/assets/auth/carreiras-composicao.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { PasswordRecovery } from "@/components/PasswordRecovery";
 import { Input } from "@/components/ui/input";
@@ -239,7 +240,7 @@ function AuthPage() {
           <NorteBrand light />
         </Link>
         <figure className="auth-artwork">
-          <img src="/media/hero/auth-carreiras-composicao.webp" alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
+          <img src={authComposition} alt="Composição de carreiras policiais com distintivo, equipe tática e cão policial" width={1440} height={600} fetchPriority="high" />
         </figure>
         <div className="auth-visual-copy">
           <span className="chip-brass">
