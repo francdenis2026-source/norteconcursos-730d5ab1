@@ -1,5 +1,4 @@
 import { HeroBadge } from "@/components/landing/HeroBadge";
-import { useHomeMicroInteractions } from "@/hooks/useHomeMicroInteractions";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { HomeRail } from "@/components/landing/HomeRail";
@@ -254,7 +253,6 @@ function PreparationInfo() {
 }
 
 function Index() {
-  useHomeMicroInteractions();
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);

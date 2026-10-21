@@ -1,185 +1,121 @@
-/* Restrained, theme-aware feedback. Reading paragraphs remain still and readable. */
-.home {
-  --micro-accent: var(--brass-soft);
-  --micro-glow: color-mix(in srgb, var(--brass) 12%, transparent);
-  --micro-text-glow: color-mix(in srgb, var(--brass) 24%, transparent);
+/* Quiet surface feedback: no pointer tracking, hotspots or neon. */
+.home { --micro-accent: var(--brass-soft); }
+:root:not(.dark) .home { --micro-accent: var(--stage-accent); }
+
+:root:is(.dark, :not(.dark)) .home.home :is(
+  .home-opportunity, .home-plan, .home-preparation__info,
+  .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+) {
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1),
+    border-color 240ms ease, box-shadow 240ms ease;
 }
-:root:not(.dark) .home {
-  --micro-accent: var(--stage-accent);
-  --micro-glow: color-mix(in srgb, var(--stage-accent) 6%, transparent);
-  --micro-text-glow: transparent;
+/* Leave room for the lifted edge inside horizontal carousels. */
+.home.home .home-rail__track:is(.home-opportunities, .home-plans__grid) {
+  padding-block: 8px 20px;
 }
-:root:is(.dark, :not(.dark))
-  .home.home
-  :is(
-    .home-opportunity,
-    .home-plan,
-    .home-preparation__info,
-    .daily-badge,
-    .question-count-badge,
-    .home-plans__signal
-  ) {
-  position: relative;
-  transition:
-    border-color 200ms ease,
-    box-shadow 200ms ease;
-}
-.home
-  :is(
-    .home-nav a,
-    .home-login,
-    .home-footer__links a,
-    .home-footer__contact-card[href],
-    .home-hero__explore,
-    .home-preparation__challenge,
-    summary,
-    .home-preparation__tab,
-    h3,
-    h2 em
-  ) {
-  transition:
-    color 180ms ease,
-    text-shadow 180ms ease;
+/* Disable the legacy decorative overlay as well as the former cursor light. */
+:root:is(.dark, :not(.dark)) .home.home :is(
+  .home-opportunity, .home-plan, .home-preparation__info,
+  .daily-badge, .question-count-badge, .home-plans__signal
+)::after { content: none; }
+
+.home :is(.home-nav a, .home-login, .home-footer__links a,
+  .home-footer__contact-card[href], .home-hero__explore,
+  .home-preparation__challenge, summary, .home-preparation__tab, h3) {
+  transition: color 180ms ease;
+  text-shadow: none;
 }
 .home :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge) > svg {
   transition: transform 180ms ease;
 }
+.home :is(.home-opportunity__image, .home-plan__media) { overflow: hidden; }
+.home :is(.home-opportunity__image, .home-plan__media) > img {
+  transition: transform 400ms cubic-bezier(.2,.7,.2,1);
+}
+
+/* Compact frosted contact strip; one shared surface, rather than three cards. */
+:root:is(.dark, :not(.dark)) .home.home .home-footer__contact {
+  padding: 8px 16px;
+  border: 1px solid var(--home-glass-edge);
+  border-radius: 12px;
+  background: linear-gradient(120deg, var(--home-glass-light), transparent 65%),
+    var(--home-glass-fill);
+  -webkit-backdrop-filter: blur(14px) saturate(110%);
+  backdrop-filter: blur(14px) saturate(110%);
+  box-shadow: inset 0 1px 0 var(--home-glass-light),
+    0 8px 24px -20px rgb(0 0 0 / 30%);
+}
+.home.home .home-footer__contact-card { font-size: 12px; }
+
 @media (hover: hover) and (pointer: fine) {
-  :root:is(.dark, :not(.dark))
-    .home.home
-    :is(
-      .home-opportunity,
-      .home-plan,
-      .home-preparation__info,
-      .daily-badge,
-      .question-count-badge,
-      .home-plans__signal
-    )::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    border-radius: inherit;
-    background: radial-gradient(
-      300px circle at var(--spot-x, 50%) var(--spot-y, 50%),
-      var(--micro-glow),
-      transparent 72%
-    );
-    opacity: 0;
-    transform: none;
-    pointer-events: none;
-    transition: opacity 220ms ease;
+  :root:is(.dark, :not(.dark)) .home.home :is(
+    .home-opportunity, .home-plan, .home-preparation__info,
+    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+  ):hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--micro-accent) 42%, var(--home-glass-edge));
+    box-shadow: inset 0 1px 0 var(--home-glass-light),
+      0 16px 28px -18px rgb(0 0 0 / 38%);
   }
-  :root:is(.dark, :not(.dark)) .home.home [data-home-pointer="true"]::after {
-    opacity: 1;
-  }
-  :root:is(.dark, :not(.dark))
-    .home.home
-    :is(
-      .home-opportunity,
-      .home-plan,
-      .home-preparation__info,
-      .daily-badge,
-      .question-count-badge,
-      .home-plans__signal
-    ):hover {
-    border-color: color-mix(in srgb, var(--micro-accent) 55%, var(--home-glass-edge));
-    box-shadow:
-      inset 0 1px 0 var(--home-glass-light),
-      var(--home-glass-shadow),
-      0 0 24px -12px var(--micro-text-glow);
-    transform: none;
+  .home :is(.home-opportunity, .home-plan):hover :is(.home-opportunity__image, .home-plan__media) > img {
+    transform: scale(1.025);
   }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-opportunity, .home-plan):hover h3,
-  :root:is(.dark, :not(.dark))
-    .home.home
-    :is(
-      .home-nav a,
-      .home-login,
-      .home-footer__links a,
-      .home-footer__contact-card[href],
-      .home-hero__explore,
-      .home-preparation__challenge,
-      summary,
-      h2 em
-    ):hover {
+  :root:is(.dark, :not(.dark)) .home.home :is(
+    .home-nav a, .home-login, .home-footer__links a,
+    .home-footer__contact-card[href], .home-hero__explore,
+    .home-preparation__challenge, summary
+  ):hover {
     color: var(--micro-accent);
-    text-shadow: 0 0 16px var(--micro-text-glow);
+    text-shadow: none;
   }
-  :root:is(.dark, :not(.dark)) .home.home .home-preparation__tab:not([data-state="active"]):hover {
-    color: var(--micro-accent);
-    text-shadow: 0 0 16px var(--micro-text-glow);
-  }
-  .home
-    :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge):hover
-    > svg {
+  .home :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge):hover > svg {
     transform: translate(2px, -1px);
   }
 }
-:root:is(.dark, :not(.dark))
-  .home.home
-  :is(.home-opportunity, .home-plan, .home-preparation__info):focus-within {
-  border-color: var(--micro-accent);
+:root:is(.dark, :not(.dark)) .home.home :is(
+  .home-opportunity, .home-plan, .home-preparation__info,
+  .daily-badge, .question-count-badge, .home-platform-qr
+):focus-within { border-color: var(--micro-accent); }
+.home :is(.home-footer__contact-card[href], .home-hero__explore,
+  .home-preparation__challenge, summary):focus-visible {
+  outline: 2px solid var(--micro-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
-.home
-  :is(
-    .home-footer__contact-card[href],
-    .home-hero__explore,
-    .home-preparation__challenge,
-    summary
-  ):focus-visible {
-  color: var(--micro-accent);
-  text-shadow: 0 0 16px var(--micro-text-glow);
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-footer__contact { padding: 8px 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  :root:is(.dark, :not(.dark))
-    .home.home
-    :is(
-      .home-opportunity,
-      .home-plan,
-      .home-preparation__info,
-      .daily-badge,
-      .question-count-badge,
-      .home-plans__signal
-    )::after {
-    display: none;
-  }
-  .home
-    :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge):hover
-    > svg {
-    transform: none;
-  }
-  .home
-    :is(
-      .home-nav a,
-      .home-login,
-      .home-footer__links a,
-      .home-footer__contact-card[href],
-      .home-hero__explore,
-      .home-preparation__challenge,
-      summary,
-      .home-preparation__tab,
-      h3,
-      h2 em
-    ) {
+  :root:is(.dark, :not(.dark)) .home.home :is(
+    .home-opportunity, .home-plan, .home-preparation__info,
+    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+  ) { transition: none; }
+  :root:is(.dark, :not(.dark)) .home.home :is(
+    .home-opportunity, .home-plan, .home-preparation__info,
+    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+  ):hover { transform: none; }
+  .home :is(.home-opportunity__image, .home-plan__media) > img,
+  .home :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge) > svg {
     transition: none;
+    transform: none !important;
+  }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  :root:is(.dark, :not(.dark)) .home.home .home-footer__contact { background: var(--home-surface); }
+}
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home .home-footer__contact {
+    background: var(--home-surface);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 }
 @media (forced-colors: active) {
-  :root:is(.dark, :not(.dark))
-    .home.home
-    :is(
-      .home-opportunity,
-      .home-plan,
-      .home-preparation__info,
-      .daily-badge,
-      .question-count-badge,
-      .home-plans__signal
-    )::after {
-    display: none;
-  }
-  .home {
-    --micro-accent: LinkText;
-    --micro-text-glow: transparent;
+  .home { --micro-accent: LinkText; }
+  :root:is(.dark, :not(.dark)) .home.home .home-footer__contact {
+    background: Canvas;
+    border-color: CanvasText;
   }
 }
