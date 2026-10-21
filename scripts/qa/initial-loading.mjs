@@ -2,7 +2,7 @@
  * PLAYWRIGHT_MODULE=/path/to/playwright-core/index.mjs node scripts/qa/initial-loading.mjs
  */
 import assert from 'node:assert/strict';
-import {statSync} from 'node:fs';
+import {statSync,writeFileSync} from 'node:fs';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:3000';
 assert.ok(statSync('public/media/loading/norte-abertura-hd.webp').size<330_000);
@@ -22,7 +22,10 @@ try{
   assert.equal(await boot.locator('img').evaluate(img=>img.currentSrc.endsWith(innerWidth<=640&&devicePixelRatio<1.5?'norte-abertura-mobile-hd.webp':'norte-abertura-hd.webp')),true);
   assert.ok(await boot.locator('img').evaluate(img=>img.naturalWidth*(innerWidth<=640&&devicePixelRatio>=1.5?2:1)>=1280),'retain sufficient source resolution');
   assert.equal(new Set(images).size,1,'only the selected responsive image loads');
-  await page.screenshot({path:`/tmp/norte-initial-loading-${width}.png`});
+  // Hydration is intentionally paused; capture without waiting for pending font loaders.
+  const cdp=await page.context().newCDPSession(page);
+  const capture=await cdp.send('Page.captureScreenshot',{format:'png'});
+  writeFileSync(`/tmp/norte-initial-loading-${width}.png`,Buffer.from(capture.data,'base64'));await cdp.detach();
   release();await boot.waitFor({state:'hidden',timeout:20000});
   assert.equal(errors.length,0,errors.join('\n'));
   await page.locator('.home-hero__study-links .daily-badge').click();await page.waitForURL('**/desafio-diario');assert.equal(await boot.isVisible(),false,'SPA navigation does not replay startup');
