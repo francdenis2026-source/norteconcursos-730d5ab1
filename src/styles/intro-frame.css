@@ -103,3 +103,44 @@
   .tactical-intro__art, .tactical-intro__frame::before { display: none; }
   .tactical-intro__brand, .tactical-intro__edition, .tactical-intro__caption, .tactical-intro__identity > span { color: CanvasText; }
 }
+
+/* Fill the space around the film with the platform's tactical identity.
+   The video box follows its real 64:33 ratio, leaving no opaque black bars. */
+.tactical-intro__screen {
+  container-type: size;
+  background: linear-gradient(180deg, #080a09a6, #080a0966 45%, #080a09c9), url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
+}
+.home.home .tactical-intro .tactical-intro__screen video {
+  z-index: 1;
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: min(100%, calc(100cqh * 64 / 33));
+  height: min(100%, calc(100cqw * 33 / 64));
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+.tactical-intro__side {
+  position: absolute;
+  inset-block: 0;
+  width: max(0px, calc((100cqw - 100cqh * 64 / 33) / 2));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #07090833, transparent 40%, #07090888);
+}
+.tactical-intro__side--left { left: 0; border-right: 1px solid #d2ad6738; }
+.tactical-intro__side--right { right: 0; border-left: 1px solid #d2ad6738; }
+.tactical-intro__side img {
+  width: 72%;
+  max-width: 132px;
+  height: auto;
+  object-fit: contain;
+  opacity: .72;
+  filter: saturate(.6) brightness(.8) drop-shadow(0 6px 12px #000b);
+}
+@media (forced-colors: active) {
+  .tactical-intro__screen { background: Canvas; }
+  .tactical-intro__side { display: none; }
+}

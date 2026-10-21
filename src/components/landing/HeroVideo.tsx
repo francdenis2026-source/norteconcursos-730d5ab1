@@ -159,6 +159,12 @@ export function HeroVideo({
                 <span>Direção. Disciplina. Conquista.</span>
               </aside>
               <div className="tactical-intro__screen">
+                <div className="tactical-intro__side tactical-intro__side--left" aria-hidden="true">
+                  <img src={introBadge} alt="" width={768} height={811} />
+                </div>
+                <div className="tactical-intro__side tactical-intro__side--right" aria-hidden="true">
+                  <img src={introBadge} alt="" width={768} height={811} />
+                </div>
                 <video
                   ref={video}
                   muted
