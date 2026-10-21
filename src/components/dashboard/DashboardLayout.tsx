@@ -9,6 +9,8 @@ import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
 import "@/styles/workspace-banners.css";
 import "@/styles/workspace-topbar.css";
+import "@/styles/workspace-fullscreen.css";
+import { useWorkspaceFullscreen } from "@/hooks/useWorkspaceFullscreen";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation } from "@/lib/dashboardNavigation";
 import React from "react";
@@ -46,6 +48,8 @@ import {
   LayoutDashboard,
   LogOut,
   MapPin,
+  Maximize,
+  Minimize,
   Menu,
   Moon,
   NotebookPen,
@@ -351,6 +355,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     };
   }, [router]);
   const [isCollapsed, setIsCollapsed] = React.useState(false);
+  const fullscreen = useWorkspaceFullscreen();
+  const compactSidebar = isCollapsed || fullscreen.active;
   // Default estável igual ao SSR ("dark"); o tema real é sincronizado depois
   // da hidratação para não gerar mismatch (ver src/lib/theme.ts).
   const [isDarkMode, setIsDarkMode] = React.useState(true);
@@ -552,22 +558,23 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div
         className="app-shell navigation-v2"
         data-area={isAdmin ? "admin" : "student"}
+        data-focus-mode={fullscreen.active}
         style={{ "--workspace-banner-art": `url("${workspaceBannerArt}")` } as React.CSSProperties}
         data-brand-bg={brandBg ?? "off"}
       >
         {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}
         {user && user.id !== "demo-user" && <ActivityTracker />}
         <FocusReturnBar />
-        <aside className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`} data-collapsed={isCollapsed}>
+        <aside className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`} data-collapsed={compactSidebar}>
           <div className="app-sidebar__head">
             <Link
               to="/dashboard"
               activeOptions={{ exact: true, includeSearch: false }}
               aria-label="Norte Concurso — visão geral"
             >
-              <NorteBrand light compact={isCollapsed} />
+              <NorteBrand light compact={compactSidebar} />
             </Link>
-            {!isCollapsed && (
+            {!compactSidebar && (
               <button
                 type="button"
                 className="app-icon-btn"
@@ -586,7 +593,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             aria-label="Buscar área da plataforma"
           >
             <Search />
-            {!isCollapsed && (
+            {!compactSidebar && (
               <>
                 <span>Buscar área</span>
                 <span className="kbd">Ctrl K</span>
@@ -594,10 +601,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             )}
           </button>
 
-          {nav(isCollapsed)}
+          {nav(compactSidebar)}
 
           <div className="app-sidebar__foot">
-            {isCollapsed && (
+            {isCollapsed && !fullscreen.active && (
               <button
                 type="button"
                 className="app-icon-btn mx-auto mb-2"
@@ -607,7 +614,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <ChevronsRight />
               </button>
             )}
-            {userMenu(isCollapsed)}
+            {userMenu(compactSidebar)}
           </div>
         </aside>
 
@@ -640,7 +647,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     <span>Buscar área da plataforma</span>
                   </button>
                   {nav(false)}
-                  <div className="app-sidebar__foot">{userMenu(false)}</div>
+                  <div className="app-sidebar__foot">
+                    {!isAdmin && <button type="button" className="workspace-focus-entry" onClick={() => { setMobileOpen(false); fullscreen.enter(); }}><Maximize aria-hidden="true" /> Expandir área de estudo</button>}
+                    {userMenu(false)}
+                  </div>
                 </SheetContent>
               </Sheet>
             </div>
@@ -656,6 +666,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
 
             <div className="app-topbar__actions">
+              {!isAdmin && <button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia" title="Tela cheia"><Maximize aria-hidden="true" /></button>}
               <button
                 type="button"
                 className="app-top-search"
@@ -711,6 +722,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               </button>
             </div>
           </header>
+
+          {fullscreen.active && <div className="workspace-focus-controls no-print" role="toolbar" aria-label="Controles da tela cheia">
+            <button type="button" onClick={toggleTheme} aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"} title={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>{isDarkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
+            <button type="button" onClick={fullscreen.exit} aria-label="Restaurar visualização" title="Restaurar visualização (Esc)"><Minimize aria-hidden="true" /></button>
+          </div>}
 
           {!isAdmin && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}
 

@@ -1,4 +1,4 @@
-import { useLocation, useRouter } from "@tanstack/react-router";
+import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { dashboardHref } from "@/lib/internalNavigation";
@@ -15,7 +15,7 @@ export function PlatformBack() {
     visited.current.set(index, location.href);
     setPrevious(dashboardHref(visited.current.get(index - 1) ?? ""));
   }, [index, location.href]);
-  if (!previous || previous === location.href) return null;
+  if (!previous || previous === location.href) return <Link to={location.pathname === '/dashboard' ? '/' : '/dashboard'} className="app-top-btn platform-back no-print" aria-label={location.pathname === '/dashboard' ? 'Ir para a página inicial' : 'Voltar à área do aluno'} title={location.pathname === '/dashboard' ? 'Página inicial' : 'Área do aluno'}><ArrowLeft aria-hidden="true" /></Link>;
   return (
     <Tooltip>
       <TooltipTrigger asChild>

@@ -162,3 +162,15 @@
   .auth .auth-panel { background: Canvas; }
   .auth-insignia__reflection { display: none; }
 }
+
+/* Keep the homepage action inside the scroll layout and below device cutouts. */
+.auth.auth .auth-panel { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: max(12px, env(safe-area-inset-top)); padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+.auth .auth-access-nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; align-self: stretch; flex: none; display: flex; padding-block: 0 12px; }
+.auth .auth-access-nav .auth-back { position: relative; inset: auto; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid #ffffff35; border-radius: 12px; background: #10171ff0; color: #f7f2e8; font-size: 13px; font-weight: 600; text-decoration: none; transform: none; }
+.auth .auth-access-nav .auth-back svg { width: 18px; height: 18px; }
+.auth .auth-access-nav .auth-back:focus-visible { outline: 2px solid #e8bd70; outline-offset: 2px; }
+.auth.auth .auth-card { flex: none; margin-block: auto; }
+@media screen and (max-width: 1023px) {
+  .auth.auth .auth-panel { padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+}
+@media (forced-colors: active) { .auth .auth-access-nav .auth-back { background: Canvas; color: LinkText; border-color: CanvasText; } }

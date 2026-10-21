@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   AlertCircle,
-  ArrowLeft,
+  Home,
   ArrowRight,
   Eye,
   EyeOff,
@@ -273,9 +273,9 @@ function AuthPage() {
       </section>
 
       <section className="auth-panel">
-        <Link to="/" className="auth-back">
-          <ArrowLeft /> Voltar para o início
-        </Link>
+        <nav className="auth-access-nav" aria-label="Navegação de acesso">
+          <Link to="/" className="auth-back"><Home aria-hidden="true" /> Página inicial</Link>
+        </nav>
         <div className="auth-card">
           <div className="auth-identity">
             <div><span>NORTE · CARREIRAS POLICIAIS</span><strong>Seu objetivo tem um norte.</strong></div>

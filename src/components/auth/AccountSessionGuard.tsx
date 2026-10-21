@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { useLocation } from '@tanstack/react-router';
+import { Link, useLocation } from '@tanstack/react-router';
 import { clearPersistedAuthSession, supabase } from '@/integrations/supabase/client';
 import { createAccountSessionMonitor, type AccountSessionState } from '@/lib/accountSession';
 import { verifyAccountSession } from '@/lib/accountSessionApi';
@@ -62,12 +62,13 @@ export function AccountSessionGuard({ access, children }: { access: AccountAcces
     };
   }, [access?.userId, access?.sessionKey, access?.claim]);
   useEffect(() => { if (access) void monitor.current?.check(); }, [access?.accessToken]);
-  if (state === 'verified' || (state === 'checking' && (pathname === '/auth' || pathname === '/admin'))) return children;
+  if (pathname === '/' || state === 'verified' || (state === 'checking' && (pathname === '/auth' || pathname === '/admin'))) return children;
   return <main className="grid min-h-dvh place-items-center bg-background p-6 text-foreground" aria-busy={state === 'checking'}>
     <section className="w-full max-w-md rounded-2xl border bg-card p-7 text-center shadow-lg" role="status">
       <h1 className="text-xl font-semibold">{state === 'checking' ? 'Verificando sua sessão…' : state === 'revoked' ? 'Sessão encerrada' : 'Não foi possível confirmar seu acesso'}</h1>
       <p className="mt-3 text-sm text-muted-foreground">{state === 'checking' ? 'Confirmando o dispositivo conectado à sua conta.' : state === 'revoked' ? 'Sua conta foi aberta em outro dispositivo. Entre novamente para continuar neste aparelho.' : 'Confira sua conexão e tente novamente. Seu acesso precisa ser validado antes de continuar.'}</p>
       {state === 'unavailable' && <Button className="mt-5" onClick={() => { void monitor.current?.check(true); }}>Tentar novamente</Button>}
+      <Link to="/" className="mt-4 inline-flex min-h-11 items-center justify-center rounded-lg border px-4 text-sm font-semibold">Página inicial</Link>
     </section>
   </main>;
 }

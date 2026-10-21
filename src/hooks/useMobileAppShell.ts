@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MOBILE_APP_QUERY } from "@/lib/appScroll";
+import { MOBILE_APP_QUERY, usesWorkspaceScroll } from "@/lib/appScroll";
 import { useElementScrollRestoration, useLocation } from "@tanstack/react-router";
 
 /** Keep the authenticated shell inside the visible viewport, including iOS keyboards. */
@@ -8,7 +8,7 @@ export function useMobileAppShell() {
   const restored = useElementScrollRestoration({ id: "dashboard-content" });
   const restoreY = restored?.scrollY;
   useEffect(() => {
-    if (!restoreY || !window.matchMedia(MOBILE_APP_QUERY).matches) return;
+    if (!restoreY || !usesWorkspaceScroll()) return;
     const content = document.getElementById("dashboard-content");
     if (!content) return;
     // Route components may render a short loading state before their content.
