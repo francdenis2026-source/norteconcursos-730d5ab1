@@ -1,6 +1,6 @@
 import { acreDate } from "@/lib/acreTime";
 import React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -40,6 +40,7 @@ export const Route = createFileRoute("/dashboard/profile")({
 });
 
 function ProfilePage() {
+  const navigate = useNavigate();
   const { user, isLoading } = useAuthStatus();
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
@@ -122,7 +123,7 @@ function ProfilePage() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    window.location.href = "/";
+    await navigate({ to: "/", replace: true });
   };
 
   const handleOpenBillingPortal = async () => {

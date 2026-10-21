@@ -44,7 +44,7 @@ export function SessionTabGuard({ sessionKey, children }: { sessionKey: string |
             <NorteBrand className="session-access__brand" />
             <div className="session-access__emblem" aria-hidden="true">
               <span className="session-access__halo" />
-              <img className="session-access__badge" src="/media/hero/auth-distintivo.webp" alt="" width="300" height="296" decoding="async" />
+              <img className="session-access__badge" src="/media/brand/distintivo-carreiras-hd.webp" alt="" width="768" height="811" decoding="async" />
               <span className="session-access__badge-shadow" />
             </div>
             <div className="session-access__status">

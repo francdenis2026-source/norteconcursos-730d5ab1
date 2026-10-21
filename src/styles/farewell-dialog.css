@@ -1,0 +1,66 @@
+/* Shared theme, one police insignia composition, and no oversized photo banner. */
+.farewell-dialog {
+  --farewell-accent: var(--brass-deep);
+  width: min(500px, calc(100vw - 32px));
+  max-width: 500px;
+  max-height: calc(100dvh - 32px);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 28px;
+  isolation: isolate;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: 0 28px 80px -30px rgb(0 0 0 / 55%);
+  scrollbar-width: thin;
+}
+.dark .farewell-dialog { --farewell-accent: var(--brass-soft); }
+.farewell-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(100deg, var(--card) 8%, color-mix(in srgb, var(--card) 82%, transparent) 70%),
+    url('/media/hero/carreiras-background.webp') 66% center / auto 100% no-repeat;
+}
+.farewell-intro { padding-right: 12px; }
+.farewell-kicker { display: inline-flex; align-items: center; gap: 7px; color: var(--farewell-accent); font-size: 9px; font-weight: 700; letter-spacing: .13em; padding-right: 12px; }
+.farewell-kicker svg { width: 15px; height: 15px; flex-shrink: 0; }
+.farewell-title { margin-top: 16px; font-family: var(--font-insignia); font-size: 29px; font-weight: 700; line-height: 1.2; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.farewell-title span { color: var(--farewell-accent); }
+.farewell-description { max-width: 39ch; margin-top: 12px; font-size: 13px; line-height: 1.7; color: var(--muted-foreground); }
+.farewell-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-block: 18px; border-block: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent); margin: 0; gap: 14px; }
+.farewell-metrics > div { min-width: 0; }
+.farewell-metrics > div + div { border-left: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent); padding-left: 14px; }
+.farewell-metrics dt { display: flex; align-items: flex-start; gap: 6px; font-size: 10px; line-height: 1.5; color: var(--muted-foreground); }
+.farewell-metrics dt svg { width: 14px; height: 14px; margin-top: 1px; color: var(--farewell-accent); flex-shrink: 0; }
+.farewell-metrics dd { margin: 8px 0 0; font-size: 23px; line-height: 1.2; font-weight: 750; letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.farewell-actions { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10px; }
+.farewell-actions > button { min-width: 0; width: 100%; min-height: 44px; margin: 0; font-size: 12px; border-radius: 10px; }
+.farewell-actions > .farewell-stay { background: color-mix(in srgb, var(--card) 80%, transparent); color: var(--foreground); border-color: color-mix(in srgb, var(--foreground) 16%, transparent); }
+.farewell-actions > .farewell-leave { background: var(--brass-soft); color: var(--ink); }
+.farewell-actions > .farewell-leave:hover { background: var(--brass); }
+.farewell-dialog :is(button, a):focus-visible { outline: 2px solid var(--farewell-accent); outline-offset: 3px; }
+@media (max-width: 420px) {
+  .farewell-dialog { padding: 22px 20px 20px; gap: 20px; border-radius: 16px; }
+  .farewell-title { font-size: 25px; }
+  .farewell-description { font-size: 12px; }
+  .farewell-kicker { max-width: calc(100% - 12px); font-size: 8px; letter-spacing: .08em; }
+  .farewell-metrics { gap: 10px; padding-block: 16px; }
+  .farewell-metrics > div + div { padding-left: 10px; }
+  .farewell-metrics dt { flex-direction: column; gap: 6px; font-size: 9px; }
+  .farewell-metrics dd { font-size: 21px; }
+  .farewell-actions { grid-template-columns: 1fr; gap: 8px; }
+}
+@media (max-height: 460px) and (min-width: 421px) {
+  .farewell-dialog { padding: 20px 24px; gap: 16px; }
+  .farewell-title { font-size: 25px; margin-top: 10px; }
+  .farewell-metrics { padding-block: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .farewell-dialog { animation: none; } }
+@media (forced-colors: active) { .farewell-art { display: none; } .farewell-dialog { --farewell-accent: LinkText; border-color: CanvasText; } }

@@ -59,7 +59,7 @@ export function PlansSection() {
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
             <img
               className="home-plans__insignia"
-              src="/media/hero/auth-distintivo.webp"
+              src="/media/brand/distintivo-carreiras-hd.webp"
               alt=""
               width={96}
               height={116}
@@ -206,11 +206,11 @@ export function PlansSection() {
             <span className="home-eyebrow home-signal">Sem dúvidas no caminho</span>
             <h3>Antes de começar</h3>
             <img
-              className="home-faq__art"
-              src="/media/hero/faq-preparacao-operacional.webp"
+              className="home-faq__art home-faq__art--composition"
+              src="/media/hero/faq-agentes-composicao.webp"
               alt=""
-              width={768}
-              height={512}
+              width={1000}
+              height={667}
               loading="lazy"
               decoding="async"
             />

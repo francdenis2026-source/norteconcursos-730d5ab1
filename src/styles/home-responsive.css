@@ -458,3 +458,53 @@
     backdrop-filter: none;
   }
 }
+
+/* Compact FAQ: one integrated scene, full figures and no cutout-driven excess height. */
+:root:is(.dark, :not(.dark)) .home.home .home-plans--insignia .home-faq {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: 24px;
+  padding: 18px 22px;
+}
+.home.home .home-faq__intro {
+  grid-template-columns: minmax(0, 1fr) clamp(170px, 15vw, 220px);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  gap: 8px 16px;
+}
+.home.home .home-faq__intro > .home-eyebrow { align-self: end; }
+.home.home .home-faq__intro > h3 { align-self: start; margin: 0; }
+.home.home .home-faq__art.home-faq__art--composition {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1000 / 667;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid color-mix(in srgb, var(--brass) 24%, transparent);
+  border-radius: 10px;
+  filter: none;
+}
+@media (min-width: 600px) and (max-width: 1000px) {
+  .home.home .home-faq__intro { grid-template-columns: 1fr; gap: 8px; }
+  .home.home .home-faq__art.home-faq__art--composition {
+    grid-column: 1;
+    grid-row: auto;
+    width: min(100%, 170px);
+  }
+}
+@media (max-width: 599px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-plans--insignia .home-faq {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+  .home.home .home-faq__intro { grid-template-columns: minmax(0, 1fr) clamp(112px, 34vw, 140px); gap: 6px 12px; }
+  .home.home .home-plans--insignia .home-faq__intro > h3 { font-size: 20px; }
+}
+@media (forced-colors: active) {
+  .home.home .home-faq__art.home-faq__art--composition { border-color: CanvasText; }
+}
