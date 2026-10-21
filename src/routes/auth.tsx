@@ -527,7 +527,7 @@ function AuthPage() {
             <ShieldCheck />
             <span>Conexão protegida · acesso individual à sua conta</span>
           </div>
-          <p className="auth-dev-signature">Dev. Franc D'nis · Feijó-AC, Brasil</p>
+          <p className="auth-dev-signature">Desenvolvido por Franc Denis · Feijó, Acre, Brasil</p>
         </div>
       </section>
     </main>

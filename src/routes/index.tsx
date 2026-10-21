@@ -25,6 +25,9 @@ import {
   Landmark,
   LineChart,
   Map as MapIcon,
+  MapPin,
+  Mail,
+  MessageCircle,
   Menu,
   LogIn,
   ScrollText,
@@ -592,6 +595,42 @@ function Index() {
               </span>
             </a>
           </div>
+          <section className="home-footer__contact" aria-labelledby="footer-contact-title">
+            <h3 id="footer-contact-title">Endereço e contato</h3>
+            <div className="home-footer__contact-grid">
+              <address className="home-footer__contact-card">
+                <MapPin aria-hidden="true" />
+                <div>
+                  <span className="home-footer__contact-label">Nosso endereço</span>
+                  <strong>Rua Joel Fereira de Sousa</strong>
+                  <span>Bela Vista · Feijó, Acre</span>
+                  <span>CEP 69960-000</span>
+                </div>
+              </address>
+              <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com">
+                <Mail aria-hidden="true" />
+                <div>
+                  <span className="home-footer__contact-label">E-mail</span>
+                  <strong>francdenis2026@gmail.com</strong>
+                  <span>Envie sua mensagem <ArrowUpRight aria-hidden="true" /></span>
+                </div>
+              </a>
+              <a
+                className="home-footer__contact-card"
+                href="https://wa.me/5568992031340"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
+              >
+                <MessageCircle aria-hidden="true" />
+                <div>
+                  <span className="home-footer__contact-label">WhatsApp</span>
+                  <strong>(68) 99203-1340</strong>
+                  <span>Iniciar conversa <ArrowUpRight aria-hidden="true" /></span>
+                </div>
+              </a>
+            </div>
+          </section>
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
             <span>Tecnologia a serviço da sua preparação</span>

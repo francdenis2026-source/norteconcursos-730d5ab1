@@ -728,7 +728,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <footer className="app-footer no-print">
               <span>© 2026 Norte Concurso</span>
               <span>
-                Desenvolvido por <strong className="text-foreground">Franc D&apos;nis</strong> ·
+                Desenvolvido por <strong className="text-foreground">Franc Denis</strong> ·
                 Feijó-AC
               </span>
             </footer>
