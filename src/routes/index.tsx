@@ -358,8 +358,8 @@ function Index() {
       <main id="conteudo" tabIndex={-1}>
         <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
+          <HeroBadge show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying}>
-            <HeroBadge show={introSettled} />
             <div className="home-hero__grid">
               <div className="home-hero__copy">
                 <span className="home-eyebrow">

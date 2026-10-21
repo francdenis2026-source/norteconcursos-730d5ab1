@@ -4461,11 +4461,12 @@
    Distintivo 3D da hero (vitrine "Carreiras Policiais")
    ========================================================================== */
 .hero-badge {
-  --badge-w: clamp(118px, 11vw, 158px);
+  --badge-w: clamp(104px, 8vw, 138px);
   position: absolute;
   z-index: 2;
-  top: 30px;
-  left: calc(55% - var(--badge-w) / 2);
+  top: clamp(24px, 2.5vw, 40px);
+  left: auto;
+  right: clamp(24px, 4vw, 80px);
   width: var(--badge-w);
   aspect-ratio: 460 / 531;
   perspective: 700px;
@@ -4533,12 +4534,12 @@
   to { opacity: 1; transform: none; }
 }
 @media (max-width: 1099px) {
-  /* Tablet: ao lado da cabeça do agente, no fundo escuro à direita, afastado do cabeçalho. */
+  /* Anchor to the hero artwork, leaving the agent's face and copy unobstructed. */
   .hero-badge {
-    --badge-w: clamp(92px, 13vw, 118px);
+    --badge-w: clamp(88px, 10vw, 104px);
     left: auto;
-    right: 4%;
-    top: 46px;
+    right: 24px;
+    top: 24px;
   }
 }
 @media (max-width: 759px) {
