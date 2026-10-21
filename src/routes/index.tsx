@@ -446,10 +446,10 @@ function Index() {
         <section id="concursos" className="home-section home-operations">
           <img
             className="home-operations__art"
-            src="/media/hero/auth-carreiras-composicao.webp"
+            src="/media/hero/carreiras-background.webp"
             alt=""
-            width={1440}
-            height={600}
+            width={1926}
+            height={816}
             loading="lazy"
             decoding="async"
           />

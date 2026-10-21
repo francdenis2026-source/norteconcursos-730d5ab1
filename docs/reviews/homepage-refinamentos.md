@@ -44,3 +44,16 @@ Chromium: 320/390/768/1440 px em claro/escuro, sem overflow horizontal, arte de 
 Verificação Chromium em claro/escuro, mouse e toque emulado: nenhum loop no distintivo, entrada de 200 ms, cor/fundo da aba ativa estáveis sob hover, cartões imóveis no toque, hover preservado no mouse, carrossel imediato nas setas e botões acionados pelo teclado, clique suave e movimento reduzido sem animação. Cartões imóveis também com movimento reduzido em desktop. Larguras adicionais de 320/768 px sem overflow; sem exceções JavaScript. Typecheck, lint dos componentes e build de produção passaram.
 
 **Celular físico continua pendente.** Não há aparelho conectado ao ambiente; emulação não certifica gesto real, Safari/iOS, safe areas, PWA ou desempenho a 60/120 FPS. A aprovação acima se restringe ao código e aos comportamentos verificados no navegador, sem promessa de desempenho em hardware real.
+
+## Fundos fixos e composições distintas
+
+| Before | After | Why |
+| --- | --- | --- |
+| Preparação e concursos com a mesma imagem dos agentes | Preparação mantém os agentes; concursos usa a composição com distintivo e equipamentos; planos mantém sua textura própria | Evitar repetição entre faixas vizinhas |
+| Imagens absolutas presas à altura das seções | Camadas `position:fixed`, altura `100lvh` e `clip-path:inset(0)` nas faixas | A imagem permanece parada na janela enquanto o conteúdo rola, sem aparecer fora de sua faixa |
+| Fundo geral repetido verticalmente no celular | Removido o mosaico móvel antigo | Evitar repetição adicional durante a rolagem |
+| Arte da preparação com opacidade de 10% e modo luminosidade no claro | Opacidade integral, cor original e véu claro localizado | Preservar a presença da arte com leitura protegida |
+
+O efeito usa CSS, sem listeners de scroll ou atualização de estado por quadro. Os textos, cartões, alturas de conteúdo e navegação foram preservados. A altura `100lvh` mantém o enquadramento estável durante mudanças das barras móveis do navegador. As camadas são decorativas e não capturam eventos.
+
+Validação Chromium: três fundos distintos, em 320/390/768/1440 px, claro e escuro (24 casos). Antes/depois de rolar 160 px, todas as camadas mantiveram top=0 e a mesma altura, sem overflow horizontal. Os fundos são ocultos em cores forçadas. Emulação de toque: um gesto vertical rolou a página de 1344 para 1579 px enquanto o fundo permaneceu com top=0 e altura=844 px. Typecheck, lint de lógica do arquivo de rota e build passaram; sem exceções JavaScript. Inspeção visual das capturas em desktop e celular emulado concluída. Safari/iOS e aparelho físico continuam sem validação neste ambiente.
