@@ -345,6 +345,16 @@
 .home-menu nav svg {
   width: 16px;
 }
+.home-menu__label {
+  margin-top: 18px;
+  padding: 8px 0 3px;
+  color: var(--landing-nav-active);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 .home-menu__access {
   display: grid;
   gap: 10px;

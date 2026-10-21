@@ -348,6 +348,17 @@ function Index() {
                       <ChevronRight />
                     </Link>
                   </SheetClose>
+                  <div className="home-menu__label" aria-hidden="true">Institucional</div>
+                  {[
+                    ["Nossa história", "/sobre"],
+                    ["Privacidade", "/privacy"],
+                    ["Termos de uso", "/terms"],
+                    ["Central de suporte", "/suporte"],
+                  ].map(([label, href]) => (
+                    <SheetClose asChild key={href}>
+                      <a href={href}>{label}<ChevronRight /></a>
+                    </SheetClose>
+                  ))}
                 </nav>
                 <div className="home-menu__access">
                   <SheetClose asChild>

@@ -850,6 +850,16 @@ html {
   width: 18px;
   color: var(--brass);
 }
+.lp-sheet-nav__label {
+  margin-top: 22px;
+  padding: 0 4px 6px;
+  color: var(--brass-soft);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 
 /* Hero */
 .lp-hero {
@@ -3583,6 +3593,14 @@ html {
   }
   .lp-theme-toggle svg {
     width: 18px;
+  }
+  /* Os links institucionais ficam no menu móvel; o rodapé mantém só a marca. */
+  .lp-footer__grid > :not(.lp-footer__brand) {
+    display: none;
+  }
+  .lp-footer__grid {
+    grid-template-columns: 1fr;
+    padding-block: 18px;
   }
   :root:not(.dark) .lp-header[data-scrolled="true"] {
     background: oklch(0.99 0.004 255 / 0.9);
@@ -7320,6 +7338,9 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   .lp-hero__pillars,
   .lp-hero__aside {
     display: none !important;
+  }
+  .lp-footer__grid {
+    padding-block: 14px;
   }
   .lp-hero {
     min-height: 0;
