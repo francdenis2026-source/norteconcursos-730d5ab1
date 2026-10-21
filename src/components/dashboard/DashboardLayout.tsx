@@ -1,3 +1,4 @@
+import { useTopbarGlass } from "@/hooks/useTopbarGlass";
 import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
@@ -5,6 +6,7 @@ import "@/styles/student-canvas.css";
 import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
 import "@/styles/workspace-banners.css";
+import "@/styles/workspace-topbar.css";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
@@ -26,7 +28,6 @@ import {
   BookOpen,
   CalendarClock,
   BrainCircuit,
-  ChevronRight,
   ChevronsLeft,
   ChevronsRight,
   ChevronsUpDown,
@@ -304,6 +305,7 @@ const BRAND_BG_ROUTES: Record<string, "blue" | "gold"> = {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   useMobileAppShell();
+  const topbar = useTopbarGlass();
   const location = useLocation();
   const navigate = useNavigate();
   const router = useRouter();
@@ -618,7 +620,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <RenewPlanDialog user={user} enabled={!isAdmin} />
 
         <div className="app-main">
-          <header className="app-topbar no-print">
+          <header ref={topbar} className="app-topbar no-print" aria-label="Navegação da área atual">
             <PlatformBack />
             <div className="app-mobile-bar min-w-0 gap-2">
               <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -647,20 +649,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   <div className="app-sidebar__foot">{userMenu(false)}</div>
                 </SheetContent>
               </Sheet>
-              <Link
-                to="/dashboard"
-                activeOptions={{ exact: true, includeSearch: false }}
-                aria-label="Norte Concurso — visão geral"
-              >
-                <NorteBrand light compact />
-              </Link>
-              <span className="app-mobile-title">{current?.label ?? (isAdmin ? "Administração" : "Minha preparação")}</span>
             </div>
 
-            <div className="app-crumbs">
-              <span>{current?.group ?? "Norte"}</span>
-              <ChevronRight />
-              <strong>{current?.label ?? "Painel"}</strong>
+            <div className="app-location" aria-label="Localização na plataforma">
+              <div className="app-location__context">
+                <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{current.group}</span>}
+              </div>
+              <strong className="app-location__title" title={current?.label}>
+                {current?.label ?? (location.pathname === "/dashboard/admin-support" ? "Central de atendimento" : isAdmin ? "Painel administrativo" : "Minha preparação")}
+              </strong>
             </div>
 
             <div className="app-topbar__actions">
