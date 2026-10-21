@@ -1,13 +1,12 @@
-import { usePoliceInsigniaSource } from "@/hooks/usePoliceInsignia";
+import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 
 /** Decorative depth stays away from the form's focus and pointer targets. */
 export function AuthInsignia() {
-  const src = usePoliceInsigniaSource();
   return (
     <div className="auth-insignia" aria-hidden="true">
       <div className="auth-insignia__relief">
-        <img className="auth-insignia__edge" src={src} alt="" width={768} height={811} />
-        <img src={src} alt="" width={768} height={811} decoding="async" />
+        <PoliceInsignia className="auth-insignia__edge" alt="" width={768} height={811} />
+        <PoliceInsignia alt="" width={768} height={811} decoding="async" />
         <span className="auth-insignia__reflection" />
       </div>
     </div>
