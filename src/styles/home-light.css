@@ -1,0 +1,119 @@
+/* Modo claro da homepage: as seções "de palco" (topo, concursos, planos, CTA e rodapé)
+   deixam de ser escuras. Só vale com :root:not(.dark); o modo escuro não muda.
+   Hierarquia: texto azul-marinho (contraste >= 7:1), apoio cinza-azulado (>= 4.5:1),
+   ação em azul, destaques em âmbar profundo; ouro só em fundo de botão. */
+:root:not(.dark) .home.home {
+  --ink: oklch(0.975 0.008 255);
+  --ink-deep: oklch(0.945 0.012 255);
+  --ink-raised: oklch(1 0 0);
+  --on-ink: oklch(0.24 0.035 262);
+  --on-ink-muted: oklch(0.43 0.03 260);
+  --on-ink-line: oklch(0.88 0.016 255);
+  --stage-ink: oklch(0.24 0.035 262);
+  --stage-muted: oklch(0.43 0.03 260);
+  --stage-line: oklch(0.88 0.018 255);
+  --stage-accent: oklch(0.45 0.16 262);
+  --stage-amber: oklch(0.5 0.11 62);
+  --stage-card: oklch(1 0 0);
+  --stage-shadow: 0 1px 2px oklch(0.25 0.04 262 / 0.06), 0 14px 32px -18px oklch(0.25 0.04 262 / 0.22);
+}
+
+/* Topo */
+:root:not(.dark) .home.home .home-hero { background: linear-gradient(180deg, oklch(0.985 0.006 255), oklch(0.955 0.016 255)); color: var(--stage-ink); }
+:root:not(.dark) .home.home .home-hero h1 { color: var(--stage-ink); }
+:root:not(.dark) .home.home .home-hero h1 em { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero__copy > p { color: var(--stage-muted); }
+:root:not(.dark) .home.home .home-hero__image { opacity: 1; filter: saturate(.95); border-radius: 0 0 0 28px; mask-image: linear-gradient(90deg, transparent, #000 22%); -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%); }
+:root:not(.dark) .home.home .home-hero::after { background: linear-gradient(90deg, oklch(0.975 0.008 255) 28%, oklch(0.975 0.008 255 / 0.55) 46%, transparent 66%); }
+:root:not(.dark) .home.home .home-hero :is(.home-eyebrow, .home-text-link, .home-trust a) { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero .home-eyebrow > span { background: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero__explore { color: var(--stage-ink); background: oklch(1 0 0 / 0.85); border-color: var(--stage-line); }
+:root:not(.dark) .home.home .home-hero__note,
+:root:not(.dark) .home.home .home-hero :is(.home-trust, .home-trust span, .home-testing) { color: var(--stage-muted); }
+:root:not(.dark) .home.home .home-hero :is(.home-daily, .home-count, .home-hero__card, .home-hero__stat),
+:root:not(.dark) .home.home .home-hero [class*="daily"],
+:root:not(.dark) .home.home .home-hero [class*="count"] { background: var(--stage-card); color: var(--stage-ink); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
+:root:not(.dark) .home.home .home-hero [class*="daily"] :is(p, small, span, strong, a),
+:root:not(.dark) .home.home .home-hero [class*="count"] :is(p, small, span, strong, a) { color: inherit; }
+
+/* Concursos, Planos e Rodapé */
+:root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) {
+  --home-text: var(--stage-ink);
+  --home-muted: var(--stage-muted);
+  --home-accent: var(--stage-accent);
+  --home-line: var(--stage-line);
+  --stage-surface: var(--stage-card);
+  --stage-gold: var(--stage-accent);
+}
+:root:not(.dark) .home.home #concursos.home-operations,
+:root:not(.dark) .home.home .home-operations { background: linear-gradient(180deg, oklch(0.955 0.018 255), oklch(0.975 0.01 255)); }
+:root:not(.dark) .home.home .home-plans--insignia { background: linear-gradient(180deg, oklch(0.985 0.006 80), oklch(0.97 0.012 255)); border-top-color: var(--stage-line); }
+:root:not(.dark) .home-plans--insignia::before { opacity: .05; }
+:root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia) .home-heading h2 em { color: var(--stage-amber); }
+:root:not(.dark) .home.home .home-operations .home-opportunity,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan],
+:root:not(.dark) .home.home .home-plans--insignia .home-compare { background: var(--stage-card); box-shadow: var(--stage-shadow); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan].home-plan--featured { background: linear-gradient(160deg, oklch(0.97 0.03 80), var(--stage-card) 55%); border-color: var(--stage-amber); box-shadow: 0 0 0 1px oklch(0.5 0.11 62 / 0.25), var(--stage-shadow); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] :is(h3, .home-plan__annual) { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] .home-tag,
+:root:not(.dark) .home.home .home-operations .home-opportunity .home-status { background: oklch(0.95 0.03 262); color: var(--stage-accent); border-color: oklch(0.88 0.04 262); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button { color: var(--stage-accent); background: transparent; border-color: oklch(0.8 0.06 262); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button,
+:root:not(.dark) .home.home .home-operations .home-opportunity .home-button { background: var(--stage-accent); color: oklch(0.99 0 0); border-color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:disabled { color: oklch(0.5 0.02 260); background: oklch(0.94 0.008 255); border-color: var(--stage-line); }
+:root:not(.dark) .home.home .home-plans--insignia .home-compare .is-trial { background: oklch(0.96 0.03 262); }
+:root:not(.dark) .home.home .home-operations__art { border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
+:root:not(.dark) .home-plans__insignia { filter: drop-shadow(0 8px 12px oklch(0.25 0.04 262 / 0.25)); }
+
+/* Rodapé claro */
+:root:not(.dark) .home.home .home-footer.home-footer--command { background: linear-gradient(180deg, oklch(0.94 0.014 255), oklch(0.915 0.02 255)); border-top: 1px solid var(--stage-line); }
+:root:not(.dark) .home.home .home-footer--command .home-platform-qr { background: var(--stage-card); box-shadow: var(--stage-shadow); }
+:root:not(.dark) .home.home .home-footer--command .home-platform-qr :is(small, strong),
+:root:not(.dark) .home.home .home-footer--command .home-footer__links h3 { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-footer--command .home-footer__links a:hover { color: var(--stage-accent); text-decoration: underline; }
+:root:not(.dark) .home.home .home-footer .norte-brand__type,
+:root:not(.dark) .home.home .home-footer .norte-brand__type span { color: var(--stage-ink); }
+
+/* Faixa final (CTA) */
+:root:not(.dark) .home.home .home-final { background: linear-gradient(115deg, oklch(0.95 0.025 262), oklch(0.985 0.008 255)); color: var(--stage-ink); }
+:root:not(.dark) .home.home .home-final :is(h2, p, .home-final__challenge) { color: var(--stage-ink); }
+:root:not(.dark) .home.home .home-final p { color: var(--stage-muted); }
+:root:not(.dark) .home.home .home-final h2 em { color: var(--stage-accent); }
+
+/* Faixa "Uma plataforma": painel claro, sem a foto escura de fundo */
+:root:not(.dark) .home.home .home-preparation__band {
+  --preparation-text: var(--stage-ink);
+  --preparation-muted: var(--stage-muted);
+  background: linear-gradient(115deg, oklch(0.955 0.02 262), oklch(0.985 0.008 255));
+  border-color: var(--stage-line);
+  box-shadow: none;
+}
+:root:not(.dark) .home.home .home-preparation__art { opacity: .1; mix-blend-mode: luminosity; }
+:root:not(.dark) .home.home .home-preparation__band::before { background: linear-gradient(90deg, oklch(0.975 0.008 255 / 0.92), oklch(0.975 0.008 255 / 0.7)); }
+:root:not(.dark) .home.home .home-preparation__band::after { background-image: linear-gradient(oklch(0.45 0.16 262 / 0.05) 1px, transparent 1px), linear-gradient(90deg, oklch(0.45 0.16 262 / 0.05) 1px, transparent 1px); }
+:root:not(.dark) .home.home .home-preparation__frame { background: none; }
+:root:not(.dark) .home.home .home-preparation__sweep { display: none; }
+:root:not(.dark) .home.home .home-preparation__eyebrow { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-preparation__intro h2 em { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-preparation__info { background: var(--stage-card); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
+:root:not(.dark) .home.home .home-preparation__tabs { border-bottom-color: var(--stage-line); background: oklch(0.97 0.008 255); }
+:root:not(.dark) .home.home .home-preparation__tab:hover { color: var(--stage-accent); background: oklch(0.94 0.03 262); }
+:root:not(.dark) .home.home .home-preparation__tab[data-state="active"] { background: var(--stage-accent); color: oklch(0.99 0 0); }
+:root:not(.dark) .home.home .home-preparation__items > :is(article, li) { border-bottom-color: var(--stage-line); }
+:root:not(.dark) .home.home .home-preparation__items svg,
+:root:not(.dark) .home.home .home-preparation__band .home-preparation__items h3 { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-preparation__panel { scrollbar-color: var(--stage-accent) transparent; }
+
+/* Topo: selo de acesso, link de planos e itens de confiança com contraste adequado */
+:root:not(.dark) .home.home :is(.home-testing, .home-testing strong) { color: var(--stage-amber); }
+:root:not(.dark) .home.home .home-trust :is(span, svg) { color: var(--stage-muted); }
+:root:not(.dark) .home.home .home-trust svg { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero a:not(.home-button):not(.home-hero__explore) { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-testing a { background: oklch(1 0 0 / 0.92); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--stage-line); font-weight: 600; }
+
+/* Celular/tablet: a foto vira textura suave atrás do texto, que mantém contraste total */
+@media (max-width: 900px) {
+  :root:not(.dark) .home.home .home-hero__image { opacity: .16; mask-image: none; -webkit-mask-image: none; filter: grayscale(.4); border-radius: 0; }
+  :root:not(.dark) .home.home .home-hero::after { background: linear-gradient(180deg, oklch(0.985 0.006 255 / 0.75), oklch(0.96 0.014 255 / 0.9)); }
+  :root:not(.dark) .home.home .home-hero__explore { background: oklch(1 0 0); }
+}

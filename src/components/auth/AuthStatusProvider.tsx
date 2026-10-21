@@ -31,6 +31,9 @@ async function loadProfile(session: Session): Promise<UserProfile> {
       .eq("user_id", session.user.id)
       .abortSignal(AbortSignal.timeout(10000)),
   ]);
+  // Sem os papéis não dá para saber se é administrador: falhar (com nova tentativa) em vez de
+  // rebaixar o gerenciador a aluno comum, o que exibia avisos de plano e "acesso restrito".
+  if (rolesRes.error) throw rolesRes.error;
   const profile = profileRes.data;
   const roles = (rolesRes.data ?? []).map((row) => row.role);
   const topRole = roles.includes("admin")

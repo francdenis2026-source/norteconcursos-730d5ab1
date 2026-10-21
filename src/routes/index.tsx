@@ -36,6 +36,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
 import "@/styles/home-operations.css";
+import "@/styles/home-light.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -63,6 +64,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: "/media/hero/hero-norte-impacto.webp", fetchPriority: "high" },
     ],
   }),
 });

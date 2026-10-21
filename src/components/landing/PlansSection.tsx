@@ -18,19 +18,19 @@ const PLAN_IMAGES: Record<
   string,
   { src: string; position: string; width?: number; height?: number }
 > = {
-  free: { src: "/media/hero/painel-aluno-estudo.webp", position: "55% 42%", width: 960, height: 640 },
-  essential: { src: "/media/hero/exam-hall.webp", position: "76% 44%", width: 1672, height: 941 },
+  free: { src: "/media/hero/pro/plano-1.webp", position: "50% 42%", width: 1200, height: 500 },
+  essential: { src: "/media/hero/pro/plano-2.webp", position: "70% 40%", width: 1200, height: 500 },
   plus: {
-    src: "/media/hero/plano-plus-carreira.webp",
-    position: "68% 42%",
-    width: 1672,
-    height: 941,
+    src: "/media/hero/pro/plano-3.webp",
+    position: "72% 40%",
+    width: 1200,
+    height: 500,
   },
   premium: {
-    src: "/media/hero/plano-premium-equipe.webp",
+    src: "/media/hero/pro/plano-4.webp",
     position: "50% 42%",
-    width: 1672,
-    height: 941,
+    width: 1200,
+    height: 500,
   },
 };
 
