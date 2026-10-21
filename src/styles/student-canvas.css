@@ -1,7 +1,8 @@
 .app-topbar .app-top-btn.platform-back { width: 44px; min-width: 44px; height: 44px; min-height: 44px; }
 
 /* One fixed canvas: the content scrolls over a single, gently veiled composition. */
-.app-shell[data-area="student"] #dashboard-content[data-header-style="original"] { padding-top: 12px; }
+/* Every client menu shares the same compact top gutter; back navigation lives in the toolbar. */
+.app-shell[data-area="student"] #dashboard-content { padding-top: 12px; }
 .app-shell[data-area="student"]:is([data-brand-bg="blue"], [data-brand-bg="gold"]) { isolation: isolate; }
 .app-study-backdrop {
   position: fixed;

@@ -103,7 +103,7 @@ function SubscriptionsPage() {
     }
   }, [user?.id]);
   return (
-    <div className="mx-auto max-w-6xl space-y-6 p-4 md:p-6">
+    <div className="mx-auto max-w-6xl space-y-6 px-4 pb-4 md:px-6 md:pb-6">
       <PageHero
         image="dashboard"
         size="sm"
