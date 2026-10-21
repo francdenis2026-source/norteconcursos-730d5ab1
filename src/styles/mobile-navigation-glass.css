@@ -1,0 +1,82 @@
+/* An opaque shelf shields scrolling content. Reflections stay on the glass surface. */
+.mobile-nav-shelf { display: none; }
+@media (max-width: 1100px) {
+  .home.home { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+  html:has(.home) { scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+  .home .mobile-nav-shelf {
+    position: fixed;
+    z-index: 45;
+    inset: auto 0 0;
+    display: block;
+    padding: 10px max(12px, env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+    background: var(--background);
+    border-top: 1px solid color-mix(in srgb, var(--foreground) 9%, transparent);
+    box-shadow: 0 -8px 24px rgb(0 0 0 / 6%);
+  }
+  .home.home .mobile-nav-shelf .home-app-nav {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: min(100%, 640px);
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 18px;
+  }
+  :root .home .home-app-nav.mobile-nav-glass,
+  :root .app-shell .app-bottom-nav.mobile-nav-glass {
+    isolation: isolate;
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 65%), transparent 56%),
+      linear-gradient(0deg, color-mix(in srgb, var(--brass) 5%, transparent), transparent),
+      var(--card);
+    border: 1px solid color-mix(in srgb, var(--foreground) 16%, transparent);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 80%), inset 0 -1px 0 rgb(0 0 0 / 3%), 0 6px 18px rgb(0 0 0 / 8%);
+    -webkit-backdrop-filter: blur(24px) saturate(120%);
+    backdrop-filter: blur(24px) saturate(120%);
+  }
+  :root.dark .home .home-app-nav.mobile-nav-glass,
+  :root.dark .app-shell .app-bottom-nav.mobile-nav-glass {
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 9%), transparent 56%),
+      linear-gradient(0deg, color-mix(in srgb, var(--brass) 5%, transparent), transparent),
+      var(--card);
+    border-color: color-mix(in srgb, var(--foreground) 17%, transparent);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 13%), inset 0 -1px 0 rgb(0 0 0 / 16%), 0 6px 18px rgb(0 0 0 / 24%);
+  }
+  .home .home-app-nav.mobile-nav-glass a {
+    min-height: 54px;
+    gap: 4px;
+    padding: 4px 1px;
+    border-radius: 12px;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  .home .home-app-nav.mobile-nav-glass svg { width: 21px; height: 21px; flex: none; }
+  .home .home-app-nav.mobile-nav-glass a[aria-current] {
+    background: color-mix(in srgb, var(--app-accent) 13%, var(--card));
+    border-color: color-mix(in srgb, var(--app-accent) 28%, transparent);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 12%);
+  }
+}
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  /* Keep the dashboard dock in its own layout row, outside the content scrollport. */
+  :root .app-shell.navigation-v2 .app-bottom-nav.mobile-nav-glass {
+    flex: none;
+    border-inline: 0;
+    border-bottom: 0;
+    padding-top: 6px;
+    padding-bottom: max(6px, env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 359px) {
+  .home .home-app-nav.mobile-nav-glass a { font-size: 9px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root .home .home-app-nav.mobile-nav-glass,
+  :root .app-shell .app-bottom-nav.mobile-nav-glass { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--card); }
+}
+@media (forced-colors: active) {
+  .home .mobile-nav-shelf { background: Canvas; border-color: CanvasText; }
+  :root .home .home-app-nav.mobile-nav-glass,
+  :root .app-shell .app-bottom-nav.mobile-nav-glass { background: Canvas; color: CanvasText; border-color: CanvasText; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

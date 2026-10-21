@@ -43,7 +43,8 @@ export function HomeAppNavigation() {
     };
   }, []);
   return (
-    <nav className="home-app-nav" aria-label="Atalhos da homepage">
+    <div className="mobile-nav-shelf">
+    <nav className="home-app-nav mobile-nav-glass" aria-label="Atalhos da homepage">
       {SECTIONS.map(({ id, label, icon: Icon }) => (
         <a href={`#${id}`} key={id} aria-current={active === id ? "location" : undefined}>
           <Icon aria-hidden="true" />
@@ -55,5 +56,6 @@ export function HomeAppNavigation() {
         <span>Entrar</span>
       </Link>
     </nav>
+    </div>
   );
 }

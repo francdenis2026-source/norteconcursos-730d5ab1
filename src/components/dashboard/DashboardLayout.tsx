@@ -742,7 +742,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </footer>
           </main>
 
-          <nav className="app-bottom-nav no-print" aria-label="Navegação rápida">
+          <nav className="app-bottom-nav mobile-nav-glass no-print" aria-label="Navegação rápida">
             {(isAdmin ? ADMIN_MOBILE_NAV : MOBILE_NAV).slice(0, 4).map((item) => (
               <Link
                 key={item.href}
