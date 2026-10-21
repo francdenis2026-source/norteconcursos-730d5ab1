@@ -5,10 +5,25 @@ o token. Expiração, revogação pelo servidor e saída solicitada pelo usuári
 
 O antigo controle `active_user_sessions` identificava abas com `sessionStorage`: abrir outra
 aba substituía o registro e provocava uma saída que também atingia o armazenamento compartilhado.
-A aplicação deixou de usar essa tabela para encerrar sessões ou impedir respostas. Isso também
-permite sessões simultâneas: uma política de dispositivo único, se necessária no futuro, deve ser
-implementada no serviço de autenticação, com identificação de sessões e revogação no servidor.
+A aplicação deixou de usar essa tabela para encerrar sessões ou impedir respostas.
 A tabela antiga fica preservada para evitar alterações desnecessárias nos dados existentes.
+
+## Uma aba por sessão
+
+O `SessionTabGuard` permite **uma única aba ativa por sessão no mesmo navegador e origem**.
+A primeira aba adquire um Web Lock pelo `session_id`; as demais mostram uma tela de bloqueio,
+sem montar o painel, os cronômetros ou o monitor de inatividade. A aba bloqueada não chama
+`signOut`, não remove tokens e não renova o prazo de cinco minutos da aba original.
+
+O bloqueio é atômico inclusive quando duas abas são abertas juntas. Não depende de um ID de
+`sessionStorage` (que pode ser copiado ao duplicar a aba), de heartbeat, de visibilidade da aba
+ou de consultas ao Supabase. Fechar a aba libera o lock pelo próprio navegador. A aba bloqueada
+pode então usar **Tentar novamente**. A verificação aguarda até 150 ms para tolerar a limpeza
+de uma instância anterior; depois de detectar outra aba ativa, cancela a espera e não permanece
+na fila para tomar a sessão durante uma recarga posterior da aba original. Renovação de token preserva a mesma chave; um novo login usa outra.
+Se o navegador não conseguir arbitrar o lock, a tela informa o problema e não libera acesso
+sem confirmação. A regra não impede sessões independentes em outros aparelhos ou perfis de
+navegador; essa política exigiria validação no servidor.
 
 A contagem de estudo é pausada após dois minutos sem atividade. Separadamente, o
 `SessionIdleGuard`, montado no provedor de autenticação, encerra a sessão após **cinco minutos
@@ -17,7 +32,7 @@ inclusive fora do painel. Reprodução de mídia continua válida para contabili
 mas não renova o prazo de autenticação.
 
 O prazo é persistido por usuário e pelo `session_id` do Supabase: uma interação em outra aba da
-mesma sessão renova o prazo, recarga e renovação do token não o reiniciam, e um novo login tem
+mesma sessão só renova o prazo se ela for a aba autorizada; recarga e renovação do token não o reiniciam. Um novo login tem
 um novo prazo. Ao voltar de uma aba suspensa, a expiração é verificada antes de aceitar uma
 nova interação. Eventos sintéticos, foco da janela e respostas da rede não contam como interação.
 
@@ -36,11 +51,13 @@ revoga sessões válidas por falha de rede ou por uma conta comum abrir o login 
 Com o servidor local iniciado e Playwright/Chromium disponíveis:
 
 ```sh
+PLAYWRIGHT_MODULE=/caminho/playwright-core/index.mjs node scripts/qa/session-tabs.mjs
 PLAYWRIGHT_MODULE=/caminho/playwright-core/index.mjs node scripts/qa/auth-session-stability.mjs
 ```
 
 O teste intercepta o Supabase e usa tokens fictícios: verifica administrador e aluno em duas abas,
-atividade entre abas, aviso e saída após cinco minutos, retorno à aba, recarga e erros na consulta administrativa.
+bloqueio da segunda aba, recarga da primeira, abertura simultânea, liberação ao fechar a primeira,
+aviso e saída após cinco minutos, retorno à aba e erros na consulta administrativa.
 O cenário adicional de rede travada verifica a remoção local de tokens sem esperar o Supabase.
 Não consulta nem escreve contas reais. A configuração de expiração/revogação no Supabase de
 produção não é alterada por essas correções.

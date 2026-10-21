@@ -46,26 +46,29 @@ try {
     assert.ok(await first.locator('.app-shell').count(), 'authenticated layout mounted');
     const second = await context.newPage();
     await second.goto(`${base}/dashboard/profile`);
-    await second.waitForTimeout(900);
-    for (const page of [first, second]) await page.clock.install();
+    await second.getByRole('heading', { name: 'Sua sessão já está aberta em outra aba' }).waitFor();
+    assert.equal(await second.locator('.app-shell').count(), 0, 'duplicate tab cannot mount protected screens');
+    await first.clock.install();
     await first.clock.fastForward(4 * 60_000);
     await first.getByRole('dialog').waitFor();
+    const activityBefore = await first.evaluate(() => Object.entries(localStorage).filter(([key]) => key.startsWith('norte_auth_activity:')));
+    await second.getByRole('button', { name: 'Tentar novamente' }).click();
+    const activityAfter = await first.evaluate(() => Object.entries(localStorage).filter(([key]) => key.startsWith('norte_auth_activity:')));
+    assert.deepEqual(activityAfter, activityBefore, 'blocked tab cannot renew the active session');
     assert.ok(await first.evaluate(key => !!localStorage.getItem(key), storageKey), 'warning retains token');
     await first.getByRole('button', { name: 'Continuar estudando' }).click();
-    await second.clock.fastForward(5 * 60_000);
-    assert.ok(await second.evaluate(key => !!localStorage.getItem(key), storageKey), 'real input in other tab renews the deadline');
     await first.clock.fastForward(301_000);
     await first.clock.runFor(2000);
     await first.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
-    await second.clock.runFor(2000);
-    await second.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
+    await second.waitForFunction(key => !localStorage.getItem(key), storageKey);
+    assert.equal(await second.locator('.app-shell').count(), 0, 'expired duplicate cannot access the panel');
     assert.equal(await first.evaluate(key => localStorage.getItem(key), storageKey), null, 'expired session tokens removed');
     assert.ok(calls.logout >= 1, 'auth sign-out requested');
     assert.equal(calls.ownership, 0, 'legacy tab ownership cannot interfere with auth');
     await first.reload();
     assert.ok(first.url().includes('/auth'), 'reload does not restore expired login');
     await context.close();
-    console.log(`PASS ${role}: two tabs, warning, real interaction, five-minute expiry and reload`);
+    console.log(`PASS ${role}: duplicate tab blocked, warning, real interaction, five-minute expiry and reload`);
   }
   {
     const context = await browser.newContext();
@@ -103,6 +106,7 @@ try {
     await page.getByRole('dialog').waitFor({ timeout: 20000 });
     await page.goto(base);
     await page.locator('.home').waitFor({ timeout: 20000 });
+    await page.waitForLoadState('networkidle');
     const now = await page.evaluate(() => Date.now());
     await page.clock.setSystemTime(now + 61_000);
     await page.evaluate(() => {

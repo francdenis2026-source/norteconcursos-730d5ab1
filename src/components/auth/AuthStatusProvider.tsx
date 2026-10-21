@@ -7,7 +7,7 @@ import { effectiveTier, planEndsAt } from "@/lib/launch.config";
 import { platformDate } from "@/lib/platformClock";
 import { createSessionProfileLoader } from "@/lib/sessionProfileLoader";
 import { sessionActivityKey } from "@/lib/sessionIdle";
-import { SessionIdleGuard } from "./SessionIdleGuard";
+import { SessionTabGuard } from "./SessionTabGuard";
 
 type AuthStatus = {
   user: UserProfile | null;
@@ -201,8 +201,7 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
     [user, isLoading, error, retry],
   );
   return <AuthContext.Provider value={value}>
-    {sessionKey && <SessionIdleGuard key={sessionKey} sessionKey={sessionKey} />}
-    {children}
+    <SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard>
   </AuthContext.Provider>;
 }
 
