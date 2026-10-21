@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Hint } from "@/components/ui/hint";
 import { acreDateKey } from "@/lib/acreTime";
 import { fmtHuman, getStudyToday, subscribeStudyClock } from "@/lib/studyClock";
 
@@ -126,22 +127,20 @@ export function StudyTimeCard({ userId }: { userId: string }) {
           aria-label="Tempo por dia nos últimos 14 dias"
         >
           {stats.days.map((d) => (
-            <div
-              key={d.k}
-              className="flex h-full min-w-0 flex-1 flex-col items-center gap-1"
-              title={`${d.label}: ${fmtHuman(d.s)}`}
-            >
-              <div className="flex w-full flex-1 items-end">
-                <div
-                  className="w-full rounded-t bg-primary/80"
-                  style={{
-                    height: `${Math.max(d.s ? 6 : 2, (d.s / stats.max) * 100)}%`,
-                    opacity: d.s ? 1 : 0.25,
-                  }}
-                />
+            <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}`}>
+              <div className="flex h-full min-w-0 flex-1 flex-col items-center gap-1">
+                <div className="flex w-full flex-1 items-end">
+                  <div
+                    className="w-full rounded-t bg-primary/80"
+                    style={{
+                      height: `${Math.max(d.s ? 6 : 2, (d.s / stats.max) * 100)}%`,
+                      opacity: d.s ? 1 : 0.25,
+                    }}
+                  />
+                </div>
+                <span className="text-[10px] text-muted-foreground">{d.label.slice(0, 2)}</span>
               </div>
-              <span className="text-[10px] text-muted-foreground">{d.label.slice(0, 2)}</span>
-            </div>
+            </Hint>
           ))}
         </div>
       </CardContent>

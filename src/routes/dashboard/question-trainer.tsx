@@ -106,6 +106,7 @@ import {
   splitExplanation,
 } from "@/lib/questionFormat";
 import { Badge } from "@/components/ui/badge";
+import { Hint } from "@/components/ui/hint";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -1825,16 +1826,17 @@ function QuestionTrainer() {
                   {DIFFICULTY_LABEL[question.difficulty]}
                 </Badge>
                 {currencyAllowed && question.currencyTags?.length ? (
-                  <Badge
-                    variant="outline"
-                    className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
-                    title={question.currencyNote ?? question.currencyTags.join(" · ")}
-                  >
-                    <Sparkles className="h-3 w-3" aria-hidden="true" />
-                    Atual:{" "}
-                    {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
-                      "Prova recente"}
-                  </Badge>
+                  <Hint content={question.currencyNote ?? question.currencyTags.join(" · ")}>
+                    <Badge
+                      variant="outline"
+                      className="gap-1 border-amber-500/60 font-bold text-amber-700 dark:text-amber-300"
+                    >
+                      <Sparkles className="h-3 w-3" aria-hidden="true" />
+                      Atual:{" "}
+                      {question.currencyTags.filter((tag) => tag !== "Prova recente")[0] ??
+                        "Prova recente"}
+                    </Badge>
+                  </Hint>
                 ) : null}
                 <span className="ml-auto">
                   <ReportQuestionButton question={question} />
@@ -1956,23 +1958,24 @@ function QuestionTrainer() {
                           )}
                         </button>
                         {canStrike && !answered && (
-                          <Button
-                            type="button"
-                            variant={isStruck ? "secondary" : "ghost"}
-                            size="sm"
-                            className="min-h-11 shrink-0 gap-1.5 px-2"
-                            disabled={answered || saving}
-                            aria-pressed={isStruck}
-                            aria-label={
-                              isStruck
-                                ? `Desfazer risco da alternativa ${option.letter}`
-                                : `Riscar alternativa ${option.letter}`
-                            }
-                            title={isStruck ? "Desfazer risco" : "Riscar alternativa"}
-                            onClick={() => toggleStrike(option.letter)}
-                          >
-                            <Strikethrough aria-hidden="true" className="h-4 w-4" />
-                          </Button>
+                          <Hint content={isStruck ? "Desfazer risco" : "Riscar alternativa"}>
+                            <Button
+                              type="button"
+                              variant={isStruck ? "secondary" : "ghost"}
+                              size="sm"
+                              className="min-h-11 shrink-0 gap-1.5 px-2"
+                              disabled={answered || saving}
+                              aria-pressed={isStruck}
+                              aria-label={
+                                isStruck
+                                  ? `Desfazer risco da alternativa ${option.letter}`
+                                  : `Riscar alternativa ${option.letter}`
+                              }
+                              onClick={() => toggleStrike(option.letter)}
+                            >
+                              <Strikethrough aria-hidden="true" className="h-4 w-4" />
+                            </Button>
+                          </Hint>
                         )}
                       </div>
                     );

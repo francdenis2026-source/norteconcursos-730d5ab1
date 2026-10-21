@@ -16,7 +16,7 @@ export function LegalRefText({ text }: { text: string }) {
         p.href ? (
           <Link key={i} to="/dashboard/legal-course/$slug" params={{ slug: p.href.slug }}
             search={{ art: p.href.art, ...(p.href.par ? { par: p.href.par } : {}) } as never}
-            title="Abrir este dispositivo" className="font-semibold text-amber-700 underline decoration-dotted underline-offset-2 hover:decoration-solid dark:text-amber-300">
+            className="font-semibold text-amber-700 underline decoration-dotted underline-offset-2 hover:decoration-solid dark:text-amber-300">
             {p.text}
           </Link>
         ) : (

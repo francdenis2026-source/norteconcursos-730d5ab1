@@ -1,5 +1,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Check, CheckCircle2, Timer, X, XCircle } from "lucide-react";
+import { Hint } from "@/components/ui/hint";
 import "@/styles/answer-feedback.css";
 
 type AnswerFeedbackProps = {
@@ -71,19 +72,20 @@ export function AnswerFeedback({
           </p>
         </div>
         {elapsedSeconds !== undefined && (
-          <div
-            className="answer-feedback__time ml-auto inline-flex shrink-0 items-center gap-1.5 self-start rounded-full border px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
-            title="Tempo ativo gasto nesta questão, sem contar abas ocultas nem pausas"
-            data-answer-time={Math.round(elapsedSeconds)}
-          >
-            <Timer className="h-3 w-3" aria-hidden="true" />
-            <span>
-              Respondida em{" "}
-              <strong className="font-semibold text-foreground">
-                {formatAnswerTime(elapsedSeconds)}
-              </strong>
-            </span>
-          </div>
+          <Hint content="Tempo ativo gasto nesta questão, sem contar abas ocultas nem pausas">
+            <div
+              className="answer-feedback__time ml-auto inline-flex shrink-0 items-center gap-1.5 self-start rounded-full border px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
+              data-answer-time={Math.round(elapsedSeconds)}
+            >
+              <Timer className="h-3 w-3" aria-hidden="true" />
+              <span>
+                Respondida em{" "}
+                <strong className="font-semibold text-foreground">
+                  {formatAnswerTime(elapsedSeconds)}
+                </strong>
+              </span>
+            </div>
+          </Hint>
         )}
       </div>
       <div className="answer-feedback__comparison">
