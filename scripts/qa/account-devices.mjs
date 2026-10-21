@@ -12,13 +12,13 @@ const session = id => {
     user:{id:uid,email:'device@example.test',role:'authenticated',aud:'authenticated',user_metadata:{full_name:'CONTA TESTE'},app_metadata:{provider:'email'},created_at:new Date().toISOString()} };
 };
 try {
-  for (const mode of ['legacy','rpc']) {
+  for (const mode of (process.env.RPC_ONLY ? ['rpc'] : ['legacy','rpc'])) {
     let row = null, unavailable = false;
     const calls = { writes:0, logout:0 };
     const contexts=[];
     async function device(id,width,seed) {
       const value=session(id);
-      const context=await browser.newContext({viewport:{width,height:900},...(width<1000?{isMobile:true,hasTouch:true}:{})});
+      const context=await browser.newContext({ignoreHTTPSErrors:process.env.QA_PROXY_TLS==='1',viewport:{width,height:900},...(width<1000?{isMobile:true,hasTouch:true}:{})});
       contexts.push(context);
       await context.addInitScript(({key,value,seed})=>{
         localStorage.setItem('theme','light');
@@ -108,6 +108,20 @@ try {
     await mobile.getByRole('button',{name:'Tentar novamente',exact:true}).click();
     await mobile.locator('.app-shell').waitFor();
     assert.equal(calls.writes,writes,'recovery verifies instead of reclaiming');
+    if(mode==='rpc' && base.startsWith('http://127.0.0.1')) {
+      await mobile.evaluate(key=>{
+        void navigator.locks.request(`lock:${key}`,()=>new Promise(resolve=>{
+          window.__qaAuthLockReady=true;
+          window.__qaReleaseAuthLock=resolve;
+        }));
+      },storageKey);
+      await mobile.waitForFunction(()=>window.__qaAuthLockReady===true);
+      row='a-new-device-session';
+      await mobile.evaluate(()=>window.dispatchEvent(new Event('online')));
+      await mobile.waitForURL(/auth\?reason=another-device/,{timeout:12000});
+      assert.equal(await mobile.evaluate(key=>localStorage.getItem(key),storageKey),null,'held SDK auth lock cannot stop ownership check or local logout');
+      console.log('PASS held Supabase Web Lock: independent RPC detects lost ownership and clears tokens despite stalled SDK signOut');
+    }
     console.log(`PASS ${mode}: actual login replaces device, polling logs out desktop, reload/tablet cannot reclaim, network recovery, mobile close contrast and instant responsive search`);
     for(const context of contexts)await context.close();
   }

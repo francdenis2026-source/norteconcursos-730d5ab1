@@ -4,9 +4,9 @@ import { createEmailAuthCallbackFlow, readEmailAuthCallback } from "@/lib/authCa
 // These fallback values are public client credentials. They keep Lovable previews
 // operational when the local `.env.local` file is not available in the cloud build.
 // Privileged credentials such as service_role must never be added here.
-const supabaseUrl =
+export const supabaseUrl =
   import.meta.env["VITE_SUPABASE_URL"] ?? "https://gkwphadbveiyjcwiiizw.supabase.co";
-const supabaseAnonKey =
+export const supabaseAnonKey =
   import.meta.env["VITE_SUPABASE_PUBLISHABLE_KEY"] ??
   "sb_publishable_hF4jXHTs4tapaOMX2KdqvA_N_A5Tyqf";
 

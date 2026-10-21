@@ -8,20 +8,26 @@ import { endFocus } from '@/lib/focusSession';
 import { stopStudyClock } from '@/lib/studyClock';
 import { Button } from '@/components/ui/button';
 
-export type AccountAccess = { userId: string; sessionKey: string; claim: boolean };
+export type AccountAccess = { userId: string; sessionKey: string; claim: boolean; accessToken: string };
 
 /** Server ownership is independent of the same-browser tab lock. */
 export function AccountSessionGuard({ access, children }: { access: AccountAccess | null; children: ReactNode }) {
   const { pathname } = useLocation();
   const [snapshot, setSnapshot] = useState<{ key: string; state: AccountSessionState } | null>(null);
   const monitor = useRef<ReturnType<typeof createAccountSessionMonitor> | null>(null);
+  const currentAccess = useRef(access);
+  currentAccess.current = access;
   const state = access ? snapshot?.key === access.sessionKey ? snapshot.state : 'checking' : 'verified';
   useEffect(() => {
     if (!access) return;
     const { userId, sessionKey, claim } = access;
     const session = createAccountSessionMonitor({
       claim,
-      verify: (takeover, signal) => verifyAccountSession(userId, sessionKey, takeover, signal),
+      verify: (takeover, signal) => {
+        const current = currentAccess.current;
+        if (!current || current.sessionKey !== sessionKey) throw new Error('Authentication session changed');
+        return verifyAccountSession(userId, sessionKey, takeover, signal, current.accessToken);
+      },
       publish: state => setSnapshot({ key: sessionKey, state }),
       revoke: () => {
         void endIdleSession({
@@ -55,6 +61,7 @@ export function AccountSessionGuard({ access, children }: { access: AccountAcces
       document.removeEventListener('visibilitychange', resume);
     };
   }, [access?.userId, access?.sessionKey, access?.claim]);
+  useEffect(() => { if (access) void monitor.current?.check(); }, [access?.accessToken]);
   if (state === 'verified' || (state === 'checking' && (pathname === '/auth' || pathname === '/admin'))) return children;
   return <main className="grid min-h-dvh place-items-center bg-background p-6 text-foreground" aria-busy={state === 'checking'}>
     <section className="w-full max-w-md rounded-2xl border bg-card p-7 text-center shadow-lg" role="status">

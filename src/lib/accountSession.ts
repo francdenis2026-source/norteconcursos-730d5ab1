@@ -6,6 +6,7 @@ export function createAccountSessionMonitor(options: {
   verify: (claim: boolean, signal: AbortSignal) => Promise<boolean>;
   publish: (state: AccountSessionState) => void;
   revoke: () => void;
+  timeoutMs?: number;
 }) {
   let disposed = false;
   let revoked = false;
@@ -18,10 +19,18 @@ export function createAccountSessionMonitor(options: {
     if (pending) return pending;
     const takeover = claim;
     claim = false;
-    controller = new AbortController();
-    const signal = controller.signal;
-    const timeout = setTimeout(() => controller?.abort(), 8000);
-    pending = Promise.resolve().then(() => options.verify(takeover, signal)).then(owns => {
+    const request = new AbortController();
+    controller = request;
+    const signal = request.signal;
+    let abort: () => void;
+    const aborted = new Promise<never>((_, reject) => {
+      abort = () => reject(signal.reason ?? new Error('Session verification aborted'));
+      signal.addEventListener('abort', abort, { once: true });
+    });
+    const timeout = setTimeout(() => request.abort(new Error('Session verification timed out')), options.timeoutMs ?? 8000);
+    // Aborting fetch alone cannot release a request stalled before fetch (e.g. an
+    // SDK auth/storage lock). Bound the entire operation and discard late results.
+    pending = Promise.race([Promise.resolve().then(() => options.verify(takeover, signal)), aborted]).then(owns => {
       if (disposed) return;
       if (owns) options.publish('verified');
       else {
@@ -32,7 +41,7 @@ export function createAccountSessionMonitor(options: {
     }).catch(() => {
       // Network/permissions errors cannot grant access or mean another device logged in.
       if (!disposed) options.publish('unavailable');
-    }).finally(() => { clearTimeout(timeout); pending = null; });
+    }).finally(() => { clearTimeout(timeout); signal.removeEventListener('abort', abort); pending = null; });
     return pending;
   };
   return { check, dispose: () => { disposed = true; controller?.abort(); } };

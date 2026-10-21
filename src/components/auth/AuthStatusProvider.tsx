@@ -113,8 +113,9 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
       setSessionKey(key);
       setAccountAccess(previous => {
         if (!session || !key) return null;
-        if (previous?.sessionKey === key) return previous;
-        return { userId: session.user.id, sessionKey: key, claim };
+        if (previous?.sessionKey === key)
+          return previous.accessToken === session.access_token ? previous : { ...previous, accessToken: session.access_token };
+        return { userId: session.user.id, sessionKey: key, claim, accessToken: session.access_token };
       });
     };
     let lastRefresh = 0;

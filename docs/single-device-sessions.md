@@ -20,6 +20,18 @@ Aplicar integralmente pelo SQL Editor do Supabase ou pelo fluxo de migrações:
 
 `supabase/migrations/20261021170000_enforce_account_session.sql`
 
+Depois, aplicar a migração complementar:
+
+`supabase/migrations/20261021213000_register_account_session_on_auth_login.sql`
+
+Ela registra automaticamente o novo login por um trigger `AFTER INSERT` em
+`auth.sessions`, sem depender de o cliente chamar a RPC. Também registra a sessão
+mais recente de cada conta já existente e revoga as antigas, inclusive das contas
+que ainda não passaram pelo guard. Preserva usuários, perfis e progresso. A
+inserção de uma sessão de Auth é o evento de login; `UPDATE`/renovação de token
+não reassume a conta. A migração é transacional e pode ser repetida. O trigger
+usa o mesmo bloqueio por conta e a mesma ordem de sessões da RPC de verificação.
+
 Depois, recarregar os clientes. A migração pode ser executada novamente e preserva
 a tabela. Ela habilita Realtime quando a publicação `supabase_realtime` existe,
 retira escrita direta dos clientes e instala `verify_account_session(boolean)`.
@@ -41,10 +53,19 @@ autenticada é bloqueada com nova tentativa, sem apagar os tokens. Uma divergên
 confirmada de sessão provoca logout local, mesmo se a chamada Auth estiver lenta.
 Não se usa `signOut(scope: 'global')`, que encerraria também o login vencedor.
 
+A RPC usa o token atual já recebido pelo observador de autenticação em uma
+requisição direta, sem esperar pelo `getSession()` ou pelo Web Lock do SDK. A
+renovação do token atualiza essa referência sem recriar ou reassumir a sessão.
+O prazo de oito segundos cobre a operação inteira, mesmo se uma dependência
+ignorar o sinal de cancelamento. Respostas atrasadas não podem reabrir acesso
+depois de uma falha ou revogação. O teste de navegador mantém o Web Lock real do
+Supabase preso e confirma a consulta e o logout local nessa condição.
+
 ## Validação
 
 - `node --import ./scripts/alias.mjs --test scripts/account-session.test.mjs scripts/session-idle.test.mjs scripts/session-tab.test.mjs`
 - `PGLITE_MODULE=/caminho/pglite/dist/index.js node scripts/qa/account-session-sql.mjs`
+- `PGLITE_MODULE=/caminho/pglite/dist/index.js node scripts/qa/account-session-login-sql.mjs`
 - `PLAYWRIGHT_MODULE=/caminho/playwright-core/index.mjs node scripts/qa/account-devices.mjs`
 
 Os testes de navegador usam contextos isolados e endpoints simulados, sem contas
