@@ -39,7 +39,7 @@ export function FounderStory({ full = false }: { full?: boolean }) {
             <figure className="founder-portrait-frame">
               <img
                 className="founder-portrait"
-                src="/media/franc-denis-recorte.png"
+                src="/media/franc-denis-recorte.webp"
                 alt="Franc Denis, com camisa azul e colete, diante da composição de distintivos da Norte Concursos"
                 width={1086}
                 height={1448}

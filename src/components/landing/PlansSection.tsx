@@ -18,19 +18,19 @@ const PLAN_IMAGES: Record<
   string,
   { src: string; position: string; width?: number; height?: number }
 > = {
-  free: { src: "/media/hero/pro/plano-1.webp", position: "50% 42%", width: 1942, height: 809 },
-  essential: { src: "/media/hero/pro/plano-2.webp", position: "70% 40%", width: 1942, height: 809 },
+  free: { src: "/media/hero/pro/plano-1.webp", position: "50% 42%", width: 1200, height: 500 },
+  essential: { src: "/media/hero/pro/plano-2.webp", position: "70% 40%", width: 1200, height: 500 },
   plus: {
     src: "/media/hero/pro/plano-3.webp",
     position: "72% 40%",
-    width: 1942,
-    height: 809,
+    width: 1200,
+    height: 500,
   },
   premium: {
     src: "/media/hero/pro/plano-4.webp",
     position: "50% 42%",
-    width: 1942,
-    height: 809,
+    width: 1200,
+    height: 500,
   },
 };
 
