@@ -105,8 +105,8 @@
   border-color: var(--stage-line);
   box-shadow: none;
 }
-:root:not(.dark) .home.home .home-preparation__art { opacity: .1; mix-blend-mode: luminosity; }
-:root:not(.dark) .home.home .home-preparation__band::before { background: linear-gradient(90deg, oklch(0.975 0.008 255 / 0.92), oklch(0.975 0.008 255 / 0.7)); }
+:root:not(.dark) .home.home .home-preparation__art { opacity: 1; mix-blend-mode: normal; }
+:root:not(.dark) .home.home .home-preparation__band::before { background: linear-gradient(90deg, color-mix(in srgb, var(--background) 94%, transparent), color-mix(in srgb, var(--background) 52%, transparent)); }
 :root:not(.dark) .home.home .home-preparation__band::after { background-image: linear-gradient(oklch(0.45 0.16 262 / 0.05) 1px, transparent 1px), linear-gradient(90deg, oklch(0.45 0.16 262 / 0.05) 1px, transparent 1px); }
 :root:not(.dark) .home.home .home-preparation__frame { background: none; }
 :root:not(.dark) .home.home .home-preparation__sweep { display: none; }
