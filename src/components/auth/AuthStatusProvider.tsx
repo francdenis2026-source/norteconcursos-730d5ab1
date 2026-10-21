@@ -6,6 +6,8 @@ import { setStorageOwner } from "@/lib/userStorage";
 import { effectiveTier, planEndsAt } from "@/lib/launch.config";
 import { platformDate } from "@/lib/platformClock";
 import { createSessionProfileLoader } from "@/lib/sessionProfileLoader";
+import { sessionActivityKey } from "@/lib/sessionIdle";
+import { SessionIdleGuard } from "./SessionIdleGuard";
 
 type AuthStatus = {
   user: UserProfile | null;
@@ -81,6 +83,7 @@ async function loadProfile(session: Session): Promise<UserProfile> {
 
 /** One verified profile for the whole application, never persisted between users. */
 export function AuthStatusProvider({ children }: { children: ReactNode }) {
+  const [sessionKey, setSessionKey] = useState<string | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -136,6 +139,7 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
       eventVersion++;
       currentSession = session;
+      setSessionKey(sessionActivityKey(session));
       // Clear previous-account access synchronously, but defer SDK reads out
       // of Supabase's auth lock. Identical pending reads share one promise.
       loader.select(session);
@@ -152,6 +156,7 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
         if (!active || eventVersion !== initialVersion) return;
         if (error) throw error;
         currentSession = data.session;
+        setSessionKey(sessionActivityKey(data.session));
         return loader.run(data.session);
       })
       .catch((error) => {
@@ -195,7 +200,10 @@ export function AuthStatusProvider({ children }: { children: ReactNode }) {
     }),
     [user, isLoading, error, retry],
   );
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={value}>
+    {sessionKey && <SessionIdleGuard key={sessionKey} sessionKey={sessionKey} />}
+    {children}
+  </AuthContext.Provider>;
 }
 
 export function useAuthStatus() {

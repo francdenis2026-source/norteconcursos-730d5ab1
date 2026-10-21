@@ -13,7 +13,15 @@ const supabaseAnonKey =
 export const emailAuthCallback = typeof window !== "undefined"
   ? readEmailAuthCallback(window.location.href)
   : { present: false, recovery: false };
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const authStorageKey = `sb-${new URL(supabaseUrl).hostname.split(".")[0]}-auth-token`;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, { auth: { storageKey: authStorageKey } });
+
+/** Fallback for idle expiry when the auth request/lock is stalled. A hard navigation follows. */
+export function clearPersistedAuthSession() {
+  for (const key of [authStorageKey, `${authStorageKey}-user`, `${authStorageKey}-code-verifier`]) {
+    try { localStorage.removeItem(key); } catch { /* unavailable storage */ }
+  }
+}
 
 // Reuse verification across the root, auth page and StrictMode mounts: links are single-use.
 const callbackFlow = createEmailAuthCallbackFlow(supabase.auth, emailAuthCallback);

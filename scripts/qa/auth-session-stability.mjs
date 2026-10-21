@@ -14,12 +14,13 @@ const session = (role) => {
   const encode = value => Buffer.from(JSON.stringify(value)).toString('base64url');
   return { access_token: `${encode({ alg: 'HS256', typ: 'JWT' })}.${encode({ sub: uid, exp, role: 'authenticated', session_id: '22222222-2222-4222-8222-222222222222' })}.test`, refresh_token: 'test-refresh', token_type: 'bearer', expires_in: 86400, expires_at: exp, user };
 };
-async function mock(context, role, roleError = false) {
+async function mock(context, role, roleError = false, heldNetwork = false) {
   const calls = { logout: 0, ownership: 0 };
   await context.route('https://gkwphadbveiyjcwiiizw.supabase.co/**', async route => {
     const path = new URL(route.request().url()).pathname;
     if (process.env.DEBUG_QA) console.log(route.request().method(), path);
     if (path.includes('/logout')) calls.logout++;
+    if (heldNetwork && (path.includes('/logout') || path.endsWith('/study_heartbeat'))) return;
     if (path.includes('/active_user_sessions')) calls.ownership++;
     let status = 200, body = [];
     if (path.endsWith('/token')) body = session(role);
@@ -46,20 +47,73 @@ try {
     const second = await context.newPage();
     await second.goto(`${base}/dashboard/profile`);
     await second.waitForTimeout(900);
-    for (const page of [first, second]) {
-      await page.clock.install();
-      await page.clock.fastForward(16 * 60_000);
-      await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
-      await page.waitForTimeout(100);
-      assert.ok(await page.evaluate(key => !!localStorage.getItem(key), storageKey), `${role} token retained after inactivity`);
-      assert.ok(page.url().includes('/dashboard'), `${role} remains in dashboard`);
-    }
-    await first.reload();
-    await first.waitForTimeout(600);
-    assert.equal(calls.logout, 0, `${role}: no logout across tabs, idle, visibility or reload`);
+    for (const page of [first, second]) await page.clock.install();
+    await first.clock.fastForward(4 * 60_000);
+    await first.getByRole('dialog').waitFor();
+    assert.ok(await first.evaluate(key => !!localStorage.getItem(key), storageKey), 'warning retains token');
+    await first.getByRole('button', { name: 'Continuar estudando' }).click();
+    await second.clock.fastForward(5 * 60_000);
+    assert.ok(await second.evaluate(key => !!localStorage.getItem(key), storageKey), 'real input in other tab renews the deadline');
+    await first.clock.fastForward(301_000);
+    await first.clock.runFor(2000);
+    await first.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
+    await second.clock.runFor(2000);
+    await second.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
+    assert.equal(await first.evaluate(key => localStorage.getItem(key), storageKey), null, 'expired session tokens removed');
+    assert.ok(calls.logout >= 1, 'auth sign-out requested');
     assert.equal(calls.ownership, 0, 'legacy tab ownership cannot interfere with auth');
+    await first.reload();
+    assert.ok(first.url().includes('/auth'), 'reload does not restore expired login');
     await context.close();
-    console.log(`PASS ${role}: two tabs, sixteen idle minutes, visibility and reload`);
+    console.log(`PASS ${role}: two tabs, warning, real interaction, five-minute expiry and reload`);
+  }
+  {
+    const context = await browser.newContext();
+    await mock(context, 'user', false, true);
+    await context.addInitScript(({ key, value }) => { if (!sessionStorage.getItem('qa-seeded')) { localStorage.setItem(key, JSON.stringify(value)); sessionStorage.setItem('qa-seeded', '1'); } }, { key: storageKey, value: session('user') });
+    const page = await context.newPage();
+    await page.goto(`${base}/dashboard/profile`);
+    await page.locator('.app-shell').waitFor({ timeout: 20000 });
+    await page.evaluate(() => {
+      const video = document.createElement('video');
+      Object.defineProperty(video, 'paused', { value: false });
+      Object.defineProperty(video, 'readyState', { value: 4 });
+      document.body.appendChild(video);
+    });
+    await page.clock.install();
+    await page.clock.fastForward(301_000);
+    await page.clock.runFor(2000);
+    await page.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
+    assert.equal(await page.evaluate(key => localStorage.getItem(key), storageKey), null, 'hung auth and progress requests cannot retain local tokens');
+    await context.close();
+    console.log('PASS blocked network and media playback: local expiry still enforced');
+  }
+
+  {
+    const context = await browser.newContext();
+    await mock(context, 'user');
+    await context.addInitScript(({ key, value }) => { if (!sessionStorage.getItem('qa-seeded')) { localStorage.setItem(key, JSON.stringify(value)); sessionStorage.setItem('qa-seeded', '1'); } }, { key: storageKey, value: session('user') });
+    const page = await context.newPage();
+    await page.goto(`${base}/dashboard/profile`);
+    await page.locator('.app-shell').waitFor({ timeout: 20000 });
+    await page.clock.install();
+    await page.clock.fastForward(240_000);
+    await page.getByRole('dialog').waitFor();
+    await page.reload();
+    await page.getByRole('dialog').waitFor({ timeout: 20000 });
+    await page.goto(base);
+    await page.locator('.home').waitFor({ timeout: 20000 });
+    const now = await page.evaluate(() => Date.now());
+    await page.clock.setSystemTime(now + 61_000);
+    await page.evaluate(() => {
+      window.dispatchEvent(new Event('pointerdown'));
+      window.dispatchEvent(new Event('focus'));
+    });
+    await page.clock.runFor(2000);
+    await page.waitForURL(/auth\?reason=inactive/, { timeout: 15000 });
+    assert.equal(await page.evaluate(key => localStorage.getItem(key), storageKey), null, 'return from suspension enforces the original deadline');
+    await context.close();
+    console.log('PASS reload, public page, synthetic input and return from suspension: deadline retained');
   }
   for (const unavailable of [true, false]) {
     const context = await browser.newContext();
