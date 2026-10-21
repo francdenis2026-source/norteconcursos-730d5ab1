@@ -54,3 +54,15 @@ em produção.
 Se estiver reutilizando uma conexão que ficou em transação com erro, execute `rollback;`
 antes de tentar novamente. Não basta adicionar `$$` ao trecho cortado: faltariam os índices,
 os gatilhos e a confirmação final. O arquivo completo inclui todas essas etapas.
+
+### Erro `23514: official_exam_questions_active_legal_audit_check`
+
+Há registros anteriores à constraint `NOT VALID` que não satisfazem sua expressão. PostgreSQL
+mantém esses registros antigos, mas reavalia o CHECK em qualquer UPDATE, inclusive de metadados.
+A migração avalia os CHECKs não validados de cada tabela e preenche chaves somente em registros
+que os satisfazem. Não desabilita, remove ou altera constraints e não modifica conteúdo/status.
+
+As linhas preservadas com chaves nulas continuam protegidas: o trigger compara seu conteúdo
+normalizado ao analisar uma nova importação. Elas permanecem sujeitas à revisão editorial habitual
+antes de qualquer alteração. Os testes incluem um legado que viola o CHECK, confirmam que ele
+fica intacto, bloqueiam sua reimportação e verificam que a auditoria continua obrigatória.

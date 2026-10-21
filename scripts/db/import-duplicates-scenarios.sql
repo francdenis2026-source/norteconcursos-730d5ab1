@@ -9,6 +9,19 @@ end $$;
 do $$
 declare first_id uuid; second_id uuid; old_key text;
 begin
+  assert (select content_status = 'active' and not legal_audit_completed and import_content_key is null
+    from public.official_exam_questions where id = '00000000-0000-4000-8000-000000000090'),
+    'grandfathered content untouched by metadata migration';
+  assert (select not convalidated from pg_constraint
+    where conname = 'official_exam_questions_active_legal_audit_check'), 'audit check preserved';
+  perform pg_temp.must_reject_duplicate($q$insert into public.official_exam_questions(item_number, question_text)
+    values(91, 'LEGADO jurídico sem auditoria.')$q$);
+  begin
+    update public.official_exam_questions set item_number=92
+      where id='00000000-0000-4000-8000-000000000090';
+    raise exception 'Legal audit check must still block updates';
+  exception when check_violation then null;
+  end;
   assert (select count(*) from public.board_exam_questions)=2, 'preserve legacy rows';
   assert (select count(import_unique_key) from public.board_exam_questions)=1;
   update public.board_exam_questions set review_note='Revisão preservada' where item_number=2;

@@ -68,7 +68,7 @@ begin
   end if;
   new.import_unique_key := new.import_content_key;
   if new.import_content_key is not null then
-    execute format('select id from public.%I where import_content_key = $1 and id <> $2 limit 1', tg_table_name)
+    execute format('select id from public.%I q where (import_content_key = $1 or (import_content_key is null and public.question_import_content_key(%L, to_jsonb(q)) = $1)) and id <> $2 limit 1', tg_table_name, tg_table_name)
       into existing_id using new.import_content_key, new.id;
     if existing_id is not null then
       execute format('select exists(select 1 from public.%I where import_unique_key = $1)', tg_table_name)
@@ -86,19 +86,34 @@ begin
   return new;
 end $$;
 
+-- NOT VALID checks may grandfather rows that cannot be updated, even for metadata.
+-- Evaluate those checks without weakening or dropping them. Such rows keep null guard
+-- columns; the duplicate trigger above compares their actual content as a fallback.
+create or replace function pg_temp.backfill_question_import_guards(target regclass)
+returns void language plpgsql as $backfill$
+declare eligible text;
+begin
+  select coalesce(string_agg('(' || pg_get_expr(conbin, conrelid) || ') is not false', ' and '), 'true')
+    into eligible from pg_constraint
+    where conrelid = target and contype = 'c' and not convalidated;
+  execute format(
+    'with keyed as (
+       select q.id, public.question_import_content_key(%L, to_jsonb(q)) content_key from %s q
+     ), ranked as (
+       select id, content_key, row_number() over (partition by content_key order by id) n from keyed
+     )
+     update %s q set import_content_key = r.content_key,
+       import_unique_key = case when r.n = 1 then r.content_key else null end
+     from ranked r where r.id = q.id and (%s)',
+    replace(target::text, 'public.', ''), target, target, eligible);
+end $backfill$;
+
 -- Explicit DDL keeps the SQL Editor script free of anonymous DO blocks.
 
 lock table public.question_support_texts in share row exclusive mode;
 alter table public.question_support_texts
   add column import_content_key text, add column import_unique_key text;
-update public.question_support_texts q
-  set import_content_key = public.question_import_content_key('question_support_texts', to_jsonb(q));
-with ranked as (
-  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
-  from public.question_support_texts where import_content_key is not null
-)
-update public.question_support_texts q set import_unique_key = r.import_content_key
-  from ranked r where r.id = q.id and r.n = 1;
+select pg_temp.backfill_question_import_guards('public.question_support_texts'::regclass);
 create index question_support_texts_import_content_lookup on public.question_support_texts(import_content_key);
 create unique index question_support_texts_import_content_unique on public.question_support_texts(import_unique_key);
 create trigger question_import_duplicate_guard before insert or update on public.question_support_texts
@@ -107,14 +122,7 @@ create trigger question_import_duplicate_guard before insert or update on public
 lock table public.official_exam_questions in share row exclusive mode;
 alter table public.official_exam_questions
   add column import_content_key text, add column import_unique_key text;
-update public.official_exam_questions q
-  set import_content_key = public.question_import_content_key('official_exam_questions', to_jsonb(q));
-with ranked as (
-  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
-  from public.official_exam_questions where import_content_key is not null
-)
-update public.official_exam_questions q set import_unique_key = r.import_content_key
-  from ranked r where r.id = q.id and r.n = 1;
+select pg_temp.backfill_question_import_guards('public.official_exam_questions'::regclass);
 create index official_exam_questions_import_content_lookup on public.official_exam_questions(import_content_key);
 create unique index official_exam_questions_import_content_unique on public.official_exam_questions(import_unique_key);
 create trigger question_import_duplicate_guard before insert or update on public.official_exam_questions
@@ -123,14 +131,7 @@ create trigger question_import_duplicate_guard before insert or update on public
 lock table public.board_exam_questions in share row exclusive mode;
 alter table public.board_exam_questions
   add column import_content_key text, add column import_unique_key text;
-update public.board_exam_questions q
-  set import_content_key = public.question_import_content_key('board_exam_questions', to_jsonb(q));
-with ranked as (
-  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
-  from public.board_exam_questions where import_content_key is not null
-)
-update public.board_exam_questions q set import_unique_key = r.import_content_key
-  from ranked r where r.id = q.id and r.n = 1;
+select pg_temp.backfill_question_import_guards('public.board_exam_questions'::regclass);
 create index board_exam_questions_import_content_lookup on public.board_exam_questions(import_content_key);
 create unique index board_exam_questions_import_content_unique on public.board_exam_questions(import_unique_key);
 create trigger question_import_duplicate_guard before insert or update on public.board_exam_questions
@@ -139,14 +140,7 @@ create trigger question_import_duplicate_guard before insert or update on public
 lock table public.curated_question_catalog in share row exclusive mode;
 alter table public.curated_question_catalog
   add column import_content_key text, add column import_unique_key text;
-update public.curated_question_catalog q
-  set import_content_key = public.question_import_content_key('curated_question_catalog', to_jsonb(q));
-with ranked as (
-  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
-  from public.curated_question_catalog where import_content_key is not null
-)
-update public.curated_question_catalog q set import_unique_key = r.import_content_key
-  from ranked r where r.id = q.id and r.n = 1;
+select pg_temp.backfill_question_import_guards('public.curated_question_catalog'::regclass);
 create index curated_question_catalog_import_content_lookup on public.curated_question_catalog(import_content_key);
 create unique index curated_question_catalog_import_content_unique on public.curated_question_catalog(import_unique_key);
 create trigger question_import_duplicate_guard before insert or update on public.curated_question_catalog
@@ -155,14 +149,7 @@ create trigger question_import_duplicate_guard before insert or update on public
 lock table public.question_bank in share row exclusive mode;
 alter table public.question_bank
   add column import_content_key text, add column import_unique_key text;
-update public.question_bank q
-  set import_content_key = public.question_import_content_key('question_bank', to_jsonb(q));
-with ranked as (
-  select id, import_content_key, row_number() over (partition by import_content_key order by id) n
-  from public.question_bank where import_content_key is not null
-)
-update public.question_bank q set import_unique_key = r.import_content_key
-  from ranked r where r.id = q.id and r.n = 1;
+select pg_temp.backfill_question_import_guards('public.question_bank'::regclass);
 create index question_bank_import_content_lookup on public.question_bank(import_content_key);
 create unique index question_bank_import_content_unique on public.question_bank(import_unique_key);
 create trigger question_import_duplicate_guard before insert or update on public.question_bank

@@ -30,3 +30,10 @@ create table public.question_bank (
 insert into public.board_exam_questions(id,item_number,stem) values
  ('00000000-0000-4000-8000-000000000001',1,'Legado repetido que precisa manter suas referências.'),
  ('00000000-0000-4000-8000-000000000002',2,'Legado repetido que precisa manter suas referências.');
+
+-- Existing invalid rows remain grandfathered by NOT VALID, but cannot be updated.
+alter table public.official_exam_questions add column legal_audit_completed boolean default false;
+insert into public.official_exam_questions(id, item_number, question_text, content_status)
+  values ('00000000-0000-4000-8000-000000000090', 90, 'Legado jurídico sem auditoria.', 'active');
+alter table public.official_exam_questions add constraint official_exam_questions_active_legal_audit_check
+  check (content_status <> 'active' or legal_audit_completed) not valid;
