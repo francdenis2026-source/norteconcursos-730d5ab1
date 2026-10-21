@@ -30,8 +30,8 @@ export function InitialLoadingScreen() {
   return (
     <div id="norte-initial-loading" role="status" aria-label="Preparando a plataforma Norte Concursos">
       <picture aria-hidden="true">
-        <source media="(max-width: 640px)" srcSet="/media/loading/norte-abertura-mobile.webp" />
-        <img src="/media/loading/norte-abertura.webp" width={800} height={533} alt="" fetchPriority="high" decoding="async" />
+        <source media="(max-width: 640px)" srcSet="/media/loading/norte-abertura-mobile-hd.webp 1x, /media/loading/norte-abertura-hd.webp 2x" />
+        <img src="/media/loading/norte-abertura-hd.webp" width={1536} height={1024} alt="" fetchPriority="high" decoding="async" />
       </picture>
       <div className="norte-boot-copy">
         <strong className="norte-boot-brand">NORTE</strong>

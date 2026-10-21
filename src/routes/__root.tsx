@@ -184,8 +184,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: READING_SCALE_INIT_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: CHUNK_RECOVERY_SCRIPT }} />
         <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
-        <link rel="preload" as="image" href="/media/loading/norte-abertura-mobile.webp" media="(max-width: 640px)" type="image/webp" />
-        <link rel="preload" as="image" href="/media/loading/norte-abertura.webp" media="(min-width: 641px)" type="image/webp" />
+        <link rel="preload" as="image" href="/media/loading/norte-abertura-mobile-hd.webp" imageSrcSet="/media/loading/norte-abertura-mobile-hd.webp 1x, /media/loading/norte-abertura-hd.webp 2x" media="(max-width: 640px)" type="image/webp" />
+        <link rel="preload" as="image" href="/media/loading/norte-abertura-hd.webp" media="(min-width: 641px)" type="image/webp" />
         <HeadContent />
       </head>
       <body>

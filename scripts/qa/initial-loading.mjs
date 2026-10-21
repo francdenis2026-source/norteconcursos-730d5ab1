@@ -5,12 +5,12 @@ import assert from 'node:assert/strict';
 import {statSync} from 'node:fs';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:3000';
-assert.ok(statSync('public/media/loading/norte-abertura.webp').size<55_000);
-assert.ok(statSync('public/media/loading/norte-abertura-mobile.webp').size<35_000);
+assert.ok(statSync('public/media/loading/norte-abertura-hd.webp').size<330_000);
+assert.ok(statSync('public/media/loading/norte-abertura-mobile-hd.webp').size<230_000);
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 try{
- for(const width of [1440,390]){
-  const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
+ for(const [width,dpr] of [[1440,1],[390,1],[390,2]]){
+  const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:dpr,reducedMotion:'reduce'});
   let release;const gate=new Promise(resolve=>{release=resolve});const images=[];
   page.on('request',request=>{if(request.url().includes('/media/loading/'))images.push(request.url());});
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
@@ -19,7 +19,8 @@ try{
   const boot=page.locator('#norte-initial-loading');await boot.waitFor({state:'visible'});
   await boot.locator('img').evaluate(async img=>{await img.decode()});
   assert.ok(await boot.getByText('Preparando sua plataforma…').isVisible());
-  assert.equal(await boot.locator('img').evaluate(img=>img.currentSrc.endsWith(innerWidth<=640?'norte-abertura-mobile.webp':'norte-abertura.webp')),true);
+  assert.equal(await boot.locator('img').evaluate(img=>img.currentSrc.endsWith(innerWidth<=640&&devicePixelRatio<1.5?'norte-abertura-mobile-hd.webp':'norte-abertura-hd.webp')),true);
+  assert.ok(await boot.locator('img').evaluate(img=>img.naturalWidth*(innerWidth<=640&&devicePixelRatio>=1.5?2:1)>=1280),'retain sufficient source resolution');
   assert.equal(new Set(images).size,1,'only the selected responsive image loads');
   await page.screenshot({path:`/tmp/norte-initial-loading-${width}.png`});
   release();await boot.waitFor({state:'hidden',timeout:20000});
