@@ -27,6 +27,7 @@ async function mock(context, role, roleError = false, heldNetwork = false) {
     else if (path.endsWith('/profiles')) body = { id: uid, full_name: 'CONTA DE TESTE', onboarding_completed: true, subscription_tier: 'premium', is_activated: true, created_at: new Date().toISOString() };
     else if (path.endsWith('/user_roles')) body = [{ role }];
     else if (path.endsWith('/has_role')) { status = roleError ? 503 : 200; body = roleError ? { message: 'temporarily unavailable' } : role === 'admin'; }
+    else if (path.endsWith('/verify_account_session')) body = true;
     else if (path.endsWith('/server_now')) body = new Date().toISOString();
     else if (path.endsWith('/active_user_sessions')) body = { session_key: 'another-tab-old-key' };
     await route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body), headers: { 'access-control-allow-origin': '*' } });

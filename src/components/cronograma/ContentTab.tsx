@@ -11,6 +11,7 @@ import {
 import { discColor } from "@/lib/cronogramaDia";
 import type { TheoryTarget } from "@/lib/cronogramaTeoria";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 type Filter = "todos" | "pendentes" | "andamento" | "concluidos";
 type Status = "novo" | "andamento" | "concluido";
@@ -28,12 +29,13 @@ const chip = "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs fo
 
 export function TheoryButton({ target }: { target: TheoryTarget }) {
   return (
-    <Link to={target.to as never} params={target.params as never} search={target.search as never}
-      title={target.direct ? target.label : "Não há material específico: abre a Biblioteca já pesquisando este assunto"}
-      className={cn(chip, target.kind === "busca" ? "bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200" : "bg-sky-600 text-white")}>
-      {target.kind === "busca" ? <Search className="h-3 w-3" /> : <BookOpen className="h-3 w-3" />}
-      {target.kind === "material" ? "Estudar o material" : target.kind === "edital" ? "Estudar no edital" : "Procurar teoria"}
-    </Link>
+    <Hint content={target.direct ? target.label : "Não há material específico: abre a Biblioteca já pesquisando este assunto"}>
+      <Link to={target.to as never} params={target.params as never} search={target.search as never}
+        className={cn(chip, target.kind === "busca" ? "bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200" : "bg-sky-600 text-white")}>
+        {target.kind === "busca" ? <Search className="h-3 w-3" /> : <BookOpen className="h-3 w-3" />}
+        {target.kind === "material" ? "Estudar o material" : target.kind === "edital" ? "Estudar no edital" : "Procurar teoria"}
+      </Link>
+    </Hint>
   );
 }
 

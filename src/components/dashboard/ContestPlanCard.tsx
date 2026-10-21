@@ -3,6 +3,7 @@ import { Brain, ChevronDown, Flag, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 export interface PlanEdition {
   key: string;
@@ -225,18 +226,18 @@ export function ContestPlanCard({
                       </div>
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {items.slice(0, 24).map((weak) => (
-                          <span
-                            key={`${weak.edition}-${weak.item}`}
-                            className={cn(
-                              "rounded-full px-2 py-0.5 text-[10px] font-bold",
-                              weak.verdict === "errada"
-                                ? "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200"
-                                : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
-                            )}
-                            title={weak.verdict === "errada" ? "Erro" : "Em branco"}
-                          >
-                            {weak.edition} · item {weak.item}
-                          </span>
+                          <Hint key={`${weak.edition}-${weak.item}`} content={weak.verdict === "errada" ? "Erro" : "Em branco"}>
+                            <span
+                              className={cn(
+                                "rounded-full px-2 py-0.5 text-[10px] font-bold",
+                                weak.verdict === "errada"
+                                  ? "bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-200"
+                                  : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200",
+                              )}
+                            >
+                              {weak.edition} · item {weak.item}
+                            </span>
+                          </Hint>
                         ))}
                         {items.length > 24 && (
                           <span className="text-[10px] text-muted-foreground">

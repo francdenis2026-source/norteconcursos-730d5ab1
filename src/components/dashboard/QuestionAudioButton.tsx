@@ -1,6 +1,7 @@
 import { Pause, Play, Volume2 } from "lucide-react";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
+import { Hint } from "@/components/ui/hint";
 
 /** Reads directly with the browser voice; no generated audio or download. */
 export function QuestionAudioButton({ text }: { text: string }) {
@@ -70,12 +71,13 @@ export function QuestionAudioButton({ text }: { text: string }) {
   const label = state === "playing" ? "Pausar leitura" : state === "paused" ? "Continuar leitura" : "Ler em voz alta";
   return (
     <div className="min-w-0">
-      <Button type="button" variant="outline" size="sm" className="min-h-10 gap-2" onClick={play}
-        disabled={!text.trim()} aria-label={label} aria-pressed={state === "playing"}
-        title="Leitura com a voz padrão do navegador">
-        {state === "playing" ? <Pause className="h-4 w-4" aria-hidden="true" /> : state === "paused" ? <Play className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
-        {label}
-      </Button>
+      <Hint content="Leitura com a voz padrão do navegador">
+        <Button type="button" variant="outline" size="sm" className="min-h-10 gap-2" onClick={play}
+          disabled={!text.trim()} aria-label={label} aria-pressed={state === "playing"}>
+          {state === "playing" ? <Pause className="h-4 w-4" aria-hidden="true" /> : state === "paused" ? <Play className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}
+          {label}
+        </Button>
+      </Hint>
       {error && <p role="status" className="mt-1 max-w-sm text-xs text-muted-foreground">{error}</p>}
     </div>
   );

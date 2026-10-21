@@ -6,7 +6,7 @@ const migration = await readFile(new URL('../supabase/migrations/20261022010000_
 const user = '11111111-1111-4111-8111-111111111111';
 const first = '22222222-2222-4222-8222-222222222222';
 const second = '33333333-3333-4333-8333-333333333333';
-async function setup() {
+async function setup(withPreviousMigrations = false) {
   const db = new PGlite();
   await db.exec(`
     create role anon; create role authenticated;
@@ -23,6 +23,11 @@ async function setup() {
     grant all on public.answers to authenticated, anon;
     create function public.save_answer() returns void language sql security definer as $$ insert into public.answers values (9, 'stale RPC') $$;
   `);
+  if (withPreviousMigrations) {
+    for (const file of ['20261021170000_enforce_account_session.sql', '20261021213000_register_account_session_on_auth_login.sql']) {
+      await db.exec(await readFile(new URL(`../supabase/migrations/${file}`, import.meta.url), 'utf8'));
+    }
+  }
   await db.exec(migration);
   return db;
 }
@@ -44,9 +49,11 @@ test('actual PostgreSQL migration: bootstrap, newest login, token refresh, stale
       await assert.rejects(db.exec(sql), e => e.code === '42501' && e.detail === 'NORTE_SESSION_REPLACED');
     }
     await jwt(db, second); assert.equal(await current(db), true);
+    assert.equal((await db.query('select public.verify_account_session(true) as active')).rows[0].active, true);
     await db.exec("insert into public.answers values (2, 'new owner')");
     // Refresh changes access-token timestamps but not Auth session_id.
     await jwt(db, second); assert.equal(await current(db), true);
+    assert.equal((await db.query('select public.verify_account_session(true) as active')).rows[0].active, true);
     await db.exec("update public.answers set answer = 'new owner updated' where id = 2");
     assert.equal((await db.query('select count(*)::int as n from public.answers')).rows[0].n, 2);
     // New owner logging out cannot resurrect the previous device.
@@ -58,7 +65,7 @@ test('actual PostgreSQL migration: bootstrap, newest login, token refresh, stale
 });
 
 test('registry is read-only to browsers; session timestamps cannot be forged; reinstall preserves latest ownership', async () => {
-  const db = await setup();
+  const db = await setup(true);
   try {
     await jwt(db, first);
     await db.exec('set role authenticated');
@@ -71,6 +78,7 @@ test('registry is read-only to browsers; session timestamps cannot be forged; re
     await db.exec(`insert into auth.sessions values ('44444444-4444-4444-8444-444444444444', '${user}', '2026-10-20T09:00:00Z')`);
     await db.exec(migration);
     await jwt(db, second); assert.equal(await current(db), true);
+    assert.equal((await db.query('select public.verify_account_session(true) as active')).rows[0].active, true);
     await jwt(db, first); assert.equal(await current(db), false);
     await jwt(db, null, 'anon');
     await db.exec("insert into public.answers values (3, 'public flow remains public')");

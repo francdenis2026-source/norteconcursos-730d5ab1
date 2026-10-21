@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import outlook from "@/data/pcAcreStudyOutlook.json";
 import { pcAcrePriorities, type PcAcreRole } from "@/lib/pcAcreOutlook";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 export function PcAcreStudyOutlook({
   role,
@@ -214,20 +215,20 @@ export function PcAcreStudyOutlook({
               </p>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
                 {exam.sources.map((source) => (
-                  <a
-                    key={source.url}
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={source.title}
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-primary underline"
-                  >
-                    {source.title.toLowerCase().includes("gabarito")
-                      ? "Gabarito"
-                      : "Caderno da prova"}
-                    <ExternalLink className="h-3 w-3" />
-                    <span className="sr-only"> — {source.title} (abre em outra aba)</span>
-                  </a>
+                  <Hint key={source.url} content={source.title}>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-primary underline"
+                    >
+                      {source.title.toLowerCase().includes("gabarito")
+                        ? "Gabarito"
+                        : "Caderno da prova"}
+                      <ExternalLink className="h-3 w-3" />
+                      <span className="sr-only"> — {source.title} (abre em outra aba)</span>
+                    </a>
+                  </Hint>
                 ))}
               </div>
             </li>

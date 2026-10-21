@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { GLOSSARY, normalize } from "@/lib/glossary";
 import type { PenalRule } from "@/lib/penalPolicy";
+import { Hint } from "@/components/ui/hint";
 const aliases: Record<string, string> = { Progressão: "Progressão de regime" };
 const definitions: Record<string, string> = {
   Fiança:
@@ -24,16 +25,17 @@ export function PenalRuleHelp({ rule }: { rule: PenalRule }) {
   );
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <button
-          type="button"
-          aria-label={`Entender ${rule.title}`}
-          title={`Entender ${rule.title}`}
-          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-current hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:hover:bg-white/10"
-        >
-          <Info aria-hidden className="h-4 w-4" />
-        </button>
-      </DialogTrigger>
+      <Hint content={`Entender ${rule.title}`}>
+        <DialogTrigger asChild>
+          <button
+            type="button"
+            aria-label={`Entender ${rule.title}`}
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-current hover:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary dark:hover:bg-white/10"
+          >
+            <Info aria-hidden className="h-4 w-4" />
+          </button>
+        </DialogTrigger>
+      </Hint>
       <DialogContent className="max-h-[85dvh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>{rule.title}</DialogTitle>

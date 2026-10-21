@@ -9,6 +9,7 @@ import type { StudyEnrichment } from "@/lib/studyEnrichment";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Hint } from "@/components/ui/hint";
 import {
   Dialog,
   DialogContent,
@@ -167,15 +168,16 @@ export function EnrichmentAdmin() {
                   <Eye className="h-3.5 w-3.5" /> Ver
                 </Button>
                 {item.status === "active" ? (
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    aria-label="Voltar para revisão"
-                    title="Voltar para revisão"
-                    onClick={() => setStatus.mutate({ id: item.id, status: "under_review" })}
-                  >
-                    <Undo2 className="h-4 w-4" />
-                  </Button>
+                  <Hint content="Voltar para revisão">
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      aria-label="Voltar para revisão"
+                      onClick={() => setStatus.mutate({ id: item.id, status: "under_review" })}
+                    >
+                      <Undo2 className="h-4 w-4" />
+                    </Button>
+                  </Hint>
                 ) : (
                   <Button
                     size="sm"

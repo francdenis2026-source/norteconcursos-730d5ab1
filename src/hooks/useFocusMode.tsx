@@ -12,6 +12,7 @@ import {
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Hint } from "@/components/ui/hint";
 import type { ToolsArea } from "@/components/study/StudyTools";
 import { confirmDialog } from "@/lib/confirm";
 import {
@@ -253,33 +254,35 @@ export function useFocusMode() {
             </div>
             <div className="focus-study-actions col-span-2 flex min-w-0 flex-wrap items-center justify-end gap-1.5 lg:col-span-1">
               <nav className="flex items-center gap-1.5" aria-label="Navegação do modo foco">
-                <button
-                  type="button"
-                  disabled={!p.onPrev}
-                  onClick={p.onPrev}
-                  aria-label={p.prevLabel ?? "Anterior"}
-                  title={p.prevLabel ?? "Anterior"}
-                  className="flex items-center gap-1 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold hover:bg-white/25 disabled:opacity-40"
-                >
-                  <ChevronLeft className="h-4 w-4" />{" "}
-                  <span className="hidden sm:inline">Anterior</span>
-                </button>
+                <Hint content={p.prevLabel ?? "Anterior"}>
+                  <button
+                    type="button"
+                    disabled={!p.onPrev}
+                    onClick={p.onPrev}
+                    aria-label={p.prevLabel ?? "Anterior"}
+                    className="flex items-center gap-1 rounded-lg bg-white/15 px-3 py-2 text-sm font-semibold hover:bg-white/25 disabled:opacity-40"
+                  >
+                    <ChevronLeft className="h-4 w-4" />{" "}
+                    <span className="hidden sm:inline">Anterior</span>
+                  </button>
+                </Hint>
                 {p.position && (
                   <span className="hidden whitespace-nowrap px-1 text-xs font-medium text-white/85 xl:inline">
                     {p.position}
                   </span>
                 )}
-                <button
-                  type="button"
-                  disabled={!p.onNext}
-                  onClick={p.onNext}
-                  aria-label={p.nextLabel ?? "Próxima"}
-                  title={p.nextLabel ?? "Próxima"}
-                  className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-amber-800 hover:bg-white/90 disabled:opacity-40"
-                >
-                  <span className="hidden sm:inline">Próxima</span>{" "}
-                  <ChevronRight className="h-4 w-4" />
-                </button>
+                <Hint content={p.nextLabel ?? "Próxima"}>
+                  <button
+                    type="button"
+                    disabled={!p.onNext}
+                    onClick={p.onNext}
+                    aria-label={p.nextLabel ?? "Próxima"}
+                    className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-bold text-amber-800 hover:bg-white/90 disabled:opacity-40"
+                  >
+                    <span className="hidden sm:inline">Próxima</span>{" "}
+                    <ChevronRight className="h-4 w-4" />
+                  </button>
+                </Hint>
               </nav>
               {p.tools && (
                 <button
@@ -294,15 +297,16 @@ export function useFocusMode() {
                 </button>
               )}
               {p.extra}
-              <button
-                type="button"
-                onClick={() => void requestExit()}
-                aria-label="Sair do modo foco"
-                title="Sair do modo foco (Esc)"
-                className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15"
-              >
-                <X className="h-4 w-4" /> <span className="hidden sm:inline">Sair</span>
-              </button>
+              <Hint content="Sair do modo foco (Esc)">
+                <button
+                  type="button"
+                  onClick={() => void requestExit()}
+                  aria-label="Sair do modo foco"
+                  className="flex items-center gap-1 rounded-lg border border-white/40 px-3 py-2 text-sm font-semibold hover:bg-white/15"
+                >
+                  <X className="h-4 w-4" /> <span className="hidden sm:inline">Sair</span>
+                </button>
+              </Hint>
             </div>
           </div>
           {p.progress !== undefined && (

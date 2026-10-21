@@ -2,6 +2,7 @@ import { Flame } from "lucide-react";
 import { CARGO_GROUPS, CARGO_LABEL, HEAT_LABEL, countFor, forecastOf, heatOf, type ArtStat, type CargoGroup } from "@/lib/cobrancas";
 import { COBRANCA_QUESTIONS, COBRANCA_UPDATED } from "@/lib/cobrancaData";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 const HEAT_CLASS = {
   alta: "bg-rose-100 text-rose-900 ring-rose-300 dark:bg-rose-950/50 dark:text-rose-100 dark:ring-rose-500/40",
@@ -15,9 +16,11 @@ export function CobrancaBadge({ stat, group }: { stat: ArtStat | undefined; grou
   const heat = heatOf(n);
   if (!heat) return null;
   return (
-    <span className={cn("ml-auto inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold ring-1", HEAT_CLASS[heat])} title={`${HEAT_LABEL[heat]}: ${n} ${n === 1 ? "questão" : "questões"} das provas da plataforma citam este artigo${group === "all" ? "" : ` (${CARGO_LABEL[group]})`}`}>
-      <Flame className="h-3 w-3" aria-hidden /> {n}
-    </span>
+    <Hint content={`${HEAT_LABEL[heat]}: ${n} ${n === 1 ? "questão" : "questões"} das provas da plataforma citam este artigo${group === "all" ? "" : ` (${CARGO_LABEL[group]})`}`}>
+      <span className={cn("ml-auto inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold ring-1", HEAT_CLASS[heat])}>
+        <Flame className="h-3 w-3" aria-hidden /> {n}
+      </span>
+    </Hint>
   );
 }
 

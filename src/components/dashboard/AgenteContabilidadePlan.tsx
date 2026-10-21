@@ -54,7 +54,6 @@ export function AgenteContabilidadePlan() {
                           return (
                             <span
                               key={year}
-                              title={`${count} questão(ões) em ${year}`}
                               className={`rounded-md border px-1.5 py-0.5 tabular-nums ${count ? "bg-emerald-50 font-semibold text-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-200" : "text-muted-foreground"}`}
                             >
                               {year}: {count}

@@ -23,12 +23,12 @@ async function mock(context, role, roleError = false, heldNetwork = false) {
     if (heldNetwork && (path.includes('/logout') || path.endsWith('/study_heartbeat'))) return;
     if (path.includes('/active_user_sessions')) calls.ownership++;
     let status = 200, body = [];
-    if (path.endsWith('/is_current_device_session')) body = true;
-    else if (path.endsWith('/token')) body = session(role);
+    if (path.endsWith('/token')) body = session(role);
     else if (path.endsWith('/user')) body = session(role).user;
     else if (path.endsWith('/profiles')) body = { id: uid, full_name: 'CONTA DE TESTE', onboarding_completed: true, subscription_tier: 'premium', is_activated: true, created_at: new Date().toISOString() };
     else if (path.endsWith('/user_roles')) body = [{ role }];
     else if (path.endsWith('/has_role')) { status = roleError ? 503 : 200; body = roleError ? { message: 'temporarily unavailable' } : role === 'admin'; }
+    else if (path.endsWith('/verify_account_session')) body = true;
     else if (path.endsWith('/server_now')) body = new Date().toISOString();
     else if (path.endsWith('/active_user_sessions')) body = { session_key: 'another-tab-old-key' };
     await route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body), headers: { 'access-control-allow-origin': '*' } });

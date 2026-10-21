@@ -21,7 +21,7 @@ async function query(query) {
 await query(sql);
 const verification = await query(`select
   to_regprocedure('public.is_current_device_session()') is not null as rpc,
-  exists(select 1 from pg_trigger where tgrelid = 'auth.sessions'::regclass and tgname = 'norte_register_auth_session' and tgenabled = 'O') as auth_trigger,
+  exists(select 1 from pg_trigger where tgrelid = 'auth.sessions'::regclass and tgname = 'norte_single_account_session' and tgenabled = 'O') as auth_trigger,
   not exists (
     select 1 from pg_class c join pg_namespace n on n.oid = c.relnamespace
     where n.nspname = 'public' and c.relkind in ('r', 'p') and not c.relispartition

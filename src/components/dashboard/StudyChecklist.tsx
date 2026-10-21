@@ -628,7 +628,6 @@ export function MethodCard({
                     KIND_STYLE[it.kind].split(" ")[1]?.replace("/10", "/70"),
                   )}
                   style={{ width: `${it.pct}%` }}
-                  title={`${it.kind} ${it.pct}%`}
                 />
               ))}
             </div>

@@ -1,6 +1,6 @@
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 import { useEffect, useState, type ReactNode } from "react";
-import { useLocation } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { SessionIdleGuard } from "./SessionIdleGuard";
 import { ArrowRight, Copy, ShieldCheck } from "lucide-react";
 import { NorteBrand } from "@/components/brand/NorteBrand";
@@ -23,14 +23,15 @@ export function SessionTabGuard({ sessionKey, children }: { sessionKey: string |
   // Preserve an in-flight login/recovery form while claiming its new session. Protected
   // routes are never mounted during checking, and blocked tabs mount no idle monitor.
   const authForm = pathname === "/auth" || pathname === "/admin";
-  const showChildren = state === "owner" || (state === "checking" && authForm);
+  const publicHome = pathname === "/";
+  const showChildren = publicHome || state === "owner" || (state === "checking" && authForm);
   const checking = state === "checking";
   const blocked = state === "blocked";
   return (
     <>
       {sessionKey && state === "owner" && <SessionIdleGuard key={sessionKey} sessionKey={sessionKey} />}
-      <div style={{ display: checking ? "none" : "contents" }}>{showChildren && children}</div>
-      {state !== "owner" && <main className="session-access" data-session-tab-state={state}>
+      <div style={{ display: checking && !publicHome ? "none" : "contents" }}>{showChildren && children}</div>
+      {state !== "owner" && !publicHome && <main className="session-access" data-session-tab-state={state}>
         <div className="session-access__scene" aria-hidden="true" />
         <div className="session-access__layout">
           <aside className="session-access__editorial" aria-hidden="true">
@@ -63,6 +64,7 @@ export function SessionTabGuard({ sessionKey, children }: { sessionKey: string |
               </p>
             </div>
             {!checking && <Button className="session-access__retry" onClick={() => { setState("checking"); setAttempt(value => value + 1); }}>Tentar novamente <ArrowRight size={17} aria-hidden="true" /></Button>}
+            <Link to="/" className="session-access__home">Página inicial</Link>
             <span className="session-access__footer"><ShieldCheck size={13} aria-hidden="true" /> Seu acesso permanece protegido</span>
           </section>
         </div>

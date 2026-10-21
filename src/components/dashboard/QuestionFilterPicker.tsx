@@ -14,6 +14,7 @@ import {
   CommandEmpty,
   CommandItem,
 } from "@/components/ui/command";
+import { Hint } from "@/components/ui/hint";
 
 const fold = (text: string) =>
   text
@@ -69,26 +70,27 @@ export function QuestionFilterPicker({
         {label}
       </span>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <button
-            type="button"
-            role="combobox"
-            aria-label={label}
-            aria-describedby={description ? `${id}-description` : undefined}
-            aria-haspopup="dialog"
-            aria-expanded={open}
-            disabled={unavailable}
-            title={unavailable ? "Sem opções compatíveis com os filtros deste treino." : undefined}
-            className="trainer-picker-trigger"
-            data-filtered={value !== "all"}
-          >
-            <span>{selected?.label ?? labels[value] ?? value}</span>
-            {selected?.count !== undefined && (
-              <small>{selected.count.toLocaleString("pt-BR")}</small>
-            )}
-            <ChevronsUpDown aria-hidden="true" />
-          </button>
-        </DialogTrigger>
+        <Hint content={unavailable ? "Sem opções compatíveis com os filtros deste treino." : undefined}>
+          <DialogTrigger asChild>
+            <button
+              type="button"
+              role="combobox"
+              aria-label={label}
+              aria-describedby={description ? `${id}-description` : undefined}
+              aria-haspopup="dialog"
+              aria-expanded={open}
+              disabled={unavailable}
+              className="trainer-picker-trigger"
+              data-filtered={value !== "all"}
+            >
+              <span>{selected?.label ?? labels[value] ?? value}</span>
+              {selected?.count !== undefined && (
+                <small>{selected.count.toLocaleString("pt-BR")}</small>
+              )}
+              <ChevronsUpDown aria-hidden="true" />
+            </button>
+          </DialogTrigger>
+        </Hint>
         <DialogContent className="trainer-picker-window">
           <div className="trainer-picker-heading">
             <span>

@@ -9,6 +9,8 @@
   background: #0c0e10;
   color: #f7f2e8;
 }
+.session-access__home { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; width: 100%; margin-top: 8px; border: 1px solid #e8bd7040; border-radius: 12px; color: #f7f2e8; font-size: 13px; font-weight: 600; text-decoration: none; }
+.session-access__home:focus-visible { outline: 2px solid #e8bd70; outline-offset: 2px; }
 .session-access__scene {
   position: absolute;
   z-index: -1;

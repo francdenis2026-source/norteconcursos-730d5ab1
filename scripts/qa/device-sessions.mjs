@@ -7,7 +7,9 @@ const browser = await chromium.launch({ executablePath: '/usr/bin/chromium', arg
 const base = process.env.BASE_URL || 'http://127.0.0.1:3000';
 const uid = '11111111-1111-4111-8111-111111111111';
 const storageKey = 'sb-gkwphadbveiyjcwiiizw-auth-token';
+const sessionIds = { old: '22222222-2222-4222-8222-222222222222', new: '33333333-3333-4333-8333-333333333333' };
 function session(id) {
+  id = sessionIds[id];
   const exp = Math.floor(Date.now() / 1000) + 86400;
   const user = { id: uid, email: 'qa@example.test', role: 'authenticated', aud: 'authenticated', user_metadata: { full_name: 'ALUNO TESTE' }, app_metadata: { provider: 'email' }, created_at: new Date().toISOString() };
   const encode = x => Buffer.from(JSON.stringify(x)).toString('base64url');
@@ -28,10 +30,11 @@ try {
       await context.route('https://gkwphadbveiyjcwiiizw.supabase.co/**', async route => {
         const request = route.request(), url = new URL(request.url()), path = url.pathname;
         let status = 200, body = [];
-        if (path.endsWith('/is_current_device_session')) {
+        if (path.endsWith('/verify_account_session')) {
           status = missing ? 404 : offline && id === 'old' ? 503 : 200;
-          body = missing ? { code: 'PGRST202', message: 'Could not find public.is_current_device_session' } : status === 503 ? { message: 'offline' } : owner === id;
-        } else if (path.endsWith('/profiles')) body = request.headers()['accept']?.includes('object')
+          body = missing ? { code: 'PGRST202', message: 'Could not find public.verify_account_session' } : status === 503 ? { message: 'offline' } : owner === id;
+        } else if (path.endsWith('/active_user_sessions')) body = { session_key: `norte_auth_activity:${uid}:${sessionIds[owner]}` };
+        else if (path.endsWith('/profiles')) body = request.headers()['accept']?.includes('object')
           ? { id: uid, full_name: 'ALUNO TESTE', onboarding_completed: true, subscription_tier: 'premium', is_activated: true, created_at: new Date().toISOString() } : [];
         else if (path.endsWith('/user_roles')) body = [{ user_id: uid, role }];
         else if (path.endsWith('/has_role')) body = role === 'admin';
@@ -79,7 +82,6 @@ try {
     const legacy = await device('old');
     await legacy.page.goto(`${base}/dashboard/profile`);
     await legacy.page.locator('.app-shell').waitFor({ timeout: 25000 });
-    if (role === 'admin') await legacy.page.getByRole('alert').filter({ hasText: 'Proteção entre dispositivos pendente' }).waitFor();
     await legacy.context.close();
     console.log(`PASS ${role}: separate devices, offline reconnect, takeover, local logout and database rollout`);
   }
