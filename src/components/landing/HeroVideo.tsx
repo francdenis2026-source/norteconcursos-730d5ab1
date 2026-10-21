@@ -1,6 +1,10 @@
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+// Mantém a intro como uma abertura da plataforma durante a sessão do SPA.
+// Um refresh recria o módulo e permite uma nova abertura.
+let introStartedThisSession = false;
+
 /** Plays once, then removes the video and reveals the homepage photograph. */
 export function HeroVideo({
   onIntroChange,
@@ -17,8 +21,18 @@ export function HeroVideo({
   const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
   const finishRef = useRef<() => void>(() => {});
   const retryRef = useRef<() => void>(() => {});
+  const effectInitialized = useRef(false);
 
   useEffect(() => {
+    if (effectInitialized.current) return;
+    effectInitialized.current = true;
+
+    if (introStartedThisSession) {
+      onIntroSettled?.();
+      return;
+    }
+    introStartedThisSession = true;
+
     const connection = (
       navigator as Navigator & {
         connection?: { saveData?: boolean; effectiveType?: string; downlink?: number };
