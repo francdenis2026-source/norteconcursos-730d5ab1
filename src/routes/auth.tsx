@@ -276,7 +276,7 @@ function AuthPage() {
         </Link>
         <div className="auth-card">
           <div className="auth-identity">
-            <img src="/media/hero/auth-distintivo.webp" alt="Distintivo Carreiras Policiais" width={96} height={116} />
+            <img src="/media/brand/distintivo-carreiras-hd.webp" alt="Distintivo Carreiras Policiais" width={96} height={116} />
             <div><span>CARREIRAS POLICIAIS</span><strong>Sua próxima conquista começa aqui.</strong><p>Questões, simulados e evolução em um só lugar.</p></div>
           </div>
           <div className="auth-mobile-brand">

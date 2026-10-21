@@ -59,7 +59,7 @@ export function PlansSection() {
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
             <img
               className="home-plans__insignia"
-              src="/media/hero/auth-distintivo.webp"
+              src="/media/brand/distintivo-carreiras-hd.webp"
               alt=""
               width={96}
               height={116}

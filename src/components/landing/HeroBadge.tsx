@@ -1,6 +1,6 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
-const SRC = "/media/hero/distintivo-carreiras.webp";
+const SRC = "/media/brand/distintivo-carreiras-hd.webp";
 const THICKNESS = [1, 2, 3, 4, 5];
 
 /** Intentional brand interaction, with restrained depth and an accessible replay. */
@@ -104,8 +104,8 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
                   className="hero-badge__edge"
                   src={SRC}
                   alt=""
-                  width={460}
-                  height={531}
+                  width={768}
+                  height={811}
                   style={{ transform: `translateZ(${-depth}px)` }}
                   draggable={false}
                 />
@@ -114,8 +114,8 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
                 className="hero-badge__face"
                 src={SRC}
                 alt=""
-                width={460}
-                height={531}
+                width={768}
+                height={811}
                 decoding="async"
                 draggable={false}
               />

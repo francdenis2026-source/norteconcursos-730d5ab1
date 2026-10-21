@@ -62,7 +62,7 @@ export function InstitutionalWindow({
           {updatedAt && <p className="iw-print-date">Atualizado em {updatedAt}</p>}
         </div>
         <img
-          src="/media/hero/auth-distintivo.webp"
+          src="/media/brand/distintivo-carreiras-hd.webp"
           alt=""
           width={96}
           height={116}

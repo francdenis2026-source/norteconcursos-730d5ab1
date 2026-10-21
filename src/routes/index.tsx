@@ -566,7 +566,7 @@ function Index() {
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <img className="home-footer__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
+              <img className="home-footer__insignia" src="/media/brand/distintivo-carreiras-hd.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
               <div>
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>

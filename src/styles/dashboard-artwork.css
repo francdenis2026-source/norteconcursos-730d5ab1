@@ -11,7 +11,7 @@
   [data-section-art="Ferramentas"], [data-section-art="Desempenho"],
   [data-section-art="Conta"]
 ) {
-  --section-art: url('/media/hero/auth-distintivo.webp');
+  --section-art: url('/media/brand/distintivo-carreiras-hd.webp');
   --section-art-position: right 18px center;
   --section-art-size: auto calc(100% - 24px);
 }
