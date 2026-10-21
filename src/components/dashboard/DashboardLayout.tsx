@@ -89,6 +89,7 @@ import {
 
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Hint } from "@/components/ui/hint";
 import { PlanCountdownInline, PlanCountdownShort } from "@/components/dashboard/PlanCountdown";
 import { AcreClock } from "@/components/dashboard/AcreClock";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
@@ -666,7 +667,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
 
             <div className="app-topbar__actions">
-              {!isAdmin && <button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia" title="Tela cheia"><Maximize aria-hidden="true" /></button>}
+              {!isAdmin && <Hint content="Tela cheia"><button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia"><Maximize aria-hidden="true" /></button></Hint>}
               <button
                 type="button"
                 className="app-top-search"
@@ -705,27 +706,34 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   </Tooltip>
                 )}
                 {!isAdmin && (
-                  <span className="app-streak" title="Dias seguidos de estudo">
-                    <Flame />
-                    <span className="tabular">{streak?.currentStreak ?? 0}</span>
-                  </span>
+                  <Hint content="Dias seguidos de estudo">
+                    <span className="app-streak">
+                      <Flame />
+                      <span className="tabular">{streak?.currentStreak ?? 0}</span>
+                    </span>
+                  </Hint>
                 )}
               </div>
-              <button
-                type="button"
-                className="app-top-btn app-theme-toggle"
-                onClick={toggleTheme}
-                aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
-                title={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
-              >
-                {isDarkMode ? <Sun /> : <Moon />}
-              </button>
+              <Hint content={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>
+                <button
+                  type="button"
+                  className="app-top-btn app-theme-toggle"
+                  onClick={toggleTheme}
+                  aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}
+                >
+                  {isDarkMode ? <Sun /> : <Moon />}
+                </button>
+              </Hint>
             </div>
           </header>
 
           {fullscreen.active && <div className="workspace-focus-controls no-print" role="toolbar" aria-label="Controles da tela cheia">
-            <button type="button" onClick={toggleTheme} aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"} title={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>{isDarkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
-            <button type="button" onClick={fullscreen.exit} aria-label="Restaurar visualização" title="Restaurar visualização (Esc)"><Minimize aria-hidden="true" /></button>
+            <Hint content={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>
+              <button type="button" onClick={toggleTheme} aria-label={isDarkMode ? "Ativar tema claro" : "Ativar tema escuro"}>{isDarkMode ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
+            </Hint>
+            <Hint content="Restaurar visualização (Esc)">
+              <button type="button" onClick={fullscreen.exit} aria-label="Restaurar visualização"><Minimize aria-hidden="true" /></button>
+            </Hint>
           </div>}
 
           {!isAdmin && <StudentSectionNavigation items={items} pathname={location.pathname} search={location.search} />}

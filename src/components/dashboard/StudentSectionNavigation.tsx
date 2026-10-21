@@ -22,7 +22,7 @@ export function StudentSectionNavigation({ items, pathname, search }: { items: N
   // Planning pages already render StudyPlanningNav. ENEM has its own workspace.
   if (!section || section.group === 'Planejamento' || section.entries.length < 2) return null;
   return <nav ref={nav} className="workspace-section-nav no-print" aria-label={`${section.group}: páginas da área`}>
-    {section.entries.map(item => <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} title={item.label} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
+    {section.entries.map(item => <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
       <item.icon aria-hidden="true" /><span>{item.label}</span>
     </Link>)}
   </nav>;
