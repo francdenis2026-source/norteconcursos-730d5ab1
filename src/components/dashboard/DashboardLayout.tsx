@@ -1,3 +1,4 @@
+import { NavigationCommand } from "./NavigationCommand";
 import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
@@ -6,7 +7,7 @@ import "@/styles/dashboard-artwork.css";
 import "@/styles/student-navigation.css";
 import "@/styles/workspace-banners.css";
 import { createAchievementMonitor } from "@/lib/achievementMonitor";
-import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
+import { activeNavigation } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
 import { PlatformBack } from "./PlatformBack";
@@ -79,15 +80,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
+
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PlanCountdownInline, PlanCountdownShort } from "@/components/dashboard/PlanCountdown";
@@ -782,33 +775,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           onLeave={() => void reallySignOut()}
         />
 
-        <Dialog open={paletteOpen} onOpenChange={setPaletteOpen}>
-          <DialogContent className="cmd-dialog max-w-xl overflow-hidden p-0">
-            <DialogTitle className="sr-only">Buscar área da plataforma</DialogTitle>
-            <Command className="[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-input]]:h-14 [&_[cmdk-item]]:gap-3 [&_[cmdk-item]]:rounded-lg [&_[cmdk-item]]:px-3 [&_[cmdk-item]]:py-2.5 [&_[cmdk-item]_svg]:h-4 [&_[cmdk-item]_svg]:w-4">
-              <CommandInput placeholder="Para onde vamos? Ex.: simulador, edital, erros…" />
-              <CommandList className="max-h-[420px] p-2">
-                <CommandEmpty>Nenhuma área encontrada.</CommandEmpty>
-                {Array.from(new Set(items.map((item) => item.group))).map((group) => (
-                  <CommandGroup key={group} heading={group}>
-                    {items
-                      .filter((item) => item.group === group)
-                      .map((item) => (
-                        <CommandItem
-                          key={navigationKey(item)}
-                          value={`${item.label} ${item.group}`}
-                          onSelect={() => go(item)}
-                        >
-                          <item.icon />
-                          {item.label}
-                        </CommandItem>
-                      ))}
-                  </CommandGroup>
-                ))}
-              </CommandList>
-            </Command>
-          </DialogContent>
-        </Dialog>
+        <NavigationCommand open={paletteOpen} onOpenChange={setPaletteOpen} items={items} userId={user?.id ?? "anonymous"} pathname={location.pathname} search={location.search} onNavigate={go} />
       </div>
     </TooltipProvider>
   );
