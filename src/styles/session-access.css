@@ -16,7 +16,7 @@
   background:
     linear-gradient(0deg, #090b0ef0 0%, transparent 40%, #090b0e45 100%),
     linear-gradient(90deg, #090b0e18 0%, #090b0e18 30%, #090b0ea8 63%, #090b0e 100%),
-    url('/media/hero/auth-carreiras-composicao.webp') 35% center / cover no-repeat;
+    url('../assets/auth/carreiras-composicao.webp') 35% center / cover no-repeat;
 }
 .session-access__layout {
   width: min(100%, 1280px);
@@ -83,7 +83,7 @@
 @media (max-width: 760px) {
   .session-access__layout { grid-template-columns: minmax(0, 440px); justify-content: center; padding: 24px 18px; gap: 0; }
   .session-access__editorial { display: none; }
-  .session-access__scene { background: linear-gradient(0deg, #090b0ee0, #090b0e65 65%, #090b0e35), url('/media/hero/auth-carreiras-composicao.webp') center top / auto 100svh no-repeat; }
+  .session-access__scene { background: linear-gradient(0deg, #090b0ee0, #090b0e65 65%, #090b0e35), url('../assets/auth/carreiras-composicao.webp') center top / auto 100svh no-repeat; }
   .session-access__card { padding: 24px; border-radius: 22px; }
   .session-access__emblem { height: 140px; }
   .session-access__badge { width: 120px; }
