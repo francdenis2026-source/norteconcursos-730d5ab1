@@ -1,6 +1,7 @@
 import { studentSections } from "@/lib/studentNavigation";
 import { useEffect, useId, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { Hint } from "@/components/ui/hint";
 import {
   ChevronDown,
   LayoutDashboard,
@@ -94,24 +95,38 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
   const home = available.find(item => item.href === "/dashboard");
   return (
     <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
-      {home && <div className="nav-primary" aria-label="Área do aluno">
-        {!collapsed && <p className="nav-primary__label">Minha preparação</p>}
-        <Link to={home.href} search={home.search ?? {}} className="app-nav__link" title={home.label} aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
-          <span className="app-ico" data-hue="gold"><home.icon aria-hidden="true" /></span>
-          <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
-        </Link>
-      </div>}
+      {home && (() => {
+        const homeLink = (
+          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
+            <span className="app-ico" data-hue="gold"><home.icon aria-hidden="true" /></span>
+            <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
+          </Link>
+        );
+        return (
+          <div className="nav-primary" aria-label="Área do aluno">
+            {!collapsed && <p className="nav-primary__label">Minha preparação</p>}
+            {/* The short "Painel" label only appears collapsed; the hint restores the full name instead of a native title tooltip. */}
+            {collapsed ? <Hint content={home.label} side="right">{homeLink}</Hint> : homeLink}
+          </div>
+        );
+      })()}
       {!collapsed && <p className="nav-section-label">Sua jornada</p>}
       {studentSections(available).map(({ group, entry }) => {
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
-        return <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} title={`${group} — ${groupDetails[group] ?? "Abrir área"}`} onClick={onNavigate}>
-          <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
-          {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
-            <span className="app-nav__label"><strong>{group}</strong><small>{groupDetails[group]}</small></span>
-            <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
-          </>}
-        </Link>;
+        const sectionLink = (
+          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} onClick={onNavigate}>
+            <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
+            {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
+              <span className="app-nav__label"><strong>{group}</strong><small>{groupDetails[group]}</small></span>
+              <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
+            </>}
+          </Link>
+        );
+        // Expanded, the group name and description already read on the card — a tooltip would only repeat them.
+        return collapsed
+          ? <Hint key={group} content={<>{group} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>
+          : sectionLink;
       })}
     </nav>
   );
@@ -158,7 +173,7 @@ function GroupedDashboardNavigation({
     !!current && navigationKey(current) === navigationKey(item);
   function link(item: NavigationItem, compact = false) {
     const Icon = item.icon;
-    return (
+    const element = (
       <Link
         key={navigationKey(item)}
         to={item.href}
@@ -169,7 +184,6 @@ function GroupedDashboardNavigation({
         data-active={isCurrent(item)}
         aria-current={isCurrent(item) ? "page" : undefined}
         aria-label={compact ? item.label : undefined}
-        title={item.label}
         onClick={onNavigate}
       >
         <span className="app-ico" data-hue={hues[item.group] ?? "gold"}>
@@ -181,6 +195,8 @@ function GroupedDashboardNavigation({
         {!compact && isCurrent(item) && <span className="nav-current-dot" aria-hidden="true" />}
       </Link>
     );
+    // The compact rail abbreviates the label; the hint restores the full name.
+    return compact ? <Hint key={navigationKey(item)} content={item.label} side="right">{element}</Hint> : element;
   }
   return (
     <nav className="app-nav scroll-dark navigation-workspace" aria-label="Menu principal">
@@ -212,7 +228,6 @@ function GroupedDashboardNavigation({
                   className="nav-group-trigger"
                   data-active={active}
                   aria-label={`Abrir ${group}`}
-                  title={group}
                 >
                   <Icon aria-hidden="true" />
                   <span>
@@ -257,7 +272,6 @@ function GroupedDashboardNavigation({
               data-active={active}
               aria-expanded={open}
               aria-controls={id}
-              title={groupDetails[group]}
               onClick={() =>
                 setExpanded((previous) =>
                   open ? previous.filter((value) => value !== group) : [...previous, group],
