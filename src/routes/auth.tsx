@@ -1,4 +1,4 @@
-import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
+import { AuthInsignia } from "@/components/brand/AuthInsignia";
 import "@/styles/auth-art.css";
 import authComposition from "@/assets/auth/carreiras-composicao.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
@@ -247,10 +247,10 @@ function AuthPage() {
             <Sparkles /> Preparação para carreiras policiais
           </span>
           <h1>
-            Entre em operação com <em>um plano claro.</em>
+            Sua próxima conquista.<br /><em>Um passo por dia.</em>
           </h1>
           <p>
-            Acesse o ambiente que transforma questões, simulados e desempenho em decisões de estudo.
+            Questões, simulados e um caminho de estudo para a carreira que você escolheu.
           </p>
         </div>
         <div className="auth-benefits">
@@ -278,8 +278,8 @@ function AuthPage() {
         </Link>
         <div className="auth-card">
           <div className="auth-identity">
-            <PoliceInsignia alt="Distintivo Carreiras Policiais" width={96} height={116} />
-            <div><span>CARREIRAS POLICIAIS</span><strong>Sua próxima conquista começa aqui.</strong><p>Questões, simulados e evolução em um só lugar.</p></div>
+            <div><span>NORTE · CARREIRAS POLICIAIS</span><strong>Seu objetivo tem um norte.</strong></div>
+            <AuthInsignia />
           </div>
           <div className="auth-mobile-brand">
             <NorteBrand />
@@ -362,19 +362,18 @@ function AuthPage() {
                 </button>
               </div>
               <div className="auth-heading">
-                <h2>{mode === "login" ? "Acesse sua preparação" : "Crie sua conta gratuita"}</h2>
+                <h2>{mode === "login" ? "Continue sua preparação" : "Crie sua conta gratuita"}</h2>
                 <p>
                   {mode === "login"
-                    ? "Entre com seu e-mail e continue de onde parou."
-                    : "Leva menos de dois minutos para começar."}
+                    ? "Seu próximo passo começa aqui."
+                    : "Organize seus estudos e acompanhe sua evolução."}
                 </p>
               </div>
               {mode === "register" && TESTING_PHASE && (
                 <p className="auth-trial" role="note">
                   <Sparkles aria-hidden="true" />
                   <span>
-                    <strong>{TESTING_DAYS} dias com a plataforma liberada (plano Plus)</strong>, sem cartão.
-                    Depois, sua conta segue no plano Gratuito.
+                    <strong>{TESTING_DAYS} dias de Plus grátis.</strong> Sem cartão; depois, plano Gratuito.
                   </span>
                 </p>
               )}
@@ -527,7 +526,7 @@ function AuthPage() {
           )}
           <div className="auth-security">
             <ShieldCheck />
-            <span>Conexão protegida · acesso individual à sua conta</span>
+            <span>Conexão segura · sua conta, seu progresso</span>
           </div>
           <p className="auth-dev-signature">Desenvolvido por Franc Denis · Feijó, Acre, Brasil</p>
         </div>
