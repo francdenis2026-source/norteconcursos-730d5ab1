@@ -8,95 +8,161 @@
 <style>
   :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #f6f3eb; background: #0b0d0c; }
   * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; background: linear-gradient(125deg, #1a191425, transparent 60%), #0b0d0c; }
-  .top { width: min(100%, 1440px); margin-inline: auto; padding: clamp(20px, 3vw, 40px) clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  html { height: 100%; overflow: hidden; }
+  body { margin: 0; height: 100vh; height: 100dvh; overflow: hidden; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; isolation: isolate; }
+  .scene { position: fixed; inset: 0; z-index: -2; width: 100vw; height: 100%; object-fit: cover; object-position: center; }
+  body::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, #070a08a6, #070a0850 54%, #070a087d), linear-gradient(0deg, #070a08bc, transparent 35%, #070a0840); }
+  .top { width: min(100%, 1440px); margin-inline: auto; padding: clamp(16px, 2.5dvh, 28px) clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
   .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
   .brand img { width: 42px; height: 48px; }
   .brand strong { display: block; font-size: 22px; letter-spacing: .23em; line-height: 1.1; }
   .brand small { display: block; margin-top: 7px; color: #e5bc70; font-size: 9px; font-weight: 700; letter-spacing: .36em; }
-  .top-note { display: flex; align-items: center; gap: 8px; color: #b9b6aa; font-size: 11px; letter-spacing: .08em; }
-  .top-note::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #d4b16d; }
-  main { width: min(100%, 1440px); flex: 1; align-self: center; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; padding: 0 clamp(22px, 5vw, 76px) 24px; }
-  .art { min-width: 0; margin: 0 -30px; position: relative; }
-  .art img { display: block; width: 100%; height: auto; max-height: 69svh; object-fit: contain; object-position: center; mask-image: linear-gradient(0deg, transparent, #000 12%, #000 90%, transparent); }
-  .art figcaption { position: absolute; bottom: 2%; left: 9%; color: #c8b992; font-size: 9px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
-  .panel { width: 100%; max-width: 480px; padding: clamp(24px, 3vw, 38px); border: 1px solid #d9b77030; border-radius: 24px; background: linear-gradient(145deg, #242620eb, #141714f5); box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0004; }
-  .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 22px; color: #e4bd75; font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .motion-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid #d4b16d40; border-radius: 10px; background: #0d120ebd; color: #d6c9aa; font: inherit; font-size: 11px; cursor: pointer; }
+  .motion-toggle:hover { border-color: #e5bc7090; background: #181e17; }
+  main { width: min(100%, 1320px); min-height: 0; justify-self: center; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 88px); align-items: center; padding: 8px clamp(22px, 5vw, 76px); }
+  .emblem { min-width: 0; min-height: 0; height: 100%; margin: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px; }
+  .badge-stage { --badge-size: min(34vw, 54dvh, 440px); position: relative; width: var(--badge-size); aspect-ratio: 768 / 811; perspective: 1200px; }
+  .badge-stage::after { content: ''; position: absolute; bottom: -18px; left: 20%; width: 60%; height: 12px; border-radius: 50%; background: #0009; filter: blur(8px); }
+  .badge-rotor { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; will-change: transform; animation: badge-orbit 48s linear infinite; }
+  .badge-face, .badge-edge { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .badge-face { object-fit: contain; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .badge-front { transform: translateZ(6px); }
+  .badge-back { transform: rotateY(180deg) translateZ(6px); }
+  .badge-edge { background: linear-gradient(115deg, #58432c, #bfa064 45%, #382c1e); mask: url('/media/brand/distintivo-carreiras-hd.webp') center / contain no-repeat; -webkit-mask: url('/media/brand/distintivo-carreiras-hd.webp') center / contain no-repeat; transform: translateZ(var(--depth)); }
+  .motion-paused .badge-rotor { animation-play-state: paused; }
+  .emblem figcaption { color: #e1cb9a; font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; text-shadow: 0 2px 12px #000; }
+  .panel { position: relative; width: 100%; max-width: 480px; justify-self: end; overflow: hidden; border: 1px solid #d9b77055; border-radius: 24px; background: #121811ed; box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0005; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .panel-art { display: flex; align-items: center; min-height: 76px; padding: 20px 28px; border-bottom: 1px solid #d9b77035; background: linear-gradient(90deg, #11170ff2, #11170f38), url('/media/hero/norte-atmosphere.webp') right 36% / 150% auto; }
+  .panel-content { padding: clamp(22px, 2.4vw, 30px); }
+  .eyebrow { display: flex; align-items: center; gap: 9px; color: #e4bd75; font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
   svg { flex: 0 0 auto; }
-  h1 { margin: 0; font-size: clamp(29px, 3.2vw, 44px); line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
+  h1 { margin: 0; font-size: clamp(28px, 3vw, 40px); line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
   h1 span { color: #edc782; }
-  .description { margin: 20px 0 24px; color: #c4c5bb; font-size: 14px; line-height: 1.7; }
-  .saved { display: flex; gap: 10px; align-items: flex-start; padding: 16px 0; border-block: 1px solid #d9b77020; }
+  .description { margin: 16px 0 20px; color: #c8cbbf; font-size: 14px; line-height: 1.6; }
+  .saved { display: flex; gap: 10px; align-items: flex-start; padding: 14px 0; border-block: 1px solid #d9b77030; }
   .saved svg { color: #d7b779; margin-top: 2px; }
-  .saved p { margin: 0; font-size: 12px; line-height: 1.6; color: #b7b9ae; }
+  .saved p { margin: 0; font-size: 12px; line-height: 1.6; color: #bfc5b5; }
   .saved strong { display: block; color: #e8e7df; font-size: 12px; margin-bottom: 3px; }
-  button { width: 100%; min-height: 48px; margin-top: 24px; padding: 12px 18px; display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid #f4d799; border-radius: 12px; background: linear-gradient(115deg, #f1cf8a, #dca94c); color: #211b0f; font: inherit; font-size: 13px; font-weight: 750; cursor: pointer; transition: filter .18s, transform .18s; }
-  button:hover { filter: brightness(1.06); transform: translateY(-1px); }
-  button:active { transform: translateY(0); }
-  button:focus-visible, a:focus-visible { outline: 2px solid #f3d49a; outline-offset: 5px; }
-  .automatic { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 14px 0 0; color: #a9ad9f; font-size: 11px; line-height: 1.5; text-align: center; }
-  footer { padding: 14px 22px max(20px, env(safe-area-inset-bottom)); color: #858c7d; font-size: 10px; letter-spacing: .07em; text-align: center; }
-  @media (max-width: 760px) {
-    .top { padding: 20px 24px 4px; }
+  .retry { width: 100%; min-height: 48px; margin-top: 20px; padding: 12px 18px; display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid #f4d799; border-radius: 12px; background: linear-gradient(115deg, #f1cf8a, #dca94c); color: #211b0f; font: inherit; font-size: 13px; font-weight: 750; cursor: pointer; transition: filter .18s, transform .18s; }
+  .retry:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .retry:active { transform: translateY(0); }
+  button:focus-visible, a:focus-visible { outline: 2px solid #f3d49a; outline-offset: 4px; }
+  .automatic { margin: 12px 0 0; color: #b4bba8; font-size: 11px; line-height: 1.5; text-align: center; }
+  footer { padding: 14px 22px max(18px, env(safe-area-inset-bottom)); color: #c1bfaf; font-size: 10px; letter-spacing: .07em; text-align: center; text-shadow: 0 2px 10px #000; }
+  @keyframes badge-orbit { from { transform: rotateX(-5deg) rotateY(0deg); } to { transform: rotateX(-5deg) rotateY(360deg); } }
+  @media (min-resolution: 2dppx) { .badge-stage { --badge-size: min(34vw, 54dvh, 380px); } }
+  @media (max-width: 1000px) and (orientation: portrait) {
+    .scene { object-position: 66% center; }
+    .top { padding: 14px 20px 4px; }
     .brand img { width: 32px; height: 38px; }
     .brand strong { font-size: 18px; }
     .brand small { font-size: 8px; margin-top: 5px; }
-    .top-note { font-size: 9px; letter-spacing: .02em; }
-    main { width: min(100%, 520px); grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0 22px 8px; align-content: center; }
-    .art { margin: 0 -12px -28px; }
-    .art img { max-height: clamp(190px, 29svh, 300px); }
-    .art figcaption { display: none; }
-    .panel { position: relative; max-width: none; padding: 24px; border-radius: 20px; }
-    .eyebrow { margin-bottom: 16px; font-size: 9px; }
-    h1 { font-size: clamp(28px, 7vw, 36px); }
-    .description { margin: 14px 0 18px; font-size: 13px; }
-    .saved { padding: 12px 0; }
-    button { margin-top: 18px; }
-    footer { padding-top: 12px; font-size: 9px; }
-  }
-  @media (max-height: 680px) and (max-width: 760px) {
-    .top { padding-top: 12px; }
-    .art img { max-height: 170px; }
-    .panel { padding: 18px; }
-    h1 { font-size: 27px; }
+    .motion-label { display: none; }
+    .motion-toggle { padding: 8px; min-width: 44px; }
+    main { width: min(100%, 500px); grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 12px; padding: 8px 20px; }
+    .emblem { gap: 14px; }
+    .badge-stage { --badge-size: min(64vw, 30dvh, 360px); }
+    .emblem figcaption { font-size: 8px; letter-spacing: .18em; }
+    .panel { max-width: none; border-radius: 20px; }
+    .panel-art { min-height: 50px; padding: 14px 22px; }
+    .panel-content { padding: 20px 22px; }
+    .eyebrow { font-size: 9px; }
+    h1 { font-size: clamp(27px, 7vw, 34px); }
+    .description { margin: 12px 0 16px; font-size: 13px; }
+    .saved { padding: 11px 0; }
     .saved p, .saved strong { font-size: 11px; }
-    .saved p { line-height: 1.5; }
-    button { min-height: 44px; margin-top: 14px; }
-    .eyebrow { margin-bottom: 12px; }
-    .description { margin: 12px 0; font-size: 12px; line-height: 1.55; }
-    .automatic { margin-top: 10px; font-size: 10px; }
-    footer { padding-bottom: 12px; }
+    .retry { margin-top: 16px; min-height: 46px; }
+    .automatic { font-size: 10px; margin-top: 10px; }
+    footer { padding: 8px 16px max(12px, env(safe-area-inset-bottom)); font-size: 9px; }
   }
-  @media (prefers-reduced-motion: reduce) { button { transition: none; } }
-  @media (forced-colors: active) { .panel { border: 1px solid CanvasText; } button { border: 1px solid ButtonText; } .art { display: none; } }
+  @media (max-height: 720px) and (orientation: portrait) {
+    .top { padding-top: 8px; }
+    main { gap: 8px; padding-block: 4px; }
+    .badge-stage { --badge-size: min(48vw, 23dvh); }
+    .emblem figcaption { display: none; }
+    .panel-art { min-height: 42px; padding: 10px 18px; }
+    .panel-content { padding: 16px 18px; }
+    h1 { font-size: 26px; }
+    .description { margin: 10px 0 12px; font-size: 12px; line-height: 1.5; }
+    .saved { padding: 9px 0; }
+    .saved p { line-height: 1.45; }
+    .retry { min-height: 44px; margin-top: 12px; padding-block: 10px; }
+    footer { padding-block: 8px; }
+  }
+  @media (max-height: 600px) and (orientation: landscape) {
+    .top { padding: 8px 20px; }
+    .brand img { width: 30px; height: 34px; }
+    .brand strong { font-size: 17px; }
+    .brand small { font-size: 7px; margin-top: 4px; }
+    main { gap: 24px; padding: 4px 24px; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); }
+    .badge-stage { --badge-size: min(30vw, 59dvh, 270px); }
+    .emblem { gap: 12px; }
+    .emblem figcaption { font-size: 8px; }
+    .panel { max-width: 440px; border-radius: 16px; }
+    .panel-art { min-height: 36px; padding: 9px 16px; }
+    .eyebrow { font-size: 8px; }
+    .panel-content { padding: 14px 16px; }
+    h1 { font-size: 24px; }
+    .description { margin: 8px 0 10px; font-size: 12px; line-height: 1.45; }
+    .saved { padding: 8px 0; }
+    .saved p, .saved strong { font-size: 10px; line-height: 1.4; }
+    .retry { min-height: 44px; margin-top: 10px; padding: 9px 12px; font-size: 12px; }
+    .automatic { font-size: 9px; margin-top: 8px; }
+    footer { font-size: 8px; padding: 6px 16px 8px; }
+  }
+  @media (max-height: 360px) and (orientation: landscape) {
+    .emblem figcaption, footer { display: none; }
+    .badge-stage { --badge-size: min(28vw, 61dvh); }
+    .panel-content { padding: 10px 12px; }
+    .panel-art { min-height: 30px; padding: 7px 12px; }
+    h1 { font-size: 20px; }
+    .description { font-size: 11px; }
+    .automatic { margin-top: 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .badge-rotor { animation: none; transform: rotateY(-10deg); will-change: auto; } .motion-toggle { display: none; } .retry { transition: none; } }
+  @media (forced-colors: active) { .scene, .emblem { display: none; } body::before { display: none; } body { background: Canvas; } main { display: flex; justify-content: center; } .panel { background: Canvas; border: 1px solid CanvasText; color: CanvasText; } .panel-art { background: Canvas; } .retry { border: 1px solid ButtonText; } }
 </style>
 </head>
 <body>
+<img class="scene" src="/media/hero/norte-atmosphere.webp" alt="" width="1942" height="809" fetchpriority="high" decoding="async">
 <header class="top">
   <a class="brand" href="/" aria-label="Norte Concursos — página inicial">
     <img src="/favicon.svg" alt="" width="42" height="48">
     <span><strong>NORTE</strong><small>CONCURSOS</small></span>
   </a>
-  <span class="top-note">Carreiras policiais</span>
+  <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Pausar animação do emblema"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8v8m6-8v8"/></svg><span class="motion-label">Pausar animação</span></button>
 </header>
 <main>
-  <figure class="art" aria-hidden="true">
-    <img src="/media/loading/norte-abertura-hd.webp" width="1536" height="1024" alt="" decoding="async">
-    <figcaption>Foco. Constância. Conquista.</figcaption>
+  <figure class="emblem" aria-hidden="true">
+    <div class="badge-stage">
+      <div class="badge-rotor">
+        <span class="badge-edge" style="--depth:-5px"></span>
+        <span class="badge-edge" style="--depth:-3px"></span>
+        <span class="badge-edge" style="--depth:-1px"></span>
+        <span class="badge-edge" style="--depth:1px"></span>
+        <span class="badge-edge" style="--depth:3px"></span>
+        <span class="badge-edge" style="--depth:5px"></span>
+        <img class="badge-face badge-front" src="/media/brand/distintivo-carreiras-hd.webp" width="768" height="811" alt="" decoding="async">
+        <img class="badge-face badge-back" src="/media/brand/distintivo-carreiras-hd.webp" width="768" height="811" alt="" decoding="async">
+      </div>
+    </div>
+    <figcaption>Carreiras policiais · Norte Concursos</figcaption>
   </figure>
   <section class="panel" aria-labelledby="offline-title">
-    <div class="eyebrow">
+    <div class="panel-art"><div class="eyebrow">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m2 2 20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2M16 11a10 10 0 0 1 3 2M2 9a15 15 0 0 1 4-2.6M10 5.2A15 15 0 0 1 22 9M12 20h.01"/></svg>
       Conexão interrompida
-    </div>
+    </div></div>
+    <div class="panel-content">
     <h1 id="offline-title">Você está sem conexão<span>.</span></h1>
-    <p class="description">Uma pausa na conexão, não no seu objetivo. Reconecte-se à internet para continuar sua preparação.</p>
+    <p class="description">Reconecte-se à internet para continuar sua preparação.</p>
     <div class="saved">
       <svg width="18" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4v5c0 5-5 8-8 10-3-2-8-5-8-10V7zM8 12l3 3 5-6"/></svg>
-      <p><strong>Seu progresso confirmado permanece salvo.</strong>Novas respostas precisam de conexão para serem registradas na sua conta.</p>
+      <p><strong>Seu progresso confirmado está salvo.</strong>Novas respostas precisam de conexão para serem registradas na sua conta.</p>
     </div>
-    <button type="button" id="retry">Tentar reconectar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
-    <p class="automatic" role="status">Voltaremos automaticamente quando a conexão retornar.</p>
+    <button type="button" class="retry" id="retry">Tentar reconectar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+    <p class="automatic" role="status">Retorno automático ao reconectar.</p>
+    </div>
   </section>
 </main>
 <footer>Norte Concursos · Sua preparação tem um norte.</footer>
@@ -106,7 +172,19 @@
     else location.reload();
   }
   document.getElementById('retry').addEventListener('click', reconnect);
-  addEventListener('online', reconnect);
+  addEventListener('online', async function () {
+    try {
+      // HEAD bypasses the service worker's GET cache: a restored local network
+      // alone must not trigger a reload while the server is still unreachable.
+      const response = await fetch('/favicon.svg', { method: 'HEAD', cache: 'no-store' });
+      if (response.ok) reconnect();
+    } catch { /* Keep the offline page available until a real connection returns. */ }
+  });
+  document.getElementById('motion-toggle').addEventListener('click', function () {
+    const paused = document.body.classList.toggle('motion-paused');
+    this.setAttribute('aria-label', paused ? 'Retomar animação do emblema' : 'Pausar animação do emblema');
+    this.querySelector('.motion-label').textContent = paused ? 'Retomar animação' : 'Pausar animação';
+  });
 </script>
 </body>
 </html>
