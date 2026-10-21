@@ -1,0 +1,10 @@
+:root {
+  --police-insignia-art: url('/media/brand/carreiras-marca-claro-hd.webp');
+  --police-insignia-aspect: 768 / 1061;
+}
+:root.dark {
+  --police-insignia-art: url('/media/brand/distintivo-carreiras-hd.webp');
+  --police-insignia-aspect: 768 / 811;
+}
+.police-insignia { object-fit: contain; }
+.session-access__badge.police-insignia { max-height: 140px; object-fit: contain; }

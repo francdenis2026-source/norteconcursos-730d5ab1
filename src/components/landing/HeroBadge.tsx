@@ -1,10 +1,11 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
-const SRC = "/media/brand/distintivo-carreiras-hd.webp";
+import { usePoliceInsigniaSource } from "@/hooks/usePoliceInsignia";
 const THICKNESS = [1, 2, 3, 4, 5];
 
 /** Intentional brand interaction, with restrained depth and an accessible replay. */
 export function HeroBadge({ show = true }: { show?: boolean }) {
+  const src = usePoliceInsigniaSource();
   const root = useRef<HTMLButtonElement>(null);
   const tilt = useRef<HTMLDivElement>(null);
   const spin = useRef<HTMLDivElement>(null);
@@ -102,7 +103,7 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
                 <img
                   key={depth}
                   className="hero-badge__edge"
-                  src={SRC}
+                  src={src}
                   alt=""
                   width={768}
                   height={811}
@@ -112,7 +113,7 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
               ))}
               <img
                 className="hero-badge__face"
-                src={SRC}
+                src={src}
                 alt=""
                 width={768}
                 height={811}

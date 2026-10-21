@@ -1,3 +1,4 @@
+import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 import { HomeRail } from "@/components/landing/HomeRail";
 import { PLAN_ROWS, planValue, FAQ } from "@/lib/planPresentation";
 import { Link } from "@tanstack/react-router";
@@ -57,9 +58,8 @@ export function PlansSection() {
             </p>
           </div>
           <aside className="home-plans__signal" aria-label="Condições do teste gratuito">
-            <img
+            <PoliceInsignia
               className="home-plans__insignia"
-              src="/media/brand/distintivo-carreiras-hd.webp"
               alt=""
               width={96}
               height={116}

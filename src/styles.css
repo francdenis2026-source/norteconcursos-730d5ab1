@@ -2,6 +2,7 @@
 @source "../src";
 @import "tw-animate-css";
 @import "./styles/platform-signature.css";
+@import "./styles/police-insignia.css";
 
 @utility no-print {
   @media print {

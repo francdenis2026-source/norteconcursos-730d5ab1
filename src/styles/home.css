@@ -4478,7 +4478,7 @@
   left: auto;
   right: clamp(24px, 4vw, 80px);
   width: var(--badge-w);
-  aspect-ratio: 768 / 811;
+  aspect-ratio: var(--police-insignia-aspect, 768 / 811);
   perspective: 700px;
   padding: 0;
   border: 0;
@@ -4524,8 +4524,8 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 35%, rgb(255 244 214 / 25%), transparent 52%);
-  -webkit-mask: url("/media/brand/distintivo-carreiras-hd.webp") center / contain no-repeat;
-  mask: url("/media/brand/distintivo-carreiras-hd.webp") center / contain no-repeat;
+  -webkit-mask: var(--police-insignia-art) center / contain no-repeat;
+  mask: var(--police-insignia-art) center / contain no-repeat;
   mix-blend-mode: soft-light;
   transform: translateZ(1px);
 }

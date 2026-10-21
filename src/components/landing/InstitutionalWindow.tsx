@@ -1,3 +1,4 @@
+import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 import { Link } from "@tanstack/react-router";
 import * as Tabs from "@radix-ui/react-tabs";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Printer, ShieldCheck } from "lucide-react";
@@ -61,8 +62,7 @@ export function InstitutionalWindow({
           <p>{description}</p>
           {updatedAt && <p className="iw-print-date">Atualizado em {updatedAt}</p>}
         </div>
-        <img
-          src="/media/brand/distintivo-carreiras-hd.webp"
+        <PoliceInsignia
           alt=""
           width={96}
           height={116}
