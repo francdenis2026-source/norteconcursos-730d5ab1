@@ -39,3 +39,14 @@ for f in scripts/db/equivalent-reservation-stub.sql \
   supabase/migrations/20261020140000_equivalent_first_answer_reservation.sql \
   scripts/db/equivalent-reservation-scenarios.sql; do psql -v ON_ERROR_STOP=1 -d norte_check -f $f; done
 ```
+
+### Erro `42601: unterminated dollar-quoted string`
+
+Esse erro ocorre ao executar somente uma parte do arquivo: o bloco `do $$` precisa chegar
+até `end $$;`. No SQL Editor, limpe a seleção de texto e execute o arquivo completo
+`supabase/migrations/20261021100000_question_import_duplicate_guard.sql`, desde `begin;`
+até o último `commit;`. Não execute os arquivos de teste em produção.
+
+Se estiver reutilizando uma conexão que ficou em transação com erro, execute `rollback;`
+antes de tentar novamente. Não basta adicionar `$$` ao trecho cortado: faltariam os índices,
+os gatilhos e a confirmação final. O arquivo completo inclui todas essas etapas.

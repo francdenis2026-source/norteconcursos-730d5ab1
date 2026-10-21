@@ -26,7 +26,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
 import { CHUNK_RECOVERY_SCRIPT } from "../lib/chunkRecovery";
 import { READING_SCALE_INIT_SCRIPT } from "../lib/readingScale";
-import { claimSingleDeviceSession, ownsSingleDeviceSession } from "../lib/singleDeviceSession";
 
 function StatusScreen({
   code,
@@ -252,41 +251,11 @@ function RootComponent() {
       const currentUser = session?.user.id ?? null;
       if (currentUser !== previousUser) queryClient.clear();
       previousUser = currentUser;
-      if ((event === "SIGNED_IN" || event === "INITIAL_SESSION") && session) {
-        void claimSingleDeviceSession(session.user.id);
-      }
       if (event === "PASSWORD_RECOVERY" && !hasPendingEmailAuthCallback())
         void router.navigate({ to: "/auth", search: { recovery: true } });
     });
     return () => { active = false; data.subscription.unsubscribe(); };
   }, [router, queryClient]);
-
-  useEffect(() => {
-    let cancelled = false;
-    const check = async () => {
-      const { data } = await supabase.auth.getSession();
-      const userId = data.session?.user.id;
-      if (!userId || cancelled) return;
-      if (!(await ownsSingleDeviceSession(userId)) && !cancelled) {
-        await supabase.auth.signOut({ scope: "local" });
-        window.location.assign("/auth?reason=another-device");
-      }
-    };
-    // Dá tempo para a sessão recém-criada ser registrada antes da primeira
-    // verificação, evitando logout durante o redirecionamento inicial.
-    const first = window.setTimeout(check, 8000);
-    const timer = window.setInterval(check, 10000);
-    const onVisibility = () => {
-      if (document.visibilityState === "visible") void check();
-    };
-    document.addEventListener("visibilitychange", onVisibility);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(first);
-      window.clearInterval(timer);
-      document.removeEventListener("visibilitychange", onVisibility);
-    };
-  }, []);
 
   useEffect(() => {
     // Registra o service worker de app-shell (guarda o app para abrir offline;

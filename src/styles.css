@@ -26,6 +26,7 @@
 
 @theme {
   --font-sans: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-insignia: "Norte Insignia", "Georgia", serif;
   --font-display: "Archivo", "Bahnschrift SemiCondensed", "Arial Narrow", sans-serif;
   --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
 
@@ -13963,4 +13964,15 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell .student-hub__masthead--careers .student-hub__masthead-actions { margin-top: 12px; }
 @media (max-width: 640px) {
   .app-shell .student-hub__masthead--careers .student-hub__hero-copy { padding: 16px 18px 20px; }
+}
+
+/* Insignia-inspired editorial titles; controls and study content retain Archivo.
+   Local DejaVu Serif Condensed Bold is a licensed approximation of the raster badge. */
+.home.home :is(h1, h2),
+.app-shell.app-shell :is(h1, h2),
+.admin-access.admin-access h1 {
+  font-family: var(--font-insignia);
+  font-weight: 700;
+  font-synthesis: none;
+  letter-spacing: -.025em;
 }

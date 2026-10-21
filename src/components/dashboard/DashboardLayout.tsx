@@ -89,7 +89,7 @@ import { AcreClock } from "@/components/dashboard/AcreClock";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
 import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
 import { SessionClock } from "@/components/dashboard/SessionClock";
-import { IdleGuard } from "@/components/dashboard/IdleGuard";
+import { ActivityTracker } from "@/components/dashboard/ActivityTracker";
 import { FocusReturnBar } from "@/components/dashboard/FocusReturnBar";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
 import { MockService } from "@/services/mockService";
@@ -553,7 +553,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         data-area={isAdmin ? "admin" : "student"}
         data-brand-bg={brandBg ?? "off"}
       >
-        {user && user.id !== "demo-user" && <IdleGuard />}
+        {user && user.id !== "demo-user" && <ActivityTracker />}
         <FocusReturnBar />
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>
           <div className="app-sidebar__head">

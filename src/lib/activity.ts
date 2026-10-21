@@ -1,16 +1,10 @@
 import { platformNow } from "@/lib/platformClock";
 /**
- * Atividade do usuário na plataforma: mouse, teclado, rolagem ou toque. Serve para dois fins:
- * (1) parar de contar tempo de estudo quando não há ninguém interagindo e
- * (2) encerrar a sessão após 5 minutos de inatividade.
- * O instante da última interação fica no localStorage para valer entre abas do mesmo navegador.
+ * Atividade do usuário: pausa o tempo de estudo sem encerrar a autenticação.
+ * A última interação é compartilhada entre abas do mesmo navegador.
  */
 const KEY = "norte_last_activity";
 export const IDLE_PAUSE_SECONDS = 120;
-export const IDLE_LOGOUT_SECONDS = 300;
-export const IDLE_WARNING_SECONDS = 240;
-/** Páginas de leitura (leis, materiais, trilhas): ler sem tocar na tela é normal; tolera até 15 min. */
-export const IDLE_READING_LOGOUT_SECONDS = 900;
 
 const monotonicNow = () => typeof performance === "undefined" ? Date.now() : performance.now();
 let lastMonotonic = monotonicNow();
