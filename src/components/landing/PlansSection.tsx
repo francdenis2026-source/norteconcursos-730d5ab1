@@ -206,11 +206,11 @@ export function PlansSection() {
             <span className="home-eyebrow home-signal">Sem dúvidas no caminho</span>
             <h3>Antes de começar</h3>
             <img
-              className="home-faq__art home-faq__art--agents"
-              src="/media/hero/faq-agentes-recorte.webp"
+              className="home-faq__art home-faq__art--composition"
+              src="/media/hero/faq-agentes-composicao.webp"
               alt=""
               width={1000}
-              height={816}
+              height={667}
               loading="lazy"
               decoding="async"
             />
