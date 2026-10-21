@@ -1,0 +1,119 @@
+/* One location block and a compact utility strip, with glass when content scrolls. */
+.app-shell.navigation-v2 { --app-topbar-h: 72px; }
+.app-shell.navigation-v2[data-area] .app-topbar {
+  container: workspace-topbar / inline-size;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: calc(var(--app-topbar-h) + env(safe-area-inset-top, 0px));
+  min-height: calc(var(--app-topbar-h) + env(safe-area-inset-top, 0px));
+  padding-inline: clamp(16px, 2.2vw, 32px);
+  background: color-mix(in srgb, var(--card) 96%, transparent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.app-shell.navigation-v2[data-area] .app-topbar[data-scrolled="true"] {
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--brass) 26%, var(--border));
+  box-shadow: 0 8px 24px -20px rgb(0 0 0 / 40%);
+  -webkit-backdrop-filter: blur(22px) saturate(115%);
+  backdrop-filter: blur(22px) saturate(115%);
+}
+.app-location { flex: 1 1 auto; min-width: 0; display: grid; gap: 3px; }
+.app-location__context { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; color: var(--muted-foreground); font-size: 10px; font-weight: 550; line-height: 1.3; letter-spacing: .035em; }
+.app-location__group { display: inline-flex; align-items: center; gap: 8px; }
+.app-location__group::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--brass-deep); }
+.dark .app-location__group::before { background: var(--brass); }
+.app-location__title {
+  display: block;
+  margin: 0;
+  min-width: 0;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -.015em;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.app-shell.navigation-v2[data-area] .app-topbar__actions { flex: none; display: flex; align-items: center; gap: 8px; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back) {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted-foreground);
+  background: color-mix(in srgb, var(--card) 76%, transparent);
+  box-shadow: none;
+  transform: none;
+}
+.app-shell.navigation-v2[data-area] .app-topbar .app-top-search > span { display: none; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back):hover { color: var(--foreground); background: var(--muted); border-color: color-mix(in srgb, var(--foreground) 24%, var(--border)); transform: none; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(button, a):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back) svg { width: 18px; height: 18px; color: inherit; }
+.app-shell.navigation-v2[data-area] .app-topbar .app-chips { display: flex; align-items: center; flex: none; height: 40px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: color-mix(in srgb, var(--card) 72%, transparent); box-shadow: none; }
+.app-shell.navigation-v2[data-area] .app-topbar .app-chips > .app-streak {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  gap: 6px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: none;
+}
+.app-shell.navigation-v2[data-area] .app-topbar .app-chips > .app-streak + .app-streak { border-left: 1px solid var(--border); }
+.app-shell.navigation-v2[data-area] .app-topbar .app-streak svg { width: 15px; height: 15px; flex: none; color: var(--muted-foreground); }
+.app-shell.navigation-v2[data-area] .app-topbar .app-trial__full,
+.app-shell.navigation-v2[data-area] .app-topbar .app-trial__label { display: none; }
+.app-shell.navigation-v2[data-area] .app-topbar .app-trial__short { display: inline-flex; align-items: center; white-space: nowrap; }
+@container workspace-topbar (max-width: 950px) {
+  .app-shell.navigation-v2[data-area] .app-topbar .app-chips .app-clock { display: none; }
+}
+@container workspace-topbar (max-width: 640px) {
+  .app-shell.navigation-v2[data-area] .app-topbar .app-chips { display: none; }
+}
+@media screen and (max-width: 767px), screen and (max-width: 1023px) and (hover: none) and (pointer: coarse) {
+  .app-shell.navigation-v2 { --app-topbar-h: 64px; }
+  .app-shell.navigation-v2[data-area] .app-topbar { gap: 8px; padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right)); }
+  .app-shell.navigation-v2[data-area] .app-mobile-bar { display: flex; flex: none; min-width: 0; }
+  .app-shell.navigation-v2[data-area] .app-mobile-bar > button,
+  .app-shell.navigation-v2[data-area] .app-mobile-bar [data-slot="sheet-trigger"] { flex: none; }
+  .app-shell.navigation-v2[data-area] .app-topbar__actions { gap: 4px; }
+  .app-shell.navigation-v2[data-area] .app-topbar .app-chips { display: none; }
+  .app-location { gap: 2px; }
+  .app-location__area:has(+ .app-location__group), .app-location__group::before { display: none; }
+  .app-location__context { font-size: 9px; line-height: 1.2; letter-spacing: 0; }
+  .app-location__title { font-size: 13px; line-height: 1.2; }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .app-shell.navigation-v2[data-area] .app-topbar[data-scrolled] { background: var(--card); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .app-shell.navigation-v2[data-area] .app-topbar[data-scrolled] { background: var(--card); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce) { .app-shell.navigation-v2[data-area] .app-topbar { transition: none; } }
+@media (forced-colors: active) {
+  .app-shell.navigation-v2[data-area] .app-topbar[data-scrolled] { background: Canvas; color: CanvasText; border-color: CanvasText; -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: none; }
+}
