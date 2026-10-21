@@ -29,6 +29,7 @@ import {
   Mail,
   MessageCircle,
   Menu,
+  Plus,
   LogIn,
   ScrollText,
   ShieldCheck,
@@ -224,7 +225,10 @@ function PreparationInfo() {
       <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
         <div className="home-preparation__items">
           {TOOLS.map(({ icon: Icon, title, text }) => (
-            <article key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{text}</p></div></article>
+            <details key={title} name="preparation-tools" className="home-preparation__tool">
+              <summary><Icon aria-hidden="true" /><span>{title}</span><Plus aria-hidden="true" /></summary>
+              <p>{text}</p>
+            </details>
           ))}
         </div>
       </PreparationTabs.Content>
@@ -443,14 +447,6 @@ function Index() {
                 <span className="home-preparation__eyebrow">Para quem escolheu servir e proteger</span>
                 <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
                 <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
-                <div className="home-preparation__actions">
-                  <Link to="/auth" search={{ mode: "register" }} className="home-button home-button--gold">
-                    Começar gratuitamente <ArrowUpRight aria-hidden="true" />
-                  </Link>
-                  <Link to="/desafio-diario" className="home-preparation__challenge">
-                    Fazer o desafio diário <ArrowRight aria-hidden="true" />
-                  </Link>
-                </div>
               </div>
               <PreparationInfo />
             </div>
@@ -559,15 +555,20 @@ function Index() {
               <img className="home-footer__insignia" src="/media/hero/auth-distintivo.webp" alt="" width={96} height={116} loading="lazy" decoding="async" />
               <div>
                 <NorteBrand />
-                <p>Seu norte na preparação para carreiras policiais.</p>
+                <p>Preparação para carreiras policiais.</p>
+                <div className="home-footer__access" aria-label="Acesse sua conta">
+                  <Link to="/auth" search={{ mode: undefined }}>Entrar <LogIn aria-hidden="true" /></Link>
+                  <Link to="/auth" search={{ mode: "register" }}>Começar grátis <ArrowUpRight aria-hidden="true" /></Link>
+                </div>
               </div>
             </div>
             <FooterColumn
-              title="Plataforma"
+              title="Explore"
               links={[
                 ["Ferramentas", "#ferramentas"],
                 ["Carreiras", "#carreiras"],
                 ["Desafio diário", "/desafio-diario"],
+                ["Planos e condições", "#planos"],
               ]}
             />
             <FooterColumn
@@ -577,14 +578,6 @@ function Index() {
                 ["Privacidade", "/privacy"],
                 ["Termos de uso", "/terms"],
                 ["Central de suporte", "/suporte"],
-              ]}
-            />
-            <FooterColumn
-              title="Acesso"
-              links={[
-                ["Entrar", "/auth"],
-                ["Começar grátis", "/auth?mode=register"],
-                ["Planos e condições", "#planos"],
               ]}
             />
             <a
@@ -613,9 +606,10 @@ function Index() {
                 <MapPin aria-hidden="true" />
                 <address>Rua Joel Fereira de Sousa, Bela Vista · Feijó, AC · <span className="whitespace-nowrap">CEP 69960-000</span></address>
               </div>
-              <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com">
+              <a className="home-footer__contact-card" href="mailto:francdenis2026@gmail.com" aria-label="Enviar e-mail para francdenis2026@gmail.com">
                 <Mail aria-hidden="true" />
-                <span>francdenis2026@gmail.com</span>
+                <span className="home-footer__contact-detail">francdenis2026@gmail.com</span>
+                <span className="home-footer__contact-label">E-mail</span>
               </a>
               <a
                 className="home-footer__contact-card"
@@ -625,14 +619,14 @@ function Index() {
                 aria-label="Conversar pelo WhatsApp: (68) 99203-1340 (abre em nova aba)"
               >
                 <MessageCircle aria-hidden="true" />
-                <span>WhatsApp · (68) 99203-1340</span>
+                <span className="home-footer__contact-detail">WhatsApp · (68) 99203-1340</span>
+                <span className="home-footer__contact-label">WhatsApp</span>
               </a>
             </div>
           </section>
           <div className="home-footer__bottom">
             <span>© 2026 Norte Concursos. Todos os direitos reservados.</span>
-            <span>Tecnologia a serviço da sua preparação</span>
-            <span>Feijó · Acre</span>
+            <span className="home-footer__credit">Designed by Franc Denis · Feijó, Acre</span>
           </div>
         </div>
       </footer>
