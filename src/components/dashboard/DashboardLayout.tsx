@@ -400,6 +400,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, []);
 
   React.useEffect(() => {
+    // Administrador gerencia a plataforma: não registra visita de estudo, sequência nem medalhas.
+    if (isAdmin) return;
     let known = 0;
     let cancelled = false;
     Promise.all([
@@ -429,7 +431,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       cancelled = true;
       window.clearInterval(interval);
     };
-  }, []);
+  }, [isAdmin]);
 
   React.useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -644,7 +646,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               >
                 <NorteBrand light compact />
               </Link>
-              <span className="app-mobile-title">{current?.label ?? "Minha preparação"}</span>
+              <span className="app-mobile-title">{current?.label ?? (isAdmin ? "Administração" : "Minha preparação")}</span>
             </div>
 
             <div className="app-crumbs">
@@ -691,10 +693,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                     </TooltipContent>
                   </Tooltip>
                 )}
-                <span className="app-streak" title="Dias seguidos de estudo">
-                  <Flame />
-                  <span className="tabular">{streak?.currentStreak ?? 0}</span>
-                </span>
+                {!isAdmin && (
+                  <span className="app-streak" title="Dias seguidos de estudo">
+                    <Flame />
+                    <span className="tabular">{streak?.currentStreak ?? 0}</span>
+                  </span>
+                )}
               </div>
               <button
                 type="button"
