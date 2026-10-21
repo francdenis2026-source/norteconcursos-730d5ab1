@@ -205,15 +205,17 @@ export function PlansSection() {
           <div className="home-faq__intro">
             <span className="home-eyebrow home-signal">Sem dúvidas no caminho</span>
             <h3>Antes de começar</h3>
-            <img
-              className="home-faq__art home-faq__art--composition"
-              src="/media/hero/faq-agentes-composicao.webp"
-              alt=""
-              width={1000}
-              height={667}
-              loading="lazy"
-              decoding="async"
-            />
+            <div className="home-faq__scene" aria-hidden="true">
+              <img
+                className="home-faq__art"
+                src="/media/hero/faq-agentes-recorte.webp"
+                alt=""
+                width={1000}
+                height={816}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
           <div className="home-faq__list">
             {FAQ.map(([question, answer]) => (
