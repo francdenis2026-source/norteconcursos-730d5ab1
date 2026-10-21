@@ -613,7 +613,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
         <div className="app-main">
           <header className="app-topbar no-print">
-            <div className="app-mobile-bar gap-2">
+            <PlatformBack />
+            <div className="app-mobile-bar min-w-0 gap-2">
               <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                 <SheetTrigger asChild>
                   <button type="button" className="app-top-btn" aria-label="Abrir menu">
@@ -722,7 +723,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             data-hue={GROUP_HUE[current?.group ?? "Planejamento"] ?? "gold"}
           >
             <div className="app-content__inner">
-              <PlatformBack />
               {children}
             </div>
             {showsReadingControl(location.pathname) && <ReadingSizeControl />}
