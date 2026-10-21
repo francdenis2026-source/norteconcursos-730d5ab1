@@ -1,0 +1,767 @@
+{
+  "layoutCases": [
+    {
+      "width": 1440,
+      "theme": "dark",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 1428,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 1440,
+      "mode": "worst",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "worst",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "worst",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "zero",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "zero",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "zero",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "one",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "one",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "one",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "unavailable",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "unavailable",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 1440,
+      "mode": "unavailable",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 756,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 768,
+      "mode": "worst",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "worst",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "worst",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "zero",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "zero",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "zero",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "one",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "one",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "one",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "unavailable",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 768,
+      "mode": "unavailable",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": true
+    },
+    {
+      "width": 768,
+      "mode": "unavailable",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 390,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 390,
+      "mode": "worst",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "worst",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "worst",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "zero",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "zero",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "zero",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "one",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "one",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "one",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "unavailable",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "unavailable",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 390,
+      "mode": "unavailable",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "v": 1,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "v": 2,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "v": 3,
+      "overflow": false,
+      "heading": "Sua preparação tem um norte.",
+      "rootWidth": 320,
+      "primary": "/auth?mode=register"
+    },
+    {
+      "width": 320,
+      "mode": "worst",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "worst",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "worst",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "9.007.199.254.740.991questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "zero",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "zero",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "zero",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "0questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "one",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "one",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "one",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "1questões disponíveis",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "unavailable",
+      "v": 1,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "unavailable",
+      "v": 2,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    },
+    {
+      "width": 320,
+      "mode": "unavailable",
+      "v": 3,
+      "pageOverflow": false,
+      "count": "Questõespara sua preparação",
+      "counterOverflow": false,
+      "fallback": false
+    }
+  ],
+  "additionalChecks": {
+    "out": [
+      {
+        "width": 2560,
+        "v": 1,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "width": 2560,
+        "v": 2,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "width": 2560,
+        "v": 3,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "width": 720,
+        "v": 1,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 2
+      },
+      {
+        "width": 720,
+        "v": 2,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 2
+      },
+      {
+        "width": 720,
+        "v": 3,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 2
+      },
+      {
+        "width": 320,
+        "v": 1,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "width": 320,
+        "v": 2,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "width": 320,
+        "v": 3,
+        "overflow": false,
+        "artTransition": "0s",
+        "deadAnchors": [],
+        "rootFontScale": 1
+      },
+      {
+        "cpuThrottle": 4,
+        "flips": 12,
+        "metrics": [
+          {
+            "name": "LayoutCount",
+            "delta": 118
+          },
+          {
+            "name": "RecalcStyleCount",
+            "delta": 178
+          },
+          {
+            "name": "LayoutDuration",
+            "delta": 0.246255
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "delta": 0.450633
+          },
+          {
+            "name": "TaskDuration",
+            "delta": 5.955507
+          }
+        ]
+      },
+      {
+        "reducedMotion": {
+          "transform": "none",
+          "duration": "1e-05s"
+        }
+      },
+      {
+        "clipboardDenied": true,
+        "toasts": 1,
+        "rootToasters": 1
+      }
+    ],
+    "errors": []
+  },
+  "note": "rootFontScale=2 significa html font-size:200%, não zoom real do navegador. CPU 4x é emulação; sem medição em celular físico."
+}

@@ -73,6 +73,7 @@ import { Route as DashboardStudyToolsRouteImport } from './routes/dashboard/stud
 import { Route as DashboardSubscriptionsRouteImport } from './routes/dashboard/subscriptions'
 import { Route as DashboardTimerRouteImport } from './routes/dashboard/timer'
 import { Route as DashboardTrilhasRouteImport } from './routes/dashboard/trilhas'
+import { Route as PrototypesHomepageRouteImport } from './routes/prototypes.homepage'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as DashboardAdminStudentIdRouteImport } from './routes/dashboard/admin-student.$id'
 import { Route as DashboardCancellationReceiptIdRouteImport } from './routes/dashboard/cancellation-receipt.$id'
@@ -406,6 +407,11 @@ const DashboardTrilhasRoute = DashboardTrilhasRouteImport.update({
   path: '/trilhas',
   getParentRoute: () => DashboardRoute,
 } as any)
+const PrototypesHomepageRoute = PrototypesHomepageRouteImport.update({
+  id: '/prototypes/homepage',
+  path: '/prototypes/homepage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   id: '/api/public/stripe-webhook',
   path: '/api/public/stripe-webhook',
@@ -513,6 +519,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/trilhas': typeof DashboardTrilhasRoute
+  '/prototypes/homepage': typeof PrototypesHomepageRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -584,6 +591,7 @@ export interface FileRoutesByTo {
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/trilhas': typeof DashboardTrilhasRoute
+  '/prototypes/homepage': typeof PrototypesHomepageRoute
   '/dashboard': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -659,6 +667,7 @@ export interface FileRoutesById {
   '/dashboard/subscriptions': typeof DashboardSubscriptionsRoute
   '/dashboard/timer': typeof DashboardTimerRoute
   '/dashboard/trilhas': typeof DashboardTrilhasRoute
+  '/prototypes/homepage': typeof PrototypesHomepageRoute
   '/dashboard/': typeof DashboardIndexRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
   '/dashboard/admin-student/$id': typeof DashboardAdminStudentIdRoute
@@ -735,6 +744,7 @@ export interface FileRouteTypes {
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/trilhas'
+    | '/prototypes/homepage'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -806,6 +816,7 @@ export interface FileRouteTypes {
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/trilhas'
+    | '/prototypes/homepage'
     | '/dashboard'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -880,6 +891,7 @@ export interface FileRouteTypes {
     | '/dashboard/subscriptions'
     | '/dashboard/timer'
     | '/dashboard/trilhas'
+    | '/prototypes/homepage'
     | '/dashboard/'
     | '/api/public/stripe-webhook'
     | '/dashboard/admin-student/$id'
@@ -906,6 +918,7 @@ export interface RootRouteChildren {
   ApiVoiceSpeechRoute: typeof ApiVoiceSpeechRoute
   ApiVoiceStudioAdminRoute: typeof ApiVoiceStudioAdminRoute
   CheckoutPlanIdRoute: typeof CheckoutPlanIdRoute
+  PrototypesHomepageRoute: typeof PrototypesHomepageRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
 
@@ -1359,6 +1372,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardTrilhasRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/prototypes/homepage': {
+      id: '/prototypes/homepage'
+      path: '/prototypes/homepage'
+      fullPath: '/prototypes/homepage'
+      preLoaderRoute: typeof PrototypesHomepageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/stripe-webhook': {
       id: '/api/public/stripe-webhook'
       path: '/api/public/stripe-webhook'
@@ -1576,6 +1596,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiVoiceSpeechRoute: ApiVoiceSpeechRoute,
   ApiVoiceStudioAdminRoute: ApiVoiceStudioAdminRoute,
   CheckoutPlanIdRoute: CheckoutPlanIdRoute,
+  PrototypesHomepageRoute: PrototypesHomepageRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
 export const routeTree = rootRouteImport
