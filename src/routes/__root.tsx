@@ -1,3 +1,4 @@
+import { DARK_INSIGNIA, LIGHT_INSIGNIA } from "@/lib/policeInsignia";
 import { InitialLoadingScreen, InitialLoadingReady, INITIAL_LOADING_CSS, INITIAL_LOADING_WATCHDOG, finishInitialLoading } from "@/components/PlatformLoadingScreen";
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
@@ -186,6 +187,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
         <link rel="preload" as="image" href="/media/loading/norte-abertura-mobile-hd.webp" imageSrcSet="/media/loading/norte-abertura-mobile-hd.webp 1x, /media/loading/norte-abertura-hd.webp 2x" media="(max-width: 640px)" type="image/webp" />
         <link rel="preload" as="image" href="/media/loading/norte-abertura-hd.webp" media="(min-width: 641px)" type="image/webp" />
+        <link rel="preload" as="image" href={LIGHT_INSIGNIA} type="image/webp" />
+        <link rel="preload" as="image" href={DARK_INSIGNIA} type="image/webp" />
         <HeadContent />
       </head>
       <body>

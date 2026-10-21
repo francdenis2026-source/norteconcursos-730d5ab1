@@ -1,11 +1,10 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
-import { usePoliceInsigniaSource } from "@/hooks/usePoliceInsignia";
+import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 const THICKNESS = [1, 2, 3, 4, 5];
 
 /** Intentional brand interaction, with restrained depth and an accessible replay. */
 export function HeroBadge({ show = true }: { show?: boolean }) {
-  const src = usePoliceInsigniaSource();
   const root = useRef<HTMLButtonElement>(null);
   const tilt = useRef<HTMLDivElement>(null);
   const spin = useRef<HTMLDivElement>(null);
@@ -100,10 +99,9 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
           <div className="hero-badge__enter">
             <div className="hero-badge__spin" ref={spin}>
               {THICKNESS.map((depth) => (
-                <img
+                <PoliceInsignia
                   key={depth}
                   className="hero-badge__edge"
-                  src={src}
                   alt=""
                   width={768}
                   height={811}
@@ -111,9 +109,8 @@ export function HeroBadge({ show = true }: { show?: boolean }) {
                   draggable={false}
                 />
               ))}
-              <img
+              <PoliceInsignia
                 className="hero-badge__face"
-                src={src}
                 alt=""
                 width={768}
                 height={811}
