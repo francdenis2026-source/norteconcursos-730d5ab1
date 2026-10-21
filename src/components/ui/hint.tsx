@@ -22,7 +22,7 @@ export function Hint({
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
-        <TooltipContent side={side}>{content}</TooltipContent>
+        <TooltipContent side={side ?? "top"}>{content}</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
