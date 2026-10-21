@@ -61,6 +61,26 @@ try {
   await context.close();console.log('PASS simultaneous opening: exactly one active panel');
  }
  {
+  // A fresh login can issue another JWT session_id even in the same browser.
+  // Separate per-page seeded tokens reproduce that without production auth writes.
+  const context=await browser.newContext();await mock(context,'user');
+  const first=await context.newPage();
+  await first.addInitScript(({key,value})=>localStorage.setItem(key,JSON.stringify(value)),{key:storageKey,value:session('user')});
+  await first.goto(base+'/dashboard/profile');await first.locator('.app-shell').waitFor();
+  const second=await context.newPage();const fresh=session('user');
+  const payload=JSON.parse(Buffer.from(fresh.access_token.split('.')[1],'base64url').toString());
+  payload.session_id='33333333-3333-4333-8333-333333333333';
+  fresh.access_token=fresh.access_token.split('.')[0]+'.'+Buffer.from(JSON.stringify(payload)).toString('base64url')+'.test';
+  await second.addInitScript(({key,value})=>localStorage.setItem(key,JSON.stringify(value)),{key:storageKey,value:fresh});
+  await second.goto(base+'/dashboard/profile');await blocked(second).waitFor();
+  await first.locator('.app-shell').waitFor();assert.equal(await second.locator('.app-shell').count(),0);
+  // Auth broadcasts / token rotation must not release the original document lock.
+  await first.evaluate(value=>window.dispatchEvent(new StorageEvent('storage',{key:'sb-gkwphadbveiyjcwiiizw-auth-token',newValue:JSON.stringify(value)})),fresh);
+  await second.getByRole('button',{name:'Tentar novamente'}).click();await blocked(second).waitFor();
+  await first.close();await second.getByRole('button',{name:'Tentar novamente'}).click();await second.locator('.app-shell').waitFor();
+  await context.close();console.log('PASS fresh login with a different session_id cannot bypass browser tab ownership');
+ }
+ {
   const {context}=await seeded('user');await context.addInitScript(()=>Object.defineProperty(navigator,'locks',{value:undefined}));
   const page=await context.newPage();await page.goto(base+'/dashboard/profile');await page.locator('[data-session-tab-state="unavailable"]').waitFor();
   assert.equal(await page.locator('.app-shell').count(),0);await context.close();console.log('PASS unavailable lock service: access remains blocked');

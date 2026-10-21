@@ -9,14 +9,15 @@ import { claimSessionTab, type SessionTabState } from "@/lib/sessionTab";
 /** Block the duplicate before mounting protected screens, timers or the inactivity monitor. */
 export function SessionTabGuard({ sessionKey, children }: { sessionKey: string | null; children: ReactNode }) {
   const { pathname } = useLocation();
-  const [snapshot, setSnapshot] = useState<{ key: string | null; state: SessionTabState }>({ key: sessionKey, state: "checking" });
+  const authenticated = sessionKey !== null;
+  const [snapshot, setSnapshot] = useState<{ authenticated: boolean; state: SessionTabState }>({ authenticated, state: "checking" });
   const [attempt, setAttempt] = useState(0);
-  const state = sessionKey === null ? "owner" : snapshot.key === sessionKey ? snapshot.state : "checking";
-  const setState = (next: SessionTabState) => setSnapshot({ key: sessionKey, state: next });
+  const state = !authenticated ? "owner" : snapshot.authenticated ? snapshot.state : "checking";
+  const setState = (next: SessionTabState) => setSnapshot({ authenticated, state: next });
   useEffect(() => {
-    if (!sessionKey) return;
-    return claimSessionTab(navigator.locks, sessionKey, next => setSnapshot({ key: sessionKey, state: next }));
-  }, [sessionKey, attempt]);
+    if (!authenticated) { setSnapshot({ authenticated: false, state: "checking" }); return; }
+    return claimSessionTab(navigator.locks, next => setSnapshot({ authenticated: true, state: next }));
+  }, [authenticated, attempt]);
   // Preserve an in-flight login/recovery form while claiming its new session. Protected
   // routes are never mounted during checking, and blocked tabs mount no idle monitor.
   const authForm = pathname === "/auth" || pathname === "/admin";

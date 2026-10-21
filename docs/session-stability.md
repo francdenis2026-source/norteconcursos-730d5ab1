@@ -8,10 +8,10 @@ aba substituía o registro e provocava uma saída que também atingia o armazena
 A aplicação deixou de usar essa tabela para encerrar sessões ou impedir respostas.
 A tabela antiga fica preservada para evitar alterações desnecessárias nos dados existentes.
 
-## Uma aba por sessão
+## Uma aba autenticada por navegador
 
-O `SessionTabGuard` permite **uma única aba ativa por sessão no mesmo navegador e origem**.
-A primeira aba adquire um Web Lock pelo `session_id`; as demais mostram uma tela de bloqueio,
+O `SessionTabGuard` permite **uma única aba autenticada no mesmo navegador e origem**.
+A primeira aba adquire o Web Lock fixo `norte:authenticated-tab`; as demais mostram uma tela de bloqueio,
 sem montar o painel, os cronômetros ou o monitor de inatividade. A aba bloqueada não chama
 `signOut`, não remove tokens e não renova o prazo de cinco minutos da aba original.
 
@@ -20,7 +20,7 @@ O bloqueio é atômico inclusive quando duas abas são abertas juntas. Não depe
 ou de consultas ao Supabase. Fechar a aba libera o lock pelo próprio navegador. A aba bloqueada
 pode então usar **Tentar novamente**. A verificação aguarda até 150 ms para tolerar a limpeza
 de uma instância anterior; depois de detectar outra aba ativa, cancela a espera e não permanece
-na fila para tomar a sessão durante uma recarga posterior da aba original. Renovação de token preserva a mesma chave; um novo login usa outra.
+na fila para tomar a sessão durante uma recarga posterior da aba original. Renovação de token e novo login preservam o mesmo bloqueio; um novo `session_id` não permite uma segunda aba ativa.
 Se o navegador não conseguir arbitrar o lock, a tela informa o problema e não libera acesso
 sem confirmação. A regra não impede sessões independentes em outros aparelhos ou perfis de
 navegador; essa política exigiria validação no servidor.
@@ -56,7 +56,7 @@ PLAYWRIGHT_MODULE=/caminho/playwright-core/index.mjs node scripts/qa/auth-sessio
 ```
 
 O teste intercepta o Supabase e usa tokens fictícios: verifica administrador e aluno em duas abas,
-bloqueio da segunda aba, recarga da primeira, abertura simultânea, liberação ao fechar a primeira,
+bloqueio da segunda aba inclusive com outro `session_id`, recarga da primeira, abertura simultânea, liberação ao fechar a primeira,
 aviso e saída após cinco minutos, retorno à aba e erros na consulta administrativa.
 O cenário adicional de rede travada verifica a remoção local de tokens sem esperar o Supabase.
 Não consulta nem escreve contas reais. A configuração de expiração/revogação no Supabase de
