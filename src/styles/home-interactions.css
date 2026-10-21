@@ -4,7 +4,7 @@
 
 :root:is(.dark, :not(.dark)) .home.home :is(
   .home-opportunity, .home-plan, .home-preparation__info,
-  .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+  .question-count-badge, .home-plans__signal, .home-platform-qr
 ) {
   transition: transform 240ms cubic-bezier(.2,.7,.2,1),
     border-color 240ms ease, box-shadow 240ms ease;
@@ -16,7 +16,7 @@
 /* Disable the legacy decorative overlay as well as the former cursor light. */
 :root:is(.dark, :not(.dark)) .home.home :is(
   .home-opportunity, .home-plan, .home-preparation__info,
-  .daily-badge, .question-count-badge, .home-plans__signal
+  .question-count-badge, .home-plans__signal
 )::after { content: none; }
 
 .home :is(.home-nav a, .home-login, .home-footer__links a,
@@ -50,7 +50,7 @@
 @media (hover: hover) and (pointer: fine) {
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-opportunity, .home-plan, .home-preparation__info,
-    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+    .question-count-badge, .home-plans__signal, .home-platform-qr
   ):hover {
     transform: translateY(-4px);
     border-color: color-mix(in srgb, var(--micro-accent) 42%, var(--home-glass-edge));
@@ -75,7 +75,7 @@
 }
 :root:is(.dark, :not(.dark)) .home.home :is(
   .home-opportunity, .home-plan, .home-preparation__info,
-  .daily-badge, .question-count-badge, .home-platform-qr
+  .question-count-badge, .home-platform-qr
 ):focus-within { border-color: var(--micro-accent); }
 .home :is(.home-footer__contact-card[href], .home-hero__explore,
   .home-preparation__challenge, summary):focus-visible {
@@ -89,11 +89,11 @@
 @media (prefers-reduced-motion: reduce) {
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-opportunity, .home-plan, .home-preparation__info,
-    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+    .question-count-badge, .home-plans__signal, .home-platform-qr
   ) { transition: none; }
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-opportunity, .home-plan, .home-preparation__info,
-    .daily-badge, .question-count-badge, .home-plans__signal, .home-platform-qr
+    .question-count-badge, .home-plans__signal, .home-platform-qr
   ):hover { transform: none; }
   .home :is(.home-opportunity__image, .home-plan__media) > img,
   .home :is(.home-button, .home-text-link, .home-hero__explore, .home-preparation__challenge) > svg {

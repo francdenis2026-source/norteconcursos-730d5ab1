@@ -201,39 +201,71 @@
   .home-backdrop { display: none; }
 }
 
-/* A slow perimeter signal draws attention to the free daily challenge. */
-@property --daily-orbit {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
+/* Daily challenge: fixed brass detailing with deliberate, quiet feedback. */
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge {
+  --daily-accent: var(--brass-soft);
+  transform: none;
+  transition: none;
+  border-color: color-mix(in oklch, var(--daily-accent) 32%, var(--home-glass-edge));
+  box-shadow: inset 0 1px 0 var(--home-glass-light);
 }
-:root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after {
+:root:not(.dark) .home.home .home-hero .home-hero__study-links .daily-badge { --daily-accent: var(--stage-amber); }
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:hover {
+  transform: none;
+  background: linear-gradient(145deg, var(--home-glass-light), transparent 55%), var(--home-glass-fill);
+  border-color: color-mix(in oklch, var(--daily-accent) 32%, var(--home-glass-edge));
+  box-shadow: inset 0 1px 0 var(--home-glass-light);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge::before {
   content: '';
   display: block;
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  padding: 1.5px;
-  background: conic-gradient(from var(--daily-orbit),
-    transparent 0deg 265deg,
-    color-mix(in srgb, var(--brass) 45%, transparent) 290deg,
-    var(--brass-soft) 315deg,
-    transparent 340deg 360deg);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
+  z-index: -1;
   pointer-events: none;
-  opacity: .75;
-  animation: daily-perimeter 8s linear infinite;
+  background: linear-gradient(115deg, color-mix(in oklch, var(--daily-accent) 13%, transparent), transparent 68%);
+  transform: none;
+  animation: none;
+  opacity: .3;
+  transition: opacity 160ms ease;
 }
-@keyframes daily-perimeter { to { --daily-orbit: 360deg; } }
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 14px auto 14px 0;
+  width: 2px;
+  border-radius: 0 2px 2px 0;
+  background: var(--daily-accent);
+  pointer-events: none;
+  opacity: .7;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge .daily-badge__cta {
+  color: var(--daily-accent);
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge .daily-badge__cta svg {
+  transform: none;
+  transition: transform 160ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:hover::before { opacity: 1; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:hover .daily-badge__cta svg { transform: translateX(2px); }
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:focus-visible {
+  outline: 2px solid var(--daily-accent);
+  outline-offset: 3px;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:focus-visible::before { opacity: 1; transition: none; }
+:root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:active::before { opacity: .65; transition: none; }
 @media (prefers-reduced-motion: reduce) {
-  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after {
-    animation: none;
-    opacity: .4;
-  }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge::before,
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge .daily-badge__cta svg { transition: none; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:hover .daily-badge__cta svg { transform: none; }
 }
 @media (forced-colors: active) {
-  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after { display: none; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge,
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:hover { background: Canvas; color: CanvasText; border-color: CanvasText; box-shadow: none; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge::before,
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge::after { display: none; }
+  :root:is(.dark, :not(.dark)) .home.home .home-hero .home-hero__study-links .daily-badge:focus-visible { outline-color: Highlight; }
 }
