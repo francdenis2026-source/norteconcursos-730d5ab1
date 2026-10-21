@@ -12,8 +12,7 @@ export function HeroVideo({
 }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
-  // Celular e tablet recebem uma versão menor (640 px, ~85 KB): o vídeo ocupa só uma faixa de 240 px
-  // nessas telas, e o arquivo grande demorava a chegar em conexões móveis.
+  // Touch layouts use the smaller video in the artwork area, alongside or below the copy.
   const [compact, setCompact] = useState(false);
   const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
   const finishRef = useRef<() => void>(() => {});
@@ -32,7 +31,7 @@ export function HeroVideo({
       (connection?.downlink !== undefined && connection.downlink > 0 && connection.downlink < 0.7);
     // Plays on phones and tablets too; only data saver, slow networks and reduced motion keep the still image.
     if (!connection?.saveData && !slow && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setCompact(matchMedia("(max-width: 900px)").matches);
+      setCompact(matchMedia("(max-width: 1100px)").matches);
       setLoadVideo(true);
     } else onIntroSettled?.();
     // eslint-disable-next-line react-hooks/exhaustive-deps

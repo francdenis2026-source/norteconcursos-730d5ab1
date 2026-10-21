@@ -42,6 +42,7 @@ import "@/styles/home-operations.css";
 import "@/styles/home-light.css";
 import "@/styles/home-refinements.css";
 import "@/styles/home-interactions.css";
+import "@/styles/home-responsive.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -256,8 +257,17 @@ function Index() {
   const [introPlaying, setIntroPlaying] = useState(false);
   const [introSettled, setIntroSettled] = useState(false);
   const [menuKeyboard, setMenuKeyboard] = useState(false);
+  const [compactHero, setCompactHero] = useState(false);
+  useEffect(() => {
+    const media = matchMedia("(max-width: 1100px)");
+    const update = () => setCompactHero(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
   return (
     <div className="home">
+      <div className="home-backdrop" aria-hidden="true" />
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
@@ -363,7 +373,7 @@ function Index() {
         <section className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
-          <div className="home-container home-hero__content" inert={introPlaying}>
+          <div className="home-container home-hero__content" inert={introPlaying && !compactHero}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
                 <span className="home-eyebrow">
