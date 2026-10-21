@@ -313,7 +313,7 @@
       "pageOverflow": false,
       "count": "Questõespara sua preparação",
       "counterOverflow": false,
-      "fallback": true
+      "fallback": false
     },
     {
       "width": 768,
@@ -466,7 +466,7 @@
       "pageOverflow": false,
       "count": "Questõespara sua preparação",
       "counterOverflow": false,
-      "fallback": false
+      "fallback": true
     },
     {
       "width": 390,
@@ -475,7 +475,7 @@
       "pageOverflow": false,
       "count": "Questõespara sua preparação",
       "counterOverflow": false,
-      "fallback": false
+      "fallback": true
     },
     {
       "width": 390,
