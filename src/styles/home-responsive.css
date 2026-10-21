@@ -458,3 +458,23 @@
     backdrop-filter: none;
   }
 }
+
+/* Transparent agents replace the framed still life without adding another background. */
+.home.home .home-faq__art.home-faq__art--agents {
+  width: min(100%, 300px);
+  height: auto;
+  max-height: 250px;
+  aspect-ratio: 1000 / 816;
+  object-fit: contain;
+  object-position: center bottom;
+  border: 0;
+  border-radius: 0;
+  filter: drop-shadow(0 10px 14px rgb(0 0 0 / 20%));
+}
+@media (max-width: 760px) {
+  .home.home .home-faq__intro { grid-template-columns: minmax(0, 1fr) clamp(112px, 30vw, 140px); }
+  .home.home .home-faq__art.home-faq__art--agents { width: 100%; height: 124px; }
+}
+@media (forced-colors: active) {
+  .home.home .home-faq__art.home-faq__art--agents { filter: none; }
+}
