@@ -200,3 +200,40 @@
 @media (forced-colors: active), print {
   .home-backdrop { display: none; }
 }
+
+/* A slow perimeter signal draws attention to the free daily challenge. */
+@property --daily-orbit {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+:root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--daily-orbit),
+    transparent 0deg 265deg,
+    color-mix(in srgb, var(--brass) 45%, transparent) 290deg,
+    var(--brass-soft) 315deg,
+    transparent 340deg 360deg);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: .75;
+  animation: daily-perimeter 8s linear infinite;
+}
+@keyframes daily-perimeter { to { --daily-orbit: 360deg; } }
+@media (prefers-reduced-motion: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after {
+    animation: none;
+    opacity: .4;
+  }
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__study-links .daily-badge::after { display: none; }
+}
