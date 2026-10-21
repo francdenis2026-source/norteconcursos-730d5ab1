@@ -114,11 +114,11 @@ export function HeroVideo({
     <>
       <img
         className="home-hero__image"
-        src="/media/hero/hero-norte-impacto.webp"
+        src="/media/hero/hero-norte-recorte.webp"
         alt=""
         aria-hidden="true"
-        width={1774}
-        height={887}
+        width={1208}
+        height={1302}
         fetchPriority="high"
       />
       {loadVideo && phase === "ready" && (

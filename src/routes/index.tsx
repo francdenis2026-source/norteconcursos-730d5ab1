@@ -67,7 +67,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preload", as: "image", href: "/media/hero/hero-norte-impacto.webp", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: "/media/hero/hero-norte-recorte.webp", fetchPriority: "high" },
     ],
   }),
 });

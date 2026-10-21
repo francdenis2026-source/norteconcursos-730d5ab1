@@ -6,8 +6,8 @@
   --home-glass-light: color-mix(in srgb, var(--background) 42%, transparent);
   --home-glass-shadow: 0 16px 40px -24px color-mix(in srgb, var(--foreground) 28%, transparent);
   background-image: linear-gradient(
-    color-mix(in srgb, var(--home-bg) 94%, transparent),
-    color-mix(in srgb, var(--home-bg) 88%, transparent)
+    color-mix(in srgb, var(--home-bg) 92%, transparent),
+    color-mix(in srgb, var(--home-bg) 92%, transparent)
   ), url('/media/hero/home-bg-texture.webp');
   background-position: center;
   background-size: cover;
@@ -21,8 +21,8 @@
   --home-glass-light: color-mix(in srgb, var(--on-ink) 5%, transparent);
   --home-glass-shadow: 0 20px 48px -24px rgb(0 0 0 / 55%);
   background-image: linear-gradient(
-    color-mix(in srgb, var(--home-bg) 58%, transparent),
-    color-mix(in srgb, var(--home-bg) 72%, transparent)
+    color-mix(in srgb, var(--home-bg) 64%, transparent),
+    color-mix(in srgb, var(--home-bg) 64%, transparent)
   ), url('/media/hero/home-bg-texture.webp');
 }
 
@@ -46,13 +46,15 @@
 
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__band {
   padding-block: clamp(40px, 5vw, 72px);
+  clip-path: none;
 }
 
+/* A second photograph and its veil used to form a darker horizontal strip.
+   All bands now reveal the exact same canvas and exposure. */
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__art,
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__band::before,
 :root:is(.dark, :not(.dark)) .home.home .home-preparation__band::after {
-  -webkit-mask-image: linear-gradient(transparent, #000 24%, #000 76%, transparent);
-  mask-image: linear-gradient(transparent, #000 24%, #000 76%, transparent);
+  display: none;
 }
 
 :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__frame, .home-preparation__sweep) {
@@ -84,16 +86,29 @@
 }
 
 :root:is(.dark, :not(.dark)) .home.home .home-hero::after {
-  -webkit-mask-image: linear-gradient(#000 70%, transparent);
-  mask-image: linear-gradient(#000 70%, transparent);
+  background: none;
 }
 
 :root:is(.dark, :not(.dark)) .home.home .home-hero__image {
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24%), linear-gradient(#000 72%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 24%), linear-gradient(#000 72%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
+  width: 48%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 1;
+  filter: drop-shadow(0 12px 32px rgb(0 0 0 / 25%));
+  -webkit-mask-image: linear-gradient(#000 78%, transparent);
+  mask-image: linear-gradient(#000 78%, transparent);
   border-radius: 0;
+}
+
+/* A warm, low-intensity rim glow connects the isolated figure to the gold insignia. */
+:root:is(.dark, :not(.dark)) .home.home .home-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 77% 42%, color-mix(in srgb, var(--brass) 12%, transparent), transparent 48%);
 }
 
 /* Frosted reading surfaces: soft reflection, restrained edges and real background blur. */
@@ -160,8 +175,20 @@
     background-position: center top;
   }
   :root:is(.dark, :not(.dark)) .home.home .home-hero__image {
+    width: 66%;
+    right: -14%;
+    object-position: right bottom;
+    opacity: .2;
     -webkit-mask-image: linear-gradient(#000 65%, transparent);
     mask-image: linear-gradient(#000 65%, transparent);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
+  :root:is(.dark, :not(.dark)) .home.home .home-hero__image {
+    width: 55%;
+    right: -8%;
+    opacity: .25;
   }
 }
 
