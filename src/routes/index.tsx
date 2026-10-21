@@ -36,6 +36,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
 import "@/styles/home-operations.css";
+import "@/styles/home-light.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
