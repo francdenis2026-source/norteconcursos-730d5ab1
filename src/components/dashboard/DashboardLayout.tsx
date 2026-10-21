@@ -607,7 +607,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             {isCollapsed && !fullscreen.active && (
               <button
                 type="button"
-                className="app-icon-btn mx-auto mb-2"
+                className="app-sidebar__expand"
                 onClick={toggleCollapsed}
                 aria-label="Expandir menu lateral"
               >
