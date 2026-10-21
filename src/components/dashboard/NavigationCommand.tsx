@@ -59,12 +59,12 @@ export function NavigationCommand({ open, onOpenChange, items, userId, pathname,
   );
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="navigation-command" onOpenAutoFocus={event => {
+      <DialogContent motion="instant" className="navigation-command" onOpenAutoFocus={event => {
         event.preventDefault(); previousFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
         input.current?.focus();
       }} onCloseAutoFocus={event => { event.preventDefault(); if (previousFocus.current?.isConnected) previousFocus.current.focus({ preventScroll: true }); }}>
         <header className="nav-command__hero">
-          <img src={artwork} alt="" aria-hidden="true" width={1440} height={600} />
+          <img src={artwork} alt="" aria-hidden="true" width={1440} height={600} decoding="async" />
           <div className="nav-command__hero-copy">
             <span><ShieldCheck size={14} aria-hidden="true" /> Central de navegação</span>
             <DialogTitle>Navegue com direção.</DialogTitle>

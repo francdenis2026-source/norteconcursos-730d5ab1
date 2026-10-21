@@ -6,6 +6,12 @@
 @import "./styles/theme-switch.css";
 @import "./styles/mobile-navigation-glass.css";
 
+/* The navigation search opens/closes in the current frame, including its backdrop. */
+[data-dialog-motion="instant"] {
+  animation: none !important;
+  transition: none !important;
+}
+
 @utility no-print {
   @media print {
     display: none !important;
@@ -4695,7 +4701,13 @@ html {
   color: white;
 }
 .app-sheet > button {
-  color: white;
+  color: var(--foreground);
+}
+.app-sheet > .surface-close, .lp-sheet > .surface-close {
+  color: var(--foreground);
+  background: var(--background);
+  border-color: var(--border);
+  opacity: 1;
 }
 .app-sheet .app-nav {
   padding-top: 8px;

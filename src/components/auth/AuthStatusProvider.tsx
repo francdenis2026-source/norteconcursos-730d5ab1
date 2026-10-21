@@ -8,6 +8,7 @@ import { platformDate } from "@/lib/platformClock";
 import { createSessionProfileLoader } from "@/lib/sessionProfileLoader";
 import { sessionActivityKey } from "@/lib/sessionIdle";
 import { SessionTabGuard } from "./SessionTabGuard";
+import { AccountSessionGuard, type AccountAccess } from "./AccountSessionGuard";
 
 type AuthStatus = {
   user: UserProfile | null;
@@ -84,6 +85,7 @@ async function loadProfile(session: Session): Promise<UserProfile> {
 /** One verified profile for the whole application, never persisted between users. */
 export function AuthStatusProvider({ children, statusObserver }: { children: ReactNode; statusObserver?: ReactNode }) {
   const [sessionKey, setSessionKey] = useState<string | null>(null);
+  const [accountAccess, setAccountAccess] = useState<AccountAccess | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -103,6 +105,18 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
     }, 15_000);
     let eventVersion = 0;
     let currentSession: Session | null = null;
+    let knownSessionKey: string | null = null;
+    const selectDeviceSession = (session: Session | null, signedIn = false) => {
+      const key = sessionActivityKey(session);
+      const claim = signedIn && key !== knownSessionKey;
+      knownSessionKey = key;
+      setSessionKey(key);
+      setAccountAccess(previous => {
+        if (!session || !key) return null;
+        if (previous?.sessionKey === key) return previous;
+        return { userId: session.user.id, sessionKey: key, claim };
+      });
+    };
     let lastRefresh = 0;
     const deferred = new Set<number>();
     const loader = createSessionProfileLoader<Session, UserProfile>({
@@ -139,7 +153,7 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
       eventVersion++;
       currentSession = session;
-      setSessionKey(sessionActivityKey(session));
+      selectDeviceSession(session, _event === "SIGNED_IN" || _event === "PASSWORD_RECOVERY");
       // Clear previous-account access synchronously, but defer SDK reads out
       // of Supabase's auth lock. Identical pending reads share one promise.
       loader.select(session);
@@ -156,7 +170,7 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
         if (!active || eventVersion !== initialVersion) return;
         if (error) throw error;
         currentSession = data.session;
-        setSessionKey(sessionActivityKey(data.session));
+        selectDeviceSession(data.session);
         return loader.run(data.session);
       })
       .catch((error) => {
@@ -202,7 +216,9 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
   );
   return <AuthContext.Provider value={value}>
     {statusObserver}
-    <SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard>
+    <AccountSessionGuard access={accountAccess}>
+      <SessionTabGuard sessionKey={sessionKey}>{children}</SessionTabGuard>
+    </AccountSessionGuard>
   </AuthContext.Provider>;
 }
 
