@@ -6,6 +6,7 @@ import { Link } from "@tanstack/react-router";
 import { Clock3, PlayCircle, SkipForward, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { Hint } from "@/components/ui/hint";
 import { platformNow } from "@/lib/platformClock";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
 import {
@@ -113,16 +114,17 @@ export function ResumeSessions({
                     {s.unsavedResult ? "Salvar resultado" : "Continuar"}
                   </Link>
                 </Button>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setClosing(s)}
-                  aria-label={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}
-                  title={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}
-                >
-                  <X className="h-4 w-4" aria-hidden="true" />
-                </Button>
+                <Hint content={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setClosing(s)}
+                    aria-label={s.kind === "trainer" ? "Fechar este treino" : "Fechar esta prova"}
+                  >
+                    <X className="h-4 w-4" aria-hidden="true" />
+                  </Button>
+                </Hint>
               </div>
             </div>
             <Progress

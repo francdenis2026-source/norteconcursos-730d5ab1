@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { Minus, Plus, RotateCcw, Type } from "lucide-react";
 import { useReadingScale } from "@/hooks/useReadingScale";
 import { READING_SCALES, readingScalePercent, stepReadingScale } from "@/lib/readingScale";
+import { Hint } from "@/components/ui/hint";
 
 /**
  * Controle de tamanho do texto de leitura (questões, simulados e materiais). Só aumenta a partir do
@@ -94,18 +95,19 @@ export function ReadingSizeControl() {
           </button>
         </div>
       )}
-      <button
-        type="button"
-        className="reading-size__toggle"
-        onClick={() => setOpen((value) => !value)}
-        aria-expanded={open}
-        aria-controls={open ? panelId : undefined}
-        aria-label={`Tamanho do texto: ${percent}. ${open ? "Fechar" : "Ajustar"}`}
-        title="Tamanho do texto"
-      >
-        <Type aria-hidden="true" />
-        {scale > 1 && <span className="reading-size__badge">{percent}</span>}
-      </button>
+      <Hint content="Tamanho do texto">
+        <button
+          type="button"
+          className="reading-size__toggle"
+          onClick={() => setOpen((value) => !value)}
+          aria-expanded={open}
+          aria-controls={open ? panelId : undefined}
+          aria-label={`Tamanho do texto: ${percent}. ${open ? "Fechar" : "Ajustar"}`}
+        >
+          <Type aria-hidden="true" />
+          {scale > 1 && <span className="reading-size__badge">{percent}</span>}
+        </button>
+      </Hint>
     </div>
   );
 }

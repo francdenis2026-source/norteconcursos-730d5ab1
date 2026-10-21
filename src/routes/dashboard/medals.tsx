@@ -19,6 +19,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Button } from "@/components/ui/button";
 import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { Hint } from "@/components/ui/hint";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/medals")({ component: MedalsPage });
@@ -137,36 +138,35 @@ function Seal({
 }) {
   const tier = TIERS[Math.min(tierIndex, TIERS.length - 1)]!;
   return (
-    <li
-      className="flex w-[4.75rem] flex-col items-center gap-1 text-center"
-      title={`${m.name} — ${m.description}${when ? ` (conquistada em ${when})` : ""}`}
-    >
-      <span
-        className={cn(
-          "grid h-14 w-14 place-items-center rounded-full",
-          m.earned
-            ? cn("bg-gradient-to-br text-white shadow-lg", tier.grad, tier.shadow)
-            : "border-2 border-dashed border-muted-foreground/30 text-muted-foreground",
-        )}
-      >
-        {m.earned ? (
-          <Icon className="h-6 w-6 drop-shadow" aria-hidden />
-        ) : (
-          <span className="text-xs font-black tabular-nums">{m.target}</span>
-        )}
-      </span>
-      <span
-        className={cn(
-          "text-[0.62rem] font-bold uppercase tracking-wide",
-          m.earned ? "text-foreground" : "text-muted-foreground",
-        )}
-      >
-        {tier.name}
-      </span>
-      <span className="line-clamp-2 text-[0.62rem] leading-tight text-muted-foreground">
-        {m.earned && when ? when : m.name}
-      </span>
-    </li>
+    <Hint content={`${m.name} — ${m.description}${when ? ` (conquistada em ${when})` : ""}`}>
+      <li className="flex w-[4.75rem] flex-col items-center gap-1 text-center">
+        <span
+          className={cn(
+            "grid h-14 w-14 place-items-center rounded-full",
+            m.earned
+              ? cn("bg-gradient-to-br text-white shadow-lg", tier.grad, tier.shadow)
+              : "border-2 border-dashed border-muted-foreground/30 text-muted-foreground",
+          )}
+        >
+          {m.earned ? (
+            <Icon className="h-6 w-6 drop-shadow" aria-hidden />
+          ) : (
+            <span className="text-xs font-black tabular-nums">{m.target}</span>
+          )}
+        </span>
+        <span
+          className={cn(
+            "text-[0.62rem] font-bold uppercase tracking-wide",
+            m.earned ? "text-foreground" : "text-muted-foreground",
+          )}
+        >
+          {tier.name}
+        </span>
+        <span className="line-clamp-2 text-[0.62rem] leading-tight text-muted-foreground">
+          {m.earned && when ? when : m.name}
+        </span>
+      </li>
+    </Hint>
   );
 }
 

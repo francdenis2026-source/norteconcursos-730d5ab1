@@ -101,7 +101,6 @@ function PositionBadge({ pos }: { pos: number }) {
         "relative flex h-9 w-9 items-center justify-center rounded-full ring-2",
         tier.cls,
       )}
-      title={`${pos}º lugar`}
     >
       <tier.Icon className="h-5 w-5" />
       <span className="absolute -bottom-1 -right-1 rounded-full bg-background px-1 text-[10px] font-black text-foreground ring-1 ring-border">
