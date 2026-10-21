@@ -5,11 +5,11 @@ import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
 /** Inline critical styles keep the initial server-rendered screen independent of route JS/fonts. */
 export const INITIAL_LOADING_CSS = `
 html:not([data-norte-boot=ready]){overflow:hidden}
-#norte-initial-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:end center;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
-#norte-initial-loading picture{position:absolute;inset:0;pointer-events:none}
-#norte-initial-loading img{width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.86}
-#norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09 0%,rgba(8,10,9,.88) 12%,transparent 45%),linear-gradient(90deg,rgba(8,10,9,.25),transparent 45%,rgba(8,10,9,.25))}
-#norte-initial-loading .norte-boot-copy{position:relative;z-index:1;text-align:center;max-width:calc(100% - 48px);padding-bottom:max(32px,7vh);margin:0}
+#norte-initial-loading{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;align-content:center;gap:clamp(16px,4vh,36px);padding:clamp(12px,3vh,28px) 16px;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
+#norte-initial-loading picture{position:relative;width:min(100%,1280px);height:min(64vh,calc((100vw - 32px)*2/3));max-height:calc(100dvh - 172px);display:flex;align-items:center;justify-content:center;pointer-events:none}
+#norte-initial-loading img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;opacity:.9}
+#norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09 0%,rgba(8,10,9,.45) 12%,transparent 30%)}
+#norte-initial-loading .norte-boot-copy{position:relative;z-index:1;text-align:center;max-width:calc(100% - 48px);padding-bottom:0;margin:0}
 #norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:.28em;line-height:1.2}
 #norte-initial-loading .norte-boot-tagline{display:block;margin-top:10px;font-size:13px;letter-spacing:.025em;color:#e1ddd3}
 #norte-initial-loading .norte-boot-status{display:block;margin-top:22px;font-size:11px;color:#bdb8ad}
@@ -17,7 +17,8 @@ html:not([data-norte-boot=ready]){overflow:hidden}
 #norte-initial-loading .norte-boot-track:after{content:'';position:absolute;inset:0;width:35%;background:#efd090;animation:norte-boot-progress 1.6s ease-in-out infinite}
 @keyframes norte-boot-progress{from{transform:translateX(-100%)}to{transform:translateX(390%)}}
 html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
-@media(max-width:640px){#norte-initial-loading picture{inset:0 0 auto;height:70%}#norte-initial-loading img{object-position:center 30%}#norte-initial-loading .norte-boot-copy{padding-bottom:max(32px,9vh)}#norte-initial-loading:after{background:linear-gradient(0deg,#080a09 12%,transparent 55%)}}
+@media(max-width:640px){#norte-initial-loading{padding: max(20px,env(safe-area-inset-top)) 12px max(20px,env(safe-area-inset-bottom))}#norte-initial-loading picture{height:min(64vh,calc((100vw - 24px)*2/3))}}
+@media(max-height:500px){#norte-initial-loading picture{max-height:calc(100dvh - 140px)}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
 @media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading .norte-boot-brand,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-status{color:CanvasText}}
 @media print{#norte-initial-loading{display:none}}
