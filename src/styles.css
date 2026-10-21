@@ -4312,8 +4312,43 @@ html {
 }
 .app-sidebar__foot {
   flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
   padding: 12px;
   border-top: 1px solid oklch(1 0 0 / 0.06);
+}
+.app-sidebar[data-collapsed="true"] .app-sidebar__foot {
+  align-items: center;
+}
+.app-sidebar__expand {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  place-items: center;
+  border: 1px solid oklch(1 0 0 / 0.1);
+  border-radius: 10px;
+  color: oklch(1 0 0 / 0.62);
+  background: oklch(1 0 0 / 0.04);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+.app-sidebar__expand:hover {
+  color: white;
+  background: oklch(1 0 0 / 0.08);
+  border-color: oklch(1 0 0 / 0.18);
+}
+.app-sidebar__expand:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.app-sidebar__expand svg {
+  width: 16px;
+  height: 16px;
 }
 .app-stats {
   display: grid;
