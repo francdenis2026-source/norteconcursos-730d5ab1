@@ -5,12 +5,14 @@ export function TestingSeal() {
   if (!TESTING_PHASE) return null;
   return (
     <div role="note" className="home-testing">
-      <BadgeCheck aria-hidden="true" />
-      <p>
+      <span className="home-testing__status home-signal">
+        <BadgeCheck aria-hidden="true" />
         <strong>Acesso aberto · Fase de testes</strong>
-        <span>Grátis por {TESTING_DAYS} dias com tudo do plano Plus · depois, planos pagos</span>
-      </p>
-      <a href="#planos">
+      </span>
+      <span className="home-testing__detail">
+        Grátis por {TESTING_DAYS} dias com tudo do plano Plus · depois, planos pagos
+      </span>
+      <a href="#planos" className="home-testing__link">
         Entenda os planos <ArrowUpRight aria-hidden="true" />
       </a>
     </div>

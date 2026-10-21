@@ -56,7 +56,7 @@ export function PcprExamPromo() {
         </div>
         <div className="home-opportunity__intro">
           <div className="home-opportunity__identity">
-            <span className="home-eyebrow">Prova disponível · PCPR {PCPR_EXAM.year}</span>
+            <span className="home-eyebrow home-signal">Prova disponível · PCPR {PCPR_EXAM.year}</span>
             <span className="home-exam-icon">
               <FileCheck2 aria-hidden="true" />
             </span>

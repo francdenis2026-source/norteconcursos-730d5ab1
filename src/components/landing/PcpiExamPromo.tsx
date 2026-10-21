@@ -27,7 +27,7 @@ export function PcpiExamPromo() {
         </div>
         <div className="home-opportunity__intro">
           <div className="home-opportunity__identity">
-            <span className="home-eyebrow">Provas disponíveis · PC-PI 2026</span>
+            <span className="home-eyebrow home-signal">Provas disponíveis · PC-PI 2026</span>
             <FileCheck2 className="home-exam-icon" aria-hidden="true" />
           </div>
           <h3 id="pcpi-title">Polícia Civil do Piauí</h3>

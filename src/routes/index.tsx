@@ -44,6 +44,7 @@ import "@/styles/home-light.css";
 import "@/styles/home-refinements.css";
 import "@/styles/home-interactions.css";
 import "@/styles/home-responsive.css";
+import "@/styles/home-signals.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
@@ -176,7 +177,7 @@ const PILLARS: { icon: LucideIcon; title: string; text: string }[] = [
 function Head({ kicker, children, lead }: { kicker: string; children: ReactNode; lead?: string }) {
   return (
     <div className="home-heading">
-      <span className="home-eyebrow">{kicker}</span>
+      <span className="home-eyebrow home-signal">{kicker}</span>
       <h2>{children}</h2>
       {lead && <p>{lead}</p>}
     </div>
@@ -380,7 +381,7 @@ function Index() {
           <div className="home-container home-hero__content" inert={introPlaying && !compactHero}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
-                <span className="home-eyebrow">
+                <span className="home-eyebrow home-signal">
                   <span /> Carreiras policiais e segurança pública
                 </span>
                 <h1 id="home-title">
@@ -444,7 +445,7 @@ function Index() {
                 decoding="async"
               />
               <div className="home-preparation__intro">
-                <span className="home-preparation__eyebrow">Para quem escolheu servir e proteger</span>
+                <span className="home-preparation__eyebrow home-signal">Para quem escolheu servir e proteger</span>
                 <h2 id="preparation-title">Uma plataforma.<br /><em>A sua carreira.</em></h2>
                 <p>Do edital ao treino: teoria, questões, revisão e desempenho para estudar com uma prioridade clara.</p>
               </div>
@@ -495,7 +496,7 @@ function Index() {
                       <CalendarClock /> Edital ainda não publicado
                     </span>
                     <div className="home-opportunity__identity">
-                      <span className="home-eyebrow">Preparação antecipada · PCAC 2026</span>
+                      <span className="home-eyebrow home-signal">Preparação antecipada · PCAC 2026</span>
                       <div>
                         <img
                           src="/media/brasao-acre-oficial.svg"

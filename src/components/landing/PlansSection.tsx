@@ -44,7 +44,7 @@ export function PlansSection() {
       <div className="home-container">
         <div className="home-plans__intro">
           <div className="home-heading">
-            <span className="home-eyebrow">Seu ritmo. Seu plano.</span>
+            <span className="home-eyebrow home-signal">Seu ritmo. Seu plano.</span>
             <h2 id="planos-title">
               Comece grátis.
               <br />
@@ -203,7 +203,7 @@ export function PlansSection() {
         )}
         <div className="home-faq">
           <div className="home-faq__intro">
-            <span className="home-eyebrow">Sem dúvidas no caminho</span>
+            <span className="home-eyebrow home-signal">Sem dúvidas no caminho</span>
             <h3>Antes de começar</h3>
             <img
               className="home-faq__art"
