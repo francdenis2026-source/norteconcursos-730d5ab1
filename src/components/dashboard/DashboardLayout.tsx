@@ -1,5 +1,7 @@
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
+import "@/styles/student-canvas.css";
+import { createAchievementMonitor } from "@/lib/achievementMonitor";
 import { activeNavigation, navigationKey } from "@/lib/dashboardNavigation";
 import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
@@ -400,38 +402,36 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   }, []);
 
   React.useEffect(() => {
-    // Administrador gerencia a plataforma: não registra visita de estudo, sequência nem medalhas.
-    if (isAdmin) return;
-    let known = 0;
+    setStreak(null);
+    setAchievements([]);
+    // Each account owns its monitor; administrators do not earn study awards.
+    if (isAdmin || !user?.id || user.id === "demo-user") return;
     let cancelled = false;
-    Promise.all([
-      MockService.registerStudyVisit().then((v) => v ?? MockService.getUserStreak()),
-      MockService.awardAchievements().then(() => MockService.getAchievements()),
-    ]).then(([s, a]) => {
-      if (cancelled) return;
-      setStreak(s);
-      setAchievements(a);
-      known = a.length;
+    const monitor = createAchievementMonitor({
+      award: () => MockService.awardAchievements({ strict: true }),
+      load: () => MockService.getAchievements({ strict: true }),
+      onSnapshot: setAchievements,
+      onEarned: (achievement) => {
+        void import("@/components/dashboard/AchievementNotification").then(({ showAchievementNotification }) => {
+          if (!cancelled) showAchievementNotification(achievement);
+        }).catch(() => { /* The saved achievement remains available in the collection. */ });
+      },
     });
-    const interval = window.setInterval(async () => {
+    void MockService.registerStudyVisit().then((v) => v ?? MockService.getUserStreak())
+      .then((s) => { if (!cancelled) setStreak(s); }).catch(() => {});
+    const refresh = () => {
       if (document.visibilityState === "hidden" || !navigator.onLine) return;
-      await MockService.awardAchievements();
-      const latest = await MockService.getAchievements();
-      if (cancelled || latest.length <= known) return;
-      known = latest.length;
-      setAchievements(latest);
-      const newest = latest[latest.length - 1];
-      if (newest) {
-        const { showAchievementNotification } =
-          await import("@/components/dashboard/AchievementNotification");
-        showAchievementNotification(newest);
-      }
-    }, 30000);
+      // Retain the last confirmed snapshot on failure; retry without overlapping requests.
+      void monitor.refresh().catch(() => {});
+    };
+    refresh();
+    const interval = window.setInterval(refresh, 30000);
     return () => {
       cancelled = true;
+      monitor.stop();
       window.clearInterval(interval);
     };
-  }, [isAdmin]);
+  }, [isAdmin, user?.id]);
 
   React.useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -553,6 +553,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         data-area={isAdmin ? "admin" : "student"}
         data-brand-bg={brandBg ?? "off"}
       >
+        {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}
         {user && user.id !== "demo-user" && <ActivityTracker />}
         <FocusReturnBar />
         <aside className="app-sidebar no-print" data-collapsed={isCollapsed}>

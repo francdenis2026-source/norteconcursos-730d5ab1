@@ -651,8 +651,9 @@ export const MockService = {
   },
 
   /** Concede no servidor as medalhas cuja meta foi atingida; devolve as novas. */
-  awardAchievements: async (): Promise<Achievement[]> => {
-    const { data } = await supabase.rpc("award_achievements");
+  awardAchievements: async (options?: { strict?: boolean }): Promise<Achievement[]> => {
+    const { data, error } = await supabase.rpc("award_achievements");
+    if (error && options?.strict) throw error;
     return (data as Achievement[] | null) ?? [];
   },
 
@@ -661,21 +662,24 @@ export const MockService = {
     return (data as MedalProgress[] | null) ?? [];
   },
 
-  getAchievements: async (): Promise<Achievement[]> => {
+  getAchievements: async (options?: { strict?: boolean }): Promise<Achievement[]> => {
     try {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+      if (sessionError) throw sessionError;
       if (session) {
         const { data, error } = await supabase
           .from("user_achievements")
-          .select("*, achievement:achievements(*)");
-        if (!error && data) return data.map((a: { achievement: Achievement }) => a.achievement);
+          .select("*, achievement:achievements(*)")
+          .eq("user_id", session.user.id)
+          .order("attained_at", { ascending: true });
+        if (error) throw error;
+        return (data ?? []).map((a: { achievement: Achievement | null }) => a.achievement)
+          .filter((a): a is Achievement => !!a?.id);
       }
-
-      // Sem conta não há medalhas: nada de dados de exemplo.
+      if (options?.strict) throw new Error("Sessão indisponível para consultar conquistas.");
       return [];
-    } catch (e) {
+    } catch (error) {
+      if (options?.strict) throw error;
       return [];
     }
   },

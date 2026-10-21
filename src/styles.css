@@ -12968,8 +12968,8 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
    Sem "emenda" entre texto e foto (claro e escuro): nenhuma faixa dissolvida,
    gradiente ou máscara sobre a imagem. A foto entra com corte limpo.
    ========================================================================== */
-.student-hub__hero-visual::after { display: none !important; }
-.student-hub__hero-visual img { -webkit-mask-image: none !important; mask-image: none !important; filter: none !important; }
+.student-hub__masthead:not(.student-hub__masthead--careers) .student-hub__hero-visual::after { display: none !important; }
+.student-hub__masthead:not(.student-hub__masthead--careers) .student-hub__hero-visual img { -webkit-mask-image: none !important; mask-image: none !important; filter: none !important; }
 :root:not(.dark) :is(.page-hero, .catalog-command-hero):not(.mock-result-hero):not(.min-h-svh)::before,
 :root:not(.dark) .study-assistant-hero::before,
 :root:not(.dark) .exam-simulator-hero::before,
