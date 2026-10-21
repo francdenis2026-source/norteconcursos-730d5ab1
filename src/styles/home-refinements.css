@@ -76,7 +76,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home :is(.home-button, .home-text-link, .home-final__challenge):active {
+  .home.home :is(.home-button, .home-text-link, .home-final__challenge):is(:hover, :active),
+  .home.home :is(.home-plan, .home-opportunity, .home-career):hover {
     transform: none;
   }
 }

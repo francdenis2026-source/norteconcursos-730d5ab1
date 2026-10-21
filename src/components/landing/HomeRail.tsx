@@ -60,7 +60,7 @@ export function HomeRail({
       element.removeEventListener("scroll", measure);
     };
   }, [count]);
-  const move = (direction: number) => {
+  const move = (direction: number, fromKeyboard = false) => {
     const element = track.current;
     if (!element) return;
     const cards = Array.from(element.children);
@@ -75,7 +75,10 @@ export function HomeRail({
         : (positions.filter((position) => position < element.scrollLeft - 5).at(-1) ?? 0);
     element.scrollTo({
       left: target,
-      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+      behavior:
+        fromKeyboard || matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
     });
   };
   return (
@@ -94,7 +97,7 @@ export function HomeRail({
           if (event.target !== event.currentTarget || !state.overflow) return;
           if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
             event.preventDefault();
-            move(event.key === "ArrowRight" ? 1 : -1);
+            move(event.key === "ArrowRight" ? 1 : -1, true);
           }
         }}
       >
@@ -108,7 +111,7 @@ export function HomeRail({
           </span>
           <button
             type="button"
-            onClick={() => move(-1)}
+            onClick={(event) => move(-1, event.detail === 0)}
             disabled={state.start}
             aria-controls={id}
             aria-label={`Anterior: ${label}`}
@@ -117,7 +120,7 @@ export function HomeRail({
           </button>
           <button
             type="button"
-            onClick={() => move(1)}
+            onClick={(event) => move(1, event.detail === 0)}
             disabled={state.end}
             aria-controls={id}
             aria-label={`Próximo: ${label}`}

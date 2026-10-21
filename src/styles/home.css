@@ -2552,10 +2552,12 @@
   background: var(--home-surface);
   transition: transform .2s var(--ease-out), border-color .2s ease, box-shadow .2s ease;
 }
+@media (hover: hover) and (pointer: fine) {
 .home-career:hover {
   transform: translateY(-2px);
   border-color: var(--home-accent);
   box-shadow: var(--shadow-card);
+}
 }
 .home-sources {
   padding-block: 48px 56px;
@@ -3257,8 +3259,10 @@
   background: var(--home-surface);
   box-shadow: var(--shadow-card);
 }
+@media (hover: hover) and (pointer: fine) {
 :root:not(.dark) .home :is(.home-plan,.home-opportunity):hover {
   box-shadow: var(--shadow-lift);
+}
 }
 /* Reading copy must remain comfortable on both desktop and small screens. */
 .home :is(.home-plan__description,.home-plan__annual,.home-plan__availability,
@@ -3365,7 +3369,9 @@
 :root:not(.dark) article.home-plan:nth-of-type(2) { --plan-c: var(--c-teal); --plan-soft: var(--c-teal-soft); }
 :root:not(.dark) article.home-plan:nth-of-type(3) { --plan-c: var(--c-blue); --plan-soft: var(--c-blue-soft); }
 :root:not(.dark) article.home-plan:nth-of-type(4) { --plan-c: var(--c-violet); --plan-soft: var(--c-violet-soft); }
+@media (hover: hover) and (pointer: fine) {
 :root:not(.dark) .home-plan:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+}
 :root:not(.dark) .home-plan--featured {
   border-color: var(--c-blue); border-top-width: 5px;
   box-shadow: 0 0 0 2px oklch(0.5 0.18 262 / .22), var(--shadow-lift);
@@ -3500,7 +3506,9 @@
 .dark article.home-plan:nth-of-type(2) { --plan-c: var(--d-teal); }
 .dark article.home-plan:nth-of-type(3) { --plan-c: var(--d-blue); }
 .dark article.home-plan:nth-of-type(4) { --plan-c: var(--d-violet); }
+@media (hover: hover) and (pointer: fine) {
 .dark .home-plan:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -22px oklch(0 0 0 / .8); }
+}
 .dark .home-plan--featured {
   border-color: var(--d-blue); border-top-width: 5px;
   box-shadow: 0 0 0 2px color-mix(in oklab, var(--d-blue) 28%, transparent), 0 22px 44px -24px oklch(0 0 0 / .8);
@@ -4456,77 +4464,33 @@
    Distintivo 3D da hero (vitrine "Carreiras Policiais")
    ========================================================================== */
 .hero-badge {
-  --rx: 0deg;
-  --ry: 0deg;
-  --gx: 50%;
-  --gy: 40%;
   --badge-w: clamp(118px, 11vw, 158px);
   position: absolute;
   z-index: 2;
   top: 30px;
-  /* Centrado no vão entre o texto e o agente (mesma referência da primeira versão). */
   left: calc(55% - var(--badge-w) / 2);
   width: var(--badge-w);
   aspect-ratio: 460 / 531;
   perspective: 700px;
-  cursor: pointer;
+  pointer-events: none;
   user-select: none;
-  /* Rolagem vertical segue funcionando; o arrasto horizontal e o toque inclinam o distintivo. */
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
 }
 .hero-badge__float {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation: hero-badge-float 6.5s ease-in-out infinite;
 }
-.hero-badge__tilt {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: rotateX(var(--rx)) rotateY(var(--ry));
-  transition: transform 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
-  /* Sem cursor sobre a hero, balança bem devagar para chamar a atenção. */
-  animation: hero-badge-sway 9s ease-in-out infinite;
-}
-.hero-badge[data-live="true"] .hero-badge__tilt {
-  animation: none;
-}
-.hero-badge[data-visible="false"] .hero-badge__float,
-.hero-badge[data-visible="false"] .hero-badge__tilt,
-.hero-badge[data-visible="false"] .hero-badge__sweep {
-  animation-play-state: paused;
-}
-.hero-badge__spin {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-}
+.hero-badge__tilt,
 .hero-badge__enter {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
 }
-/* Antes do fim da introdução o distintivo não existe; depois, gira até a posição final. */
-.hero-badge[data-reveal="pending"] {
-  visibility: hidden;
-  pointer-events: none;
-}
+.hero-badge__tilt { transform: rotateY(-6deg); }
+.hero-badge[data-reveal="pending"] { visibility: hidden; }
 .hero-badge[data-reveal="in"] .hero-badge__enter {
-  animation: hero-badge-enter 1.5s cubic-bezier(0.2, 0.75, 0.25, 1) 0.35s both;
-}
-.hero-badge[data-reveal="in"] .hero-badge__shadow {
-  animation: hero-badge-shadow-in 1.2s ease-out 0.5s both, hero-badge-shadow 6.5s ease-in-out 1.7s infinite;
-}
-.hero-badge[data-reveal="in"] .hero-badge__sweep {
-  /* O brilho principal acompanha o fim da entrada; depois volta ao ritmo calmo. */
-  animation: hero-badge-sweep 7s ease-in-out 1.6s infinite;
-}
-.hero-badge[data-spin="true"] .hero-badge__spin {
-  animation: hero-badge-spin 1.1s cubic-bezier(0.3, 0.7, 0.2, 1) 1;
+  animation: hero-badge-enter 200ms var(--ease-out) both;
 }
 .hero-badge__face,
 .hero-badge__edge {
@@ -4535,42 +4499,16 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  pointer-events: none;
 }
-.hero-badge__edge {
-  filter: brightness(0.32) saturate(0.8);
-}
-/* Reflexo: segue o cursor e só aparece sobre o metal (máscara = o próprio recorte). */
-.hero-badge__glare,
-.hero-badge__sweep {
+.hero-badge__edge { filter: brightness(0.32) saturate(0.8); }
+.hero-badge__glare {
   position: absolute;
   inset: 0;
-  pointer-events: none;
+  background: radial-gradient(circle at 50% 35%, rgb(255 244 214 / 25%), transparent 52%);
   -webkit-mask: url("/media/hero/distintivo-carreiras.webp") center / contain no-repeat;
   mask: url("/media/hero/distintivo-carreiras.webp") center / contain no-repeat;
-}
-.hero-badge__glare {
-  background: radial-gradient(
-    circle at var(--gx) var(--gy),
-    rgb(255 244 214 / 0.55),
-    rgb(255 244 214 / 0) 52%
-  );
   mix-blend-mode: soft-light;
   transform: translateZ(1px);
-}
-/* Faixa de luz que cruza o distintivo de tempos em tempos. */
-.hero-badge__sweep {
-  background: linear-gradient(
-    115deg,
-    transparent 38%,
-    rgb(255 240 200 / 0.55) 49%,
-    transparent 60%
-  );
-  background-size: 260% 100%;
-  background-position: 130% 0;
-  mix-blend-mode: soft-light;
-  transform: translateZ(1px);
-  animation: hero-badge-sweep 7s ease-in-out 2.5s infinite;
 }
 .hero-badge__shadow {
   position: absolute;
@@ -4579,69 +4517,12 @@
   bottom: -14%;
   height: 12%;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgb(0 0 0 / 0.55), transparent);
+  background: radial-gradient(closest-side, rgb(0 0 0 / 55%), transparent);
   filter: blur(4px);
-  animation: hero-badge-shadow 6.5s ease-in-out infinite;
-}
-@keyframes hero-badge-float {
-  50% {
-    transform: translateY(-8px);
-  }
-}
-@keyframes hero-badge-shadow {
-  50% {
-    transform: scale(0.84);
-    opacity: 0.7;
-  }
-}
-@keyframes hero-badge-sway {
-  0%,
-  100% {
-    transform: rotateX(2deg) rotateY(-12deg);
-  }
-  50% {
-    transform: rotateX(-3deg) rotateY(12deg);
-  }
-}
-@keyframes hero-badge-sweep {
-  0%,
-  55% {
-    background-position: 130% 0;
-  }
-  85%,
-  100% {
-    background-position: -30% 0;
-  }
 }
 @keyframes hero-badge-enter {
-  0% {
-    opacity: 0;
-    transform: rotateY(-300deg) scale(0.55) translateY(10px);
-    filter: brightness(1.6);
-  }
-  55% {
-    opacity: 1;
-  }
-  82% {
-    transform: rotateY(12deg) scale(1.05) translateY(0);
-    filter: brightness(1.15);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(0) scale(1) translateY(0);
-    filter: brightness(1);
-  }
-}
-@keyframes hero-badge-shadow-in {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-}
-@keyframes hero-badge-spin {
-  to {
-    transform: rotateY(360deg);
-  }
+  from { opacity: 0; transform: translateY(4px) scale(0.96); }
+  to { opacity: 1; transform: none; }
 }
 @media (max-width: 1099px) {
   /* Tablet: ao lado da cabeça do agente, no fundo escuro à direita, afastado do cabeçalho. */
@@ -4667,25 +4548,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-badge__float,
-  .hero-badge__tilt,
-  .hero-badge__sweep,
-  .hero-badge__shadow,
-  .hero-badge[data-reveal="in"] .hero-badge__shadow,
-  .hero-badge[data-reveal="in"] .hero-badge__sweep {
-    animation: none;
-  }
-  .hero-badge[data-reveal="in"] .hero-badge__enter {
-    animation: hero-badge-fade 0.6s ease-out both;
-  }
-  .hero-badge__tilt {
-    transform: rotateY(-8deg);
-  }
-}
-@keyframes hero-badge-fade {
-  from {
-    opacity: 0;
-  }
+  .hero-badge[data-reveal="in"] .hero-badge__enter { animation: none; }
 }
 
 /* Celular/tablet: "Ver introdução" (aparece quando o navegador bloqueia o autoplay) fica no canto

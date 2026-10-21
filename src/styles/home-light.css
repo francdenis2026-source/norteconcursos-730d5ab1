@@ -114,7 +114,9 @@
 :root:not(.dark) .home.home .home-preparation__intro h2 em { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-preparation__info { background: var(--stage-card); border-color: var(--stage-line); box-shadow: var(--stage-shadow); }
 :root:not(.dark) .home.home .home-preparation__tabs { border-bottom-color: var(--stage-line); background: oklch(0.97 0.008 255); }
-:root:not(.dark) .home.home .home-preparation__tab:hover { color: var(--stage-accent); background: oklch(0.94 0.03 262); }
+@media (hover: hover) and (pointer: fine) {
+  :root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]):hover { color: var(--stage-accent); background: oklch(0.94 0.03 262); }
+}
 :root:not(.dark) .home.home .home-preparation__tab[data-state="active"] { background: var(--stage-accent); color: oklch(0.99 0 0); }
 :root:not(.dark) .home.home .home-preparation__items > :is(article, li) { border-bottom-color: var(--stage-line); }
 :root:not(.dark) .home.home .home-preparation__items svg,
