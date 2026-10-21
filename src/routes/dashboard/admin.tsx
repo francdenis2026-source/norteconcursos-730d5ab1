@@ -371,29 +371,10 @@ function AdminPanel() {
                 </CardDescription>
               </div>
               <div className="flex gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="gap-2"
-                  onClick={() => document.getElementById("csv-import")?.click()}
-                >
-                  <FileText className="h-4 w-4" /> Importar Questões (CSV)
-                  <input
-                    id="csv-import"
-                    type="file"
-                    accept=".csv"
-                    className="hidden"
-                    onChange={async (e) => {
-                      const file = e.target.files?.[0];
-                      if (!file) return;
-                      toast.info("Processando arquivo CSV...");
-                      // Simulação de processamento
-                      setTimeout(() => {
-                        toast.success("50 questões importadas com sucesso!");
-                        loadData();
-                      }, 1500);
-                    }}
-                  />
+                <Button size="sm" variant="outline" className="gap-2" asChild>
+                  <Link to="/dashboard/admin-questions">
+                    <FileText className="h-4 w-4" /> Importar questões
+                  </Link>
                 </Button>
                 <Button size="sm" className="gap-2">
                   <Plus className="h-4 w-4" /> Novo Concurso

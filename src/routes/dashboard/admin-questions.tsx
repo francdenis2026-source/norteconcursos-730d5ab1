@@ -18,6 +18,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { confirmDialog } from "@/lib/confirm";
+import { fetchAllRows } from "@/lib/catalog";
+import {
+  parseBoardImport,
+  planBoardImport,
+  type BoardImportQuestion,
+  type BoardImportPlan,
+} from "@/lib/questionImport";
 
 export const Route = createFileRoute("/dashboard/admin-questions")({
   head: () => ({
@@ -38,30 +45,20 @@ interface Row {
   legal_review_required: boolean;
   official_answer: string;
 }
-interface Incoming {
-  board: string;
-  contest_name: string;
-  career_name: string;
-  exam_year: number;
-  exam_type: string;
-  item_number: number;
-  subject: string;
-  stem: string;
-  options: Record<string, string>;
-  official_answer: string;
-  source_url: string;
-  answer_key_url: string;
-  [k: string]: unknown;
-}
-
-const CONFLICT = "board,contest_name,career_name,exam_year,exam_type,item_number";
-
 function AdminQuestionsPage() {
   const { isAdmin } = useAuthStatus();
   const [rows, setRows] = React.useState<Row[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [missing, setMissing] = React.useState(false);
-  const [incoming, setIncoming] = React.useState<Incoming[] | null>(null);
+  const [incoming, setIncoming] = React.useState<BoardImportQuestion[] | null>(null);
+  const [plan, setPlan] = React.useState<BoardImportPlan | null>(null);
+  const [checking, setChecking] = React.useState(false);
+  const [checkError, setCheckError] = React.useState("");
+  const [result, setResult] = React.useState<{
+    inserted: number;
+    ignored: number;
+    complete: boolean;
+  } | null>(null);
   const [fileName, setFileName] = React.useState("");
   const [progress, setProgress] = React.useState<{ done: number; total: number } | null>(null);
 
@@ -126,44 +123,107 @@ function AdminQuestionsPage() {
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [rows]);
 
+  const analyze = async (questions: BoardImportQuestion[]) => {
+    setChecking(true);
+    setPlan(null);
+    setCheckError("");
+    try {
+      const stored = await fetchAllRows<BoardImportQuestion>(
+        (from, to) =>
+          supabase
+            .from("board_exam_questions")
+            .select(
+              "id,board,contest_name,career_name,exam_year,exam_type,item_number,stem,options,support_text,figure_urls,needs_visual,official_answer",
+            )
+            .order("id")
+            .range(from, to) as unknown as PromiseLike<{
+            data: BoardImportQuestion[] | null;
+            error: unknown;
+          }>,
+        1000,
+      );
+      setPlan(planBoardImport(questions, stored));
+    } catch {
+      setCheckError(
+        "Não foi possível conferir todo o acervo. A importação fica bloqueada até a verificação concluir. Tente novamente.",
+      );
+    } finally {
+      setChecking(false);
+    }
+  };
+
   const onFile = async (file: File | undefined) => {
     if (!file) return;
+    setPlan(null);
+    setIncoming(null);
+    setResult(null);
+    setCheckError("");
+    setFileName(file.name);
+    setChecking(true);
     try {
-      const data = JSON.parse(await file.text()) as Incoming[];
-      if (
-        !Array.isArray(data) ||
-        !data.every(
-          (q) => q.contest_name && q.stem && q.options && q.official_answer && q.item_number,
-        )
-      )
-        throw new Error("formato");
+      if (file.size > 20 * 1024 * 1024) throw new Error("O arquivo deve ter até 20 MB.");
+      const data = parseBoardImport(JSON.parse(await file.text()));
       setIncoming(data);
-      setFileName(file.name);
-    } catch {
-      toast.error("Arquivo inválido. Use o fgv_questions.json da pasta supabase/imports/fgv.");
+      await analyze(data);
+    } catch (error) {
+      toast.error(
+        error instanceof SyntaxError
+          ? "JSON inválido. Confira o arquivo de questões."
+          : (error as Error).message,
+      );
       setIncoming(null);
+      setChecking(false);
     }
   };
 
   const doImport = async () => {
-    if (!incoming?.length) return;
-    setProgress({ done: 0, total: incoming.length });
-    for (let i = 0; i < incoming.length; i += 100) {
-      const chunk = incoming.slice(i, i + 100);
-      const { error } = await supabase
-        .from("board_exam_questions")
-        .upsert(chunk, { onConflict: CONFLICT, ignoreDuplicates: true });
-      if (error) {
-        toast.error(`Falha ao importar (lote ${i / 100 + 1}): ${error.message}`);
-        setProgress(null);
-        return;
+    if (!incoming || !plan?.ready.length || plan.conflicts || checking || progress) return;
+    setResult(null);
+    setProgress({ done: 0, total: plan.ready.length });
+    let inserted = 0;
+    try {
+      for (let i = 0; i < plan.ready.length; i += 100) {
+        const chunk = plan.ready.slice(i, i + 100);
+        const { data, error } = await supabase
+          .from("board_exam_questions")
+          .insert(chunk)
+          .select("id");
+        if (error) {
+          setResult({ inserted, ignored: plan.duplicates, complete: false });
+          toast.error(
+            error.code === "23505"
+              ? "Foi detectada uma repetição durante o envio. O lote foi interrompido e será conferido novamente."
+              : `Falha ao importar o lote ${i / 100 + 1}: ${error.message}`,
+          );
+          setProgress(null);
+          await analyze(incoming);
+          await load();
+          return;
+        }
+        inserted += data?.length ?? 0;
+        if (data?.length !== chunk.length)
+          throw new Error(
+            "O banco não confirmou todas as linhas do lote. Confira o acervo antes de continuar.",
+          );
+        setResult({ inserted, ignored: plan.duplicates, complete: false });
+        setProgress({ done: Math.min(i + 100, plan.ready.length), total: plan.ready.length });
       }
-      setProgress({ done: Math.min(i + 100, incoming.length), total: incoming.length });
+      toast.success(`${inserted} questões importadas; ${plan.duplicates} repetidas ignoradas.`);
+      setResult({ inserted, ignored: plan.duplicates, complete: true });
+      setProgress(null);
+      setIncoming(null);
+      setPlan(null);
+      await load();
+    } catch (error) {
+      setResult({ inserted, ignored: plan.duplicates, complete: false });
+      setPlan(null);
+      setCheckError(
+        "O envio foi interrompido. Verifique o acervo novamente antes de continuar; registros já confirmados não serão reenviados.",
+      );
+      toast.error(error instanceof Error ? error.message : "Não foi possível concluir o envio.");
+    } finally {
+      setProgress(null);
     }
-    toast.success(`${incoming.length} questões enviadas. As repetidas foram ignoradas.`);
-    setProgress(null);
-    setIncoming(null);
-    await load();
   };
 
   const activate = async () => {
@@ -255,7 +315,8 @@ function AdminQuestionsPage() {
           </CardTitle>
           <CardDescription>
             Escolha o arquivo <b>fgv_questions.json</b> (pasta <code>supabase/imports/fgv</code> do
-            projeto). Questões já importadas são ignoradas. Todas entram “em revisão”.
+            projeto). O conteúdo é comparado no arquivo e no acervo, mesmo com outra numeração.
+            Questões novas entram “em revisão”; nenhum conteúdo existente é substituído.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-3">
@@ -265,17 +326,38 @@ function AdminQuestionsPage() {
               type="file"
               accept="application/json,.json"
               className="sr-only"
-              onChange={(e) => void onFile(e.target.files?.[0])}
+              disabled={checking || !!progress}
+              onChange={(e) => {
+                const file = e.target.files?.[0];
+                e.currentTarget.value = "";
+                void onFile(file);
+              }}
             />
           </label>
-          {incoming && (
+          {checking && (
+            <p role="status" className="text-sm text-muted-foreground">
+              Conferindo enunciados, alternativas e textos de apoio no acervo…
+            </p>
+          )}
+          {checkError && (
+            <div role="alert" className="space-y-2 text-sm">
+              <p>{checkError}</p>
+              <Button variant="outline" onClick={() => incoming && void analyze(incoming)}>
+                Verificar novamente
+              </Button>
+            </div>
+          )}
+          {incoming && plan && (
             <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-muted/50 p-3 text-sm">
               <span>
-                <b>{incoming.length}</b> questões em{" "}
-                {new Set(incoming.map((q) => `${q.contest_name}|${q.career_name}`)).size} provas,
-                prontas para importar.
+                <b>{plan.ready.length}</b> novas · <b>{plan.duplicates}</b> repetidas ignoradas ·{" "}
+                <b>{plan.conflicts}</b> conflitos.
               </span>
-              <Button onClick={() => void doImport()} disabled={!!progress} className="gap-2">
+              <Button
+                onClick={() => void doImport()}
+                disabled={!!progress || checking || !!plan.conflicts || !plan.ready.length}
+                className="gap-2"
+              >
                 {progress ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" /> {progress.done}/{progress.total}
@@ -287,6 +369,43 @@ function AdminQuestionsPage() {
                 )}
               </Button>
             </div>
+          )}
+          {plan && plan.issues.length > 0 && (
+            <details className="rounded-lg border p-3 text-sm" open={plan.conflicts > 0}>
+              <summary className="cursor-pointer font-medium">
+                Resultado da verificação ({plan.issues.length})
+              </summary>
+              <p className="my-2 text-muted-foreground">
+                Textos de apoio iguais podem servir a perguntas diferentes. Provas e cargos
+                diferentes mantêm sua identificação. Corrija os conflitos de gabarito ou numeração
+                antes de importar.
+              </p>
+              <ul className="max-h-64 space-y-2 overflow-auto">
+                {plan.issues.slice(0, 100).map((issue) => (
+                  <li key={issue.index}>
+                    Linha {issue.index}, questão {issue.item}:{" "}
+                    {issue.reason === "duplicate"
+                      ? "conteúdo já encontrado"
+                      : issue.reason === "answer_conflict"
+                        ? "mesmo conteúdo com gabarito diferente"
+                        : "número já utilizado por outro conteúdo"}
+                    {issue.origin === "file" ? " no arquivo." : " no acervo."}
+                  </li>
+                ))}
+              </ul>
+              {plan.issues.length > 100 && (
+                <p className="mt-2 text-muted-foreground">Exibindo os primeiros 100 registros.</p>
+              )}
+            </details>
+          )}
+          {result && (
+            <p role="status" className="text-sm">
+              {result.complete ? "Importação concluída" : "Importação parcial"}: {result.inserted}{" "}
+              questões gravadas, {result.ignored} repetidas ignoradas.{" "}
+              {result.complete
+                ? "Todas as novas questões aguardam revisão."
+                : "Confira a análise atualizada antes de continuar."}
+            </p>
           )}
         </CardContent>
       </Card>
