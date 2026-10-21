@@ -55,6 +55,7 @@ import {
   type TimerState,
 } from "@/lib/studyTimer";
 import { cn } from "@/lib/utils";
+import { Hint } from "@/components/ui/hint";
 
 type Search = {
   edital?: string | undefined;
@@ -250,21 +251,21 @@ function TimerPanel({
 
         <ol className="flex gap-1" aria-label="Fases do bloco">
           {segments.map((s, i) => (
-            <li
-              key={i}
-              title={`${s.type === "focus" ? "Foco" : "Pausa"} ${s.ms / 60_000} min`}
-              className={cn(
-                "h-1.5 rounded-full",
-                i < state.seg || state.finished
-                  ? s.type === "focus"
-                    ? "bg-primary"
-                    : "bg-emerald-500"
-                  : i === state.seg
-                    ? "bg-primary/60"
-                    : "bg-muted",
-              )}
-              style={{ flexGrow: s.ms }}
-            />
+            <Hint key={i} content={`${s.type === "focus" ? "Foco" : "Pausa"} ${s.ms / 60_000} min`}>
+              <li
+                className={cn(
+                  "h-1.5 rounded-full",
+                  i < state.seg || state.finished
+                    ? s.type === "focus"
+                      ? "bg-primary"
+                      : "bg-emerald-500"
+                    : i === state.seg
+                      ? "bg-primary/60"
+                      : "bg-muted",
+                )}
+                style={{ flexGrow: s.ms }}
+              />
+            </Hint>
           ))}
         </ol>
 

@@ -13,6 +13,7 @@ import {
   TESTING_PHASE,
   TESTING_TIER,
 } from "@/lib/launch.config";
+import { Hint } from "@/components/ui/hint";
 
 /** Uma foto por plano (do acervo da plataforma), enquadrada no rosto e no assunto de cada cena. */
 const PLAN_IMAGES: Record<
@@ -159,16 +160,17 @@ export function PlansSection() {
                   </ul>
                 </details>
                 {plan.price > 0 && !PAYMENTS_ENABLED ? (
-                  <button
-                    type="button"
-                    disabled
-                    aria-disabled="true"
-                    className="home-button home-button--disabled"
-                    title={PAYMENTS_NOTICE}
-                  >
-                    {SOON_LABEL}
-                    <Clock aria-hidden="true" />
-                  </button>
+                  <Hint content={PAYMENTS_NOTICE}>
+                    <button
+                      type="button"
+                      disabled
+                      aria-disabled="true"
+                      className="home-button home-button--disabled"
+                    >
+                      {SOON_LABEL}
+                      <Clock aria-hidden="true" />
+                    </button>
+                  </Hint>
                 ) : (
                   <Link
                     to="/auth"
