@@ -1,5 +1,6 @@
 import { startOnlinePresence } from "@/hooks/useOnlinePresence";
 import { AuthStatusProvider } from "@/components/auth/AuthStatusProvider";
+import { PlatformSignature } from "@/components/brand/PlatformSignature";
 import { synchronizeClock } from "@/lib/platformClock";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
@@ -184,6 +185,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body>
         {children}
+        <PlatformSignature />
         <Scripts />
       </body>
     </html>

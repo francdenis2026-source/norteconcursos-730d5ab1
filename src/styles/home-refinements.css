@@ -241,65 +241,6 @@
   }
 }
 
-/* An ownership imprint on the page edge, outside reading and touch targets. */
-.home-signature {
-  position: fixed;
-  z-index: 3;
-  inset: 50% 7px auto auto;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  writing-mode: vertical-rl;
-  color: color-mix(in srgb, var(--home-text) 52%, transparent);
-  font-size: 9px;
-  font-weight: 650;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-  user-select: none;
-}
-.home-signature::before,
-.home-signature::after {
-  content: "";
-  width: 1px;
-  height: 32px;
-  background: linear-gradient(transparent, currentColor, transparent);
-}
-.home-signature__mark {
-  border: 1px solid currentColor;
-  border-radius: 2px;
-  padding: 6px 3px;
-  font-size: 8px;
-  letter-spacing: .08em;
-}
-.home-signature__credit {
-  font-size: 7px;
-  letter-spacing: .12em;
-}
-@media (max-width: 760px) {
-  .home-signature {
-    right: 3px;
-    gap: 12px;
-    font-size: 7px;
-    letter-spacing: .1em;
-  }
-  .home-signature__mark { font-size: 7px; padding: 4px 1px; }
-  .home-signature__credit { font-size: 6px; }
-  .home-signature::before, .home-signature::after { height: 20px; }
-}
-@media (max-height: 540px) {
-  .home-signature__credit,
-  .home-signature::before,
-  .home-signature::after { display: none; }
-}
-@media print {
-  .home-signature { display: none; }
-}
-@media (forced-colors: active) {
-  .home-signature { display: none; }
-}
 
 @media (max-width: 760px) {
   :root:is(.dark, :not(.dark)) .home.home .home-hero:has(.home-intro-start) .home-hero__content {
