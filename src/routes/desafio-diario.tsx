@@ -28,8 +28,6 @@ import {
   Zap,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { NorteBrand } from "@/components/brand/NorteBrand";
-import { PageHero } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -189,26 +187,15 @@ function DesafioDiario() {
   };
 
   return (
-    <div className="daily-page min-h-[100svh] bg-background">
-      <header className="daily-header sticky top-0 z-30 pt-[env(safe-area-inset-top)]">
-        <div className="daily-container flex min-h-18 items-center justify-between gap-3">
-          <Link to="/" aria-label="Norte Concurso — início">
-            <NorteBrand />
-          </Link>
-          <div className="flex items-center gap-2">
-            <Link to="/" className="daily-home-link">
-              <ArrowLeft className="h-4 w-4" /> Início
-            </Link>
-            <Link
-              to="/auth"
-              search={{ mode: "register" }}
-              className="btn-brass !min-h-11 !px-4 !text-sm"
-            >
-              Criar conta
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className="daily-page" data-step={step}>
+      <div className="daily-art" aria-hidden="true">
+        <img src="/media/hero/distintivo-carreiras.webp" alt="" />
+        <img src="/media/hero/auth-distintivo.webp" alt="" />
+      </div>
+      <div className="daily-controls">
+        <div className="daily-identity"><ShieldCheck aria-hidden="true" /><span>NORTE <small>CAMPO DE TREINO</small></span></div>
+        <Link to="/" className="daily-exit"><ArrowLeft aria-hidden="true" /> Sair do treino</Link>
+      </div>
 
       <main className="daily-container daily-main">
         {step === "loading" && (
@@ -242,137 +229,48 @@ function DesafioDiario() {
           </Center>
         )}
         {step === "blocked" && (
-          <PageHero
-            image="trainer"
-            size="lg"
-            kicker="Desafio de hoje concluído"
-            icon={Sparkles}
-            title={
-              <>
-                Você já respondeu <em>hoje.</em>
-              </>
-            }
-            description={`Suas ${GUEST_DAILY_LIMIT} questões grátis de hoje já foram usadas neste computador. O desafio libera de novo à meia-noite do Acre. Crie uma conta para conhecer os planos e continuar sua preparação.`}
-            actions={
-              <>
-                <Link
-                  to="/auth"
-                  search={{ mode: undefined }}
-                  className="hero-btn-ghost inline-flex items-center px-4 text-sm"
-                >
-                  Já tenho conta
-                </Link>
-                <Link
-                  to="/auth"
-                  search={{ mode: "register" }}
-                  className="hero-btn-primary inline-flex items-center gap-2 px-4 text-sm"
-                >
-                  Criar conta grátis <ArrowRight className="h-4 w-4" />
-                </Link>
-              </>
-            }
-          />
+          <section className="daily-empty">
+            <ShieldCheck size={40} aria-hidden="true" />
+            <span className="daily-eyebrow">MISSÃO DO DIA CONCLUÍDA</span>
+            <h1>Treino feito.<br /><em>Um passo à frente.</em></h1>
+            <p>Você já utilizou as {GUEST_DAILY_LIMIT} respostas de hoje neste aparelho. Uma nova rodada chega à meia-noite do Acre.</p>
+            <Link to="/auth" search={{mode:"register"}} className="daily-start">Conhecer a preparação completa <ArrowRight size={18} /></Link>
+          </section>
         )}
 
         {step === "intro" && (
           <div className="daily-overview">
-            <div className="daily-heading">
-              <div>
-                <span className="daily-eyebrow">SUA PREPARAÇÃO, TODOS OS DIAS</span>
-                <h1>Desafio diário</h1>
+            <section className="daily-cover" aria-labelledby="daily-cover-title">
+              <span className="daily-eyebrow">SEGURANÇA PÚBLICA / DESAFIO DIÁRIO</span>
+              <div className="daily-cover__content">
+                <span className="daily-cover__badge"><Zap size={14} /> ACESSO LIVRE · SEM CADASTRO</span>
+                <h1 id="daily-cover-title">A próxima conquista<br />começa no <em>treino.</em></h1>
+                <p>Dez questões. Uma missão: avançar um pouco mais hoje. Teste seu conhecimento e aprenda com cada resposta.</p>
+                <button type="button" className="daily-start" onClick={startChallenge}>
+                  {remaining < GUEST_DAILY_LIMIT ? "Continuar meu desafio" : "Iniciar meu desafio"}<ArrowRight size={20} />
+                </button>
+                <span className="daily-cover__note"><ShieldCheck size={15} /> Gabarito oficial e explicações após responder</span>
               </div>
-              <p>
-                Segurança pública <span aria-hidden="true">/</span> Cebraspe e Cespe
-              </p>
-            </div>
-            <div className="daily-intro-grid">
-              <section className="daily-cover" aria-labelledby="daily-cover-title">
-                <img
-                  src="/media/hero/trainer.webp"
-                  alt=""
-                  width={1536}
-                  height={1024}
-                  fetchPriority="high"
-                />
-                <div className="daily-cover__content">
-                  <span className="daily-cover__badge">
-                    <Zap size={14} /> GRÁTIS · SEM CADASTRO
-                  </span>
-                  <h2 id="daily-cover-title">
-                    Um desafio hoje.
-                    <br />
-                    <em>Mais preparo amanhã.</em>
-                  </h2>
-                  <p>
-                    Questões de concursos de segurança pública para testar seus conhecimentos e
-                    aprender com cada resposta.
-                  </p>
-                  <button type="button" className="btn-brass" onClick={startChallenge}>
-                    Começar meu desafio <ArrowRight size={18} />
-                  </button>
-                  <span className="daily-cover__note">
-                    <ShieldCheck size={16} /> Gabarito oficial e explicação após responder
-                  </span>
-                </div>
-              </section>
-              <aside className="daily-round" aria-labelledby="daily-round-title">
-                <div className="daily-round__heading">
-                  <span className="daily-eyebrow">SUA RODADA</span>
-                  <span className="daily-round__tag">Disponível hoje</span>
-                </div>
-                <h2 id="daily-round-title">Pronto para começar?</h2>
-                <div className="daily-metrics">
-                  <div>
-                    <strong>{questions.length.toString().padStart(2, "0")}</strong>
-                    <span>questões disponíveis</span>
-                  </div>
-                  <div>
-                    <strong>
-                      {new Set(questions.map((q) => q.subject)).size.toString().padStart(2, "0")}
-                    </strong>
-                    <span>disciplinas</span>
-                  </div>
-                </div>
-                <h3>Neste desafio</h3>
-                <ul className="daily-subjects">
-                  {Array.from(new Set(questions.map((q) => q.subject))).map((subject) => (
-                    <li key={subject}>
-                      <BookOpenCheck size={15} />
-                      <span>{subject}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="daily-round__renewal">
-                  <Sparkles size={18} />
-                  <p>
-                    <strong>Uma nova rodada a cada dia</strong>
-                    <span>
-                      Renova à meia-noite do Acre. Até {GUEST_DAILY_LIMIT} respostas grátis por dia
-                      neste aparelho.
-                    </span>
-                  </p>
-                </div>
-              </aside>
-            </div>
-            <section className="daily-method" aria-label="Como funciona o desafio">
-              {[
-                ["01", "Resolva no seu ritmo", "Leia o enunciado e escolha Certo ou Errado."],
-                ["02", "Aprenda com a resposta", "Confirme sua escolha para ver a explicação."],
-                ["03", "Acompanhe seu resultado", "Veja seus acertos e o que precisa revisar."],
-              ].map(([number, title, description]) => (
-                <div key={number}>
-                  <span>{number}</span>
-                  <div>
-                    <h2>{title}</h2>
-                    <p>{description}</p>
-                  </div>
-                </div>
-              ))}
+              <div className="daily-protocol"><span>01 <b>Leia</b></span><span>02 <b>Decida</b></span><span>03 <b>Evolua</b></span></div>
             </section>
+            <aside className="daily-round" aria-labelledby="daily-round-title">
+              <div className="daily-round__heading"><span className="daily-eyebrow">BRIEFING DO DIA</span><span className="daily-round__tag">Disponível</span></div>
+              <h2 id="daily-round-title">Seu ponto de partida.</h2>
+              <div className="daily-metrics">
+                <div><strong>{questions.length.toString().padStart(2, "0")}</strong><span>questões disponíveis</span></div>
+                <div><strong>{new Set(questions.map(q => q.subject)).size.toString().padStart(2, "0")}</strong><span>disciplinas na rodada</span></div>
+              </div>
+              <details className="daily-briefing-subjects">
+                <summary>Disciplinas deste desafio <BookOpenCheck size={16} /></summary>
+                <ul className="daily-subjects">{Array.from(new Set(questions.map(q => q.subject))).map(subject => <li key={subject}>{subject}</li>)}</ul>
+              </details>
+              <div className="daily-round__renewal"><Sparkles size={18} /><p><strong>Amanhã, uma nova oportunidade.</strong><span>Até {GUEST_DAILY_LIMIT} respostas por dia neste aparelho. Renova à meia-noite do Acre.</span></p></div>
+              <Link to="/auth" search={{mode:"register"}} className="daily-register">Conheça a preparação completa <ArrowRight size={15} /></Link>
+            </aside>
           </div>
         )}
 
-        <div className={step === "done" ? "daily-result" : "daily-workspace"}>
+        <div className={step === "done" ? "daily-result" : "daily-workspace"} hidden={step !== "playing" && step !== "done"}>
           {step === "done" && (
             <TrainingResult total={correct + wrong} correct={correct} wrong={wrong} />
           )}
@@ -442,6 +340,10 @@ function QuestionPlayer({
   const parsed = parseQuestion(question.text);
   const explanation = splitExplanation(question.explanation);
   const isCorrect = selected === question.answer;
+  const explanationRef = React.useRef<HTMLElement>(null);
+  React.useEffect(() => {
+    if (answered) explanationRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+  }, [answered]);
   return (
     <div className="daily-player">
       <aside className="daily-session" aria-label="Progresso do desafio">
@@ -479,6 +381,7 @@ function QuestionPlayer({
         <p className="daily-session__renewal">Nova rodada à meia-noite do Acre.</p>
       </aside>
       <div className="daily-question-column">
+        <div className="daily-reading" tabIndex={0} role="region" aria-label="Questão e explicação">
         <Card className="daily-question-card overflow-hidden">
           <CardContent className="p-5 md:p-7">
             <div className="daily-question-heading">
@@ -490,7 +393,7 @@ function QuestionPlayer({
               </div>
               <QuestionTimer seconds={seconds} completed={answered} paused={paused} />
             </div>
-            <div className="mb-5 flex flex-wrap gap-2">
+            <div className="daily-question-meta">
               <Badge>{question.board}</Badge>
               <Badge variant="outline">Certo ou errado</Badge>
               <Badge variant="outline">{question.subject}</Badge>
@@ -516,6 +419,59 @@ function QuestionPlayer({
             <ReadingSizeInline className="justify-end" />
             <QuestionProse text={parsed.stem} className="text-base font-medium md:text-lg" />
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
+          </CardContent>
+        </Card>
+        {answered && (
+          <>
+            <AnswerFeedback
+              selected={selected === "C" ? "Certo" : "Errado"}
+              answer={question.answer === "C" ? "Certo" : "Errado"}
+              correct={isCorrect}
+              sourceLabel="Gabarito oficial"
+              elapsedSeconds={seconds}
+            />
+            <section
+              ref={explanationRef}
+              aria-label="Explicação da resposta"
+              className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
+            >
+              <div>
+                <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
+                <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
+              </div>
+              {explanation.example && (
+                <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
+                  <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
+                  <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
+                </div>
+              )}
+              {question.legalBasis.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {question.legalBasis.map((basis, i) => (
+                    <a
+                      key={i}
+                      href={basisHref(basis)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-lg border px-3 py-2 text-xs underline"
+                    >
+                      {basis.title || basis.lei || "Consultar fonte oficial"}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+            </section>
+          </>
+        )}
+        {answered && (
+          <details className="daily-study-extra">
+            <summary>Continuar estudando esta disciplina <BookOpenCheck size={16} /></summary>
+            <QuestionStudyCompanion subject={question.subject} answered={answered} />
+          </details>
+        )}
+        </div>
+        <div className="daily-answer-dock" aria-label="Responder à questão">
             <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
               Julgue o item
             </p>
@@ -555,63 +511,16 @@ function QuestionPlayer({
                 </button>
               ))}
             </div>
-            {!answered && (
+            {!answered ? (
               <div className="mt-6 flex justify-end">
                 <Button size="lg" disabled={!selected} onClick={onSubmit}>
                   Confirmar resposta <Check className="ml-2 h-4 w-4" />
                 </Button>
               </div>
+            ) : (
+              <Button size="lg" onClick={onNext}>{isLast ? "Ver resultado" : "Próxima questão"}<ArrowRight className="ml-2 h-4 w-4" /></Button>
             )}
-          </CardContent>
-        </Card>
-        {answered && (
-          <>
-            <AnswerFeedback
-              selected={selected === "C" ? "Certo" : "Errado"}
-              answer={question.answer === "C" ? "Certo" : "Errado"}
-              correct={isCorrect}
-              sourceLabel="Gabarito oficial"
-              elapsedSeconds={seconds}
-            />
-            <section
-              aria-label="Explicação da resposta"
-              className="space-y-4 rounded-2xl border bg-card p-5 md:p-7"
-            >
-              <div>
-                <h3 className="mb-2 text-sm font-bold">Entenda a resposta</h3>
-                <p className="whitespace-pre-line text-sm leading-7">{explanation.main}</p>
-              </div>
-              {explanation.example && (
-                <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/30 dark:text-amber-100">
-                  <h3 className="mb-2 text-sm font-bold">Exemplo prático</h3>
-                  <p className="whitespace-pre-line text-sm leading-7">{explanation.example}</p>
-                </div>
-              )}
-              {question.legalBasis.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {question.legalBasis.map((basis, i) => (
-                    <a
-                      key={i}
-                      href={basisHref(basis)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-lg border px-3 py-2 text-xs underline"
-                    >
-                      {basis.title || basis.lei || "Consultar fonte oficial"}
-                    </a>
-                  ))}
-                </div>
-              )}
-              <div className="flex justify-end">
-                <Button size="lg" onClick={onNext}>
-                  {isLast ? "Ver resultado" : "Próxima questão"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </section>
-          </>
-        )}
-        <QuestionStudyCompanion subject={question.subject} answered={answered} />
+        </div>
       </div>
     </div>
   );
