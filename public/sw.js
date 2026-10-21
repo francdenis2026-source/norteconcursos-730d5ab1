@@ -7,7 +7,7 @@
 //  - /offline.html, mostrada quando não há nem página guardada.
 // O que NUNCA é guardado: dados do Supabase e qualquer outro domínio, nem requisições que não sejam GET.
 // Questões, respostas, ranking e login continuam sempre ao vivo.
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL_CACHE = `norte-app-shell-${VERSION}`;
 const ASSET_CACHE = `norte-assets-${VERSION}`;
 const PAGE_CACHE = `norte-pages-${VERSION}`;
@@ -16,6 +16,7 @@ const SHELL_ASSETS = [
   "/icons/icon-256.png",
   "/favicon.svg",
   "/offline.html",
+  "/media/loading/norte-abertura-hd.webp",
 ];
 const MAX_ASSETS = 220;
 const MAX_PAGES = 25;
@@ -86,7 +87,18 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const page = await caches.match(request, { ignoreSearch: true });
-          return page || (await caches.match("/offline.html")) || Response.error();
+          const fallback = page || (await caches.match("/offline.html"));
+          if (!fallback) return Response.error();
+          // A cached /offline.html response carries its own URL. Return a fresh
+          // response so reload/reconnect keeps the route the person requested.
+          const headers = new Headers(fallback.headers);
+          headers.delete("content-encoding");
+          headers.delete("content-length");
+          return new Response(fallback.body, {
+            status: fallback.status,
+            statusText: fallback.statusText,
+            headers,
+          });
         }),
     );
     return;

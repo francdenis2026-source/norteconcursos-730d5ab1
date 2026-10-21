@@ -1,0 +1,24 @@
+/* On-image colors retain contrast in either platform theme. */
+.offline-notice {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 24px max(14px, env(safe-area-inset-bottom));
+  border-top: 1px solid #ddbc7540;
+  background: linear-gradient(90deg, #10130fef, #171a15f5), url('/media/loading/norte-abertura-hd.webp') center 38% / cover;
+  color: #c7c9bd;
+  box-shadow: 0 -8px 32px #0003;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.offline-notice > svg { color: #e5be73; }
+.offline-notice strong { color: #f0d197; font-weight: 650; }
+@media (max-width: 640px) {
+  .offline-notice { gap: 10px; padding-inline: 18px; font-size: 11px; }
+  .offline-notice strong { display: block; }
+}
+@media (forced-colors: active) { .offline-notice { background: Canvas; color: CanvasText; border-color: CanvasText; } .offline-notice strong, .offline-notice > svg { color: CanvasText; } }

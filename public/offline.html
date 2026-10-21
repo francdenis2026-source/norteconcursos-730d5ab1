@@ -2,30 +2,111 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#14171d">
-<title>Sem conexão — Norte Concurso</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0d0c">
+<title>Sem conexão — Norte Concursos</title>
 <style>
-  :root { color-scheme: dark; }
+  :root { color-scheme: dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #f6f3eb; background: #0b0d0c; }
   * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #14171d; color: #eef0f3; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { width: 100%; max-width: 420px; text-align: center; }
-  img { width: 72px; height: 72px; margin-bottom: 16px; }
-  h1 { margin: 0 0 8px; font-size: 1.4rem; }
-  p { margin: 0 0 12px; line-height: 1.5; color: #b6bcc6; }
-  button { margin-top: 8px; padding: 12px 22px; border: 0; border-radius: 12px; background: #eef0f3; color: #14171d; font-size: 1rem; font-weight: 600; cursor: pointer; }
-  small { display: block; margin-top: 16px; color: #8a919c; }
+  body { margin: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; background: linear-gradient(125deg, #1a191425, transparent 60%), #0b0d0c; }
+  .top { width: min(100%, 1440px); margin-inline: auto; padding: clamp(20px, 3vw, 40px) clamp(22px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+  .brand img { width: 42px; height: 48px; }
+  .brand strong { display: block; font-size: 22px; letter-spacing: .23em; line-height: 1.1; }
+  .brand small { display: block; margin-top: 7px; color: #e5bc70; font-size: 9px; font-weight: 700; letter-spacing: .36em; }
+  .top-note { display: flex; align-items: center; gap: 8px; color: #b9b6aa; font-size: 11px; letter-spacing: .08em; }
+  .top-note::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #d4b16d; }
+  main { width: min(100%, 1440px); flex: 1; align-self: center; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; padding: 0 clamp(22px, 5vw, 76px) 24px; }
+  .art { min-width: 0; margin: 0 -30px; position: relative; }
+  .art img { display: block; width: 100%; height: auto; max-height: 69svh; object-fit: contain; object-position: center; mask-image: linear-gradient(0deg, transparent, #000 12%, #000 90%, transparent); }
+  .art figcaption { position: absolute; bottom: 2%; left: 9%; color: #c8b992; font-size: 9px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+  .panel { width: 100%; max-width: 480px; padding: clamp(24px, 3vw, 38px); border: 1px solid #d9b77030; border-radius: 24px; background: linear-gradient(145deg, #242620eb, #141714f5); box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0004; }
+  .eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 22px; color: #e4bd75; font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  svg { flex: 0 0 auto; }
+  h1 { margin: 0; font-size: clamp(29px, 3.2vw, 44px); line-height: 1.08; letter-spacing: -.045em; text-wrap: balance; }
+  h1 span { color: #edc782; }
+  .description { margin: 20px 0 24px; color: #c4c5bb; font-size: 14px; line-height: 1.7; }
+  .saved { display: flex; gap: 10px; align-items: flex-start; padding: 16px 0; border-block: 1px solid #d9b77020; }
+  .saved svg { color: #d7b779; margin-top: 2px; }
+  .saved p { margin: 0; font-size: 12px; line-height: 1.6; color: #b7b9ae; }
+  .saved strong { display: block; color: #e8e7df; font-size: 12px; margin-bottom: 3px; }
+  button { width: 100%; min-height: 48px; margin-top: 24px; padding: 12px 18px; display: flex; align-items: center; justify-content: center; gap: 12px; border: 1px solid #f4d799; border-radius: 12px; background: linear-gradient(115deg, #f1cf8a, #dca94c); color: #211b0f; font: inherit; font-size: 13px; font-weight: 750; cursor: pointer; transition: filter .18s, transform .18s; }
+  button:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  button:active { transform: translateY(0); }
+  button:focus-visible, a:focus-visible { outline: 2px solid #f3d49a; outline-offset: 5px; }
+  .automatic { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 14px 0 0; color: #a9ad9f; font-size: 11px; line-height: 1.5; text-align: center; }
+  footer { padding: 14px 22px max(20px, env(safe-area-inset-bottom)); color: #858c7d; font-size: 10px; letter-spacing: .07em; text-align: center; }
+  @media (max-width: 760px) {
+    .top { padding: 20px 24px 4px; }
+    .brand img { width: 32px; height: 38px; }
+    .brand strong { font-size: 18px; }
+    .brand small { font-size: 8px; margin-top: 5px; }
+    .top-note { font-size: 9px; letter-spacing: .02em; }
+    main { width: min(100%, 520px); grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0 22px 8px; align-content: center; }
+    .art { margin: 0 -12px -28px; }
+    .art img { max-height: clamp(190px, 29svh, 300px); }
+    .art figcaption { display: none; }
+    .panel { position: relative; max-width: none; padding: 24px; border-radius: 20px; }
+    .eyebrow { margin-bottom: 16px; font-size: 9px; }
+    h1 { font-size: clamp(28px, 7vw, 36px); }
+    .description { margin: 14px 0 18px; font-size: 13px; }
+    .saved { padding: 12px 0; }
+    button { margin-top: 18px; }
+    footer { padding-top: 12px; font-size: 9px; }
+  }
+  @media (max-height: 680px) and (max-width: 760px) {
+    .top { padding-top: 12px; }
+    .art img { max-height: 170px; }
+    .panel { padding: 18px; }
+    h1 { font-size: 27px; }
+    .saved p, .saved strong { font-size: 11px; }
+    .saved p { line-height: 1.5; }
+    button { min-height: 44px; margin-top: 14px; }
+    .eyebrow { margin-bottom: 12px; }
+    .description { margin: 12px 0; font-size: 12px; line-height: 1.55; }
+    .automatic { margin-top: 10px; font-size: 10px; }
+    footer { padding-bottom: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) { button { transition: none; } }
+  @media (forced-colors: active) { .panel { border: 1px solid CanvasText; } button { border: 1px solid ButtonText; } .art { display: none; } }
 </style>
 </head>
 <body>
+<header class="top">
+  <a class="brand" href="/" aria-label="Norte Concursos — página inicial">
+    <img src="/favicon.svg" alt="" width="42" height="48">
+    <span><strong>NORTE</strong><small>CONCURSOS</small></span>
+  </a>
+  <span class="top-note">Carreiras policiais</span>
+</header>
 <main>
-  <img src="/icons/icon-256.png" alt="" width="72" height="72">
-  <h1>Você está sem conexão</h1>
-  <p>Não foi possível abrir esta página agora. O que você já respondeu está salvo e continua na sua conta.</p>
-  <p>Conecte-se à internet para continuar estudando.</p>
-  <button type="button" onclick="location.reload()">Tentar de novo</button>
-  <small>Quando a conexão voltar, esta tela recarrega sozinha.</small>
+  <figure class="art" aria-hidden="true">
+    <img src="/media/loading/norte-abertura-hd.webp" width="1536" height="1024" alt="" decoding="async">
+    <figcaption>Foco. Constância. Conquista.</figcaption>
+  </figure>
+  <section class="panel" aria-labelledby="offline-title">
+    <div class="eyebrow">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m2 2 20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5-2M16 11a10 10 0 0 1 3 2M2 9a15 15 0 0 1 4-2.6M10 5.2A15 15 0 0 1 22 9M12 20h.01"/></svg>
+      Conexão interrompida
+    </div>
+    <h1 id="offline-title">Você está sem conexão<span>.</span></h1>
+    <p class="description">Uma pausa na conexão, não no seu objetivo. Reconecte-se à internet para continuar sua preparação.</p>
+    <div class="saved">
+      <svg width="18" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8 4v5c0 5-5 8-8 10-3-2-8-5-8-10V7zM8 12l3 3 5-6"/></svg>
+      <p><strong>Seu progresso confirmado permanece salvo.</strong>Novas respostas precisam de conexão para serem registradas na sua conta.</p>
+    </div>
+    <button type="button" id="retry">Tentar reconectar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+    <p class="automatic" role="status">Voltaremos automaticamente quando a conexão retornar.</p>
+  </section>
 </main>
-<script>addEventListener("online", function () { location.reload(); });</script>
+<footer>Norte Concursos · Sua preparação tem um norte.</footer>
+<script>
+  function reconnect() {
+    if (location.pathname === '/offline.html') location.replace('/');
+    else location.reload();
+  }
+  document.getElementById('retry').addEventListener('click', reconnect);
+  addEventListener('online', reconnect);
+</script>
 </body>
 </html>
