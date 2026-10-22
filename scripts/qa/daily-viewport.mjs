@@ -27,6 +27,15 @@ try{
   if(theme==='dark')await page.screenshot({path:`/tmp/norte-daily-intro-${width}.png`});
   await page.getByRole('button',{name:'Iniciar meu desafio'}).click();
   const confirm=page.getByRole('button',{name:'Confirmar resposta'});await confirm.waitFor();assert.ok(await confirm.isDisabled(),'answer required');
+  const clock=page.locator('.daily-question-card .tactical-clock--question');
+  const art=await clock.locator('.tactical-clock__face').boundingBox();
+  const display=await clock.locator('.tactical-clock__display').boundingBox();
+  const timerRow=await page.locator('.question-timing-row').boundingBox();
+  assert.ok(art.width>=112,'large tactical dial');
+  assert.ok(display.y>=art.y+art.height,'digital readout below the image without overlap');
+  assert.ok(Math.abs(art.x+art.width/2-timerRow.x-timerRow.width/2)<1,'dial centered in question area');
+  assert.equal(await clock.evaluate(n=>getComputedStyle(n).borderTopWidth),'0px','no surrounding box');
+  assert.equal(await clock.evaluate(n=>getComputedStyle(n).backgroundColor),'rgba(0, 0, 0, 0)','transparent surround');
   await checkFrame();const dock=await page.locator('.daily-answer-dock').boundingBox();assert.ok(dock.y+dock.height<=height,'response controls stay inside viewport');
   assert.ok(await page.locator('.daily-reading').evaluate(el=>el.scrollHeight>el.clientHeight),'long stem scrolls internally');
   for(let i=0;i<10;i++){

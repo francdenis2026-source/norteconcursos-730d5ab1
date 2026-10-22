@@ -198,3 +198,34 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-start { box-shadow: 0 5px 14px -10px rgb(0 0 0 / 35%); transition: transform 180ms ease; }
 .daily-study-extra { border-top: 1px solid var(--daily-edge); padding-top: 12px; }
 .daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
+
+/* A freestanding instrument for the daily challenge, with its readout below the dial. */
+.daily-question-card .question-timing-row { justify-content: center; margin-block: 4px 20px; }
+.daily-question-card .question-stopwatch .tactical-clock--question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face {
+  width: clamp(112px, 12vw, 144px);
+}
+.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__display {
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__time { font-size: 28px; }
+.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__status { justify-content: center; }
+@media (max-height: 620px) and (orientation: landscape) {
+  .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face { width: 112px; }
+}
