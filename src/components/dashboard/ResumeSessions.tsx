@@ -36,6 +36,7 @@ export function ResumeSessions({
   only,
   skipRoute,
   className,
+  compact = false,
 }: {
   userId: string | undefined;
   /** Mostra só um tipo (ex.: no treinador, só o treino). */
@@ -43,6 +44,8 @@ export function ResumeSessions({
   /** Rota atual do treinador: sessão salva com os mesmos filtros já é retomada pela própria tela. */
   skipRoute?: string;
   className?: string;
+  /** Dense summary for the student home; other routes retain their current presentation. */
+  compact?: boolean;
 }) {
   const [sessions, setSessions] = React.useState<ResumeSession[]>([]);
   // Sessões iniciadas em outro aparelho chegam da conta antes da primeira leitura.
@@ -95,10 +98,11 @@ export function ResumeSessions({
         return (
           <article
             key={`${s.kind}:${s.title}`}
-            className="rounded-2xl border border-primary/30 bg-primary/5 p-4"
+            className={`resume-session rounded-2xl border border-primary/30 bg-primary/5 p-4${compact ? " resume-session--compact" : ""}`}
+            data-kind={s.kind}
           >
-            <div className="flex flex-wrap items-start justify-between gap-3">
-              <div className="min-w-0">
+            <div className="resume-session__heading flex flex-wrap items-start justify-between gap-3">
+              <div className="resume-session__copy min-w-0">
                 <p className="text-xs font-bold uppercase tracking-wider text-primary">
                   {s.kind === "trainer" ? "Treino em andamento" : "Prova em andamento"}
                 </p>
@@ -107,7 +111,7 @@ export function ResumeSessions({
                   Você parou na questão {s.position} de {s.total}.
                 </p>
               </div>
-              <div className="flex shrink-0 items-center gap-2">
+              <div className="resume-session__actions flex shrink-0 items-center gap-2">
                 <Button asChild>
                   <Link to={s.to} search={s.search as never}>
                     <PlayCircle className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -128,11 +132,11 @@ export function ResumeSessions({
               </div>
             </div>
             <Progress
-              className="mt-3 h-2"
+              className="resume-session__progress mt-3 h-2"
               value={s.total ? (done / s.total) * 100 : 0}
               aria-label="Progresso da sessão"
             />
-            <dl className="mt-3 grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
+            <dl className="resume-session__stats mt-3 grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
               {s.kind === "trainer" ? (
                 <>
                   <Item label="Acertos" value={s.correct ?? 0} />
@@ -159,7 +163,7 @@ export function ResumeSessions({
               )}
             </dl>
             {s.kind === "simulator" && (
-              <p className="mt-2 text-xs text-muted-foreground">
+              <p className="resume-session__note mt-2 text-xs text-muted-foreground">
                 {s.unsavedResult || (s.secondsLeft ?? 0) <= 0
                   ? "O prazo terminou: abra a prova para finalizar e registrar o resultado."
                   : "O relógio da prova continua correndo enquanto você está fora. O gabarito só aparece na entrega."}
