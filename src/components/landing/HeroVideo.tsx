@@ -1,11 +1,13 @@
-import { ArrowRight, Play, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
+import { createPortal } from "react-dom";
 import introArtwork from "@/assets/auth/carreiras-composicao.webp";
 import introBadge from "@/assets/auth/distintivo.webp";
 import { claimDocumentIntro } from "@/lib/documentIntro";
+import { documentStartup } from "@/lib/startupSequence";
 import "@/styles/intro-frame.css";
 import { useEffect, useRef, useState } from "react";
 
-/** Plays once, then removes the video and reveals the homepage photograph. */
+/** The optional film belongs to the startup stage, before the homepage is revealed. */
 export function HeroVideo({
   onIntroChange,
   onIntroSettled,
@@ -16,11 +18,10 @@ export function HeroVideo({
 }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
-  // Touch layouts use the smaller video in the artwork area, alongside or below the copy.
+  // Touch layouts use the lighter video inside the same startup frame.
   const [compact, setCompact] = useState(false);
-  const [phase, setPhase] = useState<"image" | "ready" | "playing" | "fading">("image");
+  const [phase, setPhase] = useState<"image" | "playing" | "fading">("image");
   const finishRef = useRef<() => void>(() => {});
-  const retryRef = useRef<() => void>(() => {});
   const eligible = useRef<boolean | null>(null);
 
   useEffect(() => {
@@ -29,6 +30,7 @@ export function HeroVideo({
       eligible.current = claimDocumentIntro(document.documentElement, navigation?.name ?? window.location.href);
     }
     if (!eligible.current) {
+      documentStartup().settleIntro();
       onIntroSettled?.();
       return;
     }
@@ -44,16 +46,13 @@ export function HeroVideo({
       /(^|-)2g$/.test(connection?.effectiveType ?? "") ||
       (connection?.downlink !== undefined && connection.downlink > 0 && connection.downlink < 0.7);
     // Plays on phones and tablets too; only data saver, slow networks and reduced motion keep the still image.
-    const start = () => {
-      if (!connection?.saveData && !slow && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        setCompact(matchMedia("(max-width: 1100px)").matches);
-        setLoadVideo(true);
-      } else onIntroSettled?.();
-    };
-    // The one-time document loader must finish before the five-second film starts.
-    if (document.documentElement.dataset["norteBoot"] === "ready") start();
-    else window.addEventListener("norte:boot-ready", start, { once: true });
-    return () => window.removeEventListener("norte:boot-ready", start);
+    if (!connection?.saveData && !slow && !matchMedia("(prefers-reduced-motion: reduce)").matches && documentStartup().prepareIntro()) {
+      setCompact(matchMedia("(max-width: 1100px)").matches);
+      setLoadVideo(true);
+    } else {
+      documentStartup().settleIntro();
+      onIntroSettled?.();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -63,34 +62,42 @@ export function HeroVideo({
     if (!element) return;
     let active = true;
     let finished = false;
+    let shown = false;
     let fadeTimer = 0;
     let playbackTimer = 0;
+    const removeFilm = () => {
+      fadeTimer = window.setTimeout(() => {
+        if (active) { setPhase("image"); setLoadVideo(false); }
+      }, 280);
+    };
     const finish = () => {
       if (!active || finished) return;
       finished = true;
       window.clearTimeout(loadTimer);
       window.clearTimeout(playbackTimer);
       element.pause();
-      setPhase("fading");
+      if (shown) setPhase("fading");
+      else { setPhase("image"); setLoadVideo(false); }
       onIntroChange(false);
       onIntroSettled?.();
-      fadeTimer = window.setTimeout(() => {
-        if (active) {
-          setPhase("image");
-          setLoadVideo(false);
-        }
-      }, 320);
+      documentStartup().settleIntro();
+      if (shown) {
+        if (document.documentElement.dataset['norteBoot'] === 'ready') removeFilm();
+        else window.addEventListener('norte:boot-ready', removeFilm, { once: true });
+      }
     };
     finishRef.current = finish;
     const started = () => {
-      if (finished) return;
+      if (finished) { element.pause(); return; }
+      if (!documentStartup().showIntro()) { finish(); return; }
+      shown = true;
       window.clearTimeout(loadTimer);
       setPhase("playing");
       onIntroChange(true);
       // Never leave the visitor behind an intro stalled by the connection.
       if (!playbackTimer) playbackTimer = window.setTimeout(finish, 9000);
     };
-    const loadTimer = window.setTimeout(finish, 8000);
+    const loadTimer = window.setTimeout(finish, 4000);
     element.addEventListener("playing", started);
     element.addEventListener("ended", finish);
     element.addEventListener("error", finish);
@@ -101,17 +108,11 @@ export function HeroVideo({
     element.setAttribute("webkit-playsinline", "");
     const play = () => {
       if (!active || finished) return;
-      void element.play().catch((error: unknown) => {
+      void element.play().catch(() => {
         if (!active || finished) return;
-        if (error instanceof DOMException && error.name === "NotAllowedError") {
-          window.clearTimeout(loadTimer);
-          setPhase("ready");
-          onIntroChange(false);
-          onIntroSettled?.();
-        } else finish();
+        finish();
       });
     };
-    retryRef.current = play;
     element.load();
     play();
     return () => {
@@ -119,12 +120,12 @@ export function HeroVideo({
       window.clearTimeout(loadTimer);
       window.clearTimeout(playbackTimer);
       window.clearTimeout(fadeTimer);
+      window.removeEventListener('norte:boot-ready', removeFilm);
       element.removeEventListener("playing", started);
       element.removeEventListener("ended", finish);
       element.removeEventListener("error", finish);
       element.pause();
       finishRef.current = () => {};
-      retryRef.current = () => {};
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadVideo, onIntroChange]);
@@ -140,13 +141,8 @@ export function HeroVideo({
         height={1302}
         fetchPriority="high"
       />
-      {loadVideo && phase === "ready" && (
-        <button type="button" className="home-intro-start" onClick={() => retryRef.current()}>
-          <Play aria-hidden="true" /> Ver introdução
-        </button>
-      )}
-      {loadVideo && (
-        <div className="home-intro tactical-intro" data-phase={phase} aria-label="Introdução Norte Concursos">
+      {loadVideo && typeof document !== 'undefined' && document.getElementById('norte-initial-loading') && createPortal(
+        <div className="home-intro tactical-intro startup-intro" data-phase={phase} aria-label="Introdução Norte Concursos">
           <div className="tactical-intro__frame">
             <img className="tactical-intro__art" src={introArtwork} alt="" aria-hidden="true" width={1440} height={600} />
             <header className="tactical-intro__heading">
@@ -193,7 +189,7 @@ export function HeroVideo({
               )}
             </footer>
           </div>
-        </div>
+        </div>, document.getElementById('norte-initial-loading')!,
       )}
     </>
   );

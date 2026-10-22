@@ -195,8 +195,8 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         <InitialLoadingScreen />
         <script dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_WATCHDOG }} />
-        <noscript><style>{"#norte-initial-loading{display:none}html:not([data-norte-boot=ready]){overflow:auto}"}</style></noscript>
-        {children}
+        <noscript><style>{"#norte-initial-loading{display:none}html:not([data-norte-boot=ready]){overflow:auto}html:not([data-norte-boot=ready]) #norte-app-content{visibility:visible;opacity:1;pointer-events:auto}"}</style></noscript>
+        <div id="norte-app-content">{children}</div>
         <PlatformSignature />
         <Scripts />
       </body>
