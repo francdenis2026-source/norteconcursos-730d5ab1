@@ -14,11 +14,12 @@ function session() {
 try {
   for (const authenticated of [false, true]) {
     const context = await browser.newContext({ viewport: { width: authenticated ? 1440 : 390, height: authenticated ? 900 : 844 } });
-    let disconnected = false;
+    let disconnected = false, profileCalls = 0;
     if (authenticated) await context.addInitScript(value => localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token', JSON.stringify(value)), session());
     await context.route('https://gkwphadbveiyjcwiiizw.supabase.co/**', async route => {
-      if (disconnected) return route.abort('internetdisconnected');
       const path = new URL(route.request().url()).pathname;
+      if (path.endsWith('/profiles') && route.request().headers()['accept']?.includes('object')) profileCalls++;
+      if (disconnected) return route.abort('internetdisconnected');
       let body = [];
       if (path.endsWith('/profiles') && route.request().headers()['accept']?.includes('object')) body = { id: uid, full_name: 'ALUNO TESTE', onboarding_completed: true, subscription_tier: 'premium', is_activated: true, created_at: new Date().toISOString() };
       else if (path.endsWith('/user_roles')) body = [{ user_id: uid, role: 'user' }];
@@ -43,26 +44,35 @@ try {
     await page.getByRole('dialog', { name: 'Você está sem conexão' }).waitFor({ timeout: 4000 });
     await frame.getByRole('heading', { name: 'Você está sem conexão.' }).waitFor();
     assert.equal(await frame.locator('.scene').evaluate(img => img.naturalWidth), 1942);
-    assert.equal(await page.locator('#norte-platform-surface').evaluate(node => node.inert), true);
+    assert.equal(await page.locator('#norte-platform-surface').evaluate(node => node.closest('[inert]') !== null), true);
     assert.equal(navigations, 0, 'connection loss cannot navigate or replay startup');
     assert.equal(page.url(), originalURL);
     await frame.getByRole('button', { name: 'Tentar reconectar' }).click();
     await frame.getByText('Conexão ainda indisponível.').waitFor();
     assert.equal(navigations, 0, 'embedded retry must not reload the host page');
     if (authenticated) {
+      await page.evaluate(() => window.dispatchEvent(new Event('norte:profile-updated')));
       // The root overlay must survive the auth guard replacing its own children.
       await page.getByRole('heading', { name: 'Não foi possível confirmar seu acesso', includeHidden: true }).waitFor({ state: 'attached', timeout: 15000 });
       assert.equal(await page.locator('.offline-connection').isVisible(), true);
     } else {
       assert.equal(await page.getByLabel('E-mail', { exact: true }).inputValue(), 'draft@example.test', 'keep the same mounted form and its draft');
     }
+    const beforeRecoveryProfiles = profileCalls;
+    const recoveredProfile = authenticated ? page.waitForResponse(response =>
+      new URL(response.url()).pathname.endsWith('/profiles') && response.request().headers()['accept']?.includes('object') && response.ok(), { timeout: 20000 }) : null;
     disconnected = false;
     await context.setOffline(false);
     await page.locator('.offline-connection').waitFor({ state: 'hidden', timeout: 12000 });
     assert.equal(navigations, 0, 'reconnection restores the existing page without a reload');
     assert.equal(page.url(), originalURL);
-    assert.equal(await page.locator('#norte-platform-surface').evaluate(node => node.inert), false);
+    assert.equal(await page.locator('#norte-platform-surface').evaluate(node => node.closest('[inert]') !== null), false);
     if (!authenticated) assert.equal(await page.getByLabel('E-mail', { exact: true }).inputValue(), 'draft@example.test');
+    else {
+      await recoveredProfile;
+      await page.locator('.app-shell').waitFor({ timeout: 12000 });
+      assert.ok(profileCalls > beforeRecoveryProfiles, 'recovery immediately retries a profile that failed during the outage');
+    }
     // HTTP detection covers internet loss while navigator.onLine remains true.
     let headReachable = false;
     await context.route('**/favicon.svg', route => route.request().method() === 'HEAD'

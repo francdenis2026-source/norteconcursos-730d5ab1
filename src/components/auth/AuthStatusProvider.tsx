@@ -190,9 +190,21 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
     const refreshProfile = () => {
       void loader.run(currentSession);
     };
+    const refreshAfterConnection = () => {
+      const session = currentSession;
+      if (!session) return;
+      const restoredAt = Date.now();
+      void loader.run(session).then(() => {
+        // A request started during the outage may still be timing out. Retry
+        // once after it settles instead of retaining its error for a minute.
+        if (active && sessionActivityKey(currentSession) === sessionActivityKey(session) && lastRefresh < restoredAt)
+          void loader.run(currentSession);
+      });
+    };
     const interval = window.setInterval(refresh, 60_000);
     document.addEventListener("visibilitychange", refresh);
     window.addEventListener("norte:profile-updated", refreshProfile);
+    window.addEventListener("norte:connection-restored", refreshAfterConnection);
     return () => {
       active = false;
       window.clearTimeout(deadline);
@@ -202,6 +214,7 @@ export function AuthStatusProvider({ children, statusObserver }: { children: Rea
       window.clearInterval(interval);
       document.removeEventListener("visibilitychange", refresh);
       window.removeEventListener("norte:profile-updated", refreshProfile);
+      window.removeEventListener("norte:connection-restored", refreshAfterConnection);
     };
   }, [attempt]);
   const value = useMemo(

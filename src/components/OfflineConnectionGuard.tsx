@@ -20,7 +20,10 @@ export function OfflineConnectionGuard() {
         const response = await fetch("/favicon.svg", { method: "HEAD", cache: "no-store", signal });
         return response.ok;
       },
-      publish: reachable => setOffline(!reachable),
+      publish: reachable => {
+        setOffline(!reachable);
+        if (reachable) window.dispatchEvent(new Event("norte:connection-restored"));
+      },
     });
     const check = () => monitor.check();
     const lost = () => monitor.offline();
