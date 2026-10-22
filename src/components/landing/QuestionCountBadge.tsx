@@ -1,3 +1,4 @@
+import "./QuestionCountBadge.css";
 import { BookOpenCheck, ArrowUpRight } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -31,14 +32,14 @@ export function QuestionCountBadge() {
         <BookOpenCheck />
       </span>
       <span className="question-count-content">
-        <span className="question-count-eyebrow">Seu próximo nível começa aqui</span>
+        <span className="question-count-eyebrow">Banco de questões</span>
         <span className="question-count-main">
           <strong>{data ? format(data.available) : "Questões"}</strong>
           <span>
             {data
               ? data.available === 1
-                ? "questão disponível"
-                : "questões disponíveis"
+                ? "questão disponível para treinar"
+                : "questões disponíveis para treinar"
               : "para sua preparação"}
           </span>
         </span>

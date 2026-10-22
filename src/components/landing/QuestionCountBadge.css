@@ -1,0 +1,27 @@
+/* Lead with the real, available catalogue count while retaining the shared glass surface. */
+.home.home .home-hero__study-links .question-count-badge .question-count-content { gap: 7px; padding-right: 12px; }
+.home.home .home-hero__study-links .question-count-badge .question-count-eyebrow {
+  display: block;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: .12em;
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-main {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-main strong {
+  font-size: clamp(36px, 3.6vw, 48px);
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.045em;
+  line-height: 1;
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-main > span { font-size: 12px; font-weight: 600; line-height: 1.4; }
+.home.home .home-hero__study-links .question-count-badge .question-count-detail { line-height: 1.4; }
+.home.home .home-hero__study-links .question-count-badge .question-count-arrow { width: 17px; height: 17px; }
+@media (max-width: 520px) {
+  .home.home .home-hero__study-links .question-count-badge .question-count-main strong { font-size: 38px; }
+}
