@@ -25,3 +25,28 @@
 @media (max-width: 520px) {
   .home.home .home-hero__study-links .question-count-badge .question-count-main strong { font-size: 38px; }
 }
+
+.home.home .home-hero__study-links .question-count-badge .question-count-detail {
+  display: grid;
+  gap: 5px;
+  margin-top: 3px;
+  padding-top: 10px;
+  border-top: 1px solid var(--home-glass-edge, var(--border));
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-registered {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-registered strong {
+  color: var(--signal-ink, var(--brass-soft));
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.035em;
+  line-height: 1.1;
+}
+.home.home .home-hero__study-links .question-count-badge .question-count-registered > span { font-size: 11px; font-weight: 650; }
+.home.home .home-hero__study-links .question-count-badge .question-count-sources { font-size: 10px; }

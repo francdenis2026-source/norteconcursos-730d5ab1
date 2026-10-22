@@ -44,9 +44,15 @@ export function QuestionCountBadge() {
           </span>
         </span>
         <span className="question-count-detail">
-          {data
-            ? `${format(data.registered)} ${data.registered === 1 ? "cadastrada" : "cadastradas"} · oficiais e autorais`
-            : "Oficiais e autorais · liberação após revisão"}
+          {data ? (
+            <>
+              <span className="question-count-registered">
+                <strong>{format(data.registered)}</strong>
+                <span>{data.registered === 1 ? "cadastrada no total" : "cadastradas no total"}</span>
+              </span>
+              <span className="question-count-sources">Questões oficiais e autorais</span>
+            </>
+          ) : "Oficiais e autorais · liberação após revisão"}
         </span>
       </span>
       <ArrowUpRight className="question-count-arrow" aria-hidden="true" />
