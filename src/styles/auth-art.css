@@ -91,7 +91,7 @@
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: 134px;
+  min-height: 158px;
   margin: 0 calc(-1 * var(--access-padding)) 20px;
   padding: 18px var(--access-padding);
   overflow: hidden;
@@ -105,8 +105,8 @@
   inset: 0 0 0 auto;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 65% 45%;
+  object-fit: contain;
+  object-position: right center;
 }
 .auth .auth-identity::after {
   content: '';
@@ -146,12 +146,12 @@
 @media (max-width: 480px) {
   .auth.auth .auth-panel { padding-inline: max(14px, env(safe-area-inset-left)) max(14px, env(safe-area-inset-right)); }
   .auth.auth .auth-card { --access-padding: 20px; border-radius: 16px; }
-  .auth .auth-identity { min-height: 120px; }
+  .auth .auth-identity { min-height: 144px; }
   .auth[data-auth-mode="register"] .auth-row { grid-template-columns: minmax(0, 1fr); }
 }
 /* Compress spacing before changing the field layout. Narrow devices always keep stacked fields. */
 @media (max-height: 740px) {
-  .auth .auth-identity { min-height: 105px; padding-block: 12px; margin-bottom: 14px; }
+  .auth .auth-identity { min-height: 124px; padding-block: 12px; margin-bottom: 14px; }
   .auth .auth-identity strong { font-size: 19px; }
   .auth .auth-tabs { margin-bottom: 12px; }
   .auth .auth-form { margin-top: 14px; gap: 12px; }
@@ -162,7 +162,7 @@
   .auth.auth .auth-panel { padding-block: max(8px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-bottom)); }
   .auth.auth .auth-card { padding-bottom: 14px; }
   .auth .auth-access-nav { padding-bottom: 10px; }
-  .auth .auth-identity { min-height: 90px; margin-bottom: 12px; }
+  .auth .auth-identity { min-height: 108px; margin-bottom: 12px; }
   .auth .auth-identity__career { display: none; }
   .auth .auth-tabs button { min-height: 36px; }
   .auth .auth-heading p { display: none; }
@@ -170,12 +170,12 @@
   .auth .auth-field input { height: 44px; }
   .auth .auth-security { margin-top: 10px; }
   .auth[data-auth-mode="login"] .auth-dev-signature { display: none; }
-  .auth[data-auth-mode="login"] .auth-identity { min-height: 80px; padding-block: 10px; }
+  .auth[data-auth-mode="login"] .auth-identity { min-height: 100px; padding-block: 10px; }
   .auth[data-auth-mode="login"] .auth-security { margin-top: 8px; }
 }
 @media (max-height: 480px) and (min-width: 680px) {
   .auth.auth .auth-card { width: min(100%, 620px); }
-  .auth .auth-identity { min-height: 76px; }
+  .auth .auth-identity { min-height: 90px; }
   .auth .auth-identity strong { font-size: 18px; }
   .auth[data-auth-mode="login"] .auth-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 20px; }
   .auth[data-auth-mode="login"] .auth-form > :not(.contents) { grid-column: 1 / -1; }
@@ -190,4 +190,42 @@
   .auth .auth-identity { background: Canvas; color: CanvasText; }
   .auth .auth-identity strong, .auth .auth-identity span { color: CanvasText; }
   .auth .auth-identity::after, .auth-identity__scene { display: none; }
+}
+
+/* Give the artwork room while keeping the login controls inside short windows. */
+@media (max-height: 620px) {
+  .auth[data-auth-mode="login"] .auth-security,
+  .auth[data-auth-mode="login"] .auth-dev-signature { display: none; }
+  .auth[data-auth-mode="login"] .auth-access-nav { padding-bottom: 6px; }
+}
+@media (max-height: 540px) and (min-width: 480px) {
+  .auth.auth[data-auth-mode="login"] .auth-card { width: min(100%, 620px); }
+  .auth[data-auth-mode="login"] .auth-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 20px; }
+  .auth[data-auth-mode="login"] .auth-form > :not(.contents) { grid-column: 1 / -1; }
+  .auth[data-auth-mode="login"] .auth-field { align-content: end; }
+}
+@media (max-height: 480px) and (min-width: 480px) {
+  .auth[data-auth-mode="login"] .auth-heading { display: none; }
+  .auth[data-auth-mode="login"] .auth-identity { min-height: 90px; margin-bottom: 8px; }
+  .auth[data-auth-mode="login"] .auth-tabs { margin-bottom: 0; }
+  .auth[data-auth-mode="login"] .auth-form { margin-top: 8px; }
+}
+@media (max-height: 360px) and (min-width: 480px) {
+  .auth[data-auth-mode="login"] .auth-identity { min-height: 60px; padding-block: 8px; }
+  .auth[data-auth-mode="login"] .auth-identity strong { display: none; }
+  .auth[data-auth-mode="login"] .auth-tabs button { min-height: 32px; padding-block: 6px; }
+}
+@media (max-height: 740px) {
+  .auth[data-auth-mode="login"] .auth-heading p,
+  .auth[data-auth-mode="login"] .auth-security,
+  .auth[data-auth-mode="login"] .auth-dev-signature { display: none; }
+}
+@media (max-height: 360px) and (min-width: 480px) {
+  .auth.auth[data-auth-mode="login"] .auth-panel { padding-block: 6px; }
+  .auth.auth[data-auth-mode="login"] .auth-card { padding-bottom: 8px; }
+  .auth[data-auth-mode="login"] .auth-access-nav { padding-bottom: 2px; }
+  .auth[data-auth-mode="login"] .auth-form { gap: 6px 12px; margin-top: 6px; }
+  .auth[data-auth-mode="login"] .auth-field > .flex { column-gap: 4px; row-gap: 0; }
+  .auth[data-auth-mode="login"] .auth-field label,
+  .auth[data-auth-mode="login"] .auth-link { font-size: 11px; }
 }
