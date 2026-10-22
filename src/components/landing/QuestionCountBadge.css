@@ -1,5 +1,6 @@
 /* Lead with the real, available catalogue count while retaining the shared glass surface. */
-.home.home .home-hero__study-links .question-count-badge .question-count-content { gap: 7px; padding-right: 12px; }
+.home.home .home-hero__study-links .question-count-badge .question-count-content { gap: 0; padding-right: 0; }
+.home.home .home-hero__study-links .question-count-badge .question-count-head { gap: 10px; }
 .home.home .home-hero__study-links .question-count-badge .question-count-eyebrow {
   display: block;
   font-size: 9px;
@@ -11,6 +12,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  margin-top: 10px;
 }
 .home.home .home-hero__study-links .question-count-badge .question-count-main strong {
   font-size: clamp(36px, 3.6vw, 48px);
@@ -22,6 +24,10 @@
 .home.home .home-hero__study-links .question-count-badge .question-count-main > span { font-size: 12px; font-weight: 600; line-height: 1.4; }
 .home.home .home-hero__study-links .question-count-badge .question-count-detail { line-height: 1.4; }
 .home.home .home-hero__study-links .question-count-badge .question-count-arrow { width: 17px; height: 17px; }
+.home.home .home-hero__study-links .question-count-badge .question-count-meter {
+  height: 5px;
+  margin: 14px 0 2px;
+}
 @media (max-width: 520px) {
   .home.home .home-hero__study-links .question-count-badge .question-count-main strong { font-size: 38px; }
 }
