@@ -206,18 +206,18 @@ export function toBoardExamRow(q: BoardImportQuestion): Record<string, unknown> 
     const basis =
       typeof review.basis === "string" && review.basis.startsWith("https://") ? review.basis : null;
     if (title) {
-      row.legal_review_required = false;
-      row.law_version_checked_at =
+      row["legal_review_required"] = false;
+      row["law_version_checked_at"] =
         typeof review.checked_at === "string" && /^\d{4}-\d{2}-\d{2}$/.test(review.checked_at)
           ? `${review.checked_at}T12:00:00Z`
           : null;
-      row.legal_basis = basis ? [{ title, url: basis }] : [];
+      row["legal_basis"] = basis ? [{ title, url: basis }] : [];
     } else {
       // Status de conferência desconhecido: a verificação legislativa precisa ser refeita.
-      row.legal_review_required = true;
+      row["legal_review_required"] = true;
     }
   }
   if (answerKeyStatus && answerKeyStatus !== "definitivo")
-    row.review_note = `Gabarito ${answerKeyStatus} publicado pela banca; confirme o gabarito definitivo antes de qualquer ativação.`;
+    row["review_note"] = `Gabarito ${answerKeyStatus} publicado pela banca; confirme o gabarito definitivo antes de qualquer ativação.`;
   return row;
 }
