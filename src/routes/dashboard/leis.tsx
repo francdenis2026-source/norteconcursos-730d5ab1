@@ -164,10 +164,10 @@ function LawFinderPage() {
         icon={Scale}
         title={
           <>
-            Leis <em>extravagantes</em> e especiais
+            Leis <em>especiais</em>
           </>
         }
-        description="Encontre a lei de estudo pelo número, pelo nome popular, pela sigla ou pelo tema. O resultado aparece enquanto você digita."
+        description="Localize leis especiais, também chamadas de extravagantes, por número, nome, sigla ou tema. Este localizador complementa a área de Legislação e súmulas."
       />
 
       <section className="law-finder__panel" aria-label="Buscar lei">

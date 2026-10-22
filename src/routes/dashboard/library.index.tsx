@@ -235,7 +235,7 @@ function LibraryIndex() {
           <>
             {lawsOnly ? (
               <>
-                Biblioteca de <em>leis</em>
+                Legislação e <em>súmulas</em>
               </>
             ) : (
               <>
@@ -261,7 +261,7 @@ function LibraryIndex() {
           <>
             {lawsOnly ? (
               <>
-                Biblioteca de <em>leis</em>
+                Legislação e <em>súmulas</em>
               </>
             ) : (
               <>

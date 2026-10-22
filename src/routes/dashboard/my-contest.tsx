@@ -38,13 +38,13 @@ const NEXT_STEPS = [
   },
   {
     to: "/dashboard/cronograma",
-    title: "Cronograma por edital",
+    title: "Agenda por edital",
     text: "Disciplinas e tópicos distribuídos até a prova.",
     icon: CalendarClock,
   },
   {
     to: "/dashboard/study-plan",
-    title: "Plano por resultados",
+    title: "Ajustes pelos resultados",
     text: "Prioridades a partir das provas que você já fez.",
     icon: ClipboardList,
   },
@@ -87,11 +87,11 @@ function MyContestPage() {
       <header className="edital-heading workspace-banner">
         <div>
           <span className="edital-eyebrow">SEU OBJETIVO</span>
-          <h1>{focusedContest?.agency || "Meu concurso"}</h1>
+          <h1>{focusedContest?.agency || "Meu objetivo"}</h1>
           <p>
             {focusedContest
               ? `${focusedContest.role} · ${focusedContest.examBoard}`
-              : "Defina o concurso que orienta sua preparação."}
+              : "Escolha o concurso que orienta sua preparação em Buscar concursos. Depois, consulte os tópicos em Estudar pelo edital."}
           </p>
         </div>
         <Target className="edital-heading-icon" />
@@ -149,7 +149,7 @@ function MyContestPage() {
           <Button asChild variant={focusedContest ? "default" : "outline"}>
             <Link to="/dashboard/edital">
               <BookOpenText className="mr-2 h-4 w-4" />
-              Ver todos os editais
+              Estudar pelo edital
             </Link>
           </Button>
           <Button asChild variant={focusedContest ? "outline" : "default"}>

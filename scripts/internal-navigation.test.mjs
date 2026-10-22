@@ -163,3 +163,10 @@ test('explicit skips survive reload without becoming answers or blocking the nex
  const contradictory={...b,sessionAttempts:[{index:0,selected:'A',isCorrect:false}]};
  assert.equal(restoreTrainerBookmark(contradictory,b.route,catalog,now),null);
 });
+
+test('the shared focus desk retains an explicit ENEM objective without changing its URL', () => {
+ const menu=[{href:'/dashboard/study-tools',label:'Sessão de foco'},{href:'/dashboard/enem',label:'ENEM'}];
+ assert.equal(activeNavigation(menu,'/dashboard/study-tools',{context:'enem'}),menu[1]);
+ assert.equal(activeNavigation(menu,'/dashboard/study-tools',{}),menu[0]);
+ assert.equal(activeNavigation([menu[0]],'/dashboard/study-tools',{context:'enem'}),menu[0], 'never select a destination outside the authorized menu');
+});

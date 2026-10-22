@@ -1,3 +1,4 @@
+import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
@@ -144,32 +145,32 @@ const MENU: MenuItem[] = [
     href: "/dashboard/admin-contests",
     adminOnly: true,
   },
-  { group: "Planejamento", label: "Área do aluno", icon: LayoutDashboard, href: "/dashboard", primary: true },
-  { group: "Planejamento", label: "Estratégia de estudos", icon: Sparkles, href: "/dashboard/study-coach" },
-  { group: "Planejamento", label: "Cronograma por edital", icon: CalendarClock, href: "/dashboard/cronograma" },
-  { group: "Planejamento", label: "Plano por resultados", icon: ClipboardList, href: "/dashboard/study-plan" },
-  { group: "Meu concurso", label: "Meu concurso", icon: Target, href: "/dashboard/my-contest" },
-  { group: "Meu concurso", label: "Meu edital", icon: MapPin, href: "/dashboard/edital" },
+  { group: "Planejamento", label: "Meu painel", icon: LayoutDashboard, href: "/dashboard", primary: true },
+  { group: "Planejamento", label: "Configuração do estudo", icon: Sparkles, href: "/dashboard/study-coach" },
+  { group: "Planejamento", label: "Agenda por edital", icon: CalendarClock, href: "/dashboard/cronograma" },
+  { group: "Planejamento", label: "Ajustes pelos resultados", icon: ClipboardList, href: "/dashboard/study-plan" },
+  { group: "Planejamento", label: "Sessão de foco", icon: Timer, href: "/dashboard/study-tools" },
+  { group: "Meu concurso", label: "Meu objetivo", icon: Target, href: "/dashboard/my-contest" },
+  { group: "Meu concurso", label: "Estudar pelo edital", icon: MapPin, href: "/dashboard/edital" },
   { group: "Meu concurso", label: "Carreiras", icon: ShieldCheck, href: "/dashboard/careers" },
-  { group: "Meu concurso", label: "Concursos e editais", icon: Search, href: "/dashboard/questions" },
+  { group: "Meu concurso", label: "Buscar concursos", icon: Search, href: "/dashboard/questions" },
   { group: "Meu concurso", label: "Radar do edital", icon: Radar, href: "/dashboard/edital-radar" },
-  { group: "Meu concurso", label: "Panorama das provas", icon: BarChart3, href: "/dashboard/exam-panorama" },
+  { group: "Meu concurso", label: "Panorama e tendências", icon: BarChart3, href: "/dashboard/exam-panorama" },
   { group: "Meu concurso", label: "Perfil das bancas", icon: Landmark, href: "/dashboard/perfil-bancas" },
-  { group: "Material didático", label: "Visão geral do material", icon: Library, href: "/dashboard/material" },
+  { group: "Material didático", label: "Visão geral dos materiais", icon: Library, href: "/dashboard/material" },
   { group: "Material didático", label: "Legislação e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
-  { group: "Material didático", label: "Leis extravagantes", icon: Gavel, href: "/dashboard/leis" },
+  { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
+  { group: "Material didático", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
+  { group: "Material didático", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
   { group: "Material didático", label: "Disciplinas", icon: BookOpen, href: "/dashboard/disciplinas" },
   { group: "Material didático", label: "Videoaulas e podcasts", icon: PlayCircle, href: "/dashboard/media" },
   { group: "Material didático", label: "Dicionário de estudo", icon: BookA, href: "/dashboard/dicionario" },
   { group: "Material didático", label: "Redação para concursos", icon: PenLine, href: "/dashboard/essays" },
-  { group: "Ferramentas", label: "Foco e revisão", icon: Timer, href: "/dashboard/study-tools" },
-  { group: "Ferramentas", label: "Calculadora penal", icon: Scale, href: "/dashboard/calculadora-penal" },
-  { group: "Ferramentas", label: "Painel do CTB", icon: Gavel, href: "/dashboard/ctb" },
   { group: "Questões", label: "Treinador de questões", icon: BrainCircuit, href: "/dashboard/question-trainer", primary: true },
   { group: "Questões", label: "Caderno de erros", icon: NotebookPen, href: "/dashboard/errors" },
   { group: "Questões", label: "Flashcards", icon: Layers, href: "/dashboard/flashcards" },
-  { group: "Questões", label: "Meus cadernos", icon: BookOpen, href: "/dashboard/notebooks" },
-  { group: "Questões", label: "Acervo de questões", icon: BookMarked, href: "/dashboard/question-bank" },
+  { group: "Questões", label: "Coleções de questões", icon: BookOpen, href: "/dashboard/notebooks" },
+  { group: "Questões", label: "Explorar questões", icon: BookMarked, href: "/dashboard/question-bank" },
   {
     group: "Questões",
     label: "Resolver com IA",
@@ -177,15 +178,15 @@ const MENU: MenuItem[] = [
     href: "/dashboard/ai-solver",
     soon: !AI_ENABLED,
   },
-  { group: "Provas", label: "Simulador de provas", icon: Trophy, href: "/dashboard/mock-exams", primary: true },
-  { group: "Provas", label: "Minhas provas e diagnóstico", icon: FileStack, href: "/dashboard/student-exams" },
-  { group: "ENEM", label: "ENEM", icon: GraduationCap, href: "/dashboard/enem", primary: true },
+  { group: "Provas", label: "Simulados", icon: Trophy, href: "/dashboard/mock-exams", primary: true },
+  { group: "Provas", label: "Provas realizadas e diagnóstico", icon: FileStack, href: "/dashboard/student-exams" },
   { group: "Desempenho", label: "Meu desempenho", icon: Layers, href: "/dashboard/performance" },
-  { group: "Desempenho", label: "Histórico de atividades", icon: History, href: "/dashboard/history" },
+  { group: "Desempenho", label: "Histórico de estudos", icon: History, href: "/dashboard/history" },
   { group: "Desempenho", label: "Ranking", icon: Trophy, href: "/dashboard/ranking" },
   { group: "Desempenho", label: "Medalhas", icon: Medal, href: "/dashboard/medals" },
-  { group: "Conta", label: "Plano e uso", icon: Sparkles, href: "/dashboard/subscriptions" },
+  { group: "Conta", label: "Plano e assinatura", icon: Sparkles, href: "/dashboard/subscriptions" },
   { group: "Conta", label: "Perfil", icon: User, href: "/dashboard/profile" },
+  { group: "ENEM", label: "ENEM", icon: GraduationCap, href: "/dashboard/enem", primary: true },
   {
     group: "Administração",
     label: "Conteúdo da plataforma",
@@ -397,7 +398,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     if (path.startsWith("/dashboard/admin") || path === "/dashboard/profile") return;
     navigate({ to: "/dashboard/admin-students", replace: true });
   }, [isAdmin, location.pathname, navigate]);
-  const current = activeNavigation(items, location.pathname, location.search);
+  const activeItem = activeNavigation(items, location.pathname, location.search);
+  const current = location.pathname === "/dashboard/study-tools" && location.search["context"] === "enem" && activeItem?.group === "ENEM" ? { ...activeItem, label: "Sessão de foco ENEM" } : activeItem;
 
   React.useEffect(() => {
     setIsDarkMode(document.documentElement.classList.contains("dark"));
@@ -659,7 +661,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{current.group}</span>}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
               </div>
               <strong className="app-location__title" title={current?.label}>
                 {current?.label ?? (location.pathname === "/dashboard/admin-support" ? "Central de atendimento" : isAdmin ? "Painel administrativo" : "Minha preparação")}

@@ -607,8 +607,8 @@ function StudyCoachPage() {
       <section className="study-assistant-hero workspace-banner" aria-labelledby="study-assistant-title">
         <div className="study-assistant-hero__content">
           <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
-          <h1 id="study-assistant-title">Estratégia de estudos</h1>
-          <p>Transforme seu objetivo em uma rotina possível. Planeje a semana, revise o que precisa e acompanhe o que você realmente fez.</p>
+          <h1 id="study-assistant-title">Configuração do estudo</h1>
+          <p>Defina sua disponibilidade e distribua a semana. Use a Agenda por edital para executar os tópicos e Ajustes pelos resultados para consultar prioridades das provas realizadas.</p>
           {profile && <a href="#coach-workspace" className="study-assistant-hero__action" onClick={() => setView("week")}>Organizar minha semana <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>}
         </div>
       </section>

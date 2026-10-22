@@ -1,3 +1,4 @@
+import { SubscriptionManagement } from "@/components/dashboard/SubscriptionManagement";
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Crown, Volume2, X } from "lucide-react";
@@ -111,10 +112,10 @@ function SubscriptionsPage() {
         icon={Crown}
         title={
           <>
-            Planos e <em>uso</em>
+            Plano e <em>assinatura</em>
           </>
         }
-        description="Seu plano, o uso de recursos e o que cada plano oferece."
+        description="Acompanhe o uso, compare planos e gerencie sua assinatura, cancelamentos e recibos nesta área."
       />
 
       {!PAYMENTS_ENABLED && (
@@ -147,7 +148,7 @@ function SubscriptionsPage() {
             </div>
           </div>
           <a
-            href="/#planos"
+            href="#comparar-planos"
             className="inline-flex shrink-0 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
           >
             Comparar planos
@@ -190,7 +191,9 @@ function SubscriptionsPage() {
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <SubscriptionManagement />
+
+      <div id="comparar-planos" className="grid scroll-mt-24 grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {SUBSCRIPTION_PLANS.map((plan) => {
           const current = plan.id === tier;
           return (

@@ -1028,7 +1028,7 @@ function ProfessionalSimulator() {
     return (
       <LockedState
         image="exam-hall"
-        title="Simulador de provas"
+        title="Simulados"
         description="Entre na sua conta para preparar e acompanhar suas provas cronometradas."
       />
     );
@@ -1087,7 +1087,7 @@ function ProfessionalSimulator() {
       <section className="exam-simulator-hero workspace-banner" aria-labelledby="simulator-title">
         <div className="exam-simulator-hero__content">
           <span className="exam-simulator-hero__eyebrow">Preparação em condições de prova</span>
-          <h1 id="simulator-title">{isEnemMode ? "Simulador ENEM" : "Simulador de provas"}</h1>
+          <h1 id="simulator-title">{isEnemMode ? "Simulados ENEM" : "Simulados"}</h1>
           <p>
             Pratique a gestão do tempo, marque questões para revisar e confira seu desempenho ao
             finalizar.

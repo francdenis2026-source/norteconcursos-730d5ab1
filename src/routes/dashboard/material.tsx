@@ -268,10 +268,10 @@ function MaterialHub() {
         icon={Library}
         title={
           <>
-            Tudo para <em>estudar</em>, no lugar certo
+            Materiais <em>de estudo</em>
           </>
         }
-        description="A legislação (leis, súmulas e leis extravagantes) fica separada das demais disciplinas. Escolha por onde começar."
+        description="Estude por legislação, disciplina ou formato. Leis especiais, CTB e calculadora penal estão reunidos nos recursos de legislação."
       >
         <div className="page-hero__stats max-w-xl">
           <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
@@ -361,6 +361,14 @@ function MaterialHub() {
             </li>
           </ul>
         )}
+      </section>
+
+      <section aria-labelledby="hub-legal-tools" className="space-y-3">
+        <h2 id="hub-legal-tools" className="text-xl font-bold">Recursos de legislação</h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Link to="/dashboard/ctb" className="material-card"><span className="material-card__icon" data-tone="law"><BookOpen aria-hidden="true" /></span><span className="material-card__body"><strong>Painel do CTB</strong><span>Legislação de trânsito: multas, pontos, prazos e resoluções.</span></span></Link>
+          <Link to="/dashboard/calculadora-penal" className="material-card"><span className="material-card__icon" data-tone="law"><Calculator aria-hidden="true" /></span><span className="material-card__body"><strong>Calculadora penal</strong><span>Recurso de cálculo para acompanhar o estudo da legislação penal.</span></span></Link>
+        </div>
       </section>
 
       <section aria-labelledby="hub-subjects" className="space-y-3">

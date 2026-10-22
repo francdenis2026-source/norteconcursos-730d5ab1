@@ -430,7 +430,7 @@ function ErrorsPage() {
             Caderno de <em>erros</em>
           </>
         }
-        description="Cada questão que você errou no Treinador vira um item de revisão. Leia o gabarito, marque o que já domina e refaça no modo Reforço do Treinador."
+        description="Seus erros no Treinador aparecem aqui automaticamente. Revise o gabarito e refaça no modo Reforço. Para organizar questões manualmente, use Coleções de questões."
         actions={
           <>
             <Select value={filterSubject} onValueChange={setFilterSubject}>

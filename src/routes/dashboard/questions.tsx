@@ -104,8 +104,8 @@ function QuestionsCatalog() {
     <section className="space-y-6">
       <header className="catalog-command-hero tactical-feature-hero workspace-banner">
         <span className="internal-hero-kicker">Seu próximo objetivo</span>
-        <h1>Concursos e editais</h1>
-        <p>Encontre uma oportunidade acompanhada ou escolha uma edição para orientar seu estudo.</p>
+        <h1>Buscar concursos</h1>
+        <p>Encontre oportunidades e escolha seu concurso em foco. Para estudar o programa de uma edição, abra Estudar pelo edital.</p>
       </header>
       {!loading && !error && contests.length > 0 && (
         <section aria-label="Filtrar oportunidades" className="space-y-3">

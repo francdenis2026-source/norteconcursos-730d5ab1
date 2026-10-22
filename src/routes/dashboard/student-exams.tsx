@@ -1,3 +1,4 @@
+import { PageHero } from "@/components/dashboard/PageHero";
 import { canonicalSubject } from "@/lib/subjects";
 import React from "react";
 import { createFileRoute, Link, type ErrorComponentProps } from "@tanstack/react-router";
@@ -821,7 +822,7 @@ function AddExamCard({
         fotos e acompanhar o seu rendimento por disciplina.
       </p>
       <Link
-        to="/dashboard/profile"
+        to="/dashboard/subscriptions"
         className="mt-2 inline-block text-xs font-bold text-emerald-700 hover:underline"
       >
         Ver os planos →
@@ -845,11 +846,10 @@ function Hero({
         <div className="page-hero__text">
           <span className="hero-chip">Seu histórico em concursos</span>
           <h1>
-            Minhas provas <em>e diagnóstico</em>
+            Provas realizadas <em>e diagnóstico</em>
           </h1>
           <p className="page-hero__desc">
-            Registre as provas que você fez, descubra onde perde pontos e saia daqui com o próximo
-            passo de estudo.
+            Registre provas de concursos que você já fez e consulte o diagnóstico. Para treinar na plataforma, use Simulados.
           </p>
           {action && <div className="mt-4">{action}</div>}
         </div>
@@ -1448,13 +1448,14 @@ function MiniMetric({
 }
 function LoadingState() {
   return (
-    <div className="flex min-h-[55vh] flex-col items-center justify-center gap-3 text-center">
+    <div className="space-y-5"><PageHero image="exam-hall" kicker="Provas" title={<>Provas realizadas <em>e diagnóstico</em></>} description="Histórico de concursos que você já fez. Para treinar na plataforma, use Simulados." />
+    <div className="flex min-h-[30vh] flex-col items-center justify-center gap-3 text-center">
       <RefreshCw className="h-8 w-8 animate-spin text-emerald-600" />
       <p className="text-sm font-bold">Calculando seu histórico de desempenho…</p>
       <p className="text-xs text-muted-foreground">
         Provas, disciplinas e questões estão sendo organizadas.
       </p>
-    </div>
+    </div></div>
   );
 }
 function EmptyState({
@@ -1467,12 +1468,13 @@ function EmptyState({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-[55vh] flex-col items-center justify-center gap-4 text-center">
+    <div className="space-y-5"><PageHero image="exam-hall" kicker="Provas" title={<>Provas realizadas <em>e diagnóstico</em></>} description="Histórico de concursos que você já fez. Para treinar na plataforma, use Simulados." />
+    <div className="flex min-h-[30vh] flex-col items-center justify-center gap-4 text-center">
       <FileStack className="h-14 w-14 text-muted-foreground/30" />
       <h2 className="text-xl font-black">{title}</h2>
       <p className="max-w-md text-sm text-muted-foreground">{description}</p>
       {children}
-    </div>
+    </div></div>
   );
 }
 function ExamRouteError({ reset }: ErrorComponentProps) {

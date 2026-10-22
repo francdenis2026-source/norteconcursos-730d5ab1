@@ -136,7 +136,7 @@ function EnemPage() {
         description="Estude por área do conhecimento, assista a videoaulas gratuitas, treine a redação e acompanhe seu checklist."
         actions={
           <Button asChild className="hero-btn-primary gap-2">
-            <Link to="/dashboard/study-tools">
+            <Link to="/dashboard/study-tools" search={{ context: "enem" }}>
               <Timer className="h-4 w-4" /> Sessão de foco
             </Link>
           </Button>

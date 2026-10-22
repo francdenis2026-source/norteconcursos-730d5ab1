@@ -483,11 +483,10 @@ function StudyPlanPage() {
               <Sparkles /> Baseado nas suas provas
             </span>
             <h1>
-              Plano por resultados: <em>{plan.fullName}</em>
+              Ajustes pelos resultados: <em>{plan.fullName}</em>
             </h1>
             <p className="page-hero__desc">
-              Seus acertos e erros viram prioridades, uma semana de estudo pronta e metas que você
-              consegue medir.
+              Consulte prioridades a partir das provas realizadas. A carreira, a carga horária e a data abaixo são os parâmetros deste diagnóstico; confira se correspondem ao objetivo da sua preparação.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-2">

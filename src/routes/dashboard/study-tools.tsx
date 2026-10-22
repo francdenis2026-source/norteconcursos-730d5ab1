@@ -1,3 +1,5 @@
+import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
+import { ENEM_AREAS } from "@/data/enem";
 import { platformDate } from "@/lib/platformClock";
 import { libraryCollection } from "@/lib/libraryOrganization";
 import React from "react";
@@ -45,7 +47,8 @@ import { acreDateKey } from "@/lib/acreTime";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-tools")({
-  head: () => ({ meta: [{ title: "Foco e revisão | Norte Concurso" }] }),
+  head: () => ({ meta: [{ title: "Sessão de foco | Norte Concurso" }] }),
+  validateSearch: (search: Record<string, unknown>): { context?: "enem" | undefined } => ({ context: search["context"] === "enem" ? "enem" : undefined }),
   component: StudyToolsPage,
 });
 
@@ -185,6 +188,12 @@ function readDay(): { day: string; cycles: number; minutes: number } {
 
 function StudyToolsPage() {
   const ctx = useStudyContext();
+  const { context } = Route.useSearch();
+  const enem = context === "enem";
+  const enemSubjects = React.useMemo(() => ENEM_AREAS.flatMap(area => area.subjects), []);
+  const subjects = enem ? enemSubjects.map(item => item.name) : ctx.subjects;
+  const suggested = enem ? "" : ctx.suggested;
+  const pickKey = enem ? "norte_focus_pick_enem" : "norte_focus_pick";
   const [pick, setPick] = React.useState<{ subject: string; topic: string }>({
     subject: "",
     topic: "",
@@ -193,22 +202,23 @@ function StudyToolsPage() {
 
   React.useEffect(() => {
     setDay(readDay());
+    setPick({ subject: "", topic: "" });
     try {
-      const saved = JSON.parse(localStorage.getItem("norte_focus_pick") ?? "null") as
+      const saved = JSON.parse(localStorage.getItem(pickKey) ?? "null") as
         typeof pick | null;
       if (saved) setPick(saved);
     } catch {
       /* sem armazenamento */
     }
-  }, []);
+  }, [pickKey]);
   const subject =
-    pick.subject && ctx.subjects.includes(pick.subject) ? pick.subject : ctx.suggested;
-  const topics = React.useMemo(() => topicsFor(subject), [subject]);
+    pick.subject && subjects.includes(pick.subject) ? pick.subject : (suggested || subjects[0] || "");
+  const topics = React.useMemo(() => enem ? (enemSubjects.find(item => item.name === subject)?.topics ?? []) : topicsFor(subject), [subject, enem, enemSubjects]);
   const topic = topics.includes(pick.topic) ? pick.topic : (topics[0] ?? "");
   const choose = (next: { subject: string; topic: string }) => {
     setPick(next);
     try {
-      localStorage.setItem("norte_focus_pick", JSON.stringify(next));
+      localStorage.setItem(pickKey, JSON.stringify(next));
     } catch {
       /* sem armazenamento */
     }
@@ -228,23 +238,23 @@ function StudyToolsPage() {
     <div className="space-y-6">
       <PageHero
         image="study-desk"
-        kicker="Ferramentas"
+        kicker={enem ? "ENEM" : "Meu planejamento"}
         icon={Timer}
         title={
           <>
-            Foco e <em>revisão</em>
+            Sessão de <em>foco</em>
           </>
         }
         description={
-          ctx.profile
+          enem ? "Escolha uma matéria do ENEM e use o cronômetro. Seus materiais e questões continuam vinculados ao exame." : ctx.profile
             ? `Montada para ${ctx.career.name}${ctx.daysToExam !== null && ctx.daysToExam > 0 ? ` · faltam ${ctx.daysToExam} dias para a prova` : ""}. Cronômetro de foco, cartões de revisão e checklist; o conteúdo vem da Biblioteca de leis e das Trilhas por disciplina.`
-            : "Foco, revisão e checklist das disciplinas. Defina sua Estratégia de estudos para personalizar com o seu concurso."
+            : "Foco, revisão e checklist das disciplinas. Abra Configuração do estudo para personalizar com o seu concurso."
         }
         actions={
-          !ctx.profile && !ctx.loading && ctx.real ? (
+          !enem && !ctx.profile && !ctx.loading && ctx.real ? (
             <Button asChild className="hero-btn-primary gap-2">
               <Link to="/dashboard/study-coach">
-                <Sparkles className="h-4 w-4" /> Configurar meu plano
+                <Sparkles className="h-4 w-4" /> Configuração do estudo
               </Link>
             </Button>
           ) : undefined
@@ -253,26 +263,28 @@ function StudyToolsPage() {
         <div className="page-hero__stats">
           <HeroStat
             icon={Target}
-            label="Carreira"
+            label={enem ? "Objetivo" : "Carreira"}
             value={
               <span className="text-base">
-                {ctx.career.id === "OUTRA" ? "Geral" : ctx.career.id}
+                {enem ? "ENEM" : ctx.career.id === "OUTRA" ? "Geral" : ctx.career.id}
               </span>
             }
           />
           <HeroStat
             icon={CalendarClock}
             label="Dias para a prova"
-            value={ctx.daysToExam !== null ? Math.max(0, ctx.daysToExam) : "—"}
+            value={!enem && ctx.daysToExam !== null ? Math.max(0, ctx.daysToExam) : "—"}
           />
-          <HeroStat icon={Layers} label="Cartões a revisar" value={ctx.due.length} />
+          {!enem && <HeroStat icon={Layers} label="Cartões a revisar" value={ctx.due.length} />}
           <HeroStat icon={Flame} label="Foco hoje" value={`${day.minutes} min`} />
         </div>
       </PageHero>
 
+      {enem ? <Button asChild variant="outline"><Link to="/dashboard/enem">Voltar à área ENEM</Link></Button> : <StudyPlanningNav active="focus" />}
       <FocusCard
-        subjects={ctx.subjects}
-        suggested={ctx.suggested}
+        enem={enem}
+        subjects={subjects}
+        suggested={suggested}
         subject={subject}
         topic={topic}
         topics={topics}
@@ -281,6 +293,7 @@ function StudyToolsPage() {
         onFocusDone={onFocusDone}
       />
 
+      {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
       <PlatformMaterialCard subject={subject} topic={topic} />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -298,6 +311,7 @@ function StudyToolsPage() {
         subjects={ctx.subjects}
         essay={ctx.profile?.essay ?? false}
       />
+      </>}
     </div>
   );
 }
@@ -411,6 +425,7 @@ const selectCls =
   "h-10 w-full rounded-lg border border-input bg-background px-3 text-sm font-medium";
 
 function FocusCard({
+  enem = false,
   subjects,
   suggested,
   subject,
@@ -420,6 +435,7 @@ function FocusCard({
   day,
   onFocusDone,
 }: {
+  enem?: boolean;
   subjects: string[];
   suggested: string;
   subject: string;
@@ -443,7 +459,7 @@ function FocusCard({
   const mm = String(Math.floor(pomo.left / 60)).padStart(2, "0");
   const ss = String(pomo.left % 60).padStart(2, "0");
   const isBreak = pomo.mode === 5;
-  const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}) };
+  const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}), ...(enem ? { contest: "ENEM" } : {}) };
 
   return (
     <Card className="overflow-hidden">
@@ -490,9 +506,7 @@ function FocusCard({
           </div>
           <div className="grid gap-2 sm:grid-cols-3">
             <Button asChild variant="outline" className="justify-start gap-2">
-              <Link to="/dashboard/study-room" search={{ subject, topic }}>
-                <BookOpenCheck className="h-4 w-4" /> Sala de estudo
-              </Link>
+              {enem ? <Link to="/dashboard/enem" search={{ tab: "materiais" }}><BookOpenCheck className="h-4 w-4" /> Materiais ENEM</Link> : <Link to="/dashboard/study-room" search={{ subject, topic }}><BookOpenCheck className="h-4 w-4" /> Sala de estudo</Link>}
             </Button>
             <Button asChild variant="outline" className="justify-start gap-2">
               <Link to="/dashboard/question-trainer" search={trainer}>
@@ -846,7 +860,7 @@ function PlanLinkCard({
                 to={real ? "/dashboard/study-coach" : "/auth"}
                 {...(real ? {} : { search: { mode: undefined } })}
               >
-                {real ? "Configurar meu plano" : "Entrar"} <ArrowRight className="h-4 w-4" />
+                {real ? "Configuração do estudo" : "Entrar"} <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </>

@@ -1,4 +1,4 @@
-import { studentSections } from "@/lib/studentNavigation";
+import { studentSections, studentGroupLabel } from "@/lib/studentNavigation";
 import { useEffect, useId, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Hint } from "@/components/ui/hint";
@@ -49,14 +49,14 @@ const groupIcons: Record<string, LucideIcon> = {
   Administração: ShieldCheck,
 };
 const groupDetails: Record<string, string> = {
-  Planejamento: "Estratégia, cronograma e metas",
-  "Meu concurso": "Edital, carreira e tendências",
-  "Material didático": "Leis, súmulas, disciplinas e vídeos",
+  Planejamento: "Configuração, agenda, resultados e foco",
+  "Meu concurso": "Objetivo, edital e análise do concurso",
+  "Material didático": "Legislação, disciplinas, vídeos e redação",
   Ferramentas: "Foco, calculadora e painéis",
-  Questões: "Treino, revisão e acervo",
-  Provas: "Simulados e suas provas",
+  Questões: "Treino, erros, coleções e flashcards",
+  Provas: "Simulados e concursos realizados",
   Desempenho: "Evolução, ranking e medalhas",
-  ENEM: "Preparação para o exame",
+  ENEM: "Outro objetivo: preparação para o ENEM",
   Conta: "Perfil, plano e assinatura",
   Administração: "Operação da plataforma",
 };
@@ -104,7 +104,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         );
         return (
           <div className="nav-primary" aria-label="Área do aluno">
-            {!collapsed && <p className="nav-primary__label">Minha preparação</p>}
+            {!collapsed && <p className="nav-primary__label">Meu painel</p>}
             {/* The short "Painel" label only appears collapsed; the hint restores the full name instead of a native title tooltip. */}
             {collapsed ? <Hint content={home.label} side="right">{homeLink}</Hint> : homeLink}
           </div>
@@ -115,17 +115,18 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
         const sectionLink = (
-          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} onClick={onNavigate}>
+          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? studentGroupLabel(group) : undefined} onClick={onNavigate}>
             <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
             {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
-              <span className="app-nav__label"><strong>{group}</strong><small>{groupDetails[group]}</small></span>
+              <span className="app-nav__label"><strong>{studentGroupLabel(group)}</strong><small>{groupDetails[group]}</small></span>
               <ChevronRight className="nav-section-link__arrow" aria-hidden="true" />
             </>}
           </Link>
         );
         // Expanded, the group name and description already read on the card — a tooltip would only repeat them.
+        if (group === 'ENEM' && !collapsed) return <div key={group} className="student-navigation__other"><p className="nav-section-label">Outros objetivos</p>{sectionLink}</div>;
         return collapsed
-          ? <Hint key={group} content={<>{group} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>
+          ? <Hint key={group} content={<>{studentGroupLabel(group)} — {groupDetails[group] ?? "Abrir área"}</>} side="right">{sectionLink}</Hint>
           : sectionLink;
       })}
     </nav>

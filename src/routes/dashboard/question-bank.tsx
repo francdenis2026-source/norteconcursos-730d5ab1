@@ -107,7 +107,7 @@ function QuestionBankPage() {
         <span className="hero-chip">
           <LibraryBig className="mr-1 h-3.5 w-3.5" /> Acervo de questões
         </span>
-        <h1 className="text-3xl font-black md:text-5xl">Acervo de questões</h1>
+        <h1 className="text-3xl font-black md:text-5xl">Explorar questões</h1>
         <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-200 md:text-base">
           Escolha uma disciplina, banca, prova ou ano para abrir o Treinador com a seleção aplicada.
           As quantidades incluem questões novas e já respondidas, com conteúdo disponível.
@@ -477,7 +477,7 @@ function Loading() {
   return (
     <div aria-busy="true" className="space-y-5">
       <section className="page-hero page-hero--lg workspace-banner" data-hero="trainer">
-        <h1>Acervo de questões</h1>
+        <h1>Explorar questões</h1>
         <p>Consulte e organize suas questões para estudar.</p>
       </section>
       <div role="status" className="flex items-center gap-3 rounded-2xl border bg-card p-5">
@@ -493,7 +493,7 @@ function Login() {
       image="trainer"
       title={
         <>
-          Acervo de <em>questões</em>
+          Explorar <em>questões</em>
         </>
       }
       description="Entre na sua conta para consultar o acervo de questões."

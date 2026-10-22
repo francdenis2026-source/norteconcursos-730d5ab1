@@ -1,3 +1,4 @@
+import { studentGroupLabel } from '@/lib/studentNavigation';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, CornerDownLeft, History, SearchX, ShieldCheck, X } from 'lucide-react';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from '@/components/ui/dialog';
@@ -81,12 +82,12 @@ export function NavigationCommand({ open, onOpenChange, items, userId, pathname,
             <nav className="nav-command__categories" aria-label="Filtrar por categoria">
               <span className="nav-command__category-title">Explorar por área</span>
               {['all', ...groups].map(category => <button key={category} type="button" aria-pressed={group === category} onClick={() => setGroup(category)}>
-                <span>{category === 'all' ? 'Todas as áreas' : category}</span>
+                <span>{category === 'all' ? 'Todas as áreas' : studentGroupLabel(category)}</span>
                 <span aria-hidden="true">{category === 'all' ? items.length : items.filter(item => item.group === category).length}</span>
               </button>)}
             </nav>
             <div className="nav-command__results">
-              <div className="nav-command__result-meta"><span>{query.trim() ? 'Resultados da busca' : group === 'all' ? 'Encontre seu próximo passo' : group}</span><span aria-live="polite" role="status">{filtered.length} {filtered.length === 1 ? 'área' : 'áreas'}</span></div>
+              <div className="nav-command__result-meta"><span>{query.trim() ? 'Resultados da busca' : group === 'all' ? 'Encontre seu próximo passo' : studentGroupLabel(group)}</span><span aria-live="polite" role="status">{filtered.length} {filtered.length === 1 ? 'área' : 'áreas'}</span></div>
               <CommandList className="nav-command__list">
                 <CommandEmpty><SearchX size={28} aria-hidden="true" /><strong>Nenhum destino encontrado</strong><span>Tente outro termo ou escolha uma categoria.</span><button type="button" onClick={clear}>Limpar busca e filtros</button></CommandEmpty>
                 {recent.length > 0 && <CommandGroup heading={<span><History size={12} aria-hidden="true" /> Acessos recentes</span>}>{recent.map(row)}</CommandGroup>}

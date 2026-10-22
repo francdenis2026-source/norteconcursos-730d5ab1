@@ -160,8 +160,8 @@ function EditalPage() {
       <header className="edital-heading workspace-banner">
         <div>
           <span className="edital-eyebrow">MEU CONCURSO</span>
-          <h1>Meu edital</h1>
-          <p>Encontre seu concurso e transforme o programa em uma sequência de estudo e prática.</p>
+          <h1>Estudar pelo edital</h1>
+          <p>Selecione uma edição para consultar disciplinas e tópicos. A edição aberta aparece abaixo; seu concurso em foco continua disponível em Meu objetivo.</p>
         </div>
         <BookOpenText aria-hidden className="edital-heading-icon" />
       </header>

@@ -68,7 +68,7 @@ function PerformancePage() {
         <div>
           <p className="font-semibold">Procurando suas provas de concursos?</p>
           <p className="text-sm text-muted-foreground">
-            Envios, cadernos, gabaritos e notas de corte ficam em Minhas provas e diagnóstico.
+            Envios, cadernos, gabaritos e notas de corte ficam em Provas realizadas e diagnóstico.
           </p>
         </div>
         <Link
@@ -76,7 +76,7 @@ function PerformancePage() {
           to="/dashboard/student-exams"
           search={{ career: undefined }}
         >
-          Minhas provas e diagnóstico →
+          Provas realizadas e diagnóstico →
         </Link>
       </div>
       <StudyTimeCard key={user.id} userId={user.id} />

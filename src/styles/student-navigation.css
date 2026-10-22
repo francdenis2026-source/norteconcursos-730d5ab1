@@ -275,3 +275,7 @@
   .workspace-section-nav { background: Canvas; border-color: CanvasText; }
   .workspace-section-nav a[aria-current="page"] { color: HighlightText; background: Highlight; border-color: Highlight; }
 }
+
+.workspace-section-nav__item { display: inline-flex; align-items: center; flex: none; gap: 4px; }
+.workspace-section-nav__segment { flex: none; margin-inline: 8px 4px; padding-left: 10px; border-left: 1px solid var(--border); color: var(--foreground); font-size: 10px; font-weight: 700; white-space: nowrap; }
+.workspace-section-nav__item:first-child .workspace-section-nav__segment { border-left: 0; padding-left: 0; margin-left: 0; }

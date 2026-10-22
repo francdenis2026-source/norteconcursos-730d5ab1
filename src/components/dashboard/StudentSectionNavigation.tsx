@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from '@tanstack/react-router';
 import { activeNavigation, navigationKey } from '@/lib/dashboardNavigation';
-import { studentSections } from '@/lib/studentNavigation';
+import { studentSections, studentGroupLabel, studentNavigationSegment } from '@/lib/studentNavigation';
 import type { NavigationItem } from './DashboardNavigation';
 
 /** Secondary destinations live in the workspace, never in expanding sidebar groups. */
@@ -21,9 +21,11 @@ export function StudentSectionNavigation({ items, pathname, search }: { items: N
   }, [activeKey]);
   // Planning pages already render StudyPlanningNav. ENEM has its own workspace.
   if (!section || section.group === 'Planejamento' || section.entries.length < 2) return null;
-  return <nav ref={nav} className="workspace-section-nav no-print" aria-label={`${section.group}: páginas da área`}>
-    {section.entries.map(item => <Link key={navigationKey(item)} to={item.href} search={item.search ?? {}} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
+  return <nav ref={nav} className="workspace-section-nav no-print" aria-label={`${studentGroupLabel(section.group)}: páginas da área`}>
+    {section.entries.map((item, index) => <span className="workspace-section-nav__item" key={navigationKey(item)}>
+      {studentNavigationSegment(item.href) && studentNavigationSegment(item.href) !== studentNavigationSegment(section.entries[index - 1]?.href ?? '') && <span className="workspace-section-nav__segment">{studentNavigationSegment(item.href)}</span>}
+      <Link to={item.href} search={item.search ?? {}} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
       <item.icon aria-hidden="true" /><span>{item.label}</span>
-    </Link>)}
+    </Link></span>)}
   </nav>;
 }

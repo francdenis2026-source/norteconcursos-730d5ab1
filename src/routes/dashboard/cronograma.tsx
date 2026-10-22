@@ -99,13 +99,13 @@ function CronogramaPage() {
   if (isLoading || (real && !plans))
     return <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Carregando" /></div>;
   if (!real)
-    return <LockedState image="journey" title={<>Cronograma <em>por edital</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
+    return <LockedState image="journey" title={<>Agenda <em>por edital</em></>} description="Entre na sua conta para montar e acompanhar o seu cronograma de estudos por edital." />;
 
   const open = plans!.find((p) => p.id === openId);
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Cronograma <em>por edital</em></>}
-        description="Escolha um modelo de edital ou monte o seu. A semana se ajusta ao que você já estudou e ao seu desempenho." />
+      <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Agenda <em>por edital</em></>}
+        description="Organize e execute os tópicos do edital por dia. Esta agenda acompanha o conteúdo concluído; a configuração da semana e a análise de resultados ficam nas etapas ao lado." />
       <StudyPlanningNav active="schedule" />
       {openId === "new" && !canCreate ? (
         <CreateLocked onBack={() => setOpenId(null)} />

@@ -18,6 +18,10 @@ export function activeNavigation<T extends NavigationTarget>(
   pathname: string,
   rawSearch: Record<string, unknown> = {},
 ) {
+  if (pathname === "/dashboard/study-tools" && rawSearch["context"] === "enem") {
+    const enem = items.find(item => item.href === "/dashboard/enem");
+    if (enem) return enem;
+  }
   // Os artigos de lei (legal-course) pertencem à coleção de legislação do menu.
   const search =
     pathname.startsWith("/dashboard/legal-course/") && rawSearch["collection"] === undefined

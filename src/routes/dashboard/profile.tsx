@@ -1,36 +1,17 @@
-import { acreDate } from "@/lib/acreTime";
 import React from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { MockService } from "@/services/mockService";
-import {
-  User,
-  Mail,
-  CreditCard,
-  Shield,
-  LogOut,
-  ExternalLink,
-  Zap,
-  RefreshCw,
-  History as HistoryIcon,
-} from "lucide-react";
+import { User, Mail, LogOut } from "lucide-react";
 import { PageHero } from "@/components/dashboard/PageHero";
-import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
-import { CancelSubscriptionDialog } from "@/components/dashboard/CancelSubscriptionDialog";
-import { useMyCancellations } from "@/hooks/useCancellations";
-import { emailStatusLabel, isPaidSubscriber, scheduledCancellation } from "@/lib/cancellation";
 import { PlanStatusCard } from "@/components/dashboard/PlanStatusCard";
 import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
 import { normalizeUppercase } from "@/lib/utils";
-import { createPortalSession } from "@/lib/stripe.functions";
-import { useServerFn } from "@tanstack/react-start";
 
 export const Route = createFileRoute("/dashboard/profile")({
   component: ProfilePage,
@@ -44,15 +25,6 @@ function ProfilePage() {
   const { user, isLoading } = useAuthStatus();
   const [isUpdating, setIsUpdating] = React.useState(false);
   const [isVerifying, setIsVerifying] = React.useState(false);
-  const [isRedirecting, setIsRedirecting] = React.useState(false);
-  const [cancelOpen, setCancelOpen] = React.useState(false);
-  const cancellations = useMyCancellations(user?.id);
-  const scheduled = scheduledCancellation(cancellations.list);
-  const paid = !!user && isPaidSubscriber(user.subscription_tier, user.subscription_expires_at, user.on_trial);
-  const [auditLogs, setAuditLogs] = React.useState<import("@/types").SubscriptionAuditLog[]>([]);
-
-  const portal = useServerFn(createPortalSession);
-
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -67,11 +39,6 @@ function ProfilePage() {
         newEmail: "",
       });
     }
-    const loadAudit = async () => {
-      const logs = await MockService.getSubscriptionAuditLogs();
-      setAuditLogs(logs);
-    };
-    loadAudit();
   }, [user]);
 
   const handleUpdateName = async (e: React.FormEvent) => {
@@ -126,31 +93,6 @@ function ProfilePage() {
     await navigate({ to: "/", replace: true });
   };
 
-  const handleOpenBillingPortal = async () => {
-    setIsRedirecting(true);
-    try {
-      const { url } = await portal();
-      if (url) window.location.href = url;
-    } catch (error) {
-      toast.error("Erro ao abrir portal de cobrança");
-    } finally {
-      setIsRedirecting(false);
-    }
-  };
-
-  const handleCancelled = (
-    record: { receipt_number: string; effective_until: string },
-    emailStatus: string,
-  ) => {
-    void cancellations.refresh();
-    toast.success(
-      `Cancelamento agendado (recibo ${record.receipt_number}). Seu plano continua até ${new Date(record.effective_until).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}.`,
-    );
-    if (emailStatus === "enviado") toast.info("Enviamos a confirmação para o seu e-mail.");
-    else
-      toast.info("O e-mail de confirmação não foi enviado agora; o recibo está no seu histórico.");
-  };
-
   if (isLoading) return <div className="p-8">Carregando...</div>;
 
   return (
@@ -164,7 +106,7 @@ function ProfilePage() {
             Meu <em>perfil</em>
           </>
         }
-        description="Gerencie suas informações pessoais, plano e assinatura."
+        description="Atualize seus dados pessoais e de contato. Para cobrança e recibos, use Plano e assinatura."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -236,175 +178,14 @@ function ProfilePage() {
         <PlanStatusCard />
 
         <Card className="md:col-span-3">
-          <CardHeader className="flex flex-row items-center justify-between">
-            <div>
-              <CardTitle className="flex items-center gap-2">
-                <CreditCard className="h-5 w-5 text-secondary" />
-                Planos e Assinatura
-              </CardTitle>
-              <CardDescription>
-                Escolha o plano que melhor se adapta ao seu ritmo de estudos.
-              </CardDescription>
-            </div>
-            {user?.subscription_tier !== "free" && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex gap-2"
-                onClick={handleOpenBillingPortal}
-                disabled={isRedirecting}
-              >
-                <ExternalLink className="h-4 w-4" />
-                Gerenciar Assinatura
-              </Button>
-            )}
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">
-              O plano em vigor e o prazo aparecem em <strong>Seu plano</strong>, acima. Para
-              comparar o que cada plano oferece e acompanhar o uso, abra{" "}
-              <Link
-                to="/dashboard/subscriptions"
-                className="font-semibold text-primary hover:underline"
-              >
-                Plano e uso
-              </Link>
-              .
-            </p>
-
-            <div className="mt-6 pt-6 border-t flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <Shield className="h-5 w-5 text-emerald-500" />
-                <div className="text-sm">
-                  <p className="font-medium">Assinatura Segura</p>
-                  <p className="text-muted-foreground text-xs">
-                    Sua conexão usa HTTPS. O acesso aos dados da conta é protegido por autenticação
-                    e permissões.
-                  </p>
-                </div>
-              </div>
-              {scheduled ? (
-                <p className="text-xs text-muted-foreground">
-                  Cancelamento agendado: seu plano continua até{" "}
-                  {new Date(scheduled.effective_until).toLocaleDateString("pt-BR", {
-                    timeZone: "America/Rio_Branco",
-                  })}
-                  .
-                </p>
-              ) : (
-                paid && (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-destructive/70 hover:text-destructive hover:bg-destructive/10 text-[10px]"
-                    onClick={() => setCancelOpen(true)}
-                  >
-                    Cancelar Plano
-                  </Button>
-                )
-              )}
-              <Button
-                variant="ghost"
-                className="text-destructive hover:text-destructive hover:bg-destructive/10 gap-2"
-                onClick={handleLogout}
-              >
-                <LogOut className="h-4 w-4" /> Sair da Conta
-              </Button>
-            </div>
+          <CardHeader><CardTitle>Acesso à conta</CardTitle><CardDescription>Seus dados ficam aqui. Cobrança, cancelamentos e recibos ficam em Plano e assinatura.</CardDescription></CardHeader>
+          <CardContent className="flex flex-wrap items-center gap-3">
+            <Button asChild variant="outline"><Link to="/dashboard/subscriptions">Plano e assinatura</Link></Button>
+            <Button variant="ghost" className="gap-2 text-destructive" onClick={handleLogout}><LogOut className="h-4 w-4" /> Sair da conta</Button>
           </CardContent>
         </Card>
-
-        {auditLogs.length > 0 && (
-          <Card className="md:col-span-3">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <HistoryIcon className="h-5 w-5 text-primary" />
-                Histórico de Assinatura
-              </CardTitle>
-              <CardDescription>Eventos importantes relacionados ao seu plano.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {auditLogs.map((log) => (
-                  <div
-                    key={log.id}
-                    className="flex items-center justify-between py-2 border-b last:border-0"
-                  >
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium capitalize">
-                        {log.event_type.replace("_", " ")}
-                      </span>
-                      <span className="text-[10px] text-muted-foreground">
-                        {acreDate(log.created_at).toLocaleString("pt-BR", {
-                          timeZone: "America/Rio_Branco",
-                        })}
-                      </span>
-                      {typeof log.metadata?.["reason"] === "string" && (
-                        <span className="text-[9px] text-rose-500/80 mt-0.5 italic">
-                          Motivo: {String(log.metadata?.["reason"])}
-                        </span>
-                      )}
-                    </div>
-                    <Badge variant="outline" className="uppercase text-[9px]">
-                      {log.new_tier}
-                    </Badge>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        )}
-        {cancellations.list.length > 0 && (
-          <Card className="md:col-span-3">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <HistoryIcon className="h-5 w-5 text-primary" />
-                Cancelamentos e recibos
-              </CardTitle>
-              <CardDescription>
-                Cada cancelamento gera um recibo que você pode consultar e imprimir.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {cancellations.list.map((c) => (
-                <div
-                  key={c.id}
-                  className="flex flex-wrap items-center justify-between gap-3 border-b pb-3 last:border-0"
-                >
-                  <div className="text-sm">
-                    <p className="font-semibold">
-                      {c.receipt_number} · Plano {c.plan_name}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      Pedido em{" "}
-                      {acreDate(c.requested_at).toLocaleString("pt-BR", {
-                        timeZone: "America/Rio_Branco",
-                      })}{" "}
-                      · vale até{" "}
-                      {new Date(c.effective_until).toLocaleDateString("pt-BR", {
-                        timeZone: "America/Rio_Branco",
-                      })}{" "}
-                      · e-mail: {emailStatusLabel[c.email_status]}
-                    </p>
-                  </div>
-                  <Button asChild variant="outline" size="sm">
-                    <Link to="/dashboard/cancellation-receipt/$id" params={{ id: c.id }}>
-                      Ver recibo
-                    </Link>
-                  </Button>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        )}
       </div>
-      <CancelSubscriptionDialog
-        open={cancelOpen}
-        onOpenChange={setCancelOpen}
-        planName={SUBSCRIPTION_PLANS.find((p) => p.id === user?.subscription_tier)?.name ?? "atual"}
-        endsAt={user?.subscription_expires_at}
-        onDone={handleCancelled}
-      />
+
     </div>
   );
 }

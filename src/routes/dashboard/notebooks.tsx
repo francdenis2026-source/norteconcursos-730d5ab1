@@ -190,10 +190,10 @@ function NotebooksPage() {
         icon={BookOpen}
         title={
           <>
-            Meus <em>cadernos</em>
+            Coleções de <em>questões</em>
           </>
         }
-        description="Organize suas questões favoritas em coleções para revisão personalizada."
+        description="Monte seus cadernos manualmente com questões favoritas. Os erros do Treinador são reunidos automaticamente no Caderno de erros."
         actions={
           <Button onClick={handleCreateNotebook} className="hero-btn-primary gap-2">
             <Plus className="h-4 w-4" /> Criar caderno
