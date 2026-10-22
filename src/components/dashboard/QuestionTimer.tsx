@@ -6,10 +6,13 @@ export function QuestionTimer({
   seconds,
   completed = false,
   paused = false,
+  compact = false,
 }: {
   seconds: number;
   completed?: boolean;
   paused?: boolean;
+  /** Inline badge instead of the full dial — for headers with little vertical room. */
+  compact?: boolean;
 }) {
   const elapsed = Math.max(0, Math.floor(Number.isFinite(seconds) ? seconds : 0));
   const hours = Math.floor(elapsed / 3600);
@@ -28,10 +31,10 @@ export function QuestionTimer({
       aria-label={`Tempo nesta questão: ${time}${completed ? ", finalizado" : paused ? ", pausado" : ""}`}
     >
       <TacticalClock
-        size="question"
+        size={compact ? "compact" : "question"}
         time={time}
         seconds={elapsed}
-        label="Nesta questão"
+        {...(compact ? {} : { label: "Nesta questão" })}
         status={completed ? "Finalizado" : paused ? "Pausado" : "Tempo ativo"}
         paused={paused && !completed}
         completed={completed}
