@@ -2,7 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { BookOpen, BrainCircuit, FileText, Shield, Target, TrendingUp, ArrowRight, ExternalLink } from "lucide-react";
 
-export const Route = createFileRoute("/dashboard/inteligencia-idecan")({ component: InteligenciaIdecan });
+export const Route = createFileRoute("/dashboard/inteligencia-idecan")({
+  component: InteligenciaIdecan,
+  head: () => ({
+    meta: [
+      { title: "Inteligência IDECAN | Operação PCAC — Norte Concursos" },
+      { name: "description", content: "Radar de preparação IDECAN para a Polícia Civil do Acre: disciplinas, provas, prioridades e plano de ataque." },
+    ],
+  }),
+});
 
 type Topic = { name: string; priority: "Alta" | "Média"; topics: string[]; reason: string };
 const subjects: Topic[] = [
