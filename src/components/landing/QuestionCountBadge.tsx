@@ -1,5 +1,5 @@
 import "./QuestionCountBadge.css";
-import { BookOpenCheck, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -26,13 +26,15 @@ export function QuestionCountBadge() {
     },
   });
   const format = (n: number) => n.toLocaleString("pt-BR");
+  const ratio = data && data.registered > 0 ? Math.min(1, data.available / data.registered) : null;
+
   return (
     <a href="#plataforma" className="question-count-badge">
-      <span className="question-count-icon" aria-hidden="true">
-        <BookOpenCheck />
+      <span className="question-count-head">
+        <span className="question-count-eyebrow">Banco de questões</span>
+        <ArrowUpRight className="question-count-arrow" aria-hidden="true" />
       </span>
       <span className="question-count-content">
-        <span className="question-count-eyebrow">Banco de questões</span>
         <span className="question-count-main">
           <strong>{data ? format(data.available) : "Questões"}</strong>
           <span>
@@ -43,6 +45,11 @@ export function QuestionCountBadge() {
               : "para sua preparação"}
           </span>
         </span>
+        {ratio !== null && (
+          <span className="question-count-meter" role="presentation">
+            <span className="question-count-meter__fill" style={{ width: `${Math.round(ratio * 100)}%` }} />
+          </span>
+        )}
         <span className="question-count-detail">
           {data ? (
             <>
@@ -55,7 +62,6 @@ export function QuestionCountBadge() {
           ) : "Oficiais e autorais · liberação após revisão"}
         </span>
       </span>
-      <ArrowUpRight className="question-count-arrow" aria-hidden="true" />
     </a>
   );
 }
