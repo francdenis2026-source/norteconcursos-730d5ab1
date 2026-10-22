@@ -97,7 +97,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
     <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
       {home && (() => {
         const homeLink = (
-          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
+          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" data-hue="gold" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
             <span className="app-ico" data-hue="gold"><home.icon aria-hidden="true" /></span>
             <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
           </Link>
@@ -115,7 +115,7 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
         const Icon = groupIcons[group] ?? BookOpen;
         const active = current?.href !== "/dashboard" && current?.group === group;
         const sectionLink = (
-          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} onClick={onNavigate}>
+          <Link key={group} to={entry.href} search={entry.search ?? {}} className="app-nav__link nav-section-link" data-hue={hues[group] ?? "gold"} data-active={active} aria-current={active ? "location" : undefined} aria-label={collapsed ? group : undefined} onClick={onNavigate}>
             <span className="app-ico" data-hue={hues[group] ?? "gold"}><Icon aria-hidden="true" /></span>
             {collapsed ? <span className="app-nav__compact-label">{collapsedLabels[group] ?? group}</span> : <>
               <span className="app-nav__label"><strong>{group}</strong><small>{groupDetails[group]}</small></span>
