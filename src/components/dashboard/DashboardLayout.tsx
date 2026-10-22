@@ -663,9 +663,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
                 {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
               </div>
-              <strong className="app-location__title" title={current?.label}>
-                {current?.label ?? (location.pathname === "/dashboard/admin-support" ? "Central de atendimento" : isAdmin ? "Painel administrativo" : "Minha preparação")}
-              </strong>
             </div>
 
             <div className="app-topbar__actions">
