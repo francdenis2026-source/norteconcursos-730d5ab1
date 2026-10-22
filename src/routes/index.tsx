@@ -504,8 +504,6 @@ function Index() {
               </Head>
             </div>
             <HomeRail className="home-opportunities" label="Oportunidades de concursos">
-              <PcprExamPromo />
-              <PcpiExamPromo />
               <article
                 className="home-opportunity home-opportunity--acre"
                 aria-labelledby="pcac-title"
@@ -585,6 +583,8 @@ function Index() {
                   </div>
                 </div>
               </article>
+              <PcprExamPromo />
+              <PcpiExamPromo />
             </HomeRail>
           </div>
         </section>
