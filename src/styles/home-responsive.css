@@ -559,7 +559,7 @@
 }
 @media (max-width: 1000px) and (min-width: 600px) {
   .home.home .home-faq__intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
-  .home.home .home-faq__intro > .home-eyebrow { font-size: 8px; letter-spacing: .03em; padding: 5px 6px; }
+  .home.home .home-faq__intro > .home-eyebrow { font-size: 9px; letter-spacing: .03em; padding: 5px 6px; }
   .home.home .home-plans--insignia .home-faq__intro > h3 { font-size: 22px; }
 }
 @media (max-width: 599px) {
