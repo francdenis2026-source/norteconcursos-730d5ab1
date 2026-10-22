@@ -28,19 +28,6 @@
 .app-location__group { display: inline-flex; align-items: center; gap: 8px; }
 .app-location__group::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--brass-deep); }
 .dark .app-location__group::before { background: var(--brass); }
-.app-location__title {
-  display: block;
-  margin: 0;
-  min-width: 0;
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 650;
-  line-height: 1.25;
-  letter-spacing: -.015em;
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
 .app-shell.navigation-v2[data-area] .app-topbar__actions { flex: none; display: flex; align-items: center; gap: 8px; }
 .app-shell.navigation-v2[data-area] .app-topbar :is(.app-top-search, .app-theme-toggle, .platform-back) {
   display: grid;
@@ -106,7 +93,6 @@
   .app-location { gap: 2px; }
   .app-location__area:has(+ .app-location__group), .app-location__group::before { display: none; }
   .app-location__context { font-size: 9px; line-height: 1.2; letter-spacing: 0; }
-  .app-location__title { font-size: 13px; line-height: 1.2; }
 }
 @supports not (backdrop-filter: blur(1px)) {
   .app-shell.navigation-v2[data-area] .app-topbar[data-scrolled] { background: var(--card); }
