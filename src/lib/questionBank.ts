@@ -2,6 +2,7 @@ import type { Question } from "./questionFormat";
 import { examKey } from "./questionFormat";
 import { needsMissingSupportText } from "./questionText";
 import { parseQuestionCode, questionCode } from "./questionIdentity";
+import { dedupeSharedExamItems } from "./questionDuplicates";
 import { trainerCollectionQuestions } from "./trainerFilters";
 import {
   questionContestValue,
@@ -31,8 +32,13 @@ export function searchQuestionCatalog(catalog: Question[], query: string) {
       )
     : catalog;
 }
+// Mesma contagem do Treinador de questões: o mesmo item cadastrado para mais de um cargo
+// da mesma prova (ex.: Agente e Papiloscopista) é unido num só, senão o Acervo mostrava mais
+// questões do que o aluno realmente consegue treinar nesse filtro.
 export function availableQuestionBank(catalog: Question[], collection: BankCollection) {
-  return trainerCollectionQuestions(catalog, collection).filter((q) => !needsMissingSupportText(q));
+  return dedupeSharedExamItems(
+    trainerCollectionQuestions(catalog, collection).filter((q) => !needsMissingSupportText(q)),
+  );
 }
 /** Published training inventory across both preparations; private notebooks stay separate. */
 export function publishedQuestionBank(catalog: Question[]) {

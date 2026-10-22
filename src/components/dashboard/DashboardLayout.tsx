@@ -2,6 +2,7 @@ import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
+import { useQuestionCatalogRealtime } from "@/hooks/useQuestionCatalogRealtime";
 import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
@@ -309,6 +310,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigate = useNavigate();
   const router = useRouter();
   const { user } = useAuthStatus();
+  // Mantém em sincronia, em tempo real, todas as contagens de questões (Treinador, Acervo,
+  // painel administrativo): qualquer tela do dashboard reflete na hora uma questão cadastrada,
+  // editada ou removida, sem depender do cache de cada tela expirar por conta própria.
+  useQuestionCatalogRealtime(!!user && user.id !== "demo-user");
   // Depois que a tela principal já está pronta, baixa em segundo plano o código das seções mais
   // usadas, uma por vez, para o clique no menu abrir na hora. Respeita "economia de dados".
   React.useEffect(() => {
