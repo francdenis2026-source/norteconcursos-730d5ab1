@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "input_sha256": "b66c1468b7f028bfd04a2b258a8343f62b183d7944c42c5592e698e288a6b98c",
+  "official_directory": "https://concurso.idecan.org.br/editais?status=concluidos",
+  "scope": "Local import file; not the production database or a representative IDECAN sample",
+  "online_verification_performed": false,
+  "database_import_performed": false,
+  "publication_approved": false,
+  "received_items": 273,
+  "retained_items": 273,
+  "annulled_items": 0,
+  "duplicates": 0,
+  "conflicts": 0,
+  "issues": [],
+  "civil_police_items": 190,
+  "exams": [
+    {
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "career": "Agente de Polícia Civil",
+      "year": 2026,
+      "booklet": "Tipo B",
+      "comparison_scope": "policia_civil",
+      "retained_items": 92,
+      "original_exam_items": null,
+      "subjects": [
+        {
+          "subject": "Contabilidade",
+          "count": 1,
+          "share_of_retained_items": 1.09
+        },
+        {
+          "subject": "Direito Administrativo",
+          "count": 6,
+          "share_of_retained_items": 6.52
+        },
+        {
+          "subject": "Direito Constitucional",
+          "count": 6,
+          "share_of_retained_items": 6.52
+        },
+        {
+          "subject": "Direito Penal",
+          "count": 10,
+          "share_of_retained_items": 10.87
+        },
+        {
+          "subject": "Direito Processual Penal",
+          "count": 8,
+          "share_of_retained_items": 8.7
+        },
+        {
+          "subject": "Direitos Humanos",
+          "count": 5,
+          "share_of_retained_items": 5.43
+        },
+        {
+          "subject": "Legislação Institucional",
+          "count": 1,
+          "share_of_retained_items": 1.09
+        },
+        {
+          "subject": "Língua Portuguesa",
+          "count": 20,
+          "share_of_retained_items": 21.74
+        },
+        {
+          "subject": "Raciocínio Lógico-Matemático",
+          "count": 15,
+          "share_of_retained_items": 16.3
+        },
+        {
+          "subject": "Tecnologia da Informação, Segurança Cibernética e Crimes Digitais",
+          "count": 20,
+          "share_of_retained_items": 21.74
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+          "kind": "mirror"
+        }
+      ],
+      "answer_keys": [
+        {
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+          "kind": "mirror"
+        }
+      ],
+      "declared_answer_key_status": {
+        "definitivo": 92
+      },
+      "legal_review_metadata": {
+        "atemporal": 3,
+        "missing": 55,
+        "sem_alteracao_localizada": 33,
+        "verificada": 1
+      },
+      "syllabus_topic_links": 0,
+      "item_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        64,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "career": "Aluno-Soldado Temporário (QPTPM)",
+      "year": 2026,
+      "booklet": "Tipo A",
+      "comparison_scope": "seguranca_complementar",
+      "retained_items": 37,
+      "original_exam_items": null,
+      "subjects": [
+        {
+          "subject": "Constituição Federal de 1988",
+          "count": 4,
+          "share_of_retained_items": 10.81
+        },
+        {
+          "subject": "Código de Trânsito Brasileiro",
+          "count": 5,
+          "share_of_retained_items": 13.51
+        },
+        {
+          "subject": "Geografia de Santa Catarina",
+          "count": 5,
+          "share_of_retained_items": 13.51
+        },
+        {
+          "subject": "Informática",
+          "count": 3,
+          "share_of_retained_items": 8.11
+        },
+        {
+          "subject": "Legislação Institucional",
+          "count": 1,
+          "share_of_retained_items": 2.7
+        },
+        {
+          "subject": "Legislação Penal",
+          "count": 5,
+          "share_of_retained_items": 13.51
+        },
+        {
+          "subject": "Legislação Penal Militar",
+          "count": 5,
+          "share_of_retained_items": 13.51
+        },
+        {
+          "subject": "Língua Portuguesa",
+          "count": 5,
+          "share_of_retained_items": 13.51
+        },
+        {
+          "subject": "Raciocínio Lógico e Matemático",
+          "count": 4,
+          "share_of_retained_items": 10.81
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf",
+          "kind": "mirror"
+        }
+      ],
+      "answer_keys": [
+        {
+          "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+          "kind": "official_link_not_reverified"
+        }
+      ],
+      "declared_answer_key_status": {
+        "definitivo": 37
+      },
+      "legal_review_metadata": {
+        "missing": 17,
+        "sem_alteracao_localizada": 16,
+        "verificada": 4
+      },
+      "syllabus_topic_links": 0,
+      "item_numbers": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "career": "Cadete BM (CFO)",
+      "year": 2026,
+      "booklet": "Tipo A",
+      "comparison_scope": "seguranca_complementar",
+      "retained_items": 46,
+      "original_exam_items": null,
+      "subjects": [
+        {
+          "subject": "Ciências Naturais",
+          "count": 8,
+          "share_of_retained_items": 17.39
+        },
+        {
+          "subject": "Conhecimentos Gerais e de Minas Gerais",
+          "count": 7,
+          "share_of_retained_items": 15.22
+        },
+        {
+          "subject": "Direitos Humanos e Legislação",
+          "count": 8,
+          "share_of_retained_items": 17.39
+        },
+        {
+          "subject": "Inglês",
+          "count": 5,
+          "share_of_retained_items": 10.87
+        },
+        {
+          "subject": "Língua Portuguesa",
+          "count": 5,
+          "share_of_retained_items": 10.87
+        },
+        {
+          "subject": "Matemática e Raciocínio Lógico",
+          "count": 8,
+          "share_of_retained_items": 17.39
+        },
+        {
+          "subject": "Proteção e Defesa Civil",
+          "count": 5,
+          "share_of_retained_items": 10.87
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/160263/idecan-2026-cbm-mg-cadete-bm-prova.pdf",
+          "kind": "mirror"
+        }
+      ],
+      "answer_keys": [
+        {
+          "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+          "kind": "placeholder"
+        }
+      ],
+      "declared_answer_key_status": {
+        "definitivo": 46
+      },
+      "legal_review_metadata": {
+        "atemporal": 5,
+        "missing": 38,
+        "sem_alteracao_localizada": 3
+      },
+      "syllabus_topic_links": 0,
+      "item_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "career": "Escrivão de Polícia Civil",
+      "year": 2026,
+      "booklet": "Tipo A",
+      "comparison_scope": "policia_civil",
+      "retained_items": 98,
+      "original_exam_items": null,
+      "subjects": [
+        {
+          "subject": "Administração",
+          "count": 5,
+          "share_of_retained_items": 5.1
+        },
+        {
+          "subject": "Contabilidade",
+          "count": 5,
+          "share_of_retained_items": 5.1
+        },
+        {
+          "subject": "Direito Administrativo",
+          "count": 6,
+          "share_of_retained_items": 6.12
+        },
+        {
+          "subject": "Direito Constitucional",
+          "count": 5,
+          "share_of_retained_items": 5.1
+        },
+        {
+          "subject": "Direito Penal",
+          "count": 10,
+          "share_of_retained_items": 10.2
+        },
+        {
+          "subject": "Direito Processual Penal",
+          "count": 8,
+          "share_of_retained_items": 8.16
+        },
+        {
+          "subject": "Direitos Humanos",
+          "count": 4,
+          "share_of_retained_items": 4.08
+        },
+        {
+          "subject": "Legislação Institucional",
+          "count": 4,
+          "share_of_retained_items": 4.08
+        },
+        {
+          "subject": "Língua Portuguesa",
+          "count": 20,
+          "share_of_retained_items": 20.41
+        },
+        {
+          "subject": "Raciocínio Lógico-Matemático",
+          "count": 11,
+          "share_of_retained_items": 11.22
+        },
+        {
+          "subject": "Tecnologia da Informação, Segurança Cibernética e Crimes Digitais",
+          "count": 20,
+          "share_of_retained_items": 20.41
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+          "kind": "mirror"
+        }
+      ],
+      "answer_keys": [
+        {
+          "url": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201",
+          "kind": "contest_page"
+        }
+      ],
+      "declared_answer_key_status": {
+        "definitivo": 98
+      },
+      "legal_review_metadata": {
+        "missing": 98
+      },
+      "syllabus_topic_links": 0,
+      "item_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        97,
+        98,
+        99,
+        100
+      ]
+    }
+  ]
+}
