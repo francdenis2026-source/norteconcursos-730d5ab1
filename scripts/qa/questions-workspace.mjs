@@ -1,5 +1,5 @@
 /** Question workspace functional and responsive regression with mocked authentication; no production writes.
- * PLAYWRIGHT_MODULE=/path/to/playwright-core/index.mjs node scripts/qa/workspace-fullscreen.mjs
+ * PLAYWRIGHT_MODULE=/path/to/playwright-core/index.mjs node scripts/qa/questions-workspace.mjs
  * Start the local dev server first (BASE_URL defaults to http://127.0.0.1:3000).
  */
 import assert from "node:assert/strict";
