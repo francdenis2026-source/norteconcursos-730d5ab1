@@ -5,10 +5,12 @@ Aplicar no SQL Editor do Supabase (a tabela `board_exam_questions` já existe), 
 - `pcsc_agente_2026.sql`: PC SC, Agente de Polícia Civil, caderno B (92 questões, gabarito definitivo)
 - `pmsc_aluno_soldado_2026.sql`: PMSC, Aluno-Soldado Temporário, caderno A (39 questões, gabarito **preliminar**)
 - `cbmmg_cadete_2026.sql`: CBMMG, CFO BM 2027 Cadete, caderno A (46 questões, gabarito definitivo)
-- `pcsc_escrivao_2026.sql`: PC SC, Escrivão de Polícia Civil, caderno Tipo A (100 questões, gabarito **preliminar**)
+- `pcsc_escrivao_2026.sql`: PC SC, Escrivão de Polícia Civil, caderno Tipo A (98 questões, gabarito **definitivo** — conferido em antigo-concurso.idecan.org.br em 22/10/2026; itens 24 e 96 foram anulados no definitivo e ficaram fora da carga)
 
 `idecan_questions.json` traz as mesmas questões para a tela "Questões de bancas".
 
 Todas entram como `under_review`. Fora desta carga, de propósito: legislação local (leis e decretos estaduais de SC e MG), questões anuladas, sem gabarito (CBMES), com figura ausente ou com extração incompleta.
 
 Conferência legislativa de 22/10/2026: as questões de lei trazem a norma conferida em `legal_basis` e a data em `law_version_checked_at`. "Sem alteração localizada" significa que não achei mudança, sem reler todo o texto. Isso não substitui a decisão individual exigida em `CONTENT_GOVERNANCE.md`. Antes de ativar, confirme o gabarito definitivo (PMSC) e o vínculo ao edital.
+
+Conferência de gabaritos definitivos (22/10/2026, via antigo-concurso.idecan.org.br): **PC SC Agente** — gabarito já importado batia 100% com o definitivo (92/92 itens conferidos, zero divergência); o item 60 (anulado) já estava corretamente fora da carga. **PC SC Escrivão** — 2 itens (24 e 96) mudaram de resposta válida (preliminar) para anulados (definitivo); removidos da carga e dos 98 itens restantes, zero divergência contra o definitivo.
