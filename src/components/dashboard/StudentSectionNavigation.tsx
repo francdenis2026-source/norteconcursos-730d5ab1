@@ -4,6 +4,15 @@ import { activeNavigation, navigationKey } from '@/lib/dashboardNavigation';
 import { studentSections, studentGroupLabel, studentNavigationSegment } from '@/lib/studentNavigation';
 import type { NavigationItem } from './DashboardNavigation';
 
+const destinationTones: Record<string, string> = {
+  '/dashboard/question-trainer': 'teal',
+  '/dashboard/errors': 'rose',
+  '/dashboard/flashcards': 'violet',
+  '/dashboard/notebooks': 'amber',
+  '/dashboard/question-bank': 'blue',
+};
+const sectionTones = ['blue', 'teal', 'violet', 'amber', 'rose'];
+
 /** Secondary destinations live in the workspace, never in expanding sidebar groups. */
 export function StudentSectionNavigation({ items, pathname, search }: { items: NavigationItem[]; pathname: string; search: Record<string, unknown> }) {
   const current = activeNavigation(items, pathname, search);
@@ -24,7 +33,7 @@ export function StudentSectionNavigation({ items, pathname, search }: { items: N
   return <nav ref={nav} className="workspace-section-nav no-print" aria-label={`${studentGroupLabel(section.group)}: páginas da área`}>
     {section.entries.map((item, index) => <span className="workspace-section-nav__item" key={navigationKey(item)}>
       {studentNavigationSegment(item.href) && studentNavigationSegment(item.href) !== studentNavigationSegment(section.entries[index - 1]?.href ?? '') && <span className="workspace-section-nav__segment">{studentNavigationSegment(item.href)}</span>}
-      <Link to={item.href} search={item.search ?? {}} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
+      <Link data-tone={destinationTones[item.href] ?? sectionTones[index % sectionTones.length]} to={item.href} search={item.search ?? {}} aria-current={navigationKey(item) === activeKey ? 'page' : undefined}>
       <item.icon aria-hidden="true" /><span>{item.label}</span>
     </Link></span>)}
   </nav>;
