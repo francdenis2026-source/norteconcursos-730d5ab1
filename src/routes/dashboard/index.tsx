@@ -1,3 +1,4 @@
+import "@/styles/student-desk.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,32 +58,44 @@ const number = (n: number) => n.toLocaleString("pt-BR");
 const duration = (seconds: number) => (seconds > 0 ? fmtHuman(seconds) : "0 min");
 const destinations = [
   {
+    to: "/dashboard/cronograma",
+    title: "Cronograma",
+    text: "Organize seu dia de estudo",
+    tone: "blue",
+    icon: CalendarClock,
+  },
+  {
     to: "/dashboard/question-trainer",
     title: "Questões",
+    tone: "teal",
     text: "Pratique e revise seus erros",
     icon: BrainCircuit,
   },
   {
     to: "/dashboard/library",
     title: "Conteúdo",
+    tone: "violet",
     text: "Leis, teoria e disciplinas",
     icon: BookOpen,
   },
   {
     to: "/dashboard/edital",
     title: "Meu edital",
+    tone: "blue",
     text: "Estude o que será cobrado",
     icon: FileText,
   },
   {
     to: "/dashboard/mock-exams",
     title: "Simulados",
+    tone: "rose",
     text: "Prepare seu ritmo de prova",
     icon: Trophy,
   },
   {
     to: "/dashboard/ranking",
     title: "Ranking",
+    tone: "amber",
     text: "Veja sua posição entre os alunos",
     icon: Medal,
   },
@@ -203,11 +216,11 @@ function StudentHome({ user }: { user: UserProfile }) {
             }
           : q.objective.isSuccess && !objective
             ? {
-                title: "Dê direção à sua preparação.",
+                title: "Comece pelas questões.",
                 reason:
-                  "Escolha seu concurso para acompanhar o objetivo. Você também pode começar pelas questões ou pelo conteúdo abaixo.",
-                label: "Consultar concursos e editais",
-                to: "/dashboard/questions",
+                  "Escolha uma disciplina, pratique e use a correção para orientar seu próximo estudo.",
+                label: "Iniciar meu treino",
+                to: "/dashboard/question-trainer",
               }
             : q.strategy.data && !plan
               ? {
@@ -233,7 +246,7 @@ function StudentHome({ user }: { user: UserProfile }) {
     }
   };
   return (
-    <div className="student-home student-hub">
+    <div className="student-home student-hub student-desk">
       <header className="student-hub__masthead student-hub__masthead--careers workspace-banner">
         <div className="student-hub__hero-copy">
           <p className="student-hub__welcome">
@@ -257,8 +270,37 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
         </div>
       </header>
-      <PcprExamSpotlight />
-      <ResumeSessions userId={user.id} className="mb-4 space-y-3" />
+      <section className="student-desk__access" aria-labelledby="student-access-title">
+        <div className="student-desk__section-heading">
+          <h2 id="student-access-title">Acessos rápidos</h2>
+          <span>Seu estudo a um toque</span>
+        </div>
+        <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
+          {destinations.map(({ to, title, text, tone, icon: Icon }) => (
+            <Link
+              key={to}
+              to={to}
+              data-accent={tone}
+              {...(to === "/dashboard/ranking"
+                ? {
+                    search: { section: "general", page: 1, size: 20, q: "" } as never,
+                    "data-rank": "",
+                  }
+                : {})}
+            >
+              <span className="student-home__tool-icon">
+                <Icon aria-hidden="true" />
+              </span>
+              <div>
+                <strong>{title}</strong>
+                <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
+              </div>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      </section>
+      <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric
           icon={BrainCircuit}
@@ -330,60 +372,36 @@ function StudentHome({ user }: { user: UserProfile }) {
         onClose={() => setMetric(null)}
         returnFocus={metricTrigger.current}
       />
-      <nav className="student-hub__shortcuts" aria-label="Caminhos de estudo">
-        {destinations.map(({ to, title, text, icon: Icon }, i) => (
-          <Link
-            key={to}
-            to={to}
-            data-tone={i}
-            {...(to === "/dashboard/ranking"
-              ? { search: { section: "general", page: 1, size: 20, q: "" } as never, "data-rank": "" }
-              : {})}
-          >
-            <span className="student-home__tool-icon">
-              <Icon aria-hidden="true" />
+
+      {!schedule && (
+        <section
+          className="student-desk__next"
+          data-accent="amber"
+          aria-labelledby="dashboard-next-step"
+        >
+          <div className="student-hub__resume-copy">
+            <span className="student-desk__eyebrow">
+              <Sparkles aria-hidden="true" /> Seu próximo passo
             </span>
-            <div>
-              <strong>{title}</strong>
-              <small>{to === "/dashboard/ranking" && rankText ? rankText : text}</small>
-            </div>
+            <h2 id="dashboard-next-step">{priority.title}</h2>
+            <p>{priority.reason}</p>
+          </div>
+          <Link
+            className="student-home__primary"
+            to={priority.to}
+            {...("params" in priority ? { params: priority.params } : {})}
+            {...("search" in priority ? { search: priority.search } : {})}
+          >
+            {priority.label}
             <ArrowRight aria-hidden="true" />
           </Link>
-        ))}
-      </nav>
+        </section>
+      )}
       <div className="student-hub__workspace">
         <div className="student-hub__main">
-          {!schedule && (
-            <section className="student-hub__resume" aria-labelledby="dashboard-next-step">
-              <img
-                className="student-home__art"
-                src="/media/hero/painel-aluno-direcao-estudos.webp"
-                alt=""
-                aria-hidden="true"
-                width={2172}
-                height={724}
-                decoding="async"
-              />
-              <div className="student-hub__resume-copy">
-                <span className="student-hub__kicker">
-                  <span /> SEU PRÓXIMO PASSO
-                </span>
-                <h2 id="dashboard-next-step">{priority.title}</h2>
-                <p>{priority.reason}</p>
-                <Link
-                  className="student-home__primary"
-                  to={priority.to}
-                  {...("params" in priority ? { params: priority.params } : {})}
-                  {...("search" in priority ? { search: priority.search } : {})}
-                >
-                  {priority.label}
-                  <ArrowRight aria-hidden="true" />
-                </Link>
-              </div>
-            </section>
-          )}
           <section
             className="student-home__card student-home__schedule"
+            data-accent="blue"
             aria-labelledby="dashboard-schedule-title"
           >
             <SectionTitle
@@ -529,7 +547,11 @@ function StudentHome({ user }: { user: UserProfile }) {
               </Link>
             </p>
           </div>
-          <section className="student-home__card" aria-labelledby="dashboard-rhythm-title">
+          <section
+            className="student-home__card"
+            data-accent="teal"
+            aria-labelledby="dashboard-rhythm-title"
+          >
             <SectionTitle
               icon={TrendingUp}
               title="Seu ritmo na semana"
@@ -601,7 +623,11 @@ function StudentHome({ user }: { user: UserProfile }) {
           </section>
         </div>
         <aside className="student-hub__rail" aria-label="Seu objetivo e suas prioridades">
-          <section className="student-home__card" aria-labelledby="dashboard-objective-title">
+          <section
+            className="student-home__card"
+            data-accent="amber"
+            aria-labelledby="dashboard-objective-title"
+          >
             <SectionTitle icon={Target} title="Concurso em foco" id="dashboard-objective-title" />
             {q.objective.isPending ? (
               <PanelLoading />
@@ -644,7 +670,11 @@ function StudentHome({ user }: { user: UserProfile }) {
             )}
           </section>
 
-          <section className="student-home__card" aria-labelledby="dashboard-reading-title">
+          <section
+            className="student-home__card"
+            data-accent="violet"
+            aria-labelledby="dashboard-reading-title"
+          >
             <SectionTitle
               icon={BookOpen}
               title="Continue sua leitura"
@@ -686,7 +716,11 @@ function StudentHome({ user }: { user: UserProfile }) {
             )}
           </section>
 
-          <section className="student-home__card" aria-labelledby="dashboard-review-title">
+          <section
+            className="student-home__card"
+            data-accent="rose"
+            aria-labelledby="dashboard-review-title"
+          >
             <SectionTitle
               icon={BrainCircuit}
               title="Prioridades de revisão"
@@ -786,6 +820,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </nav>
         </aside>
       </div>
+      <PcprExamSpotlight compact />
       <details className="student-home__data-note">
         <summary>Como este painel calcula seus indicadores</summary>
         <p>
@@ -916,13 +951,13 @@ function QueryError({ text, retry }: { text: string; retry: () => unknown }) {
 function DashboardSkeleton() {
   return (
     <div className="space-y-5" role="status" aria-label="Carregando painel">
-      <Skeleton className="h-64 rounded-2xl" />
+      <Skeleton className="h-40 rounded-2xl" />
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {[0, 1, 2, 3].map((n) => (
-          <Skeleton key={n} className="h-28 rounded-xl" />
+          <Skeleton key={n} className="h-24 rounded-xl" />
         ))}
       </div>
-      <Skeleton className="h-96 rounded-2xl" />
+      <Skeleton className="h-48 rounded-2xl" />
     </div>
   );
 }
