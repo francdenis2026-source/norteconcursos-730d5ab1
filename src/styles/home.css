@@ -3102,10 +3102,12 @@
 /* Text-bearing campaign artwork must stay intact at every card width. */
 .home-opportunity--pcpr .home-pcpr-hero,
 .home-opportunity--acre .home-opportunity__image,
-.home-opportunity--pcpi .home-opportunity__image { height:auto; aspect-ratio:1672 / 940; background:#171b22; flex-shrink:0; }
+.home-opportunity--pcpi .home-opportunity__image,
+.home-opportunity--pcsc .home-opportunity__image { height:auto; aspect-ratio:1672 / 940; background:#171b22; flex-shrink:0; }
 .home-opportunity--pcpr .home-pcpr-hero > img,
 .home-opportunity--acre .home-opportunity__image > img,
-.home-opportunity--pcpi .home-opportunity__image > img { width:100%; height:100%; object-fit:contain; object-position:center; }
+.home-opportunity--pcpi .home-opportunity__image > img,
+.home-opportunity--pcsc .home-opportunity__image > img { width:100%; height:100%; object-fit:contain; object-position:center; }
 .home-opportunity--pcpr .home-pcpr-hero::after { display:none; }
 .home-opportunity--acre .home-status--inline { position:static; width:fit-content; margin:0 0 10px; border:1px solid var(--home-line); }
 

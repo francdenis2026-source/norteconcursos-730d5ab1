@@ -55,6 +55,7 @@ import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
 import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
 import { PcpiExamPromo } from "@/components/landing/PcpiExamPromo";
+import { PcscExamPromo } from "@/components/landing/PcscExamPromo";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
@@ -583,6 +584,7 @@ function Index() {
                   </div>
                 </div>
               </article>
+              <PcscExamPromo />
               <PcprExamPromo />
               <PcpiExamPromo />
             </HomeRail>
