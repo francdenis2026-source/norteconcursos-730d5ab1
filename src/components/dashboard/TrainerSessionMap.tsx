@@ -73,7 +73,6 @@ export function TrainerSessionMap({
           </dt>
           <dd>{remaining}</dd>
         </div>
-        <div><dt>Puladas</dt><dd>{skipped}</dd></div>
       </dl>
       <h3>Mapa de questões</h3>
       <nav className="trainer-question-grid" aria-label="Navegar pelas questões da sessão">

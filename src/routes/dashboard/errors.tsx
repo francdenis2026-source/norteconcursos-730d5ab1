@@ -1,3 +1,4 @@
+import "@/styles/question-workspace.css";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
@@ -185,8 +186,7 @@ function ErrorArsenal({
           to="/dashboard/question-trainer"
           search={{ subject: question.subject, go: "1", mode: "reforco" }}
         >
-          <Target className="h-4 w-4" /> Refazer meus erros de {question.subject} (reforço, não
-          pontua de novo)
+          <Target className="h-4 w-4" /> Refazer meus erros
         </Link>
       </Button>
       <Button asChild variant="outline" className="w-full gap-2">
@@ -194,7 +194,7 @@ function ErrorArsenal({
           to="/dashboard/question-trainer"
           search={{ subject: question.subject, go: "1", reinforce: "1" }}
         >
-          <Target className="h-4 w-4" /> Praticar mais questões de {question.subject}
+          <Target className="h-4 w-4" /> Treinar esta disciplina
         </Link>
       </Button>
     </div>
@@ -266,7 +266,10 @@ function ErrorsPage() {
       if (answer.isCorrect) continue;
       const question = catalogById.get(key);
       if (!question) continue; // questão saiu de circulação (inativada) desde o erro
-      entries.push({ question, status: reviewStatus[`${question.source}:${question.id}`] ?? "pendente" });
+      entries.push({
+        question,
+        status: reviewStatus[`${question.source}:${question.id}`] ?? "pendente",
+      });
     }
     return entries;
   }, [locked, catalogById, reviewStatus]);
@@ -346,7 +349,7 @@ function ErrorsPage() {
         )
       : [];
     return (
-      <div className="mx-auto max-w-2xl space-y-6">
+      <div className="question-workspace question-errors question-errors--review mx-auto max-w-2xl">
         <div className="flex items-center justify-between">
           <Button variant="ghost" onClick={() => setRevisionMode(false)}>
             Voltar ao caderno
@@ -420,7 +423,7 @@ function ErrorsPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="question-workspace question-errors">
       <PageHero
         image="trainer"
         kicker="Questões"
@@ -430,37 +433,35 @@ function ErrorsPage() {
             Caderno de <em>erros</em>
           </>
         }
-        description="Seus erros no Treinador aparecem aqui automaticamente. Revise o gabarito e refaça no modo Reforço. Para organizar questões manualmente, use Coleções de questões."
-        actions={
-          <>
-            <Select value={filterSubject} onValueChange={setFilterSubject}>
-              <SelectTrigger className="hero-btn-ghost w-[190px]">
-                <Filter className="mr-2 h-4 w-4" />
-                <SelectValue placeholder="Disciplina" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">Todas as disciplinas</SelectItem>
-                {subjects.map((subject) => (
-                  <SelectItem key={subject} value={subject}>
-                    {subject}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <Button
-              className="hero-btn-primary gap-2"
-              disabled={reviewQueue.length === 0}
-              onClick={() => {
-                setRevisionIndex(0);
-                setRevisionMode(true);
-                toast.success("Revisão guiada iniciada");
-              }}
-            >
-              <Play className="h-4 w-4" /> Revisão sequencial
-            </Button>
-          </>
-        }
+        description="Revise as questões que você errou e acompanhe o que já dominou."
       />
+      <div className="question-workspace__toolbar" aria-label="Filtrar e revisar erros">
+        <Select value={filterSubject} onValueChange={setFilterSubject}>
+          <SelectTrigger className="w-full sm:w-[210px]">
+            <Filter className="mr-2 h-4 w-4" />
+            <SelectValue placeholder="Disciplina" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Todas as disciplinas</SelectItem>
+            {subjects.map((subject) => (
+              <SelectItem key={subject} value={subject}>
+                {subject}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <Button
+          className="question-workspace__primary gap-2"
+          disabled={reviewQueue.length === 0}
+          onClick={() => {
+            setRevisionIndex(0);
+            setRevisionMode(true);
+            toast.success("Revisão guiada iniciada");
+          }}
+        >
+          <Play className="h-4 w-4" /> Revisão sequencial
+        </Button>
+      </div>
 
       {visibleErrors.length > 0 && (
         <div className="flex flex-wrap gap-3 text-sm">

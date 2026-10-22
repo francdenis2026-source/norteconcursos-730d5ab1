@@ -1,3 +1,4 @@
+import "@/styles/question-workspace.css";
 import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -11,9 +12,7 @@ import {
   Loader2,
   RefreshCw,
   Search,
-  Sparkles,
   TextSearch,
-  Trophy,
 } from "lucide-react";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import {
@@ -26,7 +25,7 @@ import {
 } from "@/lib/questionBank";
 import { trainerCollectionQuestions } from "@/lib/trainerFilters";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -102,18 +101,20 @@ function QuestionBankPage() {
   const maxSubject = bySubject[0]?.[1] ?? 1;
   const maxBoard = byBoard[0]?.[1] ?? 1;
   return (
-    <div className="space-y-6 pb-8">
-      <section className="page-hero page-hero--lg workspace-banner" data-hero="trainer">
-        <span className="hero-chip">
-          <LibraryBig className="mr-1 h-3.5 w-3.5" /> Acervo de questões
-        </span>
-        <h1 className="text-3xl font-black md:text-5xl">Explorar questões</h1>
-        <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-200 md:text-base">
-          Escolha uma disciplina, banca, prova ou ano para abrir o Treinador com a seleção aplicada.
-          As quantidades incluem questões novas e já respondidas, com conteúdo disponível.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Button asChild className="gap-2 bg-emerald-600 hover:bg-emerald-700">
+    <div className="question-workspace question-catalog">
+      <PageHero
+        image="trainer"
+        size="sm"
+        kicker="Questões"
+        icon={LibraryBig}
+        title={
+          <>
+            Explorar <em>questões</em>
+          </>
+        }
+        description="Encontre uma disciplina, banca ou prova e abra sua seleção no treinador."
+        actions={
+          <Button asChild className="hero-btn-primary gap-2">
             <Link
               to="/dashboard/question-trainer"
               search={questionBankSearch(collection, source, search, {})}
@@ -121,52 +122,32 @@ function QuestionBankPage() {
               <BookOpenCheck className="h-4 w-4" /> Ir para o Treinador
             </Link>
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            className="gap-2 border-white/40 bg-white/10 text-white hover:bg-white/20"
-          >
-            <Link to="/dashboard/question-trainer" search={{ currency: "recent" }}>
-              <Sparkles className="h-4 w-4" /> Questões em alta
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            className="gap-2 border-white/40 bg-white/10 text-white hover:bg-white/20"
-          >
-            <Link to="/dashboard/mock-exams">
-              <Trophy className="h-4 w-4" /> Fazer um simulado
-            </Link>
-          </Button>
-        </div>
-        <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
-          <Metric icon={LibraryBig} value={items.length} label="questões disponíveis" />
-          <Metric
-            icon={FileCheck2}
-            value={questionBankExams(items).length}
-            label="provas e concursos"
-          />
-          <Metric
-            icon={Building2}
-            value={
-              new Set(
-                items
-                  .map((i) => i.board)
-                  .filter((b) => b !== "Não informada" && b !== "Meu caderno"),
-              ).size
-            }
-            label="bancas"
-          />
-          <Metric
-            icon={Layers3}
-            value={new Set(items.map((i) => i.subject)).size}
-            label="disciplinas"
-          />
-        </div>
-      </section>
+        }
+      />
+      <div className="question-workspace__metrics" aria-label="Resumo do acervo">
+        <Metric icon={LibraryBig} value={items.length} label="questões disponíveis" />
+        <Metric
+          icon={FileCheck2}
+          value={questionBankExams(items).length}
+          label="provas e concursos"
+        />
+        <Metric
+          icon={Building2}
+          value={
+            new Set(
+              items.map((i) => i.board).filter((b) => b !== "Não informada" && b !== "Meu caderno"),
+            ).size
+          }
+          label="bancas"
+        />
+        <Metric
+          icon={Layers3}
+          value={new Set(items.map((i) => i.subject)).size}
+          label="disciplinas"
+        />
+      </div>
 
-      <Card>
+      <Card className="question-catalog__filters">
         <CardContent className="flex flex-wrap items-center gap-3 p-4">
           <fieldset className="w-full border-b pb-4">
             <legend className="mb-2 text-sm font-semibold">Área de preparação</legend>
@@ -243,7 +224,7 @@ function QuestionBankPage() {
         </CardContent>
       </Card>
 
-      <div className="grid gap-6 xl:grid-cols-2">
+      <div className="question-catalog__distributions grid gap-4 xl:grid-cols-2">
         <Distribution
           title="Por disciplina"
           description="Quantidade de questões em cada matéria."
@@ -347,14 +328,11 @@ function QuestionBankPage() {
             )}
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Qualidade do acervo</CardTitle>
-            <CardDescription>
-              O que a plataforma já garante e o que ainda está em construção.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3 text-sm">
+        <details className="question-workspace__help question-catalog__quality">
+          <summary>
+            Qualidade do acervo{missingText ? ` · ${missingText} com apoio pendente` : ""}
+          </summary>
+          <div className="space-y-3 text-sm">
             <p className="flex gap-2">
               <FileCheck2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />{" "}
               Questões oficiais só entram após conferência com o gabarito definitivo; itens com
@@ -386,8 +364,8 @@ function QuestionBankPage() {
                 )}
               </p>
             )}
-          </CardContent>
-        </Card>
+          </div>
+        </details>
       </div>
     </div>
   );
@@ -464,7 +442,7 @@ function Metric({
   label: string;
 }) {
   return (
-    <div className="hero-stat">
+    <div className="question-workspace__metric">
       <span>
         <Icon />
         {label}

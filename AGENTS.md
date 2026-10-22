@@ -37,3 +37,7 @@ Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as 
 ## Theme architecture
 - Homepage color aliases must inherit shared semantic theme tokens; image-backed sections use dedicated on-image tokens to maintain contrast without a second competing palette.
 - Install missing-module recovery before hydration as well as in the React boundary, sharing a session throttle to avoid reload loops after version changes.
+
+## Diretriz de remodelação da área do cliente
+
+Orientação do usuário: trabalhar uma área por vez, com apresentação profissional, compacta, organizada e acesso fácil. Manter a faixa de boas-vindas na Área do aluno. Nas demais áreas, usar faixas de identificação baixas e evitar cartões e avisos excessivamente altos. Remover comandos, contagens e explicações redundantes; preservar funções, regras de estudo e dados reais. Aplicar destaques coloridos com contraste nos modos claro e escuro. Adaptar à largura disponível em celular, tablet e desktop, sem rolagem horizontal nem controles cortados. Ao concluir a área solicitada, informar a conclusão e aguardar o usuário indicar a próxima.
