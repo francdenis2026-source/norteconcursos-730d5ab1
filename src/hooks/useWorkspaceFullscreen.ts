@@ -10,11 +10,32 @@ export function useWorkspaceFullscreen() {
   const mounted = useRef(true);
   const scroll = useRef<number | null>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
+  const settleTimer = useRef<number | null>(null);
+  // O navegador anima a entrada/saída da tela cheia nativa (redimensionando a janela aos poucos).
+  // Enquanto isso, a troca de layout (fixed, 100dvh) e os painéis com desfoque (backdrop-filter)
+  // seriam recalculados a cada quadro dessa animação, o que aparecia como um "piscar" de falha.
+  // Este marcador congela transições e desfoque até a troca de tela cheia se acomodar.
+  const beginTransition = useCallback(() => {
+    document.documentElement.dataset['workspaceFocusTransition'] = 'true';
+    if (settleTimer.current !== null) window.clearTimeout(settleTimer.current);
+    settleTimer.current = window.setTimeout(() => {
+      delete document.documentElement.dataset['workspaceFocusTransition'];
+      settleTimer.current = null;
+    }, 400);
+  }, []);
+  const endTransition = useCallback(() => {
+    if (settleTimer.current !== null) {
+      window.clearTimeout(settleTimer.current);
+      settleTimer.current = null;
+    }
+    delete document.documentElement.dataset['workspaceFocusTransition'];
+  }, []);
   const enter = useCallback(() => {
     if (activeRef.current) return;
     returnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const content = document.getElementById('dashboard-content');
     scroll.current = window.matchMedia(MOBILE_APP_QUERY).matches ? content?.scrollTop ?? 0 : window.scrollY;
+    beginTransition();
     activeRef.current = true;
     setActive(true);
     if (!document.fullscreenElement && document.fullscreenEnabled && document.documentElement.requestFullscreen) {
@@ -28,17 +49,18 @@ export function useWorkspaceFullscreen() {
         }
       }).catch(() => { pending.current = false; });
     }
-  }, []);
+  }, [beginTransition]);
   const exit = useCallback(() => {
     if (!activeRef.current) return;
     scroll.current = document.getElementById('dashboard-content')?.scrollTop ?? 0;
+    beginTransition();
     activeRef.current = false;
     setActive(false);
     if (native.current && document.fullscreenElement === document.documentElement) {
       native.current = false;
       void document.exitFullscreen().catch(() => {});
     }
-  }, []);
+  }, [beginTransition]);
   useLayoutEffect(() => {
     if (active) {
       document.documentElement.dataset['workspaceFocus'] = 'true';
@@ -60,6 +82,8 @@ export function useWorkspaceFullscreen() {
     const change = () => {
       if (document.fullscreenElement === document.documentElement && pending.current) native.current = true;
       else if (!document.fullscreenElement && native.current) { native.current = false; exit(); }
+      // A troca de tela cheia nativa terminou: o layout pode voltar a animar normalmente.
+      endTransition();
     };
     const key = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && activeRef.current && !document.querySelector('[role="dialog"], [role="menu"]')) exit();
@@ -70,10 +94,11 @@ export function useWorkspaceFullscreen() {
       mounted.current = false;
       activeRef.current = false;
       delete document.documentElement.dataset['workspaceFocus'];
+      endTransition();
       document.removeEventListener('fullscreenchange', change);
       window.removeEventListener('keydown', key, true);
       if (native.current && document.fullscreenElement === document.documentElement) void document.exitFullscreen().catch(() => {});
     };
-  }, [exit]);
+  }, [exit, endTransition]);
   return { active, enter, exit };
 }
