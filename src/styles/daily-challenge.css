@@ -204,12 +204,17 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-study-extra { border-top: 1px solid var(--daily-edge); padding-top: 12px; }
 .daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
 
-/* A compact inline readout next to the heading — the full dial ate the room the stem needs. */
-.daily-question-heading .question-timing-row { flex-shrink: 0; padding-top: 2px; }
-.daily-question-heading .tactical-clock--compact { gap: 6px; }
-.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 28px; }
-.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 15px; color: var(--foreground); }
-.daily-question-heading .tactical-clock--compact .tactical-clock__status { font-size: 9px; }
+/* A compact inline readout next to the heading — the full dial ate the room the stem needs.
+   Sized to the heading row's own height (eyebrow + h2), not shrunk past legibility. */
+.daily-question-heading .question-timing-row { flex-shrink: 0; align-self: center; }
+.daily-question-heading .tactical-clock--compact { gap: 9px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 42px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 19px; font-weight: 800; color: var(--foreground); }
+.daily-question-heading .tactical-clock--compact .tactical-clock__status { font-size: 10px; }
 @media (max-width: 1000px) {
   .daily-question-heading .tactical-clock--compact .tactical-clock__status { display: none; }
+}
+@media (max-width: 700px) {
+  .daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 34px; }
+  .daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 16px; }
 }
