@@ -1,8 +1,15 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { Link } from "@tanstack/react-router";
-import { Timer } from "lucide-react";
+import { TacticalClock } from "@/components/brand/TacticalClock";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { fmtClock, getStudyToday, startStudyClock, stopStudyClock, flushStudyClock, subscribeStudyClock } from "@/lib/studyClock";
+import {
+  fmtClock,
+  getStudyToday,
+  startStudyClock,
+  stopStudyClock,
+  flushStudyClock,
+  subscribeStudyClock,
+} from "@/lib/studyClock";
 
 /**
  * Tempo do aluno na plataforma HOJE (dia do Acre). Soma o tempo ativo com a plataforma visível,
@@ -11,7 +18,10 @@ import { fmtClock, getStudyToday, startStudyClock, stopStudyClock, flushStudyClo
 export function SessionClock({ userId }: { userId: string }) {
   useEffect(() => {
     startStudyClock(userId);
-    return () => { void flushStudyClock(); stopStudyClock(); };
+    return () => {
+      void flushStudyClock();
+      stopStudyClock();
+    };
   }, [userId]);
   const today = useSyncExternalStore(subscribeStudyClock, getStudyToday, () => 0);
 
@@ -25,8 +35,7 @@ export function SessionClock({ userId }: { userId: string }) {
           role="timer"
           aria-label={`Tempo na plataforma hoje: ${fmtClock(today)}`}
         >
-          <Timer />
-          <span className="tabular">{fmtClock(today)}</span>
+          <TacticalClock time={fmtClock(today)} seconds={today} />
         </Link>
       </TooltipTrigger>
       <TooltipContent side="bottom" className="app-session-tooltip">

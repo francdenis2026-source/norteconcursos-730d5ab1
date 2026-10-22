@@ -1,6 +1,6 @@
 import { platformNow } from "@/lib/platformClock";
 import { useEffect, useState } from "react";
-import { CalendarClock } from "lucide-react";
+import { TacticalClock } from "@/components/brand/TacticalClock";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const TZ = "America/Rio_Branco";
@@ -45,9 +45,8 @@ export function AcreClock() {
           role="timer"
           aria-label={`Horário do Acre: ${full.format(d)}`}
         >
-          <CalendarClock />
           <span className="tabular capitalize">{day.format(d).replace(".", "")}</span>
-          <span className="tabular">{hm.format(d)}</span>
+          <TacticalClock time={hm.format(d)} seconds={d.getUTCSeconds()} />
         </span>
       </TooltipTrigger>
       <TooltipContent side="bottom">

@@ -1,3 +1,4 @@
+import { TacticalClock } from "@/components/brand/TacticalClock";
 import { platformNow } from "@/lib/platformClock";
 import { acreDate } from "@/lib/acreTime";
 import React, { useState, useEffect, useRef, useCallback } from "react";
@@ -148,8 +149,8 @@ function TimerPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2 overflow-hidden">
-          <CardContent className="flex flex-col items-center justify-center p-12 gap-8 relative">
-            <div className="flex gap-2 p-1 bg-muted rounded-lg mb-4">
+          <CardContent className="flex flex-col items-center justify-center p-4 sm:p-8 lg:p-12 gap-8 relative">
+            <div className="flex flex-wrap justify-center gap-1 p-1 bg-muted rounded-lg mb-4">
               {(Object.keys(MODES) as TimerMode[]).map((m) => (
                 <Button
                   key={m}
@@ -163,36 +164,27 @@ function TimerPage() {
               ))}
             </div>
 
-            <div className="relative w-64 h-64 flex items-center justify-center">
-              <svg className="absolute w-full h-full -rotate-90">
-                <circle
-                  cx="128"
-                  cy="128"
-                  r="120"
-                  stroke="currentColor"
-                  strokeWidth="8"
-                  fill="transparent"
-                  className="text-muted/20"
-                />
-                <circle
-                  cx="128"
-                  cy="128"
-                  r="120"
-                  stroke="currentColor"
-                  strokeWidth="8"
-                  fill="transparent"
-                  strokeDasharray={753.98}
-                  strokeDashoffset={753.98 * (1 - progress / 100)}
-                  className={cn(
-                    "transition-[stroke-dashoffset,color] duration-1000",
-                    MODES[mode].color.replace("text-", "stroke-"),
-                  )}
-                  strokeLinecap="round"
-                />
-              </svg>
-              <div className="text-6xl font-mono font-black tracking-tighter text-primary z-10">
-                {format(timeLeft)}
-              </div>
+            <div
+              role="timer"
+              aria-live="off"
+              aria-label={`${MODES[mode].label}: ${format(timeLeft)}`}
+              className="w-full flex justify-center"
+            >
+              <TacticalClock
+                size="focus"
+                time={format(timeLeft)}
+                seconds={timeLeft}
+                progress={progress / 100}
+                label={MODES[mode].label}
+                paused={!isActive}
+                status={
+                  isActive
+                    ? "Em andamento"
+                    : timeLeft === MODES[mode].minutes * 60
+                      ? "Pronto para iniciar"
+                      : "Pausado"
+                }
+              />
             </div>
 
             <div className="flex gap-4 z-10">
@@ -209,7 +201,13 @@ function TimerPage() {
                 {isActive ? <Pause className="mr-2" /> : <Play className="mr-2" />}
                 {isActive ? "Pausar" : "Iniciar"}
               </Button>
-              <Button variant="outline" size="lg" onClick={reset} className="h-14 w-14 border-2">
+              <Button
+                aria-label="Reiniciar cronômetro"
+                variant="outline"
+                size="lg"
+                onClick={reset}
+                className="h-14 w-14 border-2"
+              >
                 <RotateCcw className="h-6 w-6" />
               </Button>
             </div>
@@ -261,10 +259,13 @@ function TimerPage() {
                       <div className="flex flex-col">
                         <span className="text-xs font-bold">Foco Total</span>
                         <span className="text-[10px] text-muted-foreground">
-                          {acreDate().toLocaleTimeString("pt-BR", { ...({
-                            hour: "2-digit",
-                            minute: "2-digit",
-                          }), timeZone: "America/Rio_Branco" })}
+                          {acreDate().toLocaleTimeString("pt-BR", {
+                            ...{
+                              hour: "2-digit",
+                              minute: "2-digit",
+                            },
+                            timeZone: "America/Rio_Branco",
+                          })}
                         </span>
                       </div>
                       <span className="text-xs font-medium text-emerald-600">+25m</span>
