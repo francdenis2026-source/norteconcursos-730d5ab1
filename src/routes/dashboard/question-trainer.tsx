@@ -1,3 +1,4 @@
+import "@/styles/question-workspace.css";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useResponseSeconds } from "@/hooks/useResponseSeconds";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -18,7 +19,6 @@ import {
 } from "@/lib/trainerContext";
 import { useUnseenActivity } from "@/hooks/useUnseenActivity";
 import { freshActivityQuestions } from "@/lib/dailyStudyActivity";
-import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
 import { QuestionTimer } from "@/components/dashboard/QuestionTimer";
 import { useQuery } from "@tanstack/react-query";
@@ -62,7 +62,6 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   ChevronDown,
-  Clock,
   LayoutGrid,
   ArrowLeft,
   ArrowRight,
@@ -137,7 +136,6 @@ import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel"
 import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
 import { QuestionAudioButton } from "@/components/dashboard/QuestionAudioButton";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
-import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { checkFeatureAccess } from "@/lib/subscriptions.config";
@@ -240,6 +238,7 @@ function QuestionTrainer() {
     catalog: fullCatalog,
     loading: catalogLoading,
     error: catalogError,
+    reload: reloadCatalog,
   } = useQuestionCatalog(userId, canLoad);
   const examEdition = useQuery({
     queryKey: ["trainer-exam-edition", userId, routeFilters.edition],
@@ -1368,16 +1367,15 @@ function QuestionTrainer() {
       <Center>
         <XCircle className="h-10 w-10 text-destructive" />
         <p>{error}</p>
-        {historyError && (
-          <Button
-            onClick={() => {
-              void reloadHistory();
-              if (routeFilters.unseen === "1") void unseenHistory.refetch();
-            }}
-          >
-            Conferir histórico novamente
-          </Button>
-        )}
+        <Button
+          onClick={() => {
+            if (catalogError) void reloadCatalog();
+            if (historyError) void reloadHistory();
+            if (routeFilters.unseen === "1") void unseenHistory.refetch();
+          }}
+        >
+          Tentar novamente
+        </Button>
         <Button asChild variant="outline">
           <Link to="/dashboard/question-bank">Voltar ao banco</Link>
         </Button>
@@ -1408,8 +1406,7 @@ function QuestionTrainer() {
     );
   if (!started)
     return (
-      <div className="trainer-workbench" aria-busy={loading}>
-        <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} />
+      <div className="trainer-workbench question-workspace" aria-busy={loading}>
         <header className="trainer-workbench-heading trainer-workbench-hero workspace-banner">
           <div>
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
@@ -1422,26 +1419,12 @@ function QuestionTrainer() {
             <ArrowRight aria-hidden="true" />
           </Link>
         </header>
+        <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} compact />
         {loading && (
           <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground">
             <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
             Carregando questões e conferindo seu histórico…
           </p>
-        )}
-        {practiceMode === "catalog" && (
-          <div className="trainer-catalog-scope" role="status">
-            <p className="font-semibold">
-              {pool.length.toLocaleString("pt-BR")} questões na seleção atual
-            </p>
-            <p className="text-sm">{examCoverage({ contest, career, year }, pool.length, true)}</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Ajuste disciplina, banca, ano ou assunto abaixo. Questões já respondidas são revisadas
-              sem pontuar novamente.
-              {dailyRemaining !== undefined
-                ? ` Você pode registrar ${dailyRemaining} ${dailyRemaining === 1 ? "nova resposta" : "novas respostas"} hoje; esse limite é aplicado ao montar a sessão.`
-                : ""}
-            </p>
-          </div>
         )}
         {routeFilters.catalogQuery && (
           <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border p-3 text-sm">
@@ -1472,76 +1455,76 @@ function QuestionTrainer() {
         {examNotice}
         {lawNotice}
         {activityNotice}
-        <section className="trainer-practice-panel" aria-label="Modo de prática">
-          {missingSupportText > 0 && (
-            <details className="trainer-quality-note">
-              <summary>Questões com conteúdo incompleto ficam fora do treino</summary>
-              <p>
-                {missingSupportText} questões desta área aguardam texto de apoio. Elas não entram na
-                seleção até que o material esteja disponível.
-              </p>
-            </details>
-          )}
-          {notice && (
-            <p
-              className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100"
-              role="status"
-            >
-              {notice}
-            </p>
-          )}
-          <h2 className="text-base font-semibold">Como você quer praticar?</h2>
-          <div className="trainer-practice-modes">
-            {(
-              [
-                [
-                  "catalog",
-                  "Todas da seleção",
-                  `${pool.length} questões, incluindo as já respondidas.`,
-                ],
-                ["new", "Questões novas", `${fresh.length} ainda não respondidas neste filtro.`],
-                [
-                  "wrong",
-                  "Revisar meus erros",
-                  `${wrongPending.length} erros pendentes${recovered ? ` · ${recovered} já recuperados` : ""}. Não pontuam de novo.`,
-                ],
-                [
-                  "all",
-                  "Revisar respostas",
-                  `${answeredPool.length} já respondidas. Não pontuam de novo.`,
-                ],
-              ] as const
-            ).map(([id, title, sub]) => (
-              <label key={id} className="trainer-practice-mode" data-active={practiceMode === id}>
-                <input
-                  type="radio"
-                  name="practice-mode"
-                  className="mr-2"
-                  checked={practiceMode === id}
-                  onChange={() => changePracticeMode(id)}
-                />
-                <span className="trainer-practice-mode__title">{title}</span>
-                <span className="mt-1 block text-xs text-muted-foreground">
-                  {loading ? "Consultando questões disponíveis…" : sub}
-                </span>
-              </label>
-            ))}
-          </div>
-        </section>
-        <PcprExamSpotlight compact />
         <div
           id="trainer-setup"
           tabIndex={-1}
           className="trainer-focus-target"
           aria-label="Configurar treino de questões"
         >
-          <TrainerContextBanner
-            discipline={context.discipline}
-            topic={context.topic}
-            automatic={context.automatic}
-            setup
-          />
+          {context.automatic && (
+            <TrainerContextBanner
+              discipline={context.discipline}
+              topic={context.topic}
+              automatic={context.automatic}
+              setup
+            />
+          )}
           <TrainerSetup
+            practiceModes={
+              <section className="trainer-practice-panel" aria-label="Modo de prática">
+                {missingSupportText > 0 && (
+                  <details className="trainer-quality-note">
+                    <summary>Questões com conteúdo incompleto ficam fora do treino</summary>
+                    <p>
+                      {missingSupportText} questões desta área aguardam texto de apoio. Elas não
+                      entram na seleção até que o material esteja disponível.
+                    </p>
+                  </details>
+                )}
+                {notice && (
+                  <p
+                    className="rounded-lg border border-amber-300 bg-amber-50 p-2 text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/20 dark:text-amber-100"
+                    role="status"
+                  >
+                    {notice}
+                  </p>
+                )}
+                <h2 className="text-base font-semibold">Como você quer praticar?</h2>
+                <div className="trainer-practice-modes">
+                  {(
+                    [
+                      ["catalog", "Todas da seleção", `${pool.length} disponíveis`],
+                      ["new", "Questões novas", `${fresh.length} sem resposta`],
+                      [
+                        "wrong",
+                        "Revisar meus erros",
+                        `${wrongPending.length} pendentes${recovered ? ` · ${recovered} recuperados` : ""}`,
+                      ],
+                      ["all", "Revisar respostas", `${answeredPool.length} respondidas`],
+                    ] as const
+                  ).map(([id, title, sub]) => (
+                    <label
+                      key={id}
+                      className="trainer-practice-mode"
+                      data-mode={id}
+                      data-active={practiceMode === id}
+                    >
+                      <input
+                        type="radio"
+                        name="practice-mode"
+                        className="mr-2"
+                        checked={practiceMode === id}
+                        onChange={() => changePracticeMode(id)}
+                      />
+                      <span className="trainer-practice-mode__title">{title}</span>
+                      <span className="mt-1 block text-xs text-muted-foreground">
+                        {loading ? "Consultando questões disponíveis…" : sub}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </section>
+            }
             lockedSubject={lockedSubject}
             lockedCollection={lockedCollection}
             loading={loading}
@@ -1551,6 +1534,7 @@ function QuestionTrainer() {
                 : trainingPool.length
             }
             dailyRemaining={practiceMode === "new" ? dailyRemaining : undefined}
+            newAnswersRemaining={dailyRemaining}
             choices={choices}
             facets={facets}
             currencyLocked={!currencyAllowed}
@@ -1619,6 +1603,16 @@ function QuestionTrainer() {
             start={startTraining}
           />
         </div>
+        <details className="question-workspace__help">
+          <summary>Como funciona este treino</summary>
+          <p>
+            Primeiras respostas registram seu desempenho. Revisões não pontuam novamente. O
+            cronômetro acompanha seu ritmo, sem limitar o tempo da questão.
+          </p>
+          {practiceMode === "catalog" && (
+            <p>{examCoverage({ contest, career, year }, pool.length, true)}</p>
+          )}
+        </details>
       </div>
     );
   if (!questions.length)
@@ -1683,7 +1677,7 @@ function QuestionTrainer() {
     if (selected === letter) setSelected(null);
   };
   return (
-    <div className="trainer-session-shell trainer-resolution-workspace">
+    <div className="trainer-session-shell trainer-resolution-workspace question-workspace">
       <Dialog
         open={leaveDialogOpen}
         onOpenChange={(open) => {
@@ -1718,21 +1712,23 @@ function QuestionTrainer() {
 
       <aside
         role="status"
-        className="trainer-resume-banner rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm"
+        className="trainer-session-status"
+        data-error={bookmarkError || undefined}
       >
-        <strong>
-          {resumeNotice ? "Treino retomado" : "Treino em andamento"} · Questão {index + 1} de{" "}
-          {questions.length}
-        </strong>
-        {sessionExamCoverage(questions) && <p>{sessionExamCoverage(questions)}</p>}
-        <p>
+        <ShieldCheck aria-hidden="true" />
+        <span>
           {bookmarkError
             ? "Não foi possível salvar a retomada neste navegador. Evite recarregar antes de concluir."
-            : "Sua posição é salva automaticamente neste navegador, nesta conta. Você pode atualizar a página e continuar daqui."}
-        </p>
-        <button type="button" className="mt-2 underline" onClick={() => setConfirmStop(true)}>
-          Encerrar este treino
-        </button>
+            : resumeNotice
+              ? "Treino retomado. Sua posição fica salva neste navegador."
+              : "Sua posição fica salva neste navegador para continuar depois."}
+        </span>
+        {sessionExamCoverage(questions) && (
+          <details>
+            <summary>Cobertura da prova</summary>
+            <p>{sessionExamCoverage(questions)}</p>
+          </details>
+        )}
       </aside>
       {examNotice}
       {lawNotice}
@@ -1745,9 +1741,8 @@ function QuestionTrainer() {
         >
           <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
           <p>
-            <strong>Modo reforço.</strong> Esta tentativa fica registrada para você acompanhar sua
-            evolução, mas não conta de novo para o ranking, as medalhas nem o limite diário. A sua
-            primeira resposta continua sendo a oficial.
+            <strong>Modo reforço.</strong> Revisão sem novos pontos ou consumo do limite diário. Sua
+            primeira resposta permanece como registro oficial.
           </p>
         </div>
       )}
@@ -1788,7 +1783,11 @@ function QuestionTrainer() {
         </div>
         <div>
           {user?.id && <SaveStudyLater userId={user.id} question={question} />}
-          <Button variant="outline" onClick={() => setMapOpen(true)}>
+          <Button
+            className="trainer-map-trigger"
+            variant="outline"
+            onClick={() => setMapOpen(true)}
+          >
             <LayoutGrid className="mr-2 h-4 w-4" />
             Navegar questões
           </Button>
@@ -1809,11 +1808,13 @@ function QuestionTrainer() {
           >
             <CardContent className="trainer-question-content">
               <QuestionCode question={question} />
-              <TrainerContextBanner
-                discipline={context.discipline}
-                topic={context.topic}
-                automatic={context.automatic}
-              />
+              {context.automatic && (
+                <TrainerContextBanner
+                  discipline={context.discipline}
+                  topic={context.topic}
+                  automatic={context.automatic}
+                />
+              )}
               <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
                 <Badge variant="outline">{question.board}</Badge>
                 <Badge variant="outline">
@@ -1864,23 +1865,23 @@ function QuestionTrainer() {
                   </span>
                 </div>
               )}
-              <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+              <div className="trainer-question-heading">
                 <div className="min-w-0 flex-1 basis-24">
                   <h2 className="font-display text-xl font-extrabold leading-none text-foreground sm:text-3xl">
                     Questão {index + 1}{" "}
                     <span className="text-muted-foreground">de {questions.length}</span>
                   </h2>
-                  <p className="mt-1.5 text-xs text-muted-foreground">
+                  <p className="trainer-mobile-summary mt-1.5 text-xs text-muted-foreground">
                     {correct + wrong} respondidas · {correct} acertos · {wrong} erros · {skipped}{" "}
                     puladas
                   </p>
                 </div>
+                {(!reviewingPast || sessionSeconds !== undefined) && (
+                  <div className="question-timing-row" aria-label="Tempo de resolução">
+                    <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
+                  </div>
+                )}
               </div>
-              {(!reviewingPast || sessionSeconds !== undefined) && (
-                <div className="question-timing-row" aria-label="Tempo de resolução">
-                  <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
-                </div>
-              )}
               <progress
                 className="trainer-question-progress"
                 value={correct + wrong}
@@ -2151,7 +2152,6 @@ function QuestionTrainer() {
               )}
             </CardContent>
           </Card>
-          <QuestionStudyCompanion subject={question.subject} answered={answered} />
         </div>
         <aside className="trainer-session-overview">
           <TrainerSessionMap
@@ -2326,11 +2326,13 @@ type SetupSetters = {
 };
 
 function TrainerSetup({
+  practiceModes,
   loading,
   lockedSubject,
   lockedCollection,
   available,
   dailyRemaining,
+  newAnswersRemaining,
   choices,
   facets,
   currencyLocked,
@@ -2338,12 +2340,14 @@ function TrainerSetup({
   setters,
   start,
 }: {
+  practiceModes: React.ReactNode;
   loading: boolean;
   lockedSubject: string | null;
   lockedCollection: "enem" | "contests" | null;
   currencyLocked: boolean;
   available: number;
   dailyRemaining?: number | undefined;
+  newAnswersRemaining?: number | undefined;
   facets: { counts: Record<string, Map<string, number>>; totals: Record<string, number> };
   choices: {
     contests: string[];
@@ -2390,7 +2394,7 @@ function TrainerSetup({
           </span>
           <div>
             <h2 id="trainer-content-title">O que você quer estudar?</h2>
-            <p>Selecione o conteúdo. Combine os critérios para encontrar suas questões.</p>
+            <p>Escolha os filtros e o modo de prática.</p>
           </div>
         </header>
         <fieldset className="trainer-collection">
@@ -2455,6 +2459,7 @@ function TrainerSetup({
             </button>
           </p>
         )}
+        {practiceModes}
         <div className="trainer-filter-grid">
           {lockedSubject ? (
             <div
@@ -2515,37 +2520,13 @@ function TrainerSetup({
             allCount={facets.totals["year"]}
             allLabel="Todos os anos"
           />
-          <TrainerFilter
-            label="Concurso / material de origem"
-            description="De onde vêm as questões: órgão do concurso ou material de estudo."
-            allLabel="Todos os concursos e materiais"
-            value={values.contest}
-            setValue={setters.setContest}
-            options={choices.contests}
-            counts={facets.counts["contest"]}
-            allCount={facets.totals["contest"]}
-            labels={Object.fromEntries(
-              choices.contests.map((value) => [value, questionContestOptionLabel(value)]),
-            )}
-            hideAll={isEnemContest(values.contest)}
-          />
-          {!isEnemContest(values.contest) && (
-            <TrainerFilter
-              label="Cargo da prova"
-              description="Função disputada, como Agente, Escrivão ou Perito. Apenas cargos identificados."
-              value={values.career}
-              setValue={setters.setCareer}
-              options={choices.careers}
-              counts={facets.counts["career"]}
-              allCount={facets.totals["career"]}
-              allLabel="Qualquer cargo"
-            />
-          )}
         </div>
         <details
           className="trainer-refinements"
           open={
             [
+              "contest",
+              "career",
               "currency",
               "appliedExam",
               "source",
@@ -2559,12 +2540,38 @@ function TrainerSetup({
           <summary>
             <SlidersHorizontal aria-hidden="true" />
             <span>
-              Mais critérios
-              <small>Atualidade, prova aplicada, origem, dificuldade e localização</small>
+              Mais filtros
+              <small>Concurso, cargo, atualidade, origem e dificuldade</small>
             </span>
             <ChevronDown aria-hidden="true" />
           </summary>
           <div className="trainer-filter-grid">
+            <TrainerFilter
+              label="Concurso / material de origem"
+              description="De onde vêm as questões: órgão do concurso ou material de estudo."
+              allLabel="Todos os concursos e materiais"
+              value={values.contest}
+              setValue={setters.setContest}
+              options={choices.contests}
+              counts={facets.counts["contest"]}
+              allCount={facets.totals["contest"]}
+              labels={Object.fromEntries(
+                choices.contests.map((value) => [value, questionContestOptionLabel(value)]),
+              )}
+              hideAll={isEnemContest(values.contest)}
+            />
+            {!isEnemContest(values.contest) && (
+              <TrainerFilter
+                label="Cargo da prova"
+                description="Função disputada, como Agente, Escrivão ou Perito. Apenas cargos identificados."
+                value={values.career}
+                setValue={setters.setCareer}
+                options={choices.careers}
+                counts={facets.counts["career"]}
+                allCount={facets.totals["career"]}
+                allLabel="Qualquer cargo"
+              />
+            )}
             {currencyLocked ? (
               <div
                 role="note"
@@ -2665,8 +2672,7 @@ function TrainerSetup({
         </div>
       </section>
       <aside className="trainer-session-builder" aria-labelledby="trainer-session-title">
-        <span className="trainer-panel-kicker">PRONTO PARA PRATICAR</span>
-        <h2 id="trainer-session-title">Sua sessão</h2>
+        <h2 id="trainer-session-title">Configurar sessão</h2>
         <div className="trainer-stock">
           <strong>{loading ? "…" : available.toLocaleString("pt-BR")}</strong>
           <span>questões disponíveis neste modo</span>
@@ -2687,12 +2693,6 @@ function TrainerSetup({
           labels={{ random: "Ordem aleatória", exam: "Ordem do acervo" }}
           hideAll
         />
-        <div className="trainer-session-estimate">
-          <Clock aria-hidden="true" />
-          <span>
-            Sem limite de tempo<small>Cronômetro por questão e correção após responder.</small>
-          </span>
-        </div>
         <div className="trainer-start-bar">
           <p>
             {loading
@@ -2703,9 +2703,10 @@ function TrainerSetup({
                   ? `${sessionSize} ${sessionSize === 1 ? "questão" : "questões"} nesta sessão`
                   : "Nenhuma questão para estes filtros"}
           </p>
-          {dailyRemaining !== undefined && (
+          {newAnswersRemaining !== undefined && (
             <small>
-              {dailyRemaining} novas respostas disponíveis hoje. Revisões não consomem esse limite.
+              {newAnswersRemaining} novas respostas disponíveis hoje. Revisões não consomem esse
+              limite.
             </small>
           )}
           <Button
@@ -2717,10 +2718,6 @@ function TrainerSetup({
             <ArrowRight aria-hidden="true" />
           </Button>
         </div>
-        <p className="trainer-builder-note">
-          <ShieldCheck aria-hidden="true" />A primeira resposta registra seu desempenho. Revisões
-          não pontuam novamente.
-        </p>
       </aside>
     </div>
   );
@@ -2803,7 +2800,10 @@ function TrainingResult({
   const answered = correct + wrong;
   const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
   return (
-    <section className="trainer-workbench trainer-results" aria-labelledby="trainer-result-title">
+    <section
+      className="trainer-workbench trainer-results question-workspace"
+      aria-labelledby="trainer-result-title"
+    >
       <header className="trainer-result-header">
         <span>
           <CheckCircle2 aria-hidden="true" />

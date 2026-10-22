@@ -154,15 +154,18 @@ test("every facet count matches actual filtering across all combinations", () =>
     const facets = trainerFilterFacets(catalog, selected, topics);
     for (const key of TRAINER_FACET_KEYS) {
       const field = key === "exam" ? "appliedExam" : key;
+      // The discipline picker clears the old topic and schedule area when it changes.
+      const candidates =
+        field === "subject" ? { ...selected, topic: "all", area: "all" } : selected;
       for (const [value, count] of facets.counts[key])
         assert.equal(
-          filterTrainerQuestions(catalog, { ...selected, [field]: value }, topics).length,
+          filterTrainerQuestions(catalog, { ...candidates, [field]: value }, topics).length,
           count,
           `${key}: ${value}`,
         );
       assert.equal(
         facets.totals[key],
-        filterTrainerQuestions(catalog, { ...selected, [field]: "all" }, topics).length,
+        filterTrainerQuestions(catalog, { ...candidates, [field]: "all" }, topics).length,
       );
     }
   }

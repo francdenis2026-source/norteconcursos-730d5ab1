@@ -1,3 +1,4 @@
+import "@/styles/question-workspace.css";
 import { scrollAppToTop } from "@/lib/appScroll";
 import { PlanGate } from "@/components/dashboard/PlanGate";
 import { platformDate } from "@/lib/platformClock";
@@ -364,7 +365,7 @@ function FlashcardsPage() {
   const sessionTotal = reviewed + queue.length;
 
   return (
-    <div className="mx-auto max-w-4xl space-y-6">
+    <div className="question-workspace question-flashcards">
       <PageHero
         image="toolkit"
         size="sm"
@@ -378,13 +379,13 @@ function FlashcardsPage() {
         description="Crie cartões e revise na hora certa: o sistema agenda cada um conforme a facilidade que você teve."
       />
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="question-workspace__metrics question-workspace__metrics--three">
         {[
           ["Para revisar agora", dueNow.length],
           ["Revisados hoje", doneToday],
           ["Total no baralho", cards.length],
         ].map(([l, v]) => (
-          <div key={String(l)} className="rounded-xl border bg-card p-4">
+          <div key={String(l)} className="question-workspace__metric">
             <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">
               {l}
             </p>
