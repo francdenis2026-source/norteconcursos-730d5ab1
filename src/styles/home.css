@@ -4737,7 +4737,7 @@
   padding: 10px 12px;
   gap: 7px;
   border: 1px solid rgb(240 205 139 / 24%);
-  border-radius: 8px;
+  border-radius: 10px;
   background: rgb(10 13 16 / 82%);
   color: var(--on-ink);
 }
@@ -4751,21 +4751,70 @@
 .home.home .home-hero__study-links :is(.daily-badge__main small, .question-count-detail) { font-size: 10px; line-height: 1.5; color: var(--on-ink-muted); }
 .home.home .home-hero__study-links .daily-badge__cta { display: inline-flex; margin-top: 5px; min-height: 0; padding: 0; font-size: 10px; color: var(--brass-soft); }
 .home.home .home-hero__study-links .daily-badge__progress { display: none; }
-.home.home .home-hero__study-links .question-count-badge { justify-content: center; align-items: flex-start; }
-.home-hero__study-links :is(.question-count-icon, .question-count-eyebrow) { display: none; }
-.home.home .home-hero__study-links .question-count-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 6px; }
-.home.home .home-hero__study-links .question-count-main strong { font-size: 22px; line-height: 1.2; color: var(--brass-soft); }
+
+/* Banco de questões: cartão de destaque com cabeçalho, número, barra de
+   proporção (disponíveis / cadastradas) e rodapé com fonte dos dados. */
+.home.home .home-hero__study-links .question-count-badge {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 14px 16px 16px;
+  overflow: hidden;
+}
+.home.home .home-hero__study-links .question-count-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brass-soft), transparent);
+  opacity: 0.85;
+}
+.home.home .home-hero__study-links .question-count-badge:hover::before { opacity: 1; }
+.home-hero__study-links .question-count-icon { display: none; }
+.home.home .home-hero__study-links .question-count-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.home.home .home-hero__study-links .question-count-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 6px; margin-top: 8px; }
+.home.home .home-hero__study-links .question-count-main strong { font-size: 24px; line-height: 1.15; color: var(--brass-soft); }
 .home.home .home-hero__study-links .question-count-main > span { font-size: 11px; color: var(--on-ink); }
-.home-hero__study-links .question-count-arrow { position: absolute; right: 10px; bottom: 10px; width: 13px; height: 13px; color: var(--brass-soft); }
-.home-hero__study-links .question-count-content { padding-right: 8px; gap: 5px; }
+.home-hero__study-links .question-count-arrow {
+  width: 13px;
+  height: 13px;
+  flex: none;
+  color: var(--brass-soft);
+  margin-left: 0;
+}
+.home.home .home-hero__study-links .question-count-meter {
+  display: block;
+  height: 4px;
+  margin: 9px 0 1px;
+  border-radius: 999px;
+  background: rgb(240 205 139 / 16%);
+  overflow: hidden;
+}
+.home.home .home-hero__study-links .question-count-meter__fill {
+  display: block;
+  height: 100%;
+  min-width: 2%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--brass-soft), var(--brass));
+}
+.home-hero__study-links .question-count-content { padding-right: 0; gap: 0; }
 .home.home .home-hero:has(.home-hero__study-entry) .home-trust { margin-top: 14px !important; padding-top: 8px !important; }
 @media (max-width: 520px) {
   .home-hero__study-links { grid-template-columns: 1fr; gap: 7px; }
-  .home.home .home-hero__study-links .question-count-badge { padding-block: 9px; }
-  .home.home .home-hero__study-links .question-count-main strong { font-size: 18px; }
+  .home.home .home-hero__study-links .question-count-badge { padding: 12px 14px 14px; }
+  .home.home .home-hero__study-links .question-count-main strong { font-size: 19px; }
 }
 @media (forced-colors: active) {
   .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { background: Canvas; color: CanvasText; border-color: CanvasText; }
+  .home.home .home-hero__study-links .question-count-badge::before { background: CanvasText; }
+  .home.home .home-hero__study-links .question-count-meter { background: CanvasText; }
+  .home.home .home-hero__study-links .question-count-meter__fill { background: Highlight; }
 }
 
 /* === Oportunidades de concursos: hierarquia e alinhamento === */

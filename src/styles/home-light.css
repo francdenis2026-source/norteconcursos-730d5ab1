@@ -37,6 +37,9 @@
 :root:not(.dark) .home.home .home-hero :is(.daily-badge__main small, .question-count-detail, .question-count-eyebrow, .daily-badge__count) { color: var(--stage-muted); }
 :root:not(.dark) .home.home .home-hero :is(.daily-badge__live, .daily-badge__timer, .daily-badge__cta, .question-count-main strong, .question-count-arrow, .question-count-icon) { color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-hero :is(.daily-badge__timer, .question-count-icon) svg { color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-hero .question-count-badge::before { background: linear-gradient(90deg, transparent, var(--stage-accent), transparent); opacity: 0.55; }
+:root:not(.dark) .home.home .home-hero .question-count-meter { background: var(--stage-line); }
+:root:not(.dark) .home.home .home-hero .question-count-meter__fill { background: var(--stage-accent); }
 
 /* Concursos, Planos e Rodapé */
 :root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) {
