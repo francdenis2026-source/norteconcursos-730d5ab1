@@ -196,7 +196,92 @@ async function fixture(width, height, theme = "dark", state = "populated") {
   });
   return { context, answers, setState: (value) => (activeState = value) };
 }
-try {
+async function checkCatalog() {
+  for (const theme of ["light", "dark"])
+    for (const [width, height] of [
+      [320, 700],
+      [390, 844],
+      [768, 1024],
+      [1440, 1000],
+    ]) {
+      const { context } = await fixture(width, height, theme);
+      const page = await context.newPage();
+      await page.goto(`${base}/dashboard/question-bank`);
+      await page.locator(".catalog-metric").first().waitFor();
+      assert.equal(await page.locator(".catalog-metric").count(), 5);
+      for (const metric of await page.locator(".catalog-metric").all()) {
+        await metric.click();
+        await page.getByRole("dialog").waitFor();
+        assert(await page.getByRole("dialog").getByRole("heading").first().isVisible());
+        assert.equal(
+          await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),
+          false,
+        );
+        assert.equal(
+          await page.locator(".catalog-details").evaluate((el) => el.scrollWidth > el.clientWidth),
+          false,
+        );
+        const bounds = await page.getByRole("dialog").boundingBox();
+        assert(bounds.y >= 0 && bounds.y + bounds.height <= height + 1);
+        await page.getByRole("dialog").getByRole("button", { name: "Fechar", exact: true }).click();
+        await page.getByRole("dialog").waitFor({ state: "hidden" });
+        assert(await metric.evaluate((el) => el === document.activeElement));
+      }
+      await page.getByRole("button", { name: /Bancas: 1/ }).click();
+      await page.getByRole("textbox", { name: "Buscar nos detalhes" }).fill("cesp");
+      assert.equal(await page.locator(".catalog-details__row").count(), 0);
+      await page.getByRole("button", { name: "Limpar busca" }).click();
+      assert.equal(await page.locator(".catalog-details__row").count(), 1);
+      await page.getByRole("button", { name: "Fechar", exact: true }).click();
+      await page.getByRole("textbox", { name: "Buscar no acervo" }).fill("Informática");
+      await page.getByRole("button", { name: /Questões da seleção: 4/ }).waitFor();
+      await page.getByRole("button", { name: /Disciplinas: 1/ }).click();
+      const row = page.locator(".catalog-details__row");
+      assert.equal(await row.count(), 1);
+      assert((await row.innerText()).includes("Informática"));
+      const href = await row.getAttribute("href");
+      assert(href.includes("catalogQuery=Inform") && href.includes("subject=Inform"));
+      if (width === 390) await page.screenshot({ path: `/tmp/catalog-${theme}.png` });
+      await row.click();
+      await page.locator(".trainer-workbench").waitFor();
+      assert.equal(new URL(page.url()).searchParams.get("subject"), "Informática");
+      await context.close();
+      console.log("PASS", theme, width);
+    }
+  const { context } = await fixture(390, 844, "dark");
+  const extra = (suffix, overrides) => ({ ...questions[0], id: `20000000-0000-4000-8000-${String(suffix).padStart(12, "0")}`, ...overrides });
+  await context.route("https://gkwphadbveiyjcwiiizw.supabase.co/rest/v1/**", async (route) => {
+    const url = new URL(route.request().url());
+    const table = url.pathname.split("/").pop();
+    let rows;
+    if (table === "official_exam_questions") rows = [...questions,
+      extra(1, { contest_name: "ENEM", exam_board: "INEP" }),
+      extra(2, { contest_name: "ENEM", exam_board: "INEP" }),
+      extra(3, { context_review_required: true })];
+    else if (table === "curated_question_catalog") rows = [extra(4, { contest_year: 2025 })];
+    else if (table === "question_bank") rows = [extra(5, { contest_year: 2025 })];
+    else return route.fallback();
+    await route.fulfill({ contentType: "application/json", body: JSON.stringify(Number(url.searchParams.get("offset") || 0) > 0 ? [] : rows) });
+  });
+  const page = await context.newPage();
+  await page.goto(base + "/dashboard/question-bank");
+  await page.getByRole("button", { name: /Total na plataforma: 11/ }).waitFor();
+  await page.getByRole("button", { name: /Questões da seleção: 10/ }).waitFor();
+  await page.getByRole("button", { name: /Total na plataforma: 11/ }).click();
+  assert.match(await page.locator(".catalog-details__areas").innerText(), /9 questões/);
+  assert.match(await page.locator(".catalog-details__areas").innerText(), /2 questões/);
+  const publicLinks = await page.locator(".catalog-details__areas a").evaluateAll(links => links.map(a => a.href));
+  assert.equal(publicLinks.length, 3);
+  assert(publicLinks.every(href => /source=(official|curated)/.test(href)));
+  await page.getByRole("button", { name: "Fechar", exact: true }).click();
+  await page.getByRole("button", { name: "ENEM", exact: true }).click();
+  await page.getByRole("button", { name: /Questões da seleção: 2/ }).waitFor();
+  await page.getByRole("button", { name: /Total na plataforma: 11/ }).waitFor();
+  await context.close();
+  console.log("PASS catalog: mixed collections, private exclusion, pending content, scoped links");
+
+}
+async function checkWorkspace() {
   for (const theme of ["light", "dark"])
     for (const [width, height] of [
       [320, 700],
@@ -304,7 +389,7 @@ try {
     if (path === "question-bank") {
       await page.getByRole("textbox", { name: "Buscar no acervo", exact: true }).fill("Matemática");
       await page.getByRole("link", { name: "Treinar Matemática", exact: true }).waitFor();
-      assert.equal(await page.locator(".question-workspace__metric").count(), 4);
+      assert.equal(await page.locator(".question-workspace__metric").count(), 5);
     }
     if (path === "errors") {
       await page.getByRole("button", { name: "Revisão sequencial", exact: true }).click();
@@ -366,6 +451,10 @@ try {
   );
   console.log("PASS daily quota: new answers blocked, existing answers remain reviewable");
   await context.close();
+}
+try {
+  await checkCatalog();
+  if (!process.env.QA_ONLY_CATALOG) await checkWorkspace();
 } finally {
   await browser.close();
 }

@@ -34,17 +34,31 @@ export function searchQuestionCatalog(catalog: Question[], query: string) {
 export function availableQuestionBank(catalog: Question[], collection: BankCollection) {
   return trainerCollectionQuestions(catalog, collection).filter((q) => !needsMissingSupportText(q));
 }
+/** Published training inventory across both preparations; private notebooks stay separate. */
+export function publishedQuestionBank(catalog: Question[]) {
+  return [
+    ...availableQuestionBank(catalog, "contests"),
+    ...availableQuestionBank(catalog, "enem"),
+  ].filter((question) => question.source !== "personal");
+}
 /** Only official questions belong to a paper; authored practice must not inflate its total. */
 export function questionBankExams(catalog: Question[]) {
   const groups = new Map<
     string,
-    { key: string; question: Question; count: number; subjects: Set<string> }
+    { key: string; question: Question; count: number; subjects: Set<string>; questions: Question[] }
   >();
   for (const question of catalog) {
     if (!isAppliedExamQuestion(question)) continue;
     const key = examKey(question);
-    const group = groups.get(key) ?? { key, question, count: 0, subjects: new Set<string>() };
+    const group = groups.get(key) ?? {
+      key,
+      question,
+      count: 0,
+      subjects: new Set<string>(),
+      questions: [],
+    };
     group.count++;
+    group.questions.push(question);
     group.subjects.add(question.subject);
     groups.set(key, group);
   }
