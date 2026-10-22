@@ -718,3 +718,135 @@
   flex: none;
   width: auto;
 }
+/* Artwork stays inside the existing selector rectangle; it never participates in layout. */
+.question-workspace .trainer-collection button[data-preparation] {
+  --preparation-accent: #986b1e;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(115deg, color-mix(in srgb, var(--card) 96%, white), var(--card));
+  border-color: color-mix(in srgb, var(--preparation-accent) 23%, var(--border));
+  box-shadow: inset 0 1px 0 #ffffff12;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+.question-workspace .trainer-collection button[data-preparation="enem"] {
+  --preparation-accent: #236998;
+}
+.dark .question-workspace .trainer-collection button[data-preparation="contests"] {
+  --preparation-accent: #e5bf77;
+}
+.dark .question-workspace .trainer-collection button[data-preparation="enem"] {
+  --preparation-accent: #96cbea;
+}
+.question-workspace .trainer-collection button[data-preparation] > :not(.trainer-collection__art) {
+  position: relative;
+  z-index: 1;
+}
+.question-workspace .trainer-collection button[data-preparation] > svg {
+  flex: none;
+  color: var(--preparation-accent);
+}
+.question-workspace .trainer-collection__art {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 auto;
+  width: 48%;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: auto 200%;
+  background-position: right top;
+  mask-image: linear-gradient(90deg, transparent, #000 38%);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%);
+  opacity: 0.88;
+  transition: opacity 180ms ease;
+}
+.question-workspace [data-preparation="enem"] > .trainer-collection__art {
+  background-position: right bottom;
+}
+.dark .question-workspace .trainer-collection__art {
+  opacity: 0.56;
+}
+.question-workspace .trainer-collection button[data-preparation][aria-pressed="true"] {
+  border-color: var(--preparation-accent);
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--preparation-accent) 9%, var(--card)),
+    var(--card)
+  );
+  box-shadow:
+    inset 3px 0 0 var(--preparation-accent),
+    inset 0 1px 0 #ffffff18;
+}
+.question-workspace .trainer-collection button[data-preparation]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, #ffffff15 48%, transparent 65%);
+  transform: translateX(-130%);
+  transition: transform 550ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .question-workspace .trainer-collection button[data-preparation]:not(:disabled):hover {
+    border-color: var(--preparation-accent);
+    box-shadow:
+      inset 0 1px 0 #ffffff20,
+      inset 0 0 16px color-mix(in srgb, var(--preparation-accent) 8%, transparent);
+  }
+  .question-workspace .trainer-collection button[data-preparation]:not(:disabled):hover::before {
+    transform: translateX(130%);
+  }
+  .question-workspace
+    .trainer-collection
+    button[data-preparation]:not(:disabled):hover
+    > .trainer-collection__art {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .question-workspace .trainer-collection button[data-preparation],
+  .question-workspace .trainer-collection__art {
+    transition: none;
+  }
+  .question-workspace .trainer-collection button[data-preparation]::before {
+    display: none;
+  }
+}
+@media (forced-colors: active) {
+  .question-workspace .trainer-collection__art,
+  .question-workspace .trainer-collection button[data-preparation]::before {
+    display: none;
+  }
+  .question-workspace .trainer-collection button[data-preparation] {
+    background: ButtonFace;
+    border-color: ButtonText;
+    box-shadow: none;
+  }
+  .question-workspace .trainer-collection button[data-preparation][aria-pressed="true"] {
+    outline: 2px solid Highlight;
+    outline-offset: -3px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .question-workspace .trainer-collection button[data-preparation][aria-pressed="true"]:hover {
+    box-shadow:
+      inset 3px 0 0 var(--preparation-accent),
+      inset 0 1px 0 #ffffff20;
+  }
+  .dark
+    .question-workspace
+    .trainer-collection
+    button[data-preparation]:not(:disabled):hover
+    > .trainer-collection__art {
+    opacity: 0.64;
+  }
+}
+@media (forced-colors: active) {
+  .question-workspace .trainer-collection button[data-preparation][aria-pressed="true"] {
+    background: ButtonFace;
+    box-shadow: none;
+  }
+}

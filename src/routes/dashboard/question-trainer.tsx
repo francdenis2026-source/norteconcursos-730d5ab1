@@ -1,4 +1,5 @@
 import "@/styles/question-workspace.css";
+import preparationAreasArt from "@/assets/questions/preparation-areas.webp";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useResponseSeconds } from "@/hooks/useResponseSeconds";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -2406,6 +2407,7 @@ function TrainerSetup({
                 <button
                   key={collection}
                   type="button"
+                  data-preparation={collection}
                   aria-pressed={active}
                   disabled={!!lockedCollection && collection !== lockedCollection}
                   title={
@@ -2420,6 +2422,11 @@ function TrainerSetup({
                     setters.setContest(collection === "enem" ? "ENEM" : "all");
                   }}
                 >
+                  <span
+                    className="trainer-collection__art"
+                    aria-hidden="true"
+                    style={{ backgroundImage: `url("${preparationAreasArt}")` }}
+                  />
                   {collection === "enem" ? (
                     <GraduationCap aria-hidden="true" />
                   ) : (
