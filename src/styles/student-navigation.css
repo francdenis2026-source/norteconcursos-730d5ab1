@@ -204,6 +204,48 @@
 .student-navigation .student-direct-navigation .nav-section-link small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--student-nav-muted); font-size: 10px; line-height: 14px; font-weight: 400; }
 .student-navigation .student-direct-navigation .nav-section-link__arrow { width: 14px; height: 14px; color: var(--student-nav-muted); }
 .student-navigation .student-direct-navigation .nav-section-link[data-active="true"] .nav-section-link__arrow { color: var(--student-nav-accent); }
+
+/* Existing journey hues identify areas; the shell and unselected labels stay neutral. */
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] {
+  --hue-ink: oklch(.46 .12 var(--hue-h));
+  --student-nav-accent: var(--hue-ink);
+  --student-nav-selected: color-mix(in srgb, var(--student-nav-accent) 12%, var(--card));
+  --student-nav-hover: color-mix(in srgb, var(--student-nav-accent) 5%, var(--card));
+}
+:root.dark .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] { --hue-ink: oklch(.78 .10 var(--hue-h)); }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] {
+  color: var(--student-nav-accent);
+  background: var(--student-nav-selected);
+  border-color: color-mix(in srgb, var(--student-nav-accent) 35%, transparent);
+  box-shadow: inset 3px 0 0 var(--student-nav-accent);
+}
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"]::before { background: var(--student-nav-accent); }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue]:hover:not([data-active="true"]) { background: var(--student-nav-hover); }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue]:focus-visible { outline-color: var(--student-nav-accent); }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] .app-ico svg { color: inherit; }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] .app-nav__compact-label { color: inherit; }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] .nav-section-link__arrow { color: var(--student-nav-accent); }
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] .app-ico {
+  color: var(--student-nav-accent);
+  background: color-mix(in srgb, var(--student-nav-accent) 9%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--student-nav-accent) 19%, transparent);
+  transform: none;
+}
+:root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] .app-ico {
+  background: color-mix(in srgb, var(--student-nav-accent) 17%, var(--card));
+  border-color: color-mix(in srgb, var(--student-nav-accent) 32%, transparent);
+}
+.app-shell.navigation-v2 .student-navigation[data-collapsed="true"] .student-direct-navigation .app-nav__link[data-hue]:hover:not([data-active="true"]) {
+  color: var(--student-nav-text);
+  background: var(--student-nav-hover);
+  border-color: color-mix(in srgb, var(--student-nav-accent) 20%, transparent);
+}
+@media (forced-colors: active) {
+  :root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] { --student-nav-accent: Highlight; --student-nav-hover: Canvas; --student-nav-selected: Highlight; }
+  :root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] { color: HighlightText; background: Highlight; border-color: Highlight; box-shadow: none; }
+  :root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] .app-ico,
+  :root .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] .app-ico { color: inherit; background: transparent; border-color: currentColor; }
+}
 .workspace-section-nav {
   position: sticky;
   top: calc(var(--app-topbar-h, 72px) + env(safe-area-inset-top, 0px));
