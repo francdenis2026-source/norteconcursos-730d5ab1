@@ -61,7 +61,7 @@ const lastDays = (n: number) =>
   });
 
 function AdminMetricsPage() {
-  const { isAdmin } = useAuthStatus();
+  const { isAdmin, user } = useAuthStatus();
   const [raw, setRaw] = useState<Raw | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -285,7 +285,7 @@ function AdminMetricsPage() {
         </div>
       )}
 
-      <QuestionTotals enabled={isAdmin} />
+      <QuestionTotals enabled={isAdmin} userId={user?.id} />
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
