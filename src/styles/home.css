@@ -4928,3 +4928,46 @@
   .home.home :is(.home-button--gold, .home-header__register):hover,
   .home.home :is(.home-button--gold, .home-header__register):focus-visible { transform: none; }
 }
+
+/* A barra de confiança (3 itens) ficava alinhada à largura total do hero
+   enquanto o título e o texto ficam numa coluna de 52%/510px: a leitura era
+   de uma faixa larga "sobrando" sob a arte, e não a continuação do bloco de
+   texto. Acima de 760px (onde a arte ainda sangra para a direita), alinhamos
+   a largura da barra à da coluna de texto. */
+@media (min-width: 761px) {
+  .home.home .home-hero__content .home-trust {
+    max-width: 510px;
+  }
+}
+/* A lista é focável (tabIndex=0) para leitores de tela que navegam por tab,
+   mas nunca tinha um anel de foco próprio: o contorno global só cobre
+   a/button/summary. */
+.home.home .home-trust:focus-visible {
+  outline: 3px solid var(--home-accent);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Links de navegação do cabeçalho ganham um traço inferior sutil em vez de
+   depender só da troca de cor, reforçando o estado de foco/hover sem ruído
+   visual extra. */
+.home.home .home-nav a {
+  position: relative;
+  padding-bottom: 2px;
+}
+.home.home .home-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 2px;
+  height: 1px;
+  background: var(--home-accent);
+  transition: right 0.2s ease;
+}
+.home.home .home-nav a:is(:hover, :focus-visible)::after {
+  right: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home .home-nav a::after { transition: none; }
+}
