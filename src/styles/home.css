@@ -4912,3 +4912,19 @@
   .home.home .home-opportunity--featured::before { display: none; }
   .home-pcsc-badge { background: Canvas; color: CanvasText; border: 1px solid CanvasText; box-shadow: none; }
 }
+
+/* Efeito luminoso discreto nos dois pontos de conversão principais (CTA dourado). */
+.home.home :is(.home-button--gold, .home-header__register) {
+  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.25s ease, transform 0.2s ease;
+}
+.home.home :is(.home-button--gold, .home-header__register):hover,
+.home.home :is(.home-button--gold, .home-header__register):focus-visible {
+  box-shadow: 0 10px 28px -10px color-mix(in oklab, var(--home-gold) 65%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--home-gold) 45%, transparent);
+  transform: translateY(-1px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .home.home :is(.home-button--gold, .home-header__register) { transition: background-color 0.15s, border-color 0.15s; }
+  .home.home :is(.home-button--gold, .home-header__register):hover,
+  .home.home :is(.home-button--gold, .home-header__register):focus-visible { transform: none; }
+}

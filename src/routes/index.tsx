@@ -239,9 +239,18 @@ function PreparationInfo() {
       </PreparationTabs.List>
       <PreparationTabs.Content value="ferramentas" className="home-preparation__panel">
         <div className="home-preparation__items">
-          {TOOLS.map(({ icon: Icon, title, text }) => (
-            <details key={title} name="preparation-tools" className="home-preparation__tool">
-              <summary><Icon aria-hidden="true" /><span>{title}</span><Plus aria-hidden="true" /></summary>
+          {TOOLS.map(({ icon: Icon, title, text, featured }) => (
+            <details
+              key={title}
+              name="preparation-tools"
+              className={`home-preparation__tool${featured ? " home-preparation__tool--featured" : ""}`}
+            >
+              <summary>
+                <Icon aria-hidden="true" />
+                <span>{title}</span>
+                {featured && <span className="home-preparation__tool-tag">Destaque</span>}
+                <Plus aria-hidden="true" />
+              </summary>
               <p>{text}</p>
             </details>
           ))}
