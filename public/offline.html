@@ -29,7 +29,7 @@
   .badge-front { transform: translateZ(6px); }
   .badge-back { transform: rotateY(180deg) translateZ(6px); }
   .badge-edge { background: linear-gradient(115deg, #58432c, #bfa064 45%, #382c1e); mask: url('/media/brand/distintivo-carreiras-hd.webp') center / contain no-repeat; -webkit-mask: url('/media/brand/distintivo-carreiras-hd.webp') center / contain no-repeat; transform: translateZ(var(--depth)); }
-  .motion-paused .badge-rotor { animation-play-state: paused; }
+  .motion-paused .badge-rotor, body[data-overlay-hidden] .badge-rotor { animation-play-state: paused; }
   .emblem figcaption { color: #e1cb9a; font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; text-shadow: 0 2px 12px #000; }
   .panel { position: relative; width: 100%; max-width: 480px; justify-self: end; overflow: hidden; border: 1px solid #d9b77055; border-radius: 24px; background: #121811ed; box-shadow: inset 0 1px 0 #fff09, 0 24px 70px #0005; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
   .panel-art { display: flex; align-items: center; min-height: 76px; padding: 20px 28px; border-bottom: 1px solid #d9b77035; background: linear-gradient(90deg, #11170ff2, #11170f38), url('/media/hero/norte-atmosphere.webp') right 36% / 150% auto; }
@@ -167,18 +167,47 @@
 </main>
 <footer>Norte Concursos · Sua preparação tem um norte.</footer>
 <script>
+  const embedded = Boolean(window.frameElement && window.frameElement.hasAttribute('data-norte-offline'));
+  if (embedded) document.body.setAttribute('data-overlay-hidden', '');
   function reconnect() {
+    if (embedded) {
+      parent.postMessage({ type: 'norte:retry-connection' }, parent.location.origin);
+      return;
+    }
     if (location.pathname === '/offline.html') location.replace('/');
     else location.reload();
   }
   document.getElementById('retry').addEventListener('click', reconnect);
-  addEventListener('online', async function () {
+  if (embedded) {
+    const brandLink = document.querySelector('.brand');
+    brandLink.setAttribute('aria-label', 'Verificar conexão com Norte Concursos');
+    brandLink.addEventListener('click', function (event) { event.preventDefault(); reconnect(); });
+    addEventListener('keydown', function (event) {
+      if (event.key !== 'Tab') return;
+      const controls = Array.from(document.querySelectorAll('a[href], button:not(:disabled)')).filter(function (node) { return node.getClientRects().length; });
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && (document.activeElement === first || document.activeElement === document.body)) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+  }
+  if (!embedded) addEventListener('online', async function () {
     try {
       // HEAD bypasses the service worker's GET cache: a restored local network
       // alone must not trigger a reload while the server is still unreachable.
       const response = await fetch('/favicon.svg', { method: 'HEAD', cache: 'no-store' });
       if (response.ok) reconnect();
     } catch { /* Keep the offline page available until a real connection returns. */ }
+  });
+  if (embedded) addEventListener('message', function (event) {
+    if (event.source !== parent || event.origin !== parent.location.origin || !event.data) return;
+    if (event.data.type === 'norte:offline-visibility') {
+      document.body.toggleAttribute('data-overlay-hidden', !event.data.visible);
+      return;
+    }
+    if (event.data.type !== 'norte:connection-status') return;
+    document.getElementById('retry').disabled = Boolean(event.data.checking);
+    if (!event.data.checking && event.data.reachable === false) document.getElementById('retry').focus();
+    document.querySelector('.automatic').textContent = event.data.checking ? 'Verificando conexão…' : event.data.reachable === false ? 'Conexão ainda indisponível.' : 'Retorno automático ao reconectar.';
   });
   document.getElementById('motion-toggle').addEventListener('click', function () {
     const paused = document.body.classList.toggle('motion-paused');

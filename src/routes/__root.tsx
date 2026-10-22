@@ -23,7 +23,7 @@ import { toast } from "sonner";
 import { ConfirmHost } from "@/components/ConfirmHost";
 import { InstallAppPrompt } from "@/components/InstallAppPrompt";
 import { UpdateAvailablePrompt } from "@/components/UpdateAvailablePrompt";
-import { OfflineBanner } from "../components/OfflineBanner";
+import { OfflineConnectionGuard } from "../components/OfflineConnectionGuard";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { THEME_INIT_SCRIPT } from "../lib/theme";
@@ -282,14 +282,16 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <div id="norte-platform-surface" style={{ display: "contents" }}>
       <AuthStatusProvider statusObserver={<InitialLoadingReady />}>
         <TooltipProvider delayDuration={200}><Outlet /></TooltipProvider>
         <Toaster position="top-center" closeButton />
         <ConfirmHost />
         <InstallAppPrompt />
         <UpdateAvailablePrompt />
-        <OfflineBanner />
       </AuthStatusProvider>
+      </div>
+      <OfflineConnectionGuard />
     </QueryClientProvider>
   );
 }

@@ -1,0 +1,4 @@
+html[data-norte-offline="true"] { overflow: hidden !important; scrollbar-gutter: auto !important; }
+.offline-connection { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; z-index: 20000; background: #0b0d0c; }
+.offline-connection[hidden] { display: none; }
+.offline-connection > iframe { display: block; width: 100%; height: 100%; max-width: none; border: 0; }
