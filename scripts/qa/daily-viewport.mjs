@@ -31,7 +31,7 @@ try{
   const art=await clock.locator('.tactical-clock__face').boundingBox();
   const display=await clock.locator('.tactical-clock__display').boundingBox();
   const timerRow=await page.locator('.question-timing-row').boundingBox();
-  assert.ok(art.width>=112,'large tactical dial');
+  assert.ok(art.width>=70,'compact tactical dial');
   assert.ok(display.y>=art.y+art.height,'digital readout below the image without overlap');
   assert.ok(Math.abs(art.x+art.width/2-timerRow.x-timerRow.width/2)<1,'dial centered in question area');
   assert.equal(await clock.evaluate(n=>getComputedStyle(n).borderTopWidth),'0px','no surrounding box');

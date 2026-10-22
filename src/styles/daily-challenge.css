@@ -28,8 +28,10 @@ body:has(.daily-page) { overflow: hidden; }
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(110deg, var(--daily-veil) 15%, transparent 150%),
+  background: radial-gradient(ellipse 65% 75% at 22% 48%, var(--daily-veil) 0%, transparent 72%),
+    linear-gradient(110deg, var(--daily-veil) 15%, transparent 150%),
     url('/media/hero/home-bg-texture.webp') center / cover no-repeat;
+  filter: saturate(.82) brightness(.92);
 }
 .daily-art::after {
   content: '';
@@ -72,8 +74,9 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-metrics strong { display: block; font-size: clamp(32px, 4vw, 56px); line-height: 1; font-weight: 750; letter-spacing: -.05em; }
 .daily-metrics span { display: block; margin-top: 8px; font-size: 11px; color: var(--muted-foreground); }
 .daily-briefing-subjects { font-size: 12px; }
-.daily-briefing-subjects summary { min-height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.daily-subjects { padding: 8px 0; margin: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.daily-briefing-subjects__label { min-height: 28px; display: flex; align-items: center; gap: 8px; color: var(--muted-foreground); font-weight: 600; }
+.daily-briefing-subjects__label svg { color: var(--daily-accent); flex-shrink: 0; }
+.daily-subjects { padding: 10px 0 0; margin: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .daily-subjects li { padding: 5px 8px; border: 1px solid var(--daily-edge); border-radius: 6px; font-size: 10px; color: var(--muted-foreground); }
 .daily-round__renewal { display: flex; gap: 10px; margin-top: auto; padding-top: 24px; }
 .daily-round__renewal svg { color: var(--daily-accent); flex-shrink: 0; }
@@ -102,6 +105,8 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-question-heading h2 > span { font-size: 14px; font-weight: 400; color: var(--muted-foreground); }
 .daily-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 .daily-reading > :not(:first-child) { margin-top: 18px; }
+.daily-toolbar-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.daily-question-code { margin: 0; flex: 0 1 auto; }
 .daily-answer-dock { display: grid; grid-template-columns: auto minmax(180px, 1fr) auto; align-items: center; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--daily-edge); background: var(--card); }
 .daily-answer-dock > p { margin: 0; font-size: 10px; max-width: 50px; line-height: 1.6; }
 .daily-answer-dock > .grid { margin: 0; gap: 10px; }
@@ -138,7 +143,7 @@ body:has(.daily-page) { overflow: hidden; }
   .daily-metrics { padding-block: 12px; margin-block: 10px; }
   .daily-metrics strong { font-size: 30px; }
   .daily-metrics span { font-size: 10px; margin-top: 4px; }
-  .daily-briefing-subjects summary { min-height: 32px; font-size: 11px; }
+  .daily-briefing-subjects__label { min-height: 22px; font-size: 11px; }
   .daily-round__renewal { padding-top: 10px; }
   .daily-round__renewal strong { font-size: 11px; }
   .daily-round__renewal p > span { font-size: 10px; margin-top: 2px; }
@@ -200,7 +205,7 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
 
 /* A freestanding instrument for the daily challenge, with its readout below the dial. */
-.daily-question-card .question-timing-row { justify-content: center; margin-block: 4px 20px; }
+.daily-question-card .question-timing-row { justify-content: center; margin-block: 0 14px; }
 .daily-question-card .question-stopwatch .tactical-clock--question {
   display: flex;
   flex-direction: column;
@@ -214,7 +219,7 @@ body:has(.daily-page) { overflow: hidden; }
   box-shadow: none;
 }
 .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face {
-  width: clamp(112px, 12vw, 144px);
+  width: clamp(72px, 7vw, 92px);
 }
 .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__display {
   align-items: center;
@@ -224,7 +229,7 @@ body:has(.daily-page) { overflow: hidden; }
   border: 0;
   text-align: center;
 }
-.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__time { font-size: 28px; }
+.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__time { font-size: 20px; }
 .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__status { justify-content: center; }
 @media (max-height: 620px) and (orientation: landscape) {
   .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face { width: 112px; }
