@@ -1,4 +1,3 @@
-import { AuthInsignia } from "@/components/brand/AuthInsignia";
 import "@/styles/auth-art.css";
 import authComposition from "@/assets/auth/carreiras-composicao.webp";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
@@ -278,8 +277,13 @@ function AuthPage() {
         </nav>
         <div className="auth-card">
           <div className="auth-identity">
-            <div><span>NORTE · CARREIRAS POLICIAIS</span><strong>Seu objetivo tem um norte.</strong></div>
-            <AuthInsignia />
+            <img className="auth-identity__scene" src={authComposition} alt="" aria-hidden="true"
+              width={1440} height={600} decoding="async" />
+            <div className="auth-identity__copy">
+              <span>NORTE CONCURSOS</span>
+              <strong>Seu objetivo<br />tem um norte.</strong>
+              <span className="auth-identity__career">CARREIRAS POLICIAIS</span>
+            </div>
           </div>
           <div className="auth-mobile-brand">
             <NorteBrand />

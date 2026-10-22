@@ -1,3 +1,4 @@
+import { TacticalClock } from "@/components/brand/TacticalClock";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
 import { snapshotUploader } from "@/lib/sessionSnapshotsAccount";
@@ -1808,34 +1809,9 @@ function ActiveSimulator(p: {
                 : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
             )}
           >
-            <svg viewBox="0 0 44 44" className="h-11 w-11 -rotate-90" aria-hidden="true">
-              <circle
-                cx="22"
-                cy="22"
-                r="18"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                opacity=".15"
-              />
-              <circle
-                cx="22"
-                cy="22"
-                r="18"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                pathLength="100"
-                strokeDasharray="100"
-                strokeDashoffset={100 - Math.min(100, (timeLeft / durationSeconds) * 100)}
-              />
-            </svg>
-            <span>
-              <span className="block text-[10px] font-medium uppercase tracking-wide">
-                Tempo restante
-              </span>
-              {formatTime(timeLeft)}
+            <span role="timer" aria-live="off" aria-label={`Tempo restante: ${formatTime(timeLeft)}`}>
+              <TacticalClock time={formatTime(timeLeft)} seconds={timeLeft} label="Tempo restante"
+                progress={durationSeconds > 0 ? timeLeft / durationSeconds : 0} urgent={timeLeft < 300} />
             </span>
           </div>
           <div className="flex gap-2">
