@@ -195,12 +195,13 @@ export function toBoardExamRow(q: BoardImportQuestion): Record<string, unknown> 
   delete row.import_content_key;
   delete row.import_unique_key;
   const review =
-    q.legal_review && typeof q.legal_review === "object"
-      ? (q.legal_review as BoardExamReviewMeta)
+    q["legal_review"] && typeof q["legal_review"] === "object"
+      ? (q["legal_review"] as BoardExamReviewMeta)
       : null;
-  delete row.legal_review;
-  const answerKeyStatus = typeof q.answer_key_status === "string" ? q.answer_key_status : null;
-  delete row.answer_key_status;
+  delete row["legal_review"];
+  const answerKeyStatus =
+    typeof q["answer_key_status"] === "string" ? (q["answer_key_status"] as string) : null;
+  delete row["answer_key_status"];
   if (review && typeof review.status === "string") {
     const title = LEGAL_REVIEW_TITLES[review.status];
     const basis =
