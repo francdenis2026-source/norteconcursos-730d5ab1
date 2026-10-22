@@ -22,6 +22,7 @@ import { fetchAllRows } from "@/lib/catalog";
 import {
   parseBoardImport,
   planBoardImport,
+  toBoardExamRow,
   type BoardImportQuestion,
   type BoardImportPlan,
 } from "@/lib/questionImport";
