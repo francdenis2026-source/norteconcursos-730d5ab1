@@ -1,5 +1,5 @@
 /** Tactical clock timing and responsive regression with mocked authentication; no production writes.
- * PLAYWRIGHT_MODULE=/path/to/playwright-core/index.mjs node scripts/qa/workspace-fullscreen.mjs
+ * PLAYWRIGHT_MODULE=/path/to/playwright-core/index.mjs node scripts/qa/tactical-clock.mjs
  * Start the local dev server first (BASE_URL defaults to http://127.0.0.1:3000).
  */
 import assert from "node:assert/strict";
@@ -130,8 +130,8 @@ try {
       "no overflow " + width,
     );
     if (width === 1440) {
-      const dial = await page.locator(".app-topbar .tactical-clock__dial").first().boundingBox();
-      assert.equal(dial.width, 34);
+      assert.equal(await page.locator(".app-topbar [role=timer]").count(), 0);
+      assert.ok(await page.evaluate(() => Object.keys(localStorage).some(key => key.startsWith("norte_clock_v2:"))), "active study tracking continues without topbar clocks");
     }
     await page.screenshot({ path: "/tmp/tactical-clock-" + width + ".png", fullPage: true });
     // Exercise the real question component with long elapsed times and all states.
@@ -169,8 +169,10 @@ try {
       const fits = await page.locator("#qa-clocks .tactical-clock--question").evaluateAll((nodes) =>
         nodes.every((node) => {
           const face = node.getBoundingClientRect(),
+            dial = node.querySelector(".tactical-clock__face").getBoundingClientRect(),
             display = node.querySelector(".tactical-clock__display").getBoundingClientRect();
           return (
+            display.left >= dial.right &&
             display.bottom <= face.bottom + 1 &&
             display.left >= face.left &&
             display.right <= face.right

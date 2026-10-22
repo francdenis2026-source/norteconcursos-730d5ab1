@@ -41,10 +41,10 @@ async function seeded(role) {
  return {context,calls};
 }
 
-const sections=[['Planejamento','/dashboard/study-coach'],['Meu concurso','/dashboard/my-contest'],['Material didático','/dashboard/material'],['Ferramentas','/dashboard/study-tools'],['Questões','/dashboard/question-trainer'],['Provas','/dashboard/mock-exams'],['ENEM','/dashboard/enem'],['Desempenho','/dashboard/performance'],['Conta','/dashboard/profile']];
+const sections=[['Planejamento','/dashboard/study-coach'],['Meu concurso','/dashboard/my-contest'],['Material didático','/dashboard/material'],['Questões','/dashboard/question-trainer'],['Provas','/dashboard/mock-exams'],['ENEM','/dashboard/enem'],['Desempenho','/dashboard/performance'],['Conta','/dashboard/profile']];
 try {
  const {context}=await seeded('user');const p=await context.newPage();await p.setViewportSize({width:1366,height:900});await p.goto(base+'/dashboard/profile');await p.locator('.app-shell').waitFor();
- const sidebar=p.locator('.app-sidebar .student-direct-navigation');assert.equal(await sidebar.locator('button,[aria-expanded],.app-nav__entries').count(),0);assert.equal(await sidebar.getByRole('link').count(),10);
+ const sidebar=p.locator('.app-sidebar .student-direct-navigation');assert.equal(await sidebar.locator('button,[aria-expanded],.app-nav__entries').count(),0);assert.equal(await sidebar.getByRole('link').count(),9);
  for(const [group,path] of sections){console.log('Checking section',group);await sidebar.locator(`a.nav-section-link[href="${path}"]`).click();await p.waitForURL(url=>url.pathname===path);await sidebar.locator('.nav-section-link[data-active="true"]').waitFor();assert.equal(await sidebar.locator('button,[aria-expanded]').count(),0);if(group==='Planejamento'||group==='ENEM')assert.equal(await p.locator('.workspace-section-nav').count(),0);else assert.ok(await p.locator('.workspace-section-nav a').count()>=2);}
  await p.getByRole('button',{name:'Recolher menu lateral',exact:true}).click();
  await sidebar.locator('a[href="/dashboard/material"]').click();await p.waitForURL(url=>url.pathname==='/dashboard/material');assert.equal(await p.getByRole('menu').count(),0);assert.equal(await sidebar.locator('button,[aria-expanded]').count(),0);
@@ -52,7 +52,7 @@ try {
  await p.getByRole('button',{name:'Expandir menu lateral',exact:true}).click();
  await p.screenshot({path:'/tmp/norte-direct-navigation-desktop.png'});
  await p.goto(base+'/dashboard/study-plan');await p.locator('.app-shell').waitFor();assert.equal(await sidebar.locator('a[href="/dashboard/study-coach"]').getAttribute('data-active'),'true');assert.equal(await p.locator('.workspace-section-nav').count(),0);
- await context.close();console.log('PASS all nine section destinations, compact sidebar, exact library query and deep-route highlight; no student accordions or flyouts');
+ await context.close();console.log('PASS all eight section destinations, compact sidebar, exact library query and deep-route highlight; no student accordions or flyouts');
  for(const width of [390,820]) {
   const ctx=await browser.newContext({viewport:{width,height:844},isMobile:true,hasTouch:true});await mock(ctx,'user');await ctx.addInitScript(({key,value})=>localStorage.setItem(key,JSON.stringify(value)),{key:storageKey,value:session('user')});
   const page=await ctx.newPage();await page.goto(base+'/dashboard/profile');await page.locator('.app-shell').waitFor();await page.getByRole('button',{name:'Abrir menu completo',exact:true}).click();

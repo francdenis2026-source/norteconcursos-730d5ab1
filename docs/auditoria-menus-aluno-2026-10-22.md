@@ -94,3 +94,16 @@ A calculadora penal pode ser recurso contextual dentro da legislação penal; ne
 ## Ordem sugerida de execução
 
 Primeiro padronizar nomes e descrições, manter os títulos nos estados vazios e explicitar a função dos três planejamentos. Depois reorganizar materiais e recursos jurídicos. Por último revisar a continuidade de objetivo/configurações entre áreas, que exige validação com dados e rotinas reais. Não fundir bancos de dados, apagar páginas ou alterar regras de acesso como consequência automática de uma mudança de menu.
+
+
+## Implementação após a auditoria
+
+Aplicada a organização por Meu planejamento, Meu objetivo, Materiais, Questões e revisão, Provas, Desempenho e Conta. ENEM permanece separado em Outros objetivos. Sessão de foco passou ao planejamento; CTB e calculadora penal passaram a Materiais/Legislação. As páginas de objetivo e materiais têm segmentos identificados, sem aumentar a largura da barra lateral.
+
+Os quatro acessos de planejamento explicam configuração, agenda, ajustes pelos resultados e foco. Nomes de menu e títulos foram alinhados; nomes anteriores continuam aceitos na busca. Os dados e as configurações de cada função foram preservados, com a origem dos parâmetros do diagnóstico explícita. Não houve fusão automática de planos ou migração de dados.
+
+Gestão de assinatura, histórico, cancelamentos e recibos foram concentrados em Plano e assinatura; o perfil mantém dados pessoais, resumo do plano, saída da conta e acesso direto à gestão. A página de provas realizadas preserva título e identificação nos estados vazio, de carregamento e de erro. Foco aberto pelo ENEM mantém matérias e links do exame.
+
+Verificação com autenticação e dados simulados: todas as 35 páginas, busca pelos nomes anteriores, seleção de seção, consulta de legislação com parâmetro preservado, menus em 390 e 820 px e separação da área administrativa.
+
+A pedido posterior, os relógios de data/hora e tempo ativo foram retirados da barra superior. O registro de estudo permanece independente da interface. O cronômetro de questão foi movido para uma linha própria, com mostrador tático e tempo digital em colunas separadas, preservando estados pausado/finalizado.

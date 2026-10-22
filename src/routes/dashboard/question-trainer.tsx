@@ -1875,12 +1875,12 @@ function QuestionTrainer() {
                     puladas
                   </p>
                 </div>
-                <div className="flex items-end gap-2 sm:gap-3">
-                  {(!reviewingPast || sessionSeconds !== undefined) && (
-                    <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
-                  )}
-                </div>
               </div>
+              {(!reviewingPast || sessionSeconds !== undefined) && (
+                <div className="question-timing-row" aria-label="Tempo de resolução">
+                  <QuestionTimer seconds={sessionSeconds ?? questionSecs} completed={answered} />
+                </div>
+              )}
               <progress
                 className="trainer-question-progress"
                 value={correct + wrong}

@@ -170,3 +170,9 @@ test('the shared focus desk retains an explicit ENEM objective without changing 
  assert.equal(activeNavigation(menu,'/dashboard/study-tools',{}),menu[0]);
  assert.equal(activeNavigation([menu[0]],'/dashboard/study-tools',{context:'enem'}),menu[0], 'never select a destination outside the authorized menu');
 });
+
+
+test('subscription receipts retain the account billing location', () => {
+ const menu=[{href:'/dashboard/profile'},{href:'/dashboard/subscriptions'}];
+ assert.equal(activeNavigation(menu,'/dashboard/cancellation-receipt/receipt-id'),menu[1]);
+});

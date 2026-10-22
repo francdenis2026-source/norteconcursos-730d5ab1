@@ -92,10 +92,9 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Hint } from "@/components/ui/hint";
 import { PlanCountdownInline, PlanCountdownShort } from "@/components/dashboard/PlanCountdown";
-import { AcreClock } from "@/components/dashboard/AcreClock";
 import { FarewellDialog } from "@/components/dashboard/FarewellDialog";
 import { flushStudyClock, getStudyToday, stopStudyClock } from "@/lib/studyClock";
-import { SessionClock } from "@/components/dashboard/SessionClock";
+import { StudyActivityTracker } from "@/components/dashboard/StudyActivityTracker";
 import { ActivityTracker } from "@/components/dashboard/ActivityTracker";
 import { FocusReturnBar } from "@/components/dashboard/FocusReturnBar";
 import { RenewPlanDialog } from "@/components/dashboard/RenewPlanDialog";
@@ -567,6 +566,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       >
         {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}
         {user && user.id !== "demo-user" && <ActivityTracker />}
+        {!isAdmin && user && user.id !== "demo-user" && <StudyActivityTracker userId={user.id} />}
         <FocusReturnBar />
         <aside className={`app-sidebar no-print${isAdmin ? "" : " student-navigation"}`} data-collapsed={compactSidebar}>
           <div className="app-sidebar__head">
@@ -681,8 +681,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span className="kbd">Ctrl K</span>
               </button>
               <div className="app-chips">
-                <AcreClock />
-                {!isAdmin && user && user.id !== "demo-user" && <SessionClock userId={user.id} />}
                 {TESTING_PHASE && !isAdmin && !!user?.on_trial && !!user?.plan_ends_at && (
                   <Tooltip>
                     <TooltipTrigger asChild>

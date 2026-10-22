@@ -85,8 +85,8 @@ try {
  for(const width of [390,820]){
   const {context:ctx}=await seeded('user');const page=await ctx.newPage();await page.setViewportSize({width,height:844});await page.goto(base+'/dashboard/profile');await ready(page);
   const trigger=page.getByRole('button',{name:'Abrir menu completo',exact:true});
-  if(await trigger.isVisible()) await trigger.click();
-  const mobile=page.locator(await trigger.isVisible()?'.app-sheet .student-direct-navigation':'.app-sidebar .student-direct-navigation');await mobile.waitFor();assert.equal(await mobile.getByRole('link').count(),9);
+  const drawer=await trigger.isVisible();if(drawer) await trigger.click();
+  const mobile=page.locator(drawer?'.app-sheet .student-direct-navigation':'.app-sidebar .student-direct-navigation');await mobile.waitFor();assert.equal(await mobile.getByRole('link').count(),9);
   await mobile.locator('a[href="/dashboard/material"]').click();await page.waitForURL(url=>url.pathname==='/dashboard/material');
   const tabs=page.locator('.workspace-section-nav');await tabs.locator('a[href="/dashboard/ctb"]').click();await page.waitForURL(url=>url.pathname==='/dashboard/ctb');
   const selected=tabs.locator('a[aria-current="page"]');await selected.waitFor();await page.waitForTimeout(200);const rect=await selected.boundingBox();assert.ok(rect.x>=0&&rect.x+rect.width<=width+1,JSON.stringify(rect));
