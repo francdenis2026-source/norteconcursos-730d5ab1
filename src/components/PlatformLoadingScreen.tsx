@@ -3,6 +3,8 @@ import portraitArtwork from "@/assets/auth/carreiras-abertura-vertical.webp";
 import { useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
+import { documentStartup } from "@/lib/startupSequence";
+export { finishInitialLoading } from "@/lib/startupSequence";
 
 export const INITIAL_LOADING_ART = loadingArtwork;
 export const INITIAL_LOADING_PORTRAIT_ART = portraitArtwork;
@@ -10,9 +12,10 @@ export const INITIAL_LOADING_PORTRAIT_ART = portraitArtwork;
 /** Inline critical styles keep the initial server-rendered screen independent of route JS/fonts. */
 export const INITIAL_LOADING_CSS = `
 html:not([data-norte-boot=ready]){overflow:hidden;scrollbar-gutter:auto!important;background:#080a09}
+html:not([data-norte-boot=ready]) #norte-app-content{visibility:hidden;opacity:0;pointer-events:none}
 #norte-initial-loading{position:fixed;inset:0;width:100vw;z-index:10000;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
 #norte-initial-loading picture{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
-#norte-initial-loading img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+#norte-initial-loading>picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 #norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09f5 0%,#080a09c9 12%,#080a0933 32%,transparent 55%)}
 #norte-initial-loading .norte-boot-copy{position:absolute;inset:auto auto max(28px,6dvh,env(safe-area-inset-bottom)) clamp(24px,5vw,96px);width:min(420px,calc(100% - 48px));z-index:1;text-align:left;padding:0;margin:0;text-shadow:0 2px 16px #000}
 #norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:0;line-height:1.2}
@@ -22,7 +25,8 @@ html:not([data-norte-boot=ready]){overflow:hidden;scrollbar-gutter:auto!importan
 #norte-initial-loading .norte-boot-track:after{content:'';position:absolute;inset:0;width:35%;background:#efd090;animation:norte-boot-progress 1.6s ease-in-out infinite}
 @keyframes norte-boot-progress{from{transform:translateX(-100%)}to{transform:translateX(390%)}}
 html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
-@media(orientation:portrait){#norte-initial-loading img{object-position:50% 35%}#norte-initial-loading .norte-boot-copy{inset:auto 20px max(32px,7dvh,env(safe-area-inset-bottom));width:auto;text-align:center}#norte-initial-loading .norte-boot-brand{padding-left:.28em}#norte-initial-loading .norte-boot-track{margin-inline:auto}}
+html[data-norte-startup-stage=intro] #norte-initial-loading>.norte-boot-copy{visibility:hidden}
+@media(orientation:portrait){#norte-initial-loading>picture img{object-position:50% 35%}#norte-initial-loading .norte-boot-copy{inset:auto 20px max(32px,7dvh,env(safe-area-inset-bottom));width:auto;text-align:center}#norte-initial-loading .norte-boot-brand{padding-left:.28em}#norte-initial-loading .norte-boot-track{margin-inline:auto}}
 @media(max-height:500px){#norte-initial-loading .norte-boot-copy{bottom:max(16px,env(safe-area-inset-bottom))}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
 @media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading .norte-boot-brand,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-status{color:CanvasText}}
@@ -49,12 +53,6 @@ export function InitialLoadingScreen() {
   );
 }
 
-export function finishInitialLoading() {
-  if (typeof document === "undefined" || document.documentElement.dataset["norteBoot"] === "ready") return;
-  document.documentElement.dataset["norteBoot"] = "ready";
-  window.dispatchEvent(new Event("norte:boot-ready"));
-}
-
 /** Called only inside the auth provider; public pages never wait for account requests. */
 export function InitialLoadingReady() {
   const { isLoading, error } = useAuthStatus();
@@ -62,7 +60,7 @@ export function InitialLoadingReady() {
   useEffect(() => {
     if (status === "pending") return;
     if (pathname.startsWith("/dashboard") && isLoading && !error) return;
-    finishInitialLoading();
+    documentStartup().routeReady(pathname);
   }, [pathname, status, isLoading, error]);
   return null;
 }

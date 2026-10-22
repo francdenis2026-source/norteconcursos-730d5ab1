@@ -45,7 +45,7 @@ try {
   await ctx.addInitScript(value=>localStorage.setItem('sb-gkwphadbveiyjcwiiizw-auth-token',JSON.stringify(value)),session);
   await ctx.route('https://gkwphadbveiyjcwiiizw.supabase.co/**',route=>{
    const path=new URL(route.request().url()).pathname;
-   const body=path.endsWith('/profiles')?{id:uid,full_name:'TESTE LOCAL',subscription_tier:'premium',onboarding_completed:true,is_activated:true,created_at:new Date().toISOString()}:path.endsWith('/user_roles')?[{role:'user'}]:path.endsWith('/user')?user:path.endsWith('/server_now')?new Date().toISOString():[];
+   const body=path.endsWith('/profiles')?{id:uid,full_name:'TESTE LOCAL',subscription_tier:'premium',onboarding_completed:true,is_activated:true,created_at:new Date().toISOString()}:path.endsWith('/user_roles')?[{role:'user'}]:path.endsWith('/verify_account_session')?true:path.endsWith('/user')?user:path.endsWith('/server_now')?new Date().toISOString():[];
    return route.fulfill({contentType:'application/json',body:JSON.stringify(body)});
   });
   const p=await ctx.newPage();await p.goto(base+'/dashboard/profile');await p.locator('.app-shell').waitFor();
