@@ -5,6 +5,7 @@ Aplicar no SQL Editor do Supabase (a tabela `board_exam_questions` já existe), 
 - `pcsc_agente_2026.sql`: PC SC, Agente de Polícia Civil, caderno B (92 questões, gabarito definitivo)
 - `pmsc_aluno_soldado_2026.sql`: PMSC, Aluno-Soldado Temporário, caderno A (39 questões, gabarito **preliminar**)
 - `cbmmg_cadete_2026.sql`: CBMMG, CFO BM 2027 Cadete, caderno A (46 questões, gabarito definitivo)
+- `pcsc_escrivao_2026.sql`: PC SC, Escrivão de Polícia Civil, caderno Tipo A (100 questões, gabarito **preliminar**)
 
 `idecan_questions.json` traz as mesmas questões para a tela "Questões de bancas".
 
