@@ -39,7 +39,7 @@ try {
   assert.equal(await page.locator('.badge-rotor').evaluate(n => getComputedStyle(n).animationPlayState), 'paused');
   await page.getByRole('button', { name: 'Retomar animação do emblema' }).click();
   assert.equal(await page.locator('.badge-rotor').evaluate(n => getComputedStyle(n).animationPlayState), 'running');
-  assert.equal(await page.locator('.badge-rotor').evaluate(n => getComputedStyle(n).animationDuration), '48s');
+  assert.equal(await page.locator('.badge-rotor').evaluate(n => getComputedStyle(n).animationDuration), '14s');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   assert.equal(await page.locator('.badge-rotor').evaluate(n => getComputedStyle(n).animationName), 'none');
   await page.emulateMedia({ reducedMotion: 'no-preference' });
@@ -54,5 +54,5 @@ try {
   await returned;
   assert.ok(page.url().endsWith('/qa-uncached-offline-route'), 'reconnection retries the original route automatically');
   await context.close();
-  console.log('PASS real service worker: cached artwork offline, ten responsive sizes, no clipped controls, HD rotating emblem, pause and reduced motion, manual retry and automatic reconnection');
+  console.log('PASS real service worker: cached artwork offline, ten responsive sizes, no clipped controls, HD gently swaying emblem, pause and reduced motion, manual retry and automatic reconnection');
 } finally { await browser.close(); }

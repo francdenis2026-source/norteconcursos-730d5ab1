@@ -7,7 +7,7 @@
 //  - /offline.html, mostrada quando não há nem página guardada.
 // O que NUNCA é guardado: dados do Supabase e qualquer outro domínio, nem requisições que não sejam GET.
 // Questões, respostas, ranking e login continuam sempre ao vivo.
-const VERSION = "v6";
+const VERSION = "v7";
 const SHELL_CACHE = `norte-app-shell-${VERSION}`;
 const ASSET_CACHE = `norte-assets-${VERSION}`;
 const PAGE_CACHE = `norte-pages-${VERSION}`;
