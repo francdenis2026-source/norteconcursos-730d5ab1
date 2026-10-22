@@ -336,6 +336,19 @@
 .home-preparation__tool > summary::-webkit-details-marker { display: none; }
 .home-preparation__tool > summary svg { color: var(--micro-accent); margin: 0; }
 .home-preparation__tool > summary svg:last-child { margin-left: auto; width: 14px; height: 14px; }
+.home-preparation__tool-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--home-gold, var(--brass)) 16%, transparent);
+  color: var(--home-gold, var(--brass-deep));
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
 .home-preparation__tool[open] > summary { color: var(--micro-accent); }
 .home-preparation__tool[open] > summary svg:last-child { transform: rotate(45deg); }
 .home-preparation__tool > summary:focus-visible { outline: 2px solid var(--micro-accent); outline-offset: -2px; border-radius: 4px; }
