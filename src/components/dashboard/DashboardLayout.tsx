@@ -157,6 +157,7 @@ const MENU: MenuItem[] = [
   { group: "Meu concurso", label: "Radar do edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Meu concurso", label: "Panorama e tendências", icon: BarChart3, href: "/dashboard/exam-panorama" },
   { group: "Meu concurso", label: "Perfil das bancas", icon: Landmark, href: "/dashboard/perfil-bancas" },
+  { group: "Meu concurso", label: "Inteligência IDECAN • PCAC", icon: Radar, href: "/dashboard/inteligencia-idecan" },
   { group: "Material didático", label: "Visão geral dos materiais", icon: Library, href: "/dashboard/material" },
   { group: "Material didático", label: "Legislação e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
   { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
