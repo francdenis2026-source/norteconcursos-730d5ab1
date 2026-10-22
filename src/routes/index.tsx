@@ -19,7 +19,6 @@ import {
   ArrowUpRight,
   BadgeCheck,
   BrainCircuit,
-  CalendarClock,
   ChevronRight,
   Compass,
   FileSearch,
@@ -521,13 +520,17 @@ function Index() {
                       loading="lazy"
                       decoding="async"
                     />
+                    <span className="home-pcac-news" aria-hidden="true">
+                      <span>Banca definida</span>
+                      <strong>IDECAN</strong>
+                    </span>
                   </div>
                   <div className="home-opportunity__intro">
                     <span className="home-status home-status--inline">
-                      <CalendarClock /> Edital ainda não publicado
+                      <BadgeCheck /> Banca definida · IDECAN
                     </span>
                     <div className="home-opportunity__identity">
-                      <span className="home-eyebrow home-signal">Preparação antecipada · PCAC 2026</span>
+                      <span className="home-eyebrow home-signal">PCAC 2026 · Pré-edital</span>
                       <div>
                         <img
                           src="/media/brasao-acre-oficial.svg"
@@ -550,10 +553,20 @@ function Index() {
                 </div>
                 <div className="home-opportunity__body">
                   <details className="home-exam-details">
-                    <summary>Cargos e informações</summary>
+                    <summary>O edital ainda não saiu. Antecipe-se.</summary>
                     <p>
-                      O novo concurso foi anunciado, com vagas previstas para Delegado, Oficial
-                      Investigador e Perito. Sua preparação pode começar agora.
+                      O <strong>IDECAN</strong> foi escolhido para organizar o próximo concurso da
+                      Polícia Civil do Acre. A dispensa de licitação e sua ratificação foram
+                      publicadas no Diário Oficial do Estado de <time dateTime="2026-10-22">22 de
+                      outubro de 2026</time>, quinta-feira.
+                    </p>
+                    <p>
+                      <strong>O edital ainda não foi publicado. Sua preparação já pode começar.</strong>{" "}
+                      Antecipe seus estudos com o <strong>Norte Concursos</strong> e transforme seu
+                      objetivo em uma rotina de preparação.
+                    </p>
+                    <p>
+                      <strong>Seu futuro na Polícia Civil começa com o que você faz hoje.</strong>
                     </p>
                   </details>
                   <div className="home-opportunity__bottom">

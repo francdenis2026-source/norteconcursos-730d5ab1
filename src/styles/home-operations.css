@@ -63,6 +63,28 @@
 .home.home .home-operations .home-rail__track.home-opportunities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
 .home.home .home-operations .home-opportunity { min-width: 0; background: var(--stage-surface); border: 1px solid var(--home-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px -28px #000; }
 .home.home .home-operations .home-opportunity__image { height: auto; aspect-ratio: 16 / 8; }
+/* News ribbon stays inside the existing PCAC artwork; card geometry is unchanged. */
+.home-opportunity--acre .home-opportunity__image { position: relative; }
+.home-pcac-news {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: grid;
+  gap: 2px;
+  padding: 7px 12px;
+  border: 1px solid var(--stage-gold);
+  border-left-width: 3px;
+  border-radius: 4px;
+  background: rgb(13 20 24 / 96%);
+  color: var(--stage-gold);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 35%);
+  font-size: 9px;
+  line-height: 1.25;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.home-pcac-news strong { color: var(--on-ink); font-size: 19px; letter-spacing: .05em; }
 .home.home .home-operations .home-opportunity__intro { padding: 16px 18px 8px; }
 .home.home .home-operations .home-opportunity__body { padding: 0 18px 18px; }
 .home.home .home-operations .home-opportunity h3 { color: var(--home-text); font-size: 20px; }
