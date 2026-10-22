@@ -10,9 +10,21 @@
 .workspace-focus-controls button:hover, .workspace-fullscreen-trigger:hover { background: var(--muted); border-color: var(--ring); }
 :is(.workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
 html[data-workspace-focus="true"], html[data-workspace-focus="true"] body { overflow: hidden; overscroll-behavior: none; }
+/* position:fixed + inset:0 já prendem as quatro bordas à viewport, então a caixa não precisa de
+   width/height explícitos. Um 100dvh aqui seria recalculado a cada quadro da animação nativa de
+   entrada/saída da tela cheia (o navegador redimensiona a janela de forma gradual), o que fazia
+   o layout piscar durante a transição. */
 .app-shell.navigation-v2[data-focus-mode="true"] {
   position: fixed; inset: 0; z-index: 40; display: grid;
-  grid-template-columns: 68px minmax(0, 1fr); width: 100%; height: 100dvh; min-height: 0; overflow: hidden;
+  grid-template-columns: 68px minmax(0, 1fr); min-height: 0; overflow: hidden;
+}
+/* Enquanto a tela cheia nativa ainda está entrando/saindo (ver useWorkspaceFullscreen), congela
+   transições e desfoque: evita o "piscar" causado pelo backdrop-filter sendo repintado a cada
+   quadro do redimensionamento animado do navegador. */
+html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
+  transition: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-main { display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
 .app-shell.navigation-v2[data-focus-mode="true"] :is(.app-topbar, .workspace-section-nav, .app-bottom-nav, .app-footer, .app-focus-return) { display: none; }

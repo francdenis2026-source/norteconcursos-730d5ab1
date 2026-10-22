@@ -2,6 +2,7 @@ import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { NavigationCommand } from "./NavigationCommand";
 import { useTopbarGlass } from "@/hooks/useTopbarGlass";
+import { useQuestionCatalogRealtime } from "@/hooks/useQuestionCatalogRealtime";
 import workspaceBannerArt from "@/assets/auth/carreiras-composicao.webp";
 import "@/styles/dashboard-glass.css";
 import "@/styles/dashboard-light.css";
@@ -156,6 +157,7 @@ const MENU: MenuItem[] = [
   { group: "Meu concurso", label: "Radar do edital", icon: Radar, href: "/dashboard/edital-radar" },
   { group: "Meu concurso", label: "Panorama e tendências", icon: BarChart3, href: "/dashboard/exam-panorama" },
   { group: "Meu concurso", label: "Perfil das bancas", icon: Landmark, href: "/dashboard/perfil-bancas" },
+  { group: "Meu concurso", label: "Inteligência IDECAN • PCAC", icon: Radar, href: "/dashboard/inteligencia-idecan" },
   { group: "Material didático", label: "Visão geral dos materiais", icon: Library, href: "/dashboard/material" },
   { group: "Material didático", label: "Legislação e súmulas", icon: Scale, href: "/dashboard/library", search: { collection: "laws" } },
   { group: "Material didático", label: "Leis especiais", icon: Gavel, href: "/dashboard/leis" },
@@ -309,6 +311,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigate = useNavigate();
   const router = useRouter();
   const { user } = useAuthStatus();
+  // Mantém em sincronia, em tempo real, todas as contagens de questões (Treinador, Acervo,
+  // painel administrativo): qualquer tela do dashboard reflete na hora uma questão cadastrada,
+  // editada ou removida, sem depender do cache de cada tela expirar por conta própria.
+  useQuestionCatalogRealtime(!!user && user.id !== "demo-user");
   // Depois que a tela principal já está pronta, baixa em segundo plano o código das seções mais
   // usadas, uma por vez, para o clique no menu abrir na hora. Respeita "economia de dados".
   React.useEffect(() => {
@@ -663,9 +669,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
                 {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
               </div>
-              <strong className="app-location__title" title={current?.label}>
-                {current?.label ?? (location.pathname === "/dashboard/admin-support" ? "Central de atendimento" : isAdmin ? "Painel administrativo" : "Minha preparação")}
-              </strong>
             </div>
 
             <div className="app-topbar__actions">

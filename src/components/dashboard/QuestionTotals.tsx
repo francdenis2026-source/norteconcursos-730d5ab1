@@ -1,20 +1,28 @@
+import { useMemo } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BadgeCheck, Database, ShieldCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useQuestionStats } from "@/hooks/useQuestionStats";
+import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
+import { publishedQuestionBank } from "@/lib/questionBank";
 
 const fmt = (value: number) => value.toLocaleString("pt-BR");
 
 type Props = {
   enabled: boolean;
+  userId: string | undefined;
   className?: string;
 };
 
-export function QuestionTotals({ enabled, className }: Props) {
+export function QuestionTotals({ enabled, userId, className }: Props) {
   const { data, isPending, isError, refetch } = useQuestionStats(enabled);
-  const loading = enabled && isPending;
+  // Mesmo número do Treinador e do Acervo: mesmo catálogo, mesma dedução por cargo e mesma
+  // exigência de texto de apoio. "Disponíveis no treino" nunca deve divergir da área do aluno.
+  const catalog = useQuestionCatalog(userId, enabled);
+  const available = useMemo(() => publishedQuestionBank(catalog.catalog).length, [catalog.catalog]);
+  const loading = enabled && (isPending || catalog.loading);
   const raw = data?.raw ?? 0;
-  const eligiblePct = raw ? Math.round(((data?.eligible ?? 0) / raw) * 100) : 0;
+  const eligiblePct = raw ? Math.round((available / raw) * 100) : 0;
   const reviewedPct = raw ? Math.round(((data?.reviewed ?? 0) / raw) * 100) : 0;
 
   return (
@@ -40,10 +48,10 @@ export function QuestionTotals({ enabled, className }: Props) {
         <Stat
           icon={ShieldCheck}
           label="Disponíveis no treino"
-          value={data ? fmt(data.eligible) : undefined}
+          value={data && !catalog.loading ? fmt(available) : undefined}
           loading={loading}
           tone="signal"
-          text="Com gabarito conferido e vigência legal validada na fonte oficial."
+          text="O mesmo número que o aluno vê no Treinador e no Acervo."
         />
         <Stat
           icon={BadgeCheck}
@@ -70,11 +78,11 @@ export function QuestionTotals({ enabled, className }: Props) {
             </button>
           </>
         )}
-        {data && (
+        {data && !catalog.loading && (
           <>
             <b>{reviewedPct}%</b> do acervo já está revisado · {fmt(data.official)} oficiais e{" "}
-            {fmt(data.curated)} autorais · {fmt(Math.max(0, data.raw - data.eligible))} fora do
-            treino (aguardando conferência de vigência ou gabarito)
+            {fmt(data.curated)} autorais · {fmt(Math.max(0, data.raw - available))} fora do treino
+            (aguardando conferência de vigência, gabarito ou texto de apoio)
           </>
         )}
       </p>

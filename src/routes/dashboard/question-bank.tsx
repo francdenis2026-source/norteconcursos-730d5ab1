@@ -17,6 +17,7 @@ import {
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import {
   availableQuestionBank,
+  publishedQuestionBank,
   searchQuestionCatalog,
   questionBankExams,
   questionBankSearch,
@@ -30,7 +31,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { needsMissingSupportText } from "@/lib/questionText";
+import { catalogGroups } from "@/lib/questionCatalogSummary";
 import { cn } from "@/lib/utils";
+import {
+  QuestionCatalogDetails,
+  type CatalogDetail,
+} from "@/components/questions/QuestionCatalogDetails";
 
 /**
  * Acervo de questões: página só de consulta. Mostra o que existe na plataforma (por disciplina, banca, prova e origem)
@@ -55,6 +61,13 @@ function QuestionBankPage() {
   const [collection, setCollection] = React.useState<BankCollection>("contests");
   const [search, setSearch] = React.useState("");
   const [source, setSource] = React.useState<BankSource>("all");
+  const [detail, setDetail] = React.useState<CatalogDetail | null>(null);
+  const detailTrigger = React.useRef<HTMLButtonElement | null>(null);
+  const publicCatalog = React.useMemo(() => publishedQuestionBank(catalog), [catalog]);
+  const openDetail = (view: CatalogDetail, trigger: HTMLButtonElement) => {
+    detailTrigger.current = trigger;
+    setDetail(view);
+  };
   const [examLimit, setExamLimit] = React.useState(15);
   const items = React.useMemo(
     () => availableQuestionBank(catalog, collection),
@@ -72,13 +85,14 @@ function QuestionBankPage() {
       ),
     [items, source, search],
   );
-  const bySubject = React.useMemo(() => countBy(visible, (q) => q.subject), [visible]);
+  const bySubject = React.useMemo(
+    () =>
+      catalogGroups(visible, "subject").map((g): [string, number] => [g.name, g.questions.length]),
+    [visible],
+  );
   const byBoard = React.useMemo(
     () =>
-      countBy(
-        visible.filter((q) => q.board !== "Não informada" && q.board !== "Meu caderno"),
-        (q) => q.board,
-      ),
+      catalogGroups(visible, "board").map((g): [string, number] => [g.name, g.questions.length]),
     [visible],
   );
   const byYear = React.useMemo(
@@ -124,28 +138,53 @@ function QuestionBankPage() {
           </Button>
         }
       />
-      <div className="question-workspace__metrics" aria-label="Resumo do acervo">
-        <Metric icon={LibraryBig} value={items.length} label="questões disponíveis" />
+      <div className="catalog-metrics" aria-label="Resumo do acervo">
+        <Metric
+          icon={LibraryBig}
+          value={publicCatalog.length}
+          label="Total na plataforma"
+          hint="Concursos + ENEM"
+          onClick={(e) => openDetail("platform", e.currentTarget)}
+        />
+        <Metric
+          icon={BookOpenCheck}
+          value={visible.length}
+          label="Questões da seleção"
+          hint={collection === "enem" ? "ENEM · ver questões" : "Concursos · ver questões"}
+          onClick={(e) => openDetail("questions", e.currentTarget)}
+        />
         <Metric
           icon={FileCheck2}
-          value={questionBankExams(items).length}
-          label="provas e concursos"
+          value={exams.length}
+          label="Provas e concursos"
+          hint="Explorar provas"
+          onClick={(e) => openDetail("exams", e.currentTarget)}
         />
         <Metric
           icon={Building2}
-          value={
-            new Set(
-              items.map((i) => i.board).filter((b) => b !== "Não informada" && b !== "Meu caderno"),
-            ).size
-          }
-          label="bancas"
+          value={byBoard.length}
+          label="Bancas"
+          hint="Conhecer a distribuição"
+          onClick={(e) => openDetail("boards", e.currentTarget)}
         />
         <Metric
           icon={Layers3}
-          value={new Set(items.map((i) => i.subject)).size}
-          label="disciplinas"
+          value={bySubject.length}
+          label="Disciplinas"
+          hint="Encontrar sua matéria"
+          onClick={(e) => openDetail("subjects", e.currentTarget)}
         />
       </div>
+      <QuestionCatalogDetails
+        view={detail}
+        onClose={() => setDetail(null)}
+        restoreFocus={() => detailTrigger.current?.focus()}
+        publicCatalog={publicCatalog}
+        items={visible}
+        collection={collection}
+        source={source}
+        query={search}
+      />
 
       <Card className="question-catalog__filters">
         <CardContent className="flex flex-wrap items-center gap-3 p-4">
@@ -436,19 +475,33 @@ function Metric({
   icon: Icon,
   value,
   label,
+  hint,
+  onClick,
 }: {
   icon: React.ElementType;
   value: number;
   label: string;
+  hint: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
-    <div className="question-workspace__metric">
+    <button
+      type="button"
+      className="question-workspace__metric catalog-metric"
+      onClick={onClick}
+      aria-haspopup="dialog"
+      aria-label={`${label}: ${value.toLocaleString("pt-BR")}. Ver detalhes`}
+    >
       <span>
-        <Icon />
+        <Icon aria-hidden="true" />
         {label}
       </span>
-      <strong className="tabular">{value}</strong>
-    </div>
+      <strong className="tabular">{value.toLocaleString("pt-BR")}</strong>
+      <small>
+        {hint}
+        <ArrowRight aria-hidden="true" />
+      </small>
+    </button>
   );
 }
 function Loading() {

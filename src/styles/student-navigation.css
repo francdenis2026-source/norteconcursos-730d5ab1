@@ -316,6 +316,14 @@
   border-color: color-mix(in srgb, var(--section-accent) 45%, var(--border));
   box-shadow: inset 0 -2px 0 var(--section-accent);
 }
+/* Match the palette used inside each question workspace. */
+.workspace-section-nav[data-section="Questões"] a[data-tone="teal"] { --section-accent: var(--question-teal); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="rose"] { --section-accent: var(--question-rose); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="violet"] { --section-accent: var(--question-violet); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="amber"] { --section-accent: var(--question-amber); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="blue"] { --section-accent: var(--question-blue); }
+.workspace-section-nav[data-section="Questões"] a[data-tone] { transition: none; }
+.workspace-section-nav a[data-tone]:focus-visible { outline-color: var(--section-accent); }
 @media (prefers-reduced-motion: reduce) { .workspace-section-nav a[data-tone] { transition: none; } }
 @media (forced-colors: active) {
   .workspace-section-nav { background: Canvas; }

@@ -257,10 +257,10 @@ function DesafioDiario() {
                 <div><strong>{questions.length.toString().padStart(2, "0")}</strong><span>questões disponíveis</span></div>
                 <div><strong>{new Set(questions.map(q => q.subject)).size.toString().padStart(2, "0")}</strong><span>disciplinas na rodada</span></div>
               </div>
-              <details className="daily-briefing-subjects">
-                <summary>Disciplinas deste desafio <BookOpenCheck size={16} /></summary>
+              <div className="daily-briefing-subjects">
+                <span className="daily-briefing-subjects__label"><BookOpenCheck size={16} /> Disciplinas deste desafio</span>
                 <ul className="daily-subjects">{Array.from(new Set(questions.map(q => q.subject))).map(subject => <li key={subject}>{subject}</li>)}</ul>
-              </details>
+              </div>
               <div className="daily-round__renewal"><Sparkles size={18} /><p><strong>Amanhã, uma nova oportunidade.</strong><span>Até {GUEST_DAILY_LIMIT} respostas por dia neste aparelho. Renova à meia-noite do Acre.</span></p></div>
               <Link to="/auth" search={{mode:"register"}} className="daily-register">Conheça a preparação completa <ArrowRight size={15} /></Link>
             </aside>
@@ -388,9 +388,9 @@ function QuestionPlayer({
                   Questão {index + 1} <span>de {total}</span>
                 </h2>
               </div>
-            </div>
-            <div className="question-timing-row" aria-label="Tempo de resolução">
-              <QuestionTimer seconds={seconds} completed={answered} paused={paused} />
+              <div className="question-timing-row" aria-label="Tempo de resolução">
+                <QuestionTimer seconds={seconds} completed={answered} paused={paused} compact />
+              </div>
             </div>
             <div className="daily-question-meta">
               <Badge>{question.board}</Badge>
@@ -414,8 +414,10 @@ function QuestionPlayer({
                 </div>
               </details>
             )}
-            <QuestionCode question={question} />
-            <ReadingSizeInline className="justify-end" />
+            <div className="daily-toolbar-row">
+              <QuestionCode question={question} className="daily-question-code" />
+              <ReadingSizeInline />
+            </div>
             <QuestionProse text={parsed.stem} className="text-base font-medium md:text-lg" />
             <QuestionFigures urls={question.figures} illustrations={parsed.illustrations} />
           </CardContent>

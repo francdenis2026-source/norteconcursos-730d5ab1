@@ -2,6 +2,7 @@ import type { Question } from "./questionFormat";
 import { examKey } from "./questionFormat";
 import { needsMissingSupportText } from "./questionText";
 import { parseQuestionCode, questionCode } from "./questionIdentity";
+import { dedupeSharedExamItems } from "./questionDuplicates";
 import { trainerCollectionQuestions } from "./trainerFilters";
 import {
   questionContestValue,
@@ -31,20 +32,39 @@ export function searchQuestionCatalog(catalog: Question[], query: string) {
       )
     : catalog;
 }
+// Mesma contagem do Treinador de questões: o mesmo item cadastrado para mais de um cargo
+// da mesma prova (ex.: Agente e Papiloscopista) é unido num só, senão o Acervo mostrava mais
+// questões do que o aluno realmente consegue treinar nesse filtro.
 export function availableQuestionBank(catalog: Question[], collection: BankCollection) {
-  return trainerCollectionQuestions(catalog, collection).filter((q) => !needsMissingSupportText(q));
+  return dedupeSharedExamItems(
+    trainerCollectionQuestions(catalog, collection).filter((q) => !needsMissingSupportText(q)),
+  );
+}
+/** Published training inventory across both preparations; private notebooks stay separate. */
+export function publishedQuestionBank(catalog: Question[]) {
+  return [
+    ...availableQuestionBank(catalog, "contests"),
+    ...availableQuestionBank(catalog, "enem"),
+  ].filter((question) => question.source !== "personal");
 }
 /** Only official questions belong to a paper; authored practice must not inflate its total. */
 export function questionBankExams(catalog: Question[]) {
   const groups = new Map<
     string,
-    { key: string; question: Question; count: number; subjects: Set<string> }
+    { key: string; question: Question; count: number; subjects: Set<string>; questions: Question[] }
   >();
   for (const question of catalog) {
     if (!isAppliedExamQuestion(question)) continue;
     const key = examKey(question);
-    const group = groups.get(key) ?? { key, question, count: 0, subjects: new Set<string>() };
+    const group = groups.get(key) ?? {
+      key,
+      question,
+      count: 0,
+      subjects: new Set<string>(),
+      questions: [],
+    };
     group.count++;
+    group.questions.push(question);
     group.subjects.add(question.subject);
     groups.set(key, group);
   }

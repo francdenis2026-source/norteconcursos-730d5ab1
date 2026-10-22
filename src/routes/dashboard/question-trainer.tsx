@@ -1,4 +1,5 @@
 import "@/styles/question-workspace.css";
+import preparationAreasArt from "@/assets/questions/preparation-areas.webp";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useResponseSeconds } from "@/hooks/useResponseSeconds";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -338,7 +339,8 @@ function QuestionTrainer() {
   // Vindos do cronograma: matéria do plano (pode juntar várias do banco) e assunto classificado por palavras-chave.
   const [area, setArea] = React.useState(routeFilters.area || "all");
   const [topic, setTopic] = React.useState(routeFilters.topic || "all");
-  const autoStart = React.useRef(routeFilters.go === "1");
+  const [resumeRequested, setResumeRequested] = React.useState(false);
+  const [resumeAvailable, setResumeAvailable] = React.useState(false);
   const [difficulty, setDifficulty] = React.useState("all");
   const [currency, setCurrency] = React.useState(routeFilters.currency || "all");
   // O filtro "Atual" é do Essencial para cima (durante o período de testes todas as contas têm Essencial).
@@ -541,7 +543,8 @@ function QuestionTrainer() {
           ? "wrong"
           : "new",
     );
-    autoStart.current = routeFilters.go === "1";
+    setResumeRequested(false);
+    setResumeAvailable(false);
     pendingRestore.current = true;
   }, [
     law,
@@ -577,13 +580,16 @@ function QuestionTrainer() {
       !sessionsReady
     )
       return;
-    pendingRestore.current = false;
     try {
       const storageKey = `trainer-bookmark:${userId}`;
       const raw = localStorage.getItem(storageKey) ?? sessionStorage.getItem(storageKey);
       if (!raw) return;
       const restored = restoreTrainerBookmark(JSON.parse(raw), routeKey, subjectCatalog);
       if (!restored) return;
+      setResumeAvailable(true);
+      if (!resumeRequested) return;
+      pendingRestore.current = false;
+      setResumeAvailable(false);
       const b = restored.bookmark;
       sessionAnswers.current = new Map(
         (b.sessionAttempts ?? []).map(({ index, ...answer }) => [index, answer]),
@@ -633,7 +639,7 @@ function QuestionTrainer() {
       setDifficulty(f.difficulty);
       setLimit(f.limit);
       setOrderMode(f.orderMode === "exam" ? "exam" : "random");
-      autoStart.current = false;
+      setResumeRequested(false);
     } catch {
       /* Corrupt or unavailable storage is never a prerequisite for training. */
     }
@@ -647,6 +653,7 @@ function QuestionTrainer() {
     lockedSubject,
     lockedCollection,
     sessionsReady,
+    resumeRequested,
   ]);
   const examNotice = routeFilters.edition ? (
     <aside role="status" className="rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm">
@@ -918,6 +925,9 @@ function QuestionTrainer() {
       : undefined;
   const startTraining = () => {
     if (loading || authLoading || error || !canLoad) return;
+    pendingRestore.current = false;
+    setResumeAvailable(false);
+    setResumeRequested(false);
     responseIdRef.current = crypto.randomUUID();
     const orderedPool = orderMode === "random" ? shuffled(trainingPool) : [...trainingPool];
     const ordered =
@@ -956,73 +966,7 @@ function QuestionTrainer() {
     setStartedAt(Date.now());
     setStarted(true);
   };
-  // Veio com ?go=1 (cronograma, cursos, leis): começa direto, com 10 questões ainda não respondidas do assunto.
-  React.useEffect(() => {
-    if (!autoStart.current || loading || started || examEdition.isError) return;
-    if (routeFilters.edition) {
-      autoStart.current = false;
-      if (!trainingPool.length) {
-        setNotice(
-          "Não há questões elegíveis disponíveis desta prova para iniciar. Nenhuma questão de outra prova será incluída.",
-        );
-        return;
-      }
-      startTraining();
-      return;
-    }
-    if (pool.length === 0 && routeFilters.unseen === "1") {
-      autoStart.current = false;
-      setNotice(
-        "Não há questões novas disponíveis para este assunto no momento. Nenhuma questão já feita ou de outro assunto será incluída.",
-      );
-      return;
-    }
-    if (pool.length === 0) {
-      // assunto sem questões catalogadas: treina a matéria inteira em vez de abrir uma tela vazia
-      if (topic !== "all") {
-        setNotice(
-          "Ainda há poucas questões deste assunto específico; o treino usa a matéria inteira.",
-        );
-        setTopic("all");
-      }
-      return;
-    }
-    autoStart.current = false;
-    if (trainingPool.length === 0) {
-      setNotice(
-        practiceMode === "new"
-          ? "Você já respondeu todas as questões deste tema. Escolha “Reforço” para refazer as que errou ou outro assunto."
-          : "Não há questões para este modo de reforço neste tema.",
-      );
-      return;
-    }
-    // Link que pede um tamanho (ex.: prova inteira com limit=all): usa o fluxo normal de início, sem sorteio de 10.
-    if (routeFilters.limit) {
-      startTraining();
-      return;
-    }
-    setSessionReinforce(practiceMode === "all" || practiceMode === "wrong");
-    setLimit("10");
-    const count = trainerSessionSize(trainingPool.length, 10, dailyRemaining);
-    if (!count) {
-      setNotice(
-        "O limite de novas respostas foi atingido hoje. Você pode revisar questões já respondidas.",
-      );
-      return;
-    }
-    responseIdRef.current = crypto.randomUUID();
-    setQuestions(shuffled(trainingPool).slice(0, count));
-    sessionAnswers.current.clear();
-    setSaveError("");
-    setIndex(0);
-    setResults([]);
-    setSelected(null);
-    setStruck([]);
-    setAnswered(false);
-    setSupportNotice(false);
-    setStartedAt(Date.now());
-    setStarted(true);
-  }, [loading, started, pool, trainingPool, practiceMode, topic]);
+  // Links preselect filters; only the start button may create a session.
   const selectAppliedExam = (value: string) => {
     if (
       value !== "all" &&
@@ -1381,29 +1325,6 @@ function QuestionTrainer() {
         </Button>
       </Center>
     );
-  if (!started && !loading && routeFilters.edition && routeFilters.go === "1")
-    return (
-      <Center>
-        {autoStart.current ? (
-          <Loader2 className="h-7 w-7 animate-spin" />
-        ) : (
-          <Target className="h-8 w-8 text-primary" />
-        )}
-        <p role="status">
-          {autoStart.current
-            ? "Abrindo as questões da prova escolhida…"
-            : notice || "Treino encerrado. Suas respostas confirmadas permanecem no histórico."}
-        </p>
-        {!autoStart.current && catalog.length > 0 && (
-          <Button onClick={startTraining}>Resolver novamente esta prova</Button>
-        )}
-        <Button asChild variant="outline">
-          <Link to="/dashboard/edital" search={{ edition: routeFilters.edition }}>
-            Voltar ao meu edital
-          </Link>
-        </Button>
-      </Center>
-    );
   if (!started)
     return (
       <div className="trainer-workbench question-workspace" aria-busy={loading}>
@@ -1419,6 +1340,14 @@ function QuestionTrainer() {
             <ArrowRight aria-hidden="true" />
           </Link>
         </header>
+        {resumeAvailable && (
+          <aside className="flex flex-wrap items-center justify-between gap-3 rounded-xl border p-3">
+            <p className="text-sm">Você tem um treino salvo para esta seleção.</p>
+            <Button onClick={() => setResumeRequested(true)} disabled={loading}>
+              Continuar treino salvo
+            </Button>
+          </aside>
+        )}
         <ResumeSessions userId={userId} only="trainer" skipRoute={routeKey} compact />
         {loading && (
           <p role="status" className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -2406,6 +2335,7 @@ function TrainerSetup({
                 <button
                   key={collection}
                   type="button"
+                  data-preparation={collection}
                   aria-pressed={active}
                   disabled={!!lockedCollection && collection !== lockedCollection}
                   title={
@@ -2420,6 +2350,11 @@ function TrainerSetup({
                     setters.setContest(collection === "enem" ? "ENEM" : "all");
                   }}
                 >
+                  <span
+                    className="trainer-collection__art"
+                    aria-hidden="true"
+                    style={{ backgroundImage: `url("${preparationAreasArt}")` }}
+                  />
                   {collection === "enem" ? (
                     <GraduationCap aria-hidden="true" />
                   ) : (

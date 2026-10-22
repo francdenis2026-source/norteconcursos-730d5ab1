@@ -22,6 +22,7 @@ import { fetchAllRows } from "@/lib/catalog";
 import {
   parseBoardImport,
   planBoardImport,
+  toBoardExamRow,
   type BoardImportQuestion,
   type BoardImportPlan,
 } from "@/lib/questionImport";
@@ -186,7 +187,7 @@ function AdminQuestionsPage() {
         const chunk = plan.ready.slice(i, i + 100);
         const { data, error } = await supabase
           .from("board_exam_questions")
-          .insert(chunk)
+          .insert(chunk.map(toBoardExamRow))
           .select("id");
         if (error) {
           setResult({ inserted, ignored: plan.duplicates, complete: false });
@@ -314,9 +315,11 @@ function AdminQuestionsPage() {
             <Upload className="h-5 w-5" /> Importar provas
           </CardTitle>
           <CardDescription>
-            Escolha o arquivo <b>fgv_questions.json</b> (pasta <code>supabase/imports/fgv</code> do
-            projeto). O conteúdo é comparado no arquivo e no acervo, mesmo com outra numeração.
-            Questões novas entram “em revisão”; nenhum conteúdo existente é substituído.
+            Escolha o arquivo da banca — <b>fgv_questions.json</b> (pasta{" "}
+            <code>supabase/imports/fgv</code>) ou <b>idecan_questions.json</b> (pasta{" "}
+            <code>supabase/imports/idecan</code>) do projeto. O conteúdo é comparado no arquivo e no
+            acervo, mesmo com outra numeração. Questões novas entram “em revisão”; nenhum conteúdo
+            existente é substituído.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-3">

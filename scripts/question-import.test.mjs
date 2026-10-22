@@ -5,6 +5,7 @@ import {
   normalizeImportText,
   parseBoardImport,
   planBoardImport,
+  toBoardExamRow,
 } from "../src/lib/questionImport.ts";
 
 const question = (changes = {}) => ({
@@ -136,4 +137,45 @@ test("the actual repository import file remains accepted, including held visual 
   const repeated = planBoardImport(rows, rows);
   assert.equal(repeated.ready.length, 0);
   assert.equal(repeated.duplicates, 754);
+});
+
+test("the IDECAN repository import file is accepted and its review metadata survives the table mapping", () => {
+  const rows = parseBoardImport(
+    JSON.parse(
+      fs.readFileSync(
+        new URL("../supabase/imports/idecan/idecan_questions.json", import.meta.url),
+        "utf8",
+      ),
+    ),
+  );
+  assert.equal(rows.length, 177);
+  assert(rows.every((q) => q.content_status === "under_review"));
+  assert.equal(rows.filter((q) => q.support_text).length, 10);
+  assert.equal(rows.filter((q) => "legal_review" in q).length, 66);
+  assert.equal(rows.filter((q) => q.answer_key_status === "preliminar").length, 39);
+  const mapped = rows.map(toBoardExamRow);
+  assert(mapped.every((r) => !("legal_review" in r) && !("answer_key_status" in r)));
+  const verified = mapped.filter((_, i) => typeof rows[i].legal_review === "object");
+  assert.equal(verified.length, 66);
+  assert(
+    verified.every(
+      (r) =>
+        r.legal_review_required === false &&
+        r.law_version_checked_at === "2026-10-22T12:00:00Z" &&
+        Array.isArray(r.legal_basis) &&
+        r.legal_basis.length === 1 &&
+        String(r.legal_basis[0].url).startsWith("https://"),
+    ),
+  );
+  const preliminar = mapped.filter((_, i) => rows[i].answer_key_status === "preliminar");
+  assert.equal(preliminar.length, 39);
+  assert(
+    preliminar.every((r) =>
+      String(r.review_note).includes("Gabarito preliminar"),
+    ),
+  );
+  assert(mapped.filter((_, i) => rows[i].answer_key_status === "definitivo").every((r) => !r.review_note));
+  const repeated = planBoardImport(rows, rows);
+  assert.equal(repeated.ready.length, 0);
+  assert.equal(repeated.duplicates, 177);
 });

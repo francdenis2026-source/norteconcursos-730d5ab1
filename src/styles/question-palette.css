@@ -1,0 +1,15 @@
+/* Shared by the question pages and their navigation so each destination keeps its identity. */
+:root {
+  --question-teal: #137566;
+  --question-rose: #a84560;
+  --question-violet: #7650a0;
+  --question-amber: #8b6016;
+  --question-blue: #285f9e;
+}
+:root.dark {
+  --question-teal: #8ad8bf;
+  --question-rose: #eda3b7;
+  --question-violet: #c3a8eb;
+  --question-amber: #e8c27b;
+  --question-blue: #94bff1;
+}

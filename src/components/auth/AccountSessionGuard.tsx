@@ -42,26 +42,23 @@ export function AccountSessionGuard({ access, children }: { access: AccountAcces
     });
     monitor.current = session;
     void session.check(true);
-    const resume = () => { if (document.visibilityState !== 'hidden') void session.check(); };
+    // Realtime pushes an eviction the instant another device claims the account; the poll below
+    // is only a fallback for a dropped channel. Neither needs help from tab-switch or token-refresh
+    // churn, which used to force an extra check on every focus/visibilitychange and every silent
+    // auto-refresh (itself triggered by focus) — making a mere tab switch look like a logout.
     const channel = supabase.channel(`account-session:${userId}`)
       .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'active_user_sessions', filter: `user_id=eq.${userId}` }, () => { void session.check(); })
       .subscribe();
-    const poll = window.setInterval(() => { void session.check(); }, 2000);
-    window.addEventListener('focus', resume);
-    window.addEventListener('pageshow', resume);
-    window.addEventListener('online', resume);
-    document.addEventListener('visibilitychange', resume);
+    const reconnect = () => { if (document.visibilityState !== 'hidden') void session.check(); };
+    const poll = window.setInterval(() => { void session.check(); }, 60_000);
+    window.addEventListener('online', reconnect);
     return () => {
       session.dispose(); monitor.current = null;
       void supabase.removeChannel(channel);
       window.clearInterval(poll);
-      window.removeEventListener('focus', resume);
-      window.removeEventListener('pageshow', resume);
-      window.removeEventListener('online', resume);
-      document.removeEventListener('visibilitychange', resume);
+      window.removeEventListener('online', reconnect);
     };
   }, [access?.userId, access?.sessionKey, access?.claim]);
-  useEffect(() => { if (access) void monitor.current?.check(); }, [access?.accessToken]);
   if (pathname === '/' || state === 'verified' || (state === 'checking' && (pathname === '/auth' || pathname === '/admin'))) return children;
   return <SessionVerificationScreen state={state} onRetry={() => { void monitor.current?.check(true); }} />;
 }
