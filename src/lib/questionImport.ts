@@ -191,9 +191,9 @@ export interface BoardExamReviewMeta {
  */
 export function toBoardExamRow(q: BoardImportQuestion): Record<string, unknown> {
   const row: Record<string, unknown> = { ...q };
-  delete row.id;
-  delete row.import_content_key;
-  delete row.import_unique_key;
+  delete row["id"];
+  delete row["import_content_key"];
+  delete row["import_unique_key"];
   const review =
     q["legal_review"] && typeof q["legal_review"] === "object"
       ? (q["legal_review"] as BoardExamReviewMeta)
