@@ -1,8 +1,8 @@
+import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
-import { HomeRail } from "@/components/landing/HomeRail";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import {
@@ -53,9 +53,6 @@ import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
 import { HeroVideo } from "@/components/landing/HeroVideo";
 import { DailyChallengeBadge } from "@/components/landing/DailyChallengeBadge";
-import { PcprExamPromo } from "@/components/landing/PcprExamPromo";
-import { PcpiExamPromo } from "@/components/landing/PcpiExamPromo";
-import { PcscExamPromo } from "@/components/landing/PcscExamPromo";
 import { HomeAppNavigation } from "@/components/landing/HomeAppNavigation";
 import { ThemeToggle } from "@/components/landing/ThemeToggle";
 
@@ -498,96 +495,13 @@ function Index() {
           <div className="home-container">
             <div className="home-operations__heading">
               <Head
-                kicker="No seu radar"
-                lead="Provas para praticar agora e uma próxima oportunidade para começar a se preparar."
+                kicker="Seu foco começa no Acre"
+                lead="PC-AC em destaque. Provas da IDECAN e de outras bancas para transformar seu objetivo em prática."
               >
                 Seu próximo <em>objetivo.</em>
               </Head>
             </div>
-            <HomeRail className="home-opportunities" label="Oportunidades de concursos">
-              <article
-                className="home-opportunity home-opportunity--acre"
-                aria-labelledby="pcac-title"
-              >
-                <div className="home-opportunity__header">
-                  <div className="home-opportunity__image">
-                    <img
-                      src="/media/hero/pcac-capa.webp"
-                      alt="Capa PC-AC — Polícia Civil do Estado do Acre, com agente, viatura e identidade Norte Concursos"
-                      width={1672}
-                      height={940}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <span className="home-pcac-news" aria-hidden="true">
-                      <span>Banca definida</span>
-                      <strong>IDECAN</strong>
-                    </span>
-                  </div>
-                  <div className="home-opportunity__intro">
-                    <span className="home-status home-status--inline">
-                      <BadgeCheck /> Banca definida · IDECAN
-                    </span>
-                    <div className="home-opportunity__identity">
-                      <span className="home-eyebrow home-signal">PCAC 2026 · Pré-edital</span>
-                      <div>
-                        <img
-                          src="/media/brasao-acre-oficial.svg"
-                          alt="Brasão do Estado do Acre"
-                          width={32}
-                          height={32}
-                          loading="lazy"
-                        />
-                        <img
-                          src="/media/brasao-pcac-oficial.jpg"
-                          alt="Brasão da Polícia Civil do Acre"
-                          width={32}
-                          height={32}
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <h3 id="pcac-title">Polícia Civil do Acre</h3>
-                  </div>
-                </div>
-                <div className="home-opportunity__body">
-                  <details className="home-exam-details">
-                    <summary>O edital ainda não saiu. Antecipe-se.</summary>
-                    <p>
-                      O <strong>IDECAN</strong> foi escolhido para organizar o próximo concurso da
-                      Polícia Civil do Acre. A dispensa de licitação e sua ratificação foram
-                      publicadas no Diário Oficial do Estado de <time dateTime="2026-10-22">22 de
-                      outubro de 2026</time>, quinta-feira.
-                    </p>
-                    <p>
-                      <strong>O edital ainda não foi publicado. Sua preparação já pode começar.</strong>{" "}
-                      Antecipe seus estudos com o <strong>Norte Concursos</strong> e transforme seu
-                      objetivo em uma rotina de preparação.
-                    </p>
-                    <p>
-                      <strong>Seu futuro na Polícia Civil começa com o que você faz hoje.</strong>
-                    </p>
-                  </details>
-                  <div className="home-opportunity__bottom">
-                    <Link
-                      to="/auth"
-                      search={{ mode: "register" }}
-                      className="home-button home-button--secondary"
-                    >
-                      Quero me preparar
-                      <ArrowUpRight />
-                    </Link>
-                    <small>
-                      Campanha educacional independente, sem vínculo ou endosso do Governo do Acre
-                      ou da Polícia Civil.
-                    </small>
-                  </div>
-                </div>
-              </article>
-              <PcscExamPromo />
-              <PcprExamPromo />
-              <PcpiExamPromo />
-            </HomeRail>
+            <ContestShowcase />
           </div>
         </section>
 

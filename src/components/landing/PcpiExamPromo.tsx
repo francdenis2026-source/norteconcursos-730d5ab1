@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, FileCheck2 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { useExamAvailability } from "@/hooks/useExamAvailability";
+import { usePcpiAvailability } from "@/hooks/usePcpiAvailability";
 import { PCPI_EXAM, pcpiTrainerSearch } from "@/lib/pcpiExam";
 
-const PUBLIC_CHECK = { checkedAt: "19/10/2026", counts: [80, 74] };
 export function PcpiExamPromo() {
   const { isAuthenticated } = useAuthStatus();
-  const { counts, checkedAt, loading } = useExamAvailability(PCPI_EXAM, PUBLIC_CHECK);
+  const { counts, checkedAt, loading } = usePcpiAvailability();
   return (
     <article
       id="prova-pcpi"
