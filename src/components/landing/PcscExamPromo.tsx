@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarCheck, FileCheck2, Scale, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, FileCheck2, Scale, ShieldCheck, Sparkles } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { PCSC_EXAM, PCSC_TRAINER_SEARCH } from "@/lib/pcscExam";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
@@ -41,9 +41,13 @@ export function PcscExamPromo() {
   return (
     <article
       id="prova-pcsc"
-      className="home-opportunity home-opportunity--pcsc"
+      className="home-opportunity home-opportunity--pcsc home-opportunity--featured"
       aria-labelledby="pcsc-title"
     >
+      <span className="home-pcsc-badge">
+        <Sparkles aria-hidden="true" />
+        Novo
+      </span>
       <div className="home-opportunity__header">
         <div className="home-opportunity__image">
           <img
@@ -57,7 +61,7 @@ export function PcscExamPromo() {
         </div>
         <div className="home-opportunity__intro">
           <div className="home-opportunity__identity">
-            <span className="home-eyebrow home-signal">
+            <span className="home-eyebrow home-signal home-signal--gold">
               Prova IDECAN {PCSC_EXAM.year} · mesma banca da PC-AC
             </span>
             <span className="home-exam-icon">

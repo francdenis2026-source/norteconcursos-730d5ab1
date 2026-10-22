@@ -110,3 +110,14 @@
   :root:is(.dark, :not(.dark)) .home.home .home-signal:is(.home-eyebrow, .home-preparation__eyebrow, .home-testing__status) { box-shadow: none; background: Canvas; }
   :root:is(.dark, :not(.dark)) .home.home .home-hero__study-entry .home-testing > .home-testing__link { background: Canvas; color: LinkText; }
 }
+
+/* PC-SC: eyebrow com acabamento dourado sólido, para destacar o card entre os demais. */
+:root:is(.dark, :not(.dark)) .home.home .home-eyebrow.home-signal--gold {
+  --signal-ink: var(--brass-foreground);
+  border-left-color: var(--brass-foreground);
+  background: var(--brass);
+  box-shadow: none;
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home .home-eyebrow.home-signal--gold { background: Canvas; }
+}
