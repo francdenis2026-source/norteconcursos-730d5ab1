@@ -50,39 +50,62 @@ export const Route = createFileRoute("/dashboard/perfil-bancas")({
 type Row = Record<string, unknown>;
 type Page = PromiseLike<{ data: Row[] | null; error: unknown }>;
 
+function rowToBancaQuestion(r: Row, boardField: string, textField: string): BancaQuestion | null {
+  const board = canonicalBoard(String(r[boardField] ?? ""));
+  if (!board || board === "Não informada") return null;
+  return {
+    board,
+    contest: String(r["contest_name"] ?? ""),
+    career: unifiedCareer(
+      canonicalCareerName(String(r["career_name"] ?? "")),
+      String(r["contest_name"] ?? ""),
+    ),
+    rawCareer: String(r["career_name"] ?? ""),
+    org: panoramaOrganization(String(r["contest_name"] ?? "")).family,
+    year: Number(r["exam_year"]),
+    subject: canonicalSubject(String(r["subject"] ?? "")),
+    topic: r["tested_topic"] ? String(r["tested_topic"]) : null,
+    answer: String(r["official_answer"] ?? ""),
+    item: r["item_number"] == null ? null : Number(r["item_number"]),
+    text: String(r[textField] ?? ""),
+  };
+}
+
 async function loadQuestions(): Promise<BancaQuestion[]> {
-  const rows = await fetchAllRows<Row>(
-    (from, to) =>
-      supabase
-        .from("official_exam_questions")
-        .select(
-          "exam_board,contest_name,career_name,exam_year,subject,tested_topic,official_answer,item_number,question_text",
-        )
-        .eq("content_status", "active")
-        .neq("official_answer", "X")
-        .order("id")
-        .range(from, to) as unknown as Page,
-  );
+  const [officialRows, boardRows] = await Promise.all([
+    fetchAllRows<Row>(
+      (from, to) =>
+        supabase
+          .from("official_exam_questions")
+          .select(
+            "exam_board,contest_name,career_name,exam_year,subject,tested_topic,official_answer,item_number,question_text",
+          )
+          .eq("content_status", "active")
+          .neq("official_answer", "X")
+          .order("id")
+          .range(from, to) as unknown as Page,
+    ),
+    fetchAllRows<Row>(
+      (from, to) =>
+        supabase
+          .from("board_exam_questions")
+          .select(
+            "board,contest_name,career_name,exam_year,subject,tested_topic,official_answer,item_number,stem",
+          )
+          .eq("content_status", "active")
+          .neq("official_answer", "X")
+          .order("id")
+          .range(from, to) as unknown as Page,
+    ),
+  ]);
   const out: BancaQuestion[] = [];
-  for (const r of rows) {
-    const board = canonicalBoard(String(r["exam_board"] ?? ""));
-    if (!board || board === "Não informada") continue;
-    out.push({
-      board,
-      contest: String(r["contest_name"] ?? ""),
-      career: unifiedCareer(
-        canonicalCareerName(String(r["career_name"] ?? "")),
-        String(r["contest_name"] ?? ""),
-      ),
-      rawCareer: String(r["career_name"] ?? ""),
-      org: panoramaOrganization(String(r["contest_name"] ?? "")).family,
-      year: Number(r["exam_year"]),
-      subject: canonicalSubject(String(r["subject"] ?? "")),
-      topic: r["tested_topic"] ? String(r["tested_topic"]) : null,
-      answer: String(r["official_answer"] ?? ""),
-      item: r["item_number"] == null ? null : Number(r["item_number"]),
-      text: String(r["question_text"] ?? ""),
-    });
+  for (const r of officialRows) {
+    const q = rowToBancaQuestion(r, "exam_board", "question_text");
+    if (q) out.push(q);
+  }
+  for (const r of boardRows) {
+    const q = rowToBancaQuestion(r, "board", "stem");
+    if (q) out.push(q);
   }
   return out;
 }
