@@ -1,9 +1,5 @@
 /* Compact question journey. Reading surfaces keep their own comfortable typography. */
 :root .question-workspace {
-  --question-blue: #285f9e;
-  --question-teal: #137566;
-  --question-violet: #7650a0;
-  --question-rose: #a84560;
   --question-accent: var(--question-teal);
   --trainer-accent: var(--question-accent);
   --trainer-line: var(--border);
@@ -15,12 +11,7 @@
   max-width: none;
   container: questions / inline-size;
 }
-:root.dark .question-workspace {
-  --question-blue: #94bff1;
-  --question-teal: #8ad8bf;
-  --question-violet: #c3a8eb;
-  --question-rose: #eda3b7;
-}
+
 :root .app-shell .question-workspace :is(h2, h3) {
   font-family: var(--font-sans);
   letter-spacing: -0.015em;
@@ -502,6 +493,9 @@
   --question-accent: var(--question-rose);
 }
 :root .question-workspace.question-collections {
+  --question-accent: var(--question-amber);
+}
+:root .question-workspace.question-catalog {
   --question-accent: var(--question-blue);
 }
 /* Compact resumable session; the drawer's confirmation and saved filters stay unchanged. */

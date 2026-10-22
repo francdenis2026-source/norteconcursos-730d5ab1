@@ -279,3 +279,26 @@
 .workspace-section-nav__item { display: inline-flex; align-items: center; flex: none; gap: 4px; }
 .workspace-section-nav__segment { flex: none; margin-inline: 8px 4px; padding-left: 10px; border-left: 1px solid var(--border); color: var(--foreground); font-size: 10px; font-weight: 700; white-space: nowrap; }
 .workspace-section-nav__item:first-child .workspace-section-nav__segment { border-left: 0; padding-left: 0; margin-left: 0; }
+
+/* Question destinations: color identifies the tool; selection also has an underline. */
+.workspace-section-nav[data-section="Questões"] a[data-tone="teal"] { --section-accent: var(--question-teal); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="rose"] { --section-accent: var(--question-rose); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="violet"] { --section-accent: var(--question-violet); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="amber"] { --section-accent: var(--question-amber); }
+.workspace-section-nav[data-section="Questões"] a[data-tone="blue"] { --section-accent: var(--question-blue); }
+.workspace-section-nav[data-section="Questões"] a[data-tone] { color: var(--foreground); transition: none; }
+.workspace-section-nav[data-section="Questões"] a[data-tone] > svg { color: var(--section-accent); }
+.workspace-section-nav[data-section="Questões"] a[data-tone]:hover { background: color-mix(in srgb, var(--section-accent) 6%, var(--card)); border-color: color-mix(in srgb, var(--section-accent) 22%, var(--border)); }
+.workspace-section-nav[data-section="Questões"] a[data-tone][aria-current="page"] {
+  color: var(--section-accent);
+  border-color: color-mix(in srgb, var(--section-accent) 30%, var(--border));
+  background: color-mix(in srgb, var(--section-accent) 10%, var(--card));
+  box-shadow: inset 0 -2px 0 var(--section-accent);
+}
+.workspace-section-nav[data-section="Questões"] a[data-tone]:focus-visible { outline-color: var(--section-accent); }
+@media (forced-colors: active) {
+  .workspace-section-nav[data-section="Questões"] a[data-tone] { color: LinkText; }
+  .workspace-section-nav[data-section="Questões"] a[data-tone] > svg { color: inherit; }
+  .workspace-section-nav[data-section="Questões"] a[data-tone][aria-current="page"] { background: Highlight; color: HighlightText; border-color: Highlight; box-shadow: none; text-decoration: underline; text-underline-offset: 4px; }
+  .workspace-section-nav[data-section="Questões"] a[data-tone]:focus-visible { outline-color: Highlight; }
+}
