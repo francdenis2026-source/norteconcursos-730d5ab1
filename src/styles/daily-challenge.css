@@ -96,15 +96,15 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-session__tip svg { flex-shrink: 0; color: var(--daily-accent); }
 .daily-session__renewal { font-size: 10px; color: var(--muted-foreground); margin-top: 20px; }
 .daily-question-column { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; border: 1px solid var(--daily-edge); border-radius: 18px; overflow: hidden; background: var(--daily-glass); }
-.daily-reading { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; padding: clamp(16px, 2.3vw, 30px); }
+.daily-reading { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; padding: clamp(14px, 2vw, 24px); }
 .daily-reading:focus-visible { outline: 2px solid var(--daily-accent); outline-offset: -4px; }
 .daily-question-card { background: transparent; border: 0; box-shadow: none; border-radius: 0; gap: 0; padding: 0; }
 .daily-question-card > div { padding: 0; }
-.daily-question-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
-.daily-question-heading h2 { font-size: 25px; font-weight: 700; margin-top: 4px; }
+.daily-question-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.daily-question-heading h2 { font-size: 22px; font-weight: 700; margin-top: 2px; }
 .daily-question-heading h2 > span { font-size: 14px; font-weight: 400; color: var(--muted-foreground); }
-.daily-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-.daily-reading > :not(:first-child) { margin-top: 18px; }
+.daily-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.daily-reading > :not(:first-child) { margin-top: 10px; }
 .daily-toolbar-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 .daily-question-code { margin: 0; flex: 0 1 auto; }
 .daily-answer-dock { display: grid; grid-template-columns: auto minmax(180px, 1fr) auto; align-items: center; gap: 16px; padding: 16px 24px; border-top: 1px solid var(--daily-edge); background: var(--card); }
@@ -204,33 +204,12 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-study-extra { border-top: 1px solid var(--daily-edge); padding-top: 12px; }
 .daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
 
-/* A freestanding instrument for the daily challenge, with its readout below the dial. */
-.daily-question-card .question-timing-row { justify-content: center; margin-block: 0 14px; }
-.daily-question-card .question-stopwatch .tactical-clock--question {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: auto;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-}
-.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face {
-  width: clamp(72px, 7vw, 92px);
-}
-.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__display {
-  align-items: center;
-  min-width: 0;
-  gap: 4px;
-  padding: 0;
-  border: 0;
-  text-align: center;
-}
-.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__time { font-size: 20px; }
-.daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__status { justify-content: center; }
-@media (max-height: 620px) and (orientation: landscape) {
-  .daily-question-card .question-stopwatch .tactical-clock--question .tactical-clock__face { width: 112px; }
+/* A compact inline readout next to the heading — the full dial ate the room the stem needs. */
+.daily-question-heading .question-timing-row { flex-shrink: 0; padding-top: 2px; }
+.daily-question-heading .tactical-clock--compact { gap: 6px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 28px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 15px; color: var(--foreground); }
+.daily-question-heading .tactical-clock--compact .tactical-clock__status { font-size: 9px; }
+@media (max-width: 1000px) {
+  .daily-question-heading .tactical-clock--compact .tactical-clock__status { display: none; }
 }

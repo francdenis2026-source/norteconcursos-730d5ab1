@@ -388,9 +388,9 @@ function QuestionPlayer({
                   Questão {index + 1} <span>de {total}</span>
                 </h2>
               </div>
-            </div>
-            <div className="question-timing-row" aria-label="Tempo de resolução">
-              <QuestionTimer seconds={seconds} completed={answered} paused={paused} />
+              <div className="question-timing-row" aria-label="Tempo de resolução">
+                <QuestionTimer seconds={seconds} completed={answered} paused={paused} compact />
+              </div>
             </div>
             <div className="daily-question-meta">
               <Badge>{question.board}</Badge>
