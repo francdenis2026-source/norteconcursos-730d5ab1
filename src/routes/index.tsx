@@ -74,6 +74,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...SHARE_IMAGE_META,
     ],
     links: [
       { rel: "preload", as: "image", href: "/media/hero/hero-norte-recorte.webp", fetchPriority: "high" },

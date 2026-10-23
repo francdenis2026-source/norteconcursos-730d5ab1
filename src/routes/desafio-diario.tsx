@@ -65,6 +65,7 @@ export const Route = createFileRoute("/desafio-diario")({
         content:
           "Responda 10 questões oficiais de concursos públicos por dia, sem cadastro. Mesmas questões pra todo mundo, todo dia.",
       },
+      ...SHARE_IMAGE_META,
     ],
   }),
 });

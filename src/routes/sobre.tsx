@@ -4,7 +4,9 @@ import { FounderStory } from "@/components/landing/FounderStory";
 import { InstitutionalWindow, WindowSections } from "@/components/landing/InstitutionalWindow";
 export const Route = createFileRoute("/sobre")({
   component: About,
-  head: () => ({ meta: [{ title: "Nossa história | Norte Concursos" }] }),
+  head: () => ({
+    meta: [{ title: "Nossa história | Norte Concursos" }, ...SHARE_IMAGE_META],
+  }),
 });
 function About() {
   return (

@@ -11,7 +11,7 @@ export const SHARE_IMAGE_URL = `https://norteconcursos.xyz${shareImage.url}`;
 export const SHARE_IMAGE_ALT =
   "Brasão Carreiras Policiais da Norte Concursos: escudo metálico dourado com metade crânio e metade pistola, sobre uma bancada de ferramentas de precisão.";
 
-/** Conjunto de tags aplicado em toda página pública que abre a miniatura. */
+/** Tags de miniatura aplicadas em toda página pública que abre a imagem. */
 export const SHARE_IMAGE_META = [
   { property: "og:image", content: SHARE_IMAGE_URL },
   { property: "og:image:width", content: "1200" },
@@ -19,4 +19,4 @@ export const SHARE_IMAGE_META = [
   { property: "og:image:alt", content: SHARE_IMAGE_ALT },
   { name: "twitter:image", content: SHARE_IMAGE_URL },
   { name: "twitter:image:alt", content: SHARE_IMAGE_ALT },
-] as const satisfies ReadonlyArray<Record<string, string>>;
+];

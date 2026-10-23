@@ -21,7 +21,9 @@ import "@/styles/support-center.css";
 
 export const Route = createFileRoute("/suporte")({
   component: Support,
-  head: () => ({ meta: [{ title: "Central de suporte | Norte Concursos" }] }),
+  head: () => ({
+    meta: [{ title: "Central de suporte | Norte Concursos" }, ...SHARE_IMAGE_META],
+  }),
 });
 const FAQ = [
   [
