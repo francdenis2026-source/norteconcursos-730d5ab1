@@ -57,7 +57,7 @@ O perfil mantém os denominadores de **100 posições impressas por caderno**, i
 
 ## Um único SQL para registrar a continuação
 
-Execute [aplicar-continuacao.sql](aplicar-continuacao.sql) no SQL Editor como administrador, depois da carga e da primeira revisão já aplicadas. Ele atualiza apenas os 177 candidatos que estavam pendentes, com comparação do estado/payload esperado e auditoria de antes/depois. Não sobrescreve os 23 pareceres anteriores, mesmo se receberam notas posteriores.
+Para o SQL Editor, execute as **seis partes menores** seguindo [partes/LEIAME.md](partes/LEIAME.md), depois da carga e da primeira revisão já aplicadas. Substitua o conteúdo do editor a cada parte; não cole todas juntas. O arquivo único [aplicar-continuacao.sql](aplicar-continuacao.sql) fica reservado à conexão direta ao banco, pois excedeu o limite do editor. Ele atualiza apenas os 177 candidatos que estavam pendentes, com comparação do estado/payload esperado e auditoria de antes/depois. Não sobrescreve os 23 pareceres anteriores, mesmo se receberam notas posteriores.
 
 A operação é transacional: um conflito desfaz todo o lote e preserva a decisão existente. Reexecutar a mesma decisão não duplica auditoria. Não modifica permissões, estudos dos alunos nem questões ativas.
 
