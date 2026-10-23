@@ -39,6 +39,13 @@ export function acreDayStartISO(now: Date = platformDate()): string {
   return `${acreDateKey(now)}T05:00:00.000Z`;
 }
 
+/** Início e fim (exclusivo), em UTC ISO, de um dia civil do Acre (AAAA-MM-DD) — para filtrar "nesse dia" no banco. */
+export function acreDayRangeISO(dayKey: string): [string, string] {
+  const start = `${dayKey}T05:00:00.000Z`;
+  const end = new Date(new Date(start).getTime() + 86_400_000).toISOString();
+  return [start, end];
+}
+
 /** 3725 -> "01:02:05" */
 export function formatCountdown(totalSeconds: number): string {
   const t = Math.min(86399, Math.max(0, Math.floor(totalSeconds)));
