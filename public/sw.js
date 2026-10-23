@@ -26,7 +26,7 @@ const SHELL_ASSETS = [
   "/media/loading/norte-abertura-hd.webp",
   "/media/hero/home-bg-texture.webp",
   "/media/hero/norte-atmosphere.webp",
-  "/media/brand/distintivo-carreiras-hd-v2.webp",
+  "/media/brand/norte-identity/emblema-premium.webp",
 ];
 const MAX_ASSETS = 220;
 const MAX_PAGES = 25;

@@ -1,5 +1,5 @@
-export const LIGHT_INSIGNIA = "/media/brand/carreiras-marca-claro-hd.webp";
-export const DARK_INSIGNIA = "/media/brand/distintivo-carreiras-hd.webp";
+export const LIGHT_INSIGNIA = "/media/brand/norte-identity/emblema.svg";
+export const DARK_INSIGNIA = "/media/brand/norte-identity/emblema-premium.webp";
 
 // Retain both decoded surfaces so the first theme switch needs no image work.
 let surfaces: HTMLImageElement[] | undefined;

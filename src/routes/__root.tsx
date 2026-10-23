@@ -141,16 +141,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content",
       },
-      { title: "Norte Concurso" },
+      { title: "Norte Concursos" },
       {
         name: "description",
         content: "Preparação inteligente e personalizada para concursos públicos.",
       },
-      { name: "author", content: "Norte Concurso" },
-      { property: "og:title", content: "Norte Concurso" },
+      { name: "author", content: "Norte Concursos" },
+      { property: "og:title", content: "Norte Concursos" },
       { property: "og:description", content: "Estude com direção. Evolua com clareza." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:site_name", content: "Norte Concursos" },
+      { property: "og:image", content: "https://norteconcursos.xyz/media/brand/norte-identity/compartilhamento.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Norte Concursos — Polícia, Carreiras e Segurança" },
+      { name: "twitter:image", content: "https://norteconcursos.xyz/media/brand/norte-identity/compartilhamento.png" },
+      { name: "twitter:image:alt", content: "Nova identidade Norte Concursos" },
       { name: "theme-color", content: "#f4f5f6" },
       // Meta tags de app-shell: no celular, adicionar à tela inicial abre em
       // modo standalone (sem barra de endereço do navegador), como um app nativo.
@@ -190,7 +197,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <style dangerouslySetInnerHTML={{ __html: INITIAL_LOADING_CSS }} />
         <link rel="preload" as="image" href={INITIAL_LOADING_ART} fetchPriority="high" type="image/webp" />
         <link rel="preload" as="image" href="/media/brand/norte-identity/emblema.svg" type="image/svg+xml" />
-        <link rel="preload" as="image" href={LIGHT_INSIGNIA} type="image/webp" />
+        <link rel="preload" as="image" href={LIGHT_INSIGNIA} type="image/svg+xml" />
         <link rel="preload" as="image" href={DARK_INSIGNIA} type="image/webp" />
         <HeadContent />
       </head>

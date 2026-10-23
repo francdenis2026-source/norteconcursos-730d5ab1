@@ -5,6 +5,14 @@ import cairosvg
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'public/media/brand/norte-identity'
 
+# Social crawlers require a public raster image with an absolute metadata URL.
+from PIL import Image
+share=Image.new("RGB", (1200,630), "#14212A")
+logo=Image.open(OUT/"logo-premium.png").convert("RGBA")
+logo.thumbnail((420,510), Image.Resampling.LANCZOS)
+share.paste(logo, ((1200-logo.width)//2,(630-logo.height)//2), logo)
+share.save(OUT/"compartilhamento.png", optimize=True)
+
 def nested(name,x,y,w,h):
     raw=(OUT/name).read_text()
     raw=re.sub(r'^<svg[^>]*>',f'<svg x="{x}" y="{y}" width="{w}" height="{h}" viewBox="0 0 '+('620 640' if name.startswith('brasao') else '512 700')+'">',raw)
