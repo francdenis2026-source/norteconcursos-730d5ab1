@@ -445,3 +445,136 @@
   }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image { display: none; }
 }
+
+
+/* Desktop viewport-fit layout: never crop content to force a one-screen hero.
+@media (min-width: 1101px) {
+  :root:is(.dark, :not(.dark)) .home.home {
+    --home-desktop-gutter: clamp(24px, 3.6vw, 68px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-container {
+    width: min(1440px, calc(100% - 2 * var(--home-desktop-gutter)));
+    max-width: 100%;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    /* Fill an ordinary viewport; grow naturally when content needs more room. */
+    min-height: max(620px, calc(100svh - 76px));
+    height: auto;
+    overflow-x: clip;
+    overflow-y: visible;
+    background-position: center center, right -22px bottom;
+    background-size: 100% 100%, auto min(94svh, 920px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: max(620px, calc(100svh - 76px));
+    height: auto;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-content: center;
+    justify-content: stretch;
+    padding-block: clamp(20px, 3vh, 42px) clamp(18px, 2.6vh, 34px);
+    gap: clamp(14px, 2vh, 24px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__grid {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(48%, 600px);
+    max-width: 600px;
+    min-width: 0;
+    padding-right: 8px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    max-width: 15ch;
+    margin-block: 0;
+    font-size: clamp(36px, 3.9vw, 59px);
+    line-height: 1.07;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy > p {
+    font-size: clamp(14px, 1.05vw, 16px);
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-actions {
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: 12px;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust {
+    display: flex;
+    align-self: end;
+    max-width: min(100%, 850px);
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding-block: 0 !important;
+    margin: 0 !important;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust li {
+    font-size: 12px;
+    min-height: 30px;
+  }
+  /* Other homepage sections flow with their content rather than clipping it. */
+  :root:is(.dark, :not(.dark)) .home.home #plataforma .home-preparation__band,
+  :root:is(.dark, :not(.dark)) .home.home #concursos .home-container,
+  :root:is(.dark, :not(.dark)) .home.home .home-plans--insignia > .home-container {
+    min-width: 0;
+    height: auto;
+    max-height: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #concursos .contest-catalog {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1101px) and (max-width: 1370px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(52%, 565px);
+    max-width: 565px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(36px, 3.8vw, 52px);
+  }
+}
+@media (min-width: 1101px) and (max-height: 800px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero,
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: max(610px, calc(100svh - 76px));
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    padding-block: 16px;
+    gap: 10px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(35px, 3.45vw, 49px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: 8px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-actions {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1101px) and (max-height: 630px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero,
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    padding-block: 20px;
+  }
+}
