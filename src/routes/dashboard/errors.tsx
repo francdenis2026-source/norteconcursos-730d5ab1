@@ -51,7 +51,7 @@ import {
   splitExplanation,
   type Question,
 } from "@/lib/questionFormat";
-import { PageHero, LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { toast } from "sonner";
 import {
   Select,
@@ -434,7 +434,12 @@ function ErrorsPage() {
           </>
         }
         description="Revise as questões que você errou e acompanhe o que já dominou."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={AlertCircle} label="No caderno" value={allErrors.length} />
+          <HeroStat icon={History} label="Para revisar" value={reviewQueue.length} />
+        </div>
+      </PageHero>
       <div className="question-workspace__toolbar" aria-label="Filtrar e revisar erros">
         <Select value={filterSubject} onValueChange={setFilterSubject}>
           <SelectTrigger className="w-full sm:w-[210px]">

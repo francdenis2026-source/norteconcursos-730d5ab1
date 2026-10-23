@@ -62,7 +62,7 @@ import React from "react";
 import { simulatorClock } from "@/lib/simulatorClock";
 import { createPortal } from "react-dom";
 import { useQueryClient } from "@tanstack/react-query";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -1097,6 +1097,20 @@ function ProfessionalSimulator() {
             {scopedCatalog.length.toLocaleString("pt-BR")} questões disponíveis •{" "}
             {new Set(scopedCatalog.map((q) => q.subject)).size} disciplinas
           </span>
+          <div className="page-hero__stats">
+            <HeroStat icon={History} label="Últimos simulados" value={history.length} />
+            <HeroStat
+              icon={Target}
+              label="Aproveitamento médio"
+              value={
+                history.length
+                  ? `${Math.round(
+                      history.reduce((sum, item) => sum + item.accuracy, 0) / history.length,
+                    )}%`
+                  : "—"
+              }
+            />
+          </div>
           {isEnemMode && (
             <Link to="/dashboard/enem" className="mt-3 inline-block text-sm underline">
               Voltar à área ENEM

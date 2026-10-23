@@ -8,10 +8,12 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { User, Mail, LogOut } from "lucide-react";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { PlanStatusCard } from "@/components/dashboard/PlanStatusCard";
 import { AvatarUploader } from "@/components/dashboard/AvatarUploader";
 import { normalizeUppercase } from "@/lib/utils";
+import { ShieldCheck, CheckCircle2 } from "lucide-react";
+import { SUBSCRIPTION_PLANS } from "@/lib/subscriptions.config";
 
 export const Route = createFileRoute("/dashboard/profile")({
   component: ProfilePage,
@@ -107,7 +109,23 @@ function ProfilePage() {
           </>
         }
         description="Atualize seus dados pessoais e de contato. Para cobrança e recibos, use Plano e assinatura."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat
+            icon={ShieldCheck}
+            label="Plano atual"
+            value={
+              SUBSCRIPTION_PLANS.find((plan) => plan.id === user?.subscription_tier)?.name ??
+              "Gratuito"
+            }
+          />
+          <HeroStat
+            icon={CheckCircle2}
+            label="Conta"
+            value={user?.is_activated ? "Ativada" : "Pendente"}
+          />
+        </div>
+      </PageHero>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         <div className="space-y-5 md:col-span-2">

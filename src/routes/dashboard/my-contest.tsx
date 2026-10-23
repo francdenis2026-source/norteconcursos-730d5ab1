@@ -22,6 +22,7 @@ import {
 import { platformDate } from "@/lib/platformClock";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { HeroStat } from "@/components/dashboard/PageHero";
 
 const NEXT_STEPS = [
   {
@@ -93,6 +94,16 @@ function MyContestPage() {
               ? `${focusedContest.role} · ${focusedContest.examBoard}`
               : "Escolha o concurso que orienta sua preparação em Buscar concursos. Depois, consulte os tópicos em Estudar pelo edital."}
           </p>
+          {focusedContest && (
+            <div className="page-hero__stats">
+              <HeroStat
+                icon={Calendar}
+                label="Dias p/ a prova"
+                value={days !== null && Number.isFinite(days) ? Math.max(days, 0) : "—"}
+              />
+              <HeroStat icon={ClipboardList} label="Editais localizados" value={matches.length} />
+            </div>
+          )}
         </div>
         <Target className="edital-heading-icon" />
       </header>
