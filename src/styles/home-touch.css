@@ -448,3 +448,85 @@
     object-position: right bottom;
   }
 }
+
+
+/* Desktop-only: compose the agent directly INTO the hero background rather
+   than positioning an <img> in front of it. Mobile retains its existing art.
+   The shared wallpaper/clock remains visible through transparent areas. */
+@media (min-width: 1101px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(490px, min(72vh, 52vw), 790px);
+    background-color: transparent;
+    background-image:
+      linear-gradient(90deg,
+        color-mix(in srgb, var(--home-bg) 54%, transparent) 0%,
+        color-mix(in srgb, var(--home-bg) 34%, transparent) 35%,
+        transparent 63%),
+      radial-gradient(ellipse 34% 55% at 82% 58%,
+        rgb(193 155 93 / 12%) 0%,
+        transparent 82%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size:
+      100% 100%,
+      100% 100%,
+      auto var(--hero-agent-height);
+    background-position:
+      center center,
+      center center,
+      right clamp(4px, 3vw, 64px) bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    isolation: isolate;
+    overflow: clip;
+  }
+
+  /* The portrait is a background layer on desktop; never display a second copy. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    display: none;
+  }
+
+  /* Subtle fade into the shared page background at the hero's lower edge. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: clamp(28px, 7vh, 85px);
+    background: linear-gradient(to bottom, transparent,
+      color-mix(in srgb, var(--home-bg) 34%, transparent));
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(51%, 610px);
+    max-width: 610px;
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (min-width: 1101px) and (max-height: 730px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(430px, 77vh, 620px);
+  }
+}
+@media (min-width: 1101px) and (max-width: 1350px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(460px, 68vh, 670px);
+    background-position: center, center, right 0 bottom;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: 53%;
+  }
+}
+@media (min-width: 1101px) and (prefers-reduced-transparency: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image:
+      linear-gradient(90deg,
+        var(--home-bg) 0%,
+        color-mix(in srgb, var(--home-bg) 94%, transparent) 44%,
+        transparent 75%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size: 100% 100%, auto var(--hero-agent-height);
+    background-position: center, right bottom;
+  }
+}
