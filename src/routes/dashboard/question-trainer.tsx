@@ -1,5 +1,4 @@
 import "@/styles/question-workspace.css";
-import preparationAreasArt from "@/assets/questions/preparation-areas.webp";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useResponseSeconds } from "@/hooks/useResponseSeconds";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -2358,7 +2357,7 @@ function TrainerSetup({
                   <span
                     className="trainer-collection__art"
                     aria-hidden="true"
-                    style={{ backgroundImage: `url("${preparationAreasArt}")` }}
+                    data-art={collection}
                   />
                   {collection === "enem" ? (
                     <GraduationCap aria-hidden="true" />
