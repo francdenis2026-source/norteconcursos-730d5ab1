@@ -240,3 +240,55 @@ body:has(.daily-page) { overflow: hidden; }
   .daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 52px; }
   .daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 17px; }
 }
+
+
+/* Desktop sidebar viewport fit: keep the briefing/progress inside the available
+   panel height without showing a redundant nested scrollbar. */
+@media (min-width: 701px) and (min-height: 680px) {
+  .daily-page { gap: 12px; padding-block: 12px; }
+  .daily-overview, .daily-player { min-height: 0; }
+  .daily-round {
+    min-width: 0;
+    overflow-y: hidden;
+    padding: clamp(14px, 1.7vw, 24px);
+  }
+  .daily-round h2 { margin-top: 10px; font-size: clamp(18px, 1.5vw, 22px); }
+  .daily-metrics {
+    margin-block: 10px;
+    padding-block: 12px;
+    gap: 10px;
+  }
+  .daily-metrics strong { font-size: clamp(30px, 3vw, 44px); }
+  .daily-metrics span { margin-top: 5px; }
+  .daily-subjects { padding-top: 7px; gap: 5px; }
+  .daily-subjects li { padding: 4px 6px; line-height: 1.25; }
+  .daily-round__renewal { margin-top: auto; padding-top: 12px; }
+  .daily-round__renewal p > span { line-height: 1.45; margin-top: 3px; }
+  .daily-register { margin-top: 12px; padding-top: 12px; min-height: 32px; }
+  .daily-session {
+    min-width: 0;
+    overflow: hidden;
+    padding: clamp(13px, 1.5vw, 19px);
+  }
+  .daily-session h1 { margin: 8px 0 12px; font-size: 22px; }
+  .daily-session > .rounded-xl { margin-block: 12px; padding-block: 10px; }
+  .daily-session__scores { padding-block: 12px; gap: 8px; }
+  .daily-session__scores strong { font-size: 26px; }
+  .daily-session__tip { margin-top: 12px; line-height: 1.5; }
+  .daily-session__renewal { margin-top: 12px; }
+}
+/* Briefings can contain an arbitrary number of subjects. On exceptionally
+   short windows preserve every item instead of clipping inaccessible text. */
+@media (min-width: 701px) and (max-height: 679px) {
+  .daily-page { gap: 10px; padding-block: 10px; }
+  .daily-round, .daily-session { padding: 12px; }
+  .daily-round h2 { margin-top: 8px; font-size: 18px; }
+  .daily-metrics { margin-block: 8px; padding-block: 8px; }
+  .daily-metrics strong { font-size: 30px; }
+  .daily-round__renewal { padding-top: 8px; }
+  .daily-register { padding-top: 8px; margin-top: 8px; }
+  .daily-session h1 { font-size: 20px; margin-block: 6px 10px; }
+  .daily-session > .rounded-xl { margin-block: 8px; padding-block: 8px; }
+  .daily-session__scores { padding-block: 8px; }
+  .daily-session__tip, .daily-session__renewal { margin-top: 8px; }
+}
