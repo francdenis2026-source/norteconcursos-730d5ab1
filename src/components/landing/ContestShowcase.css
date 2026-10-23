@@ -110,3 +110,146 @@
   .home .contest-action, .home .contest-action--gold { color: LinkText; background: Canvas; border-color: LinkText; }
   .home .contest-card__badge { background: LinkText; color: Canvas; }
 }
+
+/* Native, touch-first horizontal carousel, restricted to phone widths. */
+.home .contest-carousel-controls,
+.home .contest-swipe-hint { display: none; }
+@media (max-width: 700px) {
+  .home .contest-swipe-hint { display: block; margin-top: 5px; color: var(--contest-accent); font-weight: 700; }
+  .home .contest-catalog {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    scroll-padding-inline: 2px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+    scrollbar-width: none;
+    padding: 4px 2px 12px;
+  }
+  .home .contest-catalog::-webkit-scrollbar { display: none; }
+  .home .contest-catalog .contest-card {
+    flex: 0 0 calc(100% - 26px);
+    scroll-snap-align: start;
+    width: calc(100% - 26px);
+    max-width: 430px;
+    height: auto;
+  }
+  .home .contest-catalog .contest-card:hover { transform: none; }
+  .home .contest-card__content { padding: 18px; }
+  .home .contest-card__role,
+  .home .contest-availability > span,
+  .home .contest-details,
+  .home .contest-reference { font-size: 13px; line-height: 1.5; }
+  .home .contest-eyebrow,
+  .home .contest-details > summary { font-size: 12px; }
+  .home .contest-availability small { font-size: 12px; }
+  .home .contest-action { min-height: 46px; font-size: 14px; }
+  .home .contest-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 6px;
+    padding: 2px 0 8px;
+  }
+  .home .contest-carousel-status { color: var(--home-muted); font-size: 13px; font-weight: 650; white-space: nowrap; }
+  .home .contest-carousel-dots { display: flex; align-items: center; justify-content: center; gap: 5px; }
+  .home .contest-carousel-dots button {
+    width: 22px;
+    height: 32px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .home .contest-carousel-dots button::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    border-radius: 100px;
+    background: var(--home-muted);
+    opacity: .65;
+    transition: width 150ms ease, background-color 150ms ease;
+  }
+  .home .contest-carousel-dots button[aria-current="true"]::after {
+    width: 18px;
+    background: var(--contest-accent);
+    opacity: 1;
+  }
+  .home .contest-carousel-arrows { display: flex; gap: 7px; }
+  .home .contest-carousel-arrows button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--home-line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--home-text);
+    cursor: pointer;
+  }
+  .home .contest-carousel-arrows svg { width: 20px; height: 20px; }
+  .home .contest-carousel-arrows button:disabled { opacity: .35; cursor: default; }
+  .home .contest-carousel-controls button:focus-visible,
+  .home .contest-catalog:focus-visible { outline: 2px solid var(--contest-accent); outline-offset: 2px; }
+}
+@media (max-width: 360px) {
+  .home .contest-carousel-controls { flex-wrap: wrap; }
+  .home .contest-carousel-dots { order: 3; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .contest-catalog { scroll-behavior: auto; }
+  .home .contest-carousel-dots button::after { transition: none; }
+}
+
+
+/* PC-AC feature: reserve the photograph exclusively for the officer/insignia.
+   Both editorial labels live in the content panel at every breakpoint. */
+.home .contest-spotlight__content > .contest-spotlight__ribbon {
+  position: static;
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: normal;
+  background: color-mix(in srgb, var(--contest-accent) 10%, var(--card));
+  color: var(--contest-accent);
+  border-color: color-mix(in srgb, var(--contest-accent) 44%, var(--home-line));
+  box-shadow: none;
+}
+.home .contest-spotlight__content > .contest-spotlight__signature {
+  position: static;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 14px;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+.home .contest-spotlight__art {
+  isolation: isolate;
+}
+.home .contest-spotlight__art > img {
+  display: block;
+}
+@media (max-width: 700px) {
+  .home .contest-spotlight__content > .contest-spotlight__ribbon {
+    margin-bottom: 12px;
+  }
+  .home .contest-spotlight__content > .contest-spotlight__signature {
+    margin-top: 12px;
+    font-size: 9px;
+  }
+}

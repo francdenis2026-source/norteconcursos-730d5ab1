@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, ExternalLink, Library, Scale, Search, SearchX, X } from "lucide-react";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Button } from "@/components/ui/button";
 import {
   LAW_ROWS,
@@ -168,7 +168,12 @@ function LawFinderPage() {
           </>
         }
         description="Localize leis especiais, também chamadas de extravagantes, por número, nome, sigla ou tema. Este localizador complementa a área de Legislação e súmulas."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Scale} label="Leis no acervo" value={LAW_ROWS.length} />
+          <HeroStat icon={Library} label="Temas" value={LAW_THEMES.length} />
+        </div>
+      </PageHero>
 
       <section className="law-finder__panel" aria-label="Buscar lei">
         <label htmlFor="law-search" className="law-finder__label">

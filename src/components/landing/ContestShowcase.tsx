@@ -1,6 +1,7 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, Target } from "lucide-react";
+import { useRef, useState } from "react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
 import { usePcprAvailability } from "@/hooks/usePcprAvailability";
@@ -49,6 +50,30 @@ function CountReference({ date }: { date: string | null }) {
 /** Public references are dated; signed-in counts continue to use the eligible catalogue. */
 export function ContestShowcase() {
   const { isAuthenticated } = useAuthStatus();
+  const catalogRef = useRef<HTMLDivElement>(null);
+  const [activeContest, setActiveContest] = useState(0);
+  const contestTotal = 3;
+  const moveContest = (index: number) => {
+    const track = catalogRef.current;
+    if (!track) return;
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
+    const next = Math.max(0, Math.min(cards.length - 1, index));
+    const destination = cards[next];
+    if (!destination) return;
+    track.scrollTo({ left: destination.offsetLeft - (cards[0]?.offsetLeft ?? 0), behavior: "smooth" });
+    setActiveContest(next);
+  };
+  const trackContestScroll = () => {
+    const track = catalogRef.current;
+    if (!track) return;
+    const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
+    if (!cards.length) return;
+    const first = cards[0]?.offsetLeft ?? 0;
+    const closest = cards.reduce((best, card, i) =>
+      Math.abs(card.offsetLeft - first - track.scrollLeft) <
+      Math.abs((cards[best]?.offsetLeft ?? 0) - first - track.scrollLeft) ? i : best, 0);
+    setActiveContest(closest);
+  };
   const sc = usePcscAvailability();
   const pr = usePcprAvailability();
   const pi = usePcpiAvailability();
@@ -87,12 +112,11 @@ export function ContestShowcase() {
             loading="lazy"
             decoding="async"
           />
+        </div>
+        <div className="contest-spotlight__content">
           <span className="contest-spotlight__ribbon">
             <Target size={14} aria-hidden="true" /> Concurso em destaque
           </span>
-          <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
-        </div>
-        <div className="contest-spotlight__content">
           <div className="contest-kickers">
             <span>
               <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
@@ -143,6 +167,7 @@ export function ContestShowcase() {
             {trainingLink(PCSC_TRAINER_SEARCH, "Treinar com a IDECAN")}
           </div>
           <CountReference date={sc.checkedAt} />
+          <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           <details className="contest-details">
             <summary>Sobre o concurso e a preparação</summary>
             <p>
@@ -160,9 +185,9 @@ export function ContestShowcase() {
           <span className="contest-eyebrow">DA PREPARAÇÃO À PRÁTICA</span>
           <h3>Provas reais. Seu próximo treino.</h3>
         </div>
-        <p>Escolha o concurso e veja quantas questões estão disponíveis.</p>
+        <p>Escolha o concurso e veja quantas questões estão disponíveis. <span className="contest-swipe-hint">Deslize para ver outros concursos →</span></p>
       </div>
-      <div className="contest-catalog">
+      <div className="contest-catalog" ref={catalogRef} onScroll={trackContestScroll} role="region" aria-roledescription="carrossel" aria-label="Provas disponíveis por concurso" tabIndex={0}>
         <article
           className="contest-card contest-card--idecan"
           id="prova-pcsc"
@@ -289,6 +314,28 @@ export function ContestShowcase() {
             </details>
           </div>
         </article>
+      </div>
+      <div className="contest-carousel-controls" aria-label="Navegação entre concursos">
+        <span className="contest-carousel-status" aria-live="polite">{activeContest + 1} de {contestTotal} concursos</span>
+        <div className="contest-carousel-dots" aria-label="Selecionar concurso">
+          {["PC-SC", "PC-PR", "PC-PI"].map((label, index) => (
+            <button
+              key={label}
+              type="button"
+              aria-label={`Ver concurso ${label}`}
+              aria-current={activeContest === index ? "true" : undefined}
+              onClick={() => moveContest(index)}
+            />
+          ))}
+        </div>
+        <div className="contest-carousel-arrows">
+          <button type="button" aria-label="Concurso anterior" disabled={activeContest === 0} onClick={() => moveContest(activeContest - 1)}>
+            <ArrowLeft aria-hidden="true" />
+          </button>
+          <button type="button" aria-label="Próximo concurso" disabled={activeContest === contestTotal - 1} onClick={() => moveContest(activeContest + 1)}>
+            <ArrowRight aria-hidden="true" />
+          </button>
+        </div>
       </div>
       <p className="contest-independence">
         Iniciativa educacional independente, sem vínculo ou endosso das Polícias Civis, governos ou

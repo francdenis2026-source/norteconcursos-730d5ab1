@@ -45,7 +45,7 @@ svg.tactical-clock-backdrop {
   --hand-period: 60s;
   animation-timing-function: steps(60, end);
   animation-delay: var(--hand-delay, 0s);
-  opacity: 0.65;
+  opacity: 1;
 }
 .tactical-clock-backdrop__edge {
   fill: none;
@@ -55,8 +55,8 @@ svg.tactical-clock-backdrop {
 }
 .tactical-clock-backdrop__needle {
   fill: none;
-  stroke: #aa9368;
-  stroke-width: 0.85;
+  stroke: #ff5a45;
+  stroke-width: 4;
   stroke-linecap: round;
 }
 .tactical-clock-backdrop__hub {
@@ -101,5 +101,13 @@ svg.tactical-clock-backdrop {
 @media print, (forced-colors: active), (prefers-reduced-transparency: reduce) {
   svg.tactical-clock-backdrop {
     display: none;
+  }
+}
+/* On a phone the whole hero sits inside this single dial: at full strength its hour and minute
+   hands read as loose gold bars crossing the headline, CTAs and badges rather than as ambiance.
+   Fading the mechanism keeps the texture without it competing with content. */
+@media (max-width: 760px) {
+  .tactical-clock-backdrop__mechanism {
+    opacity: 0.22;
   }
 }

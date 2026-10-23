@@ -31,8 +31,8 @@ export function PlanStatusCard() {
   })).filter((row) => row.value !== null || row.next !== null);
 
   return (
-    <Card className="md:col-span-3">
-      <CardHeader>
+    <Card>
+      <CardHeader className="pb-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <CardTitle className="flex items-center gap-2">
@@ -60,9 +60,9 @@ export function PlanStatusCard() {
           </div>
         </div>
       </CardHeader>
-      <CardContent className="space-y-5">
+      <CardContent className="space-y-4">
         {scheduled && (
-          <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-950 dark:border-amber-500/40 dark:bg-amber-950/20 dark:text-amber-100">
+          <div className="rounded-lg border border-border border-l-4 border-l-amber-500 bg-card p-3.5 text-sm text-foreground">
             <p className="font-bold">Cancelamento agendado</p>
             <p className="mt-1">
               Você continua no plano {scheduled.plan_name} até{" "}
@@ -82,7 +82,7 @@ export function PlanStatusCard() {
         )}
         {paidEnds && <PlanCountdown endsAt={paidEnds} planName={current.name} />}
         {!isAdmin && (testing || expired || current.id === "free") && (
-          <div className="rounded-xl border bg-muted/30 p-4">
+          <div className="rounded-lg border border-border p-3.5">
             <p className="text-sm font-bold">
               {current.id === "free"
                 ? "O que o plano Gratuito inclui"

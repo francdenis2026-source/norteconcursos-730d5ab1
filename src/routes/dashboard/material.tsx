@@ -263,7 +263,6 @@ function MaterialHub() {
     <div className="material-hub space-y-8 pb-10">
       <PageHero
         image="study-desk"
-        size="lg"
         kicker="Material didático"
         icon={Library}
         title={
@@ -271,7 +270,7 @@ function MaterialHub() {
             Materiais <em>de estudo</em>
           </>
         }
-        description="Estude por legislação, disciplina ou formato. Leis especiais, CTB e calculadora penal estão reunidos nos recursos de legislação."
+        description="Estude por legislação, disciplina ou formato."
       >
         <div className="page-hero__stats max-w-xl">
           <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
@@ -284,20 +283,6 @@ function MaterialHub() {
       </PageHero>
 
       <HubSearch subjects={subjects} />
-
-      <Link to="/dashboard/leis" className="material-finder">
-        <span className="material-card__icon" data-tone="law">
-          <Scale aria-hidden="true" />
-        </span>
-        <span className="material-card__body">
-          <strong>Leis extravagantes e especiais: {LAW_ROWS.length} leis, de A a Z</strong>
-          <span>
-            Localizador com busca por número, nome, sigla ou tema, e filtros por assunto (drogas e
-            armas, crime organizado, proteção de pessoas e outros).
-          </span>
-        </span>
-        <span className="material-finder__go">Abrir o localizador →</span>
-      </Link>
 
       <section aria-labelledby="hub-laws" className="space-y-3">
         <header className="flex flex-wrap items-end justify-between gap-2">
@@ -325,6 +310,20 @@ function MaterialHub() {
           </div>
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <li className="sm:col-span-2 lg:col-span-3">
+              <Link to="/dashboard/leis" className="material-card">
+                <span className="material-card__icon" data-tone="law">
+                  <Scale aria-hidden="true" />
+                </span>
+                <span className="material-card__body">
+                  <strong>Leis extravagantes e especiais: {LAW_ROWS.length} leis, de A a Z</strong>
+                  <span>
+                    Localizador com busca por número, nome, sigla ou tema, e filtros por assunto
+                    (drogas e armas, crime organizado, proteção de pessoas e outros).
+                  </span>
+                </span>
+              </Link>
+            </li>
             {laws.map((entry) => (
               <li key={entry.name}>
                 <Link
@@ -359,16 +358,30 @@ function MaterialHub() {
                 </span>
               </Link>
             </li>
+            <li>
+              <Link to="/dashboard/ctb" className="material-card">
+                <span className="material-card__icon" data-tone="law">
+                  <BookOpen aria-hidden="true" />
+                </span>
+                <span className="material-card__body">
+                  <strong>Painel do CTB</strong>
+                  <span>Legislação de trânsito: multas, pontos, prazos e resoluções.</span>
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/calculadora-penal" className="material-card">
+                <span className="material-card__icon" data-tone="law">
+                  <Calculator aria-hidden="true" />
+                </span>
+                <span className="material-card__body">
+                  <strong>Calculadora penal</strong>
+                  <span>Recurso de cálculo para acompanhar o estudo da legislação penal.</span>
+                </span>
+              </Link>
+            </li>
           </ul>
         )}
-      </section>
-
-      <section aria-labelledby="hub-legal-tools" className="space-y-3">
-        <h2 id="hub-legal-tools" className="text-xl font-bold">Recursos de legislação</h2>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Link to="/dashboard/ctb" className="material-card"><span className="material-card__icon" data-tone="law"><BookOpen aria-hidden="true" /></span><span className="material-card__body"><strong>Painel do CTB</strong><span>Legislação de trânsito: multas, pontos, prazos e resoluções.</span></span></Link>
-          <Link to="/dashboard/calculadora-penal" className="material-card"><span className="material-card__icon" data-tone="law"><Calculator aria-hidden="true" /></span><span className="material-card__body"><strong>Calculadora penal</strong><span>Recurso de cálculo para acompanhar o estudo da legislação penal.</span></span></Link>
-        </div>
       </section>
 
       <section aria-labelledby="hub-subjects" className="space-y-3">
@@ -401,7 +414,7 @@ function MaterialHub() {
               const Icon = SUBJECT_ICONS[entry.icon];
               const content = (
                 <>
-                  <span className="material-card__icon" data-tone="subject">
+                  <span className="material-card__icon" data-subject={entry.icon}>
                     <Icon aria-hidden="true" />
                   </span>
                   <span className="material-card__body">

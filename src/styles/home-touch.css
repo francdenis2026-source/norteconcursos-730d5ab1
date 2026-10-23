@@ -3,9 +3,12 @@
   :root:is(.dark, :not(.dark)) .home.home {
     --home-glass-fill: color-mix(in srgb, var(--card) 97%, transparent);
     --home-glass-edge: color-mix(in srgb, var(--foreground) 17%, transparent);
-    --home-canvas-veil: color-mix(in srgb, var(--background) 94%, transparent);
+    --home-canvas-veil: color-mix(in srgb, var(--background) 96%, transparent);
   }
-  :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 76%, transparent); }
+  /* The tactical clock backdrop's hands read as loose gold strokes crossing the hero's buttons
+     at phone width, where there is no room to lay content away from the dial's center. A heavier
+     veil here keeps the texture as a hint instead of a competing line through the CTAs. */
+  :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 90%, transparent); }
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading,
     .home-preparation__info, .home-plan[data-plan],
@@ -32,6 +35,30 @@
   :root:is(.dark, :not(.dark)) .home.home .home-preparation__tabs { background: var(--muted); padding: 6px; }
   .home.home .home-preparation__tab { min-height: 44px; font-size: 12px; }
   .home.home .home-preparation__tool summary { min-height: 48px; }
+  /* A flat line of same-size glyphs read as a plain list on a narrow screen; a tinted chip behind
+     the leading icon gives each row its own anchor and a touch of color beyond gold-on-black. */
+  .home.home .home-preparation__tool summary svg:first-child {
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--micro-accent) 14%, transparent);
+    flex-shrink: 0;
+  }
+  .home.home .home-preparation__careers svg,
+  .home.home .home-preparation__items > article > svg {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--micro-accent) 14%, transparent);
+    color: var(--micro-accent);
+    flex-shrink: 0;
+  }
   .home.home .home-plan[data-plan] :is(.home-plan__description, .home-plan__features) { line-height: 1.65; }
   .home.home .home-plan[data-plan] > .home-button { min-height: 44px; }
   .home.home .home-trust {
@@ -140,4 +167,1114 @@
 }
 @media (max-width: 1100px) and (forced-colors: active) {
   .home-menu, .home-menu__group > summary { background: Canvas; color: CanvasText; }
+}
+
+
+/* Accessibility pass: readable homepage on compact phones and tablets.
+   This stylesheet is imported last by the homepage so these rules supersede
+   earlier compact overrides without affecting the authenticated dashboard. */
+@media (max-width: 1100px) {
+  .home.home { padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
+  .home.home .home-app-nav {
+    width: min(680px, calc(100% - 16px));
+    padding: 7px 5px;
+    border-radius: 20px;
+    gap: 2px;
+  }
+  .home.home .home-app-nav a {
+    min-height: 66px;
+    gap: 5px;
+    padding: 7px 2px;
+    border-radius: 14px;
+    font-size: clamp(11px, 2.9vw, 13px);
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .home.home .home-app-nav svg { width: 25px; height: 25px; stroke-width: 2.15; flex: none; }
+  .home.home .home-header__inner { min-height: 74px; gap: 10px; }
+  .home.home .home-header__actions { gap: 6px; }
+  .home.home .home-header__actions > button,
+  .home.home .home-menu-trigger { min-width: 48px; min-height: 48px; }
+  .home.home .home-menu-trigger svg,
+  .home.home .home-header__actions > button svg { width: 22px; height: 22px; }
+  .home.home .home-header__register { min-height: 46px; font-size: 14px; font-weight: 700; }
+  .home.home .home-header__register svg { width: 18px; height: 18px; }
+  .home.home :is(.home-section, .home-preparation__band) { scroll-margin-top: 88px; }
+  .home.home .home-hero__copy > p,
+  .home.home .home-preparation__intro > p,
+  .home.home .home-heading > p,
+  .home.home .home-plan__description,
+  .home.home .home-plan__features,
+  .home.home .home-preparation__panel p { font-size: 15px; line-height: 1.65; }
+  .home.home .home-hero .home-actions > :is(a, button),
+  .home.home .home-plan[data-plan] > .home-button { min-height: 48px; font-size: 14px; font-weight: 700; }
+  .home.home .home-preparation__tab { min-height: 48px; font-size: 14px; line-height: 1.4; }
+  .home.home .home-preparation__tab svg,
+  .home.home .home-preparation__tool summary svg { width: 20px; height: 20px; }
+  .home.home .home-preparation__tool summary,
+  .home.home .home-faq__list summary { min-height: 48px; font-size: 15px; line-height: 1.5; }
+  .home.home .home-trust li { font-size: 13px; line-height: 1.45; min-height: 42px; }
+  .home.home .home-plan h3 { font-size: 20px; line-height: 1.3; }
+  .home.home .home-eyebrow,
+  .home.home .home-plan__eyebrow { font-size: 12px; line-height: 1.45; }
+  .home.home .home-footer--command .home-footer__bottom { font-size: 12px; line-height: 1.55; }
+  .home-menu__group > summary { min-height: 52px; font-size: 15px; }
+  .home-menu .home-menu__group nav a { min-height: 48px; font-size: 15px; }
+  .home-menu__contact :is(address, a) { font-size: 14px; }
+  .home-menu__contact small { font-size: 12px; }
+  .home-menu__group > summary svg,
+  .home-menu__contact svg { width: 20px; height: 20px; }
+}
+@media (max-width: 760px) {
+  .home.home .home-hero__copy > p { font-size: 15px; line-height: 1.65; }
+  .home.home .home-hero .home-actions > :is(a, button) { font-size: 14px; padding-inline: 14px; }
+  .home.home .home-trust { flex-wrap: wrap; overflow: visible; gap: 8px; }
+  .home.home .home-trust li { flex: 1 1 140px; white-space: normal; padding: 8px 10px; }
+  .home.home .home-header__inner { min-height: 72px; }
+  .home.home .home-header__register { padding-inline: 10px; }
+}
+@media (max-width: 380px) {
+  .home.home .home-app-nav { width: calc(100% - 10px); padding: 6px 3px; gap: 0; }
+  .home.home .home-app-nav a { font-size: 10.5px; min-height: 64px; padding-inline: 1px; }
+  .home.home .home-app-nav svg { width: 23px; height: 23px; }
+  .home.home .home-header__actions { gap: 2px; }
+  .home.home .home-header__register { font-size: 12px; }
+  .home.home .home-hero h1 { overflow-wrap: normal; }
+}
+@media (max-width: 359px) {
+  .home.home .home-header__register { display: none; }
+  .home.home .home-header__actions { margin-left: auto; }
+}
+
+/* Compact the header registration CTA independently of the primary hero buttons. */
+@media (max-width: 760px) {
+  .home.home .home-header__register {
+    min-height: 40px;
+    padding: 7px 9px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    gap: 4px;
+    border-radius: 10px;
+  }
+  .home.home .home-header__register svg { width: 14px; height: 14px; }
+}
+@media (max-width: 390px) {
+  .home.home .home-header__register { padding-inline: 7px; font-size: 11px; }
+}
+
+/* Second-pass mobile information hierarchy: cards first, legible detail,
+   restrained decoration, and no compressed two-column reading surfaces. */
+@media (max-width: 760px) {
+  .home.home .home-hero__study-entry { display: grid; gap: 12px; min-width: 0; }
+  .home.home .home-hero__study-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-width: 0; }
+  .home.home .home-hero__study-links > * { min-width: 0; width: 100%; }
+  .home.home .home-preparation__intro,
+  .home.home .home-operations__heading,
+  .home.home .home-plans__intro .home-heading { padding: 18px; }
+  .home.home .home-preparation__band { gap: 16px; }
+  .home.home .home-preparation__art { opacity: .12; pointer-events: none; }
+  .home.home .home-preparation__tabs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .home.home .home-preparation__tab { padding: 10px; overflow-wrap: anywhere; }
+  .home.home .home-heading h2,
+  .home.home .home-preparation__intro h2 { font-size: clamp(26px, 7vw, 34px); line-height: 1.17; }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { padding: 16px; }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) :is(p, small, span) { line-height: 1.5; }
+  .home.home .home-testing__detail,
+  .home.home .home-testing__link,
+  .home.home .home-testing__status { font-size: 14px; line-height: 1.5; }
+  .home.home .home-operations .home-rail__track,
+  .home.home .home-plans--insignia .home-rail__track { scroll-padding-inline: 12px; }
+  .home.home .home-plan[data-plan] { padding: 20px; gap: 12px; }
+  .home.home .home-plan[data-plan] :is(li, p, small) { font-size: max(14px, 0.875rem); line-height: 1.6; }
+  .home.home .home-faq__list summary { padding: 14px; }
+  .home.home .home-footer--command .home-footer__bottom { padding-inline: 12px; }
+}
+@media (max-width: 599px) {
+  .home.home .home-operations .home-rail__track.home-opportunities > *,
+  .home.home .home-plans--insignia .home-rail__track.home-plans__grid > .home-plan {
+    flex-basis: min(92%, 380px);
+  }
+  .home.home .home-rail__controls button { min-width: 48px; min-height: 48px; }
+}
+@media (max-width: 380px) {
+  .home.home .home-preparation__tabs { grid-template-columns: minmax(0, 1fr); }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { padding: 12px; }
+  .home.home .home-hero__copy > p { font-size: 15px; }
+}
+
+
+
+/* Keep the existing portrait treatment on phones; desktop uses a separate composition. */
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-image: radial-gradient(ellipse 38% 125px at 82% 210px,
+      rgb(201 168 103 / 9%), transparent 78%);
+    background-repeat: no-repeat;
+  }
+  /* The source photo (1208x1302) is a back/shoulder portrait: face at the top, the full
+     "CARREIRAS" banner ends around 48% of its height, and the pistol artwork + "POLICIAIS"
+     banner only start below that. At phone width there isn't enough room above the hero's
+     text card to show the whole figure, so earlier versions let the box run tall and relied
+     on the paragraph card's opaque background to hide the overflow — which cut the "POLICIAIS"
+     banner off mid-word wherever the card happened to start. Cropping the box itself to that
+     48% line (object-fit: cover, anchored top) keeps the crop intentional: face and shoulder
+     stay whole, the banner reads in full, and the box always finishes above the card. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    position: absolute;
+    top: clamp(80px, 21vw, 102px);
+    right: -2px;
+    bottom: auto;
+    left: auto;
+    width: clamp(150px, 43vw, 214px);
+    max-width: 58%;
+    height: clamp(78px, 22.5vw, 112px);
+    object-fit: cover;
+    object-position: 50% top;
+    opacity: .78;
+    pointer-events: none;
+    filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%));
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+  }
+}
+@media (max-width: 359px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    width: 55%;
+    height: 76px;
+    opacity: .72;
+  }
+}
+/* Desktop hero: show the same FIXED animated clock canvas beneath the agent.
+   Do not paint a replacement wallpaper here: the real clock lives in .home-backdrop. */
+@media (min-width: 1101px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(670px, 96vh, 1050px);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: min(820px, calc(100svh - 76px));
+    background-color: transparent;
+    background-image:
+      linear-gradient(90deg,
+        rgb(10 18 22 / 66%) 0%,
+        rgb(10 18 22 / 48%) 31%,
+        rgb(10 18 22 / 18%) 50%,
+        transparent 74%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size: 100% 100%, auto var(--hero-agent-height);
+    background-position: center center, right clamp(-55px, -2vw, -10px) bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    box-shadow: none;
+  }
+  /* No redundant image, spotlight or edge flare in the desktop hero. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    display: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::before {
+    content: none;
+    display: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 44px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, rgb(11 19 23 / 35%));
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: min(820px, calc(100svh - 76px));
+    height: auto;
+    justify-content: center;
+    padding-top: clamp(24px, 4vh, 48px);
+    padding-bottom: 22px;
+    gap: 14px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    position: relative;
+    z-index: 1;
+    width: min(49%, 595px);
+    max-width: 595px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(39px, 4.3vw, 62px);
+    line-height: 1.04;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: clamp(12px, 2vh, 24px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust {
+    margin-top: 12px !important;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1370px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(640px, 91vh, 900px);
+    background-position: center center, right -75px bottom;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(53%, 555px);
+  }
+}
+@media (min-width: 1101px) and (max-height: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(610px, 112vh, 900px);
+    min-height: 630px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: 630px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(36px, 3.8vw, 53px);
+  }
+}
+@media (min-width: 1101px) and (prefers-reduced-transparency: reduce) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image:
+      linear-gradient(90deg, rgb(16 25 28 / 82%) 0%, rgb(16 25 28 / 58%) 38%, transparent 75%),
+      url('/media/hero/hero-norte-recorte.webp');
+  }
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image: none;
+    background-color: Canvas;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image { display: none; }
+}
+
+
+/* Desktop viewport-fit layout: never crop content to force a one-screen hero. */
+@media (min-width: 1101px) {
+  :root:is(.dark, :not(.dark)) .home.home {
+    --home-desktop-gutter: clamp(24px, 3.6vw, 68px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home .home-container {
+    width: min(1440px, calc(100% - 2 * var(--home-desktop-gutter)));
+    max-width: 100%;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    /* Fill an ordinary viewport; grow naturally when content needs more room. */
+    min-height: max(620px, calc(100svh - 76px));
+    height: auto;
+    overflow-x: clip;
+    overflow-y: visible;
+    background-position: center center, right -22px bottom;
+    background-size: 100% 100%, auto min(94svh, 920px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: max(620px, calc(100svh - 76px));
+    height: auto;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-content: center;
+    justify-content: stretch;
+    padding-block: clamp(20px, 3vh, 42px) clamp(18px, 2.6vh, 34px);
+    gap: clamp(14px, 2vh, 24px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__grid {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(48%, 600px);
+    max-width: 600px;
+    min-width: 0;
+    padding-right: 8px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    max-width: 15ch;
+    margin-block: 0;
+    font-size: clamp(36px, 3.9vw, 59px);
+    line-height: 1.07;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy > p {
+    font-size: clamp(14px, 1.05vw, 16px);
+    line-height: 1.55;
+    margin-top: 10px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-actions {
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: 12px;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    min-width: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-links > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust {
+    display: flex;
+    align-self: end;
+    max-width: min(100%, 850px);
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding-block: 0 !important;
+    margin: 0 !important;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust li {
+    font-size: 12px;
+    min-height: 30px;
+  }
+  /* Other homepage sections flow with their content rather than clipping it. */
+  :root:is(.dark, :not(.dark)) .home.home #plataforma .home-preparation__band,
+  :root:is(.dark, :not(.dark)) .home.home #concursos .home-container,
+  :root:is(.dark, :not(.dark)) .home.home .home-plans--insignia > .home-container {
+    min-width: 0;
+    height: auto;
+    max-height: none;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #concursos .contest-catalog {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1101px) and (max-width: 1370px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
+    width: min(52%, 565px);
+    max-width: 565px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(36px, 3.8vw, 52px);
+  }
+}
+@media (min-width: 1101px) and (max-height: 800px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero,
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: max(610px, calc(100svh - 76px));
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    padding-block: 16px;
+    gap: 10px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(35px, 3.45vw, 49px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: 8px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-actions {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1101px) and (max-height: 630px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero,
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: 0;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    padding-block: 20px;
+  }
+}
+
+
+/* Mobile navigation: one viewport-fitted drawer, a scrollable link area,
+   and action buttons that remain accessible above the device safe area. */
+@media (max-width: 1140px) {
+  .home-menu[data-menu-motion="popover"] {
+    box-sizing: border-box;
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(420px, 100vw);
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    min-height: 0;
+    padding:
+      max(18px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      max(16px, env(safe-area-inset-bottom))
+      16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: auto;
+  }
+  .home-menu[data-menu-motion="popover"] > button:first-child {
+    top: max(10px, env(safe-area-inset-top));
+    right: max(10px, env(safe-area-inset-right));
+    z-index: 2;
+  }
+  .home-menu .home-menu__header {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 100%;
+    padding-right: 48px;
+    text-align: left;
+  }
+  .home-menu .home-menu__header :is(h2, p) {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .home-menu .home-menu__groups {
+    display: grid;
+    align-content: start;
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 8px;
+    padding: 2px 4px 6px 0;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .home-menu .home-menu__group,
+  .home-menu .home-menu__group nav,
+  .home-menu .home-menu__contact {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .home-menu .home-menu__group > summary,
+  .home-menu .home-menu__group nav a {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+  .home-menu .home-menu__group nav {
+    display: grid;
+    margin: 0;
+    padding: 4px 12px;
+  }
+  .home-menu .home-menu__group nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 48px;
+    padding-block: 10px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .home-menu .home-menu__group nav a svg,
+  .home-menu .home-menu__group > summary svg {
+    flex: 0 0 auto;
+  }
+  .home-menu .home-menu__contact :is(address, a, span, small) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .home-menu .home-menu__access {
+    flex: 0 0 auto;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding-top: 12px;
+    margin: 0;
+    border-top: 1px solid var(--border);
+  }
+  .home-menu .home-menu__access .home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+    font-size: 14px;
+  }
+  .home.home .home-header__inner {
+    min-width: 0;
+  }
+  .home.home .home-header__actions {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+  .home.home .home-menu-trigger {
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    touch-action: manipulation;
+  }
+}
+@media (max-width: 600px) {
+  .home.home .home-header__inner {
+    gap: 8px;
+  }
+  .home.home .home-brand-lockup {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .home.home .home-header__actions {
+    gap: 4px;
+  }
+  .home-menu[data-menu-motion="popover"] {
+    width: min(100vw, 390px);
+    padding-left: 14px;
+    padding-right: max(14px, env(safe-area-inset-right));
+  }
+  .home-menu .home-menu__header { padding-right: 44px; }
+}
+@media (max-width: 380px) {
+  .home.home .home-header__register {
+    max-width: 116px;
+    padding-inline: 6px;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .home.home .home-header__register svg { display: none; }
+  .home.home .home-menu-trigger {
+    flex-basis: 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 44px;
+  }
+  .home-menu .home-menu__groups { gap: 6px; }
+}
+@media (max-height: 620px) and (max-width: 1140px) {
+  .home-menu[data-menu-motion="popover"] {
+    gap: 8px;
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  .home-menu .home-menu__header p { display: none; }
+  .home-menu .home-menu__access { padding-top: 8px; gap: 6px; }
+}
+
+
+/* Light-theme hero badge: prevent a bright diagonal glare / stacked 3D
+   surfaces from reading as a white tear inside the vector insignia.
+   The dark theme retains its original material and animation. */
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__glare,
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__shine,
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__edge {
+  display: none;
+}
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__spin {
+  transform-style: flat;
+}
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__face {
+  filter: none;
+  opacity: 1;
+  backface-visibility: hidden;
+}
+
+
+/* Norte Concursos / light-only homepage color system.
+   Shared dark-mode tokens and the rest of the application remain untouched.
+   Normal-text checks on #fff: ink #182a3c 14.6:1, muted #43566b 7.5:1,
+   blue #174c7e 8.9:1, amber #86591d 6.1:1. */
+:root:not(.dark) .home.home {
+  --stage-ink: #182a3c;
+  --stage-muted: #43566b;
+  --stage-accent: #174c7e;
+  --stage-amber: #86591d;
+  --stage-line: #d5dfe8;
+  --stage-card: #ffffff;
+  --stage-shadow: 0 12px 36px -28px rgb(20 41 60 / 22%), 0 1px 3px rgb(20 41 60 / 7%);
+  --home-bg: #f2f5f8;
+  --home-surface: #ffffff;
+  --home-tint: #eaf0f5;
+  --home-text: var(--stage-ink);
+  --home-muted: var(--stage-muted);
+  --home-line: var(--stage-line);
+  --home-accent: var(--stage-accent);
+  --home-glass-fill: #ffffff;
+  --home-glass-edge: #d5dfe8;
+  color: var(--stage-ink);
+  background-color: #f2f5f8;
+}
+:root:not(.dark) .home.home .home-header {
+  background: rgb(255 255 255 / 96%);
+  color: var(--stage-ink);
+  border-bottom: 1px solid var(--stage-line);
+  box-shadow: 0 3px 20px -16px rgb(20 41 60 / 23%);
+}
+:root:not(.dark) .home.home .home-header :is(.home-nav a, .home-login, .home-menu-trigger, .lp-theme-toggle) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-header :is(.home-nav a, .home-login):hover,
+:root:not(.dark) .home.home .home-header :is(.home-menu-trigger, .lp-theme-toggle):hover {
+  color: var(--stage-accent);
+  background-color: #eaf0f5;
+}
+:root:not(.dark) .home.home :is(.home-hero, .home-preparation, .home-operations, .home-plans--insignia, .home-final, .home-footer--command) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home :is(.home-hero h1, .home-preparation h2, .home-operations h2, .home-plans--insignia h2, .home-final h2, .home-footer--command h2, .home-plan__price) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home :is(.home-heading p, .home-preparation__intro p, .home-operations__heading p, .home-plan__description, .home-plan__features li, .home-faq__list p, .home-footer__bottom) {
+  color: var(--stage-muted);
+}
+:root:not(.dark) .home.home :is(.home-eyebrow, .home-signal, .home-preparation__eyebrow, .home-preparation__number, .home-plan__annual) {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home :is(.home-hero h1 em, .home-preparation__intro h2 em, .home-heading h2 em, .home-final h2 em) {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home :is(.home-preparation__info, .home-preparation__intro, .home-operations__heading, .home-plan[data-plan], .home-plans__signal, .home-plans__notice, .home-plan-comparison, .home-faq, .home-platform-qr, .home-hero__study-links .daily-badge, .home-hero__study-links .question-count-badge) {
+  background-color: #ffffff;
+  color: var(--stage-ink);
+  border-color: var(--stage-line);
+  box-shadow: var(--stage-shadow);
+}
+:root:not(.dark) .home.home .home-hero__copy > p {
+  color: var(--stage-muted);
+  background: #fff;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-hero :is(.home-trust li, .home-testing) {
+  color: var(--stage-muted);
+}
+:root:not(.dark) .home.home .home-hero .home-trust li {
+  background: #ffffff;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-hero .home-trust svg {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home .home-button--gold,
+:root:not(.dark) .home.home .home-button--primary,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button {
+  background: #174c7e;
+  color: #ffffff;
+  border-color: #174c7e;
+  box-shadow: 0 7px 18px -12px rgb(23 76 126 / 34%);
+}
+:root:not(.dark) .home.home :is(.home-button--gold, .home-button--primary):hover,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button:hover {
+  background: #123b63;
+  color: #ffffff;
+  border-color: #123b63;
+}
+:root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore),
+:root:not(.dark) .home.home .home-plans--insignia .home-plan:not([data-plan="free"]) > .home-button:not(:disabled) {
+  background: #ffffff;
+  color: #174c7e;
+  border-color: #9aafc2;
+}
+:root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore):hover,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan:not([data-plan="free"]) > .home-button:not(:disabled):hover {
+  background: #eaf0f5;
+  color: #123b63;
+  border-color: #174c7e;
+}
+/* Maintain a coherent light background across the section bands. */
+:root:not(.dark) .home.home .home-preparation__band {
+  background: linear-gradient(120deg, #e8eff5, #f7f9fb 72%);
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-operations {
+  background: linear-gradient(180deg, #edf2f7, #f7f9fb);
+}
+:root:not(.dark) .home.home .home-plans--insignia {
+  background: linear-gradient(180deg, #f7f9fb, #edf2f7);
+}
+:root:not(.dark) .home.home .home-plans--insignia .home-plan--featured {
+  background: linear-gradient(160deg, #fff8ed, #ffffff 52%);
+  border-color: #b38a46;
+}
+:root:not(.dark) .home.home .home-plan[data-plan] :is(.home-tag, .home-plan__badge) {
+  background: #eaf0f5;
+  color: #174c7e;
+  border-color: #cedae5;
+}
+:root:not(.dark) .home.home .home-preparation__tabs {
+  background: #eaf0f5;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]) {
+  color: #43566b;
+}
+:root:not(.dark) .home.home .home-preparation__tab[data-state="active"] {
+  background: #174c7e;
+  color: #ffffff;
+}
+:root:not(.dark) .home.home .home-faq__list :is(summary, p),
+:root:not(.dark) .home.home .home-plan__features summary {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-final {
+  background: linear-gradient(125deg, #e8eff5, #f7f9fb);
+}
+:root:not(.dark) .home.home .home-footer--command {
+  background: #e7eef4;
+  border-top-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-footer--command :is(a, strong, h3) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-footer--command a:hover {
+  color: var(--stage-accent);
+}
+/* Keep the animated clock's genuine fixed backdrop; don't paint an opaque
+   white card across it or replace it with a static background. */
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-color: transparent;
+    background-image:
+      linear-gradient(90deg, rgb(215 227 237 / 94%) 0%, rgb(219 231 240 / 90%) 27%, rgb(223 233 241 / 69%) 40%, rgb(226 235 242 / 18%) 53%, transparent 65%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size: 100% 100%, auto min(94svh, 920px);
+    background-position: center center, right -22px bottom;
+    background-repeat: no-repeat;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    background: linear-gradient(180deg, transparent, rgb(235 242 248 / 26%));
+  }
+}
+/* The mobile menu lives in a portal outside .home: theme it explicitly. */
+:root:not(.dark) .home-menu {
+  --home-text: #182a3c;
+  --home-accent: #174c7e;
+  --home-line: #d5dfe8;
+  background: #ffffff;
+  color: #182a3c;
+}
+:root:not(.dark) .home-menu :is(.home-menu__group, .home-menu__group nav, .home-menu__access) {
+  border-color: #d5dfe8;
+}
+:root:not(.dark) .home-menu .home-menu__group > summary {
+  background: #eaf0f5;
+  color: #182a3c;
+}
+:root:not(.dark) .home-menu .home-menu__group nav a {
+  color: #174c7e;
+}
+:root:not(.dark) .home-menu .home-menu__access .home-button--primary {
+  background: #174c7e;
+  color: #ffffff;
+  border-color: #174c7e;
+}
+:root:not(.dark) .home-menu .home-menu__access .home-button--secondary {
+  background: #ffffff;
+  color: #174c7e;
+  border-color: #9aafc2;
+}
+
+
+/* Light-theme contrast pass: no opaque white wash over the agent.
+   Restore dark ink on all pale reading surfaces and give interactive
+   states distinct accessible emphasis; keep SVG clock and dark mode intact. */
+:root:not(.dark) .home.home {
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+  --stage-muted: #405469;
+  --home-glass-light: rgb(255 255 255 / 12%);
+  --home-glass-shadow: 0 10px 26px -23px rgb(18 42 65 / 24%);
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__info, .home-preparation__intro, .home-operations__heading,
+  .home-plans__signal, .home-plans__notice, .home-plan[data-plan],
+  .home-plan-comparison, .home-faq, .home-platform-qr
+) {
+  color: #182a3c;
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+  --home-text: #182a3c;
+  --home-muted: #405469;
+  --stage-gold: #86591d;
+  border-color: #ced9e3;
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__items p, .home-preparation__intro > p,
+  .home-operations__heading p, .home-plan__description,
+  .home-plan__features li, .home-faq__list p,
+  .home-plans__notice p, .home-plans__signal p,
+  .home-footer__bottom, .home-footer__credit
+) {
+  color: #405469;
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__items h3, .home-preparation__intro h2,
+  .home-operations__heading h2, .home-plan h3,
+  .home-faq h3, .home-plan-comparison summary
+) {
+  color: #182a3c;
+}
+:root:not(.dark) .home.home :is(
+  .home-operations__heading .home-eyebrow,
+  .home-plans--insignia .home-eyebrow,
+  .home-plans--insignia .home-plans__signal strong,
+  .home-plan__annual, .home-footer--command .home-footer__links h3
+) {
+  color: #86591d;
+}
+:root:not(.dark) .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) {
+  background: #f9fbfd;
+  color: #182a3c;
+  border: 1px solid #bdcedd;
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+}
+:root:not(.dark) .home.home .home-hero__study-links :is(
+  .daily-badge__main strong, .question-count-main, .question-count-main strong
+) { color: #182a3c; }
+:root:not(.dark) .home.home .home-hero__study-links :is(
+  .daily-badge__main small, .question-count-detail,
+  .question-count-eyebrow, .daily-badge__count
+) { color: #405469; }
+:root:not(.dark) .home.home .home-hero .home-trust li {
+  background: #f7fafd;
+  color: #405469;
+  border-color: #cbd8e3;
+}
+:root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]) {
+  background: transparent;
+  color: #284860;
+}
+:root:not(.dark) .home.home .home-faq__list summary,
+:root:not(.dark) .home.home .home-plan__features summary {
+  color: #174c7e;
+}
+:root:not(.dark) .home.home .home-hero__copy > p {
+  background: rgb(240 246 250 / 95%);
+  color: #30465a;
+  border-color: #c1d1df;
+}
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    /* Retain the cutout subject in full color, unwashed on the right. */
+    background-color: transparent;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__copy {
+    color: #182a3c;
+  }
+}
+@media (max-width: 900px) {
+  :root:not(.dark) .home.home #inicio.home-hero > .home-hero__image {
+    opacity: .88;
+    filter: saturate(.92) contrast(1.06) drop-shadow(0 12px 22px rgb(18 42 65 / 20%));
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    /* The reading cards protect the copy; a milky full-screen overlay is not needed. */
+    background: linear-gradient(180deg, rgb(223 232 239 / 16%), transparent 65%);
+  }
+}
+@media (forced-colors: active) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-image: none;
+    background-color: Canvas;
+  }
+}
+
+
+/* Homepage desktop navigation: legible editorial scale, not tiny utility text.
+   The mobile/tablet header and hamburger sheet remain unchanged. */
+@media (min-width: 1141px) {
+  .home.home .home-header__inner {
+    min-height: 86px;
+    gap: clamp(16px, 2.1vw, 32px);
+  }
+  .home.home .home-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 1.15vw, 20px);
+    min-width: 0;
+  }
+  .home.home .home-nav a {
+    min-height: 48px;
+    padding: 10px clamp(10px, .85vw, 15px);
+    font-size: clamp(15px, 1.02vw, 17px);
+    font-weight: 650;
+    line-height: 1.3;
+    letter-spacing: -.01em;
+    white-space: nowrap;
+    border-radius: 9px;
+  }
+  .home.home .home-nav a::after {
+    left: 12px;
+    bottom: 6px;
+  }
+  .home.home .home-header__actions {
+    flex: 0 0 auto;
+    gap: clamp(8px, .9vw, 14px);
+  }
+  .home.home .home-login {
+    min-height: 48px;
+    padding-inline: 13px;
+    gap: 9px;
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+  .home.home .home-login svg {
+    width: 20px;
+    height: 20px;
+  }
+  .home.home .home-header__register {
+    min-height: 48px;
+    padding: 12px 18px;
+    gap: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+    border-radius: 10px;
+  }
+  .home.home .home-header__register svg {
+    width: 19px;
+    height: 19px;
+  }
+  .home.home .lp-theme-toggle {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    border-radius: 10px;
+  }
+  .home.home .lp-theme-toggle svg {
+    width: 21px;
+    height: 21px;
+  }
+  .home.home .home-header :is(.home-nav a, .home-login, .home-header__register, .lp-theme-toggle):focus-visible {
+    outline: 3px solid var(--home-accent);
+    outline-offset: 3px;
+  }
+}
+/* Narrow desktop widths: preserve the full header without compressing the text. */
+@media (min-width: 1141px) and (max-width: 1280px) {
+  .home.home .home-header__inner { gap: 12px; }
+  .home.home .home-nav { gap: 5px; }
+  .home.home .home-nav a { padding-inline: 8px; font-size: 15px; }
+  .home.home .home-header__actions { gap: 7px; }
+  .home.home .home-header__register { padding-inline: 12px; font-size: 14px; }
+  .home.home .home-login { padding-inline: 8px; font-size: 14px; }
+}
+
+
+/* Desktop homepage / mineral editorial light mode.
+   Richer blue-slate atmosphere without the milky veil over the officer.
+   Scoped to the public homepage and desktop; no mobile or dark-mode changes. */
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home {
+    --home-bg: #d9e5ed;
+    --home-surface: #f7fafc;
+    --home-tint: #dce9f2;
+    --home-glass-fill: #f5f9fc;
+    --home-glass-edge: #b5c9d7;
+    --home-glass-light: rgb(255 255 255 / 13%);
+    --stage-card: #f8fbfd;
+    --stage-line: #b9cedc;
+    --stage-muted: #364e63;
+    --home-canvas-veil: rgb(207 224 235 / .74);
+    background: #d9e5ed;
+    color: #172f44;
+  }
+  /* Allow the clock artwork to read as a purposeful faint engraving. */
+  :root:not(.dark) .home.home .home-backdrop {
+    background-color: #d5e3ec;
+    --backdrop-clock-veil: rgb(208 225 237 / .75);
+  }
+  :root:not(.dark) .home.home .home-backdrop .tactical-clock-backdrop__mechanism {
+    opacity: .43;
+    filter: none;
+  }
+  :root:not(.dark) .home.home .home-backdrop .tactical-clock-backdrop__scale {
+    opacity: .55;
+  }
+  /* A dark-to-soft slate wash behind copy only. Rightmost half of the
+     photograph is kept clear, so the person retains detail and saturation. */
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-color: #cfdfeb;
+    background-image:
+      linear-gradient(90deg,
+        rgb(200 217 231 / .98) 0%,
+        rgb(207 223 235 / .94) 24%,
+        rgb(209 226 238 / .72) 37%,
+        rgb(211 228 238 / .24) 49%,
+        transparent 61%),
+      url('/media/hero/hero-norte-recorte.webp');
+    box-shadow: inset 0 -1px 0 rgb(39 70 91 / .14);
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    background: linear-gradient(180deg, transparent 75%, rgb(180 202 219 / .20));
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__copy > p {
+    background: rgb(229 240 247 / .9);
+    color: #2d465a;
+    border: 1px solid #b7cbda;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__study-links :is(.daily-badge, .question-count-badge),
+  :root:not(.dark) .home.home #inicio.home-hero .home-trust li {
+    background: #edf5fa;
+    color: #172f44;
+    border-color: #b2c9d8;
+    box-shadow: 0 6px 20px -16px rgb(25 55 81 / .34);
+  }
+  :root:not(.dark) .home.home .home-header {
+    background: rgb(232 241 247 / .97);
+    border-bottom: 1px solid #b4c9d9;
+    box-shadow: 0 7px 22px -20px rgb(25 52 73 / .4);
+  }
+  /* Related editorial panels share a single mineral system instead of
+     alternating blown-out white and nearly white stripes. */
+  :root:not(.dark) .home.home .home-preparation__band {
+    background: linear-gradient(115deg, #cbdde9, #e4eef5 70%, #d7e5ee);
+    border-color: #b4cbd9;
+  }
+  :root:not(.dark) .home.home .home-operations {
+    background: linear-gradient(165deg, #d9e6f0 0%, #cbdce8 48%, #e2edf4);
+  }
+  :root:not(.dark) .home.home .home-plans--insignia {
+    background: linear-gradient(145deg, #e3edf4, #d4e3ed 55%, #e7f0f5);
+  }
+  :root:not(.dark) .home.home .home-final {
+    background: linear-gradient(120deg, #c8dce9, #e0ebf3);
+  }
+  :root:not(.dark) .home.home .home-footer--command {
+    background: linear-gradient(180deg, #d1e0eb, #c4d7e5);
+    border-top-color: #a9c1d2;
+  }
+  :root:not(.dark) .home.home :is(
+    .home-preparation__info, .home-plans__notice, .home-faq,
+    .home-plan[data-plan], .home-plan-comparison, .home-platform-qr
+  ) {
+    --home-glass-fill: #f5f9fc;
+    --home-glass-edge: #b6c9d7;
+    background: #f5f9fc;
+    border-color: #b6c9d7;
+    box-shadow: 0 3px 8px rgb(26 55 77 / .07), 0 20px 38px -28px rgb(25 55 81 / .32);
+  }
+  :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan].home-plan--featured {
+    background: linear-gradient(155deg, #f6ebd8, #f8fafc 48%, #f2f6fa);
+    border-color: #a57d40;
+  }
+  :root:not(.dark) .home.home :is(
+    .home-heading p, .home-preparation__intro p, .home-operations__heading p,
+    .home-plan__description, .home-plan__features li, .home-footer__bottom
+  ) {
+    color: #364e63;
+  }
+}
+@media (forced-colors: active) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background: Canvas;
+    color: CanvasText;
+  }
 }

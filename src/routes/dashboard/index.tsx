@@ -37,7 +37,7 @@ import { platformDate } from "@/lib/platformClock";
 import { getStudyToday, subscribeStudyClock, fmtHuman } from "@/lib/studyClock";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { PcprExamSpotlight } from "@/components/dashboard/PcprExamSpotlight";
 import type { UserProfile } from "@/types";
 
@@ -255,6 +255,23 @@ function StudentHome({ user }: { user: UserProfile }) {
           </p>
           <h1 id="student-home-title">Área do aluno</h1>
           <p>Seu estudo, suas prioridades e sua evolução.</p>
+          <div className="student-hub__masthead-stats" aria-label="Seu progresso">
+            <HeroStat
+              icon={CheckCircle2}
+              label="Questões hoje"
+              value={stats ? number(stats.today) : "—"}
+            />
+            <HeroStat
+              icon={TrendingUp}
+              label="Aproveitamento"
+              value={stats?.accuracy != null ? `${stats.accuracy}%` : "—"}
+            />
+            <HeroStat
+              icon={Target}
+              label={days !== null && days < 0 ? "Dias desde a prova" : "Dias p/ a prova"}
+              value={days !== null ? Math.abs(days) : "—"}
+            />
+          </div>
           <div className="student-hub__masthead-actions">
             <span className="student-hub__date">
               <CalendarClock aria-hidden="true" />
@@ -302,7 +319,6 @@ function StudentHome({ user }: { user: UserProfile }) {
           ))}
         </nav>
       </section>
-      <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric
           icon={BrainCircuit}
@@ -625,6 +641,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </section>
         </div>
         <aside className="student-hub__rail" aria-label="Seu objetivo e suas prioridades">
+          <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
           <section
             className="student-home__card"
             data-accent="amber"

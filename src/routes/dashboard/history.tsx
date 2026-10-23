@@ -1,7 +1,7 @@
-import { acreDate } from "@/lib/acreTime";
+import { acreDate, acreDateKey, acreDayRangeISO } from "@/lib/acreTime";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Clock, History, Loader2, Trophy } from "lucide-react";
+import { Clock, History, Loader2, Trophy, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
@@ -15,11 +15,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { AttemptHistoryList } from "@/components/dashboard/AttemptHistoryList";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 
 export const Route = createFileRoute("/dashboard/history")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    day: typeof search["day"] === "string" && /^\d{4}-\d{2}-\d{2}$/.test(search["day"])
+      ? search["day"]
+      : undefined,
+  }),
   component: HistoryPage,
   head: () => ({ meta: [{ title: "Histórico de estudos | Norte Concurso" }] }),
 });
@@ -43,6 +48,7 @@ const fmtDate = (iso: string) =>
 
 function HistoryPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
+  const { day } = Route.useSearch();
   const real = !!user && user.id !== "demo-user";
   const [attempts, setAttempts] = React.useState<AttemptWithDetails[]>([]);
   const [answers, setAnswers] = React.useState<Answer[]>([]);
@@ -56,21 +62,30 @@ function HistoryPage() {
       return;
     }
     let alive = true;
+    setLoading(true);
+    let answersQuery = supabase
+      .from("question_training_responses")
+      .select("id,subject,contest_name,is_correct,response_seconds,created_at")
+      .eq("user_id", user.id)
+      .order("created_at", { ascending: false });
+    answersQuery = day
+      ? (() => {
+          const [start, end] = acreDayRangeISO(day);
+          return answersQuery.gte("created_at", start).lt("created_at", end);
+        })()
+      : answersQuery.limit(20);
     void Promise.all([
-      fetchAttemptHistory(user.id, 20).then(
+      fetchAttemptHistory(user.id, day ? 200 : 20).then(
         (data) => ({ data, error: null }),
         (error: unknown) => ({ data: [] as AttemptWithDetails[], error }),
       ),
-      supabase
-        .from("question_training_responses")
-        .select("id,subject,contest_name,is_correct,response_seconds,created_at")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
-        .limit(20),
+      answersQuery,
       supabase.rpc("my_rank_summary", { _period: "all", _metric: "points" }).maybeSingle(),
     ]).then(([a, r, m]) => {
       if (!alive) return;
-      setAttempts(a.data);
+      setAttempts(
+        day ? a.data.filter((x) => acreDateKey(acreDate(x.finished_at)) === day) : a.data,
+      );
       setAnswers((r.data as Answer[] | null) ?? []);
       setMe((m.data as Me | null) ?? null);
       setLoading(false);
@@ -78,7 +93,7 @@ function HistoryPage() {
     return () => {
       alive = false;
     };
-  }, [authLoading, real, user]);
+  }, [authLoading, real, user, day]);
 
   if (authLoading || loading)
     return (
@@ -111,7 +126,32 @@ function HistoryPage() {
           </>
         }
         description="Seus simulados e as últimas questões respondidas no Treinador, em ordem cronológica."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat
+            icon={Trophy}
+            label="Posição no ranking"
+            value={me?.rank_position ? `#${me.rank_position}` : "—"}
+          />
+          <HeroStat icon={Clock} label="Pontos de ranking" value={me?.total_points ?? 0} />
+        </div>
+      </PageHero>
+
+      {day && (
+        <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-2.5 text-sm">
+          <span>
+            Mostrando atividades de{" "}
+            <strong>{acreDate(day).toLocaleDateString("pt-BR", { timeZone: "America/Rio_Branco" })}</strong>
+          </span>
+          <Link
+            to="/dashboard/history"
+            search={{ day: undefined }}
+            className="inline-flex min-h-11 items-center gap-1 text-xs font-semibold text-primary hover:underline"
+          >
+            <X className="h-3.5 w-3.5" aria-hidden /> Ver tudo
+          </Link>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
@@ -127,7 +167,7 @@ function HistoryPage() {
           <CardContent>
             {attempts.length === 0 ? (
               <p className="rounded-md border py-8 text-center text-sm text-muted-foreground">
-                Nenhum simulado realizado ainda.
+                {day ? "Nenhum simulado nesse dia." : "Nenhum simulado realizado ainda."}
               </p>
             ) : (
               <AttemptHistoryList items={attempts} />
@@ -171,10 +211,12 @@ function HistoryPage() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Clock className="h-5 w-5 text-primary" /> Respostas recentes
+            <Clock className="h-5 w-5 text-primary" /> {day ? "Respostas nesse dia" : "Respostas recentes"}
           </CardTitle>
           <CardDescription>
-            Suas últimas {answers.length || 20} questões do Treinador.
+            {day
+              ? `${answers.length} questão${answers.length === 1 ? "" : "ões"} do Treinador nesse dia.`
+              : `Suas últimas ${answers.length || 20} questões do Treinador.`}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -193,7 +235,9 @@ function HistoryPage() {
                 {answers.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={5} className="py-8 text-center text-muted-foreground">
-                      Você ainda não respondeu nenhuma questão no Treinador.
+                      {day
+                        ? "Nenhuma questão do Treinador respondida nesse dia."
+                        : "Você ainda não respondeu nenhuma questão no Treinador."}
                     </TableCell>
                   </TableRow>
                 ) : (

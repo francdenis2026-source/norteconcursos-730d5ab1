@@ -1,11 +1,27 @@
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { createPortal } from "react-dom";
 import introArtwork from "@/assets/auth/carreiras-composicao.webp";
-import introBadge from "@/assets/auth/distintivo.webp";
+const introBadge = "/media/brand/norte-identity/emblema-premium.webp";
 import { claimDocumentIntro } from "@/lib/documentIntro";
 import { documentStartup } from "@/lib/startupSequence";
 import "@/styles/intro-frame.css";
 import { useEffect, useRef, useState } from "react";
+
+const SKIP_INTRO_KEY = "norte-concursos:skip-intro";
+
+function introDisabled(): boolean {
+  try { return window.localStorage.getItem(SKIP_INTRO_KEY) === "true"; }
+  catch { return false; }
+}
+
+function rememberIntroChoice(disabled: boolean): boolean {
+  try {
+    if (disabled) window.localStorage.setItem(SKIP_INTRO_KEY, "true");
+    else window.localStorage.removeItem(SKIP_INTRO_KEY);
+    return true;
+  } catch { return false; }
+}
+
 
 /** The optional film belongs to the startup stage, before the homepage is revealed. */
 export function HeroVideo({
@@ -18,6 +34,7 @@ export function HeroVideo({
 }) {
   const video = useRef<HTMLVideoElement>(null);
   const [loadVideo, setLoadVideo] = useState(false);
+  const [dontShowAgain, setDontShowAgain] = useState(false);
   // Touch layouts use the lighter video inside the same startup frame.
   const [compact, setCompact] = useState(false);
   const [phase, setPhase] = useState<"image" | "playing" | "fading">("image");
@@ -29,7 +46,8 @@ export function HeroVideo({
       const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
       eligible.current = claimDocumentIntro(document.documentElement, navigation?.name ?? window.location.href);
     }
-    if (!eligible.current) {
+    // Read the saved preference before preparing or loading the film.
+    if (!eligible.current || introDisabled()) {
       documentStartup().settleIntro();
       onIntroSettled?.();
       return;
@@ -151,15 +169,15 @@ export function HeroVideo({
             </header>
             <div className="tactical-intro__body">
               <aside className="tactical-intro__identity" aria-hidden="true">
-                <img src={introBadge} alt="" width={768} height={811} />
+                <img src={introBadge} alt="" width={768} height={768} />
                 <span>Direção. Disciplina. Conquista.</span>
               </aside>
               <div className="tactical-intro__screen">
                 <div className="tactical-intro__side tactical-intro__side--left" aria-hidden="true">
-                  <img src={introBadge} alt="" width={768} height={811} />
+                  <img src={introBadge} alt="" width={768} height={768} />
                 </div>
                 <div className="tactical-intro__side tactical-intro__side--right" aria-hidden="true">
-                  <img src={introBadge} alt="" width={768} height={811} />
+                  <img src={introBadge} alt="" width={768} height={768} />
                 </div>
                 <video
                   ref={video}
@@ -183,9 +201,22 @@ export function HeroVideo({
             <footer className="tactical-intro__footer">
               <span className="tactical-intro__caption">Sua preparação tem um norte.</span>
               {phase === "playing" && (
-                <button type="button" onClick={() => finishRef.current()}>
-                  Pular introdução <ArrowRight size={14} aria-hidden="true" />
-                </button>
+                <div className="tactical-intro__footer-actions">
+                  <label className="tactical-intro__remember">
+                    <input
+                      type="checkbox"
+                      checked={dontShowAgain}
+                      onChange={(event) => {
+                        const checked = event.currentTarget.checked;
+                        if (rememberIntroChoice(checked)) setDontShowAgain(checked);
+                      }}
+                    />
+                    <span>Não mostrar este vídeo novamente</span>
+                  </label>
+                  <button type="button" onClick={() => finishRef.current()}>
+                    Pular introdução <ArrowRight size={14} aria-hidden="true" />
+                  </button>
+                </div>
               )}
             </footer>
           </div>

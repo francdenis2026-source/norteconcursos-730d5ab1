@@ -367,7 +367,7 @@ function QuestionBankPage() {
                 <span className="font-mono">{y}</span>
                 <span className="h-2 overflow-hidden rounded-full bg-muted">
                   <span
-                    className="block h-full rounded-full bg-gradient-to-r from-sky-500 to-amber-400"
+                    className="block h-full rounded-full bg-sky-500"
                     style={{ width: `${(n / Math.max(1, ...byYear.map((r) => r[1]))) * 100}%` }}
                   />
                 </span>
@@ -464,7 +464,7 @@ function Distribution({
             <span className="truncate font-medium">{name}</span>
             <span className="h-2 overflow-hidden rounded-full bg-muted">
               <span
-                className="block h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
+                className="block h-full rounded-full bg-emerald-500"
                 style={{ width: `${Math.max(3, (n / max) * 100)}%` }}
               />
             </span>

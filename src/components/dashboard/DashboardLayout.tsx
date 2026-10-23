@@ -20,6 +20,7 @@ import React from "react";
 import { useMobileAppShell } from "@/hooks/useMobileAppShell";
 import { PlatformBack } from "./PlatformBack";
 import { ReadingSizeControl } from "@/components/accessibility/ReadingSizeControl";
+import { PanelTextScale } from "./PanelTextScale";
 import { showsReadingControl } from "@/lib/readingScale";
 import { Link, useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import {
@@ -106,7 +107,7 @@ import { NorteBrand } from "@/components/brand/NorteBrand";
 
 type MenuItem = NavigationItem;
 
-type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
+type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal" | "indigo" | "slate";
 const GROUP_HUE: Record<string, Hue> = {
   Planejamento: "gold",
   "Meu concurso": "sky",
@@ -114,9 +115,9 @@ const GROUP_HUE: Record<string, Hue> = {
   Ferramentas: "teal",
   Questões: "emerald",
   Provas: "rose",
-  ENEM: "sky",
+  ENEM: "indigo",
   Desempenho: "orange",
-  Conta: "teal",
+  Conta: "slate",
   Administração: "gold",
 };
 const MOBILE_HUE: Record<string, Hue> = {
@@ -673,6 +674,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
 
             <div className="app-topbar__actions">
+              {!isAdmin && <PanelTextScale />}
               {!isAdmin && <Hint content="Tela cheia"><button type="button" className="workspace-fullscreen-trigger" onClick={fullscreen.enter} aria-label="Expandir área de estudo em tela cheia"><Maximize aria-hidden="true" /></button></Hint>}
               <button
                 type="button"

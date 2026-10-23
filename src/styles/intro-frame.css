@@ -163,3 +163,227 @@
   .tactical-intro__screen { background: Canvas; }
   .tactical-intro__side { display: none; }
 }
+
+
+/* Remember-intro preference: readable, accessible and contained in the film footer. */
+.tactical-intro__footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  min-width: 0;
+}
+.tactical-intro__remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 4px 0;
+  color: #e4ddcf;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.35;
+  cursor: pointer;
+}
+.tactical-intro__remember input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #dcb972;
+}
+.tactical-intro__remember input:focus-visible {
+  outline: 2px solid #efcf8c;
+  outline-offset: 3px;
+}
+@media (max-width: 599px) {
+  .tactical-intro__footer {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .tactical-intro__footer-actions {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 5px 10px;
+  }
+  .tactical-intro__remember {
+    flex: 1 1 145px;
+    min-width: 0;
+    font-size: 11px;
+  }
+}
+
+
+/* Mobile introduction: show the artwork at its natural proportions rather than
+   enlarging a landscape image to fill a tall portrait frame. Avoid the
+   excessively dark overlays that made details appear muddy. */
+@media (max-width: 599px) {
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    background:
+      linear-gradient(180deg, rgb(8 14 18 / 22%), rgb(8 14 18 / 76%) 52%, #080c0e 100%),
+      #101a1f;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
+    /* Small, contained scenery instead of a stretched full-window poster. */
+    inset: 52px auto auto 50%;
+    width: min(76%, 290px);
+    max-width: 290px;
+    height: auto;
+    aspect-ratio: 1440 / 600;
+    object-fit: contain;
+    object-position: center;
+    transform: translateX(-50%);
+    opacity: .38;
+    filter: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen {
+    background-color: #10191e;
+    background-image:
+      linear-gradient(180deg, rgb(8 12 15 / 24%), rgb(8 12 15 / 48%)),
+      url('/media/hero/home-bg-texture.webp');
+    background-position: center center, center center;
+    background-size: 100% 100%, auto min(100%, 170px);
+    background-repeat: no-repeat;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen video {
+    object-fit: contain;
+    image-rendering: auto;
+  }
+}
+
+
+/* Portrait cinematic intro: use the entire phone viewport for the composition,
+   with a photographic backdrop, a crisp emblem and an uncropped video.
+   Overrides the legacy 290px-wide landscape poster treatment above. */
+@media (max-width: 599px) and (orientation: portrait) {
+  #norte-initial-loading .startup-intro {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: clamp(10px, 2vh, 20px);
+    padding:
+      max(20px, env(safe-area-inset-top))
+      clamp(16px, 5vw, 26px)
+      max(16px, env(safe-area-inset-bottom));
+    background:
+      linear-gradient(180deg, rgb(7 13 19 / 36%) 0%, rgb(7 13 19 / 28%) 36%, rgb(7 13 19 / 74%) 100%),
+      #101a22;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: 48% center;
+    opacity: .34;
+    transform: none;
+    filter: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__heading {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    padding-block: 8px 12px;
+    min-height: 56px;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__body {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(16px, 3.2vh, 28px);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 0;
+    padding: 0;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > img {
+    display: block;
+    width: clamp(108px, 32vw, 165px);
+    max-width: 42vw;
+    max-height: min(20dvh, 165px);
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+    filter: drop-shadow(0 10px 20px rgb(0 0 0 / 45%));
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > span {
+    max-width: 100%;
+    color: #f0dcae;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .14em;
+    text-align: center;
+    text-shadow: 0 2px 12px #000;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 64 / 33;
+    border-radius: 12px;
+    background-color: #10191e;
+    background-size: 100% 100%, contain;
+    box-shadow: 0 14px 40px rgb(0 0 0 / 42%);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen video {
+    object-fit: contain;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__footer {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+    padding: 10px 0 0;
+    border-top: 1px solid rgb(210 173 103 / 28%);
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__footer-actions {
+    width: 100%;
+    gap: 6px 12px;
+  }
+}
+@media (max-width: 599px) and (orientation: portrait) and (max-height: 650px) {
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    gap: 8px;
+    padding-top: max(10px, env(safe-area-inset-top));
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity {
+    gap: 4px;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__identity > img {
+    width: min(25vw, 92px);
+    max-height: 14dvh;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__body {
+    gap: 10px;
+  }
+}

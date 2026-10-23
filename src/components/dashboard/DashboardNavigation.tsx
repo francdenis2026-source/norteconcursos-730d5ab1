@@ -97,8 +97,8 @@ function StudentDashboardNavigation({ items, pathname, search = {}, collapsed, h
     <nav className="app-nav scroll-dark navigation-workspace student-direct-navigation" aria-label="Menu principal">
       {home && (() => {
         const homeLink = (
-          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" data-hue="gold" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
-            <span className="app-ico" data-hue="gold"><home.icon aria-hidden="true" /></span>
+          <Link to={home.href} search={home.search ?? {}} className="app-nav__link" data-hue="navy" aria-label={collapsed ? home.label : undefined} data-active={current?.href === home.href} aria-current={current?.href === home.href ? "page" : undefined} onClick={onNavigate}>
+            <span className="app-ico" data-hue="navy"><home.icon aria-hidden="true" /></span>
             <span className={collapsed ? "app-nav__compact-label" : "app-nav__label"}>{collapsed ? "Painel" : home.label}</span>
           </Link>
         );

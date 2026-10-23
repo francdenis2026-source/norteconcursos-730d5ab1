@@ -21,7 +21,7 @@ import {
   TESTING_NOTICE,
   TESTING_PHASE,
 } from "@/lib/launch.config";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
@@ -104,7 +104,7 @@ function SubscriptionsPage() {
     }
   }, [user?.id]);
   return (
-    <div className="mx-auto max-w-6xl space-y-6 px-4 pb-4 md:px-6 md:pb-6">
+    <div className="mx-auto max-w-6xl space-y-5 px-4 pb-4 md:px-6 md:pb-6">
       <PageHero
         image="dashboard"
         size="sm"
@@ -116,7 +116,12 @@ function SubscriptionsPage() {
           </>
         }
         description="Acompanhe o uso, compare planos e gerencie sua assinatura, cancelamentos e recibos nesta área."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Crown} label="Resoluções de IA hoje" value={used} />
+          <HeroStat icon={Crown} label="Questões hoje" value={answered} />
+        </div>
+      </PageHero>
 
       {!PAYMENTS_ENABLED && (
         <p role="status" className="text-sm text-muted-foreground">
@@ -133,8 +138,8 @@ function SubscriptionsPage() {
         />
       )}
 
-      <Card className="border-primary/30 bg-primary/5">
-        <CardContent className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+      <Card className="border-l-4 border-l-primary">
+        <CardContent className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-3">
             <span className="rounded-xl bg-primary/10 p-2 text-primary">
               <Volume2 className="h-5 w-5" aria-hidden="true" />

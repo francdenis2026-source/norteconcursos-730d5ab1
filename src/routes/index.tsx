@@ -1,6 +1,5 @@
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
-import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
@@ -40,6 +39,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import "@/styles/home.css";
+import "@/styles/home-hero-emblem.css";
 import "@/styles/home-operations.css";
 import "@/styles/home-light.css";
 import "@/styles/home-refinements.css";
@@ -49,6 +49,7 @@ import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -416,6 +417,7 @@ function Index() {
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
+          <TacticalCrosshair />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
@@ -436,16 +438,17 @@ function Index() {
                     to="/auth"
                     search={{ mode: "register" }}
                     className="home-button home-button--gold"
+                    data-aim
                   >
                     Começar grátis
                     <ArrowUpRight />
                   </Link>
-                  <a href="#plataforma" className="home-hero__explore">
+                  <a href="#plataforma" className="home-hero__explore" data-aim>
                     Conhecer a plataforma
                     <ArrowRight />
                   </a>
                 </div>
-                <div className="home-hero__study-entry" aria-label="Comece sua preparação">
+                <div className="home-hero__study-entry" aria-label="Comece sua preparação" data-aim>
                   <TestingSeal />
                   <div className="home-hero__study-links">
                     <DailyChallengeBadge />
@@ -523,7 +526,6 @@ function Index() {
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <FooterInsignia />
               <div>
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>

@@ -28,10 +28,9 @@ import {
 import {
   AlertCircle,
   BookOpenCheck,
-  Check,
   ExternalLink,
-  History,
   Filter,
+  History,
   Loader2,
   Play,
   Sparkles,
@@ -51,7 +50,7 @@ import {
   splitExplanation,
   type Question,
 } from "@/lib/questionFormat";
-import { PageHero, LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { toast } from "sonner";
 import {
   Select,
@@ -196,6 +195,44 @@ function ErrorArsenal({
         >
           <Target className="h-4 w-4" /> Treinar esta disciplina
         </Link>
+      </Button>
+    </div>
+  );
+}
+
+/** As três decisões possíveis ao revisar um erro, lado a lado; a atual fica desativada. */
+function ReviewActions({
+  status,
+  onChange,
+}: {
+  status: ReviewStatus;
+  onChange: (status: ReviewStatus) => void;
+}) {
+  return (
+    <div className="grid grid-cols-1 gap-2 border-t pt-4 sm:grid-cols-3">
+      <Button
+        variant="outline"
+        disabled={status === "dominado"}
+        className="justify-center hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700"
+        onClick={() => onChange("dominado")}
+      >
+        Dominado
+      </Button>
+      <Button
+        variant="outline"
+        disabled={status === "revisado"}
+        className="justify-center hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        onClick={() => onChange("revisado")}
+      >
+        Revisado, manter para reforço
+      </Button>
+      <Button
+        variant="outline"
+        disabled={status === "pendente"}
+        className="justify-center hover:border-amber-200 hover:bg-amber-50 hover:text-amber-700"
+        onClick={() => onChange("pendente")}
+      >
+        Ainda tenho dúvida
       </Button>
     </div>
   );
@@ -381,41 +418,14 @@ function ErrorsPage() {
               {correctOption && <p className="mt-1 text-sm leading-6">{correctOption.text}</p>}
             </div>
             <ErrorArsenal question={question} relatedMaterial={relatedMaterial} videos={videos} />
-            <div className="grid grid-cols-1 gap-2 pt-2">
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200"
-                onClick={async () => {
-                  await updateStatus(question, "dominado");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Dominado (sair da revisão)
-              </Button>
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200"
-                onClick={async () => {
-                  await updateStatus(question, "revisado");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Revisado (manter para reforço)
-              </Button>
-              <Button
-                variant="outline"
-                className="justify-start hover:bg-amber-50 hover:text-amber-700 hover:border-amber-200"
-                onClick={async () => {
-                  await updateStatus(question, "pendente");
-                  if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
-                  else setRevisionMode(false);
-                }}
-              >
-                Ainda tenho dúvida (prioridade)
-              </Button>
-            </div>
+            <ReviewActions
+              status={reviewQueue[revisionIndex]!.status}
+              onChange={async (next) => {
+                await updateStatus(question, next);
+                if (revisionIndex < reviewQueue.length - 1) setRevisionIndex((i) => i + 1);
+                else setRevisionMode(false);
+              }}
+            />
           </CardContent>
         </Card>
       </div>
@@ -434,7 +444,12 @@ function ErrorsPage() {
           </>
         }
         description="Revise as questões que você errou e acompanhe o que já dominou."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={AlertCircle} label="No caderno" value={allErrors.length} />
+          <HeroStat icon={History} label="Para revisar" value={reviewQueue.length} />
+        </div>
+      </PageHero>
       <div className="question-workspace__toolbar" aria-label="Filtrar e revisar erros">
         <Select value={filterSubject} onValueChange={setFilterSubject}>
           <SelectTrigger className="w-full sm:w-[210px]">
@@ -494,30 +509,16 @@ function ErrorsPage() {
                     <Badge variant="outline">{question.board}</Badge>
                     <QuestionCode question={question} />
                   </div>
-                  <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                     {question.contest} · {question.year}
                   </span>
                 </div>
                 <p className="mb-4 line-clamp-3 font-medium">{parseQuestion(question.text).stem}</p>
                 <div className="flex flex-wrap items-center justify-between gap-2 border-t pt-4 text-sm">
-                  <span className="flex items-center gap-1 text-muted-foreground">
-                    <History className="h-3 w-3" /> {DIFFICULTY_LABEL[question.difficulty]}
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    <Button variant="outline" size="sm" onClick={() => setDetail(question)}>
-                      Revisar
-                    </Button>
-                    {status !== "dominado" && (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200"
-                        onClick={() => updateStatus(question, "dominado")}
-                      >
-                        <Check className="mr-1 h-3.5 w-3.5" /> Marcar dominada
-                      </Button>
-                    )}
-                  </div>
+                  <span className="text-muted-foreground">{DIFFICULTY_LABEL[question.difficulty]}</span>
+                  <Button variant="outline" onClick={() => setDetail(question)}>
+                    Revisar
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -588,9 +589,18 @@ function ErrorsPage() {
                       relatedMaterial={detailRelatedMaterial}
                       videos={detailVideos}
                     />
+                    <ReviewActions
+                      status={reviewStatus[`${detail.source}:${detail.id}`] ?? "pendente"}
+                      onChange={async (next) => {
+                        await updateStatus(detail, next);
+                        setDetail(null);
+                      }}
+                    />
                   </div>
                   <DialogFooter>
-                    <Button onClick={() => setDetail(null)}>Fechar</Button>
+                    <Button variant="ghost" onClick={() => setDetail(null)}>
+                      Fechar
+                    </Button>
                   </DialogFooter>
                 </>
               );
