@@ -156,7 +156,68 @@
 }
 .home.home .home-footer--command .home-footer__grid { grid-template-columns: minmax(250px, 1.4fr) repeat(3, minmax(100px, .65fr)) minmax(210px, 1fr); gap: 32px; align-items: start; }
 .home.home .home-footer--command .home-footer__brand { display: flex; gap: 16px; align-items: center; grid-column: auto; }
-.home-footer__insignia { width: 70px; height: 90px; flex: none; object-fit: contain; }
+/* Interactive 3D clock in the footer's brand corner: same restrained tilt-on-hover interaction the
+   hero badge used to have, applied to the "Carreiras Policiais" clock art, with real functioning hands. */
+.home-footer__insignia {
+  width: 70px;
+  aspect-ratio: 656 / 856;
+  flex: none;
+  perspective: 700px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  touch-action: pan-y;
+  user-select: none;
+}
+.home-footer__insignia-float {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: footer-insignia-rest 6.5s ease-in-out infinite;
+}
+.home-footer__insignia-tilt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-6deg);
+  transition: transform 180ms var(--ease-out);
+}
+.home-footer__insignia-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgb(0 0 0 / 45%));
+}
+/* Specificity must beat the homepage's generic ".home svg { width: 20px; height: 20px }"
+   icon-sizing rule, or the hand overlay collapses to a 20px box and never shows. */
+.home.home .home-footer__insignia-hands {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: initial;
+  overflow: visible;
+}
+.home-footer__insignia-hand line { stroke-linecap: round; }
+.home-footer__insignia-hand--hour line { stroke: #eac77e; stroke-width: 15; }
+.home-footer__insignia-hand--minute line { stroke: #f4d998; stroke-width: 10; }
+.home-footer__insignia-hand--second line { stroke: #ff5a45; stroke-width: 4; }
+.home-footer__insignia-pivot { fill: #eac77e; stroke: #3a2c12; stroke-width: 3; }
+.home-footer__insignia[data-visible="false"] * { animation-play-state: paused; }
+@keyframes footer-insignia-rest { 50% { transform: translateY(-3px); } }
+@media (prefers-reduced-motion: reduce) {
+  .home-footer__insignia-float { animation: none; }
+  .home-footer__insignia-tilt { transition: none; }
+}
+@media (forced-colors: active) {
+  .home-footer__insignia-hand line { stroke: Highlight; }
+  .home-footer__insignia-pivot { fill: Highlight; }
+}
 .home.home .home-footer--command .home-footer__brand p { margin-top: 12px; font-size: 12px; color: var(--home-muted); }
 .home.home .home-footer--command .home-footer__links h3 { color: var(--stage-gold); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 .home.home .home-footer--command .home-footer__links ul { display: flex; flex-direction: column; gap: 0; }
