@@ -6,6 +6,15 @@
 ):not(:is(button *, a *, [role="button"] *, nav *, .reading-size *, .panel-text-control *)) {
   zoom: var(--panel-text-scale, 1);
 }
+/* Include standalone counters, metrics and descriptors that are spans rather than paragraphs.
+   Exclude descendants of scaled prose so their scale is never multiplied. */
+.app-shell[data-area="student"] #dashboard-content :is(span, strong, small):not(:has(*)):not(:is(
+  button *, a *, nav *, p *, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+  td *, th *, label *, legend *, blockquote *, figcaption *,
+  .question-readable *, .q-option-text *, .reading-size *, .panel-text-control *
+)) {
+  zoom: var(--panel-text-scale, 1);
+}
 /* Avoid multiple multipliers on nested prose. */
 .app-shell[data-area="student"] #dashboard-content :is(p, blockquote, td, th, label, legend) :is(p, blockquote, td, th, label, legend) {
   zoom: 1;
