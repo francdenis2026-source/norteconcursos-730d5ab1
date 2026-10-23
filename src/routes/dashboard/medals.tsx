@@ -18,7 +18,7 @@ import { MockService, type MedalProgress } from "@/services/mockService";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Button } from "@/components/ui/button";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Hint } from "@/components/ui/hint";
 import { cn } from "@/lib/utils";
 
@@ -334,7 +334,12 @@ function MedalsPage() {
           </>
         }
         description="Conquistadas automaticamente pelo que você faz na plataforma: questões, simulados, redações e dias seguidos de estudo."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Medal} label="Conquistadas" value={`${earned.length}/${total}`} />
+          <HeroStat icon={Trophy} label="Perto de ganhar" value={upcoming.length} />
+        </div>
+      </PageHero>
 
       {!list ? (
         <div className="flex justify-center py-10">

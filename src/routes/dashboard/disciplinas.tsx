@@ -20,7 +20,7 @@ import {
   X,
   type LucideIcon,
 } from "lucide-react";
-import { PageHero, LockedState } from "@/components/dashboard/PageHero";
+import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { readSlugs, useStudyMaterialList } from "@/lib/studyMaterials";
@@ -120,7 +120,16 @@ function DisciplineIndex({
           </>
         }
         description="Português, Matemática, Raciocínio Lógico, Química, Física, Estatística, Contabilidade e mais. Cada disciplina reúne seus materiais, a trilha de aulas e as videoaulas num só lugar. Legislação e leis ficam na área de leis."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={GraduationCap} label="Disciplinas" value={cards.length} />
+          <HeroStat
+            icon={PlayCircle}
+            label="Videoaulas"
+            value={cards.reduce((sum, c) => sum + c.videos, 0)}
+          />
+        </div>
+      </PageHero>
       {unknown && (
         <p role="status" className="rounded-xl border p-3 text-sm">
           Não encontramos a disciplina “{unknown}”. Escolha uma abaixo.
@@ -238,7 +247,12 @@ function DisciplineDetail({
             <Target aria-hidden="true" size={18} /> Praticar com questões
           </Link>
         }
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={BookOpen} label="Materiais" value={card.materials} />
+          <HeroStat icon={PlayCircle} label="Videoaulas" value={card.videos} />
+        </div>
+      </PageHero>
 
       <section aria-labelledby="d-track" className="space-y-3">
         <h2 id="d-track" className="discipline-h">

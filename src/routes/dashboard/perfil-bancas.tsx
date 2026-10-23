@@ -11,7 +11,7 @@ import {
   ScanSearch,
 } from "lucide-react";
 import { PlanGate } from "@/components/dashboard/PlanGate";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStatus } from "@/hooks/useDashboard";
@@ -260,7 +260,12 @@ function PerfilBancasPage() {
           </>
         }
         description="Entenda como a banca do seu concurso costuma montar a prova, com base nas provas já realizadas e no que existe de fato no acervo. Onde não há padrão, dizemos que não há."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Landmark} label="Provas analisadas" value={view.exams} />
+          <HeroStat icon={ScanSearch} label="Questões no perfil" value={view.items} />
+        </div>
+      </PageHero>
 
       <Card>
         <CardContent className="grid gap-3 pt-6 sm:grid-cols-3">

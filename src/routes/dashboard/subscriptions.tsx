@@ -21,7 +21,7 @@ import {
   TESTING_NOTICE,
   TESTING_PHASE,
 } from "@/lib/launch.config";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/subscriptions")({
   head: () => ({
@@ -116,7 +116,12 @@ function SubscriptionsPage() {
           </>
         }
         description="Acompanhe o uso, compare planos e gerencie sua assinatura, cancelamentos e recibos nesta área."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Crown} label="Resoluções de IA hoje" value={used} />
+          <HeroStat icon={Crown} label="Questões hoje" value={answered} />
+        </div>
+      </PageHero>
 
       {!PAYMENTS_ENABLED && (
         <p role="status" className="text-sm text-muted-foreground">
