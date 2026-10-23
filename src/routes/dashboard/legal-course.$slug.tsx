@@ -17,6 +17,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
 import { LawPracticeLink } from "@/components/library/LawPracticeLink";
+import { LawPracticeQuiz } from "@/components/library/LawPracticeQuiz";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { SafeBoundary } from "@/components/library/SafeBoundary";
@@ -207,10 +208,9 @@ function LegalCoursePage() {
 function UnitLesson({ cargo, unit, law, materialSlug, references, progress, userId, highlightPar, searchQuery, onNext, onPrev }: { searchQuery?: string | undefined; highlightPar?: string | undefined; unit: LegalUnit; law: string; materialSlug: string; references: LegalCourse["overview"]["jurisprudence"]; progress: LegalProgress | undefined; userId: string; onNext: () => void; onPrev?: () => void; cargo: CargoGroup | "all" }) {
   const caveat = legalStudyCaveat(law, unit.unit_key);
   const queryClient = useQueryClient();
-  const [step, setStep] = useState<"entender" | "texto" | "fixar">(highlightPar ? "texto" : "entender");
+  // o texto oficial vem primeiro: o aluno lê a norma, depois a explicação, depois pratica
+  const [step, setStep] = useState<"entender" | "texto" | "fixar">("texto");
   const explanation = useLegalExplanation(unit.id, userId);
-  // sem explicação publicada para este artigo: começa direto no texto oficial
-  useEffect(() => { if (explanation.isSuccess && !explanation.data && !highlightPar) setStep(cur => (cur === "entender" ? "texto" : cur)); }, [explanation.isSuccess, explanation.data, highlightPar]);
   const bodyMatch = !!searchQuery && matchesLegalUnit(unit, searchQuery);
   const bodyExcerpt = bodyMatch ? legalSearchExcerpt(unit.body_text, searchQuery!, 520) : "";
   const explanationExcerpt = searchQuery && !bodyExcerpt && explanation.data ? legalSearchExcerpt([explanation.data.simples, ...explanation.data.pontos, ...explanation.data.atencao, explanation.data.exemplo, ...explanation.data.prova].join(" "), searchQuery, 520) : "";
@@ -238,7 +238,7 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
     {unit.content_status !== "excluded" && <CobrancaCard stat={cobrancaOf(law, unit.unit_key)} group={cargo} />}
     {unit.content_status === "excluded" ? <p className="rounded-xl border border-amber-500 p-4 text-sm">Este dispositivo está vetado, revogado ou sem redação ativa no texto compilado. Não integra o progresso de estudo das regras vigentes. Consulte o ato modificador na fonte oficial.</p> : <>
       <nav className="grid gap-2 rounded-xl bg-muted/40 p-1.5 sm:grid-cols-3" aria-label="Passos de estudo deste artigo">
-        {([["entender", "1", "Entender", "Leia a explicação simples", "from-sky-500 to-amber-600"], ["texto", "2", "Ler o texto oficial", "Com grifos e dicas dos termos", "from-emerald-500 to-teal-600"], ["fixar", "3", "Fixar", "Teste o que você aprendeu", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
+        {([["texto", "1", "Ler o texto oficial", "Com grifos e dicas dos termos", "from-emerald-500 to-teal-600"], ["entender", "2", "Entender", "Leia a explicação simples", "from-sky-500 to-amber-600"], ["fixar", "3", "Praticar", "Revise e responda questões desta lei", "from-amber-500 to-orange-600"]] as const).map(([id, n, title, sub, grad]) =>
           <button key={id} type="button" aria-current={step === id ? "step" : undefined} onClick={() => { setStep(id); if (id === "fixar") { setRevealed(false); setResponse(""); } }}
             className={`flex items-center gap-3 rounded-lg p-3 text-left transition ${step === id ? "bg-primary text-primary-foreground shadow-sm" : "hover:bg-card"}`}>
             <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-full text-xs font-bold ${step === id ? "bg-white/25" : "bg-muted"}`}>{n}</span>
@@ -250,18 +250,23 @@ function UnitLesson({ cargo, unit, law, materialSlug, references, progress, user
         {caveat && <aside className="rounded-xl border border-amber-500/50 bg-amber-500/10 p-4 text-sm"><strong>{caveat.title}</strong><p className="mt-2 leading-7">{caveat.explanation}</p><a href={caveat.source} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">Conferir a fonte oficial</a></aside>}
         {references.map(ref => <aside key={ref.url} className="rounded-xl border border-amber-500/50 p-4 text-sm"><strong>{ref.title}</strong><p className="mt-2">{ref.explanation}</p>{isStudySourceUrl(ref.url) && <a className="mt-2 inline-block underline" href={ref.url} target="_blank" rel="noopener noreferrer">Fonte do tribunal</a>}</aside>)}
         <UnitExplanation unit={unit} userId={userId} />
-        {explanation.isSuccess && !explanation.data && <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">A explicação deste artigo ainda está em preparação. Leia o texto oficial no passo 2.</p>}
-        <div className="flex justify-end"><Button onClick={() => setStep("texto")}>Ler o texto oficial →</Button></div>
+        {explanation.isSuccess && !explanation.data && <p className="rounded-xl border border-dashed p-4 text-sm text-muted-foreground">A explicação deste artigo ainda está em preparação. Releia o texto oficial no passo 1.</p>}
+        <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("texto")}>← Texto oficial</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Praticar →</Button></div>
       </>}
       {(step === "texto" || (step === "fixar" && revealed)) && <>
         <div className={unit.unit_key.startsWith("anexo-") ? "library-body overflow-x-auto" : undefined}><LegalStudyReading source={unit.body_text} markdown={unit.unit_key.startsWith("anexo-")} highlightPar={highlightPar} searchQuery={searchQuery} /></div>
         {step === "texto" && caveat?.literalPractice !== false && <SafeBoundary><UnitTrueFalse key={unit.id} unit={unit} userId={userId} /></SafeBoundary>}
         {unit.recall.figures?.filter(figure => isStudySourceUrl(figure.url)).map(figure => <figure key={figure.url} className="rounded-xl border p-3"><img src={figure.url} alt={figure.title} className="h-auto max-w-full" loading="lazy" onError={event => { event.currentTarget.hidden = true; }} /><figcaption className="mt-2 text-xs"><a href={figure.url} target="_blank" rel="noopener noreferrer" className="underline">{figure.title}</a></figcaption></figure>)}
-        {step === "texto" && <div className="flex justify-between gap-2"><Button variant="outline" onClick={() => setStep("entender")}>← Entender</Button><Button onClick={() => { setStep("fixar"); setRevealed(false); setResponse(""); }}>Fixar este artigo →</Button></div>}
+        {step === "texto" && <div className="flex justify-end"><Button onClick={() => setStep("entender")}>Entender →</Button></div>}
       </>}
       {step === "fixar" && <>
-        <section className="rounded-xl bg-muted/40 p-4"><h3 className="font-semibold">Como conferir sua compreensão</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm">{unit.recall.checklist.map(item => <li key={item}>{item}</li>)}</ul></section>
         <WorkedExamples slug={materialSlug} enabled={true} articleLabel={unit.label} />
+        <section className="space-y-3" aria-label="Questões autorais desta lei">
+          <h3 className="font-semibold">Questões desta lei</h3>
+          <p className="text-sm text-muted-foreground">Praticam toda a lei, não só este dispositivo — exercícios de fixação da equipe, não atribuídos a nenhuma banca.</p>
+          <LawPracticeQuiz law={law} />
+        </section>
+        <LawPracticeLink law={law} userId={userId} />
       </>}
       {mode === "recall" && revealed && <section className="space-y-3"><p className="text-sm">Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que confundiu. Esta avaliação é feita por você; não é correção automática de texto livre.</p><div className="flex flex-wrap gap-2">{([['again','Não lembrei · 10 min'],['hard','Com dificuldade · 1 dia'],['good','Lembrei'],['easy','Lembrei com facilidade']] as const).map(([rating,label]) => <Button disabled={busy} key={rating} variant="outline" onClick={() => void save(rating)}>{label}</Button>)}</div></section>}
       <details className="rounded-lg border px-3 py-2 text-sm" open={!!notes}><summary className="cursor-pointer font-medium">Minhas anotações</summary><textarea aria-label="Minhas anotações" maxLength={4000} className="mt-2 min-h-20 w-full rounded-lg border bg-background p-2 text-sm" value={notes} onChange={e => setNotes(e.target.value)} /></details>
