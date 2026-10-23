@@ -1,6 +1,5 @@
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
-import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -416,8 +415,7 @@ function Index() {
       <main id="conteudo" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <HeroClock />
-          <HeroBadge show={introSettled} />
+          <HeroClock show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
