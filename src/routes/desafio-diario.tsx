@@ -7,6 +7,7 @@ import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {

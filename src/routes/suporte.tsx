@@ -1,4 +1,5 @@
 import { acreDate } from "@/lib/acreTime";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 import { Input } from "@/components/ui/input";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";

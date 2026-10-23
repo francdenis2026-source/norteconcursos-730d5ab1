@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { InstitutionalWindow, WindowSections } from "@/components/landing/InstitutionalWindow";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 export const Route = createFileRoute("/privacy")({
   component: Privacy,
   head: () => ({

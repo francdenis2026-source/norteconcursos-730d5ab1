@@ -3,6 +3,7 @@ import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
