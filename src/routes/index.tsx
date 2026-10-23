@@ -49,6 +49,7 @@ import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -416,6 +417,7 @@ function Index() {
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
           <HeroBadge show={introSettled} />
+          <TacticalCrosshair />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
@@ -436,16 +438,17 @@ function Index() {
                     to="/auth"
                     search={{ mode: "register" }}
                     className="home-button home-button--gold"
+                    data-aim
                   >
                     Começar grátis
                     <ArrowUpRight />
                   </Link>
-                  <a href="#plataforma" className="home-hero__explore">
+                  <a href="#plataforma" className="home-hero__explore" data-aim>
                     Conhecer a plataforma
                     <ArrowRight />
                   </a>
                 </div>
-                <div className="home-hero__study-entry" aria-label="Comece sua preparação">
+                <div className="home-hero__study-entry" aria-label="Comece sua preparação" data-aim>
                   <TestingSeal />
                   <div className="home-hero__study-links">
                     <DailyChallengeBadge />
