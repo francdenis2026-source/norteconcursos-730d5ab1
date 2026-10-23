@@ -12,12 +12,12 @@
   <!-- Thin optical housing; transparent lens keeps the target visible. -->
   <circle cx="18" cy="18" r="14.25" fill="url(#lens)" stroke="#101820" stroke-width="2.7"/>
   <circle cx="18" cy="18" r="14.25" fill="none" stroke="url(#steel)" stroke-width="1.5"/>
-  <circle cx="18" cy="18" r="12.6" fill="none" stroke="#edf0ef" stroke-opacity=".85" stroke-width=".6"/>
-  <circle cx="18" cy="18" r="15.45" fill="none" stroke="#d3dbe1" stroke-opacity=".75" stroke-width=".45"/>
+  <circle cx="18" cy="18" r="12.6" fill="none" stroke="#ea5660" stroke-opacity=".85" stroke-width=".6"/>
+  <circle cx="18" cy="18" r="15.45" fill="none" stroke="#9e1925" stroke-opacity=".8" stroke-width=".45"/>
   <!-- Fine duplex crosshair and evenly spaced ranging marks. -->
   <path id="reticle" d="M18 5.8v9.2m0 6v9.2M5.8 18H15m6 0h9.2M10 16.7v2.6m3-2.1v1.6m10-1.6v1.6m3-2.1v2.6M16.7 10h2.6m-2.1 3h1.6m-1.6 10h1.6m-2.1 3h2.6" fill="none"/>
   <use href="#reticle" fill="none" stroke="#101820" stroke-width="1.8"/>
-  <use href="#reticle" fill="none" stroke="#f1eee5" stroke-width=".85"/>
-  <circle cx="18" cy="18" r="1.45" fill="#14202b"/>
-  <circle cx="18" cy="18" r=".8" fill="#f5cb76"/>
+  <use href="#reticle" fill="none" stroke="#e62738" stroke-width="1.15"/>
+  <circle cx="18" cy="18" r="1.45" fill="#65151b"/>
+  <circle cx="18" cy="18" r=".8" fill="#ff3445"/>
 </svg>
