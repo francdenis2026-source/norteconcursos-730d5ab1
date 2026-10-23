@@ -1,0 +1,105 @@
+/* Decorative artwork, with no hit targets, layout space or per-frame React updates. */
+svg.tactical-clock-backdrop {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+}
+.tactical-clock-backdrop__veil {
+  fill: var(--backdrop-clock-veil, transparent);
+}
+.tactical-clock-backdrop__mechanism {
+  opacity: 0.8;
+  filter: drop-shadow(0 1px 1px #0008);
+}
+.tactical-clock-backdrop__scale {
+  pointer-events: none;
+}
+.tactical-clock-backdrop__hour-mark {
+  fill: #baa77e;
+  opacity: 0.7;
+}
+.tactical-clock-backdrop__minute-mark {
+  fill: #ac9b7c;
+  opacity: 0.35;
+}
+.tactical-clock-backdrop__hand {
+  transform-origin: 0 0;
+  transform: rotate(var(--hand-angle));
+  animation: backdrop-hand-turn var(--hand-period) linear infinite;
+  fill: var(--hand-gold);
+  stroke: #51462f;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+}
+.tactical-clock-backdrop__hour {
+  --hand-period: 43200s;
+}
+.tactical-clock-backdrop__minute {
+  --hand-period: 3600s;
+}
+.tactical-clock-backdrop__second {
+  --hand-period: 60s;
+  animation-timing-function: steps(60, end);
+  animation-delay: var(--hand-delay, 0s);
+  opacity: 0.65;
+}
+.tactical-clock-backdrop__edge {
+  fill: none;
+  stroke: #d3c5a1;
+  stroke-width: 0.55;
+  opacity: 0.5;
+}
+.tactical-clock-backdrop__needle {
+  fill: none;
+  stroke: #aa9368;
+  stroke-width: 0.85;
+  stroke-linecap: round;
+}
+.tactical-clock-backdrop__hub {
+  fill: var(--hand-gold);
+  stroke: #51462f;
+  stroke-width: 1;
+}
+.tactical-clock-backdrop__collar {
+  fill: #29251d;
+}
+.tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand {
+  animation-play-state: paused;
+}
+@keyframes backdrop-hand-turn {
+  from {
+    transform: rotate(var(--hand-angle));
+  }
+  to {
+    transform: rotate(calc(var(--hand-angle) + 360deg));
+  }
+}
+/* The veil affects the photograph alone; hands keep their metallic colors in both themes. */
+.home .home-backdrop:has(.tactical-clock-backdrop) {
+  background-image: none;
+  --backdrop-clock-veil: var(--home-canvas-veil);
+}
+.app-shell[data-area="student"][data-brand-bg="blue"]
+  .app-study-backdrop:has(.tactical-clock-backdrop) {
+  background-image: none;
+  --backdrop-clock-veil: color-mix(in srgb, var(--background) 94%, transparent);
+}
+.dark
+  .app-shell[data-area="student"][data-brand-bg="blue"]
+  .app-study-backdrop:has(.tactical-clock-backdrop) {
+  --backdrop-clock-veil: color-mix(in srgb, var(--background) 84%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tactical-clock-backdrop__hand {
+    animation: none;
+  }
+}
+@media print, (forced-colors: active), (prefers-reduced-transparency: reduce) {
+  svg.tactical-clock-backdrop {
+    display: none;
+  }
+}

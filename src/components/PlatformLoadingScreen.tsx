@@ -1,19 +1,16 @@
-import loadingArtwork from "@/assets/auth/carreiras-composicao.webp";
-import portraitArtwork from "@/assets/auth/carreiras-abertura-vertical.webp";
 import { useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { useAuthStatus } from "@/components/auth/AuthStatusProvider";
 import { documentStartup } from "@/lib/startupSequence";
 export { finishInitialLoading } from "@/lib/startupSequence";
 
-export const INITIAL_LOADING_ART = loadingArtwork;
-export const INITIAL_LOADING_PORTRAIT_ART = portraitArtwork;
+export const INITIAL_LOADING_ART = "/media/hero/home-bg-texture.webp";
 
 /** Inline critical styles keep the initial server-rendered screen independent of route JS/fonts. */
 export const INITIAL_LOADING_CSS = `
 html:not([data-norte-boot=ready]){overflow:hidden;scrollbar-gutter:auto!important;background:#080a09}
 html:not([data-norte-boot=ready]) #norte-app-content{visibility:hidden;opacity:0;pointer-events:none}
-#norte-initial-loading{position:fixed;inset:0;width:100vw;z-index:10000;overflow:hidden;background:#080a09;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
+#norte-initial-loading{position:fixed;inset:0;width:100vw;z-index:10000;overflow:hidden;background:#080a09 url("${INITIAL_LOADING_ART}") center/cover no-repeat;color:#f5f1e8;opacity:1;visibility:visible;transition:opacity .24s ease,visibility .24s ease;font-family:system-ui,-apple-system,Segoe UI,sans-serif;pointer-events:auto}
 #norte-initial-loading picture{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
 #norte-initial-loading>picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 #norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09f5 0%,#080a09c9 12%,#080a0933 32%,transparent 55%)}
@@ -26,7 +23,7 @@ html:not([data-norte-boot=ready]) #norte-app-content{visibility:hidden;opacity:0
 @keyframes norte-boot-progress{from{transform:translateX(-100%)}to{transform:translateX(390%)}}
 html[data-norte-boot=ready] #norte-initial-loading{opacity:0;visibility:hidden;pointer-events:none}
 html[data-norte-startup-stage=intro] #norte-initial-loading>.norte-boot-copy{visibility:hidden}
-@media(orientation:portrait){#norte-initial-loading>picture img{object-position:50% 35%}#norte-initial-loading .norte-boot-copy{inset:auto 20px max(32px,7dvh,env(safe-area-inset-bottom));width:auto;text-align:center}#norte-initial-loading .norte-boot-brand{padding-left:.28em}#norte-initial-loading .norte-boot-track{margin-inline:auto}}
+@media(orientation:portrait){#norte-initial-loading>picture img{object-position:50% 50%}#norte-initial-loading .norte-boot-copy{inset:auto 20px max(32px,7dvh,env(safe-area-inset-bottom));width:auto;text-align:center}#norte-initial-loading .norte-boot-brand{padding-left:.28em}#norte-initial-loading .norte-boot-track{margin-inline:auto}}
 @media(max-height:500px){#norte-initial-loading .norte-boot-copy{bottom:max(16px,env(safe-area-inset-bottom))}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){#norte-initial-loading{transition:none}#norte-initial-loading .norte-boot-track:after{animation:none;left:32%}}
 @media(forced-colors:active){#norte-initial-loading{background:Canvas;color:CanvasText}#norte-initial-loading picture,#norte-initial-loading:after{display:none}#norte-initial-loading .norte-boot-brand,#norte-initial-loading .norte-boot-tagline,#norte-initial-loading .norte-boot-status{color:CanvasText}}
@@ -40,8 +37,7 @@ export function InitialLoadingScreen() {
   return (
     <div id="norte-initial-loading" role="status" aria-label="Preparando a plataforma Norte Concursos">
       <picture aria-hidden="true">
-        <source media="(orientation: portrait)" srcSet={INITIAL_LOADING_PORTRAIT_ART} type="image/webp" />
-        <img src={INITIAL_LOADING_ART} width={1440} height={600} alt="" fetchPriority="high" decoding="async" />
+        <img src={INITIAL_LOADING_ART} width={2087} height={753} alt="" loading="eager" fetchPriority="high" decoding="sync" />
       </picture>
       <div className="norte-boot-copy">
         <strong className="norte-boot-brand">NORTE</strong>

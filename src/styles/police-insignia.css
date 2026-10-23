@@ -1,6 +1,6 @@
 :root {
   --police-insignia-art: url('/media/brand/carreiras-marca-claro-hd.webp');
-  --police-insignia-aspect: 768 / 1061;
+  --police-insignia-aspect: 768 / 1080;
 }
 :root.dark {
   --police-insignia-art: url('/media/brand/distintivo-carreiras-hd.webp');

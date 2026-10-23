@@ -7,7 +7,7 @@
 //  - /offline.html, mostrada quando não há nem página guardada.
 // O que NUNCA é guardado: dados do Supabase e qualquer outro domínio, nem requisições que não sejam GET.
 // Questões, respostas, ranking e login continuam sempre ao vivo.
-const VERSION = "v7";
+const VERSION = "v8";
 const SHELL_CACHE = `norte-app-shell-${VERSION}`;
 const ASSET_CACHE = `norte-assets-${VERSION}`;
 const PAGE_CACHE = `norte-pages-${VERSION}`;
@@ -17,8 +17,9 @@ const SHELL_ASSETS = [
   "/favicon.svg",
   "/offline.html",
   "/media/loading/norte-abertura-hd.webp",
+  "/media/hero/home-bg-texture.webp",
   "/media/hero/norte-atmosphere.webp",
-  "/media/brand/distintivo-carreiras-hd.webp",
+  "/media/brand/distintivo-carreiras-hd-v2.webp",
 ];
 const MAX_ASSETS = 220;
 const MAX_PAGES = 25;

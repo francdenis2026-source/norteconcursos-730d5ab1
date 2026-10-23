@@ -1,5 +1,6 @@
+import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
-import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
+import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
@@ -47,9 +48,7 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
-import "@/styles/home-clock.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { ClockShowcase } from "@/components/landing/ClockShowcase";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -297,7 +296,7 @@ function Index() {
   }, []);
   return (
     <div className="home">
-      <div className="home-backdrop" aria-hidden="true" />
+      <div className="home-backdrop" aria-hidden="true"><TacticalClockBackdrop /></div>
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>
@@ -469,8 +468,6 @@ function Index() {
           </div>
         </section>
 
-        <ClockShowcase />
-
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">
             <div className="home-preparation__band">
@@ -526,7 +523,7 @@ function Index() {
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <PoliceInsignia className="home-footer__insignia" alt="" width={96} height={116} loading="lazy" decoding="async" />
+              <FooterInsignia />
               <div>
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>

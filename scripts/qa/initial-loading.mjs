@@ -5,22 +5,23 @@ import assert from 'node:assert/strict';
 import {statSync,writeFileSync} from 'node:fs';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.BASE_URL||'http://127.0.0.1:3000';
-assert.ok(statSync('src/assets/auth/carreiras-abertura-vertical.webp').size<600_000);
+assert.ok(statSync('public/media/hero/home-bg-texture.webp').size<200_000);
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 try{
  for(const [width,dpr] of [[1440,1],[1920,1],[820,1],[390,1],[390,2]]){
   const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:dpr,reducedMotion:'reduce'});
   let release;const gate=new Promise(resolve=>{release=resolve});const images=[];
-  page.on('request',request=>{if(/carreiras-abertura-vertical|carreiras-composicao/.test(request.url()))images.push(request.url());});
+  page.on('request',request=>{if(/home-bg-texture/.test(request.url()))images.push(request.url());});
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/*',async route=>{if(route.request().resourceType()==='script')await gate;await route.continue();});
   await page.goto(base+'/',{waitUntil:'commit'});
   const boot=page.locator('#norte-initial-loading');await boot.waitFor({state:'visible'});
   await boot.locator('img').evaluate(async img=>{await img.decode()});
   assert.ok(await boot.getByText('Preparando sua plataforma…').isVisible());
-  assert.equal(await boot.locator('img').evaluate(img=>innerWidth<innerHeight ? img.currentSrc.includes('carreiras-abertura-vertical') : img.currentSrc.includes('carreiras-composicao')),true);
-  assert.ok(await boot.locator('img').evaluate(img=>innerWidth<innerHeight ? img.naturalWidth>=900 && img.naturalHeight>=1600 : img.naturalWidth>=1440),'retain the full-resolution source');
-  assert.equal(new Set(images).size,1,'only the selected responsive image loads');
+  assert.equal(await boot.locator('img').evaluate(img=>img.currentSrc.endsWith('/media/hero/home-bg-texture.webp')),true);
+  assert.ok(await boot.locator('img').evaluate(img=>img.naturalWidth===2087 && img.naturalHeight===753),'retain the full-resolution source');
+  assert.equal(new Set(images).size,1,'one shared background loads in either orientation');
+  assert.match(await boot.evaluate(el=>getComputedStyle(el).backgroundImage),/home-bg-texture/,'critical CSS also paints the shared artwork before route JavaScript');
   const bounds = await boot.locator('picture').boundingBox();
   assert.deepEqual(bounds, { x: 0, y: 0, width, height: 900 }, 'artwork occupies the entire viewport');
   assert.equal(await boot.locator('img').evaluate(img=>getComputedStyle(img).objectFit),'cover');
@@ -30,7 +31,7 @@ try{
   writeFileSync(`/tmp/norte-initial-loading-${width}.png`,Buffer.from(capture.data,'base64'));await cdp.detach();
   release();await boot.waitFor({state:'hidden',timeout:20000});
   assert.equal(errors.length,0,errors.join('\n'));
-  await page.locator('.home-hero__study-links .daily-badge').click();await page.waitForURL('**/desafio-diario');assert.equal(await boot.isVisible(),false,'SPA navigation does not replay startup');
+  await page.locator('a[href="/desafio-diario"]').first().click();await page.waitForURL('**/desafio-diario');assert.equal(await boot.isVisible(),false,'SPA navigation does not replay startup');
   assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('#norte-initial-loading')).pointerEvents),'none');
   await page.close();console.log('PASS pre-hydration artwork, responsive bytes, hydration and SPA:',width);
  }
