@@ -1,5 +1,6 @@
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
-import { PoliceInsignia } from "@/components/brand/PoliceInsignia";
+import { FooterInsignia } from "@/components/landing/FooterInsignia";
+import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -46,9 +47,7 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
-import "@/styles/home-clock.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { HeroClock } from "@/components/landing/HeroClock";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -415,7 +414,7 @@ function Index() {
       <main id="conteudo" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <HeroClock show={introSettled} />
+          <HeroBadge show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
               <div className="home-hero__copy">
@@ -523,7 +522,7 @@ function Index() {
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <PoliceInsignia className="home-footer__insignia" alt="" width={96} height={116} loading="lazy" decoding="async" />
+              <FooterInsignia />
               <div>
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>
