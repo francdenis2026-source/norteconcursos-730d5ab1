@@ -62,7 +62,6 @@ export function InitialLoadingScreen() {
         <img src={INITIAL_LOADING_ART} width={2087} height={753} alt="" loading="eager" fetchPriority="high" decoding="sync" />
       </picture>
       <img className="norte-boot-watermark" src="/media/brand/norte-identity/logo-horizontal-escuro.svg" width={1000} height={320} alt="" aria-hidden="true" decoding="sync" />
-      <img className="norte-boot-mobile-logo" src="/media/brand/norte-identity/logo-vertical-escuro.svg" width={512} height={700} alt="" aria-hidden="true" decoding="sync" />
       <div className="norte-boot-copy">
         <strong className="norte-boot-brand">NORTE</strong>
         <span className="norte-boot-tagline">Sua preparação tem um norte.</span>
