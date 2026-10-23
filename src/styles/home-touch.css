@@ -341,8 +341,8 @@
     opacity: .53;
   }
 }
-/* A single desktop composition: shared wallpaper and agent are layers
-   of ONE background, with no gold halos or floating duplicate portrait. */
+/* Desktop hero: show the same FIXED animated clock canvas beneath the agent.
+   Do not paint a replacement wallpaper here: the real clock lives in .home-backdrop. */
 @media (min-width: 1101px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     --hero-agent-height: clamp(670px, 96vh, 1050px);
@@ -350,18 +350,16 @@
     isolation: isolate;
     overflow: hidden;
     min-height: min(820px, calc(100svh - 76px));
-    background-color: #10191c;
+    background-color: transparent;
     background-image:
       linear-gradient(90deg,
-        rgb(10 18 22 / 94%) 0%,
-        rgb(10 18 22 / 83%) 28%,
-        rgb(10 18 22 / 53%) 47%,
-        rgb(10 18 22 / 7%) 74%,
-        rgb(10 18 22 / 12%) 100%),
-      url('/media/hero/hero-norte-recorte.webp'),
-      url('/media/hero/home-bg-texture.webp');
-    background-size: 100% 100%, auto var(--hero-agent-height), cover;
-    background-position: center center, right clamp(-55px, -2vw, -10px) bottom, center center;
+        rgb(10 18 22 / 66%) 0%,
+        rgb(10 18 22 / 48%) 31%,
+        rgb(10 18 22 / 18%) 50%,
+        transparent 74%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size: 100% 100%, auto var(--hero-agent-height);
+    background-position: center center, right clamp(-55px, -2vw, -10px) bottom;
     background-repeat: no-repeat;
     background-attachment: scroll;
     box-shadow: none;
@@ -413,7 +411,7 @@
 @media (min-width: 1101px) and (max-width: 1370px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     --hero-agent-height: clamp(640px, 91vh, 900px);
-    background-position: center center, right -75px bottom, center center;
+    background-position: center center, right -75px bottom;
   }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
     width: min(53%, 555px);
@@ -436,9 +434,8 @@
 @media (min-width: 1101px) and (prefers-reduced-transparency: reduce) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     background-image:
-      linear-gradient(90deg, #10191c 0%, rgb(16 25 28 / 93%) 38%, rgb(16 25 28 / 45%) 75%),
-      url('/media/hero/hero-norte-recorte.webp'),
-      url('/media/hero/home-bg-texture.webp');
+      linear-gradient(90deg, rgb(16 25 28 / 82%) 0%, rgb(16 25 28 / 58%) 38%, transparent 75%),
+      url('/media/hero/hero-norte-recorte.webp');
   }
 }
 @media (forced-colors: active) {
