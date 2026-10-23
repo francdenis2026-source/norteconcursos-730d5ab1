@@ -98,9 +98,9 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-question-column { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; border: 1px solid var(--daily-edge); border-radius: 18px; overflow: hidden; background: var(--daily-glass); }
 .daily-reading { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; padding: clamp(14px, 2vw, 24px); }
 .daily-reading:focus-visible { outline: 2px solid var(--daily-accent); outline-offset: -4px; }
-.daily-question-card { background: transparent; border: 0; box-shadow: none; border-radius: 0; gap: 0; padding: 0; }
+.daily-question-card { background: transparent; border: 0; box-shadow: none; border-radius: 0; gap: 0; padding: 0; overflow: visible; }
 .daily-question-card > div { padding: 0; }
-.daily-question-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.daily-question-heading { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
 .daily-question-heading h2 { font-size: 22px; font-weight: 700; margin-top: 2px; }
 .daily-question-heading h2 > span { font-size: 14px; font-weight: 400; color: var(--muted-foreground); }
 .daily-question-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
@@ -204,17 +204,39 @@ body:has(.daily-page) { overflow: hidden; }
 .daily-study-extra { border-top: 1px solid var(--daily-edge); padding-top: 12px; }
 .daily-study-extra > summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 12px; cursor: pointer; font-size: 12px; color: var(--daily-accent); }
 
-/* A compact inline readout next to the heading — the full dial ate the room the stem needs.
-   Sized to the heading row's own height (eyebrow + h2), not shrunk past legibility. */
-.daily-question-heading .question-timing-row { flex-shrink: 0; align-self: center; }
-.daily-question-heading .tactical-clock--compact { gap: 9px; }
-.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 42px; }
-.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 19px; font-weight: 800; color: var(--foreground); }
+/* A medallion that floats over the heading, big enough to show the engraved art, without
+   taking part in the row's own layout — the header, filters and stem keep their height. */
+.daily-question-heading .question-timing-row {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  flex-shrink: 0;
+}
+.daily-question-heading .tactical-clock--compact { gap: 12px; }
+.daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 76px; }
+/* This badge carries the new "Carreiras Policiais" artwork: let it show at full strength
+   instead of the muted watermark treatment used for the generic insignia elsewhere. */
+.daily-question-heading .tactical-clock--compact .tactical-clock__engraving {
+  opacity: 1;
+  inset: 8%;
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__engraving img {
+  filter: saturate(1) contrast(1.05);
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__face {
+  box-shadow:
+    0 4px 14px -4px #000a,
+    0 0 0 1px #0006,
+    inset 0 1px 2px #fff3;
+}
+.daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 23px; font-weight: 800; color: var(--foreground); }
 .daily-question-heading .tactical-clock--compact .tactical-clock__status { font-size: 10px; }
 @media (max-width: 1000px) {
   .daily-question-heading .tactical-clock--compact .tactical-clock__status { display: none; }
 }
 @media (max-width: 700px) {
-  .daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 34px; }
-  .daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 16px; }
+  .daily-question-heading .tactical-clock--compact .tactical-clock__face { width: 52px; }
+  .daily-question-heading .tactical-clock--compact .tactical-clock__time { font-size: 17px; }
 }

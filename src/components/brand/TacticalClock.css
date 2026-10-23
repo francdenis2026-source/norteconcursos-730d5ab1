@@ -1,5 +1,6 @@
 .tactical-clock {
   --clock-gold: #eac77e;
+  --clock-pointer: #ff5a45;
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -71,8 +72,21 @@
   opacity: 0.6;
 }
 .tactical-clock__hand {
-  fill: #fff0c3;
-  filter: drop-shadow(0 0 3px #f7cd77);
+  fill: var(--clock-pointer);
+  filter: drop-shadow(0 0 4px var(--clock-pointer)) drop-shadow(0 0 1px #000a);
+}
+/* A thin full-length needle from the center, in the pointer color, so the sweep
+   reads clearly as "this is the moving hand" against the busy engraved art. */
+.tactical-clock__needle {
+  stroke: var(--clock-pointer);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 3px var(--clock-pointer));
+}
+.tactical-clock__pivot {
+  fill: var(--clock-pointer);
+  stroke: #1a1a1a;
+  stroke-width: 1.5;
 }
 .tactical-clock__bezel {
   fill: #ecd6a4;
@@ -137,6 +151,15 @@
 .tactical-clock--focus .tactical-clock__engraving {
   inset: 29% 25% 25%;
   opacity: 0.65;
+}
+/* The question timer always carries the "Carreiras Policiais" artwork now — show it at
+   full strength instead of the muted watermark treatment the generic insignia uses. */
+.tactical-clock--question .tactical-clock__engraving {
+  inset: 16% 18% 20%;
+  opacity: 1;
+}
+.tactical-clock--question .tactical-clock__engraving img {
+  filter: saturate(1) contrast(1.05);
 }
 .tactical-clock--question .tactical-clock__display,
 .tactical-clock--focus .tactical-clock__display {
