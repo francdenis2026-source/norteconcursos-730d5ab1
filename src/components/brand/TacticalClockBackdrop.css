@@ -103,3 +103,11 @@ svg.tactical-clock-backdrop {
     display: none;
   }
 }
+/* On a phone the whole hero sits inside this single dial: at full strength its hour and minute
+   hands read as loose gold bars crossing the headline, CTAs and badges rather than as ambiance.
+   Fading the mechanism keeps the texture without it competing with content. */
+@media (max-width: 760px) {
+  .tactical-clock-backdrop__mechanism {
+    opacity: 0.22;
+  }
+}

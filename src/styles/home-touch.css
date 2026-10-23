@@ -3,9 +3,12 @@
   :root:is(.dark, :not(.dark)) .home.home {
     --home-glass-fill: color-mix(in srgb, var(--card) 97%, transparent);
     --home-glass-edge: color-mix(in srgb, var(--foreground) 17%, transparent);
-    --home-canvas-veil: color-mix(in srgb, var(--background) 94%, transparent);
+    --home-canvas-veil: color-mix(in srgb, var(--background) 96%, transparent);
   }
-  :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 76%, transparent); }
+  /* The tactical clock backdrop's hands read as loose gold strokes crossing the hero's buttons
+     at phone width, where there is no room to lay content away from the dial's center. A heavier
+     veil here keeps the texture as a hint instead of a competing line through the CTAs. */
+  :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 90%, transparent); }
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading,
     .home-preparation__info, .home-plan[data-plan],
@@ -32,6 +35,30 @@
   :root:is(.dark, :not(.dark)) .home.home .home-preparation__tabs { background: var(--muted); padding: 6px; }
   .home.home .home-preparation__tab { min-height: 44px; font-size: 12px; }
   .home.home .home-preparation__tool summary { min-height: 48px; }
+  /* A flat line of same-size glyphs read as a plain list on a narrow screen; a tinted chip behind
+     the leading icon gives each row its own anchor and a touch of color beyond gold-on-black. */
+  .home.home .home-preparation__tool summary svg:first-child {
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--micro-accent) 14%, transparent);
+    flex-shrink: 0;
+  }
+  .home.home .home-preparation__careers svg,
+  .home.home .home-preparation__items > article > svg {
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    padding: 8px;
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--micro-accent) 14%, transparent);
+    color: var(--micro-accent);
+    flex-shrink: 0;
+  }
   .home.home .home-plan[data-plan] :is(.home-plan__description, .home-plan__features) { line-height: 1.65; }
   .home.home .home-plan[data-plan] > .home-button { min-height: 44px; }
   .home.home .home-trust {

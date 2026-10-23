@@ -2970,6 +2970,14 @@
 .home-menu nav a { min-height:46px; font-size:15px; gap:12px; }
 .home-menu__access { margin-top:0; padding-top:16px; border-top:1px solid var(--home-line); gap:10px; flex:none; }
 .home-menu__access .home-button { min-height:46px; font-size:14px; }
+/* The sheet's own CTA used the neutral --primary pairing (near-white on dark), reading as an
+   off-brand plain button next to every gold CTA elsewhere on the page. */
+.home-menu__access .home-button--primary {
+  background: var(--home-gold);
+  border-color: var(--home-gold);
+  color: var(--brass-foreground);
+}
+.home-menu__access .home-button--primary:hover { background: var(--brass-hover); border-color: var(--brass-hover); }
 .home-menu > button:first-child { top:8px; right:8px; }
 
 @media(max-width:1100px) {
