@@ -331,3 +331,48 @@
   .workspace-section-nav a[data-tone] > svg { color: inherit; background: Canvas; box-shadow: none; }
   .workspace-section-nav a[data-tone][aria-current="page"] { color: HighlightText; background: Highlight; border-color: Highlight; box-shadow: none; text-decoration: underline; }
 }
+
+
+/* Customer workspace / desktop navigation reading scale. */
+@media (min-width: 1024px) and (pointer: fine) {
+  .app-shell[data-area="student"] .student-navigation .app-sidebar__search {
+    height: 48px;
+    min-height: 48px;
+    font-size: 14px;
+  }
+  .app-shell[data-area="student"] .student-navigation .app-sidebar__search > svg {
+    width: 21px;
+    height: 21px;
+  }
+  .app-shell[data-area="student"] .student-navigation .navigation-workspace :is(.nav-primary__label, .nav-section-label) {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation .nav-section-link {
+    min-height: 48px;
+  }
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation .nav-section-link strong {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  .app-shell[data-area="student"] .student-navigation .student-direct-navigation .nav-section-link small {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .app-shell[data-area="student"] .workspace-section-nav a {
+    min-height: 44px;
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+  .app-shell[data-area="student"] .workspace-section-nav__segment {
+    font-size: 12px;
+  }
+  .app-shell[data-area="student"] .workspace-section-nav a svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .app-shell[data-area="student"] .app-location__context {
+    font-size: 12px;
+  }
+}
