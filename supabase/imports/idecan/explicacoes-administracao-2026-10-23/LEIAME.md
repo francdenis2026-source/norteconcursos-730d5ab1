@@ -22,7 +22,7 @@ A consulta REST pública desta sessão retornou zero linhas por restrição de l
 
 Temas: eficiência/eficácia/efetividade, descentralização decisória, qualidade e projetos, controle e planejamento estratégico. São explicações de Administração Geral, sem normas jurídicas. A distinção organizacional de descentralização não foi apresentada como classificação de Direito Administrativo.
 
-As explicações foram escritas nesta etapa; **não foram aplicadas ao Supabase nem tornaram nenhuma questão nova disponível**. Não se sabe, sem nova leitura administrativa, se esses registros receberam explicações posteriores à auditoria. Por isso, não há SQL de sobrescrita ou promoção automática neste lote.
+As explicações foram escritas nesta etapa; **não foram aplicadas ao Supabase nem tornaram nenhuma questão nova disponível**. Não se sabe, sem nova leitura administrativa, se esses registros receberam explicações posteriores à auditoria. O SQL posterior, autorizado pelo usuário, acrescenta somente explicações vazias e não promove estados nem sobrescreve explicações existentes.
 
 ## Evidência e pendências
 
@@ -31,3 +31,11 @@ O cotejo literal anterior dos cinco itens está em `../revisao-integral/cotejo-p
 Antes de publicar: ler o estado atual, preservar explicações existentes, reconferir caderno e gabarito definitivo, validar o tópico real do edital aplicável e aplicar somente o comentário aprovado com comparação do estado anterior, auditoria e leitura de confirmação. Preservar gabaritos, anuladas e bloqueios. Não converter a pertinência temática à PF em previsão de um futuro edital PC-AC.
 
 Para os próximos lotes jurídicos, seguir `CONTENT_GOVERNANCE.md`: consultar o dispositivo vigente no Planalto (norma federal) ou legislador oficial competente (norma estadual), e STF/STJ/tribunal competente quando houver jurisprudência. Registrar URL, dispositivo, data da conferência e alcance temporal. Fonte inacessível ou dúvida de vigência mantém a questão retida. Não usar apenas conhecimento de memória, links antigos ou retorno HTTP 200 como prova de validade.
+
+## SQL solicitado para execução manual
+
+`aplicar-cinco-explicacoes.sql` contém integralmente os cinco comentários. Executar inteiro no SQL Editor como `postgres`. Compara SHA-256 do enunciado, alternativas, gabarito e disciplina, além da identidade exata do concurso/caderno/item; bloqueia cada registro; aceita somente `active` e `under_review` sem exigência visual/jurídica adicional; recusa explicação preexistente diferente. Atualiza somente `explanation`, sem alterar status, tópico, enunciado, gabarito ou data de verificação. Não libera questões retidas nem atesta novo cotejo das fontes.
+
+Grava antes/depois em auditoria privada com RLS e sem acesso pelos papéis de navegador. Tudo ocorre em uma transação: uma divergência cancela as cinco mudanças. Reexecutar o mesmo texto não duplica auditoria. Se houver erro, preserve os dados existentes e use o diagnóstico para investigar, sem remover as proteções. A consulta final mostra os cinco estados e tópicos reais; `under_review` continua indisponível para alunos.
+
+Gerador local: `node scripts/idecan/build-admin-explanation-sql.mjs CAMINHO_PGLITE`. Testes: `node scripts/idecan/test-admin-explanation-sql.mjs CAMINHO_PGLITE`. Foram verificados aplicação, preservação de todos os outros campos, idempotência e reversão integral por explicação concorrente, enunciado/gabarito modificado, estado bloqueado e necessidade de revisão jurídica. **SQL não executado no Supabase por este assistente.**
