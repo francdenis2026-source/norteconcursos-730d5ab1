@@ -1,0 +1,51 @@
+/* Only prose and copy inside a student's page. No links, buttons, controls or navigation.
+   zoom affects text layout inside existing blocks, not the outer panel or menu geometry. */
+.app-shell[data-area="student"] #dashboard-content :is(
+  h1, h2, h3, h4, h5, h6, p, blockquote, figcaption,
+  td, th, label, legend, .question-readable, .q-option-text
+):not(:is(button *, a *, [role="button"] *, nav *, .reading-size *, .panel-text-control *)) {
+  zoom: var(--panel-text-scale, 1);
+}
+/* Avoid multiple multipliers on nested prose. */
+.app-shell[data-area="student"] #dashboard-content :is(p, blockquote, td, th, label, legend) :is(p, blockquote, td, th, label, legend) {
+  zoom: 1;
+}
+.panel-text-control { position: relative; flex: none; }
+.panel-text-control__trigger {
+  display: grid; place-items: center; flex: 0 0 44px;
+  width: 44px; height: 44px; min-width: 44px;
+  padding: 0; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--card); color: var(--foreground); cursor: pointer;
+}
+.panel-text-control__trigger svg { width: 20px; height: 20px; }
+.panel-text-control__trigger:hover { background: var(--muted); }
+.panel-text-control__popover {
+  position: absolute; top: calc(100% + 10px); right: 0; z-index: 75;
+  width: min(290px, calc(100vw - 24px)); padding: 16px;
+  border: 1px solid var(--border); border-radius: 14px;
+  background: var(--card); color: var(--foreground);
+  box-shadow: 0 18px 40px rgb(0 0 0 / .22);
+}
+.panel-text-control__popover strong { display: block; font-size: 15px; }
+.panel-text-control__popover p { margin: 8px 0 14px; color: var(--muted-foreground); font-size: 12px; line-height: 1.5; }
+.panel-text-control__steps { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.panel-text-control__steps button {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--muted); cursor: pointer;
+}
+.panel-text-control__steps button:disabled,
+.panel-text-control__reset:disabled { opacity: .38; cursor: not-allowed; }
+.panel-text-control__steps button svg { width: 19px; height: 19px; }
+.panel-text-control__steps output { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.panel-text-control__reset {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; min-height: 40px; margin-top: 12px;
+  border: 1px solid var(--border); border-radius: 9px;
+  background: transparent; cursor: pointer; font-size: 12px;
+}
+.panel-text-control__reset svg { width: 15px; height: 15px; }
+.panel-text-control button:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+@media (forced-colors: active) {
+  .panel-text-control__popover, .panel-text-control__trigger { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
