@@ -1,6 +1,6 @@
 import "./ContestShowcase.css";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, ShieldCheck, Target } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ShieldCheck, Sparkles, Target } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { usePcscAvailability } from "@/hooks/usePcscAvailability";
 import { usePcprAvailability } from "@/hooks/usePcprAvailability";
@@ -168,6 +168,9 @@ export function ContestShowcase() {
           id="prova-pcsc"
           aria-labelledby="pcsc-title"
         >
+          <span className="contest-card__badge">
+            <Sparkles size={11} aria-hidden="true" /> Novo
+          </span>
           <div className="contest-card__art">
             <img
               src="/media/hero/pcsc-capa.webp"
