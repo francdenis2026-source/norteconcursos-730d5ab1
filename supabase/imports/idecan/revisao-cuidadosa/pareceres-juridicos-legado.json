@@ -1,0 +1,2244 @@
+{
+  "checked_at": "2026-10-23T04:25:00.066132+00:00",
+  "count": 101,
+  "remote_applied": false,
+  "publication_approved": false,
+  "items": [
+    {
+      "local_index": 0,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 1,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cp",
+          "article": "155",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:155"
+        }
+      ],
+      "explanation": "O gabarito B aplica a insignificância à tipicidade material, e não à ilicitude. O valor de R$ 30, isoladamente, não basta para estabelecer a tese: é preciso conferir a ofensividade, a periculosidade social, a reprovabilidade e a inexpressividade da lesão, além das circunstâncias pessoais relevantes.\n\nErro comum: Não transformar um limite de valor em autorização automática para subtrair bens.\n\nExemplo prático: Uma subtração de pequeno valor exige examinar o contexto antes de concluir pela bagatela.",
+      "hold_reason": "Conferir precedente competente e circunstâncias da insignificância; não liberar só pelo valor.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 1,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 2,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cp",
+          "article": "20",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:20"
+        },
+        {
+          "document": "drogas",
+          "article": "33",
+          "excerpt_artifact": "excertos-juridicos.json#/drogas:33"
+        }
+      ],
+      "explanation": "A alternativa E descreve erro de tipo inevitável: Simone acredita receber farinha, desconhecendo a natureza da substância. O art. 20 exclui o dolo e, se o erro for escusável, não subsiste imputação culposa. Não confundir com erro sobre a proibição.\n\nErro comum: O art. 21 trata da consciência da ilicitude; a situação narrada envolve um elemento fático do tipo.\n\nExemplo prático: Quem recebe um objeto sem saber que contém droga pode desconhecer a própria situação de fato.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 2,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 3,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cp",
+          "article": "15",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:15"
+        }
+      ],
+      "explanation": "Depois de esgotar os disparos, Mário atua para impedir a morte e a vítima sobrevive em razão do socorro. Na hipótese assumida, há arrependimento eficaz e ele responde pelos atos já praticados, como lesão corporal: D.\n\nErro comum: Desistência voluntária interrompe uma execução ainda possível; arrependimento posterior tem requisitos próprios e não se aplica a crime violento dessa forma.\n\nExemplo prático: Se o agente consegue impedir o resultado que desencadeou, examine o art. 15, sem confundi-lo com simples remorso.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 3,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 4,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cp",
+          "article": "171",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:171"
+        }
+      ],
+      "explanation": "Para o fato de maio de 2022, o gabarito A corresponde ao aumento de um terço ao dobro do estelionato contra idoso ou vulnerável, considerada a relevância do resultado gravoso. A conferência precisa incluir a redação vigente em 2022 e as regras de sucessão de leis, não só o caput atual.\n\nErro comum: Uma vítima com 61 anos já é idosa; isso não se confunde com outros limites etários previstos para representação.\n\nExemplo prático: Antes de aplicar uma pena atual a fato antigo, compare as duas redações e a possibilidade de retroação benéfica.",
+      "hold_reason": "Concluir confronto da redação de 2022 com as alterações posteriores do art. 171.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 4,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 5,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cp",
+          "article": "121",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:121"
+        },
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        }
+      ],
+      "explanation": "O fato foi situado em 2024 e a resposta D discute a antiga referência a parentesco consanguíneo até terceiro grau. A hipótese envolve filha adotiva e também pode atrair outras qualificadoras, como vítima menor de 14 anos. Exige análise da redação temporal e do entendimento judicial; não ensinar que a adoção reduz a proteção da criança.\n\nErro comum: Não usar analogia penal desfavorável nem transportar automaticamente uma alteração posterior para fato anterior.\n\nExemplo prático: Uma mesma morte pode exigir análise de qualificadoras distintas, ainda que uma qualificadora funcional não incida.",
+      "hold_reason": "Verificar legislação histórica e precedente sobre filiação adotiva; explicitar outras qualificadoras e alcance da resposta.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 5,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 6,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cp",
+          "article": "30",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:30"
+        },
+        {
+          "document": "cp",
+          "article": "312",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:312"
+        },
+        {
+          "document": "cp",
+          "article": "29",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:29"
+        }
+      ],
+      "explanation": "A condição de funcionário público é elementar do peculato e pode comunicar-se ao particular que a conhece e concorre para o delito. Por isso, B. O caso afirma apropriação do computador possuído em razão do cargo; não se deve generalizar o resultado para qualquer empréstimo ou mero uso temporário.\n\nErro comum: A regra de incomunicabilidade do art. 30 ressalva as elementares do crime.\n\nExemplo prático: O particular que ajuda conscientemente um servidor a se apropriar de bem funcional pode responder pelo mesmo delito.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 6,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 7,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cp",
+          "article": "155",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:155"
+        }
+      ],
+      "explanation": "A alternativa A adota a inversão da posse, ou amotio: o agente retira o colar e sai da loja, sem que a captura posterior impeça por si a consumação. A exigência de posse tranquila e desvigiada não decorre dessa orientação.\n\nErro comum: Ser preso logo depois não transforma necessariamente um furto consumado em tentativa.\n\nExemplo prático: A recuperação imediata da coisa não apaga, por si só, uma inversão de posse já ocorrida.",
+      "hold_reason": "Conferir precedente oficial sobre consumação do furto antes da aprovação definitiva.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 7,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 8,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cp",
+          "article": "70",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:70"
+        }
+      ],
+      "explanation": "Uma única conduta culposa provoca duas mortes, sem desígnios autônomos. O gabarito C corresponde ao concurso formal próprio: pena de um dos crimes, ou a mais grave, aumentada de um sexto até metade, observada a regra do parágrafo único.\n\nErro comum: Concurso material pressupõe pluralidade de condutas; crime continuado não nasce de uma única ação com duas vítimas.\n\nExemplo prático: Uma só manobra imprudente que causa dois resultados pode configurar concurso formal.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 8,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 9,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cp",
+          "article": "317",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:317"
+        }
+      ],
+      "explanation": "A solicitação de vantagem indevida em razão da função já integra a corrupção passiva, mesmo sem pagamento: E. O enunciado usa solicitar, distinguindo a conduta da exigência própria da concussão.\n\nErro comum: Corrupção ativa não é o delito cometido pelo funcionário apenas por solicitar a vantagem.\n\nExemplo prático: Se o servidor pede dinheiro para liberar uma irregularidade e o motorista recusa, a solicitação pode bastar à consumação.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 9,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 10,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cp",
+          "article": "213",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:213"
+        },
+        {
+          "document": "cp",
+          "article": "226",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:226"
+        }
+      ],
+      "explanation": "Para a hipótese de estupro praticado por dois agentes, C corresponde à causa de aumento de um terço a dois terços prevista para o concurso de dois ou mais agentes. É preciso distinguir violência contra pessoa adulta da vulnerabilidade presumida por idade.\n\nErro comum: Não trocar o intervalo da majorante por frações de outras causas de aumento.\n\nExemplo prático: O emprego de violência e a atuação de dois autores são circunstâncias examinadas em etapas próprias da tipificação e da pena.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 10,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 11,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "158-A",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:158-A"
+        },
+        {
+          "document": "cpp",
+          "article": "158-B",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:158-B"
+        }
+      ],
+      "explanation": "A alternativa D reproduz a etapa isolamento: evitar alteração e preservar o ambiente imediato, mediato e relacionado aos vestígios. Fixação descreve o vestígio; coleta o recolhe; recebimento formaliza sua transferência; armazenamento assegura a guarda.\n\nErro comum: Trocar os nomes das etapas impede documentar corretamente a história do vestígio.\n\nExemplo prático: Antes de recolher uma cápsula, preserve o local e registre sua posição para que a coleta não destrua o contexto.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 11,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 12,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "617",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:617"
+        }
+      ],
+      "explanation": "Quando somente a defesa apela, o tribunal não pode agravar a pena: vedação da reformatio in pejus, alternativa E. A alegação de desproporção não autoriza aumentar de cinco para seis anos nesse recurso exclusivo.\n\nErro comum: A revisão pelo tribunal não afasta os limites impostos pela ausência de recurso acusatório.\n\nExemplo prático: Se só o réu recorre buscando redução ou nulidade, o recurso não pode servir para piorar a pena nos termos do art. 617.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 12,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 13,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "25",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:25"
+        }
+      ],
+      "explanation": "A regra geral é que a representação se torna irretratável depois do oferecimento da denúncia, e não apenas do seu recebimento. Alternativa A. Regimes especiais, como os da violência doméstica, precisam de exame próprio.\n\nErro comum: Oferecer denúncia é ato do Ministério Público; receber a denúncia é ato judicial posterior.\n\nExemplo prático: Uma retratação feita antes do oferecimento ainda deve ser analisada sob o regime legal aplicável ao crime.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 13,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 14,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "maria-penha",
+          "article": "41",
+          "excerpt_artifact": "excertos-juridicos.json#/maria-penha:41"
+        }
+      ],
+      "explanation": "A lesão corporal contra mulher em contexto de violência doméstica é tratada como ação penal pública incondicionada no gabarito C. A dispensa de representação decorre da interpretação do sistema protetivo pelos tribunais competentes, e não de uma regra para todos os crimes domésticos.\n\nErro comum: Não estender automaticamente a mesma natureza de ação penal a qualquer infração praticada no âmbito familiar.\n\nExemplo prático: Lesão corporal e ameaça podem exigir enquadramentos e regimes de ação diferentes.",
+      "hold_reason": "Conferir STF ADI 4424 e STJ Súmula 542 em documento oficial atual.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 14,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 15,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "interceptacao",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/interceptacao:1"
+        },
+        {
+          "document": "interceptacao",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/interceptacao:2"
+        },
+        {
+          "document": "interceptacao",
+          "article": "3",
+          "excerpt_artifact": "excertos-juridicos.json#/interceptacao:3"
+        }
+      ],
+      "explanation": "A lei admite interceptação na investigação criminal e na instrução processual penal, mediante decisão judicial e os demais requisitos. A vedação do art. 2º, III, refere-se a infração punida, no máximo, com detenção; não existe aqui requisito de pena mínima superior a quatro anos. Alternativa D.\n\nErro comum: Não confundir os requisitos da interceptação com os de outras cautelares.\n\nExemplo prático: Uma investigação de crime punido com reclusão ainda precisa demonstrar indícios e impossibilidade de obter a prova por outros meios disponíveis.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 15,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 16,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "312",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:312"
+        },
+        {
+          "document": "cpp",
+          "article": "313",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:313"
+        }
+      ],
+      "explanation": "O caso narra agente primário e crime culposo, sem hipótese especial de admissibilidade demonstrada. A gravidade do resultado e a repercussão social, isoladamente, não autorizam a preventiva. O gabarito E deve ser ensinado à luz das hipóteses atuais do art. 313, inclusive das alterações de 2026, sem ocultá-las.\n\nErro comum: Notoriedade de um fato não substitui requisitos legais e fundamentação concreta.\n\nExemplo prático: Uma morte no trânsito não basta, por si, para converter um crime culposo em hipótese comum de preventiva.",
+      "hold_reason": "Revisar alcance das novas hipóteses do art. 313 de 2026 e a afirmação absoluta da alternativa antes de liberar.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 16,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 17,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "prisao-temporaria",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/prisao-temporaria:2"
+        }
+      ],
+      "explanation": "A prisão temporária depende de representação da autoridade policial ou de requerimento do Ministério Público. Não cabe decretá-la de ofício: B. A gravidade do crime ou a primariedade não elimina essa exigência de provocação.\n\nErro comum: Não confundir crime incluído no rol da lei com autorização para iniciativa judicial espontânea.\n\nExemplo prático: Mesmo em investigação de crime grave, é necessário observar quem pode requerer a temporária.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 17,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 18,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "158",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:158"
+        },
+        {
+          "document": "cpp",
+          "article": "167",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:167"
+        }
+      ],
+      "explanation": "A regra é exame de corpo de delito quando há vestígios; a exceção do art. 167 permite prova testemunhal se o exame não é possível porque os vestígios desapareceram. Alternativa A. A confissão não substitui o exame exigível.\n\nErro comum: Não transformar a exceção por desaparecimento em liberdade para dispensar perícia ainda possível.\n\nExemplo prático: Uma lesão já inteiramente desaparecida pode exigir avaliar depoimentos, com justificação da impossibilidade do exame.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 175,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 1,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cp",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:2"
+        },
+        {
+          "document": "cp",
+          "article": "121",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:121"
+        },
+        {
+          "document": "cp",
+          "article": "121-A",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:121-A"
+        }
+      ],
+      "explanation": "O fato de 2023 antecede a criação do feminicídio autônomo com pena mais severa. A lei anterior pode continuar a reger o fato por ultratividade: E, sem aplicar retroativamente a norma mais gravosa. A comparação deve considerar a redação histórica da qualificadora e a Lei 14.994/2024.\n\nErro comum: Ultratividade conserva a lei anterior para fatos do seu tempo; não é retroação da lei nova.\n\nExemplo prático: Uma elevação posterior de pena não pode, só por ser atual, agravar a punição de fato anterior.",
+      "hold_reason": "Conferir e arquivar a redação histórica aplicável ao fato de 2023, além do texto compilado atual.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 176,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 2,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cp",
+          "article": "22",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:22"
+        }
+      ],
+      "explanation": "A exclusão ligada à obediência hierárquica exige ordem não manifestamente ilegal. Torturar pessoa detida é ordem manifestamente ilegal; cumpri-la não gera a excludente descrita. A alternativa D corresponde à responsabilização pelas condutas praticadas.\n\nErro comum: Hierarquia não autoriza executar qualquer ordem, sobretudo de violência ilícita evidente.\n\nExemplo prático: Um servidor deve distinguir ordem de serviço legítima de determinação explícita de cometer crime.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 177,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 3,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cp",
+          "article": "17",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:17"
+        }
+      ],
+      "explanation": "Uma arma totalmente desmuniciada, usada apenas para tentar matar por disparos, é meio absolutamente ineficaz no cenário narrado. O gabarito B se refere ao crime impossível quanto à tentativa de homicídio. Isso não afirma ausência de qualquer outro possível ilícito.\n\nErro comum: Ineficácia absoluta não se confunde com simples dificuldade ou falha ocasional de meio apto.\n\nExemplo prático: Uma arma sem qualquer munição não efetua o disparo necessário ao modo de execução descrito.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 178,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 4,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cp",
+          "article": "16",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:16"
+        }
+      ],
+      "explanation": "A reparação voluntária e integral do dano, em crime sem violência ou grave ameaça, até o recebimento da denúncia ou queixa pode gerar redução de um a dois terços por arrependimento posterior: A. O oferecimento anterior, sozinho, não encerra o prazo do art. 16.\n\nErro comum: Arrependimento posterior reduz pena; não significa responder apenas pelos atos anteriores ao resultado.\n\nExemplo prático: Restituir integralmente o prejuízo antes de o juiz receber a denúncia pode permitir o benefício, se preenchidos os demais requisitos.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 179,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 5,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cp",
+          "article": "4",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:4"
+        },
+        {
+          "document": "cp",
+          "article": "27",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:27"
+        },
+        {
+          "document": "eca",
+          "article": "103",
+          "excerpt_artifact": "excertos-juridicos.json#/eca:103"
+        }
+      ],
+      "explanation": "A idade é aferida no momento da conduta, conforme a teoria da atividade. Ele tinha menos de 18 anos ao desferir os golpes e não se torna imputável pelo falecimento posterior: B no sentido penal. Isso não exclui responsabilização por ato infracional análogo.\n\nErro comum: A data do resultado não substitui a data da ação para verificar imputabilidade etária.\n\nExemplo prático: Quem pratica a conduta aos 17 anos continua sujeito ao regime próprio da infância e juventude, ainda que o resultado ocorra depois dos 18.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 180,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 6,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cp",
+          "article": "159",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:159"
+        }
+      ],
+      "explanation": "A privação de liberdade com finalidade de obter vantagem como condição ou preço do resgate consuma a extorsão mediante sequestro. Receber o dinheiro é exaurimento; o resgate policial posterior não desfaz a consumação. Alternativa E.\n\nErro comum: Não exigir o pagamento como elemento de consumação do tipo descrito.\n\nExemplo prático: O cativeiro é descoberto antes do pagamento; isso não torna necessariamente o crime apenas tentado.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 181,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 7,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cp",
+          "article": "29",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:29"
+        },
+        {
+          "document": "cp",
+          "article": "317",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:317"
+        },
+        {
+          "document": "cp",
+          "article": "333",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:333"
+        }
+      ],
+      "explanation": "Como regra, os que concorrem respondem pelo mesmo crime, na medida da culpabilidade: teoria monista, A. Existem exceções legais, como os tipos autônomos de corrupção ativa e passiva, que não devem ser negadas.\n\nErro comum: Teoria monista não significa que todos os participantes terão a mesma pena concreta.\n\nExemplo prático: Dois agentes podem responder pelo mesmo fato e receber penas diferentes pela participação e circunstâncias próprias.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 182,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 8,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cp",
+          "article": "316",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:316"
+        },
+        {
+          "document": "cpm",
+          "article": "305",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:305"
+        }
+      ],
+      "explanation": "O núcleo exigir vantagem indevida em razão da função caracteriza concussão, alternativa C. A entrega do valor exigido não transforma automaticamente a pessoa constrangida em autora de corrupção ativa. Em atuação militar, o enquadramento precisa observar também o CPM e seus critérios de incidência.\n\nErro comum: Exigir é diferente de solicitar: essa escolha verbal altera o tipo penal examinado.\n\nExemplo prático: Se um agente impõe pagamento sob abuso da função, examine a exigência e o contexto, em vez de presumir negociação voluntária.",
+      "hold_reason": "Confirmar âmbito penal militar e pertinência do edital, sem reduzir o caso ao Código Penal comum.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 183,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 9,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cp",
+          "article": "307",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:307"
+        }
+      ],
+      "explanation": "Atribuir-se identidade falsa para obter vantagem e evitar a captura não se confunde com permanecer calado. O gabarito D afirma que a autodefesa não autoriza a falsa identidade, mas sua validação definitiva exige conferir a orientação específica do tribunal.\n\nErro comum: Não confundir silêncio constitucionalmente protegido com afirmar dados falsos de identidade.\n\nExemplo prático: Recusar-se a responder e declarar o nome de outra pessoa são comportamentos juridicamente distintos.",
+      "hold_reason": "Conferir a Súmula 522 do STJ e eventual orientação posterior na fonte primária.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 184,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 10,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cp",
+          "article": "14",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:14"
+        }
+      ],
+      "explanation": "A regra do parágrafo único do art. 14 é pena do crime consumado reduzida de um a dois terços, salvo disposição em contrário. Alternativa C. A ressalva legal e o intervalo de redução fazem parte da resposta.\n\nErro comum: Não trocar um terço por um sexto nem afirmar redução sem admitir exceções expressas.\n\nExemplo prático: Uma pena-base de seis anos reduzida em metade resulta em três, antes de outras operações eventualmente cabíveis.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 185,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 11,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "17",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:17"
+        }
+      ],
+      "explanation": "A autoridade policial não pode mandar arquivar autos de inquérito: art. 17, alternativa E. Pode relatar sua conclusão e encaminhar os autos ao fluxo legal competente, mas não arquivá-los por decisão própria.\n\nErro comum: Concluir pela inexistência do crime no relatório não equivale a ter atribuição para arquivar o inquérito.\n\nExemplo prático: Um delegado relata falta de elementos e remete os autos, sem usar isso como poder autônomo de arquivamento.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 186,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 12,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "25",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:25"
+        },
+        {
+          "document": "cp",
+          "article": "147",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:147"
+        }
+      ],
+      "explanation": "O caso envolve ameaça entre colegas homens e representação seguida de retratação antes do oferecimento da denúncia. A regra geral do art. 25 torna a representação irretratável apenas depois desse oferecimento: C. A exceção atual do art. 147, §2º, para ameaça contra mulher por razões do sexo feminino não descreve o caso.\n\nErro comum: Não usar a exceção da ameaça em contexto legal específico para apagar o regime do fato narrado.\n\nExemplo prático: Se a retratação válida ocorre antes da denúncia, deve-se verificar a falta de condição para iniciar a ação condicionada.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 187,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 13,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "hediondos",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/hediondos:2"
+        },
+        {
+          "document": "prisao-temporaria",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/prisao-temporaria:2"
+        }
+      ],
+      "explanation": "No tráfico de drogas, a regra especial do art. 2º, §4º, da Lei 8.072/1990 é temporária de 30 dias, prorrogável por igual período em extrema e comprovada necessidade: B. O prazo não dispensa os pressupostos da cautelar.\n\nErro comum: Não transportar o prazo geral de cinco dias para a hipótese submetida à regra especial.\n\nExemplo prático: Ser possível prazo de 30 dias não autoriza decretar a prisão sem demonstrar os requisitos da lei e da interpretação constitucional.",
+      "hold_reason": "Conferir o julgamento do STF sobre requisitos cumulativos da temporária, exigido no enunciado.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 188,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 14,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "313",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:313"
+        }
+      ],
+      "explanation": "A situação narra contravenção penal de vias de fato, e não crime. O gabarito D rejeita a prisão preventiva para essa hipótese. A presença de violência doméstica não permite substituir automaticamente os requisitos de admissibilidade da cautelar.\n\nErro comum: Não chamar contravenção de crime nem atribuir à preventiva os prazos próprios da temporária.\n\nExemplo prático: Medidas protetivas e outras providências devem ser analisadas sem presumir que qualquer contravenção autoriza preventiva.",
+      "hold_reason": "Conferir orientação judicial atual sobre contravenção em violência doméstica e as novas hipóteses legais de 2026.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 189,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 15,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "399",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:399"
+        }
+      ],
+      "explanation": "O art. 399, §2º, associa a sentença ao juiz que presidiu a instrução: princípio da identidade física do juiz, D. A regra não deve ser apresentada como impossibilidade absoluta de substituição legal do magistrado.\n\nErro comum: Juízo natural e contraditório são garantias relacionadas, mas não são o nome da regra transcrita.\n\nExemplo prático: O magistrado que colheu a prova oral é, em regra, quem profere a sentença, ressalvadas hipóteses legais de substituição.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 190,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 16,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "302",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:302"
+        },
+        {
+          "document": "cpp",
+          "article": "290",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:290"
+        }
+      ],
+      "explanation": "A perseguição iniciada logo após e mantida sem interrupção pode caracterizar flagrante impróprio. O art. 302, III, não fixa uma barreira geral de 24, 48 ou 72 horas, nem exige contato visual permanente em todo o percurso. A é o gabarito, sujeito à comprovação dos requisitos concretos.\n\nErro comum: Não substituir o requisito de continuidade por um prazo que a lei não estabelece para essa modalidade.\n\nExemplo prático: Perder contato visual não significa necessariamente perder a perseguição, se o acompanhamento continua nos termos legais.",
+      "hold_reason": "Confirmar precedente oficial atual sobre continuidade da perseguição, expressamente exigido pelo enunciado.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 191,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 17,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "interceptacao",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/interceptacao:2"
+        },
+        {
+          "document": "cp",
+          "article": "123",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:123"
+        }
+      ],
+      "explanation": "O infanticídio do art. 123 tem pena de detenção, e o art. 2º, III, da Lei 9.296/1996 veda a interceptação quando a infração é punida, no máximo, com detenção. C é a alternativa correta no caso isoladamente narrado.\n\nErro comum: Gravidade do fato ou competência do júri não substituem os requisitos específicos dessa medida invasiva.\n\nExemplo prático: Um crime com detenção não passa a admitir interceptação apenas porque a investigação parece difícil.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 192,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 18,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cpp",
+          "article": "3-A",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:3-A"
+        },
+        {
+          "document": "cpp",
+          "article": "282",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:282"
+        },
+        {
+          "document": "cpp",
+          "article": "311",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:311"
+        }
+      ],
+      "explanation": "A decretação de preventiva depende de provocação legitimada; não cabe transformar o pedido de cautelares menos gravosas em iniciativa judicial autônoma de prisão. E corresponde à vedação de decretar e converter de ofício no caso narrado.\n\nErro comum: A gravidade do delito não restaura poderes de iniciativa incompatíveis com o regime legal acusatório.\n\nExemplo prático: Se os requerimentos são por liberdade ou medidas diversas, o juiz deve observar os limites legais para decretar prisão.",
+      "hold_reason": "Conferir jurisprudência atual sobre pedido de medidas menos gravosas e proibição de conversão de ofício.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 18,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 19,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        }
+      ],
+      "explanation": "O habeas corpus tutela liberdade de locomoção contra coação ilegal ou ameaça. Se o único delito tem apenas pena de multa, o caso não apresenta a ameaça à locomoção pressuposta pelo remédio: E no gabarito.\n\nErro comum: Estar solto não impede HC preventivo; a questão é o bem jurídico ameaçado, não somente a custódia atual.\n\nExemplo prático: Uma ilegalidade processual pode exigir outra via de impugnação, sem se tornar automaticamente hipótese de HC.",
+      "hold_reason": "Conferir Súmula 695 do STF na fonte competente antes da liberação.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 19,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 20,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cf",
+          "article": "60",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:60"
+        }
+      ],
+      "explanation": "O art. 60, I, legitima pelo menos um terço dos membros da Câmara ou do Senado a propor emenda constitucional: A. Também são legitimados o Presidente da República e mais da metade das Assembleias, nas condições do inciso III.\n\nErro comum: Não confundir quórum para apresentar a proposta com três quintos em dois turnos para aprová-la.\n\nExemplo prático: Assinaturas suficientes para propor uma PEC não bastam para aprová-la nas duas Casas.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 20,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 21,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        }
+      ],
+      "explanation": "O mandado de segurança protege direito líquido e certo não amparado por habeas corpus ou habeas data: C. No caso, é necessário comprovar documentalmente a alegada ilegalidade da exclusão, sem presumir automaticamente o mérito de toda restrição médica.\n\nErro comum: Habeas data não serve para qualquer lesão a direito envolvendo informação sobre a saúde.\n\nExemplo prático: Uma exclusão documentada de concurso pode ser discutida pela via adequada, inclusive com análise de urgência e prova pré-constituída.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 21,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 22,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        },
+        {
+          "document": "cpp",
+          "article": "245",
+          "excerpt_artifact": "excertos-juridicos.json#/cpp:245"
+        }
+      ],
+      "explanation": "O ingresso domiciliar por determinação judicial é permitido durante o dia, ressalvadas as hipóteses constitucionais autônomas. À noite, o mandado não basta, sem consentimento ou hipótese excepcional demonstrada: D.\n\nErro comum: A gravidade dos crimes investigados não elimina, por si, a inviolabilidade domiciliar.\n\nExemplo prático: Um mandado não autoriza arrombar residência à noite apenas porque o morador recusou atender, sem outra causa constitucional legítima.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 22,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 23,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cf",
+          "article": "136",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:136"
+        }
+      ],
+      "explanation": "O Presidente deve submeter a decretação ou prorrogação do estado de defesa ao Congresso em 24 horas, com justificação; a decisão é por maioria absoluta: B. O mecanismo está sujeito a controle, limites materiais e temporais.\n\nErro comum: O prazo de encaminhamento do ato não é o mesmo que a duração do estado de defesa.\n\nExemplo prático: Uma prorrogação também deve ser encaminhada ao controle parlamentar previsto no artigo.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 23,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 24,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cf",
+          "article": "127",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:127"
+        }
+      ],
+      "explanation": "Unidade, indivisibilidade e independência funcional são princípios institucionais do Ministério Público, conforme art. 127, §1º: E. Independência funcional não elimina deveres legais nem estrutura administrativa.\n\nErro comum: Não substituir esses princípios por características de outros órgãos ou por garantias pessoais dos seus membros.\n\nExemplo prático: A independência na atuação jurídica não significa que o membro possa desconsiderar a Constituição e a lei.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 24,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 25,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "lia",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/lia:1"
+        }
+      ],
+      "explanation": "A LIA atual define condutas dolosas nos arts. 9º, 10 e 11 e exige vontade livre e consciente de alcançar o resultado ilícito. O gabarito B acrescenta ressalva genérica de modalidade culposa que exige análise: o §1º ressalva tipos em leis especiais, sem restabelecer por si a antiga improbidade culposa.\n\nErro comum: Não dizer que todo erro administrativo é improbidade nem transformar uma ressalva abstrata em tipo culposo existente.\n\nExemplo prático: Uma gestão ineficiente exige apurar responsabilidade própria; não é automaticamente improbidade dolosa.",
+      "hold_reason": "Ambiguidade da ressalva sobre culpa na alternativa: confirmar alcance e eventual decisão oficial sobre o item.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 25,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 26,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "lia",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/lia:1"
+        },
+        {
+          "document": "lia",
+          "article": "10",
+          "excerpt_artifact": "excertos-juridicos.json#/lia:10"
+        }
+      ],
+      "explanation": "O art. 10 exige ação ou omissão dolosa e lesão efetiva e comprovada ao erário. D reúne dolo e prejuízo patrimonial concreto, coerentes com o dispositivo lido em conjunto com o art. 1º.\n\nErro comum: Ilegalidade formal sem dano patrimonial comprovado não preenche automaticamente esse tipo de improbidade.\n\nExemplo prático: Para enquadrar pagamento indevido no art. 10, apuram-se a conduta dolosa e o prejuízo efetivamente causado.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 26,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 27,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "lgpd",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/lgpd:5"
+        }
+      ],
+      "explanation": "A definição do art. 5º, II, inclui origem racial ou étnica, convicção religiosa, opinião política, filiação sindical ou às organizações descritas, saúde, vida sexual e dado genético ou biométrico vinculado a pessoa natural: A.\n\nErro comum: Um dado pode ser pessoal sem pertencer à categoria legal de sensível; a distinção importa para o regime de tratamento.\n\nExemplo prático: Uma informação biométrica ligada a uma pessoa identificada é exemplo de dado pessoal sensível.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 27,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 28,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "lgpd",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/lgpd:5"
+        },
+        {
+          "document": "lgpd",
+          "article": "7",
+          "excerpt_artifact": "excertos-juridicos.json#/lgpd:7"
+        }
+      ],
+      "explanation": "O consentimento é uma das bases legais do art. 7º, e sua definição exige manifestação livre, informada e inequívoca para finalidade determinada: C. Não é a única base de tratamento prevista na lei.\n\nErro comum: Não ensinar que todo tratamento lícito exige consentimento: há outras hipóteses legais.\n\nExemplo prático: Uma inscrição voluntária pode usar consentimento para uma finalidade especificada, sem autorizar automaticamente usos incompatíveis.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 28,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 29,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "lai",
+          "article": "3",
+          "excerpt_artifact": "excertos-juridicos.json#/lai:3"
+        }
+      ],
+      "explanation": "O art. 3º, I, estabelece publicidade como preceito geral e sigilo como exceção: E. A existência de restrições legítimas não inverte a regra da transparência.\n\nErro comum: Não presumir sigilo por mera conveniência administrativa nem ignorar proteção legal de informações pessoais.\n\nExemplo prático: Um órgão deve identificar fundamento para restringir acesso, em vez de exigir justificativa para toda publicidade.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 29,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 30,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "lai",
+          "article": "24",
+          "excerpt_artifact": "excertos-juridicos.json#/lai:24"
+        }
+      ],
+      "explanation": "O art. 24 prevê graus ultrassecreto, secreto e reservado e prazos máximos de 25, 15 e 5 anos, respectivamente, sujeitos às regras legais específicas: B. O prazo máximo não torna obrigatória a adoção do maior período possível.\n\nErro comum: Não confundir classificação de sigilo com restrição de acesso a informação pessoal, que tem disciplina distinta.\n\nExemplo prático: Uma informação reservada não recebe automaticamente o mesmo prazo de uma ultrassecreta.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 30,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 31,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "uso-forca",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/uso-forca:2"
+        }
+      ],
+      "explanation": "A Lei 13.060/2014 prioriza instrumentos de menor potencial ofensivo, desde que isso não ponha em risco a integridade física ou psíquica dos policiais, e exige legalidade, necessidade, razoabilidade e proporcionalidade: A.\n\nErro comum: A preferência legal não cria obrigação cega de usar qualquer instrumento em qualquer situação.\n\nExemplo prático: A escolha do meio deve considerar a ameaça concreta, a proteção das pessoas e as condições de segurança previstas na lei.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 31,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 32,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:1"
+        }
+      ],
+      "explanation": "O art. 1º da DUDH afirma liberdade e igualdade em dignidade e direitos desde o nascimento e orienta a fraternidade: D. A titularidade não depende de nacionalidade, riqueza ou posição social.\n\nErro comum: Igual dignidade não significa que toda diferença de situação jurídica seja proibida; a vedação é à discriminação incompatível com direitos humanos.\n\nExemplo prático: A condição de estrangeiro não retira a dignidade humana nem permite tratamento degradante.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 32,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 33,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:2"
+        }
+      ],
+      "explanation": "O art. 2º assegura invocação dos direitos da Declaração sem distinções como raça, cor, sexo, língua, religião ou origem: B. A lista não autoriza restringir os direitos aos nacionais de certos países.\n\nErro comum: Universalidade não se limita a direitos civis e políticos nem apenas a cidadãos de Estados membros.\n\nExemplo prático: Uma pessoa sem nacionalidade continua titular de direitos humanos.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 33,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 34,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "decreto-forca",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/decreto-forca:2"
+        }
+      ],
+      "explanation": "O art. 2º enumera legalidade, precaução, necessidade, proporcionalidade, razoabilidade, responsabilização e não discriminação: C. A lista é específica para uso da força.\n\nErro comum: Princípios administrativos conhecidos não substituem a enumeração expressa do decreto.\n\nExemplo prático: Uma ação deve minimizar danos previsíveis e evitar tratamento discriminatório, além de perseguir um objetivo legal.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 34,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 35,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "17",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:17"
+        }
+      ],
+      "explanation": "A DUDH reconhece propriedade individual ou em sociedade e veda privação arbitrária: E. Isso não corresponde a propriedade absolutamente imune a qualquer disciplina jurídica legítima.\n\nErro comum: Não confundir proteção contra arbitrariedade com impossibilidade de qualquer intervenção prevista no direito.\n\nExemplo prático: A titularidade em comum também é abrangida pela declaração, e não apenas a propriedade individual.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 35,
+      "contest": "PC SC - Agente de Polícia Civil 2026",
+      "booklet": "Tipo B",
+      "item_number": 36,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "lonpc",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/lonpc:1"
+        },
+        {
+          "document": "cf",
+          "article": "144",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:144"
+        }
+      ],
+      "explanation": "A permanência da instituição e as funções de polícia judiciária e apuração de infrações, exceto militares, encontram fundamento na Lei Orgânica e no art. 144, §4º: E. Não há subordinação funcional geral ao Judiciário como sugere outro distrator.\n\nErro comum: Cumprir decisões judiciais não transforma a instituição em órgão subordinado funcionalmente ao Poder Judiciário.\n\nExemplo prático: A polícia civil investiga infrações no âmbito constitucional de suas atribuições, sem assumir as exceções militares como regra.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 193,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 19,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cf",
+          "article": "60",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:60"
+        }
+      ],
+      "explanation": "A origem em Assembleia Constituinte sustenta a classificação promulgada; o procedimento de emenda mais exigente que o de lei ordinária caracteriza rigidez; a disciplina extensa de matérias corresponde à classificação analítica: A.\n\nErro comum: Rigidez não significa impossibilidade de emenda, e constituição analítica não é sinônimo de outorgada.\n\nExemplo prático: Uma Constituição pode admitir emendas e ainda ser rígida se o procedimento for especial.",
+      "hold_reason": "A classificação é doutrinária: conferir referência acadêmica competente além do texto constitucional.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 194,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 20,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cf",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:1"
+        }
+      ],
+      "explanation": "Cidadania é fundamento expresso da República no art. 1º, II, e corresponde à alternativa D no enunciado. Não se confunde com soberania, pluralismo político ou valor social do trabalho.\n\nErro comum: Reconhecer o fundamento por sua função evita escolher outro princípio importante que não corresponde à definição pedida.\n\nExemplo prático: O exercício de direitos de participação e sua defesa integra a compreensão constitucional da cidadania.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 195,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 21,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        },
+        {
+          "document": "interceptacao",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/interceptacao:1"
+        }
+      ],
+      "explanation": "O gabarito E classifica a inviolabilidade do sigilo como norma de eficácia contida, considerando possibilidade de restrição nos termos constitucionais. A discussão envolve doutrina sobre eficácia e a reserva legal específica para interceptação; o texto isolado não certifica a classificação sem controvérsia.\n\nErro comum: Não equiparar existência de lei regulamentadora, por si só, a toda categoria de eficácia limitada.\n\nExemplo prático: A classificação depende de distinguir a proteção do direito e a regulamentação de sua exceção.",
+      "hold_reason": "Conferir doutrina competente e alcance da classificação exigida, sem validar apenas pelo gabarito.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 196,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 22,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        },
+        {
+          "document": "drogas",
+          "article": "28",
+          "excerpt_artifact": "excertos-juridicos.json#/drogas:28"
+        }
+      ],
+      "explanation": "O HC exige lesão ou ameaça à locomoção. A hipótese afirma ausência de pena privativa de liberdade no art. 28 e não demonstra ameaça desse tipo: C no gabarito. O tratamento da posse de cannabis após o julgamento do STF precisa ser distinguido de outras substâncias e do cenário narrado.\n\nErro comum: Estar em liberdade, isoladamente, não impede habeas corpus preventivo.\n\nExemplo prático: Uma nulidade processual sem ameaça de prisão pode exigir outro meio de impugnação.",
+      "hold_reason": "Conferir STF sobre HC sem pena privativa de liberdade e o Tema 506; substância não identificada no caso.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 197,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 23,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cf",
+          "article": "66",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:66"
+        }
+      ],
+      "explanation": "O art. 66, §2º, prevê veto parcial de texto integral de artigo, parágrafo, inciso ou alínea. A alternativa B omite inciso ao apresentar a lista como exclusiva. O gabarito histórico não autoriza ensinar uma enumeração incompleta como transcrição integral.\n\nErro comum: O veto não pode eliminar apenas palavras para alterar o sentido, mas também não se deve excluir inciso da lista constitucional.\n\nExemplo prático: Vetar um inciso integral é diferente de vetar uma expressão isolada dentro dele.",
+      "hold_reason": "Divergência literal: falta inciso na alternativa tida como correta; manter original e gabarito histórico retidos.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 198,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 25,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "lia",
+          "article": "3",
+          "excerpt_artifact": "excertos-juridicos.json#/lia:3"
+        }
+      ],
+      "explanation": "O art. 3º atual exige indução ou concorrência dolosa do terceiro. A alternativa A acrescenta uma via autônoma de responsabilização por simples benefício direto ou indireto, expressão retirada da redação anterior. O benefício isolado não pode substituir a demonstração exigida na norma vigente.\n\nErro comum: Não responsabilizar automaticamente alguém só porque recebeu benefício, sem examinar dolo, participação e regras específicas.\n\nExemplo prático: Um sócio não responde de forma automática pelo ato imputado à pessoa jurídica; é preciso verificar os requisitos legais.",
+      "hold_reason": "Alternativa usa trecho da redação antiga; manter em revisão, sem adulterar o gabarito histórico.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 199,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 26,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "lia",
+          "article": "12",
+          "excerpt_artifact": "excertos-juridicos.json#/lia:12"
+        }
+      ],
+      "explanation": "O caput do art. 12 permite aplicação isolada ou cumulativa das sanções, conforme a gravidade do fato: E. Isso não dispensa fundamentação, proporcionalidade e observância das condições de cada sanção.\n\nErro comum: Uma condenação não impõe automaticamente todas as consequências máximas previstas na lei.\n\nExemplo prático: A decisão deve justificar as sanções cabíveis e sua dosimetria para o caso concreto.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 200,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 27,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "lai",
+          "article": "10",
+          "excerpt_artifact": "excertos-juridicos.json#/lai:10"
+        }
+      ],
+      "explanation": "Qualquer interessado pode pedir acesso por meio legítimo, com identificação e especificação da informação. O §3º veda exigir motivos determinantes da solicitação de informação de interesse público: B.\n\nErro comum: Não confundir ausência de necessidade de motivar o interesse com ausência de requisitos de identificação ou com acesso irrestrito a dados protegidos.\n\nExemplo prático: Uma pessoa jurídica também pode formular pedido de acesso, observados os requisitos legais.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 201,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 28,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "lai",
+          "article": "11",
+          "excerpt_artifact": "excertos-juridicos.json#/lai:11"
+        }
+      ],
+      "explanation": "O art. 11 manda conceder acesso imediato ao que está disponível. Se isso não for possível, há prazo de até 20 dias, prorrogável por dez mediante justificativa expressa e ciência do requerente: D.\n\nErro comum: Vinte mais dez não é prazo automático de 30 dias em todo pedido.\n\nExemplo prático: Uma informação pronta deve ser fornecida de imediato; prorrogação exige fundamento, não mera preferência do órgão.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 202,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 29,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "lgpd",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/lgpd:1"
+        }
+      ],
+      "explanation": "O art. 1º abrange tratamento de dados, inclusive em meios digitais, por pessoa natural ou jurídica pública ou privada, para proteger liberdade, privacidade e livre desenvolvimento da personalidade: C, observadas as hipóteses legais de incidência e exceção.\n\nErro comum: A LGPD não se limita à internet, a empresas privadas ou à Administração Pública.\n\nExemplo prático: Um cadastro em papel também pode envolver tratamento de dados submetido à lei, conforme sua finalidade e contexto.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 203,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 30,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "lgpd",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/lgpd:6"
+        }
+      ],
+      "explanation": "O art. 6º, I, define finalidade por propósitos legítimos, específicos, explícitos e informados, sem tratamento posterior incompatível: A. A opção reproduz o princípio, enquanto os demais nomes não correspondem às definições apresentadas.\n\nErro comum: Informar uma finalidade genérica não autoriza qualquer uso futuro dos dados.\n\nExemplo prático: Dados coletados para uma inscrição não podem ser destinados indiscriminadamente a objetivos incompatíveis não informados.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 204,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 31,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:6"
+        }
+      ],
+      "explanation": "O art. 6º da DUDH assegura reconhecimento da personalidade jurídica em todos os lugares: A. Esse reconhecimento não depende do exercício de direitos políticos ou de nacionalidade específica.\n\nErro comum: Não tratar personalidade jurídica humana como privilégio concedido apenas aos cidadãos.\n\nExemplo prático: Um estrangeiro também deve ser reconhecido como sujeito de direitos perante a ordem jurídica.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 205,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 32,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "9",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:9"
+        }
+      ],
+      "explanation": "O art. 9º veda prisão, detenção ou exílio arbitrários: E. A vedação não é limitada ao tempo de paz nem superada por uma invocação genérica de ordem pública.\n\nErro comum: Decisão administrativa ou previsão interna, por si só, não torna não arbitrária toda privação de liberdade.\n\nExemplo prático: Uma detenção precisa respeitar requisitos e garantias; afirmar conveniência pública não dispensa esse controle.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 206,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 33,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "decreto-forca",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/decreto-forca:5"
+        },
+        {
+          "document": "decreto-forca",
+          "article": "7",
+          "excerpt_artifact": "excertos-juridicos.json#/decreto-forca:7"
+        }
+      ],
+      "explanation": "A ideia geral de fiscalização encontra disciplina no decreto, especialmente no art. 7º. Porém, o enunciado atribui o tema ao art. 5º, que enumera competências do Ministério da Justiça e Segurança Pública. A referência específica precisa de correção editorial claramente identificada ou decisão fundamentada de retenção.\n\nErro comum: Não inventar o conteúdo de um artigo para fazê-lo coincidir com uma alternativa genericamente plausível.\n\nExemplo prático: Ao estudar mecanismos de controle, consulte o dispositivo efetivamente correspondente, preservando a referência histórica do enunciado.",
+      "hold_reason": "Referência normativa imprecisa no enunciado: art. 5º não é a enumeração específica de mecanismos do art. 7º.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 207,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 34,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "decreto-forca",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/decreto-forca:6"
+        }
+      ],
+      "explanation": "O art. 6º, II, inclui registro e publicação de dados sobre uso da força entre as diretrizes dos órgãos de segurança pública: B. A diretriz não se limita, pela redação desse inciso, a lesão corporal ou morte.\n\nErro comum: Não trocar uma diretriz geral por um recorte de outras obrigações de registro previstas no decreto.\n\nExemplo prático: Publicar dados de uso da força e elaborar relatório de uma ocorrência específica são deveres que podem ter requisitos próprios.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 208,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 35,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "lonpc",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/lonpc:1"
+        },
+        {
+          "document": "cf",
+          "article": "24",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:24"
+        },
+        {
+          "document": "cf",
+          "article": "144",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:144"
+        }
+      ],
+      "explanation": "A lei organiza normas nacionais para as polícias civis dos Estados e do Distrito Federal, no quadro constitucional, sem eliminar por inteiro a legislação estadual: A no gabarito. A autonomia federativa deve ser lida em conjunto com as normas gerais e as atribuições constitucionais.\n\nErro comum: Polícia Civil estadual não é Polícia Federal, e norma geral nacional não equivale a subordinar a instituição ao Judiciário.\n\nExemplo prático: Uma lei estadual pode detalhar organização dentro dos limites constitucionais e das normas gerais aplicáveis.",
+      "hold_reason": "Completar cotejo dos dispositivos de âmbito e de eventuais decisões de controle sobre a Lei Orgânica.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 209,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 36,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "sc491",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/sc491:5"
+        }
+      ],
+      "explanation": "O art. 5º da LC catarinense 491/2010 afirma que jurisdição disciplinar não exclui a comum e manda comunicar crime ou contravenção às autoridades competentes. O parágrafo único admite cumulação de sanções civis, penais e administrativas: D.\n\nErro comum: Independência das instâncias não dispensa observar exceções legais, como a absolvição que nega fato ou autoria tratada no artigo seguinte.\n\nExemplo prático: Um fato funcional pode gerar apurações em mais de uma esfera, com os limites de comunicação entre elas.",
+      "hold_reason": "Legislação estadual catarinense: conferir tópico oficial específico; não atribuir automaticamente pertinência ao Acre.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 210,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 37,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "sc741",
+          "article": "3",
+          "excerpt_artifact": "excertos-juridicos.json#/sc741:3"
+        }
+      ],
+      "explanation": "O art. 3º inclui órgãos do Gabinete do Governador, Gabinete do Vice-Governador e Secretarias na administração direta estadual: B. São órgãos; não se confundem com pessoas jurídicas da administração indireta.\n\nErro comum: Autarquia e fundação não se tornam órgãos da administração direta apenas por sua vinculação a uma secretaria.\n\nExemplo prático: Uma secretaria integra a pessoa estatal; uma autarquia possui personalidade jurídica própria.",
+      "hold_reason": "Legislação estadual catarinense: falta conferir vínculo a edital específico, sem transferir regras para o Acre.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 211,
+      "contest": "PC SC - Escrivão de Polícia Civil 2026",
+      "booklet": "Tipo A",
+      "item_number": 38,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "sc741",
+          "article": "4",
+          "excerpt_artifact": "excertos-juridicos.json#/sc741:4"
+        }
+      ],
+      "explanation": "O art. 4º da LC 741/2019 lista autarquias, fundações públicas de direito público e privado, empresas públicas e sociedades de economia mista: E. O ponto comum é personalidade jurídica própria, com regimes e características distintos.\n\nErro comum: Não reduzir a administração indireta apenas às autarquias ou confundi-la com secretarias.\n\nExemplo prático: Uma sociedade de economia mista e uma autarquia podem integrar a administração indireta sem terem o mesmo regime jurídico.",
+      "hold_reason": "Legislação estadual catarinense: falta vínculo oficial ao edital da carreira correspondente.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 109,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 29,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "lonpm",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/lonpm:2"
+        }
+      ],
+      "explanation": "O art. 2º qualifica as instituições militares como permanentes, exclusivas e típicas de Estado: E. O texto também as situa como forças auxiliares e reserva do Exército, sem convertê-las em órgãos temporários de governo.\n\nErro comum: A vinculação constitucional não autoriza dizer que toda função de segurança pública lhes é exclusiva.\n\nExemplo prático: Ser instituição típica de Estado é diferente de servir exclusivamente a um governo transitório.",
+      "hold_reason": "Confirmar pertinência ao edital militar correspondente; não transferir a matéria automaticamente à PC-AC.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 110,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 31,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cp",
+          "article": "218-C",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:218-C"
+        }
+      ],
+      "explanation": "O registro divulgado sem consentimento, nas hipóteses do art. 218-C, corresponde ao crime denominado na alternativa A. A pena atual foi alterada pela Lei 15.280/2025; não se deve ensinar a antiga pena com base em comentários anteriores. A forma de vingança é examinada também no §1º.\n\nErro comum: Divulgar conteúdo íntimo não é o mesmo núcleo de registrar intimidade sem autorização, embora atos distintos possam exigir análise própria.\n\nExemplo prático: Receber e publicar vídeo íntimo de terceiros sem consentimento pode enquadrar-se na divulgação, mesmo sem ter feito a gravação original.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 111,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 32,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cp",
+          "article": "101",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:101"
+        }
+      ],
+      "explanation": "O enunciado transcreve a disciplina da ação penal no crime complexo: D. O art. 101 prevê ação pública se um fato que compõe o crime deve ser perseguido por iniciativa do Ministério Público.\n\nErro comum: Não confundir essa regra com perdão do ofendido ou simples retratação de representação.\n\nExemplo prático: Quando fatos autonomamente típicos integram outro crime, deve-se verificar a regra específica de iniciativa da ação.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 112,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 33,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cp",
+          "article": "121",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:121"
+        }
+      ],
+      "explanation": "A alternativa B reúne hipóteses do art. 121, §2º: recurso que dificulta defesa, arma de uso restrito ou proibido e paga, promessa ou motivo torpe. Outras opções misturam qualificadoras com privilégios, majorantes ou descrições incompletas.\n\nErro comum: Violenta emoção logo após provocação pode integrar o privilégio do §1º, não uma qualificadora por esse simples enunciado.\n\nExemplo prático: Para classificar uma circunstância, localize-a no dispositivo: qualificadora altera a moldura da pena, enquanto outras regras atuam em etapas distintas.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 113,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 34,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cp",
+          "article": "161",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:161"
+        },
+        {
+          "document": "cp",
+          "article": "168-A",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:168-A"
+        },
+        {
+          "document": "cp",
+          "article": "173",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:173"
+        }
+      ],
+      "explanation": "Esbulho possessório, apropriação indébita previdenciária e abuso de incapazes estão no título dos crimes contra o patrimônio: C. Os distratores incluem figuras de outros títulos ou expressões que não constituem tipo patrimonial autônomo.\n\nErro comum: Não classificar o crime só pela impressão de que alguém perdeu dinheiro; confira o título e o artigo.\n\nExemplo prático: Uma conduta pode produzir prejuízo econômico e, ainda assim, ter como bem jurídico principal outro interesse protegido.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 114,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 35,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cp",
+          "article": "26",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:26"
+        },
+        {
+          "document": "cp",
+          "article": "28",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:28"
+        }
+      ],
+      "explanation": "A alternativa E aponta embriaguez completa por caso fortuito ou força maior. A isenção do art. 28, §1º, exige ainda incapacidade inteira de entender a ilicitude ou de se determinar no momento do fato. Emoção, paixão e embriaguez voluntária não excluem imputabilidade por si.\n\nErro comum: Não dispensar o requisito de incapacidade só porque a ingestão foi involuntária.\n\nExemplo prático: O efeito de uma substância ingerida por acidente precisa ser analisado quanto à incapacidade concreta e ao momento da conduta.",
+      "hold_reason": "A alternativa omite o requisito de incapacidade completa; registrar alcance e conferir se a redação admite aprovação sem ambiguidade.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 115,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 36,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cpm",
+          "article": "30",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:30"
+        },
+        {
+          "document": "cpm",
+          "article": "39",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:39"
+        },
+        {
+          "document": "cpm",
+          "article": "43",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:43"
+        },
+        {
+          "document": "cp",
+          "article": "14",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:14"
+        },
+        {
+          "document": "cp",
+          "article": "24",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:24"
+        }
+      ],
+      "explanation": "O CPM prevê tratamento próprio do estado de necessidade e permite, na tentativa de excepcional gravidade, aplicar pena do consumado. O CP tem outra disciplina, embora compartilhem diversas regras gerais: C. A comparação deve usar o texto posterior à reforma de 2023.\n\nErro comum: Semelhança de códigos não torna idênticos todos os seus institutos.\n\nExemplo prático: Comparar o parágrafo único do art. 30 do CPM com o do art. 14 do CP evidencia diferença expressa na tentativa.",
+      "hold_reason": "Confirmar matriz de edital militar; o assunto não deve ser liberado como previsão automática para Polícia Civil.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 116,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 37,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cpm",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:6"
+        },
+        {
+          "document": "cp",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/cp:6"
+        }
+      ],
+      "explanation": "O art. 6º do CPM menciona expressamente que, nos crimes omissivos, o lugar é onde a ação deveria ocorrer: E no contraste textual proposto. O CP usa regra geral de lugar do crime e não reproduz a mesma frase especial.\n\nErro comum: Não transformar diferença literal entre dispositivos em afirmação de que o direito penal comum desconhece crimes omissivos.\n\nExemplo prático: A omissão de um dever deve ser localizada onde a atuação juridicamente exigida deveria realizar-se.",
+      "hold_reason": "O termo exclusivo exige cuidado doutrinário e tópico de edital militar; manter retida até esse enquadramento.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 117,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 38,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cpm",
+          "article": "151",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:151"
+        }
+      ],
+      "explanation": "O texto corresponde à omissão de lealdade militar, B: deixar de informar preparação de motim ou revolta, ou não usar meios disponíveis para impedi-los quando presenciados, nos termos do art. 151.\n\nErro comum: Não confundir omitir a comunicação com participar de conspiração, que tem requisitos próprios.\n\nExemplo prático: Conhecer uma preparação e deixar de comunicá-la exige análise dos deveres e elementos do tipo militar.",
+      "hold_reason": "Falta conferir tópico oficial do edital militar e adequação de carreira.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 118,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 39,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cpm",
+          "article": "194",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:194"
+        },
+        {
+          "document": "cpm",
+          "article": "196",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:196"
+        },
+        {
+          "document": "cpm",
+          "article": "197",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:197"
+        }
+      ],
+      "explanation": "Omissão de oficial, descumprimento de missão e retenção indevida aparecem no título dos crimes contra o serviço e o dever militar: A. O enquadramento por título não depende de adivinhar qual conduta parece mais grave.\n\nErro comum: Os distratores misturam crimes situados em outros títulos do CPM.\n\nExemplo prático: Localizar artigo e título ajuda a distinguir proteção do serviço militar de tutela da autoridade ou da disciplina.",
+      "hold_reason": "Conferir matriz específica militar antes de disponibilizar o repertório.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 119,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 40,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cpm",
+          "article": "324",
+          "excerpt_artifact": "excertos-juridicos.json#/cpm:324"
+        }
+      ],
+      "explanation": "O art. 324 tipifica deixar de observar lei, regulamento ou instrução no exercício de função, dando causa direta a ato prejudicial à administração militar: D. O nexo descrito e as modalidades legais não podem ser omitidos.\n\nErro comum: Não confundir o núcleo com condescendência criminosa, prevaricação ou outras omissões de dever.\n\nExemplo prático: A mera citação de uma norma descumprida não dispensa demonstrar o prejuízo e o vínculo exigidos pelo tipo.",
+      "hold_reason": "Conferir vínculo ao edital militar e separar essa legislação do treino geral para PC-AC.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 120,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 41,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        }
+      ],
+      "explanation": "Prestar socorro é exceção constitucional ao ingresso sem consentimento, inclusive à noite: D. O horário de 18h não determina sozinho, em todos os lugares e épocas, o conceito de dia; a alternativa usa uma hipótese autônoma de socorro.\n\nErro comum: Mandado judicial e socorro têm fundamentos distintos; a exceção de socorro não depende da faixa diurna.\n\nExemplo prático: Uma emergência real que exige salvamento deve ser analisada de modo diferente de uma diligência comum baseada apenas em mandado.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 121,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 43,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "cf",
+          "article": "6",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:6"
+        }
+      ],
+      "explanation": "O parágrafo único do art. 6º reconhece renda básica familiar ao brasileiro em vulnerabilidade social, garantida pelo poder público em programa permanente, com normas e requisitos legais: A. Não se confunde com promessa universal de salário-mínimo a qualquer pessoa.\n\nErro comum: Renda básica familiar e benefício assistencial de prestação continuada têm fundamentos e requisitos próprios.\n\nExemplo prático: Identificar qual direito está na Constituição evita importar condições de outro benefício social.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 122,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 44,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "cf",
+          "article": "142",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:142"
+        }
+      ],
+      "explanation": "O art. 142, §3º, V, impede militar em serviço ativo de filiar-se a partido político: C. As Forças Armadas compreendem Marinha, Exército e Aeronáutica e não incorporam as polícias militares estaduais nessa enumeração.\n\nErro comum: A existência de regimes militares distintos não autoriza fundir Forças Armadas e polícias estaduais.\n\nExemplo prático: Ao estudar composição institucional, separe o art. 142 das instituições de segurança pública do art. 144.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 123,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 45,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "cf",
+          "article": "144",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:144"
+        }
+      ],
+      "explanation": "A EC 104/2019 incluiu as polícias penais federal, estaduais e distrital no art. 144. O §5º-A as vincula ao órgão administrador do sistema penal e atribui segurança dos estabelecimentos penais: E.\n\nErro comum: Não atribuir investigação penal genérica às polícias penais com base apenas na criação constitucional da instituição.\n\nExemplo prático: A existência de uma nova polícia constitucional não torna indistintas suas funções e as da Polícia Civil.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 124,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 46,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "ctb",
+          "article": "1",
+          "excerpt_artifact": "excertos-juridicos.json#/ctb:1"
+        }
+      ],
+      "explanation": "O art. 1º, §3º, estabelece responsabilidade objetiva dos órgãos e entidades do SNT, no âmbito de suas competências, por danos decorrentes das condutas especificadas: D. Competência e nexo com o dano continuam relevantes.\n\nErro comum: Objetiva não significa indenização automática sem dano e sem relação com a atuação ou omissão imputada.\n\nExemplo prático: Uma falha em programa de trânsito deve ser relacionada ao órgão competente e ao prejuízo causado.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 125,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 47,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "ctb",
+          "article": "40",
+          "excerpt_artifact": "excertos-juridicos.json#/ctb:40"
+        }
+      ],
+      "explanation": "O art. 40, II, manda usar luz alta em via não iluminada, exceto ao cruzar com outro veículo ou segui-lo: A. A regra deve ser lida com as demais normas de iluminação e segurança.\n\nErro comum: Não manter luz alta de modo a ofuscar outros usuários, e não inverter a preferência dos veículos sobre trilhos.\n\nExemplo prático: Ao se aproximar de veículo em sentido contrário numa estrada escura, reduza a luz conforme a disciplina legal.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 126,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 48,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "ctb",
+          "article": "84",
+          "excerpt_artifact": "excertos-juridicos.json#/ctb:84"
+        }
+      ],
+      "explanation": "O art. 84 permite retirar ou determinar a retirada de elemento que prejudique a visibilidade da sinalização e a segurança, com ônus a quem o colocou: B. A competência é do órgão ou entidade com circunscrição sobre a via.\n\nErro comum: Não substituir arbitrariamente a competência prevista em lei por outra entidade nem admitir publicidade que comprometa a sinalização.\n\nExemplo prático: Um anúncio que encobre uma placa pode ser removido nos termos legais, com cobrança a quem o instalou.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 127,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 49,
+      "historical_answer": "E",
+      "references": [
+        {
+          "document": "ctb",
+          "article": "147",
+          "excerpt_artifact": "excertos-juridicos.json#/ctb:147"
+        },
+        {
+          "document": "lei15428",
+          "article": "2 e 3",
+          "excerpt_artifact": "vigencia-lei15428.json"
+        }
+      ],
+      "explanation": "A alternativa E reproduz uma dispensa antes prevista no art. 147, §6º, para certos tripulantes. O texto compilado atual marca o parágrafo como revogado pela Lei 15.428/2026. É indispensável confirmar o início de vigência da alteração e a data da prova antes de decidir o uso histórico ou atual.\n\nErro comum: Não reutilizar uma exceção revogada apenas porque o gabarito oficial de uma prova antiga a registrou.\n\nExemplo prático: Um comentário de habilitação precisa indicar a versão temporal da regra, especialmente após revogação expressa.",
+      "hold_reason": "Art. 147, §6º, revogado em 05/06/2026 pelos arts. 2º e 3º da Lei 15.428/2026; conservar resposta histórica, sem treino como norma atual.",
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "obsolete"
+    },
+    {
+      "local_index": 128,
+      "contest": "PMSC - Aluno-Soldado Temporário 2026",
+      "booklet": "Tipo A",
+      "item_number": 50,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "ctb",
+          "article": "271",
+          "excerpt_artifact": "excertos-juridicos.json#/ctb:271"
+        }
+      ],
+      "explanation": "O art. 271, §10, prevê cobrança de remoção e estada pelo período efetivo em depósito, contado em dias e limitado a seis meses: C. O limite da cobrança não é autorização automática para manter qualquer apreensão pelo mesmo prazo.\n\nErro comum: Não confundir remoção com retenção nem prazo de cobrança com validade de toda a medida administrativa.\n\nExemplo prático: Uma cobrança de estada deve considerar o tempo efetivo e o teto legal, sem afastar discussão sobre eventual recolhimento indevido.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 157,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 31,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "declaration",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:declaration"
+        }
+      ],
+      "explanation": "A DUDH foi proclamada como declaração e não é, por sua forma, tratado internacional. Isso não retira sua influência normativa e interpretativa sobre direitos humanos: D.\n\nErro comum: Não concluir que ausência de forma de tratado torna o documento irrelevante ou meramente sem efeito.\n\nExemplo prático: Uma declaração pode orientar normas e interpretações sem adotar o procedimento de um tratado.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 158,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 32,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "pidcp",
+          "article": "9",
+          "excerpt_artifact": "excertos-juridicos.json#/pidcp:9"
+        }
+      ],
+      "explanation": "O art. 9º do Pacto protege contra prisão e detenção arbitrárias e assegura controle judicial da legalidade da privação de liberdade: C. Restrição de liberdade não se legitima por mera conveniência administrativa.\n\nErro comum: Estados não podem invocar genericamente emergência para suspender qualquer direito sem limites.\n\nExemplo prático: Uma pessoa detida deve poder questionar judicialmente a legalidade da detenção nos termos do Pacto.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 159,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 33,
+      "historical_answer": "C",
+      "references": [
+        {
+          "document": "upr",
+          "article": "universal-periodic-review",
+          "excerpt_artifact": "excertos-juridicos.json#/upr:universal-periodic-review"
+        }
+      ],
+      "explanation": "A Revisão Periódica Universal é mecanismo do Conselho de Direitos Humanos para examinar a situação de direitos humanos dos Estados: C. O Conselho não é uma corte contenciosa com poder geral de anular leis nacionais.\n\nErro comum: Não confundir monitoramento internacional e recomendações com julgamento judicial de casos individuais.\n\nExemplo prático: Um Estado pode ter sua situação examinada na revisão periódica sem que isso constitua sentença de um tribunal internacional.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 160,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 34,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "onyudhr",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/onyudhr:2"
+        }
+      ],
+      "explanation": "Universalidade significa titularidade de direitos humanos por todas as pessoas, independentemente de condição: A. Isso não equivale a admitir restrições estatais ilimitadas nem a limitar os direitos a determinada cultura.\n\nErro comum: Universalidade trata da titularidade e não torna dispensável analisar a disciplina e os limites de cada direito.\n\nExemplo prático: A pobreza ou a condição migratória não retiram de alguém sua titularidade de direitos humanos.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 161,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 35,
+      "historical_answer": "B",
+      "references": [
+        {
+          "document": "cadh",
+          "article": "62",
+          "excerpt_artifact": "excertos-juridicos.json#/cadh:62"
+        }
+      ],
+      "explanation": "O art. 62 trata do reconhecimento da competência contenciosa da Corte Interamericana pelos Estados: B. A existência de um sistema internacional não dispensa observar seus pressupostos de competência e admissibilidade.\n\nErro comum: Esgotamento de recursos internos tem regra e exceções próprias; não é simplesmente dispensado em todo caso.\n\nExemplo prático: Antes de levar um litígio ao sistema, distinguem-se competência do tribunal e condições para processamento da petição.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 162,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 36,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "cf",
+          "article": "5",
+          "excerpt_artifact": "excertos-juridicos.json#/cf:5"
+        }
+      ],
+      "explanation": "O art. 5º, §1º, determina aplicação imediata das normas definidoras de direitos e garantias fundamentais: D. Não se deve ler essa previsão como se toda norma tivesse estrutura idêntica ou como se nenhuma regulamentação pudesse ser necessária.\n\nErro comum: Aplicação imediata não significa que direitos fundamentais se restrinjam a brasileiros natos ou apenas a relações privadas.\n\nExemplo prático: A garantia constitucional orienta desde logo a atuação estatal, observada a estrutura normativa do direito em discussão.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 163,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 37,
+      "historical_answer": "D",
+      "references": [
+        {
+          "document": "lindb",
+          "article": "2",
+          "excerpt_artifact": "excertos-juridicos.json#/lindb:2"
+        }
+      ],
+      "explanation": "A perda de vigência da lei revogadora não restaura automaticamente a lei anterior; o art. 2º, §3º, ressalva disposição em contrário. D corresponde à repristinação expressamente determinada, e não à restauração automática por lacuna.\n\nErro comum: Não confundir revogar a lei revogadora com mandar a lei antiga voltar a vigorar.\n\nExemplo prático: Se B revoga A e depois C revoga B, A não volta automaticamente só por essa sequência.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    },
+    {
+      "local_index": 164,
+      "contest": "CBMMG - CFO BM 2027 (Cadete BM) 2026",
+      "booklet": "Tipo A",
+      "item_number": 38,
+      "historical_answer": "A",
+      "references": [
+        {
+          "document": "lindb",
+          "article": "4",
+          "excerpt_artifact": "excertos-juridicos.json#/lindb:4"
+        }
+      ],
+      "explanation": "Na omissão, o art. 4º indica analogia, costumes e princípios gerais do direito. A é a opção compatível entre as apresentadas. A norma não deve ser convertida sem fundamento em autorização para equidade irrestrita nem em hierarquia absoluta não expressa.\n\nErro comum: Não usar a integração para criar punição penal desfavorável por analogia nem ignorar limites próprios de cada ramo.\n\nExemplo prático: Diante de lacuna, examina-se uma situação semelhante e os demais critérios legais, preservando os limites normativos.",
+      "hold_reason": null,
+      "publication_approved": false,
+      "missing_excerpt_references": [],
+      "stage": "confronto_normativo_com_pendencias_editoriais_e_de_edital",
+      "recommended_status": "under_review"
+    }
+  ],
+  "scope": "Pareceres iniciais; refinamentos e aplicações posteriores apenas nos relatórios específicos."
+}

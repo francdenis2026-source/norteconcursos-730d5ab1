@@ -1,0 +1,115 @@
+[
+  {
+    "id": "agente",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+    "status": 200,
+    "sha256": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+    "bytes": 754494,
+    "pages": 23,
+    "checked_at": "2026-10-23T04:09:57.762799+00:00"
+  },
+  {
+    "id": "agente-key",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+    "status": 200,
+    "sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+    "bytes": 113975,
+    "pages": 1,
+    "checked_at": "2026-10-23T04:09:56.713462+00:00"
+  },
+  {
+    "id": "pmsc",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf",
+    "status": 200,
+    "sha256": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+    "bytes": 772078,
+    "pages": 14,
+    "checked_at": "2026-10-23T04:09:57.805065+00:00"
+  },
+  {
+    "id": "pmsc-key",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+    "status": 200,
+    "sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "bytes": 417042,
+    "pages": 2,
+    "checked_at": "2026-10-23T04:09:57.863627+00:00"
+  },
+  {
+    "id": "cbmmg",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/160263/idecan-2026-cbm-mg-cadete-bm-prova.pdf",
+    "status": 200,
+    "sha256": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd",
+    "bytes": 2641034,
+    "pages": 17,
+    "checked_at": "2026-10-23T04:09:58.594871+00:00"
+  },
+  {
+    "id": "cbmmg-key",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+    "status": 200,
+    "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
+    "bytes": 227731,
+    "pages": 3,
+    "checked_at": "2026-10-23T04:09:57.921224+00:00"
+  },
+  {
+    "id": "escrivao",
+    "url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+    "status": 200,
+    "sha256": "7d75eb4e9e447dae31b5a7f66cddd4a6bfde140dfbe54e1201f564017c5b8fa8",
+    "bytes": 295188,
+    "pages": 22,
+    "checked_at": "2026-10-23T04:09:58.547736+00:00"
+  },
+  {
+    "id": "escrivao-key",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=445F7XU35JUR4VEO0IWB06549QLKTDVHWSRH944PUKAY0OOVBQJFGC5RHCW660BCV9CXBLTBYOPH8OJJ7158.pdf",
+    "status": 200,
+    "sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+    "bytes": 427452,
+    "pages": 1,
+    "checked_at": "2026-10-23T04:09:57.822360+00:00"
+  },
+  {
+    "id": "sumulas-stj",
+    "url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+    "status": 200,
+    "sha256": "8a7298bfd40ecac21b31f15a6f9aef6a10a4fbbecdee4fac6fd665ebec338b82",
+    "bytes": 7814927,
+    "pages": 2847,
+    "checked_at": "2026-10-23T04:10:21.602859+00:00"
+  },
+  {
+    "id": "sumulas-stf",
+    "url": "https://www.stf.jus.br/arquivo/cms/jurisprudenciaSumula/anexo/Enunciados_Sumulas_STF_Completo.pdf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "pcce-escrivao",
+    "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/83736/idecan-2021-pc-ce-escrivao-de-policia-civil-prova.pdf",
+    "status": 200,
+    "sha256": "a835d92983601375c77355a50f68bdc77092e4fb88fdb9686ff453b8ed2fd57d",
+    "bytes": 4657948,
+    "pages": 32,
+    "checked_at": "2026-10-23T04:23:15.741867+00:00"
+  },
+  {
+    "id": "pcce-key",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=X6BT90RYGNDO2S8DGORM9OO61FDNBPF2P0I6D2GESRJNOE4S4WCY4LGHA0TVQ1S1DDEP85BIAPGOEYBF1384.pdf",
+    "status": 200,
+    "sha256": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+    "bytes": 376814,
+    "pages": 3,
+    "checked_at": "2026-10-23T04:23:16.620989+00:00"
+  },
+  {
+    "id": "pf-edital",
+    "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "status": 200,
+    "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+    "bytes": 1505541,
+    "pages": 132,
+    "checked_at": "2026-10-23T04:23:19.181612+00:00"
+  }
+]
