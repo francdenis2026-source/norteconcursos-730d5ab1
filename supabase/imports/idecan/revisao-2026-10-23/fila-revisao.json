@@ -1,0 +1,3024 @@
+{
+  "reviewed_at": "2026-10-23T00:16:25Z",
+  "remote_application_verified": false,
+  "items": [
+    {
+      "candidate_id": "450567393cf35e12f428a93fa27d27b3c045dfcb51b74b39a29fda17d8cbf025",
+      "role": "inspetor",
+      "number": 1,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "be36723a278818d4416765275b38538757a804e7be8f9135e8a90afe34d84dec",
+      "role": "inspetor",
+      "number": 2,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "61b650f33b6d32c128683651afb32ccd2625a0653034fcbda34e0baabba92832",
+      "role": "inspetor",
+      "number": 3,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "5958f4b075a4c34ab00fd36eacad4d5f3070000b62e10f70c7d27d0b45010750",
+      "role": "inspetor",
+      "number": 4,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "f9691065305b1ea0396b420a7786cc30b8a8ee0621f7ae9efa17e864ac9d4d75",
+      "role": "inspetor",
+      "number": 5,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "89efd958b7b18147439dbeb9874b50ecc69586e51b87b91d643da7c3cdcdb96e",
+      "role": "inspetor",
+      "number": 6,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "d26ac36625454d637d0aea21b3edcd3aab5b12275ac315ea1c813a62fadf7218",
+      "role": "inspetor",
+      "number": 7,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo",
+        "segunda_conferencia_da_analogia_simbolica"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "da585e63a6fe6ba06c5dffc87ef5d086b695380ecee801545551b82944419010",
+      "role": "inspetor",
+      "number": 8,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "546e6e7471cafb0dabc485eb29745e85c6ccce86cae63294fdefab114c9d22ec",
+      "role": "inspetor",
+      "number": 9,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo",
+        "segunda_conferencia_da_funcao_sintatica"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "798420fc7707d7c15d0be19b5e5a7d28dcdd44963bb833bd078932eedafddf13",
+      "role": "inspetor",
+      "number": 10,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido",
+        "cabecalho_preliminar_em_documento_listado_como_definitivo"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "61bf4a9ae194f5d34abe9996671bcf8460bdab1b9ad6cce42210d74ec9683290",
+      "role": "inspetor",
+      "number": 11,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3f5d9f9b157d366de7b7eba70996ee00fe69f9bcd1b901a0d1ba9f49d0373275",
+      "role": "inspetor",
+      "number": 12,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "55131eb8225a205f58319e7f21b06bfb366c385e8309c92690764c3ea9f6d98d",
+      "role": "inspetor",
+      "number": 13,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "847ab60425ad713b61db31d8b5a43de86956c074581a7b7938ec064738fe0876",
+      "role": "inspetor",
+      "number": 14,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c16ff2e7c7167dcc2ec6d5102135bc879357b620413a9dc2b393658c24799e8f",
+      "role": "inspetor",
+      "number": 15,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e59719f0553f033030c196ff4e06ee41c20a41bf3fe7cbf55e4e94f97eecd772",
+      "role": "inspetor",
+      "number": 16,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "cda9d6429b0c99d8b68987cb0379dd55a1bccf4f9ff645d92635d58e0a394272",
+      "role": "inspetor",
+      "number": 17,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8ce5fa16e668db1644b608b9a3c13b153e91c25e3f0237b8f51f37ac27f3c7d7",
+      "role": "inspetor",
+      "number": 18,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "26cfe931002a1881819898c33ed9c43f244be6648daa38d45abaecb0a4b542f0",
+      "role": "inspetor",
+      "number": 19,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "ed322179132b389198e756c7755b1861937eab4b027ed95d5d89bfd26e71f25d",
+      "role": "inspetor",
+      "number": 20,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5265fc281b7c7e2f6535c9e222ae499db1e79afbbb1a2ea565320791f72df49a",
+      "role": "inspetor",
+      "number": 21,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "137ce64a77e97ccfeaadb1e64c94938b553fdac4a3c2ea34f40599e747320535",
+      "role": "inspetor",
+      "number": 22,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "d2b6b9bf77207af53bea534333e746506c5fc0182df42032c4a228575a6bcd2e",
+      "role": "inspetor",
+      "number": 23,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "d074829c336b1430fe681e2946cf48595792e0851a0ec08b95c0aa9bc81def3e",
+      "role": "inspetor",
+      "number": 24,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8d9741194dd24793d7d80b37262fe536ea60a00a90b64f0992591af2406b8ee3",
+      "role": "inspetor",
+      "number": 25,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3bbd472b77be5c2a774fdd7f1194e4f40a3ebeef9361ef9e6832726032432fe5",
+      "role": "inspetor",
+      "number": 26,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "cdbb95aaee754e20e708f1318402c660acf1b5dfd441255689b0ac8ffa26788a",
+      "role": "inspetor",
+      "number": 27,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "32d4ad13f965a6d5956f3c09b277c205f01d7e1308077d52839fdb0c4b736791",
+      "role": "inspetor",
+      "number": 28,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "33dbf9283c83447a7ceb8a04fd765557ffa490119935c66cde4aa6aa48725bdd",
+      "role": "inspetor",
+      "number": 29,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9a17b8fdc501cfff412081bfbfe7ff40e49bcc4222c7aeb99f12a55d324574bd",
+      "role": "inspetor",
+      "number": 30,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "12f4e2ea09cbb529eac061a4ad4530749ff4f4feefa53b3397230d7fdc43e2ff",
+      "role": "inspetor",
+      "number": 31,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4eab75dd53273e2ee281d57b39571dc51a94c9db3b949971655bb890223b7889",
+      "role": "inspetor",
+      "number": 32,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7f82b63179b431abf507b784385e58d55880bf2d68f0039e8ecac92f6eabcec6",
+      "role": "inspetor",
+      "number": 33,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "aef95dabb098030b63e861214e225682e47474d88d65dad3e390431a6ae3c51c",
+      "role": "inspetor",
+      "number": 34,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "6123717e6c63bdcfeb9b6d2b108f682d0d041157cbebafcdc999da977eb236b6",
+      "role": "inspetor",
+      "number": 35,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9bc92366895ab2a0639273ce3b17f66b10a2a524d01392cb75f41f3cb40ecbb8",
+      "role": "inspetor",
+      "number": 36,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "efce7bd288053a56ed4cd6119518e4729d41f860255ea12ca04f72e2e55f000d",
+      "role": "inspetor",
+      "number": 37,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9082bcbec729eed0e6acc2cfde82b5716b33701420756a11e959162a89ba786b",
+      "role": "inspetor",
+      "number": 38,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "51efbee47f0045d2e693ce758ce45dd74eb22f55144007c2260a9ca937b1aea0",
+      "role": "inspetor",
+      "number": 39,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e41cf39861f7e95c69ffe4a543ead0e5372fd3be7d331fc3e56db87391b97afd",
+      "role": "inspetor",
+      "number": 40,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "a3e0a23d3c7caa28190314d8e9c47e6b86d5dad87183ee40d2e4ff47faa2361d",
+      "role": "inspetor",
+      "number": 41,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "b40437a4cde29ca3a753aeb293b1878c6ed48f2592b3d41ae875b5bb67c88551",
+      "role": "inspetor",
+      "number": 42,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "94cf03a250e57fb0981770d181e88a9f775bc19763debfe0e93990d85635bfe5",
+      "role": "inspetor",
+      "number": 43,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "08f55c788c5e9f11b37976941cf95bb4cb56c6586c399f9f59cee77919e29051",
+      "role": "inspetor",
+      "number": 44,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1044476937ad458dc64f4f57401e0a380463eb2269fa6820e9382110e3ea05c2",
+      "role": "inspetor",
+      "number": 45,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1bd895c53f7e18ae5a016bc2e948739a8fc0251a98f83dd7732869affbff11d0",
+      "role": "inspetor",
+      "number": 46,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "348e823e20ea43fa71bbf96337454da34d7b55868e68757b9375f5f8b22f7de7",
+      "role": "inspetor",
+      "number": 47,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "82e8bcea45756653556caa3db6219738ae00a6c6d1edfa61e9d7ff96965fbafb",
+      "role": "inspetor",
+      "number": 48,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "832e0fa667899eb8aff70d590288314a92950a546e4b4a8b7b47ce4a0b748142",
+      "role": "inspetor",
+      "number": 49,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3962ff99dbe7a7fa35bdf515f24ff2eef26b38513edabfedb04f3cb1b6ad6819",
+      "role": "inspetor",
+      "number": 50,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9d07c5560abc189edfc488f48a1f297b18d774be54cc5f8138d972bc5584b469",
+      "role": "inspetor",
+      "number": 51,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f099ced1a5995e99e3223464a57f2702904b1aa7b91296e7fc4d85814f105807",
+      "role": "inspetor",
+      "number": 52,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "0523c129106fd973c0e93a01b88945c340e548886ac7568b3deca612a03a16ef",
+      "role": "inspetor",
+      "number": 53,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "61ebf92d9c0912e8f2bcdc2cd3bd6c7f77fb03e370360ef4bc5087c78b90c0a9",
+      "role": "inspetor",
+      "number": 54,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f80a93fe7b5b294c14b96bf24a7bb99b68adf120533a80f71ec64e5ead40f6e4",
+      "role": "inspetor",
+      "number": 55,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "06812eeb01f13b402f5d24a661cf8a0fd1a0ef5e13de8bafa843486ec538bca0",
+      "role": "inspetor",
+      "number": 56,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7cb4f7560f5e1a2a8fea837bc8084e1aa9498410fbf734b75236c7ee619fcf66",
+      "role": "inspetor",
+      "number": 57,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "625a096a0c0d9f70e151580551bef90528613d219b1906873b03f717f5d66536",
+      "role": "inspetor",
+      "number": 58,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e2ee27b4572aeaf7895847f10b432ddf5aa9b4715941a50a7d292f9bf74cdddb",
+      "role": "inspetor",
+      "number": 59,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f9b9ec78039862882b9502900184d53ea4d0a728396eb18867218dc4d562361a",
+      "role": "inspetor",
+      "number": 60,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e43ddadeaede233fdd62b5d9d1b54b7f81b53ee63ecc067f92f7cd417dc34a25",
+      "role": "inspetor",
+      "number": 61,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "fea9d4416051483fa0b0965e624beac542e56291e3945e5462c96af8f9aa455e",
+      "role": "inspetor",
+      "number": 62,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "59e63d7a8474c1575f5e5ead54e0419960e84636725622d9234d8619ad277a1c",
+      "role": "inspetor",
+      "number": 63,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c029d472767d55b1514d96e4ed284dff2f2da88be4995639762a2bf771205e90",
+      "role": "inspetor",
+      "number": 64,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "a395169d5b76ae1ac4d0747572387dc53dbb789aaab3818cf054c7eddc486fe1",
+      "role": "inspetor",
+      "number": 65,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1f1a0dacfa3bbec40cb7fdaf940ea977d9f77983521c2915be2974edb298aff3",
+      "role": "inspetor",
+      "number": 66,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "22ff384961da674c8a773e18a8ff6434d068135d7273193fd00fa8151cd85678",
+      "role": "inspetor",
+      "number": 67,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1cd6fb01f087eceae33b9a97a0242a910860aa100210c0321213ac17c6f33ef1",
+      "role": "inspetor",
+      "number": 68,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "71168cbc0e87d63617af747a32bcbaa21418bc67350bd1b3abb7c699d1027a46",
+      "role": "inspetor",
+      "number": 69,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4ff8c919e4af6392ee19e1ed193c615f7f6acecf31793899e91f51b2e6014822",
+      "role": "inspetor",
+      "number": 70,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c7ea02e0b6064815c3e42477016b2939b4a57032d128d468b206911792abf356",
+      "role": "inspetor",
+      "number": 71,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "701fb4a4c0b847e4651d9e29270eb48363d27e474f0666f0766cc1d5f4833740",
+      "role": "inspetor",
+      "number": 72,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8cf157d3c2e6d5b820e74406fceae45efdc74258119995c6334f8ecd992f8c13",
+      "role": "inspetor",
+      "number": 73,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5a2323447bf451af790614eb9b730d3242ec0dba0a5d11f02b7dcb5cd4d9579a",
+      "role": "inspetor",
+      "number": 74,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c84e6128cb21fa3d244f1924f53bfe69e1fc0ac827ec5968d923448f3b52fef6",
+      "role": "inspetor",
+      "number": 75,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "6b8f627254f71424aaa6597122d51910ed40cc70291f1863f0cc727c75a550f1",
+      "role": "inspetor",
+      "number": 76,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "0f3c9ee6c7b2845296fc7c6ce52a85dd1fed15fadf07a66328be319b891cf33c",
+      "role": "inspetor",
+      "number": 77,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3a76b28c3f16356e85d8e9a62c03a6b1acc0d6ed583488f526e0f87e09637c86",
+      "role": "inspetor",
+      "number": 78,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1e1170fbd648ef84b39ab905467e3d37ba990c752d9706ca39f9827e44a383bb",
+      "role": "inspetor",
+      "number": 79,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "a859cb62b8aae868c349da59a06f49bcb9b0e7180fff900dadc7104857782eb6",
+      "role": "inspetor",
+      "number": 80,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8851b041f5d115fa9cedc8be7b1be818b7d14cfa278d4613877d8953f0ae87f9",
+      "role": "inspetor",
+      "number": 81,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "dca2b80a8104bb177a45f3d0c9d5fa3d6040ca8e2913713b8b8bcef3ecd6a624",
+      "role": "inspetor",
+      "number": 82,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e59a71080dfee6a8f6f51c1c5f29710df81cc6a79e55ca2c955bfbf34315c045",
+      "role": "inspetor",
+      "number": 83,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "83565fcadd58e5aeaa56293c5deb5d7f5f60ed66657803108ebb73afe99e550b",
+      "role": "inspetor",
+      "number": 84,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "424be89da589a4bf70fbf5bde6d76ef43208925d524a0ad575527809479b9c4a",
+      "role": "inspetor",
+      "number": 85,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "47272a3295663924dac888edfe93398950fe5ea86015e50909c7244f95e98f0a",
+      "role": "inspetor",
+      "number": 86,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9bef8ec23e01b6158a685b2d05ec54cf8cb95e9da32e984835090f041f36c90a",
+      "role": "inspetor",
+      "number": 87,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "ba90f7f6f7dee864c1ae735f99c177821c550a3bcd1fd5f896b385fd4710fd41",
+      "role": "inspetor",
+      "number": 88,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1a5ce75cb220b1f70b508ad19c63922b4551bc22727532d2c536911a168cf310",
+      "role": "inspetor",
+      "number": 89,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "40fe218ea6ee92d0e61491b11e920448a660785adc7786e1dff72fe9c7844eef",
+      "role": "inspetor",
+      "number": 90,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "685072e425c70e6c135789f468a19d4e83769e22c66405278d89026948fb449f",
+      "role": "inspetor",
+      "number": 91,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5080085a787b046dc6ce1e56d79296090ecd1d2627f193d392a64c0694defa74",
+      "role": "inspetor",
+      "number": 92,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9ca5672617025ac925baad4a60d2288a1f2efd7e0004d207018f6bfe9e0aa05e",
+      "role": "inspetor",
+      "number": 93,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "b944a8f210be8fbfdbc81598e37d8caaf36a55552f3d3d548a6e13806a162655",
+      "role": "inspetor",
+      "number": 94,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "11f7ad5cc0ad905a946b77d43009c2c0dbad5f66f5889b888ee4a23dd3c63e94",
+      "role": "inspetor",
+      "number": 95,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "83c97d396470128e32a4a81d7beb38a11eba7ab0cfcd9b2f4687e36037c9fc91",
+      "role": "inspetor",
+      "number": 96,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "bc240eb05db427182e2f7f4e33d2c05c43193a4e0891dd844198369181519a1a",
+      "role": "inspetor",
+      "number": 97,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9fd7f4dc22f9218916d1374e34427a66ef6de35758ba278356adb92e2295bf1e",
+      "role": "inspetor",
+      "number": 98,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e0d3e80cc9fd3e473b82a166783148424bc5dc4eea72457f320a9988917253e0",
+      "role": "inspetor",
+      "number": 99,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "980fc5cd676dc592d6ba77203133e5d6459cbf45cd8f22a25be3b8b2d90ae2a4",
+      "role": "inspetor",
+      "number": 100,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "gabarito_de_inspetor_pendente",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e7a266d0534338ec9a007e02a5d0d60e36d53f000036e5066f5481ece682891b",
+      "role": "escrivao",
+      "number": 1,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "b7d7c1ab925b3060600565939944a241fcc882a99cd336419b029347f682f931",
+      "role": "escrivao",
+      "number": 2,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "6642ab8a488c12a33a227f63465db599987fce721b0f8f3cc0246a82bd40c297",
+      "role": "escrivao",
+      "number": 3,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "f87d4b435d0be3ecaa227b4debb8ef24d93696eff9b42ca422c22a8491d634b6",
+      "role": "escrivao",
+      "number": 4,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "0c000c735f75d731af920d1a53f44e1023c373a9d7eb931220611a88524f8440",
+      "role": "escrivao",
+      "number": 5,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "2a7a5df6660c351902269e85e3843b6ed980ccc36248b01a18dd2ee518cb5c26",
+      "role": "escrivao",
+      "number": 6,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "6b822694d5c427f36932414e2d4cdda0db30676dc970681e13f92605504c7c5c",
+      "role": "escrivao",
+      "number": 7,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "67845242c6a43849f53fca62d4a5c1bd2c72581b787bccd5ce5d4dffcc305f44",
+      "role": "escrivao",
+      "number": 8,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "bf5adc062730483b96f794e874846b93b76e2170e1fb619a168841105f572994",
+      "role": "escrivao",
+      "number": 9,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "443c3ed2a73ded0efda478b0359c850798db94c49e2b71f4175bb4a3a8fd6680",
+      "role": "escrivao",
+      "number": 10,
+      "discipline": "LÍNGUA PORTUGUESA",
+      "proposed_status": "reviewed",
+      "publication_approved": false,
+      "blockers": [
+        "vinculo_a_topico_de_edital_ativo_nao_conferido"
+      ],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "a15cfef91eb96cf646fd33786c8a183dc7d44e14609c643a270746727b3317fd",
+      "role": "escrivao",
+      "number": 11,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "cbe2da7f42acb5b4482df191d05c36ee697bc14bf026b73db60f71d57b3a785c",
+      "role": "escrivao",
+      "number": 12,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5ee0a1dc540a02ea530180148ffed97551401044ce86e9e19c97a9e2df2b7f53",
+      "role": "escrivao",
+      "number": 13,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "006433304c0ae7fb908f02012335c1e3dc8ed8ffafffd89e49ebfb7bc6971b9d",
+      "role": "escrivao",
+      "number": 14,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "69b59da14245106ece67bec9f9adaa0fee0b5732729798fa67c4f52a118228b9",
+      "role": "escrivao",
+      "number": 15,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "76a081727c0061adedac5e91b44a0bd09a1b1c199687ee83c981d679a54a5342",
+      "role": "escrivao",
+      "number": 16,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "476a7ec5fa2e09781eca9cc78c615ed67b3687237cfef8cd67cf740e41f62290",
+      "role": "escrivao",
+      "number": 17,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "25e3e718ed57496677f703ac0028d549e3e47b8540c8f98dc51608a3ac580ba5",
+      "role": "escrivao",
+      "number": 18,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "rejected",
+      "publication_approved": false,
+      "blockers": [],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "4367ff6333c4a848969b2bb0415de27e13bd8ed366ba78f29f8c701f027e65f2",
+      "role": "escrivao",
+      "number": 19,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "123d5d16a6a80c1f9e5a1768b6324256313d1d9d01a5b336998d7272e2921d82",
+      "role": "escrivao",
+      "number": 20,
+      "discipline": "INFORMÁTICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "aa118e8abaccc37424fc16970bb777e3a1b7957ac297303d31519fe1f8c942bb",
+      "role": "escrivao",
+      "number": 21,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "dc34546a41e281e7e93b7056164cd1898130aa308089d3f7497314a9637886fb",
+      "role": "escrivao",
+      "number": 22,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "b5d618a85b5cd04ad4dbae3603d5657d2043519f1e1f3de18ee864f3018e7e97",
+      "role": "escrivao",
+      "number": 23,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8b27077fc703354d5f28a33473e4964de2fd0531ce2642e0c0338972d15dff81",
+      "role": "escrivao",
+      "number": 24,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "492d9a1bcc05d6fe1f41157194b5ce8ed99614e416fe7fd6842df62e64519126",
+      "role": "escrivao",
+      "number": 25,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "b6ec7e3339ab6894c05fdb99a255ed8cb150c3a75bf053c48ec711227f2dd3bf",
+      "role": "escrivao",
+      "number": 26,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7bed35b55e9c8e95528ebdcb7eb9b6a10ddfd30c1258e76eda875696722a63d9",
+      "role": "escrivao",
+      "number": 27,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "2cadf86b3e063badc48c1c065992db0c58a37ca132e04519c4d0f9ac53c652db",
+      "role": "escrivao",
+      "number": 28,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "61930888655ce2b968dada9fef1c272b0d48873dd31618cd8c387266dc74013c",
+      "role": "escrivao",
+      "number": 29,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "21215c8947da6382b7a0104670958a0809cd76ee941da19c3ca84f5ad9ece8fa",
+      "role": "escrivao",
+      "number": 30,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4f573fdfb3f47e382e345ef710e8911f4d0e9841532603fe0d5f4e31499bcbee",
+      "role": "escrivao",
+      "number": 31,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3d724683feb35992d8b23c107a54af3a44dbca8fe300725e18ca98c50f07f6bd",
+      "role": "escrivao",
+      "number": 32,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "44db34bde3cb6992d4f457dafbd9fa0b0ae9aa70af52bd0b6bd7c6d25223e7cd",
+      "role": "escrivao",
+      "number": 33,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8b10387dd770c298ebbba2fb4f9fb1dae1b6b1cf6aad0a7751b551df54be7c61",
+      "role": "escrivao",
+      "number": 34,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e2a5e88c3d0a3be401c07075de155ca02e50944311346a9f0b0bdf1c99c6dfe7",
+      "role": "escrivao",
+      "number": 35,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "aed4708feb4bfe4eee9b21fd7e1d11cae419112e60711ebabff27f0afe499e48",
+      "role": "escrivao",
+      "number": 36,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "df9ca2d7fc97a750e88208d3d5501709169f6c35bd76eb02235707d96f6ac4da",
+      "role": "escrivao",
+      "number": 37,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1d8cb0a88ab78e27db26b6491d87023c0e78cbcd2dc15af3947b6243e27e2a18",
+      "role": "escrivao",
+      "number": 38,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "adaaa255f3be9b7c7d6c06679c5073ddc588c9ad4b0b9ab93c0a0c44fbd2ac78",
+      "role": "escrivao",
+      "number": 39,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "b120eec64c784e8e063b858d90d0232a402d4c108da59432f81fb0894ac6f3ee",
+      "role": "escrivao",
+      "number": 40,
+      "discipline": "NOÇÕES DE DIREITO PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "d3958113c91af670337f0e36145ac2d844ec3a7dc5012219800adaf439665b1f",
+      "role": "escrivao",
+      "number": 41,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9eb5d977cab500980795bb9ca9c582ea465b681fe6fadb91429e697e3b255c72",
+      "role": "escrivao",
+      "number": 42,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "2150db18fd71538f45a203655a2ef970d3b53cb2814f7e5e0b46a204326847c3",
+      "role": "escrivao",
+      "number": 43,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "rejected",
+      "publication_approved": false,
+      "blockers": [],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "a82024ad6757aa4995904a1e08d95f9b3566e0ce1654984b1b2d013e03cd033e",
+      "role": "escrivao",
+      "number": 44,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7091bae5af4ff049bfc586f67b86a277d0e1d9295cd9e07d576691fac3f65912",
+      "role": "escrivao",
+      "number": 45,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3855427ae965bf99df8e894d2055dd1012e1cd9edde651ac8295813cf3e1b408",
+      "role": "escrivao",
+      "number": 46,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "a41159be71db8a61ad92fb3c588837428e4cf72827c33c60dd768164c0506e25",
+      "role": "escrivao",
+      "number": 47,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "6debecb93e51f8110bae2a59f930c83c556769d4ca3f415b0a0d221434f4bb58",
+      "role": "escrivao",
+      "number": 48,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4514a5a6afdb8eab0ebf529336ad0dc395f7d8a89df09c24e907f39d4e481dd2",
+      "role": "escrivao",
+      "number": 49,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "aacce575a9a72db62514d63f95d468bb823007420b49a6265c3a8d9237428eb1",
+      "role": "escrivao",
+      "number": 50,
+      "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "0958530c8efc270fa6427abd114d1cffbd4a2c4056e92d1c2ff613413ca316da",
+      "role": "escrivao",
+      "number": 51,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "0979f63c6433d7ec5b4b87dd8f53b151ad50d7ffa1e25af0e4ba92659e97aea8",
+      "role": "escrivao",
+      "number": 52,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8bcad0e266132b5ebee187c5476eb24fd0d015fc9b842b7176c79772b09c9c3a",
+      "role": "escrivao",
+      "number": 53,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "0349e73ab28bbdcd81b0443f5a24030aa4227a26f7a1a4931016c3c70eb67063",
+      "role": "escrivao",
+      "number": 54,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "da425f91ac7e3d37f52e7a45ba0a72d4ce18c73c8c9e1048b853c7c823663768",
+      "role": "escrivao",
+      "number": 55,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "d38c403f4b29cb699e4fa9ff20f4840d8d65485ee310d127340b816f9c0f803c",
+      "role": "escrivao",
+      "number": 56,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3be7425c5782f100ec9df0a180c1d337c83d6e05470539e8aec26fb6289dc9a4",
+      "role": "escrivao",
+      "number": 57,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "99f310819c528b65459ffc0e2022bd954b77ae1de8a4b8d88e3442331214616b",
+      "role": "escrivao",
+      "number": 58,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "38f6b17b07dc830288e6a47382aad2975cd1f9f3296903d87cb9e6574d74008e",
+      "role": "escrivao",
+      "number": 59,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f2a0ad8e2c97730455886d0c03e88bced1d3e606be8851dd2a45749c04e7e81a",
+      "role": "escrivao",
+      "number": 60,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9d81bf241677b5e54038fa0836a4f31e59f7214f6ed6a52c4b82f2aa8f268c95",
+      "role": "escrivao",
+      "number": 61,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "3e69366ad4e5d8f06fa9e97429d24380e40bbaefd787634fd33bb83d1acfb630",
+      "role": "escrivao",
+      "number": 62,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "424299c04139ac109c31a3d63034eda42d83a79766133c31c643df816d5ab347",
+      "role": "escrivao",
+      "number": 63,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7e77ae7beec9bb2dc36a6298aaaa92a4a6c85911b21fd0815792861f5de150dd",
+      "role": "escrivao",
+      "number": 64,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f8a7451c21f2c1b7fb23beacb4d73b540f2e174d088b3c0f4c4d950307833cd4",
+      "role": "escrivao",
+      "number": 65,
+      "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "87fcc69522150f27dd40ac03673f58faff63dee23e234ca198b73c3ea1462f4e",
+      "role": "escrivao",
+      "number": 66,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c56d418ed86617c54cc332f00a0112caa4c47d54e43b9d3378e6b851ff1caefe",
+      "role": "escrivao",
+      "number": 67,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "1eeb9e7e75f891bd844726a63c473bdcdcf2a591da4bc4142f28af586b69a928",
+      "role": "escrivao",
+      "number": 68,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "c0091b186184047c9a862b6e298a245507bcb48a81bb3e2891d7328610fafddc",
+      "role": "escrivao",
+      "number": 69,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "a066cce9a249977f345f13e18e74ad40d9d589a7193d78a1478e582e5fdbda63",
+      "role": "escrivao",
+      "number": 70,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "9bcd7f476b76c6c1fcf2a366ae2a5a84db94b172a22f9f68adf6f4b97b5cbe2c",
+      "role": "escrivao",
+      "number": 71,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "bd4af3536320b212fd823576d229a7f619fa4a909be86b8acb4baffac0492d68",
+      "role": "escrivao",
+      "number": 72,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "003b158db317a679802797d3f5be7b91a7349d3e8aab1d35405d2d14fc815609",
+      "role": "escrivao",
+      "number": 73,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "f969611933e3055991cc59b0721869bfa0091524ef81bdb3e1aee2fb61e32446",
+      "role": "escrivao",
+      "number": 74,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "65886872b0b3bfba3e27759da728b5cbfae78dfb995f321c26c4c305ef2e342e",
+      "role": "escrivao",
+      "number": 75,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "e2cd979a090625176aeaecd0a88ce5a39f070c8e38ac7a95744f6c785880eda8",
+      "role": "escrivao",
+      "number": 76,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "ec712a726089716ecc5d0bd60197fcba9f50b1c0133119fc42a3c7a2e38905a4",
+      "role": "escrivao",
+      "number": 77,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5072dd3433f5300b82734138fea2849ffcee81576085dc5aacfd9d93b5577eae",
+      "role": "escrivao",
+      "number": 78,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "359698d32cf64ad8c6fadad1cbd95039a51a83f12915222ba22392d569fa5737",
+      "role": "escrivao",
+      "number": 79,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "rejected",
+      "publication_approved": false,
+      "blockers": [],
+      "triage_only": false
+    },
+    {
+      "candidate_id": "d18006a6f5222cffb59162f3eef346be0b410cef6bae2b059a27eb097032d1ee",
+      "role": "escrivao",
+      "number": 80,
+      "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4745e9446b6e11ba7ffa35b018f9e06c103622b19bbb29de287af2036db5a624",
+      "role": "escrivao",
+      "number": 81,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "78834a87e369769700a74da0caf6a8ad458dd4161792df0d10abc7c76f3e3d42",
+      "role": "escrivao",
+      "number": 82,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "485bebcd35af1ab60aa5627a1920d47e7b023ee394afe602c8c6a868bc94a916",
+      "role": "escrivao",
+      "number": 83,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "bd21f587c0b874cb31140dc0fde6126a355c12cc81f4ef12fc8cc27c44a6c105",
+      "role": "escrivao",
+      "number": 84,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4fa66c7700830e96a980493c6d3247b692e8fee347a14244b28dd9507eb68f6b",
+      "role": "escrivao",
+      "number": 85,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "cba6d69927104cf1c6db8ef5f01b2ad4ee947cc3edf5437c25dced3ff1d9b968",
+      "role": "escrivao",
+      "number": 86,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "fb31da5d6bc48f00b38a7641740434863ffc3e33ff0954fdf99ebd74e4ca6a2b",
+      "role": "escrivao",
+      "number": 87,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "7dfe12596129c3da2dc285eeed44d7d706f147d5a329769d6371ce3bade0981e",
+      "role": "escrivao",
+      "number": 88,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "dad70e59cf5a4ddec6f355e6ffd3c89234a1df0459906bc9bdff88047c80d087",
+      "role": "escrivao",
+      "number": 89,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "337bbf75232d22d0b70aa54a688d8be9f42f785e68a908782be2f2165cd8c6e9",
+      "role": "escrivao",
+      "number": 90,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "45bd48a75e23527c213a963e34d7de9905b1b4b544f18a997d5f15e0222ce014",
+      "role": "escrivao",
+      "number": 91,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "4639b8ad7294eb0d3d98f9842368dd770396fa41d701dd038b27748c0d8f95c6",
+      "role": "escrivao",
+      "number": 92,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8d91aa1bc5ceda7349325b8953f0ff4dd56e529f86977bd6628445d417be0f47",
+      "role": "escrivao",
+      "number": 93,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "8921f01908e8c8c90c9a9678397d17dd636697bb7c43ba8603a61b18c4bc01be",
+      "role": "escrivao",
+      "number": 94,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "5d412792819734ab02c93add321e47d167052702893b1cc54af5bafc8e844125",
+      "role": "escrivao",
+      "number": 95,
+      "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "d861aa7398cbca7ebc9807a1ebd1c618d1eb3bbba975076a1eb35abe023e9f81",
+      "role": "escrivao",
+      "number": 96,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "bbd5d36e521b3cfb9ce6f21e82ece9161ac90d524adad21ea85b804a6d423de6",
+      "role": "escrivao",
+      "number": 97,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "baa8ae7af79b6c8f42d605a9e9a719d5b236cf7288c212b88291e6d7574170f1",
+      "role": "escrivao",
+      "number": 98,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "aee5f09089579de6c34af3a1c3f322bf610e68889f4ee69236003a72b8ef6362",
+      "role": "escrivao",
+      "number": 99,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    },
+    {
+      "candidate_id": "98507413dc622ea7e8a2f79ef9f93f6169689f910593d2b6c9eeee98f752279b",
+      "role": "escrivao",
+      "number": 100,
+      "discipline": "LEGISLAÇÃO ESPECÍFICA",
+      "proposed_status": "under_review",
+      "publication_approved": false,
+      "blockers": [
+        "revisao_individual_pendente",
+        "contexto_e_formatacao_pendentes",
+        "vinculo_a_edital_ativo_nao_conferido",
+        "fonte_juridica_oficial_e_vigencia_nao_conferidas",
+        "legislacao_cearense_nao_transferir_ao_acre"
+      ],
+      "triage_only": true
+    }
+  ]
+}
