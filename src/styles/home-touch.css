@@ -326,3 +326,40 @@
     mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
   }
 }
+
+
+/* Homepage-only cinematic integration: a quiet rim light behind the agent,
+   plus a soft silhouette shadow. No moving filters or permanent animations. */
+@media (min-width: 761px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image:
+      radial-gradient(ellipse 35% 72% at 80% 57%,
+        rgb(196 155 92 / 12%) 0%,
+        rgb(129 143 146 / 6%) 46%,
+        transparent 77%);
+    background-repeat: no-repeat;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    opacity: .93;
+    filter: drop-shadow(-12px 9px 20px rgb(0 0 0 / 28%))
+            drop-shadow(-3px 0 12px rgb(211 177 112 / 14%));
+  }
+}
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image:
+      radial-gradient(ellipse 38% 125px at 82% 210px,
+        rgb(201 168 103 / 9%),
+        transparent 78%);
+    background-repeat: no-repeat;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    opacity: .68;
+    filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%))
+            drop-shadow(-2px 0 7px rgb(211 177 112 / 9%));
+  }
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero { background-image: none; }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image { filter: none; }
+}
