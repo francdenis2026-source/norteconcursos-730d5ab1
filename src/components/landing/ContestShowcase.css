@@ -208,3 +208,48 @@
   .home .contest-catalog { scroll-behavior: auto; }
   .home .contest-carousel-dots button::after { transition: none; }
 }
+
+
+/* PC-AC feature: reserve the photograph exclusively for the officer/insignia.
+   Both editorial labels live in the content panel at every breakpoint. */
+.home .contest-spotlight__content > .contest-spotlight__ribbon {
+  position: static;
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: normal;
+  background: color-mix(in srgb, var(--contest-accent) 10%, var(--card));
+  color: var(--contest-accent);
+  border-color: color-mix(in srgb, var(--contest-accent) 44%, var(--home-line));
+  box-shadow: none;
+}
+.home .contest-spotlight__content > .contest-spotlight__signature {
+  position: static;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 14px;
+  color: var(--home-muted);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+.home .contest-spotlight__art {
+  isolation: isolate;
+}
+.home .contest-spotlight__art > img {
+  display: block;
+}
+@media (max-width: 700px) {
+  .home .contest-spotlight__content > .contest-spotlight__ribbon {
+    margin-bottom: 12px;
+  }
+  .home .contest-spotlight__content > .contest-spotlight__signature {
+    margin-top: 12px;
+    font-size: 9px;
+  }
+}
