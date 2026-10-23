@@ -305,124 +305,19 @@
 }
 
 
-/* Homepage-only hero: anchor the agent to the scenic background layer,
-   not to the viewport or content flow. The subject ends with the hero. */
-@media (min-width: 761px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-  }
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    width: min(52%, 760px);
-    height: 100%;
-    object-fit: contain;
-    object-position: right bottom;
-    opacity: .88;
-    pointer-events: none;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 86%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 86%, transparent 100%);
-    filter: none;
-  }
-}
+
+/* Keep the existing portrait treatment on phones; desktop uses a separate composition. */
 @media (max-width: 760px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    background-image: radial-gradient(ellipse 38% 125px at 82% 210px,
+      rgb(201 168 103 / 9%), transparent 78%);
+    background-repeat: no-repeat;
   }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
     position: absolute;
-    top: clamp(100px, calc(44vw - 41px), 148px);
-    right: -6px;
-    bottom: auto;
-    left: auto;
-    width: 43%;
-    height: 200px;
-    object-fit: contain;
-    object-position: center bottom;
-    opacity: .62;
-    pointer-events: none;
-    filter: none;
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
-  }
-}
-
-
-/* Homepage-only cinematic integration: a quiet rim light behind the agent,
-   plus a soft silhouette shadow. No moving filters or permanent animations. */
-@media (min-width: 761px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    background-image:
-      radial-gradient(ellipse 35% 72% at 80% 57%,
-        rgb(196 155 92 / 12%) 0%,
-        rgb(129 143 146 / 6%) 46%,
-        transparent 77%);
-    background-repeat: no-repeat;
-  }
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    opacity: .93;
-    filter: drop-shadow(-12px 9px 20px rgb(0 0 0 / 28%))
-            drop-shadow(-3px 0 12px rgb(211 177 112 / 14%));
-  }
-}
-@media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    background-image:
-      radial-gradient(ellipse 38% 125px at 82% 210px,
-        rgb(201 168 103 / 9%),
-        transparent 78%);
-    background-repeat: no-repeat;
-  }
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    opacity: .68;
-    filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%))
-            drop-shadow(-2px 0 7px rgb(211 177 112 / 9%));
-  }
-}
-@media (forced-colors: active) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero { background-image: none; }
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image { filter: none; }
-}
-
-
-/* Final responsive framing of the homepage agent.
-   Match the artwork's 1208:1302 portrait proportion, retain its full silhouette,
-   and align it to the scene instead of stretching it to the window. */
-@media (min-width: 1101px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    top: auto;
-    right: clamp(0px, 1.5vw, 30px);
-    bottom: 0;
-    left: auto;
-    width: clamp(440px, 47vw, 735px);
-    max-width: 55%;
-    height: min(100%, 800px);
-    object-fit: contain;
-    object-position: right bottom;
-  }
-}
-@media (min-width: 761px) and (max-width: 1100px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    width: 48%;
-    height: 100%;
-    object-fit: contain;
-    object-position: right bottom;
-    opacity: .82;
-  }
-}
-@media (max-width: 760px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
     top: clamp(88px, 25vw, 140px);
     right: -4px;
     bottom: auto;
@@ -433,6 +328,10 @@
     object-fit: contain;
     object-position: right top;
     opacity: .60;
+    pointer-events: none;
+    filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%));
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
   }
 }
 @media (max-width: 359px) {
@@ -442,91 +341,110 @@
     opacity: .53;
   }
 }
-@media (min-width: 761px) and (max-height: 650px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    max-height: 100%;
-    object-position: right bottom;
-  }
-}
-
-
-/* Desktop-only: compose the agent directly INTO the hero background rather
-   than positioning an <img> in front of it. Mobile retains its existing art.
-   The shared wallpaper/clock remains visible through transparent areas. */
+/* A single desktop composition: shared wallpaper and agent are layers
+   of ONE background, with no gold halos or floating duplicate portrait. */
 @media (min-width: 1101px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    --hero-agent-height: clamp(490px, min(72vh, 52vw), 790px);
-    background-color: transparent;
+    --hero-agent-height: clamp(670px, 96vh, 1050px);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: min(820px, calc(100svh - 76px));
+    background-color: #10191c;
     background-image:
       linear-gradient(90deg,
-        color-mix(in srgb, var(--home-bg) 54%, transparent) 0%,
-        color-mix(in srgb, var(--home-bg) 34%, transparent) 35%,
-        transparent 63%),
-      radial-gradient(ellipse 34% 55% at 82% 58%,
-        rgb(193 155 93 / 12%) 0%,
-        transparent 82%),
-      url('/media/hero/hero-norte-recorte.webp');
-    background-size:
-      100% 100%,
-      100% 100%,
-      auto var(--hero-agent-height);
-    background-position:
-      center center,
-      center center,
-      right clamp(4px, 3vw, 64px) bottom;
+        rgb(10 18 22 / 94%) 0%,
+        rgb(10 18 22 / 83%) 28%,
+        rgb(10 18 22 / 53%) 47%,
+        rgb(10 18 22 / 7%) 74%,
+        rgb(10 18 22 / 12%) 100%),
+      url('/media/hero/hero-norte-recorte.webp'),
+      url('/media/hero/home-bg-texture.webp');
+    background-size: 100% 100%, auto var(--hero-agent-height), cover;
+    background-position: center center, right clamp(-55px, -2vw, -10px) bottom, center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    isolation: isolate;
-    overflow: clip;
+    box-shadow: none;
   }
-
-  /* The portrait is a background layer on desktop; never display a second copy. */
+  /* No redundant image, spotlight or edge flare in the desktop hero. */
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
     display: none;
   }
-
-  /* Subtle fade into the shared page background at the hero's lower edge. */
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::before {
+    content: none;
+    display: none;
+  }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero::after {
     content: "";
     position: absolute;
     inset: auto 0 0;
-    height: clamp(28px, 7vh, 85px);
-    background: linear-gradient(to bottom, transparent,
-      color-mix(in srgb, var(--home-bg) 34%, transparent));
-    pointer-events: none;
+    height: 44px;
     z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent, rgb(11 19 23 / 35%));
   }
-
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: min(820px, calc(100svh - 76px));
+    height: auto;
+    justify-content: center;
+    padding-top: clamp(24px, 4vh, 48px);
+    padding-bottom: 22px;
+    gap: 14px;
+  }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
-    width: min(51%, 610px);
-    max-width: 610px;
     position: relative;
     z-index: 1;
+    width: min(49%, 595px);
+    max-width: 595px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(39px, 4.3vw, 62px);
+    line-height: 1.04;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__study-entry {
+    margin-top: clamp(12px, 2vh, 24px);
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-trust {
+    margin-top: 12px !important;
+    gap: 10px 16px;
+    flex-wrap: wrap;
   }
 }
-@media (min-width: 1101px) and (max-height: 730px) {
+@media (min-width: 1101px) and (max-width: 1370px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    --hero-agent-height: clamp(430px, 77vh, 620px);
-  }
-}
-@media (min-width: 1101px) and (max-width: 1350px) {
-  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
-    --hero-agent-height: clamp(460px, 68vh, 670px);
-    background-position: center, center, right 0 bottom;
+    --hero-agent-height: clamp(640px, 91vh, 900px);
+    background-position: center center, right -75px bottom, center center;
   }
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__copy {
-    width: 53%;
+    width: min(53%, 555px);
+  }
+}
+@media (min-width: 1101px) and (max-height: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    --hero-agent-height: clamp(610px, 112vh, 900px);
+    min-height: 630px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero .home-hero__content {
+    min-height: 630px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero h1 {
+    font-size: clamp(36px, 3.8vw, 53px);
   }
 }
 @media (min-width: 1101px) and (prefers-reduced-transparency: reduce) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
     background-image:
-      linear-gradient(90deg,
-        var(--home-bg) 0%,
-        color-mix(in srgb, var(--home-bg) 94%, transparent) 44%,
-        transparent 75%),
-      url('/media/hero/hero-norte-recorte.webp');
-    background-size: 100% 100%, auto var(--hero-agent-height);
-    background-position: center, right bottom;
+      linear-gradient(90deg, #10191c 0%, rgb(16 25 28 / 93%) 38%, rgb(16 25 28 / 45%) 75%),
+      url('/media/hero/hero-norte-recorte.webp'),
+      url('/media/hero/home-bg-texture.webp');
   }
+}
+@media (forced-colors: active) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    background-image: none;
+    background-color: Canvas;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image { display: none; }
 }
