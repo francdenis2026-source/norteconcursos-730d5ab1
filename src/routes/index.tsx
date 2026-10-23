@@ -3,6 +3,7 @@ import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
 import { StudyPresence } from "@/components/landing/StudyPresence";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
@@ -74,6 +75,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      ...SHARE_IMAGE_META,
     ],
     links: [
       { rel: "preload", as: "image", href: "/media/hero/hero-norte-recorte.webp", fetchPriority: "high" },

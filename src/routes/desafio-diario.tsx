@@ -7,6 +7,7 @@ import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
@@ -65,6 +66,7 @@ export const Route = createFileRoute("/desafio-diario")({
         content:
           "Responda 10 questões oficiais de concursos públicos por dia, sem cadastro. Mesmas questões pra todo mundo, todo dia.",
       },
+      ...SHARE_IMAGE_META,
     ],
   }),
 });

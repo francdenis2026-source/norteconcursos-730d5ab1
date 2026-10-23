@@ -1,8 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { InstitutionalWindow, WindowSections } from "@/components/landing/InstitutionalWindow";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 export const Route = createFileRoute("/terms")({
   component: Terms,
-  head: () => ({ meta: [{ title: "Termos de uso | Norte Concursos" }] }),
+  head: () => ({
+    meta: [{ title: "Termos de uso | Norte Concursos" }, ...SHARE_IMAGE_META],
+  }),
 });
 function Terms() {
   return (

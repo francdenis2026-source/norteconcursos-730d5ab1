@@ -2,9 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { FounderStory } from "@/components/landing/FounderStory";
 import { InstitutionalWindow, WindowSections } from "@/components/landing/InstitutionalWindow";
+import { SHARE_IMAGE_META } from "@/lib/shareImage";
 export const Route = createFileRoute("/sobre")({
   component: About,
-  head: () => ({ meta: [{ title: "Nossa história | Norte Concursos" }] }),
+  head: () => ({
+    meta: [{ title: "Nossa história | Norte Concursos" }, ...SHARE_IMAGE_META],
+  }),
 });
 function About() {
   return (
