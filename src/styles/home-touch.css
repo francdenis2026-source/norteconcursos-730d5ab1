@@ -276,3 +276,53 @@
   .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { padding: 12px; }
   .home.home .home-hero__copy > p { font-size: 15px; }
 }
+
+
+/* Homepage-only hero: anchor the agent to the scenic background layer,
+   not to the viewport or content flow. The subject ends with the hero. */
+@media (min-width: 761px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: min(52%, 760px);
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    opacity: .88;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 86%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 86%, transparent 100%);
+    filter: none;
+  }
+}
+@media (max-width: 760px) {
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
+    position: absolute;
+    top: clamp(100px, calc(44vw - 41px), 148px);
+    right: -6px;
+    bottom: auto;
+    left: auto;
+    width: 43%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center bottom;
+    opacity: .62;
+    pointer-events: none;
+    filter: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+  }
+}
