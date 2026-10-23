@@ -447,7 +447,7 @@
 }
 
 
-/* Desktop viewport-fit layout: never crop content to force a one-screen hero.
+/* Desktop viewport-fit layout: never crop content to force a one-screen hero. */
 @media (min-width: 1101px) {
   :root:is(.dark, :not(.dark)) .home.home {
     --home-desktop-gutter: clamp(24px, 3.6vw, 68px);
