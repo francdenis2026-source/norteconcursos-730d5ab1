@@ -59,19 +59,21 @@ export function ContestShowcase() {
     const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
     const next = Math.max(0, Math.min(cards.length - 1, index));
     const destination = cards[next];
-    if (!destination) return;
-    track.scrollTo({ left: destination.offsetLeft - cards[0].offsetLeft, behavior: "smooth" });
+    const first = cards[0];
+    if (!destination || !first) return;
+    track.scrollTo({ left: destination.offsetLeft - first.offsetLeft, behavior: "smooth" });
     setActiveContest(next);
   };
   const trackContestScroll = () => {
     const track = catalogRef.current;
     if (!track) return;
     const cards = Array.from(track.querySelectorAll<HTMLElement>(".contest-card"));
-    if (!cards.length) return;
-    const first = cards[0].offsetLeft;
+    const firstCard = cards[0];
+    if (!firstCard) return;
+    const first = firstCard.offsetLeft;
     const closest = cards.reduce((best, card, i) =>
       Math.abs(card.offsetLeft - first - track.scrollLeft) <
-      Math.abs(cards[best].offsetLeft - first - track.scrollLeft) ? i : best, 0);
+      Math.abs((cards[best]?.offsetLeft ?? first) - first - track.scrollLeft) ? i : best, 0);
     setActiveContest(closest);
   };
   const sc = usePcscAvailability();
