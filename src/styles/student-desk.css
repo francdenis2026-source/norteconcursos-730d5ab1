@@ -576,3 +576,158 @@
   min-height: 40px;
   color: var(--desk-blue);
 }
+
+
+/* Desktop readability: student dashboard, without increasing mobile density. */
+@media (min-width: 1024px) and (pointer: fine) {
+  .app-shell[data-area="student"] .student-home.student-desk {
+    gap: 20px;
+  }
+  .app-shell[data-area="student"] .student-desk__section-heading h2 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .app-shell[data-area="student"] .student-desk__section-heading > span,
+  .app-shell[data-area="student"] .student-hub__shortcuts small {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .app-shell[data-area="student"] .student-hub__shortcuts {
+    gap: 12px;
+  }
+  .app-shell[data-area="student"] .student-hub__shortcuts > a {
+    min-height: 94px;
+    gap: 12px;
+    padding: 14px;
+  }
+  .app-shell[data-area="student"] .student-home__tool-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+  .app-shell[data-area="student"] .student-home__tool-icon svg {
+    width: 23px;
+    height: 23px;
+    stroke-width: 2.1;
+  }
+  .app-shell[data-area="student"] .student-hub__shortcuts strong {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .app-shell[data-area="student"] .student-home__metrics {
+    gap: 12px;
+  }
+  :root .app-shell[data-area="student"] .student-home.student-desk .student-home__metric {
+    min-height: 96px;
+    padding: 17px;
+    gap: 12px;
+  }
+  :root .app-shell[data-area="student"] .student-home.student-desk .student-home__metric > span {
+    width: 40px;
+    height: 40px;
+  }
+  .app-shell[data-area="student"] .student-home__metric > span svg {
+    width: 22px;
+    height: 22px;
+  }
+  .app-shell[data-area="student"] .student-home__metric h2,
+  .app-shell[data-area="student"] .student-home__metric p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .app-shell[data-area="student"] .student-home__metric strong {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+  .app-shell[data-area="student"] .student-desk__next {
+    padding: 20px 22px;
+    gap: 16px;
+  }
+  .app-shell[data-area="student"] .student-desk__eyebrow {
+    font-size: 13px;
+  }
+  .app-shell[data-area="student"] .student-desk__eyebrow svg {
+    width: 17px;
+    height: 17px;
+  }
+  .app-shell[data-area="student"] .student-desk__next h2 {
+    font-size: 19px;
+  }
+  .app-shell[data-area="student"] .student-desk__next p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .app-shell[data-area="student"] .student-desk__next .student-home__primary {
+    min-height: 48px;
+    padding: 11px 17px;
+    font-size: 15px;
+    max-width: min(320px, 100%);
+  }
+  .app-shell[data-area="student"] .student-home__card[data-accent] {
+    padding: 22px;
+  }
+  .app-shell[data-area="student"] .student-home__section-title h2 {
+    font-size: 18px;
+  }
+  .app-shell[data-area="student"] .student-home__section-title p,
+  .app-shell[data-area="student"] .student-home__empty p,
+  .app-shell[data-area="student"] .student-home__quiet,
+  .app-shell[data-area="student"] .student-hub__planning-link p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .app-shell[data-area="student"] .student-home__section-title > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+  .app-shell[data-area="student"] .student-home__section-title > span svg {
+    width: 24px;
+    height: 24px;
+  }
+  .app-shell[data-area="student"] .student-home__empty h3,
+  .app-shell[data-area="student"] .student-home__objective-name {
+    font-size: 17px;
+  }
+  .app-shell[data-area="student"] .student-home__text-link,
+  .app-shell[data-area="student"] .student-home__empty :is(a, button),
+  .app-shell[data-area="student"] .student-hub__results a {
+    font-size: 14px;
+    min-height: 44px;
+  }
+  .app-shell[data-area="student"] .resume-session--compact h2,
+  .app-shell[data-area="student"] .pcpr-spot--compact h2 {
+    font-size: 16px;
+  }
+  .app-shell[data-area="student"] .resume-session--compact :is(
+    .resume-session__copy > p:first-child,
+    .resume-session__copy > p:last-child,
+    .resume-session__stats dt,
+    .resume-session__stats dd,
+    .resume-session__note
+  ),
+  .app-shell[data-area="student"] .pcpr-spot--compact :is(p, summary) {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .app-shell[data-area="student"] .resume-session--compact .resume-session__actions a {
+    min-height: 46px;
+    font-size: 14px;
+  }
+  .app-shell[data-area="student"] .student-home__data-note {
+    font-size: 13px;
+  }
+  /* The objective's aiming reticle remains proportional and easily visible. */
+  .app-shell[data-area="student"] .student-home__card:has(#dashboard-objective-title)
+  .student-home__section-title > span {
+    border: 1px solid color-mix(in srgb, var(--desk-accent, var(--desk-blue)) 32%, var(--border));
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--desk-accent, var(--desk-blue)) 7%, transparent);
+  }
+  .app-shell[data-area="student"] .student-home__card:has(#dashboard-objective-title)
+  .student-home__section-title > span svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2.25;
+  }
+}
