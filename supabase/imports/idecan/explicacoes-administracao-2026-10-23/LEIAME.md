@@ -39,3 +39,13 @@ Para os próximos lotes jurídicos, seguir `CONTENT_GOVERNANCE.md`: consultar o 
 Grava antes/depois em auditoria privada com RLS e sem acesso pelos papéis de navegador. Tudo ocorre em uma transação: uma divergência cancela as cinco mudanças. Reexecutar o mesmo texto não duplica auditoria. Se houver erro, preserve os dados existentes e use o diagnóstico para investigar, sem remover as proteções. A consulta final mostra os cinco estados e tópicos reais; `under_review` continua indisponível para alunos.
 
 Gerador local: `node scripts/idecan/build-admin-explanation-sql.mjs CAMINHO_PGLITE`. Testes: `node scripts/idecan/test-admin-explanation-sql.mjs CAMINHO_PGLITE`. Foram verificados aplicação, preservação de todos os outros campos, idempotência e reversão integral por explicação concorrente, enunciado/gabarito modificado, estado bloqueado e necessidade de revisão jurídica. **SQL não executado no Supabase por este assistente.**
+
+## Correção após diagnóstico real dos cinco registros
+
+O usuário confirmou via SQL administrativo que os cinco IDs estão `active`, com `needs_visual=false`, `legal_review_required=false`, explicações nulas e `legal_basis` contendo somente `[{"title":"Questão de teoria da Administração; sem legislação diretamente aplicável"}]`. O bloqueio anterior era causado por essa anotação descritiva no campo reservado a fundamentos jurídicos, não por uma referência normativa real. A validação original recusava qualquer array não vazio.
+
+`corrigir-anotacao-nao-juridica.sql` normaliza exclusivamente essa anotação exata para `[]`, para os cinco IDs e identidades/gabaritos fornecidos. Não remove normas reais, URLs ou objetos com campos extras. Exige estados e flags confirmados; preserva explicações concorrentes; audita integralmente antes/depois em tabela privada; reverte o lote se qualquer item divergir. Não altera status, tópico, nota de revisão ou data de conferência.
+
+Ordem para o usuário: executar a correção completa e, depois, executar novamente `aplicar-cinco-explicacoes.sql` completo. O segundo bloco continua verificando hashes dos enunciados, alternativas, gabaritos e disciplinas antes de gravar as explicações. A correção dos metadados sozinha não acrescenta explicações e não confere tópico de edital ausente. Nenhum dos dois foi executado remotamente por este assistente.
+
+Teste `scripts/idecan/test-admin-metadata-sql.mjs`: reproduz o erro com o marcador real, aplica normalização + SQL original, verifica idempotência/auditoria e preservação de outros campos, e exige reversão integral diante de referência jurídica real, campo extra, estado alterado ou explicação concorrente.
