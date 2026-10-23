@@ -26,6 +26,8 @@ import { RecentAttempts } from "@/components/dashboard/RecentAttempts";
 import { usePerformanceOverview, type SubjectAccuracy } from "@/hooks/usePerformanceOverview";
 import { useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { rhythmInsights, type RhythmKind } from "@/lib/rhythmInsights";
+import { PerformanceChartsGrid } from "@/components/dashboard/PerformanceCharts";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Route = createFileRoute("/dashboard/performance")({
   component: PerformancePage,
@@ -319,247 +321,269 @@ function PerformanceOverviewTab({
           to="/dashboard/ranking"
         />
       </section>
+
+      <PerformanceChartsGrid overview={overview} />
+
       <RecentAttempts />
 
-      <RhythmCard subjects={trainer.bySubject} />
+      <Tabs defaultValue="forte-fraco" className="performance-detail-tabs">
+        <TabsList className="flex-wrap">
+          <TabsTrigger value="forte-fraco">Pontos fortes e fracos</TabsTrigger>
+          <TabsTrigger value="ritmo">Ritmo por matéria</TabsTrigger>
+          <TabsTrigger value="dificuldade">Onde focar</TabsTrigger>
+          <TabsTrigger value="sugestoes">Sugestões</TabsTrigger>
+          <TabsTrigger value="erros">Caderno de erros</TabsTrigger>
+        </TabsList>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Gauge className="h-5 w-5 text-primary" />
-              Pontos fortes e fracos no Treinador
-            </CardTitle>
-            <CardDescription>
-              Primeira resposta de cada questão, por disciplina. Repetições não aumentam sua
-              amostra.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {!available.training ? (
-              <p>As respostas não puderam ser consultadas nesta atualização.</p>
-            ) : trainer.bySubject.length === 0 ? (
-              <p className="text-sm text-muted-foreground">
-                Responda questões no Treinador para ver seus pontos fortes e fracos aqui.
-              </p>
-            ) : (
-              <>
-                {strongSubjects.length > 0 && (
-                  <div>
-                    <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-emerald-700">
-                      Pontos fortes
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {strongSubjects.map((s) => (
-                        <Link
-                          key={s.subject}
-                          to="/dashboard/question-trainer"
-                          search={disciplinePracticeSearch(s.subject)}
-                          aria-label={`Treinar ${s.subject} pelo diagnóstico`}
-                          className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
-                        >
-                          <Badge
-                            variant="outline"
-                            className="border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
-                          >
-                            {s.subject} · {s.accuracy}%
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {weakSubjects.length > 0 && (
-                  <div>
-                    <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-rose-700">
-                      Precisam de reforço
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {weakSubjects.map((s) => (
-                        <Link
-                          key={s.subject}
-                          to="/dashboard/question-trainer"
-                          search={disciplinePracticeSearch(s.subject)}
-                          aria-label={`Treinar ${s.subject} pelo diagnóstico`}
-                          className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
-                        >
-                          <Badge
-                            variant="outline"
-                            className="border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300"
-                          >
-                            {s.subject} · {s.accuracy}%
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                <SubjectTable subjects={trainer.bySubject} />
-              </>
-            )}
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <BookOpenCheck className="h-5 w-5 text-primary" />
-              Caderno de erros
-            </CardTitle>
-            <CardDescription>
-              Erros da primeira resposta no histórico, por status de revisão. Sem classificação, o
-              erro é pendente. O caderno exibe apenas questões ainda ativas.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {!available.reviews ? (
-              <p>As revisões não puderam ser consultadas nesta atualização.</p>
-            ) : errors.total === 0 ? (
-              <p className="text-sm text-muted-foreground">
-                Nenhum erro na primeira resposta encontrado no histórico consultado.
-              </p>
-            ) : (
-              <div className="flex flex-wrap gap-3 text-sm">
-                <span className="flex items-center gap-1.5 rounded-full border border-rose-300 bg-rose-50 px-3 py-1 font-semibold text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300">
-                  {errors.pendente} pendentes
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-3 py-1 font-semibold text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300">
-                  {errors.revisado} revisadas
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 font-semibold text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300">
-                  {errors.dominado} dominadas
-                </span>
-              </div>
-            )}
-            <Link
-              to="/dashboard/errors"
-              className="inline-block text-xs font-bold text-primary hover:underline"
-            >
-              Abrir o Caderno de erros →
-            </Link>
-          </CardContent>
-        </Card>
-      </div>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <Lightbulb className="h-5 w-5 text-amber-500" />
-            Onde você precisa de mais atenção
-          </CardTitle>
-          <CardDescription>
-            Cruzamos erros e tempo mediano para orientar o reforço. Sem análise por assunto, usamos
-            a disciplina. O índice de atenção é uma heurística de estudo, não uma previsão de nota.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {difficulty.length === 0 ? (
-            <p className="text-sm text-muted-foreground">
-              {available.training
-                ? "Responda questões no Treinador para criar seu diagnóstico de dificuldade."
-                : "Diagnóstico indisponível nesta atualização."}
-            </p>
-          ) : (
-            <div className="grid gap-2 sm:grid-cols-2">
-              {difficulty.slice(0, 6).map((item) => (
-                <div
-                  key={`${item.subject}-${item.topic}`}
-                  className="rounded-xl border bg-muted/20 p-3"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <Link
-                        to="/dashboard/question-trainer"
-                        search={disciplinePracticeSearch(item.subject)}
-                        aria-label={`Treinar ${item.subject} pela análise de dificuldade`}
-                        className="inline-flex min-h-11 items-center break-words text-sm font-bold underline underline-offset-4 hover:text-primary"
-                        title={item.subject}
-                      >
-                        {item.subject}
-                      </Link>
-                      <p className="truncate text-xs text-muted-foreground" title={item.topic}>
-                        {item.topic}
+        <TabsContent value="forte-fraco" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Gauge className="h-5 w-5 text-primary" />
+                Pontos fortes e fracos no Treinador
+              </CardTitle>
+              <CardDescription>
+                Primeira resposta de cada questão, por disciplina. Repetições não aumentam sua
+                amostra.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {!available.training ? (
+                <p>As respostas não puderam ser consultadas nesta atualização.</p>
+              ) : trainer.bySubject.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  Responda questões no Treinador para ver seus pontos fortes e fracos aqui.
+                </p>
+              ) : (
+                <>
+                  {strongSubjects.length > 0 && (
+                    <div>
+                      <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-emerald-700">
+                        Pontos fortes
                       </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {strongSubjects.map((s) => (
+                          <Link
+                            key={s.subject}
+                            to="/dashboard/question-trainer"
+                            search={disciplinePracticeSearch(s.subject)}
+                            aria-label={`Treinar ${s.subject} pelo diagnóstico`}
+                            className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
+                          >
+                            <Badge
+                              variant="outline"
+                              className="border-emerald-300 bg-emerald-50 text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300"
+                            >
+                              {s.subject} · {s.accuracy}%
+                            </Badge>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    <Badge variant="outline" className="shrink-0 text-[10px]">
-                      {item.answered < 5
-                        ? "Amostra inicial"
-                        : `${item.difficultyScore}/100 atenção`}
-                    </Badge>
-                  </div>
-                  <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
-                    <span>
-                      {item.accuracy}% de acertos · {item.answered}{" "}
-                      {item.answered === 1 ? "questão" : "questões"}
-                    </span>
-                    <span className="tabular-nums">mediana {item.medianSeconds}s</span>
-                  </div>
-                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
-                    <div
-                      className="h-full rounded-full bg-amber-500"
-                      style={{ width: `${Math.max(4, item.difficultyScore)}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </CardContent>
-      </Card>
+                  )}
+                  {weakSubjects.length > 0 && (
+                    <div>
+                      <p className="mb-1.5 text-xs font-black uppercase tracking-wider text-rose-700">
+                        Precisam de reforço
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {weakSubjects.map((s) => (
+                          <Link
+                            key={s.subject}
+                            to="/dashboard/question-trainer"
+                            search={disciplinePracticeSearch(s.subject)}
+                            aria-label={`Treinar ${s.subject} pelo diagnóstico`}
+                            className="inline-flex min-h-11 items-center underline underline-offset-4 hover:opacity-80"
+                          >
+                            <Badge
+                              variant="outline"
+                              className="border-rose-300 bg-rose-50 text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300"
+                            >
+                              {s.subject} · {s.accuracy}%
+                            </Badge>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <SubjectTable subjects={trainer.bySubject} />
+                </>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <Lightbulb className="h-5 w-5 text-amber-500" />
-            Sugestões e estratégia de estudo
-          </CardTitle>
-          <CardDescription>
-            Geradas a partir do seu desempenho real — focam no que mais vai pesar na sua nota.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {suggestions.length === 0 ? (
-            <p className="text-sm text-muted-foreground">
-              Continue respondendo questões e fazendo simulados para receber sugestões
-              personalizadas.
-            </p>
-          ) : (
-            suggestions.map((s, i) => (
-              <div key={i} className="flex items-start gap-3 rounded-xl border p-3 text-sm">
-                <s.icon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
-                <div className="min-w-0">
-                  <p>{s.text}</p>
-                  {s.link?.kind === "library" && (
-                    <Link
-                      to="/dashboard/library/$slug"
-                      params={{ slug: s.link.slug }}
-                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+        <TabsContent value="ritmo" className="space-y-4">
+          <RhythmCard subjects={trainer.bySubject} />
+        </TabsContent>
+
+        <TabsContent value="dificuldade" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Lightbulb className="h-5 w-5 text-amber-500" />
+                Onde você precisa de mais atenção
+              </CardTitle>
+              <CardDescription>
+                Cruzamos erros e tempo mediano para orientar o reforço. Sem análise por assunto,
+                usamos a disciplina. O índice de atenção é uma heurística de estudo, não uma
+                previsão de nota.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {difficulty.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  {available.training
+                    ? "Responda questões no Treinador para criar seu diagnóstico de dificuldade."
+                    : "Diagnóstico indisponível nesta atualização."}
+                </p>
+              ) : (
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {difficulty.slice(0, 6).map((item) => (
+                    <div
+                      key={`${item.subject}-${item.topic}`}
+                      className="rounded-xl border bg-muted/20 p-3"
                     >
-                      {s.link.label} →
-                    </Link>
-                  )}
-                  {s.link?.kind === "errors" && (
-                    <Link
-                      to="/dashboard/errors"
-                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
-                    >
-                      {s.link.label} →
-                    </Link>
-                  )}
-                  {s.link?.kind === "mock-exams" && (
-                    <Link
-                      to="/dashboard/mock-exams"
-                      className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
-                    >
-                      {s.link.label} →
-                    </Link>
-                  )}
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <Link
+                            to="/dashboard/question-trainer"
+                            search={disciplinePracticeSearch(item.subject)}
+                            aria-label={`Treinar ${item.subject} pela análise de dificuldade`}
+                            className="inline-flex min-h-11 items-center break-words text-sm font-bold underline underline-offset-4 hover:text-primary"
+                            title={item.subject}
+                          >
+                            {item.subject}
+                          </Link>
+                          <p className="truncate text-xs text-muted-foreground" title={item.topic}>
+                            {item.topic}
+                          </p>
+                        </div>
+                        <Badge variant="outline" className="shrink-0 text-[10px]">
+                          {item.answered < 5
+                            ? "Amostra inicial"
+                            : `${item.difficultyScore}/100 atenção`}
+                        </Badge>
+                      </div>
+                      <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
+                        <span>
+                          {item.accuracy}% de acertos · {item.answered}{" "}
+                          {item.answered === 1 ? "questão" : "questões"}
+                        </span>
+                        <span className="tabular-nums">mediana {item.medianSeconds}s</span>
+                      </div>
+                      <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
+                        <div
+                          className="h-full rounded-full bg-amber-500"
+                          style={{ width: `${Math.max(4, item.difficultyScore)}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            ))
-          )}
-        </CardContent>
-      </Card>
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="sugestoes" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Lightbulb className="h-5 w-5 text-amber-500" />
+                Sugestões e estratégia de estudo
+              </CardTitle>
+              <CardDescription>
+                Geradas a partir do seu desempenho real — focam no que mais vai pesar na sua nota.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {suggestions.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  Continue respondendo questões e fazendo simulados para receber sugestões
+                  personalizadas.
+                </p>
+              ) : (
+                suggestions.map((s, i) => (
+                  <div key={i} className="flex items-start gap-3 rounded-xl border p-3 text-sm">
+                    <s.icon className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+                    <div className="min-w-0">
+                      <p>{s.text}</p>
+                      {s.link?.kind === "library" && (
+                        <Link
+                          to="/dashboard/library/$slug"
+                          params={{ slug: s.link.slug }}
+                          className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                        >
+                          {s.link.label} →
+                        </Link>
+                      )}
+                      {s.link?.kind === "errors" && (
+                        <Link
+                          to="/dashboard/errors"
+                          className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                        >
+                          {s.link.label} →
+                        </Link>
+                      )}
+                      {s.link?.kind === "mock-exams" && (
+                        <Link
+                          to="/dashboard/mock-exams"
+                          className="mt-1 inline-block text-xs font-bold text-primary hover:underline"
+                        >
+                          {s.link.label} →
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))
+              )}
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="erros" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <BookOpenCheck className="h-5 w-5 text-primary" />
+                Caderno de erros
+              </CardTitle>
+              <CardDescription>
+                Erros da primeira resposta no histórico, por status de revisão. Sem
+                classificação, o erro é pendente. O caderno exibe apenas questões ainda ativas.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {!available.reviews ? (
+                <p>As revisões não puderam ser consultadas nesta atualização.</p>
+              ) : errors.total === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  Nenhum erro na primeira resposta encontrado no histórico consultado.
+                </p>
+              ) : (
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <span className="flex items-center gap-1.5 rounded-full border border-rose-300 bg-rose-50 px-3 py-1 font-semibold text-rose-700 dark:border-rose-500/40 dark:bg-rose-500/10 dark:text-rose-300">
+                    {errors.pendente} pendentes
+                  </span>
+                  <span className="flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-3 py-1 font-semibold text-amber-700 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-300">
+                    {errors.revisado} revisadas
+                  </span>
+                  <span className="flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 font-semibold text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-500/10 dark:text-emerald-300">
+                    {errors.dominado} dominadas
+                  </span>
+                </div>
+              )}
+              <Link
+                to="/dashboard/errors"
+                className="inline-block text-xs font-bold text-primary hover:underline"
+              >
+                Abrir o Caderno de erros →
+              </Link>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
