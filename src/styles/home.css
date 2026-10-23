@@ -3507,10 +3507,6 @@
 .home-method__intro { margin-bottom: 22px; }
 .home-method__visual img { height: 170px; }
 .home-steps > li { padding: 16px; }
-.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
-.home-opportunity__image { height: 116px; }
-.home-opportunity__body { padding: 0 14px 14px; }
-.home-exam-details { margin: 8px 0; }
 .home-career { padding: 12px; }
 .home-sources { padding-block: 36px 42px; }
 .home-sources__visual img { height: 210px; }
@@ -3533,7 +3529,6 @@
   .home-start .daily-badge, .home-start .question-count-badge { min-height: 50px; }
   .home-platform__visual > img { height: 190px; }
   .home-method__visual img { height: 150px; }
-  .home-opportunity__image { height: 112px; }
   .home-sources__visual img { height: 160px; }
   .home-plan__media { height: 82px; }
 }
@@ -3738,12 +3733,6 @@
 .home .home-method__intro .home-heading { max-width: 760px; }
 .home .home-steps { gap: 12px; }
 .home .home-steps > li { padding: 16px; background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 12px; }
-.home .home-opportunity { background: var(--home-surface); }
-.home .home-opportunity__header { padding: 0; display: block; }
-.home .home-opportunity__image { height: 150px; border-radius: 0; }
-.home .home-opportunity__image img { width: 100%; height: 100%; object-fit: cover; }
-.home .home-opportunity__intro { padding: 14px 16px 8px; }
-.home .home-opportunity__body { padding: 0 16px 16px; }
 .home .home-careers__layout { gap: 24px; }
 .home .home-careers::before, .home .home-careers::after { content: none; }
 .home .home-career { background: var(--home-surface); border: 1px solid var(--home-line); border-radius: 10px; }
