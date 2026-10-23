@@ -754,3 +754,21 @@
   .home-menu .home-menu__header p { display: none; }
   .home-menu .home-menu__access { padding-top: 8px; gap: 6px; }
 }
+
+
+/* Light-theme hero badge: prevent a bright diagonal glare / stacked 3D
+   surfaces from reading as a white tear inside the vector insignia.
+   The dark theme retains its original material and animation. */
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__glare,
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__shine,
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__edge {
+  display: none;
+}
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__spin {
+  transform-style: flat;
+}
+:root:not(.dark) .home.home #inicio.home-hero .hero-badge__face {
+  filter: none;
+  opacity: 1;
+  backface-visibility: hidden;
+}
