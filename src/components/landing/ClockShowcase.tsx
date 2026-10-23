@@ -1,9 +1,9 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
 const MAX_TILT = 8;
-// Dial geometry measured on the 742×907 art: pivot and hand reach in art pixels.
-const CX = 356;
-const CY = 460;
+// Dial geometry measured on the 656×856 art (bullets cropped out): pivot and hand reach in art pixels.
+const CX = 309;
+const CY = 459;
 const HOUR_LEN = 118;
 const MINUTE_LEN = 178;
 const SECOND_LEN = 196;
@@ -101,44 +101,46 @@ export function ClockShowcase() {
             foco tático e disciplina até o dia da prova. Os ponteiros marcam a hora real, agora.
           </p>
         </div>
-        <div
-          ref={stage}
-          className="home-clock__stage"
-          data-visible="false"
-          onPointerMove={move}
-          onPointerLeave={rest}
-          onBlur={rest}
-        >
-          <span className="home-clock__pedestal" aria-hidden="true" />
-          <span className="home-clock__glow" aria-hidden="true" />
-          <span className="home-clock__shadow" aria-hidden="true" />
-          <div className="home-clock__tilt" ref={tilt}>
-            <img
-              className="home-clock__image"
-              src="/media/brand/relogio-carreiras-policiais.webp"
-              alt="Relógio Carreiras Policiais da Norte Concursos, com caveira, pistola e munições em metal escovado"
-              width={742}
-              height={907}
-              loading="lazy"
-              decoding="async"
-            />
-            <svg
-              className="home-clock__hands"
-              viewBox="0 0 742 907"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <g ref={hourHand} className="home-clock__hand home-clock__hand--hour">
-                <line x1={CX} y1={CY} x2={CX} y2={CY - HOUR_LEN} />
-              </g>
-              <g ref={minuteHand} className="home-clock__hand home-clock__hand--minute">
-                <line x1={CX} y1={CY} x2={CX} y2={CY - MINUTE_LEN} />
-              </g>
-              <g ref={secondHand} className="home-clock__hand home-clock__hand--second">
-                <line x1={CX} y1={CY + SECOND_TAIL} x2={CX} y2={CY - SECOND_LEN} />
-              </g>
-              <circle className="home-clock__pivot" cx={CX} cy={CY} r={9} />
-            </svg>
+        <div className="home-clock__plate">
+          <div
+            ref={stage}
+            className="home-clock__stage"
+            data-visible="false"
+            onPointerMove={move}
+            onPointerLeave={rest}
+            onBlur={rest}
+          >
+            <span className="home-clock__pedestal" aria-hidden="true" />
+            <span className="home-clock__glow" aria-hidden="true" />
+            <span className="home-clock__shadow" aria-hidden="true" />
+            <div className="home-clock__tilt" ref={tilt}>
+              <img
+                className="home-clock__image"
+                src="/media/brand/relogio-carreiras-policiais.webp"
+                alt="Relógio Carreiras Policiais da Norte Concursos, com caveira e pistola em metal escovado"
+                width={656}
+                height={856}
+                loading="lazy"
+                decoding="async"
+              />
+              <svg
+                className="home-clock__hands"
+                viewBox="0 0 656 856"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <g ref={hourHand} className="home-clock__hand home-clock__hand--hour">
+                  <line x1={CX} y1={CY} x2={CX} y2={CY - HOUR_LEN} />
+                </g>
+                <g ref={minuteHand} className="home-clock__hand home-clock__hand--minute">
+                  <line x1={CX} y1={CY} x2={CX} y2={CY - MINUTE_LEN} />
+                </g>
+                <g ref={secondHand} className="home-clock__hand home-clock__hand--second">
+                  <line x1={CX} y1={CY + SECOND_TAIL} x2={CX} y2={CY - SECOND_LEN} />
+                </g>
+                <circle className="home-clock__pivot" cx={CX} cy={CY} r={9} />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
