@@ -28,11 +28,13 @@ html[data-norte-startup-stage=intro] #norte-initial-loading>.norte-boot-copy{vis
 @media(max-height:500px){#norte-initial-loading .norte-boot-copy{bottom:max(16px,env(safe-area-inset-bottom))}#norte-initial-loading .norte-boot-brand{font-size:20px}#norte-initial-loading .norte-boot-tagline{margin-top:5px;font-size:12px}#norte-initial-loading .norte-boot-status{margin-top:10px}}
 #norte-initial-loading .norte-boot-mobile-logo{display:none}
 @media(max-width:1024px),(max-width:1366px) and (pointer:coarse){
-#norte-initial-loading{background:radial-gradient(ellipse at 50% 38%,#c6ad7617,transparent 53%),linear-gradient(145deg,#1c2c36,#101b23 58%,#0b131a)}
-#norte-initial-loading>picture,#norte-initial-loading>.norte-boot-watermark{display:none}
+#norte-initial-loading{background:linear-gradient(155deg,#14232b,#101b23 60%,#0b131a)}
+#norte-initial-loading>picture{display:block;inset:0;overflow:hidden}
+#norte-initial-loading>picture img{width:100%;height:100%;object-fit:contain;object-position:center 40%;opacity:.92}
+#norte-initial-loading>.norte-boot-watermark{display:none}
 #norte-initial-loading:before{content:'';position:absolute;inset:clamp(16px,4vw,40px);border:1px solid #c6ad762b;border-radius:24px;pointer-events:none;background:linear-gradient(90deg,transparent,#c6ad7655,transparent) center top/60% 1px no-repeat}
-#norte-initial-loading:after{background:radial-gradient(ellipse at center,transparent 35%,#080e1559);pointer-events:none}
-#norte-initial-loading .norte-boot-mobile-logo{display:block;position:absolute;top:43%;left:50%;transform:translate(-50%,-50%);width:clamp(180px,34vw,290px);height:auto;max-height:49dvh;object-fit:contain;z-index:1;filter:drop-shadow(0 12px 28px #0005)}
+#norte-initial-loading:after{background:linear-gradient(180deg,#0b131a38 0%,transparent 28%,#0b131a33 62%,#0b131aea 100%);pointer-events:none}
+#norte-initial-loading .norte-boot-mobile-logo{display:none}
 #norte-initial-loading .norte-boot-copy{inset:auto 28px max(52px,12dvh,env(safe-area-inset-bottom));width:auto;text-align:center}
 #norte-initial-loading .norte-boot-brand{display:none}
 #norte-initial-loading .norte-boot-tagline{font-size:clamp(12px,2vw,15px);color:#f3eee2;letter-spacing:.035em}
