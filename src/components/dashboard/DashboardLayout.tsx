@@ -106,7 +106,7 @@ import { NorteBrand } from "@/components/brand/NorteBrand";
 
 type MenuItem = NavigationItem;
 
-type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal";
+type Hue = "gold" | "sky" | "violet" | "emerald" | "rose" | "orange" | "teal" | "indigo" | "slate";
 const GROUP_HUE: Record<string, Hue> = {
   Planejamento: "gold",
   "Meu concurso": "sky",
@@ -114,9 +114,9 @@ const GROUP_HUE: Record<string, Hue> = {
   Ferramentas: "teal",
   Questões: "emerald",
   Provas: "rose",
-  ENEM: "sky",
+  ENEM: "indigo",
   Desempenho: "orange",
-  Conta: "teal",
+  Conta: "slate",
   Administração: "gold",
 };
 const MOBILE_HUE: Record<string, Hue> = {
