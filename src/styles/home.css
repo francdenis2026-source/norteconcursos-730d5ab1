@@ -4679,3 +4679,29 @@
 @media (prefers-reduced-motion: reduce) {
   .home.home .home-nav a::after { transition: none; }
 }
+
+/* Larger optical signature inside the existing header height. */
+.home .home-header .norte-brand { gap: 9px; flex-shrink: 0; }
+.home .home-header .norte-brand__mark {
+  width: 49px; height: 54px;
+  filter: drop-shadow(0 2px 4px #94733526);
+  animation: norte-header-emblem 9s ease-in-out infinite;
+  transform-origin: center;
+}
+.home .home-header .norte-brand__type { --brand-size: 30px; }
+@keyframes norte-header-emblem {
+  0%, 65%, 100% { transform: perspective(420px) rotateY(0deg); }
+  78% { transform: perspective(420px) rotateY(-12deg) translateY(-1px); }
+  90% { transform: perspective(420px) rotateY(7deg); }
+}
+@media (max-width: 600px) {
+  .home .home-header .norte-brand { gap: 6px; }
+  .home .home-header .norte-brand__mark { width: 39px; height: 45px; }
+  .home .home-header .norte-brand__type { --brand-size: 23px; }
+}
+@media (max-width: 360px) {
+  .home .home-header .norte-brand__type { --brand-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .home-header .norte-brand__mark { animation: none; }
+}

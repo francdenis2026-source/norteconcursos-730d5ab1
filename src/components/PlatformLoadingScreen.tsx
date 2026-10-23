@@ -14,6 +14,7 @@ html:not([data-norte-boot=ready]) #norte-app-content{visibility:hidden;opacity:0
 #norte-initial-loading picture{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none}
 #norte-initial-loading>picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 #norte-initial-loading:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#080a09f5 0%,#080a09c9 12%,#080a0933 32%,transparent 55%)}
+#norte-initial-loading .norte-boot-watermark{position:absolute;top:max(24px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));width:clamp(150px,20vw,280px);height:auto;opacity:.42;z-index:1;pointer-events:none;filter:drop-shadow(0 2px 8px #0008)}
 #norte-initial-loading .norte-boot-copy{position:absolute;inset:auto auto max(28px,6dvh,env(safe-area-inset-bottom)) clamp(24px,5vw,96px);width:min(420px,calc(100% - 48px));z-index:1;text-align:left;padding:0;margin:0;text-shadow:0 2px 16px #000}
 #norte-initial-loading .norte-boot-brand{display:block;color:#efd090;font-size:clamp(20px,3vw,30px);font-weight:750;letter-spacing:.28em;padding-left:0;line-height:1.2}
 #norte-initial-loading .norte-boot-tagline{display:block;margin-top:10px;font-size:13px;letter-spacing:.025em;color:#e1ddd3}
@@ -39,6 +40,7 @@ export function InitialLoadingScreen() {
       <picture aria-hidden="true">
         <img src={INITIAL_LOADING_ART} width={2087} height={753} alt="" loading="eager" fetchPriority="high" decoding="sync" />
       </picture>
+      <img className="norte-boot-watermark" src="/media/brand/norte-identity/logo-horizontal-escuro.svg" width={1000} height={320} alt="" aria-hidden="true" decoding="sync" />
       <div className="norte-boot-copy">
         <strong className="norte-boot-brand">NORTE</strong>
         <span className="norte-boot-tagline">Sua preparação tem um norte.</span>

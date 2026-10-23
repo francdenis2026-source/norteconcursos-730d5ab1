@@ -1,7 +1,7 @@
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { createPortal } from "react-dom";
 import introArtwork from "@/assets/auth/carreiras-composicao.webp";
-import introBadge from "@/assets/auth/distintivo.webp";
+const introBadge = "/media/brand/norte-identity/emblema-premium.webp";
 import { claimDocumentIntro } from "@/lib/documentIntro";
 import { documentStartup } from "@/lib/startupSequence";
 import "@/styles/intro-frame.css";
@@ -151,15 +151,15 @@ export function HeroVideo({
             </header>
             <div className="tactical-intro__body">
               <aside className="tactical-intro__identity" aria-hidden="true">
-                <img src={introBadge} alt="" width={768} height={811} />
+                <img src={introBadge} alt="" width={768} height={768} />
                 <span>Direção. Disciplina. Conquista.</span>
               </aside>
               <div className="tactical-intro__screen">
                 <div className="tactical-intro__side tactical-intro__side--left" aria-hidden="true">
-                  <img src={introBadge} alt="" width={768} height={811} />
+                  <img src={introBadge} alt="" width={768} height={768} />
                 </div>
                 <div className="tactical-intro__side tactical-intro__side--right" aria-hidden="true">
-                  <img src={introBadge} alt="" width={768} height={811} />
+                  <img src={introBadge} alt="" width={768} height={768} />
                 </div>
                 <video
                   ref={video}
