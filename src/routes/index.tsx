@@ -47,7 +47,9 @@ import "@/styles/home-responsive.css";
 import "@/styles/home-signals.css";
 import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
+import "@/styles/home-clock.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
+import { ClockShowcase } from "@/components/landing/ClockShowcase";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -466,6 +468,8 @@ function Index() {
             </ul>
           </div>
         </section>
+
+        <ClockShowcase />
 
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">

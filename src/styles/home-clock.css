@@ -1,0 +1,92 @@
+/* Brand showcase band for the "Carreiras Policiais" clock art, between the hero and the platform section. */
+.home-clock { overflow: clip; }
+.home-clock__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 400px);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+}
+.home-clock__copy { max-width: 540px; }
+.home-clock__copy h2 { margin: 0; }
+.home.home .home-clock__copy h2 em {
+  color: var(--brass-soft);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  font-style: normal;
+}
+.home-clock__copy > p {
+  margin-top: 14px;
+  max-width: 48ch;
+  color: var(--on-ink-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.home-clock__stage {
+  position: relative;
+  justify-self: center;
+  width: clamp(220px, 24vw, 360px);
+  perspective: 900px;
+  touch-action: pan-y;
+}
+.home-clock__glow {
+  position: absolute;
+  inset: -20% -12%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(60% 60% at 50% 42%, color-mix(in srgb, var(--brass-soft) 34%, transparent), transparent 72%);
+  filter: blur(28px);
+  opacity: 0.65;
+  animation: clock-glow-pulse 6s ease-in-out infinite;
+}
+.home-clock__shadow {
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: -4%;
+  height: 14%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(0 0 0 / 50%), transparent);
+  filter: blur(10px);
+}
+.home-clock__tilt {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 180ms var(--ease-out);
+  animation: clock-float 7s ease-in-out infinite;
+  will-change: transform;
+}
+.home-clock__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 22px 32px rgb(0 0 0 / 45%));
+}
+.home-clock__stage[data-visible="false"] * { animation-play-state: paused; }
+
+@keyframes clock-float { 50% { transform: translateY(-6px); } }
+@keyframes clock-glow-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.85; } }
+
+:root:not(.dark) .home.home .home-clock__image {
+  filter: drop-shadow(0 18px 28px rgb(15 23 42 / 20%));
+}
+
+@media (max-width: 900px) {
+  .home-clock__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .home-clock__copy { max-width: 56ch; order: 1; }
+  .home-clock__copy > p { margin-inline: auto; }
+  .home-clock__stage { order: 0; width: clamp(180px, 46vw, 260px); margin-bottom: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-clock__tilt { animation: none; transition: none; }
+  .home-clock__glow { animation: none; }
+}
+
+@media (forced-colors: active) {
+  .home-clock__glow, .home-clock__shadow { display: none; }
+}
