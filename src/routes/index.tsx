@@ -49,7 +49,7 @@ import "@/styles/home-app.css";
 import "@/styles/home-touch.css";
 import "@/styles/home-clock.css";
 import { NorteBrand } from "@/components/brand/NorteBrand";
-import { ClockShowcase } from "@/components/landing/ClockShowcase";
+import { HeroClock } from "@/components/landing/HeroClock";
 import { QuestionCountBadge } from "@/components/landing/QuestionCountBadge";
 import { PlansSection } from "@/components/landing/PlansSection";
 import { TestingSeal } from "@/components/landing/TestingSeal";
@@ -416,6 +416,7 @@ function Index() {
       <main id="conteudo" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
+          <HeroClock />
           <HeroBadge show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
@@ -468,8 +469,6 @@ function Index() {
             </ul>
           </div>
         </section>
-
-        <ClockShowcase />
 
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">
