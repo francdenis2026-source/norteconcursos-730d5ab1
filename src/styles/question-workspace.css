@@ -5,7 +5,7 @@
   --trainer-line: var(--border);
   --trainer-soft: color-mix(in srgb, var(--question-accent) 8%, var(--card));
   display: grid;
-  gap: 14px;
+  gap: 12px;
   min-width: 0;
   width: 100%;
   max-width: none;
@@ -35,7 +35,7 @@
 }
 .question-workspace .trainer-config-card,
 .question-workspace .trainer-session-builder {
-  padding: 16px;
+  padding: 15px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--card);
@@ -43,7 +43,7 @@
 }
 .question-workspace .trainer-configuration {
   grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 14px;
+  gap: 12px;
   align-items: start;
 }
 .question-workspace .trainer-config-heading {
@@ -858,8 +858,8 @@
   align-items: stretch;
 }
 .question-workspace .catalog-metric:first-child {
-  border-color: color-mix(in srgb, var(--question-accent) 45%, var(--border));
-  background: color-mix(in srgb, var(--question-accent) 8%, var(--card));
+  border-left: 3px solid var(--question-accent);
+  background: var(--card);
 }
 .question-workspace .catalog-metric:hover {
   border-color: var(--question-accent);
