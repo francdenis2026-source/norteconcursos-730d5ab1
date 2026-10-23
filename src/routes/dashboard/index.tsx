@@ -302,7 +302,6 @@ function StudentHome({ user }: { user: UserProfile }) {
           ))}
         </nav>
       </section>
-      <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
       <section className="student-home__metrics" aria-label="Seu resumo de estudos">
         <Metric
           icon={BrainCircuit}
@@ -625,6 +624,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </section>
         </div>
         <aside className="student-hub__rail" aria-label="Seu objetivo e suas prioridades">
+          <ResumeSessions userId={user.id} compact className="student-desk__sessions" />
           <section
             className="student-home__card"
             data-accent="amber"

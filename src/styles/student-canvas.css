@@ -70,13 +70,13 @@
   justify-content: start;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: 6px;
+  gap: 5px;
   width: 100%;
   min-width: 0;
-  padding: 18px 22px;
+  padding: 15px 20px;
 }
 .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__welcome { max-width: 100%; margin: 0; padding: 4px 9px; font-size: 12px; line-height: 1.4; overflow-wrap: anywhere; }
-.app-shell .student-hub__masthead.student-hub__masthead--careers #student-home-title { margin: 0; font-size: clamp(27px, 3vw, 35px); line-height: 1.1; }
+.app-shell .student-hub__masthead.student-hub__masthead--careers #student-home-title { margin: 0; font-size: clamp(24px, 2.6vw, 31px); line-height: 1.1; }
 .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__hero-copy > p:not(.student-hub__welcome) { max-width: 34ch; margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted-foreground); }
 .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__masthead-actions { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px 18px; margin: 0; align-items: center; }
 .app-shell .student-hub__masthead.student-hub__masthead--careers .student-hub__masthead-actions > a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; }
