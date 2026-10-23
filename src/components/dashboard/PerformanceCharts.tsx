@@ -32,12 +32,23 @@ const VIOLET = "#8b5cf6";
 const GOLD = "var(--brass)";
 
 const TOOLTIP_STYLE = {
-  background: "var(--popover)",
+  backgroundColor: "var(--popover)",
   color: "var(--popover-foreground)",
   border: "1px solid var(--border)",
   borderRadius: 10,
   fontSize: 12,
-  padding: "6px 10px",
+  padding: "8px 12px",
+  boxShadow: "0 12px 28px rgb(0 0 0 / 18%)",
+};
+/* Recharts uses separate inline styles for the tooltip label and each
+   value/name row. Without these, dark-mode popovers inherit black text. */
+const TOOLTIP_LABEL_STYLE = {
+  color: "var(--popover-foreground)",
+  fontWeight: 700,
+};
+const TOOLTIP_ITEM_STYLE = {
+  color: "var(--popover-foreground)",
+  fontWeight: 600,
 };
 const AXIS_TICK = { fill: "var(--muted-foreground)", fontSize: 11 };
 
@@ -150,6 +161,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
               </Pie>
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
+                labelStyle={TOOLTIP_LABEL_STYLE}
+                itemStyle={TOOLTIP_ITEM_STYLE}
                 formatter={(value: number, name: string) => [`${value} questões`, name]}
               />
             </PieChart>
@@ -188,6 +201,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
               />
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
+                labelStyle={TOOLTIP_LABEL_STYLE}
+                itemStyle={TOOLTIP_ITEM_STYLE}
                 formatter={(value: number | null) =>
                   value === null ? ["sem dados", "Aproveitamento"] : [`${value}%`, "Aproveitamento"]
                 }
@@ -258,6 +273,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
               />
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
+                labelStyle={TOOLTIP_LABEL_STYLE}
+                itemStyle={TOOLTIP_ITEM_STYLE}
                 formatter={(value: number, _n, p) => [
                   `${value}% (${p.payload.total} questões)`,
                   "Aproveitamento",
@@ -305,6 +322,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
               />
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
+                labelStyle={TOOLTIP_LABEL_STYLE}
+                itemStyle={TOOLTIP_ITEM_STYLE}
                 formatter={(value: number, _n, p) => [
                   `${value}% · ${p.payload.count} simulado${p.payload.count === 1 ? "" : "s"}`,
                   p.payload.label,
