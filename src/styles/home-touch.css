@@ -236,3 +236,43 @@
 @media (max-width: 390px) {
   .home.home .home-header__register { padding-inline: 7px; font-size: 11px; }
 }
+
+/* Second-pass mobile information hierarchy: cards first, legible detail,
+   restrained decoration, and no compressed two-column reading surfaces. */
+@media (max-width: 760px) {
+  .home.home .home-hero__study-entry { display: grid; gap: 12px; min-width: 0; }
+  .home.home .home-hero__study-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-width: 0; }
+  .home.home .home-hero__study-links > * { min-width: 0; width: 100%; }
+  .home.home .home-preparation__intro,
+  .home.home .home-operations__heading,
+  .home.home .home-plans__intro .home-heading { padding: 18px; }
+  .home.home .home-preparation__band { gap: 16px; }
+  .home.home .home-preparation__art { opacity: .12; pointer-events: none; }
+  .home.home .home-preparation__tabs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .home.home .home-preparation__tab { padding: 10px; overflow-wrap: anywhere; }
+  .home.home .home-heading h2,
+  .home.home .home-preparation__intro h2 { font-size: clamp(26px, 7vw, 34px); line-height: 1.17; }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { padding: 16px; }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) :is(p, small, span) { line-height: 1.5; }
+  .home.home .home-testing__detail,
+  .home.home .home-testing__link,
+  .home.home .home-testing__status { font-size: 14px; line-height: 1.5; }
+  .home.home .home-operations .home-rail__track,
+  .home.home .home-plans--insignia .home-rail__track { scroll-padding-inline: 12px; }
+  .home.home .home-plan[data-plan] { padding: 20px; gap: 12px; }
+  .home.home .home-plan[data-plan] :is(li, p, small) { font-size: max(14px, 0.875rem); line-height: 1.6; }
+  .home.home .home-faq__list summary { padding: 14px; }
+  .home.home .home-footer--command .home-footer__bottom { padding-inline: 12px; }
+}
+@media (max-width: 599px) {
+  .home.home .home-operations .home-rail__track.home-opportunities > *,
+  .home.home .home-plans--insignia .home-rail__track.home-plans__grid > .home-plan {
+    flex-basis: min(92%, 380px);
+  }
+  .home.home .home-rail__controls button { min-width: 48px; min-height: 48px; }
+}
+@media (max-width: 380px) {
+  .home.home .home-preparation__tabs { grid-template-columns: minmax(0, 1fr); }
+  .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) { padding: 12px; }
+  .home.home .home-hero__copy > p { font-size: 15px; }
+}
