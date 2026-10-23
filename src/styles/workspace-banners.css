@@ -156,15 +156,30 @@
 /* The student greeting shares one low band, with date and next action alongside. */
 .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 4px 18px;
   width: 100%;
   max-width: none;
   padding: 0;
 }
-.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy > :not(.student-hub__masthead-actions) { grid-column: 1; }
-.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions {
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy > :not(.student-hub__masthead-actions, .student-hub__masthead-stats) { grid-column: 1; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats {
   grid-column: 2;
+  grid-row: 1 / 4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats .hero-stat {
+  flex: 0 0 auto;
+  min-width: 92px;
+  min-height: 40px;
+  padding: 6px 10px;
+}
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats .hero-stat strong { font-size: 16px; }
+.app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions {
+  grid-column: 3;
   grid-row: 1 / 4;
   display: flex;
   flex-direction: column;
@@ -199,7 +214,12 @@
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .hero-stat { flex-basis: 108px; }
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .page-hero__actions :is(a, button) { min-height: 44px; }
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__hero-copy { grid-template-columns: minmax(0, 1fr); }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats { grid-column: 1; grid-row: auto; flex-wrap: wrap; margin-top: 8px; }
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats .hero-stat { flex: 1 1 108px; }
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-actions { grid-column: 1; grid-row: auto; flex-direction: row; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: 4px 16px; margin-top: 4px; padding: 0; background: transparent; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner .student-hub__masthead-stats { display: none; }
 }
 @media print, (forced-colors: active) {
   .app-shell[data-area] #dashboard-content[data-header-style] .workspace-banner { background: Canvas !important; color: CanvasText !important; box-shadow: none !important; border-color: CanvasText !important; }
