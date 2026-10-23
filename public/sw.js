@@ -17,6 +17,7 @@ const SHELL_ASSETS = [
   "/favicon.svg",
   "/offline.html",
   "/media/loading/norte-abertura-hd.webp",
+  "/media/hero/home-bg-texture.webp",
   "/media/hero/norte-atmosphere.webp",
   "/media/brand/distintivo-carreiras-hd-v2.webp",
 ];
