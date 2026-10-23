@@ -5,12 +5,13 @@ import { reviewChanges } from '../review-question-corpus.mjs';
 const root = 'supabase/imports/idecan';
 const directory = path.join(root, 'revisao-2026-10-23');
 
-export function reviewSql(changes) {
+export function reviewSql(changes, label = 'Primeira revisão PC-CE 2021: 20 pareceres de Português e 3 anuladas.') {
+  if (typeof label !== 'string' || /[\r\n]/.test(label)) throw Error('Título SQL inválido');
   if (!changes.length || changes.some((c) => c.next_payload.publication || c.next_payload.individual_review?.publication_approved !== false))
     throw Error('Este lote não autoriza publicação');
   const data = JSON.stringify(changes), delimiter = '$idecan_review_batch$';
   if (data.includes(delimiter) || data.includes('$review$')) throw Error('Delimitador no conteúdo');
-  return `-- Primeira revisão PC-CE 2021: 20 pareceres de Português e 3 anuladas.
+  return `-- ${label}
 -- Executar como administrador no SQL Editor. Não ativa questões.
 -- Requer a migração existente 20261010110000_audited_corpus_reviews.sql.
 -- Usa os mesmos estados, comparação de payload e histórico da revisão de acervo.

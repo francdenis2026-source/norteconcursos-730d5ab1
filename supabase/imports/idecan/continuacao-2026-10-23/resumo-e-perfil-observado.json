@@ -1,0 +1,1103 @@
+{
+  "reviewed_at": "2026-10-23T00:46:40.973169Z",
+  "new_individual_decisions": 177,
+  "total_historical_positions": 200,
+  "proposed_states": {
+    "reviewed_held": 192,
+    "obsolete": 5,
+    "rejected_annulled": 3,
+    "under_review": 0
+  },
+  "publication_approved": 0,
+  "remote_application_verified": false,
+  "corpus_scope": "Dois cargos do mesmo concurso PC-CE 2021; não amostra representativa de toda a IDECAN nem previsão PC-AC",
+  "official_and_primary_documents_consulted": 10,
+  "profile_methodology": "Detecção textual não exaustiva de comandos de exceção/incorreção; temas atribuídos individualmente; não mede frequência de toda a banca.",
+  "failed_planalto_requests": 14,
+  "observed_profile": [
+    {
+      "role": "inspetor",
+      "denominator": "100 posições objetivas impressas, incluindo históricas/excluídas",
+      "printed_positions": 100,
+      "command_requires_exception_or_incorrect_answer": 19,
+      "disciplines": [
+        {
+          "discipline": "LÍNGUA PORTUGUESA",
+          "printed_items": 10
+        },
+        {
+          "discipline": "INFORMÁTICA",
+          "printed_items": 10
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO PENAL",
+          "printed_items": 20
+        },
+        {
+          "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+          "printed_items": 10
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+          "printed_items": 15
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+          "printed_items": 15
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+          "printed_items": 15
+        },
+        {
+          "discipline": "LEGISLAÇÃO ESPECÍFICA",
+          "printed_items": 5
+        }
+      ],
+      "observed_topics": [
+        {
+          "item": 1,
+          "topic": "Relações de causa e comparação de enunciados",
+          "state": "reviewed"
+        },
+        {
+          "item": 2,
+          "topic": "Inferência e atribuição de opiniões",
+          "state": "reviewed"
+        },
+        {
+          "item": 3,
+          "topic": "Concordância verbal e colocação pronominal",
+          "state": "reviewed"
+        },
+        {
+          "item": 4,
+          "topic": "Concordância com porcentagens e expressões fracionárias",
+          "state": "reviewed"
+        },
+        {
+          "item": 5,
+          "topic": "Substantivação e classes de palavras no contexto",
+          "state": "reviewed"
+        },
+        {
+          "item": 6,
+          "topic": "Sintaxe: expressão de assunto",
+          "state": "reviewed"
+        },
+        {
+          "item": 7,
+          "topic": "Representação simbólica de estruturas nominais",
+          "state": "reviewed"
+        },
+        {
+          "item": 8,
+          "topic": "Semântica lexical contextual",
+          "state": "reviewed"
+        },
+        {
+          "item": 9,
+          "topic": "Sintaxe e predicação adjetiva",
+          "state": "reviewed"
+        },
+        {
+          "item": 10,
+          "topic": "Flexão de adjetivos compostos",
+          "state": "reviewed"
+        },
+        {
+          "item": 11,
+          "topic": "Fontwork e alternância de caixa",
+          "state": "reviewed"
+        },
+        {
+          "item": 12,
+          "topic": "Windows: menu e configurações",
+          "state": "reviewed"
+        },
+        {
+          "item": 13,
+          "topic": "Comandos de navegação e espaço Linux",
+          "state": "reviewed"
+        },
+        {
+          "item": 14,
+          "topic": "Confidencialidade, disponibilidade e integridade",
+          "state": "reviewed"
+        },
+        {
+          "item": 15,
+          "topic": "Impress: exportar, localizar e abrir",
+          "state": "reviewed"
+        },
+        {
+          "item": 16,
+          "topic": "Redes sociais e afirmações temporais",
+          "state": "reviewed"
+        },
+        {
+          "item": 17,
+          "topic": "Firefox e foco na barra",
+          "state": "reviewed"
+        },
+        {
+          "item": 18,
+          "topic": "Filelink e prazo do serviço",
+          "state": "reviewed"
+        },
+        {
+          "item": 19,
+          "topic": "Calc: SE, média e soma",
+          "state": "reviewed"
+        },
+        {
+          "item": 20,
+          "topic": "Criptomoedas e chaves de carteira",
+          "state": "reviewed"
+        },
+        {
+          "item": 21,
+          "topic": "Autoria colateral incerta",
+          "state": "reviewed"
+        },
+        {
+          "item": 22,
+          "topic": "Crimes patrimoniais e limites da insignificância",
+          "state": "reviewed"
+        },
+        {
+          "item": 23,
+          "topic": "Rol de crimes hediondos",
+          "state": "reviewed"
+        },
+        {
+          "item": 24,
+          "topic": "Crimes sexuais e segredo de justiça",
+          "state": "reviewed"
+        },
+        {
+          "item": 25,
+          "topic": "Dependência química e imputabilidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 26,
+          "topic": "Legalidade e majorante de funcionário público",
+          "state": "reviewed"
+        },
+        {
+          "item": 27,
+          "topic": "Lugar do crime e ubiquidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 28,
+          "topic": "Lei intermediária mais benéfica",
+          "state": "reviewed"
+        },
+        {
+          "item": 29,
+          "topic": "Crime permanente e sucessão de leis",
+          "state": "reviewed"
+        },
+        {
+          "item": 30,
+          "topic": "Especialidade entre tráfico e contrabando",
+          "state": "reviewed"
+        },
+        {
+          "item": 31,
+          "topic": "Elementos do fato típico",
+          "state": "reviewed"
+        },
+        {
+          "item": 32,
+          "topic": "Vínculo subjetivo e furto culposo",
+          "state": "reviewed"
+        },
+        {
+          "item": 33,
+          "topic": "Detração de recolhimento domiciliar",
+          "state": "reviewed"
+        },
+        {
+          "item": 34,
+          "topic": "Participação com executor inimputável",
+          "state": "reviewed"
+        },
+        {
+          "item": 35,
+          "topic": "Conduta e sonambulismo",
+          "state": "reviewed"
+        },
+        {
+          "item": 36,
+          "topic": "Escusa absolutória patrimonial",
+          "state": "reviewed"
+        },
+        {
+          "item": 37,
+          "topic": "Drogas, prova e jurisprudência temporal",
+          "state": "reviewed"
+        },
+        {
+          "item": 38,
+          "topic": "Consumação do furto",
+          "state": "reviewed"
+        },
+        {
+          "item": 39,
+          "topic": "Dolo eventual e concurso formal",
+          "state": "reviewed"
+        },
+        {
+          "item": 40,
+          "topic": "Jurisprudência sobre crimes sexuais",
+          "state": "reviewed"
+        },
+        {
+          "item": 41,
+          "topic": "Recurso no Juizado Especial Criminal",
+          "state": "reviewed"
+        },
+        {
+          "item": 42,
+          "topic": "Regras do Juizado Especial Criminal",
+          "state": "reviewed"
+        },
+        {
+          "item": 43,
+          "topic": "Retroatividade do Pacote Anticrime",
+          "state": "reviewed"
+        },
+        {
+          "item": 44,
+          "topic": "Insignificância em crime ambiental",
+          "state": "reviewed"
+        },
+        {
+          "item": 45,
+          "topic": "Constituição de crédito tributário e tipicidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 46,
+          "topic": "Violência doméstica e institutos despenalizadores",
+          "state": "reviewed"
+        },
+        {
+          "item": 47,
+          "topic": "Suspensão condicional do processo",
+          "state": "reviewed"
+        },
+        {
+          "item": 48,
+          "topic": "Perícia em produto impróprio ao consumo",
+          "state": "reviewed"
+        },
+        {
+          "item": 49,
+          "topic": "Crimes de armas e perigo abstrato",
+          "state": "reviewed"
+        },
+        {
+          "item": 50,
+          "topic": "Lavagem e autolavagem",
+          "state": "reviewed"
+        },
+        {
+          "item": 51,
+          "topic": "Prova testemunhal e cerceamento",
+          "state": "reviewed"
+        },
+        {
+          "item": 52,
+          "topic": "Provas e sigilo profissional",
+          "state": "reviewed"
+        },
+        {
+          "item": 53,
+          "topic": "Verdade processual",
+          "state": "reviewed"
+        },
+        {
+          "item": 54,
+          "topic": "Prazo da denúncia",
+          "state": "reviewed"
+        },
+        {
+          "item": 55,
+          "topic": "Juiz das garantias e competência",
+          "state": "obsolete"
+        },
+        {
+          "item": 56,
+          "topic": "Progressão e milícia privada",
+          "state": "obsolete"
+        },
+        {
+          "item": 57,
+          "topic": "Fontes processuais extravagantes",
+          "state": "reviewed"
+        },
+        {
+          "item": 58,
+          "topic": "Formalidades do flagrante",
+          "state": "reviewed"
+        },
+        {
+          "item": 59,
+          "topic": "Inquérito, recurso e arquivamento",
+          "state": "reviewed"
+        },
+        {
+          "item": 60,
+          "topic": "Recusa de depor por parentes",
+          "state": "reviewed"
+        },
+        {
+          "item": 61,
+          "topic": "Base de cálculo da progressão seguinte",
+          "state": "reviewed"
+        },
+        {
+          "item": 62,
+          "topic": "Interceptação e degravação",
+          "state": "reviewed"
+        },
+        {
+          "item": 63,
+          "topic": "Prisões e revisão nonagesimal",
+          "state": "reviewed"
+        },
+        {
+          "item": 64,
+          "topic": "Flagrante, custódia e defensor",
+          "state": "reviewed"
+        },
+        {
+          "item": 65,
+          "topic": "Indulto e comutação",
+          "state": "reviewed"
+        },
+        {
+          "item": 66,
+          "topic": "Cassação de ato",
+          "state": "reviewed"
+        },
+        {
+          "item": 67,
+          "topic": "Poder de polícia e abuso",
+          "state": "reviewed"
+        },
+        {
+          "item": 68,
+          "topic": "Afastamento cautelar em improbidade",
+          "state": "obsolete"
+        },
+        {
+          "item": 69,
+          "topic": "Responsabilidade subsidiária",
+          "state": "reviewed"
+        },
+        {
+          "item": 70,
+          "topic": "Controle interno e externo",
+          "state": "reviewed"
+        },
+        {
+          "item": 71,
+          "topic": "Anulação e convalidação",
+          "state": "reviewed"
+        },
+        {
+          "item": 72,
+          "topic": "Renúncia e desistência no processo administrativo",
+          "state": "reviewed"
+        },
+        {
+          "item": 73,
+          "topic": "Atos revogáveis",
+          "state": "reviewed"
+        },
+        {
+          "item": 74,
+          "topic": "Tipificação e dolo na improbidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 75,
+          "topic": "Inexigibilidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 76,
+          "topic": "Território e organização administrativa",
+          "state": "reviewed"
+        },
+        {
+          "item": 77,
+          "topic": "Elementos e pressupostos dos atos",
+          "state": "reviewed"
+        },
+        {
+          "item": 78,
+          "topic": "Duração do processo e eficiência",
+          "state": "reviewed"
+        },
+        {
+          "item": 79,
+          "topic": "Dados de crianças",
+          "state": "reviewed"
+        },
+        {
+          "item": 80,
+          "topic": "Sanções da LGPD",
+          "state": "reviewed"
+        },
+        {
+          "item": 81,
+          "topic": "Classificações da Constituição",
+          "state": "reviewed"
+        },
+        {
+          "item": 82,
+          "topic": "Iniciativa de emenda",
+          "state": "reviewed"
+        },
+        {
+          "item": 83,
+          "topic": "Legitimados à ADC",
+          "state": "reviewed"
+        },
+        {
+          "item": 84,
+          "topic": "Garantias do júri",
+          "state": "reviewed"
+        },
+        {
+          "item": 85,
+          "topic": "Medida provisória: pressupostos e procedimento",
+          "state": "reviewed"
+        },
+        {
+          "item": 86,
+          "topic": "Efeitos da improbidade e dano",
+          "state": "reviewed"
+        },
+        {
+          "item": 87,
+          "topic": "Direitos indígenas e recursos minerais",
+          "state": "reviewed"
+        },
+        {
+          "item": 88,
+          "topic": "Funções do Ministério Público",
+          "state": "reviewed"
+        },
+        {
+          "item": 89,
+          "topic": "Ação popular e cidadania",
+          "state": "reviewed"
+        },
+        {
+          "item": 90,
+          "topic": "Previdência e reserva de lei complementar",
+          "state": "reviewed"
+        },
+        {
+          "item": 91,
+          "topic": "Direitos sociais",
+          "state": "reviewed"
+        },
+        {
+          "item": 92,
+          "topic": "Direitos fundamentais e limites de medida provisória",
+          "state": "reviewed"
+        },
+        {
+          "item": 93,
+          "topic": "Habeas data",
+          "state": "reviewed"
+        },
+        {
+          "item": 94,
+          "topic": "Acumulação de cargos e atualização constitucional",
+          "state": "reviewed"
+        },
+        {
+          "item": 95,
+          "topic": "Órgãos de segurança pública",
+          "state": "reviewed"
+        },
+        {
+          "item": 96,
+          "topic": "Processos e requisitos da controladoria cearense",
+          "state": "reviewed"
+        },
+        {
+          "item": 97,
+          "topic": "Graus de transgressões disciplinares no Ceará",
+          "state": "reviewed"
+        },
+        {
+          "item": 98,
+          "topic": "Órgãos de controle e segurança cearenses",
+          "state": "reviewed"
+        },
+        {
+          "item": 99,
+          "topic": "Regime funcional de servidor cearense",
+          "state": "reviewed"
+        },
+        {
+          "item": 100,
+          "topic": "Afastamento, promoção e inventário na Polícia Civil do Ceará",
+          "state": "reviewed"
+        }
+      ]
+    },
+    {
+      "role": "escrivao",
+      "denominator": "100 posições objetivas impressas, incluindo históricas/excluídas",
+      "printed_positions": 100,
+      "command_requires_exception_or_incorrect_answer": 13,
+      "disciplines": [
+        {
+          "discipline": "LÍNGUA PORTUGUESA",
+          "printed_items": 10
+        },
+        {
+          "discipline": "INFORMÁTICA",
+          "printed_items": 10
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO PENAL",
+          "printed_items": 20
+        },
+        {
+          "discipline": "LEGISLAÇÃO PENAL EXTRAVAGANTE",
+          "printed_items": 10
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO PROCESSUAL PENAL",
+          "printed_items": 15
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO ADMINISTRATIVO",
+          "printed_items": 15
+        },
+        {
+          "discipline": "NOÇÕES DE DIREITO CONSTITUCIONAL",
+          "printed_items": 15
+        },
+        {
+          "discipline": "LEGISLAÇÃO ESPECÍFICA",
+          "printed_items": 5
+        }
+      ],
+      "observed_topics": [
+        {
+          "item": 1,
+          "topic": "Inferência e distinção entre hipótese e certeza",
+          "state": "reviewed"
+        },
+        {
+          "item": 2,
+          "topic": "Coesão referencial: catáfora",
+          "state": "reviewed"
+        },
+        {
+          "item": 3,
+          "topic": "Tipologia textual e adequação da linguagem",
+          "state": "reviewed"
+        },
+        {
+          "item": 4,
+          "topic": "Sintaxe: aposto especificativo",
+          "state": "reviewed"
+        },
+        {
+          "item": 5,
+          "topic": "Classes e função adjetiva de pronomes",
+          "state": "reviewed"
+        },
+        {
+          "item": 6,
+          "topic": "Voz passiva e construções participiais",
+          "state": "reviewed"
+        },
+        {
+          "item": 7,
+          "topic": "Palavras denotativas de exclusão",
+          "state": "reviewed"
+        },
+        {
+          "item": 8,
+          "topic": "Relação explicativa entre segmentos",
+          "state": "reviewed"
+        },
+        {
+          "item": 9,
+          "topic": "Emprego dos porquês",
+          "state": "reviewed"
+        },
+        {
+          "item": 10,
+          "topic": "Regência verbal e crase",
+          "state": "reviewed"
+        },
+        {
+          "item": 11,
+          "topic": "Thunderbird e atalhos de mensagem",
+          "state": "reviewed"
+        },
+        {
+          "item": 12,
+          "topic": "Ícones de Windows e OneDrive",
+          "state": "reviewed"
+        },
+        {
+          "item": 13,
+          "topic": "Phishing e hoax",
+          "state": "reviewed"
+        },
+        {
+          "item": 14,
+          "topic": "Geolocalização e redes sociais",
+          "state": "reviewed"
+        },
+        {
+          "item": 15,
+          "topic": "Writer: seleção e alinhamento",
+          "state": "reviewed"
+        },
+        {
+          "item": 16,
+          "topic": "SOMASE e intervalos absolutos",
+          "state": "reviewed"
+        },
+        {
+          "item": 17,
+          "topic": "Diretórios Linux",
+          "state": "reviewed"
+        },
+        {
+          "item": 18,
+          "topic": "Anulação confirmada",
+          "state": "rejected"
+        },
+        {
+          "item": 19,
+          "topic": "Chrome: página inicial e recarregar",
+          "state": "reviewed"
+        },
+        {
+          "item": 20,
+          "topic": "Ameaça e probabilidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 21,
+          "topic": "Lei penal no tempo e progressão",
+          "state": "reviewed"
+        },
+        {
+          "item": 22,
+          "topic": "Legalidade e analogia desfavorável",
+          "state": "reviewed"
+        },
+        {
+          "item": 23,
+          "topic": "Abolitio criminis e efeitos da condenação",
+          "state": "reviewed"
+        },
+        {
+          "item": 24,
+          "topic": "Concurso formal impróprio",
+          "state": "reviewed"
+        },
+        {
+          "item": 25,
+          "topic": "Irretroatividade da hediondez",
+          "state": "reviewed"
+        },
+        {
+          "item": 26,
+          "topic": "Inimputabilidade etária e emancipação",
+          "state": "reviewed"
+        },
+        {
+          "item": 27,
+          "topic": "Abandono de incapaz e resultado morte",
+          "state": "reviewed"
+        },
+        {
+          "item": 28,
+          "topic": "Autonomia do dolo de matar após estupro",
+          "state": "reviewed"
+        },
+        {
+          "item": 29,
+          "topic": "Ultratividade de lei temporária",
+          "state": "reviewed"
+        },
+        {
+          "item": 30,
+          "topic": "Erro de proibição",
+          "state": "reviewed"
+        },
+        {
+          "item": 31,
+          "topic": "Territorialidade e extraterritorialidade condicionada",
+          "state": "reviewed"
+        },
+        {
+          "item": 32,
+          "topic": "Causalidade cumulativa e concurso de pessoas",
+          "state": "reviewed"
+        },
+        {
+          "item": 33,
+          "topic": "Tipicidade conglobante",
+          "state": "reviewed"
+        },
+        {
+          "item": 34,
+          "topic": "Contagem material de decadência e prescrição",
+          "state": "reviewed"
+        },
+        {
+          "item": 35,
+          "topic": "Inexigibilidade supralegal de conduta diversa",
+          "state": "reviewed"
+        },
+        {
+          "item": 36,
+          "topic": "Detração em processos distintos",
+          "state": "reviewed"
+        },
+        {
+          "item": 37,
+          "topic": "Induzimento ao suicídio após Lei 13.968",
+          "state": "reviewed"
+        },
+        {
+          "item": 38,
+          "topic": "Munição e insignificância",
+          "state": "reviewed"
+        },
+        {
+          "item": 39,
+          "topic": "Dignidade na execução penal",
+          "state": "reviewed"
+        },
+        {
+          "item": 40,
+          "topic": "Participação não seguida de execução",
+          "state": "reviewed"
+        },
+        {
+          "item": 41,
+          "topic": "Reincidência e transação penal",
+          "state": "reviewed"
+        },
+        {
+          "item": 42,
+          "topic": "Reparação do dano ambiental",
+          "state": "reviewed"
+        },
+        {
+          "item": 43,
+          "topic": "Anulação confirmada",
+          "state": "rejected"
+        },
+        {
+          "item": 44,
+          "topic": "Racismo em estabelecimento comercial",
+          "state": "reviewed"
+        },
+        {
+          "item": 45,
+          "topic": "Terrorismo e erro de referência legislativa",
+          "state": "reviewed"
+        },
+        {
+          "item": 46,
+          "topic": "Lavagem de capitais e dolo",
+          "state": "reviewed"
+        },
+        {
+          "item": 47,
+          "topic": "Indiciamento fundamentado",
+          "state": "reviewed"
+        },
+        {
+          "item": 48,
+          "topic": "Corrupção de menores",
+          "state": "reviewed"
+        },
+        {
+          "item": 49,
+          "topic": "Violência doméstica e suspensão da pena",
+          "state": "reviewed"
+        },
+        {
+          "item": 50,
+          "topic": "Livramento em hediondo com morte",
+          "state": "reviewed"
+        },
+        {
+          "item": 51,
+          "topic": "Meios de obtenção de prova em organização criminosa",
+          "state": "reviewed"
+        },
+        {
+          "item": 52,
+          "topic": "Sistema acusatório e diligência suplementar",
+          "state": "reviewed"
+        },
+        {
+          "item": 53,
+          "topic": "Decadência da queixa",
+          "state": "reviewed"
+        },
+        {
+          "item": 54,
+          "topic": "Busca domiciliar e pessoal",
+          "state": "reviewed"
+        },
+        {
+          "item": 55,
+          "topic": "Flagrante e condição de procedibilidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 56,
+          "topic": "Faltas graves na execução",
+          "state": "reviewed"
+        },
+        {
+          "item": 57,
+          "topic": "Características das cautelares e formalização do flagrante",
+          "state": "reviewed"
+        },
+        {
+          "item": 58,
+          "topic": "Reconhecimento de pessoas",
+          "state": "reviewed"
+        },
+        {
+          "item": 59,
+          "topic": "Órgãos e regras da execução penal",
+          "state": "reviewed"
+        },
+        {
+          "item": 60,
+          "topic": "Requisitos do ANPP",
+          "state": "reviewed"
+        },
+        {
+          "item": 61,
+          "topic": "Conceito de organização criminosa",
+          "state": "reviewed"
+        },
+        {
+          "item": 62,
+          "topic": "Revisão criminal e habeas corpus",
+          "state": "reviewed"
+        },
+        {
+          "item": 63,
+          "topic": "Comunhão e limites das provas",
+          "state": "reviewed"
+        },
+        {
+          "item": 64,
+          "topic": "Progressão antes do trânsito e execução provisória",
+          "state": "reviewed"
+        },
+        {
+          "item": 65,
+          "topic": "Novo interrogatório e direito de defesa",
+          "state": "reviewed"
+        },
+        {
+          "item": 66,
+          "topic": "Sanções por violação a princípios",
+          "state": "obsolete"
+        },
+        {
+          "item": 67,
+          "topic": "Representação por improbidade",
+          "state": "reviewed"
+        },
+        {
+          "item": 68,
+          "topic": "Estado e Administração Pública",
+          "state": "reviewed"
+        },
+        {
+          "item": 69,
+          "topic": "Sobrepreço e superfaturamento",
+          "state": "reviewed"
+        },
+        {
+          "item": 70,
+          "topic": "Eficiência, eficácia e efetividade",
+          "state": "reviewed"
+        },
+        {
+          "item": 71,
+          "topic": "Patrimonialismo",
+          "state": "reviewed"
+        },
+        {
+          "item": 72,
+          "topic": "Extinção e invalidade de contratos públicos",
+          "state": "reviewed"
+        },
+        {
+          "item": 73,
+          "topic": "Responsabilidade objetiva e nexo",
+          "state": "reviewed"
+        },
+        {
+          "item": 74,
+          "topic": "Elemento subjetivo da improbidade",
+          "state": "obsolete"
+        },
+        {
+          "item": 75,
+          "topic": "Delegação, forma e decadência administrativa",
+          "state": "reviewed"
+        },
+        {
+          "item": 76,
+          "topic": "Competência do agente administrativo",
+          "state": "reviewed"
+        },
+        {
+          "item": 77,
+          "topic": "Conceito de dado anonimizado",
+          "state": "reviewed"
+        },
+        {
+          "item": 78,
+          "topic": "Poder de polícia e taxa",
+          "state": "reviewed"
+        },
+        {
+          "item": 79,
+          "topic": "Anulação confirmada",
+          "state": "rejected"
+        },
+        {
+          "item": 80,
+          "topic": "Órgão e pessoa jurídica",
+          "state": "reviewed"
+        },
+        {
+          "item": 81,
+          "topic": "Concurso e direito à nomeação",
+          "state": "reviewed"
+        },
+        {
+          "item": 82,
+          "topic": "Cláusula pétrea do voto",
+          "state": "reviewed"
+        },
+        {
+          "item": 83,
+          "topic": "Voto facultativo",
+          "state": "reviewed"
+        },
+        {
+          "item": 84,
+          "topic": "Cargos de brasileiro nato",
+          "state": "reviewed"
+        },
+        {
+          "item": 85,
+          "topic": "Competência originária do STJ",
+          "state": "reviewed"
+        },
+        {
+          "item": 86,
+          "topic": "Estado de defesa",
+          "state": "reviewed"
+        },
+        {
+          "item": 87,
+          "topic": "Competência legislativa concorrente",
+          "state": "reviewed"
+        },
+        {
+          "item": 88,
+          "topic": "Objetivos da República",
+          "state": "reviewed"
+        },
+        {
+          "item": 89,
+          "topic": "Eficácia das normas constitucionais",
+          "state": "reviewed"
+        },
+        {
+          "item": 90,
+          "topic": "Liberdade de associação",
+          "state": "reviewed"
+        },
+        {
+          "item": 91,
+          "topic": "Presunção de periculosidade e direito penal do autor",
+          "state": "reviewed"
+        },
+        {
+          "item": 92,
+          "topic": "Reclamação e aumento por isonomia",
+          "state": "reviewed"
+        },
+        {
+          "item": 93,
+          "topic": "Mandado de segurança coletivo",
+          "state": "reviewed"
+        },
+        {
+          "item": 94,
+          "topic": "Garantias da Defensoria",
+          "state": "reviewed"
+        },
+        {
+          "item": 95,
+          "topic": "Suspensão do Presidente",
+          "state": "reviewed"
+        },
+        {
+          "item": 96,
+          "topic": "Aproveitamento na carreira cearense",
+          "state": "reviewed"
+        },
+        {
+          "item": 97,
+          "topic": "Competências da controladoria disciplinar cearense",
+          "state": "reviewed"
+        },
+        {
+          "item": 98,
+          "topic": "Estágio probatório no Ceará",
+          "state": "reviewed"
+        },
+        {
+          "item": 99,
+          "topic": "Segurança pública na Constituição cearense",
+          "state": "reviewed"
+        },
+        {
+          "item": 100,
+          "topic": "Estatuto da Polícia Civil cearense",
+          "state": "reviewed"
+        }
+      ]
+    }
+  ]
+}

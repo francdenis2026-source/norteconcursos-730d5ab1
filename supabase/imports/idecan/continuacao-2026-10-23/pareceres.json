@@ -1,0 +1,2276 @@
+{
+  "escrivao": [
+    {
+      "item": 11,
+      "topic": "Thunderbird e atalhos de mensagem",
+      "explanation": "B é o gabarito histórico V,V,F: os dois primeiros atalhos se referem à composição/resposta, enquanto Alt+F7 não é o atalho usual de fechar. A versão 78.12.0 precisa ser preservada e validada; o ícone X foi conferido no PDF.",
+      "references": [],
+      "flags": [
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "verdadeiro_falso"
+    },
+    {
+      "item": 12,
+      "topic": "Ícones de Windows e OneDrive",
+      "explanation": "As alternativas perderam todos os ícones na extração. O PDF mostra em C wi-fi, remoção segura e nuvem do OneDrive. Essa restauração semântica não dispensa incorporar as figuras ao material de treino; não publicar as opções vazias.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente",
+        "inconsistencia_dois_tres_no_comando"
+      ],
+      "decision": "reviewed",
+      "style": "identificacao_de_icones"
+    },
+    {
+      "item": 13,
+      "topic": "Phishing e hoax",
+      "explanation": "As definições distinguem fraude para obtenção de dados de mensagem falsa/alarmista. O gabarito B corresponde aos termos, mas falta anexar fonte técnica primária consultada; não tomar qualquer notícia alarmante como hoax sem verificação.",
+      "references": [],
+      "flags": [
+        "fonte_tecnica_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceitos_em_pares"
+    },
+    {
+      "item": 14,
+      "topic": "Geolocalização e redes sociais",
+      "explanation": "E associa Foursquare a check-ins por localização. Recursos e disponibilidade de serviços mudam; registrar o contexto histórico de 2021 e conferir documentação da plataforma antes de usar como fato atual.",
+      "references": [],
+      "flags": [
+        "servico_digital_temporal"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 15,
+      "topic": "Writer: seleção e alinhamento",
+      "explanation": "O PDF diferencia os ícones: A traz Ctrl+A e alinhamento justificado; B traz centralização. Os rótulos desapareceram na extração. Preservar versão 7.1.4.2 e integrar os ícones antes de considerar o contexto completo.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "identificacao_de_icones"
+    },
+    {
+      "item": 16,
+      "topic": "SOMASE e intervalos absolutos",
+      "explanation": "No PDF, D contém soma_intervalo $C$7:$C$8, enquanto o intervalo de critério é $B$7:$B$18. A extração não perdeu o dígito 1: essa diferença está impressa. É preciso executar a fórmula no Calc 7.1.4.2 ou consultar errata para validar o comportamento de expansão do intervalo; não corrigir silenciosamente.",
+      "references": [],
+      "flags": [
+        "formula_com_intervalos_diferentes",
+        "teste_na_versao_pendente",
+        "midia_nao_integrada"
+      ],
+      "decision": "reviewed",
+      "style": "planilha"
+    },
+    {
+      "item": 17,
+      "topic": "Diretórios Linux",
+      "explanation": "O PDF restaura E como /etc e /lib, que correspondem às descrições tradicionais do FHS. Não inferir posição física em distribuições com usr-merge; falta integrar as imagens das alternativas para treino.",
+      "references": [
+        "fhsetc",
+        "fhslib"
+      ],
+      "flags": [
+        "midia_nao_integrada"
+      ],
+      "decision": "reviewed",
+      "style": "identificacao_de_icones"
+    },
+    {
+      "item": 19,
+      "topic": "Chrome: página inicial e recarregar",
+      "explanation": "A combina Alt+Home com o símbolo de recarregar no PDF. Homepage configurada não se confunde com nova guia. Os ícones perderam-se na extração e a versão 92 deve ser mantida no enunciado.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "identificacao_de_icones"
+    },
+    {
+      "item": 20,
+      "topic": "Ameaça e probabilidade",
+      "explanation": "O segundo conceito descreve chance de falha, enquanto risco em geral combina probabilidade e impacto. A letra D distingue os dois rótulos; confirmar fonte técnica e não simplificar risco como sinônimo necessário de probabilidade.",
+      "references": [],
+      "flags": [
+        "fonte_tecnica_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceitos_em_pares"
+    },
+    {
+      "item": 21,
+      "topic": "Lei penal no tempo e progressão",
+      "explanation": "O fato é de 10/11/2006. O 1/6 indicado no gabarito histórico exige análise temporal e da natureza do tráfico, não aplicação automática das frações de hoje. A LEP atualizada tem alterações de 2026; consultar os precedentes de retroatividade antes de utilizar este caso.",
+      "references": [
+        "cp:2",
+        "lep:112"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 22,
+      "topic": "Legalidade e analogia desfavorável",
+      "explanation": "A indicação histórica A distingue analogia in malam partem de interpretação autorizada. O enunciado chama o STF de Superior Tribunal Federal; preservar esse erro na extração e anotar que o nome correto é Supremo Tribunal Federal. Conferir o precedente específico sobre sinal de TV a cabo.",
+      "references": [
+        "cp:1",
+        "cp:155"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "erro_nome_tribunal"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 23,
+      "topic": "Abolitio criminis e efeitos da condenação",
+      "explanation": "O art. 2º faz cessar execução e efeitos penais; o art. 107, III, trata da extinção da punibilidade. A alternativa B preserva efeitos civis. O confronto no texto da Câmara é compatível, mas não substitui a conferência de publicação exigida no Planalto.",
+      "references": [
+        "cp:2",
+        "cp:107"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 24,
+      "topic": "Concurso formal impróprio",
+      "explanation": "Uma ação alcança duas vítimas com desígnios autônomos. O art. 70 determina cumulação nas condições da segunda parte, distinguindo concurso formal impróprio do formal próprio. A soma das penas em C é o ponto cobrado.",
+      "references": [
+        "cp:70"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 25,
+      "topic": "Irretroatividade da hediondez",
+      "explanation": "O fato foi em outubro de 2019, antes da alteração invocada pelo Pacote Anticrime. A classificação mais gravosa não pode retroagir para agravar a situação do autor; conferir também Lei 8.072 e datas de vigência. Não atualizar a data do caso para transformar a pergunta.",
+      "references": [
+        "cp:2"
+      ],
+      "flags": [
+        "fonte_especial_pendente",
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 26,
+      "topic": "Inimputabilidade etária e emancipação",
+      "explanation": "A emancipação civil não antecipa imputabilidade penal: CP 27 e CF 228 remetem o menor de 18 anos à legislação especial. Isso não significa inexistência de ato infracional; a alternativa C distingue os planos.",
+      "references": [
+        "cp:27",
+        "cf:228"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 27,
+      "topic": "Abandono de incapaz e resultado morte",
+      "explanation": "A qualificação pelo resultado exige nexo e imputação ao menos culposa do resultado, nos termos do art. 19. O art. 133 teve penas alteradas em 2025; a revisão não deve ensinar as penas antigas nem presumir responsabilidade objetiva pela morte.",
+      "references": [
+        "cp:13",
+        "cp:19",
+        "cp:133"
+      ],
+      "flags": [
+        "pena_alterada_sem_mudar_automaticamente_a_tipificacao"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 28,
+      "topic": "Autonomia do dolo de matar após estupro",
+      "explanation": "A narrativa situa o dolo de matar após o encerramento do estupro, favorecendo concurso material e não a absorção automática como estupro qualificado pela morte. Conferir circunstâncias e qualificadoras sem acrescentá-las ao gabarito C.",
+      "references": [
+        "cp:69",
+        "cp:213"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 29,
+      "topic": "Ultratividade de lei temporária",
+      "explanation": "O art. 3º mantém a aplicação aos fatos praticados durante a vigência, mesmo após o termo final. D não se confunde com retroatividade ordinária de lei mais gravosa.",
+      "references": [
+        "cp:3"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 30,
+      "topic": "Erro de proibição",
+      "explanation": "O art. 21 distingue desconhecimento da lei e erro sobre a ilicitude. Inimputabilidade ou inexigibilidade não decorrem automaticamente da nacionalidade; é preciso aferir se o erro era evitável. A alternativa A é a categoria teórica indicada.",
+      "references": [
+        "cp:21"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 31,
+      "topic": "Territorialidade e extraterritorialidade condicionada",
+      "explanation": "A narrativa exige separar preparação, execução, nacionalidade e dupla tipicidade. A formulação de B sobre território holandês em navio privado precisa ser qualificada: não é ficção territorial ilimitada. Conferir o art. 7º e a lei estrangeira aplicável; não certificar a assertiva absoluta.",
+      "references": [
+        "cp:5",
+        "cp:6",
+        "cp:7"
+      ],
+      "flags": [
+        "lei_estrangeira_e_tese_territorial_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 32,
+      "topic": "Causalidade cumulativa e concurso de pessoas",
+      "explanation": "Há prévio ajuste e a ação conjunta dos dois venenos causa a morte. A contribuição causal e o vínculo subjetivo diferenciam o caso da autoria colateral incerta. O gabarito D remete ao homicídio consumado em concurso.",
+      "references": [
+        "cp:13",
+        "cp:29",
+        "cp:121"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 33,
+      "topic": "Tipicidade conglobante",
+      "explanation": "O comando expressamente adota uma teoria doutrinária. Não substituir sua resposta pela leitura isolada do art. 23: a alternativa E trabalha a ausência de antinormatividade na construção teórica. Falta fonte doutrinária verificável para certificação.",
+      "references": [
+        "cp:23"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 34,
+      "topic": "Contagem material de decadência e prescrição",
+      "explanation": "CP 10 inclui o dia do começo. Os marcos dados conduzem, pela contagem material, a 07/07/2021 e 18/07/2021. Não confundir prazo penal com prorrogação de prazo processual; o caso fixa hipoteticamente o início da prescrição.",
+      "references": [
+        "cp:10",
+        "cp:103"
+      ],
+      "flags": [
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 35,
+      "topic": "Inexigibilidade supralegal de conduta diversa",
+      "explanation": "A alternativa D enuncia uma tese defensiva possível, não absolvição automática por vulnerabilidade econômica ou microcefalia. O art. 128 não autoriza concluir que toda microcefalia configura hipótese legal de aborto permitido. Exige análise individual e fonte doutrinária/judicial específica.",
+      "references": [
+        "cp:22",
+        "cp:128"
+      ],
+      "flags": [
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 36,
+      "topic": "Detração em processos distintos",
+      "explanation": "O crime da condenação é anterior à prisão cautelar de outro processo. O ponto é evitar crédito penal para crimes futuros; D indica a possibilidade condicionada de detração, não abatimento automático sem decisão do juízo. Conferir o precedente do tribunal.",
+      "references": [
+        "cp:42"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 37,
+      "topic": "Induzimento ao suicídio após Lei 13.968",
+      "explanation": "O art. 122 passou a prever modalidade básica sem exigir morte ou lesão grave para a tipicidade. A presença apenas de lesão leve não leva, por si, à inexistência do delito. D deve ser lida à luz da redação nova e da data do fato.",
+      "references": [
+        "cp:122"
+      ],
+      "flags": [
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 38,
+      "topic": "Munição e insignificância",
+      "explanation": "A alternativa A traduz hipótese excepcional dependente das circunstâncias, não regra de que toda munição isolada seja atípica. Há também referência a calibre 9mm e uso permitido, cuja classificação depende do regulamento temporal. Não certificar sem o precedente e o ato regulamentar pertinentes.",
+      "references": [],
+      "flags": [
+        "jurisprudencia_pendente",
+        "classificacao_de_calibre_temporal"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 39,
+      "topic": "Dignidade na execução penal",
+      "explanation": "O gabarito E trata do fundamento de humanidade da pena. A compensação em dobro decorre de decisão e contexto específicos; não deve virar regra geral para qualquer unidade prisional. Identificar o caso e seu alcance no STJ.",
+      "references": [
+        "cf:1",
+        "cf:5",
+        "lep:3"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 40,
+      "topic": "Participação não seguida de execução",
+      "explanation": "CP 31 afasta a punição da instigação quando o crime não chega ao menos à tentativa, salvo disposição específica. O relato não descreve início de execução; não equiparar desistência antes da execução à desistência voluntária do art. 15.",
+      "references": [
+        "cp:14",
+        "cp:15",
+        "cp:31"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 41,
+      "topic": "Reincidência e transação penal",
+      "explanation": "Transação penal não é condenação criminal para reincidência. Condenação anterior por contravenção não equivale ao crime anterior exigido no CP 63 para o crime posterior. O gabarito C exige cotejo também com a Lei 9.099.",
+      "references": [
+        "cp:63"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 42,
+      "topic": "Reparação do dano ambiental",
+      "explanation": "A questão cobra consequência específica da reparação espontânea na Lei 9.605, e não abolitio criminis ou arrependimento eficaz. O gabarito C indica atenuante; falta conferência do dispositivo especial atual.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 44,
+      "topic": "Racismo em estabelecimento comercial",
+      "explanation": "A recusa de atendimento por raça ou cor deve ser confrontada com o tipo específico da Lei 7.716. Não substituir racismo por injúria racial nem tratar a recusa como mero ilícito civil; falta cotejo do texto especial atualizado.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 45,
+      "topic": "Terrorismo e erro de referência legislativa",
+      "explanation": "O texto menciona Lei 13.620/2016, referência inconsistente com a Lei 13.260/2016 de terrorismo. A identificação da norma deve ser conferida no original/errata e em fonte oficial antes de justificar A. Não corrigir silenciosamente o número na extração.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente",
+        "referencia_legal_inconsistente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 46,
+      "topic": "Lavagem de capitais e dolo",
+      "explanation": "O gabarito E opõe modalidade dolosa a alternativas que condicionam indevidamente a autonomia da lavagem à conclusão do processo antecedente ou às três fases clássicas. Conferir Lei 9.613 e precedentes sem presumir que todas as teses de 2021 continuam íntegras.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 47,
+      "topic": "Indiciamento fundamentado",
+      "explanation": "A Lei 12.830 disciplina indiciamento privativo e análise técnico-jurídica de autoria, materialidade e circunstâncias. O gabarito B é a tese a confrontar; não dispensar a checagem do texto oficial atual nem ampliar a exclusividade para atos não previstos.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 48,
+      "topic": "Corrupção de menores",
+      "explanation": "A tese histórica E corresponde ao caráter formal da corrupção de menores, mas é necessário conferir a súmula/precedente no STJ. A alternativa de responsabilidade automática do comerciante não autoriza responsabilidade penal objetiva.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 49,
+      "topic": "Violência doméstica e suspensão da pena",
+      "explanation": "Distinguir suspensão condicional da pena de suspensão do processo e transação penal. A viabilidade do sursis depende da pena concretamente aplicada e dos requisitos do art. 77, não de uma dispensa geral para violência doméstica. Considerar as alterações das penas de lesão.",
+      "references": [
+        "cp:77",
+        "cp:129"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 50,
+      "topic": "Livramento em hediondo com morte",
+      "explanation": "D é o gabarito histórico. A vedação deve ser cotejada com o enquadramento temporal e as hipóteses atuais do art. 112, que sofreu mudanças em 2026. Não transportar os percentuais errados dos distratores para um resumo de legislação vigente.",
+      "references": [
+        "lep:112"
+      ],
+      "flags": [
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 51,
+      "topic": "Meios de obtenção de prova em organização criminosa",
+      "explanation": "O comando pede a exceção ao rol legal, não o nome da técnica narrada. O gabarito B exige cotejo literal do art. 3º da Lei 12.850; a ação controlada tem requisitos próprios e não se resume à afirmação genérica de autorização judicial.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 52,
+      "topic": "Sistema acusatório e diligência suplementar",
+      "explanation": "A resposta histórica C classifica a produção de provas pelo juiz como exceção às características do sistema acusatório. O STF, no item 1 da decisão de 24/08/2023, admite diligências suplementares pontuais nos limites legais. É preciso delimitar teoria e regra vigente; não converter a classificação em proibição absoluta nem certificar automaticamente a manutenção do gabarito.",
+      "references": [
+        "cpp:3A",
+        "cpp:156",
+        "stf6298"
+      ],
+      "flags": [
+        "delimitacao_doutrinaria_e_jurisprudencial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 53,
+      "topic": "Decadência da queixa",
+      "explanation": "CPP 38 e CP 10/103 distinguem prazo decadencial de prazo processual ordinário. São seis meses a partir do conhecimento da autoria, com contagem material; D é o resultado histórico a conferir no marco dado.",
+      "references": [
+        "cp:10",
+        "cp:103",
+        "cpp:38"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 54,
+      "topic": "Busca domiciliar e pessoal",
+      "explanation": "B formula exigência absoluta de mandado para toda busca domiciliar, incompatível com hipóteses constitucionais. Busca pessoal também exige fundamento legal, não autorização genérica irrestrita. Confrontar CF 5º, XI, e CPP 240/244/245.",
+      "references": [
+        "cf:5",
+        "cpp:240",
+        "cpp:244",
+        "cpp:245"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 55,
+      "topic": "Flagrante e condição de procedibilidade",
+      "explanation": "O gabarito C distingue injúria simples e ameaça na situação narrada. A manifestação da vítima e a tipificação concreta devem ser verificadas; alterações de ação penal para hipóteses especiais de ameaça não podem ser generalizadas ao caso.",
+      "references": [
+        "cp:145",
+        "cp:147",
+        "cpp:301"
+      ],
+      "flags": [
+        "jurisprudencia_e_condicao_de_procedibilidade_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 56,
+      "topic": "Faltas graves na execução",
+      "explanation": "O gabarito histórico A exige cotejo de todas as teses atuais do STJ. Houve alteração legislativa sobre exame criminológico em 2024, relevante também à alternativa C; não manter uma justificativa que o trate somente como exigência excepcional por falta grave.",
+      "references": [
+        "lep:39",
+        "lep:50",
+        "lep:112"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "legislacao_alterada"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 57,
+      "topic": "Características das cautelares e formalização do flagrante",
+      "explanation": "Informalidade é a exceção indicada em E; o flagrante exige documentação e comunicação legais. A qualificação doutrinária do flagrante como cautelar ou pré-cautelar precisa ser delimitada, sem atribuir ao ato policial toda a jurisdicionalidade da prisão preventiva.",
+      "references": [
+        "cpp:304",
+        "cpp:306"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 58,
+      "topic": "Reconhecimento de pessoas",
+      "explanation": "A forma narrada não segue o art. 226 e o gabarito C a considera inválida. Conferir os precedentes atuais sobre obrigatoriedade do procedimento e limites de prova independente; não confundir confirmação posterior sugestiva com saneamento do primeiro reconhecimento.",
+      "references": [
+        "cpp:226"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 59,
+      "topic": "Órgãos e regras da execução penal",
+      "explanation": "A enumeração do art. 61 não inclui genericamente agentes penitenciários como órgão. B é o gabarito histórico da exceção; conferir também os demais dispositivos, as alterações do art. 112 e o erro material remissão/remição na alternativa C.",
+      "references": [
+        "lep:2",
+        "lep:61",
+        "lep:111",
+        "lep:112",
+        "lep:126"
+      ],
+      "flags": [
+        "erro_terminologico_na_fonte"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 60,
+      "topic": "Requisitos do ANPP",
+      "explanation": "O art. 28-A usa pena mínima inferior a quatro anos, consideradas causas de aumento/diminuição, e exclui caso de transação penal. A alternativa A não pode afastar essa exclusão; preservar também a distinção entre pena mínima e expressão genérica pena em abstrato.",
+      "references": [
+        "cpp:28A"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 61,
+      "topic": "Conceito de organização criminosa",
+      "explanation": "A alternativa D reúne quatro ou mais pessoas, estrutura e divisão de tarefas, vantagem de qualquer natureza e os requisitos de infrações/transnacionalidade. A confirmação do texto atual da Lei 12.850 permanece pendente; não reduzir o conceito a mero número de pessoas.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 62,
+      "topic": "Revisão criminal e habeas corpus",
+      "explanation": "O item cobra um conjunto de teses jurisprudenciais; o gabarito D não pode ser justificado apenas pela leitura do CPP 621. São necessários precedentes sobre superveniência do julgamento e alcance do habeas corpus, inclusive distinções de objeto.",
+      "references": [
+        "cpp:621"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 63,
+      "topic": "Comunhão e limites das provas",
+      "explanation": "O caráter absoluto de sem exceção em E exige ressalvas, especialmente para provas submetidas a regras de produção, uso e ilicitude. CPP 155/157 e CF 5º dão limites; falta confirmar a classificação doutrinária e o tratamento das demais alternativas.",
+      "references": [
+        "cpp:155",
+        "cpp:157",
+        "cf:5"
+      ],
+      "flags": [
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "principios_em_alternativas"
+    },
+    {
+      "item": 64,
+      "topic": "Progressão antes do trânsito e execução provisória",
+      "explanation": "O gabarito A pressupõe cumprimento de requisitos objetivos e subjetivos, mas o enunciado menciona prisão preventiva sem explicitar condenação. Conferir a súmula do STF e sua exigência de sentença/execução provisória; não ensinar progressão de preso meramente cautelar como regra automática.",
+      "references": [
+        "lep:2",
+        "lep:112"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "pressuposto_de_condenacao_nao_explicito"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 65,
+      "topic": "Novo interrogatório e direito de defesa",
+      "explanation": "CPP 196 autoriza novo interrogatório de ofício ou a pedido fundamentado. C restringe indevidamente a iniciativa ao requerimento das partes. Confrontar também o direito ao silêncio e a intervenção de defesa nos arts. 185 a 188.",
+      "references": [
+        "cpp:185",
+        "cpp:186",
+        "cpp:188",
+        "cpp:196"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 66,
+      "topic": "Sanções por violação a princípios",
+      "explanation": "I e II utilizam suspensão de direitos políticos e multa de até cem remunerações da redação anterior. O art. 12, III, atualizado prevê multa até 24 remunerações e vedação de contratar, com disciplina diferente. A resposta D não pode ser ensinada como sanção vigente.",
+      "references": [
+        "improbidade:11",
+        "improbidade:12"
+      ],
+      "flags": [
+        "superacao_legislativa"
+      ],
+      "decision": "obsolete",
+      "style": "afirmativas"
+    },
+    {
+      "item": 67,
+      "topic": "Representação por improbidade",
+      "explanation": "O art. 14 confirma qualquer pessoa, autoridade administrativa competente e investigação. A letra E não se limita a cidadão ou a provocação do Tribunal de Contas; faltam os demais requisitos de publicação e cotejo do Planalto.",
+      "references": [
+        "improbidade:14"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "preenchimento_de_lacunas"
+    },
+    {
+      "item": 68,
+      "topic": "Estado e Administração Pública",
+      "explanation": "A letra A expressa a distinção entre Estado personalizado e Administração como organização/função. Não atribuir personalidade própria a todos os órgãos; conferir a fonte doutrinária para a formulação conceitual.",
+      "references": [
+        "cf:18",
+        "cf:37"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 69,
+      "topic": "Sobrepreço e superfaturamento",
+      "explanation": "O gabarito A separa preço orçado acima do referencial de dano efetivo por superfaturamento. A atualização deve usar os conceitos da Lei 14.133, não a lei revogada como regime geral vigente. Texto especial atual ainda pendente.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 70,
+      "topic": "Eficiência, eficácia e efetividade",
+      "explanation": "II relaciona eficiência à economia de meios para o mesmo resultado. Eficácia não é sinônimo de efetividade e baixo custo de ação desnecessária não demonstra impacto social. A classificação é pedagógica, sem certificação de uma norma única.",
+      "references": [
+        "cf:37"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 71,
+      "topic": "Patrimonialismo",
+      "explanation": "A descreve a confusão entre interesses privados do governante e coisa pública. Não confundir esse modelo com mera gestão de patrimônio ou terceirização; é uma classificação de teoria administrativa a documentar.",
+      "references": [],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 72,
+      "topic": "Extinção e invalidade de contratos públicos",
+      "explanation": "D é a descrição genérica do gabarito; prazos, alteração e extinção dependem do regime legal do contrato. Não transformar termos anuais/perpétuos em regras gerais nem reaproveitar a fundamentação revogada sem lei de transição.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 73,
+      "topic": "Responsabilidade objetiva e nexo",
+      "explanation": "CF 37, §6º, fornece a base, mas o alcance de causas excludentes e prescrição exige precedentes. Culpa da vítima não afasta necessariamente toda responsabilidade se o nexo não foi rompido; não generalizar a afirmação I sobre imprescritibilidade material.",
+      "references": [
+        "cf:37"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 74,
+      "topic": "Elemento subjetivo da improbidade",
+      "explanation": "A alternativa C, antes incompatível com a modalidade culposa do art. 10, tornou-se compatível com a exigência de dolo dos arts. 1º e 10. E também descreve consequência do enriquecimento ilícito. O conjunto de alternativa única não preserva a mesma resposta de 2021.",
+      "references": [
+        "improbidade:1",
+        "improbidade:9",
+        "improbidade:10",
+        "improbidade:12"
+      ],
+      "flags": [
+        "superacao_legislativa"
+      ],
+      "decision": "obsolete",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 75,
+      "topic": "Delegação, forma e decadência administrativa",
+      "explanation": "O art. 14, §2º, confirma a revogação da delegação a qualquer tempo. Os arts. 22 e 54 afastam as generalizações de escrita sem exceções e inexistência de decadência. O âmbito federal da Lei 9.784 deve ficar expresso.",
+      "references": [
+        "processoadm:14",
+        "processoadm:22",
+        "processoadm:54"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 76,
+      "topic": "Competência do agente administrativo",
+      "explanation": "A narrativa muda a lotação e a atribuição do delegado; ato posterior na unidade anterior não se legitima apenas por estar pendente. E depende de a competência não ter sido mantida/delegada por norma específica, que precisa ser conferida.",
+      "references": [
+        "processoadm:11"
+      ],
+      "flags": [
+        "norma_de_competencia_especifica_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 77,
+      "topic": "Conceito de dado anonimizado",
+      "explanation": "LGPD 5º, III, relaciona impossibilidade de identificar o titular a meios técnicos razoáveis e disponíveis. A alternativa E não equivale a afirmar que toda anonimização é irreversível para sempre, nem dispensa avaliar reidentificação.",
+      "references": [
+        "lgpd:5"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 78,
+      "topic": "Poder de polícia e taxa",
+      "explanation": "A vedação tributária absoluta em C conflita com CF 145, II, que prevê taxas pelo exercício do poder de polícia. O conceito também exige cotejo com o CTN; não confundir taxa e imposto ou legitimar qualquer cobrança por ato policial.",
+      "references": [
+        "cf:145"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 80,
+      "topic": "Órgão e pessoa jurídica",
+      "explanation": "A Presidência integra a estrutura da Administração Direta e não é pessoa jurídica autônoma. E trata de órgão; a representação e competências específicas não se confundem com personalidade.",
+      "references": [
+        "cf:76"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 81,
+      "topic": "Concurso e direito à nomeação",
+      "explanation": "B exige conferir a tese do STF sobre vagas e suas ressalvas; CF 37 não estabelece sozinho todos os contornos do direito subjetivo. Os distratores confundem cargo em comissão, prazo máximo e vinculação remuneratória.",
+      "references": [
+        "cf:37"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 82,
+      "topic": "Cláusula pétrea do voto",
+      "explanation": "CF 60, §4º, enumera voto direto, secreto, universal e periódico, não obrigatoriedade/facultatividade. Não interpretar E como autorização para abolir essas características protegidas.",
+      "references": [
+        "cf:60"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 83,
+      "topic": "Voto facultativo",
+      "explanation": "CF 14, §1º, II, contempla analfabetos, maiores de setenta e maiores de dezesseis/menores de dezoito. Residência no exterior e condição de apenado não são categorias automáticas de facultatividade.",
+      "references": [
+        "cf:14"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 84,
+      "topic": "Cargos de brasileiro nato",
+      "explanation": "CF 12, §3º, inclui Presidente da Câmara dos Deputados. Não estender a reserva a todo senador, ministro ou delegado pela simples natureza pública do cargo.",
+      "references": [
+        "cf:12"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 85,
+      "topic": "Competência originária do STJ",
+      "explanation": "CF 105, I, a, inclui membros de tribunais de contas municipais nos crimes comuns e de responsabilidade. Verificar a redação e o cargo exato, sem confundir tribunal estadual de contas dos municípios com órgão municipal comum.",
+      "references": [
+        "cf:105"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 86,
+      "topic": "Estado de defesa",
+      "explanation": "CF 136 permite restrições específicas, inclusive sigilo de correspondência, e veda incomunicabilidade do preso. Não substituir restrição temporária por criminalização geral de reuniões ou expropriação sem base.",
+      "references": [
+        "cf:136"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 87,
+      "topic": "Competência legislativa concorrente",
+      "explanation": "CF 24 inclui direito financeiro entre União, estados e DF. Municípios têm suplementação nos limites constitucionais, o que não os torna integrantes automáticos do rol concorrente do caput.",
+      "references": [
+        "cf:24",
+        "cf:30"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 88,
+      "topic": "Objetivos da República",
+      "explanation": "Erradicar pobreza e marginalização é objetivo do art. 3º. Os outros itens reproduzem princípios de relações internacionais do art. 4º; a distinção textual sustenta o gabarito D.",
+      "references": [
+        "cf:3",
+        "cf:4"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 89,
+      "topic": "Eficácia das normas constitucionais",
+      "explanation": "O art. 20, IX, define titularidade dos recursos minerais. A classificação como eficácia plena decorre de teoria constitucional, não de uma etiqueta escrita no artigo; falta a fonte doutrinária para certificar a classificação.",
+      "references": [
+        "cf:20"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 90,
+      "topic": "Liberdade de associação",
+      "explanation": "CF 5º, XIX, exige decisão judicial para suspensão e trânsito em julgado para dissolução compulsória. Não confundir autorização de criação com legitimidade para representar associados, que também depende de precedentes.",
+      "references": [
+        "cf:5"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 91,
+      "topic": "Presunção de periculosidade e direito penal do autor",
+      "explanation": "O caso remete à recepção constitucional da contravenção de portar instrumentos de furto por condição pessoal. A letra D exige o precedente do STF; não inferir recepção/não recepção só pelo rótulo dignidade humana.",
+      "references": [
+        "cf:1",
+        "cf:5"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 92,
+      "topic": "Reclamação e aumento por isonomia",
+      "explanation": "A resposta D depende da súmula vinculante sobre aumento de vencimentos pelo Judiciário. CF 103-A fornece a via de reclamação, mas não substitui conferir a súmula e os pressupostos específicos do instrumento.",
+      "references": [
+        "cf:103A"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 93,
+      "topic": "Mandado de segurança coletivo",
+      "explanation": "CF 5º, LXX, restringe partido à representação no Congresso. A extensão da legitimidade de entidades e da dispensa de autorização depende também de lei e súmulas; a formulação I sem requisito não deve ser tomada como correta.",
+      "references": [
+        "cf:5"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 94,
+      "topic": "Garantias da Defensoria",
+      "explanation": "CF 134 prevê ingresso por concurso e inamovibilidade, vedando advocacia fora das atribuições. Não conferir vitaliciedade nem defesa de autossuficientes como conteúdo da garantia de assistência aos necessitados.",
+      "references": [
+        "cf:134"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 95,
+      "topic": "Suspensão do Presidente",
+      "explanation": "CF 86 diferencia recebimento da acusação criminal pelo STF de instauração do processo de responsabilidade no Senado, após autorização da Câmara. A alternativa A reúne os marcos descritos para infração penal comum.",
+      "references": [
+        "cf:86"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 96,
+      "topic": "Aproveitamento na carreira cearense",
+      "explanation": "O rol da Lei estadual 12.124/1993 não foi confrontado em fonte estadual atual. A resposta histórica C não pode ser aplicada a aproveitamento na PC-AC.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 97,
+      "topic": "Competências da controladoria disciplinar cearense",
+      "explanation": "A alternativa B depende do texto e das alterações da LC estadual 98/2011, inclusive da diferença entre participação obrigatória e facultativa. Não há certificação da norma estadual.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 98,
+      "topic": "Estágio probatório no Ceará",
+      "explanation": "A letra A deve ser confrontada com a Lei estadual 9.826/1974 e suas alterações. O vínculo ao início do exercício não autoriza transplantar a lei estadual para o Acre.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 99,
+      "topic": "Segurança pública na Constituição cearense",
+      "explanation": "O controle externo da atividade policial não se confunde com subordinação ao Secretário de Segurança. A classificação I/III depende também do texto estadual e das atualizações, não lidas nesta sessão.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 100,
+      "topic": "Estatuto da Polícia Civil cearense",
+      "explanation": "Posse, disponibilidade e preenchimento de comissão são regras da carreira cearense. O gabarito C fica histórico e pendente da fonte estadual, sem conversão em regra nacional ou acreana.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    }
+  ],
+  "inspetor": [
+    {
+      "item": 11,
+      "topic": "Fontwork e alternância de caixa",
+      "explanation": "O PDF mostra a citação artística e o gabarito B combina Fontwork e Shift+F3. O número de acionamentos depende do estado inicial e da versão; preservar esse contexto e a ilustração.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "software_em_caso_pratico"
+    },
+    {
+      "item": 12,
+      "topic": "Windows: menu e configurações",
+      "explanation": "O símbolo ausente é a tecla do logotipo Windows. A mostra Ctrl+Esc e Windows+I. Não deixar a tecla como lacuna nas alternativas nem tratar a linguagem coloquial do enunciado como especificação universal de interface.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "atalhos_de_teclado"
+    },
+    {
+      "item": 13,
+      "topic": "Comandos de navegação e espaço Linux",
+      "explanation": "O gabarito D reúne cd, ls e df. A afirmação sobre data de criação por ls e unidades padrão de df depende de sistema, opções e ambiente; não certificar as descrições em todos os Unix sem documentação técnica.",
+      "references": [],
+      "flags": [
+        "detalhes_de_comando_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "conceitos_em_trio"
+    },
+    {
+      "item": 14,
+      "topic": "Confidencialidade, disponibilidade e integridade",
+      "explanation": "As definições P1/P2/P3 correspondem a confidencialidade, disponibilidade e integridade. O triângulo foi visto no PDF, mas não integrado à publicação; confirmar a fonte técnica para a terminologia.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "fonte_tecnica_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceitos_em_trio"
+    },
+    {
+      "item": 15,
+      "topic": "Impress: exportar, localizar e abrir",
+      "explanation": "O PDF mostra em E os ícones PDF, localizar/substituir e pasta de abrir. Todas as alternativas gráficas sumiram da extração; gabarito histórico não torna esse texto utilizável sem as figuras e a versão.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "identificacao_de_icones"
+    },
+    {
+      "item": 16,
+      "topic": "Redes sociais e afirmações temporais",
+      "explanation": "A proposição I não pode tratar perfis racistas como vantagem legítima. A II contém ranking de uso de 2021 que precisa de fonte datada; III descreve funções gerais de LinkedIn e YouTube. Manter contexto histórico e não anunciar ranking atual sem evidência.",
+      "references": [],
+      "flags": [
+        "ranking_temporal_nao_verificado"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 17,
+      "topic": "Firefox e foco na barra",
+      "explanation": "O quadro de Inspetor indica X. A combinação usual da barra de endereços não deve ser inventada para selecionar uma alternativa; o PDF mostra a janela Imprimir, mas não resolve a controvérsia do gabarito nem a versão do programa.",
+      "references": [],
+      "flags": [
+        "gabarito_de_anulacao_nao_certificado",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "atalhos_de_teclado"
+    },
+    {
+      "item": 18,
+      "topic": "Filelink e prazo do serviço",
+      "explanation": "Tamanho default e prazo de disponibilidade do WeTransfer são dados de versão/serviço. A alternativa A é histórica, não prova que o serviço gratuito atual mantenha sete dias ou a mesma integração. Conferir documentação datada antes de usar.",
+      "references": [],
+      "flags": [
+        "servico_digital_temporal",
+        "versao_de_software_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "parametros_de_servico"
+    },
+    {
+      "item": 19,
+      "topic": "Calc: SE, média e soma",
+      "explanation": "O PDF fornece B7=22, C6=MUCURIPE e valores A10:A13 de 17,23,29,11. A expressão SE resulta em MUCURIPE; a fórmula MED não representa, como escrita, a função média exigida; SOMA(A10;A13)=28. A resposta histórica C depende de preservar a tabela, não só o texto extraído.",
+      "references": [],
+      "flags": [
+        "midia_nao_integrada",
+        "validacao_na_versao_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "planilha"
+    },
+    {
+      "item": 20,
+      "topic": "Criptomoedas e chaves de carteira",
+      "explanation": "A letra B corresponde ao julgamento histórico F,F,V. A formulação sobre moedas guardadas na carteira e irreversibilidade é simplificada: carteiras gerem chaves e efeitos dependem da rede/custódia. Não ensinar ausência universal de intermediários ou reversão como regra absoluta.",
+      "references": [],
+      "flags": [
+        "simplificacao_tecnica_a_revisar"
+      ],
+      "decision": "reviewed",
+      "style": "verdadeiro_falso"
+    },
+    {
+      "item": 21,
+      "topic": "Autoria colateral incerta",
+      "explanation": "Sem vínculo subjetivo e sem possibilidade de determinar o tiro fatal, o gabarito C trabalha tentativa para ambos sem concurso de pessoas. Não confundir com autoria cumulativa em que a perícia demonstra contribuição conjunta. Conferir o suporte doutrinário.",
+      "references": [
+        "cp:13",
+        "cp:14",
+        "cp:29"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 22,
+      "topic": "Crimes patrimoniais e limites da insignificância",
+      "explanation": "A resposta histórica C exige conferir o tratamento específico da apropriação indébita previdenciária e os valores invocados. O resumo estatístico do enunciado é histórico; não certifica incidência atual. Todas as cinco teses dependem de precedentes oficiais atuais.",
+      "references": [
+        "cp:168A",
+        "cp:180"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "dado_estatistico_historico"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 23,
+      "topic": "Rol de crimes hediondos",
+      "explanation": "A exceção indicada em A depende da redação da Lei 8.072 e da diferença entre arma de fogo, explosivo e furto com explosivo. Alterações posteriores do rol devem ser cotejadas; não certificar a lista de 2021 a partir da memória.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 24,
+      "topic": "Crimes sexuais e segredo de justiça",
+      "explanation": "A alternativa C é a tese histórica em desacordo. O segredo do art. 234-B não pode ser reduzido mecanicamente à vítima; houve alterações posteriores no tratamento de dados e consulta de condenados. Verificar cada tese no STJ e o âmbito temporal.",
+      "references": [
+        "cp:234B",
+        "cp:217A",
+        "cp:29"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "legislacao_alterada"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 25,
+      "topic": "Dependência química e imputabilidade",
+      "explanation": "Dependência não basta para inimputabilidade: é necessário demonstrar incapacidade de entendimento ou autodeterminação no momento do fato e aplicar a disciplina específica. A alternativa D descreve a categoria arguível, não uma isenção automática por laudo de dependência.",
+      "references": [
+        "cp:26"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 26,
+      "topic": "Legalidade e majorante de funcionário público",
+      "explanation": "O art. 327, §2º, enumera entidades e não menciona autarquia no texto transcrito. C invoca vedação de analogia desfavorável; a qualidade de funcionário público do caput não se confunde com o âmbito da majorante. Conferir a jurisprudência específica.",
+      "references": [
+        "cp:1",
+        "cp:327"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 27,
+      "topic": "Lugar do crime e ubiquidade",
+      "explanation": "O art. 6º considera ação/omissão e produção ou resultado esperado. C aplica o critério ao resultado no Brasil; distinguir da extraterritorialidade condicionada do art. 7º.",
+      "references": [
+        "cp:5",
+        "cp:6",
+        "cp:7"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 28,
+      "topic": "Lei intermediária mais benéfica",
+      "explanation": "A lei B tem a menor pena dentre as três e pode ter eficácia benéfica mesmo revogada pela C. CP 2 impede selecionar apenas a lei da ação ou a lei da sentença sem comparação global.",
+      "references": [
+        "cp:2"
+      ],
+      "flags": [
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 29,
+      "topic": "Crime permanente e sucessão de leis",
+      "explanation": "O caso situa permanência durante a entrada em vigor da lei nova. A tese E depende também da súmula do STF sobre cessação de permanência e não se confunde com combinação de leis para um fato instantâneo.",
+      "references": [
+        "cp:4"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes",
+        "marco_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 30,
+      "topic": "Especialidade entre tráfico e contrabando",
+      "explanation": "A alternativa A trabalha a lei especial de drogas para a importação da substância. Não acrescentar associação para o tráfico sem descrição de vínculo associativo; conferir os tipos especiais e a técnica de conflito aparente.",
+      "references": [
+        "cp:12"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 31,
+      "topic": "Elementos do fato típico",
+      "explanation": "A alternativa C usa a classificação doutrinária conduta, resultado, nexo e tipicidade. A exigência de resultado naturalístico varia conforme a espécie de delito; o resumo não deve sugerir que todo crime é material.",
+      "references": [
+        "cp:13",
+        "cp:18"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 32,
+      "topic": "Vínculo subjetivo e furto culposo",
+      "explanation": "O relato não descreve adesão da empregada ao plano do companheiro. Sem dolo de contribuição ou tipo culposo específico de furto, a responsabilização não decorre da mera falta de vigilância da chave.",
+      "references": [
+        "cp:18",
+        "cp:29",
+        "cp:155"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 33,
+      "topic": "Detração de recolhimento domiciliar",
+      "explanation": "O gabarito E refere-se à detração, não remição. A conversão de horas de recolhimento em tempo de pena e as condições do abatimento dependem da tese atual do STJ; não descontar integralmente 18 meses sem apurar as restrições.",
+      "references": [
+        "cp:42"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 34,
+      "topic": "Participação com executor inimputável",
+      "explanation": "A inimputabilidade do executor não torna, automaticamente, todo indutor autor mediato. D exige examinar domínio do fato e atuação do adolescente; distinguir participação de utilização de instrumento sem autonomia. Falta fonte doutrinária/judicial específica.",
+      "references": [
+        "cp:27",
+        "cp:29"
+      ],
+      "flags": [
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 35,
+      "topic": "Conduta e sonambulismo",
+      "explanation": "O relato afirma estado de inconsciência durante os movimentos. D corresponde à falta de voluntariedade da conduta; não deslocar a explicação para inexigibilidade de conduta diversa ou dolo eventual sem dados adicionais.",
+      "references": [
+        "cp:13",
+        "cp:18"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 36,
+      "topic": "Escusa absolutória patrimonial",
+      "explanation": "O art. 181 contempla descendente contra ascendente, ressalvadas as exceções do art. 183. O caso informa mãe de 45 anos e ausência de violência; não generalizar a isenção para todos os crimes patrimoniais.",
+      "references": [
+        "cp:181",
+        "cp:183"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 37,
+      "topic": "Drogas, prova e jurisprudência temporal",
+      "explanation": "B é a resposta histórica do comando em desacordo. O item reúne materialidade toxicológica, nulidades, reincidência e lei no tempo; exige confirmação das teses atuais, inclusive do impacto de decisões posteriores sobre porte para uso. Não certificar o conjunto só com Lei 11.343.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 38,
+      "topic": "Consumação do furto",
+      "explanation": "O gabarito D aponta apprehensio/amotio e exige o precedente do STJ sobre inversão da posse, ainda que breve. Não exigir posse mansa ou retirada para local seguro sem conferir a tese atual.",
+      "references": [
+        "cp:155"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 39,
+      "topic": "Dolo eventual e concurso formal",
+      "explanation": "A narrativa diz que o construtor prosseguiu sem se importar com as consequências após alerta. Isso sustenta a discussão de dolo eventual, mas não o presume de todo acidente ou infração técnica; conferir vínculo subjetivo e modalidade do concurso.",
+      "references": [
+        "cp:18",
+        "cp:70"
+      ],
+      "flags": [
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 40,
+      "topic": "Jurisprudência sobre crimes sexuais",
+      "explanation": "O gabarito histórico E exige conferir a relação professor/aluno no STJ. As outras quatro teses e eventuais mudanças nas majorantes e proteção de vulneráveis também precisam de revisão; as estatísticas citadas não são dados atuais da plataforma.",
+      "references": [
+        "cp:216A",
+        "cp:217A",
+        "cp:226"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "dado_estatistico_historico"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 41,
+      "topic": "Recurso no Juizado Especial Criminal",
+      "explanation": "A resposta B supõe incidência do rito da Lei 9.099 e sua apelação contra rejeição de denúncia, diferentemente da regra geral do CPP 581. É preciso conferir a pena atual do art. 134 e o rito aplicável antes de concluir a espécie recursal.",
+      "references": [
+        "cp:134",
+        "cpp:581"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 42,
+      "topic": "Regras do Juizado Especial Criminal",
+      "explanation": "A alternativa D depende do cotejo dos arts. 63, 69, 73 e 76 da Lei 9.099, incluindo registro da transação sem reincidência e prazo de cinco anos para nova concessão. A confirmação do texto especial permanece pendente.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 43,
+      "topic": "Retroatividade do Pacote Anticrime",
+      "explanation": "O conjunto de teses é temporalmente sensível: a limitação histórica do ANPP ao não recebimento da denúncia exige cotejo com julgamentos posteriores, assim como representação no estelionato e cadeia de custódia. Não atestar apenas a letra D sem revisar todos os distratores.",
+      "references": [
+        "cpp:28A",
+        "cpp:158A"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "legislacao_e_teses_temporais"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 44,
+      "topic": "Insignificância em crime ambiental",
+      "explanation": "As alternativas dependem do alcance de precedentes sobre defeso, petrechos proibidos e ofensividade concreta. O gabarito A não pode ser transformado em proibição absoluta de insignificância sem cotejo atual no STJ.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 45,
+      "topic": "Constituição de crédito tributário e tipicidade",
+      "explanation": "A alternativa C reproduz tese vinculante sobre crimes materiais tributários dos incisos I a IV. Exige confirmação da súmula no STF e da Lei 8.137; a pendência administrativa não deve ser generalizada a todo crime tributário.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 46,
+      "topic": "Violência doméstica e institutos despenalizadores",
+      "explanation": "O item cobra a exceção a cinco teses dos tribunais. A letra E não dispensa conferir as súmulas atuais sobre insignificância, coabitação e substituição da pena; o contexto da Lei Maria da Penha é essencial.",
+      "references": [
+        "cp:44"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 47,
+      "topic": "Suspensão condicional do processo",
+      "explanation": "A pena mínima de até um ano, e não máxima de dois, é o parâmetro da Lei 9.099 para o instituto, além dos requisitos. O rito do júri não afasta o instituto por si; conferir o texto especial e o caso, sem prometer direito automático.",
+      "references": [
+        "cp:124"
+      ],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 48,
+      "topic": "Perícia em produto impróprio ao consumo",
+      "explanation": "A letra C depende da incidência do art. 158 e da tese específica sobre mercadoria vencida. A discussão de dispensabilidade por outros elementos não pode ser resolvida apenas pela fórmula geral corpo de delito obrigatório.",
+      "references": [
+        "cpp:158"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 49,
+      "topic": "Crimes de armas e perigo abstrato",
+      "explanation": "O item exige cotejo das cinco teses, especialmente a distinção entre perigo concreto e abstrato e a excepcional insignificância de munição. A lei especial e os precedentes do STJ ainda precisam de confirmação.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 50,
+      "topic": "Lavagem e autolavagem",
+      "explanation": "A alternativa D enuncia a tese histórica incorreta sobre impossibilidade de autolavagem. Há ainda referência suspeita de continuidade delitiva ao art. 70 em B, que trata de concurso formal; conferir o PDF e os precedentes sem corrigir silenciosamente a fonte.",
+      "references": [
+        "cp:70",
+        "cp:71"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes",
+        "referencia_legal_inconsistente"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 51,
+      "topic": "Prova testemunhal e cerceamento",
+      "explanation": "D formula nulidade de modo genérico. O indeferimento exige avaliar pertinência, motivação e regras de cooperação, não simples residência no exterior. As demais teses do STJ também precisam de conferência atual.",
+      "references": [
+        "cpp:222A",
+        "cpp:366"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 52,
+      "topic": "Provas e sigilo profissional",
+      "explanation": "CPP 207 permite o depoimento após desobrigação se a pessoa quiser testemunhar, não cria obrigação automática. I deve ser lida com a delimitação atual das diligências suplementares pelo STF; o gabarito C é histórico.",
+      "references": [
+        "cpp:156",
+        "cpp:158",
+        "cpp:207",
+        "cpp:229",
+        "stf6298"
+      ],
+      "flags": [
+        "confronto_jurisprudencial_parcial"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 53,
+      "topic": "Verdade processual",
+      "explanation": "O gabarito C usa a verdade construída a partir de elementos lícitos do processo. Não justificar busca ilimitada de verdade real em detrimento de contraditório, imparcialidade e proibição de prova ilícita. Falta fonte doutrinária para certificação da nomenclatura.",
+      "references": [
+        "cpp:155",
+        "cpp:157"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 54,
+      "topic": "Prazo da denúncia",
+      "explanation": "CPP 46 distingue cinco dias com preso e quinze dias com investigado solto ou afiançado, contados do recebimento dos autos pelo MP. Não transportar esses prazos para leis especiais sem verificar regras próprias.",
+      "references": [
+        "cpp:46"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 55,
+      "topic": "Juiz das garantias e competência",
+      "explanation": "O gabarito de 2021 indica E como incorreta. A decisão do STF de 24/08/2023 encerra a competência com o oferecimento e amplia as exclusões; também afasta relaxamento automático pela extrapolação do prazo. B, D e E não conservam a mesma configuração de 2021.",
+      "references": [
+        "cpp:3B",
+        "cpp:3C",
+        "stf6298"
+      ],
+      "flags": [
+        "superacao_jurisprudencial"
+      ],
+      "decision": "obsolete",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 56,
+      "topic": "Progressão e milícia privada",
+      "explanation": "O gabarito C usa 50% para constituição de milícia. O art. 112, VI, c, no texto da Câmara consultado, passou a integrar o patamar de 75% após alteração de 2026. Sem data do fato que imponha lei histórica, a pergunta não tem a mesma resposta para o regime atual.",
+      "references": [
+        "lep:112"
+      ],
+      "flags": [
+        "superacao_legislativa"
+      ],
+      "decision": "obsolete",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 57,
+      "topic": "Fontes processuais extravagantes",
+      "explanation": "A classificação modificativa/autônoma é doutrinária e não se resolve só pelo título das leis. B é o gabarito transcrito; conferir a referência bibliográfica e evitar apresentar a taxonomia como lista legal exaustiva.",
+      "references": [],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 58,
+      "topic": "Formalidades do flagrante",
+      "explanation": "CPP 304, §4º, exige informações sobre filhos e responsável indicado. A letra D não dispensa as demais formalidades; o texto atual do art. 310 e as decisões de controle afastam generalizações sobre nulidade automática por prazo.",
+      "references": [
+        "cpp:304",
+        "cpp:305",
+        "cpp:306",
+        "cpp:310",
+        "stf6298"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 59,
+      "topic": "Inquérito, recurso e arquivamento",
+      "explanation": "CPP 5º, §2º, prevê recurso ao chefe de polícia contra indeferimento de abertura, tornando A a resposta histórica. A alternativa E exige atualização do procedimento de arquivamento diante do art. 28 e do controle do STF; não ensinar monopólio judicial de arquivamento.",
+      "references": [
+        "cpp:5",
+        "cpp:28",
+        "stf6298"
+      ],
+      "flags": [
+        "legislacao_e_interpretacao_alteradas"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 60,
+      "topic": "Recusa de depor por parentes",
+      "explanation": "CPP 206 enumera os familiares que podem recusar-se e a ressalva de impossibilidade de obter/integrar a prova de outro modo. A vedação por sigilo profissional do art. 207 é instituto distinto.",
+      "references": [
+        "cpp:206",
+        "cpp:207"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 61,
+      "topic": "Base de cálculo da progressão seguinte",
+      "explanation": "A letra E trabalha a pena remanescente. O cálculo concreto exige marcos de cumprimento, detração e regra temporal de percentuais; confirmar a jurisprudência do STJ para a operação, sem usar o total original indiscriminadamente.",
+      "references": [
+        "lep:111",
+        "lep:112"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "caso_pratico"
+    },
+    {
+      "item": 62,
+      "topic": "Interceptação e degravação",
+      "explanation": "A letra A afirma exigência de peritos oficiais que precisa ser confrontada com o precedente específico. Todos os demais enunciados também exigem cotejo quanto a subsidiariedade, ônus de demonstração e encontro fortuito.",
+      "references": [],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 63,
+      "topic": "Prisões e revisão nonagesimal",
+      "explanation": "A III transcreve parte do art. 316, mas não deve ensinar soltura automática no dia 91. As decisões do STF exigem controle fundamentado; a prisão temporária por epidemia com morte ainda exige conferência da Lei 7.960 e dos requisitos cumulativos.",
+      "references": [
+        "cpp:303",
+        "cpp:305",
+        "cpp:316",
+        "stf6298"
+      ],
+      "flags": [
+        "fonte_especial_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 64,
+      "topic": "Flagrante, custódia e defensor",
+      "explanation": "O gabarito D reúne nulidade por assistência, mas as demais teses sobre superação de vícios e ausência de audiência não devem ser tratadas como absolutas. Confrontar a decisão atual do STF e precedentes específicos do STJ, inclusive controle de maus-tratos e algemas.",
+      "references": [
+        "cpp:310",
+        "cf:5",
+        "stf6298"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 65,
+      "topic": "Indulto e comutação",
+      "explanation": "O enunciado reúne cinco teses que dependem do decreto aplicável e dos precedentes do STJ. A distinção entre pena original e remanescente não pode ser generalizada a qualquer decreto; manter E apenas como gabarito histórico não certificado.",
+      "references": [
+        "cf:84"
+      ],
+      "flags": [
+        "jurisprudencia_pendente",
+        "decreto_temporal_obrigatorio"
+      ],
+      "decision": "reviewed",
+      "style": "jurisprudencia_em_alternativas"
+    },
+    {
+      "item": 66,
+      "topic": "Cassação de ato",
+      "explanation": "E descreve perda por descumprimento das condições do benefício/licença, não revogação discricionária por conveniência. A cassação da habilitação tem requisitos próprios no CTB; a analogia doutrinária não certifica toda infração de trânsito como causa.",
+      "references": [],
+      "flags": [
+        "doutrina_e_fonte_especial_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 67,
+      "topic": "Poder de polícia e abuso",
+      "explanation": "Abuso de poder não se restringe a atos discricionários nem desvio de poder a vinculados. A análise II/III deve considerar competências legais, modalidades preventivas/repressivas e vinculadas/discricionárias. A letra E exige fonte doutrinária e legal.",
+      "references": [],
+      "flags": [
+        "doutrina_e_fonte_especial_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 68,
+      "topic": "Afastamento cautelar em improbidade",
+      "explanation": "A premissa admite determinação por autoridade administrativa ou judicial, enquanto o art. 20 atualizado atribui a medida à autoridade judicial, com até 90 dias prorrogáveis uma vez. O item também aparece com X no quadro controvertido de Inspetor, sem certificação de anulação.",
+      "references": [
+        "improbidade:20"
+      ],
+      "flags": [
+        "superacao_legislativa",
+        "gabarito_de_anulacao_nao_certificado"
+      ],
+      "decision": "obsolete",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 69,
+      "topic": "Responsabilidade subsidiária",
+      "explanation": "A é a indicação histórica, mas o enunciado genérico omite a relação principal/subsidiária e o ente que atua. Confirmar a construção doutrinária/jurisprudencial, sem responsabilizar órgãos sem personalidade ou excluir automaticamente a responsabilidade pessoal do agente.",
+      "references": [
+        "cf:37"
+      ],
+      "flags": [
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 70,
+      "topic": "Controle interno e externo",
+      "explanation": "CF 74, §1º, determina ciência ao TCU, não substituição genérica pelo MP. O §2º regula legitimados para denúncia e o art. 71 disciplina o controle de atos de pessoal.",
+      "references": [
+        "cf:71",
+        "cf:74"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 71,
+      "topic": "Anulação e convalidação",
+      "explanation": "O art. 54 da Lei 9.784 prevê decadência, ressalvada má-fé, não prescrição independente de boa-fé como B. A regra é federal e requer análise de incidência no ente; não universalizar o prazo para todos os regimes.",
+      "references": [
+        "processoadm:53",
+        "processoadm:54",
+        "processoadm:55"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 72,
+      "topic": "Renúncia e desistência no processo administrativo",
+      "explanation": "O art. 51 permite desistência total/parcial e renúncia a direitos disponíveis por manifestação escrita. A renúncia de um não alcança todos, e interesse público pode justificar prosseguimento.",
+      "references": [
+        "processoadm:51"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 73,
+      "topic": "Atos revogáveis",
+      "explanation": "O enunciado cita autor e descreve retirada por conveniência/oportunidade. A lei distingue revogação de anulação por ilegalidade, mas a reprodução da citação bibliográfica não foi verificada na obra.",
+      "references": [
+        "processoadm:53"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 74,
+      "topic": "Tipificação e dolo na improbidade",
+      "explanation": "O enquadramento II/IV requer cotejo com os incisos atuais do art. 10 e demonstração de prejuízo efetivo e dolo. O texto antigo não basta para ensinar improbidade objetiva ou culposa hoje; distinguir os grupos dos arts. 9º e 11.",
+      "references": [
+        "improbidade:1",
+        "improbidade:9",
+        "improbidade:10",
+        "improbidade:11"
+      ],
+      "flags": [
+        "requisitos_supervenientes_nao_explicitos"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 75,
+      "topic": "Inexigibilidade",
+      "explanation": "Inviabilidade de competição é o fundamento da inexigibilidade, distinto de dispensa por hipótese legal apesar de competição possível. Conferir o regime atual da Lei 14.133 e eventuais contratos sob regras de transição.",
+      "references": [],
+      "flags": [
+        "fonte_especial_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 76,
+      "topic": "Território e organização administrativa",
+      "explanation": "O caso trata de território federal, não estado ou município, e exige cotejo dos arts. 21 e 33 da CF. Há X no quadro de Inspetor, ainda não certificado como definitivo; não escolher letra por inferência.",
+      "references": [
+        "cf:21",
+        "cf:33"
+      ],
+      "flags": [
+        "gabarito_de_anulacao_nao_certificado"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 77,
+      "topic": "Elementos e pressupostos dos atos",
+      "explanation": "O quadro de Inspetor indica X, não resposta válida certificada. A classificação de motivo, finalidade e objeto depende da teoria adotada; não converter discussão doutrinária controvertida em alternativa única sem bibliografia e gabarito definitivo.",
+      "references": [],
+      "flags": [
+        "doutrina_pendente",
+        "gabarito_de_anulacao_nao_certificado"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 78,
+      "topic": "Duração do processo e eficiência",
+      "explanation": "CF 5º, LXXVIII, e 37 permitem relacionar celeridade e eficiência. A associação com modelo gerencial é classificação teórica, não imposição de um modelo único pela emenda.",
+      "references": [
+        "cf:5",
+        "cf:37"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 79,
+      "topic": "Dados de crianças",
+      "explanation": "LGPD 14, §1º, exige consentimento específico e em destaque de pelo menos um dos pais ou responsável na hipótese ali tratada. A frase não dispensa examinar outras bases legais admitidas e o melhor interesse; confirmar também interpretação regulatória atual.",
+      "references": [
+        "lgpd:14"
+      ],
+      "flags": [
+        "interpretacao_regulatoria_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "preenchimento_de_lacunas"
+    },
+    {
+      "item": 80,
+      "topic": "Sanções da LGPD",
+      "explanation": "Art. 52 prevê advertência, publicização e bloqueio; os limites e prazos de multa/suspensão não correspondem aos distratores II/IV. Não confundir teto da multa diária com um valor universal fixo de 50 mil reais.",
+      "references": [
+        "lgpd:52"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 81,
+      "topic": "Classificações da Constituição",
+      "explanation": "B é a classificação doutrinária formal, escrita, dogmática e democrática. O documento constitucional demonstra características, mas não substitui a bibliografia para certificar toda a taxonomia proposta.",
+      "references": [
+        "cf:1"
+      ],
+      "flags": [
+        "doutrina_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "teoria_doutrinaria"
+    },
+    {
+      "item": 82,
+      "topic": "Iniciativa de emenda",
+      "explanation": "Art. 60 exige um terço de cada Casa ou Presidente, ou mais da metade das Assembleias com maioria relativa em cada uma. A afirmativa II troca relativa por absoluta; IV não reproduz iniciativa popular no rol textual.",
+      "references": [
+        "cf:60"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 83,
+      "topic": "Legitimados à ADC",
+      "explanation": "CF 103 inclui entidade de classe de âmbito nacional. Partido precisa de representação no Congresso; AGU e presidentes mencionados não se tornam legitimados só por exercerem a função.",
+      "references": [
+        "cf:103"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 84,
+      "topic": "Garantias do júri",
+      "explanation": "CF 5º, XXXVIII, garante competência para crimes dolosos contra a vida. As denominações dos demais distratores não reproduzem plenitude de defesa, sigilo e soberania; soberania não equivale a irrecorribilidade absoluta.",
+      "references": [
+        "cf:5"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 85,
+      "topic": "Medida provisória: pressupostos e procedimento",
+      "explanation": "O comando separa pressupostos materiais de procedimentais. Relevância/urgência são materiais; E descreve a conversão em sessenta dias prorrogáveis uma vez. Acrescentar a ressalva de suspensão do prazo no recesso, sem substituir a resposta histórica.",
+      "references": [
+        "cf:62"
+      ],
+      "flags": [
+        "distincao_doutrinaria_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 86,
+      "topic": "Efeitos da improbidade e dano",
+      "explanation": "CF 37, §4º, enumera ressarcimento, mas isso não o torna automático sem dano efetivo e pressupostos legais. E deve ser lida com a redação atual da LIA, distinguindo perda de função de suspensão de direitos e indisponibilidade de confisco.",
+      "references": [
+        "cf:37",
+        "improbidade:12"
+      ],
+      "flags": [
+        "necessidade_de_dano_e_tipificacao"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 87,
+      "topic": "Direitos indígenas e recursos minerais",
+      "explanation": "CF 231 diferencia posse permanente, usufruto e participação nos resultados da lavra, mediante requisitos. Não afirmar propriedade particular ilimitada nem admitir exploração sem autorização e oitiva exigidas.",
+      "references": [
+        "cf:231"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 88,
+      "topic": "Funções do Ministério Público",
+      "explanation": "CF 129, II, sustenta B; a ação civil pública não é privativa do MP. Consultoria jurídica, registro pelo TCU e funções do Conselho da República não se confundem com o rol do Ministério Público.",
+      "references": [
+        "cf:129"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 89,
+      "topic": "Ação popular e cidadania",
+      "explanation": "CF 5º, LXXIII, admite cidadão para anular ato lesivo, inclusive ao patrimônio histórico e cultural. Cidadania não equivale a todo brasileiro, todo adulto residente ou qualquer pessoa.",
+      "references": [
+        "cf:5"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 90,
+      "topic": "Previdência e reserva de lei complementar",
+      "explanation": "O comando fala em lei ordinária, mas a CF 40 exige lei complementar nas hipóteses indicadas de requisitos diferenciados. O X do documento controvertido não é gabarito apto a treino; manter discussão histórica sem certificar anulação definitiva.",
+      "references": [
+        "cf:40"
+      ],
+      "flags": [
+        "gabarito_de_anulacao_nao_certificado",
+        "reserva_de_lei_complementar"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 91,
+      "topic": "Direitos sociais",
+      "explanation": "A alimentação está no rol do art. 6º. As demais alternativas têm proteção constitucional, mas não integram por isso esse rol textual específico.",
+      "references": [
+        "cf:6"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 92,
+      "topic": "Direitos fundamentais e limites de medida provisória",
+      "explanation": "O caráter absoluto em III é inadequado. IV formula vedação genérica de regulamentação de direitos fundamentais por MP que não decorre, nesses termos amplos, do art. 62. A letra C exige segunda análise doutrinária/jurisprudencial; não certificar a generalização como regra textual.",
+      "references": [
+        "cf:5",
+        "cf:60",
+        "cf:62"
+      ],
+      "flags": [
+        "ambiguidade_material",
+        "doutrina_e_jurisprudencia_pendentes"
+      ],
+      "decision": "reviewed",
+      "style": "afirmativas"
+    },
+    {
+      "item": 93,
+      "topic": "Habeas data",
+      "explanation": "CF 5º, LXXII, protege conhecimento/retificação de dados pessoais nos registros indicados. Não transformar habeas data em via para qualquer informação pública ou confundir com liberdade de locomoção.",
+      "references": [
+        "cf:5"
+      ],
+      "flags": [],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 94,
+      "topic": "Acumulação de cargos e atualização constitucional",
+      "explanation": "O art. 37, XVI, tem mudança em 2025 sobre cargo de professor com outro de qualquer natureza, mantida compatibilidade. A letra D genérica não deve receber justificativa que ensine o antigo rol como se fosse o atual; verificar também as regras de magistrado e vereador.",
+      "references": [
+        "cf:37",
+        "cf:38",
+        "cf:95"
+      ],
+      "flags": [
+        "legislacao_alterada"
+      ],
+      "decision": "reviewed",
+      "style": "confronto_de_regras"
+    },
+    {
+      "item": 95,
+      "topic": "Órgãos de segurança pública",
+      "explanation": "Polícia ferroviária federal está no art. 144. O alcance do papel das guardas municipais depende da interpretação atual do STF, não só de sua ausência no caput. Não ensinar que guardas são estranhas ao sistema sem cotejo jurisprudencial.",
+      "references": [
+        "cf:144"
+      ],
+      "flags": [
+        "jurisprudencia_pendente"
+      ],
+      "decision": "reviewed",
+      "style": "conceito_com_alternativas"
+    },
+    {
+      "item": 96,
+      "topic": "Processos e requisitos da controladoria cearense",
+      "explanation": "A assertiva incorreta C depende do requisito de tempo de serviço da LC 98. Não tratar os cinco anos citados como requisito nacional sem consultar a fonte estadual atual.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 97,
+      "topic": "Graus de transgressões disciplinares no Ceará",
+      "explanation": "A classificação da conduta de residência como transgressão depende do grau previsto na Lei 12.124/1993. Não copiar essa escala disciplinar para a PC-AC.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 98,
+      "topic": "Órgãos de controle e segurança cearenses",
+      "explanation": "O item mistura competências da Controladoria e conselhos estaduais, inclusive limites de apuração de direitos humanos. O texto constitucional estadual atual ainda precisa ser consultado.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 99,
+      "topic": "Regime funcional de servidor cearense",
+      "explanation": "A letra D depende da ressalva de acumulação lícita e das alterações do estatuto estadual; a alternativa E contém terminologia processual histórica que também exige revisão de compatibilidade constitucional.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    },
+    {
+      "item": 100,
+      "topic": "Afastamento, promoção e inventário na Polícia Civil do Ceará",
+      "explanation": "O gabarito B distingue progressão/promoção e formalidades de transmissão da função. Não substituir termos nem importar os destinatários administrativos da lei cearense para o Acre.",
+      "references": [],
+      "flags": [
+        "fonte_estadual_pendente",
+        "escopo_historico_ce",
+        "pertinencia_pcac_nao_comprovada"
+      ],
+      "decision": "reviewed",
+      "style": "lei_estadual_historica"
+    }
+  ],
+  "reviewed_at": "2026-10-23T00:46:40.973169Z"
+}

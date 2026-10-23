@@ -40,3 +40,7 @@ O nome genérico do arquivo do CBMMG foi validado pelo download: trata-se de um 
 ## Primeira revisão individual — 23/10/2026
 
 Consulte [o resultado da primeira revisão](revisao-2026-10-23/LEIAME.md): 20 pareceres de Português com publicação retida, três anulações definitivas de Escrivão e 177 itens ainda pendentes. O [SQL de registro da revisão](revisao-2026-10-23/aplicar-primeira-revisao.sql) é separado da carga inicial e preserva a auditoria e decisões concorrentes. Nenhuma questão foi autorizada para publicação neste lote.
+
+## Continuação individual — 23/10/2026
+
+Os [177 pareceres de continuação](continuacao-2026-10-23/LEIAME.md) completam a primeira passagem das 200 posições. O estado proposto é 192 pareceres retidos, cinco itens superados para treino atual e três anulações confirmadas, sem aprovação para publicação. O [SQL único da continuação](continuacao-2026-10-23/aplicar-continuacao.sql) preserva as 23 decisões anteriores. Conferência integral no Planalto, jurisprudência, contexto final e vínculo ao edital permanecem explicitamente pendentes.

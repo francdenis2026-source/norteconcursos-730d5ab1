@@ -1,0 +1,18 @@
+{
+  "inspetor": {
+    "positions_checked": 100,
+    "matches": 100,
+    "document_sha256": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+    "section_heading_ambiguous": true,
+    "definitive_key_certified": false,
+    "checked_at": "2026-10-23T00:46:40.968635+00:00"
+  },
+  "escrivao": {
+    "positions_checked": 100,
+    "matches": 100,
+    "document_sha256": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+    "section_heading_ambiguous": false,
+    "definitive_key_certified": true,
+    "checked_at": "2026-10-23T00:46:40.971776+00:00"
+  }
+}
