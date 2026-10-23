@@ -572,3 +572,57 @@
     background: Highlight; color: HighlightText; border-color: Highlight; box-shadow: none;
   }
 }
+
+
+/* Navigation comfort: independent navy dashboard tile; planning remains amber.
+   Preserve 286px sidebar, 88px collapsed rail and content width. */
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="navy"] {
+  --nav-identity: #173e62;
+}
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="navy"] {
+  --nav-identity: #89b9e2;
+}
+/* Add vertical breathing room without widening columns or reducing typography. */
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation {
+  row-gap: 5px;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-primary {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation :is(.app-nav__link, .nav-section-link) {
+  height: 56px;
+  min-height: 56px;
+  margin-block: 3px;
+  padding-block: 8px;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-section-link .app-nav__label {
+  gap: 2px;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-section-link strong {
+  line-height: 1.2;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-section-link small {
+  line-height: 1.2;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation :is(.nav-primary__label, .nav-section-label) {
+  color: var(--student-nav-text);
+  letter-spacing: .045em;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-primary__label {
+  color: #46708e;
+}
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .nav-primary__label {
+  color: #a0c7e4;
+}
+/* Collapsed mode uses its original 60×56 tile and compact labels. */
+.app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace.student-direct-navigation :is(.app-nav__link, .nav-section-link) {
+  margin-block: 3px;
+  padding: 6px 2px;
+}
+@media (max-width: 767px) {
+  .app-shell[data-area="student"] .app-sheet.student-navigation .navigation-workspace.student-direct-navigation :is(.app-nav__link, .nav-section-link) {
+    height: 58px;
+    min-height: 58px;
+  }
+}
