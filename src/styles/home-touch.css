@@ -219,3 +219,20 @@
   .home.home .home-header__register { display: none; }
   .home.home .home-header__actions { margin-left: auto; }
 }
+
+/* Compact the header registration CTA independently of the primary hero buttons. */
+@media (max-width: 760px) {
+  .home.home .home-header__register {
+    min-height: 40px;
+    padding: 7px 9px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    gap: 4px;
+    border-radius: 10px;
+  }
+  .home.home .home-header__register svg { width: 14px; height: 14px; }
+}
+@media (max-width: 390px) {
+  .home.home .home-header__register { padding-inline: 7px; font-size: 11px; }
+}
