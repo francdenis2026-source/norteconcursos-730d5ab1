@@ -141,3 +141,81 @@
 @media (max-width: 1100px) and (forced-colors: active) {
   .home-menu, .home-menu__group > summary { background: Canvas; color: CanvasText; }
 }
+
+
+/* Accessibility pass: readable homepage on compact phones and tablets.
+   This stylesheet is imported last by the homepage so these rules supersede
+   earlier compact overrides without affecting the authenticated dashboard. */
+@media (max-width: 1100px) {
+  .home.home { padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
+  .home.home .home-app-nav {
+    width: min(680px, calc(100% - 16px));
+    padding: 7px 5px;
+    border-radius: 20px;
+    gap: 2px;
+  }
+  .home.home .home-app-nav a {
+    min-height: 66px;
+    gap: 5px;
+    padding: 7px 2px;
+    border-radius: 14px;
+    font-size: clamp(11px, 2.9vw, 13px);
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+  }
+  .home.home .home-app-nav svg { width: 25px; height: 25px; stroke-width: 2.15; flex: none; }
+  .home.home .home-header__inner { min-height: 74px; gap: 10px; }
+  .home.home .home-header__actions { gap: 6px; }
+  .home.home .home-header__actions > button,
+  .home.home .home-menu-trigger { min-width: 48px; min-height: 48px; }
+  .home.home .home-menu-trigger svg,
+  .home.home .home-header__actions > button svg { width: 22px; height: 22px; }
+  .home.home .home-header__register { min-height: 46px; font-size: 14px; font-weight: 700; }
+  .home.home .home-header__register svg { width: 18px; height: 18px; }
+  .home.home :is(.home-section, .home-preparation__band) { scroll-margin-top: 88px; }
+  .home.home .home-hero__copy > p,
+  .home.home .home-preparation__intro > p,
+  .home.home .home-heading > p,
+  .home.home .home-plan__description,
+  .home.home .home-plan__features,
+  .home.home .home-preparation__panel p { font-size: 15px; line-height: 1.65; }
+  .home.home .home-hero .home-actions > :is(a, button),
+  .home.home .home-plan[data-plan] > .home-button { min-height: 48px; font-size: 14px; font-weight: 700; }
+  .home.home .home-preparation__tab { min-height: 48px; font-size: 14px; line-height: 1.4; }
+  .home.home .home-preparation__tab svg,
+  .home.home .home-preparation__tool summary svg { width: 20px; height: 20px; }
+  .home.home .home-preparation__tool summary,
+  .home.home .home-faq__list summary { min-height: 48px; font-size: 15px; line-height: 1.5; }
+  .home.home .home-trust li { font-size: 13px; line-height: 1.45; min-height: 42px; }
+  .home.home .home-plan h3 { font-size: 20px; line-height: 1.3; }
+  .home.home .home-eyebrow,
+  .home.home .home-plan__eyebrow { font-size: 12px; line-height: 1.45; }
+  .home.home .home-footer--command .home-footer__bottom { font-size: 12px; line-height: 1.55; }
+  .home-menu__group > summary { min-height: 52px; font-size: 15px; }
+  .home-menu .home-menu__group nav a { min-height: 48px; font-size: 15px; }
+  .home-menu__contact :is(address, a) { font-size: 14px; }
+  .home-menu__contact small { font-size: 12px; }
+  .home-menu__group > summary svg,
+  .home-menu__contact svg { width: 20px; height: 20px; }
+}
+@media (max-width: 760px) {
+  .home.home .home-hero__copy > p { font-size: 15px; line-height: 1.65; }
+  .home.home .home-hero .home-actions > :is(a, button) { font-size: 14px; padding-inline: 14px; }
+  .home.home .home-trust { flex-wrap: wrap; overflow: visible; gap: 8px; }
+  .home.home .home-trust li { flex: 1 1 140px; white-space: normal; padding: 8px 10px; }
+  .home.home .home-header__inner { min-height: 72px; }
+  .home.home .home-header__register { padding-inline: 10px; }
+}
+@media (max-width: 380px) {
+  .home.home .home-app-nav { width: calc(100% - 10px); padding: 6px 3px; gap: 0; }
+  .home.home .home-app-nav a { font-size: 10.5px; min-height: 64px; padding-inline: 1px; }
+  .home.home .home-app-nav svg { width: 23px; height: 23px; }
+  .home.home .home-header__actions { gap: 2px; }
+  .home.home .home-header__register { font-size: 12px; }
+  .home.home .home-hero h1 { overflow-wrap: normal; }
+}
+@media (max-width: 359px) {
+  .home.home .home-header__register { display: none; }
+  .home.home .home-header__actions { margin-left: auto; }
+}
