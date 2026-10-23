@@ -936,7 +936,7 @@
   :root:not(.dark) .home.home #inicio.home-hero {
     background-color: transparent;
     background-image:
-      linear-gradient(90deg, rgb(246 249 252 / 98%) 0%, rgb(246 249 252 / 94%) 30%, rgb(246 249 252 / 77%) 46%, rgb(246 249 252 / 7%) 78%),
+      linear-gradient(90deg, rgb(215 227 237 / 94%) 0%, rgb(219 231 240 / 90%) 27%, rgb(223 233 241 / 69%) 40%, rgb(226 235 242 / 18%) 53%, transparent 65%),
       url('/media/hero/hero-norte-recorte.webp');
     background-size: 100% 100%, auto min(94svh, 920px);
     background-position: center center, right -22px bottom;
@@ -973,4 +973,110 @@
   background: #ffffff;
   color: #174c7e;
   border-color: #9aafc2;
+}
+
+
+/* Light-theme contrast pass: no opaque white wash over the agent.
+   Restore dark ink on all pale reading surfaces and give interactive
+   states distinct accessible emphasis; keep SVG clock and dark mode intact. */
+:root:not(.dark) .home.home {
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+  --stage-muted: #405469;
+  --home-glass-light: rgb(255 255 255 / 12%);
+  --home-glass-shadow: 0 10px 26px -23px rgb(18 42 65 / 24%);
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__info, .home-preparation__intro, .home-operations__heading,
+  .home-plans__signal, .home-plans__notice, .home-plan[data-plan],
+  .home-plan-comparison, .home-faq, .home-platform-qr
+) {
+  color: #182a3c;
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+  --home-text: #182a3c;
+  --home-muted: #405469;
+  --stage-gold: #86591d;
+  border-color: #ced9e3;
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__items p, .home-preparation__intro > p,
+  .home-operations__heading p, .home-plan__description,
+  .home-plan__features li, .home-faq__list p,
+  .home-plans__notice p, .home-plans__signal p,
+  .home-footer__bottom, .home-footer__credit
+) {
+  color: #405469;
+}
+:root:not(.dark) .home.home :is(
+  .home-preparation__items h3, .home-preparation__intro h2,
+  .home-operations__heading h2, .home-plan h3,
+  .home-faq h3, .home-plan-comparison summary
+) {
+  color: #182a3c;
+}
+:root:not(.dark) .home.home :is(
+  .home-operations__heading .home-eyebrow,
+  .home-plans--insignia .home-eyebrow,
+  .home-plans--insignia .home-plans__signal strong,
+  .home-plan__annual, .home-footer--command .home-footer__links h3
+) {
+  color: #86591d;
+}
+:root:not(.dark) .home.home .home-hero__study-links :is(.daily-badge, .question-count-badge) {
+  background: #f9fbfd;
+  color: #182a3c;
+  border: 1px solid #bdcedd;
+  --on-ink: #182a3c;
+  --on-ink-muted: #405469;
+}
+:root:not(.dark) .home.home .home-hero__study-links :is(
+  .daily-badge__main strong, .question-count-main, .question-count-main strong
+) { color: #182a3c; }
+:root:not(.dark) .home.home .home-hero__study-links :is(
+  .daily-badge__main small, .question-count-detail,
+  .question-count-eyebrow, .daily-badge__count
+) { color: #405469; }
+:root:not(.dark) .home.home .home-hero .home-trust li {
+  background: #f7fafd;
+  color: #405469;
+  border-color: #cbd8e3;
+}
+:root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]) {
+  background: transparent;
+  color: #284860;
+}
+:root:not(.dark) .home.home .home-faq__list summary,
+:root:not(.dark) .home.home .home-plan__features summary {
+  color: #174c7e;
+}
+:root:not(.dark) .home.home .home-hero__copy > p {
+  background: rgb(240 246 250 / 95%);
+  color: #30465a;
+  border-color: #c1d1df;
+}
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    /* Retain the cutout subject in full color, unwashed on the right. */
+    background-color: transparent;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__copy {
+    color: #182a3c;
+  }
+}
+@media (max-width: 900px) {
+  :root:not(.dark) .home.home #inicio.home-hero > .home-hero__image {
+    opacity: .88;
+    filter: saturate(.92) contrast(1.06) drop-shadow(0 12px 22px rgb(18 42 65 / 20%));
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    /* The reading cards protect the copy; a milky full-screen overlay is not needed. */
+    background: linear-gradient(180deg, rgb(223 232 239 / 16%), transparent 65%);
+  }
+}
+@media (forced-colors: active) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-image: none;
+    background-color: Canvas;
+  }
 }
