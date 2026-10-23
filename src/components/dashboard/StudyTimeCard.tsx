@@ -1,5 +1,6 @@
 import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { Link } from "@tanstack/react-router";
 import { CalendarCheck, CalendarClock, Clock, Hourglass, TrendingUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -135,11 +136,7 @@ export function StudyTimeCard({ userId }: { userId: string }) {
             <span>Últimos 14 dias</span>
             {stats.avg > 0 && <span>Média diária: {fmtHuman(stats.avg)}</span>}
           </div>
-          <div
-            className="relative flex h-32 items-end gap-1.5"
-            role="img"
-            aria-label="Tempo ativo por dia nos últimos 14 dias"
-          >
+          <div className="relative flex h-32 items-end gap-1.5">
             {stats.avg > 0 && (
               <div
                 className="pointer-events-none absolute inset-x-0 border-t border-dashed border-sky-500/40"
@@ -149,13 +146,18 @@ export function StudyTimeCard({ userId }: { userId: string }) {
             {stats.days.map((d) => {
               const isToday = d.k === stats.todayKey;
               return (
-                <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}${isToday ? " · hoje" : ""}`}>
-                  <div className="flex h-full min-w-0 flex-1 flex-col items-center gap-1.5">
+                <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}${isToday ? " · hoje" : ""} — ver atividades`}>
+                  <Link
+                    to="/dashboard/history"
+                    search={{ day: d.k }}
+                    aria-label={`Ver atividades de ${d.label}${isToday ? " (hoje)" : ""}: ${fmtHuman(d.s)}`}
+                    className="flex h-full min-w-0 flex-1 flex-col items-center gap-1.5 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+                  >
                     <div className="flex w-full flex-1 items-end">
                       <div
                         className={cn(
                           "w-full rounded-t-md transition-colors",
-                          d.s ? (isToday ? "bg-sky-500" : "bg-sky-500/65") : "bg-muted",
+                          d.s ? (isToday ? "bg-sky-500" : "bg-sky-500/65 hover:bg-sky-500/85") : "bg-muted hover:bg-sky-500/30",
                         )}
                         style={{ height: `${Math.max(d.s ? 6 : 3, (d.s / stats.max) * 100)}%` }}
                       />
@@ -168,7 +170,7 @@ export function StudyTimeCard({ userId }: { userId: string }) {
                     >
                       {d.label.slice(0, 2)}
                     </span>
-                  </div>
+                  </Link>
                 </Hint>
               );
             })}
