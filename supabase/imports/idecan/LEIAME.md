@@ -30,3 +30,9 @@ node --import ./scripts/alias.mjs scripts/idecan/audit-corpus.mjs
 ```
 
 O relatório separa Polícia Civil de PM/bombeiros, usa apenas os itens retidos como denominador e identifica referências espelhadas, páginas de concurso e URL genérica de gabarito. Não certifica metadados anteriores, não consulta o banco e não importa nem ativa questões. A coleta adicional no portal de concursos concluídos depende de acesso de rede aos domínios oficiais. As pendências de fonte e de revisão devem ser resolvidas antes de produzir estatísticas de incidência ou publicar conteúdo.
+
+## Nova coleta: PC-CE 2021
+
+Foram preparados dois pacotes privados com 100 itens cada (Inspetor e Escrivão, Tipo B), separados do JSON legado. Leia [a coleta e suas pendências](PCAC_COLETA_PC_CE_2021.md) antes de usar o [SQL de carga privada](pcce_2021_acervo_privado.sql). O gabarito de Inspetor tem divergência entre o título do link e o cabeçalho interno; os textos jurídicos são históricos e nenhum dos 200 itens foi aprovado para publicação. A carga remota ainda não foi executada.
+
+O nome genérico do arquivo do CBMMG foi validado pelo download: trata-se de um PDF oficial acessível, não de um placeholder. O inventário anterior foi corrigido para distinguir nome genérico de URL inválida; a evidência do download consta em `fontes_verificadas_2026-10-22.json`.

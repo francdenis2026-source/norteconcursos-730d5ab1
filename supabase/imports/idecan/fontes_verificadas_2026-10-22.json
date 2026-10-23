@@ -1,0 +1,42 @@
+[
+  {
+    "contest_id": 32,
+    "title_on_official_page": "GABARITO DEFINITIVO",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=X6BT90RYGNDO2S8DGORM9OO61FDNBPF2P0I6D2GESRJNOE4S4WCY4LGHA0TVQ1S1DDEP85BIAPGOEYBF1384.pdf",
+    "pdf_sha256": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+    "pdf_bytes": 376814,
+    "download_verified_as_pdf": true,
+    "verification_date": "2026-10-22",
+    "scope": "arquivo consultado; não comprova revisão jurídica nem ativação de questões"
+  },
+  {
+    "contest_id": 201,
+    "title_on_official_page": "GABARITO OFICIAL DEFINITIVO TIPO A-B",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=445F7XU35JUR4VEO0IWB06549QLKTDVHWSRH944PUKAY0OOVBQJFGC5RHCW660BCV9CXBLTBYOPH8OJJ7158.pdf",
+    "pdf_sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+    "pdf_bytes": 427452,
+    "download_verified_as_pdf": true,
+    "verification_date": "2026-10-22",
+    "scope": "arquivo consultado; não comprova revisão jurídica nem ativação de questões"
+  },
+  {
+    "contest_id": 200,
+    "title_on_official_page": "GABARITO OFICIAL DEFINITIVO TIPO A-B",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=QXKCWH6A0MIYW5KEAAHR3LTA6NR7EEQ2NA98G7VML2QR17129NO8IRQ5R6FVGRUVQEVI061WJKYVIH267159.pdf",
+    "pdf_sha256": "f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432",
+    "pdf_bytes": 113975,
+    "download_verified_as_pdf": true,
+    "verification_date": "2026-10-22",
+    "scope": "arquivo consultado; não comprova revisão jurídica nem ativação de questões"
+  },
+  {
+    "contest_id": 224,
+    "title_on_official_page": "GABARITO OFICIAL DEFINITIVO -TIPO ABC",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+    "pdf_sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
+    "pdf_bytes": 227731,
+    "download_verified_as_pdf": true,
+    "verification_date": "2026-10-22",
+    "scope": "arquivo consultado; não comprova revisão jurídica nem ativação de questões"
+  }
+]

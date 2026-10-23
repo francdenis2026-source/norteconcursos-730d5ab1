@@ -10,7 +10,7 @@ const countBy = (rows, key) => Object.fromEntries(
 export function sourceKind(value) {
   const url = new URL(value);
   if (!/(^|\.)idecan\.org\.br$/.test(url.hostname)) return "mirror";
-  if (/GABARITO_OFICIAL_DEFINITIVO/i.test(url.search)) return "placeholder";
+  if (/GABARITO_OFICIAL_DEFINITIVO/i.test(url.search)) return "generic_filename_not_reverified";
   if (/Concurso\.aspx$/i.test(url.pathname)) return "contest_page";
   return "official_link_not_reverified";
 }
@@ -86,7 +86,7 @@ export function renderReport(report) {
       `Vínculos a tópicos de edital neste JSON: ${exam.syllabus_topic_links}.\n`).join("\n") +
     `\n## Próxima coleta e critérios de entrada\n\n` +
     `1. Consultar [concursos concluídos da IDECAN](${report.official_directory}); priorizar Polícia Civil, depois Polícia Penal/perícia e, em separado, PM/bombeiros. Conferir banca, instituição, cargo, ano e caderno no próprio documento.\n` +
-    `2. Arquivar PDF original da prova, edital/retificações e gabarito definitivo com URL oficial, data de coleta e SHA-256. Página de concurso não substitui arquivo de gabarito; URL genérica/placeholder precisa ser resolvida.\n` +
+    `2. Arquivar PDF original da prova, edital/retificações e gabarito definitivo com URL oficial, data de coleta e SHA-256. Página de concurso não substitui arquivo de gabarito; nome genérico de arquivo precisa ser validado pelo download.\n` +
     `3. Extrair enunciado, alternativas, textos e figuras com página/número de origem. Manter anuladas no registro histórico, fora dos treinos. Comparar versões de caderno e bloquear gabaritos conflitantes.\n` +
     `4. Classificar disciplina, tópico e forma de cobrança mediante revisão; registrar legislação estadual para não transferir regras de SC/MG ao Acre. Não inferir tópicos ou estilo apenas pelo rótulo da disciplina.\n` +
     `5. Usar o importador existente em \`under_review\`. Para ativar, cumprir CONTENT_GOVERNANCE.md: tópico de edital, fonte oficial, vigência e revisão individual. \`sem_alteracao_localizada\` não comprova revisão jurídica concluída.\n` +

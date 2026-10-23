@@ -27,7 +27,7 @@ test("military questions have a separate comparison scope and per-booklet denomi
 test("official-looking URLs do not certify an answer key or accept lookalike domains", () => {
   assert.equal(sourceKind("https://idecan.org.br.evil.test/key.pdf"), "mirror");
   assert.equal(sourceKind("https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201"), "contest_page");
-  assert.equal(sourceKind("https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=GABARITO_OFICIAL_DEFINITIVO.pdf"), "placeholder");
+  assert.equal(sourceKind("https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID=GABARITO_OFICIAL_DEFINITIVO.pdf"), "generic_filename_not_reverified");
   assert.equal(sourceKind(item().answer_key_url), "official_link_not_reverified");
 });
 test("existing corpus is reproducible and its metadata does not approve publication", () => {

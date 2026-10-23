@@ -1,0 +1,57 @@
+{
+  "packs": [
+    {
+      "file": "pcce_inspetor_2021_corpus.json",
+      "title": "PC-CE 2021 — Inspetor de Polícia Civil — Tipo B",
+      "sha256": "56a363de9d9c7d346d116c9e4d86cd8f5d737222ea51595a906c8596813c6cfe",
+      "items": 100,
+      "page_count": 32,
+      "annulled_in_document": [
+        17,
+        68,
+        76,
+        77,
+        90
+      ],
+      "key_requires_clarification": true,
+      "disciplines": {
+        "LÍNGUA PORTUGUESA": 10,
+        "INFORMÁTICA": 10,
+        "NOÇÕES DE DIREITO PENAL": 20,
+        "LEGISLAÇÃO PENAL EXTRAVAGANTE": 10,
+        "NOÇÕES DE DIREITO PROCESSUAL PENAL": 15,
+        "NOÇÕES DE DIREITO ADMINISTRATIVO": 15,
+        "NOÇÕES DE DIREITO CONSTITUCIONAL": 15,
+        "LEGISLAÇÃO ESPECÍFICA": 5
+      },
+      "alternative_label_issues": [],
+      "publication_approved": false
+    },
+    {
+      "file": "pcce_escrivao_2021_corpus.json",
+      "title": "PC-CE 2021 — Escrivão de Polícia Civil — Tipo B",
+      "sha256": "a835d92983601375c77355a50f68bdc77092e4fb88fdb9686ff453b8ed2fd57d",
+      "items": 100,
+      "page_count": 32,
+      "annulled_in_document": [
+        18,
+        43,
+        79
+      ],
+      "key_requires_clarification": false,
+      "disciplines": {
+        "LÍNGUA PORTUGUESA": 10,
+        "INFORMÁTICA": 10,
+        "NOÇÕES DE DIREITO PENAL": 20,
+        "LEGISLAÇÃO PENAL EXTRAVAGANTE": 10,
+        "NOÇÕES DE DIREITO PROCESSUAL PENAL": 15,
+        "NOÇÕES DE DIREITO ADMINISTRATIVO": 15,
+        "NOÇÕES DE DIREITO CONSTITUCIONAL": 15,
+        "LEGISLAÇÃO ESPECÍFICA": 5
+      },
+      "alternative_label_issues": [],
+      "publication_approved": false
+    }
+  ],
+  "database_import_performed": false
+}

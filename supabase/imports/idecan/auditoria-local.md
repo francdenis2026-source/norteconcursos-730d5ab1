@@ -81,7 +81,7 @@ Fontes do caderno:
 
 Referências de gabarito:
 
-- https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf — `placeholder`
+- https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf — `generic_filename_not_reverified`
 
 Revisão declarada: atemporal: 5; missing: 38; sem_alteracao_localizada: 3. Vínculos a tópicos de edital neste JSON: 0.
 
@@ -116,7 +116,7 @@ Revisão declarada: missing: 98. Vínculos a tópicos de edital neste JSON: 0.
 ## Próxima coleta e critérios de entrada
 
 1. Consultar [concursos concluídos da IDECAN](https://concurso.idecan.org.br/editais?status=concluidos); priorizar Polícia Civil, depois Polícia Penal/perícia e, em separado, PM/bombeiros. Conferir banca, instituição, cargo, ano e caderno no próprio documento.
-2. Arquivar PDF original da prova, edital/retificações e gabarito definitivo com URL oficial, data de coleta e SHA-256. Página de concurso não substitui arquivo de gabarito; URL genérica/placeholder precisa ser resolvida.
+2. Arquivar PDF original da prova, edital/retificações e gabarito definitivo com URL oficial, data de coleta e SHA-256. Página de concurso não substitui arquivo de gabarito; nome genérico de arquivo precisa ser validado pelo download.
 3. Extrair enunciado, alternativas, textos e figuras com página/número de origem. Manter anuladas no registro histórico, fora dos treinos. Comparar versões de caderno e bloquear gabaritos conflitantes.
 4. Classificar disciplina, tópico e forma de cobrança mediante revisão; registrar legislação estadual para não transferir regras de SC/MG ao Acre. Não inferir tópicos ou estilo apenas pelo rótulo da disciplina.
 5. Usar o importador existente em `under_review`. Para ativar, cumprir CONTENT_GOVERNANCE.md: tópico de edital, fonte oficial, vigência e revisão individual. `sem_alteracao_localizada` não comprova revisão jurídica concluída.

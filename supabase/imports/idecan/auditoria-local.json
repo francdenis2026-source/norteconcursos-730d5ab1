@@ -361,7 +361,7 @@
       "answer_keys": [
         {
           "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
-          "kind": "placeholder"
+          "kind": "generic_filename_not_reverified"
         }
       ],
       "declared_answer_key_status": {
