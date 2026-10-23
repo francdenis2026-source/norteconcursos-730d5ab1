@@ -15,6 +15,41 @@ svg.tactical-clock-backdrop {
   opacity: 0.86;
   filter: drop-shadow(0 1px 1px #0008);
 }
+.tactical-clock-backdrop__scale {
+  pointer-events: none;
+}
+.tactical-clock-backdrop__hour-mark {
+  fill: none;
+  stroke: #c7a45f;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+.tactical-clock-backdrop__minute-mark {
+  fill: none;
+  stroke: #b89960;
+  stroke-width: 0.8;
+  opacity: 0.5;
+}
+.tactical-clock-backdrop__numerals {
+  fill: #d8b979;
+  stroke: #211c14;
+  stroke-width: 2.5;
+  paint-order: stroke fill;
+  font-family: var(--font-insignia, Georgia, serif);
+  font-size: 17px;
+  font-weight: 700;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.tactical-clock-backdrop__zone {
+  fill: #c7ad78;
+  stroke: #211c14;
+  stroke-width: 1.7;
+  paint-order: stroke fill;
+  font-family: ui-monospace, monospace;
+  font-size: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 .tactical-clock-backdrop__hand {
   transform-origin: 0 0;
   transform: rotate(var(--hand-angle));

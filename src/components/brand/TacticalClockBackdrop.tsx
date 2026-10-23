@@ -50,6 +50,41 @@ export function TacticalClockBackdrop() {
           transform="translate(1043 387)"
           style={{ "--hand-gold": `url(#${goldId})` } as CSSProperties}
         >
+          <g className="tactical-clock-backdrop__scale">
+            {Array.from({ length: 60 }, (_, minute) => (
+              <path
+                key={minute}
+                d={minute % 5 === 0 ? "M0-193V-181" : "M0-192V-188"}
+                transform={`rotate(${minute * 6})`}
+                className={
+                  minute % 5 === 0
+                    ? "tactical-clock-backdrop__hour-mark"
+                    : "tactical-clock-backdrop__minute-mark"
+                }
+              />
+            ))}
+            <g
+              className="tactical-clock-backdrop__numerals"
+              textAnchor="middle"
+              dominantBaseline="central"
+            >
+              <text x="0" y="-112">
+                12
+              </text>
+              <text x="112" y="0">
+                3
+              </text>
+              <text x="0" y="112">
+                6
+              </text>
+              <text x="-112" y="0">
+                9
+              </text>
+            </g>
+            <text className="tactical-clock-backdrop__zone" x="0" y="83" textAnchor="middle">
+              ACRE · UTC−5
+            </text>
+          </g>
           <g
             className="tactical-clock-backdrop__hand tactical-clock-backdrop__hour"
             style={{ "--hand-angle": `${angles.hour}deg` } as CSSProperties}
