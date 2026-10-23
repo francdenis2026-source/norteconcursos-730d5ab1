@@ -1166,3 +1166,115 @@
   .home.home .home-header__register { padding-inline: 12px; font-size: 14px; }
   .home.home .home-login { padding-inline: 8px; font-size: 14px; }
 }
+
+
+/* Desktop homepage / mineral editorial light mode.
+   Richer blue-slate atmosphere without the milky veil over the officer.
+   Scoped to the public homepage and desktop; no mobile or dark-mode changes. */
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home {
+    --home-bg: #d9e5ed;
+    --home-surface: #f7fafc;
+    --home-tint: #dce9f2;
+    --home-glass-fill: #f5f9fc;
+    --home-glass-edge: #b5c9d7;
+    --home-glass-light: rgb(255 255 255 / 13%);
+    --stage-card: #f8fbfd;
+    --stage-line: #b9cedc;
+    --stage-muted: #364e63;
+    --home-canvas-veil: rgb(207 224 235 / .74);
+    background: #d9e5ed;
+    color: #172f44;
+  }
+  /* Allow the clock artwork to read as a purposeful faint engraving. */
+  :root:not(.dark) .home.home .home-backdrop {
+    background-color: #d5e3ec;
+    --backdrop-clock-veil: rgb(208 225 237 / .75);
+  }
+  :root:not(.dark) .home.home .home-backdrop .tactical-clock-backdrop__mechanism {
+    opacity: .43;
+    filter: none;
+  }
+  :root:not(.dark) .home.home .home-backdrop .tactical-clock-backdrop__scale {
+    opacity: .55;
+  }
+  /* A dark-to-soft slate wash behind copy only. Rightmost half of the
+     photograph is kept clear, so the person retains detail and saturation. */
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-color: #cfdfeb;
+    background-image:
+      linear-gradient(90deg,
+        rgb(200 217 231 / .98) 0%,
+        rgb(207 223 235 / .94) 24%,
+        rgb(209 226 238 / .72) 37%,
+        rgb(211 228 238 / .24) 49%,
+        transparent 61%),
+      url('/media/hero/hero-norte-recorte.webp');
+    box-shadow: inset 0 -1px 0 rgb(39 70 91 / .14);
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    background: linear-gradient(180deg, transparent 75%, rgb(180 202 219 / .20));
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__copy > p {
+    background: rgb(229 240 247 / .9);
+    color: #2d465a;
+    border: 1px solid #b7cbda;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero .home-hero__study-links :is(.daily-badge, .question-count-badge),
+  :root:not(.dark) .home.home #inicio.home-hero .home-trust li {
+    background: #edf5fa;
+    color: #172f44;
+    border-color: #b2c9d8;
+    box-shadow: 0 6px 20px -16px rgb(25 55 81 / .34);
+  }
+  :root:not(.dark) .home.home .home-header {
+    background: rgb(232 241 247 / .97);
+    border-bottom: 1px solid #b4c9d9;
+    box-shadow: 0 7px 22px -20px rgb(25 52 73 / .4);
+  }
+  /* Related editorial panels share a single mineral system instead of
+     alternating blown-out white and nearly white stripes. */
+  :root:not(.dark) .home.home .home-preparation__band {
+    background: linear-gradient(115deg, #cbdde9, #e4eef5 70%, #d7e5ee);
+    border-color: #b4cbd9;
+  }
+  :root:not(.dark) .home.home .home-operations {
+    background: linear-gradient(165deg, #d9e6f0 0%, #cbdce8 48%, #e2edf4);
+  }
+  :root:not(.dark) .home.home .home-plans--insignia {
+    background: linear-gradient(145deg, #e3edf4, #d4e3ed 55%, #e7f0f5);
+  }
+  :root:not(.dark) .home.home .home-final {
+    background: linear-gradient(120deg, #c8dce9, #e0ebf3);
+  }
+  :root:not(.dark) .home.home .home-footer--command {
+    background: linear-gradient(180deg, #d1e0eb, #c4d7e5);
+    border-top-color: #a9c1d2;
+  }
+  :root:not(.dark) .home.home :is(
+    .home-preparation__info, .home-plans__notice, .home-faq,
+    .home-plan[data-plan], .home-plan-comparison, .home-platform-qr
+  ) {
+    --home-glass-fill: #f5f9fc;
+    --home-glass-edge: #b6c9d7;
+    background: #f5f9fc;
+    border-color: #b6c9d7;
+    box-shadow: 0 3px 8px rgb(26 55 77 / .07), 0 20px 38px -28px rgb(25 55 81 / .32);
+  }
+  :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan].home-plan--featured {
+    background: linear-gradient(155deg, #f6ebd8, #f8fafc 48%, #f2f6fa);
+    border-color: #a57d40;
+  }
+  :root:not(.dark) .home.home :is(
+    .home-heading p, .home-preparation__intro p, .home-operations__heading p,
+    .home-plan__description, .home-plan__features li, .home-footer__bottom
+  ) {
+    color: #364e63;
+  }
+}
+@media (forced-colors: active) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background: Canvas;
+    color: CanvasText;
+  }
+}
