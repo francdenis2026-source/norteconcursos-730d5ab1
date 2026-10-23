@@ -1,0 +1,39 @@
+{
+  "item": 29,
+  "question_id": "441523b1-ea7e-40d4-8b3b-a1f427bc666f",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "previous_items": "Os itens 23–28 não constam no snapshot administrativo disponível; o próximo item existente é o 29.",
+  "reviewed_at": "2026-10-23",
+  "answer": {
+    "official_key": "E",
+    "official_key_source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Lei nº 14.751/2023 — Lei Orgânica Nacional das Polícias Militares e dos Corpos de Bombeiros Militares",
+    "article": "2º",
+    "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14751.htm",
+    "sha256": "f9ae07dfc89b90e3d1369d8263b7815aa5c32f47c943887a4424f640646d4ceb",
+    "checked_at": "2026-10-23T04:06:14Z",
+    "relevant_text": "instituições militares permanentes, exclusivas e típicas de Estado",
+    "conclusion": "A alternativa E reproduz a tríade do art. 2º. As expressões essenciais à Justiça Militar e forças auxiliares/reserva do Exército são relações distintas, não transformam as instituições em auxiliares da Justiça Militar."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "role": "Aluno-Soldado Temporário (QPTPM)",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "annex": "II, printed pages 51–52",
+    "excerpt": "Lei nº 14.751, de 12 de dezembro de 2023 — Lei Orgânica Nacional das Polícias Militares e dos Corpos de Bombeiros Militares dos Estados e suas atualizações.",
+    "confirmed": true
+  },
+  "explanation": "De acordo com o art. 2º da Lei 14.751/2023, as Polícias Militares e os Corpos de Bombeiros Militares são instituições militares permanentes, exclusivas e típicas de Estado. A mesma frase diz que são essenciais à Justiça Militar e, separadamente, forças auxiliares e reserva do Exército. A) Errada: não são indispensáveis à igualdade entre os Estados; o texto fala em preservação da ordem pública. B) Errada: essenciais à Justiça Militar não significa auxiliares da Justiça Militar; forças auxiliares refere-se ao Exército. C) Errada: o artigo não as define como essenciais ao Poder Judiciário nem exclusivas de Governo. D) Errada: proteção da segurança pública não autoriza acrescentar soberania nacional à tríade. E) Correta: reproduz as três características expressas. Exemplo: diante de alternativas que misturam esses conceitos, compare a lista literal do art. 2º antes de escolher.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item29-lonpm.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

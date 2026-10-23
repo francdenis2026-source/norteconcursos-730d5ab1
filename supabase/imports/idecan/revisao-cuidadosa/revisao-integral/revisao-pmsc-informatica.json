@@ -67,6 +67,8 @@
     "qualification": "Compatibilidade para treino do edital PF Agente 2025; não constitui previsão PC-AC nem vínculo ao edital PMSC 2026."
   },
   "link_sql_path": "pmsc-informatica-vinculo-edital.sql",
-  "link_sql_applied": false,
+  "link_sql_applied": true,
+  "link_sql_application_reported_by_user": true,
+  "independent_public_readback": "não disponível: RLS não permite leitura pública de linhas individuais do catálogo de provas",
   "remote_applied": false
 }

@@ -79,5 +79,17 @@
     "bytes": 427452,
     "pdf": true,
     "sha256": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e"
+  },
+  {
+    "label": "pmsc-edital-200-ccp-2025",
+    "kind": "official_syllabus",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "status": 200,
+    "bytes": 967249,
+    "pdf": true,
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "checked_at": "2026-10-23",
+    "relevant_pages": "Anexo II, pp. 51–52",
+    "note": "Downloaded via official IDECAN contest page ID 207 with official-page session/referrer. Lists Lei 14.751/2023 under Legislação Institucional."
   }
 ]
