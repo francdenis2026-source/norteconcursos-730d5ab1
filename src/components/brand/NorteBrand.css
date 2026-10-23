@@ -1,0 +1,30 @@
+.norte-brand .norte-brand__mark {
+  object-fit: contain;
+}
+.norte-brand .norte-brand__wordmark {
+  display: block;
+  width: calc(var(--brand-size, 1.5rem) * 4.5);
+  height: auto;
+  aspect-ratio: 420 / 170;
+  max-width: none;
+  overflow: visible;
+}
+.norte-brand__name {
+  fill: currentColor;
+}
+.norte-brand__subtitle {
+  fill: #947335;
+}
+.norte-brand.is-light .norte-brand__subtitle,
+.dark .norte-brand .norte-brand__subtitle {
+  fill: #c6ad76;
+}
+@media (prefers-reduced-motion: reduce) {
+  .norte-brand .norte-brand__mark {
+    transition: none;
+  }
+}
+
+:root:not(.dark) :is(.app-shell, .app-sheet) .norte-brand__subtitle {
+  fill: #947335;
+}
