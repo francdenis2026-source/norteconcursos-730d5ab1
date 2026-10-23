@@ -316,29 +316,37 @@
       rgb(201 168 103 / 9%), transparent 78%);
     background-repeat: no-repeat;
   }
+  /* The source photo (1208x1302) is a back/shoulder portrait: face at the top, the full
+     "CARREIRAS" banner ends around 48% of its height, and the pistol artwork + "POLICIAIS"
+     banner only start below that. At phone width there isn't enough room above the hero's
+     text card to show the whole figure, so earlier versions let the box run tall and relied
+     on the paragraph card's opaque background to hide the overflow — which cut the "POLICIAIS"
+     banner off mid-word wherever the card happened to start. Cropping the box itself to that
+     48% line (object-fit: cover, anchored top) keeps the crop intentional: face and shoulder
+     stay whole, the banner reads in full, and the box always finishes above the card. */
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
     position: absolute;
-    top: clamp(88px, 25vw, 140px);
-    right: -4px;
+    top: clamp(80px, 21vw, 102px);
+    right: -2px;
     bottom: auto;
     left: auto;
-    width: clamp(155px, 52vw, 300px);
-    max-width: 56%;
-    height: clamp(210px, 57vw, 315px);
-    object-fit: contain;
-    object-position: right top;
-    opacity: .60;
+    width: clamp(150px, 43vw, 214px);
+    max-width: 58%;
+    height: clamp(78px, 22.5vw, 112px);
+    object-fit: cover;
+    object-position: 50% top;
+    opacity: .78;
     pointer-events: none;
     filter: drop-shadow(-5px 4px 10px rgb(0 0 0 / 19%));
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
   }
 }
 @media (max-width: 359px) {
   :root:is(.dark, :not(.dark)) .home.home #inicio.home-hero > .home-hero__image {
-    width: 53%;
-    height: 205px;
-    opacity: .53;
+    width: 55%;
+    height: 76px;
+    opacity: .72;
   }
 }
 /* Desktop hero: show the same FIXED animated clock canvas beneath the agent.
