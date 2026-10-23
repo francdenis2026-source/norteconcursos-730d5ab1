@@ -1,13 +1,23 @@
 import { useEffect, useRef, type PointerEvent } from "react";
 
 const MAX_TILT = 8;
+// Dial geometry measured on the 742×907 art: pivot and hand reach in art pixels.
+const CX = 356;
+const CY = 460;
+const HOUR_LEN = 118;
+const MINUTE_LEN = 178;
+const SECOND_LEN = 196;
+const SECOND_TAIL = 34;
 
-/** Brand showcase for the "Carreiras Policiais" clock art: a restrained 3D tilt, no required motion. */
+/** Brand showcase for the "Carreiras Policiais" clock art: real hands, a restrained 3D tilt, no required motion. */
 export function ClockShowcase() {
   const stage = useRef<HTMLDivElement>(null);
   const tilt = useRef<HTMLDivElement>(null);
   const frame = useRef(0);
   const next = useRef({ x: 0, y: 0 });
+  const hourHand = useRef<SVGGElement>(null);
+  const minuteHand = useRef<SVGGElement>(null);
+  const secondHand = useRef<SVGGElement>(null);
 
   const rest = () => {
     cancelAnimationFrame(frame.current);
@@ -29,6 +39,33 @@ export function ClockShowcase() {
       observer.disconnect();
       document.removeEventListener("visibilitychange", onVisibilityChange);
       cancelAnimationFrame(frame.current);
+    };
+  }, []);
+
+  // Real wall-clock hands: updated once a second, aligned to the second boundary.
+  useEffect(() => {
+    let timeout = 0;
+    let interval = 0;
+    const tick = () => {
+      const now = new Date();
+      const hours = now.getHours() % 12;
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const hourDeg = (hours + minutes / 60) * 30;
+      const minuteDeg = (minutes + seconds / 60) * 6;
+      const secondDeg = seconds * 6;
+      hourHand.current?.setAttribute("transform", `rotate(${hourDeg} ${CX} ${CY})`);
+      minuteHand.current?.setAttribute("transform", `rotate(${minuteDeg} ${CX} ${CY})`);
+      secondHand.current?.setAttribute("transform", `rotate(${secondDeg} ${CX} ${CY})`);
+    };
+    tick();
+    timeout = window.setTimeout(() => {
+      tick();
+      interval = window.setInterval(tick, 1000);
+    }, 1000 - new Date().getMilliseconds());
+    return () => {
+      window.clearTimeout(timeout);
+      window.clearInterval(interval);
     };
   }, []);
 
@@ -61,7 +98,7 @@ export function ClockShowcase() {
           </h2>
           <p>
             O relógio Carreiras Policiais é a nossa assinatura: tempo de estudo bem investido,
-            foco tático e disciplina até o dia da prova.
+            foco tático e disciplina até o dia da prova. Os ponteiros marcam a hora real, agora.
           </p>
         </div>
         <div
@@ -72,6 +109,7 @@ export function ClockShowcase() {
           onPointerLeave={rest}
           onBlur={rest}
         >
+          <span className="home-clock__pedestal" aria-hidden="true" />
           <span className="home-clock__glow" aria-hidden="true" />
           <span className="home-clock__shadow" aria-hidden="true" />
           <div className="home-clock__tilt" ref={tilt}>
@@ -84,6 +122,23 @@ export function ClockShowcase() {
               loading="lazy"
               decoding="async"
             />
+            <svg
+              className="home-clock__hands"
+              viewBox="0 0 742 907"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <g ref={hourHand} className="home-clock__hand home-clock__hand--hour">
+                <line x1={CX} y1={CY} x2={CX} y2={CY - HOUR_LEN} />
+              </g>
+              <g ref={minuteHand} className="home-clock__hand home-clock__hand--minute">
+                <line x1={CX} y1={CY} x2={CX} y2={CY - MINUTE_LEN} />
+              </g>
+              <g ref={secondHand} className="home-clock__hand home-clock__hand--second">
+                <line x1={CX} y1={CY + SECOND_TAIL} x2={CX} y2={CY - SECOND_LEN} />
+              </g>
+              <circle className="home-clock__pivot" cx={CX} cy={CY} r={9} />
+            </svg>
           </div>
         </div>
       </div>
