@@ -33,9 +33,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/enem")({
   validateSearch: (search: Record<string, unknown>): { tab?: string } => ({
-    tab: ["visao", "materiais", "videos", "redacao", "questoes", "checklist"].includes(
-      String(search["tab"]),
-    )
+    tab: ["visao", "materiais", "videos", "redacao", "questoes"].includes(String(search["tab"]))
       ? String(search["tab"])
       : "visao",
   }),
@@ -154,8 +152,6 @@ function EnemPage() {
         </div>
       </PageHero>
 
-      <EnemCalendar />
-
       <Tabs value={tab} onValueChange={setTab}>
         <TabsList className="h-auto w-full flex-wrap justify-start gap-1">
           <TabsTrigger value="visao" className="gap-1.5">
@@ -173,9 +169,6 @@ function EnemPage() {
           <TabsTrigger value="questoes" className="gap-1.5">
             <BrainCircuit className="h-4 w-4 !text-emerald-500" /> Questões
           </TabsTrigger>
-          <TabsTrigger value="checklist" className="gap-1.5">
-            <ListChecks className="h-4 w-4 !text-amber-500" /> Checklist
-          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="visao" className="mt-5 space-y-5">
@@ -188,6 +181,7 @@ function EnemPage() {
               </div>
             ))}
           </div>
+          <EnemCalendar />
           <p className="flex items-start gap-2 text-xs text-muted-foreground">
             <CalendarDays className="mt-0.5 h-4 w-4 shrink-0" /> Dia 1: Linguagens, Ciências Humanas
             e Redação. Dia 2: Ciências da Natureza e Matemática. Datas e regras oficiais: confira
@@ -198,6 +192,7 @@ function EnemPage() {
               <AreaCard key={area.id} area={area} state={checks.state} onWatch={watch} />
             ))}
           </div>
+          <Checklist state={checks.state} toggle={checks.toggle} />
         </TabsContent>
 
         <TabsContent value="materiais" className="mt-5">
@@ -310,15 +305,6 @@ function EnemPage() {
             </CardContent>
           </Card>
         </TabsContent>
-
-        <TabsContent value="checklist" className="mt-5">
-          <Checklist
-            state={checks.state}
-            toggle={checks.toggle}
-            done={done}
-            total={allTopics.length}
-          />
-        </TabsContent>
       </Tabs>
     </div>
   );
@@ -329,7 +315,7 @@ const HUE_BAR: Record<EnemArea["hue"], string> = {
   orange: "bg-orange-500",
   emerald: "bg-emerald-500",
   sky: "bg-sky-500",
-  violet: "bg-amber-500",
+  violet: "bg-violet-500",
   teal: "bg-teal-500",
   gold: "bg-amber-400",
 };
@@ -400,36 +386,20 @@ function AreaCard({
 function Checklist({
   state,
   toggle,
-  done,
-  total,
 }: {
   state: Record<string, true>;
   toggle: (k: string) => void;
-  done: number;
-  total: number;
 }) {
-  const pct = total ? Math.round((100 * done) / total) : 0;
   return (
     <Card>
       <CardHeader className="pb-3">
-        <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-lg">
-          <span className="flex items-center gap-2">
-            <BookOpenCheck className="h-5 w-5" /> Checklist de assuntos
-          </span>
-          <Badge variant="outline">
-            {done} de {total} · {pct}%
-          </Badge>
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <BookOpenCheck className="h-5 w-5" /> Checklist de assuntos
         </CardTitle>
         <CardDescription>
           Assuntos mais cobrados em cada matéria. Marque o que já estudou. Fica salvo neste
           navegador.
         </CardDescription>
-        <div className="h-2 overflow-hidden rounded-full bg-muted">
-          <div
-            className="h-full rounded-full bg-gradient-to-r from-sky-400 to-emerald-500 transition-[width]"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
       </CardHeader>
       <CardContent className="grid gap-3 md:grid-cols-2">
         {ENEM_AREAS.flatMap((a) => a.subjects).map((s) => {
