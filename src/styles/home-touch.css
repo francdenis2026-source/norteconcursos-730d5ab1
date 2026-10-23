@@ -772,3 +772,197 @@
   opacity: 1;
   backface-visibility: hidden;
 }
+
+
+/* Norte Concursos / light-only homepage color system.
+   Shared dark-mode tokens and the rest of the application remain untouched.
+   Normal-text checks on #fff: ink #182a3c 14.6:1, muted #43566b 7.5:1,
+   blue #174c7e 8.9:1, amber #86591d 6.1:1. */
+:root:not(.dark) .home.home {
+  --stage-ink: #182a3c;
+  --stage-muted: #43566b;
+  --stage-accent: #174c7e;
+  --stage-amber: #86591d;
+  --stage-line: #d5dfe8;
+  --stage-card: #ffffff;
+  --stage-shadow: 0 12px 36px -28px rgb(20 41 60 / 22%), 0 1px 3px rgb(20 41 60 / 7%);
+  --home-bg: #f2f5f8;
+  --home-surface: #ffffff;
+  --home-tint: #eaf0f5;
+  --home-text: var(--stage-ink);
+  --home-muted: var(--stage-muted);
+  --home-line: var(--stage-line);
+  --home-accent: var(--stage-accent);
+  --home-glass-fill: #ffffff;
+  --home-glass-edge: #d5dfe8;
+  color: var(--stage-ink);
+  background-color: #f2f5f8;
+}
+:root:not(.dark) .home.home .home-header {
+  background: rgb(255 255 255 / 96%);
+  color: var(--stage-ink);
+  border-bottom: 1px solid var(--stage-line);
+  box-shadow: 0 3px 20px -16px rgb(20 41 60 / 23%);
+}
+:root:not(.dark) .home.home .home-header :is(.home-nav a, .home-login, .home-menu-trigger, .lp-theme-toggle) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-header :is(.home-nav a, .home-login):hover,
+:root:not(.dark) .home.home .home-header :is(.home-menu-trigger, .lp-theme-toggle):hover {
+  color: var(--stage-accent);
+  background-color: #eaf0f5;
+}
+:root:not(.dark) .home.home :is(.home-hero, .home-preparation, .home-operations, .home-plans--insignia, .home-final, .home-footer--command) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home :is(.home-hero h1, .home-preparation h2, .home-operations h2, .home-plans--insignia h2, .home-final h2, .home-footer--command h2, .home-plan__price) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home :is(.home-heading p, .home-preparation__intro p, .home-operations__heading p, .home-plan__description, .home-plan__features li, .home-faq__list p, .home-footer__bottom) {
+  color: var(--stage-muted);
+}
+:root:not(.dark) .home.home :is(.home-eyebrow, .home-signal, .home-preparation__eyebrow, .home-preparation__number, .home-plan__annual) {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home :is(.home-hero h1 em, .home-preparation__intro h2 em, .home-heading h2 em, .home-final h2 em) {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home :is(.home-preparation__info, .home-preparation__intro, .home-operations__heading, .home-plan[data-plan], .home-plans__signal, .home-plans__notice, .home-plan-comparison, .home-faq, .home-platform-qr, .home-hero__study-links .daily-badge, .home-hero__study-links .question-count-badge) {
+  background-color: #ffffff;
+  color: var(--stage-ink);
+  border-color: var(--stage-line);
+  box-shadow: var(--stage-shadow);
+}
+:root:not(.dark) .home.home .home-hero__copy > p {
+  color: var(--stage-muted);
+  background: #fff;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-hero :is(.home-trust li, .home-testing) {
+  color: var(--stage-muted);
+}
+:root:not(.dark) .home.home .home-hero .home-trust li {
+  background: #ffffff;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-hero .home-trust svg {
+  color: var(--stage-accent);
+}
+:root:not(.dark) .home.home .home-button--gold,
+:root:not(.dark) .home.home .home-button--primary,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button {
+  background: #174c7e;
+  color: #ffffff;
+  border-color: #174c7e;
+  box-shadow: 0 7px 18px -12px rgb(23 76 126 / 34%);
+}
+:root:not(.dark) .home.home :is(.home-button--gold, .home-button--primary):hover,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button:hover {
+  background: #123b63;
+  color: #ffffff;
+  border-color: #123b63;
+}
+:root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore),
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:not(:disabled) {
+  background: #ffffff;
+  color: #174c7e;
+  border-color: #9aafc2;
+}
+:root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore):hover,
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:not(:disabled):hover {
+  background: #eaf0f5;
+  color: #123b63;
+  border-color: #174c7e;
+}
+/* Maintain a coherent light background across the section bands. */
+:root:not(.dark) .home.home .home-preparation__band {
+  background: linear-gradient(120deg, #e8eff5, #f7f9fb 72%);
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-operations {
+  background: linear-gradient(180deg, #edf2f7, #f7f9fb);
+}
+:root:not(.dark) .home.home .home-plans--insignia {
+  background: linear-gradient(180deg, #f7f9fb, #edf2f7);
+}
+:root:not(.dark) .home.home .home-plans--insignia .home-plan--featured {
+  background: linear-gradient(160deg, #fff8ed, #ffffff 52%);
+  border-color: #b38a46;
+}
+:root:not(.dark) .home.home .home-plan[data-plan] :is(.home-tag, .home-plan__badge) {
+  background: #eaf0f5;
+  color: #174c7e;
+  border-color: #cedae5;
+}
+:root:not(.dark) .home.home .home-preparation__tabs {
+  background: #eaf0f5;
+  border-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-preparation__tab:not([data-state="active"]) {
+  color: #43566b;
+}
+:root:not(.dark) .home.home .home-preparation__tab[data-state="active"] {
+  background: #174c7e;
+  color: #ffffff;
+}
+:root:not(.dark) .home.home .home-faq__list :is(summary, p),
+:root:not(.dark) .home.home .home-plan__features summary {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-final {
+  background: linear-gradient(125deg, #e8eff5, #f7f9fb);
+}
+:root:not(.dark) .home.home .home-footer--command {
+  background: #e7eef4;
+  border-top-color: var(--stage-line);
+}
+:root:not(.dark) .home.home .home-footer--command :is(a, strong, h3) {
+  color: var(--stage-ink);
+}
+:root:not(.dark) .home.home .home-footer--command a:hover {
+  color: var(--stage-accent);
+}
+/* Keep the animated clock's genuine fixed backdrop; don't paint an opaque
+   white card across it or replace it with a static background. */
+@media (min-width: 1101px) {
+  :root:not(.dark) .home.home #inicio.home-hero {
+    background-color: transparent;
+    background-image:
+      linear-gradient(90deg, rgb(246 249 252 / 98%) 0%, rgb(246 249 252 / 94%) 30%, rgb(246 249 252 / 77%) 46%, rgb(246 249 252 / 7%) 78%),
+      url('/media/hero/hero-norte-recorte.webp');
+    background-size: 100% 100%, auto min(94svh, 920px);
+    background-position: center center, right -22px bottom;
+    background-repeat: no-repeat;
+  }
+  :root:not(.dark) .home.home #inicio.home-hero::after {
+    background: linear-gradient(180deg, transparent, rgb(235 242 248 / 26%));
+  }
+}
+/* The mobile menu lives in a portal outside .home: theme it explicitly. */
+:root:not(.dark) .home-menu {
+  --home-text: #182a3c;
+  --home-accent: #174c7e;
+  --home-line: #d5dfe8;
+  background: #ffffff;
+  color: #182a3c;
+}
+:root:not(.dark) .home-menu :is(.home-menu__group, .home-menu__group nav, .home-menu__access) {
+  border-color: #d5dfe8;
+}
+:root:not(.dark) .home-menu .home-menu__group > summary {
+  background: #eaf0f5;
+  color: #182a3c;
+}
+:root:not(.dark) .home-menu .home-menu__group nav a {
+  color: #174c7e;
+}
+:root:not(.dark) .home-menu .home-menu__access .home-button--primary {
+  background: #174c7e;
+  color: #ffffff;
+  border-color: #174c7e;
+}
+:root:not(.dark) .home-menu .home-menu__access .home-button--secondary {
+  background: #ffffff;
+  color: #174c7e;
+  border-color: #9aafc2;
+}
