@@ -1,5 +1,5 @@
 import type { Question } from "./questionFormat";
-import { examKey } from "./questionFormat";
+import { examKey, hasReviewedExplanation } from "./questionFormat";
 import { needsMissingSupportText } from "./questionText";
 import { parseQuestionCode, questionCode } from "./questionIdentity";
 import { dedupeSharedExamItems } from "./questionDuplicates";
@@ -46,6 +46,10 @@ export function publishedQuestionBank(catalog: Question[]) {
     ...availableQuestionBank(catalog, "contests"),
     ...availableQuestionBank(catalog, "enem"),
   ].filter((question) => question.source !== "personal");
+}
+/** A didactic review is an additional subset of the available public training inventory. */
+export function reviewedQuestionBank(catalog: Question[]) {
+  return publishedQuestionBank(catalog).filter(hasReviewedExplanation);
 }
 /** Only official questions belong to a paper; authored practice must not inflate its total. */
 export function questionBankExams(catalog: Question[]) {

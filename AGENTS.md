@@ -41,3 +41,7 @@ Todo dia, à meia-noite do horário do Acre (`America/Rio_Branco`, UTC−5), as 
 ## Diretriz de remodelação da área do cliente
 
 Orientação do usuário: trabalhar uma área por vez, com apresentação profissional, compacta, organizada e acesso fácil. Manter a faixa de boas-vindas na Área do aluno. Nas demais áreas, usar faixas de identificação baixas e evitar cartões e avisos excessivamente altos. Remover comandos, contagens e explicações redundantes; preservar funções, regras de estudo e dados reais. Aplicar destaques coloridos com contraste nos modos claro e escuro. Adaptar à largura disponível em celular, tablet e desktop, sem rolagem horizontal nem controles cortados. Ao concluir a área solicitada, informar a conclusão e aguardar o usuário indicar a próxima.
+
+## Contagens globais de questões
+
+Homepage, área do aluno e totais administrativos usam `usePlatformQuestionSummary` (RPC `get_public_question_summary` e cache `public-question-summary`) para **Total cadastrado** e **Disponíveis para treinar**. Não substituir esses totais por `catalog.length` ou por uma seleção de Concursos/ENEM. Contagens por área, busca, origem, disciplina ou banca devem ser identificadas como **seleção de estudo**. Questões pessoais ficam fora do total global. **Revisadas com exemplo** é um indicador distinto: usar `reviewedQuestionBank`, com a mesma exigência de revisão didática e elegibilidade em todas as telas.

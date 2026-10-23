@@ -42,7 +42,8 @@ async function mock(context, role, roleError = false, heldNetwork = false) {
     if (path.includes("/active_user_sessions")) calls.ownership++;
     let status = 200,
       body = [];
-    if (path.endsWith("/token")) body = session(role);
+    if (path.endsWith("/get_public_question_summary")) body = { registered: 12, available: 8 };
+    else if (path.endsWith("/token")) body = session(role);
     else if (path.endsWith("/user")) body = session(role).user;
     else if (path.endsWith("/profiles"))
       body = {
@@ -208,8 +209,8 @@ async function checkCatalog() {
       const page = await context.newPage();
       await page.goto(`${base}/dashboard/question-bank`);
       await page.locator(".catalog-metric").first().waitFor();
-      assert.equal(await page.locator(".catalog-metric").count(), 5);
-      for (const metric of await page.locator(".catalog-metric").all()) {
+      assert.equal(await page.locator(".catalog-metric").count(), 4);
+      for (const metric of await page.locator(".catalog-metric, .platform-question-counts__grid button").all()) {
         await metric.click();
         await page.getByRole("dialog").waitFor();
         assert(await page.getByRole("dialog").getByRole("heading").first().isVisible());
@@ -245,6 +246,18 @@ async function checkCatalog() {
       await row.click();
       await page.locator(".trainer-workbench").waitFor();
       assert.equal(new URL(page.url()).searchParams.get("subject"), "Informática");
+      if (width === 390 && theme === "light") {
+        await page.emulateMedia({ reducedMotion: "reduce" });
+        await page.goto(base + "/");
+        await page.locator(".question-count-main strong").waitFor();
+        await page.waitForFunction(() => document.querySelector(".question-count-main strong")?.textContent === "8");
+        assert.equal(await page.locator(".question-count-registered strong").innerText(), "12");
+        await page.goto(base + "/dashboard");
+        await page.getByRole("link", { name: /Total cadastrado: 12/ }).waitFor();
+        await page.getByRole("link", { name: /Disponíveis para treinar: 8/ }).waitFor();
+        assert.equal(await page.locator(".platform-question-counts").count(), 1);
+        console.log("PASS shared counts: homepage, student home and catalog");
+      }
       await context.close();
       console.log("PASS", theme, width);
     }
@@ -254,6 +267,7 @@ async function checkCatalog() {
     const url = new URL(route.request().url());
     const table = url.pathname.split("/").pop();
     let rows;
+    if (table === "get_public_question_summary") return route.fulfill({ contentType: "application/json", body: JSON.stringify({ registered: 12, available: 11 }) });
     if (table === "official_exam_questions") rows = [...questions,
       extra(1, { contest_name: "ENEM", exam_board: "INEP" }),
       extra(2, { contest_name: "ENEM", exam_board: "INEP" }),
@@ -265,9 +279,9 @@ async function checkCatalog() {
   });
   const page = await context.newPage();
   await page.goto(base + "/dashboard/question-bank");
-  await page.getByRole("button", { name: /Total na plataforma: 11/ }).waitFor();
+  await page.getByRole("button", { name: /Total cadastrado: 12/ }).waitFor();
   await page.getByRole("button", { name: /Questões da seleção: 10/ }).waitFor();
-  await page.getByRole("button", { name: /Total na plataforma: 11/ }).click();
+  await page.getByRole("button", { name: /Total cadastrado: 12/ }).click();
   assert.match(await page.locator(".catalog-details__areas").innerText(), /9 questões/);
   assert.match(await page.locator(".catalog-details__areas").innerText(), /2 questões/);
   const publicLinks = await page.locator(".catalog-details__areas a").evaluateAll(links => links.map(a => a.href));
@@ -276,11 +290,34 @@ async function checkCatalog() {
   await page.getByRole("button", { name: "Fechar", exact: true }).click();
   await page.getByRole("button", { name: "ENEM", exact: true }).click();
   await page.getByRole("button", { name: /Questões da seleção: 2/ }).waitFor();
-  await page.getByRole("button", { name: /Total na plataforma: 11/ }).waitFor();
+  await page.getByRole("button", { name: /Total cadastrado: 12/ }).waitFor();
+  await page.getByRole("button", { name: /Disponíveis para treinar: 11/ }).waitFor();
   await context.close();
   console.log("PASS catalog: mixed collections, private exclusion, pending content, scoped links");
 
 }
+async function checkCountError() {
+  const { context } = await fixture(390, 844, "light");
+  let recovered = false;
+  await context.route("**/rpc/get_public_question_summary", route => route.fulfill({
+    status: recovered ? 200 : 503, contentType: "application/json",
+    body: JSON.stringify(recovered ? { registered: 12, available: 8 } : { message: "temporarily unavailable" }),
+  }));
+  const page = await context.newPage();
+  await page.goto(base + "/dashboard/question-bank");
+  await page.getByText(/Não foi possível atualizar os totais/).waitFor();
+  assert.equal(await page.locator('[data-count-kind="registered"] strong').innerText(), "—");
+  assert.equal(await page.locator('[data-count-kind="available"] strong').innerText(), "—");
+  await page.getByRole("textbox", { name: "Buscar no acervo" }).fill("Informática");
+  recovered = true;
+  await page.getByRole("button", { name: "Atualizar totais de questões" }).click();
+  await page.getByRole("button", { name: /Total cadastrado: 12/ }).waitFor();
+  await page.getByRole("button", { name: /Disponíveis para treinar: 8/ }).waitFor();
+  await page.getByRole("button", { name: /Questões da seleção: 4/ }).waitFor();
+  await context.close();
+  console.log("PASS summary failure: no fabricated zero, retry recovers shared totals and preserves filters");
+}
+
 async function checkWorkspace() {
   for (const theme of ["light", "dark"])
     for (const [width, height] of [
@@ -389,7 +426,7 @@ async function checkWorkspace() {
     if (path === "question-bank") {
       await page.getByRole("textbox", { name: "Buscar no acervo", exact: true }).fill("Matemática");
       await page.getByRole("link", { name: "Treinar Matemática", exact: true }).waitFor();
-      assert.equal(await page.locator(".question-workspace__metric").count(), 5);
+      assert.equal(await page.locator(".question-workspace__metric").count(), 4);
     }
     if (path === "errors") {
       await page.getByRole("button", { name: "Revisão sequencial", exact: true }).click();
@@ -454,6 +491,7 @@ async function checkWorkspace() {
 }
 try {
   await checkCatalog();
+  await checkCountError();
   if (!process.env.QA_ONLY_CATALOG) await checkWorkspace();
 } finally {
   await browser.close();

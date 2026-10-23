@@ -20,6 +20,7 @@ import {
   type BankCollection,
   type BankSource,
 } from "@/lib/questionBank";
+import { QUESTION_COUNT_LABELS, type PlatformQuestionSummary } from "@/lib/platformQuestionSummary";
 import { catalogGroups, catalogNumber as n } from "@/lib/questionCatalogSummary";
 
 export type CatalogDetail = "platform" | "questions" | "exams" | "boards" | "subjects";
@@ -43,6 +44,8 @@ type Props = {
   onClose: () => void;
   restoreFocus: () => void;
   publicCatalog: Question[];
+  platformSummary: PlatformQuestionSummary | undefined;
+  reviewedCount: number;
   items: Question[];
   collection: BankCollection;
   source: BankSource;
@@ -75,6 +78,8 @@ export function QuestionCatalogDetails(props: Props) {
 function DetailBody({
   view,
   publicCatalog,
+  platformSummary,
+  reviewedCount,
   items,
   collection,
   source,
@@ -123,31 +128,49 @@ function DetailBody({
         <DialogTitle>{titles[view]}</DialogTitle>
         <DialogDescription>
           {view === "platform"
-            ? "Questões publicadas e aptas para treino em Concursos e ENEM. Questões pessoais e conteúdos pendentes não entram neste total."
+            ? "Resumo global de Concursos e ENEM, igual ao da homepage. O total cadastrado inclui itens ainda em conferência; as listas de estudo mostram apenas a seleção liberada. Questões pessoais ficam à parte."
             : `${collection === "enem" ? "ENEM" : "Concursos públicos"} · ${source === "all" ? "Todas as origens" : origins[source]}${query ? ` · Busca: ${query}` : ""}. Os dados respeitam os filtros da página.`}
         </DialogDescription>
       </DialogHeader>
       <div className="catalog-details__scroll">
-        <div className="catalog-details__summary">
-          <div>
-            <strong>{n(scope.length)}</strong>
-            <span>questões {view === "platform" ? "publicadas" : "na seleção"}</span>
+        {view === "platform" ? (
+          <div className="catalog-details__summary">
+            <div>
+              <strong>{platformSummary ? n(platformSummary.registered) : "—"}</strong>
+              <span>{QUESTION_COUNT_LABELS.registered}</span>
+            </div>
+            <div>
+              <strong>{platformSummary ? n(platformSummary.available) : "—"}</strong>
+              <span>{QUESTION_COUNT_LABELS.available}</span>
+            </div>
+            <div>
+              <strong>{n(reviewedCount)}</strong>
+              <span>{QUESTION_COUNT_LABELS.reviewed}</span>
+            </div>
           </div>
-          <div>
-            <strong>{n(catalogGroups(scope, "subject").length)}</strong>
-            <span>disciplinas</span>
+        ) : (
+          <div className="catalog-details__summary">
+            <div>
+              <strong>{n(scope.length)}</strong>
+              <span>questões na seleção</span>
+            </div>
+            <div>
+              <strong>{n(catalogGroups(scope, "subject").length)}</strong>
+              <span>disciplinas</span>
+            </div>
+            <div>
+              <strong>
+                {years.length
+                  ? Math.min(...years) === Math.max(...years)
+                    ? String(years[0])
+                    : `${Math.min(...years)}–${Math.max(...years)}`
+                  : "—"}
+              </strong>
+              <span>anos do acervo</span>
+            </div>
           </div>
-          <div>
-            <strong>
-              {years.length
-                ? Math.min(...years) === Math.max(...years)
-                  ? String(years[0])
-                  : `${Math.min(...years)}–${Math.max(...years)}`
-                : "—"}
-            </strong>
-            <span>anos do acervo</span>
-          </div>
-        </div>
+        )}
+
         {view === "platform" ? (
           <>
             <h3>Escolha sua preparação</h3>
@@ -201,8 +224,10 @@ function DetailBody({
               ))}
             </div>
             <p className="catalog-details__note">
-              O total reúne o acervo disponível para sua conta. O conteúdo do seu caderno continua
-              acessível pelo filtro “Meu caderno”, na página do acervo.
+              O total cadastrado e as disponíveis vêm do mesmo resumo da homepage. “Revisadas com
+              exemplo” indica a revisão didática adicional das questões completas deste catálogo. A
+              área, o cargo e os filtros de estudo podem reduzir a seleção. Seu caderno pessoal não
+              entra no total global.
             </p>
           </>
         ) : (

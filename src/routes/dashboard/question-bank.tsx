@@ -14,10 +14,13 @@ import {
   Search,
   TextSearch,
 } from "lucide-react";
+import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
+import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
 import {
   availableQuestionBank,
   publishedQuestionBank,
+  reviewedQuestionBank,
   searchQuestionCatalog,
   questionBankExams,
   questionBankSearch,
@@ -58,6 +61,8 @@ function QuestionBankPage() {
   const { user, isLoading: authLoading } = useAuthStatus();
   const canLoad = !authLoading && !!user && user.id !== "demo-user";
   const { catalog, loading, error, reload } = useQuestionCatalog(user?.id, canLoad);
+  const summary = usePlatformQuestionSummary(canLoad);
+  const reviewed = React.useMemo(() => reviewedQuestionBank(catalog).length, [catalog]);
   const [collection, setCollection] = React.useState<BankCollection>("contests");
   const [search, setSearch] = React.useState("");
   const [source, setSource] = React.useState<BankSource>("all");
@@ -138,48 +143,18 @@ function QuestionBankPage() {
           </Button>
         }
       />
-      <div className="catalog-metrics" aria-label="Resumo do acervo">
-        <Metric
-          icon={LibraryBig}
-          value={publicCatalog.length}
-          label="Total na plataforma"
-          hint="Concursos + ENEM"
-          onClick={(e) => openDetail("platform", e.currentTarget)}
-        />
-        <Metric
-          icon={BookOpenCheck}
-          value={visible.length}
-          label="Questões da seleção"
-          hint={collection === "enem" ? "ENEM · ver questões" : "Concursos · ver questões"}
-          onClick={(e) => openDetail("questions", e.currentTarget)}
-        />
-        <Metric
-          icon={FileCheck2}
-          value={exams.length}
-          label="Provas e concursos"
-          hint="Explorar provas"
-          onClick={(e) => openDetail("exams", e.currentTarget)}
-        />
-        <Metric
-          icon={Building2}
-          value={byBoard.length}
-          label="Bancas"
-          hint="Conhecer a distribuição"
-          onClick={(e) => openDetail("boards", e.currentTarget)}
-        />
-        <Metric
-          icon={Layers3}
-          value={bySubject.length}
-          label="Disciplinas"
-          hint="Encontrar sua matéria"
-          onClick={(e) => openDetail("subjects", e.currentTarget)}
-        />
-      </div>
+      <PlatformQuestionCounts
+        enabled={canLoad}
+        reviewed={reviewed}
+        onExplore={(e) => openDetail("platform", e.currentTarget)}
+      />
       <QuestionCatalogDetails
         view={detail}
         onClose={() => setDetail(null)}
         restoreFocus={() => detailTrigger.current?.focus()}
         publicCatalog={publicCatalog}
+        platformSummary={summary.data}
+        reviewedCount={reviewed}
         items={visible}
         collection={collection}
         source={source}
@@ -262,6 +237,46 @@ function QuestionBankPage() {
           </p>
         </CardContent>
       </Card>
+
+      <div>
+        <p className="question-catalog__scope">
+          Sua seleção de estudo · {collection === "enem" ? "ENEM" : "Concursos públicos"}
+          <span>Os números abaixo respeitam a área, a origem e a busca selecionadas.</span>
+        </p>
+        <div
+          className="catalog-metrics catalog-metrics--selection"
+          aria-label="Indicadores da seleção de estudo"
+        >
+          <Metric
+            icon={BookOpenCheck}
+            value={visible.length}
+            label="Questões da seleção"
+            hint={collection === "enem" ? "ENEM · ver questões" : "Concursos · ver questões"}
+            onClick={(e) => openDetail("questions", e.currentTarget)}
+          />
+          <Metric
+            icon={FileCheck2}
+            value={exams.length}
+            label="Provas e concursos"
+            hint="Explorar provas"
+            onClick={(e) => openDetail("exams", e.currentTarget)}
+          />
+          <Metric
+            icon={Building2}
+            value={byBoard.length}
+            label="Bancas"
+            hint="Conhecer a distribuição"
+            onClick={(e) => openDetail("boards", e.currentTarget)}
+          />
+          <Metric
+            icon={Layers3}
+            value={bySubject.length}
+            label="Disciplinas"
+            hint="Encontrar sua matéria"
+            onClick={(e) => openDetail("subjects", e.currentTarget)}
+          />
+        </div>
+      </div>
 
       <div className="question-catalog__distributions grid gap-4 xl:grid-cols-2">
         <Distribution
