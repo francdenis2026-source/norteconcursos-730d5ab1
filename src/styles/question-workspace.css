@@ -1198,7 +1198,7 @@
 .question-workspace .trainer-collection button[data-preparation="contests"] { --trainer-accent: #e2b34f; }
 .question-workspace .trainer-collection button[data-preparation] .trainer-collection__art {
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   inset: 0;
   display: block;
   width: 100%;
@@ -1218,7 +1218,7 @@
 .question-workspace .trainer-collection button[data-preparation]::after {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   inset: 0;
   background: linear-gradient(180deg, rgb(3 15 29 / .02) 0%, rgb(3 15 29 / .22) 36%, rgb(3 15 29 / .94) 100%);
   pointer-events: none;
@@ -1235,7 +1235,7 @@
 }
 .question-workspace .trainer-collection button[data-preparation] > span:not(.trainer-collection__art) {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: block;
   color: #fff;
   font-size: 15px;
@@ -1255,7 +1255,7 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  z-index: 2;
+  z-index: 3;
   width: 20px;
   height: 20px;
   margin: 0;
