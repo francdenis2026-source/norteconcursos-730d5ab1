@@ -1019,82 +1019,6 @@
 #concursos > .home-container > .home-heading {
   margin-bottom: 24px;
 }
-.home-opportunities {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-}
-.home-opportunity {
-  border: 1px solid var(--home-line);
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-.home-opportunity__body {
-  padding: 0 20px 20px;
-  display: flex;
-  flex-direction: column;
-}
-.home-opportunity__header {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  align-items: center;
-  gap: 16px;
-  padding: 20px 20px 0;
-}
-.home-opportunity__intro {
-  min-width: 0;
-}
-.home-opportunity__header .home-opportunity__image {
-  border-radius: 8px;
-  overflow: hidden;
-}
-.home-opportunity__identity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-.home-opportunity__identity .home-eyebrow {
-  margin: 0;
-  font-size: 9px;
-}
-.home-opportunity__identity > div {
-  display: flex;
-  gap: 8px;
-}
-.home-opportunity__identity img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-.home-exam-icon {
-  color: var(--home-accent);
-}
-.home-opportunity h3 {
-  font-size: 21px;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-}
-.home-opportunity__intro > p {
-  color: var(--home-muted);
-  font-size: 13px;
-  margin-top: 10px;
-}
-.home-opportunity__image {
-  height: 144px;
-  position: relative;
-}
-.home-opportunity__image > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 32%;
-}
 .home-status {
   position: absolute;
   bottom: 12px;
@@ -1111,76 +1035,6 @@
 .home-status svg {
   width: 14px;
   height: 14px;
-}
-.home-exam-details {
-  margin: 14px 0;
-}
-.home-exam-details summary {
-  cursor: pointer;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 650;
-  color: var(--home-accent);
-}
-.home-exam-details p,
-.home-exam-details dd {
-  color: var(--home-muted);
-  font-size: 12px;
-  line-height: 1.7;
-}
-.home-exam-details ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-block: 12px;
-}
-.home-exam-details li,
-.home-exam-details dt {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-weight: 650;
-}
-.home-exam-details li svg,
-.home-exam-details dt svg {
-  width: 14px;
-  height: 14px;
-  color: var(--home-accent);
-}
-.home-exam-details dl {
-  display: grid;
-  gap: 10px;
-}
-.home-exam-details dd {
-  margin: 0;
-}
-.home-opportunity__bottom {
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  padding-top: 12px;
-}
-.home-opportunity__bottom > small {
-  flex-basis: 100%;
-  font-size: 10px;
-  color: var(--home-muted);
-  line-height: 1.6;
-}
-.home-opportunity--pcpr {
-  background: var(--home-bg);
-}
-.home-opportunity--pcpr .home-opportunity__body {
-  padding: 0 20px 20px;
-}
-.home-opportunity--pcpr .home-exam-details {
-  padding-block: 0;
-  border-top: 1px solid var(--home-line);
-  margin: 14px 0 0;
 }
 /* Career index and sources remain easy to find without a separate card for every paragraph. */
 .home-careers__layout {
@@ -2010,33 +1864,6 @@
   .home-steps p {
     font-size: 11px;
   }
-  .home-opportunities {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .home-opportunity__body,
-  .home-opportunity--pcpr .home-opportunity__body {
-    padding: 0 16px 16px;
-  }
-  .home-opportunity__header {
-    display: block;
-    padding: 0;
-  }
-  .home-opportunity__intro {
-    padding: 16px 16px 0;
-  }
-  .home-opportunity__header .home-opportunity__image {
-    border-radius: 0;
-  }
-  .home-opportunity h3 {
-    font-size: 23px;
-  }
-  .home-opportunity__image {
-    height: 132px;
-  }
-  .home-opportunity__bottom .home-button {
-    width: 100%;
-  }
   .home-careers__grid {
     gap: 0 16px;
   }
@@ -2197,10 +2024,6 @@
 .home-method__intro { margin-bottom: 22px; }
 .home-method__visual img { height: 170px; }
 .home-steps > li { padding: 16px; }
-.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
-.home-opportunity__image { height: 116px; }
-.home-opportunity__body { padding: 0 14px 14px; }
-.home-exam-details { margin: 8px 0; }
 .home-career { padding: 12px; }
 .home-sources { padding-block: 36px 42px; }
 .home-sources__visual img { height: 210px; }
@@ -2223,7 +2046,6 @@
   .home-start .daily-badge, .home-start .question-count-badge { min-height: 50px; }
   .home-platform__visual > img { height: 190px; }
   .home-method__visual img { height: 150px; }
-  .home-opportunity__image { height: 112px; }
   .home-sources__visual img { height: 160px; }
   .home-plan__media { height: 82px; }
 }
@@ -2267,11 +2089,6 @@
 .home-method__visual img { height: 170px; }
 .home-steps > li { padding: 16px; }
 .home-steps p { line-height: 1.5; }
-.home-opportunity__header { padding: 14px 14px 0; gap: 12px; }
-.home-opportunity__image { height: 116px; }
-.home-opportunity__body { padding: 0 14px 14px; }
-.home-exam-details { margin: 8px 0; }
-.home-exam-details summary { min-height: 38px; }
 .home-careers__visual { margin-top: 18px; }
 .home-careers__visual img { height: 180px; }
 .home-career { padding: 12px; }
@@ -2300,7 +2117,6 @@
   .home-start .question-count-badge { min-height: 50px; }
   .home-platform__visual > img { height: 190px; }
   .home-method__visual img { height: 150px; }
-  .home-opportunity__image { height: 112px; }
   .home-sources__visual img { height: 160px; }
   .home-plan__media { height: 82px; }
 }
@@ -2536,15 +2352,6 @@
   background: var(--home-surface);
   border-block: 1px solid var(--home-line);
 }
-.home-opportunities {
-  gap: 16px;
-}
-.home-opportunity {
-  border-color: var(--home-line);
-  border-radius: 16px;
-  background: var(--home-bg);
-  box-shadow: var(--shadow-card);
-}
 .home-careers {
   background: var(--home-bg);
 }
@@ -2723,7 +2530,7 @@
 
 /* Navigation focus: replace the card glow with clear color transitions in the
    top bar and mobile menu. */
-.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details)::after {
   display: none;
 }
 .home-nav a,
@@ -2939,10 +2746,6 @@
   scrollbar-width: thin;
   scrollbar-color: var(--home-line) transparent;
 }
-.home-rail__track.home-opportunities > .home-opportunity {
-  scroll-snap-align: start;
-  min-width: 0;
-}
 @media (max-width: 700px) {
   .home-rail__track.home-opportunities { grid-auto-columns:88%; gap:14px; }
 }
@@ -3079,13 +2882,6 @@
   }
 }
 
-/* Exclusive Paraná hero keeps faces visible without putting copy over the photograph. */
-.home-opportunity--pcpr .home-pcpr-hero { height:220px; flex-shrink:0; overflow:hidden; background:#222731; }
-.home-pcpr-hero > img { object-position:65% 10%; }
-.home-pcpr-hero::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(20,24,31,.85),transparent 55%); pointer-events:none; }
-.home-pcpr-hero > span { position:absolute; z-index:1; inset-inline:24px; bottom:16px; color:#f7dfab; font-size:10px; font-weight:700; letter-spacing:.12em; line-height:1.5; }
-@media(max-width:639px) { .home-opportunity--pcpr .home-pcpr-hero { height:190px; } .home-pcpr-hero > span { inset-inline:20px; font-size:9px; } }
-
 :root:not(.dark) .home-header {
   background: var(--header-glass);
   border-bottom-color: var(--home-line);
@@ -3098,18 +2894,6 @@
   :root:not(.dark) .home-header { background:Canvas; color:CanvasText; border-color:CanvasText; backdrop-filter:none; }
   :root:not(.dark) .home-header :is(a,button,span,strong) { color:CanvasText; }
 }
-
-/* Text-bearing campaign artwork must stay intact at every card width. */
-.home-opportunity--pcpr .home-pcpr-hero,
-.home-opportunity--acre .home-opportunity__image,
-.home-opportunity--pcpi .home-opportunity__image,
-.home-opportunity--pcsc .home-opportunity__image { height:auto; aspect-ratio:1672 / 940; background:#171b22; flex-shrink:0; }
-.home-opportunity--pcpr .home-pcpr-hero > img,
-.home-opportunity--acre .home-opportunity__image > img,
-.home-opportunity--pcpi .home-opportunity__image > img,
-.home-opportunity--pcsc .home-opportunity__image > img { width:100%; height:100%; object-fit:contain; object-position:center; }
-.home-opportunity--pcpr .home-pcpr-hero::after { display:none; }
-.home-opportunity--acre .home-status--inline { position:static; width:fit-content; margin:0 0 10px; border:1px solid var(--home-line); }
 
 /* Keep the scene-filled N visible instead of washing it out behind mobile copy. */
 @media (max-width: 900px) {
@@ -3132,18 +2916,6 @@
     max-width: 600px;
   }
 }
-@media (min-width: 480px) and (max-width: 600px) {
-  .home-opportunity__header {
-    display: grid;
-    padding: 16px 16px 0;
-  }
-  .home-opportunity__intro {
-    padding: 0;
-  }
-  .home-opportunity__header .home-opportunity__image {
-    border-radius: 8px;
-  }
-}
 @media (forced-colors: active) {
   .home-hero__image {
     visibility: hidden;
@@ -3152,12 +2924,6 @@
     background: Canvas;
   }
 }
-
-.home-pcpi-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
-.home-pcpi-actions > div { min-width:0; display:flex; flex-direction:column; gap:10px; }
-.home-pcpi-actions .home-button { margin-top:auto; padding-inline:12px; font-size:11px; }
-
-@media(max-width:359px) { .home-pcpi-actions { grid-template-columns:1fr; } }
 
 /* Shared content rows keep every plan and its action aligned, even when one feature list expands. */
 .home-rail__track.home-plans__grid {
@@ -3210,7 +2976,7 @@
   .home p:not(.home-plan__price) { font-size:14px; line-height:1.65; }
   .home :is(.home-tag,.home-status,.home-eyebrow,.home-hero__copy>.home-eyebrow) { font-size:11px; line-height:1.5; }
   .home :is(.home-core-tool h3,.home-tool h3,.home-steps h3,.home-footer__links h3) { font-size:14px; }
-  .home :is(.home-tool summary,.home-faq__list summary,.home-plan__features summary,.home-plan>.home-button,.home-opportunity .home-button) { font-size:14px; }
+  .home :is(.home-tool summary,.home-faq__list summary,.home-plan__features summary,.home-plan>.home-button) { font-size:14px; }
   .home .home-plan__features li,.home .home-plan__features li small { font-size:13px; line-height:1.6; }
   .home :is(.home-plan__price small,.home-plan__price>span) { font-size:13px; }
   .home .home-plan__top .home-tag { font-size:11px; }
@@ -3231,7 +2997,7 @@
 }
 
 /* Content cards remain stable; feedback belongs to their actions and borders. */
-.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details) {
+.home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
   position: relative;
   transition:
     box-shadow 180ms ease,
@@ -3257,29 +3023,29 @@
   transform: translateY(0) scale(0.98);
 }
 @media (prefers-reduced-motion: reduce), (hover: none) {
-  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details) {
+  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details) {
     transform: none;
     transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
   }
-  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-opportunity, .home-career, .home-plan, .home-source-details)::after {
+  .home :is(.home-core-tool, .home-tool, .home-steps > li, .home-career, .home-plan, .home-source-details)::after {
     display: none;
   }
 }
 
 /* White cards carry the content; the neutral canvas separates each surface. */
-:root:not(.dark) .home :is(.home-plan,.home-opportunity) {
+:root:not(.dark) .home .home-plan {
   background: var(--home-surface);
   box-shadow: var(--shadow-card);
 }
 @media (hover: hover) and (pointer: fine) {
-:root:not(.dark) .home :is(.home-plan,.home-opportunity):hover {
+:root:not(.dark) .home .home-plan:hover {
   box-shadow: var(--shadow-lift);
 }
 }
 /* Reading copy must remain comfortable on both desktop and small screens. */
 .home :is(.home-plan__description,.home-plan__annual,.home-plan__availability,
 .home-plan__features summary,.home-plan__features li,.home-plans__signal p,
-.home-opportunity__intro>p,.home-opportunity__bottom>small,.home-rail__hint,
+.home-rail__hint,
 .home-rail__position) { font-size: 14px; line-height: 1.6; }
 .home :is(.home-button,.home-text-link) { font-size: 14px; }
 @media(max-width:600px) {
@@ -3364,11 +3130,6 @@
 :root:not(.dark) .home-career:nth-child(3n) { --car-c: var(--c-violet); }
 :root:not(.dark) .home-career:hover { background: #fff; }
 
-/* Objetivos / provas */
-:root:not(.dark) .home-opportunity { border-color: oklch(0.88 0.03 262); border-top: 4px solid var(--c-blue); box-shadow: var(--shadow-card); background: #fff; }
-:root:not(.dark) .home-opportunity:nth-child(2) { border-top-color: var(--c-teal); }
-:root:not(.dark) .home-opportunity:nth-child(3) { border-top-color: var(--c-violet); }
-
 /* Planos: cada nível com sua cor; o Plus (em teste) em destaque */
 :root:not(.dark) .home-plan {
   --plan-c: var(--c-green); --plan-soft: var(--c-green-soft);
@@ -3404,7 +3165,7 @@
 
 /* Faixa de confiança, desafio do dia e botões de texto */
 :root:not(.dark) .home-text-link, :root:not(.dark) .home-trust a { color: var(--c-blue); }
-:root:not(.dark) .home-source-details, :root:not(.dark) .home-exam-details { border-color: oklch(0.88 0.03 262); }
+:root:not(.dark) .home-source-details { border-color: oklch(0.88 0.03 262); }
 @media (max-width: 760px) {
   :root:not(.dark) .home-steps > li { padding: 14px; }
 }
@@ -3420,13 +3181,6 @@
 :root:not(.dark) :is(.home-hero, .home-final) :is(.home-eyebrow, .home-text-link, .home-trust a) { color: var(--brass-soft); }
 :root:not(.dark) :is(.home-hero, .home-final) .home-eyebrow > span { background: var(--brass); }
 :root:not(.dark) .home-final h2 em { color: var(--brass); background: none; -webkit-text-fill-color: currentColor; }
-
-/* Cards de oportunidades: mesma altura no carrossel, com as ações alinhadas na base. */
-.home-rail__track.home-opportunities { align-items: stretch; }
-.home-rail__track.home-opportunities > .home-opportunity { height: 100%; }
-.home-opportunity__body { flex: 1 1 auto; }
-.home-opportunity__body > .home-opportunity__bottom,
-.home-opportunity__bottom { margin-top: auto; }
 
 /* Vídeo de introdução em tablet e celular: ocupa a mesma faixa da imagem do hero,
    em vez de se espalhar com transparência atrás do texto. */
@@ -3500,13 +3254,6 @@
 .dark .home-career:nth-child(3n) { --car-c: var(--d-violet); }
 .dark .home-career:hover { background: color-mix(in oklab, var(--car-c) 9%, transparent); }
 
-/* Cards de provas e do desafio */
-.dark .home-opportunity { border-top: 4px solid var(--d-blue); border-color: color-mix(in oklab, var(--d-blue) 25%, var(--home-line)); border-top-color: var(--d-blue); }
-.dark .home-opportunity:nth-child(2) { border-top-color: var(--d-teal); border-color: color-mix(in oklab, var(--d-teal) 25%, var(--home-line)); border-top-color: var(--d-teal); }
-.dark .home-opportunity:nth-child(3) { border-top-color: var(--d-violet); border-color: color-mix(in oklab, var(--d-violet) 25%, var(--home-line)); border-top-color: var(--d-violet); }
-.dark .home-opportunity .home-text-link, .dark .home-exam-details > summary { color: var(--d-blue); }
-.dark .home-exam-icon { color: var(--d-teal); }
-
 /* Planos: cada nível com sua cor; o Plus em destaque */
 .dark .home-plan {
   --plan-c: var(--d-green);
@@ -3546,32 +3293,6 @@
 .dark .home-plan--featured > .home-button[aria-disabled="true"] { background: var(--d-blue); color: oklch(0.2 0.03 262); border-color: var(--d-blue); }
 .dark .home-plan--featured > .home-button svg { color: inherit; }
 
-/* Cards de oportunidades mais compactos: mesma arte da campanha (proporção e tamanho
-   preservados); só o espaçamento vertical entre os blocos diminui. */
-.home-opportunity .home-opportunity__header { padding: 14px 18px 0; gap: 14px; }
-.home-opportunity .home-opportunity__identity { margin-bottom: 8px; }
-.home-opportunity .home-opportunity__intro > p { margin-top: 6px; line-height: 1.5; }
-.home-opportunity .home-opportunity__body,
-.home-opportunity--pcpr .home-opportunity__body { padding: 0 18px 14px; }
-.home-opportunity .home-exam-details { margin: 6px 0 0; }
-.home-opportunity--pcpr .home-exam-details { margin: 8px 0 0; }
-.home-opportunity .home-exam-details summary { min-height: 40px; }
-.home-opportunity .home-pcpi-actions { margin-top: 10px; gap: 10px; }
-.home-opportunity .home-pcpi-actions > div { gap: 6px; }
-.home-opportunity .home-opportunity__bottom { padding-top: 6px; gap: 6px 14px; }
-.home-opportunity .home-opportunity__bottom > small { line-height: 1.45; }
-
-/* Rodapé do card: ações no topo do bloco e aviso legal sempre na base, sem vão entre
-   "Detalhes" e os botões quando o card é esticado para igualar a altura. */
-.home-opportunity .home-opportunity__bottom {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto 1fr;
-  align-items: center; column-gap: 14px; row-gap: 2px; flex: 1 1 auto; margin-top: 0;
-}
-.home-opportunity .home-opportunity__bottom > small { grid-column: 1 / -1; grid-row: 2; align-self: end; }
-/* Tablet: um card por vez (com o próximo à vista), arte da campanha maior e legível. */
-@media (min-width: 601px) and (max-width: 900px) {
-  .home-rail__track.home-opportunities { grid-auto-columns: 86%; gap: 16px; }
-}
 
 
 /* Static, first-party QR with an untouched white quiet zone in both themes. */
@@ -3730,8 +3451,6 @@
 .home-steps { gap: 14px; }
 .home-steps > li { padding: 20px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-surface); box-shadow: var(--shadow-card); }
 #concursos { background: var(--home-surface); border-block: 1px solid var(--home-line); }
-.home-opportunities { gap: 16px; }
-.home-opportunity { border-color: var(--home-line); border-radius: 16px; background: var(--home-bg); box-shadow: var(--shadow-card); }
 .home-careers { background: var(--home-bg); }
 .home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 3px solid var(--home-accent); border-radius: 10px; background: var(--home-surface); }
 .home-careers__grid { gap: 8px 18px; }

@@ -157,7 +157,6 @@
 /* Frosted reading surfaces: soft reflection, restrained edges and real background blur. */
 :root:is(.dark, :not(.dark)) .home.home :is(.home-hero, .home-section, .home-footer) :is(
   .home-preparation__info,
-  .home-opportunity,
   .home-plan[data-plan],
   .home-plans__signal,
   .home-plan-comparison,
@@ -199,17 +198,6 @@
   padding: 12px 16px;
   border-radius: 10px;
   line-height: 1.65;
-}
-
-:root:is(.dark, :not(.dark)) .home.home .home-opportunity {
-  transition: border-color 180ms ease, box-shadow 180ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  :root:is(.dark, :not(.dark)) .home.home .home-opportunity:hover {
-    border-color: color-mix(in srgb, var(--stage-gold) 48%, var(--home-glass-edge));
-    box-shadow: inset 0 1px 0 var(--home-glass-light), 0 24px 48px -24px rgb(0 0 0 / 30%);
-  }
 }
 
 @media (max-width: 760px) {
@@ -300,7 +288,7 @@
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-opportunity, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
@@ -315,17 +303,13 @@
     backdrop-filter: none;
   }
   :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__art, .home-hero__image) { display: none; }
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-opportunity, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-preparation__info, .home-plan, .home-plans__signal, .home-plan-comparison, .home-faq, .home-plans__notice, .home-platform-qr, .daily-badge, .question-count-badge) {
     background: Canvas;
     border-color: CanvasText;
     box-shadow: none;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root:is(.dark, :not(.dark)) .home.home .home-opportunity { transition: none; }
 }
 
 .home.home .home-preparation {
@@ -397,16 +381,9 @@
   }
 }
 
-@media (max-width: 699px) {
-  .home.home .home-opportunity :is(.home-button, .home-text-link),
-  .home.home .home-opportunity .home-exam-details > summary {
-    min-height: 44px;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .home.home :is(.home-button, .home-text-link, .home-final__challenge):is(:hover, :active),
-  .home.home :is(.home-plan, .home-opportunity, .home-career):hover {
+  .home.home :is(.home-plan, .home-career):hover {
     transform: none;
   }
 }
