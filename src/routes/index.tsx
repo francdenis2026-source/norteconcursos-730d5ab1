@@ -1,8 +1,6 @@
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
-import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
-import { HeroEmblemClock } from "@/components/landing/HeroEmblemClock";
 import { StudyPresence } from "@/components/landing/StudyPresence";
 import * as PreparationTabs from "@radix-ui/react-tabs";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -417,7 +415,6 @@ function Index() {
       <main id="conteudo" tabIndex={-1}>
         <section id="inicio" className="home-hero" aria-labelledby="home-title" data-intro={introPlaying}>
           <HeroVideo onIntroChange={setIntroPlaying} onIntroSettled={() => setIntroSettled(true)} />
-          <HeroEmblemClock />
           <HeroBadge show={introSettled} />
           <div className="home-container home-hero__content" inert={introPlaying}>
             <div className="home-hero__grid">
@@ -526,7 +523,6 @@ function Index() {
         <div className="home-container">
           <div className="home-footer__grid">
             <div className="home-footer__brand">
-              <FooterInsignia />
               <div>
                 <NorteBrand />
                 <p>Preparação para carreiras policiais.</p>
