@@ -8,7 +8,7 @@
   :root.dark .home.home { --home-canvas-veil: color-mix(in srgb, var(--background) 76%, transparent); }
   :root:is(.dark, :not(.dark)) .home.home :is(
     .home-preparation__intro, .home-operations__heading, .home-plans__intro .home-heading,
-    .home-preparation__info, .home-opportunity, .home-plan[data-plan],
+    .home-preparation__info, .home-plan[data-plan],
     .home-plans__signal, .home-plan-comparison, .home-plans__notice,
     .home-hero__copy > p, .home-hero__study-links .daily-badge,
     .home-hero__study-links .question-count-badge
@@ -32,8 +32,7 @@
   :root:is(.dark, :not(.dark)) .home.home .home-preparation__tabs { background: var(--muted); padding: 6px; }
   .home.home .home-preparation__tab { min-height: 44px; font-size: 12px; }
   .home.home .home-preparation__tool summary { min-height: 48px; }
-  .home.home .home-plan[data-plan] :is(.home-plan__description, .home-plan__features),
-  .home.home .home-opportunity__body { line-height: 1.65; }
+  .home.home .home-plan[data-plan] :is(.home-plan__description, .home-plan__features) { line-height: 1.65; }
   .home.home .home-plan[data-plan] > .home-button { min-height: 44px; }
   .home.home .home-trust {
     display: grid;
@@ -122,7 +121,7 @@
     overflow: visible;
     padding: 0;
   }
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-opportunity, .home-plan[data-plan]) { min-width: 0; height: auto; }
+  :root:is(.dark, :not(.dark)) .home.home .home-plan[data-plan] { min-width: 0; height: auto; }
   .home.home .home-plan[data-plan] .home-plan__media { height: 140px; }
   .home.home .home-operations .home-rail__track > :last-child:nth-child(odd) {
     grid-column: 1 / -1;
@@ -131,7 +130,7 @@
   }
 }
 @media (max-width: 599px) {
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > :is(.home-opportunity, .home-plan) { flex-basis: min(88%, 360px); }
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > .home-plan { flex-basis: min(88%, 360px); }
   .home.home .home-plan[data-plan] .home-plan__media { height: 132px; }
   .home.home .home-rail__controls { padding: 8px 0; gap: 10px; }
   .home.home .home-faq__list summary { padding-block: 14px; font-size: 13px; line-height: 1.5; }

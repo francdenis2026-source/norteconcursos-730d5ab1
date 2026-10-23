@@ -50,6 +50,7 @@ import { Route as DashboardEssaysRouteImport } from './routes/dashboard/essays'
 import { Route as DashboardExamPanoramaRouteImport } from './routes/dashboard/exam-panorama'
 import { Route as DashboardFlashcardsRouteImport } from './routes/dashboard/flashcards'
 import { Route as DashboardHistoryRouteImport } from './routes/dashboard/history'
+import { Route as DashboardInteligenciaIdecanRouteImport } from './routes/dashboard/inteligencia-idecan'
 import { Route as DashboardLeisRouteImport } from './routes/dashboard/leis'
 import { Route as DashboardLibraryRouteImport } from './routes/dashboard/library'
 import { Route as DashboardMaterialRouteImport } from './routes/dashboard/material'
@@ -290,6 +291,12 @@ const DashboardHistoryRoute = DashboardHistoryRouteImport.update({
   path: '/history',
   getParentRoute: () => DashboardRoute,
 } as any)
+const DashboardInteligenciaIdecanRoute =
+  DashboardInteligenciaIdecanRouteImport.update({
+    id: '/inteligencia-idecan',
+    path: '/inteligencia-idecan',
+    getParentRoute: () => DashboardRoute,
+  } as any)
 const DashboardLeisRoute = DashboardLeisRouteImport.update({
   id: '/leis',
   path: '/leis',
@@ -490,6 +497,7 @@ export interface FileRoutesByFullPath {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
   '/dashboard/material': typeof DashboardMaterialRoute
@@ -562,6 +570,7 @@ export interface FileRoutesByTo {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/material': typeof DashboardMaterialRoute
   '/dashboard/medals': typeof DashboardMedalsRoute
@@ -636,6 +645,7 @@ export interface FileRoutesById {
   '/dashboard/exam-panorama': typeof DashboardExamPanoramaRoute
   '/dashboard/flashcards': typeof DashboardFlashcardsRoute
   '/dashboard/history': typeof DashboardHistoryRoute
+  '/dashboard/inteligencia-idecan': typeof DashboardInteligenciaIdecanRoute
   '/dashboard/leis': typeof DashboardLeisRoute
   '/dashboard/library': typeof DashboardLibraryRouteWithChildren
   '/dashboard/material': typeof DashboardMaterialRoute
@@ -712,6 +722,7 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
     | '/dashboard/material'
@@ -784,6 +795,7 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/material'
     | '/dashboard/medals'
@@ -857,6 +869,7 @@ export interface FileRouteTypes {
     | '/dashboard/exam-panorama'
     | '/dashboard/flashcards'
     | '/dashboard/history'
+    | '/dashboard/inteligencia-idecan'
     | '/dashboard/leis'
     | '/dashboard/library'
     | '/dashboard/material'
@@ -1198,6 +1211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardHistoryRouteImport
       parentRoute: typeof DashboardRoute
     }
+    '/dashboard/inteligencia-idecan': {
+      id: '/dashboard/inteligencia-idecan'
+      path: '/inteligencia-idecan'
+      fullPath: '/dashboard/inteligencia-idecan'
+      preLoaderRoute: typeof DashboardInteligenciaIdecanRouteImport
+      parentRoute: typeof DashboardRoute
+    }
     '/dashboard/leis': {
       id: '/dashboard/leis'
       path: '/leis'
@@ -1472,6 +1492,7 @@ interface DashboardRouteChildren {
   DashboardExamPanoramaRoute: typeof DashboardExamPanoramaRoute
   DashboardFlashcardsRoute: typeof DashboardFlashcardsRoute
   DashboardHistoryRoute: typeof DashboardHistoryRoute
+  DashboardInteligenciaIdecanRoute: typeof DashboardInteligenciaIdecanRoute
   DashboardLeisRoute: typeof DashboardLeisRoute
   DashboardLibraryRoute: typeof DashboardLibraryRouteWithChildren
   DashboardMaterialRoute: typeof DashboardMaterialRoute
@@ -1528,6 +1549,7 @@ const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardExamPanoramaRoute: DashboardExamPanoramaRoute,
   DashboardFlashcardsRoute: DashboardFlashcardsRoute,
   DashboardHistoryRoute: DashboardHistoryRoute,
+  DashboardInteligenciaIdecanRoute: DashboardInteligenciaIdecanRoute,
   DashboardLeisRoute: DashboardLeisRoute,
   DashboardLibraryRoute: DashboardLibraryRouteWithChildren,
   DashboardMaterialRoute: DashboardMaterialRoute,
