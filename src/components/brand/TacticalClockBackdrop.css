@@ -12,7 +12,7 @@ svg.tactical-clock-backdrop {
   fill: var(--backdrop-clock-veil, transparent);
 }
 .tactical-clock-backdrop__mechanism {
-  opacity: 0.82;
+  opacity: 0.62;
 }
 .tactical-clock-backdrop__hand {
   transform-origin: 0 0;
@@ -21,40 +21,38 @@ svg.tactical-clock-backdrop {
 }
 .tactical-clock-backdrop__hour {
   --hand-period: 43200s;
-  fill: #eac77e;
-  stroke: #302414;
-  stroke-width: 2;
+  fill: #9d8965;
+  stroke: #332e25;
+  stroke-width: 1;
 }
 .tactical-clock-backdrop__minute {
   --hand-period: 3600s;
-  fill: #8ad8bf;
-  stroke: #123d36;
-  stroke-width: 2;
+  fill: #afb2ac;
+  stroke: #303432;
+  stroke-width: 1;
 }
 .tactical-clock-backdrop__second {
   --hand-period: 60s;
-  fill: #eda3b7;
-  stroke: #eda3b7;
-  stroke-width: 2.5;
+  fill: #b19a6c;
+  stroke: #b19a6c;
+  stroke-width: 1;
+  opacity: 0.48;
 }
 .tactical-clock-backdrop__inlay {
   fill: none;
-  stroke: #fff7df;
-  stroke-opacity: 0.7;
-  stroke-width: 2;
-}
-.tactical-clock-backdrop__second circle {
-  fill: #172225;
+  stroke: #d6cbb3;
+  stroke-opacity: 0.3;
+  stroke-width: 0.7;
 }
 .tactical-clock-backdrop__hub {
-  fill: #252a2c;
-  stroke: #eac77e;
-  stroke-width: 3;
+  fill: #292a27;
+  stroke: #9d8965;
+  stroke-width: 1.5;
 }
 .tactical-clock-backdrop__jewel {
-  fill: #f5dfac;
-  stroke: #674a26;
-  stroke-width: 2;
+  fill: #a39980;
+  stroke: #554c3b;
+  stroke-width: 0.7;
 }
 .tactical-clock-backdrop[data-paused] .tactical-clock-backdrop__hand {
   animation-play-state: paused;

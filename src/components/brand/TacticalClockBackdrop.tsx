@@ -43,26 +43,25 @@ export function TacticalClockBackdrop() {
             className="tactical-clock-backdrop__hand tactical-clock-backdrop__hour"
             style={{ "--hand-angle": `${angles.hour}deg` } as CSSProperties}
           >
-            <path d="M-9 28 L-11-76 L0-137 L11-76 L9 28Z" />
-            <path className="tactical-clock-backdrop__inlay" d="M0-116V-15" />
+            <path d="M-3 16 L-4-73 L0-112 L4-73 L3 16Z" />
+            <path className="tactical-clock-backdrop__inlay" d="M0-95V-16" />
           </g>
           <g
             className="tactical-clock-backdrop__hand tactical-clock-backdrop__minute"
             style={{ "--hand-angle": `${angles.minute}deg` } as CSSProperties}
           >
-            <path d="M-6 35 L-7-126 L0-187 L7-126 L6 35Z" />
-            <path className="tactical-clock-backdrop__inlay" d="M0-163V-20" />
+            <path d="M-2 20 L-3-117 L0-156 L3-117 L2 20Z" />
+            <path className="tactical-clock-backdrop__inlay" d="M0-139V-18" />
           </g>
           <g
             className="tactical-clock-backdrop__hand tactical-clock-backdrop__second"
             style={{ "--hand-angle": `${angles.second}deg` } as CSSProperties}
           >
-            <path d="M0 48V-201" />
-            <path className="tactical-clock-backdrop__tip" d="M-4-188L0-205L4-188Z" />
-            <circle cy="34" r="8" />
+            <path d="M0 24V-167" />
+            <path className="tactical-clock-backdrop__tip" d="M-1.5-158L0-170L1.5-158Z" />
           </g>
-          <circle r="14" className="tactical-clock-backdrop__hub" />
-          <circle r="6" className="tactical-clock-backdrop__jewel" />
+          <circle r="8" className="tactical-clock-backdrop__hub" />
+          <circle r="3" className="tactical-clock-backdrop__jewel" />
         </g>
       )}
     </svg>
