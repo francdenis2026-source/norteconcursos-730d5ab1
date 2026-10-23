@@ -863,13 +863,13 @@
   border-color: #123b63;
 }
 :root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore),
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:not(:disabled) {
+:root:not(.dark) .home.home .home-plans--insignia .home-plan:not([data-plan="free"]) > .home-button:not(:disabled) {
   background: #ffffff;
   color: #174c7e;
   border-color: #9aafc2;
 }
 :root:not(.dark) .home.home :is(.home-button--secondary, .home-hero__explore):hover,
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:not(:disabled):hover {
+:root:not(.dark) .home.home .home-plans--insignia .home-plan:not([data-plan="free"]) > .home-button:not(:disabled):hover {
   background: #eaf0f5;
   color: #123b63;
   border-color: #174c7e;
