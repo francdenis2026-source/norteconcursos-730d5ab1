@@ -1,5 +1,6 @@
 import "./QuestionTimer.css";
 import { TacticalClock } from "@/components/brand/TacticalClock";
+import relogioCarreirasPoliciais from "@/assets/brand/relogio-face-circular.webp";
 
 /** A compact stopwatch: the dial shows seconds within a minute, never a deadline. */
 export function QuestionTimer({
@@ -34,6 +35,7 @@ export function QuestionTimer({
         size={compact ? "compact" : "question"}
         time={time}
         seconds={elapsed}
+        engraving={relogioCarreirasPoliciais}
         {...(compact ? {} : { label: "Nesta questão" })}
         status={completed ? "Finalizado" : paused ? "Pausado" : "Tempo ativo"}
         paused={paused && !completed}

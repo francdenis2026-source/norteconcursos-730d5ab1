@@ -12,6 +12,8 @@ type TacticalClockProps = {
   paused?: boolean;
   completed?: boolean;
   urgent?: boolean;
+  /** Center artwork for the dial. Defaults to the platform insignia. */
+  engraving?: string;
 };
 
 /** Presentation only: every hand and arc follows the caller's authoritative timer. */
@@ -25,6 +27,7 @@ export function TacticalClock({
   paused = false,
   completed = false,
   urgent = false,
+  engraving = insignia,
 }: TacticalClockProps) {
   const id = useId().replace(/:/g, "");
   const second = ((Math.floor(Number.isFinite(seconds) ? seconds : 0) % 60) + 60) % 60;
@@ -38,7 +41,7 @@ export function TacticalClock({
     >
       <span className="tactical-clock__face" aria-hidden="true">
         <span className="tactical-clock__engraving">
-          <img src={insignia} alt="" decoding="async" />
+          <img src={engraving} alt="" decoding="async" />
         </span>
         <svg className="tactical-clock__dial" viewBox="0 0 240 240" fill="none">
           <defs>
@@ -68,11 +71,20 @@ export function TacticalClock({
               CARREIRAS POLICIAIS
             </textPath>
           </text>
+          <line
+            className="tactical-clock__needle"
+            x1="120"
+            y1="120"
+            x2="120"
+            y2="33"
+            transform={`rotate(${second * 6} 120 120)`}
+          />
           <path
             className="tactical-clock__hand"
             d="M116 37l4-9 4 9z"
             transform={`rotate(${second * 6} 120 120)`}
           />
+          <circle className="tactical-clock__pivot" cx="120" cy="120" r="5" />
         </svg>
         {size !== "compact" && <span className="tactical-clock__signature">NORTE · PRECISÃO</span>}
       </span>

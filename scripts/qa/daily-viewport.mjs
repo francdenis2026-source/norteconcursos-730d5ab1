@@ -30,8 +30,10 @@ try{
   const clock=page.locator('.daily-question-heading .tactical-clock--compact');
   const art=await clock.locator('.tactical-clock__face').boundingBox();
   const heading=await page.locator('.daily-question-heading').boundingBox();
-  assert.ok(art.width>=30&&art.width<=60,'inline compact dial, legible but not the old large question dial');
-  assert.ok(art.y>=heading.y&&art.y+art.height<=heading.y+heading.height+4,'timer sits inline with the heading row, not its own block');
+  const subjectsBlock=await page.locator('.daily-question-meta, .daily-toolbar-row').first().boundingBox();
+  assert.ok(art.width>=40&&art.width<=90,'floating medallion dial, large enough to show the engraved art');
+  assert.ok(art.y+art.height<=heading.y+heading.height+40,'timer floats near the heading row, not far below it');
+  if(subjectsBlock)assert.ok(art.y+art.height<=subjectsBlock.y+4,'floating timer does not overlap the row below the heading');
   assert.equal(await clock.evaluate(n=>getComputedStyle(n).borderTopWidth),'0px','no surrounding box');
   assert.equal(await clock.evaluate(n=>getComputedStyle(n).backgroundColor),'rgba(0, 0, 0, 0)','transparent surround');
   await checkFrame();const dock=await page.locator('.daily-answer-dock').boundingBox();assert.ok(dock.y+dock.height<=height,'response controls stay inside viewport');
