@@ -104,7 +104,7 @@ function SubscriptionsPage() {
     }
   }, [user?.id]);
   return (
-    <div className="mx-auto max-w-6xl space-y-6 px-4 pb-4 md:px-6 md:pb-6">
+    <div className="mx-auto max-w-6xl space-y-5 px-4 pb-4 md:px-6 md:pb-6">
       <PageHero
         image="dashboard"
         size="sm"
@@ -133,8 +133,8 @@ function SubscriptionsPage() {
         />
       )}
 
-      <Card className="border-primary/30 bg-primary/5">
-        <CardContent className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
+      <Card className="border-l-4 border-l-primary">
+        <CardContent className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-3">
             <span className="rounded-xl bg-primary/10 p-2 text-primary">
               <Volume2 className="h-5 w-5" aria-hidden="true" />
