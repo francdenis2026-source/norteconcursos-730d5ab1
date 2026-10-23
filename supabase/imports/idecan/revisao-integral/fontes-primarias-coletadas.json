@@ -1,0 +1,125 @@
+{
+  "sources": [
+    {
+      "id": "pf-edital",
+      "url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "status": 200,
+      "bytes": 1505541,
+      "sha256": "900be3d17f0a8f6e834d2c90019e3a594aa0fa81d354fff483059662401be88b",
+      "checked_at": "2026-10-23T01:41:24.392952+00:00"
+    },
+    {
+      "id": "rfc-cgnat",
+      "url": "https://www.rfc-editor.org/rfc/rfc6888.txt",
+      "status": 200,
+      "bytes": 32484,
+      "sha256": "d457f77ec6d4bd0b1921f1a14c5d27dfbb620a7166d1d02864a4dcd13a6b1b91",
+      "checked_at": "2026-10-23T01:41:23.596588+00:00"
+    },
+    {
+      "id": "rfc-snmp",
+      "url": "https://www.rfc-editor.org/rfc/rfc3411.txt",
+      "status": 200,
+      "bytes": 140096,
+      "sha256": "5cae3a3d7ab2013b5ba9e285e3fc3c9001b7ccba8fafda48bd04b04e0e366016",
+      "checked_at": "2026-10-23T01:41:23.629480+00:00"
+    },
+    {
+      "id": "rfc-sftp",
+      "url": "https://www.rfc-editor.org/rfc/rfc4253.txt",
+      "status": 200,
+      "bytes": 68263,
+      "sha256": "b471173305154f6c66facffcf7a4a25fc5c32765cb30542120be6c20a88f1ed3",
+      "checked_at": "2026-10-23T01:41:23.379043+00:00"
+    },
+    {
+      "id": "thunar",
+      "url": "https://docs.xfce.org/xfce/thunar/start",
+      "status": 200,
+      "bytes": 31257,
+      "sha256": "2945dc60dab7698e5265ac84c387e93182dfeb864650e7f6323e173c937193a9",
+      "checked_at": "2026-10-23T01:41:24.294665+00:00"
+    },
+    {
+      "id": "android-verified-boot",
+      "url": "https://source.android.com/docs/security/features/verifiedboot",
+      "status": 200,
+      "bytes": 155697,
+      "sha256": "ede2751b502ac8994d2411cadcbcc059c04fe4e31eb1f0cad19e97fa721e962a",
+      "checked_at": "2026-10-23T01:41:23.665647+00:00"
+    },
+    {
+      "id": "bitcoin-segwit",
+      "url": "https://bips.dev/173/",
+      "status": 200,
+      "bytes": 30123,
+      "sha256": "dbbf5c53a6a4504c8035ca8f2ad4f57bb39074ba4e8eca73f8424f0b481e3fd6",
+      "checked_at": "2026-10-23T01:41:23.476843+00:00"
+    },
+    {
+      "id": "bitcoin-taproot",
+      "url": "https://bips.dev/350/",
+      "status": 200,
+      "bytes": 33940,
+      "sha256": "001f7413c1228883a9d3e6314b9d0e8858b28dfd67ec0944fdb5223a37fa299d",
+      "checked_at": "2026-10-23T01:41:23.578447+00:00"
+    },
+    {
+      "id": "nist-sha1",
+      "url": "https://csrc.nist.gov/projects/hash-functions",
+      "status": 200,
+      "bytes": 50471,
+      "sha256": "763ed830133ecb6fd49fcf92196f46d10ab7dc9a9fe4cac3115491cd66ad3336",
+      "checked_at": "2026-10-23T01:41:24.462050+00:00"
+    },
+    {
+      "id": "planalto-cp",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "status": 200,
+      "bytes": 683589,
+      "sha256": "82046837a0e3bc919b06004732295b4f3a29eb7fead03df3ff5807258e886f67",
+      "checked_at": "2026-10-23T01:41:27.173542+00:00"
+    },
+    {
+      "id": "planalto-cpp",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+      "status": 200,
+      "bytes": 908608,
+      "sha256": "6f5dd4f4c56eb7bf381b8fb937803ab43d609b95e8686130904da9503be3fdd9",
+      "checked_at": "2026-10-23T01:41:26.950437+00:00"
+    },
+    {
+      "id": "planalto-cf",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "status": 200,
+      "bytes": 1847715,
+      "sha256": "abec0da360e8b622ef0faf3b13c8c6b48256b04008e37135f57e171acfcad3cd",
+      "checked_at": "2026-10-23T01:41:30.247393+00:00"
+    },
+    {
+      "id": "planalto-marco",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm",
+      "status": 200,
+      "bytes": 119976,
+      "sha256": "d87725a650c3cc9510d295fc35a1628fd46c26d7a3d1f12e846d7ec9787c66f4",
+      "checked_at": "2026-10-23T01:41:25.497072+00:00"
+    }
+  ],
+  "pf_read_excerpts": [
+    {
+      "term": "RACIOCÍNIO LÓGICO: 1 Estruturas",
+      "found": true,
+      "excerpt": "RACIOCÍNIO LÓGICO: 1 Estruturas lógicas. 2 Lógica de argumentação: analogias, inferências, deduções e conclusões. 3 Lógica sentencial (ou proposicional). 3.1 Proposições simples e compostas. 3.2 Tabelas verdade. 3.3 Equivalências. 3.4 Leis de Morgan. 3.5 Diagramas lógicos. 4 Lógica de primeira ordem. 5 Princípios de contagem e probabilidade. 6 Operações com conjuntos. 7 Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais. CONHECIMENTOS ESPECÍFICOS CARGO 2: PERITO CRIMINAL FEDERAL – ÁREA 1: CONTÁBIL-FINANCEIRA 1 Contabilidade geral. 1.1 Teoria Contábil. 1.2 Estrutura conceitual para relatórios financeiros. 1.3 Documentos emitidos pelo Comitê de Pronunciamentos Contábeis (CPC). 1.4 Normas do Conselho Federal de Contabilidade (CFC). 2 Contabilidade comercial. 2.1 Operações com mercadorias. 2.2 Estoques. 2.3 Impostos sobre compras e vendas. 2.4 Provisão para devedores duvidosos. 2.5 Folha de pagamento. 2.6 Operações comerciais e bancárias. 3 Contabilidade avançada. 3.1 Investimentos. 3.2 Reavaliação de ativos. 3.3 Transações entre partes relacionadas. 3.4 Consolidação de demonstrações financeiras. 3.5 Matriz e filial. 3.6 Concentração e extinção de sociedades 3.7 Combinação de negócios. 4 Contabilidade societária. 4.1 Companhias abertas. 4.2 Normas da comissã"
+    },
+    {
+      "term": "ESTATÍSTICA: 1 Estatística descritiva",
+      "found": true,
+      "excerpt": "ESTATÍSTICA: 1 Estatística descritiva e análise exploratória de dados: gráﬁcos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose). 2 Probabilidade. 2.1 Probabilidade e Probabilidade Condicional. 2.2 Conceitos básicos de probabilidade. 2.3 Cálculo de probabilidades condicionais. 2.4 Deﬁnições básicas e axiomas. 2.5 Probabilidade condicional e independência. 2.6 Variáveis aleatórias discretas e contínuas. 2.7 Distribuição de probabilidades. 2.8 Função de probabilidade. 2.9 Função densidade de probabilidade. 2.10 Esperança e momentos. 2.11 Distribuições especiais. 2.12 Distribuições condicionais e independência. 2.13 Transformação de variáveis. 2.14 Leis dos grandes números. 2.15 Teorema central do limite. 2.16 Amostras aleatórias. 2.17 Distribuições amostrais. 2.18 Independência de Eventos, Regra de Bayes e Teorema da Probabilidade Total. 2.19 Conceito de independência. 2.20 Aplicação da regra de Bayes. 2.21 Uso do teorema da probabilidade total. 2.21 Variáveis Aleatórias e Funções de Probabilidade. 2.21.1 Deﬁnição e exemplos de variáveis aleatórias. 2.21.2 Função de probabilidade (para variáveis discretas) e função densidade de probabilidade (para variáveis contínuas). 2.22 Principais Distribuições de Probabilidade Discretas e Contínuas. 2.22.1 Dis"
+    },
+    {
+      "term": "INFORMÁTICA: 1 Conceito de internet",
+      "found": true,
+      "excerpt": "INFORMÁTICA: 1 Conceito de internet e intranet. 2 Conceitos e modos de utilização de tecnologias, ferramentas, aplicativos e procedimentos associados a internet/intranet. 2.1 Ferramentas e aplicativos comerciais de navegação, de correio eletrônico, de grupos de discussão, de busca, de pesquisa e de redes sociais. 2.2 Noções de sistema operacional (ambiente Linux e Windows). 2.3 Acesso à distância a computadores, transferência de informação e arquivos, aplicativos de áudio, vídeo e multimídia. 2.4 Edição de textos, planilhas e apresentações (ambientes Microsoft Office e LibreOffice). 3 Redes de computadores. 3.1 Formação de endereços IPV4 e IPV6. 4 Conceitos de proteção e segurança. 4.1 Noções de vírus, worms e pragas virtuais. 4.2 Aplicativos para segurança (antivírus, firewall, anti-spyware etc.). 5 Computação na nuvem (cloud computing). 6 Fundamentos da Teoria Geral de Sistemas. 6.1 Camadas de Aplicação, processos, frontend, backend. 7 Sistemas de informação. 7.1 Fases e etapas de sistema de informação. 7.2 Análise de requisitos, especificação, ambientes de testes, homologação, produção e suporte. 8 Teoria da informação. 8.1 Conceitos de informação, dados, representação de dados, de conhecimentos, segurança e inteligência. 9 Banco de dados. 9.1 Base de dados, documentação e pro"
+    }
+  ]
+}

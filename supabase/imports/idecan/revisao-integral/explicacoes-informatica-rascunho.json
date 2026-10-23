@@ -1,0 +1,411 @@
+[
+  {
+    "local_index": 36,
+    "solution": "A ligação entre redes de filiais em cidades distintas por enlaces de operadoras caracteriza uma WAN, rede de longa distância. A alternativa B corresponde ao alcance geográfico descrito.",
+    "common_error": "LAN é a rede local; PAN atende dispositivos pessoais; anel descreve topologia, não abrangência.",
+    "practical_example": "Uma delegacia tem sua LAN; a conexão entre delegacias de cidades diferentes pode compor uma WAN.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 37,
+    "solution": "CGNAT é NAT em escala de operadora. Ele traduz endereços privados de vários clientes para endereços públicos compartilhados e distingue conexões por portas. Alternativa A.",
+    "common_error": "Compartilhar um IPv4 público não é implantar IPv6 dual stack nem criar um proxy de aplicação.",
+    "practical_example": "Dois assinantes podem sair pelo mesmo IPv4 público, usando mapeamentos de portas diferentes.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 38,
+    "solution": "SNMP organiza a gerência de dispositivos por gerente e agentes, permitindo consultar contadores e estado. Alternativa D. As consultas normalmente usam UDP 161; notificações usam UDP 162.",
+    "common_error": "DHCP configura hosts, DNS resolve nomes e FTP transfere arquivos; não substituem essa arquitetura de gerência.",
+    "practical_example": "Um monitor consulta por SNMP o contador de tráfego de uma interface de roteador.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 39,
+    "solution": "O gabarito histórico aponta DuckDuckGo Browser (C), produto com recursos de proteção contra rastreamento e limpeza de dados. Porém, a afirmação de apagar todos os dados ao fechar cada aba não pode ser estendida a todas as versões e plataformas sem conferir a documentação e as configurações.",
+    "common_error": "Não transforme uma característica comercial de privacidade em garantia absoluta de anonimato ou apagamento automático.",
+    "practical_example": "O botão de limpeza e as preferências de um navegador precisam ser conferidos separadamente da simples ação de fechar uma aba.",
+    "editorial_issues": [
+      "afirmacoes_absolutas_de_produto_dependem_de_versao_e_configuracao"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 40,
+    "solution": "O Tor constrói circuitos por relés com criptografia em camadas; serviços onion usam endereços ligados a chaves públicas. A alternativa E reúne essas propriedades. Para um serviço onion, não há o nó de saída convencional usado para alcançar a web aberta.",
+    "common_error": "Darknet não usa simplesmente DNS público e NAT para tornar usuários anônimos; anonimato também não elimina riscos nos terminais.",
+    "practical_example": "Uma conexão a um site comum via Tor e uma conexão a serviço onion têm caminhos de entrega diferentes.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 41,
+    "solution": "As estações rádio-base fazem a interface de rádio com os terminais móveis e se conectam à rede de transporte e ao núcleo. A alternativa B identifica esse equipamento.",
+    "common_error": "Um ponto de acesso Wi-Fi não é automaticamente uma estação de uma rede celular licenciada.",
+    "practical_example": "Um telefone em deslocamento troca de célula em um handover, coordenado pela infraestrutura celular.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 42,
+    "solution": "Ransomware é o malware associado à extorsão, no caso pela criptografia de arquivos e exigência de pagamento. Alternativa A.",
+    "common_error": "Spyware coleta informações; adware exibe publicidade; worm indica forma de propagação. Essas categorias podem se combinar em um ataque.",
+    "practical_example": "Arquivos de trabalho ficam inacessíveis e o invasor exige resgate; restaurar backup íntegro é uma medida de recuperação.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 43,
+    "solution": "Autenticação verifica a identidade alegada usando credenciais. Alternativa C. Identificação é declarar quem se é; autorização decide quais recursos podem ser usados depois.",
+    "common_error": "Não confunda provar identidade com conceder permissão ou garantir integridade de arquivos.",
+    "practical_example": "Informar o nome é identificar-se; comprovar a senha é autenticar-se; receber acesso ao módulo é autorização.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 44,
+    "solution": "A solução voltada a detectar e remover programas espiões é anti-spyware, alternativa D. Ela busca ameaças que coletam informações sem consentimento.",
+    "common_error": "Criptografar o disco protege dados em repouso; não é sinônimo de remover um programa espião já executando.",
+    "practical_example": "Uma ferramenta detecta um coletor de teclas não autorizado e o coloca em quarentena.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 45,
+    "solution": "Uma saída hexadecimal de 64 caracteres contém 256 bits e é compatível com SHA-256, da família SHA indicada em E. Comparar o hash com um valor de referência obtido por canal confiável ajuda a verificar integridade.",
+    "common_error": "Hash não é criptografia reversível. A coincidência não prova autoria se o atacante puder substituir também o valor de referência.",
+    "practical_example": "O fabricante publica um SHA-256 em seu site autenticado; o usuário calcula o hash do instalador e compara os valores.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 46,
+    "solution": "Formato, resolução, taxa de bits, duração e codec descrevem propriedades técnicas do arquivo. Por isso, a alternativa A classifica esses metadados como técnicos.",
+    "common_error": "Metadados descritivos ajudam a identificar o conteúdo; administrativos tratam da gestão. As categorias podem ter usos sobrepostos.",
+    "practical_example": "“1920×1080, H.264, 30 quadros por segundo” descreve tecnicamente um vídeo.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 47,
+    "solution": "SHA-1 gera um resumo de 160 bits; é a alternativa B. A palavra “única” deve ser entendida como impressão resumida, não como impossibilidade matemática de colisão. SHA-1 tem colisões conhecidas e não deve ser recomendado para novos usos que exijam resistência a colisões.",
+    "common_error": "Base64 é codificação, não função de hash; 160 bits não significam 160 caracteres.",
+    "practical_example": "Um resumo SHA-1 em hexadecimal tem 40 caracteres, pois cada caractere representa quatro bits.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 48,
+    "solution": "Coletar e analisar informações de fontes publicamente acessíveis é OSINT, inteligência de fontes abertas. Alternativa E. Ser público não dispensa finalidade legítima, cuidado com dados pessoais e validação do conteúdo.",
+    "common_error": "Acesso público não é autorização para invadir conta, interceptar comunicação privada ou presumir que toda postagem seja verdadeira.",
+    "practical_example": "Uma publicação pública pode indicar um local; a análise precisa verificar data, autoria e contexto.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 49,
+    "solution": "A extração física busca dados no armazenamento em nível inferior à interface lógica do sistema. O acesso direto ao chip descrito se enquadra na alternativa C. Criptografia, desgaste e sobrescrita podem impedir a recuperação de dados apagados.",
+    "common_error": "Análise física não garante recuperar todo conteúdo e não se confunde com uma consulta por API.",
+    "practical_example": "Uma imagem bit a bit pode conter áreas que um backup comum do usuário não inclui.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 50,
+    "solution": "O produto orientado a apoiar decisões e antecipar cenários é inteligência, alternativa D. O enunciado vai além de registrar dados ou organizar informação: há análise para ação.",
+    "common_error": "Ter muitos registros não produz inteligência automaticamente; são necessários contexto, avaliação e inferências justificadas.",
+    "practical_example": "Cruzar ocorrências e padrões de horário pode apoiar a decisão de onde reforçar patrulhas.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 51,
+    "solution": "O viés, ou bias, é o termo b em z=Σ(wᵢxᵢ)+b. Ele desloca a ativação e permite ajustar a saída mesmo com entradas nulas. Alternativa B. Em treinamento, b costuma ser aprendido; “fixo” significa um termo aditivo para aquela avaliação, não um parâmetro eternamente imutável.",
+    "common_error": "Taxa de aprendizado controla atualizações; função de perda mede erro; nenhuma delas é o termo aditivo do neurônio.",
+    "practical_example": "Em y=2x+3, o termo 3 desloca a reta de modo análogo ao viés.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 52,
+    "solution": "A chave pública pode ser derivada da privada e divulgada; a privada autoriza assinaturas. Isso sustenta a alternativa A entre as opções. Contudo, endereço de recebimento e chave pública não são sempre o mesmo objeto: endereços frequentemente são derivados de chaves ou scripts.",
+    "common_error": "Não ensinar que todo endereço de criptoativo é literalmente uma chave pública; a descrição exige precisão por rede e formato.",
+    "practical_example": "Em Bitcoin, um endereço pode codificar um programa de testemunha, sem expor diretamente a chave pública.",
+    "editorial_issues": [
+      "enunciado_mistura_chave_publica_e_endereco_de_recebimento"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 53,
+    "solution": "Prova de Trabalho, PoW, exige esforço computacional para produzir uma solução cuja verificação é simples. Alternativa D. A resistência a alterações depende das regras e da distribuição de poder computacional; “imutável” não significa impossível de reorganizar em qualquer condição.",
+    "common_error": "PoS seleciona validadores por participação e regras próprias, sem a mineração intensiva descrita.",
+    "practical_example": "No Bitcoin, mineradores procuram um hash de bloco que satisfaça o alvo de dificuldade.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 54,
+    "solution": "A distinção indicada no caso é a subtração automatizada sem colaboração da vítima, diferente de uma entrega patrimonial motivada por engano. O gabarito C aponta furto qualificado por meio informático. A classificação e a pena atuais exigem conferir o art. 155, §4º-B, e o art. 171, §2º-A, do Código Penal.",
+    "common_error": "Não classifique todo golpe eletrônico como estelionato: a forma de obtenção e a participação da vítima importam.",
+    "practical_example": "Transferência causada por invasão e transferência voluntária após fraude exigem análises típicas distintas.",
+    "editorial_issues": [
+      "questao_juridica_dentro_de_disciplina_de_informatica_vigencia_pendente"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 55,
+    "solution": "O art. 13, §1º, do Marco Civil trata da impossibilidade de transferir a terceiros a responsabilidade pela manutenção de registros de conexão. Isso corresponde a E. A vedação de transferir responsabilidade não deve ser confundida, sem análise normativa, com proibição de toda contratação técnica de armazenamento.",
+    "common_error": "Separe executar um serviço técnico de assumir a responsabilidade legal perante usuários e autoridades.",
+    "practical_example": "Uma empresa pode contratar infraestrutura e continuar responsável pelos deveres legais que a norma lhe atribui.",
+    "editorial_issues": [
+      "questao_juridica_dentro_de_disciplina_de_informatica_vigencia_pendente"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 106,
+    "solution": "Thunar é o gerenciador de arquivos do ambiente Xfce. Alternativa E. O PDF traz File Explorer na alternativa D; o lote local substituiu-a indevidamente por “Spam”.",
+    "common_error": "Firefox é navegador; Gedit é editor de texto; PulseAudio trata de áudio.",
+    "practical_example": "No Xfce, abrir uma pasta pelo gerenciador de arquivos normalmente aciona o Thunar.",
+    "editorial_issues": [
+      "alternativa_D_local_deve_ser_File_Explorer_conforme_PDF_pagina_7"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 107,
+    "solution": "Na função SE, avalie primeiro o teste: 5×6=30, e 30<35 é verdadeiro. A função retorna o primeiro texto, “Válido”, alternativa D. O resultado lógico do teste e o resultado da função não são a mesma coisa.",
+    "common_error": "A função retorna o texto escolhido, não necessariamente VERDADEIRO ou FALSO.",
+    "practical_example": "SE(2<3;\"Sim\";\"Não\") retorna “Sim”.",
+    "editorial_issues": [
+      "alternativas_A_B_e_final_do_enunciado_contaminados_por_questao_23"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 108,
+    "solution": "A coleta oculta de teclas, capturas de tela e credenciais caracteriza spyware, alternativa B no PDF. Um keylogger é uma ferramenta de registro de teclas que pode integrar esse tipo de ameaça.",
+    "common_error": "TPM, GPU, RAM e controladores são componentes de hardware: as alternativas locais foram copiadas de outra questão.",
+    "practical_example": "Um programa instalado sem consentimento que envia senhas a terceiros é comportamento de espionagem.",
+    "editorial_issues": [
+      "todas_as_alternativas_locais_pertencem_a_questao_19_restaurar_do_PDF_pagina_7"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 212,
+    "solution": "Um switch de camada 2 aprende endereços MAC e os associa a portas para encaminhar quadros. Alternativa A. Quadros de destino desconhecido podem ser difundidos nas portas elegíveis, exceto a de entrada.",
+    "common_error": "DHCP atribui parâmetros IP; um switch de camada 2 não passa a executar esse serviço só por encaminhar quadros.",
+    "practical_example": "Se o MAC do computador B está associado à porta 3, um quadro unicast conhecido para B segue por essa porta.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 213,
+    "solution": "SFTP é o protocolo de transferência de arquivos sobre SSH e fornece um canal protegido para autenticação, integridade e confidencialidade. Alternativa E. Não é o mesmo que FTPS, que usa FTP protegido por TLS.",
+    "common_error": "Confundir SFTP com FTP comum ignora a proteção da sessão.",
+    "practical_example": "Uma cópia via SFTP pode usar autenticação por chave SSH, sem expor o conteúdo em texto claro na rede.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 214,
+    "solution": "SaaS oferece a aplicação pronta como serviço, acessada pelo usuário sem administrar servidores ou sistema operacional. Alternativa D.",
+    "common_error": "Em IaaS o cliente administra mais camadas da infraestrutura; PaaS fornece plataforma para desenvolver e executar aplicações.",
+    "practical_example": "Usar uma suíte de documentos on-line pelo navegador é um exemplo de SaaS.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 215,
+    "solution": "Darknet é a infraestrutura sobreposta que exige protocolos ou software específicos. Dark web se refere a conteúdo e serviços web hospedados nesse ambiente. A descrição da rede corresponde a C.",
+    "common_error": "Deep web inclui conteúdo não indexado, como sistemas restritos comuns, e não é sinônimo de darknet.",
+    "practical_example": "Uma intranet não indexada pode fazer parte da deep web sem usar uma rede de anonimização.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 216,
+    "solution": "O fornecedor entrega uma funcionalidade de aplicação financeira pela internet, caracterizando provedor de aplicações no contexto técnico descrito. Alternativa B.",
+    "common_error": "Provedor de conexão fornece acesso à rede; isso é diferente de oferecer uma aplicação de gestão.",
+    "practical_example": "A empresa que oferece um sistema de agenda on-line entrega uma aplicação, mesmo que use infraestrutura de outra empresa.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 217,
+    "solution": "Em LTE, S1 conecta a E-UTRAN ao núcleo EPC. S1-MME atende sinalização de controle e S1-U transporta dados de usuário. Alternativa E. X2 conecta estações eNodeB entre si; Uu é a interface de rádio.",
+    "common_error": "A-bis pertence a outra arquitetura celular e não é a interface LTE pedida.",
+    "practical_example": "Um fluxo do telefone alcança a estação pela interface de rádio e segue ao núcleo pelo plano de usuário S1-U.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 218,
+    "solution": "Worm é o código capaz de se autorreplicar e se propagar entre sistemas, frequentemente explorando serviços vulneráveis. Alternativa A.",
+    "common_error": "Um vírus normalmente depende de um hospedeiro; ransomware descreve extorsão e spyware descreve espionagem, não necessariamente o modo de propagação.",
+    "practical_example": "Uma máquina vulnerável infecta outras automaticamente pela rede, sem alguém abrir um anexo em cada uma.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 219,
+    "solution": "Confidencialidade impede divulgação e acesso a pessoas não autorizadas. A alternativa C corresponde ao controle de visualização dos prontuários.",
+    "common_error": "Integridade trata de alterações indevidas; disponibilidade trata do acesso quando necessário.",
+    "practical_example": "Um prontuário pode estar íntegro e disponível, mas violar confidencialidade se qualquer pessoa puder consultá-lo.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 220,
+    "solution": "Senha é um fator de conhecimento; um autenticador em dispositivo controlado pelo usuário representa posse. A combinação pode constituir autenticação multifator, alternativa D.",
+    "common_error": "Duas senhas não constituem dois fatores diferentes. A segurança também depende do mecanismo de código e de sua resistência a phishing.",
+    "practical_example": "Um acesso exige a senha e um código TOTP gerado em aplicativo registrado pelo usuário.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 221,
+    "solution": "MD5 produz resumos de 128 bits, sendo B a alternativa compatível. Ele tem colisões práticas conhecidas e não é adequado para novas aplicações que dependam de resistência a colisões.",
+    "common_error": "Hash não é criptografia reversível e saída de tamanho fixo admite colisões: duas entradas podem ter o mesmo resumo.",
+    "practical_example": "Um MD5 em hexadecimal tem 32 caracteres; SHA-512 tem 128 caracteres hexadecimais.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 222,
+    "solution": "EXIF é um padrão de metadados usado por imagens e pode registrar câmera, data e coordenadas GPS. Alternativa D. Esses campos podem estar ausentes, ser alterados ou removidos e precisam de validação pericial.",
+    "common_error": "Metadado não é prova infalível: data incorreta da câmera ou edição pode alterar a interpretação.",
+    "practical_example": "Uma fotografia pode conter coordenadas no EXIF, mas a localização deve ser confrontada com outras evidências.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 223,
+    "solution": "A assinatura digital usa criptografia assimétrica: a chave privada assina e a pública permite verificar. O certificado associa uma identidade à chave pública dentro de uma cadeia de confiança. Alternativa A.",
+    "common_error": "Não diga que assinatura e cifragem são operações sempre idênticas ou que divulgar a chave pública revela a privada.",
+    "practical_example": "Quem recebe um documento verifica a assinatura com a chave pública do certificado do signatário.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 224,
+    "solution": "O gabarito B indica Telegram, entre as plataformas apresentadas. A afirmação sobre ser a mais comum precisa de relatório identificado, período e população; não é uma propriedade universal e permanente do serviço.",
+    "common_error": "Não inferir que toda utilização da plataforma seja ilícita nem que todos os seus modos de conversa tenham criptografia ponta a ponta.",
+    "practical_example": "Grupos públicos e chats secretos de um mensageiro podem ter modelos de acesso e criptografia diferentes.",
+    "editorial_issues": [
+      "comparacao_de_frequencia_sem_relatorio_primario_identificado"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 225,
+    "solution": "Root é obtenção de privilégios elevados no sistema Android, alternativa D do gabarito. Desbloqueio do bootloader, desativação do Verified Boot e root são operações relacionadas em alguns métodos, mas não são sinônimos nem necessariamente alterações permanentes.",
+    "common_error": "O enunciado mistura privilégios do sistema com a cadeia de inicialização; não ensinar equivalência automática.",
+    "practical_example": "Um bootloader desbloqueado permite iniciar imagens modificadas, mas isso não significa que qualquer aplicativo já tenha acesso root.",
+    "editorial_issues": [
+      "enunciado_mistura_root_bootloader_e_verified_boot"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 226,
+    "solution": "Valores isolados ainda sem interpretação são dados, alternativa E. Quando organizados e contextualizados, podem produzir informação para uma análise.",
+    "common_error": "Conhecimento e inteligência exigem tratamento e interpretação além da simples medição.",
+    "practical_example": "O número 42 é um dado; “42 veículos passaram nesta via entre 8h e 8h01” acrescenta contexto.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 227,
+    "solution": "Embeddings são representações vetoriais aprendidas que podem expressar similaridade semântica por distâncias ou medidas como cosseno. Alternativa A.",
+    "common_error": "Tokens são unidades de entrada; logits são escores de saída; nenhum dos dois é sinônimo do vetor semântico descrito.",
+    "practical_example": "A busca pode aproximar “viatura” e “carro policial” por seus vetores, mesmo sem palavras idênticas.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 228,
+    "solution": "Endereços Bitcoin com bc1 estão associados a formatos de testemunha nativa, como Bech32 e Bech32m. Entre as opções, C indica SegWit. Segregar informações de testemunha altera a contabilização do peso e pode reduzir taxas, sem garantir um custo fixo.",
+    "common_error": "P2PKH tradicional não começa com bc1; BIP32 trata de carteiras hierárquicas. bc1 não distingue sozinho todas as versões de testemunha.",
+    "practical_example": "Um endereço bc1q e um bc1p usam versões de testemunha diferentes e exigem interpretação do formato completo.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 229,
+    "solution": "Na Prova de Participação, PoS, a seleção e as responsabilidades dos validadores dependem de ativos comprometidos e das regras do protocolo. Alternativa E.",
+    "common_error": "PoW exige trabalho computacional; PoA depende de autoridades identificadas; não são sinônimos de staking.",
+    "practical_example": "Um validador pode bloquear participação e sofrer penalidades se violar regras do protocolo.",
+    "editorial_issues": [],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 230,
+    "solution": "A alternativa C refere-se à Lei 12.737/2012, conhecida como Lei Carolina Dieckmann, que introduziu o art. 154-A no Código Penal. Para ensinar a tipificação atual, é preciso usar o texto vigente, inclusive alterações posteriores da Lei 14.155/2021, e avaliar os elementos do caso.",
+    "common_error": "O nome popular da lei não substitui os requisitos atuais do tipo penal nem torna toda divulgação um único crime automático.",
+    "practical_example": "Invasão de dispositivo e divulgação posterior podem exigir análise separada de condutas e qualificações.",
+    "editorial_issues": [
+      "questao_juridica_dentro_de_disciplina_de_informatica_vigencia_pendente"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  },
+  {
+    "local_index": 231,
+    "solution": "O tratamento isonômico dos pacotes, sem discriminação por conteúdo, origem, destino, serviço, terminal ou aplicação, é a neutralidade de rede. Alternativa B. O art. 9º do Marco Civil prevê hipóteses e requisitos de discriminação ou degradação, que precisam ser conferidos no texto vigente.",
+    "common_error": "Não tratar neutralidade como ausência de qualquer gerenciamento técnico: há exceções normativas delimitadas.",
+    "practical_example": "Bloquear vídeo concorrente para favorecer o próprio serviço é situação diferente de gerenciamento técnico permitido pela norma.",
+    "editorial_issues": [
+      "questao_juridica_dentro_de_disciplina_de_informatica_vigencia_pendente"
+    ],
+    "draft_only": true,
+    "publication_approved": false
+  }
+]
