@@ -1,10 +1,11 @@
 import { fetchAllRows } from "@/lib/catalog";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
-import { Clock } from "lucide-react";
+import { CalendarCheck, CalendarClock, Clock, Hourglass, TrendingUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Hint } from "@/components/ui/hint";
 import { acreDateKey } from "@/lib/acreTime";
+import { cn } from "@/lib/utils";
 import { fmtHuman, getStudyToday, subscribeStudyClock } from "@/lib/studyClock";
 
 const DAYS = 14;
@@ -67,6 +68,7 @@ export function StudyTimeCard({ userId }: { userId: string }) {
       active,
       max: Math.max(1, ...days.map((d) => d.s)),
       today: byDay.get(today) ?? 0,
+      todayKey: today,
     };
   }, [rows, live]);
 
@@ -107,41 +109,70 @@ export function StudyTimeCard({ userId }: { userId: string }) {
           por inatividade e abas ocultas não contam. Dias contados pelo horário do Acre.
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-5">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {[
-            ["Hoje", fmtHuman(stats.today)],
-            ["Média por dia de estudo", fmtHuman(stats.avg)],
-            ["Dias com estudo", String(stats.active)],
-            ["Total registrado", fmtHuman(stats.total)],
-          ].map(([l, v]) => (
-            <div key={l} className="rounded-lg border border-border p-3">
-              <p className="text-xs text-muted-foreground">{l}</p>
-              <p className="text-lg font-semibold text-foreground">{v}</p>
+          {(
+            [
+              { icon: CalendarClock, label: "Hoje", value: fmtHuman(stats.today) },
+              { icon: TrendingUp, label: "Média por dia de estudo", value: fmtHuman(stats.avg) },
+              { icon: CalendarCheck, label: "Dias com estudo", value: String(stats.active) },
+              { icon: Hourglass, label: "Total registrado", value: fmtHuman(stats.total) },
+            ] as const
+          ).map(({ icon: Icon, label, value }) => (
+            <div key={label} className="flex items-start gap-2.5 rounded-lg border border-border bg-muted/20 p-3">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-sky-500/10 text-sky-600 dark:bg-sky-400/15 dark:text-sky-400">
+                <Icon className="h-4 w-4" aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <p className="text-xs text-muted-foreground">{label}</p>
+                <p className="text-lg font-semibold text-foreground">{value}</p>
+              </div>
             </div>
           ))}
         </div>
-        <div
-          className="flex h-32 items-end gap-1.5"
-          role="img"
-          aria-label="Tempo por dia nos últimos 14 dias"
-        >
-          {stats.days.map((d) => (
-            <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}`}>
-              <div className="flex h-full min-w-0 flex-1 flex-col items-center gap-1">
-                <div className="flex w-full flex-1 items-end">
-                  <div
-                    className="w-full rounded-t bg-primary/80"
-                    style={{
-                      height: `${Math.max(d.s ? 6 : 2, (d.s / stats.max) * 100)}%`,
-                      opacity: d.s ? 1 : 0.25,
-                    }}
-                  />
-                </div>
-                <span className="text-[10px] text-muted-foreground">{d.label.slice(0, 2)}</span>
-              </div>
-            </Hint>
-          ))}
+        <div>
+          <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
+            <span>Últimos 14 dias</span>
+            {stats.avg > 0 && <span>Média diária: {fmtHuman(stats.avg)}</span>}
+          </div>
+          <div
+            className="relative flex h-32 items-end gap-1.5"
+            role="img"
+            aria-label="Tempo ativo por dia nos últimos 14 dias"
+          >
+            {stats.avg > 0 && (
+              <div
+                className="pointer-events-none absolute inset-x-0 border-t border-dashed border-sky-500/40"
+                style={{ bottom: `${(stats.avg / stats.max) * 100}%` }}
+              />
+            )}
+            {stats.days.map((d) => {
+              const isToday = d.k === stats.todayKey;
+              return (
+                <Hint key={d.k} content={`${d.label}: ${fmtHuman(d.s)}${isToday ? " · hoje" : ""}`}>
+                  <div className="flex h-full min-w-0 flex-1 flex-col items-center gap-1.5">
+                    <div className="flex w-full flex-1 items-end">
+                      <div
+                        className={cn(
+                          "w-full rounded-t-md transition-colors",
+                          d.s ? (isToday ? "bg-sky-500" : "bg-sky-500/65") : "bg-muted",
+                        )}
+                        style={{ height: `${Math.max(d.s ? 6 : 3, (d.s / stats.max) * 100)}%` }}
+                      />
+                    </div>
+                    <span
+                      className={cn(
+                        "text-xs text-muted-foreground",
+                        isToday && "font-bold text-sky-600 dark:text-sky-400",
+                      )}
+                    >
+                      {d.label.slice(0, 2)}
+                    </span>
+                  </div>
+                </Hint>
+              );
+            })}
+          </div>
         </div>
       </CardContent>
     </Card>
