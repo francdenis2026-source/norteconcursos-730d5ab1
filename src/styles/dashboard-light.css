@@ -142,3 +142,34 @@
 }
 :root:not(.dark) #dashboard-content [data-slot="button"][data-variant="outline"] { border-color: #b9cbe3; }
 :root:not(.dark) #dashboard-content [data-slot="button"]:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+
+
+/* Soft, mineral reading surfaces: remove the overexposed white highlight
+   across internal page headers and keep a visible boundary against the canvas. */
+:root:not(.dark) .app-shell[data-area] {
+  --background: #e7edf2;
+  --card: #f9fbfd;
+  --popover: #ffffff;
+  --border: #cbd8e2;
+  --muted: #e4ebf1;
+  --muted-foreground: #405469;
+}
+:root:not(.dark) .app-shell[data-area] #dashboard-content[data-header-style="glass"] :is(
+  .page-hero, .tactical-feature-hero, .catalog-command-hero,
+  .study-assistant-hero, .exam-simulator-hero, .trainer-workbench-hero,
+  .library-header, .edital-heading, .edital-topic-heading, .ranking-glass-header
+):not(.workspace-banner) {
+  border-color: #bdcdd9 !important;
+  background: linear-gradient(120deg, #f2f6f9 0%, #e7eff5 74%, #dfeaf1) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .44), 0 8px 24px -20px rgb(32 52 68 / .23) !important;
+}
+:root:not(.dark) .app-shell[data-area] #dashboard-content [data-slot="card"] {
+  box-shadow: 0 2px 6px rgb(22 43 62 / .04), 0 12px 25px -23px rgb(22 43 62 / .18);
+}
+:root:not(.dark) .app-shell[data-area] #dashboard-content [data-slot="card"] > [data-slot="card-header"] {
+  background: linear-gradient(105deg, #edf3f7, #f8fafc);
+  border-bottom-color: #d6e1e9;
+}
+:root:not(.dark) .app-shell[data-area] #dashboard-content [data-slot="card-title"] {
+  color: #1e3549;
+}
