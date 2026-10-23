@@ -19,7 +19,7 @@ import {
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 import { StudyTimeCard } from "@/components/dashboard/StudyTimeCard";
 import { RecentAttempts } from "@/components/dashboard/RecentAttempts";
@@ -63,6 +63,17 @@ function PerformancePage() {
             de concursos realizados ficam em uma área própria.
           </p>
         </div>
+        {data && !error && (
+          <div className="page-hero__stats max-w-xl">
+            <HeroStat
+              icon={ListChecks}
+              label="Questões respondidas"
+              value={data.trainer.totalAnswered.toLocaleString("pt-BR")}
+            />
+            <HeroStat icon={Gauge} label="Aproveitamento" value={`${data.trainer.accuracy}%`} />
+            <HeroStat icon={Flame} label="Sequência de estudo" value={`${data.streak.current} dias`} />
+          </div>
+        )}
       </section>
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border bg-card p-4">
         <div>
