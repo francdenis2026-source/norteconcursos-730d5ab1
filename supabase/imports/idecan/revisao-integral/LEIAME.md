@@ -18,6 +18,8 @@ A leitura administrativa do banco confirmou 273 registros IDECAN em `board_exam_
 
 Problemas confirmados visualmente/textualmente: PMSC Tipo A itens 20, 21 e 22 têm alternativas ou trecho do enunciado contaminados na importação local; o item 22 recebeu alternativas da questão 19. PC-SC Agente Tipo B item 90 perdeu raízes, fração e potência, recuperadas na página 21. PC-SC Escrivão Tipo A item 94 teve raízes conferidas visualmente na página 21. Não modificar o gabarito histórico para encobrir erros de extração.
 
+**Atualização:** a transcrição PMSC dos itens 20–22 foi cotejada com o PDF e gabarito definitivo. As versões restauradas e explicações estão em `pmsc-informatica-correcao.sql`; a aplicação permanece pendente e não libera os itens. Ver `../revisao-cuidadosa/revisao-integral/revisao-pmsc-informatica.json` para os antes/depois e a evidência.
+
 ## Continuação
 
 1. Fazer nova leitura administrativa antes de escrever: os snapshots desta sessão ficaram somente em `/tmp/idecan-full-review/live`, fora do Git, e podem não existir em outra sessão.

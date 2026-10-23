@@ -13,6 +13,12 @@ Os cinco últimos ajustes e as três liberações jurídicas têm comparação d
 
 Os números desta pasta são o **recorte IDECAN**, não os totais globais da plataforma. Não substituem a RPC `get_public_question_summary`. A revisão integral continua pendente; não interpretar estes lotes como aprovação dos demais itens.
 
+## Correção de transcrição PMSC — informática, itens 20–22
+
+Conferência dos registros administrativos exportados em 23/10/2026 contra a página 7 do caderno Tipo A confirmou contaminações na importação: item 20, alternativa D; item 21, final do enunciado e alternativas A/B; item 22, todas as alternativas. O gabarito definitivo publicado pela IDECAN foi conferido separadamente: 20-E, 21-D e 22-B. Os hashes, excertos e estado exportado estão em `revisao-integral/revisao-pmsc-informatica.json`.
+
+`revisao-integral/pmsc-informatica-correcao.sql` restaura o texto comprovado, inclui explicações e grava os dados anteriores e posteriores na auditoria. O lote mantém os três registros em `under_review`: não há aprovação de tópico de edital vigente. O SQL ainda precisa ser aplicado no Supabase; sua execução aborta se os campos conferidos, fontes ou gabaritos divergirem do retrato usado na revisão.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
