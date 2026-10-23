@@ -85,7 +85,10 @@ export function EnemStudy() {
       {ENEM_STUDY_GROUPS.filter((g) => visible.some((m) => g.subjects.includes(m.discipline))).map(
         (g) => (
           <section key={g.id} className="space-y-3">
-            <h3 className={`border-l pl-3 text-lg font-bold ${g.color}`}>{g.name}</h3>
+            <h3 className={`flex items-center gap-2 text-lg font-bold ${g.text}`}>
+              <span className={`h-2 w-2 shrink-0 rounded-full ${g.dot}`} aria-hidden />
+              {g.name}
+            </h3>
             <div className="grid gap-3 md:grid-cols-2">
               {visible
                 .filter((m) => g.subjects.includes(m.discipline))
