@@ -226,13 +226,16 @@
       #101a1f;
   }
   #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
-    inset: 0 0 auto;
-    width: 100%;
+    /* Small, contained scenery instead of a stretched full-window poster. */
+    inset: 52px auto auto 50%;
+    width: min(76%, 290px);
+    max-width: 290px;
     height: auto;
     aspect-ratio: 1440 / 600;
     object-fit: contain;
-    object-position: center top;
-    opacity: .78;
+    object-position: center;
+    transform: translateX(-50%);
+    opacity: .38;
     filter: none;
   }
   #norte-initial-loading .startup-intro .tactical-intro__screen {
@@ -241,7 +244,7 @@
       linear-gradient(180deg, rgb(8 12 15 / 24%), rgb(8 12 15 / 48%)),
       url('/media/hero/home-bg-texture.webp');
     background-position: center center, center center;
-    background-size: 100% 100%, contain;
+    background-size: 100% 100%, auto min(100%, 170px);
     background-repeat: no-repeat;
   }
   #norte-initial-loading .startup-intro .tactical-intro__screen video {
