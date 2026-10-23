@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { LockedState } from "@/components/dashboard/PageHero";
+import { LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import {
   Accordion,
@@ -162,6 +162,16 @@ function EditalPage() {
           <span className="edital-eyebrow">MEU CONCURSO</span>
           <h1>Estudar pelo edital</h1>
           <p>Selecione uma edição para consultar disciplinas e tópicos. A edição aberta aparece abaixo; seu concurso em foco continua disponível em Meu objetivo.</p>
+          <div className="page-hero__stats">
+            {edition ? (
+              <>
+                <HeroStat icon={BookOpenText} label="Disciplinas" value={disciplines.length} />
+                <HeroStat icon={Search} label="Tópicos" value={topics.length} />
+              </>
+            ) : (
+              <HeroStat icon={BookOpenText} label="Editais disponíveis" value={editions.length} />
+            )}
+          </div>
         </div>
         <BookOpenText aria-hidden className="edital-heading-icon" />
       </header>

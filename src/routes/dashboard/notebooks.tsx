@@ -28,7 +28,7 @@ import {
   CheckCircle2,
   Printer,
 } from "lucide-react";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { AiResolutionsSection } from "@/components/dashboard/AiResolutionsSection";
 import {
   DropdownMenu,
@@ -229,7 +229,16 @@ function NotebooksPage() {
             <Plus className="h-4 w-4" /> Criar caderno
           </Button>
         }
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={BookOpen} label="Cadernos" value={notebooks.length} />
+          <HeroStat
+            icon={Plus}
+            label="Questões salvas"
+            value={notebooks.reduce((sum, nb) => sum + nb.questionIds.length, 0)}
+          />
+        </div>
+      </PageHero>
 
       {owner && <StudyLaterNotebook key={owner} userId={owner} />}
 

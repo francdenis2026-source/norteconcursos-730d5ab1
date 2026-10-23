@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { MODELOS_CRONOGRAMA, type ModeloCronograma } from "@/data/cronogramaModelos";
 import {
   canonicalDiscipline, accuracy, buildWeek, discStats, isGenericDiscipline, EMPTY_PROGRESS, nextTopic, topicDone,
@@ -105,7 +105,23 @@ function CronogramaPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-6">
       <PageHero image="journey" size="sm" kicker="Planejamento" icon={CalendarClock} title={<>Agenda <em>por edital</em></>}
-        description="Organize e execute os tópicos do edital por dia. Esta agenda acompanha o conteúdo concluído; a configuração da semana e a análise de resultados ficam nas etapas ao lado." />
+        description="Organize e execute os tópicos do edital por dia. Esta agenda acompanha o conteúdo concluído; a configuração da semana e a análise de resultados ficam nas etapas ao lado.">
+        <div className="page-hero__stats">
+          <HeroStat icon={NotebookPen} label="Cronogramas" value={plans?.length ?? 0} />
+          <HeroStat
+            icon={Target}
+            label="Dias p/ a mais próxima"
+            value={(() => {
+              const dates = (plans ?? [])
+                .map((p) => p.exam_date)
+                .filter((d): d is string => !!d)
+                .map((d) => Math.ceil((new Date(d).getTime() - platformDate().getTime()) / 86400000))
+                .filter((d) => d >= 0);
+              return dates.length ? Math.min(...dates) : "—";
+            })()}
+          />
+        </div>
+      </PageHero>
       <StudyPlanningNav active="schedule" />
       {openId === "new" && !canCreate ? (
         <CreateLocked onBack={() => setOpenId(null)} />

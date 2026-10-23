@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { AttemptHistoryList } from "@/components/dashboard/AttemptHistoryList";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 
@@ -111,7 +111,16 @@ function HistoryPage() {
           </>
         }
         description="Seus simulados e as últimas questões respondidas no Treinador, em ordem cronológica."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat
+            icon={Trophy}
+            label="Posição no ranking"
+            value={me?.rank_position ? `#${me.rank_position}` : "—"}
+          />
+          <HeroStat icon={Clock} label="Pontos de ranking" value={me?.total_points ?? 0} />
+        </div>
+      </PageHero>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">

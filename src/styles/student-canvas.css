@@ -164,3 +164,89 @@
     background-color: Canvas;
   }
 }
+
+
+/* Student-only mineral canvas v2 — restore depth lost behind nearly opaque
+   white veils. Applies to all signed-in student routes, not admin/public pages. */
+:root:not(.dark) .app-shell[data-area="student"] {
+  --background: #dce6ee;
+  --card: #fbfcfe;
+  --card-foreground: #172b3e;
+  --foreground: #172b3e;
+  --muted: #e4edf4;
+  --muted-foreground: #40566b;
+  --border: #bacbd8;
+  --secondary: #e3ecf5;
+  --secondary-foreground: #213d57;
+  --accent: #d8e7f3;
+  --accent-foreground: #16466e;
+  background-color: #dce6ee;
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-main {
+  /* The fixed artwork sits behind this layer. Do not hide it with opaque paint. */
+  background-color: transparent;
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content {
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle at 6% 7%, rgb(35 75 110 / .075), transparent 33%),
+    radial-gradient(circle at 95% 87%, rgb(75 107 131 / .075), transparent 42%),
+    repeating-linear-gradient(0deg, transparent 0 95px, rgb(28 63 91 / .035) 95px 96px),
+    repeating-linear-gradient(90deg, transparent 0 95px, rgb(28 63 91 / .035) 95px 96px);
+}
+:root:not(.dark) .app-shell[data-area="student"] .app-study-backdrop {
+  background-color: #d5e1e9;
+  background-image:
+    linear-gradient(120deg, rgb(214 227 237 / .78), rgb(219 230 238 / .84)),
+    var(--brand-banner);
+}
+:root:not(.dark) .app-shell[data-area="student"][data-brand-bg="blue"]
+.app-study-backdrop:has(.tactical-clock-backdrop) {
+  background-image: none;
+  --backdrop-clock-veil: rgb(216 229 237 / .80);
+}
+:root:not(.dark) .app-shell[data-area="student"]
+.app-study-backdrop .tactical-clock-backdrop__mechanism {
+  opacity: .34;
+  filter: none;
+}
+:root:not(.dark) .app-shell[data-area="student"]
+.app-study-backdrop .tactical-clock-backdrop__scale {
+  opacity: .38;
+}
+/* Stronger surfaces with a quiet mineral edge; never tint semantic states. */
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content
+[data-slot="card"]:not([class*="bg-"]) {
+  background-color: #fbfcfe;
+  border-color: #bacbd8;
+  box-shadow: 0 2px 5px rgb(21 49 75 / .055), 0 17px 34px -26px rgb(20 52 78 / .33);
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content
+:is(.student-home__card, .student-home__metric, .resume-session--compact, .student-desk__next) {
+  background-color: #fbfcfe;
+  border-color: #b8cbd9;
+  box-shadow: 0 3px 9px rgb(20 52 78 / .055), 0 16px 32px -28px rgb(20 52 78 / .3);
+}
+:root:not(.dark) .app-shell[data-area="student"] #dashboard-content
+:is(.student-home__card, .student-home__metric, [data-slot="card"]) :is(h2, h3, strong) {
+  color: #172b3e;
+}
+/* The compact top navigation needs a clean edge against the textured canvas. */
+:root:not(.dark) .app-shell[data-area="student"] .app-topbar {
+  background: rgb(243 248 251 / .96);
+  border-bottom-color: #b9cbd9;
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root:not(.dark) .app-shell[data-area="student"] .app-main {
+    background: #dce6ee;
+  }
+  :root:not(.dark) .app-shell[data-area="student"] #dashboard-content {
+    background-image: none;
+  }
+}
+@media (forced-colors: active) {
+  :root:not(.dark) .app-shell[data-area="student"] :is(.app-main, #dashboard-content) {
+    background: Canvas;
+    color: CanvasText;
+  }
+}

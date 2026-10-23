@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { ContranStudy } from "@/components/library/ContranStudy";
 import {
   CATEGORIAS,
@@ -74,7 +74,12 @@ function CtbPanelPage() {
             Ler o CTB artigo por artigo
           </Link>
         }
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Gavel} label="Infrações catalogadas" value={INFRACOES.length} />
+          <HeroStat icon={Search} label="Prazos catalogados" value={PRAZOS.length} />
+        </div>
+      </PageHero>
 
       <Tabs value={tab} onValueChange={setTab}>
         <TabsList className="flex h-auto flex-wrap justify-start gap-1">
