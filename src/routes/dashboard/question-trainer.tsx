@@ -11,6 +11,7 @@ import { QuestionText } from "@/components/dashboard/QuestionText";
 import { QuestionCode } from "@/components/dashboard/QuestionCode";
 import { scrollAppToSection } from "@/lib/appScroll";
 import { QuestionProse } from "@/components/dashboard/QuestionProse";
+import { HeroStat } from "@/components/dashboard/PageHero";
 import {
   trainerContext,
   lockedTrainerSubject,
@@ -1333,6 +1334,10 @@ function QuestionTrainer() {
             <span className="trainer-panel-kicker">PRATICAR E EVOLUIR</span>
             <h1 id="trainer-title">Treinador de questões</h1>
             <p>Uma seleção precisa. Uma questão por vez. Clareza para aprender.</p>
+            <div className="page-hero__stats">
+              <HeroStat icon={Target} label="Na seleção atual" value={pool.length} />
+              <HeroStat icon={CheckCircle2} label="Já respondidas" value={locked.size} />
+            </div>
           </div>
           <Link to="/dashboard/question-bank" className="trainer-catalog-link">
             <BookOpenCheck aria-hidden="true" />
