@@ -45,7 +45,7 @@ svg.tactical-clock-backdrop {
   --hand-period: 60s;
   animation-timing-function: steps(60, end);
   animation-delay: var(--hand-delay, 0s);
-  opacity: 0.65;
+  opacity: 1;
 }
 .tactical-clock-backdrop__edge {
   fill: none;
@@ -55,8 +55,8 @@ svg.tactical-clock-backdrop {
 }
 .tactical-clock-backdrop__needle {
   fill: none;
-  stroke: #aa9368;
-  stroke-width: 0.85;
+  stroke: #ff5a45;
+  stroke-width: 4;
   stroke-linecap: round;
 }
 .tactical-clock-backdrop__hub {
