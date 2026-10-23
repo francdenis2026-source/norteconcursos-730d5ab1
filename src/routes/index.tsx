@@ -1,3 +1,4 @@
+import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { ContestShowcase } from "@/components/landing/ContestShowcase";
 import { FooterInsignia } from "@/components/landing/FooterInsignia";
 import { HeroBadge } from "@/components/landing/HeroBadge";
@@ -295,7 +296,7 @@ function Index() {
   }, []);
   return (
     <div className="home">
-      <div className="home-backdrop" aria-hidden="true" />
+      <div className="home-backdrop" aria-hidden="true"><TacticalClockBackdrop /></div>
       <a href="#conteudo" className="home-skip">
         Pular para o conteúdo
       </a>

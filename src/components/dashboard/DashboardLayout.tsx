@@ -1,3 +1,4 @@
+import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";
 import { NavigationCommand } from "./NavigationCommand";
@@ -570,7 +571,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         style={{ "--workspace-banner-art": `url("${workspaceBannerArt}")` } as React.CSSProperties}
         data-brand-bg={brandBg ?? "off"}
       >
-        {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true" />}
+        {!isAdmin && brandBg && <div className="app-study-backdrop" aria-hidden="true">{brandBg === "blue" && <TacticalClockBackdrop />}</div>}
         {user && user.id !== "demo-user" && <ActivityTracker />}
         {!isAdmin && user && user.id !== "demo-user" && <StudyActivityTracker userId={user.id} />}
         <FocusReturnBar />
