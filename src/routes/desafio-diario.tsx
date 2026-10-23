@@ -7,6 +7,8 @@ import { QuestionSupportText } from "@/components/library/QuestionSupportText";
 import { QuestionStudyCompanion } from "@/components/dashboard/QuestionStudyCompanion";
 import { useGuestQuestionTimer } from "@/hooks/useGuestQuestionTimer";
 import { AnswerFeedback } from "@/components/dashboard/AnswerFeedback";
+import { TacticalCrosshair } from "@/components/brand/TacticalCrosshair";
+import { dispatchAimFeedback } from "@/lib/aimFeedback";
 import "@/styles/daily-challenge.css";
 import { QuestionFigures } from "@/components/dashboard/QuestionFigures";
 import {
@@ -165,6 +167,7 @@ function DesafioDiario() {
         return;
       }
       setAnswered(true);
+      dispatchAimFeedback(isCorrect ? "hit" : "miss");
       if (isCorrect) setCorrect((value) => value + 1);
       else setWrong((value) => value + 1);
     } catch {
@@ -473,6 +476,7 @@ function QuestionPlayer({
         )}
         </div>
         <div className="daily-answer-dock" aria-label="Responder à questão">
+            <TacticalCrosshair />
             <p className="mt-5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
               Julgue o item
             </p>
@@ -481,6 +485,7 @@ function QuestionPlayer({
                 <button
                   key={answer}
                   type="button"
+                  data-aim
                   aria-pressed={selected === answer}
                   disabled={answered}
                   onClick={() => onSelect(answer)}
@@ -514,7 +519,7 @@ function QuestionPlayer({
             </div>
             {!answered ? (
               <div className="mt-6 flex justify-end">
-                <Button size="lg" disabled={!selected} onClick={onSubmit}>
+                <Button size="lg" data-aim disabled={!selected} onClick={onSubmit}>
                   Confirmar resposta <Check className="ml-2 h-4 w-4" />
                 </Button>
               </div>
