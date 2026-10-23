@@ -1155,3 +1155,13 @@
     gap: 10px;
   }
 }
+
+/* Local indicators describe only the selected collection/search, separately from global totals. */
+.catalog-metrics.catalog-metrics--selection { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.question-workspace .catalog-metrics--selection .catalog-metric:first-child { grid-column: auto; display: flex; align-items: stretch; border-color: var(--border); background: var(--card); }
+.catalog-metrics--selection .catalog-metric:first-child > strong { margin-top: 4px; }
+.catalog-metrics--selection .catalog-metric:first-child small { justify-content: space-between; }
+@media (max-width: 600px) { .catalog-metrics.catalog-metrics--selection { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.question-catalog__scope { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+.question-catalog__scope span { font-size: 11px; font-weight: 400; color: var(--muted-foreground); }

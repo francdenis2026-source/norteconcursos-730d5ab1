@@ -1,3 +1,4 @@
+import { PlatformQuestionCounts } from "@/components/dashboard/PlatformQuestionCounts";
 import "@/styles/student-desk.css";
 import { StudentMetricPanel, type StudentMetric } from "@/components/dashboard/StudentMetricPanel";
 import { useQuery } from "@tanstack/react-query";
@@ -270,6 +271,7 @@ function StudentHome({ user }: { user: UserProfile }) {
           </div>
         </div>
       </header>
+      <PlatformQuestionCounts compact />
       <section className="student-desk__access" aria-labelledby="student-access-title">
         <div className="student-desk__section-heading">
           <h2 id="student-access-title">Acessos rápidos</h2>

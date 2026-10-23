@@ -2,9 +2,10 @@ import { useMemo } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BadgeCheck, Database, ShieldCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useQuestionStats } from "@/hooks/useQuestionStats";
+import { usePlatformQuestionSummary } from "@/hooks/usePlatformQuestionSummary";
+import { QUESTION_COUNT_LABELS } from "@/lib/platformQuestionSummary";
 import { useQuestionCatalog } from "@/hooks/useQuestionCatalog";
-import { publishedQuestionBank } from "@/lib/questionBank";
+import { reviewedQuestionBank } from "@/lib/questionBank";
 
 const fmt = (value: number) => value.toLocaleString("pt-BR");
 
@@ -15,15 +16,13 @@ type Props = {
 };
 
 export function QuestionTotals({ enabled, userId, className }: Props) {
-  const { data, isPending, isError, refetch } = useQuestionStats(enabled);
-  // Mesmo número do Treinador e do Acervo: mesmo catálogo, mesma dedução por cargo e mesma
-  // exigência de texto de apoio. "Disponíveis no treino" nunca deve divergir da área do aluno.
+  const { data, isPending, isError, refetch } = usePlatformQuestionSummary(enabled);
   const catalog = useQuestionCatalog(userId, enabled);
-  const available = useMemo(() => publishedQuestionBank(catalog.catalog).length, [catalog.catalog]);
-  const loading = enabled && (isPending || catalog.loading);
-  const raw = data?.raw ?? 0;
-  const eligiblePct = raw ? Math.round((available / raw) * 100) : 0;
-  const reviewedPct = raw ? Math.round(((data?.reviewed ?? 0) / raw) * 100) : 0;
+  const reviewed = useMemo(() => reviewedQuestionBank(catalog.catalog).length, [catalog.catalog]);
+  const loading = enabled && isPending;
+  const raw = data?.registered ?? 0;
+  const eligiblePct = raw ? Math.min(100, Math.round(((data?.available ?? 0) / raw) * 100)) : 0;
+  const reviewedPct = raw ? Math.min(100, Math.round((reviewed / raw) * 100)) : 0;
 
   return (
     <section className={`acervo ${className ?? ""}`} aria-label="Total de questões da plataforma">
@@ -40,24 +39,24 @@ export function QuestionTotals({ enabled, userId, className }: Props) {
       <div className="acervo__grid">
         <Stat
           icon={Database}
-          label="Total bruto"
-          value={data ? fmt(data.raw) : undefined}
+          label={QUESTION_COUNT_LABELS.registered}
+          value={data ? fmt(data.registered) : undefined}
           loading={loading}
           text="Todas as questões cadastradas, oficiais e autorais, antes de qualquer filtro."
         />
         <Stat
           icon={ShieldCheck}
-          label="Disponíveis no treino"
-          value={data && !catalog.loading ? fmt(available) : undefined}
+          label={QUESTION_COUNT_LABELS.available}
+          value={data ? fmt(data.available) : undefined}
           loading={loading}
           tone="signal"
-          text="O mesmo número que o aluno vê no Treinador e no Acervo."
+          text="Mesmo resumo global da homepage, antes dos filtros de estudo."
         />
         <Stat
           icon={BadgeCheck}
-          label="Revisadas"
-          value={data ? fmt(data.reviewed) : undefined}
-          loading={loading}
+          label={QUESTION_COUNT_LABELS.reviewed}
+          value={!catalog.loading && !catalog.error ? fmt(reviewed) : undefined}
+          loading={enabled && catalog.loading}
           tone="brass"
           text="Explicação didática com exemplo do dia a dia e fonte oficial verificada."
         />
@@ -70,19 +69,26 @@ export function QuestionTotals({ enabled, userId, className }: Props) {
       </div>
       <p className="acervo__legend">
         {!enabled && "Entre na sua conta para ver os totais do acervo."}
-        {isError && (
+        {(isError || catalog.error) && (
           <>
             Não foi possível carregar os totais.{" "}
-            <button type="button" onClick={() => refetch()}>
+            <button
+              type="button"
+              onClick={() => {
+                void refetch();
+                void catalog.reload();
+              }}
+            >
               Tentar novamente
             </button>
           </>
         )}
-        {data && !catalog.loading && (
+        {data && !catalog.loading && !catalog.error && (
           <>
-            <b>{reviewedPct}%</b> do acervo já está revisado · {fmt(data.official)} oficiais e{" "}
-            {fmt(data.curated)} autorais · {fmt(Math.max(0, data.raw - available))} fora do treino
-            (aguardando conferência de vigência, gabarito ou texto de apoio)
+            Disponíveis e total cadastrado usam o mesmo resumo da homepage. {fmt(reviewed)} questões
+            do catálogo têm revisão didática com exemplo ({reviewedPct}% do total cadastrado). Itens
+            em conferência e registros compartilhados entre cargos podem ficar fora da seleção de
+            treino.
           </>
         )}
       </p>
