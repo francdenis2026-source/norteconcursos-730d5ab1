@@ -1,0 +1,406 @@
+{
+  "batch_id": "idecan-primary-critical-v1",
+  "changes": [
+    {
+      "id": "93d09d86-cfc0-4b1d-b225-82819f0ade61",
+      "local_index": 24,
+      "expected": {
+        "id": "93d09d86-cfc0-4b1d-b225-82819f0ade61",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Agente de Polícia Civil 2026",
+        "career_name": "Agente de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo B",
+        "item_number": 25,
+        "subject": "Direito Administrativo",
+        "support_text": null,
+        "stem": "À luz do texto expresso da Lei nº 8.429/1992, após as alterações introduzidas pela Lei nº 14.230/2021, considera-se ato de improbidade administrativa aquele que:",
+        "options": {
+          "A": "Seja praticado por agente público ou terceiro, ainda que ausente comprovação de elemento subjetivo específico.",
+          "B": "É praticado com dolo, caracterizado pela vontade livre e consciente de alcançar o resultado ilícito tipificado na lei, não sendo admitida a modalidade culposa, salvo disposição legal expressa.",
+          "C": "Resulta em dano ao erário, ainda que decorrente exclusivamente de culpa grave do agente público, desde que demonstrado nexo causal.",
+          "D": "Viola princípios da administração pública, independentemente da demonstração de tipicidade fechada e de finalidade ilícita específica.",
+          "E": "Decorre de erro grosseiro do agente público, quando configurada ofensa aos deveres de legalidade e eficiência."
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa B é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/148842/idecan-2026-pc-sc-agente-de-policia-civil-prova.pdf",
+        "answer_key_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; sem alteração legislativa localizada em 2026-10-22; ainda exige decisão individual antes de ativar (Texto pós-Lei 14.230/2021.) Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T17:00:15.234319+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "72120fd59824106d65a5c903d37e8259f2bdfce3766d133b6a6017474ea31a57",
+        "import_unique_key": "72120fd59824106d65a5c903d37e8259f2bdfce3766d133b6a6017474ea31a57"
+      },
+      "patch": {
+        "content_status": "under_review",
+        "explanation": "A LIA atual define condutas dolosas nos arts. 9º, 10 e 11 e exige vontade livre e consciente de alcançar o resultado ilícito. O gabarito B acrescenta ressalva genérica de modalidade culposa que exige análise: o §1º ressalva tipos em leis especiais, sem restabelecer por si a antiga improbidade culposa.\n\nErro comum: Não dizer que todo erro administrativo é improbidade nem transformar uma ressalva abstrata em tipo culposo existente.\n\nExemplo prático: Uma gestão ineficiente exige apurar responsabilidade própria; não é automaticamente improbidade dolosa.",
+        "legal_basis": [
+          {
+            "title": "Dispositivo oficial conferido — lia",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "artigo": "1"
+          }
+        ],
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-23T04:31:08.568168+00:00",
+        "review_note": "disciplina atribuída pela ordem do caderno; sem alteração legislativa localizada em 2026-10-22; ainda exige decisão individual antes de ativar (Texto pós-Lei 14.230/2021.) Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Conferência em fonte primária: Ambiguidade da ressalva sobre culpa na alternativa: confirmar alcance e eventual decisão oficial sobre o item."
+      },
+      "evidence": {
+        "publication_approved": false,
+        "reason": "Ambiguidade da ressalva sobre culpa na alternativa: confirmar alcance e eventual decisão oficial sobre o item.",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "sha256": "3aa10a1b8377383a925851774905c5e399559ac05b68d050e98a7a81866c762f",
+            "checked_at": "2026-10-23T04:06:14.809445+00:00",
+            "article": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d060ae9a-0469-4996-8e25-ca862b5b93aa",
+      "local_index": 127,
+      "expected": {
+        "id": "d060ae9a-0469-4996-8e25-ca862b5b93aa",
+        "board": "IDECAN",
+        "contest_name": "PMSC - Aluno-Soldado Temporário 2026",
+        "career_name": "Aluno-Soldado Temporário (QPTPM)",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo A",
+        "item_number": 49,
+        "subject": "Código de Trânsito Brasileiro",
+        "support_text": null,
+        "stem": "De acordo com o Código de Trânsito Brasileiro, é correto afirmar que:",
+        "options": {
+          "A": "As repartições aduaneiras e os órgãos de controle de fronteira comunicarão diretamente ao RENACH a entrada e saída temporária ou definitiva de veículos.",
+          "B": "No caso de transferência de propriedade, o prazo para o proprietário adotar as providências necessárias à efetivação da expedição do novo Certificado de Registro de Veículo é de quinze dias, sendo que nos demais casos as providências deverão ser imediatas.",
+          "C": "O registro e o licenciamento dos veículos de propulsão humana e dos veículos de tração animal obedecerão à regulamentação estabelecida em legislação estadual do domicílio ou residência de seus proprietários.",
+          "D": "O proprietário de veículo irrecuperável, ou destinado à desmontagem, deverá requerer a baixa do registro, no prazo e forma estabelecidos pelo RENAVAM, vedada a remontagem do veículo sobre o mesmo chassi de forma a manter o registro anterior.",
+          "E": "O Conselho Nacional de Trânsito – CONTRAN poderá dispensar os tripulantes de aeronaves que apresentarem o cartão de saúde expedido pelas Forças Armadas ou pelo Departamento de Aeronáutica Civil, respectivamente, da prestação do exame de aptidão física e mental."
+        },
+        "official_answer": "E",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.legjur.com/legislacao/art/lei_00095031997-148",
+            "title": "Norma vigente conferida"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa E é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Militar",
+        "source_url": "https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf",
+        "answer_key_url": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-gabarito.pdf",
+        "content_status": "under_review",
+        "review_note": "Gabarito PRELIMINAR da banca; confira o definitivo. disciplina atribuída pela ordem do caderno; norma vigente conferida em 2026-10-22; ainda exige decisão individual antes de ativar (Art. 123 §1º (30 dias) e art. 148 §5º conferidos; Lei 15.428/2026 não os alterou.); gabarito preliminar publicado pela banca; confirme o definitivo antes de ativar Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T17:00:50.487919+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "e87737919ba4f979be97381d13baa1a0ae39732225c9cc58c8deafa3b80e422f",
+        "import_unique_key": "e87737919ba4f979be97381d13baa1a0ae39732225c9cc58c8deafa3b80e422f"
+      },
+      "patch": {
+        "content_status": "obsolete",
+        "explanation": "A alternativa E reproduz uma dispensa antes prevista no art. 147, §6º, para certos tripulantes. O texto compilado atual marca o parágrafo como revogado pela Lei 15.428/2026. É indispensável confirmar o início de vigência da alteração e a data da prova antes de decidir o uso histórico ou atual.\n\nErro comum: Não reutilizar uma exceção revogada apenas porque o gabarito oficial de uma prova antiga a registrou.\n\nExemplo prático: Um comentário de habilitação precisa indicar a versão temporal da regra, especialmente após revogação expressa.",
+        "legal_basis": [
+          {
+            "title": "Dispositivo oficial conferido — ctb",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+            "artigo": "147"
+          },
+          {
+            "title": "Dispositivo oficial conferido — lei15428",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm",
+            "artigo": "2 e 3"
+          }
+        ],
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-23T04:31:08.568204+00:00",
+        "review_note": "Gabarito PRELIMINAR da banca; confira o definitivo. disciplina atribuída pela ordem do caderno; norma vigente conferida em 2026-10-22; ainda exige decisão individual antes de ativar (Art. 123 §1º (30 dias) e art. 148 §5º conferidos; Lei 15.428/2026 não os alterou.); gabarito preliminar publicado pela banca; confirme o definitivo antes de ativar Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Conferência em fonte primária: Art. 147, §6º, revogado em 05/06/2026 pelos arts. 2º e 3º da Lei 15.428/2026; conservar resposta histórica, sem treino como norma atual."
+      },
+      "evidence": {
+        "publication_approved": false,
+        "reason": "Art. 147, §6º, revogado em 05/06/2026 pelos arts. 2º e 3º da Lei 15.428/2026; conservar resposta histórica, sem treino como norma atual.",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+            "sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+            "checked_at": "2026-10-23T04:06:15.863910+00:00",
+            "article": "147"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15428.htm",
+            "sha256": "5537cf10b2348a7ebf74db30e73ede0449a645c16961d9669cc6220f7fb6c1cf",
+            "checked_at": "2026-10-23T04:16:23.174496+00:00",
+            "article": "2 e 3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c3bfe321-3371-4368-bfd8-a7d68a1d0217",
+      "local_index": 197,
+      "expected": {
+        "id": "c3bfe321-3371-4368-bfd8-a7d68a1d0217",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Escrivão de Polícia Civil 2026",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo A",
+        "item_number": 23,
+        "subject": "Direito Constitucional",
+        "support_text": null,
+        "stem": "Nos termos do artigo 66, §1º, da Constituição da República de 1988, se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público vetá-lo-á total ou parcialmente, no prazo de quinze dias úteis, contados da data do recebimento, e comunicará, dentro de quarenta e oito horas, ao Presidente do Senado Federal os motivos do veto. Em relação ao tema veto, marque a afirmativa correta.",
+        "options": {
+          "A": "O veto não será apreciado em sessão conjunta, dentro de trinta dias a contar de seu recebimento, só podendo ser rejeitado pelo voto da maioria relativa dos Deputados e Senadores.",
+          "B": "O veto parcial somente abrangerá texto integral de artigo, de parágrafo ou de alínea.",
+          "C": "O veto será apreciado em sessão conjunta, dentro de sessenta dias a contar de seu recebimento, só podendo ser rejeitado pelo voto da maioria absoluta dos Deputados e Senadores.",
+          "D": "O veto parcial poderá abranger palavra, vírgula ou expressão de artigo, de parágrafo ou de alínea.",
+          "E": "O veto será apreciado em sessão conjunta, dentro de trinta dias a contar de seu recebimento, só podendo ser rejeitado pelo voto da maioria relativa dos Deputados e Senadores."
+        },
+        "official_answer": "B",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa B é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+        "answer_key_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/gabarito-oficial-escrivao.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T21:25:19.286722+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "7ba5afe46a2f770ebe886ed2b2040041521be911fe71a7f9ade43dc080e0ad4b",
+        "import_unique_key": "7ba5afe46a2f770ebe886ed2b2040041521be911fe71a7f9ade43dc080e0ad4b"
+      },
+      "patch": {
+        "content_status": "under_review",
+        "explanation": "O art. 66, §2º, prevê veto parcial de texto integral de artigo, parágrafo, inciso ou alínea. A alternativa B omite inciso ao apresentar a lista como exclusiva. O gabarito histórico não autoriza ensinar uma enumeração incompleta como transcrição integral.\n\nErro comum: O veto não pode eliminar apenas palavras para alterar o sentido, mas também não se deve excluir inciso da lista constitucional.\n\nExemplo prático: Vetar um inciso integral é diferente de vetar uma expressão isolada dentro dele.",
+        "legal_basis": [
+          {
+            "title": "Dispositivo oficial conferido — cf",
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "artigo": "66"
+          }
+        ],
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-23T04:31:08.568229+00:00",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Conferência em fonte primária: Divergência literal: falta inciso na alternativa tida como correta; manter original e gabarito histórico retidos."
+      },
+      "evidence": {
+        "publication_approved": false,
+        "reason": "Divergência literal: falta inciso na alternativa tida como correta; manter original e gabarito histórico retidos.",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+            "sha256": "15d2ade2e9733e1bc122c439b8be0701668333a3f932ed5cec82c24b07a37389",
+            "checked_at": "2026-10-23T04:06:17.396878+00:00",
+            "article": "66"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0a2c289f-8251-4956-8d10-178795fd4a88",
+      "local_index": 198,
+      "expected": {
+        "id": "0a2c289f-8251-4956-8d10-178795fd4a88",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Escrivão de Polícia Civil 2026",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo A",
+        "item_number": 25,
+        "subject": "Direito Administrativo",
+        "support_text": null,
+        "stem": "À luz do texto expresso da Lei nº 8.429/1992, no que se refere à responsabilização do terceiro que induz ou concorre para a prática do ato de improbidade administrativa, é correto afirmar que:",
+        "options": {
+          "A": "O terceiro que induz ou concorre dolosamente para a prática do ato de improbidade, ou dele se beneficia sob qualquer forma direta ou indireta, sujeita-se às sanções previstas na lei, no que couber.",
+          "B": "A responsabilização do terceiro depende de prévia condenação criminal do agente público envolvido.",
+          "C": "O terceiro somente poderá ser responsabilizado quando mantiver vínculo funcional ou contratual com a Administração Pública.",
+          "D": "A lei veda expressamente a aplicação de sanções de improbidade a particulares que não detenham a condição de agente público.",
+          "E": "A responsabilização do terceiro prescinde da demonstração de dolo, bastando o benefício econômico auferido."
+        },
+        "official_answer": "A",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa A é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+        "answer_key_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/gabarito-oficial-escrivao.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T21:25:19.286722+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "34fc158eaa5e262920d75bc5e0ba93d3e75efeae06d8f8cfdbdacf4b24da238c",
+        "import_unique_key": "34fc158eaa5e262920d75bc5e0ba93d3e75efeae06d8f8cfdbdacf4b24da238c"
+      },
+      "patch": {
+        "content_status": "under_review",
+        "explanation": "O art. 3º atual exige indução ou concorrência dolosa do terceiro. A alternativa A acrescenta uma via autônoma de responsabilização por simples benefício direto ou indireto, expressão retirada da redação anterior. O benefício isolado não pode substituir a demonstração exigida na norma vigente.\n\nErro comum: Não responsabilizar automaticamente alguém só porque recebeu benefício, sem examinar dolo, participação e regras específicas.\n\nExemplo prático: Um sócio não responde de forma automática pelo ato imputado à pessoa jurídica; é preciso verificar os requisitos legais.",
+        "legal_basis": [
+          {
+            "title": "Dispositivo oficial conferido — lia",
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "artigo": "3"
+          }
+        ],
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-23T04:31:08.568238+00:00",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Conferência em fonte primária: Alternativa usa trecho da redação antiga; manter em revisão, sem adulterar o gabarito histórico."
+      },
+      "evidence": {
+        "publication_approved": false,
+        "reason": "Alternativa usa trecho da redação antiga; manter em revisão, sem adulterar o gabarito histórico.",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+            "sha256": "3aa10a1b8377383a925851774905c5e399559ac05b68d050e98a7a81866c762f",
+            "checked_at": "2026-10-23T04:06:14.809445+00:00",
+            "article": "3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "47901977-c1af-4e7b-af5c-7f80241a522a",
+      "local_index": 206,
+      "expected": {
+        "id": "47901977-c1af-4e7b-af5c-7f80241a522a",
+        "board": "IDECAN",
+        "contest_name": "PC SC - Escrivão de Polícia Civil 2026",
+        "career_name": "Escrivão de Polícia Civil",
+        "exam_year": 2026,
+        "exam_date": null,
+        "exam_type": "Tipo A",
+        "item_number": 33,
+        "subject": "Direitos Humanos",
+        "support_text": null,
+        "stem": "Consoante o art. 5º do Decreto nº 12.341/2024, no que se refere aos mecanismos de controle e monitoramento da atuação dos agentes de segurança pública, assinale a alternativa correta.",
+        "options": {
+          "A": "Os mecanismos de controle e monitoramento aplicam-se apenas às situações de uso de força letal.",
+          "B": "O controle da atuação dos agentes constitui medida facultativa, a critério da autoridade administrativa.",
+          "C": "A atuação dos agentes de segurança pública deverá estar sujeita a mecanismos de controle e monitoramento.",
+          "D": "O monitoramento da atuação destina-se exclusivamente à apuração de responsabilidade penal.",
+          "E": "Os mecanismos de controle somente poderão ser exigidos após regulamentação futura."
+        },
+        "official_answer": "C",
+        "needs_visual": false,
+        "legal_review_required": false,
+        "law_version_checked_at": "2026-10-22T12:00:00+00:00",
+        "legal_basis": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "title": "Sem alteração legislativa localizada"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+            "title": "Sem alteração legislativa localizada"
+          }
+        ],
+        "explanation": "Explicação preliminar: a alternativa C é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
+        "difficulty": "média",
+        "state": "SC",
+        "career_category": "Polícia Civil",
+        "source_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/prova-escrivao.pdf",
+        "answer_key_url": "https://dsoconcursos.com.br/wp-content/uploads/2026/03/gabarito-oficial-escrivao.pdf",
+        "content_status": "under_review",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.",
+        "verified_at": "2026-10-23T03:56:15.637018+00:00",
+        "created_at": "2026-10-22T21:25:19.286722+00:00",
+        "syllabus_topic_id": null,
+        "tested_topic": null,
+        "figure_urls": [],
+        "import_content_key": "8318b8fdb04ab06eeffc9c5d78b7368c6bf528ab74e4ac6c255eb046885fc305",
+        "import_unique_key": "8318b8fdb04ab06eeffc9c5d78b7368c6bf528ab74e4ac6c255eb046885fc305"
+      },
+      "patch": {
+        "content_status": "under_review",
+        "explanation": "A ideia geral de fiscalização encontra disciplina no decreto, especialmente no art. 7º. Porém, o enunciado atribui o tema ao art. 5º, que enumera competências do Ministério da Justiça e Segurança Pública. A referência específica precisa de correção editorial claramente identificada ou decisão fundamentada de retenção.\n\nErro comum: Não inventar o conteúdo de um artigo para fazê-lo coincidir com uma alternativa genericamente plausível.\n\nExemplo prático: Ao estudar mecanismos de controle, consulte o dispositivo efetivamente correspondente, preservando a referência histórica do enunciado.",
+        "legal_basis": [
+          {
+            "title": "Dispositivo oficial conferido — decreto-forca",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "artigo": "5"
+          },
+          {
+            "title": "Dispositivo oficial conferido — decreto-forca",
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "artigo": "7"
+          }
+        ],
+        "legal_review_required": true,
+        "law_version_checked_at": "2026-10-23T04:31:08.568250+00:00",
+        "review_note": "disciplina atribuída pela ordem do caderno; gabarito oficial DEFINITIVO (conferido em antigo-concurso.idecan.org.br, 22/10/2026) — itens 24 e 96 do Tipo A foram anulados no definitivo e ficaram fora desta carga; ainda exige decisão individual antes de ativar (CONTENT_GOVERNANCE.md). Lote legislação pendente de conferência normativa e vínculo ao edital. Auditoria de liberação: bloqueado até vínculo a syllabus_topics e validação de edital oficial; revisão solicitada em 2026-10-23.; Conferência em fonte primária: Referência normativa imprecisa no enunciado: art. 5º não é a enumeração específica de mecanismos do art. 7º."
+      },
+      "evidence": {
+        "publication_approved": false,
+        "reason": "Referência normativa imprecisa no enunciado: art. 5º não é a enumeração específica de mecanismos do art. 7º.",
+        "sources": [
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "sha256": "c2c25de2c94ff8359367177f67f516dd021bd8e4a11ba82d07fd94edb0d462b8",
+            "checked_at": "2026-10-23T04:06:13.869864+00:00",
+            "article": "5"
+          },
+          {
+            "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+            "sha256": "c2c25de2c94ff8359367177f67f516dd021bd8e4a11ba82d07fd94edb0d462b8",
+            "checked_at": "2026-10-23T04:06:13.869864+00:00",
+            "article": "7"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "batch_id": "idecan-use-of-force-3-v1",
+  "applied": true,
+  "complete": true,
+  "verified_at": "2026-10-23T04:45:20.342743+00:00",
+  "rows": [
+    {
+      "id": "b88e0433-aa12-4a06-8395-9dd4f6c0df9b",
+      "status": "active",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "law_version_checked_at": "2026-10-23T04:43:19.99147+00:00",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "3aa102d1-436e-4e61-b9ed-898f866da0f7",
+      "status": "active",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "law_version_checked_at": "2026-10-23T04:43:19.991501+00:00",
+      "audited": true,
+      "historical_answer_preserved": true
+    },
+    {
+      "id": "5ee3b4ed-5693-41c8-bd51-8c5f9d786e66",
+      "status": "active",
+      "syllabus_topic_id": "afaf633e-5b3a-4ed9-96ae-a1a9a352c339",
+      "law_version_checked_at": "2026-10-23T04:43:19.991522+00:00",
+      "audited": true,
+      "historical_answer_preserved": true
+    }
+  ]
+}
