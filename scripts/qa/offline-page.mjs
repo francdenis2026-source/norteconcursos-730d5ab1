@@ -12,13 +12,13 @@ try {
     await navigator.serviceWorker.ready;
     if (!navigator.serviceWorker.controller) await new Promise(resolve => navigator.serviceWorker.addEventListener('controllerchange', resolve, { once: true }));
   });
-  for (const path of ['/media/hero/norte-atmosphere.webp', '/media/brand/distintivo-carreiras-hd.webp']) {
+  for (const path of ['/media/hero/norte-atmosphere.webp', '/media/brand/distintivo-carreiras-hd-v2.webp']) {
     assert.ok(await page.evaluate(async path => !!await caches.match(path), path), `${path}: precached before the offline screen is needed`);
   }
   await context.setOffline(true);
   await page.goto(`${base}/qa-uncached-offline-route`);
   await page.getByRole('heading', { name: 'Você está sem conexão.' }).waitFor();
-  await page.waitForFunction(() => document.querySelector('.scene')?.naturalWidth > 0 && document.querySelector('.badge-front')?.naturalWidth === 768);
+  await page.waitForFunction(() => document.querySelector('.scene')?.naturalWidth > 0 && document.querySelector('.badge-front')?.naturalWidth === 779);
   for (const [name, width, height] of [['large-desktop', 1920, 1080], ['desktop', 1440, 900], ['laptop', 1366, 768], ['tablet', 820, 1180], ['small-tablet', 768, 1024], ['mobile', 390, 844], ['small-mobile', 360, 640], ['narrow-mobile', 320, 568], ['landscape', 844, 390], ['small-landscape', 568, 320]]) {
     await page.setViewportSize({ width, height });
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${name}: no horizontal overflow`);
