@@ -9,11 +9,10 @@ const SECOND_LEN = 196;
 const SECOND_TAIL = 34;
 
 /**
- * The "Carreiras Policiais" clock, merged into the hero's own background artwork (fixed,
- * watermark-style, behind the copy) instead of living in a separate card further down the page.
- * Real wall-clock hands keep it "functional"; the dial art is dimmed into the hero's dark wash.
+ * The "Carreiras Policiais" clock, anchored top-right of the hero in place of the old badge:
+ * full color, stuck to the hero artwork, with real wall-clock hands.
  */
-export function HeroClock() {
+export function HeroClock({ show = true }: { show?: boolean }) {
   const hourHand = useRef<SVGGElement>(null);
   const minuteHand = useRef<SVGGElement>(null);
   const secondHand = useRef<SVGGElement>(null);
@@ -45,7 +44,7 @@ export function HeroClock() {
   }, []);
 
   return (
-    <div className="home-hero__clock" aria-hidden="true">
+    <div className="home-hero__clock" data-reveal={show ? "in" : "pending"} aria-hidden="true">
       <img
         className="home-hero__clock-art"
         src="/media/brand/relogio-carreiras-policiais.webp"
