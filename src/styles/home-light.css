@@ -72,16 +72,13 @@
 :root:not(.dark) .home.home .home-plans--insignia .home-faq { padding: 22px 20px; border-radius: 10px; background: color-mix(in srgb, var(--stage-card) 68%, transparent); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plans__notice { padding: 10px 12px; border-radius: 6px; }
 :root:not(.dark) .home.home :is(.home-operations, .home-plans--insignia) .home-heading h2 em { color: var(--stage-amber); }
-:root:not(.dark) .home.home .home-operations .home-opportunity,
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan],
 :root:not(.dark) .home.home .home-plans--insignia .home-compare { background: var(--stage-card); box-shadow: var(--stage-shadow); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan].home-plan--featured { background: linear-gradient(160deg, oklch(0.97 0.03 80), var(--stage-card) 55%); border-color: var(--stage-amber); box-shadow: 0 0 0 1px oklch(0.5 0.11 62 / 0.25), var(--stage-shadow); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] :is(h3, .home-plan__annual) { color: var(--stage-accent); }
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] .home-tag,
-:root:not(.dark) .home.home .home-operations .home-opportunity .home-status { background: oklch(0.95 0.03 262); color: var(--stage-accent); border-color: oklch(0.88 0.04 262); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] .home-tag { background: oklch(0.95 0.03 262); color: var(--stage-accent); border-color: oklch(0.88 0.04 262); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button { color: var(--stage-accent); background: transparent; border-color: oklch(0.8 0.06 262); }
-:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button,
-:root:not(.dark) .home.home .home-operations .home-opportunity .home-button { background: var(--stage-accent); color: oklch(0.99 0 0); border-color: var(--stage-accent); }
+:root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan="free"] > .home-button { background: var(--stage-accent); color: oklch(0.99 0 0); border-color: var(--stage-accent); }
 :root:not(.dark) .home.home .home-plans--insignia .home-plan[data-plan] > .home-button:disabled { color: oklch(0.5 0.02 260); background: oklch(0.94 0.008 255); border-color: var(--stage-line); }
 :root:not(.dark) .home.home .home-plans--insignia .home-compare .is-trial { background: oklch(0.96 0.03 262); }
 
@@ -129,13 +126,13 @@
 :root:not(.dark) .home.home .home-preparation__panel { scrollbar-color: var(--stage-accent) transparent; }
 
 /* Deliberate light-theme hierarchy, including expandable and secondary content. */
-:root:not(.dark) .home.home :is(.home-opportunity h3, .home-plan__price, .home-faq h3, .home-plan-comparison > summary) {
+:root:not(.dark) .home.home :is(.home-plan__price, .home-faq h3, .home-plan-comparison > summary) {
   color: var(--stage-ink);
 }
 :root:not(.dark) .home.home :is(.home-preparation__number, .home-preparation__challenge, .home-faq__list summary, .home-plan__features summary) {
   color: var(--stage-accent);
 }
-:root:not(.dark) .home.home :is(.home-preparation__tab:not([data-state="active"]), .home-faq__list p, .home-plan__features li, .home-exam-details p, .home-exam-details li, .home-compare td) {
+:root:not(.dark) .home.home :is(.home-preparation__tab:not([data-state="active"]), .home-faq__list p, .home-plan__features li, .home-compare td) {
   color: var(--stage-muted);
 }
 :root:not(.dark) .home.home .home-faq__list details[open] > summary {

@@ -60,7 +60,7 @@
     scroll-padding-inline: 2px;
     align-items: stretch;
   }
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > :is(.home-opportunity, .home-plan) {
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > .home-plan {
     flex: 0 0 clamp(260px, 38vw, 330px);
     height: auto;
     scroll-snap-align: start;
@@ -162,7 +162,7 @@
   .home.home .home-footer--command .home-footer__bottom { flex-direction: column; }
 }
 @media (max-width: 599px) {
-  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > :is(.home-opportunity, .home-plan) { flex-basis: 88%; }
+  :root:is(.dark, :not(.dark)) .home.home :is(.home-operations, .home-plans--insignia) .home-rail__track > .home-plan { flex-basis: 88%; }
 }
 @media (hover: hover) and (pointer: fine) {
   .home-app-nav a:hover { color: var(--app-accent); background: var(--muted); }

@@ -60,11 +60,7 @@
   box-shadow: none;
   pointer-events: none;
 }
-.home.home .home-operations .home-rail__track.home-opportunities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 20px; }
-.home.home .home-operations .home-opportunity { min-width: 0; background: var(--stage-surface); border: 1px solid var(--home-line); border-radius: 12px; overflow: hidden; box-shadow: 0 16px 40px -28px #000; }
-.home.home .home-operations .home-opportunity__image { height: auto; aspect-ratio: 16 / 8; }
 /* News ribbon stays inside the existing PCAC artwork; card geometry is unchanged. */
-.home-opportunity--acre .home-opportunity__image { position: relative; }
 .home-pcac-news {
   position: absolute;
   top: 10px;
@@ -85,16 +81,6 @@
   pointer-events: none;
 }
 .home-pcac-news strong { color: var(--on-ink); font-size: 19px; letter-spacing: .05em; }
-.home.home .home-operations .home-opportunity__intro { padding: 16px 18px 8px; }
-.home.home .home-operations .home-opportunity__body { padding: 0 18px 18px; }
-.home.home .home-operations .home-opportunity h3 { color: var(--home-text); font-size: 20px; }
-.home.home .home-operations .home-opportunity .home-eyebrow { color: var(--stage-gold); background: none; border: 0; padding: 0; font-size: 10px; }
-.home.home .home-operations .home-opportunity :is(.home-exam-icon, .home-exam-details summary) { color: var(--stage-gold); }
-.home.home .home-operations .home-opportunity .home-status { color: var(--home-text); background: rgb(0 0 0 / 25%); border-color: var(--home-line); }
-.home.home .home-operations .home-opportunity .home-button { border-color: rgb(232 205 153 / 40%); background: var(--stage-gold); color: var(--brass-foreground); border-radius: 6px; min-height: 42px; }
-.home.home .home-operations .home-opportunity .home-exam-details { border-color: var(--home-line); }
-.home.home .home-operations .home-opportunity :is(p, small, li) { color: var(--home-muted); }
-.home.home .home-operations .home-opportunity__bottom { margin-top: auto; }
 /* Plans: warm metal accents, an exposed insignia and quiet surfaces for comparison. */
 .home.home .home-plans--insignia {
   padding-block: 40px;
@@ -196,8 +182,6 @@
   .home.home :is(.home-operations, .home-plans--insignia) { padding-block: 28px; }
   .home.home :is(.home-operations, .home-plans--insignia, .home-footer--command) > .home-container { width: calc(100% - 32px); }
   .home-operations__heading { grid-template-columns: 1fr; gap: 16px; margin-bottom: 18px; padding-bottom: 18px; }
-  .home.home .home-operations .home-rail__track.home-opportunities { display: flex; gap: 12px; }
-  .home.home .home-operations .home-rail__track.home-opportunities > .home-opportunity { flex: 0 0 86%; scroll-snap-align: start; }
   .home.home .home-plans--insignia .home-plans__intro { grid-template-columns: 1fr; gap: 20px; }
   .home.home .home-plans--insignia .home-plans__signal { padding-left: 0; border-left: 0; }
   .home-plans__insignia { width: 60px; height: 76px; }
