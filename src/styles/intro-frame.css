@@ -214,3 +214,38 @@
     font-size: 11px;
   }
 }
+
+
+/* Mobile introduction: show the artwork at its natural proportions rather than
+   enlarging a landscape image to fill a tall portrait frame. Avoid the
+   excessively dark overlays that made details appear muddy. */
+@media (max-width: 599px) {
+  #norte-initial-loading .startup-intro .tactical-intro__frame {
+    background:
+      linear-gradient(180deg, rgb(8 14 18 / 22%), rgb(8 14 18 / 76%) 52%, #080c0e 100%),
+      #101a1f;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__frame > .tactical-intro__art {
+    inset: 0 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 600;
+    object-fit: contain;
+    object-position: center top;
+    opacity: .78;
+    filter: none;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen {
+    background-color: #10191e;
+    background-image:
+      linear-gradient(180deg, rgb(8 12 15 / 24%), rgb(8 12 15 / 48%)),
+      url('/media/hero/home-bg-texture.webp');
+    background-position: center center, center center;
+    background-size: 100% 100%, contain;
+    background-repeat: no-repeat;
+  }
+  #norte-initial-loading .startup-intro .tactical-intro__screen video {
+    object-fit: contain;
+    image-rendering: auto;
+  }
+}
