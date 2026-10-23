@@ -112,12 +112,11 @@ export function ContestShowcase() {
             loading="lazy"
             decoding="async"
           />
+        </div>
+        <div className="contest-spotlight__content">
           <span className="contest-spotlight__ribbon">
             <Target size={14} aria-hidden="true" /> Concurso em destaque
           </span>
-          <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
-        </div>
-        <div className="contest-spotlight__content">
           <div className="contest-kickers">
             <span>
               <ShieldCheck size={14} aria-hidden="true" /> PC-AC · PRÉ-EDITAL
@@ -168,6 +167,7 @@ export function ContestShowcase() {
             {trainingLink(PCSC_TRAINER_SEARCH, "Treinar com a IDECAN")}
           </div>
           <CountReference date={sc.checkedAt} />
+          <span className="contest-spotlight__signature">NORTE CONCURSOS · ACRE</span>
           <details className="contest-details">
             <summary>Sobre o concurso e a preparação</summary>
             <p>
