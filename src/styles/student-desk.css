@@ -732,3 +732,22 @@
     stroke-width: 2.25;
   }
 }
+
+
+/* Retículo do objetivo: vermelho de mira, sem colorir o restante do painel. */
+.app-shell[data-area="student"] .student-home.student-desk
+.student-home__card:has(#dashboard-objective-title)
+.student-home__section-title > span {
+  color: #d42b32;
+  background: color-mix(in srgb, #d42b32 9%, var(--card));
+  border: 1px solid color-mix(in srgb, #d42b32 48%, var(--border));
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #d42b32 11%, transparent);
+}
+.app-shell[data-area="student"] .student-home.student-desk
+.student-home__card:has(#dashboard-objective-title)
+.student-home__section-title > span svg {
+  color: #d42b32;
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
