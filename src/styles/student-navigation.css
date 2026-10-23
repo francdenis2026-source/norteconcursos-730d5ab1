@@ -496,3 +496,79 @@
     box-shadow: none;
   }
 }
+
+
+/* Sidebar category identity v3 — visibly distinct even BEFORE selecting a menu.
+   The earlier palette only tinted an icon in an otherwise transparent row.
+   This version gives each section a permanent color rail + soft surface.
+   No width, height, padding or grid columns changed. */
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: #956015; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"] { --nav-identity: #176caa; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"] { --nav-identity: #7550b5; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"] { --nav-identity: #087d79; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="emerald"] { --nav-identity: #21804f; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="rose"] { --nav-identity: #b03f61; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="indigo"] { --nav-identity: #464cb0; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="orange"] { --nav-identity: #a65c23; }
+:root:not(.dark) .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="slate"] { --nav-identity: #42617d; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="gold"] { --nav-identity: #e2bd75; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="sky"] { --nav-identity: #79bff5; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="violet"] { --nav-identity: #bd9ef6; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="teal"] { --nav-identity: #61cfc8; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="emerald"] { --nav-identity: #75d6a0; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="rose"] { --nav-identity: #efa0ba; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="indigo"] { --nav-identity: #aeb7ff; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="orange"] { --nav-identity: #f1b57a; }
+:root.dark .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue="slate"] { --nav-identity: #a4bfd5; }
+
+/* Specificity also beats the general active-state and icon hue styles from
+   styles.css, including in the touch drawer. */
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] {
+  position: relative;
+  --student-nav-accent: var(--nav-identity);
+  --student-nav-selected: color-mix(in srgb, var(--nav-identity) 18%, var(--card));
+  --student-nav-hover: color-mix(in srgb, var(--nav-identity) 12%, var(--card));
+  background: color-mix(in srgb, var(--nav-identity) 7%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--nav-identity) 23%, var(--card));
+  box-shadow: inset 3px 0 0 var(--nav-identity);
+  color: var(--student-nav-text);
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] .app-ico {
+  color: var(--nav-identity);
+  background: color-mix(in srgb, var(--nav-identity) 18%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--nav-identity) 38%, var(--card));
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] .app-ico svg {
+  color: currentColor;
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] .app-nav__label strong {
+  color: var(--student-nav-text);
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue]:hover {
+  background: var(--student-nav-hover);
+  border-color: color-mix(in srgb, var(--nav-identity) 48%, var(--card));
+  box-shadow: inset 3px 0 0 var(--nav-identity);
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue][data-active="true"] {
+  background: var(--student-nav-selected);
+  border-color: color-mix(in srgb, var(--nav-identity) 55%, var(--card));
+  color: var(--nav-identity);
+  box-shadow: inset 4px 0 0 var(--nav-identity);
+}
+.app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue][data-active="true"] .app-nav__label strong {
+  color: var(--nav-identity);
+}
+/* Collapsed sidebar retains exactly the same tiles but the hue stays visible. */
+.app-shell[data-area="student"] .app-sidebar.student-navigation[data-collapsed="true"] .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] {
+  background: color-mix(in srgb, var(--nav-identity) 8%, var(--card));
+  border-color: color-mix(in srgb, var(--nav-identity) 27%, var(--card));
+  box-shadow: inset 3px 0 0 var(--nav-identity);
+}
+@media (forced-colors: active) {
+  .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue] {
+    background: Canvas; color: CanvasText; border-color: ButtonBorder; box-shadow: none;
+  }
+  .app-shell[data-area="student"] .student-navigation .navigation-workspace.student-direct-navigation a.app-nav__link[data-hue][data-active="true"] {
+    background: Highlight; color: HighlightText; border-color: Highlight; box-shadow: none;
+  }
+}
