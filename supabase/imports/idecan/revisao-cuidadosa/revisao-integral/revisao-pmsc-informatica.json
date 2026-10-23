@@ -54,6 +54,19 @@
       }
     }
   ],
-  "release_block": "Não foi aprovado tópico de edital vigente para esta correção; SQL preserva under_review.",
+  "curriculum_match": {
+    "edition": "Polícia Federal — Agente de Polícia Federal, edital 2025, Retificação nº 4",
+    "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
+    "official_source_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+    "official_source_status_in_snapshot": "vigente / is_official=true",
+    "matches": [
+      {"item": 20, "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf", "excerpt": "2.2 Noções de sistema operacional (ambiente Linux e Windows); 17.1 Noções de sistema operacional (ambiente Linux e Windows)."},
+      {"item": 21, "topic_id": "705afab1-ae16-46b8-8717-44d21d732faf", "excerpt": "2.4 Edição de textos, planilhas e apresentações (ambientes Microsoft Office e LibreOffice)."},
+      {"item": 22, "topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906", "excerpt": "4.1 Noções de vírus, worms e pragas virtuais. 4.2 Aplicativos para segurança (antivírus, firewall, anti-spyware etc.)."}
+    ],
+    "qualification": "Compatibilidade para treino do edital PF Agente 2025; não constitui previsão PC-AC nem vínculo ao edital PMSC 2026."
+  },
+  "link_sql_path": "pmsc-informatica-vinculo-edital.sql",
+  "link_sql_applied": false,
   "remote_applied": false
 }

@@ -17,7 +17,7 @@ Os números desta pasta são o **recorte IDECAN**, não os totais globais da pla
 
 Conferência dos registros administrativos exportados em 23/10/2026 contra a página 7 do caderno Tipo A confirmou contaminações na importação: item 20, alternativa D; item 21, final do enunciado e alternativas A/B; item 22, todas as alternativas. O gabarito definitivo publicado pela IDECAN foi conferido separadamente: 20-E, 21-D e 22-B. Os hashes, excertos e estado exportado estão em `revisao-integral/revisao-pmsc-informatica.json`.
 
-`revisao-integral/pmsc-informatica-correcao.sql` restaura o texto comprovado, inclui explicações e grava os dados anteriores e posteriores na auditoria. O lote mantém os três registros em `under_review`: não há aprovação de tópico de edital vigente. O SQL ainda precisa ser aplicado no Supabase; sua execução aborta se os campos conferidos, fontes ou gabaritos divergirem do retrato usado na revisão.
+`revisao-integral/pmsc-informatica-correcao.sql` restaurou o texto comprovado e incluiu explicações, conforme a saída SQL recebida do usuário. O edital oficial PF 2025, atualizado pela Retificação nº 4, contém explicitamente os três tópicos: ambiente Linux (2.2/17.1), planilhas Microsoft Office/LibreOffice (2.4) e malware/anti-spyware (4.1/4.2). `revisao-integral/pmsc-informatica-vinculo-edital.sql` vincula os registros à matriz de Agente PF 2025, grava a evidência na auditoria e os torna `active` para estudo compatível com esse edital. Essa compatibilidade não prevê o futuro edital PC-AC. O lote de vínculo ainda precisa ser aplicado no Supabase; ele exige a auditoria e os dados restaurados já confirmados e aborta em divergência.
 
 ## Pareceres e evidências
 
