@@ -13998,11 +13998,30 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 }
 .material-card__icon svg { width: 22px; height: 22px; }
 .material-card__icon[data-tone="law"] { background: color-mix(in oklab, #d9a53a 22%, transparent); color: #b8801a; }
-.material-card__icon[data-tone="subject"] { background: color-mix(in oklab, #3b82f6 18%, transparent); color: #2563eb; }
 .material-card__icon[data-tone="more"] { background: color-mix(in oklab, #14b8a6 18%, transparent); color: #0d9488; }
 .dark .material-card__icon[data-tone="law"] { color: #f0c15a; }
-.dark .material-card__icon[data-tone="subject"] { color: #8ab4ff; }
 .dark .material-card__icon[data-tone="more"] { color: #5eead4; }
+/* Cada disciplina com sua própria cor, para reconhecer de relance — nunca só a cor, sempre com ícone e nome distintos também. */
+.material-card__icon[data-subject="portugues"] { background: color-mix(in oklab, #f43f5e 18%, transparent); color: #e11d48; }
+.material-card__icon[data-subject="matematica"] { background: color-mix(in oklab, #0ea5e9 18%, transparent); color: #0284c7; }
+.material-card__icon[data-subject="logica"] { background: color-mix(in oklab, #8b5cf6 18%, transparent); color: #7c3aed; }
+.material-card__icon[data-subject="informatica"] { background: color-mix(in oklab, #6366f1 18%, transparent); color: #4f46e5; }
+.material-card__icon[data-subject="quimica"] { background: color-mix(in oklab, #10b981 18%, transparent); color: #059669; }
+.material-card__icon[data-subject="fisica"] { background: color-mix(in oklab, #f59e0b 18%, transparent); color: #d97706; }
+.material-card__icon[data-subject="estatistica"] { background: color-mix(in oklab, #06b6d4 18%, transparent); color: #0891b2; }
+.material-card__icon[data-subject="contabilidade"] { background: color-mix(in oklab, #f97316 18%, transparent); color: #ea580c; }
+.material-card__icon[data-subject="ingles"] { background: color-mix(in oklab, #d946ef 18%, transparent); color: #c026d3; }
+.material-card__icon[data-subject="geral"] { background: color-mix(in oklab, #64748b 18%, transparent); color: #475569; }
+.dark .material-card__icon[data-subject="portugues"] { color: #fb7185; }
+.dark .material-card__icon[data-subject="matematica"] { color: #38bdf8; }
+.dark .material-card__icon[data-subject="logica"] { color: #a78bfa; }
+.dark .material-card__icon[data-subject="informatica"] { color: #818cf8; }
+.dark .material-card__icon[data-subject="quimica"] { color: #34d399; }
+.dark .material-card__icon[data-subject="fisica"] { color: #fbbf24; }
+.dark .material-card__icon[data-subject="estatistica"] { color: #22d3ee; }
+.dark .material-card__icon[data-subject="contabilidade"] { color: #fb923c; }
+.dark .material-card__icon[data-subject="ingles"] { color: #e879f9; }
+.dark .material-card__icon[data-subject="geral"] { color: #94a3b8; }
 .material-card__body { display: grid; gap: 2px; min-width: 0; }
 .material-card__body strong { font-size: 15px; line-height: 1.25; overflow-wrap: anywhere; }
 .material-card__body span { font-size: 12.5px; color: var(--muted-foreground); line-height: 1.35; }
@@ -14071,11 +14090,6 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .hub-search__list li span { display: grid; gap: 1px; min-width: 0; }
 .hub-search__list li strong { font-size: 14.5px; overflow-wrap: anywhere; }
 .hub-search__list li small { font-size: 12px; color: var(--muted-foreground); }
-.material-finder { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1px solid color-mix(in oklab, #d9a53a 50%, var(--border)); border-radius: 18px; background: color-mix(in oklab, #d9a53a 9%, var(--card)); color: var(--foreground); text-decoration: none; }
-.material-finder:hover { border-color: #d9a53a; }
-.material-finder:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline-offset: 2px; }
-.material-finder__go { flex: 0 0 auto; font-size: 14px; font-weight: 700; color: var(--primary); }
-@media (max-width: 639px) { .material-finder { flex-wrap: wrap; } .material-finder__go { width: 100%; text-align: right; } }
 .law-finder__search input:focus,
 .law-finder__search input:focus-visible,
 .hub-search__box input:focus,
