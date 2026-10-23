@@ -62,7 +62,7 @@ begin
     end if;
 
     if q.content_status <> 'under_review'
-      or q.official_answer <> case item when 20 then 'E' when 21 then 'D' else 'B' end
+      or q.official_answer <> (case item when 20 then 'E' when 21 then 'D' else 'B' end)
       or q.source_url <> 'https://arquivos.qconcursos.com/prova/arquivo_prova/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-prova.pdf'
       or q.answer_key_url <> 'https://arquivos.qconcursos.com/prova/arquivo_gabarito/147684/idecan-2026-cbm-sc-aluno-soldado-temporario-gabarito.pdf'
     then raise exception 'Estado/gabarito/fonte divergente na questão %; lote cancelado', item; end if;
