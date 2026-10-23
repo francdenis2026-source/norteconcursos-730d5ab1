@@ -428,3 +428,71 @@
     line-height: 13px;
   }
 }
+
+
+/* Customer sidebar: one recognizable, restrained accent per destination.
+   Each section owns its hue in expanded sidebar, compact rail and mobile drawer.
+   Keep all existing grid columns, widths, row heights and text sizes. */
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: #956015; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="sky"]     { --student-nav-accent: #176caa; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="violet"]  { --student-nav-accent: #7550b5; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="teal"]    { --student-nav-accent: #087d79; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="emerald"] { --student-nav-accent: #21804f; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="rose"]    { --student-nav-accent: #b03f61; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="indigo"]  { --student-nav-accent: #464cb0; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="orange"]  { --student-nav-accent: #a65c23; }
+:root:not(.dark) .student-navigation .student-direct-navigation .app-nav__link[data-hue="slate"]   { --student-nav-accent: #42617d; }
+
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="gold"]    { --student-nav-accent: #e2bd75; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="sky"]     { --student-nav-accent: #79bff5; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="violet"]  { --student-nav-accent: #bd9ef6; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="teal"]    { --student-nav-accent: #61cfc8; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="emerald"] { --student-nav-accent: #75d6a0; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="rose"]    { --student-nav-accent: #efa0ba; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="indigo"]  { --student-nav-accent: #aeb7ff; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="orange"]  { --student-nav-accent: #f1b57a; }
+:root.dark .student-navigation .student-direct-navigation .app-nav__link[data-hue="slate"]   { --student-nav-accent: #a4bfd5; }
+
+/* The existing icon tile already occupies 32px; tint it rather than enlarging. */
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] {
+  --student-nav-selected: color-mix(in srgb, var(--student-nav-accent) 13%, var(--card));
+  --student-nav-hover: color-mix(in srgb, var(--student-nav-accent) 7%, var(--card));
+  border-color: transparent;
+  background: transparent;
+  transition: background-color .16s ease, border-color .16s ease, color .16s ease;
+}
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] .app-ico {
+  color: var(--student-nav-accent);
+  background: color-mix(in srgb, var(--student-nav-accent) 11%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--student-nav-accent) 24%, var(--card));
+}
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue]:hover:not([data-active="true"]) {
+  border-color: color-mix(in srgb, var(--student-nav-accent) 19%, var(--student-nav-line));
+  background: var(--student-nav-hover);
+}
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] {
+  background: var(--student-nav-selected);
+  border-color: color-mix(in srgb, var(--student-nav-accent) 40%, var(--card));
+  box-shadow: inset 3px 0 0 var(--student-nav-accent);
+}
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] .app-ico {
+  background: color-mix(in srgb, var(--student-nav-accent) 18%, var(--card));
+  border-color: color-mix(in srgb, var(--student-nav-accent) 38%, var(--card));
+}
+/* Nonselected text stays neutral and readable; hue never replaces the label. */
+.student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue]:not([data-active="true"]) .app-nav__label strong {
+  color: var(--student-nav-text);
+}
+@media (forced-colors: active) {
+  .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue] {
+    border-color: ButtonBorder;
+    background: Canvas;
+    color: CanvasText;
+  }
+  .student-navigation .navigation-workspace.student-direct-navigation .app-nav__link[data-hue][data-active="true"] {
+    background: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
+    box-shadow: none;
+  }
+}
