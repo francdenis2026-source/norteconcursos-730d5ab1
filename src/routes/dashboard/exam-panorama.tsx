@@ -7,7 +7,7 @@ import { useAuthStatus } from "@/hooks/useDashboard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { LockedState, PageHero } from "@/components/dashboard/PageHero";
+import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { canonicalSubject } from "@/lib/subjects";
 import {
   analyzeEditals,
@@ -237,7 +237,12 @@ function ExamPanoramaPage() {
           </>
         }
         description="Explore o histórico de provas e encontre prioridades para organizar seu estudo por cargo."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={FileText} label="Provas analisadas" value={view.n} />
+          <HeroStat icon={Layers} label="Disciplinas" value={view.table.length} />
+        </div>
+      </PageHero>
 
       <PcAcreStudyOutlook
         role={pcAcreRole(search.pcCargo)}

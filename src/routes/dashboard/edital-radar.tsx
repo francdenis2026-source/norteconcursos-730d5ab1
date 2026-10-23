@@ -24,7 +24,7 @@ import {
 } from "@/lib/editalRadar";
 import { loadRadarData, type RadarData } from "@/lib/radarData";
 import { cn } from "@/lib/utils";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/edital-radar")({
   component: () => (
@@ -104,7 +104,12 @@ function EditalRadarPage() {
           </>
         }
         description="Cruza o que cada edital lista com o que as provas já cadastradas realmente cobraram: o que mais cai, o que nunca caiu e o que tende a cair. É estatística, não garantia."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={Radar} label="Tópicos analisados" value={result.topics.length} />
+          <HeroStat icon={AlertTriangle} label="Prioridade alta/média" value={likely.length} />
+        </div>
+      </PageHero>
       <section className="rounded-3xl border bg-background p-6 shadow-sm">
         <div className="flex flex-wrap gap-2">
           {SPHERES.map((item) => (

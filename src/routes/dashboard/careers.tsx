@@ -5,7 +5,7 @@ import { CAREERS } from "@/lib/careers";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ShieldCheck, FileStack, BookMarked } from "lucide-react";
-import { PageHero } from "@/components/dashboard/PageHero";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 
 export const Route = createFileRoute("/dashboard/careers")({
   component: CareersPage,
@@ -72,7 +72,16 @@ function CareersPage() {
           </>
         }
         description="Escolha uma carreira para treinar questões ou rever suas provas. Os números crescem conforme você registra provas e responde questões."
-      />
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={FileStack} label="Carreiras" value={CAREERS.length} />
+          <HeroStat
+            icon={BookMarked}
+            label="Questões registradas"
+            value={Object.values(counts).reduce((sum, c) => sum + c.questions, 0)}
+          />
+        </div>
+      </PageHero>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {CAREERS.map((c) => {
