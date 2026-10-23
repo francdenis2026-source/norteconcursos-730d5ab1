@@ -29,7 +29,11 @@ export function RecentAttempts({ limit = 5 }: { limit?: number }) {
             tentativa.
           </p>
         </div>
-        <Link className="text-sm font-semibold underline" to="/dashboard/history">
+        <Link
+          className="text-sm font-semibold underline"
+          to="/dashboard/history"
+          search={{ day: undefined }}
+        >
           Ver histórico completo
         </Link>
       </div>
