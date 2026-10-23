@@ -292,3 +292,99 @@ body:has(.daily-page) { overflow: hidden; }
   .daily-session__scores { padding-block: 8px; }
   .daily-session__tip, .daily-session__renewal { margin-top: 8px; }
 }
+
+
+/* Desafio Diario / initial briefing only: the panoramic clock photograph
+   must never be blown up to cover a tall viewport. Contain and center it;
+   preserve both panels inside the actual viewport without distorting art. */
+.daily-page[data-step="intro"] .daily-art {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 65% 75% at 22% 48%, var(--daily-veil) 0%, transparent 72%),
+    linear-gradient(110deg, var(--daily-veil) 15%, transparent 150%),
+    url('/media/hero/home-bg-texture.webp');
+  background-size: 100% 100%, 100% 100%, min(100vw, 1600px) auto;
+  background-position: center, center, center 44%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 701px) {
+  .daily-page[data-step="intro"] .daily-main {
+    overflow-x: hidden;
+    min-height: 0;
+  }
+  .daily-page[data-step="intro"] .daily-overview {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, .82fr);
+    align-items: stretch;
+    gap: clamp(12px, 1.6vw, 24px);
+  }
+  .daily-page[data-step="intro"] .daily-cover {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    padding: clamp(20px, 3vw, 42px);
+    gap: clamp(10px, 2vh, 20px);
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .daily-page[data-step="intro"] .daily-cover__content {
+    min-width: 0;
+    width: 100%;
+    max-width: 620px;
+  }
+  .daily-page[data-step="intro"] .daily-cover h1 {
+    font-size: clamp(31px, min(4.2vw, 6.3vh), 60px);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    margin-block: clamp(10px, 2vh, 18px);
+    overflow-wrap: break-word;
+  }
+  .daily-page[data-step="intro"] .daily-cover__content > p {
+    max-width: 44ch;
+    line-height: 1.55;
+  }
+  .daily-page[data-step="intro"] .daily-start {
+    max-width: 100%;
+    margin-top: clamp(12px, 2.2vh, 22px);
+    gap: 12px;
+  }
+  .daily-page[data-step="intro"] .daily-protocol {
+    flex-wrap: wrap;
+    gap: 8px clamp(12px, 2vw, 28px);
+    padding-top: 12px;
+  }
+  .daily-page[data-step="intro"] .daily-round {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+/* Very short landscape screens: allow natural scrolling rather than
+   clipping the heading, primary action, or protocol. */
+@media (min-width: 701px) and (max-height: 610px) {
+  .daily-page[data-step="intro"] .daily-main {
+    overflow-y: auto;
+  }
+  .daily-page[data-step="intro"] .daily-overview {
+    min-height: 480px;
+    height: auto;
+  }
+  .daily-page[data-step="intro"] .daily-cover {
+    overflow: visible;
+  }
+}
+@media (max-width: 700px) {
+  .daily-page[data-step="intro"] .daily-art {
+    background-size: 100% 100%, 100% 100%, 100% auto;
+    background-position: center, center, center 35%;
+  }
+  .daily-page[data-step="intro"] .daily-overview,
+  .daily-page[data-step="intro"] .daily-cover,
+  .daily-page[data-step="intro"] .daily-round {
+    min-width: 0;
+  }
+}
