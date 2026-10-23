@@ -29,3 +29,20 @@ Problemas confirmados visualmente/textualmente: PMSC Tipo A itens 20, 21 e 22 t�
 Os filtros PostgREST do gerador foram conferidos por uma consulta somente de leitura. Os testes verificam cálculos, lógica do culpado, separação dos rascunhos e retenção da questão ambígua; não substituem a revisão pedagógica de todos os itens.
 
 Credenciais não foram adicionadas ao repositório. A sessão administrativa que as mantinha em memória foi encerrada ao interromper o trabalho.
+
+## SQL de publicação solicitado na continuação
+
+[aplicar-explicacoes-matematica.sql](aplicar-explicacoes-matematica.sql) está pronto para execução integral no SQL Editor como `postgres`. Tem cerca de 26 KB: aplica explicação, erro comum, exemplo e vínculo ao tópico para 37 questões de matemática já ativas; mantém uma questão ambígua em `under_review` e restaura o enunciado matemático incompleto do item 90 de Agente PC-SC. Não publica os 43 rascunhos de informática nem libera PC-CE ou legislação. Nenhum gabarito é alterado.
+
+A consulta administrativa refeita antes da geração encontrou 273 questões, sendo 129 ativas e 144 em revisão; 144 já tinham explicação, e nenhuma tinha tópico. Essas mudanças posteriores à primeira leitura foram preservadas: o SQL se limita aos 38 IDs do parecer de matemática, que ainda correspondiam aos originais conferidos. Não reproduza a contagem histórica acima como estado atual.
+
+O lote compara SHA-256 do registro completo (exceto datas de criação/verificação), valida tópico/edição/fonte no banco, bloqueia o registro durante a atualização e grava antes/depois em tabela privada de auditoria. Qualquer divergência reverte toda a transação. Reexecutar o mesmo lote não duplica a auditoria; alterações posteriores ao lote são protegidas.
+
+**Geração e testes concluídos localmente; SQL ainda não aplicado remotamente por este assistente.** Ao executar, o resultado do lote deve mostrar `active=37`, `under_review=1`, ambos com explicação. As demais questões não são alteradas.
+
+Reprodução com snapshots administrativos privados fora do Git:
+
+```sh
+node scripts/idecan/build-math-publication-sql.mjs DIRETORIO_PRIVADO CAMINHO_PGLITE
+node scripts/idecan/test-math-publication-sql.mjs CAMINHO_PGLITE DIRETORIO_PRIVADO
+```

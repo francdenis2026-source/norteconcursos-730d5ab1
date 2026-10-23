@@ -26,3 +26,16 @@ test('prazo fracionário não é arredondado silenciosamente nem publicado',()=>
  assert.equal(r.items.find(x=>x.local_index===270).new_content_status,'under_review');
  assert.equal(r.items.find(x=>x.local_index===81).visual_resolution,true);
 });
+
+test('SQL compacto contém somente os 38 pareceres de matemática e protege concorrência',()=>{
+ const sql=fs.readFileSync(`${root}/aplicar-explicacoes-matematica.sql`,'utf8');
+ const data=JSON.parse(sql.split('$items$')[1]);
+ const report=JSON.parse(fs.readFileSync(`${root}/pareceres-matematica.json`)).items;
+ assert.equal(data.length,38);assert.deepEqual(data.map(x=>x[0]),report.map(x=>x.id));
+ assert.equal(data.filter(x=>x[2]==='active').length,37);
+ assert.equal(data.filter(x=>x[2]==='under_review').length,1);
+ assert.ok(Buffer.byteLength(sql)<90000);
+ assert.match(sql,/for update/);assert.match(sql,/actual_hash is distinct from/);
+ assert.match(sql,/previous_application.after_data/);assert.match(sql,/before_data,after_data/);
+ assert.doesNotMatch(sql,/sb_secret_|eyJhbGci/);
+});
