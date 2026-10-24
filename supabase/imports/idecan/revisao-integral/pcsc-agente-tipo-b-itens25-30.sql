@@ -1,7 +1,7 @@
 -- PC-SC Agente, caderno Tipo B, Direito Administrativo itens 25–30.
 -- Estado vivo fornecido pelo usuário: todos under_review; item 25 já tem explicação parcial.
 -- Gabarito definitivo cotejado: B-D-A-C-E-B. Fontes oficiais Planalto consultadas em 23/10/2026.
--- Libera somente após validar estado/gabarito/textos, cria vínculo curricular e mantém trilha de auditoria.
+-- A comparação textual normaliza apenas quebras HTML/whitespace para tolerar a formatação da saída SQL.
 begin;
 do $review$
 declare
@@ -64,7 +64,9 @@ Base: Lei 12.527/2011, arts. 24, §§ 1º–4º, e 29.$new$, $topic$Lei de Acess
    else
      if q.board<>'IDECAN' or q.contest_name<>'PC SC - Agente de Polícia Civil 2026' or q.exam_type<>'Tipo B'
        or q.item_number<>r.item_number or q.official_answer<>r.answer or q.content_status<>r.expected_status
-       or q.syllabus_topic_id is not null or q.explanation<>r.old_explanation then
+       or q.syllabus_topic_id is not null
+       or regexp_replace(regexp_replace(coalesce(q.explanation,''), '<br[[:space:]]*/?>', ' ', 'gi'), '[[:space:]]+', ' ', 'g')
+          <> regexp_replace(regexp_replace(r.old_explanation, '<br[[:space:]]*/?>', ' ', 'gi'), '[[:space:]]+', ' ', 'g') then
        raise exception 'Item %, status/gabarito/explicação diverge do resultado conferido; transação cancelada',r.item_number; end if;
      update public.board_exam_questions set
        explanation=r.new_explanation,content_status='active',syllabus_topic_id=v_topic,tested_topic=r.tested_topic,
