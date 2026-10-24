@@ -93,7 +93,7 @@ function CareersPage() {
               <CardContent className="pt-5 space-y-3">
                 <div className="flex items-center justify-between">
                   <div
-                    className="h-10 w-10 rounded-xl flex items-center justify-center font-black text-white text-sm"
+                    className="flex h-10 min-w-10 items-center justify-center rounded-xl px-2 text-sm font-black text-white"
                     style={{ background: c.color }}
                   >
                     {c.name}
