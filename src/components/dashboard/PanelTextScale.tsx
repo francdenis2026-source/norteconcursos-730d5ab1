@@ -17,7 +17,7 @@ export function PanelTextScale() {
     try { stored = valid(Number(window.localStorage.getItem(KEY))); } catch { /* Storage optional */ }
     setScale(stored);
     document.documentElement.style.setProperty("--panel-text-scale", String(stored));
-    return () => document.documentElement.style.removeProperty("--panel-text-scale");
+    return () => { document.documentElement.style.removeProperty("--panel-text-scale"); };
   }, []);
   useEffect(() => {
     if (!open) return;
