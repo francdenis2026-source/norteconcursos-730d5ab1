@@ -70,8 +70,11 @@
   font-weight: 600;
   text-decoration: none;
   transform: none;
+  transition: background-color 160ms ease, border-color 160ms ease;
 }
 .auth .auth-access-nav .auth-back svg { width: 18px; height: 18px; }
+.auth .auth-access-nav .auth-back:hover { background: #1b2630f5; border-color: #cad3d55a; }
+.auth .auth-access-nav .auth-back:active { background: #0c1216f5; }
 .auth .auth-access-nav .auth-back:focus-visible { outline: 2px solid #e8bd70; outline-offset: 2px; }
 .auth.auth .auth-card {
   --access-padding: 24px;
@@ -120,8 +123,9 @@
 .auth .auth-identity strong { display: block; margin-top: 7px; color: #fff5e5; font-size: 21px; line-height: 1.12; letter-spacing: -.035em; }
 .auth-identity__copy > .auth-identity__career { margin-top: 10px; font-size: 8px; letter-spacing: .14em; color: #d2c7b1; }
 .auth .auth-tabs { margin-bottom: 18px; padding: 4px; border-radius: 10px; background: color-mix(in srgb, var(--muted) 65%, var(--card)); }
-.auth .auth-tabs button { min-height: 40px; height: auto; padding: 8px; border-radius: 7px; }
+.auth .auth-tabs button { min-height: 40px; height: auto; padding: 8px; border-radius: 7px; transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 160ms var(--ease-out); }
 .auth .auth-tabs button[aria-selected="true"] { color: var(--foreground); background: var(--card); box-shadow: 0 1px 4px #0002, inset 0 -2px 0 var(--brass); }
+.auth .auth-tabs button:active { transform: scale(0.97); }
 .auth .auth-heading h2 { font-size: clamp(1.4rem, 2vw, 1.8rem); line-height: 1.12; }
 .auth .auth-heading p { color: var(--muted-foreground); font-size: .8125rem; line-height: 1.4; margin-top: 7px; }
 .auth .auth-form { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 20px; }
