@@ -2,6 +2,7 @@ import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Gavel, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -66,13 +67,11 @@ function CtbPanelPage() {
         title="Painel do Código de Trânsito Brasileiro"
         description="Multas, pontos, velocidades, habilitação, prazos e as resoluções do Contran em um só lugar, conferidos com o texto oficial vigente."
         actions={
-          <Link
-            to="/dashboard/legal-course/$slug"
-            params={{ slug: "transito" }}
-            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
-          >
-            Ler o CTB artigo por artigo
-          </Link>
+          <Button asChild>
+            <Link to="/dashboard/legal-course/$slug" params={{ slug: "transito" }}>
+              Ler o CTB artigo por artigo
+            </Link>
+          </Button>
         }
       >
         <div className="page-hero__stats">
