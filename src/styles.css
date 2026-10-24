@@ -14194,3 +14194,18 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
     transform: none;
   }
 }
+
+/* Mesmo princípio, no painel (Meu painel): os links e botões próprios da página
+   (student-home__text-link, student-home__section-button, atalho de Planejamento) também só
+   tinham :hover. */
+.student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a) {
+  transition: color 0.15s, text-decoration-color 0.15s, transform 90ms ease-out;
+}
+.student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a):active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a):active {
+    transform: none;
+  }
+}
