@@ -11590,6 +11590,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   box-shadow: 0 12px 26px -18px color-mix(in oklab, var(--hub-accent) 55%, transparent);
   transform: translateY(-2px);
 }
+.student-home__metric:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
 .student-home__metric[data-tone="blue"] > span { color: var(--c-blue, var(--hub-accent)); }
 .student-home__metric[data-tone="teal"] > span { color: var(--c-teal, var(--hub-accent)); }
 .student-home__metric[data-tone="amber"] > span { color: var(--c-amber, var(--hub-accent)); }
@@ -11653,6 +11657,13 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .student-hub__shortcuts > a:hover::before,
 .student-hub__shortcuts > a:focus-visible::before {
   transform: scale(1.07);
+}
+.student-hub__shortcuts > a:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 10px 22px -18px color-mix(in oklab, var(--hub-accent) 48%, transparent);
+}
+.student-hub__shortcuts > a:active::before {
+  transform: scale(1.02);
 }
 .student-hub__shortcuts > a > * {
   position: relative;
@@ -11825,6 +11836,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   box-shadow: 0 16px 30px -22px color-mix(in oklab, var(--primary) 70%, transparent);
   filter: saturate(1.08);
 }
+.performance-metric-link:active .performance-metric-card {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
 .performance-overview :is(a, button, summary) {
   cursor: pointer;
 }
@@ -11839,8 +11854,11 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
   }
   .student-home__metric:hover,
+  .student-home__metric:active,
   .student-hub__shortcuts > a:hover,
-  .performance-metric-link:hover .performance-metric-card {
+  .student-hub__shortcuts > a:active,
+  .performance-metric-link:hover .performance-metric-card,
+  .performance-metric-link:active .performance-metric-card {
     transform: none;
   }
 }
