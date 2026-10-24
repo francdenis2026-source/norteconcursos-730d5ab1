@@ -25,7 +25,7 @@ Quatro trilhas introdutórias novas — Matemática, Física, Química e Inglês
 
 ## O que permanece pendente
 
-A consulta inicial encontrou 3.511 dispositivos jurídicos atuais com explicação publicada vinculada ao mesmo hash do texto. Isso não equivale à revisão atual de vigência nem a 20 exercícios por artigo. Conteúdo normativo novo, incluindo os complementos jurídicos e de Contabilidade que dependem de norma, não foi publicado nesta operação.
+A consulta inicial encontrou 3.511 dispositivos jurídicos atuais com explicação publicada vinculada ao mesmo hash do texto. Isso não equivale à revisão atual de vigência nem a 20 exercícios por artigo. Restam 83 materiais ativos com menos de 20 exercícios autorais, todos jurídicos ou contábeis, listados em `pending-materials.json`. Conteúdo normativo novo, incluindo os complementos jurídicos e de Contabilidade que dependem de norma, não foi publicado nesta operação.
 
 O ambiente retornou `403 Forbidden` ao consultar o Planalto. Foram acrescentados os domínios oficiais à configuração de rede salva, preservando os domínios anteriores; a ferramenta informou `requires_publish: true`, e o acesso no ambiente atual continuou bloqueado. É preciso aplicar essa liberação antes da conferência e publicação jurídica. A regra de `CONTENT_GOVERNANCE.md` exige “texto vigente conferido em fonte oficial”. Não foram inventados datas de conferência, aprovações editoriais ou fontes para contornar a pendência.
 

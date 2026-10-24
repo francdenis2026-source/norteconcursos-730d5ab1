@@ -1,0 +1,762 @@
+{
+  "total": 83,
+  "by_discipline": {
+    "Direito Administrativo": 12,
+    "Direitos Humanos": 2,
+    "Legislação Especial": 38,
+    "Direito Processual Penal": 1,
+    "Direito Processual Civil": 3,
+    "Direito Penal": 5,
+    "Contabilidade Geral": 18,
+    "Direito Constitucional": 4
+  },
+  "materials": [
+    {
+      "id": "05301d6b-d15c-446f-bd50-31165e596a89",
+      "slug": "administrativo-poder-de-policia-ciclo-prescricao",
+      "discipline": "Direito Administrativo",
+      "title": "Poder de polícia: atributos, ciclo e prescrição",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "106c75d7-bb46-4ce7-a971-3c7059120ea3",
+      "slug": "legislacao-menor-potencial-ofensivo-revisao",
+      "discipline": "Direitos Humanos",
+      "title": "Lei 13.060/2014 — Instrumentos de Menor Potencial Ofensivo — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "1250a67d-308c-4129-8488-28aab44aed05",
+      "slug": "legislacao-henry-borel-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 14.344/2022 — Lei Henry Borel — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "128f6abf-2b59-4a4f-b3df-f60dbeb635ae",
+      "slug": "processo-penal-cpp-provas-flagrante-revisao",
+      "discipline": "Direito Processual Penal",
+      "title": "Código de Processo Penal — leitura atualizada — guia de estudo e aplicação",
+      "authored_quiz_count": 14,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "1d07f5bb-4d9d-4684-bf60-651b50afdecd",
+      "slug": "processo-civil-pensao-alimenticia-atualizacoes",
+      "discipline": "Direito Processual Civil",
+      "title": "Pensão alimentícia — casos e atualização de 2026",
+      "authored_quiz_count": 0,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "1e22859b-a057-40f8-a1d8-f187bf75c90f",
+      "slug": "legislacao-terrorismo-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.260/2016 — Lei Antiterrorismo — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "25e952e1-debf-4e58-99fc-4beca896e88d",
+      "slug": "servidores-lei-8112-posse-exercicio-vacancia-remocao",
+      "discipline": "Direito Administrativo",
+      "title": "Lei nº 8.112/1990: posse, exercício, vacância, remoção e redistribuição",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "287e7307-ed41-4416-988d-0a81c90dcdcc",
+      "slug": "administrativo-controle-da-administracao-publica",
+      "discipline": "Direito Administrativo",
+      "title": "Controle da Administração Pública",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "2eb5e9d0-bf52-48dd-ad2e-3d0a5fc1b944",
+      "slug": "penal-erros-tentativa-dolo-fixacao",
+      "discipline": "Direito Penal",
+      "title": "Código Penal — erros, tentativa e dolo: laboratório de casos",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "30a76cc6-0d35-4363-9e07-607a526c2c20",
+      "slug": "legislacao-quimicos-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 10.357/2001 — Controle de Produtos Químicos — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "352028f7-5c7d-427b-aae9-c740c469a615",
+      "slug": "processo-civil-tutela-provisoria",
+      "discipline": "Direito Processual Civil",
+      "title": "Tutela provisória: urgência e evidência",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "40e592c0-7d97-4fe9-95b4-11a6d469ae85",
+      "slug": "legislacao-temporaria-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 7.960/1989 — Prisão Temporária — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "43b1e0ed-0673-48d6-8c13-8573795bbb8f",
+      "slug": "legislacao-pensao-especial-feminicidio",
+      "discipline": "Legislação Especial",
+      "title": "Pensão especial — regulamentação — leitura integral — guia de estudo e aplicação",
+      "authored_quiz_count": 0,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "46819240-a7df-44fc-b4c0-618e246d345f",
+      "slug": "legislacao-testemunhas-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.807/1999 — Proteção a Vítimas e Testemunhas — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "47e1ef74-bea5-4072-90d1-15b746d93f58",
+      "slug": "contabilidade-mercadorias-cmv-resultado-bruto",
+      "discipline": "Contabilidade Geral",
+      "title": "Operações com mercadorias, CMV e resultado bruto",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "47f0e7bc-a56d-4413-9a1f-09ebbabcb08e",
+      "slug": "legislacao-hediondos-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 8.072/1990 — Crimes Hediondos — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "48407590-049a-465e-9d6d-5a4348dc2417",
+      "slug": "administrativo-processo-administrativo-lei-9784",
+      "discipline": "Direito Administrativo",
+      "title": "Processo administrativo federal (Lei nº 9.784/1999)",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "4acfe155-9ed7-4e95-a46a-d18e86126913",
+      "slug": "legislacao-identidade-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 7.116/1983 — Carteira de Identidade — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "4b456e05-de96-4054-ba87-0a2f5c53fa76",
+      "slug": "legislacao-eca-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 8.069/1990 — Estatuto da Criança e do Adolescente — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "4ce3ede7-1eb8-4f5a-bdf4-16ad247440c2",
+      "slug": "legislacao-migracao-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.445/2017 — Lei de Migração — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "4e3c379d-a2d7-4e0c-a0b8-aedfd01bf972",
+      "slug": "contabilidade-notas-explicativas-grande-porte-avp",
+      "discipline": "Contabilidade Geral",
+      "title": "Notas explicativas, sociedades de grande porte e ajuste a valor presente",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "55af1c3a-60a6-4562-8db7-6ca7d011707f",
+      "slug": "legislacao-pcd-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.146/2015 — Estatuto da Pessoa com Deficiência — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "569e43d1-7273-47d7-a50d-383ede8075b0",
+      "slug": "legislacao-transito-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.503/1997 — Código de Trânsito Brasileiro — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "56b9dd7d-203d-4668-abf3-e1e5f4f75d17",
+      "slug": "legislacao-ambientais-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.605/1998 — Crimes Ambientais — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "57bd39cd-c90e-4b05-96b1-cbd95269da8a",
+      "slug": "contabilidade-escrituracao-partidas-dobradas-livros",
+      "discipline": "Contabilidade Geral",
+      "title": "Escrituração, partidas dobradas e livros contábeis",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "59ffbc97-40c7-4624-9932-c83d635565e1",
+      "slug": "contabilidade-conceito-objeto-usuarios",
+      "discipline": "Contabilidade Geral",
+      "title": "Contabilidade: conceito, objeto e usuários",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "5ecbf590-5189-493a-8dbc-f249d7b9b600",
+      "slug": "legislacao-racismo-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 7.716/1989 — Crimes de Racismo e Preconceito — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "61a13de2-b663-466e-a9b5-b7a7fbd625b3",
+      "slug": "constitucional-acumulacao-ec138-casos",
+      "discipline": "Direito Constitucional",
+      "title": "Constituição — acumulação de cargos: atualização da EC 138/2025",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "64266575-7e27-47ee-9003-111fab3dac1e",
+      "slug": "legislacao-maria-penha-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 11.340/2006 — Lei Maria da Penha — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "6ed7c262-3745-4ea5-ab77-f83a22bbeee7",
+      "slug": "legislacao-budapeste-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Decreto 11.491/2023 — Convenção de Budapeste — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "6fd281c1-048f-48d7-ab59-8a8f422ffee6",
+      "slug": "legislacao-uso-forca-revisao",
+      "discipline": "Direitos Humanos",
+      "title": "Decreto 12.341/2024 — Uso Diferenciado da Força — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "75131583-097e-4f33-8e44-d60c9bc980a4",
+      "slug": "legislacao-contravencoes-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Decreto-Lei 3.688/1941 — Lei das Contravenções Penais — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "75e15a29-3576-431b-ac04-1e19bbd8ad61",
+      "slug": "administrativo-contratos-administrativos-lei-14133",
+      "discipline": "Direito Administrativo",
+      "title": "Contratos administrativos: prerrogativas, alteração, extinção e sanções (Lei nº 14.133/2021)",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "768b20a2-df14-48c1-9273-4595e7ed7077",
+      "slug": "penal-lei-no-espaco",
+      "discipline": "Direito Penal",
+      "title": "Lei penal no espaço: lugar e aplicação são perguntas diferentes",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "79febf3c-7d4a-47f9-ac70-b6e74760d337",
+      "slug": "contabilidade-balanco-patrimonial-estrutura",
+      "discipline": "Contabilidade Geral",
+      "title": "Balanço patrimonial: estrutura e classificação das contas",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "7ab7fc3c-6caf-460e-9d83-a9fd128fcf12",
+      "slug": "legislacao-cpf-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 14.534/2023 — CPF como identificador único — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "7c20498d-8989-4cfe-8fd9-46e6bb4bf76f",
+      "slug": "constitucional-nacionalidade-medidas-retirada",
+      "discipline": "Direito Constitucional",
+      "title": "Nacionalidade: brasileiros natos e naturalizados",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "7d2b7ea8-85a5-4103-a767-3ff84aabc33e",
+      "slug": "legislacao-sic-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Decreto 11.797/2023 — Serviço de Identificação do Cidadão — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "7d9c06ff-3f29-4d65-900a-292384a89b87",
+      "slug": "contabilidade-atos-fatos-contabeis",
+      "discipline": "Contabilidade Geral",
+      "title": "Atos e fatos contábeis: permutativos, modificativos e mistos",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "83193529-75b6-4690-ba9a-689cfc6dfd98",
+      "slug": "legislacao-identificacao-criminal-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 12.037/2009 — Identificação Criminal — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "86e46373-8fd3-4f79-9088-131ee8d58a8e",
+      "slug": "legislacao-drogas-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 11.343/2006 — Lei de Drogas — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "87701877-7ccb-4462-a288-710bb70e5273",
+      "slug": "servidores-lei-8112-pad-sindicancia-ritos-prescricao",
+      "discipline": "Direito Administrativo",
+      "title": "Processo administrativo disciplinar: sindicância, ritos, prazos e prescrição",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "8e123dc0-aa08-44a5-ba2d-6e5e25112759",
+      "slug": "contabilidade-provisoes-passivo-contingente-epcld",
+      "discipline": "Contabilidade Geral",
+      "title": "Provisões, passivos contingentes e EPCLD",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "8f57ecf7-bd6b-4334-b244-0364b7521714",
+      "slug": "legislacao-abuso-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.869/2019 — Abuso de Autoridade — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "90555f7c-a56c-467a-ad9e-ed005047d0f2",
+      "slug": "contabilidade-demonstracoes-contabeis-lei-6404",
+      "discipline": "Contabilidade Geral",
+      "title": "Demonstrações contábeis e a Lei nº 6.404/1976",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "951b740a-19fc-4262-8c74-db177f0b8a63",
+      "slug": "administrativo-poderes-vinculado-discricionario-hierarquico",
+      "discipline": "Direito Administrativo",
+      "title": "Poderes vinculado, discricionário, hierárquico, disciplinar e regulamentar",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "969528f3-0d19-486a-84e9-1feb258545e7",
+      "slug": "processo-civil-formacao-suspensao-extincao",
+      "discipline": "Direito Processual Civil",
+      "title": "Formação, suspensão e extinção do processo",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "974c9792-88d8-4114-afb3-4ea15c30366e",
+      "slug": "contabilidade-patrimonio-liquido-capital-reservas",
+      "discipline": "Contabilidade Geral",
+      "title": "Patrimônio líquido: capital, reservas e ações em tesouraria",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "98aec2d2-5417-46c9-b42b-16cbcf734bb6",
+      "slug": "contabilidade-patrimonio-equacao-fundamental",
+      "discipline": "Contabilidade Geral",
+      "title": "Patrimônio, balanço e equação fundamental",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "98f1f660-4003-4716-b31e-d813857f704e",
+      "slug": "legislacao-organizacoes-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 12.850/2013 — Organizações Criminosas — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "9ccc0e28-dffc-434f-a586-4c115e7c5bc8",
+      "slug": "administrativo-licitacoes-lei-14133-modalidades",
+      "discipline": "Direito Administrativo",
+      "title": "Licitações: princípios, modalidades e inexigibilidade na Lei nº 14.133/2021",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "9d4b1e76-ed6a-4f3a-a530-a00c34e55482",
+      "slug": "legislacao-pf-interestadual-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 10.446/2002 — Investigações de repercussão interestadual ou internacional — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "9de129e4-df5c-481b-b6ea-3a7b18f3efed",
+      "slug": "legislacao-lavagem-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.613/1998 — Lavagem de Dinheiro — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "9deb4c3a-2fc5-44f8-a278-cbe685d5fe6a",
+      "slug": "administrativo-improbidade-lei-8429-reforma-14230",
+      "discipline": "Direito Administrativo",
+      "title": "Improbidade administrativa após a Lei nº 14.230/2021",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "a099e1d5-87a4-4f8d-88ed-a1551f8b125b",
+      "slug": "penal-lei-no-tempo",
+      "discipline": "Direito Penal",
+      "title": "Lei penal no tempo: organize a linha temporal",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "a68e01bb-ac6a-446e-9d70-db82bcb53265",
+      "slug": "contabilidade-contas-plano-de-contas",
+      "discipline": "Contabilidade Geral",
+      "title": "Contas, plano de contas e títulos de crédito",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "a784035f-9aae-4669-abfa-6879da40fbe0",
+      "slug": "contabilidade-estoques-cpc-16",
+      "discipline": "Contabilidade Geral",
+      "title": "Estoques (CPC 16): o que compõe o custo",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "aae28eaf-aa36-493e-b8cb-4ae55e577270",
+      "slug": "legislacao-cin-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Decreto 10.977/2022 — Carteira de Identidade Nacional — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "ac83e2cb-8a42-4c89-a258-01a2dcb7d876",
+      "slug": "administrativo-responsabilidade-civil-do-estado",
+      "discipline": "Direito Administrativo",
+      "title": "Responsabilidade civil do Estado",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "ae733366-1c97-43ba-b3de-91285c366f30",
+      "slug": "penal-principios-direito-penal",
+      "discipline": "Direito Penal",
+      "title": "Código Penal — leitura atualizada — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "b5a62776-6f24-4085-b117-4c3cfd6d5e2c",
+      "slug": "legislacao-icn-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.444/2017 — Identificação Civil Nacional — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "b82da9ff-297d-44cc-b1fb-5e4d0c164726",
+      "slug": "constitucional-direitos-politicos-elegibilidade",
+      "discipline": "Direito Constitucional",
+      "title": "Direitos políticos, elegibilidade e partidos políticos",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "c15c3f5e-da79-4cff-836a-19759dfef1e7",
+      "slug": "legislacao-armas-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 10.826/2003 — Estatuto do Desarmamento — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "c181dbc8-1664-4bef-8d51-d1d48d545308",
+      "slug": "contabilidade-lancamentos-operacoes-diversas",
+      "discipline": "Contabilidade Geral",
+      "title": "Lançamentos de operações diversas",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "c25c6b01-9db8-4083-8703-7271795f610c",
+      "slug": "legislacao-lep-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 7.210/1984 — Lei de Execução Penal — guia de estudo e aplicação",
+      "authored_quiz_count": 14,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "c2728ae7-5200-4106-bd34-3c0d23eee1ee",
+      "slug": "contabilidade-depreciacao-amortizacao-exaustao",
+      "discipline": "Contabilidade Geral",
+      "title": "Depreciação, amortização e exaustão",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "cec691cf-d546-46e2-b948-96c168ea8fe9",
+      "slug": "contabilidade-regimes-caixa-competencia",
+      "discipline": "Contabilidade Geral",
+      "title": "Regimes de caixa e de competência",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d032f780-b1ca-4ad7-8839-2c240c52dbb2",
+      "slug": "constitucional-privacidade-dados",
+      "discipline": "Direito Constitucional",
+      "title": "Privacidade e dados pessoais: proteção constitucional",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d03e96c4-19fc-4ebe-88d6-d55b3ed35340",
+      "slug": "administrativo-bens-publicos-classificacao-uso",
+      "discipline": "Direito Administrativo",
+      "title": "Bens públicos: classificação, regime e uso privativo",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d3e55479-1357-4483-b440-d66077d58959",
+      "slug": "legislacao-seguranca-privada-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 14.967/2024 — Estatuto da Segurança Privada — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d517a8d3-cf5b-4a06-824b-7b2bba07a5bf",
+      "slug": "legislacao-tortura-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.455/1997 — Crimes de Tortura — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d627084c-2429-4dd5-b8a1-7bc7bc48ff49",
+      "slug": "legislacao-trafico-pessoas-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 13.344/2016 — Tráfico de Pessoas — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "d886e593-7ab8-409d-a9d2-132bc59490c5",
+      "slug": "penal-confissao-sumulas-545-630",
+      "discipline": "Direito Penal",
+      "title": "Confissão — Súmulas 545 e 630 revisadas",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "e0bc4d8a-865a-4d75-b13c-fbe9e584592b",
+      "slug": "contabilidade-balancete-verificacao",
+      "discipline": "Contabilidade Geral",
+      "title": "Balancete de verificação",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "e823eec6-6575-4de1-b1b0-56cdd3c91a51",
+      "slug": "contabilidade-impairment-cpc-01-baixa-ativos",
+      "discipline": "Contabilidade Geral",
+      "title": "Redução ao valor recuperável (CPC 01) e baixa de ativos",
+      "authored_quiz_count": 3,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "ebf53d2d-e811-4b02-b4ca-aa1b96457b4e",
+      "slug": "legislacao-juizados-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.099/1995 — Juizados Especiais Cíveis e Criminais — guia de estudo e aplicação",
+      "authored_quiz_count": 14,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "f2dcfc58-931c-446e-af27-fc57bb35429d",
+      "slug": "legislacao-antifaccao-marco-legal",
+      "discipline": "Legislação Especial",
+      "title": "Lei antifacção — leitura integral — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "f2e21de7-4559-4c7c-bc66-44c4f47296fc",
+      "slug": "legislacao-idosa-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 10.741/2003 — Estatuto da Pessoa Idosa — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "f71f492b-9b85-421a-8193-d38aa2626a42",
+      "slug": "legislacao-delegado-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 12.830/2013 — Investigação conduzida pelo Delegado — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "f83f90a7-8944-4641-a1d0-e0189a55cbb7",
+      "slug": "administrativo-atos-administrativos-requisitos-atributos",
+      "discipline": "Direito Administrativo",
+      "title": "Atos administrativos: requisitos, atributos, espécies e extinção",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "fec46f13-43fd-47dd-8dfa-f490faa5f20b",
+      "slug": "contabilidade-dre-dfc-dva-lei-6404",
+      "discipline": "Contabilidade Geral",
+      "title": "DRE, fluxos de caixa e valor adicionado (Lei nº 6.404/1976)",
+      "authored_quiz_count": 4,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "ffa95593-2c0f-40d0-be01-d977483cf17c",
+      "slug": "legislacao-ric-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.454/1997 — Registro de Identidade Civil — guia de estudo e aplicação",
+      "authored_quiz_count": 8,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    },
+    {
+      "id": "fff20509-43db-42cb-8b3b-36bdacc032d3",
+      "slug": "legislacao-interceptacao-revisao",
+      "discipline": "Legislação Especial",
+      "title": "Lei 9.296/1996 — Interceptação Telefônica — guia de estudo e aplicação",
+      "authored_quiz_count": 14,
+      "target_count": 20,
+      "reason": "Conferência normativa oficial pendente antes da complementação"
+    }
+  ]
+}
