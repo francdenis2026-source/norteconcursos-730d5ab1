@@ -49,6 +49,12 @@ O gabarito definitivo IDECAN confirma C. A apropriação indébita previdenciár
 
 `revisao-integral/pmsc-item34-crimes-patrimonio.sql` reaproveita o tópico validado de Legislação Penal e libera somente o item 34 com auditoria e conferência do estado anterior. Ainda precisa ser aplicado no Supabase; não constitui previsão PC-AC.
 
+## Próximo item: PMSC Tipo A, item 35
+
+O gabarito definitivo IDECAN confirma E; o edital inclui arts. 1º a 28 do Código Penal. A alternativa resume a hipótese do art. 28, § 1º, mas omite que a isenção exige incapacidade total no momento do fato. A explicação complementa esse requisito legal e distingue embriaguez voluntária/culposa, capacidade parcialmente reduzida e incapacidade total. Registro em `revisao-integral/revisao-pmsc-item35.json`.
+
+`revisao-integral/pmsc-item35-embriaguez-involuntaria.sql` usa o tópico de Legislação Penal já validado, mantém o gabarito histórico E, substitui a explicação preliminar e libera apenas o item 35, com auditoria antes/depois. Aplicação no Supabase pendente; a revisão vale para a prova PMSC e não prevê PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
