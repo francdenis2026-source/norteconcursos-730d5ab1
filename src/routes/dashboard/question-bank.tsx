@@ -362,7 +362,7 @@ function QuestionBankPage() {
                 to="/dashboard/question-trainer"
                 search={questionBankSearch(collection, source, search, { year: y })}
                 aria-label={`Treinar questões de ${y}`}
-                className="grid min-h-11 grid-cols-[3rem_1fr_auto] items-center gap-3 rounded-lg px-2 text-sm hover:bg-muted"
+                className="grid min-h-11 grid-cols-[3rem_1fr_auto] items-center gap-3 rounded-lg px-2 text-sm transition-[background-color,transform] duration-150 hover:bg-muted active:scale-[0.98] motion-reduce:active:scale-100"
               >
                 <span className="font-mono">{y}</span>
                 <span className="h-2 overflow-hidden rounded-full bg-muted">
@@ -458,7 +458,7 @@ function Distribution({
             key={name}
             to="/dashboard/question-trainer"
             search={questionBankSearch(collection, source, query, { [linkKey]: name })}
-            className="group grid grid-cols-[minmax(0,12rem)_1fr_auto] items-center gap-3 min-h-11 rounded-lg px-2 py-2 text-sm hover:bg-muted/60"
+            className="group grid grid-cols-[minmax(0,12rem)_1fr_auto] items-center gap-3 min-h-11 rounded-lg px-2 py-2 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
             aria-label={`Treinar ${name}`}
           >
             <span className="truncate font-medium">{name}</span>
