@@ -4000,10 +4000,14 @@ html {
   border-radius: 8px;
   transform: translateY(-50%);
   color: var(--color-muted-foreground);
+  transition: color 0.2s, background 0.2s;
 }
 .auth-field__toggle:hover {
   color: var(--color-foreground);
   background: var(--color-muted);
+}
+.auth-field__toggle:active {
+  background: var(--color-border);
 }
 .auth-field__toggle svg {
   width: 17px;
