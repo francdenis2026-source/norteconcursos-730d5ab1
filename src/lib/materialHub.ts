@@ -7,11 +7,16 @@ import {
   libraryDiscipline,
   type LibraryClassifiable,
 } from "./libraryOrganization";
+import { materialLawSlug } from "./legalLibrary";
 
 export type HubItem = LibraryClassifiable & { contest_name?: string | null };
 export interface HubEntry {
   name: string;
   count: number;
+}
+export interface HubLawEntry extends HubEntry {
+  /** Set only when every material of the group belongs to this one law: the card can open it directly. */
+  lawSlug: string | null;
 }
 export interface HubSubject extends HubEntry {
   /** Ícone sugerido (chave de ícone da interface). */
@@ -69,8 +74,22 @@ function count(items: HubItem[], collection: "laws" | "subjects"): Map<string, n
 }
 
 /** Legislação: cada grupo de leis (Código Penal, CPP, extravagante, trânsito...) com a contagem. */
-export function hubLaws(items: HubItem[]): HubEntry[] {
-  return [...count(items, "laws")].map(([name, n]) => ({ name, count: n })).sort(byName);
+export function hubLaws(items: HubItem[]): HubLawEntry[] {
+  const slugs = new Map<string, Set<string | null>>();
+  for (const item of items) {
+    if (libraryCollection(item) !== "laws") continue;
+    const name = libraryDiscipline(item);
+    const set = slugs.get(name) ?? new Set<string | null>();
+    set.add(materialLawSlug(item) ?? null);
+    slugs.set(name, set);
+  }
+  return [...count(items, "laws")]
+    .map(([name, n]) => {
+      const set = slugs.get(name);
+      const only = set && set.size === 1 ? [...set][0] : undefined;
+      return { name, count: n, lawSlug: only ?? null };
+    })
+    .sort(byName);
 }
 
 /** Demais disciplinas: as esperadas primeiro (mesmo vazias), depois as que existirem no acervo. */

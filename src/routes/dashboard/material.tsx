@@ -326,21 +326,39 @@ function MaterialHub() {
             </li>
             {laws.map((entry) => (
               <li key={entry.name}>
-                <Link
-                  to="/dashboard/library"
-                  search={{ collection: "laws", discipline: entry.name }}
-                  className="material-card"
-                >
-                  <span className="material-card__icon" data-tone="law">
-                    <Scale aria-hidden="true" />
-                  </span>
-                  <span className="material-card__body">
-                    <strong>{entry.name}</strong>
-                    <span>
-                      {entry.count} {entry.count === 1 ? "material" : "materiais"}
+                {entry.lawSlug ? (
+                  <Link
+                    to="/dashboard/legal-course/$slug"
+                    params={{ slug: entry.lawSlug }}
+                    className="material-card"
+                  >
+                    <span className="material-card__icon" data-tone="law">
+                      <Scale aria-hidden="true" />
                     </span>
-                  </span>
-                </Link>
+                    <span className="material-card__body">
+                      <strong>{entry.name}</strong>
+                      <span>
+                        {entry.count} {entry.count === 1 ? "material" : "materiais"}
+                      </span>
+                    </span>
+                  </Link>
+                ) : (
+                  <Link
+                    to="/dashboard/library"
+                    search={{ collection: "laws", discipline: entry.name }}
+                    className="material-card"
+                  >
+                    <span className="material-card__icon" data-tone="law">
+                      <Scale aria-hidden="true" />
+                    </span>
+                    <span className="material-card__body">
+                      <strong>{entry.name}</strong>
+                      <span>
+                        {entry.count} {entry.count === 1 ? "material" : "materiais"}
+                      </span>
+                    </span>
+                  </Link>
+                )}
               </li>
             ))}
             <li>
