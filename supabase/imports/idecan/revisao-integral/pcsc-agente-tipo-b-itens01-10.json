@@ -40,7 +40,9 @@
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2226200"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa B está correta. O princípio da insignificância afasta a tipicidade material quando a lesão ao bem jurídico é irrelevante, desde que presentes os vetores reconhecidos pela jurisprudência, como mínima ofensividade e reduzido grau de reprovabilidade. Ele não elimina a tipicidade formal nem a ilicitude."
     },
     {
       "id": "3b1a3115-43e4-4147-9007-377fe77babe5",
@@ -65,7 +67,9 @@
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://www.planalto.gov.br/ccivil_03/leis/l11343.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa E está correta. Simone desconhecia a realidade do objeto recebido, o que caracteriza erro de tipo sobre elemento do fato, disciplinado pelo art. 20 do Código Penal. O erro inevitável exclui dolo e culpa; no caso narrado, a alternativa reproduz essa consequência."
     },
     {
       "id": "82e22511-e91a-4b05-b998-d40719537e64",
@@ -89,7 +93,9 @@
       "tested_topic": "Arrependimento eficaz; desistência voluntária; art. 15 do CP.",
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa D está correta. Após efetuar todos os disparos, Mário esgotou os atos executórios e, por iniciativa própria, socorreu a vítima, impedindo o resultado morte. Trata-se de arrependimento eficaz; responde pelos atos já praticados, lesão corporal."
     },
     {
       "id": "28759241-3634-42dd-87df-5c03749897ed",
@@ -115,7 +121,9 @@
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14155.htm",
         "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa A está correta. O estelionato contra pessoa idosa possui causa de aumento de um terço até o dobro, prevista no art. 171, § 4º, do Código Penal."
     },
     {
       "id": "c27c8438-1c64-4d6e-a307-f6b3c7bc3c39",
@@ -135,14 +143,16 @@
       "answer_matches_final_key": true,
       "current_local_status": "under_review",
       "previous_explanation": "Explicação preliminar: a alternativa D é a resposta registrada no gabarito. A análise definitiva exige confronto com a norma vigente, fonte oficial e tópico do edital. Item mantido em revisão.",
-      "replacement_explanation": "D é correta quanto à qualificadora funcional perguntada. Na redação aplicável aos fatos de 2024, o art. 121, § 2º, VII, do CP abrangia o homicídio contra agente dos arts. 142/144 da CF e seu cônjuge, companheiro ou parente consanguíneo até terceiro grau, em razão dessa condição. A filha adotiva tem filiação civil plena, mas não é parente consanguínea; não se amplia qualificadora penal por analogia contra o réu.\nA), B), C) e E) erram o tipo de parentesco ou o grau. Limite da resposta: isso afasta somente a qualificadora funcional. A vítima tinha 8 anos, podendo incidir a qualificadora autônoma do art. 121, § 2º, IX (Lei 14.344/2022), além de outras conforme fatos provados.\nBase: CP, art. 121, § 2º, VII e IX; Leis 13.142/2015 e 14.344/2022; CF, art. 227, § 6º.",
+      "replacement_explanation": "D é correta quanto à qualificadora funcional perguntada. Na redação aplicável aos fatos de 2024, o art. 121, § 2º, VII, do CP abrangia o homicídio contra agente dos arts. 142/144 da CF e seu cônjuge, companheiro ou parente consanguíneo até terceiro grau, em razão dessa condição. A filha adotiva tem filiação civil plena, mas o texto da qualificadora funcional aplicável ao agente policial exige parentesco consanguíneo até terceiro grau; não se pode ampliá-la por analogia contra o réu.\nA), B), C) e E) erram o tipo de parentesco ou o grau. Limite da resposta: isso afasta somente a qualificadora funcional. A vítima tinha 8 anos, podendo incidir a qualificadora autônoma do art. 121, § 2º, IX (Lei 14.344/2022), além de outras conforme fatos provados.\nBase: CP, art. 121, § 2º, VII e IX; Leis 13.142/2015 e 14.344/2022; CF, art. 227, § 6º.",
       "tested_topic": "Qualificadora funcional do homicídio; parentesco consanguíneo; qualificadora autônoma por vítima menor de 14 anos.",
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13142.htm",
         "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
         "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa D está correta. A qualificadora alcança parente consanguíneo ou por afinidade até o terceiro grau; filha adotiva é parente por vínculo civil, e a redação legal não autoriza ampliar o alcance para incluí-la nessa hipótese."
     },
     {
       "id": "d877c024-cbd7-43fe-82f3-7e37a732a156",
@@ -166,7 +176,9 @@
       "tested_topic": "Concurso de pessoas, comunicabilidade de elementar e peculato.",
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa B está correta. A condição de funcionário público é elementar do peculato e comunica-se ao particular que concorre para o crime, quando conhecida, conforme art. 30 do Código Penal."
     },
     {
       "id": "ff118a80-525c-484d-9f2c-c6d2da9315ae",
@@ -191,7 +203,9 @@
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=934&cod_tema_final=934"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa A está correta. O furto se consuma com a inversão da posse, ainda que breve, segundo a teoria da amotio adotada pelo STJ. A captura logo depois não transforma o crime em tentativa."
     },
     {
       "id": "d5a0adcf-e3e1-4b5b-bcc7-19d091dd89d5",
@@ -215,7 +229,9 @@
       "tested_topic": "Concurso formal próprio e concurso de crimes culposos.",
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa C está correta. Uma única ação culposa produziu dois homicídios, sem desígnios autônomos. Aplica-se concurso formal próprio, com a pena de um crime aumentada de um sexto até a metade."
     },
     {
       "id": "78232f2c-9698-4737-a3d9-52fa31b39e84",
@@ -239,7 +255,9 @@
       "tested_topic": "Corrupção passiva: solicitação e consumação.",
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa E está correta. O crime de corrupção passiva se consuma com a solicitação da vantagem indevida, ainda que o particular não pague. O policial praticou a modalidade consumada do art. 317 do Código Penal."
     },
     {
       "id": "7dd46816-6ff3-4cda-acc6-bf134af37620",
@@ -264,8 +282,24 @@
       "sources": [
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
         "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13718.htm"
-      ]
+      ],
+      "confirmed_database_status": "active",
+      "previous_database_explanation": "A alternativa C está correta. O estupro praticado por duas ou mais pessoas recebe aumento de um terço a dois terços, conforme art. 226, IV, a, do Código Penal."
     }
   ],
-  "next_step": "Check current Supabase status/explanation for items 1–10 before writing updates; the latest CBMMG result showed live data can differ from the repository snapshot."
+  "next_step": "Check current Supabase status/explanation for items 1–10 before writing updates; the latest CBMMG result showed live data can differ from the repository snapshot.",
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "all_items_active": true,
+    "all_answers_match": true,
+    "all_syllabus_topic_id_null": true,
+    "source": "Resultado SQL enviado pelo usuário"
+  },
+  "official_edital": {
+    "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "title": "Edital nº 01/2025 — Agente de Polícia Civil, PCSC",
+    "program_pages": "Anexo I, p. 53 do Diário Oficial de SC nº 22.660, 12/12/2025"
+  },
+  "official_program_text": "NOÇÕES DE DIREITO PENAL: 1 introdução ao direito penal. 1.1 conceito, características e função do direito penal. 1.2 princípios do direito penal. 2. conceito de crime e seus elementos. 2.1 classificações do crime. 2.2 ação e omissão. 2.3 sujeito ativo e sujeito passivo. 2.4 bem jurídico. 3. Tipicidade. ilicitude. culpabilidade. punibilidade. 4. Erro de tipo e erro de proibição. 5. crime consumado. Tentativa. desistência voluntária. arrependimento eficaz. arrependimento posterior. crime impossível. 6. concurso de pessoas. 7. concurso de crimes. 8. Extinção da punibilidade. 9 crimes. 9.1 crimes contra a pessoa. 9.2 crimes contra o patrimônio. 9.3 crimes contra a dignidade sexual. 9.4 crimes contra a fé pública. 9.5 crimes contra a administração pública. 9.6 crimes contra o Estado democrático de direito."
 }
