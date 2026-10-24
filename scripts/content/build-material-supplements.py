@@ -28,6 +28,8 @@ for slug,addition in packs.items():
  else:
   if slug.startswith('portugues-'):tid=portuguese.get(slug,'5873244d-48e6-4241-a474-b5db3317d27f')
   elif slug.startswith('rlm-'):tid='a7ae3924-db95-4f19-9d59-67f2c3011458' if 'proposicoes' in slug else '3c989c30-37f2-41c5-84f0-65d9bf9e7a45'
+  elif slug=='informatica-hardware-memorias-software':tid='d7de8327-3793-45a7-94ca-bb87b7a0a86a'
+  elif slug=='informatica-backup-incremental-diferencial':tid='416e6d1d-62aa-4d1b-8808-acdf02b5ca1f'
   elif slug in network:tid='b2a1b459-a544-41c4-8ff8-db030d25841b'
   elif slug in security:tid='bef7a8b5-d550-4309-9e95-a911ea8f1906'
   elif slug in linux:tid='705afab1-ae16-46b8-8717-44d21d732faf'

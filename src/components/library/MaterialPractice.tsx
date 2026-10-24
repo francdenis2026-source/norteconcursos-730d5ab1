@@ -145,7 +145,8 @@ function PracticeSession({ questions }: { questions: Question[] }) {
   return (
     <div className="min-w-0 space-y-4 border-t pt-4">
       <p className="text-xs text-muted-foreground">
-        Questão {index + 1} de {questions.length} · {q.board} · {q.year}
+        Questão {index + 1} de {questions.length} · {q.board}
+        {q.year ? ` · ${q.year}` : ""}
       </p>
       {parsed.base && (
         <aside className="max-h-80 overflow-auto whitespace-pre-wrap rounded-xl border bg-muted/40 p-3 text-sm">

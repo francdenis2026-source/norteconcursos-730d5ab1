@@ -3990,11 +3990,11 @@
       "discipline": "Informática",
       "title": "Backup: completo, incremental, diferencial e restauração",
       "topic_label": "Cópias e recuperação",
-      "syllabus_topic_id": "bef7a8b5-d550-4309-9e95-a911ea8f1906",
-      "syllabus_topic_text": "Segurança, malwares, antivírus, firewall, MFA, criptografia, hash e assinaturas digitais.",
-      "edition_id": "a982e86c-f18a-47f5-9cf8-f1f8bd2a22ff",
-      "source_id": "e48e61a0-ecf6-4140-b431-e9dba7b40b67",
-      "source_url": "https://cdn.cebraspe.org.br/concursos/PF_25/arquivos/Ed_1_PF_25_Abertura_Atualizado_ate_ret_4.pdf",
+      "syllabus_topic_id": "416e6d1d-62aa-4d1b-8808-acdf02b5ca1f",
+      "syllabus_topic_text": "TECNOLOGIA E SISTEMAS DE INFORMAÇÃO E DE COMUNICAÇÃO, SEGURANÇA CIBERNÉTICA E CRIMES DIGITAIS (Anexo I, item 1, Edital 01/2026 PC-PR): 1.1. Fundamentos de informática: hardware, software, periféricos, dispositivos móveis, armazenamento de dados, backup, BIOS, UEFI, drivers e firmware. 1.2. Sistemas operacionais e aplicativos: Microsoft Windows 11(BR); Android; iOS; Microsoft 365 (BR); LibreOffice/BrOffice; Google Workspace; instalação, atualização, configuração e segurança de sistemas e aplicativos. 1.3. Internet, redes e tecnologias digitais: internet e intranet; navegadores; correio eletrônico; computação em nuvem; compartilhamento de arquivos; redes de computadores; IP; DNS; VPN; firewall; redes sociais; plataformas digitais; registros eletrônicos; cookies; cache; metadados; noções de lógica de programação, aplicações web, HTML, CSS, JavaScript, bancos de dados e APIs. 1.4. Segurança da informação e segurança cibernética: confidencialidade, integridade, disponibilidade, autenticidade e rastreabilidade das informações; controle de acesso; autenticação; logs; auditoria; criptografia; certificados digitais; backup; recuperação de dados; vulnerabilidades; malware; ransomware; phishing; engenharia social; segurança em redes, dispositivos e serviços em nuvem; políticas de segurança; proteção de dados pessoais; prevenção e resposta a incidentes de segurança. 1.5. Crimes cibernéticos, investigação digital e evidências eletrônicas: crimes digitais; fraudes eletrônicas; invasão de dispositivos; crimes em redes sociais e na internet; coleta, preservação, rastreabilidade e cadeia de custódia de evidências digitais; r",
+      "edition_id": "fb4aa334-39b6-4795-b7fb-6c72af5726ca",
+      "source_id": "8035eb83-d3f4-454c-8bfe-48170af07aaa",
+      "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/copia-1-de-edital-01-2026-pcpr-publicacao.docx.pdf",
       "source_note": "Vínculo a tópico real do edital/matriz cadastrado; exercícios autorais de fixação, sem atribuição à banca. Não certifica prazos atuais de edital histórico.",
       "before_quiz": [
         {
@@ -4653,11 +4653,11 @@
       "discipline": "Informática",
       "title": "Hardware, software e memórias: o que cada componente faz",
       "topic_label": "Fundamentos de computadores",
-      "syllabus_topic_id": "07f9615d-857e-4b1f-bc95-ca5e6570bbf5",
-      "syllabus_topic_text": "Microsoft Windows 10; Microsoft Word, Excel e PowerPoint; navegadores (Google Chrome e Mozilla Firefox); inteligência artificial generativa; segurança da informação.",
-      "edition_id": "a95217a8-13ae-49e4-b4be-ffdd222218db",
-      "source_id": "a86d22be-e261-4832-9be8-bd9667fe4697",
-      "source_url": "https://concursos-publicacoes.s3.amazonaws.com/1092/publico/edital_abertura/edital_abertura_10926acfed10daaed.pdf",
+      "syllabus_topic_id": "d7de8327-3793-45a7-94ca-bb87b7a0a86a",
+      "syllabus_topic_text": "INFORMÁTICA (Edital nº 02/2025 PC-PI (FGV), Anexo I): 1. Conceitos fundamentais de hardware, software, periféricos e componentes de um sistema computacional; 2 Sistemas operacionais Windows e Linux: estrutura de diretórios e arquivos, permissões de acesso, ocultação e localização de arquivos, uso básico de linha de comando (CMD, PowerShell e Bash; 3. Ferramentas de produtividade do Microsoft Office e Libre Office(editor de texto, editor planilhas eletrônicas e editor de apresentações); 4. Redes de computadores e internet: endereçamento IP,DNS, gateway padrão, conceitos de roteamento, NAT e proxy, protocolos HTTP, HTTPS, FTP, SMTP e IMAP, uso de VPNs; 5. Segurança da informação: malware: vírus, worms, cavalos de Troia (trojans), spyware, ransomware, backdoor, zero-day exploits e keyloggers, phishing, baiting e engenharia social: métodos e canais utilizados; 6. Navegadores, correio eletrônico e redes sociais: funcionamento de navegadores, uso de cache, cookies e histórico, análise de cabeçalhos de e-mails; 7. Conceitos de hash, criptografia, assinatura digital e certificação digital, autenticação de dois fatores. Noções de backup e análise de dispositivos: conceito de imagem forense, hash de integridade, partições, sistemas de arquivos e mídias removíveis; 8. Noções de bancos de dados e dados; 9. Legislação digital aplicada à investigação: princípios e aplicações do Marco Civil da Internet, Lei Carolina Dieckmann, Lei Geral de Proteção de Dados (LGPD), Lei dos Crimes Cibernéticos e Lei de Interceptações Telefônicas e Telemáticas. 10 Noções de aprendizado de máquina, IA Generativa: principais características.",
+      "edition_id": "0649a19f-f691-4110-84ca-a3342ba77192",
+      "source_id": "2cf1a57e-fa5e-4e97-9728-a9c237624142",
+      "source_url": "https://conhecimento.fgv.br/sites/default/files/concursos/oficial-investigador-cns100-tipo-1.pdf",
       "source_note": "Vínculo a tópico real do edital/matriz cadastrado; exercícios autorais de fixação, sem atribuição à banca. Não certifica prazos atuais de edital histórico.",
       "before_quiz": [
         {

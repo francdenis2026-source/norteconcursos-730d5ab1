@@ -241,7 +241,9 @@ function MaterialPage() {
         key={material.slug}
         text={
           <>
-            <HighlightToggle />
+            <HighlightToggle
+              legend={!!materialLawSlug(material) || /direito|legisla/i.test(material.discipline)}
+            />
             {materialLawSlug(material) && (
               <Link
                 to="/dashboard/legal-course/$slug"

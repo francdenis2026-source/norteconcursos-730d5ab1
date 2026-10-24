@@ -19,7 +19,7 @@ Quatro trilhas introdutórias novas — Matemática, Física, Química e Inglês
 - 480 enunciados novos distintos, todos com resposta booleana, comentário e exemplo.
 - 100 verificações registradas de cálculos e linhas de tabela-verdade. As demais questões conceituais têm gabaritos e justificativas autorais, não uma certificação matemática automática.
 - 4 testes Python: integridade, cálculos/lógica, proteção contra alteração concorrente e repetição idempotente sem regravação.
-- 21 testes direcionados da aplicação aprovados; build de produção aprovado.
+- 22 testes direcionados da aplicação aprovados; build de produção aprovado.
 - Navegador: celular, tablet e desktop; bateria autoral completa de 20 com nota conferida; quatro novas trilhas com 20 itens; exercícios disponíveis durante indisponibilidade simulada do acervo; sem rolagem horizontal.
 - A suíte geral teve 867 aprovações e 2 falhas anteriores: dependência local `@electric-sql/pglite` ausente e teste IDECAN ainda esperando 177 registros, enquanto o arquivo existente contém 273. Typecheck mantém os erros anteriores em PanelTextScale/PerformanceCharts; nenhum erro novo nos arquivos desta entrega.
 

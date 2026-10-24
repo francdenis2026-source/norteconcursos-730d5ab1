@@ -157,9 +157,9 @@ function Lesson({
           {lesson.group}
         </p>
         <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
-        <p className="mt-1 text-xs text-muted-foreground">Edital: {lesson.edital}</p>
+        <p className="mt-1 text-xs text-muted-foreground">Tópico de estudo: {lesson.edital}</p>
         <div className="mt-3">
-          <HighlightToggle />
+          <HighlightToggle legend={LAW_TRACKS.has(trackSlug)} />
         </div>
       </header>
       <MaterialStudyTabs
