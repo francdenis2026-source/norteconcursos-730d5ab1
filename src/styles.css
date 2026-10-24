@@ -13880,6 +13880,24 @@ html[data-read-scale] :is(.q-text, .study-prose, .reading-text) .q-option-text {
   font-size: inherit;
 }
 
+/* O controle A+ deve ampliar também o enunciado e as alternativas do treinador.
+   Usar font-size (não zoom) preserva a largura do cartão e o fluxo das linhas. */
+html[data-read-scale] .trainer-resolution-workspace .trainer-question-stem.q-text {
+  zoom: 1;
+  font-size: calc(17px * var(--read-scale));
+}
+html[data-read-scale] .trainer-resolution-workspace .trainer-option .q-option-text {
+  font-size: calc(14px * var(--read-scale));
+}
+@media (max-width: 639px) {
+  html[data-read-scale] .trainer-resolution-workspace .trainer-question-stem.q-text {
+    font-size: calc(16px * var(--read-scale));
+  }
+  html[data-read-scale] .trainer-resolution-workspace .trainer-option .q-option-text {
+    font-size: calc(13px * var(--read-scale));
+  }
+}
+
 .reading-size {
   position: fixed;
   z-index: 60;
