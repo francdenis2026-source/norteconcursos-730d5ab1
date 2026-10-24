@@ -572,7 +572,7 @@ function Stat({ label, value, sub }: { label: string; value: string; sub: string
 
 /** Atalhos para as ferramentas da plataforma já filtradas pela disciplina. */
 function ToolLinks({ nome, theory }: { nome: string; theory?: TheoryTarget | undefined }) {
-  const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold hover:bg-primary hover:text-primary-foreground";
+  const cls = "inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-semibold transition-[background-color,color,transform] duration-150 hover:bg-primary hover:text-primary-foreground active:scale-95 motion-reduce:active:scale-100";
   return (
     <span className="flex flex-wrap gap-1.5">
       {theory ? <TheoryButton target={theory} /> : <Link to="/dashboard/library" search={{ collection: libraryCollection({ slug: "", discipline: nome }) === "subjects" ? "subjects" : "laws" }} className={cls}><BookOpen className="h-3 w-3" />Teoria</Link>}
