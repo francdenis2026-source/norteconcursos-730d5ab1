@@ -107,12 +107,10 @@ function MyContestPage() {
         </div>
         <Target className="edital-heading-icon" />
       </header>
-      {days !== null && Number.isFinite(days) && (
-        <p className="flex items-center gap-2 rounded-xl border p-4">
-          <Calendar className="h-5 w-5" />
-          {days >= 0
-            ? `${days} dias para a data da prova cadastrada`
-            : "A data da prova cadastrada já passou"}
+      {days !== null && Number.isFinite(days) && days < 0 && (
+        <p className="flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
+          <Calendar className="h-4 w-4 shrink-0" />A data da prova cadastrada já passou. Atualize o
+          seu objetivo se a data mudou.
         </p>
       )}
       <section className="edital-catalog">

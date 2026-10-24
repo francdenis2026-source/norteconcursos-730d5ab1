@@ -137,15 +137,15 @@ function Wizard({
     setBusy(true);
     try {
       await onSave({
-      name: name.trim() || null,
-      experience,
-      career,
-      exam_date: examDate || null,
-      hours_per_week: hours,
-      study_days: days,
-      essay,
-      start_time: startTime,
-    });
+        name: name.trim() || null,
+        experience,
+        career,
+        exam_date: examDate || null,
+        hours_per_week: hours,
+        study_days: days,
+        essay,
+        start_time: startTime,
+      });
     } finally {
       setBusy(false);
     }
@@ -159,7 +159,8 @@ function Wizard({
           {initial ? "Editar plano" : "Vamos montar o seu plano"}
         </CardTitle>
         <CardDescription>
-          Defina seu objetivo e uma rotina viável. A distribuição das matérias considera os resultados registrados na plataforma.
+          Defina seu objetivo e uma rotina viável. A distribuição das matérias considera os
+          resultados registrados na plataforma.
         </CardDescription>
         <ol className="flex flex-wrap gap-2 pt-2 text-xs" aria-label="Etapas">
           {steps.map((s, i) => (
@@ -416,6 +417,53 @@ function TrendIcon({ t }: { t: "up" | "down" | "flat" | null }) {
   return null;
 }
 
+const COACH_STAT_TONE = {
+  amber: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+  violet: "bg-violet-500/10 text-violet-600 dark:text-violet-400",
+  sky: "bg-sky-500/10 text-sky-600 dark:text-sky-400",
+  emerald: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
+  teal: "bg-teal-500/10 text-teal-600 dark:text-teal-400",
+  rose: "bg-rose-500/10 text-rose-600 dark:text-rose-400",
+} as const;
+
+function CoachStat({
+  icon: Icon,
+  tone,
+  label,
+  value,
+  compact,
+}: {
+  icon: React.ComponentType<{ className?: string; "aria-hidden"?: boolean | "true" }>;
+  tone: keyof typeof COACH_STAT_TONE;
+  label: string;
+  value: string;
+  compact?: boolean;
+}) {
+  return (
+    <div className="flex items-start gap-2 rounded-lg bg-muted/60 p-2.5">
+      <span
+        className={cn("grid h-7 w-7 shrink-0 place-items-center rounded-md", COACH_STAT_TONE[tone])}
+      >
+        <Icon className="h-4 w-4" aria-hidden="true" />
+      </span>
+      <span className="min-w-0">
+        <span className="block text-[0.65rem] font-semibold uppercase tracking-wide text-muted-foreground">
+          {label}
+        </span>
+        <span
+          className={cn(
+            "block font-black leading-tight",
+            compact ? "truncate text-sm" : "text-base",
+          )}
+          title={value}
+        >
+          {value}
+        </span>
+      </span>
+    </div>
+  );
+}
+
 type Mode = { kind: "view" } | { kind: "create" } | { kind: "edit"; id: string };
 
 function StudyCoachPage() {
@@ -597,34 +645,84 @@ function StudyCoachPage() {
   const showPlanPaywall = !hasStudyPlanAccess && (plans.length === 0 || mode.kind !== "view");
   const editing = mode.kind === "edit" ? (plans.find((p) => p.id === mode.id) ?? null) : null;
 
-  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(platformDate());
+  const todayDate = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Rio_Branco" }).format(
+    platformDate(),
+  );
   const todayDay = new Date(`${todayDate}T00:00:00Z`).getUTCDay();
   const summary = coachWeekSummary(schedule, checks, profile?.id ?? "", weekStart, todayDay);
   const nextBlock = summary.nextBlock;
 
   return (
     <div className="study-assistant mx-auto max-w-6xl space-y-6">
-      <section className="study-assistant-hero workspace-banner" aria-labelledby="study-assistant-title">
+      <section
+        className="study-assistant-hero workspace-banner"
+        aria-labelledby="study-assistant-title"
+      >
         <div className="study-assistant-hero__content">
           <span className="study-assistant-hero__eyebrow">Planejamento • prática • revisão</span>
           <h1 id="study-assistant-title">Configuração do estudo</h1>
-          <p>Defina sua disponibilidade e distribua a semana. Use a Agenda por edital para executar os tópicos e Ajustes pelos resultados para consultar prioridades das provas realizadas.</p>
-          {profile && <a href="#coach-workspace" className="study-assistant-hero__action" onClick={() => setView("week")}>Organizar minha semana <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>}
+          <p>
+            Defina sua disponibilidade e distribua a semana. Use a Agenda por edital para executar
+            os tópicos e Ajustes pelos resultados para consultar prioridades das provas realizadas.
+          </p>
+          {profile && (
+            <a
+              href="#coach-workspace"
+              className="study-assistant-hero__action"
+              onClick={() => setView("week")}
+            >
+              Organizar minha semana <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          )}
         </div>
       </section>
 
       <StudyPlanningNav active="coach" />
-      {loadError && <Card role="alert"><CardContent className="flex flex-wrap items-center justify-between gap-3 p-5"><div><p className="font-semibold">Não foi possível carregar seu planejamento</p><p className="text-sm text-muted-foreground">Tente novamente para consultar seus planos e registros.</p></div><Button variant="outline" onClick={() => void load()}>Tentar novamente</Button></CardContent></Card>}
+      {loadError && (
+        <Card role="alert">
+          <CardContent className="flex flex-wrap items-center justify-between gap-3 p-5">
+            <div>
+              <p className="font-semibold">Não foi possível carregar seu planejamento</p>
+              <p className="text-sm text-muted-foreground">
+                Tente novamente para consultar seus planos e registros.
+              </p>
+            </div>
+            <Button variant="outline" onClick={() => void load()}>
+              Tentar novamente
+            </Button>
+          </CardContent>
+        </Card>
+      )}
 
       {!loadError && plans.length > 0 && (
-        <section className="flex flex-wrap items-end justify-between gap-3 rounded-2xl border bg-card p-4" aria-label="Selecionar plano">
+        <section
+          className="flex flex-wrap items-end justify-between gap-3 rounded-2xl border bg-card p-4"
+          aria-label="Selecionar plano"
+        >
           <div className="min-w-0 flex-1 space-y-2 sm:max-w-md">
             <Label htmlFor="coach-plan">Plano de preparação</Label>
-            <select id="coach-plan" className="h-11 w-full rounded-lg border border-input bg-background px-3 text-sm" value={selectedId ?? ""} onChange={(event) => { setSelectedId(event.target.value); setMode({ kind: "view" }); setView("week"); }}>
-              {plans.map((p) => <option key={p.id} value={p.id}>{planLabel(p)}</option>)}
+            <select
+              id="coach-plan"
+              className="h-11 w-full rounded-lg border border-input bg-background px-3 text-sm"
+              value={selectedId ?? ""}
+              onChange={(event) => {
+                setSelectedId(event.target.value);
+                setMode({ kind: "view" });
+                setView("week");
+              }}
+            >
+              {plans.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {planLabel(p)}
+                </option>
+              ))}
             </select>
           </div>
-          {hasStudyPlanAccess && mode.kind === "view" && <Button variant="outline" onClick={() => setMode({ kind: "create" })}><Plus className="h-4 w-4" /> Novo plano</Button>}
+          {hasStudyPlanAccess && mode.kind === "view" && (
+            <Button variant="outline" onClick={() => setMode({ kind: "create" })}>
+              <Plus className="h-4 w-4" /> Novo plano
+            </Button>
+          )}
         </section>
       )}
 
@@ -662,7 +760,7 @@ function StudyCoachPage() {
       {!loadError && profile && plan && mode.kind === "view" && (
         <>
           <Card>
-            <CardHeader className="gap-2 md:flex-row md:items-start md:justify-between">
+            <CardHeader className="gap-2 pb-3 md:flex-row md:items-start md:justify-between">
               <div>
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <Badge variant="secondary">{plan.phase.title}</Badge>
@@ -696,38 +794,51 @@ function StudyCoachPage() {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-                <div className="rounded-lg bg-muted/60 p-3">
-                  <p className="flex items-center gap-1 text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">
-                    <CalendarDays className="h-3.5 w-3.5" /> Tempo até a prova
-                  </p>
-                  <p className="text-xl font-black">
-                    {plan.weeksLeft !== null
-                      ? `${plan.weeksLeft} semanas`
-                      : `~${plan.assumedWeeks} sem. (estimado)`}
-                  </p>
-                </div>
-                <div className="rounded-lg bg-muted/60 p-3">
-                  <p className="flex items-center gap-1 text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">
-                    <Gauge className="h-3.5 w-3.5" /> Ritmo estimado
-                  </p>
-                  <p className="text-xl font-black">{plan.neededHoursPerWeek} h/sem</p>
-                </div>
-                <div className="rounded-lg bg-muted/60 p-3">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">
-                    Sua disponibilidade
-                  </p>
-                  <p className="text-xl font-black">{plan.hoursPerWeek} h/sem</p>
-                </div>
-                <div className="rounded-lg bg-muted/60 p-3">
-                  <p className="flex items-center gap-1 text-[0.68rem] font-semibold uppercase tracking-wide text-muted-foreground">
-                    <Target className="h-3.5 w-3.5" /> Acerto geral
-                  </p>
-                  <p className="text-xl font-black">
-                    {plan.overallAccuracy !== null ? `${plan.overallAccuracy}%` : "—"}
-                  </p>
-                </div>
+            <CardContent className="space-y-3 pt-0">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+                <CoachStat
+                  icon={CalendarDays}
+                  tone="amber"
+                  label="Até a prova"
+                  value={
+                    plan.weeksLeft !== null
+                      ? `${plan.weeksLeft} sem.`
+                      : `~${plan.assumedWeeks} sem.`
+                  }
+                />
+                <CoachStat
+                  icon={Gauge}
+                  tone="violet"
+                  label="Ritmo necessário"
+                  value={`${plan.neededHoursPerWeek} h/sem`}
+                />
+                <CoachStat
+                  icon={Clock}
+                  tone="sky"
+                  label="Sua disponibilidade"
+                  value={`${plan.hoursPerWeek} h/sem`}
+                />
+                <CoachStat
+                  icon={Target}
+                  tone="emerald"
+                  label="Acerto geral"
+                  value={plan.overallAccuracy !== null ? `${plan.overallAccuracy}%` : "—"}
+                />
+                <CoachStat
+                  icon={CheckCircle2}
+                  tone="teal"
+                  label="Semana"
+                  value={`${summary.completed}/${summary.total}`}
+                />
+                <CoachStat
+                  icon={BookOpenCheck}
+                  tone="rose"
+                  label="Próximo bloco"
+                  value={
+                    nextBlock ? nextBlock.subject : summary.todayCount ? "Concluído" : "Sem blocos"
+                  }
+                  compact
+                />
               </div>
               <div>
                 <div className="mb-1 flex justify-between text-xs font-semibold">
@@ -745,14 +856,24 @@ function StudyCoachPage() {
             </CardContent>
           </Card>
 
-          <section id="coach-workspace" className="scroll-mt-24 space-y-5">
-            <div className="grid gap-3 sm:grid-cols-3">
-              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><CheckCircle2 className="h-4 w-4" /> Semana em andamento</p><p className="mt-2 text-2xl font-bold">{summary.completed}/{summary.total} blocos</p><Progress className="mt-3 h-2" value={summary.percentage} /><p className="mt-2 text-xs text-muted-foreground">{summary.percentage}% das atividades planejadas concluídas</p></CardContent></Card>
-              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><Clock className="h-4 w-4" /> Rotina semanal</p><p className="mt-2 text-2xl font-bold">{profile.hours_per_week} horas</p><p className="mt-2 text-xs text-muted-foreground">Distribuídas em {profile.study_days.length} dias de estudo</p></CardContent></Card>
-              <Card><CardContent className="p-5"><p className="flex items-center gap-2 text-xs font-semibold text-muted-foreground"><BookOpenCheck className="h-4 w-4" /> Próximo bloco de hoje</p><p className="mt-2 text-base font-bold">{nextBlock ? nextBlock.subject : summary.todayCount ? "Atividades concluídas" : "Dia sem blocos planejados"}</p><p className="mt-2 text-xs text-muted-foreground">{nextBlock ? `${nextBlock.kind} · ${nextBlock.minutes} minutos` : "Consulte a semana e preserve seu tempo de descanso."}</p></CardContent></Card>
-            </div>
+          <section id="coach-workspace" className="scroll-mt-24">
             <div className="coach-view-switch" role="group" aria-label="Visualização da estratégia">
-              {([ ["week", "Esta semana"], ["strategy", "Estratégia"], ["history", "Histórico"] ] as const).map(([key, label]) => <button type="button" key={key} aria-pressed={view === key} onClick={() => setView(key)}>{label}</button>)}
+              {(
+                [
+                  ["week", "Esta semana"],
+                  ["strategy", "Estratégia"],
+                  ["history", "Histórico"],
+                ] as const
+              ).map(([key, label]) => (
+                <button
+                  type="button"
+                  key={key}
+                  aria-pressed={view === key}
+                  onClick={() => setView(key)}
+                >
+                  {label}
+                </button>
+              ))}
             </div>
           </section>
 
@@ -804,42 +925,46 @@ function StudyCoachPage() {
             </Card>
           )}
 
-          {view === "strategy" && <Card>
-            <CardHeader>
-              <CardTitle>Distribuição do tempo por matéria</CardTitle>
-              <CardDescription>A distribuição combina o peso da matéria com os resultados disponíveis.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              {plan.subjects.map((s) => (
-                <div key={s.name} className="space-y-1">
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
-                    <span className="flex items-center gap-1.5 font-semibold">
-                      {s.name} <TrendIcon t={s.trend} />
-                    </span>
-                    <span className="tabular-nums text-muted-foreground">
-                      {s.minutes} min · {s.questions} questões · {s.share}%
-                    </span>
+          {view === "strategy" && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Distribuição do tempo por matéria</CardTitle>
+                <CardDescription>
+                  A distribuição combina o peso da matéria com os resultados disponíveis.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {plan.subjects.map((s) => (
+                  <div key={s.name} className="space-y-1">
+                    <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                      <span className="flex items-center gap-1.5 font-semibold">
+                        {s.name} <TrendIcon t={s.trend} />
+                      </span>
+                      <span className="tabular-nums text-muted-foreground">
+                        {s.minutes} min · {s.questions} questões · {s.share}%
+                      </span>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-muted">
+                      <div
+                        className={cn(
+                          "h-full",
+                          s.accuracy === null
+                            ? "bg-primary/60"
+                            : s.accuracy < 60
+                              ? "bg-rose-500"
+                              : s.accuracy < 75
+                                ? "bg-amber-500"
+                                : "bg-emerald-500",
+                        )}
+                        style={{ width: `${Math.min(100, s.share)}%` }}
+                      />
+                    </div>
+                    <p className="text-xs text-muted-foreground">{s.reason}</p>
                   </div>
-                  <div className="h-2 overflow-hidden rounded-full bg-muted">
-                    <div
-                      className={cn(
-                        "h-full",
-                        s.accuracy === null
-                          ? "bg-primary/60"
-                          : s.accuracy < 60
-                            ? "bg-rose-500"
-                            : s.accuracy < 75
-                              ? "bg-amber-500"
-                              : "bg-emerald-500",
-                      )}
-                      style={{ width: `${Math.min(100, s.share)}%` }}
-                    />
-                  </div>
-                  <p className="text-xs text-muted-foreground">{s.reason}</p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>}
+                ))}
+              </CardContent>
+            </Card>
+          )}
 
           {view === "strategy" && plan.tips.length > 0 && (
             <Card>
