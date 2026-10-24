@@ -194,5 +194,12 @@
         "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm"
       ]
     }
-  ]
+  ],
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "all_items_active": true,
+    "all_answers_match": true,
+    "all_syllabus_topic_id_null": true,
+    "evidence": "Consulta SQL enviada pelo usuário."
+  }
 }
