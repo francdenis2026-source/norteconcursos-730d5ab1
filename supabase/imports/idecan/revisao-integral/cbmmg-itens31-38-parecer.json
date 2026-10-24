@@ -8,8 +8,8 @@
     "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
     "notice": "Aviso nº 279/2026-CBMMG/ABM/CSE, Ato nº 12.448/2026, de 03/08/2026"
   },
-  "release_status": "blocked_under_review",
-  "hold_reason": "A edição do edital do CBMMG ainda não está cadastrada/vinculada ao edital oficial; os pareceres abaixo corrigem e completam as explicações, mas preservam content_status=under_review.",
+  "release_status": "already_active_explanation_update_only",
+  "hold_reason": "Consulta ao banco em 2026-10-24 confirmou que os oito registros já estão active e syllabus_topic_id=null. O SQL atualizado preserva active e não atribui tópico sem validação do edital oficial.",
   "items": [
     {
       "id": "7dfe5bfd-73a0-4de7-b9d3-2d6c35116971",
@@ -27,7 +27,9 @@
         "B": "Instrumento jurídico de aplicação facultativa, sem qualquer impacto na formação de normas internas dos Estados.",
         "C": "Norma regional aplicável exclusivamente aos países integrantes da Organização dos Estados Americanos.",
         "D": "Documento internacional que, embora não possua natureza de tratado, orienta a interpretação e a formulação de normas de direitos humanos."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. A Declaração Universal de 1948 é uma resolução da Assembleia Geral da ONU, e não um tratado internacional ratificado pelos Estados. Mesmo sem a forma de tratado, tornou-se referência central para interpretar a dignidade humana e inspirar constituições, leis e tratados posteriores."
     },
     {
       "id": "7ced0a3d-5659-43f8-8cd0-53f51e978b32",
@@ -45,7 +47,9 @@
         "B": "Autorização para suspensão geral e sem limites de direitos civis em toda hipótese de emergência nacional.",
         "C": "Proteção contra prisão ou detenção arbitrária, assegurado o direito de controle judicial da legalidade da detenção.",
         "D": "Subordinação integral dos direitos individuais ao direito interno, sem incidência de mecanismos internacionais de proteção."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa C está correta. O Pacto Internacional dos Direitos Civis e Políticos protege contra prisão ou detenção arbitrária e assegura que a pessoa privada de liberdade possa questionar judicialmente a legalidade da detenção. A emergência não autoriza suspensão ilimitada de direitos."
     },
     {
       "id": "472a03f7-e91e-4ad9-badb-18d5ba5389d5",
@@ -63,7 +67,9 @@
         "B": "Fiscalização legislativa interna dos Estados-membros com poder de anulação de leis nacionais.",
         "C": "Realização de revisões periódicas universais sobre a situação de direitos humanos nos Estados.",
         "D": "Execução direta de sanções econômicas em casos de violações graves de direitos humanos."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa C está correta. O Conselho de Direitos Humanos da ONU realiza a Revisão Periódica Universal, mecanismo que examina a situação dos direitos humanos em todos os Estados-membros. Ele não funciona como tribunal para julgar individualmente violações nem anula leis nacionais."
     },
     {
       "id": "c8e33e60-b292-4a8d-8e88-32956b1cfda1",
@@ -80,7 +86,9 @@
         "B": "Relatividade absoluta, permitindo sua restrição ilimitada pelos Estados.",
         "C": "Dependência exclusiva da legislação interna para sua existência jurídica.",
         "D": "Aplicação restrita a contextos culturais específicos previamente definidos."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa A está correta. A universalidade significa que os direitos humanos pertencem a todas as pessoas, sem discriminação por nacionalidade, origem, sexo, raça ou qualquer outra condição. Isso não impede limitações legais proporcionais em situações específicas."
     },
     {
       "id": "482329fd-f9c4-4a6d-aef8-13cb95b4ad82",
@@ -98,7 +106,9 @@
         "B": "Estabelece a competência da Corte Interamericana para julgar Estados que reconheçam sua jurisdição.",
         "C": "Limita sua aplicação exclusivamente a situações de conflito armado internacional.",
         "D": "Dispensa a necessidade de esgotamento de recursos internos para análise de casos individuais."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa B está correta. A Convenção Americana prevê a Corte Interamericana de Direitos Humanos e sua jurisdição contenciosa depende do reconhecimento pelo Estado. O tratado protege direitos civis e políticos e, em regra, exige o esgotamento dos recursos internos, salvo exceções."
     },
     {
       "id": "70087036-b55c-4304-bc60-5503af33aa95",
@@ -115,7 +125,9 @@
         "B": "São restritos aos cidadãos brasileiros natos.",
         "C": "Aplicam-se exclusivamente às relações entre particulares.",
         "D": "Possuem aplicabilidade imediata, nos termos da Constituição."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. O art. 5º, § 1º, da Constituição determina que as normas definidoras dos direitos e garantias fundamentais têm aplicação imediata. Isso não significa que toda regra dispense regulamentação, mas impede tratar os direitos como meras promessas sem eficácia."
     },
     {
       "id": "c0d42a5e-c8a2-4a69-b5fd-b1794a2be167",
@@ -132,7 +144,9 @@
         "B": "A lei revogada recupera automaticamente sua vigência com a perda de eficácia da lei revogadora.",
         "C": "A lei revogada retorna à vigência sempre que houver lacuna normativa relevante.",
         "D": "A lei revogada volta a vigorar somente se houver disposição expressa nesse sentido."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa D está correta. Pela regra da LINDB, a lei revogada não volta automaticamente a vigorar quando a lei revogadora perde eficácia. A repristinação somente ocorre se houver disposição expressa determinando o retorno da lei anterior."
     },
     {
       "id": "b0880a41-4442-4564-b116-35266f3f7caa",
@@ -150,7 +164,10 @@
         "B": "A omissão legal autoriza a construção da decisão com base em precedentes vinculantes e regulamentos administrativos.",
         "C": "A integração normativa deve ser realizada com base na equidade e na interpretação extensiva, independentemente de outros critérios.",
         "D": "A decisão deve ser fundamentada prioritariamente na jurisprudência consolidada, seguida da doutrina majoritária e, subsidiariamente, na equidade."
-      }
+      },
+      "expected_current_status": "active",
+      "expected_current_explanation": "A alternativa A está correta. Diante de lacuna, a Lei de Introdução às Normas do Direito Brasileiro orienta o julgador a decidir por analogia, costumes e princípios gerais de direito. Esses instrumentos integram o sistema e não autorizam o juiz a deixar de decidir."
     }
-  ]
+  ],
+  "database_state_verified_at": "2026-10-24"
 }
