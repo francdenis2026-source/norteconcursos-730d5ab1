@@ -19,6 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { confirmDialog } from "@/lib/confirm";
 import { fetchAllRows } from "@/lib/catalog";
+import { canonicalSubject } from "@/lib/subjects";
 import {
   parseBoardImport,
   planBoardImport,
@@ -120,7 +121,10 @@ function AdminQuestionsPage() {
   }, [rows]);
   const bySubject = React.useMemo(() => {
     const m = new Map<string, number>();
-    for (const r of rows) m.set(r.subject, (m.get(r.subject) ?? 0) + 1);
+    for (const r of rows) {
+      const s = canonicalSubject(r.subject);
+      m.set(s, (m.get(s) ?? 0) + 1);
+    }
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [rows]);
 
