@@ -318,6 +318,7 @@ function MaterialPage() {
               key={material.slug}
               userId={user!.id}
               authoredQuiz={material.quiz ?? []}
+              authoredReview={material.practice_review}
               authoredKey={material.slug}
               label={material.topic_label ?? material.title}
               scope={{

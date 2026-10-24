@@ -1,0 +1,1547 @@
+[
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11340.htm",
+    "file": "69563ddeb99901c861cf3b804080c5a69a65a6eeacc00f4cade4fdd96c866897.bin",
+    "checked_at": "2026-10-24T17:19:13.763558+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+    "content_type": "text/html",
+    "bytes": 264515,
+    "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2013/Lei/L12850.htm",
+    "file": "b383f3944a59c124c53bffd3902f0bac643772393ff6e89454878ab7905b96e8.bin",
+    "checked_at": "2026-10-24T17:19:13.764028+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+    "content_type": "text/html",
+    "bytes": 91847,
+    "sha256": "95f8e40f7c9958a0b813e86d7d172641f8219b43003ece822998f0f46eadcf41"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+    "file": "b588675acbbce6f5585c3330bc5992f3648b9d5adf2d658ab1d0aaa3a9ba8ccf.bin",
+    "checked_at": "2026-10-24T17:19:13.764310+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm",
+    "content_type": "text/html",
+    "bytes": 264515,
+    "sha256": "488268242fbb9247107248cd2fca73b00e7084fd6d296d193558ce1236907587"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+    "file": "bbb579a35c96db3667c1fb1c95e4eb11e874aaf20c5ffb424557e6e8c2e3abed.bin",
+    "checked_at": "2026-10-24T17:19:13.764597+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm",
+    "content_type": "text/html",
+    "bytes": 259031,
+    "sha256": "bfefb750aa771ff6b39984bef996963996f491fd0b98af4be8f90f69c80bb10c"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11638.htm",
+    "file": "ebb6f2d39f98daadd14ee027b8382df6a2a7b86871cd0742d2e2645d43f244d7.bin",
+    "checked_at": "2026-10-24T17:19:13.764875+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11638.htm",
+    "content_type": "text/html",
+    "bytes": 45722,
+    "sha256": "a5bd9f38477968830d7b07f16d96c25cf994a919c2abe57ecbbdade17af5eb64"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+    "file": "072c7021c49918ae2e5bde71cc731ee166a8b19d737d9a43ac575ccf34ad643e.bin",
+    "checked_at": "2026-10-24T17:19:13.765141+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+    "content_type": "text/html",
+    "bytes": 30322,
+    "sha256": "ffafcb27c12e0898d93f95bf0ef30dd6bea5b094a1bac34127dbc3b2a93e07b3"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+    "file": "168cacedb4787e4b22b3040397d77b3a5d753ec8bd4886cc435a49ad534f2f6e.bin",
+    "checked_at": "2026-10-24T17:19:16.140309+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12830.htm",
+    "content_type": "text/html",
+    "bytes": 7540,
+    "sha256": "edf25bfde606ff1e3d738395c12bce2c5eb71edc6404526f203639a8dbd0c54f"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+    "file": "11011276761b2774e8b5c5844fdda636a13b8510beeb2f1ad5e49166bb27630c.bin",
+    "checked_at": "2026-10-24T17:19:16.715230+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12850.htm",
+    "content_type": "text/html",
+    "bytes": 91847,
+    "sha256": "3d2f9971777f04eb0f3d177f367fa6d96b5766c30899991f114ed09d498fff6e"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+    "file": "be687a137c6e2a02a9b8d61b048fa97ac03ebdc51f7a64f390945a824a893de8.bin",
+    "checked_at": "2026-10-24T17:19:16.940648+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13060.htm",
+    "content_type": "text/html",
+    "bytes": 11011,
+    "sha256": "0a207ba377990faab16d1418a6d8ba268d54f4271a77c36b399366868be29ac2"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+    "file": "e6dea64303cd5f247d83c3f8a98887921858f349552c2216b27f657c2c071f94.bin",
+    "checked_at": "2026-10-24T17:19:17.402929+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+    "content_type": "text/html",
+    "bytes": 1689626,
+    "sha256": "1747061f7e33a65ef8749aa8212394a9d65be9e10c2c91bdd12bcf921ca5a176"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+    "file": "3b7e80d9119d6c0f76feeacb5049e24846cac269241382fb493ab75573308390.bin",
+    "checked_at": "2026-10-24T17:19:17.733943+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+    "content_type": "text/html",
+    "bytes": 243670,
+    "sha256": "07c3b769d42950a38a622d4f41d9229c5ca3f77b894d2efbc3994439c1939f53"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+    "file": "1548a6e12b86527ed2630f8b0895d8403c5f53ca234d696e30688d897b105b43.bin",
+    "checked_at": "2026-10-24T17:19:18.179835+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13260.htm",
+    "content_type": "text/html",
+    "bytes": 30907,
+    "sha256": "9dee2b63b49413e444b7858c1ffb14ba6fe66c06a5fc6c6498a0136a4c1462b5"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+    "file": "07b7a9ac9a279dcd06eab326dfbaa01b5160a7ebf8465bc9995b91a3f82eaa3b.bin",
+    "checked_at": "2026-10-24T17:19:18.180179+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13344.htm",
+    "content_type": "text/html",
+    "bytes": 42255,
+    "sha256": "7be86497385f10e6313abb6bd282af8a41d86ab3ed6bdcd9d4b845e736f04604"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+    "file": "470a29fdcaf688652951d9c401413955e2a4556ee5ae9924ebcfc59dfb166ba8.bin",
+    "checked_at": "2026-10-24T17:19:18.310662+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13444.htm",
+    "content_type": "text/html",
+    "bytes": 25166,
+    "sha256": "2cfeda83d5efcc1d598dee768eb5c4145befe751fe1a4e489da94b7298a76fa0"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+    "file": "51522d2d8105b7dba39912653b742756e31a4437b7824a5c1f185925f24b2869.bin",
+    "checked_at": "2026-10-24T17:19:18.373269+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+    "content_type": "text/html",
+    "bytes": 484623,
+    "sha256": "cc00e8c67b786b8a72f94615777b51167e2f46359c25f8e961ac438e7da52a03"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+    "file": "95fb605e43f3b6edbdf425555e9fcd51002fa84ee8169dc974cb997d7b869d76.bin",
+    "checked_at": "2026-10-24T17:19:18.748300+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869compilado.htm",
+    "content_type": "text/html",
+    "bytes": 76084,
+    "sha256": "f1a86082d1f62102b81c340641d2e634024509409c535308abcfbe3e9ab63663"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+    "file": "e8e6656272c4d565ba979c31fd4630a5c52bdd1d3c1e71381ce343d181bf603d.bin",
+    "checked_at": "2026-10-24T17:19:18.848804+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+    "content_type": "text/html",
+    "bytes": 649705,
+    "sha256": "1c16b042533cd64577e5e3e9b99c2bbf1026c390a15793ba72c94b6c7a7355b1"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+    "file": "1d8ed5bcd71a350df504e4516b3b9d0979fc0c75b63805bbb48bd73cf9e577d4.bin",
+    "checked_at": "2026-10-24T17:19:19.049538+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d10977.htm",
+    "content_type": "text/html",
+    "bytes": 93156,
+    "sha256": "603263b68a9fcae81dfb982cbc40b2c9a3c95d467fab9b8edd99a0ed5c80c131"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+    "file": "cf6c47173e039747c502264bca7fd193d2fd2593a7e4eb30da5647973c3eb5e6.bin",
+    "checked_at": "2026-10-24T17:19:19.642608+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14344.htm",
+    "content_type": "text/html",
+    "bytes": 95073,
+    "sha256": "6e3cad57339ea8a9f9c7b2560d5f5184797aa09f9568212913f0333ebf57c76d"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11491.htm",
+    "file": "f88762266528f7764ec0b76340fb60126ce09c6e0900235e9c650e7134ab76f4.bin",
+    "checked_at": "2026-10-24T17:19:19.770933+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11491.htm",
+    "content_type": "text/html",
+    "bytes": 129411,
+    "sha256": "e7c7b33b80b143e6747353c79a475700c5384155e015391c81e4044ade98c148"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+    "file": "970c27d74ab654af99734032ab0a70148249bc22067d6a6ec3c43876618a6266.bin",
+    "checked_at": "2026-10-24T17:19:20.231003+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11797.htm",
+    "content_type": "text/html",
+    "bytes": 85208,
+    "sha256": "c45b27f1576761c3519d354c942688f012ac19d2e1c9c649bf155dbc8887d7e0"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+    "file": "6beaae841c87427280a68786ca7c2a0660fb6208e3b811be52caffbdcf1eb1e0.bin",
+    "checked_at": "2026-10-24T17:19:20.517298+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14534.htm",
+    "content_type": "text/html",
+    "bytes": 28202,
+    "sha256": "9525904c071880610e021035bd8b4520e837e8ffea6691b4f8d4f2e47af369cb"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14717.htm",
+    "file": "e719d51d56c505afc26fcd7ee57b33472ccb67b947bf85813ae10b3d95fd4ac5.bin",
+    "checked_at": "2026-10-24T17:19:21.194584+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14717.htm",
+    "content_type": "text/html",
+    "bytes": 16986,
+    "sha256": "12c88ac4f32c815eab849fc01ba2433ff27da4715bb1b46d71955a639aa98ac8"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+    "file": "eea6e390b56b16ac3d37b7cd0880e85baa9afe4a38cd93515693fce6597969f4.bin",
+    "checked_at": "2026-10-24T17:19:21.225426+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12341.htm",
+    "content_type": "text/html",
+    "bytes": 45781,
+    "sha256": "257aae14a3ea4c6639075d4fff9282e2df923c5049bd01bf2f7c450444fa084e"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+    "file": "e192cfaf781651333de400a0ce1da5e8ea20ef5e26e3933fb8efece8fcb346a5.bin",
+    "checked_at": "2026-10-24T17:19:21.226476+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14967.htm",
+    "content_type": "text/html",
+    "bytes": 165502,
+    "sha256": "28933b4fac7f9e8a915365381296536651dd0c1b9f6ff8456c4329c3dfdc64d1"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12374.htm",
+    "file": "3b05bf6c977339a96012f7aa09093bdb5dbe801e1567f21ade03bbcd110633c5.bin",
+    "checked_at": "2026-10-24T17:19:21.544962+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12374.htm",
+    "content_type": "text/html",
+    "bytes": 42715,
+    "sha256": "e0b82d73636a589e7a8e508c2706428f2f58384ee16a57adc29902bb9e24f6a1"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+    "file": "7b5db993a3bd6dd170d87a31b8ccfe12d5d66c6a93d6e305dd167ace534e4374.bin",
+    "checked_at": "2026-10-24T17:19:21.728303+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12636.htm",
+    "content_type": "text/html",
+    "bytes": 37953,
+    "sha256": "7b61a99cd6acbc43ad0cae654067051c3994d578abb54d240ed11575e449c2e3"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12807.htm",
+    "file": "2d5020f40b518f4d92404a366dc5b9a9710fb0be2802a7e1f56c936a2522db73.bin",
+    "checked_at": "2026-10-24T17:19:22.016764+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12807.htm",
+    "content_type": "text/html",
+    "bytes": 22683,
+    "sha256": "fc3eb796170e778e76a1d980b49856e560b834c3e8454f63a205f7ab29a700c8"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+    "file": "9779a6de6f5d3d2e43e7bb1cf6327ace05fca000968700e658f1f7eb8f3ece3c.bin",
+    "checked_at": "2026-10-24T17:19:22.056625+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15245.htm",
+    "content_type": "text/html",
+    "bytes": 22603,
+    "sha256": "539858dead0891a25e4fda7211e63893167ad6989756fad81812339cda0277c5"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+    "file": "0fa0b5b0e79079d6e649757cbf05311485603519d5a0f9be4678226e583b1840.bin",
+    "checked_at": "2026-10-24T17:19:22.353182+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15295.htm",
+    "content_type": "text/html",
+    "bytes": 20989,
+    "sha256": "6ddab503377b19181e5c853ef8ec15436191f7799d7e67a0ca6bdfcd7c6ec4e7"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm",
+    "file": "bed48b58f7fe8cb2ade34ab06f315cc040de41f44195029dc1b3dc9179250f8b.bin",
+    "checked_at": "2026-10-24T17:19:22.381099+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/congresso/adc-96-mpv1.360.htm",
+    "content_type": "text/html",
+    "bytes": 3692,
+    "sha256": "0f1e5fc93b0e64d6628433c90ed9a57b587c7abe0bfc818d0b66e70ad1e1c868"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+    "file": "805acce5afe4aa37aed9ed0e035f14050d66d9f659434ea5ca604b7364a16a5a.bin",
+    "checked_at": "2026-10-24T17:19:22.402207+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15358.htm",
+    "content_type": "text/html",
+    "bytes": 217801,
+    "sha256": "c6132085463615f8e5fdffe54e646fe724eb08e2f89f5523c7c3cbe9853edb48"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+    "file": "552b31563f8fa63e8773bb8f3a9fee4fa405440ab3a7d0a75810c217a72ebb73.bin",
+    "checked_at": "2026-10-24T17:19:22.506224+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15384.htm",
+    "content_type": "text/html",
+    "bytes": 19777,
+    "sha256": "b2f5122457d1f70c146ae6b0c30337f2d4a52c22e5e547ab17aceac9e711cbbc"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+    "file": "e6108d3ebe93cb1d406396f47275d1c7623fadb134a6f03d6b66bb77fef0fc2b.bin",
+    "checked_at": "2026-10-24T17:19:22.555245+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15410.htm",
+    "content_type": "text/html",
+    "bytes": 21277,
+    "sha256": "f3d8c37720432c0207419f985d06d6b429054fb639086f5c3bfa20c87742e123"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15479.htm",
+    "file": "6b2ffa11c51c43deb4d2fb72e6343184d47d45518e715261e0c1efc0f400b3f0.bin",
+    "checked_at": "2026-10-24T17:19:22.686773+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15479.htm",
+    "content_type": "text/html",
+    "bytes": 24012,
+    "sha256": "abf796bab7b44cd26ae2baedc8aaf566287c0dc7944b0c43a119f1bac037e7ca"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+    "file": "7c11b8e26de3a9eb2b2b58a612e7866d6522dd05b5909df25a1dcd430d86f54e.bin",
+    "checked_at": "2026-10-24T17:19:22.806185+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15487.htm",
+    "content_type": "text/html",
+    "bytes": 59063,
+    "sha256": "4cffebfd4bad9a944c1fb3459ef1278ac5f690d45f30eb43f57edd54ace1be32"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "file": "c9a18b3aeaf1fa6194ef5971ac9f432eeb234b4f464a027811988fd0e266849e.bin",
+    "checked_at": "2026-10-24T17:19:22.855608+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    "content_type": "text/html",
+    "bytes": 1847715,
+    "sha256": "416bee718ebd0c8ea78a98eeb3f6b4c828aa3ec5cf8b974bab5936303c30af99"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+    "file": "8541e9cc323a36f1eb6d289470dba0ae72e84c177485f362b5bf13ca76ffd728.bin",
+    "checked_at": "2026-10-24T17:19:23.106960+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+    "content_type": "text/html",
+    "bytes": 1507134,
+    "sha256": "807c7b1d0d7c4e23bd3033e6fa03738081cf39ae6c1bbc425cd3ae4650721de8"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc115.htm",
+    "file": "079b292f43b1fb368d6f687384c26b1710fb2e75a41ea706b613fbf8b4b93d77.bin",
+    "checked_at": "2026-10-24T17:19:23.118498+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc115.htm",
+    "content_type": "text/html",
+    "bytes": 26599,
+    "sha256": "c1faae38420677003f138513e761926af8741a713801f5f8dc306bfff01c3c59"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc131.htm",
+    "file": "08d25d557b67668ea0363da62732dc41a017e78ac1db7e9fc7918f0061255ed7.bin",
+    "checked_at": "2026-10-24T17:19:23.123368+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc131.htm",
+    "content_type": "text/html",
+    "bytes": 14433,
+    "sha256": "c6a82cd16ec2769753a11e9cb7d78b9c022e847a4b3433a14e5b9764e9510b01"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc136.htm",
+    "file": "c8c54c2cc3579f3d211d552406e731810911eb593747738821b451277e619184.bin",
+    "checked_at": "2026-10-24T17:19:23.143391+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc136.htm",
+    "content_type": "text/html",
+    "bytes": 58815,
+    "sha256": "47ee2810e143ec0e2826b272b36862b9c65c1de43d30a8c7eb24bd79ec00c505"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc137.htm",
+    "file": "121a6e24d9d6f7eba08b9958303b13a7442410fd42465d853ceedf4b608d8b2f.bin",
+    "checked_at": "2026-10-24T17:19:23.572969+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc137.htm",
+    "content_type": "text/html",
+    "bytes": 19729,
+    "sha256": "8997ffa3b570b78692f2ea657a8165f1e72cb4ad7fcc5155123c3825adc24cf4"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+    "file": "a45678d1a710ebcf65d548892ccd41b65e0364e5003740aa0efd6ffd0a5297de.bin",
+    "checked_at": "2026-10-24T17:19:23.576680+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc138.htm",
+    "content_type": "text/html",
+    "bytes": 21932,
+    "sha256": "862e371e91d1d48014e9f469e052a528d7466f0831763607f4d2774f32882687"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc139.htm",
+    "file": "a9aedffa41df3583239423f6bf0899a1669c563dee27a22c74a84ad6c80f16ed.bin",
+    "checked_at": "2026-10-24T17:19:23.767259+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc139.htm",
+    "content_type": "text/html",
+    "bytes": 19532,
+    "sha256": "056ad58cf2a751b882ea66a863890b3c0dc497c1b55e96910de5fda5a367dbe2"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "file": "0af6ffe751d8cee2111a97ce799eab62494efff949285a97dc5b757e41ea081f.bin",
+    "checked_at": "2026-10-24T17:19:23.900759+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "content_type": "text/html",
+    "bytes": 682030,
+    "sha256": "f4c34d0668dd477858a5a331104ed4bf3ec13dc21912123f6d59b78add0e67b2"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+    "file": "2218e9860df8228658101826494fa95b9cfd555ed9ebf40c9f44c4bef4d970e1.bin",
+    "checked_at": "2026-10-24T17:19:24.041944+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3688.htm",
+    "content_type": "text/html",
+    "bytes": 111343,
+    "sha256": "fef55f1d9e777c13c5ebd6a2c1f72ef84931519d27a11b0fab8f6bdc8d418a7f"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+    "file": "367caddee5f13589bea4890ad3d9bfc25c2b7fa80d6831e5fc4f33c803d45333.bin",
+    "checked_at": "2026-10-24T17:19:24.051802+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+    "content_type": "text/html",
+    "bytes": 908608,
+    "sha256": "b16c4a5d90fbb12bd6bb7e2d914235248ca691b74f0307c370e01ab14a90a8df"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto/antigos/d20910.htm",
+    "file": "f8ab29b2438d1871528eeec047a38fd8a04a6ebffeb1426d8d91ff7bdec6a622.bin",
+    "checked_at": "2026-10-24T17:19:24.283051+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/decreto/antigos/d20910.htm",
+    "content_type": "text/html",
+    "bytes": 7151,
+    "sha256": "2510bae960e2a452a80a85799952db7fe079ae636ec855f6a6da8db1123cf2d0"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+    "file": "9b7939540f209d8475499e0ffda351285cb436402fbe6652b82d08f4d2392b96.bin",
+    "checked_at": "2026-10-24T17:19:24.612686+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l7116.htm",
+    "content_type": "text/html",
+    "bytes": 19475,
+    "sha256": "c02075dd3562b4cf5c69b1347f0a7d54e2195ad839916daf271d85e34a11d8eb"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+    "file": "ecb590f93a853cf8a16b7809f9f918e8b1675f6a06f9e186722f338359acb5f3.bin",
+    "checked_at": "2026-10-24T17:19:24.931368+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+    "content_type": "text/html",
+    "bytes": 923899,
+    "sha256": "111221d1455f0cc907ce78c8a5a7b518eae62e80f5cc8c61422aad88a84f14af"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+    "file": "275c93aa732a0fcf4c2f48ec04f4d18af08baf68cd4e73de5d0df6e588841535.bin",
+    "checked_at": "2026-10-24T17:19:25.085684+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10446.htm",
+    "content_type": "text/html",
+    "bytes": 10243,
+    "sha256": "ae742f4e2b4d7c5ecad306565107e56df1c4397782afe0edf5615f6ac8cd9a66"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm",
+    "file": "e1dc399e129301ed328721074b7cd362698eb179a6d5d45d30b513501cc7dbf9.bin",
+    "checked_at": "2026-10-24T17:19:25.399787+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm",
+    "content_type": "text/html",
+    "bytes": 238160,
+    "sha256": "3554a81f09db13303238c996f7d035d0c416b650572a3350925a2984b1a4fc11"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "file": "e719b3a708017147da532aaa8701f1dba2f7ee7818f2530870e26b28a41ce1b9.bin",
+    "checked_at": "2026-10-24T17:19:26.853185+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "content_type": "text/html",
+    "bytes": 213279,
+    "sha256": "e66da3559e6fe233033395fd655050e3a79f6622c9c203d6eaa2780e87929643"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+    "file": "5ce2163adf2342e0aa0b8d9f7fd849682a4f955de5dbc58559e77efbf5be14f3.bin",
+    "checked_at": "2026-10-24T17:19:27.288603+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826compilado.htm",
+    "content_type": "text/html",
+    "bytes": 107928,
+    "sha256": "4e3c5e9a441a21bdd836ecd9c81a4c9553730f46b8e5394c2c7caeeee9af9ba1"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm",
+    "file": "1b1c7a3345aed3b1ba34c1fdc9828fb22fcd36dc6f69b1a14891afb664c9d5c6.bin",
+    "checked_at": "2026-10-24T17:19:27.983125+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm",
+    "content_type": "text/html",
+    "bytes": 533449,
+    "sha256": "88bb8864eae3fcf431cd4285f9e712c05e37f5347a02b943d24de627029692ff"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+    "file": "ff0b58810e11ade50e2795c5f489e4a44a2aad9c38fffb80824a308cfef963c8.bin",
+    "checked_at": "2026-10-24T17:19:28.460302+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+    "content_type": "text/html",
+    "bytes": 289910,
+    "sha256": "eb08d0744a9af7e7cf3cbc471f6ea265466c59152fd63d76a8552e649b75cec9"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm",
+    "file": "6ac1a236a1a572d1746d6a3905e39b3855eadd87f6cc6bcb7285442f83598201.bin",
+    "checked_at": "2026-10-24T17:19:29.449541+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm",
+    "content_type": "text/html",
+    "bytes": 554245,
+    "sha256": "7a926761b11c4cd2f4e08a26904e7ab729f8552d099aa2735d859d84a08ebd11"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+    "file": "57fb1af39d62413ecf1f14bc67bfecc64d68802f5bf97bc26b2f7635b33058c7.bin",
+    "checked_at": "2026-10-24T17:19:29.586956+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+    "content_type": "text/html",
+    "bytes": 307502,
+    "sha256": "5f7fbfffcf9c988469523de714b1b6d526cad6b2b14798086fce858ef92ec256"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+    "file": "f41510471d5614ab76c552a5aa76dae5d01545f46d2d89e43bd7f6939d2fa79b.bin",
+    "checked_at": "2026-10-24T17:19:29.677181+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l7716.htm",
+    "content_type": "text/html",
+    "bytes": 28851,
+    "sha256": "56cdcfd37c154c380d20a88d86dddcafbabda7503ea071ec3569263b7ee49d59"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+    "file": "684d0bbb039625bcd5c2834eaf056eef4dd74b06396b8f17104e13d5d3d4e398.bin",
+    "checked_at": "2026-10-24T17:19:30.035738+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l7960.htm",
+    "content_type": "text/html",
+    "bytes": 14347,
+    "sha256": "e13652143bdb99889d6f4a46d514913f112642a02dccac0628652ef4abffccc5"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+    "file": "1728d7f796d28666b74496a82ec763c418df39214920d07a928b2cc3d4801ecf.bin",
+    "checked_at": "2026-10-24T17:19:30.230241+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+    "content_type": "text/html",
+    "bytes": 696951,
+    "sha256": "5a22c3f50e7136e5a026a42f68ff9ad6509ebf8d89b1a8a038cf9e40934e7041"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+    "file": "8095d6303715ab6d936f35ddeb51f9a85229cfa39667d1d570a908d51b52b8b2.bin",
+    "checked_at": "2026-10-24T17:19:30.271034+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l8072.htm",
+    "content_type": "text/html",
+    "bytes": 50432,
+    "sha256": "ad22871827739eeb4b57424760080270cf73ba8c2ccba92707c78bd81685de41"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+    "file": "3ae6dcfd6ea43180e477cfa4e9ee0afcd8128e69ab5830e9181ea2f99ce5c87c.bin",
+    "checked_at": "2026-10-24T17:19:30.493773+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm",
+    "content_type": "text/html",
+    "bytes": 563961,
+    "sha256": "e1937284c454f23225b45e45f073b335113ed52647ee8383cec93e2fb306635d"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+    "file": "ae94c86903b573f367d086a2856efa6e4bc7e0877e0f52e08475d49801690dd2.bin",
+    "checked_at": "2026-10-24T17:19:31.018369+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+    "content_type": "text/html",
+    "bytes": 210250,
+    "sha256": "6cd3e9f4a09c13703f86e045cb7ef3e95f7666f159f01b50cc2ef3b8bae37a5b"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+    "file": "d20d35a9588511822ffe25eac278fc84b76b451de77e486e47634f759487916d.bin",
+    "checked_at": "2026-10-24T17:19:31.777131+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm",
+    "content_type": "text/html",
+    "bytes": 89220,
+    "sha256": "2740e18a8188e7b5b67dc4cbfe9d315c653aa3dd1847d28591977af809b05c8c"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+    "file": "bde573c8fbb0e99d60a1b4cbddd9dccc3b4da3a15e896e0393de71bfa2bd860d.bin",
+    "checked_at": "2026-10-24T17:19:32.326985+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9296.htm",
+    "content_type": "text/html",
+    "bytes": 21359,
+    "sha256": "3eb58a13f32e96f6a3219eb43aaec43f56cdcfa1aa462718156aa1111fc6a237"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+    "file": "db71431a50c2a2b7bf6e99fc1ed9f7190d903c38eee593944e1c3d26b4b08e5d.bin",
+    "checked_at": "2026-10-24T17:19:32.354895+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9454.htm",
+    "content_type": "text/html",
+    "bytes": 12766,
+    "sha256": "62c98918934eac2fa8a69c80d437408a824c8c02e2cd5f0376e910c47e9f4ea6"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+    "file": "459f51f38eb3fe727491ff174872e779f2947ea39456d3d7fa9415c01482cdec.bin",
+    "checked_at": "2026-10-24T17:19:32.689167+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9455.htm",
+    "content_type": "text/html",
+    "bytes": 9339,
+    "sha256": "9d5704fe73449f45b5c0a1025956e8feabbbd8e24c43b3fc35bd595322911b4f"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9474.htm",
+    "file": "7addc79b1f9d26ff8e2af90c704d12362d263b8322946ccefba0d342895fc555.bin",
+    "checked_at": "2026-10-24T17:19:32.810058+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9474.htm",
+    "content_type": "text/html",
+    "bytes": 34117,
+    "sha256": "e5aa24ecb5c9f76becf25d955e2952031a8a06a22ce48beeab44cbcc164223d6"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9494.htm",
+    "file": "bd8e8a72b0cec6cb7bd00ef3a97575d70e7e69c2b85bff9cbb4cfb8dabe38038.bin",
+    "checked_at": "2026-10-24T17:19:32.993243+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9494.htm",
+    "content_type": "text/html",
+    "bytes": 11734,
+    "sha256": "ad196b3a36591bcc7b50f324cae9b4facb3ec666318ddac7b91e204b0e14464f"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "file": "a5a20fb016867651f60fe53c2c064dcf4738b385dec94b2d94916c0902b68353.bin",
+    "checked_at": "2026-10-24T17:19:33.024503+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "content_type": "text/html",
+    "bytes": 789873,
+    "sha256": "4c495081fb54fda1c6db2a1833b5d16b46f0c6eded60d2f80a8dabec6c64615e"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+    "file": "ac457704198c69ddf8639170e82354c105095085bc430ccf26f73565f3013f11.bin",
+    "checked_at": "2026-10-24T17:19:33.279631+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+    "content_type": "text/html",
+    "bytes": 120006,
+    "sha256": "9c18f048f4096da542c68cf355f92c00d0e951e59e8e8a11efce648e032761e8"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+    "file": "05b7cd4618fae40b839ab291d478ebd576154c0b2b49da9ffa8615edd3e690f6.bin",
+    "checked_at": "2026-10-24T17:19:33.379334+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9613.htm",
+    "content_type": "text/html",
+    "bytes": 131715,
+    "sha256": "24097a9457f2078993b68229406ba426a083529b89f7d25e54d9e979f26a93af"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+    "file": "8424f419d88d7839b7c83256de496f4ee7cec9a915cda5d1faa4c72c4673db48.bin",
+    "checked_at": "2026-10-24T17:19:33.504650+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+    "content_type": "text/html",
+    "bytes": 74941,
+    "sha256": "ba754406a95c3b35159802c9326197b8642c7591989af22ee211397d4784015e"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+    "file": "abeeee49d0594ab971fa49e9ab661f0109fa8b28923c31a36d6bb16fc7a877c9.bin",
+    "checked_at": "2026-10-24T17:19:34.131715+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9807.htm",
+    "content_type": "text/html",
+    "bytes": 27371,
+    "sha256": "5b41f5c4c29c302b675b59a2d387b3b3fbfcbb9253ab7d28e657a04d6d7c6967"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9873.htm",
+    "file": "81e4e797da5230bcf9948ae75b99d1ab21059a96d04af4ffbcdf180552ad6941.bin",
+    "checked_at": "2026-10-24T17:19:34.180794+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/l9873.htm",
+    "content_type": "text/html",
+    "bytes": 14368,
+    "sha256": "a0bd62040e1a51b9c605d620c1c0bcdeac6f5bda1aca4d9ad6557631c20c146b"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm",
+    "file": "4935d6dd88ab3c26356e78d3c104c801bc43cc98cbeede36790f16fd13866f14.bin",
+    "checked_at": "2026-10-24T17:19:34.296835+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm",
+    "content_type": "text/html",
+    "bytes": 1644422,
+    "sha256": "6a04aab111d72e49fb2479e8b995074b325a016cacb9fb4d074ac2d1617d4e68"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp198.htm",
+    "file": "417e522ee0bebe0af18c90356491e8d7976add23592d42a74479eec192b10467.bin",
+    "checked_at": "2026-10-24T17:19:34.443755+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp198.htm",
+    "content_type": "text/html",
+    "bytes": 19277,
+    "sha256": "e795f5ae7b9cbf07c50bf502b4da62e88f664df624be513a1d5330bb4d71bac6"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "file": "83382f53eedc306253d111944f453ac039b27717a7fa3fd040f4792445a2ac56.bin",
+    "checked_at": "2026-10-24T17:19:34.516312+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "content_type": "text/html",
+    "bytes": 5402108,
+    "sha256": "ae6b958b9877b8bff56d8bd2d2010aa37f760fc703ad28889c53785ecef362f6"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+    "file": "390758a9d3ebc3ade43edb528dacde40ace7411422e8e8bf4fdb55802f2951ef.bin",
+    "checked_at": "2026-10-24T17:19:34.632472+00:00",
+    "status": 200,
+    "final_url": "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10357.htm",
+    "content_type": "text/html",
+    "bytes": 22333,
+    "sha256": "09e5617320121b4d61abbb5d271421a1773cbaeea4b12e6904ecb48bca3b1330"
+  },
+  {
+    "code": "106",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/530_CPC_48_rev_19.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=106",
+    "checked_at": "2026-10-24T17:27:30.954099+00:00",
+    "status": 200,
+    "file": "c3acd1c5cefd0bd68c4bdec976e61d0e4080f4df61ed8705861429abe890107d.pdf",
+    "sha256": "22fd4e8df8ff2c93506b80720f921c139d4c972e51617e8979addcdff1cd5be6",
+    "bytes": 1129244,
+    "pages": 130,
+    "text_chars": 492934
+  },
+  {
+    "code": "2",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/27_CPC_01_R1_rev 21_ComAVISO.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=2",
+    "checked_at": "2026-10-24T17:27:30.954678+00:00",
+    "status": 200,
+    "file": "58f603ea99ba63c7b45aeee3af25364ea16931862d1fb55c361e56d14c8433bc.pdf",
+    "sha256": "0e102dd9d30251a7711ad32dfe7e78edf61fc60fff6ed1f6fcd42a2d39ad2eb1",
+    "bytes": 525319,
+    "pages": 46,
+    "text_chars": 137602
+  },
+  {
+    "code": "34",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/183_CPC_03_R2_rev 24.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=34",
+    "checked_at": "2026-10-24T17:27:30.955012+00:00",
+    "status": 200,
+    "file": "6170292c57f6ce521d88498e1c78b05b60c65b61b78a7a6da68d5ab6afe6653d.pdf",
+    "sha256": "0aa75f14f80cf45e0c9de00e1d5e52f52e368c0d73ffa41ea9d67e37d277571c",
+    "bytes": 486567,
+    "pages": 24,
+    "text_chars": 64314
+  },
+  {
+    "code": "35",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/187_CPC_04_R1_rev 21.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=35",
+    "checked_at": "2026-10-24T17:27:30.955325+00:00",
+    "status": 200,
+    "file": "af5ed9b508ca4bd3da3a0b5497544c48471f1666d4a9c59e4f5782da81353672.pdf",
+    "sha256": "28a8ae024050b630483f9ad182168ffd1abf1825df2450ff48f008f168896c54",
+    "bytes": 503222,
+    "pages": 38,
+    "text_chars": 121044
+  },
+  {
+    "code": "40",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/632_CPC 09 R1.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=40",
+    "checked_at": "2026-10-24T17:27:30.955590+00:00",
+    "status": 200,
+    "file": "203b95274ed49a94b3804cc2fbc597a8cc1868ff6b97568fa4871c46457c4dbd.pdf",
+    "sha256": "b845c34874cafae0d16c38355d3dbe0ab27949c287599deaa037eabcb22737cd",
+    "bytes": 532646,
+    "pages": 24,
+    "text_chars": 75067
+  },
+  {
+    "code": "43",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/619_CPC 12 (R1) - Ajuste a Valor Presente.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43",
+    "checked_at": "2026-10-24T17:27:33.917842+00:00",
+    "status": 200,
+    "file": "6c559cb624f5de5ffe65fb78aa1e8c2316a4dc3678e3828ae59d8f0a2c0f09b8.pdf",
+    "sha256": "356573e52dcccc952d813396eb5d4cf1226f38eb6629f175a12ff87ef6079276",
+    "bytes": 333750,
+    "pages": 21,
+    "text_chars": 67958
+  },
+  {
+    "code": "47",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/243_CPC_16_R1_rev 13_ComAVISO.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=47",
+    "checked_at": "2026-10-24T17:27:33.993639+00:00",
+    "status": 200,
+    "file": "98283daf1289f1b071b1a38f97d4837a0e432bdc36d67171ff124b709aef0110.pdf",
+    "sha256": "b78bd34da5010237dd15a2f5c3477d26aa8c7c0edeb80907fd1c0053d121bde6",
+    "bytes": 315907,
+    "pages": 11,
+    "text_chars": 32952
+  },
+  {
+    "code": "54",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/296_CPC_23_rev 20.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=54",
+    "checked_at": "2026-10-24T17:27:33.994592+00:00",
+    "status": 200,
+    "file": "296a1b56fae73aae9b35096c9646c9227a079956a417cb6de4b1950a67a731d3.pdf",
+    "sha256": "d76e50342da47bb3a284b235adc6e3d5fb3a4c0b54d5b76802c2e9f0f67b6634",
+    "bytes": 226238,
+    "pages": 14,
+    "text_chars": 42723
+  },
+  {
+    "code": "56",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/304_CPC_25_rev 19.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56",
+    "checked_at": "2026-10-24T17:27:34.201913+00:00",
+    "status": 200,
+    "file": "42910485d00c0ef745de70c7c4d9047f6dfe14ba62aa9523d032fb2d2736c32f.pdf",
+    "sha256": "65cf567bb61564745df0a78aa00a8f4249b1f15d96e3323c710e2c46feb636c3",
+    "bytes": 314512,
+    "pages": 27,
+    "text_chars": 77439
+  },
+  {
+    "code": "57",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/312_CPC_26_R1_rev 23_ComAVISO.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=57",
+    "checked_at": "2026-10-24T17:27:34.321146+00:00",
+    "status": 200,
+    "file": "a6be380acd3d7906487b9e0ce38b6e2e28fd93b300f7611643bcab0945ff3ead.pdf",
+    "sha256": "e13631496a38670b99c0773b0c10d415489409b61c5f17ead7a475c1d2fa709e",
+    "bytes": 622845,
+    "pages": 49,
+    "text_chars": 160952
+  },
+  {
+    "code": "58",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/316_CPC_27_rev 22.pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=58",
+    "checked_at": "2026-10-24T17:27:35.950464+00:00",
+    "status": 200,
+    "file": "af2406ec7e87fc409717cf920bcf4a70e19341cdfc7df5c68ee5876f09a06097.pdf",
+    "sha256": "0fa0400a65a27efaf66f38229d78fafa38a3078e0a5a299d2032a0b12dbbe3e2",
+    "bytes": 242507,
+    "pages": 18,
+    "text_chars": 61317
+  },
+  {
+    "code": "80",
+    "url": "https://www.cpc.org.br/Arquivos/Documentos/573_CPC00(R2).pdf",
+    "index_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=80",
+    "checked_at": "2026-10-24T17:27:36.013497+00:00",
+    "status": 200,
+    "file": "e27daa2f46ce7d5390fe4c70bcc97903c0e3faf5060119154597817f24b91188.pdf",
+    "sha256": "acb69b58ab30db63f39550bb4d1d95de2275eb70fb82f9a333de9512333c920d",
+    "bytes": 735794,
+    "pages": 62,
+    "text_chars": 200647
+  },
+  {
+    "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1194&cod_tema_final=1194",
+    "checked_at": "2026-10-24T17:31:54.370365+00:00",
+    "status": 200,
+    "file": "c656a9b555cba9856cc2bba6574abc4efbb67c721d79e08967d9b7ad4a866736.bin",
+    "sha256": "097a7fe590390220ff3f338187e9c462f614e141c29d25280f845c8cad8000f4",
+    "bytes": 59534,
+    "final_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1194&cod_tema_final=1194",
+    "content_valid": true
+  },
+  {
+    "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270863%27.cod.",
+    "checked_at": "2026-10-24T17:31:54.371184+00:00",
+    "status": 200,
+    "file": "a80bf657508392feb8ae2ef90fc7d96d98b2fa82328497d06e580fef7901fe6a.bin",
+    "sha256": "8fb8c3ddec9ddfd8d783b893fc5a171320b54bf22c096ac719d454951550ed83",
+    "bytes": 295334,
+    "final_url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270863%27.cod.",
+    "content_valid": true
+  },
+  {
+    "url": "https://www1.cfc.org.br/sisweb/SRE/docs/ITG2000(R1).pdf",
+    "checked_at": "2026-10-24T17:31:54.371603+00:00",
+    "status": 200,
+    "file": "be566123035892cf7ecaf70abc3738361391e05b013ee33c127d3b8581ddd305.bin",
+    "sha256": "6b4355f83fb74d084248893d4dc3ce78258a624a151dabcaebb801d9a63042e5",
+    "bytes": 212395,
+    "final_url": "https://www1.cfc.org.br/sisweb/SRE/docs/ITG2000(R1).pdf",
+    "content_valid": true
+  },
+  {
+    "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTGEC.pdf",
+    "checked_at": "2026-10-24T17:31:54.371953+00:00",
+    "status": 200,
+    "file": "3f2831d87039409b3bfec7248ca9fb89567f47e8c653838a14e3a29ca0a3d369.bin",
+    "sha256": "4b55e6d00a2cecdcc241b9cb1a5ba65ef57ab6c95aee64876f959dc61affefa0",
+    "bytes": 672319,
+    "final_url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTGEC.pdf",
+    "content_valid": true
+  },
+  {
+    "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+    "checked_at": "2026-10-24T17:23:30.299984+00:00",
+    "status": 200,
+    "file": "6110b8d50599bfdfe7fd8acc1d458187069635cafc4de2843d838268cf33dec2.bin",
+    "sha256": "5188086378bebdb1d2f5dc61dc5f22247709b0ca8527b0377162fe02aea4afcb",
+    "bytes": 191163,
+    "final_url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf"
+  },
+  {
+    "url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+    "checked_at": "2026-10-24T17:23:30.300543+00:00",
+    "status": 200,
+    "file": "cc5bcb123c1fc7537ccaf9d9d6fd7a97e4ea6fc2e73ee0c61d618a2bee126115.bin",
+    "sha256": "9deae26a22e7ff26ef56b7d28320393f435c2bf55e6ca1ddd5b4b52095611dda",
+    "bytes": 233218,
+    "final_url": "https://www1.cfc.org.br/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf"
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos",
+    "checked_at": "2026-10-24T17:23:30.301160+00:00",
+    "status": 200,
+    "file": "6f8c7236a6cea9fa9be1497e1e1740af9ae03c955695d8002e76db7afed387e2.bin",
+    "sha256": "40557167f48c2b0a83930c3c9ad5cb6b13323b5637243d37a1f64d31999b2bf1",
+    "bytes": 67827,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos"
+  },
+  {
+    "url": "https://noticias.stf.jus.br/postsnoticias/associacao-questiona-no-stf-pontos-do-marco-legal-do-combate-ao-crime-organizado/",
+    "checked_at": "2026-10-24T17:25:12.871945+00:00",
+    "status": 200,
+    "file": "1b77c82c70c783e0777825977966291e6fd0e71120cc764d473265124e0f2a8a.bin",
+    "sha256": "c4457d657e88ec207beb521f6421de1ba4e554133250f7fba61e10739d8f237b",
+    "bytes": 65505,
+    "final_url": "https://noticias.stf.jus.br/postsnoticias/associacao-questiona-no-stf-pontos-do-marco-legal-do-combate-ao-crime-organizado/"
+  },
+  {
+    "url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/",
+    "checked_at": "2026-10-24T17:25:12.872498+00:00",
+    "status": 200,
+    "file": "398d6fc5eb7fb88d5e20c4d30cb6f3f93d0c84862333552bc885093c6aadd014.bin",
+    "sha256": "7374d2d0c6ea96df8e75074c7f64710d12cfeb821236b874181f4ae45d7ea249",
+    "bytes": 66828,
+    "final_url": "https://noticias.stf.jus.br/postsnoticias/stf-define-40-gramas-de-maconha-como-criterio-para-diferenciar-usuario-de-traficante/"
+  },
+  {
+    "url": "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/",
+    "checked_at": "2026-10-24T17:25:12.872821+00:00",
+    "status": 200,
+    "file": "fb2480fa1f815e02c136edfef3f6b44332984106d4a4a30e71b8478e23a8c4bf.bin",
+    "sha256": "73a14e18ad910359fddbc2418560f9a03a4345c06ca1ea51f1fa475ba1ac5e2b",
+    "bytes": 69191,
+    "final_url": "https://noticias.stf.jus.br/postsnoticias/supremo-declara-inconstitucionalidade-de-tres-dispositivos-do-estatuto-do-desarmamento/"
+  },
+  {
+    "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=897",
+    "checked_at": "2026-10-24T17:25:12.873103+00:00",
+    "status": 200,
+    "file": "91e4c53d632ce3e6846fdde7cc1370f7af457f30971dfd34866aad6e1bc271ae.bin",
+    "sha256": "75195671f546ee028e34d0031beb7b09dd770c97f014749ef2737aaa899bc6f1",
+    "bytes": 61517,
+    "final_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=897"
+  },
+  {
+    "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=940",
+    "checked_at": "2026-10-24T17:25:12.873306+00:00",
+    "status": 200,
+    "file": "8982044fad9b09aeac2ac367f470a2ba34dfda8e2f17541bbc44ededb792dd6c.bin",
+    "sha256": "4be400269fb9cb604ea726dedf898bf51d81c277b9607d0af17d827d9ce623da",
+    "bytes": 61631,
+    "final_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=940"
+  },
+  {
+    "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4005451&numeroProcesso=633782&numeroTema=532",
+    "checked_at": "2026-10-24T17:25:14.861497+00:00",
+    "status": 200,
+    "file": "8742c4184641de0364b5816539d6a38e563093d571dfa3750785472d9f4099ee.bin",
+    "sha256": "e7cdbf27ab22ef977e558a5625aa914972afd08e5add7669b05ad5fad008fc36",
+    "bytes": 195834,
+    "final_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4005451&numeroProcesso=633782&numeroTema=532"
+  },
+  {
+    "url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4645403&numeroProcesso=841526&numeroTema=592",
+    "checked_at": "2026-10-24T17:25:14.885121+00:00",
+    "status": 200,
+    "file": "1964a43a885531f983ccfcb65f7f9338e2ca54a5ca911a572c5c7725b0d154d4.bin",
+    "sha256": "34309e1193375b8c7adba90478d139e44f0cf0872f856d537ed490d156b4cbee",
+    "bytes": 186266,
+    "final_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4645403&numeroProcesso=841526&numeroTema=592"
+  },
+  {
+    "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=481715&tip=UN",
+    "checked_at": "2026-10-24T17:25:14.961582+00:00",
+    "status": 200,
+    "file": "2dd3e2fd8ceaa56a94ace2d581328ed1fe39352ba0a79fe2c1e63c0c72e27aca.bin",
+    "sha256": "a2fa2fcc4224c2c92bc05aa0127f490ae80bad8d6c8c886a4a540777d3b7123f",
+    "bytes": 65132,
+    "final_url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=481715&tip=UN"
+  },
+  {
+    "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=493313&ori=1",
+    "checked_at": "2026-10-24T17:25:15.218481+00:00",
+    "status": 200,
+    "file": "b031a10c5d34c471b2d3124a0321f8d38fe025d10a39add774cde802d9391618.bin",
+    "sha256": "3b95c60d6a8bfa5eb0c14da96ba41a3678ffdfbb79a6c2d98c4d86ead8fb6514",
+    "bytes": 61868,
+    "final_url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=493313&ori=1"
+  },
+  {
+    "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2259375",
+    "checked_at": "2026-10-24T17:25:15.682163+00:00",
+    "status": 200,
+    "file": "4ec46b426b1001cc705f570cc7ce7a878d82aef588c783a67a621d982d43926a.bin",
+    "sha256": "83558ea648d5fe7d4235013a7f8d48db79d1933613031fb9e61f2863e3261d07",
+    "bytes": 71584,
+    "final_url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2259375"
+  },
+  {
+    "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552",
+    "checked_at": "2026-10-24T17:25:17.125622+00:00",
+    "status": 200,
+    "file": "ed92a37c661184eb368d18ac4d5ccfa20a1a4df8b018703055fe26652713074a.bin",
+    "sha256": "2b4b4279fea95675d167607f2d9b1e9789bb0735f1bf6db89aba908c3299e7fd",
+    "bytes": 70894,
+    "final_url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5840552"
+  },
+  {
+    "url": "https://portal.stf.jus.br/processos/listarProcessos.asp?classe=ADI&numeroProcesso=7236",
+    "checked_at": "2026-10-24T17:25:17.368816+00:00",
+    "status": 200,
+    "file": "f0ce95840dbf04bc87bade0e08460130ace9b25761810fe2f553fa11340e1edd.bin",
+    "sha256": "f92c66c3475151f36bf7b0272cc6053a1462faf6284f74cf37f19f009f425d46",
+    "bytes": 70920,
+    "final_url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=6475588"
+  },
+  {
+    "url": "https://portal.stf.jus.br/textos/verTexto.asp?pagina=casos_notorios_2022&servico=jurisprudenciaPesquisaGeral",
+    "checked_at": "2026-10-24T17:25:17.638468+00:00",
+    "status": 200,
+    "file": "a059472bccde60a860b59db26ef9fac51d6007c3f44a7ef2c184b3b94326a0b4.bin",
+    "sha256": "7fe4a011c328f7b381b9131ff3b0ea06d340f9efc34acbb48f9680d1e2466971",
+    "bytes": 151955,
+    "final_url": "https://portal.stf.jus.br/textos/verTexto.asp?pagina=casos_notorios_2022&servico=jurisprudenciaPesquisaGeral"
+  },
+  {
+    "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D014772",
+    "checked_at": "2026-10-24T17:25:17.851095+00:00",
+    "status": 200,
+    "file": "607d452f438121bbfbd2a2791c831281115efd0df2196b784efc567945e54e34.bin",
+    "sha256": "3e6b352b44bad1812f2c8413b391a958c1c17d630846dc03b4db1bdd0920273e",
+    "bytes": 140382,
+    "final_url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisar&aplicacao=informativo&livre=%40cnot%3D014772"
+  },
+  {
+    "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270821%27.cod.",
+    "checked_at": "2026-10-24T17:25:17.874489+00:00",
+    "status": 200,
+    "file": "4ff6e0a170be7290f4b423c2d730b2913a4fa5c36515e5b33845e6268b2af6c9.bin",
+    "sha256": "bb59fcad0e2de18d4dfdcc5d7118ae8285d56a80672ced610435fa83ada20fb0",
+    "bytes": 347923,
+    "final_url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/?acao=pesquisarumaedicao&livre=%270821%27.cod."
+  },
+  {
+    "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T",
+    "checked_at": "2026-10-24T17:25:17.998947+00:00",
+    "status": 200,
+    "file": "a692b506b3a292daad947baeaf8c156b00db4c39d4915e784668f78113226c0d.bin",
+    "sha256": "067bb30b5d6653102578b49023d88bce5800f9bfad28057e061908b655384b90",
+    "bytes": 79508,
+    "final_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=1016&cod_tema_inicial=1016&novaConsulta=true&tipo_pesquisa=T"
+  },
+  {
+    "url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T",
+    "checked_at": "2026-10-24T17:25:18.425833+00:00",
+    "status": 200,
+    "file": "7243813c0761ef8a74460ee66800a4200f0ad6e6886deedccccea3df48cbb4d1.bin",
+    "sha256": "337d34adb3ac103dd779ee26c88eb99c6be80e3533ed0d668a7f035d6b5ffc0c",
+    "bytes": 61698,
+    "final_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?cod_tema_final=952&cod_tema_inicial=952&novaConsulta=true&tipo_pesquisa=T"
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=106",
+    "checked_at": "2026-10-24T17:25:18.669098+00:00",
+    "status": 200,
+    "file": "ac9f11e2a737ec2d9a1198f8fb17d723465f61ad42743846535a2f68b8f86e03.bin",
+    "sha256": "7f7b0d81c3b4d090174e5c24b36cf6ffbf2028adb6593a51657b91fc7c75af3b",
+    "bytes": 21975,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=106",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/529_CPC_48 Termo de Aprovação.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/530_CPC_48_rev_19.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/531_CPC_48 Relatorio audpub.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=2",
+    "checked_at": "2026-10-24T17:25:18.670129+00:00",
+    "status": 200,
+    "file": "7304245da6d8ede877e816d92bdc2da491ed84c704076e675924fa527885fc07.bin",
+    "sha256": "5bc77b8f4f5cdace45a734878721c3a63cb6f99b207c260e8b510b4fca8d9c5f",
+    "bytes": 24605,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=2",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/26_CPC 01 R1 Termo de Aprovação.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/27_CPC_01_R1_rev 21_ComAVISO.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/28_CPC01R1_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/29_CPC 01 R1 Relatório da Audiência Pública.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=34",
+    "checked_at": "2026-10-24T17:25:19.246262+00:00",
+    "status": 200,
+    "file": "0a0da99338f90c5ee0f648ba27b124a3736b4283b90c37efd0c86c747f516a9a.bin",
+    "sha256": "9f837e50a055f4b4a8124331544b4625c1ddd1497fa9bd3b6070ade156c29900",
+    "bytes": 25508,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=34",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/182_CPC03R2_Termoaprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/183_CPC_03_R2_rev 24.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/184_CPC03R2_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/185_CPC03R2_rel_audpub.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=35",
+    "checked_at": "2026-10-24T17:25:19.427116+00:00",
+    "status": 200,
+    "file": "a1f66c2f5d1c797d79560e3e460976c2e59c041aabfdd66c3b916235541b3edc.bin",
+    "sha256": "306069b8bc5c18d6e71d2c805886618aac00635971af58e889168fb5f1d0bd3d",
+    "bytes": 24711,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=35",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/186_CPC04_R1_Termoaprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/187_CPC_04_R1_rev 21.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/188_CPC04_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/189_CPC04R1_rel_audpub.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=40",
+    "checked_at": "2026-10-24T17:25:19.804044+00:00",
+    "status": 200,
+    "file": "8913cb1e4a007c8e6316c13e87803736f408bec7d816c4399da136cd2535f200.bin",
+    "sha256": "79d1f1d4c77926ec6764fa0940d46536bec6e5163a18d73e3774a02715985ec8",
+    "bytes": 24968,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=40",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/631_CPC 09 R1_Termo_de_aprovação.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/632_CPC 09 R1.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/634_CPC 09 R1_Relatório_de_audiência.pdf"
+      },
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/174_Termo_de_aprovacao_CPC_09.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/175_CPC_09_rev 14.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/176_Sumario_CPC_09.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/177_relatorio_audpub_CPC_09.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43",
+    "checked_at": "2026-10-24T17:25:19.805397+00:00",
+    "status": 200,
+    "file": "660f06dfbd9597d7274f55979a07ce563b5bb431fd88f77d5e71b74c79ae91e3.bin",
+    "sha256": "5ff5f99b3f580ebdcea0fa9edd7e75a52789c53b06991cf867a449ffab74de91",
+    "bytes": 24302,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/618_CPC 12 (R1) - Termo de aprovação.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/619_CPC 12 (R1) - Ajuste a Valor Presente.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/621_CPC 12 (R1) - Relatório da audiência pública.pdf"
+      },
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/218_Termo_de_aprovacao_CPC_12.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/219_CPC_12.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/220_Sumario_CPC_12.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/221_relatorio_audpub_CPC_12.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=47",
+    "checked_at": "2026-10-24T17:25:19.935941+00:00",
+    "status": 200,
+    "file": "c1f2843f4e0e4f1ac718bc557309dce8c1eeb6d6c25aff49096cc27f4fc53fe5.bin",
+    "sha256": "95ecd159f5a993608901e8812df98e71be5bd9d9f9cd261031c443c686ca7d0a",
+    "bytes": 24447,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=47",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/242_CPC_16_TermoAprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/243_CPC_16_R1_rev 13_ComAVISO.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/244_CPC_16_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/245_CPC_16_RelatorioAudiencia.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=54",
+    "checked_at": "2026-10-24T17:25:20.244708+00:00",
+    "status": 200,
+    "file": "0d3e22f1cd431f29a5ba4c6fd0eb408ecf8af384a2496dcd870e70e054f28583.bin",
+    "sha256": "9a24378d8e2b0a8dd802915404577eed8ca1d243a9cccd1998b54d3dcb1a0942",
+    "bytes": 22880,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=54",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/295_CPC_23_Termodeaprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/296_CPC_23_rev 20.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/297_CPC_23_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/298_CPC_23_relatoriodaaudiencia.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56",
+    "checked_at": "2026-10-24T17:25:20.260604+00:00",
+    "status": 200,
+    "file": "78b4f4b1481a29f89bc0a2d56d78bf3548c482d6cbea6a6f9368328d63a40ccb.bin",
+    "sha256": "111555c229fc69533906bc5e2fb33bbda73ff8c504a7b4f21a34fc76478f599c",
+    "bytes": 22857,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/303_CPC_25_Termodeaprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/304_CPC_25_rev 19.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/305_CPC_25_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/306_CPC_25_Relatorio_audienciapublica.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=57",
+    "checked_at": "2026-10-24T17:25:20.437350+00:00",
+    "status": 200,
+    "file": "e1ef32c10ff64ea695ed0b0aa331ceb702d205ea2ac9f54d1888567b5dc8e320.bin",
+    "sha256": "b437f92a3766016ef83ffc15627109cdd94cd42a1a7f79df57332d5b364efc5d",
+    "bytes": 24577,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=57",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/311_CPC26_R1_Termo de aprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/312_CPC_26_R1_rev 23_ComAVISO.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/313_CPC26_R1_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/314_CPC26_R1_Rel_AudPublica.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=58",
+    "checked_at": "2026-10-24T17:25:20.473477+00:00",
+    "status": 200,
+    "file": "d8aaabc3441de0da6cf7852820bf4cfe498e819eaa4ea599e428f0ee6df51f72.bin",
+    "sha256": "b2f6cd03ee489da3b0150791a2786ddd78ce7cfad2bb54d927798fb440adc334",
+    "bytes": 22812,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=58",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/315_CPC 27 Termo de aprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/316_CPC_27_rev 22.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/317_CPC 27 Sumário.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/318_CPC 27 Relatorio_audpub.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=80",
+    "checked_at": "2026-10-24T17:25:20.622454+00:00",
+    "status": 200,
+    "file": "b239636e4e8876385c53d074e02472ebad49623e001995acfa4a9d9f5da5d964.bin",
+    "sha256": "a8998e9fe7b81da448c23a0c2bea6bc1b2cf501b40aef1c758641c09e113d516",
+    "bytes": 27540,
+    "final_url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=80",
+    "pdf_links": [
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/572_CPC_00 (R2) Termo de Aprovação.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/573_CPC00(R2).pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/575_CPC_00(R2) Relatorio de Audiência Pública (EA).pdf"
+      },
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/146_CPC00_R1_Termo_de_aprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/147_CPC00_R1.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/148_CPC00_R1_Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/149_CPC00_R1_Rel_AudPublica.pdf"
+      },
+      {
+        "title": "Termo de Aprovação",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/454_CPC00 Termo Aprovacao.pdf"
+      },
+      {
+        "title": "Pronunciamento",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/455_CPC00 Pronunciamento.pdf"
+      },
+      {
+        "title": "Sumário",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/456_CPC00 Sumario.pdf"
+      },
+      {
+        "title": "Relatório da Audiência Pública",
+        "url": "https://www.cpc.org.br/Arquivos/Documentos/457_CPC00 Relatorio AudPub.pdf"
+      }
+    ]
+  },
+  {
+    "url": "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Verbetes/VerbetesSTJ_asc.pdf",
+    "checked_at": "2026-10-24T17:25:20.776648+00:00",
+    "status": 200,
+    "file": "78e1faf94c98a659279a4ab7fa2390d9402545a0a7928994a672c65dd786c8dd.bin",
+    "sha256": "90609cbe65a79261478116bafdbea82cc81544452e3e5cb5e9cebac6f9b3def3",
+    "bytes": 417469,
+    "final_url": "https://www.stj.jus.br/docs_internet/jurisprudencia/tematica/download/SU/Verbetes/VerbetesSTJ_asc.pdf"
+  }
+]

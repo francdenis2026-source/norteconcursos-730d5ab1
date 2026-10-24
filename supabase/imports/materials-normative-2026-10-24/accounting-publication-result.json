@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-24T18:02:29.731378+00:00",
+  "file": "04-publish-accounting.sql",
+  "sql_sha256": "eb6df07545c07d514a7afcc20937a7b223210c675094c804bec46c6649814b74",
+  "http_status": 201,
+  "result": [
+    {
+      "confirmed_materials": 18,
+      "additional_exercises": 304
+    }
+  ]
+}

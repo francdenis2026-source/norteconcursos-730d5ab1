@@ -27,7 +27,7 @@ import { useMediaCatalog } from "@/lib/mediaStore";
 import { lawVideos } from "@/lib/relatedVideos";
 import { UnitTrueFalse } from "@/components/library/UnitTrueFalse";
 import { LegalCoverage } from "@/components/library/LegalCoverage";
-import { useStudyMaterial } from "@/lib/studyMaterials";
+import { useStudyMaterial, type StudyMaterial } from "@/lib/studyMaterials";
 import { UnitExplanation } from "@/components/library/UnitExplanation";
 import { LegalRefProvider } from "@/components/library/LegalRefText";
 import { rememberLegal } from "@/components/library/StartHere";
@@ -561,6 +561,7 @@ function LegalCoursePage() {
                   unit={selected}
                   law={course.slug}
                   materialSlug={course.material_slug}
+                  practiceMaterial={material.data ?? undefined}
                   references={course.overview.jurisprudence.filter((ref) =>
                     ref.articles.includes(selected.label),
                   )}
@@ -656,6 +657,7 @@ function UnitLesson({
   unit,
   law,
   materialSlug,
+  practiceMaterial,
   references,
   progress,
   userId,
@@ -669,6 +671,7 @@ function UnitLesson({
   unit: LegalUnit;
   law: string;
   materialSlug: string;
+  practiceMaterial?: StudyMaterial | undefined;
   references: LegalCourse["overview"]["jurisprudence"];
   progress: LegalProgress | undefined;
   userId: string;
@@ -966,6 +969,9 @@ function UnitLesson({
                 key={`${law}:${unit.unit_key}`}
                 userId={userId}
                 scope={{ law, article: unit.label }}
+                authoredQuiz={practiceMaterial?.quiz ?? []}
+                authoredReview={practiceMaterial?.practice_review}
+                authoredKey={materialSlug}
                 label={unit.label}
               />
             </div>

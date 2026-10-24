@@ -466,6 +466,7 @@ function DisciplinePracticePanel({
       scope={{ subject, ...(topic ? { topic: materialTopic(subject, topic) } : {}) }}
       authoredKey={selected?.slug ?? subject}
       authoredQuiz={material.data?.quiz ?? []}
+      authoredReview={material.data?.practice_review}
     />
   );
 }
