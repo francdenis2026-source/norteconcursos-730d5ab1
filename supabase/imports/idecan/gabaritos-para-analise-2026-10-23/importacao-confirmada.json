@@ -1,0 +1,115 @@
+{
+  "checked_at": "2026-10-24T02:14:35.404602+00:00",
+  "applied": true,
+  "plan": [
+    {
+      "id": "0ee5357c101eae156661c60c6af6da304bba2dd4444988111ae0d31aeffb3a47",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo A",
+      "action": "insert_private_reference",
+      "existing_reference": null
+    },
+    {
+      "id": "18939ee1d23804ee43643a36cdc89b5ccb5f365f5a020effb6d2d570bb780796",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo B",
+      "action": "insert_private_reference",
+      "existing_reference": null
+    },
+    {
+      "id": "de0eb5fa71e435a767e4c4da71ce04959fa15f8edabbd22cb108ad451dd5f34f",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo C",
+      "action": "insert_private_reference",
+      "existing_reference": null
+    },
+    {
+      "id": "298fbc77f2ae9e99cf33f72823439f6e9d59da495c7c1bfcfd4056d06970cefa",
+      "title": "PEFOCE 2021 — Retificação do gabarito — Auxiliar de Perícia",
+      "action": "insert_private_reference",
+      "existing_reference": null
+    },
+    {
+      "id": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+      "title": "PC-SC Escrivão 2026 — Gabarito oficial definitivo",
+      "action": "insert_private_reference",
+      "existing_reference": null
+    },
+    {
+      "id": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+      "title": "PC-CE 2021 — Documento de gabaritos de Inspetor e Escrivão",
+      "action": "preserve_existing_reference",
+      "existing_reference": {
+        "table": "question_corpus_sources",
+        "id": "56a363de9d9c7d346d116c9e4d86cd8f5d737222ea51595a906c8596813c6cfe",
+        "title": "PC-CE 2021 — Inspetor de Polícia Civil — Tipo B"
+      }
+    }
+  ],
+  "inserted": [
+    {
+      "id": "0ee5357c101eae156661c60c6af6da304bba2dd4444988111ae0d31aeffb3a47",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo A"
+    },
+    {
+      "id": "18939ee1d23804ee43643a36cdc89b5ccb5f365f5a020effb6d2d570bb780796",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo B"
+    },
+    {
+      "id": "de0eb5fa71e435a767e4c4da71ce04959fa15f8edabbd22cb108ad451dd5f34f",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo C"
+    },
+    {
+      "id": "298fbc77f2ae9e99cf33f72823439f6e9d59da495c7c1bfcfd4056d06970cefa",
+      "title": "PEFOCE 2021 — Retificação do gabarito — Auxiliar de Perícia"
+    },
+    {
+      "id": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+      "title": "PC-SC Escrivão 2026 — Gabarito oficial definitivo"
+    }
+  ],
+  "preserved": [
+    {
+      "id": "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+      "title": "PC-CE 2021 — Documento de gabaritos de Inspetor e Escrivão",
+      "action": "preserve_existing_reference",
+      "existing_reference": {
+        "table": "question_corpus_sources",
+        "id": "56a363de9d9c7d346d116c9e4d86cd8f5d737222ea51595a906c8596813c6cfe",
+        "title": "PC-CE 2021 — Inspetor de Polícia Civil — Tipo B"
+      }
+    }
+  ],
+  "confirmed": [
+    {
+      "id": "0ee5357c101eae156661c60c6af6da304bba2dd4444988111ae0d31aeffb3a47",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo A",
+      "page_count": 7,
+      "document_kind": "answer_key"
+    },
+    {
+      "id": "18939ee1d23804ee43643a36cdc89b5ccb5f365f5a020effb6d2d570bb780796",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo B",
+      "page_count": 7,
+      "document_kind": "answer_key"
+    },
+    {
+      "id": "de0eb5fa71e435a767e4c4da71ce04959fa15f8edabbd22cb108ad451dd5f34f",
+      "title": "PEFOCE 2021 — Gabarito definitivo — Tipo C",
+      "page_count": 7,
+      "document_kind": "answer_key"
+    },
+    {
+      "id": "298fbc77f2ae9e99cf33f72823439f6e9d59da495c7c1bfcfd4056d06970cefa",
+      "title": "PEFOCE 2021 — Retificação do gabarito — Auxiliar de Perícia",
+      "page_count": 1,
+      "document_kind": "answer_key_correction"
+    },
+    {
+      "id": "dfb80fdb55ac07b191a131b6e0a6995cd747444eb7136fac227c13488f03ad6e",
+      "title": "PC-SC Escrivão 2026 — Gabarito oficial definitivo",
+      "page_count": 1,
+      "document_kind": "answer_key"
+    }
+  ],
+  "question_candidates_created": 0,
+  "student_questions_created": 0,
+  "complete": true
+}
