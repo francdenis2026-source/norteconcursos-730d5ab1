@@ -67,6 +67,24 @@ Os quatro gabaritos definitivos foram conferidos: 37-E, 38-B, 39-A e 40-D. O CPM
 
 `revisao-integral/pmsc-itens37-40-cpm.sql` é um lote transacional com quatro guardas individuais de identidade, texto, opções, gabarito e estado; audita cada alteração e cancela o lote inteiro se houver divergência. Ele cria/reutiliza o tópico militar próprio da edição PMSC e libera apenas esses quatro itens. Ainda precisa ser aplicado no Supabase; não constitui previsão PC-AC.
 
+## Próximo item: PMSC Tipo A, item 41
+
+Gabarito definitivo D. O art. 5º, XI, da Constituição admite ingresso domiciliar para prestar socorro a qualquer hora, além das demais exceções expressas. A explicação distingue socorro de busca para localizar suspeito e esclarece que 18h não define automaticamente dia/noite. O edital PMSC inclui o art. 5º (Anexo II, p. 52). Fonte e leitura: `revisao-integral/revisao-pmsc-item41.json`.
+
+`revisao-integral/pmsc-item41-inviolabilidade-domicilio.sql` registra a matriz constitucional da seleção e a auditoria antes/depois; libera apenas o item 41. Ainda depende de aplicação no Supabase e não prevê PC-AC.
+
+## Item PMSC Tipo A, 43
+
+O item 42 não consta no catálogo importado; o gabarito oficial definitivo marca a posição 42 como anulada (X), então ela não deve entrar como questão pontuada. Para o item 43, gabarito A, confirmei o parágrafo único do art. 6º incluído pela EC 114/2021 e a inclusão do art. 6º no edital PMSC. A explicação registra que a redação constitucional também remete requisitos de acesso à lei e à legislação fiscal/orçamentária. Parecer: `revisao-integral/revisao-pmsc-item43.json`.
+
+`revisao-integral/pmsc-item43-renda-basica.sql` registra o tópico constitucional da edição e audita a revisão antes de ativar apenas o item 43. Aplicação pendente no Supabase; não é previsão PC-AC.
+
+## Itens PMSC Tipo A, 44–45
+
+Gabaritos definitivos: 44-C e 45-E. O item 44 foi conferido com art. 142, § 3º, V; o item 45 com a inclusão das polícias penais no art. 144, § 5º-A, pela EC 104/2019. O edital PMSC inclui os arts. 142 e 144 (Anexo II, p. 52). Evidências em `revisao-integral/revisao-pmsc-itens44-45.json`.
+
+`revisao-integral/pmsc-itens44-45-constituicao.sql` é um lote transacional com guardas e auditoria individual para os dois itens, reutiliza o tópico constitucional da edição e libera apenas 44 e 45. Aplicação pendente no Supabase; a revisão não prevê PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
