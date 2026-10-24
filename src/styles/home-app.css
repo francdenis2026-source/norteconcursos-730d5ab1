@@ -108,7 +108,8 @@
   .home-footer__address > summary svg:last-child { width: 12px; height: 12px; transition: transform 200ms var(--ease-out); }
   .home-footer__address[open] > summary svg:last-child { transform: rotate(90deg); }
   .home-footer__address address { padding-bottom: 8px; color: var(--home-muted); font-size: 12px; font-style: normal; line-height: 1.6; }
-  .home.home .home-footer__contact-card[href] { display: flex; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--home-line); border-radius: 10px; }
+  .home.home .home-footer__contact-card[href] { display: flex; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--home-line); border-radius: 10px; transition: transform 160ms var(--ease-out), border-color 160ms ease, background-color 160ms ease; }
+  .home.home .home-footer__contact-card[href]:active { transform: scale(0.92); }
   .home.home .home-footer__contact-label { display: none; }
   .home.home .home-footer__contact-card[href] svg { width: 17px; height: 17px; }
   .home.home .home-footer--command .home-footer__bottom { margin-top: 6px; padding-top: 8px; gap: 2px 12px; font-size: 10px; }
