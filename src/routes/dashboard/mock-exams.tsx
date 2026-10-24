@@ -40,6 +40,7 @@ import {
 } from "@/lib/examScoring";
 import { fetchAttemptHistory, type AttemptWithDetails } from "@/lib/attemptHistory";
 import { AttemptHistoryItem } from "@/components/dashboard/AttemptHistoryList";
+import { StudyCompletionNotice } from "@/components/dashboard/StudyCompletionNotice";
 import { ReportQuestionButton } from "@/components/dashboard/ReportQuestionButton";
 import { dedupeSharedExamItems, expandAnsweredBySiblings } from "@/lib/questionDuplicates";
 import { useLockedAnswers } from "@/hooks/useLockedAnswers";
@@ -2195,6 +2196,7 @@ function ResultView({
           </div>
         )}
       </section>
+      <StudyCompletionNotice kind="simulado" />
       <section className="mock-result-hero tactical-feature-hero rounded-2xl p-7 text-white shadow-xl md:p-10 workspace-banner">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>

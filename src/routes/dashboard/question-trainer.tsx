@@ -134,6 +134,7 @@ import {
 import { useStudyMaterialList } from "@/lib/studyMaterials";
 import { canOpenTrainerLearning, relatedTrainerMaterials } from "@/lib/trainerLearning";
 import { TrainerLearningMaterials } from "@/components/dashboard/TrainerLearningMaterials";
+import { StudyCompletionNotice } from "@/components/dashboard/StudyCompletionNotice";
 import { QuestionSocialPanel } from "@/components/dashboard/QuestionSocialPanel";
 import { ReadingSizeInline } from "@/components/accessibility/ReadingSizeInline";
 import { QuestionAudioButton } from "@/components/dashboard/QuestionAudioButton";
@@ -2802,6 +2803,7 @@ function TrainingResult({
           <p>Confira suas respostas e escolha o próximo passo.</p>
         </div>
       </header>
+      <StudyCompletionNotice kind="trainer" />
       <div className="trainer-result-layout">
         <section className="trainer-result-score" aria-label="Resumo do treino">
           <span>Aproveitamento nesta sessão</span>
