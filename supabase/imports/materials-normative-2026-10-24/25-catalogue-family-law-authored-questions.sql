@@ -63,13 +63,19 @@ update public.study_materials
 set practice_review=jsonb_set(
   practice_review,'{sources}',
   coalesce(practice_review->'sources','[]'::jsonb)
-    || jsonb_build_array(
-      jsonb_build_object('url','https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA+INPATH%28TIPO%29+AND+358+INPATH%28NUM%29'),
-      jsonb_build_object('url','https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+309+INPATH%28NUM%29&ordenacao=-%40NUM&p=false')
-    ))
+    || jsonb_build_array(jsonb_build_object('url','https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA+INPATH%28TIPO%29+AND+358+INPATH%28NUM%29')))
 where slug='processo-civil-pensao-alimenticia-atualizacoes'
   and not coalesce(practice_review->'sources','[]'::jsonb)
     @> '[{"url":"https://processo.stj.jus.br/SCON/pesquisar.jsp?b=SUMU&livre=SUMULA+INPATH%28TIPO%29+AND+358+INPATH%28NUM%29"}]'::jsonb;
+
+update public.study_materials
+set practice_review=jsonb_set(
+  practice_review,'{sources}',
+  coalesce(practice_review->'sources','[]'::jsonb)
+    || jsonb_build_array(jsonb_build_object('url','https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+309+INPATH%28NUM%29&ordenacao=-%40NUM&p=false')))
+where slug='processo-civil-pensao-alimenticia-atualizacoes'
+  and not coalesce(practice_review->'sources','[]'::jsonb)
+    @> '[{"url":"https://scon.stj.jus.br/SCON/sumstj/doc.jsp?b=SUMU&h=true&i=1&l=10&livre=SUMULA+INPATH%28TIPO%29+AND+309+INPATH%28NUM%29&ordenacao=-%40NUM&p=false"}]'::jsonb;
 
 with m as (
   select sm.* from public.study_materials sm
