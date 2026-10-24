@@ -25,15 +25,28 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { useStudyMaterialList } from "@/lib/studyMaterials";
+import { readSlugs, useStudyMaterialList, type StudyMaterialSummary } from "@/lib/studyMaterials";
 import { LockedState, PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { hubLaws, type SubjectIcon } from "@/lib/materialHub";
-import { disciplineCards, type DisciplineCard } from "@/lib/disciplineHub";
+import { disciplineCards, materialsOf, tracksOf, type DisciplineCard } from "@/lib/disciplineHub";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS } from "@/data/mediaCatalog";
 import { LAW_ROWS, searchLaws } from "@/lib/lawFinder";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import { libraryDisciplines, libraryCollection } from "@/lib/libraryOrganization";
+import { materialLawSlug } from "@/lib/legalLibrary";
+import { compareMaterialRevision } from "@/lib/legalChronology";
+
+/** The most useful next stop in a group: first unread, else the first by revision. */
+function nextMaterial(
+  items: StudyMaterialSummary[],
+  read: Set<string>,
+): StudyMaterialSummary | undefined {
+  if (!items.length) return undefined;
+  const ordered = [...items].sort(compareMaterialRevision);
+  return ordered.find((item) => !read.has(item.slug)) ?? ordered[0];
+}
 
 export const Route = createFileRoute("/dashboard/material")({
   component: MaterialHub,
@@ -245,6 +258,16 @@ function MaterialHub() {
     (sum, entry) => sum + entry.materials + entry.lessons + entry.videos,
     0,
   );
+  const [read, setRead] = React.useState<Set<string>>(new Set());
+  React.useEffect(() => setRead(readSlugs()), []);
+  const lawGroupItems = React.useMemo(
+    () => new Map(libraryDisciplines(items.filter((item) => libraryCollection(item) === "laws"))),
+    [items],
+  );
+  const subjectItems = React.useMemo(
+    () => items.filter((item) => libraryCollection(item) === "subjects"),
+    [items],
+  );
 
   if (!isLoading && !signedIn)
     return (
@@ -324,43 +347,62 @@ function MaterialHub() {
                 </span>
               </Link>
             </li>
-            {laws.map((entry) => (
-              <li key={entry.name}>
-                {entry.lawSlug ? (
-                  <Link
-                    to="/dashboard/legal-course/$slug"
-                    params={{ slug: entry.lawSlug }}
-                    className="material-card"
-                  >
-                    <span className="material-card__icon" data-tone="law">
-                      <Scale aria-hidden="true" />
+            {laws.map((entry) => {
+              const next = entry.lawSlug
+                ? undefined
+                : nextMaterial(lawGroupItems.get(entry.name) ?? [], read);
+              const nextLawSlug = next && materialLawSlug(next);
+              const body = (
+                <>
+                  <span className="material-card__icon" data-tone="law">
+                    <Scale aria-hidden="true" />
+                  </span>
+                  <span className="material-card__body">
+                    <strong>{entry.name}</strong>
+                    <span>
+                      {entry.count} {entry.count === 1 ? "material" : "materiais"}
                     </span>
-                    <span className="material-card__body">
-                      <strong>{entry.name}</strong>
-                      <span>
-                        {entry.count} {entry.count === 1 ? "material" : "materiais"}
-                      </span>
-                    </span>
-                  </Link>
-                ) : (
-                  <Link
-                    to="/dashboard/library"
-                    search={{ collection: "laws", discipline: entry.name }}
-                    className="material-card"
-                  >
-                    <span className="material-card__icon" data-tone="law">
-                      <Scale aria-hidden="true" />
-                    </span>
-                    <span className="material-card__body">
-                      <strong>{entry.name}</strong>
-                      <span>
-                        {entry.count} {entry.count === 1 ? "material" : "materiais"}
-                      </span>
-                    </span>
-                  </Link>
-                )}
-              </li>
-            ))}
+                  </span>
+                </>
+              );
+              return (
+                <li key={entry.name}>
+                  {entry.lawSlug ? (
+                    <Link
+                      to="/dashboard/legal-course/$slug"
+                      params={{ slug: entry.lawSlug }}
+                      className="material-card"
+                    >
+                      {body}
+                    </Link>
+                  ) : nextLawSlug ? (
+                    <Link
+                      to="/dashboard/legal-course/$slug"
+                      params={{ slug: nextLawSlug }}
+                      className="material-card"
+                    >
+                      {body}
+                    </Link>
+                  ) : next ? (
+                    <Link
+                      to="/dashboard/library/$slug"
+                      params={{ slug: next.slug }}
+                      className="material-card"
+                    >
+                      {body}
+                    </Link>
+                  ) : (
+                    <Link
+                      to="/dashboard/library"
+                      search={{ collection: "laws", discipline: entry.name }}
+                      className="material-card"
+                    >
+                      {body}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
             <li>
               <Link
                 to="/dashboard/library"
@@ -441,9 +483,30 @@ function MaterialHub() {
                   </span>
                 </>
               );
+              const nextReading =
+                entry.materials > 0
+                  ? nextMaterial(materialsOf(entry.name, subjectItems), read)
+                  : undefined;
+              const firstTrack = !nextReading ? tracksOf(entry.name, TRACKS)[0] : undefined;
               return (
                 <li key={entry.name}>
-                  {entry.hasContent ? (
+                  {nextReading ? (
+                    <Link
+                      to="/dashboard/library/$slug"
+                      params={{ slug: nextReading.slug }}
+                      className="material-card"
+                    >
+                      {content}
+                    </Link>
+                  ) : firstTrack ? (
+                    <Link
+                      to="/dashboard/trilhas"
+                      search={{ t: firstTrack.slug }}
+                      className="material-card"
+                    >
+                      {content}
+                    </Link>
+                  ) : entry.hasContent ? (
                     <Link
                       to="/dashboard/disciplinas"
                       search={{ d: entry.name }}
