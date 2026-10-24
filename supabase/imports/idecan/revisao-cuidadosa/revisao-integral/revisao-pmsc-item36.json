@@ -1,0 +1,46 @@
+{
+  "item": 36,
+  "question_id": "0850f6c9-6c12-4837-a710-1fac9812c85b",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "official_answer": {
+    "letter": "C",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 36",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "laws": [
+    {
+      "name": "Código Penal Militar — Decreto-Lei nº 1.001/1969, compilado após a Lei nº 14.688/2023",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del1001.htm",
+      "checked_at": "2026-10-23T04:06:14Z",
+      "html_sha256": "06b0bdfa1071e5cd919f8668f427aaf1259ca030eca6776d8cf52593eb900ef6",
+      "text_sha256": "2b5c5352f70b9bb24d14c2b1882dd8710d9cd092b6db595b4ee563d19e596923",
+      "articles": ["30", "39", "43"]
+    },
+    {
+      "name": "Código Penal — Decreto-Lei nº 2.848/1940, texto compilado",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+      "checked_at": "2026-10-23T04:06:15Z",
+      "html_sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+      "articles": ["14", "24"]
+    }
+  ],
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Parte Geral: arts. 1º ao 9º; arts. 29 ao 47.",
+    "confirmed": true
+  },
+  "conclusion": "C é correta. No CPM, o estado de necessidade aparece nos arts. 39 e 43, com regimes e requisitos específicos distintos do art. 24 do CP. O CPM, art. 30, parágrafo único, prevê expressamente que, em excepcional gravidade, o juiz pode aplicar a pena do crime consumado; o CP, art. 14, parágrafo único, prevê diminuição de 1 a 2/3, salvo disposição contrária.",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item36-diferencas-cp-cpm.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

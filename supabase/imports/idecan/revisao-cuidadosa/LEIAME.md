@@ -55,6 +55,12 @@ O gabarito definitivo IDECAN confirma E; o edital inclui arts. 1º a 28 do Códi
 
 `revisao-integral/pmsc-item35-embriaguez-involuntaria.sql` usa o tópico de Legislação Penal já validado, mantém o gabarito histórico E, substitui a explicação preliminar e libera apenas o item 35, com auditoria antes/depois. Aplicação no Supabase pendente; a revisão vale para a prova PMSC e não prevê PC-AC.
 
+## Próximo item: PMSC Tipo A, item 36
+
+O gabarito definitivo IDECAN confirma C. Comparei CP art. 24 e art. 14, parágrafo único, com CPM arts. 30, parágrafo único, 39 e 43 no texto compilado oficial, já após a Lei nº 14.688/2023. As diferenças cobradas são os regimes de estado de necessidade e a possibilidade expressa no CPM de, em excepcional gravidade, aplicar a pena do crime consumado na tentativa. O edital PMSC inclui CPM arts. 29 a 47 (Anexo II, p. 52). Evidências em `revisao-integral/revisao-pmsc-item36.json`.
+
+`revisao-integral/pmsc-item36-diferencas-cp-cpm.sql` registra a fonte do CPM e um tópico de Legislação Penal Militar específico da edição PMSC, depois libera somente a questão 36 com auditoria. Ainda depende de aplicação no Supabase e não prevê PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
