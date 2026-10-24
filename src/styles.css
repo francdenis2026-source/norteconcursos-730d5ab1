@@ -14173,3 +14173,24 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
   font-synthesis: none;
   letter-spacing: -.025em;
 }
+
+/* Apple HIG "Response": feedback starts the instant a control is pressed, not when it's
+   released — these shell controls only had :hover before, so a tap felt dead until the
+   click resolved. A small, fast scale on :active covers press-down for mouse and touch. */
+.app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user, .app-bottom-nav a, .app-bottom-nav button) {
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 100ms ease-out;
+}
+.app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user):active {
+  transform: scale(0.96);
+}
+.app-bottom-nav a:active,
+.app-bottom-nav button:active {
+  transform: scale(0.94);
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user):active,
+  .app-bottom-nav a:active,
+  .app-bottom-nav button:active {
+    transform: none;
+  }
+}
