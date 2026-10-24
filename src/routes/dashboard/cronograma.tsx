@@ -409,12 +409,12 @@ function PlanView({ plan, userId, autoRun, onBack, onChange, onDeleted }: {
         <Button variant="ghost" size="sm" onClick={onBack}><ArrowLeft className="mr-1 h-4 w-4" /> Meus cronogramas</Button>
         <Button variant="ghost" size="sm" className="text-destructive" onClick={remove}><Trash2 className="mr-1 h-4 w-4" /> Excluir</Button>
       </div>
-      <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 p-5 text-white shadow-lg">
+      <div className="rounded-2xl border bg-card p-4">
         <div className="grid gap-4 sm:grid-cols-[1fr_auto_auto] sm:items-center">
           <div>
-            <p className="text-xl font-black">{plan.name}</p>
-            <div className="mt-3 flex items-center gap-2"><div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/25"><div className="h-full rounded-full bg-white transition-[width]" style={{ width: `${pct}%` }} /></div><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
-            <p className="mt-1 text-xs text-white/80">{done} de {total} conteúdos concluídos</p>
+            <p className="text-lg font-black">{plan.name}</p>
+            <div className="mt-2 flex items-center gap-2"><Progress value={pct} className="h-2.5 flex-1" /><span className="text-sm font-bold tabular-nums">{pct}%</span></div>
+            <p className="mt-1 text-xs text-muted-foreground">{done} de {total} conteúdos concluídos</p>
           </div>
           <Stat label="Estudado (7 dias)" value={studiedMin === null ? "…" : fmtH(studiedMin)} sub={`meta ${cfg.weeklyHours} h`} />
           <Stat label="Prova" value={daysLeft === null ? "—" : daysLeft >= 0 ? `${daysLeft} dias` : "passou"} sub={plan.exam_date ? plan.exam_date.split("-").reverse().join("/") : "sem data"} />
@@ -562,10 +562,10 @@ function CustomEditor({ cfg, setCfg }: { cfg: CronoConfig; setCfg: (p: Partial<C
 
 function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
-    <div className="rounded-xl bg-white/15 px-4 py-2 text-center backdrop-blur">
-      <p className="text-[11px] uppercase tracking-wide text-white/80">{label}</p>
+    <div className="rounded-xl bg-muted/50 px-4 py-2 text-center">
+      <p className="text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
       <p className="text-xl font-black tabular-nums">{value}</p>
-      <p className="text-[11px] text-white/80">{sub}</p>
+      <p className="text-[11px] text-muted-foreground">{sub}</p>
     </div>
   );
 }
