@@ -292,8 +292,22 @@
     "confirmed_at": "2026-10-24",
     "all_items_active": true,
     "all_answers_match": true,
-    "all_syllabus_topic_id_null": true,
-    "source": "Resultado SQL enviado pelo usuário"
+    "all_items_linked": true,
+    "syllabus_topic_id": "37976c57-41cc-4da5-951f-2f6c0520ff14",
+    "discipline": "Noções de Direito Penal",
+    "items": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "evidence": "Saída SQL do usuário após a revisão; status active e tópicos específicos conferidos."
   },
   "official_edital": {
     "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
