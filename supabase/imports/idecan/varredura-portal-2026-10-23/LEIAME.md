@@ -63,3 +63,20 @@ O índice de concursos em andamento pode incluir provas ainda não realizadas. P
 Testes locais do coletor: domínio e redirecionamento autorizado, preservação de IDs, exclusão de resultados de candidatos, inventário com fixtures sintéticas, falha de rede/desafio sem falsas seeds e rejeição de HTML disfarçado de PDF. Fixtures não foram incluídas no acervo real.
 
 Para prosseguir com questões reais, é necessário acesso ao portal neste ambiente ou receber os PDFs de cadernos e gabaritos (ou páginas oficiais salvas em HTML). O manifesto não substitui esses documentos.
+
+## Atualização: acesso autenticado ao Supabase confirmado
+
+Depois da tentativa de coleta, o usuário forneceu uma chave administrativa da API. Ela foi usada apenas em memória para consultas de conteúdo educacional; não foi incluída em arquivos do repositório ou nos relatórios. Não foram executados `supabase init`, login interativo, migrações ou alterações no banco.
+
+A leitura autenticada foi confirmada e substitui a limitação anterior de acesso administrativo para as próximas comparações. O relatório sanitizado `acervo-atual-api.json` registra o momento e os totais efetivamente lidos, sem credenciais e sem dados de alunos:
+
+- `board_exam_questions`: 273 registros IDECAN, sendo 168 ativos, 104 em revisão e um obsoleto; entre os ativos, 82 têm explicação preenchida e 86 não têm.
+- `curated_question_catalog`: dez registros IDECAN, todos ativos com explicação.
+- `official_exam_questions`: nenhum registro IDECAN nessa consulta.
+- Nos dois acervos privados PC-CE: 200 posições, sendo 192 `reviewed`, três `rejected` e cinco `obsolete`. `reviewed` privado não significa publicado.
+
+São 178 registros públicos ativos, dos quais 92 têm texto de explicação e 86 não têm. Texto preenchido não equivale à revisão didática/jurídica completa. Não somar publicações curadas às suas posições privadas como questões inéditas.
+
+Os snapshots educacionais necessários à comparação futura foram guardados apenas em `/tmp/idecan-live-baseline`, fora do Git e sem credenciais. A contagem é uma fotografia daquele instante; revisões concorrentes devem ser lidas novamente antes de qualquer escrita.
+
+O portal IDECAN foi testado outra vez e continua inacessível com `Tunnel connection failed: 403 Forbidden`. O acesso à API do Supabase não remove o bloqueio de rede aos domínios da banca. Nenhuma nova prova foi obtida e nenhuma seed nova foi criada ou aplicada nesta etapa. Ainda são necessários os cadernos/gabaritos ou acesso aos documentos oficiais para prosseguir com a coleta.
