@@ -1,0 +1,78 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-ti-43-48-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "official_key_sequence": "CEBACD",
+  "answer_key_matches": true,
+  "official_syllabus_url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+  "official_syllabus_sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+  "items": [
+    {
+      "id": "6efce673-a679-473a-a598-22b066c3ad77",
+      "item_number": 43,
+      "answer": "C",
+      "previous_status": "under_review",
+      "decision": "remain_under_review",
+      "reason": "DuckDuckGo documents Fire Tabs (mobile) and Fire Windows (desktop) as isolated sessions whose data is erased when closed. The stem incorrectly generalizes this to all tabs by default and overstates hardware/sensor protections. Revise stem before release.",
+      "technical_sources": [
+        "https://duckduckgo.com/duckduckgo-help-pages/privacy/fire-tabs/",
+        "https://duckduckgo.com/duckduckgo-help-pages/privacy/web-tracking-protections/"
+      ]
+    },
+    {
+      "id": "96f8e25c-9f14-4aef-9531-a76b6a43d651",
+      "item_number": 44,
+      "answer": "E",
+      "previous_status": "under_review",
+      "decision": "remain_under_review",
+      "reason": "Correct properties of onion services (.onion names derived from public keys and onion circuits) are conflated with Tor's ordinary internet access through exit relays. The stem falsely implies all services reachable through Tor use .onion.",
+      "technical_sources": [
+        "https://support.torproject.org/about-tor/how-tor-works/",
+        "https://support.torproject.org/tor-browser/features/onion-services/",
+        "https://www.rfc-editor.org/rfc/rfc7686"
+      ]
+    },
+    {
+      "id": "4574080f-fe7a-4fdf-bd4b-8eb60a00f25a",
+      "item_number": 45,
+      "answer": "B",
+      "previous_status": "under_review",
+      "decision": "active",
+      "technical_sources": [
+        "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf"
+      ]
+    },
+    {
+      "id": "f368c7bf-18ec-4d71-a587-430b03e3417f",
+      "item_number": 46,
+      "answer": "A",
+      "previous_status": "under_review",
+      "decision": "active",
+      "technical_sources": [
+        "https://www.cisa.gov/stopransomware/ransomware-guide"
+      ]
+    },
+    {
+      "id": "4ff7f5bd-3b3d-4114-8460-5f39fb49a8c3",
+      "item_number": 47,
+      "answer": "C",
+      "previous_status": "under_review",
+      "decision": "active",
+      "technical_sources": [
+        "https://csrc.nist.gov/glossary/term/authentication",
+        "https://csrc.nist.gov/glossary/term/identification"
+      ]
+    },
+    {
+      "id": "b03d1912-616e-4963-8cec-c70fb476f735",
+      "item_number": 48,
+      "answer": "D",
+      "previous_status": "under_review",
+      "decision": "active",
+      "technical_sources": [
+        "https://csrc.nist.gov/glossary/term/spyware"
+      ]
+    }
+  ]
+}
