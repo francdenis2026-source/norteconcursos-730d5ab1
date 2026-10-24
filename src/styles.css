@@ -6007,6 +6007,12 @@ html {
 }
 
 /* Shared surface system: consistent density across student and admin workspaces. */
+.surface-card {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
 .app-content__inner > :is(.page-hero, .tactical-feature-hero, .catalog-command-hero) {
   min-height: 184px;
   padding: clamp(22px, 3vw, 34px);

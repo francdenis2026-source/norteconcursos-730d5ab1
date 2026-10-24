@@ -35,6 +35,7 @@ import {
 } from "@/lib/disciplineHub";
 import { disciplinePracticeSearch } from "@/lib/practiceLink";
 import { normalizeLibrarySearch } from "@/lib/librarySearch";
+import { canonicalSubject } from "@/lib/subjects";
 import type { SubjectIcon } from "@/lib/materialHub";
 
 export const Route = createFileRoute("/dashboard/disciplinas")({
@@ -85,7 +86,12 @@ function DisciplinesPage() {
         description="Entre na sua conta para estudar por disciplina."
       />
     );
-  const current = d ? cards.find((card) => card.name === d) : undefined;
+  // Compara pelo nome canônico: a disciplina clicada sempre bate com seu cartão, mesmo que o
+  // parâmetro "d" chegue com variação de acento, maiúscula ou nome alternativo da mesma matéria.
+  const current = d
+    ? (cards.find((card) => card.name === d) ??
+      cards.find((card) => card.name === canonicalSubject(d)))
+    : undefined;
   return current ? (
     <DisciplineDetail card={current} materials={materials} />
   ) : (
