@@ -552,7 +552,7 @@ function InteligenciaIdecan() {
         <CardContent className="grid gap-3 sm:grid-cols-2">
           <Link
             to="/dashboard/study-coach"
-            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-colors hover:bg-muted/60"
+            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
           >
             <ClipboardList className="h-5 w-5 shrink-0 text-primary" aria-hidden />
             <span>
@@ -565,7 +565,7 @@ function InteligenciaIdecan() {
           </Link>
           <Link
             to="/dashboard/question-trainer"
-            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-colors hover:bg-muted/60"
+            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
           >
             <Target className="h-5 w-5 shrink-0 text-primary" aria-hidden />
             <span>
@@ -578,7 +578,7 @@ function InteligenciaIdecan() {
           </Link>
           <Link
             to="/dashboard/mock-exams"
-            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-colors hover:bg-muted/60"
+            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
           >
             <CalendarClock className="h-5 w-5 shrink-0 text-primary" aria-hidden />
             <span>
@@ -591,7 +591,7 @@ function InteligenciaIdecan() {
           </Link>
           <Link
             to="/dashboard/perfil-bancas"
-            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-colors hover:bg-muted/60"
+            className="flex items-center gap-3 rounded-xl border p-3 text-sm transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
           >
             <BookOpenText className="h-5 w-5 shrink-0 text-primary" aria-hidden />
             <span>
