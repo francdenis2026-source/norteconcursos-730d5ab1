@@ -19,6 +19,8 @@ const families: Record<string, string[]> = {
     "Raciocínio Lógico",
     "Raciocínio Lógico-Matemático",
     "Raciocínio Lógico Matemático",
+    "Matemática e Raciocínio Lógico",
+    "Raciocínio Lógico e Matemático",
   ],
   Informática: [
     "Informática",
