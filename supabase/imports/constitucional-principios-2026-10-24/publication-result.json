@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-24T20:44:10.161234+00:00",
+  "file": "01-publish-principios.sql",
+  "sql_sha256": "3edd48a4c2856912b12e75eb0d7e09a1a9d4b31e8e4c506fe72d182c9228d17c",
+  "http_status": 201,
+  "result": [
+    {
+      "slug": "constitucional-principios-fundamentais-federacao-republica",
+      "content_status": "active",
+      "local_exercises": 20,
+      "worked_cases": 4
+    }
+  ]
+}
