@@ -1,0 +1,89 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-administrativo-25-30-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "official_key_sequence": "BDACEB",
+  "answer_key_matches": true,
+  "official_edital": {
+    "title": "Edital nº 01/2025 — Agente de Polícia Civil",
+    "url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+    "sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+    "program_pages": "Anexo I, p. 53"
+  },
+  "legal_sources_checked": "Planaltos oficiais consolidados, evidências locais consultadas em 2026-10-23",
+  "items": [
+    {
+      "id": "93d09d86-cfc0-4b1d-b225-82819f0ade61",
+      "item_number": 25,
+      "subject": "Direito Administrativo",
+      "official_answer": "B",
+      "replacement_explanation": "B é a resposta do gabarito, mas a ressalva precisa ser lida com precisão. O art. 1º, §§ 1º e 2º, da Lei 8.429/1992 define como improbidade as condutas dolosas tipificadas nos arts. 9º, 10 e 11 e exige vontade livre e consciente de alcançar o resultado ilícito; mera voluntariedade não basta. O § 1º ressalva tipos previstos em leis especiais: isso não restaura, por si só, a antiga improbidade culposa nem autoriza presumir uma modalidade culposa geral na LIA.\nA) dispensa o dolo e a tipificação. C) admite culpa grave como regra, contrariando a exigência legal de dolo. D) ignora tipificação e finalidade ilícita. E) erro grosseiro, sozinho, não configura improbidade.\nExemplo: gestão ineficiente ou erro administrativo não é automaticamente improbidade; devem ser demonstrados os requisitos legais do tipo.\nBase: Lei 8.429/1992, art. 1º, §§ 1º–3º, e arts. 9º–11.",
+      "tested_topic": "Improbidade administrativa: dolo e tipificação após a Lei 14.230/2021; ressalva de leis especiais.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+      ],
+      "live_previous_status": "under_review"
+    },
+    {
+      "id": "156edaf0-6334-4e53-9cc0-fd2da6c4f721",
+      "item_number": 26,
+      "subject": "Direito Administrativo",
+      "official_answer": "D",
+      "replacement_explanation": "D é correta. O art. 10 da Lei 8.429/1992 exige ação ou omissão dolosa que cause, de modo efetivo e comprovado, perda patrimonial, desvio, apropriação, malbaratamento ou dilapidação dos bens ou haveres das entidades protegidas. O dolo segue a definição do art. 1º, § 2º: vontade livre e consciente de alcançar o resultado ilícito tipificado; mera voluntariedade não basta.\nA) é incorreta porque a conduta precisa estar tipificada. B) não há presunção de dano. C) potencialidade lesiva não substitui a perda efetiva exigida pelo art. 10. E) culpa não basta para a modalidade geral do art. 10.\nBase: Lei 8.429/1992, arts. 1º, §§ 1º–2º, e 10, texto vigente após a Lei 14.230/2021.",
+      "tested_topic": "Improbidade administrativa: dolo e prejuízo patrimonial efetivo e comprovado no art. 10 da Lei 8.429/1992.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+      ],
+      "live_previous_status": "under_review"
+    },
+    {
+      "id": "3385771d-4d0f-486d-8186-6909b775a2e4",
+      "item_number": 27,
+      "subject": "Direito Administrativo",
+      "official_answer": "A",
+      "replacement_explanation": "A é correta. A LGPD considera sensíveis dados sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou organização religiosa, filosófica ou política, saúde, vida sexual, dado genético ou biométrico vinculado a pessoa natural (art. 5º, II).\nB descreve dado pessoal em geral, categoria mais ampla. C não torna todo dado econômico sensível por si só. D não define dado sensível e pode envolver dado anonimizado conforme o caso. E o fato de estar em fonte pública não altera automaticamente a categoria nem afasta a LGPD.\nBase: Lei 13.709/2018, arts. 5º, I–III, e 11.",
+      "tested_topic": "LGPD: conceito legal e categorias de dados pessoais sensíveis, art. 5º, II.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      ],
+      "live_previous_status": "under_review"
+    },
+    {
+      "id": "8e34f6f2-faa3-4680-90b8-b21cf83d6cd9",
+      "item_number": 28,
+      "subject": "Direito Administrativo",
+      "official_answer": "C",
+      "replacement_explanation": "C é correta. A LGPD inclui o consentimento do titular entre as bases legais para tratamento de dados pessoais (art. 7º, I) e o define como manifestação livre, informada e inequívoca para finalidade determinada (art. 5º, XII). Autorizações genéricas são nulas (art. 8º, § 4º).\nA) prática reiterada não presume consentimento. B) conveniência administrativa, sozinha, não é base legal. D) interesse público deve se enquadrar nas hipóteses legais pertinentes; não basta invocação genérica. E) dado acessível ao público continua sujeito à finalidade, boa-fé e demais princípios da LGPD.\nAtenção: consentimento é uma das bases legais, não a única; dados sensíveis têm regras próprias no art. 11.\nBase: Lei 13.709/2018, arts. 5º, XII, 7º, 8º e 11.",
+      "tested_topic": "LGPD: consentimento e bases legais para tratamento de dados pessoais; arts. 5º, XII, 7º e 8º.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      ],
+      "live_previous_status": "under_review"
+    },
+    {
+      "id": "2cd6cc42-94b7-4b6e-af46-dc892e64bce8",
+      "item_number": 29,
+      "subject": "Direito Administrativo",
+      "official_answer": "E",
+      "replacement_explanation": "E é correta. A Lei de Acesso à Informação adota a publicidade como regra geral e o sigilo como exceção, nos limites e procedimentos previstos na própria lei (art. 3º, I). O pedido não precisa ser motivado, e a Administração não pode exigir que o interessado explique por que deseja a informação (art. 10, § 3º).\nA) a lei não restringe o acesso a documentos produzidos após sua vigência, observadas existência, guarda e hipóteses legais de sigilo. B) motivação e interesse direto não são exigidos. C) o acesso não depende de autorização prévia da autoridade máxima. D) interesse institucional genérico não cria hipótese autônoma de sigilo.\nBase: Lei 12.527/2011, arts. 3º, I, 7º e 10, § 3º.",
+      "tested_topic": "Lei de Acesso à Informação: publicidade como regra, sigilo como exceção e dispensa de motivação do pedido.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      ],
+      "live_previous_status": "under_review"
+    },
+    {
+      "id": "9f7eb546-7583-4571-a3db-2b6eb0ea3f57",
+      "item_number": 30,
+      "subject": "Direito Administrativo",
+      "official_answer": "B",
+      "replacement_explanation": "B é correta. O art. 24, § 1º, da LAI fixa prazos máximos de restrição a partir da produção da informação: 25 anos para ultrassecreta, 15 para secreta e 5 para reservada. A lei também admite termo final vinculado a evento, desde que anterior ao prazo máximo (§ 3º).\nA) a reavaliação não é simplesmente facultativa: o art. 29 prevê reavaliação de ofício ou mediante provocação. C) ultrassecreto não é sigilo indeterminado; o máximo é 25 anos. D) a lei fixa limites, sem renovação indefinida. E) reservado tem prazo máximo de cinco anos.\nBase: Lei 12.527/2011, arts. 24, §§ 1º–4º, e 29.",
+      "tested_topic": "Lei de Acesso à Informação: graus e prazos máximos de classificação do sigilo, arts. 24 e 29.",
+      "sources": [
+        "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      ],
+      "live_previous_status": "under_review"
+    }
+  ]
+}
