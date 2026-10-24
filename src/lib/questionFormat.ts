@@ -17,6 +17,8 @@ export type LegalBasis = { title?: string; lei?: string; artigo?: string; url?: 
 export type Question = {
   id: string;
   source: Source;
+  /** Proveniência explícita para exibir "Questão autoral" no painel do aluno. */
+  isOriginal?: boolean;
   table?: QuestionTable;
   syllabusTopicId?: string | null;
   contest: string;

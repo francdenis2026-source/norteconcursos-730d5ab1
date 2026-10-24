@@ -180,7 +180,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
     }), // sem a coluna de texto de apoio ainda: segue sem ela
     query(
       "curated_question_catalog",
-      "id,syllabus_topic_id,contest_name,contest_year,career_name,exam_board,tested_topic,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category",
+      "id,syllabus_topic_id,contest_name,contest_year,career_name,exam_board,tested_topic,subject,subtopic,question_text,official_answer,explanation,legal_basis,difficulty,state,career_category,is_original",
       "law_version_checked_at",
       (builder) => builder.eq("content_status", "active"),
     ),
@@ -273,6 +273,7 @@ async function loadQuestionCatalog(queryClient: QueryClient, userId: string | un
         id: String(row["id"]),
         source: "curated" as const,
         table: "curated_question_catalog" as const,
+        isOriginal: row["is_original"] === true,
         syllabusTopicId: row["syllabus_topic_id"] ? String(row["syllabus_topic_id"]) : null,
         contest: String(row["contest_name"]),
         year: String(row["contest_year"]),

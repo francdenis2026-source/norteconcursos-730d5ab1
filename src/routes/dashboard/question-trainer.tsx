@@ -1795,6 +1795,7 @@ function QuestionTrainer() {
                 />
               )}
               <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
+                {question.isOriginal && <Badge variant="secondary">Questão autoral</Badge>}
                 <Badge variant="outline">{question.board}</Badge>
                 <Badge variant="outline">
                   {question.contest} · {question.year}
