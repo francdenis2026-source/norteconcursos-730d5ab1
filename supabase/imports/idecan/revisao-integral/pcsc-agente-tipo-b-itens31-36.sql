@@ -80,7 +80,6 @@ Base: Lei 14.735/2023, arts. 1º e 6º.$new$, $topic$Lei Orgânica Nacional das 
     values(batch,q.id,before_row,after_row,jsonb_build_object('official_answer',r.answer,
       'official_answer_key_url','https://arquivos.qconcursos.com/prova/arquivo_gabarito/148842/idecan-2026-pc-sc-agente-de-policia-civil-gabarito.pdf',
       'official_answer_key_sha256','f470a95ec82c545e85859cd4ff10ae46eea8aea022761ef319c5be0b4297e432',
-      'official_syllabus_sha256','d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a',
       'official_syllabus_url',edital_url,'official_syllabus_sha256','d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a',
       'status_before',r.expected_status,'status_after','active','previous_topic_id',r.expected_topic,'reviewed_at','2026-10-24', 'legal_sources',r.legal_sources),auth.uid());
    end if;
