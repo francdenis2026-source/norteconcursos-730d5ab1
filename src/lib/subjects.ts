@@ -76,11 +76,32 @@ for (const [name, aliases] of Object.entries(families))
   for (const alias of aliases) SUBJECT_ALIASES[strip(alias)] = name;
 
 /** Exact aliases only: combined disciplines, military law and specialist subjects stay distinct. */
+const LOWER_CONNECTORS = new Set(["de", "da", "do", "das", "dos", "e", "em", "a", "o"]);
+/** Importações antigas às vezes gravaram a disciplina toda em maiúsculas; sem alias conhecido,
+ * devolve em formato de título em vez de manter "LEGISLAÇÃO ESPECÍFICA" gritando na tela. */
+function titleCasePtBr(text: string): string {
+  return text
+    .toLocaleLowerCase("pt-BR")
+    .split(" ")
+    .map((word, i) =>
+      i > 0 && LOWER_CONNECTORS.has(word)
+        ? word
+        : word.charAt(0).toLocaleUpperCase("pt-BR") + word.slice(1),
+    )
+    .join(" ");
+}
+
 export function canonicalSubject(raw: string | null | undefined): string {
   const text = (raw ?? "").replace(/\s+/g, " ").trim();
   if (!text) return text;
   if (/^https?:\/\//i.test(text)) return "Disciplina não classificada";
-  return SUBJECT_ALIASES[strip(text)] ?? text.replace(/^•\s*Boa prova!\s*/i, "");
+  const known = SUBJECT_ALIASES[strip(text)];
+  if (known) return known;
+  const cleaned = text.replace(/^•\s*Boa prova!\s*/i, "");
+  return cleaned === cleaned.toLocaleUpperCase("pt-BR") &&
+    cleaned !== cleaned.toLocaleLowerCase("pt-BR")
+    ? titleCasePtBr(cleaned)
+    : cleaned;
 }
 
 /** Match case/accent/spacing variants without merging different articles or narrower subjects. */
