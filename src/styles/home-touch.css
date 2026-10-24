@@ -124,7 +124,7 @@
     background: var(--muted);
   }
   .home-menu__group > summary::-webkit-details-marker { display: none; }
-  .home-menu__group > summary svg { width: 16px; height: 16px; flex: none; }
+  .home-menu__group > summary svg { width: 16px; height: 16px; flex: none; transition: transform 200ms var(--ease-out); }
   .home-menu__group[open] > summary { border-bottom: 1px solid var(--border); }
   .home-menu__group[open] > summary svg { transform: rotate(90deg); }
   .home-menu .home-menu__group nav { margin: 0; padding: 4px 14px; }

@@ -1304,6 +1304,10 @@
 }
 .home-plan__features summary svg {
   width: 14px;
+  transition: transform 200ms var(--ease-out);
+}
+.home-plan__features[open] summary svg {
+  transform: rotate(45deg);
 }
 .home-plan__features li {
   display: flex;
@@ -1353,6 +1357,7 @@
 .home-plan-comparison > summary > svg {
   width: 16px;
   color: var(--home-accent);
+  transition: transform 200ms var(--ease-out);
 }
 .home-plan-comparison[open] > summary > svg {
   transform: rotate(180deg);
@@ -1442,6 +1447,10 @@
 }
 .home-faq__list summary svg {
   width: 14px;
+  transition: transform 200ms var(--ease-out);
+}
+.home-faq__list details[open] > summary svg {
+  transform: rotate(45deg);
 }
 .home-faq__list p {
   font-size: 12px;
