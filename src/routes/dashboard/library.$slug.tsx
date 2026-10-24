@@ -345,7 +345,7 @@ function MaterialPage() {
                   topic={material.topic_label ?? material.title}
                 />
               </details>
-            )
+            )}
           </>
         }
       />
