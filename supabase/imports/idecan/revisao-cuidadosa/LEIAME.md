@@ -31,6 +31,12 @@ O item 30 não aparece no snapshot administrativo; o próximo registro após 29 
 
 `revisao-integral/pmsc-item31-art218c.sql` registra a redação atual, o edital PMSC, a explicação das alternativas e a auditoria antes/depois; promove somente o item 31. O lote ainda precisa ser aplicado no Supabase. A liberação se limita à edição PMSC 2026 e não constitui previsão para PC-AC.
 
+## Próximo item: PMSC Tipo A, item 32
+
+O gabarito definitivo IDECAN confirma D. O enunciado reproduz o art. 101 do Código Penal (“A ação penal no crime complexo”), abrangido pelo edital PMSC nº 200/CCP/2025, Anexo II, arts. 100 a 105. A fonte legal é o texto compilado do Planalto; a explicação distingue as alternativas pelos arts. 100 a 102 e pela regra do perdão na ação privada. A análise individual está em `revisao-integral/revisao-pmsc-item32.json`.
+
+`revisao-integral/pmsc-item32-crime-complexo.sql` reutiliza o tópico PMSC de Legislação Penal conferido no item 31, sem criar duplicidade, e promove apenas o item 32 após comparar a questão e o estado esperados. O lote ainda precisa ser aplicado no Supabase; não é previsão para PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
