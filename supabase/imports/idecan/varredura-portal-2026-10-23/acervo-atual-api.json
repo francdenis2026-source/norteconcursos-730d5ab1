@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-24T01:28:38.410601+00:00",
+  "project_ref": "gkwphadbveiyjcwiiizw",
+  "scope": "IDECAN educational content only; authenticated API reads; no database writes",
+  "tables": [
+    {
+      "table": "board_exam_questions",
+      "records": 273,
+      "content_range": "0-272/273",
+      "states": {
+        "active": 168,
+        "under_review": 104,
+        "obsolete": 1
+      },
+      "active": 168,
+      "active_with_explanation": 82,
+      "active_without_explanation": 86
+    },
+    {
+      "table": "curated_question_catalog",
+      "records": 10,
+      "content_range": "0-9/10",
+      "states": {
+        "active": 10
+      },
+      "active": 10,
+      "active_with_explanation": 10,
+      "active_without_explanation": 0
+    },
+    {
+      "table": "official_exam_questions",
+      "records": 0,
+      "content_range": "*/0",
+      "states": {},
+      "active": 0,
+      "active_with_explanation": 0,
+      "active_without_explanation": 0
+    },
+    {
+      "table": "question_corpus_candidates",
+      "records": 200,
+      "content_range": "0-199/200",
+      "states": {
+        "reviewed": 192,
+        "rejected": 3,
+        "obsolete": 5
+      }
+    }
+  ],
+  "notes": [
+    "Counts with text are not a certification of didactic/legal review.",
+    "Private corpus and its public representations must not be added as distinct questions.",
+    "Live educational snapshots are outside Git; no credentials persisted."
+  ]
+}
