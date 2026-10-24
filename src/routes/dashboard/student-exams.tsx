@@ -640,10 +640,9 @@ function StudentExamIntelligence() {
   };
 
   return (
-    <div className="space-y-7 pb-10">
+    <div className="space-y-5 pb-8">
       <Hero
         attempts={attempts.length}
-        accuracy={attempts.length ? responseAccuracy : null}
         action={
           <AddExamCard
             user={user}
@@ -831,15 +830,7 @@ function AddExamCard({
   );
 }
 
-function Hero({
-  attempts,
-  accuracy,
-  action,
-}: {
-  attempts: number;
-  accuracy: number | null;
-  action: React.ReactNode;
-}) {
+function Hero({ attempts, action }: { attempts: number; action: React.ReactNode }) {
   return (
     <section className="page-hero page-hero--lg workspace-banner" data-hero="exam-hall">
       <div className="page-hero__row">
@@ -853,15 +844,9 @@ function Hero({
           </p>
           {action && <div className="mt-4">{action}</div>}
         </div>
-        <div className="flex gap-2 sm:gap-3">
-          <div className="hero-stat min-w-[120px]">
-            <span>Provas com resultado</span>
-            <strong className="tabular">{attempts}</strong>
-          </div>
-          <div className="hero-stat min-w-[120px]">
-            <span>Precisão geral</span>
-            <strong className="tabular">{accuracy === null ? "—" : `${accuracy}%`}</strong>
-          </div>
+        <div className="hero-stat min-w-[120px]">
+          <span>Provas com resultado</span>
+          <strong className="tabular">{attempts}</strong>
         </div>
       </div>
     </section>
