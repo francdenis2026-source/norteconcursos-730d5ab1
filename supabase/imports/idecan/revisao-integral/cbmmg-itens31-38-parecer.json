@@ -8,8 +8,8 @@
     "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
     "notice": "Aviso nº 279/2026-CBMMG/ABM/CSE, Ato nº 12.448/2026, de 03/08/2026"
   },
-  "release_status": "already_active_explanation_update_only",
-  "hold_reason": "Consulta ao banco em 2026-10-24 confirmou que os oito registros já estão active e syllabus_topic_id=null. O SQL atualizado preserva active e não atribui tópico sem validação do edital oficial.",
+  "release_status": "active_with_verified_official_syllabus_link_pending_db_sql",
+  "hold_reason": "A consulta confirmou todos os itens active e syllabus_topic_id nulo. Edital IDECAN nº 09/2026 e retificação Ato CBMMG nº 5.446/2026 conferidos: Anexo II inclui os oito tópicos. Foi preparado SQL guardado para cadastrar a edição e vincular os itens sem alterar status nem explicações.",
   "items": [
     {
       "id": "7dfe5bfd-73a0-4de7-b9d3-2d6c35116971",
@@ -29,7 +29,8 @@
         "D": "Documento internacional que, embora não possua natureza de tratado, orienta a interpretação e a formulação de normas de direitos humanos."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa D está correta. A Declaração Universal de 1948 é uma resolução da Assembleia Geral da ONU, e não um tratado internacional ratificado pelos Estados. Mesmo sem a forma de tratado, tornou-se referência central para interpretar a dignidade humana e inspirar constituições, leis e tratados posteriores."
+      "expected_current_explanation": "A alternativa D está correta. A Declaração Universal de 1948 é uma resolução da Assembleia Geral da ONU, e não um tratado internacional ratificado pelos Estados. Mesmo sem a forma de tratado, tornou-se referência central para interpretar a dignidade humana e inspirar constituições, leis e tratados posteriores.",
+      "official_tested_topic": "Declaração Universal dos Direitos Humanos: natureza, função e marco de 10 de dezembro de 1948."
     },
     {
       "id": "7ced0a3d-5659-43f8-8cd0-53f51e978b32",
@@ -49,7 +50,8 @@
         "D": "Subordinação integral dos direitos individuais ao direito interno, sem incidência de mecanismos internacionais de proteção."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa C está correta. O Pacto Internacional dos Direitos Civis e Políticos protege contra prisão ou detenção arbitrária e assegura que a pessoa privada de liberdade possa questionar judicialmente a legalidade da detenção. A emergência não autoriza suspensão ilimitada de direitos."
+      "expected_current_explanation": "A alternativa C está correta. O Pacto Internacional dos Direitos Civis e Políticos protege contra prisão ou detenção arbitrária e assegura que a pessoa privada de liberdade possa questionar judicialmente a legalidade da detenção. A emergência não autoriza suspensão ilimitada de direitos.",
+      "official_tested_topic": "Pacto Internacional dos Direitos Civis e Políticos (PIDCP): liberdade e segurança pessoal, art. 9; garantias em emergência, art. 4."
     },
     {
       "id": "472a03f7-e91e-4ad9-badb-18d5ba5389d5",
@@ -69,7 +71,8 @@
         "D": "Execução direta de sanções econômicas em casos de violações graves de direitos humanos."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa C está correta. O Conselho de Direitos Humanos da ONU realiza a Revisão Periódica Universal, mecanismo que examina a situação dos direitos humanos em todos os Estados-membros. Ele não funciona como tribunal para julgar individualmente violações nem anula leis nacionais."
+      "expected_current_explanation": "A alternativa C está correta. O Conselho de Direitos Humanos da ONU realiza a Revisão Periódica Universal, mecanismo que examina a situação dos direitos humanos em todos os Estados-membros. Ele não funciona como tribunal para julgar individualmente violações nem anula leis nacionais.",
+      "official_tested_topic": "Sistema das Nações Unidas e direitos humanos; papel do Conselho de Direitos Humanos da ONU e Revisão Periódica Universal."
     },
     {
       "id": "c8e33e60-b292-4a8d-8e88-32956b1cfda1",
@@ -88,7 +91,8 @@
         "D": "Aplicação restrita a contextos culturais específicos previamente definidos."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa A está correta. A universalidade significa que os direitos humanos pertencem a todas as pessoas, sem discriminação por nacionalidade, origem, sexo, raça ou qualquer outra condição. Isso não impede limitações legais proporcionais em situações específicas."
+      "expected_current_explanation": "A alternativa A está correta. A universalidade significa que os direitos humanos pertencem a todas as pessoas, sem discriminação por nacionalidade, origem, sexo, raça ou qualquer outra condição. Isso não impede limitações legais proporcionais em situações específicas.",
+      "official_tested_topic": "Definição, conceito e características dos direitos humanos, especialmente a universalidade."
     },
     {
       "id": "482329fd-f9c4-4a6d-aef8-13cb95b4ad82",
@@ -108,7 +112,8 @@
         "D": "Dispensa a necessidade de esgotamento de recursos internos para análise de casos individuais."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa B está correta. A Convenção Americana prevê a Corte Interamericana de Direitos Humanos e sua jurisdição contenciosa depende do reconhecimento pelo Estado. O tratado protege direitos civis e políticos e, em regra, exige o esgotamento dos recursos internos, salvo exceções."
+      "expected_current_explanation": "A alternativa B está correta. A Convenção Americana prevê a Corte Interamericana de Direitos Humanos e sua jurisdição contenciosa depende do reconhecimento pelo Estado. O tratado protege direitos civis e políticos e, em regra, exige o esgotamento dos recursos internos, salvo exceções.",
+      "official_tested_topic": "Convenção Americana sobre Direitos Humanos: sistema interamericano, petições e jurisdição da Corte Interamericana."
     },
     {
       "id": "70087036-b55c-4304-bc60-5503af33aa95",
@@ -127,7 +132,8 @@
         "D": "Possuem aplicabilidade imediata, nos termos da Constituição."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa D está correta. O art. 5º, § 1º, da Constituição determina que as normas definidoras dos direitos e garantias fundamentais têm aplicação imediata. Isso não significa que toda regra dispense regulamentação, mas impede tratar os direitos como meras promessas sem eficácia."
+      "expected_current_explanation": "A alternativa D está correta. O art. 5º, § 1º, da Constituição determina que as normas definidoras dos direitos e garantias fundamentais têm aplicação imediata. Isso não significa que toda regra dispense regulamentação, mas impede tratar os direitos como meras promessas sem eficácia.",
+      "official_tested_topic": "Constituição Federal de 1988: direitos fundamentais e direitos e deveres individuais e coletivos; art. 5º, § 1º."
     },
     {
       "id": "c0d42a5e-c8a2-4a69-b5fd-b1794a2be167",
@@ -146,7 +152,8 @@
         "D": "A lei revogada volta a vigorar somente se houver disposição expressa nesse sentido."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa D está correta. Pela regra da LINDB, a lei revogada não volta automaticamente a vigorar quando a lei revogadora perde eficácia. A repristinação somente ocorre se houver disposição expressa determinando o retorno da lei anterior."
+      "expected_current_explanation": "A alternativa D está correta. Pela regra da LINDB, a lei revogada não volta automaticamente a vigorar quando a lei revogadora perde eficácia. A repristinação somente ocorre se houver disposição expressa determinando o retorno da lei anterior.",
+      "official_tested_topic": "Lei de Introdução às Normas do Direito Brasileiro (LINDB), arts. 1º ao 6º: art. 2º, § 3º (repristinação)."
     },
     {
       "id": "b0880a41-4442-4564-b116-35266f3f7caa",
@@ -166,8 +173,20 @@
         "D": "A decisão deve ser fundamentada prioritariamente na jurisprudência consolidada, seguida da doutrina majoritária e, subsidiariamente, na equidade."
       },
       "expected_current_status": "active",
-      "expected_current_explanation": "A alternativa A está correta. Diante de lacuna, a Lei de Introdução às Normas do Direito Brasileiro orienta o julgador a decidir por analogia, costumes e princípios gerais de direito. Esses instrumentos integram o sistema e não autorizam o juiz a deixar de decidir."
+      "expected_current_explanation": "A alternativa A está correta. Diante de lacuna, a Lei de Introdução às Normas do Direito Brasileiro orienta o julgador a decidir por analogia, costumes e princípios gerais de direito. Esses instrumentos integram o sistema e não autorizam o juiz a deixar de decidir.",
+      "official_tested_topic": "Lei de Introdução às Normas do Direito Brasileiro (LINDB), arts. 1º ao 6º: art. 4º (integração diante de omissão)."
     }
   ],
-  "database_state_verified_at": "2026-10-24"
+  "database_state_verified_at": "2026-10-24",
+  "official_syllabus": {
+    "title": "Edital nº 09, de 16 de março de 2026 — CFO BM 2027, conforme retificação do Ato nº 5.446/2026",
+    "initial_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=PBJ7U4UHNTI43VG93VV1VAH6W9Q2JVIXFJSNXGW2TOPC7994PHN10O0GH1UL7NQO371FB8WY7BVRX07T6979.pdf",
+    "initial_sha256": "e4f65a7355dc9abe0c78c9bd5bd4034300a9c10a7404e12c9b33defcced4a4d1",
+    "retification_url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=YTA9XW6CMCPI4320DNO8IUDOQIKV4RWLSF7GJI8MDAEVJA4TPSLIHF50106NYS54SR135DPVIA4JAPR57385.pdf",
+    "retification_sha256": "4fe622494764cd8f71f22f40d376d222f6ebb34a43f80d03db8d0a1577f1b5ec",
+    "official_page": "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=224",
+    "official_program_pages": "Edital Anexo II, p. 57; retificação Ato 5.446/2026, pp. 2–3",
+    "retification_effect": "A retificação amplia os artigos do Estatuto dos Militares de MG de 15 e 25 para arts. 8–13, 15 e 25; não altera os tópicos cobrados nos itens 31–38.",
+    "program_excerpt": "NOÇÕES DE DIREITOS HUMANOS E LEGISLAÇÃO: Definição e conceito de direitos humanos. História dos direitos humanos. Pacto Internacional dos Direitos Civis e Políticos (PIDCP). Pacto Internacional dos Direitos Econômicos, Sociais e Culturais (PIDESC). Sistema das Nações Unidas e os direitos humanos. O papel do Conselho de Direitos Humanos da ONU. Declaração Universal dos Direitos Humanos – adotada pela Assembleia Geral das Nações Unidas em 10 de dezembro de 1948. Convenção Americana sobre Direitos Humanos – assinada na Conferência Especializada Interamericana sobre Direitos Humanos (San José da Costa Rica), em 22 de novembro de 1969. Lei Estadual n. 5.301, de 16 de outubro de 1969 - Estatuto dos Militares do Estado de Minas Gerais (art. 8º ao 13; arts. 15 e 25). Constituição Federal de 1988 (Direitos Fundamentais. Direitos e deveres individuais e coletivos. Administração pública. Militares dos Estados e do Distrito Federal. Organização judiciária militar dos estados. Forças armadas. Segurança pública). Constituição do Estado de Minas Gerais (Militares do estado. Segurança pública. Subordinação do Corpo de Bombeiros ao Governador do Estado. Arts. 137, 142 e 143). Lei n. 4657, de 04 de setembro de 1942 – Lei de Introdução às Normas do Direito Brasileiro (arts. 1º ao 6º)."
+  }
 }
