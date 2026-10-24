@@ -1084,7 +1084,7 @@ function ProfessionalSimulator() {
     );
 
   return (
-    <div className="simulator-workspace mx-auto max-w-6xl space-y-6 pb-6">
+    <div className="simulator-workspace mx-auto max-w-6xl space-y-5 pb-6">
       <section className="exam-simulator-hero workspace-banner" aria-labelledby="simulator-title">
         <div className="exam-simulator-hero__content">
           <span className="exam-simulator-hero__eyebrow">Preparação em condições de prova</span>
@@ -1118,29 +1118,18 @@ function ProfessionalSimulator() {
           )}
         </div>
       </section>
-      <section
-        className="rounded-2xl border bg-card p-5 text-sm"
-        aria-label="Como usar o simulador"
-      >
-        <p>
-          <strong>Simulador: teste seu desempenho.</strong> Resolva sem consultar o gabarito,
-          acompanhe o prazo e receba a correção ao finalizar. Questões podem ser puladas e retomadas
-          antes da entrega; em branco não conta como erro. A nota segue a regra de correção indicada
-          no resultado — o desconto de erro só é aplicado quando a regra da prova está registrada —
-          e é diferente do aproveitamento e dos pontos do ranking. Não é nota oficial nem TRI.
-        </p>
-        <p className="mt-2 text-muted-foreground">
-          Para aprender com correção imediata a cada questão, use o{" "}
-          <Link
-            to="/dashboard/question-trainer"
-            search={isEnemMode ? { contest: "ENEM" } : {}}
-            className="font-semibold underline"
-          >
-            Treinador de questões
-          </Link>
-          .
-        </p>
-      </section>
+      <p className="rounded-xl border bg-card px-4 py-3 text-sm text-muted-foreground">
+        Resolva sem consultar o gabarito; ele só aparece ao finalizar, com a regra de correção
+        aplicada. Para aprender com correção imediata a cada questão, use o{" "}
+        <Link
+          to="/dashboard/question-trainer"
+          search={isEnemMode ? { contest: "ENEM" } : {}}
+          className="font-semibold text-foreground underline"
+        >
+          Treinador de questões
+        </Link>
+        .
+      </p>
       {resumeDraft && (
         <section
           className="rounded-xl border border-primary/30 bg-primary/5 p-5"

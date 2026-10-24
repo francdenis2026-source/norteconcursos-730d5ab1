@@ -155,7 +155,10 @@ function LegalCoursePage() {
     setTab("learn");
   }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
   // escolher um dispositivo atualiza o endereço (compartilhável e com o botão Voltar funcionando)
+  // Internal article changes preserve the reading position; deep links still reveal the article.
+  const internalNav = useRef(false);
   const setSelectedId = (id: string) => {
+    internalNav.current = true;
     setSelectedIdState(id);
     const unit = rows.find((row) => row.id === id);
     if (unit) void navigate({ search: { art: unit.unit_key }, replace: true });
@@ -175,11 +178,12 @@ function LegalCoursePage() {
   }, [course?.slug, selected?.unit_key]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!art || !selected) return;
+    if (internalNav.current) { internalNav.current = false; return; }
     const t = setTimeout(
       () =>
         document
           .getElementById("dispositivo-aberto")
-          ?.scrollIntoView({ block: "start", behavior: "smooth" }),
+          ?.scrollIntoView({ block: "start", behavior: "instant" }),
       250,
     );
     return () => clearTimeout(t);

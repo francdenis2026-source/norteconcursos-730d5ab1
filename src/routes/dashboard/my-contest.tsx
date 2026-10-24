@@ -107,12 +107,10 @@ function MyContestPage() {
         </div>
         <Target className="edital-heading-icon" />
       </header>
-      {days !== null && Number.isFinite(days) && (
-        <p className="flex items-center gap-2 rounded-xl border p-4">
-          <Calendar className="h-5 w-5" />
-          {days >= 0
-            ? `${days} dias para a data da prova cadastrada`
-            : "A data da prova cadastrada já passou"}
+      {days !== null && Number.isFinite(days) && days < 0 && (
+        <p className="flex items-center gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
+          <Calendar className="h-4 w-4 shrink-0" />A data da prova cadastrada já passou. Atualize o
+          seu objetivo se a data mudou.
         </p>
       )}
       <section className="edital-catalog">
@@ -179,7 +177,7 @@ function MyContestPage() {
             <Link
               key={to}
               to={to}
-              className="flex gap-3 rounded-2xl border bg-card p-4 transition-colors hover:bg-muted/60"
+              className="flex gap-3 rounded-2xl border bg-card p-4 transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
             >
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
                 <Icon className="h-5 w-5" aria-hidden="true" />

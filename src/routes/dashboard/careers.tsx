@@ -93,7 +93,7 @@ function CareersPage() {
               <CardContent className="pt-5 space-y-3">
                 <div className="flex items-center justify-between">
                   <div
-                    className="h-10 w-10 rounded-xl flex items-center justify-center font-black text-white text-sm"
+                    className="flex h-10 min-w-10 items-center justify-center rounded-xl px-2 text-sm font-black text-white"
                     style={{ background: c.color }}
                   >
                     {c.name}
@@ -122,7 +122,7 @@ function CareersPage() {
                   <Link
                     to="/dashboard/question-trainer"
                     search={{ career: c.agency }}
-                    className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90"
+                    className="flex items-center justify-between rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90 active:scale-[0.97] motion-reduce:active:scale-100"
                   >
                     Treinar questões da carreira
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -130,7 +130,7 @@ function CareersPage() {
                   <Link
                     to="/dashboard/student-exams"
                     search={{ career: c.agency }}
-                    className="flex items-center justify-between rounded-xl border px-3 py-2 text-xs font-bold transition hover:bg-muted"
+                    className="flex items-center justify-between rounded-xl border px-3 py-2 text-xs font-bold transition hover:bg-muted active:scale-[0.97] motion-reduce:active:scale-100"
                   >
                     Minhas provas desta carreira
                     <FileStack className="h-3.5 w-3.5" />

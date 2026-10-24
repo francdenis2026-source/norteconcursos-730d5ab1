@@ -11590,6 +11590,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   box-shadow: 0 12px 26px -18px color-mix(in oklab, var(--hub-accent) 55%, transparent);
   transform: translateY(-2px);
 }
+.student-home__metric:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
 .student-home__metric[data-tone="blue"] > span { color: var(--c-blue, var(--hub-accent)); }
 .student-home__metric[data-tone="teal"] > span { color: var(--c-teal, var(--hub-accent)); }
 .student-home__metric[data-tone="amber"] > span { color: var(--c-amber, var(--hub-accent)); }
@@ -11653,6 +11657,13 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .student-hub__shortcuts > a:hover::before,
 .student-hub__shortcuts > a:focus-visible::before {
   transform: scale(1.07);
+}
+.student-hub__shortcuts > a:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 10px 22px -18px color-mix(in oklab, var(--hub-accent) 48%, transparent);
+}
+.student-hub__shortcuts > a:active::before {
+  transform: scale(1.02);
 }
 .student-hub__shortcuts > a > * {
   position: relative;
@@ -11825,6 +11836,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   box-shadow: 0 16px 30px -22px color-mix(in oklab, var(--primary) 70%, transparent);
   filter: saturate(1.08);
 }
+.performance-metric-link:active .performance-metric-card {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
+}
 .performance-overview :is(a, button, summary) {
   cursor: pointer;
 }
@@ -11839,8 +11854,11 @@ html body[data-scroll-locked] .right-scroll-bar-position {
     transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
   }
   .student-home__metric:hover,
+  .student-home__metric:active,
   .student-hub__shortcuts > a:hover,
-  .performance-metric-link:hover .performance-metric-card {
+  .student-hub__shortcuts > a:active,
+  .performance-metric-link:hover .performance-metric-card,
+  .performance-metric-link:active .performance-metric-card {
     transform: none;
   }
 }
@@ -11965,8 +11983,10 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .trainer-panel-kicker { display:block; font-size:10px; letter-spacing:.12em; font-weight:700; color:var(--trainer-accent); }
 .trainer-workbench-heading h1 { margin-top:7px; font-size:clamp(26px,2.5vw,36px); font-weight:750; letter-spacing:-.035em; line-height:1.15; }
 .trainer-workbench-heading p { margin-top:9px; color:var(--muted-foreground); font-size:14px; }
-.trainer-catalog-link { display:flex; align-items:center; gap:10px; min-height:44px; padding:10px 14px; border:1px solid var(--trainer-line); border-radius:9px; color:var(--foreground); background:var(--card); font-size:12px; font-weight:600; white-space:nowrap; }
+.trainer-catalog-link { display:flex; align-items:center; gap:10px; min-height:44px; padding:10px 14px; border:1px solid var(--trainer-line); border-radius:9px; color:var(--foreground); background:var(--card); font-size:12px; font-weight:600; white-space:nowrap; transition: background-color .15s, border-color .15s, transform 100ms ease-out; }
 .trainer-catalog-link svg { width:17px; height:17px; }
+.trainer-catalog-link:active { transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) { .trainer-catalog-link:active { transform: none; } }
 .trainer-catalog-scope { border-left: 1px solid var(--trainer-accent); padding:10px 14px; background:var(--trainer-soft); border-radius:0 9px 9px 0; font-size:13px; }
 .trainer-practice-panel { padding:0; }
 .trainer-practice-panel > h2 { margin:0 0 12px; font-size:14px; font-weight:650; }
@@ -12157,8 +12177,11 @@ html body[data-scroll-locked] .right-scroll-bar-position {
 .trainer-result-next h2 { font-size:21px; font-weight:700; letter-spacing:-.02em; }
 .trainer-result-next > p { font-size:13px; line-height:1.9; color:var(--muted-foreground); margin-bottom:10px; }
 .trainer-result-next > button { min-height:46px; box-shadow:none; }
-.trainer-result-next > a { display:flex; align-items:center; justify-content:center; gap:9px; min-height:44px; font-size:13px; color:var(--trainer-accent); font-weight:650; }
+.trainer-result-next > a { display:flex; align-items:center; justify-content:center; gap:9px; min-height:44px; font-size:13px; color:var(--trainer-accent); font-weight:650; transition: opacity .15s, transform 100ms ease-out; }
 .trainer-result-next > a svg { width:16px; height:16px; }
+.trainer-result-next > a:hover { opacity: .82; }
+.trainer-result-next > a:active { transform: scale(0.97); }
+@media (prefers-reduced-motion: reduce) { .trainer-result-next > a:active { transform: none; } }
 @media(max-width:767px) { .trainer-result-layout { grid-template-columns:minmax(0,1fr); } .trainer-result-score,.trainer-result-next { padding:22px; } .trainer-result-header h1 { font-size:25px; } .trainer-result-score > strong { font-size:58px; } }
 /* The exercise surface stays opaque when switching between setup, answers and results. */
 .app-content__inner > :is(.trainer-workbench,.trainer-resolution-workspace) { animation:none; }
@@ -12270,11 +12293,18 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background: var(--background);
   transition:
     border-color 0.2s,
-    background 0.2s;
+    background 0.2s,
+    transform 100ms ease-out;
 }
 .edital-edition:hover {
   border-color: var(--brass);
   background: var(--muted);
+}
+.edital-edition:active {
+  transform: scale(0.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  .edital-edition:active { transform: none; }
 }
 .edital-edition:focus-visible {
   outline: 2px solid var(--ring);
@@ -13024,6 +13054,10 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   box-shadow: 0 10px 22px -12px oklch(0.5 0.18 262 / .8); transition: background .2s, transform .2s;
 }
 :root:not(.dark) .trainer-workbench-hero .trainer-catalog-link:hover { background: oklch(0.44 0.18 262); transform: translateY(-1px); }
+:root:not(.dark) .trainer-workbench-hero .trainer-catalog-link:active { transform: translateY(0) scale(0.97); }
+@media (prefers-reduced-motion: reduce) {
+  :root:not(.dark) .trainer-workbench-hero .trainer-catalog-link:active { transform: none; }
+}
 
 /* Realces coloridos nas áreas do sistema: a identidade de cada métrica mora
    no ícone (preenchimento em gradiente), não numa tarja na borda do cartão. */
@@ -13991,8 +14025,12 @@ html[data-read-scale] :is(.q-text, .study-prose, .reading-text) .q-option-text {
   transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 a.material-card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 8px 22px rgb(0 0 0 / 0.12); }
+a.material-card:active { transform: translateY(0) scale(0.98); box-shadow: none; }
 a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline-offset: 2px; }
 .material-card[data-empty="true"] { opacity: 0.62; cursor: default; border-style: dashed; }
+@media (prefers-reduced-motion: reduce) {
+  a.material-card:hover, a.material-card:active { transform: none; }
+}
 .material-card__icon {
   display: grid;
   flex: 0 0 auto;
@@ -14057,6 +14095,7 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .law-finder__list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .law-finder__card { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); color: var(--foreground); text-decoration: none; transition: border-color .15s, transform .15s, box-shadow .15s; }
 .law-finder__card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 8px 22px rgb(0 0 0 / .12); }
+.law-finder__card:active { transform: translateY(0) scale(0.98); box-shadow: none; }
 .law-finder__card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline-offset: 2px; }
 .law-finder__badge { display: grid; flex: 0 0 auto; place-items: center; gap: 1px; min-width: 96px; padding: 8px 10px; border-radius: 12px; background: color-mix(in oklab, #d9a53a 20%, transparent); color: #8a5b11; text-align: center; }
 .dark .law-finder__badge { color: #f0c15a; }
@@ -14079,6 +14118,12 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
   .law-finder__card { flex-wrap: wrap; align-items: flex-start; }
   .law-finder__badge { min-width: 0; width: 100%; grid-auto-flow: column; justify-content: start; gap: 10px; padding: 6px 12px; }
   .law-finder__go { width: 100%; justify-content: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .law-finder__card:hover, .law-finder__card:active,
+  a.discipline-card:hover, a.discipline-card:active {
+    transform: none;
+  }
 }
 
 /* Busca única do hub e atalho para o localizador de leis */
@@ -14110,6 +14155,7 @@ a.material-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline
 .discipline-search button { display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 10px; background: var(--muted); color: var(--foreground); cursor: pointer; }
 .discipline-card { display: grid; gap: 10px; align-content: start; min-height: 148px; padding: 18px; border: 1px solid var(--border); border-radius: 18px; background: var(--card); color: var(--foreground); text-decoration: none; transition: border-color .15s, transform .15s, box-shadow .15s; }
 a.discipline-card:hover { border-color: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 26px rgb(0 0 0 / .14); }
+a.discipline-card:active { transform: translateY(0) scale(0.98); box-shadow: none; }
 a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outline-offset: 2px; }
 .discipline-card[data-empty="true"] { opacity: .62; border-style: dashed; }
 .discipline-card > strong { font-size: 17px; line-height: 1.25; }
@@ -14120,7 +14166,12 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .discipline-card__stats li { padding: 3px 10px; border-radius: 999px; background: var(--muted); font-size: 12px; color: var(--muted-foreground); }
 .discipline-card__soon { font-size: 12.5px; color: var(--muted-foreground); }
 .discipline-back { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-size: 14px; font-weight: 600; color: var(--primary); text-decoration: none; }
-.discipline-practice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-weight: 700; text-decoration: none; }
+.discipline-practice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 12px; background: var(--primary); color: var(--primary-foreground); font-weight: 700; text-decoration: none; transition: transform 100ms ease-out, opacity 0.15s; }
+.discipline-practice:hover { opacity: 0.9; }
+.discipline-practice:active { transform: scale(0.96); }
+@media (prefers-reduced-motion: reduce) {
+  .discipline-practice:active { transform: none; }
+}
 .discipline-h { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 19px; font-weight: 700; }
 .discipline-none { margin: 0; padding: 14px 16px; border: 1px dashed var(--border); border-radius: 14px; font-size: 14px; color: var(--muted-foreground); }
 
@@ -14172,4 +14223,40 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
   font-weight: 700;
   font-synthesis: none;
   letter-spacing: -.025em;
+}
+
+/* Apple HIG "Response": feedback starts the instant a control is pressed, not when it's
+   released — these shell controls only had :hover before, so a tap felt dead until the
+   click resolved. A small, fast scale on :active covers press-down for mouse and touch. */
+.app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user, .app-bottom-nav a, .app-bottom-nav button) {
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 100ms ease-out;
+}
+.app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user):active {
+  transform: scale(0.96);
+}
+.app-bottom-nav a:active,
+.app-bottom-nav button:active {
+  transform: scale(0.94);
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell.app-shell :is(.app-icon-btn, .app-top-btn, .app-sidebar__expand, .app-top-search, .app-user):active,
+  .app-bottom-nav a:active,
+  .app-bottom-nav button:active {
+    transform: none;
+  }
+}
+
+/* Mesmo princípio, no painel (Meu painel): os links e botões próprios da página
+   (student-home__text-link, student-home__section-button, atalho de Planejamento) também só
+   tinham :hover. */
+.student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a) {
+  transition: color 0.15s, text-decoration-color 0.15s, transform 90ms ease-out;
+}
+.student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a):active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  .student-home :is(.student-home__text-link, .student-home__section-button, .student-hub__planning-link a):active {
+    transform: none;
+  }
 }

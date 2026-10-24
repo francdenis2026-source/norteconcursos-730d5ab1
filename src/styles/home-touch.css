@@ -23,7 +23,10 @@
     backdrop-filter: blur(16px);
   }
   :root:is(.dark, :not(.dark)) .home.home .home-header {
-    background: color-mix(in srgb, var(--background) 97%, transparent);
+    /* Near-opaque on its own: position: sticky + backdrop-filter can sample a stale backdrop on
+       some devices while scrolling, letting the heading text underneath stay sharp instead of
+       blurred — the opacity alone, not the blur, is what has to hide it reliably. */
+    background: color-mix(in srgb, var(--background) 99%, transparent);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
   }
@@ -807,7 +810,7 @@
   background-color: #f2f5f8;
 }
 :root:not(.dark) .home.home .home-header {
-  background: rgb(255 255 255 / 96%);
+  background: rgb(255 255 255 / 99%);
   color: var(--stage-ink);
   border-bottom: 1px solid var(--stage-line);
   box-shadow: 0 3px 20px -16px rgb(20 41 60 / 23%);
@@ -1228,7 +1231,7 @@
     box-shadow: 0 6px 20px -16px rgb(25 55 81 / .34);
   }
   :root:not(.dark) .home.home .home-header {
-    background: rgb(232 241 247 / .97);
+    background: rgb(232 241 247 / .99);
     border-bottom: 1px solid #b4c9d9;
     box-shadow: 0 7px 22px -20px rgb(25 52 73 / .4);
   }

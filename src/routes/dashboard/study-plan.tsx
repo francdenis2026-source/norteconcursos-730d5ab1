@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { AgenteContabilidadePlan } from "@/components/dashboard/AgenteContabilidadePlan";
+import { PageHero, HeroStat } from "@/components/dashboard/PageHero";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/dashboard/study-plan")({ component: StudyPlanPage });
@@ -476,38 +477,20 @@ function StudyPlanPage() {
 
   return (
     <div className="space-y-7 pb-10">
-      <section className="page-hero page-hero--lg workspace-banner" data-hero="journey">
-        <div className="grid gap-7 lg:grid-cols-[1.5fr_1fr] lg:items-end">
-          <div>
-            <span className="hero-chip">
-              <Sparkles /> Baseado nas suas provas
-            </span>
-            <h1>
-              Ajustes pelos resultados: <em>{plan.fullName}</em>
-            </h1>
-            <p className="page-hero__desc">
-              Consulte prioridades a partir das provas realizadas. A carreira, a carga horária e a data abaixo são os parâmetros deste diagnóstico; confira se correspondem ao objetivo da sua preparação.
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <HeroMetric
-              label="Provas da carreira"
-              value={String(current.length)}
-              icon={FileCheck2}
-            />
-            <HeroMetric
-              label="Precisão geral"
-              value={overallAccuracy === null ? "—" : `${overallAccuracy}%`}
-              icon={Gauge}
-            />
-            <HeroMetric
-              label="Tendência"
-              value={trend === null ? "—" : `${trend > 0 ? "+" : ""}${trend} pts`}
-              icon={TrendingUp}
-            />
-          </div>
+      <PageHero
+        image="journey"
+        size="sm"
+        kicker="Baseado nas suas provas"
+        icon={Sparkles}
+        title={<>Ajustes pelos resultados: <em>{plan.fullName}</em></>}
+        description="Consulte prioridades a partir das provas realizadas. A carreira, a carga horária e a data abaixo são os parâmetros deste diagnóstico; confira se correspondem ao objetivo da sua preparação."
+      >
+        <div className="page-hero__stats">
+          <HeroStat icon={FileCheck2} label="Provas da carreira" value={String(current.length)} />
+          <HeroStat icon={Gauge} label="Precisão geral" value={overallAccuracy === null ? "—" : `${overallAccuracy}%`} />
+          <HeroStat icon={TrendingUp} label="Tendência" value={trend === null ? "—" : `${trend > 0 ? "+" : ""}${trend} pts`} />
         </div>
-      </section>
+      </PageHero>
       <StudyPlanningNav active="diagnosis" />
 
       {error && (
@@ -894,23 +877,17 @@ function StudyPlanPage() {
         </CardContent>
       </Card>
 
-      <section
-        className="page-hero page-hero--sm md:!flex-row md:!items-end md:!justify-between workspace-banner"
-        data-hero="exam-hall"
-      >
+      <Card className="flex flex-wrap items-center justify-between gap-4 p-5">
         <div>
-          <span className="hero-chip">Próxima missão</span>
-          <h2 className="font-display mt-3 text-3xl font-extrabold leading-none">
-            {current.length ? "Refaça a medição" : "Faça seu diagnóstico"}{" "}
-            <span className="text-brass">{career}</span>
-          </h2>
-          <p className="page-hero__desc">
-            O resultado recalcula as prioridades acima. Gabarito e explicações só aparecem ao
-            finalizar.
+          <p className="font-black">
+            {current.length ? "Refaça a medição" : "Faça seu diagnóstico"} — {career}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            O resultado recalcula as prioridades acima. Gabarito e explicações só aparecem ao finalizar.
           </p>
         </div>
-        <div className="mt-5 flex flex-wrap gap-2 md:mt-0">
-          <Button asChild size="lg" className="hero-btn-primary">
+        <div className="flex flex-wrap gap-2">
+          <Button asChild>
             <Link
               to="/dashboard/mock-exams"
               search={{
@@ -921,31 +898,11 @@ function StudyPlanPage() {
               Iniciar treino direcionado <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild size="lg" className="hero-btn-ghost">
+          <Button asChild variant="outline">
             <Link to="/dashboard/cronograma">Ver cronograma por edital</Link>
           </Button>
         </div>
-      </section>
-    </div>
-  );
-}
-
-function HeroMetric({
-  label,
-  value,
-  icon: Icon,
-}: {
-  label: string;
-  value: string;
-  icon: React.ElementType;
-}) {
-  return (
-    <div className="hero-stat">
-      <span>
-        <Icon />
-        <span className="truncate">{label}</span>
-      </span>
-      <strong className="truncate !text-xl tabular">{value}</strong>
+      </Card>
     </div>
   );
 }
