@@ -1,0 +1,46 @@
+{
+  "batch_key": "idecan-pcsc-agente-tipo-b-redes-40-42-v1",
+  "contest": "PC SC - Agente de Polícia Civil 2026",
+  "exam_type": "Tipo B",
+  "reviewed_at": "2026-10-24",
+  "official_key_sequence": "BAD",
+  "answer_key_matches": true,
+  "official_syllabus_url": "https://portal.doe.sea.sc.gov.br/repositorio/2025/20251212/Jornal/22660.pdf",
+  "official_syllabus_sha256": "d7f9f37b5fc7ed09ec19360e998d2a07dc751260d3e59ce6f2623f50905d758a",
+  "items": [
+    {
+      "id": "20d622a4-34f6-4ca9-8c51-16f641523079",
+      "item_number": 40,
+      "answer": "B",
+      "previous_status": "under_review",
+      "explanation": "B é correta. WAN (Wide Area Network) conecta redes locais separadas por grandes distâncias, como filiais em cidades distintas por enlaces de operadoras.\nA) descreve PAN, de alcance pessoal. C) anel é uma topologia, não a classificação pelo alcance. D) LAN tem alcance local. E) ponto a ponto descreve um tipo de enlace, não a rede geográfica descrita.\nBase técnica: conteúdo de redes LAN, WAN e MAN do Anexo I do edital PCSC; distinção por abrangência geográfica.",
+      "tested_topic": "Redes de computadores: WAN e classificação de redes por abrangência geográfica; interligação de redes locais por enlaces de operadoras.",
+      "technical_sources": []
+    },
+    {
+      "id": "f7c2f911-adb5-4814-81a4-4382302dd218",
+      "item_number": 41,
+      "answer": "A",
+      "previous_status": "under_review",
+      "explanation": "A é correta. CGNAT (Carrier-Grade NAT) é o NAT realizado na rede da operadora para compartilhar endereços IPv4 públicos entre muitos assinantes, usando mapeamento de endereços e portas. A RFC 6598 reserva 100.64.0.0/10 como espaço compartilhado para redes de provedores; a RFC 6888 descreve requisitos comuns de CGN.\nB) GRE encapsula tráfego em túneis; C) roteamento hierárquico organiza rotas; D) proxy reverso atua na camada de aplicação; E) dual stack usa IPv4 e IPv6, não é o mecanismo descrito.\nEm investigações, a atribuição confiável pode depender de endereço público, porta de origem, protocolo e horário, além dos registros de tradução da operadora.\nReferência técnica: RFCs 6598 e 6888, RFC Editor/IETF.",
+      "tested_topic": "Redes de computadores: CGNAT, compartilhamento de IPv4 e mapeamento de portas; RFCs 6598 e 6888.",
+      "technical_sources": [
+        "https://www.rfc-editor.org/rfc/rfc6598",
+        "https://www.rfc-editor.org/rfc/rfc6888"
+      ]
+    },
+    {
+      "id": "ff0d209d-063c-402a-bfda-dedca67623ac",
+      "item_number": 42,
+      "answer": "D",
+      "previous_status": "under_review",
+      "explanation": "D é correta. SNMP (Simple Network Management Protocol) usa uma arquitetura de gerente e agentes: o gerente consulta agentes nos dispositivos por objetos identificados em MIBs/OIDs. Operações GET consultam valores e SET pode alterá-los se houver autorização. Em geral, consultas usam UDP 161 e notificações SNMP usam UDP 162 (RFC 3417). SNMPv3 oferece mecanismos de autenticação e privacidade.\nA) DHCP atribui configuração de rede; B) HTTP transfere recursos web; C) DNS resolve nomes; E) FTP transfere arquivos.\nReferências técnicas: RFCs 3411 (arquitetura), 3416 (operações) e 3417 (mapeamento de transporte), RFC Editor/IETF.",
+      "tested_topic": "Redes de computadores: SNMP, arquitetura gerente-agente, operações e portas usuais; RFCs 3411, 3416 e 3417.",
+      "technical_sources": [
+        "https://www.rfc-editor.org/rfc/rfc3411",
+        "https://www.rfc-editor.org/rfc/rfc3416",
+        "https://www.rfc-editor.org/rfc/rfc3417"
+      ]
+    }
+  ]
+}
