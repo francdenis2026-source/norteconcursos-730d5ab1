@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-24T01:09:04.811619+00:00",
+  "scope": "Official portal discovery, not publication",
+  "local_reference": {
+    "scope": "Local historical reference only; not a live database inventory or count of new/active questions",
+    "records_by_file": {
+      "idecan_questions.json": 273,
+      "pcce_inspetor_2021_corpus.json": 100,
+      "pcce_escrivao_2021_corpus.json": 100
+    },
+    "official_urls": [
+      "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=201",
+      "https://antigo-concurso.idecan.org.br/Concurso.aspx?ID=32",
+      "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=GABARITO_OFICIAL_DEFINITIVO.pdf",
+      "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=M9HQWJK3ETPULWNR0MV39BJ9PDFKY8F9XC2P3T6XRU8IYOJECTQBA9T6I920N7ES9PYT13278U1LBSPB7045.pdf",
+      "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=X6BT90RYGNDO2S8DGORM9OO61FDNBPF2P0I6D2GESRJNOE4S4WCY4LGHA0TVQ1S1DDEP85BIAPGOEYBF1384.pdf"
+    ],
+    "sha256": [
+      "56a363de9d9c7d346d116c9e4d86cd8f5d737222ea51595a906c8596813c6cfe",
+      "6bdc8686ea4c69b6651cf5b69e5f845a6e21589653bf0402b5776bcbdb748cb3",
+      "a835d92983601375c77355a50f68bdc77092e4fb88fdb9686ff453b8ed2fd57d"
+    ]
+  },
+  "pages": [],
+  "documents": [],
+  "failures": [
+    {
+      "url": "https://concurso.idecan.org.br/editais?status=andamento",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "stage": "listing_read"
+    },
+    {
+      "url": "https://antigo-concurso.idecan.org.br/SITE/Concursos.aspx",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "stage": "listing_read"
+    }
+  ],
+  "questions_extracted": 0,
+  "questions_seeded": 0,
+  "summary": {
+    "pages_attempted": 2,
+    "pages_read": 0,
+    "documents_discovered": 0,
+    "pdfs_downloaded": 0,
+    "failures": 2,
+    "queue_remaining": 0,
+    "coverage": "incomplete"
+  }
+}
