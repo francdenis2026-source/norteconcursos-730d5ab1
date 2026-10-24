@@ -25,6 +25,12 @@ O snapshot administrativo disponível não contém os itens 23–28; o próximo 
 
 `revisao-integral/pmsc-item29-lonpm.sql` registra a edição e o tópico oficiais da própria seleção, a fonte legal do Planalto, a explicação das cinco alternativas e a auditoria antes/depois; promove somente o item 29. O lote ainda precisa ser aplicado no Supabase. A liberação se limita ao edital histórico PMSC 2026 e não sugere previsão para PC-AC.
 
+## Próximo item existente: PMSC Tipo A, item 31
+
+O item 30 não aparece no snapshot administrativo; o próximo registro após 29 é o 31. O gabarito definitivo IDECAN confirma A. O texto compilado oficial do Código Penal mantém no art. 218-C a conduta descrita na questão; a Lei 15.280/2025 alterou a pena do caput, mudança explicitada na explicação. O Anexo II do Edital PMSC nº 200/CCP/2025 inclui expressamente os arts. 213 a 218-C (página impressa 52). A conferência e os hashes estão em `revisao-integral/revisao-pmsc-item31.json` e `fontes-coletadas.json`.
+
+`revisao-integral/pmsc-item31-art218c.sql` registra a redação atual, o edital PMSC, a explicação das alternativas e a auditoria antes/depois; promove somente o item 31. O lote ainda precisa ser aplicado no Supabase. A liberação se limita à edição PMSC 2026 e não constitui previsão para PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.

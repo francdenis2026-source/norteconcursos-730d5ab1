@@ -90,6 +90,18 @@
     "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
     "checked_at": "2026-10-23",
     "relevant_pages": "Anexo II, pp. 51–52",
-    "note": "Downloaded via official IDECAN contest page ID 207 with official-page session/referrer. Lists Lei 14.751/2023 under Legislação Institucional."
+    "note": "Downloaded via official IDECAN contest page ID 207 with official-page session/referrer. Anexo II includes Lei 14.751/2023 under Legislação Institucional (pp. 51–52) and Código Penal arts. 213 a 218-C under Legislação Penal (p. 52)."
+  },
+  {
+    "label": "codigo-penal-compilado-art218c",
+    "kind": "official_law",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "status": 200,
+    "bytes": 683589,
+    "pdf": false,
+    "sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "relevant_excerpt": "Art. 218-C, caput e § 1º; pena do caput com redação dada pela Lei 15.280/2025."
   }
 ]
