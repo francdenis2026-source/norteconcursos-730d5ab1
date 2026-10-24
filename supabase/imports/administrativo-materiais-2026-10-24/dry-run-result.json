@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-24T22:32:42.545593+00:00",
+  "rolled_back": true,
+  "materials_sql_sha256": "158b338c30c9b5a7eeea6e1f1f69de1cdce5dc29923aa3c69bb461635ebbf685",
+  "questions_sql_sha256": "1d58a40397daed65c0362de30786ba3584ab55d0f760421f830ccfe59e3a48c1",
+  "result": [
+    {
+      "review_status": "needs_review",
+      "count": 78
+    },
+    {
+      "review_status": "obsolete",
+      "count": 12
+    },
+    {
+      "review_status": "published",
+      "count": 69
+    }
+  ]
+}

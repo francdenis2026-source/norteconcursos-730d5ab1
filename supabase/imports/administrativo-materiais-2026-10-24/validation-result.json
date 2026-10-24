@@ -1,0 +1,9 @@
+{
+  "test_command": "node --import ./scripts/alias.mjs --test scripts/administrative-material-import.test.mjs scripts/material-practice-review.test.mjs",
+  "passed": 8,
+  "failed": 0,
+  "practice_validator": "all nine batteries accepted by matchesPracticeReview",
+  "question_parser": "all 69 reviewed keys accepted, MC alternatives preserved",
+  "runtime_changes": false,
+  "browser_visual_inspection": false
+}
