@@ -1,3 +1,6 @@
+import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
+import { MaterialPractice } from "@/components/library/MaterialPractice";
+import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import React from "react";
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { CheckCircle2, ChevronLeft, ChevronRight, GraduationCap } from "lucide-react";
@@ -11,13 +14,15 @@ import { TRACKS, type Track, type TrackLesson } from "@/data/tracks";
 import { cn } from "@/lib/utils";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
-import { TRACK_SUBJECT, practiceSearch } from "@/lib/practiceLink";
+import { TRACK_SUBJECT } from "@/lib/practiceLink";
 import { useAuthStatus } from "@/hooks/useDashboard";
 import { ContentSearchResults } from "@/components/library/ContentSearchResults";
 
 export const Route = createFileRoute("/dashboard/trilhas")({
   component: TracksPage,
-  validateSearch: (s: Record<string, unknown>): { t?: string | undefined; l?: string | undefined } => ({
+  validateSearch: (
+    s: Record<string, unknown>,
+  ): { t?: string | undefined; l?: string | undefined } => ({
     t: typeof s["t"] === "string" ? s["t"] : undefined,
     l: typeof s["l"] === "string" ? s["l"] : undefined,
   }),
@@ -49,7 +54,9 @@ function Quiz({ lesson }: { lesson: TrackLesson }) {
         const p = picked[i];
         return (
           <div key={item.q} className="rounded-lg border p-3 text-sm">
-            <p className="leading-6"><GlossaryText text={item.q} /></p>
+            <p className="leading-6">
+              <GlossaryText text={item.q} />
+            </p>
             <div className="mt-2 flex gap-2">
               {([true, false] as const).map((v) => (
                 <button
@@ -57,7 +64,13 @@ function Quiz({ lesson }: { lesson: TrackLesson }) {
                   type="button"
                   disabled={p !== undefined}
                   onClick={() => setPicked((s) => ({ ...s, [i]: v }))}
-                  className={cn("rounded-md border px-3 py-1.5 text-sm", p === v && (v === item.a ? "border-emerald-500 bg-emerald-500/10" : "border-rose-500 bg-rose-500/10"))}
+                  className={cn(
+                    "rounded-md border px-3 py-1.5 text-sm",
+                    p === v &&
+                      (v === item.a
+                        ? "border-emerald-500 bg-emerald-500/10"
+                        : "border-rose-500 bg-rose-500/10"),
+                  )}
                 >
                   {v ? "Certo" : "Errado"}
                 </button>
@@ -65,7 +78,8 @@ function Quiz({ lesson }: { lesson: TrackLesson }) {
             </div>
             {p !== undefined && (
               <p className="mt-2 rounded-md bg-muted p-2 text-xs leading-5" role="status">
-                <strong>{p === item.a ? "Acertou." : "Não foi dessa vez."}</strong> A afirmação está {item.a ? "certa" : "errada"}. {item.why}
+                <strong>{p === item.a ? "Acertou." : "Não foi dessa vez."}</strong> A afirmação está{" "}
+                {item.a ? "certa" : "errada"}. {item.why}
               </p>
             )}
           </div>
@@ -88,58 +102,152 @@ function Complement({ lesson, trackSlug }: { lesson: TrackLesson; trackSlug: str
     <section className="space-y-3" aria-label="Material complementar">
       <h3 className="text-base font-semibold">Aprofunde na plataforma</h3>
       <div className="flex flex-wrap gap-2 text-sm">
-        {isLaw && <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>Biblioteca de leis</Link>}
-        <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>Dicionário</Link>
-        <Link to="/dashboard/question-trainer" search={practiceSearch(TRACK_SUBJECT[trackSlug] ?? lesson.title, lesson.title) as never} className="rounded-md border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-semibold text-white hover:bg-emerald-700">Treinar questões deste assunto</Link>
+        {isLaw && (
+          <Link to="/dashboard/library" search={{ q: query, back: undefined }} className={chip}>
+            Biblioteca de leis
+          </Link>
+        )}
+        <Link to="/dashboard/dicionario" search={{ q: query } as never} className={chip}>
+          Dicionário
+        </Link>
+        <Link
+          to="/dashboard/question-trainer"
+          search={
+            materialPracticeSearch({
+              subject: TRACK_SUBJECT[trackSlug] ?? lesson.title,
+              topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? lesson.title, lesson.title),
+            }) as never
+          }
+          className="rounded-md border border-emerald-600 bg-emerald-600 px-3 py-1.5 font-semibold text-white hover:bg-emerald-700"
+        >
+          Treinar questões deste assunto
+        </Link>
       </div>
-      {isLaw && user && user.id !== "demo-user" && <ContentSearchResults query={query} userId={user.id} hideEmpty />}
+      {isLaw && user && user.id !== "demo-user" && (
+        <ContentSearchResults query={query} userId={user.id} hideEmpty />
+      )}
     </section>
   );
 }
 
-type LessonProps = { focus?: boolean; trackSlug: string; lesson: TrackLesson; done: boolean; toggleDone: () => void; onNext?: () => void; onPrev?: () => void };
+type LessonProps = {
+  focus?: boolean;
+  trackSlug: string;
+  lesson: TrackLesson;
+  done: boolean;
+  toggleDone: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
+};
 
-function Lesson({ focus = false, trackSlug, lesson, onNext, onPrev, done, toggleDone }: LessonProps) {
+function Lesson({
+  focus = false,
+  trackSlug,
+  lesson,
+  onNext,
+  onPrev,
+  done,
+  toggleDone,
+}: LessonProps) {
+  const { user } = useAuthStatus();
   return (
     <article className={cn("surface-card space-y-5 p-5 sm:p-7", focus && "text-[17px] leading-8")}>
       <header className="border-b pb-4">
-        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{lesson.group}</p>
+        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          {lesson.group}
+        </p>
         <h2 className="mt-1 text-2xl font-bold">{lesson.title}</h2>
         <p className="mt-1 text-xs text-muted-foreground">Edital: {lesson.edital}</p>
-        <div className="mt-3"><HighlightToggle /></div>
+        <div className="mt-3">
+          <HighlightToggle />
+        </div>
       </header>
-      <div className={focus ? "grid gap-x-10 gap-y-5 lg:grid-cols-2" : "space-y-5"}>
-      <div className="space-y-5">
-      <section className="space-y-2">
-        <h3 className={cn("font-semibold", focus ? "text-base" : "text-sm")}>Em palavras simples</h3>
-        <p className="leading-7"><GlossaryText text={lesson.simples} /></p>
-      </section>
-      <section className="space-y-2">
-        <h3 className="text-sm font-semibold">Pontos-chave</h3>
-        <ul className="list-disc space-y-1 pl-5 leading-7">{lesson.pontos.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
-      </section>
-      <section className="rounded-xl border-l border-l-emerald-500 bg-card p-4">
-        <h3 className="text-sm font-semibold">Exemplo prático</h3>
-        <p className="mt-1 leading-7"><GlossaryText text={lesson.exemplo} /></p>
-      </section>
-      </div>
-      <div className="space-y-5">
-      <section className="rounded-xl border-l border-l-amber-500 bg-card p-4">
-        <h3 className="text-sm font-semibold">Atenção: onde o candidato erra</h3>
-        <ul className="mt-1 list-disc space-y-1 pl-5 leading-7">{lesson.atencao.map((p) => <li key={p}><GlossaryText text={p} /></li>)}</ul>
-      </section>
-      <Complement lesson={lesson} trackSlug={trackSlug} />
-      <Quiz lesson={lesson} key={`q-${lesson.id}`} />
-      </div>
-      </div>
+      <MaterialStudyTabs
+        key={`${trackSlug}:${lesson.id}`}
+        textLabel="Teoria"
+        text={
+          <>
+            <section className="space-y-2">
+              <h3 className="font-semibold">Conteúdo do assunto</h3>
+              <ul className="list-disc space-y-2 pl-5 leading-7">
+                {lesson.pontos.map((p) => (
+                  <li key={p}>
+                    <GlossaryText text={p} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+            <Complement lesson={lesson} trackSlug={trackSlug} />
+          </>
+        }
+        explanation={
+          <>
+            <section className="space-y-2">
+              <h3 className="font-semibold">Em palavras simples</h3>
+              <p className="leading-7">
+                <GlossaryText text={lesson.simples} />
+              </p>
+            </section>
+            <section className="rounded-xl border-l-2 border-emerald-500 bg-emerald-500/5 p-4">
+              <h3 className="font-semibold">Exemplo prático</h3>
+              <p className="mt-2 leading-7">
+                <GlossaryText text={lesson.exemplo} />
+              </p>
+            </section>
+            <section className="rounded-xl border-l-2 border-amber-500 bg-amber-500/5 p-4">
+              <h3 className="font-semibold">Pontos de atenção</h3>
+              <ul className="mt-2 list-disc space-y-2 pl-5 leading-7">
+                {lesson.atencao.map((p) => (
+                  <li key={p}>
+                    <GlossaryText text={p} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
+        }
+        practice={
+          <>
+            {user && (
+              <MaterialPractice
+                key={`${trackSlug}:${lesson.id}`}
+                userId={user.id}
+                label={lesson.title}
+                scope={{
+                  subject: TRACK_SUBJECT[trackSlug] ?? trackSlug,
+                  topic: materialTopic(TRACK_SUBJECT[trackSlug] ?? trackSlug, lesson.title),
+                }}
+              />
+            )}
+            <details className="rounded-xl border p-3">
+              <summary className="cursor-pointer font-semibold">
+                Teste rápido da aula ({lesson.quiz.length} itens)
+              </summary>
+              <div className="mt-3">
+                <Quiz lesson={lesson} key={`q-${lesson.id}`} />
+              </div>
+            </details>
+          </>
+        }
+      />
       <footer className="flex flex-wrap items-center gap-2 border-t pt-4">
         <Button variant={done ? "outline" : "default"} onClick={toggleDone}>
           <CheckCircle2 className="mr-1 h-4 w-4" />
           {done ? "Aula concluída" : "Marcar como concluída"}
         </Button>
         <span className="ml-auto flex gap-2">
-          {onPrev && <Button variant="ghost" onClick={onPrev}><ChevronLeft className="h-4 w-4" />Anterior</Button>}
-          {onNext && <Button variant="outline" onClick={onNext}>Próxima<ChevronRight className="h-4 w-4" /></Button>}
+          {onPrev && (
+            <Button variant="ghost" onClick={onPrev}>
+              <ChevronLeft className="h-4 w-4" />
+              Anterior
+            </Button>
+          )}
+          {onNext && (
+            <Button variant="outline" onClick={onNext}>
+              Próxima
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          )}
         </span>
       </footer>
     </article>
@@ -152,11 +260,17 @@ function TracksPage() {
   const track: Track = TRACKS.find((x) => x.slug === t) ?? TRACKS[0]!;
   const [done, setDone] = React.useState<string[]>([]);
   React.useEffect(() => setDone(loadDone(track.slug)), [track.slug]);
-  const index = Math.max(0, track.lessons.findIndex((x) => x.id === l));
+  const index = Math.max(
+    0,
+    track.lessons.findIndex((x) => x.id === l),
+  );
   const lesson = track.lessons[index]!;
-  const go = (i: number) => void navigate({ search: { t: track.slug, l: track.lessons[i]!.id }, replace: true });
+  const go = (i: number) =>
+    void navigate({ search: { t: track.slug, l: track.lessons[i]!.id }, replace: true });
   const toggle = () => {
-    const next = done.includes(lesson.id) ? done.filter((x) => x !== lesson.id) : [...done, lesson.id];
+    const next = done.includes(lesson.id)
+      ? done.filter((x) => x !== lesson.id)
+      : [...done, lesson.id];
     setDone(next);
     saveDone(track.slug, next);
   };
@@ -188,57 +302,102 @@ function TracksPage() {
         nextLabel: "Próxima aula",
         tools: toolsAreaFor(track.title),
         notesKey: `curso:${track.slug}`,
-        extra: <Link to="/dashboard/question-trainer" search={practiceSearch(TRACK_SUBJECT[track.slug] ?? lesson.title, lesson.title) as never} className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300">Questões</Link>,
+        extra: (
+          <Link
+            to="/dashboard/question-trainer"
+            search={
+              materialPracticeSearch({
+                subject: TRACK_SUBJECT[track.slug] ?? lesson.title,
+                topic: materialTopic(TRACK_SUBJECT[track.slug] ?? lesson.title, lesson.title),
+              }) as never
+            }
+            className="flex items-center gap-1 rounded-lg bg-emerald-400 px-3 py-2 text-sm font-bold text-emerald-950 hover:bg-emerald-300"
+          >
+            Questões
+          </Link>
+        ),
       })}
-      {!fm.focus && <PageHero
-        image="study-desk"
-        kicker="Material didático"
-        icon={GraduationCap}
-        title={track.title}
-        description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}
-      />}
-      {!fm.focus && <div className="flex flex-wrap items-center gap-2">
-        {TRACKS.map((x) => (
-          <Button key={x.slug} size="sm" variant={x.slug === track.slug ? "default" : "outline"} onClick={() => void navigate({ search: { t: x.slug }, replace: true })}>
-            {x.discipline}
-          </Button>
-        ))}
-        <span className="ml-auto">{fm.button}</span>
-        <Badge variant="secondary">{done.length}/{track.lessons.length} aulas · {pct}%</Badge>
-      </div>}
-      <div className={fm.focus ? "" : "grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]"}>
-        {!fm.focus && <aside className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto" aria-label="Aulas da trilha">
-          {groups.map((g) => (
-            <div key={g}>
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{g}</p>
-              <ul className="space-y-1">
-                {track.lessons.map(
-                  (x, i) =>
-                    x.group === g && (
-                      <li key={x.id}>
-                        <button
-                          type="button"
-                          onClick={() => go(i)}
-                          aria-current={i === index ? "true" : undefined}
-                          className={cn("flex w-full items-start gap-2 rounded-lg border p-2 text-left text-sm", i === index ? "border-primary bg-primary/5" : "hover:bg-muted/50")}
-                        >
-                          <CheckCircle2 className={cn("mt-0.5 h-4 w-4 shrink-0", done.includes(x.id) ? "text-emerald-600" : "text-muted-foreground/40")} aria-hidden />
-                          <span>{x.title}</span>
-                        </button>
-                      </li>
-                    ),
-                )}
-              </ul>
-            </div>
+      {!fm.focus && (
+        <PageHero
+          image="study-desk"
+          kicker="Material didático"
+          icon={GraduationCap}
+          title={track.title}
+          description={`${track.source}. Aulas curtas, com exemplo, pegadinhas e teste rápido, na ordem do edital.`}
+        />
+      )}
+      {!fm.focus && (
+        <div className="flex flex-wrap items-center gap-2">
+          {TRACKS.map((x) => (
+            <Button
+              key={x.slug}
+              size="sm"
+              variant={x.slug === track.slug ? "default" : "outline"}
+              onClick={() => void navigate({ search: { t: x.slug }, replace: true })}
+            >
+              {x.discipline}
+            </Button>
           ))}
-        </aside>}
+          <span className="ml-auto">{fm.button}</span>
+          <Badge variant="secondary">
+            {done.length}/{track.lessons.length} aulas · {pct}%
+          </Badge>
+        </div>
+      )}
+      <div className={fm.focus ? "" : "grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]"}>
+        {!fm.focus && (
+          <aside
+            className="surface-card space-y-3 p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:self-start lg:overflow-y-auto"
+            aria-label="Aulas da trilha"
+          >
+            {groups.map((g) => (
+              <div key={g}>
+                <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                  {g}
+                </p>
+                <ul className="space-y-1">
+                  {track.lessons.map(
+                    (x, i) =>
+                      x.group === g && (
+                        <li key={x.id}>
+                          <button
+                            type="button"
+                            onClick={() => go(i)}
+                            aria-current={i === index ? "true" : undefined}
+                            className={cn(
+                              "flex w-full items-start gap-2 rounded-lg border p-2 text-left text-sm",
+                              i === index ? "border-primary bg-primary/5" : "hover:bg-muted/50",
+                            )}
+                          >
+                            <CheckCircle2
+                              className={cn(
+                                "mt-0.5 h-4 w-4 shrink-0",
+                                done.includes(x.id)
+                                  ? "text-emerald-600"
+                                  : "text-muted-foreground/40",
+                              )}
+                              aria-hidden
+                            />
+                            <span>{x.title}</span>
+                          </button>
+                        </li>
+                      ),
+                  )}
+                </ul>
+              </div>
+            ))}
+          </aside>
+        )}
         {lessonView}
       </div>
-      {!fm.focus && <Card>
-        <CardContent className="p-4 text-xs text-muted-foreground">
-          Material de estudo elaborado a partir do conteúdo programático oficial. Em caso de dúvida, confira a norma ou o pronunciamento citado.
-        </CardContent>
-      </Card>}
+      {!fm.focus && (
+        <Card>
+          <CardContent className="p-4 text-xs text-muted-foreground">
+            Material de estudo elaborado a partir do conteúdo programático oficial. Em caso de
+            dúvida, confira a norma ou o pronunciamento citado.
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

@@ -1,10 +1,12 @@
+import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
+import { MaterialPractice } from "@/components/library/MaterialPractice";
+import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
 import { LibraryDailyGate } from "@/components/dashboard/LibraryDailyGate";
 import { useEffect, useMemo } from "react";
 import { createFileRoute, useNavigate, Link, useParams } from "@tanstack/react-router";
 import {
   ArrowLeft,
   ArrowRight,
-  BrainCircuit,
   Clock3,
   ExternalLink,
   Library,
@@ -16,11 +18,9 @@ import { LockedState } from "@/components/dashboard/PageHero";
 import { LibraryVideos } from "@/components/library/LibraryVideos";
 import { Markdown } from "@/components/library/Markdown";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
-import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { materialLawSlug } from "@/lib/legalLibrary";
 import { StudyPractice } from "@/components/library/StudyPractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
-import { practiceSearch } from "@/lib/practiceLink";
 import { HighlightToggle } from "@/components/library/StudyText";
 import { useFocusMode } from "@/hooks/useFocusMode";
 import { toolsAreaFor } from "@/components/study/StudyTools";
@@ -198,10 +198,11 @@ function MaterialPage() {
             to="/dashboard/question-trainer"
             search={
               {
-                ...practiceSearch(
-                  material.discipline,
-                  `${material.topic_label ?? ""} ${material.title}`,
-                ),
+                ...materialPracticeSearch({
+                  subject: material.discipline,
+                  topic: materialTopic(material.discipline, material.topic_label ?? material.title),
+                  ...(materialLawSlug(material) ? { law: materialLawSlug(material)! } : {}),
+                }),
                 ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
               } as never
             }
@@ -235,86 +236,108 @@ function MaterialPage() {
         </ul>
       </header>
 
-      <HighlightToggle />
       <LegalUpdateNotice review={material.legal_review} slug={material.slug} />
+      <MaterialStudyTabs
+        key={material.slug}
+        text={
+          <>
+            <HighlightToggle />
+            {materialLawSlug(material) && (
+              <Link
+                to="/dashboard/legal-course/$slug"
+                params={{ slug: materialLawSlug(material)! }}
+                className="inline-flex min-h-11 items-center rounded-xl border px-3 text-sm font-semibold"
+              >
+                Estudar o texto oficial por artigo →
+              </Link>
+            )}
 
-      <div className="surface-card library-body">
-        {materialLawSlug(material) || material.legal_review ? (
-          <LegalStudyReading source={material.body_md} markdown />
-        ) : (
-          <Markdown source={material.body_md} />
-        )}
-      </div>
+            <div className="surface-card library-body">
+              {materialLawSlug(material) || material.legal_review ? (
+                <LegalStudyReading source={material.body_md} markdown />
+              ) : (
+                <Markdown source={material.body_md} />
+              )}
+            </div>
 
-      <WorkedExamples
-        key={`${user?.id}:${material.slug}`}
-        slug={material.slug}
-        enabled={signedIn}
+            {(sources.length > 0 || material.source_note) && (
+              <aside className="surface-card library-sources" aria-label="Fontes">
+                <h2>Fontes e transparência</h2>
+                <p>{material.source_note}</p>
+                {sources.length > 0 && (
+                  <ul>
+                    {sources.map((source, index) => (
+                      <li key={`${source.url ?? source.title}-${index}`}>
+                        {source.url && isStudySourceUrl(source.url) ? (
+                          <a href={source.url} target="_blank" rel="noopener noreferrer">
+                            {source.title || source.url} <ExternalLink />
+                          </a>
+                        ) : (
+                          <span>{source.title}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </aside>
+            )}
+          </>
+        }
+        explanation={
+          <>
+            {material.summary && (
+              <section className="surface-card p-4">
+                <h2 className="font-bold">Visão didática do assunto</h2>
+                <p className="mt-2 leading-7">{material.summary}</p>
+              </section>
+            )}
+            <WorkedExamples
+              key={`${user?.id}:${material.slug}`}
+              slug={material.slug}
+              enabled={signedIn}
+            />
+
+            <LibraryVideos
+              videos={videos}
+              {...(materialLawSlug(material)
+                ? { law: { slug: materialLawSlug(material)!, materialSlug: material.slug } }
+                : {})}
+            />
+
+            <p className="text-sm text-muted-foreground">
+              O texto-base reúne o material publicado. Exemplos e vídeos desta aba são complementos;
+              sua disponibilidade varia por assunto.
+            </p>
+          </>
+        }
+        practice={
+          <>
+            <MaterialPractice
+              key={material.slug}
+              userId={user!.id}
+              label={material.topic_label ?? material.title}
+              scope={{
+                subject: material.discipline,
+                topic: materialTopic(material.discipline, material.topic_label ?? material.title),
+                ...(materialLawSlug(material) ? { law: materialLawSlug(material)! } : {}),
+                ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
+              }}
+            />
+            <details className="rounded-xl border p-3">
+              <summary className="cursor-pointer font-semibold">
+                Fixação do material e flashcards
+              </summary>
+              <StudyPractice
+                flashcards={material.flashcards ?? []}
+                quiz={material.quiz ?? []}
+                slug={material.slug}
+                subject={material.discipline}
+                topic={material.topic_label ?? material.title}
+              />
+            </details>
+          </>
+        }
       />
-
-      <LibraryVideos
-        videos={videos}
-        {...(materialLawSlug(material)
-          ? { law: { slug: materialLawSlug(material)!, materialSlug: material.slug } }
-          : {})}
-      />
-
-      {(sources.length > 0 || material.source_note) && (
-        <aside className="surface-card library-sources" aria-label="Fontes">
-          <h2>Fontes e transparência</h2>
-          <p>{material.source_note}</p>
-          {sources.length > 0 && (
-            <ul>
-              {sources.map((source, index) => (
-                <li key={`${source.url ?? source.title}-${index}`}>
-                  {source.url && isStudySourceUrl(source.url) ? (
-                    <a href={source.url} target="_blank" rel="noopener noreferrer">
-                      {source.title || source.url} <ExternalLink />
-                    </a>
-                  ) : (
-                    <span>{source.title}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </aside>
-      )}
-
-      <StudyPractice
-        flashcards={material.flashcards ?? []}
-        quiz={material.quiz ?? []}
-        slug={material.slug}
-        subject={material.discipline}
-        topic={material.topic_label ?? material.title}
-      />
-
-      {materialLawSlug(material) ? (
-        <LawPracticeLink law={materialLawSlug(material)!} userId={user!.id} />
-      ) : (
-        <div className="library-cta no-print">
-          <div>
-            <strong>Hora de fixar</strong>
-            <span>Resolva questões de {material.discipline} para testar o que acabou de ler.</span>
-          </div>
-          <Button asChild className="hero-btn-primary gap-2">
-            <Link
-              to="/dashboard/question-trainer"
-              search={
-                {
-                  ...practiceSearch(
-                    material.discipline,
-                    `${material.topic_label ?? ""} ${material.title}`,
-                  ),
-                  ...(libraryCollection(material) === "enem" ? { contest: "ENEM" } : {}),
-                } as never
-              }
-            >
-              <BrainCircuit className="h-4 w-4" /> Treinar questões
-            </Link>
-          </Button>
-        </div>
-      )}
 
       <nav className="library-pager no-print" aria-label="Outros materiais da matéria">
         {siblings.prev ? (

@@ -132,7 +132,7 @@ test('Each legal section contains only its own discipline and retains chronology
 
 const courseSearchLibrary = load('src/lib/librarySearch.ts', {'./legalLibrary': laws});
 const courseSearch = load('src/lib/legalCourseSearch.ts', {'./librarySearch': courseSearchLibrary});
-const searchUnit = (key, body, chapter = 'Crimes') => ({id:key,unit_key:key,label:`Art. ${key.slice(4)}`,chapter,body_text:body,content_status:'current'});
+const searchUnit = (key, body, chapter = 'Crimes') => ({id:key,unit_key:key,label:`Art. ${key.slice(4)}`,chapter,body_text:body,recall:{prompts:[],checklist:[],figures:[]},content_status:'current'});
 test('Article search finds deep text, accents and combined terms without numeric false positives', () => {
  const unit = searchUnit('art-213', 'Introdução. '.repeat(80) + 'Estupro mediante violência ou grave ameaça. Lesão corporal.');
  for (const query of ['estupro', 'AMEACA', 'lesao corporal', 'grave violencia', 'Art.213', 'artigo 213', '213']) assert.equal(courseSearch.matchesLegalUnit(unit, query), true, query);

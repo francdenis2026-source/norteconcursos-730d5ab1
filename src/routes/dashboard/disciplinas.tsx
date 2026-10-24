@@ -1,3 +1,6 @@
+import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
+import { MaterialPractice } from "@/components/library/MaterialPractice";
+import { materialTopic } from "@/lib/materialPractice";
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -93,7 +96,7 @@ function DisciplinesPage() {
       cards.find((card) => card.name === canonicalSubject(d)))
     : undefined;
   return current ? (
-    <DisciplineDetail card={current} materials={materials} />
+    <DisciplineDetail key={current.name} card={current} materials={materials} />
   ) : (
     <DisciplineIndex cards={cards} loading={isPending && signedIn} unknown={d} />
   );
@@ -173,6 +176,8 @@ function DisciplineIndex({
       ) : (
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((card) => {
+            const { user } = useAuthStatus();
+            const [practiceTopic, setPracticeTopic] = React.useState("");
             const Icon = ICONS[card.icon];
             const body = (
               <>
@@ -226,6 +231,8 @@ function DisciplineDetail({
   card: DisciplineCard;
   materials: Parameters<typeof materialsOf>[1];
 }) {
+  const { user } = useAuthStatus();
+  const [practiceTopic, setPracticeTopic] = React.useState("");
   const Icon = ICONS[card.icon];
   const items = materialsOf(card.name, materials as never) as typeof materials;
   const tracks = tracksOf(card.name, TRACKS);
@@ -260,120 +267,175 @@ function DisciplineDetail({
         </div>
       </PageHero>
 
-      <section aria-labelledby="d-track" className="space-y-3">
-        <h2 id="d-track" className="discipline-h">
-          <GraduationCap aria-hidden="true" size={20} /> Trilha de aulas
-        </h2>
-        {tracks.length === 0 ? (
-          <p className="discipline-none">A trilha desta disciplina está em preparação.</p>
-        ) : (
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {tracks.map((track) => {
-              const done = doneLessons(track.slug);
-              return (
-                <li key={track.slug}>
-                  <Link
-                    to="/dashboard/trilhas"
-                    search={{ t: track.slug }}
-                    className="material-card"
+      <MaterialStudyTabs
+        key={card.name}
+        text={
+          <>
+            {" "}
+            <section aria-labelledby="d-materials" className="space-y-3">
+              <h2 id="d-materials" className="discipline-h">
+                <BookOpen aria-hidden="true" size={20} /> Materiais de estudo
+              </h2>
+              {items.length === 0 ? (
+                <p className="discipline-none">
+                  Os materiais de texto desta disciplina estão em preparação.
+                </p>
+              ) : (
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {items.map((item) => {
+                    const m = item as unknown as {
+                      slug: string;
+                      title: string;
+                      topic_label: string;
+                    };
+                    return (
+                      <li key={m.slug}>
+                        <Link
+                          to="/dashboard/library/$slug"
+                          params={{ slug: m.slug }}
+                          className="material-card"
+                        >
+                          <span className="material-card__icon" data-tone="subject">
+                            {read.has(m.slug) ? (
+                              <Check aria-hidden="true" />
+                            ) : (
+                              <BookOpen aria-hidden="true" />
+                            )}
+                          </span>
+                          <span className="material-card__body">
+                            <strong>{m.title}</strong>
+                            <span>
+                              {m.topic_label}
+                              {read.has(m.slug) ? " · lido" : ""}
+                            </span>
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </section>
+          </>
+        }
+        explanation={
+          <>
+            {" "}
+            <section aria-labelledby="d-track" className="space-y-3">
+              <h2 id="d-track" className="discipline-h">
+                <GraduationCap aria-hidden="true" size={20} /> Trilha de aulas
+              </h2>
+              {tracks.length === 0 ? (
+                <p className="discipline-none">A trilha desta disciplina está em preparação.</p>
+              ) : (
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {tracks.map((track) => {
+                    const done = doneLessons(track.slug);
+                    return (
+                      <li key={track.slug}>
+                        <Link
+                          to="/dashboard/trilhas"
+                          search={{ t: track.slug }}
+                          className="material-card"
+                        >
+                          <span className="material-card__icon" data-tone="more">
+                            <GraduationCap aria-hidden="true" />
+                          </span>
+                          <span className="material-card__body">
+                            <strong>{track.title}</strong>
+                            <span>
+                              {plural(track.lessons.length, "aula", "aulas")}
+                              {done > 0 ? ` · ${done} concluída${done === 1 ? "" : "s"}` : ""}
+                            </span>
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </section>
+            <section aria-labelledby="d-videos" className="space-y-3">
+              <h2 id="d-videos" className="discipline-h">
+                <PlayCircle aria-hidden="true" size={20} /> Videoaulas
+              </h2>
+              {playlists.length === 0 ? (
+                <p className="discipline-none">
+                  As videoaulas desta disciplina estão em preparação.
+                </p>
+              ) : (
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {playlists.map((list) => (
+                    <li key={list.id}>
+                      <Link to="/dashboard/media" className="material-card">
+                        <span className="material-card__icon" data-tone="law">
+                          <PlayCircle aria-hidden="true" />
+                        </span>
+                        <span className="material-card__body">
+                          <strong>{list.title}</strong>
+                          <span>Abrir na Central de mídia</span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {playlists.length > 0 && (
+                <p className="text-xs text-muted-foreground">
+                  Playlists gratuitas e públicas de terceiros; os direitos são dos autores dos
+                  canais.{" "}
+                  <a
+                    href={youtubePlaylistUrl(playlists[0]!.id)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
                   >
-                    <span className="material-card__icon" data-tone="more">
-                      <GraduationCap aria-hidden="true" />
-                    </span>
-                    <span className="material-card__body">
-                      <strong>{track.title}</strong>
-                      <span>
-                        {plural(track.lessons.length, "aula", "aulas")}
-                        {done > 0 ? ` · ${done} concluída${done === 1 ? "" : "s"}` : ""}
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </section>
-
-      <section aria-labelledby="d-materials" className="space-y-3">
-        <h2 id="d-materials" className="discipline-h">
-          <BookOpen aria-hidden="true" size={20} /> Materiais de estudo
-        </h2>
-        {items.length === 0 ? (
-          <p className="discipline-none">
-            Os materiais de texto desta disciplina estão em preparação.
-          </p>
-        ) : (
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {items.map((item) => {
-              const m = item as unknown as { slug: string; title: string; topic_label: string };
-              return (
-                <li key={m.slug}>
-                  <Link
-                    to="/dashboard/library/$slug"
-                    params={{ slug: m.slug }}
-                    className="material-card"
-                  >
-                    <span className="material-card__icon" data-tone="subject">
-                      {read.has(m.slug) ? (
-                        <Check aria-hidden="true" />
-                      ) : (
-                        <BookOpen aria-hidden="true" />
-                      )}
-                    </span>
-                    <span className="material-card__body">
-                      <strong>{m.title}</strong>
-                      <span>
-                        {m.topic_label}
-                        {read.has(m.slug) ? " · lido" : ""}
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </section>
-
-      <section aria-labelledby="d-videos" className="space-y-3">
-        <h2 id="d-videos" className="discipline-h">
-          <PlayCircle aria-hidden="true" size={20} /> Videoaulas
-        </h2>
-        {playlists.length === 0 ? (
-          <p className="discipline-none">As videoaulas desta disciplina estão em preparação.</p>
-        ) : (
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {playlists.map((list) => (
-              <li key={list.id}>
-                <Link to="/dashboard/media" className="material-card">
-                  <span className="material-card__icon" data-tone="law">
-                    <PlayCircle aria-hidden="true" />
-                  </span>
-                  <span className="material-card__body">
-                    <strong>{list.title}</strong>
-                    <span>Abrir na Central de mídia</span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-        {playlists.length > 0 && (
-          <p className="text-xs text-muted-foreground">
-            Playlists gratuitas e públicas de terceiros; os direitos são dos autores dos canais.{" "}
-            <a
-              href={youtubePlaylistUrl(playlists[0]!.id)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Ver a primeira no YouTube
-            </a>
-            .
-          </p>
-        )}
-      </section>
+                    Ver a primeira no YouTube
+                  </a>
+                  .
+                </p>
+              )}
+            </section>
+          </>
+        }
+        practice={
+          <>
+            <label className="block text-sm font-semibold">
+              Assunto
+              <select
+                className="mt-2 min-h-11 w-full rounded-xl border bg-background px-3"
+                value={practiceTopic}
+                onChange={(e) => setPracticeTopic(e.target.value)}
+              >
+                <option value="">Toda a disciplina</option>
+                {[
+                  ...new Set([
+                    ...items
+                      .map((m) => (m as { topic_label?: string }).topic_label)
+                      .filter((x): x is string => !!x),
+                    ...tracks.flatMap((t) => t.lessons.map((l) => l.title)),
+                  ]),
+                ].map((label) => (
+                  <option key={label} value={label}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {user && (
+              <MaterialPractice
+                key={`${card.name}:${practiceTopic}`}
+                userId={user.id}
+                label={practiceTopic || card.name}
+                scope={{
+                  subject: card.name,
+                  ...(practiceTopic ? { topic: materialTopic(card.name, practiceTopic) } : {}),
+                }}
+              />
+            )}
+          </>
+        }
+      />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { materialPracticePool, matchesMaterialScope } from "@/lib/materialPractice";
 import "@/styles/question-workspace.css";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useResponseSeconds } from "@/hooks/useResponseSeconds";
@@ -146,6 +147,9 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
     search: Record<string, unknown>,
   ): Partial<
     Record<
+      | "studySubject"
+      | "materialTopic"
+      | "studyArticle"
       | "studyTopic"
       | "unseen"
       | "fresh"
@@ -173,6 +177,14 @@ export const Route = createFileRoute("/dashboard/question-trainer")({
       string | undefined
     >
   > => ({
+    studySubject:
+      typeof search["studySubject"] === "string" ? search["studySubject"].slice(0, 200) : undefined,
+    materialTopic:
+      typeof search["materialTopic"] === "string"
+        ? search["materialTopic"].slice(0, 300)
+        : undefined,
+    studyArticle:
+      typeof search["studyArticle"] === "string" ? search["studyArticle"].slice(0, 80) : undefined,
     studyTopic: typeof search["studyTopic"] === "string" ? search["studyTopic"] : undefined,
     unseen: search["unseen"] === "1" ? "1" : undefined,
     fresh: typeof search["fresh"] === "string" ? search["fresh"] : undefined,
@@ -279,10 +291,27 @@ function QuestionTrainer() {
       law === undefined
         ? collectionCatalog
         : collectionCatalog.filter((q) => questionMatchesLaw(q, law));
-    const usable = scoped.filter((q) => !needsMissingSupportText(q));
-    return { catalog: usable, missingSupportText: scoped.length - usable.length };
+    const materialScope = {
+      subject: routeFilters.studySubject,
+      topic: routeFilters.materialTopic,
+      law,
+      article: routeFilters.studyArticle,
+    };
+    const fromMaterial = !!(
+      routeFilters.studySubject ||
+      routeFilters.materialTopic ||
+      routeFilters.studyArticle
+    );
+    const materialScoped = fromMaterial
+      ? materialPracticePool(scoped, materialScope)
+      : scoped.filter((q) => matchesMaterialScope(q, materialScope));
+    const usable = materialScoped.filter((q) => !needsMissingSupportText(q));
+    return { catalog: usable, missingSupportText: materialScoped.length - usable.length };
   }, [
     fullCatalog,
+    routeFilters.studySubject,
+    routeFilters.materialTopic,
+    routeFilters.studyArticle,
     law,
     collection,
     routeFilters.syllabus,
@@ -708,6 +737,21 @@ function QuestionTrainer() {
         )}
         <Link to="/dashboard/question-trainer" search={{}} className="mt-2 inline-block underline">
           Remover o filtro de lei
+        </Link>
+      </aside>
+    ) : null;
+  const materialNotice =
+    routeFilters.studySubject || routeFilters.materialTopic || routeFilters.studyArticle ? (
+      <aside role="status" className="rounded-xl border bg-primary/5 p-3 text-sm">
+        <strong>Assunto do material</strong>
+        <p>
+          {[routeFilters.studySubject, routeFilters.materialTopic, routeFilters.studyArticle]
+            .filter(Boolean)
+            .join(" · ")}
+        </p>
+        <p>Este recorte permanece aplicado, mesmo se não houver questões disponíveis.</p>
+        <Link to="/dashboard/question-trainer" search={{}} className="underline">
+          Remover recorte do material
         </Link>
       </aside>
     ) : null;
@@ -1387,6 +1431,7 @@ function QuestionTrainer() {
         )}
         {examNotice}
         {lawNotice}
+        {materialNotice}
         {activityNotice}
         <div
           id="trainer-setup"
@@ -1665,6 +1710,7 @@ function QuestionTrainer() {
       </aside>
       {examNotice}
       {lawNotice}
+      {materialNotice}
       {activityNotice}
       {noText && <MissingTextNotice scoring />}
       {(sessionReinforce || (practiceMode === "catalog" && nonScoring && !noText)) && (
