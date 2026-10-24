@@ -103,5 +103,18 @@
     "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
     "checked_at": "2026-10-23T04:06:15Z",
     "relevant_excerpt": "Art. 218-C, caput e § 1º; pena do caput com redação dada pela Lei 15.280/2025."
+  },
+  {
+    "label": "ctb-compilado-2026-10-23",
+    "kind": "official_law",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+    "status": 200,
+    "bytes": 789873,
+    "pdf": false,
+    "sha256": "25f21938684852614373ce24ce663e1ca5006931dd564a887926fb0f57dad058",
+    "text_sha256": "f7d68ef82f1785587f0f0a52f7c7ef81813c24455bd80f78585667ee33778f9e",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "relevant_items": "PMSC Tipo A 46–50",
+    "note": "Texto compilado vigente; inclui alterações recentes; disposições conferidas individualmente no item de cada questão."
   }
 ]

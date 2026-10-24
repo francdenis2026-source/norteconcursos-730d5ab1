@@ -85,6 +85,12 @@ Gabaritos definitivos: 44-C e 45-E. O item 44 foi conferido com art. 142, § 3º
 
 `revisao-integral/pmsc-itens44-45-constituicao.sql` é um lote transacional com guardas e auditoria individual para os dois itens, reutiliza o tópico constitucional da edição e libera apenas 44 e 45. Aplicação pendente no Supabase; a revisão não prevê PC-AC.
 
+## Itens PMSC Tipo A, 46–50 — Código de Trânsito Brasileiro
+
+Os gabaritos definitivos foram confirmados: 46-D, 47-A, 48-B, 49-E e 50-C. Conferi o texto compilado atual do CTB no Planalto (incluindo a alteração de 2026 em outros dispositivos), os artigos específicos das cinco questões e os intervalos do Anexo II do edital PMSC (p. 52). A explicação de cada questão corrige pegadinhas de redação: RENACH/RENAVAM, prazo de 30 dias, norma municipal, CONTRAN/SENATRAN, preferência de passagem, retenção/remoção e pontuação após suspensão. Hashes registrados em `fontes-coletadas.json`; decisões em `revisao-integral/revisao-pmsc-itens46-50.json`.
+
+`revisao-integral/pmsc-itens46-50-ctb.sql` adiciona a fonte oficial e o tópico de CTB da edição, compara os cinco registros antes de alterá-los e grava auditoria individual dentro de uma transação. Se qualquer item divergir, nenhum é publicado. A aplicação ainda está pendente no Supabase; o lote se limita à seleção PMSC e não prevê PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
