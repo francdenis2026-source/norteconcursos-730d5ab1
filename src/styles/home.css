@@ -298,9 +298,15 @@
   background: transparent;
   color: var(--home-text);
   cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms var(--ease-out);
 }
 .home .lp-theme-toggle:hover,
 .home-menu-trigger:hover {
+  background: var(--home-tint);
+}
+.home .lp-theme-toggle:active,
+.home-menu-trigger:active {
+  transform: scale(0.92);
   background: var(--home-tint);
 }
 .home .lp-theme-toggle svg {
