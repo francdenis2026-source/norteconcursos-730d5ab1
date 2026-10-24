@@ -704,10 +704,7 @@ function UnitLesson({
           520,
         )
       : "";
-  const mode = step === "fixar" ? "recall" : "read";
-  const [revealed, setRevealed] = useState(false);
   const [notes, setNotes] = useState(progress?.notes ?? "");
-  const [response, setResponse] = useState("");
   const [busy, setBusy] = useState(false);
   const pendingRequest = useRef<{
     rating: ReviewRating | "read";
@@ -815,10 +812,6 @@ function UnitLesson({
                 aria-current={step === id ? "step" : undefined}
                 onClick={() => {
                   setStep(id);
-                  if (id === "fixar") {
-                    setRevealed(false);
-                    setResponse("");
-                  }
                 }}
                 className={`flex min-h-11 items-center gap-2 rounded-lg p-2 text-left text-xs sm:p-3 ${step === id ? "bg-primary text-primary-foreground shadow-sm" : "hover:bg-card"}`}
               >
@@ -838,23 +831,6 @@ function UnitLesson({
               </button>
             ))}
           </nav>
-          {mode === "recall" && (
-            <section className="space-y-3 rounded-xl border p-4">
-              <h3 className="font-semibold">Revise de cabeça</h3>
-              <p className="text-sm text-muted-foreground">
-                Pense na resposta de cada pergunta, sem olhar o artigo. Depois confira com o texto e
-                diga o quanto lembrou: isso define quando o artigo volta para revisão.
-              </p>
-              <ol className="list-decimal space-y-2 pl-5 text-sm">
-                {unit.recall.prompts.map((prompt) => (
-                  <li key={prompt}>{prompt}</li>
-                ))}
-              </ol>
-              <Button variant="outline" onClick={() => setRevealed(true)}>
-                Mostrar o texto e conferir
-              </Button>
-            </section>
-          )}
           {step === "entender" && (
             <>
               {caveat && (
@@ -899,18 +875,14 @@ function UnitLesson({
                   ← Texto oficial
                 </Button>
                 <Button
-                  onClick={() => {
-                    setStep("fixar");
-                    setRevealed(false);
-                    setResponse("");
-                  }}
+                  onClick={() => setStep("fixar")}
                 >
                   Praticar →
                 </Button>
               </div>
             </>
           )}
-          {(step === "texto" || (step === "fixar" && revealed)) && (
+          {step === "texto" && (
             <>
               <div
                 className={
@@ -976,12 +948,11 @@ function UnitLesson({
               />
             </div>
           )}
-          {mode === "recall" && revealed && (
-            <section className="space-y-3">
-              <p className="text-sm">
-                Compare sua resposta com o dispositivo inteiro. Registre a regra ou exceção que
-                confundiu. Esta avaliação é feita por você; não é correção automática de texto
-                livre.
+          {step === "fixar" && (
+            <section className="space-y-3 rounded-lg border px-3 py-3">
+              <h3 className="text-sm font-semibold">Como foi sua prática?</h3>
+              <p className="text-xs text-muted-foreground">
+                Depois de responder às questões, registre como foi sua lembrança para programar a próxima revisão deste artigo.
               </p>
               <div className="flex flex-wrap gap-2">
                 {(
