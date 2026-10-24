@@ -97,8 +97,12 @@ function LegalCoursePage() {
   const navigationRows = filtering ? visible : current;
   const clearFilters = () => { setSearch(""); setChapter("all"); setDueOnly(false); setHotOnly(false); setShowExcluded(false); };
   useEffect(() => { setSelectedIdState(undefined); clearFilters(); setTab("learn"); }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
-  // escolher um dispositivo atualiza o endereço (compartilhável e com o botão Voltar funcionando)
+  // escolher um dispositivo atualiza o endereço (compartilhável e com o botão Voltar funcionando).
+  // Clique interno (barra lateral, anterior/próximo, chips): o leitor já está olhando para a área
+  // de leitura, então não precisa de rolagem — só links externos (?art=…) precisam.
+  const internalNav = useRef(false);
   const setSelectedId = (id: string) => {
+    internalNav.current = true;
     setSelectedIdState(id);
     const unit = rows.find(row => row.id === id);
     if (unit) void navigate({ search: { art: unit.unit_key }, replace: true });
@@ -108,7 +112,8 @@ function LegalCoursePage() {
   useEffect(() => { if (course && selected) rememberLegal({ slug: course.slug, art: selected.unit_key, label: selected.label, title: course.title.replace(/ — leitura atualizada$/, "") }); }, [course?.slug, selected?.unit_key]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!art || !selected) return;
-    const t = setTimeout(() => document.getElementById("dispositivo-aberto")?.scrollIntoView({ block: "start", behavior: "smooth" }), 250);
+    if (internalNav.current) { internalNav.current = false; return; }
+    const t = setTimeout(() => document.getElementById("dispositivo-aberto")?.scrollIntoView({ block: "start", behavior: "instant" }), 250);
     return () => clearTimeout(t);
   }, [art, par, selected?.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const summary = legalProgressSummary(current.map(row => row.id), states);
