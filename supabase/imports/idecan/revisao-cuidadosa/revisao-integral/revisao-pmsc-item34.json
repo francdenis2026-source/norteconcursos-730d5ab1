@@ -1,0 +1,38 @@
+{
+  "item": 34,
+  "question_id": "35fa4fa0-e8c4-4479-8db1-66bfec8aa480",
+  "exam": "PMSC — Aluno-Soldado Temporário, Tipo A",
+  "reviewed_at": "2026-10-23",
+  "official_answer": {
+    "letter": "C",
+    "source": "Gabarito Oficial Definitivo IDECAN, Tipo A, item 34",
+    "source_sha256": "f51d31107761b10a920b25f87b1848b9ef082fd5f659997d6e068c92ae4d01fd",
+    "confirmed": true
+  },
+  "law": {
+    "name": "Código Penal — Decreto-Lei nº 2.848/1940, texto compilado",
+    "scope": "Título II — Dos crimes contra o patrimônio, arts. 155 a 183",
+    "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "checked_at": "2026-10-23T04:06:15Z",
+    "html_sha256": "b828b522212b7e242714097f5b0e55ce616162cbdbac52efbbffb4b934ebe2e2",
+    "text_sha256": "794730ca13c2beb58692ebf16332099038769096037fc7dc56f0c854f3334bd0",
+    "conclusion": "Apropriação indébita previdenciária (168-A), esbulho possessório (161, § 1º, II) e abuso de incapazes (173) estão no Título II."
+  },
+  "official_syllabus": {
+    "contest": "PMSC - Aluno-Soldado Temporário 2026",
+    "notice": "Edital nº 200/CCP/2025",
+    "url": "https://antigo-concurso.idecan.org.br/ConcursoDownloadArquivo.aspx?ID2=1&ID=6777151006CAM2Q6591X6EC067JNMPNM2KSEMP7YP9L1WLR3CWCYWOYQ5MGJ4TLYM8SIQ2AEAWCK2UWY6453.pdf",
+    "sha256": "0935db2f3b15580627b4992be651ffbbbfd8dadf988aecc9670480b31a9060e3",
+    "location": "Anexo II, página impressa 52",
+    "excerpt": "Parte Especial: art. 121 ao 180-A.",
+    "confirmed": true
+  },
+  "explanation": "C é correta: os arts. 168-A, 161, § 1º, II, e 173 estão no Título II do Código Penal. A mistura crimes patrimoniais com caça proibida, que é ambiental; B mistura os arts. 178 e 175 (patrimoniais) com violação de segredo profissional (art. 154); D reúne matéria ambiental, crime contra a organização do trabalho (art. 200) e divulgação de segredo (art. 153); E cita furto de uso, que não é tipo autônomo, violação autoral (propriedade imaterial) e uso indevido de símbolos públicos (art. 296, fé pública).",
+  "publication": {
+    "approved_for_exact_pmsc_2026_edition": true,
+    "approved_for_pc_ac_forecast": false,
+    "sql_path": "pmsc-item34-crimes-patrimonio.sql",
+    "sql_applied": false,
+    "state_after_sql": "active"
+  }
+}

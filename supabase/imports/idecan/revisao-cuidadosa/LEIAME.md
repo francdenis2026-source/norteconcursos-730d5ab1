@@ -37,6 +37,18 @@ O gabarito definitivo IDECAN confirma D. O enunciado reproduz o art. 101 do Cód
 
 `revisao-integral/pmsc-item32-crime-complexo.sql` reutiliza o tópico PMSC de Legislação Penal conferido no item 31, sem criar duplicidade, e promove apenas o item 32 após comparar a questão e o estado esperados. O lote ainda precisa ser aplicado no Supabase; não é previsão para PC-AC.
 
+## Próximo item: PMSC Tipo A, item 33
+
+O gabarito definitivo IDECAN confirma B. A alternativa reúne os incisos I, IV e VIII do art. 121, § 2º, do Código Penal. A explicação coteja também as regras atuais e alterações posteriores sobre menor de 14 anos, homicídio em instituição de ensino e hipótese própria do § 2º-D, sem tratá-las como se fossem qualificadoras gerais intercambiáveis. O texto compilado do Planalto e o Anexo II do edital PMSC (art. 121, p. 52) foram conferidos; ver `revisao-integral/revisao-pmsc-item33.json`.
+
+`revisao-integral/pmsc-item33-homicidio-qualificado.sql` reaproveita o tópico validado de Legislação Penal e libera apenas o item 33, com auditoria antes/depois e guarda de estado. A aplicação no Supabase ainda está pendente. A revisão vale para a prova histórica PMSC e não prevê PC-AC.
+
+## Próximo item: PMSC Tipo A, item 34
+
+O gabarito definitivo IDECAN confirma C. A apropriação indébita previdenciária (art. 168-A), o esbulho possessório (art. 161, § 1º, II) e o abuso de incapazes (art. 173) pertencem ao Título II do Código Penal. O texto vigente e a abrangência de arts. 121 a 180-A no Anexo II do edital PMSC, p. 52, foram conferidos. A análise individual está em `revisao-integral/revisao-pmsc-item34.json`.
+
+`revisao-integral/pmsc-item34-crimes-patrimonio.sql` reaproveita o tópico validado de Legislação Penal e libera somente o item 34 com auditoria e conferência do estado anterior. Ainda precisa ser aplicado no Supabase; não constitui previsão PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
