@@ -177,7 +177,7 @@ function MyContestPage() {
             <Link
               key={to}
               to={to}
-              className="flex gap-3 rounded-2xl border bg-card p-4 transition-colors hover:bg-muted/60"
+              className="flex gap-3 rounded-2xl border bg-card p-4 transition-[background-color,transform] duration-150 hover:bg-muted/60 active:scale-[0.98] motion-reduce:active:scale-100"
             >
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
                 <Icon className="h-5 w-5" aria-hidden="true" />

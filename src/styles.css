@@ -12270,11 +12270,18 @@ html body[data-scroll-locked] .right-scroll-bar-position {
   background: var(--background);
   transition:
     border-color 0.2s,
-    background 0.2s;
+    background 0.2s,
+    transform 100ms ease-out;
 }
 .edital-edition:hover {
   border-color: var(--brass);
   background: var(--muted);
+}
+.edital-edition:active {
+  transform: scale(0.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  .edital-edition:active { transform: none; }
 }
 .edital-edition:focus-visible {
   outline: 2px solid var(--ring);
