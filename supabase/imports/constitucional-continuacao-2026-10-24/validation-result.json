@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-24T21:34:01.208457+00:00",
+  "tests": 24,
+  "passed": 24,
+  "failed": 0,
+  "production_build_exit_code": 0,
+  "test_command": "node --import ./scripts/alias.mjs --test scripts/constitutional-continuation.test.mjs scripts/material-practice.test.mjs scripts/material-practice-review.test.mjs scripts/library-materials.test.mjs scripts/study-enrichment.test.mjs",
+  "build_command": "npm run build",
+  "authenticated_visual_inspection": false
+}

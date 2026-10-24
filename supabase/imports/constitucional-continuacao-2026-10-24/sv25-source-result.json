@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-24T21:32:24.023240+00:00",
+  "file": "03-verify-official-sv25-source.sql",
+  "sha256": "da56342687be6c878442f48468db67a4a2c2e0a3f28228ac999b93c22de39232",
+  "before_status": "em_revisao",
+  "result": [
+    {
+      "id": "08b768e4-0a5f-436f-877c-5d1de1035a60",
+      "url": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1268",
+      "status": "vigente",
+      "is_official": true,
+      "checked_at": "2026-10-24 20:54:31.843369+00"
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "direitos-fundamentais-teoria-geral": [
+    {
+      "id": "rito",
+      "title": "Um tratado aprovado só no Senado",
+      "scenario": "Um tratado de direitos humanos recebe três quintos dos votos no Senado em dois turnos. Não houve votação na Câmara.",
+      "question": "Já existe equivalência a emenda pelo rito do art. 5º, § 3º?",
+      "steps": [
+        "Identifique a matéria: direitos humanos.",
+        "Confira separadamente as duas Casas, os dois turnos e o quórum.",
+        "Não substitua uma etapa ausente por votação qualificada em outra Casa."
+      ],
+      "conclusion": "Não. A etapa da Câmara é parte do procedimento constitucional.",
+      "pitfall": "Conferir o quórum e esquecer o órgão e os turnos.",
+      "variation": {
+        "scenario": "O tratado completa duas votações também na Câmara com três quintos dos membros.",
+        "answer": "A condição de aprovação do § 3º está preenchida, observados os demais atos necessários à incorporação."
+      },
+      "articles": [
+        "Art. 5º, § 3º"
+      ]
+    },
+    {
+      "id": "omissao",
+      "title": "O direito existe, mas falta norma",
+      "scenario": "Uma pessoa aponta direito constitucional cujo exercício está inviabilizado por falta de regulamentação. A resposta administrativa diz que a Constituição não produz efeito algum antes da lei.",
+      "question": "A resposta pode tratar a norma constitucional como juridicamente inexistente?",
+      "steps": [
+        "Separe força jurídica da norma e integração necessária a certos efeitos.",
+        "Considere o comando de aplicação imediata.",
+        "Examine a hipótese constitucional e a lei de mandado de injunção."
+      ],
+      "conclusion": "Não. A dependência de regulamentação não transforma a norma em texto sem força jurídica.",
+      "pitfall": "Confundir eficácia limitada com liberdade para contrariar a Constituição.",
+      "variation": {
+        "scenario": "A controvérsia é sobre ato que viola direito já exercitável, e não omissão normativa.",
+        "answer": "O problema muda: deve-se avaliar o instrumento adequado ao ato e ao direito, sem escolher injunção apenas por preferência."
+      },
+      "articles": [
+        "Art. 5º, § 1º",
+        "Art. 5º, LXXI"
+      ]
+    }
+  ],
+  "vida-igualdade": [
+    {
+      "id": "reserva",
+      "title": "Reserva de vagas não é dispensa de requisitos",
+      "scenario": "Um concurso prevê reserva de vagas a pessoas com deficiência. Um participante conclui que o beneficiário pode ignorar qualquer requisito legítimo do cargo.",
+      "question": "A existência da reserva produz essa dispensa geral?",
+      "steps": [
+        "Localize a autorização constitucional de reserva e critérios legais.",
+        "Distinga acesso diferenciado e capacidade ou requisito funcional legítimo.",
+        "Confira a legislação atual e o edital, sujeitos à Constituição."
+      ],
+      "conclusion": "Não. Reserva de vagas e requisitos válidos precisam ser analisados conjuntamente.",
+      "pitfall": "Tratar a inclusão como eliminação automática de toda condição de ingresso.",
+      "variation": {
+        "scenario": "A barreira discutida é ausência de adaptação de acessibilidade na prova.",
+        "answer": "Agora é necessário avaliar a adaptação de participação, que não se confunde com o percentual de vagas reservadas."
+      },
+      "articles": [
+        "Art. 37, VIII"
+      ]
+    },
+    {
+      "id": "sancao",
+      "title": "Gravidade não cria exceção nova",
+      "scenario": "Uma proposta de lei ordinária pretende instituir pena de morte para crime considerado extremamente grave, fora de guerra declarada.",
+      "question": "A gravidade permite ampliar a exceção constitucional?",
+      "steps": [
+        "Leia a vedação e sua exceção expressa.",
+        "Diferencie opinião sobre gravidade e autorização constitucional.",
+        "Considere a posição da lei ordinária diante da Constituição."
+      ],
+      "conclusion": "Não. O legislador ordinário não cria livremente nova exceção ao inciso XLVII, a.",
+      "pitfall": "Usar um argumento de conveniência para apagar o limite constitucional.",
+      "variation": {
+        "scenario": "O enunciado passa a mencionar guerra declarada nos termos constitucionais.",
+        "answer": "A exceção expressa deve ser examinada com suas condições; isso não dispensa a legislação e as garantias pertinentes."
+      },
+      "articles": [
+        "Art. 5º, XLVII, a"
+      ]
+    }
+  ],
+  "liberdades-constitucionais": [
+    {
+      "id": "aviso",
+      "title": "A reunião avisada e a autorização exigida",
+      "scenario": "Um grupo comunica reunião pacífica e sem armas em praça, sem conflito com outra anteriormente convocada. A autoridade exige licença política para concordar com as ideias defendidas.",
+      "question": "O prévio aviso transforma a reunião em autorização discricionária?",
+      "steps": [
+        "Confira os requisitos constitucionais da reunião.",
+        "Separe aviso e autorização.",
+        "Não acrescente condição de concordância ideológica da autoridade."
+      ],
+      "conclusion": "Não. O inciso XVI dispensa autorização nas condições que estabelece.",
+      "pitfall": "Ler aviso como poder de aprovar ou rejeitar previamente a opinião do grupo.",
+      "variation": {
+        "scenario": "Há outra reunião anteriormente convocada para o mesmo local e a nova a frustraria.",
+        "answer": "Esse fato exige examinar condição constitucional expressa que não estava presente no caso inicial."
+      },
+      "articles": [
+        "Art. 5º, XVI"
+      ]
+    },
+    {
+      "id": "associacao",
+      "title": "Fechar associação por portaria",
+      "scenario": "Uma autoridade manda dissolver definitivamente associação por portaria, sem decisão judicial.",
+      "question": "A fundamentação da portaria substitui a reserva judicial?",
+      "steps": [
+        "Identifique a medida: dissolução compulsória.",
+        "Leia a exigência de decisão judicial e trânsito em julgado.",
+        "Distinga dissolução de suspensão de atividades."
+      ],
+      "conclusion": "Não. A portaria não satisfaz a condição do art. 5º, XIX.",
+      "pitfall": "Supor que toda restrição associativa tem o mesmo órgão e o mesmo marco.",
+      "variation": {
+        "scenario": "A medida pretendida é suspensão de atividades, determinada judicialmente.",
+        "answer": "A Constituição exige decisão judicial também nessa hipótese, mas acrescenta trânsito em julgado expressamente à dissolução."
+      },
+      "articles": [
+        "Art. 5º, XIX"
+      ]
+    }
+  ],
+  "propriedade-funcao-social": [
+    {
+      "id": "requisicao",
+      "title": "Equipamento utilizado no perigo público",
+      "scenario": "Em iminente perigo público, a autoridade competente utiliza equipamento particular. O equipamento é devolvido sem dano, nos fatos informados.",
+      "question": "O inciso XXV impõe indenização prévia automática?",
+      "steps": [
+        "Identifique a requisição, sem confundi-la com desapropriação.",
+        "Leia o momento ulterior da indenização.",
+        "Verifique a condição de ocorrência de dano."
+      ],
+      "conclusion": "Não. O fundamento do inciso XXV condiciona indenização ulterior a dano.",
+      "pitfall": "Importar a regra ordinária de desapropriação para qualquer uso emergencial.",
+      "variation": {
+        "scenario": "O uso causa dano comprovado ao equipamento.",
+        "answer": "A condição para examinar a indenização ulterior passa a estar presente; será necessário apurar o dano e os demais elementos pertinentes."
+      },
+      "articles": [
+        "Art. 5º, XXV"
+      ]
+    },
+    {
+      "id": "rural",
+      "title": "Pequena propriedade e dívida concreta",
+      "scenario": "Um pequeno imóvel rural definido em lei é trabalhado pela família. A dívida decorre da própria atividade produtiva.",
+      "question": "Quais elementos precisam ser conferidos na proteção do inciso XXVI?",
+      "steps": [
+        "Identifique a qualificação legal da pequena propriedade.",
+        "Verifique o trabalho familiar.",
+        "Relacione a dívida à atividade produtiva, sem ampliar a hipótese para toda obrigação."
+      ],
+      "conclusion": "O conjunto dos requisitos é relevante; a simples localização rural não basta.",
+      "pitfall": "Aplicar uma proteção patrimonial específica como imunidade de todo imóvel a qualquer dívida.",
+      "variation": {
+        "scenario": "O enunciado troca o imóvel por uma grande propriedade não enquadrada na definição legal.",
+        "answer": "A premissa central da garantia do inciso XXVI deixou de estar demonstrada. Outros regimes precisam de fundamento próprio."
+      },
+      "articles": [
+        "Art. 5º, XXVI"
+      ]
+    }
+  ],
+  "seguranca-juridica-processo": [
+    {
+      "id": "socorro",
+      "title": "Socorro durante a noite",
+      "scenario": "Um pedido real de socorro exige ingresso em residência durante a noite, sem possibilidade de obter consentimento no cenário descrito.",
+      "question": "É correto negar toda hipótese constitucional de ingresso apenas pelo horário?",
+      "steps": [
+        "Identifique o fundamento informado: socorro.",
+        "Leia as exceções do art. 5º, XI.",
+        "Separe a condição diurna da determinação judicial das outras hipóteses."
+      ],
+      "conclusion": "Não. O texto não restringe a prestação de socorro ao período diurno.",
+      "pitfall": "Confundir todas as hipóteses de ingresso com cumprimento de ordem judicial.",
+      "variation": {
+        "scenario": "Não há socorro, desastre, flagrante ou consentimento; existe apenas ordem judicial.",
+        "answer": "A condição temporal da hipótese judicial torna-se relevante. A conclusão do caso inicial não pode ser reaproveitada sem os mesmos fatos."
+      },
+      "articles": [
+        "Art. 5º, XI"
+      ]
+    },
+    {
+      "id": "deposito",
+      "title": "O recorte antigo sobre depositário",
+      "scenario": "Um resumo autoriza prisão civil do depositário infiel citando apenas a parte final do art. 5º, LXVII.",
+      "question": "A resposta está atualizada com a orientação vinculante?",
+      "steps": [
+        "Identifique a modalidade de prisão civil.",
+        "Consulte a Súmula Vinculante 25 no STF.",
+        "Distinga depósito de obrigação alimentar."
+      ],
+      "conclusion": "Não. O STF considera ilícita a prisão civil de depositário infiel em qualquer modalidade de depósito.",
+      "pitfall": "Ensinar o texto isolado sem a orientação que afasta sua aplicação nessa hipótese.",
+      "variation": {
+        "scenario": "A obrigação discutida passa a ser alimentar, com regime e pressupostos próprios.",
+        "answer": "A Súmula sobre depósito não resolve essa outra hipótese. É necessário analisar o título e o procedimento pertinentes."
+      },
+      "articles": [
+        "Art. 5º, LXVII",
+        "Súmula Vinculante 25"
+      ]
+    }
+  ],
+  "remedios-constitucionais": [
+    {
+      "id": "dados",
+      "title": "Seus dados ou dados de terceiros?",
+      "scenario": "Uma pessoa pede acesso a informações relativas a ela própria em banco de caráter público e enfrenta a recusa pertinente.",
+      "question": "O objeto é o mesmo de uma consulta genérica sobre outra pessoa?",
+      "steps": [
+        "Identifique o titular das informações.",
+        "Confira natureza do banco e providência desejada.",
+        "Examine os requisitos da Lei 9.507, inclusive demonstração de recusa ou prazo pertinente."
+      ],
+      "conclusion": "Não. O habeas data tem objeto próprio ligado à pessoa do impetrante.",
+      "pitfall": "Transformá-lo em acesso universal a qualquer banco sobre qualquer terceiro.",
+      "variation": {
+        "scenario": "O pedido busca estatística pública sobre um programa, sem dados pessoais do requerente.",
+        "answer": "A via precisa ser reavaliada pelas regras de acesso à informação e outros instrumentos pertinentes, sem presumir habeas data."
+      },
+      "articles": [
+        "Art. 5º, LXXII",
+        "Lei 9.507/1997, art. 8º"
+      ]
+    },
+    {
+      "id": "escolha",
+      "title": "Omissão normativa ou ato lesivo?",
+      "scenario": "Um direito não pode ser exercido porque falta norma regulamentadora. O requerente escolhe mandado de segurança sem analisar o tipo de problema.",
+      "question": "Qual distinção deve ser feita antes de escolher o instrumento?",
+      "steps": [
+        "Investigue se existe omissão normativa impeditiva.",
+        "Separe essa hipótese do ato que viola direito líquido e certo.",
+        "Consulte a disciplina atual do mandado de injunção e as condições do direito discutido."
+      ],
+      "conclusion": "A escolha depende do problema constitucional; mandado de segurança e de injunção não são intercambiáveis.",
+      "pitfall": "Escolher pelo nome mais conhecido, ignorando a causa do impedimento.",
+      "variation": {
+        "scenario": "A norma existe e o direito é exercitável, mas uma autoridade pratica ato ilegal comprovável documentalmente.",
+        "answer": "O exame passa ao ato e à adequação da via de proteção, incluindo a eventual hipótese de mandado de segurança."
+      },
+      "articles": [
+        "Art. 5º, LXIX",
+        "Art. 5º, LXXI"
+      ]
+    }
+  ],
+  "direitos-sociais-trabalho": [
+    {
+      "id": "adolescente",
+      "title": "Aprendizagem e trabalho perigoso",
+      "scenario": "Um contrato de aprendizagem pretende colocar adolescente de quinze anos em atividade perigosa e alega que a exceção etária resolve todo o problema.",
+      "question": "A possibilidade de aprendizagem afasta a outra vedação?",
+      "steps": [
+        "Separe idade mínima geral, aprendizagem e atividades vedadas.",
+        "Leia o limite de dezoito anos para trabalho noturno, perigoso ou insalubre.",
+        "Não use uma exceção para eliminar proteção distinta."
+      ],
+      "conclusion": "Não. A aprendizagem não libera atividade perigosa ao menor de dezoito.",
+      "pitfall": "Usar apenas a idade mínima de aprendizagem como resposta completa.",
+      "variation": {
+        "scenario": "A atividade é compatível com as proteções do adolescente e a aprendizagem observa a disciplina legal.",
+        "answer": "A objeção específica do perigo não está demonstrada, mas os demais requisitos legais continuam necessários."
+      },
+      "articles": [
+        "Art. 7º, XXXIII"
+      ]
+    },
+    {
+      "id": "vinculo",
+      "title": "Empregado privado e servidor público",
+      "scenario": "Um quadro transfere todo o art. 7º, sem exceção, para qualquer cargo e contratação pública.",
+      "question": "Qual etapa foi omitida?",
+      "steps": [
+        "Identifique o vínculo e o destinatário da norma.",
+        "Leia a remissão específica do art. 39, § 3º.",
+        "Não transforme um rol de incisos determinados em importação irrestrita de todos os direitos."
+      ],
+      "conclusion": "É necessário conferir os direitos remetidos e o regime aplicável; os vínculos não são automaticamente idênticos.",
+      "pitfall": "Usar a expressão trabalhador para apagar distinções constitucionais de regime.",
+      "variation": {
+        "scenario": "O exemplo passa a tratar de trabalhador doméstico.",
+        "answer": "A referência passa ao parágrafo único do art. 7º e à legislação pertinente, com suas condições próprias."
+      },
+      "articles": [
+        "Art. 7º, parágrafo único",
+        "Art. 39, § 3º"
+      ]
+    }
+  ],
+  "organizacao-estado-competencias": [
+    {
+      "id": "concorrente",
+      "title": "A lei federal que chegou depois",
+      "scenario": "Um estado editou norma para peculiaridades locais na ausência de normas gerais federais, em matéria concorrente. Depois surge lei federal de normas gerais parcialmente incompatível.",
+      "question": "A Constituição exige revogação automática de toda a lei estadual?",
+      "steps": [
+        "Identifique a competência concorrente.",
+        "Confira a atuação estadual na ausência da lei federal.",
+        "Aplique a suspensão de eficácia somente no que for contrário à lei federal superveniente."
+      ],
+      "conclusion": "Não. O art. 24, § 4º, prevê suspensão de eficácia na parte conflitante.",
+      "pitfall": "Trocar suspensão parcial de eficácia por revogação integral.",
+      "variation": {
+        "scenario": "A norma estadual não conflita com as normas gerais supervenientes.",
+        "answer": "Não se presume a suspensão daquilo que não é contrário apenas pela existência de lei federal."
+      },
+      "articles": [
+        "Art. 24, §§ 3º e 4º"
+      ]
+    },
+    {
+      "id": "material",
+      "title": "Atuar e legislar não são a mesma coisa",
+      "scenario": "Um órgão conclui que a competência material comum para cuidar de certo serviço permite a qualquer ente editar qualquer regra legislativa sobre toda a matéria.",
+      "question": "A conclusão decorre automaticamente do art. 23?",
+      "steps": [
+        "Separe execução administrativa e produção de normas legislativas.",
+        "Localize a distribuição legislativa nos artigos pertinentes.",
+        "Confira competências específicas e eventual suplementação."
+      ],
+      "conclusion": "Não. A competência comum não substitui toda a repartição legislativa.",
+      "pitfall": "Resolver atribuição legislativa citando apenas uma competência material.",
+      "variation": {
+        "scenario": "O município fundamenta lei em interesse local e suplementação no que couber.",
+        "answer": "Essas atribuições do art. 30 devem ser examinadas especificamente; não são idênticas à conclusão genérica do caso inicial."
+      },
+      "articles": [
+        "Art. 23",
+        "Art. 30"
+      ]
+    }
+  ],
+  "administracao-publica-constituicao": [
+    {
+      "id": "confianca",
+      "title": "O nome não dispensa concurso",
+      "scenario": "Um órgão dá o nome cargo de confiança a funções operacionais permanentes para afastar qualquer concurso.",
+      "question": "A etiqueta resolve a exigência constitucional?",
+      "steps": [
+        "Identifique as atribuições reais.",
+        "Leia a regra de concurso e suas exceções.",
+        "Confira a destinação de direção, chefia e assessoramento do art. 37, V."
+      ],
+      "conclusion": "Não. A denominação isolada não transforma qualquer tarefa em hipótese válida de comissão ou confiança.",
+      "pitfall": "Examinar somente o nome escolhido pela administração.",
+      "variation": {
+        "scenario": "A situação envolve função de confiança de direção a ser exercida por servidor efetivo.",
+        "answer": "A análise muda para os requisitos próprios dessa função, sem presumir identidade com qualquer comissão."
+      },
+      "articles": [
+        "Art. 37, II e V"
+      ]
+    },
+    {
+      "id": "vereador",
+      "title": "Mandato e horário",
+      "scenario": "Servidor abrangido pelo art. 38 assume mandato de vereador, mas seus horários não são compatíveis. Ele usa um resumo que autoriza toda acumulação.",
+      "question": "Qual condição constitucional precisa ser examinada?",
+      "steps": [
+        "Identifique o mandato, evitando confundir prefeito e vereador.",
+        "Confira a compatibilidade exigida para vereador.",
+        "Na ausência da condição, observe a solução constitucional pertinente em vez de autorizar acumulação irrestrita."
+      ],
+      "conclusion": "A possibilidade de manter os exercícios depende dos requisitos do art. 38.",
+      "pitfall": "Usar o título vereador como dispensa de compatibilidade.",
+      "variation": {
+        "scenario": "Há compatibilidade real de horários.",
+        "answer": "A hipótese constitucional de compatibilidade deve ser analisada com a disciplina remuneratória própria, sem eliminar os demais requisitos."
+      },
+      "articles": [
+        "Art. 38, III"
+      ]
+    }
+  ],
+  "judiciario-garantias-carreira": [
+    {
+      "id": "garantias",
+      "title": "Estabilidade não é vitaliciedade",
+      "scenario": "Um esquema dá ao juiz de primeiro grau o prazo de três anos do servidor do art. 41 e chama as duas garantias de idênticas.",
+      "question": "Como separar os regimes?",
+      "steps": [
+        "Identifique o destinatário de cada dispositivo.",
+        "Leia os dois anos para vitaliciedade em primeiro grau.",
+        "Compare com três anos e demais condições da estabilidade do art. 41."
+      ],
+      "conclusion": "Os regimes são distintos e não podem ser unificados apenas pelo objetivo de proteção funcional.",
+      "pitfall": "Transferir o prazo de uma carreira a outra sem ler a regra própria.",
+      "variation": {
+        "scenario": "O enunciado passa a discutir servidor nomeado em cargo efetivo por concurso.",
+        "answer": "Agora a análise do art. 41 é pertinente, inclusive avaliação e demais condições; não se aplica vitaliciedade judicial."
+      },
+      "articles": [
+        "Art. 95, I",
+        "Art. 41"
+      ]
+    },
+    {
+      "id": "vinculante",
+      "title": "Nem toda súmula vincula",
+      "scenario": "Um interessado chama uma súmula comum de vinculante apenas porque foi publicada por tribunal superior.",
+      "question": "O nome tribunal superior supre o art. 103-A?",
+      "steps": [
+        "Identifique o órgão que editou o enunciado.",
+        "Confira a natureza vinculante e os requisitos constitucionais.",
+        "Não transforme publicação ou repetição de decisões em equivalência automática ao procedimento próprio."
+      ],
+      "conclusion": "Não. Súmula vinculante tem disciplina constitucional específica.",
+      "pitfall": "Tratar toda jurisprudência consolidada como enunciado vinculante do art. 103-A.",
+      "variation": {
+        "scenario": "O STF aprova enunciado pelo procedimento constitucional, com os requisitos cabíveis.",
+        "answer": "A natureza vinculante pode então ser examinada a partir desses requisitos, e não do rótulo informal do interessado."
+      },
+      "articles": [
+        "Art. 103-A"
+      ]
+    }
+  ],
+  "tribunais-competencias-cnj": [
+    {
+      "id": "idade",
+      "title": "Tabela anterior à EC 122",
+      "scenario": "Uma tabela impede candidatura ao STF de pessoa com 67 anos apenas porque o limite superior estaria em 65. Os demais requisitos ainda não foram examinados.",
+      "question": "Esse fundamento etário corresponde à redação atual?",
+      "steps": [
+        "Confira o texto atual do art. 101.",
+        "Distinga limite de ingresso e idade de aposentadoria.",
+        "Depois examine nacionalidade, demais requisitos e procedimento de escolha."
+      ],
+      "conclusion": "Não. O limite superior atual de ingresso é menos de setenta; isso não basta, sozinho, para garantir nomeação.",
+      "pitfall": "Usar tabela histórica ou confundir requisito necessário com direito automático ao cargo.",
+      "variation": {
+        "scenario": "A pessoa já tem setenta anos completos.",
+        "answer": "A condição menos de setenta não está preenchida; a conclusão sobre 67 anos não se estende automaticamente."
+      },
+      "articles": [
+        "Art. 101"
+      ]
+    },
+    {
+      "id": "cnj",
+      "title": "Controle administrativo não é nova apelação",
+      "scenario": "Um litigante pede ao CNJ que rejulgue livremente o mérito de uma sentença porque discorda da interpretação do juiz.",
+      "question": "O Conselho é instância recursal universal?",
+      "steps": [
+        "Separe mérito jurisdicional e controle administrativo ou disciplinar.",
+        "Leia as competências do art. 103-B.",
+        "Identifique a via processual adequada sem criar atribuição não prevista."
+      ],
+      "conclusion": "Não. Integrar o Judiciário não faz do CNJ recurso comum contra toda sentença.",
+      "pitfall": "Confundir controle de deveres funcionais com substituição geral da função de julgar.",
+      "variation": {
+        "scenario": "A reclamação aponta possível irregularidade em ato administrativo do tribunal.",
+        "answer": "A natureza do ato mudou e pode exigir exame das competências de controle do Conselho, com os requisitos próprios."
+      },
+      "articles": [
+        "Art. 103-B"
+      ]
+    }
+  ],
+  "funcoes-essenciais-justica": [
+    {
+      "id": "chefia",
+      "title": "MP estadual e PGR",
+      "scenario": "Um organograma coloca todos os Ministérios Públicos estaduais como departamentos subordinados ao PGR.",
+      "question": "O princípio da unidade impõe essa chefia nacional única?",
+      "steps": [
+        "Leia a distinção entre MPU e MPs estaduais.",
+        "Identifique a chefia do MPU no art. 128.",
+        "Não converta unidade institucional em hierarquia inexistente entre instituições distintas."
+      ],
+      "conclusion": "Não. O organograma confunde a estrutura constitucional dos Ministérios Públicos.",
+      "pitfall": "Usar unidade como sinônimo de subordinação de todo MP ao PGR.",
+      "variation": {
+        "scenario": "O órgão indicado é o MPDFT.",
+        "answer": "Ele integra o MPU conforme enumeração constitucional; a estrutura deve ser identificada antes de generalizar pelo local de atuação."
+      },
+      "articles": [
+        "Art. 128"
+      ]
+    },
+    {
+      "id": "instituicao",
+      "title": "Quem representa quem?",
+      "scenario": "Uma pessoa afirma que Defensoria e AGU são equivalentes e devem representar indistintamente qualquer interesse do governo ou de um particular.",
+      "question": "Quais finalidades precisam ser separadas?",
+      "steps": [
+        "Identifique representação da União e consultoria do Executivo.",
+        "Compare com orientação e defesa dos necessitados pela Defensoria.",
+        "Considere atuação judicial e extrajudicial nos respectivos âmbitos."
+      ],
+      "conclusion": "As instituições têm missões distintas, e a condição de essenciais à Justiça não as torna intercambiáveis.",
+      "pitfall": "Escolher a instituição apenas por ambas contarem com profissionais do Direito.",
+      "variation": {
+        "scenario": "A controvérsia é sobre defesa coletiva de necessitados.",
+        "answer": "A análise deve considerar a missão constitucional ampla da Defensoria, que não se limita à defesa criminal individual."
+      },
+      "articles": [
+        "Art. 131",
+        "Art. 134"
+      ]
+    }
+  ]
+}

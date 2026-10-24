@@ -1,0 +1,162 @@
+{
+  "verified_at": "2026-10-24T21:32:58.653029+00:00",
+  "new_modules": 12,
+  "updated_modules": 3,
+  "new_module_exercises": 240,
+  "final_snapshot_exercises": 300,
+  "new_cases": 30,
+  "valid_syllabus_bindings": 15,
+  "official_sources_registered": 6,
+  "rows": [
+    {
+      "slug": "constitucional-direitos-fundamentais-teoria-geral",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-vida-igualdade",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-liberdades-constitucionais",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-propriedade-funcao-social",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-seguranca-juridica-processo",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-remedios-constitucionais",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-direitos-sociais-trabalho",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-organizacao-estado-competencias",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-administracao-publica-constituicao",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-judiciario-garantias-carreira",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-tribunais-competencias-cnj",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-funcoes-essenciais-justica",
+      "kind": "new",
+      "status": "active",
+      "quiz": 20,
+      "cases": 2,
+      "flashcards": 4,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-principios-fundamentais-federacao-republica",
+      "kind": "update",
+      "status": "active",
+      "quiz": 20,
+      "cases": 6,
+      "flashcards": 6,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-nacionalidade-medidas-retirada",
+      "kind": "update",
+      "status": "active",
+      "quiz": 20,
+      "cases": 3,
+      "flashcards": 5,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    },
+    {
+      "slug": "constitucional-direitos-politicos-elegibilidade",
+      "kind": "update",
+      "status": "active",
+      "quiz": 20,
+      "cases": 3,
+      "flashcards": 5,
+      "body_hash_matches": true,
+      "exact_package_match": true
+    }
+  ]
+}
