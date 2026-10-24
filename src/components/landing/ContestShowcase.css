@@ -21,11 +21,12 @@
 .home .contest-availability > span { color: var(--home-text); font-size: 12px; font-weight: 650; line-height: 1.4; }
 .home .contest-availability small { display: block; margin-top: 3px; color: var(--home-muted); font-size: 10px; font-weight: 450; }
 .home .contest-spotlight__actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.home .contest-action { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 44px; padding: 11px 15px; border: 1px solid var(--home-line); border-radius: 8px; background: color-mix(in srgb, var(--home-text) 3%, transparent); color: var(--home-text); text-decoration: none; font-size: 12px; font-weight: 700; line-height: 1.4; transition: border-color 160ms ease, background-color 160ms ease; }
+.home .contest-action { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 44px; padding: 11px 15px; border: 1px solid var(--home-line); border-radius: 8px; background: color-mix(in srgb, var(--home-text) 3%, transparent); color: var(--home-text); text-decoration: none; font-size: 12px; font-weight: 700; line-height: 1.4; transition: border-color 160ms ease, background-color 160ms ease, transform 160ms var(--ease-out); }
 .home .contest-action > svg { flex: none; width: 16px; height: 16px; }
 .home .contest-action--gold { background: var(--brass-soft); border-color: var(--brass-soft); color: #15191d; }
 .home .contest-action:hover { border-color: var(--contest-accent); background: color-mix(in srgb, var(--contest-accent) 10%, var(--card)); }
 .home .contest-action--gold:hover { color: #15191d; background: color-mix(in srgb, var(--brass-soft) 90%, white); }
+.home .contest-action:active { transform: scale(0.97); }
 .home .contest-action:focus-visible, .home .contest-details > summary:focus-visible { outline: 2px solid var(--contest-accent); outline-offset: 3px; }
 .home .contest-reference { margin-top: 10px; color: var(--home-muted); font-size: 10px; line-height: 1.5; }
 .home .contest-details { margin-top: 10px; color: var(--home-muted); font-size: 11px; line-height: 1.65; }

@@ -96,7 +96,7 @@
   }
   .home-footer__section > summary::-webkit-details-marker,
   .home-footer__address > summary::-webkit-details-marker { display: none; }
-  .home-footer__section > summary svg { width: 14px; height: 14px; flex: none; color: var(--app-accent); }
+  .home-footer__section > summary svg { width: 14px; height: 14px; flex: none; color: var(--app-accent); transition: transform 200ms var(--ease-out); }
   .home-footer__section[open] > summary svg { transform: rotate(45deg); }
   .home-footer__section[open] > summary { border-bottom: 1px solid var(--home-line); }
   .home-footer__section .home-footer__links { padding: 2px 10px; }
@@ -105,10 +105,11 @@
   .home-footer__address { min-width: 0; }
   .home-footer__address > summary { display: flex; align-items: center; gap: 8px; min-height: 44px; color: var(--home-muted); cursor: pointer; font-size: 12px; list-style: none; }
   .home-footer__address > summary svg { width: 14px; height: 14px; flex: none; color: var(--app-accent); }
-  .home-footer__address > summary svg:last-child { width: 12px; height: 12px; }
+  .home-footer__address > summary svg:last-child { width: 12px; height: 12px; transition: transform 200ms var(--ease-out); }
   .home-footer__address[open] > summary svg:last-child { transform: rotate(90deg); }
   .home-footer__address address { padding-bottom: 8px; color: var(--home-muted); font-size: 12px; font-style: normal; line-height: 1.6; }
-  .home.home .home-footer__contact-card[href] { display: flex; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--home-line); border-radius: 10px; }
+  .home.home .home-footer__contact-card[href] { display: flex; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--home-line); border-radius: 10px; transition: transform 160ms var(--ease-out), border-color 160ms ease, background-color 160ms ease; }
+  .home.home .home-footer__contact-card[href]:active { transform: scale(0.92); }
   .home.home .home-footer__contact-label { display: none; }
   .home.home .home-footer__contact-card[href] svg { width: 17px; height: 17px; }
   .home.home .home-footer--command .home-footer__bottom { margin-top: 6px; padding-top: 8px; gap: 2px 12px; font-size: 10px; }

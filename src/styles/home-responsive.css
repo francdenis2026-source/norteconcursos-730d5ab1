@@ -334,7 +334,7 @@
 }
 .home-preparation__tool > summary::-webkit-details-marker { display: none; }
 .home-preparation__tool > summary svg { color: var(--micro-accent); margin: 0; }
-.home-preparation__tool > summary svg:last-child { margin-left: auto; width: 14px; height: 14px; }
+.home-preparation__tool > summary svg:last-child { margin-left: auto; width: 14px; height: 14px; transition: transform 200ms var(--ease-out); }
 .home-preparation__tool-tag {
   display: inline-flex;
   align-items: center;
