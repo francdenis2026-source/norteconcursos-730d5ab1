@@ -163,7 +163,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, name: string) => [`${value} questões`, name]}
+                formatter={(value) => [
+                  `${Number(value ?? 0)} questões`,
+                  String(name ?? ""),
+                ]}
               />
             </PieChart>
           </ResponsiveContainer>
@@ -203,8 +206,10 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number | null) =>
-                  value === null ? ["sem dados", "Aproveitamento"] : [`${value}%`, "Aproveitamento"]
+                formatter={(value) =>
+                  value == null
+                    ? ["sem dados", "Aproveitamento"]
+                    : [`${Number(value)}%`, "Aproveitamento"]
                 }
               />
               <Area
@@ -275,8 +280,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, _n, p) => [
-                  `${value}% (${p.payload.total} questões)`,
+                formatter={(value, _n, p) => [
+                  `${Number(value ?? 0)}% (${(p.payload as { total?: number } | undefined)?.total ?? 0} questões)`,
                   "Aproveitamento",
                 ]}
               />
@@ -324,10 +329,14 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 contentStyle={TOOLTIP_STYLE}
                 labelStyle={TOOLTIP_LABEL_STYLE}
                 itemStyle={TOOLTIP_ITEM_STYLE}
-                formatter={(value: number, _n, p) => [
-                  `${value}% · ${p.payload.count} simulado${p.payload.count === 1 ? "" : "s"}`,
-                  p.payload.label,
-                ]}
+                formatter={(value, _n, p) => {
+                  const payload = p.payload as { count?: number; label?: string } | undefined;
+                  const count = payload?.count ?? 0;
+                  return [
+                    `${Number(value ?? 0)}% · ${count} simulado${count === 1 ? "" : "s"}`,
+                    String(payload?.label ?? ""),
+                  ];
+                }}
               />
               <Bar dataKey="accuracy" radius={[6, 6, 0, 0]} barSize={28} fill={SKY}>
                 {bancaData.map((d, i) => (
