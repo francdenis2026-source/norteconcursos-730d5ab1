@@ -103,3 +103,63 @@ export function materialPracticeSearch(scope: MaterialPracticeScope) {
     limit: "20",
   };
 }
+
+/** Local, unscored exercises of the opened material; never inserted into the public catalog. */
+export function authoredMaterialPractice(
+  quiz: { q: string; a: boolean; why: string }[],
+  scope: MaterialPracticeScope,
+  key: string,
+  label: string,
+): Question[] {
+  if (
+    scope.law ||
+    scope.article ||
+    /direito|legisla|contabilidade|reda[çc][ãa]o oficial/i.test(`${scope.subject ?? ""} ${label}`)
+  )
+    return [];
+  const seen = new Set<string>();
+  return quiz.flatMap((item, index) => {
+    const normalized = normalize(item.q);
+    if (!item.q.trim() || !item.why.trim() || typeof item.a !== "boolean" || seen.has(normalized))
+      return [];
+    seen.add(normalized);
+    return [
+      {
+        id: `material:${key}:${index}`,
+        source: "curated" as const,
+        contest: scope.contest ?? "Fixação por assunto",
+        year: "",
+        career: "",
+        board: "Norte Concursos · exercício autoral",
+        subject: scope.subject ?? "",
+        subtopic: scope.topic ?? null,
+        text: item.q,
+        answer: item.a ? ("C" as const) : ("E" as const),
+        explanation: item.why,
+        legalBasis: [],
+        checkedAt: null,
+        difficulty: "média" as const,
+        state: "",
+        category: "",
+        kind: "true_false" as const,
+      },
+    ];
+  });
+}
+export function mergeMaterialPractice(catalog: Question[], authored: Question[]): Question[] {
+  const seen = new Set<string>();
+  return [...catalog, ...authored].filter((q) => {
+    const parsed = parseQuestion(q.text);
+    const key =
+      normalize(parsed.base) +
+      "\n" +
+      normalize(parsed.stem.replace(/^julgue\s+(?:o\s+)?item\s*:?\s*/i, "")) +
+      "\n" +
+      parsed.options.map((o) => normalize(o.text)).join("\n") +
+      "\n" +
+      JSON.stringify([...(q.figures ?? []), ...(parsed.illustrations ?? []).map((i) => i.url)]);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}

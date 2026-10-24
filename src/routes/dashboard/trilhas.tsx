@@ -212,6 +212,8 @@ function Lesson({
               <MaterialPractice
                 key={`${trackSlug}:${lesson.id}`}
                 userId={user.id}
+                authoredQuiz={lesson.quiz}
+                authoredKey={`${trackSlug}:${lesson.id}`}
                 label={lesson.title}
                 scope={{
                   subject: TRACK_SUBJECT[trackSlug] ?? trackSlug,

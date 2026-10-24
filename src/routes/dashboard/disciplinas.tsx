@@ -26,7 +26,7 @@ import {
 import { PageHero, LockedState, HeroStat } from "@/components/dashboard/PageHero";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuthStatus } from "@/hooks/useDashboard";
-import { readSlugs, useStudyMaterialList } from "@/lib/studyMaterials";
+import { readSlugs, useStudyMaterial, useStudyMaterialList } from "@/lib/studyMaterials";
 import { TRACKS } from "@/data/tracks";
 import { PLAYLISTS, youtubePlaylistUrl } from "@/data/mediaCatalog";
 import {
@@ -423,19 +423,49 @@ function DisciplineDetail({
               </select>
             </label>
             {user && (
-              <MaterialPractice
+              <DisciplinePracticePanel
                 key={`${card.name}:${practiceTopic}`}
                 userId={user.id}
-                label={practiceTopic || card.name}
-                scope={{
-                  subject: card.name,
-                  ...(practiceTopic ? { topic: materialTopic(card.name, practiceTopic) } : {}),
-                }}
+                subject={card.name}
+                topic={practiceTopic}
+                items={items}
               />
             )}
           </>
         }
       />
     </div>
+  );
+}
+
+function DisciplinePracticePanel({
+  userId,
+  subject,
+  topic,
+  items,
+}: {
+  userId: string;
+  subject: string;
+  topic: string;
+  items: Parameters<typeof materialsOf>[1];
+}) {
+  const selected = topic
+    ? items.find((item) => {
+        const label = (item as { topic_label?: string }).topic_label;
+        return (
+          label &&
+          (label === topic || materialTopic(subject, label) === materialTopic(subject, topic))
+        );
+      })
+    : items[0];
+  const material = useStudyMaterial(selected?.slug ?? "", !!selected);
+  return (
+    <MaterialPractice
+      userId={userId}
+      label={topic || subject}
+      scope={{ subject, ...(topic ? { topic: materialTopic(subject, topic) } : {}) }}
+      authoredKey={selected?.slug ?? subject}
+      authoredQuiz={material.data?.quiz ?? []}
+    />
   );
 }

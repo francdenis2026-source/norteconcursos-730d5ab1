@@ -8,6 +8,8 @@ import { QuestionText } from "@/components/dashboard/QuestionText";
 import { parseQuestion, shuffled, type Answer, type Question } from "@/lib/questionFormat";
 import {
   materialPracticePool,
+  authoredMaterialPractice,
+  mergeMaterialPractice,
   materialPracticeSearch,
   type MaterialPracticeScope,
 } from "@/lib/materialPractice";
@@ -16,16 +18,25 @@ export function MaterialPractice({
   userId,
   scope,
   label,
+  authoredQuiz = [],
+  authoredKey = label,
 }: {
   userId: string;
   scope: MaterialPracticeScope;
   label: string;
+  authoredQuiz?: { q: string; a: boolean; why: string }[] | undefined;
+  authoredKey?: string | undefined;
 }) {
   const { catalog, loading, error, reload } = useQuestionCatalog(
     userId,
     !!userId && userId !== "demo-user",
   );
-  const pool = useMemo(() => materialPracticePool(catalog, scope), [catalog, scope]);
+  const catalogPool = useMemo(() => materialPracticePool(catalog, scope), [catalog, scope]);
+  const authored = useMemo(
+    () => authoredMaterialPractice(authoredQuiz, scope, authoredKey, label),
+    [authoredQuiz, scope, authoredKey, label],
+  );
+  const pool = useMemo(() => mergeMaterialPractice(catalogPool, authored), [catalogPool, authored]);
   const [session, setSession] = useState<{ questions: Question[]; id: number } | null>(null);
   const search = materialPracticeSearch(scope);
   return (
@@ -39,9 +50,9 @@ export function MaterialPractice({
           Bateria de até 20 questões do assunto, sem repetir itens para completar a quantidade.
         </p>
       </header>
-      {loading ? (
+      {loading && !authored.length ? (
         <p role="status">Conferindo questões disponíveis…</p>
-      ) : error ? (
+      ) : error && !authored.length ? (
         <div role="alert">
           <p>Não foi possível carregar as questões.</p>
           <Button variant="outline" onClick={() => void reload()}>
@@ -51,7 +62,19 @@ export function MaterialPractice({
       ) : (
         <>
           <p className="text-sm" role="status">
-            <strong>{pool.length}</strong> questões disponíveis neste recorte.
+            <strong>{pool.length}</strong> itens disponíveis neste recorte.
+            {authored.length > 0 && (
+              <span className="mt-1 block text-xs text-muted-foreground">
+                {authored.length} exercícios autorais do material ·{" "}
+                {loading ? "consultando o acervo…" : `${catalogPool.length} questões do acervo`}. O
+                link abaixo explora o acervo separado.
+              </span>
+            )}
+            {error && authored.length > 0 && (
+              <span role="status" className="mt-1 block text-xs">
+                O acervo está indisponível; os exercícios do material continuam disponíveis.
+              </span>
+            )}
             {pool.length < 20 && " A cobertura de 20 questões ainda não foi atingida."}
           </p>
           <div className="flex flex-wrap gap-2">

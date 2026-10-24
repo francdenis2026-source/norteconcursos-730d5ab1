@@ -23,7 +23,10 @@ test("each card gathers materials, track lessons and videos of the same discipli
   assert.ok(pt.videos > 0, "video playlists");
   assert.ok(pt.hasContent);
   const quimica = cards.find((c) => c.name === "Química");
-  assert.equal(quimica.hasContent, false);
+  assert.equal(quimica.hasContent, true);
+  assert.ok(quimica.lessons > 0, "new introductory chemistry track");
+  const empty = disciplineCards([], [], []).find(c => c.name === "Química");
+  assert.equal(empty.hasContent, false, "a genuinely empty discipline remains in preparation");
 });
 
 test("expected disciplines come first, in order, extras after", () => {

@@ -315,6 +315,8 @@ function MaterialPage() {
             <MaterialPractice
               key={material.slug}
               userId={user!.id}
+              authoredQuiz={material.quiz ?? []}
+              authoredKey={material.slug}
               label={material.topic_label ?? material.title}
               scope={{
                 subject: material.discipline,

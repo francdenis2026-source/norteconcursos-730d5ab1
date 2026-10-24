@@ -132,3 +132,69 @@ test("explicit topic metadata takes precedence over an approximate text classifi
     ),
   );
 });
+
+test("authored material exercises keep their own origin, scope and CE key without claiming a catalog row", async () => {
+  const { authoredMaterialPractice, mergeMaterialPractice } =
+    await import("../src/lib/materialPractice.ts");
+  const items = [
+    {
+      q: "A autenticação verifica uma identidade alegada.",
+      a: true,
+      why: "Distingue identidade de autorização.",
+    },
+    { q: "A autenticação verifica uma identidade alegada.", a: true, why: "Duplicada." },
+    {
+      q: "Toda autorização concede acesso irrestrito.",
+      a: false,
+      why: "A autorização estabelece os acessos permitidos.",
+    },
+  ];
+  const result = authoredMaterialPractice(
+    items,
+    { subject: "Informática", topic: "Segurança da informação" },
+    "seguranca",
+    "Segurança da informação",
+  );
+  assert.equal(result.length, 2);
+  assert.deepEqual(
+    result.map((q) => q.answer),
+    ["C", "E"],
+  );
+  assert.ok(result.every((q) => q.table === undefined && q.board.includes("autoral")));
+  assert.equal(mergeMaterialPractice(result, result).length, 2);
+  for (const scope of [
+    { law: "codigo-processo-penal" },
+    { subject: "Direito Constitucional" },
+    { subject: "Contabilidade Geral" },
+    { article: "Art. 5" },
+  ])
+    assert.equal(authoredMaterialPractice(items, scope, "material", "tema").length, 0);
+});
+
+test("four new foundational tracks have actual syllabus bindings and twenty exercises per lesson", async () => {
+  const { TRACKS } = await import("../src/data/tracks/index.ts");
+  for (const slug of ["matematica", "fisica", "quimica", "ingles"]) {
+    const track = TRACKS.find((t) => t.slug === slug);
+    assert.ok(track);
+    assert.ok(track.lessons.length);
+    for (const lesson of track.lessons) {
+      assert.equal(lesson.quiz.length, 20);
+      assert.ok(lesson.syllabusTopicId);
+      assert.ok(lesson.pontos.length >= 4);
+      assert.ok(lesson.exemplo.length > 70);
+    }
+  }
+});
+
+test("combining authored practice preserves different support passages for the same command", async () => {
+  const { mergeMaterialPractice } = await import("../src/lib/materialPractice.ts");
+  const a = question({
+    text: "Texto-base:\nPrimeiro caso completo.\n\n[[/texto-base]]\nAssinale a alternativa correta.\n(A) Uma.\n(B) Duas.\n(C) Três.\n(D) Quatro.",
+  });
+  const b = {
+    ...a,
+    id: "different",
+    text: a.text.replace("Primeiro caso completo.", "Segundo caso completo."),
+  };
+  assert.equal(mergeMaterialPractice([a], [b]).length, 2);
+});
