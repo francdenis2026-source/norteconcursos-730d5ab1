@@ -8,7 +8,7 @@
     "sha256": "e0ba9498205d7fb44682807f8476b017b9fb81b5b4458a70900ddb7165fae3b0",
     "notice": "Aviso nº 279/2026-CBMMG/ABM/CSE, Ato nº 12.448/2026, de 03/08/2026"
   },
-  "release_status": "active_with_verified_official_syllabus_link_pending_db_sql",
+  "release_status": "reviewed_active_syllabus_link_confirmed",
   "hold_reason": "A consulta confirmou todos os itens active e syllabus_topic_id nulo. Edital IDECAN nº 09/2026 e retificação Ato CBMMG nº 5.446/2026 conferidos: Anexo II inclui os oito tópicos. Foi preparado SQL guardado para cadastrar a edição e vincular os itens sem alterar status nem explicações.",
   "items": [
     {
@@ -188,5 +188,24 @@
     "official_program_pages": "Edital Anexo II, p. 57; retificação Ato 5.446/2026, pp. 2–3",
     "retification_effect": "A retificação amplia os artigos do Estatuto dos Militares de MG de 15 e 25 para arts. 8–13, 15 e 25; não altera os tópicos cobrados nos itens 31–38.",
     "program_excerpt": "NOÇÕES DE DIREITOS HUMANOS E LEGISLAÇÃO: Definição e conceito de direitos humanos. História dos direitos humanos. Pacto Internacional dos Direitos Civis e Políticos (PIDCP). Pacto Internacional dos Direitos Econômicos, Sociais e Culturais (PIDESC). Sistema das Nações Unidas e os direitos humanos. O papel do Conselho de Direitos Humanos da ONU. Declaração Universal dos Direitos Humanos – adotada pela Assembleia Geral das Nações Unidas em 10 de dezembro de 1948. Convenção Americana sobre Direitos Humanos – assinada na Conferência Especializada Interamericana sobre Direitos Humanos (San José da Costa Rica), em 22 de novembro de 1969. Lei Estadual n. 5.301, de 16 de outubro de 1969 - Estatuto dos Militares do Estado de Minas Gerais (art. 8º ao 13; arts. 15 e 25). Constituição Federal de 1988 (Direitos Fundamentais. Direitos e deveres individuais e coletivos. Administração pública. Militares dos Estados e do Distrito Federal. Organização judiciária militar dos estados. Forças armadas. Segurança pública). Constituição do Estado de Minas Gerais (Militares do estado. Segurança pública. Subordinação do Corpo de Bombeiros ao Governador do Estado. Arts. 137, 142 e 143). Lei n. 4657, de 04 de setembro de 1942 – Lei de Introdução às Normas do Direito Brasileiro (arts. 1º ao 6º)."
+  },
+  "database_confirmation": {
+    "confirmed_at": "2026-10-24",
+    "syllabus_topic_id": "80d1bf70-916c-4593-a341-4fb26435021b",
+    "discipline": "Noções de Direitos Humanos e Legislação",
+    "all_items_active": true,
+    "answers_match_definitive_key": true,
+    "all_items_linked_to_same_current_topic": true,
+    "items_confirmed": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "evidence": "Saída SQL enviada pelo usuário; cada item retornou content_status=active, gabarito definitivo esperado, syllabus_topic_id comum, disciplina e tested_topic específico."
   }
 }
