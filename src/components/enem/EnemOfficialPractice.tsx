@@ -50,7 +50,7 @@ export function EnemOfficialPractice() {
             href={`${root}/${year}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border px-3 py-1.5 font-medium hover:bg-muted"
+            className="rounded-full border px-3 py-1.5 font-medium transition-[background-color,transform] duration-150 hover:bg-muted active:scale-95 motion-reduce:active:scale-100"
           >
             Acervo oficial {year}
           </a>
