@@ -22,6 +22,7 @@ export interface SimulatorQuestion {
   explanation: string;
   difficulty: string | null;
   legalBasis: Question["legalBasis"];
+  didacticProvenance?: Question["didacticProvenance"];
   kind?: "true_false" | "multiple_choice";
   figures?: string[];
 }

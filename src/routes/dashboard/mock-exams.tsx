@@ -1,3 +1,4 @@
+import { parseDidacticProvenance } from "@/lib/didacticQuestion";
 import { TacticalClock } from "@/components/brand/TacticalClock";
 import { questionIdentity } from "@/lib/questionIdentity";
 import { useSessionHydration } from "@/hooks/useSessionHydration";
@@ -382,7 +383,7 @@ function ProfessionalSimulator() {
         ),
         query(
           "curated_question_catalog",
-          "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis",
+          "id,contest_name,contest_year,career_name,exam_board,subject,subtopic,question_text,official_answer,explanation,difficulty,legal_basis,didactic_provenance",
         ),
         query(
           "board_exam_questions",
@@ -427,6 +428,7 @@ function ProfessionalSimulator() {
           id: "curated_question_catalog:" + String(row["id"]),
           originalId: String(row["id"]),
           sourceKind: "curated",
+          didacticProvenance: parseDidacticProvenance(row["didactic_provenance"]),
           contest: String(row["contest_name"]),
           year: Number(row["contest_year"]),
           career: canonicalCareerName(String(row["career_name"] || "Carreira policial")),
@@ -1813,9 +1815,18 @@ function ActiveSimulator(p: {
                 : "bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-100",
             )}
           >
-            <span role="timer" aria-live="off" aria-label={`Tempo restante: ${formatTime(timeLeft)}`}>
-              <TacticalClock time={formatTime(timeLeft)} seconds={timeLeft} label="Tempo restante"
-                progress={durationSeconds > 0 ? timeLeft / durationSeconds : 0} urgent={timeLeft < 300} />
+            <span
+              role="timer"
+              aria-live="off"
+              aria-label={`Tempo restante: ${formatTime(timeLeft)}`}
+            >
+              <TacticalClock
+                time={formatTime(timeLeft)}
+                seconds={timeLeft}
+                label="Tempo restante"
+                progress={durationSeconds > 0 ? timeLeft / durationSeconds : 0}
+                urgent={timeLeft < 300}
+              />
             </span>
           </div>
           <div className="flex gap-2">

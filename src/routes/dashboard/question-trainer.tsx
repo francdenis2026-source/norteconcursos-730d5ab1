@@ -1796,10 +1796,15 @@ function QuestionTrainer() {
                 />
               )}
               <div className="mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:gap-2">
-                {question.isOriginal && <Badge variant="secondary">Questão autoral</Badge>}
-                <Badge variant="outline">{question.board}</Badge>
+                {question.didacticProvenance ? (
+                  <Badge variant="secondary">Material didático catalogado</Badge>
+                ) : (
+                  question.isOriginal && <Badge variant="secondary">Questão autoral</Badge>
+                )}
+                {!question.didacticProvenance && <Badge variant="outline">{question.board}</Badge>}
                 <Badge variant="outline">
-                  {question.contest} · {question.year}
+                  {question.contest} ·{" "}
+                  {question.didacticProvenance ? `catalogação ${question.year}` : question.year}
                 </Badge>
                 <Badge
                   variant="outline"
@@ -2601,10 +2606,11 @@ function TrainerSetup({
               label="Origem"
               value={values.source}
               setValue={setters.setSource}
-              options={["official", "curated", "personal"]}
+              options={["official", "curated", "didactic", "personal"]}
               labels={{
                 official: "Provas oficiais",
                 curated: "Autorais e repertório de estudo",
+                didactic: "Materiais didáticos catalogados",
                 personal: "Meu caderno",
               }}
               counts={facets.counts["source"]}

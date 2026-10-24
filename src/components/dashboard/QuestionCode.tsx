@@ -1,3 +1,4 @@
+import { DidacticSourceNotice } from "./DidacticSourceNotice";
 // Código permanente da questão, com cópia em um toque. Serve para o aluno
 // informar exatamente qual item tem problema (ver src/lib/questionIdentity.ts).
 import * as React from "react";
@@ -48,24 +49,27 @@ export function QuestionCode({
     timer.current = setTimeout(() => setCopied(false), 2000);
   };
   return (
-    <Hint content="Copiar o código desta questão">
-      <button
-        type="button"
-        onClick={() => void copy()}
-        aria-label={`Copiar código da questão ${code}`}
-        data-question-code={code}
-        className={cn(
-          "my-1 flex min-h-11 max-w-full items-center gap-2 rounded-md border bg-muted/40 px-3 py-2 text-left text-xs text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
-          className,
-        )}
-      >
-        <span className="min-w-0 break-all font-mono">{code}</span>
-        {copied ? (
-          <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
-        ) : (
-          <Copy className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-        )}
-      </button>
-    </Hint>
+    <>
+      <Hint content="Copiar o código desta questão">
+        <button
+          type="button"
+          onClick={() => void copy()}
+          aria-label={`Copiar código da questão ${code}`}
+          data-question-code={code}
+          className={cn(
+            "my-1 flex min-h-11 max-w-full items-center gap-2 rounded-md border bg-muted/40 px-3 py-2 text-left text-xs text-foreground transition hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            className,
+          )}
+        >
+          <span className="min-w-0 break-all font-mono">{code}</span>
+          {copied ? (
+            <Check className="h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+          ) : (
+            <Copy className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+          )}
+        </button>
+      </Hint>
+      <DidacticSourceNotice provenance={question.didacticProvenance} />
+    </>
   );
 }

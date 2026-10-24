@@ -1,0 +1,7 @@
+{
+  "tests": 50,
+  "failed": 0,
+  "typecheck": "passed",
+  "production_build": "passed",
+  "visual_browser_check": false
+}

@@ -1,3 +1,4 @@
+import { DidacticSourceNotice } from "@/components/dashboard/DidacticSourceNotice";
 import { isPracticeOfficialSource } from "@/lib/materialPracticeReview";
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
@@ -151,6 +152,7 @@ function PracticeSession({ questions }: { questions: Question[] }) {
         Questão {index + 1} de {questions.length} · {q.board}
         {q.year ? ` · ${q.year}` : ""}
       </p>
+      <DidacticSourceNotice provenance={q.didacticProvenance} />
       {parsed.base && (
         <aside className="max-h-80 overflow-auto whitespace-pre-wrap rounded-xl border bg-muted/40 p-3 text-sm">
           <strong>{parsed.baseLabel}</strong>
@@ -181,7 +183,19 @@ function PracticeSession({ questions }: { questions: Question[] }) {
             {picked === q.answer ? "Resposta correta." : `Resposta correta: ${q.answer}.`}
           </p>
           <QuestionText text={q.explanation} />
-          {q.legalBasis.filter(b => b.url && isPracticeOfficialSource(b.url)).map(b => <a key={`${b.url}:${b.artigo}`} href={b.url} target="_blank" rel="noopener noreferrer" className="block text-sm underline">Conferir fonte oficial{b.artigo ? ` · ${b.artigo}` : ""}</a>)}
+          {q.legalBasis
+            .filter((b) => b.url && isPracticeOfficialSource(b.url))
+            .map((b) => (
+              <a
+                key={`${b.url}:${b.artigo}`}
+                href={b.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm underline"
+              >
+                Conferir fonte oficial{b.artigo ? ` · ${b.artigo}` : ""}
+              </a>
+            ))}
           <Button
             onClick={() =>
               index + 1 === questions.length ? setFinished(true) : setIndex(index + 1)

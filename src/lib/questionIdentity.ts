@@ -21,7 +21,7 @@ const tableByPrefix = Object.fromEntries(
   Object.entries(prefixes).map(([table, prefix]) => [prefix, table]),
 ) as Record<string, QuestionTable>;
 export const QUESTION_TABLES = Object.keys(prefixes) as QuestionTable[];
-export type QuestionReference = Pick<Question, "id" | "source" | "table">;
+export type QuestionReference = Pick<Question, "id" | "source" | "table" | "didacticProvenance">;
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -59,9 +59,10 @@ export function parseQuestionRef(ref: string): { table: QuestionTable; id: strin
 
 /** Lê um código informado pelo usuário (aceita minúsculas, espaços e traços ausentes). */
 export function parseQuestionCode(value: string): { table: QuestionTable; id: string } | null {
-  const match = /^NC[\s-]*(OF|BA|AU|PE)[\s-]*([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})$/i.exec(
-    value.trim(),
-  );
+  const match =
+    /^NC[\s-]*(OF|BA|AU|PE)[\s-]*([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})$/i.exec(
+      value.trim(),
+    );
   if (!match) return null;
   const hex = match[2]!.replace(/-/g, "").toLowerCase();
   const id = `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
@@ -72,8 +73,14 @@ export function simulatorReference(question: {
   id: string;
   originalId: string;
   sourceKind: "official" | "curated";
+  didacticProvenance?: Question["didacticProvenance"];
 }): QuestionReference {
   const table = question.id.slice(0, question.id.indexOf(":"));
   if (!(table in prefixes)) throw new Error("Origem física da questão não identificada.");
-  return { id: question.originalId, source: question.sourceKind, table: table as QuestionTable };
+  return {
+    id: question.originalId,
+    source: question.sourceKind,
+    table: table as QuestionTable,
+    ...(question.didacticProvenance ? { didacticProvenance: question.didacticProvenance } : {}),
+  };
 }

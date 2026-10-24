@@ -1,3 +1,4 @@
+import type { DidacticProvenance } from "./didacticQuestion";
 import { extractQuestionIllustrations, type QuestionIllustration } from "@/lib/questionMedia";
 import { acreDate } from "@/lib/acreTime";
 // Tipos e helpers de formatação de questão compartilhados entre o Treinador
@@ -19,6 +20,7 @@ export type Question = {
   source: Source;
   /** Proveniência explícita para exibir "Questão autoral" no painel do aluno. */
   isOriginal?: boolean;
+  didacticProvenance?: DidacticProvenance | undefined;
   table?: QuestionTable;
   syllabusTopicId?: string | null;
   contest: string;
@@ -95,48 +97,102 @@ export const isOfficialUrl = (url?: string) => {
     // Compilação da LC 106/2003 conferida no catálogo oficial do MPRJ.
     // Não autoriza páginas genéricas do portal nem outros documentos.
     if (parsed.hostname === "www.mprj.mp.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
-        parsed.pathname === "/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80" &&
-        /^\d+$/.test(parsed.searchParams.get("t") ?? "") && [...parsed.searchParams].length === 1;
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname ===
+          "/documents/20184/4361398/lei_complementar_estadual_106_2003.pdf/3c1e67b6-64db-850b-a005-7189e3f41e80" &&
+        /^\d+$/.test(parsed.searchParams.get("t") ?? "") &&
+        [...parsed.searchParams].length === 1
+      );
     }
     // Recortes de responsabilidade da LC68: compilação oficial e atos posteriores conferidos.
     if (parsed.hostname === "sapl.al.ro.leg.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&
-        parsed.pathname === "/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx";
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        parsed.pathname ===
+          "/media/sapl/public/anexonormajuridica/1992/20/lei_complementar_no_68_-_alterada_ate_lc_no_1.001_-_05.11.2018..docx"
+      );
     }
     // Normas contábeis primárias conferidas no CFC, incluindo a transição NBC31.
     if (parsed.hostname === "www1.cfc.org.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port && !parsed.search &&
-        ["/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf", "/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf"].includes(parsed.pathname);
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        !parsed.search &&
+        [
+          "/sisweb/SRE/docs/NBCTG27(R4)_rev18.pdf",
+          "/sisweb/SRE/docs/NBCTG23(R2)_rev13.pdf",
+        ].includes(parsed.pathname)
+      );
     }
     // Recortes da LC407 confrontados com os atos modificadores até 17/10/2026.
     if (parsed.hostname === "www.al.mt.gov.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
-        parsed.pathname === "/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado" &&
-        parsed.searchParams.get("exibirAnotacao") === "1" && parsed.searchParams.get("marcoHistorico") === "2026-10-17" &&
-        [...parsed.searchParams].length === 2;
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname ===
+          "/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:2010-06-30;407/compilado" &&
+        parsed.searchParams.get("exibirAnotacao") === "1" &&
+        parsed.searchParams.get("marcoHistorico") === "2026-10-17" &&
+        [...parsed.searchParams].length === 2
+      );
     }
     // Somente os recortes da LC 37/2004 conferidos na compilação da ALEPI.
     if (parsed.hostname === "sapl.al.pi.leg.br") {
-      return parsed.protocol === "https:" && parsed.pathname === "/ta/59/text" &&
-        !parsed.search && !parsed.username && !parsed.password && !parsed.port;
+      return (
+        parsed.protocol === "https:" &&
+        parsed.pathname === "/ta/59/text" &&
+        !parsed.search &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port
+      );
     }
     // Recorte da RDC 222/2018 conferido na Biblioteca Virtual do Ministério
     // da Saúde. Não libera páginas genéricas nem outras normas desse domínio.
     if (parsed.hostname === "bvsms.saude.gov.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
-        parsed.pathname === "/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf" && !parsed.search;
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/bvs/saudelegis/anvisa/2018/rdc0222_28_03_2018.pdf" &&
+        !parsed.search
+      );
     }
     if (parsed.hostname === "www.al.ro.leg.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
-        parsed.pathname === "/downloads/constituicao-do-estado-de-rondonia" && !parsed.search;
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/downloads/constituicao-do-estado-de-rondonia" &&
+        !parsed.search
+      );
     }
     // Normas estaduais conferidas na ALEPE: reconhecer a página da norma,
     // sem liberar buscas, páginas pessoais ou qualquer domínio .gov.br.
     if (parsed.hostname === "legis.alepe.pe.gov.br") {
-      return parsed.protocol === "https:" && !parsed.username && !parsed.password && !parsed.port &&
-        parsed.pathname === "/texto.aspx" && /^\d+$/.test(parsed.searchParams.get("id") ?? "") &&
-        ["TEXTOATUALIZADO", "TEXTOORIGINAL"].includes(parsed.searchParams.get("tipo") ?? "");
+      return (
+        parsed.protocol === "https:" &&
+        !parsed.username &&
+        !parsed.password &&
+        !parsed.port &&
+        parsed.pathname === "/texto.aspx" &&
+        /^\d+$/.test(parsed.searchParams.get("id") ?? "") &&
+        ["TEXTOATUALIZADO", "TEXTOORIGINAL"].includes(parsed.searchParams.get("tipo") ?? "")
+      );
     }
     return OFFICIAL_SOURCE.test(parsed.hostname + "/");
   } catch {
