@@ -105,7 +105,8 @@ export function unifiedCareer(rawCareer: string, contest = ""): string {
     return "Agente de Polícia Penal";
   if (t === "departamento penitenciario nacional" || (/penitenciario nacional/.test(c) && !t))
     return "Agente de Polícia Penal";
-  if (/agente de policia|investigador/.test(t)) return "Agente / Investigador de Polícia";
+  if (/agente de policia|investigador|inspetor de policia/.test(t))
+    return "Agente / Investigador de Polícia";
   if (/tecnico.*(pericia|policia civil|tpag)/.test(t)) return "Técnico de Perícia (apoio)";
   return raw;
 }
