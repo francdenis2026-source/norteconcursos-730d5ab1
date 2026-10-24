@@ -1,0 +1,1362 @@
+{
+  "checked_at": "2026-10-24T02:36:56.265286+00:00",
+  "live_rows": {
+    "board": 1916,
+    "curated": 2045,
+    "official": 5133,
+    "private_candidates": 5182
+  },
+  "already_registered": [
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 1
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 2
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 3
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 4
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 5
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 6
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 7
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 8
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 9
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 10
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 11
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 12
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 13
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 14
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 15
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 16
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 17
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 18
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 19
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 20
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 21
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 22
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 23
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 24
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 25
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 26
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 27
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 28
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 29
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 30
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 31
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 32
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 33
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 34
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 35
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 36
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 40
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 41
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 42
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 43
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 44
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 45
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 46
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 47
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 48
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 49
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 50
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 51
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 52
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 53
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 54
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 55
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 56
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 57
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 58
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 59
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 64
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 66
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 67
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 68
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 69
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 70
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 71
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 72
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 73
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 74
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 75
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 76
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 77
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 78
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 79
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 80
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 81
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 82
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 83
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 84
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 85
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 86
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 87
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 88
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 89
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 90
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 91
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 92
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 93
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 94
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 95
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 96
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 97
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 98
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 99
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 100
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 2
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 4
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 6
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 7
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 8
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 9
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 10
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 11
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 12
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 14
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 15
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 16
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 17
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 18
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 20
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 21
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 22
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 29
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 31
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 32
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 33
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 34
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 35
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 36
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 37
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 38
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 39
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 40
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 41
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 43
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 44
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 45
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 46
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 47
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 48
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 49
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 50
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 1
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 2
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 3
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 4
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 5
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 6
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 7
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 8
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 9
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 12
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 13
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 14
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 15
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 16
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 17
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 18
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 19
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 20
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 21
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 22
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 23
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 24
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 25
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 26
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 27
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 28
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 29
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 30
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 31
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 32
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 33
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 34
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 35
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 36
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 37
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 38
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 41
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 42
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 43
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 44
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 45
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 46
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 47
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 48
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 49
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 50
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 1
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 2
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 3
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 4
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 5
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 6
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 7
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 8
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 9
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 10
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 11
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 12
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 13
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 14
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 15
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 16
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 17
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 18
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 19
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 20
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 21
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 22
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 23
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 25
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 26
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 27
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 28
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 29
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 30
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 31
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 32
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 33
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 34
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 35
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 36
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 37
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 38
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 39
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 40
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 41
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 42
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 43
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 44
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 45
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 46
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 47
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 48
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 49
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 50
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 51
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 52
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 53
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 54
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 55
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 56
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 57
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 58
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 59
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 60
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 61
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 62
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 63
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 64
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 65
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 66
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 67
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 68
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 69
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 70
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 71
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 72
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 73
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 74
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 75
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 76
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 77
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 78
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 79
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 80
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 81
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 82
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 83
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 84
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 85
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 86
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 87
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 88
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 89
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 90
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 91
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 92
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 93
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 94
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 95
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 97
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 98
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 99
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 100
+    }
+  ],
+  "annulled_excluded": [
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 60
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 5
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 42
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 11
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 24
+    },
+    {
+      "booklet": "pcsc-escrivao",
+      "item_number": 96
+    }
+  ],
+  "duplicate_content": [],
+  "possible_duplicates": [],
+  "incomplete_held": [
+    {
+      "booklet": "pmsc",
+      "item_number": 13,
+      "reason": "Fórmula/matriz exige recuperação visual antes de criar candidato",
+      "raw_text": "13.\t Uma política de segurança estabelece: “Se o policiamento\npreventivo for reforçado (P), então a taxa de furtos diminuirá\n(Q)”.\nA expressão lógica tautológica que representa a equivalência\ndessa política é dada por:\n(A)\t 𝑃∧𝑄↔(∼𝑃∨∼𝑄)\n(B)\t 𝑃→𝑄) ↔ (𝑃∧∼𝑄\n(C)\t 𝑃→𝑄↔(∼𝑃∨𝑄)\n(D)\t 𝑃→𝑄↔(𝑄→𝑃)\n(E)\t 𝑃→𝑄) ↔ ∼(∼𝑃∧𝑄"
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 10,
+      "reason": "Fórmula/matriz exige recuperação visual antes de criar candidato",
+      "raw_text": "10.\t Seja M a matriz a seguir:\nO determinante da matriz M é igual a:\n(A)\t – 4.\n(B)\t – 5.\n(C)\t – 7.\n(D)\t – 6."
+    }
+  ],
+  "staged": [
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 37,
+      "candidate_id": "aa4f0229df79e769221186e47e7300093614b6ca1007fcf179c93461975eade2",
+      "subject": "Legislação Institucional",
+      "pages": [
+        11
+      ],
+      "answer": "B"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 38,
+      "candidate_id": "07d6175fb15cc6c4e036f0f334971375a805ebf263b1c5f241975e935ff0e3dc",
+      "subject": "Legislação Institucional",
+      "pages": [
+        11
+      ],
+      "answer": "D"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 39,
+      "candidate_id": "54f2547854e158c14c18834fdf1ddaf7e082691f93c9d7bd7ba54da7e5624da8",
+      "subject": "Legislação Institucional",
+      "pages": [
+        11
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 61,
+      "candidate_id": "b097a078a75c2e4f36bb075bd5ab148cd2e00e6fb9cd7f9d56014551f13abbfa",
+      "subject": "Contabilidade",
+      "pages": [
+        15
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 62,
+      "candidate_id": "6d404d7247a027b67d44047ec1de5180e79aa4807b14278300532c84497b7735",
+      "subject": "Contabilidade",
+      "pages": [
+        15
+      ],
+      "answer": "E"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 63,
+      "candidate_id": "8b3c7244f9d154905d8104d5dd9b65c16802e7efb36f2be0859156182baa905b",
+      "subject": "Contabilidade",
+      "pages": [
+        15
+      ],
+      "answer": "B"
+    },
+    {
+      "booklet": "pcsc-agente",
+      "item_number": 65,
+      "candidate_id": "c2ef8084611f36b348532d119ee8a898dc8a4f36c813c4ba3fa3ead0bdfd06ad",
+      "subject": "Contabilidade",
+      "pages": [
+        16
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 1,
+      "candidate_id": "aae734872b70a7e3c152431fff4be8cffaa8abf4962dfb2ccdceee7215d62985",
+      "subject": "Língua Portuguesa",
+      "pages": [
+        2
+      ],
+      "answer": "E"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 3,
+      "candidate_id": "c6913055b06c4b2a6c1d9e1db1180cd9ebd95bc2c9d717ce0cffc062af5c7754",
+      "subject": "Língua Portuguesa",
+      "pages": [
+        2
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 19,
+      "candidate_id": "65b23aebe0794c80496f2715f492fd444ef5e4bfa0631665a6fbd7df9b787017",
+      "subject": "Informática",
+      "pages": [
+        7
+      ],
+      "answer": "A"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 23,
+      "candidate_id": "22c586e787aa6d8617a8cea5093d0d25cbf9311f96d8acdeab9b8fd0bc75158f",
+      "subject": "Informática",
+      "pages": [
+        7
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 24,
+      "candidate_id": "eabbb162bc634c1dc0fc6a663ac37a65ee0345e5ad0880ce358cb6cc117227bb",
+      "subject": "Legislação Institucional",
+      "pages": [
+        8
+      ],
+      "answer": "D"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 25,
+      "candidate_id": "733dacb986e8d6ca050b397d177ad343eecdcc79d04374e9536f6b53433b2894",
+      "subject": "Legislação Institucional",
+      "pages": [
+        8
+      ],
+      "answer": "B"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 26,
+      "candidate_id": "68fb07a255b01364c236d46720326cef8d65a2eda3bd1f3a8cc99aea11b1e554",
+      "subject": "Legislação Institucional",
+      "pages": [
+        8
+      ],
+      "answer": "A"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 27,
+      "candidate_id": "8f586136918ce7f2216ead4ce7f64356a4dc2caa8fb3d2d347ef66316463cf93",
+      "subject": "Legislação Institucional",
+      "pages": [
+        8
+      ],
+      "answer": "B"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 28,
+      "candidate_id": "7d6d977d8981d9ac2bd5f21b97813f5162d02624e97252ecda8cb48674bf7200",
+      "subject": "Legislação Institucional",
+      "pages": [
+        8
+      ],
+      "answer": "E"
+    },
+    {
+      "booklet": "pmsc",
+      "item_number": 30,
+      "candidate_id": "824f5e9bb439f5afc2b186a2fb7dd95a8593a0f9ad665e41251b4b922a302dab",
+      "subject": "Legislação Institucional",
+      "pages": [
+        9
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 39,
+      "candidate_id": "100035ac656ef57a4f8093b812946d41b6ab0fe49e9a72207298d07137085281",
+      "subject": "Direitos Humanos e Legislação",
+      "pages": [
+        10
+      ],
+      "answer": "C"
+    },
+    {
+      "booklet": "cbmmg",
+      "item_number": 40,
+      "candidate_id": "634af19e5346fcd5556d6fb39cc4d6c1c002442eb9dd860d04aee17937b599fc",
+      "subject": "Direitos Humanos e Legislação",
+      "pages": [
+        10
+      ],
+      "answer": "B"
+    }
+  ],
+  "packs": [
+    {
+      "booklet": "pcsc-agente",
+      "source_id": "4c1aeba37bfed6e8c00aa0d42b6dbcf7de0dcc67a406f5b5cbc7e9136be0e147",
+      "candidates": 7
+    },
+    {
+      "booklet": "pmsc",
+      "source_id": "e60c319a40fb68f495555e7fad113bda8c9b109275000b0bd5c450fbd9ff24ec",
+      "candidates": 10
+    },
+    {
+      "booklet": "cbmmg",
+      "source_id": "6cfa2f7760a08ba57e4f214ed54d16c5181e98e2ce1f26dc218bb527bae574fd",
+      "candidates": 2
+    }
+  ],
+  "summary": {
+    "already_registered": 273,
+    "annulled_excluded": 6,
+    "duplicate_content": 0,
+    "possible_duplicates": 0,
+    "incomplete_held": 2,
+    "staged": 19
+  }
+}
