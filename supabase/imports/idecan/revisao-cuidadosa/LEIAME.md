@@ -61,6 +61,12 @@ O gabarito definitivo IDECAN confirma C. Comparei CP art. 24 e art. 14, parágra
 
 `revisao-integral/pmsc-item36-diferencas-cp-cpm.sql` registra a fonte do CPM e um tópico de Legislação Penal Militar específico da edição PMSC, depois libera somente a questão 36 com auditoria. Ainda depende de aplicação no Supabase e não prevê PC-AC.
 
+## Itens PMSC Tipo A, 37–40
+
+Os quatro gabaritos definitivos foram conferidos: 37-E, 38-B, 39-A e 40-D. O CPM compilado no Planalto, já após a Lei 14.688/2023, foi cotejado com o caderno; o edital PMSC prevê CPM arts. 1º–9º, 29–47, 149–204 e 298–339 (Anexo II, p. 52). As explicações individualizam lugar do crime omissivo (art. 6º), omissão de lealdade militar (art. 151), crimes contra serviço/dever militar (arts. 194, 196 e 197) e inobservância de lei (art. 324). Evidências detalhadas: `revisao-integral/revisao-pmsc-itens37-40.json`.
+
+`revisao-integral/pmsc-itens37-40-cpm.sql` é um lote transacional com quatro guardas individuais de identidade, texto, opções, gabarito e estado; audita cada alteração e cancela o lote inteiro se houver divergência. Ele cria/reutiliza o tópico militar próprio da edição PMSC e libera apenas esses quatro itens. Ainda precisa ser aplicado no Supabase; não constitui previsão PC-AC.
+
 ## Pareceres e evidências
 
 `pareceres-juridicos-legado.json` contém **101 pareceres individuais iniciais**, com explicação, erro comum, exemplo, referências e impedimentos específicos. Esse arquivo de etapa inicial **não aprova os 101 para publicação**. O parecer preliminar é superado somente nos itens e campos expressamente documentados nos relatórios de aplicação acima. As outras decisões ainda dependem de contexto, gabarito, pertinência a edital, doutrina ou jurisprudência, conforme o caso.
