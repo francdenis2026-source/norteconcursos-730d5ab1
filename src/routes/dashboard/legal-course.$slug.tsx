@@ -18,7 +18,6 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LegalCoursePractice } from "@/components/library/LegalCoursePractice";
 import { WorkedExamples } from "@/components/library/WorkedExamples";
-import { LawPracticeLink } from "@/components/library/LawPracticeLink";
 import { LegalUpdateNotice } from "@/components/library/LegalUpdateNotice";
 import { LegalStudyReading } from "@/components/library/LegalStudyReading";
 import { SafeBoundary } from "@/components/library/SafeBoundary";
@@ -407,44 +406,53 @@ function LegalCoursePage() {
             law={{ slug: course.slug, materialSlug: course.material_slug }}
           />
         ) : tab === "application" ? (
-          material.isPending ? (
-            <Skeleton className="h-64" />
-          ) : material.data ? (
-            <>
-              <p className="text-sm text-muted-foreground">
-                Este conjunto testa os conceitos indicados no resumo de aplicação. A cobertura da
-                leitura integral é acompanhada por dispositivo.
+          <section className="space-y-4" aria-label="Revisão geral da lei">
+            <header className="rounded-xl border bg-card p-4 sm:p-5">
+              <h2 className="text-lg font-bold">Revisão geral da lei</h2>
+              <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                Teste o que aprendeu, confira o resultado e volte aos artigos em que teve
+                dificuldade. Os exercícios desta revisão não substituem a leitura integral.
               </p>
-              <WorkedExamples
-                key={`${userId}:${course.material_slug}`}
-                slug={course.material_slug}
-                enabled={!!userId}
-              />
-              {userId && (
-                <LegalCoursePractice
-                  key={`${userId}:${material.data.slug}`}
-                  courseId={course.id}
-                  userId={userId}
-                  material={material.data}
-                />
-              )}
-              {userId && <LawPracticeLink law={course.slug} userId={userId} />}
-              <Link
-                to="/dashboard/library/$slug"
-                params={{ slug: course.material_slug }}
-                className="inline-block underline"
-              >
-                Abrir explicações e exemplos de aplicação
-              </Link>
-            </>
-          ) : (
-            <p>
-              Não foi possível carregar os exercícios.{" "}
-              <button onClick={() => void material.refetch()} className="underline">
-                Tentar novamente
-              </button>
-            </p>
-          )
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                <span className="rounded-full border px-3 py-1">1. Responder</span>
+                <span className="rounded-full border px-3 py-1">2. Conferir erros</span>
+                <span className="rounded-full border px-3 py-1">3. Revisar artigos</span>
+              </div>
+            </header>
+            {material.isPending ? (
+              <Skeleton className="h-64" />
+            ) : material.data ? (
+              <>
+                {userId && (
+                  <LegalCoursePractice
+                    key={`${userId}:${material.data.slug}`}
+                    courseId={course.id}
+                    userId={userId}
+                    material={material.data}
+                  />
+                )}
+                <div className="flex flex-wrap gap-3 rounded-xl border bg-card p-4">
+                  <Button variant="outline" onClick={() => setTab("learn")}>
+                    Revisar os artigos →
+                  </Button>
+                  <Link
+                    to="/dashboard/library/$slug"
+                    params={{ slug: course.material_slug }}
+                    className="inline-flex min-h-10 items-center rounded-lg border px-4 text-sm font-medium hover:bg-muted"
+                  >
+                    Consultar o material completo
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <p role="alert" className="rounded-xl border p-4 text-sm">
+                Não foi possível carregar a revisão.{" "}
+                <button onClick={() => void material.refetch()} className="underline">
+                  Tentar novamente
+                </button>
+              </p>
+            )}
+          </section>
         ) : (
           <div className={fm.focus ? "block" : "grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]"}>
             {!fm.focus && (
