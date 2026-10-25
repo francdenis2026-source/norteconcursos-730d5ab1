@@ -393,6 +393,11 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const isAdmin = user?.role === "admin";
   const brandPath = location.pathname.replace(/\/+$/, "") || "/";
+  const isStudyReading = !isAdmin && (
+    location.pathname.startsWith("/dashboard/library/") ||
+    location.pathname.startsWith("/dashboard/legal-course/") ||
+    location.pathname.startsWith("/dashboard/trilhas")
+  );
   const brandBg = isAdmin || brandPath === "/dashboard/enem" || brandPath.startsWith("/dashboard/enem/")
     ? undefined
     : BRAND_BG_ROUTES[brandPath] ?? "blue";
@@ -609,14 +614,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <button
             type="button"
             className="app-sidebar__search"
-            onClick={() => setPaletteOpen(true)}
-            aria-label="Buscar área da plataforma"
+            onClick={() => (isStudyReading ? fullscreen.enter() : setPaletteOpen(true))}
+            aria-label={isStudyReading ? "Iniciar estudo cronometrado" : "Buscar área da plataforma"}
           >
-            <Search />
+            {isStudyReading ? <Timer /> : <Search />}
             {!compactSidebar && (
               <>
-                <span>Buscar área</span>
-                <span className="kbd">Ctrl K</span>
+                <span>{isStudyReading ? "Estudo cronometrado" : "Buscar área"}</span>
+                {!isStudyReading && <span className="kbd">Ctrl K</span>}
               </>
             )}
           </button>
