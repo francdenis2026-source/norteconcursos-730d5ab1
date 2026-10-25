@@ -2407,11 +2407,6 @@ function TrainerSetup({
                     setters.setContest(collection === "enem" ? "ENEM" : "all");
                   }}
                 >
-                  <span
-                    className="trainer-collection__art"
-                    aria-hidden="true"
-                    data-art={collection}
-                  />
                   {collection === "enem" ? (
                     <GraduationCap aria-hidden="true" />
                   ) : (
