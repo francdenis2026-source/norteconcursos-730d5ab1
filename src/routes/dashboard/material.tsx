@@ -263,12 +263,26 @@ function MaterialHub() {
         description="Estude por legislação, disciplina ou formato."
       >
         <div className="page-hero__stats max-w-xl">
-          <HeroStat icon={Scale} label="Materiais de leis" value={isPending ? "—" : lawTotal} />
-          <HeroStat
-            icon={BookOpen}
-            label="Disciplinas com conteúdo"
-            value={isPending ? "—" : subjectTotal}
-          />
+          <Link
+            to="/dashboard/material"
+            hash="hub-laws"
+            className="hero-stat transition hover:border-emerald-400/60 hover:bg-emerald-950/20"
+            aria-label="Abrir materiais de leis"
+          >
+            <span><Scale />Materiais de leis</span>
+            <strong className="tabular">{isPending ? "—" : lawTotal}</strong>
+            <small>Textos oficiais, súmulas e explicações</small>
+          </Link>
+          <Link
+            to="/dashboard/material"
+            hash="hub-subjects"
+            className="hero-stat transition hover:border-violet-400/60 hover:bg-violet-950/20"
+            aria-label="Abrir disciplinas com conteúdo"
+          >
+            <span><BookOpen />Disciplinas com conteúdo</span>
+            <strong className="tabular">{isPending ? "—" : subjectTotal}</strong>
+            <small>Roteiros, prática e revisão por tema</small>
+          </Link>
         </div>
       </PageHero>
 
