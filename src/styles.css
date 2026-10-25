@@ -6,6 +6,7 @@
 @import "./styles/theme-switch.css";
 @import "./styles/question-palette.css";
 @import "./styles/mobile-navigation-glass.css";
+@import "./styles/portuguese-reading.css";
 
 /* The navigation search opens/closes in the current frame, including its backdrop. */
 [data-dialog-motion="instant"] {

@@ -1,3 +1,4 @@
+import { PortugueseStudyReading } from "@/components/library/PortugueseStudyReading";
 import { MaterialStudyTabs } from "@/components/library/MaterialStudyTabs";
 import { MaterialPractice } from "@/components/library/MaterialPractice";
 import { materialPracticeSearch, materialTopic } from "@/lib/materialPractice";
@@ -254,8 +255,12 @@ function MaterialPage() {
               </Link>
             )}
 
-            <div className="surface-card library-body">
-              {materialLawSlug(material) || material.legal_review ? (
+            <div
+              className={`surface-card library-body ${material.discipline === "Língua Portuguesa" ? "library-body--portuguese" : ""}`}
+            >
+              {material.discipline === "Língua Portuguesa" ? (
+                <PortugueseStudyReading source={material.body_md} />
+              ) : materialLawSlug(material) || material.legal_review ? (
                 <LegalStudyReading source={material.body_md} markdown />
               ) : (
                 <Markdown source={material.body_md} />
@@ -296,6 +301,7 @@ function MaterialPage() {
             <WorkedExamples
               key={`${user?.id}:${material.slug}`}
               slug={material.slug}
+              languageStudy={material.discipline === "Língua Portuguesa"}
               enabled={signedIn}
             />
 
@@ -331,22 +337,22 @@ function MaterialPage() {
             {(() => {
               const flashcards = material.flashcards ?? [];
               return flashcards.length > 0 ? (
-              <details className="rounded-xl border p-3">
-                <summary className="cursor-pointer font-semibold">
-                  Flashcards de revisão ({flashcards.length})
-                </summary>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Revise os conceitos essenciais ou salve os cartões no seu baralho.
-                  As questões ficam somente na atividade acima, sem repetição.
-                </p>
-                <StudyPractice
-                  flashcards={flashcards}
-                  quiz={[]}
-                  slug={material.slug}
-                  subject={material.discipline}
-                  topic={material.topic_label ?? material.title}
-                />
-              </details>
+                <details className="rounded-xl border p-3">
+                  <summary className="cursor-pointer font-semibold">
+                    Flashcards de revisão ({flashcards.length})
+                  </summary>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Revise os conceitos essenciais ou salve os cartões no seu baralho. As questões
+                    ficam somente na atividade acima, sem repetição.
+                  </p>
+                  <StudyPractice
+                    flashcards={flashcards}
+                    quiz={[]}
+                    slug={material.slug}
+                    subject={material.discipline}
+                    topic={material.topic_label ?? material.title}
+                  />
+                </details>
               ) : null;
             })()}
           </>
