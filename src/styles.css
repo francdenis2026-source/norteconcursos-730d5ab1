@@ -14441,3 +14441,11 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .performance-page .performance-charts [data-slot="card-content"] { height: 220px; }
 @media (max-width: 1100px) { .app-shell[data-area="student"] .performance-page .performance-charts { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .app-shell[data-area="student"] .performance-page .performance-charts { grid-template-columns: 1fr; } }
+
+/* Study-plan diagnosis: turn setup, metrics and schedule into one compact cockpit. */
+.app-shell[data-area="student"] .study-plan-page { max-width: 1280px; margin-inline: auto; gap: 14px; }
+.app-shell[data-area="student"] .study-plan-page > .page-hero { min-height: 0; padding: 20px 24px; border-radius: 18px; }
+.app-shell[data-area="student"] .study-plan-page > .page-hero h1 { font-size: clamp(24px,3vw,38px); letter-spacing: -.04em; }
+.app-shell[data-area="student"] .study-plan-page > [data-slot="card"] { border-radius: 15px; box-shadow: 0 10px 28px rgb(0 0 0 / .1); }
+.app-shell[data-area="student"] .study-plan-page > [data-slot="card"] > [data-slot="card-header"] { padding: 16px 20px 10px; }
+.app-shell[data-area="student"] .study-plan-page > [data-slot="card"] > [data-slot="card-content"] { padding: 12px 20px 18px; }
