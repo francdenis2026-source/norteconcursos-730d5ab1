@@ -3,7 +3,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import { MOBILE_APP_QUERY } from "@/lib/appScroll";
 
 /** Native fullscreen where allowed; the same workspace layout works without it. */
-export function useWorkspaceFullscreen() {
+export function useWorkspaceFullscreen(observerOnly = false) {
   const [active, setActive] = useState(false);
   const activeRef = useRef(false);
   const native = useRef(false);
@@ -34,6 +34,7 @@ export function useWorkspaceFullscreen() {
     delete document.documentElement.dataset["workspaceFocusTransition"];
   }, []);
   const enter = useCallback(() => {
+    if (observerOnly) { document.dispatchEvent(new Event("norte:workspace-enter")); return; }
     if (activeRef.current) return;
     returnFocus.current =
       document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -64,8 +65,9 @@ export function useWorkspaceFullscreen() {
           pending.current = false;
         });
     }
-  }, [beginTransition]);
+  }, [beginTransition, observerOnly]);
   const exit = useCallback(() => {
+    if (observerOnly) { document.dispatchEvent(new Event("norte:workspace-exit")); return; }
     if (!activeRef.current) return;
     scroll.current = document.getElementById("dashboard-content")?.scrollTop ?? 0;
     beginTransition();
@@ -75,8 +77,9 @@ export function useWorkspaceFullscreen() {
       native.current = false;
       void document.exitFullscreen().catch(() => {});
     }
-  }, [beginTransition]);
+  }, [beginTransition, observerOnly]);
   useLayoutEffect(() => {
+    if (observerOnly) return;
     if (active) {
       document.documentElement.dataset["workspaceFocus"] = "true";
       if (scroll.current !== null)
@@ -103,8 +106,16 @@ export function useWorkspaceFullscreen() {
         target?.focus({ preventScroll: true });
       }
     }
-  }, [active]);
+    document.dispatchEvent(new CustomEvent("norte:workspace-state", { detail: active }));
+  }, [active, observerOnly]);
   useEffect(() => {
+    if (observerOnly) {
+      const sync = () => setActive(document.documentElement.dataset["workspaceFocus"] === "true");
+      sync(); document.addEventListener("norte:workspace-state", sync);
+      return () => document.removeEventListener("norte:workspace-state", sync);
+    }
+    document.addEventListener("norte:workspace-enter", enter);
+    document.addEventListener("norte:workspace-exit", exit);
     mounted.current = true;
     const change = () => {
       if (document.fullscreenElement === document.documentElement && pending.current)
@@ -143,6 +154,8 @@ export function useWorkspaceFullscreen() {
     document.addEventListener("fullscreenchange", change);
     window.addEventListener("keydown", key, true);
     return () => {
+      document.removeEventListener("norte:workspace-enter", enter);
+      document.removeEventListener("norte:workspace-exit", exit);
       mounted.current = false;
       activeRef.current = false;
       delete document.documentElement.dataset["workspaceFocus"];
@@ -154,6 +167,6 @@ export function useWorkspaceFullscreen() {
       if (native.current && document.fullscreenElement === document.documentElement)
         void document.exitFullscreen().catch(() => {});
     };
-  }, [enter, exit, endTransition]);
+  }, [enter, exit, endTransition, observerOnly]);
   return { active, enter, exit };
 }

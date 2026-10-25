@@ -43,3 +43,12 @@
  .focus-session-context { padding: 22px 18px; }
 }
 .app-shell[data-area="student"] .app-content .focus-session-clock.focus-session-clock--break [role="tab"][aria-selected="true"] { background: #80d4b5; color: #15382c; }
+.app-shell.navigation-v2[data-focus-mode="true"] .study-tools-page .focus-session-card {
+  min-height: min(580px,calc(100dvh - 120px)); background: var(--card); border-color: color-mix(in srgb,var(--brass) 35%,var(--border)); box-shadow: 0 18px 50px -30px rgb(0 0 0 / 35%);
+}
+.focus-session-kicker, .focus-history-row span, .focus-history-meta time,
+.focus-progress__label, .focus-progress__meta { color: var(--muted-foreground); }
+.focus-progress__label strong { color: var(--foreground); }
+.focus-history-row { background: var(--background); }
+.focus-session-clock > .relative svg circle:first-child { stroke: color-mix(in srgb,var(--foreground) 14%,var(--card)); }
+.app-shell :is(.focus-session-kicker,.focus-history-row span,.focus-history-meta time,.focus-progress__label,.focus-progress__meta) { color: var(--muted-foreground); }
