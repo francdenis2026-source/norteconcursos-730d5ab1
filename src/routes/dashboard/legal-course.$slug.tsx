@@ -220,7 +220,7 @@ function LegalCoursePage() {
     );
   return (
     <LegalRefProvider value={{ slug: course.slug, index: refIndex }}>
-      <div className={`space-y-5 pb-8 ${fm.containerClass}`}>
+      <div className={`legal-course-page space-y-5 pb-8 ${fm.containerClass}`}>
         {fm.bar({
           kicker: course.title,
           title: selected?.label ?? "Escolha um artigo",
