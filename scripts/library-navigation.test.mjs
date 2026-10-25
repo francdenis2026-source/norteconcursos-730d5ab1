@@ -1,3 +1,5 @@
+import { TRACKS } from '../src/data/tracks/index.ts';
+import { tracksOf } from '../src/lib/disciplineHub.ts';
 import * as sharedSubjects from "../src/lib/subjects.ts";
 import * as sharedTaxonomy from "../src/lib/filterTaxonomy.ts";
 import test from 'node:test';
@@ -323,6 +325,7 @@ function renderGlobalLibrary(filters={}) {
   react:{...React,useState:initial=>{const pair=React.useState(initial);const name=['query','area','discipline','contest','topic','law'][stateCall++];return name&&filters[name]!==undefined?[filters[name],pair[1]]:pair;}},
   '@tanstack/react-router':router,'@/lib/filterTaxonomy':sharedTaxonomy,'@/lib/librarySearch':courseSearchLibrary,'@/lib/librarySearchScope':searchScope,'@/lib/contentSearch':fakeSearch,
   '@/lib/legalLibrary':laws,'@/lib/libraryOrganization':organization,'@/lib/legalChronology':chronology,
+  '@/data/tracks':{TRACKS},'@/lib/disciplineHub':{tracksOf},
   '@/hooks/useDashboard':{useAuthStatus:()=>({user:{id:'test'},isLoading:false})},'@/lib/studyMaterials':{useStudyMaterialList:()=>({data:fixture,isPending:false,isError:false}),useLibrarySearchContent:()=>({data:[],isPending:false,isError:false}),readSlugs:()=>[]},
   '@/components/library/LegalPathCatalog':catalog,'@/components/library/ContentSearchResults':results,'@/components/library/LibrarySearchMatch':match,
   '@/components/library/LibraryNavigation':load('src/components/library/LibraryNavigation.tsx',{'@/lib/libraryOrganization':organization,'@/lib/filterTaxonomy':sharedTaxonomy}),
@@ -342,4 +345,10 @@ test('Library page unifies guide and article results and passes selected discipl
  assert.deepEqual(JSON.parse(JSON.stringify(hed.calls[0])),['hediondos']);
  assert.ok(hed.html.includes('/dashboard/legal-course/hediondos'));assert.ok(!hed.html.includes('/dashboard/legal-course/codigo-penal'));
  const general=renderGlobalLibrary({area:'general'});assert.equal(general.calls[0].length,0);assert.ok(!general.html.includes('Resultados nos artigos'));
+});
+
+test('Selected discipline exposes its existing study itinerary without creating another curriculum',()=>{
+ const {html}=renderGlobalLibrary({discipline:'Direito Administrativo'});
+ assert.ok(html.includes('/dashboard/trilhas?t=administrativo'));
+ assert.ok(!html.includes('/dashboard/trilhas?t=contabilidade'));
 });

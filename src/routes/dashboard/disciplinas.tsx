@@ -250,7 +250,7 @@ function DisciplineDetail({
         kicker="Disciplina"
         icon={Icon}
         title={<>{card.name}</>}
-        description="Materiais de estudo, trilha de aulas, videoaulas e prática desta disciplina."
+        description="Materiais, roteiro de estudo, vídeos e questões reunidos nesta disciplina."
         actions={
           <Link
             to="/dashboard/question-trainer"
@@ -269,6 +269,9 @@ function DisciplineDetail({
 
       <MaterialStudyTabs
         key={card.name}
+        textLabel="Materiais"
+        explanationLabel="Roteiro e vídeos"
+        practiceLabel="Praticar"
         text={
           <>
             {" "}
@@ -323,10 +326,10 @@ function DisciplineDetail({
             {" "}
             <section aria-labelledby="d-track" className="space-y-3">
               <h2 id="d-track" className="discipline-h">
-                <GraduationCap aria-hidden="true" size={20} /> Trilha de aulas
+                <GraduationCap aria-hidden="true" size={20} /> Roteiro de estudo
               </h2>
               {tracks.length === 0 ? (
-                <p className="discipline-none">A trilha desta disciplina está em preparação.</p>
+                <p className="discipline-none">O roteiro desta disciplina está em preparação.</p>
               ) : (
                 <ul className="grid gap-3 sm:grid-cols-2">
                   {tracks.map((track) => {

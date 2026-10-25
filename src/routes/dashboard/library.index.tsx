@@ -1,3 +1,5 @@
+import { TRACKS } from "@/data/tracks";
+import { tracksOf } from "@/lib/disciplineHub";
 import { acreDate } from "@/lib/acreTime";
 import { matchesTopicFilter, scopedTopic, topicLabels } from "@/lib/filterTaxonomy";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -293,6 +295,21 @@ function LibraryIndex() {
           <HeroStat icon={Check} label="Já lidos" value={isPending ? "—" : readCount} />
         </div>
       </PageHero>
+      {discipline !== "all" &&
+        tracksOf(discipline, TRACKS).map((track) => (
+          <Link
+            key={track.slug}
+            to="/dashboard/trilhas"
+            search={{ t: track.slug }}
+            className="flex min-h-12 flex-wrap items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-sm"
+          >
+            <span>
+              <strong>Roteiro de {track.title}</strong>
+              <span className="ml-2 text-muted-foreground">Materiais na sequência de estudo</span>
+            </span>
+            <span className="font-semibold text-primary">Abrir roteiro →</span>
+          </Link>
+        ))}
 
       <nav aria-label="Coleções de estudo" className="grid gap-3 sm:grid-cols-3">
         <Link
