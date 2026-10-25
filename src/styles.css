@@ -15019,3 +15019,14 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   .mobile-homepage__footer > strong { color:#fff; font-size:17px; letter-spacing:.06em; }.mobile-homepage__footer > strong span { color:#dfb45b; font-size:10px; letter-spacing:.14em; }
   .mobile-homepage__footer div { display:flex; flex-wrap:wrap; gap:14px; }.mobile-homepage__footer a { color:#cbd5df; font-size:12px; }.mobile-homepage__footer small { color:#718092; font-size:10px; }
 }
+
+@media (max-width: 767px) {
+  .mobile-homepage__hero .tactical-clock-backdrop { position:absolute; inset:0; z-index:-3; width:100%; height:100%; opacity:.34; pointer-events:none; }
+  .mobile-homepage__hero .hero-badge { position:absolute; z-index:3; top:76px; right:16px; --badge-w:74px; }
+  .mobile-homepage__contests { padding:28px 18px; background:#101e2b; color:#f4f7fa; overflow:hidden; }
+  .mobile-homepage__contests .mobile-homepage__section-head > span { color:#e0b65d; }
+  .mobile-homepage__contests .mobile-homepage__section-head h2 { color:#fff; }
+  .mobile-homepage__contests .contest-showcase { margin-top:16px; }
+  .mobile-homepage__contests .contest-rail { overflow-x:auto; scroll-snap-type:x mandatory; }
+  .mobile-homepage__contests .contest-card { min-width:86vw; scroll-snap-align:start; }
+}
