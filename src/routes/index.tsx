@@ -471,6 +471,15 @@ function Index() {
           </div>
         </section>
 
+        <section className="home-daily-feature home-container" aria-labelledby="daily-feature-title">
+          <div className="home-daily-feature__copy">
+            <span className="home-signal"><span /> RITMO DIÁRIO</span>
+            <h2 id="daily-feature-title">Um desafio por dia. Um passo mais perto da aprovação.</h2>
+            <p>Resolva a questão do dia, acompanhe sua sequência e transforme constância em confiança para a prova.</p>
+          </div>
+          <div className="home-daily-feature__card"><DailyChallengeBadge /></div>
+        </section>
+
         <section id="plataforma" className="home-section home-preparation" aria-labelledby="preparation-title">
           <div className="home-preparation__fullwidth">
             <div className="home-preparation__band">
