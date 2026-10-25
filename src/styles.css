@@ -13764,7 +13764,7 @@ button.student-home__metric { position: relative; padding-right: 28px; }
 @media(max-width:480px) { .study-period-controls__options button { padding-inline: 8px; font-size: 12px; white-space: nowrap; } }
 
 /* Keep the selected discipline and the current question's topic in the study viewport. */
-.trainer-context { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px 24px; padding: 20px; margin-bottom: 20px; border: 1px solid var(--border); border-left: 2px solid var(--brass); border-radius: 14px; background: var(--muted); color: var(--foreground); }
+.trainer-context { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px 24px; padding: 20px; margin-bottom: 20px; border: 1px solid var(--border); border-radius: 14px; background: var(--muted); color: var(--foreground); }
 .trainer-context > div { min-width: 0; }
 .trainer-context > div > span { display: block; color: var(--muted-foreground); font-size: 11px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
 .trainer-context strong { display: block; overflow-wrap: anywhere; font-size: clamp(17px,2vw,23px); line-height: 1.35; font-weight: 750; }
@@ -14583,7 +14583,7 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 /* Materials: a readable subject workspace, with the catalogue kept outside focused study. */
 .material-library { width: 100%; min-width: 0; }
 .material-library :is(h1,h2,h3,.library-material-row strong) { font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif); text-transform: none; letter-spacing: -.02em; }
-.library-focus { padding: 20px 24px; border: 1px solid var(--library-line); border-left: 2px solid var(--library-accent); border-radius: 18px; background: var(--card); }
+.library-focus { padding: 20px 24px; border: 1px solid var(--library-line); border-radius: 18px; background: var(--card); }
 .library-focus__back { display: inline-flex; align-items: center; min-height: 36px; color: var(--muted-foreground); font-size: .875rem; font-weight: 600; }
 .library-focus__back:hover { color: var(--foreground); }
 .library-focus__identity { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 6px; }
@@ -15417,6 +15417,12 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   background:color-mix(in srgb, var(--home-surface) 62%, transparent);
   -webkit-backdrop-filter:blur(8px) saturate(120%);
   backdrop-filter:blur(8px) saturate(120%);
+}
+
+/* Impeccable: keep internal heroes structured without decorative side stripes. */
+:root:not(.dark) .student-hub__masthead::before,
+:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::before {
+  display: none;
 }
 @media (max-width: 767px) {
   .mobile-homepage :is(.mobile-homepage__eyebrow,.mobile-homepage__section-head > span) { display:inline-flex; align-items:center; gap:7px; width:max-content; max-width:100%; padding:6px 9px; border:1px solid rgb(223 180 91 / .3); border-radius:8px; background:rgb(255 255 255 / .08); -webkit-backdrop-filter:blur(7px); backdrop-filter:blur(7px); }
