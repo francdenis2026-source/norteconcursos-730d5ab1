@@ -1,5 +1,6 @@
 import { STUDENT_GROUP_TONES as GROUP_HUE } from "@/lib/studentPalette";
 import "@/styles/student-control-colors.css";
+import "@/styles/study-experience.css";
 import { TacticalClockBackdrop } from "@/components/brand/TacticalClockBackdrop";
 import { studentGroupLabel } from "@/lib/studentNavigation";
 import { StudentSectionNavigation } from "./StudentSectionNavigation";

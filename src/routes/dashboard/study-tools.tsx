@@ -1,3 +1,4 @@
+import { plannedPractice } from "@/lib/plannedStudy";
 import { StudyPlanningNav } from "@/components/dashboard/StudyPlanningNav";
 import { ENEM_AREAS } from "@/data/enem";
 import { platformDate } from "@/lib/platformClock";
@@ -453,12 +454,12 @@ function FocusCard({
   const mm = String(Math.floor(pomo.left / 60)).padStart(2, "0");
   const ss = String(pomo.left % 60).padStart(2, "0");
   const isBreak = pomo.mode === 5;
-  const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}), ...(enem ? { contest: "ENEM" } : {}) };
+  const trainer = { ...plannedPractice(subject, topic), ...(enem ? { contest: "ENEM" } : {}) };
 
   return (
     <Card className="focus-session-card overflow-hidden">
-      <div className="grid gap-0 lg:grid-cols-[1.05fr_1fr]">
-        <div className="space-y-5 p-6">
+      <div className="focus-session-layout">
+        <div className="focus-session-context">
           <div>
             <CardTitle className="flex items-center gap-2 text-lg">
               <Target className="h-5 w-5" /> Sessão de foco
@@ -498,7 +499,7 @@ function FocusCard({
             <span className="font-semibold">{subject}</span>
             <span className="text-muted-foreground">· {topic}</span>
           </div>
-          <div className="grid gap-2 sm:grid-cols-3">
+          <div className="focus-session-links">
             <Button asChild variant="outline" className="justify-start gap-2">
               {enem ? <Link to="/dashboard/enem" search={{ tab: "materiais" }}><BookOpenCheck className="h-4 w-4" /> Materiais ENEM</Link> : <Link to="/dashboard/study-room" search={{ subject, topic }}><BookOpenCheck className="h-4 w-4" /> Sala de estudo</Link>}
             </Button>
@@ -517,8 +518,8 @@ function FocusCard({
 
         <div
           className={cn(
-            "flex flex-col items-center justify-center gap-4 border-t bg-gradient-to-b p-6 lg:border-l lg:border-t-0",
-            isBreak ? "from-emerald-500/10 to-transparent" : "from-amber-400/10 to-transparent",
+            "focus-session-clock",
+            isBreak ? "focus-session-clock--break" : "",
           )}
         >
           <div className="flex gap-2" role="tablist" aria-label="Tipo de bloco">
