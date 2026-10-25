@@ -15351,6 +15351,22 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
   border-radius: 16px;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / .08), 0 20px 48px -36px rgb(0 0 0 / .48);
 }
+
+/* Light mobile contrast pass: dark artwork stays dark, while informational cards become paper surfaces. */
+@media (max-width: 767px) {
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-home__card,.student-home__metrics,.performance-metric-card,.performance-page .performance-charts > [data-slot="card"],.library-focus,.material-library .library-navigator,.law-finder__panel,.law-finder__themes-panel) {
+    background: #ffffff;
+    color: #17283a;
+    border-color: #d5dfe8;
+  }
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-home__card p,.student-home__card small,.performance-metric-card p,.performance-page .performance-charts > [data-slot="card"] p,.library-focus p,.material-library .library-navigator p) {
+    color: #526176;
+  }
+  html:not(.dark) .app-shell[data-area="student"] :is(.student-hub__masthead,.trainer-workbench-hero,.study-assistant-hero,.exam-simulator-hero,.pcpr-spot--illustrated,.pcpr-spot--cover) :is(h1,h2,h3,p,.student-hub__date,.trainer-panel-kicker) {
+    color: #f7fafc;
+    text-shadow: 0 1px 12px rgb(0 0 0 / .42);
+  }
+}
 .app-shell.navigation-v2 :is(h1,h2,h3,h4) { color:var(--taste-app-text); letter-spacing:-.025em; }
 .app-shell.navigation-v2 :is(p,small,.text-muted-foreground) { color:var(--taste-app-muted); }
 .app-shell.navigation-v2 :is(.btn-primary,.home-button--primary) { box-shadow:none; }
