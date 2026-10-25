@@ -13282,10 +13282,6 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   background: linear-gradient(115deg, oklch(0.97 0.025 262) 0%, #fff 48%);
   box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
 }
-:root:not(.dark) .student-hub__masthead::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; z-index: 1;
-  background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
-}
 :root:not(.dark) .student-hub__masthead .student-hub__welcome {
   display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px;
   background: var(--c-blue-soft); color: var(--c-blue); font-size: 12px; font-weight: 700; letter-spacing: .02em;
@@ -13317,10 +13313,6 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
     linear-gradient(90deg, oklch(0.97 0.025 262) 0%, oklch(0.97 0.025 262 / .96) 38%, oklch(0.97 0.025 262 / .55) 58%, transparent 80%),
     url('/media/hero/trainer-study.webp') center / cover;
   box-shadow: 0 1px 2px oklch(0.3 0.08 262 / .05), 0 18px 40px -26px oklch(0.4 0.14 262 / .35);
-}
-:root:not(.dark) .trainer-workbench-heading.trainer-workbench-hero::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 3px;
-  background: linear-gradient(180deg, var(--c-blue), var(--c-teal));
 }
 :root:not(.dark) .trainer-workbench-hero .trainer-panel-kicker {
   display: inline-block; width: fit-content; padding: 4px 12px; border-radius: 999px;
