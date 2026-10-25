@@ -84,7 +84,7 @@
     box-shadow: 0 24px 64px -20px rgb(0 0 0 / 45%);
   }
   .home-menu nav a { min-height: 48px; }
-  .home-menu__access { gap: 10px; }
+  .home-menu__access { gap: 10px; padding-top: 8px; }
 }
 @media (min-width: 761px) and (max-width: 1100px) {
   .home.home .home-intro {
