@@ -14458,3 +14458,18 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-header"] { padding: 16px 20px 10px; }
 .app-shell[data-area="student"] .simulator-workspace .command-panel [data-slot="card-content"] { padding: 12px 20px 18px; }
 .app-shell[data-area="student"] .simulator-workspace .simulator-exam-grid { gap: 12px; }
+
+/* Performance: distinct analytics cockpit, with evidence before narrative. */
+.app-shell[data-area="student"] .performance-page { max-width: 1340px; margin-inline: auto; }
+.app-shell[data-area="student"] .performance-page > .page-hero { display: none; }
+.app-shell[data-area="student"] .performance-page::before { content:"Seu desempenho"; display:block; padding:18px 22px; border:1px solid rgb(80 210 182 / 28%); border-radius:16px; background:linear-gradient(110deg,#10242b,#121b22 58%,#1c211b); color:#f5faf8; font-size:clamp(24px,3vw,38px); font-weight:850; letter-spacing:-.045em; box-shadow:0 16px 34px rgb(0 0 0 / .2); }
+.app-shell[data-area="student"] .performance-page .performance-overview { gap:12px; }
+.app-shell[data-area="student"] .performance-page .performance-overview__heading { display:flex; align-items:center; justify-content:space-between; margin:0; padding:0 2px; font-size:18px; }
+.app-shell[data-area="student"] .performance-page .performance-metric-card { min-height:100px; border-radius:14px; border-color:rgb(255 255 255 / 10%); background:linear-gradient(145deg,color-mix(in oklab,var(--card) 92%,transparent),color-mix(in oklab,var(--primary) 5%,var(--card))); }
+.app-shell[data-area="student"] .performance-page .performance-charts { margin-top:2px; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"] { border-radius:14px; border-color:rgb(255 255 255 / 10%); background:#111a21; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(1) { border-top:3px solid #28c6a3; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(2) { border-top:3px solid #d7a74b; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(3) { border-top:3px solid #6ea8ff; }
+.app-shell[data-area="student"] .performance-page .performance-charts > [data-slot="card"]:nth-child(4) { border-top:3px solid #d681b8; }
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs [role="tablist"] { border-radius:12px; padding:4px; background:#111a21; }
