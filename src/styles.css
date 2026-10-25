@@ -14497,3 +14497,10 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .performance-page { font-family: var(--font-sans); }
 .app-shell[data-area="student"] .performance-page :is(h1,h2,h3,h4) { letter-spacing:-.02em; line-height:1.2; }
 .app-shell[data-area="student"] .performance-page .performance-charts { margin-top:0; }
+
+/* Performance strengths panel: distinct signal cards instead of loose tag rows. */
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs .badge { min-height: 30px; padding-inline: 10px; border-radius: 999px; font-size: 12px; font-weight: 750; }
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs .text-emerald-700 { color: #57d6b5; }
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs .text-rose-700 { color: #ff98a7; }
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs .border-emerald-300 { border-color: rgb(64 205 169 / 45%); background: rgb(39 164 130 / 12%); }
+.app-shell[data-area="student"] .performance-page .performance-detail-tabs .border-rose-300 { border-color: rgb(238 112 131 / 45%); background: rgb(196 70 92 / 12%); }
