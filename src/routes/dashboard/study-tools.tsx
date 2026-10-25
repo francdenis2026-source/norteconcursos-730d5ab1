@@ -456,7 +456,7 @@ function FocusCard({
   const trainer = { area: subject, go: "1", ...(topic ? { topic } : {}), ...(enem ? { contest: "ENEM" } : {}) };
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="focus-session-card overflow-hidden">
       <div className="grid gap-0 lg:grid-cols-[1.05fr_1fr]">
         <div className="space-y-5 p-6">
           <div>

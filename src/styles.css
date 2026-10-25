@@ -14504,3 +14504,10 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell[data-area="student"] .performance-page .performance-detail-tabs .text-rose-700 { color: #ff98a7; }
 .app-shell[data-area="student"] .performance-page .performance-detail-tabs .border-emerald-300 { border-color: rgb(64 205 169 / 45%); background: rgb(39 164 130 / 12%); }
 .app-shell[data-area="student"] .performance-page .performance-detail-tabs .border-rose-300 { border-color: rgb(238 112 131 / 45%); background: rgb(196 70 92 / 12%); }
+
+/* Focus mode: visually distinct entry point and a clear timed-study surface. */
+.app-shell[data-area="student"] .app-nav__link[href="/dashboard/study-tools"] { border-color: rgb(244 183 76 / 28%); }
+.app-shell[data-area="student"] .app-nav__link[href="/dashboard/study-tools"] .app-ico { color: #f4b74c; background: rgb(244 183 76 / 14%); }
+.app-shell[data-area="student"] .study-tools-page .focus-session-card { border: 1px solid rgb(244 183 76 / 35%); box-shadow: 0 18px 42px rgb(0 0 0 / .22); }
+.app-shell[data-area="student"] .study-tools-page .focus-session-card .focus-timer { color: #ffd17b; font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+html[data-reading-focus="true"] .focus-study-bar { min-height: 42px; box-shadow: 0 8px 28px rgb(0 0 0 / .3); }
