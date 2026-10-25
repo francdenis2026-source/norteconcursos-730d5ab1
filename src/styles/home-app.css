@@ -152,7 +152,7 @@
   .home.home .home-hero .home-actions { margin-top: 16px; gap: 8px; }
   .home.home .home-hero .home-actions > :is(a, button) { padding-inline: 12px; font-size: 11px; }
   .home.home .home-trust { flex-wrap: nowrap; gap: 8px; width: 100%; overflow-x: auto; margin-top: 12px !important; padding: 4px 0 !important; scrollbar-width: thin; }
-  .home.home .home-trust li { flex: none; min-height: 30px; padding: 5px 8px; border: 1px solid var(--home-line); border-radius: 6px; background: var(--home-glass-fill); font-size: 10px; }
+  .home.home .home-trust li { flex: none; min-height: 36px; padding: 7px 9px; border: 1px solid var(--home-line); border-radius: 6px; background: var(--home-glass-fill); font-size: 12px; }
   .home.home .home-preparation__band { padding-block: 16px; }
   .home.home .home-plans--insignia .home-plans__intro { gap: 12px; }
   :root:is(.dark, :not(.dark)) .home.home .home-plans--insignia .home-faq { padding: 16px; }

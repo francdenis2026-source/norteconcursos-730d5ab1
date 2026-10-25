@@ -131,7 +131,7 @@
     width: calc(100% - 32px);
   }
   .home.home .home-header__inner { min-height: 68px; gap: 8px; }
-  .home.home .home-header__register { min-height: 42px; padding-inline: 12px; font-size: 11px; }
+  .home.home .home-header__register { min-height: 44px; padding-inline: 12px; font-size: 12px; }
   .home.home .home-header__register svg { width: 14px; }
   .home.home .home-header__actions { gap: 2px; }
   .home.home .home-brand-lockup { flex-shrink: 0; }
