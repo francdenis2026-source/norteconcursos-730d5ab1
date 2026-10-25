@@ -2379,7 +2379,7 @@
 .home-career {
   padding: 16px 14px;
   border: 1px solid var(--home-line);
-  border-left: 2px solid var(--home-accent);
+  border-left: 1px solid var(--home-line);
   border-radius: 10px;
   background: var(--home-surface);
   transition: transform .2s var(--ease-out), border-color .2s ease, box-shadow .2s ease;
@@ -3471,7 +3471,7 @@
 .home-steps > li { padding: 20px; border: 1px solid var(--home-line); border-radius: 14px; background: var(--home-surface); box-shadow: var(--shadow-card); }
 #concursos { background: var(--home-surface); border-block: 1px solid var(--home-line); }
 .home-careers { background: var(--home-bg); }
-.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 2px solid var(--home-accent); border-radius: 10px; background: var(--home-surface); }
+.home-career { padding: 16px 14px; border: 1px solid var(--home-line); border-left: 1px solid var(--home-line); border-radius: 10px; background: var(--home-surface); }
 .home-careers__grid { gap: 8px 18px; }
 .home-sources { padding-block: 48px 56px; background: var(--home-surface); }
 .home-source-details { border-color: var(--home-line); border-radius: 16px; background: var(--home-bg); }
@@ -3897,7 +3897,7 @@
 .home.home .home-section-intro {
   padding: 14px 18px;
   border: 1px solid color-mix(in srgb, var(--section-color) 24%, var(--home-line));
-  border-left: 2px solid var(--section-color);
+  border-left: 1px solid var(--home-line);
   border-radius: 0 12px 12px 0;
   color: var(--home-text);
   background: var(--card);
@@ -3924,14 +3924,14 @@
 .home.home .home-tool { border-color: color-mix(in srgb, var(--tool-c, var(--home-blue)) 28%, var(--home-line)); }
 .home.home .home-tool summary h3 { font-size: 13px; line-height: 1.4; }
 .home.home .home-tool p { font-size: 14px; line-height: 1.6; }
-.home.home .home-career { border-left: 2px solid var(--section-color); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
+.home.home .home-career { border-left: 1px solid var(--home-line); background: color-mix(in srgb, var(--section-color) 5%, var(--card)); }
 .home.home .home-career h3 { font-size: 14px; line-height: 1.4; }
 .home.home .home-career p { font-size: 12px; line-height: 1.5; margin-top: 5px; }
 .home.home .home-plans__signal { padding: 14px 16px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--home-violet) 28%, var(--home-line)); background: var(--card); }
 .home.home .home-plans__signal strong { font-size: 15px; color: var(--home-violet); }
 .home.home .home-plan { background: linear-gradient(155deg, color-mix(in srgb, var(--plan-c, var(--home-blue)) 8%, var(--card)), var(--card)); }
-.home.home .home-source-details { border-left: 2px solid var(--home-teal); }
-.home.home .home-start .daily-badge { border-left: 2px solid var(--home-teal); }
+.home.home .home-source-details { border-left: 1px solid var(--home-line); }
+.home.home .home-start .daily-badge { border-left: 1px solid var(--home-line); }
 .home.home .home-start .question-count-badge { border-left: 2px solid var(--home-blue); }
 .home.home .home-hero__copy > p { font-size: 15px; line-height: 1.7; }
 .home.home .home-hero__note { font-size: 12px; }
