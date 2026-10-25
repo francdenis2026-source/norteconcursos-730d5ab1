@@ -15114,3 +15114,18 @@ html[data-read-scale] .trainer-resolution-workspace .trainer-question-content .f
     backdrop-filter: blur(12px);
   }
 }
+
+/* Desktop homepage refinement: compact the vertical rhythm and unify the
+   command-center surfaces with restrained glassmorphism. */
+@media (min-width: 768px) {
+  .home.home { background: var(--home-bg); }
+  .home.home .home-hero { min-height: min(700px, 78svh); }
+  .home.home .home-hero__content { min-height: 0; padding-block: 92px 28px; }
+  .home.home .home-hero__copy { padding: 26px 28px; border: 1px solid rgb(255 255 255 / .14); border-radius: 22px; background: linear-gradient(145deg, rgb(12 25 38 / .72), rgb(12 25 38 / .34)); box-shadow: 0 24px 70px rgb(0 0 0 / .22), inset 0 1px 0 rgb(255 255 255 / .12); backdrop-filter: blur(14px) saturate(125%); }
+  .home.home .home-daily-feature { margin-block: 18px 28px; padding: 22px 26px; border-radius: 20px; background: color-mix(in srgb, var(--home-surface) 82%, transparent); box-shadow: 0 18px 42px -30px rgb(0 0 0 / .38), inset 0 1px 0 rgb(255 255 255 / .14); backdrop-filter: blur(16px) saturate(120%); }
+  .home.home :is(.home-preparation, .home-operations, .home-plans--insignia) { padding-block: 42px; }
+  .home.home .home-preparation__band, .home.home .home-operations__heading { border-radius: 20px; box-shadow: 0 18px 48px -34px rgb(0 0 0 / .42), inset 0 1px 0 rgb(255 255 255 / .1); backdrop-filter: blur(12px) saturate(120%); }
+  .home.home .home-operations__heading { padding: 20px 24px; margin-bottom: 18px; }
+  .home.home .home-footer--command { padding-block: 34px 18px; }
+  .home.home .home-footer--command .home-footer__grid { border-radius: 20px; box-shadow: 0 18px 42px -32px rgb(0 0 0 / .4), inset 0 1px 0 rgb(255 255 255 / .1); backdrop-filter: blur(14px) saturate(120%); }
+}
