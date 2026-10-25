@@ -9,6 +9,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { createPortal } from "react-dom";
 import { useBlocker, useRouter } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, Clock3, Maximize2, Pause, Play, Wrench, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -339,9 +340,12 @@ export function useFocusMode() {
             />
           </Suspense>
         )}
-        <div className="focus-study-footer" aria-label={`Estudo: ${p.kicker} · ${p.title}`}>
-          <span>{p.kicker}</span><strong>{p.title}</strong>
-        </div>
+        {typeof document !== "undefined" && createPortal(
+          <div className="focus-study-footer" aria-label={`Estudo: ${p.kicker} · ${p.title}`}>
+            <span>{p.kicker}</span><strong>{p.title}</strong>
+          </div>,
+          document.body,
+        )}
       </>
     );
 
