@@ -72,7 +72,10 @@ function MaterialPage() {
   const { catalog } = useMediaCatalog();
 
   useEffect(() => {
-    if (material) markSlugRead(material.slug);
+    if (material) {
+      markSlugRead(material.slug);
+      window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: material.discipline, topic: material.topic_label ?? material.title } }));
+    }
   }, [material]);
 
   const videos = useMemo(() => {

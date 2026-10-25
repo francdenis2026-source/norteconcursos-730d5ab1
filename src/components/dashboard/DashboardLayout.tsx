@@ -372,6 +372,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   React.useEffect(() => setIsDarkMode(getActiveTheme() === "dark"), []);
   const [paletteOpen, setPaletteOpen] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [studyContext, setStudyContext] = React.useState<{ discipline: string; topic: string } | null>(null);
+  React.useEffect(() => {
+    const onContext = (event: Event) => {
+      const detail = (event as CustomEvent<{ discipline?: string; topic?: string }>).detail;
+      if (detail?.discipline) setStudyContext({ discipline: detail.discipline, topic: detail.topic ?? "" });
+    };
+    window.addEventListener("norte:study-context", onContext);
+    return () => window.removeEventListener("norte:study-context", onContext);
+  }, []);
   const [streak, setStreak] = React.useState<UserStreak | null>(null);
   const [achievements, setAchievements] = React.useState<Achievement[]>([]);
   const [avatarUrl, setAvatarUrl] = React.useState<string | null>(null);
@@ -669,7 +678,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <div className="app-location" aria-label="Localização na plataforma">
               <div className="app-location__context">
                 <span className="app-location__area">{isAdmin ? "Administração" : "Área do aluno"}</span>{" "}
-                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{isAdmin ? current.group : studentGroupLabel(current.group)}</span>}
+                {current?.group && (!isAdmin || current.group !== "Administração") && <span className="app-location__group">{studyContext ? `${studyContext.discipline}${studyContext.topic ? ` · ${studyContext.topic}` : ""}` : (isAdmin ? current.group : studentGroupLabel(current.group))}</span>}
               </div>
             </div>
 

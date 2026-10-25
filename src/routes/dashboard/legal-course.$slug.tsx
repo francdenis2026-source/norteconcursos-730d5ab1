@@ -86,6 +86,9 @@ function LegalCoursePage() {
   const userId = user?.id !== "demo-user" ? user?.id : undefined;
   const courses = useLegalCourses(userId);
   const course = courses.data?.find((row) => row.slug === slug);
+  useEffect(() => {
+    if (course) window.dispatchEvent(new CustomEvent("norte:study-context", { detail: { discipline: "Direito Constitucional", topic: course.title } }));
+  }, [course]);
   const units = useLegalUnits(course?.id, userId);
   const progress = useLegalProgress(userId);
   const coverage = useLegalExplanationCoverage(userId).data?.find(
