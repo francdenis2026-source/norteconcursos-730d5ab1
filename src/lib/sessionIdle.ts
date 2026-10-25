@@ -2,8 +2,8 @@
 // Long study sessions must not be interrupted while the student is reading,
 // solving or reviewing without moving the pointer. The warning still gives a
 // clear escape hatch before the session expires.
-export const SESSION_IDLE_MS = 30 * 60_000;
-export const SESSION_WARNING_MS = 2 * 60_000;
+export const SESSION_IDLE_MS = 5 * 60_000;
+export const SESSION_WARNING_MS = 60_000;
 
 /** Stable across token refreshes, different for a new password/email login. Never stores tokens. */
 export function sessionActivityKey(session: { user: { id: string }; access_token: string } | null): string | null {
