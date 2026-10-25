@@ -426,6 +426,60 @@ html {
   }
 }
 
+/* Mobile client-area pass: shared guardrails for every dashboard route. */
+@media (max-width: 767px) {
+  .app-content__inner {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .app-content__inner :is(button, a, [role="button"], summary) {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .app-content__inner :is(input, select, textarea) {
+    min-height: 44px;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .app-content__inner :is(button, a[role="button"], [role="button"]) {
+    min-height: 44px;
+  }
+
+  .app-content__inner :is(table, pre) {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .app-content__inner :is(.grid, [class*="grid-cols-"]) {
+    min-width: 0;
+  }
+
+  .app-content__inner :is(.card, [class*="rounded"], [class*="border"]) {
+    max-width: 100%;
+  }
+
+  .app-content__inner :is(h1, h2, h3, h4) {
+    overflow-wrap: anywhere;
+  }
+
+  .app-content__inner :is(.overflow-x-auto, [data-radix-scroll-area-viewport]) {
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-content__inner *,
+  .app-bottom-nav,
+  .app-topbar {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 /* ===================================================================
    Typography helpers
    ========================================================================== */
