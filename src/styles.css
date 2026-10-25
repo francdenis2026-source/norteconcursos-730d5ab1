@@ -14347,3 +14347,14 @@ a.discipline-card:focus-visible { outline: 3px solid var(--ring, #d9a53a); outli
 .app-shell.navigation-v2[data-area="student"] .app-nav__link[aria-current="page"] { background: rgb(92 174 160 / 15%); box-shadow: inset 3px 0 #6bd1ba; }
 .app-shell.navigation-v2[data-area="student"] .app-content__inner { width: min(1280px, calc(100% - 48px)); max-width: 1280px; margin-inline: auto; padding-block: 24px 48px; }
 .app-shell.navigation-v2[data-area="student"] .app-content__inner > * { animation: none; }
+
+/* Unified internal workspaces: the same editorial rhythm across study, exams,
+   progress, essays and planning screens. */
+.app-shell.navigation-v2[data-area="student"] :is(.command-panel,.surface-card,.trainer-practice-panel,.question-workspace__help,.ranking-glass-header) {
+  border-color: rgb(255 255 255 / 10%); border-radius: 16px; box-shadow: 0 12px 32px rgb(0 0 0 / 14%); background: color-mix(in oklab, var(--card) 90%, transparent);
+}
+.app-shell.navigation-v2[data-area="student"] :is(.page-hero,.workspace-banner,.exam-simulator-hero,.trainer-workbench-hero,.tactical-feature-hero) {
+  border-radius: 18px; box-shadow: 0 16px 36px rgb(0 0 0 / 16%);
+}
+.app-shell.navigation-v2[data-area="student"] :is(h1,h2,h3) { text-wrap: balance; }
+.app-shell.navigation-v2[data-area="student"] :is(.grid,.flex) > :is(.card,.surface-card) { min-width: 0; }
