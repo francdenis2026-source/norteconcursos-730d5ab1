@@ -296,14 +296,8 @@ function StudyToolsPage() {
       {enem ? <Card><CardHeader><CardTitle>Continue sua preparação para o ENEM</CardTitle><CardDescription>Materiais, videoaulas e checklist do exame ficam na sua área ENEM.</CardDescription></CardHeader><CardContent><Button asChild variant="outline"><Link to="/dashboard/enem" search={{ tab: "materiais" }}>Abrir materiais do ENEM</Link></Button></CardContent></Card> : <>
       <PlatformMaterialCard subject={subject} topic={topic} />
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6">
         <ReviewCard due={ctx.due} subject={subject} careerId={ctx.career.id} real={ctx.real} />
-        <PlanLinkCard
-          profile={ctx.profile}
-          career={ctx.career.name}
-          real={ctx.real}
-          loading={ctx.loading}
-        />
       </div>
 
       <ChecklistCard
