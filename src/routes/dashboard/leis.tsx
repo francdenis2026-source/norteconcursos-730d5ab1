@@ -39,6 +39,7 @@ const SORTS: { id: LawSort; label: string }[] = [
   { id: "az", label: "Ordem alfabética" },
   { id: "numero", label: "Número da lei" },
   { id: "recentes", label: "Mais recentes" },
+  { id: "antigas", label: "Mais antigas" },
 ];
 
 function Highlight({ text, query }: { text: string; query: string }) {
@@ -109,7 +110,7 @@ function LawFinderPage() {
   const navigate = Route.useNavigate();
   const [query, setQuery] = React.useState(search.q ?? "");
   const [theme, setTheme] = React.useState(search.tema ?? "all");
-  const [sort, setSort] = React.useState<LawSort>("relevancia");
+  const [sort, setSort] = React.useState<LawSort>("recentes");
   const input = React.useRef<HTMLInputElement>(null);
 
   // Mantém o endereço em sincronia (compartilhável) sem recarregar a página.
@@ -146,7 +147,7 @@ function LawFinderPage() {
   );
   const rows = searching
     ? hits.map((hit) => hit.row)
-    : sortLaws(scoped, sort === "relevancia" ? "az" : sort);
+    : sortLaws(scoped, sort === "relevancia" ? "recentes" : sort);
   const sorted = searching && sort !== "relevancia" ? sortLaws(rows, sort) : rows;
   const reasonOf = (slug: string) => hits.find((hit) => hit.row.slug === slug)?.reason;
   const reset = () => {
