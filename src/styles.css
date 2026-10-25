@@ -13368,7 +13368,7 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 :root:not(.dark) .trainer-practice-mode[data-active="true"] { border-color: var(--c-blue); background: var(--c-blue-soft); }
 :root:not(.dark) .page-hero[data-hero] .page-hero__kicker,
 :root:not(.dark) .internal-hero-kicker { color: var(--c-blue); }
-:root:not(.dark) .page-hero { border-bottom: 3px solid transparent; border-image: linear-gradient(90deg, var(--c-blue), var(--c-teal), var(--c-violet)) 1; }
+:root:not(.dark) .page-hero { border-bottom: 1px solid color-mix(in oklab, var(--c-blue) 30%, var(--border)); }
 :root:not(.dark) .page-hero[data-hero="public-security"] { background-color: oklch(0.97 0.025 262); }
 :root:not(.dark) .page-hero[data-hero="public-security"]::before { background: linear-gradient(90deg, oklch(0.97 0.025 262) 20%, oklch(0.97 0.025 262 / .94) 48%, transparent 74%); }
 :root:not(.dark) .page-hero[data-hero="public-security"] h1 { color: oklch(0.25 0.07 262); }
