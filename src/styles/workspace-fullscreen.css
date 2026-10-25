@@ -28,7 +28,20 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
 }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-main { display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
 .app-shell.navigation-v2[data-focus-mode="true"] :is(.app-topbar, .workspace-section-nav, .app-bottom-nav, .app-footer, .app-focus-return) { display: none; }
-.app-shell.navigation-v2[data-focus-mode="true"] .app-content { flex: 1 1 0%; min-height: 0; width: 100%; overflow-y: auto; overscroll-behavior-y: contain; padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content {
+  position: relative; flex: 1 1 0%; min-height: 0; width: 100%; overflow-y: auto;
+  overscroll-behavior-y: contain; padding-bottom: max(88px, calc(56px + env(safe-area-inset-bottom)));
+}
+/* A faixa cria um acabamento visual no rodapé do modo foco. Ela fica fora do
+   fluxo e não captura o mouse, então a página pode continuar rolando sob o
+   vidro sem produzir repinturas intermitentes. */
+.app-shell.navigation-v2[data-focus-mode="true"] .app-content::after {
+  content: ""; position: fixed; z-index: 5; left: 68px; right: 0; bottom: 0;
+  height: 58px; pointer-events: none;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--background) 82%, transparent));
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
 .app-shell.navigation-v2[data-focus-mode="true"] .app-content__inner { max-width: none; }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: flex; position: relative; top: auto; width: 68px; height: 100%; min-height: 0; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
 .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 68px; }
@@ -46,6 +59,7 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
   .app-shell.navigation-v2[data-focus-mode="true"] .app-sidebar { display: none; }
   .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 0; }
   .app-shell.navigation-v2[data-focus-mode="true"] .app-content { padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right)); }
+  .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after { left: 0; height: 52px; }
 }
 @media (forced-colors: active) {
   .workspace-focus-controls, .workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry { background: Canvas; color: CanvasText; border-color: CanvasText; }
