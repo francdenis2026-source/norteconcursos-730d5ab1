@@ -255,7 +255,7 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
         ) : (
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={subjectData}
+              data={subjectData.slice(0, 8)}
               layout="vertical"
               margin={{ top: 4, right: 16, left: 0, bottom: 0 }}
             >
@@ -274,7 +274,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                 tick={AXIS_TICK}
                 axisLine={false}
                 tickLine={false}
-                width={100}
+                width={132}
+                tickFormatter={(v: string) => (v.length > 18 ? `${v.slice(0, 17)}…` : v)}
               />
               <Tooltip
                 contentStyle={TOOLTIP_STYLE}
@@ -285,8 +286,8 @@ export function PerformanceChartsGrid({ overview }: { overview: PerformanceOverv
                   "Aproveitamento",
                 ]}
               />
-              <Bar dataKey="accuracy" radius={[0, 6, 6, 0]} barSize={14}>
-                {subjectData.map((d) => (
+              <Bar dataKey="accuracy" radius={[0, 6, 6, 0]} barSize={12}>
+                {subjectData.slice(0, 8).map((d) => (
                   <Cell
                     key={d.subject}
                     fill={d.accuracy < 50 ? ROSE : d.accuracy < 75 ? AMBER : EMERALD}
