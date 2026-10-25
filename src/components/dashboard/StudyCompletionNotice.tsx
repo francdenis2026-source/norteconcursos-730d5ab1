@@ -1,4 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 type StudyCompletionNoticeProps = {
   kind: "simulado" | "trainer";
@@ -37,6 +38,13 @@ export function StudyCompletionNotice({ kind }: StudyCompletionNoticeProps) {
       <div className="min-w-0">
         <p className="text-sm font-semibold leading-5 text-foreground">{copy.title}</p>
         <p className="mt-1 text-sm leading-5 text-muted-foreground">{copy.description}</p>
+        <Link
+          to={kind === "simulado" ? "/dashboard/mock-exams" : "/dashboard/question-trainer"}
+          className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300"
+        >
+          {kind === "simulado" ? "Voltar aos simulados" : "Voltar às questões"}
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );
