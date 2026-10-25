@@ -7,6 +7,8 @@
 .workspace-focus-entry { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 44px; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--muted); color: var(--foreground); font-size: 12px; font-weight: 600; }
 .workspace-focus-entry svg { width: 17px; height: 17px; }
 .workspace-focus-controls { display: flex; justify-content: flex-end; gap: 6px; flex: none; padding: calc(6px + env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right)) 6px max(12px, env(safe-area-inset-left)); background: var(--card); border-bottom: 1px solid var(--border); }
+.workspace-focus-footer { position: fixed; z-index: 45; left: 68px; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 34px; padding: 6px 16px calc(6px + env(safe-area-inset-bottom)); color: var(--muted-foreground); background: color-mix(in srgb, var(--card) 78%, transparent); border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); font-size: 11px; letter-spacing: .04em; }
+.workspace-focus-footer strong { color: var(--foreground); font-size: 12px; }
 .workspace-focus-controls button:hover, .workspace-fullscreen-trigger:hover { background: var(--muted); border-color: var(--ring); }
 :is(.workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
 html[data-workspace-focus="true"], html[data-workspace-focus="true"] body { overflow: hidden; overscroll-behavior: none; }
@@ -60,6 +62,7 @@ html[data-workspace-focus-transition="true"] .app-shell.navigation-v2 * {
   .app-shell.navigation-v2[data-focus-mode="true"] .app-study-backdrop { left: 0; }
   .app-shell.navigation-v2[data-focus-mode="true"] .app-content { padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right)); }
   .app-shell.navigation-v2[data-focus-mode="true"] .app-content::after { left: 0; height: 52px; }
+  .workspace-focus-footer { left: 0; }
 }
 @media (forced-colors: active) {
   .workspace-focus-controls, .workspace-focus-controls button, .workspace-fullscreen-trigger, .workspace-focus-entry { background: Canvas; color: CanvasText; border-color: CanvasText; }

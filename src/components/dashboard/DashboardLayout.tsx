@@ -766,6 +766,13 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             </footer>
           </main>
 
+          {fullscreen.active && !isAdmin && (
+            <div className="workspace-focus-footer no-print" role="status" aria-live="polite">
+              <span>{current?.group ?? "Área de estudo"}</span>
+              <strong>{current?.label ?? "Material e questões"}</strong>
+            </div>
+          )}
+
           <nav className="app-bottom-nav mobile-nav-glass no-print" aria-label="Navegação rápida">
             {(isAdmin ? ADMIN_MOBILE_NAV : MOBILE_NAV).slice(0, 4).map((item) => (
               <Link
