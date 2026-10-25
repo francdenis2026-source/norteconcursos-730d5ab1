@@ -134,6 +134,7 @@ export function useFocusMode() {
     }, 1000);
     const readingScroll = document.querySelector<HTMLElement>(".focus-study-container");
     let settle: number | null = null;
+    let pointerSettle: number | null = null;
     const onScroll = () => {
       document.documentElement.dataset["readingScrolling"] = "true";
       if (settle !== null) window.clearTimeout(settle);
@@ -143,13 +144,25 @@ export function useFocusMode() {
       }, 140);
     };
     readingScroll?.addEventListener("scroll", onScroll, { passive: true });
+    const onPointerMove = () => {
+      document.documentElement.dataset["readingPointer"] = "true";
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      pointerSettle = window.setTimeout(() => {
+        delete document.documentElement.dataset["readingPointer"];
+        pointerSettle = null;
+      }, 120);
+    };
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
       window.clearInterval(id);
       if (settle !== null) window.clearTimeout(settle);
       readingScroll?.removeEventListener("scroll", onScroll);
+      if (pointerSettle !== null) window.clearTimeout(pointerSettle);
+      window.removeEventListener("pointermove", onPointerMove);
       delete document.documentElement.dataset["readingScrolling"];
+      delete document.documentElement.dataset["readingPointer"];
     };
   }, [focus, requestExit]);
 
