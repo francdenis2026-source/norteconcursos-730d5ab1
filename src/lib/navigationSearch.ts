@@ -24,7 +24,7 @@ const DETAILS: Record<string, { description: string; terms: string }> = {
   '/dashboard/question-bank': { description: 'Explore o acervo e abra o Treinador com filtros.', terms: 'acervo banco catalogo explorar questoes' },
   '/dashboard/ctb': { description: 'Consulte o Código de Trânsito Brasileiro e as resoluções.', terms: 'ferramentas painel transito ctb multas pontos' },
   '/dashboard/calculadora-penal': { description: 'Use o recurso de cálculo associado à legislação penal.', terms: 'ferramentas calculadora pena calculo penal' },
-  '/dashboard/questions': { description: 'Busque concursos e escolha seu objetivo em foco.', terms: 'concursos editais oportunidades buscar' },
+  '/dashboard/questions': { description: 'Busque concursos, consulte editais e escolha seu objetivo em foco.', terms: 'concursos editais oportunidades buscar catálogo objetivo' },
   '/dashboard/profile': { description: 'Gerencie seus dados e preferências.', terms: 'conta dados senha cadastro perfil' },
   '/dashboard/subscriptions': { description: 'Consulte seu plano, uso e assinatura.', terms: 'assinatura pagamento premium plus gratuito plano' },
 };

@@ -92,7 +92,7 @@ function MyContestPage() {
           <p>
             {focusedContest
               ? `${focusedContest.role} · ${focusedContest.examBoard}`
-              : "Escolha o concurso que orienta sua preparação em Buscar concursos. Depois, consulte os tópicos em Estudar pelo edital."}
+              : "Escolha o concurso que orienta sua preparação em Concursos e editais. Depois, consulte os tópicos em Estudar pelo edital."}
           </p>
           {focusedContest && (
             <div className="page-hero__stats">
